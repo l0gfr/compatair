@@ -55,6 +55,16 @@ mv -Tf "$deploy_root/current.next" "$deploy_root/current"
 printf '%s\n' "$release_id" > "$deploy_root/DEPLOYED_SHA"
 if systemctl is-enabled --quiet compatair-mcp.service 2>/dev/null; then
 	sudo -n /bin/systemctl restart compatair-mcp.service
-	curl --fail --silent --show-error --max-time 5 http://127.0.0.1:8787/health > /dev/null
+	mcp_ready=0
+	for attempt in {1..10}; do
+		if curl --fail --silent --max-time 2 http://127.0.0.1:8787/health > /dev/null; then
+			mcp_ready=1
+			break
+		fi
+		sleep 1
+	done
+	if (( mcp_ready == 0 )); then
+		curl --fail --silent --show-error --max-time 5 http://127.0.0.1:8787/health > /dev/null
+	fi
 fi
 printf 'Activated %s at %s\n' "$release_id" "$(date -u +%FT%TZ)"
