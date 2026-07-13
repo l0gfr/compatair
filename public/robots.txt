@@ -3,6 +3,7 @@ Allow: /
 Disallow: /go/
 Disallow: /recherche/
 Disallow: /comparateur/
+Disallow: /stats/
 Disallow: /*?
 
 Sitemap: https://compatair.fr/sitemap-index.xml

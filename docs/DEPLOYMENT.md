@@ -89,6 +89,25 @@ curl --fail \
 
 Après ces trois contrôles, créer la variable GitHub `MCP_ENABLED` avec la valeur `true`. Les déploiements et le monitoring vérifieront alors le MCP automatiquement.
 
+## Statistiques privées sans cookie
+
+Le rapport GoAccess est généré à partir du journal Apache de CompatAir, sans JavaScript de suivi côté visiteur. Les adresses IP sont anonymisées au niveau 2, les paramètres d’URL sont supprimés et seules les données des 90 derniers jours sont affichées.
+
+Après un déploiement contenant les scripts d’administration courants, exécuter :
+
+```bash
+sudo bash /home/compatair-deploy/compatair-deploy/deploy/server/install-stats.sh
+```
+
+Le script demande un identifiant et un mot de passe d’au moins 16 caractères sans les afficher. Le rapport protégé est disponible sur `https://compatair.fr/stats/` et actualisé toutes les 15 minutes par `compatair-stats.timer`.
+
+Contrôler l’automatisation avec :
+
+```bash
+sudo systemctl status compatair-stats.timer --no-pager
+sudo systemctl status compatair-stats.service --no-pager
+```
+
 ## Rollback
 
 Lister les releases sur le serveur puis réactiver un SHA connu :

@@ -18,6 +18,7 @@
 - workflows CI, déploiement, sécurité, snapshot et disponibilité, avec permissions minimales et actions épinglées ;
 - CSP, HSTS, politiques de sécurité, signalement responsable, confidentialité, cookies, affiliation et sources ;
 - HTML statique, scripts inférieurs à 35 Ko compressés par page, images dimensionnées, focus visible et réduction des animations.
+- rapport GoAccess privé sans cookie, adresses IP masquées, paramètres d’URL supprimés, fenêtre de 90 jours et actualisation systemd toutes les 15 minutes.
 
 ## Prêt mais sans données partenaires
 

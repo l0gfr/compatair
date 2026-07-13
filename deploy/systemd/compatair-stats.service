@@ -1,0 +1,24 @@
+[Unit]
+Description=Generate the private CompatAir GoAccess report
+After=apache2.service
+
+[Service]
+Type=oneshot
+User=compatair-stats
+Group=compatair-stats
+SupplementaryGroups=adm
+UMask=0027
+Environment=LC_TIME=C
+ExecStart=/usr/local/libexec/compatair-generate-stats
+NoNewPrivileges=true
+PrivateDevices=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_UNIX
+ReadWritePaths=/var/www/html/compatair-stats
+MemoryMax=256M
+TasksMax=32
