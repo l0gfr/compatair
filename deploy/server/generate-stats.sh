@@ -5,7 +5,7 @@ umask 027
 log_directory="/var/log/apache2"
 active_log="$log_directory/compatair-ssl-access.log"
 output_directory="/var/www/html/compatair-stats"
-temporary_report=$(mktemp "$output_directory/.index.html.XXXXXX")
+temporary_report=$(mktemp --suffix=.html "$output_directory/.index.XXXXXX")
 trap 'rm -f "$temporary_report"' EXIT
 
 test -r "$active_log"
