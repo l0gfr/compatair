@@ -79,33 +79,35 @@ jobs:
           printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
           chmod 600 "$HOME/.ssh/known_hosts"
 
-      - name: Open the SSH knock window
-        env:
-          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
-          DEPLOY_KNOCK_PORTS: ${{ secrets.DEPLOY_KNOCK_PORTS }}
-        run: |
-          [[ "$DEPLOY_HOST" =~ ^[A-Za-z0-9.-]+$ ]]
-          [[ "$DEPLOY_KNOCK_PORTS" =~ ^[0-9]{1,5}(\ [0-9]{1,5})*$ ]]
-          read -ra knock_ports <<< "$DEPLOY_KNOCK_PORTS"
-          for port in "${knock_ports[@]}"; do
-            nc -z -w 1 "$DEPLOY_HOST" "$port" || true
-            sleep 1
-          done
-
       - name: Transfer and activate release
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_KNOCK_PORTS: ${{ secrets.DEPLOY_KNOCK_PORTS }}
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
           DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
           DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
         run: |
+          [[ "$DEPLOY_HOST" =~ ^[A-Za-z0-9.-]+$ ]]
+          [[ "$DEPLOY_KNOCK_PORTS" =~ ^[0-9]{1,5}(\ [0-9]{1,5})*$ ]]
           [[ "$DEPLOY_PATH" =~ ^/var/www/html/[A-Za-z0-9._/-]+$ ]]
           remote="${DEPLOY_USER}@${DEPLOY_HOST}"
           remote_dir="/home/${DEPLOY_USER}/compatair-deploy"
+
+          knock_server() {
+            read -ra knock_ports <<< "$DEPLOY_KNOCK_PORTS"
+            for port in "${knock_ports[@]}"; do
+              nc -z -w 1 "$DEPLOY_HOST" "$port" || true
+              sleep 1
+            done
+          }
+
+          knock_server
           ssh -i "$HOME/.ssh/id_ed25519" -p "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes "$remote" "install -d -m 700 '$remote_dir'"
+          knock_server
           scp -i "$HOME/.ssh/id_ed25519" -P "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes \
             "compatair-${GITHUB_SHA}.tar.gz" "compatair-${GITHUB_SHA}.tar.gz.sha256" scripts/deploy-remote.sh \
             "${remote}:${remote_dir}/"
+          knock_server
           ssh -i "$HOME/.ssh/id_ed25519" -p "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes "$remote" \
             "bash '$remote_dir/deploy-remote.sh' '$remote_dir/compatair-${GITHUB_SHA}.tar.gz' '$remote_dir/compatair-${GITHUB_SHA}.tar.gz.sha256' '$DEPLOY_PATH' '$GITHUB_SHA'"
 
