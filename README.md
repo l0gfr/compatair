@@ -23,7 +23,8 @@ Le site est généré statiquement dans `dist/`. La logique métier se trouve da
 - push sur une branche : CI uniquement ;
 - pull request vers `main` : CI, build et artefact de preview ;
 - push ou merge sur `main` : CI puis déploiement atomique sur Debian ;
-- CodeQL : `main`, pull requests et analyse hebdomadaire.
+- Audit des dépendances de production à chaque CI et déploiement.
+- Dependabot : surveillance hebdomadaire des dépendances et de GitHub Actions.
 
 Voir [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) pour la préparation Apache, TLS, les secrets et le rollback.
 
