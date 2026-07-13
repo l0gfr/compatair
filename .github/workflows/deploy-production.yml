@@ -54,6 +54,8 @@ jobs:
           install -D -m 644 server/mcp-server.mjs dist/_server/mcp-server.mjs
           tar -C dist -czf "compatair-${GITHUB_SHA}.tar.gz" .
           sha256sum "compatair-${GITHUB_SHA}.tar.gz" > "compatair-${GITHUB_SHA}.tar.gz.sha256"
+          tar -czf "compatair-admin-${GITHUB_SHA}.tar.gz" deploy
+          sha256sum "compatair-admin-${GITHUB_SHA}.tar.gz" > "compatair-admin-${GITHUB_SHA}.tar.gz.sha256"
 
       - name: Upload release artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
@@ -62,6 +64,8 @@ jobs:
           path: |
             compatair-${{ github.sha }}.tar.gz
             compatair-${{ github.sha }}.tar.gz.sha256
+            compatair-admin-${{ github.sha }}.tar.gz
+            compatair-admin-${{ github.sha }}.tar.gz.sha256
           if-no-files-found: error
           retention-days: 30
 
@@ -113,14 +117,13 @@ jobs:
           ssh -i "$HOME/.ssh/id_ed25519" -p "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes "$remote" "install -d -m 700 '$remote_dir'"
           knock_server
           scp -i "$HOME/.ssh/id_ed25519" -P "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes \
-            "compatair-${GITHUB_SHA}.tar.gz" "compatair-${GITHUB_SHA}.tar.gz.sha256" scripts/deploy-remote.sh \
+            "compatair-${GITHUB_SHA}.tar.gz" "compatair-${GITHUB_SHA}.tar.gz.sha256" \
+            "compatair-admin-${GITHUB_SHA}.tar.gz" "compatair-admin-${GITHUB_SHA}.tar.gz.sha256" \
+            scripts/deploy-remote.sh \
             "${remote}:${remote_dir}/"
           knock_server
-          scp -r -i "$HOME/.ssh/id_ed25519" -P "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes \
-            deploy "${remote}:${remote_dir}/"
-          knock_server
           ssh -i "$HOME/.ssh/id_ed25519" -p "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes "$remote" \
-            "bash '$remote_dir/deploy-remote.sh' '$remote_dir/compatair-${GITHUB_SHA}.tar.gz' '$remote_dir/compatair-${GITHUB_SHA}.tar.gz.sha256' '$DEPLOY_PATH' '$GITHUB_SHA'"
+            "cd '$remote_dir' && sha256sum --check 'compatair-admin-${GITHUB_SHA}.tar.gz.sha256' && tar -xzf 'compatair-admin-${GITHUB_SHA}.tar.gz' && bash '$remote_dir/deploy-remote.sh' '$remote_dir/compatair-${GITHUB_SHA}.tar.gz' '$remote_dir/compatair-${GITHUB_SHA}.tar.gz.sha256' '$DEPLOY_PATH' '$GITHUB_SHA'"
 
       - name: Verify live HTTPS surface
         env:
