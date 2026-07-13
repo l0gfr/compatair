@@ -12,11 +12,12 @@ fi
 test -f /var/www/html/compatair/current/_server/mcp-server.mjs
 test -f /var/www/html/compatair/current/data/catalog.json
 test -f "$project_dir/deploy/systemd/compatair-mcp.service"
-if [[ ! -x /usr/bin/node ]]; then
-	echo "Node.js 24 must be installed at /usr/bin/node before enabling the MCP service" >&2
+node_binary="/opt/compatair/node/bin/node"
+if [[ ! -x "$node_binary" ]]; then
+	echo "Install the dedicated runtime with deploy/server/install-node-runtime.sh first" >&2
 	exit 2
 fi
-node_major=$(/usr/bin/node -p 'process.versions.node.split(".")[0]')
+node_major=$($node_binary -p 'process.versions.node.split(".")[0]')
 if (( node_major != 24 )); then
 	echo "Node.js 24 is required; found $node_major" >&2
 	exit 2

@@ -116,6 +116,9 @@ jobs:
             "compatair-${GITHUB_SHA}.tar.gz" "compatair-${GITHUB_SHA}.tar.gz.sha256" scripts/deploy-remote.sh \
             "${remote}:${remote_dir}/"
           knock_server
+          scp -r -i "$HOME/.ssh/id_ed25519" -P "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            deploy "${remote}:${remote_dir}/"
+          knock_server
           ssh -i "$HOME/.ssh/id_ed25519" -p "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes "$remote" \
             "bash '$remote_dir/deploy-remote.sh' '$remote_dir/compatair-${GITHUB_SHA}.tar.gz' '$remote_dir/compatair-${GITHUB_SHA}.tar.gz.sha256' '$DEPLOY_PATH' '$GITHUB_SHA'"
 
