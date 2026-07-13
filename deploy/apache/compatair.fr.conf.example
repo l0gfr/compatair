@@ -1,0 +1,48 @@
+<VirtualHost *:80>
+    ServerName compatair.fr
+    ServerAlias www.compatair.fr
+    DocumentRoot /var/www/html/compatair/current
+
+    <Directory /var/www/html/compatair/current>
+        Options -Indexes -ExecCGI
+        AllowOverride None
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/compatair-error.log
+    CustomLog ${APACHE_LOG_DIR}/compatair-access.log combined
+
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} !^/.well-known/acme-challenge/
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE]
+</VirtualHost>
+
+<IfModule mod_ssl.c>
+<VirtualHost *:443>
+    ServerName compatair.fr
+    ServerAlias www.compatair.fr
+    DocumentRoot /var/www/html/compatair/current
+
+    SSLEngine on
+    # Certbot manages the certificate directives in the installed vhost.
+
+    <Directory /var/www/html/compatair/current>
+        Options -Indexes -ExecCGI
+        AllowOverride None
+        Require all granted
+    </Directory>
+
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+    Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; script-src 'self' 'sha256-cbtovV2785saS7qy4C2S6gU+doEchK8H8khhOWmyUL0='; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests"
+
+    <FilesMatch "\.(?:css|js|svg|png|jpg|jpeg|webp|avif|woff2)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    ErrorLog ${APACHE_LOG_DIR}/compatair-ssl-error.log
+    CustomLog ${APACHE_LOG_DIR}/compatair-ssl-access.log combined
+</VirtualHost>
+</IfModule>

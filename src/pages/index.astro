@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const organization = {
+	'@context': 'https://schema.org',
+	'@type': 'Organization',
+	name: 'CompatAir',
+	url: 'https://compatair.fr',
+};
+---
+
+<BaseLayout title="CompatAir : le bon compresseur pour chaque outil" description="Dimensionnez un compresseur selon le débit réellement restitué, la pression et votre usage. Des verdicts sourcés, reproductibles et indépendants.">
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(organization)} />
+	<section class="hero">
+		<div class="container">
+			<p class="eyebrow">Compatibilité d’air comprimé, sans approximation commerciale</p>
+			<h1>Votre compresseur peut-il vraiment alimenter vos outils&nbsp;?</h1>
+			<p class="lead">CompatAir vérifie le débit restitué, la pression, la cuve et le rythme d’utilisation. Vous obtenez un verdict clair&nbsp;: continu, intermittent, incompatible ou données insuffisantes.</p>
+			<div class="actions">
+				<a class="button primary" href="#fonctionnement">Dimensionner mon installation</a>
+				<a class="button" href="/methodologie/">Voir notre méthode</a>
+			</div>
+		</div>
+	</section>
+
+	<div class="proof-strip">
+		<div class="container">
+			<span><strong>FAD prioritaire</strong> plutôt que débit aspiré</span>
+			<span><strong>Sources affichées</strong> par donnée critique</span>
+			<span><strong>Calcul reproductible</strong> sans recommandation générative</span>
+		</div>
+	</div>
+
+	<section class="section" id="fonctionnement">
+		<div class="container">
+			<div class="section-head">
+				<p class="eyebrow">Le moteur CompatAir</p>
+				<h2>Une réponse technique en trois étapes</h2>
+			</div>
+			<div class="grid">
+				<article class="card"><p class="step">01</p><h3>Décrivez vos usages</h3><p>Outils, durée, simultanéité, pression et longueur du flexible.</p></article>
+				<article class="card"><p class="step">02</p><h3>Nous calculons le besoin</h3><p>Débit de pointe, débit moyen, marge, pertes et réserve utile.</p></article>
+				<article class="card"><p class="step">03</p><h3>Comparez sans vous tromper</h3><p>Modèles compatibles, limites explicites et accessoires nécessaires.</p></article>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container callout">
+			<div>
+				<p class="eyebrow">La donnée qui change tout</p>
+				<h2>Le volume de cuve ne suffit pas.</h2>
+				<p>Un compresseur 50&nbsp;L peut être trop juste pour une ponceuse et parfaitement adapté à une clé à chocs occasionnelle. Le débit restitué à la pression de travail et le cycle d’utilisation déterminent le résultat.</p>
+			</div>
+			<div class="metric"><strong>4 verdicts</strong><span>continu · intermittent · incompatible · données insuffisantes</span></div>
+		</div>
+	</section>
+</BaseLayout>

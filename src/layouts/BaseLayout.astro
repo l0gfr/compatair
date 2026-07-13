@@ -1,0 +1,58 @@
+---
+import '../styles/global.css';
+
+type Props = {
+	title: string;
+	description: string;
+	canonicalPath?: string;
+	noindex?: boolean;
+};
+
+const { title, description, canonicalPath = Astro.url.pathname, noindex = false } = Astro.props;
+const canonical = new URL(canonicalPath, Astro.site);
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large'} />
+		<link rel="canonical" href={canonical} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="fr_FR" />
+		<meta property="og:site_name" content="CompatAir" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<meta name="twitter:card" content="summary" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header class="site-header">
+			<nav class="container nav" aria-label="Navigation principale">
+				<a class="brand" href="/"><span class="brand-mark" aria-hidden="true">C</span>CompatAir</a>
+				<div class="nav-links">
+					<a href="/#fonctionnement">Comment ça marche</a>
+					<a href="/methodologie/">Méthodologie</a>
+					<a href="/affiliation/">Affiliation</a>
+					<a href="/contact/">Signaler une donnée</a>
+				</div>
+			</nav>
+		</header>
+		<main><slot /></main>
+		<footer>
+			<div class="container footer-grid">
+				<div><strong>CompatAir</strong><br /><small>Le bon compresseur pour chaque usage.</small></div>
+				<div class="footer-links">
+					<a href="/methodologie/">Méthodologie</a>
+					<a href="/affiliation/">Affiliation</a>
+					<a href="/contact/">Contact</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
