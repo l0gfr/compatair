@@ -24,7 +24,8 @@
     DocumentRoot /var/www/html/compatair/current
 
     SSLEngine on
-    # Certbot manages the certificate directives in the installed vhost.
+    SSLCertificateFile /etc/letsencrypt/live/compatair.fr/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/compatair.fr/privkey.pem
 
     <Directory /var/www/html/compatair/current>
         Options -Indexes -ExecCGI

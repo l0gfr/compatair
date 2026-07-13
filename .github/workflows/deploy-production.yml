@@ -79,6 +79,19 @@ jobs:
           printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
           chmod 600 "$HOME/.ssh/known_hosts"
 
+      - name: Open the SSH knock window
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_KNOCK_PORTS: ${{ secrets.DEPLOY_KNOCK_PORTS }}
+        run: |
+          [[ "$DEPLOY_HOST" =~ ^[A-Za-z0-9.-]+$ ]]
+          [[ "$DEPLOY_KNOCK_PORTS" =~ ^[0-9]{1,5}(\ [0-9]{1,5})*$ ]]
+          read -ra knock_ports <<< "$DEPLOY_KNOCK_PORTS"
+          for port in "${knock_ports[@]}"; do
+            nc -z -w 1 "$DEPLOY_HOST" "$port" || true
+            sleep 1
+          done
+
       - name: Transfer and activate release
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}

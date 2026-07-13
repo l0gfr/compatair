@@ -30,6 +30,7 @@ Créer les secrets suivants dans le dépôt :
 
 - `DEPLOY_HOST` : nom DNS ou adresse IP SSH du serveur ;
 - `DEPLOY_PORT` : port SSH ;
+- `DEPLOY_KNOCK_PORTS` : séquence de ports séparés par des espaces ;
 - `DEPLOY_USER` : `bluetouff` ou un compte dédié sans sudo ;
 - `DEPLOY_PATH` : `/var/www/html/compatair` ;
 - `DEPLOY_SSH_KEY` : clé privée Ed25519 dédiée à GitHub Actions ;
@@ -38,6 +39,17 @@ Créer les secrets suivants dans le dépôt :
 La clé publique correspondante doit être ajoutée au `~/.ssh/authorized_keys` du compte de déploiement. Utiliser une clé propre à CompatAir, révocable sans affecter les accès humains.
 
 Une fois le serveur, le DNS et le certificat vérifiés, créer la variable de dépôt `DEPLOY_ENABLED` avec la valeur `true`. Tant que cette variable est absente, le workflow de production reste volontairement inactif, même sur `main`.
+
+## TLS et vhost
+
+Le bootstrap installe d’abord le vhost HTTP et un contenu d’attente. Demander ensuite le certificat avec le compte Certbot déjà configuré sur le serveur :
+
+```bash
+sudo certbot certonly --webroot -w /var/www/html -d compatair.fr -d www.compatair.fr
+sudo bash /home/bluetouff/compatair-bootstrap/deploy/server/activate-tls.sh
+```
+
+Le second script installe le vhost HTTPS durci, valide la configuration Apache et recharge le service. Il échoue sans modifier le vhost actif si les fichiers Let’s Encrypt n’existent pas.
 
 ## Rollback
 
