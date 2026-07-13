@@ -65,13 +65,13 @@ Le dossier d’amorçage n’est pas un clone Git et ne doit pas être mis à jo
 Installer le runtime Node.js 24 dédié à CompatAir. Le script utilise l’archive officielle nodejs.org avec une version et un SHA-256 épinglés. Il ne remplace pas le Node.js fourni par Debian :
 
 ```bash
-sudo bash /home/bluetouff/compatair-deploy/deploy/server/install-node-runtime.sh
+sudo bash /home/compatair-deploy/compatair-deploy/deploy/server/install-node-runtime.sh
 ```
 
 Activer ensuite le service :
 
 ```bash
-sudo bash /home/bluetouff/compatair-deploy/deploy/server/install-mcp.sh
+sudo bash /home/compatair-deploy/compatair-deploy/deploy/server/install-mcp.sh
 ```
 
 Contrôler le service local, le proxy HTTPS puis la négociation MCP :
