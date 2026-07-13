@@ -15,13 +15,20 @@ const organization = {
 <BaseLayout title="CompatAir : comparer compresseurs et outils pneumatiques" description="Comparez la consommation publiée d’un outil au débit restitué documenté d’un compresseur, à la même pression de travail.">
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(organization)} />
 	<section class="hero">
-		<div class="container">
-			<p class="eyebrow">Compatibilité d’air comprimé, sans approximation commerciale</p>
-			<h1>Votre compresseur peut-il vraiment alimenter vos outils&nbsp;?</h1>
-			<p class="lead">CompatAir compare la consommation publiée d’un outil au débit restitué documenté d’un compresseur, à la même pression de travail. Une donnée absente produit «&nbsp;données insuffisantes&nbsp;».</p>
-			<div class="actions">
-				<a class="button primary" href="/calculateur/">Dimensionner mon installation</a>
-				<a class="button" href="/methodologie/">Voir notre méthode</a>
+		<div class="container hero-grid">
+			<div class="hero-copy">
+				<p class="eyebrow">Compatibilité d’air comprimé, sans approximation commerciale</p>
+				<h1>Le bon débit.<br /><span>À la bonne pression.</span></h1>
+				<p class="lead">CompatAir compare la consommation publiée d’un outil au débit restitué documenté d’un compresseur, à la même pression de travail. Une donnée absente produit «&nbsp;données insuffisantes&nbsp;».</p>
+				<div class="actions">
+					<a class="button primary" href="/calculateur/">Tester une compatibilité <span aria-hidden="true">→</span></a>
+					<a class="button subtle" href="/methodologie/">Voir notre méthode</a>
+				</div>
+			</div>
+			<div class="hero-instrument" aria-label="Principes de calcul CompatAir">
+				<div class="instrument-top"><span>CompatAir Engine</span><strong>v0.2</strong></div>
+				<div class="gauge" aria-hidden="true"><div class="gauge-face"><span class="tick t1"></span><span class="tick t2"></span><span class="tick t3"></span><span class="gauge-hand"></span><span class="gauge-hub"></span><div class="gauge-value"><strong>+25 %</strong><small>marge interne</small></div></div></div>
+				<div class="instrument-legend"><span><i class="signal green"></i><strong>FAD</strong><small>documenté</small></span><span><i class="signal lime"></i><strong>bar</strong><small>pression égale</small></span><span><i class="signal orange"></i><strong>0</strong><small>donnée inventée</small></span></div>
 			</div>
 		</div>
 	</section>
