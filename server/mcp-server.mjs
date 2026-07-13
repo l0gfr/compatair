@@ -1,7 +1,7 @@
 import { createServer } from 'node:http';
+import { realpathSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
-import { pathToFileURL } from 'node:url';
-import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { createMcpCore, ENGINE_VERSION, PROTOCOL_VERSION } from './mcp-core.mjs';
 
 const BODY_LIMIT = 65_536;
@@ -31,6 +31,11 @@ export function parseOfferId(pathname) {
 	let value;
 	try { value = decodeURIComponent(pathname.slice(4)); } catch { return undefined; }
 	return /^[a-z0-9-]{1,100}$/.test(value) ? value : undefined;
+}
+
+export function isMainModule(entryPath, moduleUrl) {
+	if (!entryPath) return false;
+	try { return realpathSync(entryPath) === realpathSync(fileURLToPath(moduleUrl)); } catch { return false; }
 }
 
 function createRateLimiter() {
@@ -166,5 +171,5 @@ async function start() {
 	server.listen(port, host, () => console.error(`CompatAir MCP listening on http://${host}:${port}`));
 }
 
-const isMain = process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url;
+const isMain = isMainModule(process.argv[1], import.meta.url);
 if (isMain) await start();
