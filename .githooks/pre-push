@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+echo "CompatAir pre-push: validating source, tests and production build"
+pnpm validate

@@ -26,3 +26,9 @@ Le site est généré statiquement dans `dist/`. La logique métier se trouve da
 - CodeQL : `main`, pull requests et analyse hebdomadaire.
 
 Voir [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) pour la préparation Apache, TLS, les secrets et le rollback.
+
+Le checkout local utilise le hook versionné `.githooks/pre-push`. Après un nouveau clone, l’activer avec :
+
+```bash
+git config core.hooksPath .githooks
+```
