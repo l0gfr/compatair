@@ -17,7 +17,7 @@ apt-get update
 apt-get install -y --no-install-recommends apache2-utils goaccess gzip
 a2enmod auth_basic authn_file headers
 
-goaccess_help=$(/usr/bin/goaccess --help 2>&1)
+goaccess_help=$(/usr/bin/goaccess --help 2>&1 || true)
 if [[ "$goaccess_help" != *"--anonymize-level"* ]]; then
 	echo "The installed GoAccess version does not support the required IP anonymization level" >&2
 	exit 2
