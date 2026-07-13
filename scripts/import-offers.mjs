@@ -14,8 +14,9 @@ const merchantId = args.get('merchant') ?? 'manomano-fr';
 const catalogFile = args.get('catalog') ?? 'dist/data/catalog.json';
 const output = args.get('output') ?? 'src/data/offers.snapshot.json';
 const reportFile = args.get('report') ?? 'manomano-import-report.json';
+const dryRun = args.get('dry-run') === true;
 if (!input || merchantId !== 'manomano-fr') {
-	throw new Error('Usage : pnpm data:import-offers -- --input flux.csv[.gz] [--catalog dist/data/catalog.json] [--output src/data/offers.snapshot.json]');
+	throw new Error('Usage : pnpm data:import-offers -- --input flux.csv[.gz] [--dry-run] [--catalog dist/data/catalog.json] [--output src/data/offers.snapshot.json]');
 }
 
 const [bytes, catalogText] = await Promise.all([readFile(resolve(String(input))), readFile(resolve(String(catalogFile)), 'utf8')]);
@@ -26,6 +27,11 @@ const result = importManoManoFeed({
 	collectedAt: args.get('collected-at') ? String(args.get('collected-at')) : new Date().toISOString(),
 });
 await writeFile(resolve(String(reportFile)), `${JSON.stringify(result.report, null, 2)}\n`, { mode: 0o600 });
-if (result.offers.length === 0) throw new Error(`Aucune offre ManoMano appariée. Rapport : ${reportFile}`);
-await writeFile(resolve(String(output)), `${JSON.stringify({ generatedAt: result.report.generatedAt, sourceChecksum: result.report.sourceChecksum, offers: result.offers }, null, 2)}\n`, { mode: 0o600 });
-console.log(`${result.offers.length} offres importées, ${result.report.unmatched} non appariées, ${result.report.rejected} rejetées. Rapport : ${reportFile}`);
+if (dryRun) {
+	console.log(`Simulation : ${result.offers.length} offres appariées, ${result.report.unmatched} non appariées, ${result.report.rejected} rejetées. Snapshot inchangé. Rapport : ${reportFile}`);
+	process.exitCode = 0;
+} else {
+	if (result.offers.length === 0) throw new Error(`Aucune offre ManoMano appariée. Snapshot inchangé. Rapport : ${reportFile}`);
+	await writeFile(resolve(String(output)), `${JSON.stringify({ generatedAt: result.report.generatedAt, sourceChecksum: result.report.sourceChecksum, offers: result.offers }, null, 2)}\n`, { mode: 0o600 });
+	console.log(`${result.offers.length} offres importées, ${result.report.unmatched} non appariées, ${result.report.rejected} rejetées. Rapport : ${reportFile}`);
+}

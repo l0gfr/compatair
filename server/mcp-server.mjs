@@ -33,6 +33,19 @@ export function parseOfferId(pathname) {
 	return /^[a-z0-9-]{1,100}$/.test(value) ? value : undefined;
 }
 
+export function allowedOfferRedirect(offer) {
+	if (!offer || typeof offer.url !== 'string') return undefined;
+	let url; try { url = new URL(offer.url); } catch { return undefined; }
+	if (url.protocol !== 'https:') return undefined;
+	const host = url.hostname.toLowerCase();
+	if (offer.merchantId === 'amazon-fr') return host === 'amazon.fr' || host.endsWith('.amazon.fr') ? url.toString() : undefined;
+	if (offer.merchantId !== 'manomano-fr') return undefined;
+	if (host === 'manomano.fr' || host.endsWith('.manomano.fr')) return url.toString();
+	if (!(host === 'awin1.com' || host.endsWith('.awin1.com'))) return undefined;
+	if (!['/pclick.php', '/cread.php'].includes(url.pathname)) return undefined;
+	return (url.searchParams.get('m') ?? url.searchParams.get('awinmid')) === '17547' ? url.toString() : undefined;
+}
+
 export function isMainModule(entryPath, moduleUrl) {
 	if (!entryPath) return false;
 	try { return realpathSync(entryPath) === realpathSync(fileURLToPath(moduleUrl)); } catch { return false; }
@@ -110,9 +123,10 @@ export function createCompatAirServer({ catalog, offerSnapshot = { offers: [], s
 			const offerId = parseOfferId(url.pathname);
 			if (!offerId) return json(response, 404, { error: 'offer_not_found' });
 			const offer = (offerSnapshot.offers ?? []).find((item) => item.id === offerId);
-			if (!offer || typeof offer.url !== 'string' || !offer.url.startsWith('https://')) return json(response, 404, { error: 'offer_not_found' });
+			const redirect = allowedOfferRedirect(offer);
+			if (!redirect) return json(response, 404, { error: 'offer_not_found' });
 			counters.affiliateClicks[offerId] = (counters.affiliateClicks[offerId] ?? 0) + 1;
-			response.writeHead(302, { Location: offer.url, 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer', 'X-Content-Type-Options': 'nosniff' });
+			response.writeHead(302, { Location: redirect, 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer', 'X-Content-Type-Options': 'nosniff' });
 			return response.end();
 		}
 

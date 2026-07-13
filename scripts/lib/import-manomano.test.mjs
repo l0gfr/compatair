@@ -18,6 +18,8 @@ describe('import du flux ManoMano Awin', () => {
 		expect(result.offers).toHaveLength(1);
 		expect(result.offers[0]).toMatchObject({ productId: 'compressor-a', merchantProductId: 'MM-1', productName: 'Compresseur, 50 L', priceEur: 149.9, shippingEur: 9.9, availability: 'in_stock' });
 		expect(result.report.unmatched).toBe(1);
+		expect(result.report.matches[0]).toMatchObject({ productId: 'compressor-a', matchedBy: ['mpn'] });
+		expect(result.report.unmatchedSamples[0]).toMatchObject({ merchantProductId: 'MM-2', identifiers: { mpn: 'UNKNOWN' } });
 	});
 
 	it('rejette un lien Awin visant un autre annonceur', () => {
@@ -26,6 +28,17 @@ describe('import du flux ManoMano Awin', () => {
 
 		expect(result.offers).toHaveLength(0);
 		expect(result.report.issues[0].reason).toBe('wrong_awin_advertiser');
+		expect(result.report.rejectionReasons).toEqual({ wrong_awin_advertiser: 1 });
+	});
+
+	it('renouvelle une offre avec un identifiant stable et une collecte plus récente', () => {
+		const csv = 'product_id,product_name,price,deep_link,image_url,mpn\nMM-1,Compresseur,149.90,https://www.awin1.com/pclick.php?p=42&a=7&m=17547,https://cdn.example.test/mm-1.webp,4010393';
+		const first = importManoManoFeed({ bytes: Buffer.from(csv), fileName: 'first.csv', catalog, collectedAt: '2026-07-13T20:00:00.000Z' });
+		const renewed = importManoManoFeed({ bytes: Buffer.from(csv), fileName: 'renewed.csv', catalog, collectedAt: '2026-07-15T08:00:00.000Z' });
+
+		expect(renewed.offers[0].id).toBe(first.offers[0].id);
+		expect(renewed.offers[0].collectedAt).toBe('2026-07-15T08:00:00.000Z');
+		expect(renewed.offers[0].sourceId).toBe('awin:17547:renewed.csv');
 	});
 
 	it('accepte les exports Awin séparés par tabulation', () => {

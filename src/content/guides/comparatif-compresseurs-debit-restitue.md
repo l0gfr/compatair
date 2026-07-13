@@ -1,9 +1,10 @@
 ---
-title: "Comparatif de 10 compresseurs : ce que leurs débits restitués permettent réellement de valider"
-description: "Comparaison factuelle de dix références Einhell, Metabo et ABAC selon les points de débit publiés, sans classement fondé sur le débit aspiré."
+title: "Comparatif de 13 compresseurs : ce que leurs débits restitués permettent réellement de valider"
+description: "Comparaison factuelle de treize références Einhell, Metabo et ABAC selon les points de débit publiés, sans classement fondé sur le débit aspiré."
 pubDate: 2026-07-13
+updatedDate: 2026-07-14
 category: "Choisir"
-readingTime: 13
+readingTime: 14
 featured: true
 sources:
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
@@ -16,17 +17,20 @@ sources:
   - https://shop.abacaircompressors.com/en-US/products/4116000868/atf-s-3-24-10-230150-ce
   - https://shop.abacaircompressors.com/nl-NL/products/4116000874/atf-s-3-50-10-230150-ce-uk
   - https://shop.abacaircompressors.com/fr-FR/products/1129740297/pole-position-os20p
+  - https://www.einhell.fr/p/4020590-tc-ac-200-24-8-of
+  - https://www.einhell.fr/p/4007375-tc-ac-190-24-8-i-of/
+  - https://www.einhell.fr/p/4010451-te-ac-270-50-silent/
 ---
 
 Un comparatif de compresseurs peut produire une conclusion fausse tout en reprenant des chiffres exacts. Il suffit de classer les modèles par débit aspiré, de mélanger des débits mesurés à des pressions différentes ou de considérer qu’une cuve plus grande signifie un débit supérieur.
 
-Ce dossier compare les [dix compresseurs actuellement documentés par CompatAir](/compresseurs/). Il ne cherche pas à désigner un vainqueur universel. Il établit ce que les fiches constructeur permettent de valider pour cinq outils précis.
+Ce dossier compare les [treize compresseurs actuellement documentés par CompatAir](/compresseurs/). Il ne cherche pas à désigner un vainqueur universel. Il établit ce que les fiches constructeur permettent de valider pour cinq outils précis.
 
-<svg viewBox="0 0 760 350" role="img" aria-labelledby="compare-title compare-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="compare-title">Niveau de documentation des dix compresseurs</title><desc id="compare-desc">Cinq compresseurs possèdent plusieurs points de débit, quatre un seul point et un aucun point de débit restitué.</desc>
+<svg viewBox="0 0 760 350" role="img" aria-labelledby="compare-title compare-desc" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:1.5rem">
+  <title id="compare-title">Niveau de documentation des treize compresseurs</title><desc id="compare-desc">Huit compresseurs possèdent plusieurs points de débit, quatre un seul point et un aucun point de débit restitué.</desc>
   <rect width="760" height="350" rx="22" fill="#10281e"/><text x="38" y="45" fill="#d3eb56" font-size="15" font-weight="700">AVANT DE COMPARER LES PERFORMANCES</text>
   <text x="38" y="90" fill="white" font-size="23" font-weight="700">Combien de points FAD sont publiés ?</text>
-  <rect x="38" y="124" width="430" height="48" rx="10" fill="#19704f"/><text x="58" y="155" fill="white" font-size="17" font-weight="700">Plusieurs points : 5 modèles</text>
+  <rect x="38" y="124" width="430" height="48" rx="10" fill="#19704f"/><text x="58" y="155" fill="white" font-size="17" font-weight="700">Plusieurs points : 8 modèles</text>
   <rect x="38" y="190" width="344" height="48" rx="10" fill="#d3eb56"/><text x="58" y="221" fill="#10281e" font-size="17" font-weight="700">Un seul point : 4 modèles</text>
   <rect x="38" y="256" width="86" height="48" rx="10" fill="#e39a5e"/><text x="58" y="287" fill="#10281e" font-size="17" font-weight="700">0 : 1</text>
   <text x="505" y="142" fill="#9fb3a8" font-size="14">Une courbe à plusieurs points</text><text x="505" y="166" fill="#9fb3a8" font-size="14">permet une interpolation bornée.</text><text x="505" y="221" fill="#9fb3a8" font-size="14">Un point isolé ne devient pas</text><text x="505" y="245" fill="#9fb3a8" font-size="14">une courbe complète.</text>
@@ -48,17 +52,23 @@ Les valeurs ci-dessous sont reprises des sources constructeur liées dans les fi
 | ABAC ATF-S 3 24 | 24 L | 10 bar | 150 à 10 bar | A |
 | ABAC ATF-S 3 50 | 50 L | 10 bar | 150 à 10 bar | A |
 | ABAC Pole Position OS20P | 24 L | 9 bar | non publié à une pression de travail | C |
+| Einhell TC-AC 200/24/8 OF | 24 L | 8 bar | 110 à 0 bar, 70 à 4 bar, 45 à 7 bar | A |
+| Einhell TC-AC 190/24/8 I OF | 24 L | 8 bar | 110 à 0 bar, 75 à 4 bar, 55 à 7 bar | A |
+| Einhell TE-AC 270/50 Silent | 50 L | 10 bar | 175 à 0 bar, 135 à 4 bar, 98 à 7 bar | A |
 
 Ce tableau ne place pas automatiquement 220 L/min à 8 bar au-dessus de 200 L/min à 7 bar pour un outil travaillant à 6,3 bar. Les conditions de comparaison ne sont pas identiques.
 
 ## Ce que permet une courbe à plusieurs points
 
-Les quatre courbes Einhell publiées jusqu’à 7 bar permettent une interpolation entre 4 et 7 bar. À 6,3 bar, CompatAir calcule environ :
+Les sept courbes Einhell publiées jusqu’à 7 bar permettent une interpolation entre 4 et 7 bar. À 6,3 bar, CompatAir calcule environ :
 
 - 83 L/min pour le TC-AC 240/50/10 OF ;
 - 202 L/min pour le TE-AC 430/90/10 ;
 - 102 L/min pour le TE-AC 270/50 Silent Plus ;
-- 59 L/min pour le TE-AC 135/24 Silent Plus.
+- 59 L/min pour le TE-AC 135/24 Silent Plus ;
+- 51 L/min pour le TC-AC 200/24/8 OF ;
+- 60 L/min pour le TC-AC 190/24/8 I OF ;
+- 107 L/min pour le TE-AC 270/50 Silent.
 
 Ces nombres sont des interpolations linéaires, pas de nouveaux points constructeur. Ils sont compris entre deux valeurs publiées. La distinction entre [débit restitué et débit aspiré](/guides/debit-restitue-fad-vs-debit-aspire/) reste indispensable. Le TC-AC 190 OF Set s’arrête à 4 bar dans la source consultée ; CompatAir ne prolonge pas sa courbe jusqu’à 6,3 bar.
 
@@ -72,14 +82,15 @@ Cette règle défavorise la quantité de verdicts, pas la qualité des produits.
 
 ## Résultats pour une ponceuse de 100 L/min
 
-La ponceuse Einhell TC-PE 150 demande 100 L/min à 6,3 bar. Deux modèles du tableau couvrent nominalement ce besoin avec une courbe exploitable :
+La ponceuse Einhell TC-PE 150 demande 100 L/min à 6,3 bar. Trois modèles du tableau couvrent nominalement ce besoin avec une courbe exploitable :
 
 - le TE-AC 430/90/10, environ 202 L/min ;
-- le TE-AC 270/50 Silent Plus, environ 102 L/min.
+- le TE-AC 270/50 Silent Plus, environ 102 L/min ;
+- le TE-AC 270/50 Silent, environ 107 L/min.
 
-Le second dépasse le besoin nominal d’environ 2 L/min mais n’atteint pas le seuil interne CompatAir de 125 L/min. Il reste classé compatible en continu selon le besoin publié, avec avertissement sur la marge.
+Les deux modèles Silent de 50 litres dépassent le besoin nominal, mais aucun n’atteint le seuil interne CompatAir de 125 L/min. Ils restent classés compatibles selon le besoin publié, avec avertissement sur la marge.
 
-Le TC-AC 240/50/10 OF et le TE-AC 135/24 Silent Plus restent sous 100 L/min. Les cinq autres références manquent d’un point comparable selon la règle stricte du moteur.
+Quatre courbes restent sous 100 L/min à 6,3 bar. Les six autres références manquent d’un point comparable selon la règle stricte du moteur.
 
 ## Résultats pour deux meuleuses
 
@@ -87,17 +98,17 @@ La TC-PA 50 demande 113 L/min à 6,3 bar. La TC-PP 220 demande 128 L/min à la m
 
 Le TE-AC 270/50 Silent Plus, avec environ 102 L/min à 6,3 bar, ne couvre aucune des deux meuleuses malgré ses 270 L/min aspirés. L’exemple montre pourquoi le débit aspiré ne doit pas être le critère de classement.
 
-<svg viewBox="0 0 760 360" role="img" aria-labelledby="matrix-title matrix-desc" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 760 360" role="img" aria-labelledby="matrix-title matrix-desc" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:1.5rem">
   <title id="matrix-title">Matrice des verdicts documentés</title><desc id="matrix-desc">Le TE-AC 430 couvre trois outils à 6,3 bar. Le TE-AC 270 couvre la ponceuse sans marge de 25 pour cent. Aucun modèle ne couvre le pistolet de sablage ou la soufflette au point étudié.</desc>
   <rect width="760" height="360" rx="22" fill="#eef2e9"/><text x="38" y="45" fill="#143426" font-size="22" font-weight="700">Verdicts issus des points comparables</text>
   <g font-family="Manrope, sans-serif" font-size="13"><text x="250" y="88" fill="#56685e">Ponceuse</text><text x="360" y="88" fill="#56685e">Meuleuse 113</text><text x="485" y="88" fill="#56685e">Meuleuse 128</text><text x="620" y="88" fill="#56685e">Sablage 300</text>
-  <text x="38" y="135" fill="#143426" font-weight="700">TE-AC 430</text><text x="38" y="195" fill="#143426" font-weight="700">TE-AC 270</text><text x="38" y="255" fill="#143426" font-weight="700">TC-AC 240</text><text x="38" y="315" fill="#143426" font-weight="700">Autres modèles</text></g>
+  <text x="38" y="135" fill="#143426" font-weight="700">TE-AC 430</text><text x="38" y="195" fill="#143426" font-weight="700">270 Silent Plus</text><text x="38" y="255" fill="#143426" font-weight="700">TC-AC 240</text><text x="38" y="315" fill="#143426" font-weight="700">Autres cas</text></g>
   <g><rect x="245" y="110" width="88" height="34" rx="17" fill="#19704f"/><rect x="365" y="110" width="88" height="34" rx="17" fill="#19704f"/><rect x="493" y="110" width="88" height="34" rx="17" fill="#19704f"/><rect x="625" y="110" width="88" height="34" rx="17" fill="#b95d26"/>
   <rect x="245" y="170" width="88" height="34" rx="17" fill="#d3eb56"/><rect x="365" y="170" width="88" height="34" rx="17" fill="#b95d26"/><rect x="493" y="170" width="88" height="34" rx="17" fill="#b95d26"/><rect x="625" y="170" width="88" height="34" rx="17" fill="#b95d26"/>
   <rect x="245" y="230" width="88" height="34" rx="17" fill="#b95d26"/><rect x="365" y="230" width="88" height="34" rx="17" fill="#b95d26"/><rect x="493" y="230" width="88" height="34" rx="17" fill="#b95d26"/><rect x="625" y="230" width="88" height="34" rx="17" fill="#b95d26"/>
   <rect x="245" y="290" width="468" height="34" rx="17" fill="#cbd3cc"/></g>
   <g fill="white" font-size="12" font-weight="700" text-anchor="middle"><text x="289" y="132">OUI</text><text x="409" y="132">OUI</text><text x="537" y="132">OUI</text><text x="669" y="132">NON</text><text x="409" y="192">NON</text><text x="537" y="192">NON</text><text x="669" y="192">NON</text><text x="289" y="252">NON</text><text x="409" y="252">NON</text><text x="537" y="252">NON</text><text x="669" y="252">NON</text></g>
-  <text x="289" y="192" fill="#143426" font-size="11" font-weight="700" text-anchor="middle">SANS MARGE</text><text x="479" y="312" fill="#56685e" font-size="12" font-weight="700" text-anchor="middle">DONNÉES INSUFFISANTES À LA PRESSION DEMANDÉE</text>
+  <text x="289" y="192" fill="#143426" font-size="11" font-weight="700" text-anchor="middle">SANS MARGE</text><text x="479" y="312" fill="#56685e" font-size="12" font-weight="700" text-anchor="middle">NON OU DONNÉES INSUFFISANTES À LA PRESSION DEMANDÉE</text>
 </svg>
 
 ## Aucun modèle validé pour le sablage étudié
@@ -145,3 +156,6 @@ Enfin, vérifiez la marge, le cycle de service, le réseau, la cuve et les crit�
 - [ABAC, ATF-S 3 24](https://shop.abacaircompressors.com/en-US/products/4116000868/atf-s-3-24-10-230150-ce)
 - [ABAC, ATF-S 3 50](https://shop.abacaircompressors.com/nl-NL/products/4116000874/atf-s-3-50-10-230150-ce-uk)
 - [ABAC, Pole Position OS20P](https://shop.abacaircompressors.com/fr-FR/products/1129740297/pole-position-os20p)
+- [Einhell, TC-AC 200/24/8 OF](https://www.einhell.fr/p/4020590-tc-ac-200-24-8-of)
+- [Einhell, TC-AC 190/24/8 I OF](https://www.einhell.fr/p/4007375-tc-ac-190-24-8-i-of/)
+- [Einhell, TE-AC 270/50 Silent](https://www.einhell.fr/p/4010451-te-ac-270-50-silent/)

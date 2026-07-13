@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { compressors, tools } from '../data/catalog';
 import { glossaryTerms } from '../data/glossary';
+import { CALCULATION_VERSION } from '../domain/sizing';
 
 const allGuides = await getCollection('guides');
 const featuredGuides = allGuides.filter((guide) => guide.data.featured).sort((a, b) => b.data.readingTime - a.data.readingTime).slice(0, 4);
@@ -21,7 +23,7 @@ const featuredGuides = allGuides.filter((guide) => guide.data.featured).sort((a,
 				</div>
 			</div>
 			<div class="hero-instrument" aria-label="Principes de calcul CompatAir">
-				<div class="instrument-top"><span>CompatAir Engine</span><strong>v0.2</strong></div>
+				<div class="instrument-top"><span>CompatAir Engine</span><strong>v{CALCULATION_VERSION}</strong></div>
 				<div class="gauge" aria-hidden="true"><div class="gauge-face"><span class="tick t1"></span><span class="tick t2"></span><span class="tick t3"></span><span class="gauge-hand"></span><span class="gauge-hub"></span><div class="gauge-value"><strong>+25 %</strong><small>marge interne</small></div></div></div>
 				<div class="instrument-legend"><span><i class="signal green"></i><strong>FAD</strong><small>documenté</small></span><span><i class="signal lime"></i><strong>bar</strong><small>pression égale</small></span><span><i class="signal orange"></i><strong>0</strong><small>donnée inventée</small></span></div>
 			</div>
@@ -30,8 +32,8 @@ const featuredGuides = allGuides.filter((guide) => guide.data.featured).sort((a,
 
 	<section class="section home-calculator">
 		<div class="container callout">
-			<div><p class="eyebrow">Le calculateur est ouvert</p><h2>Testez cinq outils sur dix compresseurs documentés.</h2><p>CompatAir compare les valeurs publiées et affiche séparément une marge interne de 25&nbsp;%. Les pertes du réseau ne sont pas estimées sans données documentées.</p><div class="actions"><a class="button primary inverse" href="/calculateur/">Lancer le calcul</a><a class="button inverse-outline" href="/compresseurs/">Voir les produits</a></div></div>
-			<div class="metric"><strong>50</strong><span>couples outil-compresseur évalués par le moteur 0.2</span></div>
+			<div><p class="eyebrow">Le calculateur est ouvert</p><h2>Testez {tools.length} outils sur {compressors.length} compresseurs documentés.</h2><p>CompatAir compare les valeurs publiées et affiche séparément une marge interne de 25&nbsp;%. Les pertes du réseau ne sont pas estimées sans données documentées.</p><div class="actions"><a class="button primary inverse" href="/calculateur/">Lancer le calcul</a><a class="button inverse-outline" href="/compresseurs/">Voir les produits</a></div></div>
+			<div class="metric"><strong>{tools.length} × {compressors.length}</strong><span>profils disponibles dans le moteur {CALCULATION_VERSION}, avec saisie obligatoire lorsque le besoin dépend de l’usage</span></div>
 		</div>
 	</section>
 
@@ -73,7 +75,7 @@ const featuredGuides = allGuides.filter((guide) => guide.data.featured).sort((a,
 				<h2>Le volume de cuve ne suffit pas.</h2>
 				<p>Le volume de la cuve stocke de l’air, mais ne remplace pas un débit restitué insuffisant. Le calculateur ne déduit donc pas une compatibilité du seul nombre de litres.</p>
 			</div>
-			<div class="metric"><strong>3 résultats</strong><span>compatible en continu · incompatible · données insuffisantes</span></div>
+			<div class="metric"><strong>4 verdicts</strong><span>continu · intermittent · incompatible · données insuffisantes</span></div>
 		</div>
 	</section>
 </BaseLayout>

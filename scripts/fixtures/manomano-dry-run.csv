@@ -1,0 +1,3 @@
+product_id,product_name,price,deep_link,image_url,ean,mpn,currency,delivery_cost,in_stock
+MM-VALID-1,Compresseur Einhell TC-AC 240/50/10 OF,199.90,https://www.awin1.com/pclick.php?p=42&a=7&m=17547,https://cdn.example.test/mm-valid-1.webp,4006825597295,4010393,EUR,0,1
+MM-UNMATCHED-1,Produit sans correspondance,49.90,https://www.awin1.com/pclick.php?p=43&a=7&m=17547,https://cdn.example.test/mm-unmatched-1.webp,,UNKNOWN,EUR,4.90,1

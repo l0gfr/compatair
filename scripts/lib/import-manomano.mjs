@@ -50,13 +50,13 @@ function addIndex(index, key, productId) {
 
 function matchProduct(row, indexes) {
 	const identifiers = { ean: normalizeGtin(row.ean), gtin: normalizeGtin(row.gtin), mpn: String(row.mpn ?? '').trim() || undefined };
-	const candidates = new Set(); let ambiguous = false;
-	for (const gtin of [identifiers.ean, identifiers.gtin].filter(Boolean)) { const ids = indexes.gtin.get(gtin); if (ids?.size > 1) ambiguous = true; for (const id of ids ?? []) candidates.add(id); }
+	const candidates = new Set(); const matchedBy = new Set(); let ambiguous = false;
+	for (const [kind, gtin] of [['ean', identifiers.ean], ['gtin', identifiers.gtin]].filter(([, value]) => Boolean(value))) { const ids = indexes.gtin.get(gtin); if (ids?.size > 1) ambiguous = true; if (ids?.size) matchedBy.add(kind); for (const id of ids ?? []) candidates.add(id); }
 	const normalizedMpn = normalizeMpn(identifiers.mpn); const mpnIds = normalizedMpn ? indexes.mpn.get(normalizedMpn) : undefined;
-	if (mpnIds?.size > 1) ambiguous = true; for (const id of mpnIds ?? []) candidates.add(id);
+	if (mpnIds?.size > 1) ambiguous = true; if (mpnIds?.size) matchedBy.add('mpn'); for (const id of mpnIds ?? []) candidates.add(id);
 	if (ambiguous || candidates.size > 1) return { error: 'identifier_conflict' };
 	if (candidates.size === 0) return { identifiers, unmatched: true };
-	return { identifiers, productId: [...candidates][0] };
+	return { identifiers, productId: [...candidates][0], matchedBy: [...matchedBy] };
 }
 
 function parseMoney(value) {
@@ -104,11 +104,11 @@ export function importManoManoFeed({ bytes, fileName, catalog, collectedAt }) {
 	const headers = parsed[0] ? Object.keys(parsed[0].row) : [];
 	for (const field of ['product_id', 'product_name', 'price', 'deep_link', 'image_url']) if (!headers.includes(field)) throw new Error(`Colonne Awin absente : ${field}`);
 	if (Number.isNaN(Date.parse(collectedAt))) throw new Error('Date de collecte invalide.');
-	const indexes = indexCatalog(catalog); const offers = []; const issues = []; const seen = new Set(); let unmatched = 0;
+	const indexes = indexCatalog(catalog); const offers = []; const issues = []; const matches = []; const unmatchedSamples = []; const seen = new Set(); let unmatched = 0;
 	for (const { line, row } of parsed) {
 		const merchantProductId = row.product_id;
 		const match = matchProduct(row, indexes);
-		if (match.unmatched) { unmatched++; continue; }
+		if (match.unmatched) { unmatched++; if (unmatchedSamples.length < 100) unmatchedSamples.push({ line, merchantProductId, identifiers: Object.fromEntries(Object.entries(match.identifiers).filter(([, value]) => value)) }); continue; }
 		if (match.error) { issues.push({ line, merchantProductId, reason: match.error }); continue; }
 		try {
 			if (!merchantProductId || seen.has(merchantProductId)) throw new Error(merchantProductId ? 'duplicate_product_id' : 'missing_product_id');
@@ -126,7 +126,9 @@ export function importManoManoFeed({ bytes, fileName, catalog, collectedAt }) {
 				sourceId: `awin:${AWIN_ADVERTISER_ID}:${basename(fileName)}`, sourceChecksum: checksum,
 				identifiers: Object.fromEntries(Object.entries(match.identifiers).filter(([, value]) => value)),
 			});
+			if (matches.length < 100) matches.push({ line, merchantProductId, productId: match.productId, matchedBy: match.matchedBy });
 		} catch (error) { issues.push({ line, merchantProductId, reason: error instanceof Error ? error.message : 'invalid_row' }); }
 	}
-	return { offers, report: { generatedAt: collectedAt, sourceId: `awin:${AWIN_ADVERTISER_ID}:${basename(fileName)}`, sourceChecksum: checksum, rows: parsed.length, imported: offers.length, unmatched, rejected: issues.length, issues } };
+	const rejectionReasons = Object.fromEntries([...new Set(issues.map((issue) => issue.reason))].sort().map((reason) => [reason, issues.filter((issue) => issue.reason === reason).length]));
+	return { offers, report: { generatedAt: collectedAt, sourceId: `awin:${AWIN_ADVERTISER_ID}:${basename(fileName)}`, sourceChecksum: checksum, rows: parsed.length, imported: offers.length, unmatched, rejected: issues.length, rejectionReasons, sampleLimits: { matches: 100, unmatched: 100 }, matches, unmatchedSamples, issues } };
 }

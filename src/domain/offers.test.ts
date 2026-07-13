@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { assertAllowedOfferUrl, merchantSchema, offerSchema } from './offers';
+import { assertAllowedOfferUrl, isFreshOffer, merchantSchema, offerSchema } from './offers';
 
 const merchant = merchantSchema.parse({ id: 'manomano-fr', name: 'ManoMano.fr', allowedHosts: ['manomano.fr', 'awin1.com'], trackingAdvertiserId: '17547' });
 const base = {
@@ -17,5 +17,11 @@ describe('sécurité des liens d’offre', () => {
 	it('refuse un autre annonceur derrière le même domaine Awin', () => {
 		const offer = offerSchema.parse({ ...base, url: 'https://www.awin1.com/pclick.php?p=1&a=2&m=999' });
 		expect(() => assertAllowedOfferUrl(offer, [merchant])).toThrow('Annonceur Awin non autorisé');
+	});
+
+	it('retire une offre après 48 heures sans renouvellement', () => {
+		const offer = offerSchema.parse({ ...base, url: 'https://www.awin1.com/pclick.php?p=1&a=2&m=17547' });
+		expect(isFreshOffer(offer, new Date('2026-07-15T20:00:00.000Z'))).toBe(true);
+		expect(isFreshOffer(offer, new Date('2026-07-15T20:00:00.001Z'))).toBe(false);
 	});
 });

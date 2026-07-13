@@ -23,7 +23,7 @@ L'import du flux produits ManoMano est décrit dans [docs/MANOMANO_IMPORT.md](do
 
 ## Catalogue pilote
 
-- `/calculateur/` compare 5 profils d’outils à 10 compresseurs ;
+- `/calculateur/` compare les profils d’outils à l’ensemble du catalogue de compresseurs ;
 - `/compresseurs/` publie les caractéristiques, réserves et sources de chaque modèle ;
 - `/outils-pneumatiques/` documente les besoins nominaux des outils ;
 - le moteur refuse d’utiliser le débit aspiré lorsque le débit restitué à la pression de travail est absent.
