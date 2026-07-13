@@ -22,4 +22,22 @@ describe('CompatAir Apache CSP', () => {
 		expect(config).toContain("object-src 'none'");
 		expect(config).toContain("frame-ancestors 'none'");
 	});
+
+	it('blocks executable release internals and hidden paths', () => {
+		expect(config).toContain('^/(?:_server)(?:/|$)');
+		expect(config).toContain('(?:^|/)\\.');
+		expect(config.match(/Require all denied/g)?.length).toBeGreaterThanOrEqual(2);
+	});
+
+	it('caps request metadata and bodies at the reverse proxy', () => {
+		expect(config).toContain('LimitRequestLine 2048');
+		expect(config).toContain('LimitRequestFields 50');
+		expect(config.match(/LimitRequestBody 65536/g)).toHaveLength(2);
+	});
+
+	it('sets browser isolation and disables script attributes', () => {
+		expect(config).toContain('Cross-Origin-Opener-Policy "same-origin"');
+		expect(config).toContain('Cross-Origin-Resource-Policy "same-origin"');
+		expect(config).toContain("script-src-attr 'none'");
+	});
 });

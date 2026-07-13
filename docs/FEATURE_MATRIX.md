@@ -22,10 +22,10 @@
 
 ## Prêt mais sans données partenaires
 
-- Les offres Amazon et ManoMano restent vides tant qu’aucun flux autorisé et aucune convention d’affiliation ne sont fournis.
+- Les offres Amazon et ManoMano restent vides tant qu’aucun flux autorisé et aucune convention d’affiliation ne sont fournis. Le connecteur CSV Awin pour ManoMano FR est prêt et documenté.
 - Le tri par prix, les frais de livraison, la disponibilité et les données structurées `Offer` ne s’activent qu’après validation d’un flux.
 - Les catégories d’outils sans référence constructeur sont indiquées comme à documenter. Aucun besoin générique n’est fabriqué.
-- L’import JSON et CSV est disponible. Un connecteur XML ne sera écrit qu’à partir du schéma officiel du flux concerné, avec interdiction des entités externes.
+- L’import ManoMano accepte le CSV Awin, y compris compressé, et publie uniquement les lignes appariées par EAN, GTIN ou MPN. Un connecteur XML ne sera écrit qu’à partir du schéma officiel du flux concerné, avec interdiction des entités externes.
 
 ## Opérations administrateur requises
 

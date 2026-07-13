@@ -23,4 +23,14 @@ describe('MCP core', () => {
 		const response: any = core.handle({ jsonrpc: '2.0', id: 7, method: 'tools/call', params: { name: 'size_compressor', arguments: { demands: [{ model: 'inflation', volumeLiters: 40, initialPressureBar: 3, targetPressureBar: 2.5, targetMinutes: 1 }] } } });
 		expect(response.result.isError).toBe(true);
 	});
+	it('enforces the advertised limits instead of trusting the JSON schema alone', () => {
+		const tooManyDemands = Array.from({ length: 21 }, () => ({ flowLpm: 100, pressureBar: 6 }));
+		const response: any = core.handle({ jsonrpc: '2.0', id: 8, method: 'tools/call', params: { name: 'size_compressor', arguments: { demands: tooManyDemands, safetyMargin: -1 } } });
+		expect(response.result.isError).toBe(true);
+		expect(response.result.structuredContent.error).toBe('Arguments invalides.');
+	});
+	it('rejects unexpected properties and non-finite-equivalent input shapes', () => {
+		const response: any = core.handle({ jsonrpc: '2.0', id: 9, method: 'tools/call', params: { name: 'search_compressors', arguments: { query: 'test', constructor: 'unexpected' } } });
+		expect(response.result.isError).toBe(true);
+	});
 });

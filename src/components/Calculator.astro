@@ -148,6 +148,11 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		const value = Number(raw);
 		return Number.isFinite(value) ? value : undefined;
 	}
+	function requireRange(value: number | undefined, minimum: number, maximum: number, label: string, optional = false) {
+		if (value === undefined && optional) return undefined;
+		if (value === undefined || !Number.isFinite(value) || value < minimum || value > maximum) throw new Error(`${label} doit être compris entre ${minimum} et ${maximum}.`);
+		return value;
+	}
 
 	function configFromForm() {
 		if (!form || !rows) return undefined;
@@ -157,24 +162,32 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 			const tool = tools.find((item) => item.id === id)!;
 			const quantity = Number(row.querySelector<HTMLInputElement>('[data-quantity]')!.value);
 			if (!Number.isInteger(quantity) || quantity < 1 || quantity > 20) throw new Error('Le nombre d’outils doit être compris entre 1 et 20.');
-			if (tool.demandModel === 'fixed-flow') return { model: 'fixed-flow' as const, id, flowLpm: tool.airflowLpm.typical, pressureBar: tool.workingPressureBar.typical, quantity, dutyFactor: Number(row.querySelector<HTMLSelectElement>('[data-duty]')!.value) };
+			if (tool.demandModel === 'fixed-flow') { const dutyFactor = Number(row.querySelector<HTMLSelectElement>('[data-duty]')!.value); if (![.1, .3, .6, 1].includes(dutyFactor)) throw new Error('La fréquence sélectionnée est invalide.'); return { model: 'fixed-flow' as const, id, flowLpm: tool.airflowLpm.typical, pressureBar: tool.workingPressureBar.typical, quantity, dutyFactor }; }
 			if (tool.demandModel === 'per-action') {
 				const actionsPerMinute = Number(row.querySelector<HTMLInputElement>('[data-cadence]')!.value);
-				if (!Number.isFinite(actionsPerMinute) || actionsPerMinute <= 0) throw new Error(`Saisissez une cadence supérieure à zéro pour ${tool.label}.`);
+				if (!Number.isFinite(actionsPerMinute) || actionsPerMinute <= 0 || actionsPerMinute > 10_000) throw new Error(`Saisissez une cadence valide pour ${tool.label}.`);
 				return { model: 'per-action' as const, id, litersPerAction: tool.airPerActionLiters, actionsPerMinute, pressureBar: tool.workingPressureBar.typical, quantity };
 			}
 			const volumeLiters = Number(row.querySelector<HTMLInputElement>('[data-volume]')!.value);
 			const initialPressureBar = Number(row.querySelector<HTMLInputElement>('[data-initial-pressure]')!.value);
 			const targetPressureBar = Number(row.querySelector<HTMLInputElement>('[data-target-pressure]')!.value);
 			const durationSeconds = Number(row.querySelector<HTMLInputElement>('[data-duration-seconds]')!.value);
-			if (!Number.isFinite(volumeLiters) || volumeLiters <= 0) throw new Error('Saisissez le volume interne unitaire à gonfler.');
-			if (!Number.isFinite(initialPressureBar) || initialPressureBar < 0) throw new Error('Saisissez une pression initiale positive ou nulle.');
+			if (!Number.isFinite(volumeLiters) || volumeLiters <= 0 || volumeLiters > 100_000) throw new Error('Saisissez un volume interne unitaire valide.');
+			if (!Number.isFinite(initialPressureBar) || initialPressureBar < 0 || initialPressureBar > 50) throw new Error('Saisissez une pression initiale valide.');
 			if (!Number.isFinite(targetPressureBar) || targetPressureBar <= initialPressureBar) throw new Error('La pression cible doit être supérieure à la pression initiale.');
 			if (targetPressureBar > (tool.workingPressureBar.max ?? 50)) throw new Error(`La pression cible dépasse la pression maximale publiée de ${tool.workingPressureBar.max} bar pour ${tool.label}.`);
-			if (!Number.isFinite(durationSeconds) || durationSeconds <= 0) throw new Error('Saisissez un temps cible supérieur à zéro.');
+			if (!Number.isFinite(durationSeconds) || durationSeconds <= 0 || durationSeconds > 86_400) throw new Error('Saisissez un temps cible valide.');
 			return { model: 'inflation' as const, id, volumeLiters, initialPressureBar, targetPressureBar, targetMinutes: durationSeconds / 60, quantity };
 		});
-		return { demands, mode: String(data.get('mode')), safetyMargin: Number(data.get('margin')) / 100, sessionMinutes: Number(data.get('session')), hoseLengthMeters: readNumber(data, 'hoseLength'), hoseInnerDiameterMm: readNumber(data, 'hoseDiameter'), selectedCompressor: String(data.get('compressor') ?? ''), custom: { maxPressureBar: readNumber(data, 'customPressure'), availableFadLpm: readNumber(data, 'customFad'), tankLiters: readNumber(data, 'customTank'), dutyCycle: (readNumber(data, 'customDuty') ?? 100) / 100, cutInPressureBar: readNumber(data, 'customCutIn'), cutOutPressureBar: readNumber(data, 'customCutOut') } };
+		const mode = String(data.get('mode')); if (!['successive', 'simultaneous'].includes(mode)) throw new Error('Le mode d’utilisation est invalide.');
+		const safetyMargin = requireRange(Number(data.get('margin')) / 100, 0, .5, 'La marge');
+		const sessionMinutes = requireRange(Number(data.get('session')), 1, 1_440, 'La durée de session');
+		const hoseLengthMeters = requireRange(readNumber(data, 'hoseLength'), 0, 500, 'La longueur du flexible', true);
+		const hoseInnerDiameterMm = requireRange(readNumber(data, 'hoseDiameter'), 1, 100, 'Le diamètre du flexible', true);
+		const selectedCompressor = String(data.get('compressor') ?? ''); if (!['', 'custom', ...compressors.map((item) => item.id)].includes(selectedCompressor)) throw new Error('Le compresseur sélectionné est invalide.');
+		const custom = { maxPressureBar: requireRange(readNumber(data, 'customPressure'), .1, 50, 'La pression maximale personnalisée', selectedCompressor !== 'custom'), availableFadLpm: requireRange(readNumber(data, 'customFad'), 1, 20_000, 'Le FAD personnalisé', true), tankLiters: requireRange(readNumber(data, 'customTank'), 0, 20_000, 'Le volume personnalisé', true), dutyCycle: requireRange((readNumber(data, 'customDuty') ?? 100) / 100, .01, 1, 'Le cycle personnalisé'), cutInPressureBar: requireRange(readNumber(data, 'customCutIn'), 0, 50, 'La pression de réenclenchement', true), cutOutPressureBar: requireRange(readNumber(data, 'customCutOut'), .1, 50, 'La pression d’arrêt', true) };
+		if (custom.cutInPressureBar !== undefined && custom.cutOutPressureBar !== undefined && custom.cutInPressureBar >= custom.cutOutPressureBar) throw new Error('La pression de réenclenchement doit être inférieure à la pression d’arrêt.');
+		return { demands, mode, safetyMargin, sessionMinutes, hoseLengthMeters, hoseInnerDiameterMm, selectedCompressor, custom };
 	}
 
 	function compressorInput(config: ReturnType<typeof configFromForm>, requiredPressureBar: number) {
@@ -229,10 +242,24 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		return btoa(encodeURIComponent(JSON.stringify(config)).replace(/%([0-9A-F]{2})/g, (_, hex) => String.fromCharCode(Number.parseInt(hex, 16)))).replaceAll('+', '-').replaceAll('/', '_').replaceAll('=', '');
 	}
 	function decodeConfig(encoded: string) {
+		if (!/^[A-Za-z0-9_-]{1,16000}$/.test(encoded)) return undefined;
 		try { const base64 = encoded.replaceAll('-', '+').replaceAll('_', '/'); const binary = atob(base64); const percent = [...binary].map((char) => `%${char.charCodeAt(0).toString(16).padStart(2, '0')}`).join(''); return JSON.parse(decodeURIComponent(percent)); } catch { return undefined; }
 	}
+	function isSharedConfig(config: any) {
+		if (!config || typeof config !== 'object' || !Array.isArray(config.demands) || config.demands.length < 1 || config.demands.length > 8) return false;
+		if (!['successive', 'simultaneous'].includes(config.mode) || !Number.isFinite(config.safetyMargin) || config.safetyMargin < 0 || config.safetyMargin > .5) return false;
+		if (!Number.isFinite(config.sessionMinutes) || config.sessionMinutes < 1 || config.sessionMinutes > 1_440) return false;
+		if (!['', 'custom', ...compressors.map((item) => item.id)].includes(config.selectedCompressor)) return false;
+		return config.demands.every((demand: any) => {
+			if (!demand || typeof demand !== 'object' || !Number.isInteger(demand.quantity) || demand.quantity < 1 || demand.quantity > 20) return false;
+			const tool = tools.find((item) => item.id === demand.id); if (!tool) return false;
+			if (tool.demandModel === 'fixed-flow') return demand.model === 'fixed-flow' && [.1, .3, .6, 1].includes(demand.dutyFactor);
+			if (tool.demandModel === 'per-action') return demand.model === 'per-action' && Number.isFinite(demand.actionsPerMinute) && demand.actionsPerMinute > 0 && demand.actionsPerMinute <= 10_000;
+			return demand.model === 'inflation' && Number.isFinite(demand.volumeLiters) && demand.volumeLiters > 0 && demand.volumeLiters <= 100_000 && Number.isFinite(demand.initialPressureBar) && demand.initialPressureBar >= 0 && Number.isFinite(demand.targetPressureBar) && demand.targetPressureBar > demand.initialPressureBar && demand.targetPressureBar <= (tool.workingPressureBar.max ?? 50) && Number.isFinite(demand.targetMinutes) && demand.targetMinutes > 0 && demand.targetMinutes <= 1_440;
+		});
+	}
 	function restoreConfig(config: any) {
-		if (!form || !rows || !config?.demands) return;
+		if (!form || !rows || !isSharedConfig(config)) return;
 		rows.replaceChildren(); for (const demand of config.demands.slice(0, 8)) addDemand(demand.id, demand.quantity, demand);
 		for (const [name, value] of Object.entries({ mode: config.mode, margin: config.safetyMargin * 100, session: config.sessionMinutes, hoseLength: config.hoseLengthMeters, hoseDiameter: config.hoseInnerDiameterMm, compressor: config.selectedCompressor, customPressure: config.custom?.maxPressureBar, customFad: config.custom?.availableFadLpm, customTank: config.custom?.tankLiters, customDuty: config.custom?.dutyCycle * 100, customCutIn: config.custom?.cutInPressureBar, customCutOut: config.custom?.cutOutPressureBar })) { const field = form.elements.namedItem(name); if (field instanceof HTMLInputElement || field instanceof HTMLSelectElement) field.value = value === undefined ? '' : String(value); }
 		form.querySelector<HTMLElement>('[data-custom-compressor]')!.hidden = config.selectedCompressor !== 'custom';
@@ -245,7 +272,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 
 	const initialTool = new URLSearchParams(window.location.search).get('outil') ?? undefined;
 	const hashConfig = window.location.hash.startsWith('#config=') ? decodeConfig(window.location.hash.slice(8)) : undefined;
-	if (hashConfig) restoreConfig(hashConfig); else addDemand(initialTool);
+	if (hashConfig && isSharedConfig(hashConfig)) restoreConfig(hashConfig); else addDemand(initialTool);
 
 	form?.addEventListener('submit', (event) => {
 		event.preventDefault(); if (!output || !list || !evaluated) return;

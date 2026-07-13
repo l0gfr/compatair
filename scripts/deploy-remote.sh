@@ -32,6 +32,11 @@ while IFS= read -r entry; do
 	esac
 done < <(tar -tzf "$archive")
 
+if tar -tvzf "$archive" | awk '$1 ~ /^[lhcbp]/ { found=1 } END { exit !found }'; then
+	echo "Release archive contains a link or special file" >&2
+	exit 2
+fi
+
 releases="$deploy_root/releases"
 release="$releases/$release_id"
 incoming="$releases/.incoming-$release_id"

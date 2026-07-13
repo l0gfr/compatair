@@ -27,6 +27,9 @@
     SSLEngine on
     SSLCertificateFile /etc/letsencrypt/live/compatair.fr/fullchain.pem
     SSLCertificateKeyFile /etc/letsencrypt/live/compatair.fr/privkey.pem
+	LimitRequestLine 2048
+	LimitRequestFields 50
+	LimitRequestFieldSize 8190
 
     RewriteEngine On
     RewriteCond %{HTTP_HOST} !^compatair\.fr$ [NC]
@@ -67,6 +70,15 @@
 	<Location "/mcp">
 		LimitRequestBody 65536
 	</Location>
+	<Location "/events">
+		LimitRequestBody 65536
+	</Location>
+	<LocationMatch "^/(?:_server)(?:/|$)">
+		Require all denied
+	</LocationMatch>
+	<LocationMatch "(?:^|/)\.">
+		Require all denied
+	</LocationMatch>
 
     <Directory /var/www/html/compatair/current>
         Options -Indexes -ExecCGI
@@ -76,15 +88,26 @@
 
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
     Header always set X-Content-Type-Options "nosniff"
+	Header always set X-Frame-Options "DENY"
+	Header always set X-Permitted-Cross-Domain-Policies "none"
+	Header always set Cross-Origin-Opener-Policy "same-origin"
+	Header always set Cross-Origin-Resource-Policy "same-origin"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
     Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
-	Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; script-src 'self' 'sha256-cbtovV2785saS7qy4C2S6gU+doEchK8H8khhOWmyUL0='; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests" "expr=%{REQUEST_URI} !~ m#^/stats/#"
+	Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-src 'none'; frame-ancestors 'none'; form-action 'self'; media-src 'none'; worker-src 'none'; upgrade-insecure-requests" "expr=%{REQUEST_URI} !~ m#^/stats/#"
+	Header onsuccess unset Cache-Control
+	Header always unset Cache-Control
+	Header always set Cache-Control "no-cache"
 
     <FilesMatch "\.(?:css|js|svg|png|jpg|jpeg|webp|avif|woff2)$">
-        Header set Cache-Control "public, max-age=31536000, immutable"
+		Header onsuccess unset Cache-Control
+		Header always unset Cache-Control
+		Header always set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
 	<LocationMatch "^/data/(?:catalog|offers)\.json$">
-		Header set Cache-Control "public, max-age=300"
+		Header onsuccess unset Cache-Control
+		Header always unset Cache-Control
+		Header always set Cache-Control "public, max-age=300"
 	</LocationMatch>
 
     ErrorLog ${APACHE_LOG_DIR}/compatair-ssl-error.log

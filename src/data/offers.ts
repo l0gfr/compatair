@@ -3,7 +3,7 @@ import snapshot from './offers.snapshot.json';
 
 export const merchants: Merchant[] = [
 	merchantSchema.parse({ id: 'amazon-fr', name: 'Amazon.fr', allowedHosts: ['amazon.fr'] }),
-	merchantSchema.parse({ id: 'manomano-fr', name: 'ManoMano.fr', allowedHosts: ['manomano.fr'] }),
+	merchantSchema.parse({ id: 'manomano-fr', name: 'ManoMano.fr', allowedHosts: ['manomano.fr', 'awin1.com'], trackingAdvertiserId: '17547' }),
 ];
 
 // Aucune offre n’est publiée avant réception et validation d’un flux partenaire autorisé.

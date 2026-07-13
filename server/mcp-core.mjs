@@ -1,9 +1,62 @@
 const ENGINE_VERSION = '1.1.0';
 const PROTOCOL_VERSION = '2025-06-18';
 const STANDARD_ATMOSPHERE_BAR = 1.01325;
+const MAX_SHORT_TEXT = 256;
+
+function isRecord(value) { return value !== null && typeof value === 'object' && !Array.isArray(value); }
+function hasOnlyKeys(value, allowed) { return isRecord(value) && Object.keys(value).every((key) => allowed.includes(key)); }
+function isShortString(value) { return typeof value === 'string' && value.length <= MAX_SHORT_TEXT; }
+function isFiniteNumber(value, minimum, maximum, exclusiveMinimum = false) {
+	return typeof value === 'number' && Number.isFinite(value) && (exclusiveMinimum ? value > minimum : value >= minimum) && (maximum === undefined || value <= maximum);
+}
+function isOptionalInteger(value, minimum, maximum) { return value === undefined || (Number.isInteger(value) && value >= minimum && value <= maximum); }
+
+function validDemand(item) {
+	if (!isRecord(item)) return false;
+	if (item.model === 'per-action') return hasOnlyKeys(item, ['model', 'litersPerAction', 'actionsPerMinute', 'pressureBar', 'quantity'])
+		&& isFiniteNumber(item.litersPerAction, 0, undefined, true) && isFiniteNumber(item.actionsPerMinute, 0, undefined, true)
+		&& isFiniteNumber(item.pressureBar, 0, undefined, true) && isOptionalInteger(item.quantity, 1, 20);
+	if (item.model === 'inflation') return hasOnlyKeys(item, ['model', 'volumeLiters', 'initialPressureBar', 'targetPressureBar', 'targetMinutes', 'quantity'])
+		&& isFiniteNumber(item.volumeLiters, 0, undefined, true) && isFiniteNumber(item.initialPressureBar, 0)
+		&& isFiniteNumber(item.targetPressureBar, 0, undefined, true) && item.targetPressureBar > item.initialPressureBar
+		&& isFiniteNumber(item.targetMinutes, 0, undefined, true) && isOptionalInteger(item.quantity, 1, 20);
+	return (item.model === undefined || item.model === 'fixed-flow') && hasOnlyKeys(item, ['model', 'flowLpm', 'pressureBar', 'quantity', 'dutyFactor'])
+		&& isFiniteNumber(item.flowLpm, 0, undefined, true) && isFiniteNumber(item.pressureBar, 0, undefined, true)
+		&& isOptionalInteger(item.quantity, 1, 20) && (item.dutyFactor === undefined || isFiniteNumber(item.dutyFactor, 0, 1, true));
+}
+
+function validToolArguments(name, args) {
+	if (!isRecord(args)) return false;
+	switch (name) {
+		case 'search_tools': return hasOnlyKeys(args, ['query', 'category', 'cursor', 'limit'])
+			&& (args.query === undefined || isShortString(args.query)) && (args.category === undefined || isShortString(args.category))
+			&& (args.cursor === undefined || isShortString(args.cursor)) && isOptionalInteger(args.limit, 1, 50);
+		case 'get_tool_requirements': return hasOnlyKeys(args, ['id']) && isShortString(args.id) && args.id.length > 0;
+		case 'search_compressors': return hasOnlyKeys(args, ['query', 'minTankLiters', 'minPressureBar', 'oilType', 'cursor', 'limit'])
+			&& (args.query === undefined || isShortString(args.query)) && (args.cursor === undefined || isShortString(args.cursor))
+			&& (args.minTankLiters === undefined || isFiniteNumber(args.minTankLiters, 0)) && (args.minPressureBar === undefined || isFiniteNumber(args.minPressureBar, 0))
+			&& (args.oilType === undefined || ['oil', 'oil-free'].includes(args.oilType)) && isOptionalInteger(args.limit, 1, 50);
+		case 'get_compressor_specs': return hasOnlyKeys(args, ['id']) && isShortString(args.id) && args.id.length > 0;
+		case 'size_compressor': return hasOnlyKeys(args, ['demands', 'mode', 'safetyMargin']) && Array.isArray(args.demands)
+			&& args.demands.length >= 1 && args.demands.length <= 20 && args.demands.every(validDemand)
+			&& (args.mode === undefined || ['simultaneous', 'successive'].includes(args.mode))
+			&& (args.safetyMargin === undefined || isFiniteNumber(args.safetyMargin, 0, 1));
+		case 'check_compatibility': return hasOnlyKeys(args, ['compressorId', 'toolId', 'safetyMargin'])
+			&& isShortString(args.compressorId) && args.compressorId.length > 0 && isShortString(args.toolId) && args.toolId.length > 0
+			&& (args.safetyMargin === undefined || isFiniteNumber(args.safetyMargin, 0, 1));
+		case 'compare_compressors': return hasOnlyKeys(args, ['ids']) && Array.isArray(args.ids) && args.ids.length >= 2 && args.ids.length <= 3
+			&& args.ids.every((id) => isShortString(id) && id.length > 0);
+		case 'find_accessories': return hasOnlyKeys(args, ['toolId']) && isShortString(args.toolId) && args.toolId.length > 0;
+		case 'find_offers': return hasOnlyKeys(args, ['productId', 'cursor', 'limit']) && isShortString(args.productId) && args.productId.length > 0
+			&& (args.cursor === undefined || isShortString(args.cursor)) && isOptionalInteger(args.limit, 1, 50);
+		default: return true;
+	}
+}
 
 function page(values, cursor, limit = 20) {
-	const start = cursor ? Number.parseInt(Buffer.from(cursor, 'base64url').toString('utf8'), 10) : 0;
+	let decoded = '';
+	try { decoded = typeof cursor === 'string' && cursor.length <= MAX_SHORT_TEXT ? Buffer.from(cursor, 'base64url').toString('utf8') : ''; } catch {}
+	const start = /^\d{1,10}$/.test(decoded) ? Number.parseInt(decoded, 10) : 0;
 	const safeStart = Number.isInteger(start) && start >= 0 ? start : 0;
 	const safeLimit = Math.min(Math.max(Number(limit) || 20, 1), 50);
 	const items = values.slice(safeStart, safeStart + safeLimit);
@@ -75,6 +128,7 @@ function failure(message, catalog) { return { content: [{ type: 'text', text: me
 export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVersion: 'empty' }) {
 	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item])); const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
 	function callTool(name, args = {}) {
+		if (!validToolArguments(name, args)) return failure('Arguments invalides.', catalog);
 		switch (name) {
 			case 'search_tools': { const q = String(args.query ?? '').toLowerCase(); const values = catalog.tools.filter((item) => (!q || `${item.label} ${item.category} ${item.brand} ${item.model}`.toLowerCase().includes(q)) && (!args.category || item.category === args.category)); const found = page(values, args.cursor, args.limit); return result({ tools: found.items, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog); }
 			case 'get_tool_requirements': { const item = toolMap.get(args.id); return item ? result({ tool: item }, catalog) : failure('Outil inconnu.', catalog); }
@@ -131,16 +185,17 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 		handle(message) {
 			const { id, method, params = {} } = message;
 			if (method === 'notifications/initialized' || method?.startsWith('notifications/')) return null;
+			if (!isRecord(params)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Paramètres invalides.' } };
 			let value;
 			switch (method) {
 				case 'initialize': value = { protocolVersion: PROTOCOL_VERSION, capabilities: { tools: { listChanged: false }, resources: { subscribe: false, listChanged: false }, prompts: { listChanged: false } }, serverInfo: { name: 'compatair-mcp', title: 'CompatAir MCP', version: ENGINE_VERSION }, instructions: 'Serveur en lecture seule. Conserver insufficient_data et les versions dans chaque résultat.' }; break;
 				case 'ping': value = {}; break;
-				case 'tools/list': { const found = page(toolDefinitions, params.cursor, 20); value = { tools: found.items, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }; break; }
-				case 'tools/call': { const called = callTool(params.name, params.arguments); if (called === undefined) return { jsonrpc: '2.0', id, error: { code: -32602, message: `Outil inconnu : ${params.name}` } }; value = called; break; }
+				case 'tools/list': { if (params.cursor !== undefined && !isShortString(params.cursor)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Curseur invalide.' } }; const found = page(toolDefinitions, params.cursor, 20); value = { tools: found.items, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }; break; }
+				case 'tools/call': { if (!isShortString(params.name)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Nom d’outil invalide.' } }; const called = callTool(params.name, params.arguments ?? {}); if (called === undefined) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Outil inconnu.' } }; value = called; break; }
 				case 'resources/list': value = { resources }; break;
-				case 'resources/read': { const content = readResource(params.uri); if (!content) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Ressource inconnue.' } }; value = { contents: [{ uri: params.uri, mimeType: 'application/json', text: JSON.stringify(content) }] }; break; }
+				case 'resources/read': { if (!isShortString(params.uri)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'URI invalide.' } }; const content = readResource(params.uri); if (!content) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Ressource inconnue.' } }; value = { contents: [{ uri: params.uri, mimeType: 'application/json', text: JSON.stringify(content) }] }; break; }
 				case 'prompts/list': value = { prompts }; break;
-				case 'prompts/get': { const prompt = prompts.find((item) => item.name === params.name); if (!prompt) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Prompt inconnu.' } }; const supplied = Object.values(params.arguments ?? {}).join('\n'); value = { description: prompt.description, messages: [{ role: 'user', content: { type: 'text', text: `${prompt.description}\n\n${supplied}\n\nUtiliser uniquement les données et outils CompatAir. Signaler toute donnée insuffisante.` } }] }; break; }
+				case 'prompts/get': { const prompt = isShortString(params.name) ? prompts.find((item) => item.name === params.name) : undefined; if (!prompt) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Prompt inconnu.' } }; const promptArguments = params.arguments ?? {}; if (!isRecord(promptArguments) || Object.values(promptArguments).some((item) => typeof item !== 'string' || item.length > 4_000)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Arguments de prompt invalides.' } }; const supplied = Object.values(promptArguments).join('\n').slice(0, 8_000); value = { description: prompt.description, messages: [{ role: 'user', content: { type: 'text', text: `${prompt.description}\n\n${supplied}\n\nUtiliser uniquement les données et outils CompatAir. Signaler toute donnée insuffisante.` } }] }; break; }
 				default: return { jsonrpc: '2.0', id, error: { code: -32601, message: 'Méthode inconnue.' } };
 			}
 			return { jsonrpc: '2.0', id, result: value };

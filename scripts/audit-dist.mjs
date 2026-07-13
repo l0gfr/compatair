@@ -1,8 +1,8 @@
-import { readdir, readFile, stat } from 'node:fs/promises';
+import { lstat, readdir, readFile } from 'node:fs/promises';
 import { join, relative, resolve } from 'node:path';
 
 const root = resolve('dist'); const errors = []; const htmlFiles = [];
-async function walk(directory) { for (const name of await readdir(directory)) { const file = join(directory, name); const info = await stat(file); if (info.isDirectory()) await walk(file); else if (name.endsWith('.html')) htmlFiles.push(file); } }
+async function walk(directory) { for (const name of await readdir(directory)) { const file = join(directory, name); const info = await lstat(file); const label = relative(root, file); if (info.isSymbolicLink()) errors.push(`${label}: lien symbolique interdit dans l’artifact`); else if (info.isDirectory()) await walk(file); else if (!info.isFile()) errors.push(`${label}: type de fichier spécial interdit dans l’artifact`); else if (name.endsWith('.map')) errors.push(`${label}: source map publique interdite`); else if (name.endsWith('.html')) htmlFiles.push(file); } }
 await walk(root);
 const titles = new Map(); const descriptions = new Map(); const sitePaths = new Set(htmlFiles.map((file) => { const rel = relative(root, file); return rel === 'index.html' ? '/' : `/${rel.replace(/index\.html$/, '')}`; }));
 for (const file of htmlFiles) {

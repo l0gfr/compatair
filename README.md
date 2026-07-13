@@ -19,6 +19,8 @@ pnpm security:audit
 
 Le site est généré statiquement dans `dist/`. La logique métier se trouve dans `src/domain` et ne dépend pas d’Astro. Le détail du périmètre livré et des dépendances externes se trouve dans [docs/FEATURE_MATRIX.md](docs/FEATURE_MATRIX.md).
 
+L'import du flux produits ManoMano est décrit dans [docs/MANOMANO_IMPORT.md](docs/MANOMANO_IMPORT.md).
+
 ## Catalogue pilote
 
 - `/calculateur/` compare 5 profils d’outils à 10 compresseurs ;
