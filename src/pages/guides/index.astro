@@ -3,9 +3,17 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const guides = (await getCollection('guides')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const pillars = guides.filter((guide) => guide.data.readingTime >= 12).sort((a, b) => b.data.readingTime - a.data.readingTime);
+const practicalGuides = guides.filter((guide) => guide.data.readingTime < 12);
 ---
 
 <BaseLayout title="Guides sur les compresseurs et outils pneumatiques | CompatAir" description="Comprendre le débit restitué, choisir une cuve, dimensionner un flexible et alimenter correctement chaque outil pneumatique.">
 	<section class="page-hero compact"><div class="container"><p class="eyebrow">Base de connaissances</p><h1>Comprendre avant d’acheter</h1><p class="lead">Des dossiers techniques sourcés pour distinguer les caractéristiques qui comptent des arguments commerciaux qui induisent en erreur.</p></div></section>
-	<section class="section"><div class="container guide-grid">{guides.map((guide) => <article class="guide-card"><p class="guide-meta">{guide.data.category} · {guide.data.readingTime} min</p><h2><a href={`/guides/${guide.id}/`}>{guide.data.title}</a></h2><p>{guide.data.description}</p><a class="text-link" href={`/guides/${guide.id}/`}>Lire le dossier</a></article>)}</div></section>
+	<section class="section pillar-section">
+		<div class="container">
+			<div class="section-head split-head"><div><p class="eyebrow">Dossiers de référence</p><h2>Du besoin réel à l’installation</h2></div><p>Quatre formats longs pour dimensionner, comparer, installer et entretenir sans remplacer une donnée manquante par une supposition.</p></div>
+			<div class="pillar-grid">{pillars.map((guide, index) => <article class:list={["pillar-card", { lead: index === 0 }]}><div class="pillar-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</div><div><p class="guide-meta">{guide.data.category} · {guide.data.readingTime} min</p><h2><a href={`/guides/${guide.id}/`}>{guide.data.title}</a></h2><p>{guide.data.description}</p><a class="text-link" href={`/guides/${guide.id}/`}>Lire le dossier complet</a></div></article>)}</div>
+		</div>
+	</section>
+	<section class="section practical-guides"><div class="container"><div class="section-head"><p class="eyebrow">Guides pratiques</p><h2>Une question, une réponse vérifiable</h2></div><div class="guide-grid">{practicalGuides.map((guide) => <article class="guide-card"><p class="guide-meta">{guide.data.category} · {guide.data.readingTime} min</p><h2><a href={`/guides/${guide.id}/`}>{guide.data.title}</a></h2><p>{guide.data.description}</p><a class="text-link" href={`/guides/${guide.id}/`}>Lire le guide</a></article>)}</div></div></section>
 </BaseLayout>
