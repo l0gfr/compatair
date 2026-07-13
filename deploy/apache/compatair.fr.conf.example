@@ -60,7 +60,9 @@
 		Header always unset Cache-Control
 		Header always set Cache-Control "private, no-store, max-age=0"
 		Header always set X-Robots-Tag "noindex, nofollow, noarchive"
-		Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"
+		Header onsuccess unset Content-Security-Policy
+		Header always unset Content-Security-Policy
+		Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; font-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"
 	</Location>
 	<Location "/mcp">
 		LimitRequestBody 65536
@@ -76,7 +78,7 @@
     Header always set X-Content-Type-Options "nosniff"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
     Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
-    Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; script-src 'self' 'sha256-cbtovV2785saS7qy4C2S6gU+doEchK8H8khhOWmyUL0='; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests"
+	Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; script-src 'self' 'sha256-cbtovV2785saS7qy4C2S6gU+doEchK8H8khhOWmyUL0='; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests" "expr=%{REQUEST_URI} !~ m#^/stats/#"
 
     <FilesMatch "\.(?:css|js|svg|png|jpg|jpeg|webp|avif|woff2)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
