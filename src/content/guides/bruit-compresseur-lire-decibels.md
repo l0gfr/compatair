@@ -2,6 +2,7 @@
 title: "Bruit d’un compresseur : comment comparer les décibels sans se tromper"
 description: "Un nombre en dB n’est comparable que si l’indicateur et les conditions de mesure sont identiques. Distinguez pression et puissance acoustiques."
 pubDate: 2026-07-13
+updatedDate: 2026-07-14
 category: "Comprendre"
 readingTime: 6
 featured: false
@@ -14,7 +15,7 @@ sources:
 
 Comparer deux compresseurs à partir d’un nombre suivi de « dB » peut produire une fausse hiérarchie. Il faut d’abord vérifier ce qui a été mesuré : niveau de pression acoustique au poste d’utilisation, niveau de puissance acoustique de la machine, distance, environnement et méthode.
 
-<svg viewBox="0 0 760 300" role="img" aria-labelledby="noise-title noise-desc" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 760 300" role="img" aria-labelledby="noise-title noise-desc" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:1.5rem">
   <title id="noise-title">Conditions d’une comparaison acoustique valable</title><desc id="noise-desc">Deux valeurs en décibels ne sont comparables que si elles utilisent le même indicateur, la même distance et des conditions de mesure compatibles.</desc>
   <rect width="760" height="300" rx="18" fill="#eef2e9"/><text x="40" y="48" fill="#102018" font-size="22" font-weight="700">Avant de classer deux valeurs en dB</text>
   <rect x="40" y="82" width="200" height="74" rx="10" fill="#2f7659"/><text x="83" y="126" fill="white" font-size="19" font-weight="700">Même indicateur</text>
@@ -52,6 +53,8 @@ Le bruit perçu dépend aussi de l’installation : local réverbérant, sol, vi
 - comparer des valeurs issues de méthodes compatibles ;
 - ne pas déduire une exposition professionnelle du seul chiffre produit ;
 - consulter la notice et les exigences de protection applicables.
+
+Pour passer de la lecture acoustique au choix d’un modèle, consultez le dossier [choisir un compresseur silencieux pour l’atelier](/guides/choisir-compresseur-silencieux-atelier/).
 
 ## Sources
 

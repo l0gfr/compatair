@@ -24,16 +24,22 @@ Construire d'abord le catalogue public qui sert de référentiel d'appariement :
 pnpm build
 ```
 
-Lancer ensuite l'import local :
+Lancer ensuite l’import local :
 
 ```sh
 pnpm data:import-offers -- --input /chemin/prive/manomano.csv.gz
 ```
 
+Avant toute publication, exécuter une simulation. Elle génère le rapport mais ne modifie jamais le snapshot versionné, y compris lorsqu’aucune ligne n’est appariée :
+
+```sh
+pnpm data:import-offers -- --input /chemin/prive/manomano.csv.gz --dry-run
+```
+
 Le script écrit :
 
 - `src/data/offers.snapshot.json`, uniquement si au moins une offre est appariée ;
-- `manomano-import-report.json`, ignoré par Git, avec les volumes importés, non appariés et rejetés.
+- `manomano-import-report.json`, ignoré par Git, avec les volumes importés, les motifs de rejet et des échantillons bornés de correspondances et de lignes non appariées.
 
 Une date reproductible peut être passée avec `--collected-at 2026-07-13T20:00:00.000Z`. Les chemins peuvent être adaptés avec `--catalog`, `--output` et `--report`.
 
@@ -48,3 +54,5 @@ Une date reproductible peut être passée avec `--collected-at 2026-07-13T20:00:
 - Une offre disparaît du site après 48 heures sans nouvel import.
 
 Après import, exécuter `pnpm validate:full` et examiner le rapport avant de versionner le snapshot.
+
+Un nouvel import remplace le snapshot précédent. L’identifiant public d’une offre reste stable tant que `product_id` ne change pas, tandis que la date de collecte et le checksum sont renouvelés. Une offre absente du nouveau snapshot disparaît immédiatement ; une offre non renouvelée n’est plus publiée après 48 heures.

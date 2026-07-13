@@ -1,13 +1,14 @@
 ---
 import { compressors, tools } from '../data/catalog';
 import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
+import { CALCULATION_VERSION } from '../domain/sizing';
 ---
 
 <div class="calculator calculator-v2" data-calculator>
 	<form class="calculator-form" data-calculator-form>
 		<div class="calculator-form-head">
 			<div><p class="eyebrow">Configuration</p><h2>Décrire le besoin réel</h2></div>
-			<span class="version-chip">Moteur 1.1.0</span>
+			<span class="version-chip">Moteur {CALCULATION_VERSION}</span>
 		</div>
 
 		<fieldset class="calculator-fieldset">

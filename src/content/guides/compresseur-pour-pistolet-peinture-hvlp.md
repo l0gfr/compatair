@@ -2,8 +2,9 @@
 title: "Quel compresseur pour un pistolet à peinture HVLP ?"
 description: "Comparer un pistolet HVLP au débit restitué du compresseur, avec l’exemple documenté du G-550F ABAC à 220 L/min et 4 bar."
 pubDate: 2026-07-13
+updatedDate: 2026-07-14
 category: "Choisir"
-readingTime: 7
+readingTime: 8
 featured: false
 relatedCalculatorTool: abac-g-550f
 sources:
@@ -41,6 +42,12 @@ Le raccord de 1/4 pouce figure dans la documentation du G-550F. Cette dimension 
 Le débit disponible au pistolet peut être inférieur au débit mesuré en sortie de compresseur si le réseau crée une perte. Le calculateur signale ce risque, mais ne chiffre aucune perte sans courbe ou mesure. Le guide sur le [diamètre du flexible](/guides/diametre-longueur-flexible-air-comprime/) explique les données à relever.
 
 Testez le [G-550F dans le calculateur](/calculateur/?outil=abac-g-550f) et consultez la fiche source du compresseur avant toute décision.
+
+## Cas de la peinture automobile
+
+Le débit et la pression valident seulement l’alimentation nominale du pistolet. Ils ne suffisent pas à valider une finition automobile : la buse et le produit appliqué, la préparation, la filtration, l’humidité et les pertes du réseau doivent aussi être vérifiés dans leurs documentations respectives.
+
+La comparaison [LVLP face à HVLP](/guides/pistolet-lvlp-vs-hvlp-compresseur/) montre pourquoi la référence exacte compte davantage que l’étiquette de famille. Le guide [qualité de l’air comprimé](/guides/qualite-air-comprime-iso-8573-1/) traite séparément particules, eau et huile.
 
 ## Sources
 
