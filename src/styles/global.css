@@ -92,6 +92,7 @@ footer { margin-top: 4rem; padding: 2.5rem 0; border-top: 1px solid var(--line);
 .field label { font-weight: 750; }
 .field select { width: 100%; min-height: 48px; padding: .7rem; border: 1px solid #aab9ae; border-radius: .5rem; color: var(--ink); background: white; font: inherit; }
 .calculator-form .button { width: 100%; border: 0; cursor: pointer; }
+.form-disclaimer { margin: 0 0 1.1rem; color: var(--muted); font-size: .85rem; }
 .calculator-output[hidden] { display: none; }
 .result-summary { padding-bottom: 1.25rem; border-bottom: 1px solid var(--line); }
 .result-summary strong { font-size: clamp(1.6rem, 4vw, 2.5rem); }
@@ -144,12 +145,42 @@ footer { margin-top: 4rem; padding: 2.5rem 0; border-top: 1px solid var(--line);
 .button.primary.inverse { color: var(--ink); background: var(--accent); border-color: var(--accent); }
 .button.inverse-outline { color: white; border-color: #91a096; }
 .home-calculator { padding-top: 0; }
+.guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.guide-card { padding: clamp(1.25rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: .9rem; background: var(--panel); }
+.guide-card h2 { margin: .5rem 0 .8rem; font-size: clamp(1.45rem, 3vw, 2rem); }
+.guide-card h3 { margin: .5rem 0 .8rem; font-size: clamp(1.45rem, 3vw, 2rem); }
+.guide-card h2 a, .guide-card h3 a { text-decoration: none; }
+.guide-card p { color: var(--muted); }
+.guide-meta { color: var(--brand) !important; font-size: .76rem; font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
+.text-link { color: var(--brand); font-weight: 800; text-underline-offset: .2em; }
+.editorial-layout { display: grid; grid-template-columns: minmax(0, 760px) 260px; gap: clamp(2rem, 6vw, 5rem); align-items: start; padding-block: 2rem 5rem; }
+.editorial-main { min-width: 0; }
+.article-head { padding-bottom: 2rem; border-bottom: 1px solid var(--line); }
+.article-head h1 { font-size: clamp(2.5rem, 6vw, 4.7rem); }
+.article-byline { margin-top: 1.5rem; color: var(--muted); font-size: .85rem; }
+.article-body { font-size: 1.05rem; }
+.article-body h2 { margin: 3.5rem 0 1rem; font-size: clamp(1.8rem, 4vw, 2.6rem); scroll-margin-top: 2rem; }
+.article-body h3 { margin: 2rem 0 .75rem; font-size: 1.35rem; }
+.article-body p, .article-body li { color: #35473d; }
+.article-body a { color: var(--brand-dark); text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.article-body blockquote { margin: 2rem 0; padding: 1rem 1.25rem; border-left: 4px solid var(--accent); background: white; }
+.article-body blockquote p { margin: 0; color: var(--ink); font-weight: 700; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .92rem; }
+.article-body th, .article-body td { padding: .7rem; border: 1px solid var(--line); text-align: left; }
+.article-body th { background: white; }
+.article-body svg { display: block; width: 100%; height: auto; margin: 2rem 0 2.75rem; border-radius: .8rem; }
+.article-aside { position: sticky; top: 1.5rem; padding: 1.2rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--panel); }
+.article-aside ol { margin: 1rem 0 1.5rem; padding-left: 1.2rem; }
+.article-aside li { margin: .55rem 0; color: var(--muted); font-size: .86rem; }
+.article-aside a:not(.button) { color: inherit; text-decoration: none; }
+.article-aside .button { width: 100%; }
 
 @media (max-width: 760px) {
 	.nav-links { display: none; }
-	.grid, .callout, .calculator, .product-grid { grid-template-columns: 1fr; }
+	.grid, .callout, .calculator, .product-grid, .guide-grid, .editorial-layout { grid-template-columns: 1fr; }
 	.field-row { grid-template-columns: 1fr; gap: 0; }
 	.result-card-head, .product-detail-head { align-items: start; flex-direction: column; }
 	.product-monogram.large { width: 4rem; height: 4rem; font-size: 1.8rem; }
 	.spec-table div { grid-template-columns: 1fr; gap: .15rem; }
+	.article-aside { position: static; }
 }

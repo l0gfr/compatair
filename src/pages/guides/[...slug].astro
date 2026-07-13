@@ -1,0 +1,36 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+	const guides = await getCollection('guides');
+	return guides.map((guide) => ({ params: { slug: guide.id }, props: { guide } }));
+}
+
+const { guide } = Astro.props;
+const { Content, headings } = await render(guide);
+const published = guide.data.pubDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+const articleJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'TechArticle',
+	headline: guide.data.title,
+	description: guide.data.description,
+	datePublished: guide.data.pubDate.toISOString(),
+	dateModified: (guide.data.updatedDate ?? guide.data.pubDate).toISOString(),
+	mainEntityOfPage: `https://compatair.fr/guides/${guide.id}/`,
+	author: { '@type': 'Organization', name: 'CompatAir' },
+	publisher: { '@type': 'Organization', name: 'CompatAir', url: 'https://compatair.fr' },
+};
+---
+
+<BaseLayout title={`${guide.data.title} | CompatAir`} description={guide.data.description}>
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
+	<article class="container editorial-layout">
+		<div class="editorial-main">
+			<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/guides/">Guides</a><span>/</span><span>{guide.data.category}</span></nav>
+			<header class="article-head"><p class="eyebrow">{guide.data.category}</p><h1>{guide.data.title}</h1><p class="lead">{guide.data.description}</p><p class="article-byline">Publié le {published} · Lecture {guide.data.readingTime} minutes · Vérification technique CompatAir</p></header>
+			<div class="article-body"><Content /></div>
+		</div>
+		<aside class="article-aside" aria-label="Sommaire"><strong>Dans ce dossier</strong><ol>{headings.filter((heading) => heading.depth === 2).map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol><a class="button primary" href="/calculateur/">Ouvrir le calculateur</a></aside>
+	</article>
+</BaseLayout>

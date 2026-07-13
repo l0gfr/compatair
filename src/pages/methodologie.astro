@@ -1,16 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Méthodologie de dimensionnement | CompatAir" description="Comment CompatAir distingue débit aspiré, débit restitué, pression, cycle d’utilisation et réserve de cuve.">
+<BaseLayout title="Méthodologie de dimensionnement | CompatAir" description="Comment CompatAir compare le débit restitué documenté à la consommation d’air publiée d’un outil, sans compléter les données manquantes.">
 	<article class="container content">
 		<p class="eyebrow">Transparence technique</p>
 		<h1>Notre méthodologie</h1>
-		<p>CompatAir dimensionne une installation à partir du débit d’air restitué à la pression de travail. Le débit aspiré n’est jamais traité comme une mesure équivalente.</p>
+		<p>CompatAir compare le débit d’air restitué documenté du compresseur à la consommation nominale publiée de l’outil, à la même pression de travail. Le débit aspiré n’est jamais utilisé comme substitut.</p>
 		<h2>Ce que nous calculons</h2>
-		<ul><li>le débit instantané des outils utilisés simultanément&nbsp;;</li><li>le débit moyen corrigé par le cycle d’utilisation&nbsp;;</li><li>la marge nécessaire selon l’usage et la confiance des données&nbsp;;</li><li>la réserve utile de la cuve et les pertes de charge.</li></ul>
+		<ul>
+			<li>l’interpolation linéaire entre deux débits restitués publiés lorsque la pression de travail se situe entre leurs points de mesure&nbsp;;</li>
+			<li>l’écart, en litres par minute et en pourcentage, entre le débit disponible et la consommation nominale publiée&nbsp;;</li>
+			<li>un seuil indicatif égal à la consommation publiée augmentée de 25&nbsp;%.</li>
+		</ul>
+		<p>La marge de 25&nbsp;% est une convention conservatrice propre à CompatAir. Elle n’est pas présentée comme une exigence du fabricant. Le verdict «&nbsp;compatible en continu&nbsp;» exige d’abord que le débit documenté couvre la consommation nominale publiée. L’interface signale séparément si la marge CompatAir est atteinte.</p>
+		<h2>Ce que nous ne calculons pas</h2>
+		<p>CompatAir ne déduit pas un cycle d’utilisation, une autonomie de cuve ou une perte de charge à partir de valeurs génériques. Ces résultats nécessiteraient notamment un profil d’usage, la pression de réenclenchement et les caractéristiques documentées du flexible et des raccords.</p>
 		<h2>Niveaux de confiance</h2>
-		<p>A correspond à une documentation constructeur ou une mesure vérifiée. B indique une documentation officielle incomplète ou plusieurs sources concordantes. C et D ne peuvent pas produire seuls une compatibilité certaine.</p>
+		<p>A correspond à une documentation constructeur exploitable. B indique une documentation officielle incomplète ou des points de mesure qui nécessitent une interpolation. Les niveaux C et D ne produisent pas seuls un verdict positif.</p>
 		<h2>Limites</h2>
-		<p>Les résultats sont des aides au dimensionnement. Une donnée déterminante absente conduit à «&nbsp;données insuffisantes&nbsp;», jamais à une compatibilité inventée.</p>
+		<p>Les résultats sont des aides au dimensionnement, pas des mesures sur installation. Une donnée déterminante absente conduit à «&nbsp;données insuffisantes&nbsp;». La source de chaque fiche est affichée et doit être consultée avant un achat.</p>
 	</article>
 </BaseLayout>

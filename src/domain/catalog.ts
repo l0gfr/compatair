@@ -40,8 +40,6 @@ export const toolProfileSchema = z.object({
 	model: z.string().min(1),
 	workingPressureBar: z.object({ min: z.number().positive(), typical: z.number().positive(), max: z.number().positive() }),
 	airflowLpm: z.object({ min: z.number().positive(), typical: z.number().positive(), max: z.number().positive() }),
-	dutyFactor: z.number().positive().max(1),
-	usagePattern: z.enum(['burst', 'intermittent', 'continuous']),
 	connectorSize: z.string().optional(),
 	confidence: confidenceSchema,
 	evidence: z.array(evidenceSchema).min(1),

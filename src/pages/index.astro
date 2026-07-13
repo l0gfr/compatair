@@ -1,5 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const featuredGuides = (await getCollection('guides')).filter((guide) => guide.data.featured).slice(0, 4);
 
 const organization = {
 	'@context': 'https://schema.org',
@@ -9,13 +12,13 @@ const organization = {
 };
 ---
 
-<BaseLayout title="CompatAir : le bon compresseur pour chaque outil" description="Dimensionnez un compresseur selon le débit réellement restitué, la pression et votre usage. Des verdicts sourcés, reproductibles et indépendants.">
+<BaseLayout title="CompatAir : comparer compresseurs et outils pneumatiques" description="Comparez la consommation publiée d’un outil au débit restitué documenté d’un compresseur, à la même pression de travail.">
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(organization)} />
 	<section class="hero">
 		<div class="container">
 			<p class="eyebrow">Compatibilité d’air comprimé, sans approximation commerciale</p>
 			<h1>Votre compresseur peut-il vraiment alimenter vos outils&nbsp;?</h1>
-			<p class="lead">CompatAir vérifie le débit restitué, la pression, la cuve et le rythme d’utilisation. Vous obtenez un verdict clair&nbsp;: continu, intermittent, incompatible ou données insuffisantes.</p>
+			<p class="lead">CompatAir compare la consommation publiée d’un outil au débit restitué documenté d’un compresseur, à la même pression de travail. Une donnée absente produit «&nbsp;données insuffisantes&nbsp;».</p>
 			<div class="actions">
 				<a class="button primary" href="/calculateur/">Dimensionner mon installation</a>
 				<a class="button" href="/methodologie/">Voir notre méthode</a>
@@ -25,8 +28,16 @@ const organization = {
 
 	<section class="section home-calculator">
 		<div class="container callout">
-			<div><p class="eyebrow">Le calculateur est ouvert</p><h2>Testez cinq outils sur dix compresseurs documentés.</h2><p>CompatAir calcule le besoin avec une marge de 25 %, corrige les pertes du flexible et refuse de confondre débit aspiré et débit restitué.</p><div class="actions"><a class="button primary inverse" href="/calculateur/">Lancer le calcul</a><a class="button inverse-outline" href="/compresseurs/">Voir les produits</a></div></div>
+			<div><p class="eyebrow">Le calculateur est ouvert</p><h2>Testez cinq outils sur dix compresseurs documentés.</h2><p>CompatAir compare les valeurs publiées et affiche séparément une marge interne de 25&nbsp;%. Les pertes du réseau ne sont pas estimées sans données documentées.</p><div class="actions"><a class="button primary inverse" href="/calculateur/">Lancer le calcul</a><a class="button inverse-outline" href="/compresseurs/">Voir les produits</a></div></div>
 			<div class="metric"><strong>50</strong><span>couples outil-compresseur évalués par le moteur 0.2</span></div>
+		</div>
+	</section>
+
+	<section class="section editorial-home">
+		<div class="container">
+			<div class="section-head"><p class="eyebrow">Guides techniques</p><h2>Les chiffres avant les promesses</h2><p class="lead">Chaque dossier sépare données constructeur, calculs reproductibles et hypothèses CompatAir. Une donnée absente reste absente.</p></div>
+			<div class="guide-grid">{featuredGuides.map((guide) => <article class="guide-card"><p class="guide-meta">{guide.data.category} · {guide.data.readingTime} min</p><h3><a href={`/guides/${guide.id}/`}>{guide.data.title}</a></h3><p>{guide.data.description}</p><a class="text-link" href={`/guides/${guide.id}/`}>Lire le dossier</a></article>)}</div>
+			<div class="actions"><a class="button" href="/guides/">Tous les guides</a></div>
 		</div>
 	</section>
 
@@ -45,9 +56,9 @@ const organization = {
 				<h2>Une réponse technique en trois étapes</h2>
 			</div>
 			<div class="grid">
-				<article class="card"><p class="step">01</p><h3>Décrivez vos usages</h3><p>Outils, durée, simultanéité, pression et longueur du flexible.</p></article>
-				<article class="card"><p class="step">02</p><h3>Nous calculons le besoin</h3><p>Débit de pointe, débit moyen, marge, pertes et réserve utile.</p></article>
-				<article class="card"><p class="step">03</p><h3>Comparez sans vous tromper</h3><p>Modèles compatibles, limites explicites et accessoires nécessaires.</p></article>
+				<article class="card"><p class="step">01</p><h3>Choisissez un outil</h3><p>Le moteur utilise sa consommation et sa pression de travail publiées.</p></article>
+				<article class="card"><p class="step">02</p><h3>Choisissez un compresseur</h3><p>Le débit restitué est lu ou interpolé entre deux points constructeur documentés.</p></article>
+				<article class="card"><p class="step">03</p><h3>Lisez le résultat</h3><p>Débit disponible, besoin publié, marge CompatAir et limites sont affichés séparément.</p></article>
 			</div>
 		</div>
 	</section>
@@ -57,9 +68,9 @@ const organization = {
 			<div>
 				<p class="eyebrow">La donnée qui change tout</p>
 				<h2>Le volume de cuve ne suffit pas.</h2>
-				<p>Un compresseur 50&nbsp;L peut être trop juste pour une ponceuse et parfaitement adapté à une clé à chocs occasionnelle. Le débit restitué à la pression de travail et le cycle d’utilisation déterminent le résultat.</p>
+				<p>Le volume de la cuve stocke de l’air, mais ne remplace pas un débit restitué insuffisant. Le calculateur ne déduit donc pas une compatibilité du seul nombre de litres.</p>
 			</div>
-			<div class="metric"><strong>4 verdicts</strong><span>continu · intermittent · incompatible · données insuffisantes</span></div>
+			<div class="metric"><strong>3 résultats</strong><span>compatible en continu · incompatible · données insuffisantes</span></div>
 		</div>
 	</section>
 </BaseLayout>

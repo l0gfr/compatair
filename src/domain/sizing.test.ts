@@ -43,16 +43,15 @@ describe('compatibility engine', () => {
 });
 
 describe('air demand sizing', () => {
-	it('applies duty factor only to average demand', () => {
-		expect(sizeAirDemand({ toolFlowLpm: 200, dutyFactor: 0.5, safetyMargin: 0.25 })).toEqual({
+	it('applies the explicit CompatAir safety margin', () => {
+		expect(sizeAirDemand({ toolFlowLpm: 200, safetyMargin: 0.25 })).toEqual({
 			peakFlowLpm: 200,
-			averageFlowLpm: 100,
 			recommendedFadLpm: 250,
-			calculationVersion: '0.1.0',
+			calculationVersion: '0.2.0',
 		});
 	});
 
 	it('refuses physically invalid input', () => {
-		expect(() => sizeAirDemand({ toolFlowLpm: -1, dutyFactor: 0.5 })).toThrow();
+		expect(() => sizeAirDemand({ toolFlowLpm: -1 })).toThrow();
 	});
 });

@@ -59,27 +59,27 @@ const rawCompressors: Compressor[] = [
 const rawTools: ToolProfile[] = [
 	{
 		id: 'einhell-tc-pe-150', slug: 'ponceuse-excentrique-einhell-tc-pe-150', category: 'Ponceuse pneumatique', label: 'Ponceuse excentrique Einhell TC-PE 150', brand: 'Einhell', model: 'TC-PE 150',
-		workingPressureBar: { min: 6.3, typical: 6.3, max: 6.3 }, airflowLpm: { min: 100, typical: 100, max: 100 }, dutyFactor: .8, usagePattern: 'continuous', connectorSize: 'Flexible intérieur 9 mm recommandé', confidence: 'A',
+		workingPressureBar: { min: 6.3, typical: 6.3, max: 6.3 }, airflowLpm: { min: 100, typical: 100, max: 100 }, connectorSize: 'Flexible intérieur 9 mm recommandé', confidence: 'A',
 		evidence: [{ id: 'einhell-4133330-official', sourceUrl: 'https://www.einhell.fr/p/4133330-tc-pe-150/', sourceLabel: 'Einhell France, fiche produit officielle', sourceType: 'manufacturer', retrievedAt, confidence: 'A' }], notes: [],
 	},
 	{
 		id: 'einhell-tc-pp-220', slug: 'meuleuse-droite-einhell-tc-pp-220', category: 'Meuleuse pneumatique', label: 'Meuleuse droite Einhell TC-PP 220', brand: 'Einhell', model: 'TC-PP 220',
-		workingPressureBar: { min: 6.3, typical: 6.3, max: 6.3 }, airflowLpm: { min: 128, typical: 128, max: 128 }, dutyFactor: .6, usagePattern: 'intermittent', confidence: 'A',
+		workingPressureBar: { min: 6.3, typical: 6.3, max: 6.3 }, airflowLpm: { min: 128, typical: 128, max: 128 }, confidence: 'A',
 		evidence: [{ id: 'einhell-4138540-official', sourceUrl: 'https://www.einhell.fr/p/4138540-tc-pp-220/', sourceLabel: 'Einhell France, fiche produit officielle', sourceType: 'manufacturer', retrievedAt, confidence: 'A' }], notes: [],
 	},
 	{
 		id: 'einhell-tc-pa-50', slug: 'meuleuse-angle-einhell-tc-pa-50', category: 'Meuleuse pneumatique', label: 'Meuleuse d’angle Einhell TC-PA 50', brand: 'Einhell', model: 'TC-PA 50',
-		workingPressureBar: { min: 6.3, typical: 6.3, max: 6.3 }, airflowLpm: { min: 113, typical: 113, max: 113 }, dutyFactor: .6, usagePattern: 'intermittent', confidence: 'A',
+		workingPressureBar: { min: 6.3, typical: 6.3, max: 6.3 }, airflowLpm: { min: 113, typical: 113, max: 113 }, confidence: 'A',
 		evidence: [{ id: 'einhell-4138550-official', sourceUrl: 'https://www.einhell.fr/p/4138550-tc-pa-50/', sourceLabel: 'Einhell France, fiche produit officielle', sourceType: 'manufacturer', retrievedAt, confidence: 'A' }], notes: [],
 	},
 	{
 		id: 'metabo-ssp-1000', slug: 'pistolet-sablage-metabo-ssp-1000', category: 'Pistolet de sablage', label: 'Pistolet de sablage Metabo SSP 1000', brand: 'Metabo', model: 'SSP 1000',
-		workingPressureBar: { min: 7, typical: 7, max: 7 }, airflowLpm: { min: 300, typical: 300, max: 300 }, dutyFactor: .75, usagePattern: 'continuous', connectorSize: 'Raccord 1/4 pouce', confidence: 'A',
+		workingPressureBar: { min: 7, typical: 7, max: 7 }, airflowLpm: { min: 300, typical: 300, max: 300 }, connectorSize: 'Raccord 1/4 pouce', confidence: 'A',
 		evidence: [{ id: 'metabo-601569000-official', sourceUrl: 'https://fr.metabo.com/fr/machines/air-comprime/outils-a-air-comprime/pistolets-de-sablage-a-air-comprime/ssp-1000-601569000-pistolet-de-sablage-a-air-comprime.html', sourceLabel: 'Metabo France, fiche produit officielle', sourceType: 'manufacturer', retrievedAt, confidence: 'A' }], notes: [],
 	},
 	{
 		id: 'metabo-bp-200', slug: 'soufflette-metabo-bp-200', category: 'Soufflette', label: 'Soufflette Metabo BP 200', brand: 'Metabo', model: 'BP 200',
-		workingPressureBar: { min: 3, typical: 6, max: 8 }, airflowLpm: { min: 130, typical: 240, max: 350 }, dutyFactor: .25, usagePattern: 'burst', connectorSize: 'Raccord 1/4 pouce', confidence: 'A',
+		workingPressureBar: { min: 3, typical: 6, max: 8 }, airflowLpm: { min: 130, typical: 240, max: 350 }, connectorSize: 'Raccord 1/4 pouce', confidence: 'A',
 		evidence: [{ id: 'metabo-601581180-official', sourceUrl: 'https://www.metabo.com/ch/fr/machines/air-comprime/outils-a-air-comprime/soufflettes-a-air-comprime/bp-200-soufflette-a-air-comprime/601581180', sourceLabel: 'Metabo, fiche produit officielle', sourceType: 'manufacturer', retrievedAt, confidence: 'A' }], notes: ['Le débit dépend du réglage. Le calcul utilise 240 L/min par défaut.'],
 	},
 ];
@@ -89,4 +89,3 @@ export const tools = rawTools.map((item) => toolProfileSchema.parse(item));
 
 export const getCompressor = (slug: string) => compressors.find((item) => item.slug === slug);
 export const getTool = (slug: string) => tools.find((item) => item.slug === slug);
-
