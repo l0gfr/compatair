@@ -197,6 +197,7 @@ footer { margin-top: 4rem; padding: 3rem 0; color: white; background: var(--ink)
 .field select, .field input { width: 100%; min-height: 50px; padding: .7rem .85rem; border: 1px solid #afbbb2; border-radius: .8rem; color: var(--ink); background: white; font: inherit; }
 .calculator-form .button { width: 100%; border: 0; cursor: pointer; }
 .form-disclaimer { margin: 0 0 1.1rem; color: var(--muted); font-size: .85rem; }
+.form-error { margin: 0 0 1rem; padding: .8rem 1rem; border: 1px solid #d8a39e; border-radius: .75rem; color: #762d27; background: #fff2ef; font-size: .86rem; font-weight: 700; }
 .calculator-output[hidden] { display: none; }
 .result-summary { padding-bottom: 1.25rem; border-bottom: 1px solid var(--line); }
 .result-summary strong { font-size: clamp(1.6rem, 4vw, 2.5rem); }
@@ -218,9 +219,13 @@ footer { margin-top: 4rem; padding: 3rem 0; color: white; background: var(--ink)
 .version-chip { flex: 0 0 auto; padding: .32rem .55rem; border-radius: 999px; color: var(--brand-dark); background: var(--accent-soft); font: 800 .7rem/1.2 ui-monospace, monospace; }
 .calculator-fieldset { min-width: 0; margin: 0 0 1.1rem; padding: 1rem; border: 1px solid var(--line); border-radius: 1rem; }
 .calculator-fieldset legend { padding: 0 .4rem; font-weight: 800; }
-.demand-row { position: relative; display: grid; grid-template-columns: minmax(0, 1.6fr) 90px minmax(130px, .7fr) 32px; gap: .65rem; align-items: end; margin-bottom: .75rem; }
+.demand-row { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 90px 32px; gap: .65rem; align-items: end; margin-bottom: .75rem; padding: .8rem; border: 1px solid var(--line); border-radius: .8rem; background: rgba(244,246,239,.6); }
 .demand-row .field { margin: 0; }
 .demand-row label { font-size: .75rem; }
+.demand-parameters { grid-column: 1 / -1; display: grid; gap: .6rem; padding-top: .7rem; border-top: 1px solid var(--line); }
+.demand-parameters [hidden] { display: none !important; }
+.inflation-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+.demand-note { margin: 0; color: var(--muted); font-size: .75rem; }
 .remove-demand { width: 32px; height: 50px; border: 0; color: #97372f; background: transparent; font-size: 1.4rem; cursor: pointer; }
 .inline-action { padding: .45rem .65rem; border: 1px solid var(--line); border-radius: .55rem; color: var(--brand-dark); background: #eef2e9; font: 750 .78rem/1.3 inherit; cursor: pointer; }
 .input-unit { position: relative; }
@@ -447,8 +452,9 @@ footer { margin-top: 4rem; padding: 3rem 0; color: white; background: var(--ink)
 	.instrument-legend { grid-template-columns: 1fr; }
 	.gauge-face { width: min(230px, 68vw); }
 	.field-row { grid-template-columns: 1fr; gap: 0; }
-	.demand-row { grid-template-columns: 1fr 1fr 32px; }
+	.demand-row { grid-template-columns: 1fr 90px 32px; }
 	.demand-tool { grid-column: 1 / -1; }
+	.inflation-fields { grid-template-columns: 1fr; }
 	.result-metrics { grid-template-columns: 1fr; }
 	.result-card-head, .product-detail-head { align-items: start; flex-direction: column; }
 	.product-monogram.large { width: 4rem; height: 4rem; font-size: 1.8rem; }

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { sizeAirDemand, sizeConfiguration, usableTankAir } from './sizing';
+import { inflationFreeAirLiters, perActionAverageFlow, sizeAirDemand, sizeConfiguration, usableTankAir } from './sizing';
 import { barToPsi, cfmToLitersPerMinute, litersPerMinuteToCfm, psiToBar } from './units';
 import { compressors, tools } from '../data/catalog';
 import { evaluateCompatibility, interpolateFad } from './compatibility';
@@ -53,7 +53,7 @@ describe('air demand sizing', () => {
 		expect(sizeAirDemand({ toolFlowLpm: 200, safetyMargin: 0.25 })).toEqual({
 			peakFlowLpm: 200,
 			recommendedFadLpm: 250,
-			calculationVersion: '1.0.0',
+			calculationVersion: '1.1.0',
 		});
 	});
 
@@ -87,5 +87,40 @@ describe('air demand sizing', () => {
 
 	it('uses only the pressure interval as free-air reserve', () => {
 		expect(usableTankAir(50, 6, 8)).toBe(100);
+	});
+
+	it('converts documented air per action and explicit cadence to an average flow', () => {
+		expect(perActionAverageFlow(0.66, 30, 2)).toBeCloseTo(39.6, 10);
+		const result = sizeConfiguration({
+			demands: [{
+				model: 'per-action', id: 'stapler', litersPerAction: 0.66,
+				actionsPerMinute: 30, pressureBar: 6.3, quantity: 2,
+			}],
+		});
+		expect(result.peakFlowLpm).toBeCloseTo(39.6, 10);
+		expect(result.averageFlowLpm).toBeCloseTo(39.6, 10);
+		expect(result.flowBasis).toBe('derived-average');
+	});
+
+	it('converts a gauge-pressure increase to equivalent free air at one standard atmosphere', () => {
+		expect(inflationFreeAirLiters(50, 0, 2)).toBeCloseTo(98.6923, 4);
+		const result = sizeConfiguration({
+			demands: [{
+				model: 'inflation', id: 'inflator', volumeLiters: 50,
+				initialPressureBar: 0, targetPressureBar: 2, targetMinutes: 2,
+			}],
+		});
+		expect(result.peakFlowLpm).toBeCloseTo(49.34616, 5);
+		expect(result.requiredPressureBar).toBe(2);
+		expect(result.flowBasis).toBe('derived-average');
+	});
+
+	it('rejects an inflation target that does not exceed the initial pressure', () => {
+		expect(() => sizeConfiguration({
+			demands: [{
+				model: 'inflation', id: 'inflator', volumeLiters: 10,
+				initialPressureBar: 2.5, targetPressureBar: 2, targetMinutes: 1,
+			}],
+		})).toThrow();
 	});
 });

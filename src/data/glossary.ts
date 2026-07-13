@@ -19,6 +19,10 @@ export const glossarySources = {
 		label: 'NIST, Guide for the Use of the International System of Units',
 		url: 'https://physics.nist.gov/cuu/pdf/sp811.pdf',
 	},
+	nasa: {
+		label: 'NASA Glenn Research Center, Ideal Gases under Constant Volume',
+		url: 'https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking/ideal_gases_under_constant.htm',
+	},
 	method: {
 		label: 'Méthodologie CompatAir',
 		url: '/methodologie/',
@@ -38,6 +42,7 @@ export type GlossaryTerm = {
 export const glossaryTerms: GlossaryTerm[] = [
 	{ term: 'Aftercooler', slug: 'aftercooler', definition: 'Échangeur qui refroidit l’air à la sortie du compresseur. Le refroidissement peut faire condenser une partie de l’eau, ensuite séparée en aval.', source: 'cagi', related: { label: 'Condensats et entretien', href: '/guides/entretien-compresseur-purge-condensats/' } },
 	{ term: 'Air libre', slug: 'air-libre', definition: 'Air considéré aux conditions atmosphériques d’un lieu déterminé, avant l’effet du compresseur. Les conditions de référence doivent être précisées pour comparer des débits.', source: 'cagi' },
+	{ term: 'Atmosphère standard', slug: 'atmosphere-standard', definition: 'Unité de pression définie exactement à 101 325 pascals, soit 1,01325 bar. CompatAir utilise cette valeur de référence pour exprimer le volume d’air libre équivalent du calcul de gonflage.', source: 'nist', related: { label: 'Calculer un gonflage', href: '/guides/compresseur-pour-gonfler-pneus/' } },
 	{ term: 'Bar', slug: 'bar', definition: 'Unité de pression non SI couramment utilisée pour l’air comprimé. Un bar vaut exactement 100 000 pascals, soit 100 kPa.', source: 'nist', related: { label: 'Comprendre bar, psi et pression', href: '/guides/bar-psi-pression-absolue-relative/' } },
 	{ term: 'Capacité réelle', slug: 'capacite-reelle', definition: 'Quantité d’air effectivement comprimée et délivrée dans les conditions nominales. Le CAGI rapproche cette notion du Free Air Delivered.', source: 'cagi' },
 	{ term: 'CFM', slug: 'cfm', definition: 'Cubic feet per minute, unité de débit volumique utilisée dans les documentations anglo-saxonnes. Une valeur en CFM n’est comparable que si ses conditions de référence sont connues.', source: 'cagi', related: { label: 'Conversions et conditions', href: '/guides/bar-psi-pression-absolue-relative/' } },
@@ -62,6 +67,7 @@ export const glossaryTerms: GlossaryTerm[] = [
 	{ term: 'Interpolation', slug: 'interpolation', definition: 'Calcul d’une valeur entre deux points documentés. CompatAir emploie une interpolation linéaire uniquement à l’intérieur d’une courbe publiée et indique qu’il s’agit d’un calcul.', source: 'method', related: { label: 'Méthodologie', href: '/methodologie/' } },
 	{ term: 'ISO 8573-1', slug: 'iso-8573-1', definition: 'Norme qui spécifie des classes de pureté de l’air comprimé pour les particules, l’eau et l’huile. Elle identifie aussi d’autres familles de contaminants.', source: 'iso', related: { label: 'Lire ISO 8573-1', href: '/guides/qualite-air-comprime-iso-8573-1/' } },
 	{ term: 'L/min', slug: 'litre-par-minute', definition: 'Litre par minute, unité de débit volumique. Une valeur seule reste incomplète si la pression et les conditions auxquelles elle s’applique ne sont pas indiquées.', source: 'cagi' },
+	{ term: 'Loi des gaz parfaits', slug: 'loi-gaz-parfaits', definition: 'Relation d’état entre pression, volume, quantité de matière et température pour un gaz idéal. Son emploi pour le gonflage reste une approximation qui suppose notamment une température et un volume constants.', source: 'nasa', related: { label: 'Méthode de gonflage', href: '/methodologie/' } },
 	{ term: 'Marge CompatAir', slug: 'marge-compatair', definition: 'Seuil interne égal au besoin publié multiplié par 1,25. Il est affiché séparément du verdict nominal et ne constitue pas une prescription universelle de fabricant.', source: 'method', related: { label: 'Méthode de dimensionnement', href: '/guides/guide-complet-dimensionner-compresseur-air/' } },
 	{ term: 'Point de rosée sous pression', slug: 'point-rosee-pression', definition: 'Température à laquelle l’eau commence à condenser dans l’air à une pression donnée. Elle doit être distinguée du point de rosée aux conditions atmosphériques.', source: 'cagi', related: { label: 'Choisir le traitement d’air', href: '/guides/point-rosee-secheur-filtre-air-comprime/' } },
 	{ term: 'Pression absolue', slug: 'pression-absolue', definition: 'Pression mesurée à partir du vide absolu. Elle intègre donc la pression atmosphérique locale.', source: 'cagi', related: { label: 'Pression absolue et relative', href: '/guides/bar-psi-pression-absolue-relative/' } },

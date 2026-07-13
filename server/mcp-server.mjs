@@ -1,6 +1,6 @@
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
-import { createMcpCore, PROTOCOL_VERSION } from './mcp-core.mjs';
+import { createMcpCore, ENGINE_VERSION, PROTOCOL_VERSION } from './mcp-core.mjs';
 
 const host = process.env.MCP_HOST ?? '127.0.0.1'; const port = Number(process.env.MCP_PORT ?? 8787);
 const catalogPath = process.env.COMPAT_AIR_CATALOG ?? new URL('../dist/data/catalog.json', import.meta.url).pathname;
@@ -16,7 +16,7 @@ async function body(request) { const chunks = []; let size = 0; for await (const
 const server = createServer(async (request, response) => {
 	response.setTimeout(10_000);
 	const url = new URL(request.url ?? '/', `http://${request.headers.host ?? 'localhost'}`);
-	if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', catalogVersion: catalog.catalogVersion, engineVersion: '1.0.0', ...counters });
+	if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, ...counters });
 	if (url.pathname === '/events' && request.method === 'POST') {
 		const origin = request.headers.origin; if (origin && !allowedOrigins.has(origin)) return json(response, 403, { error: 'origin_forbidden' });
 		if (!allow(request.socket.remoteAddress ?? 'unknown')) return json(response, 429, { error: 'rate_limited' }, { 'Retry-After': '60' });

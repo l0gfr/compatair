@@ -1,5 +1,6 @@
-const ENGINE_VERSION = '1.0.0';
+const ENGINE_VERSION = '1.1.0';
 const PROTOCOL_VERSION = '2025-06-18';
+const STANDARD_ATMOSPHERE_BAR = 1.01325;
 
 function page(values, cursor, limit = 20) {
 	const start = cursor ? Number.parseInt(Buffer.from(cursor, 'base64url').toString('utf8'), 10) : 0;
@@ -39,7 +40,11 @@ const toolDefinitions = [
 	['get_tool_requirements', 'Retourner les exigences publiées d’un outil.', { id: { type: 'string' } }, ['id']],
 	['search_compressors', 'Rechercher des compresseurs selon des critères techniques.', { query: { type: 'string' }, minTankLiters: { type: 'number', minimum: 0 }, minPressureBar: { type: 'number', minimum: 0 }, oilType: { type: 'string', enum: ['oil', 'oil-free'] }, cursor: { type: 'string' }, limit: { type: 'integer', minimum: 1, maximum: 50 } }],
 	['get_compressor_specs', 'Retourner les caractéristiques et sources d’un compresseur.', { id: { type: 'string' } }, ['id']],
-	['size_compressor', 'Dimensionner un besoin de débit déterministe.', { demands: { type: 'array', minItems: 1, maxItems: 20, items: { type: 'object', properties: { flowLpm: { type: 'number', exclusiveMinimum: 0 }, pressureBar: { type: 'number', exclusiveMinimum: 0 }, quantity: { type: 'integer', minimum: 1 }, dutyFactor: { type: 'number', exclusiveMinimum: 0, maximum: 1 } }, required: ['flowLpm', 'pressureBar'] } }, mode: { type: 'string', enum: ['simultaneous', 'successive'] }, safetyMargin: { type: 'number', minimum: 0, maximum: 1 } }, ['demands']],
+	['size_compressor', 'Dimensionner un débit continu, un besoin par action ou un gonflage paramétré.', { demands: { type: 'array', minItems: 1, maxItems: 20, items: { oneOf: [
+		{ type: 'object', properties: { model: { type: 'string', enum: ['fixed-flow'] }, flowLpm: { type: 'number', exclusiveMinimum: 0 }, pressureBar: { type: 'number', exclusiveMinimum: 0 }, quantity: { type: 'integer', minimum: 1, maximum: 20 }, dutyFactor: { type: 'number', exclusiveMinimum: 0, maximum: 1 } }, required: ['flowLpm', 'pressureBar'], additionalProperties: false },
+		{ type: 'object', properties: { model: { type: 'string', enum: ['per-action'] }, litersPerAction: { type: 'number', exclusiveMinimum: 0 }, actionsPerMinute: { type: 'number', exclusiveMinimum: 0 }, pressureBar: { type: 'number', exclusiveMinimum: 0 }, quantity: { type: 'integer', minimum: 1, maximum: 20 } }, required: ['model', 'litersPerAction', 'actionsPerMinute', 'pressureBar'], additionalProperties: false },
+		{ type: 'object', properties: { model: { type: 'string', enum: ['inflation'] }, volumeLiters: { type: 'number', exclusiveMinimum: 0 }, initialPressureBar: { type: 'number', minimum: 0 }, targetPressureBar: { type: 'number', exclusiveMinimum: 0 }, targetMinutes: { type: 'number', exclusiveMinimum: 0 }, quantity: { type: 'integer', minimum: 1, maximum: 20 } }, required: ['model', 'volumeLiters', 'initialPressureBar', 'targetPressureBar', 'targetMinutes'], additionalProperties: false },
+	] } }, mode: { type: 'string', enum: ['simultaneous', 'successive'] }, safetyMargin: { type: 'number', minimum: 0, maximum: 1 } }, ['demands']],
 	['check_compatibility', 'Comparer un compresseur et un outil avec un verdict normalisé.', { compressorId: { type: 'string' }, toolId: { type: 'string' }, safetyMargin: { type: 'number', minimum: 0, maximum: 1 } }, ['compressorId', 'toolId']],
 	['compare_compressors', 'Comparer deux ou trois compresseurs sans score commercial.', { ids: { type: 'array', minItems: 2, maxItems: 3, items: { type: 'string' } } }, ['ids']],
 	['find_accessories', 'Retourner uniquement les raccords ou accessoires documentés pour un outil.', { toolId: { type: 'string' } }, ['toolId']],
@@ -75,7 +80,33 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 			case 'get_tool_requirements': { const item = toolMap.get(args.id); return item ? result({ tool: item }, catalog) : failure('Outil inconnu.', catalog); }
 			case 'search_compressors': { const q = String(args.query ?? '').toLowerCase(); const values = catalog.compressors.filter((item) => (!q || `${item.brand} ${item.model} ${item.mpn ?? ''}`.toLowerCase().includes(q)) && (!args.minTankLiters || item.tankLiters >= args.minTankLiters) && (!args.minPressureBar || item.maxPressureBar >= args.minPressureBar) && (!args.oilType || item.oilType === args.oilType)); const found = page(values, args.cursor, args.limit); return result({ compressors: found.items, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog); }
 			case 'get_compressor_specs': { const item = compressorMap.get(args.id); return item ? result({ compressor: item }, catalog) : failure('Compresseur inconnu.', catalog); }
-			case 'size_compressor': { const mode = args.mode === 'simultaneous' ? 'simultaneous' : 'successive'; const safetyMargin = Number.isFinite(args.safetyMargin) ? args.safetyMargin : .25; if (!Array.isArray(args.demands) || !args.demands.length) return failure('Au moins une demande est requise.', catalog); const demands = args.demands.map((item) => ({ peak: Number(item.flowLpm) * Number(item.quantity ?? 1), average: Number(item.flowLpm) * Number(item.quantity ?? 1) * Number(item.dutyFactor ?? 1), pressure: Number(item.pressureBar) })); if (demands.some((item) => !Number.isFinite(item.peak) || item.peak <= 0 || !Number.isFinite(item.pressure) || item.pressure <= 0)) return failure('Demande invalide.', catalog); const peakFlowLpm = mode === 'simultaneous' ? demands.reduce((sum, item) => sum + item.peak, 0) : Math.max(...demands.map((item) => item.peak)); const averageFlowLpm = Math.min(peakFlowLpm, demands.reduce((sum, item) => sum + item.average, 0)); return result({ sizing: { verdict: 'insufficient_data', peakFlowLpm, averageFlowLpm, requiredPressureBar: Math.max(...demands.map((item) => item.pressure)), recommendedFadLpm: peakFlowLpm * (1 + safetyMargin), limitingFactor: 'data', hypotheses: [`mode=${mode}`, `safetyMargin=${safetyMargin}`], calculationVersion: ENGINE_VERSION } }, catalog); }
+			case 'size_compressor': {
+				const mode = args.mode === 'simultaneous' ? 'simultaneous' : 'successive';
+				const safetyMargin = Number.isFinite(args.safetyMargin) ? args.safetyMargin : .25;
+				if (!Array.isArray(args.demands) || !args.demands.length) return failure('Au moins une demande est requise.', catalog);
+				const demands = args.demands.map((item) => {
+					const quantity = Number(item.quantity ?? 1);
+					if (!Number.isInteger(quantity) || quantity < 1 || quantity > 20) return undefined;
+					if (item.model === 'per-action') {
+						const average = Number(item.litersPerAction) * Number(item.actionsPerMinute) * quantity;
+						return { peak: average, average, pressure: Number(item.pressureBar), derived: true, hypothesis: `${item.litersPerAction} L/action × ${item.actionsPerMinute} action(s)/min × ${quantity}` };
+					}
+					if (item.model === 'inflation') {
+						const initial = Number(item.initialPressureBar), target = Number(item.targetPressureBar), minutes = Number(item.targetMinutes), volume = Number(item.volumeLiters);
+						if (target <= initial) return undefined;
+						const freeAirLiters = volume * quantity * (target - initial) / STANDARD_ATMOSPHERE_BAR;
+						const average = freeAirLiters / minutes;
+						return { peak: average, average, pressure: target, derived: true, hypothesis: `${freeAirLiters} L d’air libre idéal en ${minutes} min` };
+					}
+					const peak = Number(item.flowLpm) * quantity;
+					return { peak, average: peak * Number(item.dutyFactor ?? 1), pressure: Number(item.pressureBar), derived: false };
+				});
+				if (demands.some((item) => !item || !Number.isFinite(item.peak) || item.peak <= 0 || !Number.isFinite(item.pressure) || item.pressure <= 0)) return failure('Demande invalide.', catalog);
+				const peakFlowLpm = mode === 'simultaneous' ? demands.reduce((sum, item) => sum + item.peak, 0) : Math.max(...demands.map((item) => item.peak));
+				const averageFlowLpm = Math.min(peakFlowLpm, demands.reduce((sum, item) => sum + item.average, 0));
+				const flowBasis = demands.some((item) => item.derived) ? 'derived-average' : 'documented-continuous';
+				return result({ sizing: { verdict: 'insufficient_data', peakFlowLpm, averageFlowLpm, requiredPressureBar: Math.max(...demands.map((item) => item.pressure)), recommendedFadLpm: peakFlowLpm * (1 + safetyMargin), flowBasis, limitingFactor: 'data', hypotheses: [`mode=${mode}`, `safetyMargin=${safetyMargin}`, ...demands.flatMap((item) => item.hypothesis ? [item.hypothesis] : [])], calculationVersion: ENGINE_VERSION } }, catalog);
+			}
 			case 'check_compatibility': { const compressor = compressorMap.get(args.compressorId), tool = toolMap.get(args.toolId); if (!compressor || !tool) return failure('Compresseur ou outil inconnu.', catalog); return result({ compatibility: compatibility(compressor, tool, args.safetyMargin ?? .25) }, catalog); }
 			case 'compare_compressors': { if (!Array.isArray(args.ids) || args.ids.length < 2 || args.ids.length > 3) return failure('Deux ou trois identifiants sont requis.', catalog); const values = args.ids.map((id) => compressorMap.get(id)); return values.some((item) => !item) ? failure('Un compresseur est inconnu.', catalog) : result({ compressors: values }, catalog); }
 			case 'find_accessories': { const tool = toolMap.get(args.toolId); if (!tool) return failure('Outil inconnu.', catalog); return result({ status: tool.connectorSize ? 'documented' : 'insufficient_data', accessories: tool.connectorSize ? [{ type: 'connector_or_hose', requirement: tool.connectorSize, source: tool.evidence?.[0] }] : [] }, catalog); }
@@ -87,7 +118,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 	function readResource(uri) {
 		const values = {
 			'compatair://catalog/version': { catalogVersion: catalog.catalogVersion, schemaVersion: catalog.schemaVersion, verifiedAt: catalog.verifiedAt },
-			'compatair://methodology': { engineVersion: ENGINE_VERSION, rules: ['FAD comparé à pression égale', 'aucune extrapolation hors courbe', 'débit aspiré jamais substitué', 'insufficient_data si donnée déterminante absente'] },
+			'compatair://methodology': { engineVersion: ENGINE_VERSION, standardAtmosphereBar: STANDARD_ATMOSPHERE_BAR, rules: ['FAD comparé à pression égale', 'aucune extrapolation hors courbe', 'débit aspiré jamais substitué', 'débit par action calculé seulement avec une cadence explicite', 'gonflage calculé seulement avec volume, pressions et temps explicites', 'insufficient_data si donnée déterminante absente'] },
 			'compatair://tools/taxonomy': { categories: catalog.toolTaxonomy ?? [...new Set(catalog.tools.map((item) => ({ label: item.category })))].sort() },
 			'compatair://confidence-scale': { A: 'documentation constructeur exploitable', B: 'source officielle incomplète ou interpolation encadrée', C: 'donnée ambiguë, aucun verdict positif', D: 'information non confirmée, aucun verdict positif' },
 			'compatair://affiliation-policy': { verdictBeforeOffers: true, commissionAffectsVerdict: false, staleOfferHours: 48 },
@@ -102,7 +133,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 			if (method === 'notifications/initialized' || method?.startsWith('notifications/')) return null;
 			let value;
 			switch (method) {
-				case 'initialize': value = { protocolVersion: PROTOCOL_VERSION, capabilities: { tools: { listChanged: false }, resources: { subscribe: false, listChanged: false }, prompts: { listChanged: false } }, serverInfo: { name: 'compatair-mcp', title: 'CompatAir MCP', version: '1.0.0' }, instructions: 'Serveur en lecture seule. Conserver insufficient_data et les versions dans chaque résultat.' }; break;
+				case 'initialize': value = { protocolVersion: PROTOCOL_VERSION, capabilities: { tools: { listChanged: false }, resources: { subscribe: false, listChanged: false }, prompts: { listChanged: false } }, serverInfo: { name: 'compatair-mcp', title: 'CompatAir MCP', version: ENGINE_VERSION }, instructions: 'Serveur en lecture seule. Conserver insufficient_data et les versions dans chaque résultat.' }; break;
 				case 'ping': value = {}; break;
 				case 'tools/list': { const found = page(toolDefinitions, params.cursor, 20); value = { tools: found.items, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }; break; }
 				case 'tools/call': { const called = callTool(params.name, params.arguments); if (called === undefined) return { jsonrpc: '2.0', id, error: { code: -32602, message: `Outil inconnu : ${params.name}` } }; value = called; break; }

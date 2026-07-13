@@ -8,4 +8,19 @@ describe('MCP core', () => {
 	it('lists the nine read-only tools', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 2, method: 'tools/list' }); expect(response.result.tools).toHaveLength(9); expect(response.result.tools.every((tool: any) => tool.annotations.readOnlyHint)).toBe(true); });
 	it('preserves insufficient_data for an undocumented FAD', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 3, method: 'tools/call', params: { name: 'check_compatibility', arguments: { compressorId: 'abac-pole-position-os20p', toolId: 'einhell-tc-pe-150' } } }); expect(response.result.structuredContent.compatibility.verdict).toBe('insufficient_data'); });
 	it('does not return fabricated offers', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 4, method: 'tools/call', params: { name: 'find_offers', arguments: { productId: 'x' } } }); expect(response.result.structuredContent.offers).toEqual([]); });
+	it('sizes a per-action demand only from an explicit cadence', () => {
+		const response: any = core.handle({ jsonrpc: '2.0', id: 5, method: 'tools/call', params: { name: 'size_compressor', arguments: { demands: [{ model: 'per-action', litersPerAction: .66, actionsPerMinute: 30, pressureBar: 6.3 }] } } });
+		expect(response.result.structuredContent.engineVersion).toBe('1.1.0');
+		expect(response.result.structuredContent.sizing.peakFlowLpm).toBeCloseTo(19.8, 10);
+		expect(response.result.structuredContent.sizing.flowBasis).toBe('derived-average');
+	});
+	it('sizes inflation from explicit volume, pressures and time', () => {
+		const response: any = core.handle({ jsonrpc: '2.0', id: 6, method: 'tools/call', params: { name: 'size_compressor', arguments: { demands: [{ model: 'inflation', volumeLiters: 40, initialPressureBar: 0, targetPressureBar: 2.5, targetMinutes: 1 }] } } });
+		expect(response.result.structuredContent.sizing.peakFlowLpm).toBeCloseTo(98.6923, 4);
+		expect(response.result.structuredContent.sizing.requiredPressureBar).toBe(2.5);
+	});
+	it('rejects an inflation target below the initial pressure', () => {
+		const response: any = core.handle({ jsonrpc: '2.0', id: 7, method: 'tools/call', params: { name: 'size_compressor', arguments: { demands: [{ model: 'inflation', volumeLiters: 40, initialPressureBar: 3, targetPressureBar: 2.5, targetMinutes: 1 }] } } });
+		expect(response.result.isError).toBe(true);
+	});
 });

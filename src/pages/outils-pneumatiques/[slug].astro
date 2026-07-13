@@ -13,7 +13,15 @@ const labels = { continuous: 'Continu', intermittent: 'Intermittent', incompatib
 const marginTarget = fixedFlow ? Math.round(tool.airflowLpm.typical * 1.25) : undefined;
 const demandLabel = toolDemandLabel(tool);
 const pressureLabel = toolPressureLabel(tool);
-const relatedGuide = tool.category === 'Ponceuse pneumatique' ? '/guides/compresseur-pour-ponceuse-pneumatique/' : '/guides/pression-travail-6-3-bar-outils-pneumatiques/';
+const guideByCategory: Record<string, string> = {
+	'Ponceuse pneumatique': '/guides/compresseur-pour-ponceuse-pneumatique/',
+	'Meuleuse pneumatique': '/guides/compresseur-pour-meuleuse-pneumatique/',
+	'Clé à chocs': '/guides/compresseur-pour-cle-a-chocs-pneumatique/',
+	'Agrafeuse et cloueuse': '/guides/compresseur-pour-agrafeuse-cloueuse-pneumatique/',
+	'Gonflage': '/guides/compresseur-pour-gonfler-pneus/',
+	'Pistolet à peinture HVLP': '/guides/compresseur-pour-pistolet-peinture-hvlp/',
+};
+const relatedGuide = guideByCategory[tool.category] ?? '/guides/pression-travail-6-3-bar-outils-pneumatiques/';
 const productJsonLd = {
 	'@context': 'https://schema.org', '@type': 'Product', name: tool.label,
 	image: `https://compatair.fr${tool.image.src}`, brand: { '@type': 'Brand', name: tool.brand }, model: tool.model,
@@ -45,7 +53,7 @@ const productJsonLd = {
 		{fixedFlow ? <>
 			<section class="editorial-section"><h2>Comment dimensionner le compresseur</h2><p>Le premier seuil est la consommation nominale de <strong>{tool.airflowLpm.typical} L/min à {tool.workingPressureBar.typical} bar</strong>. Un compresseur n’est déclaré compatible en continu que si son débit restitué documenté couvre cette valeur à la même pression.</p><p>CompatAir affiche aussi un seuil de <strong>{marginTarget} L/min</strong>. Cette majoration de 25 % est une convention interne destinée à rendre visible une réserve de dimensionnement. Elle n’est pas attribuée au fabricant de l’outil.</p><div class="actions"><a class="button primary" href={`/calculateur/?outil=${tool.id}`}>Comparer les compresseurs</a></div></section>
 			<section class="editorial-section"><h2>Résultats sur les compresseurs documentés</h2><div class="compatibility-table">{matches.map(({ compressor, result }) => <a href={`/compresseurs/${compressor.slug}/`}><span><strong>{compressor.brand} {compressor.model}</strong><small>{result.availableFadLpm !== undefined ? `${Math.round(result.availableFadLpm)} L/min disponibles à la pression demandée` : 'Débit non documenté à la pression demandée'}</small></span><strong class={`text-${result.verdict}`}>{labels[result.verdict]}</strong></a>)}</div></section>
-		</> : <section class="editorial-section"><h2>Pourquoi aucun verdict automatique n’est affiché</h2><p>{tool.demandModel === 'per-action' ? `La documentation exprime la consommation par ${tool.actionLabel}. Il faut connaître le nombre de ${tool.actionLabel}s par minute pour obtenir un débit moyen, puis contrôler la capacité de pointe et la réserve du compresseur.` : tool.demandExplanation}</p><p>Attribuer un débit minute sans ces paramètres serait une extrapolation. CompatAir conserve donc le statut « données insuffisantes » pour toute paire compresseur-outil.</p></section>}
+		</> : <section class="editorial-section"><h2>Calculer avec les paramètres manquants</h2><p>{tool.demandModel === 'per-action' ? `La documentation exprime la consommation par ${tool.actionLabel}. Le calculateur multiplie cette valeur par la cadence réellement saisie pour obtenir un débit moyen. Il ne prétend pas reconstituer la pointe instantanée au déclenchement.` : tool.demandExplanation}</p><p>Attribuer un débit minute sans ces paramètres serait une extrapolation. Les pages de compatibilité statiques conservent donc le statut « données insuffisantes », tandis que le calculateur permet une simulation explicite.</p><div class="actions"><a class="button primary" href={`/calculateur/?outil=${tool.id}`}>Renseigner les paramètres</a></div></section>}
 
 		<section class="related-reading"><h2>Guides liés à cet outil</h2><div class="link-cards"><a href={relatedGuide}><strong>Dimensionnement pratique</strong><span>Lire le dossier correspondant au besoin de cet outil.</span></a><a href="/guides/diametre-longueur-flexible-air-comprime/"><strong>Flexible et raccords</strong><span>Comprendre pourquoi le réseau peut réduire la pression disponible.</span></a><a href="/guides/debit-restitue-fad-vs-debit-aspire/"><strong>Débit restitué ou aspiré</strong><span>Comparer le bon chiffre à la consommation publiée.</span></a></div></section>
 

@@ -1,14 +1,13 @@
 ---
 import { compressors, tools } from '../data/catalog';
-import { isFixedFlowTool } from '../domain/tool-demand';
-const calculableTools = tools.filter(isFixedFlowTool);
+import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 ---
 
 <div class="calculator calculator-v2" data-calculator>
 	<form class="calculator-form" data-calculator-form>
 		<div class="calculator-form-head">
 			<div><p class="eyebrow">Configuration</p><h2>Décrire le besoin réel</h2></div>
-			<span class="version-chip">Moteur 1.0.0</span>
+			<span class="version-chip">Moteur 1.1.0</span>
 		</div>
 
 		<fieldset class="calculator-fieldset">
@@ -39,6 +38,7 @@ const calculableTools = tools.filter(isFixedFlowTool);
 
 		<label class="margin-control" for="margin"><span>Marge CompatAir</span><output data-margin-output>25 %</output><input id="margin" name="margin" type="range" min="0" max="50" step="5" value="25" /></label>
 		<p class="form-disclaimer">Les fréquences sont des hypothèses explicites. Les pertes du réseau restent signalées, mais ne sont pas chiffrées sans courbe ou mesure documentée.</p>
+		<p class="form-error" role="alert" data-form-error hidden></p>
 		<button class="button primary" type="submit">Calculer la configuration</button>
 	</form>
 
@@ -54,21 +54,29 @@ const calculableTools = tools.filter(isFixedFlowTool);
 	</div>
 </div>
 
-<template data-demand-template>
-	<div class="demand-row">
-		<div class="field demand-tool"><label data-label="outil">Outil</label><select data-tool>{calculableTools.map((tool) => <option value={tool.id}>{tool.label} · {tool.airflowLpm.typical} L/min à {tool.workingPressureBar.typical} bar</option>)}</select></div>
+	<template data-demand-template>
+	<div class="demand-row demand-card">
+		<div class="field demand-tool"><label data-label="outil">Outil</label><select data-tool>{tools.map((tool) => <option value={tool.id}>{tool.label} · {toolDemandLabel(tool)} · {toolPressureLabel(tool)}</option>)}</select></div>
 		<div class="field"><label data-label="nombre">Nombre</label><input data-quantity type="number" min="1" max="20" value="1" /></div>
-		<div class="field"><label data-label="frequence">Fréquence</label><select data-duty><option value="0.1">Rare, 10 %</option><option value="0.3">Intermittente, 30 %</option><option value="0.6">Fréquente, 60 %</option><option value="1" selected>Continue, 100 %</option></select></div>
 		<button type="button" class="remove-demand" data-remove-tool aria-label="Supprimer cet outil">×</button>
+		<div class="demand-parameters" data-demand-parameters>
+			<div class="field" data-fixed-fields><label data-label="frequence">Fréquence</label><select data-duty><option value="0.1">Rare, 10 %</option><option value="0.3">Intermittente, 30 %</option><option value="0.6">Fréquente, 60 %</option><option value="1" selected>Continue, 100 %</option></select></div>
+			<div class="field" data-action-fields hidden><label data-label="cadence">Cadence réelle</label><div class="input-unit"><input data-cadence type="number" min="0.1" max="10000" step="0.1" inputmode="decimal" /><span>tirs/min</span></div></div>
+			<div class="inflation-fields" data-inflation-fields hidden>
+				<div class="field"><label data-label="volume">Volume interne unitaire</label><div class="input-unit"><input data-volume type="number" min="0.1" max="100000" step="0.1" inputmode="decimal" /><span>L</span></div></div>
+				<div class="field"><label data-label="initiale">Pression initiale</label><div class="input-unit"><input data-initial-pressure type="number" min="0" max="50" step="0.1" inputmode="decimal" /><span>bar</span></div></div>
+				<div class="field"><label data-label="cible">Pression cible</label><div class="input-unit"><input data-target-pressure type="number" min="0.1" max="50" step="0.1" inputmode="decimal" /><span>bar</span></div></div>
+				<div class="field"><label data-label="duree">Temps cible</label><div class="input-unit"><input data-duration-seconds type="number" min="1" max="86400" step="1" inputmode="numeric" /><span>s</span></div></div>
+			</div>
+			<p class="demand-note" data-demand-note></p>
+		</div>
 	</div>
 </template>
 
 <script>
 	import { compressors, tools } from '../data/catalog';
 	import { interpolateFad } from '../domain/compatibility';
-	import { isFixedFlowTool } from '../domain/tool-demand';
 	import { sizeConfiguration, type SizingResult } from '../domain/sizing';
-	const calculableTools = tools.filter(isFixedFlowTool);
 
 	const root = document.querySelector<HTMLElement>('[data-calculator]');
 	const form = root?.querySelector<HTMLFormElement>('[data-calculator-form]');
@@ -81,7 +89,26 @@ const calculableTools = tools.filter(isFixedFlowTool);
 	const rank = { continuous: 0, intermittent: 1, insufficient_data: 2, incompatible: 3 } as const;
 	let demandIndex = 0;
 
-	function addDemand(toolId?: string, quantity = 1, duty = 1) {
+	function resultLabel(result: SizingResult) {
+		if (result.flowBasis === 'documented-continuous') return labels[result.verdict];
+		return result.verdict === 'continuous' ? 'Débit moyen couvert' : result.verdict === 'intermittent' ? 'Débit moyen couvert avec réserve' : labels[result.verdict];
+	}
+
+	function updateDemandMode(row: HTMLElement) {
+		const id = row.querySelector<HTMLSelectElement>('[data-tool]')!.value;
+		const tool = tools.find((item) => item.id === id)!;
+		row.querySelector<HTMLElement>('[data-fixed-fields]')!.hidden = tool.demandModel !== 'fixed-flow';
+		row.querySelector<HTMLElement>('[data-action-fields]')!.hidden = tool.demandModel !== 'per-action';
+		row.querySelector<HTMLElement>('[data-inflation-fields]')!.hidden = tool.demandModel !== 'variable-volume';
+		const note = row.querySelector<HTMLElement>('[data-demand-note]')!;
+		note.textContent = tool.demandModel === 'fixed-flow'
+			? `${tool.airflowLpm.typical} L/min documentés à ${tool.workingPressureBar.typical} bar.`
+			: tool.demandModel === 'per-action'
+				? `${tool.airPerActionLiters.toLocaleString('fr-FR')} L par ${tool.actionLabel} à ${tool.workingPressureBar.typical} bar. La cadence est obligatoire et reste une saisie utilisateur.`
+				: `Aucun volume de pneumatique n’est déduit du modèle. Volume, pressions et temps doivent être saisis.`;
+	}
+
+	function addDemand(toolId?: string, quantity = 1, saved: any = {}) {
 		if (!rows || !template || rows.children.length >= 8) return;
 		const fragment = template.content.cloneNode(true) as DocumentFragment;
 		const row = fragment.querySelector<HTMLElement>('.demand-row')!;
@@ -89,14 +116,29 @@ const calculableTools = tools.filter(isFixedFlowTool);
 		const quantityInput = row.querySelector<HTMLInputElement>('[data-quantity]')!;
 		const dutySelect = row.querySelector<HTMLSelectElement>('[data-duty]')!;
 		const rowIndex = demandIndex++;
-		for (const [control, suffix] of [[select, 'outil'], [quantityInput, 'nombre'], [dutySelect, 'frequence']] as const) {
+		const controls = [
+			[select, 'outil'], [quantityInput, 'nombre'], [dutySelect, 'frequence'],
+			[row.querySelector<HTMLInputElement>('[data-cadence]')!, 'cadence'],
+			[row.querySelector<HTMLInputElement>('[data-volume]')!, 'volume'],
+			[row.querySelector<HTMLInputElement>('[data-initial-pressure]')!, 'initiale'],
+			[row.querySelector<HTMLInputElement>('[data-target-pressure]')!, 'cible'],
+			[row.querySelector<HTMLInputElement>('[data-duration-seconds]')!, 'duree'],
+		] as const;
+		for (const [control, suffix] of controls) {
 			control.id = `demande-${rowIndex}-${suffix}`;
 			row.querySelector<HTMLLabelElement>(`label[data-label="${suffix}"]`)!.htmlFor = control.id;
 		}
-		if (toolId && calculableTools.some((tool) => tool.id === toolId)) select.value = toolId;
+		if (toolId && tools.some((tool) => tool.id === toolId)) select.value = toolId;
 		quantityInput.value = String(quantity);
-		dutySelect.value = String(duty);
+		dutySelect.value = String(saved.dutyFactor ?? 1);
+		row.querySelector<HTMLInputElement>('[data-cadence]')!.value = saved.actionsPerMinute ?? '';
+		row.querySelector<HTMLInputElement>('[data-volume]')!.value = saved.volumeLiters ?? '';
+		row.querySelector<HTMLInputElement>('[data-initial-pressure]')!.value = saved.initialPressureBar ?? '';
+		row.querySelector<HTMLInputElement>('[data-target-pressure]')!.value = saved.targetPressureBar ?? '';
+		row.querySelector<HTMLInputElement>('[data-duration-seconds]')!.value = saved.targetMinutes ? String(saved.targetMinutes * 60) : '';
+		select.addEventListener('change', () => updateDemandMode(row));
 		row.querySelector('[data-remove-tool]')?.addEventListener('click', () => { if (rows.children.length > 1) row.remove(); });
+		updateDemandMode(row);
 		rows.append(fragment);
 	}
 
@@ -112,8 +154,25 @@ const calculableTools = tools.filter(isFixedFlowTool);
 		const data = new FormData(form);
 		const demands = [...rows.querySelectorAll<HTMLElement>('.demand-row')].map((row) => {
 			const id = row.querySelector<HTMLSelectElement>('[data-tool]')!.value;
-			const tool = calculableTools.find((item) => item.id === id)!;
-			return { id, flowLpm: tool.airflowLpm.typical, pressureBar: tool.workingPressureBar.typical, quantity: Number(row.querySelector<HTMLInputElement>('[data-quantity]')!.value), dutyFactor: Number(row.querySelector<HTMLSelectElement>('[data-duty]')!.value) };
+			const tool = tools.find((item) => item.id === id)!;
+			const quantity = Number(row.querySelector<HTMLInputElement>('[data-quantity]')!.value);
+			if (!Number.isInteger(quantity) || quantity < 1 || quantity > 20) throw new Error('Le nombre d’outils doit être compris entre 1 et 20.');
+			if (tool.demandModel === 'fixed-flow') return { model: 'fixed-flow' as const, id, flowLpm: tool.airflowLpm.typical, pressureBar: tool.workingPressureBar.typical, quantity, dutyFactor: Number(row.querySelector<HTMLSelectElement>('[data-duty]')!.value) };
+			if (tool.demandModel === 'per-action') {
+				const actionsPerMinute = Number(row.querySelector<HTMLInputElement>('[data-cadence]')!.value);
+				if (!Number.isFinite(actionsPerMinute) || actionsPerMinute <= 0) throw new Error(`Saisissez une cadence supérieure à zéro pour ${tool.label}.`);
+				return { model: 'per-action' as const, id, litersPerAction: tool.airPerActionLiters, actionsPerMinute, pressureBar: tool.workingPressureBar.typical, quantity };
+			}
+			const volumeLiters = Number(row.querySelector<HTMLInputElement>('[data-volume]')!.value);
+			const initialPressureBar = Number(row.querySelector<HTMLInputElement>('[data-initial-pressure]')!.value);
+			const targetPressureBar = Number(row.querySelector<HTMLInputElement>('[data-target-pressure]')!.value);
+			const durationSeconds = Number(row.querySelector<HTMLInputElement>('[data-duration-seconds]')!.value);
+			if (!Number.isFinite(volumeLiters) || volumeLiters <= 0) throw new Error('Saisissez le volume interne unitaire à gonfler.');
+			if (!Number.isFinite(initialPressureBar) || initialPressureBar < 0) throw new Error('Saisissez une pression initiale positive ou nulle.');
+			if (!Number.isFinite(targetPressureBar) || targetPressureBar <= initialPressureBar) throw new Error('La pression cible doit être supérieure à la pression initiale.');
+			if (targetPressureBar > (tool.workingPressureBar.max ?? 50)) throw new Error(`La pression cible dépasse la pression maximale publiée de ${tool.workingPressureBar.max} bar pour ${tool.label}.`);
+			if (!Number.isFinite(durationSeconds) || durationSeconds <= 0) throw new Error('Saisissez un temps cible supérieur à zéro.');
+			return { model: 'inflation' as const, id, volumeLiters, initialPressureBar, targetPressureBar, targetMinutes: durationSeconds / 60, quantity };
 		});
 		return { demands, mode: String(data.get('mode')), safetyMargin: Number(data.get('margin')) / 100, sessionMinutes: Number(data.get('session')), hoseLengthMeters: readNumber(data, 'hoseLength'), hoseInnerDiameterMm: readNumber(data, 'hoseDiameter'), selectedCompressor: String(data.get('compressor') ?? ''), custom: { maxPressureBar: readNumber(data, 'customPressure'), availableFadLpm: readNumber(data, 'customFad'), tankLiters: readNumber(data, 'customTank'), dutyCycle: (readNumber(data, 'customDuty') ?? 100) / 100, cutInPressureBar: readNumber(data, 'customCutIn'), cutOutPressureBar: readNumber(data, 'customCutOut') } };
 	}
@@ -130,9 +189,9 @@ const calculableTools = tools.filter(isFixedFlowTool);
 		const metrics = root?.querySelector<HTMLElement>('[data-result-metrics]');
 		if (!metrics) return;
 		const values = [
-			['Débit de pointe', `${Math.round(result.peakFlowLpm)} L/min`],
-			['Débit moyen', `${Math.round(result.averageFlowLpm)} L/min`],
-			['FAD recommandé', `${Math.round(result.recommendedFadLpm)} L/min`],
+			[result.flowBasis === 'documented-continuous' ? 'Débit de pointe' : 'Débit de dimensionnement moyen', `${result.peakFlowLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min`],
+			['Débit moyen', `${result.averageFlowLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min`],
+			['FAD recommandé', `${result.recommendedFadLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min`],
 			['Pression demandée', `${result.requiredPressureBar.toLocaleString('fr-FR')} bar`],
 			['Pression utile après pertes', result.usefulPressureBar !== undefined ? `${result.usefulPressureBar.toLocaleString('fr-FR')} bar avant pertes non chiffrées` : 'Données insuffisantes'],
 			['Cuve recommandée', result.recommendedTankLiters !== undefined ? `${Math.round(result.recommendedTankLiters)} L` : 'Non déterminable sans durée de rafale'],
@@ -152,7 +211,7 @@ const calculableTools = tools.filter(isFixedFlowTool);
 	}
 	function renderAccessories(config: ReturnType<typeof configFromForm>) {
 		const target = root?.querySelector<HTMLElement>('[data-accessories]'); if (!target || !config) return;
-		const messages = config.demands.map((demand) => calculableTools.find((item) => item.id === demand.id)).filter(Boolean).map((tool) => tool!.connectorSize ? `${tool!.label} : ${tool!.connectorSize}.` : `${tool!.label} : raccord et exigences de traitement non documentés dans la source actuelle.`);
+		const messages = config.demands.map((demand) => tools.find((item) => item.id === demand.id)).filter(Boolean).map((tool) => tool!.connectorSize ? `${tool!.label} : ${tool!.connectorSize}.` : `${tool!.label} : raccord et exigences de traitement non documentés dans la source actuelle.`);
 		messages.push('Prévoir des raccords compatibles avec les filetages et passages internes réellement présents. CompatAir ne propose aucune référence commerciale sans flux vérifié.');
 		target.replaceChildren(...messages.map((message) => { const li = document.createElement('li'); li.textContent = message; return li; }));
 	}
@@ -161,7 +220,7 @@ const calculableTools = tools.filter(isFixedFlowTool);
 		const article = document.createElement('article'); article.className = `result-card verdict-${result.verdict}`;
 		const head = document.createElement('div'); head.className = 'result-card-head';
 		const title = document.createElement('h4'); const link = document.createElement('a'); link.href = `/compresseurs/${compressor.slug}/`; link.textContent = `${compressor.brand} ${compressor.model}`; title.append(link);
-		const badge = document.createElement('span'); badge.className = 'verdict-badge'; badge.textContent = labels[result.verdict]; head.append(title, badge);
+		const badge = document.createElement('span'); badge.className = 'verdict-badge'; badge.textContent = resultLabel(result); head.append(title, badge);
 		const detail = document.createElement('p'); detail.textContent = result.verdict === 'insufficient_data' ? `FAD non vérifiable à ${result.requiredPressureBar} bar · confiance ${compressor.confidence}.` : `${interpolateFad(compressor, result.requiredPressureBar)?.toFixed(0) ?? 'FAD inconnu'} L/min documentés · cuve ${compressor.tankLiters} L · confiance ${compressor.confidence}.`;
 		article.append(head, detail); return article;
 	}
@@ -174,7 +233,7 @@ const calculableTools = tools.filter(isFixedFlowTool);
 	}
 	function restoreConfig(config: any) {
 		if (!form || !rows || !config?.demands) return;
-		rows.replaceChildren(); for (const demand of config.demands.slice(0, 8)) addDemand(demand.id, demand.quantity, demand.dutyFactor);
+		rows.replaceChildren(); for (const demand of config.demands.slice(0, 8)) addDemand(demand.id, demand.quantity, demand);
 		for (const [name, value] of Object.entries({ mode: config.mode, margin: config.safetyMargin * 100, session: config.sessionMinutes, hoseLength: config.hoseLengthMeters, hoseDiameter: config.hoseInnerDiameterMm, compressor: config.selectedCompressor, customPressure: config.custom?.maxPressureBar, customFad: config.custom?.availableFadLpm, customTank: config.custom?.tankLiters, customDuty: config.custom?.dutyCycle * 100, customCutIn: config.custom?.cutInPressureBar, customCutOut: config.custom?.cutOutPressureBar })) { const field = form.elements.namedItem(name); if (field instanceof HTMLInputElement || field instanceof HTMLSelectElement) field.value = value === undefined ? '' : String(value); }
 		form.querySelector<HTMLElement>('[data-custom-compressor]')!.hidden = config.selectedCompressor !== 'custom';
 		root?.querySelector<HTMLOutputElement>('[data-margin-output]')!.replaceChildren(`${Math.round(config.safetyMargin * 100)} %`);
@@ -190,21 +249,31 @@ const calculableTools = tools.filter(isFixedFlowTool);
 
 	form?.addEventListener('submit', (event) => {
 		event.preventDefault(); if (!output || !list || !evaluated) return;
-		const config = configFromForm(); if (!config) return;
-		const base = sizeConfiguration(config as any);
-		const selected = compressorInput(config, base.requiredPressureBar);
-		const result = sizeConfiguration({ ...config, compressor: selected } as any);
-		root?.querySelector<HTMLElement>('[data-verdict]')!.replaceChildren(labels[result.verdict]);
-		root?.querySelector<HTMLElement>('[data-required-flow]')!.replaceChildren(`${Math.round(result.recommendedFadLpm).toLocaleString('fr-FR')} L/min recommandés`);
-		root?.querySelector<HTMLElement>('[data-result-context]')!.replaceChildren(`${Math.round(result.peakFlowLpm)} L/min de pointe, ${Math.round(result.averageFlowLpm)} L/min en moyenne, à ${result.requiredPressureBar} bar.`);
-		renderMetrics(result); renderWarnings(result); renderAccessories(config);
-		if (config.selectedCompressor) { const title = document.createElement('h3'); title.textContent = 'Compresseur vérifié'; const p = document.createElement('p'); p.textContent = labels[result.verdict]; evaluated.replaceChildren(title, p); } else evaluated.replaceChildren();
+		const errorTarget = root?.querySelector<HTMLElement>('[data-form-error]');
+		try {
+			const config = configFromForm(); if (!config) return;
+			if (errorTarget) { errorTarget.hidden = true; errorTarget.textContent = ''; }
+			const base = sizeConfiguration(config as any);
+			const selected = compressorInput(config, base.requiredPressureBar);
+			const result = sizeConfiguration({ ...config, compressor: selected } as any);
+			root?.querySelector<HTMLElement>('[data-verdict]')!.replaceChildren(resultLabel(result));
+			root?.querySelector<HTMLElement>('[data-required-flow]')!.replaceChildren(`${result.recommendedFadLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min recommandés`);
+			const hasInflation = config.demands.some((demand) => demand.model === 'inflation');
+			root?.querySelector<HTMLElement>('[data-result-context]')!.replaceChildren(result.flowBasis === 'documented-continuous' ? `${Math.round(result.peakFlowLpm)} L/min de pointe, ${Math.round(result.averageFlowLpm)} L/min en moyenne, à ${result.requiredPressureBar} bar.` : hasInflation ? `${result.peakFlowLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min de besoin moyen idéalisé à ${result.requiredPressureBar.toLocaleString('fr-FR')} bar. Le temps réel et les restrictions ne sont pas modélisés.` : `${result.peakFlowLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min de besoin moyen calculé à ${result.requiredPressureBar.toLocaleString('fr-FR')} bar. La pointe instantanée n’est pas modélisée.`);
+			renderMetrics(result); renderWarnings(result); renderAccessories(config);
+			if (config.selectedCompressor) { const title = document.createElement('h3'); title.textContent = 'Compresseur vérifié'; const p = document.createElement('p'); p.textContent = resultLabel(result); evaluated.replaceChildren(title, p); } else evaluated.replaceChildren();
 
-		const candidates = compressors.map((compressor) => ({ compressor, result: sizeConfiguration({ ...config, compressor: { maxPressureBar: compressor.maxPressureBar, availableFadLpm: interpolateFad(compressor, base.requiredPressureBar), tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle } } as any) })).sort((a, b) => rank[a.result.verdict] - rank[b.result.verdict] || (interpolateFad(b.compressor, base.requiredPressureBar) ?? 0) - (interpolateFad(a.compressor, base.requiredPressureBar) ?? 0));
-		list.replaceChildren(...candidates.map(({ compressor, result }) => renderResultCard(compressor, result)));
-		window.history.replaceState(null, '', `${window.location.pathname}#config=${encodeConfig(config)}`);
-		if (navigator.sendBeacon) navigator.sendBeacon('/events', new Blob([JSON.stringify({ event: 'calculator_used' })], { type: 'application/json' }));
-		output.hidden = false; output.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+			const candidates = compressors.map((compressor) => ({ compressor, result: sizeConfiguration({ ...config, compressor: { maxPressureBar: compressor.maxPressureBar, availableFadLpm: interpolateFad(compressor, base.requiredPressureBar), tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle } } as any) })).sort((a, b) => rank[a.result.verdict] - rank[b.result.verdict] || (interpolateFad(b.compressor, base.requiredPressureBar) ?? 0) - (interpolateFad(a.compressor, base.requiredPressureBar) ?? 0));
+			list.replaceChildren(...candidates.map(({ compressor, result }) => renderResultCard(compressor, result)));
+			window.history.replaceState(null, '', `${window.location.pathname}#config=${encodeConfig(config)}`);
+			if (navigator.sendBeacon) navigator.sendBeacon('/events', new Blob([JSON.stringify({ event: 'calculator_used' })], { type: 'application/json' }));
+			output.hidden = false; output.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+		} catch (error) {
+			if (!errorTarget) return;
+			errorTarget.textContent = error instanceof Error ? error.message : 'La configuration contient une valeur invalide.';
+			errorTarget.hidden = false;
+			errorTarget.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		}
 	});
 
 	root?.querySelector('[data-share]')?.addEventListener('click', async () => { const config = configFromForm(); if (!config) return; const url = `${location.origin}${location.pathname}#config=${encodeConfig(config)}`; await navigator.clipboard.writeText(url); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'URL copiée'; });

@@ -1,14 +1,40 @@
 import { z } from 'zod';
 
-export const CALCULATION_VERSION = '1.0.0' as const;
+export const CALCULATION_VERSION = '1.1.0' as const;
+export const STANDARD_ATMOSPHERE_BAR = 1.01325 as const;
 
-const demandSchema = z.object({
+const fixedFlowDemandSchema = z.object({
+	model: z.literal('fixed-flow').default('fixed-flow'),
 	id: z.string().min(1),
 	flowLpm: z.number().positive().max(10_000),
 	pressureBar: z.number().positive().max(50),
 	quantity: z.number().int().min(1).max(20).default(1),
 	dutyFactor: z.number().min(0.01).max(1).default(1),
 });
+
+const perActionDemandSchema = z.object({
+	model: z.literal('per-action'),
+	id: z.string().min(1),
+	litersPerAction: z.number().positive().max(1_000),
+	actionsPerMinute: z.number().positive().max(10_000),
+	pressureBar: z.number().positive().max(50),
+	quantity: z.number().int().min(1).max(20).default(1),
+});
+
+const inflationDemandSchema = z.object({
+	model: z.literal('inflation'),
+	id: z.string().min(1),
+	volumeLiters: z.number().positive().max(100_000),
+	initialPressureBar: z.number().nonnegative().max(50),
+	targetPressureBar: z.number().positive().max(50),
+	targetMinutes: z.number().positive().max(1_440),
+	quantity: z.number().int().min(1).max(20).default(1),
+}).refine((value) => value.targetPressureBar > value.initialPressureBar, {
+	message: 'La pression cible doit être supérieure à la pression initiale.',
+	path: ['targetPressureBar'],
+});
+
+const demandSchema = z.union([fixedFlowDemandSchema, perActionDemandSchema, inflationDemandSchema]);
 
 const compressorInputSchema = z.object({
 	maxPressureBar: z.number().positive().max(50),
@@ -32,6 +58,7 @@ export const sizingInputSchema = z.object({
 export type SizingInput = z.input<typeof sizingInputSchema>;
 export type NormalizedSizingInput = z.output<typeof sizingInputSchema>;
 export type SizingVerdict = 'continuous' | 'intermittent' | 'incompatible' | 'insufficient_data';
+export type FlowBasis = 'documented-continuous' | 'derived-average';
 
 export type SizingResult = {
 	verdict: SizingVerdict;
@@ -48,8 +75,31 @@ export type SizingResult = {
 	confidence: 'high' | 'medium' | 'low';
 	hypotheses: string[];
 	warnings: string[];
+	flowBasis: FlowBasis;
 	calculationVersion: typeof CALCULATION_VERSION;
 };
+
+export function perActionAverageFlow(litersPerAction: number, actionsPerMinute: number, quantity = 1): number {
+	return z.number().positive().max(1_000).parse(litersPerAction)
+		* z.number().positive().max(10_000).parse(actionsPerMinute)
+		* z.number().int().min(1).max(20).parse(quantity);
+}
+
+/**
+ * Equivalent free-air volume under an ideal-gas, constant-temperature and fixed-volume model.
+ * Input pressures are gauge pressures. Their difference is converted at one standard atmosphere.
+ */
+export function inflationFreeAirLiters(volumeLiters: number, initialGaugeBar: number, targetGaugeBar: number, quantity = 1): number {
+	const value = z.object({
+		volumeLiters: z.number().positive().max(100_000),
+		initialPressureBar: z.number().nonnegative().max(50),
+		targetPressureBar: z.number().positive().max(50),
+		quantity: z.number().int().min(1).max(20),
+	}).refine((item) => item.targetPressureBar > item.initialPressureBar).parse({
+		volumeLiters, initialPressureBar: initialGaugeBar, targetPressureBar: targetGaugeBar, quantity,
+	});
+	return value.volumeLiters * value.quantity * (value.targetPressureBar - value.initialPressureBar) / STANDARD_ATMOSPHERE_BAR;
+}
 
 /**
  * Free-air reserve from receiver volume and two gauge pressures.
@@ -62,11 +112,24 @@ export function usableTankAir(tankLiters: number, cutInBar: number, cutOutBar: n
 
 export function sizeConfiguration(input: SizingInput): SizingResult {
 	const value = sizingInputSchema.parse(input);
-	const expanded = value.demands.map((demand) => ({
-		...demand,
-		peak: demand.flowLpm * demand.quantity,
-		average: demand.flowLpm * demand.quantity * demand.dutyFactor,
-	}));
+	const expanded = value.demands.map((demand) => {
+		if (demand.model === 'per-action') {
+			const average = perActionAverageFlow(demand.litersPerAction, demand.actionsPerMinute, demand.quantity);
+			return { pressureBar: demand.pressureBar, peak: average, average, derived: true };
+		}
+		if (demand.model === 'inflation') {
+			const freeAirLiters = inflationFreeAirLiters(demand.volumeLiters, demand.initialPressureBar, demand.targetPressureBar, demand.quantity);
+			const average = freeAirLiters / demand.targetMinutes;
+			return { pressureBar: demand.targetPressureBar, peak: average, average, derived: true };
+		}
+		return {
+			pressureBar: demand.pressureBar,
+			peak: demand.flowLpm * demand.quantity,
+			average: demand.flowLpm * demand.quantity * demand.dutyFactor,
+			derived: false,
+		};
+	});
+	const flowBasis: FlowBasis = expanded.some((demand) => demand.derived) ? 'derived-average' : 'documented-continuous';
 	const peakFlowLpm = value.mode === 'simultaneous'
 		? expanded.reduce((sum, demand) => sum + demand.peak, 0)
 		: Math.max(...expanded.map((demand) => demand.peak));
@@ -83,6 +146,19 @@ export function sizeConfiguration(input: SizingInput): SizingResult {
 		`La session déclarée dure ${value.sessionMinutes} minutes. Une fréquence ne décrit pas à elle seule la durée de chaque rafale.`,
 	];
 	const warnings: string[] = [];
+	for (const demand of value.demands) {
+		if (demand.model === 'per-action') {
+			const average = perActionAverageFlow(demand.litersPerAction, demand.actionsPerMinute, demand.quantity);
+			hypotheses.push(`${demand.quantity} outil(s) à ${demand.litersPerAction.toLocaleString('fr-FR')} L par action et ${demand.actionsPerMinute.toLocaleString('fr-FR')} action(s)/min donnent ${average.toLocaleString('fr-FR', { maximumFractionDigits: 2 })} L/min en moyenne.`);
+			warnings.push('Le calcul par action ne décrit pas le débit instantané au déclenchement. Le flexible, les raccords et la réserve locale doivent être vérifiés séparément.');
+		}
+		if (demand.model === 'inflation') {
+			const freeAirLiters = inflationFreeAirLiters(demand.volumeLiters, demand.initialPressureBar, demand.targetPressureBar, demand.quantity);
+			hypotheses.push(`Le gonflage utilise ${freeAirLiters.toLocaleString('fr-FR', { maximumFractionDigits: 2 })} L d’air libre équivalent pour ${demand.quantity} volume(s) de ${demand.volumeLiters.toLocaleString('fr-FR')} L, de ${demand.initialPressureBar.toLocaleString('fr-FR')} à ${demand.targetPressureBar.toLocaleString('fr-FR')} bar relatifs.`);
+			hypotheses.push(`La conversion retient une atmosphère standard de ${STANDARD_ATMOSPHERE_BAR.toLocaleString('fr-FR')} bar et une approximation de gaz parfait à température et volume constants.`);
+			warnings.push('Le temps de gonflage calculé est un objectif moyen idéalisé. Il ne modélise ni échauffement, ni fuite, ni restriction de valve, ni perte du flexible ou du détendeur.');
+		}
+	}
 
 	if (value.hoseLengthMeters !== undefined || value.hoseInnerDiameterMm !== undefined) {
 		if (value.hoseLengthMeters === undefined || value.hoseInnerDiameterMm === undefined) {
@@ -97,7 +173,7 @@ export function sizeConfiguration(input: SizingInput): SizingResult {
 			verdict: 'insufficient_data', peakFlowLpm, averageFlowLpm, recommendedFadLpm, requiredPressureBar,
 			limitingFactor: 'data', confidence: 'medium', hypotheses,
 			warnings: [...warnings, 'Aucun compresseur n’a été renseigné. Le résultat décrit uniquement le besoin en air.'],
-			calculationVersion: CALCULATION_VERSION,
+			flowBasis, calculationVersion: CALCULATION_VERSION,
 		};
 	}
 
@@ -106,7 +182,7 @@ export function sizeConfiguration(input: SizingInput): SizingResult {
 		return {
 			verdict: 'incompatible', peakFlowLpm, averageFlowLpm, recommendedFadLpm, requiredPressureBar,
 			usefulPressureBar: compressor.maxPressureBar, limitingFactor: 'pressure', confidence: 'high', hypotheses, warnings,
-			calculationVersion: CALCULATION_VERSION,
+			flowBasis, calculationVersion: CALCULATION_VERSION,
 		};
 	}
 	if (compressor.availableFadLpm === undefined) {
@@ -114,7 +190,7 @@ export function sizeConfiguration(input: SizingInput): SizingResult {
 			verdict: 'insufficient_data', peakFlowLpm, averageFlowLpm, recommendedFadLpm, requiredPressureBar,
 			limitingFactor: 'data', confidence: 'low', hypotheses,
 			warnings: [...warnings, 'Le débit restitué à la pression demandée manque. Le débit aspiré ne peut pas le remplacer.'],
-			calculationVersion: CALCULATION_VERSION,
+			flowBasis, calculationVersion: CALCULATION_VERSION,
 		};
 	}
 
@@ -131,7 +207,7 @@ export function sizeConfiguration(input: SizingInput): SizingResult {
 		return {
 			verdict: 'continuous', peakFlowLpm, averageFlowLpm, recommendedFadLpm, requiredPressureBar,
 			usefulPressureBar: requiredPressureBar, usableTankAirLiters, confidence: 'high', hypotheses, warnings,
-			calculationVersion: CALCULATION_VERSION,
+			flowBasis, calculationVersion: CALCULATION_VERSION,
 		};
 	}
 
@@ -141,7 +217,7 @@ export function sizeConfiguration(input: SizingInput): SizingResult {
 			usefulPressureBar: requiredPressureBar, usableTankAirLiters,
 			limitingFactor: compressor.dutyCycle ? 'duty_cycle' : 'flow', confidence: 'high', hypotheses,
 			warnings: [...warnings, 'La capacité moyenne documentée ne couvre pas la demande moyenne saisie.'],
-			calculationVersion: CALCULATION_VERSION,
+			flowBasis, calculationVersion: CALCULATION_VERSION,
 		};
 	}
 
@@ -150,7 +226,7 @@ export function sizeConfiguration(input: SizingInput): SizingResult {
 			verdict: 'insufficient_data', peakFlowLpm, averageFlowLpm, recommendedFadLpm, requiredPressureBar,
 			usefulPressureBar: requiredPressureBar, limitingFactor: 'data', confidence: 'low', hypotheses,
 			warnings: [...warnings, 'Le débit de pointe dépasse le FAD. Les pressions de coupure et la cuve sont nécessaires pour estimer un fonctionnement intermittent.'],
-			calculationVersion: CALCULATION_VERSION,
+			flowBasis, calculationVersion: CALCULATION_VERSION,
 		};
 	}
 
@@ -166,7 +242,7 @@ export function sizeConfiguration(input: SizingInput): SizingResult {
 		estimatedRecoveryMinutes: recoverySurplusLpm > 0 ? usableTankAirLiters / recoverySurplusLpm : undefined,
 		limitingFactor: 'flow', confidence: 'medium', hypotheses,
 		warnings: [...warnings, 'Le fonctionnement intermittent dépend des pressions de coupure réellement réglées et du profil d’usage saisi.'],
-		calculationVersion: CALCULATION_VERSION,
+		flowBasis, calculationVersion: CALCULATION_VERSION,
 	};
 }
 
