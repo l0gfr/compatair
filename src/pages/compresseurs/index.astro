@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { compressors } from '../../data/catalog';
+---
+
+<BaseLayout title="Compresseurs documentés et comparés | CompatAir" description="Consultez les débits restitués, pressions, cuves et limites documentaires des compresseurs analysés par CompatAir.">
+	<section class="page-hero compact"><div class="container"><p class="eyebrow">Catalogue pilote</p><h1>{compressors.length} compresseurs passés au crible</h1><p class="lead">Une fiche n’est considérée exploitable que si son débit disponible à la pression de travail peut être vérifié.</p></div></section>
+	<section class="section"><div class="container product-grid">
+		{compressors.map((compressor) => (
+			<article class="product-card">
+				<div class="product-monogram" aria-hidden="true">{compressor.brand.slice(0, 1)}</div>
+				<p class="product-brand">{compressor.brand}</p>
+				<h2><a href={`/compresseurs/${compressor.slug}/`}>{compressor.model}</a></h2>
+				<dl class="spec-list"><div><dt>Cuve</dt><dd>{compressor.tankLiters} L</dd></div><div><dt>Pression max.</dt><dd>{compressor.maxPressureBar} bar</dd></div><div><dt>Confiance</dt><dd>{compressor.confidence}</dd></div></dl>
+				<p class:list={['data-status', compressor.fadCurve.length ? 'verified' : 'missing']}>{compressor.fadCurve.length ? 'Débit restitué documenté' : 'FAD à confirmer'}</p>
+			</article>
+		))}
+	</div></section>
+</BaseLayout>
+

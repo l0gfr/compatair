@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { compressors, tools } from '../../data/catalog';
+import { evaluateCompatibility } from '../../domain/compatibility';
+
+export function getStaticPaths() {
+	return compressors.map((compressor) => ({ params: { slug: compressor.slug }, props: { compressor } }));
+}
+
+const { compressor } = Astro.props;
+const matches = tools.map((tool) => ({ tool, result: evaluateCompatibility(compressor, tool) }));
+const labels = { continuous: 'Continu', intermittent: 'Intermittent', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' };
+---
+
+<BaseLayout title={`${compressor.brand} ${compressor.model} : débit et compatibilité | CompatAir`} description={`Analyse du ${compressor.brand} ${compressor.model} : cuve ${compressor.tankLiters} L, pression ${compressor.maxPressureBar} bar et débit restitué sourcé.`}>
+	<article class="container product-detail">
+		<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/compresseurs/">Compresseurs</a><span>/</span><span>{compressor.brand} {compressor.model}</span></nav>
+		<div class="product-detail-head"><div><p class="eyebrow">Confiance documentaire {compressor.confidence}</p><h1>{compressor.brand} {compressor.model}</h1><p class="lead">Référence {compressor.mpn ?? 'non renseignée'} · {compressor.oilType === 'oil-free' ? 'sans huile' : 'lubrifié'} · statut {compressor.status === 'active' ? 'actif' : compressor.status}.</p></div><div class="product-monogram large" aria-hidden="true">{compressor.brand.slice(0, 1)}</div></div>
+		<section class="spec-panel"><h2>Spécifications vérifiées</h2><dl class="spec-table"><div><dt>Cuve</dt><dd>{compressor.tankLiters} L</dd></div><div><dt>Pression maximale</dt><dd>{compressor.maxPressureBar} bar</dd></div><div><dt>Débit aspiré</dt><dd>{compressor.intakeFlowLpm ? `${compressor.intakeFlowLpm} L/min, non utilisé pour le verdict` : 'Non publié'}</dd></div><div><dt>Débit restitué documenté</dt><dd>{compressor.fadCurve.length ? compressor.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ') : 'Donnée insuffisante'}</dd></div><div><dt>Cycle maximal</dt><dd>{compressor.dutyCycle ? `${Math.round(compressor.dutyCycle * 100)} %` : 'Non documenté'}</dd></div></dl></section>
+		<section><h2>Verdicts sur nos outils pilotes</h2><div class="compatibility-table">{matches.map(({ tool, result }) => <a href={`/outils-pneumatiques/${tool.slug}/`}><span>{tool.label}</span><strong class={`text-${result.verdict}`}>{labels[result.verdict]}</strong></a>)}</div></section>
+		<section class="sources-panel"><h2>Sources et réserves</h2>{compressor.evidence.map((evidence) => <p><a href={evidence.sourceUrl} rel="nofollow noopener" target="_blank">{evidence.sourceLabel}</a> · consultée le {evidence.retrievedAt.split('-').reverse().join('/')} · niveau {evidence.confidence}</p>)}{compressor.notes.map((note) => <p>{note}</p>)}</section>
+	</article>
+</BaseLayout>
+

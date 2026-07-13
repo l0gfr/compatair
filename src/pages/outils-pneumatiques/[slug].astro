@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { tools } from '../../data/catalog';
+
+export function getStaticPaths() { return tools.map((tool) => ({ params: { slug: tool.slug }, props: { tool } })); }
+const { tool } = Astro.props;
+---
+<BaseLayout title={`${tool.label} : quel compresseur ? | CompatAir`} description={`${tool.label} nécessite ${tool.airflowLpm.typical} L/min à ${tool.workingPressureBar.typical} bar. Calculez le compresseur adapté.`}>
+	<article class="container product-detail"><nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/outils-pneumatiques/">Outils pneumatiques</a><span>/</span><span>{tool.label}</span></nav><p class="eyebrow">Données constructeur · confiance {tool.confidence}</p><h1>{tool.label}</h1><p class="lead">Besoin nominal documenté : {tool.airflowLpm.typical} L/min à {tool.workingPressureBar.typical} bar.</p><section class="spec-panel"><h2>Profil de consommation</h2><dl class="spec-table"><div><dt>Plage de débit</dt><dd>{tool.airflowLpm.min === tool.airflowLpm.max ? `${tool.airflowLpm.typical} L/min` : `${tool.airflowLpm.min} à ${tool.airflowLpm.max} L/min`}</dd></div><div><dt>Pression typique</dt><dd>{tool.workingPressureBar.typical} bar</dd></div><div><dt>Rythme</dt><dd>{tool.usagePattern}</dd></div><div><dt>Facteur d’utilisation</dt><dd>{Math.round(tool.dutyFactor * 100)} %</dd></div><div><dt>Raccordement</dt><dd>{tool.connectorSize ?? 'À vérifier selon l’installation'}</dd></div></dl></section><div class="actions"><a class="button primary" href={`/calculateur/?outil=${tool.id}`}>Comparer les compresseurs</a></div><section class="sources-panel"><h2>Source</h2>{tool.evidence.map((evidence) => <p><a href={evidence.sourceUrl} rel="nofollow noopener" target="_blank">{evidence.sourceLabel}</a> · consultée le {evidence.retrievedAt.split('-').reverse().join('/')}</p>)}{tool.notes.map((note) => <p>{note}</p>)}</section></article>
+</BaseLayout>

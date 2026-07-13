@@ -1,0 +1,119 @@
+---
+import { tools } from '../data/catalog';
+---
+
+<div class="calculator" data-calculator>
+	<form class="calculator-form" data-calculator-form>
+		<div class="field">
+			<label for="tool">Outil pneumatique</label>
+			<select id="tool" name="tool">
+				{tools.map((tool) => <option value={tool.id}>{tool.label} · {tool.airflowLpm.typical} L/min à {tool.workingPressureBar.typical} bar</option>)}
+			</select>
+		</div>
+		<div class="field-row">
+			<div class="field">
+				<label for="hose-length">Longueur du flexible</label>
+				<select id="hose-length" name="hoseLength">
+					<option value="5">5 mètres</option>
+					<option value="10" selected>10 mètres</option>
+					<option value="20">20 mètres</option>
+					<option value="30">30 mètres</option>
+				</select>
+			</div>
+			<div class="field">
+				<label for="hose-diameter">Diamètre intérieur</label>
+				<select id="hose-diameter" name="hoseDiameter">
+					<option value="6">6 mm</option>
+					<option value="8">8 mm</option>
+					<option value="9" selected>9 mm</option>
+					<option value="10">10 mm ou plus</option>
+				</select>
+			</div>
+		</div>
+		<button class="button primary" type="submit">Calculer les compatibilités</button>
+	</form>
+
+	<div class="calculator-output" aria-live="polite" data-calculator-output hidden>
+		<div class="result-summary">
+			<p class="eyebrow">Besoin calculé</p>
+			<strong data-required-flow></strong>
+			<p data-result-context></p>
+		</div>
+		<div class="result-list" data-result-list></div>
+		<p class="calculator-note">Résultats indicatifs fondés sur les données constructeur listées. Les prix et offres marchandes seront ajoutés seulement après connexion d’un flux d’affiliation vérifié.</p>
+	</div>
+</div>
+
+<script>
+	import { compressors, tools } from '../data/catalog';
+	import { evaluateCompatibility } from '../domain/compatibility';
+
+	const root = document.querySelector<HTMLElement>('[data-calculator]');
+	const form = root?.querySelector<HTMLFormElement>('[data-calculator-form]');
+	const output = root?.querySelector<HTMLElement>('[data-calculator-output]');
+	const list = root?.querySelector<HTMLElement>('[data-result-list]');
+	const required = root?.querySelector<HTMLElement>('[data-required-flow]');
+	const context = root?.querySelector<HTMLElement>('[data-result-context]');
+	const labels = { continuous: 'Compatible en continu', intermittent: 'Compatible par intermittence', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' } as const;
+	const rank = { continuous: 0, intermittent: 1, insufficient_data: 2, incompatible: 3 } as const;
+
+	function number(value: number) { return Math.round(value).toLocaleString('fr-FR'); }
+	const requestedTool = new URLSearchParams(window.location.search).get('outil');
+	const toolSelect = form?.elements.namedItem('tool');
+	if (requestedTool && toolSelect instanceof HTMLSelectElement && tools.some((item) => item.id === requestedTool)) toolSelect.value = requestedTool;
+
+	form?.addEventListener('submit', (event) => {
+		event.preventDefault();
+		const values = new FormData(form);
+		const tool = tools.find((item) => item.id === values.get('tool'));
+		if (!tool || !output || !list || !required || !context) return;
+		const hoseLengthM = Number(values.get('hoseLength'));
+		const hoseInnerDiameterMm = Number(values.get('hoseDiameter'));
+		const results = compressors
+			.map((compressor) => ({ compressor, result: evaluateCompatibility(compressor, tool, { hoseLengthM, hoseInnerDiameterMm }) }))
+			.sort((a, b) => rank[a.result.verdict] - rank[b.result.verdict] || (b.result.availableFadLpm ?? 0) - (a.result.availableFadLpm ?? 0));
+
+		required.textContent = `${number(tool.airflowLpm.typical * 1.25)} L/min recommandés`;
+		context.textContent = `${tool.airflowLpm.typical} L/min à ${tool.workingPressureBar.typical} bar, marge de 25 %, flexible ${hoseLengthM} m / ${hoseInnerDiameterMm} mm.`;
+		list.replaceChildren();
+
+		for (const { compressor, result } of results) {
+			const article = document.createElement('article');
+			article.className = `result-card verdict-${result.verdict}`;
+			const header = document.createElement('div');
+			header.className = 'result-card-head';
+			const title = document.createElement('h3');
+			const link = document.createElement('a');
+			link.href = `/compresseurs/${compressor.slug}/`;
+			link.textContent = `${compressor.brand} ${compressor.model}`;
+			title.append(link);
+			const badge = document.createElement('span');
+			badge.className = 'verdict-badge';
+			badge.textContent = labels[result.verdict];
+			header.append(title, badge);
+
+			const detail = document.createElement('p');
+			if (result.availableFadLpm !== undefined) {
+				detail.textContent = `${number(result.availableFadLpm)} L/min disponibles à la pression demandée · cuve ${compressor.tankLiters} L · confiance ${compressor.confidence}.`;
+			} else {
+				detail.textContent = `FAD non vérifiable à ${tool.workingPressureBar.typical} bar · débit aspiré volontairement ignoré · confiance ${compressor.confidence}.`;
+			}
+			article.append(header, detail);
+			if (result.estimatedWorkSeconds) {
+				const estimate = document.createElement('p');
+				estimate.className = 'result-estimate';
+				estimate.textContent = `Autonomie théorique avant baisse de pression : environ ${number(result.estimatedWorkSeconds)} secondes.`;
+				article.append(estimate);
+			}
+			for (const warning of result.warnings) {
+				const warningElement = document.createElement('p');
+				warningElement.className = 'result-warning';
+				warningElement.textContent = warning;
+				article.append(warningElement);
+			}
+			list.append(article);
+		}
+		output.hidden = false;
+		output.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	});
+</script>
