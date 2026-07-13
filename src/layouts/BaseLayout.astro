@@ -3,6 +3,7 @@ import '@fontsource-variable/manrope/index.css';
 import '@fontsource-variable/newsreader/index.css';
 import '../styles/global.css';
 import SiteSearch from '../components/SiteSearch.astro';
+import UiIcon from '../components/UiIcon.astro';
 
 type Props = {
 	title: string;
@@ -32,6 +33,7 @@ const {
 const canonical = new URL(canonicalPath, Astro.site);
 const socialImage = imagePath ? new URL(imagePath, Astro.site) : undefined;
 const currentPath = Astro.url.pathname;
+const currentYear = new Date().getFullYear();
 const navItems = [
 	{ href: '/guides/', label: 'Guides' },
 	{ href: '/glossaire/', label: 'Glossaire' },
@@ -108,6 +110,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 		<title>{title}</title>
 	</head>
 	<body>
+		<a class="skip-link" href="#contenu">Aller au contenu</a>
 		<header class="site-header">
 			<nav class="container nav" aria-label="Navigation principale">
 				<a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><span class="brand-arc"></span><span class="brand-needle"></span></span><span class="brand-name">CompatAir<small>le débit utile, vérifié</small></span></a>
@@ -122,24 +125,56 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 				</details>
 			</nav>
 		</header>
-		<main><slot /></main>
-		<footer>
-			<div class="container footer-grid">
-				<div class="footer-brand"><span class="brand-mark" aria-hidden="true"><span class="brand-arc"></span><span class="brand-needle"></span></span><div><strong>CompatAir</strong><br /><small>Comparer le débit utile, pas la promesse commerciale.</small></div></div>
-				<div class="footer-links">
-					<a href="/guides/">Guides</a>
-					<a href="/glossaire/">Glossaire</a>
-					<a href="/calculateur/">Calculateur</a>
-					<a href="/compresseurs/">Compresseurs</a>
-					<a href="/outils-pneumatiques/">Outils</a>
-					<a href="/methodologie/">Méthodologie</a>
-					<a href="/sources-fiabilite/">Sources et fiabilité</a>
-					<a href="/affiliation/">Affiliation</a>
-					<a href="/contact/">Contact</a>
-					<a href="/mentions-legales/">Mentions légales</a>
-					<a href="/confidentialite/">Confidentialité</a>
-					<a href="/cookies/">Cookies</a>
-					<a href="/mcp-documentation/">MCP</a>
+		<main id="contenu"><slot /></main>
+		<footer class="site-footer" aria-label="Pied de page">
+			<div class="container footer-shell">
+				<div class="footer-topline">
+					<a class="footer-identity" href="/" aria-label="CompatAir, accueil">
+						<span class="brand-mark footer-mark" aria-hidden="true"><span class="brand-arc"></span><span class="brand-needle"></span></span>
+						<span><strong>CompatAir</strong><small>Le débit utile, vérifié.</small></span>
+					</a>
+					<p>Comparer la consommation réelle d’un outil au débit restitué documenté, à pression égale.</p>
+					<div class="footer-assurances" aria-label="Principes CompatAir">
+						<span><UiIcon name="check" size={16} /> Données sourcées</span>
+						<span><UiIcon name="shield" size={16} /> Aucune estimation silencieuse</span>
+						<span><UiIcon name="scale" size={16} /> Verdict indépendant</span>
+					</div>
+				</div>
+
+				<nav class="footer-directory" aria-label="Navigation du pied de page">
+					<section class="footer-block">
+						<header><span class="footer-icon"><UiIcon name="compass" /></span><h2>Explorer</h2></header>
+						<a href="/compresseurs/"><span>Compresseurs</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/outils-pneumatiques/"><span>Outils pneumatiques</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/guides/"><span>Guides techniques</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/glossaire/"><span>Glossaire sourcé</span><UiIcon name="arrow" size={15} /></a>
+					</section>
+					<section class="footer-block">
+						<header><span class="footer-icon"><UiIcon name="calculator" /></span><h2>Dimensionner</h2></header>
+						<a href="/calculateur/"><span>Calculateur CompatAir</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/comparateur/"><span>Comparer des modèles</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/comparatifs/"><span>Comparatifs techniques</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/recherche/"><span>Recherche globale</span><UiIcon name="arrow" size={15} /></a>
+					</section>
+					<section class="footer-block">
+						<header><span class="footer-icon"><UiIcon name="database" /></span><h2>Méthode & données</h2></header>
+						<a href="/methodologie/"><span>Méthodologie</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/sources-fiabilite/"><span>Sources et fiabilité</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/data/catalog.json"><span>Catalogue JSON</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/mcp-documentation/"><span>Interface MCP</span><UiIcon name="arrow" size={15} /></a>
+					</section>
+					<section class="footer-block">
+						<header><span class="footer-icon"><UiIcon name="shield" /></span><h2>Confiance</h2></header>
+						<a href="/affiliation/"><span>Affiliation et indépendance</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/contact/"><span>Signaler une donnée</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/securite/"><span>Signaler une vulnérabilité</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/confidentialite/"><span>Confidentialité</span><UiIcon name="arrow" size={15} /></a>
+					</section>
+				</nav>
+
+				<div class="footer-bottomline">
+					<p>CompatAir © {currentYear} · site statique · sans tracker publicitaire</p>
+					<div><a href="/mentions-legales/">Mentions légales</a><a href="/cookies/">Cookies</a><a href="/sitemap-index.xml">Sitemap</a></div>
 				</div>
 			</div>
 		</footer>

@@ -33,6 +33,30 @@ describe('compatibility engine', () => {
 		expect(evaluateCompatibility(compressor!, tool!).verdict).toBe('insufficient_data');
 	});
 
+	it('keeps the new Metabo single-point profiles strict at 6.3 bar', () => {
+		const compressor = compressors.find((item) => item.id === 'metabo-basic-250-50-w');
+		const tool = tools.find((item) => item.id === 'einhell-tc-pe-150');
+		expect(evaluateCompatibility(compressor!, tool!).verdict).toBe('insufficient_data');
+	});
+
+	it('validates a new multipoint profile only from its interpolated FAD', () => {
+		const compressor = compressors.find((item) => item.id === 'einhell-tc-ac-420-50-10-v');
+		const tool = tools.find((item) => item.id === 'einhell-tc-pp-220');
+		const result = evaluateCompatibility(compressor!, tool!);
+		expect(result.verdict).toBe('continuous');
+		expect(result.availableFadLpm).toBeCloseTo(161.67, 2);
+		expect(result.warnings).toEqual([]);
+	});
+
+	it('keeps the margin warning for a new profile that only covers nominal flow', () => {
+		const compressor = compressors.find((item) => item.id === 'einhell-tc-ac-270-50-8');
+		const tool = tools.find((item) => item.id === 'einhell-tc-pe-150');
+		const result = evaluateCompatibility(compressor!, tool!);
+		expect(result.verdict).toBe('continuous');
+		expect(result.availableFadLpm).toBeCloseTo(105.83, 2);
+		expect(result.warnings[0]).toContain('marge recommandée de 25 %');
+	});
+
 	it('rejects a continuous tool when average flow is unavailable', () => {
 		const compressor = compressors.find((item) => item.id === 'einhell-te-ac-135-24-silent-plus');
 		const tool = tools.find((item) => item.id === 'metabo-ssp-1000');

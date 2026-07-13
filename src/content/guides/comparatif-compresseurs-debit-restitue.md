@@ -1,10 +1,10 @@
 ---
-title: "Comparatif de 13 compresseurs : ce que leurs débits restitués permettent réellement de valider"
-description: "Comparaison factuelle de treize références Einhell, Metabo et ABAC selon les points de débit publiés, sans classement fondé sur le débit aspiré."
+title: "Comparatif de 20 compresseurs : ce que leurs débits restitués permettent réellement de valider"
+description: "Comparaison factuelle de vingt références Einhell, Metabo et ABAC selon les points de débit publiés, sans classement fondé sur le débit aspiré."
 pubDate: 2026-07-13
 updatedDate: 2026-07-14
 category: "Choisir"
-readingTime: 14
+readingTime: 16
 featured: true
 sources:
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
@@ -20,18 +20,25 @@ sources:
   - https://www.einhell.fr/p/4020590-tc-ac-200-24-8-of
   - https://www.einhell.fr/p/4007375-tc-ac-190-24-8-i-of/
   - https://www.einhell.fr/p/4010451-te-ac-270-50-silent/
+  - https://www.einhell.fr/p/4010495/
+  - https://www.einhell.fr/p/4007332-tc-ac-190-50-8/
+  - https://www.einhell.fr/p/4007360-tc-ac-270-50-8/
+  - https://www.einhell.fr/p/4010472
+  - https://www.einhell.fr/p/4010810-te-ac-430-50-10/
+  - https://de.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/basic-250-24-w-601533000-kompressor.html
+  - https://at.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/basic-250-50-w-601534000-kompressor.html
 ---
 
 Un comparatif de compresseurs peut produire une conclusion fausse tout en reprenant des chiffres exacts. Il suffit de classer les modèles par débit aspiré, de mélanger des débits mesurés à des pressions différentes ou de considérer qu’une cuve plus grande signifie un débit supérieur.
 
-Ce dossier compare les [treize compresseurs actuellement documentés par CompatAir](/compresseurs/). Il ne cherche pas à désigner un vainqueur universel. Il établit ce que les fiches constructeur permettent de valider pour cinq outils précis.
+Ce dossier compare les [vingt compresseurs actuellement documentés par CompatAir](/compresseurs/). Il ne cherche pas à désigner un vainqueur universel. Il établit ce que les fiches constructeur permettent de valider pour cinq outils précis.
 
 <svg viewBox="0 0 760 350" role="img" aria-labelledby="compare-title compare-desc" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:1.5rem">
-  <title id="compare-title">Niveau de documentation des treize compresseurs</title><desc id="compare-desc">Huit compresseurs possèdent plusieurs points de débit, quatre un seul point et un aucun point de débit restitué.</desc>
+  <title id="compare-title">Niveau de documentation des vingt compresseurs</title><desc id="compare-desc">Treize compresseurs possèdent plusieurs points de débit, six un seul point et un aucun point de débit restitué.</desc>
   <rect width="760" height="350" rx="22" fill="#10281e"/><text x="38" y="45" fill="#d3eb56" font-size="15" font-weight="700">AVANT DE COMPARER LES PERFORMANCES</text>
   <text x="38" y="90" fill="white" font-size="23" font-weight="700">Combien de points FAD sont publiés ?</text>
-  <rect x="38" y="124" width="430" height="48" rx="10" fill="#19704f"/><text x="58" y="155" fill="white" font-size="17" font-weight="700">Plusieurs points : 8 modèles</text>
-  <rect x="38" y="190" width="344" height="48" rx="10" fill="#d3eb56"/><text x="58" y="221" fill="#10281e" font-size="17" font-weight="700">Un seul point : 4 modèles</text>
+  <rect x="38" y="124" width="430" height="48" rx="10" fill="#19704f"/><text x="58" y="155" fill="white" font-size="17" font-weight="700">Plusieurs points : 13 modèles</text>
+  <rect x="38" y="190" width="280" height="48" rx="10" fill="#d3eb56"/><text x="58" y="221" fill="#10281e" font-size="17" font-weight="700">Un seul point : 6 modèles</text>
   <rect x="38" y="256" width="86" height="48" rx="10" fill="#e39a5e"/><text x="58" y="287" fill="#10281e" font-size="17" font-weight="700">0 : 1</text>
   <text x="505" y="142" fill="#9fb3a8" font-size="14">Une courbe à plusieurs points</text><text x="505" y="166" fill="#9fb3a8" font-size="14">permet une interpolation bornée.</text><text x="505" y="221" fill="#9fb3a8" font-size="14">Un point isolé ne devient pas</text><text x="505" y="245" fill="#9fb3a8" font-size="14">une courbe complète.</text>
 </svg>
@@ -55,12 +62,19 @@ Les valeurs ci-dessous sont reprises des sources constructeur liées dans les fi
 | Einhell TC-AC 200/24/8 OF | 24 L | 8 bar | 110 à 0 bar, 70 à 4 bar, 45 à 7 bar | A |
 | Einhell TC-AC 190/24/8 I OF | 24 L | 8 bar | 110 à 0 bar, 75 à 4 bar, 55 à 7 bar | A |
 | Einhell TE-AC 270/50 Silent | 50 L | 10 bar | 175 à 0 bar, 135 à 4 bar, 98 à 7 bar | A |
+| Einhell TC-AC 420/50/10 V | 50 L | 10 bar | 245 à 0 bar, 200 à 4 bar, 150 à 7 bar | A |
+| Einhell TC-AC 190/50/8 | 50 L | 8 bar | 110 à 0 bar, 75 à 4 bar, 55 à 7 bar | A |
+| Einhell TC-AC 270/50/8 | 50 L | 8 bar | 140 à 0 bar, 125 à 4 bar, 100 à 7 bar | A |
+| Einhell TE-AC 400/50/10 V | 50 L | 10 bar | 270 à 0 bar, 210 à 4 bar, 155 à 7 bar | A |
+| Einhell TE-AC 430/50/10 | 50 L | 10 bar | 230 à 0 bar, 210 à 4 bar, 200 à 7 bar | A |
+| Metabo Basic 250-24 W | 24 L | 8 bar | 95 à 6,4 bar | A |
+| Metabo Basic 250-50 W | 50 L | 8 bar | 95 à 6,4 bar | A |
 
 Ce tableau ne place pas automatiquement 220 L/min à 8 bar au-dessus de 200 L/min à 7 bar pour un outil travaillant à 6,3 bar. Les conditions de comparaison ne sont pas identiques.
 
 ## Ce que permet une courbe à plusieurs points
 
-Les sept courbes Einhell publiées jusqu’à 7 bar permettent une interpolation entre 4 et 7 bar. À 6,3 bar, CompatAir calcule environ :
+Les douze courbes Einhell publiées jusqu’à 7 bar permettent une interpolation entre 4 et 7 bar. À 6,3 bar, CompatAir calcule environ :
 
 - 83 L/min pour le TC-AC 240/50/10 OF ;
 - 202 L/min pour le TE-AC 430/90/10 ;
@@ -68,13 +82,18 @@ Les sept courbes Einhell publiées jusqu’à 7 bar permettent une interpolation
 - 59 L/min pour le TE-AC 135/24 Silent Plus ;
 - 51 L/min pour le TC-AC 200/24/8 OF ;
 - 60 L/min pour le TC-AC 190/24/8 I OF ;
-- 107 L/min pour le TE-AC 270/50 Silent.
+- 107 L/min pour le TE-AC 270/50 Silent ;
+- 162 L/min pour le TC-AC 420/50/10 V ;
+- 60 L/min pour le TC-AC 190/50/8 ;
+- 106 L/min pour le TC-AC 270/50/8 ;
+- 168 L/min pour le TE-AC 400/50/10 V ;
+- 202 L/min pour le TE-AC 430/50/10.
 
 Ces nombres sont des interpolations linéaires, pas de nouveaux points constructeur. Ils sont compris entre deux valeurs publiées. La distinction entre [débit restitué et débit aspiré](/guides/debit-restitue-fad-vs-debit-aspire/) reste indispensable. Le TC-AC 190 OF Set s’arrête à 4 bar dans la source consultée ; CompatAir ne prolonge pas sa courbe jusqu’à 6,3 bar.
 
-## Pourquoi quatre modèles restent souvent en données insuffisantes
+## Pourquoi six modèles restent souvent en données insuffisantes
 
-Metabo publie 95 L/min à 6,4 bar pour le Basic 220-24 OF Silent et 220 L/min à 8 bar pour le Mega 350-100 W. ABAC publie 150 L/min à 10 bar pour les deux ATF-S.
+Metabo publie 95 L/min à 6,4 bar pour les Basic 220-24 OF Silent, Basic 250-24 W et Basic 250-50 W, ainsi que 220 L/min à 8 bar pour le Mega 350-100 W. ABAC publie 150 L/min à 10 bar pour les deux ATF-S.
 
 Ces valeurs sont utiles et précisément rattachées à une pression. Elles ne permettent toutefois pas de dessiner la courbe complète. CompatAir exige une correspondance exacte lorsqu’un seul point existe. Une demande à 6,3 ou 7 bar produit donc « données insuffisantes » plutôt qu’une extrapolation.
 
@@ -82,27 +101,31 @@ Cette règle défavorise la quantité de verdicts, pas la qualité des produits.
 
 ## Résultats pour une ponceuse de 100 L/min
 
-La ponceuse Einhell TC-PE 150 demande 100 L/min à 6,3 bar. Trois modèles du tableau couvrent nominalement ce besoin avec une courbe exploitable :
+La ponceuse Einhell TC-PE 150 demande 100 L/min à 6,3 bar. Sept modèles du tableau couvrent nominalement ce besoin avec une courbe exploitable :
 
 - le TE-AC 430/90/10, environ 202 L/min ;
 - le TE-AC 270/50 Silent Plus, environ 102 L/min ;
-- le TE-AC 270/50 Silent, environ 107 L/min.
+- le TE-AC 270/50 Silent, environ 107 L/min ;
+- le TC-AC 420/50/10 V, environ 162 L/min ;
+- le TC-AC 270/50/8, environ 106 L/min ;
+- le TE-AC 400/50/10 V, environ 168 L/min ;
+- le TE-AC 430/50/10, environ 202 L/min.
 
-Les deux modèles Silent de 50 litres dépassent le besoin nominal, mais aucun n’atteint le seuil interne CompatAir de 125 L/min. Ils restent classés compatibles selon le besoin publié, avec avertissement sur la marge.
+Les deux modèles Silent de 50 litres et le TC-AC 270/50/8 dépassent le besoin nominal, mais aucun n’atteint le seuil interne CompatAir de 125 L/min. Ils restent classés compatibles selon le besoin publié, avec avertissement sur la marge. Les quatre autres modèles dépassent aussi ce seuil de marge.
 
-Quatre courbes restent sous 100 L/min à 6,3 bar. Les six autres références manquent d’un point comparable selon la règle stricte du moteur.
+Cinq courbes restent sous 100 L/min à 6,3 bar. Les huit autres références manquent d’un point comparable selon la règle stricte du moteur.
 
 ## Résultats pour deux meuleuses
 
-La TC-PA 50 demande 113 L/min à 6,3 bar. La TC-PP 220 demande 128 L/min à la même pression. Parmi les courbes comparables, seul le TE-AC 430/90/10 couvre les deux besoins nominaux et les seuils internes de 141,25 et 160 L/min.
+La TC-PA 50 demande 113 L/min à 6,3 bar. La TC-PP 220 demande 128 L/min à la même pression. Parmi les courbes comparables, les TE-AC 430/90/10, TC-AC 420/50/10 V, TE-AC 400/50/10 V et TE-AC 430/50/10 couvrent les deux besoins nominaux et les seuils internes de 141,25 et 160 L/min.
 
 Le TE-AC 270/50 Silent Plus, avec environ 102 L/min à 6,3 bar, ne couvre aucune des deux meuleuses malgré ses 270 L/min aspirés. L’exemple montre pourquoi le débit aspiré ne doit pas être le critère de classement.
 
 <svg viewBox="0 0 760 360" role="img" aria-labelledby="matrix-title matrix-desc" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:1.5rem">
-  <title id="matrix-title">Matrice des verdicts documentés</title><desc id="matrix-desc">Le TE-AC 430 couvre trois outils à 6,3 bar. Le TE-AC 270 couvre la ponceuse sans marge de 25 pour cent. Aucun modèle ne couvre le pistolet de sablage ou la soufflette au point étudié.</desc>
+  <title id="matrix-title">Matrice des verdicts documentés</title><desc id="matrix-desc">Quatre compresseurs couvrent avec marge la ponceuse et les deux meuleuses à 6,3 bar. Trois autres couvrent uniquement la ponceuse sans marge de 25 pour cent. Aucun modèle ne couvre le pistolet de sablage au point étudié.</desc>
   <rect width="760" height="360" rx="22" fill="#eef2e9"/><text x="38" y="45" fill="#143426" font-size="22" font-weight="700">Verdicts issus des points comparables</text>
   <g font-family="Manrope, sans-serif" font-size="13"><text x="250" y="88" fill="#56685e">Ponceuse</text><text x="360" y="88" fill="#56685e">Meuleuse 113</text><text x="485" y="88" fill="#56685e">Meuleuse 128</text><text x="620" y="88" fill="#56685e">Sablage 300</text>
-  <text x="38" y="135" fill="#143426" font-weight="700">TE-AC 430</text><text x="38" y="195" fill="#143426" font-weight="700">270 Silent Plus</text><text x="38" y="255" fill="#143426" font-weight="700">TC-AC 240</text><text x="38" y="315" fill="#143426" font-weight="700">Autres cas</text></g>
+  <text x="38" y="135" fill="#143426" font-weight="700">4 modèles avec marge</text><text x="38" y="195" fill="#143426" font-weight="700">3 modèles sans marge</text><text x="38" y="255" fill="#143426" font-weight="700">5 courbes sous le besoin</text><text x="38" y="315" fill="#143426" font-weight="700">8 cas non comparables</text></g>
   <g><rect x="245" y="110" width="88" height="34" rx="17" fill="#19704f"/><rect x="365" y="110" width="88" height="34" rx="17" fill="#19704f"/><rect x="493" y="110" width="88" height="34" rx="17" fill="#19704f"/><rect x="625" y="110" width="88" height="34" rx="17" fill="#b95d26"/>
   <rect x="245" y="170" width="88" height="34" rx="17" fill="#d3eb56"/><rect x="365" y="170" width="88" height="34" rx="17" fill="#b95d26"/><rect x="493" y="170" width="88" height="34" rx="17" fill="#b95d26"/><rect x="625" y="170" width="88" height="34" rx="17" fill="#b95d26"/>
   <rect x="245" y="230" width="88" height="34" rx="17" fill="#b95d26"/><rect x="365" y="230" width="88" height="34" rx="17" fill="#b95d26"/><rect x="493" y="230" width="88" height="34" rx="17" fill="#b95d26"/><rect x="625" y="230" width="88" height="34" rx="17" fill="#b95d26"/>
@@ -119,7 +142,7 @@ Le Mega 350-100 W porte un nombre de 350 dans son nom et publie 320 L/min aspir�
 
 ## Aucun modèle validé pour la soufflette au point médian
 
-La Metabo BP 200 utilise par défaut 240 L/min à 6 bar dans le calculateur. L’interpolation du TE-AC 430 donne environ 203 L/min à cette pression. Il reste sous le besoin. Aucun autre modèle avec courbe comparable ne le dépasse.
+La Metabo BP 200 utilise par défaut 240 L/min à 6 bar dans le calculateur. L’interpolation des deux TE-AC 430 donne environ 203 L/min à cette pression. Ils restent sous le besoin. Aucun autre modèle avec courbe comparable ne les dépasse.
 
 La BP 200 étant réglable, un autre réglage peut modifier sa consommation. Le verdict par défaut ne prétend pas couvrir toute la plage de 130 à 350 L/min.
 
@@ -159,3 +182,10 @@ Enfin, vérifiez la marge, le cycle de service, le réseau, la cuve et les crit�
 - [Einhell, TC-AC 200/24/8 OF](https://www.einhell.fr/p/4020590-tc-ac-200-24-8-of)
 - [Einhell, TC-AC 190/24/8 I OF](https://www.einhell.fr/p/4007375-tc-ac-190-24-8-i-of/)
 - [Einhell, TE-AC 270/50 Silent](https://www.einhell.fr/p/4010451-te-ac-270-50-silent/)
+- [Einhell, TC-AC 420/50/10 V](https://www.einhell.fr/p/4010495/)
+- [Einhell, TC-AC 190/50/8](https://www.einhell.fr/p/4007332-tc-ac-190-50-8/)
+- [Einhell, TC-AC 270/50/8](https://www.einhell.fr/p/4007360-tc-ac-270-50-8/)
+- [Einhell, TE-AC 400/50/10 V](https://www.einhell.fr/p/4010472)
+- [Einhell, TE-AC 430/50/10](https://www.einhell.fr/p/4010810-te-ac-430-50-10/)
+- [Metabo, Basic 250-24 W](https://de.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/basic-250-24-w-601533000-kompressor.html)
+- [Metabo, Basic 250-50 W](https://at.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/basic-250-50-w-601534000-kompressor.html)
