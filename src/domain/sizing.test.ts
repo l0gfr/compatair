@@ -39,6 +39,32 @@ describe('compatibility engine', () => {
 		expect(evaluateCompatibility(compressor!, tool!).verdict).toBe('insufficient_data');
 	});
 
+	it('keeps the new Metabo industrial point bound to its documented pressure', () => {
+		const compressor = compressors.find((item) => item.id === 'metabo-mega-580-200-d');
+		expect(compressor).toBeDefined();
+		expect(interpolateFad(compressor!, 8.8)).toBe(360);
+		expect(interpolateFad(compressor!, 7)).toBeUndefined();
+	});
+
+	it('does not reuse an 8 bar compressor point for a 6.2 bar ratchet', () => {
+		const compressor = compressors.find((item) => item.id === 'metabo-mega-400-50-w');
+		const tool = tools.find((item) => item.id === 'metabo-drs-68-set');
+		expect(evaluateCompatibility(compressor!, tool!).verdict).toBe('insufficient_data');
+	});
+
+	it('rejects the new air screwdriver when a comparable curve is below its demand', () => {
+		const compressor = compressors.find((item) => item.id === 'einhell-te-ac-430-50-10');
+		const tool = tools.find((item) => item.id === 'metabo-ds-14');
+		const result = evaluateCompatibility(compressor!, tool!);
+		expect(result.verdict).toBe('incompatible');
+		expect(result.availableFadLpm).toBeCloseTo(202.67, 2);
+	});
+
+	it('exposes the expanded sourced catalog', () => {
+		expect(compressors).toHaveLength(24);
+		expect(tools).toHaveLength(12);
+	});
+
 	it('validates a new multipoint profile only from its interpolated FAD', () => {
 		const compressor = compressors.find((item) => item.id === 'einhell-tc-ac-420-50-10-v');
 		const tool = tools.find((item) => item.id === 'einhell-tc-pp-220');

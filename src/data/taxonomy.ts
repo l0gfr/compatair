@@ -1,5 +1,7 @@
 export const toolTaxonomy = [
 	{ id: 'cle-a-chocs', label: 'Clé à chocs', aliases: ['Clé à choc pneumatique'] },
+	{ id: 'cle-a-cliquet', label: 'Clé à cliquet pneumatique', aliases: [] },
+	{ id: 'visseuse', label: 'Visseuse pneumatique', aliases: [] },
 	{ id: 'soufflette', label: 'Soufflette', aliases: [] },
 	{ id: 'gonflage', label: 'Gonflage', aliases: ['Pistolet de gonflage'] },
 	{ id: 'agrafeuse-cloueuse', label: 'Agrafeuse et cloueuse', aliases: ['Cloueur pneumatique'] },
