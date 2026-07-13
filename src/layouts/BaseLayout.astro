@@ -8,10 +8,28 @@ type Props = {
 	description: string;
 	canonicalPath?: string;
 	noindex?: boolean;
+	pageType?: 'website' | 'article' | 'product';
+	imagePath?: string;
+	imageAlt?: string;
+	issueDate?: Date;
+	modifiedDate?: Date;
+	breadcrumbs?: Array<{ name: string; path: string }>;
 };
 
-const { title, description, canonicalPath = Astro.url.pathname, noindex = false } = Astro.props;
+const {
+	title,
+	description,
+	canonicalPath = Astro.url.pathname,
+	noindex = false,
+	pageType = 'website',
+	imagePath,
+	imageAlt,
+	issueDate,
+	modifiedDate,
+	breadcrumbs = [],
+} = Astro.props;
 const canonical = new URL(canonicalPath, Astro.site);
+const socialImage = imagePath ? new URL(imagePath, Astro.site) : undefined;
 const currentPath = Astro.url.pathname;
 const navItems = [
 	{ href: '/guides/', label: 'Guides' },
@@ -20,6 +38,40 @@ const navItems = [
 	{ href: '/methodologie/', label: 'Méthode' },
 ];
 const isCurrent = (href: string) => currentPath.startsWith(href);
+const websiteJsonLd = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{
+			'@type': 'Organization',
+			'@id': 'https://compatair.fr/#organization',
+			name: 'CompatAir',
+			url: 'https://compatair.fr/',
+			email: 'admin@toonux.com',
+		},
+		{
+			'@type': 'WebSite',
+			'@id': 'https://compatair.fr/#website',
+			url: 'https://compatair.fr/',
+			name: 'CompatAir',
+			description: 'Comparateur technique de compresseurs et d’outils pneumatiques fondé sur le débit restitué documenté.',
+			inLanguage: 'fr-FR',
+			publisher: { '@id': 'https://compatair.fr/#organization' },
+		},
+	],
+};
+const breadcrumbJsonLd = breadcrumbs.length ? {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://compatair.fr/' },
+		...breadcrumbs.map((item, index) => ({
+			'@type': 'ListItem',
+			position: index + 2,
+			name: item.name,
+			item: new URL(item.path, Astro.site).toString(),
+		})),
+	],
+} : undefined;
 ---
 
 <!doctype html>
@@ -28,17 +80,29 @@ const isCurrent = (href: string) => currentPath.startsWith(href);
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="application-name" content="CompatAir" />
+		<meta name="author" content="l0g.fr" />
+		<meta name="theme-color" content="#11251c" />
 		<meta name="description" content={description} />
-		<meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large'} />
+		<meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'} />
 		<link rel="canonical" href={canonical} />
+		<link rel="alternate" hreflang="fr-FR" href={canonical} />
+		<link rel="alternate" hreflang="x-default" href={canonical} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta property="og:type" content="website" />
+		<meta property="og:type" content={pageType} />
 		<meta property="og:locale" content="fr_FR" />
 		<meta property="og:site_name" content="CompatAir" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonical} />
-		<meta name="twitter:card" content="summary" />
+		{socialImage && <><meta property="og:image" content={socialImage} /><meta property="og:image:alt" content={imageAlt ?? title} /><meta name="twitter:image" content={socialImage} /></>}
+		{issueDate && <meta property="article:published_time" content={issueDate.toISOString()} />}
+		{modifiedDate && <meta property="article:modified_time" content={modifiedDate.toISOString()} />}
+		<meta name="twitter:card" content={socialImage ? 'summary_large_image' : 'summary'} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<script is:inline type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />
+		{breadcrumbJsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />}
 		<title>{title}</title>
 	</head>
 	<body>
@@ -67,6 +131,7 @@ const isCurrent = (href: string) => currentPath.startsWith(href);
 					<a href="/methodologie/">Méthodologie</a>
 					<a href="/affiliation/">Affiliation</a>
 					<a href="/contact/">Contact</a>
+					<a href="/mentions-legales/">Mentions légales et confidentialité</a>
 				</div>
 			</div>
 		</footer>

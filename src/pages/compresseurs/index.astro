@@ -2,9 +2,14 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductImage from '../../components/ProductImage.astro';
 import { compressors } from '../../data/catalog';
+const compressorListJsonLd = {
+	'@context': 'https://schema.org', '@type': 'ItemList', name: 'Compresseurs documentés par CompatAir',
+	itemListElement: compressors.map((compressor, index) => ({ '@type': 'ListItem', position: index + 1, name: `${compressor.brand} ${compressor.model}`, url: `https://compatair.fr/compresseurs/${compressor.slug}/` })),
+};
 ---
 
-<BaseLayout title="Compresseurs documentés et comparés | CompatAir" description="Consultez les débits restitués, pressions, cuves et limites documentaires des compresseurs analysés par CompatAir.">
+<BaseLayout title="Compresseurs documentés et comparés | CompatAir" description="Consultez les débits restitués, pressions, cuves et limites documentaires des compresseurs analysés par CompatAir." breadcrumbs={[{ name: 'Compresseurs', path: '/compresseurs/' }]}>
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(compressorListJsonLd)} />
 	<section class="page-hero compact"><div class="container"><p class="eyebrow">Catalogue pilote</p><h1>{compressors.length} compresseurs passés au crible</h1><p class="lead">Une fiche n’est considérée exploitable que si son débit disponible à la pression de travail peut être vérifié.</p></div></section>
 	<section class="section"><div class="container product-grid">
 		{compressors.map((compressor) => (

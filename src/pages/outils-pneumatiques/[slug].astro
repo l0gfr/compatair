@@ -13,10 +13,22 @@ const relatedGuide = tool.category === 'Ponceuse pneumatique' ? '/guides/compres
 const productJsonLd = {
 	'@context': 'https://schema.org', '@type': 'Product', name: tool.label,
 	image: `https://compatair.fr${tool.image.src}`, brand: { '@type': 'Brand', name: tool.brand }, model: tool.model,
-	description: tool.editorial.overview,
+	description: tool.editorial.overview, url: `https://compatair.fr/outils-pneumatiques/${tool.slug}/`,
+	category: tool.category,
+	additionalProperty: [
+		{ '@type': 'PropertyValue', name: 'Consommation d’air publiée', value: `${tool.airflowLpm.typical} L/min` },
+		{ '@type': 'PropertyValue', name: 'Pression de travail publiée', value: `${tool.workingPressureBar.typical} bar` },
+	],
 };
 ---
-<BaseLayout title={`${tool.label} : quel compresseur ? | CompatAir`} description={`${tool.label} nécessite ${tool.airflowLpm.typical} L/min à ${tool.workingPressureBar.typical} bar. Calculez le compresseur adapté.`}>
+<BaseLayout
+	title={`${tool.label} : quel compresseur ? | CompatAir`}
+	description={`${tool.label} nécessite ${tool.airflowLpm.typical} L/min à ${tool.workingPressureBar.typical} bar. Calculez le compresseur adapté.`}
+	pageType="product"
+	imagePath={tool.image.src}
+	imageAlt={tool.image.alt}
+	breadcrumbs={[{ name: 'Outils pneumatiques', path: '/outils-pneumatiques/' }, { name: tool.label, path: `/outils-pneumatiques/${tool.slug}/` }]}
+>
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(productJsonLd)} />
 	<article class="container product-detail">
 		<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/outils-pneumatiques/">Outils pneumatiques</a><span>/</span><span>{tool.label}</span></nav>

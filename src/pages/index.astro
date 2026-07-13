@@ -5,16 +5,9 @@ import { getCollection } from 'astro:content';
 const allGuides = await getCollection('guides');
 const featuredGuides = allGuides.filter((guide) => guide.data.featured).sort((a, b) => b.data.readingTime - a.data.readingTime).slice(0, 4);
 
-const organization = {
-	'@context': 'https://schema.org',
-	'@type': 'Organization',
-	name: 'CompatAir',
-	url: 'https://compatair.fr',
-};
 ---
 
 <BaseLayout title="CompatAir : comparer compresseurs et outils pneumatiques" description="Comparez la consommation publiée d’un outil au débit restitué documenté d’un compresseur, à la même pression de travail.">
-	<script is:inline type="application/ld+json" set:html={JSON.stringify(organization)} />
 	<section class="hero">
 		<div class="container hero-grid">
 			<div class="hero-copy">

@@ -18,12 +18,24 @@ const articleJsonLd = {
 	datePublished: guide.data.pubDate.toISOString(),
 	dateModified: (guide.data.updatedDate ?? guide.data.pubDate).toISOString(),
 	mainEntityOfPage: `https://compatair.fr/guides/${guide.id}/`,
-	author: { '@type': 'Organization', name: 'CompatAir' },
-	publisher: { '@type': 'Organization', name: 'CompatAir', url: 'https://compatair.fr' },
+	inLanguage: 'fr-FR',
+	articleSection: guide.data.category,
+	timeRequired: `PT${guide.data.readingTime}M`,
+	isAccessibleForFree: true,
+	citation: guide.data.sources,
+	author: { '@id': 'https://compatair.fr/#organization' },
+	publisher: { '@id': 'https://compatair.fr/#organization' },
 };
 ---
 
-<BaseLayout title={`${guide.data.title} | CompatAir`} description={guide.data.description}>
+<BaseLayout
+	title={`${guide.data.title} | CompatAir`}
+	description={guide.data.description}
+	pageType="article"
+	issueDate={guide.data.pubDate}
+	modifiedDate={guide.data.updatedDate ?? guide.data.pubDate}
+	breadcrumbs={[{ name: 'Guides', path: '/guides/' }, { name: guide.data.title, path: `/guides/${guide.id}/` }]}
+>
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
 	<article class="container editorial-layout">
 		<div class="editorial-main">

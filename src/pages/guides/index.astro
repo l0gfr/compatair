@@ -5,9 +5,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const guides = (await getCollection('guides')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const pillars = guides.filter((guide) => guide.data.readingTime >= 12).sort((a, b) => b.data.readingTime - a.data.readingTime);
 const practicalGuides = guides.filter((guide) => guide.data.readingTime < 12);
+const guideListJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'ItemList',
+	name: 'Guides techniques CompatAir',
+	itemListElement: guides.map((guide, index) => ({ '@type': 'ListItem', position: index + 1, name: guide.data.title, url: `https://compatair.fr/guides/${guide.id}/` })),
+};
 ---
 
-<BaseLayout title="Guides sur les compresseurs et outils pneumatiques | CompatAir" description="Comprendre le débit restitué, choisir une cuve, dimensionner un flexible et alimenter correctement chaque outil pneumatique.">
+<BaseLayout title="Guides sur les compresseurs et outils pneumatiques | CompatAir" description="Comprendre le débit restitué, choisir une cuve, dimensionner un flexible et alimenter correctement chaque outil pneumatique." breadcrumbs={[{ name: 'Guides', path: '/guides/' }]}>
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(guideListJsonLd)} />
 	<section class="page-hero compact"><div class="container"><p class="eyebrow">Base de connaissances</p><h1>Comprendre avant d’acheter</h1><p class="lead">Des dossiers techniques sourcés pour distinguer les caractéristiques qui comptent des arguments commerciaux qui induisent en erreur.</p></div></section>
 	<section class="section pillar-section">
 		<div class="container">

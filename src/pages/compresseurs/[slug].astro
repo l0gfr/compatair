@@ -15,11 +15,24 @@ const productJsonLd = {
 	'@context': 'https://schema.org', '@type': 'Product', name: `${compressor.brand} ${compressor.model}`,
 	image: `https://compatair.fr${compressor.image.src}`, brand: { '@type': 'Brand', name: compressor.brand },
 	model: compressor.model, ...(compressor.mpn ? { mpn: compressor.mpn } : {}),
-	description: compressor.editorial.overview,
+	description: compressor.editorial.overview, url: `https://compatair.fr/compresseurs/${compressor.slug}/`,
+	category: 'Compresseur d’air',
+	additionalProperty: [
+		{ '@type': 'PropertyValue', name: 'Volume de cuve', value: `${compressor.tankLiters} L` },
+		{ '@type': 'PropertyValue', name: 'Pression maximale', value: `${compressor.maxPressureBar} bar` },
+		...(compressor.fadCurve.length ? [{ '@type': 'PropertyValue', name: 'Débit restitué documenté', value: compressor.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(', ') }] : []),
+	],
 };
 ---
 
-<BaseLayout title={`${compressor.brand} ${compressor.model} : débit et compatibilité | CompatAir`} description={`Analyse du ${compressor.brand} ${compressor.model} : cuve ${compressor.tankLiters} L, pression ${compressor.maxPressureBar} bar et débit restitué sourcé.`}>
+<BaseLayout
+	title={`${compressor.brand} ${compressor.model} : débit et compatibilité | CompatAir`}
+	description={`Analyse du ${compressor.brand} ${compressor.model} : cuve ${compressor.tankLiters} L, pression ${compressor.maxPressureBar} bar et débit restitué sourcé.`}
+	pageType="product"
+	imagePath={compressor.image.src}
+	imageAlt={compressor.image.alt}
+	breadcrumbs={[{ name: 'Compresseurs', path: '/compresseurs/' }, { name: `${compressor.brand} ${compressor.model}`, path: `/compresseurs/${compressor.slug}/` }]}
+>
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(productJsonLd)} />
 	<article class="container product-detail">
 		<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/compresseurs/">Compresseurs</a><span>/</span><span>{compressor.brand} {compressor.model}</span></nav>
