@@ -21,6 +21,12 @@ function interpolateFad(compressor, pressureBar) {
 }
 
 function compatibility(compressor, tool, safetyMargin = .25) {
+	if (tool.demandModel !== 'fixed-flow') return {
+		verdict: 'insufficient_data',
+		limitingFactor: 'data',
+		warnings: [tool.demandModel === 'per-action' ? 'Un rythme d’actions par minute est requis pour convertir le volume par action en débit.' : tool.demandExplanation],
+		calculationVersion: ENGINE_VERSION,
+	};
 	const requiredFadLpm = tool.airflowLpm.typical * (1 + safetyMargin);
 	if (compressor.maxPressureBar < tool.workingPressureBar.typical) return { verdict: 'incompatible', limitingFactor: 'pressure', requiredFadLpm, calculationVersion: ENGINE_VERSION };
 	const availableFadLpm = interpolateFad(compressor, tool.workingPressureBar.typical);

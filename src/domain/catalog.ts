@@ -54,15 +54,15 @@ export const compressorSchema = z.object({
 	notes: z.array(z.string()).default([]),
 });
 
-export const toolProfileSchema = z.object({
+const toolBaseSchema = z.object({
 	id: z.string().min(1),
 	slug: z.string().regex(/^[a-z0-9-]+$/),
 	category: z.string().min(1),
 	label: z.string().min(1),
 	brand: z.string().min(1),
 	model: z.string().min(1),
-	workingPressureBar: z.object({ min: z.number().positive(), typical: z.number().positive(), max: z.number().positive() }),
-	airflowLpm: z.object({ min: z.number().positive(), typical: z.number().positive(), max: z.number().positive() }),
+	mpn: z.string().optional(),
+	ean: z.string().regex(/^\d{8,14}$/).optional(),
 	connectorSize: z.string().optional(),
 	usagePattern: z.enum(['burst', 'intermittent', 'continuous']).optional(),
 	dutyFactor: z.number().min(0.01).max(1).optional(),
@@ -77,6 +77,31 @@ export const toolProfileSchema = z.object({
 	fieldSources: z.record(z.string(), z.array(z.string())).default({}),
 	notes: z.array(z.string()).default([]),
 });
+
+const fixedFlowDemandSchema = z.object({
+	demandModel: z.literal('fixed-flow'),
+	workingPressureBar: z.object({ min: z.number().positive(), typical: z.number().positive(), max: z.number().positive() }),
+	airflowLpm: z.object({ min: z.number().positive(), typical: z.number().positive(), max: z.number().positive() }),
+});
+
+const perActionDemandSchema = z.object({
+	demandModel: z.literal('per-action'),
+	workingPressureBar: z.object({ min: z.number().positive(), typical: z.number().positive(), max: z.number().positive() }),
+	airPerActionLiters: z.number().positive(),
+	actionLabel: z.string().min(1),
+});
+
+const variableVolumeDemandSchema = z.object({
+	demandModel: z.literal('variable-volume'),
+	workingPressureBar: z.object({ min: z.number().positive().optional(), typical: z.number().positive().optional(), max: z.number().positive() }),
+	demandExplanation: z.string().min(1),
+});
+
+export const toolProfileSchema = toolBaseSchema.and(z.discriminatedUnion('demandModel', [
+	fixedFlowDemandSchema,
+	perActionDemandSchema,
+	variableVolumeDemandSchema,
+]));
 
 export type Compressor = z.infer<typeof compressorSchema>;
 export type ToolProfile = z.infer<typeof toolProfileSchema>;

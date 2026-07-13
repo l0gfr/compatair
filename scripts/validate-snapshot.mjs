@@ -15,7 +15,12 @@ if (snapshot.compressors) {
 }
 if (snapshot.tools) {
 	const ids = new Set();
-	for (const item of snapshot.tools) { if (ids.has(item.id)) errors.push(`outil dupliqué : ${item.id}`); ids.add(item.id); if (item.airflowLpm?.typical <= 0 || item.workingPressureBar?.typical <= 0) errors.push(`profil impossible : ${item.id}`); }
+	for (const item of snapshot.tools) {
+		if (ids.has(item.id)) errors.push(`outil dupliqué : ${item.id}`); ids.add(item.id);
+		if (item.demandModel === 'fixed-flow' && (item.airflowLpm?.typical <= 0 || item.workingPressureBar?.typical <= 0)) errors.push(`profil à débit fixe impossible : ${item.id}`);
+		if (item.demandModel === 'per-action' && (item.airPerActionLiters <= 0 || item.workingPressureBar?.typical <= 0)) errors.push(`profil par action impossible : ${item.id}`);
+		if (item.demandModel === 'variable-volume' && (!item.demandExplanation || item.workingPressureBar?.max <= 0)) errors.push(`profil à volume variable impossible : ${item.id}`);
+	}
 }
 if (snapshot.offers) {
 	const now = Date.now();

@@ -6,8 +6,8 @@ export type CompatibilityResult = {
 	verdict: CompatibilityVerdict;
 	confidence: 'high' | 'medium' | 'low';
 	limitingFactor?: 'flow' | 'pressure' | 'tank' | 'duty_cycle' | 'data';
-	requiredFadLpm: number;
-	averageDemandLpm: number;
+	requiredFadLpm?: number;
+	averageDemandLpm?: number;
 	availableFadLpm?: number;
 	marginPercent?: number;
 	warnings: string[];
@@ -37,6 +37,12 @@ export function evaluateCompatibility(
 ): CompatibilityResult {
 	const safetyMargin = input.safetyMargin ?? .25;
 	const warnings: string[] = [];
+	if (tool.demandModel !== 'fixed-flow') {
+		const warning = tool.demandModel === 'per-action'
+			? `La source publie ${tool.airPerActionLiters} litre par ${tool.actionLabel}. Un rythme d’actions par minute est nécessaire pour calculer un débit.`
+			: tool.demandExplanation;
+		return { verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data', warnings: [warning], calculationVersion: '1.0.0' };
+	}
 	const peakDemand = tool.airflowLpm.typical;
 	const averageDemandLpm = peakDemand;
 	const requiredFadLpm = peakDemand * (1 + safetyMargin);

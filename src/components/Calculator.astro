@@ -1,5 +1,7 @@
 ---
 import { compressors, tools } from '../data/catalog';
+import { isFixedFlowTool } from '../domain/tool-demand';
+const calculableTools = tools.filter(isFixedFlowTool);
 ---
 
 <div class="calculator calculator-v2" data-calculator>
@@ -54,7 +56,7 @@ import { compressors, tools } from '../data/catalog';
 
 <template data-demand-template>
 	<div class="demand-row">
-		<div class="field demand-tool"><label data-label="outil">Outil</label><select data-tool>{tools.map((tool) => <option value={tool.id}>{tool.label} · {tool.airflowLpm.typical} L/min à {tool.workingPressureBar.typical} bar</option>)}</select></div>
+		<div class="field demand-tool"><label data-label="outil">Outil</label><select data-tool>{calculableTools.map((tool) => <option value={tool.id}>{tool.label} · {tool.airflowLpm.typical} L/min à {tool.workingPressureBar.typical} bar</option>)}</select></div>
 		<div class="field"><label data-label="nombre">Nombre</label><input data-quantity type="number" min="1" max="20" value="1" /></div>
 		<div class="field"><label data-label="frequence">Fréquence</label><select data-duty><option value="0.1">Rare, 10 %</option><option value="0.3">Intermittente, 30 %</option><option value="0.6">Fréquente, 60 %</option><option value="1" selected>Continue, 100 %</option></select></div>
 		<button type="button" class="remove-demand" data-remove-tool aria-label="Supprimer cet outil">×</button>
@@ -64,7 +66,9 @@ import { compressors, tools } from '../data/catalog';
 <script>
 	import { compressors, tools } from '../data/catalog';
 	import { interpolateFad } from '../domain/compatibility';
+	import { isFixedFlowTool } from '../domain/tool-demand';
 	import { sizeConfiguration, type SizingResult } from '../domain/sizing';
+	const calculableTools = tools.filter(isFixedFlowTool);
 
 	const root = document.querySelector<HTMLElement>('[data-calculator]');
 	const form = root?.querySelector<HTMLFormElement>('[data-calculator-form]');
@@ -89,7 +93,7 @@ import { compressors, tools } from '../data/catalog';
 			control.id = `demande-${rowIndex}-${suffix}`;
 			row.querySelector<HTMLLabelElement>(`label[data-label="${suffix}"]`)!.htmlFor = control.id;
 		}
-		if (toolId && tools.some((tool) => tool.id === toolId)) select.value = toolId;
+		if (toolId && calculableTools.some((tool) => tool.id === toolId)) select.value = toolId;
 		quantityInput.value = String(quantity);
 		dutySelect.value = String(duty);
 		row.querySelector('[data-remove-tool]')?.addEventListener('click', () => { if (rows.children.length > 1) row.remove(); });
@@ -108,7 +112,7 @@ import { compressors, tools } from '../data/catalog';
 		const data = new FormData(form);
 		const demands = [...rows.querySelectorAll<HTMLElement>('.demand-row')].map((row) => {
 			const id = row.querySelector<HTMLSelectElement>('[data-tool]')!.value;
-			const tool = tools.find((item) => item.id === id)!;
+			const tool = calculableTools.find((item) => item.id === id)!;
 			return { id, flowLpm: tool.airflowLpm.typical, pressureBar: tool.workingPressureBar.typical, quantity: Number(row.querySelector<HTMLInputElement>('[data-quantity]')!.value), dutyFactor: Number(row.querySelector<HTMLSelectElement>('[data-duty]')!.value) };
 		});
 		return { demands, mode: String(data.get('mode')), safetyMargin: Number(data.get('margin')) / 100, sessionMinutes: Number(data.get('session')), hoseLengthMeters: readNumber(data, 'hoseLength'), hoseInnerDiameterMm: readNumber(data, 'hoseDiameter'), selectedCompressor: String(data.get('compressor') ?? ''), custom: { maxPressureBar: readNumber(data, 'customPressure'), availableFadLpm: readNumber(data, 'customFad'), tankLiters: readNumber(data, 'customTank'), dutyCycle: (readNumber(data, 'customDuty') ?? 100) / 100, cutInPressureBar: readNumber(data, 'customCutIn'), cutOutPressureBar: readNumber(data, 'customCutOut') } };
@@ -148,7 +152,7 @@ import { compressors, tools } from '../data/catalog';
 	}
 	function renderAccessories(config: ReturnType<typeof configFromForm>) {
 		const target = root?.querySelector<HTMLElement>('[data-accessories]'); if (!target || !config) return;
-		const messages = config.demands.map((demand) => tools.find((item) => item.id === demand.id)).filter(Boolean).map((tool) => tool!.connectorSize ? `${tool!.label} : ${tool!.connectorSize}.` : `${tool!.label} : raccord et exigences de traitement non documentés dans la source actuelle.`);
+		const messages = config.demands.map((demand) => calculableTools.find((item) => item.id === demand.id)).filter(Boolean).map((tool) => tool!.connectorSize ? `${tool!.label} : ${tool!.connectorSize}.` : `${tool!.label} : raccord et exigences de traitement non documentés dans la source actuelle.`);
 		messages.push('Prévoir des raccords compatibles avec les filetages et passages internes réellement présents. CompatAir ne propose aucune référence commerciale sans flux vérifié.');
 		target.replaceChildren(...messages.map((message) => { const li = document.createElement('li'); li.textContent = message; return li; }));
 	}
