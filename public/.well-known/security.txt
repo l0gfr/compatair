@@ -1,0 +1,5 @@
+Contact: mailto:admin@toonux.com
+Preferred-Languages: fr, en
+Canonical: https://compatair.fr/.well-known/security.txt
+Policy: https://compatair.fr/securite/
+Expires: 2027-07-13T00:00:00.000Z

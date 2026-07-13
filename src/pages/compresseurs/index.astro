@@ -11,15 +11,48 @@ const compressorListJsonLd = {
 <BaseLayout title="Compresseurs documentés et comparés | CompatAir" description="Consultez les débits restitués, pressions, cuves et limites documentaires des compresseurs analysés par CompatAir." breadcrumbs={[{ name: 'Compresseurs', path: '/compresseurs/' }]}>
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(compressorListJsonLd)} />
 	<section class="page-hero compact"><div class="container"><p class="eyebrow">Catalogue pilote</p><h1>{compressors.length} compresseurs passés au crible</h1><p class="lead">Une fiche n’est considérée exploitable que si son débit disponible à la pression de travail peut être vérifié.</p></div></section>
-	<section class="section"><div class="container product-grid">
+	<section class="section"><div class="container catalog-layout">
+		<aside class="catalog-filters" aria-label="Filtres du catalogue">
+			<h2>Filtrer</h2>
+			<div class="field"><label for="filter-brand">Marque</label><select id="filter-brand" data-filter-brand><option value="">Toutes</option>{[...new Set(compressors.map((item) => item.brand))].sort().map((brand) => <option value={brand}>{brand}</option>)}</select></div>
+			<div class="field"><label for="filter-tank">Cuve minimale</label><select id="filter-tank" data-filter-tank><option value="0">Toutes</option><option value="24">24 L</option><option value="50">50 L</option><option value="90">90 L</option></select></div>
+			<div class="field"><label for="filter-pressure">Pression minimale</label><select id="filter-pressure" data-filter-pressure><option value="0">Toutes</option><option value="8">8 bar</option><option value="10">10 bar</option></select></div>
+			<div class="field"><label for="filter-oil">Lubrification</label><select id="filter-oil" data-filter-oil><option value="">Toutes</option><option value="oil-free">Sans huile</option><option value="oil">Lubrifié</option></select></div>
+			<div class="field"><label for="filter-noise">Bruit publié maximal</label><select id="filter-noise" data-filter-noise><option value="">Tous ou inconnu</option><option value="60">60 dB</option><option value="70">70 dB</option><option value="80">80 dB</option></select></div>
+			<div class="field"><label for="catalog-sort">Trier</label><select id="catalog-sort" data-catalog-sort><option value="confidence">Pertinence technique</option><option value="tank-desc">Volume de cuve</option><option value="noise-asc">Bruit publié</option><option value="pressure-desc">Pression maximale</option></select></div>
+			<button type="button" class="inline-action" data-reset-filters>Réinitialiser</button>
+		</aside>
+		<div class="catalog-main"><div class="catalog-toolbar"><p data-catalog-count>{compressors.length} résultats</p><a class="button" data-compare-link href="/comparateur/" aria-disabled="true">Comparer <span data-compare-count>0</span>/3</a></div><div class="product-grid" data-product-grid>
 		{compressors.map((compressor) => (
-			<article class="product-card">
+			<article class="product-card" data-product-card data-id={compressor.id} data-brand={compressor.brand} data-tank={compressor.tankLiters} data-pressure={compressor.maxPressureBar} data-oil={compressor.oilType} data-noise={compressor.noiseDb ?? ''} data-confidence={compressor.confidence}>
 				<a class="product-card-image" href={`/compresseurs/${compressor.slug}/`} aria-label={`Voir la fiche ${compressor.brand} ${compressor.model}`}><ProductImage image={compressor.image} compact /></a>
 				<p class="product-brand">{compressor.brand}</p>
 				<h2><a href={`/compresseurs/${compressor.slug}/`}>{compressor.model}</a></h2>
 				<dl class="spec-list"><div><dt>Cuve</dt><dd>{compressor.tankLiters} L</dd></div><div><dt>Pression max.</dt><dd>{compressor.maxPressureBar} bar</dd></div><div><dt>Confiance</dt><dd>{compressor.confidence}</dd></div></dl>
 				<p class:list={['data-status', compressor.fadCurve.length ? 'verified' : 'missing']}>{compressor.fadCurve.length ? 'Débit restitué documenté' : 'FAD à confirmer'}</p>
+				<label class="compare-check"><input type="checkbox" value={compressor.id} data-compare-checkbox /> Ajouter au comparateur</label>
 			</article>
 		))}
-	</div></section>
+		</div><nav class="catalog-pagination" aria-label="Pagination du catalogue" data-pagination></nav></div></div></section>
+	<script>
+		const cards = [...document.querySelectorAll<HTMLElement>('[data-product-card]')];
+		const grid = document.querySelector<HTMLElement>('[data-product-grid]');
+		const count = document.querySelector<HTMLElement>('[data-catalog-count]');
+		const pagination = document.querySelector<HTMLElement>('[data-pagination]');
+		const fields = { brand: document.querySelector<HTMLSelectElement>('[data-filter-brand]'), tank: document.querySelector<HTMLSelectElement>('[data-filter-tank]'), pressure: document.querySelector<HTMLSelectElement>('[data-filter-pressure]'), oil: document.querySelector<HTMLSelectElement>('[data-filter-oil]'), noise: document.querySelector<HTMLSelectElement>('[data-filter-noise]'), sort: document.querySelector<HTMLSelectElement>('[data-catalog-sort]') };
+		let page = 1; const pageSize = 6;
+		function refresh() {
+			const filtered = cards.filter((card) => (!fields.brand?.value || card.dataset.brand === fields.brand.value) && Number(card.dataset.tank) >= Number(fields.tank?.value ?? 0) && Number(card.dataset.pressure) >= Number(fields.pressure?.value ?? 0) && (!fields.oil?.value || card.dataset.oil === fields.oil.value) && (!fields.noise?.value || (card.dataset.noise !== '' && Number(card.dataset.noise) <= Number(fields.noise.value))));
+			const sort = fields.sort?.value; filtered.sort((a, b) => sort === 'tank-desc' ? Number(b.dataset.tank) - Number(a.dataset.tank) : sort === 'noise-asc' ? (Number(a.dataset.noise || 999) - Number(b.dataset.noise || 999)) : sort === 'pressure-desc' ? Number(b.dataset.pressure) - Number(a.dataset.pressure) : String(a.dataset.confidence).localeCompare(String(b.dataset.confidence)));
+			for (const card of filtered) grid?.append(card); const pages = Math.max(1, Math.ceil(filtered.length / pageSize)); page = Math.min(page, pages);
+			for (const card of cards) card.hidden = !filtered.includes(card) || filtered.indexOf(card) < (page - 1) * pageSize || filtered.indexOf(card) >= page * pageSize;
+			if (count) count.textContent = `${filtered.length} résultat${filtered.length > 1 ? 's' : ''}`;
+			if (pagination) { pagination.replaceChildren(...Array.from({ length: pages }, (_, index) => { const button = document.createElement('button'); button.type = 'button'; button.textContent = String(index + 1); button.setAttribute('aria-current', page === index + 1 ? 'page' : 'false'); button.addEventListener('click', () => { page = index + 1; refresh(); }); return button; })); }
+		}
+		for (const field of Object.values(fields)) field?.addEventListener('change', () => { page = 1; refresh(); });
+		document.querySelector('[data-reset-filters]')?.addEventListener('click', () => { for (const field of Object.values(fields)) if (field) field.selectedIndex = 0; page = 1; refresh(); });
+		const boxes = [...document.querySelectorAll<HTMLInputElement>('[data-compare-checkbox]')]; const link = document.querySelector<HTMLAnchorElement>('[data-compare-link]'); const compareCount = document.querySelector('[data-compare-count]');
+		for (const box of boxes) box.addEventListener('change', () => { const selected = boxes.filter((item) => item.checked); if (selected.length > 3) { box.checked = false; return; } if (compareCount) compareCount.textContent = String(selected.length); if (link) { link.href = selected.length >= 2 ? `/comparateur/#ids=${selected.map((item) => item.value).join(',')}` : '/comparateur/'; link.setAttribute('aria-disabled', selected.length >= 2 ? 'false' : 'true'); } });
+		refresh();
+	</script>
 </BaseLayout>

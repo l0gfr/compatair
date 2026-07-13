@@ -1,92 +1,207 @@
 ---
-import { tools } from '../data/catalog';
+import { compressors, tools } from '../data/catalog';
 ---
 
-<div class="calculator" data-calculator>
+<div class="calculator calculator-v2" data-calculator>
 	<form class="calculator-form" data-calculator-form>
-		<div class="field">
-			<label for="tool">Outil pneumatique</label>
-			<select id="tool" name="tool">
-				{tools.map((tool) => <option value={tool.id}>{tool.label} · {tool.airflowLpm.typical} L/min à {tool.workingPressureBar.typical} bar</option>)}
-			</select>
+		<div class="calculator-form-head">
+			<div><p class="eyebrow">Configuration</p><h2>Décrire le besoin réel</h2></div>
+			<span class="version-chip">Moteur 1.0.0</span>
 		</div>
-		<p class="form-disclaimer">Le verdict compare uniquement les valeurs constructeur à pression égale. Les pertes du flexible et des raccords ne sont pas quantifiées sans leurs courbes techniques.</p>
-		<button class="button primary" type="submit">Calculer les compatibilités</button>
+
+		<fieldset class="calculator-fieldset">
+			<legend>Outils utilisés</legend>
+			<div data-demand-rows></div>
+			<button class="inline-action" type="button" data-add-tool>+ Ajouter un outil</button>
+		</fieldset>
+
+		<div class="field-row">
+			<div class="field"><label for="mode">Organisation</label><select id="mode" name="mode"><option value="successive">Utilisation successive</option><option value="simultaneous">Utilisation simultanée</option></select></div>
+			<div class="field"><label for="session">Durée de session</label><div class="input-unit"><input id="session" name="session" type="number" min="1" max="1440" value="30" /><span>min</span></div></div>
+		</div>
+
+		<details class="calculator-details">
+			<summary>Flexible et réseau</summary>
+			<div class="field-row details-body"><div class="field"><label for="hose-length">Longueur du flexible</label><div class="input-unit"><input id="hose-length" name="hoseLength" type="number" min="0" max="500" step="0.5" value="10" /><span>m</span></div></div><div class="field"><label for="hose-diameter">Diamètre intérieur</label><div class="input-unit"><input id="hose-diameter" name="hoseDiameter" type="number" min="1" max="100" step="0.5" value="9" /><span>mm</span></div></div></div>
+		</details>
+
+		<fieldset class="calculator-fieldset">
+			<legend>Compresseur à vérifier</legend>
+			<div class="field"><label for="compressor">Modèle ou saisie personnalisée</label><select id="compressor" name="compressor"><option value="">Aucun, calculer seulement le besoin</option>{compressors.map((compressor) => <option value={compressor.id}>{compressor.brand} {compressor.model}</option>)}<option value="custom">Caractéristiques personnalisées</option></select></div>
+			<div class="custom-compressor" data-custom-compressor hidden>
+				<div class="field-row"><div class="field"><label for="custom-pressure">Pression maximale</label><div class="input-unit"><input id="custom-pressure" name="customPressure" type="number" min="0.1" max="50" step="0.1" value="8" /><span>bar</span></div></div><div class="field"><label for="custom-fad">FAD à la pression demandée</label><div class="input-unit"><input id="custom-fad" name="customFad" type="number" min="1" max="20000" step="1" /><span>L/min</span></div></div></div>
+				<div class="field-row"><div class="field"><label for="custom-tank">Volume de cuve</label><div class="input-unit"><input id="custom-tank" name="customTank" type="number" min="0" max="20000" step="1" /><span>L</span></div></div><div class="field"><label for="custom-duty">Cycle maximal</label><div class="input-unit"><input id="custom-duty" name="customDuty" type="number" min="1" max="100" step="1" value="100" /><span>%</span></div></div></div>
+				<div class="field-row"><div class="field"><label for="custom-cut-in">Pression de réenclenchement</label><div class="input-unit"><input id="custom-cut-in" name="customCutIn" type="number" min="0" max="50" step="0.1" /><span>bar</span></div></div><div class="field"><label for="custom-cut-out">Pression d’arrêt</label><div class="input-unit"><input id="custom-cut-out" name="customCutOut" type="number" min="0.1" max="50" step="0.1" /><span>bar</span></div></div></div>
+			</div>
+		</fieldset>
+
+		<label class="margin-control" for="margin"><span>Marge CompatAir</span><output data-margin-output>25 %</output><input id="margin" name="margin" type="range" min="0" max="50" step="5" value="25" /></label>
+		<p class="form-disclaimer">Les fréquences sont des hypothèses explicites. Les pertes du réseau restent signalées, mais ne sont pas chiffrées sans courbe ou mesure documentée.</p>
+		<button class="button primary" type="submit">Calculer la configuration</button>
 	</form>
 
 	<div class="calculator-output" aria-live="polite" data-calculator-output hidden>
-		<div class="result-summary">
-			<p class="eyebrow">Besoin calculé</p>
-			<strong data-required-flow></strong>
-			<p data-result-context></p>
-		</div>
-		<div class="result-list" data-result-list></div>
-		<p class="calculator-note">Résultats indicatifs fondés sur les données constructeur listées. Les prix et offres marchandes seront ajoutés seulement après connexion d’un flux d’affiliation vérifié.</p>
+		<div class="result-summary"><div><p class="eyebrow">Verdict</p><span class="verdict-large" data-verdict></span></div><strong data-required-flow></strong><p data-result-context></p></div>
+		<div class="result-metrics" data-result-metrics></div>
+		<div class="result-section" data-evaluated-result></div>
+		<div class="result-section"><h3>Accessoires et raccordement</h3><ul data-accessories></ul></div>
+		<div class="result-section"><h3>Compresseurs documentés</h3><p>Classement technique à la pression maximale demandée. Une donnée absente reste une donnée insuffisante.</p><div class="result-list" data-result-list></div></div>
+		<div class="result-section"><h3>Hypothèses et avertissements</h3><ul data-assumptions></ul></div>
+		<div class="share-row"><button class="button" type="button" data-share>Copier l’URL de simulation</button><span role="status" data-share-status></span></div>
+		<p class="calculator-note">La configuration est encodée dans le fragment de l’URL. Elle n’est ni envoyée ni enregistrée sur le serveur.</p>
 	</div>
 </div>
 
+<template data-demand-template>
+	<div class="demand-row">
+		<div class="field demand-tool"><label data-label="outil">Outil</label><select data-tool>{tools.map((tool) => <option value={tool.id}>{tool.label} · {tool.airflowLpm.typical} L/min à {tool.workingPressureBar.typical} bar</option>)}</select></div>
+		<div class="field"><label data-label="nombre">Nombre</label><input data-quantity type="number" min="1" max="20" value="1" /></div>
+		<div class="field"><label data-label="frequence">Fréquence</label><select data-duty><option value="0.1">Rare, 10 %</option><option value="0.3">Intermittente, 30 %</option><option value="0.6">Fréquente, 60 %</option><option value="1" selected>Continue, 100 %</option></select></div>
+		<button type="button" class="remove-demand" data-remove-tool aria-label="Supprimer cet outil">×</button>
+	</div>
+</template>
+
 <script>
 	import { compressors, tools } from '../data/catalog';
-	import { evaluateCompatibility } from '../domain/compatibility';
+	import { interpolateFad } from '../domain/compatibility';
+	import { sizeConfiguration, type SizingResult } from '../domain/sizing';
 
 	const root = document.querySelector<HTMLElement>('[data-calculator]');
 	const form = root?.querySelector<HTMLFormElement>('[data-calculator-form]');
+	const rows = root?.querySelector<HTMLElement>('[data-demand-rows]');
+	const template = document.querySelector<HTMLTemplateElement>('[data-demand-template]');
 	const output = root?.querySelector<HTMLElement>('[data-calculator-output]');
 	const list = root?.querySelector<HTMLElement>('[data-result-list]');
-	const required = root?.querySelector<HTMLElement>('[data-required-flow]');
-	const context = root?.querySelector<HTMLElement>('[data-result-context]');
-	const labels = { continuous: 'Compatible en continu', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' } as const;
-	const rank = { continuous: 0, insufficient_data: 1, incompatible: 2 } as const;
+	const evaluated = root?.querySelector<HTMLElement>('[data-evaluated-result]');
+	const labels = { continuous: 'Compatible en continu', intermittent: 'Compatible par intermittence', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' } as const;
+	const rank = { continuous: 0, intermittent: 1, insufficient_data: 2, incompatible: 3 } as const;
+	let demandIndex = 0;
 
-	function number(value: number) { return Math.round(value).toLocaleString('fr-FR'); }
-	const requestedTool = new URLSearchParams(window.location.search).get('outil');
-	const toolSelect = form?.elements.namedItem('tool');
-	if (requestedTool && toolSelect instanceof HTMLSelectElement && tools.some((item) => item.id === requestedTool)) toolSelect.value = requestedTool;
+	function addDemand(toolId?: string, quantity = 1, duty = 1) {
+		if (!rows || !template || rows.children.length >= 8) return;
+		const fragment = template.content.cloneNode(true) as DocumentFragment;
+		const row = fragment.querySelector<HTMLElement>('.demand-row')!;
+		const select = row.querySelector<HTMLSelectElement>('[data-tool]')!;
+		const quantityInput = row.querySelector<HTMLInputElement>('[data-quantity]')!;
+		const dutySelect = row.querySelector<HTMLSelectElement>('[data-duty]')!;
+		const rowIndex = demandIndex++;
+		for (const [control, suffix] of [[select, 'outil'], [quantityInput, 'nombre'], [dutySelect, 'frequence']] as const) {
+			control.id = `demande-${rowIndex}-${suffix}`;
+			row.querySelector<HTMLLabelElement>(`label[data-label="${suffix}"]`)!.htmlFor = control.id;
+		}
+		if (toolId && tools.some((tool) => tool.id === toolId)) select.value = toolId;
+		quantityInput.value = String(quantity);
+		dutySelect.value = String(duty);
+		row.querySelector('[data-remove-tool]')?.addEventListener('click', () => { if (rows.children.length > 1) row.remove(); });
+		rows.append(fragment);
+	}
+
+	function readNumber(data: FormData, key: string) {
+		const raw = data.get(key);
+		if (typeof raw !== 'string' || raw.trim() === '') return undefined;
+		const value = Number(raw);
+		return Number.isFinite(value) ? value : undefined;
+	}
+
+	function configFromForm() {
+		if (!form || !rows) return undefined;
+		const data = new FormData(form);
+		const demands = [...rows.querySelectorAll<HTMLElement>('.demand-row')].map((row) => {
+			const id = row.querySelector<HTMLSelectElement>('[data-tool]')!.value;
+			const tool = tools.find((item) => item.id === id)!;
+			return { id, flowLpm: tool.airflowLpm.typical, pressureBar: tool.workingPressureBar.typical, quantity: Number(row.querySelector<HTMLInputElement>('[data-quantity]')!.value), dutyFactor: Number(row.querySelector<HTMLSelectElement>('[data-duty]')!.value) };
+		});
+		return { demands, mode: String(data.get('mode')), safetyMargin: Number(data.get('margin')) / 100, sessionMinutes: Number(data.get('session')), hoseLengthMeters: readNumber(data, 'hoseLength'), hoseInnerDiameterMm: readNumber(data, 'hoseDiameter'), selectedCompressor: String(data.get('compressor') ?? ''), custom: { maxPressureBar: readNumber(data, 'customPressure'), availableFadLpm: readNumber(data, 'customFad'), tankLiters: readNumber(data, 'customTank'), dutyCycle: (readNumber(data, 'customDuty') ?? 100) / 100, cutInPressureBar: readNumber(data, 'customCutIn'), cutOutPressureBar: readNumber(data, 'customCutOut') } };
+	}
+
+	function compressorInput(config: ReturnType<typeof configFromForm>, requiredPressureBar: number) {
+		if (!config?.selectedCompressor) return undefined;
+		if (config.selectedCompressor === 'custom') return config.custom.maxPressureBar ? config.custom : undefined;
+		const compressor = compressors.find((item) => item.id === config.selectedCompressor);
+		if (!compressor) return undefined;
+		return { maxPressureBar: compressor.maxPressureBar, availableFadLpm: interpolateFad(compressor, requiredPressureBar), tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle };
+	}
+
+	function renderMetrics(result: SizingResult) {
+		const metrics = root?.querySelector<HTMLElement>('[data-result-metrics]');
+		if (!metrics) return;
+		const values = [
+			['Débit de pointe', `${Math.round(result.peakFlowLpm)} L/min`],
+			['Débit moyen', `${Math.round(result.averageFlowLpm)} L/min`],
+			['FAD recommandé', `${Math.round(result.recommendedFadLpm)} L/min`],
+			['Pression demandée', `${result.requiredPressureBar.toLocaleString('fr-FR')} bar`],
+			['Pression utile après pertes', result.usefulPressureBar !== undefined ? `${result.usefulPressureBar.toLocaleString('fr-FR')} bar avant pertes non chiffrées` : 'Données insuffisantes'],
+			['Cuve recommandée', result.recommendedTankLiters !== undefined ? `${Math.round(result.recommendedTankLiters)} L` : 'Non déterminable sans durée de rafale'],
+			['Confiance', result.confidence === 'high' ? 'Élevée' : result.confidence === 'medium' ? 'Moyenne' : 'Faible'],
+			['Facteur limitant', result.limitingFactor === 'flow' ? 'Débit' : result.limitingFactor === 'pressure' ? 'Pression' : result.limitingFactor === 'duty_cycle' ? 'Cycle du compresseur' : result.limitingFactor === 'data' ? 'Données manquantes' : 'Aucun identifié'],
+			...(result.usableTankAirLiters !== undefined ? [['Réserve utile', `${Math.round(result.usableTankAirLiters)} L d’air libre`]] : []),
+			...(result.estimatedWorkMinutes !== undefined ? [['Travail estimé', `${result.estimatedWorkMinutes.toFixed(1)} min`]] : []),
+			...(result.estimatedRecoveryMinutes !== undefined ? [['Récupération estimée', `${result.estimatedRecoveryMinutes.toFixed(1)} min`]] : []),
+		];
+		metrics.replaceChildren(...values.map(([label, value]) => { const div = document.createElement('div'); const small = document.createElement('small'); const strong = document.createElement('strong'); small.textContent = label; strong.textContent = value; div.append(small, strong); return div; }));
+	}
+
+	function renderWarnings(result: SizingResult) {
+		const target = root?.querySelector<HTMLElement>('[data-assumptions]');
+		if (!target) return;
+		target.replaceChildren(...[...result.hypotheses, ...result.warnings].map((message) => { const li = document.createElement('li'); li.textContent = message; return li; }));
+	}
+	function renderAccessories(config: ReturnType<typeof configFromForm>) {
+		const target = root?.querySelector<HTMLElement>('[data-accessories]'); if (!target || !config) return;
+		const messages = config.demands.map((demand) => tools.find((item) => item.id === demand.id)).filter(Boolean).map((tool) => tool!.connectorSize ? `${tool!.label} : ${tool!.connectorSize}.` : `${tool!.label} : raccord et exigences de traitement non documentés dans la source actuelle.`);
+		messages.push('Prévoir des raccords compatibles avec les filetages et passages internes réellement présents. CompatAir ne propose aucune référence commerciale sans flux vérifié.');
+		target.replaceChildren(...messages.map((message) => { const li = document.createElement('li'); li.textContent = message; return li; }));
+	}
+
+	function renderResultCard(compressor: (typeof compressors)[number], result: SizingResult) {
+		const article = document.createElement('article'); article.className = `result-card verdict-${result.verdict}`;
+		const head = document.createElement('div'); head.className = 'result-card-head';
+		const title = document.createElement('h4'); const link = document.createElement('a'); link.href = `/compresseurs/${compressor.slug}/`; link.textContent = `${compressor.brand} ${compressor.model}`; title.append(link);
+		const badge = document.createElement('span'); badge.className = 'verdict-badge'; badge.textContent = labels[result.verdict]; head.append(title, badge);
+		const detail = document.createElement('p'); detail.textContent = result.verdict === 'insufficient_data' ? `FAD non vérifiable à ${result.requiredPressureBar} bar · confiance ${compressor.confidence}.` : `${interpolateFad(compressor, result.requiredPressureBar)?.toFixed(0) ?? 'FAD inconnu'} L/min documentés · cuve ${compressor.tankLiters} L · confiance ${compressor.confidence}.`;
+		article.append(head, detail); return article;
+	}
+
+	function encodeConfig(config: ReturnType<typeof configFromForm>) {
+		return btoa(encodeURIComponent(JSON.stringify(config)).replace(/%([0-9A-F]{2})/g, (_, hex) => String.fromCharCode(Number.parseInt(hex, 16)))).replaceAll('+', '-').replaceAll('/', '_').replaceAll('=', '');
+	}
+	function decodeConfig(encoded: string) {
+		try { const base64 = encoded.replaceAll('-', '+').replaceAll('_', '/'); const binary = atob(base64); const percent = [...binary].map((char) => `%${char.charCodeAt(0).toString(16).padStart(2, '0')}`).join(''); return JSON.parse(decodeURIComponent(percent)); } catch { return undefined; }
+	}
+	function restoreConfig(config: any) {
+		if (!form || !rows || !config?.demands) return;
+		rows.replaceChildren(); for (const demand of config.demands.slice(0, 8)) addDemand(demand.id, demand.quantity, demand.dutyFactor);
+		for (const [name, value] of Object.entries({ mode: config.mode, margin: config.safetyMargin * 100, session: config.sessionMinutes, hoseLength: config.hoseLengthMeters, hoseDiameter: config.hoseInnerDiameterMm, compressor: config.selectedCompressor, customPressure: config.custom?.maxPressureBar, customFad: config.custom?.availableFadLpm, customTank: config.custom?.tankLiters, customDuty: config.custom?.dutyCycle * 100, customCutIn: config.custom?.cutInPressureBar, customCutOut: config.custom?.cutOutPressureBar })) { const field = form.elements.namedItem(name); if (field instanceof HTMLInputElement || field instanceof HTMLSelectElement) field.value = value === undefined ? '' : String(value); }
+		form.querySelector<HTMLElement>('[data-custom-compressor]')!.hidden = config.selectedCompressor !== 'custom';
+		root?.querySelector<HTMLOutputElement>('[data-margin-output]')!.replaceChildren(`${Math.round(config.safetyMargin * 100)} %`);
+	}
+
+	root?.querySelector('[data-add-tool]')?.addEventListener('click', () => addDemand());
+	form?.querySelector<HTMLSelectElement>('[name="compressor"]')?.addEventListener('change', (event: Event) => { root!.querySelector<HTMLElement>('[data-custom-compressor]')!.hidden = (event.target as HTMLSelectElement).value !== 'custom'; });
+	form?.querySelector<HTMLInputElement>('[name="margin"]')?.addEventListener('input', (event: Event) => { root!.querySelector<HTMLOutputElement>('[data-margin-output]')!.value = `${(event.target as HTMLInputElement).value} %`; });
+
+	const initialTool = new URLSearchParams(window.location.search).get('outil') ?? undefined;
+	const hashConfig = window.location.hash.startsWith('#config=') ? decodeConfig(window.location.hash.slice(8)) : undefined;
+	if (hashConfig) restoreConfig(hashConfig); else addDemand(initialTool);
 
 	form?.addEventListener('submit', (event) => {
-		event.preventDefault();
-		const values = new FormData(form);
-		const tool = tools.find((item) => item.id === values.get('tool'));
-		if (!tool || !output || !list || !required || !context) return;
-		const results = compressors
-			.map((compressor) => ({ compressor, result: evaluateCompatibility(compressor, tool) }))
-			.sort((a, b) => rank[a.result.verdict] - rank[b.result.verdict] || (b.result.availableFadLpm ?? 0) - (a.result.availableFadLpm ?? 0));
+		event.preventDefault(); if (!output || !list || !evaluated) return;
+		const config = configFromForm(); if (!config) return;
+		const base = sizeConfiguration(config as any);
+		const selected = compressorInput(config, base.requiredPressureBar);
+		const result = sizeConfiguration({ ...config, compressor: selected } as any);
+		root?.querySelector<HTMLElement>('[data-verdict]')!.replaceChildren(labels[result.verdict]);
+		root?.querySelector<HTMLElement>('[data-required-flow]')!.replaceChildren(`${Math.round(result.recommendedFadLpm).toLocaleString('fr-FR')} L/min recommandés`);
+		root?.querySelector<HTMLElement>('[data-result-context]')!.replaceChildren(`${Math.round(result.peakFlowLpm)} L/min de pointe, ${Math.round(result.averageFlowLpm)} L/min en moyenne, à ${result.requiredPressureBar} bar.`);
+		renderMetrics(result); renderWarnings(result); renderAccessories(config);
+		if (config.selectedCompressor) { const title = document.createElement('h3'); title.textContent = 'Compresseur vérifié'; const p = document.createElement('p'); p.textContent = labels[result.verdict]; evaluated.replaceChildren(title, p); } else evaluated.replaceChildren();
 
-		required.textContent = `${number(tool.airflowLpm.typical * 1.25)} L/min recommandés`;
-		context.textContent = `${tool.airflowLpm.typical} L/min à ${tool.workingPressureBar.typical} bar selon le fabricant. Le seuil conseillé inclut une marge méthodologique CompatAir de 25 %.`;
-		list.replaceChildren();
-
-		for (const { compressor, result } of results) {
-			const article = document.createElement('article');
-			article.className = `result-card verdict-${result.verdict}`;
-			const header = document.createElement('div');
-			header.className = 'result-card-head';
-			const title = document.createElement('h3');
-			const link = document.createElement('a');
-			link.href = `/compresseurs/${compressor.slug}/`;
-			link.textContent = `${compressor.brand} ${compressor.model}`;
-			title.append(link);
-			const badge = document.createElement('span');
-			badge.className = 'verdict-badge';
-			badge.textContent = labels[result.verdict];
-			header.append(title, badge);
-
-			const detail = document.createElement('p');
-			if (result.availableFadLpm !== undefined) {
-				detail.textContent = `${number(result.availableFadLpm)} L/min disponibles à la pression demandée · cuve ${compressor.tankLiters} L · confiance ${compressor.confidence}.`;
-			} else {
-				detail.textContent = `FAD non vérifiable à ${tool.workingPressureBar.typical} bar · débit aspiré volontairement ignoré · confiance ${compressor.confidence}.`;
-			}
-			article.append(header, detail);
-			for (const warning of result.warnings) {
-				const warningElement = document.createElement('p');
-				warningElement.className = 'result-warning';
-				warningElement.textContent = warning;
-				article.append(warningElement);
-			}
-			list.append(article);
-		}
-		output.hidden = false;
-		output.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		const candidates = compressors.map((compressor) => ({ compressor, result: sizeConfiguration({ ...config, compressor: { maxPressureBar: compressor.maxPressureBar, availableFadLpm: interpolateFad(compressor, base.requiredPressureBar), tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle } } as any) })).sort((a, b) => rank[a.result.verdict] - rank[b.result.verdict] || (interpolateFad(b.compressor, base.requiredPressureBar) ?? 0) - (interpolateFad(a.compressor, base.requiredPressureBar) ?? 0));
+		list.replaceChildren(...candidates.map(({ compressor, result }) => renderResultCard(compressor, result)));
+		window.history.replaceState(null, '', `${window.location.pathname}#config=${encodeConfig(config)}`);
+		if (navigator.sendBeacon) navigator.sendBeacon('/events', new Blob([JSON.stringify({ event: 'calculator_used' })], { type: 'application/json' }));
+		output.hidden = false; output.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
 	});
+
+	root?.querySelector('[data-share]')?.addEventListener('click', async () => { const config = configFromForm(); if (!config) return; const url = `${location.origin}${location.pathname}#config=${encodeConfig(config)}`; await navigator.clipboard.writeText(url); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'URL copiée'; });
 </script>

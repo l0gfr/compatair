@@ -1,0 +1,53 @@
+name: Validate data snapshot
+
+on:
+  schedule:
+    - cron: '42 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: data-snapshot
+  cancel-in-progress: true
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version-file: .nvmrc
+          check-latest: false
+      - name: Install pnpm
+        run: npm install --global pnpm@10.34.4
+      - name: Install from frozen lockfile
+        run: pnpm install --frozen-lockfile
+      - name: Build immutable snapshots
+        run: pnpm validate:full
+      - name: Fetch current production snapshots
+        run: |
+          curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/catalog.json -o previous-catalog.json
+          curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/offers.json -o previous-offers.json
+      - name: Produce change reports
+        run: |
+          node scripts/diff-snapshots.mjs previous-catalog.json dist/data/catalog.json catalog-diff.json
+          node scripts/diff-snapshots.mjs previous-offers.json dist/data/offers.json offers-diff.json
+      - name: Upload validated snapshot and reports
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: compatair-data-${{ github.run_id }}
+          path: |
+            dist/data/catalog.json
+            dist/data/offers.json
+            catalog-diff.json
+            offers-diff.json
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,27 @@
+name: Production availability
+
+on:
+  schedule:
+    - cron: '13,43 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-monitor
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check public site and snapshots
+        run: |
+          curl --fail --silent --show-error --retry 3 --retry-delay 2 --max-time 15 https://compatair.fr/ > /dev/null
+          curl --fail --silent --show-error --retry 3 --retry-delay 2 --max-time 15 https://compatair.fr/data/catalog.json | grep -Fq 'catalogVersion'
+          curl --fail --silent --show-error --retry 3 --retry-delay 2 --max-time 15 https://compatair.fr/data/offers.json | grep -Fq 'snapshotVersion'
+      - name: Check MCP health
+        if: vars.MCP_ENABLED == 'true'
+        run: curl --fail --silent --show-error --retry 3 --retry-delay 2 --max-time 15 https://compatair.fr/mcp-health | grep -Fq '"status":"ok"'

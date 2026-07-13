@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { sizeAirDemand } from './sizing';
+import { sizeAirDemand, sizeConfiguration, usableTankAir } from './sizing';
 import { barToPsi, cfmToLitersPerMinute, litersPerMinuteToCfm, psiToBar } from './units';
 import { compressors, tools } from '../data/catalog';
 import { evaluateCompatibility, interpolateFad } from './compatibility';
@@ -43,7 +43,7 @@ describe('compatibility engine', () => {
 		const tool = tools.find((item) => item.id === 'einhell-tc-pe-150')!;
 		const low = compressors.find((item) => item.id === 'einhell-te-ac-135-24-silent-plus')!;
 		const high = compressors.find((item) => item.id === 'einhell-te-ac-430-90-10')!;
-		const rank = { insufficient_data: 0, incompatible: 1, continuous: 2 };
+		const rank = { insufficient_data: 0, incompatible: 1, intermittent: 1, continuous: 2 };
 		expect(rank[evaluateCompatibility(high, tool).verdict]).toBeGreaterThanOrEqual(rank[evaluateCompatibility(low, tool).verdict]);
 	});
 });
@@ -53,11 +53,39 @@ describe('air demand sizing', () => {
 		expect(sizeAirDemand({ toolFlowLpm: 200, safetyMargin: 0.25 })).toEqual({
 			peakFlowLpm: 200,
 			recommendedFadLpm: 250,
-			calculationVersion: '0.2.0',
+			calculationVersion: '1.0.0',
 		});
 	});
 
 	it('refuses physically invalid input', () => {
 		expect(() => sizeAirDemand({ toolFlowLpm: -1 })).toThrow();
+	});
+
+	it('aggregates simultaneous tools and their explicit duty factors', () => {
+		const result = sizeConfiguration({
+			demands: [
+				{ id: 'a', flowLpm: 100, pressureBar: 6, quantity: 2, dutyFactor: .5 },
+				{ id: 'b', flowLpm: 80, pressureBar: 7, quantity: 1, dutyFactor: .25 },
+			],
+			mode: 'simultaneous',
+		});
+		expect(result.peakFlowLpm).toBe(280);
+		expect(result.averageFlowLpm).toBe(120);
+		expect(result.requiredPressureBar).toBe(7);
+		expect(result.recommendedFadLpm).toBe(350);
+	});
+
+	it('returns intermittent only when tank cut-in and cut-out are explicit', () => {
+		const result = sizeConfiguration({
+			demands: [{ id: 'tool', flowLpm: 200, pressureBar: 6, dutyFactor: .5 }],
+			compressor: { maxPressureBar: 8, availableFadLpm: 150, tankLiters: 50, cutInPressureBar: 6, cutOutPressureBar: 8 },
+		});
+		expect(result.verdict).toBe('intermittent');
+		expect(result.usableTankAirLiters).toBe(100);
+		expect(result.estimatedWorkMinutes).toBe(2);
+	});
+
+	it('uses only the pressure interval as free-air reserve', () => {
+		expect(usableTankAir(50, 6, 8)).toBe(100);
 	});
 });

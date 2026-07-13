@@ -5,6 +5,7 @@ dist/
 
 # dependencies
 node_modules/
+.lighthouseci/
 
 # logs
 npm-debug.log*

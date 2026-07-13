@@ -9,14 +9,15 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Validation complète :
+Validations complètes :
 
 ```bash
-pnpm validate
+pnpm validate:full
+pnpm audit:dist
 pnpm security:audit
 ```
 
-Le site est généré statiquement dans `dist/`. La logique métier se trouve dans `src/domain` et ne dépend pas d’Astro.
+Le site est généré statiquement dans `dist/`. La logique métier se trouve dans `src/domain` et ne dépend pas d’Astro. Le détail du périmètre livré et des dépendances externes se trouve dans [docs/FEATURE_MATRIX.md](docs/FEATURE_MATRIX.md).
 
 ## Catalogue pilote
 
@@ -26,6 +27,17 @@ Le site est généré statiquement dans `dist/`. La logique métier se trouve da
 - le moteur refuse d’utiliser le débit aspiré lorsque le débit restitué à la pression de travail est absent.
 
 Les offres et prix affiliés ne sont pas encore publiés. Ils seront ajoutés uniquement via un flux marchand daté et validé.
+
+## Serveur MCP
+
+Le service MCP lit les snapshots générés dans `dist/data/` et écoute uniquement sur `127.0.0.1:8787`. Pour un test local après le build :
+
+```bash
+pnpm build
+pnpm mcp:start
+```
+
+L’installation Debian et le proxy Apache sont décrits dans [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md). Ne définir `MCP_ENABLED=true` dans GitHub qu’après validation de l’endpoint public.
 
 ## Livraison
 

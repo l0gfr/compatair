@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { compressors, tools } from '../../data/catalog';
+import { evaluateCompatibility } from '../../domain/compatibility';
+export function getStaticPaths() { return tools.map((tool) => ({ params: { slug: tool.slug }, props: { tool } })); }
+const { tool } = Astro.props;
+const results = compressors.map((compressor) => ({ compressor, result: evaluateCompatibility(compressor, tool) }));
+const continuous = results.filter((item) => item.result.verdict === 'continuous');
+const insufficient = results.filter((item) => item.result.verdict === 'insufficient_data');
+const pageUrl = `/quel-compresseur-pour/${tool.slug}/`;
+---
+<BaseLayout title={`Quel compresseur pour ${tool.model} ? | CompatAir`} description={`Besoin publié du ${tool.label} : ${tool.airflowLpm.typical} L/min à ${tool.workingPressureBar.typical} bar, seuil recommandé et modèles documentés.`} breadcrumbs={[{ name: 'Outils pneumatiques', path: '/outils-pneumatiques/' }, { name: `Quel compresseur pour ${tool.model}`, path: pageUrl }]}>
+	<article class="container content use-page"><p class="eyebrow">Dimensionnement par outil</p><h1>Quel compresseur pour {tool.label}&nbsp;?</h1><p class="lead">Le fabricant publie une consommation de {tool.airflowLpm.typical} L/min à {tool.workingPressureBar.typical} bar. CompatAir affiche séparément le seuil nominal et sa marge de dimensionnement.</p>
+		<h2>Seuils à contrôler</h2><dl class="spec-table"><div><dt>Débit nominal</dt><dd>{tool.airflowLpm.typical} L/min</dd></div><div><dt>Pression de travail</dt><dd>{tool.workingPressureBar.typical} bar</dd></div><div><dt>FAD conseillé</dt><dd>{Math.round(tool.airflowLpm.typical * 1.25)} L/min avec marge CompatAir de 25 %</dd></div><div><dt>Raccordement documenté</dt><dd>{tool.connectorSize ?? 'Non documenté dans la source consultée'}</dd></div></dl>
+		<h2>Modèles dont le débit peut être comparé</h2>{continuous.length ? <div class="compatibility-table">{continuous.map(({ compressor, result }) => <a href={`/compatibilite/${compressor.slug}--${tool.slug}/`}><span><strong>{compressor.brand} {compressor.model}</strong><small>{Math.round(result.availableFadLpm!)} L/min documentés à la pression demandée</small></span><strong class="text-continuous">Continu</strong></a>)}</div> : <p>Aucun modèle du catalogue actuel ne couvre le débit nominal avec des données suffisantes.</p>}
+		<h2>Données qui ne permettent pas de conclure</h2><p>{insufficient.length} modèle{insufficient.length > 1 ? 's' : ''} ne reçoit aucun verdict positif ou négatif faute de FAD documenté à la pression demandée.</p>
+		<div class="actions"><a class="button primary" href={`/calculateur/?outil=${tool.id}`}>Ouvrir la configuration</a><a class="button" href={`/outils-pneumatiques/${tool.slug}/`}>Voir la fiche outil</a></div>
+	</article>
+</BaseLayout>

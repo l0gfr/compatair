@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /go/
+Disallow: /recherche/
+Disallow: /comparateur/
+Disallow: /*?
 
 Sitemap: https://compatair.fr/sitemap-index.xml

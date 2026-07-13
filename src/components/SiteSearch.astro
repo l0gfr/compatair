@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import { compressors, tools } from '../data/catalog';
+import { glossaryTerms } from '../data/glossary';
+
+const guides = await getCollection('guides');
+const searchItems = [
+	...compressors.map((item) => ({ title: `${item.brand} ${item.model}`, type: 'Compresseur', url: `/compresseurs/${item.slug}/`, keywords: `${item.tankLiters} litres ${item.maxPressureBar} bar ${item.mpn ?? ''}` })),
+	...tools.map((item) => ({ title: item.label, type: 'Outil', url: `/outils-pneumatiques/${item.slug}/`, keywords: `${item.category} ${item.airflowLpm.typical} litres minute ${item.workingPressureBar.typical} bar` })),
+	...guides.map((item) => ({ title: item.data.title, type: 'Guide', url: `/guides/${item.id}/`, keywords: `${item.data.description} ${item.data.category}` })),
+	...glossaryTerms.map((item) => ({ title: item.term, type: 'Glossaire', url: `/glossaire/#${item.slug}`, keywords: item.definition })),
+];
+---
+
+<details class="site-search" data-site-search>
+	<summary>Rechercher</summary>
+	<div class="search-panel">
+		<label for="global-search">Rechercher un modèle, un outil ou un terme</label>
+		<input id="global-search" type="search" inputmode="search" autocomplete="off" placeholder="Ex. débit restitué, ponceuse, 50 litres" data-search-input />
+		<div class="search-results" data-search-results><p>Saisissez au moins deux caractères.</p></div>
+		<a class="search-all" href="/recherche/">Ouvrir la recherche complète</a>
+	</div>
+</details>
+<div hidden data-search-index={JSON.stringify(searchItems)}></div>
+
+<script src="../scripts/site-search.ts"></script>

@@ -1,8 +1,8 @@
-import { compressorSchema, toolProfileSchema, type Compressor, type ToolProfile } from '../domain/catalog';
+import { compressorSchema, toolProfileSchema } from '../domain/catalog';
 
 const retrievedAt = '2026-07-13';
 
-const rawCompressors: Compressor[] = [
+const rawCompressors = [
 	{
 		id: 'einhell-tc-ac-240-50-10-of', slug: 'einhell-tc-ac-240-50-10-of', brand: 'Einhell', model: 'TC-AC 240/50/10 OF', mpn: '4010393',
 		tankLiters: 50, maxPressureBar: 10, fadCurve: [{ pressureBar: 0, litersPerMinute: 173 }, { pressureBar: 4, litersPerMinute: 107 }, { pressureBar: 7, litersPerMinute: 76 }], intakeFlowLpm: 240, dutyCycle: .25, oilType: 'oil-free', noiseDb: 77, confidence: 'A', status: 'active',
@@ -76,7 +76,7 @@ const rawCompressors: Compressor[] = [
 	},
 ];
 
-const rawTools: ToolProfile[] = [
+const rawTools = [
 	{
 		id: 'einhell-tc-pe-150', slug: 'ponceuse-excentrique-einhell-tc-pe-150', category: 'Ponceuse pneumatique', label: 'Ponceuse excentrique Einhell TC-PE 150', brand: 'Einhell', model: 'TC-PE 150',
 		workingPressureBar: { min: 6.3, typical: 6.3, max: 6.3 }, airflowLpm: { min: 100, typical: 100, max: 100 }, connectorSize: 'Flexible intérieur 9 mm recommandé', confidence: 'A',

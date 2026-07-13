@@ -12,6 +12,8 @@ const guides = defineCollection({
 		category: z.enum(['Comprendre', 'Choisir', 'Installer', 'Utiliser']),
 		readingTime: z.number().int().positive(),
 		featured: z.boolean().default(false),
+		author: z.string().default('CompatAir'),
+		reviewer: z.string().default('CompatAir'),
 		relatedCalculatorTool: z.string().optional(),
 		sources: z.array(z.url()).min(1),
 	}),

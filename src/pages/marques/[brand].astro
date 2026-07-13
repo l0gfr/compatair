@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductImage from '../../components/ProductImage.astro';
+import { compressors, tools } from '../../data/catalog';
+const slugify = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+export function getStaticPaths() {
+	const makeSlug = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+	const values = [...new Set([...compressors.map((item) => item.brand), ...tools.map((item) => item.brand)])];
+	return values.map((brand) => ({ params: { brand: makeSlug(brand) }, props: { brand } }));
+}
+const { brand } = Astro.props; const brandCompressors = compressors.filter((item) => item.brand === brand); const brandTools = tools.filter((item) => item.brand === brand);
+---
+<BaseLayout title={`${brand} : compresseurs et outils documentés | CompatAir`} description={`Fiches techniques ${brand} sourcées par CompatAir : débits restitués, consommations, pressions et limites connues.`} breadcrumbs={[{ name: 'Marques', path: '/marques/' }, { name: brand, path: `/marques/${slugify(brand)}/` }]}>
+	<section class="page-hero compact"><div class="container"><p class="eyebrow">Documentation par marque</p><h1>{brand} sur CompatAir</h1><p class="lead">{brandCompressors.length} compresseur{brandCompressors.length > 1 ? 's' : ''} et {brandTools.length} outil{brandTools.length > 1 ? 's' : ''} disposent actuellement d’une fiche sourcée.</p></div></section>
+	{brandCompressors.length > 0 && <section class="section"><div class="container"><h2>Compresseurs {brand}</h2><div class="product-grid">{brandCompressors.map((item) => <article class="product-card"><a class="product-card-image" href={`/compresseurs/${item.slug}/`}><ProductImage image={item.image} compact /></a><p class="product-brand">{item.brand}</p><h3><a href={`/compresseurs/${item.slug}/`}>{item.model}</a></h3><p>{item.tankLiters} L · {item.maxPressureBar} bar · confiance {item.confidence}</p></article>)}</div></div></section>}
+	{brandTools.length > 0 && <section class="section"><div class="container"><h2>Outils {brand}</h2><div class="product-grid">{brandTools.map((item) => <article class="product-card"><a class="product-card-image" href={`/outils-pneumatiques/${item.slug}/`}><ProductImage image={item.image} compact /></a><p class="product-brand">{item.category}</p><h3><a href={`/outils-pneumatiques/${item.slug}/`}>{item.model}</a></h3><p>{item.airflowLpm.typical} L/min à {item.workingPressureBar.typical} bar</p></article>)}</div></div></section>}
+</BaseLayout>

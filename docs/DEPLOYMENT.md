@@ -51,6 +51,36 @@ sudo bash /home/bluetouff/compatair-bootstrap/deploy/server/activate-tls.sh
 
 Le second script installe le vhost HTTPS durci, valide la configuration Apache et recharge le service. Il échoue sans modifier le vhost actif si les fichiers Let’s Encrypt n’existent pas.
 
+## Activation du MCP
+
+Le site statique doit d’abord avoir été déployé par GitHub Actions avec le dossier `_server`. Sur le serveur, vérifier :
+
+```bash
+test -f /var/www/html/compatair/current/_server/mcp-server.mjs
+test -f /var/www/html/compatair/current/data/catalog.json
+```
+
+Le dépôt d’amorçage doit contenir la version courante des fichiers `deploy/`. Exécuter ensuite :
+
+```bash
+sudo bash /home/bluetouff/compatair-bootstrap/deploy/server/install-mcp.sh
+```
+
+Contrôler le service local, le proxy HTTPS puis la négociation MCP :
+
+```bash
+curl --fail http://127.0.0.1:8787/health
+curl --fail https://compatair.fr/mcp-health
+curl --fail \
+  -H 'Accept: application/json, text/event-stream' \
+  -H 'Content-Type: application/json' \
+  -H 'Origin: https://compatair.fr' \
+  --data '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"smoke","version":"1"}}}' \
+  https://compatair.fr/mcp
+```
+
+Après ces trois contrôles, créer la variable GitHub `MCP_ENABLED` avec la valeur `true`. Les déploiements et le monitoring vérifieront alors le MCP automatiquement.
+
 ## Rollback
 
 Lister les releases sur le serveur puis réactiver un SHA connu :

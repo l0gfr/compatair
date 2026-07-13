@@ -53,4 +53,8 @@ ln -sfn "$release" "$deploy_root/current.next"
 mv -Tf "$deploy_root/current.next" "$deploy_root/current"
 
 printf '%s\n' "$release_id" > "$deploy_root/DEPLOYED_SHA"
+if systemctl is-enabled --quiet compatair-mcp.service 2>/dev/null; then
+	sudo -n /bin/systemctl restart compatair-mcp.service
+	curl --fail --silent --show-error --max-time 5 http://127.0.0.1:8787/health > /dev/null
+fi
 printf 'Activated %s at %s\n' "$release_id" "$(date -u +%FT%TZ)"

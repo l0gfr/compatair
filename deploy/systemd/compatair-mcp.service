@@ -1,0 +1,30 @@
+[Unit]
+Description=CompatAir read-only MCP server
+After=network.target
+
+[Service]
+Type=simple
+User=compatair-deploy
+Group=compatair-deploy
+WorkingDirectory=/var/www/html/compatair/current
+Environment=MCP_HOST=127.0.0.1
+Environment=MCP_PORT=8787
+Environment=MCP_ALLOWED_ORIGINS=https://compatair.fr,https://www.compatair.fr
+Environment=COMPAT_AIR_CATALOG=/var/www/html/compatair/current/data/catalog.json
+Environment=COMPAT_AIR_OFFERS=/var/www/html/compatair/current/data/offers.json
+ExecStart=/usr/bin/node /var/www/html/compatair/current/_server/mcp-server.mjs
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+MemoryMax=256M
+TasksMax=64
+
+[Install]
+WantedBy=multi-user.target

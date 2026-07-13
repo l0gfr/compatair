@@ -36,11 +36,28 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Validate source and build
-        run: pnpm validate
+      - name: Lint source and workflow policy
+        run: pnpm lint:source
+
+      - name: Validate source, tests, build and snapshots
+        run: pnpm validate:full
 
       - name: Audit production dependencies
         run: pnpm security:audit
+
+      - name: Check generated HTML and internal links
+        run: node scripts/audit-dist.mjs
+
+      - name: Lighthouse performance, accessibility and SEO
+        run: pnpm lighthouse
+
+      - name: Upload Lighthouse reports
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: lighthouse-${{ github.sha }}
+          path: .lighthouseci/reports/
+          if-no-files-found: error
+          retention-days: 7
 
       - name: Upload pull request preview
         if: github.event_name == 'pull_request'

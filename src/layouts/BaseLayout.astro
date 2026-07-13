@@ -2,6 +2,7 @@
 import '@fontsource-variable/manrope/index.css';
 import '@fontsource-variable/newsreader/index.css';
 import '../styles/global.css';
+import SiteSearch from '../components/SiteSearch.astro';
 
 type Props = {
 	title: string;
@@ -109,14 +110,15 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 	<body>
 		<header class="site-header">
 			<nav class="container nav" aria-label="Navigation principale">
-				<a class="brand" href="/" aria-label="CompatAir, accueil"><span class="brand-mark" aria-hidden="true"><span class="brand-arc"></span><span class="brand-needle"></span></span><span class="brand-name">CompatAir<small>le débit utile, vérifié</small></span></a>
+				<a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><span class="brand-arc"></span><span class="brand-needle"></span></span><span class="brand-name">CompatAir<small>le débit utile, vérifié</small></span></a>
 				<div class="desktop-nav">
 					<div class="nav-links">{navItems.map((item) => <a href={item.href} class:list={{ active: isCurrent(item.href) }} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>)}</div>
+					<SiteSearch />
 					<a class:list={['nav-cta', isCurrent('/calculateur/') && 'active']} href="/calculateur/">Calculateur <span aria-hidden="true">→</span></a>
 				</div>
 				<details class="mobile-menu">
 					<summary>Menu <span aria-hidden="true"></span></summary>
-					<div class="mobile-menu-panel">{navItems.map((item) => <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>)}<a href="/calculateur/">Calculateur</a><a href="/affiliation/">Affiliation</a><a href="/contact/">Signaler une donnée</a></div>
+					<div class="mobile-menu-panel">{navItems.map((item) => <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>)}<a href="/recherche/">Recherche</a><a href="/calculateur/">Calculateur</a><a href="/affiliation/">Affiliation</a><a href="/contact/">Signaler une donnée</a></div>
 				</details>
 			</nav>
 		</header>
@@ -131,9 +133,13 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 					<a href="/compresseurs/">Compresseurs</a>
 					<a href="/outils-pneumatiques/">Outils</a>
 					<a href="/methodologie/">Méthodologie</a>
+					<a href="/sources-fiabilite/">Sources et fiabilité</a>
 					<a href="/affiliation/">Affiliation</a>
 					<a href="/contact/">Contact</a>
-					<a href="/mentions-legales/">Mentions légales et confidentialité</a>
+					<a href="/mentions-legales/">Mentions légales</a>
+					<a href="/confidentialite/">Confidentialité</a>
+					<a href="/cookies/">Cookies</a>
+					<a href="/mcp-documentation/">MCP</a>
 				</div>
 			</div>
 		</footer>

@@ -1,0 +1,5 @@
+/.github/workflows/ @bluetouff
+/deploy/ @bluetouff
+/server/ @bluetouff
+/src/domain/ @bluetouff
+/src/data/ @bluetouff

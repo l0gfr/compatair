@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { compressors, tools } from '../data/catalog';
+import { glossaryTerms } from '../data/glossary';
+const guides = await getCollection('guides');
+const items = [
+	...compressors.map((item) => ({ title: `${item.brand} ${item.model}`, type: 'Compresseur', url: `/compresseurs/${item.slug}/`, text: `${item.brand} ${item.model} ${item.tankLiters} litres ${item.maxPressureBar} bar ${item.mpn ?? ''}` })),
+	...tools.map((item) => ({ title: item.label, type: 'Outil pneumatique', url: `/outils-pneumatiques/${item.slug}/`, text: `${item.label} ${item.category} ${item.airflowLpm.typical} L/min ${item.workingPressureBar.typical} bar` })),
+	...guides.map((item) => ({ title: item.data.title, type: 'Guide', url: `/guides/${item.id}/`, text: `${item.data.title} ${item.data.description} ${item.data.category}` })),
+	...glossaryTerms.map((item) => ({ title: item.term, type: 'Glossaire', url: `/glossaire/#${item.slug}`, text: `${item.term} ${item.definition}` })),
+];
+---
+<BaseLayout title="Recherche technique | CompatAir" description="Recherchez dans les compresseurs, outils pneumatiques, guides et définitions publiés par CompatAir." noindex breadcrumbs={[{ name: 'Recherche', path: '/recherche/' }]}>
+	<section class="page-hero compact"><div class="container"><p class="eyebrow">Recherche globale</p><h1>Trouver une donnée vérifiée</h1><p class="lead">La recherche couvre uniquement les fiches et contenus effectivement publiés.</p></div></section>
+	<section class="section"><div class="container search-page"><label for="page-search">Modèle, outil, usage ou terme technique</label><input id="page-search" type="search" autofocus placeholder="Ex. FAD, sablage, Einhell, pression" data-page-search /><p data-search-count>{items.length} entrées indexées</p><div class="search-page-results" data-page-results>{items.map((item) => <a href={item.url} data-search-item data-search-text={item.text}><span>{item.type}</span><strong>{item.title}</strong></a>)}</div></div></section>
+	<script>
+		const input = document.querySelector<HTMLInputElement>('[data-page-search]');
+		const entries = [...document.querySelectorAll<HTMLElement>('[data-search-item]')];
+		const count = document.querySelector<HTMLElement>('[data-search-count]');
+		const normalize = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+		input?.addEventListener('input', () => { const query = normalize(input.value.trim()); let visible = 0; for (const entry of entries) { const match = !query || normalize(entry.dataset.searchText ?? '').includes(query); entry.hidden = !match; if (match) visible++; } if (count) count.textContent = `${visible} résultat${visible > 1 ? 's' : ''}`; });
+	</script>
+</BaseLayout>

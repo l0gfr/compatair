@@ -9,6 +9,8 @@ export async function getStaticPaths() {
 
 const { guide } = Astro.props;
 const { Content, headings } = await render(guide);
+const allGuides = await getCollection('guides');
+const relatedGuides = allGuides.filter((item) => item.id !== guide.id && item.data.category === guide.data.category).slice(0, 3);
 const published = guide.data.pubDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 const articleJsonLd = {
 	'@context': 'https://schema.org',
@@ -40,8 +42,9 @@ const articleJsonLd = {
 	<article class="container editorial-layout">
 		<div class="editorial-main">
 			<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/guides/">Guides</a><span>/</span><span>{guide.data.category}</span></nav>
-			<header class="article-head"><p class="eyebrow">{guide.data.category}</p><h1>{guide.data.title}</h1><p class="lead">{guide.data.description}</p><p class="article-byline">Publié le {published} · Lecture {guide.data.readingTime} minutes · Vérification technique CompatAir</p></header>
+			<header class="article-head"><p class="eyebrow">{guide.data.category}</p><h1>{guide.data.title}</h1><p class="lead">{guide.data.description}</p><p class="article-byline">Publié le {published} · Lecture {guide.data.readingTime} minutes · Auteur {guide.data.author} · Relecture {guide.data.reviewer}</p></header>
 			<div class="article-body"><Content /></div>
+			{relatedGuides.length > 0 && <section class="related-reading"><h2>Continuer sur ce sujet</h2><div class="link-cards">{relatedGuides.map((item) => <a href={`/guides/${item.id}/`}><strong>{item.data.title}</strong><span>{item.data.description}</span></a>)}</div></section>}
 		</div>
 		<aside class="article-aside" aria-label="Sommaire"><strong>Dans ce dossier</strong><ol>{headings.filter((heading) => heading.depth === 2).map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol><a class="button primary" href="/calculateur/">Ouvrir le calculateur</a><a class="aside-secondary" href="/glossaire/">Consulter le glossaire</a></aside>
 	</article>
