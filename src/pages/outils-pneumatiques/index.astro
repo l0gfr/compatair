@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductImage from '../../components/ProductImage.astro';
 import { tools } from '../../data/catalog';
 ---
-<BaseLayout title="Outils pneumatiques et besoins en air | CompatAir" description="Débit, pression et rythme d’utilisation documentés pour les outils pneumatiques du catalogue CompatAir.">
-	<section class="page-hero compact"><div class="container"><p class="eyebrow">Profils techniques</p><h1>{tools.length} outils, des besoins vérifiés</h1><p class="lead">Chaque profil sépare pression, débit instantané et rythme d’utilisation avant toute recommandation.</p></div></section>
-	<section class="section"><div class="container product-grid">{tools.map((tool) => <article class="product-card"><p class="product-brand">{tool.category}</p><h2><a href={`/outils-pneumatiques/${tool.slug}/`}>{tool.label}</a></h2><dl class="spec-list"><div><dt>Débit</dt><dd>{tool.airflowLpm.typical} L/min</dd></div><div><dt>Pression</dt><dd>{tool.workingPressureBar.typical} bar</dd></div><div><dt>Confiance</dt><dd>{tool.confidence}</dd></div></dl></article>)}</div></section>
+<BaseLayout title="Outils pneumatiques et besoins en air | CompatAir" description="Débit et pression publiés pour les outils pneumatiques documentés par CompatAir, avec source constructeur et limites explicites.">
+	<section class="page-hero compact"><div class="container"><p class="eyebrow">Profils techniques</p><h1>{tools.length} outils, des besoins vérifiés</h1><p class="lead">Chaque profil reprend la pression et la consommation publiées. Aucun rythme d’utilisation n’est ajouté lorsqu’il n’est pas documenté.</p></div></section>
+	<section class="section"><div class="container product-grid">{tools.map((tool) => <article class="product-card"><a class="product-card-image" href={`/outils-pneumatiques/${tool.slug}/`} aria-label={`Voir la fiche ${tool.label}`}><ProductImage image={tool.image} compact /></a><p class="product-brand">{tool.category}</p><h2><a href={`/outils-pneumatiques/${tool.slug}/`}>{tool.label}</a></h2><dl class="spec-list"><div><dt>Débit</dt><dd>{tool.airflowLpm.typical} L/min</dd></div><div><dt>Pression</dt><dd>{tool.workingPressureBar.typical} bar</dd></div><div><dt>Confiance</dt><dd>{tool.confidence}</dd></div></dl></article>)}</div></section>
 </BaseLayout>

@@ -1,6 +1,6 @@
 import type { Compressor, ToolProfile } from './catalog';
 
-export type CompatibilityVerdict = 'continuous' | 'intermittent' | 'incompatible' | 'insufficient_data';
+export type CompatibilityVerdict = 'continuous' | 'incompatible' | 'insufficient_data';
 
 export type CompatibilityResult = {
 	verdict: CompatibilityVerdict;
@@ -18,7 +18,7 @@ export function interpolateFad(compressor: Compressor, pressureBar: number): num
 	const curve = [...compressor.fadCurve].sort((a, b) => a.pressureBar - b.pressureBar);
 	if (curve.length === 0) return undefined;
 	if (curve.length === 1) {
-		return pressureBar <= curve[0].pressureBar ? curve[0].litersPerMinute : undefined;
+		return pressureBar === curve[0].pressureBar ? curve[0].litersPerMinute : undefined;
 	}
 	if (pressureBar < curve[0].pressureBar || pressureBar > curve[curve.length - 1].pressureBar) return undefined;
 	const exact = curve.find((point) => point.pressureBar === pressureBar);

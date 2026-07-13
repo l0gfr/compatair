@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductImage from '../../components/ProductImage.astro';
 import { compressors } from '../../data/catalog';
 ---
 
@@ -8,7 +9,7 @@ import { compressors } from '../../data/catalog';
 	<section class="section"><div class="container product-grid">
 		{compressors.map((compressor) => (
 			<article class="product-card">
-				<div class="product-monogram" aria-hidden="true">{compressor.brand.slice(0, 1)}</div>
+				<a class="product-card-image" href={`/compresseurs/${compressor.slug}/`} aria-label={`Voir la fiche ${compressor.brand} ${compressor.model}`}><ProductImage image={compressor.image} compact /></a>
 				<p class="product-brand">{compressor.brand}</p>
 				<h2><a href={`/compresseurs/${compressor.slug}/`}>{compressor.model}</a></h2>
 				<dl class="spec-list"><div><dt>Cuve</dt><dd>{compressor.tankLiters} L</dd></div><div><dt>Pression max.</dt><dd>{compressor.maxPressureBar} bar</dd></div><div><dt>Confiance</dt><dd>{compressor.confidence}</dd></div></dl>
@@ -17,4 +18,3 @@ import { compressors } from '../../data/catalog';
 		))}
 	</div></section>
 </BaseLayout>
-

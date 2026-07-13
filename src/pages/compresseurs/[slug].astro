@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductImage from '../../components/ProductImage.astro';
 import { compressors, tools } from '../../data/catalog';
 import { evaluateCompatibility } from '../../domain/compatibility';
 
@@ -9,16 +10,30 @@ export function getStaticPaths() {
 
 const { compressor } = Astro.props;
 const matches = tools.map((tool) => ({ tool, result: evaluateCompatibility(compressor, tool) }));
-const labels = { continuous: 'Continu', intermittent: 'Intermittent', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' };
+const labels = { continuous: 'Continu', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' };
+const productJsonLd = {
+	'@context': 'https://schema.org', '@type': 'Product', name: `${compressor.brand} ${compressor.model}`,
+	image: `https://compatair.fr${compressor.image.src}`, brand: { '@type': 'Brand', name: compressor.brand },
+	model: compressor.model, ...(compressor.mpn ? { mpn: compressor.mpn } : {}),
+	description: compressor.editorial.overview,
+};
 ---
 
 <BaseLayout title={`${compressor.brand} ${compressor.model} : débit et compatibilité | CompatAir`} description={`Analyse du ${compressor.brand} ${compressor.model} : cuve ${compressor.tankLiters} L, pression ${compressor.maxPressureBar} bar et débit restitué sourcé.`}>
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(productJsonLd)} />
 	<article class="container product-detail">
 		<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/compresseurs/">Compresseurs</a><span>/</span><span>{compressor.brand} {compressor.model}</span></nav>
-		<div class="product-detail-head"><div><p class="eyebrow">Confiance documentaire {compressor.confidence}</p><h1>{compressor.brand} {compressor.model}</h1><p class="lead">Référence {compressor.mpn ?? 'non renseignée'} · {compressor.oilType === 'oil-free' ? 'sans huile' : 'lubrifié'} · statut {compressor.status === 'active' ? 'actif' : compressor.status}.</p></div><div class="product-monogram large" aria-hidden="true">{compressor.brand.slice(0, 1)}</div></div>
-		<section class="spec-panel"><h2>Spécifications vérifiées</h2><dl class="spec-table"><div><dt>Cuve</dt><dd>{compressor.tankLiters} L</dd></div><div><dt>Pression maximale</dt><dd>{compressor.maxPressureBar} bar</dd></div><div><dt>Débit aspiré</dt><dd>{compressor.intakeFlowLpm ? `${compressor.intakeFlowLpm} L/min, non utilisé pour le verdict` : 'Non publié'}</dd></div><div><dt>Débit restitué documenté</dt><dd>{compressor.fadCurve.length ? compressor.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ') : 'Donnée insuffisante'}</dd></div><div><dt>Cycle maximal</dt><dd>{compressor.dutyCycle ? `${Math.round(compressor.dutyCycle * 100)} %` : 'Non documenté'}</dd></div></dl></section>
-		<section><h2>Verdicts sur nos outils pilotes</h2><div class="compatibility-table">{matches.map(({ tool, result }) => <a href={`/outils-pneumatiques/${tool.slug}/`}><span>{tool.label}</span><strong class={`text-${result.verdict}`}>{labels[result.verdict]}</strong></a>)}</div></section>
+		<div class="product-hero"><div><p class="eyebrow">Confiance documentaire {compressor.confidence}</p><h1>{compressor.brand} {compressor.model}</h1><p class="lead">{compressor.editorial.overview}</p><p class="product-reference">Référence {compressor.mpn ?? 'non renseignée'} · {compressor.oilType === 'oil-free' ? 'sans huile' : 'lubrifié'} · fiche suivie comme {compressor.status === 'active' ? 'active' : compressor.status}.</p></div><ProductImage image={compressor.image} eager /></div>
+
+		<section class="spec-panel"><h2>Spécifications vérifiées</h2><dl class="spec-table"><div><dt>Cuve</dt><dd>{compressor.tankLiters} L</dd></div><div><dt>Pression maximale</dt><dd>{compressor.maxPressureBar} bar</dd></div><div><dt>Débit aspiré</dt><dd>{compressor.intakeFlowLpm ? `${compressor.intakeFlowLpm} L/min, non utilisé pour le verdict` : 'Non publié'}</dd></div><div><dt>Débit restitué documenté</dt><dd>{compressor.fadCurve.length ? compressor.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ') : 'Donnée insuffisante'}</dd></div><div><dt>Cycle maximal</dt><dd>{compressor.dutyCycle ? `${Math.round(compressor.dutyCycle * 100)} %` : 'Non documenté'}</dd></div><div><dt>Niveau sonore publié</dt><dd>{compressor.noiseDb ? `${compressor.noiseDb} dB, indicateur à vérifier dans la source` : 'Non documenté'}</dd></div></dl></section>
+
+		<section class="editorial-section"><p class="eyebrow">Lecture CompatAir</p><h2>Ce que la documentation permet d’affirmer</h2><div class="evidence-grid"><div class="fact-box"><h3>Faits vérifiés</h3><ul>{compressor.editorial.verifiedFacts.map((fact) => <li>{fact}</li>)}</ul></div><div class="limit-box"><h3>Limites</h3><ul>{compressor.editorial.limitations.map((limit) => <li>{limit}</li>)}</ul></div></div></section>
+
+		<section class="editorial-section"><h2>Lire le débit de ce compresseur</h2>{compressor.fadCurve.length ? <><p>Les points ci-dessous sont ceux publiés dans la source. CompatAir interpole uniquement entre deux points documentés et ne prolonge pas la courbe en dehors de cette plage.</p><div class="curve-table" role="table" aria-label="Points de débit restitué"><div class="curve-row head" role="row"><span role="columnheader">Pression</span><span role="columnheader">Débit restitué</span></div>{compressor.fadCurve.map((point) => <div class="curve-row" role="row"><span role="cell">{point.pressureBar} bar</span><strong role="cell">{point.litersPerMinute} L/min</strong></div>)}</div></> : <p>Aucun débit restitué à une pression de travail n’est publié dans la source consultée. Le débit aspiré ne le remplace pas.</p>}</section>
+
+		<section class="editorial-section"><h2>Compatibilité avec les outils documentés</h2><p>Le verdict compare le débit restitué disponible à la consommation nominale publiée de chaque outil, à pression égale. La marge interne de 25 % est affichée séparément.</p><div class="compatibility-table">{matches.map(({ tool, result }) => <a href={`/outils-pneumatiques/${tool.slug}/`}><span><strong>{tool.label}</strong><small>{tool.airflowLpm.typical} L/min à {tool.workingPressureBar.typical} bar{result.availableFadLpm !== undefined ? ` · ${Math.round(result.availableFadLpm)} L/min documentés` : ''}</small></span><strong class={`text-${result.verdict}`}>{labels[result.verdict]}</strong></a>)}</div></section>
+
+		<section class="related-reading"><h2>Approfondir avant de choisir</h2><div class="link-cards"><a href="/guides/debit-restitue-fad-vs-debit-aspire/"><strong>Débit aspiré ou FAD</strong><span>Identifier le chiffre comparable à la consommation d’un outil.</span></a><a href="/guides/choisir-volume-cuve-24-50-90-litres/"><strong>Comprendre le rôle de la cuve</strong><span>Distinguer stockage d’air et capacité de production.</span></a><a href="/methodologie/"><strong>Méthode et limites</strong><span>Voir les règles exactes du moteur CompatAir.</span></a></div></section>
 		<section class="sources-panel"><h2>Sources et réserves</h2>{compressor.evidence.map((evidence) => <p><a href={evidence.sourceUrl} rel="nofollow noopener" target="_blank">{evidence.sourceLabel}</a> · consultée le {evidence.retrievedAt.split('-').reverse().join('/')} · niveau {evidence.confidence}</p>)}{compressor.notes.map((note) => <p>{note}</p>)}</section>
 	</article>
 </BaseLayout>
-

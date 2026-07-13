@@ -35,8 +35,8 @@ import { tools } from '../data/catalog';
 	const list = root?.querySelector<HTMLElement>('[data-result-list]');
 	const required = root?.querySelector<HTMLElement>('[data-required-flow]');
 	const context = root?.querySelector<HTMLElement>('[data-result-context]');
-	const labels = { continuous: 'Compatible en continu', intermittent: 'Compatible par intermittence', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' } as const;
-	const rank = { continuous: 0, intermittent: 1, insufficient_data: 2, incompatible: 3 } as const;
+	const labels = { continuous: 'Compatible en continu', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' } as const;
+	const rank = { continuous: 0, insufficient_data: 1, incompatible: 2 } as const;
 
 	function number(value: number) { return Math.round(value).toLocaleString('fr-FR'); }
 	const requestedTool = new URLSearchParams(window.location.search).get('outil');

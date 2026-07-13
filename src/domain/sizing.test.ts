@@ -27,6 +27,12 @@ describe('compatibility engine', () => {
 		expect(evaluateCompatibility(compressor!, tool!).verdict).toBe('insufficient_data');
 	});
 
+	it('does not reuse a single FAD point at another pressure', () => {
+		const compressor = compressors.find((item) => item.id === 'abac-atf-s-3-24');
+		const tool = tools.find((item) => item.id === 'einhell-tc-pe-150');
+		expect(evaluateCompatibility(compressor!, tool!).verdict).toBe('insufficient_data');
+	});
+
 	it('rejects a continuous tool when average flow is unavailable', () => {
 		const compressor = compressors.find((item) => item.id === 'einhell-te-ac-135-24-silent-plus');
 		const tool = tools.find((item) => item.id === 'metabo-ssp-1000');
@@ -37,7 +43,7 @@ describe('compatibility engine', () => {
 		const tool = tools.find((item) => item.id === 'einhell-tc-pe-150')!;
 		const low = compressors.find((item) => item.id === 'einhell-te-ac-135-24-silent-plus')!;
 		const high = compressors.find((item) => item.id === 'einhell-te-ac-430-90-10')!;
-		const rank = { insufficient_data: 0, incompatible: 1, intermittent: 2, continuous: 3 };
+		const rank = { insufficient_data: 0, incompatible: 1, continuous: 2 };
 		expect(rank[evaluateCompatibility(high, tool).verdict]).toBeGreaterThanOrEqual(rank[evaluateCompatibility(low, tool).verdict]);
 	});
 });

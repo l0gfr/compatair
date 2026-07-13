@@ -12,6 +12,19 @@ export const evidenceSchema = z.object({
 	notes: z.string().optional(),
 });
 
+const productImageSchema = z.object({
+	src: z.string().startsWith('/images/products/'),
+	alt: z.string().min(1),
+	sourceUrl: z.url(),
+	sourceLabel: z.string().min(1),
+});
+
+const editorialSchema = z.object({
+	overview: z.string().min(1),
+	verifiedFacts: z.array(z.string().min(1)).min(2),
+	limitations: z.array(z.string().min(1)).min(1),
+});
+
 export const compressorSchema = z.object({
 	id: z.string().min(1),
 	slug: z.string().regex(/^[a-z0-9-]+$/),
@@ -27,6 +40,8 @@ export const compressorSchema = z.object({
 	noiseDb: z.number().positive().optional(),
 	confidence: confidenceSchema,
 	status: z.enum(['active', 'discontinued', 'unknown']),
+	image: productImageSchema,
+	editorial: editorialSchema,
 	evidence: z.array(evidenceSchema).min(1),
 	notes: z.array(z.string()).default([]),
 });
@@ -42,6 +57,8 @@ export const toolProfileSchema = z.object({
 	airflowLpm: z.object({ min: z.number().positive(), typical: z.number().positive(), max: z.number().positive() }),
 	connectorSize: z.string().optional(),
 	confidence: confidenceSchema,
+	image: productImageSchema,
+	editorial: editorialSchema,
 	evidence: z.array(evidenceSchema).min(1),
 	notes: z.array(z.string()).default([]),
 });
