@@ -37,6 +37,8 @@ Créer les secrets suivants dans le dépôt :
 
 La clé publique correspondante doit être ajoutée au `~/.ssh/authorized_keys` du compte de déploiement. Utiliser une clé propre à CompatAir, révocable sans affecter les accès humains.
 
+Une fois le serveur, le DNS et le certificat vérifiés, créer la variable de dépôt `DEPLOY_ENABLED` avec la valeur `true`. Tant que cette variable est absente, le workflow de production reste volontairement inactif, même sur `main`.
+
 ## Rollback
 
 Lister les releases sur le serveur puis réactiver un SHA connu :
