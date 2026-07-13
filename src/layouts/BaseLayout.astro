@@ -33,6 +33,7 @@ const socialImage = imagePath ? new URL(imagePath, Astro.site) : undefined;
 const currentPath = Astro.url.pathname;
 const navItems = [
 	{ href: '/guides/', label: 'Guides' },
+	{ href: '/glossaire/', label: 'Glossaire' },
 	{ href: '/compresseurs/', label: 'Compresseurs' },
 	{ href: '/outils-pneumatiques/', label: 'Outils' },
 	{ href: '/methodologie/', label: 'Méthode' },
@@ -125,6 +126,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 				<div class="footer-brand"><span class="brand-mark" aria-hidden="true"><span class="brand-arc"></span><span class="brand-needle"></span></span><div><strong>CompatAir</strong><br /><small>Comparer le débit utile, pas la promesse commerciale.</small></div></div>
 				<div class="footer-links">
 					<a href="/guides/">Guides</a>
+					<a href="/glossaire/">Glossaire</a>
 					<a href="/calculateur/">Calculateur</a>
 					<a href="/compresseurs/">Compresseurs</a>
 					<a href="/outils-pneumatiques/">Outils</a>

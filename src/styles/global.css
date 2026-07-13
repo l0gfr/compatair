@@ -129,6 +129,38 @@ h3 { font-weight: 560; }
 .legal-list dt { color: var(--muted); }
 .legal-list dd { margin: 0; color: var(--ink); font-weight: 700; }
 .contact-privacy { margin-top: 1.5rem; font-size: .9rem; }
+.glossary-layout { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); padding-block: 3rem 5rem; align-items: start; }
+.glossary-index { position: sticky; top: 6rem; padding: 1.2rem; border: 1px solid var(--line); border-radius: 1rem; background: rgba(252,253,249,.9); box-shadow: var(--shadow-sm); }
+.glossary-index > div { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1rem 0; }
+.glossary-index > div a { width: 2rem; height: 2rem; display: grid; place-items: center; border-radius: .5rem; color: var(--brand-dark); background: #e9eee5; font-weight: 800; text-decoration: none; }
+.glossary-index p { margin-bottom: 0; color: var(--muted); font-size: .78rem; }
+.glossary-main { min-width: 0; }
+.glossary-letter { scroll-margin-top: 6rem; margin-bottom: 3rem; }
+.glossary-letter > header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.glossary-letter > header span { width: 2.6rem; height: 2.6rem; display: grid; place-items: center; border-radius: 50%; color: var(--ink); background: var(--accent); font-weight: 900; }
+.glossary-letter > header h2 { margin: 0; font-size: 1.35rem; }
+.glossary-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9rem; }
+.glossary-card { scroll-margin-top: 6rem; padding: 1.25rem; border: 1px solid var(--line); border-radius: 1rem; background: rgba(252,253,249,.88); box-shadow: var(--shadow-sm); }
+.glossary-card h3 { margin: 0 0 .55rem; font-size: 1.3rem; }
+.glossary-card p { margin: 0; color: var(--muted); font-size: .92rem; }
+.glossary-links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1rem; font-size: .76rem; font-weight: 800; }
+.glossary-links a { color: var(--brand-dark); text-underline-offset: .2em; }
+.glossary-sources { padding-top: 1rem; border-top: 1px solid var(--line); }
+.glossary-sources li { margin: .55rem 0; color: var(--muted); }
+.glossary-gateway { padding-bottom: 0; }
+.glossary-banner { display: grid; grid-template-columns: 1.3fr .7fr; gap: 2rem; padding: clamp(1.6rem, 4vw, 2.6rem); border: 1px solid var(--line); border-radius: 1.5rem; background: linear-gradient(135deg, #fcfdf9, #e9eee5); box-shadow: var(--shadow-sm); }
+.glossary-banner h2 { margin: 0; }
+.glossary-banner p { color: var(--muted); }
+.metric.light { background: rgba(255,255,255,.65); border-color: var(--line); }
+.metric.light span { display: block; color: var(--muted); }
+.metric.light .button { margin-top: 1rem; }
+.deep-dives { background: #f8f9f4; }
+.deep-card { border-top: 4px solid var(--brand); }
+.home-glossary { display: grid; grid-template-columns: 1.1fr 1fr auto; gap: 1rem; align-items: center; margin: 0 0 1.25rem; padding: 1.15rem 1.3rem; border: 1px solid rgba(211,235,86,.4); border-radius: 1rem; color: white; background: var(--ink); text-decoration: none; box-shadow: var(--shadow-sm); }
+.home-glossary span:first-child { display: grid; }
+.home-glossary small { color: var(--accent); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.home-glossary span:nth-child(2) { color: #b9cac1; font-size: .84rem; }
+.home-glossary b { color: var(--accent); font-size: 1.4rem; }
 
 footer { margin-top: 4rem; padding: 3rem 0; color: white; background: var(--ink); }
 .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
@@ -283,6 +315,7 @@ footer { margin-top: 4rem; padding: 3rem 0; color: white; background: var(--ink)
 .article-aside li { margin: .55rem 0; color: var(--muted); font-size: .86rem; }
 .article-aside a:not(.button) { color: inherit; text-decoration: none; }
 .article-aside .button { width: 100%; }
+.aside-secondary { display: block; margin-top: 1rem; color: var(--brand-dark) !important; font-size: .8rem; font-weight: 800; text-align: center; text-decoration: underline !important; text-underline-offset: .2em; }
 
 @media (max-width: 900px) {
 	.desktop-nav { display: none; }
@@ -301,7 +334,7 @@ footer { margin-top: 4rem; padding: 3rem 0; color: white; background: var(--ink)
 }
 
 @media (max-width: 760px) {
-	.grid, .callout, .calculator, .product-grid, .guide-grid, .pillar-grid, .split-head, .editorial-layout, .product-hero, .evidence-grid, .link-cards { grid-template-columns: 1fr; }
+	.grid, .callout, .calculator, .product-grid, .guide-grid, .pillar-grid, .split-head, .editorial-layout, .product-hero, .evidence-grid, .link-cards, .glossary-layout, .glossary-grid, .glossary-banner, .home-glossary { grid-template-columns: 1fr; }
 	.pillar-card { min-height: 0; }
 	.site-header { padding: .45rem 0; }
 	.nav { min-height: 58px; border-radius: .95rem; }
@@ -317,6 +350,7 @@ footer { margin-top: 4rem; padding: 3rem 0; color: white; background: var(--ink)
 	.spec-table div { grid-template-columns: 1fr; gap: .15rem; }
 	.legal-list div { grid-template-columns: 1fr; gap: .15rem; }
 	.article-aside { position: static; }
+	.glossary-index { position: static; }
 	.product-visual img { height: 320px; }
 	.product-visual.compact img { height: 220px; }
 	.compatibility-table a { align-items: start; flex-direction: column; }
