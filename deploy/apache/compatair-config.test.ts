@@ -15,7 +15,10 @@ describe('CompatAir Apache CSP', () => {
 
 	it('allows only the inline and embedded assets required by GoAccess', () => {
 		expect(config).toContain("font-src 'self' data:");
-		expect(config).toContain("script-src 'self' 'unsafe-inline'");
+		expect(config).toContain(
+			"script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+		);
+		expect(config).toContain("connect-src 'none'");
 		expect(config).toContain("object-src 'none'");
 		expect(config).toContain("frame-ancestors 'none'");
 	});
