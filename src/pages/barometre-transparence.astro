@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { CATALOG_VERIFIED_AT, compressors } from '../data/catalog';
+import { createTransparencyBarometer } from '../domain/transparency-barometer';
+const barometer = createTransparencyBarometer(compressors, CATALOG_VERIFIED_AT);
+const formatDate = (date: string) => new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
+---
+<BaseLayout title={`Baromètre transparence ${barometer.edition} | CompatAir`} description="Baromètre CompatAir de transparence documentaire des fabricants de compresseurs : FAD, cycle, sources, acoustique, identifiants et fraîcheur." breadcrumbs={[{ name: 'Baromètre de transparence', path: '/barometre-transparence/' }]}>
+	<section class="page-hero"><div class="container"><p class="eyebrow">Édition {barometer.edition}</p><h1>Baromètre de transparence documentaire</h1><p class="lead">Un classement reproductible de la documentation disponible pour les {compressors.length} compresseurs du catalogue CompatAir. Ce score mesure la transparence observée, jamais la qualité, la fiabilité ou les performances d’une machine.</p></div></section>
+	<section class="section"><div class="container"><div class="barometer-warning"><strong>À lire avant le classement</strong><p>Le périmètre dépend des références actuellement étudiées par CompatAir. Un petit échantillon peut déplacer fortement un score. L’absence d’une donnée signifie « non documentée dans notre corpus », pas nécessairement « jamais publiée par la marque ».</p></div>
+		<div class="barometer-ranking">{barometer.brands.map((row) => <article class="barometer-brand"><header><span class="barometer-rank">#{row.rank}</span><div><h2>{row.brand}</h2><p>{row.sampleSize} compresseur{row.sampleSize > 1 ? 's' : ''} étudié{row.sampleSize > 1 ? 's' : ''}</p></div><strong>{row.score}<small>/100</small></strong></header><div class="score-track" aria-label={`Score ${row.score} sur 100`}><span style={`width:${row.score}%`}></span></div><dl>{barometer.criteria.map((criterion) => <div><dt>{criterion.label}</dt><dd>{row.criteria[criterion.id]} %</dd></div>)}</dl></article>)}</div>
+	</div></section>
+	<section class="section barometer-method"><div class="container"><p class="eyebrow">Méthode ouverte</p><h2>Six critères, pondérés à parts égales</h2><div class="criteria-grid">{barometer.criteria.map((criterion, index) => <article><span>0{index + 1}</span><h3>{criterion.label}</h3><p>{criterion.description}</p></article>)}</div><p>Les pourcentages sont calculés référence par référence, puis leur moyenne forme le score sur 100. Édition arrêtée au {formatDate(barometer.publishedAt)}. La source machine est disponible dans le <a href="/data/transparency-barometer.json">JSON du baromètre</a> et les preuves correspondantes dans l’<a href="/preuves/">historique public</a>.</p></div></section>
+</BaseLayout>

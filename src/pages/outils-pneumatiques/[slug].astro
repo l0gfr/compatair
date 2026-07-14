@@ -60,6 +60,6 @@ const productJsonLd = {
 
 		<section class="related-reading"><h2>Guides liés à cet outil</h2><div class="link-cards"><a href={relatedGuide}><strong>Dimensionnement pratique</strong><span>Lire le dossier correspondant au besoin de cet outil.</span></a><a href="/guides/diametre-longueur-flexible-air-comprime/"><strong>Flexible et raccords</strong><span>Comprendre pourquoi le réseau peut réduire la pression disponible.</span></a><a href="/guides/debit-restitue-fad-vs-debit-aspire/"><strong>Débit restitué ou aspiré</strong><span>Comparer le bon chiffre à la consommation publiée.</span></a></div></section>
 
-		<section class="sources-panel"><h2>Source et réserves</h2>{tool.evidence.map((evidence) => <p><a href={evidence.sourceUrl} rel="nofollow noopener" target="_blank">{evidence.sourceLabel}</a> · consultée le {evidence.retrievedAt.split('-').reverse().join('/')} · niveau {evidence.confidence}</p>)}{tool.notes.map((note) => <p>{note}</p>)}</section>
+		<section class="sources-panel"><h2>Source et réserves</h2>{tool.evidence.map((evidence) => <p><a href={evidence.sourceUrl} rel="nofollow noopener" target="_blank">{evidence.sourceLabel}</a> · consultée le {evidence.retrievedAt.split('-').reverse().join('/')} · niveau {evidence.confidence}</p>)}{tool.notes.map((note) => <p>{note}</p>)}<p><a href={`/preuves/#${tool.id}`}>Voir l’historique versionné de toutes les preuves de cette référence</a></p></section>
 	</article>
 </BaseLayout>

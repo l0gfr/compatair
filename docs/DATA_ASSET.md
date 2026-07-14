@@ -16,6 +16,12 @@ Le catalogue technique est physiquement découpé en un fichier par référence 
 
 Le validateur bloque les identifiants dupliqués, les références vers une preuve inconnue et les caractéristiques critiques sans provenance.
 
+## Historique des preuves
+
+`src/data/evidence-history.snapshot.json` constitue le registre public append-only. Sa baseline du 14 juillet 2026 archive les 67 preuves alors présentes, sans reconstruire artificiellement un passé antérieur. Toute modification d’une source doit ajouter un événement conservant l’ancien instantané ; le test d’intégrité bloque une preuve courante qui ne correspond pas à la dernière version archivée. Les contrats publics sont `/preuves/` et `/data/evidence-history.json`.
+
+Le baromètre annuel est calculé uniquement depuis les compresseurs et preuves du catalogue. Ses six critères, son périmètre, son échantillon et ses résultats sont exposés sur `/barometre-transparence/` et `/data/transparency-barometer.json`.
+
 ## Verdicts versionnés
 
 `/data/verdicts.json` contient toutes les paires entre un compresseur et un outil à débit fixe, y compris `insufficient_data`. Le snapshot lie :

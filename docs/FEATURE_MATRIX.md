@@ -5,6 +5,7 @@
 ## Livré dans le dépôt
 
 - site statique responsive, navigation, recherche, fil d’Ariane, pages 404 et 410, correction des données et partage des simulations ;
+- historique public append-only des preuves, empreintes de versions et baromètre annuel de transparence documentaire ;
 - catalogue de compresseurs filtrable et paginé, fiches sourcées, courbes FAD, limites, confiance et alternatives comparables ;
 - catalogue d’outils et taxonomie extensible, fiches sourcées et exigences non documentées signalées ;
 - calculateur multi-outils avec simultanéité, fréquence, durée, flexible, modèle existant et saisie personnalisée ;

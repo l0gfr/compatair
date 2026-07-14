@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { compressors, tools } from '../../data/catalog';
+import { evidenceHistory } from '../../data/evidence-history';
+import { historyForProduct } from '../../domain/evidence-history';
+
+const products = [
+	...compressors.map((product) => ({ product, type: 'compressor' as const, href: `/compresseurs/${product.slug}/` })),
+	...tools.map((product) => ({ product, type: 'tool' as const, href: `/outils-pneumatiques/${product.slug}/` })),
+];
+const formatDate = (date: string) => new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
+---
+<BaseLayout title="Historique des preuves | CompatAir" description="Historique public et versionné des sources techniques utilisées par CompatAir, avec instantanés, dates et empreintes." breadcrumbs={[{ name: 'Historique des preuves', path: '/preuves/' }]}>
+	<section class="page-hero compact"><div class="container"><p class="eyebrow">AirGraph · traçabilité</p><h1>Historique complet des preuves</h1><p class="lead">{evidenceHistory.events.length} preuves sont archivées pour {products.length} produits. Chaque événement conserve la source, sa date de consultation, son niveau de confiance et une empreinte vérifiable.</p></div></section>
+	<section class="section"><div class="container history-intro">
+		<div class="callout"><h2>Une baseline, pas un passé reconstruit</h2><p>L’historique public commence le {formatDate(evidenceHistory.startedAt)}. Les sources présentes ce jour-là sont marquées « baseline ». CompatAir ne fabrique pas rétroactivement des modifications antérieures ; toute évolution suivante doit ajouter un événement sans effacer les précédents.</p></div>
+		<p><a class="button secondary" href="/data/evidence-history.json">Télécharger l’historique JSON</a></p>
+	</div></section>
+	<section class="section history-section"><div class="container"><div class="split-head"><div><p class="eyebrow">Registre append-only</p><h2>Toutes les preuves par produit</h2></div><p>Version <code>{evidenceHistory.historyVersion.slice(0, 12)}</code>. L’empreinte complète figure dans le JSON.</p></div>
+		<div class="history-list">{products.map(({ product, type, href }) => {
+			const events = historyForProduct(evidenceHistory, product.id);
+			return <article id={product.id} class="history-product"><header><div><p class="guide-meta">{type === 'compressor' ? 'Compresseur' : 'Outil'} · {product.brand}</p><h3><a href={href}>{product.model}</a></h3></div><strong>{events.length} preuve{events.length > 1 ? 's' : ''}</strong></header><ol>{events.map((event) => <li><div><span class="history-kind">{event.kind === 'baseline' ? 'Baseline' : event.kind}</span><time datetime={event.occurredAt}>{formatDate(event.occurredAt)}</time></div><h4>{event.snapshot.sourceLabel}</h4><p>{event.summary}</p><p class="history-meta">Consultée le {formatDate(event.snapshot.retrievedAt)} · confiance {event.snapshot.confidence} · empreinte <code>{event.fingerprint.slice(0, 12)}</code></p><a href={event.snapshot.sourceUrl} rel="nofollow noopener" target="_blank">Consulter la source</a></li>)}</ol></article>;
+		})}</div>
+	</div></section>
+</BaseLayout>

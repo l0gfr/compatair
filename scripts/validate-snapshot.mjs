@@ -4,7 +4,7 @@ const [file = 'dist/data/catalog.json'] = process.argv.slice(2);
 const snapshot = JSON.parse(await readFile(file, 'utf8'));
 const errors = [];
 if (!/^\d+\.\d+\.\d+$/.test(snapshot.schemaVersion ?? '')) errors.push('schemaVersion invalide');
-if (!/^[a-f0-9]{64}$/.test(snapshot.catalogVersion ?? snapshot.snapshotVersion ?? '')) errors.push('version de snapshot absente');
+if (!/^[a-f0-9]{64}$/.test(snapshot.catalogVersion ?? snapshot.snapshotVersion ?? snapshot.historyVersion ?? snapshot.barometerVersion ?? '')) errors.push('version de snapshot absente');
 if (snapshot.compressors) {
 	const ids = new Set();
 	for (const item of snapshot.compressors) {
@@ -38,6 +38,20 @@ if (snapshot.pairs) {
 		if (!pair.compressorId || !pair.toolId) errors.push(`couple incomplet : ${pair.id}`);
 	}
 	for (const [verdict, count] of Object.entries(summary)) if (snapshot.summary?.[verdict] !== count) errors.push(`résumé incohérent pour ${verdict}`);
+}
+if (snapshot.events) {
+	const ids = new Set();
+	for (const event of snapshot.events) {
+		if (ids.has(event.id)) errors.push(`événement historique dupliqué : ${event.id}`); ids.add(event.id);
+		if (!event.productId || !event.evidenceId || !/^[a-f0-9]{64}$/.test(event.fingerprint ?? '')) errors.push(`événement historique invalide : ${event.id}`);
+		if (event.snapshot?.id !== event.evidenceId) errors.push(`instantané de preuve incohérent : ${event.id}`);
+	}
+}
+if (snapshot.brands) {
+	for (const [index, brand] of snapshot.brands.entries()) {
+		if (brand.rank !== index + 1 || brand.sampleSize < 1 || brand.score < 0 || brand.score > 100) errors.push(`ligne de baromètre invalide : ${brand.brand}`);
+		if (Object.values(brand.criteria ?? {}).some((value) => value < 0 || value > 100)) errors.push(`critère de baromètre invalide : ${brand.brand}`);
+	}
 }
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 console.log(`Snapshot valide : ${file}`);

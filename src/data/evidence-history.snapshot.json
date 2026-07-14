@@ -1,0 +1,1237 @@
+{
+  "schemaVersion": "1.0.0",
+  "startedAt": "2026-07-14",
+  "events": [
+    {
+      "id": "baseline:einhell-tc-ac-240-50-10-of:einhell-4010393-official",
+      "evidenceId": "einhell-4010393-official",
+      "productId": "einhell-tc-ac-240-50-10-of",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "6f5c4027eacda41a5e86d6b279e6c9f383e1cd869dfecf78e2115416de598e6b",
+      "snapshot": {
+        "id": "einhell-4010393-official",
+        "sourceUrl": "https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-te-ac-430-90-10:einhell-4010800-official",
+      "evidenceId": "einhell-4010800-official",
+      "productId": "einhell-te-ac-430-90-10",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "1b9d430b28ef29772d9add71fe1d195b4e4bd8bb136dacd4b914bf486628ac5b",
+      "snapshot": {
+        "id": "einhell-4010800-official",
+        "sourceUrl": "https://www.einhell.fr/p/4010800-te-ac-430-90-10/",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-te-ac-270-50-silent-plus:einhell-2024-catalog-270",
+      "evidenceId": "einhell-2024-catalog-270",
+      "productId": "einhell-te-ac-270-50-silent-plus",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "371d7f404f08fe8d99267723a348db3baaf986c7f5d2077cb13af9d5b8e61bd3",
+      "snapshot": {
+        "id": "einhell-2024-catalog-270",
+        "sourceUrl": "https://www.einhell.fr/fileadmin/corporate-media/services/catalogues/pdf-en/einhell-services-catalogue-power-tools-2024-en.pdf",
+        "sourceLabel": "Catalogue officiel Einhell 2024",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "B"
+      }
+    },
+    {
+      "id": "baseline:einhell-te-ac-135-24-silent-plus:einhell-2024-catalog-135",
+      "evidenceId": "einhell-2024-catalog-135",
+      "productId": "einhell-te-ac-135-24-silent-plus",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "c745ae9b0a2abc500899cd505087929c74704a5fb8630729abb3c0147da4b8de",
+      "snapshot": {
+        "id": "einhell-2024-catalog-135",
+        "sourceUrl": "https://www.einhell.fr/fileadmin/corporate-media/services/catalogues/pdf-en/einhell-services-catalogue-power-tools-2024-en.pdf",
+        "sourceLabel": "Catalogue officiel Einhell 2024",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "B"
+      }
+    },
+    {
+      "id": "baseline:einhell-tc-ac-190-of-set:einhell-4020660-official",
+      "evidenceId": "einhell-4020660-official",
+      "productId": "einhell-tc-ac-190-of-set",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "55f98a7ec55f61b3d2a914b9c2db75de0816a2d4499e602125571242ce8a1ff5",
+      "snapshot": {
+        "id": "einhell-4020660-official",
+        "sourceUrl": "https://www.einhell.fr/p/4020660",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "B"
+      }
+    },
+    {
+      "id": "baseline:metabo-basic-220-24-of-silent:metabo-601593000-official",
+      "evidenceId": "metabo-601593000-official",
+      "productId": "metabo-basic-220-24-of-silent",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "34292e27e797aeaa73420523cdb6866558c955c884e5b0618c3a215b1ec0c739",
+      "snapshot": {
+        "id": "metabo-601593000-official",
+        "sourceUrl": "https://fr.metabo.com/fr/machines/air-comprime/compresseurs/compresseurs-d-atelier-mobiles/basic-220-24-of-silent-601593000-compresseur.html",
+        "sourceLabel": "Metabo France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A",
+        "notes": "Débit effectif annoncé à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "baseline:metabo-mega-350-100-w:metabo-601538000-official",
+      "evidenceId": "metabo-601538000-official",
+      "productId": "metabo-mega-350-100-w",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "ad8b30418187fdb12423cb0765985209d84f698b9af20ef7aab2f199201737a5",
+      "snapshot": {
+        "id": "metabo-601538000-official",
+        "sourceUrl": "https://fr.metabo.com/fr/machines/air-comprime/compresseurs/compresseurs-d-atelier-mobiles/mega-350-100-w-601538000-compresseur.html",
+        "sourceLabel": "Metabo France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A",
+        "notes": "Débit effectif annoncé à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "baseline:abac-atf-s-3-24:abac-4116000868-official",
+      "evidenceId": "abac-4116000868-official",
+      "productId": "abac-atf-s-3-24",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "644a7e4d260d8d67c65e3dae388846fd26c6068d2a8ac5c376a8e9cda9be8ba0",
+      "snapshot": {
+        "id": "abac-4116000868-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-US/products/4116000868/atf-s-3-24-10-230150-ce",
+        "sourceLabel": "ABAC, catalogue produit officiel",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A",
+        "notes": "FAD annoncé à la pression maximale pour la variante 24 L."
+      }
+    },
+    {
+      "id": "baseline:abac-atf-s-3-50:abac-4116000874-official",
+      "evidenceId": "abac-4116000874-official",
+      "productId": "abac-atf-s-3-50",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "7cd4a3b4f286763b93f21504ab2e27f3b42c0d8b6a4d6c70166559dbf2b41c93",
+      "snapshot": {
+        "id": "abac-4116000874-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/nl-NL/products/4116000874/atf-s-3-50-10-230150-ce-uk",
+        "sourceLabel": "ABAC, catalogue produit officiel",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A",
+        "notes": "FAD annoncé à la pression maximale."
+      }
+    },
+    {
+      "id": "baseline:abac-pole-position-os20p:abac-1129740297-official",
+      "evidenceId": "abac-1129740297-official",
+      "productId": "abac-pole-position-os20p",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "fb8ed70ad53bb8595c77bf5699745836e1c00e94dd75b9fc61aca020380c14e2",
+      "snapshot": {
+        "id": "abac-1129740297-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/fr-FR/products/1129740297/pole-position-os20p",
+        "sourceLabel": "ABAC France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "C",
+        "notes": "La fiche publie un volume engendré, pas un FAD à la pression de travail."
+      }
+    },
+    {
+      "id": "baseline:einhell-tc-ac-200-24-8-of:einhell-4020590-official",
+      "evidenceId": "einhell-4020590-official",
+      "productId": "einhell-tc-ac-200-24-8-of",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "71bbfe66dcd422629d99d79af9f3d598e41a36a64875224ee58943b84e38b373",
+      "snapshot": {
+        "id": "einhell-4020590-official",
+        "sourceUrl": "https://www.einhell.fr/p/4020590-tc-ac-200-24-8-of",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-tc-ac-190-24-8-i-of:einhell-4007375-official",
+      "evidenceId": "einhell-4007375-official",
+      "productId": "einhell-tc-ac-190-24-8-i-of",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "78b3a1bbf647b344b0e53be8fa5574fc999997f9cccd5b850e32d4f255d416bd",
+      "snapshot": {
+        "id": "einhell-4007375-official",
+        "sourceUrl": "https://www.einhell.fr/p/4007375-tc-ac-190-24-8-i-of/",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-te-ac-270-50-silent:einhell-4010451-official",
+      "evidenceId": "einhell-4010451-official",
+      "productId": "einhell-te-ac-270-50-silent",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "8029ee5d95b505976fba84140e53117c538f90c090fbfe89a86ae5efb2d2422a",
+      "snapshot": {
+        "id": "einhell-4010451-official",
+        "sourceUrl": "https://www.einhell.fr/p/4010451-te-ac-270-50-silent/",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-tc-ac-420-50-10-v:einhell-4010495-official",
+      "evidenceId": "einhell-4010495-official",
+      "productId": "einhell-tc-ac-420-50-10-v",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "9ef78fb12fad3342ce8e6e0a355780192a4977435a50a2ef8012800be33e14e7",
+      "snapshot": {
+        "id": "einhell-4010495-official",
+        "sourceUrl": "https://www.einhell.fr/p/4010495/",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-tc-ac-190-50-8:einhell-4007332-official",
+      "evidenceId": "einhell-4007332-official",
+      "productId": "einhell-tc-ac-190-50-8",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "c243f3d3cd52213d00affcb7727b4bf77e44e3b0ef2850f8bb04099056b2fbc2",
+      "snapshot": {
+        "id": "einhell-4007332-official",
+        "sourceUrl": "https://www.einhell.fr/p/4007332-tc-ac-190-50-8/",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-tc-ac-270-50-8:einhell-4007360-official",
+      "evidenceId": "einhell-4007360-official",
+      "productId": "einhell-tc-ac-270-50-8",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "2e6e401c694ed80ff9695be1ba40b64749f905efb94924558a2d8c38d9386d2a",
+      "snapshot": {
+        "id": "einhell-4007360-official",
+        "sourceUrl": "https://www.einhell.fr/p/4007360-tc-ac-270-50-8/",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-te-ac-400-50-10-v:einhell-4010472-official",
+      "evidenceId": "einhell-4010472-official",
+      "productId": "einhell-te-ac-400-50-10-v",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "577c561ccc6b255910532447efc7b8e4ce0f31768a282d346bcfb3d421d07ea9",
+      "snapshot": {
+        "id": "einhell-4010472-official",
+        "sourceUrl": "https://www.einhell.fr/p/4010472",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-te-ac-430-50-10:einhell-4010810-official",
+      "evidenceId": "einhell-4010810-official",
+      "productId": "einhell-te-ac-430-50-10",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "23aeee27b69c1a2fcf6a8238ab6adeb531f0fe42c90a94b300a622b2fcbdae82",
+      "snapshot": {
+        "id": "einhell-4010810-official",
+        "sourceUrl": "https://www.einhell.fr/p/4010810-te-ac-430-50-10/",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:metabo-basic-250-24-w:metabo-601533000-official",
+      "evidenceId": "metabo-601533000-official",
+      "productId": "metabo-basic-250-24-w",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "c0c0cf79d71b6c0fa3a9550ca5939587fd91187660d10cd84670ca5d24fabca9",
+      "snapshot": {
+        "id": "metabo-601533000-official",
+        "sourceUrl": "https://de.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/basic-250-24-w-601533000-kompressor.html",
+        "sourceLabel": "Metabo, fiche produit officielle Basic 250-24 W",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "baseline:metabo-basic-250-50-w:metabo-601534000-official",
+      "evidenceId": "metabo-601534000-official",
+      "productId": "metabo-basic-250-50-w",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "d439adaead42c5cf783ad8adef5a26cb67e1622b34ccf91b011784a99d361b1b",
+      "snapshot": {
+        "id": "metabo-601534000-official",
+        "sourceUrl": "https://at.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/basic-250-50-w-601534000-kompressor.html",
+        "sourceLabel": "Metabo, fiche produit officielle Basic 250-50 W",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "baseline:metabo-basic-160-6-w-of:metabo-601501000-official",
+      "evidenceId": "metabo-601501000-official",
+      "productId": "metabo-basic-160-6-w-of",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "8bf747e3c96774fa7c290833d1f153585a73e8fdf5cb05f4752848123e202df8",
+      "snapshot": {
+        "id": "metabo-601501000-official",
+        "sourceUrl": "https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/basic-160-6-w-of-601501000-kompressor.html",
+        "sourceLabel": "Metabo, fiche produit officielle Basic 160-6 W OF",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "baseline:metabo-power-180-5-w-of:metabo-601531000-official",
+      "evidenceId": "metabo-601531000-official",
+      "productId": "metabo-power-180-5-w-of",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "3a723c09febf35dbb0678fa8c9d7e4febe784ef7c83d4b022ddf6f2754dbad18",
+      "snapshot": {
+        "id": "metabo-601531000-official",
+        "sourceUrl": "https://de.metabo.com/de/maschinen/druckluft/kompressoren/baustellen-kompressoren/power-180-5-w-of-601531000-kompressor.html",
+        "sourceLabel": "Metabo, fiche produit officielle Power 180-5 W OF",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "baseline:metabo-mega-400-50-w:metabo-601536000-official",
+      "evidenceId": "metabo-601536000-official",
+      "productId": "metabo-mega-400-50-w",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "4770ec1b23027e5573a4a3609a368d17ab102a48f9460150ceda7178dae4ea61",
+      "snapshot": {
+        "id": "metabo-601536000-official",
+        "sourceUrl": "https://at.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/mega-400-50-w-601536000-kompressor.html",
+        "sourceLabel": "Metabo, fiche produit officielle Mega 400-50 W",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "baseline:metabo-mega-580-200-d:metabo-601588000-official",
+      "evidenceId": "metabo-601588000-official",
+      "productId": "metabo-mega-580-200-d",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "341a594f6b0bbd9b902ad744b0373f70f3c1bbd813869b2040bfc0759d327251",
+      "snapshot": {
+        "id": "metabo-601588000-official",
+        "sourceUrl": "https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html",
+        "sourceLabel": "Metabo, fiche produit officielle Mega 580-200 D",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "baseline:abac-atf-s-4-100:abac-4116000871-official",
+      "evidenceId": "abac-4116000871-official",
+      "productId": "abac-atf-s-4-100",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "0f291a50bf3e1dd8fb6be97daf67074a890bf93b4a56eef34c9b633388348370",
+      "snapshot": {
+        "id": "abac-4116000871-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-US/products/4116000871/atf-s-4-100-10-400350-ce",
+        "sourceLabel": "ABAC, fiche produit officielle ATF-S 4 100",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "FAD publié à 10 bar. La table technique indique 90 L tandis que le résumé de page indique 100 L."
+      }
+    },
+    {
+      "id": "baseline:abac-atl-5-5-270:abac-4116001436-official",
+      "evidenceId": "abac-4116001436-official",
+      "productId": "abac-atl-5-5-270",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "998f01e5db00f663dfd420d3fcb54225d451ccc6babeebccf71ebcfaefdc9b16",
+      "snapshot": {
+        "id": "abac-4116001436-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-GB/products/4116001436/atl-55-270-10-400350-ce",
+        "sourceLabel": "ABAC, fiche produit officielle ATL 5.5 270",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:abac-atl-5-5-270:schneider-industrial-tech-2023",
+      "evidenceId": "schneider-industrial-tech-2023",
+      "productId": "abac-atl-5-5-270",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "8644f1cd39b0f592205998166d07e701a35d42752478f98348afbe47f0806b2b",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique ATL",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "La table ATL publie 504 L/min à 7 bar pour le groupe 4 kW."
+      }
+    },
+    {
+      "id": "baseline:abac-atf-5-5-270d:abac-4116001463-official",
+      "evidenceId": "abac-4116001463-official",
+      "productId": "abac-atf-5-5-270d",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "c14334629aca469650391b72e09bfa2d95fb75529900973d2caee60068bdf262",
+      "snapshot": {
+        "id": "abac-4116001463-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-FR/products/4116001463/atf-55-270d-10-400350yd-ce",
+        "sourceLabel": "ABAC, fiche produit officielle ATF 5.5 270D",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:abac-atf-5-5-270d:schneider-industrial-tech-2023",
+      "evidenceId": "schneider-industrial-tech-2023",
+      "productId": "abac-atf-5-5-270d",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "f5be28c0a7328698a4d3931b0c6117d22e70ec09e6b7f4733d186f14925bb3c1",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique ATF",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "La table ATF publie 492 L/min à 7 bar pour le groupe sans huile 4 kW."
+      }
+    },
+    {
+      "id": "baseline:einhell-te-ac-110-6-silent-plus:einhell-4020600-official",
+      "evidenceId": "einhell-4020600-official",
+      "productId": "einhell-te-ac-110-6-silent-plus",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "895924030f52b51f90508f652f5253ed29922f00851c277a29ba834e9d6e0970",
+      "snapshot": {
+        "id": "einhell-4020600-official",
+        "sourceUrl": "https://www.einhell.de/p/4020600-te-ac-110-6-silent-plus/",
+        "sourceLabel": "Einhell Allemagne, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-te-ac-18-75-li-of-solo:einhell-4020410-official",
+      "evidenceId": "einhell-4020410-official",
+      "productId": "einhell-te-ac-18-75-li-of-solo",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "e3924fa1b9eeab4b86b2ec632777341181199aaf976db78b6c312605a00dfd5f",
+      "snapshot": {
+        "id": "einhell-4020410-official",
+        "sourceUrl": "https://www.einhell.de/p/4020410-te-ac-18-75-li-of-solo/",
+        "sourceLabel": "Einhell Allemagne, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-silenzzo-18-160:einhell-4020385-official",
+      "evidenceId": "einhell-4020385-official",
+      "productId": "einhell-silenzzo-18-160",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "1e7c6339d93964890e62c3606ce04c983b706bdbd38d96278cb01b5f3e0e0e2e",
+      "snapshot": {
+        "id": "einhell-4020385-official",
+        "sourceUrl": "https://www.einhell.de/p/4020385-silenzzo-18-160/",
+        "sourceLabel": "Einhell Allemagne, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-te-ac-270-24-10:einhell-4010450-official",
+      "evidenceId": "einhell-4010450-official",
+      "productId": "einhell-te-ac-270-24-10",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "601ba62e4522d07e90a4b849c3fc5bbc6e9b7a2f9ceb18e47255b0cb1b4a37c0",
+      "snapshot": {
+        "id": "einhell-4010450-official",
+        "sourceUrl": "https://www.einhell.de/p/4010450-te-ac-270-24-10/",
+        "sourceLabel": "Einhell Allemagne, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-silenzzo-36-210:einhell-4020380-official",
+      "evidenceId": "einhell-4020380-official",
+      "productId": "einhell-silenzzo-36-210",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "5c938235197820622f45ece8fd77ab87391e949075cb99b58a5b650f4a2ada33",
+      "snapshot": {
+        "id": "einhell-4020380-official",
+        "sourceUrl": "https://www.einhell.de/p/4020380-silenzzo-36-210/",
+        "sourceLabel": "Einhell Allemagne, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-tc-ac-190-24-8:einhell-4007325-official",
+      "evidenceId": "einhell-4007325-official",
+      "productId": "einhell-tc-ac-190-24-8",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "0075bf6b3fac755c4287822a530cea67be57a51aae68ab15683082127d237af0",
+      "snapshot": {
+        "id": "einhell-4007325-official",
+        "sourceUrl": "https://www.einhell.fr/p/4007325-tc-ac-190-24-8/",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Puissance publiée en régime S2 de 15 minutes."
+      }
+    },
+    {
+      "id": "baseline:einhell-te-ac-36-150-li-of-solo:einhell-4020415-official",
+      "evidenceId": "einhell-4020415-official",
+      "productId": "einhell-te-ac-36-150-li-of-solo",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "6db4e2de72d27a7698ff1428368b8ad8e1f3d5db908bfaa46057624888d2734e",
+      "snapshot": {
+        "id": "einhell-4020415-official",
+        "sourceUrl": "https://www.einhell.de/p/4020415-te-ac-36-150-li-of-solo/",
+        "sourceLabel": "Einhell Allemagne, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-te-ac-36-8-li-of-set-solo:einhell-4020440-official",
+      "evidenceId": "einhell-4020440-official",
+      "productId": "einhell-te-ac-36-8-li-of-set-solo",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "df6166384304cc52bfb2b31472c1191719bf5ef1aed66c3d89e65d426148342f",
+      "snapshot": {
+        "id": "einhell-4020440-official",
+        "sourceUrl": "https://www.einhell.de/p/4020440-te-ac-36-8-li-of-set-solo/",
+        "sourceLabel": "Einhell Allemagne, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-tc-ac-270-50-10:einhell-4007361-official",
+      "evidenceId": "einhell-4007361-official",
+      "productId": "einhell-tc-ac-270-50-10",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "ae843d1ad20d16641aa1cfd32c14b0b159ffe6232f78b6604413ac4dbf76a00e",
+      "snapshot": {
+        "id": "einhell-4007361-official",
+        "sourceUrl": "https://www.einhell.de/p/4007361-tc-ac-270-50-10/",
+        "sourceLabel": "Einhell Allemagne, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:atlas-copco-ab25e100:atlas-ab-series-official",
+      "evidenceId": "atlas-ab-series-official",
+      "productId": "atlas-copco-ab25e100",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "e9f31ea5ebf53143856a435b1217d2ca941ada9decae7d84eba4851530faa302",
+      "snapshot": {
+        "id": "atlas-ab-series-official",
+        "sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/australia/documents/AB-series-brochure.pdf",
+        "sourceLabel": "Atlas Copco, brochure officielle AB25E100 et AB30E100",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "MPN, cuve et FAD de 172 L/min explicitement publiés à 7 bar."
+      }
+    },
+    {
+      "id": "baseline:atlas-copco-ab30e100:atlas-ab-series-official",
+      "evidenceId": "atlas-ab-series-official",
+      "productId": "atlas-copco-ab30e100",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "ff1eaadabcc87c3418ded7ccca37bd74395e082e8667757644f158c38f2d2f5b",
+      "snapshot": {
+        "id": "atlas-ab-series-official",
+        "sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/australia/documents/AB-series-brochure.pdf",
+        "sourceLabel": "Atlas Copco, brochure officielle AB25E100 et AB30E100",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "MPN, cuve et FAD de 305 L/min explicitement publiés à 7 bar."
+      }
+    },
+    {
+      "id": "baseline:atlas-copco-ab40e100t:atlas-automan-2024",
+      "evidenceId": "atlas-automan-2024",
+      "productId": "atlas-copco-ab40e100t",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "77f0f478efb808529a59db2bf5c8322943e2a6e73a054cc1cf016d25ec0c3c6b",
+      "snapshot": {
+        "id": "atlas-automan-2024",
+        "sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/australia/documents/compressor-technique/ct-brochures/Automan-Compressor-and-Dryer-Packs-2024.pdf",
+        "sourceLabel": "Atlas Copco, brochure officielle Automan 2024",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "FAD constructeur conservateur de 340 L/min pour AB40E100T."
+      }
+    },
+    {
+      "id": "baseline:atlas-copco-ab40e100t:atlas-ab40e100t-mpn",
+      "evidenceId": "atlas-ab40e100t-mpn",
+      "productId": "atlas-copco-ab40e100t",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "24ec1e0c5d0581d6961d44dadf5cfc5ae0abcc35bf7cf7eec19321c955459d74",
+      "snapshot": {
+        "id": "atlas-ab40e100t-mpn",
+        "sourceUrl": "https://www.gasweld.com.au/atlas-copco-ab40e100t-4116026427-air-compressor-100l-4hp-professional-series-belt-drive",
+        "sourceLabel": "Gasweld, fiche AB40E100T",
+        "sourceType": "merchant",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "MPN 4116026427 et caractéristiques d’alimentation."
+      }
+    },
+    {
+      "id": "baseline:abac-atl-7-5-270:abac-catalog-2024-atl",
+      "evidenceId": "abac-catalog-2024-atl",
+      "productId": "abac-atl-7-5-270",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "7a0fc48d0b912bb28c0ae73daf205aaeca9e295523e3d5421eda7cc5c4b934f4",
+      "snapshot": {
+        "id": "abac-catalog-2024-atl",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/france/doc/catalogue_2024_abac_web%201.pdf",
+        "sourceLabel": "ABAC France, catalogue officiel 2024",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:abac-atl-7-5-270:schneider-industrial-tech-2023",
+      "evidenceId": "schneider-industrial-tech-2023",
+      "productId": "abac-atl-7-5-270",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "91d588957177408f879140f40d0accf3fbd356e490232550ea97f4b32ba872a6",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique ATL",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "La table ATL publie 702 L/min à 7 bar pour le groupe 5,5 kW."
+      }
+    },
+    {
+      "id": "baseline:einhell-tc-pe-150:einhell-4133330-official",
+      "evidenceId": "einhell-4133330-official",
+      "productId": "einhell-tc-pe-150",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "9f7ce169f148c02bfb5c396dd817607bf181bd04fd63865e528042d8bda564cd",
+      "snapshot": {
+        "id": "einhell-4133330-official",
+        "sourceUrl": "https://www.einhell.fr/p/4133330-tc-pe-150/",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-tc-pp-220:einhell-4138540-official",
+      "evidenceId": "einhell-4138540-official",
+      "productId": "einhell-tc-pp-220",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "9f14baee505cf60e7636762c3be099ef6772897ea7ef791023ec8ff8698dea11",
+      "snapshot": {
+        "id": "einhell-4138540-official",
+        "sourceUrl": "https://www.einhell.fr/p/4138540-tc-pp-220/",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-tc-pa-50:einhell-4138550-official",
+      "evidenceId": "einhell-4138550-official",
+      "productId": "einhell-tc-pa-50",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "a75937bbb4e28b431d0d16956a536b932a3a02f80644fefb079d97c8683f9789",
+      "snapshot": {
+        "id": "einhell-4138550-official",
+        "sourceUrl": "https://www.einhell.fr/p/4138550-tc-pa-50/",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:metabo-ssp-1000:metabo-601569000-official",
+      "evidenceId": "metabo-601569000-official",
+      "productId": "metabo-ssp-1000",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "7ba9435604d591c030f40a22ede1b4c123858f2329a6d5a38f10a8153ca8ede6",
+      "snapshot": {
+        "id": "metabo-601569000-official",
+        "sourceUrl": "https://fr.metabo.com/fr/machines/air-comprime/outils-a-air-comprime/pistolets-de-sablage-a-air-comprime/ssp-1000-601569000-pistolet-de-sablage-a-air-comprime.html",
+        "sourceLabel": "Metabo France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:metabo-bp-200:metabo-601581180-official",
+      "evidenceId": "metabo-601581180-official",
+      "productId": "metabo-bp-200",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "2860befc70c94e223bfbad28c7657d95bb5be3ce65c54b669885ec74089d0b28",
+      "snapshot": {
+        "id": "metabo-601581180-official",
+        "sourceUrl": "https://www.metabo.com/ch/fr/machines/air-comprime/outils-a-air-comprime/soufflettes-a-air-comprime/bp-200-soufflette-a-air-comprime/601581180",
+        "sourceLabel": "Metabo, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-tc-pw-340:einhell-4138950-official",
+      "evidenceId": "einhell-4138950-official",
+      "productId": "einhell-tc-pw-340",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "a36378e64a4f9e37c37450c8c9c7bb3f14b7270291d1385d5c5d74f49daeb6ea",
+      "snapshot": {
+        "id": "einhell-4138950-official",
+        "sourceUrl": "https://www.einhell.fr/p/4138950-tc-pw-340/",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-tc-pw-340:einhell-4138950-manual",
+      "evidenceId": "einhell-4138950-manual",
+      "productId": "einhell-tc-pw-340",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "222c1cd283913cdffd8b82d1534c3d7506c018c02cba7cbd95d1e62af8a5041b",
+      "snapshot": {
+        "id": "einhell-4138950-manual",
+        "sourceUrl": "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_c7bjdn248d2dret4jdk27m9377/4138950_21022_002_SPK2.pdf",
+        "sourceLabel": "Einhell, notice TC-PW 340",
+        "sourceType": "manual",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A",
+        "notes": "Consommation, flexible, pression et recommandation de cuve."
+      }
+    },
+    {
+      "id": "baseline:einhell-tc-pc-45:einhell-4139040-official",
+      "evidenceId": "einhell-4139040-official",
+      "productId": "einhell-tc-pc-45",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "d2be9352860dc33c704b19b7250713517ffc4f98fa9938e41c90568301b55078",
+      "snapshot": {
+        "id": "einhell-4139040-official",
+        "sourceUrl": "https://www.einhell.fr/p/4139040-tc-pc-45",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-tc-pn-50:einhell-4137790-official",
+      "evidenceId": "einhell-4137790-official",
+      "productId": "einhell-tc-pn-50",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "dcec2cecfa050bb916b5c51411020f470e657ccb2da4f673c07455a62878d861",
+      "snapshot": {
+        "id": "einhell-4137790-official",
+        "sourceUrl": "https://www.einhell.fr/p/4137790-tc-pn-50/",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:einhell-tc-pn-50:einhell-4137790-manual",
+      "evidenceId": "einhell-4137790-manual",
+      "productId": "einhell-tc-pn-50",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "1b6c9654b60577ec82bb5ce0da3e71b1f08c1baaea731dd417543db2232237dd",
+      "snapshot": {
+        "id": "einhell-4137790-manual",
+        "sourceUrl": "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_698oi8nul919b1objb9nq34k5m/4137790_11018_001_SPK9.pdf",
+        "sourceLabel": "Einhell, notice TC-PN 50",
+        "sourceType": "manual",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A",
+        "notes": "Volume par tir, pression et flexible."
+      }
+    },
+    {
+      "id": "baseline:einhell-4137000-manometre:einhell-4137000-official",
+      "evidenceId": "einhell-4137000-official",
+      "productId": "einhell-4137000-manometre",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "f79fc048cdaadfdaaad8f8b6f526caaf7363341eac64cdda0d51cc24b90f1875",
+      "snapshot": {
+        "id": "einhell-4137000-official",
+        "sourceUrl": "https://www.einhell.fr/p/4137000-manometre/",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:abac-g-550f:abac-2809913544-product",
+      "evidenceId": "abac-2809913544-product",
+      "productId": "abac-g-550f",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "dacd42b479e7e9f7504ed3f64087cd4fbefad0f17aed1e992ce56552bb8a61c7",
+      "snapshot": {
+        "id": "abac-2809913544-product",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-GB/products/2809913544/paint-spray-gun-g-550f",
+        "sourceLabel": "ABAC, fiche produit G-550F",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:abac-g-550f:abac-2025-catalog-g550f",
+      "evidenceId": "abac-2025-catalog-g550f",
+      "productId": "abac-g-550f",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "2d1d832b72c392d7467348ed5812fecbfeb3221cdc874c9da7ff94c34973dcca",
+      "snapshot": {
+        "id": "abac-2025-catalog-g550f",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, catalogue général 2025 France",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-13",
+        "confidence": "A",
+        "notes": "Débit, pression, raccord, buse et godet."
+      }
+    },
+    {
+      "id": "baseline:metabo-drs-68-set:metabo-604119500-official",
+      "evidenceId": "metabo-604119500-official",
+      "productId": "metabo-drs-68-set",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "4d6ad01d1682c892593944da70bf84ec21a6390522c2d6e369ed1ec455b48c06",
+      "snapshot": {
+        "id": "metabo-604119500-official",
+        "sourceUrl": "https://www.metabo.com/no/no/maskiner/trykkluft/trykkluft-verktoy/trykkluft-skralletrekker/drs-68-set-1-2-trykkluft-skralletrekker/604119500",
+        "sourceLabel": "Metabo, fiche produit officielle DRS 68 Set",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:metabo-ds-14:metabo-604117000-official",
+      "evidenceId": "metabo-604117000-official",
+      "productId": "metabo-ds-14",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "ec1c4e47c3a6282b1ef2c94060f050b9eaf3c469b077db7a1cb387a651a1d29f",
+      "snapshot": {
+        "id": "metabo-604117000-official",
+        "sourceUrl": "https://www.metabo.com/za/en/tools/compressed-air/compressed-air-tools/air-screwdriver/ds-14-604117000-air-screwdriver.html",
+        "sourceLabel": "Metabo, fiche produit officielle DS 14",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:metabo-db-10:metabo-604120000-official",
+      "evidenceId": "metabo-604120000-official",
+      "productId": "metabo-db-10",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "7a7d40b77f4d9786d83d96edc3a658feae957d75cca257161d376c0be3ad6257",
+      "snapshot": {
+        "id": "metabo-604120000-official",
+        "sourceUrl": "https://ch.metabo.com/de/maschinen/bohren-schrauben-meisseln-ruehren/bohrmaschinen/db-10-604120000-druckluft-bohrmaschine.html",
+        "sourceLabel": "Metabo, fiche officielle DB 10",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:metabo-dg-25-set:metabo-604116500-official",
+      "evidenceId": "metabo-604116500-official",
+      "productId": "metabo-dg-25-set",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "99a9b5e2ba1482e8c19965fea5580f1a7a93a2fb8db56e3f0757aa78db4606fb",
+      "snapshot": {
+        "id": "metabo-604116500-official",
+        "sourceUrl": "https://ch.metabo.com/de/maschinen/trennen-schleifen-fraesen/metallbearbeitung/geradschleifer/dg-25-set-604116500-druckluft-geradschleifer.html",
+        "sourceLabel": "Metabo, fiche officielle DG 25 Set",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:metabo-dmh-30-set:metabo-604115500-official",
+      "evidenceId": "metabo-604115500-official",
+      "productId": "metabo-dmh-30-set",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "246bb36237f3601e4be292139e7f551b4428c06a6086b09c4362fc5d1d4b6cdd",
+      "snapshot": {
+        "id": "metabo-604115500-official",
+        "sourceUrl": "https://www.metabo.com/ua/uk/instrumenty/pnevmatyka/pnevmatychni-instrumenty/pnevmatychni-vidbiini-molotky/dmh-30-set-604115500-pnevmatychnyi-vidbiinyi-molotok.html",
+        "sourceLabel": "Metabo, fiche officielle DMH 30 Set",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:metabo-dssw-500:metabo-601590000-official",
+      "evidenceId": "metabo-601590000-official",
+      "productId": "metabo-dssw-500",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "20d301cd827b2db4a84282f0f2e611de508a47a3148fbffe213d61426ca8aa3f",
+      "snapshot": {
+        "id": "metabo-601590000-official",
+        "sourceUrl": "https://www.metabo.com/at/de/maschinen/bohren-schrauben-meisseln-ruehren/schlagschrauber/dssw-500-1-2-c-druckluft-schlagschrauber/601590000",
+        "sourceLabel": "Metabo, fiche officielle DSSW 500-1/2 C",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "7 L/s convertis exactement en 420 L/min."
+      }
+    },
+    {
+      "id": "baseline:metabo-dsx-150:metabo-601558000-official",
+      "evidenceId": "metabo-601558000-official",
+      "productId": "metabo-dsx-150",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "0609fdc3d8ea2a93f2788b1af9198957dc321626a3b3f8964e60702fbceb53da",
+      "snapshot": {
+        "id": "metabo-601558000-official",
+        "sourceUrl": "https://de.metabo.com/de/maschinen/trennen-schleifen-fraesen/holzbearbeitung/exzenterschleifer/dsx-150-601558000-druckluft-exzenterschleifer.html",
+        "sourceLabel": "Metabo, fiche officielle DSX 150",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:metabo-dw-125:metabo-601556000-official",
+      "evidenceId": "metabo-601556000-official",
+      "productId": "metabo-dw-125",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "b869aded52f61c2a0231aea42d16652b9995df9d8eb795393e15ae8d54cc00b1",
+      "snapshot": {
+        "id": "metabo-601556000-official",
+        "sourceUrl": "https://www.metabo.com/com/es/maquinas/cortar-rectificar-fresar/amoladoras-angulares/amoladoras-angulares-de-o100-150-mm/dw-125-amoladora-angular-neumatica/601556000",
+        "sourceLabel": "Metabo, fiche officielle DW 125",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:metabo-dbf-457:metabo-601559000-official",
+      "evidenceId": "metabo-601559000-official",
+      "productId": "metabo-dbf-457",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "1004845a58de775b324304020583db0bf97ecb50e44b6f8eec430df3c96113c6",
+      "snapshot": {
+        "id": "metabo-601559000-official",
+        "sourceUrl": "https://ch.metabo.com/de/maschinen/trennen-schleifen-fraesen/metallbearbeitung/bandfeilen/dbf-457-601559000-druckluft-bandfeile.html",
+        "sourceLabel": "Metabo, fiche officielle DBF 457",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "baseline:metabo-fsp-600-lvlp:metabo-601578000-official",
+      "evidenceId": "metabo-601578000-official",
+      "productId": "metabo-fsp-600-lvlp",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "baseline",
+      "summary": "Première version archivée lors de l’ouverture de l’historique public CompatAir.",
+      "fingerprint": "34e406dfcc201343b97df9bd7ea9297f5283c006d68606dd9c3689db4437d524",
+      "snapshot": {
+        "id": "metabo-601578000-official",
+        "sourceUrl": "https://de.metabo.com/de/maschinen/druckluft/druckluft-werkzeuge/druckluft-farbspritzpistolen/fsp-600-lvlp-601578000-druckluft-farbspritzpistole.html",
+        "sourceLabel": "Metabo, fiche officielle FSP 600 LVLP",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A"
+      }
+    }
+  ],
+  "historyVersion": "48db53c293008d47cd4e88a4fe090ed1ef8957c4916232d351d73b7717d6647c"
+}
