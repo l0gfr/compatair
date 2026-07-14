@@ -1,11 +1,15 @@
 import { lstat, readdir, readFile } from 'node:fs/promises';
 import { basename, join, relative, resolve } from 'node:path';
+import { gzipSync } from 'node:zlib';
 
 const root = resolve('dist');
 const siteOrigin = 'https://compatair.fr';
 const errors = [];
 const htmlFiles = [];
 const artifactPaths = new Set();
+const maximumDocumentTitleLength = 60;
+const maximumPageScriptBytesGzip = 50 * 1024;
+let largestPageScriptBudget = { bytes: 0, label: '' };
 
 async function walk(directory) {
 	for (const name of await readdir(directory)) {
@@ -88,8 +92,11 @@ for (const file of htmlFiles) {
 	if (isCompatibilityDetail && !noindex) errors.push(`${label}: un couple produit-outil doit rester noindex`);
 
 	if (!title) errors.push(`${label}: title absent`);
-	else if (titles.has(title)) errors.push(`${label}: title dupliqué avec ${titles.get(title)}`);
-	else titles.set(title, label);
+	else {
+		if (decodeXml(title).length > maximumDocumentTitleLength) errors.push(`${label}: title supérieur à ${maximumDocumentTitleLength} caractères`);
+		if (titles.has(title)) errors.push(`${label}: title dupliqué avec ${titles.get(title)}`);
+		else titles.set(title, label);
+	}
 	if (!description) errors.push(`${label}: description absente`);
 	else if (descriptions.has(description)) errors.push(`${label}: description dupliquée avec ${descriptions.get(description)}`);
 	else descriptions.set(description, label);
@@ -133,6 +140,14 @@ for (const file of htmlFiles) {
 		if (!/\salt="[^"]*"/.test(` ${match[1]}`)) errors.push(`${label}: image sans alt`);
 		if (!/\swidth="\d+"/.test(` ${match[1]}`) || !/\sheight="\d+"/.test(` ${match[1]}`)) errors.push(`${label}: dimensions image absentes`);
 	}
+	const pageScripts = new Set([...html.matchAll(/<script[^>]+src="(\/[^"]+\.js)"/g)].map((match) => match[1]));
+	let scriptBytesGzip = 0;
+	for (const scriptPath of pageScripts) {
+		if (!artifactPaths.has(scriptPath)) { errors.push(`${label}: script introuvable ${scriptPath}`); continue; }
+		scriptBytesGzip += gzipSync(await readFile(join(root, scriptPath))).byteLength;
+	}
+	if (scriptBytesGzip > largestPageScriptBudget.bytes) largestPageScriptBudget = { bytes: scriptBytesGzip, label };
+	if (scriptBytesGzip > maximumPageScriptBytesGzip) errors.push(`${label}: scripts client ${Math.ceil(scriptBytesGzip / 1024)} Ko gzip, budget ${maximumPageScriptBytesGzip / 1024} Ko dépassé`);
 }
 
 for (const sitemapUrl of sitemapUrls) {
@@ -145,4 +160,4 @@ if (errors.length) {
 	console.error(errors.join('\n'));
 	process.exit(1);
 }
-console.log(`Audit SEO réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, indexabilité, JSON-LD, liens et images cohérents.`);
+console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, titres ≤ ${maximumDocumentTitleLength} caractères et JavaScript client ≤ ${maximumPageScriptBytesGzip / 1024} Ko gzip (maximum ${Math.ceil(largestPageScriptBudget.bytes / 1024)} Ko sur ${largestPageScriptBudget.label}).`);

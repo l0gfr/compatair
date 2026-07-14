@@ -6,6 +6,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		<p class="eyebrow">Transparence technique</p>
 		<h1>Notre méthodologie</h1>
 		<p>CompatAir compare le débit d’air restitué documenté du compresseur à la consommation nominale publiée de l’outil, à la même pression de travail. Le débit aspiré n’est jamais utilisé comme substitut.</p>
+		<h2>Qui produit et relit l’information</h2>
+		<p>Le moteur est un programme déterministe maintenu par l’éditeur identifié dans les <a href="/mentions-legales/">mentions légales</a>. Il n’utilise pas de modèle génératif pour produire un verdict. Les guides affichent leur auteur, leur relecteur, leurs sources et leurs dates de publication ou de mise à jour.</p>
+		<h2>Méthode éditoriale</h2>
+		<ul><li>identifier la référence exacte par marque, modèle et, lorsqu’ils sont publiés, MPN, EAN ou GTIN&nbsp;;</li><li>préférer la notice ou la fiche constructeur et conserver son URL ainsi que la date de consultation&nbsp;;</li><li>relier chaque champ critique à la preuve qui le documente&nbsp;;</li><li>séparer la valeur constructeur, la conversion exacte et l’hypothèse choisie par l’utilisateur&nbsp;;</li><li>signaler les contradictions, les absences et les limites sans compléter silencieusement la donnée&nbsp;;</li><li>faire passer toute modification d’un verdict par les tests du moteur et la validation du catalogue.</li></ul>
 		<h2>Ce que nous calculons</h2>
 		<ul>
 			<li>l’interpolation linéaire entre deux débits restitués publiés lorsque la pression de travail se situe entre leurs points de mesure&nbsp;;</li>
@@ -29,6 +33,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		<p>A correspond à une documentation constructeur exploitable. B indique une documentation officielle incomplète ou des points de mesure qui nécessitent une interpolation. Les niveaux C et D ne produisent pas seuls un verdict positif.</p>
 		<h2>Limites</h2>
 		<p>Les résultats sont des aides au dimensionnement, pas des mesures sur installation. Une donnée déterminante absente conduit à «&nbsp;données insuffisantes&nbsp;». La source de chaque fiche est affichée et doit être consultée avant un achat.</p>
+		<p>Les corrections qui affectent une valeur, un verdict ou une promesse mesurable sont consignées dans le <a href="/corrections/">journal public des corrections</a>.</p>
 		<h2>Références physiques</h2><ul><li><a href="https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors">NIST, définition de l’atmosphère standard</a></li><li><a href="https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking/ideal_gases_under_constant.htm">NASA Glenn Research Center, équation d’état du gaz parfait</a></li></ul>
 		<h2>Historique des formules</h2><div class="curve-table"><div class="curve-row head"><span>Version</span><span>Évolution</span></div><div class="curve-row"><span>1.1.0 · 13/07/2026</span><span>Débit moyen calculé à partir d’un volume par action et d’une cadence, plus gonflage idéalisé à partir du volume, des pressions et du temps saisis.</span></div><div class="curve-row"><span>1.0.0 · 13/07/2026</span><span>Plusieurs outils, simultanéité, fréquence, réserve de cuve, temps de travail et récupération conditionnels.</span></div><div class="curve-row"><span>0.2.0 · 13/07/2026</span><span>Comparaison d’un outil unique au FAD documenté avec marge séparée.</span></div></div>
 	</article>

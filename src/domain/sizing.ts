@@ -181,7 +181,8 @@ export function sizeConfiguration(input: SizingInput): SizingResult {
 	if (compressor.maxPressureBar < requiredPressureBar) {
 		return {
 			verdict: 'incompatible', peakFlowLpm, averageFlowLpm, recommendedFadLpm, requiredPressureBar,
-			usefulPressureBar: compressor.maxPressureBar, limitingFactor: 'pressure', confidence: 'high', hypotheses, warnings,
+			usefulPressureBar: compressor.maxPressureBar, limitingFactor: 'pressure', confidence: 'high', hypotheses,
+			warnings: [...warnings, 'La pression maximale du compresseur est inférieure à la pression requise.'],
 			flowBasis, calculationVersion: CALCULATION_VERSION,
 		};
 	}
@@ -203,7 +204,7 @@ export function sizeConfiguration(input: SizingInput): SizingResult {
 	}
 
 	if (compressor.availableFadLpm >= peakFlowLpm && effectiveAverageCapacity >= averageFlowLpm) {
-		if (compressor.availableFadLpm < recommendedFadLpm) warnings.push('Le débit de pointe est couvert, mais pas la marge de dimensionnement CompatAir.');
+		if (compressor.availableFadLpm < recommendedFadLpm) warnings.push(`Le débit nominal est couvert, mais la marge recommandée de ${Math.round(value.safetyMargin * 100)} % n’est pas atteinte.`);
 		return {
 			verdict: 'continuous', peakFlowLpm, averageFlowLpm, recommendedFadLpm, requiredPressureBar,
 			usefulPressureBar: requiredPressureBar, usableTankAirLiters, confidence: 'high', hypotheses, warnings,

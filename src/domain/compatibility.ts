@@ -1,5 +1,5 @@
 import type { Compressor, ToolProfile } from './catalog';
-import { CALCULATION_VERSION } from './sizing';
+import { CALCULATION_VERSION, sizeConfiguration } from './sizing';
 
 export type CompatibilityVerdict = 'continuous' | 'intermittent' | 'incompatible' | 'insufficient_data';
 
@@ -37,33 +37,42 @@ export function evaluateCompatibility(
 	input: { safetyMargin?: number } = {},
 ): CompatibilityResult {
 	const safetyMargin = input.safetyMargin ?? .25;
-	const warnings: string[] = [];
 	if (tool.demandModel !== 'fixed-flow') {
 		const warning = tool.demandModel === 'per-action'
 			? `La source publie ${tool.airPerActionLiters} litre par ${tool.actionLabel}. Un rythme d’actions par minute est nécessaire pour calculer un débit.`
 			: tool.demandExplanation;
 		return { verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data', warnings: [warning], calculationVersion: CALCULATION_VERSION };
 	}
-	const peakDemand = tool.airflowLpm.typical;
-	const averageDemandLpm = peakDemand;
-	const requiredFadLpm = peakDemand * (1 + safetyMargin);
-
-	if (compressor.maxPressureBar < tool.workingPressureBar.typical) {
-		return { verdict: 'incompatible', confidence: 'high', limitingFactor: 'pressure', requiredFadLpm, averageDemandLpm, warnings: ['Pression maximale inférieure à la pression de travail de l’outil.'], calculationVersion: CALCULATION_VERSION };
-	}
-
 	const documentedFad = interpolateFad(compressor, tool.workingPressureBar.typical);
-	if (documentedFad === undefined || ['C', 'D'].includes(compressor.confidence)) {
-		return { verdict: 'insufficient_data', confidence: 'low', limitingFactor: 'data', requiredFadLpm, averageDemandLpm, warnings: ['Débit restitué non documenté à la pression de travail. Le débit aspiré n’est pas utilisé comme substitut.'], calculationVersion: CALCULATION_VERSION };
-	}
+	const usableFad = ['C', 'D'].includes(compressor.confidence) ? undefined : documentedFad;
+	const sizing = sizeConfiguration({
+		demands: [{
+			id: tool.id,
+			flowLpm: tool.airflowLpm.typical,
+			pressureBar: tool.workingPressureBar.typical,
+			dutyFactor: 1,
+		}],
+		safetyMargin,
+		compressor: {
+			maxPressureBar: compressor.maxPressureBar,
+			availableFadLpm: usableFad,
+			tankLiters: compressor.tankLiters,
+			dutyCycle: compressor.dutyCycle,
+		},
+	});
+	const documentaryConfidence = compressor.confidence === 'A' && tool.confidence === 'A'
+		? sizing.confidence
+		: sizing.confidence === 'high' ? 'medium' : sizing.confidence;
 
-	const availableFadLpm = documentedFad;
-	const marginPercent = ((availableFadLpm - peakDemand) / peakDemand) * 100;
-
-	if (availableFadLpm >= peakDemand) {
-		if (availableFadLpm < requiredFadLpm) warnings.push('Le débit nominal est couvert, mais la marge recommandée de 25 % n’est pas atteinte.');
-		return { verdict: 'continuous', confidence: compressor.confidence === 'A' && tool.confidence === 'A' ? 'high' : 'medium', requiredFadLpm, averageDemandLpm, availableFadLpm, marginPercent, warnings, calculationVersion: CALCULATION_VERSION };
-	}
-
-	return { verdict: 'incompatible', confidence: compressor.confidence === 'A' && tool.confidence === 'A' ? 'high' : 'medium', limitingFactor: 'flow', requiredFadLpm, averageDemandLpm, availableFadLpm, marginPercent, warnings: [...warnings, 'Le débit restitué documenté ne couvre pas la consommation nominale publiée de l’outil. Une autonomie intermittente ne peut pas être calculée sans profil d’usage et pression de réenclenchement documentés.'], calculationVersion: CALCULATION_VERSION };
+	return {
+		verdict: sizing.verdict,
+		confidence: documentaryConfidence,
+		limitingFactor: sizing.limitingFactor,
+		requiredFadLpm: sizing.recommendedFadLpm,
+		averageDemandLpm: sizing.averageFlowLpm,
+		availableFadLpm: usableFad,
+		marginPercent: usableFad === undefined ? undefined : ((usableFad - sizing.peakFlowLpm) / sizing.peakFlowLpm) * 100,
+		warnings: sizing.warnings,
+		calculationVersion: sizing.calculationVersion,
+	};
 }

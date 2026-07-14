@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { compressors, tools } from '../data/catalog';
-import { evaluateCompatibility } from './compatibility';
+import { evaluateCompatibility, interpolateFad } from './compatibility';
+import { sizeConfiguration } from './sizing';
 
 describe('evaluateCompatibility avec plusieurs modèles de demande', () => {
 	it('conserve le calcul de débit fixe', () => {
@@ -10,6 +11,20 @@ describe('evaluateCompatibility avec plusieurs modèles de demande', () => {
 
 		expect(result.requiredFadLpm).toBe(177.5);
 		expect(result.verdict).toBe('continuous');
+	});
+
+	it('utilise le même verdict que le moteur de dimensionnement avec un cycle de service', () => {
+		const compressor = compressors.find((item) => item.id === 'einhell-tc-ac-240-50-10-of')!;
+		const tool = tools.find((item) => item.id === 'metabo-fsp-600-lvlp')!;
+		if (tool.demandModel !== 'fixed-flow') throw new Error('Profil de test invalide.');
+		const availableFadLpm = interpolateFad(compressor, tool.workingPressureBar.typical);
+		const sizing = sizeConfiguration({
+			demands: [{ id: tool.id, flowLpm: tool.airflowLpm.typical, pressureBar: tool.workingPressureBar.typical, dutyFactor: 1 }],
+			compressor: { maxPressureBar: compressor.maxPressureBar, availableFadLpm, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle },
+		});
+
+		expect(evaluateCompatibility(compressor, tool).verdict).toBe(sizing.verdict);
+		expect(sizing.verdict).toBe('incompatible');
 	});
 
 	it('refuse de convertir un volume par tir sans cadence', () => {

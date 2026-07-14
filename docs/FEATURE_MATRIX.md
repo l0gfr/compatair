@@ -22,7 +22,7 @@
 - serveur MCP Streamable HTTP en lecture seule, neuf outils, six ressources, trois prompts, pagination, quotas, limite de taille, contrôle Origin, santé et métriques agrégées ;
 - workflows CI, déploiement, sécurité, snapshot et disponibilité, avec permissions minimales et actions épinglées ;
 - CSP, HSTS, politiques de sécurité, signalement responsable, confidentialité, cookies, affiliation et sources ;
-- HTML statique, scripts inférieurs à 35 Ko compressés par page, images dimensionnées, focus visible et réduction des animations.
+- HTML statique, budget automatisé de 50 Ko gzip maximum pour les scripts client externes d’une page, images dimensionnées, focus visible et réduction des animations.
 - rapport GoAccess privé sans cookie, adresses IP masquées, paramètres d’URL supprimés, fenêtre de 90 jours et actualisation systemd toutes les 15 minutes.
 
 ## Prêt mais sans données partenaires

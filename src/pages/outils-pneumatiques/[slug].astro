@@ -4,9 +4,11 @@ import ProductImage from '../../components/ProductImage.astro';
 import { compressors, tools } from '../../data/catalog';
 import { evaluateCompatibility } from '../../domain/compatibility';
 import { isFixedFlowTool, toolDemandLabel, toolPressureLabel } from '../../domain/tool-demand';
+import { latestEvidenceDate } from '../../domain/provenance';
 
 export function getStaticPaths() { return tools.map((tool) => ({ params: { slug: tool.slug }, props: { tool } })); }
 const { tool } = Astro.props;
+const verifiedAt = latestEvidenceDate(tool);
 const fixedFlow = isFixedFlowTool(tool);
 const matches = fixedFlow ? compressors.map((compressor) => ({ compressor, result: evaluateCompatibility(compressor, tool) })) : [];
 const labels = { continuous: 'Continu', intermittent: 'Intermittent', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' };
@@ -41,6 +43,7 @@ const productJsonLd = {
 	pageType="product"
 	imagePath={tool.image.src}
 	imageAlt={tool.image.alt}
+	modifiedDate={new Date(verifiedAt)}
 	breadcrumbs={[{ name: 'Outils pneumatiques', path: '/outils-pneumatiques/' }, { name: tool.label, path: `/outils-pneumatiques/${tool.slug}/` }]}
 >
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(productJsonLd)} />
