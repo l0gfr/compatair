@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { CATALOG_VERIFIED_AT, compressors, tools } from '../data/catalog';
-import { createPassportReport, decodePassportConfiguration, encodePassportConfiguration, PASSPORT_SCHEMA_VERSION } from './passport';
+import { createPassportEnvelope, createPassportReport, decodePassportConfiguration, decodePassportEnvelope, encodePassportConfiguration, encodePassportEnvelope, PASSPORT_ENVELOPE_SCHEMA_VERSION, PASSPORT_SCHEMA_VERSION, reportFromPassportEnvelope } from './passport';
 
 const configuration = {
 	demands: [{ model: 'fixed-flow' as const, id: 'einhell-tc-pe-150', flowLpm: 100, pressureBar: 6.3, quantity: 1, dutyFactor: 1 }],
@@ -25,5 +25,26 @@ describe('CompatAir passport', () => {
 		expect(report.result.calculationVersion).toBe('1.1.0');
 		expect(report.sources.length).toBeGreaterThanOrEqual(2);
 		expect(report.warnings.join(' ')).toContain('ne sont pas soustraites');
+	});
+
+	it('keeps the original report immutable when the current catalog changes', async () => {
+		const envelope = await createPassportEnvelope(configuration, compressors, tools, CATALOG_VERIFIED_AT, '2026-07-14T10:00:00.000Z');
+		const encoded = encodePassportEnvelope(envelope);
+		const decoded = decodePassportEnvelope(encoded)!;
+		const original = await reportFromPassportEnvelope(decoded);
+		const changedCompressors = structuredClone(compressors);
+		changedCompressors.find((item) => item.id === configuration.selectedCompressor)!.fadCurve = [{ pressureBar: 6.3, litersPerMinute: 1_000 }];
+		const recalculated = await createPassportReport(configuration, changedCompressors, tools, '2027-01-01', '2027-01-01T00:00:00.000Z');
+		expect(original.schemaVersion).toBe(PASSPORT_ENVELOPE_SCHEMA_VERSION);
+		expect(original.generatedAt).toBe('2026-07-14T10:00:00.000Z');
+		expect(original.catalogVerifiedAt).toBe(CATALOG_VERIFIED_AT);
+		expect(original.passportId).toBe(envelope.reportDigest);
+		expect(recalculated.result).not.toEqual(original.result);
+	});
+
+	it('rejects a modified report snapshot', async () => {
+		const envelope = await createPassportEnvelope(configuration, compressors, tools, CATALOG_VERIFIED_AT, '2026-07-14T10:00:00.000Z');
+		const modified = { ...envelope, inputSnapshot: { ...envelope.inputSnapshot, compressorLabel: 'Valeur falsifiée' } };
+		await expect(reportFromPassportEnvelope(modified)).rejects.toThrow('empreinte');
 	});
 });

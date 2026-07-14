@@ -48,9 +48,12 @@ if (snapshot.events) {
 	}
 }
 if (snapshot.brands) {
-	for (const [index, brand] of snapshot.brands.entries()) {
-		if (brand.rank !== index + 1 || brand.sampleSize < 1 || brand.score < 0 || brand.score > 100) errors.push(`ligne de baromètre invalide : ${brand.brand}`);
+	let officialRank = 0;
+	for (const brand of snapshot.brands) {
+		const expectedRank = snapshot.rankingPublished && brand.sampleSize >= (snapshot.minimumSampleForRanking ?? 10) ? ++officialRank : null;
+		if (brand.rank !== expectedRank || brand.sampleSize < 1 || brand.score < 0 || brand.score > 100 || brand.coverageScore < 0 || brand.coverageScore > 100) errors.push(`ligne de baromètre invalide : ${brand.brand}`);
 		if (Object.values(brand.criteria ?? {}).some((value) => value < 0 || value > 100)) errors.push(`critère de baromètre invalide : ${brand.brand}`);
+		if ((brand.references?.length ?? 0) !== brand.sampleSize) errors.push(`échantillon de baromètre incomplet : ${brand.brand}`);
 	}
 }
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }

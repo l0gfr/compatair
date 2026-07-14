@@ -2,7 +2,6 @@ import type { APIRoute, GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import sharp from 'sharp';
 import { compressors, tools } from '../../data/catalog';
-import { evaluateCompatibility } from '../../domain/compatibility';
 import { renderSocialCardSvg, socialCardKey, type SocialCard } from '../../domain/social-card';
 import { toolDemandLabel, toolPressureLabel } from '../../domain/tool-demand';
 
@@ -19,6 +18,7 @@ const staticCards: SocialCard[] = [
 	{ path: '/comparateur/', kicker: 'Comparaison', title: 'Comparer des compresseurs', subtitle: 'Caractéristiques et données manquantes côte à côte' },
 	{ path: '/comparatifs/', kicker: 'Comparatifs', title: 'Comparer sans confondre les chiffres', subtitle: 'FAD, pression et confiance documentaire' },
 	{ path: '/comparatifs/compresseurs-debit-restitue/', kicker: 'Comparatif factuel', title: 'Compresseurs par débit restitué', subtitle: 'Chaque valeur reste liée à sa pression publiée' },
+	{ path: '/compatibilite/', kicker: 'Compatibilité CompatAir', title: 'Compresseur et outil pneumatique', subtitle: 'Verdict, débit, pression, limites et sources' },
 	{ path: '/compresseurs/', kicker: 'Catalogue', title: 'Compresseurs documentés', subtitle: 'Débit restitué, pression, cuve et limites' },
 	{ path: '/confidentialite/', kicker: 'Confiance', title: 'Politique de confidentialité', subtitle: 'Données traitées, finalités et droits' },
 	{ path: '/contact/', kicker: 'Correction', title: 'Signaler une donnée', subtitle: 'Proposer une source ou corriger une caractéristique' },
@@ -45,16 +45,10 @@ function buildCards(guides: Awaited<ReturnType<typeof getCollection<'guides'>>>)
 		...tools.map((tool) => ({ path: `/outils-pneumatiques/${tool.slug}/`, kicker: `Outil pneumatique · confiance ${tool.confidence}`, title: tool.label, subtitle: `${toolDemandLabel(tool)} · ${toolPressureLabel(tool)}` })),
 	];
 	const usageCards = tools.map((tool) => ({ path: `/quel-compresseur-pour/${tool.slug}/`, kicker: 'Guide de compatibilité', title: `Quel compresseur pour ${tool.model} ?`, subtitle: `${toolDemandLabel(tool)} · ${toolPressureLabel(tool)}` }));
-	const compatibilityCards = compressors.flatMap((compressor) => tools.flatMap((tool) => {
-		const result = evaluateCompatibility(compressor, tool);
-		if (result.verdict === 'insufficient_data') return [];
-		const verdict = result.verdict === 'continuous' ? 'Compatible en continu' : result.verdict === 'intermittent' ? 'Compatible par intermittence' : 'Incompatible';
-		return [{ path: `/compatibilite/${compressor.slug}--${tool.slug}/`, kicker: verdict, title: `${compressor.model} avec ${tool.model}`, subtitle: `Verdict moteur ${result.calculationVersion} · sources affichées`, accent: result.verdict === 'continuous' ? '#d3eb56' : '#e39a5e' }];
-	}));
 	const guideCards = guides.map((guide) => ({ path: `/guides/${guide.id}/`, kicker: `Guide · ${guide.data.category}`, title: guide.data.title, subtitle: `${guide.data.readingTime} min · sources et hypothèses explicites` }));
 	const brands = [...new Set([...compressors, ...tools].map((item) => item.brand))];
 	const brandCards = brands.map((brand) => ({ path: `/marques/${brand.toLowerCase().replaceAll(' ', '-')}/`, kicker: 'Fabricant documenté', title: brand, subtitle: 'Compresseurs, outils, sources et limites' }));
-	return [...staticCards, ...productCards, ...usageCards, ...compatibilityCards, ...guideCards, ...brandCards];
+	return [...staticCards, ...productCards, ...usageCards, ...guideCards, ...brandCards];
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {

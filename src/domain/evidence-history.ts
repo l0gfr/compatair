@@ -38,6 +38,21 @@ export function historyForProduct(history: EvidenceHistory, productId: string) {
 		.sort((a, b) => b.occurredAt.localeCompare(a.occurredAt) || b.id.localeCompare(a.id));
 }
 
+export function assertHistoryExtends(previous: EvidenceHistory, current: EvidenceHistory) {
+	const errors: string[] = [];
+	if (previous.schemaVersion !== current.schemaVersion) errors.push('Le schéma de l’historique publié ne peut pas être remplacé silencieusement.');
+	if (previous.startedAt !== current.startedAt) errors.push('La date de début de l’historique publié a été modifiée.');
+	const currentById = new Map(current.events.map((event) => [event.id, event]));
+	for (const event of previous.events) {
+		const candidate = currentById.get(event.id);
+		if (!candidate) errors.push(`Événement publié supprimé : ${event.id}`);
+		else if (JSON.stringify(candidate) !== JSON.stringify(event)) errors.push(`Événement publié modifié : ${event.id}`);
+	}
+	if (current.events.length < previous.events.length) errors.push('Le nouvel historique contient moins d’événements que la version publiée.');
+	if (errors.length) throw new Error(errors.join('\n'));
+	return true;
+}
+
 export function assertEvidenceHistoryIntegrity(history: EvidenceHistory, compressors: Compressor[], tools: ToolProfile[]) {
 	const products = [
 		...compressors.map((product) => ({ product, type: 'compressor' as const })),

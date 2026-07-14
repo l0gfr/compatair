@@ -4,6 +4,7 @@ import { interpolateFad } from './compatibility';
 import { CALCULATION_VERSION, sizeConfiguration, sizingInputSchema, type SizingResult } from './sizing';
 
 export const PASSPORT_SCHEMA_VERSION = '1.0.0' as const;
+export const PASSPORT_ENVELOPE_SCHEMA_VERSION = '2.0.0' as const;
 
 const customCompressorSchema = z.object({
 	maxPressureBar: z.number().positive().max(50).optional(),
@@ -46,7 +47,7 @@ export type PassportSource = {
 };
 
 export type PassportReport = {
-	schemaVersion: typeof PASSPORT_SCHEMA_VERSION;
+	schemaVersion: typeof PASSPORT_SCHEMA_VERSION | typeof PASSPORT_ENVELOPE_SCHEMA_VERSION;
 	calculationVersion: typeof CALCULATION_VERSION;
 	catalogVerifiedAt: string;
 	passportId: string;
@@ -64,6 +65,60 @@ export type PassportReport = {
 	possibleUpgrades: string[];
 };
 
+const passportSourceSchema = z.object({
+	id: z.string().min(1).max(160), productId: z.string().min(1).max(160), productLabel: z.string().min(1).max(240),
+	label: z.string().min(1).max(500), url: z.url(), retrievedAt: z.iso.date(), confidence: z.enum(['A', 'B', 'C', 'D']),
+});
+
+const sizingResultSnapshotSchema = z.object({
+	verdict: z.enum(['continuous', 'intermittent', 'incompatible', 'insufficient_data']),
+	peakFlowLpm: z.number().nonnegative().max(200_000), averageFlowLpm: z.number().nonnegative().max(200_000),
+	recommendedFadLpm: z.number().nonnegative().max(200_000), recommendedTankLiters: z.number().nonnegative().max(200_000).optional(),
+	requiredPressureBar: z.number().nonnegative().max(50), usefulPressureBar: z.number().nonnegative().max(50).optional(),
+	usableTankAirLiters: z.number().nonnegative().max(2_000_000).optional(), estimatedWorkMinutes: z.number().nonnegative().max(1_000_000).optional(),
+	estimatedRecoveryMinutes: z.number().nonnegative().max(1_000_000).optional(), limitingFactor: z.enum(['flow', 'pressure', 'duty_cycle', 'data']).optional(),
+	confidence: z.enum(['high', 'medium', 'low']), hypotheses: z.array(z.string().max(2_000)).max(100), warnings: z.array(z.string().max(2_000)).max(100),
+	flowBasis: z.enum(['documented-continuous', 'derived-average']), calculationVersion: z.string().regex(/^\d+\.\d+\.\d+$/),
+});
+
+const passportInputSnapshotSchema = z.object({
+	compressorLabel: z.string().min(1).max(240), toolLabels: z.array(z.string().min(1).max(240)).max(20),
+	availableFadLpm: z.number().positive().max(20_000).optional(), nominalMarginPercent: z.number().optional(), compatAirMarginCovered: z.boolean().optional(),
+	sources: z.array(passportSourceSchema).max(100), warnings: z.array(z.string().max(2_000)).max(100), missingData: z.array(z.string().max(2_000)).max(100), possibleUpgrades: z.array(z.string().max(2_000)).max(100),
+});
+
+export const passportEnvelopeSchema = z.object({
+	passportSchemaVersion: z.literal(PASSPORT_ENVELOPE_SCHEMA_VERSION), createdAt: z.iso.datetime(), catalogVersion: z.string().min(1).max(160),
+	calculationVersion: z.string().regex(/^\d+\.\d+\.\d+$/), configuration: passportConfigurationSchema,
+	inputSnapshot: passportInputSnapshotSchema, resultSnapshot: sizingResultSnapshotSchema,
+	evidenceFingerprints: z.array(z.object({ id: z.string().min(1).max(400), fingerprint: z.string().regex(/^[a-f0-9]{64}$/) })).max(100),
+	reportDigest: z.string().regex(/^[a-f0-9]{64}$/),
+});
+
+export type PassportEnvelope = z.infer<typeof passportEnvelopeSchema>;
+
+function encodeUrlPayload(value: unknown) {
+	const bytes = new TextEncoder().encode(JSON.stringify(value));
+	let binary = '';
+	for (const byte of bytes) binary += String.fromCharCode(byte);
+	return btoa(binary).replaceAll('+', '-').replaceAll('/', '_').replaceAll('=', '');
+}
+
+function decodeUrlPayload(encoded: string) {
+	if (!/^[A-Za-z0-9_-]{1,64000}$/.test(encoded)) return undefined;
+	try {
+		const base64 = encoded.replaceAll('-', '+').replaceAll('_', '/');
+		const binary = atob(base64);
+		const bytes = Uint8Array.from(binary, (character) => character.charCodeAt(0));
+		return JSON.parse(new TextDecoder().decode(bytes)) as unknown;
+	} catch { return undefined; }
+}
+
+async function sha256(value: unknown) {
+	const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(JSON.stringify(value)));
+	return [...new Uint8Array(digest)].map((item) => item.toString(16).padStart(2, '0')).join('');
+}
+
 export function parsePassportConfiguration(input: unknown, compressorIds?: Set<string>, toolIds?: Set<string>) {
 	const value = passportConfigurationSchema.parse(input);
 	if (compressorIds && value.selectedCompressor && value.selectedCompressor !== 'custom' && !compressorIds.has(value.selectedCompressor)) throw new Error('Le compresseur du Passeport n’existe pas dans le catalogue actuel.');
@@ -73,28 +128,59 @@ export function parsePassportConfiguration(input: unknown, compressorIds?: Set<s
 
 export function encodePassportConfiguration(input: unknown) {
 	const value = passportConfigurationSchema.parse(input);
-	const bytes = new TextEncoder().encode(JSON.stringify(value));
-	let binary = '';
-	for (const byte of bytes) binary += String.fromCharCode(byte);
-	return btoa(binary).replaceAll('+', '-').replaceAll('/', '_').replaceAll('=', '');
+	return encodeUrlPayload(value);
 }
 
 export function decodePassportConfiguration(encoded: string) {
-	if (!/^[A-Za-z0-9_-]{1,24000}$/.test(encoded)) return undefined;
-	try {
-		const base64 = encoded.replaceAll('-', '+').replaceAll('_', '/');
-		const binary = atob(base64);
-		const bytes = Uint8Array.from(binary, (character) => character.charCodeAt(0));
-		return passportConfigurationSchema.parse(JSON.parse(new TextDecoder().decode(bytes)));
-	} catch {
-		return undefined;
-	}
+	const decoded = decodeUrlPayload(encoded);
+	const parsed = passportConfigurationSchema.safeParse(decoded);
+	return parsed.success ? parsed.data : undefined;
+}
+
+export function encodePassportEnvelope(input: PassportEnvelope) { return encodeUrlPayload(passportEnvelopeSchema.parse(input)); }
+
+export function decodePassportEnvelope(encoded: string) {
+	const parsed = passportEnvelopeSchema.safeParse(decodeUrlPayload(encoded));
+	return parsed.success ? parsed.data : undefined;
+}
+
+export async function verifyPassportEnvelope(envelope: PassportEnvelope) {
+	const { reportDigest: _reportDigest, ...unsigned } = passportEnvelopeSchema.parse(envelope);
+	return envelope.reportDigest === await sha256(unsigned);
 }
 
 export async function passportId(configuration: PassportConfiguration, catalogVerifiedAt: string) {
 	const canonical = JSON.stringify({ schemaVersion: PASSPORT_SCHEMA_VERSION, calculationVersion: CALCULATION_VERSION, catalogVerifiedAt, configuration });
-	const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(canonical));
-	return [...new Uint8Array(digest)].map((value) => value.toString(16).padStart(2, '0')).join('');
+	return sha256(canonical);
+}
+
+function inputSnapshotFromReport(report: PassportReport) {
+	return {
+		compressorLabel: report.compressorLabel, toolLabels: report.toolLabels, availableFadLpm: report.availableFadLpm,
+		nominalMarginPercent: report.nominalMarginPercent, compatAirMarginCovered: report.compatAirMarginCovered,
+		sources: report.sources, warnings: report.warnings, missingData: report.missingData, possibleUpgrades: report.possibleUpgrades,
+	};
+}
+
+export async function createPassportEnvelope(input: unknown, compressors: Compressor[], tools: ToolProfile[], catalogVersion: string, createdAt = new Date().toISOString()) {
+	const report = await createPassportReport(input, compressors, tools, catalogVersion, createdAt);
+	const inputSnapshot = inputSnapshotFromReport(report);
+	const evidenceFingerprints = await Promise.all(report.sources.map(async (source) => ({ id: `${source.productId}:${source.id}`, fingerprint: await sha256(source) })));
+	const unsigned = {
+		passportSchemaVersion: PASSPORT_ENVELOPE_SCHEMA_VERSION, createdAt, catalogVersion, calculationVersion: report.calculationVersion,
+		configuration: report.configuration, inputSnapshot, resultSnapshot: report.result, evidenceFingerprints,
+	};
+	return passportEnvelopeSchema.parse({ ...unsigned, reportDigest: await sha256(unsigned) });
+}
+
+export async function reportFromPassportEnvelope(input: PassportEnvelope): Promise<PassportReport> {
+	const envelope = passportEnvelopeSchema.parse(input);
+	if (!await verifyPassportEnvelope(envelope)) throw new Error('L’empreinte du Passeport ne correspond pas à son contenu.');
+	return {
+		schemaVersion: envelope.passportSchemaVersion, calculationVersion: envelope.calculationVersion as typeof CALCULATION_VERSION,
+		catalogVerifiedAt: envelope.catalogVersion, passportId: envelope.reportDigest, generatedAt: envelope.createdAt,
+		configuration: envelope.configuration, result: envelope.resultSnapshot as SizingResult, ...envelope.inputSnapshot,
+	};
 }
 
 export function passportVerdictLabel(result: SizingResult) {

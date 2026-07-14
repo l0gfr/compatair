@@ -2,7 +2,7 @@
 	<div class="passport-loading" data-passport-loading>
 		<p class="eyebrow">Lecture locale</p>
 		<h2>Ouverture du Passeport…</h2>
-		<p>La configuration est décodée et recalculée dans ce navigateur.</p>
+		<p>L’enveloppe versionnée est décodée et vérifiée dans ce navigateur.</p>
 	</div>
 
 	<div class="passport-empty" data-passport-empty hidden>
@@ -26,6 +26,11 @@
 				<div><dt>Catalogue</dt><dd data-catalog-date></dd></div>
 			</dl>
 		</header>
+		<div class="passport-version-choice" data-version-choice hidden>
+			<div><strong>Version affichée</strong><p data-version-note></p></div>
+			<button class="button" type="button" data-show-original>Voir le rapport original</button>
+			<button class="button" type="button" data-show-current>Recalculer avec le catalogue actuel</button>
+		</div>
 
 		<div class="passport-actions">
 			<button class="button primary" type="button" data-download>Télécharger le PDF</button>
@@ -93,7 +98,7 @@
 <script>
 	import { CATALOG_VERIFIED_AT, compressors, tools } from '../data/catalog';
 	import { createPassportPdf } from '../domain/passport-pdf';
-	import { createPassportReport, decodePassportConfiguration, passportVerdictLabel } from '../domain/passport';
+	import { createPassportReport, decodePassportConfiguration, decodePassportEnvelope, encodePassportConfiguration, passportVerdictLabel, reportFromPassportEnvelope, type PassportReport } from '../domain/passport';
 
 	const root = document.querySelector<HTMLElement>('[data-passport-root]');
 	const query = <T extends Element>(selector: string) => root?.querySelector<T>(selector);
@@ -115,22 +120,7 @@
 		}
 	}
 
-	async function loadPassport() {
-		const empty = query<HTMLElement>('[data-passport-empty]');
-		const documentPanel = query<HTMLElement>('[data-passport-document]');
-		const loading = query<HTMLElement>('[data-passport-loading]');
-		const encoded = new URLSearchParams(location.hash.slice(1)).get('passport');
-		const configuration = encoded ? decodePassportConfiguration(encoded) : undefined;
-		if (!configuration || !encoded) {
-			if (encoded) setText('[data-passport-error]', 'Cette URL est invalide, incomplète ou utilise un format non reconnu.');
-			if (loading) loading.hidden = true;
-			if (empty) empty.hidden = false;
-			return;
-		}
-
-		try {
-			const report = await createPassportReport(configuration, compressors, tools, CATALOG_VERIFIED_AT);
-			const currentUrl = `${location.origin}/passeport/#passport=${encoded}`;
+	function renderPassport(report: PassportReport, currentUrl: string) {
 			setText('[data-compressor]', report.compressorLabel);
 			setText('[data-verdict]', passportVerdictLabel(report.result));
 			query<HTMLElement>('[data-verdict]')?.setAttribute('data-status', report.result.verdict);
@@ -174,12 +164,14 @@
 				if (!report.sources.length) sourcesPanel.textContent = 'Aucune source constructeur liée à cette configuration.';
 			}
 
-			query<HTMLAnchorElement>('[data-edit]')?.setAttribute('href', `/calculateur/#config=${encoded}`);
-			query<HTMLButtonElement>('[data-copy]')?.addEventListener('click', async () => {
+			query<HTMLAnchorElement>('[data-edit]')?.setAttribute('href', `/calculateur/#config=${encodePassportConfiguration(report.configuration)}`);
+			const copyButton = query<HTMLButtonElement>('[data-copy]');
+			if (copyButton) copyButton.onclick = async () => {
 				await navigator.clipboard.writeText(currentUrl);
 				setText('[data-action-status]', 'URL copiée.');
-			});
-			query<HTMLButtonElement>('[data-download]')?.addEventListener('click', () => {
+			};
+			const downloadButton = query<HTMLButtonElement>('[data-download]');
+			if (downloadButton) downloadButton.onclick = () => {
 				const blob = new Blob([createPassportPdf(report, currentUrl)], { type: 'application/pdf' });
 				const objectUrl = URL.createObjectURL(blob);
 				const link = document.createElement('a');
@@ -188,7 +180,48 @@
 				link.click();
 				setTimeout(() => URL.revokeObjectURL(objectUrl), 1_000);
 				setText('[data-action-status]', 'PDF généré localement.');
-			});
+			};
+	}
+
+	async function loadPassport() {
+		const empty = query<HTMLElement>('[data-passport-empty]');
+		const documentPanel = query<HTMLElement>('[data-passport-document]');
+		const loading = query<HTMLElement>('[data-passport-loading]');
+		const encoded = new URLSearchParams(location.hash.slice(1)).get('passport');
+		const envelope = encoded ? decodePassportEnvelope(encoded) : undefined;
+		const legacyConfiguration = encoded && !envelope ? decodePassportConfiguration(encoded) : undefined;
+		if ((!envelope && !legacyConfiguration) || !encoded) {
+			if (encoded) setText('[data-passport-error]', 'Cette URL est invalide, incomplète ou utilise un format non reconnu.');
+			if (loading) loading.hidden = true;
+			if (empty) empty.hidden = false;
+			return;
+		}
+
+		try {
+			const currentUrl = `${location.origin}/passeport/#passport=${encoded}`;
+			if (envelope) {
+				const original = await reportFromPassportEnvelope(envelope);
+				const current = await createPassportReport(envelope.configuration, compressors, tools, CATALOG_VERIFIED_AT);
+				const choice = query<HTMLElement>('[data-version-choice]');
+				if (choice) choice.hidden = false;
+				const showOriginal = () => { renderPassport(original, currentUrl); setText('[data-version-note]', `Rapport original du ${original.generatedAt.slice(0, 10)}, catalogue ${original.catalogVerifiedAt}.`); };
+				const showCurrent = () => { renderPassport(current, currentUrl); setText('[data-version-note]', `Simulation actuelle, catalogue ${current.catalogVerifiedAt}. L’URL originale n’est pas modifiée.`); };
+				const originalButton = query<HTMLButtonElement>('[data-show-original]');
+				const currentButton = query<HTMLButtonElement>('[data-show-current]');
+				if (originalButton) originalButton.onclick = showOriginal;
+				if (currentButton) currentButton.onclick = showCurrent;
+				showOriginal();
+			} else {
+				const current = await createPassportReport(legacyConfiguration, compressors, tools, CATALOG_VERIFIED_AT);
+				renderPassport(current, currentUrl);
+				const choice = query<HTMLElement>('[data-version-choice]');
+				if (choice) choice.hidden = false;
+				setText('[data-version-note]', 'Ancien format : seule la configuration était conservée. Ce rapport est recalculé avec le catalogue actuel.');
+				const originalButton = query<HTMLButtonElement>('[data-show-original]');
+				const currentButton = query<HTMLButtonElement>('[data-show-current]');
+				if (originalButton) originalButton.hidden = true;
+				if (currentButton) currentButton.hidden = true;
+			}
 			if (loading) loading.hidden = true;
 			if (documentPanel) documentPanel.hidden = false;
 		} catch (error) {

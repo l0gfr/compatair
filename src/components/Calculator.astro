@@ -97,9 +97,9 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 </template>
 
 <script>
-	import { compressors, tools } from '../data/catalog';
+	import { CATALOG_VERIFIED_AT, compressors, tools } from '../data/catalog';
 	import { interpolateFad } from '../domain/compatibility';
-	import { decodePassportConfiguration, encodePassportConfiguration, parsePassportConfiguration, type PassportConfiguration } from '../domain/passport';
+	import { createPassportEnvelope, decodePassportConfiguration, encodePassportConfiguration, encodePassportEnvelope, parsePassportConfiguration, type PassportConfiguration } from '../domain/passport';
 	import { CALCULATION_VERSION, sizeConfiguration, type SizingResult } from '../domain/sizing';
 
 	const root = document.querySelector<HTMLElement>('[data-calculator]');
@@ -388,7 +388,7 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 	const hashConfig = window.location.hash.startsWith('#config=') ? validateSharedConfig(decodePassportConfiguration(window.location.hash.slice(8))) : undefined;
 	if (hashConfig) restoreConfig(hashConfig); else addDemand(initialTool);
 
-	form?.addEventListener('submit', (event) => {
+	form?.addEventListener('submit', async (event) => {
 		event.preventDefault(); if (!output || !list || !evaluated) return;
 		const errorTarget = root?.querySelector<HTMLElement>('[data-form-error]');
 		try {
@@ -416,7 +416,8 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 			currentFilter = 'all'; renderCandidateResults(candidates); lastSummary = buildSummary(config, result, candidates);
 			const encodedConfig = encodePassportConfiguration(config);
 			window.history.replaceState(null, '', `${window.location.pathname}#config=${encodedConfig}`);
-			root?.querySelector<HTMLAnchorElement>('[data-create-passport]')?.setAttribute('href', `/passeport/#passport=${encodedConfig}`);
+			const envelope = await createPassportEnvelope(config, compressors, tools, CATALOG_VERIFIED_AT);
+			root?.querySelector<HTMLAnchorElement>('[data-create-passport]')?.setAttribute('href', `/passeport/#passport=${encodePassportEnvelope(envelope)}`);
 			contributeDemand(config, base);
 			output.hidden = false; output.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
 		} catch (error) {
