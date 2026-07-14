@@ -76,8 +76,15 @@
 		LimitRequestBody 65536
 	</Location>
 	<Location "/api/v1/compatibility">
+		# Normalize headers already emitted by the Node service. Without the
+		# explicit unsets, Apache appends a second value and browsers reject the
+		# otherwise valid cross-origin response.
+		Header always unset Access-Control-Allow-Origin
 		Header always set Access-Control-Allow-Origin "*"
+		Header always unset Cross-Origin-Resource-Policy
 		Header always set Cross-Origin-Resource-Policy "cross-origin"
+		Header always unset X-Content-Type-Options
+		Header always set X-Content-Type-Options "nosniff"
 	</Location>
 	<Location "/widget/v1/compatair-widget.js">
 		Header always set Access-Control-Allow-Origin "*"

@@ -49,4 +49,21 @@ describe('CompatAir Apache CSP', () => {
 		expect(config).toContain('<Location "/widget/v1/compatair-widget.js">');
 		expect(config.match(/Cross-Origin-Resource-Policy "cross-origin"/g)).toHaveLength(2);
 	});
+
+	it('normalizes proxied API headers before exposing them cross-origin', () => {
+		const apiLocation = config.match(
+			/<Location "\/api\/v1\/compatibility">([\s\S]*?)<\/Location>/,
+		)?.[1];
+		expect(apiLocation).toBeDefined();
+		for (const header of [
+			'Access-Control-Allow-Origin',
+			'Cross-Origin-Resource-Policy',
+			'X-Content-Type-Options',
+		]) {
+			expect(apiLocation).toContain(`Header always unset ${header}`);
+			expect(apiLocation?.indexOf(`Header always unset ${header}`)).toBeLessThan(
+				apiLocation?.indexOf(`Header always set ${header}`) ?? -1,
+			);
+		}
+	});
 });
