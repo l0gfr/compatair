@@ -10,6 +10,12 @@ export const productSeoTitles: Record<string, string> = {
 	'atlas-copco-ab25e100': 'Atlas Copco AB25E100 : FAD et débit | CompatAir',
 	'atlas-copco-ab30e100': 'Atlas Copco AB30E100 : FAD et débit | CompatAir',
 	'atlas-copco-ab40e100t': 'Atlas Copco AB40E100T : FAD et débit | CompatAir',
+	'boge-po-1-l': 'BOGE PO 1 L : FAD et débit | CompatAir',
+	'boge-po-2-l': 'BOGE PO 2 L : FAD et débit | CompatAir',
+	'boge-po-3-l-10-bar': 'BOGE PO 3 L 10 bar : FAD et débit | CompatAir',
+	'boge-po-4-l-10-bar': 'BOGE PO 4 L 10 bar : FAD et débit | CompatAir',
+	'boge-po-6-l-10-bar': 'BOGE PO 6 L 10 bar : FAD et débit | CompatAir',
+	'boge-po-8-l-10-bar': 'BOGE PO 8 L 10 bar : FAD et débit | CompatAir',
 	'einhell-silenzzo-18-160': 'Einhell SILENZZO 18/160 : FAD et débit | CompatAir',
 	'einhell-silenzzo-36-210': 'Einhell SILENZZO 36/210 : FAD et débit | CompatAir',
 	'einhell-tc-ac-190-24-8-i-of': 'Einhell TC-AC 190/24/8 I OF : FAD et débit | CompatAir',
@@ -60,6 +66,11 @@ export const productSeoTitles: Record<string, string> = {
 	'metabo-dsx-150': 'Metabo DSX 150 : débit et pression | CompatAir',
 	'metabo-bp-200': 'Metabo BP 200 : débit et pression | CompatAir',
 	'metabo-ds-14': 'Metabo DS 14 : débit et pression | CompatAir',
+	'chicago-pneumatic-cp7269p': 'CP7269P : débit et pression | CompatAir',
+	'chicago-pneumatic-cp7722': 'CP7722 : débit et pression | CompatAir',
+	'chicago-pneumatic-cp7741': 'CP7741 : débit et pression | CompatAir',
+	'chicago-pneumatic-cp7762': 'CP7762 : débit et pression | CompatAir',
+	'chicago-pneumatic-cp5000': 'CP5000 : débit et pression | CompatAir',
 };
 
 export const toolUseSeoTitles: Record<string, string> = {
@@ -83,6 +94,11 @@ export const toolUseSeoTitles: Record<string, string> = {
 	'metabo-dsx-150': 'Metabo DSX 150 : quel compresseur ? | CompatAir',
 	'metabo-bp-200': 'Metabo BP 200 : quel compresseur ? | CompatAir',
 	'metabo-ds-14': 'Metabo DS 14 : quel compresseur ? | CompatAir',
+	'chicago-pneumatic-cp7269p': 'CP7269P : quel compresseur ? | CompatAir',
+	'chicago-pneumatic-cp7722': 'CP7722 : quel compresseur ? | CompatAir',
+	'chicago-pneumatic-cp7741': 'CP7741 : quel compresseur ? | CompatAir',
+	'chicago-pneumatic-cp7762': 'CP7762 : quel compresseur ? | CompatAir',
+	'chicago-pneumatic-cp5000': 'CP5000 : quel compresseur ? | CompatAir',
 };
 
 export function productSeoTitle(productId: string) {

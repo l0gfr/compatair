@@ -8,36 +8,42 @@ import product7 from './abac-pole-position-os20p';
 import product8 from './atlas-copco-ab25e100';
 import product9 from './atlas-copco-ab30e100';
 import product10 from './atlas-copco-ab40e100t';
-import product11 from './einhell-silenzzo-18-160';
-import product12 from './einhell-silenzzo-36-210';
-import product13 from './einhell-tc-ac-190-24-8';
-import product14 from './einhell-tc-ac-190-24-8-i-of';
-import product15 from './einhell-tc-ac-190-50-8';
-import product16 from './einhell-tc-ac-190-of-set';
-import product17 from './einhell-tc-ac-200-24-8-of';
-import product18 from './einhell-tc-ac-240-50-10-of';
-import product19 from './einhell-tc-ac-270-50-10';
-import product20 from './einhell-tc-ac-270-50-8';
-import product21 from './einhell-tc-ac-420-50-10-v';
-import product22 from './einhell-te-ac-110-6-silent-plus';
-import product23 from './einhell-te-ac-135-24-silent-plus';
-import product24 from './einhell-te-ac-18-75-li-of-solo';
-import product25 from './einhell-te-ac-270-24-10';
-import product26 from './einhell-te-ac-270-50-silent';
-import product27 from './einhell-te-ac-270-50-silent-plus';
-import product28 from './einhell-te-ac-36-150-li-of-solo';
-import product29 from './einhell-te-ac-36-8-li-of-set-solo';
-import product30 from './einhell-te-ac-400-50-10-v';
-import product31 from './einhell-te-ac-430-50-10';
-import product32 from './einhell-te-ac-430-90-10';
-import product33 from './metabo-basic-160-6-w-of';
-import product34 from './metabo-basic-220-24-of-silent';
-import product35 from './metabo-basic-250-24-w';
-import product36 from './metabo-basic-250-50-w';
-import product37 from './metabo-mega-350-100-w';
-import product38 from './metabo-mega-400-50-w';
-import product39 from './metabo-mega-580-200-d';
-import product40 from './metabo-power-180-5-w-of';
+import product11 from './boge-po-1-l';
+import product12 from './boge-po-2-l';
+import product13 from './boge-po-3-l-10-bar';
+import product14 from './boge-po-4-l-10-bar';
+import product15 from './boge-po-6-l-10-bar';
+import product16 from './boge-po-8-l-10-bar';
+import product17 from './einhell-silenzzo-18-160';
+import product18 from './einhell-silenzzo-36-210';
+import product19 from './einhell-tc-ac-190-24-8';
+import product20 from './einhell-tc-ac-190-24-8-i-of';
+import product21 from './einhell-tc-ac-190-50-8';
+import product22 from './einhell-tc-ac-190-of-set';
+import product23 from './einhell-tc-ac-200-24-8-of';
+import product24 from './einhell-tc-ac-240-50-10-of';
+import product25 from './einhell-tc-ac-270-50-10';
+import product26 from './einhell-tc-ac-270-50-8';
+import product27 from './einhell-tc-ac-420-50-10-v';
+import product28 from './einhell-te-ac-110-6-silent-plus';
+import product29 from './einhell-te-ac-135-24-silent-plus';
+import product30 from './einhell-te-ac-18-75-li-of-solo';
+import product31 from './einhell-te-ac-270-24-10';
+import product32 from './einhell-te-ac-270-50-silent';
+import product33 from './einhell-te-ac-270-50-silent-plus';
+import product34 from './einhell-te-ac-36-150-li-of-solo';
+import product35 from './einhell-te-ac-36-8-li-of-set-solo';
+import product36 from './einhell-te-ac-400-50-10-v';
+import product37 from './einhell-te-ac-430-50-10';
+import product38 from './einhell-te-ac-430-90-10';
+import product39 from './metabo-basic-160-6-w-of';
+import product40 from './metabo-basic-220-24-of-silent';
+import product41 from './metabo-basic-250-24-w';
+import product42 from './metabo-basic-250-50-w';
+import product43 from './metabo-mega-350-100-w';
+import product44 from './metabo-mega-400-50-w';
+import product45 from './metabo-mega-580-200-d';
+import product46 from './metabo-power-180-5-w-of';
 
 export const rawCompressors = [
 	product1,
@@ -80,4 +86,10 @@ export const rawCompressors = [
 	product38,
 	product39,
 	product40,
+	product41,
+	product42,
+	product43,
+	product44,
+	product45,
+	product46,
 ];

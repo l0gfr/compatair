@@ -12,6 +12,7 @@ const maximumDocumentTitleLength = 60;
 const maximumInitialPageScriptBytesGzip = 50 * 1024;
 const maximumPassportInitialScriptBytesGzip = 45 * 1024;
 const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
+const maximumSocialImageCount = 180;
 const forbiddenPublicWording = [
 	'CompatAir Engine',
 	'actif statistique',
@@ -64,7 +65,7 @@ function jsonLdNodes(value) {
 await walk(root);
 
 const socialImageCount = [...artifactPaths].filter((path) => /^\/social\/[^/]+\.png$/.test(path)).length;
-if (socialImageCount > 160) errors.push(`social: ${socialImageCount} cartes générées, plafond 160 dépassé`);
+if (socialImageCount > maximumSocialImageCount) errors.push(`social: ${socialImageCount} cartes générées, plafond ${maximumSocialImageCount} dépassé`);
 
 const immutableWidgetPath = '/widget/v1.0.0/compatair-widget.js';
 let immutableWidgetIntegrity = '';

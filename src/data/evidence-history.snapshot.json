@@ -1231,7 +1231,330 @@
         "retrievedAt": "2026-07-14",
         "confidence": "A"
       }
+    },
+    {
+      "id": "added:boge-po-1-l:boge-po-current-range:2026-07-14",
+      "evidenceId": "boge-po-current-range",
+      "productId": "boge-po-1-l",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "9ee7961bf9f0ef09fb0563592cb15a2b588121146e7fc088a43420610b227178",
+      "snapshot": {
+        "id": "boge-po-current-range",
+        "sourceUrl": "https://www.boge.com/en-sg/products/compressors/piston-compressors/po-series-up-to-11-kw/",
+        "sourceLabel": "BOGE, gamme actuelle de compresseurs à piston PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Tableau actuel des variantes : pression, débit effectif maximal, puissance, absence de réservoir et poids maximal."
+      }
+    },
+    {
+      "id": "added:boge-po-1-l:boge-po-technical-brochure:2026-07-14",
+      "evidenceId": "boge-po-technical-brochure",
+      "productId": "boge-po-1-l",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "bfc54df83a985041381b04dd8a061af5e7fd0e7b9957d1809f28e1ad1af6f84e",
+      "snapshot": {
+        "id": "boge-po-technical-brochure",
+        "sourceUrl": "https://row.boge.com/sites/default/files/382-en-po-series_19.pdf",
+        "sourceLabel": "BOGE, brochure technique de la série PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "La brochure précise que le débit d’air effectif est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:boge-po-2-l:boge-po-current-range:2026-07-14",
+      "evidenceId": "boge-po-current-range",
+      "productId": "boge-po-2-l",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "00ac6a86af9e78cdac86ced7375f6b184c51c4f4e9edd975fcaf44e118399c0f",
+      "snapshot": {
+        "id": "boge-po-current-range",
+        "sourceUrl": "https://www.boge.com/en-sg/products/compressors/piston-compressors/po-series-up-to-11-kw/",
+        "sourceLabel": "BOGE, gamme actuelle de compresseurs à piston PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Tableau actuel des variantes : pression, débit effectif maximal, puissance, absence de réservoir et poids maximal."
+      }
+    },
+    {
+      "id": "added:boge-po-2-l:boge-po-technical-brochure:2026-07-14",
+      "evidenceId": "boge-po-technical-brochure",
+      "productId": "boge-po-2-l",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "c96f4f8c34f62f26a09040131f2ef0802dfa92f9f0f1e9c68c421791ab13de24",
+      "snapshot": {
+        "id": "boge-po-technical-brochure",
+        "sourceUrl": "https://row.boge.com/sites/default/files/382-en-po-series_19.pdf",
+        "sourceLabel": "BOGE, brochure technique de la série PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "La brochure précise que le débit d’air effectif est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:boge-po-3-l-10-bar:boge-po-current-range:2026-07-14",
+      "evidenceId": "boge-po-current-range",
+      "productId": "boge-po-3-l-10-bar",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "d6f21476834fe0ed6642a5e1b0012cd5746e8a5b9de41963ea185446e6d06e65",
+      "snapshot": {
+        "id": "boge-po-current-range",
+        "sourceUrl": "https://www.boge.com/en-sg/products/compressors/piston-compressors/po-series-up-to-11-kw/",
+        "sourceLabel": "BOGE, gamme actuelle de compresseurs à piston PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Tableau actuel des variantes : pression, débit effectif maximal, puissance, absence de réservoir et poids maximal."
+      }
+    },
+    {
+      "id": "added:boge-po-3-l-10-bar:boge-po-technical-brochure:2026-07-14",
+      "evidenceId": "boge-po-technical-brochure",
+      "productId": "boge-po-3-l-10-bar",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "3bec0ff4460624695b8c98a29017f020f229364daab7e9bc111df06e4195a242",
+      "snapshot": {
+        "id": "boge-po-technical-brochure",
+        "sourceUrl": "https://row.boge.com/sites/default/files/382-en-po-series_19.pdf",
+        "sourceLabel": "BOGE, brochure technique de la série PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "La brochure précise que le débit d’air effectif est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:boge-po-4-l-10-bar:boge-po-current-range:2026-07-14",
+      "evidenceId": "boge-po-current-range",
+      "productId": "boge-po-4-l-10-bar",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "d3b959e6518adb451bea4185ef4976adfd567f57fa6dde803ec4ecd106bffbba",
+      "snapshot": {
+        "id": "boge-po-current-range",
+        "sourceUrl": "https://www.boge.com/en-sg/products/compressors/piston-compressors/po-series-up-to-11-kw/",
+        "sourceLabel": "BOGE, gamme actuelle de compresseurs à piston PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Tableau actuel des variantes : pression, débit effectif maximal, puissance, absence de réservoir et poids maximal."
+      }
+    },
+    {
+      "id": "added:boge-po-4-l-10-bar:boge-po-technical-brochure:2026-07-14",
+      "evidenceId": "boge-po-technical-brochure",
+      "productId": "boge-po-4-l-10-bar",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "ef97cc3107cb46c9f5d84c2211f92d19b0e9474f04416472b5321854565a5301",
+      "snapshot": {
+        "id": "boge-po-technical-brochure",
+        "sourceUrl": "https://row.boge.com/sites/default/files/382-en-po-series_19.pdf",
+        "sourceLabel": "BOGE, brochure technique de la série PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "La brochure précise que le débit d’air effectif est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:boge-po-6-l-10-bar:boge-po-current-range:2026-07-14",
+      "evidenceId": "boge-po-current-range",
+      "productId": "boge-po-6-l-10-bar",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "bc832b6b2a32b0968a62c5c4d8b45979c38574d06056b2336dde4b92aa3edd8b",
+      "snapshot": {
+        "id": "boge-po-current-range",
+        "sourceUrl": "https://www.boge.com/en-sg/products/compressors/piston-compressors/po-series-up-to-11-kw/",
+        "sourceLabel": "BOGE, gamme actuelle de compresseurs à piston PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Tableau actuel des variantes : pression, débit effectif maximal, puissance, absence de réservoir et poids maximal."
+      }
+    },
+    {
+      "id": "added:boge-po-6-l-10-bar:boge-po-technical-brochure:2026-07-14",
+      "evidenceId": "boge-po-technical-brochure",
+      "productId": "boge-po-6-l-10-bar",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "08ae5a981724b615f19c3c50c930fae0d37514bfcb4c0aeaa04f58400b03e38e",
+      "snapshot": {
+        "id": "boge-po-technical-brochure",
+        "sourceUrl": "https://row.boge.com/sites/default/files/382-en-po-series_19.pdf",
+        "sourceLabel": "BOGE, brochure technique de la série PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "La brochure précise que le débit d’air effectif est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:boge-po-8-l-10-bar:boge-po-current-range:2026-07-14",
+      "evidenceId": "boge-po-current-range",
+      "productId": "boge-po-8-l-10-bar",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "03d50e966ea74b17d61aafc5280a618a6993099cfab3dd94cb13b72346cee185",
+      "snapshot": {
+        "id": "boge-po-current-range",
+        "sourceUrl": "https://www.boge.com/en-sg/products/compressors/piston-compressors/po-series-up-to-11-kw/",
+        "sourceLabel": "BOGE, gamme actuelle de compresseurs à piston PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Tableau actuel des variantes : pression, débit effectif maximal, puissance, absence de réservoir et poids maximal."
+      }
+    },
+    {
+      "id": "added:boge-po-8-l-10-bar:boge-po-technical-brochure:2026-07-14",
+      "evidenceId": "boge-po-technical-brochure",
+      "productId": "boge-po-8-l-10-bar",
+      "productType": "compressor",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "84f69d76c46bd87e20154ccc1225ad58157cb76f9d9da2abd1cdec23acd35331",
+      "snapshot": {
+        "id": "boge-po-technical-brochure",
+        "sourceUrl": "https://row.boge.com/sites/default/files/382-en-po-series_19.pdf",
+        "sourceLabel": "BOGE, brochure technique de la série PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "La brochure précise que le débit d’air effectif est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp5000:cp-t024585-official:2026-07-14",
+      "evidenceId": "cp-t024585-official",
+      "productId": "chicago-pneumatic-cp5000",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "0f8161316cca944f0b3a31b74049502feaea93bfbed685db6e69986e378c54d7",
+      "snapshot": {
+        "id": "cp-t024585-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp5000-skuT024585",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP5000",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Consommation en charge de 25 L/s convertie exactement en 1 500 L/min, pression dynamique maximale de 6,3 bar."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7722:cp-8941077220-official:2026-07-14",
+      "evidenceId": "cp-8941077220-official",
+      "productId": "chicago-pneumatic-cp7722",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "443c0f89b26c03c6c5ec285aeb02411f21a594f37a741984340884683a02bce7",
+      "snapshot": {
+        "id": "cp-8941077220-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp7722-sku8941077220",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7722",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Consommation en charge de 4,7 L/s convertie exactement en 282 L/min, pression dynamique maximale de 6,3 bar."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7741:cp-8941077410-official:2026-07-14",
+      "evidenceId": "cp-8941077410-official",
+      "productId": "chicago-pneumatic-cp7741",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "02697c3a1a26830a13567f27d416b2f7a3f623bf2dde0a15124d4d089a749ab9",
+      "snapshot": {
+        "id": "cp-8941077410-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp7741-sku8941077410",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7741",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Consommation en charge de 9,3 L/s convertie exactement en 558 L/min, pression dynamique maximale de 6,3 bar."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7762:cp-8941077620-official:2026-07-14",
+      "evidenceId": "cp-8941077620-official",
+      "productId": "chicago-pneumatic-cp7762",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "2837bcf28532cb261f4d698481e0990297752d12b510ce9edd20360fed472585",
+      "snapshot": {
+        "id": "cp-8941077620-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp7762-sku8941077620",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7762",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Consommation en charge de 16 L/s convertie exactement en 960 L/min, pression dynamique maximale de 6,3 bar."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7269p:cp-8941078691-official:2026-07-14",
+      "evidenceId": "cp-8941078691-official",
+      "productId": "chicago-pneumatic-cp7269p",
+      "productType": "tool",
+      "occurredAt": "2026-07-14",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "844fe8395bdd79cf7762d8334d94870b446da5e33a39e1cc15f18b8a294ab84e",
+      "snapshot": {
+        "id": "cp-8941078691-official",
+        "sourceUrl": "https://tools.cp.com/en/products/sanders/cp7269p-sku8941078691",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7269P",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Consommation en charge de 11 L/s convertie exactement en 660 L/min, pression dynamique maximale de 6,3 bar."
+      }
     }
   ],
-  "historyVersion": "48db53c293008d47cd4e88a4fe090ed1ef8957c4916232d351d73b7717d6647c"
+  "historyVersion": "de7a5b3683d6b89f3fb36f43a3fd380f8d2c78599d7d19480fea061e71939270"
 }
