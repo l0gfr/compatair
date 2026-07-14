@@ -11,9 +11,10 @@ const REQUEST_LIMIT = 120;
 const RATE_WINDOW_MS = 60_000;
 const MAX_RATE_ENTRIES = 10_000;
 
-function json(response, status, value, headers = {}) {
+function json(response, status, value, headers = {}, options = {}) {
 	const payload = JSON.stringify(value);
-	response.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': Buffer.byteLength(payload), 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', ...headers });
+	const securityHeaders = options.omitContentTypeOptions ? {} : { 'X-Content-Type-Options': 'nosniff' };
+	response.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': Buffer.byteLength(payload), 'Cache-Control': 'no-store', ...securityHeaders, ...headers });
 	response.end(payload);
 }
 
@@ -98,9 +99,9 @@ function isJsonContentType(request) {
 }
 
 /**
- * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, allowedOrigins: Set<string>, demandAggregatePath?: string }} options
+ * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, allowedOrigins: Set<string>, demandAggregatePath?: string, proxyManagesApiHeaders?: boolean }} options
  */
-export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable' }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, allowedOrigins, demandAggregatePath = undefined }) {
+export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable' }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, allowedOrigins, demandAggregatePath = undefined, proxyManagesApiHeaders = false }) {
 	const core = createMcpCore(catalog, offerSnapshot);
 	const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
 	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item]));
@@ -118,22 +119,26 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, verdictVersion: verdictSnapshot.verdictVersion, demandAggregation: { enabled: demandStore.enabled, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION } });
 
 		if (url.pathname === '/api/v1/compatibility') {
-			const corsHeaders = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, OPTIONS', 'Access-Control-Allow-Headers': 'Accept', 'Cross-Origin-Resource-Policy': 'cross-origin', Vary: 'Origin' };
+			const corsHeaders = {
+				...(proxyManagesApiHeaders ? {} : { 'Access-Control-Allow-Origin': '*', 'Cross-Origin-Resource-Policy': 'cross-origin' }),
+				'Access-Control-Allow-Methods': 'GET, OPTIONS', 'Access-Control-Allow-Headers': 'Accept', Vary: 'Origin',
+			};
+			const apiJson = (status, value, headers = {}) => json(response, status, value, headers, { omitContentTypeOptions: proxyManagesApiHeaders });
 			if (request.method === 'OPTIONS') { response.writeHead(204, { ...corsHeaders, 'Cache-Control': 'public, max-age=86400' }); return response.end(); }
-			if (request.method !== 'GET') return json(response, 405, { error: 'method_not_allowed' }, { ...corsHeaders, Allow: 'GET, OPTIONS' });
-			if (!allow(`api:${clientAddress(request)}`)) return json(response, 429, { error: 'rate_limited' }, { ...corsHeaders, 'Retry-After': '60' });
+			if (request.method !== 'GET') return apiJson(405, { error: 'method_not_allowed' }, { ...corsHeaders, Allow: 'GET, OPTIONS' });
+			if (!allow(`api:${clientAddress(request)}`)) return apiJson(429, { error: 'rate_limited' }, { ...corsHeaders, 'Retry-After': '60' });
 			const keys = [...url.searchParams.keys()];
-			if (keys.some((key) => !['compressorId', 'toolId'].includes(key)) || ['compressorId', 'toolId'].some((key) => url.searchParams.getAll(key).length > 1)) return json(response, 400, { error: 'invalid_query' }, corsHeaders);
+			if (keys.some((key) => !['compressorId', 'toolId'].includes(key)) || ['compressorId', 'toolId'].some((key) => url.searchParams.getAll(key).length > 1)) return apiJson(400, { error: 'invalid_query' }, corsHeaders);
 			const compressorId = url.searchParams.get('compressorId') ?? '';
 			const toolId = url.searchParams.get('toolId') ?? '';
-			if (!/^[a-z0-9-]{1,160}$/.test(compressorId) || !/^[a-z0-9-]{1,160}$/.test(toolId)) return json(response, 400, { error: 'invalid_query' }, corsHeaders);
+			if (!/^[a-z0-9-]{1,160}$/.test(compressorId) || !/^[a-z0-9-]{1,160}$/.test(toolId)) return apiJson(400, { error: 'invalid_query' }, corsHeaders);
 			const compressor = compressorMap.get(compressorId);
 			const tool = toolMap.get(toolId);
-			if (!compressor || !tool) return json(response, 404, { error: 'product_not_found' }, corsHeaders);
+			if (!compressor || !tool) return apiJson(404, { error: 'product_not_found' }, corsHeaders);
 			const snapshotPair = verdictMap.get(`${compressorId}--${toolId}`);
-			if (tool.demandModel === 'fixed-flow' && !snapshotPair) return json(response, 503, { error: 'verdict_snapshot_unavailable' }, { ...corsHeaders, 'Retry-After': '60' });
+			if (tool.demandModel === 'fixed-flow' && !snapshotPair) return apiJson(503, { error: 'verdict_snapshot_unavailable' }, { ...corsHeaders, 'Retry-After': '60' });
 			const evaluation = snapshotPair ?? { verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data' };
-			return json(response, 200, {
+			return apiJson(200, {
 				schemaVersion: '1.0.0', catalogVersion: catalog.catalogVersion, catalogVerifiedAt: catalog.verifiedAt, verdictVersion: verdictSnapshot.verdictVersion, calculationVersion: verdictSnapshot.calculationVersion,
 				input: { compressorId, toolId },
 				compressor: { id: compressor.id, brand: compressor.brand, model: compressor.model, slug: compressor.slug },
@@ -223,12 +228,13 @@ async function start() {
 	const verdictsPath = resolveVerdictSnapshotPath(catalogPath, process.env.COMPAT_AIR_VERDICTS);
 	const allowedOrigins = new Set((process.env.MCP_ALLOWED_ORIGINS ?? 'https://compatair.fr,https://www.compatair.fr').split(',').map((item) => item.trim()).filter(Boolean));
 	const demandAggregatePath = process.env.COMPAT_AIR_DEMAND_AGGREGATES || undefined;
+	const proxyManagesApiHeaders = process.env.COMPAT_AIR_PROXY_MANAGES_API_HEADERS === '1';
 	const catalog = JSON.parse(await readFile(catalogPath, 'utf8'));
 	const verdictSnapshot = JSON.parse(await readFile(verdictsPath, 'utf8'));
 	if (verdictSnapshot.catalogVersion !== catalog.catalogVersion || !Array.isArray(verdictSnapshot.pairs)) throw new Error('Le snapshot de verdicts ne correspond pas au catalogue.');
 	let offerSnapshot = { offers: [], snapshotVersion: 'empty' };
 	try { offerSnapshot = JSON.parse(await readFile(offersPath, 'utf8')); } catch {}
-	const server = createCompatAirServer({ catalog, verdictSnapshot, offerSnapshot, allowedOrigins, demandAggregatePath });
+	const server = createCompatAirServer({ catalog, verdictSnapshot, offerSnapshot, allowedOrigins, demandAggregatePath, proxyManagesApiHeaders });
 	server.on('error', (error) => { console.error(error); process.exitCode = 1; });
 	server.listen(port, host, () => console.error(`CompatAir MCP listening on http://${host}:${port}`));
 }

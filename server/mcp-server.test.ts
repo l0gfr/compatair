@@ -66,6 +66,27 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(JSON.parse(result.body).sources).toHaveLength(2);
 	});
 
+	it('lets the production reverse proxy own API security and CORS headers', async () => {
+		const server = createCompatAirServer({
+			catalog: { catalogVersion: 'test', compressors: [], tools: [] },
+			allowedOrigins: new Set(['https://compatair.fr']),
+			proxyManagesApiHeaders: true,
+		});
+		const headers = await new Promise<Record<string, string>>((resolve) => {
+			const request = { url: '/api/v1/compatibility?compressorId=a&toolId=b', method: 'GET', headers: {}, socket: { remoteAddress: '127.0.0.1' } };
+			const response = { setTimeout() {}, writeHead(_status: number, values: Record<string, string>) { resolve(values); }, end() {}, destroy() {} };
+			server.emit('request', request, response);
+		});
+		expect(headers).not.toHaveProperty('Access-Control-Allow-Origin');
+		expect(headers).not.toHaveProperty('Cross-Origin-Resource-Policy');
+		expect(headers).not.toHaveProperty('X-Content-Type-Options');
+		expect(headers).toMatchObject({
+			'Access-Control-Allow-Methods': 'GET, OPTIONS',
+			'Access-Control-Allow-Headers': 'Accept',
+			Vary: 'Origin',
+		});
+	});
+
 	it('fails closed when a fixed-flow verdict is absent from the authoritative snapshot', async () => {
 		const catalog = { catalogVersion: 'test', compressors: [{ id: 'compressor-a' }], tools: [{ id: 'tool-a', demandModel: 'fixed-flow' }] } as any;
 		const server = createCompatAirServer({ catalog, verdictSnapshot: { verdictVersion: 'empty', pairs: [] }, allowedOrigins: new Set(['https://compatair.fr']) });
