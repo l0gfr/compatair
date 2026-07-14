@@ -25,6 +25,7 @@ const staticCards: SocialCard[] = [
 	{ path: '/cookies/', kicker: 'Confidentialité', title: 'Politique relative aux cookies', subtitle: 'Aucun cookie publicitaire côté navigateur' },
 	{ path: '/corrections/', kicker: 'Traçabilité', title: 'Journal public des corrections', subtitle: 'Valeurs, verdicts et promesses mesurables' },
 	{ path: '/glossaire/', kicker: 'Référentiel', title: 'Glossaire de l’air comprimé', subtitle: 'FAD, pression, débit et qualité de l’air' },
+	{ path: '/gouvernance-editoriale/', kicker: 'Responsabilité éditoriale', title: 'Qui écrit, qui relit, qui décide', subtitle: 'Rôles, contrôles, indépendance et limites de la revue' },
 	{ path: '/guides/', kicker: 'Documentation', title: 'Guides techniques CompatAir', subtitle: 'Comprendre, choisir, installer et utiliser' },
 	{ path: '/marques/', kicker: 'Fabricants', title: 'Marques documentées', subtitle: 'Références reliées à des sources identifiées' },
 	{ path: '/mcp-documentation/', kicker: 'Interface agents', title: 'Serveur MCP CompatAir', subtitle: 'Catalogue et moteur déterministe en lecture seule' },

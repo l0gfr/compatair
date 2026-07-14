@@ -13,9 +13,18 @@ const guides = defineCollection({
 		readingTime: z.number().int().positive(),
 		featured: z.boolean().default(false),
 		author: z.string().default('CompatAir'),
-		reviewer: z.string().default('CompatAir'),
+		reviewStatus: z.enum(['internal', 'external']).default('internal'),
+		reviewer: z.string().min(2).optional(),
+		reviewerRole: z.string().min(2).optional(),
 		relatedCalculatorTool: z.string().optional(),
 		sources: z.array(z.url()).min(1),
+	}).superRefine((guide, context) => {
+		if (guide.reviewStatus === 'external' && (!guide.reviewer || !guide.reviewerRole)) {
+			context.addIssue({ code: 'custom', message: 'Une revue externe exige un relecteur nommé et son rôle.', path: ['reviewer'] });
+		}
+		if (guide.reviewStatus === 'internal' && (guide.reviewer || guide.reviewerRole)) {
+			context.addIssue({ code: 'custom', message: 'Un relecteur nommé exige le statut external.', path: ['reviewStatus'] });
+		}
 	}),
 });
 

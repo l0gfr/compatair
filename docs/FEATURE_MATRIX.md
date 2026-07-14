@@ -18,7 +18,7 @@
 - conversions, interpolation bornée, débit de pointe, débit moyen, réserve de cuve, récupération conditionnelle et version des formules ;
 - recherche globale, comparateur de deux ou trois modèles, pages par marque, pages par usage et pages de compatibilité limitées aux données concluantes ;
 - frontière SEO programmatique : couples produit-outil en `noindex,follow`, hors sitemap, avec fiches et pages d’usage comme surfaces indexables ;
-- guides Astro validés par Zod, glossaire, sommaires, auteurs, relecteurs et contenus associés ;
+- guides Astro validés par Zod, glossaire, sommaires, rédaction, statut de revue explicite et contenus associés ;
 - schémas d’offres, liste blanche des marchands, fraîcheur de 48 heures, redirection fermée et compteur agrégé ;
 - catalogue JSON normalisé par EAN/GTIN/MPN, familles de variantes et index de provenance par champ critique ;
 - snapshots JSON du catalogue et de chaque verdict, validation, checksums, détection des doublons et rapports de différences ;
@@ -28,7 +28,7 @@
 - serveur MCP Streamable HTTP en lecture seule, neuf outils, six ressources, trois prompts, pagination, quotas, limite de taille, contrôle Origin, santé et métriques agrégées ;
 - workflows CI, déploiement, sécurité, snapshot et disponibilité, avec permissions minimales et actions épinglées ;
 - CSP, HSTS, politiques de sécurité, signalement responsable, confidentialité, cookies, affiliation et sources ;
-- HTML statique, carte sociale PNG 1200 × 630 dédiée à chaque URL, budget automatisé de 50 Ko gzip maximum pour les scripts client externes d’une page, images dimensionnées, focus visible et réduction des animations.
+- HTML statique, cartes sociales PNG 1200 × 630 dédiées aux surfaces indexables et carte mutualisée pour les couples `noindex`, budget automatisé de 50 Ko gzip maximum pour les scripts client externes d’une page, images dimensionnées, focus visible et réduction des animations.
 - rapport GoAccess privé sans cookie, adresses IP masquées, paramètres d’URL supprimés, fenêtre de 90 jours et actualisation systemd toutes les 15 minutes.
 
 ## Prêt mais sans données partenaires
@@ -37,6 +37,7 @@
 - Le tri par prix, les frais de livraison, la disponibilité et les données structurées `Offer` ne s’activent qu’après validation d’un flux.
 - Les catégories d’outils sans référence constructeur sont indiquées comme à documenter. Aucun besoin générique n’est fabriqué.
 - L’import ManoMano accepte le CSV Awin, y compris compressé, et publie uniquement les lignes appariées par EAN, GTIN ou MPN. Un connecteur XML ne sera écrit qu’à partir du schéma officiel du flux concerné, avec interdiction des entités externes.
+- La gouvernance éditoriale, le protocole de publication et le statut de revue sont publics. Aucun professionnel externe n’est présenté comme relecteur tant qu’une personne qualifiée n’a pas accepté ce rôle, avec son nom et sa fonction.
 
 ## Opérations administrateur requises
 

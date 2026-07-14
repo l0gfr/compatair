@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Gouvernance éditoriale | CompatAir" description="Rôles, contrôles, indépendance et limites de la rédaction CompatAir, avec un statut de revue explicite pour chaque guide." breadcrumbs={[{ name: 'Gouvernance éditoriale', path: '/gouvernance-editoriale/' }]}>
+	<article class="container content">
+		<p class="eyebrow">Responsabilité éditoriale</p>
+		<h1>Qui écrit, qui relit, qui décide</h1>
+		<p class="lead">CompatAir distingue la rédaction, les contrôles automatisés et une éventuelle revue professionnelle externe. Aucun rôle n’est attribué à une personne qui ne l’a pas accepté.</p>
+
+		<div class="status-callout"><strong>Statut actuel</strong><span>Les guides font l’objet d’une relecture éditoriale interne et de contrôles techniques automatisés. Aucune validation professionnelle externe n’est actuellement revendiquée.</span></div>
+
+		<h2>Rôles publiés</h2>
+		<dl class="confidence-scale">
+			<div><dt>Rédaction</dt><dd><strong>CompatAir</strong> recherche les sources, rédige et maintient les contenus. Cette signature désigne l’organisation éditrice, pas un expert indépendant.</dd></div>
+			<div><dt>Relecture interne</dt><dd>Elle vérifie la cohérence du texte avec les sources, le catalogue et la méthodologie. Elle ne vaut pas validation d’une installation réelle.</dd></div>
+			<div><dt>Revue externe</dt><dd>Elle ne sera affichée qu’avec le nom, le rôle et l’accord explicite du professionnel. En son absence, le guide le dit clairement.</dd></div>
+			<div><dt>Décision technique</dt><dd>Le moteur déterministe applique les mêmes règles à tous les produits. Ni la rédaction, ni un marchand, ni une commission ne peuvent modifier un verdict au cas par cas.</dd></div>
+		</dl>
+
+		<h2>Protocole de publication</h2>
+		<ol><li>identifier précisément le produit ou le phénomène traité&nbsp;;</li><li>privilégier les notices, fiches constructeur, normes et organismes techniques compétents&nbsp;;</li><li>relier les caractéristiques critiques à leurs sources et dates de consultation&nbsp;;</li><li>séparer les valeurs publiées, les conversions exactes et les hypothèses utilisateur&nbsp;;</li><li>faire échouer les contrôles lorsque les données ou métadonnées obligatoires manquent&nbsp;;</li><li>consigner les corrections qui changent une valeur, un verdict ou une promesse mesurable.</li></ol>
+
+		<h2>Indépendance et conflits d’intérêts</h2>
+		<p>Une offre marchande peut être affichée après un verdict, jamais utilisée pour le calculer ou le classer. Une relation commerciale, une fourniture de produit ou une participation externe pertinente devra être indiquée sur le contenu concerné. Consultez la politique <a href="/affiliation/">Affiliation et indépendance</a>.</p>
+
+		<h2>Limites de responsabilité</h2>
+		<p>Un guide explique une méthode et un verdict compare des données publiées. Ils ne remplacent ni une mesure sur installation, ni la validation d’un installateur qualifié, ni les consignes du fabricant. Toute donnée déterminante absente produit un résultat insuffisant plutôt qu’une estimation silencieuse.</p>
+
+		<h2>Contrôler ou corriger</h2>
+		<p>Les sources et niveaux de confiance sont décrits dans <a href="/sources-fiabilite/">Sources et fiabilité</a>. Les changements vérifiables figurent dans le <a href="/corrections/">journal des corrections</a> et l’<a href="/preuves/">historique des preuves</a>. Une source plus récente peut être proposée depuis la page <a href="/contact/">Signaler une donnée</a>.</p>
+	</article>
+</BaseLayout>

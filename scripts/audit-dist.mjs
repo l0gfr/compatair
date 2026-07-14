@@ -138,9 +138,16 @@ for (const file of htmlFiles) {
 	const titleSource = html.match(/<meta name="compatair:title-source" content="([^"]+)"/)?.[1];
 	const noindex = robots.split(',').map((rule) => rule.trim()).includes('noindex');
 	const isCompatibilityDetail = label.startsWith('compatibilite/');
+	const isGuideArticle = /^guides\/[^/]+\/index\.html$/.test(label);
 	const isEditorialProductPage = /^(compresseurs|outils-pneumatiques|quel-compresseur-pour)\/[^/]+\/index\.html$/.test(label);
 	if (isCompatibilityDetail && !noindex) errors.push(`${label}: un couple produit-outil doit rester noindex`);
 	if (isEditorialProductPage && titleSource !== 'editorial') errors.push(`${label}: titre SEO éditorial requis`);
+	if (isGuideArticle) {
+		const reviewStatus = html.match(/data-review-status="([^"]+)"/)?.[1];
+		if (!['internal', 'external'].includes(reviewStatus)) errors.push(`${label}: statut de revue éditoriale absent ou invalide`);
+		if (!html.includes('href="/gouvernance-editoriale/"')) errors.push(`${label}: lien vers la gouvernance éditoriale absent`);
+		if (reviewStatus === 'internal' && !html.includes('sans validation professionnelle externe')) errors.push(`${label}: limite de revue externe absente`);
+	}
 	if (label === 'professionnels/index.html') {
 		const widgetTag = html.match(/<script[^>]+src="\/widget\/v1\.0\.0\/compatair-widget\.js"[^>]*>/)?.[0];
 		if (!widgetTag) errors.push(`${label}: widget immuable absent`);
@@ -195,7 +202,10 @@ for (const file of htmlFiles) {
 	if (html.includes('<meta property="og:type" content="article">')) {
 		const article = structuredNodes.find((node) => ['Article', 'TechArticle', 'NewsArticle'].includes(node['@type']));
 		if (!article) errors.push(`${label}: données Article absentes`);
-		else for (const property of ['headline', 'description', 'dateModified', 'mainEntityOfPage', 'author', 'publisher']) if (!article[property]) errors.push(`${label}: propriété Article absente ${property}`);
+		else {
+			for (const property of ['headline', 'description', 'dateModified', 'mainEntityOfPage', 'author', 'publisher']) if (!article[property]) errors.push(`${label}: propriété Article absente ${property}`);
+			if (isGuideArticle && html.includes('data-review-status="external"') && !article.reviewedBy?.name) errors.push(`${label}: relecteur externe absent des données Article`);
+		}
 	}
 
 	for (const match of html.matchAll(/(?:href|src)="(\/[^\"]*)"/g)) {
