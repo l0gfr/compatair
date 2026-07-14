@@ -8,13 +8,14 @@
         "http://localhost/compresseurs/einhell-te-ac-430-90-10/",
         "http://localhost/guides/guide-complet-dimensionner-compresseur-air/"
       ],
-      "numberOfRuns": 1,
+      "numberOfRuns": 3,
       "settings": {
         "preset": "desktop",
         "chromeFlags": "--headless --no-sandbox --disable-dev-shm-usage"
       }
     },
     "assert": {
+      "aggregationMethod": "median",
       "assertions": {
         "categories:performance": ["error", { "minScore": 0.85 }],
         "categories:accessibility": ["error", { "minScore": 0.95 }],
