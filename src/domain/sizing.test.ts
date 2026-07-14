@@ -46,17 +46,37 @@ describe('compatibility engine', () => {
 		expect(interpolateFad(compressor!, 7)).toBeUndefined();
 	});
 
-	it('keeps the new ABAC triphase FAD values bound to 10 bar', () => {
-		const expectedAtTenBar = new Map([
-			['abac-atf-s-4-100', 170],
+	it('keeps each ABAC industrial FAD bound to its documented pressure', () => {
+		const atfS = compressors.find((item) => item.id === 'abac-atf-s-4-100');
+		expect(atfS).toBeDefined();
+		expect(interpolateFad(atfS!, 10)).toBe(170);
+		expect(interpolateFad(atfS!, 7)).toBeUndefined();
+
+		const expectedAtSevenBar = new Map([
 			['abac-atl-5-5-270', 504],
 			['abac-atf-5-5-270d', 492],
+			['abac-atl-7-5-270', 702],
 		]);
-		for (const [id, fad] of expectedAtTenBar) {
+		for (const [id, fad] of expectedAtSevenBar) {
 			const compressor = compressors.find((item) => item.id === id);
 			expect(compressor).toBeDefined();
-			expect(interpolateFad(compressor!, 10)).toBe(fad);
-			expect(interpolateFad(compressor!, 7)).toBeUndefined();
+			expect(interpolateFad(compressor!, 7)).toBe(fad);
+			expect(interpolateFad(compressor!, 10)).toBeUndefined();
+		}
+	});
+
+	it('exposes exact 7 bar verdicts for the sourced 100 litre profiles', () => {
+		const expectedAtSevenBar = new Map([
+			['atlas-copco-ab25e100', 172],
+			['atlas-copco-ab30e100', 305],
+			['atlas-copco-ab40e100t', 340],
+		]);
+		for (const [id, fad] of expectedAtSevenBar) {
+			const compressor = compressors.find((item) => item.id === id);
+			expect(compressor).toBeDefined();
+			expect(compressor!.tankLiters).toBe(100);
+			expect(interpolateFad(compressor!, 7)).toBe(fad);
+			expect(interpolateFad(compressor!, 6.3)).toBeUndefined();
 		}
 	});
 
@@ -75,7 +95,7 @@ describe('compatibility engine', () => {
 	});
 
 	it('exposes the expanded sourced catalog', () => {
-		expect(compressors).toHaveLength(35);
+		expect(compressors).toHaveLength(40);
 		expect(tools).toHaveLength(12);
 	});
 

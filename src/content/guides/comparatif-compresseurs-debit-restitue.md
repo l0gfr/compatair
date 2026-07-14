@@ -1,6 +1,6 @@
 ---
-title: "Comparatif de 35 compresseurs : ce que leurs débits restitués permettent réellement de valider"
-description: "Comparaison factuelle de vingt-sept références Einhell, Metabo et ABAC selon les points de débit publiés, sans classement fondé sur le débit aspiré."
+title: "Comparatif de 40 compresseurs : ce que leurs débits restitués permettent réellement de valider"
+description: "Comparaison factuelle de quarante références documentées selon leurs points de débit restitué publiés, sans classement fondé sur le débit aspiré."
 pubDate: 2026-07-13
 updatedDate: 2026-07-14
 category: "Choisir"
