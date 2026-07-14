@@ -17,7 +17,7 @@ jobs:
   validate:
     if: github.ref == 'refs/heads/main' && vars.DEPLOY_ENABLED == 'true'
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
@@ -31,10 +31,13 @@ jobs:
           check-latest: false
 
       - name: Install pnpm
-        run: npm install --global pnpm@10.34.4
+        run: npm install --global --ignore-scripts pnpm@10.34.4
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Verify lockfile integrity and install-script policy
+        run: pnpm security:supply-chain
 
       - name: Lint source and workflow policy
         run: pnpm lint:source
@@ -117,16 +120,33 @@ jobs:
             done
           }
 
-          knock_server
-          ssh -i "$HOME/.ssh/id_ed25519" -p "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes "$remote" "install -d -m 700 '$remote_dir'"
-          knock_server
-          scp -i "$HOME/.ssh/id_ed25519" -P "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes \
+          retry_after_knock() {
+            local label=$1
+            shift
+            for attempt in 1 2 3; do
+              knock_server
+              if "$@"; then
+                return 0
+              fi
+              if (( attempt == 3 )); then
+                echo "::error::${label} a échoué après ${attempt} tentatives de port-knocking et connexion." >&2
+                return 1
+              fi
+              echo "::warning::${label} a échoué à la tentative ${attempt}; nouvel essai avec une séquence de port-knocking fraîche." >&2
+              sleep $((attempt * 5))
+            done
+          }
+
+          ssh_options=(-i "$HOME/.ssh/id_ed25519" -p "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=15 -o ConnectionAttempts=1 -o ServerAliveInterval=10 -o ServerAliveCountMax=2)
+          scp_options=(-i "$HOME/.ssh/id_ed25519" -P "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=15 -o ConnectionAttempts=1 -o ServerAliveInterval=10 -o ServerAliveCountMax=2)
+
+          retry_after_knock "Préparation du répertoire distant" ssh "${ssh_options[@]}" "$remote" "install -d -m 700 '$remote_dir'"
+          retry_after_knock "Transfert des archives" scp "${scp_options[@]}" \
             "compatair-${GITHUB_SHA}.tar.gz" "compatair-${GITHUB_SHA}.tar.gz.sha256" \
             "compatair-admin-${GITHUB_SHA}.tar.gz" "compatair-admin-${GITHUB_SHA}.tar.gz.sha256" \
             scripts/deploy-remote.sh \
             "${remote}:${remote_dir}/"
-          knock_server
-          ssh -i "$HOME/.ssh/id_ed25519" -p "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes "$remote" \
+          retry_after_knock "Activation de la release" ssh "${ssh_options[@]}" "$remote" \
             "cd '$remote_dir' && sha256sum --check 'compatair-admin-${GITHUB_SHA}.tar.gz.sha256' && tar -xzf 'compatair-admin-${GITHUB_SHA}.tar.gz' && bash '$remote_dir/deploy-remote.sh' '$remote_dir/compatair-${GITHUB_SHA}.tar.gz' '$remote_dir/compatair-${GITHUB_SHA}.tar.gz.sha256' '$DEPLOY_PATH' '$GITHUB_SHA'"
 
       - name: Verify live HTTPS surface
@@ -136,10 +156,18 @@ jobs:
           curl --fail --silent --show-error --location --retry 5 --retry-delay 3 --max-time 20 https://compatair.fr/ > /dev/null
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/robots.txt | grep -Fq 'https://compatair.fr/sitemap-index.xml'
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/sitemap-index.xml > /dev/null
+          curl --fail --silent --show-error --max-time 20 https://compatair.fr/scanner/ | grep -Fq 'Scanner et vérifier'
+          curl --fail --silent --show-error --max-time 20 https://compatair.fr/professionnels/ | grep -Fq 'Widget marchand'
+          curl --fail --silent --show-error --max-time 20 https://compatair.fr/widget/v1/compatair-widget.js | grep -Fq 'CompatAir widget API v1'
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/catalog.json | grep -Fq 'catalogVersion'
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/verdicts.json | grep -Fq 'verdictVersion'
           if [[ "$MCP_ENABLED" == "true" ]]; then
-            curl --fail --silent --show-error --max-time 20 https://compatair.fr/mcp-health | grep -Fq '"status":"ok"'
+            health=$(curl --fail --silent --show-error --max-time 20 https://compatair.fr/mcp-health)
+            grep -Fq '"status":"ok"' <<< "$health"
+            grep -Fq '"verdictVersion"' <<< "$health"
+            curl --fail --silent --show-error --max-time 20 \
+              'https://compatair.fr/api/v1/compatibility?compressorId=einhell-tc-ac-240-50-10-of&toolId=einhell-tc-pe-150' \
+              | grep -Fq '"schemaVersion":"1.0.0"'
           fi
     environment:
       name: production

@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="API de compatibilité pneumatique | CompatAir" description="API HTTP versionnée de CompatAir pour comparer un compresseur et un outil avec verdict, calculs, versions et sources." canonicalPath="/api/">
+	<section class="page-hero compact"><div class="container"><p class="eyebrow">CompatAir API 1.0</p><h1>Un verdict technique exploitable sans recopier le moteur</h1><p class="lead">L’API compare un compresseur et un outil documentés. Elle conserve les quatre verdicts, les versions du catalogue et du calcul, ainsi que les sources utilisées.</p></div></section>
+	<article class="container content api-documentation">
+		<div class="status-callout"><strong>Endpoint public bêta</strong><code>GET https://compatair.fr/api/v1/compatibility</code><span>Lecture seule, 120 requêtes par minute et par adresse. Une offre professionnelle contractualisée pourra fournir quotas, support et historique distincts.</span></div>
+		<h2>Requête</h2>
+		<pre><code>curl --get 'https://compatair.fr/api/v1/compatibility' \
+  --data-urlencode 'compressorId=einhell-tc-ac-240-50-10-of' \
+  --data-urlencode 'toolId=einhell-tc-pe-150'</code></pre>
+		<h2>Contrat de réponse</h2>
+		<ul><li><code>schemaVersion</code>, <code>catalogVersion</code> et <code>calculationVersion</code> ;</li><li>identités normalisées du compresseur et de l’outil ;</li><li>verdict <code>continuous</code>, <code>intermittent</code>, <code>incompatible</code> ou <code>insufficient_data</code> ;</li><li>FAD requis, FAD disponible, facteur limitant et avertissements lorsque ces données existent ;</li><li>sources datées et URL de détail CompatAir.</li></ul>
+		<h2>Erreurs et limites</h2><p>L’API refuse les identifiants inconnus, les paramètres non prévus ou dupliqués et les méthodes d’écriture. Si un verdict calculé manque au snapshot versionné, elle échoue explicitement au lieu d’utiliser un autre calcul. Une indisponibilité ne doit jamais être transformée côté client en verdict positif.</p>
+		<h2>Intégration navigateur</h2><p>La route autorise les lectures CORS sans cookie. Elle ne reçoit ni photographie, ni configuration d’atelier, ni donnée personnelle.</p>
+		<p><a class="button primary" href="/professionnels/">Voir le widget marchand</a> <a class="button" href="/mcp-documentation/">Interface MCP pour agents</a></p>
+	</article>
+</BaseLayout>

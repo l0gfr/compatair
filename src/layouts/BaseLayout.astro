@@ -42,6 +42,7 @@ const navItems = [
 	{ href: '/glossaire/', label: 'Glossaire' },
 	{ href: '/compresseurs/', label: 'Compresseurs' },
 	{ href: '/outils-pneumatiques/', label: 'Outils' },
+	{ href: '/scanner/', label: 'Scanner' },
 	{ href: '/methodologie/', label: 'Méthode' },
 ];
 const isCurrent = (href: string) => currentPath.startsWith(href);
@@ -161,6 +162,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 						<header><span class="footer-icon"><UiIcon name="calculator" /></span><h2>Dimensionner</h2></header>
 						<a href="/calculateur/"><span>Calculateur CompatAir</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/passeport/"><span>Passeport CompatAir</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/scanner/"><span>Scanner et vérifier</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/comparateur/"><span>Comparer des modèles</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/comparatifs/"><span>Comparatifs techniques</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/recherche/"><span>Recherche globale</span><UiIcon name="arrow" size={15} /></a>
@@ -174,6 +176,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 						<a href="/corrections/"><span>Journal des corrections</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/data/catalog.json"><span>Catalogue JSON</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/mcp-documentation/"><span>Interface MCP</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/api/"><span>API de compatibilité</span><UiIcon name="arrow" size={15} /></a>
 					</section>
 					<section class="footer-block">
 						<header><span class="footer-icon"><UiIcon name="shield" /></span><h2>Confiance</h2></header>
@@ -181,6 +184,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 						<a href="/contact/"><span>Signaler une donnée</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/securite/"><span>Signaler une vulnérabilité</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/confidentialite/"><span>Confidentialité</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/professionnels/"><span>Solutions professionnelles</span><UiIcon name="arrow" size={15} /></a>
 					</section>
 				</nav>
 

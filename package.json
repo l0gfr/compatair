@@ -15,30 +15,32 @@
     "test:watch": "vitest",
     "validate": "pnpm check && pnpm test && pnpm build",
     "security:audit": "pnpm audit --prod --audit-level high",
+    "security:supply-chain": "node scripts/audit-supply-chain.mjs",
+    "security:registry": "node scripts/audit-supply-chain.mjs --registry",
     "data:validate": "node scripts/validate-snapshot.mjs dist/data/catalog.json && node scripts/validate-snapshot.mjs dist/data/offers.json && node scripts/validate-snapshot.mjs dist/data/verdicts.json && node scripts/validate-snapshot.mjs dist/data/evidence-history.json && node scripts/validate-snapshot.mjs dist/data/transparency-barometer.json",
     "data:import-offers": "node scripts/import-offers.mjs",
-	"data:rank-demand": "node scripts/rank-demand.mjs",
-	"audit:dist": "node scripts/audit-dist.mjs",
-	"lint:source": "node scripts/lint-source.mjs",
-	"lighthouse": "lhci autorun",
+    "data:rank-demand": "node scripts/rank-demand.mjs",
+    "audit:dist": "node scripts/audit-dist.mjs",
+    "lint:source": "node scripts/lint-source.mjs",
+    "lighthouse": "lhci autorun",
     "validate:full": "pnpm validate && pnpm data:validate",
     "preview": "astro preview",
     "mcp:start": "node server/mcp-server.mjs",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.3",
-    "@fontsource-variable/manrope": "^5.2.8",
-    "@fontsource-variable/newsreader": "^5.2.10",
-    "astro": "^7.0.7",
+    "@astrojs/sitemap": "3.7.3",
+    "@fontsource-variable/manrope": "5.2.8",
+    "@fontsource-variable/newsreader": "5.2.10",
+    "astro": "7.0.7",
     "sharp": "0.35.3",
-    "zod": "^4.4.3"
+    "zod": "4.4.3"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.9",
+    "@astrojs/check": "0.9.9",
     "@lhci/cli": "0.15.1",
-    "typescript": "^6.0.0",
-    "vitest": "^4.1.10"
+    "typescript": "6.0.3",
+    "vitest": "4.1.10"
   },
   "pnpm": {
     "overrides": {

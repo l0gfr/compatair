@@ -11,6 +11,7 @@ fi
 
 test -f /var/www/html/compatair/current/_server/mcp-server.mjs
 test -f /var/www/html/compatair/current/data/catalog.json
+test -f /var/www/html/compatair/current/data/verdicts.json
 test -f "$project_dir/deploy/systemd/compatair-mcp.service"
 node_binary="/opt/compatair/node/bin/node"
 if [[ ! -x "$node_binary" ]]; then

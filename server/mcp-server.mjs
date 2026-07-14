@@ -92,8 +92,14 @@ function isJsonContentType(request) {
 	return /^application\/json(?:\s*;|$)/.test(value);
 }
 
-export function createCompatAirServer({ catalog, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, allowedOrigins, demandAggregatePath = undefined }) {
+/**
+ * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, allowedOrigins: Set<string>, demandAggregatePath?: string }} options
+ */
+export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable' }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, allowedOrigins, demandAggregatePath = undefined }) {
 	const core = createMcpCore(catalog, offerSnapshot);
+	const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
+	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item]));
+	const verdictMap = new Map((verdictSnapshot.pairs ?? []).map((item) => [`${item.compressorId}--${item.toolId}`, item]));
 	const allow = createRateLimiter();
 	const counters = { rpc: 0, errors: 0, tools: Object.create(null), events: { calculator_used: 0 }, affiliateClicks: Object.create(null) };
 	const demandStore = createDemandAggregateStore({ filePath: demandAggregatePath, catalog });
@@ -104,7 +110,34 @@ export function createCompatAirServer({ catalog, offerSnapshot = { offers: [], s
 		let url;
 		try { url = new URL(request.url, 'http://localhost'); } catch { return json(response, 400, { error: 'invalid_request_target' }); }
 
-		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, demandAggregation: { enabled: demandStore.enabled, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION } });
+		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, verdictVersion: verdictSnapshot.verdictVersion, demandAggregation: { enabled: demandStore.enabled, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION } });
+
+		if (url.pathname === '/api/v1/compatibility') {
+			const corsHeaders = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, OPTIONS', 'Access-Control-Allow-Headers': 'Accept', 'Cross-Origin-Resource-Policy': 'cross-origin', Vary: 'Origin' };
+			if (request.method === 'OPTIONS') { response.writeHead(204, { ...corsHeaders, 'Cache-Control': 'public, max-age=86400' }); return response.end(); }
+			if (request.method !== 'GET') return json(response, 405, { error: 'method_not_allowed' }, { ...corsHeaders, Allow: 'GET, OPTIONS' });
+			if (!allow(`api:${clientAddress(request)}`)) return json(response, 429, { error: 'rate_limited' }, { ...corsHeaders, 'Retry-After': '60' });
+			const keys = [...url.searchParams.keys()];
+			if (keys.some((key) => !['compressorId', 'toolId'].includes(key)) || ['compressorId', 'toolId'].some((key) => url.searchParams.getAll(key).length > 1)) return json(response, 400, { error: 'invalid_query' }, corsHeaders);
+			const compressorId = url.searchParams.get('compressorId') ?? '';
+			const toolId = url.searchParams.get('toolId') ?? '';
+			if (!/^[a-z0-9-]{1,160}$/.test(compressorId) || !/^[a-z0-9-]{1,160}$/.test(toolId)) return json(response, 400, { error: 'invalid_query' }, corsHeaders);
+			const compressor = compressorMap.get(compressorId);
+			const tool = toolMap.get(toolId);
+			if (!compressor || !tool) return json(response, 404, { error: 'product_not_found' }, corsHeaders);
+			const snapshotPair = verdictMap.get(`${compressorId}--${toolId}`);
+			if (tool.demandModel === 'fixed-flow' && !snapshotPair) return json(response, 503, { error: 'verdict_snapshot_unavailable' }, { ...corsHeaders, 'Retry-After': '60' });
+			const evaluation = snapshotPair ?? { verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data' };
+			return json(response, 200, {
+				schemaVersion: '1.0.0', catalogVersion: catalog.catalogVersion, catalogVerifiedAt: catalog.verifiedAt, verdictVersion: verdictSnapshot.verdictVersion, calculationVersion: verdictSnapshot.calculationVersion,
+				input: { compressorId, toolId },
+				compressor: { id: compressor.id, brand: compressor.brand, model: compressor.model, slug: compressor.slug },
+				tool: { id: tool.id, brand: tool.brand, model: tool.model, label: tool.label, slug: tool.slug },
+				compatibility: evaluation,
+				sources: [...(compressor.evidence ?? []), ...(tool.evidence ?? [])].map((source) => ({ id: source.id, label: source.sourceLabel, url: source.sourceUrl, retrievedAt: source.retrievedAt, confidence: source.confidence })),
+				detailsUrl: `https://compatair.fr/compatibilite/${compressor.slug}--${tool.slug}/`,
+			}, { ...corsHeaders, 'Cache-Control': 'public, max-age=300' });
+		}
 
 		if (url.pathname === '/events') {
 			if (request.method !== 'POST') return json(response, 405, { error: 'method_not_allowed' }, { Allow: 'POST' });
@@ -182,12 +215,15 @@ async function start() {
 	if (!Number.isInteger(port) || port < 1 || port > 65_535) throw new Error('MCP_PORT invalide.');
 	const catalogPath = process.env.COMPAT_AIR_CATALOG ?? new URL('../dist/data/catalog.json', import.meta.url).pathname;
 	const offersPath = process.env.COMPAT_AIR_OFFERS ?? new URL('../dist/data/offers.json', import.meta.url).pathname;
+	const verdictsPath = process.env.COMPAT_AIR_VERDICTS ?? new URL('../dist/data/verdicts.json', import.meta.url).pathname;
 	const allowedOrigins = new Set((process.env.MCP_ALLOWED_ORIGINS ?? 'https://compatair.fr,https://www.compatair.fr').split(',').map((item) => item.trim()).filter(Boolean));
 	const demandAggregatePath = process.env.COMPAT_AIR_DEMAND_AGGREGATES || undefined;
 	const catalog = JSON.parse(await readFile(catalogPath, 'utf8'));
+	const verdictSnapshot = JSON.parse(await readFile(verdictsPath, 'utf8'));
+	if (verdictSnapshot.catalogVersion !== catalog.catalogVersion || !Array.isArray(verdictSnapshot.pairs)) throw new Error('Le snapshot de verdicts ne correspond pas au catalogue.');
 	let offerSnapshot = { offers: [], snapshotVersion: 'empty' };
 	try { offerSnapshot = JSON.parse(await readFile(offersPath, 'utf8')); } catch {}
-	const server = createCompatAirServer({ catalog, offerSnapshot, allowedOrigins, demandAggregatePath });
+	const server = createCompatAirServer({ catalog, verdictSnapshot, offerSnapshot, allowedOrigins, demandAggregatePath });
 	server.on('error', (error) => { console.error(error); process.exitCode = 1; });
 	server.listen(port, host, () => console.error(`CompatAir MCP listening on http://${host}:${port}`));
 }

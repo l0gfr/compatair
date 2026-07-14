@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Widget et API pour marchands pneumatiques | CompatAir" description="Intégrez un verdict de compatibilité sourcé sur une fiche marchande grâce au widget et à l’API CompatAir." canonicalPath="/professionnels/">
+	<section class="page-hero compact pro-hero"><div class="container split-head"><div><p class="eyebrow">CompatAir pour les professionnels</p><h1>Le verdict technique au point de décision</h1><p class="lead">Le site public construit l’autorité documentaire. Le widget, l’API et les données versionnées permettent aux marchands d’expliquer une compatibilité sans laisser l’affiliation influencer le résultat.</p></div><div class="passport-privacy-note"><strong>Bêta technique disponible</strong><p>L’API publique et le widget sont livrés sans engagement de disponibilité. Quotas dédiés, support, historique et exports restent à contractualiser.</p></div></div></section>
+	<section class="section"><div class="container b2b-grid">
+		<article class="b2b-card"><p class="eyebrow">Widget marchand</p><h2>« Ce compresseur convient-il à mon outil ? »</h2><div class="widget-demo"><div><strong>CompatAir</strong><small>Moteur 1.1.0</small></div><p>Ce compresseur convient-il à cet outil ?</p><b>Non, incompatible</b><span>Le FAD documenté ne couvre pas le besoin de l’outil.</span><a href="/compatibilite/einhell-tc-ac-240-50-10-of--ponceuse-excentrique-einhell-tc-pe-150/">Voir le calcul et les sources</a></div></article>
+		<article class="b2b-card"><p class="eyebrow">API HTTP</p><h2>Un contrat stable pour les catalogues</h2><p>Une requête fournit le verdict, les facteurs limitants, les versions et les preuves. Le moteur reste centralisé : une correction documentaire peut être répercutée sans modifier le code du marchand.</p><a class="button" href="/api/">Lire la documentation API</a></article>
+	</div></section>
+	<section class="section integration-section"><div class="container"><div class="section-head"><p class="eyebrow">Intégration</p><h2>Deux identifiants, aucun verdict commercial</h2></div><pre><code>&lt;script
+  src="https://compatair.fr/widget/v1/compatair-widget.js"
+  data-compressor-id="einhell-tc-ac-240-50-10-of"
+  data-tool-id="einhell-tc-pe-150"
+  defer&gt;&lt;/script&gt;</code></pre><p>Le site marchand doit autoriser <code>https://compatair.fr</code> dans ses politiques <code>script-src</code> et <code>connect-src</code>. Le widget utilise un Shadow DOM, n’écrit aucun cookie et ne transmet que les deux identifiants techniques.</p></div></section>
+	<section class="section b2b-boundary"><div class="container callout"><div><p class="eyebrow">Modèle économique</p><h2>Ce qui peut financer le catalogue</h2><p>La valeur B2B vient de la couverture documentaire, de la stabilité du contrat, des corrections versionnées et du support d’intégration, jamais d’un verdict favorable acheté.</p></div><ul><li>Quotas et disponibilité contractualisés</li><li>Surveillance des changements de données</li><li>Exports catalogue et dossiers d’intégration</li><li>Extension priorisée, sans influencer les calculs</li></ul></div></section>
+</BaseLayout>

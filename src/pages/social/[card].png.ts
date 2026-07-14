@@ -11,9 +11,11 @@ const staticCards: SocialCard[] = [
 	{ path: '/404.html', kicker: 'Navigation', title: 'Page introuvable', subtitle: 'Retrouvez le catalogue et les guides CompatAir', accent: '#e39a5e' },
 	{ path: '/410/', kicker: 'Navigation', title: 'Contenu retiré', subtitle: 'Cette ressource ne possède pas de remplacement direct', accent: '#e39a5e' },
 	{ path: '/affiliation/', kicker: 'Indépendance', title: 'Affiliation et verdict technique', subtitle: 'Une commission ne modifie jamais la compatibilité' },
+	{ path: '/api/', kicker: 'CompatAir API 1.0', title: 'API de compatibilité pneumatique', subtitle: 'Verdicts, versions et sources dans un contrat en lecture seule' },
 	{ path: '/barometre-transparence/', kicker: 'Édition 2026', title: 'Baromètre de transparence documentaire', subtitle: 'Un score de documentation, jamais de qualité produit' },
 	{ path: '/calculateur/', kicker: 'Moteur CompatAir', title: 'Dimensionner une installation pneumatique', subtitle: 'Débit, pression, fréquence et limites explicites' },
 	{ path: '/passeport/', kicker: 'Dossier versionné', title: 'Le Passeport CompatAir', subtitle: 'Installation, calculs, sources, marges et limites' },
+	{ path: '/professionnels/', kicker: 'CompatAir B2B', title: 'Widget et API pour marchands', subtitle: 'Le verdict technique au point de décision' },
 	{ path: '/comparateur/', kicker: 'Comparaison', title: 'Comparer des compresseurs', subtitle: 'Caractéristiques et données manquantes côte à côte' },
 	{ path: '/comparatifs/', kicker: 'Comparatifs', title: 'Comparer sans confondre les chiffres', subtitle: 'FAD, pression et confiance documentaire' },
 	{ path: '/comparatifs/compresseurs-debit-restitue/', kicker: 'Comparatif factuel', title: 'Compresseurs par débit restitué', subtitle: 'Chaque valeur reste liée à sa pression publiée' },
@@ -33,6 +35,7 @@ const staticCards: SocialCard[] = [
 	{ path: '/preuves/', kicker: 'AirGraph · traçabilité', title: 'Historique complet des preuves', subtitle: 'Sources, versions, dates et empreintes vérifiables' },
 	{ path: '/recherche/', kicker: 'Navigation', title: 'Recherche technique', subtitle: 'Produits, guides et définitions CompatAir' },
 	{ path: '/securite/', kicker: 'Sécurité', title: 'Signaler une vulnérabilité', subtitle: 'Canal de signalement responsable', accent: '#e39a5e' },
+	{ path: '/scanner/', kicker: 'Scanner et vérifier', title: 'Une plaque propose, les preuves décident', subtitle: 'MPN, EAN et lecture locale avec confirmation obligatoire' },
 	{ path: '/sources-fiabilite/', kicker: 'Traçabilité', title: 'Sources et niveaux de fiabilité', subtitle: 'Origine, fraîcheur et confiance des données' },
 ];
 

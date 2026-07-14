@@ -1,0 +1,190 @@
+<div class="scanner" data-scanner>
+	<form class="scanner-form" data-scanner-form>
+		<div class="scanner-photo">
+			<div class="scanner-preview" data-preview>
+				<span>Photo locale</span>
+				<strong>Aucune plaque chargée</strong>
+			</div>
+			<div>
+				<label class="button" for="scanner-photo">Photographier ou choisir une image</label>
+				<input id="scanner-photo" data-photo type="file" accept="image/*" capture="environment" />
+				<button class="button subtle" type="button" data-read-photo disabled>Proposer un identifiant</button>
+				<p class="scanner-local-note">L’image reste dans ce navigateur. Elle n’est ni envoyée, ni enregistrée.</p>
+			</div>
+		</div>
+
+		<div class="scanner-confirmation">
+			<div class="field">
+				<label for="scanner-identifier">MPN, EAN ou GTIN à confirmer</label>
+				<input id="scanner-identifier" data-identifier type="text" maxlength="160" autocomplete="off" placeholder="Ex. 4010393 ou 4006825597295" required />
+				<small data-candidate-origin>Saisie manuelle.</small>
+			</div>
+			<button class="button primary" type="submit">Confirmer et vérifier</button>
+		</div>
+		<p class="scanner-status" role="status" data-status></p>
+		<p class="form-error" role="alert" data-error hidden></p>
+	</form>
+
+	<section class="scanner-result" data-result hidden>
+		<header class="scanner-result-head">
+			<div><p class="eyebrow">Modèle identifié après confirmation</p><h2 data-product-name></h2><p data-match></p></div>
+			<a class="button" data-product-link href="/">Voir la fiche et les preuves</a>
+		</header>
+		<div class="scanner-result-grid">
+			<section class="scanner-result-panel can"><span>Peut alimenter</span><h3 data-can-title></h3><ul data-can></ul></section>
+			<section class="scanner-result-panel cannot"><span>Ne peut pas alimenter</span><h3 data-cannot-title></h3><ul data-cannot></ul></section>
+		</div>
+		<section class="scanner-result-panel uncertain"><span>Données insuffisantes</span><h3>CompatAir refuse de conclure</h3><ul data-insufficient></ul></section>
+		<section class="scanner-unlocks" data-unlocks-section>
+			<p class="eyebrow">Débloquer un usage</p>
+			<h3>Tuyau documenté ou autre compresseur</h3>
+			<div data-unlocks></div>
+		</section>
+		<section class="scanner-evidence"><h3>Preuves du modèle identifié</h3><div data-evidence></div></section>
+	</section>
+</div>
+
+<script>
+	import { compressors, tools } from '../data/catalog';
+	import { compressorCapabilities, identifyProducts, toolCompatibleCompressors } from '../domain/product-identification';
+
+	type DetectorResult = { rawValue?: string };
+	type Detector = { detect(source: ImageBitmap): Promise<DetectorResult[]> };
+	type DetectorConstructor = new (options?: { formats?: string[] }) => Detector;
+	type DetectionWindow = Window & typeof globalThis & { BarcodeDetector?: DetectorConstructor; TextDetector?: DetectorConstructor };
+
+	const root = document.querySelector<HTMLElement>('[data-scanner]');
+	const form = root?.querySelector<HTMLFormElement>('[data-scanner-form]');
+	const photo = root?.querySelector<HTMLInputElement>('[data-photo]');
+	const readPhoto = root?.querySelector<HTMLButtonElement>('[data-read-photo]');
+	const identifier = root?.querySelector<HTMLInputElement>('[data-identifier]');
+	let photoUrl: string | undefined;
+
+	const query = <T extends Element>(selector: string) => root?.querySelector<T>(selector);
+	const setText = (selector: string, value: string) => { const element = query<HTMLElement>(selector); if (element) element.textContent = value; };
+	const linkFor = (type: 'compressor' | 'tool', slug: string) => type === 'compressor' ? `/compresseurs/${slug}/` : `/outils-pneumatiques/${slug}/`;
+	const verdictLabel = (verdict: string) => verdict === 'continuous' ? 'continu' : verdict === 'intermittent' ? 'intermittent' : verdict === 'incompatible' ? 'incompatible' : 'données insuffisantes';
+
+	function renderList(targetSelector: string, values: Array<{ label: string; href?: string; suffix?: string }>, empty: string) {
+		const target = query<HTMLUListElement>(targetSelector);
+		if (!target) return;
+		target.replaceChildren();
+		for (const value of values.length ? values : [{ label: empty }]) {
+			const item = document.createElement('li');
+			if (value.href) { const link = document.createElement('a'); link.href = value.href; link.textContent = value.label; item.append(link); }
+			else item.textContent = value.label;
+			if (value.suffix) item.append(document.createTextNode(` · ${value.suffix}`));
+			target.append(item);
+		}
+	}
+
+	photo?.addEventListener('change', () => {
+		const file = photo.files?.[0];
+		if (!file || !file.type.startsWith('image/') || file.size > 15_000_000) {
+			setText('[data-status]', file ? 'Image refusée : format image et taille maximale de 15 Mo requis.' : '');
+			if (readPhoto) readPhoto.disabled = true;
+			return;
+		}
+		if (photoUrl) URL.revokeObjectURL(photoUrl);
+		photoUrl = URL.createObjectURL(file);
+		const preview = query<HTMLElement>('[data-preview]');
+		if (preview) {
+			const image = document.createElement('img');
+			image.src = photoUrl;
+			image.alt = 'Aperçu local de la plaque à lire';
+			preview.replaceChildren(image);
+		}
+		if (readPhoto) readPhoto.disabled = false;
+		setText('[data-status]', 'Image prête. La lecture locale proposera seulement un candidat à confirmer.');
+	});
+
+	readPhoto?.addEventListener('click', async () => {
+		const file = photo?.files?.[0];
+		if (!file || !identifier || !readPhoto) return;
+		readPhoto.disabled = true;
+		setText('[data-status]', 'Lecture locale en cours…');
+		try {
+			const bitmap = await createImageBitmap(file);
+			const detectionWindow = window as DetectionWindow;
+			const proposals: Array<{ value: string; origin: 'code-barres' | 'OCR local' }> = [];
+			if (detectionWindow.BarcodeDetector) {
+				const detector = new detectionWindow.BarcodeDetector({ formats: ['ean_13', 'ean_8', 'upc_a', 'upc_e', 'code_128'] });
+				for (const result of await detector.detect(bitmap)) if (result.rawValue) proposals.push({ value: result.rawValue, origin: 'code-barres' });
+			}
+			if (!proposals.length && detectionWindow.TextDetector) {
+				const detector = new detectionWindow.TextDetector();
+				const text = (await detector.detect(bitmap)).map((item) => item.rawValue ?? '').join(' ');
+				const tokens = text.toUpperCase().match(/[A-Z0-9][A-Z0-9._/-]{3,23}/g) ?? [];
+				const candidate = tokens.find((token) => identifyProducts(token, compressors, tools).length > 0);
+				if (candidate) proposals.push({ value: candidate, origin: 'OCR local' });
+			}
+			bitmap.close();
+			const proposal = proposals.find((item) => identifyProducts(item.value, compressors, tools).length > 0) ?? proposals[0];
+			if (proposal) {
+				identifier.value = proposal.value;
+				setText('[data-candidate-origin]', `Proposition issue de ${proposal.origin}, non validée. Vérifiez la plaque puis confirmez.`);
+				setText('[data-status]', 'Un identifiant a été proposé. Aucun modèle n’est validé tant que vous ne cliquez pas sur « Confirmer et vérifier ».');
+			} else {
+				setText('[data-status]', 'Aucun identifiant exploitable détecté localement. Saisissez le MPN ou l’EAN visible sur la plaque.');
+			}
+		} catch {
+			setText('[data-status]', 'La lecture automatique locale n’est pas disponible pour cette image. Saisissez l’identifiant visible.');
+		} finally { readPhoto.disabled = false; }
+	});
+
+	form?.addEventListener('submit', (event) => {
+		event.preventDefault();
+		const error = query<HTMLElement>('[data-error]');
+		if (error) error.hidden = true;
+		const matches = identifyProducts(identifier?.value ?? '', compressors, tools);
+		if (matches.length !== 1) {
+			if (error) { error.hidden = false; error.textContent = matches.length > 1 ? 'Identifiant ambigu : vérifiez la marque et le modèle sur la plaque.' : 'Aucun modèle ne correspond exactement à cet identifiant validé.'; }
+			query<HTMLElement>('[data-result]')?.setAttribute('hidden', '');
+			return;
+		}
+		const match = matches[0];
+		const product = match.product;
+		setText('[data-product-name]', `${product.brand} ${product.model}`);
+		setText('[data-match]', `Correspondance exacte par ${match.matchedBy.toUpperCase()} ${match.matchedValue}.`);
+		query<HTMLAnchorElement>('[data-product-link]')?.setAttribute('href', linkFor(match.type, product.slug));
+
+		if (match.type === 'compressor') {
+			const unlockSection = query<HTMLElement>('[data-unlocks-section]'); if (unlockSection) unlockSection.hidden = false;
+			const result = compressorCapabilities(product as (typeof compressors)[number], compressors, tools);
+			setText('[data-can-title]', `${result.compatible.length} outil(s) couvert(s)`);
+			setText('[data-cannot-title]', `${result.incompatible.length} outil(s) incompatibles`);
+			renderList('[data-can]', result.compatible.map(({ tool, result: verdict }) => ({ label: tool.label, href: linkFor('tool', tool.slug), suffix: verdictLabel(verdict.verdict) })), 'Aucun outil concluamment compatible dans le catalogue actuel.');
+			renderList('[data-cannot]', result.incompatible.map(({ tool, result: verdict }) => ({ label: tool.label, href: linkFor('tool', tool.slug), suffix: verdict.limitingFactor === 'pressure' ? 'pression insuffisante' : 'débit insuffisant' })), 'Aucun outil concluamment incompatible.');
+			renderList('[data-insufficient]', result.insufficient.map(({ tool }) => ({ label: tool.label, href: linkFor('tool', tool.slug) })), 'Aucun cas à données insuffisantes.');
+			const unlocks = query<HTMLElement>('[data-unlocks]');
+			if (unlocks) {
+				unlocks.replaceChildren(...result.unlocks.map((unlock) => {
+					const article = document.createElement('article');
+					const title = document.createElement('strong'); title.textContent = unlock.toolLabel;
+					const hose = document.createElement('p'); hose.textContent = unlock.hoseAdvice;
+					const alternatives = document.createElement('p'); alternatives.textContent = unlock.alternativeCompressors.length ? `Compresseurs documentés qui débloquent l’usage : ${unlock.alternativeCompressors.map((item) => item.label).join(', ')}.` : 'Aucun compresseur alternatif concluant dans le catalogue actuel.';
+					article.append(title, hose, alternatives); return article;
+				}));
+			}
+		} else {
+			const result = toolCompatibleCompressors(product as (typeof tools)[number], compressors);
+			setText('[data-can-title]', `${result.compatible.length} compresseur(s) compatibles`);
+			setText('[data-cannot-title]', `${result.incompatible.length} compresseur(s) incompatibles`);
+			renderList('[data-can]', result.compatible.map(({ compressor, result: verdict }) => ({ label: `${compressor.brand} ${compressor.model}`, href: linkFor('compressor', compressor.slug), suffix: verdictLabel(verdict.verdict) })), 'Aucun compresseur concluant dans le catalogue actuel.');
+			renderList('[data-cannot]', result.incompatible.map(({ compressor, result: verdict }) => ({ label: `${compressor.brand} ${compressor.model}`, href: linkFor('compressor', compressor.slug), suffix: verdict.limitingFactor === 'pressure' ? 'pression insuffisante' : 'débit insuffisant' })), 'Aucun compresseur concluamment incompatible.');
+			renderList('[data-insufficient]', result.insufficient.map(({ compressor }) => ({ label: `${compressor.brand} ${compressor.model}`, href: linkFor('compressor', compressor.slug) })), 'Aucun cas à données insuffisantes.');
+			const section = query<HTMLElement>('[data-unlocks-section]'); if (section) section.hidden = true;
+		}
+
+		const evidence = query<HTMLElement>('[data-evidence]');
+		if (evidence) {
+			evidence.replaceChildren(...product.evidence.map((source) => {
+				const link = document.createElement('a'); link.href = source.sourceUrl; link.rel = 'noreferrer'; link.textContent = `${source.sourceLabel} · ${source.retrievedAt} · confiance ${source.confidence}`; return link;
+			}));
+		}
+		query<HTMLElement>('[data-result]')?.removeAttribute('hidden');
+		query<HTMLElement>('[data-result]')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	});
+
+	window.addEventListener('pagehide', () => { if (photoUrl) URL.revokeObjectURL(photoUrl); }, { once: true });
+</script>

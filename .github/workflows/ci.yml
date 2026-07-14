@@ -30,10 +30,13 @@ jobs:
           check-latest: false
 
       - name: Install pnpm
-        run: npm install --global pnpm@10.34.4
+        run: npm install --global --ignore-scripts pnpm@10.34.4
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Verify lockfile integrity and install-script policy
+        run: pnpm security:supply-chain
 
       - name: Lint source and workflow policy
         run: pnpm lint:source
