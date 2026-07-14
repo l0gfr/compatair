@@ -46,7 +46,7 @@ describe('CompatAir Apache CSP', () => {
 	it('publishes only the read-only API and widget as cross-origin resources', () => {
 		expect(config).toContain('ProxyPass /api/v1/compatibility');
 		expect(config).toContain('<Location "/api/v1/compatibility">');
-		expect(config).toContain('<Location "/widget/v1/compatair-widget.js">');
+		expect(config).toContain('<LocationMatch "^/widget/(?:v1|v1\\.0\\.0)/compatair-widget\\.js$">');
 		expect(config.match(/Cross-Origin-Resource-Policy "cross-origin"/g)).toHaveLength(2);
 	});
 

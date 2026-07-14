@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { lstat, readdir, readFile } from 'node:fs/promises';
 import { basename, join, relative, resolve } from 'node:path';
 import { gzipSync } from 'node:zlib';
@@ -9,7 +10,7 @@ const htmlFiles = [];
 const artifactPaths = new Set();
 const maximumDocumentTitleLength = 60;
 const maximumPageScriptBytesGzip = 50 * 1024;
-let largestPageScriptBudget = { bytes: 0, label: '' };
+let largestPageScriptBudget = { bytes: 0, label: '', modules: 0 };
 
 async function walk(directory) {
 	for (const name of await readdir(directory)) {
@@ -38,6 +39,35 @@ function jsonLdNodes(value) {
 }
 
 await walk(root);
+
+const socialImageCount = [...artifactPaths].filter((path) => /^\/social\/[^/]+\.png$/.test(path)).length;
+if (socialImageCount > 160) errors.push(`social: ${socialImageCount} cartes générées, plafond 160 dépassé`);
+
+const immutableWidgetPath = '/widget/v1.0.0/compatair-widget.js';
+let immutableWidgetIntegrity = '';
+if (!artifactPaths.has(immutableWidgetPath)) errors.push(`${immutableWidgetPath}: widget immuable absent`);
+else immutableWidgetIntegrity = `sha384-${createHash('sha384').update(await readFile(join(root, immutableWidgetPath))).digest('base64')}`;
+
+async function scriptClosure(entryPaths) {
+	const modules = new Set();
+	async function visit(scriptPath) {
+		if (modules.has(scriptPath)) return;
+		modules.add(scriptPath);
+		if (!artifactPaths.has(scriptPath)) { errors.push(`${scriptPath}: module JavaScript introuvable`); return; }
+		const source = await readFile(join(root, scriptPath), 'utf8');
+		const imports = source.matchAll(/\b(?:import|export)[^\"'()]*?\bfrom\s*[\"']([^\"']+\.js(?:\?[^\"']*)?)[\"']|\bimport\s*\(\s*[\"']([^\"']+\.js(?:\?[^\"']*)?)[\"']/g);
+		for (const match of imports) {
+			const specifier = match[1] ?? match[2];
+			const imported = new URL(specifier, new URL(scriptPath, siteOrigin));
+			if (imported.origin !== siteOrigin) { errors.push(`${scriptPath}: import JavaScript externe non budgété ${specifier}`); continue; }
+			await visit(imported.pathname);
+		}
+	}
+	for (const entryPath of entryPaths) await visit(entryPath);
+	let bytes = 0;
+	for (const modulePath of modules) if (artifactPaths.has(modulePath)) bytes += gzipSync(await readFile(join(root, modulePath))).byteLength;
+	return { bytes, modules: modules.size };
+}
 
 const sitemapIndexPath = join(root, 'sitemap-index.xml');
 if (!artifactPaths.has('/sitemap-index.xml')) errors.push('sitemap-index.xml: fichier absent');
@@ -80,6 +110,23 @@ const sitePaths = new Set(htmlFiles.map((file) => {
 	return rel === 'index.html' ? '/' : `/${rel.replace(/index\.html$/, '')}`;
 }));
 
+let verifiedCompatibilityPairs = 0;
+if (!artifactPaths.has('/data/catalog.json') || !artifactPaths.has('/data/verdicts.json')) errors.push('data: catalogue ou verdicts absents pour contrôler les URL de compatibilité');
+else {
+	const catalog = JSON.parse(await readFile(join(root, '/data/catalog.json'), 'utf8'));
+	const verdicts = JSON.parse(await readFile(join(root, '/data/verdicts.json'), 'utf8'));
+	const verdictMap = new Map((verdicts.pairs ?? []).map((item) => [`${item.compressorId}--${item.toolId}`, item]));
+	for (const compressor of catalog.compressors ?? []) for (const tool of catalog.tools ?? []) {
+		const pair = verdictMap.get(`${compressor.id}--${tool.id}`);
+		if (tool.demandModel === 'fixed-flow' && !pair) errors.push(`verdicts: couple à débit fixe absent ${compressor.id}--${tool.id}`);
+		const verdict = pair?.verdict ?? 'insufficient_data';
+		const detailsPath = `/compatibilite/${compressor.slug}--${tool.slug}/`;
+		if (verdict !== 'insufficient_data' && !sitePaths.has(detailsPath)) errors.push(`verdicts: page de détail absente ${detailsPath}`);
+		if (verdict === 'insufficient_data' && sitePaths.has(detailsPath)) errors.push(`verdicts: page de détail indue pour données insuffisantes ${detailsPath}`);
+		verifiedCompatibilityPairs += 1;
+	}
+}
+
 for (const file of htmlFiles) {
 	const html = await readFile(file, 'utf8');
 	const label = relative(root, file);
@@ -94,6 +141,15 @@ for (const file of htmlFiles) {
 	const isEditorialProductPage = /^(compresseurs|outils-pneumatiques|quel-compresseur-pour)\/[^/]+\/index\.html$/.test(label);
 	if (isCompatibilityDetail && !noindex) errors.push(`${label}: un couple produit-outil doit rester noindex`);
 	if (isEditorialProductPage && titleSource !== 'editorial') errors.push(`${label}: titre SEO éditorial requis`);
+	if (label === 'professionnels/index.html') {
+		const widgetTag = html.match(/<script[^>]+src="\/widget\/v1\.0\.0\/compatair-widget\.js"[^>]*>/)?.[0];
+		if (!widgetTag) errors.push(`${label}: widget immuable absent`);
+		else {
+			const integrity = widgetTag.match(/\sintegrity="([^"]+)"/)?.[1];
+			if (!integrity || integrity !== immutableWidgetIntegrity) errors.push(`${label}: empreinte SRI du widget absente ou invalide`);
+			if (!/\scrossorigin="anonymous"/.test(widgetTag)) errors.push(`${label}: crossorigin anonyme requis pour le widget SRI`);
+		}
+	}
 
 	if (!title) errors.push(`${label}: title absent`);
 	else {
@@ -153,13 +209,9 @@ for (const file of htmlFiles) {
 		if (!/\swidth="\d+"/.test(` ${match[1]}`) || !/\sheight="\d+"/.test(` ${match[1]}`)) errors.push(`${label}: dimensions image absentes`);
 	}
 	const pageScripts = new Set([...html.matchAll(/<script[^>]+src="(\/[^"]+\.js)"/g)].map((match) => match[1]));
-	let scriptBytesGzip = 0;
-	for (const scriptPath of pageScripts) {
-		if (!artifactPaths.has(scriptPath)) { errors.push(`${label}: script introuvable ${scriptPath}`); continue; }
-		scriptBytesGzip += gzipSync(await readFile(join(root, scriptPath))).byteLength;
-	}
-	if (scriptBytesGzip > largestPageScriptBudget.bytes) largestPageScriptBudget = { bytes: scriptBytesGzip, label };
-	if (scriptBytesGzip > maximumPageScriptBytesGzip) errors.push(`${label}: scripts client ${Math.ceil(scriptBytesGzip / 1024)} Ko gzip, budget ${maximumPageScriptBytesGzip / 1024} Ko dépassé`);
+	const scriptBudget = await scriptClosure(pageScripts);
+	if (scriptBudget.bytes > largestPageScriptBudget.bytes) largestPageScriptBudget = { bytes: scriptBudget.bytes, label, modules: scriptBudget.modules };
+	if (scriptBudget.bytes > maximumPageScriptBytesGzip) errors.push(`${label}: graphe client ${Math.ceil(scriptBudget.bytes / 1024)} Ko gzip sur ${scriptBudget.modules} modules, budget ${maximumPageScriptBytesGzip / 1024} Ko dépassé`);
 }
 
 for (const sitemapUrl of sitemapUrls) {
@@ -172,4 +224,4 @@ if (errors.length) {
 	console.error(errors.join('\n'));
 	process.exit(1);
 }
-console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, images sociales dédiées, titres ≤ ${maximumDocumentTitleLength} caractères et JavaScript client ≤ ${maximumPageScriptBytesGzip / 1024} Ko gzip (maximum ${Math.ceil(largestPageScriptBudget.bytes / 1024)} Ko sur ${largestPageScriptBudget.label}).`);
+console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, ${verifiedCompatibilityPairs} couples sans URL de détail invalide, ${socialImageCount} cartes sociales, titres ≤ ${maximumDocumentTitleLength} caractères et graphe JavaScript client ≤ ${maximumPageScriptBytesGzip / 1024} Ko gzip (maximum ${Math.ceil(largestPageScriptBudget.bytes / 1024)} Ko sur ${largestPageScriptBudget.label}, ${largestPageScriptBudget.modules} modules). Widget immuable et SRI vérifiés.`);

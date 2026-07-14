@@ -7,7 +7,7 @@
 			</div>
 			<div>
 				<label class="button" for="scanner-photo">Photographier ou choisir une image</label>
-				<input id="scanner-photo" data-photo type="file" accept="image/*" capture="environment" />
+				<input id="scanner-photo" data-photo type="file" accept="image/jpeg,image/png,image/webp,image/gif" capture="environment" />
 				<button class="button subtle" type="button" data-read-photo disabled>Proposer un identifiant</button>
 				<p class="scanner-local-note">L’image reste dans ce navigateur. Elle n’est ni envoyée, ni enregistrée.</p>
 			</div>
@@ -46,6 +46,7 @@
 
 <script>
 	import { compressors, tools } from '../data/catalog';
+	import { isImageWithinPixelBudget, readImageDimensions, type ImageDimensions } from '../domain/image-dimensions';
 	import { compressorCapabilities, identifyProducts, toolCompatibleCompressors } from '../domain/product-identification';
 
 	type DetectorResult = { rawValue?: string };
@@ -58,7 +59,8 @@
 	const photo = root?.querySelector<HTMLInputElement>('[data-photo]');
 	const readPhoto = root?.querySelector<HTMLButtonElement>('[data-read-photo]');
 	const identifier = root?.querySelector<HTMLInputElement>('[data-identifier]');
-	let photoUrl: string | undefined;
+	let photoBitmap: ImageBitmap | undefined;
+	let photoGeneration = 0;
 
 	const query = <T extends Element>(selector: string) => root?.querySelector<T>(selector);
 	const setText = (selector: string, value: string) => { const element = query<HTMLElement>(selector); if (element) element.textContent = value; };
@@ -78,33 +80,58 @@
 		}
 	}
 
-	photo?.addEventListener('change', () => {
+	async function inspectImage(file: File) {
+		const header = new Uint8Array(await file.slice(0, 1_048_576).arrayBuffer());
+		return readImageDimensions(header);
+	}
+
+	function resizedDimensions(dimensions: ImageDimensions, maximumEdge = 2_048) {
+		const scale = Math.min(1, maximumEdge / Math.max(dimensions.width, dimensions.height));
+		return { width: Math.max(1, Math.round(dimensions.width * scale)), height: Math.max(1, Math.round(dimensions.height * scale)) };
+	}
+
+	photo?.addEventListener('change', async () => {
+		const generation = ++photoGeneration;
 		const file = photo.files?.[0];
-		if (!file || !file.type.startsWith('image/') || file.size > 15_000_000) {
-			setText('[data-status]', file ? 'Image refusée : format image et taille maximale de 15 Mo requis.' : '');
+		photoBitmap?.close(); photoBitmap = undefined;
+		if (!file || !['image/jpeg', 'image/png', 'image/webp', 'image/gif'].includes(file.type) || file.size > 15_000_000) {
+			setText('[data-status]', file ? 'Image refusée : JPEG, PNG, WebP ou GIF et taille maximale de 15 Mo requis.' : '');
 			if (readPhoto) readPhoto.disabled = true;
 			return;
 		}
-		if (photoUrl) URL.revokeObjectURL(photoUrl);
-		photoUrl = URL.createObjectURL(file);
-		const preview = query<HTMLElement>('[data-preview]');
-		if (preview) {
-			const image = document.createElement('img');
-			image.src = photoUrl;
-			image.alt = 'Aperçu local de la plaque à lire';
-			preview.replaceChildren(image);
+		if (readPhoto) readPhoto.disabled = true;
+		setText('[data-status]', 'Contrôle local des dimensions en cours…');
+		try {
+			const dimensions = await inspectImage(file);
+			if (!dimensions) throw new Error('dimensions_unknown');
+			if (!isImageWithinPixelBudget(dimensions)) throw new Error('dimensions_excessive');
+			const resized = resizedDimensions(dimensions);
+			const bitmap = await createImageBitmap(file, { resizeWidth: resized.width, resizeHeight: resized.height, resizeQuality: 'high' });
+			if (generation !== photoGeneration) { bitmap.close(); return; }
+			photoBitmap = bitmap;
+			const preview = query<HTMLElement>('[data-preview]');
+			if (preview) {
+				const canvas = document.createElement('canvas');
+				canvas.width = bitmap.width; canvas.height = bitmap.height;
+				canvas.setAttribute('role', 'img'); canvas.setAttribute('aria-label', 'Aperçu local réduit de la plaque à lire');
+				canvas.getContext('2d')?.drawImage(bitmap, 0, 0);
+				preview.replaceChildren(canvas);
+			}
+			if (readPhoto) readPhoto.disabled = false;
+			setText('[data-status]', `Image ${dimensions.width} × ${dimensions.height} px contrôlée puis réduite localement pour la lecture.`);
+		} catch (error) {
+			if (generation !== photoGeneration) return;
+			const excessive = error instanceof Error && error.message === 'dimensions_excessive';
+			setText('[data-status]', excessive ? 'Image refusée : maximum 8 192 px par côté et 32 mégapixels.' : 'Image refusée : dimensions impossibles à contrôler de façon sûre. Utilisez un JPEG, PNG, WebP ou GIF standard.');
 		}
-		if (readPhoto) readPhoto.disabled = false;
-		setText('[data-status]', 'Image prête. La lecture locale proposera seulement un candidat à confirmer.');
 	});
 
 	readPhoto?.addEventListener('click', async () => {
-		const file = photo?.files?.[0];
-		if (!file || !identifier || !readPhoto) return;
+		const bitmap = photoBitmap;
+		if (!bitmap || !identifier || !readPhoto) return;
 		readPhoto.disabled = true;
 		setText('[data-status]', 'Lecture locale en cours…');
 		try {
-			const bitmap = await createImageBitmap(file);
 			const detectionWindow = window as DetectionWindow;
 			const proposals: Array<{ value: string; origin: 'code-barres' | 'OCR local' }> = [];
 			if (detectionWindow.BarcodeDetector) {
@@ -118,7 +145,6 @@
 				const candidate = tokens.find((token) => identifyProducts(token, compressors, tools).length > 0);
 				if (candidate) proposals.push({ value: candidate, origin: 'OCR local' });
 			}
-			bitmap.close();
 			const proposal = proposals.find((item) => identifyProducts(item.value, compressors, tools).length > 0) ?? proposals[0];
 			if (proposal) {
 				identifier.value = proposal.value;
@@ -186,5 +212,5 @@
 		query<HTMLElement>('[data-result]')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	});
 
-	window.addEventListener('pagehide', () => { if (photoUrl) URL.revokeObjectURL(photoUrl); }, { once: true });
+	window.addEventListener('pagehide', () => photoBitmap?.close(), { once: true });
 </script>

@@ -62,8 +62,26 @@ describe('MCP HTTP boundary helpers', () => {
 		});
 		expect(result.status).toBe(200);
 		expect(result.headers['Access-Control-Allow-Origin']).toBe('*');
-		expect(JSON.parse(result.body)).toMatchObject({ schemaVersion: '1.0.0', verdictVersion: 'verdict-test', calculationVersion: 'calculation-test', compatibility: { verdict: 'continuous' } });
+		expect(JSON.parse(result.body)).toMatchObject({ schemaVersion: '1.0.0', verdictVersion: 'verdict-test', calculationVersion: 'calculation-test', compatibility: { verdict: 'continuous' }, detailsUrl: 'https://compatair.fr/compatibilite/compressor-a--tool-a/' });
 		expect(JSON.parse(result.body).sources).toHaveLength(2);
+	});
+
+	it('routes an insufficient-data API result to a prefilled calculator instead of a missing detail page', async () => {
+		const catalog = {
+			catalogVersion: 'catalog-test', verifiedAt: '2026-07-14',
+			compressors: [{ id: 'compressor-a', slug: 'compressor-a', brand: 'A', model: 'A1', evidence: [] }],
+			tools: [{ id: 'tool-a', slug: 'tool-a', brand: 'B', model: 'B1', label: 'Outil B1', demandModel: 'fixed-flow', evidence: [] }],
+		} as any;
+		const verdictSnapshot = { verdictVersion: 'verdict-test', calculationVersion: 'calculation-test', pairs: [{ id: 'compressor-a--tool-a', compressorId: 'compressor-a', toolId: 'tool-a', verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data' }] };
+		const server = createCompatAirServer({ catalog, verdictSnapshot, allowedOrigins: new Set(['https://compatair.fr']) });
+		const result = await new Promise<{ status: number; body: string }>((resolve) => {
+			let status = 0; let body = '';
+			const request = { url: '/api/v1/compatibility?compressorId=compressor-a&toolId=tool-a', method: 'GET', headers: {}, socket: { remoteAddress: '127.0.0.1' } };
+			const response = { setTimeout() {}, writeHead(value: number) { status = value; }, end(value = '') { body += value; resolve({ status, body }); }, destroy() {} };
+			server.emit('request', request, response);
+		});
+		expect(result.status).toBe(200);
+		expect(JSON.parse(result.body)).toMatchObject({ compatibility: { verdict: 'insufficient_data' }, detailsUrl: 'https://compatair.fr/calculateur/?outil=tool-a&compresseur=compressor-a' });
 	});
 
 	it('lets the production reverse proxy own API security and CORS headers', async () => {

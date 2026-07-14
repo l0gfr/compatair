@@ -5,11 +5,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout title="Widget et API pour marchands pneumatiques | CompatAir" description="Intégrez un verdict de compatibilité sourcé sur une fiche marchande grâce au widget et à l’API CompatAir." canonicalPath="/professionnels/">
 	<section class="page-hero compact pro-hero"><div class="container split-head"><div><p class="eyebrow">CompatAir pour les professionnels</p><h1>Le verdict technique au point de décision</h1><p class="lead">Le site public construit l’autorité documentaire. Le widget, l’API et les données versionnées permettent aux marchands d’expliquer une compatibilité sans laisser l’affiliation influencer le résultat.</p></div><div class="passport-privacy-note"><strong>Bêta technique disponible</strong><p>L’API publique et le widget sont livrés sans engagement de disponibilité. Quotas dédiés, support, historique et exports restent à contractualiser.</p></div></div></section>
 	<section class="section"><div class="container b2b-grid">
-		<article class="b2b-card"><p class="eyebrow">Widget marchand</p><h2>« Ce compresseur convient-il à mon outil ? »</h2><p>Cette démonstration appelle réellement le contrat public. Si le service est indisponible, elle refuse de fabriquer un verdict.</p><div id="merchant-widget-demo" class="widget-demo-live"></div><script is:inline src="/widget/v1/compatair-widget.js" data-target="merchant-widget-demo" data-compressor-id="einhell-tc-ac-240-50-10-of" data-tool-id="einhell-tc-pe-150" defer></script></article>
+		<article class="b2b-card"><p class="eyebrow">Widget marchand</p><h2>« Ce compresseur convient-il à mon outil ? »</h2><p>Cette démonstration appelle réellement le contrat public. Si le service est indisponible, elle refuse de fabriquer un verdict.</p><div id="merchant-widget-demo" class="widget-demo-live"></div><script is:inline src="/widget/v1.0.0/compatair-widget.js" integrity="sha384-pZVA7LPRTtlWQ/eeRb84bAhHdWq1X1ISb/iW+VWmtmFAj7tyo3afdACxYMo3VZF1" crossorigin="anonymous" data-target="merchant-widget-demo" data-compressor-id="einhell-tc-ac-240-50-10-of" data-tool-id="einhell-tc-pe-150" defer></script></article>
 		<article class="b2b-card"><p class="eyebrow">API HTTP</p><h2>Un contrat stable pour les catalogues</h2><p>Une requête fournit le verdict, les facteurs limitants, les versions et les preuves. Le moteur reste centralisé : une correction documentaire peut être répercutée sans modifier le code du marchand.</p><a class="button" href="/api/">Lire la documentation API</a></article>
 	</div></section>
 	<section class="section integration-section"><div class="container"><div class="section-head"><p class="eyebrow">Intégration</p><h2>Deux identifiants, aucun verdict commercial</h2></div><pre><code>&lt;script
-  src="https://compatair.fr/widget/v1/compatair-widget.js"
+  src="https://compatair.fr/widget/v1.0.0/compatair-widget.js"
+  integrity="sha384-pZVA7LPRTtlWQ/eeRb84bAhHdWq1X1ISb/iW+VWmtmFAj7tyo3afdACxYMo3VZF1"
+  crossorigin="anonymous"
   data-compressor-id="einhell-tc-ac-240-50-10-of"
 	 data-tool-id="einhell-tc-pe-150"
 	 data-target="compatibility-result"

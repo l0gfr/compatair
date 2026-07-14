@@ -384,9 +384,18 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 	form?.querySelector<HTMLSelectElement>('[name="compressor"]')?.addEventListener('change', (event: Event) => { root!.querySelector<HTMLElement>('[data-custom-compressor]')!.hidden = (event.target as HTMLSelectElement).value !== 'custom'; });
 	form?.querySelector<HTMLInputElement>('[name="margin"]')?.addEventListener('input', (event: Event) => { root!.querySelector<HTMLOutputElement>('[data-margin-output]')!.value = `${(event.target as HTMLInputElement).value} %`; });
 
-	const initialTool = new URLSearchParams(window.location.search).get('outil') ?? undefined;
+	const initialParameters = new URLSearchParams(window.location.search);
+	const initialTool = initialParameters.get('outil') ?? undefined;
+	const initialCompressor = initialParameters.get('compresseur') ?? undefined;
 	const hashConfig = window.location.hash.startsWith('#config=') ? validateSharedConfig(decodePassportConfiguration(window.location.hash.slice(8))) : undefined;
-	if (hashConfig) restoreConfig(hashConfig); else addDemand(initialTool);
+	if (hashConfig) restoreConfig(hashConfig);
+	else {
+		addDemand(initialTool);
+		if (initialCompressor && compressors.some((item) => item.id === initialCompressor)) {
+			const compressorSelect = form?.querySelector<HTMLSelectElement>('[name="compressor"]');
+			if (compressorSelect) compressorSelect.value = initialCompressor;
+		}
+	}
 
 	form?.addEventListener('submit', async (event) => {
 		event.preventDefault(); if (!output || !list || !evaluated) return;

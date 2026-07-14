@@ -138,6 +138,9 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			const snapshotPair = verdictMap.get(`${compressorId}--${toolId}`);
 			if (tool.demandModel === 'fixed-flow' && !snapshotPair) return apiJson(503, { error: 'verdict_snapshot_unavailable' }, { ...corsHeaders, 'Retry-After': '60' });
 			const evaluation = snapshotPair ?? { verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data' };
+			const detailsUrl = evaluation.verdict === 'insufficient_data'
+				? `https://compatair.fr/calculateur/?outil=${encodeURIComponent(tool.id)}&compresseur=${encodeURIComponent(compressor.id)}`
+				: `https://compatair.fr/compatibilite/${compressor.slug}--${tool.slug}/`;
 			return apiJson(200, {
 				schemaVersion: '1.0.0', catalogVersion: catalog.catalogVersion, catalogVerifiedAt: catalog.verifiedAt, verdictVersion: verdictSnapshot.verdictVersion, calculationVersion: verdictSnapshot.calculationVersion,
 				input: { compressorId, toolId },
@@ -145,7 +148,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 				tool: { id: tool.id, brand: tool.brand, model: tool.model, label: tool.label, slug: tool.slug },
 				compatibility: evaluation,
 				sources: [...(compressor.evidence ?? []), ...(tool.evidence ?? [])].map((source) => ({ id: source.id, label: source.sourceLabel, url: source.sourceUrl, retrievedAt: source.retrievedAt, confidence: source.confidence })),
-				detailsUrl: `https://compatair.fr/compatibilite/${compressor.slug}--${tool.slug}/`,
+				detailsUrl,
 			}, { ...corsHeaders, 'Cache-Control': 'public, max-age=300' });
 		}
 

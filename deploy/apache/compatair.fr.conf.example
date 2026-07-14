@@ -86,10 +86,10 @@
 		Header always unset X-Content-Type-Options
 		Header always set X-Content-Type-Options "nosniff"
 	</Location>
-	<Location "/widget/v1/compatair-widget.js">
+	<LocationMatch "^/widget/(?:v1|v1\.0\.0)/compatair-widget\.js$">
 		Header always set Access-Control-Allow-Origin "*"
 		Header always set Cross-Origin-Resource-Policy "cross-origin"
-	</Location>
+	</LocationMatch>
 	<LocationMatch "^/(?:_server)(?:/|$)">
 		Require all denied
 	</LocationMatch>
