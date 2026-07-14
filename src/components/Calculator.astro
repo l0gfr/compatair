@@ -78,8 +78,8 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 </div>
 
 	<template data-demand-template>
-	<div class="demand-row demand-card">
-		<div class="field demand-tool"><label data-label="outil">Outil</label><select data-tool>{tools.map((tool) => <option value={tool.id}>{tool.label} · {toolDemandLabel(tool)} · {toolPressureLabel(tool)}</option>)}</select></div>
+		<div class="demand-row demand-card">
+			<div class="field demand-tool"><label data-label="outil">Outil</label><select data-tool>{tools.map((tool) => <option value={tool.id} data-demand-model={tool.demandModel} data-airflow={tool.demandModel === 'fixed-flow' ? tool.airflowLpm.typical : undefined} data-pressure={tool.workingPressureBar.typical} data-air-per-action={tool.demandModel === 'per-action' ? tool.airPerActionLiters : undefined} data-action-label={tool.demandModel === 'per-action' ? tool.actionLabel : undefined}>{tool.label} · {toolDemandLabel(tool)} · {toolPressureLabel(tool)}</option>)}</select></div>
 		<div class="field"><label data-label="nombre">Nombre</label><input data-quantity type="number" min="1" max="20" value="1" /></div>
 		<button type="button" class="remove-demand" data-remove-tool aria-label="Supprimer cet outil">×</button>
 		<div class="demand-parameters" data-demand-parameters>
@@ -97,10 +97,44 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 </template>
 
 <script>
-	import { CATALOG_VERIFIED_AT, compressors, tools } from '../data/catalog';
-	import { interpolateFad } from '../domain/compatibility';
-	import { createPassportEnvelope, decodePassportConfiguration, encodePassportConfiguration, encodePassportEnvelope, parsePassportConfiguration, type PassportConfiguration } from '../domain/passport';
-	import { CALCULATION_VERSION, sizeConfiguration, type SizingResult } from '../domain/sizing';
+	type Compressor = import('../domain/catalog').Compressor;
+	type ToolProfile = import('../domain/catalog').ToolProfile;
+	type PassportConfiguration = import('../domain/passport').PassportConfiguration;
+	type SizingResult = import('../domain/sizing').SizingResult;
+	let CATALOG_VERIFIED_AT = '';
+	let CALCULATION_VERSION = '';
+	let compressors: Compressor[] = [];
+	let tools: ToolProfile[] = [];
+	let interpolateFad: typeof import('../domain/compatibility').interpolateFad;
+	let createPassportEnvelope: typeof import('../domain/passport').createPassportEnvelope;
+	let decodePassportConfiguration: typeof import('../domain/passport').decodePassportConfiguration;
+	let encodePassportConfiguration: typeof import('../domain/passport').encodePassportConfiguration;
+	let encodePassportEnvelope: typeof import('../domain/passport').encodePassportEnvelope;
+	let parsePassportConfiguration: typeof import('../domain/passport').parsePassportConfiguration;
+	let sizeConfiguration: typeof import('../domain/sizing').sizeConfiguration;
+	let runtimePromise: Promise<void> | undefined;
+
+	function loadCalculatorRuntime() {
+		runtimePromise ??= Promise.all([
+			import('../data/catalog'),
+			import('../domain/compatibility'),
+			import('../domain/passport'),
+			import('../domain/sizing'),
+		]).then(([catalog, compatibility, passport, sizing]) => {
+			CATALOG_VERIFIED_AT = catalog.CATALOG_VERIFIED_AT;
+			CALCULATION_VERSION = sizing.CALCULATION_VERSION;
+			compressors = catalog.compressors;
+			tools = catalog.tools;
+			interpolateFad = compatibility.interpolateFad;
+			createPassportEnvelope = passport.createPassportEnvelope;
+			decodePassportConfiguration = passport.decodePassportConfiguration;
+			encodePassportConfiguration = passport.encodePassportConfiguration;
+			encodePassportEnvelope = passport.encodePassportEnvelope;
+			parsePassportConfiguration = passport.parsePassportConfiguration;
+			sizeConfiguration = sizing.sizeConfiguration;
+		});
+		return runtimePromise;
+	}
 
 	const root = document.querySelector<HTMLElement>('[data-calculator]');
 	const form = root?.querySelector<HTMLFormElement>('[data-calculator-form]');
@@ -129,16 +163,16 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 	}
 
 	function updateDemandMode(row: HTMLElement) {
-		const id = row.querySelector<HTMLSelectElement>('[data-tool]')!.value;
-		const tool = tools.find((item) => item.id === id)!;
-		row.querySelector<HTMLElement>('[data-fixed-fields]')!.hidden = tool.demandModel !== 'fixed-flow';
-		row.querySelector<HTMLElement>('[data-action-fields]')!.hidden = tool.demandModel !== 'per-action';
-		row.querySelector<HTMLElement>('[data-inflation-fields]')!.hidden = tool.demandModel !== 'variable-volume';
+		const selected = row.querySelector<HTMLSelectElement>('[data-tool]')!.selectedOptions[0];
+		const demandModel = selected.dataset.demandModel;
+		row.querySelector<HTMLElement>('[data-fixed-fields]')!.hidden = demandModel !== 'fixed-flow';
+		row.querySelector<HTMLElement>('[data-action-fields]')!.hidden = demandModel !== 'per-action';
+		row.querySelector<HTMLElement>('[data-inflation-fields]')!.hidden = demandModel !== 'variable-volume';
 		const note = row.querySelector<HTMLElement>('[data-demand-note]')!;
-		note.textContent = tool.demandModel === 'fixed-flow'
-			? `${tool.airflowLpm.typical} L/min documentés à ${tool.workingPressureBar.typical} bar.`
-			: tool.demandModel === 'per-action'
-				? `${tool.airPerActionLiters.toLocaleString('fr-FR')} L par ${tool.actionLabel} à ${tool.workingPressureBar.typical} bar. La cadence est obligatoire et reste une saisie utilisateur.`
+		note.textContent = demandModel === 'fixed-flow'
+			? `${selected.dataset.airflow} L/min documentés à ${selected.dataset.pressure} bar.`
+			: demandModel === 'per-action'
+				? `${Number(selected.dataset.airPerAction).toLocaleString('fr-FR')} L par ${selected.dataset.actionLabel} à ${selected.dataset.pressure} bar. La cadence est obligatoire et reste une saisie utilisateur.`
 				: `Aucun volume de pneumatique n’est déduit du modèle. Volume, pressions et temps doivent être saisis.`;
 	}
 
@@ -162,7 +196,7 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 			control.id = `demande-${rowIndex}-${suffix}`;
 			row.querySelector<HTMLLabelElement>(`label[data-label="${suffix}"]`)!.htmlFor = control.id;
 		}
-		if (toolId && tools.some((tool) => tool.id === toolId)) select.value = toolId;
+		if (toolId && [...select.options].some((option) => option.value === toolId)) select.value = toolId;
 		quantityInput.value = String(quantity);
 		dutySelect.value = String(saved.dutyFactor ?? 1);
 		row.querySelector<HTMLInputElement>('[data-cadence]')!.value = saved.actionsPerMinute ?? '';
@@ -395,21 +429,24 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 	const initialParameters = new URLSearchParams(window.location.search);
 	const initialTool = initialParameters.get('outil') ?? undefined;
 	const initialCompressor = initialParameters.get('compresseur') ?? undefined;
-	const hashConfig = window.location.hash.startsWith('#config=') ? validateSharedConfig(decodePassportConfiguration(window.location.hash.slice(8))) : undefined;
-	if (hashConfig) restoreConfig(hashConfig);
-	else {
-		addDemand(initialTool);
-		if (initialCompressor && compressors.some((item) => item.id === initialCompressor)) {
-			const compressorSelect = form?.querySelector<HTMLSelectElement>('[name="compressor"]');
-			if (compressorSelect) compressorSelect.value = initialCompressor;
+	async function initializeCalculator() {
+		if (window.location.hash.startsWith('#config=')) {
+			await loadCalculatorRuntime();
+			const hashConfig = validateSharedConfig(decodePassportConfiguration(window.location.hash.slice(8)));
+			if (hashConfig) { restoreConfig(hashConfig); return; }
 		}
+		addDemand(initialTool);
+		const compressorSelect = form?.querySelector<HTMLSelectElement>('[name="compressor"]');
+		if (initialCompressor && compressorSelect && [...compressorSelect.options].some((option) => option.value === initialCompressor)) compressorSelect.value = initialCompressor;
 	}
+	void initializeCalculator();
 
 	form?.addEventListener('submit', async (event) => {
 		event.preventDefault(); if (!output || !list || !evaluated) return;
 		recordFunnelStep('started');
 		const errorTarget = root?.querySelector<HTMLElement>('[data-form-error]');
 		try {
+			await loadCalculatorRuntime();
 			const config = configFromForm(); if (!config) return;
 			if (errorTarget) { errorTarget.hidden = true; errorTarget.textContent = ''; }
 			const base = sizeConfiguration(config as any);
@@ -450,5 +487,5 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 	for (const button of root?.querySelectorAll<HTMLButtonElement>('[data-result-filter]') ?? []) button.addEventListener('click', () => setResultFilter(button.dataset.resultFilter as keyof typeof labels | 'all'));
 	root?.querySelector('[data-print]')?.addEventListener('click', () => window.print());
 	root?.querySelector('[data-copy-summary]')?.addEventListener('click', async () => { if (!lastSummary) return; await navigator.clipboard.writeText(lastSummary); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'Synthèse copiée'; });
-	root?.querySelector('[data-share]')?.addEventListener('click', async () => { const config = configFromForm(); if (!config) return; const url = `${location.origin}${location.pathname}#config=${encodePassportConfiguration(config)}`; await navigator.clipboard.writeText(url); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'URL copiée'; });
+	root?.querySelector('[data-share]')?.addEventListener('click', async () => { await loadCalculatorRuntime(); const config = configFromForm(); if (!config) return; const url = `${location.origin}${location.pathname}#config=${encodePassportConfiguration(config)}`; await navigator.clipboard.writeText(url); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'URL copiée'; });
 </script>

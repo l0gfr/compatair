@@ -29,7 +29,7 @@
 		<div class="passport-version-choice" data-version-choice hidden>
 			<div><strong>Version affichée</strong><p data-version-note></p></div>
 			<button class="button" type="button" data-show-original>Voir le rapport original</button>
-			<button class="button" type="button" data-show-current>Recalculer avec le catalogue actuel</button>
+			<button class="button" type="button" data-show-current disabled>Recalculer avec le catalogue actuel</button>
 		</div>
 
 		<div class="passport-actions">
@@ -201,16 +201,30 @@
 			const currentUrl = `${location.origin}/passeport/#passport=${encoded}`;
 			if (envelope) {
 				const original = await reportFromPassportEnvelope(envelope);
-				const current = await createPassportReport(envelope.configuration, compressors, tools, CATALOG_VERIFIED_AT);
 				const choice = query<HTMLElement>('[data-version-choice]');
 				if (choice) choice.hidden = false;
 				const showOriginal = () => { renderPassport(original, currentUrl); setText('[data-version-note]', `Rapport original du ${original.generatedAt.slice(0, 10)}, catalogue ${original.catalogVerifiedAt}.`); };
-				const showCurrent = () => { renderPassport(current, currentUrl); setText('[data-version-note]', `Simulation actuelle, catalogue ${current.catalogVerifiedAt}. L’URL originale n’est pas modifiée.`); };
 				const originalButton = query<HTMLButtonElement>('[data-show-original]');
 				const currentButton = query<HTMLButtonElement>('[data-show-current]');
 				if (originalButton) originalButton.onclick = showOriginal;
-				if (currentButton) currentButton.onclick = showCurrent;
 				showOriginal();
+				if (loading) loading.hidden = true;
+				if (documentPanel) documentPanel.hidden = false;
+
+				try {
+					const current = await createPassportReport(envelope.configuration, compressors, tools, CATALOG_VERIFIED_AT);
+					const showCurrent = () => { renderPassport(current, currentUrl); setText('[data-version-note]', `Simulation actuelle, catalogue ${current.catalogVerifiedAt}. L’URL originale n’est pas modifiée.`); };
+					if (currentButton) {
+						currentButton.disabled = false;
+						currentButton.onclick = showCurrent;
+					}
+				} catch {
+					if (currentButton) {
+						currentButton.disabled = true;
+						currentButton.title = 'Simulation actuelle indisponible : une référence du Passeport n’existe plus dans le catalogue courant.';
+					}
+					setText('[data-version-note]', `Rapport original du ${original.generatedAt.slice(0, 10)}, catalogue ${original.catalogVerifiedAt}. Simulation actuelle indisponible.`);
+				}
 			} else {
 				const current = await createPassportReport(legacyConfiguration, compressors, tools, CATALOG_VERIFIED_AT);
 				renderPassport(current, currentUrl);

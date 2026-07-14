@@ -45,6 +45,17 @@ jobs:
       - name: Validate source, tests, build and snapshots
         run: pnpm validate:full
 
+      - name: Fetch current production invariants
+        run: |
+          curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/evidence-history.json -o previous-evidence-history.json
+          curl --fail --silent --show-error --max-time 20 https://compatair.fr/widget/v1.0.0/compatair-widget.js -o previous-compatair-widget.js
+
+      - name: Enforce append-only evidence history
+        run: node scripts/assert-evidence-history-extension.mjs previous-evidence-history.json dist/data/evidence-history.json
+
+      - name: Enforce immutable published widget
+        run: cmp --silent previous-compatair-widget.js dist/widget/v1.0.0/compatair-widget.js
+
       - name: Sign published data snapshots
         env:
           COMPATAIR_PUBLICATION_SIGNING_KEY: ${{ secrets.COMPATAIR_PUBLICATION_SIGNING_KEY }}

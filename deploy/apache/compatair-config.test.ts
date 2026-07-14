@@ -50,6 +50,16 @@ describe('CompatAir Apache CSP', () => {
 		expect(config.match(/Cross-Origin-Resource-Policy "cross-origin"/g)).toHaveLength(2);
 	});
 
+	it('reserves immutable caching for versioned or hashed JavaScript', () => {
+		expect(config).toContain('^/(?:_astro/[^/]+\\.js|widget/v1\\.0\\.0/compatair-widget\\.js)$');
+		expect(config).toContain('^/widget/v1/compatair-widget\\.js$');
+		const mutableAlias = config.match(
+			/<LocationMatch "\^\/widget\/v1\/compatair-widget\\\.js\$">([\s\S]*?)<\/LocationMatch>/,
+		)?.[1];
+		expect(mutableAlias).toContain('Cache-Control "no-cache"');
+		expect(mutableAlias).not.toContain('immutable');
+	});
+
 	it('normalizes proxied API headers before exposing them cross-origin', () => {
 		const apiLocation = config.match(
 			/<Location "\/api\/v1\/compatibility">([\s\S]*?)<\/Location>/,

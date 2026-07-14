@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
 import type { Compressor } from './catalog';
 
-export const BAROMETER_SCHEMA_VERSION = '2.0.0';
+export const BAROMETER_SCHEMA_VERSION = '3.0.0';
 export const BAROMETER_FRESHNESS_DAYS = 365;
 export const BAROMETER_MINIMUM_SAMPLE = 10;
 
@@ -18,14 +18,6 @@ type CriterionId = typeof transparencyCriteria[number]['id'];
 
 function percentage(values: boolean[]) {
 	return values.length ? Math.round(values.filter(Boolean).length / values.length * 100) : 0;
-}
-
-function wilsonInterval(successes: number, trials: number) {
-	if (!trials) return { low: 0, high: 100 };
-	const z = 1.96; const proportion = successes / trials; const denominator = 1 + z * z / trials;
-	const center = (proportion + z * z / (2 * trials)) / denominator;
-	const margin = z / denominator * Math.sqrt(proportion * (1 - proportion) / trials + z * z / (4 * trials * trials));
-	return { low: Math.round(Math.max(0, center - margin) * 100), high: Math.round(Math.min(1, center + margin) * 100) };
 }
 
 function segment(tankLiters: number) { return tankLiters <= 24 ? 'portable-0-24l' : tankLiters < 100 ? 'atelier-25-99l' : 'production-100l-plus'; }
@@ -50,10 +42,10 @@ export function createTransparencyBarometer(compressors: Compressor[], published
 		const coverageIds: CriterionId[] = ['identifiers', 'freshness'];
 		const score = Math.round(manufacturerIds.reduce((total, id) => total + scores[id], 0) / manufacturerIds.length);
 		const coverageScore = Math.round(coverageIds.reduce((total, id) => total + scores[id], 0) / coverageIds.length);
-		const successes = manufacturerIds.reduce((total, id) => total + products.length * scores[id] / 100, 0);
+		const manufacturerScores = manufacturerIds.map((id) => scores[id]);
 		return {
 			brand, sampleSize: products.length, eligibleForRanking: products.length >= BAROMETER_MINIMUM_SAMPLE, score, coverageScore,
-			uncertainty95: wilsonInterval(successes, products.length * manufacturerIds.length), criteria: scores,
+			observedCompletenessRange: { low: Math.min(...manufacturerScores), high: Math.max(...manufacturerScores) }, criteria: scores,
 			references: products.map((item) => ({ id: item.id, model: item.model, segment: segment(item.tankLiters) })),
 		};
 	}).sort((a, b) => Number(b.eligibleForRanking) - Number(a.eligibleForRanking) || b.score - a.score || b.sampleSize - a.sampleSize || a.brand.localeCompare(b.brand));
@@ -66,7 +58,7 @@ export function createTransparencyBarometer(compressors: Compressor[], published
 		scope: 'Corpus des compresseurs présents dans le catalogue CompatAir, avec score constructeur séparé de la couverture CompatAir',
 		minimumSampleForRanking: BAROMETER_MINIMUM_SAMPLE,
 		rankingPublished,
-		limitations: ['Les dates disponibles sont des dates de consultation par CompatAir, pas nécessairement des dates de publication constructeur.', 'Les segments décrivent la taille de cuve ; ils ne garantissent pas encore un échantillonnage identique des gammes et usages.', 'Les fabricants peuvent signaler une source ou demander une correction via la page de contact.'],
+		limitations: ['Les dates disponibles sont des dates de consultation par CompatAir, pas nécessairement des dates de publication constructeur.', 'Le corpus est un corpus de convenance et non un échantillon aléatoire du marché ; la plage publiée décrit seulement l’étendue observée des quatre critères.', 'Les segments décrivent la taille de cuve ; ils ne garantissent pas encore un échantillonnage identique des gammes et usages.', 'Les fabricants peuvent signaler une source ou demander une correction via la page de contact.'],
 		criteria: transparencyCriteria,
 		brands: rows.map((row) => ({ rank: rankingPublished && row.eligibleForRanking ? ++officialRank : null, status: rankingPublished && row.eligibleForRanking ? 'official' : 'provisional', ...row })),
 	};

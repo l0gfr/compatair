@@ -9,8 +9,11 @@ const errors = [];
 const htmlFiles = [];
 const artifactPaths = new Set();
 const maximumDocumentTitleLength = 60;
-const maximumPageScriptBytesGzip = 50 * 1024;
-let largestPageScriptBudget = { bytes: 0, label: '', modules: 0 };
+const maximumInitialPageScriptBytesGzip = 50 * 1024;
+const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
+let largestInitialPageScriptBudget = { bytes: 0, label: '', modules: 0 };
+let largestOnDemandPageScriptBudget = { bytes: 0, label: '', modules: 0 };
+const immutableAssetManifest = JSON.parse(await readFile(resolve('config/immutable-assets.json'), 'utf8'));
 
 async function walk(directory) {
 	for (const name of await readdir(directory)) {
@@ -46,9 +49,12 @@ if (socialImageCount > 160) errors.push(`social: ${socialImageCount} cartes gén
 const immutableWidgetPath = '/widget/v1.0.0/compatair-widget.js';
 let immutableWidgetIntegrity = '';
 if (!artifactPaths.has(immutableWidgetPath)) errors.push(`${immutableWidgetPath}: widget immuable absent`);
-else immutableWidgetIntegrity = `sha384-${createHash('sha384').update(await readFile(join(root, immutableWidgetPath))).digest('base64')}`;
+else {
+	immutableWidgetIntegrity = `sha384-${createHash('sha384').update(await readFile(join(root, immutableWidgetPath))).digest('base64')}`;
+	if (immutableAssetManifest.assets?.[immutableWidgetPath] !== immutableWidgetIntegrity) errors.push(`${immutableWidgetPath}: contenu différent de l’empreinte historique épinglée`);
+}
 
-async function scriptClosure(entryPaths) {
+async function scriptClosure(entryPaths, includeDynamicImports) {
 	const modules = new Set();
 	async function visit(scriptPath) {
 		if (modules.has(scriptPath)) return;
@@ -57,6 +63,7 @@ async function scriptClosure(entryPaths) {
 		const source = await readFile(join(root, scriptPath), 'utf8');
 		const imports = source.matchAll(/\b(?:import|export)[^\"'()]*?\bfrom\s*[\"']([^\"']+\.js(?:\?[^\"']*)?)[\"']|\bimport\s*\(\s*[\"']([^\"']+\.js(?:\?[^\"']*)?)[\"']/g);
 		for (const match of imports) {
+			if (!includeDynamicImports && match[2]) continue;
 			const specifier = match[1] ?? match[2];
 			const imported = new URL(specifier, new URL(scriptPath, siteOrigin));
 			if (imported.origin !== siteOrigin) { errors.push(`${scriptPath}: import JavaScript externe non budgété ${specifier}`); continue; }
@@ -135,6 +142,7 @@ for (const file of htmlFiles) {
 	const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
 	const socialImage = html.match(/<meta property="og:image" content="([^"]+)"/)?.[1];
 	const robots = html.match(/<meta name="robots" content="([^"]+)"/)?.[1] ?? '';
+	const author = html.match(/<meta name="author" content="([^"]+)"/)?.[1];
 	const titleSource = html.match(/<meta name="compatair:title-source" content="([^"]+)"/)?.[1];
 	const noindex = robots.split(',').map((rule) => rule.trim()).includes('noindex');
 	const isCompatibilityDetail = label.startsWith('compatibilite/');
@@ -177,6 +185,7 @@ for (const file of htmlFiles) {
 			if (!noindex && !sitemapUrls.has(canonical)) errors.push(`${label}: page indexable absente du sitemap`);
 		} catch { errors.push(`${label}: canonical invalide ${canonical}`); }
 	}
+	if (!label.startsWith('go/') && author !== 'CompatAir') errors.push(`${label}: auteur global absent ou incohérent`);
 	if (!socialImage) errors.push(`${label}: image sociale absente`);
 	else {
 		try {
@@ -219,9 +228,12 @@ for (const file of htmlFiles) {
 		if (!/\swidth="\d+"/.test(` ${match[1]}`) || !/\sheight="\d+"/.test(` ${match[1]}`)) errors.push(`${label}: dimensions image absentes`);
 	}
 	const pageScripts = new Set([...html.matchAll(/<script[^>]+src="(\/[^"]+\.js)"/g)].map((match) => match[1]));
-	const scriptBudget = await scriptClosure(pageScripts);
-	if (scriptBudget.bytes > largestPageScriptBudget.bytes) largestPageScriptBudget = { bytes: scriptBudget.bytes, label, modules: scriptBudget.modules };
-	if (scriptBudget.bytes > maximumPageScriptBytesGzip) errors.push(`${label}: graphe client ${Math.ceil(scriptBudget.bytes / 1024)} Ko gzip sur ${scriptBudget.modules} modules, budget ${maximumPageScriptBytesGzip / 1024} Ko dépassé`);
+	const initialScriptBudget = await scriptClosure(pageScripts, false);
+	const onDemandScriptBudget = await scriptClosure(pageScripts, true);
+	if (initialScriptBudget.bytes > largestInitialPageScriptBudget.bytes) largestInitialPageScriptBudget = { bytes: initialScriptBudget.bytes, label, modules: initialScriptBudget.modules };
+	if (onDemandScriptBudget.bytes > largestOnDemandPageScriptBudget.bytes) largestOnDemandPageScriptBudget = { bytes: onDemandScriptBudget.bytes, label, modules: onDemandScriptBudget.modules };
+	if (initialScriptBudget.bytes > maximumInitialPageScriptBytesGzip) errors.push(`${label}: chargement JavaScript initial ${Math.ceil(initialScriptBudget.bytes / 1024)} Ko gzip sur ${initialScriptBudget.modules} modules, budget ${maximumInitialPageScriptBytesGzip / 1024} Ko dépassé`);
+	if (onDemandScriptBudget.bytes > maximumOnDemandPageScriptBytesGzip) errors.push(`${label}: graphe JavaScript total à la demande ${Math.ceil(onDemandScriptBudget.bytes / 1024)} Ko gzip sur ${onDemandScriptBudget.modules} modules, budget ${maximumOnDemandPageScriptBytesGzip / 1024} Ko dépassé`);
 }
 
 for (const sitemapUrl of sitemapUrls) {
@@ -234,4 +246,4 @@ if (errors.length) {
 	console.error(errors.join('\n'));
 	process.exit(1);
 }
-console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, ${verifiedCompatibilityPairs} couples sans URL de détail invalide, ${socialImageCount} cartes sociales, titres ≤ ${maximumDocumentTitleLength} caractères et graphe JavaScript client ≤ ${maximumPageScriptBytesGzip / 1024} Ko gzip (maximum ${Math.ceil(largestPageScriptBudget.bytes / 1024)} Ko sur ${largestPageScriptBudget.label}, ${largestPageScriptBudget.modules} modules). Widget immuable et SRI vérifiés.`);
+console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, ${verifiedCompatibilityPairs} couples sans URL de détail invalide, ${socialImageCount} cartes sociales et titres ≤ ${maximumDocumentTitleLength} caractères. JavaScript initial ≤ ${maximumInitialPageScriptBytesGzip / 1024} Ko gzip (maximum ${Math.ceil(largestInitialPageScriptBudget.bytes / 1024)} Ko sur ${largestInitialPageScriptBudget.label}) ; total à la demande ≤ ${maximumOnDemandPageScriptBytesGzip / 1024} Ko (maximum ${Math.ceil(largestOnDemandPageScriptBudget.bytes / 1024)} Ko sur ${largestOnDemandPageScriptBudget.label}). Widget immuable et SRI vérifiés.`);

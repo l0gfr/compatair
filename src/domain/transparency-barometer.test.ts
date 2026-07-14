@@ -14,8 +14,8 @@ describe('manufacturer documentation transparency barometer', () => {
 			expect(row.score).toBeLessThanOrEqual(100);
 			expect(row.coverageScore).toBeGreaterThanOrEqual(0);
 			expect(row.references).toHaveLength(row.sampleSize);
-			expect(row.uncertainty95.low).toBeLessThanOrEqual(row.score);
-			expect(row.uncertainty95.high).toBeGreaterThanOrEqual(row.score);
+			expect(row.observedCompletenessRange.low).toBe(Math.min(row.criteria.multiPressureFad, row.criteria.dutyCycle, row.criteria.officialSource, row.criteria.acousticValue));
+			expect(row.observedCompletenessRange.high).toBe(Math.max(row.criteria.multiPressureFad, row.criteria.dutyCycle, row.criteria.officialSource, row.criteria.acousticValue));
 		}
 	});
 
@@ -25,5 +25,7 @@ describe('manufacturer documentation transparency barometer', () => {
 		expect(barometer.rankingPublished).toBe(false);
 		expect(barometer.brands.reduce((total, row) => total + row.sampleSize, 0)).toBe(compressors.length);
 		expect(barometer.barometerVersion).toMatch(/^[a-f0-9]{64}$/);
+		expect(barometer.schemaVersion).toBe('3.0.0');
+		expect(barometer.limitations.join(' ')).toContain('non un échantillon aléatoire');
 	});
 });

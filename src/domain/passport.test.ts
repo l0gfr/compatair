@@ -42,6 +42,17 @@ describe('CompatAir passport', () => {
 		expect(recalculated.result).not.toEqual(original.result);
 	});
 
+	it('keeps the original report readable after a catalog reference is removed', async () => {
+		const envelope = await createPassportEnvelope(configuration, compressors, tools, CATALOG_VERIFIED_AT, '2026-07-14T10:00:00.000Z');
+		const reducedCompressors = compressors.filter((item) => item.id !== configuration.selectedCompressor);
+		await expect(createPassportReport(configuration, reducedCompressors, tools, '2027-01-01')).rejects.toThrow('n’existe pas');
+		await expect(reportFromPassportEnvelope(envelope)).resolves.toMatchObject({
+			passportId: envelope.reportDigest,
+			compressorLabel: envelope.inputSnapshot.compressorLabel,
+			result: envelope.resultSnapshot,
+		});
+	});
+
 	it('rejects a modified report snapshot', async () => {
 		const envelope = await createPassportEnvelope(configuration, compressors, tools, CATALOG_VERIFIED_AT, '2026-07-14T10:00:00.000Z');
 		const modified = { ...envelope, inputSnapshot: { ...envelope.inputSnapshot, compressorLabel: 'Valeur falsifiée' } };
