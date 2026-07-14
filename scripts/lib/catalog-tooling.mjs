@@ -1,8 +1,69 @@
-import { access, readdir, readFile, writeFile } from 'node:fs/promises';
-import { basename, join, resolve } from 'node:path';
+import { access, readdir, readFile, rename, stat, unlink, writeFile } from 'node:fs/promises';
+import { basename, extname, join, resolve, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const KINDS = { compressors: { exportName: 'rawCompressors' }, tools: { exportName: 'rawTools' } };
+export const MAX_PRODUCT_IMAGE_BYTES = 750 * 1024;
+export const MAX_PRODUCT_IMAGE_DIMENSION = 1600;
+export const PRODUCT_IMAGE_WEBP_QUALITY = 82;
+
+export function productImageSizeError(productId, imageSrc, bytes) {
+	if (bytes <= MAX_PRODUCT_IMAGE_BYTES) return null;
+	return `Image produit trop lourde : ${productId} ${imageSrc} (${Math.ceil(bytes / 1024)} Ko, maximum ${MAX_PRODUCT_IMAGE_BYTES / 1024} Ko). Optimiser l’image avant publication.`;
+}
+
+export async function optimizeImportedProductImage(root, product) {
+	const relativeImagePath = product.image.src.replace(/^\/+/, '');
+	const productImagesRoot = resolve(root, 'public/images/products');
+	const sourcePath = resolve(root, 'public', relativeImagePath);
+	if (!sourcePath.startsWith(`${productImagesRoot}${sep}`)) {
+		throw new Error(`L’image importée doit se trouver dans /images/products : ${product.image.src}`);
+	}
+
+	const sourceInfo = await stat(sourcePath);
+	const { default: sharp } = await import('sharp');
+	const metadata = await sharp(sourcePath).metadata();
+	const alreadyOptimized = extname(sourcePath).toLowerCase() === '.webp'
+		&& sourceInfo.size <= MAX_PRODUCT_IMAGE_BYTES
+		&& (metadata.width ?? 0) <= MAX_PRODUCT_IMAGE_DIMENSION
+		&& (metadata.height ?? 0) <= MAX_PRODUCT_IMAGE_DIMENSION;
+	if (alreadyOptimized) return product.image.src;
+
+	const targetPath = sourcePath.slice(0, -extname(sourcePath).length) + '.webp';
+	const temporaryPath = `${targetPath}.import-${process.pid}-${Date.now()}`;
+	if (targetPath !== sourcePath) {
+		try {
+			await access(targetPath);
+			throw new Error(`L’image optimisée existe déjà : ${targetPath}`);
+		} catch (error) {
+			if (error.code !== 'ENOENT') throw error;
+		}
+	}
+
+	try {
+		await sharp(sourcePath)
+			.rotate()
+			.resize({
+				width: MAX_PRODUCT_IMAGE_DIMENSION,
+				height: MAX_PRODUCT_IMAGE_DIMENSION,
+				fit: 'inside',
+				withoutEnlargement: true,
+			})
+			.webp({ quality: PRODUCT_IMAGE_WEBP_QUALITY, alphaQuality: 100, smartSubsample: true, effort: 6 })
+			.toFile(temporaryPath);
+		const optimizedInfo = await stat(temporaryPath);
+		const sizeError = productImageSizeError(product.id, product.image.src, optimizedInfo.size);
+		if (sizeError) throw new Error(sizeError);
+		await rename(temporaryPath, targetPath);
+		if (targetPath !== sourcePath) await unlink(sourcePath);
+	} catch (error) {
+		await unlink(temporaryPath).catch(() => {});
+		throw error;
+	}
+
+	product.image.src = `/${relativeImagePath.slice(0, -extname(relativeImagePath).length)}.webp`;
+	return product.image.src;
+}
 
 export function buildCatalogIndexSource(kind, files) {
 	const exportName = KINDS[kind]?.exportName;
@@ -39,7 +100,11 @@ export async function validateCatalog(root, schemas, seoTitles, toolUseSeoTitles
 			else if (seoTitles[product.id].length > 60) errors.push(`Titre SEO supérieur à 60 caractères : ${product.id}`);
 			if (kind === 'tools' && !toolUseSeoTitles[product.id]) errors.push(`Titre SEO éditorial d’usage absent : ${product.id}`);
 			else if (kind === 'tools' && toolUseSeoTitles[product.id].length > 60) errors.push(`Titre SEO d’usage supérieur à 60 caractères : ${product.id}`);
-			try { await access(resolve(root, 'public', product.image.src.replace(/^\//, ''))); } catch { errors.push(`Image locale absente : ${product.id} ${product.image.src}`); }
+			try {
+				const imageInfo = await stat(resolve(root, 'public', product.image.src.replace(/^\//, '')));
+				const sizeError = productImageSizeError(product.id, product.image.src, imageInfo.size);
+				if (sizeError) errors.push(sizeError);
+			} catch { errors.push(`Image locale absente : ${product.id} ${product.image.src}`); }
 			const evidenceIds = new Set(product.evidence.map((item) => item.id));
 			for (const [field, ids] of Object.entries(product.fieldSources)) for (const id of ids) if (!evidenceIds.has(id)) errors.push(`Source de champ inconnue : ${product.id}.${field} -> ${id}`);
 			for (const evidence of product.evidence) if (!evidence.sourceUrl.startsWith('https://')) errors.push(`Source non HTTPS : ${product.id}/${evidence.id}`);
@@ -63,6 +128,7 @@ export async function addCatalogProduct(root, kind, draftPath, schema) {
 	const product = schema.parse(draft);
 	const target = resolve(root, 'src/data/products', kind, `${product.slug}.ts`);
 	try { await access(target); throw new Error(`Le produit existe déjà : ${target}`); } catch (error) { if (error.code !== 'ENOENT') throw error; }
+	await optimizeImportedProductImage(root, product);
 	await writeFile(target, `const product = ${JSON.stringify(product, null, 2)};\n\nexport default product;\n`, { flag: 'wx' });
 	await generateCatalogIndexes(root);
 	return target;

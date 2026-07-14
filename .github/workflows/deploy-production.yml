@@ -107,7 +107,7 @@ jobs:
         run: node scripts/audit-dist.mjs
 
       - name: Lighthouse performance, accessibility and SEO
-        run: pnpm lighthouse
+        run: pnpm lighthouse:production
 
       - name: Upload Lighthouse reports
         if: ${{ always() && hashFiles('.lighthouseci/reports/**') != '' }}

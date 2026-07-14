@@ -11,6 +11,7 @@
       "numberOfRuns": 3,
       "settings": {
         "preset": "desktop",
+        "onlyCategories": ["performance", "accessibility", "best-practices", "seo"],
         "chromeFlags": "--headless --no-sandbox --disable-dev-shm-usage"
       }
     },

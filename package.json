@@ -29,6 +29,7 @@
     "audit:dist": "node scripts/audit-dist.mjs",
     "lint:source": "node scripts/lint-source.mjs",
     "lighthouse": "lhci autorun",
+    "lighthouse:production": "lhci autorun --collect.numberOfRuns=2",
     "validate:full": "pnpm validate && pnpm data:validate",
     "validate:main": "pnpm lint:source && pnpm validate:full && pnpm audit:dist && pnpm lighthouse",
     "preview": "astro preview",
