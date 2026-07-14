@@ -1,0 +1,202 @@
+<section class="passport-shell" data-passport-root aria-live="polite">
+	<div class="passport-loading" data-passport-loading>
+		<p class="eyebrow">Lecture locale</p>
+		<h2>Ouverture du Passeport…</h2>
+		<p>La configuration est décodée et recalculée dans ce navigateur.</p>
+	</div>
+
+	<div class="passport-empty" data-passport-empty hidden>
+		<p class="eyebrow">Aucune installation chargée</p>
+		<h2>Créez d’abord une configuration</h2>
+		<p data-passport-error>Cette page attend une URL de Passeport générée par le calculateur.</p>
+		<a class="button primary" href="/calculateur/">Ouvrir le calculateur</a>
+	</div>
+
+	<article class="passport-document" data-passport-document hidden>
+		<header class="passport-head">
+			<div>
+				<p class="eyebrow">Passeport CompatAir</p>
+				<h2 data-compressor></h2>
+				<p class="passport-verdict" data-verdict></p>
+			</div>
+			<dl class="passport-identity">
+				<div><dt>Identifiant</dt><dd data-id></dd></div>
+				<div><dt>Schéma</dt><dd data-schema></dd></div>
+				<div><dt>Moteur</dt><dd data-engine></dd></div>
+				<div><dt>Catalogue</dt><dd data-catalog-date></dd></div>
+			</dl>
+		</header>
+
+		<div class="passport-actions">
+			<button class="button primary" type="button" data-download>Télécharger le PDF</button>
+			<button class="button" type="button" data-copy>Copier l’URL</button>
+			<a class="button" href="/calculateur/" data-edit>Modifier</a>
+			<span role="status" data-action-status></span>
+		</div>
+
+		<section class="passport-section passport-calculations">
+			<header><span>01</span><h3>Calculs et marges</h3></header>
+			<dl class="passport-metrics">
+				<div><dt>Débit de pointe</dt><dd data-peak></dd></div>
+				<div><dt>Débit moyen</dt><dd data-average></dd></div>
+				<div><dt>FAD recommandé</dt><dd data-recommended></dd></div>
+				<div><dt>FAD disponible</dt><dd data-available></dd></div>
+				<div><dt>Marge nominale</dt><dd data-nominal-margin></dd></div>
+				<div><dt>Marge CompatAir</dt><dd data-safety-margin></dd></div>
+			</dl>
+			<p class="passport-confidence" data-confidence></p>
+		</section>
+
+		<div class="passport-two-columns">
+			<section class="passport-section">
+				<header><span>02</span><h3>Installation déclarée</h3></header>
+				<dl class="passport-details">
+					<div><dt>Outils</dt><dd data-tools></dd></div>
+					<div><dt>Organisation</dt><dd data-mode></dd></div>
+					<div><dt>Profil</dt><dd data-usage></dd></div>
+					<div><dt>Flexible</dt><dd data-hose></dd></div>
+					<div><dt>Distance totale</dt><dd data-distance></dd></div>
+					<div><dt>Raccords</dt><dd data-fittings></dd></div>
+					<div><dt>Traitement d’air</dt><dd data-filtration></dd></div>
+				</dl>
+			</section>
+
+			<section class="passport-section passport-watch">
+				<header><span>03</span><h3>Points de vigilance</h3></header>
+				<ul data-warnings></ul>
+			</section>
+		</div>
+
+		<div class="passport-two-columns">
+			<section class="passport-section">
+				<header><span>04</span><h3>Évolutions possibles</h3></header>
+				<ul data-upgrades></ul>
+			</section>
+			<section class="passport-section passport-missing">
+				<header><span>05</span><h3>Données manquantes</h3></header>
+				<ul data-missing></ul>
+			</section>
+		</div>
+
+		<section class="passport-section">
+			<header><span>06</span><h3>Sources liées</h3></header>
+			<div class="passport-sources" data-sources></div>
+		</section>
+
+		<footer class="passport-notice">
+			<strong>Périmètre du document</strong>
+			<p>Le Passeport décrit la configuration déclarée et les données disponibles à sa date de génération. Il ne remplace ni une mesure en charge, ni une notice constructeur, ni une vérification réglementaire.</p>
+		</footer>
+	</article>
+</section>
+
+<script>
+	import { CATALOG_VERIFIED_AT, compressors, tools } from '../data/catalog';
+	import { createPassportPdf } from '../domain/passport-pdf';
+	import { createPassportReport, decodePassportConfiguration, passportVerdictLabel } from '../domain/passport';
+
+	const root = document.querySelector<HTMLElement>('[data-passport-root]');
+	const query = <T extends Element>(selector: string) => root?.querySelector<T>(selector);
+	const setText = (selector: string, value: string) => { const element = query<HTMLElement>(selector); if (element) element.textContent = value; };
+	const format = (value: number, digits = 1) => value.toLocaleString('fr-FR', { maximumFractionDigits: digits });
+	const valueOrMissing = (value: number | undefined, unit: string) => value === undefined ? 'Non renseigné' : `${format(value)} ${unit}`;
+	const usageLabels = { occasional: 'Occasionnel', intermittent: 'Intermittent', sustained: 'Soutenu', mixed: 'Mixte' } as const;
+	const fittingLabels = { unknown: 'Non renseigné', 'euro-7.2': 'Euro 7,2 mm', 'iso-6150-b': 'ISO 6150-B', other: 'Autre standard' } as const;
+	const filtrationLabels = { unknown: 'Non renseigné', none: 'Aucune déclarée', particle: 'Filtration particulaire', 'water-separator': 'Séparateur d’eau', coalescing: 'Filtration coalescente', dryer: 'Sécheur' } as const;
+
+	function renderList(selector: string, values: string[], emptyMessage: string) {
+		const list = query<HTMLUListElement>(selector);
+		if (!list) return;
+		list.replaceChildren();
+		for (const value of values.length ? values : [emptyMessage]) {
+			const item = document.createElement('li');
+			item.textContent = value;
+			list.append(item);
+		}
+	}
+
+	async function loadPassport() {
+		const empty = query<HTMLElement>('[data-passport-empty]');
+		const documentPanel = query<HTMLElement>('[data-passport-document]');
+		const loading = query<HTMLElement>('[data-passport-loading]');
+		const encoded = new URLSearchParams(location.hash.slice(1)).get('passport');
+		const configuration = encoded ? decodePassportConfiguration(encoded) : undefined;
+		if (!configuration || !encoded) {
+			if (encoded) setText('[data-passport-error]', 'Cette URL est invalide, incomplète ou utilise un format non reconnu.');
+			if (loading) loading.hidden = true;
+			if (empty) empty.hidden = false;
+			return;
+		}
+
+		try {
+			const report = await createPassportReport(configuration, compressors, tools, CATALOG_VERIFIED_AT);
+			const currentUrl = `${location.origin}/passeport/#passport=${encoded}`;
+			setText('[data-compressor]', report.compressorLabel);
+			setText('[data-verdict]', passportVerdictLabel(report.result));
+			query<HTMLElement>('[data-verdict]')?.setAttribute('data-status', report.result.verdict);
+			setText('[data-id]', report.passportId.slice(0, 16));
+			query<HTMLElement>('[data-id]')?.setAttribute('title', report.passportId);
+			setText('[data-schema]', report.schemaVersion);
+			setText('[data-engine]', report.calculationVersion);
+			setText('[data-catalog-date]', report.catalogVerifiedAt);
+			setText('[data-peak]', `${format(report.result.peakFlowLpm)} L/min`);
+			setText('[data-average]', `${format(report.result.averageFlowLpm)} L/min`);
+			setText('[data-recommended]', `${format(report.result.recommendedFadLpm)} L/min à ${format(report.result.requiredPressureBar)} bar`);
+			setText('[data-available]', report.availableFadLpm === undefined ? 'Donnée insuffisante' : `${format(report.availableFadLpm)} L/min`);
+			setText('[data-nominal-margin]', report.nominalMarginPercent === undefined ? 'Non calculable' : `${format(report.nominalMarginPercent)} %`);
+			setText('[data-safety-margin]', `${Math.round(report.configuration.safetyMargin * 100)} % · ${report.compatAirMarginCovered === undefined ? 'couverture indéterminable' : report.compatAirMarginCovered ? 'couverte' : 'non couverte'}`);
+			setText('[data-confidence]', `Confiance du résultat : ${report.result.confidence === 'high' ? 'élevée' : report.result.confidence === 'medium' ? 'moyenne' : 'faible'}.`);
+			setText('[data-tools]', report.toolLabels.join(', '));
+			setText('[data-mode]', report.configuration.mode === 'simultaneous' ? 'Utilisation simultanée' : 'Utilisation successive');
+			setText('[data-usage]', `${usageLabels[report.configuration.usageProfile]} · session ${report.configuration.sessionMinutes} min`);
+			setText('[data-hose]', `${valueOrMissing(report.configuration.hoseLengthMeters, 'm')} · diamètre intérieur ${valueOrMissing(report.configuration.hoseInnerDiameterMm, 'mm')}`);
+			setText('[data-distance]', valueOrMissing(report.configuration.networkDistanceMeters, 'm'));
+			setText('[data-fittings]', `${fittingLabels[report.configuration.fittingStandard]} · ${report.configuration.fittingCount ?? 'nombre non renseigné'}`);
+			setText('[data-filtration]', filtrationLabels[report.configuration.filtration]);
+			renderList('[data-warnings]', report.warnings, 'Aucun point de vigilance supplémentaire.');
+			renderList('[data-upgrades]', report.possibleUpgrades, 'Aucune évolution proposée.');
+			renderList('[data-missing]', report.missingData, 'Aucune donnée manquante identifiée dans le périmètre actuel.');
+
+			const sourcesPanel = query<HTMLElement>('[data-sources]');
+			if (sourcesPanel) {
+				sourcesPanel.replaceChildren();
+				for (const source of report.sources) {
+					const article = document.createElement('article');
+					const link = document.createElement('a');
+					const meta = document.createElement('span');
+					link.href = source.url;
+					link.rel = 'noreferrer';
+					link.textContent = `${source.productLabel} · ${source.label}`;
+					meta.textContent = `Consultée le ${source.retrievedAt} · confiance ${source.confidence}`;
+					article.append(link, meta);
+					sourcesPanel.append(article);
+				}
+				if (!report.sources.length) sourcesPanel.textContent = 'Aucune source constructeur liée à cette configuration.';
+			}
+
+			query<HTMLAnchorElement>('[data-edit]')?.setAttribute('href', `/calculateur/#config=${encoded}`);
+			query<HTMLButtonElement>('[data-copy]')?.addEventListener('click', async () => {
+				await navigator.clipboard.writeText(currentUrl);
+				setText('[data-action-status]', 'URL copiée.');
+			});
+			query<HTMLButtonElement>('[data-download]')?.addEventListener('click', () => {
+				const blob = new Blob([createPassportPdf(report, currentUrl)], { type: 'application/pdf' });
+				const objectUrl = URL.createObjectURL(blob);
+				const link = document.createElement('a');
+				link.href = objectUrl;
+				link.download = `passeport-compatair-${report.passportId.slice(0, 16)}.pdf`;
+				link.click();
+				setTimeout(() => URL.revokeObjectURL(objectUrl), 1_000);
+				setText('[data-action-status]', 'PDF généré localement.');
+			});
+			if (loading) loading.hidden = true;
+			if (documentPanel) documentPanel.hidden = false;
+		} catch (error) {
+			setText('[data-passport-error]', error instanceof Error ? error.message : 'Le Passeport ne peut pas être recalculé.');
+			if (loading) loading.hidden = true;
+			if (empty) empty.hidden = false;
+		}
+	}
+
+	void loadPassport();
+</script>

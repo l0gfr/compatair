@@ -9,7 +9,9 @@
 - catalogue de compresseurs filtrable et paginé, fiches sourcées, courbes FAD, limites, confiance et alternatives comparables ;
 - catalogue d’outils et taxonomie extensible, fiches sourcées et exigences non documentées signalées ;
 - calculateur multi-outils avec simultanéité, fréquence, durée, flexible, modèle existant et saisie personnalisée ;
-- dossier de dimensionnement local avec synthèse de configuration, recommandations prioritaires, filtres par verdict, copie texte et export imprimable en PDF ;
+- dossier de dimensionnement local avec synthèse de configuration, recommandations prioritaires, filtres par verdict et copie texte ;
+- Passeport CompatAir gratuit : installation encodée dans une URL versionnée, recalcul local, sources, marges, points de vigilance, évolutions possibles, données manquantes et PDF généré dans le navigateur ;
+- frontière produit explicite : aucune sauvegarde serveur dans la version gratuite ; la sauvegarde de plusieurs ateliers, les exports de dossiers et les alertes restent le périmètre envisagé d’une version professionnelle non disponible ;
 - verdicts `continuous`, `intermittent`, `incompatible` et `insufficient_data` ;
 - conversions, interpolation bornée, débit de pointe, débit moyen, réserve de cuve, récupération conditionnelle et version des formules ;
 - recherche globale, comparateur de deux ou trois modèles, pages par marque, pages par usage et pages de compatibilité limitées aux données concluantes ;

@@ -13,6 +13,7 @@ const staticCards: SocialCard[] = [
 	{ path: '/affiliation/', kicker: 'Indépendance', title: 'Affiliation et verdict technique', subtitle: 'Une commission ne modifie jamais la compatibilité' },
 	{ path: '/barometre-transparence/', kicker: 'Édition 2026', title: 'Baromètre de transparence documentaire', subtitle: 'Un score de documentation, jamais de qualité produit' },
 	{ path: '/calculateur/', kicker: 'Moteur CompatAir', title: 'Dimensionner une installation pneumatique', subtitle: 'Débit, pression, fréquence et limites explicites' },
+	{ path: '/passeport/', kicker: 'Dossier versionné', title: 'Le Passeport CompatAir', subtitle: 'Installation, calculs, sources, marges et limites' },
 	{ path: '/comparateur/', kicker: 'Comparaison', title: 'Comparer des compresseurs', subtitle: 'Caractéristiques et données manquantes côte à côte' },
 	{ path: '/comparatifs/', kicker: 'Comparatifs', title: 'Comparer sans confondre les chiffres', subtitle: 'FAD, pression et confiance documentaire' },
 	{ path: '/comparatifs/compresseurs-debit-restitue/', kicker: 'Comparatif factuel', title: 'Compresseurs par débit restitué', subtitle: 'Chaque valeur reste liée à sa pression publiée' },

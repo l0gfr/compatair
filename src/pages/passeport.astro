@@ -1,0 +1,59 @@
+---
+import PassportViewer from '../components/PassportViewer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+	title="Passeport d’installation pneumatique | CompatAir"
+	description="Conservez une installation pneumatique dans une URL privée par conception et exportez un PDF versionné avec calculs, sources, marges et données manquantes."
+	canonicalPath="/passeport/"
+>
+	<section class="page-hero compact passport-hero">
+		<div class="container split-head">
+			<div>
+				<p class="eyebrow">Une installation, un dossier vérifiable</p>
+				<h1>Le Passeport CompatAir</h1>
+				<p class="lead">Une photographie versionnée de votre compresseur, de vos outils et de votre réseau, avec les limites visibles au même endroit.</p>
+			</div>
+			<div class="passport-privacy-note">
+				<strong>Gratuit · sans compte</strong>
+				<p>La configuration reste dans le fragment de l’URL et le PDF est produit dans votre navigateur. CompatAir ne sauvegarde pas l’installation sur son serveur.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section passport-viewer-section">
+		<div class="container"><PassportViewer /></div>
+	</section>
+
+	<section class="section passport-offers">
+		<div class="container">
+			<div class="section-head">
+				<p class="eyebrow">Une frontière explicite</p>
+				<h2>Le grand public d’abord, les ateliers professionnels ensuite</h2>
+			</div>
+			<div class="passport-offer-grid">
+				<article class="passport-offer active">
+					<span>Disponible</span>
+					<h3>Version gratuite</h3>
+					<p>Pour décrire et partager une installation ponctuelle sans créer de compte.</p>
+					<ul>
+						<li>URL versionnée et modifiable</li>
+						<li>Calculs, sources, marges et limites</li>
+						<li>PDF produit localement</li>
+					</ul>
+				</article>
+				<article class="passport-offer future">
+					<span>Projet · non disponible</span>
+					<h3>Version professionnelle</h3>
+					<p>Pour suivre un parc d’installations et conserver un historique opérationnel.</p>
+					<ul>
+						<li>Sauvegarde de plusieurs ateliers</li>
+						<li>Export de dossiers regroupés</li>
+						<li>Alertes lorsque les données changent</li>
+					</ul>
+				</article>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
