@@ -121,7 +121,7 @@
 		Header always unset Cache-Control
 		Header always set Cache-Control "public, max-age=31536000, immutable"
 	</FilesMatch>
-	<LocationMatch "^/(?:_astro/[^/]+\.js|widget/v1\.0\.0/compatair-widget\.js)$">
+	<LocationMatch "^/(?:_assets/[^/]+\.js|widget/v1\.0\.0/compatair-widget\.js)$">
 		Header onsuccess unset Cache-Control
 		Header always unset Cache-Control
 		Header always set Cache-Control "public, max-age=31536000, immutable"

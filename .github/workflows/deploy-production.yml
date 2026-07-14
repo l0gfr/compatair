@@ -5,6 +5,12 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      recovery_mode:
+        description: Autoriser une restauration si les invariants live sont indisponibles
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -23,6 +29,7 @@ jobs:
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           persist-credentials: false
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
@@ -45,15 +52,42 @@ jobs:
       - name: Validate source, tests, build and snapshots
         run: pnpm validate:full
 
-      - name: Fetch current production invariants
+      - name: Enforce repository append-only baseline
+        env:
+          PUSH_BASE_SHA: ${{ github.event.before }}
         run: |
-          curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/evidence-history.json -o previous-evidence-history.json
-          curl --fail --silent --show-error --max-time 20 https://compatair.fr/widget/v1.0.0/compatair-widget.js -o previous-compatair-widget.js
+          previous_sha="$PUSH_BASE_SHA"
+          if [[ -z "$previous_sha" || "$previous_sha" =~ ^0+$ ]]; then
+            previous_sha="$(git rev-parse HEAD^)"
+          fi
+          git cat-file -e "${previous_sha}:src/data/evidence-history.snapshot.json"
+          git show "${previous_sha}:src/data/evidence-history.snapshot.json" > previous-repository-evidence-history.json
+          node scripts/assert-evidence-history-extension.mjs previous-repository-evidence-history.json dist/data/evidence-history.json
 
-      - name: Enforce append-only evidence history
+      - name: Fetch current production invariants
+        id: production-invariants
+        env:
+          RECOVERY_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.recovery_mode || false }}
+        run: |
+          available=true
+          if ! curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/evidence-history.json -o previous-evidence-history.json ||
+             ! curl --fail --silent --show-error --max-time 20 https://compatair.fr/widget/v1.0.0/compatair-widget.js -o previous-compatair-widget.js; then
+            rm -f previous-evidence-history.json previous-compatair-widget.js
+            if [[ "$RECOVERY_MODE" != "true" ]]; then
+              echo "::error::Les invariants live sont indisponibles. Utiliser recovery_mode uniquement pour une restauration manuelle approuvée." >&2
+              exit 1
+            fi
+            available=false
+            echo "::warning::Mode récupération actif : la référence Git et les empreintes épinglées restent obligatoires, les comparaisons live sont ignorées."
+          fi
+          echo "available=$available" >> "$GITHUB_OUTPUT"
+
+      - name: Enforce live append-only evidence history
+        if: steps.production-invariants.outputs.available == 'true'
         run: node scripts/assert-evidence-history-extension.mjs previous-evidence-history.json dist/data/evidence-history.json
 
-      - name: Enforce immutable published widget
+      - name: Enforce immutable live widget
+        if: steps.production-invariants.outputs.available == 'true'
         run: cmp --silent previous-compatair-widget.js dist/widget/v1.0.0/compatair-widget.js
 
       - name: Sign published data snapshots
@@ -193,6 +227,19 @@ jobs:
               'https://compatair.fr/api/v1/compatibility?compressorId=einhell-tc-ac-240-50-10-of&toolId=einhell-tc-pe-150' \
               | grep -Fq '"schemaVersion":"1.0.0"'
           fi
+
+      - name: Archive signed production invariants
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: compatair-invariants-${{ github.sha }}
+          path: |
+            dist/data/evidence-history.json
+            dist/data/signatures.json
+            dist/data/signing-keys.json
+            dist/widget/v1.0.0/compatair-widget.js
+            config/immutable-assets.json
+          if-no-files-found: error
+          retention-days: 90
     environment:
       name: production
       url: https://compatair.fr

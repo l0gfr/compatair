@@ -2,7 +2,7 @@
 	<div class="passport-loading" data-passport-loading>
 		<p class="eyebrow">Lecture locale</p>
 		<h2>Ouverture du Passeport…</h2>
-		<p>L’enveloppe versionnée est décodée et vérifiée dans ce navigateur.</p>
+		<p>L’enveloppe versionnée est décodée et son intégrité locale est vérifiée dans ce navigateur.</p>
 	</div>
 
 	<div class="passport-empty" data-passport-empty hidden>
@@ -91,13 +91,12 @@
 		<footer class="passport-notice">
 			<strong>Périmètre du document</strong>
 			<p>Le Passeport décrit la configuration déclarée et les données disponibles à sa date de génération. Il ne remplace ni une mesure en charge, ni une notice constructeur, ni une vérification réglementaire.</p>
+			<p>Son empreinte détecte une modification du contenu, mais ne constitue pas une signature d’authenticité émise par CompatAir.</p>
 		</footer>
 	</article>
 </section>
 
 <script>
-	import { CATALOG_VERIFIED_AT, compressors, tools } from '../data/catalog';
-	import { createPassportPdf } from '../domain/passport-pdf';
 	import { createPassportReport, decodePassportConfiguration, decodePassportEnvelope, encodePassportConfiguration, passportVerdictLabel, reportFromPassportEnvelope, type PassportReport } from '../domain/passport';
 
 	const root = document.querySelector<HTMLElement>('[data-passport-root]');
@@ -108,6 +107,11 @@
 	const usageLabels = { occasional: 'Occasionnel', intermittent: 'Intermittent', sustained: 'Soutenu', mixed: 'Mixte' } as const;
 	const fittingLabels = { unknown: 'Non renseigné', 'euro-7.2': 'Euro 7,2 mm', 'iso-6150-b': 'ISO 6150-B', other: 'Autre standard' } as const;
 	const filtrationLabels = { unknown: 'Non renseigné', none: 'Aucune déclarée', particle: 'Filtration particulaire', 'water-separator': 'Séparateur d’eau', coalescing: 'Filtration coalescente', dryer: 'Sécheur' } as const;
+	let currentCatalogPromise: Promise<typeof import('../data/catalog')> | undefined;
+	function loadCurrentCatalog() {
+		currentCatalogPromise ??= import('../data/catalog');
+		return currentCatalogPromise;
+	}
 
 	function renderList(selector: string, values: string[], emptyMessage: string) {
 		const list = query<HTMLUListElement>(selector);
@@ -171,15 +175,24 @@
 				setText('[data-action-status]', 'URL copiée.');
 			};
 			const downloadButton = query<HTMLButtonElement>('[data-download]');
-			if (downloadButton) downloadButton.onclick = () => {
-				const blob = new Blob([createPassportPdf(report, currentUrl)], { type: 'application/pdf' });
-				const objectUrl = URL.createObjectURL(blob);
-				const link = document.createElement('a');
-				link.href = objectUrl;
-				link.download = `passeport-compatair-${report.passportId.slice(0, 16)}.pdf`;
-				link.click();
-				setTimeout(() => URL.revokeObjectURL(objectUrl), 1_000);
-				setText('[data-action-status]', 'PDF généré localement.');
+			if (downloadButton) downloadButton.onclick = async () => {
+				downloadButton.disabled = true;
+				setText('[data-action-status]', 'Préparation locale du PDF…');
+				try {
+					const { createPassportPdf } = await import('../domain/passport-pdf');
+					const blob = new Blob([createPassportPdf(report, currentUrl)], { type: 'application/pdf' });
+					const objectUrl = URL.createObjectURL(blob);
+					const link = document.createElement('a');
+					link.href = objectUrl;
+					link.download = `passeport-compatair-${report.passportId.slice(0, 16)}.pdf`;
+					link.click();
+					setTimeout(() => URL.revokeObjectURL(objectUrl), 1_000);
+					setText('[data-action-status]', 'PDF généré localement.');
+				} catch {
+					setText('[data-action-status]', 'La génération locale du PDF a échoué. Le Passeport reste disponible dans cette page.');
+				} finally {
+					downloadButton.disabled = false;
+				}
 			};
 	}
 
@@ -210,22 +223,26 @@
 				showOriginal();
 				if (loading) loading.hidden = true;
 				if (documentPanel) documentPanel.hidden = false;
-
-				try {
-					const current = await createPassportReport(envelope.configuration, compressors, tools, CATALOG_VERIFIED_AT);
-					const showCurrent = () => { renderPassport(current, currentUrl); setText('[data-version-note]', `Simulation actuelle, catalogue ${current.catalogVerifiedAt}. L’URL originale n’est pas modifiée.`); };
-					if (currentButton) {
-						currentButton.disabled = false;
-						currentButton.onclick = showCurrent;
-					}
-				} catch {
-					if (currentButton) {
+				if (currentButton) {
+					currentButton.disabled = false;
+					currentButton.onclick = async () => {
 						currentButton.disabled = true;
-						currentButton.title = 'Simulation actuelle indisponible : une référence du Passeport n’existe plus dans le catalogue courant.';
-					}
-					setText('[data-version-note]', `Rapport original du ${original.generatedAt.slice(0, 10)}, catalogue ${original.catalogVerifiedAt}. Simulation actuelle indisponible.`);
+						setText('[data-version-note]', 'Chargement du catalogue actuel et recalcul local…');
+						try {
+							const { CATALOG_VERIFIED_AT, compressors, tools } = await loadCurrentCatalog();
+							const current = await createPassportReport(envelope.configuration, compressors, tools, CATALOG_VERIFIED_AT);
+							renderPassport(current, currentUrl);
+							setText('[data-version-note]', `Simulation actuelle, catalogue ${current.catalogVerifiedAt}. L’URL originale n’est pas modifiée.`);
+							currentButton.disabled = false;
+						} catch {
+							currentButton.disabled = true;
+							currentButton.title = 'Simulation actuelle indisponible : une référence du Passeport n’existe plus dans le catalogue courant.';
+							setText('[data-version-note]', `Rapport original du ${original.generatedAt.slice(0, 10)}, catalogue ${original.catalogVerifiedAt}. Simulation actuelle indisponible.`);
+						}
+					};
 				}
 			} else {
+				const { CATALOG_VERIFIED_AT, compressors, tools } = await loadCurrentCatalog();
 				const current = await createPassportReport(legacyConfiguration, compressors, tools, CATALOG_VERIFIED_AT);
 				renderPassport(current, currentUrl);
 				const choice = query<HTMLElement>('[data-version-choice]');

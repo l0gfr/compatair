@@ -100,6 +100,12 @@ Après ces contrôles, créer la variable GitHub `MCP_ENABLED` avec la valeur `t
 
 L’ajout de l’API ou une modification de ses en-têtes inter-origines nécessite de rejouer `install-mcp.sh` avant le premier déploiement qui les vérifie. Le script installe le vhost versionné, exécute `apache2ctl configtest`, puis recharge Apache. Un paquet statique seul ne peut pas modifier `/etc/apache2`.
 
+## Récupération des invariants
+
+Chaque déploiement compare l’historique candidat avec le snapshot du commit Git précédent avant de consulter la production. Cette référence indépendante reste disponible lorsqu’un incident rend le site public inaccessible. Après signature, le workflow conserve aussi pendant 90 jours un artefact GitHub Actions dédié avec l’historique, son manifeste Ed25519, les clés publiques, le widget versionné et son empreinte épinglée.
+
+Un push normal continue d’échouer si les invariants live ne peuvent pas être téléchargés. Pour restaurer le service pendant une panne, lancer manuellement `Deploy production` avec l’option `recovery_mode`. Ce mode est refusé sur un push automatique, reste visible dans le journal GitHub Actions et conserve les contrôles Git, SRI, tests, signatures et audits. Après restauration, relancer un déploiement normal afin de confirmer les comparaisons avec la surface live.
+
 ## Priorités issues de la demande
 
 Le fichier agrégé reste privé sur le serveur. Pour produire un rapport local sans publier les petits volumes :

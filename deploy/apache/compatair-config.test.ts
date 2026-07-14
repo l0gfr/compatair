@@ -5,6 +5,11 @@ const config = readFileSync(
 	new URL('./compatair.fr.conf.example', import.meta.url),
 	'utf8',
 );
+const astroConfig = readFileSync(
+	new URL('../../astro.config.mjs', import.meta.url),
+	'utf8',
+);
+const assetsDirectory = astroConfig.match(/assets:\s*['"]([^'"]+)['"]/)?.[1];
 
 describe('CompatAir Apache CSP', () => {
 	it('isolates the private statistics policy from the public site policy', () => {
@@ -51,7 +56,9 @@ describe('CompatAir Apache CSP', () => {
 	});
 
 	it('reserves immutable caching for versioned or hashed JavaScript', () => {
-		expect(config).toContain('^/(?:_astro/[^/]+\\.js|widget/v1\\.0\\.0/compatair-widget\\.js)$');
+		expect(assetsDirectory).toBeDefined();
+		const escapedAssetsDirectory = assetsDirectory!.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+		expect(config).toContain(`^/(?:${escapedAssetsDirectory}/[^/]+\\.js|widget/v1\\.0\\.0/compatair-widget\\.js)$`);
 		expect(config).toContain('^/widget/v1/compatair-widget\\.js$');
 		const mutableAlias = config.match(
 			/<LocationMatch "\^\/widget\/v1\/compatair-widget\\\.js\$">([\s\S]*?)<\/LocationMatch>/,
