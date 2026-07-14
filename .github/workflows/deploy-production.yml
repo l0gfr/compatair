@@ -213,7 +213,7 @@ jobs:
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/robots.txt | grep -Fq 'https://compatair.fr/sitemap-index.xml'
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/sitemap-index.xml > /dev/null
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/scanner/ | grep -Fq 'Scanner et vérifier'
-          curl --fail --silent --show-error --max-time 20 https://compatair.fr/professionnels/ | grep -Fq 'Widget marchand'
+          curl --fail --silent --show-error --max-time 20 https://compatair.fr/professionnels/ | grep -Fq 'id="merchant-widget-demo"'
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/widget/v1.0.0/compatair-widget.js | grep -Fq 'CompatAir widget API v1'
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/catalog.json | grep -Fq 'catalogVersion'
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/verdicts.json | grep -Fq 'verdictVersion'
