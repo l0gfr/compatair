@@ -38,7 +38,7 @@ La cuve peut fournir temporairement la différence tant que sa pression baisse. 
 
 Le [Metabo Mega 350-100 W](https://fr.metabo.com/fr/machines/air-comprime/compresseurs/compresseurs-d-atelier-mobiles/mega-350-100-w-601538000-compresseur.html) annonce 320 L/min aspirés, mais 220 L/min effectifs à 8 bar. Les 320 L/min ne valident donc pas le SSP 1000. Le point effectif est inférieur au besoin et publié à une autre pression.
 
-Dans le catalogue actuel, aucun compresseur ne dispose d’un débit restitué documenté couvrant 300 L/min à 7 bar. La conclusion utile n’est pas de choisir le modèle « le moins mauvais », mais de chercher une référence dont la fiche publie au moins ce débit à cette pression.
+Le [tableau dynamique des verdicts](/quel-compresseur-pour/pistolet-sablage-metabo-ssp-1000/) recalcule les modèles compatibles à chaque build. Il faut retenir uniquement les références dont la fiche publie au moins 300 L/min à 7 bar ; un classement construit avec le débit aspiré serait trompeur.
 
 ## Checklist avant achat
 

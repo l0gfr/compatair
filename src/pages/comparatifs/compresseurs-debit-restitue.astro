@@ -1,9 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { compressors } from '../../data/catalog';
+import { compressors, tools } from '../../data/catalog';
+import { getCatalogMetrics } from '../../domain/catalog-insights';
 
 const documented = compressors.filter((item) => item.fadCurve.length > 0);
 const incomplete = compressors.filter((item) => item.fadCurve.length === 0);
+const metrics = getCatalogMetrics(compressors, tools);
 ---
 
 <BaseLayout
@@ -15,6 +17,19 @@ const incomplete = compressors.filter((item) => item.fadCurve.length === 0);
 		<p class="eyebrow">Comparatif factuel</p>
 		<h1>Comparer les compresseurs par débit restitué</h1>
 		<p class="lead">Un point de FAD n’est comparable à un autre que si sa pression est également prise en compte. Le tableau conserve donc les couples débit et pression publiés.</p>
+		<div class="result-metrics">
+			<div><small>Compresseurs</small><strong>{metrics.compressorCount}</strong></div>
+			<div><small>Outils documentés</small><strong>{metrics.toolCount}</strong></div>
+			<div><small>Couples verdictables</small><strong>{metrics.compatibilityPageCount}</strong></div>
+			<div><small>Profils à débit fixe</small><strong>{metrics.fixedFlowToolCount}</strong></div>
+		</div>
+		<p>Ces volumes sont calculés pendant le build depuis le catalogue et le moteur. Ils ne sont pas recopiés dans cette page.</p>
+		<h2>Niveau de documentation FAD</h2>
+		<ul>
+			<li>{metrics.fadDocumentation.multiplePoints} modèles avec plusieurs points, permettant une interpolation strictement bornée.</li>
+			<li>{metrics.fadDocumentation.singlePoint} modèles avec un point unique, utilisable uniquement à sa pression publiée.</li>
+			<li>{metrics.fadDocumentation.withoutPoint} modèle{metrics.fadDocumentation.withoutPoint > 1 ? 's' : ''} sans point exploitable.</li>
+		</ul>
 		<h2>Points documentés</h2>
 		<div class="compare-table-wrap">
 			<table class="compare-table">
@@ -23,7 +38,14 @@ const incomplete = compressors.filter((item) => item.fadCurve.length === 0);
 			</table>
 		</div>
 		<h2>Références non classables</h2>
-		<p>{incomplete.map((item) => `${item.brand} ${item.model}`).join(', ')} ne {incomplete.length === 1 ? 'dispose' : 'disposent'} pas d’un FAD exploitable dans la source actuelle. Elles ne sont pas replacées dans le classement à partir du débit aspiré.</p>
+		<p>{incomplete.map((item) => `${item.brand} ${item.model}`).join(', ')} ne {incomplete.length === 1 ? 'dispose' : 'disposent'} pas d’un FAD exploitable dans la source actuelle. {incomplete.length === 1 ? 'Cette référence n’est pas replacée' : 'Ces références ne sont pas replacées'} dans le classement à partir du débit aspiré.</p>
+		<h2>Verdicts générés par outil</h2>
+		<div class="compare-table-wrap">
+			<table class="compare-table">
+				<thead><tr><th>Outil</th><th>Compatibles en continu</th><th>Incompatibles</th><th>Données insuffisantes</th><th>Pages publiées</th></tr></thead>
+				<tbody>{metrics.toolVerdicts.map((summary) => <tr><th><a href={`/quel-compresseur-pour/${summary.tool.slug}/`}>{summary.tool.label}</a></th><td>{summary.continuous}</td><td>{summary.incompatible}</td><td>{summary.insufficientData}</td><td>{summary.verdictable}</td></tr>)}</tbody>
+			</table>
+		</div>
 		<p>Le <a href="/guides/comparatif-compresseurs-debit-restitue/">dossier éditorial complet</a> explique les limites de chaque comparaison.</p>
 	</article>
 </BaseLayout>

@@ -18,7 +18,7 @@ const pageUrl = `/compatibilite/${compressor.slug}--${tool.slug}/`;
 const jsonLd = {
 	'@context': 'https://schema.org', '@type': 'TechArticle', headline: title,
 	description: `Verdict reproductible fondé sur ${result.availableFadLpm !== undefined ? `${Math.round(result.availableFadLpm)} L/min restitués` : 'la pression maximale'} face au besoin publié de ${tool.airflowLpm.typical} L/min à ${tool.workingPressureBar.typical} bar.`,
-	mainEntityOfPage: `https://compatair.fr${pageUrl}`, dateModified: '2026-07-13', author: { '@id': 'https://compatair.fr/#organization' }, publisher: { '@id': 'https://compatair.fr/#organization' },
+	mainEntityOfPage: `https://compatair.fr${pageUrl}`, dateModified: '2026-07-14', author: { '@id': 'https://compatair.fr/#organization' }, publisher: { '@id': 'https://compatair.fr/#organization' },
 };
 ---
 <BaseLayout title={`${title} | CompatAir`} description={`Compatibilité vérifiée entre ${compressor.brand} ${compressor.model} et ${tool.label}, avec débit, pression, limites et sources.`} pageType="article" breadcrumbs={[{ name: 'Compatibilité', path: '/calculateur/' }, { name: title, path: pageUrl }]}>
