@@ -59,6 +59,10 @@ export function resolveVerdictSnapshotPath(catalogPath, configuredPath) {
 	return configuredPath || resolve(dirname(catalogPath), 'verdicts.json');
 }
 
+export function resolveProductFunnelAggregatePath(demandAggregatePath, configuredPath) {
+	return configuredPath || (demandAggregatePath ? resolve(dirname(demandAggregatePath), 'product-funnel-aggregates.json') : undefined);
+}
+
 function createRateLimiter() {
 	const requests = new Map();
 	return (key) => {
@@ -232,7 +236,7 @@ async function start() {
 	const verdictsPath = resolveVerdictSnapshotPath(catalogPath, process.env.COMPAT_AIR_VERDICTS);
 	const allowedOrigins = new Set((process.env.MCP_ALLOWED_ORIGINS ?? 'https://compatair.fr,https://www.compatair.fr').split(',').map((item) => item.trim()).filter(Boolean));
 	const demandAggregatePath = process.env.COMPAT_AIR_DEMAND_AGGREGATES || undefined;
-	const productFunnelAggregatePath = process.env.COMPAT_AIR_PRODUCT_FUNNEL_AGGREGATES || undefined;
+	const productFunnelAggregatePath = resolveProductFunnelAggregatePath(demandAggregatePath, process.env.COMPAT_AIR_PRODUCT_FUNNEL_AGGREGATES || undefined);
 	const proxyManagesApiHeaders = process.env.COMPAT_AIR_PROXY_MANAGES_API_HEADERS === '1';
 	const catalog = JSON.parse(await readFile(catalogPath, 'utf8'));
 	const verdictSnapshot = JSON.parse(await readFile(verdictsPath, 'utf8'));

@@ -5,7 +5,7 @@ import { createServer } from 'node:net';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { allowedOfferRedirect, clientAddress, createCompatAirServer, isMainModule, parseOfferId, resolveVerdictSnapshotPath } from './mcp-server.mjs';
+import { allowedOfferRedirect, clientAddress, createCompatAirServer, isMainModule, parseOfferId, resolveProductFunnelAggregatePath, resolveVerdictSnapshotPath } from './mcp-server.mjs';
 
 async function reservePort() {
 	const server = createServer();
@@ -171,6 +171,12 @@ describe('MCP HTTP boundary helpers', () => {
 	it('resolves verdicts next to the configured production catalog', () => {
 		expect(resolveVerdictSnapshotPath('/var/www/html/compatair/current/data/catalog.json')).toBe('/var/www/html/compatair/current/data/verdicts.json');
 		expect(resolveVerdictSnapshotPath('/catalog.json', '/srv/verdicts.json')).toBe('/srv/verdicts.json');
+	});
+
+	it('keeps funnel aggregation enabled with an older production unit', () => {
+		expect(resolveProductFunnelAggregatePath('/var/lib/compatair/demand-aggregates.json')).toBe('/var/lib/compatair/product-funnel-aggregates.json');
+		expect(resolveProductFunnelAggregatePath(undefined)).toBeUndefined();
+		expect(resolveProductFunnelAggregatePath('/var/lib/compatair/demand-aggregates.json', '/srv/custom-funnel.json')).toBe('/srv/custom-funnel.json');
 	});
 
 	it('starts from the production release layout without a legacy verdict environment variable', async () => {
