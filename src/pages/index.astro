@@ -6,76 +6,315 @@ import { glossaryTerms } from '../data/glossary';
 import { CALCULATION_VERSION } from '../domain/sizing';
 
 const allGuides = await getCollection('guides');
-const featuredGuides = allGuides.filter((guide) => guide.data.featured).sort((a, b) => b.data.readingTime - a.data.readingTime).slice(0, 4);
-
+const featuredGuides = allGuides
+	.filter((guide) => guide.data.featured)
+	.sort((a, b) => b.data.readingTime - a.data.readingTime)
+	.slice(0, 4);
+const [leadGuide, ...secondaryGuides] = featuredGuides;
+const comparisonCount = tools.length * compressors.length;
 ---
 
 <BaseLayout title="CompatAir : comparer compresseurs et outils pneumatiques" description="Comparez la consommation publiée d’un outil au débit restitué documenté d’un compresseur, à la même pression de travail.">
-	<section class="hero">
-		<div class="container hero-grid">
-			<div class="hero-copy">
-				<p class="eyebrow">Compatibilité d’air comprimé, sans approximation commerciale</p>
-				<h1>Le bon débit.<br /><span>À la bonne pression.</span></h1>
-				<p class="lead">CompatAir compare la consommation publiée d’un outil au débit restitué documenté d’un compresseur, à la même pression de travail. Une donnée absente produit «&nbsp;données insuffisantes&nbsp;».</p>
-				<div class="actions">
-					<a class="button primary" href="/calculateur/">Tester une compatibilité <span aria-hidden="true">→</span></a>
-					<a class="button subtle" href="/methodologie/">Voir notre méthode</a>
+	<div class="home-canvas">
+		<section class="home-hero">
+			<div class="container">
+				<header class="home-kicker-row">
+					<p>Dimensionnement de l’air comprimé</p>
+					<p><span>Méthode de calcul</span> <strong>v{CALCULATION_VERSION}</strong></p>
+				</header>
+
+				<div class="home-hero-layout">
+					<div class="home-hero-copy">
+						<h1>Avant le compresseur,<br /><em>il y a le besoin d’air.</em></h1>
+						<p class="home-lead">CompatAir part de l’outil, aligne la pression de travail et confronte son besoin au <a href="/glossaire/#fad">débit restitué</a> documenté. Quand une donnée manque, le moteur ne la remplace pas.</p>
+						<div class="actions">
+							<a class="button primary" href="/calculateur/">Vérifier une configuration <span aria-hidden="true">→</span></a>
+							<a class="home-inline-link" href="/methodologie/">Lire la méthode complète</a>
+						</div>
+					</div>
+
+					<aside class="home-method-rail" aria-label="Conditions d’une comparaison technique correcte">
+						<p class="home-rail-title">Une comparaison juste exige</p>
+						<ol>
+							<li><span>01</span><div><strong>La même pression</strong><small>Le besoin et le débit disponible sont comparés au même nombre de bars.</small></div></li>
+							<li><span>02</span><div><strong>Le débit utile</strong><small>Le <a href="/glossaire/#fad">FAD</a> est distingué du <a href="/glossaire/#debit-aspire">débit aspiré</a>.</small></div></li>
+							<li><span>03</span><div><strong>Des limites visibles</strong><small>La marge et les données absentes restent séparées du résultat.</small></div></li>
+						</ol>
+					</aside>
+				</div>
+
+				<div class="home-equation" aria-label="Chaîne de décision CompatAir">
+					<p>La chaîne de décision</p>
+					<div><small>Besoin</small><strong>Consommation de l’outil</strong><span>à sa pression de travail</span></div>
+					<b aria-hidden="true">→</b>
+					<div><small>Disponible</small><strong>FAD du compresseur</strong><span>à cette même pression</span></div>
+					<b aria-hidden="true">→</b>
+					<div><small>Sortie</small><strong>Verdict et limites</strong><span>sans estimation silencieuse</span></div>
+				</div>
+
+				<dl class="home-facts" aria-label="Contenu documenté par CompatAir">
+					<div><dt>{compressors.length}</dt><dd>compresseurs<br />documentés</dd></div>
+					<div><dt>{tools.length}</dt><dd>outils<br />pneumatiques</dd></div>
+					<div><dt>{comparisonCount.toLocaleString('fr-FR')}</dt><dd>paires que le moteur<br />peut examiner</dd></div>
+					<div><dt>{allGuides.length}</dt><dd>guides<br />techniques</dd></div>
+				</dl>
+			</div>
+		</section>
+
+		<section class="home-paths">
+			<div class="container home-section-grid">
+				<header class="home-section-intro">
+					<p class="home-index">01 / Commencer</p>
+					<h2>Partir de votre question,<br />pas d’un rayon produit.</h2>
+					<p>Un achat pertinent dépend d’abord de l’usage, de la pression et du temps de fonctionnement. Choisissez le point d’entrée qui correspond à ce que vous savez déjà.</p>
+				</header>
+
+				<div class="home-path-list">
+					<a href="/calculateur/">
+						<span>01</span>
+						<div><strong>J’ai un outil et un compresseur</strong><small>Comparez deux références ou saisissez vos propres valeurs.</small></div>
+						<b aria-hidden="true">↗</b>
+					</a>
+					<a href="/guides/">
+						<span>02</span>
+						<div><strong>Je pars d’un usage ou d’un métier</strong><small>Peinture, sablage, mécanique, réseau d’atelier : posez d’abord le besoin.</small></div>
+						<b aria-hidden="true">↗</b>
+					</a>
+					<a href="/compresseurs/">
+						<span>03</span>
+						<div><strong>Je veux examiner les références</strong><small>Consultez les caractéristiques, leurs sources et les données manquantes.</small></div>
+						<b aria-hidden="true">↗</b>
+					</a>
 				</div>
 			</div>
-			<div class="hero-instrument" aria-label="Principes de calcul CompatAir">
-				<div class="instrument-top"><span>Méthode de calcul</span><strong>v{CALCULATION_VERSION}</strong></div>
-				<div class="gauge" aria-hidden="true"><div class="gauge-face"><span class="tick t1"></span><span class="tick t2"></span><span class="tick t3"></span><span class="gauge-hand"></span><span class="gauge-hub"></span><div class="gauge-value"><strong>+25 %</strong><small>marge indicative</small></div></div></div>
-				<div class="instrument-legend"><span><i class="signal green"></i><strong>FAD</strong><small>débit restitué</small></span><span><i class="signal lime"></i><strong>bar</strong><small>pression égale</small></span><span><i class="signal orange"></i><strong>0</strong><small>donnée inventée</small></span></div>
+		</section>
+
+		<section class="home-engine">
+			<div class="container home-section-grid">
+				<header class="home-section-intro home-section-intro-light">
+					<p class="home-index">02 / Comprendre</p>
+					<h2>Le calcul reste visible.</h2>
+					<p>CompatAir ne produit pas une note opaque. Les valeurs d’entrée, les transformations autorisées et la raison du verdict restent consultables.</p>
+					<a class="home-inline-link light" href="/methodologie/">Reproduire le calcul</a>
+				</header>
+
+				<div class="home-ledger">
+					<header><span>Registre de calcul</span><strong>CompatAir / {CALCULATION_VERSION}</strong></header>
+					<div class="home-ledger-row"><span>01</span><div><strong>Lire le besoin publié</strong><small>Consommation et pression de travail de l’outil</small></div><b>Source</b></div>
+					<div class="home-ledger-row"><span>02</span><div><strong>Lire ou <a href="/glossaire/#interpolation">interpoler</a> le FAD</strong><small>Uniquement entre des points constructeur documentés</small></div><b>Calcul</b></div>
+					<div class="home-ledger-row"><span>03</span><div><strong>Appliquer la marge choisie</strong><small>Affichée séparément, jamais confondue avec une mesure</small></div><b>Choix</b></div>
+					<div class="home-ledger-row"><span>04</span><div><strong>Énoncer ce que les données permettent</strong><small>Continu, intermittent, incompatible ou données insuffisantes</small></div><b>Verdict</b></div>
+					<footer><span>Aucune commission d’affiliation n’entre dans le calcul.</span><a href="/affiliation/">Indépendance éditoriale →</a></footer>
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section class="section home-calculator">
-		<div class="container callout">
-			<div><p class="eyebrow">Le calculateur est ouvert</p><h2>Testez {tools.length} outils sur {compressors.length} compresseurs documentés.</h2><p>CompatAir compare les valeurs publiées et affiche séparément une marge indicative de 25&nbsp;%. Les pertes du réseau ne sont pas estimées sans données documentées.</p><div class="actions"><a class="button primary inverse" href="/calculateur/">Lancer le calcul</a><a class="button inverse-outline" href="/compresseurs/">Voir les produits</a></div></div>
-			<div class="metric"><strong>{tools.length} × {compressors.length}</strong><span>combinaisons calculables avec la méthode {CALCULATION_VERSION}. Les informations qui dépendent de votre usage doivent être saisies.</span></div>
-		</div>
-	</section>
+		<section class="home-reading">
+			<div class="container">
+				<header class="home-reading-head">
+					<div><p class="home-index">03 / Approfondir</p><h2>Guides de terrain,<br />sources à l’appui.</h2></div>
+					<p>Choisir, installer et utiliser un système d’air comprimé sans transformer une hypothèse en certitude.</p>
+				</header>
 
-	<section class="section editorial-home">
-		<div class="container">
-			<div class="section-head split-head"><div><p class="eyebrow">{allGuides.length} guides techniques</p><h2>Des dossiers qui vont jusqu’au bout du calcul</h2></div><p>Chaque dossier distingue les données du constructeur, les calculs que vous pouvez reproduire et les choix propres à notre méthode. Une donnée absente reste absente.</p></div>
-			<a class="home-glossary" href="/glossaire/"><span><small>Glossaire technique</small><strong>{glossaryTerms.length} notions définies et sourcées</strong></span><span>FAD · bar · point de rosée · ISO 8573-1</span><b aria-hidden="true">→</b></a>
-			<div class="guide-grid">{featuredGuides.map((guide) => <article class="guide-card"><p class="guide-meta">{guide.data.category} · {guide.data.readingTime} min</p><h3><a href={`/guides/${guide.id}/`}>{guide.data.title}</a></h3><p>{guide.data.description}</p><a class="text-link" href={`/guides/${guide.id}/`}>Lire le dossier</a></article>)}</div>
-			<div class="actions"><a class="button" href="/guides/">Tous les guides</a></div>
-		</div>
-	</section>
+				<div class="home-reading-layout">
+					{leadGuide && <article class="home-lead-story">
+						<p>{leadGuide.data.category} · {leadGuide.data.readingTime} min</p>
+						<h3><a href={`/guides/${leadGuide.id}/`}>{leadGuide.data.title}</a></h3>
+						<p>{leadGuide.data.description}</p>
+						<a href={`/guides/${leadGuide.id}/`}>Lire le guide <span aria-hidden="true">→</span></a>
+					</article>}
 
-	<div class="proof-strip">
-		<div class="container">
-			<span><strong><a href="/glossaire/#fad">Débit restitué (FAD)</a></strong> plutôt que <a href="/glossaire/#debit-aspire">débit aspiré</a></span>
-			<span><strong>Sources affichées</strong> par donnée critique</span>
-			<span><strong>Calcul reproductible</strong> sans recommandation générative</span>
-		</div>
+					<div class="home-story-list">
+						{secondaryGuides.map((guide, index) => <article>
+							<span>0{index + 2}</span>
+							<div><p>{guide.data.category} · {guide.data.readingTime} min</p><h3><a href={`/guides/${guide.id}/`}>{guide.data.title}</a></h3></div>
+						</article>)}
+						<a class="home-all-guides" href="/guides/">Voir les {allGuides.length} guides <span aria-hidden="true">→</span></a>
+					</div>
+				</div>
+
+				<a class="home-glossary-line" href="/glossaire/">
+					<span>Glossaire sourcé</span>
+					<strong>{glossaryTerms.length} notions pour lire les fiches techniques sans ambiguïté</strong>
+					<small>FAD · pression relative · cycle de service · point de rosée</small>
+					<b aria-hidden="true">↗</b>
+				</a>
+			</div>
+		</section>
+
+		<section class="home-catalog-proof">
+			<div class="container home-section-grid">
+				<header class="home-section-intro">
+					<p class="home-index">04 / Examiner</p>
+					<h2>Un catalogue construit autour des preuves.</h2>
+					<p>Une fiche n’est pas complète parce qu’elle affiche beaucoup de chiffres. Elle l’est quand les caractéristiques qui changent le verdict sont identifiées, sourcées et datées.</p>
+				</header>
+
+				<nav class="home-catalog-links" aria-label="Explorer les données CompatAir">
+					<a href="/compresseurs/"><span>Compresseurs</span><strong>{compressors.length} références</strong><b>→</b></a>
+					<a href="/outils-pneumatiques/"><span>Outils pneumatiques</span><strong>{tools.length} références</strong><b>→</b></a>
+					<a href="/sources-fiabilite/"><span>Fiabilité</span><strong>Sources et niveaux de preuve</strong><b>→</b></a>
+					<a href="/barometre-transparence/"><span>Transparence</span><strong>Données publiées par marque</strong><b>→</b></a>
+				</nav>
+			</div>
+		</section>
+
+		<section class="home-closing">
+			<div class="container">
+				<p aria-hidden="true">“</p>
+				<blockquote>
+					<p>Le volume de cuve stocke de l’air. Il ne remplace jamais un débit restitué insuffisant.</p>
+					<footer>Une règle simple qui évite beaucoup de mauvais achats.</footer>
+				</blockquote>
+				<a href="/calculateur/">Tester votre besoin <span aria-hidden="true">→</span></a>
+			</div>
+		</section>
 	</div>
-
-	<section class="section" id="fonctionnement">
-		<div class="container">
-			<div class="section-head">
-				<p class="eyebrow">Le moteur CompatAir</p>
-				<h2>Une réponse technique en trois étapes</h2>
-			</div>
-			<div class="grid">
-				<article class="card"><p class="step">01</p><h3>Choisissez un outil</h3><p>Le moteur utilise sa consommation et sa pression de travail publiées.</p></article>
-				<article class="card"><p class="step">02</p><h3>Choisissez un compresseur</h3><p>Le <a href="/glossaire/#debit-restitue">débit restitué</a> est lu ou <a href="/glossaire/#interpolation">interpolé</a> entre deux points constructeur documentés.</p></article>
-				<article class="card"><p class="step">03</p><h3>Lisez le résultat</h3><p>Débit disponible, besoin publié, marge indicative et limites sont affichés séparément.</p></article>
-			</div>
-		</div>
-	</section>
-
-	<section class="section">
-		<div class="container callout">
-			<div>
-				<p class="eyebrow">La donnée qui change tout</p>
-				<h2>Le volume de cuve ne suffit pas.</h2>
-				<p>Le volume de la cuve stocke de l’air, mais ne remplace pas un débit restitué insuffisant. Le calculateur ne déduit donc pas une compatibilité du seul nombre de litres.</p>
-			</div>
-			<div class="metric"><strong>4 verdicts</strong><span>continu · intermittent · incompatible · données insuffisantes</span></div>
-		</div>
-	</section>
 </BaseLayout>
+
+<style>
+	.home-canvas { --home-paper: #f3f0e8; --home-ink: #102a20; --home-line: rgba(16,42,32,.18); overflow: hidden; background: var(--home-paper); }
+	.home-hero { position: relative; padding: clamp(3.2rem, 7vw, 6.5rem) 0 0; background: radial-gradient(circle at 15% 4%, rgba(211,235,86,.16), transparent 24rem), linear-gradient(110deg, #f7f4ec 0 66%, #ecefe5 66%); }
+	.home-hero::after { position: absolute; right: max(1rem, calc((100vw - 1160px) / 2)); top: 0; width: 1px; height: 100%; background: rgba(16,42,32,.09); content: ""; }
+	.home-kicker-row { display: flex; justify-content: space-between; gap: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--home-line); color: #426053; font: 780 .68rem/1.3 ui-monospace, monospace; letter-spacing: .11em; text-transform: uppercase; }
+	.home-kicker-row p { margin: 0; }
+	.home-kicker-row strong { color: var(--brand); }
+	.home-hero-layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(290px, .55fr); gap: clamp(3rem, 8vw, 8rem); padding: clamp(3rem, 7vw, 6.5rem) 0 clamp(3.5rem, 6vw, 5.5rem); }
+	.home-hero-copy h1 { max-width: 870px; color: var(--home-ink); font-size: clamp(3.35rem, 7vw, 6.5rem); font-weight: 470; line-height: .91; letter-spacing: -.045em; }
+	.home-hero-copy h1 em { color: var(--brand); font-weight: inherit; }
+	.home-lead { max-width: 730px; margin: 2rem 0 0; color: #455c51; font-size: clamp(1.04rem, 1.55vw, 1.25rem); line-height: 1.72; }
+	.home-lead a, .home-method-rail a { text-decoration-color: #86a08e; text-underline-offset: .2em; }
+	.home-inline-link { align-self: center; color: var(--home-ink); font-size: .88rem; font-weight: 780; text-decoration-thickness: 1px; text-underline-offset: .35em; }
+	.home-inline-link.light { display: inline-block; margin-top: 1.2rem; color: #e7eee9; }
+	.home-method-rail { align-self: end; border-top: 3px solid var(--home-ink); }
+	.home-rail-title { margin: 0; padding: .8rem 0; border-bottom: 1px solid var(--home-line); color: #5b6f65; font: 780 .68rem/1.3 ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; }
+	.home-method-rail ol { margin: 0; padding: 0; list-style: none; }
+	.home-method-rail li { display: grid; grid-template-columns: 2rem 1fr; gap: .8rem; padding: 1.1rem 0; border-bottom: 1px solid var(--home-line); }
+	.home-method-rail li > span { padding-top: .18rem; color: var(--brand); font: 800 .66rem/1 ui-monospace, monospace; }
+	.home-method-rail li div { display: grid; gap: .28rem; }
+	.home-method-rail strong { font-size: .92rem; }
+	.home-method-rail small { color: #61736a; font-size: .74rem; line-height: 1.55; }
+	.home-equation { display: grid; grid-template-columns: .62fr 1fr auto 1fr auto 1fr; align-items: stretch; border-block: 1px solid var(--home-line); }
+	.home-equation > p { margin: 0; padding: 1.2rem 1.2rem 1.2rem 0; color: #596e63; font: 780 .66rem/1.45 ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; }
+	.home-equation > div { display: grid; gap: .12rem; padding: 1rem 1.2rem; border-left: 1px solid var(--home-line); }
+	.home-equation small { color: var(--brand); font-size: .64rem; font-weight: 820; letter-spacing: .08em; text-transform: uppercase; }
+	.home-equation strong { font-size: .82rem; }
+	.home-equation span { color: #65786e; font-size: .7rem; }
+	.home-equation > b { display: grid; place-items: center; color: #7f9288; font-weight: 500; }
+	.home-facts { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; }
+	.home-facts div { display: flex; gap: .8rem; align-items: center; padding: 1.6rem 1.2rem; border-left: 1px solid var(--home-line); }
+	.home-facts div:first-child { padding-left: 0; border-left: 0; }
+	.home-facts dt { color: var(--home-ink); font: 520 clamp(2rem, 3vw, 3.1rem)/1 "Newsreader Variable", Georgia, serif; }
+	.home-facts dd { margin: 0; color: #65776d; font-size: .7rem; line-height: 1.4; }
+	.home-paths, .home-catalog-proof { padding: clamp(5rem, 9vw, 8.5rem) 0; background: #f9f7f1; }
+	.home-section-grid { display: grid; grid-template-columns: minmax(280px, .7fr) minmax(0, 1.3fr); gap: clamp(3rem, 9vw, 9rem); }
+	.home-section-intro h2 { max-width: 540px; margin: .3rem 0 1.5rem; color: var(--home-ink); font-size: clamp(2.5rem, 4.8vw, 4.4rem); font-weight: 480; line-height: .98; }
+	.home-section-intro > p:last-child { max-width: 490px; color: #5b6d64; }
+	.home-index { margin: 0 0 1.3rem; color: var(--brand); font: 820 .69rem/1.3 ui-monospace, monospace; letter-spacing: .11em; text-transform: uppercase; }
+	.home-path-list { border-top: 1px solid var(--home-ink); }
+	.home-path-list > a { display: grid; grid-template-columns: 2.5rem 1fr auto; gap: 1.2rem; align-items: center; padding: 1.65rem 0; border-bottom: 1px solid var(--home-line); text-decoration: none; transition: padding .2s ease, color .2s ease; }
+	.home-path-list > a:hover { padding-left: .75rem; color: var(--brand); }
+	.home-path-list > a > span { color: #779086; font: 780 .68rem/1 ui-monospace, monospace; }
+	.home-path-list > a div { display: grid; gap: .28rem; }
+	.home-path-list strong { font: 530 clamp(1.35rem, 2.3vw, 2rem)/1.15 "Newsreader Variable", Georgia, serif; }
+	.home-path-list small { color: #64776d; font-size: .78rem; }
+	.home-path-list b { font-size: 1.3rem; font-weight: 400; }
+	.home-engine { padding: clamp(5rem, 9vw, 8rem) 0; color: white; background: #0b2017; }
+	.home-section-intro-light h2 { color: #f5f4ed; }
+	.home-section-intro-light > p:last-of-type { color: #aebfb6; }
+	.home-section-intro-light .home-index { color: var(--accent); }
+	.home-ledger { border-top: 1px solid rgba(255,255,255,.5); }
+	.home-ledger > header, .home-ledger > footer { display: flex; justify-content: space-between; gap: 1rem; padding: .9rem 0; color: #91a69b; font: 750 .64rem/1.4 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+	.home-ledger > header strong { color: var(--accent); }
+	.home-ledger-row { display: grid; grid-template-columns: 2.5rem 1fr auto; gap: 1rem; align-items: center; padding: 1.3rem 0; border-top: 1px solid rgba(255,255,255,.14); }
+	.home-ledger-row > span { color: var(--accent); font: 780 .68rem/1 ui-monospace, monospace; }
+	.home-ledger-row div { display: grid; gap: .25rem; }
+	.home-ledger-row strong { color: #f4f5ef; font-size: .93rem; }
+	.home-ledger-row strong a { color: inherit; text-underline-offset: .2em; }
+	.home-ledger-row small { color: #93a79c; font-size: .73rem; }
+	.home-ledger-row > b { padding: .28rem .5rem; border: 1px solid rgba(255,255,255,.18); color: #c2d0c8; font-size: .58rem; letter-spacing: .08em; text-transform: uppercase; }
+	.home-ledger > footer { border-top: 1px solid rgba(255,255,255,.45); text-transform: none; }
+	.home-ledger > footer a { color: #dbe7df; }
+	.home-reading { padding: clamp(5rem, 9vw, 8.5rem) 0; background: var(--home-paper); }
+	.home-reading-head { display: grid; grid-template-columns: 1.2fr .8fr; gap: 4rem; align-items: end; margin-bottom: 3.5rem; }
+	.home-reading-head h2 { margin: .25rem 0 0; color: var(--home-ink); font-size: clamp(2.7rem, 5.4vw, 5rem); font-weight: 480; line-height: .92; }
+	.home-reading-head > p { max-width: 420px; margin: 0; color: #5b6e64; }
+	.home-reading-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(310px, .85fr); border-block: 1px solid var(--home-ink); }
+	.home-lead-story { padding: clamp(2rem, 5vw, 4rem) clamp(2rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem) 0; border-right: 1px solid var(--home-line); }
+	.home-lead-story > p:first-child, .home-story-list article p { color: var(--brand); font: 820 .65rem/1.4 ui-monospace, monospace; letter-spacing: .09em; text-transform: uppercase; }
+	.home-lead-story h3 { max-width: 690px; margin: 1.3rem 0; font-size: clamp(2.1rem, 4.2vw, 3.8rem); font-weight: 480; line-height: .98; }
+	.home-lead-story h3 a, .home-story-list h3 a { text-decoration: none; }
+	.home-lead-story > p:nth-of-type(2) { max-width: 620px; color: #566a5f; }
+	.home-lead-story > a { display: inline-block; margin-top: 1.2rem; color: var(--brand-dark); font-weight: 800; text-underline-offset: .3em; }
+	.home-story-list { display: grid; align-content: start; padding-left: clamp(1.5rem, 4vw, 3rem); }
+	.home-story-list article { display: grid; grid-template-columns: 2rem 1fr; gap: .8rem; padding: 1.4rem 0; border-bottom: 1px solid var(--home-line); }
+	.home-story-list article > span { color: #84968d; font: 760 .65rem/1.4 ui-monospace, monospace; }
+	.home-story-list article p { margin: 0 0 .35rem; font-size: .58rem; }
+	.home-story-list h3 { margin: 0; font: 530 clamp(1.12rem, 2vw, 1.42rem)/1.16 "Newsreader Variable", Georgia, serif; }
+	.home-all-guides { justify-self: end; margin-top: 1.3rem; color: var(--brand-dark); font-size: .78rem; font-weight: 800; text-underline-offset: .3em; }
+	.home-glossary-line { display: grid; grid-template-columns: .55fr 1.25fr 1fr auto; gap: 1.5rem; align-items: center; padding: 1.4rem 0; border-bottom: 1px solid var(--home-line); text-decoration: none; }
+	.home-glossary-line > span { color: var(--brand); font: 820 .66rem/1.3 ui-monospace, monospace; letter-spacing: .09em; text-transform: uppercase; }
+	.home-glossary-line strong { font: 530 1.35rem/1.15 "Newsreader Variable", Georgia, serif; }
+	.home-glossary-line small { color: #62766b; }
+	.home-glossary-line b { font-size: 1.3rem; font-weight: 400; }
+	.home-catalog-proof { border-top: 1px solid var(--home-line); }
+	.home-catalog-links { border-top: 1px solid var(--home-ink); }
+	.home-catalog-links a { display: grid; grid-template-columns: .55fr 1fr auto; gap: 1rem; align-items: baseline; padding: 1.2rem 0; border-bottom: 1px solid var(--home-line); text-decoration: none; }
+	.home-catalog-links span { color: #6b7d74; font: 780 .64rem/1.4 ui-monospace, monospace; letter-spacing: .07em; text-transform: uppercase; }
+	.home-catalog-links strong { font: 530 clamp(1.15rem, 2vw, 1.5rem)/1.15 "Newsreader Variable", Georgia, serif; }
+	.home-catalog-links b { color: var(--brand); font-weight: 500; }
+	.home-closing { padding: clamp(4rem, 8vw, 7rem) 0; background: var(--accent); }
+	.home-closing .container { display: grid; grid-template-columns: auto 1fr auto; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
+	.home-closing .container > p { margin: 0; font: 500 6rem/1 "Newsreader Variable", Georgia, serif; }
+	.home-closing blockquote { margin: 0; }
+	.home-closing blockquote p { max-width: 800px; margin: 0; color: var(--home-ink); font: 500 clamp(2rem, 4vw, 3.7rem)/1 "Newsreader Variable", Georgia, serif; letter-spacing: -.025em; }
+	.home-closing blockquote footer { margin-top: 1rem; color: #334b40; font-size: .8rem; }
+	.home-closing .container > a { padding-bottom: .35rem; border-bottom: 1px solid var(--home-ink); font-size: .82rem; font-weight: 800; text-decoration: none; white-space: nowrap; }
+
+	@media (max-width: 900px) {
+		.home-hero { background: radial-gradient(circle at 15% 4%, rgba(211,235,86,.16), transparent 24rem), #f7f4ec; }
+		.home-hero-layout, .home-section-grid { grid-template-columns: 1fr; }
+		.home-hero-layout { gap: 3rem; }
+		.home-method-rail { max-width: 620px; }
+		.home-equation { grid-template-columns: repeat(3, 1fr); }
+		.home-equation > p { grid-column: 1 / -1; border-bottom: 1px solid var(--home-line); }
+		.home-equation > b { display: none; }
+		.home-reading-layout { grid-template-columns: 1fr; }
+		.home-lead-story { padding-right: 0; border-right: 0; }
+		.home-story-list { padding-left: 0; border-top: 1px solid var(--home-line); }
+		.home-reading-head { grid-template-columns: 1fr; gap: 1.5rem; }
+		.home-glossary-line { grid-template-columns: .7fr 1.3fr auto; }
+		.home-glossary-line small { display: none; }
+		.home-closing .container { grid-template-columns: auto 1fr; }
+		.home-closing .container > a { grid-column: 2; justify-self: start; }
+	}
+
+	@media (max-width: 620px) {
+		.home-hero { padding-top: 2rem; }
+		.home-kicker-row { align-items: flex-start; flex-direction: column; gap: .5rem; }
+		.home-hero-copy h1 { font-size: clamp(3rem, 15vw, 4.5rem); }
+		.home-hero-copy .actions { align-items: flex-start; flex-direction: column; }
+		.home-equation { grid-template-columns: 1fr; }
+		.home-equation > div { padding-left: 0; border-top: 1px solid var(--home-line); border-left: 0; }
+		.home-facts { grid-template-columns: repeat(2, 1fr); }
+		.home-facts div, .home-facts div:first-child { padding: 1.2rem 0; border-top: 1px solid var(--home-line); border-left: 0; }
+		.home-facts div:nth-child(even) { padding-left: 1rem; border-left: 1px solid var(--home-line); }
+		.home-paths, .home-catalog-proof, .home-engine, .home-reading { padding-block: 4.5rem; }
+		.home-section-intro h2 { font-size: 2.75rem; }
+		.home-path-list > a { grid-template-columns: 2rem 1fr auto; }
+		.home-path-list small { display: block; }
+		.home-ledger > header, .home-ledger > footer { align-items: flex-start; flex-direction: column; }
+		.home-ledger-row { grid-template-columns: 2rem 1fr; }
+		.home-ledger-row > b { grid-column: 2; width: fit-content; }
+		.home-reading-head h2 { font-size: 3rem; }
+		.home-glossary-line { grid-template-columns: 1fr auto; gap: .6rem 1rem; }
+		.home-glossary-line strong { grid-column: 1; }
+		.home-glossary-line b { grid-column: 2; grid-row: 1 / 3; }
+		.home-catalog-links a { grid-template-columns: 1fr auto; }
+		.home-catalog-links strong { grid-column: 1; }
+		.home-catalog-links b { grid-column: 2; grid-row: 1 / 3; }
+		.home-closing .container { grid-template-columns: 1fr; }
+		.home-closing .container > p { height: 3rem; }
+		.home-closing .container > a { grid-column: 1; }
+	}
+</style>
