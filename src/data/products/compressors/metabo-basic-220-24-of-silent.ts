@@ -1,0 +1,9 @@
+const product = {
+		id: 'metabo-basic-220-24-of-silent', slug: 'metabo-basic-220-24-of-silent', brand: 'Metabo', model: 'Basic 220-24 OF Silent', mpn: '601593000', ean: '4061792270169',
+		tankLiters: 24, maxPressureBar: 8, fadCurve: [{ pressureBar: 6.4, litersPerMinute: 95 }], intakeFlowLpm: 220, oilType: 'oil-free', noiseDb: 60, confidence: 'A', status: 'active',
+		image: { src: '/images/products/metabo-basic-220-24-of-silent.webp', alt: 'Compresseur Metabo Basic 220-24 OF Silent', sourceUrl: 'https://fr.metabo.com/fr/machines/air-comprime/compresseurs/compresseurs-d-atelier-mobiles/basic-220-24-of-silent-601593000-compresseur.html', sourceLabel: 'Visuel officiel Metabo' },
+		editorial: { overview: 'Metabo publie pour ce compresseur sans huile un débit effectif de 95 L/min à 80 % de la pression maximale, soit 6,4 bar. Ce point est directement proche de la pression de 6,3 bar utilisée par plusieurs outils du catalogue.', verifiedFacts: ['La cuve contient 24 litres et la pression maximale annoncée est de 8 bar.', 'La fiche distingue 220 L/min aspirés du débit effectif de 95 L/min à 6,4 bar.'], limitations: ['Un seul point de débit effectif est publié, ce qui interdit de reconstituer une courbe complète.', 'Le niveau de 60 dB doit être lu selon l’indicateur acoustique précisé par la fiche constructeur.'] },
+		evidence: [{ id: 'metabo-601593000-official', sourceUrl: 'https://fr.metabo.com/fr/machines/air-comprime/compresseurs/compresseurs-d-atelier-mobiles/basic-220-24-of-silent-601593000-compresseur.html', sourceLabel: 'Metabo France, fiche produit officielle', sourceType: 'manufacturer', retrievedAt: '2026-07-13', confidence: 'A', notes: 'Débit effectif annoncé à 80 % de la pression maximale.' }], notes: [],
+	};
+
+export default product;

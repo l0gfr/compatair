@@ -1,0 +1,10 @@
+const product = {
+		id: 'abac-atf-s-4-100', slug: 'abac-atf-s-4-100', brand: 'ABAC', model: 'ATF-S 4 100', mpn: '4116000871', ean: '8024900731781',
+		tankLiters: 90, maxPressureBar: 10, fadCurve: [{ pressureBar: 10, litersPerMinute: 170 }], intakeFlowLpm: 480, dutyCycle: 1, oilType: 'oil-free', noiseDb: 72, powerKw: 3.2, mobility: 'mobile', voltage: '400 V / 50 Hz', phase: 'three-phase', confidence: 'A', status: 'active',
+		image: { src: '/images/products/abac-atf-s-4-100.jpg', alt: 'Compresseur triphasé ABAC ATF-S 4 100', sourceUrl: 'https://shop.abacaircompressors.com/en-US/products/4116000871/atf-s-4-100-10-400350-ce', sourceLabel: 'Visuel officiel ABAC' },
+		editorial: { overview: 'L’ATF-S 4 100 est un compresseur mobile sans huile alimenté en 400 V triphasé. ABAC publie 170 L/min de FAD à la pression maximale de 10 bar et un cycle de service de 100 %.', verifiedFacts: ['La table technique ABAC indique 170 L/min de FAD à 10 bar, 480 L/min de débit aspiré et une cuve de 90 litres.', 'Le moteur de 3,2 kW fonctionne en 400 V triphasé et le niveau de pression acoustique publié est de 72 dB(A).'], limitations: ['Le point unique à 10 bar ne permet pas d’extrapoler le débit disponible à 6,2, 6,3 ou 7 bar.', 'La même page affiche 100 litres dans son résumé mais 90 litres dans sa table technique ; CompatAir retient la table et signale cette divergence.'] },
+		evidence: [{ id: 'abac-4116000871-official', sourceUrl: 'https://shop.abacaircompressors.com/en-US/products/4116000871/atf-s-4-100-10-400350-ce', sourceLabel: 'ABAC, fiche produit officielle ATF-S 4 100', sourceType: 'manufacturer', retrievedAt: '2026-07-14', confidence: 'A', notes: 'FAD publié à 10 bar. La table technique indique 90 L tandis que le résumé de page indique 100 L.' }],
+		fieldSources: { fadCurve: ['abac-4116000871-official'], ean: ['abac-4116000871-official'], dutyCycle: ['abac-4116000871-official'], noiseDb: ['abac-4116000871-official'] }, notes: ['Niveau sonore publié en LpA.', 'Cuve retenue à 90 L selon la table technique ; masse non reprise car la page publie 76 et 81,9 kg dans deux sections.'],
+	};
+
+export default product;

@@ -86,6 +86,7 @@ for (const file of htmlFiles) {
 	const title = html.match(/<title>([^<]+)<\/title>/)?.[1];
 	const description = html.match(/<meta name="description" content="([^"]+)"/)?.[1];
 	const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
+	const socialImage = html.match(/<meta property="og:image" content="([^"]+)"/)?.[1];
 	const robots = html.match(/<meta name="robots" content="([^"]+)"/)?.[1] ?? '';
 	const noindex = robots.split(',').map((rule) => rule.trim()).includes('noindex');
 	const isCompatibilityDetail = label.startsWith('compatibilite/');
@@ -109,6 +110,14 @@ for (const file of htmlFiles) {
 			if (noindex && sitemapUrls.has(canonical)) errors.push(`${label}: page noindex présente dans le sitemap`);
 			if (!noindex && !sitemapUrls.has(canonical)) errors.push(`${label}: page indexable absente du sitemap`);
 		} catch { errors.push(`${label}: canonical invalide ${canonical}`); }
+	}
+	if (!socialImage) errors.push(`${label}: image sociale absente`);
+	else {
+		try {
+			const socialUrl = new URL(socialImage);
+			if (socialUrl.origin !== siteOrigin || !socialUrl.pathname.endsWith('.png')) errors.push(`${label}: image sociale invalide ${socialImage}`);
+			else if (!artifactPaths.has(socialUrl.pathname)) errors.push(`${label}: fichier d’image sociale absent ${socialUrl.pathname}`);
+		} catch { errors.push(`${label}: image sociale invalide ${socialImage}`); }
 	}
 
 	const structuredNodes = [];
@@ -160,4 +169,4 @@ if (errors.length) {
 	console.error(errors.join('\n'));
 	process.exit(1);
 }
-console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, titres ≤ ${maximumDocumentTitleLength} caractères et JavaScript client ≤ ${maximumPageScriptBytesGzip / 1024} Ko gzip (maximum ${Math.ceil(largestPageScriptBudget.bytes / 1024)} Ko sur ${largestPageScriptBudget.label}).`);
+console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, images sociales dédiées, titres ≤ ${maximumDocumentTitleLength} caractères et JavaScript client ≤ ${maximumPageScriptBytesGzip / 1024} Ko gzip (maximum ${Math.ceil(largestPageScriptBudget.bytes / 1024)} Ko sur ${largestPageScriptBudget.label}).`);

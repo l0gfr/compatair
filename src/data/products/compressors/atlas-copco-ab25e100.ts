@@ -1,0 +1,11 @@
+const product = {
+		id: 'atlas-copco-ab25e100', slug: 'atlas-copco-ab25e100', brand: 'Atlas Copco', model: 'AB25E100', mpn: '1129740255',
+		variant: { familyId: 'atlas-copco-automan-ab-100', label: '2,5 HP monophasé', distinguishingAttributes: { power: '2.5 HP', phase: 'monophasé' } },
+		tankLiters: 100, maxPressureBar: 10, fadCurve: [{ pressureBar: 7, litersPerMinute: 172 }], intakeFlowLpm: 275, oilType: 'oil', noiseDb: 73, powerKw: 1.85, weightKg: 76, mobility: 'mobile', voltage: '230 V / 50 Hz', phase: 'single-phase', confidence: 'A', status: 'active',
+		image: { src: '/images/products/atlas-copco-ab25e100.png', alt: 'Compresseur Atlas Copco de la gamme Automan AB 100 litres', sourceUrl: 'https://www.atlascopco.com/content/dam/atlas-copco/local-countries/australia/documents/compressor-technique/ct-brochures/Automan-Compressor-and-Dryer-Packs-2024.pdf', sourceLabel: 'Visuel de gamme officiel Atlas Copco' },
+		editorial: { overview: 'L’AB25E100 est un compresseur Automan monophasé de 100 litres. Son débit d’air libre est documenté à 172 L/min sous 7 bar, distinct des 275 L/min de déplacement de pompe.', verifiedFacts: ['La documentation publie 172 L/min de FAD à 7 bar pour une cuve de 100 litres.', 'Le modèle est référencé 1129740255, avec un moteur de 1,85 kW et une pression maximale de 10 bar.'], limitations: ['Un seul point FAD est documenté ; aucune extrapolation n’est réalisée à une autre pression.', 'Le visuel provient de la brochure officielle de la gamme Automan et peut illustrer une autre variante de la famille.'] },
+		evidence: [{ id: 'atlas-ab-series-official', sourceUrl: 'https://www.atlascopco.com/content/dam/atlas-copco/local-countries/australia/documents/AB-series-brochure.pdf', sourceLabel: 'Atlas Copco, brochure officielle AB25E100 et AB30E100', sourceType: 'manufacturer', retrievedAt: '2026-07-14', confidence: 'A', notes: 'MPN, cuve et FAD de 172 L/min explicitement publiés à 7 bar.' }],
+		fieldSources: { fadCurve: ['atlas-ab-series-official'], mpn: ['atlas-ab-series-official'] }, notes: ['MPN prêt pour rapprochement exact ; aucun EAN officiel trouvé dans les sources retenues.'],
+	};
+
+export default product;

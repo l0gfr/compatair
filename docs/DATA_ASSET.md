@@ -2,6 +2,8 @@
 
 CompatAir sépare strictement quatre couches : catalogue technique, moteur, demande agrégée et offres marchandes. Une offre ne peut jamais modifier une caractéristique technique ou un verdict.
 
+Le catalogue technique est physiquement découpé en un fichier par référence sous `src/data/products/compressors` et `src/data/products/tools`. `src/data/catalog.ts` reste la façade publique : il agrège les modules, applique les schémas Zod et conserve les exports historiques utilisés par Astro, les snapshots et le serveur MCP.
+
 ## Catalogue normalisé
 
 `/data/catalog.json` publie le catalogue source et une vue `normalized` :

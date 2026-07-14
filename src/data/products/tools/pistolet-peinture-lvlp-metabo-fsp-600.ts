@@ -1,0 +1,10 @@
+const product = {
+		id: 'metabo-fsp-600-lvlp', slug: 'pistolet-peinture-lvlp-metabo-fsp-600', category: 'Pistolet à peinture LVLP', label: 'Pistolet à peinture LVLP Metabo FSP 600', brand: 'Metabo', model: 'FSP 600 LVLP', mpn: '601578000', ean: '4007430246202',
+		demandModel: 'fixed-flow', workingPressureBar: { min: 1.6, typical: 1.6, max: 1.6 }, airflowLpm: { min: 136, typical: 136, max: 136 }, connectorSize: 'Raccord 1/4 pouce', usagePattern: 'continuous', filtrationRequirement: 'Air propre et adapté à la peinture selon la notice', confidence: 'A',
+		image: { src: '/images/products/metabo-fsp-600-lvlp.jpg', alt: 'Pistolet à peinture LVLP Metabo FSP 600', sourceUrl: 'https://de.metabo.com/de/maschinen/druckluft/druckluft-werkzeuge/druckluft-farbspritzpistolen/fsp-600-lvlp-601578000-druckluft-farbspritzpistole.html', sourceLabel: 'Visuel officiel Metabo' },
+		editorial: { overview: 'Le FSP 600 LVLP est un pistolet à peinture à faible volume et basse pression. Son besoin de 136 L/min à 1,6 bar permet de le comparer à une courbe FAD dans une zone rarement documentée par les autres profils.', verifiedFacts: ['Metabo publie une consommation de 136 L/min à une pression de travail de 1,6 bar.', 'Le pistolet reçoit une buse de 1,3 mm, un godet de 0,6 litre et pèse 0,7 kg.'], limitations: ['La qualité de peinture dépend aussi de la filtration, du produit et du réglage de la buse.', 'Le débit disponible doit être confirmé à 1,6 bar et non déduit du débit aspiré.'] },
+		evidence: [{ id: 'metabo-601578000-official', sourceUrl: 'https://de.metabo.com/de/maschinen/druckluft/druckluft-werkzeuge/druckluft-farbspritzpistolen/fsp-600-lvlp-601578000-druckluft-farbspritzpistole.html', sourceLabel: 'Metabo, fiche officielle FSP 600 LVLP', sourceType: 'manufacturer', retrievedAt: '2026-07-14', confidence: 'A' }],
+		fieldSources: { airflowLpm: ['metabo-601578000-official'], workingPressureBar: ['metabo-601578000-official'], connectorSize: ['metabo-601578000-official'] }, notes: [],
+	};
+
+export default product;

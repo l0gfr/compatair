@@ -1,0 +1,10 @@
+const product = {
+		id: 'metabo-mega-580-200-d', slug: 'metabo-mega-580-200-d', brand: 'Metabo', model: 'Mega 580-200 D', mpn: '601588000', ean: '4007430253866',
+		tankLiters: 200, maxPressureBar: 11, fadCurve: [{ pressureBar: 8.8, litersPerMinute: 360 }], intakeFlowLpm: 510, oilType: 'oil', noiseDb: 87, powerKw: 3, weightKg: 136, mobility: 'mobile', voltage: '380-415 V', phase: 'three-phase', confidence: 'A', status: 'active',
+		image: { src: '/images/products/metabo-mega-580-200-d.webp', alt: 'Compresseur Metabo Mega 580-200 D', sourceUrl: 'https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html', sourceLabel: 'Visuel officiel Metabo' },
+		editorial: { overview: 'Le Mega 580-200 D est un compresseur lubrifié à deux étages, doté d’une cuve de 200 litres et d’une alimentation triphasée. Metabo publie 360 L/min effectifs à 8,8 bar.', verifiedFacts: ['La fiche distingue 510 L/min aspirés, 395 L/min de remplissage et 360 L/min effectifs à 80 % de la pression maximale de 11 bar.', 'Metabo publie une alimentation de 380 à 415 V, une puissance de 3 kW, un poids de 136 kg et 87 dB(A) de pression acoustique.'], limitations: ['Le point unique à 8,8 bar ne devient pas une courbe vers 6,3 ou 7 bar.', 'Le triphasé, le poids et les contraintes d’installation excluent une comparaison purement numérique avec un modèle portable.'] },
+		evidence: [{ id: 'metabo-601588000-official', sourceUrl: 'https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html', sourceLabel: 'Metabo, fiche produit officielle Mega 580-200 D', sourceType: 'manufacturer', retrievedAt: '2026-07-14', confidence: 'A', notes: 'Débit effectif publié à 80 % de la pression maximale.' }],
+		fieldSources: { fadCurve: ['metabo-601588000-official'], ean: ['metabo-601588000-official'], noiseDb: ['metabo-601588000-official'] }, notes: ['Point effectif unique à 8,8 bar.'],
+	};
+
+export default product;

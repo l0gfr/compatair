@@ -1,0 +1,10 @@
+const product = {
+		id: 'metabo-basic-160-6-w-of', slug: 'metabo-basic-160-6-w-of', brand: 'Metabo', model: 'Basic 160-6 W OF', mpn: '601501000', ean: '4061792174061',
+		tankLiters: 6, maxPressureBar: 8, fadCurve: [{ pressureBar: 6.4, litersPerMinute: 55 }], intakeFlowLpm: 160, oilType: 'oil-free', noiseDb: 82, powerKw: .9, weightKg: 8.4, mobility: 'portable', phase: 'single-phase', confidence: 'A', status: 'active',
+		image: { src: '/images/products/metabo-basic-160-6-w-of.webp', alt: 'Compresseur Metabo Basic 160-6 W OF', sourceUrl: 'https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/basic-160-6-w-of-601501000-kompressor.html', sourceLabel: 'Visuel officiel Metabo' },
+		editorial: { overview: 'Le Basic 160-6 W OF est un compresseur portable sans huile de 6 litres. Metabo distingue les 160 L/min aspirés du débit effectif de 55 L/min publié à 80 % de la pression maximale, soit 6,4 bar.', verifiedFacts: ['Metabo publie 55 L/min effectifs à 6,4 bar pour une pression maximale de 8 bar.', 'La fiche indique une cuve de 6 litres, une puissance de 0,9 kW, un poids de 8,4 kg et 82 dB(A) de pression acoustique.'], limitations: ['Le point unique à 6,4 bar ne permet pas d’extrapoler le débit à 6,2 ou 6,3 bar.', 'Le format portable et la cuve de 6 litres ne remplacent pas un débit effectif suffisant pour un outil continu.'] },
+		evidence: [{ id: 'metabo-601501000-official', sourceUrl: 'https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/basic-160-6-w-of-601501000-kompressor.html', sourceLabel: 'Metabo, fiche produit officielle Basic 160-6 W OF', sourceType: 'manufacturer', retrievedAt: '2026-07-14', confidence: 'A', notes: 'Débit effectif publié à 80 % de la pression maximale.' }],
+		fieldSources: { fadCurve: ['metabo-601501000-official'], ean: ['metabo-601501000-official'], noiseDb: ['metabo-601501000-official'] }, notes: ['Point effectif unique à 6,4 bar.'],
+	};
+
+export default product;

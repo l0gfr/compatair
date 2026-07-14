@@ -1,0 +1,10 @@
+const product = {
+		id: 'metabo-dssw-500', slug: 'cle-a-chocs-metabo-dssw-500', category: 'Clé à chocs', label: 'Clé à chocs pneumatique Metabo DSSW 500-1/2 C', brand: 'Metabo', model: 'DSSW 500-1/2 C', mpn: '601590000',
+		demandModel: 'fixed-flow', workingPressureBar: { min: 6.2, typical: 6.2, max: 6.2 }, airflowLpm: { min: 420, typical: 420, max: 420 }, connectorSize: 'Raccord 1/4 pouce et embout de flexible 10 mm', usagePattern: 'burst', lubricationRequirement: 'Lubrification avec l’huile prévue pour les outils pneumatiques', confidence: 'A',
+		image: { src: '/images/products/metabo-dssw-500.jpg', alt: 'Clé à chocs pneumatique Metabo DSSW 500', sourceUrl: 'https://www.metabo.com/at/de/maschinen/bohren-schrauben-meisseln-ruehren/schlagschrauber/dssw-500-1-2-c-druckluft-schlagschrauber/601590000', sourceLabel: 'Visuel officiel Metabo' },
+		editorial: { overview: 'La DSSW 500-1/2 C est une clé à chocs compacte pour les roues de véhicules et les travaux de montage. Metabo publie 7 L/s, soit 420 L/min, à 6,2 bar.', verifiedFacts: ['Le besoin constructeur de 7 L/s correspond exactement à 420 L/min à 6,2 bar.', 'La fiche publie 540 Nm de couple maximal, 860 Nm au desserrage et un poids de 1,2 kg.'], limitations: ['Le caractère bref d’un serrage ne permet pas d’inventer une autonomie sur cuve.', 'Le verdict continu reste volontairement plus exigeant qu’un usage ponctuel réel.'] },
+		evidence: [{ id: 'metabo-601590000-official', sourceUrl: 'https://www.metabo.com/at/de/maschinen/bohren-schrauben-meisseln-ruehren/schlagschrauber/dssw-500-1-2-c-druckluft-schlagschrauber/601590000', sourceLabel: 'Metabo, fiche officielle DSSW 500-1/2 C', sourceType: 'manufacturer', retrievedAt: '2026-07-14', confidence: 'A', notes: '7 L/s convertis exactement en 420 L/min.' }],
+		fieldSources: { airflowLpm: ['metabo-601590000-official'], workingPressureBar: ['metabo-601590000-official'], connectorSize: ['metabo-601590000-official'] }, notes: ['Conversion exacte : 7 L/s × 60 = 420 L/min.'],
+	};
+
+export default product;

@@ -35,8 +35,6 @@ const productJsonLd = {
 	title={`${compressor.brand} ${compressor.model} : débit et compatibilité | CompatAir`}
 	description={`Analyse du ${compressor.brand} ${compressor.model} : cuve ${compressor.tankLiters} L, pression ${compressor.maxPressureBar} bar et débit restitué sourcé.`}
 	pageType="product"
-	imagePath={compressor.image.src}
-	imageAlt={compressor.image.alt}
 	modifiedDate={new Date(verifiedAt)}
 	breadcrumbs={[{ name: 'Compresseurs', path: '/compresseurs/' }, { name: `${compressor.brand} ${compressor.model}`, path: `/compresseurs/${compressor.slug}/` }]}
 >
