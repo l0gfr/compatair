@@ -11,6 +11,8 @@
 - calculateur multi-outils avec simultanéité, fréquence, durée, flexible, modèle existant et saisie personnalisée ;
 - dossier de dimensionnement local avec synthèse de configuration, recommandations prioritaires, filtres par verdict et copie texte ;
 - Passeport CompatAir gratuit : installation encodée dans une URL versionnée, recalcul local, sources, marges, points de vigilance, évolutions possibles, données manquantes et PDF généré dans le navigateur ;
+- Scanner et vérifier : saisie exacte MPN/EAN, photo locale, lecture code-barres et OCR natif lorsque disponible, confirmation humaine obligatoire, preuves et compatibilités recalculées ;
+- API HTTP `v1` de compatibilité en lecture seule et widget marchand sans cookie, tous deux fondés sur le même moteur et les mêmes sources ;
 - frontière produit explicite : aucune sauvegarde serveur dans la version gratuite ; la sauvegarde de plusieurs ateliers, les exports de dossiers et les alertes restent le périmètre envisagé d’une version professionnelle non disponible ;
 - verdicts `continuous`, `intermittent`, `incompatible` et `insufficient_data` ;
 - conversions, interpolation bornée, débit de pointe, débit moyen, réserve de cuve, récupération conditionnelle et version des formules ;

@@ -58,6 +58,7 @@ Le site statique doit d’abord avoir été déployé par GitHub Actions avec le
 ```bash
 test -f /var/www/html/compatair/current/_server/mcp-server.mjs
 test -f /var/www/html/compatair/current/data/catalog.json
+test -f /var/www/html/compatair/current/data/verdicts.json
 ```
 
 Le dossier d’amorçage n’est pas un clone Git et ne doit pas être mis à jour avec `git pull`. Il est renouvelé par le paquet de déploiement.
@@ -86,6 +87,7 @@ Contrôler le service local, le proxy HTTPS puis la négociation MCP :
 ```bash
 curl --fail http://127.0.0.1:8787/health
 curl --fail https://compatair.fr/mcp-health
+curl --fail 'https://compatair.fr/api/v1/compatibility?compressorId=einhell-tc-ac-240-50-10-of&toolId=einhell-tc-pe-150'
 curl --fail \
   -H 'Accept: application/json, text/event-stream' \
   -H 'Content-Type: application/json' \
@@ -94,7 +96,9 @@ curl --fail \
   https://compatair.fr/mcp
 ```
 
-Après ces trois contrôles, créer la variable GitHub `MCP_ENABLED` avec la valeur `true`. Les déploiements et le monitoring vérifieront alors le MCP automatiquement.
+Après ces contrôles, créer la variable GitHub `MCP_ENABLED` avec la valeur `true`. Les déploiements et le monitoring vérifieront alors le MCP automatiquement.
+
+L’ajout de l’API ou une modification de ses en-têtes inter-origines nécessite de rejouer `install-mcp.sh` avant le premier déploiement qui les vérifie. Le script installe le vhost versionné, exécute `apache2ctl configtest`, puis recharge Apache. Un paquet statique seul ne peut pas modifier `/etc/apache2`.
 
 ## Priorités issues de la demande
 

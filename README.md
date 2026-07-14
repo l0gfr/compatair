@@ -14,6 +14,8 @@ Validations complètes :
 ```bash
 pnpm validate:full
 pnpm audit:dist
+pnpm security:supply-chain
+pnpm security:registry
 pnpm security:audit
 ```
 
@@ -48,6 +50,7 @@ L’installation Debian et le proxy Apache sont décrits dans [docs/DEPLOYMENT.m
 - pull request vers `main` : CI, build et artefact de preview ;
 - push ou merge sur `main` : validation complète dans le workflow de déploiement, puis activation atomique sur Debian ;
 - Audit des dépendances de production à chaque CI et déploiement.
+- Quarantaine de 24 heures, contrôle de provenance et scripts d’installation refusés par défaut ; voir [docs/SUPPLY_CHAIN.md](docs/SUPPLY_CHAIN.md).
 - Dependabot : surveillance hebdomadaire des dépendances et de GitHub Actions.
 
 Voir [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) pour la préparation Apache, TLS, les secrets et le rollback.

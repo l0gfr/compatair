@@ -39,6 +39,8 @@
 	ErrorDocument 410 /410/
 
 	ProxyPreserveHost On
+	ProxyPass /api/v1/compatibility http://127.0.0.1:8787/api/v1/compatibility timeout=8 connectiontimeout=2
+	ProxyPassReverse /api/v1/compatibility http://127.0.0.1:8787/api/v1/compatibility
 	ProxyPass /events http://127.0.0.1:8787/events timeout=5 connectiontimeout=2
 	ProxyPassReverse /events http://127.0.0.1:8787/events
 	ProxyPass /go/ http://127.0.0.1:8787/go/ timeout=5 connectiontimeout=2
@@ -73,6 +75,14 @@
 	<Location "/events">
 		LimitRequestBody 65536
 	</Location>
+	<Location "/api/v1/compatibility">
+		Header always set Access-Control-Allow-Origin "*"
+		Header always set Cross-Origin-Resource-Policy "cross-origin"
+	</Location>
+	<Location "/widget/v1/compatair-widget.js">
+		Header always set Access-Control-Allow-Origin "*"
+		Header always set Cross-Origin-Resource-Policy "cross-origin"
+	</Location>
 	<LocationMatch "^/(?:_server)(?:/|$)">
 		Require all denied
 	</LocationMatch>
@@ -93,8 +103,8 @@
 	Header always set Cross-Origin-Opener-Policy "same-origin"
 	Header always set Cross-Origin-Resource-Policy "same-origin"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
-    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
-	Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-src 'none'; frame-ancestors 'none'; form-action 'self'; media-src 'none'; worker-src 'none'; upgrade-insecure-requests" "expr=%{REQUEST_URI} !~ m#^/stats/#"
+	Header always set Permissions-Policy "camera=(self), microphone=(), geolocation=(), payment=()"
+	Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data: blob:; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-src 'none'; frame-ancestors 'none'; form-action 'self'; media-src 'none'; worker-src 'none'; upgrade-insecure-requests" "expr=%{REQUEST_URI} !~ m#^/stats/#"
 	Header onsuccess unset Cache-Control
 	Header always unset Cache-Control
 	Header always set Cache-Control "no-cache"

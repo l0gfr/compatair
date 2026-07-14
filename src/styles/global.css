@@ -601,6 +601,66 @@ h3 { font-weight: 560; }
 .passport-offer.future { border-top: 4px solid #8b9a91; background: rgba(253,254,250,.65); }
 .passport-offer.future > span { color: #68776f; }
 
+.scanner-section { padding-top: 1.5rem; }
+.scanner { display: grid; gap: 1.2rem; }
+.scanner-form, .scanner-result { overflow: hidden; border: 1px solid var(--line); border-radius: 1.4rem; background: var(--panel); box-shadow: var(--shadow-md); }
+.scanner-photo { display: grid; grid-template-columns: minmax(280px, .8fr) 1.2fr; gap: clamp(1.2rem, 4vw, 3rem); align-items: center; padding: clamp(1.4rem, 4vw, 2.5rem); }
+.scanner-preview { min-height: 250px; display: grid; place-content: center; gap: .4rem; overflow: hidden; border: 1px dashed #9aaba0; border-radius: 1rem; color: var(--muted); background: #eef2eb; text-align: center; }
+.scanner-preview span { color: var(--brand); font-size: .7rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+.scanner-preview img { width: 100%; height: 300px; display: block; object-fit: contain; background: #152219; }
+.scanner-photo input[type="file"] { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; }
+.scanner-photo > div:last-child { display: flex; flex-wrap: wrap; gap: .7rem; align-items: center; }
+.scanner-local-note { width: 100%; margin: .25rem 0 0; color: var(--muted); font-size: .82rem; }
+.scanner-confirmation { display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: end; padding: clamp(1.4rem, 4vw, 2.5rem); border-top: 1px solid var(--line); background: #f4f7f1; }
+.scanner-confirmation .field input { min-height: 52px; }
+.scanner-confirmation small { color: var(--muted); }
+.scanner-status, .scanner-form > .form-error { margin: 0; padding: 0 clamp(1.4rem, 4vw, 2.5rem) 1.4rem; background: #f4f7f1; }
+.scanner-status { color: var(--brand); font-size: .82rem; font-weight: 750; }
+.scanner-result { scroll-margin-top: 6rem; }
+.scanner-result-head { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; padding: clamp(1.5rem, 4vw, 2.7rem); color: white; background: radial-gradient(circle at 90% 0, rgba(58,139,101,.34), transparent 20rem), var(--ink); }
+.scanner-result-head h2 { margin: .2rem 0 .6rem; color: white; }
+.scanner-result-head p:not(.eyebrow) { margin: 0; color: #aebfb5; }
+.scanner-result-head .eyebrow { color: var(--accent); }
+.scanner-result-head .button { color: white; border-color: #64796c; background: rgba(255,255,255,.06); }
+.scanner-result-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.scanner-result-panel { padding: clamp(1.4rem, 3vw, 2rem); border-bottom: 1px solid var(--line); }
+.scanner-result-grid .scanner-result-panel + .scanner-result-panel { border-left: 1px solid var(--line); }
+.scanner-result-panel > span { color: var(--brand); font-size: .68rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.scanner-result-panel.cannot > span, .scanner-result-panel.uncertain > span { color: var(--warning); }
+.scanner-result-panel h3 { margin: .35rem 0 1rem; }
+.scanner-result-panel ul { margin: 0; padding-left: 1.15rem; columns: 2; column-gap: 2rem; }
+.scanner-result-panel li { break-inside: avoid; margin: .55rem 0; color: #354b3f; font-size: .84rem; }
+.scanner-result-panel a { color: var(--brand-dark); font-weight: 750; }
+.scanner-result-panel.uncertain { background: #f8f5ec; }
+.scanner-unlocks, .scanner-evidence { padding: clamp(1.5rem, 4vw, 2.5rem); border-bottom: 1px solid var(--line); }
+.scanner-unlocks h3, .scanner-evidence h3 { margin-top: .3rem; }
+.scanner-unlocks [data-unlocks] { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+.scanner-unlocks article { padding: 1rem; border: 1px solid var(--line); border-radius: .8rem; background: #f7f9f4; }
+.scanner-unlocks article p { margin: .5rem 0 0; color: var(--muted); font-size: .8rem; }
+.scanner-evidence [data-evidence] { display: grid; gap: .5rem; }
+.scanner-evidence a { color: var(--brand-dark); overflow-wrap: anywhere; }
+.scanner-method { padding-top: 0; }
+.scanner-method code { color: var(--accent); }
+
+.api-documentation pre, .integration-section pre { overflow-x: auto; padding: 1.2rem; border: 1px solid #2d493b; border-radius: .9rem; color: #e8f1eb; background: #0d2118; font-size: .82rem; }
+.api-documentation .button + .button { margin-left: .5rem; }
+.pro-hero .passport-privacy-note { color: var(--ink); }
+.b2b-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.b2b-card { padding: clamp(1.5rem, 4vw, 2.6rem); border: 1px solid var(--line); border-radius: 1.3rem; background: var(--panel); box-shadow: var(--shadow-sm); }
+.b2b-card h2 { margin-top: .3rem; }
+.b2b-card > p:not(.eyebrow) { color: var(--muted); }
+.widget-demo { max-width: 520px; padding: 1.2rem; border: 1px solid var(--line); border-radius: 1rem; background: #fdfefa; box-shadow: var(--shadow-sm); }
+.widget-demo > div { display: flex; justify-content: space-between; gap: 1rem; }
+.widget-demo small { color: var(--muted); }
+.widget-demo p { margin: 1rem 0 .25rem; color: var(--muted); }
+.widget-demo b { display: block; color: #a32f28; font-size: 1.35rem; }
+.widget-demo span { display: block; margin-top: .4rem; color: #354b3f; font-size: .82rem; }
+.widget-demo a { display: inline-block; margin-top: .8rem; color: var(--brand-dark); font-weight: 800; }
+.integration-section { background: #e9eee5; }
+.integration-section pre { max-width: 800px; }
+.integration-section > .container > p { max-width: 800px; color: var(--muted); }
+.b2b-boundary { padding-top: 0; }
+
 :focus-visible { outline: 3px solid #3f7f63; outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .001ms !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; } }
 
@@ -626,6 +686,7 @@ h3 { font-weight: 560; }
 	.barometer-brand dl, .criteria-grid { grid-template-columns: repeat(2, 1fr); }
 	.passport-head { grid-template-columns: 1fr; }
 	.passport-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.scanner-result-panel ul { columns: 1; }
 }
 
 @media (max-width: 760px) {
@@ -670,6 +731,10 @@ h3 { font-weight: 560; }
 	.passport-metrics, .passport-identity { grid-template-columns: 1fr; }
 	.passport-actions .button { width: 100%; }
 	.passport-details div { grid-template-columns: 1fr; gap: .2rem; }
+	.scanner-photo, .scanner-confirmation, .scanner-result-head, .scanner-result-grid, .scanner-unlocks [data-unlocks], .b2b-grid { grid-template-columns: 1fr; }
+	.scanner-result-grid .scanner-result-panel + .scanner-result-panel { border-top: 1px solid var(--line); border-left: 0; }
+	.scanner-result-head .button { width: 100%; }
+	.api-documentation .button + .button { margin: .6rem 0 0; }
 }
 
 @page { size: A4; margin: 14mm; }

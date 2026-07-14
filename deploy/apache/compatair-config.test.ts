@@ -39,5 +39,14 @@ describe('CompatAir Apache CSP', () => {
 		expect(config).toContain('Cross-Origin-Opener-Policy "same-origin"');
 		expect(config).toContain('Cross-Origin-Resource-Policy "same-origin"');
 		expect(config).toContain("script-src-attr 'none'");
+		expect(config).toContain("img-src 'self' data: blob:");
+		expect(config).toContain('Permissions-Policy "camera=(self)');
+	});
+
+	it('publishes only the read-only API and widget as cross-origin resources', () => {
+		expect(config).toContain('ProxyPass /api/v1/compatibility');
+		expect(config).toContain('<Location "/api/v1/compatibility">');
+		expect(config).toContain('<Location "/widget/v1/compatair-widget.js">');
+		expect(config.match(/Cross-Origin-Resource-Policy "cross-origin"/g)).toHaveLength(2);
 	});
 });

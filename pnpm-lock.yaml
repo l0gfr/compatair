@@ -13,35 +13,35 @@ importers:
   .:
     dependencies:
       '@astrojs/sitemap':
-        specifier: ^3.7.3
+        specifier: 3.7.3
         version: 3.7.3
       '@fontsource-variable/manrope':
-        specifier: ^5.2.8
+        specifier: 5.2.8
         version: 5.2.8
       '@fontsource-variable/newsreader':
-        specifier: ^5.2.10
+        specifier: 5.2.10
         version: 5.2.10
       astro:
-        specifier: ^7.0.7
+        specifier: 7.0.7
         version: 7.0.7(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@24.13.3)(yaml@2.9.0)
       sharp:
         specifier: 0.35.3
         version: 0.35.3(@types/node@24.13.3)
       zod:
-        specifier: ^4.4.3
+        specifier: 4.4.3
         version: 4.4.3
     devDependencies:
       '@astrojs/check':
-        specifier: ^0.9.9
+        specifier: 0.9.9
         version: 0.9.9(prettier@3.9.5)(typescript@6.0.3)
       '@lhci/cli':
         specifier: 0.15.1
         version: 0.15.1
       typescript:
-        specifier: ^6.0.0
+        specifier: 6.0.3
         version: 6.0.3
       vitest:
-        specifier: ^4.1.10
+        specifier: 4.1.10
         version: 4.1.10(@types/node@24.13.3)(vite@8.1.4(@types/node@24.13.3)(esbuild@0.28.1)(yaml@2.9.0))
 
 packages:

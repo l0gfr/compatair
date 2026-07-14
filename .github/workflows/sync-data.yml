@@ -27,9 +27,11 @@ jobs:
           node-version-file: .nvmrc
           check-latest: false
       - name: Install pnpm
-        run: npm install --global pnpm@10.34.4
+        run: npm install --global --ignore-scripts pnpm@10.34.4
       - name: Install from frozen lockfile
         run: pnpm install --frozen-lockfile
+      - name: Verify lockfile integrity and install-script policy
+        run: pnpm security:supply-chain
       - name: Build immutable snapshots
         run: pnpm validate:full
       - name: Fetch current production snapshots
