@@ -31,7 +31,8 @@ EOF
 chmod 440 /etc/sudoers.d/compatair-mcp-deploy
 visudo -cf /etc/sudoers.d/compatair-mcp-deploy
 systemctl daemon-reload
-systemctl enable --now compatair-mcp.service
+systemctl enable compatair-mcp.service
+systemctl restart compatair-mcp.service
 install -m 644 "$project_dir/deploy/apache/compatair.fr.conf.example" /etc/apache2/sites-available/compatair.fr.conf
 apache2ctl configtest
 systemctl reload apache2
