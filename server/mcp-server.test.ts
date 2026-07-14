@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { spawn } from 'node:child_process';
-import { copyFileSync, mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { createServer } from 'node:net';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -44,6 +44,25 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(result.status).toBe(302);
 		expect(result.headers.Location).toBe(target);
 		expect(result.headers['Referrer-Policy']).toBe('no-referrer');
+	});
+
+	it('persists only a validated aggregate calculator funnel event', async () => {
+		const directory = mkdtempSync(join(tmpdir(), 'compatair-funnel-http-'));
+		const productFunnelAggregatePath = join(directory, 'product-funnel.json');
+		try {
+			const server = createCompatAirServer({ catalog: { catalogVersion: 'test', compressors: [], tools: [] }, allowedOrigins: new Set(['https://compatair.fr']), productFunnelAggregatePath });
+			const payload = JSON.stringify({ event: 'calculator_funnel_aggregate', schemaVersion: '1.0.0', step: 'completed' });
+			const status = await new Promise<number>((resolve) => {
+				const request = {
+					url: '/events', method: 'POST', headers: { origin: 'https://compatair.fr', 'content-type': 'application/json' }, socket: { remoteAddress: '127.0.0.1' },
+					async *[Symbol.asyncIterator]() { yield Buffer.from(payload); },
+				};
+				const response = { setTimeout() {}, writeHead(value: number) { resolve(value); }, end() {}, destroy() {} };
+				server.emit('request', request, response);
+			});
+			expect(status).toBe(204);
+			expect(JSON.parse(readFileSync(productFunnelAggregatePath, 'utf8'))).toMatchObject({ totalEvents: 1, calculator: { completed: 1 } });
+		} finally { rmSync(directory, { recursive: true, force: true }); }
 	});
 
 	it('serves the versioned compatibility API with CORS and source evidence', async () => {
@@ -160,7 +179,7 @@ describe('MCP HTTP boundary helpers', () => {
 		const current = join(directory, 'current');
 		mkdirSync(join(release, '_server'), { recursive: true });
 		mkdirSync(join(release, 'data'), { recursive: true });
-		for (const file of ['mcp-server.mjs', 'mcp-core.mjs', 'demand-aggregates.mjs']) copyFileSync(join(process.cwd(), 'server', file), join(release, '_server', file));
+		for (const file of ['mcp-server.mjs', 'mcp-core.mjs', 'demand-aggregates.mjs', 'product-funnel-aggregates.mjs']) copyFileSync(join(process.cwd(), 'server', file), join(release, '_server', file));
 		writeFileSync(join(release, 'data', 'catalog.json'), JSON.stringify({ catalogVersion: 'catalog-test', compressors: [], tools: [] }));
 		writeFileSync(join(release, 'data', 'verdicts.json'), JSON.stringify({ catalogVersion: 'catalog-test', verdictVersion: 'verdict-test', calculationVersion: 'calculation-test', pairs: [] }));
 		writeFileSync(join(release, 'data', 'offers.json'), JSON.stringify({ offers: [], snapshotVersion: 'empty' }));
@@ -175,6 +194,7 @@ describe('MCP HTTP boundary helpers', () => {
 				COMPAT_AIR_OFFERS: join(current, 'data', 'offers.json'),
 				COMPAT_AIR_VERDICTS: '',
 				COMPAT_AIR_DEMAND_AGGREGATES: '',
+				COMPAT_AIR_PRODUCT_FUNNEL_AGGREGATES: '',
 			},
 			stdio: ['ignore', 'ignore', 'pipe'],
 		});

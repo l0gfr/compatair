@@ -5,6 +5,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createMcpCore, ENGINE_VERSION, PROTOCOL_VERSION } from './mcp-core.mjs';
 import { createDemandAggregateStore, DEMAND_EVENT_SCHEMA_VERSION, validateDemandEvent } from './demand-aggregates.mjs';
+import { createProductFunnelAggregateStore, PRODUCT_FUNNEL_SCHEMA_VERSION, validateProductFunnelEvent } from './product-funnel-aggregates.mjs';
 
 const BODY_LIMIT = 65_536;
 const REQUEST_LIMIT = 120;
@@ -99,16 +100,17 @@ function isJsonContentType(request) {
 }
 
 /**
- * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, allowedOrigins: Set<string>, demandAggregatePath?: string, proxyManagesApiHeaders?: boolean }} options
+ * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, allowedOrigins: Set<string>, demandAggregatePath?: string, productFunnelAggregatePath?: string, proxyManagesApiHeaders?: boolean }} options
  */
-export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable' }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, allowedOrigins, demandAggregatePath = undefined, proxyManagesApiHeaders = false }) {
+export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable' }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, allowedOrigins, demandAggregatePath = undefined, productFunnelAggregatePath = undefined, proxyManagesApiHeaders = false }) {
 	const core = createMcpCore(catalog, offerSnapshot);
 	const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
 	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item]));
 	const verdictMap = new Map((verdictSnapshot.pairs ?? []).map((item) => [`${item.compressorId}--${item.toolId}`, item]));
 	const allow = createRateLimiter();
-	const counters = { rpc: 0, errors: 0, tools: Object.create(null), events: { calculator_used: 0 }, affiliateClicks: Object.create(null) };
+	const counters = { rpc: 0, errors: 0, tools: Object.create(null), affiliateClicks: Object.create(null) };
 	const demandStore = createDemandAggregateStore({ filePath: demandAggregatePath, catalog });
+	const productFunnelStore = createProductFunnelAggregateStore({ filePath: productFunnelAggregatePath });
 
 	async function handle(request, response) {
 		response.setTimeout(10_000);
@@ -116,7 +118,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 		let url;
 		try { url = new URL(request.url, 'http://localhost'); } catch { return json(response, 400, { error: 'invalid_request_target' }); }
 
-		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, verdictVersion: verdictSnapshot.verdictVersion, demandAggregation: { enabled: demandStore.enabled, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION } });
+		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, verdictVersion: verdictSnapshot.verdictVersion, demandAggregation: { enabled: demandStore.enabled, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION }, productFunnelAggregation: { enabled: productFunnelStore.enabled, schemaVersion: PRODUCT_FUNNEL_SCHEMA_VERSION } });
 
 		if (url.pathname === '/api/v1/compatibility') {
 			const corsHeaders = {
@@ -159,12 +161,11 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			if (!allow(`events:${clientAddress(request)}`)) return json(response, 429, { error: 'rate_limited' }, { 'Retry-After': '60' });
 			try {
 				const event = await readJsonBody(request);
-				if (event?.event === 'calculator_used' && Object.keys(event).length === 1) counters.events.calculator_used++;
-				else {
-					const demand = validateDemandEvent(event, catalog);
-					if (!demand) return json(response, 400, { error: 'invalid_event' });
-					await demandStore.record(demand);
-				}
+				const demand = validateDemandEvent(event, catalog);
+				const productFunnel = validateProductFunnelEvent(event);
+				if (demand) await demandStore.record(demand);
+				else if (productFunnel) await productFunnelStore.record(productFunnel);
+				else return json(response, 400, { error: 'invalid_event' });
 				response.writeHead(204, { 'Cache-Control': 'no-store' });
 				return response.end();
 			} catch (error) { return json(response, error instanceof Error && error.message === 'BODY_TOO_LARGE' ? 413 : 400, { error: 'invalid_event' }); }
@@ -231,13 +232,14 @@ async function start() {
 	const verdictsPath = resolveVerdictSnapshotPath(catalogPath, process.env.COMPAT_AIR_VERDICTS);
 	const allowedOrigins = new Set((process.env.MCP_ALLOWED_ORIGINS ?? 'https://compatair.fr,https://www.compatair.fr').split(',').map((item) => item.trim()).filter(Boolean));
 	const demandAggregatePath = process.env.COMPAT_AIR_DEMAND_AGGREGATES || undefined;
+	const productFunnelAggregatePath = process.env.COMPAT_AIR_PRODUCT_FUNNEL_AGGREGATES || undefined;
 	const proxyManagesApiHeaders = process.env.COMPAT_AIR_PROXY_MANAGES_API_HEADERS === '1';
 	const catalog = JSON.parse(await readFile(catalogPath, 'utf8'));
 	const verdictSnapshot = JSON.parse(await readFile(verdictsPath, 'utf8'));
 	if (verdictSnapshot.catalogVersion !== catalog.catalogVersion || !Array.isArray(verdictSnapshot.pairs)) throw new Error('Le snapshot de verdicts ne correspond pas au catalogue.');
 	let offerSnapshot = { offers: [], snapshotVersion: 'empty' };
 	try { offerSnapshot = JSON.parse(await readFile(offersPath, 'utf8')); } catch {}
-	const server = createCompatAirServer({ catalog, verdictSnapshot, offerSnapshot, allowedOrigins, demandAggregatePath, proxyManagesApiHeaders });
+	const server = createCompatAirServer({ catalog, verdictSnapshot, offerSnapshot, allowedOrigins, demandAggregatePath, productFunnelAggregatePath, proxyManagesApiHeaders });
 	server.on('error', (error) => { console.error(error); process.exitCode = 1; });
 	server.listen(port, host, () => console.error(`CompatAir MCP listening on http://${host}:${port}`));
 }

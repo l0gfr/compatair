@@ -116,6 +116,12 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 	let demandIndex = 0;
 	let currentFilter: keyof typeof labels | 'all' = 'all';
 	let lastSummary = '';
+	const recordedFunnelSteps = new Set<'started' | 'completed'>();
+
+	function recordFunnelStep(step: 'started' | 'completed') {
+		if (recordedFunnelSteps.has(step) || !navigator.sendBeacon) return;
+		if (navigator.sendBeacon('/events', new Blob([JSON.stringify({ event: 'calculator_funnel_aggregate', schemaVersion: '1.0.0', step })], { type: 'application/json' }))) recordedFunnelSteps.add(step);
+	}
 
 	function resultLabel(result: SizingResult) {
 		if (result.flowBasis === 'documented-continuous') return labels[result.verdict];
@@ -381,6 +387,8 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 	}
 
 	root?.querySelector('[data-add-tool]')?.addEventListener('click', () => addDemand());
+	form?.addEventListener('input', () => recordFunnelStep('started'), { once: true });
+	form?.addEventListener('change', () => recordFunnelStep('started'), { once: true });
 	form?.querySelector<HTMLSelectElement>('[name="compressor"]')?.addEventListener('change', (event: Event) => { root!.querySelector<HTMLElement>('[data-custom-compressor]')!.hidden = (event.target as HTMLSelectElement).value !== 'custom'; });
 	form?.querySelector<HTMLInputElement>('[name="margin"]')?.addEventListener('input', (event: Event) => { root!.querySelector<HTMLOutputElement>('[data-margin-output]')!.value = `${(event.target as HTMLInputElement).value} %`; });
 
@@ -399,6 +407,7 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 
 	form?.addEventListener('submit', async (event) => {
 		event.preventDefault(); if (!output || !list || !evaluated) return;
+		recordFunnelStep('started');
 		const errorTarget = root?.querySelector<HTMLElement>('[data-form-error]');
 		try {
 			const config = configFromForm(); if (!config) return;
@@ -428,6 +437,7 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 			const envelope = await createPassportEnvelope(config, compressors, tools, CATALOG_VERIFIED_AT);
 			root?.querySelector<HTMLAnchorElement>('[data-create-passport]')?.setAttribute('href', `/passeport/#passport=${encodePassportEnvelope(envelope)}`);
 			contributeDemand(config, base);
+			recordFunnelStep('completed');
 			output.hidden = false; output.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
 		} catch (error) {
 			if (!errorTarget) return;

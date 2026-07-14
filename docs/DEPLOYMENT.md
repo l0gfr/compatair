@@ -75,7 +75,7 @@ Activer ensuite le service :
 sudo bash /home/bluetouff/compatair-bootstrap/deploy/server/install-mcp.sh
 ```
 
-Ce script installe aussi le répertoire privé `/var/lib/compatair`, créé par systemd avec le mode `0700`. Le service y conserve uniquement `demand-aggregates.json`, composé de compteurs agrégés. Après une mise à jour de l’unité systemd, rejouer la même commande une fois puis vérifier :
+Ce script installe aussi le répertoire privé `/var/lib/compatair`, créé par systemd avec le mode `0700`. Le service y conserve `demand-aggregates.json` et `product-funnel-aggregates.json`, composés uniquement de compteurs agrégés. Après une mise à jour de l’unité systemd, rejouer la même commande une fois puis vérifier :
 
 ```bash
 sudo systemctl show compatair-mcp.service -p StateDirectory -p Environment
@@ -111,6 +111,15 @@ pnpm data:rank-demand -- /chemin/prive/demand-aggregates.json
 ```
 
 Le rapport `demand-priorities.json` exclut toute dimension comptant moins de cinq contributions. Il rapproche ensuite la demande agrégée du snapshot public `data/verdicts.json` afin de faire remonter les outils recherchés qui disposent du moins de compresseurs concluants.
+
+Pour mesurer la complétion du calculateur sans exporter de navigation brute :
+
+```bash
+scp bluetouff@serveur:/var/lib/compatair/product-funnel-aggregates.json /chemin/prive/
+pnpm data:report-funnel -- /chemin/prive/product-funnel-aggregates.json
+```
+
+Le rapport `product-funnel-report.json` refuse de publier un taux lorsque les compteurs sont incohérents, par exemple si des pertes réseau conduisent à plus de complétions reçues que de démarrages.
 
 ## Statistiques privées sans cookie
 

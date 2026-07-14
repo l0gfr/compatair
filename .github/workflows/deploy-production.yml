@@ -68,6 +68,7 @@ jobs:
         run: |
           install -D -m 644 server/mcp-core.mjs dist/_server/mcp-core.mjs
           install -D -m 644 server/demand-aggregates.mjs dist/_server/demand-aggregates.mjs
+          install -D -m 644 server/product-funnel-aggregates.mjs dist/_server/product-funnel-aggregates.mjs
           install -D -m 644 server/mcp-server.mjs dist/_server/mcp-server.mjs
           tar -C dist -czf "compatair-${GITHUB_SHA}.tar.gz" .
           sha256sum "compatair-${GITHUB_SHA}.tar.gz" > "compatair-${GITHUB_SHA}.tar.gz.sha256"

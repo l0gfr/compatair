@@ -24,6 +24,7 @@
 - snapshots JSON du catalogue et de chaque verdict, validation, checksums, détection des doublons et rapports de différences ;
 - contribution facultative aux priorités du catalogue, agrégée sans événement brut, cookie, identifiant de navigateur ni adresse IP persistée ;
 - rapport privé de priorisation avec seuil minimal de cinq contributions par dimension ;
+- funnel du calculateur agrégé sans URL, referrer, cookie ni identifiant, avec rapport privé et contrôle de cohérence du taux ;
 - serveur MCP Streamable HTTP en lecture seule, neuf outils, six ressources, trois prompts, pagination, quotas, limite de taille, contrôle Origin, santé et métriques agrégées ;
 - workflows CI, déploiement, sécurité, snapshot et disponibilité, avec permissions minimales et actions épinglées ;
 - CSP, HSTS, politiques de sécurité, signalement responsable, confidentialité, cookies, affiliation et sources ;
@@ -40,7 +41,7 @@
 ## Opérations administrateur requises
 
 - Installer et activer le service MCP systemd et les règles Apache avec `deploy/server/install-mcp.sh`.
-- Réinstaller une fois le service MCP après l’ajout de l’actif de demande afin de créer `/var/lib/compatair` via `StateDirectory`.
+- Réinstaller une fois le service MCP après l’ajout des actifs agrégés de demande et de funnel afin de créer `/var/lib/compatair` via `StateDirectory`.
 - Définir la variable GitHub `MCP_ENABLED=true` après le test HTTPS de `/mcp-health`.
 - Activer dans GitHub les règles de branche, les checks obligatoires, la protection des secrets et l’épinglage obligatoire des Actions si le plan du dépôt le permet.
 - Enregistrer les propriétés du domaine dans Google Search Console et Bing Webmaster Tools. Cette opération exige les comptes du propriétaire.

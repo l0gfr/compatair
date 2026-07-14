@@ -1,6 +1,6 @@
 # Actif de données CompatAir
 
-CompatAir sépare strictement quatre couches : catalogue technique, moteur, demande agrégée et offres marchandes. Une offre ne peut jamais modifier une caractéristique technique ou un verdict.
+CompatAir sépare strictement le catalogue technique, le moteur, la demande agrégée, le funnel produit agrégé et les offres marchandes. Une offre ne peut jamais modifier une caractéristique technique ou un verdict.
 
 Le catalogue technique est physiquement découpé en un fichier par référence sous `src/data/products/compressors` et `src/data/products/tools`. `src/data/catalog.ts` reste la façade publique : il agrège les modules, applique les schémas Zod et conserve les exports historiques utilisés par Astro, les snapshots et le serveur MCP.
 
@@ -56,6 +56,12 @@ La contribution est désactivée par défaut. Lorsqu’une personne l’active d
 Le serveur incrémente directement des compteurs marginaux. Il ne conserve ni ligne d’événement, ni cookie, ni identifiant de navigateur, ni adresse IP dans cet actif. Les rapports masquent les dimensions de moins de cinq contributions.
 
 Ce dispositif suit les principes de minimisation et de statistiques anonymes exposés par la CNIL. Il ne constitue pas une certification juridique et doit être réévalué avant tout ajout de traceur, identifiant persistant, recoupement ou transmission à un tiers.
+
+## Funnel produit agrégé
+
+Le calculateur transmet au plus un signal `started` et un signal `completed` par chargement de page. Aucun chemin, URL, referrer, identifiant ou contenu de formulaire n’atteint l’actif statistique.
+
+Le serveur conserve uniquement les deux compteurs globaux dans `/var/lib/compatair/product-funnel-aggregates.json`. Si des pertes réseau ou des requêtes invalides conduisent à davantage de complétions que de démarrages, le taux est laissé à `null` et une alerte de qualité est produite.
 
 ## Offres ManoMano
 
