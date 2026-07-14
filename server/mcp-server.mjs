@@ -3,6 +3,7 @@ import { realpathSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { createMcpCore, ENGINE_VERSION, PROTOCOL_VERSION } from './mcp-core.mjs';
+import { createDemandAggregateStore, DEMAND_EVENT_SCHEMA_VERSION, validateDemandEvent } from './demand-aggregates.mjs';
 
 const BODY_LIMIT = 65_536;
 const REQUEST_LIMIT = 120;
@@ -91,10 +92,11 @@ function isJsonContentType(request) {
 	return /^application\/json(?:\s*;|$)/.test(value);
 }
 
-export function createCompatAirServer({ catalog, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, allowedOrigins }) {
+export function createCompatAirServer({ catalog, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, allowedOrigins, demandAggregatePath = undefined }) {
 	const core = createMcpCore(catalog, offerSnapshot);
 	const allow = createRateLimiter();
 	const counters = { rpc: 0, errors: 0, tools: Object.create(null), events: { calculator_used: 0 }, affiliateClicks: Object.create(null) };
+	const demandStore = createDemandAggregateStore({ filePath: demandAggregatePath, catalog });
 
 	async function handle(request, response) {
 		response.setTimeout(10_000);
@@ -102,7 +104,7 @@ export function createCompatAirServer({ catalog, offerSnapshot = { offers: [], s
 		let url;
 		try { url = new URL(request.url, 'http://localhost'); } catch { return json(response, 400, { error: 'invalid_request_target' }); }
 
-		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION });
+		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, demandAggregation: { enabled: demandStore.enabled, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION } });
 
 		if (url.pathname === '/events') {
 			if (request.method !== 'POST') return json(response, 405, { error: 'method_not_allowed' }, { Allow: 'POST' });
@@ -111,8 +113,12 @@ export function createCompatAirServer({ catalog, offerSnapshot = { offers: [], s
 			if (!allow(`events:${clientAddress(request)}`)) return json(response, 429, { error: 'rate_limited' }, { 'Retry-After': '60' });
 			try {
 				const event = await readJsonBody(request);
-				if (!event || typeof event !== 'object' || Array.isArray(event) || Object.keys(event).length !== 1 || event.event !== 'calculator_used') return json(response, 400, { error: 'invalid_event' });
-				counters.events.calculator_used++;
+				if (event?.event === 'calculator_used' && Object.keys(event).length === 1) counters.events.calculator_used++;
+				else {
+					const demand = validateDemandEvent(event, catalog);
+					if (!demand) return json(response, 400, { error: 'invalid_event' });
+					await demandStore.record(demand);
+				}
 				response.writeHead(204, { 'Cache-Control': 'no-store' });
 				return response.end();
 			} catch (error) { return json(response, error instanceof Error && error.message === 'BODY_TOO_LARGE' ? 413 : 400, { error: 'invalid_event' }); }
@@ -177,10 +183,11 @@ async function start() {
 	const catalogPath = process.env.COMPAT_AIR_CATALOG ?? new URL('../dist/data/catalog.json', import.meta.url).pathname;
 	const offersPath = process.env.COMPAT_AIR_OFFERS ?? new URL('../dist/data/offers.json', import.meta.url).pathname;
 	const allowedOrigins = new Set((process.env.MCP_ALLOWED_ORIGINS ?? 'https://compatair.fr,https://www.compatair.fr').split(',').map((item) => item.trim()).filter(Boolean));
+	const demandAggregatePath = process.env.COMPAT_AIR_DEMAND_AGGREGATES || undefined;
 	const catalog = JSON.parse(await readFile(catalogPath, 'utf8'));
 	let offerSnapshot = { offers: [], snapshotVersion: 'empty' };
 	try { offerSnapshot = JSON.parse(await readFile(offersPath, 'utf8')); } catch {}
-	const server = createCompatAirServer({ catalog, offerSnapshot, allowedOrigins });
+	const server = createCompatAirServer({ catalog, offerSnapshot, allowedOrigins, demandAggregatePath });
 	server.on('error', (error) => { console.error(error); process.exitCode = 1; });
 	server.listen(port, host, () => console.error(`CompatAir MCP listening on http://${host}:${port}`));
 }

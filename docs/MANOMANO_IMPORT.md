@@ -45,7 +45,7 @@ Une date reproductible peut être passée avec `--collected-at 2026-07-13T20:00:
 
 ## Règles de publication
 
-- L'appariement repose exclusivement sur un EAN, GTIN ou MPN déjà présent dans le catalogue technique. Le titre ou la marque ne suffisent jamais.
+- L'appariement repose exclusivement sur un EAN, GTIN ou MPN déjà présent dans l’identité normalisée du catalogue technique. Les séparateurs et la casse des MPN sont normalisés, mais le titre ou la marque ne suffisent jamais.
 - Si plusieurs identifiants désignent des produits différents, la ligne est rejetée.
 - Seuls les prix en euros, les images HTTPS et les liens HTTPS réellement présents dans le flux sont conservés.
 - Un lien de suivi Awin doit utiliser `pclick.php` ou `cread.php` et viser l'annonceur `17547`. Un autre annonceur est rejeté même s'il utilise le bon domaine Awin.

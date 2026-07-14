@@ -8,7 +8,10 @@ export default defineConfig({
 	output: 'static',
 	integrations: [sitemap({
 		entryLimit: 25,
-		filter: (page) => !['/410/', '/comparateur/', '/offres/', '/recherche/', '/securite/'].some((path) => new URL(page).pathname === path),
+		filter: (page) => {
+			const pathname = new URL(page).pathname;
+			return !pathname.startsWith('/compatibilite/') && !['/410/', '/comparateur/', '/offres/', '/recherche/', '/securite/'].includes(pathname);
+		},
 	})],
 	build: {
 		assets: '_assets',

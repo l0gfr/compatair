@@ -39,6 +39,10 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 
 		<label class="margin-control" for="margin"><span>Marge CompatAir</span><output data-margin-output>25 %</output><input id="margin" name="margin" type="range" min="0" max="50" step="5" value="25" /></label>
 		<p class="form-disclaimer">Les fréquences sont des hypothèses explicites. Les pertes du réseau restent signalées, mais ne sont pas chiffrées sans courbe ou mesure documentée.</p>
+		<label class="demand-contribution">
+			<input type="checkbox" data-demand-contribution />
+			<span><strong>Contribuer aux priorités du catalogue</strong><small>Si vous cochez cette case, CompatAir envoie après le calcul uniquement les identifiants des outils et des tranches de débit, pression et durée. Aucun texte libre, valeur personnalisée exacte, cookie, adresse IP ou configuration brute n’est enregistré dans l’actif statistique.</small></span>
+		</label>
 		<p class="form-error" role="alert" data-form-error hidden></p>
 		<button class="button primary" type="submit">Calculer la configuration</button>
 	</form>
@@ -347,6 +351,40 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 		root?.querySelector<HTMLOutputElement>('[data-margin-output]')!.replaceChildren(`${Math.round(config.safetyMargin * 100)} %`);
 	}
 
+	function flowBucket(value: number) {
+		if (value < 100) return 'lt-100';
+		if (value < 200) return '100-199';
+		if (value < 400) return '200-399';
+		if (value < 700) return '400-699';
+		return '700-plus';
+	}
+	function pressureBucket(value: number) {
+		if (value < 4) return 'lt-4';
+		if (value < 6) return '4-5.9';
+		if (value < 8) return '6-7.9';
+		return '8-plus';
+	}
+	function sessionBucket(value: number) {
+		if (value < 15) return 'lt-15';
+		if (value < 60) return '15-59';
+		return '60-plus';
+	}
+	function contributeDemand(config: NonNullable<ReturnType<typeof configFromForm>>, result: SizingResult) {
+		if (!root?.querySelector<HTMLInputElement>('[data-demand-contribution]')?.checked || !navigator.sendBeacon) return;
+		const event = {
+			event: 'calculator_demand_aggregate',
+			schemaVersion: '1.0.0',
+			calculationVersion: CALCULATION_VERSION,
+			toolIds: [...new Set(config.demands.map((demand) => demand.id))],
+			mode: config.mode,
+			flowBucket: flowBucket(result.recommendedFadLpm),
+			pressureBucket: pressureBucket(result.requiredPressureBar),
+			sessionBucket: sessionBucket(config.sessionMinutes ?? 30),
+			compressorSelection: config.selectedCompressor === 'custom' ? 'custom' : config.selectedCompressor ? 'catalog' : 'none',
+		};
+		navigator.sendBeacon('/events', new Blob([JSON.stringify(event)], { type: 'application/json' }));
+	}
+
 	root?.querySelector('[data-add-tool]')?.addEventListener('click', () => addDemand());
 	form?.querySelector<HTMLSelectElement>('[name="compressor"]')?.addEventListener('change', (event: Event) => { root!.querySelector<HTMLElement>('[data-custom-compressor]')!.hidden = (event.target as HTMLSelectElement).value !== 'custom'; });
 	form?.querySelector<HTMLInputElement>('[name="margin"]')?.addEventListener('input', (event: Event) => { root!.querySelector<HTMLOutputElement>('[data-margin-output]')!.value = `${(event.target as HTMLInputElement).value} %`; });
@@ -382,7 +420,7 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 				|| Math.abs((a.availableFadLpm ?? Number.POSITIVE_INFINITY) - base.recommendedFadLpm) - Math.abs((b.availableFadLpm ?? Number.POSITIVE_INFINITY) - base.recommendedFadLpm));
 			currentFilter = 'all'; renderCandidateResults(candidates); lastSummary = buildSummary(config, result, candidates);
 			window.history.replaceState(null, '', `${window.location.pathname}#config=${encodeConfig(config)}`);
-			if (navigator.sendBeacon) navigator.sendBeacon('/events', new Blob([JSON.stringify({ event: 'calculator_used' })], { type: 'application/json' }));
+			contributeDemand(config, base);
 			output.hidden = false; output.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
 		} catch (error) {
 			if (!errorTarget) return;

@@ -12,9 +12,13 @@
 - verdicts `continuous`, `intermittent`, `incompatible` et `insufficient_data` ;
 - conversions, interpolation bornée, débit de pointe, débit moyen, réserve de cuve, récupération conditionnelle et version des formules ;
 - recherche globale, comparateur de deux ou trois modèles, pages par marque, pages par usage et pages de compatibilité limitées aux données concluantes ;
+- frontière SEO programmatique : couples produit-outil en `noindex,follow`, hors sitemap, avec fiches et pages d’usage comme surfaces indexables ;
 - guides Astro validés par Zod, glossaire, sommaires, auteurs, relecteurs et contenus associés ;
 - schémas d’offres, liste blanche des marchands, fraîcheur de 48 heures, redirection fermée et compteur agrégé ;
-- snapshots JSON versionnés, validation, checksum d’import, détection des doublons et rapport de différences ;
+- catalogue JSON normalisé par EAN/GTIN/MPN, familles de variantes et index de provenance par champ critique ;
+- snapshots JSON du catalogue et de chaque verdict, validation, checksums, détection des doublons et rapports de différences ;
+- contribution facultative aux priorités du catalogue, agrégée sans événement brut, cookie, identifiant de navigateur ni adresse IP persistée ;
+- rapport privé de priorisation avec seuil minimal de cinq contributions par dimension ;
 - serveur MCP Streamable HTTP en lecture seule, neuf outils, six ressources, trois prompts, pagination, quotas, limite de taille, contrôle Origin, santé et métriques agrégées ;
 - workflows CI, déploiement, sécurité, snapshot et disponibilité, avec permissions minimales et actions épinglées ;
 - CSP, HSTS, politiques de sécurité, signalement responsable, confidentialité, cookies, affiliation et sources ;
@@ -31,6 +35,7 @@
 ## Opérations administrateur requises
 
 - Installer et activer le service MCP systemd et les règles Apache avec `deploy/server/install-mcp.sh`.
+- Réinstaller une fois le service MCP après l’ajout de l’actif de demande afin de créer `/var/lib/compatair` via `StateDirectory`.
 - Définir la variable GitHub `MCP_ENABLED=true` après le test HTTPS de `/mcp-health`.
 - Activer dans GitHub les règles de branche, les checks obligatoires, la protection des secrets et l’épinglage obligatoire des Actions si le plan du dépôt le permet.
 - Enregistrer les propriétés du domaine dans Google Search Console et Bing Webmaster Tools. Cette opération exige les comptes du propriétaire.

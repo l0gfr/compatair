@@ -84,6 +84,8 @@ for (const file of htmlFiles) {
 	const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
 	const robots = html.match(/<meta name="robots" content="([^"]+)"/)?.[1] ?? '';
 	const noindex = robots.split(',').map((rule) => rule.trim()).includes('noindex');
+	const isCompatibilityDetail = label.startsWith('compatibilite/');
+	if (isCompatibilityDetail && !noindex) errors.push(`${label}: un couple produit-outil doit rester noindex`);
 
 	if (!title) errors.push(`${label}: title absent`);
 	else if (titles.has(title)) errors.push(`${label}: title dupliqué avec ${titles.get(title)}`);
@@ -135,6 +137,7 @@ for (const file of htmlFiles) {
 
 for (const sitemapUrl of sitemapUrls) {
 	const pathname = new URL(sitemapUrl).pathname;
+	if (pathname.startsWith('/compatibilite/')) errors.push(`sitemap: couple produit-outil indexable interdit ${sitemapUrl}`);
 	if (!sitePaths.has(pathname)) errors.push(`sitemap: URL sans page HTML ${sitemapUrl}`);
 }
 

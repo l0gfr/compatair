@@ -2,6 +2,7 @@ import { compressorSchema, toolProfileSchema } from '../domain/catalog';
 
 const retrievedAt = '2026-07-13';
 const retrievedAtCurrent = '2026-07-14';
+export const CATALOG_VERIFIED_AT = retrievedAtCurrent;
 
 const rawCompressors = [
 	{
@@ -14,6 +15,7 @@ const rawCompressors = [
 	},
 	{
 		id: 'einhell-te-ac-430-90-10', slug: 'einhell-te-ac-430-90-10', brand: 'Einhell', model: 'TE-AC 430/90/10', mpn: '4010800', ean: '4006825642339',
+		variant: { familyId: 'einhell-te-ac-430-10', label: 'Cuve 90 L', distinguishingAttributes: { tank: '90 L' } },
 		tankLiters: 90, maxPressureBar: 10, fadCurve: [{ pressureBar: 0, litersPerMinute: 230 }, { pressureBar: 4, litersPerMinute: 210 }, { pressureBar: 7, litersPerMinute: 200 }], intakeFlowLpm: 430, dutyCycle: 1, oilType: 'oil', noiseDb: 73, confidence: 'A', status: 'active',
 		image: { src: '/images/products/einhell-te-ac-430-90-10.webp', alt: 'Compresseur Einhell TE-AC 430/90/10', sourceUrl: 'https://www.einhell.fr/p/4010800-te-ac-430-90-10/', sourceLabel: 'Visuel officiel Einhell' },
 		editorial: { overview: 'Le TE-AC 430/90/10 est un compresseur lubrifié de 90 litres. Sa courbe constructeur conserve 200 L/min à 7 bar, valeur directement exploitable pour les outils dont la pression de travail se situe dans la plage documentée.', verifiedFacts: ['Einhell publie 230 L/min à 0 bar, 210 L/min à 4 bar et 200 L/min à 7 bar.', 'La pression maximale annoncée est de 10 bar et le débit aspiré de 430 L/min.'], limitations: ['Les 430 L/min aspirés ne décrivent pas le débit disponible à l’outil.', 'La fiche consultée ne fournit pas de point de débit restitué au-delà de 7 bar.'] },
@@ -56,6 +58,7 @@ const rawCompressors = [
 	},
 	{
 		id: 'abac-atf-s-3-24', slug: 'abac-atf-s-3-24', brand: 'ABAC', model: 'ATF-S 3 24', mpn: '4116000868', ean: '8024900731750',
+		variant: { familyId: 'abac-atf-s-3', label: 'Cuve 24 L', distinguishingAttributes: { tank: '24 L' } },
 		tankLiters: 24, maxPressureBar: 10, fadCurve: [{ pressureBar: 10, litersPerMinute: 150 }], dutyCycle: 1, oilType: 'oil-free', noiseDb: 68, confidence: 'A', status: 'active',
 		image: { src: '/images/products/abac-atf-s-3-24.jpg', alt: 'Compresseur ABAC ATF-S 3 24', sourceUrl: 'https://shop.abacaircompressors.com/en-US/products/4116000868/atf-s-3-24-10-230150-ce', sourceLabel: 'Visuel officiel ABAC' },
 		editorial: { overview: 'L’ATF-S 3 24 est un compresseur sans huile de 24 litres. ABAC publie un FAD de 150 L/min à la pression maximale de 10 bar et un cycle de service de 100 %.', verifiedFacts: ['Le débit restitué annoncé est de 150 L/min à 10 bar.', 'La fiche publie une cuve de 24 litres et un niveau sonore de 68 dB.'], limitations: ['La source consultée ne fournit pas de courbe à plusieurs pressions.', 'CompatAir ne majore pas le débit à 6,3 ou 7 bar sans valeur constructeur correspondante.'] },
@@ -63,6 +66,7 @@ const rawCompressors = [
 	},
 	{
 		id: 'abac-atf-s-3-50', slug: 'abac-atf-s-3-50', brand: 'ABAC', model: 'ATF-S 3 50', mpn: '4116000874', ean: '8024900732061',
+		variant: { familyId: 'abac-atf-s-3', label: 'Cuve 50 L', distinguishingAttributes: { tank: '50 L' } },
 		tankLiters: 50, maxPressureBar: 10, fadCurve: [{ pressureBar: 10, litersPerMinute: 150 }], dutyCycle: 1, oilType: 'oil-free', noiseDb: 68, confidence: 'A', status: 'active',
 		image: { src: '/images/products/abac-atf-s-3-50.jpg', alt: 'Compresseur ABAC ATF-S 3 50', sourceUrl: 'https://shop.abacaircompressors.com/nl-NL/products/4116000874/atf-s-3-50-10-230150-ce-uk', sourceLabel: 'Visuel officiel ABAC' },
 		editorial: { overview: 'Cette variante ATF-S associe le même FAD publié de 150 L/min à 10 bar à une cuve de 50 litres. Le volume de stockage augmente par rapport à la version 24 litres, pas le débit restitué annoncé.', verifiedFacts: ['ABAC publie 150 L/min de FAD à 10 bar.', 'La cuve contient 50 litres, le cycle annoncé est de 100 % et le niveau sonore de 68 dB.'], limitations: ['La fiche ne publie qu’un point de FAD.', 'Le gain lié à la cuve ne peut pas être converti en durée d’usage sans pressions de coupure et profil de consommation.'] },
@@ -133,6 +137,7 @@ const rawCompressors = [
 	},
 	{
 		id: 'einhell-te-ac-430-50-10', slug: 'einhell-te-ac-430-50-10', brand: 'Einhell', model: 'TE-AC 430/50/10', mpn: '4010810', ean: '4006825672053',
+		variant: { familyId: 'einhell-te-ac-430-10', label: 'Cuve 50 L', distinguishingAttributes: { tank: '50 L' } },
 		tankLiters: 50, maxPressureBar: 10, fadCurve: [{ pressureBar: 0, litersPerMinute: 230 }, { pressureBar: 4, litersPerMinute: 210 }, { pressureBar: 7, litersPerMinute: 200 }], intakeFlowLpm: 430, oilType: 'oil', noiseDb: 73.5, powerKw: 3, weightKg: 56.4, mobility: 'mobile', confidence: 'A', status: 'active',
 		image: { src: '/images/products/einhell-te-ac-430-50-10.webp', alt: 'Compresseur Einhell TE-AC 430/50/10', sourceUrl: 'https://www.einhell.fr/p/4010810-te-ac-430-50-10/', sourceLabel: 'Visuel officiel Einhell' },
 		editorial: { overview: 'Le TE-AC 430/50/10 reprend une courbe de débit élevée dans un format de 50 litres. Il fournit 200 L/min à 7 bar selon Einhell, malgré un débit aspiré affiché de 430 L/min.', verifiedFacts: ['La fiche publie 230 L/min à 0 bar, 210 L/min à 4 bar et 200 L/min à 7 bar.', 'Einhell annonce 10 bar maximum, 3 kW, 56,4 kg et 73,5 dB(A) de pression acoustique.'], limitations: ['Aucun débit restitué n’est documenté entre 7 et 10 bar.', 'Le poids et la puissance électrique doivent être vérifiés face aux contraintes du lieu d’utilisation.'] },
@@ -141,6 +146,7 @@ const rawCompressors = [
 	},
 	{
 		id: 'metabo-basic-250-24-w', slug: 'metabo-basic-250-24-w', brand: 'Metabo', model: 'Basic 250-24 W', mpn: '601533000', ean: '4007430244420',
+		variant: { familyId: 'metabo-basic-250-w', label: 'Cuve 24 L', distinguishingAttributes: { tank: '24 L' } },
 		tankLiters: 24, maxPressureBar: 8, fadCurve: [{ pressureBar: 6.4, litersPerMinute: 95 }], intakeFlowLpm: 200, oilType: 'oil', noiseDb: 81, powerKw: 1.5, weightKg: 27, mobility: 'mobile', voltage: '220-240 V / 50 Hz', phase: 'single-phase', confidence: 'A', status: 'active',
 		image: { src: '/images/products/metabo-basic-250-24-w.webp', alt: 'Compresseur Metabo Basic 250-24 W', sourceUrl: 'https://www.metabo.com/com/en/products/tools/compressed-air/compressors/mobile-workshop-compressors', sourceLabel: 'Visuel officiel Metabo' },
 		editorial: { overview: 'Le Basic 250-24 W est un compresseur lubrifié de 24 litres. Metabo distingue 200 L/min aspirés du débit effectif de 95 L/min mesuré à 80 % de la pression maximale, soit 6,4 bar.', verifiedFacts: ['Metabo publie un débit effectif de 95 L/min à 6,4 bar pour une pression maximale de 8 bar.', 'La fiche indique 1,5 kW, 27 kg et un niveau de pression acoustique de 81 dB(A).'], limitations: ['Le point unique à 6,4 bar ne permet pas de reconstituer une courbe.', 'CompatAir ne transpose pas automatiquement ce débit vers 6,3 bar.'] },
@@ -149,6 +155,7 @@ const rawCompressors = [
 	},
 	{
 		id: 'metabo-basic-250-50-w', slug: 'metabo-basic-250-50-w', brand: 'Metabo', model: 'Basic 250-50 W', mpn: '601534000', ean: '4007430244437',
+		variant: { familyId: 'metabo-basic-250-w', label: 'Cuve 50 L', distinguishingAttributes: { tank: '50 L' } },
 		tankLiters: 50, maxPressureBar: 8, fadCurve: [{ pressureBar: 6.4, litersPerMinute: 95 }], intakeFlowLpm: 200, oilType: 'oil', noiseDb: 81, powerKw: 1.5, weightKg: 32, mobility: 'mobile', voltage: '220-240 V / 50 Hz', phase: 'single-phase', confidence: 'A', status: 'active',
 		image: { src: '/images/products/metabo-basic-250-50-w.webp', alt: 'Compresseur Metabo Basic 250-50 W', sourceUrl: 'https://www.metabo.com/com/en/products/tools/compressed-air/compressors/mobile-workshop-compressors', sourceLabel: 'Visuel officiel Metabo' },
 		editorial: { overview: 'Le Basic 250-50 W utilise le même débit effectif publié de 95 L/min à 6,4 bar que la version 24 litres, avec une cuve portée à 50 litres. Le volume de stockage supplémentaire ne devient pas un débit supérieur.', verifiedFacts: ['Metabo publie 95 L/min effectifs à 6,4 bar, 200 L/min aspirés et 8 bar maximum.', 'La fiche indique une puissance de 1,5 kW, un poids de 32 kg et 81 dB(A) de pression acoustique.'], limitations: ['Un seul point de débit effectif est publié.', 'La cuve de 50 litres ne justifie aucune extrapolation du débit à une autre pression.'] },
@@ -285,6 +292,7 @@ const rawCompressors = [
 	},
 	{
 		id: 'atlas-copco-ab25e100', slug: 'atlas-copco-ab25e100', brand: 'Atlas Copco', model: 'AB25E100', mpn: '1129740255',
+		variant: { familyId: 'atlas-copco-automan-ab-100', label: '2,5 HP monophasé', distinguishingAttributes: { power: '2.5 HP', phase: 'monophasé' } },
 		tankLiters: 100, maxPressureBar: 10, fadCurve: [{ pressureBar: 7, litersPerMinute: 172 }], intakeFlowLpm: 275, oilType: 'oil', noiseDb: 73, powerKw: 1.85, weightKg: 76, mobility: 'mobile', voltage: '230 V / 50 Hz', phase: 'single-phase', confidence: 'A', status: 'active',
 		image: { src: '/images/products/atlas-copco-ab25e100.png', alt: 'Compresseur Atlas Copco de la gamme Automan AB 100 litres', sourceUrl: 'https://www.atlascopco.com/content/dam/atlas-copco/local-countries/australia/documents/compressor-technique/ct-brochures/Automan-Compressor-and-Dryer-Packs-2024.pdf', sourceLabel: 'Visuel de gamme officiel Atlas Copco' },
 		editorial: { overview: 'L’AB25E100 est un compresseur Automan monophasé de 100 litres. Son débit d’air libre est documenté à 172 L/min sous 7 bar, distinct des 275 L/min de déplacement de pompe.', verifiedFacts: ['La documentation publie 172 L/min de FAD à 7 bar pour une cuve de 100 litres.', 'Le modèle est référencé 1129740255, avec un moteur de 1,85 kW et une pression maximale de 10 bar.'], limitations: ['Un seul point FAD est documenté ; aucune extrapolation n’est réalisée à une autre pression.', 'Le visuel provient de la brochure officielle de la gamme Automan et peut illustrer une autre variante de la famille.'] },
@@ -293,6 +301,7 @@ const rawCompressors = [
 	},
 	{
 		id: 'atlas-copco-ab30e100', slug: 'atlas-copco-ab30e100', brand: 'Atlas Copco', model: 'AB30E100', mpn: '1129740256',
+		variant: { familyId: 'atlas-copco-automan-ab-100', label: '3 HP monophasé', distinguishingAttributes: { power: '3 HP', phase: 'monophasé' } },
 		tankLiters: 100, maxPressureBar: 10, fadCurve: [{ pressureBar: 7, litersPerMinute: 305 }], intakeFlowLpm: 369, oilType: 'oil', noiseDb: 73, powerKw: 2.2, weightKg: 81, mobility: 'mobile', voltage: '230 V / 50 Hz', phase: 'single-phase', confidence: 'A', status: 'active',
 		image: { src: '/images/products/atlas-copco-ab30e100.png', alt: 'Compresseur Atlas Copco de la gamme Automan AB 100 litres', sourceUrl: 'https://www.atlascopco.com/content/dam/atlas-copco/local-countries/australia/documents/compressor-technique/ct-brochures/Automan-Compressor-and-Dryer-Packs-2024.pdf', sourceLabel: 'Visuel de gamme officiel Atlas Copco' },
 		editorial: { overview: 'L’AB30E100 est un compresseur Automan monophasé de 100 litres destiné à l’atelier. Le débit publié de 305 L/min à 7 bar permet un verdict exact pour les outils documentés à cette pression.', verifiedFacts: ['La documentation publie 305 L/min de FAD à 7 bar, contre 369 L/min de déplacement de pompe.', 'Le MPN est 1129740256, le moteur développe 2,2 kW et la pression maximale est de 10 bar.'], limitations: ['Un seul point FAD est documenté ; aucune valeur n’est inventée à 6,3 ou 10 bar.', 'Le visuel provient de la brochure officielle de la gamme Automan et peut illustrer une autre variante de la famille.'] },
@@ -301,6 +310,7 @@ const rawCompressors = [
 	},
 	{
 		id: 'atlas-copco-ab40e100t', slug: 'atlas-copco-ab40e100t', brand: 'Atlas Copco', model: 'AB40E100T', mpn: '4116026427',
+		variant: { familyId: 'atlas-copco-automan-ab-100', label: '4 HP triphasé', distinguishingAttributes: { power: '4 HP', phase: 'triphasé' } },
 		tankLiters: 100, maxPressureBar: 10, fadCurve: [{ pressureBar: 7, litersPerMinute: 340 }], intakeFlowLpm: 430, oilType: 'oil', noiseDb: 79.4, powerKw: 3, weightKg: 71, mobility: 'mobile', voltage: '400 V / 50 Hz', phase: 'three-phase', confidence: 'A', status: 'active',
 		image: { src: '/images/products/atlas-copco-ab40e100t.png', alt: 'Compresseur triphasé Atlas Copco de la gamme Automan AB 100 litres', sourceUrl: 'https://www.atlascopco.com/content/dam/atlas-copco/local-countries/australia/documents/compressor-technique/ct-brochures/Automan-Compressor-and-Dryer-Packs-2024.pdf', sourceLabel: 'Visuel de gamme officiel Atlas Copco' },
 		editorial: { overview: 'L’AB40E100T couvre le segment 100 litres triphasé. CompatAir retient le FAD constructeur le plus conservateur, 340 L/min à 7 bar, et non les valeurs aspirées ou les chiffres marchands supérieurs.', verifiedFacts: ['La brochure officielle publie 340 L/min de FAD, une cuve de 100 litres, un moteur de 3 kW et une alimentation 400 V triphasée.', 'Le MPN 4116026427 est publié par le distributeur de la marque et la pression maximale est de 10 bar.'], limitations: ['Un seul point FAD est exploitable ; aucune courbe n’est reconstruite.', 'Le visuel provient de la brochure officielle de la gamme Automan et peut illustrer une autre variante de la famille.'] },

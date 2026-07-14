@@ -74,6 +74,13 @@ Activer ensuite le service :
 sudo bash /home/compatair-deploy/compatair-deploy/deploy/server/install-mcp.sh
 ```
 
+Ce script installe aussi le répertoire privé `/var/lib/compatair`, créé par systemd avec le mode `0700`. Le service y conserve uniquement `demand-aggregates.json`, composé de compteurs agrégés. Après une mise à jour de l’unité systemd, rejouer la même commande une fois puis vérifier :
+
+```bash
+sudo systemctl show compatair-mcp.service -p StateDirectory -p Environment
+sudo test -d /var/lib/compatair
+```
+
 Contrôler le service local, le proxy HTTPS puis la négociation MCP :
 
 ```bash
@@ -88,6 +95,18 @@ curl --fail \
 ```
 
 Après ces trois contrôles, créer la variable GitHub `MCP_ENABLED` avec la valeur `true`. Les déploiements et le monitoring vérifieront alors le MCP automatiquement.
+
+## Priorités issues de la demande
+
+Le fichier agrégé reste privé sur le serveur. Pour produire un rapport local sans publier les petits volumes :
+
+```bash
+scp bluetouff@serveur:/var/lib/compatair/demand-aggregates.json /chemin/prive/
+pnpm build
+pnpm data:rank-demand -- /chemin/prive/demand-aggregates.json
+```
+
+Le rapport `demand-priorities.json` exclut toute dimension comptant moins de cinq contributions. Il rapproche ensuite la demande agrégée du snapshot public `data/verdicts.json` afin de faire remonter les outils recherchés qui disposent du moins de compresseurs concluants.
 
 ## Statistiques privées sans cookie
 

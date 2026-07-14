@@ -45,4 +45,11 @@ describe('import du flux ManoMano Awin', () => {
 		const rows = parseDelimited('product_id\tproduct_name\tprice\n1\tProduit\t12.50');
 		expect(rows[0].row).toEqual({ product_id: '1', product_name: 'Produit', price: '12.50' });
 	});
+
+	it('apparie un alias MPN uniquement lorsqu’il est présent dans la vue normalisée', () => {
+		const normalizedCatalog = { ...catalog, normalized: { products: [{ id: 'compressor-a', identity: { mpn: '4010393', aliases: [{ type: 'legacy_mpn', value: 'OLD-4010-393' }] } }] } };
+		const csv = 'product_id,product_name,price,deep_link,image_url,mpn\nMM-ALIAS,Compresseur,149.90,https://www.awin1.com/pclick.php?p=42&a=7&m=17547,https://cdn.example.test/mm-alias.webp,OLD-4010-393';
+		const result = importManoManoFeed({ bytes: Buffer.from(csv), fileName: 'manomano.csv', catalog: normalizedCatalog, collectedAt: '2026-07-14T09:00:00.000Z' });
+		expect(result.offers[0]).toMatchObject({ productId: 'compressor-a', merchantProductId: 'MM-ALIAS' });
+	});
 });

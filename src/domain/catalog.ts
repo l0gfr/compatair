@@ -33,6 +33,16 @@ export const compressorSchema = z.object({
 	mpn: z.string().optional(),
 	ean: z.string().regex(/^\d{8,14}$/).optional(),
 	gtin: z.string().regex(/^\d{8,14}$/).optional(),
+	identifierAliases: z.array(z.object({
+		type: z.enum(['mpn', 'ean', 'gtin', 'legacy_mpn']),
+		value: z.string().min(1),
+		evidenceIds: z.array(z.string().min(1)).min(1),
+	})).default([]),
+	variant: z.object({
+		familyId: z.string().regex(/^[a-z0-9-]+$/),
+		label: z.string().min(1),
+		distinguishingAttributes: z.record(z.string(), z.string()).default({}),
+	}).optional(),
 	tankLiters: z.number().nonnegative(),
 	maxPressureBar: z.number().positive(),
 	fadCurve: z.array(z.object({ pressureBar: z.number().nonnegative(), litersPerMinute: z.number().positive() })),
@@ -63,6 +73,16 @@ const toolBaseSchema = z.object({
 	model: z.string().min(1),
 	mpn: z.string().optional(),
 	ean: z.string().regex(/^\d{8,14}$/).optional(),
+	identifierAliases: z.array(z.object({
+		type: z.enum(['mpn', 'ean', 'gtin', 'legacy_mpn']),
+		value: z.string().min(1),
+		evidenceIds: z.array(z.string().min(1)).min(1),
+	})).default([]),
+	variant: z.object({
+		familyId: z.string().regex(/^[a-z0-9-]+$/),
+		label: z.string().min(1),
+		distinguishingAttributes: z.record(z.string(), z.string()).default({}),
+	}).optional(),
 	connectorSize: z.string().optional(),
 	usagePattern: z.enum(['burst', 'intermittent', 'continuous']).optional(),
 	dutyFactor: z.number().min(0.01).max(1).optional(),

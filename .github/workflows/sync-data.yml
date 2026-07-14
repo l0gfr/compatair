@@ -36,10 +36,12 @@ jobs:
         run: |
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/catalog.json -o previous-catalog.json
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/offers.json -o previous-offers.json
+          curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/verdicts.json -o previous-verdicts.json
       - name: Produce change reports
         run: |
           node scripts/diff-snapshots.mjs previous-catalog.json dist/data/catalog.json catalog-diff.json
           node scripts/diff-snapshots.mjs previous-offers.json dist/data/offers.json offers-diff.json
+          node scripts/diff-snapshots.mjs previous-verdicts.json dist/data/verdicts.json verdicts-diff.json
       - name: Upload validated snapshot and reports
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
@@ -47,7 +49,9 @@ jobs:
           path: |
             dist/data/catalog.json
             dist/data/offers.json
+            dist/data/verdicts.json
             catalog-diff.json
             offers-diff.json
+            verdicts-diff.json
           if-no-files-found: error
           retention-days: 30

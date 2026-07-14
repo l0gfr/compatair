@@ -54,6 +54,7 @@ jobs:
       - name: Package immutable release
         run: |
           install -D -m 644 server/mcp-core.mjs dist/_server/mcp-core.mjs
+          install -D -m 644 server/demand-aggregates.mjs dist/_server/demand-aggregates.mjs
           install -D -m 644 server/mcp-server.mjs dist/_server/mcp-server.mjs
           tar -C dist -czf "compatair-${GITHUB_SHA}.tar.gz" .
           sha256sum "compatair-${GITHUB_SHA}.tar.gz" > "compatair-${GITHUB_SHA}.tar.gz.sha256"
@@ -136,6 +137,7 @@ jobs:
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/robots.txt | grep -Fq 'https://compatair.fr/sitemap-index.xml'
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/sitemap-index.xml > /dev/null
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/catalog.json | grep -Fq 'catalogVersion'
+          curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/verdicts.json | grep -Fq 'verdictVersion'
           if [[ "$MCP_ENABLED" == "true" ]]; then
             curl --fail --silent --show-error --max-time 20 https://compatair.fr/mcp-health | grep -Fq '"status":"ok"'
           fi

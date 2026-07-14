@@ -41,6 +41,14 @@ function indexCatalog(catalog) {
 		for (const value of [product.ean, product.gtin].map(normalizeGtin).filter(Boolean)) addIndex(indexes.gtin, value, product.id);
 		const mpn = normalizeMpn(product.mpn); if (mpn) addIndex(indexes.mpn, mpn, product.id);
 	}
+	for (const product of catalog.normalized?.products ?? []) {
+		for (const value of [product.identity?.ean, product.identity?.gtin].map(normalizeGtin).filter(Boolean)) addIndex(indexes.gtin, value, product.id);
+		const mpn = normalizeMpn(product.identity?.mpn); if (mpn) addIndex(indexes.mpn, mpn, product.id);
+		for (const alias of product.identity?.aliases ?? []) {
+			if (alias.type === 'ean' || alias.type === 'gtin') { const value = normalizeGtin(alias.value); if (value) addIndex(indexes.gtin, value, product.id); }
+			else { const value = normalizeMpn(alias.value); if (value) addIndex(indexes.mpn, value, product.id); }
+		}
+	}
 	return indexes;
 }
 

@@ -26,5 +26,18 @@ if (snapshot.offers) {
 	const now = Date.now();
 	for (const offer of snapshot.offers) { if (now - Date.parse(offer.collectedAt) > 48 * 3_600_000) errors.push(`offre périmée : ${offer.id}`); if (!offer.url.startsWith('https://')) errors.push(`URL non HTTPS : ${offer.id}`); }
 }
+if (snapshot.pairs) {
+	if (!/^[a-f0-9]{64}$/.test(snapshot.verdictVersion ?? '')) errors.push('verdictVersion absent');
+	if (!/^\d+\.\d+\.\d+$/.test(snapshot.calculationVersion ?? '')) errors.push('calculationVersion invalide');
+	const ids = new Set();
+	const summary = { continuous: 0, intermittent: 0, incompatible: 0, insufficient_data: 0 };
+	for (const pair of snapshot.pairs) {
+		if (ids.has(pair.id)) errors.push(`couple de verdict dupliqué : ${pair.id}`); ids.add(pair.id);
+		if (!(pair.verdict in summary)) errors.push(`verdict inconnu : ${pair.id}`);
+		else summary[pair.verdict] += 1;
+		if (!pair.compressorId || !pair.toolId) errors.push(`couple incomplet : ${pair.id}`);
+	}
+	for (const [verdict, count] of Object.entries(summary)) if (snapshot.summary?.[verdict] !== count) errors.push(`résumé incohérent pour ${verdict}`);
+}
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 console.log(`Snapshot valide : ${file}`);
