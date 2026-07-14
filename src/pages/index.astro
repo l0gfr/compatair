@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { compressors, tools } from '../data/catalog';
 import { glossaryTerms } from '../data/glossary';
-import { CALCULATION_VERSION } from '../domain/sizing';
 
 const allGuides = await getCollection('guides');
 const featuredGuides = allGuides
@@ -14,48 +13,48 @@ const [leadGuide, ...secondaryGuides] = featuredGuides;
 const comparisonCount = tools.length * compressors.length;
 ---
 
-<BaseLayout title="CompatAir : comparer compresseurs et outils pneumatiques" description="Comparez la consommation publiée d’un outil au débit restitué documenté d’un compresseur, à la même pression de travail.">
+<BaseLayout title="Quel compresseur pour vos outils pneumatiques ? | CompatAir" description="Comparez la consommation d’air publiée de vos outils au débit restitué documenté d’un compresseur, à la même pression de travail.">
 	<div class="home-canvas">
 		<section class="home-hero">
 			<div class="container">
 				<header class="home-kicker-row">
-					<p>Dimensionnement de l’air comprimé</p>
-					<p><span>Méthode de calcul</span> <strong>v{CALCULATION_VERSION}</strong></p>
+					<p>CompatAir · vérifier un compresseur pour ses outils</p>
+					<p>{compressors.length} compresseurs <strong>documentés</strong></p>
 				</header>
 
 				<div class="home-hero-layout">
 					<div class="home-hero-copy">
-						<h1>Avant le compresseur,<br /><em>il y a le besoin d’air.</em></h1>
-						<p class="home-lead">CompatAir part de l’outil, aligne la pression de travail et confronte son besoin au <a href="/glossaire/#fad">débit restitué</a> documenté. Quand une donnée manque, le moteur ne la remplace pas.</p>
+						<h1>Vérifiez quel compresseur peut alimenter vos <em>outils pneumatiques.</em></h1>
+						<p class="home-lead">CompatAir étudie les compresseurs d’air à partir de documents constructeur, puis vérifie lesquels peuvent alimenter vos outils à leur pression d’utilisation. Explorez les références, vérifiez votre installation et voyez immédiatement ce qui est confirmé ou encore inconnu.</p>
 						<div class="actions">
 							<a class="button primary" href="/calculateur/">Vérifier une configuration <span aria-hidden="true">→</span></a>
-							<a class="home-inline-link" href="/methodologie/">Lire la méthode complète</a>
+							<a class="home-inline-link" href="/compresseurs/">Explorer les compresseurs évalués</a>
 						</div>
 					</div>
 
-					<aside class="home-method-rail" aria-label="Conditions d’une comparaison technique correcte">
-						<p class="home-rail-title">Une comparaison juste exige</p>
+					<aside class="home-method-rail" aria-label="Éléments vérifiés par CompatAir">
+						<p class="home-rail-title">Ce que CompatAir vérifie</p>
 						<ol>
-							<li><span>01</span><div><strong>La même pression</strong><small>Le besoin et le débit disponible sont comparés au même nombre de bars.</small></div></li>
-							<li><span>02</span><div><strong>Le débit utile</strong><small>Le <a href="/glossaire/#fad">FAD</a> est distingué du <a href="/glossaire/#debit-aspire">débit aspiré</a>.</small></div></li>
-							<li><span>03</span><div><strong>Des limites visibles</strong><small>La marge et les données absentes restent séparées du résultat.</small></div></li>
+							<li><span>01</span><div><strong>Le besoin de vos outils</strong><small>Consommation d’air et pression de travail.</small></div></li>
+							<li><span>02</span><div><strong>Le débit des compresseurs</strong><small>Le <a href="/glossaire/#fad">débit restitué</a> réellement disponible, pas le <a href="/glossaire/#debit-aspire">débit aspiré</a>.</small></div></li>
+							<li><span>03</span><div><strong>La compatibilité réelle</strong><small>Usage continu, intermittent, impossible ou données insuffisantes.</small></div></li>
 						</ol>
 					</aside>
 				</div>
 
-				<div class="home-equation" aria-label="Chaîne de décision CompatAir">
-					<p>La chaîne de décision</p>
+				<div class="home-equation" aria-label="Comment CompatAir obtient le résultat">
+					<p>Comment la réponse est obtenue</p>
 					<div><small>Besoin</small><strong>Consommation de l’outil</strong><span>à sa pression de travail</span></div>
 					<b aria-hidden="true">→</b>
-					<div><small>Disponible</small><strong>FAD du compresseur</strong><span>à cette même pression</span></div>
+					<div><small>Disponible</small><strong>Débit restitué du compresseur</strong><span>à cette même pression</span></div>
 					<b aria-hidden="true">→</b>
-					<div><small>Sortie</small><strong>Verdict et limites</strong><span>sans estimation silencieuse</span></div>
+					<div><small>Résultat</small><strong>Compatibilité et limites</strong><span>sans donnée inventée</span></div>
 				</div>
 
 				<dl class="home-facts" aria-label="Contenu documenté par CompatAir">
 					<div><dt>{compressors.length}</dt><dd>compresseurs<br />documentés</dd></div>
 					<div><dt>{tools.length}</dt><dd>outils<br />pneumatiques</dd></div>
-					<div><dt>{comparisonCount.toLocaleString('fr-FR')}</dt><dd>paires que le moteur<br />peut examiner</dd></div>
+					<div><dt>{comparisonCount.toLocaleString('fr-FR')}</dt><dd>comparaisons outil<br />et compresseur possibles</dd></div>
 					<div><dt>{allGuides.length}</dt><dd>guides<br />techniques</dd></div>
 				</dl>
 			</div>
@@ -93,17 +92,17 @@ const comparisonCount = tools.length * compressors.length;
 			<div class="container home-section-grid">
 				<header class="home-section-intro home-section-intro-light">
 					<p class="home-index">02 / Comprendre</p>
-					<h2>Le calcul reste visible.</h2>
-					<p>CompatAir ne produit pas une note opaque. Les valeurs d’entrée, les transformations autorisées et la raison du verdict restent consultables.</p>
-					<a class="home-inline-link light" href="/methodologie/">Reproduire le calcul</a>
+					<h2>Chaque réponse est expliquée.</h2>
+					<p>CompatAir n’affiche pas un résultat sans explication. Les données utilisées, les calculs appliqués et la raison du résultat restent consultables.</p>
+					<a class="home-inline-link light" href="/methodologie/">Voir comment nous vérifions</a>
 				</header>
 
 				<div class="home-ledger">
-					<header><span>Registre de calcul</span><strong>CompatAir / {CALCULATION_VERSION}</strong></header>
+					<header><span>Étapes de la comparaison</span><strong>Données et règles visibles</strong></header>
 					<div class="home-ledger-row"><span>01</span><div><strong>Lire le besoin publié</strong><small>Consommation et pression de travail de l’outil</small></div><b>Source</b></div>
-					<div class="home-ledger-row"><span>02</span><div><strong>Lire ou <a href="/glossaire/#interpolation">interpoler</a> le FAD</strong><small>Uniquement entre des points constructeur documentés</small></div><b>Calcul</b></div>
+					<div class="home-ledger-row"><span>02</span><div><strong>Lire le <a href="/glossaire/#debit-restitue">débit réellement restitué</a></strong><small>Une <a href="/glossaire/#interpolation">valeur intermédiaire</a> n’est calculée qu’entre deux mesures publiées</small></div><b>Calcul</b></div>
 					<div class="home-ledger-row"><span>03</span><div><strong>Appliquer la marge choisie</strong><small>Affichée séparément, jamais confondue avec une mesure</small></div><b>Choix</b></div>
-					<div class="home-ledger-row"><span>04</span><div><strong>Énoncer ce que les données permettent</strong><small>Continu, intermittent, incompatible ou données insuffisantes</small></div><b>Verdict</b></div>
+					<div class="home-ledger-row"><span>04</span><div><strong>Énoncer ce que les données permettent</strong><small>Continu, intermittent, incompatible ou données insuffisantes</small></div><b>Résultat</b></div>
 					<footer><span>Aucune commission d’affiliation n’entre dans le calcul.</span><a href="/affiliation/">Indépendance éditoriale →</a></footer>
 				</div>
 			</div>
@@ -136,7 +135,7 @@ const comparisonCount = tools.length * compressors.length;
 				<a class="home-glossary-line" href="/glossaire/">
 					<span>Glossaire sourcé</span>
 					<strong>{glossaryTerms.length} notions pour lire les fiches techniques sans ambiguïté</strong>
-					<small>FAD · pression relative · cycle de service · point de rosée</small>
+					<small>Débit disponible · pression · temps de fonctionnement · humidité</small>
 					<b aria-hidden="true">↗</b>
 				</a>
 			</div>
@@ -146,14 +145,14 @@ const comparisonCount = tools.length * compressors.length;
 			<div class="container home-section-grid">
 				<header class="home-section-intro">
 					<p class="home-index">04 / Examiner</p>
-					<h2>Un catalogue construit autour des preuves.</h2>
-					<p>Une fiche n’est pas complète parce qu’elle affiche beaucoup de chiffres. Elle l’est quand les caractéristiques qui changent le verdict sont identifiées, sourcées et datées.</p>
+					<h2>Des fiches reliées à leurs documents.</h2>
+					<p>Une fiche n’est pas complète parce qu’elle affiche beaucoup de chiffres. Elle l’est lorsque les caractéristiques qui changent le résultat sont identifiées, sourcées et datées.</p>
 				</header>
 
 				<nav class="home-catalog-links" aria-label="Explorer les données CompatAir">
 					<a href="/compresseurs/"><span>Compresseurs</span><strong>{compressors.length} références</strong><b>→</b></a>
 					<a href="/outils-pneumatiques/"><span>Outils pneumatiques</span><strong>{tools.length} références</strong><b>→</b></a>
-					<a href="/sources-fiabilite/"><span>Fiabilité</span><strong>Sources et niveaux de preuve</strong><b>→</b></a>
+					<a href="/sources-fiabilite/"><span>Fiabilité</span><strong>Origine et qualité des données</strong><b>→</b></a>
 					<a href="/barometre-transparence/"><span>Transparence</span><strong>Données publiées par marque</strong><b>→</b></a>
 				</nav>
 			</div>
@@ -180,7 +179,7 @@ const comparisonCount = tools.length * compressors.length;
 	.home-kicker-row p { margin: 0; }
 	.home-kicker-row strong { color: var(--brand); }
 	.home-hero-layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(290px, .55fr); gap: clamp(3rem, 8vw, 8rem); padding: clamp(3rem, 7vw, 6.5rem) 0 clamp(3.5rem, 6vw, 5.5rem); }
-	.home-hero-copy h1 { max-width: 870px; color: var(--home-ink); font-size: clamp(3.35rem, 7vw, 6.5rem); font-weight: 470; line-height: .91; letter-spacing: -.045em; }
+	.home-hero-copy h1 { max-width: 820px; color: var(--home-ink); font-size: clamp(2.8rem, 4.2vw, 4.35rem); font-weight: 480; line-height: .98; letter-spacing: -.035em; }
 	.home-hero-copy h1 em { color: var(--brand); font-weight: inherit; }
 	.home-lead { max-width: 730px; margin: 2rem 0 0; color: #455c51; font-size: clamp(1.04rem, 1.55vw, 1.25rem); line-height: 1.72; }
 	.home-lead a, .home-method-rail a { text-decoration-color: #86a08e; text-underline-offset: .2em; }
@@ -263,13 +262,14 @@ const comparisonCount = tools.length * compressors.length;
 	.home-catalog-links span { color: #6b7d74; font: 780 .64rem/1.4 ui-monospace, monospace; letter-spacing: .07em; text-transform: uppercase; }
 	.home-catalog-links strong { font: 530 clamp(1.15rem, 2vw, 1.5rem)/1.15 "Newsreader Variable", Georgia, serif; }
 	.home-catalog-links b { color: var(--brand); font-weight: 500; }
-	.home-closing { padding: clamp(4rem, 8vw, 7rem) 0; background: var(--accent); }
+	.home-closing { padding: clamp(4rem, 8vw, 7rem) 0; border-top: 1px solid rgba(255,255,255,.08); color: #f3eee4; background: radial-gradient(circle at 88% 18%, rgba(197,164,109,.16), transparent 25rem), radial-gradient(circle at 8% 110%, rgba(48,116,88,.28), transparent 30rem), linear-gradient(122deg, #1b4034 0%, #102c23 54%, #0b211a 100%); }
 	.home-closing .container { display: grid; grid-template-columns: auto 1fr auto; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
-	.home-closing .container > p { margin: 0; font: 500 6rem/1 "Newsreader Variable", Georgia, serif; }
+	.home-closing .container > p { margin: 0; color: #c5a46d; font: 500 6rem/1 "Newsreader Variable", Georgia, serif; }
 	.home-closing blockquote { margin: 0; }
-	.home-closing blockquote p { max-width: 800px; margin: 0; color: var(--home-ink); font: 500 clamp(2rem, 4vw, 3.7rem)/1 "Newsreader Variable", Georgia, serif; letter-spacing: -.025em; }
-	.home-closing blockquote footer { margin-top: 1rem; color: #334b40; font-size: .8rem; }
-	.home-closing .container > a { padding-bottom: .35rem; border-bottom: 1px solid var(--home-ink); font-size: .82rem; font-weight: 800; text-decoration: none; white-space: nowrap; }
+	.home-closing blockquote p { max-width: 800px; margin: 0; color: #f3eee4; font: 500 clamp(2rem, 4vw, 3.7rem)/1 "Newsreader Variable", Georgia, serif; letter-spacing: -.025em; }
+	.home-closing blockquote footer { margin-top: 1rem; color: #afc0b6; font-size: .8rem; }
+	.home-closing .container > a { padding-bottom: .35rem; border-bottom: 1px solid #81968b; color: #f3eee4; font-size: .82rem; font-weight: 800; text-decoration: none; white-space: nowrap; }
+	.home-closing .container > a:hover { border-bottom-color: #c5a46d; color: #dfc79e; }
 
 	@media (max-width: 900px) {
 		.home-hero { background: radial-gradient(circle at 15% 4%, rgba(211,235,86,.16), transparent 24rem), #f7f4ec; }
@@ -292,7 +292,7 @@ const comparisonCount = tools.length * compressors.length;
 	@media (max-width: 620px) {
 		.home-hero { padding-top: 2rem; }
 		.home-kicker-row { align-items: flex-start; flex-direction: column; gap: .5rem; }
-		.home-hero-copy h1 { font-size: clamp(3rem, 15vw, 4.5rem); }
+		.home-hero-copy h1 { font-size: clamp(2.35rem, 10.5vw, 3rem); line-height: 1.02; }
 		.home-hero-copy .actions { align-items: flex-start; flex-direction: column; }
 		.home-equation { grid-template-columns: 1fr; }
 		.home-equation > div { padding-left: 0; border-top: 1px solid var(--home-line); border-left: 0; }

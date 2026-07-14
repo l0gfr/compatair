@@ -8,9 +8,9 @@ const compressorListJsonLd = {
 };
 ---
 
-<BaseLayout title="Compresseurs documentés et comparés | CompatAir" description="Consultez les débits restitués, pressions, cuves et limites documentaires des compresseurs analysés par CompatAir." breadcrumbs={[{ name: 'Compresseurs', path: '/compresseurs/' }]}>
+<BaseLayout title="Compresseurs d’air vérifiés | CompatAir" description="Consultez le débit réellement restitué, la pression, la cuve et les données manquantes de chaque compresseur étudié par CompatAir." breadcrumbs={[{ name: 'Compresseurs', path: '/compresseurs/' }]}>
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(compressorListJsonLd)} />
-	<section class="page-hero compact"><div class="container"><p class="eyebrow">Catalogue pilote</p><h1>{compressors.length} compresseurs passés au crible</h1><p class="lead">Une fiche n’est considérée exploitable que si son débit disponible à la pression de travail peut être vérifié.</p></div></section>
+	<section class="page-hero compact"><div class="container"><p class="eyebrow">Compresseurs d’air vérifiés</p><h1>{compressors.length} compresseurs étudiés à partir de leurs données utiles</h1><p class="lead">Chaque fiche indique le <a href="/glossaire/#debit-restitue">débit réellement disponible</a> à une pression donnée, sa source et les informations qui manquent encore. Utilisez ensuite le <a href="/calculateur/">calculateur</a> pour vérifier vos propres outils.</p></div></section>
 	<section class="section"><div class="container catalog-layout">
 		<aside class="catalog-filters" aria-label="Filtres du catalogue">
 			<h2>Filtrer</h2>
@@ -19,7 +19,7 @@ const compressorListJsonLd = {
 			<div class="field"><label for="filter-pressure">Pression minimale</label><select id="filter-pressure" data-filter-pressure><option value="0">Toutes</option><option value="8">8 bar</option><option value="10">10 bar</option></select></div>
 			<div class="field"><label for="filter-oil">Lubrification</label><select id="filter-oil" data-filter-oil><option value="">Toutes</option><option value="oil-free">Sans huile</option><option value="oil">Lubrifié</option></select></div>
 			<div class="field"><label for="filter-noise">Bruit publié maximal</label><select id="filter-noise" data-filter-noise><option value="">Tous ou inconnu</option><option value="60">60 dB</option><option value="70">70 dB</option><option value="80">80 dB</option></select></div>
-			<div class="field"><label for="catalog-sort">Trier</label><select id="catalog-sort" data-catalog-sort><option value="confidence">Pertinence technique</option><option value="tank-desc">Volume de cuve</option><option value="noise-asc">Bruit publié</option><option value="pressure-desc">Pression maximale</option></select></div>
+			<div class="field"><label for="catalog-sort">Trier</label><select id="catalog-sort" data-catalog-sort><option value="confidence">Fiabilité des données</option><option value="tank-desc">Volume de cuve</option><option value="noise-asc">Bruit publié</option><option value="pressure-desc">Pression maximale</option></select></div>
 			<button type="button" class="inline-action" data-reset-filters>Réinitialiser</button>
 		</aside>
 		<div class="catalog-main"><div class="catalog-toolbar"><p data-catalog-count>{compressors.length} résultats</p><a class="button" data-compare-link href="/comparateur/" aria-disabled="true">Comparer <span data-compare-count>0</span>/3</a></div><div class="product-grid" data-product-grid>
@@ -28,8 +28,8 @@ const compressorListJsonLd = {
 				<a class="product-card-image" href={`/compresseurs/${compressor.slug}/`} aria-label={`Voir la fiche ${compressor.brand} ${compressor.model}`}><ProductImage image={compressor.image} compact /></a>
 				<p class="product-brand">{compressor.brand}</p>
 				<h2><a href={`/compresseurs/${compressor.slug}/`}>{compressor.model}</a></h2>
-				<dl class="spec-list"><div><dt>Cuve</dt><dd>{compressor.tankLiters} L</dd></div><div><dt>Pression max.</dt><dd>{compressor.maxPressureBar} bar</dd></div><div><dt>Confiance</dt><dd>{compressor.confidence}</dd></div></dl>
-				<p class:list={['data-status', compressor.fadCurve.length ? 'verified' : 'missing']}>{compressor.fadCurve.length ? 'Débit restitué documenté' : 'FAD à confirmer'}</p>
+				<dl class="spec-list"><div><dt>Cuve</dt><dd>{compressor.tankLiters} L</dd></div><div><dt>Pression max.</dt><dd>{compressor.maxPressureBar} bar</dd></div><div><dt>Fiabilité des données</dt><dd>{compressor.confidence}</dd></div></dl>
+				<p class:list={['data-status', compressor.fadCurve.length ? 'verified' : 'missing']}>{compressor.fadCurve.length ? 'Débit réellement restitué documenté' : 'Débit réellement restitué à confirmer'}</p>
 				<label class="compare-check"><input type="checkbox" value={compressor.id} data-compare-checkbox /> Ajouter au comparateur</label>
 			</article>
 		))}

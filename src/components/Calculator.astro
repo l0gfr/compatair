@@ -1,14 +1,13 @@
 ---
 import { compressors, tools } from '../data/catalog';
 import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
-import { CALCULATION_VERSION } from '../domain/sizing';
 ---
 
 <div class="calculator calculator-v2" data-calculator>
 	<form class="calculator-form" data-calculator-form>
 		<div class="calculator-form-head">
 			<div><p class="eyebrow">Configuration</p><h2>Décrire le besoin réel</h2></div>
-			<span class="version-chip">Moteur {CALCULATION_VERSION}</span>
+			<span class="version-chip">Calcul expliqué</span>
 		</div>
 
 		<fieldset class="calculator-fieldset">
@@ -34,25 +33,25 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 			<legend>Compresseur à vérifier</legend>
 			<div class="field"><label for="compressor">Modèle ou saisie personnalisée</label><select id="compressor" name="compressor"><option value="">Aucun, calculer seulement le besoin</option>{compressors.map((compressor) => <option value={compressor.id}>{compressor.brand} {compressor.model}</option>)}<option value="custom">Caractéristiques personnalisées</option></select></div>
 			<div class="custom-compressor" data-custom-compressor hidden>
-				<div class="field-row"><div class="field"><label for="custom-pressure">Pression maximale</label><div class="input-unit"><input id="custom-pressure" name="customPressure" type="number" min="0.1" max="50" step="0.1" value="8" /><span>bar</span></div></div><div class="field"><label for="custom-fad">FAD à la pression demandée</label><div class="input-unit"><input id="custom-fad" name="customFad" type="number" min="1" max="20000" step="1" /><span>L/min</span></div></div></div>
-				<div class="field-row"><div class="field"><label for="custom-tank">Volume de cuve</label><div class="input-unit"><input id="custom-tank" name="customTank" type="number" min="0" max="20000" step="1" /><span>L</span></div></div><div class="field"><label for="custom-duty">Cycle maximal</label><div class="input-unit"><input id="custom-duty" name="customDuty" type="number" min="1" max="100" step="1" value="100" /><span>%</span></div></div></div>
+				<div class="field-row"><div class="field"><label for="custom-pressure">Pression maximale</label><div class="input-unit"><input id="custom-pressure" name="customPressure" type="number" min="0.1" max="50" step="0.1" value="8" /><span>bar</span></div></div><div class="field"><label for="custom-fad">Débit réellement restitué à la pression demandée</label><div class="input-unit"><input id="custom-fad" name="customFad" type="number" min="1" max="20000" step="1" /><span>L/min</span></div></div></div>
+				<div class="field-row"><div class="field"><label for="custom-tank">Volume de cuve</label><div class="input-unit"><input id="custom-tank" name="customTank" type="number" min="0" max="20000" step="1" /><span>L</span></div></div><div class="field"><label for="custom-duty">Temps maximal de fonctionnement publié</label><div class="input-unit"><input id="custom-duty" name="customDuty" type="number" min="1" max="100" step="1" value="100" /><span>%</span></div></div></div>
 				<div class="field-row"><div class="field"><label for="custom-cut-in">Pression de réenclenchement</label><div class="input-unit"><input id="custom-cut-in" name="customCutIn" type="number" min="0" max="50" step="0.1" /><span>bar</span></div></div><div class="field"><label for="custom-cut-out">Pression d’arrêt</label><div class="input-unit"><input id="custom-cut-out" name="customCutOut" type="number" min="0.1" max="50" step="0.1" /><span>bar</span></div></div></div>
 			</div>
 		</fieldset>
 
-		<label class="margin-control" for="margin"><span>Marge indicative</span><output data-margin-output>25 %</output><input id="margin" name="margin" type="range" min="0" max="50" step="5" value="25" /></label>
-		<p class="form-disclaimer">Les fréquences sont des hypothèses explicites. Les pertes du réseau restent signalées, mais ne sont pas chiffrées sans courbe ou mesure documentée.</p>
+		<label class="margin-control" for="margin"><span>Réserve de débit souhaitée</span><output data-margin-output>25 %</output><input id="margin" name="margin" type="range" min="0" max="50" step="5" value="25" /></label>
+		<p class="form-disclaimer">La fréquence d’utilisation vient de vos réponses. CompatAir signale les pertes possibles dans les tuyaux et les raccords, mais ne les invente pas lorsqu’aucune mesure n’est disponible.</p>
 		<label class="demand-contribution">
 			<input type="checkbox" data-demand-contribution />
 			<span><strong>Aider à choisir les prochaines références étudiées</strong><small>Si vous cochez cette case, CompatAir compte uniquement les outils choisis et des tranches larges de débit, pression et durée. Aucun texte libre, valeur personnalisée exacte, cookie, adresse IP ou configuration complète n’est conservé dans ces statistiques.</small></span>
 		</label>
 		<p class="form-error" role="alert" data-form-error hidden></p>
-		<button class="button primary" type="submit">Calculer la configuration</button>
+		<button class="button primary" type="submit">Vérifier la configuration</button>
 	</form>
 
 	<div class="calculator-output" aria-live="polite" data-calculator-output hidden>
-		<div class="report-header" aria-hidden="true"><div><strong>CompatAir</strong><span>Dossier de dimensionnement pneumatique</span></div><div><span>Moteur {CALCULATION_VERSION}</span><span data-report-date></span></div></div>
-		<div class="result-summary"><div><p class="eyebrow">Verdict</p><span class="verdict-large" data-verdict></span></div><strong data-required-flow></strong><p data-result-context></p></div>
+		<div class="report-header" aria-hidden="true"><div><strong>CompatAir</strong><span>Vérification de votre configuration</span></div><div><span>Calcul CompatAir</span><span data-report-date></span></div></div>
+		<div class="result-summary"><div><p class="eyebrow">Résultat</p><span class="verdict-large" data-verdict></span></div><strong data-required-flow></strong><p data-result-context></p></div>
 		<div class="result-section configuration-summary" data-configuration-summary></div>
 		<div class="result-metrics" data-result-metrics></div>
 		<div class="result-section" data-evaluated-result></div>
@@ -60,8 +59,8 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 		<div class="result-section recommendation-section"><p class="eyebrow">Aide à la décision</p><h3>Recommandations prioritaires</h3><p data-result-coverage></p><div class="priority-list" data-priority-list></div></div>
 		<details class="result-section result-inventory" open>
 			<summary>Explorer les {compressors.length} compresseurs documentés</summary>
-			<p>Classement par verdict, couverture de la marge, confiance documentaire puis proximité du besoin. Une donnée absente reste une donnée insuffisante.</p>
-			<div class="result-filters" role="group" aria-label="Filtrer les compresseurs par verdict">
+			<p>Les modèles sont regroupés selon le résultat, la réserve disponible et la fiabilité des données. Une information absente reste signalée comme telle.</p>
+			<div class="result-filters" role="group" aria-label="Filtrer les compresseurs par résultat">
 				<button type="button" data-result-filter="all" aria-pressed="true">Tous <span data-result-count="all">0</span></button>
 				<button type="button" data-result-filter="continuous" aria-pressed="false">Continu <span data-result-count="continuous">0</span></button>
 				<button type="button" data-result-filter="intermittent" aria-pressed="false">Intermittent <span data-result-count="intermittent">0</span></button>
@@ -72,8 +71,8 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 			<div class="result-list" data-result-list></div>
 		</details>
 		<div class="result-section"><h3>Hypothèses et avertissements</h3><ul data-assumptions></ul></div>
-		<div class="share-row"><a class="button primary" href="/passeport/" data-create-passport>Créer le Passeport</a><button class="button" type="button" data-share>Copier l’URL</button><button class="button" type="button" data-copy-summary>Copier la synthèse</button><button class="button" type="button" data-print>Imprimer le calcul</button><span role="status" data-share-status></span></div>
-		<p class="calculator-note">La configuration est conservée après le caractère <code>#</code> de l’URL. Cette partie de l’adresse n’est ni envoyée ni enregistrée sur le serveur.</p>
+		<div class="share-row"><a class="button primary" href="/passeport/" data-create-passport>Créer une fiche partageable</a><button class="button" type="button" data-share>Copier le lien</button><button class="button" type="button" data-copy-summary>Copier la synthèse</button><button class="button" type="button" data-print>Imprimer le calcul</button><span role="status" data-share-status></span></div>
+		<p class="calculator-note">Le lien copié contient votre configuration, mais celle-ci n’est ni envoyée ni enregistrée sur le serveur CompatAir.</p>
 	</div>
 </div>
 
@@ -259,7 +258,7 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 		const filtration = String(data.get('filtration')); if (!['unknown', 'none', 'particle', 'water-separator', 'coalescing', 'dryer'].includes(filtration)) throw new Error('La filtration sélectionnée est invalide.');
 		const usageProfile = String(data.get('usageProfile')); if (!['occasional', 'intermittent', 'sustained', 'mixed'].includes(usageProfile)) throw new Error('Le profil d’utilisation est invalide.');
 		const selectedCompressor = String(data.get('compressor') ?? ''); if (!['', 'custom', ...compressors.map((item) => item.id)].includes(selectedCompressor)) throw new Error('Le compresseur sélectionné est invalide.');
-		const custom = selectedCompressor === 'custom' ? { maxPressureBar: requireRange(readNumber(data, 'customPressure'), .1, 50, 'La pression maximale personnalisée'), availableFadLpm: requireRange(readNumber(data, 'customFad'), 1, 20_000, 'Le FAD personnalisé', true), tankLiters: requireRange(readNumber(data, 'customTank'), 0, 20_000, 'Le volume personnalisé', true), dutyCycle: requireRange((readNumber(data, 'customDuty') ?? 100) / 100, .01, 1, 'Le cycle personnalisé'), cutInPressureBar: requireRange(readNumber(data, 'customCutIn'), 0, 50, 'La pression de réenclenchement', true), cutOutPressureBar: requireRange(readNumber(data, 'customCutOut'), .1, 50, 'La pression d’arrêt', true) } : {};
+		const custom = selectedCompressor === 'custom' ? { maxPressureBar: requireRange(readNumber(data, 'customPressure'), .1, 50, 'La pression maximale personnalisée'), availableFadLpm: requireRange(readNumber(data, 'customFad'), 1, 20_000, 'Le débit réellement restitué', true), tankLiters: requireRange(readNumber(data, 'customTank'), 0, 20_000, 'Le volume personnalisé', true), dutyCycle: requireRange((readNumber(data, 'customDuty') ?? 100) / 100, .01, 1, 'Le temps maximal de fonctionnement'), cutInPressureBar: requireRange(readNumber(data, 'customCutIn'), 0, 50, 'La pression de réenclenchement', true), cutOutPressureBar: requireRange(readNumber(data, 'customCutOut'), .1, 50, 'La pression d’arrêt', true) } : {};
 		if (custom.cutInPressureBar !== undefined && custom.cutOutPressureBar !== undefined && custom.cutInPressureBar >= custom.cutOutPressureBar) throw new Error('La pression de réenclenchement doit être inférieure à la pression d’arrêt.');
 		return parsePassportConfiguration({ demands, mode, safetyMargin, sessionMinutes, hoseLengthMeters, hoseInnerDiameterMm, networkDistanceMeters, fittingStandard, fittingCount, filtration, usageProfile, selectedCompressor, custom }, new Set(compressors.map((item) => item.id)), new Set(tools.map((item) => item.id)));
 	}
@@ -276,9 +275,9 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 		const metrics = root?.querySelector<HTMLElement>('[data-result-metrics]');
 		if (!metrics) return;
 		const values = [
-			[result.flowBasis === 'documented-continuous' ? 'Débit de pointe' : 'Débit de dimensionnement moyen', `${result.peakFlowLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min`],
+			[result.flowBasis === 'documented-continuous' ? 'Besoin maximal' : 'Besoin moyen calculé', `${result.peakFlowLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min`],
 			['Débit moyen', `${result.averageFlowLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min`],
-			['FAD recommandé', `${result.recommendedFadLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min`],
+			['Débit restitué recommandé', `${result.recommendedFadLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min`],
 			['Pression demandée', `${result.requiredPressureBar.toLocaleString('fr-FR')} bar`],
 			['Pression utile après pertes', result.usefulPressureBar !== undefined ? `${result.usefulPressureBar.toLocaleString('fr-FR')} bar avant pertes non chiffrées` : 'Données insuffisantes'],
 			['Cuve recommandée', result.recommendedTankLiters !== undefined ? `${Math.round(result.recommendedTankLiters)} L` : 'Non déterminable sans durée de rafale'],
@@ -335,7 +334,7 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 		const head = document.createElement('div'); head.className = 'result-card-head';
 		const title = document.createElement('h4'); const link = document.createElement('a'); link.href = `/compresseurs/${compressor.slug}/`; link.textContent = `${compressor.brand} ${compressor.model}`; title.append(link);
 		const badge = document.createElement('span'); badge.className = 'verdict-badge'; badge.textContent = resultLabel(result); head.append(title, badge);
-		const detail = document.createElement('p'); detail.textContent = result.verdict === 'insufficient_data' ? `FAD non vérifiable à ${result.requiredPressureBar} bar · confiance ${compressor.confidence}.` : `${interpolateFad(compressor, result.requiredPressureBar)?.toFixed(0) ?? 'FAD inconnu'} L/min documentés · cuve ${compressor.tankLiters} L · confiance ${compressor.confidence}.`;
+		const detail = document.createElement('p'); detail.textContent = result.verdict === 'insufficient_data' ? `Débit réellement restitué non vérifiable à ${result.requiredPressureBar} bar · fiabilité des données ${compressor.confidence}.` : `${interpolateFad(compressor, result.requiredPressureBar)?.toFixed(0) ?? 'Débit inconnu'} L/min documentés · cuve ${compressor.tankLiters} L · fiabilité des données ${compressor.confidence}.`;
 		article.append(head, detail); return article;
 	}
 
@@ -356,7 +355,7 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 		if (coverage) coverage.textContent = `${counts.continuous} en continu · ${counts.intermittent} par intermittence · ${counts.insufficient_data} en données insuffisantes · ${counts.incompatible} incompatibles.`;
 		const priority = candidates.filter(({ result }) => result.verdict === 'continuous' || result.verdict === 'intermittent').slice(0, 3);
 		if (priority.length) priorityList.replaceChildren(...priority.map(({ compressor, result }) => renderResultCard(compressor, result)));
-		else { const message = document.createElement('p'); message.className = 'decision-empty'; message.textContent = 'Aucun compresseur du catalogue ne produit actuellement un verdict positif documenté pour cette configuration. Les données insuffisantes ne sont pas transformées en recommandations.'; priorityList.replaceChildren(message); }
+		else { const message = document.createElement('p'); message.className = 'decision-empty'; message.textContent = 'Aucun compresseur actuellement étudié ne peut être recommandé pour cette configuration. Une information manquante n’est jamais transformée en recommandation.'; priorityList.replaceChildren(message); }
 		list.replaceChildren(...candidates.map(({ compressor, result }) => renderResultCard(compressor, result)));
 		setResultFilter(currentFilter);
 	}
@@ -364,11 +363,11 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 	function buildSummary(config: NonNullable<ReturnType<typeof configFromForm>>, result: SizingResult, candidates: Candidate[]) {
 		const priority = candidates.filter(({ result: candidateResult }) => candidateResult.verdict === 'continuous' || candidateResult.verdict === 'intermittent').slice(0, 3);
 		return [
-			`CompatAir : dossier de dimensionnement, moteur ${CALCULATION_VERSION}`,
+			'CompatAir : vérification de la configuration',
 			...config.demands.map(demandDescription),
 			`Organisation : ${config.mode === 'simultaneous' ? 'simultanée' : 'successive'} · marge ${Math.round((config.safetyMargin ?? .25) * 100)} %`,
 			`Besoin : ${result.peakFlowLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min à ${result.requiredPressureBar.toLocaleString('fr-FR')} bar`,
-			`FAD recommandé : ${result.recommendedFadLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min`,
+			`Débit restitué recommandé : ${result.recommendedFadLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min`,
 			priority.length ? 'Recommandations documentées :' : 'Recommandation : aucune référence concluante dans le catalogue actuel.',
 			...priority.map(({ compressor, result: candidateResult }) => `- ${compressor.brand} ${compressor.model} : ${resultLabel(candidateResult)}`),
 			`Simulation : ${location.href}`,
@@ -487,5 +486,5 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 	for (const button of root?.querySelectorAll<HTMLButtonElement>('[data-result-filter]') ?? []) button.addEventListener('click', () => setResultFilter(button.dataset.resultFilter as keyof typeof labels | 'all'));
 	root?.querySelector('[data-print]')?.addEventListener('click', () => window.print());
 	root?.querySelector('[data-copy-summary]')?.addEventListener('click', async () => { if (!lastSummary) return; await navigator.clipboard.writeText(lastSummary); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'Synthèse copiée'; });
-	root?.querySelector('[data-share]')?.addEventListener('click', async () => { await loadCalculatorRuntime(); const config = configFromForm(); if (!config) return; const url = `${location.origin}${location.pathname}#config=${encodePassportConfiguration(config)}`; await navigator.clipboard.writeText(url); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'URL copiée'; });
+	root?.querySelector('[data-share]')?.addEventListener('click', async () => { await loadCalculatorRuntime(); const config = configFromForm(); if (!config) return; const url = `${location.origin}${location.pathname}#config=${encodePassportConfiguration(config)}`; await navigator.clipboard.writeText(url); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'Lien copié'; });
 </script>

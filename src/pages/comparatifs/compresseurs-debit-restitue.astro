@@ -10,36 +10,36 @@ const metrics = getCatalogMetrics(compressors, tools);
 
 <BaseLayout
 	title="Comparatif des compresseurs par débit restitué | CompatAir"
-	description={`Tableau factuel des points de débit restitué publiés pour ${compressors.length} compresseurs, avec pression, cuve, confiance et données manquantes.`}
+	description={`Tableau des débits réellement restitués publiés pour ${compressors.length} compresseurs, avec pression, cuve, fiabilité des données et informations manquantes.`}
 	breadcrumbs={[{ name: 'Comparatifs', path: '/comparatifs/' }, { name: 'Débit restitué', path: '/comparatifs/compresseurs-debit-restitue/' }]}
 >
 	<article class="container content legal-content">
-		<p class="eyebrow">Comparatif factuel</p>
+		<p class="eyebrow">Comparer le débit réellement disponible</p>
 		<h1>Comparer les compresseurs par débit restitué</h1>
-		<p class="lead">Un point de FAD n’est comparable à un autre que si sa pression est également prise en compte. Le tableau conserve donc les couples débit et pression publiés.</p>
+		<p class="lead">Le <a href="/glossaire/#debit-restitue">débit restitué</a> indique l’air réellement délivré par le compresseur. Deux valeurs ne sont comparables que si leur pression est également indiquée.</p>
 		<div class="result-metrics">
 			<div><small>Compresseurs</small><strong>{metrics.compressorCount}</strong></div>
 			<div><small>Outils documentés</small><strong>{metrics.toolCount}</strong></div>
-			<div><small>Couples verdictables</small><strong>{metrics.compatibilityPageCount}</strong></div>
-			<div><small>Profils à débit fixe</small><strong>{metrics.fixedFlowToolCount}</strong></div>
+			<div><small>Compatibilités calculables</small><strong>{metrics.compatibilityPageCount}</strong></div>
+			<div><small>Outils avec besoin par minute</small><strong>{metrics.fixedFlowToolCount}</strong></div>
 		</div>
 		<p>Ces volumes sont recalculés automatiquement à chaque publication depuis le catalogue. Ils ne sont pas recopiés manuellement dans cette page.</p>
-		<h2>Niveau de documentation FAD</h2>
+		<h2>Qualité des données de débit</h2>
 		<ul>
-			<li>{metrics.fadDocumentation.multiplePoints} modèles avec plusieurs points, permettant une interpolation strictement bornée.</li>
+			<li>{metrics.fadDocumentation.multiplePoints} modèles avec plusieurs valeurs publiées, ce qui permet de calculer un débit entre deux pressions connues.</li>
 			<li>{metrics.fadDocumentation.singlePoint} modèles avec un point unique, utilisable uniquement à sa pression publiée.</li>
 			<li>{metrics.fadDocumentation.withoutPoint} modèle{metrics.fadDocumentation.withoutPoint > 1 ? 's' : ''} sans point exploitable.</li>
 		</ul>
 		<h2>Points documentés</h2>
 		<div class="compare-table-wrap">
 			<table class="compare-table">
-				<thead><tr><th>Modèle</th><th>Cuve</th><th>Pression maximale</th><th>FAD publié</th><th>Confiance</th></tr></thead>
+				<thead><tr><th>Modèle</th><th>Cuve</th><th>Pression maximale</th><th>Débit réellement restitué</th><th>Fiabilité des données</th></tr></thead>
 				<tbody>{documented.map((item) => <tr><th><a href={`/compresseurs/${item.slug}/`}>{item.brand} {item.model}</a></th><td>{item.tankLiters} L</td><td>{item.maxPressureBar} bar</td><td>{item.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ')}</td><td>{item.confidence}</td></tr>)}</tbody>
 			</table>
 		</div>
 		<h2>Références non classables</h2>
-		<p>{incomplete.map((item) => `${item.brand} ${item.model}`).join(', ')} ne {incomplete.length === 1 ? 'dispose' : 'disposent'} pas d’un FAD exploitable dans la source actuelle. {incomplete.length === 1 ? 'Cette référence n’est pas replacée' : 'Ces références ne sont pas replacées'} dans le classement à partir du débit aspiré.</p>
-		<h2>Verdicts générés par outil</h2>
+		<p>{incomplete.map((item) => `${item.brand} ${item.model}`).join(', ')} ne {incomplete.length === 1 ? 'dispose' : 'disposent'} pas d’un débit réellement restitué exploitable dans la source actuelle. {incomplete.length === 1 ? 'Cette référence n’est pas replacée' : 'Ces références ne sont pas replacées'} dans le classement à partir du <a href="/glossaire/#debit-aspire">débit aspiré</a>.</p>
+		<h2>Résultats disponibles pour chaque outil</h2>
 		<div class="compare-table-wrap">
 			<table class="compare-table">
 				<thead><tr><th>Outil</th><th>Compatibles en continu</th><th>Incompatibles</th><th>Données insuffisantes</th><th>Pages publiées</th></tr></thead>

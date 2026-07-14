@@ -1,28 +1,26 @@
 <section class="passport-shell" data-passport-root aria-live="polite">
 	<div class="passport-loading" data-passport-loading>
-		<p class="eyebrow">Lecture locale</p>
-		<h2>Ouverture du Passeport…</h2>
-		<p>Le dossier est ouvert et son code de contrôle est vérifié dans ce navigateur.</p>
+		<p class="eyebrow">Ouverture sur votre appareil</p>
+		<h2>Ouverture de la fiche…</h2>
+		<p>Le dossier est ouvert et contrôlé dans ce navigateur.</p>
 	</div>
 
 	<div class="passport-empty" data-passport-empty hidden>
 		<p class="eyebrow">Aucune installation chargée</p>
 		<h2>Créez d’abord une configuration</h2>
-		<p data-passport-error>Cette page attend une URL de Passeport générée par le calculateur.</p>
+		<p data-passport-error>Cette page attend un lien créé depuis le calculateur CompatAir.</p>
 		<a class="button primary" href="/calculateur/">Ouvrir le calculateur</a>
 	</div>
 
 	<article class="passport-document" data-passport-document hidden>
 		<header class="passport-head">
 			<div>
-				<p class="eyebrow">Passeport CompatAir</p>
+				<p class="eyebrow">Fiche de configuration CompatAir</p>
 				<h2 data-compressor></h2>
 				<p class="passport-verdict" data-verdict></p>
 			</div>
 			<dl class="passport-identity">
-				<div><dt>Identifiant</dt><dd data-id></dd></div>
-				<div><dt>Format du dossier</dt><dd data-schema></dd></div>
-				<div><dt>Méthode de calcul</dt><dd data-engine></dd></div>
+				<div><dt>Numéro du dossier</dt><dd data-id></dd></div>
 				<div><dt>Données vérifiées le</dt><dd data-catalog-date></dd></div>
 			</dl>
 		</header>
@@ -34,7 +32,7 @@
 
 		<div class="passport-actions">
 			<button class="button primary" type="button" data-download>Télécharger le PDF</button>
-			<button class="button" type="button" data-copy>Copier l’URL</button>
+			<button class="button" type="button" data-copy>Copier le lien</button>
 			<a class="button" href="/calculateur/" data-edit>Modifier</a>
 			<span role="status" data-action-status></span>
 		</div>
@@ -44,8 +42,8 @@
 			<dl class="passport-metrics">
 				<div><dt>Débit de pointe</dt><dd data-peak></dd></div>
 				<div><dt>Débit moyen</dt><dd data-average></dd></div>
-				<div><dt>FAD recommandé</dt><dd data-recommended></dd></div>
-				<div><dt>FAD disponible</dt><dd data-available></dd></div>
+				<div><dt>Débit restitué recommandé</dt><dd data-recommended></dd></div>
+				<div><dt>Débit restitué disponible</dt><dd data-available></dd></div>
 				<div><dt>Marge disponible sur le besoin publié</dt><dd data-nominal-margin></dd></div>
 				<div><dt>Marge indicative demandée</dt><dd data-safety-margin></dd></div>
 			</dl>
@@ -90,8 +88,8 @@
 
 		<footer class="passport-notice">
 			<strong>Périmètre du document</strong>
-			<p>Le Passeport décrit la configuration déclarée et les données disponibles à sa date de génération. Il ne remplace ni une mesure en charge, ni une notice constructeur, ni une vérification réglementaire.</p>
-			<p>Son code de contrôle détecte une modification du contenu, mais ne constitue pas une signature d’authenticité émise par CompatAir.</p>
+			<p>Cette fiche décrit la configuration déclarée et les données disponibles à sa date de création. Elle ne remplace ni une mesure en charge, ni une notice constructeur, ni une vérification réglementaire.</p>
+			<p>Le contrôle du dossier permet de détecter si son contenu a changé, mais ne prouve pas que CompatAir en est l’auteur.</p>
 		</footer>
 	</article>
 </section>
@@ -130,8 +128,6 @@
 			query<HTMLElement>('[data-verdict]')?.setAttribute('data-status', report.result.verdict);
 			setText('[data-id]', report.passportId.slice(0, 16));
 			query<HTMLElement>('[data-id]')?.setAttribute('title', report.passportId);
-			setText('[data-schema]', report.schemaVersion);
-			setText('[data-engine]', report.calculationVersion);
 			setText('[data-catalog-date]', report.catalogVerifiedAt);
 			setText('[data-peak]', `${format(report.result.peakFlowLpm)} L/min`);
 			setText('[data-average]', `${format(report.result.averageFlowLpm)} L/min`);
@@ -139,7 +135,7 @@
 			setText('[data-available]', report.availableFadLpm === undefined ? 'Donnée insuffisante' : `${format(report.availableFadLpm)} L/min`);
 			setText('[data-nominal-margin]', report.nominalMarginPercent === undefined ? 'Non calculable' : `${format(report.nominalMarginPercent)} %`);
 			setText('[data-safety-margin]', `${Math.round(report.configuration.safetyMargin * 100)} % · ${report.compatAirMarginCovered === undefined ? 'couverture indéterminable' : report.compatAirMarginCovered ? 'couverte' : 'non couverte'}`);
-			setText('[data-confidence]', `Confiance du résultat : ${report.result.confidence === 'high' ? 'élevée' : report.result.confidence === 'medium' ? 'moyenne' : 'faible'}.`);
+			setText('[data-confidence]', `Fiabilité du résultat : ${report.result.confidence === 'high' ? 'élevée' : report.result.confidence === 'medium' ? 'moyenne' : 'faible'}.`);
 			setText('[data-tools]', report.toolLabels.join(', '));
 			setText('[data-mode]', report.configuration.mode === 'simultaneous' ? 'Utilisation simultanée' : 'Utilisation successive');
 			setText('[data-usage]', `${usageLabels[report.configuration.usageProfile]} · session ${report.configuration.sessionMinutes} min`);
@@ -161,7 +157,7 @@
 					link.href = source.url;
 					link.rel = 'noreferrer';
 					link.textContent = `${source.productLabel} · ${source.label}`;
-					meta.textContent = `Consultée le ${source.retrievedAt} · confiance ${source.confidence}`;
+					meta.textContent = `Consultée le ${source.retrievedAt} · fiabilité ${source.confidence}`;
 					article.append(link, meta);
 					sourcesPanel.append(article);
 				}
@@ -172,7 +168,7 @@
 			const copyButton = query<HTMLButtonElement>('[data-copy]');
 			if (copyButton) copyButton.onclick = async () => {
 				await navigator.clipboard.writeText(currentUrl);
-				setText('[data-action-status]', 'URL copiée.');
+				setText('[data-action-status]', 'Lien copié.');
 			};
 			const downloadButton = query<HTMLButtonElement>('[data-download]');
 			if (downloadButton) downloadButton.onclick = async () => {
@@ -189,7 +185,7 @@
 					setTimeout(() => URL.revokeObjectURL(objectUrl), 1_000);
 					setText('[data-action-status]', 'PDF généré localement.');
 				} catch {
-					setText('[data-action-status]', 'La génération locale du PDF a échoué. Le Passeport reste disponible dans cette page.');
+					setText('[data-action-status]', 'La création du PDF a échoué. La fiche reste disponible dans cette page.');
 				} finally {
 					downloadButton.disabled = false;
 				}
@@ -256,7 +252,7 @@
 			if (loading) loading.hidden = true;
 			if (documentPanel) documentPanel.hidden = false;
 		} catch (error) {
-			setText('[data-passport-error]', error instanceof Error ? error.message : 'Le Passeport ne peut pas être recalculé.');
+			setText('[data-passport-error]', error instanceof Error ? error.message : 'La fiche ne peut pas être recalculée.');
 			if (loading) loading.hidden = true;
 			if (empty) empty.hidden = false;
 		}

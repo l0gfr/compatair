@@ -21,7 +21,7 @@ const product = {
 	},
 	evidence: [{ id: 'cp-8941078691-official', sourceUrl: 'https://tools.cp.com/en/products/sanders/cp7269p-sku8941078691', sourceLabel: 'Chicago Pneumatic, fiche officielle CP7269P', sourceType: 'manufacturer', retrievedAt: '2026-07-14', confidence: 'A', notes: 'Consommation en charge de 11 L/s convertie exactement en 660 L/min, pression dynamique maximale de 6,3 bar.' }],
 	fieldSources: { airflowLpm: ['cp-8941078691-official'], workingPressureBar: ['cp-8941078691-official'], connectorSize: ['cp-8941078691-official'], recommendedHose: ['cp-8941078691-official'] },
-	notes: ['Conversion exacte : 11 L/s × 60 = 660 L/min.', 'Le profil continu est un choix conservateur de CompatAir pour le dimensionnement.'],
+	notes: ['Conversion exacte : 11 L/s × 60 = 660 L/min.', 'Le profil continu est un choix conservateur de CompatAir pour le choix du compresseur.'],
 };
 
 export default product;

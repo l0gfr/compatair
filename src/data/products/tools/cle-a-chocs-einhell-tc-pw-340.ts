@@ -8,7 +8,7 @@ const product = {
 			{ id: 'einhell-4138950-manual', sourceUrl: 'https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_c7bjdn248d2dret4jdk27m9377/4138950_21022_002_SPK2.pdf', sourceLabel: 'Einhell, notice TC-PW 340', sourceType: 'manual', retrievedAt: '2026-07-13', confidence: 'A', notes: 'Consommation, flexible, pression et recommandation de cuve.' },
 		],
 		fieldSources: { airflowLpm: ['einhell-4138950-manual'], workingPressureBar: ['einhell-4138950-official', 'einhell-4138950-manual'], recommendedHose: ['einhell-4138950-manual'] },
-		notes: ['La cuve de 50 litres recommandée ne remplace pas le contrôle du FAD.'],
+		notes: ['La cuve de 50 litres recommandée ne remplace pas le contrôle du débit restitué.'],
 	};
 
 export default product;

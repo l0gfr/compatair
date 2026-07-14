@@ -14,7 +14,7 @@ const items = [
 ---
 <BaseLayout title="Recherche technique | CompatAir" description="Recherchez dans les compresseurs, outils pneumatiques, guides et définitions publiés par CompatAir." noindex breadcrumbs={[{ name: 'Recherche', path: '/recherche/' }]}>
 	<section class="page-hero compact"><div class="container"><p class="eyebrow">Recherche globale</p><h1>Trouver une donnée vérifiée</h1><p class="lead">La recherche couvre uniquement les fiches et contenus effectivement publiés.</p></div></section>
-	<section class="section"><div class="container search-page"><label for="page-search">Modèle, outil, usage ou terme technique</label><input id="page-search" type="search" autofocus placeholder="Ex. FAD, sablage, Einhell, pression" data-page-search /><p data-search-count>{items.length} entrées indexées</p><div class="search-page-results" data-page-results>{items.map((item) => <a href={item.url} data-search-item data-search-text={item.text}><span>{item.type}</span><strong>{item.title}</strong></a>)}</div></div></section>
+	<section class="section"><div class="container search-page"><label for="page-search">Modèle, outil, usage ou question</label><input id="page-search" type="search" autofocus placeholder="Ex. sablage, Einhell, débit, pression" data-page-search /><p data-search-count>{items.length} pages et définitions disponibles</p><div class="search-page-results" data-page-results>{items.map((item) => <a href={item.url} data-search-item data-search-text={item.text}><span>{item.type}</span><strong>{item.title}</strong></a>)}</div></div></section>
 	<script>
 		const input = document.querySelector<HTMLInputElement>('[data-page-search]');
 		const entries = [...document.querySelectorAll<HTMLElement>('[data-search-item]')];

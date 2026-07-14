@@ -1,6 +1,6 @@
 ---
-title: "Dimensionner un compresseur d’air : la méthode complète, du besoin de l’outil au réseau"
-description: "Une méthode en neuf étapes pour calculer le débit, fixer la pression, traiter la simultanéité, lire le FAD et intégrer les pertes sans inventer de données."
+title: "Choisir un compresseur d’air : la méthode complète, des outils au réseau"
+description: "Neuf étapes pour vérifier le débit, la pression, les usages simultanés, le réseau et les informations manquantes."
 pubDate: 2026-07-13
 category: "Choisir"
 readingTime: 14
@@ -14,19 +14,19 @@ sources:
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
 ---
 
-Dimensionner un compresseur ne consiste pas à [choisir une cuve de 50 ou 100 litres](/guides/choisir-volume-cuve-24-50-90-litres/), puis à vérifier que la pression maximale atteint 8 ou 10 bar. Il faut partir des consommateurs d’air, établir leur besoin réel, puis vérifier que le compresseur et le réseau peuvent fournir ce besoin au point d’utilisation.
+Choisir un compresseur ne consiste pas à [choisir une cuve de 50 ou 100 litres](/guides/choisir-volume-cuve-24-50-90-litres/), puis à vérifier que la pression maximale atteint 8 ou 10 bar. Il faut partir des outils, établir leur besoin réel, puis vérifier que le compresseur et le réseau peuvent fournir ce besoin au point d’utilisation.
 
 Le [manuel technique Atlas Copco](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf) structure le problème autour de la pression de travail, de la consommation nominale, des facteurs d’utilisation, de la simultanéité, du débit libre délivré et des pertes du réseau. CompatAir reprend cette logique en séparant strictement les données publiées des hypothèses.
 
 <svg viewBox="0 0 760 360" role="img" aria-labelledby="sizing-title sizing-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="sizing-title">Les neuf étapes du dimensionnement d’un compresseur</title><desc id="sizing-desc">Le dimensionnement part des outils, puis traite leur pression, leur consommation, la simultanéité, le débit restitué, la marge, le réseau, la cuve et les limites documentaires.</desc>
-  <rect width="760" height="360" rx="22" fill="#10281e"/><text x="38" y="45" fill="#d3eb56" font-size="15" font-weight="700">LA CHAÎNE DE DÉCISION COMPATAIR</text>
+  <title id="sizing-title">Les neuf étapes pour choisir un compresseur</title><desc id="sizing-desc">La vérification part des outils, puis traite leur pression, leur consommation, leur utilisation simultanée, le débit restitué, la réserve, le réseau, la cuve et les informations manquantes.</desc>
+  <rect width="760" height="360" rx="22" fill="#10281e"/><text x="38" y="45" fill="#d3eb56" font-size="15" font-weight="700">COMMENT COMPATAIR VÉRIFIE UNE CONFIGURATION</text>
   <g font-family="Manrope, sans-serif" font-size="15" font-weight="700">
     <rect x="38" y="75" width="205" height="58" rx="12" fill="#28533f"/><text x="58" y="109" fill="white">1. Lister les outils</text>
     <rect x="278" y="75" width="205" height="58" rx="12" fill="#28533f"/><text x="298" y="109" fill="white">2. Relever les bar</text>
     <rect x="518" y="75" width="205" height="58" rx="12" fill="#28533f"/><text x="538" y="109" fill="white">3. Relever les L/min</text>
     <rect x="38" y="157" width="205" height="58" rx="12" fill="#356f54"/><text x="58" y="191" fill="white">4. Fixer la simultanéité</text>
-    <rect x="278" y="157" width="205" height="58" rx="12" fill="#356f54"/><text x="298" y="191" fill="white">5. Lire le FAD</text>
+    <rect x="278" y="157" width="205" height="58" rx="12" fill="#356f54"/><text x="298" y="191" fill="white">5. Lire le débit restitué</text>
     <rect x="518" y="157" width="205" height="58" rx="12" fill="#356f54"/><text x="538" y="191" fill="white">6. Calculer la marge</text>
     <rect x="38" y="239" width="205" height="58" rx="12" fill="#d3eb56"/><text x="58" y="273" fill="#10281e">7. Vérifier le réseau</text>
     <rect x="278" y="239" width="205" height="58" rx="12" fill="#d3eb56"/><text x="298" y="273" fill="#10281e">8. Traiter la cuve</text>
@@ -60,7 +60,7 @@ Si la ponceuse [Einhell TC-PE 150](https://www.einhell.fr/p/4133330-tc-pe-150/) 
 
 ## Lire le débit restitué, pas le débit aspiré
 
-Le débit aspiré décrit l’air admis par le groupe. Le [débit restitué, ou FAD](/guides/debit-restitue-fad-vs-debit-aspire/), décrit la capacité utile selon des conditions de référence. Le manuel Atlas Copco indique que la capacité du compresseur doit couvrir la consommation nominale totale par son débit libre délivré.
+Le débit aspiré décrit l’air admis par le groupe. Le [débit restitué, aussi appelé FAD](/glossaire/#fad), décrit la capacité utile selon des conditions de référence. Le manuel Atlas Copco indique que la capacité du compresseur doit couvrir la consommation publiée des outils. Le guide [débit restitué ou débit aspiré](/guides/debit-restitue-fad-vs-debit-aspire/) explique cette différence en détail.
 
 L’[Einhell TC-AC 240/50/10 OF](https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of) illustre l’écart : 240 L/min aspirés, 107 L/min à 4 bar et 76 L/min à 7 bar. À 6,3 bar, l’interpolation entre les deux points publiés donne environ 83 L/min. Les 240 L/min ne permettent donc pas d’alimenter la ponceuse de 100 L/min en continu.
 
@@ -69,7 +69,7 @@ L’[Einhell TC-AC 240/50/10 OF](https://www.einhell.fr/p/4010393-tc-ac-240-50-1
   <rect width="760" height="330" rx="22" fill="#eef2e9"/><text x="40" y="48" fill="#143426" font-size="22" font-weight="700">Cas : ponceuse + meuleuse simultanées</text>
   <text x="40" y="91" fill="#56685e" font-size="15">Besoin publié à 6,3 bar</text><rect x="40" y="105" width="456" height="36" rx="8" fill="#19704f"/><text x="510" y="130" fill="#143426" font-size="17" font-weight="700">228 L/min</text>
   <text x="40" y="178" fill="#56685e" font-size="15">TE-AC 430/90/10 interpolé à 6,3 bar</text><rect x="40" y="192" width="404" height="36" rx="8" fill="#b95d26"/><text x="458" y="217" fill="#143426" font-size="17" font-weight="700">202 L/min</text>
-  <text x="40" y="265" fill="#56685e" font-size="15">Seuil interne CompatAir, besoin × 1,25</text><rect x="40" y="279" width="570" height="24" rx="7" fill="#d3eb56"/><text x="623" y="298" fill="#143426" font-size="16" font-weight="700">285</text>
+  <text x="40" y="265" fill="#56685e" font-size="15">Réserve proposée par CompatAir, besoin × 1,25</text><rect x="40" y="279" width="570" height="24" rx="7" fill="#d3eb56"/><text x="623" y="298" fill="#143426" font-size="16" font-weight="700">285</text>
 </svg>
 
 ## Interpoler seulement entre deux points
@@ -78,9 +78,9 @@ Lorsqu’un fabricant publie 210 L/min à 4 bar et 200 L/min à 7 bar, une inter
 
 Avec un seul point à 8 ou 10 bar, CompatAir ne recopie plus cette valeur à 6,3 bar. Le résultat devient « données insuffisantes ». Cette règle est volontairement stricte : elle empêche de transformer une valeur isolée en courbe complète.
 
-## Distinguer besoin nominal et marge
+## Distinguer besoin publié et réserve
 
-Le premier verdict compare le FAD disponible à la consommation nominale publiée. CompatAir affiche ensuite un seuil égal au besoin multiplié par 1,25. Cette marge de 25 % est une convention interne, pas une prescription universelle d’Atlas Copco ou du fabricant de l’outil.
+Le premier résultat compare le débit restitué disponible à la consommation publiée. CompatAir affiche ensuite un seuil égal au besoin multiplié par 1,25. Cette réserve de 25 % est un repère proposé par CompatAir, pas une prescription universelle d’Atlas Copco ou du fabricant de l’outil.
 
 Dans une installation professionnelle, la réserve dépend notamment des fuites, de l’usure, des évolutions prévues et du coût d’une interruption. Le manuel Atlas Copco demande de traiter ces éléments dès l’étude. Une marge unique ne remplace donc pas un audit de réseau.
 
@@ -104,7 +104,7 @@ Un dimensionnement défendable doit permettre de répondre à neuf questions :
 2. Quelle consommation chaque fabricant publie-t-il ?
 3. À quelle pression ces consommations sont-elles données ?
 4. Quels outils fonctionneront réellement ensemble ?
-5. Quel FAD le compresseur publie-t-il à cette pression ?
+5. Quel débit restitué le compresseur publie-t-il à cette pression ?
 6. Quelle marge est appliquée et par qui est-elle définie ?
 7. Quelles pertes le réseau peut-il ajouter ?
 8. Quel rôle précis la cuve doit-elle jouer ?

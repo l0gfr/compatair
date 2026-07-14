@@ -46,7 +46,7 @@ const navItems = [
 	{ href: '/compresseurs/', label: 'Compresseurs' },
 	{ href: '/outils-pneumatiques/', label: 'Outils' },
 	{ href: '/scanner/', label: 'Scanner' },
-	{ href: '/methodologie/', label: 'Méthode' },
+	{ href: '/methodologie/', label: 'Comment ça marche' },
 ];
 const isCurrent = (href: string) => currentPath.startsWith(href);
 const websiteJsonLd = {
@@ -64,7 +64,7 @@ const websiteJsonLd = {
 			'@id': 'https://compatair.fr/#website',
 			url: 'https://compatair.fr/',
 			name: 'CompatAir',
-			description: 'Comparateur technique de compresseurs et d’outils pneumatiques fondé sur le débit restitué documenté.',
+			description: 'Outil indépendant pour vérifier quels compresseurs peuvent alimenter quels outils pneumatiques à partir de données constructeur identifiées.',
 			inLanguage: 'fr-FR',
 			publisher: { '@id': 'https://compatair.fr/#organization' },
 		},
@@ -126,15 +126,15 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 		<a class="skip-link" href="#contenu">Aller au contenu</a>
 		<header class="site-header">
 			<nav class="container nav" aria-label="Navigation principale">
-				<a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><span class="brand-arc"></span><span class="brand-needle"></span></span><span class="brand-name">CompatAir<small>le débit utile, vérifié</small></span></a>
+				<a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><span class="brand-arc"></span><span class="brand-needle"></span></span><span class="brand-name">CompatAir<small>Quel compresseur pour vos outils&nbsp;?</small></span></a>
 				<div class="desktop-nav">
 					<div class="nav-links">{navItems.map((item) => <a href={item.href} class:list={{ active: isCurrent(item.href) }} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>)}</div>
 					<SiteSearch />
-					<a class:list={['nav-cta', isCurrent('/calculateur/') && 'active']} href="/calculateur/">Calculateur <span aria-hidden="true">→</span></a>
+					<a class:list={['nav-cta', isCurrent('/calculateur/') && 'active']} href="/calculateur/">Vérifier mon besoin <span aria-hidden="true">→</span></a>
 				</div>
 				<details class="mobile-menu">
 					<summary>Menu <span aria-hidden="true"></span></summary>
-					<div class="mobile-menu-panel">{navItems.map((item) => <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>)}<a href="/recherche/">Recherche</a><a href="/calculateur/">Calculateur</a><a href="/passeport/" aria-current={isCurrent('/passeport/') ? 'page' : undefined}>Passeport</a><a href="/affiliation/">Affiliation</a><a href="/contact/">Signaler une donnée</a></div>
+					<div class="mobile-menu-panel">{navItems.map((item) => <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>)}<a href="/recherche/">Recherche</a><a href="/calculateur/">Vérifier mon besoin</a><a href="/passeport/" aria-current={isCurrent('/passeport/') ? 'page' : undefined}>Conserver une configuration</a><a href="/affiliation/">Affiliation</a><a href="/contact/">Signaler une donnée</a></div>
 				</details>
 			</nav>
 		</header>
@@ -144,13 +144,13 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 				<div class="footer-topline">
 					<a class="footer-identity" href="/" aria-label="CompatAir, accueil">
 						<span class="brand-mark footer-mark" aria-hidden="true"><span class="brand-arc"></span><span class="brand-needle"></span></span>
-						<span><strong>CompatAir</strong><small>Le débit utile, vérifié.</small></span>
+						<span><strong>CompatAir</strong><small>Quel compresseur pour vos outils&nbsp;?</small></span>
 					</a>
-					<p>Comparer la consommation réelle d’un outil au <a href="/glossaire/#debit-restitue">débit restitué documenté</a>, à pression égale.</p>
+					<p>CompatAir vérifie quel compresseur peut alimenter vos outils à partir de données constructeur clairement identifiées.</p>
 					<div class="footer-assurances" aria-label="Principes CompatAir">
 						<span><UiIcon name="check" size={16} /> Données sourcées</span>
-						<span><UiIcon name="shield" size={16} /> Aucune estimation silencieuse</span>
-						<span><UiIcon name="scale" size={16} /> Verdict indépendant</span>
+						<span><UiIcon name="shield" size={16} /> Aucune donnée inventée</span>
+						<span><UiIcon name="scale" size={16} /> Résultat indépendant</span>
 					</div>
 				</div>
 
@@ -163,24 +163,21 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 						<a href="/glossaire/"><span>Glossaire sourcé</span><UiIcon name="arrow" size={15} /></a>
 					</section>
 					<section class="footer-block">
-						<header><span class="footer-icon"><UiIcon name="calculator" /></span><h2>Dimensionner</h2></header>
-						<a href="/calculateur/"><span>Calculateur CompatAir</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/passeport/"><span>Passeport CompatAir</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/scanner/"><span>Scanner et vérifier</span><UiIcon name="arrow" size={15} /></a>
+						<header><span class="footer-icon"><UiIcon name="calculator" /></span><h2>Choisir et vérifier</h2></header>
+						<a href="/calculateur/"><span>Vérifier une configuration</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/passeport/"><span>Conserver une configuration</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/scanner/"><span>Identifier un modèle</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/comparateur/"><span>Comparer des modèles</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/comparatifs/"><span>Comparatifs techniques</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/recherche/"><span>Recherche globale</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/comparatifs/"><span>Comparer les données utiles</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/recherche/"><span>Rechercher sur le site</span><UiIcon name="arrow" size={15} /></a>
 					</section>
 					<section class="footer-block">
-						<header><span class="footer-icon"><UiIcon name="database" /></span><h2>Méthode & données</h2></header>
-						<a href="/methodologie/"><span>Méthodologie</span><UiIcon name="arrow" size={15} /></a>
+						<header><span class="footer-icon"><UiIcon name="database" /></span><h2>Comment nous vérifions</h2></header>
+						<a href="/methodologie/"><span>Comment fonctionne CompatAir</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/sources-fiabilite/"><span>Sources et fiabilité</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/preuves/"><span>Historique des preuves</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/preuves/"><span>Documents et dates vérifiés</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/barometre-transparence/"><span>Baromètre de transparence</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/corrections/"><span>Journal des corrections</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/data/catalog.json"><span>Catalogue JSON</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/mcp-documentation/"><span>Interface MCP</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/api/"><span>API de compatibilité</span><UiIcon name="arrow" size={15} /></a>
 					</section>
 					<section class="footer-block">
 						<header><span class="footer-icon"><UiIcon name="shield" /></span><h2>Confiance</h2></header>
@@ -193,7 +190,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 				</nav>
 
 				<div class="footer-bottomline">
-					<p>CompatAir © {currentYear} · site statique · sans tracker publicitaire</p>
+					<p>CompatAir © {currentYear} · sans compte · sans publicité ciblée</p>
 					<div><a href="/mentions-legales/">Mentions légales</a><a href="/cookies/">Cookies</a><a href="/sitemap-index.xml">Sitemap</a></div>
 				</div>
 			</div>

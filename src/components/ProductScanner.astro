@@ -15,7 +15,7 @@
 
 		<div class="scanner-confirmation">
 			<div class="field">
-				<label for="scanner-identifier">MPN, EAN ou GTIN à confirmer</label>
+				<label for="scanner-identifier">Référence ou numéro de code-barres à confirmer</label>
 				<input id="scanner-identifier" data-identifier type="text" maxlength="160" autocomplete="off" placeholder="Ex. 4010393 ou 4006825597295" required />
 				<small data-candidate-origin>Saisie manuelle.</small>
 			</div>
@@ -28,7 +28,7 @@
 	<section class="scanner-result" data-result hidden>
 		<header class="scanner-result-head">
 			<div><p class="eyebrow">Modèle identifié après confirmation</p><h2 data-product-name></h2><p data-match></p></div>
-			<a class="button" data-product-link href="/">Voir la fiche et les preuves</a>
+			<a class="button" data-product-link href="/">Voir la fiche et ses sources</a>
 		</header>
 		<div class="scanner-result-grid">
 			<section class="scanner-result-panel can"><span>Peut alimenter</span><h3 data-can-title></h3><ul data-can></ul></section>
@@ -36,11 +36,11 @@
 		</div>
 		<section class="scanner-result-panel uncertain"><span>Données insuffisantes</span><h3>CompatAir refuse de conclure</h3><ul data-insufficient></ul></section>
 		<section class="scanner-unlocks" data-unlocks-section>
-			<p class="eyebrow">Débloquer un usage</p>
-			<h3>Tuyau documenté ou autre compresseur</h3>
+			<p class="eyebrow">Solutions possibles</p>
+			<h3>Un tuyau adapté ou un autre compresseur</h3>
 			<div data-unlocks></div>
 		</section>
-		<section class="scanner-evidence"><h3>Preuves du modèle identifié</h3><div data-evidence></div></section>
+		<section class="scanner-evidence"><h3>Sources du modèle identifié</h3><div data-evidence></div></section>
 	</section>
 </div>
 
@@ -151,7 +151,7 @@
 				setText('[data-candidate-origin]', `Proposition issue de ${proposal.origin}, non validée. Vérifiez la plaque puis confirmez.`);
 				setText('[data-status]', 'Un identifiant a été proposé. Aucun modèle n’est validé tant que vous ne cliquez pas sur « Confirmer et vérifier ».');
 			} else {
-				setText('[data-status]', 'Aucun identifiant exploitable détecté localement. Saisissez le MPN ou l’EAN visible sur la plaque.');
+				setText('[data-status]', 'Aucune référence lisible n’a été trouvée. Saisissez le numéro ou le code-barres visible sur l’étiquette.');
 			}
 		} catch {
 			setText('[data-status]', 'La lecture automatique locale n’est pas disponible pour cette image. Saisissez l’identifiant visible.');
@@ -179,8 +179,8 @@
 			const result = compressorCapabilities(product as (typeof compressors)[number], compressors, tools);
 			setText('[data-can-title]', `${result.compatible.length} outil(s) couvert(s)`);
 			setText('[data-cannot-title]', `${result.incompatible.length} outil(s) incompatibles`);
-			renderList('[data-can]', result.compatible.map(({ tool, result: verdict }) => ({ label: tool.label, href: linkFor('tool', tool.slug), suffix: verdictLabel(verdict.verdict) })), 'Aucun outil concluamment compatible dans le catalogue actuel.');
-			renderList('[data-cannot]', result.incompatible.map(({ tool, result: verdict }) => ({ label: tool.label, href: linkFor('tool', tool.slug), suffix: verdict.limitingFactor === 'pressure' ? 'pression insuffisante' : 'débit insuffisant' })), 'Aucun outil concluamment incompatible.');
+			renderList('[data-can]', result.compatible.map(({ tool, result: verdict }) => ({ label: tool.label, href: linkFor('tool', tool.slug), suffix: verdictLabel(verdict.verdict) })), 'Aucun outil compatible ne peut encore être confirmé.');
+			renderList('[data-cannot]', result.incompatible.map(({ tool, result: verdict }) => ({ label: tool.label, href: linkFor('tool', tool.slug), suffix: verdict.limitingFactor === 'pressure' ? 'pression insuffisante' : 'débit insuffisant' })), 'Aucun outil incompatible ne peut être confirmé.');
 			renderList('[data-insufficient]', result.insufficient.map(({ tool }) => ({ label: tool.label, href: linkFor('tool', tool.slug) })), 'Aucun cas à données insuffisantes.');
 			const unlocks = query<HTMLElement>('[data-unlocks]');
 			if (unlocks) {
@@ -196,8 +196,8 @@
 			const result = toolCompatibleCompressors(product as (typeof tools)[number], compressors);
 			setText('[data-can-title]', `${result.compatible.length} compresseur(s) compatibles`);
 			setText('[data-cannot-title]', `${result.incompatible.length} compresseur(s) incompatibles`);
-			renderList('[data-can]', result.compatible.map(({ compressor, result: verdict }) => ({ label: `${compressor.brand} ${compressor.model}`, href: linkFor('compressor', compressor.slug), suffix: verdictLabel(verdict.verdict) })), 'Aucun compresseur concluant dans le catalogue actuel.');
-			renderList('[data-cannot]', result.incompatible.map(({ compressor, result: verdict }) => ({ label: `${compressor.brand} ${compressor.model}`, href: linkFor('compressor', compressor.slug), suffix: verdict.limitingFactor === 'pressure' ? 'pression insuffisante' : 'débit insuffisant' })), 'Aucun compresseur concluamment incompatible.');
+			renderList('[data-can]', result.compatible.map(({ compressor, result: verdict }) => ({ label: `${compressor.brand} ${compressor.model}`, href: linkFor('compressor', compressor.slug), suffix: verdictLabel(verdict.verdict) })), 'Aucun compresseur compatible ne peut encore être confirmé.');
+			renderList('[data-cannot]', result.incompatible.map(({ compressor, result: verdict }) => ({ label: `${compressor.brand} ${compressor.model}`, href: linkFor('compressor', compressor.slug), suffix: verdict.limitingFactor === 'pressure' ? 'pression insuffisante' : 'débit insuffisant' })), 'Aucun compresseur incompatible ne peut être confirmé.');
 			renderList('[data-insufficient]', result.insufficient.map(({ compressor }) => ({ label: `${compressor.brand} ${compressor.model}`, href: linkFor('compressor', compressor.slug) })), 'Aucun cas à données insuffisantes.');
 			const section = query<HTMLElement>('[data-unlocks-section]'); if (section) section.hidden = true;
 		}
@@ -205,7 +205,7 @@
 		const evidence = query<HTMLElement>('[data-evidence]');
 		if (evidence) {
 			evidence.replaceChildren(...product.evidence.map((source) => {
-				const link = document.createElement('a'); link.href = source.sourceUrl; link.rel = 'noreferrer'; link.textContent = `${source.sourceLabel} · ${source.retrievedAt} · confiance ${source.confidence}`; return link;
+				const link = document.createElement('a'); link.href = source.sourceUrl; link.rel = 'noreferrer'; link.textContent = `${source.sourceLabel} · ${source.retrievedAt} · fiabilité ${source.confidence}`; return link;
 			}));
 		}
 		query<HTMLElement>('[data-result]')?.removeAttribute('hidden');

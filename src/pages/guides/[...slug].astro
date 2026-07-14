@@ -62,7 +62,7 @@ const articleJsonLd = {
 			<div class="article-body"><Content /></div>
 			<section class="guide-next-step" aria-labelledby="guide-next-step-title">
 				<p class="eyebrow">Vérifier sur des données réelles</p>
-				<h2 id="guide-next-step-title">Passer du guide au verdict CompatAir</h2>
+				<h2 id="guide-next-step-title">Vérifier ce guide avec un outil réel</h2>
 				{relatedTool ? (
 					<>
 						<p>Le profil publié de <strong>{relatedTool.label}</strong> est déjà disponible. Le calculateur compare son besoin au débit restitué documenté, à la même pression.</p>
@@ -72,7 +72,7 @@ const articleJsonLd = {
 						</div>
 						{compatibleCompressors.length > 0 ? (
 							<div class="guide-compatible-results">
-								<h3>Compatibilités continues déjà documentées</h3>
+								<h3>Compresseurs déjà confirmés pour un usage continu</h3>
 								<div class="link-cards">
 									{compatibleCompressors.map(({ compressor, result }) => (
 										<a href={`/compatibilite/${compressor.slug}--${relatedTool.slug}/`}>

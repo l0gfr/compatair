@@ -23,7 +23,7 @@ const product = {
 		{ id: 'boge-po-technical-brochure', sourceUrl: 'https://row.boge.com/sites/default/files/382-en-po-series_19.pdf', sourceLabel: 'BOGE, brochure technique de la série PO', sourceType: 'manufacturer', retrievedAt: '2026-07-14', confidence: 'A', notes: 'La brochure précise que le débit d’air effectif est mesuré selon VDMA 4362 à 80 % de la pression maximale.' },
 	],
 	fieldSources: { tankLiters: ['boge-po-current-range'], maxPressureBar: ['boge-po-current-range'], fadCurve: ['boge-po-current-range', 'boge-po-technical-brochure'], oilType: ['boge-po-current-range', 'boge-po-technical-brochure'], powerKw: ['boge-po-current-range'], weightKg: ['boge-po-current-range'], status: ['boge-po-current-range'] },
-	notes: ['Point FAD : 668 L/min à 8 bar, car BOGE mesure le débit effectif à 80 % des 10 bar maximaux.'],
+	notes: ['Point de débit restitué : 668 L/min à 8 bar, car BOGE mesure le débit effectif à 80 % des 10 bar maximaux.'],
 };
 
 export default product;
