@@ -6,6 +6,9 @@ const PRESSURE_BUCKETS = new Set(['lt-4', '4-5.9', '6-7.9', '8-plus']);
 const SESSION_BUCKETS = new Set(['lt-15', '15-59', '60-plus']);
 const MODES = new Set(['successive', 'simultaneous']);
 const COMPRESSOR_SELECTIONS = new Set(['none', 'catalog', 'custom']);
+const DIMENSION_KEYS = ['tools', 'categories', 'modes', 'flowBuckets', 'pressureBuckets', 'sessionBuckets', 'compressorSelections', 'calculationVersions', 'needProfiles'];
+
+function emptyCounts() { return Object.create(null); }
 
 function emptyAggregate() {
 	return {
@@ -13,21 +16,38 @@ function emptyAggregate() {
 		updatedAt: null,
 		totalContributions: 0,
 		dimensions: {
-			tools: {},
-			categories: {},
-			modes: {},
-			flowBuckets: {},
-			pressureBuckets: {},
-			sessionBuckets: {},
-			compressorSelections: {},
-			calculationVersions: {},
-			needProfiles: {},
+			tools: emptyCounts(),
+			categories: emptyCounts(),
+			modes: emptyCounts(),
+			flowBuckets: emptyCounts(),
+			pressureBuckets: emptyCounts(),
+			sessionBuckets: emptyCounts(),
+			compressorSelections: emptyCounts(),
+			calculationVersions: emptyCounts(),
+			needProfiles: emptyCounts(),
 		},
 	};
 }
 
 function increment(target, key) {
-	target[key] = (target[key] ?? 0) + 1;
+	const current = Object.hasOwn(target, key) ? target[key] : 0;
+	if (!Number.isSafeInteger(current) || current < 0 || current === Number.MAX_SAFE_INTEGER) throw new Error('aggregate_counter_invalid');
+	target[key] = current + 1;
+}
+
+function validCounts(value) {
+	return value !== null && typeof value === 'object' && !Array.isArray(value)
+		&& Object.values(value).every((count) => Number.isSafeInteger(count) && count >= 0);
+}
+
+function isValidAggregate(value) {
+	if (!value || typeof value !== 'object' || Array.isArray(value)) return false;
+	if (Object.keys(value).length !== 4 || Object.keys(value).some((key) => !['schemaVersion', 'updatedAt', 'totalContributions', 'dimensions'].includes(key))) return false;
+	if (value.schemaVersion !== DEMAND_EVENT_SCHEMA_VERSION || !Number.isSafeInteger(value.totalContributions) || value.totalContributions < 0) return false;
+	if (value.updatedAt !== null && (typeof value.updatedAt !== 'string' || Number.isNaN(Date.parse(value.updatedAt)))) return false;
+	if (!value.dimensions || Object.keys(value.dimensions).length !== DIMENSION_KEYS.length || DIMENSION_KEYS.some((key) => !validCounts(value.dimensions[key]))) return false;
+	return ['modes', 'flowBuckets', 'pressureBuckets', 'sessionBuckets', 'compressorSelections', 'calculationVersions', 'needProfiles']
+		.every((key) => Object.values(value.dimensions[key]).reduce((sum, count) => sum + count, 0) === value.totalContributions);
 }
 
 export function validateDemandEvent(value, catalog) {
@@ -76,7 +96,7 @@ async function readAggregate(filePath) {
 	if (!filePath) return emptyAggregate();
 	try {
 		const parsed = JSON.parse(await readFile(filePath, 'utf8'));
-		if (parsed?.schemaVersion !== DEMAND_EVENT_SCHEMA_VERSION || !parsed.dimensions || !Number.isInteger(parsed.totalContributions)) throw new Error('aggregate_schema_mismatch');
+		if (!isValidAggregate(parsed)) throw new Error('aggregate_schema_mismatch');
 		return parsed;
 	} catch (error) {
 		if (error && typeof error === 'object' && 'code' in error && error.code === 'ENOENT') return emptyAggregate();
@@ -91,6 +111,7 @@ async function writeAggregate(filePath, state) {
 	await rename(temporaryPath, filePath);
 }
 
+/** @param {{ filePath?: string, catalog: any, clock?: () => Date }} options */
 export function createDemandAggregateStore({ filePath = undefined, catalog, clock = () => new Date() }) {
 	let queue = Promise.resolve();
 	let statePromise = readAggregate(filePath);

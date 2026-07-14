@@ -2,7 +2,7 @@ import { compressorSchema, toolProfileSchema } from '../domain/catalog';
 import { rawCompressors } from './products/compressors';
 import { rawTools } from './products/tools';
 
-export const CATALOG_VERIFIED_AT = '2026-07-14';
+export const CATALOG_VERIFIED_AT = '2026-07-15';
 
 export const compressors = rawCompressors.map((item) => compressorSchema.parse(item));
 export const tools = rawTools.map((item) => toolProfileSchema.parse(item));

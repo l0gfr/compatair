@@ -22,7 +22,7 @@ describe('manufacturer documentation transparency barometer', () => {
 	it('only assigns an official rank to samples of at least ten references', () => {
 		for (const row of barometer.brands) if (row.rank !== null) expect(row.sampleSize).toBeGreaterThanOrEqual(10);
 		expect(barometer.brands.filter((row) => row.rank !== null).map((row) => row.rank)).toEqual(barometer.brands.filter((row) => row.rank !== null).map((_, index) => index + 1));
-		expect(barometer.rankingPublished).toBe(false);
+		expect(barometer.rankingPublished).toBe(true);
 		expect(barometer.brands.reduce((total, row) => total + row.sampleSize, 0)).toBe(compressors.length);
 		expect(barometer.barometerVersion).toMatch(/^[a-f0-9]{64}$/);
 		expect(barometer.schemaVersion).toBe('3.0.0');

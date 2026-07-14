@@ -46,6 +46,21 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(result.headers['Referrer-Policy']).toBe('no-referrer');
 	});
 
+	it('rate-limits repeated affiliate redirect requests', async () => {
+		const target = 'https://www.awin1.com/pclick.php?p=1&a=2&m=17547';
+		const offerSnapshot = { offers: [{ id: 'offer-1', merchantId: 'manomano-fr', url: target }] } as any;
+		const server = createCompatAirServer({ catalog: { catalogVersion: 'test', compressors: [], tools: [] }, offerSnapshot, allowedOrigins: new Set(['https://compatair.fr']) });
+		let status = 0;
+		for (let requestIndex = 0; requestIndex <= 120; requestIndex++) {
+			status = await new Promise<number>((resolve) => {
+				const request = { url: '/go/offer-1', method: 'GET', headers: {}, socket: { remoteAddress: '198.51.100.7' } };
+				const response = { setTimeout() {}, writeHead(value: number) { status = value; }, end() { resolve(status); }, destroy() {} };
+				server.emit('request', request, response);
+			});
+		}
+		expect(status).toBe(429);
+	});
+
 	it('persists only a validated aggregate calculator funnel event', async () => {
 		const directory = mkdtempSync(join(tmpdir(), 'compatair-funnel-http-'));
 		const productFunnelAggregatePath = join(directory, 'product-funnel.json');
@@ -179,7 +194,7 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(resolveProductFunnelAggregatePath('/var/lib/compatair/demand-aggregates.json', '/srv/custom-funnel.json')).toBe('/srv/custom-funnel.json');
 	});
 
-	it('starts from the production release layout without a legacy verdict environment variable', async () => {
+	it('starts from the production release layout without a legacy verdict environment variable', async (context) => {
 		const directory = mkdtempSync(join(tmpdir(), 'compatair-release-'));
 		const release = join(directory, 'releases', 'a'.repeat(40));
 		const current = join(directory, 'current');
@@ -190,7 +205,17 @@ describe('MCP HTTP boundary helpers', () => {
 		writeFileSync(join(release, 'data', 'verdicts.json'), JSON.stringify({ catalogVersion: 'catalog-test', verdictVersion: 'verdict-test', calculationVersion: 'calculation-test', pairs: [] }));
 		writeFileSync(join(release, 'data', 'offers.json'), JSON.stringify({ offers: [], snapshotVersion: 'empty' }));
 		symlinkSync(release, current);
-		const port = await reservePort();
+		let port: number;
+		try {
+			port = await reservePort();
+		} catch (error) {
+			rmSync(directory, { recursive: true, force: true });
+			if (error && typeof error === 'object' && 'code' in error && error.code === 'EPERM') {
+				context.skip();
+				return;
+			}
+			throw error;
+		}
 		const child = spawn(process.execPath, [join(current, '_server', 'mcp-server.mjs')], {
 			env: {
 				...process.env,

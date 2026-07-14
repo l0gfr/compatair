@@ -45,7 +45,7 @@
 </div>
 
 <script>
-	import { compressors, tools } from '../data/catalog';
+	import type { Compressor, ToolProfile } from '../domain/catalog';
 	import { isImageWithinPixelBudget, readImageDimensions, type ImageDimensions } from '../domain/image-dimensions';
 	import { compressorCapabilities, identifyProducts, toolCompatibleCompressors } from '../domain/product-identification';
 
@@ -59,6 +59,9 @@
 	const photo = root?.querySelector<HTMLInputElement>('[data-photo]');
 	const readPhoto = root?.querySelector<HTMLButtonElement>('[data-read-photo]');
 	const identifier = root?.querySelector<HTMLInputElement>('[data-identifier]');
+	let compressors: Compressor[] = [];
+	let tools: ToolProfile[] = [];
+	let catalogPromise: Promise<void> | undefined;
 	let photoBitmap: ImageBitmap | undefined;
 	let photoGeneration = 0;
 
@@ -66,6 +69,16 @@
 	const setText = (selector: string, value: string) => { const element = query<HTMLElement>(selector); if (element) element.textContent = value; };
 	const linkFor = (type: 'compressor' | 'tool', slug: string) => type === 'compressor' ? `/compresseurs/${slug}/` : `/outils-pneumatiques/${slug}/`;
 	const verdictLabel = (verdict: string) => verdict === 'continuous' ? 'continu' : verdict === 'intermittent' ? 'intermittent' : verdict === 'incompatible' ? 'incompatible' : 'données insuffisantes';
+	function loadCatalog() {
+		catalogPromise ??= fetch('/data/catalog.json', { credentials: 'same-origin', headers: { Accept: 'application/json' } }).then(async (response) => {
+			if (!response.ok) throw new Error('catalog_unavailable');
+			const catalog = await response.json() as { compressors?: Compressor[]; tools?: ToolProfile[] };
+			if (!Array.isArray(catalog.compressors) || !Array.isArray(catalog.tools)) throw new Error('catalog_invalid');
+			compressors = catalog.compressors;
+			tools = catalog.tools;
+		});
+		return catalogPromise;
+	}
 
 	function renderList(targetSelector: string, values: Array<{ label: string; href?: string; suffix?: string }>, empty: string) {
 		const target = query<HTMLUListElement>(targetSelector);
@@ -132,6 +145,7 @@
 		readPhoto.disabled = true;
 		setText('[data-status]', 'Lecture locale en cours…');
 		try {
+			await loadCatalog();
 			const detectionWindow = window as DetectionWindow;
 			const proposals: Array<{ value: string; origin: 'code-barres' | 'OCR local' }> = [];
 			if (detectionWindow.BarcodeDetector) {
@@ -158,10 +172,15 @@
 		} finally { readPhoto.disabled = false; }
 	});
 
-	form?.addEventListener('submit', (event) => {
+	form?.addEventListener('submit', async (event) => {
 		event.preventDefault();
 		const error = query<HTMLElement>('[data-error]');
 		if (error) error.hidden = true;
+		try { await loadCatalog(); }
+		catch {
+			if (error) { error.hidden = false; error.textContent = 'Le catalogue technique est momentanément indisponible. Réessayez dans quelques instants.'; }
+			return;
+		}
 		const matches = identifyProducts(identifier?.value ?? '', compressors, tools);
 		if (matches.length !== 1) {
 			if (error) { error.hidden = false; error.textContent = matches.length > 1 ? 'Identifiant ambigu : vérifiez la marque et le modèle sur la plaque.' : 'Aucun modèle ne correspond exactement à cet identifiant validé.'; }

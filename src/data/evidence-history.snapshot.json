@@ -1554,7 +1554,591 @@
         "confidence": "A",
         "notes": "Consommation en charge de 11 L/s convertie exactement en 660 L/min, pression dynamique maximale de 6,3 bar."
       }
+    },
+    {
+      "id": "added:einhell-pressito-18-21:einhell-4020467-official:2026-07-15",
+      "evidenceId": "einhell-4020467-official",
+      "productId": "einhell-pressito-18-21",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "b67100bfdf451f51fcb39edc9f85c65ceee016ea47921f80851b381fb3985b40",
+      "snapshot": {
+        "id": "einhell-4020467-official",
+        "sourceUrl": "https://www.einhell.fr/p/4020467-pressito-18-21/",
+        "sourceLabel": "Einhell France, fiche officielle PRESSITO 18/21",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:einhell-pressito-18-25:einhell-4020420-official:2026-07-15",
+      "evidenceId": "einhell-4020420-official",
+      "productId": "einhell-pressito-18-25",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "40ddd2f193fbed10d70250350b9d0c6a806ea98845e67f37cbb83573f1d19f8b",
+      "snapshot": {
+        "id": "einhell-4020420-official",
+        "sourceUrl": "https://www.einhell.fr/p/4020420-pressito-18-25/",
+        "sourceLabel": "Einhell France, fiche officielle PRESSITO 18/25",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:einhell-pressito-18-25-hybrid:einhell-4020430-official:2026-07-15",
+      "evidenceId": "einhell-4020430-official",
+      "productId": "einhell-pressito-18-25-hybrid",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "d756b0e57c76717a8bf898a420ebe7a44477a6db4794cb50e0d7d9827a9f1e45",
+      "snapshot": {
+        "id": "einhell-4020430-official",
+        "sourceUrl": "https://www.einhell.fr/p/4020430-pressito-18-25-hybrid/",
+        "sourceLabel": "Einhell France, fiche officielle PRESSITO 18/25 Hybrid",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:einhell-te-ac-240-24-silent:einhell-4010452-official:2026-07-15",
+      "evidenceId": "einhell-4010452-official",
+      "productId": "einhell-te-ac-240-24-silent",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "6e70b3af14deec01a2d2e867ba07ba169e41a50db5e3ef1aab957ab34a76fb28",
+      "snapshot": {
+        "id": "einhell-4010452-official",
+        "sourceUrl": "https://www.einhell.fr/p/4010452-te-ac-240-24-silent/",
+        "sourceLabel": "Einhell France, fiche officielle TE-AC 240/24 Silent",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débits restitués multipoints distincts du débit aspiré de 240 L/min."
+      }
+    },
+    {
+      "id": "added:metabo-basic-250-24-w-of:metabo-601532000-official:2026-07-15",
+      "evidenceId": "metabo-601532000-official",
+      "productId": "metabo-basic-250-24-w-of",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "b2a797dcf12f35672d0a1beeaa2046b85dbf4b0a86c521ec8a8cb0c67e347b5f",
+      "snapshot": {
+        "id": "metabo-601532000-official",
+        "sourceUrl": "https://www.metabo.com/com/en/products/tools/compressed-air/compressors/mobile-workshop-compressors/basic-250-24-w-of-compressor/601532000",
+        "sourceLabel": "Metabo, fiche officielle Basic 250-24 W OF",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de 8 bar."
+      }
+    },
+    {
+      "id": "added:metabo-basic-250-50-w-of:metabo-601535000-official:2026-07-15",
+      "evidenceId": "metabo-601535000-official",
+      "productId": "metabo-basic-250-50-w-of",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "209e49196c229b84b02704f6daae4a586933c4597b440d9c6e4d1dc81c74b546",
+      "snapshot": {
+        "id": "metabo-601535000-official",
+        "sourceUrl": "https://www.metabo.com/com/en/products/tools/compressed-air/compressors/mobile-workshop-compressors/basic-250-50-w-of-compressor/601535000",
+        "sourceLabel": "Metabo, fiche officielle Basic 250-50 W OF",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de 8 bar."
+      }
+    },
+    {
+      "id": "added:metabo-basic-280-50-w-of:metabo-601529000-official:2026-07-15",
+      "evidenceId": "metabo-601529000-official",
+      "productId": "metabo-basic-280-50-w-of",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "46dda11651de6ae5adebcff4d29ffe0a92abe860b4e9f2538293499b7136f913",
+      "snapshot": {
+        "id": "metabo-601529000-official",
+        "sourceUrl": "https://www.metabo.com/com/en/products/tools/compressed-air/compressors/mobile-workshop-compressors/basic-280-50-w-of-compressor/601529000",
+        "sourceLabel": "Metabo, fiche officielle Basic 280-50 W OF",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:metabo-mega-350-100-d:metabo-601539000-official:2026-07-15",
+      "evidenceId": "metabo-601539000-official",
+      "productId": "metabo-mega-350-100-d",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "fd9c97d3a41e11206fc3a2f4beaffb187b8b89c5bb32de8826a3639d116d0b0d",
+      "snapshot": {
+        "id": "metabo-601539000-official",
+        "sourceUrl": "https://www.metabo.com/com/en/tools/compressed-air/compressors/mobile-workshop-compressors/mega-350-100-d-compressor/601539000",
+        "sourceLabel": "Metabo, fiche officielle Mega 350-100 D",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de 10 bar."
+      }
+    },
+    {
+      "id": "added:metabo-mega-350-50-w:metabo-601589000-official:2026-07-15",
+      "evidenceId": "metabo-601589000-official",
+      "productId": "metabo-mega-350-50-w",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "31369eeb2c853d3bb917185f9be5c9c924ef2fe521a7c3dc77e47a9996fbb842",
+      "snapshot": {
+        "id": "metabo-601589000-official",
+        "sourceUrl": "https://www.metabo.com/com/en/tools/compressed-air/compressors/mobile-workshop-compressors/mega-350-50-w-compressor/601589000",
+        "sourceLabel": "Metabo, fiche officielle Mega 350-50 W",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de 10 bar."
+      }
+    },
+    {
+      "id": "added:metabo-mega-400-50-d:metabo-601537000-official:2026-07-15",
+      "evidenceId": "metabo-601537000-official",
+      "productId": "metabo-mega-400-50-d",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "da90f5360f3026038ae7d5ef94144242431216c0425c2029828c777d206bab36",
+      "snapshot": {
+        "id": "metabo-601537000-official",
+        "sourceUrl": "https://de.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/mega-400-50-d-601537000-kompressor.html",
+        "sourceLabel": "Metabo, fiche officielle Mega 400-50 D",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de 10 bar."
+      }
+    },
+    {
+      "id": "added:metabo-mega-650-270-d:metabo-601543000-official:2026-07-15",
+      "evidenceId": "metabo-601543000-official",
+      "productId": "metabo-mega-650-270-d",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "a1fe898d015854a303803b0693042c9149704a49acc45b9e76d2764503481423",
+      "snapshot": {
+        "id": "metabo-601543000-official",
+        "sourceUrl": "https://www.metabo.com/com/en/tools/compressed-air/compressors/mobile-workshop-compressors/mega-650-270-d-compressor/601543000",
+        "sourceLabel": "Metabo, fiche officielle Mega 650-270 D",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de 11 bar."
+      }
+    },
+    {
+      "id": "added:metabo-mega-700-90-d:metabo-601542000-official:2026-07-15",
+      "evidenceId": "metabo-601542000-official",
+      "productId": "metabo-mega-700-90-d",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "75d51cbdcc806619f31bd46bd55172a7ca15520d8ba400cacaae968345a10566",
+      "snapshot": {
+        "id": "metabo-601542000-official",
+        "sourceUrl": "https://www.metabo.com/no/no/maskiner/trykkluft/kompressorer/mobile-verksted-kompressorer/mega-700-90-d-kompressor/601542000",
+        "sourceLabel": "Metabo, fiche officielle Mega 700-90 D",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de 11 bar."
+      }
+    },
+    {
+      "id": "added:metabo-power-160-5-18-ltx-bl-of:metabo-601521850-official:2026-07-15",
+      "evidenceId": "metabo-601521850-official",
+      "productId": "metabo-power-160-5-18-ltx-bl-of",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "ac1306e36b1fd677ed1b799fb793794d812fe7b3d8c284aff1a841bf672a53d1",
+      "snapshot": {
+        "id": "metabo-601521850-official",
+        "sourceUrl": "https://www.metabo.com/com/en/tools/compressed-air/compressors/cordless-compressors/power-160-5-18-ltx-bl-of-cordless-compressor/601521850",
+        "sourceLabel": "Metabo, fiche officielle Power 160-5 18 LTX BL OF",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de 8 bar."
+      }
+    },
+    {
+      "id": "added:metabo-power-250-10-w-of:metabo-601544000-official:2026-07-15",
+      "evidenceId": "metabo-601544000-official",
+      "productId": "metabo-power-250-10-w-of",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "bd2b4390db4f0d9f0314fbf74047abdaede84457540f678ac9ffe617a98ef525",
+      "snapshot": {
+        "id": "metabo-601544000-official",
+        "sourceUrl": "https://de.metabo.com/de/maschinen/druckluft/kompressoren/baustellen-kompressoren/power-250-10-w-of-601544000-kompressor.html",
+        "sourceLabel": "Metabo, fiche officielle Power 250-10 W OF",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de 10 bar."
+      }
+    },
+    {
+      "id": "added:metabo-power-280-20-w-of:metabo-601545000-official:2026-07-15",
+      "evidenceId": "metabo-601545000-official",
+      "productId": "metabo-power-280-20-w-of",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "83c6ccaaa767125cd266de00ff02fc887a7fac281a0de722dc0fbc82a2a3abaf",
+      "snapshot": {
+        "id": "metabo-601545000-official",
+        "sourceUrl": "https://www.metabo.com/no/no/maskiner/trykkluft/kompressorer/kompressorer-for-byggeplassen/power-280-20-w-of-kompressor/601545000",
+        "sourceLabel": "Metabo, fiche officielle Power 280-20 W OF",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de 10 bar."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7630:cp-8941076300-official:2026-07-15",
+      "evidenceId": "cp-8941076300-official",
+      "productId": "chicago-pneumatic-cp7630",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "c03cd7e00d3d7cc9859610989570016b4a74fa3089e0f97b0d69c24f037d9f1b",
+      "snapshot": {
+        "id": "cp-8941076300-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp7630-sku8941076300",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7630",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "9,6 L/s convertis exactement en 576 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7748:cp-8941077481-official:2026-07-15",
+      "evidenceId": "cp-8941077481-official",
+      "productId": "chicago-pneumatic-cp7748",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "8368b95619af5b9b9253c10e66ba727cb50a2bd874f30adda07f987aab13eed6",
+      "snapshot": {
+        "id": "cp-8941077481-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp7748-sku8941077481",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7748",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "12 L/s convertis exactement en 720 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7776:cp-8941077760-official:2026-07-15",
+      "evidenceId": "cp-8941077760-official",
+      "productId": "chicago-pneumatic-cp7776",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "41e4ff3e7eaf20ffdca577dbc899150e3187b917d491456667c70aa215cdb088",
+      "snapshot": {
+        "id": "cp-8941077760-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp7776-sku8941077760",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7776",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "15 L/s convertis exactement en 900 L/min."
+      }
+    },
+    {
+      "id": "added:einhell-tc-pw-610-compact:einhell-4138965-official:2026-07-15",
+      "evidenceId": "einhell-4138965-official",
+      "productId": "einhell-tc-pw-610-compact",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "2f496f5cd08f47291009e7eb3b39f6a5bd3a33b6e633a714ba9bef2787ccc785",
+      "snapshot": {
+        "id": "einhell-4138965-official",
+        "sourceUrl": "https://www.einhell.fr/p/4138965-tc-pw-610-compact/",
+        "sourceLabel": "Einhell France, fiche officielle TC-PW 610 Compact",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp826:cp-t025074-official:2026-07-15",
+      "evidenceId": "cp-t025074-official",
+      "productId": "chicago-pneumatic-cp826",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "5561b6bbaf2b40908dd786bf68b78d6dd35eff590767d9cb39154390a2866906",
+      "snapshot": {
+        "id": "cp-t025074-official",
+        "sourceUrl": "https://tools.cp.com/en/products/ratchetwrenches/cp826-skuT025074",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP826",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "6,6 L/s convertis exactement en 396 L/min."
+      }
+    },
+    {
+      "id": "added:einhell-tc-pr-68:einhell-4139180-official:2026-07-15",
+      "evidenceId": "einhell-4139180-official",
+      "productId": "einhell-tc-pr-68",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "1acc609629d0f205aab8b9de4f2e5d81cb39b2f4b18dbdc93de7b9ab093ddfb8",
+      "snapshot": {
+        "id": "einhell-4139180-official",
+        "sourceUrl": "https://www.einhell.fr/p/4139180-tc-pr-68/",
+        "sourceLabel": "Einhell France, fiche officielle TC-PR 68",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7115:cp-8941071150-official:2026-07-15",
+      "evidenceId": "cp-8941071150-official",
+      "productId": "chicago-pneumatic-cp7115",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "b02f930015eae93b915f94dfa413e566f09afbfd56f95b761177f04424181a21",
+      "snapshot": {
+        "id": "cp-8941071150-official",
+        "sourceUrl": "https://tools.cp.com/en-uk/products/percussivetools/cp7115-sku8941071150",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7115",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "2 L/s convertis exactement en 120 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7120:cp-8941071200-catalog:2026-07-15",
+      "evidenceId": "cp-8941071200-catalog",
+      "productId": "chicago-pneumatic-cp7120",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "5a368cb596eb405c1743d11ac756aac790e390ba5a6f185343e846a0ad9d599f",
+      "snapshot": {
+        "id": "cp-8941071200-catalog",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue General Industry CP7120",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "7,4 L/s à 6,3 bar dans le tableau constructeur."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp875:cp-t023995-official:2026-07-15",
+      "evidenceId": "cp-t023995-official",
+      "productId": "chicago-pneumatic-cp875",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "69d6db8dc1a4cffd5cecc74465a788ac0c9d1c16bc826a9eaf1ae06f4e05925a",
+      "snapshot": {
+        "id": "cp-t023995-official",
+        "sourceUrl": "https://tools.cp.com/en/products/grinders/cp875-skuT023995",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP875",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "10 L/s convertis exactement en 600 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp3000-420f:cp-6151600250-official:2026-07-15",
+      "evidenceId": "cp-6151600250-official",
+      "productId": "chicago-pneumatic-cp3000-420f",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "aa60f9755769c8ef2ebdc9be6520af428ce215f93e38df31d5f43470c4491efe",
+      "snapshot": {
+        "id": "cp-6151600250-official",
+        "sourceUrl": "https://tools.cp.com/en/products/grinders/cp3000-420f-sku6151600250",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP3000-420F",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "10 L/s convertis exactement en 600 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp3030-420r:cp-6151604140-official:2026-07-15",
+      "evidenceId": "cp-6151604140-official",
+      "productId": "chicago-pneumatic-cp3030-420r",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "debbc3e7b6420e595c53d0ef18d111ed3600113ab36f608772f7648d9e09bdb1",
+      "snapshot": {
+        "id": "cp-6151604140-official",
+        "sourceUrl": "https://tools.cp.com/en/products/grinders/cp3030-420r-sku6151604140",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP3030-420R",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "11 L/s convertis exactement en 660 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp785:cp-t022698-official:2026-07-15",
+      "evidenceId": "cp-t022698-official",
+      "productId": "chicago-pneumatic-cp785",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "99073e50e3a3c670a83423021bff95d44f41e11a392126042acf1c12c0004025",
+      "snapshot": {
+        "id": "cp-t022698-official",
+        "sourceUrl": "https://tools.cp.com/en/products/drills/cp785-skuT022698",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP785",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "8 L/s convertis exactement en 480 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9779:cp-6151939779-official:2026-07-15",
+      "evidenceId": "cp-6151939779-official",
+      "productId": "chicago-pneumatic-cp9779",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "1343a2f02d81fecee7e81fe38a34583b33fc428f326104047a3e7b84fa27e1b5",
+      "snapshot": {
+        "id": "cp-6151939779-official",
+        "sourceUrl": "https://tools.cp.com/en/products/sanders/cp9779-sku6151939779",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP9779",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "28 L/s en charge convertis exactement en 1 680 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9780:cp-6151939780-official:2026-07-15",
+      "evidenceId": "cp-6151939780-official",
+      "productId": "chicago-pneumatic-cp9780",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "847d1122f4456e5ca95c7451c2ee8cbc1518aa7a91177da3c4cd43ff906bd3ac",
+      "snapshot": {
+        "id": "cp-6151939780-official",
+        "sourceUrl": "https://tools.cp.com/en/products/sanders/cp9780-sku6151939780",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP9780",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "30 L/s en charge convertis exactement en 1 800 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp881:cp-t023916-official:2026-07-15",
+      "evidenceId": "cp-t023916-official",
+      "productId": "chicago-pneumatic-cp881",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "7f259db3fde6ac804f03592b580336ec76da1faba8b1e20ae37883c63ec7a9bc",
+      "snapshot": {
+        "id": "cp-t023916-official",
+        "sourceUrl": "https://tools.cp.com/en/products/specialtycutting/cp881-skuT023916",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP881",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "2,8 L/s en charge."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp881:cp-ca145206-manual:2026-07-15",
+      "evidenceId": "cp-ca145206-manual",
+      "productId": "chicago-pneumatic-cp881",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Preuve ajoutée lors de l’intégration initiale de cette référence au catalogue.",
+      "fingerprint": "ac8747960549b29279e0b3d50b7ebcbd313f8ddd3822e6045e4e05f7f21c2d5a",
+      "snapshot": {
+        "id": "cp-ca145206-manual",
+        "sourceUrl": "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/CA145206.pdf",
+        "sourceLabel": "Chicago Pneumatic, manuel officiel CP881",
+        "sourceType": "manual",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Pression d’alimentation 6,2 bar et consignes de lubrification."
+      }
     }
   ],
-  "historyVersion": "de7a5b3683d6b89f3fb36f43a3fd380f8d2c78599d7d19480fea061e71939270"
+  "historyVersion": "c5a82fbc32f6ce4c4daeb21c66ff57b31eb7a4812b49291b34e54894b0643c0a"
 }

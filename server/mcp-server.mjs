@@ -177,6 +177,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 
 		if (url.pathname.startsWith('/go/')) {
 			if (request.method !== 'GET') return json(response, 405, { error: 'method_not_allowed' }, { Allow: 'GET' });
+			if (!allow(`go:${clientAddress(request)}`)) return json(response, 429, { error: 'rate_limited' }, { 'Retry-After': '60' });
 			const offerId = parseOfferId(url.pathname);
 			if (!offerId) return json(response, 404, { error: 'offer_not_found' });
 			const offer = (offerSnapshot.offers ?? []).find((item) => item.id === offerId);

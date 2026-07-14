@@ -1,4 +1,7 @@
 import { describe, expect, it } from 'vitest';
+import { mkdtemp, rm, writeFile } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { aggregateDemand, createDemandAggregateStore, validateDemandEvent } from './demand-aggregates.mjs';
 
 const catalog = { tools: [{ id: 'tool-a', category: 'Clé à chocs' }, { id: 'tool-b', category: 'Peinture' }] };
@@ -29,5 +32,15 @@ describe('anonymous demand aggregates', () => {
 		await store.record(validateDemandEvent(event, catalog)!);
 		expect((await store.snapshot()).totalContributions).toBe(1);
 		expect(store.enabled).toBe(false);
+	});
+
+	it('fails closed when the persisted aggregate has an incomplete schema', async () => {
+		const directory = await mkdtemp(join(tmpdir(), 'compatair-demand-invalid-'));
+		const filePath = join(directory, 'aggregate.json');
+		try {
+			await writeFile(filePath, JSON.stringify({ schemaVersion: '1.0.0', updatedAt: null, totalContributions: 0, dimensions: { tools: {} } }));
+			const store = createDemandAggregateStore({ filePath, catalog });
+			await expect(store.snapshot()).rejects.toThrow('aggregate_schema_mismatch');
+		} finally { await rm(directory, { recursive: true, force: true }); }
 	});
 });

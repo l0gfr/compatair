@@ -106,12 +106,15 @@
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
     Header always set X-Content-Type-Options "nosniff"
 	Header always set X-Frame-Options "DENY"
+	Header onsuccess unset X-XSS-Protection
+	Header always unset X-XSS-Protection
+	Header always set X-XSS-Protection "0"
 	Header always set X-Permitted-Cross-Domain-Policies "none"
 	Header always set Cross-Origin-Opener-Policy "same-origin"
 	Header always set Cross-Origin-Resource-Policy "same-origin"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
 	Header always set Permissions-Policy "camera=(self), microphone=(), geolocation=(), payment=()"
-	Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data: blob:; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-src 'none'; frame-ancestors 'none'; form-action 'self'; media-src 'none'; worker-src 'none'; upgrade-insecure-requests" "expr=%{REQUEST_URI} !~ m#^/stats/#"
+	Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data: blob:; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; frame-src 'none'; frame-ancestors 'none'; form-action 'self'; media-src 'none'; worker-src 'none'; upgrade-insecure-requests" "expr=%{REQUEST_URI} !~ m#^/stats/#"
 	Header onsuccess unset Cache-Control
 	Header always unset Cache-Control
 	Header always set Cache-Control "no-cache"

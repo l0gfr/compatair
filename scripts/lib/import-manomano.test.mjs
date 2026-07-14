@@ -33,8 +33,9 @@ describe('import du flux ManoMano Awin', () => {
 
 	it('renouvelle une offre avec un identifiant stable et une collecte plus récente', () => {
 		const csv = 'product_id,product_name,price,deep_link,image_url,mpn\nMM-1,Compresseur,149.90,https://www.awin1.com/pclick.php?p=42&a=7&m=17547,https://cdn.example.test/mm-1.webp,4010393';
-		const first = importManoManoFeed({ bytes: Buffer.from(csv), fileName: 'first.csv', catalog, collectedAt: '2026-07-13T20:00:00.000Z' });
-		const renewed = importManoManoFeed({ bytes: Buffer.from(csv), fileName: 'renewed.csv', catalog, collectedAt: '2026-07-15T08:00:00.000Z' });
+		const now = Date.parse('2026-07-15T09:00:00.000Z');
+		const first = importManoManoFeed({ bytes: Buffer.from(csv), fileName: 'first.csv', catalog, collectedAt: '2026-07-13T20:00:00.000Z', now });
+		const renewed = importManoManoFeed({ bytes: Buffer.from(csv), fileName: 'renewed.csv', catalog, collectedAt: '2026-07-15T08:00:00.000Z', now });
 
 		expect(renewed.offers[0].id).toBe(first.offers[0].id);
 		expect(renewed.offers[0].collectedAt).toBe('2026-07-15T08:00:00.000Z');
@@ -51,5 +52,12 @@ describe('import du flux ManoMano Awin', () => {
 		const csv = 'product_id,product_name,price,deep_link,image_url,mpn\nMM-ALIAS,Compresseur,149.90,https://www.awin1.com/pclick.php?p=42&a=7&m=17547,https://cdn.example.test/mm-alias.webp,OLD-4010-393';
 		const result = importManoManoFeed({ bytes: Buffer.from(csv), fileName: 'manomano.csv', catalog: normalizedCatalog, collectedAt: '2026-07-14T09:00:00.000Z' });
 		expect(result.offers[0]).toMatchObject({ productId: 'compressor-a', merchantProductId: 'MM-ALIAS' });
+	});
+
+	it('refuse une date de collecte future au-delà de la tolérance d’horloge', () => {
+		const csv = 'product_id,product_name,price,deep_link,image_url,mpn\nMM-1,Compresseur,149.90,https://www.awin1.com/pclick.php?p=42&m=17547,https://cdn.example.test/mm.webp,4010393';
+		const now = Date.parse('2026-07-15T09:00:00.000Z');
+		const future = new Date(now + 10 * 60 * 1_000).toISOString();
+		expect(() => importManoManoFeed({ bytes: Buffer.from(csv), fileName: 'manomano.csv', catalog, collectedAt: future, now })).toThrow('Date de collecte future interdite');
 	});
 });

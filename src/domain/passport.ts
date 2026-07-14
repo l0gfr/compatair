@@ -3,6 +3,9 @@ import type { Compressor, ToolProfile } from './catalog';
 import { interpolateFad } from './compatibility';
 import { CALCULATION_VERSION, sizeConfiguration, sizingInputSchema, type SizingResult } from './sizing';
 
+function isHttpsUrl(value: string) { try { return new URL(value).protocol === 'https:'; } catch { return false; } }
+const httpsUrlSchema = z.url().max(4_096).refine(isHttpsUrl, 'URL HTTPS obligatoire');
+
 export const PASSPORT_SCHEMA_VERSION = '1.0.0' as const;
 export const PASSPORT_ENVELOPE_SCHEMA_VERSION = '2.0.0' as const;
 
@@ -67,7 +70,7 @@ export type PassportReport = {
 
 const passportSourceSchema = z.object({
 	id: z.string().min(1).max(160), productId: z.string().min(1).max(160), productLabel: z.string().min(1).max(240),
-	label: z.string().min(1).max(500), url: z.url(), retrievedAt: z.iso.date(), confidence: z.enum(['A', 'B', 'C', 'D']),
+	label: z.string().min(1).max(500), url: httpsUrlSchema, retrievedAt: z.iso.date(), confidence: z.enum(['A', 'B', 'C', 'D']),
 });
 
 const sizingResultSnapshotSchema = z.object({

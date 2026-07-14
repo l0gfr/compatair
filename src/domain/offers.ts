@@ -1,34 +1,39 @@
 import { z } from 'zod';
 
+function isHttpsUrl(value: string) { try { return new URL(value).protocol === 'https:'; } catch { return false; } }
+const httpsUrlSchema = z.url().max(4_096).refine(isHttpsUrl, 'URL HTTPS obligatoire');
+const MAXIMUM_CLOCK_SKEW_MS = 5 * 60 * 1_000;
+
 export const merchantSchema = z.object({
 	id: z.string().regex(/^[a-z0-9-]+$/),
-	name: z.string().min(1),
-	allowedHosts: z.array(z.string().min(1)).min(1),
+	name: z.string().min(1).max(160),
+	allowedHosts: z.array(z.string().regex(/^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)(?:\.(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?))+$/)).min(1).max(20),
 	trackingAdvertiserId: z.string().min(1).optional(),
 });
 
 export const offerSchema = z.object({
 	id: z.string().regex(/^[a-z0-9-]+$/),
-	productId: z.string().min(1),
-	merchantId: z.string().min(1),
-	merchantProductId: z.string().min(1),
-	productName: z.string().min(1),
-	imageUrl: z.url().refine((value) => value.startsWith('https://'), 'Image HTTPS obligatoire'),
-	url: z.url().refine((value) => value.startsWith('https://'), 'HTTPS obligatoire'),
-	priceEur: z.number().nonnegative(),
-	shippingEur: z.number().nonnegative().optional(),
+	productId: z.string().regex(/^[a-z0-9-]{1,160}$/),
+	merchantId: z.string().regex(/^[a-z0-9-]{1,160}$/),
+	merchantProductId: z.string().min(1).max(500),
+	productName: z.string().min(1).max(500),
+	imageUrl: httpsUrlSchema,
+	url: httpsUrlSchema,
+	priceEur: z.number().nonnegative().max(1_000_000),
+	shippingEur: z.number().nonnegative().max(1_000_000).optional(),
 	availability: z.enum(['in_stock', 'out_of_stock', 'preorder', 'unknown']),
 	collectedAt: z.iso.datetime(),
-	sourceId: z.string().min(1),
+	sourceId: z.string().min(1).max(500),
 	sourceChecksum: z.string().regex(/^[a-f0-9]{64}$/),
-	identifiers: z.object({ ean: z.string().regex(/^\d{8,14}$/).optional(), gtin: z.string().regex(/^\d{8,14}$/).optional(), mpn: z.string().min(1).optional() }),
+	identifiers: z.object({ ean: z.string().regex(/^\d{8,14}$/).optional(), gtin: z.string().regex(/^\d{8,14}$/).optional(), mpn: z.string().min(1).max(200).optional() }),
 });
 
 export type Merchant = z.infer<typeof merchantSchema>;
 export type Offer = z.infer<typeof offerSchema>;
 
 export function isFreshOffer(offer: Offer, now = new Date(), maximumAgeHours = 48) {
-	return now.getTime() - new Date(offer.collectedAt).getTime() <= maximumAgeHours * 3_600_000;
+	const age = now.getTime() - new Date(offer.collectedAt).getTime();
+	return age >= -MAXIMUM_CLOCK_SKEW_MS && age <= maximumAgeHours * 3_600_000;
 }
 
 export function assertAllowedOfferUrl(offer: Offer, merchants: Merchant[]) {

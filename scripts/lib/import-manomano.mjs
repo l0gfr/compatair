@@ -3,6 +3,7 @@ import { gunzipSync } from 'node:zlib';
 import { basename } from 'node:path';
 
 const AWIN_ADVERTISER_ID = '17547';
+const MAXIMUM_CLOCK_SKEW_MS = 5 * 60 * 1_000;
 
 function normalizeHeader(value) { return value.trim().toLowerCase().replace(/^\uFEFF/, ''); }
 function normalizeGtin(value) { const raw = String(value ?? '').trim(); if (!/^[0-9\s-]+$/.test(raw)) return undefined; const digits = raw.replace(/[\s-]/g, ''); return /^\d{8,14}$/.test(digits) ? digits : undefined; }
@@ -103,7 +104,7 @@ function validateImage(value) {
 	return url.toString();
 }
 
-export function importManoManoFeed({ bytes, fileName, catalog, collectedAt }) {
+export function importManoManoFeed({ bytes, fileName, catalog, collectedAt, now = Date.now() }) {
 	if (bytes.length > 100 * 1024 * 1024) throw new Error('Flux compressé supérieur à 100 Mio.');
 	const checksum = createHash('sha256').update(bytes).digest('hex');
 	const payload = /\.gz$/i.test(fileName) ? gunzipSync(bytes, { maxOutputLength: 250 * 1024 * 1024 }) : bytes;
@@ -111,7 +112,9 @@ export function importManoManoFeed({ bytes, fileName, catalog, collectedAt }) {
 	const parsed = parseDelimited(payload.toString('utf8'));
 	const headers = parsed[0] ? Object.keys(parsed[0].row) : [];
 	for (const field of ['product_id', 'product_name', 'price', 'deep_link', 'image_url']) if (!headers.includes(field)) throw new Error(`Colonne Awin absente : ${field}`);
-	if (Number.isNaN(Date.parse(collectedAt))) throw new Error('Date de collecte invalide.');
+	const collectedAtTime = Date.parse(collectedAt);
+	if (Number.isNaN(collectedAtTime)) throw new Error('Date de collecte invalide.');
+	if (collectedAtTime > now + MAXIMUM_CLOCK_SKEW_MS) throw new Error('Date de collecte future interdite.');
 	const indexes = indexCatalog(catalog); const offers = []; const issues = []; const matches = []; const unmatchedSamples = []; const seen = new Set(); let unmatched = 0;
 	for (const { line, row } of parsed) {
 		const merchantProductId = row.product_id;

@@ -11,8 +11,8 @@ if [[ ! "$release_id" =~ ^[0-9a-f]{40}$ ]]; then
 	exit 2
 fi
 
-if [[ ! "$deploy_root" =~ ^/var/www/html/[A-Za-z0-9._/-]+$ ]]; then
-	echo "DEPLOY_PATH must be a dedicated directory below /var/www/html" >&2
+if [[ "$deploy_root" != "/var/www/html/compatair" ]]; then
+	echo "DEPLOY_PATH must be /var/www/html/compatair" >&2
 	exit 2
 fi
 

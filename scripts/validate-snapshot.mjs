@@ -24,7 +24,13 @@ if (snapshot.tools) {
 }
 if (snapshot.offers) {
 	const now = Date.now();
-	for (const offer of snapshot.offers) { if (now - Date.parse(offer.collectedAt) > 48 * 3_600_000) errors.push(`offre périmée : ${offer.id}`); if (!offer.url.startsWith('https://')) errors.push(`URL non HTTPS : ${offer.id}`); }
+	for (const offer of snapshot.offers) {
+		const collectedAt = Date.parse(offer.collectedAt);
+		if (!Number.isFinite(collectedAt) || collectedAt > now + 5 * 60 * 1_000) errors.push(`date de collecte invalide ou future : ${offer.id}`);
+		else if (now - collectedAt > 48 * 3_600_000) errors.push(`offre périmée : ${offer.id}`);
+		let url; try { url = new URL(offer.url); } catch {}
+		if (url?.protocol !== 'https:') errors.push(`URL non HTTPS : ${offer.id}`);
+	}
 }
 if (snapshot.pairs) {
 	if (!/^[a-f0-9]{64}$/.test(snapshot.verdictVersion ?? '')) errors.push('verdictVersion absent');

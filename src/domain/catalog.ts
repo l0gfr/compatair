@@ -1,10 +1,13 @@
 import { z } from 'zod';
 
 export const confidenceSchema = z.enum(['A', 'B', 'C', 'D']);
+function isHttpsUrl(value: string) { try { return new URL(value).protocol === 'https:'; } catch { return false; } }
+export const httpsUrlSchema = z.url().max(4_096).refine(isHttpsUrl, 'URL HTTPS obligatoire');
+const productIdSchema = z.string().regex(/^[a-z0-9-]{1,160}$/);
 
 export const evidenceSchema = z.object({
 	id: z.string().min(1),
-	sourceUrl: z.url(),
+	sourceUrl: httpsUrlSchema,
 	sourceLabel: z.string().min(1),
 	sourceType: z.enum(['manufacturer', 'manual', 'merchant', 'measured']),
 	retrievedAt: z.iso.date(),
@@ -13,9 +16,9 @@ export const evidenceSchema = z.object({
 });
 
 const productImageSchema = z.object({
-	src: z.string().startsWith('/images/products/'),
+	src: z.string().regex(/^\/images\/products\/[a-z0-9][a-z0-9._-]*\.(?:avif|gif|jpe?g|png|webp)$/),
 	alt: z.string().min(1),
-	sourceUrl: z.url(),
+	sourceUrl: httpsUrlSchema,
 	sourceLabel: z.string().min(1),
 });
 
@@ -26,7 +29,7 @@ const editorialSchema = z.object({
 });
 
 export const compressorSchema = z.object({
-	id: z.string().min(1),
+	id: productIdSchema,
 	slug: z.string().regex(/^[a-z0-9-]+$/),
 	brand: z.string().min(1),
 	model: z.string().min(1),
@@ -65,7 +68,7 @@ export const compressorSchema = z.object({
 });
 
 const toolBaseSchema = z.object({
-	id: z.string().min(1),
+	id: productIdSchema,
 	slug: z.string().regex(/^[a-z0-9-]+$/),
 	category: z.string().min(1),
 	label: z.string().min(1),

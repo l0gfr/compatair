@@ -43,7 +43,11 @@ describe('CompatAir Apache CSP', () => {
 	it('sets browser isolation and disables script attributes', () => {
 		expect(config).toContain('Cross-Origin-Opener-Policy "same-origin"');
 		expect(config).toContain('Cross-Origin-Resource-Policy "same-origin"');
+		expect(config).toContain('Header onsuccess unset X-XSS-Protection');
+		expect(config).toContain('Header always unset X-XSS-Protection');
+		expect(config).toContain('X-XSS-Protection "0"');
 		expect(config).toContain("script-src-attr 'none'");
+		expect(config).toContain("base-uri 'none'");
 		expect(config).toContain("img-src 'self' data: blob:");
 		expect(config).toContain('Permissions-Policy "camera=(self)');
 	});

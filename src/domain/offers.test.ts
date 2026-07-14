@@ -24,4 +24,14 @@ describe('sécurité des liens d’offre', () => {
 		expect(isFreshOffer(offer, new Date('2026-07-15T20:00:00.000Z'))).toBe(true);
 		expect(isFreshOffer(offer, new Date('2026-07-15T20:00:00.001Z'))).toBe(false);
 	});
+
+	it('refuse une date de collecte située artificiellement dans le futur', () => {
+		const offer = offerSchema.parse({ ...base, collectedAt: '2026-07-15T21:00:00.000Z', url: 'https://www.awin1.com/pclick.php?p=1&a=2&m=17547' });
+		expect(isFreshOffer(offer, new Date('2026-07-15T20:00:00.000Z'))).toBe(false);
+	});
+
+	it('refuse les URL non HTTPS et les montants hors contrat', () => {
+		expect(() => offerSchema.parse({ ...base, url: 'http://www.awin1.com/pclick.php?p=1&m=17547' })).toThrow();
+		expect(() => offerSchema.parse({ ...base, priceEur: Number.MAX_VALUE, url: 'https://www.awin1.com/pclick.php?p=1&m=17547' })).toThrow();
+	});
 });

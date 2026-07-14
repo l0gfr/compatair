@@ -173,7 +173,7 @@ jobs:
         run: |
           [[ "$DEPLOY_HOST" =~ ^[A-Za-z0-9.-]+$ ]]
           [[ "$DEPLOY_KNOCK_PORTS" =~ ^[0-9]{1,5}(\ [0-9]{1,5})*$ ]]
-          [[ "$DEPLOY_PATH" =~ ^/var/www/html/[A-Za-z0-9._/-]+$ ]]
+          [[ "$DEPLOY_PATH" == "/var/www/html/compatair" ]]
           remote="${DEPLOY_USER}@${DEPLOY_HOST}"
           remote_dir="/home/${DEPLOY_USER}/compatair-deploy"
 
