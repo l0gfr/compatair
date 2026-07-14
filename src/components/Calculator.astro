@@ -44,13 +44,28 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 	</form>
 
 	<div class="calculator-output" aria-live="polite" data-calculator-output hidden>
+		<div class="report-header" aria-hidden="true"><div><strong>CompatAir</strong><span>Dossier de dimensionnement pneumatique</span></div><div><span>Moteur {CALCULATION_VERSION}</span><span data-report-date></span></div></div>
 		<div class="result-summary"><div><p class="eyebrow">Verdict</p><span class="verdict-large" data-verdict></span></div><strong data-required-flow></strong><p data-result-context></p></div>
+		<div class="result-section configuration-summary" data-configuration-summary></div>
 		<div class="result-metrics" data-result-metrics></div>
 		<div class="result-section" data-evaluated-result></div>
 		<div class="result-section"><h3>Accessoires et raccordement</h3><ul data-accessories></ul></div>
-		<div class="result-section"><h3>Compresseurs documentés</h3><p>Classement technique à la pression maximale demandée. Une donnée absente reste une donnée insuffisante.</p><div class="result-list" data-result-list></div></div>
+		<div class="result-section recommendation-section"><p class="eyebrow">Aide à la décision</p><h3>Recommandations prioritaires</h3><p data-result-coverage></p><div class="priority-list" data-priority-list></div></div>
+		<details class="result-section result-inventory" open>
+			<summary>Explorer les {compressors.length} compresseurs documentés</summary>
+			<p>Classement par verdict, couverture de la marge, confiance documentaire puis proximité du besoin. Une donnée absente reste une donnée insuffisante.</p>
+			<div class="result-filters" role="group" aria-label="Filtrer les compresseurs par verdict">
+				<button type="button" data-result-filter="all" aria-pressed="true">Tous <span data-result-count="all">0</span></button>
+				<button type="button" data-result-filter="continuous" aria-pressed="false">Continu <span data-result-count="continuous">0</span></button>
+				<button type="button" data-result-filter="intermittent" aria-pressed="false">Intermittent <span data-result-count="intermittent">0</span></button>
+				<button type="button" data-result-filter="insufficient_data" aria-pressed="false">Données insuffisantes <span data-result-count="insufficient_data">0</span></button>
+				<button type="button" data-result-filter="incompatible" aria-pressed="false">Incompatible <span data-result-count="incompatible">0</span></button>
+			</div>
+			<p class="filter-empty" data-filter-empty hidden>Aucun compresseur dans cette catégorie.</p>
+			<div class="result-list" data-result-list></div>
+		</details>
 		<div class="result-section"><h3>Hypothèses et avertissements</h3><ul data-assumptions></ul></div>
-		<div class="share-row"><button class="button" type="button" data-share>Copier l’URL de simulation</button><span role="status" data-share-status></span></div>
+		<div class="share-row"><button class="button" type="button" data-share>Copier l’URL</button><button class="button" type="button" data-copy-summary>Copier la synthèse</button><button class="button primary" type="button" data-print>Imprimer ou enregistrer en PDF</button><span role="status" data-share-status></span></div>
 		<p class="calculator-note">La configuration est encodée dans le fragment de l’URL. Elle n’est ni envoyée ni enregistrée sur le serveur.</p>
 	</div>
 </div>
@@ -77,7 +92,7 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 <script>
 	import { compressors, tools } from '../data/catalog';
 	import { interpolateFad } from '../domain/compatibility';
-	import { sizeConfiguration, type SizingResult } from '../domain/sizing';
+	import { CALCULATION_VERSION, sizeConfiguration, type SizingResult } from '../domain/sizing';
 
 	const root = document.querySelector<HTMLElement>('[data-calculator]');
 	const form = root?.querySelector<HTMLFormElement>('[data-calculator-form]');
@@ -85,10 +100,14 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 	const template = document.querySelector<HTMLTemplateElement>('[data-demand-template]');
 	const output = root?.querySelector<HTMLElement>('[data-calculator-output]');
 	const list = root?.querySelector<HTMLElement>('[data-result-list]');
+	const priorityList = root?.querySelector<HTMLElement>('[data-priority-list]');
 	const evaluated = root?.querySelector<HTMLElement>('[data-evaluated-result]');
 	const labels = { continuous: 'Compatible en continu', intermittent: 'Compatible par intermittence', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' } as const;
 	const rank = { continuous: 0, intermittent: 1, insufficient_data: 2, incompatible: 3 } as const;
+	type Candidate = { compressor: (typeof compressors)[number]; result: SizingResult; availableFadLpm?: number; marginCovered: boolean };
 	let demandIndex = 0;
+	let currentFilter: keyof typeof labels | 'all' = 'all';
+	let lastSummary = '';
 
 	function resultLabel(result: SizingResult) {
 		if (result.flowBasis === 'documented-continuous') return labels[result.verdict];
@@ -230,13 +249,74 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 		target.replaceChildren(...messages.map((message) => { const li = document.createElement('li'); li.textContent = message; return li; }));
 	}
 
+	function demandDescription(demand: NonNullable<ReturnType<typeof configFromForm>>['demands'][number]) {
+		const tool = tools.find((item) => item.id === demand.id)!;
+		if (demand.model === 'fixed-flow') return `${demand.quantity} × ${tool.label} · fréquence ${Math.round(demand.dutyFactor * 100)} % · ${demand.flowLpm} L/min à ${demand.pressureBar} bar`;
+		if (demand.model === 'per-action') { const actionLabel = tool.demandModel === 'per-action' ? tool.actionLabel : 'action'; return `${demand.quantity} × ${tool.label} · ${demand.actionsPerMinute.toLocaleString('fr-FR')} ${actionLabel}/min · ${demand.litersPerAction.toLocaleString('fr-FR')} L/${actionLabel}`; }
+		return `${demand.quantity} × ${tool.label} · ${demand.volumeLiters.toLocaleString('fr-FR')} L de ${demand.initialPressureBar} à ${demand.targetPressureBar} bar en ${(demand.targetMinutes * 60).toLocaleString('fr-FR', { maximumFractionDigits: 0 })} s`;
+	}
+
+	function renderConfiguration(config: NonNullable<ReturnType<typeof configFromForm>>) {
+		const target = root?.querySelector<HTMLElement>('[data-configuration-summary]'); if (!target) return;
+		const heading = document.createElement('h3'); heading.textContent = 'Configuration analysée';
+		const items = document.createElement('ul'); items.className = 'configuration-items';
+		items.replaceChildren(...config.demands.map((demand) => { const li = document.createElement('li'); li.textContent = demandDescription(demand); return li; }));
+		const details = [
+			config.mode === 'simultaneous' ? 'Outils simultanés' : 'Outils successifs',
+			`session ${config.sessionMinutes} min`,
+			`marge ${Math.round((config.safetyMargin ?? .25) * 100)} %`,
+			...(config.hoseLengthMeters !== undefined ? [`flexible ${config.hoseLengthMeters} m`] : []),
+			...(config.hoseInnerDiameterMm !== undefined ? [`diamètre intérieur ${config.hoseInnerDiameterMm} mm`] : []),
+		];
+		const meta = document.createElement('p'); meta.className = 'configuration-meta'; meta.textContent = details.join(' · ');
+		target.replaceChildren(heading, items, meta);
+		const reportDate = root?.querySelector<HTMLElement>('[data-report-date]');
+		if (reportDate) reportDate.textContent = new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeStyle: 'short' }).format(new Date());
+	}
+
 	function renderResultCard(compressor: (typeof compressors)[number], result: SizingResult) {
-		const article = document.createElement('article'); article.className = `result-card verdict-${result.verdict}`;
+		const article = document.createElement('article'); article.className = `result-card verdict-${result.verdict}`; article.dataset.verdict = result.verdict;
 		const head = document.createElement('div'); head.className = 'result-card-head';
 		const title = document.createElement('h4'); const link = document.createElement('a'); link.href = `/compresseurs/${compressor.slug}/`; link.textContent = `${compressor.brand} ${compressor.model}`; title.append(link);
 		const badge = document.createElement('span'); badge.className = 'verdict-badge'; badge.textContent = resultLabel(result); head.append(title, badge);
 		const detail = document.createElement('p'); detail.textContent = result.verdict === 'insufficient_data' ? `FAD non vérifiable à ${result.requiredPressureBar} bar · confiance ${compressor.confidence}.` : `${interpolateFad(compressor, result.requiredPressureBar)?.toFixed(0) ?? 'FAD inconnu'} L/min documentés · cuve ${compressor.tankLiters} L · confiance ${compressor.confidence}.`;
 		article.append(head, detail); return article;
+	}
+
+	function setResultFilter(filter: keyof typeof labels | 'all') {
+		currentFilter = filter;
+		for (const button of root?.querySelectorAll<HTMLButtonElement>('[data-result-filter]') ?? []) button.setAttribute('aria-pressed', String(button.dataset.resultFilter === filter));
+		let visible = 0;
+		for (const card of list?.querySelectorAll<HTMLElement>('.result-card') ?? []) { card.hidden = filter !== 'all' && card.dataset.verdict !== filter; if (!card.hidden) visible += 1; }
+		const empty = root?.querySelector<HTMLElement>('[data-filter-empty]'); if (empty) empty.hidden = visible > 0;
+	}
+
+	function renderCandidateResults(candidates: Candidate[]) {
+		if (!list || !priorityList) return;
+		const counts: Record<keyof typeof labels, number> = { continuous: 0, intermittent: 0, incompatible: 0, insufficient_data: 0 };
+		for (const candidate of candidates) counts[candidate.result.verdict] += 1;
+		for (const [key, count] of Object.entries({ all: candidates.length, ...counts })) root?.querySelector<HTMLElement>(`[data-result-count="${key}"]`)?.replaceChildren(String(count));
+		const coverage = root?.querySelector<HTMLElement>('[data-result-coverage]');
+		if (coverage) coverage.textContent = `${counts.continuous} en continu · ${counts.intermittent} par intermittence · ${counts.insufficient_data} en données insuffisantes · ${counts.incompatible} incompatibles.`;
+		const priority = candidates.filter(({ result }) => result.verdict === 'continuous' || result.verdict === 'intermittent').slice(0, 3);
+		if (priority.length) priorityList.replaceChildren(...priority.map(({ compressor, result }) => renderResultCard(compressor, result)));
+		else { const message = document.createElement('p'); message.className = 'decision-empty'; message.textContent = 'Aucun compresseur du catalogue ne produit actuellement un verdict positif documenté pour cette configuration. Les données insuffisantes ne sont pas transformées en recommandations.'; priorityList.replaceChildren(message); }
+		list.replaceChildren(...candidates.map(({ compressor, result }) => renderResultCard(compressor, result)));
+		setResultFilter(currentFilter);
+	}
+
+	function buildSummary(config: NonNullable<ReturnType<typeof configFromForm>>, result: SizingResult, candidates: Candidate[]) {
+		const priority = candidates.filter(({ result: candidateResult }) => candidateResult.verdict === 'continuous' || candidateResult.verdict === 'intermittent').slice(0, 3);
+		return [
+			`CompatAir : dossier de dimensionnement, moteur ${CALCULATION_VERSION}`,
+			...config.demands.map(demandDescription),
+			`Organisation : ${config.mode === 'simultaneous' ? 'simultanée' : 'successive'} · marge ${Math.round((config.safetyMargin ?? .25) * 100)} %`,
+			`Besoin : ${result.peakFlowLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min à ${result.requiredPressureBar.toLocaleString('fr-FR')} bar`,
+			`FAD recommandé : ${result.recommendedFadLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min`,
+			priority.length ? 'Recommandations documentées :' : 'Recommandation : aucune référence concluante dans le catalogue actuel.',
+			...priority.map(({ compressor, result: candidateResult }) => `- ${compressor.brand} ${compressor.model} : ${resultLabel(candidateResult)}`),
+			`Simulation : ${location.href}`,
+		].join('\n');
 	}
 
 	function encodeConfig(config: ReturnType<typeof configFromForm>) {
@@ -288,11 +368,19 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 			root?.querySelector<HTMLElement>('[data-required-flow]')!.replaceChildren(`${result.recommendedFadLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min recommandés`);
 			const hasInflation = config.demands.some((demand) => demand.model === 'inflation');
 			root?.querySelector<HTMLElement>('[data-result-context]')!.replaceChildren(result.flowBasis === 'documented-continuous' ? `${Math.round(result.peakFlowLpm)} L/min de pointe, ${Math.round(result.averageFlowLpm)} L/min en moyenne, à ${result.requiredPressureBar} bar.` : hasInflation ? `${result.peakFlowLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min de besoin moyen idéalisé à ${result.requiredPressureBar.toLocaleString('fr-FR')} bar. Le temps réel et les restrictions ne sont pas modélisés.` : `${result.peakFlowLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min de besoin moyen calculé à ${result.requiredPressureBar.toLocaleString('fr-FR')} bar. La pointe instantanée n’est pas modélisée.`);
-			renderMetrics(result); renderWarnings(result); renderAccessories(config);
+			renderConfiguration(config); renderMetrics(result); renderWarnings(result); renderAccessories(config);
 			if (config.selectedCompressor) { const title = document.createElement('h3'); title.textContent = 'Compresseur vérifié'; const p = document.createElement('p'); p.textContent = resultLabel(result); evaluated.replaceChildren(title, p); } else evaluated.replaceChildren();
 
-			const candidates = compressors.map((compressor) => ({ compressor, result: sizeConfiguration({ ...config, compressor: { maxPressureBar: compressor.maxPressureBar, availableFadLpm: interpolateFad(compressor, base.requiredPressureBar), tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle } } as any) })).sort((a, b) => rank[a.result.verdict] - rank[b.result.verdict] || (interpolateFad(b.compressor, base.requiredPressureBar) ?? 0) - (interpolateFad(a.compressor, base.requiredPressureBar) ?? 0));
-			list.replaceChildren(...candidates.map(({ compressor, result }) => renderResultCard(compressor, result)));
+			const confidenceRank = { A: 0, B: 1, C: 2, D: 3 } as const;
+			const candidates: Candidate[] = compressors.map((compressor) => {
+				const availableFadLpm = interpolateFad(compressor, base.requiredPressureBar);
+				const candidateResult = sizeConfiguration({ ...config, compressor: { maxPressureBar: compressor.maxPressureBar, availableFadLpm, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle } } as any);
+				return { compressor, result: candidateResult, availableFadLpm, marginCovered: availableFadLpm !== undefined && availableFadLpm >= base.recommendedFadLpm };
+			}).sort((a, b) => rank[a.result.verdict] - rank[b.result.verdict]
+				|| Number(b.marginCovered) - Number(a.marginCovered)
+				|| confidenceRank[a.compressor.confidence] - confidenceRank[b.compressor.confidence]
+				|| Math.abs((a.availableFadLpm ?? Number.POSITIVE_INFINITY) - base.recommendedFadLpm) - Math.abs((b.availableFadLpm ?? Number.POSITIVE_INFINITY) - base.recommendedFadLpm));
+			currentFilter = 'all'; renderCandidateResults(candidates); lastSummary = buildSummary(config, result, candidates);
 			window.history.replaceState(null, '', `${window.location.pathname}#config=${encodeConfig(config)}`);
 			if (navigator.sendBeacon) navigator.sendBeacon('/events', new Blob([JSON.stringify({ event: 'calculator_used' })], { type: 'application/json' }));
 			output.hidden = false; output.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
@@ -304,5 +392,8 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 		}
 	});
 
+	for (const button of root?.querySelectorAll<HTMLButtonElement>('[data-result-filter]') ?? []) button.addEventListener('click', () => setResultFilter(button.dataset.resultFilter as keyof typeof labels | 'all'));
+	root?.querySelector('[data-print]')?.addEventListener('click', () => window.print());
+	root?.querySelector('[data-copy-summary]')?.addEventListener('click', async () => { if (!lastSummary) return; await navigator.clipboard.writeText(lastSummary); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'Synthèse copiée'; });
 	root?.querySelector('[data-share]')?.addEventListener('click', async () => { const config = configFromForm(); if (!config) return; const url = `${location.origin}${location.pathname}#config=${encodeConfig(config)}`; await navigator.clipboard.writeText(url); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'URL copiée'; });
 </script>

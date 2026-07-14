@@ -280,7 +280,25 @@ h3 { font-weight: 560; }
 .result-section > p, .result-section li { color: var(--muted); font-size: .88rem; }
 .result-card h4 { margin: 0; font-size: 1rem; }
 .result-card.verdict-intermittent { border-left-color: #d38b32; }
-.share-row { display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem; }
+.report-header { display: none; }
+.configuration-summary { padding: 1rem; border: 1px solid var(--line); border-radius: .85rem; background: #f4f7f1; }
+.configuration-summary h3 { margin-top: 0; }
+.configuration-items { display: grid; gap: .45rem; margin: .75rem 0; padding-left: 1.2rem; }
+.configuration-meta { margin: .75rem 0 0; padding-top: .75rem; border-top: 1px solid var(--line); color: var(--ink) !important; font-weight: 750; }
+.recommendation-section { padding: 1.2rem; border: 1px solid #aec7b8; border-radius: 1rem; background: linear-gradient(145deg, #edf5ef, #fbfcf8); }
+.recommendation-section h3 { margin-top: 0; font-size: 1.45rem; }
+.priority-list { display: grid; gap: .75rem; margin-top: 1rem; }
+.priority-list .result-card { background: white; box-shadow: var(--shadow-sm); }
+.decision-empty { margin: .8rem 0 0; padding: .9rem; border: 1px solid #d9b69e; border-radius: .75rem; color: #76401e !important; background: #fff7ee; }
+.result-inventory { padding-top: .25rem; border-top: 1px solid var(--line); }
+.result-inventory summary { color: var(--ink); font-family: var(--font-display); font-size: 1.25rem; font-weight: 650; cursor: pointer; }
+.result-filters { display: flex; flex-wrap: wrap; gap: .45rem; margin: 1rem 0; }
+.result-filters button { padding: .48rem .65rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); background: white; font: 750 .72rem/1.2 inherit; cursor: pointer; }
+.result-filters button[aria-pressed="true"] { border-color: var(--brand); color: white; background: var(--brand); }
+.result-filters span { display: inline-grid; min-width: 1.25rem; margin-left: .2rem; padding: .08rem .25rem; border-radius: 999px; color: inherit; background: rgba(128,128,128,.14); }
+.filter-empty { padding: .8rem; border-radius: .7rem; background: var(--paper); }
+.share-row { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; margin-top: 1.5rem; }
+.share-row .button { min-height: 42px; padding: .65rem .8rem; font-size: .76rem; }
 .share-row span { color: var(--brand); font-size: .82rem; font-weight: 800; }
 .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
 .catalog-layout { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 1.5rem; align-items: start; }
@@ -534,4 +552,30 @@ h3 { font-weight: 560; }
 	.editorial-main { --article-gutter: 1.35rem; }
 	.article-head { padding-block: 1.75rem; }
 	.guide-compatible-results .link-cards { grid-template-columns: 1fr; }
+}
+
+@page { size: A4; margin: 14mm; }
+@media print {
+	:root { color-scheme: light; }
+	body { color: #101813; background: white; font-size: 10pt; }
+	.site-header, .site-footer, .page-hero, .calculator-form, .share-row, .calculator-note, .result-inventory { display: none !important; }
+	.section, .calculator-section { padding: 0 !important; }
+	.container { width: 100% !important; max-width: none !important; }
+	.calculator, .calculator-v2 { display: block; }
+	.calculator-output { padding: 0; border: 0; border-radius: 0; background: white; box-shadow: none; }
+	.report-header { display: flex; justify-content: space-between; gap: 2rem; margin-bottom: 1rem; padding-bottom: .8rem; border-bottom: 2px solid #143426; }
+	.report-header > div { display: grid; gap: .15rem; }
+	.report-header > div:last-child { text-align: right; }
+	.report-header strong { color: #143426; font: 700 18pt/1 var(--font-display); }
+	.report-header span { color: #53655b; font-size: 8pt; }
+	.result-summary strong { font-size: 20pt; }
+	.verdict-large { color: #143426; background: #e7f0e9; }
+	.result-section, .result-metrics, .result-card { break-inside: avoid; }
+	.result-metrics { grid-template-columns: repeat(4, 1fr); gap: .35rem; }
+	.result-metrics > div, .configuration-summary, .recommendation-section { padding: .55rem; border-color: #bcc8c0; background: white; }
+	.result-section { margin-top: 1rem; }
+	.priority-list { grid-template-columns: 1fr; gap: .4rem; }
+	.priority-list .result-card { padding: .55rem; box-shadow: none; }
+	.result-card a { color: #101813; text-decoration: none; }
+	a[href]::after { content: none !important; }
 }

@@ -8,6 +8,7 @@
 - catalogue de 27 compresseurs filtrable et paginé, fiches sourcées, courbes FAD, limites, confiance et alternatives comparables ;
 - catalogue de 12 outils, taxonomie de 12 catégories, fiches sourcées et exigences non documentées signalées ;
 - calculateur multi-outils avec simultanéité, fréquence, durée, flexible, modèle existant et saisie personnalisée ;
+- dossier de dimensionnement local avec synthèse de configuration, recommandations prioritaires, filtres par verdict, copie texte et export imprimable en PDF ;
 - verdicts `continuous`, `intermittent`, `incompatible` et `insufficient_data` ;
 - conversions, interpolation bornée, débit de pointe, débit moyen, réserve de cuve, récupération conditionnelle et version des formules ;
 - recherche globale, comparateur de deux ou trois modèles, pages par marque, pages par usage et pages de compatibilité limitées aux données concluantes ;
@@ -37,4 +38,4 @@
 
 ## Réservé après lancement
 
-Les comptes, alertes de prix, historique détaillé des prix, export PDF, sauvegarde serveur de configurations, marché belge ou suisse, API commerciale, leads installateurs et stockage D1 ou KV restent volontairement hors MVP.
+Les comptes, alertes de prix, historique détaillé des prix, sauvegarde serveur de configurations, marché belge ou suisse, API commerciale, leads installateurs et stockage D1 ou KV restent volontairement hors MVP.
