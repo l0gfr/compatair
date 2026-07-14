@@ -12,6 +12,7 @@ Environment=MCP_PORT=8787
 Environment=MCP_ALLOWED_ORIGINS=https://compatair.fr,https://www.compatair.fr
 Environment=COMPAT_AIR_CATALOG=/var/www/html/compatair/current/data/catalog.json
 Environment=COMPAT_AIR_OFFERS=/var/www/html/compatair/current/data/offers.json
+Environment=COMPAT_AIR_VERDICTS=/var/www/html/compatair/current/data/verdicts.json
 Environment=COMPAT_AIR_DEMAND_AGGREGATES=/var/lib/compatair/demand-aggregates.json
 StateDirectory=compatair
 StateDirectoryMode=0700

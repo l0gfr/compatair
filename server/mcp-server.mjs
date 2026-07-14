@@ -1,6 +1,7 @@
 import { createServer } from 'node:http';
 import { realpathSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
+import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createMcpCore, ENGINE_VERSION, PROTOCOL_VERSION } from './mcp-core.mjs';
 import { createDemandAggregateStore, DEMAND_EVENT_SCHEMA_VERSION, validateDemandEvent } from './demand-aggregates.mjs';
@@ -50,6 +51,10 @@ export function allowedOfferRedirect(offer) {
 export function isMainModule(entryPath, moduleUrl) {
 	if (!entryPath) return false;
 	try { return realpathSync(entryPath) === realpathSync(fileURLToPath(moduleUrl)); } catch { return false; }
+}
+
+export function resolveVerdictSnapshotPath(catalogPath, configuredPath) {
+	return configuredPath || resolve(dirname(catalogPath), 'verdicts.json');
 }
 
 function createRateLimiter() {
@@ -215,7 +220,7 @@ async function start() {
 	if (!Number.isInteger(port) || port < 1 || port > 65_535) throw new Error('MCP_PORT invalide.');
 	const catalogPath = process.env.COMPAT_AIR_CATALOG ?? new URL('../dist/data/catalog.json', import.meta.url).pathname;
 	const offersPath = process.env.COMPAT_AIR_OFFERS ?? new URL('../dist/data/offers.json', import.meta.url).pathname;
-	const verdictsPath = process.env.COMPAT_AIR_VERDICTS ?? new URL('../dist/data/verdicts.json', import.meta.url).pathname;
+	const verdictsPath = resolveVerdictSnapshotPath(catalogPath, process.env.COMPAT_AIR_VERDICTS);
 	const allowedOrigins = new Set((process.env.MCP_ALLOWED_ORIGINS ?? 'https://compatair.fr,https://www.compatair.fr').split(',').map((item) => item.trim()).filter(Boolean));
 	const demandAggregatePath = process.env.COMPAT_AIR_DEMAND_AGGREGATES || undefined;
 	const catalog = JSON.parse(await readFile(catalogPath, 'utf8'));

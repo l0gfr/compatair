@@ -1,9 +1,23 @@
 import { describe, expect, it } from 'vitest';
-import { mkdtempSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { spawn } from 'node:child_process';
+import { copyFileSync, mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { createServer } from 'node:net';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { allowedOfferRedirect, clientAddress, createCompatAirServer, isMainModule, parseOfferId } from './mcp-server.mjs';
+import { allowedOfferRedirect, clientAddress, createCompatAirServer, isMainModule, parseOfferId, resolveVerdictSnapshotPath } from './mcp-server.mjs';
+
+async function reservePort() {
+	const server = createServer();
+	await new Promise<void>((resolve, reject) => {
+		server.once('error', reject);
+		server.listen(0, '127.0.0.1', resolve);
+	});
+	const address = server.address();
+	if (!address || typeof address === 'string') throw new Error('Port de test indisponible.');
+	await new Promise<void>((resolve, reject) => server.close((error) => error ? reject(error) : resolve()));
+	return address.port;
+}
 
 describe('MCP HTTP boundary helpers', () => {
 	it('rejects malformed and non-canonical affiliate identifiers without throwing', () => {
@@ -94,5 +108,54 @@ describe('MCP HTTP boundary helpers', () => {
 			symlinkSync(releaseEntry, currentEntry);
 			expect(isMainModule(currentEntry, pathToFileURL(releaseEntry).href)).toBe(true);
 		} finally { rmSync(directory, { recursive: true, force: true }); }
+	});
+
+	it('resolves verdicts next to the configured production catalog', () => {
+		expect(resolveVerdictSnapshotPath('/var/www/html/compatair/current/data/catalog.json')).toBe('/var/www/html/compatair/current/data/verdicts.json');
+		expect(resolveVerdictSnapshotPath('/catalog.json', '/srv/verdicts.json')).toBe('/srv/verdicts.json');
+	});
+
+	it('starts from the production release layout without a legacy verdict environment variable', async () => {
+		const directory = mkdtempSync(join(tmpdir(), 'compatair-release-'));
+		const release = join(directory, 'releases', 'a'.repeat(40));
+		const current = join(directory, 'current');
+		mkdirSync(join(release, '_server'), { recursive: true });
+		mkdirSync(join(release, 'data'), { recursive: true });
+		for (const file of ['mcp-server.mjs', 'mcp-core.mjs', 'demand-aggregates.mjs']) copyFileSync(join(process.cwd(), 'server', file), join(release, '_server', file));
+		writeFileSync(join(release, 'data', 'catalog.json'), JSON.stringify({ catalogVersion: 'catalog-test', compressors: [], tools: [] }));
+		writeFileSync(join(release, 'data', 'verdicts.json'), JSON.stringify({ catalogVersion: 'catalog-test', verdictVersion: 'verdict-test', calculationVersion: 'calculation-test', pairs: [] }));
+		writeFileSync(join(release, 'data', 'offers.json'), JSON.stringify({ offers: [], snapshotVersion: 'empty' }));
+		symlinkSync(release, current);
+		const port = await reservePort();
+		const child = spawn(process.execPath, [join(current, '_server', 'mcp-server.mjs')], {
+			env: {
+				...process.env,
+				MCP_HOST: '127.0.0.1',
+				MCP_PORT: String(port),
+				COMPAT_AIR_CATALOG: join(current, 'data', 'catalog.json'),
+				COMPAT_AIR_OFFERS: join(current, 'data', 'offers.json'),
+				COMPAT_AIR_VERDICTS: '',
+				COMPAT_AIR_DEMAND_AGGREGATES: '',
+			},
+			stdio: ['ignore', 'ignore', 'pipe'],
+		});
+		let stderr = '';
+		child.stderr.on('data', (chunk) => { stderr += chunk.toString(); });
+		try {
+			let health;
+			for (let attempt = 0; attempt < 50; attempt++) {
+				if (child.exitCode !== null) throw new Error(`Le serveur MCP a quitté prématurément : ${stderr}`);
+				try {
+					const response = await fetch(`http://127.0.0.1:${port}/health`);
+					if (response.ok) { health = await response.json(); break; }
+				} catch {}
+				await new Promise((resolve) => setTimeout(resolve, 50));
+			}
+			expect(health).toMatchObject({ status: 'ok', catalogVersion: 'catalog-test', verdictVersion: 'verdict-test' });
+		} finally {
+			child.kill('SIGTERM');
+			await new Promise<void>((resolve) => child.once('exit', () => resolve()));
+			rmSync(directory, { recursive: true, force: true });
+		}
 	});
 });
