@@ -2,12 +2,16 @@
 title: "Compresseur triphasé ou monophasé : comment choisir pour un atelier ?"
 description: "Alimentation, débit restitué, puissance et installation : les critères vérifiables pour choisir un compresseur triphasé ou monophasé en atelier."
 pubDate: 2026-07-14
+updatedDate: 2026-07-14
 category: "Choisir"
-readingTime: 8
+readingTime: 10
 featured: false
 sources:
   - https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html
   - https://at.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/mega-400-50-w-601536000-kompressor.html
+  - https://shop.abacaircompressors.com/en-US/products/4116000871/atf-s-4-100-10-400350-ce
+  - https://shop.abacaircompressors.com/en-GB/products/4116001436/atl-55-270-10-400350-ce
+  - https://shop.abacaircompressors.com/en-FR/products/4116001463/atf-55-270d-10-400350yd-ce
   - https://www.enedis.fr/faq/compteur-electrique/comment-choisir-un-sous-compteur-electrique
   - https://www.promotelec.com/professionnels/fiche/la-difference-entre-le-monophase-et-le-triphase/
 ---
@@ -35,6 +39,18 @@ Ces repères ne remplacent pas la plaque du compresseur. Un moteur annoncé pour
 L’alimentation électrique décrit ce que demande le moteur. Elle ne dit pas combien d’air le compresseur restitue à la pression de l’outil. Le Mega 580-200 D distingue officiellement 510 L/min aspirés, 395 L/min de remplissage et 360 L/min effectifs à 8,8 bar.
 
 Seule la dernière valeur est un point de [débit restitué](/guides/debit-restitue-fad-vs-debit-aspire/) exploitable pour un verdict à cette pression. Elle ne devient pas automatiquement une courbe à 6,2 ou 7 bar.
+
+## Trois autres triphasés documentés à 10 bar
+
+Le catalogue comprend désormais trois références ABAC en 400 V triphasé. Elles couvrent des configurations différentes, mais leur FAD n’est publié qu’à 10 bar.
+
+| Référence | Cuve | Lubrification | FAD publié | Cycle |
+|---|---:|---|---:|---:|
+| [ABAC ATF-S 4 100](/compresseurs/abac-atf-s-4-100/) | 90 L selon la table technique | sans huile | 170 L/min à 10 bar | 100 % |
+| [ABAC ATL 5.5 270](/compresseurs/abac-atl-5-5-270/) | 270 L | lubrifié | 504 L/min à 10 bar | 100 % |
+| [ABAC ATF 5.5 270D](/compresseurs/abac-atf-5-5-270d/) | 270 L | sans huile avec sécheur | 492 L/min à 10 bar | 100 % |
+
+Les valeurs de 504 et 492 L/min ne valident pas automatiquement un outil à 6,3 ou 7 bar. Il faudrait un second point constructeur, ou un point publié à la pression exacte, pour produire ce verdict. La page ABAC de l’ATF-S 4 100 présente en outre une divergence de volume : son résumé affiche 100 litres, tandis que la table technique affiche 90 litres. CompatAir retient la table et rend cette limite visible sur la fiche.
 
 ## Un modèle monophasé peut déjà fournir un débit élevé
 
@@ -69,11 +85,14 @@ Le guide [24, 50 ou 90 litres](/guides/choisir-volume-cuve-24-50-90-litres/) exp
 - contrôler le cycle de service, la ventilation, le bruit, le poids et l’encombrement ;
 - ne pas acheter un triphasé sur la seule base du débit aspiré.
 
-Consultez la [fiche du Mega 580-200 D](/compresseurs/metabo-mega-580-200-d/), la [fiche du Mega 400-50 W](/compresseurs/metabo-mega-400-50-w/) ou ouvrez le [comparateur](/comparateur/#ids=metabo-mega-400-50-w,metabo-mega-580-200-d) pour afficher les données côte à côte.
+Consultez la [fiche du Mega 580-200 D](/compresseurs/metabo-mega-580-200-d/), la [fiche de l’ATL 5.5 270](/compresseurs/abac-atl-5-5-270/) ou ouvrez le [comparateur triphasé](/comparateur/#ids=metabo-mega-580-200-d,abac-atl-5-5-270,abac-atf-5-5-270d) pour afficher les données côte à côte.
 
 ## Sources
 
 - [Metabo, Mega 580-200 D triphasé](https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html)
 - [Metabo, Mega 400-50 W monophasé](https://at.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/mega-400-50-w-601536000-kompressor.html)
+- [ABAC, ATF-S 4 100 triphasé](https://shop.abacaircompressors.com/en-US/products/4116000871/atf-s-4-100-10-400350-ce)
+- [ABAC, ATL 5.5 270 triphasé](https://shop.abacaircompressors.com/en-GB/products/4116001436/atl-55-270-10-400350-ce)
+- [ABAC, ATF 5.5 270D triphasé](https://shop.abacaircompressors.com/en-FR/products/4116001463/atf-55-270d-10-400350yd-ce)
 - [Enedis, choix d’un sous-compteur monophasé ou triphasé](https://www.enedis.fr/faq/compteur-electrique/comment-choisir-un-sous-compteur-electrique)
 - [Promotelec, différences entre monophasé et triphasé](https://www.promotelec.com/professionnels/fiche/la-difference-entre-le-monophase-et-le-triphase/)

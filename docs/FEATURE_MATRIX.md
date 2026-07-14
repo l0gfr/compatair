@@ -5,7 +5,7 @@
 ## Livré dans le dépôt
 
 - site statique responsive, navigation, recherche, fil d’Ariane, pages 404 et 410, correction des données et partage des simulations ;
-- catalogue de 24 compresseurs filtrable et paginé, fiches sourcées, courbes FAD, limites, confiance et alternatives comparables ;
+- catalogue de 27 compresseurs filtrable et paginé, fiches sourcées, courbes FAD, limites, confiance et alternatives comparables ;
 - catalogue de 12 outils, taxonomie de 12 catégories, fiches sourcées et exigences non documentées signalées ;
 - calculateur multi-outils avec simultanéité, fréquence, durée, flexible, modèle existant et saisie personnalisée ;
 - verdicts `continuous`, `intermittent`, `incompatible` et `insufficient_data` ;

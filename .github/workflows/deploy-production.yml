@@ -48,6 +48,9 @@ jobs:
       - name: Check generated HTML and internal links
         run: node scripts/audit-dist.mjs
 
+      - name: Lighthouse performance, accessibility and SEO
+        run: pnpm lighthouse
+
       - name: Package immutable release
         run: |
           install -D -m 644 server/mcp-core.mjs dist/_server/mcp-core.mjs

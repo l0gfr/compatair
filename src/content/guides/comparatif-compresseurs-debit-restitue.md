@@ -1,6 +1,6 @@
 ---
-title: "Comparatif de 24 compresseurs : ce que leurs débits restitués permettent réellement de valider"
-description: "Comparaison factuelle de vingt-quatre références Einhell, Metabo et ABAC selon les points de débit publiés, sans classement fondé sur le débit aspiré."
+title: "Comparatif de 27 compresseurs : ce que leurs débits restitués permettent réellement de valider"
+description: "Comparaison factuelle de vingt-sept références Einhell, Metabo et ABAC selon les points de débit publiés, sans classement fondé sur le débit aspiré."
 pubDate: 2026-07-13
 updatedDate: 2026-07-14
 category: "Choisir"
@@ -31,18 +31,21 @@ sources:
   - https://de.metabo.com/de/maschinen/druckluft/kompressoren/baustellen-kompressoren/power-180-5-w-of-601531000-kompressor.html
   - https://at.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/mega-400-50-w-601536000-kompressor.html
   - https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html
+  - https://shop.abacaircompressors.com/en-US/products/4116000871/atf-s-4-100-10-400350-ce
+  - https://shop.abacaircompressors.com/en-GB/products/4116001436/atl-55-270-10-400350-ce
+  - https://shop.abacaircompressors.com/en-FR/products/4116001463/atf-55-270d-10-400350yd-ce
 ---
 
 Un comparatif de compresseurs peut produire une conclusion fausse tout en reprenant des chiffres exacts. Il suffit de classer les modèles par débit aspiré, de mélanger des débits mesurés à des pressions différentes ou de considérer qu’une cuve plus grande signifie un débit supérieur.
 
-Ce dossier compare les [vingt-quatre compresseurs actuellement documentés par CompatAir](/compresseurs/). Il ne cherche pas à désigner un vainqueur universel. Il établit ce que les fiches constructeur permettent de valider pour cinq outils précis.
+Ce dossier compare les [vingt-sept compresseurs actuellement documentés par CompatAir](/compresseurs/). Il ne cherche pas à désigner un vainqueur universel. Il établit ce que les fiches constructeur permettent de valider pour cinq outils précis.
 
 <svg viewBox="0 0 760 350" role="img" aria-labelledby="compare-title compare-desc" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:1.5rem">
-  <title id="compare-title">Niveau de documentation des vingt-quatre compresseurs</title><desc id="compare-desc">Treize compresseurs possèdent plusieurs points de débit, dix un seul point et un aucun point de débit restitué.</desc>
+  <title id="compare-title">Niveau de documentation des vingt-sept compresseurs</title><desc id="compare-desc">Treize compresseurs possèdent plusieurs points de débit, treize un seul point et un aucun point de débit restitué.</desc>
   <rect width="760" height="350" rx="22" fill="#10281e"/><text x="38" y="45" fill="#d3eb56" font-size="15" font-weight="700">AVANT DE COMPARER LES PERFORMANCES</text>
   <text x="38" y="90" fill="white" font-size="23" font-weight="700">Combien de points FAD sont publiés ?</text>
   <rect x="38" y="124" width="430" height="48" rx="10" fill="#19704f"/><text x="58" y="155" fill="white" font-size="17" font-weight="700">Plusieurs points : 13 modèles</text>
-  <rect x="38" y="190" width="340" height="48" rx="10" fill="#d3eb56"/><text x="58" y="221" fill="#10281e" font-size="17" font-weight="700">Un seul point : 10 modèles</text>
+  <rect x="38" y="190" width="430" height="48" rx="10" fill="#d3eb56"/><text x="58" y="221" fill="#10281e" font-size="17" font-weight="700">Un seul point : 13 modèles</text>
   <rect x="38" y="256" width="86" height="48" rx="10" fill="#e39a5e"/><text x="58" y="287" fill="#10281e" font-size="17" font-weight="700">0 : 1</text>
   <text x="505" y="142" fill="#9fb3a8" font-size="14">Une courbe à plusieurs points</text><text x="505" y="166" fill="#9fb3a8" font-size="14">permet une interpolation bornée.</text><text x="505" y="221" fill="#9fb3a8" font-size="14">Un point isolé ne devient pas</text><text x="505" y="245" fill="#9fb3a8" font-size="14">une courbe complète.</text>
 </svg>
@@ -77,6 +80,9 @@ Les valeurs ci-dessous sont reprises des sources constructeur liées dans les fi
 | Metabo Power 180-5 W OF | 5 L | 8 bar | 75 à 6,4 bar | A |
 | Metabo Mega 400-50 W | 50 L | 10 bar | 260 à 8 bar | A |
 | Metabo Mega 580-200 D | 200 L | 11 bar | 360 à 8,8 bar | A |
+| ABAC ATF-S 4 100 | 90 L | 10 bar | 170 à 10 bar | A |
+| ABAC ATL 5.5 270 | 270 L | 10 bar | 504 à 10 bar | A |
+| ABAC ATF 5.5 270D | 270 L | 10 bar | 492 à 10 bar | A |
 
 Ce tableau ne place pas automatiquement 220 L/min à 8 bar au-dessus de 200 L/min à 7 bar pour un outil travaillant à 6,3 bar. Les conditions de comparaison ne sont pas identiques.
 
@@ -99,9 +105,9 @@ Les douze courbes Einhell publiées jusqu’à 7 bar permettent une interpolatio
 
 Ces nombres sont des interpolations linéaires, pas de nouveaux points constructeur. Ils sont compris entre deux valeurs publiées. La distinction entre [débit restitué et débit aspiré](/guides/debit-restitue-fad-vs-debit-aspire/) reste indispensable. Le TC-AC 190 OF Set s’arrête à 4 bar dans la source consultée ; CompatAir ne prolonge pas sa courbe jusqu’à 6,3 bar.
 
-## Pourquoi dix modèles restent souvent en données insuffisantes
+## Pourquoi treize modèles restent souvent en données insuffisantes
 
-Metabo publie des points uniques à 6,4 bar pour les Basic 220-24 OF Silent, Basic 250-24 W, Basic 250-50 W, Basic 160-6 W OF et Power 180-5 W OF. Les Mega 350-100 W, Mega 400-50 W et Mega 580-200 D sont documentés respectivement à 8, 8 et 8,8 bar. ABAC publie 150 L/min à 10 bar pour les deux ATF-S.
+Metabo publie des points uniques à 6,4 bar pour les Basic 220-24 OF Silent, Basic 250-24 W, Basic 250-50 W, Basic 160-6 W OF et Power 180-5 W OF. Les Mega 350-100 W, Mega 400-50 W et Mega 580-200 D sont documentés respectivement à 8, 8 et 8,8 bar. ABAC publie un point à 10 bar pour les ATF-S 3 24, ATF-S 3 50, ATF-S 4 100, ATL 5.5 270 et ATF 5.5 270D.
 
 Ces valeurs sont utiles et précisément rattachées à une pression. Elles ne permettent toutefois pas de dessiner la courbe complète. CompatAir exige une correspondance exacte lorsqu’un seul point existe. Une demande à 6,3 ou 7 bar produit donc « données insuffisantes » plutôt qu’une extrapolation.
 
@@ -121,7 +127,7 @@ La ponceuse Einhell TC-PE 150 demande 100 L/min à 6,3 bar. Sept modèles du tab
 
 Les deux modèles Silent de 50 litres et le TC-AC 270/50/8 dépassent le besoin nominal, mais aucun n’atteint le seuil interne CompatAir de 125 L/min. Ils restent classés compatibles selon le besoin publié, avec avertissement sur la marge. Les quatre autres modèles dépassent aussi ce seuil de marge.
 
-Cinq courbes restent sous 100 L/min à 6,3 bar. Les douze autres références manquent d’un point comparable selon la règle stricte du moteur.
+Cinq courbes restent sous 100 L/min à 6,3 bar. Les quinze autres références manquent d’un point comparable selon la règle stricte du moteur.
 
 ## Résultats pour deux meuleuses
 
@@ -130,10 +136,10 @@ La TC-PA 50 demande 113 L/min à 6,3 bar. La TC-PP 220 demande 128 L/min à la m
 Le TE-AC 270/50 Silent Plus, avec environ 102 L/min à 6,3 bar, ne couvre aucune des deux meuleuses malgré ses 270 L/min aspirés. L’exemple montre pourquoi le débit aspiré ne doit pas être le critère de classement.
 
 <svg viewBox="0 0 760 360" role="img" aria-labelledby="matrix-title matrix-desc" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:1.5rem">
-  <title id="matrix-title">Matrice des verdicts documentés</title><desc id="matrix-desc">Quatre compresseurs couvrent avec marge la ponceuse et les deux meuleuses à 6,3 bar. Trois autres couvrent uniquement la ponceuse sans marge de 25 pour cent. Aucun modèle ne couvre le pistolet de sablage au point étudié.</desc>
+  <title id="matrix-title">Matrice des verdicts documentés</title><desc id="matrix-desc">Quatre compresseurs couvrent avec marge la ponceuse et les deux meuleuses à 6,3 bar. Trois autres couvrent uniquement la ponceuse sans marge de 25 pour cent. Quinze références sont non comparables à cette pression. Aucun modèle ne couvre le pistolet de sablage au point étudié.</desc>
   <rect width="760" height="360" rx="22" fill="#eef2e9"/><text x="38" y="45" fill="#143426" font-size="22" font-weight="700">Verdicts issus des points comparables</text>
   <g font-family="Manrope, sans-serif" font-size="13"><text x="250" y="88" fill="#56685e">Ponceuse</text><text x="360" y="88" fill="#56685e">Meuleuse 113</text><text x="485" y="88" fill="#56685e">Meuleuse 128</text><text x="620" y="88" fill="#56685e">Sablage 300</text>
-  <text x="38" y="135" fill="#143426" font-weight="700">4 modèles avec marge</text><text x="38" y="195" fill="#143426" font-weight="700">3 modèles sans marge</text><text x="38" y="255" fill="#143426" font-weight="700">5 courbes sous le besoin</text><text x="38" y="315" fill="#143426" font-weight="700">12 cas non comparables</text></g>
+  <text x="38" y="135" fill="#143426" font-weight="700">4 modèles avec marge</text><text x="38" y="195" fill="#143426" font-weight="700">3 modèles sans marge</text><text x="38" y="255" fill="#143426" font-weight="700">5 courbes sous le besoin</text><text x="38" y="315" fill="#143426" font-weight="700">15 cas non comparables</text></g>
   <g><rect x="245" y="110" width="88" height="34" rx="17" fill="#19704f"/><rect x="365" y="110" width="88" height="34" rx="17" fill="#19704f"/><rect x="493" y="110" width="88" height="34" rx="17" fill="#19704f"/><rect x="625" y="110" width="88" height="34" rx="17" fill="#b95d26"/>
   <rect x="245" y="170" width="88" height="34" rx="17" fill="#d3eb56"/><rect x="365" y="170" width="88" height="34" rx="17" fill="#b95d26"/><rect x="493" y="170" width="88" height="34" rx="17" fill="#b95d26"/><rect x="625" y="170" width="88" height="34" rx="17" fill="#b95d26"/>
   <rect x="245" y="230" width="88" height="34" rx="17" fill="#b95d26"/><rect x="365" y="230" width="88" height="34" rx="17" fill="#b95d26"/><rect x="493" y="230" width="88" height="34" rx="17" fill="#b95d26"/><rect x="625" y="230" width="88" height="34" rx="17" fill="#b95d26"/>
@@ -201,3 +207,6 @@ Enfin, vérifiez la marge, le cycle de service, le réseau, la cuve et les crit�
 - [Metabo, Power 180-5 W OF](https://de.metabo.com/de/maschinen/druckluft/kompressoren/baustellen-kompressoren/power-180-5-w-of-601531000-kompressor.html)
 - [Metabo, Mega 400-50 W](https://at.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/mega-400-50-w-601536000-kompressor.html)
 - [Metabo, Mega 580-200 D](https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html)
+- [ABAC, ATF-S 4 100](https://shop.abacaircompressors.com/en-US/products/4116000871/atf-s-4-100-10-400350-ce)
+- [ABAC, ATL 5.5 270](https://shop.abacaircompressors.com/en-GB/products/4116001436/atl-55-270-10-400350-ce)
+- [ABAC, ATF 5.5 270D](https://shop.abacaircompressors.com/en-FR/products/4116001463/atf-55-270d-10-400350yd-ce)

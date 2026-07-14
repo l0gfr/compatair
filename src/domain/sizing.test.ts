@@ -46,6 +46,20 @@ describe('compatibility engine', () => {
 		expect(interpolateFad(compressor!, 7)).toBeUndefined();
 	});
 
+	it('keeps the new ABAC triphase FAD values bound to 10 bar', () => {
+		const expectedAtTenBar = new Map([
+			['abac-atf-s-4-100', 170],
+			['abac-atl-5-5-270', 504],
+			['abac-atf-5-5-270d', 492],
+		]);
+		for (const [id, fad] of expectedAtTenBar) {
+			const compressor = compressors.find((item) => item.id === id);
+			expect(compressor).toBeDefined();
+			expect(interpolateFad(compressor!, 10)).toBe(fad);
+			expect(interpolateFad(compressor!, 7)).toBeUndefined();
+		}
+	});
+
 	it('does not reuse an 8 bar compressor point for a 6.2 bar ratchet', () => {
 		const compressor = compressors.find((item) => item.id === 'metabo-mega-400-50-w');
 		const tool = tools.find((item) => item.id === 'metabo-drs-68-set');
@@ -61,7 +75,7 @@ describe('compatibility engine', () => {
 	});
 
 	it('exposes the expanded sourced catalog', () => {
-		expect(compressors).toHaveLength(24);
+		expect(compressors).toHaveLength(27);
 		expect(tools).toHaveLength(12);
 	});
 
