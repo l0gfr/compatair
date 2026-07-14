@@ -9,11 +9,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 		<h2>14 juillet 2026</h2>
 		<ul>
-			<li><strong>Compteur des comparatifs.</strong> La mention fixe « 24 références documentées » a été remplacée par un compteur dérivé du catalogue au moment du build. Le catalogue contient alors 40 compresseurs.</li>
-			<li><strong>Budget JavaScript.</strong> La promesse « scripts inférieurs à 35 Ko compressés par page » a été retirée car le calculateur la dépassait. Un contrôle automatique bloque désormais tout build dont les scripts client externes dépassent 50 Ko gzip sur une page.</li>
+			<li><strong>Compteur des comparatifs.</strong> La mention fixe « 24 références documentées » a été remplacée par un compteur actualisé automatiquement lors de la publication. Le catalogue contient alors 40 compresseurs.</li>
+			<li><strong>Poids du JavaScript.</strong> La promesse « scripts inférieurs à 35 Ko compressés par page » a été retirée car le calculateur la dépassait. Un contrôle automatique bloque désormais toute publication dont les scripts chargés dépassent 50 Ko compressés sur une page.</li>
 			<li><strong>Cohérence des verdicts.</strong> Le verdict compresseur-outil appelle désormais le même moteur de dimensionnement que le calculateur. Le cycle de service documenté du compresseur est donc traité de la même façon sur les fiches, les couples et le calculateur.</li>
-			<li><strong>Dates de vérification.</strong> Les métadonnées des fiches et des couples proviennent maintenant de la date la plus récente des sources liées, et non d’une date recopiée dans le gabarit.</li>
-			<li><strong>Titres de pages.</strong> Le pipeline borne les titres de document à 60 caractères sans modifier le titre éditorial visible dans la page.</li>
+			<li><strong>Dates de vérification.</strong> Les informations techniques des fiches et des comparaisons proviennent maintenant de la date la plus récente des sources liées, et non d’une date recopiée dans le modèle de page.</li>
+			<li><strong>Titres de pages.</strong> Le contrôle de publication limite les titres destinés aux moteurs de recherche à 60 caractères sans modifier le titre éditorial visible dans la page.</li>
 		</ul>
 
 		<h2>Règle de publication</h2>

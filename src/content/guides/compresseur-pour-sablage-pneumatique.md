@@ -24,7 +24,7 @@ Le sablage pneumatique est un bon test pour repérer les comparaisons trompeuses
 
 ## Le premier seuil est 300 L/min à 7 bar
 
-Pour valider un fonctionnement continu, CompatAir demande un débit restitué documenté au moins égal aux 300 L/min publiés par Metabo. Le seuil de 375 L/min ajoute la marge interne de 25 %. Cette marge n’est pas une valeur du fabricant.
+Pour valider un fonctionnement continu, CompatAir demande un débit restitué documenté au moins égal aux 300 L/min publiés par Metabo. Le seuil de 375 L/min ajoute la [marge indicative](/glossaire/#marge-compatair) de 25 %. Cette marge n’est pas une valeur du fabricant.
 
 Le raccord de 1/4 pouce publié pour l’outil ne renseigne pas à lui seul la perte de charge du flexible. Il faut encore connaître le diamètre intérieur, la longueur et les raccords utilisés.
 
@@ -38,7 +38,7 @@ La cuve peut fournir temporairement la différence tant que sa pression baisse. 
 
 Le [Metabo Mega 350-100 W](https://fr.metabo.com/fr/machines/air-comprime/compresseurs/compresseurs-d-atelier-mobiles/mega-350-100-w-601538000-compresseur.html) annonce 320 L/min aspirés, mais 220 L/min effectifs à 8 bar. Les 320 L/min ne valident donc pas le SSP 1000. Le point effectif est inférieur au besoin et publié à une autre pression.
 
-Le [tableau dynamique des verdicts](/quel-compresseur-pour/pistolet-sablage-metabo-ssp-1000/) recalcule les modèles compatibles à chaque build. Il faut retenir uniquement les références dont la fiche publie au moins 300 L/min à 7 bar ; un classement construit avec le débit aspiré serait trompeur.
+Le [tableau dynamique des verdicts](/quel-compresseur-pour/pistolet-sablage-metabo-ssp-1000/) recalcule les modèles compatibles à chaque publication. Il faut retenir uniquement les références dont la fiche publie au moins 300 L/min à 7 bar ; un classement construit avec le débit aspiré serait trompeur.
 
 ## Checklist avant achat
 

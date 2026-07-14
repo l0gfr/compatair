@@ -6,8 +6,8 @@ export const BAROMETER_FRESHNESS_DAYS = 365;
 export const BAROMETER_MINIMUM_SAMPLE = 10;
 
 export const transparencyCriteria = [
-	{ id: 'multiPressureFad', dimension: 'manufacturerTransparency', label: 'FAD à plusieurs pressions', description: 'Part des compresseurs avec au moins deux points de débit restitué documentés dans le corpus constructeur.' },
-	{ id: 'dutyCycle', dimension: 'manufacturerTransparency', label: 'Cycle de service publié', description: 'Part des compresseurs dont le cycle de service figure dans le corpus constructeur.' },
+	{ id: 'multiPressureFad', dimension: 'manufacturerTransparency', label: 'FAD à plusieurs pressions', description: 'Part des compresseurs avec au moins deux points de débit restitué dans la documentation du constructeur.' },
+	{ id: 'dutyCycle', dimension: 'manufacturerTransparency', label: 'Cycle de service publié', description: 'Part des compresseurs dont le cycle de service figure dans la documentation du constructeur.' },
 	{ id: 'officialSource', dimension: 'manufacturerTransparency', label: 'Source technique accessible', description: 'Part des compresseurs reliés à une source constructeur ou à une notice accessible.' },
 	{ id: 'acousticValue', dimension: 'manufacturerTransparency', label: 'Valeur acoustique publiée', description: 'Part des compresseurs avec une valeur acoustique documentée. Le protocole de mesure n’est pas encore noté.' },
 	{ id: 'identifiers', dimension: 'compatAirCoverage', label: 'Identifiants couverts', description: 'Part des compresseurs pour lesquels le catalogue CompatAir contient à la fois le MPN et l’EAN. Ce critère ne note pas le constructeur.' },
@@ -58,7 +58,7 @@ export function createTransparencyBarometer(compressors: Compressor[], published
 		scope: 'Corpus des compresseurs présents dans le catalogue CompatAir, avec score constructeur séparé de la couverture CompatAir',
 		minimumSampleForRanking: BAROMETER_MINIMUM_SAMPLE,
 		rankingPublished,
-		limitations: ['Les dates disponibles sont des dates de consultation par CompatAir, pas nécessairement des dates de publication constructeur.', 'Le corpus est un corpus de convenance et non un échantillon aléatoire du marché ; la plage publiée décrit seulement l’étendue observée des quatre critères.', 'Les segments décrivent la taille de cuve ; ils ne garantissent pas encore un échantillonnage identique des gammes et usages.', 'Les fabricants peuvent signaler une source ou demander une correction via la page de contact.'],
+		limitations: ['Les dates disponibles sont des dates de consultation par CompatAir, pas nécessairement des dates de publication constructeur.', 'Les références étudiées ont été sélectionnées pour construire le catalogue et ne constituent pas un échantillon aléatoire du marché. La plage publiée décrit seulement l’écart observé entre les quatre critères.', 'Les catégories décrivent la taille de cuve. Elles ne garantissent pas encore une représentation identique des gammes et des usages.', 'Les fabricants peuvent signaler une source ou demander une correction via la page de contact.'],
 		criteria: transparencyCriteria,
 		brands: rows.map((row) => ({ rank: rankingPublished && row.eligibleForRanking ? ++officialRank : null, status: rankingPublished && row.eligibleForRanking ? 'official' : 'provisional', ...row })),
 	};

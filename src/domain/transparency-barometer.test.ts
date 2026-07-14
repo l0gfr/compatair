@@ -26,6 +26,6 @@ describe('manufacturer documentation transparency barometer', () => {
 		expect(barometer.brands.reduce((total, row) => total + row.sampleSize, 0)).toBe(compressors.length);
 		expect(barometer.barometerVersion).toMatch(/^[a-f0-9]{64}$/);
 		expect(barometer.schemaVersion).toBe('3.0.0');
-		expect(barometer.limitations.join(' ')).toContain('non un échantillon aléatoire');
+		expect(barometer.limitations.join(' ')).toContain('ne constituent pas un échantillon aléatoire');
 	});
 });

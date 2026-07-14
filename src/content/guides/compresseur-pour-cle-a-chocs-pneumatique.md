@@ -16,7 +16,7 @@ Le bon critère n’est pas le volume de la cuve pris isolément. Il faut compar
 La notice de la [clé à chocs Einhell TC-PW 340](https://www.einhell.fr/p/4138950-tc-pw-340/) indique une consommation d’air de **142 L/min**, une pression de travail maximale de **6,3 bar**, un diamètre intérieur de flexible de **9 mm** et une recommandation de cuve d’au moins **50 litres**.
 
 <svg viewBox="0 0 760 270" role="img" aria-labelledby="cle-title cle-desc" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:1.5rem">
-  <title id="cle-title">Seuil nominal et marge CompatAir pour la TC-PW 340</title><desc id="cle-desc">Le besoin constructeur est de 142 litres par minute. La marge interne de 25 pour cent porte le seuil indicatif à 177,5 litres par minute.</desc>
+  <title id="cle-title">Besoin publié et marge indicative pour la TC-PW 340</title><desc id="cle-desc">Le besoin constructeur est de 142 litres par minute. La marge indicative de 25 pour cent porte le seuil à 177,5 litres par minute.</desc>
   <rect width="760" height="270" rx="18" fill="#eef2e9"/><text x="38" y="45" fill="#102018" font-size="22" font-weight="700">TC-PW 340 à 6,3 bar</text>
   <text x="38" y="93" fill="#35473d" font-size="15">Consommation publiée</text><rect x="38" y="108" width="426" height="34" rx="7" fill="#19704f"/><text x="480" y="132" fill="#102018" font-size="18" font-weight="700">142 L/min</text>
   <text x="38" y="183" fill="#35473d" font-size="15">Seuil CompatAir, marge 25 %</text><rect x="38" y="198" width="533" height="34" rx="7" fill="#d3eb56"/><text x="587" y="222" fill="#102018" font-size="18" font-weight="700">177,5 L/min</text>
@@ -24,7 +24,7 @@ La notice de la [clé à chocs Einhell TC-PW 340](https://www.einhell.fr/p/41389
 
 ## Le seuil à rechercher
 
-Un compresseur doit d’abord documenter au moins 142 L/min restitués à 6,3 bar pour couvrir le besoin nominal publié. CompatAir affiche séparément une marge interne réglable. Avec 25 %, le calcul est `142 × 1,25 = 177,5 L/min`.
+Un compresseur doit d’abord documenter au moins 142 L/min restitués à 6,3 bar pour couvrir le besoin nominal publié. CompatAir affiche séparément une [marge indicative](/glossaire/#marge-compatair) réglable. Avec 25 %, le calcul est `142 × 1,25 = 177,5 L/min`.
 
 Cette majoration n’est pas une exigence d’Einhell. Elle rend visible une réserve de dimensionnement. La consommation constructeur reste 142 L/min.
 

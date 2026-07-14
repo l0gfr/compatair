@@ -125,8 +125,8 @@ export function createPassportPdf(report: PassportReport, passportUrl: string) {
 	addBullet(`Traitement d'air : ${filtrationLabel(report.configuration.filtration)}.`);
 
 	addHeading('Marges');
-	addBullet(`Marge CompatAir demandée : ${Math.round(report.configuration.safetyMargin * 100)} %.`);
-	addBullet(report.nominalMarginPercent === undefined ? 'Marge nominale disponible : non calculable faute de FAD à la pression requise.' : `Marge nominale du compresseur sur le besoin : ${formatNumber(report.nominalMarginPercent)} %.`);
+	addBullet(`Marge indicative demandée : ${Math.round(report.configuration.safetyMargin * 100)} %.`);
+	addBullet(report.nominalMarginPercent === undefined ? 'Marge disponible sur le besoin publié : non calculable faute de FAD à la pression requise.' : `Marge disponible du compresseur sur le besoin publié : ${formatNumber(report.nominalMarginPercent)} %.`);
 	addBullet(report.compatAirMarginCovered === undefined ? 'Couverture de la marge CompatAir : indéterminable.' : `Couverture de la marge CompatAir : ${report.compatAirMarginCovered ? 'oui' : 'non'}.`);
 
 	addHeading('Points de vigilance');
@@ -149,7 +149,7 @@ export function createPassportPdf(report: PassportReport, passportUrl: string) {
 
 	addHeading('URL versionnée');
 	addParagraph(passportUrl, { size: 6.5, color: '0.33 0.40 0.35', spacing: 8 });
-	addParagraph('Ce document est produit localement dans le navigateur. Le rapport original, sa configuration et ses empreintes sont encodés dans le fragment de l’URL et ne sont pas envoyés au serveur. Le Passeport ne remplace ni une mesure en charge, ni la notice constructeur, ni une vérification réglementaire.', { size: 8.5, color: '0.33 0.40 0.35' });
+	addParagraph('Ce document est produit localement dans le navigateur. Le rapport original, sa configuration et ses codes de contrôle restent après le caractère # de l’URL et ne sont pas envoyés au serveur. Le Passeport ne remplace ni une mesure en charge, ni la notice constructeur, ni une vérification réglementaire.', { size: 8.5, color: '0.33 0.40 0.35' });
 
 	for (const [index, commands] of pages.entries()) {
 		commands.push(`0.82 0.86 0.83 RG 52 42 491 0.5 re S`);

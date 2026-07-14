@@ -2,7 +2,7 @@
 	<div class="passport-loading" data-passport-loading>
 		<p class="eyebrow">Lecture locale</p>
 		<h2>Ouverture du Passeport…</h2>
-		<p>L’enveloppe versionnée est décodée et son intégrité locale est vérifiée dans ce navigateur.</p>
+		<p>Le dossier est ouvert et son code de contrôle est vérifié dans ce navigateur.</p>
 	</div>
 
 	<div class="passport-empty" data-passport-empty hidden>
@@ -21,15 +21,15 @@
 			</div>
 			<dl class="passport-identity">
 				<div><dt>Identifiant</dt><dd data-id></dd></div>
-				<div><dt>Schéma</dt><dd data-schema></dd></div>
-				<div><dt>Moteur</dt><dd data-engine></dd></div>
-				<div><dt>Catalogue</dt><dd data-catalog-date></dd></div>
+				<div><dt>Format du dossier</dt><dd data-schema></dd></div>
+				<div><dt>Méthode de calcul</dt><dd data-engine></dd></div>
+				<div><dt>Données vérifiées le</dt><dd data-catalog-date></dd></div>
 			</dl>
 		</header>
 		<div class="passport-version-choice" data-version-choice hidden>
-			<div><strong>Version affichée</strong><p data-version-note></p></div>
+			<div><strong>Données affichées</strong><p data-version-note></p></div>
 			<button class="button" type="button" data-show-original>Voir le rapport original</button>
-			<button class="button" type="button" data-show-current disabled>Recalculer avec le catalogue actuel</button>
+			<button class="button" type="button" data-show-current disabled>Calculer avec les données actuelles</button>
 		</div>
 
 		<div class="passport-actions">
@@ -46,8 +46,8 @@
 				<div><dt>Débit moyen</dt><dd data-average></dd></div>
 				<div><dt>FAD recommandé</dt><dd data-recommended></dd></div>
 				<div><dt>FAD disponible</dt><dd data-available></dd></div>
-				<div><dt>Marge nominale</dt><dd data-nominal-margin></dd></div>
-				<div><dt>Marge CompatAir</dt><dd data-safety-margin></dd></div>
+				<div><dt>Marge disponible sur le besoin publié</dt><dd data-nominal-margin></dd></div>
+				<div><dt>Marge indicative demandée</dt><dd data-safety-margin></dd></div>
 			</dl>
 			<p class="passport-confidence" data-confidence></p>
 		</section>
@@ -91,7 +91,7 @@
 		<footer class="passport-notice">
 			<strong>Périmètre du document</strong>
 			<p>Le Passeport décrit la configuration déclarée et les données disponibles à sa date de génération. Il ne remplace ni une mesure en charge, ni une notice constructeur, ni une vérification réglementaire.</p>
-			<p>Son empreinte détecte une modification du contenu, mais ne constitue pas une signature d’authenticité émise par CompatAir.</p>
+			<p>Son code de contrôle détecte une modification du contenu, mais ne constitue pas une signature d’authenticité émise par CompatAir.</p>
 		</footer>
 	</article>
 </section>

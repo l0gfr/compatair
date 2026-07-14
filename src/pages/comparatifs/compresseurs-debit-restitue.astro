@@ -23,7 +23,7 @@ const metrics = getCatalogMetrics(compressors, tools);
 			<div><small>Couples verdictables</small><strong>{metrics.compatibilityPageCount}</strong></div>
 			<div><small>Profils à débit fixe</small><strong>{metrics.fixedFlowToolCount}</strong></div>
 		</div>
-		<p>Ces volumes sont calculés pendant le build depuis le catalogue et le moteur. Ils ne sont pas recopiés dans cette page.</p>
+		<p>Ces volumes sont recalculés automatiquement à chaque publication depuis le catalogue. Ils ne sont pas recopiés manuellement dans cette page.</p>
 		<h2>Niveau de documentation FAD</h2>
 		<ul>
 			<li>{metrics.fadDocumentation.multiplePoints} modèles avec plusieurs points, permettant une interpolation strictement bornée.</li>

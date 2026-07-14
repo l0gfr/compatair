@@ -23,23 +23,23 @@ const featuredGuides = allGuides.filter((guide) => guide.data.featured).sort((a,
 				</div>
 			</div>
 			<div class="hero-instrument" aria-label="Principes de calcul CompatAir">
-				<div class="instrument-top"><span>CompatAir Engine</span><strong>v{CALCULATION_VERSION}</strong></div>
-				<div class="gauge" aria-hidden="true"><div class="gauge-face"><span class="tick t1"></span><span class="tick t2"></span><span class="tick t3"></span><span class="gauge-hand"></span><span class="gauge-hub"></span><div class="gauge-value"><strong>+25 %</strong><small>marge interne</small></div></div></div>
-				<div class="instrument-legend"><span><i class="signal green"></i><strong>FAD</strong><small>documenté</small></span><span><i class="signal lime"></i><strong>bar</strong><small>pression égale</small></span><span><i class="signal orange"></i><strong>0</strong><small>donnée inventée</small></span></div>
+				<div class="instrument-top"><span>Méthode de calcul</span><strong>v{CALCULATION_VERSION}</strong></div>
+				<div class="gauge" aria-hidden="true"><div class="gauge-face"><span class="tick t1"></span><span class="tick t2"></span><span class="tick t3"></span><span class="gauge-hand"></span><span class="gauge-hub"></span><div class="gauge-value"><strong>+25 %</strong><small>marge indicative</small></div></div></div>
+				<div class="instrument-legend"><span><i class="signal green"></i><strong>FAD</strong><small>débit restitué</small></span><span><i class="signal lime"></i><strong>bar</strong><small>pression égale</small></span><span><i class="signal orange"></i><strong>0</strong><small>donnée inventée</small></span></div>
 			</div>
 		</div>
 	</section>
 
 	<section class="section home-calculator">
 		<div class="container callout">
-			<div><p class="eyebrow">Le calculateur est ouvert</p><h2>Testez {tools.length} outils sur {compressors.length} compresseurs documentés.</h2><p>CompatAir compare les valeurs publiées et affiche séparément une marge interne de 25&nbsp;%. Les pertes du réseau ne sont pas estimées sans données documentées.</p><div class="actions"><a class="button primary inverse" href="/calculateur/">Lancer le calcul</a><a class="button inverse-outline" href="/compresseurs/">Voir les produits</a></div></div>
-			<div class="metric"><strong>{tools.length} × {compressors.length}</strong><span>profils disponibles dans le moteur {CALCULATION_VERSION}, avec saisie obligatoire lorsque le besoin dépend de l’usage</span></div>
+			<div><p class="eyebrow">Le calculateur est ouvert</p><h2>Testez {tools.length} outils sur {compressors.length} compresseurs documentés.</h2><p>CompatAir compare les valeurs publiées et affiche séparément une marge indicative de 25&nbsp;%. Les pertes du réseau ne sont pas estimées sans données documentées.</p><div class="actions"><a class="button primary inverse" href="/calculateur/">Lancer le calcul</a><a class="button inverse-outline" href="/compresseurs/">Voir les produits</a></div></div>
+			<div class="metric"><strong>{tools.length} × {compressors.length}</strong><span>combinaisons calculables avec la méthode {CALCULATION_VERSION}. Les informations qui dépendent de votre usage doivent être saisies.</span></div>
 		</div>
 	</section>
 
 	<section class="section editorial-home">
 		<div class="container">
-			<div class="section-head split-head"><div><p class="eyebrow">{allGuides.length} guides techniques</p><h2>Des dossiers qui vont jusqu’au bout du calcul</h2></div><p>Chaque dossier sépare données constructeur, calculs reproductibles et hypothèses CompatAir. Une donnée absente reste absente.</p></div>
+			<div class="section-head split-head"><div><p class="eyebrow">{allGuides.length} guides techniques</p><h2>Des dossiers qui vont jusqu’au bout du calcul</h2></div><p>Chaque dossier distingue les données du constructeur, les calculs que vous pouvez reproduire et les choix propres à notre méthode. Une donnée absente reste absente.</p></div>
 			<a class="home-glossary" href="/glossaire/"><span><small>Glossaire technique</small><strong>{glossaryTerms.length} notions définies et sourcées</strong></span><span>FAD · bar · point de rosée · ISO 8573-1</span><b aria-hidden="true">→</b></a>
 			<div class="guide-grid">{featuredGuides.map((guide) => <article class="guide-card"><p class="guide-meta">{guide.data.category} · {guide.data.readingTime} min</p><h3><a href={`/guides/${guide.id}/`}>{guide.data.title}</a></h3><p>{guide.data.description}</p><a class="text-link" href={`/guides/${guide.id}/`}>Lire le dossier</a></article>)}</div>
 			<div class="actions"><a class="button" href="/guides/">Tous les guides</a></div>
@@ -48,7 +48,7 @@ const featuredGuides = allGuides.filter((guide) => guide.data.featured).sort((a,
 
 	<div class="proof-strip">
 		<div class="container">
-			<span><strong>FAD prioritaire</strong> plutôt que débit aspiré</span>
+			<span><strong><a href="/glossaire/#fad">Débit restitué (FAD)</a></strong> plutôt que <a href="/glossaire/#debit-aspire">débit aspiré</a></span>
 			<span><strong>Sources affichées</strong> par donnée critique</span>
 			<span><strong>Calcul reproductible</strong> sans recommandation générative</span>
 		</div>
@@ -62,8 +62,8 @@ const featuredGuides = allGuides.filter((guide) => guide.data.featured).sort((a,
 			</div>
 			<div class="grid">
 				<article class="card"><p class="step">01</p><h3>Choisissez un outil</h3><p>Le moteur utilise sa consommation et sa pression de travail publiées.</p></article>
-				<article class="card"><p class="step">02</p><h3>Choisissez un compresseur</h3><p>Le débit restitué est lu ou interpolé entre deux points constructeur documentés.</p></article>
-				<article class="card"><p class="step">03</p><h3>Lisez le résultat</h3><p>Débit disponible, besoin publié, marge CompatAir et limites sont affichés séparément.</p></article>
+				<article class="card"><p class="step">02</p><h3>Choisissez un compresseur</h3><p>Le <a href="/glossaire/#debit-restitue">débit restitué</a> est lu ou <a href="/glossaire/#interpolation">interpolé</a> entre deux points constructeur documentés.</p></article>
+				<article class="card"><p class="step">03</p><h3>Lisez le résultat</h3><p>Débit disponible, besoin publié, marge indicative et limites sont affichés séparément.</p></article>
 			</div>
 		</div>
 	</section>

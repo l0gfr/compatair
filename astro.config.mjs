@@ -10,7 +10,7 @@ export default defineConfig({
 		entryLimit: 25,
 		filter: (page) => {
 			const pathname = new URL(page).pathname;
-			return !pathname.startsWith('/compatibilite/') && !['/410/', '/comparateur/', '/offres/', '/recherche/', '/securite/'].includes(pathname);
+			return !pathname.startsWith('/compatibilite/') && !['/410/', '/comparateur/', '/gouvernance-editoriale/', '/offres/', '/recherche/', '/securite/'].includes(pathname);
 		},
 	})],
 	build: {

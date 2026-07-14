@@ -27,7 +27,7 @@ Le dimensionnement de plusieurs outils dépend d’abord d’une question factue
 
 La [ponceuse Einhell TC-PE 150](https://www.einhell.fr/p/4133330-tc-pe-150/) est donnée pour 100 L/min à 6,3 bar. La [meuleuse droite TC-PP 220](https://www.einhell.fr/p/4138540-tc-pp-220/) demande 128 L/min à la même pression.
 
-Si les deux outils fonctionnent ensemble, le besoin nominal vaut `100 + 128 = 228 L/min à 6,3 bar`. Le seuil CompatAir avec sa marge interne de 25 % vaut `228 × 1,25 = 285 L/min`.
+Si les deux outils fonctionnent ensemble, le besoin nominal vaut `100 + 128 = 228 L/min à 6,3 bar`. Avec la [marge indicative CompatAir](/glossaire/#marge-compatair) de 25 %, le seuil vaut `228 × 1,25 = 285 L/min`.
 
 ## Pourquoi le TE-AC 430 ne suffit pas dans ce cas
 

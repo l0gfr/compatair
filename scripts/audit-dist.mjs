@@ -12,6 +12,24 @@ const maximumDocumentTitleLength = 60;
 const maximumInitialPageScriptBytesGzip = 50 * 1024;
 const maximumPassportInitialScriptBytesGzip = 45 * 1024;
 const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
+const forbiddenPublicWording = [
+	'CompatAir Engine',
+	'actif statistique',
+	'AirGraph',
+	'Registre append-only',
+	'Ce qui peut financer le catalogue',
+	'contrat public',
+	'corpus de convenance',
+	'taux de complétion',
+	'au moment du build',
+	'marge interne',
+];
+const glossaryLinkRequirements = new Map([
+	['index.html', ['/glossaire/#fad', '/glossaire/#debit-aspire', '/glossaire/#interpolation']],
+	['calculateur/index.html', ['/glossaire/#fad']],
+	['methodologie/index.html', ['/glossaire/#debit-restitue', '/glossaire/#debit-aspire', '/glossaire/#interpolation', '/glossaire/#fad']],
+	['sources-fiabilite/index.html', ['/glossaire/#debit-restitue', '/glossaire/#debit-aspire', '/glossaire/#interpolation']],
+]);
 let largestInitialPageScriptBudget = { bytes: 0, label: '', modules: 0 };
 let largestOnDemandPageScriptBudget = { bytes: 0, label: '', modules: 0 };
 let passportInitialScriptBudget = { bytes: 0, modules: 0 };
@@ -150,12 +168,14 @@ for (const file of htmlFiles) {
 	const isCompatibilityDetail = label.startsWith('compatibilite/');
 	const isGuideArticle = /^guides\/[^/]+\/index\.html$/.test(label);
 	const isEditorialProductPage = /^(compresseurs|outils-pneumatiques|quel-compresseur-pour)\/[^/]+\/index\.html$/.test(label);
+	if (html.includes('href="/gouvernance-editoriale/"')) errors.push(`${label}: la gouvernance éditoriale masquée ne doit pas être liée publiquement`);
+	for (const wording of forbiddenPublicWording) if (html.includes(wording)) errors.push(`${label}: formulation interne interdite « ${wording} »`);
+	for (const href of glossaryLinkRequirements.get(label) ?? []) if (!html.includes(`href="${href}"`)) errors.push(`${label}: lien de glossaire requis absent ${href}`);
 	if (isCompatibilityDetail && !noindex) errors.push(`${label}: un couple produit-outil doit rester noindex`);
 	if (isEditorialProductPage && titleSource !== 'editorial') errors.push(`${label}: titre SEO éditorial requis`);
 	if (isGuideArticle) {
 		const reviewStatus = html.match(/data-review-status="([^"]+)"/)?.[1];
 		if (!['internal', 'external'].includes(reviewStatus)) errors.push(`${label}: statut de revue éditoriale absent ou invalide`);
-		if (!html.includes('href="/gouvernance-editoriale/"')) errors.push(`${label}: lien vers la gouvernance éditoriale absent`);
 		if (reviewStatus === 'internal' && !html.includes('sans validation professionnelle externe')) errors.push(`${label}: limite de revue externe absente`);
 	}
 	if (label === 'professionnels/index.html') {

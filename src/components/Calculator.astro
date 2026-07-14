@@ -40,11 +40,11 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 			</div>
 		</fieldset>
 
-		<label class="margin-control" for="margin"><span>Marge CompatAir</span><output data-margin-output>25 %</output><input id="margin" name="margin" type="range" min="0" max="50" step="5" value="25" /></label>
+		<label class="margin-control" for="margin"><span>Marge indicative</span><output data-margin-output>25 %</output><input id="margin" name="margin" type="range" min="0" max="50" step="5" value="25" /></label>
 		<p class="form-disclaimer">Les fréquences sont des hypothèses explicites. Les pertes du réseau restent signalées, mais ne sont pas chiffrées sans courbe ou mesure documentée.</p>
 		<label class="demand-contribution">
 			<input type="checkbox" data-demand-contribution />
-			<span><strong>Contribuer aux priorités du catalogue</strong><small>Si vous cochez cette case, CompatAir envoie après le calcul uniquement les identifiants des outils et des tranches de débit, pression et durée. Aucun texte libre, valeur personnalisée exacte, cookie, adresse IP ou configuration brute n’est enregistré dans l’actif statistique.</small></span>
+			<span><strong>Aider à choisir les prochaines références étudiées</strong><small>Si vous cochez cette case, CompatAir compte uniquement les outils choisis et des tranches larges de débit, pression et durée. Aucun texte libre, valeur personnalisée exacte, cookie, adresse IP ou configuration complète n’est conservé dans ces statistiques.</small></span>
 		</label>
 		<p class="form-error" role="alert" data-form-error hidden></p>
 		<button class="button primary" type="submit">Calculer la configuration</button>
@@ -73,7 +73,7 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 		</details>
 		<div class="result-section"><h3>Hypothèses et avertissements</h3><ul data-assumptions></ul></div>
 		<div class="share-row"><a class="button primary" href="/passeport/" data-create-passport>Créer le Passeport</a><button class="button" type="button" data-share>Copier l’URL</button><button class="button" type="button" data-copy-summary>Copier la synthèse</button><button class="button" type="button" data-print>Imprimer le calcul</button><span role="status" data-share-status></span></div>
-		<p class="calculator-note">La configuration est encodée dans le fragment de l’URL. Elle n’est ni envoyée ni enregistrée sur le serveur.</p>
+		<p class="calculator-note">La configuration est conservée après le caractère <code>#</code> de l’URL. Cette partie de l’adresse n’est ni envoyée ni enregistrée sur le serveur.</p>
 	</div>
 </div>
 

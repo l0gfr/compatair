@@ -15,7 +15,7 @@ sources:
 
 Un comparatif de compresseurs peut reprendre des chiffres exacts et produire malgré tout une conclusion fausse. Le problème apparaît lorsqu’il classe les modèles par débit aspiré, mélange des débits publiés à des pressions différentes ou suppose qu’une grande cuve corrige un déficit permanent de débit.
 
-Le [comparatif dynamique des débits restitués](/comparatifs/compresseurs-debit-restitue/) évite de figer ici un nombre de références ou une matrice de verdicts. À chaque build, il relit le catalogue, recompte les points FAD et exécute le même moteur déterministe que le [calculateur](/calculateur/).
+Le [comparatif dynamique des débits restitués](/comparatifs/compresseurs-debit-restitue/) évite de figer ici un nombre de références ou un tableau de verdicts. À chaque publication, il relit le catalogue, recompte les points FAD et applique la même méthode que le [calculateur](/calculateur/).
 
 <svg viewBox="0 0 760 330" role="img" aria-labelledby="compare-method-title compare-method-desc" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:1.5rem">
   <title id="compare-method-title">Méthode de comparaison CompatAir</title>
@@ -62,7 +62,7 @@ Un verdict « incompatible » signifie qu’une condition documentée échoue, p
 
 ## Un tableau qui suit automatiquement le catalogue
 
-La page dynamique publie trois éléments calculés à chaque build : le niveau de documentation FAD des compresseurs, le tableau complet des points débit-pression et le nombre de verdicts continus, incompatibles ou insuffisants pour chaque outil à débit fixe.
+La page dynamique publie trois éléments recalculés à chaque publication : le niveau de documentation FAD des compresseurs, le tableau complet des points débit-pression et le nombre de verdicts continus, incompatibles ou insuffisants pour chaque outil à débit fixe.
 
 Cette architecture évite qu’un nouvel outil ou un nouveau compresseur rende le texte faux. Les pages [« quel compresseur pour »](/outils-pneumatiques/) et les couples de [compatibilité](/calculateur/) sont produits à partir des mêmes données et de la même version du moteur.
 

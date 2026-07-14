@@ -10,7 +10,7 @@ sources:
   - https://www.atlascopco.com/en-gr/compressors/wiki/compressed-air-articles/calculating-working-pressure
 ---
 
-La valeur de 6,3 bar apparaît sur plusieurs fiches d’outils pneumatiques de notre corpus, notamment les Einhell TC-PE 150 et TC-PP 220. Elle désigne leur pression de service publiée. Ce n’est pas la pression maximale du réservoir.
+La valeur de 6,3 bar apparaît sur plusieurs fiches d’outils pneumatiques étudiées par CompatAir, notamment les Einhell TC-PE 150 et TC-PP 220. Elle désigne leur pression de service publiée. Ce n’est pas la pression maximale du réservoir.
 
 ## Trois pressions à distinguer
 

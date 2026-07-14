@@ -25,7 +25,7 @@ La fiche officielle de la [Metabo DRS 68 Set 1/2](https://www.metabo.com/no/no/m
 
 ## Le seuil nominal est 220 L/min à 6,2 bar
 
-Le premier seuil à rechercher est celui du fabricant : 220 L/min restitués à 6,2 bar. CompatAir affiche ensuite une marge interne de 25 %, soit `220 × 1,25 = 275 L/min`. Cette marge rend visible une réserve de dimensionnement, mais elle ne vient pas de Metabo.
+Le premier seuil à rechercher est celui du fabricant : 220 L/min restitués à 6,2 bar. CompatAir affiche ensuite une [marge indicative](/glossaire/#marge-compatair) de 25 %, soit `220 × 1,25 = 275 L/min`. Cette marge rend visible une réserve de dimensionnement, mais elle ne vient pas de Metabo.
 
 Une fiche qui annonce seulement 300 L/min aspirés ne permet pas de conclure. Le [débit restitué, ou FAD](/guides/debit-restitue-fad-vs-debit-aspire/), diminue généralement quand la pression augmente. Il doit donc être publié ou calculable à partir de points qui encadrent 6,2 bar.
 

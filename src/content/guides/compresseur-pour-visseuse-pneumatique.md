@@ -26,7 +26,7 @@ La fiche officielle de la [Metabo DS 14](https://www.metabo.com/za/en/tools/comp
 
 ## Le premier seuil est 340 L/min à 6,2 bar
 
-Le besoin nominal de 340 L/min est la donnée constructeur. Avec la marge interne de 25 % affichée par CompatAir, le seuil indicatif devient `340 × 1,25 = 425 L/min`. Cette majoration ne doit pas être présentée comme une prescription Metabo.
+Le besoin nominal de 340 L/min est la donnée constructeur. Avec la [marge indicative](/glossaire/#marge-compatair) de 25 % affichée par CompatAir, le seuil devient `340 × 1,25 = 425 L/min`. Cette majoration ne doit pas être présentée comme une prescription Metabo.
 
 Le débit à comparer est le [débit restitué du compresseur](/guides/debit-restitue-fad-vs-debit-aspire/) à 6,2 bar. Une valeur de remplissage, un débit aspiré ou un point FAD publié à une autre pression ne répondent pas seuls à la question.
 
