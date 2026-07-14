@@ -1,12 +1,12 @@
 # Matrice fonctionnelle CompatAir
 
-État au 13 juillet 2026. Cette matrice distingue le code livré des fonctions qui dépendent encore d’un flux partenaire ou d’une opération administrateur sur le serveur.
+État au 14 juillet 2026. Cette matrice distingue le code livré des fonctions qui dépendent encore d’un flux partenaire ou d’une opération administrateur sur le serveur.
 
 ## Livré dans le dépôt
 
 - site statique responsive, navigation, recherche, fil d’Ariane, pages 404 et 410, correction des données et partage des simulations ;
-- catalogue de compresseurs filtrable et paginé, fiches sourcées, courbes FAD, limites, confiance et alternatives comparables ;
-- catalogue d’outils, taxonomie de dix catégories, fiches sourcées et exigences non documentées signalées ;
+- catalogue de 24 compresseurs filtrable et paginé, fiches sourcées, courbes FAD, limites, confiance et alternatives comparables ;
+- catalogue de 12 outils, taxonomie de 12 catégories, fiches sourcées et exigences non documentées signalées ;
 - calculateur multi-outils avec simultanéité, fréquence, durée, flexible, modèle existant et saisie personnalisée ;
 - verdicts `continuous`, `intermittent`, `incompatible` et `insufficient_data` ;
 - conversions, interpolation bornée, débit de pointe, débit moyen, réserve de cuve, récupération conditionnelle et version des formules ;
