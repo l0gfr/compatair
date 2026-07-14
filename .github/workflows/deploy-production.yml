@@ -109,6 +109,15 @@ jobs:
       - name: Lighthouse performance, accessibility and SEO
         run: pnpm lighthouse
 
+      - name: Upload Lighthouse reports
+        if: ${{ always() && hashFiles('.lighthouseci/reports/**') != '' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: lighthouse-production-${{ github.sha }}
+          path: .lighthouseci/reports/
+          if-no-files-found: error
+          retention-days: 7
+
       - name: Package immutable release
         run: |
           install -D -m 644 server/mcp-core.mjs dist/_server/mcp-core.mjs
@@ -209,21 +218,22 @@ jobs:
         env:
           MCP_ENABLED: ${{ vars.MCP_ENABLED }}
         run: |
-          curl --fail --silent --show-error --location --retry 5 --retry-delay 3 --max-time 20 https://compatair.fr/ > /dev/null
-          curl --fail --silent --show-error --max-time 20 https://compatair.fr/robots.txt | grep -Fq 'https://compatair.fr/sitemap-index.xml'
-          curl --fail --silent --show-error --max-time 20 https://compatair.fr/sitemap-index.xml > /dev/null
-          curl --fail --silent --show-error --max-time 20 https://compatair.fr/scanner/ | grep -Fq 'Scanner et vérifier'
-          curl --fail --silent --show-error --max-time 20 https://compatair.fr/professionnels/ | grep -Fq 'id="merchant-widget-demo"'
-          curl --fail --silent --show-error --max-time 20 https://compatair.fr/widget/v1.0.0/compatair-widget.js | grep -Fq 'CompatAir widget API v1'
-          curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/catalog.json | grep -Fq 'catalogVersion'
-          curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/verdicts.json | grep -Fq 'verdictVersion'
-          curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/signatures.json | grep -Fq 'compatair-2026-01'
-          curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/signing-keys.json | grep -Fq 'Ed25519'
+          curl_args=(--fail --silent --show-error --retry 5 --retry-delay 3 --retry-all-errors --max-time 20)
+          curl "${curl_args[@]}" --location https://compatair.fr/ > /dev/null
+          curl "${curl_args[@]}" https://compatair.fr/robots.txt | grep -Fq 'https://compatair.fr/sitemap-index.xml'
+          curl "${curl_args[@]}" https://compatair.fr/sitemap-index.xml > /dev/null
+          curl "${curl_args[@]}" https://compatair.fr/scanner/ | grep -Fq 'data-compatair-surface="scanner"'
+          curl "${curl_args[@]}" https://compatair.fr/professionnels/ | grep -Fq 'id="merchant-widget-demo"'
+          curl "${curl_args[@]}" https://compatair.fr/widget/v1.0.0/compatair-widget.js | grep -Fq 'CompatAir widget API v1'
+          curl "${curl_args[@]}" https://compatair.fr/data/catalog.json | grep -Fq 'catalogVersion'
+          curl "${curl_args[@]}" https://compatair.fr/data/verdicts.json | grep -Fq 'verdictVersion'
+          curl "${curl_args[@]}" https://compatair.fr/data/signatures.json | grep -Fq 'compatair-2026-01'
+          curl "${curl_args[@]}" https://compatair.fr/data/signing-keys.json | grep -Fq 'Ed25519'
           if [[ "$MCP_ENABLED" == "true" ]]; then
-            health=$(curl --fail --silent --show-error --max-time 20 https://compatair.fr/mcp-health)
+            health=$(curl "${curl_args[@]}" https://compatair.fr/mcp-health)
             grep -Fq '"status":"ok"' <<< "$health"
             grep -Fq '"verdictVersion"' <<< "$health"
-            curl --fail --silent --show-error --max-time 20 \
+            curl "${curl_args[@]}" \
               'https://compatair.fr/api/v1/compatibility?compressorId=einhell-tc-ac-240-50-10-of&toolId=einhell-tc-pe-150' \
               | grep -Fq '"schemaVersion":"1.0.0"'
           fi

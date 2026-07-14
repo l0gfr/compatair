@@ -5,6 +5,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 	<BaseLayout title="Scanner une plaque compresseur ou outil | CompatAir" description="Identifiez un compresseur ou un outil par référence fabricant, code produit ou lecture locale d’une photo, puis vérifiez ses compatibilités et ses sources." canonicalPath="/scanner/">
 	<section class="page-hero compact scanner-hero"><div class="container"><p class="eyebrow">Identifier un modèle</p><h1>Retrouver un compresseur ou un outil depuis son étiquette</h1><p class="lead">Photographiez l’étiquette du produit ou saisissez la référence et le code-barres qui y figurent. CompatAir vous demande de confirmer le numéro lu avant de rechercher la fiche correspondante et les outils compatibles.</p></div></section>
-	<section class="section scanner-section"><div class="container"><ProductScanner /></div></section>
+	<section class="section scanner-section" data-compatair-surface="scanner"><div class="container"><ProductScanner /></div></section>
 	<section class="section scanner-method"><div class="container callout"><div><p class="eyebrow">Votre photo reste privée</p><h2>Une lecture automatique ne suffit jamais à identifier un produit</h2><p>La photo est lue uniquement dans votre navigateur. CompatAir ne retient un modèle que lorsque le numéro confirmé correspond exactement à une fiche déjà vérifiée.</p></div><div><ul><li>Confirmation obligatoire</li><li>Aucun envoi d’image</li><li>Aucune ressemblance approximative</li><li>Données manquantes toujours signalées</li></ul></div></div></section>
 </BaseLayout>

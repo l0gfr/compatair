@@ -1,5 +1,24 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-echo "CompatAir pre-push: validating source, tests and production build"
-pnpm validate
+pushes_main=false
+while read -r _local_ref _local_sha remote_ref _remote_sha; do
+	if [[ "$remote_ref" == "refs/heads/main" ]]; then
+		pushes_main=true
+	fi
+done
+
+if [[ "$pushes_main" == "true" ]]; then
+	required_node_major="$(tr -dc '0-9' < .nvmrc)"
+	actual_node_major="$(node --eval 'process.stdout.write(process.versions.node.split(".")[0])')"
+	if [[ "$actual_node_major" != "$required_node_major" ]]; then
+		echo "CompatAir pre-push: Node ${required_node_major} requis pour reproduire GitHub Actions; version active: $(node --version)" >&2
+		echo "Activez la version declaree dans .nvmrc avant de pousser main." >&2
+		exit 1
+	fi
+	echo "CompatAir pre-push main: validation complete, audit HTML et Lighthouse"
+	pnpm validate:main
+else
+	echo "CompatAir pre-push: validation source, tests et build"
+	pnpm validate
+fi

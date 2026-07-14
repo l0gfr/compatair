@@ -30,6 +30,7 @@
     "lint:source": "node scripts/lint-source.mjs",
     "lighthouse": "lhci autorun",
     "validate:full": "pnpm validate && pnpm data:validate",
+    "validate:main": "pnpm lint:source && pnpm validate:full && pnpm audit:dist && pnpm lighthouse",
     "preview": "astro preview",
     "mcp:start": "node server/mcp-server.mjs",
     "astro": "astro"
@@ -46,7 +47,8 @@
     "@astrojs/check": "0.9.9",
     "@lhci/cli": "0.15.1",
     "typescript": "6.0.3",
-    "vitest": "4.1.10"
+    "vitest": "4.1.10",
+    "yaml": "2.9.0"
   },
   "pnpm": {
     "overrides": {

@@ -1,6 +1,8 @@
 ---
 import '@fontsource-variable/manrope/index.css';
 import '@fontsource-variable/newsreader/index.css';
+import manropeLatinWghtUrl from '@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2?url';
+import newsreaderLatinWghtUrl from '@fontsource-variable/newsreader/files/newsreader-latin-wght-normal.woff2?url';
 import '../styles/global.css';
 import SiteSearch from '../components/SiteSearch.astro';
 import UiIcon from '../components/UiIcon.astro';
@@ -101,6 +103,8 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 		<link rel="alternate" hreflang="fr-FR" href={canonical} />
 		<link rel="alternate" hreflang="x-default" href={canonical} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preload" href={manropeLatinWghtUrl} as="font" type="font/woff2" crossorigin="anonymous" />
+		<link rel="preload" href={newsreaderLatinWghtUrl} as="font" type="font/woff2" crossorigin="anonymous" />
 		<meta property="og:type" content={pageType} />
 		<meta property="og:locale" content="fr_FR" />
 		<meta property="og:site_name" content="CompatAir" />

@@ -13,6 +13,7 @@ Validations complètes :
 
 ```bash
 pnpm validate:full
+pnpm validate:main
 pnpm catalog:check
 pnpm audit:dist
 pnpm security:supply-chain
@@ -57,7 +58,7 @@ L’installation Debian et le proxy Apache sont décrits dans [docs/DEPLOYMENT.m
 
 Voir [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) pour la préparation Apache, TLS, les secrets et le rollback.
 
-Le checkout local utilise le hook versionné `.githooks/pre-push`. Après un nouveau clone, l’activer avec :
+Le checkout local utilise le hook versionné `.githooks/pre-push`. Un push vers `main` exige Node 24 et exécute aussi l’audit HTML et Lighthouse afin de reproduire les principaux contrôles du déploiement avant l’envoi. Après un nouveau clone, activer le hook avec :
 
 ```bash
 git config core.hooksPath .githooks
