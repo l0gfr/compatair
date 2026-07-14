@@ -45,6 +45,16 @@ jobs:
       - name: Validate source, tests, build and snapshots
         run: pnpm validate:full
 
+      - name: Sign published data snapshots
+        env:
+          COMPATAIR_PUBLICATION_SIGNING_KEY: ${{ secrets.COMPATAIR_PUBLICATION_SIGNING_KEY }}
+          COMPATAIR_PUBLICATION_SIGNING_KEY_ID: compatair-2026-01
+          COMPATAIR_PUBLICATION_CREATED_AT: ${{ github.event.head_commit.timestamp || github.run_started_at }}
+        run: |
+          test -n "$COMPATAIR_PUBLICATION_SIGNING_KEY"
+          pnpm data:sign
+          pnpm data:verify-signatures
+
       - name: Audit production dependencies
         run: pnpm security:audit
 
@@ -161,6 +171,8 @@ jobs:
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/widget/v1/compatair-widget.js | grep -Fq 'CompatAir widget API v1'
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/catalog.json | grep -Fq 'catalogVersion'
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/verdicts.json | grep -Fq 'verdictVersion'
+          curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/signatures.json | grep -Fq 'compatair-2026-01'
+          curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/signing-keys.json | grep -Fq 'Ed25519'
           if [[ "$MCP_ENABLED" == "true" ]]; then
             health=$(curl --fail --silent --show-error --max-time 20 https://compatair.fr/mcp-health)
             grep -Fq '"status":"ok"' <<< "$health"

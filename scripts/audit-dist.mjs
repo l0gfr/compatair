@@ -88,9 +88,12 @@ for (const file of htmlFiles) {
 	const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
 	const socialImage = html.match(/<meta property="og:image" content="([^"]+)"/)?.[1];
 	const robots = html.match(/<meta name="robots" content="([^"]+)"/)?.[1] ?? '';
+	const titleSource = html.match(/<meta name="compatair:title-source" content="([^"]+)"/)?.[1];
 	const noindex = robots.split(',').map((rule) => rule.trim()).includes('noindex');
 	const isCompatibilityDetail = label.startsWith('compatibilite/');
+	const isEditorialProductPage = /^(compresseurs|outils-pneumatiques|quel-compresseur-pour)\/[^/]+\/index\.html$/.test(label);
 	if (isCompatibilityDetail && !noindex) errors.push(`${label}: un couple produit-outil doit rester noindex`);
+	if (isEditorialProductPage && titleSource !== 'editorial') errors.push(`${label}: titre SEO éditorial requis`);
 
 	if (!title) errors.push(`${label}: title absent`);
 	else {

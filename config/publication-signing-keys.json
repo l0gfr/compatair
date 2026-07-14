@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0.0",
+  "keys": [
+    {
+      "id": "compatair-2026-01",
+      "algorithm": "Ed25519",
+      "publicKeyFormat": "spki-der-base64",
+      "publicKey": "MCowBQYDK2VwAyEAfpDH/PuceqyMR8vsQo/FUYWpEAEhe0IdgeOhc5Ux5bg=",
+      "fingerprintSha256": "1f761985825b8fcfefd9c93488daa2924d96c46170dd0ca3fd827c582c20fe1e",
+      "validFrom": "2026-07-14",
+      "status": "active"
+    }
+  ]
+}

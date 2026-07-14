@@ -11,3 +11,11 @@ export function fitDocumentTitle(title: string, maximumLength = MAX_DOCUMENT_TIT
 	const shortened = (boundary >= Math.floor(available * .6) ? candidate.slice(0, boundary) : source.slice(0, available)).trimEnd();
 	return `${shortened}…${siteSuffix}`;
 }
+
+export function resolveDocumentTitle(fallbackTitle: string, editorialTitle?: string) {
+	if (editorialTitle === undefined) return { title: fitDocumentTitle(fallbackTitle), source: 'fitted-fallback' as const };
+	const value = editorialTitle.trim();
+	if (!value) throw new Error('Le titre SEO éditorial ne peut pas être vide.');
+	if (value.length > MAX_DOCUMENT_TITLE_LENGTH) throw new Error(`Le titre SEO éditorial dépasse ${MAX_DOCUMENT_TITLE_LENGTH} caractères.`);
+	return { title: value, source: 'editorial' as const };
+}

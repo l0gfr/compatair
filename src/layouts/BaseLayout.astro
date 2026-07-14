@@ -4,11 +4,12 @@ import '@fontsource-variable/newsreader/index.css';
 import '../styles/global.css';
 import SiteSearch from '../components/SiteSearch.astro';
 import UiIcon from '../components/UiIcon.astro';
-import { fitDocumentTitle } from '../domain/metadata';
+import { resolveDocumentTitle } from '../domain/metadata';
 import { socialCardKey } from '../domain/social-card';
 
 type Props = {
 	title: string;
+	editorialTitle?: string;
 	description: string;
 	canonicalPath?: string;
 	noindex?: boolean;
@@ -22,6 +23,7 @@ type Props = {
 
 const {
 	title,
+	editorialTitle,
 	description,
 	canonicalPath = Astro.url.pathname,
 	noindex = false,
@@ -32,7 +34,8 @@ const {
 	modifiedDate,
 	breadcrumbs = [],
 } = Astro.props;
-const documentTitle = fitDocumentTitle(title);
+const resolvedTitle = resolveDocumentTitle(title, editorialTitle);
+const documentTitle = resolvedTitle.title;
 const canonical = new URL(canonicalPath, Astro.site);
 const socialImage = new URL(imagePath ?? `/social/${socialCardKey(canonical.pathname)}.png`, Astro.site);
 const currentPath = Astro.url.pathname;
@@ -90,6 +93,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 		<meta name="generator" content={Astro.generator} />
 		<meta name="application-name" content="CompatAir" />
 		<meta name="author" content="l0g.fr" />
+		<meta name="compatair:title-source" content={resolvedTitle.source} />
 		<meta name="theme-color" content="#11251c" />
 		<meta name="description" content={description} />
 		<meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'} />

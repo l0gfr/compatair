@@ -16,6 +16,16 @@ Le catalogue technique est physiquement découpé en un fichier par référence 
 
 Le validateur bloque les identifiants dupliqués, les références vers une preuve inconnue et les caractéristiques critiques sans provenance.
 
+L’ajout d’une référence passe par les commandes reproductibles suivantes :
+
+```bash
+pnpm catalog:add -- compressors chemin/compresseur.json
+pnpm catalog:index
+pnpm catalog:check
+```
+
+Le fichier JSON doit satisfaire le schéma strict du domaine. L’index n’est plus maintenu à la main : il est régénéré dans l’ordre alphabétique. Le contrôle catalogue vérifie aussi le nom de fichier, l’unicité globale de l’identifiant, l’image locale, les références de preuves, les URL HTTPS et la présence des titres SEO éditoriaux. Après `catalog:add`, le contributeur doit donc ajouter les titres explicites du nouveau produit dans `src/data/product-seo-titles.ts` avant que la CI puisse passer.
+
 ## Historique des preuves
 
 `src/data/evidence-history.snapshot.json` constitue le registre public append-only. Sa baseline du 14 juillet 2026 archive les 67 preuves alors présentes, sans reconstruire artificiellement un passé antérieur. Toute modification d’une source doit ajouter un événement conservant l’ancien instantané ; le test d’intégrité bloque une preuve courante qui ne correspond pas à la dernière version archivée. Les contrats publics sont `/preuves/` et `/data/evidence-history.json`.
@@ -32,6 +42,12 @@ Le baromètre annuel est calculé uniquement depuis les compresseurs et preuves 
 - un `verdictVersion` SHA-256 reproductible.
 
 Le workflow quotidien compare ce snapshot à la production et conserve le rapport pendant 30 jours.
+
+## Signature des publications
+
+Le déploiement de production signe octet pour octet, avec Ed25519, les cinq publications JSON : catalogue, offres, verdicts, historique des preuves et baromètre. Le manifeste détaché est publié sous `/data/signatures.json`; le registre des clés publiques est disponible sous `/data/signing-keys.json`.
+
+La clé privée n’existe pas dans Git. Le workflow échoue si le secret GitHub `COMPATAIR_PUBLICATION_SIGNING_KEY` est absent ou si la clé ne correspond pas à l’empreinte publique enregistrée. La vérification locale d’un artifact signé s’effectue avec `pnpm data:verify-signatures`. Une rotation ajoute d’abord une nouvelle clé publique au registre ; une clé déjà utilisée ne doit pas être retirée, afin de préserver la vérification des publications archivées.
 
 ## Demande agrégée
 

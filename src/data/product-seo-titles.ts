@@ -1,0 +1,98 @@
+/** Titres éditoriaux explicites des pages produits indexables. Aucun titre n’est tronqué silencieusement. */
+export const productSeoTitles: Record<string, string> = {
+	'abac-atf-5-5-270d': 'ABAC ATF 5.5 270D : FAD et débit | CompatAir',
+	'abac-atf-s-3-24': 'ABAC ATF-S 3 24 : FAD et débit | CompatAir',
+	'abac-atf-s-3-50': 'ABAC ATF-S 3 50 : FAD et débit | CompatAir',
+	'abac-atf-s-4-100': 'ABAC ATF-S 4 100 : FAD et débit | CompatAir',
+	'abac-atl-5-5-270': 'ABAC ATL 5.5 270 : FAD et débit | CompatAir',
+	'abac-atl-7-5-270': 'ABAC ATL 7.5 270 : FAD et débit | CompatAir',
+	'abac-pole-position-os20p': 'ABAC Pole Position OS20P : FAD et débit | CompatAir',
+	'atlas-copco-ab25e100': 'Atlas Copco AB25E100 : FAD et débit | CompatAir',
+	'atlas-copco-ab30e100': 'Atlas Copco AB30E100 : FAD et débit | CompatAir',
+	'atlas-copco-ab40e100t': 'Atlas Copco AB40E100T : FAD et débit | CompatAir',
+	'einhell-silenzzo-18-160': 'Einhell SILENZZO 18/160 : FAD et débit | CompatAir',
+	'einhell-silenzzo-36-210': 'Einhell SILENZZO 36/210 : FAD et débit | CompatAir',
+	'einhell-tc-ac-190-24-8-i-of': 'Einhell TC-AC 190/24/8 I OF : FAD et débit | CompatAir',
+	'einhell-tc-ac-190-24-8': 'Einhell TC-AC 190/24/8 : FAD et débit | CompatAir',
+	'einhell-tc-ac-190-50-8': 'Einhell TC-AC 190/50/8 : FAD et débit | CompatAir',
+	'einhell-tc-ac-190-of-set': 'Einhell TC-AC 190 OF Set : FAD et débit | CompatAir',
+	'einhell-tc-ac-200-24-8-of': 'Einhell TC-AC 200/24/8 OF : FAD et débit | CompatAir',
+	'einhell-tc-ac-240-50-10-of': 'Einhell TC-AC 240/50/10 OF : FAD et débit | CompatAir',
+	'einhell-tc-ac-270-50-10': 'Einhell TC-AC 270/50/10 : FAD et débit | CompatAir',
+	'einhell-tc-ac-270-50-8': 'Einhell TC-AC 270/50/8 : FAD et débit | CompatAir',
+	'einhell-tc-ac-420-50-10-v': 'Einhell TC-AC 420/50/10 V : FAD et débit | CompatAir',
+	'einhell-te-ac-110-6-silent-plus': 'Einhell TE-AC 110/6 Silent Plus : FAD et débit | CompatAir',
+	'einhell-te-ac-135-24-silent-plus': 'Einhell TE-AC 135/24 Silent Plus : FAD et débit | CompatAir',
+	'einhell-te-ac-18-75-li-of-solo': 'Einhell TE-AC 18/75 Li OF-Solo : FAD et débit | CompatAir',
+	'einhell-te-ac-270-24-10': 'Einhell TE-AC 270/24/10 : FAD et débit | CompatAir',
+	'einhell-te-ac-270-50-silent-plus': 'Einhell TE-AC 270/50 Silent Plus : FAD et débit | CompatAir',
+	'einhell-te-ac-270-50-silent': 'Einhell TE-AC 270/50 Silent : FAD et débit | CompatAir',
+	'einhell-te-ac-36-150-li-of-solo': 'Einhell TE-AC 36/150 Li OF-Solo : FAD et débit | CompatAir',
+	'einhell-te-ac-36-8-li-of-set-solo': 'Einhell TE-AC 36/8 Li OF Set-Solo : FAD et débit | CompatAir',
+	'einhell-te-ac-400-50-10-v': 'Einhell TE-AC 400/50/10 V : FAD et débit | CompatAir',
+	'einhell-te-ac-430-50-10': 'Einhell TE-AC 430/50/10 : FAD et débit | CompatAir',
+	'einhell-te-ac-430-90-10': 'Einhell TE-AC 430/90/10 : FAD et débit | CompatAir',
+	'metabo-basic-160-6-w-of': 'Metabo Basic 160-6 W OF : FAD et débit | CompatAir',
+	'metabo-basic-220-24-of-silent': 'Metabo Basic 220-24 OF Silent : FAD et débit | CompatAir',
+	'metabo-basic-250-24-w': 'Metabo Basic 250-24 W : FAD et débit | CompatAir',
+	'metabo-basic-250-50-w': 'Metabo Basic 250-50 W : FAD et débit | CompatAir',
+	'metabo-mega-350-100-w': 'Metabo Mega 350-100 W : FAD et débit | CompatAir',
+	'metabo-mega-400-50-w': 'Metabo Mega 400-50 W : FAD et débit | CompatAir',
+	'metabo-mega-580-200-d': 'Metabo Mega 580-200 D : FAD et débit | CompatAir',
+	'metabo-power-180-5-w-of': 'Metabo Power 180-5 W OF : FAD et débit | CompatAir',
+	'einhell-tc-pn-50': 'Einhell TC-PN 50 : débit et pression | CompatAir',
+	'einhell-tc-pw-340': 'Einhell TC-PW 340 : débit et pression | CompatAir',
+	'metabo-dssw-500': 'Metabo DSSW 500-1/2 C : débit et pression | CompatAir',
+	'metabo-drs-68-set': 'Metabo DRS 68 Set 1/2 : débit et pression | CompatAir',
+	'metabo-dbf-457': 'Metabo DBF 457 : débit et pression | CompatAir',
+	'einhell-tc-pc-45': 'Einhell TC-PC 45 : débit et pression | CompatAir',
+	'metabo-dmh-30-set': 'Metabo DMH 30 Set : débit et pression | CompatAir',
+	'einhell-tc-pa-50': 'Einhell TC-PA 50 : débit et pression | CompatAir',
+	'metabo-dw-125': 'Metabo DW 125 : débit et pression | CompatAir',
+	'einhell-tc-pp-220': 'Einhell TC-PP 220 : débit et pression | CompatAir',
+	'metabo-dg-25-set': 'Metabo DG 25 Set : débit et pression | CompatAir',
+	'metabo-db-10': 'Metabo DB 10 : débit et pression | CompatAir',
+	'einhell-4137000-manometre': 'Einhell Manomètre 4137000 : débit et pression | CompatAir',
+	'abac-g-550f': 'ABAC G-550F : débit et pression | CompatAir',
+	'metabo-fsp-600-lvlp': 'Metabo FSP 600 LVLP : débit et pression | CompatAir',
+	'metabo-ssp-1000': 'Metabo SSP 1000 : débit et pression | CompatAir',
+	'einhell-tc-pe-150': 'Einhell TC-PE 150 : débit et pression | CompatAir',
+	'metabo-dsx-150': 'Metabo DSX 150 : débit et pression | CompatAir',
+	'metabo-bp-200': 'Metabo BP 200 : débit et pression | CompatAir',
+	'metabo-ds-14': 'Metabo DS 14 : débit et pression | CompatAir',
+};
+
+export const toolUseSeoTitles: Record<string, string> = {
+	'einhell-tc-pn-50': 'Einhell TC-PN 50 : quel compresseur ? | CompatAir',
+	'einhell-tc-pw-340': 'Einhell TC-PW 340 : quel compresseur ? | CompatAir',
+	'metabo-dssw-500': 'Metabo DSSW 500-1/2 C : quel compresseur ? | CompatAir',
+	'metabo-drs-68-set': 'Metabo DRS 68 Set 1/2 : quel compresseur ? | CompatAir',
+	'metabo-dbf-457': 'Metabo DBF 457 : quel compresseur ? | CompatAir',
+	'einhell-tc-pc-45': 'Einhell TC-PC 45 : quel compresseur ? | CompatAir',
+	'metabo-dmh-30-set': 'Metabo DMH 30 Set : quel compresseur ? | CompatAir',
+	'einhell-tc-pa-50': 'Einhell TC-PA 50 : quel compresseur ? | CompatAir',
+	'metabo-dw-125': 'Metabo DW 125 : quel compresseur ? | CompatAir',
+	'einhell-tc-pp-220': 'Einhell TC-PP 220 : quel compresseur ? | CompatAir',
+	'metabo-dg-25-set': 'Metabo DG 25 Set : quel compresseur ? | CompatAir',
+	'metabo-db-10': 'Metabo DB 10 : quel compresseur ? | CompatAir',
+	'einhell-4137000-manometre': 'Einhell Manomètre 4137000 : quel compresseur ? | CompatAir',
+	'abac-g-550f': 'ABAC G-550F : quel compresseur ? | CompatAir',
+	'metabo-fsp-600-lvlp': 'Metabo FSP 600 LVLP : quel compresseur ? | CompatAir',
+	'metabo-ssp-1000': 'Metabo SSP 1000 : quel compresseur ? | CompatAir',
+	'einhell-tc-pe-150': 'Einhell TC-PE 150 : quel compresseur ? | CompatAir',
+	'metabo-dsx-150': 'Metabo DSX 150 : quel compresseur ? | CompatAir',
+	'metabo-bp-200': 'Metabo BP 200 : quel compresseur ? | CompatAir',
+	'metabo-ds-14': 'Metabo DS 14 : quel compresseur ? | CompatAir',
+};
+
+export function productSeoTitle(productId: string) {
+	const title = productSeoTitles[productId];
+	if (!title) throw new Error(`Titre SEO éditorial absent : ${productId}`);
+	return title;
+}
+
+export function toolUseSeoTitle(productId: string) {
+	const title = toolUseSeoTitles[productId];
+	if (!title) throw new Error(`Titre SEO éditorial d’usage absent : ${productId}`);
+	return title;
+}

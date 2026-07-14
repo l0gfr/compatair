@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductImage from '../../components/ProductImage.astro';
 import { compressors, tools } from '../../data/catalog';
+import { productSeoTitle } from '../../data/product-seo-titles';
 import { evaluateCompatibility } from '../../domain/compatibility';
 import { toolDemandLabel, toolPressureLabel } from '../../domain/tool-demand';
 import { activeOffers, merchants } from '../../data/offers';
@@ -33,6 +34,7 @@ const productJsonLd = {
 
 <BaseLayout
 	title={`${compressor.brand} ${compressor.model} : débit et compatibilité | CompatAir`}
+	editorialTitle={productSeoTitle(compressor.id)}
 	description={`Analyse du ${compressor.brand} ${compressor.model} : cuve ${compressor.tankLiters} L, pression ${compressor.maxPressureBar} bar et débit restitué sourcé.`}
 	pageType="product"
 	modifiedDate={new Date(verifiedAt)}

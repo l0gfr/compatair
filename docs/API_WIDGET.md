@@ -18,12 +18,26 @@ Une erreur réseau, un produit inconnu ou une donnée technique manquante ne doi
 ```html
 <script
   src="https://compatair.fr/widget/v1/compatair-widget.js"
+  data-target="compatibility-result"
   data-compressor-id="einhell-tc-ac-240-50-10-of"
   data-tool-id="einhell-tc-pe-150"
   defer></script>
 ```
 
 Le script appelle l’API depuis son origine, isole son style dans un Shadow DOM et ne transmet que les identifiants techniques. Le marchand doit autoriser `https://compatair.fr` dans ses directives CSP `script-src` et `connect-src`.
+
+Pour une fiche produit dynamique, le même script expose une API explicite. `update` annule la requête précédente et `destroy` retire le composant :
+
+```js
+const widget = window.CompatAirWidget.mount(
+  document.getElementById('compatibility-result'),
+  { compressorId: 'einhell-tc-ac-240-50-10-of', toolId: 'einhell-tc-pe-150' },
+);
+
+widget.update({ compressorId: 'metabo-basic-250-24-w-of', toolId: 'einhell-tc-pe-150' });
+```
+
+Le client valide le schéma minimal, le verdict et l’URL de détail. Il refuse une URL externe renvoyée par l’API et n’injecte aucun HTML fourni par le réseau.
 
 ## Frontière commerciale
 

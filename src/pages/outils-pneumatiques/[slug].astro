@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductImage from '../../components/ProductImage.astro';
 import { compressors, tools } from '../../data/catalog';
+import { productSeoTitle } from '../../data/product-seo-titles';
 import { evaluateCompatibility } from '../../domain/compatibility';
 import { isFixedFlowTool, toolDemandLabel, toolPressureLabel } from '../../domain/tool-demand';
 import { latestEvidenceDate } from '../../domain/provenance';
@@ -39,6 +40,7 @@ const productJsonLd = {
 ---
 <BaseLayout
 	title={`${tool.label} : quel compresseur ? | CompatAir`}
+	editorialTitle={productSeoTitle(tool.id)}
 	description={`${tool.label} : ${demandLabel}, ${pressureLabel}. Données constructeur, limites et méthode de dimensionnement.`}
 	pageType="product"
 	modifiedDate={new Date(verifiedAt)}

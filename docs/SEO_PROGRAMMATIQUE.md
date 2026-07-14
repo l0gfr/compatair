@@ -12,6 +12,12 @@ Les pages de couples compresseur-outil répondent à un besoin produit réel : e
 
 Cette séparation évite de transformer plusieurs centaines de dossiers techniques proches en pages d’acquisition. Le corpus indexable reste centré sur les pages qui apportent une synthèse ou une information propre.
 
+## Titres éditoriaux
+
+Les fiches compresseurs, les fiches outils et les pages « quel compresseur pour » utilisent des titres écrits explicitement dans `src/data/product-seo-titles.ts`. La troncature automatique reste uniquement un filet de sécurité pour les autres gabarits. Un titre éditorial vide ou supérieur à 60 caractères fait échouer le build au lieu d’être raccourci silencieusement.
+
+Les fiches outils et leurs pages d’usage ont des intentions distinctes : caractéristiques « débit et pression » pour la fiche, sélection « quel compresseur ? » pour la page d’usage. L’audit de distribution vérifie la présence de cette couche éditoriale et l’unicité des titres rendus.
+
 ## Garde-fou automatique
 
 `scripts/audit-dist.mjs` échoue si :
@@ -20,5 +26,6 @@ Cette séparation évite de transformer plusieurs centaines de dossiers techniqu
 - une URL `/compatibilite/` apparaît dans un sitemap ;
 - une page indexable n’apparaît pas dans le sitemap ;
 - une page `noindex` apparaît dans le sitemap.
+- une fiche produit ou une page d’usage retombe sur un titre automatiquement ajusté.
 
 Cette règle doit être réexaminée avant d’indexer une sous-sélection de couples. Une page ne pourra devenir indexable que si elle apporte une valeur éditoriale propre, vérifiable et non produite uniquement par substitution de noms ou de chiffres.
