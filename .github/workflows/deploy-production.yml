@@ -248,19 +248,25 @@ jobs:
           MCP_ENABLED: ${{ vars.MCP_ENABLED }}
         run: |
           curl_args=(--fail --silent --show-error --retry 5 --retry-delay 3 --retry-all-errors --max-time 20)
+          assert_body_contains() {
+            local url=$1
+            local needle=$2
+            curl "${curl_args[@]}" --output smoke-response-body "$url"
+            grep -Fq "$needle" smoke-response-body
+          }
           curl "${curl_args[@]}" --location https://compatair.fr/ > /dev/null
-          curl "${curl_args[@]}" https://compatair.fr/robots.txt | grep -Fq 'https://compatair.fr/sitemap-index.xml'
+          assert_body_contains https://compatair.fr/robots.txt 'https://compatair.fr/sitemap-index.xml'
           curl "${curl_args[@]}" https://compatair.fr/sitemap-index.xml > /dev/null
-          curl "${curl_args[@]}" https://compatair.fr/scanner/ | grep -Fq 'data-compatair-surface="scanner"'
-          curl "${curl_args[@]}" https://compatair.fr/professionnels/ | grep -Fq 'id="merchant-widget-demo"'
-          curl "${curl_args[@]}" https://compatair.fr/widget/v1.0.0/compatair-widget.js | grep -Fq 'CompatAir widget API v1'
-          curl "${curl_args[@]}" https://compatair.fr/data/catalog.json | grep -Fq 'catalogVersion'
-          curl "${curl_args[@]}" https://compatair.fr/data/runtime-catalog.json | grep -Fq 'catalogVersion'
-          curl "${curl_args[@]}" https://compatair.fr/data/verdicts.json | grep -Fq 'verdictVersion'
-          curl "${curl_args[@]}" https://compatair.fr/data/document-quality-observatory.json | grep -Fq 'observatoryVersion'
-          curl "${curl_args[@]}" https://compatair.fr/data/contradiction-radar.json | grep -Fq 'radarVersion'
-          curl "${curl_args[@]}" https://compatair.fr/radar-contradictions/ | grep -Fq 'Radar des contradictions'
-          curl "${curl_args[@]}" https://compatair.fr/graphe-preuve/ | grep -Fq 'data-proof-graph'
+          assert_body_contains https://compatair.fr/scanner/ 'data-compatair-surface="scanner"'
+          assert_body_contains https://compatair.fr/professionnels/ 'id="merchant-widget-demo"'
+          assert_body_contains https://compatair.fr/widget/v1.0.0/compatair-widget.js 'CompatAir widget API v1'
+          assert_body_contains https://compatair.fr/data/catalog.json 'catalogVersion'
+          assert_body_contains https://compatair.fr/data/runtime-catalog.json 'catalogVersion'
+          assert_body_contains https://compatair.fr/data/verdicts.json 'verdictVersion'
+          assert_body_contains https://compatair.fr/data/document-quality-observatory.json 'observatoryVersion'
+          assert_body_contains https://compatair.fr/data/contradiction-radar.json 'radarVersion'
+          assert_body_contains https://compatair.fr/radar-contradictions/ 'Radar des contradictions'
+          assert_body_contains https://compatair.fr/graphe-preuve/ 'data-proof-graph'
           legacy_redirect=$(curl --silent --show-error --max-time 20 --output /dev/null --write-out '%{http_code} %{redirect_url}' 'https://compatair.fr/compatibilite/einhell-tc-ac-240-50-10-of--ponceuse-excentrique-einhell-tc-pe-150/')
           test "$legacy_redirect" = '301 https://compatair.fr/calculateur/#outil=einhell-tc-pe-150&compresseur=einhell-tc-ac-240-50-10-of'
           curl "${curl_args[@]}" --head --dump-header legacy-headers.txt --output /dev/null 'https://compatair.fr/compatibilite/einhell-tc-ac-240-50-10-of--ponceuse-excentrique-einhell-tc-pe-150/'
@@ -278,16 +284,16 @@ jobs:
             affiliate_redirect=$(curl --silent --show-error --head --max-time 20 --output /dev/null --write-out '%{http_code} %{redirect_url}' "https://compatair.fr/go/${affiliate_offer_id}")
             test "$affiliate_redirect" = "302 $affiliate_target"
           fi
-          curl "${curl_args[@]}" https://compatair.fr/data/signatures.json | grep -Fq 'compatair-2026-01'
-          curl "${curl_args[@]}" https://compatair.fr/data/signing-keys.json | grep -Fq 'Ed25519'
+          assert_body_contains https://compatair.fr/data/signatures.json 'compatair-2026-01'
+          assert_body_contains https://compatair.fr/data/signing-keys.json 'Ed25519'
           node scripts/verify-live-seo.mjs
           if [[ "$MCP_ENABLED" == "true" ]]; then
             health=$(curl "${curl_args[@]}" https://compatair.fr/mcp-health)
             grep -Fq '"status":"ok"' <<< "$health"
             grep -Fq '"verdictVersion"' <<< "$health"
-            curl "${curl_args[@]}" --dump-header api-headers.txt \
-              'https://compatair.fr/api/v1/compatibility?compressorId=einhell-tc-ac-240-50-10-of&toolId=einhell-tc-pe-150' \
-              | grep -Fq '"schemaVersion":"1.0.0"'
+            curl "${curl_args[@]}" --dump-header api-headers.txt --output api-response.json \
+              'https://compatair.fr/api/v1/compatibility?compressorId=einhell-tc-ac-240-50-10-of&toolId=einhell-tc-pe-150'
+            grep -Fq '"schemaVersion":"1.0.0"' api-response.json
             test "$(awk 'BEGIN { IGNORECASE=1 } /^X-Content-Type-Options:[[:space:]]*nosniff\r?$/ { count++ } END { print count + 0 }' api-headers.txt)" = '1'
           fi
 

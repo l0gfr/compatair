@@ -73,11 +73,13 @@ const scannerPage = await readFile('src/pages/scanner.astro', 'utf8');
 if (!scannerPage.includes('data-compatair-surface="scanner"')) errors.push('src/pages/scanner.astro: marqueur de vérification stable manquant');
 const deployWorkflow = await readFile('.github/workflows/deploy-production.yml', 'utf8');
 const ciWorkflow = await readFile('.github/workflows/ci.yml', 'utf8');
-if (!deployWorkflow.includes(`grep -Fq 'data-compatair-surface="scanner"'`)) errors.push('.github/workflows/deploy-production.yml: le contrôle du scanner doit utiliser son marqueur stable');
+if (!deployWorkflow.includes(`assert_body_contains https://compatair.fr/scanner/ 'data-compatair-surface="scanner"'`)) errors.push('.github/workflows/deploy-production.yml: le contrôle du scanner doit utiliser son marqueur stable');
 if (deployWorkflow.includes(`grep -Fq 'Scanner et vérifier'`)) errors.push('.github/workflows/deploy-production.yml: contrôle de production couplé au wording public du scanner');
 if (!deployWorkflow.includes('COMPATAIR_RELEASE_SHA: ${{ github.sha }}')) errors.push('.github/workflows/deploy-production.yml: injection du SHA de release absente');
 if (!deployWorkflow.includes('COMPATAIR_EXPECTED_RELEASE_SHA: ${{ github.sha }}')) errors.push('.github/workflows/deploy-production.yml: SHA attendu absent de la vérification live');
 if (!deployWorkflow.includes('node scripts/verify-live-seo.mjs')) errors.push('.github/workflows/deploy-production.yml: vérification SEO live absente');
+if (!deployWorkflow.includes('assert_body_contains()')) errors.push('.github/workflows/deploy-production.yml: helper de contrôle HTTP sans pipe absent');
+if (/curl[^\n]*\|\s*grep\s+-Fq/.test(deployWorkflow)) errors.push('.github/workflows/deploy-production.yml: curl ne doit pas être pipé vers grep -q avec retry-all-errors');
 for (const [file, workflow] of [['.github/workflows/ci.yml', ciWorkflow], ['.github/workflows/deploy-production.yml', deployWorkflow]]) {
 	if (!workflow.includes('CHROME_PATH=$chrome_path')) errors.push(`${file}: navigateur Chrome non identifié explicitement`);
 	if (!workflow.includes('pnpm lighthouse:summary')) errors.push(`${file}: résumé Lighthouse absent`);
