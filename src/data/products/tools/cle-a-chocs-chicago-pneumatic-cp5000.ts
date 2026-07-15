@@ -1,7 +1,7 @@
 const product = {
 	id: 'chicago-pneumatic-cp5000',
 	slug: 'cle-a-chocs-chicago-pneumatic-cp5000',
-	category: 'Clé à chocs',
+	categoryId: 'cle-a-chocs', category: 'Clé à chocs',
 	label: 'Clé à chocs pneumatique Chicago Pneumatic CP5000 1 pouce',
 	brand: 'Chicago Pneumatic',
 	model: 'CP5000',

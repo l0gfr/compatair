@@ -28,6 +28,12 @@ const editorialSchema = z.object({
 	limitations: z.array(z.string().min(1)).min(1),
 });
 
+const additionalSpecificationSchema = z.object({
+	label: z.string().min(1),
+	value: z.string().min(1),
+	evidenceIds: z.array(z.string().min(1)).min(1),
+});
+
 export const compressorSchema = z.object({
 	id: productIdSchema,
 	slug: z.string().regex(/^[a-z0-9-]+$/),
@@ -62,14 +68,28 @@ export const compressorSchema = z.object({
 	status: z.enum(['active', 'discontinued', 'unknown']),
 	image: productImageSchema,
 	editorial: editorialSchema,
+	specifications: z.array(additionalSpecificationSchema).default([]),
 	evidence: z.array(evidenceSchema).min(1),
 	fieldSources: z.record(z.string(), z.array(z.string())).default({}),
 	notes: z.array(z.string()).default([]),
+}).superRefine((compressor, context) => {
+	const pressures = new Set<number>();
+	for (const [index, point] of compressor.fadCurve.entries()) {
+		if (point.pressureBar > compressor.maxPressureBar) context.addIssue({ code: 'custom', path: ['fadCurve', index, 'pressureBar'], message: 'La pression FAD ne peut pas dépasser la pression maximale.' });
+		if (pressures.has(point.pressureBar)) context.addIssue({ code: 'custom', path: ['fadCurve', index, 'pressureBar'], message: 'Chaque pression FAD doit être unique.' });
+		pressures.add(point.pressureBar);
+	}
 });
 
 const toolBaseSchema = z.object({
 	id: productIdSchema,
 	slug: z.string().regex(/^[a-z0-9-]+$/),
+	categoryId: z.enum([
+		'agrafeuse-cloueuse', 'burineur', 'cle-a-chocs', 'cle-a-cliquet', 'derouilleur-a-aiguilles',
+		'gonflage', 'lime-bande', 'meuleuse', 'perceuse', 'pistolet-cartouche',
+		'pistolet-peinture-hvlp', 'pistolet-peinture-lvlp', 'polisseuse', 'ponceuse-bande',
+		'ponceuse-orbitale', 'riveteuse', 'sableuse', 'scie', 'soufflette', 'visseuse',
+	]),
 	category: z.string().min(1),
 	label: z.string().min(1),
 	brand: z.string().min(1),
@@ -96,6 +116,7 @@ const toolBaseSchema = z.object({
 	confidence: confidenceSchema,
 	image: productImageSchema,
 	editorial: editorialSchema,
+	specifications: z.array(additionalSpecificationSchema).default([]),
 	evidence: z.array(evidenceSchema).min(1),
 	fieldSources: z.record(z.string(), z.array(z.string())).default({}),
 	notes: z.array(z.string()).default([]),
@@ -105,6 +126,9 @@ const fixedFlowDemandSchema = z.object({
 	demandModel: z.literal('fixed-flow'),
 	workingPressureBar: z.object({ min: z.number().positive(), typical: z.number().positive(), max: z.number().positive() }),
 	airflowLpm: z.object({ min: z.number().positive(), typical: z.number().positive(), max: z.number().positive() }),
+}).superRefine((demand, context) => {
+	if (demand.workingPressureBar.min > demand.workingPressureBar.typical || demand.workingPressureBar.typical > demand.workingPressureBar.max) context.addIssue({ code: 'custom', path: ['workingPressureBar'], message: 'La pression doit respecter min ≤ nominale ≤ max.' });
+	if (demand.airflowLpm.min > demand.airflowLpm.typical || demand.airflowLpm.typical > demand.airflowLpm.max) context.addIssue({ code: 'custom', path: ['airflowLpm'], message: 'Le débit doit respecter min ≤ nominal ≤ max.' });
 });
 
 const perActionDemandSchema = z.object({
@@ -112,12 +136,17 @@ const perActionDemandSchema = z.object({
 	workingPressureBar: z.object({ min: z.number().positive(), typical: z.number().positive(), max: z.number().positive() }),
 	airPerActionLiters: z.number().positive(),
 	actionLabel: z.string().min(1),
+}).superRefine((demand, context) => {
+	if (demand.workingPressureBar.min > demand.workingPressureBar.typical || demand.workingPressureBar.typical > demand.workingPressureBar.max) context.addIssue({ code: 'custom', path: ['workingPressureBar'], message: 'La pression doit respecter min ≤ nominale ≤ max.' });
 });
 
 const variableVolumeDemandSchema = z.object({
 	demandModel: z.literal('variable-volume'),
 	workingPressureBar: z.object({ min: z.number().positive().optional(), typical: z.number().positive().optional(), max: z.number().positive() }),
 	demandExplanation: z.string().min(1),
+}).superRefine((demand, context) => {
+	const { min, typical, max } = demand.workingPressureBar;
+	if ((min !== undefined && min > max) || (typical !== undefined && typical > max) || (min !== undefined && typical !== undefined && min > typical)) context.addIssue({ code: 'custom', path: ['workingPressureBar'], message: 'La pression doit respecter min ≤ nominale ≤ max.' });
 });
 
 export const toolProfileSchema = toolBaseSchema.and(z.discriminatedUnion('demandModel', [

@@ -2138,7 +2138,880 @@
         "confidence": "A",
         "notes": "Pression d’alimentation 6,2 bar et consignes de lubrification."
       }
+    },
+    {
+      "id": "added:abac-2809913100:abac-2809913100-official:2026-07-15",
+      "evidenceId": "abac-2809913100-official",
+      "productId": "abac-2809913100",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "fffd23a9892cc3b29bf661668111af9ccc3c6daf82952db381ce06527dd89acf",
+      "snapshot": {
+        "id": "abac-2809913100-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/2809913100/impact-wrench-12%2B-pro-mini",
+        "sourceLabel": "ABAC, fiche officielle Professional Mini Impact Wrench 1/2\" (2809913100)",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Données de performance et dimensions produit ; 5,3 L/s convertis exactement en 318 L/min."
+      }
+    },
+    {
+      "id": "added:abac-2809913200:abac-2809913200-official:2026-07-15",
+      "evidenceId": "abac-2809913200-official",
+      "productId": "abac-2809913200",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ac7d724836d7cb76569a30aec50e33be1ef2535f498c7113eec725b3d6e9a9e8",
+      "snapshot": {
+        "id": "abac-2809913200-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/2809913200/die-grinder-pro",
+        "sourceLabel": "ABAC, fiche officielle Professional Compact Die Grinder (2809913200)",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Données de performance et dimensions produit ; 4 L/s convertis exactement en 240 L/min."
+      }
+    },
+    {
+      "id": "added:abac-2809913201:abac-2809913201-official:2026-07-15",
+      "evidenceId": "abac-2809913201-official",
+      "productId": "abac-2809913201",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7c77447b3d0053e318ebde1d09582aa68893e6a90cc09ffaa4eef5c1b2650630",
+      "snapshot": {
+        "id": "abac-2809913201-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/2809913201/angle-die-grinder-pro",
+        "sourceLabel": "ABAC, fiche officielle Professional Angle Die Grinder (2809913201)",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Données de performance et dimensions produit ; 4 L/s convertis exactement en 240 L/min."
+      }
+    },
+    {
+      "id": "added:abac-2809913202:abac-2809913202-official:2026-07-15",
+      "evidenceId": "abac-2809913202-official",
+      "productId": "abac-2809913202",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "058bb9ea755b1db1598a4e3e995961929ebf0090971e042eea66c703c9d59fd8",
+      "snapshot": {
+        "id": "abac-2809913202-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/2809913202/angle-grinder-125-comp-pro",
+        "sourceLabel": "ABAC, fiche officielle Professional Angle Grinder 125 mm (2809913202)",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Données de performance et dimensions produit ; 11 L/s convertis exactement en 660 L/min."
+      }
+    },
+    {
+      "id": "added:abac-2809913203:abac-2809913203-official:2026-07-15",
+      "evidenceId": "abac-2809913203-official",
+      "productId": "abac-2809913203",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a464f72a8054a77a7279cced8a49fb3874411fcd0e2f898dbb27ac2f9aacd2e5",
+      "snapshot": {
+        "id": "abac-2809913203-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/2809913203/long-neck-angle-grinder-pro",
+        "sourceLabel": "ABAC, fiche officielle Professional Long Neck Angle Grinder (2809913203)",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Données de performance et dimensions produit ; 14 L/s convertis exactement en 840 L/min."
+      }
+    },
+    {
+      "id": "added:abac-2809913204:abac-2809913204-official:2026-07-15",
+      "evidenceId": "abac-2809913204-official",
+      "productId": "abac-2809913204",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ec3513d7ece5c2884b47d1bcfb70ff511c591b98f7b1de093b8f6481c6337759",
+      "snapshot": {
+        "id": "abac-2809913204-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/2809913204/die-grinder-long-pro",
+        "sourceLabel": "ABAC, fiche officielle Professional Long Die Grinder (2809913204)",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Données de performance et dimensions produit ; 4 L/s convertis exactement en 240 L/min."
+      }
+    },
+    {
+      "id": "added:abac-2809913206:abac-2809913206-official:2026-07-15",
+      "evidenceId": "abac-2809913206-official",
+      "productId": "abac-2809913206",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "4d49a8baedf084fb1c96c80b91652809f2915e63c987b3464a561163d51e12b8",
+      "snapshot": {
+        "id": "abac-2809913206-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/2809913206/angle-grinder-g-202",
+        "sourceLabel": "ABAC, fiche officielle G-202 (2809913206)",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Données de performance et dimensions produit ; 2,5 L/s convertis exactement en 150 L/min."
+      }
+    },
+    {
+      "id": "added:abac-2809913251:abac-2809913251-official:2026-07-15",
+      "evidenceId": "abac-2809913251-official",
+      "productId": "abac-2809913251",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "bad7c968010516fa89cbd172bf4329c31fcbb662904182471466714893044999",
+      "snapshot": {
+        "id": "abac-2809913251-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/2809913251/orbital-sander-150-comp-pro",
+        "sourceLabel": "ABAC, fiche officielle Professional Orbital Sander 150 mm (2809913251)",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Données de performance et dimensions produit ; 7 L/s convertis exactement en 420 L/min."
+      }
+    },
+    {
+      "id": "added:abac-2809913252:abac-2809913252-official:2026-07-15",
+      "evidenceId": "abac-2809913252-official",
+      "productId": "abac-2809913252",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "773abf70e56257a6b44250edf40b71a03fe580ac2ac3eae92ba94e0a6d7949d7",
+      "snapshot": {
+        "id": "abac-2809913252-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/2809913252/palm-sander-g-225",
+        "sourceLabel": "ABAC, fiche officielle G-225 (2809913252)",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Données de performance et dimensions produit ; 3 L/s convertis exactement en 180 L/min."
+      }
+    },
+    {
+      "id": "added:abac-2809913600:abac-2809913600-official:2026-07-15",
+      "evidenceId": "abac-2809913600-official",
+      "productId": "abac-2809913600",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b9175c315076a38f0caef58f8e77e573ade9023f9e398bcd3ae1bb726d47dea1",
+      "snapshot": {
+        "id": "abac-2809913600-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/2809913600/cartridge-gun-g-570",
+        "sourceLabel": "ABAC, fiche officielle G-570 (2809913600)",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Données de performance et dimensions produit ; 1 L/s convertis exactement en 60 L/min."
+      }
+    },
+    {
+      "id": "added:abac-2809913700:abac-2809913700-official:2026-07-15",
+      "evidenceId": "abac-2809913700-official",
+      "productId": "abac-2809913700",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "71b8fbc49226f4bb6f7fbea9b9577a201aa1f6a2622521442b6ba56076d2641f",
+      "snapshot": {
+        "id": "abac-2809913700-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/2809913700/saw-comp-pro",
+        "sourceLabel": "ABAC, fiche officielle Professional Saw (2809913700)",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Données de performance et dimensions produit ; 4 L/s convertis exactement en 240 L/min."
+      }
+    },
+    {
+      "id": "corrected:abac-atf-5-5-270d:schneider-industrial-tech-2023:2026-07-15",
+      "evidenceId": "schneider-industrial-tech-2023",
+      "productId": "abac-atf-5-5-270d",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "corrected",
+      "summary": "Métadonnées de preuve normalisées pour garantir un identifiant global non ambigu ; valeur technique inchangée.",
+      "fingerprint": "10ba82061630bc8c842fbf799314e5ec5a3d5dd74d1e6640d827fe2b36820dce",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique ATF et ATL",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Les tableaux ATF et ATL publient les débits des groupes à 7 bar."
+      }
+    },
+    {
+      "id": "corrected:abac-atl-5-5-270:schneider-industrial-tech-2023:2026-07-15",
+      "evidenceId": "schneider-industrial-tech-2023",
+      "productId": "abac-atl-5-5-270",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "corrected",
+      "summary": "Métadonnées de preuve normalisées pour garantir un identifiant global non ambigu ; valeur technique inchangée.",
+      "fingerprint": "fd443d16747d048fec3cb5031479cb127698c218acd3a31f52de560e41c2aaea",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique ATF et ATL",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Les tableaux ATF et ATL publient les débits des groupes à 7 bar."
+      }
+    },
+    {
+      "id": "corrected:abac-atl-7-5-270:schneider-industrial-tech-2023:2026-07-15",
+      "evidenceId": "schneider-industrial-tech-2023",
+      "productId": "abac-atl-7-5-270",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "corrected",
+      "summary": "Métadonnées de preuve normalisées pour garantir un identifiant global non ambigu ; valeur technique inchangée.",
+      "fingerprint": "e93a8d0643688d3c1033a7f48bf4449d3489af7e31e68bb37405718f202e6ca4",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique ATF et ATL",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "Les tableaux ATF et ATL publient les débits des groupes à 7 bar."
+      }
+    },
+    {
+      "id": "corrected:atlas-copco-ab25e100:atlas-ab-series-official:2026-07-15",
+      "evidenceId": "atlas-ab-series-official",
+      "productId": "atlas-copco-ab25e100",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "corrected",
+      "summary": "Métadonnées de preuve normalisées pour garantir un identifiant global non ambigu ; valeur technique inchangée.",
+      "fingerprint": "c663e2ec65196a9ab99b53cf07f02b0da8ef5283e15c3837020909a2105dfddb",
+      "snapshot": {
+        "id": "atlas-ab-series-official",
+        "sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/australia/documents/AB-series-brochure.pdf",
+        "sourceLabel": "Atlas Copco, brochure officielle AB25E100 et AB30E100",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "La brochure publie les MPN, cuves et FAD à 7 bar des variantes AB25E100 et AB30E100."
+      }
+    },
+    {
+      "id": "corrected:atlas-copco-ab30e100:atlas-ab-series-official:2026-07-15",
+      "evidenceId": "atlas-ab-series-official",
+      "productId": "atlas-copco-ab30e100",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "corrected",
+      "summary": "Métadonnées de preuve normalisées pour garantir un identifiant global non ambigu ; valeur technique inchangée.",
+      "fingerprint": "a834facea63b97624ac5073837b8776526c30739bae6df23b719ee86b9852b08",
+      "snapshot": {
+        "id": "atlas-ab-series-official",
+        "sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/australia/documents/AB-series-brochure.pdf",
+        "sourceLabel": "Atlas Copco, brochure officielle AB25E100 et AB30E100",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-14",
+        "confidence": "A",
+        "notes": "La brochure publie les MPN, cuves et FAD à 7 bar des variantes AB25E100 et AB30E100."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp0200b32l:cp-6151618070-official:2026-07-15",
+      "evidenceId": "cp-6151618070-official",
+      "productId": "chicago-pneumatic-cp0200b32l",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1e2c7ac3da7e8c489644ff8e4a617dc8e2196ecfd562444e8fa014ec0eddfa31",
+      "snapshot": {
+        "id": "cp-6151618070-official",
+        "sourceUrl": "https://tools.cp.com/en/products/percussivetools/cp0200b32l-sku6151618070",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP0200B32L",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 13 L/s à 780 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp1117p05-keyless:cp-6151580180-official:2026-07-15",
+      "evidenceId": "cp-6151580180-official",
+      "productId": "chicago-pneumatic-cp1117p05-keyless",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "4840448e09b82615292a28850ea05c92c1f01a6f7eae1fbfddd9ca185bb7e10d",
+      "snapshot": {
+        "id": "cp-6151580180-official",
+        "sourceUrl": "https://tools.cp.com/en/products/drills/cp1117p05-keyless-sku6151580180",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP1117P05 Keyless",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 14 L/s à 840 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7110:cp-8941071101-official:2026-07-15",
+      "evidenceId": "cp-8941071101-official",
+      "productId": "chicago-pneumatic-cp7110",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "148def8896f857de9307cc125139c9698c15c402dbb67fdeda86fff88a49998c",
+      "snapshot": {
+        "id": "cp-8941071101-official",
+        "sourceUrl": "https://tools.cp.com/en-ca/products/percussivetools/cp7110-sku8941071101",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7110",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 6,9 L/s à 414 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7111h:cp-8941071111-official:2026-07-15",
+      "evidenceId": "cp-8941071111-official",
+      "productId": "chicago-pneumatic-cp7111h",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "277c15f5e51729d5425dbb73e15615351a402f80bf3c6ef310916026ff70e3cb",
+      "snapshot": {
+        "id": "cp-8941071111-official",
+        "sourceUrl": "https://tools.cp.com/en/products/percussivetools/cp7111h-sku8941071111",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7111H",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 11 L/s à 660 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7267e:cp-8941072670-official:2026-07-15",
+      "evidenceId": "cp-8941072670-official",
+      "productId": "chicago-pneumatic-cp7267e",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e6c3b05b98c0bff732fe38b1bdfb9ee6ed7ce4df62aa0f51c6223b5a62fc8608",
+      "snapshot": {
+        "id": "cp-8941072670-official",
+        "sourceUrl": "https://tools.cp.com/en/products/sanders/cp7267e-sku8941072670",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7267E",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 8,5 L/s à 510 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp785h:cp-t024134-official:2026-07-15",
+      "evidenceId": "cp-t024134-official",
+      "productId": "chicago-pneumatic-cp785h",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "829048816d4b3565ed8f2c907cef589980fc968e8eb0bb6ce416429170b4f913",
+      "snapshot": {
+        "id": "cp-t024134-official",
+        "sourceUrl": "https://tools.cp.com/en/products/drills/cp785h-skuT024134",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP785H",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 6 L/s à 360 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp854:cp-t023186-official:2026-07-15",
+      "evidenceId": "cp-t023186-official",
+      "productId": "chicago-pneumatic-cp854",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6c5db84de56e692a0ca487f45e8b1f17bc9e4d189c8de95479569879666993e8",
+      "snapshot": {
+        "id": "cp-t023186-official",
+        "sourceUrl": "https://tools.cp.com/en/products/grinders/cp854-skuT023186",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP854",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 11 L/s à 660 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp857:cp-t024387-official:2026-07-15",
+      "evidenceId": "cp-t024387-official",
+      "productId": "chicago-pneumatic-cp857",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c841a6dd681aa240aefd7c12cfca69f75aa95e6d26ebff0d63ffcec22ac59215",
+      "snapshot": {
+        "id": "cp-t024387-official",
+        "sourceUrl": "https://tools.cp.com/en/products/grinders/cp857-skuT024387",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP857",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 11 L/s à 660 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp872:cp-t025373-official:2026-07-15",
+      "evidenceId": "cp-t025373-official",
+      "productId": "chicago-pneumatic-cp872",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5f7b7b54ab0a09c4c9e89922de06a6c72ea14257d41f327538dc57a0d40e347d",
+      "snapshot": {
+        "id": "cp-t025373-official",
+        "sourceUrl": "https://tools.cp.com/en-uk/products/grinders/cp872-skuT025373",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP872",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 12 L/s à 720 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9120crn:cp-8941091200-official:2026-07-15",
+      "evidenceId": "cp-8941091200-official",
+      "productId": "chicago-pneumatic-cp9120crn",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "953bab77e7371312ba47ab3a17292669a50f7c0a0b52c674d9f429e854ebb636",
+      "snapshot": {
+        "id": "cp-8941091200-official",
+        "sourceUrl": "https://tools.cp.com/en-ca/products/grinders/cp9120crn-sku8941091200",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP9120CRN",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 11 L/s à 660 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9122cr:cp-6151952122-official:2026-07-15",
+      "evidenceId": "cp-6151952122-official",
+      "productId": "chicago-pneumatic-cp9122cr",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1d2b06513df588468918bc7e047cfccb98ff2d751869495381b21f34ca3166d6",
+      "snapshot": {
+        "id": "cp-6151952122-official",
+        "sourceUrl": "https://tools.cp.com/en-ca/products/grinders/cp9122cr-sku6151952122",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP9122CR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 14 L/s à 840 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9123:cp-6151959123-official:2026-07-15",
+      "evidenceId": "cp-6151959123-official",
+      "productId": "chicago-pneumatic-cp9123",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e7ad39e777d55cfebbc92a017de15c93cc357bb70b44cf4b94871b56bff13d5e",
+      "snapshot": {
+        "id": "cp-6151959123-official",
+        "sourceUrl": "https://tools.cp.com/en/products/grinders/cp9123-sku6151959123",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP9123",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 11 L/s à 660 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9426:cp-6151919426-official:2026-07-15",
+      "evidenceId": "cp-6151919426-official",
+      "productId": "chicago-pneumatic-cp9426",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8abec1a05009767895b2373fb0510509add4ce124a6b225603a536aada573b29",
+      "snapshot": {
+        "id": "cp-6151919426-official",
+        "sourceUrl": "https://tools.cp.com/en/products/ratchetwrenches/cp9426-sku6151919426",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP9426",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 5,6 L/s à 336 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9427:cp-6151919427-official:2026-07-15",
+      "evidenceId": "cp-6151919427-official",
+      "productId": "chicago-pneumatic-cp9427",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "95b04d45bc845e72149ae550c79f1447ae74a2213a5817260d1a6f3ce7ed2fd8",
+      "snapshot": {
+        "id": "cp-6151919427-official",
+        "sourceUrl": "https://tools.cp.com/en/products/ratchetwrenches/cp9427-sku6151919427",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP9427",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 5,6 L/s à 336 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9882:cp-8941098820-official:2026-07-15",
+      "evidenceId": "cp-8941098820-official",
+      "productId": "chicago-pneumatic-cp9882",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "44f09b2199ed31a77670e883b74f2759cd203f21f7cb5d4a2929532f92923ad2",
+      "snapshot": {
+        "id": "cp-8941098820-official",
+        "sourceUrl": "https://tools.cp.com/en/products/compression-tools/cp9882-sku8941098820",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP9882",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 1,9 L/s à 114 L/min."
+      }
+    },
+    {
+      "id": "added:einhell-tc-ac-190-6-8-of:einhell-4020655-manual:2026-07-15",
+      "evidenceId": "einhell-4020655-manual",
+      "productId": "einhell-tc-ac-190-6-8-of",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e27e39724c4e511d2f3ac33470fac9862448e762847dd2accb1e3ddb06ae5fe1",
+      "snapshot": {
+        "id": "einhell-4020655-manual",
+        "sourceUrl": "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nnrb9og2096uv1uqjn9o92jo34/4020655_21023_001_DE_TC_AC_190_6_8_OF.pdf",
+        "sourceLabel": "Einhell, documentation officielle TC-AC 190/6/8 OF",
+        "sourceType": "manual",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:einhell-tc-ac-190-6-8-of:einhell-4020655-official:2026-07-15",
+      "evidenceId": "einhell-4020655-official",
+      "productId": "einhell-tc-ac-190-6-8-of",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6a6cc89e56c36b20c6bf6d8ff2808f3b42a78bccc573ecd55743d3e7927b5f6f",
+      "snapshot": {
+        "id": "einhell-4020655-official",
+        "sourceUrl": "https://www.einhell.de/p/4020655-tc-ac-190-6-8-of/",
+        "sourceLabel": "Einhell Allemagne, fiche officielle TC-AC 190/6/8 OF",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Référence fabricant, caractéristiques produit, débits aspiré et restitué."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-1000-2-500:kaeser-eurocomp-2026-brochure:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure",
+      "productId": "kaeser-eurocomp-epc-1000-2-500",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8a1337e4f48dac86802f1aa4648a44daaa637a207cf6c6a6bcbcb2c216cdc2d5",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableaux des variantes horizontales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-1100-500:kaeser-eurocomp-2026-brochure:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure",
+      "productId": "kaeser-eurocomp-epc-1100-500",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1ccd2c20e532efb382b26eef82f8b34a53e5b7f8e5cdf8b57f9cbaf976deffda",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableaux des variantes horizontales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-1500-500:kaeser-eurocomp-2026-brochure:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure",
+      "productId": "kaeser-eurocomp-epc-1500-500",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1d49be465f3546bdfe37408e3012b4ce175c42d9f40a94465a653fdf25439861",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableaux des variantes horizontales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-230-2-100:kaeser-eurocomp-2026-brochure:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure",
+      "productId": "kaeser-eurocomp-epc-230-2-100",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "f161f481dfe243da6672ed25b9cdc1f2aef8e28ed29ec74454a8c7a8855f444b",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableaux des variantes horizontales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-340-100:kaeser-eurocomp-2026-brochure:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure",
+      "productId": "kaeser-eurocomp-epc-340-100",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "756355bad7ff855db033e2d754105796c801c6d066ed6ebd889b4a2542a8b1a4",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableaux des variantes horizontales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-420-2-250:kaeser-eurocomp-2026-brochure:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure",
+      "productId": "kaeser-eurocomp-epc-420-2-250",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "dfd26c90b511e13d7c1f204a17bd17800d744006a702bc79309aa3bbbf9354c2",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableaux des variantes horizontales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-440-100:kaeser-eurocomp-2026-brochure:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure",
+      "productId": "kaeser-eurocomp-epc-440-100",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "18993398605bebe91ed529c77bccacd3de277fb4629d01a8d4e9e8c8dce4d2ad",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableaux des variantes horizontales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-550-2-250:kaeser-eurocomp-2026-brochure:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure",
+      "productId": "kaeser-eurocomp-epc-550-2-250",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b80830d384d2f1b39220904b16ea2bb19ae58c484e64bb57103cc1aa8c0942a1",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableaux des variantes horizontales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-630-100:kaeser-eurocomp-2026-brochure:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure",
+      "productId": "kaeser-eurocomp-epc-630-100",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "47f7634d946e5a6bf10082ea8069fe3e057ddd3d5f75494967e8dd55cdd6f2c7",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableaux des variantes horizontales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-630-250:kaeser-eurocomp-2026-brochure:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure",
+      "productId": "kaeser-eurocomp-epc-630-250",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2dbf16864a6dca7bd081544542388b588c928647c6da3e1ce917536bdf03c473",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableaux des variantes horizontales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-750-2-500:kaeser-eurocomp-2026-brochure:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure",
+      "productId": "kaeser-eurocomp-epc-750-2-500",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d90746b1d8f7573eb524d22dc51f400b3b39c0ff32a82fb0fe79e8e3b1ad1d7a",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableaux des variantes horizontales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-840-100:kaeser-eurocomp-2026-brochure:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure",
+      "productId": "kaeser-eurocomp-epc-840-100",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b5c24395b325c685638273f64b448f5b8babd16e874d9e2f977e2a71bf31b331",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableaux des variantes horizontales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-840-250:kaeser-eurocomp-2026-brochure:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure",
+      "productId": "kaeser-eurocomp-epc-840-250",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "aa4fce5df8bb0e8cb578446293673f29741f4ca765b4415f181bdc2f6d122e72",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableaux des variantes horizontales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
     }
   ],
-  "historyVersion": "c5a82fbc32f6ce4c4daeb21c66ff57b31eb7a4812b49291b34e54894b0643c0a"
+  "historyVersion": "b1f0118f61390a97cf396757e55b13c3826bb3deeb78bfce515c3819652aa3a2"
 }

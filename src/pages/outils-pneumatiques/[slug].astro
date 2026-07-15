@@ -35,6 +35,7 @@ const productJsonLd = {
 	additionalProperty: [
 		{ '@type': 'PropertyValue', name: 'Besoin en air publié', value: demandLabel },
 		{ '@type': 'PropertyValue', name: 'Pression publiée', value: pressureLabel },
+		...tool.specifications.map((specification) => ({ '@type': 'PropertyValue', name: specification.label, value: specification.value })),
 	],
 };
 ---
@@ -43,6 +44,8 @@ const productJsonLd = {
 	editorialTitle={productSeoTitle(tool.id)}
 	description={`${tool.label} : ${demandLabel}, ${pressureLabel}. Données constructeur, compresseurs adaptés et informations manquantes.`}
 	pageType="product"
+	imagePath="/social/outils-pneumatiques.png"
+	imageAlt="Catalogue des outils pneumatiques documentés par CompatAir"
 	modifiedDate={new Date(verifiedAt)}
 	breadcrumbs={[{ name: 'Outils pneumatiques', path: '/outils-pneumatiques/' }, { name: tool.label, path: `/outils-pneumatiques/${tool.slug}/` }]}
 >
@@ -51,7 +54,7 @@ const productJsonLd = {
 		<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/outils-pneumatiques/">Outils pneumatiques</a><span>/</span><span>{tool.label}</span></nav>
 		<div class="product-hero"><div><p class="eyebrow">Fiche outil pneumatique · sources vérifiées</p><h1>{tool.label}</h1><p class="lead">{tool.editorial.overview}</p><p class="product-reference">Besoin publié : {demandLabel} · {pressureLabel} · fiabilité des données {tool.confidence}.</p></div><ProductImage image={tool.image} eager /></div>
 
-		<section class="spec-panel"><h2>Besoin en air publié</h2><dl class="spec-table"><div><dt>Consommation d’air</dt><dd>{demandLabel}</dd></div><div><dt><a href="/glossaire/#pression-travail">Pression d’utilisation</a></dt><dd>{pressureLabel}</dd></div><div><dt>Façon de l’utiliser</dt><dd>{tool.usagePattern === 'burst' ? 'Par courtes actions' : tool.usagePattern === 'intermittent' ? 'Avec des pauses' : tool.usagePattern === 'continuous' ? 'En continu' : 'Non documentée'}</dd></div><div><dt>Temps d’utilisation publié</dt><dd>{tool.dutyFactor ? `${Math.round(tool.dutyFactor * 100)} %` : 'Non documenté'}</dd></div><div><dt>Raccordement</dt><dd>{tool.connectorSize ?? 'Non documenté dans la fiche consultée'}</dd></div><div><dt>Flexible recommandé</dt><dd>{tool.recommendedHose ? `${tool.recommendedHose.innerDiameterMm ?? '?'} mm intérieur${tool.recommendedHose.maximumLengthMeters ? `, ${tool.recommendedHose.maximumLengthMeters} m maximum` : ''}` : 'Non documenté'}</dd></div><div><dt>Filtration</dt><dd>{tool.filtrationRequirement ?? 'Non documentée'}</dd></div><div><dt>Lubrification</dt><dd>{tool.lubricationRequirement ?? 'Non documentée'}</dd></div><div><dt>Référence fabricant</dt><dd>{tool.mpn ?? 'Non documentée'}</dd></div><div><dt>Numéro de code-barres</dt><dd>{tool.ean ?? 'Non documenté'}</dd></div><div><dt><a href="/glossaire/#marge-compatair">Réserve de 25 % proposée par CompatAir</a></dt><dd>{marginTarget !== undefined ? `${marginTarget} L/min, soit la consommation publiée + 25 %` : 'Non calculée sans débit minute documenté'}</dd></div></dl></section>
+		<section class="spec-panel"><h2>Besoin en air publié</h2><dl class="spec-table"><div><dt>Consommation d’air</dt><dd>{demandLabel}</dd></div><div><dt><a href="/glossaire/#pression-travail">Pression d’utilisation</a></dt><dd>{pressureLabel}</dd></div><div><dt>Façon de l’utiliser</dt><dd>{tool.usagePattern === 'burst' ? 'Par courtes actions' : tool.usagePattern === 'intermittent' ? 'Avec des pauses' : tool.usagePattern === 'continuous' ? 'En continu' : 'Non documentée'}</dd></div><div><dt>Temps d’utilisation publié</dt><dd>{tool.dutyFactor ? `${Math.round(tool.dutyFactor * 100)} %` : 'Non documenté'}</dd></div><div><dt>Raccordement</dt><dd>{tool.connectorSize ?? 'Non documenté dans la fiche consultée'}</dd></div><div><dt>Flexible recommandé</dt><dd>{tool.recommendedHose ? `${tool.recommendedHose.innerDiameterMm ?? '?'} mm intérieur${tool.recommendedHose.maximumLengthMeters ? `, ${tool.recommendedHose.maximumLengthMeters} m maximum` : ''}` : 'Non documenté'}</dd></div><div><dt>Filtration</dt><dd>{tool.filtrationRequirement ?? 'Non documentée'}</dd></div><div><dt>Lubrification</dt><dd>{tool.lubricationRequirement ?? 'Non documentée'}</dd></div><div><dt>Référence fabricant</dt><dd>{tool.mpn ?? 'Non documentée'}</dd></div><div><dt>Numéro de code-barres</dt><dd>{tool.ean ?? 'Non documenté'}</dd></div><div><dt><a href="/glossaire/#marge-compatair">Réserve de 25 % proposée par CompatAir</a></dt><dd>{marginTarget !== undefined ? `${marginTarget} L/min, soit la consommation publiée + 25 %` : 'Non calculée sans débit minute documenté'}</dd></div>{tool.specifications.map((specification) => <div><dt>{specification.label}</dt><dd>{specification.value}</dd></div>)}</dl></section>
 
 		<section class="editorial-section"><p class="eyebrow">Lecture CompatAir</p><h2>Ce que la documentation permet d’affirmer</h2><div class="evidence-grid"><div class="fact-box"><h3>Faits vérifiés</h3><ul>{tool.editorial.verifiedFacts.map((fact) => <li>{fact}</li>)}</ul></div><div class="limit-box"><h3>Limites</h3><ul>{tool.editorial.limitations.map((limit) => <li>{limit}</li>)}</ul></div></div></section>
 

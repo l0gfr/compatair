@@ -12,8 +12,8 @@ const maximumDocumentTitleLength = 60;
 const maximumInitialPageScriptBytesGzip = 50 * 1024;
 const maximumPassportInitialScriptBytesGzip = 45 * 1024;
 const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
-// Le catalogue de 101 produits génère 206 cartes ; conserver une marge bornée pour les prochains lots.
-const maximumSocialImageCount = 240;
+// Les pages produits réutilisent des cartes de catalogue afin que le temps de build ne croisse pas avec chaque référence.
+const maximumSocialImageCount = 80;
 const forbiddenPublicWording = [
 	'CompatAir Engine',
 	'actif statistique',

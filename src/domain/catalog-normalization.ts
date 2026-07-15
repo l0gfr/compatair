@@ -91,11 +91,19 @@ export function assertNormalizedCatalogIntegrity(compressors: Compressor[], tool
 	const ids = new Set<string>();
 	const tradeItems = new Map<string, string>();
 	const brandMpns = new Map<string, string>();
+	const evidenceById = new Map<string, string>();
 	for (const product of products) {
 		if (ids.has(product.id)) errors.push(`Identifiant produit dupliqué : ${product.id}`);
 		ids.add(product.id);
 		for (const evidenceIds of Object.values(product.fieldSources)) {
 			for (const evidenceId of evidenceIds) if (!product.evidence.some((item) => item.id === evidenceId)) errors.push(`${product.id} référence une preuve inconnue : ${evidenceId}`);
+		}
+		for (const specification of product.specifications) for (const evidenceId of specification.evidenceIds) if (!product.evidence.some((item) => item.id === evidenceId)) errors.push(`${product.id} référence une preuve de spécification inconnue : ${evidenceId}`);
+		for (const evidence of product.evidence) {
+			const serialized = JSON.stringify(evidence);
+			const previous = evidenceById.get(evidence.id);
+			if (previous && previous !== serialized) errors.push(`Identifiant de preuve réutilisé avec un contenu différent : ${evidence.id}`);
+			evidenceById.set(evidence.id, serialized);
 		}
 		if (product.ean) {
 			const ean = normalizeTradeItem(product.ean);
@@ -111,7 +119,7 @@ export function assertNormalizedCatalogIntegrity(compressors: Compressor[], tool
 			brandMpns.set(key, product.id);
 		}
 		const criticalFields = 'fadCurve' in product ? ['fadCurve', 'maxPressureBar'] : ['workingPressureBar', ...(product.demandModel === 'fixed-flow' ? ['airflowLpm'] : [])];
-		for (const field of criticalFields) if (evidenceIdsForField(product, field).length === 0) errors.push(`${product.id} ne source pas le champ critique ${field}`);
+		for (const field of criticalFields) if (!(product.fieldSources[field]?.length)) errors.push(`${product.id} ne source pas explicitement le champ critique ${field}`);
 	}
 	if (errors.length) throw new Error(errors.join('\n'));
 	return true;

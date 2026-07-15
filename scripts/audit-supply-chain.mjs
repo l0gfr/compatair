@@ -8,6 +8,7 @@ const EXPECTED_BUILD_ALLOWLIST = new Set(['esbuild']);
 const LIFECYCLE_SCRIPTS = ['preinstall', 'install', 'postinstall'];
 
 const registryMode = process.argv.includes('--registry');
+const advisoryMode = process.argv.includes('--advisories');
 const packageJson = JSON.parse(await readFile(new URL('../package.json', import.meta.url), 'utf8'));
 const workspace = await readFile(new URL('../pnpm-workspace.yaml', import.meta.url), 'utf8');
 const lockfile = await readFile(new URL('../pnpm-lock.yaml', import.meta.url), 'utf8');
@@ -98,6 +99,23 @@ async function fetchJson(url) {
   const response = await fetch(url, {
     headers: { accept: 'application/vnd.npm.install-v1+json' },
     signal: AbortSignal.timeout(20_000),
+  });
+  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+  return response.json();
+}
+
+async function fetchBulkAdvisories(packages) {
+  const versionsByName = new Map();
+  for (const { name, version } of packages) {
+    if (!versionsByName.has(name)) versionsByName.set(name, new Set());
+    versionsByName.get(name).add(version);
+  }
+  const payload = Object.fromEntries([...versionsByName].map(([name, versions]) => [name, [...versions].sort()]));
+  const response = await fetch(`${REGISTRY}/-/npm/v1/security/advisories/bulk`, {
+    method: 'POST',
+    headers: { accept: 'application/json', 'content-type': 'application/json' },
+    body: JSON.stringify(payload),
+    signal: AbortSignal.timeout(30_000),
   });
   if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
   return response.json();
@@ -207,6 +225,23 @@ if (invalidIntegrity.length) {
 
 console.log(`Lockfile: ${lockedPackages.length} versions, intégrités SHA-512 présentes: ${lockedPackages.length - invalidIntegrity.length}/${lockedPackages.length}.`);
 console.log(`Scripts d'installation autorisés: ${[...allowedBuilds].sort().join(', ') || 'aucun'}.`);
+
+if (advisoryMode) {
+  try {
+    const response = await fetchBulkAdvisories(lockedPackages);
+    const advisories = Object.entries(response).flatMap(([packageName, entries]) => (entries ?? []).map((entry) => ({ packageName, ...entry })));
+    const severityRank = new Map([['info', 0], ['low', 1], ['moderate', 2], ['high', 3], ['critical', 4]]);
+    const blocking = advisories.filter((entry) => (severityRank.get(entry.severity) ?? 5) >= severityRank.get('high'));
+    console.log(`Avis npm (endpoint bulk): ${advisories.length} signalé(s), dont ${blocking.length} de sévérité haute ou critique.`);
+    for (const advisory of advisories) {
+      const message = `${advisory.packageName}: ${advisory.severity} ${advisory.title} (${advisory.url})`;
+      if (blocking.includes(advisory)) failures.push(`vulnérabilité npm: ${message}`);
+      else warnings.push(`vulnérabilité npm sous le seuil high: ${message}`);
+    }
+  } catch (error) {
+    failures.push(`endpoint npm Bulk Advisory inaccessible ou invalide: ${error.message}`);
+  }
+}
 
 const installedManifests = await readInstalledManifests();
 if (installedManifests.length) {

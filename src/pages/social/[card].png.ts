@@ -1,9 +1,7 @@
 import type { APIRoute, GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import sharp from 'sharp';
-import { compressors, tools } from '../../data/catalog';
 import { renderSocialCardSvg, socialCardKey, type SocialCard } from '../../domain/social-card';
-import { toolDemandLabel, toolPressureLabel } from '../../domain/tool-demand';
 
 const staticCards: SocialCard[] = [
 	{ path: '/', kicker: 'Compatibilité pneumatique', title: 'Le bon débit, à la bonne pression', subtitle: 'Résultats reproductibles fondés sur le débit restitué' },
@@ -40,15 +38,8 @@ const staticCards: SocialCard[] = [
 ];
 
 function buildCards(guides: Awaited<ReturnType<typeof getCollection<'guides'>>>): SocialCard[] {
-	const productCards: SocialCard[] = [
-		...compressors.map((compressor) => ({ path: `/compresseurs/${compressor.slug}/`, kicker: `Compresseur · fiabilité ${compressor.confidence}`, title: `${compressor.brand} ${compressor.model}`, subtitle: `${compressor.tankLiters} L · ${compressor.maxPressureBar} bar · débit restitué documenté` })),
-		...tools.map((tool) => ({ path: `/outils-pneumatiques/${tool.slug}/`, kicker: `Outil pneumatique · confiance ${tool.confidence}`, title: tool.label, subtitle: `${toolDemandLabel(tool)} · ${toolPressureLabel(tool)}` })),
-	];
-	const usageCards = tools.map((tool) => ({ path: `/quel-compresseur-pour/${tool.slug}/`, kicker: 'Guide de compatibilité', title: `Quel compresseur pour ${tool.model} ?`, subtitle: `${toolDemandLabel(tool)} · ${toolPressureLabel(tool)}` }));
 	const guideCards = guides.map((guide) => ({ path: `/guides/${guide.id}/`, kicker: `Guide · ${guide.data.category}`, title: guide.data.title, subtitle: `${guide.data.readingTime} min · sources et hypothèses explicites` }));
-	const brands = [...new Set([...compressors, ...tools].map((item) => item.brand))];
-	const brandCards = brands.map((brand) => ({ path: `/marques/${brand.toLowerCase().replaceAll(' ', '-')}/`, kicker: 'Fabricant documenté', title: brand, subtitle: 'Compresseurs, outils, sources et limites' }));
-	return [...staticCards, ...productCards, ...usageCards, ...guideCards, ...brandCards];
+	return [...staticCards, ...guideCards];
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {

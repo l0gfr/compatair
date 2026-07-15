@@ -1,7 +1,7 @@
 const product = {
 	id: 'chicago-pneumatic-cp7269p',
 	slug: 'polisseuse-chicago-pneumatic-cp7269p',
-	category: 'Polisseuse',
+	categoryId: 'polisseuse', category: 'Polisseuse',
 	label: 'Polisseuse pneumatique Chicago Pneumatic CP7269P',
 	brand: 'Chicago Pneumatic',
 	model: 'CP7269P',

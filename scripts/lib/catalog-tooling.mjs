@@ -84,7 +84,7 @@ export async function loadCatalogProducts(root, kind) {
 }
 
 export async function validateCatalog(root, schemas, seoTitles, toolUseSeoTitles) {
-	const errors = []; const allIds = new Set();
+	const errors = []; const allIds = new Set(); const evidenceById = new Map();
 	for (const kind of Object.keys(KINDS)) {
 		const { directory, files, products } = await loadCatalogProducts(root, kind);
 		const expectedIndex = buildCatalogIndexSource(kind, files);
@@ -107,7 +107,18 @@ export async function validateCatalog(root, schemas, seoTitles, toolUseSeoTitles
 			} catch { errors.push(`Image locale absente : ${product.id} ${product.image.src}`); }
 			const evidenceIds = new Set(product.evidence.map((item) => item.id));
 			for (const [field, ids] of Object.entries(product.fieldSources)) for (const id of ids) if (!evidenceIds.has(id)) errors.push(`Source de champ inconnue : ${product.id}.${field} -> ${id}`);
-			for (const evidence of product.evidence) if (!evidence.sourceUrl.startsWith('https://')) errors.push(`Source non HTTPS : ${product.id}/${evidence.id}`);
+			const criticalFields = kind === 'compressors' ? ['fadCurve', 'maxPressureBar'] : ['workingPressureBar', ...(product.demandModel === 'fixed-flow' ? ['airflowLpm'] : [])];
+			for (const field of criticalFields) if (!(product.fieldSources[field]?.length)) errors.push(`Source explicite absente pour le champ critique : ${product.id}.${field}`);
+			for (const specification of product.specifications) {
+				for (const id of specification.evidenceIds) if (!evidenceIds.has(id)) errors.push(`Source de spécification inconnue : ${product.id}.${specification.label} -> ${id}`);
+			}
+			for (const evidence of product.evidence) {
+				if (!evidence.sourceUrl.startsWith('https://')) errors.push(`Source non HTTPS : ${product.id}/${evidence.id}`);
+				const serialized = JSON.stringify(evidence);
+				const previous = evidenceById.get(evidence.id);
+				if (previous && previous !== serialized) errors.push(`Identifiant de preuve réutilisé avec un contenu différent : ${evidence.id}`);
+				evidenceById.set(evidence.id, serialized);
+			}
 		}
 	}
 	if (errors.length) throw new Error(errors.join('\n'));

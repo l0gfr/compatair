@@ -1,7 +1,7 @@
 const product = {
 	id: 'chicago-pneumatic-cp7722',
 	slug: 'cle-a-chocs-chicago-pneumatic-cp7722',
-	category: 'Clé à chocs',
+	categoryId: 'cle-a-chocs', category: 'Clé à chocs',
 	label: 'Clé à chocs pneumatique Chicago Pneumatic CP7722 3/8 pouce',
 	brand: 'Chicago Pneumatic',
 	model: 'CP7722',

@@ -322,6 +322,7 @@ h3 { font-weight: 560; }
 .catalog-pagination button { width: 2.3rem; height: 2.3rem; border: 1px solid var(--line); border-radius: .55rem; background: var(--panel); cursor: pointer; }
 .catalog-pagination button[aria-current="page"] { color: white; border-color: var(--brand); background: var(--brand); }
 .product-card { overflow: hidden; padding: 1.3rem; border: 1px solid rgba(205,215,205,.9); border-radius: 1.4rem; background: rgba(253,254,250,.94); box-shadow: var(--shadow-sm); transition: transform .22s ease, box-shadow .22s ease; }
+.product-grid > .product-card { content-visibility: auto; contain-intrinsic-size: auto 470px; }
 .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
 .product-card h2 { min-height: 2.5em; margin: .4rem 0 1rem; font-size: 1.35rem; }
 .product-card h2 a { text-decoration: none; }

@@ -14,7 +14,8 @@ export function getStaticPaths() {
 const { compressor, tool, result } = Astro.props;
 if (!isFixedFlowTool(tool)) throw new Error('Une page de compatibilité exige un profil à débit fixe.');
 const labels = { continuous: 'compatible en continu', intermittent: 'compatible par intermittence', incompatible: 'incompatible', insufficient_data: 'données insuffisantes' };
-const title = `${compressor.model} + ${tool.model} : ${labels[result.verdict]}`;
+const toolTitleReference = tool.model.startsWith('Professional ') ? tool.mpn ?? tool.model : tool.model;
+const title = `${compressor.model} + ${toolTitleReference} : ${labels[result.verdict]}`;
 const pageUrl = `/compatibilite/${compressor.slug}--${tool.slug}/`;
 const verifiedAt = latestEvidenceDate(compressor, tool);
 ---
