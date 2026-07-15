@@ -48,6 +48,7 @@ describe('release boundary policy', () => {
 	it('publishes and verifies the exact GitHub release SHA', () => {
 		expect(workflow).toContain('COMPATAIR_RELEASE_SHA: ${{ github.sha }}');
 		expect(workflow).toContain('COMPATAIR_EXPECTED_RELEASE_SHA: ${{ github.sha }}');
+		expect(workflow).toContain('node scripts/smoke-live-http.mjs');
 		expect(workflow).toContain('node scripts/verify-live-seo.mjs');
 		expect(workflow).toContain('dist/data/release.json');
 		expect(releaseRoute).toContain("'Cache-Control': 'no-store'");

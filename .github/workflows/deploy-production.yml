@@ -247,55 +247,8 @@ jobs:
           COMPATAIR_EXPECTED_RELEASE_SHA: ${{ github.sha }}
           MCP_ENABLED: ${{ vars.MCP_ENABLED }}
         run: |
-          curl_args=(--fail --silent --show-error --retry 5 --retry-delay 3 --retry-all-errors --max-time 20)
-          assert_body_contains() {
-            local url=$1
-            local needle=$2
-            curl "${curl_args[@]}" --output smoke-response-body "$url"
-            grep -Fq "$needle" smoke-response-body
-          }
-          curl "${curl_args[@]}" --location https://compatair.fr/ > /dev/null
-          assert_body_contains https://compatair.fr/robots.txt 'https://compatair.fr/sitemap-index.xml'
-          curl "${curl_args[@]}" https://compatair.fr/sitemap-index.xml > /dev/null
-          assert_body_contains https://compatair.fr/scanner/ 'data-compatair-surface="scanner"'
-          assert_body_contains https://compatair.fr/professionnels/ 'id="merchant-widget-demo"'
-          assert_body_contains https://compatair.fr/widget/v1.0.0/compatair-widget.js 'CompatAir widget API v1'
-          assert_body_contains https://compatair.fr/data/catalog.json 'catalogVersion'
-          assert_body_contains https://compatair.fr/data/runtime-catalog.json 'catalogVersion'
-          assert_body_contains https://compatair.fr/data/verdicts.json 'verdictVersion'
-          assert_body_contains https://compatair.fr/data/document-quality-observatory.json 'observatoryVersion'
-          assert_body_contains https://compatair.fr/data/contradiction-radar.json 'radarVersion'
-          assert_body_contains https://compatair.fr/radar-contradictions/ 'Radar des contradictions'
-          assert_body_contains https://compatair.fr/graphe-preuve/ 'data-proof-graph'
-          legacy_redirect=$(curl --silent --show-error --max-time 20 --output /dev/null --write-out '%{http_code} %{redirect_url}' 'https://compatair.fr/compatibilite/einhell-tc-ac-240-50-10-of--ponceuse-excentrique-einhell-tc-pe-150/')
-          test "$legacy_redirect" = '301 https://compatair.fr/calculateur/#outil=einhell-tc-pe-150&compresseur=einhell-tc-ac-240-50-10-of'
-          curl "${curl_args[@]}" --head --dump-header legacy-headers.txt --output /dev/null 'https://compatair.fr/compatibilite/einhell-tc-ac-240-50-10-of--ponceuse-excentrique-einhell-tc-pe-150/'
-          test "$(awk '{ line = tolower($0); if (line ~ /^x-content-type-options:[[:space:]]*nosniff\r?$/) count++ } END { print count + 0 }' legacy-headers.txt)" = '1'
-          grep -Eiq '^Cache-Control: public, max-age=86400\r?$' legacy-headers.txt
-          legacy_removed=$(curl --silent --show-error --max-time 20 --output /dev/null --write-out '%{http_code}' 'https://compatair.fr/compatibilite/reference-inconnue--outil-inconnu/')
-          test "$legacy_removed" = '410'
-          affiliate_missing_status=$(curl --silent --show-error --max-time 20 --dump-header affiliate-missing-headers.txt --output affiliate-missing.json --write-out '%{http_code}' 'https://compatair.fr/go/offre-inconnue-ci')
-          test "$affiliate_missing_status" = '404'
-          grep -Fq '"error":"offer_not_found"' affiliate-missing.json
-          test "$(awk '{ line = tolower($0); if (line ~ /^x-content-type-options:[[:space:]]*nosniff\r?$/) count++ } END { print count + 0 }' affiliate-missing-headers.txt)" = '1'
-          node --input-type=module --eval="const snapshot = JSON.parse(await import('node:fs').then(({ readFileSync }) => readFileSync('dist/data/offers.json', 'utf8'))); const offer = snapshot.offers?.[0]; if (offer) process.stdout.write(offer.id + '\t' + offer.url + '\n');" > active-offer.tsv
-          if [[ -s active-offer.tsv ]]; then
-            IFS=$'\t' read -r affiliate_offer_id affiliate_target < active-offer.tsv
-            affiliate_redirect=$(curl --silent --show-error --head --max-time 20 --output /dev/null --write-out '%{http_code} %{redirect_url}' "https://compatair.fr/go/${affiliate_offer_id}")
-            test "$affiliate_redirect" = "302 $affiliate_target"
-          fi
-          assert_body_contains https://compatair.fr/data/signatures.json 'compatair-2026-01'
-          assert_body_contains https://compatair.fr/data/signing-keys.json 'Ed25519'
+          node scripts/smoke-live-http.mjs
           node scripts/verify-live-seo.mjs
-          if [[ "$MCP_ENABLED" == "true" ]]; then
-            health=$(curl "${curl_args[@]}" https://compatair.fr/mcp-health)
-            grep -Fq '"status":"ok"' <<< "$health"
-            grep -Fq '"verdictVersion"' <<< "$health"
-            curl "${curl_args[@]}" --dump-header api-headers.txt --output api-response.json \
-              'https://compatair.fr/api/v1/compatibility?compressorId=einhell-tc-ac-240-50-10-of&toolId=einhell-tc-pe-150'
-            grep -Fq '"schemaVersion":"1.0.0"' api-response.json
-            test "$(awk '{ line = tolower($0); if (line ~ /^x-content-type-options:[[:space:]]*nosniff\r?$/) count++ } END { print count + 0 }' api-headers.txt)" = '1'
-          fi
 
       - name: Archive signed production invariants
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
