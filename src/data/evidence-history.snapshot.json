@@ -3448,7 +3448,729 @@
         "confidence": "A",
         "notes": "Tableau des variantes verticales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
       }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp6300-rsr:cp-general-industry-2026-impact-wrenches:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-impact-wrenches",
+      "productId": "chicago-pneumatic-cp6300-rsr",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "293926b0c0d0c19cfb5e2c369ae829d650b9d28be81fe607416547b8021e66fa",
+      "snapshot": {
+        "id": "cp-general-industry-2026-impact-wrenches",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue General Industry v4.04.2026, clés à chocs",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques sont publiées à 90 psi, soit 6,3 bar ; consommation en charge lue dans la colonne métrique L/s."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp6300-rsr:cp-t025285-official:2026-07-15",
+      "evidenceId": "cp-t025285-official",
+      "productId": "chicago-pneumatic-cp6300-rsr",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a40b2ea366fb0dd5f2e3e3c99b12c88b7982e949ccdb321f12747f2d8c9d534f",
+      "snapshot": {
+        "id": "cp-t025285-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp6300-rsr-skuT025285",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP6300 RSR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Fiche produit constructeur utilisée pour l’identifiant, le couple, la pression, les dimensions et les caractéristiques de fonctionnement."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp6728-p05r:cp-6151590550-official:2026-07-15",
+      "evidenceId": "cp-6151590550-official",
+      "productId": "chicago-pneumatic-cp6728-p05r",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "10acaef97ec792dad506399265b4f2a877e2d0cc0ccc8909ee9fa2c0b4d928b6",
+      "snapshot": {
+        "id": "cp-6151590550-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp6728-p05r-sku6151590550",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP6728-P05R",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Fiche produit constructeur utilisée pour l’identifiant, le couple, la pression, les dimensions et les caractéristiques de fonctionnement."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp6728-p05r:cp-general-industry-2026-impact-wrenches:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-impact-wrenches",
+      "productId": "chicago-pneumatic-cp6728-p05r",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "bfecee8888c30ec386e9759cc0332790869c6dbd2fdf42ffbb43d7da9fa54407",
+      "snapshot": {
+        "id": "cp-general-industry-2026-impact-wrenches",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue General Industry v4.04.2026, clés à chocs",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques sont publiées à 90 psi, soit 6,3 bar ; consommation en charge lue dans la colonne métrique L/s."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp721:cp-general-industry-2026-impact-wrenches:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-impact-wrenches",
+      "productId": "chicago-pneumatic-cp721",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e80027836ec79e49c8daff4aab15e9734208bd871b30a9b56da49d624578a97a",
+      "snapshot": {
+        "id": "cp-general-industry-2026-impact-wrenches",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue General Industry v4.04.2026, clés à chocs",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques sont publiées à 90 psi, soit 6,3 bar ; consommation en charge lue dans la colonne métrique L/s."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp721:cp-t021963-official:2026-07-15",
+      "evidenceId": "cp-t021963-official",
+      "productId": "chicago-pneumatic-cp721",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5d9fff5f7fbd0cc455f4c19da0355167746f47e72fba213830ae8e739bffb0ec",
+      "snapshot": {
+        "id": "cp-t021963-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp721-skuT021963",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP721",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Fiche produit constructeur utilisée pour l’identifiant, le couple, la pression, les dimensions et les caractéristiques de fonctionnement."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp734h:cp-general-industry-2026-impact-wrenches:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-impact-wrenches",
+      "productId": "chicago-pneumatic-cp734h",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ce9f24a64bdf0a6b5beaafebc304fb9837f1afb67ab63a606b10de736341083e",
+      "snapshot": {
+        "id": "cp-general-industry-2026-impact-wrenches",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue General Industry v4.04.2026, clés à chocs",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques sont publiées à 90 psi, soit 6,3 bar ; consommation en charge lue dans la colonne métrique L/s."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp734h:cp-t024351-official:2026-07-15",
+      "evidenceId": "cp-t024351-official",
+      "productId": "chicago-pneumatic-cp734h",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d89d7e08687bea3ea2b742bb4ea1959eb198f3cd84db3ce175576f24187ae6a7",
+      "snapshot": {
+        "id": "cp-t024351-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp734h-skuT024351",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP734H",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Fiche produit constructeur utilisée pour l’identifiant, le couple, la pression, les dimensions et les caractéristiques de fonctionnement."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp749:cp-general-industry-2026-impact-wrenches:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-impact-wrenches",
+      "productId": "chicago-pneumatic-cp749",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "4f63816126f56eb286514c9328d251c3332304be812606fe1a2c551bdd11f454",
+      "snapshot": {
+        "id": "cp-general-industry-2026-impact-wrenches",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue General Industry v4.04.2026, clés à chocs",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques sont publiées à 90 psi, soit 6,3 bar ; consommation en charge lue dans la colonne métrique L/s."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp749:cp-t024587-official:2026-07-15",
+      "evidenceId": "cp-t024587-official",
+      "productId": "chicago-pneumatic-cp749",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8d58325125faebcdde8fd4e809f6f858a8ea85fe969cc4cc8ae13621bd33840c",
+      "snapshot": {
+        "id": "cp-t024587-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp749-skuT024587",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP749",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Fiche produit constructeur utilisée pour l’identifiant, le couple, la pression, les dimensions et les caractéristiques de fonctionnement."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7731:cp-8941077310-official:2026-07-15",
+      "evidenceId": "cp-8941077310-official",
+      "productId": "chicago-pneumatic-cp7731",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "559ee46d80bb3b588df2de7ded2675a237db8da3df6f37449682d19bf341fcd7",
+      "snapshot": {
+        "id": "cp-8941077310-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp7731-sku8941077310",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7731",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Fiche produit constructeur utilisée pour l’identifiant, le couple, la pression, les dimensions et les caractéristiques de fonctionnement."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7731:cp-general-industry-2026-impact-wrenches:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-impact-wrenches",
+      "productId": "chicago-pneumatic-cp7731",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "832fe40cb83af55795959b46b24105089f5bd25c5d821b237776367788b5daf4",
+      "snapshot": {
+        "id": "cp-general-industry-2026-impact-wrenches",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue General Industry v4.04.2026, clés à chocs",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques sont publiées à 90 psi, soit 6,3 bar ; consommation en charge lue dans la colonne métrique L/s."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7731c:cp-8941077311-official:2026-07-15",
+      "evidenceId": "cp-8941077311-official",
+      "productId": "chicago-pneumatic-cp7731c",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e0e69ab66dee73a0465b5fbd7cc237ede9a4f123484b2910cbbee2967bdecd8e",
+      "snapshot": {
+        "id": "cp-8941077311-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp7731c-sku8941077311",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7731C",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Fiche produit constructeur utilisée pour l’identifiant, le couple, la pression, les dimensions et les caractéristiques de fonctionnement."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7731c:cp-general-industry-2026-impact-wrenches:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-impact-wrenches",
+      "productId": "chicago-pneumatic-cp7731c",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a595f80a75fa627b47ce10c38cef76be1ae6e7d5f0c5622353b4b060b2cae523",
+      "snapshot": {
+        "id": "cp-general-industry-2026-impact-wrenches",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue General Industry v4.04.2026, clés à chocs",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques sont publiées à 90 psi, soit 6,3 bar ; consommation en charge lue dans la colonne métrique L/s."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7732:cp-8941077320-official:2026-07-15",
+      "evidenceId": "cp-8941077320-official",
+      "productId": "chicago-pneumatic-cp7732",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ac3142e092445953041cfc5795c33ae56ed5c26361fd757dc19af29b1bb7df98",
+      "snapshot": {
+        "id": "cp-8941077320-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp7732-sku8941077320",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7732",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Fiche produit constructeur utilisée pour l’identifiant, le couple, la pression, les dimensions et les caractéristiques de fonctionnement."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7732:cp-general-industry-2026-impact-wrenches:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-impact-wrenches",
+      "productId": "chicago-pneumatic-cp7732",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a478cb00275310206a3549bd95e0d5865a8fe5319b46c5d760c8d3f527ef5c2b",
+      "snapshot": {
+        "id": "cp-general-industry-2026-impact-wrenches",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue General Industry v4.04.2026, clés à chocs",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques sont publiées à 90 psi, soit 6,3 bar ; consommation en charge lue dans la colonne métrique L/s."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7737:cp-8941077370-official:2026-07-15",
+      "evidenceId": "cp-8941077370-official",
+      "productId": "chicago-pneumatic-cp7737",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a72184c7f66df9071ae08b2715365c5ed88b564396b77dd2691608609b2ab929",
+      "snapshot": {
+        "id": "cp-8941077370-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp7737-sku8941077370",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7737",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Fiche produit constructeur utilisée pour l’identifiant, le couple, la pression, les dimensions et les caractéristiques de fonctionnement."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7737:cp-general-industry-2026-impact-wrenches:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-impact-wrenches",
+      "productId": "chicago-pneumatic-cp7737",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5777689e133fe7f3bff840fd442d1dfb4f4aa55f343655825cdcba7543877264",
+      "snapshot": {
+        "id": "cp-general-industry-2026-impact-wrenches",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue General Industry v4.04.2026, clés à chocs",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques sont publiées à 90 psi, soit 6,3 bar ; consommation en charge lue dans la colonne métrique L/s."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7739:cp-8941077390-official:2026-07-15",
+      "evidenceId": "cp-8941077390-official",
+      "productId": "chicago-pneumatic-cp7739",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "491ff3b47670d8383b573563b2d3d66d75d84d9b1363d6dbbdf234d2e403e9d6",
+      "snapshot": {
+        "id": "cp-8941077390-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp7739-sku8941077390",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7739",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Fiche produit constructeur utilisée pour l’identifiant, le couple, la pression, les dimensions et les caractéristiques de fonctionnement."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7739:cp-general-industry-2026-impact-wrenches:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-impact-wrenches",
+      "productId": "chicago-pneumatic-cp7739",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "fdcec9e65f4a37e428e259c1ceb0c6faa9ffd354df30d0062574eee4f1443170",
+      "snapshot": {
+        "id": "cp-general-industry-2026-impact-wrenches",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue General Industry v4.04.2026, clés à chocs",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques sont publiées à 90 psi, soit 6,3 bar ; consommation en charge lue dans la colonne métrique L/s."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp8222-p:cp-6151590180-official:2026-07-15",
+      "evidenceId": "cp-6151590180-official",
+      "productId": "chicago-pneumatic-cp8222-p",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "3d500f733f702cc1f0ed5c9e86fbf2289fdb3d33b97226b21a3b75cedf05a6cb",
+      "snapshot": {
+        "id": "cp-6151590180-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp8222-p-sku6151590180",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP8222-P",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Fiche produit constructeur utilisée pour l’identifiant, le couple, la pression, les dimensions et les caractéristiques de fonctionnement."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp8222-p:cp-general-industry-2026-impact-wrenches:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-impact-wrenches",
+      "productId": "chicago-pneumatic-cp8222-p",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c43e7b67c0a481cb24d2306ec0b42408e5c1dd637348f42d183677f74624f8b6",
+      "snapshot": {
+        "id": "cp-general-industry-2026-impact-wrenches",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue General Industry v4.04.2026, clés à chocs",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques sont publiées à 90 psi, soit 6,3 bar ; consommation en charge lue dans la colonne métrique L/s."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp8252-p:cp-6151590210-official:2026-07-15",
+      "evidenceId": "cp-6151590210-official",
+      "productId": "chicago-pneumatic-cp8252-p",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "3763baade3d965589c42a6da3ac51b595b514a8eced10f9d690945ceba5f9eee",
+      "snapshot": {
+        "id": "cp-6151590210-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp8252-p-sku6151590210",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP8252-P",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Fiche produit constructeur utilisée pour l’identifiant, le couple, la pression, les dimensions et les caractéristiques de fonctionnement."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp8252-p:cp-general-industry-2026-impact-wrenches:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-impact-wrenches",
+      "productId": "chicago-pneumatic-cp8252-p",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6e4b21db341fc21897d9e2d748607efc2a9a06fa538ce710ba9ea3460a5a4290",
+      "snapshot": {
+        "id": "cp-general-industry-2026-impact-wrenches",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue General Industry v4.04.2026, clés à chocs",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques sont publiées à 90 psi, soit 6,3 bar ; consommation en charge lue dans la colonne métrique L/s."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9541:cp-6151909541-official:2026-07-15",
+      "evidenceId": "cp-6151909541-official",
+      "productId": "chicago-pneumatic-cp9541",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c45d3e0312f8b85c4f552167ddcb9ab3adf7b107045b7d719435eb097295384b",
+      "snapshot": {
+        "id": "cp-6151909541-official",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp9541-sku6151909541",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP9541",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Fiche produit constructeur utilisée pour l’identifiant, le couple, la pression, les dimensions et les caractéristiques de fonctionnement."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9541:cp-general-industry-2026-impact-wrenches:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-impact-wrenches",
+      "productId": "chicago-pneumatic-cp9541",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "adb0cd3a8a94d76bbdb17576fee0e01668a19a2d017eadb34564ff4a3d200448",
+      "snapshot": {
+        "id": "cp-general-industry-2026-impact-wrenches",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue General Industry v4.04.2026, clés à chocs",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques sont publiées à 90 psi, soit 6,3 bar ; consommation en charge lue dans la colonne métrique L/s."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-1000-2-g:kaeser-eurocomp-2026-brochure-base-mounted:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-base-mounted",
+      "productId": "kaeser-eurocomp-epc-1000-2-g",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "09d88b45234e584684e76c95a8e7463f8837ed102a59eef0f7290bafaaef44f5",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-base-mounted",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, tableau des versions sur bâti page 14",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débits déclarés comme mesurés selon ISO 1217 ; dimensions, masse, acoustique et alimentation reprises du tableau constructeur."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-1100-g:kaeser-eurocomp-2026-brochure-base-mounted:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-base-mounted",
+      "productId": "kaeser-eurocomp-epc-1100-g",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "70b939ea74bab26310299f40e2c083aefc7d3e8a59cb2b61ff044756cbf2ad66",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-base-mounted",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, tableau des versions sur bâti page 14",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débits déclarés comme mesurés selon ISO 1217 ; dimensions, masse, acoustique et alimentation reprises du tableau constructeur."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-150-2-g:kaeser-eurocomp-2026-brochure-base-mounted:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-base-mounted",
+      "productId": "kaeser-eurocomp-epc-150-2-g",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ff56818689679994373f3cdeda979bbae320fab75513c6e73a00a8580afbb27b",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-base-mounted",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, tableau des versions sur bâti page 14",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débits déclarés comme mesurés selon ISO 1217 ; dimensions, masse, acoustique et alimentation reprises du tableau constructeur."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-1500-g:kaeser-eurocomp-2026-brochure-base-mounted:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-base-mounted",
+      "productId": "kaeser-eurocomp-epc-1500-g",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "43b50a9c16b34cf49d1689e0c8ee9d75b9560b04337020561fb41708a19ddd50",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-base-mounted",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, tableau des versions sur bâti page 14",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débits déclarés comme mesurés selon ISO 1217 ; dimensions, masse, acoustique et alimentation reprises du tableau constructeur."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-230-2-g:kaeser-eurocomp-2026-brochure-base-mounted:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-base-mounted",
+      "productId": "kaeser-eurocomp-epc-230-2-g",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "33ba2dbeb3b56dea7f31be846d72e436ec97f8346c2a186c9f45b742c63d76f7",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-base-mounted",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, tableau des versions sur bâti page 14",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débits déclarés comme mesurés selon ISO 1217 ; dimensions, masse, acoustique et alimentation reprises du tableau constructeur."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-340-g:kaeser-eurocomp-2026-brochure-base-mounted:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-base-mounted",
+      "productId": "kaeser-eurocomp-epc-340-g",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5ebf4034cad234d8b2afcad7e38146aa5b970858a429f7f03feac338f98bd439",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-base-mounted",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, tableau des versions sur bâti page 14",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débits déclarés comme mesurés selon ISO 1217 ; dimensions, masse, acoustique et alimentation reprises du tableau constructeur."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-420-2-g:kaeser-eurocomp-2026-brochure-base-mounted:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-base-mounted",
+      "productId": "kaeser-eurocomp-epc-420-2-g",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "99925b7117d44707fbee741a5629791009307146851bf619c009303cdabb3c1c",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-base-mounted",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, tableau des versions sur bâti page 14",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débits déclarés comme mesurés selon ISO 1217 ; dimensions, masse, acoustique et alimentation reprises du tableau constructeur."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-440-g:kaeser-eurocomp-2026-brochure-base-mounted:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-base-mounted",
+      "productId": "kaeser-eurocomp-epc-440-g",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e09a1ceed34d527a23b9ab181bd33cbc3bf0eb0b7bdf424627ebd89785bc6593",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-base-mounted",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, tableau des versions sur bâti page 14",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débits déclarés comme mesurés selon ISO 1217 ; dimensions, masse, acoustique et alimentation reprises du tableau constructeur."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-550-2-g:kaeser-eurocomp-2026-brochure-base-mounted:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-base-mounted",
+      "productId": "kaeser-eurocomp-epc-550-2-g",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a35423cd29535327a7a11541c5dc102808db5f947d8568d4e7d4ccd4f3b59a2a",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-base-mounted",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, tableau des versions sur bâti page 14",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débits déclarés comme mesurés selon ISO 1217 ; dimensions, masse, acoustique et alimentation reprises du tableau constructeur."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-630-g:kaeser-eurocomp-2026-brochure-base-mounted:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-base-mounted",
+      "productId": "kaeser-eurocomp-epc-630-g",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "530337dd35043f69ab8b1986520a29e72ac6f56e9c153ad1b171c66afcfe2070",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-base-mounted",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, tableau des versions sur bâti page 14",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débits déclarés comme mesurés selon ISO 1217 ; dimensions, masse, acoustique et alimentation reprises du tableau constructeur."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-750-2-g:kaeser-eurocomp-2026-brochure-base-mounted:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-base-mounted",
+      "productId": "kaeser-eurocomp-epc-750-2-g",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "468acb8ca8a723c61e407d29ee05eb0e73c42f7ebea77ef1eef666f4a0344066",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-base-mounted",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, tableau des versions sur bâti page 14",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débits déclarés comme mesurés selon ISO 1217 ; dimensions, masse, acoustique et alimentation reprises du tableau constructeur."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-840-g:kaeser-eurocomp-2026-brochure-base-mounted:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-base-mounted",
+      "productId": "kaeser-eurocomp-epc-840-g",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "f4cba238bb1603e3ff223ef196a8374ec3141d1aa71fb1b2c30536bb8464a130",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-base-mounted",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, tableau des versions sur bâti page 14",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Débits déclarés comme mesurés selon ISO 1217 ; dimensions, masse, acoustique et alimentation reprises du tableau constructeur."
+      }
     }
   ],
-  "historyVersion": "94dcdca309a7a32766f245f4789f5662047522e508f7c03164ba5ee75d47ca3d"
+  "historyVersion": "6394b4669b7658556ab73fdc701b2a18e106741610bf1656a9521df82d1e9636"
 }

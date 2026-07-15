@@ -43,45 +43,57 @@ import product42 from './einhell-te-ac-430-50-10';
 import product43 from './einhell-te-ac-430-90-10';
 import product44 from './kaeser-eurocomp-epc-1000-2-500';
 import product45 from './kaeser-eurocomp-epc-1000-2-500-vertical';
-import product46 from './kaeser-eurocomp-epc-1100-500';
-import product47 from './kaeser-eurocomp-epc-1500-500';
-import product48 from './kaeser-eurocomp-epc-230-2-100';
-import product49 from './kaeser-eurocomp-epc-230-2-250-vertical';
-import product50 from './kaeser-eurocomp-epc-340-100';
-import product51 from './kaeser-eurocomp-epc-420-2-250';
-import product52 from './kaeser-eurocomp-epc-420-2-250-vertical';
-import product53 from './kaeser-eurocomp-epc-440-100';
-import product54 from './kaeser-eurocomp-epc-440-250-vertical';
-import product55 from './kaeser-eurocomp-epc-550-2-250';
-import product56 from './kaeser-eurocomp-epc-550-2-250-vertical';
-import product57 from './kaeser-eurocomp-epc-550-2-350-vertical';
-import product58 from './kaeser-eurocomp-epc-630-100';
-import product59 from './kaeser-eurocomp-epc-630-250';
-import product60 from './kaeser-eurocomp-epc-630-250-vertical';
-import product61 from './kaeser-eurocomp-epc-750-2-500';
-import product62 from './kaeser-eurocomp-epc-750-2-500-vertical';
-import product63 from './kaeser-eurocomp-epc-840-100';
-import product64 from './kaeser-eurocomp-epc-840-250';
-import product65 from './kaeser-eurocomp-epc-840-250-vertical';
-import product66 from './metabo-basic-160-6-w-of';
-import product67 from './metabo-basic-220-24-of-silent';
-import product68 from './metabo-basic-250-24-w';
-import product69 from './metabo-basic-250-24-w-of';
-import product70 from './metabo-basic-250-50-w';
-import product71 from './metabo-basic-250-50-w-of';
-import product72 from './metabo-basic-280-50-w-of';
-import product73 from './metabo-mega-350-100-d';
-import product74 from './metabo-mega-350-100-w';
-import product75 from './metabo-mega-350-50-w';
-import product76 from './metabo-mega-400-50-d';
-import product77 from './metabo-mega-400-50-w';
-import product78 from './metabo-mega-580-200-d';
-import product79 from './metabo-mega-650-270-d';
-import product80 from './metabo-mega-700-90-d';
-import product81 from './metabo-power-160-5-18-ltx-bl-of';
-import product82 from './metabo-power-180-5-w-of';
-import product83 from './metabo-power-250-10-w-of';
-import product84 from './metabo-power-280-20-w-of';
+import product46 from './kaeser-eurocomp-epc-1000-2-g';
+import product47 from './kaeser-eurocomp-epc-1100-500';
+import product48 from './kaeser-eurocomp-epc-1100-g';
+import product49 from './kaeser-eurocomp-epc-150-2-g';
+import product50 from './kaeser-eurocomp-epc-1500-500';
+import product51 from './kaeser-eurocomp-epc-1500-g';
+import product52 from './kaeser-eurocomp-epc-230-2-100';
+import product53 from './kaeser-eurocomp-epc-230-2-250-vertical';
+import product54 from './kaeser-eurocomp-epc-230-2-g';
+import product55 from './kaeser-eurocomp-epc-340-100';
+import product56 from './kaeser-eurocomp-epc-340-g';
+import product57 from './kaeser-eurocomp-epc-420-2-250';
+import product58 from './kaeser-eurocomp-epc-420-2-250-vertical';
+import product59 from './kaeser-eurocomp-epc-420-2-g';
+import product60 from './kaeser-eurocomp-epc-440-100';
+import product61 from './kaeser-eurocomp-epc-440-250-vertical';
+import product62 from './kaeser-eurocomp-epc-440-g';
+import product63 from './kaeser-eurocomp-epc-550-2-250';
+import product64 from './kaeser-eurocomp-epc-550-2-250-vertical';
+import product65 from './kaeser-eurocomp-epc-550-2-350-vertical';
+import product66 from './kaeser-eurocomp-epc-550-2-g';
+import product67 from './kaeser-eurocomp-epc-630-100';
+import product68 from './kaeser-eurocomp-epc-630-250';
+import product69 from './kaeser-eurocomp-epc-630-250-vertical';
+import product70 from './kaeser-eurocomp-epc-630-g';
+import product71 from './kaeser-eurocomp-epc-750-2-500';
+import product72 from './kaeser-eurocomp-epc-750-2-500-vertical';
+import product73 from './kaeser-eurocomp-epc-750-2-g';
+import product74 from './kaeser-eurocomp-epc-840-100';
+import product75 from './kaeser-eurocomp-epc-840-250';
+import product76 from './kaeser-eurocomp-epc-840-250-vertical';
+import product77 from './kaeser-eurocomp-epc-840-g';
+import product78 from './metabo-basic-160-6-w-of';
+import product79 from './metabo-basic-220-24-of-silent';
+import product80 from './metabo-basic-250-24-w';
+import product81 from './metabo-basic-250-24-w-of';
+import product82 from './metabo-basic-250-50-w';
+import product83 from './metabo-basic-250-50-w-of';
+import product84 from './metabo-basic-280-50-w-of';
+import product85 from './metabo-mega-350-100-d';
+import product86 from './metabo-mega-350-100-w';
+import product87 from './metabo-mega-350-50-w';
+import product88 from './metabo-mega-400-50-d';
+import product89 from './metabo-mega-400-50-w';
+import product90 from './metabo-mega-580-200-d';
+import product91 from './metabo-mega-650-270-d';
+import product92 from './metabo-mega-700-90-d';
+import product93 from './metabo-power-160-5-18-ltx-bl-of';
+import product94 from './metabo-power-180-5-w-of';
+import product95 from './metabo-power-250-10-w-of';
+import product96 from './metabo-power-280-20-w-of';
 
 export const rawCompressors = [
 	product1,
@@ -168,4 +180,16 @@ export const rawCompressors = [
 	product82,
 	product83,
 	product84,
+	product85,
+	product86,
+	product87,
+	product88,
+	product89,
+	product90,
+	product91,
+	product92,
+	product93,
+	product94,
+	product95,
+	product96,
 ];
