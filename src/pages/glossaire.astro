@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { glossarySources, glossaryTerms } from '../data/glossary';
+import { serializeJsonLd } from '../domain/structured-data';
 
 const letters = [...new Set(glossaryTerms.map((item) => item.term.normalize('NFD').replace(/[\u0300-\u036f]/g, '').charAt(0).toUpperCase()))];
 const termSetJsonLd = {
@@ -20,7 +21,7 @@ const termSetJsonLd = {
 ---
 
 <BaseLayout title="Glossaire de l’air comprimé : FAD, bar, débit et pression | CompatAir" description="Définitions sourcées du FAD, débit restitué, pression dynamique, point de rosée, simultanéité et ISO 8573-1 pour l’air comprimé." breadcrumbs={[{ name: 'Glossaire', path: '/glossaire/' }]}>
-	<script is:inline type="application/ld+json" set:html={JSON.stringify(termSetJsonLd)} />
+	<script is:inline type="application/ld+json" set:html={serializeJsonLd(termSetJsonLd)} />
 	<section class="page-hero compact"><div class="container"><p class="eyebrow">{glossaryTerms.length} définitions sourcées</p><h1>Le glossaire de l’air comprimé</h1><p class="lead">Un vocabulaire précis pour comparer des compresseurs, lire une fiche technique et diagnostiquer un réseau sans confondre pression, débit et conditions de référence.</p></div></section>
 	<div class="container glossary-layout">
 		<nav class="glossary-index" aria-label="Index alphabétique"><strong>Accès rapide</strong><div>{letters.map((letter) => <a href={`#lettre-${letter}`}>{letter}</a>)}</div><p>Utilisez aussi la recherche de votre navigateur pour trouver un terme.</p></nav>

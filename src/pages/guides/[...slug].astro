@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { compressors, tools } from '../../data/catalog';
 import { evaluateCompatibility } from '../../domain/compatibility';
 import { guideAudiences, guideMetiers } from '../../domain/editorial-taxonomy';
+import { serializeJsonLd } from '../../domain/structured-data';
 
 export async function getStaticPaths() {
 	const guides = await getCollection('guides');
@@ -80,7 +81,7 @@ const articleJsonLd = {
 	modifiedDate={guide.data.updatedDate ?? guide.data.pubDate}
 	breadcrumbs={[{ name: 'Guides', path: '/guides/' }, { name: guide.data.title, path: `/guides/${guide.id}/` }]}
 >
-	<script is:inline type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
+	<script is:inline type="application/ld+json" set:html={serializeJsonLd(articleJsonLd)} />
 	<article class="container editorial-layout" data-guide-audiences={guide.data.audiences.join(' ')} data-guide-metiers={guide.data.metiers.join(' ')}>
 		<div class="editorial-main">
 			<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/guides/">Guides</a><span>/</span><span>{guide.data.category}</span></nav>

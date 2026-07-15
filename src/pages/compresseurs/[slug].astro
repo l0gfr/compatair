@@ -8,6 +8,7 @@ import { toolDemandLabel, toolPressureLabel } from '../../domain/tool-demand';
 import { activeOffers, merchants } from '../../data/offers';
 import { latestEvidenceDate } from '../../domain/provenance';
 import { offerJsonLd } from '../../domain/product-structured-data';
+import { serializeJsonLd } from '../../domain/structured-data';
 
 export function getStaticPaths() {
 	return compressors.map((compressor) => ({ params: { slug: compressor.slug }, props: { compressor } }));
@@ -46,7 +47,7 @@ const productJsonLd = productOffers.length ? {
 	modifiedDate={new Date(verifiedAt)}
 	breadcrumbs={[{ name: 'Compresseurs', path: '/compresseurs/' }, { name: `${compressor.brand} ${compressor.model}`, path: `/compresseurs/${compressor.slug}/` }]}
 >
-	{productJsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(productJsonLd)} />}
+	{productJsonLd && <script is:inline type="application/ld+json" set:html={serializeJsonLd(productJsonLd)} />}
 	<article class="container product-detail">
 		<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/compresseurs/">Compresseurs</a><span>/</span><span>{compressor.brand} {compressor.model}</span></nav>
 		<div class="product-hero"><div><p class="eyebrow">Fiche compresseur · sources vérifiées</p><h1>{compressor.brand} {compressor.model}</h1><p class="lead">{compressor.editorial.overview}</p><p class="product-reference">Référence {compressor.mpn ?? 'non renseignée'} · {compressor.oilType === 'oil-free' ? 'sans huile' : 'lubrifié'} · fiabilité des données {compressor.confidence}.</p></div><ProductImage image={compressor.image} eager /></div>

@@ -4,6 +4,7 @@ import GuideCard from '../../../components/GuideCard.astro';
 import MetierIcon from '../../../components/MetierIcon.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { guideMetierIds, guideMetiers, type GuideMetierId } from '../../../domain/editorial-taxonomy';
+import { serializeJsonLd } from '../../../domain/structured-data';
 
 export function getStaticPaths() {
 	return guideMetierIds.map((metier) => ({ params: { metier }, props: { metier } }));
@@ -22,7 +23,7 @@ const itemListJsonLd = {
 ---
 
 <BaseLayout title={definition.title} editorialTitle={definition.seoTitle} description={definition.description} imagePath="/social/guides.png" breadcrumbs={[{ name: 'Guides', path: '/guides/' }, { name: 'Professionnels', path: '/guides/professionnels/' }, { name: definition.label, path: `/guides/metiers/${metier}/` }]}>
-	<script is:inline type="application/ld+json" set:html={JSON.stringify(itemListJsonLd)} />
+	<script is:inline type="application/ld+json" set:html={serializeJsonLd(itemListJsonLd)} />
 	<section class="page-hero compact metier-hero" data-editorial-hub={metier}><div class="container metier-hero-layout"><MetierIcon metier={metier} size={72} /><div><p class="eyebrow">Guides par métier</p><h1>{definition.title}</h1><p class="lead">{definition.description}</p><div class="actions"><a class="button primary" href="/calculateur/">Vérifier une configuration</a><a class="button" href="/guides/professionnels/">Tous les guides professionnels</a></div></div></div></section>
 	<section class="section"><div class="container"><div class="section-head split-head"><div><p class="eyebrow">Dossiers reliés</p><h2>{guides.length} guides utiles à ce contexte</h2></div><p>Chaque chiffre technique reste attribué à sa source et à sa référence. Une catégorie métier ne fournit aucune consommation générique.</p></div><div class="guide-grid">{guides.map((guide) => <GuideCard guide={guide} />)}</div></div></section>
 	<section class="section related-professions"><div class="container"><div class="section-head"><p class="eyebrow">Autres contextes</p><h2>Explorer les autres parcours métiers</h2></div><div class="editorial-path-grid">{guideMetierIds.filter((item) => item !== metier).map((item) => <a href={`/guides/metiers/${item}/`}><MetierIcon metier={item} /><span>Parcours métier</span><strong>{guideMetiers[item].label}</strong><small>{guideMetiers[item].description}</small></a>)}</div></div></section>

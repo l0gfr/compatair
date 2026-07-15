@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createMcpCore, ENGINE_VERSION, PROTOCOL_VERSION } from './mcp-core.mjs';
-import { createDemandAggregateStore, DEMAND_EVENT_SCHEMA_VERSION, validateDemandEvent } from './demand-aggregates.mjs';
+import { createDemandAggregateStore, DEMAND_EVENT_SCHEMA_VERSION, isValidCalculationVersion, validateDemandEvent } from './demand-aggregates.mjs';
 import { createProductFunnelAggregateStore, PRODUCT_FUNNEL_SCHEMA_VERSION, validateProductFunnelEvent } from './product-funnel-aggregates.mjs';
 
 const BODY_LIMIT = 65_536;
@@ -42,14 +42,24 @@ export function parseOfferId(pathname) {
 export function allowedOfferRedirect(offer) {
 	if (!offer || typeof offer.url !== 'string') return undefined;
 	let url; try { url = new URL(offer.url); } catch { return undefined; }
-	if (url.protocol !== 'https:') return undefined;
+	if (url.protocol !== 'https:' || url.username || url.password) return undefined;
 	const host = url.hostname.toLowerCase();
 	if (offer.merchantId === 'amazon-fr') return host === 'amazon.fr' || host.endsWith('.amazon.fr') ? url.toString() : undefined;
 	if (offer.merchantId !== 'manomano-fr') return undefined;
 	if (host === 'manomano.fr' || host.endsWith('.manomano.fr')) return url.toString();
 	if (!(host === 'awin1.com' || host.endsWith('.awin1.com'))) return undefined;
 	if (!['/pclick.php', '/cread.php'].includes(url.pathname)) return undefined;
-	return (url.searchParams.get('m') ?? url.searchParams.get('awinmid')) === '17547' ? url.toString() : undefined;
+	if (url.pathname === '/pclick.php') {
+		if (url.searchParams.has('awinmid') || url.searchParams.getAll('m').length !== 1) return undefined;
+		return url.searchParams.get('m') === '17547' ? url.toString() : undefined;
+	}
+	if (url.searchParams.has('m') || url.searchParams.getAll('awinmid').length !== 1 || url.searchParams.get('awinmid') !== '17547') return undefined;
+	const destinations = url.searchParams.getAll('ued');
+	if (destinations.length !== 1) return undefined;
+	let destination; try { destination = new URL(destinations[0]); } catch { return undefined; }
+	if (destination.protocol !== 'https:' || destination.username || destination.password) return undefined;
+	const destinationHost = destination.hostname.toLowerCase();
+	return destinationHost === 'manomano.fr' || destinationHost.endsWith('.manomano.fr') ? url.toString() : undefined;
 }
 
 export function isFreshOfferSnapshot(offer, now = Date.now()) {
@@ -113,17 +123,18 @@ function isJsonContentType(request) {
 }
 
 /**
- * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, allowedOrigins: Set<string>, demandAggregatePath?: string, productFunnelAggregatePath?: string, proxyManagesApiHeaders?: boolean, now?: () => number, recordAffiliateClick?: (offerId: string) => void }} options
+ * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, allowedOrigins: Set<string>, demandAggregatePath?: string, productFunnelAggregatePath?: string, proxyManagesApiHeaders?: boolean, now?: () => number, recordAffiliateClick?: (offerId: string) => void, recordToolCall?: (toolName: string) => void }} options
  */
-export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable' }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, allowedOrigins, demandAggregatePath = undefined, productFunnelAggregatePath = undefined, proxyManagesApiHeaders = false, now = Date.now, recordAffiliateClick = () => {} }) {
-	const core = createMcpCore(catalog, offerSnapshot);
+export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable', calculationVersion: ENGINE_VERSION }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, allowedOrigins, demandAggregatePath = undefined, productFunnelAggregatePath = undefined, proxyManagesApiHeaders = false, now = Date.now, recordAffiliateClick = () => {}, recordToolCall = () => {} }) {
+	const core = createMcpCore(catalog, offerSnapshot, { isOfferActive: (offer) => isFreshOfferSnapshot(offer, now()) && allowedOfferRedirect(offer) !== undefined });
+	const authoritativeCalculationVersion = isValidCalculationVersion(verdictSnapshot.calculationVersion) ? verdictSnapshot.calculationVersion : ENGINE_VERSION;
 	const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
 	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item]));
 	const compressorBySlug = new Map((catalog.compressors ?? []).map((item) => [item.slug, item]));
 	const toolBySlug = new Map((catalog.tools ?? []).map((item) => [item.slug, item]));
 	const verdictMap = new Map((verdictSnapshot.pairs ?? []).map((item) => [`${item.compressorId}--${item.toolId}`, item]));
 	const allow = createRateLimiter();
-	const counters = { rpc: 0, errors: 0, tools: Object.create(null), affiliateClicks: Object.create(null) };
+	const counters = { rpc: 0, errors: 0 };
 	const demandStore = createDemandAggregateStore({ filePath: demandAggregatePath, catalog });
 	const productFunnelStore = createProductFunnelAggregateStore({ filePath: productFunnelAggregatePath });
 
@@ -169,7 +180,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			const detailsUrl = `https://compatair.fr/calculateur/?outil=${encodeURIComponent(tool.id)}&compresseur=${encodeURIComponent(compressor.id)}`;
 			const proofUrl = `https://compatair.fr/graphe-preuve/?compresseur=${encodeURIComponent(compressor.id)}&outil=${encodeURIComponent(tool.id)}`;
 			return apiJson(200, {
-				schemaVersion: '1.0.0', catalogVersion: catalog.catalogVersion, catalogVerifiedAt: catalog.verifiedAt, verdictVersion: verdictSnapshot.verdictVersion, calculationVersion: verdictSnapshot.calculationVersion,
+				schemaVersion: '1.0.0', catalogVersion: catalog.catalogVersion, catalogVerifiedAt: catalog.verifiedAt, verdictVersion: verdictSnapshot.verdictVersion, calculationVersion: authoritativeCalculationVersion,
 				input: { compressorId, toolId },
 				compressor: { id: compressor.id, brand: compressor.brand, model: compressor.model, slug: compressor.slug },
 				tool: { id: tool.id, brand: tool.brand, model: tool.model, label: tool.label, slug: tool.slug },
@@ -187,7 +198,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			if (!allow(`events:${clientAddress(request)}`)) return json(response, 429, { error: 'rate_limited' }, { 'Retry-After': '60' });
 			try {
 				const event = await readJsonBody(request);
-				const demand = validateDemandEvent(event, catalog);
+				const demand = validateDemandEvent(event, catalog, authoritativeCalculationVersion);
 				const productFunnel = validateProductFunnelEvent(event);
 				if (demand) await demandStore.record(demand);
 				else if (productFunnel) await productFunnelStore.record(productFunnel);
@@ -206,10 +217,9 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			const redirect = isFreshOfferSnapshot(offer, now()) ? allowedOfferRedirect(offer) : undefined;
 			if (!redirect) return json(response, 404, { error: 'offer_not_found' });
 			if (request.method === 'GET') {
-				counters.affiliateClicks[offerId] = (counters.affiliateClicks[offerId] ?? 0) + 1;
 				recordAffiliateClick(offerId);
 			}
-			response.writeHead(302, { Location: redirect, 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer', 'X-Content-Type-Options': 'nosniff' });
+			response.writeHead(302, { Location: redirect, 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer', 'X-Robots-Tag': 'noindex, nofollow', 'X-Content-Type-Options': 'nosniff' });
 			return response.end();
 		}
 
@@ -227,8 +237,8 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			const idIsValid = message?.id === undefined || message.id === null || (typeof message.id === 'string' && message.id.length <= 128) || (typeof message.id === 'number' && Number.isFinite(message.id));
 			if (!message || typeof message !== 'object' || Array.isArray(message) || message.jsonrpc !== '2.0' || typeof message.method !== 'string' || message.method.length > 128 || !idIsValid) return json(response, 400, { jsonrpc: '2.0', id: null, error: { code: -32600, message: 'Requête JSON-RPC invalide.' } });
 			counters.rpc++;
-			if (message.method === 'tools/call' && typeof message.params?.name === 'string') counters.tools[message.params.name] = (counters.tools[message.params.name] ?? 0) + 1;
 			const result = core.handle(message);
+			if (message.method === 'tools/call' && typeof message.params?.name === 'string' && result && !result.error) recordToolCall(message.params.name);
 			if (result === null || message.id === undefined) { response.writeHead(202, { 'Cache-Control': 'no-store' }); return response.end(); }
 			if (result.error) counters.errors++;
 			return json(response, 200, result);
@@ -266,7 +276,7 @@ async function start() {
 	const proxyManagesApiHeaders = process.env.COMPAT_AIR_PROXY_MANAGES_API_HEADERS === '1';
 	const catalog = JSON.parse(await readFile(catalogPath, 'utf8'));
 	const verdictSnapshot = JSON.parse(await readFile(verdictsPath, 'utf8'));
-	if (verdictSnapshot.catalogVersion !== catalog.catalogVersion || !Array.isArray(verdictSnapshot.pairs)) throw new Error('Le snapshot de verdicts ne correspond pas au catalogue.');
+	if (verdictSnapshot.catalogVersion !== catalog.catalogVersion || !Array.isArray(verdictSnapshot.pairs) || !isValidCalculationVersion(verdictSnapshot.calculationVersion)) throw new Error('Le snapshot de verdicts ne correspond pas au catalogue.');
 	let offerSnapshot = { offers: [], snapshotVersion: 'empty' };
 	try { offerSnapshot = JSON.parse(await readFile(offersPath, 'utf8')); } catch {}
 	const server = createCompatAirServer({ catalog, verdictSnapshot, offerSnapshot, allowedOrigins, demandAggregatePath, productFunnelAggregatePath, proxyManagesApiHeaders });

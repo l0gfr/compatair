@@ -40,12 +40,28 @@ export function assertAllowedOfferUrl(offer: Offer, merchants: Merchant[]) {
 	const merchant = merchants.find((item) => item.id === offer.merchantId);
 	if (!merchant) throw new Error(`Marchand inconnu : ${offer.merchantId}`);
 	const url = new URL(offer.url);
+	if (url.username || url.password) throw new Error('Identifiants interdits dans une URL marchande');
 	const host = url.hostname.toLowerCase();
 	if (!merchant.allowedHosts.some((allowed) => host === allowed || host.endsWith(`.${allowed}`))) throw new Error(`Domaine marchand non autorisé : ${host}`);
 	if (merchant.trackingAdvertiserId && (host === 'awin1.com' || host.endsWith('.awin1.com'))) {
 		if (!['/pclick.php', '/cread.php'].includes(url.pathname)) throw new Error(`Chemin Awin non autorisé : ${url.pathname}`);
-		const advertiserId = url.searchParams.get('m') ?? url.searchParams.get('awinmid');
-		if (advertiserId !== merchant.trackingAdvertiserId) throw new Error(`Annonceur Awin non autorisé : ${advertiserId ?? 'absent'}`);
+		const advertiserParameter = url.pathname === '/pclick.php' ? 'm' : 'awinmid';
+		const conflictingParameter = advertiserParameter === 'm' ? 'awinmid' : 'm';
+		const advertiserIds = url.searchParams.getAll(advertiserParameter);
+		if (url.searchParams.has(conflictingParameter) || advertiserIds.length !== 1 || advertiserIds[0] !== merchant.trackingAdvertiserId) {
+			throw new Error(`Annonceur Awin non autorisé : ${advertiserIds[0] ?? 'absent'}`);
+		}
+		if (url.pathname === '/cread.php') {
+			const destinations = url.searchParams.getAll('ued');
+			if (destinations.length !== 1) throw new Error('Destination Awin absente ou ambiguë');
+			let destination: URL; try { destination = new URL(destinations[0]); } catch { throw new Error('Destination Awin invalide'); }
+			if (destination.protocol !== 'https:' || destination.username || destination.password) throw new Error('Destination Awin HTTPS invalide');
+			const destinationHost = destination.hostname.toLowerCase();
+			const allowedDestination = merchant.allowedHosts
+				.filter((allowed) => allowed !== 'awin1.com')
+				.some((allowed) => destinationHost === allowed || destinationHost.endsWith(`.${allowed}`));
+			if (!allowedDestination) throw new Error(`Destination Awin non autorisée : ${destinationHost}`);
+		}
 	}
 	return true;
 }

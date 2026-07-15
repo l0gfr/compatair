@@ -16,6 +16,13 @@ fi
 
 deploy_user=compatair-deploy
 deploy_root=/var/www/html/compatair
+target_config=/etc/apache2/sites-available/compatair.fr.conf
+enabled_config=/etc/apache2/sites-enabled/compatair.fr.conf
+
+if [[ -e "$deploy_root/current" || -L "$deploy_root/current" || -e "$target_config" || -L "$target_config" || -e "$enabled_config" || -L "$enabled_config" ]]; then
+	echo "Refusing to bootstrap over an existing CompatAir installation" >&2
+	exit 2
+fi
 
 if ! id "$deploy_user" >/dev/null 2>&1; then
 	useradd --create-home --shell /bin/bash "$deploy_user"
@@ -33,7 +40,7 @@ chown "$deploy_user:www-data" "$deploy_root/releases/bootstrap/index.html"
 ln -sfn "$deploy_root/releases/bootstrap" "$deploy_root/current.next"
 mv -Tf "$deploy_root/current.next" "$deploy_root/current"
 
-install -m 644 "$script_dir/../apache/compatair.fr-http.conf" /etc/apache2/sites-available/compatair.fr.conf
+install -m 644 "$script_dir/../apache/compatair.fr-http.conf" "$target_config"
 a2enmod headers rewrite ssl >/dev/null
 a2ensite compatair.fr.conf >/dev/null
 apache2ctl configtest

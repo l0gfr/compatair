@@ -127,7 +127,13 @@ function result(value, catalog) {
 }
 function failure(message, catalog) { return { content: [{ type: 'text', text: message }], structuredContent: { catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, error: message }, isError: true }; }
 
-export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVersion: 'empty' }) {
+/**
+ * @param {any} catalog
+ * @param {{ offers?: any[], snapshotVersion?: string }} offerSnapshot
+ * @param {{ isOfferActive?: (offer: any) => boolean }} options
+ */
+export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, options = {}) {
+	const { isOfferActive = () => true } = options;
 	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item])); const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
 	function callTool(name, args = {}) {
 		if (!validToolArguments(name, args)) return failure('Arguments invalides.', catalog);
@@ -172,7 +178,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 			case 'check_compatibility': { const compressor = compressorMap.get(args.compressorId), tool = toolMap.get(args.toolId); if (!compressor || !tool) return failure('Compresseur ou outil inconnu.', catalog); return result({ compatibility: compatibility(compressor, tool, args.safetyMargin ?? .25) }, catalog); }
 			case 'compare_compressors': { if (!Array.isArray(args.ids) || args.ids.length < 2 || args.ids.length > 3) return failure('Deux ou trois identifiants sont requis.', catalog); const values = args.ids.map((id) => compressorMap.get(id)); return values.some((item) => !item) ? failure('Un compresseur est inconnu.', catalog) : result({ compressors: values }, catalog); }
 			case 'find_accessories': { const tool = toolMap.get(args.toolId); if (!tool) return failure('Outil inconnu.', catalog); return result({ status: tool.connectorSize ? 'documented' : 'insufficient_data', accessories: tool.connectorSize ? [{ type: 'connector_or_hose', requirement: tool.connectorSize, source: tool.evidence?.[0] }] : [] }, catalog); }
-			case 'find_offers': { const values = (offerSnapshot.offers ?? []).filter((offer) => offer.productId === args.productId); const found = page(values, args.cursor, args.limit); return result({ offerSnapshotVersion: offerSnapshot.snapshotVersion, offers: found.items, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog); }
+			case 'find_offers': { const values = (offerSnapshot.offers ?? []).filter((offer) => offer.productId === args.productId && isOfferActive(offer)); const found = page(values, args.cursor, args.limit); return result({ offerSnapshotVersion: offerSnapshot.snapshotVersion, offers: found.items, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog); }
 			default: return undefined;
 		}
 	}

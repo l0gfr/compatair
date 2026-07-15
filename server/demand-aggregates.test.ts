@@ -15,6 +15,9 @@ describe('anonymous demand aggregates', () => {
 		expect(validateDemandEvent(event, catalog)).toBeDefined();
 		expect(validateDemandEvent({ ...event, toolIds: ['unknown'] }, catalog)).toBeUndefined();
 		expect(validateDemandEvent({ ...event, freeText: 'do not persist me' }, catalog)).toBeUndefined();
+		expect(validateDemandEvent({ ...event, calculationVersion: `${'1'.repeat(5)}.1.0` }, catalog)).toBeUndefined();
+		expect(validateDemandEvent(event, catalog, '1.2.0')).toBeUndefined();
+		expect(validateDemandEvent(event, catalog, '1.1.0')).toBeDefined();
 	});
 
 	it('stores marginal counters and no raw contribution rows', () => {

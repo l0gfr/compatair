@@ -154,6 +154,19 @@ else {
 	if (!robots.includes('Disallow: /go/')) errors.push('robots.txt: exclusion des redirections marchandes absente');
 }
 
+const securityTxtPath = '/.well-known/security.txt';
+if (!artifactPaths.has(securityTxtPath)) errors.push(`${securityTxtPath}: canal de signalement absent`);
+else {
+	const securityTxt = await readFile(join(root, securityTxtPath), 'utf8');
+	if (!securityTxt.includes('Contact: mailto:admin@toonux.com')) errors.push(`${securityTxtPath}: contact de sécurité absent`);
+	if (!securityTxt.includes(`Canonical: ${siteOrigin}${securityTxtPath}`)) errors.push(`${securityTxtPath}: URL canonique absente`);
+	if (!securityTxt.includes(`Policy: ${siteOrigin}/securite/`)) errors.push(`${securityTxtPath}: politique de divulgation absente`);
+	const expires = securityTxt.match(/^Expires:\s*(.+)$/m)?.[1];
+	const expiresAt = expires ? Date.parse(expires) : Number.NaN;
+	if (!Number.isFinite(expiresAt) || expiresAt <= Date.now()) errors.push(`${securityTxtPath}: expiration absente ou dépassée`);
+	else if (expiresAt > Date.now() + 366 * 24 * 60 * 60 * 1000) errors.push(`${securityTxtPath}: expiration supérieure à un an`);
+}
+
 const titles = new Map();
 const descriptions = new Map();
 const publishedOfferIds = new Set();

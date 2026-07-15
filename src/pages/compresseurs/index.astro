@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductImage from '../../components/ProductImage.astro';
 import { compressors } from '../../data/catalog';
 import { brandSlug } from '../../domain/brand';
+import { serializeJsonLd } from '../../domain/structured-data';
 const compressorListJsonLd = {
 	'@context': 'https://schema.org', '@type': 'ItemList', name: 'Compresseurs documentés par CompatAir',
 	itemListElement: compressors.map((compressor, index) => ({ '@type': 'ListItem', position: index + 1, name: `${compressor.brand} ${compressor.model}`, url: `https://compatair.fr/compresseurs/${compressor.slug}/` })),
@@ -10,7 +11,7 @@ const compressorListJsonLd = {
 ---
 
 <BaseLayout title="Compresseurs d’air vérifiés | CompatAir" description="Consultez le débit réellement restitué, la pression, la cuve et les données manquantes de chaque compresseur étudié par CompatAir." breadcrumbs={[{ name: 'Compresseurs', path: '/compresseurs/' }]}>
-	<script is:inline type="application/ld+json" set:html={JSON.stringify(compressorListJsonLd)} />
+	<script is:inline type="application/ld+json" set:html={serializeJsonLd(compressorListJsonLd)} />
 		<section class="page-hero compact"><div class="container"><p class="eyebrow">Compresseurs d’air vérifiés</p><h1>{compressors.length} compresseurs étudiés à partir de leurs données utiles</h1><p class="lead">Chaque fiche indique le <a href="/glossaire/#debit-restitue">débit réellement disponible</a> à une pression donnée, sa source et les informations qui manquent encore. Vous pouvez aussi <a href="/marques/">parcourir les fabricants documentés</a>, puis utiliser le <a href="/calculateur/">calculateur</a> pour vérifier vos propres outils.</p></div></section>
 	<section class="section"><div class="container catalog-layout">
 		<aside class="catalog-filters" aria-label="Filtres du catalogue">

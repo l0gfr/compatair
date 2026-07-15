@@ -8,6 +8,7 @@ import SiteSearch from '../components/SiteSearch.astro';
 import UiIcon from '../components/UiIcon.astro';
 import { resolveDocumentTitle } from '../domain/metadata';
 import { socialCardKey } from '../domain/social-card';
+import { serializeJsonLd } from '../domain/structured-data';
 
 type Props = {
 	title: string;
@@ -122,8 +123,8 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={documentTitle} />
 		<meta name="twitter:description" content={description} />
-		<script is:inline type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />
-		{breadcrumbJsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />}
+		<script is:inline type="application/ld+json" set:html={serializeJsonLd(websiteJsonLd)} />
+		{breadcrumbJsonLd && <script is:inline type="application/ld+json" set:html={serializeJsonLd(breadcrumbJsonLd)} />}
 		<title>{documentTitle}</title>
 	</head>
 	<body>

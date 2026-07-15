@@ -15,5 +15,21 @@ describe('release boundary policy', () => {
 	it('restarts and verifies the MCP service after a rollback', () => {
 		expect(rollback).toContain('systemctl restart compatair-mcp.service');
 		expect(rollback).toContain('http://127.0.0.1:8787/health');
+		expect(rollback).toContain('restore_previous_release');
+		expect(rollback).toContain('if ! restart_mcp_and_wait');
+		expect(rollback).toContain('if ! restore_previous_release');
+		expect(rollback.indexOf('if ! restart_mcp_and_wait')).toBeLessThan(
+			rollback.lastIndexOf(`printf '%s\\n' "$release_id" > "$deployed_sha"`),
+		);
+	});
+
+	it('restores the previous release when the candidate MCP is unhealthy', () => {
+		expect(deploy).toContain('restore_previous_release');
+		expect(deploy).toContain('previous_release_id');
+		expect(deploy).toContain('if ! restart_mcp_and_wait');
+		expect(deploy).toContain('if ! restore_previous_release');
+		expect(deploy.indexOf('if ! restart_mcp_and_wait')).toBeLessThan(
+			deploy.lastIndexOf(`printf '%s\\n' "$release_id" > "$deployed_sha"`),
+		);
 	});
 });

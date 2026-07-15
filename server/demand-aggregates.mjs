@@ -1,12 +1,16 @@
 import { readFile, rename, writeFile } from 'node:fs/promises';
 
 export const DEMAND_EVENT_SCHEMA_VERSION = '1.0.0';
+const CALCULATION_VERSION_PATTERN = /^\d{1,4}\.\d{1,4}\.\d{1,4}$/;
 const FLOW_BUCKETS = new Set(['lt-100', '100-199', '200-399', '400-699', '700-plus']);
 const PRESSURE_BUCKETS = new Set(['lt-4', '4-5.9', '6-7.9', '8-plus']);
 const SESSION_BUCKETS = new Set(['lt-15', '15-59', '60-plus']);
 const MODES = new Set(['successive', 'simultaneous']);
 const COMPRESSOR_SELECTIONS = new Set(['none', 'catalog', 'custom']);
 const DIMENSION_KEYS = ['tools', 'categories', 'modes', 'flowBuckets', 'pressureBuckets', 'sessionBuckets', 'compressorSelections', 'calculationVersions', 'needProfiles'];
+
+/** @param {unknown} value */
+export function isValidCalculationVersion(value) { return typeof value === 'string' && CALCULATION_VERSION_PATTERN.test(value); }
 
 function emptyCounts() { return Object.create(null); }
 
@@ -50,12 +54,14 @@ function isValidAggregate(value) {
 		.every((key) => Object.values(value.dimensions[key]).reduce((sum, count) => sum + count, 0) === value.totalContributions);
 }
 
-export function validateDemandEvent(value, catalog) {
+/** @param {any} value @param {any} catalog @param {string | undefined} expectedCalculationVersion */
+export function validateDemandEvent(value, catalog, expectedCalculationVersion = undefined) {
 	if (!value || typeof value !== 'object' || Array.isArray(value)) return undefined;
 	const allowedKeys = new Set(['event', 'schemaVersion', 'calculationVersion', 'toolIds', 'mode', 'flowBucket', 'pressureBucket', 'sessionBucket', 'compressorSelection']);
 	if (Object.keys(value).some((key) => !allowedKeys.has(key))) return undefined;
 	if (value.event !== 'calculator_demand_aggregate' || value.schemaVersion !== DEMAND_EVENT_SCHEMA_VERSION) return undefined;
-	if (typeof value.calculationVersion !== 'string' || !/^\d+\.\d+\.\d+$/.test(value.calculationVersion)) return undefined;
+	if (!isValidCalculationVersion(value.calculationVersion)) return undefined;
+	if (expectedCalculationVersion !== undefined && value.calculationVersion !== expectedCalculationVersion) return undefined;
 	if (!Array.isArray(value.toolIds) || value.toolIds.length < 1 || value.toolIds.length > 8 || new Set(value.toolIds).size !== value.toolIds.length) return undefined;
 	const catalogToolIds = new Set((catalog.tools ?? []).map((tool) => tool.id));
 	if (value.toolIds.some((id) => typeof id !== 'string' || !catalogToolIds.has(id))) return undefined;

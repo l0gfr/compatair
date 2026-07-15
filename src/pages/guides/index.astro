@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import MetierIcon from '../../components/MetierIcon.astro';
 import { guideAudienceIds, guideAudiences, guideMetierIds, guideMetiers } from '../../domain/editorial-taxonomy';
+import { serializeJsonLd } from '../../domain/structured-data';
 
 const guides = (await getCollection('guides')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const pillars = guides.filter((guide) => guide.data.featured).sort((a, b) => b.data.readingTime - a.data.readingTime);
@@ -17,7 +18,7 @@ const guideListJsonLd = {
 ---
 
 <BaseLayout title="Guides sur les compresseurs et outils pneumatiques | CompatAir" description="Comprendre le débit restitué, choisir une cuve, dimensionner un flexible et alimenter correctement chaque outil pneumatique." breadcrumbs={[{ name: 'Guides', path: '/guides/' }]}>
-	<script is:inline type="application/ld+json" set:html={JSON.stringify(guideListJsonLd)} />
+	<script is:inline type="application/ld+json" set:html={serializeJsonLd(guideListJsonLd)} />
 	<section class="page-hero compact"><div class="container"><p class="eyebrow">Conseils pour choisir et utiliser</p><h1>Comprendre avant d’acheter</h1><p class="lead">Des guides sourcés pour choisir un compresseur, alimenter vos outils et repérer les chiffres commerciaux qui ne répondent pas à votre besoin.</p></div></section>
 	<section class="section editorial-gateway">
 		<div class="container">

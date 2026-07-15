@@ -29,6 +29,15 @@ describe('MCP HTTP boundary helpers', () => {
 	it('rejects a tampered redirect even when it uses HTTPS', () => {
 		expect(allowedOfferRedirect({ merchantId: 'manomano-fr', url: 'https://evil.example/phishing' })).toBeUndefined();
 		expect(allowedOfferRedirect({ merchantId: 'manomano-fr', url: 'https://www.awin1.com/pclick.php?p=1&m=999' })).toBeUndefined();
+		expect(allowedOfferRedirect({ merchantId: 'manomano-fr', url: 'https://www.awin1.com/pclick.php?p=1&m=17547&m=17547' })).toBeUndefined();
+		expect(allowedOfferRedirect({ merchantId: 'manomano-fr', url: 'https://www.awin1.com/pclick.php?p=1&m=17547&awinmid=999' })).toBeUndefined();
+		expect(allowedOfferRedirect({ merchantId: 'manomano-fr', url: 'https://www.awin1.com/cread.php?awinmid=17547&ued=https%3A%2F%2Funauthorized.example%2F' })).toBeUndefined();
+		expect(allowedOfferRedirect({ merchantId: 'manomano-fr', url: 'https://www.awin1.com/cread.php?awinmid=17547&awinmid=17547&ued=https%3A%2F%2Fwww.manomano.fr%2F' })).toBeUndefined();
+	});
+
+	it('accepts an Awin deep link only when its final destination remains on ManoMano', () => {
+		const target = 'https://www.awin1.com/cread.php?awinmid=17547&awinaffid=42&ued=https%3A%2F%2Fwww.manomano.fr%2Fp%2F42';
+		expect(allowedOfferRedirect({ merchantId: 'manomano-fr', url: target })).toBe(target);
 	});
 
 	it('accepts an offer for at most 48 hours with five minutes of future clock tolerance', () => {
@@ -52,7 +61,9 @@ describe('MCP HTTP boundary helpers', () => {
 		});
 		expect(result.status).toBe(302);
 		expect(result.headers.Location).toBe(target);
+		expect(result.headers['Cache-Control']).toBe('no-store');
 		expect(result.headers['Referrer-Policy']).toBe('no-referrer');
+		expect(result.headers['X-Robots-Tag']).toBe('noindex, nofollow');
 	});
 
 	it('answers affiliate HEAD requests without recording a click', async () => {
@@ -90,6 +101,28 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(JSON.parse(result.body)).toEqual({ error: 'offer_not_found' });
 	});
 
+	it('keeps expired or policy-rejected offers out of MCP results', async () => {
+		const now = Date.parse('2026-07-15T20:00:00.000Z');
+		const offerSnapshot = { snapshotVersion: 'offers-test', offers: [
+			{ id: 'active', productId: 'product-a', merchantId: 'manomano-fr', url: 'https://www.awin1.com/pclick.php?p=1&m=17547', collectedAt: '2026-07-15T19:00:00.000Z' },
+			{ id: 'expired', productId: 'product-a', merchantId: 'manomano-fr', url: 'https://www.awin1.com/pclick.php?p=2&m=17547', collectedAt: '2026-07-13T19:59:59.999Z' },
+			{ id: 'rejected', productId: 'product-a', merchantId: 'manomano-fr', url: 'https://www.awin1.com/cread.php?awinmid=17547&ued=https%3A%2F%2Funauthorized.example%2F', collectedAt: '2026-07-15T19:00:00.000Z' },
+		] } as any;
+		const server = createCompatAirServer({ catalog: { catalogVersion: 'test', compressors: [], tools: [] }, offerSnapshot, allowedOrigins: new Set(['https://compatair.fr']), now: () => now });
+		const payload = JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/call', params: { name: 'find_offers', arguments: { productId: 'product-a' } } });
+		const result = await new Promise<{ status: number; body: string }>((resolve) => {
+			let status = 0; let body = '';
+			const request = {
+				url: '/mcp', method: 'POST', headers: { accept: 'application/json, text/event-stream', 'content-type': 'application/json' }, socket: { remoteAddress: '127.0.0.1' },
+				async *[Symbol.asyncIterator]() { yield Buffer.from(payload); },
+			};
+			const response = { setTimeout() {}, writeHead(value: number) { status = value; }, end(value = '') { body += value; resolve({ status, body }); }, destroy() {} };
+			server.emit('request', request, response);
+		});
+		expect(result.status).toBe(200);
+		expect(JSON.parse(result.body).result.structuredContent.offers.map((offer: { id: string }) => offer.id)).toEqual(['active']);
+	});
+
 	it('rate-limits repeated affiliate redirect requests', async () => {
 		const target = 'https://www.awin1.com/pclick.php?p=1&a=2&m=17547';
 		const offerSnapshot = { offers: [{ id: 'offer-1', merchantId: 'manomano-fr', url: target, collectedAt: '2026-07-15T19:00:00.000Z' }] } as any;
@@ -124,13 +157,50 @@ describe('MCP HTTP boundary helpers', () => {
 		} finally { rmSync(directory, { recursive: true, force: true }); }
 	});
 
+	it('rejects a demand aggregate from a non-authoritative calculation version', async () => {
+		const directory = mkdtempSync(join(tmpdir(), 'compatair-demand-http-'));
+		const demandAggregatePath = join(directory, 'demand.json');
+		try {
+			const catalog = { catalogVersion: 'test', compressors: [], tools: [{ id: 'tool-a', category: 'Test' }] } as any;
+			const server = createCompatAirServer({ catalog, verdictSnapshot: { pairs: [], verdictVersion: 'test', calculationVersion: '1.2.0' }, allowedOrigins: new Set(['https://compatair.fr']), demandAggregatePath });
+			const payload = JSON.stringify({ event: 'calculator_demand_aggregate', schemaVersion: '1.0.0', calculationVersion: '1.1.0', toolIds: ['tool-a'], mode: 'successive', flowBucket: '200-399', pressureBucket: '6-7.9', sessionBucket: '15-59', compressorSelection: 'none' });
+			const status = await new Promise<number>((resolve) => {
+				const request = {
+					url: '/events', method: 'POST', headers: { origin: 'https://compatair.fr', 'content-type': 'application/json' }, socket: { remoteAddress: '127.0.0.1' },
+					async *[Symbol.asyncIterator]() { yield Buffer.from(payload); },
+				};
+				const response = { setTimeout() {}, writeHead(value: number) { resolve(value); }, end() {}, destroy() {} };
+				server.emit('request', request, response);
+			});
+			expect(status).toBe(400);
+			expect(() => readFileSync(demandAggregatePath, 'utf8')).toThrow();
+		} finally { rmSync(directory, { recursive: true, force: true }); }
+	});
+
+	it('does not retain attacker-controlled MCP tool names in process memory', async () => {
+		const recorded: string[] = [];
+		const server = createCompatAirServer({ catalog: { catalogVersion: 'test', compressors: [], tools: [] }, allowedOrigins: new Set(['https://compatair.fr']), recordToolCall: (name) => recorded.push(name) });
+		const requestTool = (name: string) => new Promise<number>((resolve) => {
+			const payload = JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/call', params: { name, arguments: { productId: 'product-a' } } });
+			const request = {
+				url: '/mcp', method: 'POST', headers: { accept: 'application/json, text/event-stream', 'content-type': 'application/json' }, socket: { remoteAddress: '127.0.0.1' },
+				async *[Symbol.asyncIterator]() { yield Buffer.from(payload); },
+			};
+			const response = { setTimeout() {}, writeHead(value: number) { resolve(value); }, end() {}, destroy() {} };
+			server.emit('request', request, response);
+		});
+		expect(await requestTool('x'.repeat(1_000))).toBe(200);
+		expect(await requestTool('find_offers')).toBe(200);
+		expect(recorded).toEqual(['find_offers']);
+	});
+
 	it('serves the versioned compatibility API with CORS and source evidence', async () => {
 		const catalog = {
 			catalogVersion: 'catalog-test', verifiedAt: '2026-07-14',
 			compressors: [{ id: 'compressor-a', slug: 'compressor-a', brand: 'A', model: 'A1', maxPressureBar: 10, fadCurve: [{ pressureBar: 6, litersPerMinute: 200 }], confidence: 'A', evidence: [{ id: 'source-c', sourceLabel: 'Source C', sourceUrl: 'https://example.com/c', retrievedAt: '2026-07-14', confidence: 'A' }] }],
 			tools: [{ id: 'tool-a', slug: 'tool-a', brand: 'B', model: 'B1', label: 'Outil B1', demandModel: 'fixed-flow', workingPressureBar: { typical: 6 }, airflowLpm: { typical: 100 }, confidence: 'A', evidence: [{ id: 'source-t', sourceLabel: 'Source T', sourceUrl: 'https://example.com/t', retrievedAt: '2026-07-14', confidence: 'A' }] }],
 		} as any;
-		const verdictSnapshot = { verdictVersion: 'verdict-test', calculationVersion: 'calculation-test', pairs: [{ id: 'compressor-a--tool-a', compressorId: 'compressor-a', toolId: 'tool-a', verdict: 'continuous', confidence: 'high', requiredFadLpm: 125, availableFadLpm: 200 }] };
+		const verdictSnapshot = { verdictVersion: 'verdict-test', calculationVersion: '1.2.0', pairs: [{ id: 'compressor-a--tool-a', compressorId: 'compressor-a', toolId: 'tool-a', verdict: 'continuous', confidence: 'high', requiredFadLpm: 125, availableFadLpm: 200 }] };
 		const server = createCompatAirServer({ catalog, verdictSnapshot, allowedOrigins: new Set(['https://compatair.fr']) });
 		const result = await new Promise<{ status: number; headers: Record<string, string>; body: string }>((resolve) => {
 			let status = 0; let headers: Record<string, string> = {}; let body = '';
@@ -140,7 +210,7 @@ describe('MCP HTTP boundary helpers', () => {
 		});
 		expect(result.status).toBe(200);
 		expect(result.headers['Access-Control-Allow-Origin']).toBe('*');
-		expect(JSON.parse(result.body)).toMatchObject({ schemaVersion: '1.0.0', verdictVersion: 'verdict-test', calculationVersion: 'calculation-test', compatibility: { verdict: 'continuous' }, detailsUrl: 'https://compatair.fr/calculateur/?outil=tool-a&compresseur=compressor-a', proofUrl: 'https://compatair.fr/graphe-preuve/?compresseur=compressor-a&outil=tool-a' });
+		expect(JSON.parse(result.body)).toMatchObject({ schemaVersion: '1.0.0', verdictVersion: 'verdict-test', calculationVersion: '1.2.0', compatibility: { verdict: 'continuous' }, detailsUrl: 'https://compatair.fr/calculateur/?outil=tool-a&compresseur=compressor-a', proofUrl: 'https://compatair.fr/graphe-preuve/?compresseur=compressor-a&outil=tool-a' });
 		expect(JSON.parse(result.body).sources).toHaveLength(2);
 	});
 
@@ -173,7 +243,7 @@ describe('MCP HTTP boundary helpers', () => {
 			compressors: [{ id: 'compressor-a', slug: 'compressor-a', brand: 'A', model: 'A1', evidence: [] }],
 			tools: [{ id: 'tool-a', slug: 'tool-a', brand: 'B', model: 'B1', label: 'Outil B1', demandModel: 'fixed-flow', evidence: [] }],
 		} as any;
-		const verdictSnapshot = { verdictVersion: 'verdict-test', calculationVersion: 'calculation-test', pairs: [{ id: 'compressor-a--tool-a', compressorId: 'compressor-a', toolId: 'tool-a', verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data' }] };
+		const verdictSnapshot = { verdictVersion: 'verdict-test', calculationVersion: '1.2.0', pairs: [{ id: 'compressor-a--tool-a', compressorId: 'compressor-a', toolId: 'tool-a', verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data' }] };
 		const server = createCompatAirServer({ catalog, verdictSnapshot, allowedOrigins: new Set(['https://compatair.fr']) });
 		const result = await new Promise<{ status: number; body: string }>((resolve) => {
 			let status = 0; let body = '';
@@ -269,7 +339,7 @@ describe('MCP HTTP boundary helpers', () => {
 		mkdirSync(join(release, 'data'), { recursive: true });
 		for (const file of ['mcp-server.mjs', 'mcp-core.mjs', 'demand-aggregates.mjs', 'product-funnel-aggregates.mjs']) copyFileSync(join(process.cwd(), 'server', file), join(release, '_server', file));
 		writeFileSync(join(release, 'data', 'catalog.json'), JSON.stringify({ catalogVersion: 'catalog-test', compressors: [], tools: [] }));
-		writeFileSync(join(release, 'data', 'verdicts.json'), JSON.stringify({ catalogVersion: 'catalog-test', verdictVersion: 'verdict-test', calculationVersion: 'calculation-test', pairs: [] }));
+		writeFileSync(join(release, 'data', 'verdicts.json'), JSON.stringify({ catalogVersion: 'catalog-test', verdictVersion: 'verdict-test', calculationVersion: '1.2.0', pairs: [] }));
 		writeFileSync(join(release, 'data', 'offers.json'), JSON.stringify({ offers: [], snapshotVersion: 'empty' }));
 		symlinkSync(release, current);
 		let port: number;

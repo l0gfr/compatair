@@ -71,9 +71,7 @@ systemctl daemon-reload
 systemctl enable --now compatair-stats.timer
 systemctl start compatair-stats.service
 
-install -m 644 "$project_dir/deploy/apache/compatair.fr.conf.example" /etc/apache2/sites-available/compatair.fr.conf
-apache2ctl configtest
-systemctl reload apache2
+"$script_dir/install-apache-vhost.sh" "$project_dir/deploy/apache/compatair.fr.conf.example"
 
 test -s /var/www/html/compatair-stats/index.html
 stats_status=$(curl --silent --show-error --head --output /dev/null --write-out '%{http_code}' \

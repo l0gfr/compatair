@@ -80,6 +80,17 @@
 	<Location "/events">
 		LimitRequestBody 65536
 	</Location>
+	<LocationMatch "^/go/">
+		Header onsuccess unset Cache-Control
+		Header always unset Cache-Control
+		Header always set Cache-Control "no-store"
+		Header onsuccess unset Referrer-Policy
+		Header always unset Referrer-Policy
+		Header always set Referrer-Policy "no-referrer"
+		Header onsuccess unset X-Robots-Tag
+		Header always unset X-Robots-Tag
+		Header always set X-Robots-Tag "noindex, nofollow"
+	</LocationMatch>
 	<Location "/api/v1/compatibility">
 		# Normalize headers already emitted by the Node service. Without the
 		# explicit unsets, Apache appends a second value and browsers reject the
@@ -98,7 +109,7 @@
 	<LocationMatch "^/(?:_server)(?:/|$)">
 		Require all denied
 	</LocationMatch>
-	<LocationMatch "(?:^|/)\.">
+	<LocationMatch "^(?!/\.well-known/security\.txt$).*\/\.">
 		Require all denied
 	</LocationMatch>
 

@@ -19,6 +19,20 @@ describe('sécurité des liens d’offre', () => {
 		expect(() => assertAllowedOfferUrl(offer, [merchant])).toThrow('Annonceur Awin non autorisé');
 	});
 
+	it('refuse les identifiants annonceur ambigus', () => {
+		const offer = offerSchema.parse({ ...base, url: 'https://www.awin1.com/pclick.php?p=1&m=17547&awinmid=999' });
+		expect(() => assertAllowedOfferUrl(offer, [merchant])).toThrow('Annonceur Awin non autorisé');
+		const duplicated = offerSchema.parse({ ...base, url: 'https://www.awin1.com/pclick.php?p=1&m=17547&m=17547' });
+		expect(() => assertAllowedOfferUrl(duplicated, [merchant])).toThrow('Annonceur Awin non autorisé');
+	});
+
+	it('borne la destination finale des liens profonds Awin au marchand', () => {
+		const allowed = offerSchema.parse({ ...base, url: 'https://www.awin1.com/cread.php?awinmid=17547&awinaffid=42&ued=https%3A%2F%2Fwww.manomano.fr%2Fp%2F42' });
+		expect(assertAllowedOfferUrl(allowed, [merchant])).toBe(true);
+		const rejected = offerSchema.parse({ ...base, url: 'https://www.awin1.com/cread.php?awinmid=17547&awinaffid=42&ued=https%3A%2F%2Funauthorized.example%2F' });
+		expect(() => assertAllowedOfferUrl(rejected, [merchant])).toThrow('Destination Awin non autorisée');
+	});
+
 	it('retire une offre après 48 heures sans renouvellement', () => {
 		const offer = offerSchema.parse({ ...base, url: 'https://www.awin1.com/pclick.php?p=1&a=2&m=17547' });
 		expect(isFreshOffer(offer, new Date('2026-07-15T20:00:00.000Z'))).toBe(true);

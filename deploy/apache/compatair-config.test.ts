@@ -30,7 +30,15 @@ describe('CompatAir Apache CSP', () => {
 
 	it('blocks executable release internals and hidden paths', () => {
 		expect(config).toContain('^/(?:_server)(?:/|$)');
-		expect(config).toContain('(?:^|/)\\.');
+		const hiddenPathPattern = [...config.matchAll(/<LocationMatch "([^"]+)">([\s\S]*?)<\/LocationMatch>/g)]
+			.find(([, pattern, body]) => pattern.includes('well-known/security') && body.includes('Require all denied'))?.[1];
+		expect(hiddenPathPattern).toBeDefined();
+		const hiddenPath = new RegExp(hiddenPathPattern!);
+		expect(hiddenPath.test('/.env')).toBe(true);
+		expect(hiddenPath.test('/nested/.git/config')).toBe(true);
+		expect(hiddenPath.test('/.well-known/anything-else')).toBe(true);
+		expect(hiddenPath.test('/.well-known/security.txt/')).toBe(true);
+		expect(hiddenPath.test('/.well-known/security.txt')).toBe(false);
 		expect(config.match(/Require all denied/g)?.length).toBeGreaterThanOrEqual(2);
 	});
 
@@ -113,6 +121,22 @@ describe('CompatAir Apache CSP', () => {
 			expect(apiLocation).toContain(`Header always unset ${header}`);
 			expect(apiLocation?.indexOf(`Header always unset ${header}`)).toBeLessThan(
 				apiLocation?.indexOf(`Header always set ${header}`) ?? -1,
+			);
+		}
+	});
+
+	it('preserves privacy and freshness headers on affiliate redirects', () => {
+		const affiliateRedirects = config.match(
+			/<LocationMatch "\^\/go\/">([\s\S]*?)<\/LocationMatch>/,
+		)?.[1];
+		expect(affiliateRedirects).toBeDefined();
+		expect(affiliateRedirects).toContain('Header always set Cache-Control "no-store"');
+		expect(affiliateRedirects).toContain('Header always set Referrer-Policy "no-referrer"');
+		expect(affiliateRedirects).toContain('Header always set X-Robots-Tag "noindex, nofollow"');
+		for (const header of ['Cache-Control', 'Referrer-Policy', 'X-Robots-Tag']) {
+			expect(affiliateRedirects).toContain(`Header always unset ${header}`);
+			expect(affiliateRedirects?.indexOf(`Header always unset ${header}`)).toBeLessThan(
+				affiliateRedirects?.indexOf(`Header always set ${header}`) ?? -1,
 			);
 		}
 	});

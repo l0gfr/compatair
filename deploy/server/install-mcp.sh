@@ -35,9 +35,7 @@ visudo -cf /etc/sudoers.d/compatair-mcp-deploy
 systemctl daemon-reload
 systemctl enable compatair-mcp.service
 systemctl restart compatair-mcp.service
-install -m 644 "$project_dir/deploy/apache/compatair.fr.conf.example" /etc/apache2/sites-available/compatair.fr.conf
-apache2ctl configtest
-systemctl reload apache2
+"$script_dir/install-apache-vhost.sh" "$project_dir/deploy/apache/compatair.fr.conf.example"
 curl --fail --silent --show-error --max-time 5 http://127.0.0.1:8787/health
 echo
 echo "CompatAir MCP installed."
