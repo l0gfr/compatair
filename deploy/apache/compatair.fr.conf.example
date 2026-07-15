@@ -155,6 +155,11 @@
 		Header always unset X-Robots-Tag
 		Header always set X-Robots-Tag "noindex"
 	</LocationMatch>
+	<LocationMatch "^/data/release\.json$">
+		Header onsuccess unset Cache-Control
+		Header always unset Cache-Control
+		Header always set Cache-Control "no-store"
+	</LocationMatch>
 	<LocationMatch "^/data/(?:catalog|offers)\.json$">
 		Header onsuccess unset Cache-Control
 		Header always unset Cache-Control

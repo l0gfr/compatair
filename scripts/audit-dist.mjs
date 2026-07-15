@@ -20,7 +20,11 @@ const maximumRuntimeCatalogBytesGzip = 32 * 1024;
 const maximumSearchIndexBytesGzip = 64 * 1024;
 const maximumEditorialProductInternalLinksBeforeWarning = 100;
 const maximumEditorialProductInternalLinks = 120;
-const maximumStaticCompatibilityResults = 30;
+const maximumStaticCompatibilityResultsBySection = new Map([
+	['compresseurs', 8],
+	['outils-pneumatiques', 5],
+	['quel-compresseur-pour', 25],
+]);
 const maximumHtmlArtifactBytes = 64 * 1024 * 1024;
 const maximumTotalArtifactBytes = 96 * 1024 * 1024;
 // Les pages produits réutilisent des cartes de catalogue afin que le temps de build ne croisse pas avec chaque référence.
@@ -238,6 +242,18 @@ else {
 	if (searchIndexBytesGzip > maximumSearchIndexBytesGzip) errors.push(`data/search-index.json: ${Math.ceil(searchIndexBytesGzip / 1024)} Ko gzip, budget ${maximumSearchIndexBytesGzip / 1024} Ko dépassé`);
 }
 
+if (!artifactPaths.has('/data/release.json')) errors.push('data/release.json: preuve de release absente');
+else {
+	try {
+		const release = JSON.parse(await readFile(join(root, '/data/release.json'), 'utf8'));
+		if (release.schemaVersion !== '1.0.0') errors.push('data/release.json: schemaVersion invalide');
+		if (release.gitSha !== 'development' && !/^[0-9a-f]{40}$/.test(release.gitSha ?? '')) errors.push('data/release.json: SHA Git invalide');
+		if (process.env.GITHUB_ACTIONS === 'true' && release.gitSha !== process.env.GITHUB_SHA) errors.push(`data/release.json: SHA ${release.gitSha ?? 'absent'} différent du SHA GitHub ${process.env.GITHUB_SHA ?? 'absent'}`);
+	} catch {
+		errors.push('data/release.json: JSON invalide');
+	}
+}
+
 const csvArtifacts = new Map([
 	['/data/transparency-barometer.csv', ['edition', 'published_at', 'brand', 'status', 'rank', 'sample_size']],
 	['/data/document-quality-observatory.csv', ['published_at', 'metric', 'status', 'value', 'numerator', 'denominator', 'definition']],
@@ -351,9 +367,10 @@ for (const file of htmlFiles) {
 	const isCompatibilityDetail = label.startsWith('compatibilite/');
 	const isGuideArticle = /^guides\/[^/]+\/index\.html$/.test(label) && !['guides/particuliers/index.html', 'guides/professionnels/index.html'].includes(label);
 	const isEditorialProductPage = /^(compresseurs|outils-pneumatiques|quel-compresseur-pour)\/[^/]+\/index\.html$/.test(label);
+	const staticCompatibilityLimit = maximumStaticCompatibilityResultsBySection.get(label.split('/')[0]);
 	for (const match of html.matchAll(/<[^>]*data-static-compatibility-results[^>]*data-result-count="(\d+)"[^>]*>/g)) {
 		const resultCount = Number(match[1]);
-		if (resultCount > maximumStaticCompatibilityResults) errors.push(`${label}: ${resultCount} résultats de compatibilité statiques, plafond ${maximumStaticCompatibilityResults} dépassé`);
+		if (staticCompatibilityLimit !== undefined && resultCount > staticCompatibilityLimit) errors.push(`${label}: ${resultCount} résultats de compatibilité statiques, plafond ${staticCompatibilityLimit} dépassé`);
 	}
 	if (label.startsWith('compresseurs/') && label !== 'compresseurs/index.html') {
 		const brand = decodeXml(html.match(/data-product-brand="([^"]*)"/)?.[1] ?? '');

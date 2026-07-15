@@ -50,6 +50,8 @@ jobs:
         run: pnpm lint:source
 
       - name: Validate source, tests, build and snapshots
+        env:
+          COMPATAIR_RELEASE_SHA: ${{ github.sha }}
         run: pnpm validate:full
 
       - name: Enforce repository append-only baseline
@@ -227,6 +229,7 @@ jobs:
 
       - name: Verify live HTTPS surface
         env:
+          COMPATAIR_EXPECTED_RELEASE_SHA: ${{ github.sha }}
           MCP_ENABLED: ${{ vars.MCP_ENABLED }}
         run: |
           curl_args=(--fail --silent --show-error --retry 5 --retry-delay 3 --retry-all-errors --max-time 20)
@@ -258,6 +261,7 @@ jobs:
           fi
           curl "${curl_args[@]}" https://compatair.fr/data/signatures.json | grep -Fq 'compatair-2026-01'
           curl "${curl_args[@]}" https://compatair.fr/data/signing-keys.json | grep -Fq 'Ed25519'
+          node scripts/verify-live-seo.mjs
           if [[ "$MCP_ENABLED" == "true" ]]; then
             health=$(curl "${curl_args[@]}" https://compatair.fr/mcp-health)
             grep -Fq '"status":"ok"' <<< "$health"
@@ -273,6 +277,7 @@ jobs:
           name: compatair-invariants-${{ github.sha }}
           path: |
             dist/data/evidence-history.json
+            dist/data/release.json
             dist/data/signatures.json
             dist/data/signing-keys.json
             dist/widget/v1.0.0/compatair-widget.js

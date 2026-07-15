@@ -61,6 +61,9 @@ if (!scannerPage.includes('data-compatair-surface="scanner"')) errors.push('src/
 const deployWorkflow = await readFile('.github/workflows/deploy-production.yml', 'utf8');
 if (!deployWorkflow.includes(`grep -Fq 'data-compatair-surface="scanner"'`)) errors.push('.github/workflows/deploy-production.yml: le contrôle du scanner doit utiliser son marqueur stable');
 if (deployWorkflow.includes(`grep -Fq 'Scanner et vérifier'`)) errors.push('.github/workflows/deploy-production.yml: contrôle de production couplé au wording public du scanner');
+if (!deployWorkflow.includes('COMPATAIR_RELEASE_SHA: ${{ github.sha }}')) errors.push('.github/workflows/deploy-production.yml: injection du SHA de release absente');
+if (!deployWorkflow.includes('COMPATAIR_EXPECTED_RELEASE_SHA: ${{ github.sha }}')) errors.push('.github/workflows/deploy-production.yml: SHA attendu absent de la vérification live');
+if (!deployWorkflow.includes('node scripts/verify-live-seo.mjs')) errors.push('.github/workflows/deploy-production.yml: vérification SEO live absente');
 const prePushHook = await readFile('.githooks/pre-push', 'utf8');
 if (!prePushHook.includes('resolve_node_for_major')) errors.push('.githooks/pre-push: résolution automatique du runtime Node manquante');
 if (!prePushHook.includes('pnpm validate:main')) errors.push('.githooks/pre-push: validation principale manquante');

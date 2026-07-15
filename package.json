@@ -28,6 +28,7 @@
     "catalog:add": "node scripts/catalog.mjs add",
     "catalog:history": "node scripts/append-catalog-evidence.mjs",
     "audit:dist": "node scripts/audit-dist.mjs",
+		"seo:verify-live": "node scripts/verify-live-seo.mjs",
     "lint:source": "node scripts/lint-source.mjs",
     "lighthouse": "lhci autorun",
     "lighthouse:production": "lhci autorun --collect.numberOfRuns=2",

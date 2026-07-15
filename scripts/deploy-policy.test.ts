@@ -4,6 +4,8 @@ import { describe, expect, it } from 'vitest';
 const deploy = readFileSync(new URL('./deploy-remote.sh', import.meta.url), 'utf8');
 const rollback = readFileSync(new URL('./rollback-remote.sh', import.meta.url), 'utf8');
 const workflow = readFileSync(new URL('../.github/workflows/deploy-production.yml', import.meta.url), 'utf8');
+const apache = readFileSync(new URL('../deploy/apache/compatair.fr.conf.example', import.meta.url), 'utf8');
+const releaseRoute = readFileSync(new URL('../src/pages/data/release.json.ts', import.meta.url), 'utf8');
 
 describe('release boundary policy', () => {
 	it('pins deployment and rollback to the dedicated CompatAir root', () => {
@@ -31,5 +33,15 @@ describe('release boundary policy', () => {
 		expect(deploy.indexOf('if ! restart_mcp_and_wait')).toBeLessThan(
 			deploy.lastIndexOf(`printf '%s\\n' "$release_id" > "$deployed_sha"`),
 		);
+	});
+
+	it('publishes and verifies the exact GitHub release SHA', () => {
+		expect(workflow).toContain('COMPATAIR_RELEASE_SHA: ${{ github.sha }}');
+		expect(workflow).toContain('COMPATAIR_EXPECTED_RELEASE_SHA: ${{ github.sha }}');
+		expect(workflow).toContain('node scripts/verify-live-seo.mjs');
+		expect(workflow).toContain('dist/data/release.json');
+		expect(releaseRoute).toContain("'Cache-Control': 'no-store'");
+		expect(apache).toContain('<LocationMatch "^/data/release\\.json$">');
+		expect(apache).toContain('Header always set Cache-Control "no-store"');
 	});
 });
