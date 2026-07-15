@@ -75,7 +75,7 @@ const articleJsonLd = {
 								<h3>Compresseurs déjà confirmés pour un usage continu</h3>
 								<div class="link-cards">
 									{compatibleCompressors.map(({ compressor, result }) => (
-										<a href={`/compatibilite/${compressor.slug}--${relatedTool.slug}/`}>
+										<a href={`/calculateur/?outil=${encodeURIComponent(relatedTool.id)}&compresseur=${encodeURIComponent(compressor.id)}`}>
 											<strong>{compressor.brand} {compressor.model}</strong>
 											<span>{Math.round(result.availableFadLpm!)} L/min restitués documentés à la pression de l’outil</span>
 										</a>

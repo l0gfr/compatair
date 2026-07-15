@@ -96,7 +96,7 @@ describe('MCP HTTP boundary helpers', () => {
 		});
 		expect(result.status).toBe(200);
 		expect(result.headers['Access-Control-Allow-Origin']).toBe('*');
-		expect(JSON.parse(result.body)).toMatchObject({ schemaVersion: '1.0.0', verdictVersion: 'verdict-test', calculationVersion: 'calculation-test', compatibility: { verdict: 'continuous' }, detailsUrl: 'https://compatair.fr/compatibilite/compressor-a--tool-a/' });
+		expect(JSON.parse(result.body)).toMatchObject({ schemaVersion: '1.0.0', verdictVersion: 'verdict-test', calculationVersion: 'calculation-test', compatibility: { verdict: 'continuous' }, detailsUrl: 'https://compatair.fr/calculateur/?outil=tool-a&compresseur=compressor-a', proofUrl: 'https://compatair.fr/graphe-preuve/?compresseur=compressor-a&outil=tool-a' });
 		expect(JSON.parse(result.body).sources).toHaveLength(2);
 	});
 

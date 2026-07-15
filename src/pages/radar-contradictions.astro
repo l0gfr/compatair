@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { contradictionRadar as radar } from '../data/contradiction-radar';
+import { contradictionChannels, type ContradictionChannel } from '../domain/contradiction-radar';
+
+const channelLabels: Record<ContradictionChannel, string> = {
+	manual: 'Notice ou catalogue technique',
+	manufacturer: 'Fiche fabricant',
+	merchant: 'Distributeur',
+	measured: 'Mesure terrain',
+};
+const formatDate = (date: string) => new Intl.DateTimeFormat('fr-FR', { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
+const productHref = (record: typeof radar.records[number]) => record.product.type === 'compressor' ? `/compresseurs/${record.product.slug}/` : `/outils-pneumatiques/${record.product.slug}/`;
+const productOptions = [...new Map(radar.records.map((record) => [record.product.id, `${record.product.brand} ${record.product.model}`])).entries()];
+---
+<BaseLayout title="Radar des contradictions | CompatAir" description="Comparez séparément les valeurs issues des notices, fiches fabricant, distributeurs et mesures terrain, avec une décision documentaire explicite." breadcrumbs={[{ name: 'Radar des contradictions', path: '/radar-contradictions/' }]}>
+	<section class="page-hero contradiction-radar-hero"><div class="container"><p class="eyebrow">Aucune moyenne cachée</p><h1>Radar des contradictions</h1><p class="lead">Une notice, une fiche fabricant, un distributeur et une mesure terrain peuvent publier des valeurs différentes. Le radar conserve chaque affirmation dans sa propre colonne, avec son document, son emplacement et la décision prise par CompatAir.</p><p class="observatory-edition">Édition du {formatDate(radar.publishedAt)} · {radar.summary.totalCount} contradictions · <a href="/data/contradiction-radar.json">snapshot JSON versionné</a></p></div></section>
+
+	<section class="section radar-policy"><div class="container"><div class="split-head"><div><p class="eyebrow">Règle de publication</p><h2>Comparer avant de décider</h2></div><p>Une colonne vide reste vide. Une valeur écartée reste visible. Une publication suspendue n’est pas remplacée par une estimation.</p></div><ul>{radar.policy.map((rule) => <li>{rule}</li>)}</ul></div></section>
+
+	<section class="section radar-register"><div class="container" data-contradiction-radar>
+		<div class="radar-toolbar"><label for="radar-product">Référence affichée</label><select id="radar-product" data-radar-filter><option value="all">Toutes les contradictions</option>{productOptions.map(([id, label]) => <option value={id}>{label}</option>)}</select><p role="status" data-radar-count>{radar.records.length} contradiction{radar.records.length > 1 ? 's' : ''} affichée{radar.records.length > 1 ? 's' : ''}</p></div>
+		<div class="radar-list">{radar.records.map((record) => {
+			const selectedClaim = record.selectedClaim;
+			return <article class="radar-record" data-radar-record data-product-id={record.product.id}>
+				<header><div><p class="guide-meta">{record.field.label}{record.field.unit ? ` · ${record.field.unit}` : ''}</p><h2>{record.subject}</h2><p><a href={productHref(record)}>{record.product.brand} {record.product.model}</a> · constatée le {formatDate(record.observedAt)}</p></div><span class:list={['radar-status', record.status === 'open' && 'is-open']}>{record.status === 'answered' ? 'Décision publiée' : 'Arbitrage ouvert'}</span></header>
+				<p class="radar-contradiction">{record.contradiction}</p>
+				<div class="radar-channels">{contradictionChannels.map((channel) => {
+					const claims = record.claims.filter((claim) => claim.channel === channel);
+					return <section class:list={['radar-channel', !claims.length && 'is-empty']}><h3>{channelLabels[channel]}</h3>{claims.length ? <ol>{claims.map((claim) => <li class:list={{ 'is-selected': selectedClaim?.id === claim.id }}><strong>{claim.value}</strong><span>{claim.locator}</span><a href={claim.evidence.sourceUrl} rel="nofollow noopener" target="_blank">{claim.evidence.sourceLabel}</a><small>Consultée le {formatDate(claim.evidence.retrievedAt)} · fiabilité {claim.evidence.confidence}</small>{selectedClaim?.id === claim.id && <em>Valeur retenue</em>}</li>)}</ol> : <p>Aucune valeur versée dans ce canal.</p>}</section>;
+				})}</div>
+				<div class:list={['radar-decision', record.decision.outcome === 'withhold' && 'is-withheld']}><strong>{record.decision.outcome === 'retain_claim' ? `Valeur publiée : ${selectedClaim?.value}` : record.decision.outcome === 'withhold' ? 'Publication suspendue' : 'Décision en attente'}</strong><p>{record.response ?? 'Aucun arbitrage publié à ce stade.'}</p></div>
+			</article>;
+		})}</div>
+	</div></section>
+	<section class="section barometer-method"><div class="container"><p class="eyebrow">Du conflit au verdict</p><h2>Voir où une valeur intervient réellement</h2><p>Le radar décrit le désaccord documentaire. Le <a href="/graphe-preuve/">graphe de preuve</a> montre ensuite si le champ retenu alimente un calcul et permet de tester une correction sans modifier le catalogue publié.</p></div></section>
+	<script>
+		const radar = document.querySelector<HTMLElement>('[data-contradiction-radar]');
+		const filter = radar?.querySelector<HTMLSelectElement>('[data-radar-filter]');
+		const count = radar?.querySelector<HTMLElement>('[data-radar-count]');
+		filter?.addEventListener('change', () => {
+			let visible = 0;
+			for (const record of radar?.querySelectorAll<HTMLElement>('[data-radar-record]') ?? []) {
+				record.hidden = filter.value !== 'all' && record.dataset.productId !== filter.value;
+				if (!record.hidden) visible += 1;
+			}
+			if (count) count.textContent = `${visible} contradiction${visible > 1 ? 's' : ''} affichée${visible > 1 ? 's' : ''}`;
+		});
+	</script>
+</BaseLayout>

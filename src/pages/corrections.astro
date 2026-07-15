@@ -1,5 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { documentQualityLedger } from '../data/document-quality-ledger';
+const correctionsByDate = new Map<string, typeof documentQualityLedger.corrections>();
+for (const correction of documentQualityLedger.corrections) correctionsByDate.set(correction.resolvedAt, [...(correctionsByDate.get(correction.resolvedAt) ?? []), correction]);
+const formatDate = (date: string) => new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
 ---
 <BaseLayout title="Journal public des corrections | CompatAir" description="Corrections de données, de calcul et de présentation publiées par CompatAir, avec leur portée et leur date." breadcrumbs={[{ name: 'Journal des corrections', path: '/corrections/' }]}>
 	<article class="container content legal-content">
@@ -7,17 +11,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		<h1>Journal public des corrections</h1>
 		<p class="lead">Ce journal recense les erreurs publiques corrigées lorsqu’elles peuvent modifier la compréhension du catalogue, d’un résultat ou des engagements de CompatAir. Les versions successives des sources sont conservées séparément dans l’<a href="/preuves/">historique public des documents vérifiés</a>.</p>
 
-		<h2>14 juillet 2026</h2>
-		<ul>
-			<li><strong>Compteur des comparatifs.</strong> La mention fixe « 24 références documentées » a été remplacée par un compteur actualisé automatiquement lors de la publication. Le catalogue contient alors 40 compresseurs.</li>
-			<li><strong>Poids des pages.</strong> Une ancienne promesse de légèreté a été retirée parce que le calculateur la dépassait. Un contrôle automatique empêche désormais la publication d’une page dont les scripts sont trop lourds.</li>
-			<li><strong>Cohérence des résultats.</strong> Une même configuration produit désormais le même résultat sur les fiches produit, les pages de compatibilité et le calculateur. Le temps de fonctionnement publié pour le compresseur est donc pris en compte de la même façon partout.</li>
-			<li><strong>Dates de vérification.</strong> Les informations techniques des fiches et des comparaisons proviennent maintenant de la date la plus récente des sources liées, et non d’une date recopiée dans le modèle de page.</li>
-			<li><strong>Titres de pages.</strong> Le contrôle de publication limite les titres destinés aux moteurs de recherche à 60 caractères sans modifier le titre éditorial visible dans la page.</li>
-		</ul>
+		{[...correctionsByDate.entries()].sort(([a], [b]) => b.localeCompare(a)).map(([date, corrections]) => <><h2>{formatDate(date)}</h2><ul>{corrections.map((correction) => <li><strong>{correction.title}.</strong> {correction.summary} {correction.impact}</li>)}</ul></>)}
 
 		<h2>Règle de publication</h2>
 		<p>Une correction est ajoutée ici lorsqu’elle change une valeur, un résultat, une méthode, une promesse mesurable ou l’interprétation d’une donnée. Une simple correction typographique sans effet de sens peut rester dans l’historique technique du site.</p>
-		<p>Pour proposer une correction, utilisez la <a href="/contact/">page de signalement</a> et joignez la référence exacte ainsi que la source concernée.</p>
+		<p>Le délai entre ouverture et publication est suivi dans l’<a href="/observatoire-qualite-documentaire/">Observatoire de la qualité documentaire</a>. Pour proposer une correction, utilisez la <a href="/contact/">page de signalement</a> et joignez la référence exacte ainsi que la source concernée.</p>
 	</article>
 </BaseLayout>

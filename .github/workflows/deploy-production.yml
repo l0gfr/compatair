@@ -228,6 +228,10 @@ jobs:
           curl "${curl_args[@]}" https://compatair.fr/data/catalog.json | grep -Fq 'catalogVersion'
           curl "${curl_args[@]}" https://compatair.fr/data/runtime-catalog.json | grep -Fq 'catalogVersion'
           curl "${curl_args[@]}" https://compatair.fr/data/verdicts.json | grep -Fq 'verdictVersion'
+          curl "${curl_args[@]}" https://compatair.fr/data/document-quality-observatory.json | grep -Fq 'observatoryVersion'
+          curl "${curl_args[@]}" https://compatair.fr/data/contradiction-radar.json | grep -Fq 'radarVersion'
+          curl "${curl_args[@]}" https://compatair.fr/radar-contradictions/ | grep -Fq 'Radar des contradictions'
+          curl "${curl_args[@]}" https://compatair.fr/graphe-preuve/ | grep -Fq 'data-proof-graph'
           curl "${curl_args[@]}" https://compatair.fr/data/signatures.json | grep -Fq 'compatair-2026-01'
           curl "${curl_args[@]}" https://compatair.fr/data/signing-keys.json | grep -Fq 'Ed25519'
           if [[ "$MCP_ENABLED" == "true" ]]; then

@@ -14,6 +14,9 @@ const maximumInitialPageScriptBytesGzip = 50 * 1024;
 const maximumPassportInitialScriptBytesGzip = 45 * 1024;
 const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
 const maximumRuntimeCatalogBytesGzip = 32 * 1024;
+const maximumSearchIndexBytesGzip = 64 * 1024;
+const maximumHtmlArtifactBytes = 64 * 1024 * 1024;
+const maximumTotalArtifactBytes = 96 * 1024 * 1024;
 // Les pages produits réutilisent des cartes de catalogue afin que le temps de build ne croisse pas avec chaque référence.
 const maximumSocialImageCount = 80;
 const forbiddenPublicWording = [
@@ -40,6 +43,9 @@ let calculatorOnDemandScriptBudget = { bytes: 0, modules: 0 };
 let passportInitialScriptBudget = { bytes: 0, modules: 0 };
 let passportOnDemandScriptBudget = { bytes: 0, modules: 0 };
 let runtimeCatalogBytesGzip = 0;
+let searchIndexBytesGzip = 0;
+let totalArtifactBytes = 0;
+let htmlArtifactBytes = 0;
 let fixedFlowCompatibilityPairs = 0;
 let conclusiveCompatibilityPairs = 0;
 let publishedCatalogVersion = '';
@@ -55,6 +61,8 @@ async function walk(directory) {
 		else if (!info.isFile()) errors.push(`${label}: type de fichier spécial interdit dans l’artifact`);
 		else {
 			artifactPaths.add(`/${label}`);
+			totalArtifactBytes += info.size;
+			if (name.endsWith('.html')) htmlArtifactBytes += info.size;
 			if (name.endsWith('.map')) errors.push(`${label}: source map publique interdite`);
 			else if (name.endsWith('.html')) htmlFiles.push(file);
 		}
@@ -149,6 +157,10 @@ const sitePaths = new Set(htmlFiles.map((file) => {
 	const rel = relative(root, file);
 	return rel === 'index.html' ? '/' : `/${rel.replace(/index\.html$/, '')}`;
 }));
+const generatedCompatibilityPages = [...sitePaths].filter((path) => path.startsWith('/compatibilite/'));
+if (generatedCompatibilityPages.length > 0) errors.push(`compatibilité: ${generatedCompatibilityPages.length} pages de couples générées, génération quadratique interdite`);
+if (htmlArtifactBytes > maximumHtmlArtifactBytes) errors.push(`artifact: HTML ${Math.ceil(htmlArtifactBytes / 1024 / 1024)} Mo, budget ${maximumHtmlArtifactBytes / 1024 / 1024} Mo dépassé`);
+if (totalArtifactBytes > maximumTotalArtifactBytes) errors.push(`artifact: poids total ${Math.ceil(totalArtifactBytes / 1024 / 1024)} Mo, budget ${maximumTotalArtifactBytes / 1024 / 1024} Mo dépassé`);
 
 let verifiedCompatibilityPairs = 0;
 if (!artifactPaths.has('/data/catalog.json') || !artifactPaths.has('/data/verdicts.json')) errors.push('data: catalogue ou verdicts absents pour contrôler les URL de compatibilité');
@@ -162,10 +174,6 @@ else {
 	for (const compressor of catalog.compressors ?? []) for (const tool of catalog.tools ?? []) {
 		const pair = verdictMap.get(`${compressor.id}--${tool.id}`);
 		if (tool.demandModel === 'fixed-flow' && !pair) errors.push(`verdicts: couple à débit fixe absent ${compressor.id}--${tool.id}`);
-		const verdict = pair?.verdict ?? 'insufficient_data';
-		const detailsPath = `/compatibilite/${compressor.slug}--${tool.slug}/`;
-		if (verdict !== 'insufficient_data' && !sitePaths.has(detailsPath)) errors.push(`verdicts: page de détail absente ${detailsPath}`);
-		if (verdict === 'insufficient_data' && sitePaths.has(detailsPath)) errors.push(`verdicts: page de détail indue pour données insuffisantes ${detailsPath}`);
 		verifiedCompatibilityPairs += 1;
 	}
 }
@@ -179,6 +187,15 @@ else {
 	if (runtimeCatalogBytesGzip > maximumRuntimeCatalogBytesGzip) errors.push(`data/runtime-catalog.json: ${Math.ceil(runtimeCatalogBytesGzip / 1024)} Ko gzip, budget ${maximumRuntimeCatalogBytesGzip / 1024} Ko dépassé`);
 }
 
+if (!artifactPaths.has('/data/search-index.json')) errors.push('data: index de recherche externe absent');
+else {
+	const searchIndexBytes = await readFile(join(root, '/data/search-index.json'));
+	const searchIndex = JSON.parse(searchIndexBytes);
+	searchIndexBytesGzip = gzipSync(searchIndexBytes).byteLength;
+	if (!Array.isArray(searchIndex) || searchIndex.some((item) => !item.title || !item.type || !item.url || typeof item.keywords !== 'string')) errors.push('data/search-index.json: structure invalide');
+	if (searchIndexBytesGzip > maximumSearchIndexBytesGzip) errors.push(`data/search-index.json: ${Math.ceil(searchIndexBytesGzip / 1024)} Ko gzip, budget ${maximumSearchIndexBytesGzip / 1024} Ko dépassé`);
+}
+
 if (!artifactPaths.has('/data/transparency-barometer.json') || !artifactPaths.has('/barometre-transparence/index.html')) errors.push('baromètre: snapshot ou page rendue absent');
 else {
 	const snapshot = JSON.parse(await readFile(join(root, '/data/transparency-barometer.json'), 'utf8'));
@@ -190,6 +207,44 @@ else {
 		if (brand.status === 'official' && !html.includes(`<span class="barometer-rank">#${brand.rank}</span>`)) errors.push(`baromètre: rang officiel rendu absent pour ${brand.brand}`);
 		if (brand.status !== 'official' && !html.includes(`<span class="barometer-rank">Provisoire</span>`)) errors.push(`baromètre: statut provisoire rendu absent pour ${brand.brand}`);
 	}
+}
+
+if (!artifactPaths.has('/data/document-quality-observatory.json') || !artifactPaths.has('/observatoire-qualite-documentaire/index.html')) errors.push('observatoire documentaire: snapshot ou page rendue absent');
+else {
+	const snapshot = JSON.parse(await readFile(join(root, '/data/document-quality-observatory.json'), 'utf8'));
+	const html = await readFile(join(root, '/observatoire-qualite-documentaire/index.html'), 'utf8');
+	const { correctionLeadTime, multiPressureFad, referenceStability, contradictionResponses } = snapshot.metrics ?? {};
+	if (!correctionLeadTime || !multiPressureFad || !referenceStability || !contradictionResponses) errors.push('observatoire documentaire: quatre métriques obligatoires absentes');
+	else {
+		if ((correctionLeadTime.status === 'insufficient_data') !== html.includes('Non mesurable')) errors.push('observatoire documentaire: état du délai de correction incohérent entre le JSON et la page');
+		if (!html.includes(`${multiPressureFad.availableCount} compresseurs sur ${multiPressureFad.eligibleCount}`)) errors.push('observatoire documentaire: dénominateur FAD absent du rendu');
+		if (!html.includes(`${referenceStability.monitoredCount} MPN sous surveillance`)) errors.push('observatoire documentaire: périmètre de stabilité absent du rendu');
+		if (!html.includes(`${contradictionResponses.answeredCount} réponses publiées sur ${contradictionResponses.totalCount}`)) errors.push('observatoire documentaire: taux de réponse absent du rendu');
+	}
+}
+
+if (!artifactPaths.has('/data/contradiction-radar.json') || !artifactPaths.has('/radar-contradictions/index.html')) errors.push('radar des contradictions: snapshot ou page rendue absent');
+else {
+	const snapshot = JSON.parse(await readFile(join(root, '/data/contradiction-radar.json'), 'utf8'));
+	const html = await readFile(join(root, '/radar-contradictions/index.html'), 'utf8');
+	const expectedChannels = ['manual', 'manufacturer', 'merchant', 'measured'];
+	if (JSON.stringify(snapshot.channels) !== JSON.stringify(expectedChannels)) errors.push('radar des contradictions: quatre canaux obligatoires absents ou réordonnés');
+	if (snapshot.summary?.totalCount !== snapshot.records?.length) errors.push('radar des contradictions: résumé incohérent');
+	if (!html.includes('Aucune valeur versée dans ce canal.')) errors.push('radar des contradictions: état de canal vide absent du rendu');
+	for (const record of snapshot.records ?? []) {
+		if (!html.includes(record.subject)) errors.push(`radar des contradictions: entrée absente du rendu ${record.id}`);
+		if ((record.claims?.length ?? 0) < 2) errors.push(`radar des contradictions: moins de deux affirmations ${record.id}`);
+		for (const claim of record.claims ?? []) if (!html.includes(claim.value) || claim.evidence?.id !== claim.evidenceId) errors.push(`radar des contradictions: affirmation ou preuve incohérente ${record.id}/${claim.id}`);
+		if (record.decision?.outcome === 'retain_claim' && !record.claims.some((claim) => claim.id === record.decision.selectedClaimId)) errors.push(`radar des contradictions: décision sans affirmation ${record.id}`);
+		if (record.decision?.outcome !== 'retain_claim' && record.decision?.selectedClaimId !== null) errors.push(`radar des contradictions: fusion silencieuse possible ${record.id}`);
+	}
+}
+
+if (!artifactPaths.has('/graphe-preuve/index.html')) errors.push('graphe de preuve: page rendue absente');
+else {
+	const html = await readFile(join(root, '/graphe-preuve/index.html'), 'utf8');
+	for (const marker of ['data-proof-graph', 'data-graph-layer="verdict"', 'data-graph-layer="calculation"', 'data-graph-layer="field"', 'data-graph-layer="evidence"', 'data-graph-layer="version"', 'data-simulation-form']) if (!html.includes(marker)) errors.push(`graphe de preuve: marqueur absent ${marker}`);
+	if (!html.includes('/data/catalog.json') || !html.includes('/data/verdicts.json')) errors.push('graphe de preuve: snapshots publics non reliés');
 }
 
 for (const file of htmlFiles) {
@@ -206,6 +261,8 @@ for (const file of htmlFiles) {
 	const isCompatibilityDetail = label.startsWith('compatibilite/');
 	const isGuideArticle = /^guides\/[^/]+\/index\.html$/.test(label);
 	const isEditorialProductPage = /^(compresseurs|outils-pneumatiques|quel-compresseur-pour)\/[^/]+\/index\.html$/.test(label);
+	if (html.includes('data-search-index=')) errors.push(`${label}: index de recherche dupliqué dans le HTML`);
+	if (html.includes('href="/compatibilite/')) errors.push(`${label}: lien vers une page de couple statique interdite`);
 	if (html.includes('href="/gouvernance-editoriale/"')) errors.push(`${label}: la gouvernance éditoriale masquée ne doit pas être liée publiquement`);
 	for (const wording of forbiddenPublicWording) if (html.includes(wording)) errors.push(`${label}: formulation interne interdite « ${wording} »`);
 	for (const href of glossaryLinkRequirements.get(label) ?? []) if (!html.includes(`href="${href}"`)) errors.push(`${label}: lien de glossaire requis absent ${href}`);
@@ -311,4 +368,4 @@ if (errors.length) {
 	process.exit(1);
 }
 const conclusiveCoverage = fixedFlowCompatibilityPairs ? (conclusiveCompatibilityPairs / fixedFlowCompatibilityPairs * 100).toFixed(1).replace('.', ',') : '0,0';
-console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, ${verifiedCompatibilityPairs} couples sans URL de détail invalide, couverture conclusive ${conclusiveCoverage} % (${conclusiveCompatibilityPairs}/${fixedFlowCompatibilityPairs} couples à débit fixe), ${socialImageCount} cartes sociales et titres ≤ ${maximumDocumentTitleLength} caractères. JavaScript initial ≤ ${maximumInitialPageScriptBytesGzip / 1024} Ko gzip (maximum ${Math.ceil(largestInitialPageScriptBudget.bytes / 1024)} Ko sur ${largestInitialPageScriptBudget.label}, Passeport ${Math.ceil(passportInitialScriptBudget.bytes / 1024)} Ko sous son budget de ${maximumPassportInitialScriptBytesGzip / 1024} Ko) ; total à la demande ≤ ${maximumOnDemandPageScriptBytesGzip / 1024} Ko (Calculateur ${Math.ceil(calculatorOnDemandScriptBudget.bytes / 1024)} Ko, Passeport ${Math.ceil(passportOnDemandScriptBudget.bytes / 1024)} Ko, maximum global ${Math.ceil(largestOnDemandPageScriptBudget.bytes / 1024)} Ko sur ${largestOnDemandPageScriptBudget.label}) ; catalogue d’exécution ${Math.ceil(runtimeCatalogBytesGzip / 1024)} Ko sous son budget de ${maximumRuntimeCatalogBytesGzip / 1024} Ko. Widget immuable et SRI vérifiés.`);
+console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, ${verifiedCompatibilityPairs} couples conservés dans le snapshot sans page HTML quadratique, couverture conclusive ${conclusiveCoverage} % (${conclusiveCompatibilityPairs}/${fixedFlowCompatibilityPairs} couples à débit fixe), ${socialImageCount} cartes sociales et titres ≤ ${maximumDocumentTitleLength} caractères. Artifact ${Math.ceil(totalArtifactBytes / 1024 / 1024)} Mo dont ${Math.ceil(htmlArtifactBytes / 1024 / 1024)} Mo de HTML, sous les budgets de ${maximumTotalArtifactBytes / 1024 / 1024} et ${maximumHtmlArtifactBytes / 1024 / 1024} Mo ; index de recherche ${Math.ceil(searchIndexBytesGzip / 1024)} Ko gzip. JavaScript initial ≤ ${maximumInitialPageScriptBytesGzip / 1024} Ko gzip (maximum ${Math.ceil(largestInitialPageScriptBudget.bytes / 1024)} Ko sur ${largestInitialPageScriptBudget.label}, Passeport ${Math.ceil(passportInitialScriptBudget.bytes / 1024)} Ko sous son budget de ${maximumPassportInitialScriptBytesGzip / 1024} Ko) ; total à la demande ≤ ${maximumOnDemandPageScriptBytesGzip / 1024} Ko (Calculateur ${Math.ceil(calculatorOnDemandScriptBudget.bytes / 1024)} Ko, Passeport ${Math.ceil(passportOnDemandScriptBudget.bytes / 1024)} Ko, maximum global ${Math.ceil(largestOnDemandPageScriptBudget.bytes / 1024)} Ko sur ${largestOnDemandPageScriptBudget.label}) ; catalogue d’exécution ${Math.ceil(runtimeCatalogBytesGzip / 1024)} Ko sous son budget de ${maximumRuntimeCatalogBytesGzip / 1024} Ko. Widget immuable et SRI vérifiés.`);

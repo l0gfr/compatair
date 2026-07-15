@@ -329,13 +329,15 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		if (reportDate) reportDate.textContent = new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeStyle: 'short' }).format(new Date());
 	}
 
-	function renderResultCard(compressor: (typeof compressors)[number], result: SizingResult) {
+	function renderResultCard(compressor: (typeof compressors)[number], result: SizingResult, proofToolId?: string) {
 		const article = document.createElement('article'); article.className = `result-card verdict-${result.verdict}`; article.dataset.verdict = result.verdict;
 		const head = document.createElement('div'); head.className = 'result-card-head';
 		const title = document.createElement('h4'); const link = document.createElement('a'); link.href = `/compresseurs/${compressor.slug}/`; link.textContent = `${compressor.brand} ${compressor.model}`; title.append(link);
 		const badge = document.createElement('span'); badge.className = 'verdict-badge'; badge.textContent = resultLabel(result); head.append(title, badge);
 		const detail = document.createElement('p'); detail.textContent = result.verdict === 'insufficient_data' ? `Débit réellement restitué non vérifiable à ${result.requiredPressureBar} bar · fiabilité des données ${compressor.confidence}.` : `${interpolateFad(compressor, result.requiredPressureBar)?.toFixed(0) ?? 'Débit inconnu'} L/min documentés · cuve ${compressor.tankLiters} L · fiabilité des données ${compressor.confidence}.`;
-		article.append(head, detail); return article;
+		article.append(head, detail);
+		if (proofToolId) { const proofLink = document.createElement('a'); proofLink.className = 'result-proof-link'; proofLink.href = `/graphe-preuve/?compresseur=${encodeURIComponent(compressor.id)}&outil=${encodeURIComponent(proofToolId)}`; proofLink.textContent = 'Remonter aux preuves'; article.append(proofLink); }
+		return article;
 	}
 
 	function setResultFilter(filter: keyof typeof labels | 'all') {
@@ -346,7 +348,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		const empty = root?.querySelector<HTMLElement>('[data-filter-empty]'); if (empty) empty.hidden = visible > 0;
 	}
 
-	function renderCandidateResults(candidates: Candidate[]) {
+	function renderCandidateResults(candidates: Candidate[], proofToolId?: string) {
 		if (!list || !priorityList) return;
 		const counts: Record<keyof typeof labels, number> = { continuous: 0, intermittent: 0, incompatible: 0, insufficient_data: 0 };
 		for (const candidate of candidates) counts[candidate.result.verdict] += 1;
@@ -354,9 +356,9 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		const coverage = root?.querySelector<HTMLElement>('[data-result-coverage]');
 		if (coverage) coverage.textContent = `${counts.continuous} en continu · ${counts.intermittent} par intermittence · ${counts.insufficient_data} en données insuffisantes · ${counts.incompatible} incompatibles.`;
 		const priority = candidates.filter(({ result }) => result.verdict === 'continuous' || result.verdict === 'intermittent').slice(0, 3);
-		if (priority.length) priorityList.replaceChildren(...priority.map(({ compressor, result }) => renderResultCard(compressor, result)));
+		if (priority.length) priorityList.replaceChildren(...priority.map(({ compressor, result }) => renderResultCard(compressor, result, proofToolId)));
 		else { const message = document.createElement('p'); message.className = 'decision-empty'; message.textContent = 'Aucun compresseur actuellement étudié ne peut être recommandé pour cette configuration. Une information manquante n’est jamais transformée en recommandation.'; priorityList.replaceChildren(message); }
-		list.replaceChildren(...candidates.map(({ compressor, result }) => renderResultCard(compressor, result)));
+		list.replaceChildren(...candidates.map(({ compressor, result }) => renderResultCard(compressor, result, proofToolId)));
 		setResultFilter(currentFilter);
 	}
 
@@ -467,7 +469,8 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 				|| Number(b.marginCovered) - Number(a.marginCovered)
 				|| confidenceRank[a.compressor.confidence] - confidenceRank[b.compressor.confidence]
 				|| Math.abs((a.availableFadLpm ?? Number.POSITIVE_INFINITY) - base.recommendedFadLpm) - Math.abs((b.availableFadLpm ?? Number.POSITIVE_INFINITY) - base.recommendedFadLpm));
-			currentFilter = 'all'; renderCandidateResults(candidates); lastSummary = buildSummary(config, result, candidates);
+			const proofToolId = config.demands.length === 1 && config.demands[0].model === 'fixed-flow' ? config.demands[0].id : undefined;
+			currentFilter = 'all'; renderCandidateResults(candidates, proofToolId); lastSummary = buildSummary(config, result, candidates);
 			const encodedConfig = encodePassportConfiguration(config);
 			window.history.replaceState(null, '', `${window.location.pathname}#config=${encodedConfig}`);
 			const envelope = await createPassportEnvelope(config, compressors, tools, CATALOG_VERIFIED_AT);

@@ -65,6 +65,8 @@ jobs:
             dist/data/verdicts.json
             dist/data/evidence-history.json
             dist/data/transparency-barometer.json
+            dist/data/document-quality-observatory.json
+            dist/data/contradiction-radar.json
             catalog-diff.json
             offers-diff.json
             verdicts-diff.json

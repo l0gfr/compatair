@@ -1,0 +1,200 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { compressors, tools } from '../data/catalog';
+
+const fixedFlowTools = tools.filter((tool) => tool.demandModel === 'fixed-flow');
+const defaultCompressorId = compressors.some((item) => item.id === 'einhell-te-ac-430-90-10') ? 'einhell-te-ac-430-90-10' : compressors[0].id;
+const defaultToolId = fixedFlowTools.some((item) => item.id === 'einhell-tc-pw-340') ? 'einhell-tc-pw-340' : fixedFlowTools[0].id;
+const layers = [
+	{ id: 'verdict', label: 'Verdict' },
+	{ id: 'calculation', label: 'Calculs' },
+	{ id: 'field', label: 'Champs' },
+	{ id: 'evidence', label: 'Documents' },
+	{ id: 'version', label: 'Versions' },
+] as const;
+---
+<BaseLayout title="Graphe de preuve interactif | CompatAir" description="Remontez d’un verdict CompatAir vers ses calculs, champs, documents et versions, puis simulez une correction sans modifier les données publiées." breadcrumbs={[{ name: 'Graphe de preuve', path: '/graphe-preuve/' }]}>
+	<section class="page-hero proof-graph-hero"><div class="container"><p class="eyebrow">Du verdict jusqu’au document</p><h1>Graphe de preuve interactif</h1><p class="lead">Choisissez un couple. Le graphe relie le verdict publié aux calculs, aux champs utilisés, aux documents qui les soutiennent et aux versions exactes. La simulation crée une copie locale éphémère&nbsp;: elle ne corrige ni le catalogue ni le verdict officiel.</p></div></section>
+
+	<section class="section proof-graph-section"><div class="container" data-proof-graph data-catalog-source="/data/catalog.json" data-verdict-source="/data/verdicts.json" data-default-compressor={defaultCompressorId} data-default-tool={defaultToolId}>
+		<form class="proof-graph-picker" data-graph-picker>
+			<div><label for="proof-compressor">Compresseur</label><select id="proof-compressor" name="compresseur">{compressors.map((compressor) => <option value={compressor.id} selected={compressor.id === defaultCompressorId}>{compressor.brand} {compressor.model}</option>)}</select></div>
+			<div><label for="proof-tool">Outil à débit documenté</label><select id="proof-tool" name="outil">{fixedFlowTools.map((tool) => <option value={tool.id} selected={tool.id === defaultToolId}>{tool.label}</option>)}</select></div>
+			<button class="button primary" type="submit">Tracer le verdict</button>
+		</form>
+
+		<p class="proof-graph-status" role="status" data-graph-status>Chargement du snapshot publié…</p>
+		<div class="proof-verdict-summary" data-verdict-summary hidden></div>
+		<div class="proof-graph-canvas" aria-label="Chaîne de preuve du verdict" data-graph-canvas hidden>
+			{layers.map((layer, index) => <section class="proof-layer" data-graph-layer={layer.id}><header><span>{String(index + 1).padStart(2, '0')}</span><h2>{layer.label}</h2></header><div data-layer-nodes></div></section>)}
+		</div>
+		<aside class="proof-node-detail" data-node-detail hidden aria-live="polite"></aside>
+
+		<section class="proof-simulation" data-proof-simulation hidden>
+			<div class="split-head"><div><p class="eyebrow">Bac à sable local</p><h2>Simuler une correction</h2></div><p>Le résultat simulé n’est ni signé, ni sauvegardé, ni présenté comme une donnée source.</p></div>
+			<form data-simulation-form>
+				<div><label for="correction-target">Champ simulé</label><select id="correction-target" name="target"><option value="compressor-fad">FAD du compresseur à la pression demandée</option><option value="tool-airflow">Consommation de l’outil</option><option value="tool-pressure">Pression de travail de l’outil</option><option value="safety-margin">Réserve CompatAir</option></select></div>
+				<div><label for="correction-value" data-correction-label>Nouvelle valeur</label><div class="input-unit"><input id="correction-value" name="value" type="number" min="0.1" max="20000" step="0.1" required /><span data-correction-unit>L/min</span></div></div>
+				<button class="button primary" type="submit">Calculer la copie simulée</button>
+			</form>
+			<div class="simulation-result" data-simulation-result hidden aria-live="polite"></div>
+		</section>
+	</div></section>
+
+	<section class="section barometer-method"><div class="container"><p class="eyebrow">Frontière de confiance</p><h2>Une simulation n’est pas une correction</h2><p>Pour modifier la donnée publiée, il faut ajouter ou mettre à jour une preuve, relier explicitement le champ à cette preuve, reconstruire les snapshots puis publier de nouvelles versions. Consultez le <a href="/radar-contradictions/">radar des contradictions</a> pour voir comment les valeurs concurrentes restent séparées.</p></div></section>
+
+	<script>
+		type Compressor = import('../domain/catalog').Compressor;
+		type ToolProfile = import('../domain/catalog').ToolProfile;
+		type PublishedVerdictPair = import('../domain/proof-graph').PublishedVerdictPair & { compressorId: string; toolId: string };
+		type ProofGraph = ReturnType<typeof import('../domain/proof-graph').createProofGraph>;
+		type ProofCorrectionTarget = import('../domain/proof-graph').ProofCorrectionTarget;
+		type CatalogSnapshot = { catalogVersion: string; verifiedAt: string; compressors: Compressor[]; tools: ToolProfile[] };
+		type VerdictSnapshot = { verdictVersion: string; calculationVersion: string; pairs: PublishedVerdictPair[] };
+
+		const root = document.querySelector<HTMLElement>('[data-proof-graph]');
+		const picker = root?.querySelector<HTMLFormElement>('[data-graph-picker]');
+		const compressorSelect = picker?.elements.namedItem('compresseur') as HTMLSelectElement | null;
+		const toolSelect = picker?.elements.namedItem('outil') as HTMLSelectElement | null;
+		const status = root?.querySelector<HTMLElement>('[data-graph-status]');
+		const canvas = root?.querySelector<HTMLElement>('[data-graph-canvas]');
+		const summary = root?.querySelector<HTMLElement>('[data-verdict-summary]');
+		const detail = root?.querySelector<HTMLElement>('[data-node-detail]');
+		const simulation = root?.querySelector<HTMLElement>('[data-proof-simulation]');
+		const simulationForm = root?.querySelector<HTMLFormElement>('[data-simulation-form]');
+		const simulationResult = root?.querySelector<HTMLElement>('[data-simulation-result]');
+		const verdictLabels = { continuous: 'Compatible en continu', intermittent: 'Compatible par intermittence', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' } as const;
+		let catalog: CatalogSnapshot;
+		let verdicts: VerdictSnapshot;
+		let graph: ProofGraph;
+		let activeCompressor: Compressor;
+		let activeTool: ToolProfile;
+		let createProofGraph: typeof import('../domain/proof-graph').createProofGraph;
+		let simulateProofCorrection: typeof import('../domain/proof-graph').simulateProofCorrection;
+
+		function paragraph(text: string) { const element = document.createElement('p'); element.textContent = text; return element; }
+		function strong(text: string) { const element = document.createElement('strong'); element.textContent = text; return element; }
+
+		function selectNode(nodeId: string) {
+			const node = graph.nodes.find((item) => item.id === nodeId);
+			if (!node || !detail || !canvas) return;
+			const neighborIds = new Set<string>();
+			const relations = graph.edges.filter((edge) => {
+				if (edge.from === nodeId) { neighborIds.add(edge.to); return true; }
+				if (edge.to === nodeId) { neighborIds.add(edge.from); return true; }
+				return false;
+			});
+			for (const button of canvas.querySelectorAll<HTMLButtonElement>('[data-node-id]')) {
+				button.classList.toggle('is-selected', button.dataset.nodeId === nodeId);
+				button.classList.toggle('is-related', neighborIds.has(button.dataset.nodeId ?? ''));
+			}
+			const heading = document.createElement('h3'); heading.textContent = node.label;
+			const value = strong(node.value);
+			const description = paragraph(node.detail);
+			const relationList = document.createElement('ul');
+			relationList.replaceChildren(...relations.map((edge) => {
+				const otherId = edge.from === nodeId ? edge.to : edge.from;
+				const other = graph.nodes.find((item) => item.id === otherId);
+				const item = document.createElement('li'); item.textContent = `${edge.from === nodeId ? 'Vers' : 'Depuis'} ${other?.label ?? otherId} : ${edge.relation}`; return item;
+			}));
+			const children: Node[] = [heading, value, description];
+			if (node.url) { const link = document.createElement('a'); link.href = node.url; link.target = '_blank'; link.rel = 'nofollow noopener'; link.textContent = 'Ouvrir le document source'; children.push(link); }
+			if (relations.length) children.push(relationList);
+			detail.replaceChildren(...children); detail.hidden = false;
+		}
+
+		function renderGraph() {
+			if (!canvas || !summary || !simulation || !status) return;
+			for (const layer of canvas.querySelectorAll<HTMLElement>('[data-graph-layer]')) {
+				const target = layer.querySelector<HTMLElement>('[data-layer-nodes]');
+				const nodes = graph.nodes.filter((node) => node.layer === layer.dataset.graphLayer);
+				target?.replaceChildren(...nodes.map((node) => {
+					const button = document.createElement('button'); button.type = 'button'; button.className = `proof-node kind-${node.kind}`; button.dataset.nodeId = node.id; button.setAttribute('aria-label', `${node.label} : ${node.value}`);
+					const label = document.createElement('span'); label.textContent = node.label;
+					const value = document.createElement('strong'); value.textContent = node.value;
+					button.append(label, value); button.addEventListener('click', () => selectNode(node.id)); return button;
+				}));
+			}
+			const label = verdictLabels[graph.result.verdict];
+			const verdict = strong(label); verdict.className = `verdict-${graph.result.verdict}`;
+			const context = paragraph(`${graph.compressor.label} × ${graph.tool.label} · ${graph.recalculatedMatchesSnapshot ? 'recalcul local identique au snapshot' : 'écart détecté avec le snapshot'}`);
+			summary.replaceChildren(verdict, context); summary.hidden = false;
+			canvas.hidden = false; simulation.hidden = false; status.textContent = 'Graphe construit depuis les snapshots publics.';
+			selectNode('verdict:published'); updateSimulationInput();
+			if (simulationResult) simulationResult.hidden = true;
+		}
+
+		function selectedPair() {
+			if (!compressorSelect || !toolSelect) return undefined;
+			const compressor = catalog.compressors.find((item) => item.id === compressorSelect.value);
+			const tool = catalog.tools.find((item) => item.id === toolSelect.value);
+			const pair = verdicts.pairs.find((item) => item.compressorId === compressor?.id && item.toolId === tool?.id);
+			return compressor && tool ? { compressor, tool, pair } : undefined;
+		}
+
+		function buildSelectedGraph() {
+			const selected = selectedPair();
+			if (!selected || !status) return;
+			activeCompressor = selected.compressor; activeTool = selected.tool;
+			graph = createProofGraph(activeCompressor, activeTool, { catalogVersion: catalog.catalogVersion, verdictVersion: verdicts.verdictVersion, calculationVersion: verdicts.calculationVersion, verifiedAt: catalog.verifiedAt }, selected.pair);
+			const parameters = new URLSearchParams({ compresseur: activeCompressor.id, outil: activeTool.id });
+			window.history.replaceState(null, '', `${window.location.pathname}?${parameters}`);
+			renderGraph();
+		}
+
+		function updateSimulationInput() {
+			if (!simulationForm || !graph) return;
+			const target = simulationForm.elements.namedItem('target') as HTMLSelectElement;
+			const input = simulationForm.elements.namedItem('value') as HTMLInputElement;
+			const unit = simulationForm.querySelector<HTMLElement>('[data-correction-unit]');
+			const label = simulationForm.querySelector<HTMLElement>('[data-correction-label]');
+			const defaults = graph.simulationDefaults;
+			const settings = {
+				'compressor-fad': { label: 'FAD simulé', unit: 'L/min', value: defaults.compressorFadLpm, max: 20000 },
+				'tool-airflow': { label: 'Consommation simulée', unit: 'L/min', value: defaults.toolAirflowLpm, max: 10000 },
+				'tool-pressure': { label: 'Pression simulée', unit: 'bar', value: defaults.toolPressureBar, max: 50 },
+				'safety-margin': { label: 'Réserve simulée', unit: '%', value: defaults.safetyMarginPercent, max: 100 },
+			}[target.value as ProofCorrectionTarget];
+			if (!settings) return;
+			if (label) label.textContent = settings.label;
+			if (unit) unit.textContent = settings.unit;
+			input.max = String(settings.max); input.value = settings.value === undefined ? '' : String(settings.value);
+		}
+
+		async function initialize() {
+			if (!root || !compressorSelect || !toolSelect || !status) return;
+			try {
+				const [catalogResponse, verdictResponse, module] = await Promise.all([fetch('/data/catalog.json'), fetch('/data/verdicts.json'), import('../domain/proof-graph')]);
+				if (!catalogResponse.ok || !verdictResponse.ok) throw new Error('snapshot_unavailable');
+				[catalog, verdicts] = await Promise.all([catalogResponse.json() as Promise<CatalogSnapshot>, verdictResponse.json() as Promise<VerdictSnapshot>]);
+				createProofGraph = module.createProofGraph; simulateProofCorrection = module.simulateProofCorrection;
+				const parameters = new URLSearchParams(window.location.search);
+				const requestedCompressor = parameters.get('compresseur'); const requestedTool = parameters.get('outil');
+				if (requestedCompressor && [...compressorSelect.options].some((option) => option.value === requestedCompressor)) compressorSelect.value = requestedCompressor;
+				if (requestedTool && [...toolSelect.options].some((option) => option.value === requestedTool)) toolSelect.value = requestedTool;
+				buildSelectedGraph();
+			} catch { status.textContent = 'Les snapshots nécessaires sont momentanément indisponibles. Aucun graphe de secours n’est fabriqué.'; }
+		}
+
+		picker?.addEventListener('submit', (event) => { event.preventDefault(); buildSelectedGraph(); });
+		(simulationForm?.elements.namedItem('target') as HTMLSelectElement | null)?.addEventListener('change', updateSimulationInput);
+		simulationForm?.addEventListener('submit', (event) => {
+			event.preventDefault(); if (!simulationResult) return;
+			const target = (simulationForm.elements.namedItem('target') as HTMLSelectElement).value as ProofCorrectionTarget;
+			const value = Number((simulationForm.elements.namedItem('value') as HTMLInputElement).value);
+			try {
+				const simulated = simulateProofCorrection(activeCompressor, activeTool, target, value);
+				const heading = document.createElement('h3'); heading.textContent = 'Comparaison éphémère';
+				const comparison = document.createElement('div'); comparison.className = 'simulation-comparison';
+				const official = document.createElement('section'); official.append(paragraph('Verdict publié'), strong(verdictLabels[graph.result.verdict]));
+				const candidate = document.createElement('section'); candidate.append(paragraph('Copie simulée'), strong(verdictLabels[simulated.result.verdict]));
+				comparison.append(official, candidate);
+				const change = paragraph(simulated.change);
+				const metrics = paragraph(`FAD recommandé : ${simulated.result.requiredFadLpm?.toLocaleString('fr-FR', { maximumFractionDigits: 1 }) ?? 'indisponible'} L/min · FAD disponible : ${simulated.result.availableFadLpm?.toLocaleString('fr-FR', { maximumFractionDigits: 1 }) ?? 'indisponible'} L/min.`);
+				const boundary = paragraph('Cette copie n’a aucune version de catalogue ou de verdict et ne remplace pas la publication officielle.'); boundary.className = 'simulation-boundary';
+				simulationResult.replaceChildren(heading, comparison, change, metrics, boundary); simulationResult.hidden = false;
+			} catch (error) { simulationResult.replaceChildren(paragraph(error instanceof Error ? error.message : 'Simulation impossible.')); simulationResult.hidden = false; }
+		});
+		void initialize();
+	</script>
+</BaseLayout>

@@ -4,7 +4,7 @@ const [file = 'dist/data/catalog.json'] = process.argv.slice(2);
 const snapshot = JSON.parse(await readFile(file, 'utf8'));
 const errors = [];
 if (!/^\d+\.\d+\.\d+$/.test(snapshot.schemaVersion ?? '')) errors.push('schemaVersion invalide');
-if (!/^[a-f0-9]{64}$/.test(snapshot.catalogVersion ?? snapshot.snapshotVersion ?? snapshot.historyVersion ?? snapshot.barometerVersion ?? '')) errors.push('version de snapshot absente');
+if (!/^[a-f0-9]{64}$/.test(snapshot.catalogVersion ?? snapshot.snapshotVersion ?? snapshot.historyVersion ?? snapshot.barometerVersion ?? snapshot.observatoryVersion ?? snapshot.radarVersion ?? '')) errors.push('version de snapshot absente');
 if (snapshot.compressors) {
 	const ids = new Set();
 	for (const item of snapshot.compressors) {
@@ -60,6 +60,25 @@ if (snapshot.brands) {
 		if (brand.rank !== expectedRank || brand.sampleSize < 1 || brand.score < 0 || brand.score > 100 || brand.coverageScore < 0 || brand.coverageScore > 100) errors.push(`ligne de baromètre invalide : ${brand.brand}`);
 		if (Object.values(brand.criteria ?? {}).some((value) => value < 0 || value > 100)) errors.push(`critère de baromètre invalide : ${brand.brand}`);
 		if ((brand.references?.length ?? 0) !== brand.sampleSize) errors.push(`échantillon de baromètre incomplet : ${brand.brand}`);
+	}
+}
+if (snapshot.metrics?.correctionLeadTime) {
+	const { correctionLeadTime, multiPressureFad, referenceStability, contradictionResponses } = snapshot.metrics;
+	if (!['measured', 'insufficient_data'].includes(correctionLeadTime.status)) errors.push('statut du délai de correction invalide');
+	if (correctionLeadTime.medianDays !== null && correctionLeadTime.medianDays < 0) errors.push('délai de correction négatif');
+	if (multiPressureFad.availableCount > multiPressureFad.eligibleCount || multiPressureFad.percentage < 0 || multiPressureFad.percentage > 100) errors.push('métrique FAD multi-pression invalide');
+	if (referenceStability.stableCount + new Set(referenceStability.changes.map((change) => change.productId)).size + referenceStability.missingBaselineCount !== referenceStability.monitoredCount) errors.push('métrique de stabilité incohérente');
+	if (contradictionResponses.answeredCount + contradictionResponses.openCount !== contradictionResponses.totalCount || contradictionResponses.responseRate < 0 || contradictionResponses.responseRate > 100) errors.push('métrique de contradiction incohérente');
+}
+if (snapshot.records && snapshot.channels) {
+	const channels = new Set(['manual', 'manufacturer', 'merchant', 'measured']);
+	if (snapshot.channels.length !== channels.size || snapshot.channels.some((channel) => !channels.delete(channel))) errors.push('canaux du radar invalides');
+	if (snapshot.summary?.totalCount !== snapshot.records.length) errors.push('résumé du radar incohérent');
+	for (const record of snapshot.records) {
+		if ((record.claims?.length ?? 0) < 2 || new Set(record.claims.map((claim) => JSON.stringify(claim.normalizedValue))).size < 2) errors.push(`contradiction invalide : ${record.id}`);
+		if (record.claims.some((claim) => claim.evidence?.id !== claim.evidenceId)) errors.push(`preuve de contradiction incohérente : ${record.id}`);
+		if (record.decision?.outcome === 'retain_claim' && !record.claims.some((claim) => claim.id === record.decision.selectedClaimId)) errors.push(`décision de contradiction invalide : ${record.id}`);
+		if (record.decision?.outcome !== 'retain_claim' && record.decision?.selectedClaimId !== null) errors.push(`fusion silencieuse possible : ${record.id}`);
 	}
 }
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
