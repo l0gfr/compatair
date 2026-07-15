@@ -1,0 +1,27 @@
+<script>
+	const referrer = document.referrer;
+	let referrerUrl: URL | undefined;
+	try { if (referrer) referrerUrl = new URL(referrer); } catch {}
+	if (!referrerUrl || referrerUrl.origin !== location.origin) {
+		const host = referrerUrl?.hostname.toLowerCase() ?? '';
+		const agentHosts = ['chatgpt.com', 'claude.ai', 'gemini.google.com', 'perplexity.ai', 'copilot.microsoft.com'];
+		const searchHosts = ['google.', 'bing.com', 'duckduckgo.com', 'qwant.com', 'ecosia.org', 'search.brave.com'];
+		const channel = !referrerUrl ? 'direct'
+			: agentHosts.some((candidate) => host === candidate || host.endsWith(`.${candidate}`)) ? 'agent_referral'
+				: searchHosts.some((candidate) => host === candidate || host.includes(candidate)) ? 'organic' : 'referral';
+		const path = location.pathname;
+		const template = path === '/' ? 'home'
+			: path.startsWith('/calculateur/') ? 'calculator'
+				: path.startsWith('/compresseurs/') ? 'compressor'
+					: path.startsWith('/outils-pneumatiques/') ? 'tool'
+						: path.startsWith('/guides/') ? 'guide'
+							: path === '/mcp-documentation/' || path === '/en/mcp/' ? 'mcp_docs'
+								: path === '/ucp/' || path === '/en/ucp/' ? 'ucp_docs'
+									: path === '/api/' ? 'api_docs'
+										: path.startsWith('/benchmark-agents/') || path.startsWith('/en/agent-fidelity-benchmark/') ? 'benchmark'
+											: path.startsWith('/recu-compatibilite/') || path.startsWith('/en/compatibility-receipt/') ? 'receipt'
+												: path.startsWith('/offres/') ? 'offers' : 'other';
+		const event = { event: 'acquisition_aggregate', schemaVersion: '1.0.0', channel, template, action: 'view', outcome: 'unknown' };
+		if (navigator.sendBeacon) navigator.sendBeacon('/events', new Blob([JSON.stringify(event)], { type: 'application/json' }));
+	}
+</script>

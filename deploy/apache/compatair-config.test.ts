@@ -47,7 +47,8 @@ describe('CompatAir Apache CSP', () => {
 	it('caps request metadata and bodies at the reverse proxy', () => {
 		expect(config).toContain('LimitRequestLine 2048');
 		expect(config).toContain('LimitRequestFields 50');
-		expect(config.match(/LimitRequestBody 65536/g)).toHaveLength(3);
+		expect(config.match(/LimitRequestBody 65536/g)).toHaveLength(4);
+		expect(config).toContain('<Location "/api/v1/compatibility/receipts/verify">');
 	});
 
 	it('sets browser isolation and disables script attributes', () => {

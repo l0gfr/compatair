@@ -6,6 +6,7 @@ import {
 	callToolCurl,
 	claudeCliEnglish,
 	claudeProjectConfig,
+	coreTools,
 	geminiJavaScript,
 	geminiPythonEnglish,
 	initializeCurl,
@@ -49,8 +50,8 @@ const alternates = [
 			<dl class="mcp-facts">
 				<div><dt>Endpoint</dt><dd><code>{mcpEndpoint}</code></dd></div>
 				<div><dt>Transport</dt><dd>Streamable HTTP · JSON-RPC 2.0</dd></div>
-				<div><dt>Surface</dt><dd>19 tools · 9 resources · 3 prompts</dd></div>
-				<div><dt>Contracts</dt><dd>MCP 2.0.0 · method 2026.07 · AirGraph 0.1.0</dd></div>
+				<div><dt>Surface</dt><dd>19 tools · 11 resources · 3 prompts</dd></div>
+				<div><dt>Contracts</dt><dd>MCP 2.1.0 · verdicts 2.0.0 · method 2026.07</dd></div>
 				<div><dt>Authentication</dt><dd>None · public data · read-only</dd></div>
 				<div><dt>Status</dt><dd><a href={mcpHealthEndpoint}>Versions exposed by the service</a></dd></div>
 			</dl>
@@ -96,7 +97,7 @@ const alternates = [
 					<article><strong>Commerce is isolated</strong><p>Prices and availability use separate tools. Commission cannot create or change a verdict.</p></article>
 					<article><strong>Explicit versions</strong><p>Method, catalog and observation dates travel with each result and appear in the changefeed.</p></article>
 					<article><strong>Stable identifiers</strong><p>Products and configurations receive a CompatAir ID independent of the displayed commercial name.</p></article>
-					<article><strong>Progressive compatibility</strong><p>Nine legacy tools remain available. Nine AirGraph tools and one UCP tool extend the model.</p></article>
+					<article><strong>Unambiguous selection</strong><p>Eight tools form the <code>core</code> profile. Nine older tools are marked <code>legacy</code> with an explicit successor.</p></article>
 				</div>
 			</section>
 
@@ -170,6 +171,10 @@ const alternates = [
 						<thead><tr><th>Field</th><th>Purpose</th><th>Agent rule</th></tr></thead>
 						<tbody>
 							<tr><td><code>verdict</code></td><td>Normalized technical state.</td><td>Never upgrade or soften it.</td></tr>
+							<tr><td><code>verdict_scope</code></td><td>Scope of the backward-compatible root verdict.</td><td>Never extend it to another scope.</td></tr>
+							<tr><td><code>overall_system_verdict</code></td><td>Complete-system verdict, including the distribution network.</td><td>Keep it distinct from air-supply capacity.</td></tr>
+							<tr><td><code>air_supply_verdict</code></td><td>Pressure, FAD and duty-cycle decision under <code>air_supply</code>.</td><td>Never present it as complete-system validation.</td></tr>
+							<tr><td><code>compatibility_receipt</code></td><td>Versioned SHA-256-verifiable receipt.</td><td>Retain it with audited or shared decisions.</td></tr>
 							<tr><td><code>canonical_url</code></td><td>CompatAir page for this result.</td><td>Cite or offer it to the user.</td></tr>
 							<tr><td><code>product_urls</code></td><td>Relevant product pages.</td><td>Use them for product context.</td></tr>
 							<tr><td><code>source_urls</code></td><td>Evidence documents used.</td><td>Preserve claim-to-source links.</td></tr>
@@ -185,8 +190,8 @@ const alternates = [
 			</section>
 
 			<section id="tools">
-				<p class="eyebrow">MCP 2.0.0 surface</p>
-				<h2>19 tools, 9 resources and 3 prompts</h2>
+				<p class="eyebrow">MCP 2.1.0 surface</p>
+				<h2>19 tools, 11 resources and 3 prompts</h2>
 				<p class="mcp-section-intro">Legacy tools cover search, sizing and pairwise compatibility. The AirGraph layer adds multi-identifier product resolution, explanation, complete systems, minimal corrections and synchronization.</p>
 				<div class="mcp-table-wrap">
 					<table>
@@ -206,7 +211,12 @@ const alternates = [
 					</table>
 				</div>
 
+				<h3>Recommended core profile</h3>
+				<p>To reduce tool-selection errors, general integrations should expose these eight tools first. The same profile is available at <code>compatair://tools/core-profile</code>.</p>
+				<ul class="mcp-tool-list">{coreTools.map((tool) => <li><code>{tool}</code></li>)}</ul>
+
 				<h3>Maintained legacy tools</h3>
+				<p>They remain compatible, but each definition carries <code>fr.compatair/lifecycle=legacy</code> and an explicit <code>fr.compatair/successor</code>.</p>
 				<ul class="mcp-tool-list">{legacyTools.map((tool) => <li><code>{tool}</code></li>)}</ul>
 
 				<h3>Context resources</h3>
@@ -234,6 +244,7 @@ const alternates = [
 					<article><strong>Requirement</strong><p><code>ca:requirement:&lt;id&gt;</code> carries a documented pressure, flow or component fact.</p></article>
 				</div>
 				<p>A missing requirement remains missing. CompatAir does not infer pressure drop from an unknown hose and never converts intake displacement into FAD. The graph also records this absence in <code>limitations</code>.</p>
+				<p>Decisions can be frozen into a <a href="/en/compatibility-receipt/"><code>compatibility_receipt</code></a>. Assistant fidelity is measurable with the <a href="/en/agent-fidelity-benchmark/">public 100-scenario benchmark</a>, while evidence changes are mapped to portfolios through the <a href="/en/compatibility-impact-feed/">Compatibility Impact Feed</a>.</p>
 			</section>
 
 			<section id="security">
@@ -322,15 +333,16 @@ const alternates = [
 				<p>The registry manifest versioned with CompatAir declares the official remote through <code>remotes</code>:</p>
 				<pre><code>{`{
   "name": "io.github.bluetouff/compatair",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "remotes": [{
     "type": "streamable-http",
     "url": "https://compatair.fr/mcp"
   }]
 }`}</code></pre>
+				<div class="mcp-note"><p>This manifest is publication-ready, but CompatAir does not claim Registry listing without a verified Registry response. The first publication requires owner authentication and acceptance of the preview service’s CC0 terms.</p></div>
 				<div class="mcp-principles">
 					<article><strong>For an agent</strong><p><a href="/llms.txt">llms.txt</a> summarizes non-negotiable interpretation rules and entry points.</p></article>
-					<article><strong>For an integration</strong><p>The <a href="/schemas/mcp-result-2026.07.json">result schema</a> and <a href="/schemas/airgraph-0.1.0.json">AirGraph schema</a> are served at stable URIs.</p></article>
+					<article><strong>For an integration</strong><p>The <a href="/schemas/mcp-result-2026.07.json">common envelope</a>, closed per-tool schemas, <a href="/schemas/airgraph-0.1.0.json">AirGraph</a> and <a href="/schemas/compatibility-receipt-1.0.0.json">receipt schema</a> are served at stable URIs.</p></article>
 					<article><strong>For a cache</strong><p><code>get_changefeed</code> and <code>compatair://changefeed/current</code> expose visible versions.</p></article>
 				</div>
 				<p>The complete text contract remains available in <a href="/llms-full.txt">llms-full.txt</a>.</p>

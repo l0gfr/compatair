@@ -11,7 +11,7 @@ describe('MCP public publication contract', () => {
 	it('declares the public Streamable HTTP remote with the current registry schema', () => {
 		expect(manifest).toMatchObject({
 			$schema: 'https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json',
-			name: 'io.github.bluetouff/compatair', version: '2.0.0',
+			name: 'io.github.bluetouff/compatair', version: '2.1.0',
 			remotes: [{ type: 'streamable-http', url: 'https://compatair.fr/mcp' }],
 		});
 		expect(manifest).not.toHaveProperty('packages');
@@ -24,7 +24,7 @@ describe('MCP public publication contract', () => {
 	});
 
 	it('publishes the mandatory envelope and agent interpretation rules', () => {
-		expect(resultSchema.required).toEqual(expect.arrayContaining(['verdict', 'canonical_url', 'source_urls', 'limitations', 'next_actions']));
+		expect(resultSchema.required).toEqual(expect.arrayContaining(['verdict', 'verdict_scope', 'verdict_schema_version', 'canonical_url', 'source_urls', 'limitations', 'next_actions']));
 		expect(llms).toContain('https://compatair.fr/mcp');
 		expect(llms).toContain('canonical_url');
 		expect(llmsFull).toContain('identify_product');

@@ -1,6 +1,6 @@
 export type PublicChange = {
 	id: string;
-	type: 'protocol' | 'method' | 'catalog' | 'evidence' | 'knowledge' | 'offers';
+	type: 'protocol' | 'method' | 'catalog' | 'evidence' | 'knowledge' | 'offers' | 'benchmark' | 'compatibility_impact';
 	version: string;
 	observed_at: string;
 	summary: string;
@@ -35,6 +35,21 @@ export const protocolChanges: PublicChange[] = [
 		summary: 'Full-text agent corpus, JSON and NDJSON distributions, data freshness, integrity manifest and public citation records.',
 		breaking: false,
 		canonical_url: 'https://compatair.fr/ucp/#machine-data',
+	},
+	{
+		id: 'benchmark:agent-fidelity:1.0.0', type: 'benchmark', version: '1.0.0', observed_at: '2026-07-15',
+		summary: 'One hundred deterministic scenarios for measuring agent preservation of scoped verdicts, limitations, evidence and attribution.',
+		breaking: false, canonical_url: 'https://compatair.fr/benchmark-agents/',
+	},
+	{
+		id: 'compatibility-impact:1.0.0', type: 'compatibility_impact', version: '1.0.0', observed_at: '2026-07-15',
+		summary: 'Evidence changes mapped to affected products, portfolio keys and compatibility-pair recalculation boundaries.',
+		breaking: false, canonical_url: 'https://compatair.fr/impact-compatibilite/',
+	},
+	{
+		id: 'protocol:compatibility-receipt:1.0.0', type: 'protocol', version: '1.0.0', observed_at: '2026-07-15',
+		summary: 'Deterministic compatibility receipt with scoped verdicts, sources, versions and SHA-256 integrity verification.',
+		breaking: false, canonical_url: 'https://compatair.fr/recu-compatibilite/',
 	},
 ];
 

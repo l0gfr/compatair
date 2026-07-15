@@ -26,7 +26,10 @@
 - contribution facultative aux priorités du catalogue, agrégée sans événement brut, cookie, identifiant de navigateur ni adresse IP persistée ;
 - rapport privé de priorisation avec seuil minimal de cinq contributions par dimension, couverture pondérée par la demande observée et objectif opérationnel explicite de 80 % ;
 - funnel du calculateur agrégé sans URL, referrer, cookie ni identifiant, avec affichage, famille fermée, sélection et recalcul réussi de la recommandation contrefactuelle, rapport privé et contrôle de cohérence des taux ;
-- serveur MCP Streamable HTTP en lecture seule, neuf outils historiques, neuf tools AirGraph et un bridge UCP, neuf ressources, trois prompts, enveloppe canonique obligatoire, pagination, quotas, limite de taille, contrôle Origin, santé et métriques agrégées ;
+- serveur MCP Streamable HTTP en lecture seule, huit tools core, neuf outils historiques explicitement legacy avec successeur, tools spécialisés et bridge UCP, onze ressources, trois prompts, un schéma de sortie fermé par tool, deux portées de verdict, reçus vérifiables, pagination, quotas, limite de taille, contrôle Origin, santé et métriques agrégées ;
+- benchmark public de fidélité des agents avec 100 scénarios déterministes, évaluateur local et leaderboard soumis à une preuve d’exécution complète ;
+- Compatibility Impact Feed JSON/NDJSON reliant les changements de preuve aux produits, portefeuilles et couples à recalculer sans inventer de delta avant/après ;
+- acquisition agrégée séparant organic, agent/referral, widget, API, MCP et UCP par gabarit, sans URL, referrer brut, cookie ni identifiant ;
 - workflows CI, déploiement, sécurité, snapshot et disponibilité, avec permissions minimales et actions épinglées ;
 - CSP, HSTS, politiques de sécurité, signalement responsable, confidentialité, cookies, affiliation et sources ;
 - HTML statique, cartes sociales PNG 1200 × 630 dédiées aux surfaces indexables et carte mutualisée pour les couples `noindex`, budget automatisé de 50 Ko gzip maximum pour les scripts client externes d’une page, images dimensionnées, focus visible et réduction des animations.
@@ -43,7 +46,8 @@
 ## Opérations administrateur requises
 
 - Installer et activer le service MCP systemd et les règles Apache avec `deploy/server/install-mcp.sh`.
-- Réinstaller une fois le service MCP après l’ajout des actifs agrégés de demande et de funnel afin de créer `/var/lib/compatair` via `StateDirectory`.
+- Réinstaller une fois le service MCP après l’ajout des actifs agrégés et des gardes root afin de créer l’état acquisition, approuver le vhost et installer les commandes de convergence et de preuve de drill.
+- Exécuter un drill staging réel et conserver son rapport `1.1.0`; aucun rapport d’exploitation n’est fabriqué par les tests locaux.
 - Définir la variable GitHub `MCP_ENABLED=true` après le test HTTPS de `/mcp-health`.
 - Activer dans GitHub les règles de branche, les checks obligatoires, la protection des secrets et l’épinglage obligatoire des Actions si le plan du dépôt le permet.
 - Enregistrer les propriétés du domaine dans Google Search Console et Bing Webmaster Tools. Cette opération exige les comptes du propriétaire.

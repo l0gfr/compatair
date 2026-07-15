@@ -149,13 +149,23 @@ jobs:
       - name: Package immutable release
         run: |
           install -D -m 644 server/mcp-core.mjs dist/_server/mcp-core.mjs
+          install -D -m 644 server/mcp-output-schemas.mjs dist/_server/mcp-output-schemas.mjs
           install -D -m 644 server/ucp-core.mjs dist/_server/ucp-core.mjs
           install -D -m 644 server/demand-aggregates.mjs dist/_server/demand-aggregates.mjs
           install -D -m 644 server/product-funnel-aggregates.mjs dist/_server/product-funnel-aggregates.mjs
+          install -D -m 644 server/acquisition-aggregates.mjs dist/_server/acquisition-aggregates.mjs
           install -D -m 644 server/mcp-server.mjs dist/_server/mcp-server.mjs
+          install -D -m 644 scripts/generate-private-weekly-report.mjs dist/_ops/generate-private-weekly-report.mjs
+          install -D -m 644 scripts/lib/rank-demand.mjs dist/_ops/lib/rank-demand.mjs
+          install -D -m 644 scripts/lib/report-product-funnel.mjs dist/_ops/lib/report-product-funnel.mjs
+          install -D -m 644 scripts/lib/report-acquisition.mjs dist/_ops/lib/report-acquisition.mjs
           tar -C dist -czf "compatair-${GITHUB_SHA}.tar.gz" .
           sha256sum "compatair-${GITHUB_SHA}.tar.gz" > "compatair-${GITHUB_SHA}.tar.gz.sha256"
-          tar -czf "compatair-admin-${GITHUB_SHA}.tar.gz" deploy
+          tar -czf "compatair-admin-${GITHUB_SHA}.tar.gz" \
+            deploy \
+            scripts/smoke-live-http.mjs \
+            scripts/verify-live-seo.mjs \
+            scripts/lib/live-seo-verification.mjs
           sha256sum "compatair-admin-${GITHUB_SHA}.tar.gz" > "compatair-admin-${GITHUB_SHA}.tar.gz.sha256"
 
       - name: Upload release artifact

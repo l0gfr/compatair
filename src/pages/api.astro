@@ -11,13 +11,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   --data-urlencode 'compressorId=einhell-tc-ac-240-50-10-of' \
   --data-urlencode 'toolId=einhell-tc-pe-150'</code></pre>
 		<h2>Contenu de la réponse</h2>
-		<ul><li>enveloppe commune avec <code>verdict</code>, <code>canonical_url</code>, sources, versions, date, limites et actions suivantes&nbsp;;</li><li>identification normalisée du compresseur et de l’outil&nbsp;;</li><li>verdict brut compatible en continu (<code>continuous</code>), par intermittence (<code>intermittent</code>), incompatible ou données insuffisantes&nbsp;;</li><li><a href="/glossaire/#fad">FAD</a> requis, FAD disponible, raison d’une éventuelle limite et avertissements lorsque ces données existent&nbsp;;</li><li>sources datées, calculateur prérempli et <a href="/graphe-preuve/">graphe de preuve</a> prérempli.</li></ul>
+		<ul><li>enveloppe commune avec <code>verdict</code>, <code>verdict_scope</code>, <code>canonical_url</code>, sources, versions, date, limites et actions suivantes&nbsp;;</li><li><code>air_supply_verdict</code> pour pression, FAD et cycle, séparé d’<code>overall_system_verdict</code> pour le système complet&nbsp;;</li><li>vocabulaire moteur conservé dans <code>engine_verdict</code> sans devenir un second verdict ambigu&nbsp;;</li><li><a href="/glossaire/#fad">FAD</a> requis, FAD disponible, raison d’une éventuelle limite et avertissements lorsque ces données existent&nbsp;;</li><li>sources datées, reçu de compatibilité vérifiable, calculateur prérempli et <a href="/graphe-preuve/">graphe de preuve</a> prérempli.</li></ul>
 		<h2>Surface publique</h2>
 		<ul>
 			<li><code>GET /api/v1/compatibility</code>&nbsp;: décision pour une paire identifiée.</li>
 			<li><code>GET /api/v1/search</code>&nbsp;: recherche plein texte dans les guides, produits et définitions publiés.</li>
 			<li><code>GET /api/v1/evidence</code>&nbsp;: caractéristiques, documents et arêtes AirGraph utilisés.</li>
 			<li><code>GET /api/v1/changefeed</code>&nbsp;: versions protocole, méthode, catalogue, preuves, connaissances et offres.</li>
+			<li><code>POST /api/v1/compatibility/receipts/verify</code>&nbsp;: vérification d’intégrité d’un reçu, sans stockage ni téléchargement des URL incluses.</li>
 			<li><code>POST /api/ucp/v1/compatibility/evaluate</code>&nbsp;: décision UCP sur une configuration complète, sans mutation commerciale.</li>
 		</ul>
 		<p>Le contrat intégral est disponible dans l’<a href="/openapi/compatair-2026-07-15.json">OpenAPI public</a>. La capability UCP possède aussi son <a href="/openapi/ucp-2026-07-15.json">OpenAPI spécialisé</a>, son <a href="/openrpc/ucp-2026-07-15.json">binding OpenRPC</a> et son <a href="/schemas/ucp-compatibility-2026-07-15.json">JSON Schema</a>.</p>

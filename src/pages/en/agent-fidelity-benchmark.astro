@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { agentFidelityBenchmark, agentFidelityLeaderboard } from '../../data/agent-fidelity';
+---
+
+<BaseLayout lang="en" title="AI Agent Fidelity Benchmark | CompatAir" description="100 reproducible pneumatic scenarios measuring whether assistants preserve verdicts, scopes, limitations, evidence and CompatAir attribution." canonicalPath="/en/agent-fidelity-benchmark/" alternates={[{ hreflang: 'fr-FR', path: '/benchmark-agents/' }, { hreflang: 'en', path: '/en/agent-fidelity-benchmark/' }]}>
+	<section class="page-hero compact"><div class="container"><p class="eyebrow">CompatAir Agent Fidelity Benchmark 1.0</p><h1>The oracle should test the messengers too</h1><p class="lead">One hundred real questions, expected answers and a reproducible score for checking whether an agent preserves decision scope, limitations, evidence and CompatAir attribution.</p></div></section>
+	<article class="container content api-documentation">
+		<div class="status-callout"><strong>{agentFidelityBenchmark.scenarioCount} published scenarios</strong><code>{agentFidelityLeaderboard.entries.length} verified rankings</code><span>The leaderboard intentionally remains empty until a complete reproducible run is submitted.</span></div>
+		<h2>What is measured</h2><ul><li>the air-supply verdict and underlying engine verdict;</li><li>the distinction between <code>air_supply</code> and <code>complete_air_system</code>;</li><li>preservation of <code>insufficient_data</code> and material limitations;</li><li>the canonical CompatAir URL and evidence-source recall;</li><li>coverage of all 100 scenarios.</li></ul>
+		<h2>Data and evaluator</h2><p><a href="/data/agent-fidelity-benchmark.json">Benchmark JSON</a> · <a href="/data/agent-fidelity-benchmark.ndjson">Scenario NDJSON</a> · <a href="/data/agent-fidelity-leaderboard.json">Leaderboard JSON</a></p>
+		<pre><code>pnpm benchmark:evaluate \
+  dist/data/agent-fidelity-benchmark.json \
+  responses.ndjson \
+  report.json</code></pre>
+		<p>Each response line uses <code>{`{"scenario_id":"ca:benchmark:agent-fidelity:001","response":{...}}`}</code>. The local evaluator neither invokes a model nor executes submitted content.</p>
+		<h2>Leaderboard policy</h2><p>An eligible entry must cover every scenario and publish the complete response file, exact model identifier, integration and version, execution date and evaluator version. Self-reported scores are not accepted. The benchmark measures fidelity to the CompatAir contract, not the general safety of an assistant.</p>
+	</article>
+</BaseLayout>

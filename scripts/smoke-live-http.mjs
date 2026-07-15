@@ -1,8 +1,10 @@
 import { readFile } from 'node:fs/promises';
+import { pathToFileURL } from 'node:url';
 
 const origin = new URL(process.env.COMPATAIR_SITE_ORIGIN ?? 'https://compatair.fr').origin;
 const expectedSha = process.env.COMPATAIR_EXPECTED_RELEASE_SHA;
 const mcpEnabled = process.env.MCP_ENABLED === 'true';
+const releaseDirectory = process.env.COMPATAIR_RELEASE_DIR;
 
 if (!/^[0-9a-f]{40}$/.test(expectedSha ?? '')) {
 	throw new Error('COMPATAIR_EXPECTED_RELEASE_SHA doit contenir un SHA Git complet.');
@@ -89,6 +91,14 @@ for (const [label, pathname, marker] of [
 	['clés de signature', '/data/signing-keys.json', 'Ed25519'],
 	['documentation UCP FR', '/ucp/', 'fr.compatair.air.compatibility'],
 	['documentation UCP EN', '/en/ucp/', 'fr.compatair.air.compatibility'],
+	['reçu de compatibilité', '/recu-compatibilite/', 'Vérifier un reçu'],
+	['compatibility receipt EN', '/en/compatibility-receipt/', 'Verify a receipt'],
+	['schéma reçu', '/schemas/compatibility-receipt-1.0.0.json', 'receipt_id'],
+	['benchmark agents', '/benchmark-agents/', '100 scénarios'],
+	['benchmark JSON', '/data/agent-fidelity-benchmark.json', '"scenarioCount":100'],
+	['leaderboard agents', '/data/agent-fidelity-leaderboard.json', 'awaiting_reproducible_submissions'],
+	['Compatibility Impact Feed', '/data/compatibility-impact-feed.json', 'requires_recalculation'],
+	['Compatibility Impact Feed EN', '/en/compatibility-impact-feed/', 'Know which decisions require recalculation'],
 	['découverte UCP', '/.well-known/ucp', 'fr.compatair.air.compatibility'],
 	['OpenAPI UCP', '/openapi/ucp-2026-07-15.json', 'evaluateAirCompatibility'],
 	['connaissances agents', '/data/agent-knowledge.json', 'content_sha256'],
@@ -117,7 +127,8 @@ await check('offre affiliée absente', '/go/offre-inconnue-ci', ({ body, respons
 	assertHeader(response, 'x-content-type-options', 'nosniff');
 });
 
-const offers = JSON.parse(await readFile(new URL('../dist/data/offers.json', import.meta.url), 'utf8'));
+const offersLocation = releaseDirectory ? new URL('data/offers.json', pathToFileURL(`${releaseDirectory}/`)) : new URL('../dist/data/offers.json', import.meta.url);
+const offers = JSON.parse(await readFile(offersLocation, 'utf8'));
 const activeOffer = offers.offers?.[0];
 if (activeOffer) {
 	await check('offre affiliée active', `/go/${encodeURIComponent(activeOffer.id)}`, ({ response, url }) => {
@@ -133,7 +144,7 @@ if (mcpEnabled) {
 		assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
 		const health = JSON.parse(body);
 		assert(health.status === 'ok', `status MCP attendu ok, reçu ${JSON.stringify(health.status)}`);
-		assert(health.mcpServerVersion === '2.0.0', `version MCP attendue 2.0.0, reçue ${JSON.stringify(health.mcpServerVersion)}`);
+		assert(health.mcpServerVersion === '2.1.0', `version MCP attendue 2.1.0, reçue ${JSON.stringify(health.mcpServerVersion)}`);
 		assert(health.protocolVersion === '2025-11-25', `protocole MCP inattendu ${JSON.stringify(health.protocolVersion)}`);
 		assert(health.methodVersion === '2026.07', `méthode MCP inattendue ${JSON.stringify(health.methodVersion)}`);
 		assert(typeof health.verdictVersion === 'string' && health.verdictVersion.length > 0, 'verdictVersion MCP absente');
@@ -144,7 +155,11 @@ if (mcpEnabled) {
 		'/api/v1/compatibility?compressorId=einhell-tc-ac-240-50-10-of&toolId=einhell-tc-pe-150',
 		({ body, response }) => {
 			assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
-			assert(JSON.parse(body).schemaVersion === '1.0.0', 'schemaVersion API attendue 1.0.0');
+			const result = JSON.parse(body);
+			assert(result.schemaVersion === '2.0.0', 'schemaVersion API attendue 2.0.0');
+			assert(result.overall_system_verdict?.scope === 'complete_air_system', 'portée système complet absente');
+			assert(result.air_supply_verdict?.scope === 'air_supply', 'portée alimentation en air absente');
+			assert(result.compatibility_receipt?.integrity?.algorithm === 'sha-256', 'reçu de compatibilité absent');
 			assertHeader(response, 'x-content-type-options', 'nosniff');
 		},
 	);
@@ -160,6 +175,8 @@ if (mcpEnabled) {
 		assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
 		const result = JSON.parse(body);
 		assert(result.capability === 'fr.compatair.air.compatibility', 'capability UCP absente');
+		assert(result.overall_system_verdict?.scope === 'complete_air_system', 'portée système UCP absente');
+		assert(result.air_supply_verdict?.scope === 'air_supply', 'portée alimentation UCP absente');
 		assert(typeof result.canonical_url === 'string' && result.canonical_url.startsWith('https://compatair.fr/'), 'canonical_url UCP absente');
 		assert(result.security?.mutates_commerce_state === false, 'frontière read-only UCP absente');
 		assertHeader(response, 'cache-control', 'no-store');

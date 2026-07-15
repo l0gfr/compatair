@@ -37,6 +37,19 @@ describe('release boundary policy', () => {
 		);
 	});
 
+	it('converges Apache before activation and rolls back a failed public smoke', () => {
+		const convergence = 'sudo -n /usr/local/sbin/compatair-converge-mcp-config';
+		const switchMarker = 'ln -sfn "$release" "$current.next"';
+		const publicSmoke = 'if ! run_public_smoke';
+		const commitMarker = 'activation_pending=false';
+		expect(deploy).toContain(convergence);
+		expect(deploy.indexOf(convergence)).toBeLessThan(deploy.indexOf(switchMarker));
+		expect(deploy).toContain('${COMPATAIR_DEPLOY_FAILPOINT:-} == public-smoke');
+		expect(deploy.indexOf(publicSmoke, deploy.indexOf(switchMarker))).toBeLessThan(deploy.lastIndexOf(commitMarker));
+		expect(deploy.indexOf('"$node_binary" "$seo_script"')).toBeLessThan(deploy.lastIndexOf(commitMarker));
+		expect(deploy.indexOf('/bin/systemctl restart compatair-weekly-insights.timer')).toBeLessThan(deploy.lastIndexOf(commitMarker));
+	});
+
 	it('reserves failure injection for the isolated staging root', () => {
 		expect(deploy).toContain('/var/www/html/compatair-staging');
 		expect(deploy).toContain('COMPATAIR_STAGING_DRILL');
@@ -54,5 +67,7 @@ describe('release boundary policy', () => {
 		expect(releaseRoute).toContain("'Cache-Control': 'no-store'");
 		expect(apache).toContain('<LocationMatch "^/data/release\\.json$">');
 		expect(apache).toContain('Header always set Cache-Control "no-store"');
+		expect(apache).toContain('<Location "/api/v1/compatibility/receipts/verify">');
+		expect(apache).toContain('LimitRequestBody 65536');
 	});
 });

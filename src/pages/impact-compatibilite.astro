@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { compatibilityImpactFeed } from '../data/compatibility-impact';
+---
+
+<BaseLayout title="Compatibility Impact Feed | CompatAir" description="Flux machine des ajouts et corrections de preuve susceptibles d’affecter les décisions de compatibilité d’un portefeuille fabricant ou marchand." canonicalPath="/impact-compatibilite/" alternates={[{ hreflang: 'fr-FR', path: '/impact-compatibilite/' }, { hreflang: 'en', path: '/en/compatibility-impact-feed/' }]}>
+	<section class="page-hero compact"><div class="container"><p class="eyebrow">fr.compatair.compatibility-impact 1.0</p><h1>Savoir quelles décisions doivent être recalculées</h1><p class="lead">Le Compatibility Impact Feed relie chaque ajout ou correction de preuve aux produits, portefeuilles et couples de compatibilité concernés.</p></div></section>
+	<article class="container content api-documentation">
+		<div class="status-callout"><strong>{compatibilityImpactFeed.events.length} événements réévaluables</strong><code>{compatibilityImpactFeed.verdictVersion.slice(0, 12)}…</code><span>Version de verdict courante. Aucun changement avant/après n’est affirmé sans snapshot antérieur signé.</span></div>
+		<h2>À quoi sert le flux</h2><p>Un fabricant peut filtrer sa clé <code>manufacturer:...</code>, un marchand ses références couvertes, puis invalider ses caches ou demander un recalcul lorsque la preuve d’un produit évolue. Le flux indique le nombre de couples concernés et leur distribution actuelle.</p>
+		<h2>Frontière de preuve</h2><p>Les événements actuels portent une évaluation <code>requires_recalculation</code>. Le champ <code>decision_delta</code> reste <code>not_available_without_previous_verdict_snapshot</code> tant qu’un diff exact entre deux snapshots de verdict signés n’est pas disponible. CompatAir ne transforme donc pas une correction documentaire en changement technique inventé.</p>
+		<h2>Distributions</h2><p><a href="/data/compatibility-impact-feed.json">JSON</a> · <a href="/data/compatibility-impact-feed.ndjson">NDJSON</a> · <a href="/openapi/compatair-2026-07-15.json">contrat OpenAPI du changefeed</a></p>
+		<h2>Évolutions prévues</h2><p>La version suivante ajoutera les deltas de verdict exacts, les champs techniques modifiés et un mécanisme d’abonnement authentifié. Aucun webhook n’est activé avant validation des signatures, de l’anti-rejeu, de la rotation de clés et des tests de livraison hostile.</p>
+	</article>
+</BaseLayout>

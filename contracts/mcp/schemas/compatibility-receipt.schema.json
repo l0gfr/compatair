@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://compatair.fr/schemas/compatibility-receipt-1.0.0.json",
+  "title": "CompatAir compatibility receipt",
+  "$defs": {
+    "ScopedVerdict": {
+      "type": "object",
+      "required": ["schema_version", "scope", "verdict", "limiting_factor", "limitations"],
+      "properties": {
+        "schema_version": { "const": "2.0.0" },
+        "scope": { "enum": ["air_supply", "complete_air_system"] },
+        "verdict": { "enum": ["information", "compatible", "compatible_with_limits", "incompatible", "insufficient_data"] },
+        "engine_verdict": { "enum": ["continuous", "intermittent", "incompatible", "insufficient_data"] },
+        "limiting_factor": { "type": ["string", "null"] },
+        "limitations": { "type": "array", "items": { "type": "string", "maxLength": 4000 } },
+        "metrics": {
+          "type": "object",
+          "properties": {
+            "required_fad_lpm": { "type": ["number", "null"] }, "available_fad_lpm": { "type": ["number", "null"] },
+            "effective_average_capacity_lpm": { "type": ["number", "null"] }, "required_pressure_bar": { "type": ["number", "null"] },
+            "available_pressure_bar": { "type": ["number", "null"] }, "demand_flow_lpm": { "type": ["number", "null"] },
+            "recommended_fad_lpm": { "type": ["number", "null"] }, "margin_percent": { "type": ["number", "null"] }, "mode": { "type": ["string", "null"] }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "type": "object",
+  "required": ["schema_version", "receipt_id", "configuration_id", "overall_system_verdict", "air_supply_verdict", "method_version", "catalog_version", "observed_at", "canonical_url", "source_urls", "integrity", "verification_url"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "receipt_id": { "type": "string", "pattern": "^ca:receipt:[a-f0-9]{64}$" },
+    "configuration_id": { "type": "string", "pattern": "^ca:configuration:[a-f0-9]{24}$" },
+    "overall_system_verdict": { "$ref": "#/$defs/ScopedVerdict" },
+    "air_supply_verdict": { "$ref": "#/$defs/ScopedVerdict" },
+    "method_version": { "const": "2026.07" },
+    "catalog_version": { "type": "string", "minLength": 1 },
+    "observed_at": { "type": "string", "format": "date" },
+    "canonical_url": { "type": "string", "format": "uri", "pattern": "^https://compatair\\.fr/" },
+    "source_urls": { "type": "array", "items": { "type": "string", "format": "uri", "pattern": "^https://" }, "uniqueItems": true },
+    "integrity": {
+      "type": "object", "required": ["algorithm", "digest", "canonicalization"],
+      "properties": { "algorithm": { "const": "sha-256" }, "digest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "canonicalization": { "const": "json-sort-keys-v1" } },
+      "additionalProperties": false
+    },
+    "verification_url": { "type": "string", "format": "uri", "pattern": "^https://compatair\\.fr/recu-compatibilite/#" }
+  },
+  "additionalProperties": false
+}

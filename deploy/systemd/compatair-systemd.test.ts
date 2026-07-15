@@ -4,6 +4,8 @@ import { describe, expect, it } from 'vitest';
 const mcp = readFileSync(new URL('./compatair-mcp.service', import.meta.url), 'utf8');
 const stats = readFileSync(new URL('./compatair-stats.service', import.meta.url), 'utf8');
 const staging = readFileSync(new URL('./compatair-mcp-staging.service', import.meta.url), 'utf8');
+const weekly = readFileSync(new URL('./compatair-weekly-insights.service', import.meta.url), 'utf8');
+const weeklyTimer = readFileSync(new URL('./compatair-weekly-insights.timer', import.meta.url), 'utf8');
 
 describe('systemd confinement', () => {
 	it('binds the MCP service to loopback and denies private UCP egress targets', () => {
@@ -45,5 +47,15 @@ describe('systemd confinement', () => {
 		expect(staging).toContain('SocketBindAllow=ipv4:tcp:8788');
 		expect(staging).not.toContain('/var/www/html/compatair/current');
 		expect(staging).not.toContain('MCP_PORT=8787');
+	});
+
+	it('generates the weekly private report without network access or public output', () => {
+		expect(weekly).toContain('RestrictAddressFamilies=AF_UNIX');
+		expect(weekly).toContain('ReadWritePaths=/var/lib/compatair');
+		expect(weekly).toContain('/var/lib/compatair/reports');
+		expect(weekly).toContain('/current/_ops/generate-private-weekly-report.mjs');
+		expect(weekly).toContain('ConditionPathExists=/var/www/html/compatair/current/_ops/generate-private-weekly-report.mjs');
+		expect(weeklyTimer).toContain('OnCalendar=Mon *-*-* 06:15:00');
+		expect(weeklyTimer).toContain('Persistent=true');
 	});
 });

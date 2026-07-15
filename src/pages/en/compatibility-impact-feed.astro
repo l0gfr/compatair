@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { compatibilityImpactFeed } from '../../data/compatibility-impact';
+---
+
+<BaseLayout lang="en" title="Agent Compatibility Impact Feed | CompatAir" description="Machine-readable evidence changes mapped to compatibility decisions requiring recalculation across manufacturer and merchant portfolios." canonicalPath="/en/compatibility-impact-feed/" alternates={[{ hreflang: 'fr-FR', path: '/impact-compatibilite/' }, { hreflang: 'en', path: '/en/compatibility-impact-feed/' }]}>
+	<section class="page-hero compact"><div class="container"><p class="eyebrow">fr.compatair.compatibility-impact 1.0</p><h1>Know which decisions require recalculation</h1><p class="lead">The Compatibility Impact Feed maps each evidence addition or correction to affected products, portfolios and compatibility pairs.</p></div></section>
+	<article class="container content api-documentation">
+		<div class="status-callout"><strong>{compatibilityImpactFeed.events.length} recalculable events</strong><code>{compatibilityImpactFeed.verdictVersion.slice(0, 12)}…</code><span>Current verdict version. No before/after change is claimed without a previous signed snapshot.</span></div>
+		<h2>Purpose</h2><p>A manufacturer can filter its <code>manufacturer:...</code> key and a merchant its covered references, then invalidate caches or request recalculation when product evidence changes. The feed reports affected-pair counts and their current distribution.</p>
+		<h2>Evidence boundary</h2><p>Current events use <code>requires_recalculation</code>. The <code>decision_delta</code> remains <code>not_available_without_previous_verdict_snapshot</code> until an exact comparison between signed verdict snapshots exists. A documentary correction is never presented as an invented technical change.</p>
+		<h2>Distributions</h2><p><a href="/data/compatibility-impact-feed.json">JSON</a> · <a href="/data/compatibility-impact-feed.ndjson">NDJSON</a> · <a href="/openapi/compatair-2026-07-15.json">changefeed OpenAPI contract</a></p>
+		<h2>Safe evolution</h2><p>Authenticated subscriptions remain disabled until signatures, replay protection, key rotation and hostile-delivery tests are validated.</p>
+	</article>
+</BaseLayout>

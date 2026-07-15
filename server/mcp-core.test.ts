@@ -4,15 +4,18 @@ import { compressors, tools } from '../src/data/catalog';
 const catalog = { catalogVersion: 'test', schemaVersion: '1.0.0', verifiedAt: '2026-07-13', compressors, tools };
 const core = createMcpCore(catalog);
 describe('MCP core', () => {
-	it('negotiates the current protocol and capabilities', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-11-25' } }); expect(response.result.protocolVersion).toBe('2025-11-25'); expect(response.result.serverInfo.version).toBe('2.0.0'); expect(response.result.capabilities.tools).toBeDefined(); });
+	it('negotiates the current protocol and capabilities', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-11-25' } }); expect(response.result.protocolVersion).toBe('2025-11-25'); expect(response.result.serverInfo.version).toBe('2.1.0'); expect(response.result.capabilities.tools).toBeDefined(); });
 	it('negotiates a supported legacy protocol without lying to the client', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 15, method: 'initialize', params: { protocolVersion: '2025-06-18' } }); expect(response.result.protocolVersion).toBe('2025-06-18'); });
 	it('lists the legacy, AirGraph and UCP read-only tools with output contracts', () => {
 		const response: any = core.handle({ jsonrpc: '2.0', id: 2, method: 'tools/list' });
 		expect(response.result.tools).toHaveLength(19);
 		expect(response.result.tools.map((tool: any) => tool.name)).toEqual(expect.arrayContaining(['identify_product', 'build_complete_air_system', 'get_compatibility_evidence', 'get_changefeed', 'evaluate_air_compatibility']));
 		expect(response.result.tools.every((tool: any) => tool.annotations.readOnlyHint && tool.outputSchema.required.includes('canonical_url'))).toBe(true);
+		expect(new Set(response.result.tools.map((tool: any) => tool.outputSchema)).size).toBe(19);
+		expect(response.result.tools.filter((tool: any) => tool._meta['fr.compatair/lifecycle'] === 'core')).toHaveLength(8);
+		expect(response.result.tools.find((tool: any) => tool.name === 'check_compatibility')._meta['fr.compatair/successor']).toBe('evaluate_air_compatibility');
 	});
-	it('preserves insufficient_data for an undocumented FAD', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 3, method: 'tools/call', params: { name: 'check_compatibility', arguments: { compressorId: 'abac-pole-position-os20p', toolId: 'einhell-tc-pe-150' } } }); expect(response.result.structuredContent.compatibility.verdict).toBe('insufficient_data'); });
+	it('preserves insufficient_data for an undocumented FAD', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 3, method: 'tools/call', params: { name: 'check_compatibility', arguments: { compressorId: 'abac-pole-position-os20p', toolId: 'einhell-tc-pe-150' } } }); expect(response.result.structuredContent.compatibility).toMatchObject({ schema_version: '2.0.0', scope: 'air_supply', verdict: 'insufficient_data' }); });
 	it('does not return fabricated offers', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 4, method: 'tools/call', params: { name: 'find_offers', arguments: { productId: 'x' } } }); expect(response.result.structuredContent.offers).toEqual([]); });
 	it('applies the HTTP offer activity policy before returning MCP offers', () => {
 		const filteredCore = createMcpCore(catalog, { snapshotVersion: 'test', offers: [{ id: 'active', productId: 'x' }, { id: 'rejected', productId: 'x' }] }, { isOfferActive: (offer: { id: string }) => offer.id === 'active' });
@@ -38,7 +41,7 @@ describe('MCP core', () => {
 		const tooManyDemands = Array.from({ length: 21 }, () => ({ flowLpm: 100, pressureBar: 6 }));
 		const response: any = core.handle({ jsonrpc: '2.0', id: 8, method: 'tools/call', params: { name: 'size_compressor', arguments: { demands: tooManyDemands, safetyMargin: -1 } } });
 		expect(response.result.isError).toBe(true);
-		expect(response.result.structuredContent.error).toBe('Arguments invalides.');
+		expect(response.result.structuredContent.error).toEqual({ code: 'invalid_arguments', message: 'Arguments invalides.', scope: 'request', retryable: false });
 	});
 	it('rejects unexpected properties and non-finite-equivalent input shapes', () => {
 		const response: any = core.handle({ jsonrpc: '2.0', id: 9, method: 'tools/call', params: { name: 'search_compressors', arguments: { query: 'test', constructor: 'unexpected' } } });
@@ -52,7 +55,7 @@ describe('MCP core', () => {
 		const response: any = core.handle({ jsonrpc: '2.0', id: 11, method: 'tools/call', params: { name: 'get_tool_requirements', arguments: { id: 'einhell-tc-pe-150' } } });
 		expect(response.result.structuredContent).toMatchObject({
 			canonical_url: expect.stringMatching(/^https:\/\/compatair\.fr\/outils-pneumatiques\//),
-			method_version: '2026.07', catalog_version: '2026-07-13', observed_at: '2026-07-13', limitations: [],
+			method_version: '2026.07', catalog_version: 'test', observed_at: '2026-07-13', limitations: [],
 		});
 		expect(response.result.structuredContent.source_urls.length).toBeGreaterThan(0);
 	});
@@ -99,6 +102,8 @@ describe('MCP core', () => {
 		expect(response.result.structuredContent.airgraph.nodes.some((node: any) => node.id === 'ca:tool:einhell-tc-pe-150')).toBe(true);
 		expect(response.result.structuredContent.airgraph.nodes.some((node: any) => node.type === 'tank_volume')).toBe(true);
 		expect(response.result.structuredContent.verdict).toBe('insufficient_data');
+		expect(response.result.structuredContent).toMatchObject({ verdict_scope: 'complete_air_system', overall_system_verdict: { scope: 'complete_air_system', verdict: 'insufficient_data' }, air_supply_verdict: { scope: 'air_supply' } });
+		expect(response.result.structuredContent.compatibility_receipt).toMatchObject({ schema_version: '1.0.0', configuration_id: response.result.structuredContent.configuration_id, integrity: { algorithm: 'sha-256' } });
 		expect(response.result.structuredContent.limitations.every((item: unknown) => typeof item === 'string')).toBe(true);
 	});
 	it('does not propose a compressor substitution when the current air chain already covers the demand', () => {
@@ -116,6 +121,13 @@ describe('MCP core', () => {
 	it('uses the published verdict snapshot as the default compatibility authority', () => {
 		const snapshotCore = createMcpCore(catalog, undefined, { verdictSnapshot: { pairs: [{ compressorId: 'abac-pole-position-os20p', toolId: 'einhell-tc-pe-150', verdict: 'incompatible', limitingFactor: 'flow', calculationVersion: '1.2.0' }] } });
 		const response: any = snapshotCore.handle({ jsonrpc: '2.0', id: 14, method: 'tools/call', params: { name: 'check_compatibility', arguments: { compressorId: 'abac-pole-position-os20p', toolId: 'einhell-tc-pe-150' } } });
-		expect(response.result.structuredContent.compatibility).toMatchObject({ verdict: 'incompatible', limitingFactor: 'flow' });
+		expect(response.result.structuredContent.compatibility).toMatchObject({ scope: 'air_supply', verdict: 'incompatible', limiting_factor: 'flow' });
+	});
+	it('never exposes an unscoped nested verdict in UCP', () => {
+		const firstCompressor = compressors[0]!;
+		const fixedFlowTool = tools.find((item) => item.demandModel === 'fixed-flow')!;
+		const response: any = core.handle({ jsonrpc: '2.0', id: 20, method: 'tools/call', params: { name: 'evaluate_air_compatibility', arguments: { meta: { 'ucp-agent': { profile: 'https://compatair.fr/examples/ucp/platform-profile.json' } }, ucp: { version: '2026-04-08' }, configuration: { compressor: { id: firstCompressor.id }, tools: [{ id: fixedFlowTool.id }] } } } });
+		expect(response.result.structuredContent).toMatchObject({ verdict_scope: 'complete_air_system', verdict_schema_version: '2.0.0', compatibility: { scope: 'air_supply', schema_version: '2.0.0' }, air_supply_verdict: { scope: 'air_supply' }, overall_system_verdict: { scope: 'complete_air_system' } });
+		expect(['continuous', 'intermittent']).not.toContain(response.result.structuredContent.compatibility.verdict);
 	});
 });

@@ -1,14 +1,16 @@
 {
-  "verdict": "compatible_with_limits",
-  "canonical_url": "https://compatair.fr/calculateur/?outil=example-tool&compresseur=example-compressor",
+  "verdict": "compatible",
+  "verdict_scope": "air_supply",
+  "verdict_schema_version": "2.0.0",
+  "canonical_url": "https://compatair.fr/calculateur/?outil=einhell-tc-pe-150&compresseur=kaeser-eurocomp-epc-840-100",
   "product_urls": [
-    "https://compatair.fr/compresseurs/example-compressor/",
-    "https://compatair.fr/outils-pneumatiques/example-tool/"
+    "https://compatair.fr/compresseurs/kaeser-eurocomp-epc-840-100/",
+    "https://compatair.fr/outils-pneumatiques/ponceuse-excentrique-einhell-tc-pe-150/"
   ],
-  "source_urls": ["https://manufacturer.example/manual.pdf"],
+  "source_urls": ["https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902", "https://www.einhell.fr/p/4133330-tc-pe-150/"],
   "method_version": "2026.07",
-  "catalog_version": "2026-07-15",
+  "catalog_version": "d7f4e09e8697ad7dcea1e903edcfb47bff8f828cc9b56fb8af88d0ac1236a5dd",
   "observed_at": "2026-07-15",
-  "limitations": ["Example only: replace with a live MCP result."],
+  "limitations": [],
   "next_actions": ["https://compatair.fr/graphe-preuve/"]
 }

@@ -6,6 +6,7 @@ import newsreaderLatinWghtUrl from '@fontsource-variable/newsreader/files/newsre
 import '../styles/global.css';
 import SiteSearch from '../components/SiteSearch.astro';
 import UiIcon from '../components/UiIcon.astro';
+import AcquisitionTelemetry from '../components/AcquisitionTelemetry.astro';
 import { resolveDocumentTitle } from '../domain/metadata';
 import { socialCardKey } from '../domain/social-card';
 import { serializeJsonLd } from '../domain/structured-data';
@@ -192,6 +193,8 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 						<a href="/methodologie/"><span>Comment fonctionne CompatAir</span><UiIcon name="arrow" size={15} /></a>
 						<a href={lang === 'en' ? '/en/mcp/' : '/mcp-documentation/'}><span>{lang === 'en' ? 'MCP for AI agents' : 'MCP pour agents IA'}</span><UiIcon name="arrow" size={15} /></a>
 						<a href={lang === 'en' ? '/en/ucp/' : '/ucp/'}><span>{lang === 'en' ? 'UCP compatibility service' : 'UCP pour commerce agentique'}</span><UiIcon name="arrow" size={15} /></a>
+						<a href={lang === 'en' ? '/en/agent-fidelity-benchmark/' : '/benchmark-agents/'}><span>{lang === 'en' ? 'Agent fidelity benchmark' : 'Benchmark de fidélité des agents'}</span><UiIcon name="arrow" size={15} /></a>
+						<a href={lang === 'en' ? '/en/compatibility-receipt/' : '/recu-compatibilite/'}><span>{lang === 'en' ? 'Verifiable compatibility receipts' : 'Reçus de compatibilité vérifiables'}</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/sources-fiabilite/"><span>Sources et fiabilité</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/preuves/"><span>Documents et dates vérifiés</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/radar-contradictions/"><span>Radar des contradictions</span><UiIcon name="arrow" size={15} /></a>
@@ -199,6 +202,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 						<a href="/observatoire-qualite-documentaire/"><span>Observatoire documentaire</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/barometre-transparence/"><span>Baromètre de transparence</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/corrections/"><span>Journal des corrections</span><UiIcon name="arrow" size={15} /></a>
+						<a href={lang === 'en' ? '/en/compatibility-impact-feed/' : '/impact-compatibilite/'}><span>Compatibility Impact Feed</span><UiIcon name="arrow" size={15} /></a>
 					</section>
 					<section class="footer-block">
 						<header><span class="footer-icon"><UiIcon name="shield" /></span><h2>Confiance</h2></header>
@@ -216,5 +220,6 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 				</div>
 			</div>
 		</footer>
+		<AcquisitionTelemetry />
 	</body>
 </html>

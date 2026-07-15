@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
+script_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 archive=${1:-}
 checksum_file=${2:-}
 deploy_root=${3:-}
@@ -31,7 +32,24 @@ case "$deploy_root" in
 		;;
 esac
 
-if [[ -n ${COMPATAIR_DEPLOY_FAILPOINT:-} && ( "$deployment_profile" != staging || "$COMPATAIR_DEPLOY_FAILPOINT" != after-switch ) ]]; then
+if [[ "$deployment_profile" == production ]]; then
+	approved_vhost=/etc/compatair/approved/compatair.fr.conf
+	candidate_vhost="$script_dir/deploy/apache/compatair.fr.conf.example"
+	if [[ ! -f "$approved_vhost" || -L "$approved_vhost" || ! -f "$candidate_vhost" || -L "$candidate_vhost" ]]; then
+		echo "The root-approved or candidate Apache configuration is missing" >&2
+		exit 2
+	fi
+	if ! cmp --silent -- "$candidate_vhost" "$approved_vhost"; then
+		echo "The release Apache configuration is not root-approved; run install-mcp.sh manually before deployment" >&2
+		exit 2
+	fi
+	if ! sudo -n /usr/local/sbin/compatair-converge-mcp-config; then
+		echo "Apache convergence failed before activation" >&2
+		exit 1
+	fi
+fi
+
+if [[ -n ${COMPATAIR_DEPLOY_FAILPOINT:-} && ( "$deployment_profile" != staging || ! "$COMPATAIR_DEPLOY_FAILPOINT" =~ ^(after-switch|public-smoke)$ ) ]]; then
 	echo "Invalid or production failpoint" >&2
 	exit 2
 fi
@@ -87,6 +105,22 @@ restart_mcp_and_wait() {
 	curl --fail --silent --show-error --max-time 5 "$health_url" > /dev/null
 }
 
+run_public_smoke() {
+	local expected_release=$1
+	local release_directory=$2
+	local node_binary=/opt/compatair/node/bin/node
+	local smoke_script="$script_dir/scripts/smoke-live-http.mjs"
+	local seo_script="$script_dir/scripts/verify-live-seo.mjs"
+	local mcp_enabled=false
+	if [[ ! -x "$node_binary" || ! -f "$smoke_script" || ! -f "$seo_script" || ! -f "$script_dir/scripts/lib/live-seo-verification.mjs" ]]; then
+		echo "The production smoke runtime is incomplete" >&2
+		return 1
+	fi
+	if systemctl is-enabled --quiet "$mcp_service" 2>/dev/null; then mcp_enabled=true; fi
+	COMPATAIR_EXPECTED_RELEASE_SHA="$expected_release" COMPATAIR_RELEASE_DIR="$release_directory" MCP_ENABLED="$mcp_enabled" "$node_binary" "$smoke_script"
+	COMPATAIR_EXPECTED_RELEASE_SHA="$expected_release" "$node_binary" "$seo_script"
+}
+
 restore_previous_release() {
 	if [[ -z "$previous_target" || -z "$previous_release_id" ]]; then
 		echo "No previous verified release is available for automatic rollback" >&2
@@ -127,6 +161,23 @@ else
 	mv "$incoming" "$release"
 fi
 
+if [[ "$deployment_profile" == production && -n "$previous_target" ]]; then
+	node_binary=/opt/compatair/node/bin/node
+	read_mcp_version() {
+		"$node_binary" --input-type=module -e 'import { pathToFileURL } from "node:url"; const module = await import(pathToFileURL(process.argv[1]).href); process.stdout.write(module.MCP_SERVER_VERSION);' "$1"
+	}
+	current_mcp_version=$(read_mcp_version "$previous_target/_server/mcp-core.mjs")
+	candidate_mcp_version=$(read_mcp_version "$release/_server/mcp-core.mjs")
+	if [[ ! "$current_mcp_version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ || ! "$candidate_mcp_version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+		echo "Unable to verify MCP server versions before activation" >&2
+		exit 2
+	fi
+	if [[ ${current_mcp_version%%.*} != "${candidate_mcp_version%%.*}" ]]; then
+		echo "Major MCP server evolution detected: $current_mcp_version -> $candidate_mcp_version"
+		sudo -n /usr/local/sbin/compatair-assert-recent-drill
+	fi
+fi
+
 ln -sfn "$release" "$current.next"
 mv -Tf "$current.next" "$current"
 activation_pending=true
@@ -138,6 +189,20 @@ fi
 if systemctl is-enabled --quiet "$mcp_service" 2>/dev/null; then
 	if ! restart_mcp_and_wait; then
 		echo "The candidate MCP release is unhealthy" >&2
+		exit 1
+	fi
+fi
+if [[ "$deployment_profile" == staging && ${COMPATAIR_DEPLOY_FAILPOINT:-} == public-smoke ]]; then
+	echo "Intentional staging post-activation smoke failure" >&2
+	exit 1
+fi
+if [[ "$deployment_profile" == production ]]; then
+	if ! run_public_smoke "$release_id" "$release"; then
+		echo "The candidate failed the public HTTPS smoke; rollback is mandatory" >&2
+		exit 1
+	fi
+	if ! sudo -n /bin/systemctl restart compatair-weekly-insights.timer; then
+		echo "The private weekly report timer failed to converge" >&2
 		exit 1
 	fi
 fi

@@ -88,6 +88,12 @@
 	<Location "/events">
 		LimitRequestBody 65536
 	</Location>
+	<Location "/api/v1/compatibility/receipts/verify">
+		LimitRequestBody 65536
+		Header onsuccess unset Cache-Control
+		Header always unset Cache-Control
+		Header always set Cache-Control "no-store"
+	</Location>
 	<Location "/api/ucp/v1/compatibility/evaluate">
 		LimitRequestBody 65536
 		Header onsuccess unset Cache-Control

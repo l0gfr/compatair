@@ -1,9 +1,11 @@
 import { createHash } from 'node:crypto';
 import { UCP_CAPABILITY_NAME, UCP_CAPABILITY_VERSION, UCP_PROTOCOL_VERSION } from './ucp-core.mjs';
+import { CORE_TOOL_NAMES, LEGACY_SUCCESSORS, outputSchemas, receiptSchema } from './mcp-output-schemas.mjs';
 
 const ENGINE_VERSION = '1.2.0';
-const MCP_SERVER_VERSION = '2.0.0';
+const MCP_SERVER_VERSION = '2.1.0';
 const METHOD_VERSION = '2026.07';
+const VERDICT_SCHEMA_VERSION = '2.0.0';
 const PROTOCOL_VERSION = '2025-11-25';
 const SUPPORTED_PROTOCOL_VERSIONS = [PROTOCOL_VERSION, '2025-06-18', '2025-03-26'];
 const STANDARD_ATMOSPHERE_BAR = 1.01325;
@@ -22,6 +24,11 @@ function isOptionalShortString(value) { return value === undefined || isShortStr
 function isOptionalUrlString(value) { return value === undefined || (typeof value === 'string' && value.length > 0 && value.length <= MAX_URL_TEXT); }
 function normalizedText(value) { return String(value ?? '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
 function unique(values) { return [...new Set(values.filter((value) => typeof value === 'string' && value.length > 0))]; }
+function withoutUndefined(value) {
+	if (Array.isArray(value)) return value.filter((item) => item !== undefined).map(withoutUndefined);
+	if (isRecord(value)) return Object.fromEntries(Object.entries(value).filter(([, item]) => item !== undefined).map(([key, item]) => [key, withoutUndefined(item)]));
+	return value;
+}
 function publicCorpusUrl(value) {
 	try {
 		const url = new URL(value, PUBLIC_ORIGIN);
@@ -35,6 +42,11 @@ function compatAirId(type, id) { return `ca:${type}:${id}`; }
 function stableConfigurationId(value) {
 	const normalized = { compressorId: value.compressorId ?? null, mode: value.mode ?? 'successive', toolIds: [...(value.toolIds ?? [])].sort() };
 	return compatAirId('configuration', createHash('sha256').update(JSON.stringify(normalized)).digest('hex').slice(0, 24));
+}
+function stableJson(value) {
+	if (Array.isArray(value)) return `[${value.map(stableJson).join(',')}]`;
+	if (isRecord(value)) return `{${Object.keys(value).sort().map((key) => `${JSON.stringify(key)}:${stableJson(value[key])}`).join(',')}}`;
+	return JSON.stringify(value);
 }
 function publicVerdict(verdict) {
 	if (verdict === 'continuous') return 'compatible';
@@ -51,20 +63,6 @@ function productSummary(type, item) {
 		canonical_url: productUrl(type, item),
 	};
 }
-
-const PUBLIC_RESULT_SCHEMA = {
-	type: 'object',
-	properties: {
-		verdict: { type: 'string', enum: ['information', 'compatible', 'compatible_with_limits', 'incompatible', 'insufficient_data'] },
-		canonical_url: { type: 'string', format: 'uri' },
-		product_urls: { type: 'array', items: { type: 'string', format: 'uri' } },
-		source_urls: { type: 'array', items: { type: 'string', format: 'uri' } },
-		method_version: { type: 'string' }, catalog_version: { type: 'string' }, observed_at: { type: 'string' },
-		limitations: { type: 'array', items: { type: 'string' } }, next_actions: { type: 'array', items: { type: 'string' } },
-	},
-	required: ['verdict', 'canonical_url', 'product_urls', 'source_urls', 'method_version', 'catalog_version', 'observed_at', 'limitations', 'next_actions'],
-	additionalProperties: true,
-};
 
 function validDemand(item) {
 	if (!isRecord(item)) return false;
@@ -219,6 +217,92 @@ function evaluateSystem(compressor, selectedTools, mode = 'successive') {
 	};
 }
 
+function airSupplyVerdict(evaluation, extraLimitations = []) {
+	const limitations = unique([...(evaluation?.limitations ?? []), ...(evaluation?.warnings ?? []), ...extraLimitations]);
+	return {
+		schema_version: VERDICT_SCHEMA_VERSION,
+		scope: 'air_supply',
+		verdict: publicVerdict(evaluation?.verdict ?? 'insufficient_data'),
+		...(evaluation?.verdict ? { engine_verdict: evaluation.verdict } : {}),
+		limiting_factor: evaluation?.limitingFactor ?? null,
+		limitations,
+		metrics: {
+			required_fad_lpm: evaluation?.requiredFadLpm ?? null,
+			available_fad_lpm: evaluation?.availableFadLpm ?? null,
+			effective_average_capacity_lpm: evaluation?.effectiveAverageCapacityLpm ?? null,
+			required_pressure_bar: evaluation?.requiredPressureBar ?? null,
+			available_pressure_bar: evaluation?.availablePressureBar ?? null,
+			demand_flow_lpm: evaluation?.demandFlowLpm ?? null,
+			recommended_fad_lpm: evaluation?.recommendedFadLpm ?? null,
+			margin_percent: evaluation?.marginPercent ?? null,
+			mode: evaluation?.mode ?? null,
+		},
+	};
+}
+
+function completeSystemVerdict(airVerdict, limitations = []) {
+	const normalizedLimitations = unique(limitations);
+	return {
+		schema_version: VERDICT_SCHEMA_VERSION,
+		scope: 'complete_air_system',
+		verdict: normalizedLimitations.length ? 'insufficient_data' : airVerdict.verdict,
+		limiting_factor: normalizedLimitations.length ? 'unverified_components' : airVerdict.limiting_factor,
+		limitations: unique([...airVerdict.limitations, ...normalizedLimitations]),
+	};
+}
+
+function commercialConstraintsVerdict(verified, limitations = []) {
+	return {
+		schema_version: VERDICT_SCHEMA_VERSION,
+		scope: 'commercial_constraints',
+		verdict: verified ? 'compatible' : 'insufficient_data',
+		limiting_factor: verified ? null : 'offers',
+		limitations: unique(limitations),
+	};
+}
+
+function compatibilityReceipt(catalog, { configurationId, overallSystemVerdict, airSupplyVerdict: airVerdict, canonicalUrl, sources }) {
+	const payload = {
+		schema_version: '1.0.0', configuration_id: configurationId,
+		overall_system_verdict: overallSystemVerdict, air_supply_verdict: airVerdict,
+		method_version: METHOD_VERSION, catalog_version: catalog.catalogVersion,
+		observed_at: catalog.verifiedAt ?? new Date(0).toISOString().slice(0, 10), canonical_url: canonicalUrl, source_urls: unique(sources),
+	};
+	const digest = createHash('sha256').update(stableJson(payload)).digest('hex');
+	return {
+		...payload, receipt_id: `ca:receipt:${digest}`,
+		integrity: { algorithm: 'sha-256', digest, canonicalization: 'json-sort-keys-v1' },
+		verification_url: `${PUBLIC_ORIGIN}/recu-compatibilite/#${digest}`,
+	};
+}
+
+function verifyCompatibilityReceipt(value) {
+	if (!isRecord(value)) return { valid: false, error: 'invalid_receipt' };
+	const allowed = ['schema_version', 'receipt_id', 'configuration_id', 'overall_system_verdict', 'air_supply_verdict', 'method_version', 'catalog_version', 'observed_at', 'canonical_url', 'source_urls', 'integrity', 'verification_url'];
+	if (!hasOnlyKeys(value, allowed) || !allowed.every((key) => Object.hasOwn(value, key))) return { valid: false, error: 'invalid_receipt' };
+	const validScopedVerdict = (verdict, scope) => isRecord(verdict)
+		&& hasOnlyKeys(verdict, ['schema_version', 'scope', 'verdict', 'engine_verdict', 'limiting_factor', 'limitations', 'metrics'])
+		&& verdict.schema_version === VERDICT_SCHEMA_VERSION && verdict.scope === scope
+		&& ['information', 'compatible', 'compatible_with_limits', 'incompatible', 'insufficient_data'].includes(verdict.verdict)
+		&& (verdict.engine_verdict === undefined || ['continuous', 'intermittent', 'incompatible', 'insufficient_data'].includes(verdict.engine_verdict))
+		&& (verdict.limiting_factor === null || typeof verdict.limiting_factor === 'string')
+		&& Array.isArray(verdict.limitations) && verdict.limitations.every((item) => typeof item === 'string' && item.length <= 4_000)
+		&& (verdict.metrics === undefined || (isRecord(verdict.metrics) && hasOnlyKeys(verdict.metrics, ['required_fad_lpm', 'available_fad_lpm', 'effective_average_capacity_lpm', 'required_pressure_bar', 'available_pressure_bar', 'demand_flow_lpm', 'recommended_fad_lpm', 'margin_percent', 'mode']) && Object.values(verdict.metrics).every((item) => item === null || typeof item === 'number' || typeof item === 'string')));
+	if (value.schema_version !== '1.0.0' || value.method_version !== METHOD_VERSION || !/^ca:configuration:[a-f0-9]{24}$/.test(value.configuration_id ?? '')
+		|| !Array.isArray(value.source_urls) || !value.source_urls.every((item) => typeof item === 'string') || !isRecord(value.integrity)
+		|| value.integrity.algorithm !== 'sha-256' || value.integrity.canonicalization !== 'json-sort-keys-v1'
+		|| !validScopedVerdict(value.overall_system_verdict, 'complete_air_system') || !validScopedVerdict(value.air_supply_verdict, 'air_supply')) return { valid: false, error: 'invalid_receipt' };
+	const payload = {
+		schema_version: value.schema_version, configuration_id: value.configuration_id,
+		overall_system_verdict: value.overall_system_verdict, air_supply_verdict: value.air_supply_verdict,
+		method_version: value.method_version, catalog_version: value.catalog_version, observed_at: value.observed_at,
+		canonical_url: value.canonical_url, source_urls: value.source_urls,
+	};
+	const digest = createHash('sha256').update(stableJson(payload)).digest('hex');
+	const valid = value.integrity.digest === digest && value.receipt_id === `ca:receipt:${digest}` && value.verification_url === `${PUBLIC_ORIGIN}/recu-compatibilite/#${digest}`;
+	return valid ? { valid: true, receipt_id: value.receipt_id, digest, catalog_version: value.catalog_version, observed_at: value.observed_at } : { valid: false, error: 'integrity_mismatch' };
+}
+
 function airGraph(compressor, selectedTools, evaluation, configurationId) {
 	const productNodes = [
 		{ id: configurationId, type: 'configuration' },
@@ -342,10 +426,14 @@ const airGraphToolDefinitions = [
 ];
 
 const toolDefinitions = [...legacyToolDefinitions, ...airGraphToolDefinitions].map(([name, description, properties, required = []]) => ({
-	name, description,
+	name,
+	description: LEGACY_SUCCESSORS[name] ? `[LEGACY : préférer ${LEGACY_SUCCESSORS[name]}] ${description}` : description,
 	inputSchema: { type: 'object', properties, required, additionalProperties: false },
-	outputSchema: PUBLIC_RESULT_SCHEMA,
+	outputSchema: outputSchemas[name],
 	annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
+	_meta: LEGACY_SUCCESSORS[name]
+		? { 'fr.compatair/lifecycle': 'legacy', 'fr.compatair/successor': LEGACY_SUCCESSORS[name], 'fr.compatair/profile': 'compatibility' }
+		: { 'fr.compatair/lifecycle': CORE_TOOL_NAMES.includes(name) ? 'core' : 'extended', 'fr.compatair/profile': CORE_TOOL_NAMES.includes(name) ? 'core' : 'compatibility' },
 }));
 
 const resources = [
@@ -356,7 +444,9 @@ const resources = [
 	['compatair://affiliation-policy', 'Politique d’affiliation', 'Indépendance des verdicts et offres.'],
 	['compatair://engine/version', 'Version du moteur', 'Version des formules de calcul.'],
 	['compatair://airgraph/schema', 'AirGraph schema', 'Stable node identifiers, relations and evidence boundaries.'],
-	['compatair://responses/schema', 'MCP response contract', 'Required traffic, version, source and limitation fields.'],
+	['compatair://responses/schema', 'MCP response contracts', 'Strict tool-specific output schemas and scoped verdict contracts.'],
+	['compatair://tools/core-profile', 'Recommended core tool profile', 'Eight non-overlapping tools recommended for general agent integrations.'],
+	['compatair://receipts/schema', 'Compatibility receipt schema', 'Deterministic, versioned and independently hash-verifiable compatibility receipt.'],
 	['compatair://changefeed/current', 'Current changefeed state', 'Current method, catalog and offer snapshot versions.'],
 ].map(([uri, name, description]) => ({ uri, name, description, mimeType: 'application/json' }));
 
@@ -367,19 +457,22 @@ const prompts = [
 ];
 
 function result(value, catalog) {
-	const structuredContent = {
-		verdict: 'information', canonical_url: `${PUBLIC_ORIGIN}/mcp-documentation/`, product_urls: [], source_urls: [], method_version: METHOD_VERSION,
-		catalog_version: catalog.verifiedAt ?? catalog.catalogVersion, observed_at: catalog.verifiedAt ?? new Date(0).toISOString().slice(0, 10), limitations: [], next_actions: [],
+	const structuredContent = withoutUndefined({
+		verdict: 'information', verdict_scope: 'information', verdict_schema_version: VERDICT_SCHEMA_VERSION,
+		canonical_url: `${PUBLIC_ORIGIN}/mcp-documentation/`, product_urls: [], source_urls: [], method_version: METHOD_VERSION,
+		catalog_version: catalog.catalogVersion, observed_at: catalog.verifiedAt ?? new Date(0).toISOString().slice(0, 10), limitations: [], next_actions: [],
 		catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, ...value,
-	};
+	});
 	return { content: [{ type: 'text', text: JSON.stringify(structuredContent) }], structuredContent, isError: false };
 }
 function failure(message, catalog, value = {}) {
-	const structuredContent = {
-		verdict: 'insufficient_data', canonical_url: `${PUBLIC_ORIGIN}/mcp-documentation/`, product_urls: [], source_urls: [], method_version: METHOD_VERSION,
-		catalog_version: catalog.verifiedAt ?? catalog.catalogVersion, observed_at: catalog.verifiedAt ?? new Date(0).toISOString().slice(0, 10), limitations: [message], next_actions: [],
-		catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, error: message, ...value,
-	};
+	const structuredContent = withoutUndefined({
+		verdict: 'insufficient_data', verdict_scope: 'request', verdict_schema_version: VERDICT_SCHEMA_VERSION,
+		canonical_url: `${PUBLIC_ORIGIN}/mcp-documentation/`, product_urls: [], source_urls: [], method_version: METHOD_VERSION,
+		catalog_version: catalog.catalogVersion, observed_at: catalog.verifiedAt ?? new Date(0).toISOString().slice(0, 10), limitations: [message], next_actions: [],
+		catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION,
+		error: { code: message === 'Arguments invalides.' ? 'invalid_arguments' : 'insufficient_data', message, scope: 'request', retryable: false }, ...value,
+	});
 	return { content: [{ type: 'text', text: JSON.stringify(structuredContent) }], structuredContent, isError: true };
 }
 
@@ -422,8 +515,13 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 				const commercialLimitations = args.constraints && (!completeOfferCoverage || !merchantCoverage || !budgetCoverage)
 					? ['Les contraintes de prix ou de disponibilité ne peuvent pas être prouvées avec des offres fraîches couvrant chaque composant et le nombre de marchands demandé.'] : [];
 				const requested = new Set(args.requested_outputs ?? ['compatibility', 'mandatory_accessories', 'limits', 'alternatives', 'complete_configuration', 'attribution', 'evidence']);
+				const airVerdict = system.air_supply_verdict;
+				const overallVerdict = system.overall_system_verdict;
+				const commercialVerdict = args.constraints ? commercialConstraintsVerdict(commercialLimitations.length === 0, commercialLimitations) : undefined;
 				return result({
-					verdict: commercialLimitations.length ? 'insufficient_data' : system.verdict,
+					// Backward-compatible alias: the root verdict always has the explicit complete-system scope.
+					verdict: overallVerdict.verdict,
+					verdict_scope: 'complete_air_system',
 					canonical_url: system.canonical_url,
 					product_urls: system.product_urls,
 					source_urls: system.source_urls,
@@ -434,14 +532,21 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 					capability_version: UCP_CAPABILITY_VERSION,
 					intent: args.intent ?? 'will_it_work',
 					security: { access: 'anonymous_read_only', accepts_pii: false, accepts_payment: false, mutates_commerce_state: false },
-					...(requested.has('compatibility') ? { compatibility: system.evaluation } : {}),
+					overall_system_verdict: overallVerdict,
+					air_supply_verdict: airVerdict,
+					...(system.compatibility_receipt ? { compatibility_receipt: system.compatibility_receipt } : {}),
+					...(requested.has('compatibility') ? { compatibility: airVerdict } : {}),
 					...(requested.has('mandatory_accessories') ? { mandatory_accessories: { hoses: system.components?.hoses ?? [], connectors: system.components?.connectors ?? [], filtration: system.components?.filtration ?? [], lubrication: system.components?.lubrication ?? [] } } : {}),
 					...(requested.has('limits') ? { limits: [...system.limitations, ...commercialLimitations] } : {}),
 					...(requested.has('alternatives') ? { alternatives } : {}),
-					...(requested.has('complete_configuration') ? { complete_configuration: system.components, configuration_id: system.configuration_id, airgraph: system.airgraph } : {}),
+					...(requested.has('complete_configuration') ? {
+						complete_configuration: system.components,
+						...(system.configuration_id ? { configuration_id: system.configuration_id } : {}),
+						...(system.airgraph ? { airgraph: system.airgraph } : {}),
+					} : {}),
 					...(requested.has('attribution') ? { attribution: { provider: 'CompatAir', canonical_url: system.canonical_url, method_version: METHOD_VERSION } } : {}),
 					...(requested.has('evidence') ? { evidence_urls: system.source_urls, proof_urls: system.next_actions.filter((value) => typeof value === 'string' && value.startsWith(`${PUBLIC_ORIGIN}/graphe-preuve/`)) } : {}),
-					...(args.constraints ? { commercial_constraints: { requested: args.constraints, verified: commercialLimitations.length === 0, offer_snapshot_version: offersResult?.structuredContent?.offerSnapshotVersion ?? null, covered_products: [...offerProductIds], merchant_count: merchantIds.size, minimum_total_minor: minimumTotalMinor ?? null, currency: 'EUR' } } : {}),
+					...(args.constraints ? { commercial_constraints: { requested: args.constraints, verified: commercialLimitations.length === 0, verdict: commercialVerdict, offer_snapshot_version: offersResult?.structuredContent?.offerSnapshotVersion ?? null, covered_products: [...offerProductIds], merchant_count: merchantIds.size, minimum_total_minor: minimumTotalMinor ?? null, currency: 'EUR' } } : {}),
 				}, catalog);
 			}
 			case 'search_tools': {
@@ -501,7 +606,17 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 				const compressor = compressorMap.get(args.compressorId), tool = toolMap.get(args.toolId);
 				if (!compressor || !tool) return failure('Compresseur ou outil inconnu.', catalog, { canonical_url: `${PUBLIC_ORIGIN}/scanner/` });
 				const evaluation = args.safetyMargin === undefined ? publishedCompatibility(compressor, tool) : compatibility(compressor, tool, args.safetyMargin);
-				return result({ verdict: publicVerdict(evaluation.verdict), canonical_url: compatibilityUrl(compressor, tool), product_urls: [productUrl('compressor', compressor), productUrl('tool', tool)], source_urls: sourceUrls([compressor, tool]), limitations: evaluation.warnings ?? [], next_actions: [proofUrl(compressor, tool)], compatibility: evaluation }, catalog);
+				const airVerdict = airSupplyVerdict(evaluation);
+				const overallVerdict = completeSystemVerdict(airVerdict, ['Le flexible, les raccords, le traitement d’air et les pertes de charge du réseau ne sont pas évalués par cet outil historique.']);
+				const configurationId = stableConfigurationId({ compressorId: compressor.id, toolIds: [tool.id], mode: 'successive' });
+				const canonicalUrl = compatibilityUrl(compressor, tool), sources = sourceUrls([compressor, tool]);
+				return result({
+					verdict: airVerdict.verdict, verdict_scope: 'air_supply', canonical_url: canonicalUrl,
+					product_urls: [productUrl('compressor', compressor), productUrl('tool', tool)], source_urls: sources,
+					limitations: airVerdict.limitations, next_actions: [proofUrl(compressor, tool)], compatibility: airVerdict,
+					overall_system_verdict: overallVerdict, air_supply_verdict: airVerdict,
+					compatibility_receipt: compatibilityReceipt(catalog, { configurationId, overallSystemVerdict: overallVerdict, airSupplyVerdict: airVerdict, canonicalUrl, sources }),
+				}, catalog);
 			}
 			case 'compare_compressors': {
 				const values = args.ids.map((id) => compressorMap.get(id));
@@ -549,14 +664,20 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 					componentLimitations.push('Les pertes de charge réelles du réseau restent indéterminées sans longueur, diamètre, raccords et mesure ou courbe documentée de l’installation.');
 				const configurationId = selected ? stableConfigurationId({ compressorId: selected.id, toolIds: args.toolIds, mode }) : undefined;
 				const products = [...(selected ? [selected] : []), ...tools];
+				const airVerdict = airSupplyVerdict(evaluation);
+				const overallVerdict = completeSystemVerdict(airVerdict, componentLimitations);
+				const canonicalUrl = selected && tools.length === 1 ? compatibilityUrl(selected, tools[0]) : `${PUBLIC_ORIGIN}/calculateur/`;
+				const sources = sourceUrls(products);
 				return result({
-						verdict: componentLimitations.length ? 'insufficient_data' : publicVerdict(evaluation.verdict), canonical_url: selected && tools.length === 1 ? compatibilityUrl(selected, tools[0]) : `${PUBLIC_ORIGIN}/calculateur/`,
-					product_urls: products.map((item) => productUrl(compressorMap.has(item.id) ? 'compressor' : 'tool', item)), source_urls: sourceUrls(products),
+					verdict: overallVerdict.verdict, verdict_scope: 'complete_air_system', canonical_url: canonicalUrl,
+					product_urls: products.map((item) => productUrl(compressorMap.has(item.id) ? 'compressor' : 'tool', item)), source_urls: sources,
 					limitations: [...(evaluation.limitations ?? []), ...componentLimitations], next_actions: selected ? [`${PUBLIC_ORIGIN}/calculateur/`, ...(tools.length === 1 ? [proofUrl(selected, tools[0])] : [])] : ['Compléter les données déterminantes ou réduire la demande.'],
-					configuration_id: configurationId, evaluation,
+					configuration_id: configurationId, evaluation, compatibility: airVerdict,
+					overall_system_verdict: overallVerdict, air_supply_verdict: airVerdict,
 					components: { compressor: selected ? productSummary('compressor', selected) : null, tools: tools.map((tool) => productSummary('tool', tool)), hoses: tools.map((tool) => ({ tool_id: tool.id, requirement: tool.recommendedHose ?? null })), connectors: tools.map((tool) => ({ tool_id: tool.id, requirement: tool.connectorSize ?? null })), filtration: tools.map((tool) => ({ tool_id: tool.id, requirement: tool.filtrationRequirement ?? null })), lubrication: tools.map((tool) => ({ tool_id: tool.id, requirement: tool.lubricationRequirement ?? null })) },
-					compressor_candidates: candidates.map(({ compressor, evaluation: candidateEvaluation }) => ({ compressor: productSummary('compressor', compressor), evaluation: candidateEvaluation })),
+					compressor_candidates: candidates.map(({ compressor, evaluation: candidateEvaluation }) => ({ compressor: productSummary('compressor', compressor), evaluation: candidateEvaluation, air_supply_verdict: airSupplyVerdict(candidateEvaluation) })),
 					...(selected ? { airgraph: airGraph(selected, tools, evaluation, configurationId) } : {}),
+					...(selected ? { compatibility_receipt: compatibilityReceipt(catalog, { configurationId, overallSystemVerdict: overallVerdict, airSupplyVerdict: airVerdict, canonicalUrl, sources }) } : {}),
 				}, catalog);
 			}
 			case 'explain_compatibility_verdict':
@@ -570,23 +691,39 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 					{ factor: 'flow', required_fad_lpm: evaluation.requiredFadLpm, available_fad_lpm: evaluation.availableFadLpm, status: evaluation.availableFadLpm === undefined ? 'insufficient_data' : evaluation.limitingFactor === 'flow' ? 'block' : 'pass' },
 					{ factor: 'duty_cycle', documented: compressor.dutyCycle ?? null, status: evaluation.limitingFactor === 'duty_cycle' ? 'block' : compressor.dutyCycle === undefined ? 'not_applicable_to_published_pair' : 'pass' },
 				];
-				return result({ verdict: publicVerdict(evaluation.verdict), canonical_url: name === 'get_compatibility_evidence' ? proofUrl(compressor, tool) : compatibilityUrl(compressor, tool), product_urls: [productUrl('compressor', compressor), productUrl('tool', tool)], source_urls: sourceUrls([compressor, tool]), limitations: evaluation.warnings ?? [], next_actions: [proofUrl(compressor, tool)], compatibility: evaluation, factors, evidence: { compressor: compressor.evidence, tool: tool.evidence, field_sources: { compressor: compressor.fieldSources ?? {}, tool: tool.fieldSources ?? {} } }, airgraph: airGraph(compressor, [tool], evaluation, configurationId) }, catalog);
+				const airVerdict = airSupplyVerdict(evaluation);
+				const overallVerdict = completeSystemVerdict(airVerdict, ['Cette réponse explique la chaîne pression-débit-cycle ; elle ne valide pas à elle seule le flexible, les raccords, le traitement d’air ni les pertes du réseau.']);
+				const canonicalUrl = name === 'get_compatibility_evidence' ? proofUrl(compressor, tool) : compatibilityUrl(compressor, tool), sources = sourceUrls([compressor, tool]);
+				return result({
+					verdict: airVerdict.verdict, verdict_scope: 'air_supply', canonical_url: canonicalUrl,
+					product_urls: [productUrl('compressor', compressor), productUrl('tool', tool)], source_urls: sources,
+					limitations: airVerdict.limitations, next_actions: [proofUrl(compressor, tool)], compatibility: airVerdict,
+					overall_system_verdict: overallVerdict, air_supply_verdict: airVerdict,
+					compatibility_receipt: compatibilityReceipt(catalog, { configurationId, overallSystemVerdict: overallVerdict, airSupplyVerdict: airVerdict, canonicalUrl, sources }),
+					factors, evidence: { compressor: compressor.evidence, tool: tool.evidence, field_sources: { compressor: compressor.fieldSources ?? {}, tool: tool.fieldSources ?? {} } }, airgraph: airGraph(compressor, [tool], evaluation, configurationId),
+				}, catalog);
 			}
 			case 'find_compatible_alternatives': {
 				const current = compressorMap.get(args.compressorId), tools = selectedProducts(args.toolIds);
 				if (!current || tools.some((item) => !item)) return failure('Compresseur ou outil inconnu.', catalog);
 				const mode = args.mode ?? 'successive';
 				const currentEvaluation = evaluateSystem(current, tools, mode);
+				const currentAirVerdict = airSupplyVerdict(currentEvaluation);
+				const currentOverallVerdict = completeSystemVerdict(currentAirVerdict, ['Les composants du réseau et les pertes de charge ne sont pas fournis à cet outil de substitution.']);
+				const currentConfigurationId = stableConfigurationId({ compressorId: current.id, toolIds: args.toolIds, mode });
+				const canonicalUrl = tools.length === 1 ? compatibilityUrl(current, tools[0]) : `${PUBLIC_ORIGIN}/calculateur/`;
 				if (currentEvaluation.verdict === 'continuous') {
 					const products = [current, ...tools];
+					const sources = sourceUrls(products);
 					return result({
-						verdict: publicVerdict(currentEvaluation.verdict),
-						canonical_url: tools.length === 1 ? compatibilityUrl(current, tools[0]) : `${PUBLIC_ORIGIN}/calculateur/`,
+						verdict: currentAirVerdict.verdict, verdict_scope: 'air_supply', canonical_url: canonicalUrl,
 						product_urls: products.map((item) => productUrl(compressorMap.has(item.id) ? 'compressor' : 'tool', item)),
-						source_urls: sourceUrls(products),
+						source_urls: sources,
 						limitations: ['La chaîne pression-débit-cycle actuelle couvre la demande documentée ; aucune substitution corrective de compresseur n’est nécessaire.'],
 						next_actions: [],
-						current: currentEvaluation,
+						current: currentEvaluation, compatibility: currentAirVerdict,
+						overall_system_verdict: currentOverallVerdict, air_supply_verdict: currentAirVerdict,
+						compatibility_receipt: compatibilityReceipt(catalog, { configurationId: currentConfigurationId, overallSystemVerdict: currentOverallVerdict, airSupplyVerdict: currentAirVerdict, canonicalUrl, sources }),
 						alternatives: [],
 					}, catalog);
 				}
@@ -595,7 +732,16 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 					.sort((left, right) => (left.evaluation.availableFadLpm - left.evaluation.demandFlowLpm) - (right.evaluation.availableFadLpm - right.evaluation.demandFlowLpm) || left.compressor.tankLiters - right.compressor.tankLiters)
 					.slice(0, args.limit ?? 5);
 				const products = [current, ...tools, ...alternatives.map(({ compressor }) => compressor)];
-				return result({ verdict: publicVerdict(currentEvaluation.verdict), canonical_url: tools.length === 1 ? compatibilityUrl(current, tools[0]) : `${PUBLIC_ORIGIN}/calculateur/`, product_urls: products.map((item) => productUrl(compressorMap.has(item.id) ? 'compressor' : 'tool', item)), source_urls: sourceUrls(products), limitations: alternatives.length ? ['Le changement minimal est technique, pas une recommandation de prix faute d’offres comparables complètes.'] : ['Aucune substitution concluante n’est documentée dans le catalogue actuel.'], next_actions: alternatives.map(({ compressor }) => productUrl('compressor', compressor)), current: currentEvaluation, alternatives: alternatives.map(({ compressor, evaluation }) => ({ change: { field: 'compressorId', from: current.id, to: compressor.id }, compressor: productSummary('compressor', compressor), evaluation })) }, catalog);
+				const sources = sourceUrls(products);
+				return result({
+					verdict: currentAirVerdict.verdict, verdict_scope: 'air_supply', canonical_url: canonicalUrl,
+					product_urls: products.map((item) => productUrl(compressorMap.has(item.id) ? 'compressor' : 'tool', item)), source_urls: sources,
+					limitations: alternatives.length ? ['Le changement minimal est technique, pas une recommandation de prix faute d’offres comparables complètes.'] : ['Aucune substitution concluante n’est documentée dans le catalogue actuel.'],
+					next_actions: alternatives.map(({ compressor }) => productUrl('compressor', compressor)), current: currentEvaluation, compatibility: currentAirVerdict,
+					overall_system_verdict: currentOverallVerdict, air_supply_verdict: currentAirVerdict,
+					compatibility_receipt: compatibilityReceipt(catalog, { configurationId: currentConfigurationId, overallSystemVerdict: currentOverallVerdict, airSupplyVerdict: currentAirVerdict, canonicalUrl, sources }),
+					alternatives: alternatives.map(({ compressor, evaluation }) => ({ change: { field: 'compressorId', from: current.id, to: compressor.id }, compressor: productSummary('compressor', compressor), evaluation, air_supply_verdict: airSupplyVerdict(evaluation) })),
+				}, catalog);
 			}
 			case 'compare_complete_systems': {
 				const systems = [];
@@ -603,7 +749,16 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 					const compressor = compressorMap.get(input.compressorId), tools = selectedProducts(input.toolIds);
 					if (!compressor || tools.some((item) => !item)) return failure('Une configuration contient un produit inconnu.', catalog);
 					const mode = input.mode ?? 'successive', evaluation = evaluateSystem(compressor, tools, mode);
-					systems.push({ configuration_id: stableConfigurationId({ compressorId: compressor.id, toolIds: input.toolIds, mode }), compressor: productSummary('compressor', compressor), tools: tools.map((tool) => productSummary('tool', tool)), mode, evaluation });
+					const configurationId = stableConfigurationId({ compressorId: compressor.id, toolIds: input.toolIds, mode });
+					const airVerdict = airSupplyVerdict(evaluation);
+					const overallVerdict = completeSystemVerdict(airVerdict, ['Les composants du réseau et les pertes de charge ne sont pas fournis à cet outil de comparaison.']);
+					const canonicalUrl = tools.length === 1 ? compatibilityUrl(compressor, tools[0]) : `${PUBLIC_ORIGIN}/calculateur/`;
+					const sources = sourceUrls([compressor, ...tools]);
+					systems.push({
+						configuration_id: configurationId, compressor: productSummary('compressor', compressor), tools: tools.map((tool) => productSummary('tool', tool)), mode, evaluation,
+						overall_system_verdict: overallVerdict, air_supply_verdict: airVerdict,
+						compatibility_receipt: compatibilityReceipt(catalog, { configurationId, overallSystemVerdict: overallVerdict, airSupplyVerdict: airVerdict, canonicalUrl, sources }),
+					});
 				}
 				const products = systems.flatMap((system) => [compressorMap.get(system.compressor.id), ...system.tools.map((tool) => toolMap.get(tool.id))]).filter(Boolean);
 				return result({ canonical_url: `${PUBLIC_ORIGIN}/comparateur/`, product_urls: unique(systems.flatMap((system) => [system.compressor.canonical_url, ...system.tools.map((tool) => tool.canonical_url)])), source_urls: sourceUrls(products), limitations: ['Aucun score commercial ni classement par commission n’est calculé.'], next_actions: systems.map((system) => system.tools.length === 1 ? compatibilityUrl(compressorMap.get(system.compressor.id), toolMap.get(system.tools[0].id)) : `${PUBLIC_ORIGIN}/calculateur/`), systems }, catalog);
@@ -639,9 +794,11 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 			'compatair://tools/taxonomy': { categories: catalog.toolTaxonomy ?? [...new Set(catalog.tools.map((item) => ({ label: item.category })))].sort() },
 			'compatair://confidence-scale': { A: 'documentation constructeur exploitable', B: 'source officielle incomplète ou interpolation encadrée', C: 'donnée ambiguë, aucun verdict positif', D: 'information non confirmée, aucun verdict positif' },
 			'compatair://affiliation-policy': { verdictBeforeOffers: true, commissionAffectsVerdict: false, staleOfferHours: 48 },
-			'compatair://engine/version': { mcpServerVersion: MCP_SERVER_VERSION, methodVersion: METHOD_VERSION, engineVersion: ENGINE_VERSION, verdicts: ['continuous', 'intermittent', 'incompatible', 'insufficient_data'] },
+			'compatair://engine/version': { mcpServerVersion: MCP_SERVER_VERSION, methodVersion: METHOD_VERSION, engineVersion: ENGINE_VERSION, verdictSchemaVersion: VERDICT_SCHEMA_VERSION, verdicts: ['continuous', 'intermittent', 'incompatible', 'insufficient_data'] },
 			'compatair://airgraph/schema': { schemaVersion: '0.1.0', idPattern: '^ca:(compressor|tool|configuration|requirement):', nodeTypes: ['configuration', 'compressor', 'tool', 'pressure_requirement', 'flow_requirement', 'usage_profile', 'tank_volume', 'compressor_duty_cycle', 'hose_requirement', 'connector_requirement', 'filtration_requirement', 'lubrication_requirement'], relations: ['uses_compressor', 'uses_tool', 'has_tank', 'has_duty_cycle', 'has_usage_profile', 'requires_pressure', 'requires_flow', 'requires_hose', 'requires_connector', 'requires_filtration', 'requires_lubrication', 'compatible', 'compatible_with_limits', 'incompatible', 'insufficient_data'] },
-			'compatair://responses/schema': PUBLIC_RESULT_SCHEMA,
+			'compatair://responses/schema': { schemaVersion: '2.0.0', outputSchemas },
+			'compatair://tools/core-profile': { schemaVersion: '1.0.0', profile: 'core', tools: CORE_TOOL_NAMES, legacySuccessors: LEGACY_SUCCESSORS },
+			'compatair://receipts/schema': receiptSchema,
 			'compatair://changefeed/current': { methodVersion: METHOD_VERSION, catalogVersion: catalog.catalogVersion, catalogObservedAt: catalog.verifiedAt, offerSnapshotVersion: offerSnapshot.snapshotVersion },
 		};
 		return values[uri];
@@ -654,7 +811,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 			if (!isRecord(params)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Paramètres invalides.' } };
 			let value;
 			switch (method) {
-				case 'initialize': value = { protocolVersion: SUPPORTED_PROTOCOL_VERSIONS.includes(params.protocolVersion) ? params.protocolVersion : PROTOCOL_VERSION, capabilities: { tools: { listChanged: false }, resources: { subscribe: false, listChanged: false }, prompts: { listChanged: false } }, serverInfo: { name: 'compatair-mcp', title: 'CompatAir MCP', version: MCP_SERVER_VERSION, description: 'Read-only, deterministic pneumatic compatibility data with canonical CompatAir URLs and evidence.' }, instructions: 'Serveur en lecture seule. Conserver verdict, canonical_url, limitations, source_urls, insufficient_data et toutes les versions. Ne jamais laisser une offre commerciale modifier un verdict technique.' }; break;
+				case 'initialize': value = { protocolVersion: SUPPORTED_PROTOCOL_VERSIONS.includes(params.protocolVersion) ? params.protocolVersion : PROTOCOL_VERSION, capabilities: { tools: { listChanged: false }, resources: { subscribe: false, listChanged: false }, prompts: { listChanged: false } }, serverInfo: { name: 'compatair-mcp', title: 'CompatAir MCP', version: MCP_SERVER_VERSION, description: 'Read-only, deterministic pneumatic compatibility data with canonical CompatAir URLs and evidence.' }, instructions: 'Serveur en lecture seule. Conserver verdict_scope, overall_system_verdict, air_supply_verdict, canonical_url, limitations, source_urls, insufficient_data et toutes les versions. Le champ verdict historique est un alias dont la portée est toujours donnée par verdict_scope. Ne jamais laisser une offre commerciale modifier un verdict technique.' }; break;
 				case 'ping': value = {}; break;
 				case 'tools/list': { if (params.cursor !== undefined && !isShortString(params.cursor)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Curseur invalide.' } }; const found = page(toolDefinitions, params.cursor, 20); value = { tools: found.items, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }; break; }
 				case 'tools/call': { if (!isShortString(params.name)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Nom d’outil invalide.' } }; const called = callTool(params.name, params.arguments ?? {}); if (called === undefined) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Outil inconnu.' } }; value = called; break; }
@@ -669,4 +826,4 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 	};
 }
 
-export { ENGINE_VERSION, MCP_SERVER_VERSION, METHOD_VERSION, PROTOCOL_VERSION, compatibility, interpolateFad };
+export { ENGINE_VERSION, MCP_SERVER_VERSION, METHOD_VERSION, PROTOCOL_VERSION, VERDICT_SCHEMA_VERSION, compatibility, interpolateFad, verifyCompatibilityReceipt };

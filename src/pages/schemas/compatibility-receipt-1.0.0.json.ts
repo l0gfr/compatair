@@ -1,0 +1,7 @@
+import type { APIRoute } from 'astro';
+import schema from '../../../contracts/mcp/schemas/compatibility-receipt.schema.json';
+
+export const prerender = true;
+export const GET: APIRoute = () => new Response(`${JSON.stringify(schema, null, 2)}\n`, {
+	headers: { 'Content-Type': 'application/schema+json; charset=utf-8', 'Cache-Control': 'public, max-age=3600', 'X-Content-Type-Options': 'nosniff' },
+});

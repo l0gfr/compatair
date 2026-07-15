@@ -163,7 +163,22 @@ try {
 }`;
 
 export const resultEnvelope = `{
-  "verdict": "compatible_with_limits",
+  "verdict": "insufficient_data",
+  "verdict_scope": "complete_air_system",
+  "verdict_schema_version": "2.0.0",
+  "overall_system_verdict": {
+    "schema_version": "2.0.0",
+    "scope": "complete_air_system",
+    "verdict": "insufficient_data",
+    "limitations": ["Network components remain unverified."]
+  },
+  "air_supply_verdict": {
+    "schema_version": "2.0.0",
+    "scope": "air_supply",
+    "verdict": "compatible",
+    "engine_verdict": "continuous",
+    "limitations": []
+  },
   "canonical_url": "https://compatair.fr/calculateur/?outil=...&compresseur=...",
   "product_urls": [],
   "source_urls": [],
@@ -198,6 +213,17 @@ export const legacyTools = [
   'find_offers',
 ] as const;
 
+export const coreTools = [
+  'identify_product',
+  'evaluate_air_compatibility',
+  'build_complete_air_system',
+  'find_compatible_alternatives',
+  'get_compatibility_evidence',
+  'search_knowledge',
+  'get_current_offers',
+  'get_changefeed',
+] as const;
+
 export const mcpResources = [
   'compatair://catalog/version',
   'compatair://methodology',
@@ -207,6 +233,8 @@ export const mcpResources = [
   'compatair://engine/version',
   'compatair://airgraph/schema',
   'compatair://responses/schema',
+  'compatair://tools/core-profile',
+  'compatair://receipts/schema',
   'compatair://changefeed/current',
 ] as const;
 

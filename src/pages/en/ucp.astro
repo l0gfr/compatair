@@ -168,6 +168,10 @@ const alternates = [
 						<thead><tr><th>Field</th><th>Guarantee</th><th>Expected agent behavior</th></tr></thead>
 						<tbody>
 							<tr><td><code>verdict</code></td><td>Technical state, never a commercial outcome.</td><td>Never soften or upgrade it.</td></tr>
+							<tr><td><code>verdict_scope</code></td><td>Explicit scope of the root alias.</td><td>Never confuse air supply with the complete system.</td></tr>
+							<tr><td><code>overall_system_verdict</code></td><td>Complete-system decision.</td><td>Present it separately.</td></tr>
+							<tr><td><code>air_supply_verdict</code></td><td>Pressure, flow and duty-cycle decision.</td><td>Keep it strictly within <code>air_supply</code>.</td></tr>
+							<tr><td><code>compatibility_receipt</code></td><td>Configuration, versions, evidence, date and digest.</td><td>Verify or retain it for audit.</td></tr>
 							<tr><td><code>canonical_url</code></td><td>CompatAir page carrying the decision.</td><td>Cite or offer it with the answer.</td></tr>
 							<tr><td><code>source_urls</code></td><td>Documents supporting the specifications.</td><td>Preserve each claim-to-document link.</td></tr>
 							<tr><td><code>limitations</code></td><td>Missing facts and calculation boundaries.</td><td>Expose them without omission.</td></tr>
@@ -182,7 +186,7 @@ const alternates = [
 			<section id="commerce">
 				<p class="eyebrow">Enrichment, not transaction</p>
 				<h2>Price and availability remain separate constraints</h2>
-				<p>A request may include a maximum budget, a minimum merchant count and a country. The server proves these constraints only from fresh offers covering every component. When coverage is missing, it returns <code>insufficient_data</code>; it never fabricates price or stock.</p>
+				<p>A request may include a maximum budget, a minimum merchant count and a country. The server proves these constraints only from fresh offers covering every component. Missing coverage yields a separate <code>commercial_constraints</code> scoped verdict of <code>insufficient_data</code>; it neither degrades nor upgrades the technical verdict, and no price or stock is fabricated.</p>
 				<pre><code>{commercialConstraintsExample}</code></pre>
 				<ul class="mcp-checklist">
 					<li>Currently accepted currency: EUR.</li>
@@ -207,6 +211,9 @@ const alternates = [
 							<tr><td>Catalog</td><td><a href="/data/catalog.json"><code>/data/catalog.json</code></a> · <a href="/data/catalog.ndjson">NDJSON</a></td><td>Source-linked products</td></tr>
 							<tr><td>Evidence</td><td><a href="/data/evidence-history.json"><code>/data/evidence-history.json</code></a> · <a href="/data/citations.ndjson">citations</a></td><td>History + fingerprints</td></tr>
 							<tr><td>Changes</td><td><a href="/data/changefeed.json"><code>/data/changefeed.json</code></a> · <a href="/data/changefeed.ndjson">NDJSON</a></td><td>Versioned events</td></tr>
+							<tr><td>Agent fidelity</td><td><a href="/data/agent-fidelity-benchmark.json">Benchmark JSON</a> · <a href="/data/agent-fidelity-leaderboard.json">leaderboard</a></td><td>100 reproducible scenarios</td></tr>
+							<tr><td>Portfolio impact</td><td><a href="/data/compatibility-impact-feed.json">Impact Feed JSON</a> · <a href="/data/compatibility-impact-feed.ndjson">NDJSON</a></td><td>Evidence to affected pairs</td></tr>
+							<tr><td>Receipts</td><td><a href="/schemas/compatibility-receipt-1.0.0.json">JSON Schema</a> · <a href="/en/compatibility-receipt/">verifier</a></td><td>Deterministic SHA-256</td></tr>
 							<tr><td>Freshness</td><td><a href="/data/freshness.json"><code>/data/freshness.json</code></a></td><td>Dataset age and availability</td></tr>
 							<tr><td>Integrity</td><td><a href="/data/integrity.json"><code>/data/integrity.json</code></a></td><td>Per-artifact SHA-256</td></tr>
 							<tr><td>Dataset discovery</td><td><a href="/data/catalog-dcat.jsonld"><code>/data/catalog-dcat.jsonld</code></a></td><td>DCAT 3 JSON-LD</td></tr>

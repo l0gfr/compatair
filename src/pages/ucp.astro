@@ -167,6 +167,10 @@ const alternates = [
 						<thead><tr><th>Champ</th><th>Garantie</th><th>Comportement attendu de l’agent</th></tr></thead>
 						<tbody>
 							<tr><td><code>verdict</code></td><td>État calculé, jamais commercial.</td><td>Ne pas le reformuler en un état plus favorable.</td></tr>
+							<tr><td><code>verdict_scope</code></td><td>Portée explicite de l’alias racine.</td><td>Ne jamais confondre chaîne d’air et système complet.</td></tr>
+							<tr><td><code>overall_system_verdict</code></td><td>Décision du système complet.</td><td>La présenter séparément.</td></tr>
+							<tr><td><code>air_supply_verdict</code></td><td>Décision pression, débit et cycle.</td><td>La limiter strictement à <code>air_supply</code>.</td></tr>
+							<tr><td><code>compatibility_receipt</code></td><td>Configuration, versions, sources, date et empreinte.</td><td>Le vérifier ou le conserver pour l’audit.</td></tr>
 							<tr><td><code>canonical_url</code></td><td>Page CompatAir portant la décision.</td><td>La citer ou la proposer avec le résultat.</td></tr>
 							<tr><td><code>source_urls</code></td><td>Documents soutenant les caractéristiques.</td><td>Conserver le lien affirmation → document.</td></tr>
 							<tr><td><code>limitations</code></td><td>Données absentes et frontière du calcul.</td><td>Les restituer sans les masquer.</td></tr>
@@ -181,7 +185,7 @@ const alternates = [
 			<section id="commerce">
 				<p class="eyebrow">Enrichissement, pas transaction</p>
 				<h2>Prix et disponibilité restent des contraintes séparées</h2>
-				<p>Une requête peut demander un budget maximum, un nombre minimal de marchands et un pays. Le serveur vérifie ces contraintes uniquement à partir d’offres fraîches couvrant chaque composant. Si cette couverture manque, le résultat devient <code>insufficient_data</code>&nbsp;: aucun prix ni stock n’est inventé.</p>
+				<p>Une requête peut demander un budget maximum, un nombre minimal de marchands et un pays. Le serveur vérifie ces contraintes uniquement à partir d’offres fraîches couvrant chaque composant. Une couverture manquante produit un verdict séparé de portée <code>commercial_constraints</code> à <code>insufficient_data</code>&nbsp;: elle ne dégrade ni n’améliore le verdict technique, et aucun prix ni stock n’est inventé.</p>
 				<pre><code>{commercialConstraintsExample}</code></pre>
 				<ul class="mcp-checklist">
 					<li>Devise actuellement acceptée&nbsp;: EUR.</li>
@@ -206,6 +210,9 @@ const alternates = [
 							<tr><td>Catalogue</td><td><a href="/data/catalog.json"><code>/data/catalog.json</code></a> · <a href="/data/catalog.ndjson">NDJSON</a></td><td>Produits sourcés</td></tr>
 							<tr><td>Preuves</td><td><a href="/data/evidence-history.json"><code>/data/evidence-history.json</code></a> · <a href="/data/citations.ndjson">citations</a></td><td>Historique + empreintes</td></tr>
 							<tr><td>Changements</td><td><a href="/data/changefeed.json"><code>/data/changefeed.json</code></a> · <a href="/data/changefeed.ndjson">NDJSON</a></td><td>Événements versionnés</td></tr>
+							<tr><td>Fidélité des agents</td><td><a href="/data/agent-fidelity-benchmark.json">Benchmark JSON</a> · <a href="/data/agent-fidelity-leaderboard.json">leaderboard</a></td><td>100 scénarios reproductibles</td></tr>
+							<tr><td>Impact portefeuille</td><td><a href="/data/compatibility-impact-feed.json">Impact Feed JSON</a> · <a href="/data/compatibility-impact-feed.ndjson">NDJSON</a></td><td>Preuves vers couples affectés</td></tr>
+							<tr><td>Reçus</td><td><a href="/schemas/compatibility-receipt-1.0.0.json">JSON Schema</a> · <a href="/recu-compatibilite/">vérificateur</a></td><td>SHA-256 déterministe</td></tr>
 							<tr><td>Fraîcheur</td><td><a href="/data/freshness.json"><code>/data/freshness.json</code></a></td><td>Âge et disponibilité par dataset</td></tr>
 							<tr><td>Intégrité</td><td><a href="/data/integrity.json"><code>/data/integrity.json</code></a></td><td>SHA-256 par artefact</td></tr>
 							<tr><td>Découverte dataset</td><td><a href="/data/catalog-dcat.jsonld"><code>/data/catalog-dcat.jsonld</code></a></td><td>DCAT 3 JSON-LD</td></tr>

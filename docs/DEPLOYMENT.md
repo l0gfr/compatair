@@ -142,6 +142,8 @@ Le rapport `demand-priorities.json` exclut toute dimension comptant moins de cin
 
 La couverture pondérée vaut `somme(demande outil × couples concluants) / somme(demande outil × couples éligibles)`. L’objectif opérationnel est fixé à 80 %. Le rapport publie aussi la couverture non pondérée, la part des sélections d’outils effectivement visible après suppression et le nombre d’outils visibles sans verdict exploitable. En l’absence d’agrégats privés suffisants, le statut reste `insufficient_data` : le build public ne remplace jamais la demande observée par une pondération uniforme.
 
+`compatair-weekly-insights.timer` génère automatiquement chaque lundi un rapport privé consolidé dans `/var/lib/compatair/reports/latest.json`, plus une archive datée. Il croise la couverture pondérée, les vingt déficits prioritaires, le funnel, les canaux organic/agent/referral/widget/API/MCP/UCP et les conversions explicites. Le service n’a aucun accès réseau, écrit avec un `UMask=0077` et conserve uniquement des compteurs fermés. Un rapport vide reste explicitement `insufficient_data` au lieu de simuler une demande.
+
 Pour mesurer la complétion du calculateur sans exporter de navigation brute :
 
 ```bash
@@ -197,13 +199,19 @@ sudo systemctl reload apache2
 curl --fail http://127.0.0.1:8788/health
 ```
 
-Le drill exécute ensuite réellement un MCP invalide, une configuration Apache rejetée et une interruption `TERM` juste après le changement de lien. Après chaque défaut, il exige le retour au SHA initial et une santé MCP valide. La preuve JSON est écrite avec le mode `0600` sous `/var/lib/compatair-staging/failure-drills/` :
+Le drill exécute ensuite réellement un MCP invalide, une configuration Apache rejetée, une interruption `TERM` juste après le changement de lien et un échec du smoke post-activation. Après chaque défaut, il exige le retour au SHA initial et une santé MCP valide. Chaque preuve JSON `1.1.0` est conservée avec le mode `0600` sous `/var/lib/compatair-staging/failure-drills/` :
 
 ```bash
 sudo bash deploy/server/staging-failure-drill.sh
 ```
 
-Cette commande est une opération serveur explicite. Les tests locaux vérifient le contrat et la syntaxe, mais ne sont pas présentés comme la preuve du drill systemd/Apache réel.
+Cette commande est une opération serveur explicite. Les tests locaux vérifient le contrat et la syntaxe, mais ne sont pas présentés comme la preuve du drill systemd/Apache réel. Une évolution majeure du serveur MCP est refusée par le déploiement si le dernier drill réussi date de plus de 90 jours.
+
+### Garde transactionnel de production
+
+Avant la bascule, le déploiement compare le vhost de la release à la copie approuvée par root sous `/etc/compatair/approved/compatair.fr.conf`. Le compte `compatair-deploy` ne peut appeler qu’une commande root sans argument, `/usr/local/sbin/compatair-converge-mcp-config`, qui réapplique cette copie, exécute `apache2ctl configtest` puis recharge Apache avec restauration automatique en cas d’échec. Un changement de vhost exige donc une nouvelle exécution manuelle de `install-mcp.sh` par root.
+
+Après la bascule du lien et le redémarrage MCP, les smokes HTTPS et SEO s’exécutent alors que `activation_pending=true`. Tout échec quitte le script, déclenche le trap de rollback et restaure le SHA précédent. Le job GitHub répète ensuite les smokes depuis un second réseau ; cette seconde vérification ne remplace pas le garde transactionnel distant.
 
 ## Rollback manuel
 

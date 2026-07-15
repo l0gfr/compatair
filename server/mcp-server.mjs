@@ -3,9 +3,10 @@ import { realpathSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { createMcpCore, ENGINE_VERSION, MCP_SERVER_VERSION, METHOD_VERSION, PROTOCOL_VERSION } from './mcp-core.mjs';
+import { createMcpCore, ENGINE_VERSION, MCP_SERVER_VERSION, METHOD_VERSION, PROTOCOL_VERSION, verifyCompatibilityReceipt } from './mcp-core.mjs';
 import { createDemandAggregateStore, DEMAND_EVENT_SCHEMA_VERSION, isValidCalculationVersion, validateDemandEvent } from './demand-aggregates.mjs';
 import { createProductFunnelAggregateStore, PRODUCT_FUNNEL_SCHEMA_VERSION, validateProductFunnelEvent } from './product-funnel-aggregates.mjs';
+import { ACQUISITION_SCHEMA_VERSION, createAcquisitionAggregateStore, validateAcquisitionEvent } from './acquisition-aggregates.mjs';
 import { authorizeUcpRequest, createUcpError, createUcpToolArguments, fetchPublicUcpProfile, ucpErrorStatus, validateUcpEvaluationRequest } from './ucp-core.mjs';
 
 const BODY_LIMIT = 65_536;
@@ -91,6 +92,17 @@ export function resolveProductFunnelAggregatePath(demandAggregatePath, configure
 	return configuredPath || (demandAggregatePath ? resolve(dirname(demandAggregatePath), 'product-funnel-aggregates.json') : undefined);
 }
 
+export function resolveAcquisitionAggregatePath(demandAggregatePath, configuredPath) {
+	return configuredPath || (demandAggregatePath ? resolve(dirname(demandAggregatePath), 'acquisition-aggregates.json') : undefined);
+}
+
+function acquisitionOutcome(structuredContent) {
+	if (!structuredContent || structuredContent.error) return 'error';
+	if (structuredContent.verdict === 'insufficient_data') return 'insufficient_data';
+	if (structuredContent.verdict === 'incompatible') return 'incompatible';
+	return structuredContent.verdict === 'compatible' || structuredContent.verdict === 'compatible_with_limits' ? 'success' : 'unknown';
+}
+
 function createRateLimiter() {
 	const requests = new Map();
 	return (key) => {
@@ -131,16 +143,10 @@ function isJsonContentType(request) {
 	return /^application\/json(?:\s*;|$)/.test(value);
 }
 
-function publicCompatibilityVerdict(value) {
-	if (value === 'continuous') return 'compatible';
-	if (value === 'intermittent') return 'compatible_with_limits';
-	return value === 'incompatible' ? 'incompatible' : 'insufficient_data';
-}
-
 /**
- * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, knowledgeItems?: any[], changefeedEvents?: any[], allowedOrigins: Set<string>, demandAggregatePath?: string, productFunnelAggregatePath?: string, proxyManagesApiHeaders?: boolean, now?: () => number, fetchUcpProfile?: (url: URL) => Promise<any>, recordAffiliateClick?: (offerId: string) => void, recordToolCall?: (toolName: string) => void }} options
+ * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, knowledgeItems?: any[], changefeedEvents?: any[], allowedOrigins: Set<string>, demandAggregatePath?: string, productFunnelAggregatePath?: string, acquisitionAggregatePath?: string, proxyManagesApiHeaders?: boolean, now?: () => number, fetchUcpProfile?: (url: URL) => Promise<any>, recordAffiliateClick?: (offerId: string) => void, recordToolCall?: (toolName: string) => void }} options
  */
-export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable', calculationVersion: ENGINE_VERSION }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, knowledgeItems = [], changefeedEvents = [], allowedOrigins, demandAggregatePath = undefined, productFunnelAggregatePath = undefined, proxyManagesApiHeaders = false, now = Date.now, fetchUcpProfile = fetchPublicUcpProfile, recordAffiliateClick = () => {}, recordToolCall = () => {} }) {
+export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable', calculationVersion: ENGINE_VERSION }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, knowledgeItems = [], changefeedEvents = [], allowedOrigins, demandAggregatePath = undefined, productFunnelAggregatePath = undefined, acquisitionAggregatePath = undefined, proxyManagesApiHeaders = false, now = Date.now, fetchUcpProfile = fetchPublicUcpProfile, recordAffiliateClick = () => {}, recordToolCall = () => {} }) {
 	const core = createMcpCore(catalog, offerSnapshot, { isOfferActive: (offer) => isFreshOfferSnapshot(offer, now()) && allowedOfferRedirect(offer) !== undefined, verdictSnapshot, knowledgeItems, changefeedEvents, now });
 	const authoritativeCalculationVersion = isValidCalculationVersion(verdictSnapshot.calculationVersion) ? verdictSnapshot.calculationVersion : ENGINE_VERSION;
 	const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
@@ -152,6 +158,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 	const counters = { rpc: 0, errors: 0 };
 	const demandStore = createDemandAggregateStore({ filePath: demandAggregatePath, catalog });
 	const productFunnelStore = createProductFunnelAggregateStore({ filePath: productFunnelAggregatePath });
+	const acquisitionStore = createAcquisitionAggregateStore({ filePath: acquisitionAggregatePath });
 	function callPublicTool(name, args) {
 		const response = core.handle({ jsonrpc: '2.0', id: 'http-api', method: 'tools/call', params: { name, arguments: args } });
 		return response?.result;
@@ -187,6 +194,10 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			'Access-Control-Allow-Methods': methods, 'Access-Control-Allow-Headers': 'Accept', Vary: 'Origin',
 		};
 	}
+	async function recordAcquisition(event) {
+		try { await acquisitionStore.record(event); }
+		catch { counters.errors++; }
+	}
 
 	async function handle(request, response) {
 		response.setTimeout(10_000);
@@ -194,7 +205,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 		let url;
 		try { url = new URL(request.url, 'http://localhost'); } catch { return json(response, 400, { error: 'invalid_request_target' }); }
 
-		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', mcpServerVersion: MCP_SERVER_VERSION, protocolVersion: PROTOCOL_VERSION, methodVersion: METHOD_VERSION, catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, verdictVersion: verdictSnapshot.verdictVersion, knowledgeItems: knowledgeItems.length, changefeedEvents: changefeedEvents.length, ucp: { readOnlyCompatibility: true }, demandAggregation: { enabled: demandStore.enabled, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION }, productFunnelAggregation: { enabled: productFunnelStore.enabled, schemaVersion: PRODUCT_FUNNEL_SCHEMA_VERSION } });
+		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', mcpServerVersion: MCP_SERVER_VERSION, protocolVersion: PROTOCOL_VERSION, methodVersion: METHOD_VERSION, catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, verdictVersion: verdictSnapshot.verdictVersion, knowledgeItems: knowledgeItems.length, changefeedEvents: changefeedEvents.length, ucp: { readOnlyCompatibility: true }, demandAggregation: { enabled: demandStore.enabled, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION }, productFunnelAggregation: { enabled: productFunnelStore.enabled, schemaVersion: PRODUCT_FUNNEL_SCHEMA_VERSION }, acquisitionAggregation: { enabled: acquisitionStore.enabled, schemaVersion: ACQUISITION_SCHEMA_VERSION } });
 
 		if (url.pathname === '/compatibilite' || url.pathname.startsWith('/compatibilite/')) {
 			if (!['GET', 'HEAD'].includes(request.method ?? '')) return json(response, 405, { error: 'method_not_allowed' }, { Allow: 'GET, HEAD' });
@@ -214,9 +225,11 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			if (request.method !== 'GET') return apiJson(405, { error: 'method_not_allowed' }, { ...corsHeaders, Allow: 'GET, OPTIONS' });
 			if (!allow(`api:${clientAddress(request)}`)) return apiJson(429, { error: 'rate_limited' }, { ...corsHeaders, 'Retry-After': '60' });
 			const keys = [...url.searchParams.keys()];
-			if (keys.some((key) => !['compressorId', 'toolId'].includes(key)) || ['compressorId', 'toolId'].some((key) => url.searchParams.getAll(key).length > 1)) return apiJson(400, { error: 'invalid_query' }, corsHeaders);
+			if (keys.some((key) => !['compressorId', 'toolId', 'channel'].includes(key)) || ['compressorId', 'toolId', 'channel'].some((key) => url.searchParams.getAll(key).length > 1)) return apiJson(400, { error: 'invalid_query' }, corsHeaders);
 			const compressorId = url.searchParams.get('compressorId') ?? '';
 			const toolId = url.searchParams.get('toolId') ?? '';
+			const acquisitionChannel = url.searchParams.get('channel') === 'widget' ? 'widget' : 'api';
+			if (url.searchParams.has('channel') && acquisitionChannel !== 'widget') return apiJson(400, { error: 'invalid_query' }, corsHeaders);
 			if (!/^[a-z0-9-]{1,160}$/.test(compressorId) || !/^[a-z0-9-]{1,160}$/.test(toolId)) return apiJson(400, { error: 'invalid_query' }, corsHeaders);
 			const compressor = compressorMap.get(compressorId);
 			const tool = toolMap.get(toolId);
@@ -228,21 +241,42 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			const proofUrl = `https://compatair.fr/graphe-preuve/?compresseur=${encodeURIComponent(compressor.id)}&outil=${encodeURIComponent(tool.id)}`;
 			const sources = [...(compressor.evidence ?? []), ...(tool.evidence ?? [])].map((source) => ({ id: source.id, label: source.sourceLabel, url: source.sourceUrl, retrievedAt: source.retrievedAt, confidence: source.confidence }));
 			const limitations = Array.isArray(evaluation.warnings) ? evaluation.warnings : [];
+			const decision = callPublicTool('check_compatibility', { compressorId, toolId })?.structuredContent;
+			if (!decision || decision.error) return apiJson(503, { error: 'compatibility_decision_unavailable' }, { ...corsHeaders, 'Retry-After': '60' });
+			await recordAcquisition({ channel: acquisitionChannel, template: 'compatibility', action: 'decision_request', outcome: acquisitionOutcome(decision) });
 			return apiJson(200, {
-				verdict: publicCompatibilityVerdict(evaluation.verdict), canonical_url: detailsUrl,
+				verdict: decision.verdict, verdict_scope: decision.verdict_scope, verdict_schema_version: decision.verdict_schema_version, canonical_url: detailsUrl,
 				product_urls: [`https://compatair.fr/compresseurs/${compressor.slug}/`, `https://compatair.fr/outils-pneumatiques/${tool.slug}/`],
 				source_urls: [...new Set(sources.map((source) => source.url))], method_version: METHOD_VERSION,
-				catalog_version: catalog.verifiedAt ?? catalog.catalogVersion, observed_at: catalog.verifiedAt ?? new Date(0).toISOString().slice(0, 10),
+				catalog_version: catalog.catalogVersion, observed_at: catalog.verifiedAt ?? new Date(0).toISOString().slice(0, 10),
 				limitations, next_actions: [proofUrl],
-				schemaVersion: '1.0.0', catalogVersion: catalog.catalogVersion, catalogVerifiedAt: catalog.verifiedAt, verdictVersion: verdictSnapshot.verdictVersion, calculationVersion: authoritativeCalculationVersion,
+				schemaVersion: '2.0.0', catalogVersion: catalog.catalogVersion, catalogVerifiedAt: catalog.verifiedAt, verdictVersion: verdictSnapshot.verdictVersion, calculationVersion: authoritativeCalculationVersion,
 				input: { compressorId, toolId },
 				compressor: { id: compressor.id, brand: compressor.brand, model: compressor.model, slug: compressor.slug },
 				tool: { id: tool.id, brand: tool.brand, model: tool.model, label: tool.label, slug: tool.slug },
-				compatibility: evaluation,
+				compatibility: decision.compatibility,
+				overall_system_verdict: decision.overall_system_verdict,
+				air_supply_verdict: decision.air_supply_verdict,
+				compatibility_receipt: decision.compatibility_receipt,
+				engine_evaluation: evaluation,
 				sources,
 				detailsUrl,
 				proofUrl,
 			}, { ...corsHeaders, 'Cache-Control': 'public, max-age=300', Link: `<${detailsUrl}>; rel="canonical", <${proofUrl}>; rel="describedby", <https://compatair.fr/openapi/compatair-2026-07-15.json>; rel="service-desc"` });
+		}
+
+		if (url.pathname === '/api/v1/compatibility/receipts/verify') {
+			const corsHeaders = publicApiHeaders('POST, OPTIONS');
+			corsHeaders['Access-Control-Allow-Headers'] = 'Accept, Content-Type';
+			if (request.method === 'OPTIONS') { response.writeHead(204, { ...corsHeaders, 'Cache-Control': 'public, max-age=86400' }); return response.end(); }
+			if (request.method !== 'POST') return json(response, 405, { error: 'method_not_allowed' }, { ...corsHeaders, Allow: 'POST, OPTIONS' });
+			if (!isAllowedOrigin(request, allowedOrigins)) return json(response, 403, { error: 'origin_forbidden' }, corsHeaders);
+			if (!isJsonContentType(request)) return json(response, 415, { error: 'content_type_must_be_json' }, corsHeaders);
+			if (!allow(`receipt:${clientAddress(request)}`)) return json(response, 429, { error: 'rate_limited' }, { ...corsHeaders, 'Retry-After': '60' });
+			try {
+				const verification = verifyCompatibilityReceipt(await readJsonBody(request));
+				return json(response, verification.valid ? 200 : 422, verification, { ...corsHeaders, 'Cache-Control': 'no-store' });
+			} catch (error) { return json(response, error instanceof Error && error.message === 'BODY_TOO_LARGE' ? 413 : 400, { error: 'invalid_receipt' }, corsHeaders); }
 		}
 
 		if (url.pathname === '/api/v1/search') {
@@ -310,6 +344,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 				const called = callPublicTool('evaluate_air_compatibility', createUcpToolArguments(validated, resolved, authorized.profileUrl));
 				if (!called) return json(response, 500, { error: 'internal_error' });
 				if (called.isError) return json(response, 404, called.structuredContent);
+				await recordAcquisition({ channel: 'ucp', template: 'compatibility', action: 'decision_request', outcome: acquisitionOutcome(called.structuredContent) });
 				const canonicalUrl = called.structuredContent?.canonical_url;
 				const link = typeof canonicalUrl === 'string' && canonicalUrl.startsWith('https://compatair.fr/')
 					? `<${canonicalUrl}>; rel="canonical", <https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json>; rel="describedby"`
@@ -331,8 +366,10 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 				const event = await readJsonBody(request);
 				const demand = validateDemandEvent(event, catalog, authoritativeCalculationVersion);
 				const productFunnel = validateProductFunnelEvent(event);
+				const acquisition = validateAcquisitionEvent(event);
 				if (demand) await demandStore.record(demand);
 				else if (productFunnel) await productFunnelStore.record(productFunnel);
+				else if (acquisition) await acquisitionStore.record(acquisition);
 				else return json(response, 400, { error: 'invalid_event' });
 				response.writeHead(204, { 'Cache-Control': 'no-store' });
 				return response.end();
@@ -378,7 +415,10 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			}
 			counters.rpc++;
 			const result = core.handle(message);
-			if (message.method === 'tools/call' && typeof message.params?.name === 'string' && result && !result.error) recordToolCall(message.params.name);
+			if (message.method === 'tools/call' && typeof message.params?.name === 'string' && result && !result.error) {
+				recordToolCall(message.params.name);
+				await recordAcquisition({ channel: 'mcp', template: message.params.name === 'evaluate_air_compatibility' ? 'compatibility' : 'other', action: 'decision_request', outcome: acquisitionOutcome(result.result?.structuredContent) });
+			}
 			if (result === null || message.id === undefined) { response.writeHead(202, { 'Cache-Control': 'no-store' }); return response.end(); }
 			if (result.error) counters.errors++;
 			return json(response, 200, result);
@@ -415,6 +455,7 @@ async function start() {
 	const allowedOrigins = new Set((process.env.MCP_ALLOWED_ORIGINS ?? 'https://compatair.fr,https://www.compatair.fr').split(',').map((item) => item.trim()).filter(Boolean));
 	const demandAggregatePath = process.env.COMPAT_AIR_DEMAND_AGGREGATES || undefined;
 	const productFunnelAggregatePath = resolveProductFunnelAggregatePath(demandAggregatePath, process.env.COMPAT_AIR_PRODUCT_FUNNEL_AGGREGATES || undefined);
+	const acquisitionAggregatePath = resolveAcquisitionAggregatePath(demandAggregatePath, process.env.COMPAT_AIR_ACQUISITION_AGGREGATES || undefined);
 	const proxyManagesApiHeaders = process.env.COMPAT_AIR_PROXY_MANAGES_API_HEADERS === '1';
 	const catalog = JSON.parse(await readFile(catalogPath, 'utf8'));
 	const verdictSnapshot = JSON.parse(await readFile(verdictsPath, 'utf8'));
@@ -425,7 +466,7 @@ async function start() {
 	try { const value = JSON.parse(await readFile(knowledgePath, 'utf8')); if (Array.isArray(value)) knowledgeItems = value.slice(0, 10_000); } catch {}
 	let changefeedEvents = [];
 	try { const value = JSON.parse(await readFile(changefeedPath, 'utf8')); if (Array.isArray(value?.events)) changefeedEvents = value.events.slice(0, 10_000); } catch {}
-	const server = createCompatAirServer({ catalog, verdictSnapshot, offerSnapshot, knowledgeItems, changefeedEvents, allowedOrigins, demandAggregatePath, productFunnelAggregatePath, proxyManagesApiHeaders });
+	const server = createCompatAirServer({ catalog, verdictSnapshot, offerSnapshot, knowledgeItems, changefeedEvents, allowedOrigins, demandAggregatePath, productFunnelAggregatePath, acquisitionAggregatePath, proxyManagesApiHeaders });
 	server.on('error', (error) => { console.error(error); process.exitCode = 1; });
 	server.listen(port, host, () => console.error(`CompatAir MCP listening on http://${host}:${port}`));
 }

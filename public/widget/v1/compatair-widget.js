@@ -68,7 +68,7 @@
 			if (controller) controller.abort();
 			controller = typeof AbortController === 'function' ? new AbortController() : null;
 			view.version.textContent = 'Vérification en cours…'; view.verdict.textContent = 'Chargement'; view.verdict.className = 'verdict'; view.detail.textContent = ''; view.link.hidden = true;
-			var endpoint = origin + '/api/v1/compatibility?compressorId=' + encodeURIComponent(compressorId) + '&toolId=' + encodeURIComponent(toolId);
+			var endpoint = origin + '/api/v1/compatibility?compressorId=' + encodeURIComponent(compressorId) + '&toolId=' + encodeURIComponent(toolId) + '&channel=widget';
 			return fetch(endpoint, { method: 'GET', headers: { Accept: 'application/json' }, credentials: 'omit', referrerPolicy: 'no-referrer', signal: controller && controller.signal })
 				.then(function (response) { if (!response.ok) throw new Error('HTTP ' + response.status); return response.json(); })
 				.then(function (payload) {

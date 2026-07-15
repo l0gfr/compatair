@@ -91,9 +91,17 @@ if sudo -u compatair-deploy env COMPATAIR_STAGING_DRILL=1 COMPATAIR_DEPLOY_FAILP
 fi
 assert_restored
 
+public_smoke_release=$(new_release_id public-smoke)
+build_candidate "$public_smoke_release" valid
+if sudo -u compatair-deploy env COMPATAIR_STAGING_DRILL=1 COMPATAIR_DEPLOY_FAILPOINT=public-smoke bash "$deploy_script" "$temporary_root/compatair-$public_smoke_release.tar.gz" "$temporary_root/compatair-$public_smoke_release.tar.gz.sha256" "$deploy_root" "$public_smoke_release"; then
+	echo "The post-activation smoke failure unexpectedly completed" >&2
+	exit 1
+fi
+assert_restored
+
 report_directory=/var/lib/compatair-staging/failure-drills
 install -d -o root -g root -m 700 "$report_directory"
 report="$report_directory/$(date -u +%Y%m%dT%H%M%SZ).json"
-printf '{\n  "schemaVersion": "1.0.0",\n  "executedAt": "%s",\n  "baselineRelease": "%s",\n  "invalidMcpRollback": "passed",\n  "apacheRejectedConfigRestore": "passed",\n  "interruptedSwitchRollback": "passed",\n  "finalHealth": "passed"\n}\n' "$(date -u +%FT%TZ)" "$baseline_release" > "$report"
+printf '{\n  "schemaVersion": "1.1.0",\n  "executedAt": "%s",\n  "baselineRelease": "%s",\n  "invalidMcpRollback": "passed",\n  "apacheRejectedConfigRestore": "passed",\n  "interruptedSwitchRollback": "passed",\n  "publicSmokeRollback": "passed",\n  "finalHealth": "passed"\n}\n' "$(date -u +%FT%TZ)" "$baseline_release" > "$report"
 chmod 600 "$report"
 printf 'Staging failure drill passed. Evidence: %s\n' "$report"

@@ -8,7 +8,10 @@ Published contract:
 - method version: `2026.07`
 - response schema: `schemas/result.schema.json`
 - AirGraph schema: `schemas/airgraph.schema.json`
+- compatibility receipt schema: `schemas/compatibility-receipt.schema.json`
 - example: `examples/compatibility-result.json`
+
+The deterministic public export also includes the UCP capability contracts under `ucp/`. It is generated from an explicit allowlist and never contains the compatibility engine, merchant feeds or production configuration.
 
 Run the dependency-free contract checks with `npm test`.
 

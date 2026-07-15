@@ -14,7 +14,8 @@
         "summary": "Evaluate one compressor and one tool",
         "parameters": [
           { "name": "compressorId", "in": "query", "required": true, "schema": { "type": "string", "pattern": "^[a-z0-9-]{1,160}$" } },
-          { "name": "toolId", "in": "query", "required": true, "schema": { "type": "string", "pattern": "^[a-z0-9-]{1,160}$" } }
+          { "name": "toolId", "in": "query", "required": true, "schema": { "type": "string", "pattern": "^[a-z0-9-]{1,160}$" } },
+          { "name": "channel", "in": "query", "required": false, "description": "Closed attribution hint used by the official embedded widget only.", "schema": { "const": "widget" } }
         ],
         "responses": { "200": { "description": "Deterministic compatibility result with sources and proof URL", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CompatibilityResult" } } } }, "400": { "$ref": "#/components/responses/BadRequest" }, "404": { "$ref": "#/components/responses/NotFound" }, "429": { "$ref": "#/components/responses/RateLimited" }, "503": { "description": "Published verdict snapshot unavailable", "headers": { "Retry-After": { "schema": { "type": "integer", "const": 60 } } }, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } },
         "security": []
@@ -32,6 +33,21 @@
           { "name": "limit", "in": "query", "schema": { "type": "integer", "minimum": 1, "maximum": 20, "default": 10 } }
         ],
         "responses": { "200": { "description": "Rank-neutral matching published records", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/SearchResult" } } } }, "400": { "$ref": "#/components/responses/BadRequest" }, "429": { "$ref": "#/components/responses/RateLimited" } },
+        "security": []
+      }
+    },
+    "/api/v1/compatibility/receipts/verify": {
+      "post": {
+        "operationId": "verifyCompatibilityReceipt",
+        "summary": "Verify a deterministic compatibility receipt without storing it",
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "https://compatair.fr/schemas/compatibility-receipt-1.0.0.json" } } } },
+        "responses": {
+          "200": { "description": "Receipt integrity verified", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ReceiptVerification" } } } },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "413": { "description": "Receipt body exceeds 64 KiB", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } },
+          "422": { "description": "Receipt contract or integrity mismatch", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ReceiptVerification" } } } },
+          "429": { "$ref": "#/components/responses/RateLimited" }
+        },
         "security": []
       }
     },
@@ -67,13 +83,15 @@
   "components": {
     "schemas": {
       "Error": {
-        "type": "object", "required": ["error"], "properties": { "error": { "type": "string", "minLength": 1 } }, "additionalProperties": true
+        "type": "object", "required": ["error"], "properties": { "error": { "type": "string", "minLength": 1 } }, "additionalProperties": false
       },
       "PublicEnvelope": {
         "type": "object",
-        "required": ["verdict", "canonical_url", "product_urls", "source_urls", "method_version", "catalog_version", "observed_at", "limitations", "next_actions"],
+        "required": ["verdict", "verdict_scope", "verdict_schema_version", "canonical_url", "product_urls", "source_urls", "method_version", "catalog_version", "observed_at", "limitations", "next_actions"],
         "properties": {
           "verdict": { "enum": ["information", "compatible", "compatible_with_limits", "incompatible", "insufficient_data"] },
+          "verdict_scope": { "enum": ["information", "request", "air_supply", "complete_air_system", "commercial_constraints"] },
+          "verdict_schema_version": { "const": "2.0.0" },
           "canonical_url": { "type": "string", "format": "uri", "pattern": "^https://compatair\\.fr/" },
           "product_urls": { "type": "array", "items": { "type": "string", "format": "uri", "pattern": "^https://compatair\\.fr/" }, "uniqueItems": true },
           "source_urls": { "type": "array", "items": { "type": "string", "format": "uri", "pattern": "^https://" }, "uniqueItems": true },
@@ -84,15 +102,51 @@
           "next_actions": { "type": "array", "items": { "type": "string" } }
         }
       },
+      "ScopedVerdict": {
+        "type": "object", "required": ["schema_version", "scope", "verdict", "limiting_factor", "limitations"],
+        "properties": {
+          "schema_version": { "const": "2.0.0" }, "scope": { "enum": ["air_supply", "complete_air_system", "commercial_constraints"] },
+          "verdict": { "enum": ["information", "compatible", "compatible_with_limits", "incompatible", "insufficient_data"] },
+          "engine_verdict": { "enum": ["continuous", "intermittent", "incompatible", "insufficient_data"] }, "limiting_factor": { "type": ["string", "null"] },
+          "limitations": { "type": "array", "items": { "type": "string" } },
+          "metrics": { "type": "object", "properties": { "required_fad_lpm": { "type": ["number", "null"] }, "available_fad_lpm": { "type": ["number", "null"] }, "effective_average_capacity_lpm": { "type": ["number", "null"] }, "required_pressure_bar": { "type": ["number", "null"] }, "available_pressure_bar": { "type": ["number", "null"] }, "demand_flow_lpm": { "type": ["number", "null"] }, "recommended_fad_lpm": { "type": ["number", "null"] }, "margin_percent": { "type": ["number", "null"] }, "mode": { "type": ["string", "null"] } }, "additionalProperties": false }
+        },
+        "additionalProperties": false
+      },
+      "ProductIdentity": {
+        "type": "object", "required": ["id", "brand", "model", "slug"],
+        "properties": { "id": { "type": "string" }, "brand": { "type": "string" }, "model": { "type": "string" }, "label": { "type": "string" }, "slug": { "type": "string" } },
+        "additionalProperties": false
+      },
+      "EvidenceSource": {
+        "type": "object", "required": ["id", "label", "url", "retrievedAt", "confidence"],
+        "properties": { "id": { "type": "string" }, "label": { "type": "string" }, "url": { "type": "string", "format": "uri" }, "retrievedAt": { "type": "string", "format": "date" }, "confidence": { "enum": ["A", "B", "C", "D"] } },
+        "additionalProperties": false
+      },
+      "EngineEvaluation": {
+        "type": "object", "required": ["verdict"],
+        "properties": { "id": { "type": "string" }, "compressorId": { "type": "string" }, "toolId": { "type": "string" }, "verdict": { "enum": ["continuous", "intermittent", "incompatible", "insufficient_data"] }, "confidence": { "enum": ["high", "medium", "low"] }, "limitingFactor": { "type": "string" }, "requiredFadLpm": { "type": "number" }, "availableFadLpm": { "type": "number" }, "marginPercent": { "type": "number" }, "calculationVersion": { "type": "string" }, "warnings": { "type": "array", "items": { "type": "string" } } },
+        "additionalProperties": false
+      },
       "CompatibilityResult": {
         "allOf": [
           { "$ref": "#/components/schemas/PublicEnvelope" },
-          { "type": "object", "required": ["schemaVersion", "catalogVersion", "verdictVersion", "calculationVersion", "input", "compressor", "tool", "compatibility", "sources", "detailsUrl", "proofUrl"], "properties": {
-            "schemaVersion": { "const": "1.0.0" }, "catalogVersion": { "type": "string" }, "catalogVerifiedAt": { "type": "string", "format": "date" }, "verdictVersion": { "type": "string" }, "calculationVersion": { "type": "string" },
+          { "type": "object", "required": ["schemaVersion", "catalogVersion", "verdictVersion", "calculationVersion", "input", "compressor", "tool", "compatibility", "overall_system_verdict", "air_supply_verdict", "compatibility_receipt", "engine_evaluation", "sources", "detailsUrl", "proofUrl"], "properties": {
+            "schemaVersion": { "const": "2.0.0" }, "catalogVersion": { "type": "string" }, "catalogVerifiedAt": { "type": "string", "format": "date" }, "verdictVersion": { "type": "string" }, "calculationVersion": { "type": "string" },
             "input": { "type": "object", "required": ["compressorId", "toolId"], "properties": { "compressorId": { "type": "string" }, "toolId": { "type": "string" } }, "additionalProperties": false },
-            "compressor": { "type": "object" }, "tool": { "type": "object" }, "compatibility": { "type": "object" }, "sources": { "type": "array", "items": { "type": "object" } },
+            "compressor": { "$ref": "#/components/schemas/ProductIdentity" }, "tool": { "$ref": "#/components/schemas/ProductIdentity" },
+            "compatibility": { "$ref": "#/components/schemas/ScopedVerdict" }, "overall_system_verdict": { "$ref": "#/components/schemas/ScopedVerdict" }, "air_supply_verdict": { "$ref": "#/components/schemas/ScopedVerdict" },
+            "compatibility_receipt": { "$ref": "https://compatair.fr/schemas/compatibility-receipt-1.0.0.json" }, "engine_evaluation": { "$ref": "#/components/schemas/EngineEvaluation" },
+            "sources": { "type": "array", "items": { "$ref": "#/components/schemas/EvidenceSource" } },
             "detailsUrl": { "type": "string", "format": "uri" }, "proofUrl": { "type": "string", "format": "uri" }
           } }
+        ],
+        "unevaluatedProperties": false
+      },
+      "ReceiptVerification": {
+        "oneOf": [
+          { "type": "object", "required": ["valid", "receipt_id", "digest", "catalog_version", "observed_at"], "properties": { "valid": { "const": true }, "receipt_id": { "type": "string" }, "digest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "catalog_version": { "type": "string" }, "observed_at": { "type": "string", "format": "date" } }, "additionalProperties": false },
+          { "type": "object", "required": ["valid", "error"], "properties": { "valid": { "const": false }, "error": { "enum": ["invalid_receipt", "integrity_mismatch"] } }, "additionalProperties": false }
         ]
       },
       "KnowledgeRecord": {
@@ -107,7 +161,7 @@
         "allOf": [{ "$ref": "#/components/schemas/PublicEnvelope" }, { "type": "object", "required": ["compatibility", "factors", "evidence", "airgraph"], "properties": { "compatibility": { "type": "object" }, "factors": { "type": "array", "items": { "type": "object" } }, "evidence": { "type": "object" }, "airgraph": { "type": "object" } } }]
       },
       "ChangefeedEvent": {
-        "type": "object", "required": ["id", "type", "version", "observed_at", "summary"], "properties": { "id": { "type": "string" }, "type": { "enum": ["protocol", "method", "catalog", "evidence", "knowledge", "offers"] }, "version": { "type": "string" }, "observed_at": { "type": "string", "format": "date" }, "summary": { "type": "string" }, "breaking": { "type": "boolean" }, "canonical_url": { "type": "string", "format": "uri" } }, "additionalProperties": false
+        "type": "object", "required": ["id", "type", "version", "observed_at", "summary"], "properties": { "id": { "type": "string" }, "type": { "enum": ["protocol", "method", "catalog", "evidence", "knowledge", "offers", "benchmark", "compatibility_impact"] }, "version": { "type": "string" }, "observed_at": { "type": "string", "format": "date" }, "summary": { "type": "string" }, "breaking": { "type": "boolean" }, "canonical_url": { "type": "string", "format": "uri" } }, "additionalProperties": false
       },
       "ChangefeedResult": {
         "allOf": [{ "$ref": "#/components/schemas/PublicEnvelope" }, { "type": "object", "required": ["changes"], "properties": { "changes": { "type": "array", "items": { "$ref": "#/components/schemas/ChangefeedEvent" } }, "nextCursor": { "type": "string" } } }]

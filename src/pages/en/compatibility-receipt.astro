@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout lang="en" title="Verifiable compatibility receipt | CompatAir" description="Verify the integrity of a CompatAir receipt freezing configuration, scoped verdicts, method, catalog, evidence, hash and date." canonicalPath="/en/compatibility-receipt/" alternates={[{ hreflang: 'fr-FR', path: '/recu-compatibilite/' }, { hreflang: 'en', path: '/en/compatibility-receipt/' }]}>
+	<section class="page-hero compact"><div class="container"><p class="eyebrow">Compatibility Receipt 1.0</p><h1>Freeze a decision without asking anyone to trust a screenshot</h1><p class="lead">A technical decision can carry a deterministic receipt containing both verdict scopes, configuration, versions, evidence URLs, date and SHA-256 integrity hash.</p></div></section>
+	<article class="container content api-documentation">
+		<h2>Verify a receipt</h2><p>Paste only a <code>compatibility_receipt</code> object emitted by the API or MCP. Do not add personal data: the verifier expects none, stores nothing and never fetches a URL contained in the receipt.</p>
+		<form data-receipt-verifier><label for="receipt-json"><strong>Receipt JSON</strong></label><textarea id="receipt-json" name="receipt" rows="14" required spellcheck="false" placeholder='{"schema_version":"1.0.0",...}'></textarea><p><button class="button primary" type="submit">Verify integrity</button></p></form>
+		<pre aria-live="polite" data-receipt-result><code>Waiting for a receipt.</code></pre>
+		<h2>What the hash proves</h2><p>A valid result proves that the content has not changed since its digest was calculated. It is not an identity signature and does not prove that external evidence can never change. Catalog and method versions bind the receipt to CompatAir’s separately signed integrity snapshots.</p>
+		<h2>Contracts</h2><p>Schema: <a href="/schemas/compatibility-receipt-1.0.0.json">Compatibility Receipt JSON Schema</a>. Machine verification: <code>POST /api/v1/compatibility/receipts/verify</code>.</p>
+	</article>
+</BaseLayout>
+
+<script>
+	const form = document.querySelector<HTMLFormElement>('[data-receipt-verifier]');
+	const textarea = document.querySelector<HTMLTextAreaElement>('#receipt-json');
+	const output = document.querySelector<HTMLElement>('[data-receipt-result] code');
+	form?.addEventListener('submit', async (event) => {
+		event.preventDefault(); if (!textarea || !output) return; output.textContent = 'Verifying…';
+		try {
+			const receipt = JSON.parse(textarea.value);
+			const response = await fetch('/api/v1/compatibility/receipts/verify', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(receipt) });
+			const result = await response.json();
+			output.textContent = result.valid ? `Valid receipt: ${result.receipt_id}\nCatalog: ${result.catalog_version}\nObserved: ${result.observed_at}` : `Invalid receipt: ${result.error ?? `HTTP ${response.status}`}`;
+		} catch { output.textContent = 'Invalid receipt: unreadable JSON.'; }
+	});
+</script>

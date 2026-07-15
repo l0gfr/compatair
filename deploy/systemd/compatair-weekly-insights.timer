@@ -1,0 +1,11 @@
+[Unit]
+Description=Generate CompatAir private operating insights every week
+
+[Timer]
+OnCalendar=Mon *-*-* 06:15:00
+Persistent=true
+RandomizedDelaySec=900
+Unit=compatair-weekly-insights.service
+
+[Install]
+WantedBy=timers.target

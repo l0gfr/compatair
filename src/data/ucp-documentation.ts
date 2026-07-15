@@ -61,7 +61,22 @@ export const commercialConstraintsExample = `{
 }`;
 
 export const resultCore = `{
-  "verdict": "compatible_with_limits",
+  "verdict": "insufficient_data",
+  "verdict_scope": "complete_air_system",
+  "verdict_schema_version": "2.0.0",
+  "overall_system_verdict": {
+    "schema_version": "2.0.0",
+    "scope": "complete_air_system",
+    "verdict": "insufficient_data",
+    "limitations": ["Network components remain unverified."]
+  },
+  "air_supply_verdict": {
+    "schema_version": "2.0.0",
+    "scope": "air_supply",
+    "verdict": "compatible",
+    "engine_verdict": "continuous",
+    "limitations": []
+  },
   "canonical_url": "https://compatair.fr/calculateur/?...",
   "product_urls": [],
   "source_urls": [],

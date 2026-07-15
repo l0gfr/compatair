@@ -229,8 +229,54 @@ describe('MCP HTTP boundary helpers', () => {
 		});
 		expect(result.status).toBe(200);
 		expect(result.headers['Access-Control-Allow-Origin']).toBe('*');
-		expect(JSON.parse(result.body)).toMatchObject({ schemaVersion: '1.0.0', verdictVersion: 'verdict-test', calculationVersion: '1.2.0', compatibility: { verdict: 'continuous' }, detailsUrl: 'https://compatair.fr/calculateur/?outil=tool-a&compresseur=compressor-a', proofUrl: 'https://compatair.fr/graphe-preuve/?compresseur=compressor-a&outil=tool-a' });
+		expect(JSON.parse(result.body)).toMatchObject({ schemaVersion: '2.0.0', verdict_scope: 'air_supply', verdictVersion: 'verdict-test', calculationVersion: '1.2.0', compatibility: { schema_version: '2.0.0', scope: 'air_supply', verdict: 'compatible', engine_verdict: 'continuous' }, overall_system_verdict: { scope: 'complete_air_system', verdict: 'insufficient_data' }, detailsUrl: 'https://compatair.fr/calculateur/?outil=tool-a&compresseur=compressor-a', proofUrl: 'https://compatair.fr/graphe-preuve/?compresseur=compressor-a&outil=tool-a' });
 		expect(JSON.parse(result.body).sources).toHaveLength(2);
+	});
+
+	it('attributes only the closed official widget hint to the widget channel', async () => {
+		const directory = mkdtempSync(join(tmpdir(), 'compatair-widget-acquisition-'));
+		const acquisitionAggregatePath = join(directory, 'acquisition.json');
+		try {
+			const catalog = {
+				catalogVersion: 'catalog-test', verifiedAt: '2026-07-15',
+				compressors: [{ id: 'compressor-a', slug: 'compressor-a', brand: 'A', model: 'A1', maxPressureBar: 10, fadCurve: [{ pressureBar: 6, litersPerMinute: 200 }], confidence: 'A', evidence: [] }],
+				tools: [{ id: 'tool-a', slug: 'tool-a', brand: 'B', model: 'B1', label: 'B1', demandModel: 'fixed-flow', workingPressureBar: { typical: 6 }, airflowLpm: { typical: 100 }, confidence: 'A', evidence: [] }],
+			} as any;
+			const verdictSnapshot = { verdictVersion: 'verdict-test', calculationVersion: '1.2.0', pairs: [{ id: 'compressor-a--tool-a', compressorId: 'compressor-a', toolId: 'tool-a', verdict: 'continuous', confidence: 'high' }] };
+			const server = createCompatAirServer({ catalog, verdictSnapshot, allowedOrigins: new Set(['https://compatair.fr']), acquisitionAggregatePath });
+			const request = (channel: string) => new Promise<number>((resolve) => {
+				const incoming = { url: `/api/v1/compatibility?compressorId=compressor-a&toolId=tool-a&channel=${channel}`, method: 'GET', headers: {}, socket: { remoteAddress: '127.0.0.1' } };
+				const response = { setTimeout() {}, writeHead(value: number) { resolve(value); }, end() {}, destroy() {} };
+				server.emit('request', incoming, response);
+			});
+			expect(await request('attacker')).toBe(400);
+			expect(await request('widget')).toBe(200);
+			expect(JSON.parse(readFileSync(acquisitionAggregatePath, 'utf8')).buckets).toContainEqual(expect.objectContaining({ channel: 'widget', template: 'compatibility', action: 'decision_request', count: 1 }));
+		} finally { rmSync(directory, { recursive: true, force: true }); }
+	});
+
+	it('verifies a receipt without storing or dereferencing its URLs', async () => {
+		const catalog = {
+			catalogVersion: 'catalog-test', verifiedAt: '2026-07-14',
+			compressors: [{ id: 'compressor-a', slug: 'compressor-a', brand: 'A', model: 'A1', maxPressureBar: 10, fadCurve: [{ pressureBar: 6, litersPerMinute: 200 }], confidence: 'A', evidence: [] }],
+			tools: [{ id: 'tool-a', slug: 'tool-a', brand: 'B', model: 'B1', label: 'B1', demandModel: 'fixed-flow', workingPressureBar: { typical: 6 }, airflowLpm: { typical: 100 }, confidence: 'A', evidence: [] }],
+		} as any;
+		const verdictSnapshot = { verdictVersion: 'verdict-test', calculationVersion: '1.2.0', pairs: [{ id: 'compressor-a--tool-a', compressorId: 'compressor-a', toolId: 'tool-a', verdict: 'continuous', confidence: 'high' }] };
+		const server = createCompatAirServer({ catalog, verdictSnapshot, allowedOrigins: new Set(['https://compatair.fr']) });
+		const call = (request: any) => new Promise<{ status: number; body: string }>((resolve) => {
+			let status = 0; let body = '';
+			const response = { setTimeout() {}, writeHead(value: number) { status = value; }, end(value = '') { body += value; resolve({ status, body }); }, destroy() {} };
+			server.emit('request', request, response);
+		});
+		const decision = await call({ url: '/api/v1/compatibility?compressorId=compressor-a&toolId=tool-a', method: 'GET', headers: {}, socket: { remoteAddress: '127.0.0.1' } });
+		const receipt = JSON.parse(decision.body).compatibility_receipt;
+		const verified = await call({ url: '/api/v1/compatibility/receipts/verify', method: 'POST', headers: { origin: 'https://compatair.fr', 'content-type': 'application/json' }, socket: { remoteAddress: '127.0.0.1' }, async *[Symbol.asyncIterator]() { yield Buffer.from(JSON.stringify(receipt)); } });
+		expect(verified.status).toBe(200);
+		expect(JSON.parse(verified.body)).toMatchObject({ valid: true, receipt_id: receipt.receipt_id });
+		receipt.catalog_version = 'tampered';
+		const rejected = await call({ url: '/api/v1/compatibility/receipts/verify', method: 'POST', headers: { origin: 'https://compatair.fr', 'content-type': 'application/json' }, socket: { remoteAddress: '127.0.0.1' }, async *[Symbol.asyncIterator]() { yield Buffer.from(JSON.stringify(receipt)); } });
+		expect(rejected.status).toBe(422);
+		expect(JSON.parse(rejected.body)).toEqual({ valid: false, error: 'integrity_mismatch' });
 	});
 
 	it('answers a real UCP decision question through the hardened read-only boundary', async () => {
@@ -409,7 +455,7 @@ describe('MCP HTTP boundary helpers', () => {
 		const current = join(directory, 'current');
 		mkdirSync(join(release, '_server'), { recursive: true });
 		mkdirSync(join(release, 'data'), { recursive: true });
-		for (const file of ['mcp-server.mjs', 'mcp-core.mjs', 'ucp-core.mjs', 'demand-aggregates.mjs', 'product-funnel-aggregates.mjs']) copyFileSync(join(process.cwd(), 'server', file), join(release, '_server', file));
+		for (const file of ['mcp-server.mjs', 'mcp-core.mjs', 'mcp-output-schemas.mjs', 'ucp-core.mjs', 'demand-aggregates.mjs', 'product-funnel-aggregates.mjs', 'acquisition-aggregates.mjs']) copyFileSync(join(process.cwd(), 'server', file), join(release, '_server', file));
 		writeFileSync(join(release, 'data', 'catalog.json'), JSON.stringify({ catalogVersion: 'catalog-test', compressors: [], tools: [] }));
 		writeFileSync(join(release, 'data', 'verdicts.json'), JSON.stringify({ catalogVersion: 'catalog-test', verdictVersion: 'verdict-test', calculationVersion: '1.2.0', pairs: [] }));
 		writeFileSync(join(release, 'data', 'offers.json'), JSON.stringify({ offers: [], snapshotVersion: 'empty' }));
@@ -452,8 +498,11 @@ describe('MCP HTTP boundary helpers', () => {
 			}
 			expect(health).toMatchObject({ status: 'ok', catalogVersion: 'catalog-test', verdictVersion: 'verdict-test' });
 		} finally {
-			child.kill('SIGTERM');
-			await new Promise<void>((resolve) => child.once('exit', () => resolve()));
+			if (child.exitCode === null) {
+				const exited = new Promise<void>((resolve) => child.once('exit', () => resolve()));
+				child.kill('SIGTERM');
+				await exited;
+			}
 			rmSync(directory, { recursive: true, force: true });
 		}
 	});

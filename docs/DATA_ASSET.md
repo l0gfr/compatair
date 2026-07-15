@@ -47,6 +47,8 @@ Le workflow quotidien compare ce snapshot à la production et conserve le rappor
 
 Le serveur MCP utilise le snapshot de verdicts publié comme autorité par défaut. Il ne recalcule pas silencieusement un autre verdict lorsque la paire versionnée existe. Les produits conservent leurs identifiants de catalogue et reçoivent une forme globale stable `ca:compressor:<id>` ou `ca:tool:<id>`. Une configuration reçoit un identifiant `ca:configuration:<digest>` calculé uniquement depuis le compresseur, les outils triés et le mode d’usage.
 
+Le contrat de verdict `2.0.0` sépare `air_supply_verdict` de `overall_system_verdict`. Le champ historique `verdict` reste disponible mais sa portée obligatoire voyage dans `verdict_scope`. Chaque tool publie son propre `outputSchema` fermé ; les structures de compatibilité, accessoires, alternatives, AirGraph, reçus et erreurs ne reposent plus sur un objet générique ouvert.
+
 ## UCP et distributions pour agents
 
 La capability `fr.compatair.air.compatibility` transforme une configuration structurée en décision technique, accessoires obligatoires, limites, alternatives, système complet, attribution et preuves. Elle ne constitue pas un service de checkout. REST et MCP utilisent le même moteur et les mêmes règles d’échec fermé.
@@ -54,6 +56,8 @@ La capability `fr.compatair.air.compatibility` transforme une configuration stru
 Le corpus agent regroupe les guides en texte intégral, le glossaire et les fiches produit. Chaque document reçoit une empreinte SHA-256 et une langue explicite. Les traductions anglaises automatiques portent le statut `machine_translated_unreviewed`; une validation explicite est nécessaire pour `human_reviewed`. Le manifeste expose les deux nombres et les deux taux. Les distributions JSON et NDJSON, les citations, l’historique de preuve, le changefeed, la fraîcheur, l’intégrité et le catalogue DCAT sont construits à partir des mêmes sources que le site.
 
 L’AirGraph `0.1.0` relie les produits aux exigences de débit et de pression, au cycle d’usage, à la cuve, au flexible, aux raccords, au traitement d’air, au verdict et aux preuves disponibles. Une exigence absente reste `null` et alimente `limitations` ; elle n’est jamais remplacée par une valeur générique. Les schémas et exemples sont publiés dans `bluetouff/compatair-mcp` et leur miroir source reste sous `contracts/mcp`.
+
+Le benchmark de fidélité publie exactement 100 scénarios, un évaluateur reproductible et un leaderboard vide tant qu’aucune soumission complète n’est vérifiée. Le reçu de compatibilité fige les deux portées, la configuration, les versions, les sources et la date sous une empreinte SHA-256 ; cette empreinte prouve l’intégrité du contenu, pas une signature d’identité. Le Compatibility Impact Feed relie les changements de preuve aux couples et portefeuilles concernés, mais n’affirme aucun delta de verdict sans snapshot précédent signé.
 
 ## Signature des publications
 
@@ -74,6 +78,14 @@ Ce dispositif suit les principes de minimisation et de statistiques anonymes exp
 Le calculateur transmet au plus un signal `started` et un signal `completed` par chargement de page. Pour la recommandation contrefactuelle, il peut aussi transmettre une fois par famille et par chargement les étapes fermées `recommendation_displayed`, `recommendation_selected` et `recalculation_succeeded`. La famille appartient obligatoirement à la liste `pressure`, `flexible`, `simultaneity`, `leak`, `cadence` ou `machine`.
 
 Le serveur conserve uniquement les compteurs globaux et les compteurs par famille dans `/var/lib/compatair/product-funnel-aggregates.json`. Aucun chemin, URL, referrer, identifiant, référence produit, valeur saisie ou contenu de formulaire n’atteint cet actif statistique. Le schéma `2.0.0` migre le précédent fichier à deux compteurs sans inventer d’activité contrefactuelle. Si des pertes réseau ou des requêtes invalides conduisent à davantage de complétions que de démarrages, de sélections que d’affichages ou de recalculs que de sélections, le taux concerné est laissé à `null` et une alerte de qualité est produite.
+
+## Acquisition et attribution agrégées
+
+L’acquisition utilise uniquement des dimensions fermées : canal (`organic`, `agent_referral`, `referral`, `direct`, `widget`, `api`, `mcp`, `ucp`), gabarit, action et résultat. Le navigateur classe localement le domaine référent puis envoie seulement le bucket ; une navigation interne ne crée pas un nouveau signal d’acquisition. Le serveur ne conserve ni URL, ni query string, ni referrer, ni agent utilisateur, ni cookie, ni identifiant.
+
+Le rapport privé se génère avec `pnpm data:report-acquisition -- /var/lib/compatair/acquisition-aggregates.json /chemin/prive/acquisition-report.json`. Il sépare volume, succès, `insufficient_data`, suivi explicite de l’URL canonique, conversion et accusé de citation par canal et gabarit. Une URL canonique émise n’est jamais comptée comme citée sans accusé explicite de l’intégration. Les impressions et clics GSC restent absents tant qu’un export agrégé du compte propriétaire n’est pas importé ; aucun volume GSC n’est inventé.
+
+Le rapport hebdomadaire de demande existant reste produit séparément avec `pnpm data:rank-demand`. Il masque les dimensions sous cinq contributions, pondère les déficits par la demande observée et remonte les vingt couples `insufficient_data` prioritaires.
 
 ## Offres ManoMano
 

@@ -17,5 +17,7 @@ describe('widget compatibility migration', () => {
 		expect(mutableWidget).not.toContain('^\\/compatibilite\\/');
 		expect(mutableWidget).toContain("url.pathname === '/calculateur/'");
 		expect(mutableWidget).toContain("view.link.textContent = 'Compléter le calcul'");
+		expect(mutableWidget).toContain("&channel=widget");
+		expect(immutableWidget.toString()).not.toContain("&channel=widget");
 	});
 });

@@ -9,6 +9,8 @@ import { evidenceHistory } from './evidence-history';
 import { glossaryTerms } from './glossary';
 import { activeOffers, merchants } from './offers';
 import { toolTaxonomy } from './taxonomy';
+import { agentFidelityBenchmark, agentFidelityLeaderboard } from './agent-fidelity';
+import { compatibilityImpactFeed } from './compatibility-impact';
 
 function sha256(value: string) {
 	return createHash('sha256').update(value).digest('hex');
@@ -33,6 +35,11 @@ function createDcatCatalog(input: { integrity: Array<{ path: string; sha256: str
 		['Evidence history NDJSON', '/data/evidence-history.ndjson', 'application/x-ndjson'],
 		['Changefeed JSON', '/data/changefeed.json', 'application/json'],
 		['Changefeed NDJSON', '/data/changefeed.ndjson', 'application/x-ndjson'],
+		['Agent fidelity benchmark JSON', '/data/agent-fidelity-benchmark.json', 'application/json'],
+		['Agent fidelity benchmark NDJSON', '/data/agent-fidelity-benchmark.ndjson', 'application/x-ndjson'],
+		['Agent fidelity leaderboard JSON', '/data/agent-fidelity-leaderboard.json', 'application/json'],
+		['Compatibility impact feed JSON', '/data/compatibility-impact-feed.json', 'application/json'],
+		['Compatibility impact feed NDJSON', '/data/compatibility-impact-feed.ndjson', 'application/x-ndjson'],
 	];
 	return {
 		'@context': {
@@ -93,6 +100,11 @@ export async function buildMachinePublication() {
 		['/data/citations.ndjson', toNdjson(citations)],
 		['/data/changefeed.json', json(changefeed)],
 		['/data/changefeed.ndjson', toNdjson(changefeed.events)],
+		['/data/agent-fidelity-benchmark.json', json(agentFidelityBenchmark)],
+		['/data/agent-fidelity-benchmark.ndjson', toNdjson(agentFidelityBenchmark.scenarios)],
+		['/data/agent-fidelity-leaderboard.json', json(agentFidelityLeaderboard)],
+		['/data/compatibility-impact-feed.json', json(compatibilityImpactFeed)],
+		['/data/compatibility-impact-feed.ndjson', toNdjson(compatibilityImpactFeed.events)],
 	]);
 	const distributionIntegrity = [...bytes].map(([path, content]) => ({ path, sha256: sha256(content), bytes: Buffer.byteLength(content) }));
 	const latestGuideAt = latest(guides.map((guide) => (guide.data.updatedDate ?? guide.data.pubDate).toISOString().slice(0, 10)), CATALOG_VERIFIED_AT);
@@ -103,6 +115,8 @@ export async function buildMachinePublication() {
 			{ id: 'evidence', path: '/data/evidence-history.json', observed_at: CATALOG_VERIFIED_AT, maximum_age_days: 90, status: 'current' },
 			{ id: 'knowledge', path: '/data/agent-knowledge.json', observed_at: latestGuideAt, maximum_age_days: 365, status: 'current' },
 			{ id: 'offers', path: '/data/offers.json', observed_at: offerObservedAt, maximum_age_hours: 48, status: activeOffers.length ? 'current' : 'unavailable' },
+			{ id: 'agent-fidelity-benchmark', path: '/data/agent-fidelity-benchmark.json', observed_at: CATALOG_VERIFIED_AT, maximum_age_days: 90, status: 'current' },
+			{ id: 'compatibility-impact-feed', path: '/data/compatibility-impact-feed.json', observed_at: CATALOG_VERIFIED_AT, maximum_age_days: 90, status: 'current' },
 		],
 	};
 	const manifest = {

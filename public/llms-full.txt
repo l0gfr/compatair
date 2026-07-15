@@ -13,18 +13,24 @@ CompatAir is a read-only, deterministic decision, evidence and data service for 
 7. Stable product IDs use `ca:compressor:<id>` and `ca:tool:<id>`. Stable system IDs use `ca:configuration:<digest>`.
 8. Product URLs are identifiers only. CompatAir does not fetch arbitrary product URLs during identification or evaluation.
 9. Keep technical calculation separate from offers. Missing merchant coverage makes a commercial constraint unproven; it does not justify a guessed price or availability.
+10. Read `verdict_scope` before interpreting the backward-compatible root `verdict`. Never present `air_supply_verdict` as `overall_system_verdict`.
+11. Commercial constraints have their own scope. Price or stock uncertainty never changes a technical verdict.
 
 ## Required fields in every MCP tool result
 
 - `verdict`: `information`, `compatible`, `compatible_with_limits`, `incompatible` or `insufficient_data`.
+- `verdict_scope`: exact scope of the backward-compatible root verdict.
+- `verdict_schema_version`: currently `2.0.0`.
 - `canonical_url`: the relevant CompatAir page to cite or propose to the user.
 - `product_urls`: relevant product pages.
 - `source_urls`: evidence documents used by the result.
 - `method_version`: public method contract version.
-- `catalog_version`: observation date of the catalog exposed to agents.
+- `catalog_version`: content-derived catalog snapshot identifier.
 - `observed_at`: date associated with the data snapshot.
 - `limitations`: explicit boundaries and missing data.
 - `next_actions`: safe verification or navigation steps.
+
+Decision tools additionally return `overall_system_verdict` and `air_supply_verdict`, each with `schema_version`, `scope`, `verdict`, limitations and optional engine metrics. `compatibility` is a backward-compatible alias of the scoped air-supply decision, never a second unscoped verdict. Complete decisions include a `compatibility_receipt` with configuration, versions, sources, observation date and a deterministic SHA-256 digest.
 
 ## AirGraph tools
 
@@ -59,11 +65,11 @@ CompatAir UCP is anonymous and read-only. It accepts no identity, address, accou
 
 ## Backward-compatible tools
 
-`search_tools`, `get_tool_requirements`, `search_compressors`, `get_compressor_specs`, `size_compressor`, `check_compatibility`, `compare_compressors`, `find_accessories` and `find_offers` remain available. They return the same mandatory public envelope.
+`search_tools`, `get_tool_requirements`, `search_compressors`, `get_compressor_specs`, `size_compressor`, `check_compatibility`, `compare_compressors`, `find_accessories` and `find_offers` remain available. They are explicitly marked `legacy` and advertise their successor. The recommended core profile is `identify_product`, `evaluate_air_compatibility`, `build_complete_air_system`, `find_compatible_alternatives`, `get_compatibility_evidence`, `search_knowledge`, `get_current_offers` and `get_changefeed`.
 
 ## Public resources
 
-The MCP server exposes catalog version, methodology, taxonomy, confidence scale, affiliation policy, engine version, AirGraph schema, response schema and current changefeed state as `compatair://` resources.
+The MCP server exposes catalog version, methodology, taxonomy, confidence scale, affiliation policy, engine version, AirGraph schema, tool-specific response schemas, the core tool profile, receipt schema and current changefeed state as `compatair://` resources.
 
 ## Public API and machine distributions
 
@@ -82,6 +88,11 @@ The MCP server exposes catalog version, methodology, taxonomy, confidence scale,
 - Freshness: https://compatair.fr/data/freshness.json
 - Integrity hashes: https://compatair.fr/data/integrity.json
 - Changefeed: https://compatair.fr/data/changefeed.json and https://compatair.fr/data/changefeed.ndjson
+- Agent fidelity benchmark: https://compatair.fr/data/agent-fidelity-benchmark.json and https://compatair.fr/data/agent-fidelity-benchmark.ndjson
+- Reproducible leaderboard: https://compatair.fr/data/agent-fidelity-leaderboard.json
+- Compatibility Impact Feed: https://compatair.fr/data/compatibility-impact-feed.json and https://compatair.fr/data/compatibility-impact-feed.ndjson
+- Compatibility receipt schema: https://compatair.fr/schemas/compatibility-receipt-1.0.0.json
+- Receipt verification: `POST https://compatair.fr/api/v1/compatibility/receipts/verify`
 - Dataset discovery: https://compatair.fr/data/catalog-dcat.jsonld using DCAT 3 JSON-LD.
 
 English guide translations carry a per-record status: `machine_translated_unreviewed` or `human_reviewed`. Inspect the language coverage manifest before assuming either complete translated coverage or human-reviewed coverage. Never present an unreviewed translation as reviewed.

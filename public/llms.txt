@@ -13,6 +13,9 @@
 - [UCP discovery profile](https://compatair.fr/.well-known/ucp)
 - [UCP compatibility endpoint](https://compatair.fr/api/ucp/v1/compatibility/evaluate)
 - [Full agent documentation](https://compatair.fr/llms-full.txt)
+- [100-scenario agent fidelity benchmark](https://compatair.fr/benchmark-agents/)
+- [Verifiable compatibility receipts](https://compatair.fr/en/compatibility-receipt/)
+- [Compatibility Impact Feed](https://compatair.fr/en/compatibility-impact-feed/)
 
 ## Public data and methods
 
@@ -31,10 +34,16 @@
 - [Data freshness](https://compatair.fr/data/freshness.json)
 - [Integrity hashes](https://compatair.fr/data/integrity.json)
 - [Changefeed](https://compatair.fr/data/changefeed.json)
+- [Agent fidelity benchmark JSON](https://compatair.fr/data/agent-fidelity-benchmark.json)
+- [Agent fidelity benchmark NDJSON](https://compatair.fr/data/agent-fidelity-benchmark.ndjson)
+- [Agent fidelity leaderboard](https://compatair.fr/data/agent-fidelity-leaderboard.json)
+- [Compatibility Impact Feed JSON](https://compatair.fr/data/compatibility-impact-feed.json)
+- [Compatibility Impact Feed NDJSON](https://compatair.fr/data/compatibility-impact-feed.ndjson)
+- [Compatibility receipt schema](https://compatair.fr/schemas/compatibility-receipt-1.0.0.json)
 - [DCAT 3 catalog](https://compatair.fr/data/catalog-dcat.jsonld)
 - [Corrections](https://compatair.fr/corrections/)
 - [Security](https://compatair.fr/securite/)
 
 ## Citation rule
 
-Use the `canonical_url` returned by every MCP or UCP decision as the preferred CompatAir page. Keep `source_urls`, `method_version`, `catalog_version`, `observed_at`, `limitations` and `next_actions` with the result. Never turn `insufficient_data` into a positive recommendation. CompatAir is a decision and evidence layer, not a checkout or a generic product catalog.
+Use the `canonical_url` returned by every MCP or UCP decision as the preferred CompatAir page. Read `verdict_scope`; preserve `overall_system_verdict` and `air_supply_verdict` separately. Keep `source_urls`, `method_version`, `catalog_version`, `observed_at`, `limitations`, `next_actions` and any `compatibility_receipt` with the result. Never turn `insufficient_data` into a positive recommendation. CompatAir is a decision and evidence layer, not a checkout or a generic product catalog.

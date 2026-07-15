@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Reçu de compatibilité vérifiable | CompatAir" description="Vérifier l’intégrité d’un reçu CompatAir qui fige configuration, portées de verdict, méthode, catalogue, sources, empreinte et date." canonicalPath="/recu-compatibilite/" alternates={[{ hreflang: 'fr-FR', path: '/recu-compatibilite/' }, { hreflang: 'en', path: '/en/compatibility-receipt/' }]}>
+	<section class="page-hero compact"><div class="container"><p class="eyebrow">Compatibility Receipt 1.0</p><h1>Figer une décision sans demander de croire CompatAir sur parole</h1><p class="lead">Chaque décision technique peut embarquer un reçu déterministe avec les deux portées de verdict, la configuration, les versions, les sources, la date et une empreinte SHA-256.</p></div></section>
+	<article class="container content api-documentation">
+		<h2>Vérifier un reçu</h2><p>Collez uniquement un objet <code>compatibility_receipt</code> émis par l’API ou MCP. N’ajoutez aucune donnée personnelle&nbsp;: le vérificateur n’en attend pas, ne conserve pas le reçu et n’appelle aucune URL qu’il contient.</p>
+		<form data-receipt-verifier>
+			<label for="receipt-json"><strong>Reçu JSON</strong></label>
+			<textarea id="receipt-json" name="receipt" rows="14" required spellcheck="false" placeholder='{"schema_version":"1.0.0",...}'></textarea>
+			<p><button class="button primary" type="submit">Vérifier l’intégrité</button></p>
+		</form>
+		<pre aria-live="polite" data-receipt-result><code>En attente d’un reçu.</code></pre>
+		<h2>Ce que prouve l’empreinte</h2><p>Une réponse valide prouve que le contenu n’a pas changé depuis le calcul de son empreinte. Elle ne constitue ni une signature d’identité, ni une preuve que les sources externes n’ont jamais changé. Les versions du catalogue et de la méthode permettent de rattacher le reçu aux snapshots d’intégrité signés publiés séparément par CompatAir.</p>
+		<h2>Contrats</h2><p>Schéma&nbsp;: <a href="/schemas/compatibility-receipt-1.0.0.json">Compatibility Receipt JSON Schema</a>. Vérification machine&nbsp;: <code>POST /api/v1/compatibility/receipts/verify</code>. Les reçus sont également décrits dans les documentations <a href="/mcp-documentation/">MCP</a> et <a href="/ucp/">UCP</a>.</p>
+	</article>
+</BaseLayout>
+
+<script>
+	const form = document.querySelector<HTMLFormElement>('[data-receipt-verifier]');
+	const textarea = document.querySelector<HTMLTextAreaElement>('#receipt-json');
+	const output = document.querySelector<HTMLElement>('[data-receipt-result] code');
+	form?.addEventListener('submit', async (event) => {
+		event.preventDefault();
+		if (!textarea || !output) return;
+		output.textContent = 'Vérification en cours…';
+		try {
+			const receipt = JSON.parse(textarea.value);
+			const response = await fetch('/api/v1/compatibility/receipts/verify', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(receipt) });
+			const result = await response.json();
+			output.textContent = result.valid ? `Reçu valide : ${result.receipt_id}\nCatalogue : ${result.catalog_version}\nObservé le : ${result.observed_at}` : `Reçu invalide : ${result.error ?? `HTTP ${response.status}`}`;
+		} catch { output.textContent = 'Reçu invalide : JSON illisible.'; }
+	});
+</script>

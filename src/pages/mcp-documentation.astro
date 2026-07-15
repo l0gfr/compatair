@@ -6,6 +6,7 @@ import {
 	callToolCurl,
 	claudeCli,
 	claudeProjectConfig,
+	coreTools,
 	geminiJavaScript,
 	geminiPython,
 	initializeCurl,
@@ -48,8 +49,8 @@ const alternates = [
 			<dl class="mcp-facts">
 				<div><dt>Endpoint</dt><dd><code>{mcpEndpoint}</code></dd></div>
 				<div><dt>Transport</dt><dd>Streamable HTTP · JSON-RPC 2.0</dd></div>
-				<div><dt>Surface</dt><dd>19 tools · 9 ressources · 3 prompts</dd></div>
-				<div><dt>Contrats</dt><dd>MCP 2.0.0 · méthode 2026.07 · AirGraph 0.1.0</dd></div>
+				<div><dt>Surface</dt><dd>19 tools · 11 ressources · 3 prompts</dd></div>
+				<div><dt>Contrats</dt><dd>MCP 2.1.0 · verdicts 2.0.0 · méthode 2026.07</dd></div>
 				<div><dt>Authentification</dt><dd>Aucune · données publiques · lecture seule</dd></div>
 				<div><dt>État</dt><dd><a href={mcpHealthEndpoint}>Versions exposées par le service</a></dd></div>
 			</dl>
@@ -95,7 +96,7 @@ const alternates = [
 					<article><strong>Commerce isolé</strong><p>Prix et disponibilité passent par des tools séparés. Une commission ne peut ni créer ni modifier un verdict.</p></article>
 					<article><strong>Versions explicites</strong><p>Méthode, catalogue et observation voyagent avec le résultat et sont consultables par changefeed.</p></article>
 					<article><strong>Identifiants stables</strong><p>Produits et configurations reçoivent un CompatAir ID indépendant du nom commercial affiché.</p></article>
-					<article><strong>Compatibilité progressive</strong><p>Les neuf tools historiques restent disponibles. Neuf tools AirGraph et un tool UCP étendent le modèle.</p></article>
+					<article><strong>Sélection sans ambiguïté</strong><p>Huit tools forment le profil <code>core</code>. Les neuf anciens tools sont marqués <code>legacy</code> avec un successeur explicite.</p></article>
 				</div>
 			</section>
 
@@ -169,6 +170,10 @@ const alternates = [
 						<thead><tr><th>Champ</th><th>Rôle</th><th>Règle côté agent</th></tr></thead>
 						<tbody>
 							<tr><td><code>verdict</code></td><td>État technique normalisé.</td><td>Ne jamais améliorer ni atténuer le verdict.</td></tr>
+							<tr><td><code>verdict_scope</code></td><td>Portée du champ historique <code>verdict</code>.</td><td>Ne jamais l’étendre à une autre portée.</td></tr>
+							<tr><td><code>overall_system_verdict</code></td><td>Verdict du système complet, réseau compris.</td><td>Le distinguer du seul approvisionnement en air.</td></tr>
+							<tr><td><code>air_supply_verdict</code></td><td>Pression, FAD et cycle sous la portée <code>air_supply</code>.</td><td>Ne jamais l’annoncer comme validation du système complet.</td></tr>
+							<tr><td><code>compatibility_receipt</code></td><td>Reçu versionné vérifiable par SHA-256.</td><td>Le conserver avec toute décision auditée ou partagée.</td></tr>
 							<tr><td><code>canonical_url</code></td><td>Page CompatAir correspondant au résultat.</td><td>La citer ou la proposer à l’utilisateur.</td></tr>
 							<tr><td><code>product_urls</code></td><td>Pages des produits concernés.</td><td>Les utiliser pour le contexte produit.</td></tr>
 							<tr><td><code>source_urls</code></td><td>Documents de preuve utilisés.</td><td>Conserver le lien entre affirmation et source.</td></tr>
@@ -184,8 +189,8 @@ const alternates = [
 			</section>
 
 			<section id="tools">
-				<p class="eyebrow">Surface MCP 2.0.0</p>
-				<h2>19 tools, 9 ressources et 3 prompts</h2>
+				<p class="eyebrow">Surface MCP 2.1.0</p>
+				<h2>19 tools, 11 ressources et 3 prompts</h2>
 				<p class="mcp-section-intro">Les tools historiques couvrent la recherche, le dimensionnement et la compatibilité unitaire. La couche AirGraph permet l’identification multi-identifiants, l’explication, les systèmes complets, les corrections minimales et la synchronisation.</p>
 				<div class="mcp-table-wrap">
 					<table>
@@ -205,7 +210,12 @@ const alternates = [
 					</table>
 				</div>
 
+				<h3>Profil core recommandé</h3>
+				<p>Pour réduire les erreurs de sélection, une intégration généraliste devrait exposer d’abord ces huit tools. Le profil est aussi lisible dans <code>compatair://tools/core-profile</code>.</p>
+				<ul class="mcp-tool-list">{coreTools.map((tool) => <li><code>{tool}</code></li>)}</ul>
+
 				<h3>Tools historiques maintenus</h3>
+				<p>Ils restent compatibles, mais chaque définition porte <code>fr.compatair/lifecycle=legacy</code> et un <code>fr.compatair/successor</code> explicite.</p>
 				<ul class="mcp-tool-list">{legacyTools.map((tool) => <li><code>{tool}</code></li>)}</ul>
 
 				<h3>Ressources de contexte</h3>
@@ -233,6 +243,7 @@ const alternates = [
 					<article><strong>Exigence</strong><p><code>ca:requirement:&lt;id&gt;</code> porte une pression, un débit ou un composant documenté.</p></article>
 				</div>
 				<p>Une exigence absente reste absente. Par exemple, CompatAir ne déduit pas une perte de charge à partir d’un flexible inconnu et ne transforme pas un débit aspiré en FAD. Le graphe encode aussi cette absence dans <code>limitations</code>.</p>
+				<p>Les décisions peuvent être figées dans un <a href="/recu-compatibilite/"><code>compatibility_receipt</code></a>. La fidélité des assistants se mesure sur le <a href="/benchmark-agents/">benchmark public de 100 scénarios</a>, et les changements de preuve sont reliés aux portefeuilles dans le <a href="/impact-compatibilite/">Compatibility Impact Feed</a>.</p>
 			</section>
 
 			<section id="securite">
@@ -321,15 +332,16 @@ const alternates = [
 				<p>Le manifeste de registre versionné avec CompatAir déclare le remote officiel sous la propriété <code>remotes</code>&nbsp;:</p>
 				<pre><code>{`{
   "name": "io.github.bluetouff/compatair",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "remotes": [{
     "type": "streamable-http",
     "url": "https://compatair.fr/mcp"
   }]
 }`}</code></pre>
+				<div class="mcp-note"><p>Ce manifeste est prêt à publier, mais CompatAir ne revendique pas ici une inscription au Registry sans réponse Registry vérifiée. La première publication exige une authentification propriétaire et l’acceptation des conditions CC0 du service encore en preview.</p></div>
 				<div class="mcp-principles">
 					<article><strong>Pour un agent</strong><p><a href="/llms.txt">llms.txt</a> résume les règles non négociables et les points d’entrée.</p></article>
-					<article><strong>Pour une intégration</strong><p><a href="/schemas/mcp-result-2026.07.json">Schéma de réponse</a> et <a href="/schemas/airgraph-0.1.0.json">schéma AirGraph</a> sont servis à leurs URI stables.</p></article>
+					<article><strong>Pour une intégration</strong><p><a href="/schemas/mcp-result-2026.07.json">Enveloppe commune</a>, schémas fermés par tool, <a href="/schemas/airgraph-0.1.0.json">AirGraph</a> et <a href="/schemas/compatibility-receipt-1.0.0.json">reçus</a> sont servis à leurs URI stables.</p></article>
 					<article><strong>Pour un cache</strong><p><code>get_changefeed</code> et <code>compatair://changefeed/current</code> exposent les versions visibles.</p></article>
 				</div>
 				<p>Le contrat textuel complet reste disponible dans <a href="/llms-full.txt">llms-full.txt</a>.</p>
