@@ -1,0 +1,290 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {
+	commercialConstraintsExample,
+	productLocatorExample,
+	resultCore,
+	ucpCapability,
+	ucpCapabilityVersion,
+	ucpCurl,
+	ucpEndpoint,
+	ucpExamplePlatformProfile,
+	ucpMcpCall,
+	ucpProfile,
+	ucpRequest,
+	ucpService,
+	ucpVersion,
+} from '../../data/ucp-documentation';
+import '../../styles/mcp-reference.css';
+
+const alternates = [
+	{ hreflang: 'fr-FR', path: '/ucp/' },
+	{ hreflang: 'en', path: '/en/ucp/' },
+	{ hreflang: 'x-default', path: '/ucp/' },
+];
+---
+
+<BaseLayout
+	lang="en"
+	title="CompatAir UCP: compatibility for agents"
+	description="CompatAir UCP documentation: pneumatic compatibility decisions, complete systems, evidence, attribution, REST and MCP integrations, and security controls."
+	canonicalPath="/en/ucp/"
+	alternates={alternates}
+	breadcrumbs={[{ name: 'UCP documentation', path: '/en/ucp/' }]}
+>
+	<header class="mcp-hero">
+		<div class="container mcp-hero-inner">
+			<div>
+				<p class="eyebrow">Decision layer for agentic commerce</p>
+				<h1>CompatAir UCP</h1>
+				<p class="lead">CompatAir does not replace a merchant or its checkout. It answers the question product discovery cannot settle: will this air system actually work, why, within which limits, and what is the smallest safe change?</p>
+				<div class="mcp-hero-actions">
+					<a href="#quickstart">Test the API</a>
+					<a href="#capability">Understand the capability</a>
+					<a href="/ucp/" hreflang="fr">Lire en français</a>
+				</div>
+			</div>
+			<dl class="mcp-facts">
+				<div><dt>Capability</dt><dd><code>{ucpCapability}</code></dd></div>
+				<div><dt>UCP</dt><dd>{ucpVersion}</dd></div>
+				<div><dt>CompatAir</dt><dd>{ucpCapabilityVersion}</dd></div>
+				<div><dt>Transports</dt><dd>REST · MCP Streamable HTTP</dd></div>
+				<div><dt>State</dt><dd>Read-only · no PII · no payment</dd></div>
+				<div><dt>Discovery</dt><dd><a href={ucpProfile}><code>/.well-known/ucp</code></a></dd></div>
+			</dl>
+		</div>
+	</header>
+
+	<div class="container mcp-shell">
+		<aside class="mcp-toc">
+			<strong>In this documentation</strong>
+			<nav aria-label="UCP documentation table of contents">
+				<a href="#positioning">CompatAir's role</a>
+				<a href="#capability">Service and capability</a>
+				<a href="#questions">Supported questions</a>
+				<a href="#quickstart">REST quickstart</a>
+				<a href="#mcp">MCP binding</a>
+				<a href="#contract">Result and attribution</a>
+				<a href="#commerce">Commercial constraints</a>
+				<a href="#machine-data">Machine-readable data</a>
+				<a href="#security">Security and abuse</a>
+				<a href="#integration">Integration checklist</a>
+				<a href="#limitations">Limits and roadmap</a>
+				<a href="#references">References</a>
+			</nav>
+			<div class="mcp-toc-meta">
+				<a href="/openapi/ucp-2026-07-15.json">UCP OpenAPI</a>
+				<a href="/openrpc/ucp-2026-07-15.json">UCP OpenRPC</a>
+				<a href="/schemas/ucp-compatibility-2026-07-15.json">JSON Schema</a>
+				<a href="/securite/">Report a vulnerability</a>
+			</div>
+		</aside>
+
+		<main class="mcp-reference">
+			<section id="positioning">
+				<p class="eyebrow">The missing decision layer</p>
+				<h2>A commerce agent finds products. CompatAir establishes a decision.</h2>
+				<p class="mcp-section-intro">A catalog is only an input. CompatAir connects a use case, pressure, documented free-air delivery, duty cycle, compressor and distribution system, then publishes the decision and its evidence under a canonical URL.</p>
+				<div class="mcp-stat-grid">
+					<div><strong>Will it work?</strong><span>A deterministic verdict for an identified configuration.</span></div>
+					<div><strong>Why?</strong><span>Blocking factors, compared values and missing facts.</span></div>
+					<div><strong>What should change?</strong><span>The smallest correction or a complete system, without merchant bias.</span></div>
+				</div>
+				<div class="mcp-principles">
+					<article><strong>Neutrality</strong><p>Technical calculation happens before offers. Commission cannot change a verdict.</p></article>
+					<article><strong>Depth</strong><p>The decision covers the air system rather than two product names alone.</p></article>
+					<article><strong>Citation surface</strong><p>Every response separates the canonical CompatAir page from supporting evidence documents.</p></article>
+					<article><strong>Fail closed</strong><p>A missing decisive fact returns <code>insufficient_data</code>, never a silent estimate.</p></article>
+					<article><strong>Stable identity</strong><p>EAN, MPN, reference, URL or name resolves to a CompatAir ID before calculation.</p></article>
+					<article><strong>Synchronization</strong><p>Versions, freshness, hashes and a changefeed invalidate stale decisions.</p></article>
+				</div>
+			</section>
+
+			<section id="capability">
+				<p class="eyebrow">UCP discovery</p>
+				<h2>A specialized service deliberately separated from checkout</h2>
+				<p>The strict public identifier is <code>{ucpCapability}</code>. The initial <code>fr.compatair.compatibility</code> name remains useful shorthand, but UCP requires <code>reverse-domain.service.capability</code>. The <code>air</code> segment therefore names the <code>{ucpService}</code> service.</p>
+				<div class="mcp-table-wrap">
+					<table>
+						<thead><tr><th>Element</th><th>Published value</th><th>Purpose</th></tr></thead>
+						<tbody>
+							<tr><td>Business profile</td><td><a href={ucpProfile}><code>{ucpProfile}</code></a></td><td>UCP discovery and available transports.</td></tr>
+							<tr><td>Service</td><td><code>{ucpService}</code></td><td>Technical decisions for compressed-air systems.</td></tr>
+							<tr><td>Capability</td><td><code>{ucpCapability}</code></td><td>Compatibility, limits, accessories, alternatives and attribution.</td></tr>
+							<tr><td>REST</td><td><code>{ucpEndpoint}</code></td><td>Direct UCP evaluation with platform discovery.</td></tr>
+							<tr><td>MCP</td><td><code>https://compatair.fr/mcp</code></td><td>UCP tool inside an existing agent session.</td></tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="mcp-note"><p>CompatAir does not advertise an A2A binding yet. An Agent Card will be published only with a real A2A endpoint, conformance tests and a demonstrated authorization boundary. An empty discovery URL would be a misleading promise.</p></div>
+			</section>
+
+			<section id="questions">
+				<p class="eyebrow">Business intents</p>
+				<h2>The request expresses a question, not a catalog query</h2>
+				<div class="mcp-table-wrap">
+					<table>
+						<thead><tr><th><code>intent</code></th><th>Question</th><th>Useful result</th></tr></thead>
+						<tbody>
+							<tr><td><code>will_it_work</code></td><td>Will this impact wrench work with my current compressor?</td><td>Verdict, pressure, flow, limitations, accessories and evidence.</td></tr>
+							<tr><td><code>explain_limits</code></td><td>Why do these frequently paired products fail together?</td><td>Blocking factors and compared documented values.</td></tr>
+							<tr><td><code>find_minimal_change</code></td><td>What is the smallest change that makes the system admissible?</td><td>Technical alternatives ranked by fit, not commission.</td></tr>
+							<tr><td><code>build_complete_system</code></td><td>Build a complete system for these tools.</td><td>Compressor, hose, connectors, filtration, lubrication, limits and evidence.</td></tr>
+						</tbody>
+					</table>
+				</div>
+				<h3>Resolve one product without guessing</h3>
+				<p>Each reference accepts exactly one locator: <code>id</code>, <code>compatair_id</code>, <code>ean</code>, <code>mpn</code>, <code>reference</code>, <code>url</code> or <code>name</code>. Evaluation requires an exact match. Unknown or ambiguous products are rejected instead of being selected silently.</p>
+				<pre><code>{productLocatorExample}</code></pre>
+				<p>A product URL is only a local identifier matched against published data. CompatAir never downloads it during evaluation.</p>
+			</section>
+
+			<section id="quickstart">
+				<p class="eyebrow">REST</p>
+				<h2>Test one UCP decision</h2>
+				<p>A UCP platform identifies itself with <code>UCP-Agent</code>. The public sample profile can test the contract without owning a domain. Production integrations should publish their own HTTPS profile and advertise the exact CompatAir capability version they accept.</p>
+				<p class="mcp-code-label"><span>Complete request</span><span>curl</span></p>
+				<pre><code>{ucpCurl}</code></pre>
+				<p class="mcp-code-label"><span>Request body</span><span>JSON</span></p>
+				<pre><code>{ucpRequest}</code></pre>
+				<div class="mcp-warning"><p>A platform profile is untrusted network input. CompatAir rejects HTTP, embedded credentials, custom ports, redirects and non-public addresses. It validates every DNS result and pins the selected address for the TLS connection.</p></div>
+			</section>
+
+			<section id="mcp">
+				<p class="eyebrow">MCP binding</p>
+				<h2>Add a UCP decision to an agent that is already connected</h2>
+				<p>The MCP server exposes <code>evaluate_air_compatibility</code>. The UCP body remains in <code>arguments</code> and the platform profile is placed under <code>meta.ucp-agent.profile</code>. REST and MCP apply the same profile validation and invoke the same deterministic engine.</p>
+				<pre><code>{ucpMcpCall}</code></pre>
+				<p>See the <a href="/en/mcp/">full MCP documentation</a> for ChatGPT, Claude, Gemini and agent SDK installation examples.</p>
+			</section>
+
+			<section id="contract">
+				<p class="eyebrow">Output contract</p>
+				<h2>A decision must travel with its citation</h2>
+				<p>Every CompatAir response retains the same stable core. UCP adds the requested compatibility, mandatory accessories, limits, alternatives, complete configuration, attribution and evidence blocks.</p>
+				<pre><code>{resultCore}</code></pre>
+				<div class="mcp-table-wrap">
+					<table>
+						<thead><tr><th>Field</th><th>Guarantee</th><th>Expected agent behavior</th></tr></thead>
+						<tbody>
+							<tr><td><code>verdict</code></td><td>Technical state, never a commercial outcome.</td><td>Never soften or upgrade it.</td></tr>
+							<tr><td><code>canonical_url</code></td><td>CompatAir page carrying the decision.</td><td>Cite or offer it with the answer.</td></tr>
+							<tr><td><code>source_urls</code></td><td>Documents supporting the specifications.</td><td>Preserve each claim-to-document link.</td></tr>
+							<tr><td><code>limitations</code></td><td>Missing facts and calculation boundaries.</td><td>Expose them without omission.</td></tr>
+							<tr><td><code>method_version</code></td><td>Calculation contract version.</td><td>Keep it in caches and logs.</td></tr>
+							<tr><td><code>catalog_version</code></td><td>Technical snapshot queried.</td><td>Invalidate it when the changefeed reports a change.</td></tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="mcp-note"><p><code>canonical_url</code> and <code>source_urls</code> are distinct. The former makes the CompatAir decision citable. The latter proves the technical facts used. Robust integrations preserve both.</p></div>
+			</section>
+
+			<section id="commerce">
+				<p class="eyebrow">Enrichment, not transaction</p>
+				<h2>Price and availability remain separate constraints</h2>
+				<p>A request may include a maximum budget, a minimum merchant count and a country. The server proves these constraints only from fresh offers covering every component. When coverage is missing, it returns <code>insufficient_data</code>; it never fabricates price or stock.</p>
+				<pre><code>{commercialConstraintsExample}</code></pre>
+				<ul class="mcp-checklist">
+					<li>Currently accepted currency: EUR.</li>
+					<li>Currently accepted country: France.</li>
+					<li>Minimum total includes observed price and shipping.</li>
+					<li>Expired offers and non-allowlisted destinations are excluded.</li>
+					<li>Affiliate commission never influences recommendation order.</li>
+					<li>No cart, reservation, identity, payment or order mutation.</li>
+				</ul>
+			</section>
+
+			<section id="machine-data">
+				<p class="eyebrow">Machine-readable surface</p>
+				<h2>Deep data that agents can search, verify and cite</h2>
+				<div class="mcp-table-wrap">
+					<table>
+						<thead><tr><th>Need</th><th>Entry point</th><th>Format</th></tr></thead>
+						<tbody>
+							<tr><td>Complete public API</td><td><a href="/openapi/compatair-2026-07-15.json"><code>/openapi/compatair-2026-07-15.json</code></a></td><td>OpenAPI 3.1</td></tr>
+							<tr><td>Full-text search</td><td><code>/api/v1/search?q=impact+wrench&amp;locale=en</code></td><td>Paginated JSON</td></tr>
+							<tr><td>Guides and knowledge</td><td><a href="/data/agent-knowledge.json"><code>/data/agent-knowledge.json</code></a> · <a href="/data/agent-knowledge.ndjson">NDJSON</a></td><td>Full text + hashes</td></tr>
+							<tr><td>Catalog</td><td><a href="/data/catalog.json"><code>/data/catalog.json</code></a> · <a href="/data/catalog.ndjson">NDJSON</a></td><td>Source-linked products</td></tr>
+							<tr><td>Evidence</td><td><a href="/data/evidence-history.json"><code>/data/evidence-history.json</code></a> · <a href="/data/citations.ndjson">citations</a></td><td>History + fingerprints</td></tr>
+							<tr><td>Changes</td><td><a href="/data/changefeed.json"><code>/data/changefeed.json</code></a> · <a href="/data/changefeed.ndjson">NDJSON</a></td><td>Versioned events</td></tr>
+							<tr><td>Freshness</td><td><a href="/data/freshness.json"><code>/data/freshness.json</code></a></td><td>Dataset age and availability</td></tr>
+							<tr><td>Integrity</td><td><a href="/data/integrity.json"><code>/data/integrity.json</code></a></td><td>Per-artifact SHA-256</td></tr>
+							<tr><td>Dataset discovery</td><td><a href="/data/catalog-dcat.jsonld"><code>/data/catalog-dcat.jsonld</code></a></td><td>DCAT 3 JSON-LD</td></tr>
+						</tbody>
+					</table>
+				</div>
+				<p>The <a href="/data/agent-knowledge-manifest.json">agent knowledge manifest</a> exposes translated and reviewed coverage separately. Automated output remains <code>machine_translated_unreviewed</code>; only a checked document can become <code>human_reviewed</code>.</p>
+			</section>
+
+			<section id="security">
+				<p class="eyebrow">Secure by reducing authority</p>
+				<h2>The capability cannot buy, identify a person or mutate commerce state</h2>
+				<div class="mcp-table-wrap">
+					<table>
+						<thead><tr><th>Risk</th><th>CompatAir control</th><th>Failure</th></tr></thead>
+						<tbody>
+							<tr><td>SSRF through UCP profile</td><td>HTTPS only, all DNS answers checked, public IP required, pinned connection, no redirects, 64 KiB and 3 seconds.</td><td>403 or 424.</td></tr>
+							<tr><td>SSRF through product URL</td><td>Local matching against published identifiers; no remote fetch.</td><td>404 if unknown or ambiguous.</td></tr>
+							<tr><td>Field injection</td><td>Closed objects, one locator, enums, lengths, quantities and arrays bounded.</td><td>400.</td></tr>
+							<tr><td>Resource abuse</td><td>64 KiB body, address quota, timeouts, bounded profile cache, no more than 20 tools.</td><td>413 or 429.</td></tr>
+							<tr><td>Fake platform</td><td>Mandatory <code>UCP-Agent</code>; advertised capability and version checked.</td><td>400, 403 or 422.</td></tr>
+							<tr><td>Personal data</td><td>No identity, delivery, account, address or payment fields.</td><td>Schema rejection.</td></tr>
+							<tr><td>Technical/commercial confusion</td><td>Calculation before offers and insufficient state when merchant coverage is not proven.</td><td><code>insufficient_data</code>.</td></tr>
+							<tr><td>Replay or stale result</td><td>Method/catalog versions, observation date, freshness and public changefeed.</td><td>Integrator invalidates its cache.</td></tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="mcp-warning"><p>CompatAir does not yet claim HTTP signature verification for this read-only capability. Any extension involving webhooks, private state or mutation will remain disabled until signatures, replay defense, key management and negative tests are demonstrated in production.</p></div>
+			</section>
+
+			<section id="integration">
+				<p class="eyebrow">Integration contract</p>
+				<h2>What a merchant agent must do correctly</h2>
+				<ol>
+					<li>Discover <code>{ucpProfile}</code> and negotiate the exact version.</li>
+					<li>Resolve products to stable identifiers before requesting a decision.</li>
+					<li>Select an explicit <code>intent</code> and send only necessary technical data.</li>
+					<li>Validate the response against the <a href="/schemas/ucp-compatibility-2026-07-15.json">published JSON Schema</a>.</li>
+					<li>Never turn <code>insufficient_data</code> into presumed compatibility.</li>
+					<li>Display limitations, version and observation date.</li>
+					<li>Cite <code>canonical_url</code> and retain <code>source_urls</code> for audit.</li>
+					<li>Check the changefeed before reusing a cached decision.</li>
+					<li>Keep checkout, identity, payment and orders outside CompatAir requests.</li>
+				</ol>
+			</section>
+
+			<section id="limitations">
+				<p class="eyebrow">Demonstrable boundary</p>
+				<h2>What exists now, and what does not</h2>
+				<ul>
+					<li>The service covers only products and requirements in the published snapshot.</li>
+					<li>An unknown URL is never scraped on demand.</li>
+					<li>FAD is compared only at documented or safely interpolated pressures.</li>
+					<li>Pressure losses and leaks are never invented when undocumented or unmeasured.</li>
+					<li>Offers are never technical compatibility evidence.</li>
+					<li>English agent guides carry a per-document status: unreviewed machine translation or human-reviewed translation. Exact coverage for each state is machine-readable.</li>
+					<li>No A2A binding, webhook, checkout, identity, payment or order tracking is advertised.</li>
+					<li>A result does not replace manufacturer instructions, loaded measurements or workplace safety obligations.</li>
+				</ul>
+			</section>
+
+			<section id="references">
+				<p class="eyebrow">Contracts and normative sources</p>
+				<h2>An inspectable surface, not a marketing promise</h2>
+				<div class="mcp-principles">
+					<article><strong>UCP contract</strong><p><a href="/openapi/ucp-2026-07-15.json">OpenAPI</a>, <a href="/openrpc/ucp-2026-07-15.json">OpenRPC</a> and <a href="/schemas/ucp-compatibility-2026-07-15.json">JSON Schema</a>.</p></article>
+					<article><strong>Public API</strong><p><a href="/openapi/compatair-2026-07-15.json">Complete OpenAPI</a> for search, evidence, changefeed and compatibility.</p></article>
+					<article><strong>Agent context</strong><p><a href="/llms.txt">llms.txt</a> and <a href="/llms-full.txt">llms-full.txt</a>.</p></article>
+				</div>
+				<ul class="mcp-source-list">
+					<li><a href="https://ucp.dev/2026-04-08/specification/overview/" rel="noopener">Universal Commerce Protocol · 2026-04-08 overview</a></li>
+					<li><a href="https://ucp.dev/specification/signatures/" rel="noopener">Universal Commerce Protocol · HTTP message signatures</a></li>
+					<li><a href="https://developers.googleblog.com/under-the-hood-universal-commerce-protocol-ucp/" rel="noopener">Google Developers · UCP architecture</a></li>
+					<li><a href="https://github.com/Universal-Commerce-Protocol/ucp" rel="noopener">Public UCP repository</a></li>
+					<li><a href="https://www.w3.org/TR/vocab-dcat-3/" rel="noopener">W3C · Data Catalog Vocabulary 3</a></li>
+				</ul>
+				<p>The test profile is available at <a href={ucpExamplePlatformProfile}><code>{ucpExamplePlatformProfile}</code></a>. Report vulnerabilities through the <a href="/securite/">security policy</a>.</p>
+			</section>
+		</main>
+	</div>
+</BaseLayout>

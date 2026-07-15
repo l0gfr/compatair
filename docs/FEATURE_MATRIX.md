@@ -26,7 +26,7 @@
 - contribution facultative aux priorités du catalogue, agrégée sans événement brut, cookie, identifiant de navigateur ni adresse IP persistée ;
 - rapport privé de priorisation avec seuil minimal de cinq contributions par dimension, couverture pondérée par la demande observée et objectif opérationnel explicite de 80 % ;
 - funnel du calculateur agrégé sans URL, referrer, cookie ni identifiant, avec affichage, famille fermée, sélection et recalcul réussi de la recommandation contrefactuelle, rapport privé et contrôle de cohérence des taux ;
-- serveur MCP Streamable HTTP en lecture seule, neuf outils, six ressources, trois prompts, pagination, quotas, limite de taille, contrôle Origin, santé et métriques agrégées ;
+- serveur MCP Streamable HTTP en lecture seule, neuf outils historiques, neuf tools AirGraph et un bridge UCP, neuf ressources, trois prompts, enveloppe canonique obligatoire, pagination, quotas, limite de taille, contrôle Origin, santé et métriques agrégées ;
 - workflows CI, déploiement, sécurité, snapshot et disponibilité, avec permissions minimales et actions épinglées ;
 - CSP, HSTS, politiques de sécurité, signalement responsable, confidentialité, cookies, affiliation et sources ;
 - HTML statique, cartes sociales PNG 1200 × 630 dédiées aux surfaces indexables et carte mutualisée pour les couples `noindex`, budget automatisé de 50 Ko gzip maximum pour les scripts client externes d’une page, images dimensionnées, focus visible et réduction des animations.

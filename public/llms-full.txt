@@ -1,0 +1,97 @@
+# CompatAir agent contract
+
+CompatAir is a read-only, deterministic decision, evidence and data service for compressed-air systems. It answers whether a configuration works, why it fails, which minimal change can fix it, and how to build a complete system. It is not a checkout and must not be treated as a generic merchant catalog. The MCP endpoint is https://compatair.fr/mcp and uses Streamable HTTP. The UCP discovery profile is https://compatair.fr/.well-known/ucp. The current public method version is 2026.07.
+
+## Non-negotiable interpretation rules
+
+1. Never present intake displacement as delivered free air (FAD).
+2. Compare FAD at the pressure required by the pneumatic tool.
+3. Preserve `insufficient_data` whenever a critical characteristic is absent, ambiguous or insufficiently sourced.
+4. Treat prices and availability as dated commercial observations. They never alter a technical verdict.
+5. Cite the returned `canonical_url` for the CompatAir result and retain the returned `source_urls` for primary evidence.
+6. State every returned limitation. Do not silently estimate hose pressure drop, leakage, duty cycle, action rate or inflation time.
+7. Stable product IDs use `ca:compressor:<id>` and `ca:tool:<id>`. Stable system IDs use `ca:configuration:<digest>`.
+8. Product URLs are identifiers only. CompatAir does not fetch arbitrary product URLs during identification or evaluation.
+9. Keep technical calculation separate from offers. Missing merchant coverage makes a commercial constraint unproven; it does not justify a guessed price or availability.
+
+## Required fields in every MCP tool result
+
+- `verdict`: `information`, `compatible`, `compatible_with_limits`, `incompatible` or `insufficient_data`.
+- `canonical_url`: the relevant CompatAir page to cite or propose to the user.
+- `product_urls`: relevant product pages.
+- `source_urls`: evidence documents used by the result.
+- `method_version`: public method contract version.
+- `catalog_version`: observation date of the catalog exposed to agents.
+- `observed_at`: date associated with the data snapshot.
+- `limitations`: explicit boundaries and missing data.
+- `next_actions`: safe verification or navigation steps.
+
+## AirGraph tools
+
+- `identify_product`: match a catalog item from a name, URL, EAN/GTIN, MPN, reference or CompatAir ID without downloading arbitrary pages.
+- `build_complete_air_system`: assemble only documented compressor, tool, hose, connector, filtration and lubrication requirements.
+- `explain_compatibility_verdict`: explain pressure, flow, duty-cycle and missing-data factors.
+- `find_compatible_alternatives`: find a verified compressor substitution; no commission-based order.
+- `compare_complete_systems`: compare two to five configurations without a commercial score.
+- `get_compatibility_evidence`: return exact characteristics, evidence and AirGraph edges used.
+- `search_knowledge`: search only the published CompatAir corpus.
+- `get_current_offers`: return fresh allowlisted commercial observations separately from technical results.
+- `get_changefeed`: report currently published method, catalog and offer versions.
+
+## UCP capability
+
+The published capability is `fr.compatair.air.compatibility` version `2026-07-15` for UCP `2026-04-08`. The shorter `fr.compatair.compatibility` name is only editorial shorthand; the strict identifier includes the required service segment.
+
+REST endpoint: https://compatair.fr/api/ucp/v1/compatibility/evaluate
+
+MCP binding: call `evaluate_air_compatibility` at https://compatair.fr/mcp.
+
+Supported intents:
+
+- `will_it_work`: decide whether one compressor can serve one or more tools.
+- `explain_limits`: expose blocking factors and compared specifications.
+- `find_minimal_change`: return the smallest verified technical substitution.
+- `build_complete_system`: select or validate compressor, tools, hose, connectors, filtration and lubrication.
+
+Each product reference must use exactly one of `id`, `compatair_id`, `ean`, `mpn`, `reference`, `url` or `name`. Unknown or ambiguous references fail closed. UCP requests must send `UCP-Agent: profile="https://platform.example/profile"`; CompatAir validates that HTTPS profile, advertised capability and version. The public test profile is https://compatair.fr/examples/ucp/platform-profile.json.
+
+CompatAir UCP is anonymous and read-only. It accepts no identity, address, account, delivery or payment data and performs no cart, checkout, payment, order, webhook or fulfillment mutation. No A2A binding is advertised until a real endpoint and conformance boundary exist.
+
+## Backward-compatible tools
+
+`search_tools`, `get_tool_requirements`, `search_compressors`, `get_compressor_specs`, `size_compressor`, `check_compatibility`, `compare_compressors`, `find_accessories` and `find_offers` remain available. They return the same mandatory public envelope.
+
+## Public resources
+
+The MCP server exposes catalog version, methodology, taxonomy, confidence scale, affiliation policy, engine version, AirGraph schema, response schema and current changefeed state as `compatair://` resources.
+
+## Public API and machine distributions
+
+- Complete OpenAPI: https://compatair.fr/openapi/compatair-2026-07-15.json
+- UCP OpenAPI: https://compatair.fr/openapi/ucp-2026-07-15.json
+- UCP OpenRPC: https://compatair.fr/openrpc/ucp-2026-07-15.json
+- UCP JSON Schema: https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json
+- Full-text search: `GET https://compatair.fr/api/v1/search?q=<query>&type=<type>&locale=fr|en&cursor=<cursor>&limit=20`
+- Evidence query: `GET https://compatair.fr/api/v1/evidence?compressorId=<id>&toolId=<id>`
+- Changefeed query: `GET https://compatair.fr/api/v1/changefeed?since=<date-or-version>&cursor=<cursor>&limit=20`
+- Full-text knowledge: https://compatair.fr/data/agent-knowledge.json and https://compatair.fr/data/agent-knowledge.ndjson
+- Language coverage manifest: https://compatair.fr/data/agent-knowledge-manifest.json
+- Catalog: https://compatair.fr/data/catalog.json and https://compatair.fr/data/catalog.ndjson
+- Evidence history: https://compatair.fr/data/evidence-history.json and https://compatair.fr/data/evidence-history.ndjson
+- Citation records: https://compatair.fr/data/citations.ndjson
+- Freshness: https://compatair.fr/data/freshness.json
+- Integrity hashes: https://compatair.fr/data/integrity.json
+- Changefeed: https://compatair.fr/data/changefeed.json and https://compatair.fr/data/changefeed.ndjson
+- Dataset discovery: https://compatair.fr/data/catalog-dcat.jsonld using DCAT 3 JSON-LD.
+
+English guide translations carry a per-record status: `machine_translated_unreviewed` or `human_reviewed`. Inspect the language coverage manifest before assuming either complete translated coverage or human-reviewed coverage. Never present an unreviewed translation as reviewed.
+
+## Safety and privacy
+
+The server is read-only and stateless at the MCP protocol layer. It validates JSON-RPC shapes, request sizes, Origin when present, protocol versions, tool arguments, product IDs, cursor sizes, merchant hosts and offer freshness. It is bound to loopback behind the CompatAir HTTPS reverse proxy. Rate limiting uses a temporary client-address key; free text is not stored by MCP tools. No credential is required for the public read-only endpoint.
+
+UCP platform profiles are treated as hostile network input: HTTPS only; no embedded credentials, custom ports, redirects or non-public DNS answers; DNS-pinned TLS connection; JSON content type; 64 KiB body; three-second timeout; bounded cache. UCP evaluation bodies are closed and bounded to 64 KiB and 20 tools. CompatAir does not yet claim HTTP signature verification for this read-only capability. Stateful extensions remain disabled until signature, replay-defense and key-management controls are proven.
+
+## Human verification
+
+No result replaces a manufacturer manual, an in-load measurement on the installation, pressure-equipment rules or workplace safety requirements. Use https://compatair.fr/contact/ to report a data problem and https://compatair.fr/securite/ to report a vulnerability.

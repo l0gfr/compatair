@@ -5,7 +5,7 @@ import { createServer } from 'node:net';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { allowedOfferRedirect, clientAddress, createCompatAirServer, isFreshOfferSnapshot, isMainModule, parseOfferId, resolveProductFunnelAggregatePath, resolveVerdictSnapshotPath } from './mcp-server.mjs';
+import { allowedOfferRedirect, clientAddress, createCompatAirServer, isFreshOfferSnapshot, isMainModule, parseOfferId, resolveKnowledgeSnapshotPath, resolveProductFunnelAggregatePath, resolveVerdictSnapshotPath } from './mcp-server.mjs';
 
 async function reservePort() {
 	const server = createServer();
@@ -121,6 +121,25 @@ describe('MCP HTTP boundary helpers', () => {
 		});
 		expect(result.status).toBe(200);
 		expect(JSON.parse(result.body).result.structuredContent.offers.map((offer: { id: string }) => offer.id)).toEqual(['active']);
+		expect(JSON.parse(result.body).result.structuredContent.offers[0].url).toBe('https://compatair.fr/go/active');
+	});
+
+	it('implements stateless Streamable HTTP GET and Origin rejection exactly at the MCP boundary', async () => {
+		const server = createCompatAirServer({ catalog: { catalogVersion: 'test', verifiedAt: '2026-07-15', compressors: [], tools: [] }, allowedOrigins: new Set(['https://compatair.fr']) });
+		const request = (method: 'GET' | 'POST', origin?: string) => new Promise<{ status: number; headers: Record<string, string>; body: string }>((resolve) => {
+			let status = 0; let headers: Record<string, string> = {}; let body = '';
+			const incoming = {
+				url: '/mcp', method, headers: { ...(origin ? { origin } : {}), accept: 'application/json, text/event-stream', 'content-type': 'application/json' }, socket: { remoteAddress: '127.0.0.1' },
+				async *[Symbol.asyncIterator]() { yield Buffer.from('{"jsonrpc":"2.0","id":1,"method":"ping"}'); },
+			};
+			const response = { setTimeout() {}, writeHead(value: number, values: Record<string, string>) { status = value; headers = values; }, end(value = '') { body += value; resolve({ status, headers, body }); }, destroy() {} };
+			server.emit('request', incoming, response);
+		});
+		const get = await request('GET');
+		expect(get.status).toBe(405);
+		expect(get.headers.Allow).toBe('POST');
+		expect((await request('POST', 'https://attacker.example')).status).toBe(403);
+		expect((await request('POST', 'https://compatair.fr')).status).toBe(200);
 	});
 
 	it('rate-limits repeated affiliate redirect requests', async () => {
@@ -212,6 +231,54 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(result.headers['Access-Control-Allow-Origin']).toBe('*');
 		expect(JSON.parse(result.body)).toMatchObject({ schemaVersion: '1.0.0', verdictVersion: 'verdict-test', calculationVersion: '1.2.0', compatibility: { verdict: 'continuous' }, detailsUrl: 'https://compatair.fr/calculateur/?outil=tool-a&compresseur=compressor-a', proofUrl: 'https://compatair.fr/graphe-preuve/?compresseur=compressor-a&outil=tool-a' });
 		expect(JSON.parse(result.body).sources).toHaveLength(2);
+	});
+
+	it('answers a real UCP decision question through the hardened read-only boundary', async () => {
+		const catalog = {
+			catalogVersion: 'catalog-test', verifiedAt: '2026-07-15',
+			compressors: [{ id: 'compressor-a', slug: 'compressor-a', brand: 'A', model: 'A1', tankLiters: 100, maxPressureBar: 10, fadCurve: [{ pressureBar: 6, litersPerMinute: 300 }], confidence: 'A', evidence: [{ id: 'source-c', sourceLabel: 'Source C', sourceUrl: 'https://manufacturer.example/c', retrievedAt: '2026-07-15', confidence: 'A' }] }],
+			tools: [{ id: 'tool-a', slug: 'tool-a', brand: 'B', model: 'B1', label: 'Tool B1', category: 'Test', demandModel: 'fixed-flow', workingPressureBar: { min: 6, typical: 6, max: 6 }, airflowLpm: { min: 100, typical: 100, max: 100 }, connectorSize: '1/4 inch', recommendedHose: { innerDiameterMm: 10, maximumLengthMeters: 5 }, filtrationRequirement: 'dry air', lubricationRequirement: 'oil', confidence: 'A', evidence: [{ id: 'source-t', sourceLabel: 'Source T', sourceUrl: 'https://manufacturer.example/t', retrievedAt: '2026-07-15', confidence: 'A' }] }],
+		} as any;
+		const platformProfile = { ucp: { version: '2026-04-08', capabilities: { 'fr.compatair.air.compatibility': [{ version: '2026-07-15', spec: 'https://compatair.fr/en/ucp/', schema: 'https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json' }] } } };
+		const server = createCompatAirServer({ catalog, allowedOrigins: new Set(['https://compatair.fr']), fetchUcpProfile: async () => platformProfile });
+		const payload = JSON.stringify({ ucp: { version: '2026-04-08' }, intent: 'will_it_work', configuration: { compressor: { id: 'compressor-a' }, tools: [{ id: 'tool-a' }], mode: 'successive' }, requested_outputs: ['compatibility', 'attribution', 'evidence'] });
+		const result = await new Promise<{ status: number; headers: Record<string, string>; body: string }>((resolve) => {
+			let status = 0; let headers: Record<string, string> = {}; let body = '';
+			const request = {
+				url: '/api/ucp/v1/compatibility/evaluate', method: 'POST',
+				headers: { 'content-type': 'application/json', 'ucp-agent': 'profile="https://agent.example/.well-known/ucp"' }, socket: { remoteAddress: '127.0.0.1' },
+				async *[Symbol.asyncIterator]() { yield Buffer.from(payload); },
+			};
+			const response = { setTimeout() {}, writeHead(value: number, values: Record<string, string>) { status = value; headers = values; }, end(value = '') { body += value; resolve({ status, headers, body }); }, destroy() {} };
+			server.emit('request', request, response);
+		});
+		expect(result.status).toBe(200);
+		expect(result.headers['Cache-Control']).toBe('no-store');
+		expect(JSON.parse(result.body)).toMatchObject({
+			ucp: { version: '2026-04-08', capabilities: { 'fr.compatair.air.compatibility': [{ version: '2026-07-15' }] } },
+			capability: 'fr.compatair.air.compatibility', intent: 'will_it_work',
+			canonical_url: 'https://compatair.fr/calculateur/?outil=tool-a&compresseur=compressor-a',
+			security: { access: 'anonymous_read_only', accepts_pii: false, accepts_payment: false, mutates_commerce_state: false },
+			attribution: { provider: 'CompatAir', canonical_url: 'https://compatair.fr/calculateur/?outil=tool-a&compresseur=compressor-a' },
+		});
+		expect(JSON.parse(result.body).source_urls).toHaveLength(2);
+	});
+
+	it('rejects UCP checkout fields and unknown product locators without fetching product pages', async () => {
+		const platformProfile = { ucp: { version: '2026-04-08', capabilities: { 'fr.compatair.air.compatibility': [{ version: '2026-07-15', spec: 'https://compatair.fr/en/ucp/', schema: 'https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json' }] } } };
+		const server = createCompatAirServer({ catalog: { catalogVersion: 'test', compressors: [], tools: [] }, allowedOrigins: new Set(['https://compatair.fr']), fetchUcpProfile: async () => platformProfile });
+		const request = (payload: unknown) => new Promise<{ status: number; body: string }>((resolve) => {
+			let status = 0; let body = '';
+			const incoming = { url: '/api/ucp/v1/compatibility/evaluate', method: 'POST', headers: { 'content-type': 'application/json', 'ucp-agent': 'profile="https://agent.example/profile"' }, socket: { remoteAddress: '127.0.0.1' }, async *[Symbol.asyncIterator]() { yield Buffer.from(JSON.stringify(payload)); } };
+			const response = { setTimeout() {}, writeHead(value: number) { status = value; }, end(value = '') { body += value; resolve({ status, body }); }, destroy() {} };
+			server.emit('request', incoming, response);
+		});
+		const stateful = await request({ ucp: { version: '2026-04-08' }, intent: 'will_it_work', configuration: { compressor: { id: 'a' }, tools: [{ id: 'b' }] }, checkout: { payment: 'never' } });
+		expect(stateful.status).toBe(400);
+		expect(JSON.parse(stateful.body).messages[0].code).toBe('invalid_request');
+		const unresolved = await request({ ucp: { version: '2026-04-08' }, intent: 'will_it_work', configuration: { compressor: { url: 'https://merchant.example/a' }, tools: [{ id: 'b' }] } });
+		expect(unresolved.status).toBe(404);
+		expect(JSON.parse(unresolved.body).messages[0].code).toBe('product_unresolved');
 	});
 
 	it('migrates an exact historical compatibility slug and rejects unknown legacy URLs', async () => {
@@ -325,6 +392,11 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(resolveVerdictSnapshotPath('/catalog.json', '/srv/verdicts.json')).toBe('/srv/verdicts.json');
 	});
 
+	it('resolves the bounded knowledge index next to the configured catalog', () => {
+		expect(resolveKnowledgeSnapshotPath('/var/www/html/compatair/current/data/catalog.json')).toBe('/var/www/html/compatair/current/data/agent-knowledge.json');
+		expect(resolveKnowledgeSnapshotPath('/catalog.json', '/srv/search.json')).toBe('/srv/search.json');
+	});
+
 	it('keeps funnel aggregation enabled with an older production unit', () => {
 		expect(resolveProductFunnelAggregatePath('/var/lib/compatair/demand-aggregates.json')).toBe('/var/lib/compatair/product-funnel-aggregates.json');
 		expect(resolveProductFunnelAggregatePath(undefined)).toBeUndefined();
@@ -337,7 +409,7 @@ describe('MCP HTTP boundary helpers', () => {
 		const current = join(directory, 'current');
 		mkdirSync(join(release, '_server'), { recursive: true });
 		mkdirSync(join(release, 'data'), { recursive: true });
-		for (const file of ['mcp-server.mjs', 'mcp-core.mjs', 'demand-aggregates.mjs', 'product-funnel-aggregates.mjs']) copyFileSync(join(process.cwd(), 'server', file), join(release, '_server', file));
+		for (const file of ['mcp-server.mjs', 'mcp-core.mjs', 'ucp-core.mjs', 'demand-aggregates.mjs', 'product-funnel-aggregates.mjs']) copyFileSync(join(process.cwd(), 'server', file), join(release, '_server', file));
 		writeFileSync(join(release, 'data', 'catalog.json'), JSON.stringify({ catalogVersion: 'catalog-test', compressors: [], tools: [] }));
 		writeFileSync(join(release, 'data', 'verdicts.json'), JSON.stringify({ catalogVersion: 'catalog-test', verdictVersion: 'verdict-test', calculationVersion: '1.2.0', pairs: [] }));
 		writeFileSync(join(release, 'data', 'offers.json'), JSON.stringify({ offers: [], snapshotVersion: 'empty' }));

@@ -1,0 +1,226 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json",
+  "title": "CompatAir UCP read-only air compatibility capability",
+  "$defs": {
+    "CompressorReference": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]{1,160}$" },
+        "compatair_id": { "type": "string", "pattern": "^ca:compressor:[a-z0-9-]{1,160}$" },
+        "ean": { "type": "string", "pattern": "^\\d{8,14}$" },
+        "mpn": { "type": "string", "minLength": 1, "maxLength": 256 },
+        "reference": { "type": "string", "minLength": 1, "maxLength": 256 },
+        "url": { "type": "string", "format": "uri", "pattern": "^https://", "maxLength": 4096 },
+        "name": { "type": "string", "minLength": 1, "maxLength": 256 }
+      },
+      "oneOf": [
+        { "required": ["id"] },
+        { "required": ["compatair_id"] },
+        { "required": ["ean"] },
+        { "required": ["mpn"] },
+        { "required": ["reference"] },
+        { "required": ["url"] },
+        { "required": ["name"] }
+      ],
+      "additionalProperties": false
+    },
+    "ToolReference": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]{1,160}$" },
+        "compatair_id": { "type": "string", "pattern": "^ca:tool:[a-z0-9-]{1,160}$" },
+        "ean": { "type": "string", "pattern": "^\\d{8,14}$" },
+        "mpn": { "type": "string", "minLength": 1, "maxLength": 256 },
+        "reference": { "type": "string", "minLength": 1, "maxLength": 256 },
+        "url": { "type": "string", "format": "uri", "pattern": "^https://", "maxLength": 4096 },
+        "name": { "type": "string", "minLength": 1, "maxLength": 256 },
+        "quantity": { "type": "integer", "minimum": 1, "maximum": 20 }
+      },
+      "oneOf": [
+        { "required": ["id"] }, { "required": ["compatair_id"] }, { "required": ["ean"] }, { "required": ["mpn"] },
+        { "required": ["reference"] }, { "required": ["url"] }, { "required": ["name"] }
+      ],
+      "additionalProperties": false
+    },
+    "EvaluationRequest": {
+      "type": "object",
+      "required": ["ucp", "configuration"],
+      "properties": {
+        "ucp": {
+          "type": "object",
+          "required": ["version"],
+          "properties": { "version": { "const": "2026-04-08" } },
+          "additionalProperties": false
+        },
+        "intent": { "enum": ["will_it_work", "explain_limits", "find_minimal_change", "build_complete_system"] },
+        "configuration": {
+          "type": "object",
+          "required": ["tools"],
+          "properties": {
+            "compressor": { "$ref": "#/$defs/CompressorReference" },
+            "tools": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 20,
+              "items": { "$ref": "#/$defs/ToolReference" }
+            },
+            "mode": { "enum": ["successive", "simultaneous"] }
+          },
+          "additionalProperties": false
+        },
+        "constraints": {
+          "type": "object",
+          "properties": {
+            "max_total_minor": { "type": "integer", "minimum": 0, "maximum": 100000000 },
+            "currency": { "const": "EUR" },
+            "minimum_merchants": { "type": "integer", "minimum": 1, "maximum": 10 },
+            "country": { "const": "FR" }
+          },
+          "additionalProperties": false
+        },
+        "requested_outputs": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 7,
+          "items": { "enum": ["compatibility", "mandatory_accessories", "limits", "alternatives", "complete_configuration", "attribution", "evidence"] }
+        }
+      },
+      "allOf": [{
+        "if": { "properties": { "intent": { "not": { "const": "build_complete_system" } } } },
+        "then": { "properties": { "configuration": { "required": ["compressor"] } } }
+      }],
+      "additionalProperties": false
+    },
+    "McpArguments": {
+      "type": "object",
+      "required": ["meta", "ucp", "configuration"],
+      "properties": {
+        "meta": {
+          "type": "object",
+          "required": ["ucp-agent"],
+          "properties": {
+            "ucp-agent": {
+              "type": "object",
+              "required": ["profile"],
+              "properties": { "profile": { "type": "string", "format": "uri", "pattern": "^https://" } },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "ucp": { "$ref": "#/$defs/EvaluationRequest/properties/ucp" },
+        "intent": { "$ref": "#/$defs/EvaluationRequest/properties/intent" },
+        "configuration": {
+          "type": "object",
+          "required": ["tools"],
+          "properties": {
+            "compressor": { "type": "object", "required": ["id"], "properties": { "id": { "type": "string", "pattern": "^[a-z0-9-]{1,160}$" } }, "additionalProperties": false },
+            "tools": { "type": "array", "minItems": 1, "maxItems": 20, "items": { "type": "object", "required": ["id"], "properties": { "id": { "type": "string", "pattern": "^[a-z0-9-]{1,160}$" } }, "additionalProperties": false } },
+            "mode": { "enum": ["successive", "simultaneous"] }
+          },
+          "additionalProperties": false
+        },
+        "constraints": { "$ref": "#/$defs/EvaluationRequest/properties/constraints" },
+        "requested_outputs": { "$ref": "#/$defs/EvaluationRequest/properties/requested_outputs" }
+      },
+      "allOf": [{
+        "if": { "properties": { "intent": { "not": { "const": "build_complete_system" } } } },
+        "then": { "properties": { "configuration": { "required": ["compressor"] } } }
+      }],
+      "additionalProperties": false
+    },
+    "EvaluationResponse": {
+      "type": "object",
+      "required": ["ucp", "capability", "capability_version", "intent", "verdict", "canonical_url", "product_urls", "source_urls", "method_version", "catalog_version", "observed_at", "limitations", "next_actions", "security"],
+      "properties": {
+        "ucp": {
+          "type": "object",
+          "required": ["version", "capabilities"],
+          "properties": {
+            "version": { "const": "2026-04-08" },
+            "capabilities": {
+              "type": "object",
+              "required": ["fr.compatair.air.compatibility"],
+              "properties": {
+                "fr.compatair.air.compatibility": {
+                  "type": "array", "minItems": 1, "maxItems": 1,
+                  "items": { "type": "object", "required": ["version"], "properties": { "version": { "const": "2026-07-15" } }, "additionalProperties": false }
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "capability": { "const": "fr.compatair.air.compatibility" },
+        "capability_version": { "const": "2026-07-15" },
+        "intent": { "enum": ["will_it_work", "explain_limits", "find_minimal_change", "build_complete_system"] },
+        "verdict": { "enum": ["information", "compatible", "compatible_with_limits", "incompatible", "insufficient_data"] },
+        "canonical_url": { "type": "string", "format": "uri", "pattern": "^https://compatair\\.fr/" },
+        "product_urls": { "type": "array", "items": { "type": "string", "format": "uri", "pattern": "^https://compatair\\.fr/" }, "uniqueItems": true },
+        "source_urls": { "type": "array", "items": { "type": "string", "format": "uri", "pattern": "^https://" }, "uniqueItems": true },
+        "method_version": { "const": "2026.07" },
+        "catalog_version": { "type": "string", "minLength": 1 },
+        "observed_at": { "type": "string", "format": "date" },
+        "limitations": { "type": "array", "items": { "type": "string" } },
+        "next_actions": { "type": "array", "items": { "type": "string" } },
+        "catalogVersion": { "type": "string" },
+        "engineVersion": { "type": "string" },
+        "security": {
+          "type": "object",
+          "required": ["access", "accepts_pii", "accepts_payment", "mutates_commerce_state"],
+          "properties": {
+            "access": { "const": "anonymous_read_only" },
+            "accepts_pii": { "const": false },
+            "accepts_payment": { "const": false },
+            "mutates_commerce_state": { "const": false }
+          },
+          "additionalProperties": false
+        },
+        "compatibility": { "type": "object" },
+        "mandatory_accessories": { "type": "object" },
+        "limits": { "type": "array", "items": { "type": "string" } },
+        "alternatives": { "type": "array", "items": { "type": "object" } },
+        "complete_configuration": { "type": ["object", "null"] },
+        "configuration_id": { "type": "string", "pattern": "^ca:configuration:[a-f0-9]{24}$" },
+        "airgraph": { "type": "object" },
+        "attribution": {
+          "type": "object",
+          "required": ["provider", "canonical_url", "method_version"],
+          "properties": {
+            "provider": { "const": "CompatAir" },
+            "canonical_url": { "type": "string", "format": "uri", "pattern": "^https://compatair\\.fr/" },
+            "method_version": { "const": "2026.07" }
+          },
+          "additionalProperties": false
+        },
+        "evidence_urls": { "type": "array", "items": { "type": "string", "format": "uri" } },
+        "proof_urls": { "type": "array", "items": { "type": "string", "format": "uri", "pattern": "^https://compatair\\.fr/" }, "uniqueItems": true },
+        "commercial_constraints": { "type": "object" }
+      },
+      "additionalProperties": false
+    },
+    "ErrorResponse": {
+      "type": "object",
+      "required": ["ucp", "messages", "continue_url"],
+      "properties": {
+        "ucp": {
+          "type": "object", "required": ["version", "status", "capabilities"],
+          "properties": { "version": { "const": "2026-04-08" }, "status": { "const": "error" }, "capabilities": { "type": "object", "maxProperties": 0 } },
+          "additionalProperties": false
+        },
+        "messages": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object", "required": ["type", "code", "content", "severity"],
+            "properties": { "type": { "const": "error" }, "code": { "type": "string" }, "content": { "type": "string" }, "severity": { "const": "unrecoverable" } },
+            "additionalProperties": false
+          }
+        },
+        "continue_url": { "type": "string", "format": "uri", "pattern": "^https://compatair\\.fr/" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

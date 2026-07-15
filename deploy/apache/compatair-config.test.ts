@@ -31,7 +31,7 @@ describe('CompatAir Apache CSP', () => {
 	it('blocks executable release internals and hidden paths', () => {
 		expect(config).toContain('^/(?:_server)(?:/|$)');
 		const hiddenPathPattern = [...config.matchAll(/<LocationMatch "([^"]+)">([\s\S]*?)<\/LocationMatch>/g)]
-			.find(([, pattern, body]) => pattern.includes('well-known/security') && body.includes('Require all denied'))?.[1];
+			.find(([, pattern, body]) => pattern.includes('well-known/') && pattern.includes('security') && pattern.includes('ucp') && body.includes('Require all denied'))?.[1];
 		expect(hiddenPathPattern).toBeDefined();
 		const hiddenPath = new RegExp(hiddenPathPattern!);
 		expect(hiddenPath.test('/.env')).toBe(true);
@@ -39,13 +39,15 @@ describe('CompatAir Apache CSP', () => {
 		expect(hiddenPath.test('/.well-known/anything-else')).toBe(true);
 		expect(hiddenPath.test('/.well-known/security.txt/')).toBe(true);
 		expect(hiddenPath.test('/.well-known/security.txt')).toBe(false);
+		expect(hiddenPath.test('/.well-known/ucp/')).toBe(true);
+		expect(hiddenPath.test('/.well-known/ucp')).toBe(false);
 		expect(config.match(/Require all denied/g)?.length).toBeGreaterThanOrEqual(2);
 	});
 
 	it('caps request metadata and bodies at the reverse proxy', () => {
 		expect(config).toContain('LimitRequestLine 2048');
 		expect(config).toContain('LimitRequestFields 50');
-		expect(config.match(/LimitRequestBody 65536/g)).toHaveLength(2);
+		expect(config.match(/LimitRequestBody 65536/g)).toHaveLength(3);
 	});
 
 	it('sets browser isolation and disables script attributes', () => {
@@ -60,11 +62,15 @@ describe('CompatAir Apache CSP', () => {
 		expect(config).toContain('Permissions-Policy "camera=(self)');
 	});
 
-	it('publishes only the read-only API and widget as cross-origin resources', () => {
+	it('publishes only read-only APIs, machine contracts and the widget as cross-origin resources', () => {
 		expect(config).toContain('ProxyPass /api/v1/compatibility');
-		expect(config).toContain('<Location "/api/v1/compatibility">');
+		expect(config).toContain('ProxyPass /api/v1/search');
+		expect(config).toContain('ProxyPass /api/v1/evidence');
+		expect(config).toContain('ProxyPass /api/v1/changefeed');
+		expect(config).toContain('ProxyPass /api/ucp/v1/compatibility/evaluate');
+		expect(config).toContain('<LocationMatch "^/api/v1/(?:compatibility|search|evidence|changefeed)$">');
 		expect(config).toContain('<LocationMatch "^/widget/(?:v1|v1\\.0\\.0)/compatair-widget\\.js$">');
-		expect(config.match(/Cross-Origin-Resource-Policy "cross-origin"/g)).toHaveLength(2);
+		expect(config.match(/Cross-Origin-Resource-Policy "cross-origin"/g)).toHaveLength(3);
 	});
 
 	it('routes the retired compatibility namespace through the validated migration handler', () => {
@@ -103,10 +109,11 @@ describe('CompatAir Apache CSP', () => {
 	});
 
 	it('keeps public JSON out of search results without changing snapshot freshness', () => {
-		const publicJson = config.match(
-			/<LocationMatch "\^\/data\/\[\^\/\]\+\\\.json\$">([\s\S]*?)<\/LocationMatch>/,
-		)?.[1];
+		const publicJson = [...config.matchAll(/<LocationMatch "([^"]+)">([\s\S]*?)<\/LocationMatch>/g)]
+			.find(([, pattern]) => pattern.includes('jsonld') && pattern.includes('openapi'))?.[2];
 		expect(publicJson).toContain('Header always set X-Robots-Tag "noindex"');
+		expect(publicJson).toContain('Header always set Access-Control-Allow-Origin "*"');
+		expect(publicJson).toContain('Cache-Control "public, max-age=300"');
 		const shortLivedSnapshots = config.match(
 			/<LocationMatch "\^\/data\/\(\?:catalog\|offers\)\\\.json\$">([\s\S]*?)<\/LocationMatch>/,
 		)?.[1];
@@ -116,7 +123,7 @@ describe('CompatAir Apache CSP', () => {
 
 	it('normalizes proxied API headers before exposing them cross-origin', () => {
 		const apiLocation = config.match(
-			/<Location "\/api\/v1\/compatibility">([\s\S]*?)<\/Location>/,
+			/<LocationMatch "\^\/api\/v1\/\(\?:compatibility\|search\|evidence\|changefeed\)\$">([\s\S]*?)<\/LocationMatch>/,
 		)?.[1];
 		expect(apiLocation).toBeDefined();
 		for (const header of [

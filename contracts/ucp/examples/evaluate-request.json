@@ -1,0 +1,10 @@
+{
+  "ucp": { "version": "2026-04-08" },
+  "intent": "will_it_work",
+  "configuration": {
+    "compressor": { "id": "kaeser-eurocomp-epc-840-100" },
+    "tools": [{ "id": "einhell-tc-pe-150", "quantity": 1 }],
+    "mode": "successive"
+  },
+  "requested_outputs": ["compatibility", "mandatory_accessories", "limits", "alternatives", "complete_configuration", "attribution", "evidence"]
+}

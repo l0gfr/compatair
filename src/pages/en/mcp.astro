@@ -1,0 +1,351 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {
+	agentsJavaScript,
+	agentsPythonEnglish,
+	callToolCurl,
+	claudeCliEnglish,
+	claudeProjectConfig,
+	geminiJavaScript,
+	geminiPythonEnglish,
+	initializeCurl,
+	legacyTools,
+	listToolsCurl,
+	mcpEndpoint,
+	mcpHealthEndpoint,
+	mcpPrompts,
+	mcpResources,
+	resultEnvelope,
+} from '../../data/mcp-documentation';
+import '../../styles/mcp-reference.css';
+
+const alternates = [
+	{ hreflang: 'fr-FR', path: '/mcp-documentation/' },
+	{ hreflang: 'en', path: '/en/mcp/' },
+	{ hreflang: 'x-default', path: '/mcp-documentation/' },
+];
+---
+
+<BaseLayout
+	lang="en"
+	title="CompatAir MCP: documentation for AI agents"
+	description="Install the CompatAir Streamable HTTP MCP server. Explore its 19 tools, AirGraph, UCP binding, evidence contracts and security model."
+	canonicalPath="/en/mcp/"
+	alternates={alternates}
+	breadcrumbs={[{ name: 'MCP documentation', path: '/en/mcp/' }]}
+>
+	<header class="mcp-hero">
+		<div class="container mcp-hero-inner">
+			<div>
+				<p class="eyebrow">Data infrastructure for AI agents</p>
+				<h1>CompatAir MCP</h1>
+				<p class="lead">A public, deterministic and read-only MCP server for identifying pneumatic products, checking compatibility, building complete systems and tracing every decision back to evidence. The agent orchestrates. The documented engine decides the verdict.</p>
+				<div class="mcp-hero-actions">
+					<a href="#install">Install the server</a>
+					<a href="#tools">Explore the tools</a>
+					<a href="/mcp-documentation/" hreflang="fr">Lire en français</a>
+				</div>
+			</div>
+			<dl class="mcp-facts">
+				<div><dt>Endpoint</dt><dd><code>{mcpEndpoint}</code></dd></div>
+				<div><dt>Transport</dt><dd>Streamable HTTP · JSON-RPC 2.0</dd></div>
+				<div><dt>Surface</dt><dd>19 tools · 9 resources · 3 prompts</dd></div>
+				<div><dt>Contracts</dt><dd>MCP 2.0.0 · method 2026.07 · AirGraph 0.1.0</dd></div>
+				<div><dt>Authentication</dt><dd>None · public data · read-only</dd></div>
+				<div><dt>Status</dt><dd><a href={mcpHealthEndpoint}>Versions exposed by the service</a></dd></div>
+			</dl>
+		</div>
+	</header>
+
+	<div class="container mcp-shell">
+		<aside class="mcp-toc">
+			<strong>In this documentation</strong>
+			<nav aria-label="MCP documentation table of contents">
+				<a href="#architecture">Architecture</a>
+				<a href="#quickstart">Quickstart</a>
+				<a href="#install">ChatGPT, Claude, Gemini</a>
+				<a href="#contract">Result contract</a>
+				<a href="#tools">Tools, resources, prompts</a>
+				<a href="#airgraph">AirGraph</a>
+				<a href="#security">Security</a>
+				<a href="#best-practices">Best practices</a>
+				<a href="#limitations">Explicit limitations</a>
+				<a href="#troubleshooting">Troubleshooting</a>
+				<a href="#versions">Versions and sources</a>
+			</nav>
+			<div class="mcp-toc-meta">
+				<a href="/llms.txt">Concise llms.txt</a>
+				<a href="/llms-full.txt">Full llms-full.txt</a>
+				<a href="/securite/">Report a vulnerability</a>
+			</div>
+		</aside>
+
+		<main class="mcp-reference">
+			<section id="architecture">
+				<p class="eyebrow">The verifiable difference</p>
+				<h2>A technical decision service, not a conversational wrapper</h2>
+				<p class="mcp-section-intro">CompatAir never asks a language model to guess whether two products work together. The server returns inputs, method, verdict, limitations, evidence and the matching web page in a structured response.</p>
+				<div class="mcp-stat-grid">
+					<div><strong>Deterministic</strong><span>The same pair and snapshot produce the same verdict.</span></div>
+					<div><strong>Source-backed</strong><span>Critical specifications retain their documents and observation dates.</span></div>
+					<div><strong>Fail closed</strong><span>A missing decisive fact becomes <code>insufficient_data</code>.</span></div>
+				</div>
+				<div class="mcp-principles">
+					<article><strong>A canonical page in every result</strong><p><code>canonical_url</code> gives the agent a human-readable CompatAir page to cite.</p></article>
+					<article><strong>Evidence remains distinct</strong><p><code>source_urls</code> identifies the documents used. It does not replace the canonical result page.</p></article>
+					<article><strong>Commerce is isolated</strong><p>Prices and availability use separate tools. Commission cannot create or change a verdict.</p></article>
+					<article><strong>Explicit versions</strong><p>Method, catalog and observation dates travel with each result and appear in the changefeed.</p></article>
+					<article><strong>Stable identifiers</strong><p>Products and configurations receive a CompatAir ID independent of the displayed commercial name.</p></article>
+					<article><strong>Progressive compatibility</strong><p>Nine legacy tools remain available. Nine AirGraph tools and one UCP tool extend the model.</p></article>
+				</div>
+			</section>
+
+			<section id="quickstart">
+				<p class="eyebrow">Quickstart</p>
+				<h2>Test the protocol without an SDK</h2>
+				<p>These requests use the current Streamable HTTP transport. Each JSON-RPC message is sent in a new <code>POST</code> and advertises both response media types required by the protocol.</p>
+				<p class="mcp-code-label"><span>1 · Initialize</span><span>curl</span></p>
+				<pre><code>{initializeCurl}</code></pre>
+				<p class="mcp-code-label"><span>2 · Discover tools</span><span>curl</span></p>
+				<pre><code>{listToolsCurl}</code></pre>
+				<p class="mcp-code-label"><span>3 · Identify a product by EAN</span><span>curl</span></p>
+				<pre><code>{callToolCurl}</code></pre>
+				<div class="mcp-note"><p>The server is stateless at the protocol layer and returns JSON responses. A <code>GET /mcp</code> therefore receives <code>405 Method Not Allowed</code>, which is the specified behavior when the server does not expose a server-initiated SSE stream.</p></div>
+			</section>
+
+			<section id="install">
+				<p class="eyebrow">Verified integrations</p>
+				<h2>ChatGPT, Claude, Gemini and agent SDKs</h2>
+				<p class="mcp-section-intro">The endpoint is identical in every client. Configuration vocabulary, permissions and execution location are the only differences.</p>
+
+				<h3>ChatGPT</h3>
+				<ol>
+					<li>Confirm that developer mode and custom app creation are allowed for your account or workspace.</li>
+					<li>Open <strong>Settings → Apps → Create</strong>, enter <code>{mcpEndpoint}</code> and select no authentication.</li>
+					<li>Run <strong>Scan Tools</strong>, verify that the discovered actions are read-only, then create the draft.</li>
+					<li>In a new chat, select the app and test a positive case, an incompatible case and an <code>insufficient_data</code> case.</li>
+				</ol>
+				<div class="mcp-warning"><p>Menus and permissions depend on the plan and workspace policy. Before publishing, an administrator should review permissions and tool changes.</p></div>
+				<p>Official reference: <a href="https://help.openai.com/en/articles/12584461" rel="noopener">Developer mode and MCP apps in ChatGPT</a>.</p>
+
+				<h3>Claude Code</h3>
+				<div class="mcp-tabs">
+					<section>
+						<h3>CLI installation</h3>
+						<p>HTTP is the recommended transport for remote MCP servers.</p>
+						<pre><code>{claudeCliEnglish}</code></pre>
+					</section>
+					<section>
+						<h3>Project <code>.mcp.json</code></h3>
+						<p>Claude Code asks for project trust before using this configuration.</p>
+						<pre><code>{claudeProjectConfig}</code></pre>
+					</section>
+				</div>
+				<p>Use <code>--scope project</code> to share the configuration. <code>streamable-http</code> is also accepted as an alias of <code>http</code>. Official reference: <a href="https://code.claude.com/docs/en/mcp" rel="noopener">Connect Claude Code to tools via MCP</a>.</p>
+
+				<h3>Gemini Interactions API</h3>
+				<p>Remote MCP in the Interactions API accepts Streamable HTTP servers and can restrict the exposed surface with <code>allowed_tools</code>.</p>
+				<div class="mcp-tabs">
+					<section><h3>Python</h3><pre><code>{geminiPythonEnglish}</code></pre></section>
+					<section><h3>JavaScript</h3><pre><code>{geminiJavaScript}</code></pre></section>
+				</div>
+				<p>Check currently supported models in Google’s <a href="https://ai.google.dev/gemini-api/docs/function-calling#remote_mcp" rel="noopener">Gemini Remote MCP documentation</a>.</p>
+
+				<h3>OpenAI Agents SDK</h3>
+				<p>In Python, <code>HostedMCPTool</code> lets the Responses API call the public server. In JavaScript, <code>MCPServerStreamableHttp</code> connects the application process directly to it.</p>
+				<div class="mcp-tabs">
+					<section><h3>Python · Hosted MCP</h3><pre><code>{agentsPythonEnglish}</code></pre></section>
+					<section><h3>JavaScript · direct connection</h3><pre><code>{agentsJavaScript}</code></pre></section>
+				</div>
+				<p>Official references: <a href="https://openai.github.io/openai-agents-python/mcp/" rel="noopener">Python Agents SDK</a> and <a href="https://openai.github.io/openai-agents-js/guides/mcp/" rel="noopener">JavaScript Agents SDK</a>.</p>
+			</section>
+
+			<section id="contract">
+				<p class="eyebrow">Agent-to-user contract</p>
+				<h2>Every result is verifiable and citable</h2>
+				<p>Every tool publishes an <code>outputSchema</code>. Results are returned both as <code>structuredContent</code> and as serialized JSON in a text block for older clients.</p>
+				<pre><code>{resultEnvelope}</code></pre>
+				<div class="mcp-table-wrap">
+					<table>
+						<thead><tr><th>Field</th><th>Purpose</th><th>Agent rule</th></tr></thead>
+						<tbody>
+							<tr><td><code>verdict</code></td><td>Normalized technical state.</td><td>Never upgrade or soften it.</td></tr>
+							<tr><td><code>canonical_url</code></td><td>CompatAir page for this result.</td><td>Cite or offer it to the user.</td></tr>
+							<tr><td><code>product_urls</code></td><td>Relevant product pages.</td><td>Use them for product context.</td></tr>
+							<tr><td><code>source_urls</code></td><td>Evidence documents used.</td><td>Preserve claim-to-source links.</td></tr>
+							<tr><td><code>method_version</code></td><td>Calculation contract version.</td><td>Retain it in caches and traces.</td></tr>
+							<tr><td><code>catalog_version</code></td><td>Technical snapshot queried.</td><td>Compare it through the changefeed.</td></tr>
+							<tr><td><code>observed_at</code></td><td>Snapshot observation date.</td><td>Do not present it as real-time data.</td></tr>
+							<tr><td><code>limitations</code></td><td>Missing data and result boundaries.</td><td>Expose all of them.</td></tr>
+							<tr><td><code>next_actions</code></td><td>Safe checks or next pages.</td><td>Only suggest actions returned by the server.</td></tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="mcp-warning"><p><code>canonical_url</code> is the CompatAir reference. <code>source_urls</code> contains the documents supporting the data. Merging these two layers would break traceability.</p></div>
+			</section>
+
+			<section id="tools">
+				<p class="eyebrow">MCP 2.0.0 surface</p>
+				<h2>19 tools, 9 resources and 3 prompts</h2>
+				<p class="mcp-section-intro">Legacy tools cover search, sizing and pairwise compatibility. The AirGraph layer adds multi-identifier product resolution, explanation, complete systems, minimal corrections and synchronization.</p>
+				<div class="mcp-table-wrap">
+					<table>
+						<thead><tr><th>AirGraph tool</th><th>Capability</th></tr></thead>
+						<tbody>
+							<tr><td><code>evaluate_air_compatibility</code></td><td>Exposes the <code>fr.compatair.air.compatibility</code> UCP capability for intent-based transaction enrichment without touching checkout state.</td></tr>
+							<tr><td><code>identify_product</code></td><td>Matches a name, URL, EAN/GTIN, MPN, reference or CompatAir ID without fetching the supplied URL.</td></tr>
+							<tr><td><code>build_complete_air_system</code></td><td>Assembles compressor, tools, hose, connectors, filtration and lubrication from documented requirements only.</td></tr>
+							<tr><td><code>explain_compatibility_verdict</code></td><td>Breaks down pressure, flow, duty cycle and missing-data factors.</td></tr>
+							<tr><td><code>find_compatible_alternatives</code></td><td>Returns the smallest verified compressor substitution without commission-based ordering.</td></tr>
+							<tr><td><code>compare_complete_systems</code></td><td>Compares two to five technical configurations without a commercial score.</td></tr>
+							<tr><td><code>get_compatibility_evidence</code></td><td>Returns the specifications, references and AirGraph edges used by one verdict.</td></tr>
+							<tr><td><code>search_knowledge</code></td><td>Searches guides, glossary, methods and product pages within the published CompatAir corpus.</td></tr>
+							<tr><td><code>get_current_offers</code></td><td>Returns fresh allowlisted commercial observations separately from the technical verdict.</td></tr>
+							<tr><td><code>get_changefeed</code></td><td>Reports visible method, catalog and offer versions since a supplied date or version.</td></tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h3>Maintained legacy tools</h3>
+				<ul class="mcp-tool-list">{legacyTools.map((tool) => <li><code>{tool}</code></li>)}</ul>
+
+				<h3>Context resources</h3>
+				<ul class="mcp-tool-list">{mcpResources.map((resource) => <li><code>{resource}</code></li>)}</ul>
+
+				<h3>Reusable prompts</h3>
+				<ul class="mcp-tool-list">{mcpPrompts.map((prompt) => <li><code>{prompt}</code></li>)}</ul>
+			</section>
+
+			<section id="airgraph">
+				<p class="eyebrow">Sector data model</p>
+				<h2>AirGraph connects demand, distribution and evidence</h2>
+				<p class="mcp-section-intro">The graph does more than connect one tool to one compressor. It models technical requirements, distribution components, verdicts and evidence under stable identifiers.</p>
+				<div class="airgraph-flow" role="img" aria-label="Pneumatic tool to pressure and flow requirements, compressor, distribution, air treatment and compatible offers">
+					<span>Pneumatic tool and usage profile</span>
+					<span>Required pressure and flow</span>
+					<span>Compressor, tank and duty cycle</span>
+					<span>Hose, length and connectors</span>
+					<span>Filtration and lubrication</span>
+					<span>Evidence and compatible offers</span>
+				</div>
+				<div class="mcp-principles">
+					<article><strong>Product</strong><p><code>ca:compressor:&lt;id&gt;</code> and <code>ca:tool:&lt;id&gt;</code>.</p></article>
+					<article><strong>Configuration</strong><p><code>ca:configuration:&lt;digest&gt;</code> depends on the compressor, sorted tools and usage mode.</p></article>
+					<article><strong>Requirement</strong><p><code>ca:requirement:&lt;id&gt;</code> carries a documented pressure, flow or component fact.</p></article>
+				</div>
+				<p>A missing requirement remains missing. CompatAir does not infer pressure drop from an unknown hose and never converts intake displacement into FAD. The graph also records this absence in <code>limitations</code>.</p>
+			</section>
+
+			<section id="security">
+				<p class="eyebrow">Trust boundary</p>
+				<h2>A public server designed to limit its own power</h2>
+				<p class="mcp-section-intro">The service’s strongest defense is its narrow scope. CompatAir MCP cannot modify state, accepts no secrets, fetches no user-supplied URL and exposes neither the proprietary engine nor the filesystem.</p>
+				<div class="mcp-table-wrap">
+					<table>
+						<thead><tr><th>Risk</th><th>Enforced control</th></tr></thead>
+						<tbody>
+							<tr><td>DNS rebinding and browser calls</td><td>Loopback binding behind the HTTPS proxy. A present Origin must be allowlisted or the server returns 403.</td></tr>
+							<tr><td>SSRF</td><td><code>identify_product</code> parses identifiers and URL segments only. It never downloads remote content.</td></tr>
+							<tr><td>Tool abuse</td><td>All tools are functionally read-only. MCP annotations describe this, while the server enforces it.</td></tr>
+							<tr><td>Oversized input</td><td>64 KiB body limit, 2,048-character URL limit, bounded fields, arrays, cursors and identifiers.</td></tr>
+							<tr><td>Basic denial of service</td><td>120 requests per minute per client address, 10-second server timeouts and bounded sockets.</td></tr>
+							<tr><td>Exfiltration or retention</td><td>Tools retain no free text. Usage counters are aggregated and addresses are temporary rate-limit keys only.</td></tr>
+							<tr><td>Merchant redirects</td><td>HTTPS-only, explicit merchant and destination allowlists, maximum 48-hour offer freshness.</td></tr>
+							<tr><td>Commercial influence</td><td>Technical calculation runs before offers. Offers use a separate snapshot and tool.</td></tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="mcp-note"><p>No authentication is intentional for this public resource with no user data and no write action. Any future private or personalized feature must establish a new boundary, use resource-appropriate authorization and reject third-party token passthrough.</p></div>
+				<p>References: <a href="https://modelcontextprotocol.io/specification/2025-11-25/basic/transports" rel="noopener">transport specification</a> and <a href="https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices" rel="noopener">MCP security best practices</a>.</p>
+			</section>
+
+			<section id="best-practices">
+				<p class="eyebrow">Reusable checklist</p>
+				<h2>What a production MCP server should be able to demonstrate</h2>
+				<p>This list audits CompatAir and can also be used to review any remote server. A tool annotation or documentation claim is never sufficient evidence on its own.</p>
+				<ul class="mcp-checklist">
+					<li>A single Streamable HTTP endpoint and a <code>server.json</code> manifest using <code>remotes</code>.</li>
+					<li>Closed, bounded input schemas validated before processing.</li>
+					<li>A conforming <code>outputSchema</code> and <code>structuredContent</code> for every tool.</li>
+					<li>A text fallback for older clients.</li>
+					<li>Annotations that match the server’s actual authority.</li>
+					<li>Origin validation, loopback binding and an HTTPS proxy for remote access.</li>
+					<li>Documented rate limits, timeouts, maximum sizes and pagination.</li>
+					<li>A clear split between protocol errors and tool execution errors.</li>
+					<li>An explicit policy for data, logs, secrets and retention.</li>
+					<li>Stable identifiers, method versions and dated snapshots.</li>
+					<li>A canonical page and retained evidence in every domain result.</li>
+					<li>A changefeed for safe cache and decision invalidation.</li>
+					<li>Negative tests for origins, media types, JSON, arguments, quotas and destinations.</li>
+					<li>Human-readable and machine-readable documentation released together.</li>
+				</ul>
+				<p>The specification states that clients must treat tool annotations as untrusted unless the server itself is trusted. Clients should also validate structured results and keep a human in the loop for sensitive operations. See the <a href="https://modelcontextprotocol.io/specification/2025-11-25/server/tools" rel="noopener">MCP tools specification</a>.</p>
+			</section>
+
+			<section id="limitations">
+				<p class="eyebrow">Operational honesty</p>
+				<h2>What the server refuses to assume</h2>
+				<ul>
+					<li>Intake displacement is never presented as free air delivery.</li>
+					<li>FAD is compared at the required pressure with no extrapolation outside a documented curve.</li>
+					<li>Leaks and pressure drop are added only from explicit measurements.</li>
+					<li>Per-action demand requires an action rate. Inflation requires volume, pressures and target time.</li>
+					<li>A complete system remains <code>insufficient_data</code> when decisive hose, connector, filtration or lubrication requirements are undocumented.</li>
+					<li>An absent, expired or non-allowlisted offer is never replaced or invented.</li>
+					<li>An MCP result does not replace a manufacturer manual, an in-load measurement, pressure-equipment rules or workplace safety requirements.</li>
+				</ul>
+			</section>
+
+			<section id="troubleshooting">
+				<p class="eyebrow">Diagnostics</p>
+				<h2>Understand HTTP responses</h2>
+				<div class="mcp-table-wrap">
+					<table>
+						<thead><tr><th>Status</th><th>Typical cause</th><th>Correction</th></tr></thead>
+						<tbody>
+							<tr><td>400</td><td>Invalid JSON, JSON-RPC, protocol version or tool argument.</td><td>Check the request shape and tool schema.</td></tr>
+							<tr><td>403</td><td>A present <code>Origin</code> is not allowlisted.</td><td>Use a trusted client or the official origin.</td></tr>
+							<tr><td>405</td><td><code>GET /mcp</code> or another unsupported method.</td><td>Use <code>POST</code>. No server-initiated SSE stream is exposed.</td></tr>
+							<tr><td>406</td><td>Incomplete <code>Accept</code> header.</td><td>Include <code>application/json, text/event-stream</code>.</td></tr>
+							<tr><td>413</td><td>Body larger than 64 KiB.</td><td>Reduce input and paginate.</td></tr>
+							<tr><td>415</td><td>Non-JSON <code>Content-Type</code>.</td><td>Send <code>application/json</code>.</td></tr>
+							<tr><td>429</td><td>More than 120 requests per minute from one address.</td><td>Honor <code>Retry-After: 60</code> and cache stable lists.</td></tr>
+							<tr><td>5xx</td><td>Unavailable snapshot or internal error.</td><td>Check <a href={mcpHealthEndpoint}>service status</a>, retry and never convert failure into a verdict.</td></tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<section id="versions">
+				<p class="eyebrow">Discovery and governance</p>
+				<h2>Versions, manifest and reference documents</h2>
+				<p>The registry manifest versioned with CompatAir declares the official remote through <code>remotes</code>:</p>
+				<pre><code>{`{
+  "name": "io.github.bluetouff/compatair",
+  "version": "2.0.0",
+  "remotes": [{
+    "type": "streamable-http",
+    "url": "https://compatair.fr/mcp"
+  }]
+}`}</code></pre>
+				<div class="mcp-principles">
+					<article><strong>For an agent</strong><p><a href="/llms.txt">llms.txt</a> summarizes non-negotiable interpretation rules and entry points.</p></article>
+					<article><strong>For an integration</strong><p>The <a href="/schemas/mcp-result-2026.07.json">result schema</a> and <a href="/schemas/airgraph-0.1.0.json">AirGraph schema</a> are served at stable URIs.</p></article>
+					<article><strong>For a cache</strong><p><code>get_changefeed</code> and <code>compatair://changefeed/current</code> expose visible versions.</p></article>
+				</div>
+				<p>The complete text contract remains available in <a href="/llms-full.txt">llms-full.txt</a>.</p>
+				<h3>Normative and integration sources</h3>
+				<ul class="mcp-source-list">
+					<li><a href="https://modelcontextprotocol.io/registry/remote-servers" rel="noopener">MCP Registry · publishing remote servers</a></li>
+					<li><a href="https://modelcontextprotocol.io/specification/2025-11-25/basic/transports" rel="noopener">MCP · Streamable HTTP transport</a></li>
+					<li><a href="https://modelcontextprotocol.io/specification/2025-11-25/server/tools" rel="noopener">MCP · tools, schemas and structured results</a></li>
+					<li><a href="https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices" rel="noopener">MCP · security best practices</a></li>
+					<li><a href="https://help.openai.com/en/articles/12584461" rel="noopener">OpenAI · MCP apps in ChatGPT</a></li>
+					<li><a href="https://code.claude.com/docs/en/mcp" rel="noopener">Anthropic · MCP in Claude Code</a></li>
+					<li><a href="https://ai.google.dev/gemini-api/docs/function-calling#remote_mcp" rel="noopener">Google · Remote MCP in Gemini</a></li>
+				</ul>
+				<p>To report a data or integration issue, use the <a href="/contact/">contact page</a>. For a vulnerability, follow the <a href="/securite/">security policy</a>.</p>
+			</section>
+		</main>
+	</div>
+</BaseLayout>

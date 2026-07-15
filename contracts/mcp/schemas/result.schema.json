@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://compatair.fr/schemas/mcp-result-2026.07.json",
+  "title": "CompatAir MCP result",
+  "type": "object",
+  "required": ["verdict", "canonical_url", "product_urls", "source_urls", "method_version", "catalog_version", "observed_at", "limitations", "next_actions"],
+  "properties": {
+    "verdict": { "enum": ["information", "compatible", "compatible_with_limits", "incompatible", "insufficient_data"] },
+    "canonical_url": { "type": "string", "format": "uri", "pattern": "^https://compatair\\.fr/" },
+    "product_urls": { "type": "array", "items": { "type": "string", "format": "uri", "pattern": "^https://compatair\\.fr/" }, "uniqueItems": true },
+    "source_urls": { "type": "array", "items": { "type": "string", "format": "uri", "pattern": "^https://" }, "uniqueItems": true },
+    "method_version": { "const": "2026.07" },
+    "catalog_version": { "type": "string", "minLength": 1 },
+    "observed_at": { "type": "string", "format": "date" },
+    "limitations": { "type": "array", "items": { "type": "string" } },
+    "next_actions": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

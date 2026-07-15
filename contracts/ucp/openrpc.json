@@ -1,0 +1,18 @@
+{
+  "openrpc": "1.3.2",
+  "info": { "title": "CompatAir UCP MCP binding", "version": "2026-07-15" },
+  "servers": [{ "name": "CompatAir MCP", "url": "https://compatair.fr/mcp" }],
+  "methods": [{
+    "name": "evaluate_air_compatibility",
+    "summary": "Evaluate a read-only compressed-air configuration through MCP tools/call.",
+    "params": [{
+      "name": "arguments",
+      "required": true,
+      "schema": { "$ref": "https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json#/$defs/McpArguments" }
+    }],
+    "result": {
+      "name": "result",
+      "schema": { "$ref": "https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json#/$defs/EvaluationResponse" }
+    }
+  }]
+}

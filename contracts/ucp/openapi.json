@@ -1,0 +1,39 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "CompatAir UCP air compatibility service",
+    "version": "2026-07-15",
+    "description": "Read-only technical compatibility enrichment. No identity, cart, checkout, payment, order or webhook operation is exposed."
+  },
+  "servers": [{ "url": "https://compatair.fr/api/ucp/v1" }],
+  "paths": {
+    "/compatibility/evaluate": {
+      "post": {
+        "operationId": "evaluateAirCompatibility",
+        "summary": "Evaluate a complete compressed-air configuration",
+        "parameters": [{
+          "name": "UCP-Agent",
+          "in": "header",
+          "required": true,
+          "schema": { "type": "string", "maxLength": 2048, "pattern": "^profile=\\\"https://[^\\\"]+\\\"$" },
+          "description": "RFC 8941 dictionary containing the HTTPS platform profile URL."
+        }],
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json#/$defs/EvaluationRequest" } } }
+        },
+        "responses": {
+          "200": { "description": "Compatibility result or negotiated capability error", "content": { "application/json": { "schema": { "oneOf": [{ "$ref": "https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json#/$defs/EvaluationResponse" }, { "$ref": "https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json#/$defs/ErrorResponse" }] } } } },
+          "400": { "description": "Invalid closed-schema request or profile URL", "content": { "application/json": { "schema": { "$ref": "https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json#/$defs/ErrorResponse" } } } },
+          "403": { "description": "Untrusted or forbidden profile target", "content": { "application/json": { "schema": { "$ref": "https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json#/$defs/ErrorResponse" } } } },
+          "413": { "description": "Request body over 64 KiB", "content": { "application/json": { "schema": { "$ref": "https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json#/$defs/ErrorResponse" } } } },
+          "415": { "description": "Content-Type is not application/json", "content": { "application/json": { "schema": { "$ref": "https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json#/$defs/ErrorResponse" } } } },
+          "422": { "description": "Unsupported UCP version", "content": { "application/json": { "schema": { "$ref": "https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json#/$defs/ErrorResponse" } } } },
+          "424": { "description": "Platform profile could not be fetched safely", "content": { "application/json": { "schema": { "$ref": "https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json#/$defs/ErrorResponse" } } } },
+          "429": { "description": "Rate limited", "headers": { "Retry-After": { "schema": { "type": "integer" } } }, "content": { "application/json": { "schema": { "$ref": "https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json#/$defs/ErrorResponse" } } } }
+        },
+        "security": []
+      }
+    }
+  }
+}

@@ -3,9 +3,10 @@ import { realpathSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { createMcpCore, ENGINE_VERSION, PROTOCOL_VERSION } from './mcp-core.mjs';
+import { createMcpCore, ENGINE_VERSION, MCP_SERVER_VERSION, METHOD_VERSION, PROTOCOL_VERSION } from './mcp-core.mjs';
 import { createDemandAggregateStore, DEMAND_EVENT_SCHEMA_VERSION, isValidCalculationVersion, validateDemandEvent } from './demand-aggregates.mjs';
 import { createProductFunnelAggregateStore, PRODUCT_FUNNEL_SCHEMA_VERSION, validateProductFunnelEvent } from './product-funnel-aggregates.mjs';
+import { authorizeUcpRequest, createUcpError, createUcpToolArguments, fetchPublicUcpProfile, ucpErrorStatus, validateUcpEvaluationRequest } from './ucp-core.mjs';
 
 const BODY_LIMIT = 65_536;
 const REQUEST_LIMIT = 120;
@@ -78,6 +79,14 @@ export function resolveVerdictSnapshotPath(catalogPath, configuredPath) {
 	return configuredPath || resolve(dirname(catalogPath), 'verdicts.json');
 }
 
+export function resolveKnowledgeSnapshotPath(catalogPath, configuredPath) {
+	return configuredPath || resolve(dirname(catalogPath), 'agent-knowledge.json');
+}
+
+export function resolveChangefeedSnapshotPath(catalogPath, configuredPath) {
+	return configuredPath || resolve(dirname(catalogPath), 'changefeed.json');
+}
+
 export function resolveProductFunnelAggregatePath(demandAggregatePath, configuredPath) {
 	return configuredPath || (demandAggregatePath ? resolve(dirname(demandAggregatePath), 'product-funnel-aggregates.json') : undefined);
 }
@@ -122,11 +131,17 @@ function isJsonContentType(request) {
 	return /^application\/json(?:\s*;|$)/.test(value);
 }
 
+function publicCompatibilityVerdict(value) {
+	if (value === 'continuous') return 'compatible';
+	if (value === 'intermittent') return 'compatible_with_limits';
+	return value === 'incompatible' ? 'incompatible' : 'insufficient_data';
+}
+
 /**
- * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, allowedOrigins: Set<string>, demandAggregatePath?: string, productFunnelAggregatePath?: string, proxyManagesApiHeaders?: boolean, now?: () => number, recordAffiliateClick?: (offerId: string) => void, recordToolCall?: (toolName: string) => void }} options
+ * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, knowledgeItems?: any[], changefeedEvents?: any[], allowedOrigins: Set<string>, demandAggregatePath?: string, productFunnelAggregatePath?: string, proxyManagesApiHeaders?: boolean, now?: () => number, fetchUcpProfile?: (url: URL) => Promise<any>, recordAffiliateClick?: (offerId: string) => void, recordToolCall?: (toolName: string) => void }} options
  */
-export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable', calculationVersion: ENGINE_VERSION }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, allowedOrigins, demandAggregatePath = undefined, productFunnelAggregatePath = undefined, proxyManagesApiHeaders = false, now = Date.now, recordAffiliateClick = () => {}, recordToolCall = () => {} }) {
-	const core = createMcpCore(catalog, offerSnapshot, { isOfferActive: (offer) => isFreshOfferSnapshot(offer, now()) && allowedOfferRedirect(offer) !== undefined });
+export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable', calculationVersion: ENGINE_VERSION }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, knowledgeItems = [], changefeedEvents = [], allowedOrigins, demandAggregatePath = undefined, productFunnelAggregatePath = undefined, proxyManagesApiHeaders = false, now = Date.now, fetchUcpProfile = fetchPublicUcpProfile, recordAffiliateClick = () => {}, recordToolCall = () => {} }) {
+	const core = createMcpCore(catalog, offerSnapshot, { isOfferActive: (offer) => isFreshOfferSnapshot(offer, now()) && allowedOfferRedirect(offer) !== undefined, verdictSnapshot, knowledgeItems, changefeedEvents, now });
 	const authoritativeCalculationVersion = isValidCalculationVersion(verdictSnapshot.calculationVersion) ? verdictSnapshot.calculationVersion : ENGINE_VERSION;
 	const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
 	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item]));
@@ -137,6 +152,41 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 	const counters = { rpc: 0, errors: 0 };
 	const demandStore = createDemandAggregateStore({ filePath: demandAggregatePath, catalog });
 	const productFunnelStore = createProductFunnelAggregateStore({ filePath: productFunnelAggregatePath });
+	function callPublicTool(name, args) {
+		const response = core.handle({ jsonrpc: '2.0', id: 'http-api', method: 'tools/call', params: { name, arguments: args } });
+		return response?.result;
+	}
+	function resolveProductLocator(locator) {
+		const { expectedType, ...value } = locator;
+		let argumentsValue;
+		if (value.id) argumentsValue = { query: value.id, limit: 10 };
+		else if (value.compatair_id) argumentsValue = { query: value.compatair_id, limit: 10 };
+		else if (value.ean) argumentsValue = { ean: value.ean, limit: 10 };
+		else if (value.mpn || value.reference) argumentsValue = { reference: value.mpn ?? value.reference, limit: 10 };
+		else if (value.url) argumentsValue = { url: value.url, limit: 10 };
+		else if (value.name) argumentsValue = { query: value.name, limit: 10 };
+		else return undefined;
+		const called = callPublicTool('identify_product', argumentsValue);
+		const exact = called?.structuredContent?.matches?.filter((item) => item.type === expectedType && item.match_confidence === 'exact') ?? [];
+		return exact.length === 1 ? exact[0].id : undefined;
+	}
+	function resolveUcpProducts(validated) {
+		const compressorId = validated.compressor ? resolveProductLocator(validated.compressor) : undefined;
+		if (validated.compressor && !compressorId) return undefined;
+		const toolIds = [];
+		for (const { locator, quantity } of validated.tools) {
+			const toolId = resolveProductLocator(locator);
+			if (!toolId) return undefined;
+			for (let index = 0; index < quantity; index++) toolIds.push(toolId);
+		}
+		return { compressorId, toolIds };
+	}
+	function publicApiHeaders(methods = 'GET, OPTIONS') {
+		return {
+			...(proxyManagesApiHeaders ? {} : { 'Access-Control-Allow-Origin': '*', 'Cross-Origin-Resource-Policy': 'cross-origin' }),
+			'Access-Control-Allow-Methods': methods, 'Access-Control-Allow-Headers': 'Accept', Vary: 'Origin',
+		};
+	}
 
 	async function handle(request, response) {
 		response.setTimeout(10_000);
@@ -144,7 +194,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 		let url;
 		try { url = new URL(request.url, 'http://localhost'); } catch { return json(response, 400, { error: 'invalid_request_target' }); }
 
-		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, verdictVersion: verdictSnapshot.verdictVersion, demandAggregation: { enabled: demandStore.enabled, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION }, productFunnelAggregation: { enabled: productFunnelStore.enabled, schemaVersion: PRODUCT_FUNNEL_SCHEMA_VERSION } });
+		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', mcpServerVersion: MCP_SERVER_VERSION, protocolVersion: PROTOCOL_VERSION, methodVersion: METHOD_VERSION, catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, verdictVersion: verdictSnapshot.verdictVersion, knowledgeItems: knowledgeItems.length, changefeedEvents: changefeedEvents.length, ucp: { readOnlyCompatibility: true }, demandAggregation: { enabled: demandStore.enabled, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION }, productFunnelAggregation: { enabled: productFunnelStore.enabled, schemaVersion: PRODUCT_FUNNEL_SCHEMA_VERSION } });
 
 		if (url.pathname === '/compatibilite' || url.pathname.startsWith('/compatibilite/')) {
 			if (!['GET', 'HEAD'].includes(request.method ?? '')) return json(response, 405, { error: 'method_not_allowed' }, { Allow: 'GET, HEAD' });
@@ -158,10 +208,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 		}
 
 		if (url.pathname === '/api/v1/compatibility') {
-			const corsHeaders = {
-				...(proxyManagesApiHeaders ? {} : { 'Access-Control-Allow-Origin': '*', 'Cross-Origin-Resource-Policy': 'cross-origin' }),
-				'Access-Control-Allow-Methods': 'GET, OPTIONS', 'Access-Control-Allow-Headers': 'Accept', Vary: 'Origin',
-			};
+			const corsHeaders = publicApiHeaders();
 			const apiJson = (status, value, headers = {}) => json(response, status, value, headers, { omitContentTypeOptions: proxyManagesApiHeaders });
 			if (request.method === 'OPTIONS') { response.writeHead(204, { ...corsHeaders, 'Cache-Control': 'public, max-age=86400' }); return response.end(); }
 			if (request.method !== 'GET') return apiJson(405, { error: 'method_not_allowed' }, { ...corsHeaders, Allow: 'GET, OPTIONS' });
@@ -179,16 +226,100 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			const evaluation = snapshotPair ?? { verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data' };
 			const detailsUrl = `https://compatair.fr/calculateur/?outil=${encodeURIComponent(tool.id)}&compresseur=${encodeURIComponent(compressor.id)}`;
 			const proofUrl = `https://compatair.fr/graphe-preuve/?compresseur=${encodeURIComponent(compressor.id)}&outil=${encodeURIComponent(tool.id)}`;
+			const sources = [...(compressor.evidence ?? []), ...(tool.evidence ?? [])].map((source) => ({ id: source.id, label: source.sourceLabel, url: source.sourceUrl, retrievedAt: source.retrievedAt, confidence: source.confidence }));
+			const limitations = Array.isArray(evaluation.warnings) ? evaluation.warnings : [];
 			return apiJson(200, {
+				verdict: publicCompatibilityVerdict(evaluation.verdict), canonical_url: detailsUrl,
+				product_urls: [`https://compatair.fr/compresseurs/${compressor.slug}/`, `https://compatair.fr/outils-pneumatiques/${tool.slug}/`],
+				source_urls: [...new Set(sources.map((source) => source.url))], method_version: METHOD_VERSION,
+				catalog_version: catalog.verifiedAt ?? catalog.catalogVersion, observed_at: catalog.verifiedAt ?? new Date(0).toISOString().slice(0, 10),
+				limitations, next_actions: [proofUrl],
 				schemaVersion: '1.0.0', catalogVersion: catalog.catalogVersion, catalogVerifiedAt: catalog.verifiedAt, verdictVersion: verdictSnapshot.verdictVersion, calculationVersion: authoritativeCalculationVersion,
 				input: { compressorId, toolId },
 				compressor: { id: compressor.id, brand: compressor.brand, model: compressor.model, slug: compressor.slug },
 				tool: { id: tool.id, brand: tool.brand, model: tool.model, label: tool.label, slug: tool.slug },
 				compatibility: evaluation,
-				sources: [...(compressor.evidence ?? []), ...(tool.evidence ?? [])].map((source) => ({ id: source.id, label: source.sourceLabel, url: source.sourceUrl, retrievedAt: source.retrievedAt, confidence: source.confidence })),
+				sources,
 				detailsUrl,
 				proofUrl,
-			}, { ...corsHeaders, 'Cache-Control': 'public, max-age=300' });
+			}, { ...corsHeaders, 'Cache-Control': 'public, max-age=300', Link: `<${detailsUrl}>; rel="canonical", <${proofUrl}>; rel="describedby", <https://compatair.fr/openapi/compatair-2026-07-15.json>; rel="service-desc"` });
+		}
+
+		if (url.pathname === '/api/v1/search') {
+			const corsHeaders = publicApiHeaders();
+			const apiJson = (status, value, headers = {}) => json(response, status, value, headers, { omitContentTypeOptions: proxyManagesApiHeaders });
+			if (request.method === 'OPTIONS') { response.writeHead(204, { ...corsHeaders, 'Cache-Control': 'public, max-age=86400' }); return response.end(); }
+			if (request.method !== 'GET') return apiJson(405, { error: 'method_not_allowed' }, { ...corsHeaders, Allow: 'GET, OPTIONS' });
+			if (!allow(`search:${clientAddress(request)}`)) return apiJson(429, { error: 'rate_limited' }, { ...corsHeaders, 'Retry-After': '60' });
+			const permitted = ['q', 'type', 'locale', 'cursor', 'limit'];
+			if ([...url.searchParams.keys()].some((key) => !permitted.includes(key)) || permitted.some((key) => url.searchParams.getAll(key).length > 1)) return apiJson(400, { error: 'invalid_query' }, corsHeaders);
+			const query = url.searchParams.get('q') ?? '';
+			const type = url.searchParams.get('type') || undefined;
+			const locale = url.searchParams.get('locale') || undefined;
+			const cursor = url.searchParams.get('cursor') || undefined;
+			const limitRaw = url.searchParams.get('limit');
+			const limit = limitRaw === null ? 10 : Number(limitRaw);
+			const called = callPublicTool('search_knowledge', { query, ...(type ? { type } : {}), ...(locale ? { locale } : {}), ...(cursor ? { cursor } : {}), limit });
+			if (!called || called.isError) return apiJson(400, { error: 'invalid_query' }, corsHeaders);
+			return apiJson(200, called.structuredContent, { ...corsHeaders, 'Cache-Control': 'public, max-age=60' });
+		}
+
+		if (url.pathname === '/api/v1/evidence') {
+			const corsHeaders = publicApiHeaders();
+			const apiJson = (status, value, headers = {}) => json(response, status, value, headers, { omitContentTypeOptions: proxyManagesApiHeaders });
+			if (request.method === 'OPTIONS') { response.writeHead(204, { ...corsHeaders, 'Cache-Control': 'public, max-age=86400' }); return response.end(); }
+			if (request.method !== 'GET') return apiJson(405, { error: 'method_not_allowed' }, { ...corsHeaders, Allow: 'GET, OPTIONS' });
+			if (!allow(`evidence:${clientAddress(request)}`)) return apiJson(429, { error: 'rate_limited' }, { ...corsHeaders, 'Retry-After': '60' });
+			const permitted = ['compressorId', 'toolId'];
+			if ([...url.searchParams.keys()].some((key) => !permitted.includes(key)) || permitted.some((key) => url.searchParams.getAll(key).length !== 1)) return apiJson(400, { error: 'invalid_query' }, corsHeaders);
+			const called = callPublicTool('get_compatibility_evidence', { compressorId: url.searchParams.get('compressorId') ?? '', toolId: url.searchParams.get('toolId') ?? '' });
+			if (!called) return apiJson(400, { error: 'invalid_query' }, corsHeaders);
+			if (called.isError) return apiJson(404, { error: 'product_not_found', ...called.structuredContent }, corsHeaders);
+			return apiJson(200, called.structuredContent, { ...corsHeaders, 'Cache-Control': 'public, max-age=300' });
+		}
+
+		if (url.pathname === '/api/v1/changefeed') {
+			const corsHeaders = publicApiHeaders();
+			const apiJson = (status, value, headers = {}) => json(response, status, value, headers, { omitContentTypeOptions: proxyManagesApiHeaders });
+			if (request.method === 'OPTIONS') { response.writeHead(204, { ...corsHeaders, 'Cache-Control': 'public, max-age=86400' }); return response.end(); }
+			if (request.method !== 'GET') return apiJson(405, { error: 'method_not_allowed' }, { ...corsHeaders, Allow: 'GET, OPTIONS' });
+			if (!allow(`changefeed:${clientAddress(request)}`)) return apiJson(429, { error: 'rate_limited' }, { ...corsHeaders, 'Retry-After': '60' });
+			const permitted = ['since', 'cursor', 'limit'];
+			if ([...url.searchParams.keys()].some((key) => !permitted.includes(key)) || permitted.some((key) => url.searchParams.getAll(key).length > 1)) return apiJson(400, { error: 'invalid_query' }, corsHeaders);
+			const since = url.searchParams.get('since') || undefined;
+			const cursor = url.searchParams.get('cursor') || undefined;
+			const limitRaw = url.searchParams.get('limit');
+			const limit = limitRaw === null ? 20 : Number(limitRaw);
+			const called = callPublicTool('get_changefeed', { ...(since ? { since } : {}), ...(cursor ? { cursor } : {}), limit });
+			if (!called || called.isError) return apiJson(400, { error: 'invalid_query' }, corsHeaders);
+			return apiJson(200, called.structuredContent, { ...corsHeaders, 'Cache-Control': 'public, max-age=60' });
+		}
+
+		if (url.pathname === '/api/ucp/v1/compatibility/evaluate') {
+			if (request.method !== 'POST') return json(response, 405, { error: 'method_not_allowed' }, { Allow: 'POST' });
+			if (!isAllowedOrigin(request, allowedOrigins)) return json(response, 403, createUcpError('profile_not_trusted'));
+			if (!isJsonContentType(request)) return json(response, 415, createUcpError('content_type_unsupported'));
+			if (!allow(`ucp:${clientAddress(request)}`)) return json(response, 429, createUcpError('rate_limited'), { 'Retry-After': '60' });
+			try {
+				const body = await readJsonBody(request);
+				const validated = validateUcpEvaluationRequest(body);
+				if (!validated) return json(response, 400, createUcpError('invalid_request'));
+				const authorized = await authorizeUcpRequest(request, body, fetchUcpProfile);
+				const resolved = resolveUcpProducts(validated);
+				if (!resolved) return json(response, 404, createUcpError('product_unresolved'));
+				const called = callPublicTool('evaluate_air_compatibility', createUcpToolArguments(validated, resolved, authorized.profileUrl));
+				if (!called) return json(response, 500, { error: 'internal_error' });
+				if (called.isError) return json(response, 404, called.structuredContent);
+				const canonicalUrl = called.structuredContent?.canonical_url;
+				const link = typeof canonicalUrl === 'string' && canonicalUrl.startsWith('https://compatair.fr/')
+					? `<${canonicalUrl}>; rel="canonical", <https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json>; rel="describedby"`
+					: '<https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json>; rel="describedby"';
+				return json(response, 200, called.structuredContent, { 'Cache-Control': 'no-store', Link: link });
+			} catch (error) {
+				if (error instanceof Error && error.message === 'BODY_TOO_LARGE') return json(response, 413, createUcpError('body_too_large'));
+				const code = error instanceof Error ? error.message : 'invalid_request';
+				return json(response, ucpErrorStatus(code), createUcpError(code));
+			}
 		}
 
 		if (url.pathname === '/events') {
@@ -230,12 +361,21 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 		if (typeof accept !== 'string' || !accept.includes('application/json') || !accept.includes('text/event-stream')) return json(response, 406, { error: 'accept_must_include_json_and_event_stream' });
 		if (!isJsonContentType(request)) return json(response, 415, { error: 'content_type_must_be_json' });
 		const protocol = request.headers['mcp-protocol-version'];
-		if (protocol && protocol !== PROTOCOL_VERSION && protocol !== '2025-03-26') return json(response, 400, { error: 'unsupported_protocol_version' });
+		if (protocol && ![PROTOCOL_VERSION, '2025-06-18', '2025-03-26'].includes(protocol)) return json(response, 400, { error: 'unsupported_protocol_version' });
 		if (!allow(`mcp:${clientAddress(request)}`)) return json(response, 429, { error: 'rate_limited' }, { 'Retry-After': '60' });
 		try {
 			const message = await readJsonBody(request);
 			const idIsValid = message?.id === undefined || message.id === null || (typeof message.id === 'string' && message.id.length <= 128) || (typeof message.id === 'number' && Number.isFinite(message.id));
 			if (!message || typeof message !== 'object' || Array.isArray(message) || message.jsonrpc !== '2.0' || typeof message.method !== 'string' || message.method.length > 128 || !idIsValid) return json(response, 400, { jsonrpc: '2.0', id: null, error: { code: -32600, message: 'Requête JSON-RPC invalide.' } });
+			if (message.method === 'tools/call' && message.params?.name === 'evaluate_air_compatibility') {
+				const profileUrl = message.params?.arguments?.meta?.['ucp-agent']?.profile;
+				const syntheticRequest = { headers: { 'ucp-agent': typeof profileUrl === 'string' ? `profile="${profileUrl}"` : undefined } };
+				try { await authorizeUcpRequest(syntheticRequest, message.params?.arguments, fetchUcpProfile); }
+				catch (error) {
+					const code = error instanceof Error ? error.message : 'invalid_request';
+					return json(response, ucpErrorStatus(code), { jsonrpc: '2.0', id: message.id ?? null, error: { code: -32001, message: 'UCP discovery failed', data: createUcpError(code) } });
+				}
+			}
 			counters.rpc++;
 			const result = core.handle(message);
 			if (message.method === 'tools/call' && typeof message.params?.name === 'string' && result && !result.error) recordToolCall(message.params.name);
@@ -270,6 +410,8 @@ async function start() {
 	const catalogPath = process.env.COMPAT_AIR_CATALOG ?? new URL('../dist/data/catalog.json', import.meta.url).pathname;
 	const offersPath = process.env.COMPAT_AIR_OFFERS ?? new URL('../dist/data/offers.json', import.meta.url).pathname;
 	const verdictsPath = resolveVerdictSnapshotPath(catalogPath, process.env.COMPAT_AIR_VERDICTS);
+	const knowledgePath = resolveKnowledgeSnapshotPath(catalogPath, process.env.COMPAT_AIR_KNOWLEDGE);
+	const changefeedPath = resolveChangefeedSnapshotPath(catalogPath, process.env.COMPAT_AIR_CHANGEFEED);
 	const allowedOrigins = new Set((process.env.MCP_ALLOWED_ORIGINS ?? 'https://compatair.fr,https://www.compatair.fr').split(',').map((item) => item.trim()).filter(Boolean));
 	const demandAggregatePath = process.env.COMPAT_AIR_DEMAND_AGGREGATES || undefined;
 	const productFunnelAggregatePath = resolveProductFunnelAggregatePath(demandAggregatePath, process.env.COMPAT_AIR_PRODUCT_FUNNEL_AGGREGATES || undefined);
@@ -279,7 +421,11 @@ async function start() {
 	if (verdictSnapshot.catalogVersion !== catalog.catalogVersion || !Array.isArray(verdictSnapshot.pairs) || !isValidCalculationVersion(verdictSnapshot.calculationVersion)) throw new Error('Le snapshot de verdicts ne correspond pas au catalogue.');
 	let offerSnapshot = { offers: [], snapshotVersion: 'empty' };
 	try { offerSnapshot = JSON.parse(await readFile(offersPath, 'utf8')); } catch {}
-	const server = createCompatAirServer({ catalog, verdictSnapshot, offerSnapshot, allowedOrigins, demandAggregatePath, productFunnelAggregatePath, proxyManagesApiHeaders });
+	let knowledgeItems = [];
+	try { const value = JSON.parse(await readFile(knowledgePath, 'utf8')); if (Array.isArray(value)) knowledgeItems = value.slice(0, 10_000); } catch {}
+	let changefeedEvents = [];
+	try { const value = JSON.parse(await readFile(changefeedPath, 'utf8')); if (Array.isArray(value?.events)) changefeedEvents = value.events.slice(0, 10_000); } catch {}
+	const server = createCompatAirServer({ catalog, verdictSnapshot, offerSnapshot, knowledgeItems, changefeedEvents, allowedOrigins, demandAggregatePath, productFunnelAggregatePath, proxyManagesApiHeaders });
 	server.on('error', (error) => { console.error(error); process.exitCode = 1; });
 	server.listen(port, host, () => console.error(`CompatAir MCP listening on http://${host}:${port}`));
 }

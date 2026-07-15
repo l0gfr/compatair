@@ -46,6 +46,14 @@
 	RewriteRule ^compatibilite$ - [R=410,L]
 	ProxyPass /api/v1/compatibility http://127.0.0.1:8787/api/v1/compatibility timeout=8 connectiontimeout=2
 	ProxyPassReverse /api/v1/compatibility http://127.0.0.1:8787/api/v1/compatibility
+	ProxyPass /api/v1/search http://127.0.0.1:8787/api/v1/search timeout=8 connectiontimeout=2
+	ProxyPassReverse /api/v1/search http://127.0.0.1:8787/api/v1/search
+	ProxyPass /api/v1/evidence http://127.0.0.1:8787/api/v1/evidence timeout=8 connectiontimeout=2
+	ProxyPassReverse /api/v1/evidence http://127.0.0.1:8787/api/v1/evidence
+	ProxyPass /api/v1/changefeed http://127.0.0.1:8787/api/v1/changefeed timeout=8 connectiontimeout=2
+	ProxyPassReverse /api/v1/changefeed http://127.0.0.1:8787/api/v1/changefeed
+	ProxyPass /api/ucp/v1/compatibility/evaluate http://127.0.0.1:8787/api/ucp/v1/compatibility/evaluate timeout=8 connectiontimeout=2
+	ProxyPassReverse /api/ucp/v1/compatibility/evaluate http://127.0.0.1:8787/api/ucp/v1/compatibility/evaluate
 	ProxyPass /events http://127.0.0.1:8787/events timeout=5 connectiontimeout=2
 	ProxyPassReverse /events http://127.0.0.1:8787/events
 	ProxyPass /go/ http://127.0.0.1:8787/go/ timeout=5 connectiontimeout=2
@@ -80,6 +88,9 @@
 	<Location "/events">
 		LimitRequestBody 65536
 	</Location>
+	<Location "/api/ucp/v1/compatibility/evaluate">
+		LimitRequestBody 65536
+	</Location>
 	<LocationMatch "^/go/">
 		Header onsuccess unset Cache-Control
 		Header always unset Cache-Control
@@ -96,7 +107,7 @@
 		Header always unset Cache-Control
 		Header always set Cache-Control "public, max-age=86400"
 	</LocationMatch>
-	<Location "/api/v1/compatibility">
+	<LocationMatch "^/api/v1/(?:compatibility|search|evidence|changefeed)$">
 		# Normalize headers already emitted by the Node service. Without the
 		# explicit unsets, Apache appends a second value and browsers reject the
 		# otherwise valid cross-origin response.
@@ -104,7 +115,7 @@
 		Header always set Access-Control-Allow-Origin "*"
 		Header always unset Cross-Origin-Resource-Policy
 		Header always set Cross-Origin-Resource-Policy "cross-origin"
-	</Location>
+	</LocationMatch>
 	<LocationMatch "^/widget/(?:v1|v1\.0\.0)/compatair-widget\.js$">
 		Header always set Access-Control-Allow-Origin "*"
 		Header always set Cross-Origin-Resource-Policy "cross-origin"
@@ -112,7 +123,7 @@
 	<LocationMatch "^/(?:_server)(?:/|$)">
 		Require all denied
 	</LocationMatch>
-	<LocationMatch "^(?!/\.well-known/security\.txt$).*\/\.">
+	<LocationMatch "^(?!/\.well-known/(?:security\.txt|ucp)$).*\/\.">
 		Require all denied
 	</LocationMatch>
 
@@ -155,10 +166,17 @@
 		Header always unset Cache-Control
 		Header always set Cache-Control "no-cache"
 	</LocationMatch>
-	<LocationMatch "^/data/[^/]+\.json$">
+	<LocationMatch "^/(?:data/[^/]+\.(?:json|jsonld|ndjson)|openapi/[^/]+\.json|openrpc/[^/]+\.json|schemas/[^/]+\.json|\.well-known/ucp)$">
 		Header onsuccess unset X-Robots-Tag
 		Header always unset X-Robots-Tag
 		Header always set X-Robots-Tag "noindex"
+		Header always unset Access-Control-Allow-Origin
+		Header always set Access-Control-Allow-Origin "*"
+		Header always unset Cross-Origin-Resource-Policy
+		Header always set Cross-Origin-Resource-Policy "cross-origin"
+		Header onsuccess unset Cache-Control
+		Header always unset Cache-Control
+		Header always set Cache-Control "public, max-age=300"
 	</LocationMatch>
 	<LocationMatch "^/data/release\.json$">
 		Header onsuccess unset Cache-Control

@@ -32,7 +32,6 @@ const maximumSocialImageCount = 80;
 const forbiddenPublicWording = [
 	'CompatAir Engine',
 	'actif statistique',
-	'AirGraph',
 	'Registre append-only',
 	'Ce qui peut financer le catalogue',
 	'contrat public',
@@ -240,6 +239,66 @@ else {
 	searchIndexBytesGzip = gzipSync(searchIndexBytes).byteLength;
 	if (!Array.isArray(searchIndex) || searchIndex.some((item) => !item.title || !item.type || !item.url || typeof item.keywords !== 'string')) errors.push('data/search-index.json: structure invalide');
 	if (searchIndexBytesGzip > maximumSearchIndexBytesGzip) errors.push(`data/search-index.json: ${Math.ceil(searchIndexBytesGzip / 1024)} Ko gzip, budget ${maximumSearchIndexBytesGzip / 1024} Ko dépassé`);
+}
+
+const machineDataPaths = [
+	'/data/agent-knowledge.json', '/data/agent-knowledge.ndjson', '/data/agent-knowledge-manifest.json',
+	'/data/catalog.ndjson', '/data/evidence-history.ndjson', '/data/citations.ndjson',
+	'/data/changefeed.json', '/data/changefeed.ndjson', '/data/freshness.json', '/data/integrity.json', '/data/catalog-dcat.jsonld',
+	'/openapi/compatair-2026-07-15.json', '/openapi/ucp-2026-07-15.json', '/openrpc/ucp-2026-07-15.json',
+	'/schemas/ucp-compatibility-2026-07-15.json', '/.well-known/ucp', '/llms.txt', '/llms-full.txt',
+];
+for (const path of machineDataPaths) if (!artifactPaths.has(path)) errors.push(`${path}: surface machine obligatoire absente`);
+
+if (artifactPaths.has('/data/agent-knowledge.json') && artifactPaths.has('/data/agent-knowledge.ndjson') && artifactPaths.has('/data/agent-knowledge-manifest.json')) {
+	try {
+		const knowledge = JSON.parse(await readFile(join(root, '/data/agent-knowledge.json'), 'utf8'));
+		const ndjson = (await readFile(join(root, '/data/agent-knowledge.ndjson'), 'utf8')).trim().split('\n').filter(Boolean).map((line) => JSON.parse(line));
+		const manifest = JSON.parse(await readFile(join(root, '/data/agent-knowledge-manifest.json'), 'utf8'));
+		if (!Array.isArray(knowledge) || knowledge.length === 0 || ndjson.length !== knowledge.length || manifest.records !== knowledge.length) errors.push('agent-knowledge: nombres de documents incohérents');
+		if (knowledge.some((item) => !item.id || !item.url || !item.content_sha256 || !['fr', 'en'].includes(item.locale))) errors.push('agent-knowledge: document sans identité, URL, langue ou empreinte');
+		if (!manifest.languages?.fr || !manifest.languages?.en || !['complete_machine_translation', 'incomplete'].includes(manifest.languages.en.status)) errors.push('agent-knowledge: couverture linguistique non publiée');
+		if ((manifest.languages.en.human_reviewed_guides ?? 0) > manifest.languages.en.full_text_guides) errors.push('agent-knowledge: couverture revue supérieure aux traductions publiées');
+	} catch { errors.push('agent-knowledge: JSON ou NDJSON invalide'); }
+}
+
+if (artifactPaths.has('/data/integrity.json')) {
+	try {
+		const integrity = JSON.parse(await readFile(join(root, '/data/integrity.json'), 'utf8'));
+		if (integrity.algorithm !== 'sha-256' || !Array.isArray(integrity.artifacts) || integrity.artifacts.length < 10) errors.push('data/integrity.json: manifeste incomplet');
+		for (const entry of integrity.artifacts ?? []) {
+			if (!artifactPaths.has(entry.path)) { errors.push(`data/integrity.json: artefact absent ${entry.path}`); continue; }
+			const bytes = await readFile(join(root, entry.path));
+			if (entry.bytes !== bytes.byteLength || entry.sha256 !== createHash('sha256').update(bytes).digest('hex')) errors.push(`data/integrity.json: empreinte incohérente ${entry.path}`);
+		}
+	} catch { errors.push('data/integrity.json: JSON invalide'); }
+}
+
+if (artifactPaths.has('/data/changefeed.json') && artifactPaths.has('/data/changefeed.ndjson')) {
+	try {
+		const changefeed = JSON.parse(await readFile(join(root, '/data/changefeed.json'), 'utf8'));
+		const lines = (await readFile(join(root, '/data/changefeed.ndjson'), 'utf8')).trim().split('\n').filter(Boolean).map((line) => JSON.parse(line));
+		if (!Array.isArray(changefeed.events) || lines.length !== changefeed.events.length || changefeed.events.some((event) => !event.id || !event.version || !event.observed_at || !event.canonical_url)) errors.push('changefeed: événements incomplets ou distributions incohérentes');
+	} catch { errors.push('changefeed: JSON ou NDJSON invalide'); }
+}
+
+if (artifactPaths.has('/.well-known/ucp')) {
+	try {
+		const profile = JSON.parse(await readFile(join(root, '/.well-known/ucp'), 'utf8'));
+		const capability = profile.ucp?.capabilities?.['fr.compatair.air.compatibility']?.[0];
+		const transports = profile.ucp?.services?.['fr.compatair.air'] ?? [];
+		if (profile.ucp?.version !== '2026-04-08' || capability?.version !== '2026-07-15') errors.push('.well-known/ucp: version ou capability invalide');
+		if (!transports.some((item) => item.transport === 'rest') || !transports.some((item) => item.transport === 'mcp')) errors.push('.well-known/ucp: bindings REST ou MCP absents');
+		if (capability?.config?.read_only !== true || capability?.config?.accepts_pii !== false || capability?.config?.accepts_payment !== false || capability?.config?.mutates_commerce_state !== false) errors.push('.well-known/ucp: frontière de sécurité non déclarée');
+	} catch { errors.push('.well-known/ucp: JSON invalide'); }
+}
+
+for (const path of ['/ucp/index.html', '/en/ucp/index.html']) {
+	if (!artifactPaths.has(path)) errors.push(`${path}: documentation UCP absente`);
+	else {
+		const html = await readFile(join(root, path), 'utf8');
+		for (const marker of ['fr.compatair.air.compatibility', '/.well-known/ucp', 'canonical_url', '/data/integrity.json', '/data/changefeed.json']) if (!html.includes(marker)) errors.push(`${path}: élément documentaire UCP absent ${marker}`);
+	}
 }
 
 if (!artifactPaths.has('/data/release.json')) errors.push('data/release.json: preuve de release absente');

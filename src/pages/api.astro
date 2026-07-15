@@ -2,8 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="API de compatibilité pneumatique | CompatAir" description="API HTTP versionnée de CompatAir pour comparer un compresseur et un outil avec verdict, calculs, versions et sources." canonicalPath="/api/">
-	<section class="page-hero compact"><div class="container"><p class="eyebrow">CompatAir API 1.0</p><h1>Un verdict technique exploitable sans recopier le moteur</h1><p class="lead">L’API compare un compresseur et un outil documentés. Elle conserve les quatre verdicts, les versions du catalogue et du calcul, ainsi que les sources utilisées.</p></div></section>
+<BaseLayout title="API CompatAir : décisions et preuves" description="API HTTP versionnée de CompatAir pour compatibilité, recherche plein texte, preuves, changefeed et enrichissement UCP en lecture seule." canonicalPath="/api/">
+	<section class="page-hero compact"><div class="container"><p class="eyebrow">CompatAir API 1.0</p><h1>Des décisions techniques, pas un simple catalogue</h1><p class="lead">L’API répond aux questions de compatibilité, expose les preuves utilisées, recherche le corpus publié et permet aux agents de suivre les changements. Chaque décision reste versionnée, limitée et citable.</p></div></section>
 	<article class="container content api-documentation">
 		<div class="status-callout"><strong>Adresse publique en version d’essai</strong><code>GET https://compatair.fr/api/v1/compatibility</code><span>Consultation uniquement, limitée à 120 requêtes par minute et par adresse. Une offre professionnelle pourra prévoir un autre volume, une assistance et un historique distinct.</span></div>
 		<h2>Requête</h2>
@@ -11,10 +11,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   --data-urlencode 'compressorId=einhell-tc-ac-240-50-10-of' \
   --data-urlencode 'toolId=einhell-tc-pe-150'</code></pre>
 		<h2>Contenu de la réponse</h2>
-		<ul><li>version du format de réponse, du catalogue et de la méthode de calcul&nbsp;;</li><li>identification normalisée du compresseur et de l’outil&nbsp;;</li><li>verdict compatible en continu (<code>continuous</code>), compatible par intermittence (<code>intermittent</code>), incompatible (<code>incompatible</code>) ou données insuffisantes (<code>insufficient_data</code>)&nbsp;;</li><li><a href="/glossaire/#fad">FAD</a> requis, FAD disponible, raison d’une éventuelle limite et avertissements lorsque ces données existent&nbsp;;</li><li>sources datées, calculateur prérempli dans <code>detailsUrl</code> et <a href="/graphe-preuve/">graphe de preuve</a> prérempli dans <code>proofUrl</code>.</li></ul>
+		<ul><li>enveloppe commune avec <code>verdict</code>, <code>canonical_url</code>, sources, versions, date, limites et actions suivantes&nbsp;;</li><li>identification normalisée du compresseur et de l’outil&nbsp;;</li><li>verdict brut compatible en continu (<code>continuous</code>), par intermittence (<code>intermittent</code>), incompatible ou données insuffisantes&nbsp;;</li><li><a href="/glossaire/#fad">FAD</a> requis, FAD disponible, raison d’une éventuelle limite et avertissements lorsque ces données existent&nbsp;;</li><li>sources datées, calculateur prérempli et <a href="/graphe-preuve/">graphe de preuve</a> prérempli.</li></ul>
+		<h2>Surface publique</h2>
+		<ul>
+			<li><code>GET /api/v1/compatibility</code>&nbsp;: décision pour une paire identifiée.</li>
+			<li><code>GET /api/v1/search</code>&nbsp;: recherche plein texte dans les guides, produits et définitions publiés.</li>
+			<li><code>GET /api/v1/evidence</code>&nbsp;: caractéristiques, documents et arêtes AirGraph utilisés.</li>
+			<li><code>GET /api/v1/changefeed</code>&nbsp;: versions protocole, méthode, catalogue, preuves, connaissances et offres.</li>
+			<li><code>POST /api/ucp/v1/compatibility/evaluate</code>&nbsp;: décision UCP sur une configuration complète, sans mutation commerciale.</li>
+		</ul>
+		<p>Le contrat intégral est disponible dans l’<a href="/openapi/compatair-2026-07-15.json">OpenAPI public</a>. La capability UCP possède aussi son <a href="/openapi/ucp-2026-07-15.json">OpenAPI spécialisé</a>, son <a href="/openrpc/ucp-2026-07-15.json">binding OpenRPC</a> et son <a href="/schemas/ucp-compatibility-2026-07-15.json">JSON Schema</a>.</p>
 		<h2>Erreurs et limites</h2><p>L’API refuse les identifiants inconnus, les paramètres non prévus ou dupliqués et les tentatives de modification. Si un résultat manque dans la copie datée du catalogue, elle renvoie une erreur explicite au lieu d’utiliser un autre calcul. Une indisponibilité ne doit jamais être transformée côté client en verdict positif.</p>
 		<h2>Intégration dans un site web</h2><p>Un navigateur peut consulter cette adresse depuis un autre domaine, sans cookie. C’est ce que signifie l’autorisation technique CORS. L’API ne reçoit ni photographie, ni configuration d’atelier, ni donnée personnelle.</p>
-		<h2>Données publiques de qualité</h2><p>L’<a href="/data/document-quality-observatory.json">Observatoire de la qualité documentaire</a> publie un snapshot versionné des délais de correction, de la couverture FAD multi-pression, de la stabilité des MPN et des réponses aux contradictions. Le <a href="/data/contradiction-radar.json">radar des contradictions</a> conserve séparément chaque valeur, son canal et la décision documentaire. Une métrique non mesurable conserve la valeur <code>insufficient_data</code>.</p>
-		<p><a class="button primary" href="/professionnels/">Voir le widget marchand</a> <a class="button" href="/mcp-documentation/">Interface MCP pour agents</a></p>
+		<h2>Données publiques de qualité</h2><p>L’<a href="/data/document-quality-observatory.json">Observatoire de la qualité documentaire</a> publie un snapshot versionné. Le <a href="/data/contradiction-radar.json">radar des contradictions</a> conserve séparément chaque valeur et sa décision documentaire. Les distributions <a href="/data/agent-knowledge.ndjson">NDJSON</a>, le <a href="/data/freshness.json">manifeste de fraîcheur</a>, les <a href="/data/integrity.json">empreintes SHA-256</a> et le <a href="/data/catalog-dcat.jsonld">catalogue DCAT 3</a> rendent la surface auditable par machine.</p>
+		<p><a class="button primary" href="/ucp/">Documentation UCP</a> <a class="button" href="/mcp-documentation/">Interface MCP pour agents</a></p>
 	</article>
 </BaseLayout>

@@ -1,7 +1,15 @@
+import { createHash } from 'node:crypto';
+import { UCP_CAPABILITY_NAME, UCP_CAPABILITY_VERSION, UCP_PROTOCOL_VERSION } from './ucp-core.mjs';
+
 const ENGINE_VERSION = '1.2.0';
-const PROTOCOL_VERSION = '2025-06-18';
+const MCP_SERVER_VERSION = '2.0.0';
+const METHOD_VERSION = '2026.07';
+const PROTOCOL_VERSION = '2025-11-25';
+const SUPPORTED_PROTOCOL_VERSIONS = [PROTOCOL_VERSION, '2025-06-18', '2025-03-26'];
 const STANDARD_ATMOSPHERE_BAR = 1.01325;
 const MAX_SHORT_TEXT = 256;
+const MAX_URL_TEXT = 4_096;
+const PUBLIC_ORIGIN = 'https://compatair.fr';
 
 function isRecord(value) { return value !== null && typeof value === 'object' && !Array.isArray(value); }
 function hasOnlyKeys(value, allowed) { return isRecord(value) && Object.keys(value).every((key) => allowed.includes(key)); }
@@ -10,6 +18,53 @@ function isFiniteNumber(value, minimum, maximum, exclusiveMinimum = false) {
 	return typeof value === 'number' && Number.isFinite(value) && (exclusiveMinimum ? value > minimum : value >= minimum) && (maximum === undefined || value <= maximum);
 }
 function isOptionalInteger(value, minimum, maximum) { return value === undefined || (Number.isInteger(value) && value >= minimum && value <= maximum); }
+function isOptionalShortString(value) { return value === undefined || isShortString(value); }
+function isOptionalUrlString(value) { return value === undefined || (typeof value === 'string' && value.length > 0 && value.length <= MAX_URL_TEXT); }
+function normalizedText(value) { return String(value ?? '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
+function unique(values) { return [...new Set(values.filter((value) => typeof value === 'string' && value.length > 0))]; }
+function publicCorpusUrl(value) {
+	try {
+		const url = new URL(value, PUBLIC_ORIGIN);
+		return url.origin === PUBLIC_ORIGIN && url.protocol === 'https:' && !url.username && !url.password ? url.toString() : undefined;
+	} catch { return undefined; }
+}
+function productUrl(type, item) { return `${PUBLIC_ORIGIN}/${type === 'compressor' ? 'compresseurs' : 'outils-pneumatiques'}/${encodeURIComponent(item.slug)}/`; }
+function compatibilityUrl(compressor, tool) { return `${PUBLIC_ORIGIN}/calculateur/?outil=${encodeURIComponent(tool.id)}&compresseur=${encodeURIComponent(compressor.id)}`; }
+function proofUrl(compressor, tool) { return `${PUBLIC_ORIGIN}/graphe-preuve/#compresseur=${encodeURIComponent(compressor.id)}&outil=${encodeURIComponent(tool.id)}`; }
+function compatAirId(type, id) { return `ca:${type}:${id}`; }
+function stableConfigurationId(value) {
+	const normalized = { compressorId: value.compressorId ?? null, mode: value.mode ?? 'successive', toolIds: [...(value.toolIds ?? [])].sort() };
+	return compatAirId('configuration', createHash('sha256').update(JSON.stringify(normalized)).digest('hex').slice(0, 24));
+}
+function publicVerdict(verdict) {
+	if (verdict === 'continuous') return 'compatible';
+	if (verdict === 'intermittent') return 'compatible_with_limits';
+	if (verdict === 'incompatible') return 'incompatible';
+	if (verdict === 'insufficient_data') return 'insufficient_data';
+	return 'information';
+}
+function sourceUrls(products) { return unique(products.flatMap((product) => (product?.evidence ?? []).map((item) => item.sourceUrl))); }
+function productSummary(type, item) {
+	return {
+		compat_air_id: compatAirId(type, item.id), type, id: item.id, slug: item.slug, brand: item.brand, model: item.model,
+		...(item.label ? { label: item.label } : {}), ...(item.mpn ? { mpn: item.mpn } : {}), ...(item.ean ? { ean: item.ean } : {}),
+		canonical_url: productUrl(type, item),
+	};
+}
+
+const PUBLIC_RESULT_SCHEMA = {
+	type: 'object',
+	properties: {
+		verdict: { type: 'string', enum: ['information', 'compatible', 'compatible_with_limits', 'incompatible', 'insufficient_data'] },
+		canonical_url: { type: 'string', format: 'uri' },
+		product_urls: { type: 'array', items: { type: 'string', format: 'uri' } },
+		source_urls: { type: 'array', items: { type: 'string', format: 'uri' } },
+		method_version: { type: 'string' }, catalog_version: { type: 'string' }, observed_at: { type: 'string' },
+		limitations: { type: 'array', items: { type: 'string' } }, next_actions: { type: 'array', items: { type: 'string' } },
+	},
+	required: ['verdict', 'canonical_url', 'product_urls', 'source_urls', 'method_version', 'catalog_version', 'observed_at', 'limitations', 'next_actions'],
+	additionalProperties: true,
+};
 
 function validDemand(item) {
 	if (!isRecord(item)) return false;
@@ -51,6 +106,46 @@ function validToolArguments(name, args) {
 		case 'find_accessories': return hasOnlyKeys(args, ['toolId']) && isShortString(args.toolId) && args.toolId.length > 0;
 		case 'find_offers': return hasOnlyKeys(args, ['productId', 'cursor', 'limit']) && isShortString(args.productId) && args.productId.length > 0
 			&& (args.cursor === undefined || isShortString(args.cursor)) && isOptionalInteger(args.limit, 1, 50);
+		case 'identify_product': return hasOnlyKeys(args, ['query', 'url', 'ean', 'reference', 'limit'])
+			&& isOptionalShortString(args.query) && isOptionalUrlString(args.url) && isOptionalShortString(args.ean) && isOptionalShortString(args.reference)
+			&& [args.query, args.url, args.ean, args.reference].some((value) => typeof value === 'string' && value.trim().length > 0)
+			&& isOptionalInteger(args.limit, 1, 10);
+		case 'build_complete_air_system': return hasOnlyKeys(args, ['toolIds', 'mode', 'compressorId', 'limit'])
+			&& Array.isArray(args.toolIds) && args.toolIds.length >= 1 && args.toolIds.length <= 20 && args.toolIds.every((id) => isShortString(id) && id.length > 0)
+			&& (args.mode === undefined || ['simultaneous', 'successive'].includes(args.mode)) && isOptionalShortString(args.compressorId) && isOptionalInteger(args.limit, 1, 10);
+		case 'explain_compatibility_verdict':
+		case 'get_compatibility_evidence': return hasOnlyKeys(args, ['compressorId', 'toolId'])
+			&& isShortString(args.compressorId) && args.compressorId.length > 0 && isShortString(args.toolId) && args.toolId.length > 0;
+		case 'find_compatible_alternatives': return hasOnlyKeys(args, ['compressorId', 'toolIds', 'mode', 'limit'])
+			&& isShortString(args.compressorId) && args.compressorId.length > 0 && Array.isArray(args.toolIds) && args.toolIds.length >= 1 && args.toolIds.length <= 20
+			&& args.toolIds.every((id) => isShortString(id) && id.length > 0) && (args.mode === undefined || ['simultaneous', 'successive'].includes(args.mode)) && isOptionalInteger(args.limit, 1, 10);
+		case 'compare_complete_systems': return hasOnlyKeys(args, ['systems']) && Array.isArray(args.systems) && args.systems.length >= 2 && args.systems.length <= 5
+			&& args.systems.every((system) => isRecord(system) && hasOnlyKeys(system, ['compressorId', 'toolIds', 'mode'])
+				&& isShortString(system.compressorId) && system.compressorId.length > 0 && Array.isArray(system.toolIds) && system.toolIds.length >= 1 && system.toolIds.length <= 20
+				&& system.toolIds.every((id) => isShortString(id) && id.length > 0) && (system.mode === undefined || ['simultaneous', 'successive'].includes(system.mode)));
+		case 'search_knowledge': return hasOnlyKeys(args, ['query', 'type', 'locale', 'cursor', 'limit']) && isShortString(args.query) && args.query.trim().length > 0
+			&& (args.type === undefined || ['Guide', 'Glossaire', 'Compresseur', 'Outil'].includes(args.type)) && (args.locale === undefined || ['fr', 'en'].includes(args.locale)) && isOptionalShortString(args.cursor) && isOptionalInteger(args.limit, 1, 20);
+		case 'get_current_offers': return hasOnlyKeys(args, ['productIds', 'cursor', 'limit']) && Array.isArray(args.productIds) && args.productIds.length >= 1 && args.productIds.length <= 20
+			&& args.productIds.every((id) => isShortString(id) && id.length > 0) && isOptionalShortString(args.cursor) && isOptionalInteger(args.limit, 1, 50);
+		case 'get_changefeed': return hasOnlyKeys(args, ['since', 'cursor', 'limit']) && isOptionalShortString(args.since) && isOptionalShortString(args.cursor) && isOptionalInteger(args.limit, 1, 20);
+		case 'evaluate_air_compatibility': {
+			if (!hasOnlyKeys(args, ['meta', 'ucp', 'intent', 'configuration', 'constraints', 'requested_outputs']) || !isRecord(args.meta) || !hasOnlyKeys(args.meta, ['ucp-agent']) || !isRecord(args.meta['ucp-agent']) || !hasOnlyKeys(args.meta['ucp-agent'], ['profile']) || !isOptionalUrlString(args.meta['ucp-agent'].profile)) return false;
+			if (!isRecord(args.ucp) || !hasOnlyKeys(args.ucp, ['version']) || args.ucp.version !== UCP_PROTOCOL_VERSION) return false;
+			const intent = args.intent ?? 'will_it_work';
+			if (!['will_it_work', 'explain_limits', 'find_minimal_change', 'build_complete_system'].includes(intent)) return false;
+			const configuration = args.configuration;
+			if (!isRecord(configuration) || !hasOnlyKeys(configuration, ['compressor', 'tools', 'mode']) || !Array.isArray(configuration.tools) || configuration.tools.length < 1 || configuration.tools.length > 20) return false;
+			if (configuration.compressor !== undefined && (!isRecord(configuration.compressor) || !hasOnlyKeys(configuration.compressor, ['id']) || !isShortString(configuration.compressor.id))) return false;
+			if (intent !== 'build_complete_system' && configuration.compressor === undefined) return false;
+			if (configuration.mode !== undefined && !['simultaneous', 'successive'].includes(configuration.mode)) return false;
+			if (!configuration.tools.every((tool) => isRecord(tool) && hasOnlyKeys(tool, ['id']) && isShortString(tool.id) && tool.id.length > 0)) return false;
+			if (args.constraints !== undefined && (!isRecord(args.constraints) || !hasOnlyKeys(args.constraints, ['max_total_minor', 'currency', 'minimum_merchants', 'country'])
+				|| (args.constraints.max_total_minor !== undefined && !isOptionalInteger(args.constraints.max_total_minor, 0, 100_000_000))
+				|| (args.constraints.currency !== undefined && args.constraints.currency !== 'EUR') || (args.constraints.country !== undefined && args.constraints.country !== 'FR')
+				|| (args.constraints.minimum_merchants !== undefined && !isOptionalInteger(args.constraints.minimum_merchants, 1, 10)))) return false;
+			const allowedOutputs = ['compatibility', 'mandatory_accessories', 'limits', 'alternatives', 'complete_configuration', 'attribution', 'evidence'];
+			return args.requested_outputs === undefined || (Array.isArray(args.requested_outputs) && args.requested_outputs.length <= allowedOutputs.length && args.requested_outputs.every((item) => allowedOutputs.includes(item)) && new Set(args.requested_outputs).size === args.requested_outputs.length);
+		}
 		default: return true;
 	}
 }
@@ -87,10 +182,112 @@ function compatibility(compressor, tool, safetyMargin = .25) {
 	if (compressor.maxPressureBar < tool.workingPressureBar.typical) return { verdict: 'incompatible', limitingFactor: 'pressure', requiredFadLpm, calculationVersion: ENGINE_VERSION };
 	const availableFadLpm = interpolateFad(compressor, tool.workingPressureBar.typical);
 	if (availableFadLpm === undefined || ['C', 'D'].includes(compressor.confidence)) return { verdict: 'insufficient_data', limitingFactor: 'data', requiredFadLpm, calculationVersion: ENGINE_VERSION };
-	return { verdict: availableFadLpm >= tool.airflowLpm.typical ? 'continuous' : 'incompatible', limitingFactor: availableFadLpm >= tool.airflowLpm.typical ? undefined : 'flow', requiredFadLpm, availableFadLpm, marginPercent: ((availableFadLpm - tool.airflowLpm.typical) / tool.airflowLpm.typical) * 100, calculationVersion: ENGINE_VERSION };
+	const effectiveAverageCapacityLpm = availableFadLpm * (compressor.dutyCycle ?? 1);
+	const continuous = availableFadLpm >= tool.airflowLpm.typical && effectiveAverageCapacityLpm >= tool.airflowLpm.typical;
+	return {
+		verdict: continuous ? 'continuous' : 'incompatible', limitingFactor: continuous ? undefined : compressor.dutyCycle && effectiveAverageCapacityLpm < tool.airflowLpm.typical ? 'duty_cycle' : 'flow',
+		requiredFadLpm, availableFadLpm, effectiveAverageCapacityLpm, marginPercent: ((availableFadLpm - tool.airflowLpm.typical) / tool.airflowLpm.typical) * 100,
+		warnings: continuous && availableFadLpm < requiredFadLpm ? [`Le débit nominal est couvert, mais la marge recommandée de ${Math.round(safetyMargin * 100)} % n’est pas atteinte.`] : [],
+		calculationVersion: ENGINE_VERSION,
+	};
 }
 
-const toolDefinitions = [
+function evaluateSystem(compressor, selectedTools, mode = 'successive') {
+	const limitations = [];
+	if (selectedTools.some((tool) => tool.demandModel !== 'fixed-flow')) {
+		limitations.push('Au moins un outil ne publie pas un débit continu directement comparable ; une cadence ou un volume d’usage explicite est requis.');
+		return { verdict: 'insufficient_data', limitingFactor: 'data', limitations, mode };
+	}
+	const requiredPressureBar = Math.max(...selectedTools.map((tool) => tool.workingPressureBar.typical));
+	const demandFlowLpm = mode === 'simultaneous'
+		? selectedTools.reduce((sum, tool) => sum + tool.airflowLpm.typical, 0)
+		: Math.max(...selectedTools.map((tool) => tool.airflowLpm.typical));
+	const recommendedFadLpm = demandFlowLpm * 1.25;
+	if (compressor.maxPressureBar < requiredPressureBar) return { verdict: 'incompatible', limitingFactor: 'pressure', requiredPressureBar, demandFlowLpm, recommendedFadLpm, limitations, mode };
+	const availableFadLpm = ['C', 'D'].includes(compressor.confidence) ? undefined : interpolateFad(compressor, requiredPressureBar);
+	if (availableFadLpm === undefined) {
+		limitations.push('Le FAD du compresseur à la pression demandée est absent ou insuffisamment fiable.');
+		return { verdict: 'insufficient_data', limitingFactor: 'data', requiredPressureBar, demandFlowLpm, recommendedFadLpm, limitations, mode };
+	}
+	const effectiveAverageCapacityLpm = availableFadLpm * (compressor.dutyCycle ?? 1);
+	const verdict = availableFadLpm >= demandFlowLpm && effectiveAverageCapacityLpm >= demandFlowLpm ? 'continuous' : 'incompatible';
+	if (verdict === 'continuous' && availableFadLpm < recommendedFadLpm) limitations.push('Le débit demandé est couvert, mais la réserve recommandée de 25 % n’est pas atteinte.');
+	if (verdict === 'incompatible') limitations.push(effectiveAverageCapacityLpm < demandFlowLpm ? 'La capacité moyenne documentée ne couvre pas la demande.' : 'Le débit de pointe documenté ne couvre pas la demande.');
+	return {
+		verdict, limitingFactor: verdict === 'incompatible' ? compressor.dutyCycle && effectiveAverageCapacityLpm < demandFlowLpm ? 'duty_cycle' : 'flow' : undefined,
+		requiredPressureBar, demandFlowLpm, recommendedFadLpm, availableFadLpm, effectiveAverageCapacityLpm, limitations, mode,
+	};
+}
+
+function airGraph(compressor, selectedTools, evaluation, configurationId) {
+	const productNodes = [
+		{ id: configurationId, type: 'configuration' },
+		{ id: compatAirId('compressor', compressor.id), type: 'compressor', label: `${compressor.brand} ${compressor.model}`, canonical_url: productUrl('compressor', compressor) },
+		...selectedTools.map((tool) => ({ id: compatAirId('tool', tool.id), type: 'tool', label: tool.label, canonical_url: productUrl('tool', tool) })),
+	];
+	const compressorNodes = [
+		{ id: compatAirId('requirement', `${compressor.id}:tank`), type: 'tank_volume', value: compressor.tankLiters, unit: 'L' },
+		...(compressor.dutyCycle !== undefined ? [{ id: compatAirId('requirement', `${compressor.id}:duty-cycle`), type: 'compressor_duty_cycle', value: compressor.dutyCycle, unit: 'ratio' }] : []),
+	];
+	const requirementNodes = selectedTools.flatMap((tool) => {
+		const nodes = [{ id: compatAirId('requirement', `${tool.id}:pressure`), type: 'pressure_requirement', value: tool.workingPressureBar.typical, unit: 'bar' }];
+		if (tool.demandModel === 'fixed-flow') nodes.push({ id: compatAirId('requirement', `${tool.id}:flow`), type: 'flow_requirement', value: tool.airflowLpm.typical, unit: 'L/min' });
+		if (tool.usagePattern) nodes.push({ id: compatAirId('requirement', `${tool.id}:usage`), type: 'usage_profile', value: tool.usagePattern });
+		if (tool.recommendedHose) nodes.push({ id: compatAirId('requirement', `${tool.id}:hose`), type: 'hose_requirement', value: tool.recommendedHose });
+		if (tool.connectorSize) nodes.push({ id: compatAirId('requirement', `${tool.id}:connector`), type: 'connector_requirement', value: tool.connectorSize });
+		if (tool.filtrationRequirement) nodes.push({ id: compatAirId('requirement', `${tool.id}:filtration`), type: 'filtration_requirement', value: tool.filtrationRequirement });
+		if (tool.lubricationRequirement) nodes.push({ id: compatAirId('requirement', `${tool.id}:lubrication`), type: 'lubrication_requirement', value: tool.lubricationRequirement });
+		return nodes;
+	});
+	const configurationEdges = [
+		{ from: configurationId, to: compatAirId('compressor', compressor.id), relation: 'uses_compressor' },
+		...selectedTools.map((tool) => ({ from: configurationId, to: compatAirId('tool', tool.id), relation: 'uses_tool' })),
+		{ from: compatAirId('compressor', compressor.id), to: compatAirId('requirement', `${compressor.id}:tank`), relation: 'has_tank' },
+		...(compressor.dutyCycle !== undefined ? [{ from: compatAirId('compressor', compressor.id), to: compatAirId('requirement', `${compressor.id}:duty-cycle`), relation: 'has_duty_cycle' }] : []),
+	];
+	const requirementEdges = selectedTools.flatMap((tool) => [
+		{ from: compatAirId('tool', tool.id), to: compatAirId('requirement', `${tool.id}:pressure`), relation: 'requires_pressure' },
+		...(tool.demandModel === 'fixed-flow' ? [{ from: compatAirId('tool', tool.id), to: compatAirId('requirement', `${tool.id}:flow`), relation: 'requires_flow' }] : []),
+		...(tool.usagePattern ? [{ from: compatAirId('tool', tool.id), to: compatAirId('requirement', `${tool.id}:usage`), relation: 'has_usage_profile' }] : []),
+		...(tool.recommendedHose ? [{ from: compatAirId('tool', tool.id), to: compatAirId('requirement', `${tool.id}:hose`), relation: 'requires_hose' }] : []),
+		...(tool.connectorSize ? [{ from: compatAirId('tool', tool.id), to: compatAirId('requirement', `${tool.id}:connector`), relation: 'requires_connector' }] : []),
+		...(tool.filtrationRequirement ? [{ from: compatAirId('tool', tool.id), to: compatAirId('requirement', `${tool.id}:filtration`), relation: 'requires_filtration' }] : []),
+		...(tool.lubricationRequirement ? [{ from: compatAirId('tool', tool.id), to: compatAirId('requirement', `${tool.id}:lubrication`), relation: 'requires_lubrication' }] : []),
+		{ from: compatAirId('compressor', compressor.id), to: compatAirId('tool', tool.id), relation: publicVerdict(evaluation.verdict) },
+	]);
+	return {
+		schema_version: '0.1.0', configuration_id: configurationId,
+		nodes: [...productNodes, ...compressorNodes, ...requirementNodes], edges: [...configurationEdges, ...requirementEdges],
+	};
+}
+
+function identifyCandidates(catalog, args) {
+	const products = [
+		...(catalog.compressors ?? []).map((item) => ({ type: 'compressor', item })),
+		...(catalog.tools ?? []).map((item) => ({ type: 'tool', item })),
+	];
+	const rawInputs = [args.ean, args.reference, args.query].filter((value) => typeof value === 'string' && value.trim()).flatMap((value) => {
+		const trimmed = value.trim();
+		const stableId = trimmed.match(/^ca:(?:compressor|tool):(.+)$/i);
+		return stableId ? [trimmed, stableId[1]] : [trimmed];
+	});
+	if (args.url) {
+		try {
+			const url = new URL(args.url);
+			if (url.protocol === 'https:' || url.protocol === 'http:') rawInputs.push(...url.pathname.split('/').filter(Boolean).slice(-2), ...url.searchParams.values());
+		} catch {}
+	}
+	const inputs = unique(rawInputs.map(normalizedText).filter(Boolean));
+	return products.map(({ type, item }) => {
+		const identifiers = [item.id, item.slug, item.ean, item.gtin, item.mpn, ...(item.identifierAliases ?? []).map((alias) => alias.value)].filter(Boolean);
+		const exact = inputs.some((input) => identifiers.some((identifier) => normalizedText(identifier) === input));
+		const label = normalizedText(`${item.brand} ${item.model} ${item.label ?? ''}`);
+		const candidate = !exact && inputs.some((input) => input.length >= 4 && input.split(' ').every((token) => label.includes(token)));
+		return { type, item, confidence: exact ? 'exact' : candidate ? 'candidate' : undefined };
+	}).filter((match) => match.confidence).sort((left, right) => (left.confidence === 'exact' ? -1 : 1) - (right.confidence === 'exact' ? -1 : 1));
+}
+
+const legacyToolDefinitions = [
 	['search_tools', 'Rechercher des outils pneumatiques documentés.', { query: { type: 'string' }, category: { type: 'string' }, cursor: { type: 'string' }, limit: { type: 'integer', minimum: 1, maximum: 50 } }],
 	['get_tool_requirements', 'Retourner les exigences publiées d’un outil.', { id: { type: 'string' } }, ['id']],
 	['search_compressors', 'Rechercher des compresseurs selon des critères techniques.', { query: { type: 'string' }, minTankLiters: { type: 'number', minimum: 0 }, minPressureBar: { type: 'number', minimum: 0 }, oilType: { type: 'string', enum: ['oil', 'oil-free'] }, cursor: { type: 'string' }, limit: { type: 'integer', minimum: 1, maximum: 50 } }],
@@ -104,7 +301,52 @@ const toolDefinitions = [
 	['compare_compressors', 'Comparer deux ou trois compresseurs sans score commercial.', { ids: { type: 'array', minItems: 2, maxItems: 3, items: { type: 'string' } } }, ['ids']],
 	['find_accessories', 'Retourner uniquement les raccords ou accessoires documentés pour un outil.', { toolId: { type: 'string' } }, ['toolId']],
 	['find_offers', 'Retourner les offres actives issues de flux autorisés.', { productId: { type: 'string' }, cursor: { type: 'string' }, limit: { type: 'integer', minimum: 1, maximum: 50 } }, ['productId']],
-].map(([name, description, properties, required = []]) => ({ name, description, inputSchema: { type: 'object', properties, required, additionalProperties: false }, annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false } }));
+];
+
+const airGraphToolDefinitions = [
+	['evaluate_air_compatibility', 'UCP read-only compatibility decision for one documented compressor and one or more pneumatic tools. It never accepts identity, payment, checkout or order data.', {
+		meta: { type: 'object', properties: { 'ucp-agent': { type: 'object', properties: { profile: { type: 'string', format: 'uri', maxLength: MAX_URL_TEXT } }, required: ['profile'], additionalProperties: false } }, required: ['ucp-agent'], additionalProperties: false },
+		ucp: { type: 'object', properties: { version: { type: 'string', const: UCP_PROTOCOL_VERSION } }, required: ['version'], additionalProperties: false },
+		intent: { type: 'string', enum: ['will_it_work', 'explain_limits', 'find_minimal_change', 'build_complete_system'] },
+		configuration: { type: 'object', properties: { compressor: { type: 'object', properties: { id: { type: 'string' } }, required: ['id'], additionalProperties: false }, tools: { type: 'array', minItems: 1, maxItems: 20, items: { type: 'object', properties: { id: { type: 'string' } }, required: ['id'], additionalProperties: false } }, mode: { type: 'string', enum: ['simultaneous', 'successive'] } }, required: ['tools'], additionalProperties: false },
+		constraints: { type: 'object', properties: { max_total_minor: { type: 'integer', minimum: 0, maximum: 100000000 }, currency: { type: 'string', const: 'EUR' }, minimum_merchants: { type: 'integer', minimum: 1, maximum: 10 }, country: { type: 'string', const: 'FR' } }, additionalProperties: false },
+		requested_outputs: { type: 'array', maxItems: 7, uniqueItems: true, items: { type: 'string', enum: ['compatibility', 'mandatory_accessories', 'limits', 'alternatives', 'complete_configuration', 'attribution', 'evidence'] } },
+	}, ['meta', 'ucp', 'configuration']],
+	['identify_product', 'Identify a catalog product from a name, CompatAir or merchant URL, EAN/GTIN, MPN, reference, or stable CompatAir ID. No network fetch is performed.', {
+		query: { type: 'string', maxLength: MAX_SHORT_TEXT }, url: { type: 'string', maxLength: MAX_URL_TEXT }, ean: { type: 'string', maxLength: MAX_SHORT_TEXT }, reference: { type: 'string', maxLength: MAX_SHORT_TEXT }, limit: { type: 'integer', minimum: 1, maximum: 10 },
+	}],
+	['build_complete_air_system', 'Build a source-backed compressor, pneumatic tool, hose, connector, filtration and lubrication system. Missing component data stays explicit.', {
+		toolIds: { type: 'array', minItems: 1, maxItems: 20, items: { type: 'string' } }, mode: { type: 'string', enum: ['simultaneous', 'successive'] }, compressorId: { type: 'string' }, limit: { type: 'integer', minimum: 1, maximum: 10 },
+	}, ['toolIds']],
+	['explain_compatibility_verdict', 'Explain each documented pressure, flow, duty-cycle or missing-data factor behind a published compatibility verdict.', {
+		compressorId: { type: 'string' }, toolId: { type: 'string' },
+	}, ['compressorId', 'toolId']],
+	['find_compatible_alternatives', 'Find the smallest verified compressor substitution for an incompatible documented system. Commercial commission never affects ordering.', {
+		compressorId: { type: 'string' }, toolIds: { type: 'array', minItems: 1, maxItems: 20, items: { type: 'string' } }, mode: { type: 'string', enum: ['simultaneous', 'successive'] }, limit: { type: 'integer', minimum: 1, maximum: 10 },
+	}, ['compressorId', 'toolIds']],
+	['compare_complete_systems', 'Compare two to five complete configurations on documented technical facts without a commercial score.', {
+		systems: { type: 'array', minItems: 2, maxItems: 5, items: { type: 'object', properties: { compressorId: { type: 'string' }, toolIds: { type: 'array', minItems: 1, maxItems: 20, items: { type: 'string' } }, mode: { type: 'string', enum: ['simultaneous', 'successive'] } }, required: ['compressorId', 'toolIds'], additionalProperties: false } },
+	}, ['systems']],
+	['get_compatibility_evidence', 'Return the exact characteristics, evidence references, source URLs and AirGraph edges used for one compatibility result.', {
+		compressorId: { type: 'string' }, toolId: { type: 'string' },
+	}, ['compressorId', 'toolId']],
+	['search_knowledge', 'Search the published CompatAir guides, glossary, methods and product pages. The server never fetches arbitrary external content.', {
+		query: { type: 'string', maxLength: MAX_SHORT_TEXT }, type: { type: 'string', enum: ['Guide', 'Glossaire', 'Compresseur', 'Outil'] }, locale: { type: 'string', enum: ['fr', 'en'] }, cursor: { type: 'string' }, limit: { type: 'integer', minimum: 1, maximum: 20 },
+	}, ['query']],
+	['get_current_offers', 'Return dated current prices and availability separately from technical verdicts. Only allowlisted, fresh merchant destinations are returned.', {
+		productIds: { type: 'array', minItems: 1, maxItems: 20, items: { type: 'string' } }, cursor: { type: 'string' }, limit: { type: 'integer', minimum: 1, maximum: 50 },
+	}, ['productIds']],
+	['get_changefeed', 'Return catalog, method and offer snapshot changes visible since a date or version supplied by the client.', {
+		since: { type: 'string', maxLength: MAX_SHORT_TEXT }, cursor: { type: 'string' }, limit: { type: 'integer', minimum: 1, maximum: 20 },
+	}],
+];
+
+const toolDefinitions = [...legacyToolDefinitions, ...airGraphToolDefinitions].map(([name, description, properties, required = []]) => ({
+	name, description,
+	inputSchema: { type: 'object', properties, required, additionalProperties: false },
+	outputSchema: PUBLIC_RESULT_SCHEMA,
+	annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
+}));
 
 const resources = [
 	['compatair://catalog/version', 'Version du catalogue', 'Version et date de vérification du snapshot.'],
@@ -113,6 +355,9 @@ const resources = [
 	['compatair://confidence-scale', 'Échelle de confiance', 'Définition des niveaux A à D.'],
 	['compatair://affiliation-policy', 'Politique d’affiliation', 'Indépendance des verdicts et offres.'],
 	['compatair://engine/version', 'Version du moteur', 'Version des formules de calcul.'],
+	['compatair://airgraph/schema', 'AirGraph schema', 'Stable node identifiers, relations and evidence boundaries.'],
+	['compatair://responses/schema', 'MCP response contract', 'Required traffic, version, source and limitation fields.'],
+	['compatair://changefeed/current', 'Current changefeed state', 'Current method, catalog and offer snapshot versions.'],
 ].map(([uri, name, description]) => ({ uri, name, description, mimeType: 'application/json' }));
 
 const prompts = [
@@ -122,26 +367,103 @@ const prompts = [
 ];
 
 function result(value, catalog) {
-	const structuredContent = { catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, ...value };
+	const structuredContent = {
+		verdict: 'information', canonical_url: `${PUBLIC_ORIGIN}/mcp-documentation/`, product_urls: [], source_urls: [], method_version: METHOD_VERSION,
+		catalog_version: catalog.verifiedAt ?? catalog.catalogVersion, observed_at: catalog.verifiedAt ?? new Date(0).toISOString().slice(0, 10), limitations: [], next_actions: [],
+		catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, ...value,
+	};
 	return { content: [{ type: 'text', text: JSON.stringify(structuredContent) }], structuredContent, isError: false };
 }
-function failure(message, catalog) { return { content: [{ type: 'text', text: message }], structuredContent: { catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, error: message }, isError: true }; }
+function failure(message, catalog, value = {}) {
+	const structuredContent = {
+		verdict: 'insufficient_data', canonical_url: `${PUBLIC_ORIGIN}/mcp-documentation/`, product_urls: [], source_urls: [], method_version: METHOD_VERSION,
+		catalog_version: catalog.verifiedAt ?? catalog.catalogVersion, observed_at: catalog.verifiedAt ?? new Date(0).toISOString().slice(0, 10), limitations: [message], next_actions: [],
+		catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, error: message, ...value,
+	};
+	return { content: [{ type: 'text', text: JSON.stringify(structuredContent) }], structuredContent, isError: true };
+}
 
 /**
  * @param {any} catalog
  * @param {{ offers?: any[], snapshotVersion?: string }} offerSnapshot
- * @param {{ isOfferActive?: (offer: any) => boolean }} options
+ * @param {{ isOfferActive?: (offer: any) => boolean, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, knowledgeItems?: any[], changefeedEvents?: any[], now?: () => number }} options
  */
 export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, options = {}) {
-	const { isOfferActive = () => true } = options;
-	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item])); const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
+	const { isOfferActive = () => true, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable', calculationVersion: ENGINE_VERSION }, knowledgeItems = [], changefeedEvents = [] } = options;
+	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item]));
+	const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
+	const verdictMap = new Map((verdictSnapshot.pairs ?? []).map((item) => [`${item.compressorId}--${item.toolId}`, item]));
+	function publishedCompatibility(compressor, tool) { return verdictMap.get(`${compressor.id}--${tool.id}`) ?? compatibility(compressor, tool); }
+	function selectedProducts(toolIds) { return toolIds.map((id) => toolMap.get(id)); }
 	function callTool(name, args = {}) {
 		if (!validToolArguments(name, args)) return failure('Arguments invalides.', catalog);
 		switch (name) {
-			case 'search_tools': { const q = String(args.query ?? '').toLowerCase(); const values = catalog.tools.filter((item) => (!q || `${item.label} ${item.category} ${item.brand} ${item.model}`.toLowerCase().includes(q)) && (!args.category || item.category === args.category)); const found = page(values, args.cursor, args.limit); return result({ tools: found.items, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog); }
-			case 'get_tool_requirements': { const item = toolMap.get(args.id); return item ? result({ tool: item }, catalog) : failure('Outil inconnu.', catalog); }
-			case 'search_compressors': { const q = String(args.query ?? '').toLowerCase(); const values = catalog.compressors.filter((item) => (!q || `${item.brand} ${item.model} ${item.mpn ?? ''}`.toLowerCase().includes(q)) && (!args.minTankLiters || item.tankLiters >= args.minTankLiters) && (!args.minPressureBar || item.maxPressureBar >= args.minPressureBar) && (!args.oilType || item.oilType === args.oilType)); const found = page(values, args.cursor, args.limit); return result({ compressors: found.items, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog); }
-			case 'get_compressor_specs': { const item = compressorMap.get(args.id); return item ? result({ compressor: item }, catalog) : failure('Compresseur inconnu.', catalog); }
+			case 'evaluate_air_compatibility': {
+				const compressorId = args.configuration.compressor?.id;
+				const toolIds = args.configuration.tools.map((tool) => tool.id);
+				const mode = args.configuration.mode ?? 'successive';
+				const systemResult = callTool('build_complete_air_system', { ...(compressorId ? { compressorId } : {}), toolIds, mode, limit: 5 });
+				if (systemResult.isError) return systemResult;
+				const alternativesResult = compressorId ? callTool('find_compatible_alternatives', { compressorId, toolIds, mode, limit: 5 }) : undefined;
+				const system = systemResult.structuredContent;
+				const alternatives = !alternativesResult || alternativesResult.isError ? [] : alternativesResult.structuredContent.alternatives ?? [];
+				const selectedProductIds = [system.components?.compressor?.id, ...(system.components?.tools ?? []).map((tool) => tool.id)].filter(Boolean);
+				const offersResult = args.constraints && selectedProductIds.length ? callTool('get_current_offers', { productIds: selectedProductIds, limit: 50 }) : undefined;
+				const offers = offersResult?.structuredContent?.offers ?? [];
+				const offerProductIds = new Set(offers.filter((offer) => offer.availability === 'in_stock').map((offer) => offer.productId));
+				const merchantIds = new Set(offers.filter((offer) => offer.availability === 'in_stock').map((offer) => offer.merchantId));
+				const completeOfferCoverage = selectedProductIds.length > 0 && selectedProductIds.every((id) => offerProductIds.has(id));
+				const merchantCoverage = !args.constraints?.minimum_merchants || merchantIds.size >= args.constraints.minimum_merchants;
+				const minimumTotalMinor = completeOfferCoverage ? selectedProductIds.reduce((total, productId) => {
+					const prices = offers.filter((offer) => offer.productId === productId && offer.availability === 'in_stock').map((offer) => Math.round((offer.priceEur + (offer.shippingEur ?? 0)) * 100));
+					return total + Math.min(...prices);
+				}, 0) : undefined;
+				const budgetCoverage = args.constraints?.max_total_minor === undefined || (minimumTotalMinor !== undefined && minimumTotalMinor <= args.constraints.max_total_minor);
+				const commercialLimitations = args.constraints && (!completeOfferCoverage || !merchantCoverage || !budgetCoverage)
+					? ['Les contraintes de prix ou de disponibilité ne peuvent pas être prouvées avec des offres fraîches couvrant chaque composant et le nombre de marchands demandé.'] : [];
+				const requested = new Set(args.requested_outputs ?? ['compatibility', 'mandatory_accessories', 'limits', 'alternatives', 'complete_configuration', 'attribution', 'evidence']);
+				return result({
+					verdict: commercialLimitations.length ? 'insufficient_data' : system.verdict,
+					canonical_url: system.canonical_url,
+					product_urls: system.product_urls,
+					source_urls: system.source_urls,
+					limitations: [...system.limitations, ...commercialLimitations],
+					next_actions: system.next_actions,
+					ucp: { version: UCP_PROTOCOL_VERSION, capabilities: { [UCP_CAPABILITY_NAME]: [{ version: UCP_CAPABILITY_VERSION }] } },
+					capability: UCP_CAPABILITY_NAME,
+					capability_version: UCP_CAPABILITY_VERSION,
+					intent: args.intent ?? 'will_it_work',
+					security: { access: 'anonymous_read_only', accepts_pii: false, accepts_payment: false, mutates_commerce_state: false },
+					...(requested.has('compatibility') ? { compatibility: system.evaluation } : {}),
+					...(requested.has('mandatory_accessories') ? { mandatory_accessories: { hoses: system.components?.hoses ?? [], connectors: system.components?.connectors ?? [], filtration: system.components?.filtration ?? [], lubrication: system.components?.lubrication ?? [] } } : {}),
+					...(requested.has('limits') ? { limits: [...system.limitations, ...commercialLimitations] } : {}),
+					...(requested.has('alternatives') ? { alternatives } : {}),
+					...(requested.has('complete_configuration') ? { complete_configuration: system.components, configuration_id: system.configuration_id, airgraph: system.airgraph } : {}),
+					...(requested.has('attribution') ? { attribution: { provider: 'CompatAir', canonical_url: system.canonical_url, method_version: METHOD_VERSION } } : {}),
+					...(requested.has('evidence') ? { evidence_urls: system.source_urls, proof_urls: system.next_actions.filter((value) => typeof value === 'string' && value.startsWith(`${PUBLIC_ORIGIN}/graphe-preuve/`)) } : {}),
+					...(args.constraints ? { commercial_constraints: { requested: args.constraints, verified: commercialLimitations.length === 0, offer_snapshot_version: offersResult?.structuredContent?.offerSnapshotVersion ?? null, covered_products: [...offerProductIds], merchant_count: merchantIds.size, minimum_total_minor: minimumTotalMinor ?? null, currency: 'EUR' } } : {}),
+				}, catalog);
+			}
+			case 'search_tools': {
+				const q = String(args.query ?? '').toLowerCase();
+				const values = catalog.tools.filter((item) => (!q || `${item.label} ${item.category} ${item.brand} ${item.model}`.toLowerCase().includes(q)) && (!args.category || item.category === args.category));
+				const found = page(values, args.cursor, args.limit);
+				return result({ canonical_url: `${PUBLIC_ORIGIN}/outils-pneumatiques/`, product_urls: found.items.map((item) => productUrl('tool', item)), source_urls: sourceUrls(found.items), tools: found.items.map((item) => ({ ...item, compat_air_id: compatAirId('tool', item.id), canonical_url: productUrl('tool', item) })), ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog);
+			}
+			case 'get_tool_requirements': {
+				const item = toolMap.get(args.id);
+				return item ? result({ canonical_url: productUrl('tool', item), product_urls: [productUrl('tool', item)], source_urls: sourceUrls([item]), tool: { ...item, compat_air_id: compatAirId('tool', item.id), canonical_url: productUrl('tool', item) } }, catalog) : failure('Outil inconnu.', catalog, { canonical_url: `${PUBLIC_ORIGIN}/scanner/`, next_actions: ['Vérifier la référence avec identify_product.'] });
+			}
+			case 'search_compressors': {
+				const q = String(args.query ?? '').toLowerCase();
+				const values = catalog.compressors.filter((item) => (!q || `${item.brand} ${item.model} ${item.mpn ?? ''}`.toLowerCase().includes(q)) && (!args.minTankLiters || item.tankLiters >= args.minTankLiters) && (!args.minPressureBar || item.maxPressureBar >= args.minPressureBar) && (!args.oilType || item.oilType === args.oilType));
+				const found = page(values, args.cursor, args.limit);
+				return result({ canonical_url: `${PUBLIC_ORIGIN}/compresseurs/`, product_urls: found.items.map((item) => productUrl('compressor', item)), source_urls: sourceUrls(found.items), compressors: found.items.map((item) => ({ ...item, compat_air_id: compatAirId('compressor', item.id), canonical_url: productUrl('compressor', item) })), ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog);
+			}
+			case 'get_compressor_specs': {
+				const item = compressorMap.get(args.id);
+				return item ? result({ canonical_url: productUrl('compressor', item), product_urls: [productUrl('compressor', item)], source_urls: sourceUrls([item]), compressor: { ...item, compat_air_id: compatAirId('compressor', item.id), canonical_url: productUrl('compressor', item) } }, catalog) : failure('Compresseur inconnu.', catalog, { canonical_url: `${PUBLIC_ORIGIN}/scanner/`, next_actions: ['Vérifier la référence avec identify_product.'] });
+			}
 			case 'size_compressor': {
 				const mode = args.mode === 'simultaneous' ? 'simultaneous' : 'successive';
 				const safetyMargin = Number.isFinite(args.safetyMargin) ? args.safetyMargin : .25;
@@ -173,12 +495,139 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 				const requiredPressureBar = toolPressureBar + measuredPressureDropBar;
 				if (requiredPressureBar > 50) return failure('La pression outil et la chute mesurée dépassent ensemble la limite de calcul de 50 bar.', catalog);
 				const flowBasis = demands.some((item) => item.derived) ? 'derived-average' : 'documented-continuous';
-				return result({ sizing: { verdict: 'insufficient_data', peakFlowLpm, averageFlowLpm, toolPressureBar, requiredPressureBar, measuredLeakLpm, measuredPressureDropBar, recommendedFadLpm: peakFlowLpm * (1 + safetyMargin), flowBasis, limitingFactor: 'data', hypotheses: [`mode=${mode}`, `safetyMargin=${safetyMargin}`, `measuredLeakLpm=${measuredLeakLpm}`, `measuredPressureDropBar=${measuredPressureDropBar}`, ...demands.flatMap((item) => item.hypothesis ? [item.hypothesis] : [])], calculationVersion: ENGINE_VERSION } }, catalog);
+				return result({ verdict: 'insufficient_data', canonical_url: `${PUBLIC_ORIGIN}/calculateur/`, limitations: ['Aucun compresseur n’a été fourni ; le résultat décrit uniquement le besoin en air.'], next_actions: ['Comparer le FAD d’un compresseur à la pression requise.'], sizing: { verdict: 'insufficient_data', peakFlowLpm, averageFlowLpm, toolPressureBar, requiredPressureBar, measuredLeakLpm, measuredPressureDropBar, recommendedFadLpm: peakFlowLpm * (1 + safetyMargin), flowBasis, limitingFactor: 'data', hypotheses: [`mode=${mode}`, `safetyMargin=${safetyMargin}`, `measuredLeakLpm=${measuredLeakLpm}`, `measuredPressureDropBar=${measuredPressureDropBar}`, ...demands.flatMap((item) => item.hypothesis ? [item.hypothesis] : [])], calculationVersion: ENGINE_VERSION } }, catalog);
 			}
-			case 'check_compatibility': { const compressor = compressorMap.get(args.compressorId), tool = toolMap.get(args.toolId); if (!compressor || !tool) return failure('Compresseur ou outil inconnu.', catalog); return result({ compatibility: compatibility(compressor, tool, args.safetyMargin ?? .25) }, catalog); }
-			case 'compare_compressors': { if (!Array.isArray(args.ids) || args.ids.length < 2 || args.ids.length > 3) return failure('Deux ou trois identifiants sont requis.', catalog); const values = args.ids.map((id) => compressorMap.get(id)); return values.some((item) => !item) ? failure('Un compresseur est inconnu.', catalog) : result({ compressors: values }, catalog); }
-			case 'find_accessories': { const tool = toolMap.get(args.toolId); if (!tool) return failure('Outil inconnu.', catalog); return result({ status: tool.connectorSize ? 'documented' : 'insufficient_data', accessories: tool.connectorSize ? [{ type: 'connector_or_hose', requirement: tool.connectorSize, source: tool.evidence?.[0] }] : [] }, catalog); }
-			case 'find_offers': { const values = (offerSnapshot.offers ?? []).filter((offer) => offer.productId === args.productId && isOfferActive(offer)); const found = page(values, args.cursor, args.limit); return result({ offerSnapshotVersion: offerSnapshot.snapshotVersion, offers: found.items, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog); }
+			case 'check_compatibility': {
+				const compressor = compressorMap.get(args.compressorId), tool = toolMap.get(args.toolId);
+				if (!compressor || !tool) return failure('Compresseur ou outil inconnu.', catalog, { canonical_url: `${PUBLIC_ORIGIN}/scanner/` });
+				const evaluation = args.safetyMargin === undefined ? publishedCompatibility(compressor, tool) : compatibility(compressor, tool, args.safetyMargin);
+				return result({ verdict: publicVerdict(evaluation.verdict), canonical_url: compatibilityUrl(compressor, tool), product_urls: [productUrl('compressor', compressor), productUrl('tool', tool)], source_urls: sourceUrls([compressor, tool]), limitations: evaluation.warnings ?? [], next_actions: [proofUrl(compressor, tool)], compatibility: evaluation }, catalog);
+			}
+			case 'compare_compressors': {
+				const values = args.ids.map((id) => compressorMap.get(id));
+				return values.some((item) => !item) ? failure('Un compresseur est inconnu.', catalog) : result({ canonical_url: `${PUBLIC_ORIGIN}/comparateur/`, product_urls: values.map((item) => productUrl('compressor', item)), source_urls: sourceUrls(values), compressors: values }, catalog);
+			}
+			case 'find_accessories': {
+				const tool = toolMap.get(args.toolId);
+				if (!tool) return failure('Outil inconnu.', catalog);
+				const documented = Boolean(tool.connectorSize || tool.recommendedHose || tool.filtrationRequirement || tool.lubricationRequirement);
+				return result({ verdict: documented ? 'information' : 'insufficient_data', canonical_url: productUrl('tool', tool), product_urls: [productUrl('tool', tool)], source_urls: sourceUrls([tool]), limitations: documented ? [] : ['Aucun accessoire déterminant n’est documenté pour cet outil.'], status: documented ? 'documented' : 'insufficient_data', accessories: [{ type: 'connector', requirement: tool.connectorSize }, { type: 'hose', requirement: tool.recommendedHose }, { type: 'filtration', requirement: tool.filtrationRequirement }, { type: 'lubrication', requirement: tool.lubricationRequirement }].filter((item) => item.requirement !== undefined) }, catalog);
+			}
+			case 'find_offers':
+			case 'get_current_offers': {
+				const productIds = name === 'find_offers' ? [args.productId] : args.productIds;
+				const values = (offerSnapshot.offers ?? []).filter((offer) => productIds.includes(offer.productId) && isOfferActive(offer));
+				const found = page(values, args.cursor, args.limit);
+				const safeOffers = found.items.map((offer) => ({ ...offer, url: `${PUBLIC_ORIGIN}/go/${encodeURIComponent(offer.id)}` }));
+				const products = productIds.map((id) => compressorMap.get(id) ?? toolMap.get(id)).filter(Boolean);
+				return result({ verdict: safeOffers.length ? 'information' : 'insufficient_data', canonical_url: `${PUBLIC_ORIGIN}/offres/`, product_urls: products.map((item) => productUrl(compressorMap.has(item.id) ? 'compressor' : 'tool', item)), source_urls: [], limitations: safeOffers.length ? ['Prix et disponibilité sont datés et séparés du verdict technique.'] : ['Aucune offre fraîche et autorisée n’est disponible pour les produits demandés.'], next_actions: safeOffers.length ? ['Revalider le verdict technique indépendamment du prix.'] : [], offerSnapshotVersion: offerSnapshot.snapshotVersion, offers: safeOffers, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog);
+			}
+			case 'identify_product': {
+				const found = identifyCandidates(catalog, args).slice(0, args.limit ?? 5);
+				const exact = found.filter((item) => item.confidence === 'exact');
+				const definitive = exact.length === 1;
+				const matches = found.map(({ type, item, confidence }) => ({ ...productSummary(type, item), match_confidence: confidence }));
+				return result({ verdict: found.length ? 'information' : 'insufficient_data', canonical_url: definitive ? productUrl(exact[0].type, exact[0].item) : `${PUBLIC_ORIGIN}/scanner/`, product_urls: found.map(({ type, item }) => productUrl(type, item)), source_urls: sourceUrls(found.map(({ item }) => item)), limitations: definitive ? [] : found.length ? ['Plusieurs candidats ou une correspondance textuelle non unique : aucune identité certaine n’est affirmée.'] : ['Aucun identifiant ou libellé du catalogue ne correspond. Aucune page distante n’a été téléchargée.'], next_actions: definitive ? [] : ['Fournir un EAN/GTIN, un MPN ou une référence constructeur exacte.'], matches }, catalog);
+			}
+			case 'build_complete_air_system': {
+				const tools = selectedProducts(args.toolIds);
+				if (tools.some((item) => !item)) return failure('Un outil est inconnu.', catalog, { canonical_url: `${PUBLIC_ORIGIN}/scanner/` });
+				const mode = args.mode ?? 'successive';
+				const candidates = (catalog.compressors ?? []).map((compressor) => ({ compressor, evaluation: evaluateSystem(compressor, tools, mode) }))
+					.filter(({ evaluation }) => evaluation.verdict === 'continuous')
+					.sort((left, right) => (left.evaluation.availableFadLpm - left.evaluation.demandFlowLpm) - (right.evaluation.availableFadLpm - right.evaluation.demandFlowLpm) || left.compressor.tankLiters - right.compressor.tankLiters)
+					.slice(0, args.limit ?? 5);
+				const requested = args.compressorId ? compressorMap.get(args.compressorId) : undefined;
+				if (args.compressorId && !requested) return failure('Compresseur inconnu.', catalog, { canonical_url: `${PUBLIC_ORIGIN}/scanner/` });
+				const selected = requested ?? candidates[0]?.compressor;
+				const evaluation = selected ? evaluateSystem(selected, tools, mode) : { verdict: 'insufficient_data', limitations: ['Aucun compresseur documenté ne couvre complètement cette demande.'] };
+				const componentLimitations = [];
+				if (tools.some((tool) => !tool.connectorSize)) componentLimitations.push('Raccord non documenté pour au moins un outil.');
+					if (tools.some((tool) => !tool.recommendedHose)) componentLimitations.push('Diamètre ou longueur de flexible non documenté pour au moins un outil.');
+					if (tools.some((tool) => !tool.filtrationRequirement)) componentLimitations.push('Filtration non documentée pour au moins un outil.');
+					if (tools.some((tool) => !tool.lubricationRequirement)) componentLimitations.push('Lubrification non documentée pour au moins un outil.');
+					componentLimitations.push('Les pertes de charge réelles du réseau restent indéterminées sans longueur, diamètre, raccords et mesure ou courbe documentée de l’installation.');
+				const configurationId = selected ? stableConfigurationId({ compressorId: selected.id, toolIds: args.toolIds, mode }) : undefined;
+				const products = [...(selected ? [selected] : []), ...tools];
+				return result({
+						verdict: componentLimitations.length ? 'insufficient_data' : publicVerdict(evaluation.verdict), canonical_url: selected && tools.length === 1 ? compatibilityUrl(selected, tools[0]) : `${PUBLIC_ORIGIN}/calculateur/`,
+					product_urls: products.map((item) => productUrl(compressorMap.has(item.id) ? 'compressor' : 'tool', item)), source_urls: sourceUrls(products),
+					limitations: [...(evaluation.limitations ?? []), ...componentLimitations], next_actions: selected ? [`${PUBLIC_ORIGIN}/calculateur/`, ...(tools.length === 1 ? [proofUrl(selected, tools[0])] : [])] : ['Compléter les données déterminantes ou réduire la demande.'],
+					configuration_id: configurationId, evaluation,
+					components: { compressor: selected ? productSummary('compressor', selected) : null, tools: tools.map((tool) => productSummary('tool', tool)), hoses: tools.map((tool) => ({ tool_id: tool.id, requirement: tool.recommendedHose ?? null })), connectors: tools.map((tool) => ({ tool_id: tool.id, requirement: tool.connectorSize ?? null })), filtration: tools.map((tool) => ({ tool_id: tool.id, requirement: tool.filtrationRequirement ?? null })), lubrication: tools.map((tool) => ({ tool_id: tool.id, requirement: tool.lubricationRequirement ?? null })) },
+					compressor_candidates: candidates.map(({ compressor, evaluation: candidateEvaluation }) => ({ compressor: productSummary('compressor', compressor), evaluation: candidateEvaluation })),
+					...(selected ? { airgraph: airGraph(selected, tools, evaluation, configurationId) } : {}),
+				}, catalog);
+			}
+			case 'explain_compatibility_verdict':
+			case 'get_compatibility_evidence': {
+				const compressor = compressorMap.get(args.compressorId), tool = toolMap.get(args.toolId);
+				if (!compressor || !tool) return failure('Compresseur ou outil inconnu.', catalog, { canonical_url: `${PUBLIC_ORIGIN}/scanner/` });
+				const evaluation = publishedCompatibility(compressor, tool);
+				const configurationId = stableConfigurationId({ compressorId: compressor.id, toolIds: [tool.id], mode: 'successive' });
+				const factors = [
+					{ factor: 'pressure', required_bar: tool.workingPressureBar.typical, available_bar: compressor.maxPressureBar, status: compressor.maxPressureBar >= tool.workingPressureBar.typical ? 'pass' : 'block' },
+					{ factor: 'flow', required_fad_lpm: evaluation.requiredFadLpm, available_fad_lpm: evaluation.availableFadLpm, status: evaluation.availableFadLpm === undefined ? 'insufficient_data' : evaluation.limitingFactor === 'flow' ? 'block' : 'pass' },
+					{ factor: 'duty_cycle', documented: compressor.dutyCycle ?? null, status: evaluation.limitingFactor === 'duty_cycle' ? 'block' : compressor.dutyCycle === undefined ? 'not_applicable_to_published_pair' : 'pass' },
+				];
+				return result({ verdict: publicVerdict(evaluation.verdict), canonical_url: name === 'get_compatibility_evidence' ? proofUrl(compressor, tool) : compatibilityUrl(compressor, tool), product_urls: [productUrl('compressor', compressor), productUrl('tool', tool)], source_urls: sourceUrls([compressor, tool]), limitations: evaluation.warnings ?? [], next_actions: [proofUrl(compressor, tool)], compatibility: evaluation, factors, evidence: { compressor: compressor.evidence, tool: tool.evidence, field_sources: { compressor: compressor.fieldSources ?? {}, tool: tool.fieldSources ?? {} } }, airgraph: airGraph(compressor, [tool], evaluation, configurationId) }, catalog);
+			}
+			case 'find_compatible_alternatives': {
+				const current = compressorMap.get(args.compressorId), tools = selectedProducts(args.toolIds);
+				if (!current || tools.some((item) => !item)) return failure('Compresseur ou outil inconnu.', catalog);
+				const mode = args.mode ?? 'successive';
+				const currentEvaluation = evaluateSystem(current, tools, mode);
+				if (currentEvaluation.verdict === 'continuous') {
+					const products = [current, ...tools];
+					return result({
+						verdict: publicVerdict(currentEvaluation.verdict),
+						canonical_url: tools.length === 1 ? compatibilityUrl(current, tools[0]) : `${PUBLIC_ORIGIN}/calculateur/`,
+						product_urls: products.map((item) => productUrl(compressorMap.has(item.id) ? 'compressor' : 'tool', item)),
+						source_urls: sourceUrls(products),
+						limitations: ['La chaîne pression-débit-cycle actuelle couvre la demande documentée ; aucune substitution corrective de compresseur n’est nécessaire.'],
+						next_actions: [],
+						current: currentEvaluation,
+						alternatives: [],
+					}, catalog);
+				}
+				const alternatives = (catalog.compressors ?? []).filter((item) => item.id !== current.id).map((compressor) => ({ compressor, evaluation: evaluateSystem(compressor, tools, mode) }))
+					.filter(({ evaluation }) => evaluation.verdict === 'continuous')
+					.sort((left, right) => (left.evaluation.availableFadLpm - left.evaluation.demandFlowLpm) - (right.evaluation.availableFadLpm - right.evaluation.demandFlowLpm) || left.compressor.tankLiters - right.compressor.tankLiters)
+					.slice(0, args.limit ?? 5);
+				const products = [current, ...tools, ...alternatives.map(({ compressor }) => compressor)];
+				return result({ verdict: publicVerdict(currentEvaluation.verdict), canonical_url: tools.length === 1 ? compatibilityUrl(current, tools[0]) : `${PUBLIC_ORIGIN}/calculateur/`, product_urls: products.map((item) => productUrl(compressorMap.has(item.id) ? 'compressor' : 'tool', item)), source_urls: sourceUrls(products), limitations: alternatives.length ? ['Le changement minimal est technique, pas une recommandation de prix faute d’offres comparables complètes.'] : ['Aucune substitution concluante n’est documentée dans le catalogue actuel.'], next_actions: alternatives.map(({ compressor }) => productUrl('compressor', compressor)), current: currentEvaluation, alternatives: alternatives.map(({ compressor, evaluation }) => ({ change: { field: 'compressorId', from: current.id, to: compressor.id }, compressor: productSummary('compressor', compressor), evaluation })) }, catalog);
+			}
+			case 'compare_complete_systems': {
+				const systems = [];
+				for (const input of args.systems) {
+					const compressor = compressorMap.get(input.compressorId), tools = selectedProducts(input.toolIds);
+					if (!compressor || tools.some((item) => !item)) return failure('Une configuration contient un produit inconnu.', catalog);
+					const mode = input.mode ?? 'successive', evaluation = evaluateSystem(compressor, tools, mode);
+					systems.push({ configuration_id: stableConfigurationId({ compressorId: compressor.id, toolIds: input.toolIds, mode }), compressor: productSummary('compressor', compressor), tools: tools.map((tool) => productSummary('tool', tool)), mode, evaluation });
+				}
+				const products = systems.flatMap((system) => [compressorMap.get(system.compressor.id), ...system.tools.map((tool) => toolMap.get(tool.id))]).filter(Boolean);
+				return result({ canonical_url: `${PUBLIC_ORIGIN}/comparateur/`, product_urls: unique(systems.flatMap((system) => [system.compressor.canonical_url, ...system.tools.map((tool) => tool.canonical_url)])), source_urls: sourceUrls(products), limitations: ['Aucun score commercial ni classement par commission n’est calculé.'], next_actions: systems.map((system) => system.tools.length === 1 ? compatibilityUrl(compressorMap.get(system.compressor.id), toolMap.get(system.tools[0].id)) : `${PUBLIC_ORIGIN}/calculateur/`), systems }, catalog);
+			}
+			case 'search_knowledge': {
+				const query = normalizedText(args.query);
+					const matches = knowledgeItems.map((item) => ({ ...item, url: publicCorpusUrl(item.url) })).filter((item) => item.url && (!args.type || item.type === args.type) && (!args.locale || item.locale === args.locale) && normalizedText(`${item.title} ${item.description ?? ''} ${item.keywords ?? ''} ${item.body_markdown ?? ''} ${item.type ?? ''}`).includes(query));
+					const found = page(matches, args.cursor, args.limit ?? 10);
+					const items = found.items.map(({ body_markdown, ...item }) => ({ ...item, ...(typeof body_markdown === 'string' ? { excerpt: body_markdown.slice(0, 1_200) } : {}) }));
+				return result({ verdict: items.length ? 'information' : 'insufficient_data', canonical_url: items[0]?.url ?? `${PUBLIC_ORIGIN}/recherche/`, product_urls: items.filter((item) => item.type === 'Compresseur' || item.type === 'Outil').map((item) => item.url), source_urls: [], limitations: items.length ? ['Recherche limitée au corpus CompatAir publié ; aucun contenu externe n’est téléchargé.'] : ['Aucun document publié ne correspond exactement aux termes fournis.'], next_actions: items.map((item) => item.url), items, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog);
+			}
+			case 'get_changefeed': {
+				const latestOfferAt = (offerSnapshot.offers ?? []).map((offer) => offer.collectedAt).filter(Boolean).sort().at(-1);
+				const fallbackEvents = [
+					{ id: `method:${METHOD_VERSION}`, type: 'method', version: METHOD_VERSION, observed_at: catalog.verifiedAt, summary: 'Current public compatibility response contract and AirGraph method.' },
+					{ id: `catalog:${catalog.catalogVersion}`, type: 'catalog', version: catalog.catalogVersion, observed_at: catalog.verifiedAt, summary: 'Current signed catalog snapshot.' },
+					...(offerSnapshot.snapshotVersion ? [{ id: `offers:${offerSnapshot.snapshotVersion}`, type: 'offers', version: offerSnapshot.snapshotVersion, observed_at: latestOfferAt ?? catalog.verifiedAt, summary: 'Current commercial snapshot, independent from technical verdicts.' }] : []),
+				];
+				const allEvents = changefeedEvents.length ? changefeedEvents : fallbackEvents;
+				const sinceTime = typeof args.since === 'string' ? Date.parse(args.since) : Number.NaN;
+				const events = args.since ? allEvents.filter((event) => event.version !== args.since && event.id !== args.since && (!Number.isFinite(sinceTime) || Date.parse(event.observed_at) > sinceTime)) : allEvents;
+				const found = page(events, args.cursor, args.limit ?? 20);
+				return result({ canonical_url: `${PUBLIC_ORIGIN}/corrections/`, limitations: ['Le changefeed expose les versions publiées ; il ne fabrique pas de diff de champs absent des snapshots.'], next_actions: found.items.length ? ['Invalider le cache des outils ou données si une version a changé.'] : [], changes: found.items, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog);
+			}
 			default: return undefined;
 		}
 	}
@@ -190,7 +639,10 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 			'compatair://tools/taxonomy': { categories: catalog.toolTaxonomy ?? [...new Set(catalog.tools.map((item) => ({ label: item.category })))].sort() },
 			'compatair://confidence-scale': { A: 'documentation constructeur exploitable', B: 'source officielle incomplète ou interpolation encadrée', C: 'donnée ambiguë, aucun verdict positif', D: 'information non confirmée, aucun verdict positif' },
 			'compatair://affiliation-policy': { verdictBeforeOffers: true, commissionAffectsVerdict: false, staleOfferHours: 48 },
-			'compatair://engine/version': { engineVersion: ENGINE_VERSION, verdicts: ['continuous', 'intermittent', 'incompatible', 'insufficient_data'] },
+			'compatair://engine/version': { mcpServerVersion: MCP_SERVER_VERSION, methodVersion: METHOD_VERSION, engineVersion: ENGINE_VERSION, verdicts: ['continuous', 'intermittent', 'incompatible', 'insufficient_data'] },
+			'compatair://airgraph/schema': { schemaVersion: '0.1.0', idPattern: '^ca:(compressor|tool|configuration|requirement):', nodeTypes: ['configuration', 'compressor', 'tool', 'pressure_requirement', 'flow_requirement', 'usage_profile', 'tank_volume', 'compressor_duty_cycle', 'hose_requirement', 'connector_requirement', 'filtration_requirement', 'lubrication_requirement'], relations: ['uses_compressor', 'uses_tool', 'has_tank', 'has_duty_cycle', 'has_usage_profile', 'requires_pressure', 'requires_flow', 'requires_hose', 'requires_connector', 'requires_filtration', 'requires_lubrication', 'compatible', 'compatible_with_limits', 'incompatible', 'insufficient_data'] },
+			'compatair://responses/schema': PUBLIC_RESULT_SCHEMA,
+			'compatair://changefeed/current': { methodVersion: METHOD_VERSION, catalogVersion: catalog.catalogVersion, catalogObservedAt: catalog.verifiedAt, offerSnapshotVersion: offerSnapshot.snapshotVersion },
 		};
 		return values[uri];
 	}
@@ -202,7 +654,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 			if (!isRecord(params)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Paramètres invalides.' } };
 			let value;
 			switch (method) {
-				case 'initialize': value = { protocolVersion: PROTOCOL_VERSION, capabilities: { tools: { listChanged: false }, resources: { subscribe: false, listChanged: false }, prompts: { listChanged: false } }, serverInfo: { name: 'compatair-mcp', title: 'CompatAir MCP', version: ENGINE_VERSION }, instructions: 'Serveur en lecture seule. Conserver insufficient_data et les versions dans chaque résultat.' }; break;
+				case 'initialize': value = { protocolVersion: SUPPORTED_PROTOCOL_VERSIONS.includes(params.protocolVersion) ? params.protocolVersion : PROTOCOL_VERSION, capabilities: { tools: { listChanged: false }, resources: { subscribe: false, listChanged: false }, prompts: { listChanged: false } }, serverInfo: { name: 'compatair-mcp', title: 'CompatAir MCP', version: MCP_SERVER_VERSION, description: 'Read-only, deterministic pneumatic compatibility data with canonical CompatAir URLs and evidence.' }, instructions: 'Serveur en lecture seule. Conserver verdict, canonical_url, limitations, source_urls, insufficient_data et toutes les versions. Ne jamais laisser une offre commerciale modifier un verdict technique.' }; break;
 				case 'ping': value = {}; break;
 				case 'tools/list': { if (params.cursor !== undefined && !isShortString(params.cursor)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Curseur invalide.' } }; const found = page(toolDefinitions, params.cursor, 20); value = { tools: found.items, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }; break; }
 				case 'tools/call': { if (!isShortString(params.name)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Nom d’outil invalide.' } }; const called = callTool(params.name, params.arguments ?? {}); if (called === undefined) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Outil inconnu.' } }; value = called; break; }
@@ -217,4 +669,4 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 	};
 }
 
-export { ENGINE_VERSION, PROTOCOL_VERSION, compatibility, interpolateFad };
+export { ENGINE_VERSION, MCP_SERVER_VERSION, METHOD_VERSION, PROTOCOL_VERSION, compatibility, interpolateFad };

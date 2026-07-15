@@ -1,0 +1,40 @@
+# CompatAir
+
+> Source-backed, deterministic compatibility between air compressors, pneumatic tools and documented system components. Missing critical data always remains `insufficient_data`.
+
+## Agent interfaces
+
+- [MCP documentation in French](https://compatair.fr/mcp-documentation/)
+- [MCP documentation in English](https://compatair.fr/en/mcp/)
+- [Streamable HTTP endpoint](https://compatair.fr/mcp)
+- [MCP health and active versions](https://compatair.fr/mcp-health)
+- [UCP documentation in French](https://compatair.fr/ucp/)
+- [UCP documentation in English](https://compatair.fr/en/ucp/)
+- [UCP discovery profile](https://compatair.fr/.well-known/ucp)
+- [UCP compatibility endpoint](https://compatair.fr/api/ucp/v1/compatibility/evaluate)
+- [Full agent documentation](https://compatair.fr/llms-full.txt)
+
+## Public data and methods
+
+- [Compatibility methodology](https://compatair.fr/methodologie/)
+- [Source reliability policy](https://compatair.fr/sources-fiabilite/)
+- [Proof graph](https://compatair.fr/graphe-preuve/)
+- [Public API OpenAPI](https://compatair.fr/openapi/compatair-2026-07-15.json)
+- [UCP OpenAPI](https://compatair.fr/openapi/ucp-2026-07-15.json)
+- [Full-text knowledge JSON](https://compatair.fr/data/agent-knowledge.json)
+- [Full-text knowledge NDJSON](https://compatair.fr/data/agent-knowledge.ndjson)
+- [Catalog snapshot](https://compatair.fr/data/catalog.json)
+- [Catalog NDJSON](https://compatair.fr/data/catalog.ndjson)
+- [Published verdict snapshot](https://compatair.fr/data/verdicts.json)
+- [Current offers snapshot](https://compatair.fr/data/offers.json)
+- [Evidence citations NDJSON](https://compatair.fr/data/citations.ndjson)
+- [Data freshness](https://compatair.fr/data/freshness.json)
+- [Integrity hashes](https://compatair.fr/data/integrity.json)
+- [Changefeed](https://compatair.fr/data/changefeed.json)
+- [DCAT 3 catalog](https://compatair.fr/data/catalog-dcat.jsonld)
+- [Corrections](https://compatair.fr/corrections/)
+- [Security](https://compatair.fr/securite/)
+
+## Citation rule
+
+Use the `canonical_url` returned by every MCP or UCP decision as the preferred CompatAir page. Keep `source_urls`, `method_version`, `catalog_version`, `observed_at`, `limitations` and `next_actions` with the result. Never turn `insufficient_data` into a positive recommendation. CompatAir is a decision and evidence layer, not a checkout or a generic product catalog.

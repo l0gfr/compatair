@@ -38,12 +38,20 @@ Les offres et prix affiliés ne sont pas encore publiés. Ils seront ajoutés un
 
 ## Serveur MCP
 
-Le service MCP lit les snapshots générés dans `dist/data/` et écoute uniquement sur `127.0.0.1:8787`. Pour un test local après le build :
+Le service MCP v2 lit les snapshots générés dans `dist/data/` et écoute uniquement sur `127.0.0.1:8787`. Il conserve les neuf tools historiques, ajoute les neuf tools AirGraph et le bridge UCP `evaluate_air_compatibility`. Chaque résultat publie une URL canonique CompatAir, les sources, versions, limites et prochaines actions. Pour un test local après le build :
 
 ```bash
 pnpm build
 pnpm mcp:start
 ```
+
+Le manifeste distant du registre se trouve dans [server.json](server.json). Les contrats sont publiés dans [bluetouff/compatair-mcp](https://github.com/bluetouff/compatair-mcp) et leur miroir source reste sous [contracts/mcp](contracts/mcp/README.md). Les documentations publiques sont servies en [français](https://compatair.fr/mcp-documentation/) et en [anglais](https://compatair.fr/en/mcp/), avec `llms.txt` et `llms-full.txt` à la racine du site.
+
+## UCP et surface machine
+
+La capability UCP en lecture seule est `fr.compatair.air.compatibility`. Elle répond aux intentions `will_it_work`, `explain_limits`, `find_minimal_change` et `build_complete_system` via REST ou le tool MCP `evaluate_air_compatibility`. Elle n’accepte ni identité, ni panier, ni paiement, ni commande. Le profil de découverte, les schémas, les exemples et tests publics se trouvent sous [contracts/ucp](contracts/ucp/README.md), avec le contrat global sous [contracts/api](contracts/api/README.md).
+
+Le build publie aussi le corpus plein texte JSON/NDJSON, les citations, l’historique des preuves, la fraîcheur, les empreintes SHA-256, le changefeed et un catalogue DCAT 3. `agent-knowledge-manifest.json` sépare la couverture anglaise traduite de la couverture relue ; une traduction automatique reste explicitement non relue.
 
 L’installation Debian et le proxy Apache sont décrits dans [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md). Ne définir `MCP_ENABLED=true` dans GitHub qu’après validation de l’endpoint public.
 

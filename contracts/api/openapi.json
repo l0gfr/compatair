@@ -1,0 +1,122 @@
+{
+  "openapi": "3.1.1",
+  "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
+  "info": {
+    "title": "CompatAir public decision API",
+    "version": "2026-07-15",
+    "description": "Read-only compatibility, evidence, full-text knowledge and changefeed API. Technical verdicts are independent from offers."
+  },
+  "servers": [{ "url": "https://compatair.fr" }],
+  "paths": {
+    "/api/v1/compatibility": {
+      "get": {
+        "operationId": "getCompatibility",
+        "summary": "Evaluate one compressor and one tool",
+        "parameters": [
+          { "name": "compressorId", "in": "query", "required": true, "schema": { "type": "string", "pattern": "^[a-z0-9-]{1,160}$" } },
+          { "name": "toolId", "in": "query", "required": true, "schema": { "type": "string", "pattern": "^[a-z0-9-]{1,160}$" } }
+        ],
+        "responses": { "200": { "description": "Deterministic compatibility result with sources and proof URL", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CompatibilityResult" } } } }, "400": { "$ref": "#/components/responses/BadRequest" }, "404": { "$ref": "#/components/responses/NotFound" }, "429": { "$ref": "#/components/responses/RateLimited" }, "503": { "description": "Published verdict snapshot unavailable", "headers": { "Retry-After": { "schema": { "type": "integer", "const": 60 } } }, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } },
+        "security": []
+      }
+    },
+    "/api/v1/search": {
+      "get": {
+        "operationId": "searchKnowledge",
+        "summary": "Search the published full-text agent corpus",
+        "parameters": [
+          { "name": "q", "in": "query", "required": true, "schema": { "type": "string", "minLength": 1, "maxLength": 256 } },
+          { "name": "type", "in": "query", "schema": { "enum": ["Guide", "Glossaire", "Compresseur", "Outil"] } },
+          { "name": "locale", "in": "query", "schema": { "enum": ["fr", "en"] } },
+          { "name": "cursor", "in": "query", "schema": { "type": "string", "maxLength": 256 } },
+          { "name": "limit", "in": "query", "schema": { "type": "integer", "minimum": 1, "maximum": 20, "default": 10 } }
+        ],
+        "responses": { "200": { "description": "Rank-neutral matching published records", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/SearchResult" } } } }, "400": { "$ref": "#/components/responses/BadRequest" }, "429": { "$ref": "#/components/responses/RateLimited" } },
+        "security": []
+      }
+    },
+    "/api/v1/evidence": {
+      "get": {
+        "operationId": "getCompatibilityEvidence",
+        "summary": "Return the fields, sources and AirGraph edges used by a verdict",
+        "parameters": [
+          { "name": "compressorId", "in": "query", "required": true, "schema": { "type": "string", "pattern": "^[a-z0-9-]{1,160}$" } },
+          { "name": "toolId", "in": "query", "required": true, "schema": { "type": "string", "pattern": "^[a-z0-9-]{1,160}$" } }
+        ],
+        "responses": { "200": { "description": "Evidence and proof graph", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/EvidenceResult" } } } }, "400": { "$ref": "#/components/responses/BadRequest" }, "404": { "$ref": "#/components/responses/NotFound" }, "429": { "$ref": "#/components/responses/RateLimited" } },
+        "security": []
+      }
+    },
+    "/api/v1/changefeed": {
+      "get": {
+        "operationId": "getChangefeed",
+        "summary": "List public protocol, method, catalog, evidence, knowledge and offer changes",
+        "parameters": [
+          { "name": "since", "in": "query", "schema": { "type": "string", "maxLength": 256 } },
+          { "name": "cursor", "in": "query", "schema": { "type": "string", "maxLength": 256 } },
+          { "name": "limit", "in": "query", "schema": { "type": "integer", "minimum": 1, "maximum": 20, "default": 20 } }
+        ],
+        "responses": { "200": { "description": "Versioned public changes", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ChangefeedResult" } } } }, "400": { "$ref": "#/components/responses/BadRequest" }, "429": { "$ref": "#/components/responses/RateLimited" } },
+        "security": []
+      }
+    },
+    "/api/ucp/v1/compatibility/evaluate": {
+      "$ref": "https://compatair.fr/openapi/ucp-2026-07-15.json#/paths/~1compatibility~1evaluate"
+    }
+  },
+  "components": {
+    "schemas": {
+      "Error": {
+        "type": "object", "required": ["error"], "properties": { "error": { "type": "string", "minLength": 1 } }, "additionalProperties": true
+      },
+      "PublicEnvelope": {
+        "type": "object",
+        "required": ["verdict", "canonical_url", "product_urls", "source_urls", "method_version", "catalog_version", "observed_at", "limitations", "next_actions"],
+        "properties": {
+          "verdict": { "enum": ["information", "compatible", "compatible_with_limits", "incompatible", "insufficient_data"] },
+          "canonical_url": { "type": "string", "format": "uri", "pattern": "^https://compatair\\.fr/" },
+          "product_urls": { "type": "array", "items": { "type": "string", "format": "uri", "pattern": "^https://compatair\\.fr/" }, "uniqueItems": true },
+          "source_urls": { "type": "array", "items": { "type": "string", "format": "uri", "pattern": "^https://" }, "uniqueItems": true },
+          "method_version": { "type": "string", "pattern": "^2026\\.[0-9]{2}$" },
+          "catalog_version": { "type": "string", "minLength": 1 },
+          "observed_at": { "type": "string", "format": "date" },
+          "limitations": { "type": "array", "items": { "type": "string" } },
+          "next_actions": { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "CompatibilityResult": {
+        "allOf": [
+          { "$ref": "#/components/schemas/PublicEnvelope" },
+          { "type": "object", "required": ["schemaVersion", "catalogVersion", "verdictVersion", "calculationVersion", "input", "compressor", "tool", "compatibility", "sources", "detailsUrl", "proofUrl"], "properties": {
+            "schemaVersion": { "const": "1.0.0" }, "catalogVersion": { "type": "string" }, "catalogVerifiedAt": { "type": "string", "format": "date" }, "verdictVersion": { "type": "string" }, "calculationVersion": { "type": "string" },
+            "input": { "type": "object", "required": ["compressorId", "toolId"], "properties": { "compressorId": { "type": "string" }, "toolId": { "type": "string" } }, "additionalProperties": false },
+            "compressor": { "type": "object" }, "tool": { "type": "object" }, "compatibility": { "type": "object" }, "sources": { "type": "array", "items": { "type": "object" } },
+            "detailsUrl": { "type": "string", "format": "uri" }, "proofUrl": { "type": "string", "format": "uri" }
+          } }
+        ]
+      },
+      "KnowledgeRecord": {
+        "type": "object", "required": ["id", "type", "locale", "title", "url", "content_sha256"],
+        "properties": { "id": { "type": "string" }, "type": { "enum": ["Guide", "Glossaire", "Compresseur", "Outil"] }, "locale": { "enum": ["fr", "en"] }, "title": { "type": "string" }, "description": { "type": "string" }, "url": { "type": "string", "format": "uri" }, "excerpt": { "type": "string", "maxLength": 1200 }, "content_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" } },
+        "additionalProperties": true
+      },
+      "SearchResult": {
+        "allOf": [{ "$ref": "#/components/schemas/PublicEnvelope" }, { "type": "object", "required": ["items"], "properties": { "items": { "type": "array", "items": { "$ref": "#/components/schemas/KnowledgeRecord" } }, "nextCursor": { "type": "string" } } }]
+      },
+      "EvidenceResult": {
+        "allOf": [{ "$ref": "#/components/schemas/PublicEnvelope" }, { "type": "object", "required": ["compatibility", "factors", "evidence", "airgraph"], "properties": { "compatibility": { "type": "object" }, "factors": { "type": "array", "items": { "type": "object" } }, "evidence": { "type": "object" }, "airgraph": { "type": "object" } } }]
+      },
+      "ChangefeedEvent": {
+        "type": "object", "required": ["id", "type", "version", "observed_at", "summary"], "properties": { "id": { "type": "string" }, "type": { "enum": ["protocol", "method", "catalog", "evidence", "knowledge", "offers"] }, "version": { "type": "string" }, "observed_at": { "type": "string", "format": "date" }, "summary": { "type": "string" }, "breaking": { "type": "boolean" }, "canonical_url": { "type": "string", "format": "uri" } }, "additionalProperties": false
+      },
+      "ChangefeedResult": {
+        "allOf": [{ "$ref": "#/components/schemas/PublicEnvelope" }, { "type": "object", "required": ["changes"], "properties": { "changes": { "type": "array", "items": { "$ref": "#/components/schemas/ChangefeedEvent" } }, "nextCursor": { "type": "string" } } }]
+      }
+    },
+    "responses": {
+      "BadRequest": { "description": "Invalid or duplicate query parameter", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } },
+      "NotFound": { "description": "Unknown product", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } },
+      "RateLimited": { "description": "Per-address rate limit exceeded", "headers": { "Retry-After": { "schema": { "type": "integer", "const": 60 } } }, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
+    }
+  }
+}

@@ -43,6 +43,18 @@ Le baromètre annuel est calculé uniquement depuis les compresseurs et preuves 
 
 Le workflow quotidien compare ce snapshot à la production et conserve le rapport pendant 30 jours.
 
+## AirGraph et contrat MCP
+
+Le serveur MCP utilise le snapshot de verdicts publié comme autorité par défaut. Il ne recalcule pas silencieusement un autre verdict lorsque la paire versionnée existe. Les produits conservent leurs identifiants de catalogue et reçoivent une forme globale stable `ca:compressor:<id>` ou `ca:tool:<id>`. Une configuration reçoit un identifiant `ca:configuration:<digest>` calculé uniquement depuis le compresseur, les outils triés et le mode d’usage.
+
+## UCP et distributions pour agents
+
+La capability `fr.compatair.air.compatibility` transforme une configuration structurée en décision technique, accessoires obligatoires, limites, alternatives, système complet, attribution et preuves. Elle ne constitue pas un service de checkout. REST et MCP utilisent le même moteur et les mêmes règles d’échec fermé.
+
+Le corpus agent regroupe les guides en texte intégral, le glossaire et les fiches produit. Chaque document reçoit une empreinte SHA-256 et une langue explicite. Les traductions anglaises automatiques portent le statut `machine_translated_unreviewed`; une validation explicite est nécessaire pour `human_reviewed`. Le manifeste expose les deux nombres et les deux taux. Les distributions JSON et NDJSON, les citations, l’historique de preuve, le changefeed, la fraîcheur, l’intégrité et le catalogue DCAT sont construits à partir des mêmes sources que le site.
+
+L’AirGraph `0.1.0` relie les produits aux exigences de débit et de pression, au cycle d’usage, à la cuve, au flexible, aux raccords, au traitement d’air, au verdict et aux preuves disponibles. Une exigence absente reste `null` et alimente `limitations` ; elle n’est jamais remplacée par une valeur générique. Les schémas et exemples sont publiés dans `bluetouff/compatair-mcp` et leur miroir source reste sous `contracts/mcp`.
+
 ## Signature des publications
 
 Le déploiement de production signe octet pour octet, avec Ed25519, les six publications JSON : catalogue complet, catalogue d’exécution allégé, offres, verdicts, historique des preuves et baromètre. Le manifeste détaché est publié sous `/data/signatures.json`; le registre des clés publiques est disponible sous `/data/signing-keys.json`.

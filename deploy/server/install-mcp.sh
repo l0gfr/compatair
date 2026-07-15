@@ -10,6 +10,7 @@ if [[ ${EUID:-$(id -u)} -ne 0 ]]; then
 fi
 
 test -f /var/www/html/compatair/current/_server/mcp-server.mjs
+test -f /var/www/html/compatair/current/_server/ucp-core.mjs
 test -f /var/www/html/compatair/current/_server/product-funnel-aggregates.mjs
 test -f /var/www/html/compatair/current/data/catalog.json
 test -f /var/www/html/compatair/current/data/verdicts.json

@@ -19,16 +19,19 @@ function assertHeader(response, name, expected) {
 	assert(actual === expected, `${name}: attendu ${JSON.stringify(expected)}, reçu ${JSON.stringify(actual)}`);
 }
 
-async function check(label, pathname, inspect, { attempts = 3 } = {}) {
+async function check(label, pathname, inspect, { attempts = 3, method = 'GET', headers = {}, requestBody } = {}) {
 	let lastError;
 	for (let attempt = 1; attempt <= attempts; attempt += 1) {
 		try {
 			const url = new URL(pathname, origin);
 			const response = await fetch(url, {
+				method,
 				headers: {
 					'Cache-Control': 'no-cache',
 					'User-Agent': 'CompatAir deployment smoke',
+					...headers,
 				},
+				body: requestBody,
 				redirect: 'manual',
 				signal: AbortSignal.timeout(20_000),
 			});
@@ -84,6 +87,14 @@ for (const [label, pathname, marker] of [
 	['graphe de preuve', '/graphe-preuve/', 'data-proof-graph'],
 	['signatures', '/data/signatures.json', 'compatair-2026-01'],
 	['clés de signature', '/data/signing-keys.json', 'Ed25519'],
+	['documentation UCP FR', '/ucp/', 'fr.compatair.air.compatibility'],
+	['documentation UCP EN', '/en/ucp/', 'fr.compatair.air.compatibility'],
+	['découverte UCP', '/.well-known/ucp', 'fr.compatair.air.compatibility'],
+	['OpenAPI UCP', '/openapi/ucp-2026-07-15.json', 'evaluateAirCompatibility'],
+	['connaissances agents', '/data/agent-knowledge.json', 'content_sha256'],
+	['fraîcheur machine', '/data/freshness.json', 'maximum_age_days'],
+	['intégrité machine', '/data/integrity.json', 'sha-256'],
+	['changefeed machine', '/data/changefeed.json', 'protocol:ucp:2026-07-15'],
 ]) {
 	await check(label, pathname, bodyContains(marker));
 }
@@ -122,6 +133,9 @@ if (mcpEnabled) {
 		assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
 		const health = JSON.parse(body);
 		assert(health.status === 'ok', `status MCP attendu ok, reçu ${JSON.stringify(health.status)}`);
+		assert(health.mcpServerVersion === '2.0.0', `version MCP attendue 2.0.0, reçue ${JSON.stringify(health.mcpServerVersion)}`);
+		assert(health.protocolVersion === '2025-11-25', `protocole MCP inattendu ${JSON.stringify(health.protocolVersion)}`);
+		assert(health.methodVersion === '2026.07', `méthode MCP inattendue ${JSON.stringify(health.methodVersion)}`);
 		assert(typeof health.verdictVersion === 'string' && health.verdictVersion.length > 0, 'verdictVersion MCP absente');
 	});
 
@@ -134,6 +148,26 @@ if (mcpEnabled) {
 			assertHeader(response, 'x-content-type-options', 'nosniff');
 		},
 	);
+
+	await check('recherche plein texte', '/api/v1/search?q=debit&locale=fr&limit=1', ({ body, response }) => {
+		assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
+		const result = JSON.parse(body);
+		assert(Array.isArray(result.items) && result.items.length > 0, 'résultat de recherche absent');
+		assert(typeof result.canonical_url === 'string', 'canonical_url de recherche absente');
+	});
+
+	await check('décision UCP', '/api/ucp/v1/compatibility/evaluate', ({ body, response }) => {
+		assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
+		const result = JSON.parse(body);
+		assert(result.capability === 'fr.compatair.air.compatibility', 'capability UCP absente');
+		assert(typeof result.canonical_url === 'string' && result.canonical_url.startsWith('https://compatair.fr/'), 'canonical_url UCP absente');
+		assert(result.security?.mutates_commerce_state === false, 'frontière read-only UCP absente');
+		assertHeader(response, 'cache-control', 'no-store');
+	}, {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json', 'UCP-Agent': 'profile="https://compatair.fr/examples/ucp/platform-profile.json"' },
+		requestBody: JSON.stringify({ ucp: { version: '2026-04-08' }, intent: 'will_it_work', configuration: { compressor: { id: 'kaeser-eurocomp-epc-840-100' }, tools: [{ id: 'einhell-tc-pe-150' }], mode: 'successive' } }),
+	});
 }
 
 console.log(`Surface HTTP live vérifiée pour ${expectedSha}.`);

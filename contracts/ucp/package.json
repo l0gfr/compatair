@@ -1,0 +1,8 @@
+{
+  "name": "@compatair/ucp-contracts",
+  "version": "0.1.0",
+  "private": false,
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": { "test": "node --test tests/verify-contracts.mjs" }
+}

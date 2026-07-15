@@ -59,6 +59,7 @@ Le site statique doit d’abord avoir été déployé par GitHub Actions avec le
 
 ```bash
 test -f /var/www/html/compatair/current/_server/mcp-server.mjs
+test -f /var/www/html/compatair/current/_server/ucp-core.mjs
 test -f /var/www/html/compatair/current/data/catalog.json
 test -f /var/www/html/compatair/current/data/verdicts.json
 ```
@@ -90,17 +91,26 @@ Contrôler le service local, le proxy HTTPS puis la négociation MCP :
 curl --fail http://127.0.0.1:8787/health
 curl --fail https://compatair.fr/mcp-health
 curl --fail 'https://compatair.fr/api/v1/compatibility?compressorId=einhell-tc-ac-240-50-10-of&toolId=einhell-tc-pe-150'
+curl --fail 'https://compatair.fr/api/v1/search?q=debit&locale=fr&limit=1'
+curl --fail https://compatair.fr/.well-known/ucp
+curl --fail \
+  -H 'Content-Type: application/json' \
+  -H 'UCP-Agent: profile="https://compatair.fr/examples/ucp/platform-profile.json"' \
+  --data '{"ucp":{"version":"2026-04-08"},"intent":"will_it_work","configuration":{"compressor":{"id":"kaeser-eurocomp-epc-840-100"},"tools":[{"id":"einhell-tc-pe-150"}],"mode":"successive"}}' \
+  https://compatair.fr/api/ucp/v1/compatibility/evaluate
 curl --fail \
   -H 'Accept: application/json, text/event-stream' \
   -H 'Content-Type: application/json' \
   -H 'Origin: https://compatair.fr' \
-  --data '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"smoke","version":"1"}}}' \
+  --data '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"smoke","version":"1"}}}' \
   https://compatair.fr/mcp
 ```
 
 Après ces contrôles, créer la variable GitHub `MCP_ENABLED` avec la valeur `true`. Les déploiements et le monitoring vérifieront alors le MCP automatiquement.
 
 L’ajout de l’API ou une modification de ses en-têtes inter-origines nécessite de rejouer `install-mcp.sh` avant le premier déploiement qui les vérifie. Le script installe le vhost versionné, exécute `apache2ctl configtest`, puis recharge Apache. Un paquet statique seul ne peut pas modifier `/etc/apache2`.
+
+La découverte UCP autorise une sortie HTTPS publique afin de lire le profil de la plateforme appelante. L’unité systemd refuse les plages privées, locales, link-local, multicast et réservées ; le serveur vérifie en plus toutes les réponses DNS, épingle l’adresse publique retenue, refuse les redirections et borne taille et durée. Ne remplacer ces règles ni par un egress sans filtre ni par une liste de domaines codée en dur.
 
 La migration des anciennes URL `/compatibilite/` relève aussi de ce vhost. Avant le premier déploiement qui contient le gestionnaire de migration, installer la nouvelle configuration avec `install-mcp.sh`. L’ancien service répondra temporairement `404` sur ce proxy, puis l’activation atomique du nouveau service rendra les redirections `301` et retraits `410` disponibles. Le workflow vérifie ensuite une ancienne URL réelle et une référence inconnue ; il ne déclare pas la production valide si le vhost n’a pas été préparé.
 

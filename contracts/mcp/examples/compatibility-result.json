@@ -1,0 +1,14 @@
+{
+  "verdict": "compatible_with_limits",
+  "canonical_url": "https://compatair.fr/calculateur/?outil=example-tool&compresseur=example-compressor",
+  "product_urls": [
+    "https://compatair.fr/compresseurs/example-compressor/",
+    "https://compatair.fr/outils-pneumatiques/example-tool/"
+  ],
+  "source_urls": ["https://manufacturer.example/manual.pdf"],
+  "method_version": "2026.07",
+  "catalog_version": "2026-07-15",
+  "observed_at": "2026-07-15",
+  "limitations": ["Example only: replace with a live MCP result."],
+  "next_actions": ["https://compatair.fr/graphe-preuve/"]
+}

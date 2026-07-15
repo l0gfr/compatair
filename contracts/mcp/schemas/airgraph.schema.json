@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://compatair.fr/schemas/airgraph-0.1.0.json",
+  "title": "CompatAir AirGraph",
+  "type": "object",
+  "required": ["schema_version", "configuration_id", "nodes", "edges"],
+  "properties": {
+    "schema_version": { "const": "0.1.0" },
+    "configuration_id": { "type": "string", "pattern": "^ca:configuration:[a-f0-9]{24}$" },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^ca:(compressor|tool|configuration|requirement):" },
+          "type": { "enum": ["configuration", "compressor", "tool", "pressure_requirement", "flow_requirement", "usage_profile", "tank_volume", "compressor_duty_cycle", "hose_requirement", "connector_requirement", "filtration_requirement", "lubrication_requirement"] },
+          "canonical_url": { "type": "string", "format": "uri" },
+          "value": {},
+          "unit": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to", "relation"],
+        "properties": {
+          "from": { "type": "string" },
+          "to": { "type": "string" },
+          "relation": { "enum": ["uses_compressor", "uses_tool", "has_tank", "has_duty_cycle", "has_usage_profile", "requires_pressure", "requires_flow", "requires_hose", "requires_connector", "requires_filtration", "requires_lubrication", "compatible", "compatible_with_limits", "incompatible", "insufficient_data"] }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

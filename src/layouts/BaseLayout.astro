@@ -14,7 +14,9 @@ type Props = {
 	title: string;
 	editorialTitle?: string;
 	description: string;
+	lang?: 'fr' | 'en';
 	canonicalPath?: string;
+	alternates?: Array<{ hreflang: string; path: string }>;
 	noindex?: boolean;
 	pageType?: 'website' | 'article' | 'product';
 	imagePath?: string;
@@ -28,7 +30,9 @@ const {
 	title,
 	editorialTitle,
 	description,
+	lang = 'fr',
 	canonicalPath = Astro.url.pathname,
+	alternates = [],
 	noindex = false,
 	pageType = 'website',
 	imagePath,
@@ -40,6 +44,12 @@ const {
 const resolvedTitle = resolveDocumentTitle(title, editorialTitle);
 const documentTitle = resolvedTitle.title;
 const canonical = new URL(canonicalPath, Astro.site);
+const alternateLinks = alternates.length
+	? alternates.map((item) => ({ hreflang: item.hreflang, href: new URL(item.path, Astro.site).toString() }))
+	: [
+		{ hreflang: lang === 'en' ? 'en' : 'fr-FR', href: canonical.toString() },
+		{ hreflang: 'x-default', href: canonical.toString() },
+	];
 const socialImage = new URL(imagePath ?? `/social/${socialCardKey(canonical.pathname)}.png`, Astro.site);
 const currentPath = Astro.url.pathname;
 const currentYear = new Date().getFullYear();
@@ -89,7 +99,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 ---
 
 <!doctype html>
-<html lang="fr">
+<html lang={lang}>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -101,13 +111,12 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 		<meta name="description" content={description} />
 		<meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'} />
 		<link rel="canonical" href={canonical} />
-		<link rel="alternate" hreflang="fr-FR" href={canonical} />
-		<link rel="alternate" hreflang="x-default" href={canonical} />
+		{alternateLinks.map((item) => <link rel="alternate" hreflang={item.hreflang} href={item.href} />)}
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preload" href={manropeLatinWghtUrl} as="font" type="font/woff2" crossorigin="anonymous" />
 		<link rel="preload" href={newsreaderLatinWghtUrl} as="font" type="font/woff2" crossorigin="anonymous" />
 		<meta property="og:type" content={pageType} />
-		<meta property="og:locale" content="fr_FR" />
+		<meta property="og:locale" content={lang === 'en' ? 'en_US' : 'fr_FR'} />
 		<meta property="og:site_name" content="CompatAir" />
 		<meta property="og:title" content={documentTitle} />
 		<meta property="og:description" content={description} />
@@ -128,7 +137,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 		<title>{documentTitle}</title>
 	</head>
 	<body>
-		<a class="skip-link" href="#contenu">Aller au contenu</a>
+		<a class="skip-link" href="#contenu">{lang === 'en' ? 'Skip to content' : 'Aller au contenu'}</a>
 		<header class="site-header">
 			<nav class="container nav" aria-label="Navigation principale">
 				<a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><span class="brand-arc"></span><span class="brand-needle"></span></span><span class="brand-name">CompatAir<small>Quel compresseur pour vos outils&nbsp;?</small></span></a>
@@ -181,6 +190,8 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 					<section class="footer-block">
 						<header><span class="footer-icon"><UiIcon name="database" /></span><h2>Comment nous vérifions</h2></header>
 						<a href="/methodologie/"><span>Comment fonctionne CompatAir</span><UiIcon name="arrow" size={15} /></a>
+						<a href={lang === 'en' ? '/en/mcp/' : '/mcp-documentation/'}><span>{lang === 'en' ? 'MCP for AI agents' : 'MCP pour agents IA'}</span><UiIcon name="arrow" size={15} /></a>
+						<a href={lang === 'en' ? '/en/ucp/' : '/ucp/'}><span>{lang === 'en' ? 'UCP compatibility service' : 'UCP pour commerce agentique'}</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/sources-fiabilite/"><span>Sources et fiabilité</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/preuves/"><span>Documents et dates vérifiés</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/radar-contradictions/"><span>Radar des contradictions</span><UiIcon name="arrow" size={15} /></a>

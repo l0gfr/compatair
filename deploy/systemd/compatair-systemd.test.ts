@@ -6,9 +6,12 @@ const stats = readFileSync(new URL('./compatair-stats.service', import.meta.url)
 const staging = readFileSync(new URL('./compatair-mcp-staging.service', import.meta.url), 'utf8');
 
 describe('systemd confinement', () => {
-	it('limits the MCP service to loopback traffic', () => {
+	it('binds the MCP service to loopback and denies private UCP egress targets', () => {
 		expect(mcp).toContain('MCP_HOST=127.0.0.1');
-		expect(mcp).toContain('IPAddressDeny=any');
+		expect(mcp).toContain('IPAddressDeny=0.0.0.0/8 10.0.0.0/8 100.64.0.0/10 127.0.0.0/8');
+		expect(mcp).toContain('192.168.0.0/16');
+		expect(mcp).toContain('IPAddressDeny=::/128 64:ff9b::/96 64:ff9b:1::/48 100::/64 2001:2::/48 2001:10::/28 2001:db8::/32 fc00::/7 fe80::/10 ff00::/8');
+		expect(mcp).not.toContain('IPAddressDeny=any');
 		expect(mcp).toContain('IPAddressAllow=localhost');
 		expect(mcp).toContain('SocketBindDeny=any');
 		expect(mcp).toContain('SocketBindAllow=ipv4:tcp:8787');

@@ -4,14 +4,20 @@ import { compressors, tools } from '../src/data/catalog';
 const catalog = { catalogVersion: 'test', schemaVersion: '1.0.0', verifiedAt: '2026-07-13', compressors, tools };
 const core = createMcpCore(catalog);
 describe('MCP core', () => {
-	it('negotiates the protocol and capabilities', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-06-18' } }); expect(response.result.protocolVersion).toBe('2025-06-18'); expect(response.result.capabilities.tools).toBeDefined(); });
-	it('lists the nine read-only tools', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 2, method: 'tools/list' }); expect(response.result.tools).toHaveLength(9); expect(response.result.tools.every((tool: any) => tool.annotations.readOnlyHint)).toBe(true); });
+	it('negotiates the current protocol and capabilities', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-11-25' } }); expect(response.result.protocolVersion).toBe('2025-11-25'); expect(response.result.serverInfo.version).toBe('2.0.0'); expect(response.result.capabilities.tools).toBeDefined(); });
+	it('negotiates a supported legacy protocol without lying to the client', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 15, method: 'initialize', params: { protocolVersion: '2025-06-18' } }); expect(response.result.protocolVersion).toBe('2025-06-18'); });
+	it('lists the legacy, AirGraph and UCP read-only tools with output contracts', () => {
+		const response: any = core.handle({ jsonrpc: '2.0', id: 2, method: 'tools/list' });
+		expect(response.result.tools).toHaveLength(19);
+		expect(response.result.tools.map((tool: any) => tool.name)).toEqual(expect.arrayContaining(['identify_product', 'build_complete_air_system', 'get_compatibility_evidence', 'get_changefeed', 'evaluate_air_compatibility']));
+		expect(response.result.tools.every((tool: any) => tool.annotations.readOnlyHint && tool.outputSchema.required.includes('canonical_url'))).toBe(true);
+	});
 	it('preserves insufficient_data for an undocumented FAD', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 3, method: 'tools/call', params: { name: 'check_compatibility', arguments: { compressorId: 'abac-pole-position-os20p', toolId: 'einhell-tc-pe-150' } } }); expect(response.result.structuredContent.compatibility.verdict).toBe('insufficient_data'); });
 	it('does not return fabricated offers', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 4, method: 'tools/call', params: { name: 'find_offers', arguments: { productId: 'x' } } }); expect(response.result.structuredContent.offers).toEqual([]); });
 	it('applies the HTTP offer activity policy before returning MCP offers', () => {
 		const filteredCore = createMcpCore(catalog, { snapshotVersion: 'test', offers: [{ id: 'active', productId: 'x' }, { id: 'rejected', productId: 'x' }] }, { isOfferActive: (offer: { id: string }) => offer.id === 'active' });
 		const response: any = filteredCore.handle({ jsonrpc: '2.0', id: 41, method: 'tools/call', params: { name: 'find_offers', arguments: { productId: 'x' } } });
-		expect(response.result.structuredContent.offers).toEqual([{ id: 'active', productId: 'x' }]);
+		expect(response.result.structuredContent.offers).toEqual([{ id: 'active', productId: 'x', url: 'https://compatair.fr/go/active' }]);
 	});
 	it('sizes a per-action demand only from an explicit cadence', () => {
 		const response: any = core.handle({ jsonrpc: '2.0', id: 5, method: 'tools/call', params: { name: 'size_compressor', arguments: { demands: [{ model: 'per-action', litersPerAction: .66, actionsPerMinute: 30, pressureBar: 6.3 }] } } });
@@ -41,5 +47,75 @@ describe('MCP core', () => {
 	it('includes only explicit measured leak and pressure drop in sizing', () => {
 		const response: any = core.handle({ jsonrpc: '2.0', id: 10, method: 'tools/call', params: { name: 'size_compressor', arguments: { demands: [{ flowLpm: 100, pressureBar: 6 }], measuredLeakLpm: 15, measuredPressureDropBar: .7 } } });
 		expect(response.result.structuredContent.sizing).toMatchObject({ peakFlowLpm: 115, averageFlowLpm: 115, toolPressureBar: 6, requiredPressureBar: 6.7, measuredLeakLpm: 15, measuredPressureDropBar: .7 });
+	});
+	it('returns the mandatory traffic and evidence envelope for every tool result', () => {
+		const response: any = core.handle({ jsonrpc: '2.0', id: 11, method: 'tools/call', params: { name: 'get_tool_requirements', arguments: { id: 'einhell-tc-pe-150' } } });
+		expect(response.result.structuredContent).toMatchObject({
+			canonical_url: expect.stringMatching(/^https:\/\/compatair\.fr\/outils-pneumatiques\//),
+			method_version: '2026.07', catalog_version: '2026-07-13', observed_at: '2026-07-13', limitations: [],
+		});
+		expect(response.result.structuredContent.source_urls.length).toBeGreaterThan(0);
+	});
+	it('materializes the mandatory envelope on all 19 valid tool executions', () => {
+		const fixedFlowTool = tools.find((item) => item.demandModel === 'fixed-flow')!;
+		const firstCompressor = compressors[0]!;
+		const secondCompressor = compressors[1]!;
+		const calls: Record<string, unknown> = {
+			search_tools: {}, get_tool_requirements: { id: fixedFlowTool.id }, search_compressors: {}, get_compressor_specs: { id: firstCompressor.id },
+			size_compressor: { demands: [{ flowLpm: 100, pressureBar: 6 }] }, check_compatibility: { compressorId: firstCompressor.id, toolId: fixedFlowTool.id },
+			compare_compressors: { ids: [firstCompressor.id, secondCompressor.id] }, find_accessories: { toolId: fixedFlowTool.id }, find_offers: { productId: firstCompressor.id },
+			identify_product: { reference: `ca:tool:${fixedFlowTool.id}` }, build_complete_air_system: { toolIds: [fixedFlowTool.id], compressorId: firstCompressor.id },
+			explain_compatibility_verdict: { compressorId: firstCompressor.id, toolId: fixedFlowTool.id }, find_compatible_alternatives: { compressorId: firstCompressor.id, toolIds: [fixedFlowTool.id] },
+			compare_complete_systems: { systems: [{ compressorId: firstCompressor.id, toolIds: [fixedFlowTool.id] }, { compressorId: secondCompressor.id, toolIds: [fixedFlowTool.id] }] },
+			get_compatibility_evidence: { compressorId: firstCompressor.id, toolId: fixedFlowTool.id }, search_knowledge: { query: 'débit' },
+			get_current_offers: { productIds: [firstCompressor.id] }, get_changefeed: {},
+			evaluate_air_compatibility: {
+				meta: { 'ucp-agent': { profile: 'https://compatair.fr/examples/ucp/platform-profile.json' } },
+				ucp: { version: '2026-04-08' }, intent: 'will_it_work',
+				configuration: { compressor: { id: firstCompressor.id }, tools: [{ id: fixedFlowTool.id }], mode: 'successive' },
+			},
+		};
+		const required = ['verdict', 'canonical_url', 'product_urls', 'source_urls', 'method_version', 'catalog_version', 'observed_at', 'limitations', 'next_actions'];
+		for (const [name, args] of Object.entries(calls)) {
+			const response: any = core.handle({ jsonrpc: '2.0', id: name, method: 'tools/call', params: { name, arguments: args } });
+			expect(response.result?.structuredContent, name).toBeDefined();
+			for (const field of required) expect(response.result.structuredContent, `${name}:${field}`).toHaveProperty(field);
+			expect(response.result.structuredContent.canonical_url, name).toMatch(/^https:\/\/compatair\.fr\//);
+		}
+		expect(Object.keys(calls)).toHaveLength(19);
+	});
+	it('identifies an exact EAN without fetching the supplied URL', () => {
+		const product = tools.find((item) => item.ean)!;
+		const response: any = core.handle({ jsonrpc: '2.0', id: 12, method: 'tools/call', params: { name: 'identify_product', arguments: { ean: product.ean } } });
+		expect(response.result.structuredContent.matches).toContainEqual(expect.objectContaining({ id: product.id, match_confidence: 'exact', compat_air_id: `ca:tool:${product.id}` }));
+	});
+	it('identifies a full stable CompatAir ID', () => {
+		const response: any = core.handle({ jsonrpc: '2.0', id: 16, method: 'tools/call', params: { name: 'identify_product', arguments: { reference: 'ca:tool:einhell-tc-pe-150' } } });
+		expect(response.result.structuredContent.matches).toContainEqual(expect.objectContaining({ id: 'einhell-tc-pe-150', match_confidence: 'exact' }));
+	});
+	it('builds only documented AirGraph nodes and keeps missing network components explicit', () => {
+		const response: any = core.handle({ jsonrpc: '2.0', id: 13, method: 'tools/call', params: { name: 'build_complete_air_system', arguments: { toolIds: ['einhell-tc-pe-150'], mode: 'successive', limit: 2 } } });
+		expect(response.result.structuredContent.configuration_id).toMatch(/^ca:configuration:[a-f0-9]{24}$/);
+		expect(response.result.structuredContent.airgraph.nodes.some((node: any) => node.id === 'ca:tool:einhell-tc-pe-150')).toBe(true);
+		expect(response.result.structuredContent.airgraph.nodes.some((node: any) => node.type === 'tank_volume')).toBe(true);
+		expect(response.result.structuredContent.verdict).toBe('insufficient_data');
+		expect(response.result.structuredContent.limitations.every((item: unknown) => typeof item === 'string')).toBe(true);
+	});
+	it('does not propose a compressor substitution when the current air chain already covers the demand', () => {
+		const response: any = core.handle({ jsonrpc: '2.0', id: 18, method: 'tools/call', params: { name: 'find_compatible_alternatives', arguments: { compressorId: 'kaeser-eurocomp-epc-840-100', toolIds: ['einhell-tc-pe-150'], mode: 'successive' } } });
+		expect(response.result.structuredContent.current.verdict).toBe('continuous');
+		expect(response.result.structuredContent.alternatives).toEqual([]);
+		expect(response.result.structuredContent.next_actions).toEqual([]);
+	});
+	it('drops non-CompatAir knowledge URLs even when the local index is compromised', () => {
+		const isolated = createMcpCore(catalog, undefined, { knowledgeItems: [{ title: 'Danger', type: 'Guide', url: 'https://attacker.example/phish', keywords: 'danger' }] });
+		const response: any = isolated.handle({ jsonrpc: '2.0', id: 17, method: 'tools/call', params: { name: 'search_knowledge', arguments: { query: 'danger' } } });
+		expect(response.result.structuredContent.items).toEqual([]);
+		expect(response.result.structuredContent.canonical_url).toBe('https://compatair.fr/recherche/');
+	});
+	it('uses the published verdict snapshot as the default compatibility authority', () => {
+		const snapshotCore = createMcpCore(catalog, undefined, { verdictSnapshot: { pairs: [{ compressorId: 'abac-pole-position-os20p', toolId: 'einhell-tc-pe-150', verdict: 'incompatible', limitingFactor: 'flow', calculationVersion: '1.2.0' }] } });
+		const response: any = snapshotCore.handle({ jsonrpc: '2.0', id: 14, method: 'tools/call', params: { name: 'check_compatibility', arguments: { compressorId: 'abac-pole-position-os20p', toolId: 'einhell-tc-pe-150' } } });
+		expect(response.result.structuredContent.compatibility).toMatchObject({ verdict: 'incompatible', limitingFactor: 'flow' });
 	});
 });
