@@ -3,10 +3,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductImage from '../../components/ProductImage.astro';
 import { compressors } from '../../data/catalog';
 import { brandSlug } from '../../domain/brand';
+import { compressorDisplayName } from '../../domain/product-display';
 import { serializeJsonLd } from '../../domain/structured-data';
 const compressorListJsonLd = {
 	'@context': 'https://schema.org', '@type': 'ItemList', name: 'Compresseurs documentés par CompatAir',
-	itemListElement: compressors.map((compressor, index) => ({ '@type': 'ListItem', position: index + 1, name: `${compressor.brand} ${compressor.model}`, url: `https://compatair.fr/compresseurs/${compressor.slug}/` })),
+	itemListElement: compressors.map((compressor, index) => ({ '@type': 'ListItem', position: index + 1, name: compressorDisplayName(compressor), url: `https://compatair.fr/compresseurs/${compressor.slug}/` })),
 };
 ---
 
@@ -27,9 +28,9 @@ const compressorListJsonLd = {
 		<div class="catalog-main"><div class="catalog-toolbar"><p data-catalog-count>{compressors.length} résultats</p><a class="button" data-compare-link href="/comparateur/" aria-disabled="true">Comparer <span data-compare-count>0</span>/3</a></div><div class="product-grid" data-product-grid>
 		{compressors.map((compressor) => (
 			<article class="product-card" data-product-card data-id={compressor.id} data-brand={compressor.brand} data-tank={compressor.tankLiters} data-pressure={compressor.maxPressureBar} data-oil={compressor.oilType} data-noise={compressor.noiseDb ?? ''} data-confidence={compressor.confidence}>
-				<a class="product-card-image" href={`/compresseurs/${compressor.slug}/`} aria-label={`Voir la fiche ${compressor.brand} ${compressor.model}`}><ProductImage image={compressor.image} compact /></a>
+				<a class="product-card-image" href={`/compresseurs/${compressor.slug}/`} aria-label={`Voir la fiche ${compressorDisplayName(compressor)}`}><ProductImage image={compressor.image} compact /></a>
 					<p class="product-brand"><a href={`/marques/${brandSlug(compressor.brand)}/`}>{compressor.brand}</a></p>
-				<h2><a href={`/compresseurs/${compressor.slug}/`}>{compressor.model}</a></h2>
+				<h2><a href={`/compresseurs/${compressor.slug}/`}>{compressorDisplayName(compressor).replace(`${compressor.brand} `, '')}</a></h2>
 				<dl class="spec-list"><div><dt>Cuve</dt><dd>{compressor.tankLiters} L</dd></div><div><dt>Pression max.</dt><dd>{compressor.maxPressureBar} bar</dd></div><div><dt>Fiabilité des données</dt><dd>{compressor.confidence}</dd></div></dl>
 				<p class:list={['data-status', compressor.fadCurve.length ? 'verified' : 'missing']}>{compressor.fadCurve.length ? 'Débit réellement restitué documenté' : 'Débit réellement restitué à confirmer'}</p>
 				<label class="compare-check"><input type="checkbox" value={compressor.id} data-compare-checkbox /> Ajouter au comparateur</label>

@@ -2,9 +2,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductImage from '../../components/ProductImage.astro';
 import { compressors, tools } from '../../data/catalog';
+import { activeOffers } from '../../data/offers';
 import { productSeoTitle } from '../../data/product-seo-titles';
 import { toolGuidePath } from '../../data/tool-guide-links';
-import { evaluateCompatibility } from '../../domain/compatibility';
+import { compressorDisplayName } from '../../domain/product-display';
+import { createToolCompatibilitySummary } from '../../domain/seo-selection';
 import { isFixedFlowTool, toolDemandLabel, toolPressureLabel } from '../../domain/tool-demand';
 import { latestEvidenceDate } from '../../domain/provenance';
 
@@ -12,7 +14,8 @@ export function getStaticPaths() { return tools.map((tool) => ({ params: { slug:
 const { tool } = Astro.props;
 const verifiedAt = latestEvidenceDate(tool);
 const fixedFlow = isFixedFlowTool(tool);
-const matches = fixedFlow ? compressors.map((compressor) => ({ compressor, result: evaluateCompatibility(compressor, tool) })) : [];
+const availableProductIds = new Set(activeOffers.map((offer) => offer.productId));
+const compatibility = fixedFlow ? createToolCompatibilitySummary(compressors, tool, { availableProductIds }) : undefined;
 const labels = { continuous: 'Continu', intermittent: 'Intermittent', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' };
 const marginTarget = fixedFlow ? Math.round(tool.airflowLpm.typical * 1.25) : undefined;
 const demandLabel = toolDemandLabel(tool);
@@ -22,7 +25,7 @@ const relatedGuide = toolGuidePath(tool);
 <BaseLayout
 	title={`${tool.label} : quel compresseur ? | CompatAir`}
 	editorialTitle={productSeoTitle(tool.id)}
-	description={`${tool.label} : ${demandLabel}, ${pressureLabel}. Données constructeur, compresseurs adaptés et informations manquantes.`}
+	description={`${tool.label} : ${demandLabel}, ${pressureLabel}. Caractéristiques, sources, limites et besoin en air documenté.`}
 	pageType="product"
 	imagePath="/social/outils-pneumatiques.png"
 	imageAlt="Catalogue des outils pneumatiques documentés par CompatAir"
@@ -39,7 +42,7 @@ const relatedGuide = toolGuidePath(tool);
 
 		{fixedFlow ? <>
 			<section class="editorial-section"><h2>Quel débit le compresseur doit-il fournir&nbsp;?</h2><p>Le premier seuil est la consommation publiée de <strong>{tool.airflowLpm.typical} L/min à {tool.workingPressureBar.typical} bar</strong>. Un compresseur n’est déclaré compatible en continu que si son <a href="/glossaire/#debit-restitue">débit réellement disponible</a> couvre cette valeur à la même pression.</p><p>CompatAir affiche aussi une réserve à <strong>{marginTarget} L/min</strong>. Cette majoration de 25 % est un repère proposé par CompatAir, pas une exigence du fabricant.</p><div class="actions"><a class="button primary" href={`/calculateur/#outil=${tool.id}`}>Vérifier les compresseurs</a></div></section>
-			<section class="editorial-section"><h2>Résultats sur les compresseurs documentés</h2><div class="compatibility-table">{matches.map(({ compressor, result }) => <a href={`/compresseurs/${compressor.slug}/`}><span><strong>{compressor.brand} {compressor.model}</strong><small>{result.availableFadLpm !== undefined ? `${Math.round(result.availableFadLpm)} L/min disponibles à la pression demandée` : 'Débit non documenté à la pression demandée'}</small></span><strong class={`text-${result.verdict}`}>{labels[result.verdict]}</strong></a>)}</div></section>
+			<section class="editorial-section"><h2>Synthèse sur les compresseurs documentés</h2><p>La fiche outil conserve une vue courte. La page d’usage porte la sélection complète et le calculateur conserve l’exhaustivité.</p><dl class="spec-table"><div><dt>Résultats compatibles</dt><dd>{compatibility!.counts.compatible}, dont {compatibility!.counts.continuous} en continu et {compatibility!.counts.intermittent} intermittents</dd></div><div><dt>Résultats incompatibles</dt><dd>{compatibility!.counts.incompatible}</dd></div><div><dt>Résultats indéterminés</dt><dd>{compatibility!.counts.insufficient}</dd></div></dl><div class="compatibility-table" data-static-compatibility-results data-result-count={compatibility!.examples.length}>{compatibility!.examples.map(({ compressor, result }) => <a href={`/compresseurs/${compressor.slug}/`}><span><strong>{compressorDisplayName(compressor)}</strong><small>{result.availableFadLpm !== undefined ? `${Math.round(result.availableFadLpm)} L/min disponibles à la pression demandée` : 'Débit non documenté à la pression demandée'}</small></span><strong class={`text-${result.verdict}`}>{labels[result.verdict]}</strong></a>)}</div><div class="actions"><a class="button primary" href={`/quel-compresseur-pour/${tool.slug}/`}>Voir la sélection complète</a></div></section>
 		</> : <section class="editorial-section"><h2>Informations nécessaires pour calculer le besoin</h2><p>{tool.demandModel === 'per-action' ? `La documentation exprime la consommation par ${tool.actionLabel}. Le calculateur multiplie cette valeur par le nombre d’actions réellement saisi pour obtenir une moyenne par minute. Il ne prétend pas deviner le besoin exact au déclenchement.` : tool.demandExplanation}</p><p>Attribuer un débit par minute sans ces informations reviendrait à l’inventer. Les fiches indiquent donc «&nbsp;données insuffisantes&nbsp;», tandis que le calculateur vous permet de renseigner votre usage.</p><div class="actions"><a class="button primary" href={`/calculateur/#outil=${tool.id}`}>Renseigner mon usage</a></div></section>}
 
 		<section class="related-reading"><h2>Guides liés à cet outil</h2><div class="link-cards"><a href={`/quel-compresseur-pour/${tool.slug}/`}><strong>Quel compresseur pour {tool.model}&nbsp;?</strong><span>Consulter la page d’usage calculée pour cette référence.</span></a><a href={relatedGuide}><strong>Guide d’usage associé</strong><span>Approfondir le besoin en air de cette catégorie d’outil.</span></a><a href="/guides/diametre-longueur-flexible-air-comprime/"><strong>Flexible et raccords</strong><span>Comprendre pourquoi le réseau peut réduire la pression disponible.</span></a><a href="/guides/debit-restitue-fad-vs-debit-aspire/"><strong>Débit restitué ou aspiré</strong><span>Comparer le bon chiffre à la consommation publiée.</span></a></div></section>

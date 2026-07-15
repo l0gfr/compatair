@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { CATALOG_VERIFIED_AT, compressors } from '../data/catalog';
+import { serializeJsonLd } from '../domain/structured-data';
 import { createTransparencyBarometer } from '../domain/transparency-barometer';
 const barometer = createTransparencyBarometer(compressors, CATALOG_VERIFIED_AT);
 const formatDate = (date: string) => new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
@@ -9,9 +10,26 @@ const segmentLabels: Record<string, string> = {
 	'atelier-25-99l': 'atelier, cuve de 25 à 99 L',
 	'production-100l-plus': 'production, cuve de 100 L ou plus',
 };
+const datasetJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'Dataset',
+	name: `Baromètre CompatAir ${barometer.edition}`,
+	description: barometer.scope,
+	url: 'https://compatair.fr/barometre-transparence/',
+	dateModified: barometer.publishedAt,
+	version: barometer.barometerVersion,
+	inLanguage: 'fr-FR',
+	isAccessibleForFree: true,
+	creator: { '@type': 'Organization', '@id': 'https://compatair.fr/#organization', name: 'CompatAir', url: 'https://compatair.fr/' },
+	distribution: [
+		{ '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: 'https://compatair.fr/data/transparency-barometer.json' },
+		{ '@type': 'DataDownload', encodingFormat: 'text/csv', contentUrl: 'https://compatair.fr/data/transparency-barometer.csv' },
+	],
+};
 ---
-	<BaseLayout title={`Données publiées par les fabricants | CompatAir`} description="CompatAir vérifie si les fabricants publient les données nécessaires pour choisir un compresseur et les distingue des performances de la machine." breadcrumbs={[{ name: 'Baromètre de transparence', path: '/barometre-transparence/' }]}>
-	<section class="page-hero"><div class="container"><p class="eyebrow">Données publiées par les fabricants</p><h1>Les fabricants donnent-ils les informations utiles pour choisir&nbsp;?</h1><p class="lead">CompatAir regarde si les documents disponibles permettent de connaître le débit réellement délivré, les conditions de mesure et la référence exacte des {compressors.length} compresseurs étudiés. La note porte uniquement sur les informations trouvées, jamais sur la qualité ou les performances de la machine.</p></div></section>
+		<BaseLayout title={`Données publiées par les fabricants | CompatAir`} description="CompatAir vérifie si les fabricants publient les données nécessaires pour choisir un compresseur et les distingue des performances de la machine." breadcrumbs={[{ name: 'Baromètre de transparence', path: '/barometre-transparence/' }]}>
+		<script is:inline type="application/ld+json" set:html={serializeJsonLd(datasetJsonLd)} />
+		<section class="page-hero"><div class="container"><p class="eyebrow">Données publiées par les fabricants</p><h1>Les fabricants donnent-ils les informations utiles pour choisir&nbsp;?</h1><p class="lead">CompatAir regarde si les documents disponibles permettent de connaître le débit réellement délivré, les conditions de mesure et la référence exacte des {compressors.length} compresseurs étudiés. La note porte uniquement sur les informations trouvées, jamais sur la qualité ou les performances de la machine.</p><div class="actions"><a class="button" href="/data/transparency-barometer.json">Données JSON</a><a class="button" href="/data/transparency-barometer.csv">Export CSV</a></div></div></section>
 	<section class="section"><div class="container">{!barometer.rankingPublished && <div class="barometer-warning"><strong>Classement non publié à ce stade</strong><p>Aucune position officielle n’est attribuée sous {barometer.minimumSampleForRanking} références, ni tant qu’au moins deux marques ne dépassent pas ce seuil. La transparence du constructeur est séparée du travail de vérification réalisé par CompatAir. L’absence d’une donnée signifie «&nbsp;non trouvée dans les sources étudiées&nbsp;», jamais «&nbsp;non publiée par la marque&nbsp;».</p></div>}
 		<div class="barometer-ranking">{barometer.brands.map((row) => <article class="barometer-brand"><header><span class="barometer-rank">{row.rank === null ? 'Provisoire' : `#${row.rank}`}</span><div><h2>{row.brand}</h2><p>{row.sampleSize} compresseur{row.sampleSize > 1 ? 's' : ''} étudié{row.sampleSize > 1 ? 's' : ''} · selon le critère, information disponible pour {row.observedCompletenessRange.low} à {row.observedCompletenessRange.high} % des références</p></div><strong>{row.score}<small>/100</small></strong></header><div class="score-track" aria-label={`Transparence constructeur ${row.score} sur 100`}><span style={`width:${row.score}%`}></span></div><p class="barometer-coverage"><strong>Travail de vérification CompatAir : {row.coverageScore}/100.</strong> Présence des identifiants et date de nos vérifications, sans effet sur le score du constructeur.</p><dl>{barometer.criteria.map((criterion) => <div><dt>{criterion.label}</dt><dd>{row.criteria[criterion.id]} %</dd></div>)}</dl><details><summary>Références et catégories étudiées</summary><ul>{row.references.map((reference) => <li><code>{reference.id}</code> · {reference.model} · {segmentLabels[reference.segment] ?? reference.segment}</li>)}</ul></details></article>)}</div>
 	</div></section>

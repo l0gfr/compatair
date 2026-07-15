@@ -8,6 +8,7 @@ import { parseJavaScriptModuleSpecifiers } from './lib/javascript-module-graph.m
 const root = resolve('dist');
 const siteOrigin = 'https://compatair.fr';
 const errors = [];
+const warnings = [];
 const htmlFiles = [];
 const artifactPaths = new Set();
 const productImageDimensionsBySource = new Map();
@@ -17,6 +18,9 @@ const maximumPassportInitialScriptBytesGzip = 45 * 1024;
 const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
 const maximumRuntimeCatalogBytesGzip = 32 * 1024;
 const maximumSearchIndexBytesGzip = 64 * 1024;
+const maximumEditorialProductInternalLinksBeforeWarning = 100;
+const maximumEditorialProductInternalLinks = 120;
+const maximumStaticCompatibilityResults = 30;
 const maximumHtmlArtifactBytes = 64 * 1024 * 1024;
 const maximumTotalArtifactBytes = 96 * 1024 * 1024;
 // Les pages produits réutilisent des cartes de catalogue afin que le temps de build ne croisse pas avec chaque référence.
@@ -39,6 +43,11 @@ const glossaryLinkRequirements = new Map([
 	['methodologie/index.html', ['/glossaire/#debit-restitue', '/glossaire/#debit-aspire', '/glossaire/#interpolation', '/glossaire/#fad']],
 	['sources-fiabilite/index.html', ['/glossaire/#debit-restitue', '/glossaire/#debit-aspire', '/glossaire/#interpolation']],
 ]);
+const datasetDistributionRequirements = new Map([
+	['barometre-transparence/index.html', ['/data/transparency-barometer.json', '/data/transparency-barometer.csv']],
+	['observatoire-qualite-documentaire/index.html', ['/data/document-quality-observatory.json', '/data/document-quality-observatory.csv']],
+]);
+const compressorIdentityPages = new Map();
 let largestInitialPageScriptBudget = { bytes: 0, label: '', modules: 0 };
 let largestOnDemandPageScriptBudget = { bytes: 0, label: '', modules: 0 };
 let calculatorOnDemandScriptBudget = { bytes: 0, modules: 0 };
@@ -229,6 +238,18 @@ else {
 	if (searchIndexBytesGzip > maximumSearchIndexBytesGzip) errors.push(`data/search-index.json: ${Math.ceil(searchIndexBytesGzip / 1024)} Ko gzip, budget ${maximumSearchIndexBytesGzip / 1024} Ko dépassé`);
 }
 
+const csvArtifacts = new Map([
+	['/data/transparency-barometer.csv', ['edition', 'published_at', 'brand', 'status', 'rank', 'sample_size']],
+	['/data/document-quality-observatory.csv', ['published_at', 'metric', 'status', 'value', 'numerator', 'denominator', 'definition']],
+]);
+for (const [path, requiredColumns] of csvArtifacts) {
+	if (!artifactPaths.has(path)) { errors.push(`${path}: export CSV absent`); continue; }
+	const csv = await readFile(join(root, path), 'utf8');
+	const header = csv.split(/\r?\n/, 1)[0];
+	for (const column of requiredColumns) if (!header.includes(`"${column}"`)) errors.push(`${path}: colonne obligatoire absente ${column}`);
+	if (!csv.endsWith('\r\n')) errors.push(`${path}: fin de ligne CSV CRLF absente`);
+}
+
 if (!artifactPaths.has('/calculateur/index.html')) errors.push('recommandation contrefactuelle: calculateur rendu absent');
 else {
 	const calculatorHtml = await readFile(join(root, '/calculateur/index.html'), 'utf8');
@@ -330,6 +351,26 @@ for (const file of htmlFiles) {
 	const isCompatibilityDetail = label.startsWith('compatibilite/');
 	const isGuideArticle = /^guides\/[^/]+\/index\.html$/.test(label) && !['guides/particuliers/index.html', 'guides/professionnels/index.html'].includes(label);
 	const isEditorialProductPage = /^(compresseurs|outils-pneumatiques|quel-compresseur-pour)\/[^/]+\/index\.html$/.test(label);
+	for (const match of html.matchAll(/<[^>]*data-static-compatibility-results[^>]*data-result-count="(\d+)"[^>]*>/g)) {
+		const resultCount = Number(match[1]);
+		if (resultCount > maximumStaticCompatibilityResults) errors.push(`${label}: ${resultCount} résultats de compatibilité statiques, plafond ${maximumStaticCompatibilityResults} dépassé`);
+	}
+	if (label.startsWith('compresseurs/') && label !== 'compresseurs/index.html') {
+		const brand = decodeXml(html.match(/data-product-brand="([^"]*)"/)?.[1] ?? '');
+		const model = decodeXml(html.match(/data-product-model="([^"]*)"/)?.[1] ?? '');
+		const mpn = decodeXml(html.match(/data-product-mpn="([^"]*)"/)?.[1] ?? '');
+		const h1 = decodeXml(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1]?.replace(/<[^>]+>/g, '').trim() ?? '');
+		if (!brand || !model || !h1) errors.push(`${label}: identité produit rendue incomplète`);
+		else {
+			const identityKey = `${brand.toLocaleLowerCase('fr-FR')}\u0000${model.toLocaleLowerCase('fr-FR')}`;
+			const siblings = compressorIdentityPages.get(identityKey) ?? [];
+			for (const sibling of siblings) {
+				if (sibling.h1 === h1) errors.push(`${label}: H1 identique à ${sibling.label} pour ${brand} ${model}${mpn && sibling.mpn && mpn !== sibling.mpn ? ' malgré des MPN distincts' : ' sans variante rendue distincte'}`);
+			}
+			siblings.push({ label, h1, mpn });
+			compressorIdentityPages.set(identityKey, siblings);
+		}
+	}
 	if (html.includes('data-search-index=')) errors.push(`${label}: index de recherche dupliqué dans le HTML`);
 	if (html.includes('href="/compatibilite/')) errors.push(`${label}: lien vers une page de couple statique interdite`);
 	for (const wording of forbiddenPublicWording) if (html.includes(wording)) errors.push(`${label}: formulation interne interdite « ${wording} »`);
@@ -389,6 +430,15 @@ for (const file of htmlFiles) {
 			structuredNodes.push(...jsonLdNodes(parsed));
 		} catch { errors.push(`${label}: JSON-LD invalide`); }
 	}
+	const requiredDatasetDistributions = datasetDistributionRequirements.get(label);
+	if (requiredDatasetDistributions) {
+		const dataset = structuredNodes.find((node) => node['@type'] === 'Dataset');
+		if (!dataset) errors.push(`${label}: données structurées Dataset absentes`);
+		else {
+			const distributions = Array.isArray(dataset.distribution) ? dataset.distribution : [];
+			for (const path of requiredDatasetDistributions) if (!distributions.some((item) => item['@type'] === 'DataDownload' && item.contentUrl === `${siteOrigin}${path}`)) errors.push(`${label}: distribution Dataset absente ${path}`);
+		}
+	}
 	const breadcrumb = structuredNodes.find((node) => node['@type'] === 'BreadcrumbList');
 	if (breadcrumb) {
 		const items = breadcrumb.itemListElement;
@@ -410,13 +460,17 @@ for (const file of htmlFiles) {
 	}
 
 	const sourcePath = label === 'index.html' ? '/' : `/${label.replace(/index\.html$/, '')}`;
+	let internalLinkCount = 0;
 	for (const match of html.matchAll(/<a\s+[^>]*href="([^"]+)"/g)) {
 		let target;
 		try { target = new URL(decodeXml(match[1]), siteOrigin); } catch { continue; }
 		if (target.origin !== siteOrigin) continue;
+		internalLinkCount += 1;
 		if (['/calculateur/', '/graphe-preuve/'].includes(target.pathname) && target.search) errors.push(`${label}: lien de préremplissage bloqué par robots.txt ${match[1]}`);
 		if (!noindex && indexablePaths.has(sourcePath) && target.pathname !== sourcePath && incomingIndexableLinks.has(target.pathname)) incomingIndexableLinks.set(target.pathname, incomingIndexableLinks.get(target.pathname) + 1);
 	}
+	if (isEditorialProductPage && internalLinkCount > maximumEditorialProductInternalLinks) errors.push(`${label}: ${internalLinkCount} liens internes, plafond ${maximumEditorialProductInternalLinks} dépassé`);
+	else if (isEditorialProductPage && internalLinkCount > maximumEditorialProductInternalLinksBeforeWarning) warnings.push(`${label}: ${internalLinkCount} liens internes, seuil d’alerte ${maximumEditorialProductInternalLinksBeforeWarning} dépassé`);
 
 	for (const match of html.matchAll(/<a\s+([^>]*href="(\/go\/[^"]+)"[^>]*)>/g)) {
 		const attributes = match[1];
@@ -477,6 +531,7 @@ for (const sitemapUrl of sitemapUrls) {
 	if (!sitePaths.has(pathname)) errors.push(`sitemap: URL sans page HTML ${sitemapUrl}`);
 }
 
+if (warnings.length) console.warn(`Alertes SEO non bloquantes :\n${warnings.join('\n')}`);
 if (errors.length) {
 	console.error(errors.join('\n'));
 	process.exit(1);

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { compressors, tools } from '../data/catalog';
+import { compressorDisplayName } from '../domain/product-display';
 
 const fixedFlowTools = tools.filter((tool) => tool.demandModel === 'fixed-flow');
 const defaultCompressorId = compressors.some((item) => item.id === 'einhell-te-ac-430-90-10') ? 'einhell-te-ac-430-90-10' : compressors[0].id;
@@ -18,7 +19,7 @@ const layers = [
 
 	<section class="section proof-graph-section"><div class="container" data-proof-graph data-catalog-source="/data/catalog.json" data-verdict-source="/data/verdicts.json" data-default-compressor={defaultCompressorId} data-default-tool={defaultToolId}>
 		<form class="proof-graph-picker" data-graph-picker>
-			<div><label for="proof-compressor">Compresseur</label><select id="proof-compressor" name="compresseur">{compressors.map((compressor) => <option value={compressor.id} selected={compressor.id === defaultCompressorId}>{compressor.brand} {compressor.model}</option>)}</select></div>
+			<div><label for="proof-compressor">Compresseur</label><select id="proof-compressor" name="compresseur">{compressors.map((compressor) => <option value={compressor.id} selected={compressor.id === defaultCompressorId}>{compressorDisplayName(compressor)}</option>)}</select></div>
 			<div><label for="proof-tool">Outil à débit documenté</label><select id="proof-tool" name="outil">{fixedFlowTools.map((tool) => <option value={tool.id} selected={tool.id === defaultToolId}>{tool.label}</option>)}</select></div>
 			<button class="button primary" type="submit">Tracer le verdict</button>
 		</form>

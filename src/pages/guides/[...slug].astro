@@ -2,8 +2,11 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { compressors, tools } from '../../data/catalog';
+import { activeOffers } from '../../data/offers';
 import { evaluateCompatibility } from '../../domain/compatibility';
 import { guideAudiences, guideMetiers } from '../../domain/editorial-taxonomy';
+import { compressorDisplayName } from '../../domain/product-display';
+import { rankCompatibleCompressors } from '../../domain/seo-selection';
 import { serializeJsonLd } from '../../domain/structured-data';
 
 export async function getStaticPaths() {
@@ -30,11 +33,13 @@ const relatedTool = guide.data.relatedCalculatorTool
 	? tools.find((tool) => tool.id === guide.data.relatedCalculatorTool)
 	: undefined;
 const compatibleCompressors = relatedTool
-	? compressors
-		.map((compressor) => ({ compressor, result: evaluateCompatibility(compressor, relatedTool) }))
-		.filter(({ result }) => result.verdict === 'continuous')
-		.sort((a, b) => (b.result.availableFadLpm ?? 0) - (a.result.availableFadLpm ?? 0))
-		.slice(0, 3)
+	? rankCompatibleCompressors(compressors
+			.map((compressor) => ({ compressor, result: evaluateCompatibility(compressor, relatedTool) }))
+			.filter(({ result }) => result.verdict === 'continuous'), {
+				audiences: guide.data.audiences,
+				availableProductIds: new Set(activeOffers.map((offer) => offer.productId)),
+			})
+			.slice(0, 3)
 	: [];
 const published = guide.data.pubDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 const externallyReviewed = guide.data.reviewStatus === 'external';
@@ -99,11 +104,11 @@ const articleJsonLd = {
 						</div>
 						{compatibleCompressors.length > 0 ? (
 							<div class="guide-compatible-results">
-								<h3>Compresseurs déjà confirmés pour un usage continu</h3>
+									<h3>Compresseurs déjà confirmés pour un usage continu</h3><p>La sélection privilégie l’audience du guide, une alimentation cohérente et le plus petit débit documenté réellement suffisant.</p>
 								<div class="link-cards">
 									{compatibleCompressors.map(({ compressor, result }) => (
 										<a href={`/calculateur/#outil=${encodeURIComponent(relatedTool.id)}&compresseur=${encodeURIComponent(compressor.id)}`}>
-											<strong>{compressor.brand} {compressor.model}</strong>
+												<strong>{compressorDisplayName(compressor)}</strong>
 											<span>{Math.round(result.availableFadLpm!)} L/min restitués documentés à la pression de l’outil</span>
 										</a>
 									))}

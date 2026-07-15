@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { compressors, tools } from '../../data/catalog';
 import { getCatalogMetrics } from '../../domain/catalog-insights';
+import { compressorDisplayName } from '../../domain/product-display';
 
 const documented = compressors.filter((item) => item.fadCurve.length > 0);
 const incomplete = compressors.filter((item) => item.fadCurve.length === 0);
@@ -34,11 +35,11 @@ const metrics = getCatalogMetrics(compressors, tools);
 		<div class="compare-table-wrap">
 			<table class="compare-table">
 				<thead><tr><th>Modèle</th><th>Cuve</th><th>Pression maximale</th><th>Débit réellement restitué</th><th>Fiabilité des données</th></tr></thead>
-				<tbody>{documented.map((item) => <tr><th><a href={`/compresseurs/${item.slug}/`}>{item.brand} {item.model}</a></th><td>{item.tankLiters} L</td><td>{item.maxPressureBar} bar</td><td>{item.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ')}</td><td>{item.confidence}</td></tr>)}</tbody>
+				<tbody>{documented.map((item) => <tr><th><a href={`/compresseurs/${item.slug}/`}>{compressorDisplayName(item)}</a></th><td>{item.tankLiters} L</td><td>{item.maxPressureBar} bar</td><td>{item.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ')}</td><td>{item.confidence}</td></tr>)}</tbody>
 			</table>
 		</div>
 		<h2>Références non classables</h2>
-		<p>{incomplete.map((item) => `${item.brand} ${item.model}`).join(', ')} ne {incomplete.length === 1 ? 'dispose' : 'disposent'} pas d’un débit réellement restitué exploitable dans la source actuelle. {incomplete.length === 1 ? 'Cette référence n’est pas replacée' : 'Ces références ne sont pas replacées'} dans le classement à partir du <a href="/glossaire/#debit-aspire">débit aspiré</a>.</p>
+		<p>{incomplete.map(compressorDisplayName).join(', ')} ne {incomplete.length === 1 ? 'dispose' : 'disposent'} pas d’un débit réellement restitué exploitable dans la source actuelle. {incomplete.length === 1 ? 'Cette référence n’est pas replacée' : 'Ces références ne sont pas replacées'} dans le classement à partir du <a href="/glossaire/#debit-aspire">débit aspiré</a>.</p>
 		<h2>Résultats disponibles pour chaque outil</h2>
 		<div class="compare-table-wrap">
 			<table class="compare-table">

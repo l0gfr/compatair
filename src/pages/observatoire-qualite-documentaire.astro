@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { documentQualityObservatory as observatory } from '../data/document-quality-observatory';
 import { compressors, tools } from '../data/catalog';
+import { compressorDisplayName } from '../domain/product-display';
+import { serializeJsonLd } from '../domain/structured-data';
 
 const formatDate = (date: string) => new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
 const correction = observatory.metrics.correctionLeadTime;
@@ -10,9 +12,26 @@ const references = observatory.metrics.referenceStability;
 const contradictions = observatory.metrics.contradictionResponses;
 const program = observatory.measurementProgram;
 const productsById = new Map([...compressors, ...tools].map((product) => [product.id, product]));
+const datasetJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'Dataset',
+	name: 'Observatoire de la qualité documentaire CompatAir',
+	description: observatory.scope,
+	url: 'https://compatair.fr/observatoire-qualite-documentaire/',
+	dateModified: observatory.publishedAt,
+	version: observatory.observatoryVersion,
+	inLanguage: 'fr-FR',
+	isAccessibleForFree: true,
+	creator: { '@type': 'Organization', '@id': 'https://compatair.fr/#organization', name: 'CompatAir', url: 'https://compatair.fr/' },
+	distribution: [
+		{ '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: 'https://compatair.fr/data/document-quality-observatory.json' },
+		{ '@type': 'DataDownload', encodingFormat: 'text/csv', contentUrl: 'https://compatair.fr/data/document-quality-observatory.csv' },
+	],
+};
 ---
 <BaseLayout title="Observatoire qualité documentaire | CompatAir" description="Délais de correction, disponibilité du FAD multi-pression, stabilité des références et traitement public des contradictions dans le catalogue CompatAir." breadcrumbs={[{ name: 'Observatoire de la qualité documentaire', path: '/observatoire-qualite-documentaire/' }]}>
-	<section class="page-hero observatory-hero"><div class="container"><p class="eyebrow">Mesurer notre propre documentation</p><h1>Observatoire de la qualité documentaire</h1><p class="lead">Quatre indicateurs suivent ce qui rend un catalogue technique vérifiable dans le temps&nbsp;: corriger avec une date mesurable, disposer de plusieurs points FAD, conserver l’identité exacte des références et répondre publiquement aux contradictions. Une absence de données reste affichée comme telle.</p><p class="observatory-edition">Édition du {formatDate(observatory.publishedAt)} · corpus de {compressors.length + tools.length} produits · <a href="/data/document-quality-observatory.json">données JSON versionnées</a></p></div></section>
+	<script is:inline type="application/ld+json" set:html={serializeJsonLd(datasetJsonLd)} />
+	<section class="page-hero observatory-hero"><div class="container"><p class="eyebrow">Mesurer notre propre documentation</p><h1>Observatoire de la qualité documentaire</h1><p class="lead">Quatre indicateurs suivent ce qui rend un catalogue technique vérifiable dans le temps&nbsp;: corriger avec une date mesurable, disposer de plusieurs points FAD, conserver l’identité exacte des références et répondre publiquement aux contradictions. Une absence de données reste affichée comme telle.</p><p class="observatory-edition">Édition du {formatDate(observatory.publishedAt)} · corpus de {compressors.length + tools.length} produits · <a href="/data/document-quality-observatory.json">données JSON versionnées</a> · <a href="/data/document-quality-observatory.csv">export CSV</a></p></div></section>
 
 	<section class="section observatory-overview"><div class="container">
 		<div class="observatory-metrics">
@@ -43,7 +62,8 @@ const productsById = new Map([...compressors, ...tools].map((product) => [produc
 		<div class="contradiction-list">{observatory.contradictions.map((record) => {
 			const product = productsById.get(record.productId);
 			const href = product && 'tankLiters' in product ? `/compresseurs/${product.slug}/` : product ? `/outils-pneumatiques/${product.slug}/` : undefined;
-			return <article><header><span>{record.status === 'answered' ? 'Réponse publiée' : 'Ouverte'}</span><time datetime={record.observedAt}>Constatée le {formatDate(record.observedAt)}</time></header><h3>{record.subject}</h3><p><strong>Contradiction.</strong> {record.contradiction}</p><p><strong>Réponse CompatAir.</strong> {record.response ?? 'Aucun arbitrage publié à ce stade.'}</p>{product && href && <a href={href}>{product.brand} {product.model}</a>}</article>;
+			const productLabel = product && 'tankLiters' in product ? compressorDisplayName(product) : product?.label;
+			return <article><header><span>{record.status === 'answered' ? 'Réponse publiée' : 'Ouverte'}</span><time datetime={record.observedAt}>Constatée le {formatDate(record.observedAt)}</time></header><h3>{record.subject}</h3><p><strong>Contradiction.</strong> {record.contradiction}</p><p><strong>Réponse CompatAir.</strong> {record.response ?? 'Aucun arbitrage publié à ce stade.'}</p>{productLabel && href && <a href={href}>{productLabel}</a>}</article>;
 		})}</div>
 	</div></section>
 
