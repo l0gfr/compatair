@@ -105,9 +105,10 @@
 	const usageLabels = { occasional: 'Occasionnel', intermittent: 'Intermittent', sustained: 'Soutenu', mixed: 'Mixte' } as const;
 	const fittingLabels = { unknown: 'Non renseigné', 'euro-7.2': 'Euro 7,2 mm', 'iso-6150-b': 'ISO 6150-B', other: 'Autre standard' } as const;
 	const filtrationLabels = { unknown: 'Non renseigné', none: 'Aucune déclarée', particle: 'Filtration particulaire', 'water-separator': 'Séparateur d’eau', coalescing: 'Filtration coalescente', dryer: 'Sécheur' } as const;
-	let currentCatalogPromise: Promise<typeof import('../data/catalog')> | undefined;
+	type RuntimeCatalog = import('../domain/runtime-catalog').RuntimeCatalog;
+	let currentCatalogPromise: Promise<RuntimeCatalog> | undefined;
 	function loadCurrentCatalog() {
-		currentCatalogPromise ??= import('../data/catalog');
+		currentCatalogPromise ??= import('../domain/runtime-catalog').then(({ loadRuntimeCatalog }) => loadRuntimeCatalog());
 		return currentCatalogPromise;
 	}
 
@@ -225,8 +226,8 @@
 						currentButton.disabled = true;
 						setText('[data-version-note]', 'Chargement du catalogue actuel et recalcul local…');
 						try {
-							const { CATALOG_VERIFIED_AT, compressors, tools } = await loadCurrentCatalog();
-							const current = await createPassportReport(envelope.configuration, compressors, tools, CATALOG_VERIFIED_AT);
+							const { catalogVerifiedAt, compressors, tools } = await loadCurrentCatalog();
+							const current = await createPassportReport(envelope.configuration, compressors, tools, catalogVerifiedAt);
 							renderPassport(current, currentUrl);
 							setText('[data-version-note]', `Simulation actuelle, catalogue ${current.catalogVerifiedAt}. L’URL originale n’est pas modifiée.`);
 							currentButton.disabled = false;
@@ -238,8 +239,8 @@
 					};
 				}
 			} else {
-				const { CATALOG_VERIFIED_AT, compressors, tools } = await loadCurrentCatalog();
-				const current = await createPassportReport(legacyConfiguration, compressors, tools, CATALOG_VERIFIED_AT);
+				const { catalogVerifiedAt, compressors, tools } = await loadCurrentCatalog();
+				const current = await createPassportReport(legacyConfiguration, compressors, tools, catalogVerifiedAt);
 				renderPassport(current, currentUrl);
 				const choice = query<HTMLElement>('[data-version-choice]');
 				if (choice) choice.hidden = false;

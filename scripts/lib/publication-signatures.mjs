@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { basename, resolve } from 'node:path';
 
 export const SIGNATURE_SCHEMA_VERSION = '1.0.0';
-export const SIGNED_DATA_FILES = ['catalog.json', 'offers.json', 'verdicts.json', 'evidence-history.json', 'transparency-barometer.json'];
+export const SIGNED_DATA_FILES = ['catalog.json', 'runtime-catalog.json', 'offers.json', 'verdicts.json', 'evidence-history.json', 'transparency-barometer.json'];
 
 export function sha256(bytes) { return createHash('sha256').update(bytes).digest('hex'); }
 

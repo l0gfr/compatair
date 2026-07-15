@@ -100,6 +100,10 @@ export const passportEnvelopeSchema = z.object({
 
 export type PassportEnvelope = z.infer<typeof passportEnvelopeSchema>;
 
+type PassportCatalogEvidence = Pick<Compressor['evidence'][number], 'id' | 'sourceUrl' | 'sourceLabel' | 'retrievedAt' | 'confidence'>;
+type PassportCompressor = Pick<Compressor, 'id' | 'brand' | 'model' | 'maxPressureBar' | 'fadCurve' | 'tankLiters' | 'dutyCycle'> & { evidence: PassportCatalogEvidence[] };
+type PassportTool = Pick<ToolProfile, 'id' | 'brand' | 'model' | 'label' | 'connectorSize' | 'filtrationRequirement'> & { evidence: PassportCatalogEvidence[] };
+
 function encodeUrlPayload(value: unknown) {
 	const bytes = new TextEncoder().encode(JSON.stringify(value));
 	let binary = '';
@@ -165,7 +169,7 @@ function inputSnapshotFromReport(report: PassportReport) {
 	};
 }
 
-export async function createPassportEnvelope(input: unknown, compressors: Compressor[], tools: ToolProfile[], catalogVersion: string, createdAt = new Date().toISOString()) {
+export async function createPassportEnvelope(input: unknown, compressors: PassportCompressor[], tools: PassportTool[], catalogVersion: string, createdAt = new Date().toISOString()) {
 	const report = await createPassportReport(input, compressors, tools, catalogVersion, createdAt);
 	const inputSnapshot = inputSnapshotFromReport(report);
 	const evidenceFingerprints = await Promise.all(report.sources.map(async (source) => ({ id: `${source.productId}:${source.id}`, fingerprint: await sha256(source) })));
@@ -193,7 +197,7 @@ export function passportVerdictLabel(result: SizingResult) {
 	return 'Données insuffisantes';
 }
 
-export async function createPassportReport(input: unknown, compressors: Compressor[], tools: ToolProfile[], catalogVerifiedAt: string, generatedAt = new Date().toISOString()): Promise<PassportReport> {
+export async function createPassportReport(input: unknown, compressors: PassportCompressor[], tools: PassportTool[], catalogVerifiedAt: string, generatedAt = new Date().toISOString()): Promise<PassportReport> {
 	const configuration = parsePassportConfiguration(input, new Set(compressors.map((item) => item.id)), new Set(tools.map((item) => item.id)));
 	const base = sizeConfiguration(configuration);
 	const selected = compressors.find((item) => item.id === configuration.selectedCompressor);

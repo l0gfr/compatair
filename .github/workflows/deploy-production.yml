@@ -226,6 +226,7 @@ jobs:
           curl "${curl_args[@]}" https://compatair.fr/professionnels/ | grep -Fq 'id="merchant-widget-demo"'
           curl "${curl_args[@]}" https://compatair.fr/widget/v1.0.0/compatair-widget.js | grep -Fq 'CompatAir widget API v1'
           curl "${curl_args[@]}" https://compatair.fr/data/catalog.json | grep -Fq 'catalogVersion'
+          curl "${curl_args[@]}" https://compatair.fr/data/runtime-catalog.json | grep -Fq 'catalogVersion'
           curl "${curl_args[@]}" https://compatair.fr/data/verdicts.json | grep -Fq 'verdictVersion'
           curl "${curl_args[@]}" https://compatair.fr/data/signatures.json | grep -Fq 'compatair-2026-01'
           curl "${curl_args[@]}" https://compatair.fr/data/signing-keys.json | grep -Fq 'Ed25519'

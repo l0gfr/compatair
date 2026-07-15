@@ -45,7 +45,7 @@ Le workflow quotidien compare ce snapshot à la production et conserve le rappor
 
 ## Signature des publications
 
-Le déploiement de production signe octet pour octet, avec Ed25519, les cinq publications JSON : catalogue, offres, verdicts, historique des preuves et baromètre. Le manifeste détaché est publié sous `/data/signatures.json`; le registre des clés publiques est disponible sous `/data/signing-keys.json`.
+Le déploiement de production signe octet pour octet, avec Ed25519, les six publications JSON : catalogue complet, catalogue d’exécution allégé, offres, verdicts, historique des preuves et baromètre. Le manifeste détaché est publié sous `/data/signatures.json`; le registre des clés publiques est disponible sous `/data/signing-keys.json`.
 
 La clé privée n’existe pas dans Git. Le workflow échoue si le secret GitHub `COMPATAIR_PUBLICATION_SIGNING_KEY` est absent ou si la clé ne correspond pas à l’empreinte publique enregistrée. La vérification locale d’un artifact signé s’effectue avec `pnpm data:verify-signatures`. Une rotation ajoute d’abord une nouvelle clé publique au registre ; une clé déjà utilisée ne doit pas être retirée, afin de préserver la vérification des publications archivées.
 

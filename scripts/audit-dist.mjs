@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { lstat, readdir, readFile } from 'node:fs/promises';
 import { basename, join, relative, resolve } from 'node:path';
 import { gzipSync } from 'node:zlib';
+import { parseJavaScriptModuleSpecifiers } from './lib/javascript-module-graph.mjs';
 
 const root = resolve('dist');
 const siteOrigin = 'https://compatair.fr';
@@ -12,6 +13,7 @@ const maximumDocumentTitleLength = 60;
 const maximumInitialPageScriptBytesGzip = 50 * 1024;
 const maximumPassportInitialScriptBytesGzip = 45 * 1024;
 const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
+const maximumRuntimeCatalogBytesGzip = 32 * 1024;
 // Les pages produits réutilisent des cartes de catalogue afin que le temps de build ne croisse pas avec chaque référence.
 const maximumSocialImageCount = 80;
 const forbiddenPublicWording = [
@@ -34,7 +36,13 @@ const glossaryLinkRequirements = new Map([
 ]);
 let largestInitialPageScriptBudget = { bytes: 0, label: '', modules: 0 };
 let largestOnDemandPageScriptBudget = { bytes: 0, label: '', modules: 0 };
+let calculatorOnDemandScriptBudget = { bytes: 0, modules: 0 };
 let passportInitialScriptBudget = { bytes: 0, modules: 0 };
+let passportOnDemandScriptBudget = { bytes: 0, modules: 0 };
+let runtimeCatalogBytesGzip = 0;
+let fixedFlowCompatibilityPairs = 0;
+let conclusiveCompatibilityPairs = 0;
+let publishedCatalogVersion = '';
 const immutableAssetManifest = JSON.parse(await readFile(resolve('config/immutable-assets.json'), 'utf8'));
 
 async function walk(directory) {
@@ -83,12 +91,15 @@ async function scriptClosure(entryPaths, includeDynamicImports) {
 		modules.add(scriptPath);
 		if (!artifactPaths.has(scriptPath)) { errors.push(`${scriptPath}: module JavaScript introuvable`); return; }
 		const source = await readFile(join(root, scriptPath), 'utf8');
-		const imports = source.matchAll(/\b(?:import|export)[^\"'()]*?\bfrom\s*[\"']([^\"']+\.js(?:\?[^\"']*)?)[\"']|\bimport\s*\(\s*[\"']([^\"']+\.js(?:\?[^\"']*)?)[\"']/g);
-		for (const match of imports) {
-			if (!includeDynamicImports && match[2]) continue;
-			const specifier = match[1] ?? match[2];
+		let imports;
+		try { imports = parseJavaScriptModuleSpecifiers(source, scriptPath); }
+		catch (error) { errors.push(error instanceof Error ? error.message : `${scriptPath}: JavaScript impossible à analyser`); return; }
+		if (imports.unresolvedDynamicImports) errors.push(`${scriptPath}: ${imports.unresolvedDynamicImports} import(s) dynamique(s) non résoluble(s), graphe impossible à budgéter`);
+		const specifiers = includeDynamicImports ? [...imports.staticImports, ...imports.dynamicImports] : imports.staticImports;
+		for (const specifier of specifiers) {
 			const imported = new URL(specifier, new URL(scriptPath, siteOrigin));
 			if (imported.origin !== siteOrigin) { errors.push(`${scriptPath}: import JavaScript externe non budgété ${specifier}`); continue; }
+			if (!imported.pathname.endsWith('.js')) { errors.push(`${scriptPath}: import non JavaScript impossible à budgéter ${specifier}`); continue; }
 			await visit(imported.pathname);
 		}
 	}
@@ -143,7 +154,10 @@ let verifiedCompatibilityPairs = 0;
 if (!artifactPaths.has('/data/catalog.json') || !artifactPaths.has('/data/verdicts.json')) errors.push('data: catalogue ou verdicts absents pour contrôler les URL de compatibilité');
 else {
 	const catalog = JSON.parse(await readFile(join(root, '/data/catalog.json'), 'utf8'));
+	publishedCatalogVersion = catalog.catalogVersion ?? '';
 	const verdicts = JSON.parse(await readFile(join(root, '/data/verdicts.json'), 'utf8'));
+	fixedFlowCompatibilityPairs = verdicts.pairs?.length ?? 0;
+	conclusiveCompatibilityPairs = (verdicts.pairs ?? []).filter((item) => item.verdict !== 'insufficient_data').length;
 	const verdictMap = new Map((verdicts.pairs ?? []).map((item) => [`${item.compressorId}--${item.toolId}`, item]));
 	for (const compressor of catalog.compressors ?? []) for (const tool of catalog.tools ?? []) {
 		const pair = verdictMap.get(`${compressor.id}--${tool.id}`);
@@ -153,6 +167,28 @@ else {
 		if (verdict !== 'insufficient_data' && !sitePaths.has(detailsPath)) errors.push(`verdicts: page de détail absente ${detailsPath}`);
 		if (verdict === 'insufficient_data' && sitePaths.has(detailsPath)) errors.push(`verdicts: page de détail indue pour données insuffisantes ${detailsPath}`);
 		verifiedCompatibilityPairs += 1;
+	}
+}
+
+if (!artifactPaths.has('/data/runtime-catalog.json')) errors.push('data: catalogue d’exécution absent');
+else {
+	const runtimeCatalogBytes = await readFile(join(root, '/data/runtime-catalog.json'));
+	const runtimeCatalog = JSON.parse(runtimeCatalogBytes);
+	runtimeCatalogBytesGzip = gzipSync(runtimeCatalogBytes).byteLength;
+	if (!publishedCatalogVersion || runtimeCatalog.catalogVersion !== publishedCatalogVersion) errors.push('data/runtime-catalog.json: version source différente du catalogue public');
+	if (runtimeCatalogBytesGzip > maximumRuntimeCatalogBytesGzip) errors.push(`data/runtime-catalog.json: ${Math.ceil(runtimeCatalogBytesGzip / 1024)} Ko gzip, budget ${maximumRuntimeCatalogBytesGzip / 1024} Ko dépassé`);
+}
+
+if (!artifactPaths.has('/data/transparency-barometer.json') || !artifactPaths.has('/barometre-transparence/index.html')) errors.push('baromètre: snapshot ou page rendue absent');
+else {
+	const snapshot = JSON.parse(await readFile(join(root, '/data/transparency-barometer.json'), 'utf8'));
+	const html = await readFile(join(root, '/barometre-transparence/index.html'), 'utf8');
+	const unpublishedMessage = 'Classement non publié à ce stade';
+	if (snapshot.rankingPublished && html.includes(unpublishedMessage)) errors.push('baromètre: le rendu affirme que le classement n’est pas publié alors que le snapshot publie des rangs officiels');
+	if (!snapshot.rankingPublished && !html.includes(unpublishedMessage)) errors.push('baromètre: l’avertissement de classement non publié manque alors que le snapshot est provisoire');
+	for (const brand of snapshot.brands ?? []) {
+		if (brand.status === 'official' && !html.includes(`<span class="barometer-rank">#${brand.rank}</span>`)) errors.push(`baromètre: rang officiel rendu absent pour ${brand.brand}`);
+		if (brand.status !== 'official' && !html.includes(`<span class="barometer-rank">Provisoire</span>`)) errors.push(`baromètre: statut provisoire rendu absent pour ${brand.brand}`);
 	}
 }
 
@@ -256,7 +292,9 @@ for (const file of htmlFiles) {
 	const onDemandScriptBudget = await scriptClosure(pageScripts, true);
 	if (initialScriptBudget.bytes > largestInitialPageScriptBudget.bytes) largestInitialPageScriptBudget = { bytes: initialScriptBudget.bytes, label, modules: initialScriptBudget.modules };
 	if (onDemandScriptBudget.bytes > largestOnDemandPageScriptBudget.bytes) largestOnDemandPageScriptBudget = { bytes: onDemandScriptBudget.bytes, label, modules: onDemandScriptBudget.modules };
+	if (label === 'calculateur/index.html') calculatorOnDemandScriptBudget = onDemandScriptBudget;
 	if (label === 'passeport/index.html') passportInitialScriptBudget = initialScriptBudget;
+	if (label === 'passeport/index.html') passportOnDemandScriptBudget = onDemandScriptBudget;
 	if (initialScriptBudget.bytes > maximumInitialPageScriptBytesGzip) errors.push(`${label}: chargement JavaScript initial ${Math.ceil(initialScriptBudget.bytes / 1024)} Ko gzip sur ${initialScriptBudget.modules} modules, budget ${maximumInitialPageScriptBytesGzip / 1024} Ko dépassé`);
 	if (label === 'passeport/index.html' && initialScriptBudget.bytes > maximumPassportInitialScriptBytesGzip) errors.push(`${label}: chargement JavaScript initial ${Math.ceil(initialScriptBudget.bytes / 1024)} Ko gzip, budget Passeport ${maximumPassportInitialScriptBytesGzip / 1024} Ko dépassé`);
 	if (onDemandScriptBudget.bytes > maximumOnDemandPageScriptBytesGzip) errors.push(`${label}: graphe JavaScript total à la demande ${Math.ceil(onDemandScriptBudget.bytes / 1024)} Ko gzip sur ${onDemandScriptBudget.modules} modules, budget ${maximumOnDemandPageScriptBytesGzip / 1024} Ko dépassé`);
@@ -272,4 +310,5 @@ if (errors.length) {
 	console.error(errors.join('\n'));
 	process.exit(1);
 }
-console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, ${verifiedCompatibilityPairs} couples sans URL de détail invalide, ${socialImageCount} cartes sociales et titres ≤ ${maximumDocumentTitleLength} caractères. JavaScript initial ≤ ${maximumInitialPageScriptBytesGzip / 1024} Ko gzip (maximum ${Math.ceil(largestInitialPageScriptBudget.bytes / 1024)} Ko sur ${largestInitialPageScriptBudget.label}, Passeport ${Math.ceil(passportInitialScriptBudget.bytes / 1024)} Ko sous son budget de ${maximumPassportInitialScriptBytesGzip / 1024} Ko) ; total à la demande ≤ ${maximumOnDemandPageScriptBytesGzip / 1024} Ko (maximum ${Math.ceil(largestOnDemandPageScriptBudget.bytes / 1024)} Ko sur ${largestOnDemandPageScriptBudget.label}). Widget immuable et SRI vérifiés.`);
+const conclusiveCoverage = fixedFlowCompatibilityPairs ? (conclusiveCompatibilityPairs / fixedFlowCompatibilityPairs * 100).toFixed(1).replace('.', ',') : '0,0';
+console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, ${verifiedCompatibilityPairs} couples sans URL de détail invalide, couverture conclusive ${conclusiveCoverage} % (${conclusiveCompatibilityPairs}/${fixedFlowCompatibilityPairs} couples à débit fixe), ${socialImageCount} cartes sociales et titres ≤ ${maximumDocumentTitleLength} caractères. JavaScript initial ≤ ${maximumInitialPageScriptBytesGzip / 1024} Ko gzip (maximum ${Math.ceil(largestInitialPageScriptBudget.bytes / 1024)} Ko sur ${largestInitialPageScriptBudget.label}, Passeport ${Math.ceil(passportInitialScriptBudget.bytes / 1024)} Ko sous son budget de ${maximumPassportInitialScriptBytesGzip / 1024} Ko) ; total à la demande ≤ ${maximumOnDemandPageScriptBytesGzip / 1024} Ko (Calculateur ${Math.ceil(calculatorOnDemandScriptBudget.bytes / 1024)} Ko, Passeport ${Math.ceil(passportOnDemandScriptBudget.bytes / 1024)} Ko, maximum global ${Math.ceil(largestOnDemandPageScriptBudget.bytes / 1024)} Ko sur ${largestOnDemandPageScriptBudget.label}) ; catalogue d’exécution ${Math.ceil(runtimeCatalogBytesGzip / 1024)} Ko sous son budget de ${maximumRuntimeCatalogBytesGzip / 1024} Ko. Widget immuable et SRI vérifiés.`);

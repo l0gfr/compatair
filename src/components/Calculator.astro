@@ -96,8 +96,8 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 </template>
 
 <script>
-	type Compressor = import('../domain/catalog').Compressor;
-	type ToolProfile = import('../domain/catalog').ToolProfile;
+	type Compressor = import('../domain/runtime-catalog').RuntimeCompressor;
+	type ToolProfile = import('../domain/runtime-catalog').RuntimeToolProfile;
 	type PassportConfiguration = import('../domain/passport').PassportConfiguration;
 	type SizingResult = import('../domain/sizing').SizingResult;
 	let CATALOG_VERIFIED_AT = '';
@@ -115,12 +115,12 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 
 	function loadCalculatorRuntime() {
 		runtimePromise ??= Promise.all([
-			import('../data/catalog'),
+			import('../domain/runtime-catalog').then(({ loadRuntimeCatalog }) => loadRuntimeCatalog()),
 			import('../domain/compatibility'),
 			import('../domain/passport'),
 			import('../domain/sizing'),
 		]).then(([catalog, compatibility, passport, sizing]) => {
-			CATALOG_VERIFIED_AT = catalog.CATALOG_VERIFIED_AT;
+			CATALOG_VERIFIED_AT = catalog.catalogVerifiedAt;
 			CALCULATION_VERSION = sizing.CALCULATION_VERSION;
 			compressors = catalog.compressors;
 			tools = catalog.tools;

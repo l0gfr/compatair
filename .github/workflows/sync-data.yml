@@ -60,6 +60,7 @@ jobs:
           name: compatair-data-${{ github.run_id }}
           path: |
             dist/data/catalog.json
+            dist/data/runtime-catalog.json
             dist/data/offers.json
             dist/data/verdicts.json
             dist/data/evidence-history.json

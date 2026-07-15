@@ -15,7 +15,7 @@ export type CompatibilityResult = {
 	calculationVersion: typeof CALCULATION_VERSION;
 };
 
-export function interpolateFad(compressor: Compressor, pressureBar: number): number | undefined {
+export function interpolateFad(compressor: Pick<Compressor, 'fadCurve'>, pressureBar: number): number | undefined {
 	const curve = [...compressor.fadCurve].sort((a, b) => a.pressureBar - b.pressureBar);
 	if (curve.length === 0) return undefined;
 	if (curve.length === 1) {
