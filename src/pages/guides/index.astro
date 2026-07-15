@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import MetierIcon from '../../components/MetierIcon.astro';
 import { guideAudienceIds, guideAudiences, guideMetierIds, guideMetiers } from '../../domain/editorial-taxonomy';
-import { glossaryTerms } from '../../data/glossary';
 
 const guides = (await getCollection('guides')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const pillars = guides.filter((guide) => guide.data.featured).sort((a, b) => b.data.readingTime - a.data.readingTime);
@@ -27,7 +26,6 @@ const guideListJsonLd = {
 			<div class="editorial-path-grid">{guideMetierIds.map((metier) => <a href={`/guides/metiers/${metier}/`}><MetierIcon metier={metier} /><span>Métier · {guides.filter((guide) => guide.data.metiers.includes(metier)).length} guides</span><strong>{guideMetiers[metier].label}</strong><small>{guideMetiers[metier].description}</small></a>)}</div>
 		</div>
 	</section>
-	<section class="section glossary-gateway"><div class="container glossary-banner"><div><p class="eyebrow">Définitions simples</p><h2>Un mot technique ne doit jamais rester inexpliqué</h2><p>Le <a href="/glossaire/#fad">débit réellement restitué, ou FAD</a>, la pression, l’humidité et les pertes dans les tuyaux sont définis dans le glossaire, puis reliés aux guides qui les utilisent.</p></div><div class="metric light"><strong>{glossaryTerms.length}</strong><span>termes expliqués et reliés</span><a class="button primary" href="/glossaire/">Consulter les définitions</a></div></div></section>
 	<section class="section pillar-section">
 		<div class="container">
 			<div class="section-head split-head"><div><p class="eyebrow">Guides complets</p><h2>Du besoin réel à l’installation</h2></div><p>{pillars.length} guides pour choisir, comparer, installer et entretenir sans remplacer une donnée manquante par une supposition.</p></div>
