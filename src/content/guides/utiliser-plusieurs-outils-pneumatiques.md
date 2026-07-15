@@ -3,6 +3,8 @@ title: "Utiliser plusieurs outils pneumatiques : quels débits additionner ?"
 description: "Additionnez uniquement les consommations réellement simultanées et comparez leur somme au débit restitué à une pression commune."
 pubDate: 2026-07-13
 category: "Utiliser"
+audiences: [professionnel]
+metiers: [garage-automobile, carrosserie-peinture, menuiserie-agencement, maintenance-industrielle]
 readingTime: 6
 featured: false
 sources:

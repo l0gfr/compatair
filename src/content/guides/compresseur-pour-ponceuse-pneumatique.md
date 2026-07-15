@@ -3,6 +3,8 @@ title: "Quel compresseur pour une ponceuse pneumatique ?"
 description: "Une ponceuse exige un débit durable, pas seulement une grande cuve. Dimensionnez le FAD, le cycle de service et le flexible à partir d’un cas vérifié."
 pubDate: 2026-07-13
 category: Choisir
+audiences: [particulier, professionnel]
+metiers: [carrosserie-peinture, menuiserie-agencement]
 readingTime: 7
 featured: true
 relatedCalculatorTool: einhell-tc-pe-150

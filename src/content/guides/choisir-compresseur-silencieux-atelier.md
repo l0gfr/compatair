@@ -3,6 +3,8 @@ title: "Choisir un compresseur silencieux pour l’atelier sans sacrifier le dé
 description: "Méthode factuelle pour comparer le bruit et le débit restitué de compresseurs silencieux, sans confondre nom commercial, LpA et LwA."
 pubDate: 2026-07-14
 category: "Choisir"
+audiences: [particulier, professionnel]
+metiers: [maintenance-industrielle]
 readingTime: 7
 featured: true
 sources:

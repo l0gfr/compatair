@@ -3,6 +3,8 @@ title: "Installer un réseau d’air comprimé dans un atelier : pression, diam�
 description: "Concevoir le trajet entre compresseur et outils sans masquer les pertes : architecture, diamètre intérieur, boucle, filtration, purge et points de contrôle."
 pubDate: 2026-07-13
 category: "Installer"
+audiences: [professionnel]
+metiers: [garage-automobile, carrosserie-peinture, menuiserie-agencement, maintenance-industrielle]
 readingTime: 13
 featured: true
 sources:

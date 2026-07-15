@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import GuideCard from '../../components/GuideCard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { guideAudiences } from '../../domain/editorial-taxonomy';
+
+const audience = 'particulier' as const;
+const definition = guideAudiences[audience];
+const guides = (await getCollection('guides', ({ data }) => data.audiences.includes(audience)))
+	.sort((a, b) => Number(b.data.featured) - Number(a.data.featured) || b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const itemListJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'ItemList',
+	name: definition.title,
+	itemListElement: guides.map((guide, index) => ({ '@type': 'ListItem', position: index + 1, name: guide.data.title, url: `https://compatair.fr/guides/${guide.id}/` })),
+};
+---
+
+<BaseLayout title={definition.title} editorialTitle={definition.seoTitle} description={definition.description} imagePath="/social/guides.png" breadcrumbs={[{ name: 'Guides', path: '/guides/' }, { name: definition.label, path: '/guides/particuliers/' }]}>
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(itemListJsonLd)} />
+	<section class="page-hero compact audience-hero" data-editorial-hub="particulier"><div class="container"><p class="eyebrow">Parcours par besoin</p><h1>{definition.title}</h1><p class="lead">{definition.description}</p><div class="actions"><a class="button primary" href="/calculateur/">Vérifier un outil</a><a class="button" href="/guides/professionnels/">Voir le parcours professionnel</a></div></div></section>
+	<section class="section"><div class="container"><div class="section-head split-head"><div><p class="eyebrow">Sélection éditoriale</p><h2>{guides.length} guides classés pour ce parcours</h2></div><p>Un même guide peut servir aux particuliers et aux professionnels. Le contenu reste publié à une seule adresse et ses sources ne changent pas selon le parcours.</p></div><div class="guide-grid">{guides.map((guide) => <GuideCard guide={guide} />)}</div></div></section>
+</BaseLayout>

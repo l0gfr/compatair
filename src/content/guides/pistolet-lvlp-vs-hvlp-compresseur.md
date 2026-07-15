@@ -3,6 +3,8 @@ title: "Pistolet LVLP ou HVLP : quel besoin d’air demander au compresseur ?"
 description: "Comparaison documentée de deux pistolets à peinture LVLP et HVLP : débit, pression, raccord et limites d’un choix fondé sur la seule technologie."
 pubDate: 2026-07-14
 category: "Choisir"
+audiences: [particulier, professionnel]
+metiers: [carrosserie-peinture, menuiserie-agencement]
 readingTime: 7
 featured: true
 sources:

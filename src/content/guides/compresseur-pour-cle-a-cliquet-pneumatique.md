@@ -3,6 +3,8 @@ title: "Quel compresseur pour une clé à cliquet pneumatique ?"
 description: "Débit, pression, cuve et marge : méthode sourcée pour alimenter une clé à cliquet pneumatique, avec l’exemple Metabo DRS 68 à 220 L/min."
 pubDate: 2026-07-14
 category: "Choisir"
+audiences: [particulier, professionnel]
+metiers: [garage-automobile]
 readingTime: 7
 featured: false
 relatedCalculatorTool: metabo-drs-68-set

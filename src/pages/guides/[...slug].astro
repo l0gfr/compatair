@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { compressors, tools } from '../../data/catalog';
 import { evaluateCompatibility } from '../../domain/compatibility';
+import { guideAudiences, guideMetiers } from '../../domain/editorial-taxonomy';
 
 export async function getStaticPaths() {
 	const guides = await getCollection('guides');
@@ -12,7 +13,18 @@ export async function getStaticPaths() {
 const { guide } = Astro.props;
 const { Content, headings } = await render(guide);
 const allGuides = await getCollection('guides');
-const relatedGuides = allGuides.filter((item) => item.id !== guide.id && item.data.category === guide.data.category).slice(0, 3);
+const relatedGuides = allGuides
+	.filter((item) => item.id !== guide.id)
+	.map((item) => ({
+		item,
+		score: item.data.metiers.filter((metier) => guide.data.metiers.includes(metier)).length * 4
+			+ item.data.audiences.filter((audience) => guide.data.audiences.includes(audience)).length
+			+ Number(item.data.category === guide.data.category),
+	}))
+	.filter(({ score }) => score > 0)
+	.sort((a, b) => b.score - a.score || b.item.data.pubDate.valueOf() - a.item.data.pubDate.valueOf())
+	.slice(0, 3)
+	.map(({ item }) => item);
 const relatedTool = guide.data.relatedCalculatorTool
 	? tools.find((tool) => tool.id === guide.data.relatedCalculatorTool)
 	: undefined;
@@ -39,7 +51,11 @@ const articleJsonLd = {
 	timeRequired: `PT${guide.data.readingTime}M`,
 	isAccessibleForFree: true,
 	citation: guide.data.sources,
-	about: relatedTool ? { '@type': 'Product', name: relatedTool.label, url: `https://compatair.fr/outils-pneumatiques/${relatedTool.slug}/` } : undefined,
+	audience: guide.data.audiences.map((audience) => ({ '@type': 'Audience', audienceType: guideAudiences[audience].label })),
+	about: [
+		...guide.data.metiers.map((metier) => ({ '@type': 'Thing', name: guideMetiers[metier].label, url: `https://compatair.fr/guides/metiers/${metier}/` })),
+		...(relatedTool ? [{ '@type': 'Product', name: relatedTool.label, url: `https://compatair.fr/outils-pneumatiques/${relatedTool.slug}/` }] : []),
+	],
 	author: { '@type': 'Organization', '@id': 'https://compatair.fr/#organization', name: 'CompatAir', url: 'https://compatair.fr/' },
 	reviewedBy: externallyReviewed ? { '@type': 'Person', name: guide.data.reviewer, jobTitle: guide.data.reviewerRole } : undefined,
 	publisher: { '@type': 'Organization', '@id': 'https://compatair.fr/#organization', name: 'CompatAir', url: 'https://compatair.fr/' },
@@ -48,6 +64,7 @@ const articleJsonLd = {
 
 <BaseLayout
 	title={`${guide.data.title} | CompatAir`}
+	editorialTitle={guide.data.seoTitle}
 	description={guide.data.description}
 	pageType="article"
 	issueDate={guide.data.pubDate}
@@ -55,10 +72,10 @@ const articleJsonLd = {
 	breadcrumbs={[{ name: 'Guides', path: '/guides/' }, { name: guide.data.title, path: `/guides/${guide.id}/` }]}
 >
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
-	<article class="container editorial-layout">
+	<article class="container editorial-layout" data-guide-audiences={guide.data.audiences.join(' ')} data-guide-metiers={guide.data.metiers.join(' ')}>
 		<div class="editorial-main">
 			<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/guides/">Guides</a><span>/</span><span>{guide.data.category}</span></nav>
-			<header class="article-head"><p class="eyebrow">{guide.data.category}</p><h1>{guide.data.title}</h1><p class="lead">{guide.data.description}</p><p class="article-byline" data-review-status={guide.data.reviewStatus}>Publié le {published} · Lecture {guide.data.readingTime} minutes · Rédaction {guide.data.author} · {externallyReviewed ? <>Revue technique par {guide.data.reviewer}, {guide.data.reviewerRole}</> : <>Relecture éditoriale interne, sans validation professionnelle externe</>}</p></header>
+			<header class="article-head"><p class="eyebrow">{guide.data.category}</p><div class="article-taxonomy" aria-label="Publics et métiers">{guide.data.audiences.map((audience) => <a href={`/guides/${guideAudiences[audience].label.toLocaleLowerCase('fr-FR')}/`}>{guideAudiences[audience].label}</a>)}{guide.data.metiers.map((metier) => <a href={`/guides/metiers/${metier}/`}>{guideMetiers[metier].label}</a>)}</div><h1>{guide.data.title}</h1><p class="lead">{guide.data.description}</p><p class="article-byline" data-review-status={guide.data.reviewStatus}>Publié le {published} · Lecture {guide.data.readingTime} minutes · Rédaction {guide.data.author} · {externallyReviewed ? <>Revue technique par {guide.data.reviewer}, {guide.data.reviewerRole}</> : <>Relecture éditoriale interne, sans validation professionnelle externe</>}</p></header>
 			<div class="article-body"><Content /></div>
 			<section class="guide-next-step" aria-labelledby="guide-next-step-title">
 				<p class="eyebrow">Vérifier sur des données réelles</p>

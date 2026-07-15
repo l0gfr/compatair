@@ -3,6 +3,8 @@ title: "Cuve de 24, 50 ou 90 litres : ce que le volume change vraiment"
 description: "Une grande cuve absorbe les pointes et espace les démarrages, mais elle ne crée pas de débit. Comparez 24, 50 et 90 litres sans raccourci."
 pubDate: 2026-07-13
 category: Choisir
+audiences: [particulier, professionnel]
+metiers: []
 readingTime: 7
 featured: true
 sources:

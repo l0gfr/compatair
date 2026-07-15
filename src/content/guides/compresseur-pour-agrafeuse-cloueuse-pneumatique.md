@@ -3,12 +3,14 @@ title: "Quel compresseur pour une agrafeuse-cloueuse pneumatique ?"
 description: "Calcul du débit moyen à partir du volume d’air par tir et de la cadence, avec les limites à connaître pour dimensionner une agrafeuse pneumatique."
 pubDate: 2026-07-13
 category: "Choisir"
+audiences: [particulier, professionnel]
+metiers: [menuiserie-agencement]
 readingTime: 8
 featured: false
 relatedCalculatorTool: einhell-tc-pn-50
 sources:
   - https://www.einhell.fr/p/4137790-tc-pn-50/
-  - https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_698oi8nul919b1objb9nq34k5m/4137790_11018_001_SPK9.pdf
+  - https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ngovue839t5o7dugodnovh8q57/4137790_11018_001_SPK2.pdf
 ---
 
 Une agrafeuse-cloueuse peut être documentée en litres par tir plutôt qu’en litres par minute. Dans ce cas, la cadence doit rester une entrée explicite. Elle ne peut pas être devinée à partir du nom de l’outil.
@@ -49,4 +51,4 @@ Si vous ne connaissez pas encore la cadence, chronométrez une séquence représ
 ## Sources
 
 - [Einhell, fiche officielle TC-PN 50](https://www.einhell.fr/p/4137790-tc-pn-50/)
-- [Einhell, notice TC-PN 50](https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_698oi8nul919b1objb9nq34k5m/4137790_11018_001_SPK9.pdf)
+- [Einhell, notice TC-PN 50](https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ngovue839t5o7dugodnovh8q57/4137790_11018_001_SPK2.pdf)

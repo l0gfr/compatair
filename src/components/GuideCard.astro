@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { guideAudiences, guideMetiers } from '../domain/editorial-taxonomy';
+
+type Props = {
+	guide: CollectionEntry<'guides'>;
+	headingLevel?: 2 | 3;
+};
+
+const { guide, headingLevel = 2 } = Astro.props;
+const Heading = `h${headingLevel}` as 'h2' | 'h3';
+const labels = [
+	...guide.data.audiences.map((audience) => guideAudiences[audience].label),
+	...guide.data.metiers.map((metier) => guideMetiers[metier].label),
+];
+---
+
+<article class="guide-card" data-guide-audiences={guide.data.audiences.join(' ')} data-guide-metiers={guide.data.metiers.join(' ')}>
+	<p class="guide-meta">{guide.data.category} · {guide.data.readingTime} min</p>
+	<Heading><a href={`/guides/${guide.id}/`}>{guide.data.title}</a></Heading>
+	<p>{guide.data.description}</p>
+	<p class="guide-taxonomy-labels" aria-label="Publics et métiers">{labels.join(' · ')}</p>
+	<a class="text-link" href={`/guides/${guide.id}/`}>Lire le guide</a>
+</article>

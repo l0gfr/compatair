@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { guideAudiences, guideMetiers } from '../domain/editorial-taxonomy';
 import { compressors, tools } from '../data/catalog';
 import { toolSearchText } from '../domain/tool-demand';
 import { glossaryTerms } from '../data/glossary';
@@ -8,7 +9,7 @@ const guides = await getCollection('guides');
 const items = [
 	...compressors.map((item) => ({ title: `${item.brand} ${item.model}`, type: 'Compresseur', url: `/compresseurs/${item.slug}/`, text: `${item.brand} ${item.model} ${item.tankLiters} litres ${item.maxPressureBar} bar ${item.mpn ?? ''}` })),
 	...tools.map((item) => ({ title: item.label, type: 'Outil pneumatique', url: `/outils-pneumatiques/${item.slug}/`, text: toolSearchText(item) })),
-	...guides.map((item) => ({ title: item.data.title, type: 'Guide', url: `/guides/${item.id}/`, text: `${item.data.title} ${item.data.description} ${item.data.category}` })),
+	...guides.map((item) => ({ title: item.data.title, type: 'Guide', url: `/guides/${item.id}/`, text: `${item.data.title} ${item.data.description} ${item.data.category} ${item.data.audiences.map((audience) => guideAudiences[audience].label).join(' ')} ${item.data.metiers.map((metier) => guideMetiers[metier].label).join(' ')}` })),
 	...glossaryTerms.map((item) => ({ title: item.term, type: 'Glossaire', url: `/glossaire/#${item.slug}`, text: `${item.term} ${item.definition}` })),
 ];
 ---

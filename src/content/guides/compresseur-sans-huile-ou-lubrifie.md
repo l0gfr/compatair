@@ -3,6 +3,8 @@ title: "Compresseur sans huile ou lubrifié : ce que cette mention permet de con
 description: "La lubrification décrit la technologie du groupe, pas son débit, son bruit ou sa compatibilité. Comparaison de références documentées."
 pubDate: 2026-07-13
 category: "Comprendre"
+audiences: [particulier, professionnel]
+metiers: []
 readingTime: 6
 featured: false
 sources:

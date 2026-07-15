@@ -4,6 +4,8 @@ description: "Comparer un pistolet HVLP au débit restitué du compresseur, avec
 pubDate: 2026-07-13
 updatedDate: 2026-07-14
 category: "Choisir"
+audiences: [particulier, professionnel]
+metiers: [carrosserie-peinture]
 readingTime: 8
 featured: false
 relatedCalculatorTool: abac-g-550f

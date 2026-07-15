@@ -3,6 +3,8 @@ title: "Quel compresseur pour gonfler des pneus ?"
 description: "Calculer un besoin moyen de gonflage à partir du volume, des pressions initiale et cible et du temps visé, sans inventer un volume de pneumatique."
 pubDate: 2026-07-13
 category: "Choisir"
+audiences: [particulier, professionnel]
+metiers: [garage-automobile]
 readingTime: 9
 featured: false
 relatedCalculatorTool: einhell-4137000-manometre

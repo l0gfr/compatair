@@ -3,6 +3,8 @@ title: "Fuites d’air comprimé : les détecter, les mesurer et suivre les rép
 description: "Une méthode sourcée pour distinguer une suspicion de fuite d’une mesure exploitable, localiser les défauts et vérifier les réparations du réseau."
 pubDate: 2026-07-13
 category: "Utiliser"
+audiences: [professionnel]
+metiers: [garage-automobile, carrosserie-peinture, menuiserie-agencement, maintenance-industrielle]
 readingTime: 12
 featured: false
 sources:

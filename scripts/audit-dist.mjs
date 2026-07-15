@@ -270,6 +270,19 @@ else {
 	if (!html.includes('/data/catalog.json') || !html.includes('/data/verdicts.json')) errors.push('graphe de preuve: snapshots publics non reliés');
 }
 
+const editorialHubs = new Map([
+	['/guides/particuliers/index.html', 'particulier'],
+	['/guides/professionnels/index.html', 'professionnel'],
+	['/guides/metiers/garage-automobile/index.html', 'garage-automobile'],
+	['/guides/metiers/carrosserie-peinture/index.html', 'carrosserie-peinture'],
+	['/guides/metiers/menuiserie-agencement/index.html', 'menuiserie-agencement'],
+	['/guides/metiers/maintenance-industrielle/index.html', 'maintenance-industrielle'],
+]);
+for (const [path, marker] of editorialHubs) {
+	if (!artifactPaths.has(path)) errors.push(`parcours éditorial: page rendue absente ${path}`);
+	else if (!(await readFile(join(root, path), 'utf8')).includes(`data-editorial-hub="${marker}"`)) errors.push(`parcours éditorial: marqueur absent ${path}`);
+}
+
 for (const file of htmlFiles) {
 	const html = await readFile(file, 'utf8');
 	const label = relative(root, file);
@@ -282,7 +295,7 @@ for (const file of htmlFiles) {
 	const titleSource = html.match(/<meta name="compatair:title-source" content="([^"]+)"/)?.[1];
 	const noindex = robots.split(',').map((rule) => rule.trim()).includes('noindex');
 	const isCompatibilityDetail = label.startsWith('compatibilite/');
-	const isGuideArticle = /^guides\/[^/]+\/index\.html$/.test(label);
+	const isGuideArticle = /^guides\/[^/]+\/index\.html$/.test(label) && !['guides/particuliers/index.html', 'guides/professionnels/index.html'].includes(label);
 	const isEditorialProductPage = /^(compresseurs|outils-pneumatiques|quel-compresseur-pour)\/[^/]+\/index\.html$/.test(label);
 	if (html.includes('data-search-index=')) errors.push(`${label}: index de recherche dupliqué dans le HTML`);
 	if (html.includes('href="/compatibilite/')) errors.push(`${label}: lien vers une page de couple statique interdite`);

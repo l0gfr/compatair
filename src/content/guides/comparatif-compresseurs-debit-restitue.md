@@ -4,6 +4,8 @@ description: "Comparez les compresseurs selon leur débit restitué à la pressi
 pubDate: 2026-07-13
 updatedDate: 2026-07-14
 category: "Choisir"
+audiences: [particulier, professionnel]
+metiers: []
 readingTime: 9
 featured: true
 sources:

@@ -3,6 +3,8 @@ title: "Chute de pression d’air comprimé : construire un profil et trouver la
 description: "Mesurer la pression du compresseur jusqu’à l’outil pour localiser les pertes dans les filtres, conduites, raccords et flexibles sans augmenter le réglage au hasard."
 pubDate: 2026-07-13
 category: "Installer"
+audiences: [professionnel]
+metiers: [garage-automobile, carrosserie-peinture, menuiserie-agencement, maintenance-industrielle]
 readingTime: 12
 featured: false
 sources:

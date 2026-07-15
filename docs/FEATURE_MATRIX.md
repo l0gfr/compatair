@@ -19,7 +19,7 @@
 - conversions, interpolation bornée, débit de pointe, débit moyen, réserve de cuve, récupération conditionnelle et version des formules ;
 - recherche globale, comparateur de deux ou trois modèles, pages par marque et pages par usage ; les couples restent auditables dans les snapshots, le calculateur et l’API sans page HTML dédiée ;
 - frontière SEO programmatique : aucune génération quadratique sous `/compatibilite/`, anciennes URL exactes migrées vers le calculateur et retraits inconnus servis en `410`, avec fiches et pages d’usage comme surfaces indexables ;
-- guides Astro validés par Zod, glossaire, sommaires, rédaction, statut de revue explicite et contenus associés ;
+- guides Astro validés par Zod, parcours Particuliers et Professionnels, quatre hubs métiers sans duplication d’article, glossaire sourcé, sommaires, statut de revue explicite et contenus associés ;
 - schémas d’offres, liste blanche des marchands, fraîcheur de 48 heures, redirection fermée et compteur agrégé ;
 - catalogue JSON normalisé par EAN/GTIN/MPN, familles de variantes et index de provenance par champ critique ;
 - snapshots JSON du catalogue et de chaque verdict, validation, checksums, détection des doublons et rapports de différences ;

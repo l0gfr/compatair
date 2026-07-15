@@ -470,7 +470,25 @@ h3 { font-weight: 560; }
 .guide-card h2 a, .guide-card h3 a { text-decoration: none; }
 .guide-card p { color: var(--muted); }
 .guide-meta { color: var(--brand) !important; font-size: .76rem; font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
+.guide-taxonomy-labels { margin-top: 1rem; color: #68776e !important; font-size: .75rem; font-weight: 750; }
 .text-link { color: var(--brand); font-weight: 800; text-underline-offset: .2em; }
+.editorial-gateway, .related-professions { background: #eef2e9; }
+.metier-gateway { background: #e8eee7; }
+.audience-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 2rem 0 1rem; }
+.audience-grid a, .editorial-path-grid a { position: relative; display: grid; gap: .65rem; padding: clamp(1.35rem, 3vw, 2rem); overflow: hidden; border: 1px solid rgba(20,52,38,.15); border-radius: 1.2rem; color: var(--ink); background: rgba(252,253,249,.95); box-shadow: var(--shadow-sm); text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
+.audience-grid a { min-height: 220px; color: white; background: radial-gradient(circle at 100% 0, rgba(57,137,100,.36), transparent 12rem), var(--ink); }
+.audience-grid a:hover, .editorial-path-grid a:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.audience-grid span, .editorial-path-grid span { color: var(--brand); font-size: .72rem; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
+.audience-grid span { color: var(--accent); }
+.audience-grid strong, .editorial-path-grid strong { font: 540 clamp(1.6rem, 3vw, 2.25rem)/1.08 "Newsreader Variable", Georgia, serif; }
+.audience-grid small, .editorial-path-grid small { color: var(--muted); font-size: .87rem; line-height: 1.65; }
+.audience-grid small { color: #bfcec5; }
+.editorial-path-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .8rem; }
+.editorial-path-grid a { min-height: 225px; }
+.editorial-path-grid strong { font-size: clamp(1.3rem, 2vw, 1.7rem); }
+.article-taxonomy { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: .45rem; margin: .9rem 0 1.25rem; }
+.article-taxonomy a { padding: .35rem .58rem; border: 1px solid rgba(255,255,255,.17); border-radius: 999px; color: #d7e2dc; background: rgba(255,255,255,.07); font-size: .7rem; font-weight: 800; text-decoration: none; }
+.article-taxonomy a:hover { color: var(--ink); background: var(--accent); }
 .split-head { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr); gap: clamp(2rem, 6vw, 6rem); align-items: end; }
 .split-head > p { max-width: 34rem; margin-bottom: .4rem; color: var(--muted); }
 .pillar-section { position: relative; overflow: hidden; background: #e9eee5; }
@@ -833,7 +851,7 @@ h3 { font-weight: 560; }
 	.passport-two-columns .passport-section + .passport-section { border-top: 1px solid var(--line); border-left: 0; }
 	.barometer-brand header { grid-template-columns: auto 1fr; }
 	.barometer-brand header > strong { grid-column: 2; }
-	.grid, .callout, .calculator, .product-grid, .guide-grid, .pillar-grid, .split-head, .editorial-layout, .product-hero, .evidence-grid, .link-cards, .glossary-layout, .glossary-grid, .glossary-banner, .home-glossary, .catalog-main .product-grid, .search-page-results, .compare-selector, .taxonomy-grid { grid-template-columns: 1fr; }
+	.grid, .callout, .calculator, .product-grid, .guide-grid, .pillar-grid, .split-head, .editorial-layout, .product-hero, .evidence-grid, .link-cards, .glossary-layout, .glossary-grid, .glossary-banner, .home-glossary, .catalog-main .product-grid, .search-page-results, .compare-selector, .taxonomy-grid, .audience-grid, .editorial-path-grid { grid-template-columns: 1fr; }
 	.pillar-card { min-height: 0; }
 	.site-header { padding: .45rem 0; }
 	.nav { min-height: 58px; border-radius: .95rem; }

@@ -4,6 +4,8 @@ description: "Alimentation, débit restitué, puissance et installation : les cr
 pubDate: 2026-07-14
 updatedDate: 2026-07-14
 category: "Choisir"
+audiences: [particulier, professionnel]
+metiers: [maintenance-industrielle]
 readingTime: 10
 featured: false
 sources:

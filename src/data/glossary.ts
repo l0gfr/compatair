@@ -27,6 +27,22 @@ export const glossarySources = {
 		label: 'Méthodologie CompatAir',
 		url: '/methodologie/',
 	},
+	cp: {
+		label: 'Chicago Pneumatic, fiche officielle CP7748',
+		url: 'https://tools.cp.com/fr-fr/products/impactwrenches/cp7748-sku8941077481',
+	},
+	sata: {
+		label: 'SATA, données techniques SATAjet 5000 B HVLP',
+		url: 'https://www.sata.com/en-us/satajet-5000-b-hvlp-nozzle-1.3-rps-multi-purpose-cup-0.3-l-0.6-l-0.9-l-each-1x-swivel-joint/210765',
+	},
+	einhellManual: {
+		label: 'Einhell, notice TC-PN 50',
+		url: 'https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ngovue839t5o7dugodnovh8q57/4137790_11018_001_SPK2.pdf',
+	},
+	atlasPiping: {
+		label: 'Atlas Copco, dimensionnement des canalisations d’air comprimé',
+		url: 'https://www.atlascopco.com/en-uk/compressors/air-compressor-blog/sizing-compressed-air-pipe',
+	},
 } as const;
 
 export type GlossarySourceKey = keyof typeof glossarySources;
@@ -44,11 +60,13 @@ export const glossaryTerms: GlossaryTerm[] = [
 	{ term: 'Air libre', slug: 'air-libre', definition: 'Air considéré aux conditions atmosphériques d’un lieu déterminé, avant l’effet du compresseur. Les conditions de référence doivent être précisées pour comparer des débits.', source: 'cagi' },
 	{ term: 'Atmosphère standard', slug: 'atmosphere-standard', definition: 'Unité de pression définie exactement à 101 325 pascals, soit 1,01325 bar. CompatAir utilise cette valeur de référence pour exprimer le volume d’air libre équivalent du calcul de gonflage.', source: 'nist', related: { label: 'Calculer un gonflage', href: '/guides/compresseur-pour-gonfler-pneus/' } },
 	{ term: 'Bar', slug: 'bar', definition: 'Unité de pression non SI couramment utilisée pour l’air comprimé. Un bar vaut exactement 100 000 pascals, soit 100 kPa.', source: 'nist', related: { label: 'Comprendre bar, psi et pression', href: '/guides/bar-psi-pression-absolue-relative/' } },
+	{ term: 'Boucle de réseau', slug: 'boucle-reseau', definition: 'Architecture de distribution dans laquelle la conduite principale forme une boucle. Les points d’utilisation peuvent alors être alimentés par plusieurs directions, selon la configuration du réseau.', source: 'atlasPiping', related: { label: 'Installer un réseau d’atelier', href: '/guides/installer-reseau-air-comprime-atelier/' } },
 	{ term: 'Capacité réelle', slug: 'capacite-reelle', definition: 'Quantité d’air effectivement comprimée et délivrée dans les conditions nominales. Le CAGI rapproche cette notion du Free Air Delivered.', source: 'cagi' },
 	{ term: 'CFM', slug: 'cfm', definition: 'Cubic feet per minute, unité de débit volumique utilisée dans les documentations anglo-saxonnes. Une valeur en CFM n’est comparable que si ses conditions de référence sont connues.', source: 'cagi', related: { label: 'Conversions et conditions', href: '/guides/bar-psi-pression-absolue-relative/' } },
 	{ term: 'Chute de pression', slug: 'chute-pression', definition: 'Réduction de pression produite par les frottements ou une restriction dans un composant ou un réseau d’air comprimé.', source: 'cagi', related: { label: 'Diagnostiquer une chute de pression', href: '/guides/diagnostiquer-chute-pression-air-comprime/' } },
 	{ term: 'Compresseur alternatif', slug: 'compresseur-alternatif', definition: 'Compresseur dans lequel un piston effectue un mouvement alternatif dans un cylindre pour comprimer l’air.', source: 'cagi' },
 	{ term: 'Compresseur volumétrique', slug: 'compresseur-volumetrique', definition: 'Famille de compresseurs qui enferment successivement des volumes de gaz puis réduisent mécaniquement leur volume. Elle comprend des technologies alternatives et rotatives.', source: 'cagi' },
+	{ term: 'Consommation en charge', slug: 'consommation-en-charge', definition: 'Consommation publiée pendant le fonctionnement sous charge d’un outil. Ce libellé doit rester attaché à la référence et aux conditions du fabricant, sans être remplacé par une consommation moyenne.', source: 'cp', related: { label: 'Dimensionner un garage automobile', href: '/guides/dimensionner-compresseur-garage-automobile/' } },
 	{ term: 'Condensat', slug: 'condensat', definition: 'Liquide formé lorsque la vapeur d’eau contenue dans l’air se condense pendant le refroidissement ou dans le réseau. Sa gestion dépend de l’installation et des règles applicables.', source: 'atlas', related: { label: 'Purge et contrôles', href: '/guides/entretien-compresseur-purge-condensats/' } },
 	{ term: 'Coupleur rapide', slug: 'coupleur-rapide', definition: 'Raccord permettant de connecter et déconnecter rapidement un flexible ou un outil. Son passage interne et son état peuvent contribuer à la chute de pression.', source: 'atlas', related: { label: 'Flexible et raccords', href: '/guides/diametre-longueur-flexible-air-comprime/' } },
 	{ term: 'Cuve', slug: 'cuve', definition: 'Récipient qui stocke du gaz sous pression. Un réseau peut utiliser des réservoirs primaires et secondaires. La cuve amortit une demande, mais ne crée pas de débit continu.', source: 'cagi', related: { label: 'Rôle du volume de cuve', href: '/guides/choisir-volume-cuve-24-50-90-litres/' } },
@@ -68,10 +86,12 @@ export const glossaryTerms: GlossaryTerm[] = [
 	{ term: 'ISO 8573-1', slug: 'iso-8573-1', definition: 'Norme qui spécifie des classes de pureté de l’air comprimé pour les particules, l’eau et l’huile. Elle identifie aussi d’autres familles de contaminants.', source: 'iso', related: { label: 'Lire ISO 8573-1', href: '/guides/qualite-air-comprime-iso-8573-1/' } },
 	{ term: 'L/min', slug: 'litre-par-minute', definition: 'Litre par minute, unité de débit volumique. Une valeur seule reste incomplète si la pression et les conditions auxquelles elle s’applique ne sont pas indiquées.', source: 'cagi' },
 	{ term: 'Loi des gaz parfaits', slug: 'loi-gaz-parfaits', definition: 'Relation d’état entre pression, volume, quantité de matière et température pour un gaz idéal. Son emploi pour le gonflage reste une approximation qui suppose notamment une température et un volume constants.', source: 'nasa', related: { label: 'Méthode de gonflage', href: '/methodologie/' } },
+	{ term: 'Ligne de base', slug: 'ligne-base', definition: 'État initial documenté avant une action corrective. Les mesures réalisées après l’action sont comparées à cette référence dans des conditions décrites.', source: 'doe', related: { label: 'Maintenance préventive du réseau', href: '/guides/maintenance-preventive-reseau-air-comprime/' } },
 	{ term: 'Marge indicative CompatAir', slug: 'marge-compatair', definition: 'Réserve de débit réglable, fixée à 25 % par défaut. Elle est affichée séparément du besoin publié et ne constitue pas une prescription universelle du fabricant.', source: 'method', related: { label: 'Méthode de dimensionnement', href: '/guides/guide-complet-dimensionner-compresseur-air/' } },
 	{ term: 'Point de rosée sous pression', slug: 'point-rosee-pression', definition: 'Température à laquelle l’eau commence à condenser dans l’air à une pression donnée. Elle doit être distinguée du point de rosée aux conditions atmosphériques.', source: 'cagi', related: { label: 'Choisir le traitement d’air', href: '/guides/point-rosee-secheur-filtre-air-comprime/' } },
 	{ term: 'Pression absolue', slug: 'pression-absolue', definition: 'Pression mesurée à partir du vide absolu. Elle intègre donc la pression atmosphérique locale.', source: 'cagi', related: { label: 'Pression absolue et relative', href: '/guides/bar-psi-pression-absolue-relative/' } },
 	{ term: 'Pression de travail', slug: 'pression-travail', definition: 'Pression requise au point d’utilisation pour qu’un outil ou un procédé fonctionne dans les conditions publiées.', source: 'atlas', related: { label: 'Pourquoi 6,3 bar', href: '/guides/pression-travail-6-3-bar-outils-pneumatiques/' } },
+	{ term: 'Pression dynamique à l’entrée', slug: 'pression-dynamique', definition: 'Pression à l’entrée d’un outil pendant que l’air circule. SATA emploie cette grandeur pour la pression d’entrée recommandée de ses pistolets documentés.', source: 'sata', related: { label: 'Air comprimé en carrosserie', href: '/guides/air-comprime-carrosserie-peinture/' } },
 	{ term: 'Pression maximale', slug: 'pression-maximale', definition: 'Limite supérieure annoncée pour un équipement. Elle ne prouve ni le débit disponible à cette pression, ni la capacité à alimenter un outil en continu.', source: 'atlas', related: { label: 'Dimensionner sans raccourci', href: '/guides/guide-complet-dimensionner-compresseur-air/' } },
 	{ term: 'Pression relative', slug: 'pression-relative', definition: 'Pression mesurée par rapport à la pression atmosphérique. La plupart des manomètres usuels affichent cette différence.', source: 'cagi', related: { label: 'Bar, psi et références', href: '/guides/bar-psi-pression-absolue-relative/' } },
 	{ term: 'Profil de demande', slug: 'profil-demande', definition: 'Évolution du débit demandé au cours du temps. Il révèle les pointes, les charges intermittentes et les périodes sans consommation productive.', source: 'doe', related: { label: 'Mesurer le réseau', href: '/guides/diagnostiquer-chute-pression-air-comprime/' } },
@@ -82,4 +102,5 @@ export const glossaryTerms: GlossaryTerm[] = [
 	{ term: 'Séparateur d’eau', slug: 'separateur-eau', definition: 'Équipement qui retire de l’eau liquide entraînée dans le flux. Il ne remplace pas un sécheur lorsque la vapeur d’eau doit être réduite.', source: 'cagi' },
 	{ term: 'Specific power', slug: 'specific-power', definition: 'Rapport entre la puissance absorbée et la capacité délivrée dans des conditions déterminées. Il sert à comparer l’efficacité lorsque les bases de mesure sont cohérentes.', source: 'doe' },
 	{ term: 'Plage de pression', slug: 'plage-pression', definition: 'Écart entre les pressions minimale et maximale de régulation d’un compresseur, souvent décrit par les seuils de démarrage et d’arrêt ou de charge et décharge.', source: 'cagi' },
+	{ term: 'Volume d’air par action', slug: 'volume-par-action', definition: 'Quantité d’air publiée pour une action unitaire, par exemple un tir. Sa conversion en débit moyen exige une cadence explicite et ne décrit pas à elle seule la pointe instantanée.', source: 'einhellManual', related: { label: 'Dimensionner le clouage et l’agrafage', href: '/guides/dimensionner-compresseur-menuiserie-agencement/' } },
 ];

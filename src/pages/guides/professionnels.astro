@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import GuideCard from '../../components/GuideCard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { guideAudiences, guideMetierIds, guideMetiers } from '../../domain/editorial-taxonomy';
+
+const audience = 'professionnel' as const;
+const definition = guideAudiences[audience];
+const guides = (await getCollection('guides', ({ data }) => data.audiences.includes(audience)))
+	.sort((a, b) => Number(b.data.featured) - Number(a.data.featured) || b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const itemListJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'ItemList',
+	name: definition.title,
+	itemListElement: guides.map((guide, index) => ({ '@type': 'ListItem', position: index + 1, name: guide.data.title, url: `https://compatair.fr/guides/${guide.id}/` })),
+};
+---
+
+<BaseLayout title={definition.title} editorialTitle={definition.seoTitle} description={definition.description} imagePath="/social/guides.png" breadcrumbs={[{ name: 'Guides', path: '/guides/' }, { name: definition.label, path: '/guides/professionnels/' }]}>
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(itemListJsonLd)} />
+	<section class="page-hero compact audience-hero" data-editorial-hub="professionnel"><div class="container"><p class="eyebrow">Parcours professionnel</p><h1>{definition.title}</h1><p class="lead">{definition.description}</p><div class="actions"><a class="button primary" href="/calculateur/">Dimensionner une configuration</a><a class="button" href="/guides/particuliers/">Voir le parcours particulier</a></div></div></section>
+	<section class="section metier-gateway"><div class="container"><div class="section-head"><p class="eyebrow">Entrer par le métier</p><h2>Quatre contextes, les mêmes règles de preuve</h2><p>Ces pages regroupent les guides utiles à un contexte de travail. Elles ne remplacent jamais la notice de la référence réellement utilisée.</p></div><div class="editorial-path-grid">{guideMetierIds.map((metier) => <a href={`/guides/metiers/${metier}/`}><span>{guides.filter((guide) => guide.data.metiers.includes(metier)).length} guides</span><strong>{guideMetiers[metier].label}</strong><small>{guideMetiers[metier].description}</small></a>)}</div></div></section>
+	<section class="section"><div class="container"><div class="section-head split-head"><div><p class="eyebrow">Bibliothèque professionnelle</p><h2>{guides.length} guides classés pour ce parcours</h2></div><p>Les sujets transversaux et les dossiers métiers sont réunis ici sans créer de copie éditoriale ni d’URL concurrente.</p></div><div class="guide-grid">{guides.map((guide) => <GuideCard guide={guide} />)}</div></div></section>
+</BaseLayout>

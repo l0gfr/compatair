@@ -4,6 +4,8 @@ description: "Un nombre en dB n’est comparable que si l’indicateur et les co
 pubDate: 2026-07-13
 updatedDate: 2026-07-14
 category: "Comprendre"
+audiences: [particulier, professionnel]
+metiers: [maintenance-industrielle]
 readingTime: 6
 featured: false
 sources:

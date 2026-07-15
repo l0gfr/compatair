@@ -3,6 +3,8 @@ title: "Quel compresseur pour une visseuse pneumatique ?"
 description: "Comment dimensionner un compresseur pour une visseuse pneumatique sans confondre débit aspiré et débit restitué, avec l’exemple Metabo DS 14."
 pubDate: 2026-07-14
 category: "Choisir"
+audiences: [particulier, professionnel]
+metiers: [menuiserie-agencement, maintenance-industrielle]
 readingTime: 7
 featured: false
 relatedCalculatorTool: metabo-ds-14

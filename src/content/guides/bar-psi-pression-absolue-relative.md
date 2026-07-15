@@ -3,6 +3,8 @@ title: "Bar, psi, pression absolue et pression relative : convertir sans fausser
 description: "Comprendre les références de pression, convertir bar, kPa et psi, puis éviter les erreurs de comparaison entre manomètres, débits et documents constructeurs."
 pubDate: 2026-07-13
 category: "Comprendre"
+audiences: [particulier, professionnel]
+metiers: []
 readingTime: 10
 featured: false
 sources:

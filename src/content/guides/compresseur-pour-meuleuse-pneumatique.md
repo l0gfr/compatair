@@ -3,6 +3,8 @@ title: "Quel compresseur pour une meuleuse pneumatique ?"
 description: "Comparaison à pression égale des besoins des Einhell TC-PA 50 et TC-PP 220, avec calculs reproductibles à partir des courbes constructeur."
 pubDate: 2026-07-13
 category: "Choisir"
+audiences: [particulier, professionnel]
+metiers: [maintenance-industrielle]
 readingTime: 6
 featured: false
 relatedCalculatorTool: einhell-tc-pp-220

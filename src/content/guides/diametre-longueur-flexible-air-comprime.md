@@ -3,6 +3,8 @@ title: "Flexible d’air comprimé : choisir le diamètre et la longueur sans pe
 description: "Longueur, diamètre intérieur et raccords réduisent la pression disponible. Voici comment éviter qu’un bon compresseur devienne mauvais au bout du flexible."
 pubDate: 2026-07-13
 category: Installer
+audiences: [particulier, professionnel]
+metiers: []
 readingTime: 6
 featured: true
 sources:

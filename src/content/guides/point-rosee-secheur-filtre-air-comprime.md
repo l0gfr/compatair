@@ -3,6 +3,8 @@ title: "Point de rosée, sécheur et filtre : traiter l’humidité de l’air c
 description: "Distinguer eau liquide, vapeur, point de rosée sous pression, séparation, filtration et séchage pour choisir un traitement adapté à l’usage réel."
 pubDate: 2026-07-13
 category: "Installer"
+audiences: [professionnel]
+metiers: [carrosserie-peinture, maintenance-industrielle]
 readingTime: 11
 featured: false
 sources:

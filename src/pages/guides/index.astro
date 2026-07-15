@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { guideAudienceIds, guideAudiences, guideMetierIds, guideMetiers } from '../../domain/editorial-taxonomy';
+import { glossaryTerms } from '../../data/glossary';
 
 const guides = (await getCollection('guides')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const pillars = guides.filter((guide) => guide.data.featured).sort((a, b) => b.data.readingTime - a.data.readingTime);
@@ -17,7 +19,14 @@ const guideListJsonLd = {
 <BaseLayout title="Guides sur les compresseurs et outils pneumatiques | CompatAir" description="Comprendre le débit restitué, choisir une cuve, dimensionner un flexible et alimenter correctement chaque outil pneumatique." breadcrumbs={[{ name: 'Guides', path: '/guides/' }]}>
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(guideListJsonLd)} />
 	<section class="page-hero compact"><div class="container"><p class="eyebrow">Conseils pour choisir et utiliser</p><h1>Comprendre avant d’acheter</h1><p class="lead">Des guides sourcés pour choisir un compresseur, alimenter vos outils et repérer les chiffres commerciaux qui ne répondent pas à votre besoin.</p></div></section>
-	<section class="section glossary-gateway"><div class="container glossary-banner"><div><p class="eyebrow">Définitions simples</p><h2>Un mot technique ne doit jamais rester inexpliqué</h2><p>Le <a href="/glossaire/#fad">débit réellement restitué, ou FAD</a>, la pression, l’humidité et les pertes dans les tuyaux sont définis dans le glossaire, puis reliés aux guides qui les utilisent.</p></div><div class="metric light"><strong>40</strong><span>termes expliqués et reliés</span><a class="button primary" href="/glossaire/">Consulter les définitions</a></div></div></section>
+	<section class="section editorial-gateway">
+		<div class="container">
+			<div class="section-head split-head"><div><p class="eyebrow">Choisir son parcours</p><h2>Partir de votre usage, pas d’une catégorie commerciale</h2></div><p>Les parcours classent les mêmes guides canoniques. Ils n’ajoutent aucune consommation moyenne et ne transforment pas un métier en profil technique supposé.</p></div>
+			<div class="audience-grid">{guideAudienceIds.map((audience) => <a href={`/guides/${guideAudiences[audience].label.toLocaleLowerCase('fr-FR')}/`}><span>{guides.filter((guide) => guide.data.audiences.includes(audience)).length} guides</span><strong>{guideAudiences[audience].label}</strong><small>{guideAudiences[audience].description}</small></a>)}</div>
+			<div class="editorial-path-grid">{guideMetierIds.map((metier) => <a href={`/guides/metiers/${metier}/`}><span>Métier · {guides.filter((guide) => guide.data.metiers.includes(metier)).length} guides</span><strong>{guideMetiers[metier].label}</strong><small>{guideMetiers[metier].description}</small></a>)}</div>
+		</div>
+	</section>
+	<section class="section glossary-gateway"><div class="container glossary-banner"><div><p class="eyebrow">Définitions simples</p><h2>Un mot technique ne doit jamais rester inexpliqué</h2><p>Le <a href="/glossaire/#fad">débit réellement restitué, ou FAD</a>, la pression, l’humidité et les pertes dans les tuyaux sont définis dans le glossaire, puis reliés aux guides qui les utilisent.</p></div><div class="metric light"><strong>{glossaryTerms.length}</strong><span>termes expliqués et reliés</span><a class="button primary" href="/glossaire/">Consulter les définitions</a></div></div></section>
 	<section class="section pillar-section">
 		<div class="container">
 			<div class="section-head split-head"><div><p class="eyebrow">Guides complets</p><h2>Du besoin réel à l’installation</h2></div><p>{pillars.length} guides pour choisir, comparer, installer et entretenir sans remplacer une donnée manquante par une supposition.</p></div>
