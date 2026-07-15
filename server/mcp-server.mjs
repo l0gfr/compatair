@@ -110,6 +110,8 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 	const core = createMcpCore(catalog, offerSnapshot);
 	const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
 	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item]));
+	const compressorBySlug = new Map((catalog.compressors ?? []).map((item) => [item.slug, item]));
+	const toolBySlug = new Map((catalog.tools ?? []).map((item) => [item.slug, item]));
 	const verdictMap = new Map((verdictSnapshot.pairs ?? []).map((item) => [`${item.compressorId}--${item.toolId}`, item]));
 	const allow = createRateLimiter();
 	const counters = { rpc: 0, errors: 0, tools: Object.create(null), affiliateClicks: Object.create(null) };
@@ -123,6 +125,17 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 		try { url = new URL(request.url, 'http://localhost'); } catch { return json(response, 400, { error: 'invalid_request_target' }); }
 
 		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, verdictVersion: verdictSnapshot.verdictVersion, demandAggregation: { enabled: demandStore.enabled, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION }, productFunnelAggregation: { enabled: productFunnelStore.enabled, schemaVersion: PRODUCT_FUNNEL_SCHEMA_VERSION } });
+
+		if (url.pathname === '/compatibilite' || url.pathname.startsWith('/compatibilite/')) {
+			if (!['GET', 'HEAD'].includes(request.method ?? '')) return json(response, 405, { error: 'method_not_allowed' }, { Allow: 'GET, HEAD' });
+			const match = url.pathname.match(/^\/compatibilite\/([a-z0-9-]{1,160})--([a-z0-9-]{1,160})\/?$/);
+			const compressor = match ? compressorBySlug.get(match[1]) : undefined;
+			const tool = match ? toolBySlug.get(match[2]) : undefined;
+			if (!compressor || !tool) return json(response, 410, { error: 'compatibility_page_removed', replacement: '/calculateur/' }, { 'X-Robots-Tag': 'noindex, nofollow' });
+			const location = `/calculateur/?outil=${encodeURIComponent(tool.id)}&compresseur=${encodeURIComponent(compressor.id)}`;
+			response.writeHead(301, { Location: location, 'Cache-Control': 'public, max-age=86400', 'X-Robots-Tag': 'noindex, nofollow', 'X-Content-Type-Options': 'nosniff' });
+			return response.end();
+		}
 
 		if (url.pathname === '/api/v1/compatibility') {
 			const corsHeaders = {

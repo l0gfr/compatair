@@ -292,6 +292,11 @@ h3 { font-weight: 560; }
 .configuration-meta { margin: .75rem 0 0; padding-top: .75rem; border-top: 1px solid var(--line); color: var(--ink) !important; font-weight: 750; }
 .recommendation-section { padding: 1.2rem; border: 1px solid #aec7b8; border-radius: 1rem; background: linear-gradient(145deg, #edf5ef, #fbfcf8); }
 .recommendation-section h3 { margin-top: 0; font-size: 1.45rem; }
+.counterfactual-section { padding: 1.2rem; border: 1px solid #9fb58c; border-radius: 1rem; background: linear-gradient(145deg, #f2f6e7, #fbfcf8); }
+.counterfactual-section h3 { margin-top: 0; font-size: 1.45rem; }
+.counterfactual-action { display: block; color: var(--brand-dark); font-family: var(--font-display); font-size: 1.12rem; line-height: 1.35; }
+.counterfactual-proof { margin-bottom: .35rem; color: var(--ink) !important; font-weight: 720; }
+.counterfactual-boundary { margin-bottom: 0; padding-top: .75rem; border-top: 1px solid rgba(77,105,76,.2); font-size: .76rem !important; }
 .priority-list { display: grid; gap: .75rem; margin-top: 1rem; }
 .priority-list .result-card { background: white; box-shadow: var(--shadow-sm); }
 .decision-empty { margin: .8rem 0 0; padding: .9rem; border: 1px solid #d9b69e; border-radius: .75rem; color: #76401e !important; background: #fff7ee; }

@@ -25,6 +25,9 @@ export const passportConfigurationSchema = z.object({
 	sessionMinutes: z.number().positive().max(1_440).default(30),
 	hoseLengthMeters: z.number().nonnegative().max(500).optional(),
 	hoseInnerDiameterMm: z.number().positive().max(100).optional(),
+	measuredLeakLpm: z.number().nonnegative().max(10_000).optional(),
+	measuredPressureDropBar: z.number().nonnegative().max(50).optional(),
+	supplyPressureBar: z.number().positive().max(50).optional(),
 	networkDistanceMeters: z.number().nonnegative().max(2_000).optional(),
 	fittingStandard: z.enum(['unknown', 'euro-7.2', 'iso-6150-b', 'other']).default('unknown'),
 	fittingCount: z.number().int().nonnegative().max(200).optional(),
@@ -35,6 +38,8 @@ export const passportConfigurationSchema = z.object({
 }).superRefine((value, context) => {
 	if (value.selectedCompressor === 'custom' && value.custom.maxPressureBar === undefined) context.addIssue({ code: 'custom', message: 'La pression maximale du compresseur personnalisé est obligatoire.', path: ['custom', 'maxPressureBar'] });
 	if (value.custom.cutInPressureBar !== undefined && value.custom.cutOutPressureBar !== undefined && value.custom.cutInPressureBar >= value.custom.cutOutPressureBar) context.addIssue({ code: 'custom', message: 'La pression de réenclenchement doit être inférieure à la pression d’arrêt.', path: ['custom', 'cutInPressureBar'] });
+	const toolPressureBar = Math.max(...value.demands.map((demand) => demand.model === 'inflation' ? demand.targetPressureBar : demand.pressureBar));
+	if (toolPressureBar + (value.measuredPressureDropBar ?? 0) > 50) context.addIssue({ code: 'custom', message: 'La pression outil et la chute mesurée dépassent ensemble la limite de calcul de 50 bar.', path: ['measuredPressureDropBar'] });
 });
 
 export type PassportConfiguration = z.infer<typeof passportConfigurationSchema>;
@@ -77,7 +82,9 @@ const sizingResultSnapshotSchema = z.object({
 	verdict: z.enum(['continuous', 'intermittent', 'incompatible', 'insufficient_data']),
 	peakFlowLpm: z.number().nonnegative().max(200_000), averageFlowLpm: z.number().nonnegative().max(200_000),
 	recommendedFadLpm: z.number().nonnegative().max(200_000), recommendedTankLiters: z.number().nonnegative().max(200_000).optional(),
-	requiredPressureBar: z.number().nonnegative().max(50), usefulPressureBar: z.number().nonnegative().max(50).optional(),
+	requiredPressureBar: z.number().nonnegative().max(50), toolPressureBar: z.number().nonnegative().max(50).optional(),
+	measuredLeakLpm: z.number().nonnegative().max(10_000).optional(), measuredPressureDropBar: z.number().nonnegative().max(50).optional(),
+	availablePressureBar: z.number().nonnegative().max(50).optional(), usefulPressureBar: z.number().nonnegative().max(50).optional(),
 	usableTankAirLiters: z.number().nonnegative().max(2_000_000).optional(), estimatedWorkMinutes: z.number().nonnegative().max(1_000_000).optional(),
 	estimatedRecoveryMinutes: z.number().nonnegative().max(1_000_000).optional(), limitingFactor: z.enum(['flow', 'pressure', 'duty_cycle', 'data']).optional(),
 	confidence: z.enum(['high', 'medium', 'low']), hypotheses: z.array(z.string().max(2_000)).max(100), warnings: z.array(z.string().max(2_000)).max(100),
@@ -227,6 +234,9 @@ export async function createPassportReport(input: unknown, compressors: Passport
 	if (configuration.selectedCompressor && availableFadLpm === undefined) missingData.push(`FAD du compresseur à ${result.requiredPressureBar.toLocaleString('fr-FR')} bar non documenté.`);
 	if (configuration.hoseLengthMeters === undefined) missingData.push('Longueur du flexible non renseignée.');
 	if (configuration.hoseInnerDiameterMm === undefined) missingData.push('Diamètre intérieur du flexible non renseigné.');
+	if (configuration.measuredPressureDropBar === undefined) missingData.push('Chute de pression en charge non mesurée : le scénario flexible reste non testable.');
+	if (configuration.measuredLeakLpm === undefined) missingData.push('Débit de fuite non mesuré : le scénario de réparation des fuites reste non testable.');
+	if (configuration.supplyPressureBar === undefined) missingData.push('Pression réellement réglée ou mesurée non renseignée : le scénario de réglage reste non testable.');
 	if (configuration.networkDistanceMeters === undefined) missingData.push('Distance totale entre compresseur et point d’usage non renseignée.');
 	if (configuration.fittingStandard === 'unknown') missingData.push('Standard des raccords non renseigné.');
 	if (configuration.fittingCount === undefined) missingData.push('Nombre de raccords et restrictions non renseigné.');

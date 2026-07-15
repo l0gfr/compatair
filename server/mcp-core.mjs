@@ -1,4 +1,4 @@
-const ENGINE_VERSION = '1.1.0';
+const ENGINE_VERSION = '1.2.0';
 const PROTOCOL_VERSION = '2025-06-18';
 const STANDARD_ATMOSPHERE_BAR = 1.01325;
 const MAX_SHORT_TEXT = 256;
@@ -37,10 +37,12 @@ function validToolArguments(name, args) {
 			&& (args.minTankLiters === undefined || isFiniteNumber(args.minTankLiters, 0)) && (args.minPressureBar === undefined || isFiniteNumber(args.minPressureBar, 0))
 			&& (args.oilType === undefined || ['oil', 'oil-free'].includes(args.oilType)) && isOptionalInteger(args.limit, 1, 50);
 		case 'get_compressor_specs': return hasOnlyKeys(args, ['id']) && isShortString(args.id) && args.id.length > 0;
-		case 'size_compressor': return hasOnlyKeys(args, ['demands', 'mode', 'safetyMargin']) && Array.isArray(args.demands)
+		case 'size_compressor': return hasOnlyKeys(args, ['demands', 'mode', 'safetyMargin', 'measuredLeakLpm', 'measuredPressureDropBar']) && Array.isArray(args.demands)
 			&& args.demands.length >= 1 && args.demands.length <= 20 && args.demands.every(validDemand)
 			&& (args.mode === undefined || ['simultaneous', 'successive'].includes(args.mode))
-			&& (args.safetyMargin === undefined || isFiniteNumber(args.safetyMargin, 0, 1));
+			&& (args.safetyMargin === undefined || isFiniteNumber(args.safetyMargin, 0, 1))
+			&& (args.measuredLeakLpm === undefined || isFiniteNumber(args.measuredLeakLpm, 0, 10_000))
+			&& (args.measuredPressureDropBar === undefined || isFiniteNumber(args.measuredPressureDropBar, 0, 50));
 		case 'check_compatibility': return hasOnlyKeys(args, ['compressorId', 'toolId', 'safetyMargin'])
 			&& isShortString(args.compressorId) && args.compressorId.length > 0 && isShortString(args.toolId) && args.toolId.length > 0
 			&& (args.safetyMargin === undefined || isFiniteNumber(args.safetyMargin, 0, 1));
@@ -97,7 +99,7 @@ const toolDefinitions = [
 		{ type: 'object', properties: { model: { type: 'string', enum: ['fixed-flow'] }, flowLpm: { type: 'number', exclusiveMinimum: 0 }, pressureBar: { type: 'number', exclusiveMinimum: 0 }, quantity: { type: 'integer', minimum: 1, maximum: 20 }, dutyFactor: { type: 'number', exclusiveMinimum: 0, maximum: 1 } }, required: ['flowLpm', 'pressureBar'], additionalProperties: false },
 		{ type: 'object', properties: { model: { type: 'string', enum: ['per-action'] }, litersPerAction: { type: 'number', exclusiveMinimum: 0 }, actionsPerMinute: { type: 'number', exclusiveMinimum: 0 }, pressureBar: { type: 'number', exclusiveMinimum: 0 }, quantity: { type: 'integer', minimum: 1, maximum: 20 } }, required: ['model', 'litersPerAction', 'actionsPerMinute', 'pressureBar'], additionalProperties: false },
 		{ type: 'object', properties: { model: { type: 'string', enum: ['inflation'] }, volumeLiters: { type: 'number', exclusiveMinimum: 0 }, initialPressureBar: { type: 'number', minimum: 0 }, targetPressureBar: { type: 'number', exclusiveMinimum: 0 }, targetMinutes: { type: 'number', exclusiveMinimum: 0 }, quantity: { type: 'integer', minimum: 1, maximum: 20 } }, required: ['model', 'volumeLiters', 'initialPressureBar', 'targetPressureBar', 'targetMinutes'], additionalProperties: false },
-	] } }, mode: { type: 'string', enum: ['simultaneous', 'successive'] }, safetyMargin: { type: 'number', minimum: 0, maximum: 1 } }, ['demands']],
+	] } }, mode: { type: 'string', enum: ['simultaneous', 'successive'] }, safetyMargin: { type: 'number', minimum: 0, maximum: 1 }, measuredLeakLpm: { type: 'number', minimum: 0, maximum: 10000 }, measuredPressureDropBar: { type: 'number', minimum: 0, maximum: 50 } }, ['demands']],
 	['check_compatibility', 'Comparer un compresseur et un outil avec un verdict normalisé.', { compressorId: { type: 'string' }, toolId: { type: 'string' }, safetyMargin: { type: 'number', minimum: 0, maximum: 1 } }, ['compressorId', 'toolId']],
 	['compare_compressors', 'Comparer deux ou trois compresseurs sans score commercial.', { ids: { type: 'array', minItems: 2, maxItems: 3, items: { type: 'string' } } }, ['ids']],
 	['find_accessories', 'Retourner uniquement les raccords ou accessoires documentés pour un outil.', { toolId: { type: 'string' } }, ['toolId']],
@@ -156,10 +158,16 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 					return { peak, average: peak * Number(item.dutyFactor ?? 1), pressure: Number(item.pressureBar), derived: false };
 				});
 				if (demands.some((item) => !item || !Number.isFinite(item.peak) || item.peak <= 0 || !Number.isFinite(item.pressure) || item.pressure <= 0)) return failure('Demande invalide.', catalog);
-				const peakFlowLpm = mode === 'simultaneous' ? demands.reduce((sum, item) => sum + item.peak, 0) : Math.max(...demands.map((item) => item.peak));
-				const averageFlowLpm = Math.min(peakFlowLpm, demands.reduce((sum, item) => sum + item.average, 0));
+				const measuredLeakLpm = Number(args.measuredLeakLpm ?? 0);
+				const measuredPressureDropBar = Number(args.measuredPressureDropBar ?? 0);
+				const demandPeakFlowLpm = mode === 'simultaneous' ? demands.reduce((sum, item) => sum + item.peak, 0) : Math.max(...demands.map((item) => item.peak));
+				const peakFlowLpm = demandPeakFlowLpm + measuredLeakLpm;
+				const averageFlowLpm = Math.min(peakFlowLpm, demands.reduce((sum, item) => sum + item.average, 0) + measuredLeakLpm);
+				const toolPressureBar = Math.max(...demands.map((item) => item.pressure));
+				const requiredPressureBar = toolPressureBar + measuredPressureDropBar;
+				if (requiredPressureBar > 50) return failure('La pression outil et la chute mesurée dépassent ensemble la limite de calcul de 50 bar.', catalog);
 				const flowBasis = demands.some((item) => item.derived) ? 'derived-average' : 'documented-continuous';
-				return result({ sizing: { verdict: 'insufficient_data', peakFlowLpm, averageFlowLpm, requiredPressureBar: Math.max(...demands.map((item) => item.pressure)), recommendedFadLpm: peakFlowLpm * (1 + safetyMargin), flowBasis, limitingFactor: 'data', hypotheses: [`mode=${mode}`, `safetyMargin=${safetyMargin}`, ...demands.flatMap((item) => item.hypothesis ? [item.hypothesis] : [])], calculationVersion: ENGINE_VERSION } }, catalog);
+				return result({ sizing: { verdict: 'insufficient_data', peakFlowLpm, averageFlowLpm, toolPressureBar, requiredPressureBar, measuredLeakLpm, measuredPressureDropBar, recommendedFadLpm: peakFlowLpm * (1 + safetyMargin), flowBasis, limitingFactor: 'data', hypotheses: [`mode=${mode}`, `safetyMargin=${safetyMargin}`, `measuredLeakLpm=${measuredLeakLpm}`, `measuredPressureDropBar=${measuredPressureDropBar}`, ...demands.flatMap((item) => item.hypothesis ? [item.hypothesis] : [])], calculationVersion: ENGINE_VERSION } }, catalog);
 			}
 			case 'check_compatibility': { const compressor = compressorMap.get(args.compressorId), tool = toolMap.get(args.toolId); if (!compressor || !tool) return failure('Compresseur ou outil inconnu.', catalog); return result({ compatibility: compatibility(compressor, tool, args.safetyMargin ?? .25) }, catalog); }
 			case 'compare_compressors': { if (!Array.isArray(args.ids) || args.ids.length < 2 || args.ids.length > 3) return failure('Deux ou trois identifiants sont requis.', catalog); const values = args.ids.map((id) => compressorMap.get(id)); return values.some((item) => !item) ? failure('Un compresseur est inconnu.', catalog) : result({ compressors: values }, catalog); }
@@ -172,7 +180,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 	function readResource(uri) {
 		const values = {
 			'compatair://catalog/version': { catalogVersion: catalog.catalogVersion, schemaVersion: catalog.schemaVersion, verifiedAt: catalog.verifiedAt },
-			'compatair://methodology': { engineVersion: ENGINE_VERSION, standardAtmosphereBar: STANDARD_ATMOSPHERE_BAR, rules: ['FAD comparé à pression égale', 'aucune extrapolation hors courbe', 'débit aspiré jamais substitué', 'débit par action calculé seulement avec une cadence explicite', 'gonflage calculé seulement avec volume, pressions et temps explicites', 'insufficient_data si donnée déterminante absente'] },
+			'compatair://methodology': { engineVersion: ENGINE_VERSION, standardAtmosphereBar: STANDARD_ATMOSPHERE_BAR, rules: ['FAD comparé à pression égale', 'aucune extrapolation hors courbe', 'débit aspiré jamais substitué', 'fuite et chute de pression ajoutées seulement depuis une mesure explicite', 'débit par action calculé seulement avec une cadence explicite', 'gonflage calculé seulement avec volume, pressions et temps explicites', 'insufficient_data si donnée déterminante absente'] },
 			'compatair://tools/taxonomy': { categories: catalog.toolTaxonomy ?? [...new Set(catalog.tools.map((item) => ({ label: item.category })))].sort() },
 			'compatair://confidence-scale': { A: 'documentation constructeur exploitable', B: 'source officielle incomplète ou interpolation encadrée', C: 'donnée ambiguë, aucun verdict positif', D: 'information non confirmée, aucun verdict positif' },
 			'compatair://affiliation-policy': { verdictBeforeOffers: true, commissionAffectsVerdict: false, staleOfferHours: 48 },

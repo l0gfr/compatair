@@ -2,19 +2,21 @@ import { describe, expect, it } from 'vitest';
 import { CATALOG_VERIFIED_AT, compressors, tools } from '../data/catalog';
 import { documentQualityLedger } from '../data/document-quality-ledger';
 import { referenceRegistry } from '../data/reference-registry';
-import { assertDocumentQualityIntegrity, createDocumentQualityObservatory } from './document-quality-observatory';
+import { documentQualityHistory } from '../data/document-quality-observatory';
+import { assertDocumentQualityIntegrity, createDocumentQualityObservatory, documentQualityHistorySchema } from './document-quality-observatory';
 
 describe('document quality observatory', () => {
-	const observatory = createDocumentQualityObservatory(compressors, tools, documentQualityLedger, referenceRegistry, CATALOG_VERIFIED_AT);
+	const observatory = createDocumentQualityObservatory(compressors, tools, documentQualityLedger, referenceRegistry, CATALOG_VERIFIED_AT, documentQualityHistory);
 
-	it('publishes the four metrics without fabricating a legacy correction delay', () => {
+	it('publishes the four metrics without fabricating a delay for legacy corrections', () => {
 		expect(observatory.schemaVersion).toBe('1.0.0');
 		expect(observatory.observatoryVersion).toMatch(/^[a-f0-9]{64}$/);
-		expect(observatory.metrics.correctionLeadTime).toMatchObject({ status: 'insufficient_data', medianDays: null, measuredCount: 0, excludedLegacyCount: 5 });
+		expect(observatory.metrics.correctionLeadTime).toMatchObject({ status: 'measured', medianDays: 0, measuredCount: 1, excludedLegacyCount: 5 });
 		expect(observatory.metrics.multiPressureFad.eligibleCount).toBe(compressors.length);
 		expect(observatory.metrics.multiPressureFad.availableCount).toBe(compressors.filter((item) => item.fadCurve.length >= 2).length);
 		expect(observatory.metrics.referenceStability).toMatchObject({ status: 'baseline', changeCount: 0, missingBaselineCount: 0 });
 		expect(observatory.metrics.contradictionResponses).toMatchObject({ answeredCount: 4, totalCount: 4, responseRate: 100 });
+		expect(observatory.measurementProgram).toMatchObject({ baseline: { period: '2026-07', kind: 'baseline' }, trend: { status: 'insufficient_data', periodCount: 1 }, targets: { multiPressureFad: { status: 'pending_trend', targetPercent: null }, referenceBaselineCoverage: { targetPercent: 100 }, contradictionResponses: { targetPercent: 100 } } });
 	});
 
 	it('requires a current MPN observation and valid contradiction sources', () => {
@@ -29,7 +31,12 @@ describe('document quality observatory', () => {
 			...documentQualityLedger,
 			corrections: [...documentQualityLedger.corrections, { id: 'measured-example', title: 'Exemple mesuré', openedAt: '2026-07-15', resolvedAt: '2026-07-17', summary: 'Cycle daté.', impact: 'Mesure testée.' }],
 		};
-		const measured = createDocumentQualityObservatory(compressors, tools, ledger, referenceRegistry, '2026-07-17');
-		expect(measured.metrics.correctionLeadTime).toMatchObject({ status: 'measured', medianDays: 2, measuredCount: 1 });
+		const measured = createDocumentQualityObservatory(compressors, tools, ledger, referenceRegistry, '2026-07-17', documentQualityHistory);
+		expect(measured.metrics.correctionLeadTime).toMatchObject({ status: 'measured', medianDays: 1, measuredCount: 2 });
+	});
+
+	it('requires immutable monthly periods in chronological order', () => {
+		expect(() => documentQualityHistorySchema.parse({ ...documentQualityHistory, snapshots: [...documentQualityHistory.snapshots, { ...documentQualityHistory.snapshots[0], kind: 'monthly' }] })).toThrow();
+		expect(() => createDocumentQualityObservatory(compressors, tools, documentQualityLedger, referenceRegistry, '2026-08-01', documentQualityHistory)).toThrow('Snapshot mensuel documentaire manquant pour 2026-08');
 	});
 });

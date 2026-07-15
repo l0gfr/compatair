@@ -8,6 +8,7 @@ const correction = observatory.metrics.correctionLeadTime;
 const fad = observatory.metrics.multiPressureFad;
 const references = observatory.metrics.referenceStability;
 const contradictions = observatory.metrics.contradictionResponses;
+const program = observatory.measurementProgram;
 const productsById = new Map([...compressors, ...tools].map((product) => [product.id, product]));
 ---
 <BaseLayout title="Observatoire qualité documentaire | CompatAir" description="Délais de correction, disponibilité du FAD multi-pression, stabilité des références et traitement public des contradictions dans le catalogue CompatAir." breadcrumbs={[{ name: 'Observatoire de la qualité documentaire', path: '/observatoire-qualite-documentaire/' }]}>
@@ -21,12 +22,17 @@ const productsById = new Map([...compressors, ...tools].map((product) => [produc
 			<article class="observatory-metric"><p>04 · Contradictions traitées</p><strong>{contradictions.responseRate} %</strong><span>{contradictions.answeredCount} réponses publiées sur {contradictions.totalCount} contradictions recensées</span></article>
 		</div>
 		<div class="observatory-warning"><strong>Une ligne de base n’est pas encore une tendance</strong><p>Le suivi des MPN commence le {formatDate(references.observationStartedAt)}. Zéro mutation signifie qu’aucun changement n’est observé depuis cette date, pas que les références n’ont jamais changé auparavant. De même, le délai historique reste non mesurable tant que la date d’ouverture n’a pas été conservée.</p></div>
+		<div class="observatory-definitions" data-observatory-program>
+			<article><span>A</span><h3>Ligne de base</h3><p>Snapshot immuable de {program.baseline.period}, capturé le {formatDate(program.baseline.capturedAt)}. Il conserve les dénominateurs et résultats publiés au démarrage du suivi.</p></article>
+			<article><span>B</span><h3>Tendance</h3><p>{program.trend.status === 'insufficient_data' ? `Tendance insuffisante : ${program.trend.periodCount} seule période publiée. Un deuxième snapshot mensuel est nécessaire.` : `Variation mesurée de ${program.trend.fromPeriod} à ${program.trend.toPeriod}.`}</p></article>
+			<article><span>C</span><h3>Objectifs internes</h3><p>Lignes de base MPN {program.targets.referenceBaselineCoverage.targetPercent} % et réponses aux contradictions {program.targets.contradictionResponses.targetPercent} %. Les objectifs chiffrés de FAD et de délai attendent respectivement {program.targets.multiPressureFad.minimumPeriodCount} périodes et {program.targets.correctionLeadTime.minimumMeasuredCount} corrections mesurables.</p></article>
+		</div>
 	</div></section>
 
 	<section class="section observatory-detail"><div class="container">
 		<div class="split-head"><div><p class="eyebrow">Règles de calcul</p><h2>Ce que chaque indicateur prouve, et ce qu’il ne prouve pas</h2></div><p>Chaque chiffre expose son dénominateur. Les métriques portent sur le corpus CompatAir, pas sur l’ensemble du marché.</p></div>
 		<div class="observatory-definitions">
-			<article><span>01</span><h3>Délai de correction</h3><p>{correction.definition}</p><p>Les {correction.excludedLegacyCount} corrections antérieures au registre restent visibles dans le <a href="/corrections/">journal public</a>, mais aucune date d’ouverture ne leur est attribuée rétroactivement. Aucun objectif de délai n’est revendiqué à ce stade.</p></article>
+			<article><span>01</span><h3>Délai de correction</h3><p>{correction.definition}</p><p>Les {correction.excludedLegacyCount} corrections antérieures au registre restent visibles dans le <a href="/corrections/">journal public</a>, mais aucune date d’ouverture ne leur est attribuée rétroactivement. Aucun délai chiffré n’est fixé avant {program.targets.correctionLeadTime.minimumMeasuredCount} corrections mesurables.</p></article>
 			<article><span>02</span><h3>FAD à plusieurs pressions</h3><p>{fad.definition}</p><div class="score-track" aria-label={`${fad.percentage} % des compresseurs avec FAD multi-pression`}><span style={`width:${fad.percentage}%`}></span></div><p>{fad.availableCount} profils permettent une interpolation entre des points publiés. Les {fad.eligibleCount - fad.availableCount} autres ne sont jamais extrapolés silencieusement.</p></article>
 			<article><span>03</span><h3>Stabilité des références</h3><p>{references.definition}</p><p>{references.stableCount} MPN correspondent à leur dernière observation publique, {references.changeCount} mutation est consignée et {references.missingBaselineCount} référence suivie manque de ligne de base.</p></article>
 			<article><span>04</span><h3>Réponses aux contradictions</h3><p>{contradictions.definition}</p><p>Le délai médian de réponse documentaire est actuellement de {contradictions.medianResponseDays ?? 'non mesurable'} jour. Il décrit la décision de CompatAir, jamais le délai de réponse d’un fabricant.</p></article>

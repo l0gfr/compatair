@@ -5,6 +5,7 @@ const REGISTRY = 'https://registry.npmjs.org';
 const QUARANTINE_MS = 24 * 60 * 60 * 1000;
 const RECENT_WINDOW_MS = 72 * 60 * 60 * 1000;
 const EXPECTED_BUILD_ALLOWLIST = new Set(['esbuild']);
+const EXPECTED_OVERRIDES = new Map([['tmp', '0.2.7'], ['uuid', '11.1.1']]);
 const LIFECYCLE_SCRIPTS = ['preinstall', 'install', 'postinstall'];
 
 const registryMode = process.argv.includes('--registry');
@@ -31,6 +32,25 @@ function parseAllowedBuilds(source) {
   }
 
   return allowed;
+}
+
+function parseOverrides(source) {
+  const lines = source.split('\n');
+  const overrides = new Map();
+  let inOverrides = false;
+
+  for (const line of lines) {
+    if (/^overrides:\s*$/.test(line)) {
+      inOverrides = true;
+      continue;
+    }
+    if (inOverrides && /^\S/.test(line) && line.trim()) break;
+    if (!inOverrides) continue;
+    const match = line.match(/^\s{2}(['"]?)(.+?)\1:\s*(['"]?)([^'"\s]+)\3\s*$/);
+    if (match) overrides.set(match[2], match[4]);
+  }
+
+  return overrides;
 }
 
 function unquoteYamlKey(value) {
@@ -200,6 +220,15 @@ const requiredWorkspacePolicies = [
 for (const [label, pattern] of requiredWorkspacePolicies) {
   if (!pattern.test(workspace)) failures.push(`politique pnpm absente ou modifiée: ${label}`);
 }
+if (packageJson.pnpm?.overrides) failures.push('package.json#pnpm.overrides est ignoré par pnpm dans ce workspace; utiliser pnpm-workspace.yaml#overrides');
+
+const overrides = parseOverrides(workspace);
+for (const [name, version] of EXPECTED_OVERRIDES) {
+  if (overrides.get(name) !== version) failures.push(`override pnpm absent ou modifié: ${name}@${version}`);
+}
+for (const [name, version] of overrides) {
+  if (EXPECTED_OVERRIDES.get(name) !== version) failures.push(`override pnpm inattendu: ${name}@${version}`);
+}
 
 const allowedBuilds = parseAllowedBuilds(workspace);
 const unexpectedBuilds = setDifference(allowedBuilds, EXPECTED_BUILD_ALLOWLIST);
@@ -225,6 +254,7 @@ if (invalidIntegrity.length) {
 
 console.log(`Lockfile: ${lockedPackages.length} versions, intégrités SHA-512 présentes: ${lockedPackages.length - invalidIntegrity.length}/${lockedPackages.length}.`);
 console.log(`Scripts d'installation autorisés: ${[...allowedBuilds].sort().join(', ') || 'aucun'}.`);
+console.log(`Overrides pnpm contrôlés depuis pnpm-workspace.yaml: ${[...overrides].map(([name, version]) => `${name}@${version}`).join(', ') || 'aucun'}.`);
 
 if (advisoryMode) {
   try {

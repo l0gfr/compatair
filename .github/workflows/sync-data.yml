@@ -41,14 +41,23 @@ jobs:
           git cat-file -e "${previous_sha}:src/data/evidence-history.snapshot.json"
           git show "${previous_sha}:src/data/evidence-history.snapshot.json" > previous-repository-evidence-history.json
           node scripts/assert-evidence-history-extension.mjs previous-repository-evidence-history.json dist/data/evidence-history.json
+          if git cat-file -e "${previous_sha}:src/data/document-quality-observatory-history.snapshot.json"; then
+            git show "${previous_sha}:src/data/document-quality-observatory-history.snapshot.json" > previous-repository-observatory-history.json
+          else
+            echo '{}' > previous-repository-observatory-history.json
+          fi
+          node scripts/assert-observatory-history-extension.mjs previous-repository-observatory-history.json dist/data/document-quality-observatory.json
       - name: Fetch current production snapshots
         run: |
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/catalog.json -o previous-catalog.json
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/offers.json -o previous-offers.json
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/verdicts.json -o previous-verdicts.json
           curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/evidence-history.json -o previous-evidence-history.json
+          curl --fail --silent --show-error --max-time 20 https://compatair.fr/data/document-quality-observatory.json -o previous-document-quality-observatory.json
       - name: Enforce append-only evidence history
         run: node scripts/assert-evidence-history-extension.mjs previous-evidence-history.json dist/data/evidence-history.json
+      - name: Enforce append-only observatory history
+        run: node scripts/assert-observatory-history-extension.mjs previous-document-quality-observatory.json dist/data/document-quality-observatory.json
       - name: Produce change reports
         run: |
           node scripts/diff-snapshots.mjs previous-catalog.json dist/data/catalog.json catalog-diff.json

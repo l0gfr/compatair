@@ -100,11 +100,19 @@ Après ces contrôles, créer la variable GitHub `MCP_ENABLED` avec la valeur `t
 
 L’ajout de l’API ou une modification de ses en-têtes inter-origines nécessite de rejouer `install-mcp.sh` avant le premier déploiement qui les vérifie. Le script installe le vhost versionné, exécute `apache2ctl configtest`, puis recharge Apache. Un paquet statique seul ne peut pas modifier `/etc/apache2`.
 
+La migration des anciennes URL `/compatibilite/` relève aussi de ce vhost. Avant le premier déploiement qui contient le gestionnaire de migration, installer la nouvelle configuration avec `install-mcp.sh`. L’ancien service répondra temporairement `404` sur ce proxy, puis l’activation atomique du nouveau service rendra les redirections `301` et retraits `410` disponibles. Le workflow vérifie ensuite une ancienne URL réelle et une référence inconnue ; il ne déclare pas la production valide si le vhost n’a pas été préparé.
+
 ## Récupération des invariants
 
 Chaque déploiement compare l’historique candidat avec le snapshot du commit Git précédent avant de consulter la production. Cette référence indépendante reste disponible lorsqu’un incident rend le site public inaccessible. Après signature, le workflow conserve aussi pendant 90 jours un artefact GitHub Actions dédié avec l’historique, son manifeste Ed25519, les clés publiques, le widget versionné et son empreinte épinglée.
 
 Un push normal continue d’échouer si les invariants live ne peuvent pas être téléchargés. Pour restaurer le service pendant une panne, lancer manuellement `Deploy production` avec l’option `recovery_mode`. Ce mode est refusé sur un push automatique, reste visible dans le journal GitHub Actions et conserve les contrôles Git, SRI, tests, signatures et audits. Après restauration, relancer un déploiement normal afin de confirmer les comparaisons avec la surface live.
+
+## Snapshot mensuel de l’Observatoire
+
+Le fichier `src/data/document-quality-observatory-history.snapshot.json` est append-only. Lors de la première publication d’un mois, ajouter une entrée `monthly` avec la période, la date de capture et les six mesures explicites. Le build refuse une édition du catalogue dont le mois ne possède pas de snapshot, les workflows refusent la modification ou la suppression d’une période déjà publiée, et l’historique est inclus dans le snapshot JSON signé de l’Observatoire.
+
+Une seule période reste une ligne de base avec une tendance `insufficient_data`. Les objectifs chiffrés qui ne reposent pas encore sur assez d’observations restent `pending_baseline` ou `pending_trend`; ils ne doivent pas être remplis rétroactivement pour embellir la série.
 
 ## Priorités issues de la demande
 
@@ -116,7 +124,9 @@ pnpm build
 pnpm data:rank-demand -- /chemin/prive/demand-aggregates.json
 ```
 
-Le rapport `demand-priorities.json` exclut toute dimension comptant moins de cinq contributions. Il rapproche ensuite la demande agrégée du snapshot public `data/verdicts.json` afin de faire remonter les outils recherchés qui disposent du moins de compresseurs concluants.
+Le rapport `demand-priorities.json` exclut toute dimension comptant moins de cinq contributions. Il rapproche ensuite la demande agrégée du snapshot public `data/verdicts.json` afin de faire remonter les outils recherchés qui disposent du plus grand volume pondéré de couples encore insuffisants. Une seconde liste classe les compresseurs selon la somme de demande visible bloquée lorsque le besoin FAD de l’outil est déjà connu : elle sert à prioriser la recherche de courbes FAD et de pressions manquantes sans attribuer au compresseur une donnée absente côté outil.
+
+La couverture pondérée vaut `somme(demande outil × couples concluants) / somme(demande outil × couples éligibles)`. L’objectif opérationnel est fixé à 80 %. Le rapport publie aussi la couverture non pondérée, la part des sélections d’outils effectivement visible après suppression et le nombre d’outils visibles sans verdict exploitable. En l’absence d’agrégats privés suffisants, le statut reste `insufficient_data` : le build public ne remplace jamais la demande observée par une pondération uniforme.
 
 Pour mesurer la complétion du calculateur sans exporter de navigation brute :
 

@@ -1,6 +1,6 @@
 # Matrice fonctionnelle CompatAir
 
-État au 14 juillet 2026. Cette matrice distingue le code livré des fonctions qui dépendent encore d’un flux partenaire ou d’une opération administrateur sur le serveur.
+État au 15 juillet 2026. Cette matrice distingue le code livré des fonctions qui dépendent encore d’un flux partenaire ou d’une opération administrateur sur le serveur.
 
 ## Livré dans le dépôt
 
@@ -9,6 +9,7 @@
 - catalogue de compresseurs filtrable et paginé, fiches sourcées, courbes FAD, limites, confiance et alternatives comparables ;
 - catalogue d’outils et taxonomie extensible, fiches sourcées et exigences non documentées signalées ;
 - calculateur multi-outils avec simultanéité, fréquence, durée, flexible, modèle existant et saisie personnalisée ;
+- recommandation contrefactuelle déterministe : recherche du plus petit changement unique vérifié sur la pression disponible, la chute mesurée du réseau, la simultanéité, les fuites mesurées, la cadence explicite ou la machine documentée ;
 - dossier de dimensionnement local avec synthèse de configuration, recommandations prioritaires, filtres par verdict et copie texte ;
 - Passeport CompatAir gratuit : installation encodée dans une URL versionnée, recalcul local, sources, marges, points de vigilance, évolutions possibles, données manquantes et PDF généré dans le navigateur ;
 - Scanner et vérifier : saisie exacte MPN/EAN, photo locale, lecture code-barres et OCR natif lorsque disponible, confirmation humaine obligatoire, preuves et compatibilités recalculées ;
@@ -16,14 +17,14 @@
 - frontière produit explicite : aucune sauvegarde serveur dans la version gratuite ; la sauvegarde de plusieurs ateliers, les exports de dossiers et les alertes restent le périmètre envisagé d’une version professionnelle non disponible ;
 - verdicts `continuous`, `intermittent`, `incompatible` et `insufficient_data` ;
 - conversions, interpolation bornée, débit de pointe, débit moyen, réserve de cuve, récupération conditionnelle et version des formules ;
-- recherche globale, comparateur de deux ou trois modèles, pages par marque, pages par usage et pages de compatibilité limitées aux données concluantes ;
-- frontière SEO programmatique : couples produit-outil en `noindex,follow`, hors sitemap, avec fiches et pages d’usage comme surfaces indexables ;
+- recherche globale, comparateur de deux ou trois modèles, pages par marque et pages par usage ; les couples restent auditables dans les snapshots, le calculateur et l’API sans page HTML dédiée ;
+- frontière SEO programmatique : aucune génération quadratique sous `/compatibilite/`, anciennes URL exactes migrées vers le calculateur et retraits inconnus servis en `410`, avec fiches et pages d’usage comme surfaces indexables ;
 - guides Astro validés par Zod, glossaire, sommaires, rédaction, statut de revue explicite et contenus associés ;
 - schémas d’offres, liste blanche des marchands, fraîcheur de 48 heures, redirection fermée et compteur agrégé ;
 - catalogue JSON normalisé par EAN/GTIN/MPN, familles de variantes et index de provenance par champ critique ;
 - snapshots JSON du catalogue et de chaque verdict, validation, checksums, détection des doublons et rapports de différences ;
 - contribution facultative aux priorités du catalogue, agrégée sans événement brut, cookie, identifiant de navigateur ni adresse IP persistée ;
-- rapport privé de priorisation avec seuil minimal de cinq contributions par dimension ;
+- rapport privé de priorisation avec seuil minimal de cinq contributions par dimension, couverture pondérée par la demande observée et objectif opérationnel explicite de 80 % ;
 - funnel du calculateur agrégé sans URL, referrer, cookie ni identifiant, avec rapport privé et contrôle de cohérence du taux ;
 - serveur MCP Streamable HTTP en lecture seule, neuf outils, six ressources, trois prompts, pagination, quotas, limite de taille, contrôle Origin, santé et métriques agrégées ;
 - workflows CI, déploiement, sécurité, snapshot et disponibilité, avec permissions minimales et actions épinglées ;

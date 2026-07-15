@@ -22,7 +22,7 @@ describe('CompatAir passport', () => {
 		const report = await createPassportReport(configuration, compressors, tools, CATALOG_VERIFIED_AT, '2026-07-14T10:00:00.000Z');
 		expect(report.schemaVersion).toBe(PASSPORT_SCHEMA_VERSION);
 		expect(report.passportId).toMatch(/^[a-f0-9]{64}$/);
-		expect(report.result.calculationVersion).toBe('1.1.0');
+		expect(report.result.calculationVersion).toBe('1.2.0');
 		expect(report.sources.length).toBeGreaterThanOrEqual(2);
 		expect(report.warnings.join(' ')).toContain('ne sont pas soustraites');
 	});

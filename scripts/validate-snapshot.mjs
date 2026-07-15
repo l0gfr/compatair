@@ -69,6 +69,13 @@ if (snapshot.metrics?.correctionLeadTime) {
 	if (multiPressureFad.availableCount > multiPressureFad.eligibleCount || multiPressureFad.percentage < 0 || multiPressureFad.percentage > 100) errors.push('métrique FAD multi-pression invalide');
 	if (referenceStability.stableCount + new Set(referenceStability.changes.map((change) => change.productId)).size + referenceStability.missingBaselineCount !== referenceStability.monitoredCount) errors.push('métrique de stabilité incohérente');
 	if (contradictionResponses.answeredCount + contradictionResponses.openCount !== contradictionResponses.totalCount || contradictionResponses.responseRate < 0 || contradictionResponses.responseRate > 100) errors.push('métrique de contradiction incohérente');
+	const program = snapshot.measurementProgram;
+	if (!program?.baseline || !program?.trend || !program?.targets || !Array.isArray(program.history) || !program.history.length) errors.push('programme mensuel de l’observatoire invalide');
+	else {
+		if (JSON.stringify(program.baseline) !== JSON.stringify(program.history[0]) || program.history[0].kind !== 'baseline') errors.push('ligne de base mensuelle incohérente');
+		for (let index = 1; index < program.history.length; index += 1) if (program.history[index].period <= program.history[index - 1].period || program.history[index].kind !== 'monthly') errors.push(`période mensuelle invalide : ${program.history[index].period}`);
+		if (program.history.length < 2 && program.trend.status !== 'insufficient_data') errors.push('tendance documentaire prématurée');
+	}
 }
 if (snapshot.records && snapshot.channels) {
 	const channels = new Set(['manual', 'manufacturer', 'merchant', 'measured']);

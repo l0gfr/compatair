@@ -10,7 +10,33 @@ describe('demand prioritization', () => {
 		});
 		expect(report.priorities.tools).toHaveLength(1);
 		expect(report.priorities.tools[0]).toMatchObject({ toolId: 'tool-a', demandCount: 12, continuousCompressorCount: 1, insufficientDataCount: 1 });
+		expect(report.coverage).toMatchObject({ status: 'measured', weightedCoveragePercent: 50, unweightedCoveragePercent: 50, targetPercent: 80, targetStatus: 'below_target', gapPercentagePoints: 30, visibleDemandContributions: 12, totalToolSelections: 16, visibleDemandSharePercent: 75 });
 		expect(report.priorities.categories).toEqual([{ category: 'Ponçage', demandCount: 12 }]);
 		expect(JSON.stringify(report)).not.toContain('tool-b');
+	});
+
+	it('weights each tool coverage by observed demand and ranks recoverable missing pairs', () => {
+		const report = rankDemand({
+			aggregates: { schemaVersion: '1.0.0', totalContributions: 100, dimensions: { tools: { popular: 70, niche: 30 } } },
+			catalog: { catalogVersion: 'catalog', compressors: Array.from({ length: 10 }, (_, index) => ({ id: `c-${index}`, brand: 'Marque', model: `C${index}` })), tools: [{ id: 'popular', label: 'Populaire' }, { id: 'niche', label: 'Niche' }] },
+			verdicts: { verdictVersion: 'verdicts', pairs: [
+				...Array.from({ length: 8 }, (_, index) => ({ compressorId: `c-${index}`, toolId: 'popular', verdict: 'continuous', requiredFadLpm: 100 })),
+				...Array.from({ length: 2 }, (_, index) => ({ compressorId: `c-${index + 8}`, toolId: 'popular', verdict: 'insufficient_data', requiredFadLpm: 100 })),
+				...Array.from({ length: 2 }, (_, index) => ({ compressorId: `c-${index}`, toolId: 'niche', verdict: 'continuous', requiredFadLpm: 100 })),
+				...Array.from({ length: 8 }, (_, index) => ({ compressorId: `c-${index + 2}`, toolId: 'niche', verdict: 'insufficient_data', requiredFadLpm: 100 })),
+			] },
+		});
+		expect(report.coverage).toMatchObject({ weightedCoveragePercent: 62, unweightedCoveragePercent: 50, targetStatus: 'below_target', visibleDemandSharePercent: 100 });
+		expect(report.priorities.tools.map((tool) => tool.toolId)).toEqual(['niche', 'popular']);
+		expect(report.priorities.compressorSources[0]).toMatchObject({ compressorId: 'c-8', weightedInsufficientDemand: 100, missingPairCount: 2, affectedVisibleToolCount: 2 });
+	});
+
+	it('refuses to fabricate coverage when visible demand has no matching verdicts', () => {
+		const report = rankDemand({
+			aggregates: { schemaVersion: '1.0.0', totalContributions: 7, dimensions: { tools: { unknown: 7 } } },
+			catalog: { catalogVersion: 'catalog', tools: [] },
+			verdicts: { verdictVersion: 'verdicts', pairs: [] },
+		});
+		expect(report.coverage).toMatchObject({ status: 'insufficient_data', weightedCoveragePercent: null, targetStatus: 'insufficient_data', excludedVisibleToolCount: 1 });
 	});
 });

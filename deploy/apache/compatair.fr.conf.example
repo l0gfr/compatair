@@ -39,6 +39,11 @@
 	ErrorDocument 410 /410/
 
 	ProxyPreserveHost On
+	# Migration des anciennes pages quadratiques. Le service valide les deux
+	# slugs contre le catalogue, redirige les couples connus et répond 410 sinon.
+	ProxyPass /compatibilite/ http://127.0.0.1:8787/compatibilite/ timeout=5 connectiontimeout=2
+	ProxyPassReverse /compatibilite/ http://127.0.0.1:8787/compatibilite/
+	RewriteRule ^compatibilite$ - [R=410,L]
 	ProxyPass /api/v1/compatibility http://127.0.0.1:8787/api/v1/compatibility timeout=8 connectiontimeout=2
 	ProxyPassReverse /api/v1/compatibility http://127.0.0.1:8787/api/v1/compatibility
 	ProxyPass /events http://127.0.0.1:8787/events timeout=5 connectiontimeout=2

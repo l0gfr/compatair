@@ -57,7 +57,10 @@
 					<div><dt>Outils</dt><dd data-tools></dd></div>
 					<div><dt>Organisation</dt><dd data-mode></dd></div>
 					<div><dt>Profil</dt><dd data-usage></dd></div>
-					<div><dt>Flexible</dt><dd data-hose></dd></div>
+						<div><dt>Flexible</dt><dd data-hose></dd></div>
+						<div><dt>Chute mesurée en charge</dt><dd data-pressure-drop></dd></div>
+						<div><dt>Débit de fuite mesuré</dt><dd data-leak></dd></div>
+						<div><dt>Pression disponible</dt><dd data-supply-pressure></dd></div>
 					<div><dt>Distance totale</dt><dd data-distance></dd></div>
 					<div><dt>Raccords</dt><dd data-fittings></dd></div>
 					<div><dt>Traitement d’air</dt><dd data-filtration></dd></div>
@@ -140,7 +143,10 @@
 			setText('[data-tools]', report.toolLabels.join(', '));
 			setText('[data-mode]', report.configuration.mode === 'simultaneous' ? 'Utilisation simultanée' : 'Utilisation successive');
 			setText('[data-usage]', `${usageLabels[report.configuration.usageProfile]} · session ${report.configuration.sessionMinutes} min`);
-			setText('[data-hose]', `${valueOrMissing(report.configuration.hoseLengthMeters, 'm')} · diamètre intérieur ${valueOrMissing(report.configuration.hoseInnerDiameterMm, 'mm')}`);
+				setText('[data-hose]', `${valueOrMissing(report.configuration.hoseLengthMeters, 'm')} · diamètre intérieur ${valueOrMissing(report.configuration.hoseInnerDiameterMm, 'mm')}`);
+				setText('[data-pressure-drop]', valueOrMissing(report.configuration.measuredPressureDropBar, 'bar'));
+				setText('[data-leak]', valueOrMissing(report.configuration.measuredLeakLpm, 'L/min'));
+				setText('[data-supply-pressure]', valueOrMissing(report.configuration.supplyPressureBar, 'bar'));
 			setText('[data-distance]', valueOrMissing(report.configuration.networkDistanceMeters, 'm'));
 			setText('[data-fittings]', `${fittingLabels[report.configuration.fittingStandard]} · ${report.configuration.fittingCount ?? 'nombre non renseigné'}`);
 			setText('[data-filtration]', filtrationLabels[report.configuration.filtration]);

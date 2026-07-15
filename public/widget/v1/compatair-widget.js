@@ -6,7 +6,7 @@
 	var currentScript = document.currentScript;
 
 	function widgetOrigin(script) {
-		try { return new URL(script && script.src ? script.src : 'https://compatair.fr/widget/v1.0.0/compatair-widget.js', document.baseURI).origin; }
+		try { return new URL(script && script.src ? script.src : 'https://compatair.fr/widget/v1/compatair-widget.js', document.baseURI).origin; }
 		catch (_) { return 'https://compatair.fr'; }
 	}
 
@@ -14,7 +14,6 @@
 		try {
 			var url = new URL(String(value || ''), origin);
 			if (url.origin !== origin || url.hash) return null;
-			if (/^\/compatibilite\/[a-z0-9-]+--[a-z0-9-]+\/$/.test(url.pathname) && !url.search) return { href: url.href, type: 'detail' };
 			var keys = []; url.searchParams.forEach(function (_, key) { keys.push(key); });
 			var toolId = url.searchParams.get('outil') || '';
 			var compressorId = url.searchParams.get('compresseur') || '';
@@ -80,7 +79,7 @@
 					view.version.textContent = 'Moteur ' + String(data.calculationVersion || 'inconnu');
 					view.verdict.textContent = LABELS[result.verdict]; view.verdict.className = 'verdict ' + result.verdict;
 					view.detail.textContent = data.compressor.brand + ' ' + data.compressor.model + ' × ' + data.tool.label + (typeof result.requiredFadLpm === 'number' ? ' · FAD recommandé ' + Math.round(result.requiredFadLpm) + ' L/min.' : '.');
-					view.link.href = parsed.detailsUrl; view.link.textContent = parsed.detailsType === 'calculator' ? 'Compléter le calcul' : 'Voir le calcul et les sources'; view.link.hidden = false;
+					view.link.href = parsed.detailsUrl; view.link.textContent = 'Compléter le calcul'; view.link.hidden = false;
 					return true;
 				})
 				.catch(function (error) { if (error && error.name === 'AbortError') return false; fail('Le service de compatibilité ne répond pas. Aucun verdict de secours n’est fabriqué.'); return false; });

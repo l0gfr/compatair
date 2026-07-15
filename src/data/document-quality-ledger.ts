@@ -4,6 +4,7 @@ export const documentQualityLedger = documentQualityLedgerSchema.parse({
 	schemaVersion: '1.0.0',
 	startedAt: '2026-07-15',
 	corrections: [
+		{ id: 'quadratic-page-migration-contract', title: 'Migration des anciennes pages de compatibilité', openedAt: '2026-07-15', resolvedAt: '2026-07-15', summary: 'Les anciennes URL exactes sont redirigées vers le calculateur et les références inconnues répondent 410, avec contrat explicite pour les widgets en cache.', impact: 'La suppression du HTML quadratique ne laisse plus le cycle de vie des anciennes intégrations implicite.' },
 		{ id: 'catalog-counter-dynamic', title: 'Compteur des comparatifs', openedAt: null, resolvedAt: '2026-07-14', summary: 'La mention fixe « 24 références documentées » a été remplacée par un compteur actualisé automatiquement lors de la publication.', impact: 'La taille affichée du catalogue suit désormais les données publiées.' },
 		{ id: 'javascript-budget-enforced', title: 'Poids des pages', openedAt: null, resolvedAt: '2026-07-14', summary: 'Une promesse de légèreté devenue inexacte a été retirée et remplacée par des budgets automatiques de JavaScript.', impact: 'Une page dépassant le budget déclaré bloque désormais la publication.' },
 		{ id: 'verdict-consistency', title: 'Cohérence des résultats', openedAt: null, resolvedAt: '2026-07-14', summary: 'Le calculateur, les fiches produit et les pages de compatibilité utilisent désormais le même moteur et le même cycle de service.', impact: 'Une configuration identique produit le même verdict sur toutes les surfaces.' },

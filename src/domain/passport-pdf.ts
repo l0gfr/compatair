@@ -121,6 +121,7 @@ export function createPassportPdf(report: PassportReport, passportUrl: string) {
 	for (const label of report.toolLabels) addBullet(label);
 	addBullet(`Organisation : ${report.configuration.mode === 'simultaneous' ? 'outils simultanés' : 'outils successifs'} - profil ${usageLabel(report.configuration.usageProfile).toLowerCase()} - session ${report.configuration.sessionMinutes} min.`);
 	addBullet(`Flexible : ${report.configuration.hoseLengthMeters ?? 'non renseigné'} m - diamètre intérieur ${report.configuration.hoseInnerDiameterMm ?? 'non renseigné'} mm - distance totale ${report.configuration.networkDistanceMeters ?? 'non renseignée'} m.`);
+	addBullet(`Mesures en charge : chute de pression ${report.configuration.measuredPressureDropBar ?? 'non renseignée'} bar - fuite ${report.configuration.measuredLeakLpm ?? 'non renseignée'} L/min - pression disponible ${report.configuration.supplyPressureBar ?? 'non renseignée'} bar.`);
 	addBullet(`Raccords : ${fittingLabel(report.configuration.fittingStandard)} - ${report.configuration.fittingCount ?? 'nombre non renseigné'}.`);
 	addBullet(`Traitement d'air : ${filtrationLabel(report.configuration.filtration)}.`);
 

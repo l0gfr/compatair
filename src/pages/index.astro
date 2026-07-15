@@ -32,13 +32,28 @@ const comparisonCount = tools.length * compressors.length;
 						</div>
 					</div>
 
-					<aside class="home-method-rail" aria-label="Éléments vérifiés par CompatAir">
-						<p class="home-rail-title">Ce que CompatAir vérifie</p>
-						<ol>
-							<li><span>01</span><div><strong>Le besoin de vos outils</strong><small>Consommation d’air et pression de travail.</small></div></li>
-							<li><span>02</span><div><strong>Le débit des compresseurs</strong><small>Le <a href="/glossaire/#fad">débit restitué</a> réellement disponible, pas le <a href="/glossaire/#debit-aspire">débit aspiré</a>.</small></div></li>
-							<li><span>03</span><div><strong>La compatibilité réelle</strong><small>Usage continu, intermittent, impossible ou données insuffisantes.</small></div></li>
-						</ol>
+					<aside class="home-command-center" data-home-command-center aria-label="Poste de contrôle CompatAir">
+						<header>
+							<div><span class="home-live-dot" aria-hidden="true"></span><strong>CompatAir / Control</strong></div>
+							<small>Source → calcul → verdict</small>
+						</header>
+						<a class="home-command-primary" href="/calculateur/">
+							<span class="home-command-code">01 / Moteur déterministe</span>
+							<strong>Vérifier une configuration</strong>
+							<p>Dimensionnez l’usage, puis voyez le plus petit changement qui le rend possible.</p>
+							<footer><span>Contrefactuel + Passeport local</span><b aria-hidden="true">→</b></footer>
+						</a>
+						<nav class="home-command-grid" aria-label="Fonctionnalités distinctives CompatAir">
+							<a href="/radar-contradictions/"><span>02 / Radar</span><strong>Contradictions</strong><small>Notice ↔ fabricant ↔ terrain</small><b aria-hidden="true">↗</b></a>
+							<a href="/graphe-preuve/"><span>03 / Preuve</span><strong>Graphe interactif</strong><small>Verdict → champ → document</small><b aria-hidden="true">↗</b></a>
+							<a href="/scanner/"><span>04 / Identifier</span><strong>Scanner exact</strong><small>MPN, EAN, photo ou code-barres</small><b aria-hidden="true">↗</b></a>
+							<a href="/observatoire-qualite-documentaire/"><span>05 / Qualité</span><strong>Observatoire</strong><small>Corrections et stabilité suivies</small><b aria-hidden="true">↗</b></a>
+						</nav>
+						<footer class="home-command-status">
+							<div><small>Corpus</small><strong>{comparisonCount.toLocaleString('fr-FR')}</strong><span>couples auditables</span></div>
+							<div><small>Décision</small><strong>4</strong><span>verdicts explicites</span></div>
+							<div><small>Boîte noire</small><strong>0</strong><span>score commercial</span></div>
+						</footer>
 					</aside>
 				</div>
 
@@ -95,6 +110,14 @@ const comparisonCount = tools.length * compressors.length;
 					<h2>Chaque réponse est expliquée.</h2>
 					<p>CompatAir n’affiche pas un résultat sans explication. Les données utilisées, les calculs appliqués et la raison du résultat restent consultables.</p>
 					<a class="home-inline-link light" href="/methodologie/">Voir comment nous vérifions</a>
+					<div class="home-verification-list" aria-label="Ce que CompatAir vérifie">
+						<p>Ce que CompatAir vérifie</p>
+						<ol>
+							<li><span>01</span><strong>Besoin de l’outil</strong><small>Débit et pression</small></li>
+							<li><span>02</span><strong><a href="/glossaire/#fad">Débit réellement restitué</a></strong><small>Jamais le <a href="/glossaire/#debit-aspire">débit aspiré</a></small></li>
+							<li><span>03</span><strong>Usage réellement couvert</strong><small>Ou donnée insuffisante</small></li>
+						</ol>
+					</div>
 				</header>
 
 				<div class="home-ledger">
@@ -179,21 +202,40 @@ const comparisonCount = tools.length * compressors.length;
 	.home-kicker-row { display: flex; justify-content: space-between; gap: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--home-line); color: #426053; font: 780 .68rem/1.3 ui-monospace, monospace; letter-spacing: .11em; text-transform: uppercase; }
 	.home-kicker-row p { margin: 0; }
 	.home-kicker-row strong { color: var(--brand); }
-	.home-hero-layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(290px, .55fr); gap: clamp(3rem, 8vw, 8rem); padding: clamp(3rem, 7vw, 6.5rem) 0 clamp(3.5rem, 6vw, 5.5rem); }
+	.home-hero-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(370px, .9fr); gap: clamp(2.5rem, 6vw, 6rem); padding: clamp(3rem, 7vw, 6.5rem) 0 clamp(3.5rem, 6vw, 5.5rem); }
 	.home-hero-copy h1 { max-width: 820px; color: var(--home-ink); font-size: clamp(2.8rem, 4.2vw, 4.35rem); font-weight: 480; line-height: .98; letter-spacing: -.035em; }
 	.home-hero-copy h1 em { color: var(--brand); font-weight: inherit; }
 	.home-lead { max-width: 730px; margin: 2rem 0 0; color: #455c51; font-size: clamp(1.04rem, 1.55vw, 1.25rem); line-height: 1.72; }
-	.home-lead a, .home-method-rail a { text-decoration-color: #86a08e; text-underline-offset: .2em; }
+	.home-lead a { text-decoration-color: #86a08e; text-underline-offset: .2em; }
 	.home-inline-link { align-self: center; color: var(--home-ink); font-size: .88rem; font-weight: 780; text-decoration-thickness: 1px; text-underline-offset: .35em; }
 	.home-inline-link.light { display: inline-block; margin-top: 1.2rem; color: #e7eee9; }
-	.home-method-rail { align-self: end; border-top: 3px solid var(--home-ink); }
-	.home-rail-title { margin: 0; padding: .8rem 0; border-bottom: 1px solid var(--home-line); color: #5b6f65; font: 780 .68rem/1.3 ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; }
-	.home-method-rail ol { margin: 0; padding: 0; list-style: none; }
-	.home-method-rail li { display: grid; grid-template-columns: 2rem 1fr; gap: .8rem; padding: 1.1rem 0; border-bottom: 1px solid var(--home-line); }
-	.home-method-rail li > span { padding-top: .18rem; color: var(--brand); font: 800 .66rem/1 ui-monospace, monospace; }
-	.home-method-rail li div { display: grid; gap: .28rem; }
-	.home-method-rail strong { font-size: .92rem; }
-	.home-method-rail small { color: #61736a; font-size: .74rem; line-height: 1.55; }
+	.home-command-center { position: relative; align-self: end; overflow: hidden; border: 1px solid rgba(211,235,86,.38); border-radius: 1.15rem; color: #f3f7f2; background: radial-gradient(circle at 100% 0, rgba(211,235,86,.16), transparent 15rem), #0b2118; box-shadow: 0 26px 55px rgba(17,40,30,.2); }
+	.home-command-center::before { position: absolute; inset: 0; opacity: .14; background-image: linear-gradient(rgba(211,235,86,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(211,235,86,.18) 1px, transparent 1px); background-size: 22px 22px; mask-image: linear-gradient(135deg, transparent 20%, black); content: ""; pointer-events: none; }
+	.home-command-center > * { position: relative; z-index: 1; }
+	.home-command-center > header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .75rem 1rem; border-bottom: 1px solid rgba(255,255,255,.12); font: 760 .6rem/1.3 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+	.home-command-center > header div { display: flex; align-items: center; gap: .55rem; }
+	.home-command-center > header small { color: #92a99e; font-size: .55rem; }
+	.home-live-dot { width: .48rem; height: .48rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 .22rem rgba(211,235,86,.1), 0 0 1rem rgba(211,235,86,.55); }
+	.home-command-primary { display: grid; gap: .35rem; padding: 1.25rem; border-bottom: 1px solid rgba(255,255,255,.14); color: white; background: linear-gradient(115deg, rgba(211,235,86,.11), rgba(255,255,255,.02)); text-decoration: none; transition: background-color .18s ease; }
+	.home-command-primary:hover { background-color: rgba(211,235,86,.08); }
+	.home-command-code, .home-command-grid a > span { color: var(--accent); font: 800 .57rem/1.3 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+	.home-command-primary > strong { font: 520 clamp(1.35rem, 2vw, 1.8rem)/1.08 "Newsreader Variable", Georgia, serif; }
+	.home-command-primary > p { max-width: 36rem; margin: .15rem 0 .25rem; color: #b5c7bd; font-size: .74rem; line-height: 1.5; }
+	.home-command-primary footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: #e4ebdf; font-size: .65rem; font-weight: 760; }
+	.home-command-primary footer b { color: var(--accent); font-size: 1.1rem; }
+	.home-command-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.home-command-grid a { position: relative; display: grid; min-height: 8rem; gap: .18rem; align-content: start; padding: 1rem; border-bottom: 1px solid rgba(255,255,255,.11); color: #f1f5ef; text-decoration: none; transition: background-color .18s ease; }
+	.home-command-grid a:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.11); }
+	.home-command-grid a:hover { background: rgba(211,235,86,.08); }
+	.home-command-grid strong { margin-top: .25rem; font-size: .78rem; }
+	.home-command-grid small { max-width: 12rem; color: #8fa59a; font-size: .61rem; line-height: 1.45; }
+	.home-command-grid b { position: absolute; right: .8rem; bottom: .65rem; color: #759184; font-size: .8rem; }
+	.home-command-status { display: grid; grid-template-columns: repeat(3, 1fr); }
+	.home-command-status div { display: grid; gap: .05rem; padding: .75rem; border-right: 1px solid rgba(255,255,255,.11); }
+	.home-command-status div:last-child { border-right: 0; }
+	.home-command-status small { color: #82988d; font: 760 .5rem/1.3 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+	.home-command-status strong { color: var(--accent); font: 520 1.05rem/1.1 "Newsreader Variable", Georgia, serif; }
+	.home-command-status span { color: #93a79d; font-size: .52rem; line-height: 1.35; }
 	.home-equation { display: grid; grid-template-columns: .62fr 1fr auto 1fr auto 1fr; align-items: stretch; border-block: 1px solid var(--home-line); }
 	.home-equation > p { margin: 0; padding: 1.2rem 1.2rem 1.2rem 0; color: #596e63; font: 780 .66rem/1.45 ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; }
 	.home-equation > div { display: grid; gap: .12rem; padding: 1rem 1.2rem; border-left: 1px solid var(--home-line); }
@@ -214,15 +256,23 @@ const comparisonCount = tools.length * compressors.length;
 	.home-path-list { border-top: 1px solid var(--home-ink); }
 	.home-path-list > a { display: grid; grid-template-columns: 2.5rem 1fr auto; gap: 1.2rem; align-items: center; padding: 1.65rem 0; border-bottom: 1px solid var(--home-line); text-decoration: none; transition: padding .2s ease, color .2s ease; }
 	.home-path-list > a:hover { padding-left: .75rem; color: var(--brand); }
-	.home-path-list > a > span { color: #779086; font: 780 .68rem/1 ui-monospace, monospace; }
+	.home-path-list > a > span { color: #52665c; font: 780 .68rem/1 ui-monospace, monospace; }
 	.home-path-list > a div { display: grid; gap: .28rem; }
 	.home-path-list strong { font: 530 clamp(1.35rem, 2.3vw, 2rem)/1.15 "Newsreader Variable", Georgia, serif; }
-	.home-path-list small { color: #64776d; font-size: .78rem; }
+	.home-path-list small { color: #586b61; font-size: .78rem; }
 	.home-path-list b { font-size: 1.3rem; font-weight: 400; }
 	.home-engine { padding: clamp(5rem, 9vw, 8rem) 0; color: white; background: #0b2017; }
 	.home-section-intro-light h2 { color: #f5f4ed; }
 	.home-section-intro-light > p:last-of-type { color: #aebfb6; }
 	.home-section-intro-light .home-index { color: var(--accent); }
+	.home-verification-list { margin-top: 2rem; border-top: 1px solid rgba(255,255,255,.35); }
+	.home-verification-list > p { margin: 0; padding: .7rem 0; color: var(--accent); font: 780 .6rem/1.3 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+	.home-verification-list ol { margin: 0; padding: 0; border-top: 1px solid rgba(255,255,255,.1); list-style: none; }
+	.home-verification-list li { display: grid; grid-template-columns: 1.7rem 1fr; gap: .15rem .55rem; padding: .7rem 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+	.home-verification-list li > span { grid-row: 1 / 3; padding-top: .15rem; color: #718b7e; font: 760 .56rem/1 ui-monospace, monospace; }
+	.home-verification-list strong { color: #f4f5ef; font-size: .75rem; }
+	.home-verification-list small { color: #8fa49a; font-size: .65rem; }
+	.home-verification-list a { display: inline-flex; min-height: 24px; align-items: center; color: inherit; text-underline-offset: .2em; }
 	.home-ledger { border-top: 1px solid rgba(255,255,255,.5); }
 	.home-ledger > header, .home-ledger > footer { display: flex; justify-content: space-between; gap: 1rem; padding: .9rem 0; color: #91a69b; font: 750 .64rem/1.4 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
 	.home-ledger > header strong { color: var(--accent); }
@@ -248,19 +298,19 @@ const comparisonCount = tools.length * compressors.length;
 	.home-lead-story > a { display: inline-block; margin-top: 1.2rem; color: var(--brand-dark); font-weight: 800; text-underline-offset: .3em; }
 	.home-story-list { display: grid; align-content: start; padding-left: clamp(1.5rem, 4vw, 3rem); }
 	.home-story-list article { display: grid; grid-template-columns: 2rem 1fr; gap: .8rem; padding: 1.4rem 0; border-bottom: 1px solid var(--home-line); }
-	.home-story-list article > span { color: #84968d; font: 760 .65rem/1.4 ui-monospace, monospace; }
+	.home-story-list article > span { color: #52665c; font: 760 .65rem/1.4 ui-monospace, monospace; }
 	.home-story-list article p { margin: 0 0 .35rem; font-size: .58rem; }
 	.home-story-list h3 { margin: 0; font: 530 clamp(1.12rem, 2vw, 1.42rem)/1.16 "Newsreader Variable", Georgia, serif; }
 	.home-all-guides { justify-self: end; margin-top: 1.3rem; color: var(--brand-dark); font-size: .78rem; font-weight: 800; text-underline-offset: .3em; }
 	.home-glossary-line { display: grid; grid-template-columns: .55fr 1.25fr 1fr auto; gap: 1.5rem; align-items: center; padding: 1.4rem 0; border-bottom: 1px solid var(--home-line); text-decoration: none; }
 	.home-glossary-line > span { color: var(--brand); font: 820 .66rem/1.3 ui-monospace, monospace; letter-spacing: .09em; text-transform: uppercase; }
 	.home-glossary-line strong { font: 530 1.35rem/1.15 "Newsreader Variable", Georgia, serif; }
-	.home-glossary-line small { color: #62766b; }
+	.home-glossary-line small { color: #56695f; }
 	.home-glossary-line b { font-size: 1.3rem; font-weight: 400; }
 	.home-catalog-proof { border-top: 1px solid var(--home-line); }
 	.home-catalog-links { border-top: 1px solid var(--home-ink); }
 	.home-catalog-links a { display: grid; grid-template-columns: .55fr 1fr auto; gap: 1rem; align-items: baseline; padding: 1.2rem 0; border-bottom: 1px solid var(--home-line); text-decoration: none; }
-	.home-catalog-links span { color: #6b7d74; font: 780 .64rem/1.4 ui-monospace, monospace; letter-spacing: .07em; text-transform: uppercase; }
+	.home-catalog-links span { color: #52665c; font: 780 .64rem/1.4 ui-monospace, monospace; letter-spacing: .07em; text-transform: uppercase; }
 	.home-catalog-links strong { font: 530 clamp(1.15rem, 2vw, 1.5rem)/1.15 "Newsreader Variable", Georgia, serif; }
 	.home-catalog-links b { color: var(--brand); font-weight: 500; }
 	.home-closing { padding: clamp(4rem, 8vw, 7rem) 0; border-top: 1px solid rgba(255,255,255,.08); color: #f3eee4; background: radial-gradient(circle at 88% 18%, rgba(197,164,109,.16), transparent 25rem), radial-gradient(circle at 8% 110%, rgba(48,116,88,.28), transparent 30rem), linear-gradient(122deg, #1b4034 0%, #102c23 54%, #0b211a 100%); }
@@ -276,7 +326,7 @@ const comparisonCount = tools.length * compressors.length;
 		.home-hero { background: radial-gradient(circle at 15% 4%, rgba(211,235,86,.16), transparent 24rem), #f7f4ec; }
 		.home-hero-layout, .home-section-grid { grid-template-columns: 1fr; }
 		.home-hero-layout { gap: 3rem; }
-		.home-method-rail { max-width: 620px; }
+		.home-command-center { width: min(100%, 720px); }
 		.home-equation { grid-template-columns: repeat(3, 1fr); }
 		.home-equation > p { grid-column: 1 / -1; border-bottom: 1px solid var(--home-line); }
 		.home-equation > b { display: none; }

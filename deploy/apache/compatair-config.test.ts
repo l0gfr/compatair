@@ -59,6 +59,13 @@ describe('CompatAir Apache CSP', () => {
 		expect(config.match(/Cross-Origin-Resource-Policy "cross-origin"/g)).toHaveLength(2);
 	});
 
+	it('routes the retired compatibility namespace through the validated migration handler', () => {
+		expect(config).toContain('ProxyPass /compatibilite/ http://127.0.0.1:8787/compatibilite/');
+		expect(config).toContain('ProxyPassReverse /compatibilite/ http://127.0.0.1:8787/compatibilite/');
+		expect(config).toContain('RewriteRule ^compatibilite$ - [R=410,L]');
+		expect(config.indexOf('ProxyPass /compatibilite/')).toBeLessThan(config.indexOf('ProxyPass /api/v1/compatibility'));
+	});
+
 	it('reserves immutable caching for versioned or hashed JavaScript', () => {
 		expect(assetsDirectory).toBeDefined();
 		const escapedAssetsDirectory = assetsDirectory!.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

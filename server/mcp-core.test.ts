@@ -10,7 +10,7 @@ describe('MCP core', () => {
 	it('does not return fabricated offers', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 4, method: 'tools/call', params: { name: 'find_offers', arguments: { productId: 'x' } } }); expect(response.result.structuredContent.offers).toEqual([]); });
 	it('sizes a per-action demand only from an explicit cadence', () => {
 		const response: any = core.handle({ jsonrpc: '2.0', id: 5, method: 'tools/call', params: { name: 'size_compressor', arguments: { demands: [{ model: 'per-action', litersPerAction: .66, actionsPerMinute: 30, pressureBar: 6.3 }] } } });
-		expect(response.result.structuredContent.engineVersion).toBe('1.1.0');
+		expect(response.result.structuredContent.engineVersion).toBe('1.2.0');
 		expect(response.result.structuredContent.sizing.peakFlowLpm).toBeCloseTo(19.8, 10);
 		expect(response.result.structuredContent.sizing.flowBasis).toBe('derived-average');
 	});
@@ -32,5 +32,9 @@ describe('MCP core', () => {
 	it('rejects unexpected properties and non-finite-equivalent input shapes', () => {
 		const response: any = core.handle({ jsonrpc: '2.0', id: 9, method: 'tools/call', params: { name: 'search_compressors', arguments: { query: 'test', constructor: 'unexpected' } } });
 		expect(response.result.isError).toBe(true);
+	});
+	it('includes only explicit measured leak and pressure drop in sizing', () => {
+		const response: any = core.handle({ jsonrpc: '2.0', id: 10, method: 'tools/call', params: { name: 'size_compressor', arguments: { demands: [{ flowLpm: 100, pressureBar: 6 }], measuredLeakLpm: 15, measuredPressureDropBar: .7 } } });
+		expect(response.result.structuredContent.sizing).toMatchObject({ peakFlowLpm: 115, averageFlowLpm: 115, toolPressureBar: 6, requiredPressureBar: 6.7, measuredLeakLpm: 15, measuredPressureDropBar: .7 });
 	});
 });

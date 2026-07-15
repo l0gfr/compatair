@@ -137,7 +137,7 @@ describe('air demand sizing', () => {
 		expect(sizeAirDemand({ toolFlowLpm: 200, safetyMargin: 0.25 })).toEqual({
 			peakFlowLpm: 200,
 			recommendedFadLpm: 250,
-			calculationVersion: '1.1.0',
+			calculationVersion: '1.2.0',
 		});
 	});
 
@@ -157,6 +157,21 @@ describe('air demand sizing', () => {
 		expect(result.averageFlowLpm).toBe(120);
 		expect(result.requiredPressureBar).toBe(7);
 		expect(result.recommendedFadLpm).toBe(350);
+	});
+
+	it('adds only explicitly measured leakage and pressure drop', () => {
+		const result = sizeConfiguration({
+			demands: [{ id: 'tool', flowLpm: 100, pressureBar: 6 }],
+			measuredLeakLpm: 15,
+			measuredPressureDropBar: .7,
+			supplyPressureBar: 6.5,
+			compressor: { maxPressureBar: 8, availableFadLpm: 150 },
+		});
+		expect(result).toMatchObject({ peakFlowLpm: 115, averageFlowLpm: 115, toolPressureBar: 6, requiredPressureBar: 6.7, measuredLeakLpm: 15, measuredPressureDropBar: .7, availablePressureBar: 6.5, verdict: 'incompatible', limitingFactor: 'pressure' });
+	});
+
+	it('rejects a measured drop that pushes total required pressure beyond the supported range', () => {
+		expect(() => sizeConfiguration({ demands: [{ id: 'tool', flowLpm: 100, pressureBar: 30 }], measuredPressureDropBar: 25 })).toThrow('limite de calcul de 50 bar');
 	});
 
 	it('returns intermittent only when tank cut-in and cut-out are explicit', () => {

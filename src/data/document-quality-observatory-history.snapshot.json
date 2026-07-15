@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "startedAt": "2026-07-15",
+  "targetPolicy": {
+    "policyVersion": "1.0.0",
+    "correctionLeadTime": {
+      "status": "pending_baseline",
+      "medianDays": null,
+      "minimumMeasuredCount": 2,
+      "rationale": "Aucun délai chiffré n'est fixé avant deux corrections disposant d'une date d'ouverture et d'une date de résolution."
+    },
+    "multiPressureFad": {
+      "status": "pending_trend",
+      "targetPercent": null,
+      "minimumPeriodCount": 2,
+      "rationale": "Aucun seuil chiffré n'est présenté comme objectif avant une deuxième période mensuelle comparable."
+    },
+    "referenceBaselineCoverage": {
+      "targetPercent": 100,
+      "rationale": "Toute référence MPN suivie doit posséder une ligne de base publique."
+    },
+    "contradictionResponses": {
+      "targetPercent": 100,
+      "rationale": "Toute contradiction recensée doit publier un arbitrage, une réserve ou un refus d'utiliser la valeur."
+    }
+  },
+  "snapshots": [
+    {
+      "period": "2026-07",
+      "kind": "baseline",
+      "capturedAt": "2026-07-15",
+      "metrics": {
+        "correctionMedianDays": 0,
+        "measurableCorrectionCount": 1,
+        "multiPressureFadPercentage": 64,
+        "referenceBaselineCoveragePercent": 100,
+        "referenceChangeCount": 0,
+        "contradictionResponseRate": 100
+      }
+    }
+  ]
+}

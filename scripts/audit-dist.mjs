@@ -196,6 +196,22 @@ else {
 	if (searchIndexBytesGzip > maximumSearchIndexBytesGzip) errors.push(`data/search-index.json: ${Math.ceil(searchIndexBytesGzip / 1024)} Ko gzip, budget ${maximumSearchIndexBytesGzip / 1024} Ko dépassé`);
 }
 
+if (!artifactPaths.has('/calculateur/index.html')) errors.push('recommandation contrefactuelle: calculateur rendu absent');
+else {
+	const calculatorHtml = await readFile(join(root, '/calculateur/index.html'), 'utf8');
+	for (const marker of ['data-counterfactual', 'data-counterfactual-result', 'data-counterfactual-boundary', 'name="measuredPressureDrop"', 'name="measuredLeak"', 'name="supplyPressure"']) {
+		if (!calculatorHtml.includes(marker)) errors.push(`recommandation contrefactuelle: marqueur absent ${marker}`);
+	}
+}
+
+if (!artifactPaths.has('/index.html')) errors.push('poste de contrôle: accueil rendu absent');
+else {
+	const homeHtml = await readFile(join(root, '/index.html'), 'utf8');
+	for (const marker of ['data-home-command-center', '/calculateur/', '/radar-contradictions/', '/graphe-preuve/', '/scanner/', '/observatoire-qualite-documentaire/', 'Ce que CompatAir vérifie']) {
+		if (!homeHtml.includes(marker)) errors.push(`poste de contrôle: accès ou marqueur absent ${marker}`);
+	}
+}
+
 if (!artifactPaths.has('/data/transparency-barometer.json') || !artifactPaths.has('/barometre-transparence/index.html')) errors.push('baromètre: snapshot ou page rendue absent');
 else {
 	const snapshot = JSON.parse(await readFile(join(root, '/data/transparency-barometer.json'), 'utf8'));
@@ -214,12 +230,19 @@ else {
 	const snapshot = JSON.parse(await readFile(join(root, '/data/document-quality-observatory.json'), 'utf8'));
 	const html = await readFile(join(root, '/observatoire-qualite-documentaire/index.html'), 'utf8');
 	const { correctionLeadTime, multiPressureFad, referenceStability, contradictionResponses } = snapshot.metrics ?? {};
+	const program = snapshot.measurementProgram;
 	if (!correctionLeadTime || !multiPressureFad || !referenceStability || !contradictionResponses) errors.push('observatoire documentaire: quatre métriques obligatoires absentes');
 	else {
 		if ((correctionLeadTime.status === 'insufficient_data') !== html.includes('Non mesurable')) errors.push('observatoire documentaire: état du délai de correction incohérent entre le JSON et la page');
 		if (!html.includes(`${multiPressureFad.availableCount} compresseurs sur ${multiPressureFad.eligibleCount}`)) errors.push('observatoire documentaire: dénominateur FAD absent du rendu');
 		if (!html.includes(`${referenceStability.monitoredCount} MPN sous surveillance`)) errors.push('observatoire documentaire: périmètre de stabilité absent du rendu');
 		if (!html.includes(`${contradictionResponses.answeredCount} réponses publiées sur ${contradictionResponses.totalCount}`)) errors.push('observatoire documentaire: taux de réponse absent du rendu');
+	}
+	if (!program?.baseline || !program?.trend || !program?.targets || !Array.isArray(program.history)) errors.push('observatoire documentaire: baseline, tendance, objectifs ou historique mensuel absents');
+	else {
+		if (program.history[0]?.kind !== 'baseline' || program.baseline.period !== program.history[0]?.period) errors.push('observatoire documentaire: ligne de base incohérente');
+		if (program.history.length < 2 && program.trend.status !== 'insufficient_data') errors.push('observatoire documentaire: tendance revendiquée avec moins de deux périodes');
+		if (!html.includes('data-observatory-program') || !html.includes('Ligne de base') || !html.includes('Objectifs internes')) errors.push('observatoire documentaire: programme de mesure absent du rendu');
 	}
 }
 

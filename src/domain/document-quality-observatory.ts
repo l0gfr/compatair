@@ -61,8 +61,44 @@ export const referenceRegistrySchema = z.object({
 	})),
 });
 
+const monthlyMetricSchema = z.object({
+	correctionMedianDays: z.number().nonnegative().nullable(),
+	measurableCorrectionCount: z.number().int().nonnegative(),
+	multiPressureFadPercentage: z.number().min(0).max(100),
+	referenceBaselineCoveragePercent: z.number().min(0).max(100),
+	referenceChangeCount: z.number().int().nonnegative(),
+	contradictionResponseRate: z.number().min(0).max(100),
+});
+
+export const documentQualityHistorySchema = z.object({
+	schemaVersion: z.literal('1.0.0'),
+	startedAt: z.iso.date(),
+	targetPolicy: z.object({
+		policyVersion: z.literal('1.0.0'),
+		correctionLeadTime: z.object({ status: z.literal('pending_baseline'), medianDays: z.null(), minimumMeasuredCount: z.number().int().min(2), rationale: z.string().min(1) }),
+		multiPressureFad: z.object({ status: z.literal('pending_trend'), targetPercent: z.null(), minimumPeriodCount: z.number().int().min(2), rationale: z.string().min(1) }),
+		referenceBaselineCoverage: z.object({ targetPercent: z.number().min(0).max(100), rationale: z.string().min(1) }),
+		contradictionResponses: z.object({ targetPercent: z.number().min(0).max(100), rationale: z.string().min(1) }),
+	}),
+	snapshots: z.array(z.object({
+		period: z.string().regex(/^\d{4}-(?:0[1-9]|1[0-2])$/),
+		kind: z.enum(['baseline', 'monthly']),
+		capturedAt: z.iso.date(),
+		metrics: monthlyMetricSchema,
+	})).min(1),
+}).superRefine((history, context) => {
+	for (let index = 0; index < history.snapshots.length; index += 1) {
+		const snapshot = history.snapshots[index];
+		if (snapshot.capturedAt.slice(0, 7) !== snapshot.period) context.addIssue({ code: 'custom', path: ['snapshots', index, 'capturedAt'], message: 'La date de capture doit appartenir à la période mensuelle.' });
+		if (index === 0 && snapshot.kind !== 'baseline') context.addIssue({ code: 'custom', path: ['snapshots', index, 'kind'], message: 'Le premier snapshot doit être la ligne de base.' });
+		if (index > 0 && snapshot.kind !== 'monthly') context.addIssue({ code: 'custom', path: ['snapshots', index, 'kind'], message: 'Les snapshots suivant la ligne de base doivent être mensuels.' });
+		if (index > 0 && snapshot.period <= history.snapshots[index - 1].period) context.addIssue({ code: 'custom', path: ['snapshots', index, 'period'], message: 'Les périodes doivent être strictement croissantes.' });
+	}
+});
+
 export type DocumentQualityLedger = z.infer<typeof documentQualityLedgerSchema>;
 export type ReferenceRegistry = z.infer<typeof referenceRegistrySchema>;
+export type DocumentQualityHistory = z.infer<typeof documentQualityHistorySchema>;
 
 const DAY_MS = 86_400_000;
 const percentage = (count: number, total: number) => total ? Math.round(count / total * 100) : 0;
@@ -81,6 +117,7 @@ export function createDocumentQualityObservatory(
 	ledger: DocumentQualityLedger,
 	referenceRegistry: ReferenceRegistry,
 	publishedAt: string,
+	history: DocumentQualityHistory,
 ) {
 	const products = [...compressors, ...tools];
 	const measurableCorrections = ledger.corrections.filter((record) => record.openedAt !== null);
@@ -109,11 +146,34 @@ export function createDocumentQualityObservatory(
 
 	const answeredContradictions = ledger.contradictions.filter((record) => record.status === 'answered');
 	const contradictionDurations = answeredContradictions.map((record) => elapsedDays(record.observedAt, record.answeredAt!));
+	const baseline = history.snapshots[0];
+	const latest = history.snapshots.at(-1)!;
+	if (latest.period !== publishedAt.slice(0, 7)) throw new Error(`Snapshot mensuel documentaire manquant pour ${publishedAt.slice(0, 7)}`);
+	const previous = history.snapshots.at(-2);
+	const delta = (current: number | null, prior: number | null) => current === null || prior === null ? null : Number((current - prior).toFixed(1));
 	const payload = {
 		schemaVersion: '1.0.0' as const,
 		publishedAt,
 		scope: 'Catalogue CompatAir et registre public de qualité documentaire',
 		observationStartedAt: ledger.startedAt,
+		measurementProgram: {
+			baseline,
+			trend: {
+				status: previous ? 'measured' as const : 'insufficient_data' as const,
+				periodCount: history.snapshots.length,
+				fromPeriod: previous?.period ?? null,
+				toPeriod: latest.period,
+				deltas: previous ? {
+					correctionMedianDays: delta(latest.metrics.correctionMedianDays, previous.metrics.correctionMedianDays),
+					multiPressureFadPercentagePoints: delta(latest.metrics.multiPressureFadPercentage, previous.metrics.multiPressureFadPercentage),
+					referenceBaselineCoveragePercentagePoints: delta(latest.metrics.referenceBaselineCoveragePercent, previous.metrics.referenceBaselineCoveragePercent),
+					referenceChangeCount: latest.metrics.referenceChangeCount - previous.metrics.referenceChangeCount,
+					contradictionResponsePercentagePoints: delta(latest.metrics.contradictionResponseRate, previous.metrics.contradictionResponseRate),
+				} : null,
+			},
+			targets: history.targetPolicy,
+			history: history.snapshots,
+		},
 		metrics: {
 			correctionLeadTime: {
 				status: measurableCorrections.length ? 'measured' as const : 'insufficient_data' as const,
@@ -156,6 +216,7 @@ export function createDocumentQualityObservatory(
 			'La stabilité des références commence à la date de la ligne de base ; elle ne reconstitue pas un historique antérieur.',
 			'Une réponse à une contradiction désigne la décision documentaire de CompatAir, pas nécessairement une réponse du fabricant.',
 			'Le taux FAD multi-pression décrit le corpus CompatAir et non un échantillon aléatoire du marché.',
+			'Les objectifs sont des politiques internes de qualité documentaire, pas des références de performance du marché.',
 		],
 	};
 	return { observatoryVersion: createHash('sha256').update(JSON.stringify(payload)).digest('hex'), ...payload };

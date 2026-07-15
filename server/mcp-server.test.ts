@@ -100,6 +100,29 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(JSON.parse(result.body).sources).toHaveLength(2);
 	});
 
+	it('migrates an exact historical compatibility slug and rejects unknown legacy URLs', async () => {
+		const catalog = {
+			catalogVersion: 'catalog-test',
+			compressors: [{ id: 'compressor-a', slug: 'compressor-a' }],
+			tools: [{ id: 'tool-a', slug: 'cle-a-chocs-tool-a' }],
+		} as any;
+		const server = createCompatAirServer({ catalog, allowedOrigins: new Set(['https://compatair.fr']) });
+		const request = (url: string) => new Promise<{ status: number; headers: Record<string, string>; body: string }>((resolve) => {
+			let status = 0; let headers: Record<string, string> = {}; let body = '';
+			const incoming = { url, method: 'GET', headers: {}, socket: { remoteAddress: '127.0.0.1' } };
+			const response = { setTimeout() {}, writeHead(value: number, values: Record<string, string>) { status = value; headers = values; }, end(value = '') { body += value; resolve({ status, headers, body }); }, destroy() {} };
+			server.emit('request', incoming, response);
+		});
+		const migrated = await request('/compatibilite/compressor-a--cle-a-chocs-tool-a/');
+		expect(migrated.status).toBe(301);
+		expect(migrated.headers.Location).toBe('/calculateur/?outil=tool-a&compresseur=compressor-a');
+		const migratedWithDiscardedTracking = await request('/compatibilite/compressor-a--cle-a-chocs-tool-a/?utm_source=cache');
+		expect(migratedWithDiscardedTracking.headers.Location).toBe('/calculateur/?outil=tool-a&compresseur=compressor-a');
+		const removed = await request('/compatibilite/compressor-a--outil-inconnu/');
+		expect(removed.status).toBe(410);
+		expect(JSON.parse(removed.body)).toMatchObject({ error: 'compatibility_page_removed', replacement: '/calculateur/' });
+	});
+
 	it('routes an insufficient-data API result to a prefilled calculator instead of a missing detail page', async () => {
 		const catalog = {
 			catalogVersion: 'catalog-test', verifiedAt: '2026-07-14',
