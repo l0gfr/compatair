@@ -37,6 +37,12 @@ const compatibleCompressors = relatedTool
 	: [];
 const published = guide.data.pubDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 const externallyReviewed = guide.data.reviewStatus === 'external';
+const socialImageByCategory = {
+	Comprendre: '/social/guides__comprendre.png',
+	Choisir: '/social/guides__choisir.png',
+	Installer: '/social/guides__installer.png',
+	Utiliser: '/social/guides__utiliser.png',
+} as const;
 const articleJsonLd = {
 	'@context': 'https://schema.org',
 	'@type': 'TechArticle',
@@ -67,6 +73,7 @@ const articleJsonLd = {
 	editorialTitle={guide.data.seoTitle}
 	description={guide.data.description}
 	pageType="article"
+	imagePath={socialImageByCategory[guide.data.category]}
 	issueDate={guide.data.pubDate}
 	modifiedDate={guide.data.updatedDate ?? guide.data.pubDate}
 	breadcrumbs={[{ name: 'Guides', path: '/guides/' }, { name: guide.data.title, path: `/guides/${guide.id}/` }]}

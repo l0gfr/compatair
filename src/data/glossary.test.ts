@@ -9,6 +9,6 @@ describe('glossary', () => {
 
 	it('documents the concepts introduced by the audience and profession guides', () => {
 		const slugs = new Set(glossaryTerms.map((term) => term.slug));
-		for (const slug of ['boucle-reseau', 'consommation-en-charge', 'ligne-base', 'pression-dynamique', 'volume-par-action']) expect(slugs.has(slug)).toBe(true);
+		for (const slug of ['boucle-reseau', 'compresseur-appoint', 'consommation-en-charge', 'ligne-base', 'marche-a-vide', 'pression-dynamique', 'puissance-debit-nul', 'specific-power', 'stockage-primaire', 'stockage-secondaire', 'volume-par-action']) expect(slugs.has(slug)).toBe(true);
 	});
 });

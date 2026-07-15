@@ -1,5 +1,4 @@
 import type { APIRoute, GetStaticPaths } from 'astro';
-import { getCollection } from 'astro:content';
 import sharp from 'sharp';
 import { renderSocialCardSvg, socialCardKey, type SocialCard } from '../../domain/social-card';
 
@@ -24,6 +23,10 @@ const staticCards: SocialCard[] = [
 	{ path: '/corrections/', kicker: 'Suivi public', title: 'Journal public des corrections', subtitle: 'Valeurs, résultats et promesses mesurables' },
 	{ path: '/glossaire/', kicker: 'Référentiel', title: 'Glossaire de l’air comprimé', subtitle: 'FAD, pression, débit et qualité de l’air' },
 	{ path: '/guides/', kicker: 'Documentation', title: 'Guides techniques CompatAir', subtitle: 'Comprendre, choisir, installer et utiliser' },
+	{ path: '/guides/comprendre/', kicker: 'Comprendre', title: 'Lire les données de l’air comprimé', subtitle: 'Unités, mesures, sources et limites documentaires' },
+	{ path: '/guides/choisir/', kicker: 'Choisir', title: 'Dimensionner sans confondre les débits', subtitle: 'Besoins réels, pression de service et marge explicite' },
+	{ path: '/guides/installer/', kicker: 'Installer', title: 'Concevoir une distribution cohérente', subtitle: 'Réseau, stockage, qualité d’air et instrumentation' },
+	{ path: '/guides/utiliser/', kicker: 'Utiliser', title: 'Diagnostiquer un poste pneumatique', subtitle: 'Mesures terrain, sécurité et consommation maîtrisée' },
 	{ path: '/marques/', kicker: 'Fabricants', title: 'Marques documentées', subtitle: 'Références reliées à des sources identifiées' },
 	{ path: '/mcp-documentation/', kicker: 'Accès pour assistants', title: 'Serveur MCP CompatAir', subtitle: 'Catalogue et calculs en consultation uniquement' },
 	{ path: '/mentions-legales/', kicker: 'Éditeur', title: 'Mentions légales', subtitle: 'Identité, hébergement et responsabilité' },
@@ -40,15 +43,9 @@ const staticCards: SocialCard[] = [
 	{ path: '/sources-fiabilite/', kicker: 'Traçabilité', title: 'Sources et niveaux de fiabilité', subtitle: 'Origine, fraîcheur et confiance des données' },
 ];
 
-function buildCards(guides: Awaited<ReturnType<typeof getCollection<'guides'>>>): SocialCard[] {
-	const guideCards = guides.map((guide) => ({ path: `/guides/${guide.id}/`, kicker: `Guide · ${guide.data.category}`, title: guide.data.title, subtitle: `${guide.data.readingTime} min · sources et hypothèses explicites` }));
-	return [...staticCards, ...guideCards];
-}
-
 export const getStaticPaths: GetStaticPaths = async () => {
-	const cards = buildCards(await getCollection('guides'));
 	const keys = new Set<string>();
-	return cards.map((card) => {
+	return staticCards.map((card) => {
 		const key = socialCardKey(card.path);
 		if (keys.has(key)) throw new Error(`Carte sociale dupliquée : ${key}`);
 		keys.add(key);

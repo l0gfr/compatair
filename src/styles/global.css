@@ -486,6 +486,15 @@ h3 { font-weight: 560; }
 .editorial-path-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .8rem; }
 .editorial-path-grid a { min-height: 225px; }
 .editorial-path-grid strong { font-size: clamp(1.3rem, 2vw, 1.7rem); }
+.metier-icon { display: grid; width: 4.15rem; height: 4.15rem; place-items: center; margin-bottom: .2rem; border: 1px solid rgba(20,52,38,.12); border-radius: 1.15rem; color: var(--ink); background: #edf3e8; transform: rotate(-2deg); }
+.metier-icon svg { width: 2.85rem; height: 2.85rem; overflow: visible; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.metier-icon--carrosserie-peinture { color: #69441f; background: #f7e1c6; transform: rotate(2deg); }
+.metier-icon--menuiserie-agencement { color: #6e4b2d; background: #f1dfc5; }
+.metier-icon--maintenance-industrielle { color: #164f5a; background: #d8edf0; transform: rotate(2deg); }
+.editorial-path-grid a:hover .metier-icon { transform: rotate(0deg) scale(1.04); transition: transform .2s ease; }
+.metier-hero-layout { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.5rem; align-items: start; }
+.metier-hero-layout > .metier-icon { width: 5.5rem; height: 5.5rem; margin-top: .2rem; border-color: rgba(211,235,86,.28); color: var(--accent); background: rgba(255,255,255,.07); }
+.metier-hero-layout > .metier-icon svg { width: 4.1rem; height: 4.1rem; }
 .article-taxonomy { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: .45rem; margin: .9rem 0 1.25rem; }
 .article-taxonomy a { padding: .35rem .58rem; border: 1px solid rgba(255,255,255,.17); border-radius: 999px; color: #d7e2dc; background: rgba(255,255,255,.07); font-size: .7rem; font-weight: 800; text-decoration: none; }
 .article-taxonomy a:hover { color: var(--ink); background: var(--accent); }
@@ -536,6 +545,8 @@ h3 { font-weight: 560; }
 .article-body th { color: var(--ink); background: #e7eee4; font-size: .72rem; letter-spacing: .035em; text-transform: uppercase; }
 .article-body tbody tr:nth-child(even) { background: rgba(233,238,229,.45); }
 .article-body svg { display: block; width: 100%; height: auto; margin: 2.2rem 0 3rem; border: 1px solid rgba(20,52,38,.14); border-radius: 1.2rem; box-shadow: 0 18px 45px rgba(17,37,28,.1); }
+.article-infographic { margin: 2.2rem 0 3rem; }
+.article-infographic > svg { margin: 0; }
 .guide-next-step, .editorial-main > .related-reading { margin: 0; padding: clamp(2rem, 4vw, 3rem) var(--article-gutter); border-top: 1px solid var(--line); }
 .guide-next-step { background: linear-gradient(145deg, rgba(232,241,225,.92), rgba(250,252,247,.98)); }
 .guide-next-step h2, .editorial-main > .related-reading h2 { margin: .35rem 0 1rem; font-size: clamp(1.8rem, 3.2vw, 2.45rem); font-weight: 540; }
@@ -882,6 +893,8 @@ h3 { font-weight: 560; }
 	.footer-directory { grid-template-columns: 1fr; }
 	.footer-bottomline { align-items: flex-start; flex-direction: column; }
 	.editorial-main { --article-gutter: 1.35rem; }
+	.article-infographic { max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; scrollbar-color: rgba(25,112,79,.55) rgba(25,112,79,.08); }
+	.article-infographic > svg { width: 680px; max-width: none; }
 	.article-head { padding-block: 1.75rem; }
 	.guide-compatible-results .link-cards { grid-template-columns: 1fr; }
 	.passport-metrics, .passport-identity { grid-template-columns: 1fr; }
@@ -897,6 +910,8 @@ h3 { font-weight: 560; }
 @media print {
 	:root { color-scheme: light; }
 	body { color: #101813; background: white; font-size: 10pt; }
+	.article-infographic { overflow: visible; }
+	.article-infographic > svg { width: 100%; max-width: 100%; }
 	.site-header, .site-footer, .page-hero, .calculator-form, .share-row, .calculator-note, .result-inventory { display: none !important; }
 	.section, .calculator-section { padding: 0 !important; }
 	.container { width: 100% !important; max-width: none !important; }

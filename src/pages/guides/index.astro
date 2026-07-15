@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import MetierIcon from '../../components/MetierIcon.astro';
 import { guideAudienceIds, guideAudiences, guideMetierIds, guideMetiers } from '../../domain/editorial-taxonomy';
 import { glossaryTerms } from '../../data/glossary';
 
@@ -23,7 +24,7 @@ const guideListJsonLd = {
 		<div class="container">
 			<div class="section-head split-head"><div><p class="eyebrow">Choisir son parcours</p><h2>Partir de votre usage, pas d’une catégorie commerciale</h2></div><p>Les parcours classent les mêmes guides canoniques. Ils n’ajoutent aucune consommation moyenne et ne transforment pas un métier en profil technique supposé.</p></div>
 			<div class="audience-grid">{guideAudienceIds.map((audience) => <a href={`/guides/${guideAudiences[audience].label.toLocaleLowerCase('fr-FR')}/`}><span>{guides.filter((guide) => guide.data.audiences.includes(audience)).length} guides</span><strong>{guideAudiences[audience].label}</strong><small>{guideAudiences[audience].description}</small></a>)}</div>
-			<div class="editorial-path-grid">{guideMetierIds.map((metier) => <a href={`/guides/metiers/${metier}/`}><span>Métier · {guides.filter((guide) => guide.data.metiers.includes(metier)).length} guides</span><strong>{guideMetiers[metier].label}</strong><small>{guideMetiers[metier].description}</small></a>)}</div>
+			<div class="editorial-path-grid">{guideMetierIds.map((metier) => <a href={`/guides/metiers/${metier}/`}><MetierIcon metier={metier} /><span>Métier · {guides.filter((guide) => guide.data.metiers.includes(metier)).length} guides</span><strong>{guideMetiers[metier].label}</strong><small>{guideMetiers[metier].description}</small></a>)}</div>
 		</div>
 	</section>
 	<section class="section glossary-gateway"><div class="container glossary-banner"><div><p class="eyebrow">Définitions simples</p><h2>Un mot technique ne doit jamais rester inexpliqué</h2><p>Le <a href="/glossaire/#fad">débit réellement restitué, ou FAD</a>, la pression, l’humidité et les pertes dans les tuyaux sont définis dans le glossaire, puis reliés aux guides qui les utilisent.</p></div><div class="metric light"><strong>{glossaryTerms.length}</strong><span>termes expliqués et reliés</span><a class="button primary" href="/glossaire/">Consulter les définitions</a></div></div></section>
