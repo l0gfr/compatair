@@ -124,20 +124,25 @@
 	Header always unset Cache-Control
 	Header always set Cache-Control "no-cache"
 
-	<FilesMatch "\.(?:css|svg|png|jpg|jpeg|webp|avif|woff2)$">
+	<LocationMatch "^/(?:_assets/[^/]+|widget/v1\.0\.0/compatair-widget\.js)$">
 		Header onsuccess unset Cache-Control
 		Header always unset Cache-Control
 		Header always set Cache-Control "public, max-age=31536000, immutable"
-	</FilesMatch>
-	<LocationMatch "^/(?:_assets/[^/]+\.js|widget/v1\.0\.0/compatair-widget\.js)$">
+	</LocationMatch>
+	<LocationMatch "^/(?:images/products/|social/|favicon\.(?:svg|ico)$)">
 		Header onsuccess unset Cache-Control
 		Header always unset Cache-Control
-		Header always set Cache-Control "public, max-age=31536000, immutable"
+		Header always set Cache-Control "public, max-age=86400, stale-while-revalidate=604800"
 	</LocationMatch>
 	<LocationMatch "^/widget/v1/compatair-widget\.js$">
 		Header onsuccess unset Cache-Control
 		Header always unset Cache-Control
 		Header always set Cache-Control "no-cache"
+	</LocationMatch>
+	<LocationMatch "^/data/[^/]+\.json$">
+		Header onsuccess unset X-Robots-Tag
+		Header always unset X-Robots-Tag
+		Header always set X-Robots-Tag "noindex"
 	</LocationMatch>
 	<LocationMatch "^/data/(?:catalog|offers)\.json$">
 		Header onsuccess unset Cache-Control

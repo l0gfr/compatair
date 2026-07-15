@@ -1,3 +1,5 @@
+import { litersPerSecondToLitersPerMinute } from '../../domain/units.ts';
+
 type Specification = { label: string; value: string };
 
 type CuttingToolData = {
@@ -23,7 +25,7 @@ type CuttingToolData = {
 export function chicagoPneumaticCuttingTool(data: CuttingToolData) {
   const evidenceId = `cp-${data.mpn.toLowerCase()}-official`;
   const catalogEvidenceId = "cp-general-industry-2026-catalog";
-  const airflowLpm = data.airLitersPerSecond * 60;
+  const airflowLpm = litersPerSecondToLitersPerMinute(data.airLitersPerSecond);
   return {
     id: data.id,
     slug: data.slug,

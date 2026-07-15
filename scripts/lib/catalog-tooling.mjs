@@ -3,7 +3,7 @@ import { basename, extname, join, resolve, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const KINDS = { compressors: { exportName: 'rawCompressors' }, tools: { exportName: 'rawTools' } };
-export const MAX_PRODUCT_IMAGE_BYTES = 750 * 1024;
+export const MAX_PRODUCT_IMAGE_BYTES = 250 * 1024;
 export const MAX_PRODUCT_IMAGE_DIMENSION = 1600;
 export const PRODUCT_IMAGE_WEBP_QUALITY = 82;
 

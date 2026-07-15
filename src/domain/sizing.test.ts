@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { inflationFreeAirLiters, perActionAverageFlow, sizeAirDemand, sizeConfiguration, usableTankAir } from './sizing';
-import { barToPsi, cfmToLitersPerMinute, litersPerMinuteToCfm, psiToBar } from './units';
+import { barToPsi, cfmToLitersPerMinute, litersPerMinuteToCfm, litersPerSecondToLitersPerMinute, psiToBar } from './units';
 import { compressors, tools } from '../data/catalog';
 import { evaluateCompatibility, interpolateFad } from './compatibility';
 
@@ -11,6 +11,11 @@ describe('unit conversions', () => {
 
 	it('round-trips airflow', () => {
 		expect(cfmToLitersPerMinute(litersPerMinuteToCfm(250))).toBeCloseTo(250, 10);
+	});
+
+	it('publishes decimal airflow conversions without binary floating-point noise', () => {
+		expect(litersPerSecondToLitersPerMinute(8.3)).toBe(498);
+		expect(litersPerSecondToLitersPerMinute(2.8)).toBe(168);
 	});
 });
 

@@ -58,7 +58,7 @@ Le guide [24, 50 ou 90 litres](/guides/choisir-volume-cuve-24-50-90-litres/) exp
 
 ## Faire l’essai sur la référence exacte
 
-Ouvrez la [TC-PA 50 dans le calculateur](/calculateur/?outil=einhell-tc-pa-50), puis choisissez un modèle documenté. Recommencez avec chaque outil envisagé. Si deux outils doivent réellement fonctionner ensemble, utilisez le mode multi-outils ; sinon, comparez-les séparément.
+Ouvrez la [TC-PA 50 dans le calculateur](/calculateur/#outil=einhell-tc-pa-50), puis choisissez un modèle documenté. Recommencez avec chaque outil envisagé. Si deux outils doivent réellement fonctionner ensemble, utilisez le mode multi-outils ; sinon, comparez-les séparément.
 
 Une case vide indique l’étape suivante : retrouver la notice ou effectuer une mesure. Elle ne valide pas un achat par ressemblance.
 

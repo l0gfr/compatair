@@ -66,16 +66,38 @@ describe('CompatAir Apache CSP', () => {
 		expect(config.indexOf('ProxyPass /compatibilite/')).toBeLessThan(config.indexOf('ProxyPass /api/v1/compatibility'));
 	});
 
-	it('reserves immutable caching for versioned or hashed JavaScript', () => {
+	it('reserves immutable caching for fingerprinted build assets and the versioned widget', () => {
 		expect(assetsDirectory).toBeDefined();
-		const escapedAssetsDirectory = assetsDirectory!.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-		expect(config).toContain(`^/(?:${escapedAssetsDirectory}/[^/]+\\.js|widget/v1\\.0\\.0/compatair-widget\\.js)$`);
+		expect(config).toContain(`^/(?:${assetsDirectory}/[^/]+|widget/v1\\.0\\.0/compatair-widget\\.js)$`);
+		const immutableAssets = [...config.matchAll(/<LocationMatch "([^"]+)">([\s\S]*?)<\/LocationMatch>/g)]
+			.find(([, pattern]) => pattern.includes(`${assetsDirectory}/[^/]+`) && pattern.includes('widget/v1\\.0\\.0'))?.[2];
+		expect(immutableAssets).toContain('Cache-Control "public, max-age=31536000, immutable"');
 		expect(config).toContain('^/widget/v1/compatair-widget\\.js$');
 		const mutableAlias = config.match(
 			/<LocationMatch "\^\/widget\/v1\/compatair-widget\\\.js\$">([\s\S]*?)<\/LocationMatch>/,
 		)?.[1];
 		expect(mutableAlias).toContain('Cache-Control "no-cache"');
 		expect(mutableAlias).not.toContain('immutable');
+	});
+
+	it('keeps stable images revalidatable instead of immutable', () => {
+		const stableImages = [...config.matchAll(/<LocationMatch "([^"]+)">([\s\S]*?)<\/LocationMatch>/g)]
+			.find(([, pattern]) => pattern.includes('images/products/') && pattern.includes('social/') && pattern.includes('favicon'))?.[2];
+		expect(stableImages).toContain('Cache-Control "public, max-age=86400, stale-while-revalidate=604800"');
+		expect(stableImages).not.toContain('immutable');
+		expect(config).not.toContain('<FilesMatch "\\.(?:css|svg|png|jpg|jpeg|webp|avif|woff2)$">');
+	});
+
+	it('keeps public JSON out of search results without changing snapshot freshness', () => {
+		const publicJson = config.match(
+			/<LocationMatch "\^\/data\/\[\^\/\]\+\\\.json\$">([\s\S]*?)<\/LocationMatch>/,
+		)?.[1];
+		expect(publicJson).toContain('Header always set X-Robots-Tag "noindex"');
+		const shortLivedSnapshots = config.match(
+			/<LocationMatch "\^\/data\/\(\?:catalog\|offers\)\\\.json\$">([\s\S]*?)<\/LocationMatch>/,
+		)?.[1];
+		expect(shortLivedSnapshots).toContain('Cache-Control "public, max-age=300"');
+		expect(shortLivedSnapshots).not.toContain('immutable');
 	});
 
 	it('normalizes proxied API headers before exposing them cross-origin', () => {

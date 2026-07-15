@@ -44,7 +44,7 @@ Le calculateur affiche donc « débit moyen couvert » pour ce mode. Il ne trans
 
 ## Saisir un cas réel
 
-Ouvrez le [calculateur avec la TC-PN 50](/calculateur/?outil=einhell-tc-pn-50), puis indiquez le nombre d’outils et votre cadence mesurée ou prévue. La consommation de 0,66 L par tir reste issue de la notice. Seule la cadence vient de votre scénario.
+Ouvrez le [calculateur avec la TC-PN 50](/calculateur/#outil=einhell-tc-pn-50), puis indiquez le nombre d’outils et votre cadence mesurée ou prévue. La consommation de 0,66 L par tir reste issue de la notice. Seule la cadence vient de votre scénario.
 
 Si vous ne connaissez pas encore la cadence, chronométrez une séquence représentative sans modifier les consignes de sécurité du fabricant. CompatAir ne fournit aucune cadence par défaut.
 

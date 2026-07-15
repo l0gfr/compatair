@@ -7,10 +7,10 @@ export default defineConfig({
 	site: 'https://compatair.fr',
 	output: 'static',
 	integrations: [sitemap({
-		entryLimit: 25,
+		entryLimit: 5_000,
 		filter: (page) => {
 			const pathname = new URL(page).pathname;
-			return !pathname.startsWith('/compatibilite/') && !['/410/', '/comparateur/', '/gouvernance-editoriale/', '/offres/', '/recherche/', '/securite/'].includes(pathname);
+			return !pathname.startsWith('/compatibilite/') && !pathname.startsWith('/go/') && !['/410/', '/comparateur/', '/offres/', '/recherche/', '/securite/'].includes(pathname);
 		},
 	})],
 	build: {

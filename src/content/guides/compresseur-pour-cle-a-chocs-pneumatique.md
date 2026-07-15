@@ -40,7 +40,7 @@ La cuve fournit une réserve temporaire. Le moteur doit ensuite reconstituer cet
 
 La notice indique un flexible de 9 mm de diamètre intérieur. Une longueur importante, un raccord étroit, un filtre colmaté ou un détendeur sous-dimensionné peuvent créer une chute de pression. CompatAir conserve la longueur et le diamètre saisis, mais ne retranche aucun bar arbitraire sans courbe ou mesure.
 
-Utilisez le [calculateur avec la TC-PW 340 préchargée](/calculateur/?outil=einhell-tc-pw-340), puis vérifiez la source de chaque compresseur proposé. Le guide sur le [diamètre et la longueur du flexible](/guides/diametre-longueur-flexible-air-comprime/) complète cette vérification.
+Utilisez le [calculateur avec la TC-PW 340 préchargée](/calculateur/#outil=einhell-tc-pw-340), puis vérifiez la source de chaque compresseur proposé. Le guide sur le [diamètre et la longueur du flexible](/guides/diametre-longueur-flexible-air-comprime/) complète cette vérification.
 
 ## Sources
 

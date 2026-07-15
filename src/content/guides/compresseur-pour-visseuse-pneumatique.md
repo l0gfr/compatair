@@ -65,7 +65,7 @@ Vérifiez la pression à l’entrée de la visseuse pendant qu’elle consomme d
 - contrôler flexible, raccords, filtration et pression en charge ;
 - saisir une cadence seulement si l’usage réel est connu.
 
-Testez la [DS 14 dans le calculateur](/calculateur/?outil=metabo-ds-14), consultez sa [fiche CompatAir](/outils-pneumatiques/visseuse-pneumatique-metabo-ds-14/) et comparez les contraintes d’un [compresseur triphasé d’atelier](/guides/compresseur-triphase-ou-monophase-atelier/).
+Testez la [DS 14 dans le calculateur](/calculateur/#outil=metabo-ds-14), consultez sa [fiche CompatAir](/outils-pneumatiques/visseuse-pneumatique-metabo-ds-14/) et comparez les contraintes d’un [compresseur triphasé d’atelier](/guides/compresseur-triphase-ou-monophase-atelier/).
 
 ## Sources
 

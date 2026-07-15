@@ -22,6 +22,19 @@ describe('catalog schemas', () => {
 		})).toThrow();
 	});
 
+	it('rejects floating-point noise in a published airflow value', () => {
+		const tool = tools.find((item) => item.demandModel === 'fixed-flow');
+		expect(tool).toBeDefined();
+		expect(() => toolProfileSchema.parse({
+			...tool,
+			airflowLpm: { min: 498, typical: 498.00000000000006, max: 499 },
+		})).toThrow('Le débit publié ne peut pas contenir plus de trois décimales.');
+		expect(() => toolProfileSchema.parse({
+			...tool,
+			airflowLpm: { min: 0.0001, typical: 0.0001, max: 0.0001 },
+		})).toThrow('Le débit publié ne peut pas contenir plus de trois décimales.');
+	});
+
 	it('binds every tool to one controlled taxonomy entry', () => {
 		const categoryIds = new Set(toolTaxonomy.map((category) => category.id));
 		expect(categoryIds.size).toBe(toolTaxonomy.length);

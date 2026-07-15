@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { lstat, readdir, readFile } from 'node:fs/promises';
 import { basename, join, relative, resolve } from 'node:path';
 import { gzipSync } from 'node:zlib';
+import { readImageDimensions } from '../src/domain/image-dimensions.ts';
 import { parseJavaScriptModuleSpecifiers } from './lib/javascript-module-graph.mjs';
 
 const root = resolve('dist');
@@ -9,6 +10,7 @@ const siteOrigin = 'https://compatair.fr';
 const errors = [];
 const htmlFiles = [];
 const artifactPaths = new Set();
+const productImageDimensionsBySource = new Map();
 const maximumDocumentTitleLength = 60;
 const maximumInitialPageScriptBytesGzip = 50 * 1024;
 const maximumPassportInitialScriptBytesGzip = 45 * 1024;
@@ -76,7 +78,7 @@ function decodeXml(value) {
 function jsonLdNodes(value) {
 	if (Array.isArray(value)) return value.flatMap(jsonLdNodes);
 	if (!value || typeof value !== 'object') return [];
-	return value['@graph'] ? [value, ...jsonLdNodes(value['@graph'])] : [value];
+	return [value, ...Object.values(value).flatMap(jsonLdNodes)];
 }
 
 await walk(root);
@@ -149,16 +151,34 @@ if (!artifactPaths.has('/robots.txt')) errors.push('robots.txt: fichier absent')
 else {
 	const robots = await readFile(robotsPath, 'utf8');
 	if (!robots.includes(`Sitemap: ${siteOrigin}/sitemap-index.xml`)) errors.push('robots.txt: déclaration du sitemap absente ou invalide');
+	if (!robots.includes('Disallow: /go/')) errors.push('robots.txt: exclusion des redirections marchandes absente');
 }
 
 const titles = new Map();
 const descriptions = new Map();
+const publishedOfferIds = new Set();
+if (!artifactPaths.has('/data/offers.json')) errors.push('data: snapshot des offres absent');
+else {
+	try {
+		const offerSnapshot = JSON.parse(await readFile(join(root, '/data/offers.json'), 'utf8'));
+		if (!Array.isArray(offerSnapshot.offers)) errors.push('data/offers.json: liste des offres invalide');
+		else for (const offer of offerSnapshot.offers) {
+			if (!/^[a-z0-9-]{1,100}$/.test(offer.id ?? '')) errors.push(`data/offers.json: identifiant d’offre invalide ${offer.id ?? 'absent'}`);
+			else if (publishedOfferIds.has(offer.id)) errors.push(`data/offers.json: identifiant d’offre dupliqué ${offer.id}`);
+			else publishedOfferIds.add(offer.id);
+		}
+	} catch { errors.push('data/offers.json: JSON invalide'); }
+}
 const sitePaths = new Set(htmlFiles.map((file) => {
 	const rel = relative(root, file);
 	return rel === 'index.html' ? '/' : `/${rel.replace(/index\.html$/, '')}`;
 }));
+const indexablePaths = new Set([...sitemapUrls].map((url) => new URL(url).pathname));
+const incomingIndexableLinks = new Map([...indexablePaths].map((path) => [path, 0]));
 const generatedCompatibilityPages = [...sitePaths].filter((path) => path.startsWith('/compatibilite/'));
 if (generatedCompatibilityPages.length > 0) errors.push(`compatibilité: ${generatedCompatibilityPages.length} pages de couples générées, génération quadratique interdite`);
+const generatedAffiliateRedirectPages = [...sitePaths].filter((path) => path.startsWith('/go/'));
+if (generatedAffiliateRedirectPages.length > 0) errors.push(`affiliation: ${generatedAffiliateRedirectPages.length} redirections statiques générées, frontière serveur obligatoire`);
 if (htmlArtifactBytes > maximumHtmlArtifactBytes) errors.push(`artifact: HTML ${Math.ceil(htmlArtifactBytes / 1024 / 1024)} Mo, budget ${maximumHtmlArtifactBytes / 1024 / 1024} Mo dépassé`);
 if (totalArtifactBytes > maximumTotalArtifactBytes) errors.push(`artifact: poids total ${Math.ceil(totalArtifactBytes / 1024 / 1024)} Mo, budget ${maximumTotalArtifactBytes / 1024 / 1024} Mo dépassé`);
 
@@ -299,7 +319,6 @@ for (const file of htmlFiles) {
 	const isEditorialProductPage = /^(compresseurs|outils-pneumatiques|quel-compresseur-pour)\/[^/]+\/index\.html$/.test(label);
 	if (html.includes('data-search-index=')) errors.push(`${label}: index de recherche dupliqué dans le HTML`);
 	if (html.includes('href="/compatibilite/')) errors.push(`${label}: lien vers une page de couple statique interdite`);
-	if (html.includes('href="/gouvernance-editoriale/"')) errors.push(`${label}: la gouvernance éditoriale masquée ne doit pas être liée publiquement`);
 	for (const wording of forbiddenPublicWording) if (html.includes(wording)) errors.push(`${label}: formulation interne interdite « ${wording} »`);
 	for (const href of glossaryLinkRequirements.get(label) ?? []) if (!html.includes(`href="${href}"`)) errors.push(`${label}: lien de glossaire requis absent ${href}`);
 	if (isCompatibilityDetail && !noindex) errors.push(`${label}: un couple produit-outil doit rester noindex`);
@@ -308,6 +327,7 @@ for (const file of htmlFiles) {
 		const reviewStatus = html.match(/data-review-status="([^"]+)"/)?.[1];
 		if (!['internal', 'external'].includes(reviewStatus)) errors.push(`${label}: statut de revue éditoriale absent ou invalide`);
 		if (reviewStatus === 'internal' && !html.includes('sans validation professionnelle externe')) errors.push(`${label}: limite de revue externe absente`);
+		if (!html.includes('href="/gouvernance-editoriale/"')) errors.push(`${label}: lien vers le protocole de gouvernance éditoriale absent`);
 	}
 	if (label === 'professionnels/index.html') {
 		const widgetTag = html.match(/<script[^>]+src="\/widget\/v1\.0\.0\/compatair-widget\.js"[^>]*>/)?.[0];
@@ -365,20 +385,62 @@ for (const file of htmlFiles) {
 		const article = structuredNodes.find((node) => ['Article', 'TechArticle', 'NewsArticle'].includes(node['@type']));
 		if (!article) errors.push(`${label}: données Article absentes`);
 		else {
-			for (const property of ['headline', 'description', 'dateModified', 'mainEntityOfPage', 'author', 'publisher']) if (!article[property]) errors.push(`${label}: propriété Article absente ${property}`);
+			for (const property of ['headline', 'description', 'image', 'datePublished', 'dateModified', 'mainEntityOfPage', 'author', 'publisher']) if (!article[property]) errors.push(`${label}: propriété Article absente ${property}`);
 			if (isGuideArticle && html.includes('data-review-status="external"') && !article.reviewedBy?.name) errors.push(`${label}: relecteur externe absent des données Article`);
 		}
 	}
+	for (const product of structuredNodes.filter((node) => node['@type'] === 'Product')) {
+		if (!product.offers && !product.review && !product.aggregateRating) errors.push(`${label}: Product non éligible sans offre, avis ou note agrégée`);
+	}
+	for (const offer of structuredNodes.filter((node) => node['@type'] === 'Offer')) {
+		if (offer.price === undefined || !offer.priceCurrency) errors.push(`${label}: Offer sans prix ou devise`);
+	}
 
+	const sourcePath = label === 'index.html' ? '/' : `/${label.replace(/index\.html$/, '')}`;
+	for (const match of html.matchAll(/<a\s+[^>]*href="([^"]+)"/g)) {
+		let target;
+		try { target = new URL(decodeXml(match[1]), siteOrigin); } catch { continue; }
+		if (target.origin !== siteOrigin) continue;
+		if (['/calculateur/', '/graphe-preuve/'].includes(target.pathname) && target.search) errors.push(`${label}: lien de préremplissage bloqué par robots.txt ${match[1]}`);
+		if (!noindex && indexablePaths.has(sourcePath) && target.pathname !== sourcePath && incomingIndexableLinks.has(target.pathname)) incomingIndexableLinks.set(target.pathname, incomingIndexableLinks.get(target.pathname) + 1);
+	}
+
+	for (const match of html.matchAll(/<a\s+([^>]*href="(\/go\/[^"]+)"[^>]*)>/g)) {
+		const attributes = match[1];
+		const target = match[2];
+		const offerId = target.match(/^\/go\/([a-z0-9-]{1,100})\/?$/)?.[1];
+		if (!offerId || !publishedOfferIds.has(offerId)) errors.push(`${label}: redirection marchande absente du snapshot actif ${target}`);
+		const relTokens = new Set((attributes.match(/\brel="([^"]+)"/)?.[1] ?? '').split(/\s+/).filter(Boolean));
+		for (const required of ['sponsored', 'nofollow', 'noopener']) if (!relTokens.has(required)) errors.push(`${label}: lien marchand ${target} sans rel=${required}`);
+	}
 	for (const match of html.matchAll(/(?:href|src)="(\/[^\"]*)"/g)) {
 		const value = match[1].split(/[?#]/)[0];
 		if (!value || value.startsWith('//') || value.startsWith('/_assets/') || value.startsWith('/images/') || value === '/favicon.svg' || value === '/favicon.ico') continue;
+		if (value.startsWith('/go/')) continue;
 		const local = value.endsWith('/') ? value : value.match(/\.[a-z0-9]+$/i) ? value : `${value}/`;
 		if (!sitePaths.has(local) && !artifactPaths.has(value) && !['/robots.txt', '/sitemap-index.xml', '/.well-known/security.txt'].includes(value)) errors.push(`${label}: lien interne introuvable ${value}`);
 	}
 	for (const match of html.matchAll(/<img\s+([^>]+)>/g)) {
-		if (!/\salt="[^"]*"/.test(` ${match[1]}`)) errors.push(`${label}: image sans alt`);
-		if (!/\swidth="\d+"/.test(` ${match[1]}`) || !/\sheight="\d+"/.test(` ${match[1]}`)) errors.push(`${label}: dimensions image absentes`);
+		const attributes = ` ${match[1]}`;
+		if (!/\salt="[^"]*"/.test(attributes)) errors.push(`${label}: image sans alt`);
+		if (!/\swidth="\d+"/.test(attributes) || !/\sheight="\d+"/.test(attributes)) errors.push(`${label}: dimensions image absentes`);
+		const source = attributes.match(/\ssrc="([^"]+)"/)?.[1];
+		if (source?.startsWith('/images/products/')) {
+			if (!artifactPaths.has(source)) errors.push(`${label}: image produit absente de l’artifact ${source}`);
+			else {
+				let dimensions = productImageDimensionsBySource.get(source);
+				if (!dimensions) {
+					dimensions = readImageDimensions(await readFile(join(root, source)));
+					if (dimensions) productImageDimensionsBySource.set(source, dimensions);
+				}
+				if (!dimensions) errors.push(`${label}: dimensions du fichier produit illisibles ${source}`);
+				else {
+					const renderedWidth = Number(attributes.match(/\swidth="(\d+)"/)?.[1]);
+					const renderedHeight = Number(attributes.match(/\sheight="(\d+)"/)?.[1]);
+					if (renderedWidth !== dimensions.width || renderedHeight !== dimensions.height) errors.push(`${label}: dimensions HTML ${renderedWidth}x${renderedHeight} différentes du fichier ${source} (${dimensions.width}x${dimensions.height})`);
+				}
+			}
+		}
 	}
 	const pageScripts = new Set([...html.matchAll(/<script[^>]+src="(\/[^"]+\.js)"/g)].map((match) => match[1]));
 	const initialScriptBudget = await scriptClosure(pageScripts, false);
@@ -393,9 +455,12 @@ for (const file of htmlFiles) {
 	if (onDemandScriptBudget.bytes > maximumOnDemandPageScriptBytesGzip) errors.push(`${label}: graphe JavaScript total à la demande ${Math.ceil(onDemandScriptBudget.bytes / 1024)} Ko gzip sur ${onDemandScriptBudget.modules} modules, budget ${maximumOnDemandPageScriptBytesGzip / 1024} Ko dépassé`);
 }
 
+for (const [path, incoming] of incomingIndexableLinks) if (incoming === 0) errors.push(`maillage interne: page indexable sans lien entrant HTML ${path}`);
+
 for (const sitemapUrl of sitemapUrls) {
 	const pathname = new URL(sitemapUrl).pathname;
 	if (pathname.startsWith('/compatibilite/')) errors.push(`sitemap: couple produit-outil indexable interdit ${sitemapUrl}`);
+	if (pathname.startsWith('/go/')) errors.push(`sitemap: redirection marchande indexable interdite ${sitemapUrl}`);
 	if (!sitePaths.has(pathname)) errors.push(`sitemap: URL sans page HTML ${sitemapUrl}`);
 }
 

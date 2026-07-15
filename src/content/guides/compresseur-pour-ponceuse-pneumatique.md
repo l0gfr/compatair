@@ -41,7 +41,7 @@ L’[Einhell TE-AC 430/90/10](https://www.einhell.fr/p/4010800-te-ac-430-90-10/)
 3. Flexible intérieur de 9 mm ou davantage selon la notice.
 4. Traitement de l’air adapté à la finition et entretien régulier du condensat.
 
-Une autre ponceuse peut consommer beaucoup plus. Relevez toujours sa propre fiche technique. Le [profil complet de la TC-PE 150](/outils-pneumatiques/ponceuse-excentrique-einhell-tc-pe-150/) et le [calculateur CompatAir](/calculateur/?outil=einhell-tc-pe-150) permettent de reproduire ce raisonnement.
+Une autre ponceuse peut consommer beaucoup plus. Relevez toujours sa propre fiche technique. Le [profil complet de la TC-PE 150](/outils-pneumatiques/ponceuse-excentrique-einhell-tc-pe-150/) et le [calculateur CompatAir](/calculateur/#outil=einhell-tc-pe-150) permettent de reproduire ce raisonnement.
 
 ## Sources
 

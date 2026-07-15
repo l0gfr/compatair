@@ -11,6 +11,8 @@ const BODY_LIMIT = 65_536;
 const REQUEST_LIMIT = 120;
 const RATE_WINDOW_MS = 60_000;
 const MAX_RATE_ENTRIES = 10_000;
+const MAXIMUM_OFFER_AGE_MS = 48 * 60 * 60 * 1_000;
+const MAXIMUM_OFFER_CLOCK_SKEW_MS = 5 * 60 * 1_000;
 
 function json(response, status, value, headers = {}, options = {}) {
 	const payload = JSON.stringify(value);
@@ -48,6 +50,13 @@ export function allowedOfferRedirect(offer) {
 	if (!(host === 'awin1.com' || host.endsWith('.awin1.com'))) return undefined;
 	if (!['/pclick.php', '/cread.php'].includes(url.pathname)) return undefined;
 	return (url.searchParams.get('m') ?? url.searchParams.get('awinmid')) === '17547' ? url.toString() : undefined;
+}
+
+export function isFreshOfferSnapshot(offer, now = Date.now()) {
+	const collectedAt = typeof offer?.collectedAt === 'string' ? Date.parse(offer.collectedAt) : Number.NaN;
+	if (!Number.isFinite(now) || !Number.isFinite(collectedAt)) return false;
+	const age = now - collectedAt;
+	return age >= -MAXIMUM_OFFER_CLOCK_SKEW_MS && age <= MAXIMUM_OFFER_AGE_MS;
 }
 
 export function isMainModule(entryPath, moduleUrl) {
@@ -104,9 +113,9 @@ function isJsonContentType(request) {
 }
 
 /**
- * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, allowedOrigins: Set<string>, demandAggregatePath?: string, productFunnelAggregatePath?: string, proxyManagesApiHeaders?: boolean }} options
+ * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, allowedOrigins: Set<string>, demandAggregatePath?: string, productFunnelAggregatePath?: string, proxyManagesApiHeaders?: boolean, now?: () => number, recordAffiliateClick?: (offerId: string) => void }} options
  */
-export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable' }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, allowedOrigins, demandAggregatePath = undefined, productFunnelAggregatePath = undefined, proxyManagesApiHeaders = false }) {
+export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable' }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, allowedOrigins, demandAggregatePath = undefined, productFunnelAggregatePath = undefined, proxyManagesApiHeaders = false, now = Date.now, recordAffiliateClick = () => {} }) {
 	const core = createMcpCore(catalog, offerSnapshot);
 	const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
 	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item]));
@@ -132,7 +141,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			const compressor = match ? compressorBySlug.get(match[1]) : undefined;
 			const tool = match ? toolBySlug.get(match[2]) : undefined;
 			if (!compressor || !tool) return json(response, 410, { error: 'compatibility_page_removed', replacement: '/calculateur/' }, { 'X-Robots-Tag': 'noindex, nofollow' });
-			const location = `/calculateur/?outil=${encodeURIComponent(tool.id)}&compresseur=${encodeURIComponent(compressor.id)}`;
+			const location = `/calculateur/#outil=${encodeURIComponent(tool.id)}&compresseur=${encodeURIComponent(compressor.id)}`;
 			response.writeHead(301, { Location: location, 'Cache-Control': 'public, max-age=86400', 'X-Robots-Tag': 'noindex, nofollow', 'X-Content-Type-Options': 'nosniff' });
 			return response.end();
 		}
@@ -189,14 +198,17 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 		}
 
 		if (url.pathname.startsWith('/go/')) {
-			if (request.method !== 'GET') return json(response, 405, { error: 'method_not_allowed' }, { Allow: 'GET' });
+			if (!['GET', 'HEAD'].includes(request.method ?? '')) return json(response, 405, { error: 'method_not_allowed' }, { Allow: 'GET, HEAD' });
 			if (!allow(`go:${clientAddress(request)}`)) return json(response, 429, { error: 'rate_limited' }, { 'Retry-After': '60' });
 			const offerId = parseOfferId(url.pathname);
 			if (!offerId) return json(response, 404, { error: 'offer_not_found' });
 			const offer = (offerSnapshot.offers ?? []).find((item) => item.id === offerId);
-			const redirect = allowedOfferRedirect(offer);
+			const redirect = isFreshOfferSnapshot(offer, now()) ? allowedOfferRedirect(offer) : undefined;
 			if (!redirect) return json(response, 404, { error: 'offer_not_found' });
-			counters.affiliateClicks[offerId] = (counters.affiliateClicks[offerId] ?? 0) + 1;
+			if (request.method === 'GET') {
+				counters.affiliateClicks[offerId] = (counters.affiliateClicks[offerId] ?? 0) + 1;
+				recordAffiliateClick(offerId);
+			}
 			response.writeHead(302, { Location: redirect, 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer', 'X-Content-Type-Options': 'nosniff' });
 			return response.end();
 		}

@@ -7,6 +7,7 @@ import { evaluateCompatibility } from '../../domain/compatibility';
 import { toolDemandLabel, toolPressureLabel } from '../../domain/tool-demand';
 import { activeOffers, merchants } from '../../data/offers';
 import { latestEvidenceDate } from '../../domain/provenance';
+import { offerJsonLd } from '../../domain/product-structured-data';
 
 export function getStaticPaths() {
 	return compressors.map((compressor) => ({ params: { slug: compressor.slug }, props: { compressor } }));
@@ -19,7 +20,7 @@ const matches = tools.map((tool) => ({ tool, result: evaluateCompatibility(compr
 const productOffers = activeOffers.filter((offer) => offer.productId === compressor.id);
 const alternatives = compressors.filter((item) => item.id !== compressor.id).sort((a, b) => (Math.abs(a.tankLiters - compressor.tankLiters) + Math.abs(a.maxPressureBar - compressor.maxPressureBar) * 10) - (Math.abs(b.tankLiters - compressor.tankLiters) + Math.abs(b.maxPressureBar - compressor.maxPressureBar) * 10)).slice(0, 3);
 const labels = { continuous: 'Continu', intermittent: 'Intermittent', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' };
-const productJsonLd = {
+const productJsonLd = productOffers.length ? {
 	'@context': 'https://schema.org', '@type': 'Product', name: `${compressor.brand} ${compressor.model}`,
 	image: `https://compatair.fr${compressor.image.src}`, brand: { '@type': 'Brand', name: compressor.brand },
 	model: compressor.model, ...(compressor.mpn ? { mpn: compressor.mpn } : {}),
@@ -31,7 +32,8 @@ const productJsonLd = {
 		...(compressor.fadCurve.length ? [{ '@type': 'PropertyValue', name: 'Débit restitué documenté', value: compressor.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(', ') }] : []),
 		...compressor.specifications.map((specification) => ({ '@type': 'PropertyValue', name: specification.label, value: specification.value })),
 	],
-};
+	offers: productOffers.map((offer) => offerJsonLd(offer, merchants, `https://compatair.fr/compresseurs/${compressor.slug}/`)),
+} : undefined;
 ---
 
 <BaseLayout
@@ -44,7 +46,7 @@ const productJsonLd = {
 	modifiedDate={new Date(verifiedAt)}
 	breadcrumbs={[{ name: 'Compresseurs', path: '/compresseurs/' }, { name: `${compressor.brand} ${compressor.model}`, path: `/compresseurs/${compressor.slug}/` }]}
 >
-	<script is:inline type="application/ld+json" set:html={JSON.stringify(productJsonLd)} />
+	{productJsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(productJsonLd)} />}
 	<article class="container product-detail">
 		<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/compresseurs/">Compresseurs</a><span>/</span><span>{compressor.brand} {compressor.model}</span></nav>
 		<div class="product-hero"><div><p class="eyebrow">Fiche compresseur · sources vérifiées</p><h1>{compressor.brand} {compressor.model}</h1><p class="lead">{compressor.editorial.overview}</p><p class="product-reference">Référence {compressor.mpn ?? 'non renseignée'} · {compressor.oilType === 'oil-free' ? 'sans huile' : 'lubrifié'} · fiabilité des données {compressor.confidence}.</p></div><ProductImage image={compressor.image} eager /></div>

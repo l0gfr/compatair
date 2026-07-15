@@ -49,7 +49,7 @@ Le guide [qualité de l’air comprimé](/guides/qualite-air-comprime-iso-8573-1
 
 Sur ces deux références seulement, le FSP 600 LVLP publie un besoin inférieur au G-550F HVLP. La conclusion ne doit pas être généralisée à toutes les gammes. Pour acheter ou dimensionner, conserver quatre données ensemble : modèle exact, débit, pression et source.
 
-Le [guide du G-550F HVLP](/guides/compresseur-pour-pistolet-peinture-hvlp/) applique la marge CompatAir au modèle ABAC. Le catalogue d’outils accueillera un profil LVLP lorsque son visuel et toutes ses données critiques pourront être reliés proprement à la source officielle.
+Le [guide du G-550F HVLP](/guides/compresseur-pour-pistolet-peinture-hvlp/) applique la marge CompatAir au modèle ABAC. La [fiche du FSP 600 LVLP](/outils-pneumatiques/pistolet-peinture-lvlp-metabo-fsp-600/) relie désormais son visuel et ses données critiques à la source officielle Metabo.
 
 ## Sources
 

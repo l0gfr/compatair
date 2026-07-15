@@ -48,7 +48,7 @@ Cette recommandation ne livre pas le résultat du garage. Elle indique où regar
 
 Le compresseur doit publier un [débit restitué, ou FAD](/glossaire/#fad), à une pression compatible avec le scénario. Le [guide FAD et débit aspiré](/guides/debit-restitue-fad-vs-debit-aspire/) détaille pourquoi la puissance moteur et le volume de cuve ne remplacent pas ce point de comparaison.
 
-La [CP7748 est préchargée dans le calculateur](/calculateur/?outil=chicago-pneumatic-cp7748). Les autres références de l’atelier peuvent ensuite rejoindre le scénario, avec leurs chevauchements réels. Faute de point FAD exploitable autour de la pression demandée, le moteur s’arrête sur `insufficient_data`.
+La [CP7748 est préchargée dans le calculateur](/calculateur/#outil=chicago-pneumatic-cp7748). Les autres références de l’atelier peuvent ensuite rejoindre le scénario, avec leurs chevauchements réels. Faute de point FAD exploitable autour de la pression demandée, le moteur s’arrête sur `insufficient_data`.
 
 ## Ce que le dossier doit permettre de rejouer
 

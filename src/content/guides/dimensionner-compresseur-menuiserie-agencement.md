@@ -55,7 +55,7 @@ Atlas Copco recommande de limiter les pertes et de traiter séparément la canal
 
 ## Rejouer le calcul après un changement de cadence
 
-Ouvrez le [calculateur avec la TC-PN 50](/calculateur/?outil=einhell-tc-pn-50), renseignez la cadence et les usages simultanés, puis choisissez un compresseur dont le débit restitué est documenté à la pression nécessaire. Le dossier doit exposer séparément :
+Ouvrez le [calculateur avec la TC-PN 50](/calculateur/#outil=einhell-tc-pn-50), renseignez la cadence et les usages simultanés, puis choisissez un compresseur dont le débit restitué est documenté à la pression nécessaire. Le dossier doit exposer séparément :
 
 - les données de notice ;
 - les données déclarées par l’atelier ;

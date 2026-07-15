@@ -43,7 +43,7 @@ Le raccord de 1/4 pouce figure dans la documentation du G-550F. Cette dimension 
 
 Le débit disponible au pistolet peut être inférieur au débit mesuré en sortie de compresseur si le réseau crée une perte. Le calculateur signale ce risque, mais ne chiffre aucune perte sans courbe ou mesure. Le guide sur le [diamètre du flexible](/guides/diametre-longueur-flexible-air-comprime/) explique les données à relever.
 
-Testez le [G-550F dans le calculateur](/calculateur/?outil=abac-g-550f) et consultez la fiche source du compresseur avant toute décision.
+Testez le [G-550F dans le calculateur](/calculateur/#outil=abac-g-550f) et consultez la fiche source du compresseur avant toute décision.
 
 ## Cas de la peinture automobile
 

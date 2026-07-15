@@ -5,12 +5,12 @@
       "url": [
         "http://localhost/",
         "http://localhost/calculateur/",
-        "http://localhost/compresseurs/einhell-te-ac-430-90-10/",
+		"http://localhost/compresseurs/",
+		"http://localhost/compresseurs/atlas-copco-ab25e100/",
         "http://localhost/guides/guide-complet-dimensionner-compresseur-air/"
       ],
-      "numberOfRuns": 1,
+      "numberOfRuns": 3,
       "settings": {
-        "preset": "desktop",
         "onlyCategories": ["performance", "accessibility", "best-practices", "seo"],
         "chromeFlags": "--headless --no-sandbox --disable-dev-shm-usage"
       }

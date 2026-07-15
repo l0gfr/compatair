@@ -102,6 +102,8 @@ L’ajout de l’API ou une modification de ses en-têtes inter-origines nécess
 
 La migration des anciennes URL `/compatibilite/` relève aussi de ce vhost. Avant le premier déploiement qui contient le gestionnaire de migration, installer la nouvelle configuration avec `install-mcp.sh`. L’ancien service répondra temporairement `404` sur ce proxy, puis l’activation atomique du nouveau service rendra les redirections `301` et retraits `410` disponibles. Le workflow vérifie ensuite une ancienne URL réelle et une référence inconnue ; il ne déclare pas la production valide si le vhost n’a pas été préparé.
 
+Les URL `/go/<offer-id>` sont également réservées au service Node. Aucune page Astro de redirection marchande ne doit être générée ni apparaître dans le sitemap. Le service refuse une offre inconnue, une destination hors liste blanche ou une collecte vieille de plus de 48 heures. Une requête `HEAD` permet au workflow de vérifier une offre active sans incrémenter le compteur agrégé de clics. Le flux et le site statique doivent être reconstruits avant cette échéance afin que l’offre ne reste pas affichée après son expiration côté serveur.
+
 ## Récupération des invariants
 
 Chaque déploiement compare l’historique candidat avec le snapshot du commit Git précédent avant de consulter la production. Cette référence indépendante reste disponible lorsqu’un incident rend le site public inaccessible. Après signature, le workflow conserve aussi pendant 90 jours un artefact GitHub Actions dédié avec l’historique, son manifeste Ed25519, les clés publiques, le widget versionné et son empreinte épinglée.

@@ -1,3 +1,5 @@
+import { litersPerSecondToLitersPerMinute } from '../../domain/units.ts';
+
 const catalogUrl = 'https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf';
 const catalogEvidenceId = 'cp-general-industry-2026-impact-wrenches';
 
@@ -25,7 +27,7 @@ type ImpactWrenchData = {
 
 export function chicagoPneumaticImpactWrench(data: ImpactWrenchData) {
 	const evidenceId = `cp-${data.mpn.toLowerCase()}-official`;
-	const airflowLpm = data.airLitersPerSecond * 60;
+	const airflowLpm = litersPerSecondToLitersPerMinute(data.airLitersPerSecond);
 	const slug = `cle-a-chocs-${data.id}`;
 
 	return {

@@ -59,7 +59,7 @@ Une pression affichée sur la cuve n’est pas nécessairement celle disponible 
 - vérifier la pression au raccord de l’outil pendant l’utilisation ;
 - décrire la cadence réelle avant de compter sur la réserve de cuve.
 
-Ouvrez le [calculateur avec la DRS 68 préchargée](/calculateur/?outil=metabo-drs-68-set) ou consultez sa [fiche technique CompatAir](/outils-pneumatiques/cle-a-cliquet-metabo-drs-68-set/). Pour un outil de vissage plus exigeant, comparez aussi le guide de la [visseuse pneumatique](/guides/compresseur-pour-visseuse-pneumatique/).
+Ouvrez le [calculateur avec la DRS 68 préchargée](/calculateur/#outil=metabo-drs-68-set) ou consultez sa [fiche technique CompatAir](/outils-pneumatiques/cle-a-cliquet-metabo-drs-68-set/). Pour un outil de vissage plus exigeant, comparez aussi le guide de la [visseuse pneumatique](/guides/compresseur-pour-visseuse-pneumatique/).
 
 ## Sources
 

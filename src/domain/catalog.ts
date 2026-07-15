@@ -130,6 +130,9 @@ const fixedFlowDemandSchema = z.object({
 }).superRefine((demand, context) => {
 	if (demand.workingPressureBar.min > demand.workingPressureBar.typical || demand.workingPressureBar.typical > demand.workingPressureBar.max) context.addIssue({ code: 'custom', path: ['workingPressureBar'], message: 'La pression doit respecter min ≤ nominale ≤ max.' });
 	if (demand.airflowLpm.min > demand.airflowLpm.typical || demand.airflowLpm.typical > demand.airflowLpm.max) context.addIssue({ code: 'custom', path: ['airflowLpm'], message: 'Le débit doit respecter min ≤ nominal ≤ max.' });
+	for (const [key, value] of Object.entries(demand.airflowLpm)) {
+		if (Number(value.toFixed(3)) !== value) context.addIssue({ code: 'custom', path: ['airflowLpm', key], message: 'Le débit publié ne peut pas contenir plus de trois décimales.' });
+	}
 });
 
 const perActionDemandSchema = z.object({

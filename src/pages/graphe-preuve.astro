@@ -138,7 +138,7 @@ const layers = [
 			activeCompressor = selected.compressor; activeTool = selected.tool;
 			graph = createProofGraph(activeCompressor, activeTool, { catalogVersion: catalog.catalogVersion, verdictVersion: verdicts.verdictVersion, calculationVersion: verdicts.calculationVersion, verifiedAt: catalog.verifiedAt }, selected.pair);
 			const parameters = new URLSearchParams({ compresseur: activeCompressor.id, outil: activeTool.id });
-			window.history.replaceState(null, '', `${window.location.pathname}?${parameters}`);
+			window.history.replaceState(null, '', `${window.location.pathname}#${parameters}`);
 			renderGraph();
 		}
 
@@ -168,7 +168,8 @@ const layers = [
 				if (!catalogResponse.ok || !verdictResponse.ok) throw new Error('snapshot_unavailable');
 				[catalog, verdicts] = await Promise.all([catalogResponse.json() as Promise<CatalogSnapshot>, verdictResponse.json() as Promise<VerdictSnapshot>]);
 				createProofGraph = module.createProofGraph; simulateProofCorrection = module.simulateProofCorrection;
-				const parameters = new URLSearchParams(window.location.search);
+				const fragmentParameters = new URLSearchParams(window.location.hash.slice(1));
+				const parameters = fragmentParameters.has('compresseur') || fragmentParameters.has('outil') ? fragmentParameters : new URLSearchParams(window.location.search);
 				const requestedCompressor = parameters.get('compresseur'); const requestedTool = parameters.get('outil');
 				if (requestedCompressor && [...compressorSelect.options].some((option) => option.value === requestedCompressor)) compressorSelect.value = requestedCompressor;
 				if (requestedTool && [...toolSelect.options].some((option) => option.value === requestedTool)) toolSelect.value = requestedTool;

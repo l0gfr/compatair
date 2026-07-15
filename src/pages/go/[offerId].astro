@@ -1,7 +1,0 @@
----
-import { activeOffers, merchants } from '../../data/offers';
-import { assertAllowedOfferUrl } from '../../domain/offers';
-export function getStaticPaths() { return activeOffers.map((offer) => ({ params: { offerId: offer.id }, props: { offer } })); }
-const { offer } = Astro.props; assertAllowedOfferUrl(offer, merchants);
----
-<!doctype html><html lang="fr"><head><meta charset="utf-8" /><meta name="robots" content="noindex,nofollow" /><meta name="referrer" content="no-referrer" /><meta http-equiv="refresh" content={`0;url=${offer.url}`} /><title>Redirection vers le marchand</title></head><body><p>Redirection vers une offre externe. <a href={offer.url} rel="sponsored nofollow noopener">Continuer vers le marchand</a>.</p></body></html>

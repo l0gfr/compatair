@@ -43,11 +43,13 @@ const socialImageByCategory = {
 	Installer: '/social/guides__installer.png',
 	Utiliser: '/social/guides__utiliser.png',
 } as const;
+const socialImagePath = socialImageByCategory[guide.data.category];
 const articleJsonLd = {
 	'@context': 'https://schema.org',
 	'@type': 'TechArticle',
 	headline: guide.data.title,
 	description: guide.data.description,
+	image: `https://compatair.fr${socialImagePath}`,
 	datePublished: guide.data.pubDate.toISOString(),
 	dateModified: (guide.data.updatedDate ?? guide.data.pubDate).toISOString(),
 	mainEntityOfPage: `https://compatair.fr/guides/${guide.id}/`,
@@ -60,7 +62,7 @@ const articleJsonLd = {
 	audience: guide.data.audiences.map((audience) => ({ '@type': 'Audience', audienceType: guideAudiences[audience].label })),
 	about: [
 		...guide.data.metiers.map((metier) => ({ '@type': 'Thing', name: guideMetiers[metier].label, url: `https://compatair.fr/guides/metiers/${metier}/` })),
-		...(relatedTool ? [{ '@type': 'Product', name: relatedTool.label, url: `https://compatair.fr/outils-pneumatiques/${relatedTool.slug}/` }] : []),
+		...(relatedTool ? [{ '@type': 'Thing', name: relatedTool.label, url: `https://compatair.fr/outils-pneumatiques/${relatedTool.slug}/` }] : []),
 	],
 	author: { '@type': 'Organization', '@id': 'https://compatair.fr/#organization', name: 'CompatAir', url: 'https://compatair.fr/' },
 	reviewedBy: externallyReviewed ? { '@type': 'Person', name: guide.data.reviewer, jobTitle: guide.data.reviewerRole } : undefined,
@@ -73,7 +75,7 @@ const articleJsonLd = {
 	editorialTitle={guide.data.seoTitle}
 	description={guide.data.description}
 	pageType="article"
-	imagePath={socialImageByCategory[guide.data.category]}
+	imagePath={socialImagePath}
 	issueDate={guide.data.pubDate}
 	modifiedDate={guide.data.updatedDate ?? guide.data.pubDate}
 	breadcrumbs={[{ name: 'Guides', path: '/guides/' }, { name: guide.data.title, path: `/guides/${guide.id}/` }]}
@@ -82,7 +84,7 @@ const articleJsonLd = {
 	<article class="container editorial-layout" data-guide-audiences={guide.data.audiences.join(' ')} data-guide-metiers={guide.data.metiers.join(' ')}>
 		<div class="editorial-main">
 			<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/guides/">Guides</a><span>/</span><span>{guide.data.category}</span></nav>
-			<header class="article-head"><p class="eyebrow">{guide.data.category}</p><div class="article-taxonomy" aria-label="Publics et métiers">{guide.data.audiences.map((audience) => <a href={`/guides/${guideAudiences[audience].label.toLocaleLowerCase('fr-FR')}/`}>{guideAudiences[audience].label}</a>)}{guide.data.metiers.map((metier) => <a href={`/guides/metiers/${metier}/`}>{guideMetiers[metier].label}</a>)}</div><h1>{guide.data.title}</h1><p class="lead">{guide.data.description}</p><p class="article-byline" data-review-status={guide.data.reviewStatus}>Publié le {published} · Lecture {guide.data.readingTime} minutes · Rédaction {guide.data.author} · {externallyReviewed ? <>Revue technique par {guide.data.reviewer}, {guide.data.reviewerRole}</> : <>Relecture éditoriale interne, sans validation professionnelle externe</>}</p></header>
+			<header class="article-head"><p class="eyebrow">{guide.data.category}</p><div class="article-taxonomy" aria-label="Publics et métiers">{guide.data.audiences.map((audience) => <a href={`/guides/${guideAudiences[audience].label.toLocaleLowerCase('fr-FR')}/`}>{guideAudiences[audience].label}</a>)}{guide.data.metiers.map((metier) => <a href={`/guides/metiers/${metier}/`}>{guideMetiers[metier].label}</a>)}</div><h1>{guide.data.title}</h1><p class="lead">{guide.data.description}</p><p class="article-byline" data-review-status={guide.data.reviewStatus}>Publié le {published} · Lecture {guide.data.readingTime} minutes · Rédaction <a href="/gouvernance-editoriale/">{guide.data.author}</a> · {externallyReviewed ? <>Revue technique par {guide.data.reviewer}, {guide.data.reviewerRole}</> : <>Relecture éditoriale interne, sans validation professionnelle externe</>}</p></header>
 			<div class="article-body"><Content /></div>
 			<section class="guide-next-step" aria-labelledby="guide-next-step-title">
 				<p class="eyebrow">Vérifier sur des données réelles</p>
@@ -91,7 +93,7 @@ const articleJsonLd = {
 					<>
 						<p>Le profil publié de <strong>{relatedTool.label}</strong> est déjà disponible. Le calculateur compare son besoin au débit restitué documenté, à la même pression.</p>
 						<div class="actions">
-							<a class="button primary" href={`/calculateur/?outil=${relatedTool.id}`}>Tester cet outil</a>
+							<a class="button primary" href={`/calculateur/#outil=${relatedTool.id}`}>Tester cet outil</a>
 							<a class="button" href={`/outils-pneumatiques/${relatedTool.slug}/`}>Voir la fiche outil</a>
 						</div>
 						{compatibleCompressors.length > 0 ? (
@@ -99,7 +101,7 @@ const articleJsonLd = {
 								<h3>Compresseurs déjà confirmés pour un usage continu</h3>
 								<div class="link-cards">
 									{compatibleCompressors.map(({ compressor, result }) => (
-										<a href={`/calculateur/?outil=${encodeURIComponent(relatedTool.id)}&compresseur=${encodeURIComponent(compressor.id)}`}>
+										<a href={`/calculateur/#outil=${encodeURIComponent(relatedTool.id)}&compresseur=${encodeURIComponent(compressor.id)}`}>
 											<strong>{compressor.brand} {compressor.model}</strong>
 											<span>{Math.round(result.availableFadLpm!)} L/min restitués documentés à la pression de l’outil</span>
 										</a>

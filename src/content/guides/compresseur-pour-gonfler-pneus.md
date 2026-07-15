@@ -50,7 +50,7 @@ Le résultat est donc un besoin moyen idéalisé. Il permet de comparer des ordr
 
 La pression maximale de 8 bar publiée pour le pistolet Einhell est une limite de l’accessoire. Ce n’est pas la pression à appliquer automatiquement à un pneu. Michelin indique de respecter la pression recommandée par le constructeur du véhicule et de contrôler de préférence à froid.
 
-Utilisez le [calculateur de gonflage](/calculateur/?outil=einhell-4137000-manometre) uniquement avec un volume et des pressions que vous avez identifiés. Si le volume interne est inconnu, le site doit répondre « données insuffisantes » plutôt que d’en inventer un.
+Utilisez le [calculateur de gonflage](/calculateur/#outil=einhell-4137000-manometre) uniquement avec un volume et des pressions que vous avez identifiés. Si le volume interne est inconnu, le site doit répondre « données insuffisantes » plutôt que d’en inventer un.
 
 ## Sources
 

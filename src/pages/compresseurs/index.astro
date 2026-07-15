@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductImage from '../../components/ProductImage.astro';
 import { compressors } from '../../data/catalog';
+import { brandSlug } from '../../domain/brand';
 const compressorListJsonLd = {
 	'@context': 'https://schema.org', '@type': 'ItemList', name: 'Compresseurs documentés par CompatAir',
 	itemListElement: compressors.map((compressor, index) => ({ '@type': 'ListItem', position: index + 1, name: `${compressor.brand} ${compressor.model}`, url: `https://compatair.fr/compresseurs/${compressor.slug}/` })),
@@ -10,7 +11,7 @@ const compressorListJsonLd = {
 
 <BaseLayout title="Compresseurs d’air vérifiés | CompatAir" description="Consultez le débit réellement restitué, la pression, la cuve et les données manquantes de chaque compresseur étudié par CompatAir." breadcrumbs={[{ name: 'Compresseurs', path: '/compresseurs/' }]}>
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(compressorListJsonLd)} />
-	<section class="page-hero compact"><div class="container"><p class="eyebrow">Compresseurs d’air vérifiés</p><h1>{compressors.length} compresseurs étudiés à partir de leurs données utiles</h1><p class="lead">Chaque fiche indique le <a href="/glossaire/#debit-restitue">débit réellement disponible</a> à une pression donnée, sa source et les informations qui manquent encore. Utilisez ensuite le <a href="/calculateur/">calculateur</a> pour vérifier vos propres outils.</p></div></section>
+		<section class="page-hero compact"><div class="container"><p class="eyebrow">Compresseurs d’air vérifiés</p><h1>{compressors.length} compresseurs étudiés à partir de leurs données utiles</h1><p class="lead">Chaque fiche indique le <a href="/glossaire/#debit-restitue">débit réellement disponible</a> à une pression donnée, sa source et les informations qui manquent encore. Vous pouvez aussi <a href="/marques/">parcourir les fabricants documentés</a>, puis utiliser le <a href="/calculateur/">calculateur</a> pour vérifier vos propres outils.</p></div></section>
 	<section class="section"><div class="container catalog-layout">
 		<aside class="catalog-filters" aria-label="Filtres du catalogue">
 			<h2>Filtrer</h2>
@@ -26,7 +27,7 @@ const compressorListJsonLd = {
 		{compressors.map((compressor) => (
 			<article class="product-card" data-product-card data-id={compressor.id} data-brand={compressor.brand} data-tank={compressor.tankLiters} data-pressure={compressor.maxPressureBar} data-oil={compressor.oilType} data-noise={compressor.noiseDb ?? ''} data-confidence={compressor.confidence}>
 				<a class="product-card-image" href={`/compresseurs/${compressor.slug}/`} aria-label={`Voir la fiche ${compressor.brand} ${compressor.model}`}><ProductImage image={compressor.image} compact /></a>
-				<p class="product-brand">{compressor.brand}</p>
+					<p class="product-brand"><a href={`/marques/${brandSlug(compressor.brand)}/`}>{compressor.brand}</a></p>
 				<h2><a href={`/compresseurs/${compressor.slug}/`}>{compressor.model}</a></h2>
 				<dl class="spec-list"><div><dt>Cuve</dt><dd>{compressor.tankLiters} L</dd></div><div><dt>Pression max.</dt><dd>{compressor.maxPressureBar} bar</dd></div><div><dt>Fiabilité des données</dt><dd>{compressor.confidence}</dd></div></dl>
 				<p class:list={['data-status', compressor.fadCurve.length ? 'verified' : 'missing']}>{compressor.fadCurve.length ? 'Débit réellement restitué documenté' : 'Débit réellement restitué à confirmer'}</p>

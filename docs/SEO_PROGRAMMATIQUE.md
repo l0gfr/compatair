@@ -7,7 +7,7 @@ Les verdicts compresseur-outil répondent à un besoin produit réel, mais leur 
 - Les fiches de compresseur et d’outil restent indexables lorsqu’elles possèdent des données et sources propres.
 - Les pages « quel compresseur pour… » restent indexables : chacune agrège un besoin constructeur distinct et le classement complet du catalogue.
 - Aucune page statique n’est générée sous `/compatibilite/` et aucun lien interne nouveau ne doit cibler cet espace retiré.
-- Une ancienne URL exacte dont les deux slugs existent encore reçoit une redirection permanente vers le calculateur prérempli avec les identifiants canoniques.
+- Une ancienne URL exacte dont les deux slugs existent encore reçoit une redirection permanente vers le calculateur prérempli avec les identifiants canoniques dans le fragment d’URL.
 - Une URL ancienne inconnue, ambiguë ou mal formée reçoit une réponse `410 Gone` ciblée. Les paramètres de suivi d’une URL connue sont supprimés lors de la redirection canonique.
 - Les couples restent exclus du sitemap et ne publient pas de balisage `TechArticle` destiné à enrichir leur présence dans les résultats.
 - Le snapshot `/data/verdicts.json` conserve tous les couples pour l’audit, l’historique et les usages machine.
@@ -17,6 +17,8 @@ Cette séparation évite une croissance quadratique du HTML. Le corpus indexable
 ## Contrat de migration et widgets
 
 Le widget immuable `v1.0.0` conserve ses octets et peut encore reconnaître une URL historique renvoyée par une ancienne réponse API mise en cache. Le serveur migre alors cette URL par `301`; modifier ce fichier casserait son empreinte SRI et le contrat des intégrateurs. L’alias mutable `v1` n’accepte plus que la continuation actuelle vers `/calculateur/`. L’API courante ne renvoie plus de page de détail statique.
+
+Le contrat API v1 conserve ses paramètres de requête dans `detailsUrl` pour rester compatible avec le widget immuable. Les liens HTML publics et les redirections historiques utilisent le fragment `#outil=...&compresseur=...`, qui préremplit le calculateur sans créer de variantes explorables. Le calculateur continue de lire les anciennes URL à paramètres comme repli de compatibilité.
 
 Les tests couvrent les trois niveaux du contrat : octets et SRI du widget immuable, politique du widget mutable, puis redirection `301` ou retrait `410` au niveau du service et du vhost. La vérification HTTPS du workflow refuse aussi un déploiement qui ne reproduit pas ces réponses.
 

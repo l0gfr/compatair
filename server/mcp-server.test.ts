@@ -5,7 +5,7 @@ import { createServer } from 'node:net';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { allowedOfferRedirect, clientAddress, createCompatAirServer, isMainModule, parseOfferId, resolveProductFunnelAggregatePath, resolveVerdictSnapshotPath } from './mcp-server.mjs';
+import { allowedOfferRedirect, clientAddress, createCompatAirServer, isFreshOfferSnapshot, isMainModule, parseOfferId, resolveProductFunnelAggregatePath, resolveVerdictSnapshotPath } from './mcp-server.mjs';
 
 async function reservePort() {
 	const server = createServer();
@@ -31,10 +31,19 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(allowedOfferRedirect({ merchantId: 'manomano-fr', url: 'https://www.awin1.com/pclick.php?p=1&m=999' })).toBeUndefined();
 	});
 
+	it('accepts an offer for at most 48 hours with five minutes of future clock tolerance', () => {
+		const now = Date.parse('2026-07-15T20:00:00.000Z');
+		expect(isFreshOfferSnapshot({ collectedAt: '2026-07-13T20:00:00.000Z' }, now)).toBe(true);
+		expect(isFreshOfferSnapshot({ collectedAt: '2026-07-13T19:59:59.999Z' }, now)).toBe(false);
+		expect(isFreshOfferSnapshot({ collectedAt: '2026-07-15T20:05:00.000Z' }, now)).toBe(true);
+		expect(isFreshOfferSnapshot({ collectedAt: '2026-07-15T20:05:00.001Z' }, now)).toBe(false);
+		expect(isFreshOfferSnapshot({ collectedAt: 'invalid' }, now)).toBe(false);
+	});
+
 	it('redirects a validated ManoMano offer through the HTTP route', async () => {
 		const target = 'https://www.awin1.com/pclick.php?p=1&a=2&m=17547';
-		const offerSnapshot = { offers: [{ id: 'offer-1', merchantId: 'manomano-fr', url: target }] } as any;
-		const server = createCompatAirServer({ catalog: { catalogVersion: 'test', compressors: [], tools: [] }, offerSnapshot, allowedOrigins: new Set(['https://compatair.fr']) });
+		const offerSnapshot = { offers: [{ id: 'offer-1', merchantId: 'manomano-fr', url: target, collectedAt: '2026-07-15T19:00:00.000Z' }] } as any;
+		const server = createCompatAirServer({ catalog: { catalogVersion: 'test', compressors: [], tools: [] }, offerSnapshot, allowedOrigins: new Set(['https://compatair.fr']), now: () => Date.parse('2026-07-15T20:00:00.000Z') });
 		const result = await new Promise<{ status: number; headers: Record<string, string> }>((resolve) => {
 			let status = 0; let headers: Record<string, string> = {};
 			const request = { url: '/go/offer-1', method: 'GET', headers: {}, socket: { remoteAddress: '127.0.0.1' } };
@@ -46,10 +55,45 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(result.headers['Referrer-Policy']).toBe('no-referrer');
 	});
 
+	it('answers affiliate HEAD requests without recording a click', async () => {
+		const target = 'https://www.awin1.com/pclick.php?p=1&a=2&m=17547';
+		const offerSnapshot = { offers: [{ id: 'offer-1', merchantId: 'manomano-fr', url: target, collectedAt: '2026-07-15T19:00:00.000Z' }] } as any;
+		const recorded: string[] = [];
+		const server = createCompatAirServer({
+			catalog: { catalogVersion: 'test', compressors: [], tools: [] }, offerSnapshot,
+			allowedOrigins: new Set(['https://compatair.fr']), now: () => Date.parse('2026-07-15T20:00:00.000Z'),
+			recordAffiliateClick: (offerId) => recorded.push(offerId),
+		});
+		const request = (method: 'HEAD' | 'GET') => new Promise<{ status: number; headers: Record<string, string> }>((resolve) => {
+			let status = 0; let headers: Record<string, string> = {};
+			const incoming = { url: '/go/offer-1', method, headers: {}, socket: { remoteAddress: '127.0.0.1' } };
+			const response = { setTimeout() {}, writeHead(value: number, values: Record<string, string>) { status = value; headers = values; }, end() { resolve({ status, headers }); }, destroy() {} };
+			server.emit('request', incoming, response);
+		});
+		const head = await request('HEAD');
+		expect(head).toMatchObject({ status: 302, headers: { Location: target } });
+		expect(recorded).toEqual([]);
+		expect((await request('GET')).status).toBe(302);
+		expect(recorded).toEqual(['offer-1']);
+	});
+
+	it('fails closed when an affiliate offer has expired at runtime', async () => {
+		const offerSnapshot = { offers: [{ id: 'offer-1', merchantId: 'manomano-fr', url: 'https://www.awin1.com/pclick.php?p=1&m=17547', collectedAt: '2026-07-13T19:59:59.999Z' }] } as any;
+		const server = createCompatAirServer({ catalog: { catalogVersion: 'test', compressors: [], tools: [] }, offerSnapshot, allowedOrigins: new Set(['https://compatair.fr']), now: () => Date.parse('2026-07-15T20:00:00.000Z') });
+		const result = await new Promise<{ status: number; body: string }>((resolve) => {
+			let status = 0; let body = '';
+			const request = { url: '/go/offer-1', method: 'GET', headers: {}, socket: { remoteAddress: '127.0.0.1' } };
+			const response = { setTimeout() {}, writeHead(value: number) { status = value; }, end(value = '') { body += value; resolve({ status, body }); }, destroy() {} };
+			server.emit('request', request, response);
+		});
+		expect(result.status).toBe(404);
+		expect(JSON.parse(result.body)).toEqual({ error: 'offer_not_found' });
+	});
+
 	it('rate-limits repeated affiliate redirect requests', async () => {
 		const target = 'https://www.awin1.com/pclick.php?p=1&a=2&m=17547';
-		const offerSnapshot = { offers: [{ id: 'offer-1', merchantId: 'manomano-fr', url: target }] } as any;
-		const server = createCompatAirServer({ catalog: { catalogVersion: 'test', compressors: [], tools: [] }, offerSnapshot, allowedOrigins: new Set(['https://compatair.fr']) });
+		const offerSnapshot = { offers: [{ id: 'offer-1', merchantId: 'manomano-fr', url: target, collectedAt: '2026-07-15T19:00:00.000Z' }] } as any;
+		const server = createCompatAirServer({ catalog: { catalogVersion: 'test', compressors: [], tools: [] }, offerSnapshot, allowedOrigins: new Set(['https://compatair.fr']), now: () => Date.parse('2026-07-15T20:00:00.000Z') });
 		let status = 0;
 		for (let requestIndex = 0; requestIndex <= 120; requestIndex++) {
 			status = await new Promise<number>((resolve) => {
@@ -115,9 +159,9 @@ describe('MCP HTTP boundary helpers', () => {
 		});
 		const migrated = await request('/compatibilite/compressor-a--cle-a-chocs-tool-a/');
 		expect(migrated.status).toBe(301);
-		expect(migrated.headers.Location).toBe('/calculateur/?outil=tool-a&compresseur=compressor-a');
+		expect(migrated.headers.Location).toBe('/calculateur/#outil=tool-a&compresseur=compressor-a');
 		const migratedWithDiscardedTracking = await request('/compatibilite/compressor-a--cle-a-chocs-tool-a/?utm_source=cache');
-		expect(migratedWithDiscardedTracking.headers.Location).toBe('/calculateur/?outil=tool-a&compresseur=compressor-a');
+		expect(migratedWithDiscardedTracking.headers.Location).toBe('/calculateur/#outil=tool-a&compresseur=compressor-a');
 		const removed = await request('/compatibilite/compressor-a--outil-inconnu/');
 		expect(removed.status).toBe(410);
 		expect(JSON.parse(removed.body)).toMatchObject({ error: 'compatibility_page_removed', replacement: '/calculateur/' });

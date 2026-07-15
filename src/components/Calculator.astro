@@ -397,7 +397,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		const badge = document.createElement('span'); badge.className = 'verdict-badge'; badge.textContent = resultLabel(result); head.append(title, badge);
 		const detail = document.createElement('p'); detail.textContent = result.verdict === 'insufficient_data' ? `Débit réellement restitué non vérifiable à ${result.requiredPressureBar} bar · fiabilité des données ${compressor.confidence}.` : `${interpolateFad(compressor, result.requiredPressureBar)?.toFixed(0) ?? 'Débit inconnu'} L/min documentés · cuve ${compressor.tankLiters} L · fiabilité des données ${compressor.confidence}.`;
 		article.append(head, detail);
-		if (proofToolId) { const proofLink = document.createElement('a'); proofLink.className = 'result-proof-link'; proofLink.href = `/graphe-preuve/?compresseur=${encodeURIComponent(compressor.id)}&outil=${encodeURIComponent(proofToolId)}`; proofLink.textContent = 'Remonter aux preuves'; article.append(proofLink); }
+		if (proofToolId) { const proofLink = document.createElement('a'); proofLink.className = 'result-proof-link'; proofLink.href = `/graphe-preuve/#compresseur=${encodeURIComponent(compressor.id)}&outil=${encodeURIComponent(proofToolId)}`; proofLink.textContent = 'Remonter aux preuves'; article.append(proofLink); }
 		return article;
 	}
 
@@ -488,9 +488,14 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	form?.querySelector<HTMLSelectElement>('[name="compressor"]')?.addEventListener('change', (event: Event) => { root!.querySelector<HTMLElement>('[data-custom-compressor]')!.hidden = (event.target as HTMLSelectElement).value !== 'custom'; });
 	form?.querySelector<HTMLInputElement>('[name="margin"]')?.addEventListener('input', (event: Event) => { root!.querySelector<HTMLOutputElement>('[data-margin-output]')!.value = `${(event.target as HTMLInputElement).value} %`; });
 
-	const initialParameters = new URLSearchParams(window.location.search);
-	const initialTool = initialParameters.get('outil') ?? undefined;
-	const initialCompressor = initialParameters.get('compresseur') ?? undefined;
+	const legacyParameters = new URLSearchParams(window.location.search);
+	const fragmentParameters = window.location.hash.startsWith('#config=') ? new URLSearchParams() : new URLSearchParams(window.location.hash.slice(1));
+	const hasFragmentPrefill = fragmentParameters.has('outil') || fragmentParameters.has('compresseur');
+	const initialParameters = hasFragmentPrefill ? fragmentParameters : legacyParameters;
+	const requestedTool = initialParameters.get('outil') ?? undefined;
+	const requestedCompressor = initialParameters.get('compresseur') ?? undefined;
+	const initialToolSelect = template?.content.querySelector<HTMLSelectElement>('[data-tool]');
+	const initialTool = requestedTool && initialToolSelect && [...initialToolSelect.options].some((option) => option.value === requestedTool) ? requestedTool : undefined;
 	async function initializeCalculator() {
 		if (window.location.hash.startsWith('#config=')) {
 			await loadCalculatorRuntime();
@@ -499,7 +504,15 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		}
 		addDemand(initialTool);
 		const compressorSelect = form?.querySelector<HTMLSelectElement>('[name="compressor"]');
+		const initialCompressor = requestedCompressor && compressorSelect && [...compressorSelect.options].some((option) => option.value === requestedCompressor) ? requestedCompressor : undefined;
 		if (initialCompressor && compressorSelect && [...compressorSelect.options].some((option) => option.value === initialCompressor)) compressorSelect.value = initialCompressor;
+		if (!hasFragmentPrefill && (legacyParameters.has('outil') || legacyParameters.has('compresseur'))) {
+			const normalized = new URLSearchParams();
+			if (initialTool) normalized.set('outil', initialTool);
+			if (initialCompressor) normalized.set('compresseur', initialCompressor);
+			const fragment = normalized.toString();
+			window.history.replaceState(null, '', `${window.location.pathname}${fragment ? `#${fragment}` : ''}`);
+		}
 	}
 	void initializeCalculator();
 

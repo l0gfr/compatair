@@ -1,8 +1,11 @@
 ---
+import { productImageDimensions } from '../domain/product-image-dimensions';
+
 type ProductImage = { src: string; alt: string; sourceUrl: string; sourceLabel: string };
 const { image, eager = false, compact = false } = Astro.props as { image: ProductImage; eager?: boolean; compact?: boolean };
+const { width, height } = productImageDimensions(image.src);
 ---
 <figure class:list={['product-visual', compact && 'compact']}>
-	<img src={image.src} alt={image.alt} width="800" height="800" loading={eager ? 'eager' : 'lazy'} decoding="async" fetchpriority={eager ? 'high' : 'auto'} />
+	<img src={image.src} alt={image.alt} width={width} height={height} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchpriority={eager ? 'high' : 'auto'} />
 	{!compact && <figcaption>Photo : <a href={image.sourceUrl} rel="nofollow noopener" target="_blank">{image.sourceLabel}</a></figcaption>}
 </figure>
