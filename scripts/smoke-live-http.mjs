@@ -185,6 +185,63 @@ if (mcpEnabled) {
 		headers: { 'Content-Type': 'application/json', 'UCP-Agent': 'profile="https://compatair.fr/examples/ucp/platform-profile.json"' },
 		requestBody: JSON.stringify({ ucp: { version: '2026-04-08' }, intent: 'will_it_work', configuration: { compressor: { id: 'kaeser-eurocomp-epc-840-100' }, tools: [{ id: 'einhell-tc-pe-150' }], mode: 'successive' } }),
 	});
+
+	await check('contrat MCP UCP avec URL de profil', '/mcp', ({ body, response }) => {
+		assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
+		assert(response.headers.get('content-type')?.includes('application/json'), `réponse MCP non JSON: ${response.headers.get('content-type')}`);
+		const result = JSON.parse(body);
+		assert(result.jsonrpc === '2.0' && result.id === 'deploy-profile-contract', 'enveloppe JSON-RPC MCP invalide');
+		assert(!result.error, `erreur MCP inattendue: ${JSON.stringify(result.error)}`);
+		const decision = result.result?.structuredContent;
+		assert(decision?.capability === 'fr.compatair.air.compatibility', 'capability UCP MCP absente');
+		assert(decision?.overall_system_verdict?.scope === 'complete_air_system', 'portée système MCP absente');
+		assert(decision?.air_supply_verdict?.scope === 'air_supply', 'portée alimentation MCP absente');
+		assert(typeof decision?.canonical_url === 'string' && decision.canonical_url.startsWith('https://compatair.fr/'), 'canonical_url MCP absente');
+	}, {
+		method: 'POST',
+		headers: {
+			Accept: 'application/json, text/event-stream',
+			'Content-Type': 'application/json',
+			'MCP-Protocol-Version': '2025-11-25',
+		},
+		requestBody: JSON.stringify({
+			jsonrpc: '2.0', id: 'deploy-profile-contract', method: 'tools/call',
+			params: {
+				name: 'evaluate_air_compatibility',
+				arguments: {
+					meta: { 'ucp-agent': { profile: 'https://compatair.fr/examples/ucp/platform-profile.json' } },
+					ucp: { version: '2026-04-08' }, intent: 'will_it_work',
+					configuration: { compressor: { id: 'kaeser-eurocomp-epc-840-100' }, tools: [{ id: 'einhell-tc-pe-150' }], mode: 'successive' },
+				},
+			},
+		}),
+	});
+
+	await check('contrat MCP UCP avec profil tiers inaccessible', '/mcp', ({ body, response }) => {
+		assert(response.status === 424, `HTTP applicatif attendu 424, reçu ${response.status}`);
+		assert(response.headers.get('content-type')?.includes('application/json'), `réponse MCP non JSON: ${response.headers.get('content-type')}`);
+		const result = JSON.parse(body);
+		assert(result.jsonrpc === '2.0' && result.id === 'deploy-external-profile-contract', 'enveloppe JSON-RPC MCP invalide');
+		assert(result.error?.data?.messages?.[0]?.code === 'profile_unreachable', `erreur applicative profile_unreachable absente: ${body}`);
+	}, {
+		method: 'POST',
+		headers: {
+			Accept: 'application/json, text/event-stream',
+			'Content-Type': 'application/json',
+			'MCP-Protocol-Version': '2025-11-25',
+		},
+		requestBody: JSON.stringify({
+			jsonrpc: '2.0', id: 'deploy-external-profile-contract', method: 'tools/call',
+			params: {
+				name: 'evaluate_air_compatibility',
+				arguments: {
+					meta: { 'ucp-agent': { profile: 'https://agent.example/.well-known/ucp' } },
+					ucp: { version: '2026-04-08' }, intent: 'will_it_work',
+					configuration: { compressor: { id: 'kaeser-eurocomp-epc-840-100' }, tools: [{ id: 'einhell-tc-pe-150' }], mode: 'successive' },
+				},
+			},
+		}),
+	});
 }
 
 console.log(`Surface HTTP live vérifiée pour ${expectedSha}.`);
