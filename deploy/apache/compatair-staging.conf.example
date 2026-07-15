@@ -1,0 +1,17 @@
+<VirtualHost 127.0.0.1:80>
+    ServerName compatair-staging.invalid
+    DocumentRoot /var/www/html/compatair-staging/current
+
+    ProxyPreserveHost On
+    ProxyPass /mcp-health http://127.0.0.1:8788/health timeout=5 connectiontimeout=2
+    ProxyPassReverse /mcp-health http://127.0.0.1:8788/health
+
+    <Directory /var/www/html/compatair-staging/current>
+        Options -Indexes -ExecCGI
+        AllowOverride None
+        Require local
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/compatair-staging-error.log
+    CustomLog ${APACHE_LOG_DIR}/compatair-staging-access.log combined
+</VirtualHost>

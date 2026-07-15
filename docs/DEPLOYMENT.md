@@ -40,6 +40,8 @@ La clé publique correspondante doit être ajoutée au `~/.ssh/authorized_keys` 
 
 Une fois le serveur, le DNS et le certificat vérifiés, créer la variable de dépôt `DEPLOY_ENABLED` avec la valeur `true`. Tant que cette variable est absente, le workflow de production reste volontairement inactif, même sur `main`.
 
+Le secret `CRUX_API_KEY` est facultatif. Lorsqu’il contient une clé Google Cloud limitée à la Chrome UX Report API, le workflow joint au rapport Lighthouse les LCP, INP et CLS terrain disponibles pour l’origine mobile. Sans clé ou sans cohorte CrUX suffisante, l’artefact indique explicitement `not_configured` ou `insufficient_data` et ne remplace jamais ces mesures par les valeurs de laboratoire.
+
 ## TLS et vhost
 
 Le bootstrap installe d’abord le vhost HTTP et un contenu d’attente. Demander ensuite le certificat avec le compte Certbot déjà configuré sur le serveur :
@@ -126,7 +128,7 @@ pnpm build
 pnpm data:rank-demand -- /chemin/prive/demand-aggregates.json
 ```
 
-Le rapport `demand-priorities.json` exclut toute dimension comptant moins de cinq contributions. Il rapproche ensuite la demande agrégée du snapshot public `data/verdicts.json` afin de faire remonter les outils recherchés qui disposent du plus grand volume pondéré de couples encore insuffisants. Une seconde liste classe les compresseurs selon la somme de demande visible bloquée lorsque le besoin FAD de l’outil est déjà connu : elle sert à prioriser la recherche de courbes FAD et de pressions manquantes sans attribuer au compresseur une donnée absente côté outil.
+Le rapport `demand-priorities.json` exclut toute dimension comptant moins de cinq contributions. Il rapproche ensuite la demande agrégée du snapshot public `data/verdicts.json` et matérialise une file d’action bornée aux vingt couples insuffisants les plus demandés. Il fait aussi remonter les outils recherchés qui disposent du plus grand volume pondéré de couples encore insuffisants. Une seconde liste classe les compresseurs selon la somme de demande visible bloquée lorsque le besoin FAD de l’outil est déjà connu : elle sert à prioriser la recherche de courbes FAD et de pressions manquantes sans attribuer au compresseur une donnée absente côté outil.
 
 La couverture pondérée vaut `somme(demande outil × couples concluants) / somme(demande outil × couples éligibles)`. L’objectif opérationnel est fixé à 80 %. Le rapport publie aussi la couverture non pondérée, la part des sélections d’outils effectivement visible après suppression et le nombre d’outils visibles sans verdict exploitable. En l’absence d’agrégats privés suffisants, le statut reste `insufficient_data` : le build public ne remplace jamais la demande observée par une pondération uniforme.
 
@@ -159,6 +161,41 @@ sudo systemctl status compatair-stats.service --no-pager
 ```
 
 ## Rollback
+
+### Drill de panne isolé
+
+Le drill ne doit jamais être exécuté sur `/var/www/html/compatair`. Il utilise une racine, un port, une unité systemd, un état et un vhost locaux distincts. Préparer une première fois la copie staging depuis une release saine :
+
+```bash
+release=$(cat /var/www/html/compatair/DEPLOYED_SHA)
+sudo install -d -o compatair-deploy -g www-data -m 2755 /var/www/html/compatair-staging/releases
+sudo cp -a "/var/www/html/compatair/releases/$release" "/var/www/html/compatair-staging/releases/$release"
+sudo chown -R compatair-deploy:www-data "/var/www/html/compatair-staging/releases/$release"
+sudo ln -sfn "/var/www/html/compatair-staging/releases/$release" /var/www/html/compatair-staging/current
+printf '%s\n' "$release" | sudo tee /var/www/html/compatair-staging/DEPLOYED_SHA > /dev/null
+sudo chown compatair-deploy:www-data /var/www/html/compatair-staging/DEPLOYED_SHA
+sudo install -o root -g root -m 644 deploy/systemd/compatair-mcp-staging.service /etc/systemd/system/compatair-mcp-staging.service
+sudo install -o root -g root -m 644 deploy/apache/compatair-staging.conf.example /etc/apache2/sites-available/compatair-staging.conf
+sudo ln -sfn /etc/apache2/sites-available/compatair-staging.conf /etc/apache2/sites-enabled/compatair-staging.conf
+printf '%s\n' 'compatair-deploy ALL=(root) NOPASSWD: /bin/systemctl restart compatair-mcp-staging.service' | sudo tee /etc/sudoers.d/compatair-mcp-staging-drill > /dev/null
+sudo chmod 440 /etc/sudoers.d/compatair-mcp-staging-drill
+sudo visudo -cf /etc/sudoers.d/compatair-mcp-staging-drill
+sudo systemctl daemon-reload
+sudo systemctl enable --now compatair-mcp-staging.service
+sudo apache2ctl configtest
+sudo systemctl reload apache2
+curl --fail http://127.0.0.1:8788/health
+```
+
+Le drill exécute ensuite réellement un MCP invalide, une configuration Apache rejetée et une interruption `TERM` juste après le changement de lien. Après chaque défaut, il exige le retour au SHA initial et une santé MCP valide. La preuve JSON est écrite avec le mode `0600` sous `/var/lib/compatair-staging/failure-drills/` :
+
+```bash
+sudo bash deploy/server/staging-failure-drill.sh
+```
+
+Cette commande est une opération serveur explicite. Les tests locaux vérifient le contrat et la syntaxe, mais ne sont pas présentés comme la preuve du drill systemd/Apache réel.
+
+## Rollback manuel
 
 Lister les releases sur le serveur puis réactiver un SHA connu :
 

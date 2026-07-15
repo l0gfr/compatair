@@ -10,6 +10,7 @@ describe('demand prioritization', () => {
 		});
 		expect(report.priorities.tools).toHaveLength(1);
 		expect(report.priorities.tools[0]).toMatchObject({ toolId: 'tool-a', demandCount: 12, continuousCompressorCount: 1, insufficientDataCount: 1 });
+		expect(report.priorities.deficits).toHaveLength(0);
 		expect(report.coverage).toMatchObject({ status: 'measured', weightedCoveragePercent: 50, unweightedCoveragePercent: 50, targetPercent: 80, targetStatus: 'below_target', gapPercentagePoints: 30, visibleDemandContributions: 12, totalToolSelections: 16, visibleDemandSharePercent: 75 });
 		expect(report.priorities.categories).toEqual([{ category: 'Ponçage', demandCount: 12 }]);
 		expect(JSON.stringify(report)).not.toContain('tool-b');
@@ -28,7 +29,20 @@ describe('demand prioritization', () => {
 		});
 		expect(report.coverage).toMatchObject({ weightedCoveragePercent: 62, unweightedCoveragePercent: 50, targetStatus: 'below_target', visibleDemandSharePercent: 100 });
 		expect(report.priorities.tools.map((tool) => tool.toolId)).toEqual(['niche', 'popular']);
+		expect(report.priorities.deficits).toHaveLength(10);
+		expect(report.priorities.deficits[0]).toMatchObject({ rank: 1, toolId: 'popular', demandCount: 70, requiredFadLpm: 100 });
 		expect(report.priorities.compressorSources[0]).toMatchObject({ compressorId: 'c-8', weightedInsufficientDemand: 100, missingPairCount: 2, affectedVisibleToolCount: 2 });
+	});
+
+	it('caps the actionable deficit list at twenty pairs', () => {
+		const report = rankDemand({
+			aggregates: { schemaVersion: '1.0.0', totalContributions: 50, dimensions: { tools: { popular: 50 } } },
+			catalog: { catalogVersion: 'catalog', compressors: Array.from({ length: 30 }, (_, index) => ({ id: `c-${index}`, brand: 'Marque', model: `C${index}` })), tools: [{ id: 'popular', label: 'Populaire', category: 'Atelier' }] },
+			verdicts: { verdictVersion: 'verdicts', pairs: Array.from({ length: 30 }, (_, index) => ({ id: `c-${index}--popular`, compressorId: `c-${index}`, toolId: 'popular', verdict: 'insufficient_data', limitingFactor: 'data', requiredFadLpm: 250 })) },
+		});
+		expect(report.priorities.deficits).toHaveLength(20);
+		expect(report.priorities.candidateDeficitCount).toBe(30);
+		expect(report.priorities.deficits.at(-1)?.rank).toBe(20);
 	});
 
 	it('refuses to fabricate coverage when visible demand has no matching verdicts', () => {

@@ -1,21 +1,42 @@
-function completionRate(started, completed, warnings) {
-	if (completed > started) {
-		warnings.push('Le nombre de complétions dépasse les démarrages ; le taux est masqué.');
+import { normalizeProductFunnelAggregate, PRODUCT_FUNNEL_FAMILIES, PRODUCT_FUNNEL_SCHEMA_VERSION } from '../../server/product-funnel-aggregates.mjs';
+
+function boundedRate(numerator, denominator, warnings, label) {
+	if (numerator > denominator) {
+		warnings.push(`${label} : le numérateur dépasse le dénominateur ; le taux est masqué.`);
 		return null;
 	}
-	return started ? Number((completed / started * 100).toFixed(1)) : null;
+	return denominator ? Number((numerator / denominator * 100).toFixed(1)) : null;
 }
 
 export function reportProductFunnel(aggregates) {
-	if (aggregates?.schemaVersion !== '1.0.0' || !aggregates.calculator) throw new Error('Agrégat de funnel incompatible.');
+	const normalized = normalizeProductFunnelAggregate(aggregates);
+	if (!normalized) throw new Error('Compteurs de funnel incohérents.');
 	const warnings = [];
-	const { started, completed } = aggregates.calculator;
-	if (![aggregates.totalEvents, started, completed].every((value) => Number.isSafeInteger(value) && value >= 0) || aggregates.totalEvents !== started + completed) throw new Error('Compteurs de funnel incohérents.');
+	const { started, completed } = normalized.calculator;
+	const { displayed, selected, recalculated } = normalized.counterfactual;
+	const families = Object.fromEntries(PRODUCT_FUNNEL_FAMILIES.map((family) => {
+		const counts = normalized.counterfactual.byFamily[family];
+		return [family, {
+			...counts,
+			selectionRatePercent: boundedRate(counts.selected, counts.displayed, warnings, `Famille ${family}, sélection`),
+			recalculationSuccessRatePercent: boundedRate(counts.recalculated, counts.selected, warnings, `Famille ${family}, recalcul`),
+		}];
+	}));
 	return {
-		schemaVersion: '1.0.0',
-		sourceUpdatedAt: aggregates.updatedAt ?? null,
-		totalEvents: aggregates.totalEvents,
-		calculator: { started, completed, completionRatePercent: completionRate(started, completed, warnings) },
+		schemaVersion: PRODUCT_FUNNEL_SCHEMA_VERSION,
+		sourceSchemaVersion: aggregates.schemaVersion,
+		sourceUpdatedAt: normalized.updatedAt ?? null,
+		totalEvents: normalized.totalEvents,
+		calculator: { started, completed, completionRatePercent: boundedRate(completed, started, warnings, 'Calculateur') },
+		counterfactual: {
+			displayed,
+			selected,
+			recalculated,
+			selectionRatePercent: boundedRate(selected, displayed, warnings, 'Recommandations, sélection'),
+			recalculationSuccessRatePercent: boundedRate(recalculated, selected, warnings, 'Recommandations, recalcul'),
+			families,
+		},
 		dataQualityWarnings: warnings,
+		privacyBoundary: 'Compteurs fermés uniquement : aucune URL, valeur saisie, référence produit, adresse IP persistée, cookie ou événement brut.',
 	};
 }

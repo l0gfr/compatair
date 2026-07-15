@@ -143,7 +143,7 @@ describe('MCP HTTP boundary helpers', () => {
 		const productFunnelAggregatePath = join(directory, 'product-funnel.json');
 		try {
 			const server = createCompatAirServer({ catalog: { catalogVersion: 'test', compressors: [], tools: [] }, allowedOrigins: new Set(['https://compatair.fr']), productFunnelAggregatePath });
-			const payload = JSON.stringify({ event: 'calculator_funnel_aggregate', schemaVersion: '1.0.0', step: 'completed' });
+			const payload = JSON.stringify({ event: 'calculator_funnel_aggregate', schemaVersion: '2.0.0', step: 'recommendation_displayed', family: 'machine' });
 			const status = await new Promise<number>((resolve) => {
 				const request = {
 					url: '/events', method: 'POST', headers: { origin: 'https://compatair.fr', 'content-type': 'application/json' }, socket: { remoteAddress: '127.0.0.1' },
@@ -153,7 +153,7 @@ describe('MCP HTTP boundary helpers', () => {
 				server.emit('request', request, response);
 			});
 			expect(status).toBe(204);
-			expect(JSON.parse(readFileSync(productFunnelAggregatePath, 'utf8'))).toMatchObject({ totalEvents: 1, calculator: { completed: 1 } });
+			expect(JSON.parse(readFileSync(productFunnelAggregatePath, 'utf8'))).toMatchObject({ schemaVersion: '2.0.0', totalEvents: 1, counterfactual: { displayed: 1, byFamily: { machine: { displayed: 1 } } } });
 		} finally { rmSync(directory, { recursive: true, force: true }); }
 	});
 

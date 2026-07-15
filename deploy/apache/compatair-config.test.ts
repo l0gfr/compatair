@@ -72,6 +72,12 @@ describe('CompatAir Apache CSP', () => {
 		expect(config).toContain('ProxyPassReverse /compatibilite/ http://127.0.0.1:8787/compatibilite/');
 		expect(config).toContain('RewriteRule ^compatibilite$ - [R=410,L]');
 		expect(config.indexOf('ProxyPass /compatibilite/')).toBeLessThan(config.indexOf('ProxyPass /api/v1/compatibility'));
+		const compatibilityRedirects = config.match(
+			/<LocationMatch "\^\/compatibilite\/">([\s\S]*?)<\/LocationMatch>/,
+		)?.[1];
+		expect(compatibilityRedirects).toContain('Header onsuccess unset Cache-Control');
+		expect(compatibilityRedirects).toContain('Header always unset Cache-Control');
+		expect(compatibilityRedirects).toContain('Header always set Cache-Control "public, max-age=86400"');
 	});
 
 	it('reserves immutable caching for fingerprinted build assets and the versioned widget', () => {
@@ -116,13 +122,21 @@ describe('CompatAir Apache CSP', () => {
 		for (const header of [
 			'Access-Control-Allow-Origin',
 			'Cross-Origin-Resource-Policy',
-			'X-Content-Type-Options',
 		]) {
 			expect(apiLocation).toContain(`Header always unset ${header}`);
 			expect(apiLocation?.indexOf(`Header always unset ${header}`)).toBeLessThan(
 				apiLocation?.indexOf(`Header always set ${header}`) ?? -1,
 			);
 		}
+	});
+
+	it('normalizes nosniff once for static and proxied responses', () => {
+		expect(config.match(/Header onsuccess unset X-Content-Type-Options/g)).toHaveLength(1);
+		expect(config.match(/Header always unset X-Content-Type-Options/g)).toHaveLength(1);
+		expect(config.match(/Header always set X-Content-Type-Options "nosniff"/g)).toHaveLength(1);
+		expect(config.indexOf('Header always unset X-Content-Type-Options')).toBeLessThan(
+			config.indexOf('Header always set X-Content-Type-Options "nosniff"'),
+		);
 	});
 
 	it('preserves privacy and freshness headers on affiliate redirects', () => {

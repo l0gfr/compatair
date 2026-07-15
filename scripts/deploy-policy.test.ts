@@ -28,11 +28,21 @@ describe('release boundary policy', () => {
 	it('restores the previous release when the candidate MCP is unhealthy', () => {
 		expect(deploy).toContain('restore_previous_release');
 		expect(deploy).toContain('previous_release_id');
+		expect(deploy).toContain('trap rollback_after_failed_activation EXIT');
+		expect(deploy).toContain('activation_pending=true');
 		expect(deploy).toContain('if ! restart_mcp_and_wait');
 		expect(deploy).toContain('if ! restore_previous_release');
 		expect(deploy.indexOf('if ! restart_mcp_and_wait')).toBeLessThan(
 			deploy.lastIndexOf(`printf '%s\\n' "$release_id" > "$deployed_sha"`),
 		);
+	});
+
+	it('reserves failure injection for the isolated staging root', () => {
+		expect(deploy).toContain('/var/www/html/compatair-staging');
+		expect(deploy).toContain('COMPATAIR_STAGING_DRILL');
+		expect(deploy).toContain('compatair-mcp-staging.service');
+		expect(deploy).toContain('COMPATAIR_DEPLOY_FAILPOINT');
+		expect(deploy).toContain('Invalid or production failpoint');
 	});
 
 	it('publishes and verifies the exact GitHub release SHA', () => {

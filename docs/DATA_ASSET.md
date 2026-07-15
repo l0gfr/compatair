@@ -59,9 +59,9 @@ Ce dispositif suit les principes de minimisation et de statistiques anonymes exp
 
 ## Funnel produit agrégé
 
-Le calculateur transmet au plus un signal `started` et un signal `completed` par chargement de page. Aucun chemin, URL, referrer, identifiant ou contenu de formulaire n’atteint l’actif statistique.
+Le calculateur transmet au plus un signal `started` et un signal `completed` par chargement de page. Pour la recommandation contrefactuelle, il peut aussi transmettre une fois par famille et par chargement les étapes fermées `recommendation_displayed`, `recommendation_selected` et `recalculation_succeeded`. La famille appartient obligatoirement à la liste `pressure`, `flexible`, `simultaneity`, `leak`, `cadence` ou `machine`.
 
-Le serveur conserve uniquement les deux compteurs globaux dans `/var/lib/compatair/product-funnel-aggregates.json`. Si des pertes réseau ou des requêtes invalides conduisent à davantage de complétions que de démarrages, le taux est laissé à `null` et une alerte de qualité est produite.
+Le serveur conserve uniquement les compteurs globaux et les compteurs par famille dans `/var/lib/compatair/product-funnel-aggregates.json`. Aucun chemin, URL, referrer, identifiant, référence produit, valeur saisie ou contenu de formulaire n’atteint cet actif statistique. Le schéma `2.0.0` migre le précédent fichier à deux compteurs sans inventer d’activité contrefactuelle. Si des pertes réseau ou des requêtes invalides conduisent à davantage de complétions que de démarrages, de sélections que d’affichages ou de recalculs que de sélections, le taux concerné est laissé à `null` et une alerte de qualité est produite.
 
 ## Offres ManoMano
 

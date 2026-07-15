@@ -1,4 +1,4 @@
-import { chmodSync, mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { chmodSync, copyFileSync, mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { execFileSync } from 'node:child_process';
@@ -6,6 +6,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 
 const temporaryDirectories: string[] = [];
 const resolver = resolve('.githooks/lib/node-runtime.sh');
+const hook = resolve('.githooks/pre-push');
 
 function fakeNode(directory: string, major: number) {
 	mkdirSync(directory, { recursive: true });
@@ -21,6 +22,17 @@ function fakePnpm(directory: string) {
 	writeFileSync(executable, '#!/bin/sh\nprintf "pnpm-runtime=%s command=%s\\n" "$(node --version)" "$*"\n');
 	chmodSync(executable, 0o755);
 	return executable;
+}
+
+function temporaryHookRepository() {
+	const root = mkdtempSync(join(tmpdir(), 'compatair-pre-push-repository-'));
+	temporaryDirectories.push(root);
+	mkdirSync(join(root, '.githooks', 'lib'), { recursive: true });
+	copyFileSync(hook, join(root, '.githooks', 'pre-push'));
+	copyFileSync(resolver, join(root, '.githooks', 'lib', 'node-runtime.sh'));
+	copyFileSync(resolve('.nvmrc'), join(root, '.nvmrc'));
+	execFileSync('git', ['init', '--quiet'], { cwd: root });
+	return root;
 }
 
 function resolveRuntime(requiredMajor: number, environment: NodeJS.ProcessEnv) {
@@ -74,14 +86,13 @@ describe('résolution du runtime Node du hook pre-push', () => {
 	});
 
 	it('bascule le hook main vers Node 24 avant d’appeler la validation', () => {
-		const root = mkdtempSync(join(tmpdir(), 'compatair-node-runtime-'));
-		temporaryDirectories.push(root);
+		const root = temporaryHookRepository();
 		const pathDirectory = join(root, 'path');
 		fakeNode(pathDirectory, 26);
 		fakePnpm(pathDirectory);
 		const node24 = fakeNode(join(root, 'node24'), 24);
 		const output = execFileSync('/bin/bash', ['.githooks/pre-push'], {
-			cwd: resolve('.'),
+			cwd: root,
 			env: {
 				HOME: join(root, 'home'),
 				PATH: `${pathDirectory}:/usr/bin:/bin`,

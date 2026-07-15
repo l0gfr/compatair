@@ -2,7 +2,14 @@
 set -Eeuo pipefail
 
 source_config=${1:-}
-target_config=/etc/apache2/sites-available/compatair.fr.conf
+target_config=${2:-/etc/apache2/sites-available/compatair.fr.conf}
+
+if [[ "$target_config" != /etc/apache2/sites-available/compatair.fr.conf ]]; then
+	if [[ ${COMPATAIR_STAGING_DRILL:-0} != 1 || "$target_config" != /etc/apache2/sites-available/compatair-staging.conf ]]; then
+		echo "Refusing an Apache target outside the CompatAir production or staging contract" >&2
+		exit 2
+	fi
+fi
 
 if [[ ${EUID:-$(id -u)} -ne 0 ]]; then
 	echo "This script must run as root" >&2
@@ -19,7 +26,7 @@ if [[ -L "$target_config" || ( -e "$target_config" && ! -f "$target_config" ) ]]
 	exit 2
 fi
 
-backup_config=$(mktemp /etc/apache2/sites-available/.compatair.fr.conf.XXXXXX)
+backup_config=$(mktemp "$(dirname "$target_config")/.compatair-vhost.XXXXXX")
 trap 'rm -f -- "$backup_config"' EXIT
 had_previous_config=false
 

@@ -1,8 +1,8 @@
-import { readFile } from 'node:fs/promises';
+import { lstat, readFile, readdir } from 'node:fs/promises';
 import { basename, extname, relative, resolve } from 'node:path';
 import { parseDocument } from 'yaml';
 import { walkRegularSourceFiles } from './lib/source-tree.mjs';
-const roots = ['src', 'server', 'scripts', 'deploy', '.github', '.githooks', 'docs']; const extensions = new Set(['.ts', '.astro', '.mjs', '.js', '.md', '.yml', '.yaml', '.sh']); const errors = [];
+const roots = ['src', 'server', 'scripts', 'deploy', '.github', '.githooks', 'docs', 'public', 'config']; const extensions = new Set(['.ts', '.astro', '.mjs', '.js', '.md', '.json', '.yml', '.yaml', '.sh']); const errors = [];
 async function lintFile(file) {
 	const name = basename(file);
 	const label = relative(resolve('.'), resolve(file)).replaceAll('\\', '/');
@@ -11,6 +11,9 @@ async function lintFile(file) {
 	const text = await readFile(file, 'utf8');
 	if (text.includes(String.fromCodePoint(0x2014))) errors.push(`${label}: tiret cadratin interdit`);
 	if (text.includes(['pull', 'request', 'target'].join('_'))) errors.push(`${label}: événement de pull request privilégié interdit`);
+	if (extname(name) === '.json') {
+		try { JSON.parse(text); } catch (error) { errors.push(`${label}: JSON invalide (${error instanceof Error ? error.message : 'erreur inconnue'})`); }
+	}
 	if (['.ts', '.astro', '.mjs', '.js'].includes(extname(name))) {
 		for (const pattern of [/\.innerHTML\s*=/, /\.outerHTML\s*=/, /insertAdjacentHTML\s*\(/, /document\.write\s*\(/, /\beval\s*\(/, /new\s+Function\s*\(/]) if (pattern.test(text)) errors.push(`${label}: puits DOM ou exécution dynamique interdit (${pattern.source})`);
 		const htmlSinkCount = [...text.matchAll(/\bset:html\s*=/g)].length;
@@ -29,6 +32,16 @@ for (const root of roots) await walkRegularSourceFiles(root, {
 	onFile: lintFile,
 	onUnsafeEntry: (file, kind) => errors.push(`${relative(resolve('.'), resolve(file))}: entrée source interdite (${kind === 'symbolic-link' ? 'lien symbolique' : 'fichier non régulier'})`),
 });
+for (const name of await readdir('.')) {
+	const info = await lstat(name);
+	if (info.isDirectory()) continue;
+	if (info.isSymbolicLink()) errors.push(`${name}: entrée racine interdite (lien symbolique)`);
+	else if (info.isFile()) await lintFile(name);
+	else errors.push(`${name}: entrée racine interdite (fichier non régulier)`);
+}
+const agentsInstructions = await readFile('AGENTS.md', 'utf8');
+const claudeInstructions = await readFile('CLAUDE.md', 'utf8');
+if (claudeInstructions !== agentsInstructions) errors.push('CLAUDE.md: le fichier régulier doit rester identique à AGENTS.md');
 const publicWordingFiles = [
 	'src/layouts/BaseLayout.astro',
 	'src/pages/index.astro',
@@ -59,13 +72,23 @@ for (const fontPreload of ['manropeLatinWghtUrl', 'newsreaderLatinWghtUrl']) {
 const scannerPage = await readFile('src/pages/scanner.astro', 'utf8');
 if (!scannerPage.includes('data-compatair-surface="scanner"')) errors.push('src/pages/scanner.astro: marqueur de vérification stable manquant');
 const deployWorkflow = await readFile('.github/workflows/deploy-production.yml', 'utf8');
+const ciWorkflow = await readFile('.github/workflows/ci.yml', 'utf8');
 if (!deployWorkflow.includes(`grep -Fq 'data-compatair-surface="scanner"'`)) errors.push('.github/workflows/deploy-production.yml: le contrôle du scanner doit utiliser son marqueur stable');
 if (deployWorkflow.includes(`grep -Fq 'Scanner et vérifier'`)) errors.push('.github/workflows/deploy-production.yml: contrôle de production couplé au wording public du scanner');
 if (!deployWorkflow.includes('COMPATAIR_RELEASE_SHA: ${{ github.sha }}')) errors.push('.github/workflows/deploy-production.yml: injection du SHA de release absente');
 if (!deployWorkflow.includes('COMPATAIR_EXPECTED_RELEASE_SHA: ${{ github.sha }}')) errors.push('.github/workflows/deploy-production.yml: SHA attendu absent de la vérification live');
 if (!deployWorkflow.includes('node scripts/verify-live-seo.mjs')) errors.push('.github/workflows/deploy-production.yml: vérification SEO live absente');
+for (const [file, workflow] of [['.github/workflows/ci.yml', ciWorkflow], ['.github/workflows/deploy-production.yml', deployWorkflow]]) {
+	if (!workflow.includes('CHROME_PATH=$chrome_path')) errors.push(`${file}: navigateur Chrome non identifié explicitement`);
+	if (!workflow.includes('pnpm lighthouse:summary')) errors.push(`${file}: résumé Lighthouse absent`);
+	if (!workflow.includes('.lighthouseci/reports/')) errors.push(`${file}: artefact Lighthouse absent`);
+}
+if (!deployWorkflow.includes('pnpm crux:report')) errors.push('.github/workflows/deploy-production.yml: statut Core Web Vitals terrain absent');
 const prePushHook = await readFile('.githooks/pre-push', 'utf8');
 if (!prePushHook.includes('resolve_node_for_major')) errors.push('.githooks/pre-push: résolution automatique du runtime Node manquante');
 if (!prePushHook.includes('pnpm validate:main')) errors.push('.githooks/pre-push: validation principale manquante');
+const packageManifest = JSON.parse(await readFile('package.json', 'utf8'));
+if (!packageManifest.scripts?.['archive:verify']?.includes('verify-source-archive.sh')) errors.push('package.json: contrôle de structure ZIP absent');
+if (!packageManifest.scripts?.['validate:main']?.includes('archive:verify')) errors.push('package.json: contrôle de structure ZIP absent de validate:main');
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 console.log('Contrôles source et workflows réussis.');

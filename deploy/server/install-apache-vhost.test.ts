@@ -25,6 +25,12 @@ describe('transactional Apache vhost installation', () => {
 		expect(helper).toContain('Refusing to replace an unexpected Apache vhost path');
 	});
 
+	it('allows the alternate vhost target only during the explicit staging drill', () => {
+		expect(helper).toContain('COMPATAIR_STAGING_DRILL');
+		expect(helper).toContain('/etc/apache2/sites-available/compatair-staging.conf');
+		expect(helper).toContain('Refusing an Apache target outside the CompatAir production or staging contract');
+	});
+
 	it('is the only installation path used by privileged setup scripts', () => {
 		for (const caller of callers) {
 			expect(caller).toContain('install-apache-vhost.sh');

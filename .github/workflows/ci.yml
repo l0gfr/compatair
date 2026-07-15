@@ -50,8 +50,18 @@ jobs:
       - name: Check generated HTML and internal links
         run: node scripts/audit-dist.mjs
 
+      - name: Select the hosted Chrome browser
+        run: |
+          chrome_path=$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || true)
+          test -n "$chrome_path"
+          "$chrome_path" --version
+          echo "CHROME_PATH=$chrome_path" >> "$GITHUB_ENV"
+
       - name: Lighthouse performance, accessibility and SEO
         run: pnpm lighthouse
+
+      - name: Summarize Lighthouse laboratory metrics
+        run: pnpm lighthouse:summary
 
       - name: Upload Lighthouse reports
         if: ${{ always() && hashFiles('.lighthouseci/reports/**') != '' }}

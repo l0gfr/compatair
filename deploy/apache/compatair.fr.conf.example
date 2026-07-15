@@ -91,6 +91,11 @@
 		Header always unset X-Robots-Tag
 		Header always set X-Robots-Tag "noindex, nofollow"
 	</LocationMatch>
+	<LocationMatch "^/compatibilite/">
+		Header onsuccess unset Cache-Control
+		Header always unset Cache-Control
+		Header always set Cache-Control "public, max-age=86400"
+	</LocationMatch>
 	<Location "/api/v1/compatibility">
 		# Normalize headers already emitted by the Node service. Without the
 		# explicit unsets, Apache appends a second value and browsers reject the
@@ -99,8 +104,6 @@
 		Header always set Access-Control-Allow-Origin "*"
 		Header always unset Cross-Origin-Resource-Policy
 		Header always set Cross-Origin-Resource-Policy "cross-origin"
-		Header always unset X-Content-Type-Options
-		Header always set X-Content-Type-Options "nosniff"
 	</Location>
 	<LocationMatch "^/widget/(?:v1|v1\.0\.0)/compatair-widget\.js$">
 		Header always set Access-Control-Allow-Origin "*"
@@ -120,7 +123,9 @@
     </Directory>
 
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
-    Header always set X-Content-Type-Options "nosniff"
+	Header onsuccess unset X-Content-Type-Options
+	Header always unset X-Content-Type-Options
+	Header always set X-Content-Type-Options "nosniff"
 	Header always set X-Frame-Options "DENY"
 	Header onsuccess unset X-XSS-Protection
 	Header always unset X-XSS-Protection

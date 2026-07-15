@@ -105,6 +105,8 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	type PassportConfiguration = import('../domain/passport').PassportConfiguration;
 	type SizingResult = import('../domain/sizing').SizingResult;
 	type CounterfactualReport = import('../domain/counterfactual').CounterfactualReport;
+	type CounterfactualCandidate = import('../domain/counterfactual').CounterfactualCandidate;
+	type CounterfactualKind = import('../domain/counterfactual').CounterfactualKind;
 	type CounterfactualMachine = import('../domain/counterfactual').CounterfactualMachine;
 	let CATALOG_VERIFIED_AT = '';
 	let CALCULATION_VERSION = '';
@@ -159,10 +161,18 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	let currentFilter: keyof typeof labels | 'all' = 'all';
 	let lastSummary = '';
 	const recordedFunnelSteps = new Set<'started' | 'completed'>();
+	const recordedCounterfactualSteps = new Set<string>();
+	let pendingCounterfactualFamily: CounterfactualKind | undefined;
 
 	function recordFunnelStep(step: 'started' | 'completed') {
 		if (recordedFunnelSteps.has(step) || !navigator.sendBeacon) return;
-		if (navigator.sendBeacon('/events', new Blob([JSON.stringify({ event: 'calculator_funnel_aggregate', schemaVersion: '1.0.0', step })], { type: 'application/json' }))) recordedFunnelSteps.add(step);
+		if (navigator.sendBeacon('/events', new Blob([JSON.stringify({ event: 'calculator_funnel_aggregate', schemaVersion: '2.0.0', step })], { type: 'application/json' }))) recordedFunnelSteps.add(step);
+	}
+
+	function recordCounterfactualStep(step: 'recommendation_displayed' | 'recommendation_selected' | 'recalculation_succeeded', family: CounterfactualKind) {
+		const key = `${step}:${family}`;
+		if (recordedCounterfactualSteps.has(key) || !navigator.sendBeacon) return;
+		if (navigator.sendBeacon('/events', new Blob([JSON.stringify({ event: 'calculator_funnel_aggregate', schemaVersion: '2.0.0', step, family })], { type: 'application/json' }))) recordedCounterfactualSteps.add(key);
 	}
 
 	function resultLabel(result: SizingResult) {
@@ -316,6 +326,32 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		metrics.replaceChildren(...values.map(([label, value]) => { const div = document.createElement('div'); const small = document.createElement('small'); const strong = document.createElement('strong'); small.textContent = label; strong.textContent = value; div.append(small, strong); return div; }));
 	}
 
+	function applyCounterfactual(candidate: CounterfactualCandidate) {
+		if (!form) return false;
+		const setField = (name: string, value: string | number) => {
+			const field = form.elements.namedItem(name);
+			if (!(field instanceof HTMLInputElement || field instanceof HTMLSelectElement)) return false;
+			field.value = String(value);
+			return true;
+		};
+		if (candidate.kind === 'pressure') return setField('supplyPressure', candidate.afterValue);
+		if (candidate.kind === 'flexible') return setField('measuredPressureDrop', candidate.afterValue);
+		if (candidate.kind === 'simultaneity') return setField('mode', candidate.afterValue);
+		if (candidate.kind === 'leak') return setField('measuredLeak', candidate.afterValue);
+		if (candidate.kind === 'cadence') {
+			const row = [...(rows?.querySelectorAll<HTMLElement>('.demand-row') ?? [])].find((item) => item.querySelector<HTMLSelectElement>('[data-tool]')?.value === candidate.demandId);
+			const cadence = row?.querySelector<HTMLInputElement>('[data-cadence]');
+			if (!cadence) return false;
+			cadence.value = String(candidate.afterValue);
+			return true;
+		}
+		const selected = candidate.machineId ?? String(candidate.afterValue);
+		if (!setField('compressor', selected)) return false;
+		const custom = root?.querySelector<HTMLElement>('[data-custom-compressor]');
+		if (custom) custom.hidden = true;
+		return true;
+	}
+
 	function renderCounterfactual(report: CounterfactualReport) {
 		const target = root?.querySelector<HTMLElement>('[data-counterfactual-result]');
 		const boundary = root?.querySelector<HTMLElement>('[data-counterfactual-boundary]');
@@ -329,6 +365,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 			const message = document.createElement('p'); message.className = 'decision-empty'; message.textContent = 'Aucun changement unique n’est démontré suffisant avec les données disponibles. CompatAir ne combine pas plusieurs hypothèses et ne transforme pas une mesure absente en conseil.';
 			target.replaceChildren(message);
 		} else {
+			recordCounterfactualStep('recommendation_displayed', candidate.kind);
 			const title = document.createElement('strong'); title.className = 'counterfactual-action';
 			if (candidate.kind === 'pressure') title.textContent = `Porter la pression disponible de ${Number(candidate.beforeValue).toLocaleString('fr-FR')} à ${Number(candidate.afterValue).toLocaleString('fr-FR')} bar, sans dépasser la plaque machine.`;
 			else if (candidate.kind === 'flexible') title.textContent = `Ramener la chute mesurée du flexible et du réseau de ${Number(candidate.beforeValue).toLocaleString('fr-FR')} à ${Number(candidate.afterValue).toLocaleString('fr-FR')} bar ou moins.`;
@@ -342,7 +379,14 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 			}
 			const proof = document.createElement('p'); proof.className = 'counterfactual-proof'; proof.textContent = `Après recalcul : ${resultLabel(candidate.result)}, ${candidate.result.peakFlowLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min requis à ${candidate.result.requiredPressureBar.toLocaleString('fr-FR')} bar. Une seule variable a changé.`;
 			const alternatives = document.createElement('p'); alternatives.textContent = report.alternatives.length ? `${report.alternatives.length} autre(s) changement(s) unique(s) vérifié(s), classés après celui-ci.` : 'Aucune autre modification unique vérifiée ne passe.';
-			target.replaceChildren(title, proof, alternatives);
+			const apply = document.createElement('button'); apply.type = 'button'; apply.className = 'button'; apply.textContent = 'Appliquer et recalculer';
+			apply.addEventListener('click', () => {
+				if (!applyCounterfactual(candidate)) return;
+				recordCounterfactualStep('recommendation_selected', candidate.kind);
+				pendingCounterfactualFamily = candidate.kind;
+				form?.requestSubmit();
+			});
+			target.replaceChildren(title, proof, alternatives, apply);
 		}
 		const labels: Record<string, string> = { pressure: 'réglage de pression', flexible: 'flexible/réseau', simultaneity: 'simultanéité', leak: 'fuites', cadence: 'cadence', machine: 'machine' };
 		const unavailable = report.untested.map((kind) => labels[kind]).join(', ');
@@ -519,6 +563,8 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 
 	form?.addEventListener('submit', async (event) => {
 		event.preventDefault(); if (!output || !list || !evaluated) return;
+		const appliedCounterfactualFamily = pendingCounterfactualFamily;
+		pendingCounterfactualFamily = undefined;
 		recordFunnelStep('started');
 		const errorTarget = root?.querySelector<HTMLElement>('[data-form-error]');
 		try {
@@ -558,6 +604,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 			root?.querySelector<HTMLAnchorElement>('[data-create-passport]')?.setAttribute('href', `/passeport/#passport=${encodePassportEnvelope(envelope)}`);
 			contributeDemand(config, base);
 			recordFunnelStep('completed');
+			if (appliedCounterfactualFamily) recordCounterfactualStep('recalculation_succeeded', appliedCounterfactualFamily);
 			output.hidden = false; output.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
 		} catch (error) {
 			if (!errorTarget) return;

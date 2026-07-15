@@ -25,7 +25,7 @@
 - snapshots JSON du catalogue et de chaque verdict, validation, checksums, détection des doublons et rapports de différences ;
 - contribution facultative aux priorités du catalogue, agrégée sans événement brut, cookie, identifiant de navigateur ni adresse IP persistée ;
 - rapport privé de priorisation avec seuil minimal de cinq contributions par dimension, couverture pondérée par la demande observée et objectif opérationnel explicite de 80 % ;
-- funnel du calculateur agrégé sans URL, referrer, cookie ni identifiant, avec rapport privé et contrôle de cohérence du taux ;
+- funnel du calculateur agrégé sans URL, referrer, cookie ni identifiant, avec affichage, famille fermée, sélection et recalcul réussi de la recommandation contrefactuelle, rapport privé et contrôle de cohérence des taux ;
 - serveur MCP Streamable HTTP en lecture seule, neuf outils, six ressources, trois prompts, pagination, quotas, limite de taille, contrôle Origin, santé et métriques agrégées ;
 - workflows CI, déploiement, sécurité, snapshot et disponibilité, avec permissions minimales et actions épinglées ;
 - CSP, HSTS, politiques de sécurité, signalement responsable, confidentialité, cookies, affiliation et sources ;

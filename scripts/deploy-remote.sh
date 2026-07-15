@@ -11,8 +11,28 @@ if [[ ! "$release_id" =~ ^[0-9a-f]{40}$ ]]; then
 	exit 2
 fi
 
-if [[ "$deploy_root" != "/var/www/html/compatair" ]]; then
-	echo "DEPLOY_PATH must be /var/www/html/compatair" >&2
+deployment_profile=production
+mcp_service=compatair-mcp.service
+health_url=http://127.0.0.1:8787/health
+case "$deploy_root" in
+	/var/www/html/compatair) ;;
+	/var/www/html/compatair-staging)
+		if [[ ${COMPATAIR_STAGING_DRILL:-0} != 1 ]]; then
+			echo "The staging root is reserved for an explicit failure drill" >&2
+			exit 2
+		fi
+		deployment_profile=staging
+		mcp_service=compatair-mcp-staging.service
+		health_url=http://127.0.0.1:8788/health
+		;;
+	*)
+		echo "DEPLOY_PATH must be /var/www/html/compatair" >&2
+		exit 2
+		;;
+esac
+
+if [[ -n ${COMPATAIR_DEPLOY_FAILPOINT:-} && ( "$deployment_profile" != staging || "$COMPATAIR_DEPLOY_FAILPOINT" != after-switch ) ]]; then
+	echo "Invalid or production failpoint" >&2
 	exit 2
 fi
 
@@ -55,16 +75,16 @@ if [[ -L "$current" ]]; then
 fi
 
 restart_mcp_and_wait() {
-	if ! sudo -n /bin/systemctl restart compatair-mcp.service; then
+	if ! sudo -n /bin/systemctl restart "$mcp_service"; then
 		return 1
 	fi
 	for attempt in {1..10}; do
-		if curl --fail --silent --max-time 2 http://127.0.0.1:8787/health > /dev/null; then
+		if curl --fail --silent --max-time 2 "$health_url" > /dev/null; then
 			return 0
 		fi
 		sleep 1
 	done
-	curl --fail --silent --show-error --max-time 5 http://127.0.0.1:8787/health > /dev/null
+	curl --fail --silent --show-error --max-time 5 "$health_url" > /dev/null
 }
 
 restore_previous_release() {
@@ -77,6 +97,22 @@ restore_previous_release() {
 	printf '%s\n' "$previous_release_id" > "$deployed_sha"
 	restart_mcp_and_wait
 }
+
+activation_pending=false
+rollback_after_failed_activation() {
+	status=$?
+	trap - EXIT INT TERM
+	if [[ "$activation_pending" == true ]]; then
+		echo "Activation interrupted or unhealthy; restoring the previous verified release" >&2
+		if ! restore_previous_release; then
+			echo "Automatic rollback failed and requires immediate operator intervention" >&2
+		fi
+	fi
+	exit "$status"
+}
+trap rollback_after_failed_activation EXIT
+trap 'exit 130' INT
+trap 'exit 143' TERM
 
 install -d -m 755 "$releases"
 if [[ -e "$release" ]]; then
@@ -93,15 +129,18 @@ fi
 
 ln -sfn "$release" "$current.next"
 mv -Tf "$current.next" "$current"
+activation_pending=true
 
-if systemctl is-enabled --quiet compatair-mcp.service 2>/dev/null; then
+if [[ "$deployment_profile" == staging && ${COMPATAIR_DEPLOY_FAILPOINT:-} == after-switch ]]; then
+	kill -TERM "$$"
+fi
+
+if systemctl is-enabled --quiet "$mcp_service" 2>/dev/null; then
 	if ! restart_mcp_and_wait; then
-		echo "The candidate MCP release is unhealthy; restoring the previous release" >&2
-		if ! restore_previous_release; then
-			echo "Automatic rollback failed and requires immediate operator intervention" >&2
-		fi
+		echo "The candidate MCP release is unhealthy" >&2
 		exit 1
 	fi
 fi
 printf '%s\n' "$release_id" > "$deployed_sha"
+activation_pending=false
 printf 'Activated %s at %s\n' "$release_id" "$(date -u +%FT%TZ)"

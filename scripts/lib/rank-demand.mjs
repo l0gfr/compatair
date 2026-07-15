@@ -1,8 +1,9 @@
 const percent = (numerator, denominator) => denominator > 0 ? Number((numerator / denominator * 100).toFixed(1)) : null;
 
-export function rankDemand({ aggregates, catalog, verdicts, minimumCohort = 5, weightedCoverageTargetPercent = 80 }) {
+export function rankDemand({ aggregates, catalog, verdicts, minimumCohort = 5, weightedCoverageTargetPercent = 80, deficitLimit = 20 }) {
 	if (!Number.isInteger(minimumCohort) || minimumCohort < 5) throw new Error('minimumCohort doit être supérieur ou égal à 5');
 	if (!Number.isFinite(weightedCoverageTargetPercent) || weightedCoverageTargetPercent <= 0 || weightedCoverageTargetPercent > 100) throw new Error('weightedCoverageTargetPercent doit être compris entre 0 et 100');
+	if (!Number.isInteger(deficitLimit) || deficitLimit < 1 || deficitLimit > 100) throw new Error('deficitLimit doit être compris entre 1 et 100');
 	const toolById = new Map((catalog.tools ?? []).map((tool) => [tool.id, tool]));
 	const verdictsByTool = new Map();
 	for (const pair of verdicts.pairs ?? []) {
@@ -42,9 +43,24 @@ export function rankDemand({ aggregates, catalog, verdicts, minimumCohort = 5, w
 	const visibleDemandByTool = new Map(measurableTools.map((tool) => [tool.toolId, tool.demandCount]));
 	const compressorById = new Map((catalog.compressors ?? []).map((compressor) => [compressor.id, compressor]));
 	const compressorGaps = new Map();
+	const deficitCandidates = [];
 	for (const pair of verdicts.pairs ?? []) {
 		const demandCount = visibleDemandByTool.get(pair.toolId);
-		if (pair.verdict !== 'insufficient_data' || !demandCount || typeof pair.compressorId !== 'string' || !Number.isFinite(pair.requiredFadLpm)) continue;
+		if (pair.verdict !== 'insufficient_data' || !demandCount || typeof pair.compressorId !== 'string') continue;
+		const compressor = compressorById.get(pair.compressorId);
+		const tool = toolById.get(pair.toolId);
+		deficitCandidates.push({
+			pairId: typeof pair.id === 'string' ? pair.id : `${pair.compressorId}--${pair.toolId}`,
+			compressorId: pair.compressorId,
+			compressorLabel: compressor ? `${compressor.brand} ${compressor.model}` : pair.compressorId,
+			toolId: pair.toolId,
+			toolLabel: tool?.label ?? pair.toolId,
+			category: tool?.category ?? 'unknown',
+			demandCount,
+			requiredFadLpm: Number.isFinite(pair.requiredFadLpm) ? pair.requiredFadLpm : null,
+			limitingFactor: typeof pair.limitingFactor === 'string' ? pair.limitingFactor : 'data',
+		});
+		if (!Number.isFinite(pair.requiredFadLpm)) continue;
 		const gap = compressorGaps.get(pair.compressorId) ?? { weightedInsufficientDemand: 0, missingPairCount: 0, toolIds: new Set() };
 		gap.weightedInsufficientDemand += demandCount;
 		gap.missingPairCount += 1;
@@ -61,6 +77,10 @@ export function rankDemand({ aggregates, catalog, verdicts, minimumCohort = 5, w
 			affectedVisibleToolCount: gap.toolIds.size,
 		};
 	}).sort((a, b) => b.weightedInsufficientDemand - a.weightedInsufficientDemand || b.affectedVisibleToolCount - a.affectedVisibleToolCount || a.compressorId.localeCompare(b.compressorId));
+	const deficits = deficitCandidates
+		.sort((a, b) => b.demandCount - a.demandCount || b.requiredFadLpm - a.requiredFadLpm || a.toolId.localeCompare(b.toolId) || a.compressorId.localeCompare(b.compressorId))
+		.slice(0, deficitLimit)
+		.map((deficit, index) => ({ rank: index + 1, ...deficit }));
 	return {
 		schemaVersion: '1.0.0',
 		minimumCohort,
@@ -86,12 +106,15 @@ export function rankDemand({ aggregates, catalog, verdicts, minimumCohort = 5, w
 		},
 		priorities: {
 			tools,
+			deficits,
+			deficitLimit,
+			candidateDeficitCount: deficitCandidates.length,
 			compressorSources: compressorSourcePriorities,
 			categories: visibleEntries(aggregates.dimensions?.categories).map(([category, demandCount]) => ({ category, demandCount })),
 			needProfiles: visibleEntries(aggregates.dimensions?.needProfiles).map(([profile, demandCount]) => ({ profile, demandCount })),
 		},
 		suppressionRule: `Toute dimension comptant moins de ${minimumCohort} contributions est exclue du rapport.`,
 		coverageBoundary: 'La couverture pondérée porte uniquement sur les sélections d’outils agrégées visibles et reliées à des verdicts. Elle ne représente pas les cohortes supprimées ni les requêtes sans identifiant exploitable.',
-		priorityDefinition: 'Les outils sont classés par volume pondéré de couples insuffisants. Les compresseurs sont classés uniquement lorsque le besoin FAD de l’outil est connu mais que le couple reste insuffisant, afin de prioriser la recherche de débit restitué ou de pression côté compresseur.',
+		priorityDefinition: `Les ${deficitLimit} premiers déficits sont des couples insuffisants classés par demande observée de l’outil. Les outils sont ensuite classés par volume pondéré de couples insuffisants. Les compresseurs sont classés uniquement lorsque le besoin FAD de l’outil est connu mais que le couple reste insuffisant, afin de prioriser la recherche de débit restitué ou de pression côté compresseur.`,
 	};
 }
