@@ -80,6 +80,8 @@ if (!deployWorkflow.includes('COMPATAIR_EXPECTED_RELEASE_SHA: ${{ github.sha }}'
 if (!deployWorkflow.includes('node scripts/verify-live-seo.mjs')) errors.push('.github/workflows/deploy-production.yml: vérification SEO live absente');
 if (!deployWorkflow.includes('assert_body_contains()')) errors.push('.github/workflows/deploy-production.yml: helper de contrôle HTTP sans pipe absent');
 if (/curl[^\n]*\|\s*grep\s+-Fq/.test(deployWorkflow)) errors.push('.github/workflows/deploy-production.yml: curl ne doit pas être pipé vers grep -q avec retry-all-errors');
+if (deployWorkflow.includes('IGNORECASE')) errors.push('.github/workflows/deploy-production.yml: IGNORECASE n’est pas portable avec awk sur les runners Ubuntu');
+if (!deployWorkflow.includes('line = tolower($0)')) errors.push('.github/workflows/deploy-production.yml: les noms de headers HTTP/2 doivent être normalisés en minuscules');
 for (const [file, workflow] of [['.github/workflows/ci.yml', ciWorkflow], ['.github/workflows/deploy-production.yml', deployWorkflow]]) {
 	if (!workflow.includes('CHROME_PATH=$chrome_path')) errors.push(`${file}: navigateur Chrome non identifié explicitement`);
 	if (!workflow.includes('pnpm lighthouse:summary')) errors.push(`${file}: résumé Lighthouse absent`);
