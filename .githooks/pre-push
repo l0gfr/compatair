@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root"
+source "$repo_root/.githooks/lib/node-runtime.sh"
+
 pushes_main=false
 while read -r _local_ref _local_sha remote_ref _remote_sha; do
 	if [[ "$remote_ref" == "refs/heads/main" ]]; then
@@ -10,11 +14,25 @@ done
 
 if [[ "$pushes_main" == "true" ]]; then
 	required_node_major="$(tr -dc '0-9' < .nvmrc)"
+	original_node="$(type -P node 2>/dev/null || true)"
+	compatible_node="$(resolve_node_for_major "$required_node_major" || true)"
+	if [[ -z "$compatible_node" ]]; then
+		active_version="indisponible"
+		if [[ -n "$original_node" ]]; then
+			active_version="$($original_node --version 2>/dev/null || printf 'inconnue')"
+		fi
+		echo "CompatAir pre-push: Node ${required_node_major} requis pour reproduire GitHub Actions; version active: ${active_version}." >&2
+		echo "Installez Node ${required_node_major} ou definissez COMPATAIR_NODE_BIN vers un binaire compatible." >&2
+		exit 1
+	fi
+	export PATH="$(dirname "$compatible_node"):$PATH"
 	actual_node_major="$(node --eval 'process.stdout.write(process.versions.node.split(".")[0])')"
 	if [[ "$actual_node_major" != "$required_node_major" ]]; then
-		echo "CompatAir pre-push: Node ${required_node_major} requis pour reproduire GitHub Actions; version active: $(node --version)" >&2
-		echo "Activez la version declaree dans .nvmrc avant de pousser main." >&2
+		echo "CompatAir pre-push: la resolution du runtime n'a pas active Node ${required_node_major}." >&2
 		exit 1
+	fi
+	if [[ "$compatible_node" != "$original_node" ]]; then
+		echo "CompatAir pre-push: bascule automatique vers $(node --version) via ${compatible_node}."
 	fi
 	echo "CompatAir pre-push main: validation complete, audit HTML et Lighthouse"
 	pnpm validate:main
