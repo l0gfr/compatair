@@ -32,7 +32,7 @@
 		"seo:verify-live": "node scripts/verify-live-seo.mjs",
     "lint:source": "node scripts/lint-source.mjs",
     "lighthouse": "lhci autorun",
-    "lighthouse:production": "lhci autorun --collect.numberOfRuns=2",
+    "lighthouse:production": "lhci autorun",
     "lighthouse:summary": "node scripts/summarize-lighthouse.mjs",
     "crux:report": "node scripts/fetch-crux.mjs",
     "validate:full": "pnpm validate && pnpm data:validate",

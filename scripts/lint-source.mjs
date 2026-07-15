@@ -90,5 +90,9 @@ if (!prePushHook.includes('pnpm validate:main')) errors.push('.githooks/pre-push
 const packageManifest = JSON.parse(await readFile('package.json', 'utf8'));
 if (!packageManifest.scripts?.['archive:verify']?.includes('verify-source-archive.sh')) errors.push('package.json: contrôle de structure ZIP absent');
 if (!packageManifest.scripts?.['validate:main']?.includes('archive:verify')) errors.push('package.json: contrôle de structure ZIP absent de validate:main');
+if (packageManifest.scripts?.['lighthouse:production'] !== 'lhci autorun') errors.push('package.json: Lighthouse production doit conserver la configuration centrale sans surcharge du nombre de runs');
+const lighthouseConfig = JSON.parse(await readFile('lighthouserc.json', 'utf8'));
+const lighthouseRuns = lighthouseConfig.ci?.collect?.numberOfRuns;
+if (!Number.isInteger(lighthouseRuns) || lighthouseRuns < 3 || lighthouseRuns % 2 === 0) errors.push('lighthouserc.json: la médiane Lighthouse exige un nombre impair d’au moins trois runs');
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 console.log('Contrôles source et workflows réussis.');
