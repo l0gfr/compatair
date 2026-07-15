@@ -73,6 +73,17 @@ describe('CompatAir Apache CSP', () => {
 		expect(config.match(/Cross-Origin-Resource-Policy "cross-origin"/g)).toHaveLength(3);
 	});
 
+	it('never caches computed UCP decisions', () => {
+		const ucpDecision = config.match(
+			/<Location "\/api\/ucp\/v1\/compatibility\/evaluate">([\s\S]*?)<\/Location>/,
+		)?.[1];
+		expect(ucpDecision).toBeDefined();
+		expect(ucpDecision).toContain('LimitRequestBody 65536');
+		expect(ucpDecision).toContain('Header onsuccess unset Cache-Control');
+		expect(ucpDecision).toContain('Header always unset Cache-Control');
+		expect(ucpDecision).toContain('Header always set Cache-Control "no-store"');
+	});
+
 	it('routes the retired compatibility namespace through the validated migration handler', () => {
 		expect(config).toContain('ProxyPass /compatibilite/ http://127.0.0.1:8787/compatibilite/');
 		expect(config).toContain('ProxyPassReverse /compatibilite/ http://127.0.0.1:8787/compatibilite/');
