@@ -13,6 +13,7 @@ export function getStaticPaths() {
 }
 
 const { compressor } = Astro.props;
+const variantDescription = compressor.variant ? `, variante ${compressor.variant.label}` : '';
 const verifiedAt = latestEvidenceDate(compressor);
 const matches = tools.map((tool) => ({ tool, result: evaluateCompatibility(compressor, tool) }));
 const productOffers = activeOffers.filter((offer) => offer.productId === compressor.id);
@@ -36,7 +37,7 @@ const productJsonLd = {
 <BaseLayout
 	title={`${compressor.brand} ${compressor.model} : débit et compatibilité | CompatAir`}
 	editorialTitle={productSeoTitle(compressor.id)}
-	description={`Analyse du ${compressor.brand} ${compressor.model} : cuve ${compressor.tankLiters} L, pression ${compressor.maxPressureBar} bar et débit restitué sourcé.`}
+	description={`Analyse du ${compressor.brand} ${compressor.model}${variantDescription} : cuve ${compressor.tankLiters} L, pression ${compressor.maxPressureBar} bar et débit restitué sourcé.`}
 	pageType="product"
 	imagePath="/social/compresseurs.png"
 	imageAlt="Catalogue des compresseurs documentés par CompatAir"

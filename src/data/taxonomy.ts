@@ -12,6 +12,8 @@ export const toolTaxonomy = [
 	{ id: 'ponceuse-bande', label: 'Ponceuse à bande', aliases: [] },
 	{ id: 'polisseuse', label: 'Polisseuse', aliases: [] },
 	{ id: 'burineur', label: 'Burineur', aliases: ['Marteau burineur', 'Marteau burineur pneumatique'] },
+	{ id: 'cisaille', label: 'Cisaille pneumatique', aliases: [] },
+	{ id: 'grignoteuse', label: 'Grignoteuse pneumatique', aliases: [] },
 	{ id: 'derouilleur-a-aiguilles', label: 'Dérouilleur à aiguilles', aliases: [] },
 	{ id: 'pistolet-peinture-lvlp', label: 'Pistolet à peinture LVLP', aliases: [] },
 	{ id: 'pistolet-peinture-hvlp', label: 'Pistolet à peinture HVLP', aliases: [] },
@@ -19,4 +21,5 @@ export const toolTaxonomy = [
 	{ id: 'sableuse', label: 'Sableuse', aliases: ['Pistolet de sablage'] },
 	{ id: 'riveteuse', label: 'Riveteuse', aliases: [] },
 	{ id: 'scie', label: 'Scie pneumatique', aliases: ['Scie sabre'] },
+	{ id: 'tronconneuse', label: 'Tronçonneuse pneumatique', aliases: ['Outil de découpe pneumatique'] },
 ] as const;

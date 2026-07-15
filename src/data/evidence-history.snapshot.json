@@ -3011,7 +3011,444 @@
         "confidence": "A",
         "notes": "Tableaux des variantes horizontales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
       }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp785s:cp-general-industry-2026-catalog:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-catalog",
+      "productId": "chicago-pneumatic-cp785s",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "42535cd0cfd5d10f6930c5138a61f6ccf4911ef0070fa229feffb8ddeaf580aa",
+      "snapshot": {
+        "id": "cp-general-industry-2026-catalog",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue officiel General Industry",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques pneumatiques du catalogue sont données à 90 psi, soit 6,3 bar."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp785s:cp-t023200-official:2026-07-15",
+      "evidenceId": "cp-t023200-official",
+      "productId": "chicago-pneumatic-cp785s",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c958c0b4fe0e543f6e05bd10ca3149d7d2ce42c1b691a414e311bf105b45f96c",
+      "snapshot": {
+        "id": "cp-t023200-official",
+        "sourceUrl": "https://tools.cp.com/en-ca/products/specialtycutting/cp785s-skuT023200",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP785S",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 7.3 L/s à 438 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7900:cp-8941079000-official:2026-07-15",
+      "evidenceId": "cp-8941079000-official",
+      "productId": "chicago-pneumatic-cp7900",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "fae1140116d9a174035158d7d41e05bdcf06fcb00f40a56c615e20185fc0e5c8",
+      "snapshot": {
+        "id": "cp-8941079000-official",
+        "sourceUrl": "https://tools.cp.com/en/products/specialtycutting/cp7900-sku8941079000",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7900",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 2.6 L/s à 156 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7900:cp-general-industry-2026-catalog:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-catalog",
+      "productId": "chicago-pneumatic-cp7900",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c3911430f72b2ba6d036c20f38c19c2eb689e75cdced10e52308ce7757cf232b",
+      "snapshot": {
+        "id": "cp-general-industry-2026-catalog",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue officiel General Industry",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques pneumatiques du catalogue sont données à 90 psi, soit 6,3 bar."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7901:cp-8941079011-official:2026-07-15",
+      "evidenceId": "cp-8941079011-official",
+      "productId": "chicago-pneumatic-cp7901",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ca9331e748cf619c2444ec957f4bfdf693438928d2c99178cfe5ed3d47b4885c",
+      "snapshot": {
+        "id": "cp-8941079011-official",
+        "sourceUrl": "https://tools.cp.com/en-ca/products/specialtycutting/cp7901-sku8941079011",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP7901",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 2.6 L/s à 156 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7901:cp-general-industry-2026-catalog:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-catalog",
+      "productId": "chicago-pneumatic-cp7901",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6ffdd1893a06062442b141033f4aaa422db431f96c0261a4c942cf3b8ec54b40",
+      "snapshot": {
+        "id": "cp-general-industry-2026-catalog",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue officiel General Industry",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques pneumatiques du catalogue sont données à 90 psi, soit 6,3 bar."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp835:cp-general-industry-2026-catalog:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-catalog",
+      "productId": "chicago-pneumatic-cp835",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ff56f3f75f27f7cd03e9e720cbba2025481abc72d2c367c08ef796924e8286d9",
+      "snapshot": {
+        "id": "cp-general-industry-2026-catalog",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue officiel General Industry",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques pneumatiques du catalogue sont données à 90 psi, soit 6,3 bar."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp835:cp-t022550-official:2026-07-15",
+      "evidenceId": "cp-t022550-official",
+      "productId": "chicago-pneumatic-cp835",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c218c03910aa3458766ff06e33502c7ab6014ec5afaddb5243bdbef5c77f46d9",
+      "snapshot": {
+        "id": "cp-t022550-official",
+        "sourceUrl": "https://tools.cp.com/en/products/specialtycutting/cp835-skuT022550",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP835",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 8 L/s à 480 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp861:cp-general-industry-2026-catalog:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-catalog",
+      "productId": "chicago-pneumatic-cp861",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "899cd3ec868199a5ade5aabf8d887a93d1deea87d3e02804279cb4f569d9d38b",
+      "snapshot": {
+        "id": "cp-general-industry-2026-catalog",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue officiel General Industry",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques pneumatiques du catalogue sont données à 90 psi, soit 6,3 bar."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp861:cp-t022039-official:2026-07-15",
+      "evidenceId": "cp-t022039-official",
+      "productId": "chicago-pneumatic-cp861",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e472c134f91aeab30ecef5314a1e346c3e5c051d0a25b4d3542f20b8d11853f2",
+      "snapshot": {
+        "id": "cp-t022039-official",
+        "sourceUrl": "https://tools.cp.com/en-ca/products/specialtycutting/cp861-skuT022039",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP861",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 4 L/s à 240 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp874:cp-general-industry-2026-catalog:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-catalog",
+      "productId": "chicago-pneumatic-cp874",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b9bc3f3b85bcbfa8aef40f6cf31b44d598387bd1cbebd0b8040c79ebaeb68731",
+      "snapshot": {
+        "id": "cp-general-industry-2026-catalog",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue officiel General Industry",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques pneumatiques du catalogue sont données à 90 psi, soit 6,3 bar."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp874:cp-t025375-official:2026-07-15",
+      "evidenceId": "cp-t025375-official",
+      "productId": "chicago-pneumatic-cp874",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "57d91a6b5587e269e38b1ec24f00b4f4e8eb4e7c155d27eca5a4a8732f5f8809",
+      "snapshot": {
+        "id": "cp-t025375-official",
+        "sourceUrl": "https://tools.cp.com/en/products/specialtycutting/cp874-skuT025375",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP874",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 5.9 L/s à 354 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9116:cp-8941091160-official:2026-07-15",
+      "evidenceId": "cp-8941091160-official",
+      "productId": "chicago-pneumatic-cp9116",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d1791f127bc9d707e3d560bbc46f28ed5767e2777b25b59c153a52a0bbae0e44",
+      "snapshot": {
+        "id": "cp-8941091160-official",
+        "sourceUrl": "https://tools.cp.com/en-ca/products/specialtycutting/cp9116",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP9116",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Consommation en charge convertie exactement de 3.3 L/s à 198 L/min."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9116:cp-general-industry-2026-catalog:2026-07-15",
+      "evidenceId": "cp-general-industry-2026-catalog",
+      "productId": "chicago-pneumatic-cp9116",
+      "productType": "tool",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b495ed455b9080d6a1e3cff9db0d6944ed5685e0ec9ec9ba4f624f09c372770c",
+      "snapshot": {
+        "id": "cp-general-industry-2026-catalog",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, catalogue officiel General Industry",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Les caractéristiques pneumatiques du catalogue sont données à 90 psi, soit 6,3 bar."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-1000-2-500-vertical:kaeser-eurocomp-2026-brochure-vertical:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-vertical",
+      "productId": "kaeser-eurocomp-epc-1000-2-500-vertical",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5d7ee155bd1419ab0bbc1ba311c68a2ca6afa8aba4359f1917df7fd3af7d61c0",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-vertical",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, variantes verticales",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableau des variantes verticales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-230-2-250-vertical:kaeser-eurocomp-2026-brochure-vertical:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-vertical",
+      "productId": "kaeser-eurocomp-epc-230-2-250-vertical",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a7c0dce1846f01f0de52b0c68d90569eac9606170586fd95036713a0ffb51663",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-vertical",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, variantes verticales",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableau des variantes verticales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-420-2-250-vertical:kaeser-eurocomp-2026-brochure-vertical:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-vertical",
+      "productId": "kaeser-eurocomp-epc-420-2-250-vertical",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "49265fa6bf78b9bb5a478d4d73e34865c635d02860fb3f22757c371dac9ccfa2",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-vertical",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, variantes verticales",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableau des variantes verticales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-440-250-vertical:kaeser-eurocomp-2026-brochure-vertical:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-vertical",
+      "productId": "kaeser-eurocomp-epc-440-250-vertical",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8d99715c3d8344b6032257753a0d625f573cb657f9d7e2d7c961210a6a43198c",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-vertical",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, variantes verticales",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableau des variantes verticales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-550-2-250-vertical:kaeser-eurocomp-2026-brochure-vertical:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-vertical",
+      "productId": "kaeser-eurocomp-epc-550-2-250-vertical",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "fc35aa0f65d1a0063924a36cf91812d528d186081dfd0bd40ff4a3c6c03250ca",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-vertical",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, variantes verticales",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableau des variantes verticales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-550-2-350-vertical:kaeser-eurocomp-2026-brochure-vertical:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-vertical",
+      "productId": "kaeser-eurocomp-epc-550-2-350-vertical",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "cb7e4d44e476389900f157f5c759bd4dc8c29b3cc28f42c4cb09c81378b0c3d4",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-vertical",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, variantes verticales",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableau des variantes verticales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-630-250-vertical:kaeser-eurocomp-2026-brochure-vertical:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-vertical",
+      "productId": "kaeser-eurocomp-epc-630-250-vertical",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "bfe863f8b5e9aae9869416921dc1517387e610409a1e37cde8d66b85a05ec264",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-vertical",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, variantes verticales",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableau des variantes verticales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-750-2-500-vertical:kaeser-eurocomp-2026-brochure-vertical:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-vertical",
+      "productId": "kaeser-eurocomp-epc-750-2-500-vertical",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b605db6a8704ca812f131aae7f1d05b0e7339a9b444be9b9b64c0bf04c38d752",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-vertical",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, variantes verticales",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableau des variantes verticales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
+    },
+    {
+      "id": "added:kaeser-eurocomp-epc-840-250-vertical:kaeser-eurocomp-2026-brochure-vertical:2026-07-15",
+      "evidenceId": "kaeser-eurocomp-2026-brochure-vertical",
+      "productId": "kaeser-eurocomp-epc-840-250-vertical",
+      "productType": "compressor",
+      "occurredAt": "2026-07-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "618bb43bcb156ab28e45a9eeada8fe4a745da75be2471a066aa3ef571d76f2f0",
+      "snapshot": {
+        "id": "kaeser-eurocomp-2026-brochure-vertical",
+        "sourceUrl": "https://th.kaeser.com/EN/download.ashx?id=tcm%3A58-5902",
+        "sourceLabel": "KAESER, brochure EUROCOMP, édition 02/2026, variantes verticales",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-15",
+        "confidence": "A",
+        "notes": "Tableau des variantes verticales 10 et 15 bar ; débits déclarés comme mesurés selon ISO 1217."
+      }
     }
   ],
-  "historyVersion": "b1f0118f61390a97cf396757e55b13c3826bb3deeb78bfce515c3819652aa3a2"
+  "historyVersion": "94dcdca309a7a32766f245f4789f5662047522e508f7c03164ba5ee75d47ca3d"
 }

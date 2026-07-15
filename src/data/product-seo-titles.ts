@@ -85,6 +85,15 @@ export const productSeoTitles: Record<string, string> = {
 	'kaeser-eurocomp-epc-550-2-250': 'KAESER EPC 550-2-250 : débit ISO 1217 | CompatAir',
 	'kaeser-eurocomp-epc-750-2-500': 'KAESER EPC 750-2-500 : débit ISO 1217 | CompatAir',
 	'kaeser-eurocomp-epc-1000-2-500': 'KAESER EPC 1000-2-500 : débit ISO 1217 | CompatAir',
+	'kaeser-eurocomp-epc-440-250-vertical': 'KAESER EPC 440-250 vertical : débit ISO 1217 | CompatAir',
+	'kaeser-eurocomp-epc-630-250-vertical': 'KAESER EPC 630-250 vertical : débit ISO 1217 | CompatAir',
+	'kaeser-eurocomp-epc-840-250-vertical': 'KAESER EPC 840-250 vertical : débit ISO 1217 | CompatAir',
+	'kaeser-eurocomp-epc-230-2-250-vertical': 'KAESER EPC 230-2-250 vertical : débit ISO 1217 | CompatAir',
+	'kaeser-eurocomp-epc-420-2-250-vertical': 'KAESER EPC 420-2-250 vertical : débit ISO 1217 | CompatAir',
+	'kaeser-eurocomp-epc-550-2-250-vertical': 'KAESER EPC 550-2-250 vertical : débit ISO 1217 | CompatAir',
+	'kaeser-eurocomp-epc-550-2-350-vertical': 'KAESER EPC 550-2-350 vertical : débit ISO 1217 | CompatAir',
+	'kaeser-eurocomp-epc-750-2-500-vertical': 'KAESER EPC 750-2-500 vertical : débit ISO 1217 | CompatAir',
+	'kaeser-eurocomp-epc-1000-2-500-vertical': 'KAESER EPC 1000-2-500 vertical : débit ISO 1217 | CompatAir',
 	'metabo-basic-280-50-w-of': 'Metabo Basic 280-50 W OF : débit restitué | CompatAir',
 	'metabo-basic-250-24-w-of': 'Metabo Basic 250-24 W OF : débit FAD | CompatAir',
 	'metabo-basic-250-50-w-of': 'Metabo Basic 250-50 W OF : débit FAD | CompatAir',
@@ -141,6 +150,13 @@ export const productSeoTitles: Record<string, string> = {
 	'chicago-pneumatic-cp9426': 'CP9426 : débit et spécifications | CompatAir',
 	'chicago-pneumatic-cp9427': 'CP9427 : débit et spécifications | CompatAir',
 	'chicago-pneumatic-cp9882': 'CP9882 : débit et spécifications | CompatAir',
+	'chicago-pneumatic-cp874': 'CP874 : débit et spécifications | CompatAir',
+	'chicago-pneumatic-cp7900': 'CP7900 : débit et spécifications | CompatAir',
+	'chicago-pneumatic-cp7901': 'CP7901 : débit et spécifications | CompatAir',
+	'chicago-pneumatic-cp785s': 'CP785S : débit et spécifications | CompatAir',
+	'chicago-pneumatic-cp835': 'CP835 : débit et spécifications | CompatAir',
+	'chicago-pneumatic-cp861': 'CP861 : débit et spécifications | CompatAir',
+	'chicago-pneumatic-cp9116': 'CP9116 : débit et spécifications | CompatAir',
 };
 
 export const toolUseSeoTitles: Record<string, string> = {
@@ -210,6 +226,13 @@ export const toolUseSeoTitles: Record<string, string> = {
 	'chicago-pneumatic-cp9426': 'CP9426 : quel compresseur ? | CompatAir',
 	'chicago-pneumatic-cp9427': 'CP9427 : quel compresseur ? | CompatAir',
 	'chicago-pneumatic-cp9882': 'CP9882 : quel compresseur ? | CompatAir',
+	'chicago-pneumatic-cp874': 'CP874 : quel compresseur ? | CompatAir',
+	'chicago-pneumatic-cp7900': 'CP7900 : quel compresseur ? | CompatAir',
+	'chicago-pneumatic-cp7901': 'CP7901 : quel compresseur ? | CompatAir',
+	'chicago-pneumatic-cp785s': 'CP785S : quel compresseur ? | CompatAir',
+	'chicago-pneumatic-cp835': 'CP835 : quel compresseur ? | CompatAir',
+	'chicago-pneumatic-cp861': 'CP861 : quel compresseur ? | CompatAir',
+	'chicago-pneumatic-cp9116': 'CP9116 : quel compresseur ? | CompatAir',
 };
 
 export function productSeoTitle(productId: string) {
