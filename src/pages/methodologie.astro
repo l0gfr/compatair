@@ -1,10 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { CALCULATION_VERSION } from '../domain/sizing';
+
+const METHOD_VERSION = '2026.07';
 ---
 <BaseLayout title="Comment fonctionne CompatAir ? | CompatAir" description="Comment CompatAir vérifie si un compresseur peut alimenter un outil, à partir de données constructeur identifiées et sans inventer les informations manquantes.">
 	<article class="container content">
 		<p class="eyebrow">Comment le résultat est obtenu</p>
 		<h1>Comment CompatAir vérifie une configuration</h1>
+		<p><strong>Version publique de la méthode&nbsp;:</strong> <code>{METHOD_VERSION}</code> · <strong>version du moteur de calcul&nbsp;:</strong> <code>{CALCULATION_VERSION}</code>. Ces identifiants sont conservés dans les réponses machine afin qu’un résultat puisse être rattaché aux règles qui l’ont produit.</p>
 		<p>CompatAir part du besoin publié pour l’outil, puis le compare au <a href="/glossaire/#debit-restitue">débit réellement disponible</a> du compresseur à la même <a href="/glossaire/#pression-travail">pression d’utilisation</a>. Le <a href="/glossaire/#debit-aspire">débit aspiré</a>, souvent mis en avant dans les fiches commerciales, n’est pas utilisé à sa place.</p>
 		<h2>Qui produit et relit l’information</h2>
 		<p>Les mêmes données produisent toujours le même résultat. La méthode est maintenue par l’éditeur identifié dans les <a href="/mentions-legales/">mentions légales</a> et le résultat n’est pas confié à une intelligence artificielle. Les guides affichent leurs sources, leurs dates et leur niveau de relecture. À ce jour, aucune validation professionnelle externe n’est revendiquée.</p>
@@ -34,7 +38,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		<h2>Limites</h2>
 		<p>Les résultats aident à choisir un compresseur, mais ne remplacent pas une mesure sur l’installation. Une donnée indispensable absente conduit à «&nbsp;données insuffisantes&nbsp;». La source de chaque fiche est affichée et doit être consultée avant un achat.</p>
 		<p>Les corrections qui affectent une valeur, un résultat ou une promesse mesurable sont consignées dans le <a href="/corrections/">journal public des corrections</a>.</p>
-		<h2>Références physiques</h2><ul><li><a href="https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors">NIST, définition de l’atmosphère standard</a></li><li><a href="https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking/ideal_gases_under_constant.htm">NASA Glenn Research Center, équation d’état du gaz parfait</a></li></ul>
-		<h2>Évolutions de la méthode</h2><div class="curve-table"><div class="curve-row head"><span>Date</span><span>Évolution</span></div><div class="curve-row"><span>13/07/2026</span><span>Ajout des outils dont la consommation est publiée par action et du calcul de gonflage à partir des valeurs saisies.</span></div><div class="curve-row"><span>13/07/2026</span><span>Ajout de plusieurs outils, de leur utilisation ensemble ou à tour de rôle, de la réserve de cuve et des temps de récupération.</span></div><div class="curve-row"><span>13/07/2026</span><span>Première comparaison d’un outil au débit réellement restitué d’un compresseur, avec réserve affichée séparément.</span></div></div>
+		<h2>Références physiques</h2><ul><li><a href="https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors">NIST, définition de l’atmosphère standard</a></li><li><a href="https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking_ppc/ideal_gases_under_constant.htm">NASA Glenn Research Center, équation d’état du gaz parfait</a></li></ul>
+		<h2>Évolutions de la méthode</h2><div class="curve-table"><div class="curve-row head"><span>Date</span><span>Évolution</span></div><div class="curve-row"><span>15/07/2026</span><span>Publication du contrat de méthode <code>2026.07</code> dans les réponses MCP et UCP, les schémas publics et le changefeed.</span></div><div class="curve-row"><span>13/07/2026</span><span>Ajout des outils dont la consommation est publiée par action et du calcul de gonflage à partir des valeurs saisies.</span></div><div class="curve-row"><span>13/07/2026</span><span>Ajout de plusieurs outils, de leur utilisation ensemble ou à tour de rôle, de la réserve de cuve et des temps de récupération.</span></div><div class="curve-row"><span>13/07/2026</span><span>Première comparaison d’un outil au débit réellement restitué d’un compresseur, avec réserve affichée séparément.</span></div></div>
 	</article>
 </BaseLayout>

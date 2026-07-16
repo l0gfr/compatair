@@ -120,13 +120,12 @@ const alternates = [
 
 				<h3>ChatGPT</h3>
 				<ol>
-					<li>Vérifiez que le mode développeur et la création d’apps sont autorisés pour votre compte ou votre espace de travail.</li>
-					<li>Dans <strong>Réglages → Apps → Créer</strong>, renseignez <code>{mcpEndpoint}</code> et choisissez l’absence d’authentification.</li>
-					<li>Lancez <strong>Scan Tools</strong>, contrôlez que les actions annoncées sont en lecture seule, puis créez le brouillon.</li>
-					<li>Dans une nouvelle conversation, sélectionnez l’app et testez un cas concluant, un cas incompatible et un cas <code>insufficient_data</code>.</li>
+					<li>Dans ChatGPT, ouvrez <strong>Réglages → Sécurité et connexion</strong>, puis activez le <strong>mode développeur</strong>.</li>
+					<li>Ouvrez <strong>Réglages → Plugins</strong> ou <a href="https://chatgpt.com/plugins" rel="noopener">chatgpt.com/plugins</a>, sélectionnez le bouton <strong>+</strong> et créez une app en mode développeur avec l’URL <code>{mcpEndpoint}</code>. Le serveur CompatAir ne demande aucune authentification.</li>
+					<li>Dans une nouvelle conversation, sélectionnez l’app et testez un cas concluant, un cas incompatible et un cas <code>insufficient_data</code>. Répétez le contrôle dans Deep Research si cette surface est disponible dans votre espace de travail.</li>
 				</ol>
 				<div class="mcp-warning"><p>Les menus et les droits dépendent du plan et des règles de l’espace de travail. Avant publication, l’administrateur doit examiner les permissions et les changements de tools.</p></div>
-				<p>Référence officielle&nbsp;: <a href="https://help.openai.com/en/articles/12584461" rel="noopener">Developer mode and MCP apps in ChatGPT</a>.</p>
+				<p>Référence officielle&nbsp;: <a href="https://developers.openai.com/api/docs/mcp#connect-in-chatgpt" rel="noopener">OpenAI · Connect in ChatGPT</a>.</p>
 
 				<h3>Claude Code</h3>
 				<div class="mcp-tabs">
@@ -338,7 +337,7 @@ const alternates = [
     "url": "https://compatair.fr/mcp"
   }]
 }`}</code></pre>
-				<div class="mcp-note"><p>Ce manifeste est prêt à publier, mais CompatAir ne revendique pas ici une inscription au Registry sans réponse Registry vérifiée. La première publication exige une authentification propriétaire et l’acceptation des conditions CC0 du service encore en preview.</p></div>
+				<div class="mcp-note"><p>CompatAir MCP <code>2.1.0</code> est publié dans le Registry MCP officiel sous <code>io.github.bluetouff/compatair</code>, avec le remote Streamable HTTP <code>https://compatair.fr/mcp</code>. Le dépôt conserve un contrôle automatisé qui exige une correspondance exacte entre le nom, la version, le transport et cette URL.</p></div>
 				<div class="mcp-principles">
 					<article><strong>Pour un agent</strong><p><a href="/llms.txt">llms.txt</a> résume les règles non négociables et les points d’entrée.</p></article>
 					<article><strong>Pour une intégration</strong><p><a href="/schemas/mcp-result-2026.07.json">Enveloppe commune</a>, schémas fermés par tool, <a href="/schemas/airgraph-0.1.0.json">AirGraph</a> et <a href="/schemas/compatibility-receipt-1.0.0.json">reçus</a> sont servis à leurs URI stables.</p></article>
@@ -351,7 +350,7 @@ const alternates = [
 					<li><a href="https://modelcontextprotocol.io/specification/2025-11-25/basic/transports" rel="noopener">MCP · transport Streamable HTTP</a></li>
 					<li><a href="https://modelcontextprotocol.io/specification/2025-11-25/server/tools" rel="noopener">MCP · tools, schémas et résultats structurés</a></li>
 					<li><a href="https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices" rel="noopener">MCP · bonnes pratiques de sécurité</a></li>
-					<li><a href="https://help.openai.com/en/articles/12584461" rel="noopener">OpenAI · apps MCP dans ChatGPT</a></li>
+					<li><a href="https://developers.openai.com/api/docs/mcp#connect-in-chatgpt" rel="noopener">OpenAI · connecter un serveur MCP dans ChatGPT</a></li>
 					<li><a href="https://code.claude.com/docs/en/mcp" rel="noopener">Anthropic · MCP dans Claude Code</a></li>
 					<li><a href="https://ai.google.dev/gemini-api/docs/function-calling#remote_mcp" rel="noopener">Google · Remote MCP dans Gemini</a></li>
 				</ul>

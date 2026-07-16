@@ -25,7 +25,7 @@ export const glossarySources = {
 	},
 	nasa: {
 		label: 'NASA Glenn Research Center, Ideal Gases under Constant Volume',
-		url: 'https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking/ideal_gases_under_constant.htm',
+		url: 'https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking_ppc/ideal_gases_under_constant.htm',
 	},
 	method: {
 		label: 'Méthodologie CompatAir',

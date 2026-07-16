@@ -1,12 +1,12 @@
 # Publication au Registry MCP officiel
 
-État du dépôt : `server.json` est prêt pour le serveur distant Streamable HTTP `https://compatair.fr/mcp`, sous le namespace GitHub `io.github.bluetouff/compatair`, version `2.1.0`. L’absence de preuve Registry ne doit pas être transformée en affirmation de publication.
+État vérifié le 16 juillet 2026 : `io.github.bluetouff/compatair` version `2.1.0` est publié dans le Registry MCP officiel avec le serveur distant Streamable HTTP `https://compatair.fr/mcp`. Le manifeste source reste `server.json` et `pnpm registry:verify` vérifie la réponse publique du Registry.
 
-Le Registry est encore en preview. Les métadonnées publiées deviennent publiques sous CC0, une version publiée est immuable et la suppression n’est pas actuellement garantie. La première publication reste donc une opération propriétaire manuelle, après lecture des conditions officielles.
+Le Registry est encore en preview. Les métadonnées publiées deviennent publiques sous CC0, une version publiée est immuable et la suppression n’est pas actuellement garantie. Toute nouvelle version doit donc être relue et incrémentée avant sa publication propriétaire.
 
-## Publication manuelle
+## Publication d’une nouvelle version
 
-Installer le binaire officiel `mcp-publisher` en suivant la documentation Registry, puis depuis la racine du dépôt :
+Après avoir incrémenté et validé `server.json`, utiliser le binaire officiel `mcp-publisher` depuis la racine du dépôt :
 
 ```bash
 mcp-publisher login github
@@ -28,9 +28,9 @@ Le script `pnpm registry:verify` échoue tant que le Registry ne renvoie pas exa
 
 Le miroir public minimal se reconstruit dans un répertoire vide avec `pnpm contracts:export-public -- /chemin/vide`. L’export repose sur une liste fermée, inclut MCP, les reçus et UCP, produit `SYNC_MANIFEST.json`, exécute ses tests sans dépendance et exclut explicitement le moteur, les offres et la configuration de production. Il doit être synchronisé seulement après que la version correspondante est live.
 
-## Automatisation ultérieure
+## Automatisation
 
-Une publication GitHub Actions ne sera ajoutée qu’après la première publication propriétaire et la validation de la méthode d’authentification sans secret longue durée. Elle devra être séparée du déploiement de production, utiliser des permissions minimales, épingler les actions et refuser toute divergence entre `server.json`, `initialize.serverInfo.version` et le remote live.
+La publication reste actuellement une opération propriétaire explicite ; `pnpm registry:verify` est automatisable et ne publie rien. Si une publication GitHub Actions est ajoutée, elle devra rester séparée du déploiement de production, utiliser des permissions minimales, épingler les actions et refuser toute divergence entre `server.json`, `initialize.serverInfo.version` et le remote live.
 
 Références officielles :
 

@@ -11,7 +11,7 @@ relatedCalculatorTool: einhell-4137000-manometre
 sources:
   - https://www.einhell.fr/p/4137000-manometre-a-pneu-pour-compresseur-pression-max-0-8-bar/
   - https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors
-  - https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking/ideal_gases_under_constant.htm
+  - https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking_ppc/ideal_gases_under_constant.htm
   - https://www.michelin.fr/auto/conseils/pression-pneus/gonfler-pneus
 ---
 
@@ -56,5 +56,5 @@ Utilisez le [calculateur de gonflage](/calculateur/#outil=einhell-4137000-manome
 
 - [Einhell, pistolet de gonflage 4137000](https://www.einhell.fr/p/4137000-manometre-a-pneu-pour-compresseur-pression-max-0-8-bar/)
 - [NIST, définition de l’atmosphère standard](https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors)
-- [NASA Glenn Research Center, gaz parfait à volume constant](https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking/ideal_gases_under_constant.htm)
+- [NASA Glenn Research Center, gaz parfait à volume constant](https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking_ppc/ideal_gases_under_constant.htm)
 - [Michelin, comment gonfler ses pneus](https://www.michelin.fr/auto/conseils/pression-pneus/gonfler-pneus)

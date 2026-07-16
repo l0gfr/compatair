@@ -121,13 +121,12 @@ const alternates = [
 
 				<h3>ChatGPT</h3>
 				<ol>
-					<li>Confirm that developer mode and custom app creation are allowed for your account or workspace.</li>
-					<li>Open <strong>Settings → Apps → Create</strong>, enter <code>{mcpEndpoint}</code> and select no authentication.</li>
-					<li>Run <strong>Scan Tools</strong>, verify that the discovered actions are read-only, then create the draft.</li>
-					<li>In a new chat, select the app and test a positive case, an incompatible case and an <code>insufficient_data</code> case.</li>
+					<li>In ChatGPT, open <strong>Settings → Security and login</strong>, then turn on <strong>Developer mode</strong>.</li>
+					<li>Open <strong>Settings → Plugins</strong> or <a href="https://chatgpt.com/plugins" rel="noopener">chatgpt.com/plugins</a>, select the <strong>+</strong> button and create a developer-mode app using <code>{mcpEndpoint}</code>. The CompatAir server does not require authentication.</li>
+					<li>In a new chat, select the app and test a positive case, an incompatible case and an <code>insufficient_data</code> case. Repeat the check in Deep Research when that surface is available in your workspace.</li>
 				</ol>
 				<div class="mcp-warning"><p>Menus and permissions depend on the plan and workspace policy. Before publishing, an administrator should review permissions and tool changes.</p></div>
-				<p>Official reference: <a href="https://help.openai.com/en/articles/12584461" rel="noopener">Developer mode and MCP apps in ChatGPT</a>.</p>
+				<p>Official reference: <a href="https://developers.openai.com/api/docs/mcp#connect-in-chatgpt" rel="noopener">OpenAI · Connect in ChatGPT</a>.</p>
 
 				<h3>Claude Code</h3>
 				<div class="mcp-tabs">
@@ -339,7 +338,7 @@ const alternates = [
     "url": "https://compatair.fr/mcp"
   }]
 }`}</code></pre>
-				<div class="mcp-note"><p>This manifest is publication-ready, but CompatAir does not claim Registry listing without a verified Registry response. The first publication requires owner authentication and acceptance of the preview service’s CC0 terms.</p></div>
+				<div class="mcp-note"><p>CompatAir MCP <code>2.1.0</code> is published in the official MCP Registry as <code>io.github.bluetouff/compatair</code>, with the Streamable HTTP remote <code>https://compatair.fr/mcp</code>. The repository keeps an automated check that requires an exact match for the name, version, transport and URL.</p></div>
 				<div class="mcp-principles">
 					<article><strong>For an agent</strong><p><a href="/llms.txt">llms.txt</a> summarizes non-negotiable interpretation rules and entry points.</p></article>
 					<article><strong>For an integration</strong><p>The <a href="/schemas/mcp-result-2026.07.json">common envelope</a>, closed per-tool schemas, <a href="/schemas/airgraph-0.1.0.json">AirGraph</a> and <a href="/schemas/compatibility-receipt-1.0.0.json">receipt schema</a> are served at stable URIs.</p></article>
@@ -352,7 +351,7 @@ const alternates = [
 					<li><a href="https://modelcontextprotocol.io/specification/2025-11-25/basic/transports" rel="noopener">MCP · Streamable HTTP transport</a></li>
 					<li><a href="https://modelcontextprotocol.io/specification/2025-11-25/server/tools" rel="noopener">MCP · tools, schemas and structured results</a></li>
 					<li><a href="https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices" rel="noopener">MCP · security best practices</a></li>
-					<li><a href="https://help.openai.com/en/articles/12584461" rel="noopener">OpenAI · MCP apps in ChatGPT</a></li>
+					<li><a href="https://developers.openai.com/api/docs/mcp#connect-in-chatgpt" rel="noopener">OpenAI · connect an MCP server in ChatGPT</a></li>
 					<li><a href="https://code.claude.com/docs/en/mcp" rel="noopener">Anthropic · MCP in Claude Code</a></li>
 					<li><a href="https://ai.google.dev/gemini-api/docs/function-calling#remote_mcp" rel="noopener">Google · Remote MCP in Gemini</a></li>
 				</ul>
