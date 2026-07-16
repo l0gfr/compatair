@@ -1,4 +1,4 @@
-<script is:inline>
+<script>
 	const searchParameters = new URLSearchParams(location.search);
 	const trackedTool = searchParameters.get('via') === 'mcp' ? searchParameters.get('tool') : null;
 	if (trackedTool && /^[a-z0-9_]{1,80}$/.test(trackedTool)) {

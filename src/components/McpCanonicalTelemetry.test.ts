@@ -5,8 +5,9 @@ const component = readFileSync(new URL('./McpCanonicalTelemetry.astro', import.m
 const layout = readFileSync(new URL('../layouts/BaseLayout.astro', import.meta.url), 'utf8');
 
 describe('MCP canonical consultation telemetry', () => {
-	it('runs inline from the document head before page modules can rewrite the URL', () => {
-		expect(component).toContain('<script is:inline>');
+	it('runs as a CSP-compatible module from the document head before page modules can rewrite the URL', () => {
+		expect(component).toContain('<script>');
+		expect(component).not.toContain('is:inline');
 		expect(component).toContain("searchParameters.get('via') === 'mcp'");
 		expect(component).toContain("navigator.sendBeacon('/events'");
 		expect(component).toContain("fetch('/events'");
