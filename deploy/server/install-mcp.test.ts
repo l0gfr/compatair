@@ -25,6 +25,13 @@ describe('transactional MCP proxy installation', () => {
 		);
 	});
 
+	it('can prepare a root-approved vhost before the matching release exists', () => {
+		expect(installer).toContain('mode=${1:-}');
+		expect(installer).toContain('"--prepare-release"');
+		expect(installer).toContain('if [[ "$prepare_release" == false ]]');
+		expect(installer).toContain('MCP profile smoke deferred until the prepared release is activated.');
+	});
+
 	it('tests the required URL field through TLS, Apache and MCP', () => {
 		expect(smoke).toContain("path: '/mcp'");
 		expect(smoke).toContain("name: 'evaluate_air_compatibility'");

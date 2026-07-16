@@ -3,6 +3,16 @@ set -Eeuo pipefail
 
 script_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 project_dir=$(cd -- "$script_dir/../.." && pwd)
+mode=${1:-}
+
+if [[ $# -gt 1 || ( -n "$mode" && "$mode" != "--prepare-release" ) ]]; then
+	echo "Usage: $0 [--prepare-release]" >&2
+	exit 2
+fi
+prepare_release=false
+if [[ "$mode" == "--prepare-release" ]]; then
+	prepare_release=true
+fi
 
 if [[ ${EUID:-$(id -u)} -ne 0 ]]; then
 	echo "This script must run as root" >&2
@@ -91,9 +101,17 @@ systemctl enable compatair-weekly-insights.timer
 systemctl restart compatair-mcp.service
 vhost_activation_pending=true
 /usr/local/sbin/compatair-converge-mcp-config
-"$node_binary" "$script_dir/smoke-mcp-profile-contract.mjs"
+if [[ "$prepare_release" == false ]]; then
+	"$node_binary" "$script_dir/smoke-mcp-profile-contract.mjs"
+else
+	echo "MCP profile smoke deferred until the prepared release is activated."
+fi
 vhost_activation_pending=false
 curl --fail --silent --show-error --max-time 5 http://127.0.0.1:8787/health
 echo
 rm -f -- "$vhost_backup"
-echo "CompatAir MCP installed."
+if [[ "$prepare_release" == true ]]; then
+	echo "CompatAir MCP configuration prepared for the next release."
+else
+	echo "CompatAir MCP installed."
+fi

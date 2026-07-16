@@ -109,7 +109,13 @@ curl --fail \
 
 Après ces contrôles, créer la variable GitHub `MCP_ENABLED` avec la valeur `true`. Les déploiements et le monitoring vérifieront alors le MCP automatiquement.
 
-L’ajout de l’API ou une modification de ses en-têtes inter-origines nécessite de rejouer `install-mcp.sh` avant le premier déploiement qui les vérifie. Le script installe le vhost versionné, exécute `apache2ctl configtest`, puis recharge Apache. Un paquet statique seul ne peut pas modifier `/etc/apache2`.
+L’ajout de l’API ou une modification de ses en-têtes inter-origines nécessite de préparer le vhost avant le premier déploiement qui les vérifie :
+
+```bash
+sudo bash /home/bluetouff/compatair-bootstrap/deploy/server/install-mcp.sh --prepare-release
+```
+
+Ce mode installe et approuve la configuration versionnée, exécute `apache2ctl configtest`, recharge Apache et vérifie la santé de la release encore active. Le smoke du nouveau contrat MCP est volontairement différé au workflow qui active ensuite la release correspondante. Un paquet statique seul ne peut pas modifier `/etc/apache2`.
 
 La découverte UCP autorise une sortie HTTPS publique afin de lire le profil de la plateforme appelante. L’unité systemd refuse les plages privées, locales, link-local, multicast et réservées ; le serveur vérifie en plus toutes les réponses DNS, épingle l’adresse publique retenue, refuse les redirections et borne taille et durée. Ne remplacer ces règles ni par un egress sans filtre ni par une liste de domaines codée en dur.
 
