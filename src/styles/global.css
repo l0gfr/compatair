@@ -36,11 +36,10 @@ a { color: inherit; }
 
 .brand { display: inline-flex; align-items: center; gap: .7rem; font-weight: 820; text-decoration: none; font-size: 1.14rem; line-height: 1.05; }
 
-.brand-mark { position: relative; width: 2.35rem; height: 2.35rem; flex: 0 0 auto; overflow: hidden; border-radius: 50%; background: var(--ink); box-shadow: inset 0 0 0 1px rgba(255,255,255,.16); }
-.brand-arc { position: absolute; inset: .45rem; border: 3px solid var(--accent); border-bottom-color: transparent; border-radius: 50%; transform: rotate(-45deg); }
-.brand-needle { position: absolute; left: 50%; bottom: 48%; width: .78rem; height: 2px; border-radius: 3px; background: white; transform: rotate(-38deg); transform-origin: left center; }
-.brand-needle::after { position: absolute; left: -.16rem; top: -.15rem; width: .32rem; height: .32rem; border-radius: 50%; background: white; content: ""; }
+.brand-symbol { width: 2.6rem; height: 2.6rem; flex: 0 0 auto; color: var(--ink); filter: drop-shadow(0 7px 14px rgba(17,37,28,.16)); }
 .brand-name { display: grid; gap: .18rem; }
+.brand-wordmark { display: flex; align-items: baseline; letter-spacing: -.035em; }
+.brand-wordmark strong { color: var(--brand); font-weight: 850; }
 .brand-name small { color: var(--muted); font-size: .57rem; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; }
 
 .desktop-nav { display: flex; align-items: center; gap: .75rem; }
@@ -186,9 +185,10 @@ h3 { font-weight: 560; }
 .footer-topline { display: grid; grid-template-columns: .72fr 1fr; gap: 1rem 3rem; align-items: center; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,.1); }
 .footer-identity { display: inline-flex; align-items: center; gap: .85rem; width: fit-content; text-decoration: none; }
 .footer-identity > span:last-child { display: grid; gap: .18rem; }
-.footer-identity strong { color: white; font: 760 1.1rem/1 "Manrope Variable", sans-serif; }
+.footer-identity strong { color: white; font: 760 1.1rem/1 "Manrope Variable", sans-serif; letter-spacing: -.035em; }
+.footer-identity strong b { color: var(--accent); font-weight: 820; }
 .footer-identity small { color: #9fb3a8; font-size: .74rem; letter-spacing: .035em; }
-.footer-mark { border: 1px solid rgba(211,235,86,.22); background: rgba(255,255,255,.035); box-shadow: 0 0 32px rgba(211,235,86,.08); }
+.footer-mark { width: 2.8rem; height: 2.8rem; color: #10251b; filter: drop-shadow(0 0 24px rgba(211,235,86,.1)); }
 .footer-topline > p { max-width: 570px; margin: 0; color: #b7c7be; font-size: .9rem; }
 .footer-assurances { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .55rem; }
 .footer-assurances span { display: inline-flex; align-items: center; gap: .45rem; padding: .48rem .7rem; border: 1px solid rgba(255,255,255,.11); border-radius: 999px; color: #d6e1da; background: rgba(255,255,255,.035); font-size: .72rem; font-weight: 700; }

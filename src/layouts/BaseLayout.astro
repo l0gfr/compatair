@@ -6,6 +6,7 @@ import newsreaderLatinWghtUrl from '@fontsource-variable/newsreader/files/newsre
 import '../styles/global.css';
 import SiteSearch from '../components/SiteSearch.astro';
 import UiIcon from '../components/UiIcon.astro';
+import BrandMark from '../components/BrandMark.astro';
 import AcquisitionTelemetry from '../components/AcquisitionTelemetry.astro';
 import McpCanonicalTelemetry from '../components/McpCanonicalTelemetry.astro';
 import { resolveDocumentTitle } from '../domain/metadata';
@@ -115,6 +116,9 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 		<link rel="canonical" href={canonical} />
 		{alternateLinks.map((item) => <link rel="alternate" hreflang={item.hreflang} href={item.href} />)}
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/site.webmanifest" />
 		<link rel="preload" href={manropeLatinWghtUrl} as="font" type="font/woff2" crossorigin="anonymous" />
 		<link rel="preload" href={newsreaderLatinWghtUrl} as="font" type="font/woff2" crossorigin="anonymous" />
 		<meta property="og:type" content={pageType} />
@@ -143,7 +147,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 		<a class="skip-link" href="#contenu">{lang === 'en' ? 'Skip to content' : 'Aller au contenu'}</a>
 		<header class="site-header">
 			<nav class="container nav" aria-label="Navigation principale">
-				<a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><span class="brand-arc"></span><span class="brand-needle"></span></span><span class="brand-name">CompatAir<small>Quel compresseur pour vos outils&nbsp;?</small></span></a>
+				<a class="brand" href="/" aria-label="CompatAir, accueil"><BrandMark /><span class="brand-name"><span class="brand-wordmark"><span>Compat</span><strong>Air</strong></span><small>Quel compresseur pour vos outils&nbsp;?</small></span></a>
 				<div class="desktop-nav">
 					<div class="nav-links">{navItems.map((item) => <a href={item.href} class:list={{ active: isCurrent(item.href) }} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>)}</div>
 					<SiteSearch />
@@ -160,8 +164,8 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 			<div class="container footer-shell">
 				<div class="footer-topline">
 					<a class="footer-identity" href="/">
-						<span class="brand-mark footer-mark" aria-hidden="true"><span class="brand-arc"></span><span class="brand-needle"></span></span>
-						<span><strong>CompatAir</strong><small>Quel compresseur pour vos outils&nbsp;?</small></span>
+						<BrandMark class="footer-mark" />
+						<span><strong><span>Compat</span><b>Air</b></strong><small>Quel compresseur pour vos outils&nbsp;?</small></span>
 					</a>
 					<p>CompatAir vérifie quel compresseur peut alimenter vos outils à partir de données constructeur clairement identifiées.</p>
 					<div class="footer-assurances" aria-label="Principes CompatAir">

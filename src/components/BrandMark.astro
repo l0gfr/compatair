@@ -1,0 +1,13 @@
+---
+type Props = {
+	class?: string;
+};
+
+const { class: className } = Astro.props;
+---
+
+<svg class:list={['brand-symbol', className]} viewBox="0 0 64 64" aria-hidden="true">
+	<rect x="3" y="3" width="58" height="58" rx="16" fill="currentColor" />
+	<path d="M38.5 17.5H30.5C21.4 17.5 14 24 14 32s7.4 14.5 16.5 14.5h8" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" />
+	<path d="M34.5 46 45 18l10.5 28M39 35h12" fill="none" stroke="#d3eb56" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
