@@ -83,6 +83,8 @@ if (
 	|| decision?.air_supply_verdict?.scope !== 'air_supply'
 	|| typeof decision?.canonical_url !== 'string'
 	|| !decision.canonical_url.startsWith('https://compatair.fr/')
+	|| typeof decision?.canonical_follow_url !== 'string'
+	|| !decision.canonical_follow_url.includes('via=mcp')
 ) {
 	throw new Error('MCP profile contract returned an incomplete compatibility decision');
 }

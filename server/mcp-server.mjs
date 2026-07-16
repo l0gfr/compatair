@@ -7,6 +7,7 @@ import { createMcpCore, ENGINE_VERSION, MCP_SERVER_VERSION, METHOD_VERSION, PROT
 import { createDemandAggregateStore, DEMAND_EVENT_SCHEMA_VERSION, isValidCalculationVersion, validateDemandEvent } from './demand-aggregates.mjs';
 import { createProductFunnelAggregateStore, PRODUCT_FUNNEL_SCHEMA_VERSION, validateProductFunnelEvent } from './product-funnel-aggregates.mjs';
 import { ACQUISITION_SCHEMA_VERSION, createAcquisitionAggregateStore, validateAcquisitionEvent } from './acquisition-aggregates.mjs';
+import { classifyMcpClient, classifyMcpOutcome, createMcpTelemetryStore, extractMcpDemand, MCP_TELEMETRY_SCHEMA_VERSION } from './mcp-telemetry.mjs';
 import { authorizeUcpRequest, createUcpError, createUcpToolArguments, fetchPublicUcpProfile, ucpErrorStatus, validateUcpEvaluationRequest } from './ucp-core.mjs';
 
 const BODY_LIMIT = 65_536;
@@ -96,6 +97,20 @@ export function resolveAcquisitionAggregatePath(demandAggregatePath, configuredP
 	return configuredPath || (demandAggregatePath ? resolve(dirname(demandAggregatePath), 'acquisition-aggregates.json') : undefined);
 }
 
+export function resolveMcpTelemetryPath(demandAggregatePath, configuredPath) {
+	return configuredPath || (demandAggregatePath ? resolve(dirname(demandAggregatePath), 'mcp-telemetry.json') : undefined);
+}
+
+export function canonicalFollowUrl(canonicalUrl, toolName) {
+	if (typeof canonicalUrl !== 'string' || typeof toolName !== 'string' || !/^[a-z0-9_]{1,80}$/.test(toolName)) return undefined;
+	let url;
+	try { url = new URL(canonicalUrl); } catch { return undefined; }
+	if (url.origin !== 'https://compatair.fr') return undefined;
+	url.searchParams.set('via', 'mcp');
+	url.searchParams.set('tool', toolName);
+	return url.toString();
+}
+
 function acquisitionOutcome(structuredContent) {
 	if (!structuredContent || structuredContent.error) return 'error';
 	if (structuredContent.verdict === 'insufficient_data') return 'insufficient_data';
@@ -144,9 +159,9 @@ function isJsonContentType(request) {
 }
 
 /**
- * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, knowledgeItems?: any[], changefeedEvents?: any[], allowedOrigins: Set<string>, demandAggregatePath?: string, productFunnelAggregatePath?: string, acquisitionAggregatePath?: string, proxyManagesApiHeaders?: boolean, now?: () => number, fetchUcpProfile?: (url: URL) => Promise<any>, recordAffiliateClick?: (offerId: string) => void, recordToolCall?: (toolName: string) => void }} options
+ * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, knowledgeItems?: any[], changefeedEvents?: any[], allowedOrigins: Set<string>, demandAggregatePath?: string, productFunnelAggregatePath?: string, acquisitionAggregatePath?: string, mcpTelemetryPath?: string, mcpTelemetrySecretPath?: string, mcpTelemetrySecret?: string, proxyManagesApiHeaders?: boolean, now?: () => number, fetchUcpProfile?: (url: URL) => Promise<any>, recordAffiliateClick?: (offerId: string) => void, recordToolCall?: (toolName: string) => void }} options
  */
-export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable', calculationVersion: ENGINE_VERSION }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, knowledgeItems = [], changefeedEvents = [], allowedOrigins, demandAggregatePath = undefined, productFunnelAggregatePath = undefined, acquisitionAggregatePath = undefined, proxyManagesApiHeaders = false, now = Date.now, fetchUcpProfile = fetchPublicUcpProfile, recordAffiliateClick = () => {}, recordToolCall = () => {} }) {
+export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable', calculationVersion: ENGINE_VERSION }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, knowledgeItems = [], changefeedEvents = [], allowedOrigins, demandAggregatePath = undefined, productFunnelAggregatePath = undefined, acquisitionAggregatePath = undefined, mcpTelemetryPath = undefined, mcpTelemetrySecretPath = undefined, mcpTelemetrySecret = undefined, proxyManagesApiHeaders = false, now = Date.now, fetchUcpProfile = fetchPublicUcpProfile, recordAffiliateClick = () => {}, recordToolCall = () => {} }) {
 	const core = createMcpCore(catalog, offerSnapshot, { isOfferActive: (offer) => isFreshOfferSnapshot(offer, now()) && allowedOfferRedirect(offer) !== undefined, verdictSnapshot, knowledgeItems, changefeedEvents, now });
 	const authoritativeCalculationVersion = isValidCalculationVersion(verdictSnapshot.calculationVersion) ? verdictSnapshot.calculationVersion : ENGINE_VERSION;
 	const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
@@ -159,6 +174,9 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 	const demandStore = createDemandAggregateStore({ filePath: demandAggregatePath, catalog });
 	const productFunnelStore = createProductFunnelAggregateStore({ filePath: productFunnelAggregatePath });
 	const acquisitionStore = createAcquisitionAggregateStore({ filePath: acquisitionAggregatePath });
+	const telemetryStore = createMcpTelemetryStore({ filePath: mcpTelemetryPath, secretFilePath: mcpTelemetrySecretPath, configuredSecret: mcpTelemetrySecret, catalog });
+	const listedTools = core.handle({ jsonrpc: '2.0', id: 'telemetry-tools', method: 'tools/list', params: {} });
+	const knownToolNames = new Set((listedTools?.result?.tools ?? []).map((tool) => tool.name));
 	function callPublicTool(name, args) {
 		const response = core.handle({ jsonrpc: '2.0', id: 'http-api', method: 'tools/call', params: { name, arguments: args } });
 		return response?.result;
@@ -198,6 +216,13 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 		try { await acquisitionStore.record(event); }
 		catch { counters.errors++; }
 	}
+	async function telemetryActorId(request) {
+		return telemetryStore.actorId(clientAddress(request), request.headers['user-agent']);
+	}
+	async function recordTelemetry(event) {
+		try { await telemetryStore.record(event); }
+		catch { counters.errors++; }
+	}
 
 	async function handle(request, response) {
 		response.setTimeout(10_000);
@@ -205,7 +230,14 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 		let url;
 		try { url = new URL(request.url, 'http://localhost'); } catch { return json(response, 400, { error: 'invalid_request_target' }); }
 
-		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', mcpServerVersion: MCP_SERVER_VERSION, protocolVersion: PROTOCOL_VERSION, methodVersion: METHOD_VERSION, catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, verdictVersion: verdictSnapshot.verdictVersion, knowledgeItems: knowledgeItems.length, changefeedEvents: changefeedEvents.length, ucp: { readOnlyCompatibility: true }, demandAggregation: { enabled: demandStore.enabled, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION }, productFunnelAggregation: { enabled: productFunnelStore.enabled, schemaVersion: PRODUCT_FUNNEL_SCHEMA_VERSION }, acquisitionAggregation: { enabled: acquisitionStore.enabled, schemaVersion: ACQUISITION_SCHEMA_VERSION } });
+		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', mcpServerVersion: MCP_SERVER_VERSION, protocolVersion: PROTOCOL_VERSION, methodVersion: METHOD_VERSION, catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, verdictVersion: verdictSnapshot.verdictVersion, knowledgeItems: knowledgeItems.length, changefeedEvents: changefeedEvents.length, ucp: { readOnlyCompatibility: true }, demandAggregation: { enabled: demandStore.enabled, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION }, productFunnelAggregation: { enabled: productFunnelStore.enabled, schemaVersion: PRODUCT_FUNNEL_SCHEMA_VERSION }, acquisitionAggregation: { enabled: acquisitionStore.enabled, schemaVersion: ACQUISITION_SCHEMA_VERSION }, mcpTelemetry: { enabled: telemetryStore.enabled, schemaVersion: MCP_TELEMETRY_SCHEMA_VERSION } });
+
+		if (url.pathname === '/data/mcp-usage.json') {
+			if (!['GET', 'HEAD'].includes(request.method ?? '')) return json(response, 405, { error: 'method_not_allowed' }, { Allow: 'GET, HEAD' });
+			const report = await telemetryStore.publicReport();
+			if (request.method === 'HEAD') { response.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=300', 'X-Content-Type-Options': 'nosniff' }); return response.end(); }
+			return json(response, 200, report, { 'Cache-Control': 'public, max-age=300' });
+		}
 
 		if (url.pathname === '/compatibilite' || url.pathname.startsWith('/compatibilite/')) {
 			if (!['GET', 'HEAD'].includes(request.method ?? '')) return json(response, 405, { error: 'method_not_allowed' }, { Allow: 'GET, HEAD' });
@@ -364,6 +396,11 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			if (!allow(`events:${clientAddress(request)}`)) return json(response, 429, { error: 'rate_limited' }, { 'Retry-After': '60' });
 			try {
 				const event = await readJsonBody(request);
+				if (event?.event === 'mcp_canonical_follow' && event.schemaVersion === MCP_TELEMETRY_SCHEMA_VERSION && typeof event.tool === 'string' && knownToolNames.has(event.tool) && Object.keys(event).length === 3) {
+					await recordTelemetry({ type: 'canonical_follow', actorId: await telemetryActorId(request), toolName: event.tool });
+					response.writeHead(204, { 'Cache-Control': 'no-store' });
+					return response.end();
+				}
 				const demand = validateDemandEvent(event, catalog, authoritativeCalculationVersion);
 				const productFunnel = validateProductFunnelEvent(event);
 				const acquisition = validateAcquisitionEvent(event);
@@ -415,9 +452,23 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			}
 			counters.rpc++;
 			const result = core.handle(message);
-			if (message.method === 'tools/call' && typeof message.params?.name === 'string' && result && !result.error) {
-				recordToolCall(message.params.name);
-				await recordAcquisition({ channel: 'mcp', template: message.params.name === 'evaluate_air_compatibility' ? 'compatibility' : 'other', action: 'decision_request', outcome: acquisitionOutcome(result.result?.structuredContent) });
+			if (message.method === 'initialize' && result && !result.error) {
+				await recordTelemetry({ type: 'initialize', actorId: await telemetryActorId(request), clientFamily: classifyMcpClient(message.params?.clientInfo) });
+			}
+			if (message.method === 'tools/call' && typeof message.params?.name === 'string' && result) {
+				const toolName = knownToolNames.has(message.params.name) ? message.params.name : 'unknown';
+				const structuredContent = result.result?.structuredContent;
+				const followUrl = canonicalFollowUrl(structuredContent?.canonical_url, toolName);
+				if (followUrl && result.result) {
+					result.result.structuredContent = { ...structuredContent, canonical_follow_url: followUrl };
+					result.result.content = [{ type: 'text', text: JSON.stringify(result.result.structuredContent) }];
+				}
+				const demand = extractMcpDemand(toolName, message.params?.arguments, result.result?.structuredContent, catalog);
+				await recordTelemetry({ type: 'tool_call', actorId: await telemetryActorId(request), toolName, outcome: classifyMcpOutcome(result), canonicalIssued: Boolean(followUrl), ...demand });
+				if (!result.error) {
+					recordToolCall(message.params.name);
+					await recordAcquisition({ channel: 'mcp', template: message.params.name === 'evaluate_air_compatibility' ? 'compatibility' : 'other', action: 'decision_request', outcome: acquisitionOutcome(result.result?.structuredContent) });
+				}
 			}
 			if (result === null || message.id === undefined) { response.writeHead(202, { 'Cache-Control': 'no-store' }); return response.end(); }
 			if (result.error) counters.errors++;
@@ -456,6 +507,8 @@ async function start() {
 	const demandAggregatePath = process.env.COMPAT_AIR_DEMAND_AGGREGATES || undefined;
 	const productFunnelAggregatePath = resolveProductFunnelAggregatePath(demandAggregatePath, process.env.COMPAT_AIR_PRODUCT_FUNNEL_AGGREGATES || undefined);
 	const acquisitionAggregatePath = resolveAcquisitionAggregatePath(demandAggregatePath, process.env.COMPAT_AIR_ACQUISITION_AGGREGATES || undefined);
+	const mcpTelemetryPath = resolveMcpTelemetryPath(demandAggregatePath, process.env.COMPAT_AIR_MCP_TELEMETRY || undefined);
+	const mcpTelemetrySecretPath = process.env.COMPAT_AIR_MCP_TELEMETRY_SECRET_FILE || (mcpTelemetryPath ? resolve(dirname(mcpTelemetryPath), '.mcp-telemetry-secret') : undefined);
 	const proxyManagesApiHeaders = process.env.COMPAT_AIR_PROXY_MANAGES_API_HEADERS === '1';
 	const catalog = JSON.parse(await readFile(catalogPath, 'utf8'));
 	const verdictSnapshot = JSON.parse(await readFile(verdictsPath, 'utf8'));
@@ -466,7 +519,7 @@ async function start() {
 	try { const value = JSON.parse(await readFile(knowledgePath, 'utf8')); if (Array.isArray(value)) knowledgeItems = value.slice(0, 10_000); } catch {}
 	let changefeedEvents = [];
 	try { const value = JSON.parse(await readFile(changefeedPath, 'utf8')); if (Array.isArray(value?.events)) changefeedEvents = value.events.slice(0, 10_000); } catch {}
-	const server = createCompatAirServer({ catalog, verdictSnapshot, offerSnapshot, knowledgeItems, changefeedEvents, allowedOrigins, demandAggregatePath, productFunnelAggregatePath, acquisitionAggregatePath, proxyManagesApiHeaders });
+	const server = createCompatAirServer({ catalog, verdictSnapshot, offerSnapshot, knowledgeItems, changefeedEvents, allowedOrigins, demandAggregatePath, productFunnelAggregatePath, acquisitionAggregatePath, mcpTelemetryPath, mcpTelemetrySecretPath, proxyManagesApiHeaders });
 	server.on('error', (error) => { console.error(error); process.exitCode = 1; });
 	server.listen(port, host, () => console.error(`CompatAir MCP listening on http://${host}:${port}`));
 }

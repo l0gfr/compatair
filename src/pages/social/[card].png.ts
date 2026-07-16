@@ -7,6 +7,7 @@ const staticCards: SocialCard[] = [
 	{ path: '/404.html', kicker: 'Navigation', title: 'Page introuvable', subtitle: 'Retrouvez le catalogue et les guides CompatAir', accent: '#e39a5e' },
 	{ path: '/410/', kicker: 'Navigation', title: 'Contenu retiré', subtitle: 'Cette ressource ne possède pas de remplacement direct', accent: '#e39a5e' },
 	{ path: '/affiliation/', kicker: 'Indépendance', title: 'Affiliation et résultat technique', subtitle: 'Une commission ne modifie jamais la compatibilité' },
+	{ path: '/agents/', kicker: 'Infrastructure agentique', title: 'CompatAir pour les agents', subtitle: 'Connexion, contrats publics et usage MCP mesuré' },
 	{ path: '/api/', kicker: 'CompatAir API 1.0', title: 'API de compatibilité pneumatique', subtitle: 'Verdicts, versions et sources en consultation uniquement' },
 	{ path: '/barometre-transparence/', kicker: 'Édition 2026', title: 'Baromètre de transparence documentaire', subtitle: 'Un score de documentation, jamais de qualité produit' },
 	{ path: '/benchmark-agents/', kicker: 'Fidélité des assistants', title: '100 scénarios pneumatiques publics', subtitle: 'Verdicts, portées, limites, sources et attribution mesurés' },

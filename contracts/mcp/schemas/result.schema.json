@@ -10,6 +10,7 @@
     "verdict_scope": { "enum": ["information", "request", "air_supply", "complete_air_system", "commercial_constraints"] },
     "verdict_schema_version": { "const": "2.0.0" },
     "canonical_url": { "type": "string", "format": "uri", "pattern": "^https://compatair\\.fr/" },
+    "canonical_follow_url": { "type": "string", "format": "uri", "pattern": "^https://compatair\\.fr/" },
     "product_urls": { "type": "array", "items": { "type": "string", "format": "uri", "pattern": "^https://compatair\\.fr/" }, "uniqueItems": true },
     "source_urls": { "type": "array", "items": { "type": "string", "format": "uri", "pattern": "^https://" }, "uniqueItems": true },
     "method_version": { "const": "2026.07" },

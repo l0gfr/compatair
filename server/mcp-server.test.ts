@@ -5,7 +5,7 @@ import { createServer } from 'node:net';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { allowedOfferRedirect, clientAddress, createCompatAirServer, isFreshOfferSnapshot, isMainModule, parseOfferId, resolveKnowledgeSnapshotPath, resolveProductFunnelAggregatePath, resolveVerdictSnapshotPath } from './mcp-server.mjs';
+import { allowedOfferRedirect, canonicalFollowUrl, clientAddress, createCompatAirServer, isFreshOfferSnapshot, isMainModule, parseOfferId, resolveKnowledgeSnapshotPath, resolveProductFunnelAggregatePath, resolveVerdictSnapshotPath } from './mcp-server.mjs';
 
 async function reservePort() {
 	const server = createServer();
@@ -24,6 +24,11 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(parseOfferId('/go/%')).toBeUndefined();
 		expect(parseOfferId('/go/../../etc/passwd')).toBeUndefined();
 		expect(parseOfferId('/go/valid-offer-1')).toBe('valid-offer-1');
+	});
+
+	it('builds attributed follow URLs without changing the canonical contract', () => {
+		expect(canonicalFollowUrl('https://compatair.fr/calculateur/?outil=a', 'check_compatibility')).toBe('https://compatair.fr/calculateur/?outil=a&via=mcp&tool=check_compatibility');
+		expect(canonicalFollowUrl('https://example.test/private', 'check_compatibility')).toBeUndefined();
 	});
 
 	it('rejects a tampered redirect even when it uses HTTPS', () => {
@@ -211,6 +216,32 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(await requestTool('x'.repeat(1_000))).toBe(200);
 		expect(await requestTool('find_offers')).toBe(200);
 		expect(recorded).toEqual(['find_offers']);
+	});
+
+	it('persists MCP initialization, tool outcome and an explicit canonical follow', async () => {
+		const directory = mkdtempSync(join(tmpdir(), 'compatair-mcp-telemetry-http-'));
+		const mcpTelemetryPath = join(directory, 'mcp-telemetry.json');
+		try {
+			const server = createCompatAirServer({ catalog: { catalogVersion: 'test', compressors: [], tools: [] }, allowedOrigins: new Set(['https://compatair.fr']), mcpTelemetryPath, mcpTelemetrySecret: 'test-secret-with-at-least-sixteen-bytes' });
+			const call = (request: any) => new Promise<{ status: number; body: string }>((resolve) => {
+				let status = 0; let body = '';
+				const response = { setTimeout() {}, writeHead(value: number) { status = value; }, end(value = '') { body += value; resolve({ status, body }); }, destroy() {} };
+				server.emit('request', request, response);
+			});
+			const mcp = (payload: unknown) => call({
+				url: '/mcp', method: 'POST', headers: { accept: 'application/json, text/event-stream', 'content-type': 'application/json', 'user-agent': 'Claude Code/1.2.3' }, socket: { remoteAddress: '192.0.2.42' },
+				async *[Symbol.asyncIterator]() { yield Buffer.from(JSON.stringify(payload)); },
+			});
+			expect((await mcp({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-11-25', capabilities: {}, clientInfo: { name: 'Claude Code', version: '1.2.3' } } })).status).toBe(200);
+			const toolCall = await mcp({ jsonrpc: '2.0', id: 2, method: 'tools/call', params: { name: 'identify_product', arguments: { query: 'absent' } } });
+			const result = JSON.parse(toolCall.body).result.structuredContent;
+			expect(result.verdict).toBe('insufficient_data');
+			expect(result.canonical_follow_url).toContain('via=mcp&tool=identify_product');
+			const followPayload = JSON.stringify({ event: 'mcp_canonical_follow', schemaVersion: '1.0.0', tool: 'identify_product' });
+			expect((await call({ url: '/events', method: 'POST', headers: { origin: 'https://compatair.fr', 'content-type': 'application/json', 'user-agent': 'Claude Code/1.2.3' }, socket: { remoteAddress: '192.0.2.42' }, async *[Symbol.asyncIterator]() { yield Buffer.from(followPayload); } })).status).toBe(204);
+			const report = await call({ url: '/data/mcp-usage.json', method: 'GET', headers: {}, socket: { remoteAddress: '127.0.0.1' } });
+			expect(JSON.parse(report.body)).toMatchObject({ totals: { initializations: 1, tool_calls: 1, insufficient_data: 1, canonical_follows: 1, estimated_callers: null }, tools: [{ name: 'identify_product', calls: 1, insufficient_data: 1, canonical_issued: 1, canonical_follows: 1 }] });
+		} finally { rmSync(directory, { recursive: true, force: true }); }
 	});
 
 	it('serves the versioned compatibility API with CORS and source evidence', async () => {
@@ -455,7 +486,7 @@ describe('MCP HTTP boundary helpers', () => {
 		const current = join(directory, 'current');
 		mkdirSync(join(release, '_server'), { recursive: true });
 		mkdirSync(join(release, 'data'), { recursive: true });
-		for (const file of ['mcp-server.mjs', 'mcp-core.mjs', 'mcp-output-schemas.mjs', 'ucp-core.mjs', 'demand-aggregates.mjs', 'product-funnel-aggregates.mjs', 'acquisition-aggregates.mjs']) copyFileSync(join(process.cwd(), 'server', file), join(release, '_server', file));
+		for (const file of ['mcp-server.mjs', 'mcp-core.mjs', 'mcp-output-schemas.mjs', 'ucp-core.mjs', 'demand-aggregates.mjs', 'product-funnel-aggregates.mjs', 'acquisition-aggregates.mjs', 'mcp-telemetry.mjs']) copyFileSync(join(process.cwd(), 'server', file), join(release, '_server', file));
 		writeFileSync(join(release, 'data', 'catalog.json'), JSON.stringify({ catalogVersion: 'catalog-test', compressors: [], tools: [] }));
 		writeFileSync(join(release, 'data', 'verdicts.json'), JSON.stringify({ catalogVersion: 'catalog-test', verdictVersion: 'verdict-test', calculationVersion: '1.2.0', pairs: [] }));
 		writeFileSync(join(release, 'data', 'offers.json'), JSON.stringify({ offers: [], snapshotVersion: 'empty' }));

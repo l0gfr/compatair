@@ -87,6 +87,12 @@ Le rapport privé se génère avec `pnpm data:report-acquisition -- /var/lib/com
 
 Le rapport hebdomadaire de demande existant reste produit séparément avec `pnpm data:rank-demand`. Il masque les dimensions sous cinq contributions, pondère les déficits par la demande observée et remonte les vingt couples `insufficient_data` prioritaires.
 
+## Usage MCP pseudonymisé puis publié sous forme agrégée
+
+Le serveur conserve `/var/lib/compatair/mcp-telemetry.json` pendant 91 jours. Il compte les initialisations, les familles fermées de `clientInfo`, les appels et résultats par tool, les identifiants de catalogue demandés, les couples de compatibilité et les consultations attribuées via `canonical_follow_url`. Un nom de client inconnu devient `other` ; aucun nom libre n'est stocké.
+
+L'estimation des appelants repose sur un préfixe réseau tronqué et un agent utilisateur normalisé, protégés par HMAC avec `/var/lib/compatair/.mcp-telemetry-secret`. L'agrégat privé contient donc des empreintes pseudonymes, jamais des adresses IP ni des agents utilisateurs bruts. Le rapport public `/data/mcp-usage.json` ne contient aucune empreinte, masque les clients, produits et compatibilités sous cinq observations et décrit explicitement les limites de la mesure.
+
 ## Offres ManoMano
 
 Le flux Awin enrichit uniquement la couche commerciale. L’appariement échoue sans EAN, GTIN ou MPN normalisé déjà relié à une fiche technique. Le prix, le stock ou la commission ne participent jamais au moteur de compatibilité.

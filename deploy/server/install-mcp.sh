@@ -12,6 +12,7 @@ fi
 test -f /var/www/html/compatair/current/_server/mcp-server.mjs
 test -f /var/www/html/compatair/current/_server/ucp-core.mjs
 test -f /var/www/html/compatair/current/_server/product-funnel-aggregates.mjs
+test -f /var/www/html/compatair/current/_server/mcp-telemetry.mjs
 test -f /var/www/html/compatair/current/data/catalog.json
 test -f /var/www/html/compatair/current/data/verdicts.json
 test -f "$project_dir/deploy/systemd/compatair-mcp.service"

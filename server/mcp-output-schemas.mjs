@@ -116,7 +116,7 @@ const knowledgeSchema = strict({
 
 const commonProperties = {
 	verdict: { type: 'string', enum: PUBLIC_VERDICTS }, verdict_scope: { type: 'string', enum: VERDICT_SCOPES }, verdict_schema_version: { const: '2.0.0' },
-	canonical_url: uri, product_urls: uriArray, source_urls: uriArray, method_version: string, catalog_version: string,
+	canonical_url: uri, canonical_follow_url: uri, product_urls: uriArray, source_urls: uriArray, method_version: string, catalog_version: string,
 	observed_at: { type: 'string', format: 'date' }, limitations: stringArray, next_actions: stringArray,
 	catalogVersion: string, engineVersion: string,
 	error: strict({ code: { type: 'string', enum: ['invalid_arguments', 'insufficient_data'] }, message: string, scope: { const: 'request' }, retryable: { type: 'boolean' } }, ['code', 'message', 'scope', 'retryable']),

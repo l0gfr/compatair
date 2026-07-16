@@ -78,7 +78,7 @@ Activer ensuite le service :
 sudo bash /home/bluetouff/compatair-bootstrap/deploy/server/install-mcp.sh
 ```
 
-Ce script installe aussi le répertoire privé `/var/lib/compatair`, créé par systemd avec le mode `0700`. Le service y conserve `demand-aggregates.json` et `product-funnel-aggregates.json`, composés uniquement de compteurs agrégés. Après une mise à jour de l’unité systemd, rejouer la même commande une fois puis vérifier :
+Ce script installe aussi le répertoire privé `/var/lib/compatair`, créé par systemd avec le mode `0700`. Le service y conserve les agrégats de demande, de funnel, d’acquisition et d’usage MCP. La clé HMAC de télémétrie est créée au premier démarrage dans `.mcp-telemetry-secret` avec le mode `0600` et reste hors des releases. Après une mise à jour de l’unité systemd, rejouer la même commande une fois puis vérifier :
 
 ```bash
 sudo systemctl show compatair-mcp.service -p StateDirectory -p Environment
@@ -90,6 +90,7 @@ Contrôler le service local, le proxy HTTPS puis la négociation MCP :
 ```bash
 curl --fail http://127.0.0.1:8787/health
 curl --fail https://compatair.fr/mcp-health
+curl --fail https://compatair.fr/data/mcp-usage.json
 curl --fail 'https://compatair.fr/api/v1/compatibility?compressorId=einhell-tc-ac-240-50-10-of&toolId=einhell-tc-pe-150'
 curl --fail 'https://compatair.fr/api/v1/search?q=debit&locale=fr&limit=1'
 curl --fail https://compatair.fr/.well-known/ucp

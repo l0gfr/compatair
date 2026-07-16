@@ -64,6 +64,8 @@
 	ProxyPassReverse /api/ucp/v1/compatibility/evaluate http://127.0.0.1:8787/api/ucp/v1/compatibility/evaluate
 	ProxyPass /events http://127.0.0.1:8787/events timeout=5 connectiontimeout=2
 	ProxyPassReverse /events http://127.0.0.1:8787/events
+	ProxyPass /data/mcp-usage.json http://127.0.0.1:8787/data/mcp-usage.json timeout=5 connectiontimeout=2
+	ProxyPassReverse /data/mcp-usage.json http://127.0.0.1:8787/data/mcp-usage.json
 	ProxyPass /go/ http://127.0.0.1:8787/go/ timeout=5 connectiontimeout=2
 	ProxyPassReverse /go/ http://127.0.0.1:8787/go/
 	ProxyPass /mcp-health http://127.0.0.1:8787/health timeout=5 connectiontimeout=2

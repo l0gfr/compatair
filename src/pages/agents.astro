@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { callToolCurl, claudeProjectConfig, mcpEndpoint } from '../data/mcp-documentation';
+
+const contracts = [
+	{ label: 'Manifest MCP', href: 'https://github.com/bluetouff/CompatAir/blob/main/server.json', detail: 'Transport Streamable HTTP et version publiée' },
+	{ label: 'Schéma des résultats', href: '/schemas/mcp-result-2026.07.json', detail: 'Enveloppe commune, verdicts et URLs de preuve' },
+	{ label: 'Schéma AirGraph', href: '/schemas/airgraph-0.1.0.json', detail: 'Produits, exigences, relations et sources' },
+	{ label: 'OpenAPI public', href: '/openapi/compatair-2026-07-15.json', detail: 'Compatibilité, recherche, preuves et changefeed' },
+];
+---
+
+<BaseLayout
+	title="CompatAir pour les agents | MCP et usage réel"
+	description="Connecter un agent à CompatAir, vérifier les contrats publics et consulter des statistiques anonymisées d’utilisation du serveur MCP."
+	canonicalPath="/agents/"
+	breadcrumbs={[{ name: 'CompatAir pour les agents', path: '/agents/' }]}
+>
+	<section class="agent-hero">
+		<div class="container agent-hero-grid">
+			<div>
+				<p class="eyebrow">Infrastructure agentique publique</p>
+				<h1>CompatAir pour les agents</h1>
+				<p class="lead">Un serveur MCP en lecture seule pour identifier un produit, vérifier une compatibilité pneumatique et restituer les preuves sans transformer une donnée manquante en estimation.</p>
+				<div class="actions"><a class="button primary" href="#connexion">Connecter un agent</a><a class="button" href="/mcp-documentation/">Documentation MCP complète</a></div>
+			</div>
+			<aside class="agent-endpoint" aria-label="Point d’accès MCP CompatAir">
+				<span>STREAMABLE HTTP</span><code>{mcpEndpoint}</code>
+				<ul><li>Lecture seule</li><li>Sans compte</li><li>Verdicts déterministes</li><li>Sources et limites conservées</li></ul>
+			</aside>
+		</div>
+	</section>
+
+	<section class="container agent-section" id="statistiques">
+		<header class="agent-section-head"><p class="eyebrow">Preuve d’usage</p><h2>Statistiques MCP anonymisées</h2><p>Fenêtre glissante de 91 jours. Les petits cohortes sont masquées. Un lien canonique émis n’est pas compté comme consulté tant que l’URL attribuée n’a pas réellement été ouverte.</p></header>
+		<div class="agent-stats" data-agent-stats aria-live="polite">
+			<article><span>Initialisations</span><strong data-stat="initializations">...</strong></article>
+			<article><span>Appels de tools</span><strong data-stat="tool_calls">...</strong></article>
+			<article><span>Taux de succès</span><strong data-stat="success_rate">...</strong></article>
+			<article><span>Données insuffisantes</span><strong data-stat="insufficient_data_rate">...</strong></article>
+			<article><span>Taux d’erreur</span><strong data-stat="error_rate">...</strong></article>
+			<article><span>Appelants estimés</span><strong data-stat="estimated_callers">...</strong></article>
+			<article><span>Appelants récurrents</span><strong data-stat="recurrent_callers">...</strong></article>
+			<article><span>Intégrations récurrentes</span><strong data-stat="recurrent_integrations">...</strong></article>
+		</div>
+		<p class="agent-stats-status" data-stats-status>Chargement du rapport agrégé...</p>
+		<div class="agent-tables">
+			<section><h3>Tools les plus appelés</h3><div class="agent-table-wrap"><table><thead><tr><th>Tool</th><th>Appels</th><th>Succès</th><th>Insuffisant</th><th>Erreurs</th></tr></thead><tbody data-tool-rows></tbody></table></div></section>
+			<section><h3>Clients déclarés via clientInfo</h3><div class="agent-table-wrap"><table><thead><tr><th>Famille</th><th>Initialisations</th></tr></thead><tbody data-client-rows></tbody></table></div></section>
+			<section><h3>Produits les plus demandés</h3><div class="agent-table-wrap"><table><thead><tr><th>Produit</th><th>Demandes</th></tr></thead><tbody data-product-rows></tbody></table></div></section>
+			<section><h3>Compatibilités les plus demandées</h3><div class="agent-table-wrap"><table><thead><tr><th>Compresseur</th><th>Outil</th><th>Demandes</th></tr></thead><tbody data-compatibility-rows></tbody></table></div></section>
+		</div>
+		<p class="agent-method"><strong>Ce qui est mesuré.</strong> Un « appelant » est une estimation issue d’un préfixe réseau tronqué et d’une famille d’agent utilisateur, protégés par HMAC. Ce n’est ni une personne identifiée ni un compte. « Récurrent » signifie actif pendant au moins deux jours distincts. <a href="/confidentialite/">Lire le cadre de confidentialité</a>.</p>
+	</section>
+
+	<section class="agent-dark" id="connexion">
+		<div class="container agent-section">
+			<header class="agent-section-head"><p class="eyebrow">Connexion</p><h2>Une URL, plusieurs clients</h2><p>L’initialisation doit déclarer <code>clientInfo</code>. CompatAir agrège uniquement une famille fermée de clients ; les noms libres inconnus deviennent <code>other</code>.</p></header>
+			<div class="agent-code-grid">
+				<article><h3>Claude et clients compatibles</h3><pre><code>{claudeProjectConfig}</code></pre></article>
+				<article><h3>Appel direct par HTTP</h3><pre><code>{callToolCurl}</code></pre></article>
+			</div>
+			<p><a class="button primary" href="/mcp-documentation/#installer">Voir les exemples ChatGPT, Claude, Gemini et Agents SDK</a></p>
+		</div>
+	</section>
+
+	<section class="container agent-section">
+		<header class="agent-section-head"><p class="eyebrow">Contrats publics</p><h2>Une réponse que l’agent peut vérifier</h2><p>Chaque résultat conserve son verdict, sa portée, ses limitations, les versions de méthode et de catalogue, les sources et une page CompatAir de référence. <code>canonical_follow_url</code> permet de mesurer une consultation attribuée sans confondre émission et clic.</p></header>
+		<div class="agent-contracts">{contracts.map((contract) => <a href={contract.href}><strong>{contract.label}</strong><span>{contract.detail}</span><b aria-hidden="true">→</b></a>)}</div>
+	</section>
+
+	<section class="container agent-section agent-use-cases">
+		<header class="agent-section-head"><p class="eyebrow">Cas d’usage</p><h2>Des tâches techniques, pas une couche de conversation de plus</h2></header>
+		<div class="grid">
+			<article class="card"><span class="step">01</span><h3>Identifier</h3><p>Résoudre un EAN, un MPN, une référence ou un nom vers un identifiant CompatAir stable, sans télécharger une URL arbitraire.</p></article>
+			<article class="card"><span class="step">02</span><h3>Vérifier</h3><p>Comparer pression, débit restitué, cycle d’utilisation et composants du réseau, avec <code>insufficient_data</code> quand la preuve manque.</p></article>
+			<article class="card"><span class="step">03</span><h3>Expliquer</h3><p>Restituer les facteurs limitants, les sources, le reçu de compatibilité et la page canonique correspondant au résultat.</p></article>
+		</div>
+	</section>
+</BaseLayout>
+
+<script>
+	const root = document.querySelector<HTMLElement>('[data-agent-stats]');
+	const status = document.querySelector<HTMLElement>('[data-stats-status]');
+	const toolRows = document.querySelector<HTMLTableSectionElement>('[data-tool-rows]');
+	const clientRows = document.querySelector<HTMLTableSectionElement>('[data-client-rows]');
+	const productRows = document.querySelector<HTMLTableSectionElement>('[data-product-rows]');
+	const compatibilityRows = document.querySelector<HTMLTableSectionElement>('[data-compatibility-rows]');
+	const formatCount = (value: unknown) => typeof value === 'number' ? new Intl.NumberFormat('fr-FR').format(value) : 'Masqué';
+	const formatRate = (value: unknown) => typeof value === 'number' ? new Intl.NumberFormat('fr-FR', { style: 'percent', maximumFractionDigits: 1 }).format(value) : 'Indisponible';
+	const addCell = (row: HTMLTableRowElement, value: string) => { const cell = document.createElement('td'); cell.textContent = value; row.append(cell); };
+	try {
+		const response = await fetch('/data/mcp-usage.json', { headers: { Accept: 'application/json' } });
+		if (!response.ok) throw new Error('report_unavailable');
+		const report = await response.json();
+		for (const element of root?.querySelectorAll<HTMLElement>('[data-stat]') ?? []) {
+			const key = element.dataset.stat ?? '';
+			const value = report.totals?.[key];
+			element.textContent = key.endsWith('_rate') ? formatRate(value) : formatCount(value);
+		}
+		for (const tool of (report.tools ?? []).slice(0, 10)) {
+			const row = document.createElement('tr');
+			addCell(row, tool.name); addCell(row, formatCount(tool.calls)); addCell(row, formatRate(tool.success_rate)); addCell(row, formatRate(tool.insufficient_data_rate)); addCell(row, formatRate(tool.error_rate)); toolRows?.append(row);
+		}
+		for (const client of (report.clients ?? []).slice(0, 10)) {
+			const row = document.createElement('tr'); addCell(row, client.family); addCell(row, formatCount(client.initializations)); clientRows?.append(row);
+		}
+		for (const product of (report.products ?? []).slice(0, 10)) {
+			const row = document.createElement('tr'); addCell(row, product.label); addCell(row, formatCount(product.requests)); productRows?.append(row);
+		}
+		for (const compatibility of (report.compatibilities ?? []).slice(0, 10)) {
+			const row = document.createElement('tr'); addCell(row, compatibility.compressor); addCell(row, compatibility.tool); addCell(row, formatCount(compatibility.requests)); compatibilityRows?.append(row);
+		}
+		if (toolRows && !toolRows.children.length) { const row = document.createElement('tr'); const cell = document.createElement('td'); cell.colSpan = 5; cell.textContent = 'Pas encore assez de données.'; row.append(cell); toolRows.append(row); }
+		if (clientRows && !clientRows.children.length) { const row = document.createElement('tr'); const cell = document.createElement('td'); cell.colSpan = 2; cell.textContent = 'Cohortes encore inférieures au seuil public.'; row.append(cell); clientRows.append(row); }
+		if (productRows && !productRows.children.length) { const row = document.createElement('tr'); const cell = document.createElement('td'); cell.colSpan = 2; cell.textContent = 'Cohortes encore inférieures au seuil public.'; row.append(cell); productRows.append(row); }
+		if (compatibilityRows && !compatibilityRows.children.length) { const row = document.createElement('tr'); const cell = document.createElement('td'); cell.colSpan = 3; cell.textContent = 'Cohortes encore inférieures au seuil public.'; row.append(cell); compatibilityRows.append(row); }
+		if (status) status.textContent = report.updated_at ? `Rapport mis à jour le ${new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeStyle: 'short' }).format(new Date(report.updated_at))}.` : 'Instrumentation active, aucun appel agrégé à ce stade.';
+	} catch {
+		if (status) status.textContent = 'Le rapport d’usage est momentanément indisponible. Aucun chiffre de remplacement n’est estimé.';
+	}
+</script>
+
+<style>
+	.agent-hero { padding: clamp(4rem, 8vw, 7rem) 0; color: white; background: radial-gradient(circle at 82% 22%, #2d5c46, transparent 26rem), #10281e; }
+	.agent-hero h1, .agent-dark h2, .agent-dark h3 { color: white; }
+	.agent-hero .lead, .agent-dark p { color: #c9d8cf; }
+	.agent-hero .eyebrow, .agent-dark .eyebrow { color: var(--accent); }
+	.agent-hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr); gap: clamp(2rem, 7vw, 6rem); align-items: center; }
+	.agent-endpoint { padding: 1.4rem; border: 1px solid rgba(255,255,255,.18); background: rgba(6,24,17,.56); box-shadow: var(--shadow-deep); }
+	.agent-endpoint > span { display: block; margin-bottom: .8rem; color: var(--accent); font: 800 .68rem/1 ui-monospace, monospace; letter-spacing: .12em; }
+	.agent-endpoint code { display: block; overflow-wrap: anywhere; font-size: 1rem; }
+	.agent-endpoint ul { display: grid; grid-template-columns: 1fr 1fr; gap: .65rem; margin: 1.2rem 0 0; padding: 1rem 0 0; border-top: 1px solid rgba(255,255,255,.15); list-style: none; color: #c9d8cf; font-size: .78rem; }
+	.agent-section { padding-block: clamp(3.5rem, 7vw, 6rem); }
+	.agent-section-head { max-width: 790px; margin-bottom: 2rem; }
+	.agent-section-head h2 { margin: 0 0 1rem; }
+	.agent-section-head > p:last-child { color: var(--muted); }
+	.agent-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; }
+	.agent-stats article { display: grid; gap: .65rem; padding: 1.35rem; border: 1px solid var(--line); background: rgba(253,254,250,.9); box-shadow: var(--shadow-sm); }
+	.agent-stats span { color: var(--muted); font-size: .75rem; font-weight: 780; text-transform: uppercase; }
+	.agent-stats strong { color: var(--brand-dark); font: 560 clamp(1.7rem, 4vw, 2.6rem)/1 "Newsreader Variable", Georgia, serif; }
+	.agent-stats-status { color: var(--muted); font-size: .8rem; }
+	.agent-tables, .agent-code-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+	.agent-tables > section { min-width: 0; padding: 1.25rem; border: 1px solid var(--line); background: var(--panel); }
+	.agent-tables h3 { margin-top: 0; }
+	.agent-table-wrap { overflow-x: auto; }
+	.agent-table-wrap table { width: 100%; border-collapse: collapse; font-size: .78rem; }
+	.agent-table-wrap th, .agent-table-wrap td { padding: .6rem .45rem; border-bottom: 1px solid var(--line); text-align: left; }
+	.agent-method { margin-top: 1.4rem; padding: 1rem 1.2rem; border-left: 4px solid var(--brand); background: #e8eee5; color: var(--muted); }
+	.agent-dark { color: white; background: #10281e; }
+	.agent-code-grid article { min-width: 0; }
+	.agent-code-grid pre { max-height: 31rem; overflow: auto; padding: 1rem; border: 1px solid rgba(255,255,255,.14); background: #071b12; font-size: .76rem; }
+	.agent-code-grid code { color: #e1eadf; }
+	.agent-contracts { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; }
+	.agent-contracts a { display: grid; grid-template-columns: 1fr auto; gap: .35rem 1rem; padding: 1.3rem; border: 1px solid var(--line); background: var(--panel); text-decoration: none; }
+	.agent-contracts strong { color: var(--brand-dark); }
+	.agent-contracts span { color: var(--muted); font-size: .82rem; }
+	.agent-contracts b { grid-column: 2; grid-row: 1 / 3; align-self: center; color: var(--brand); }
+	.agent-use-cases { padding-top: 1rem; }
+	@media (max-width: 820px) { .agent-hero-grid, .agent-tables, .agent-code-grid { grid-template-columns: 1fr; } .agent-stats { grid-template-columns: repeat(2, 1fr); } }
+	@media (max-width: 560px) { .agent-stats, .agent-contracts { grid-template-columns: 1fr; } }
+</style>

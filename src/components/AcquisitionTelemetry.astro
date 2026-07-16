@@ -1,4 +1,13 @@
 <script>
+	const trackedTool = new URLSearchParams(location.search).get('via') === 'mcp' ? new URLSearchParams(location.search).get('tool') : null;
+	if (trackedTool && /^[a-z0-9_]{1,80}$/.test(trackedTool)) {
+		const canonicalEvent = { event: 'mcp_canonical_follow', schemaVersion: '1.0.0', tool: trackedTool };
+		if (navigator.sendBeacon) navigator.sendBeacon('/events', new Blob([JSON.stringify(canonicalEvent)], { type: 'application/json' }));
+		const cleanUrl = new URL(location.href);
+		cleanUrl.searchParams.delete('via');
+		cleanUrl.searchParams.delete('tool');
+		history.replaceState(null, '', `${cleanUrl.pathname}${cleanUrl.search}${cleanUrl.hash}`);
+	}
 	const referrer = document.referrer;
 	let referrerUrl: URL | undefined;
 	try { if (referrer) referrerUrl = new URL(referrer); } catch {}
@@ -15,7 +24,7 @@
 				: path.startsWith('/compresseurs/') ? 'compressor'
 					: path.startsWith('/outils-pneumatiques/') ? 'tool'
 						: path.startsWith('/guides/') ? 'guide'
-							: path === '/mcp-documentation/' || path === '/en/mcp/' ? 'mcp_docs'
+							: path === '/mcp-documentation/' || path === '/en/mcp/' || path === '/agents/' ? 'mcp_docs'
 								: path === '/ucp/' || path === '/en/ucp/' ? 'ucp_docs'
 									: path === '/api/' ? 'api_docs'
 										: path.startsWith('/benchmark-agents/') || path.startsWith('/en/agent-fidelity-benchmark/') ? 'benchmark'

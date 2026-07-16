@@ -91,6 +91,7 @@ for (const [label, pathname, marker] of [
 	['clés de signature', '/data/signing-keys.json', 'Ed25519'],
 	['documentation UCP FR', '/ucp/', 'fr.compatair.air.compatibility'],
 	['documentation UCP EN', '/en/ucp/', 'fr.compatair.air.compatibility'],
+	['CompatAir pour les agents', '/agents/', 'Statistiques MCP anonymisées'],
 	['reçu de compatibilité', '/recu-compatibilite/', 'Vérifier un reçu'],
 	['compatibility receipt EN', '/en/compatibility-receipt/', 'Verify a receipt'],
 	['schéma reçu', '/schemas/compatibility-receipt-1.0.0.json', 'receipt_id'],
@@ -148,6 +149,15 @@ if (mcpEnabled) {
 		assert(health.protocolVersion === '2025-11-25', `protocole MCP inattendu ${JSON.stringify(health.protocolVersion)}`);
 		assert(health.methodVersion === '2026.07', `méthode MCP inattendue ${JSON.stringify(health.methodVersion)}`);
 		assert(typeof health.verdictVersion === 'string' && health.verdictVersion.length > 0, 'verdictVersion MCP absente');
+		assert(health.mcpTelemetry?.enabled === true && health.mcpTelemetry?.schemaVersion === '1.0.0', 'télémétrie MCP inactive');
+	});
+
+	await check('statistiques MCP publiques', '/data/mcp-usage.json', ({ body, response }) => {
+		assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
+		const report = JSON.parse(body);
+		assert(report.schema_version === '1.0.0', 'schéma de statistiques MCP inattendu');
+		assert(report.minimum_public_cohort === 5, 'seuil public MCP inattendu');
+		assert(typeof report.totals?.tool_calls === 'number', 'total d’appels MCP absent');
 	});
 
 	await check(
