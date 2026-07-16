@@ -9,6 +9,8 @@ describe('MCP canonical consultation telemetry', () => {
 		expect(component).toContain('<script is:inline>');
 		expect(component).toContain("searchParameters.get('via') === 'mcp'");
 		expect(component).toContain("navigator.sendBeacon('/events'");
+		expect(component).toContain("fetch('/events'");
+		expect(component).toContain('keepalive: true');
 		expect(layout.indexOf('<McpCanonicalTelemetry />')).toBeGreaterThan(-1);
 		expect(layout.indexOf('<McpCanonicalTelemetry />')).toBeLessThan(layout.indexOf('</head>'));
 	});
