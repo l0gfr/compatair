@@ -1,0 +1,12 @@
+<script is:inline>
+	const searchParameters = new URLSearchParams(location.search);
+	const trackedTool = searchParameters.get('via') === 'mcp' ? searchParameters.get('tool') : null;
+	if (trackedTool && /^[a-z0-9_]{1,80}$/.test(trackedTool)) {
+		const canonicalEvent = { event: 'mcp_canonical_follow', schemaVersion: '1.0.0', tool: trackedTool };
+		if (navigator.sendBeacon) navigator.sendBeacon('/events', new Blob([JSON.stringify(canonicalEvent)], { type: 'application/json' }));
+		const cleanUrl = new URL(location.href);
+		cleanUrl.searchParams.delete('via');
+		cleanUrl.searchParams.delete('tool');
+		history.replaceState(null, '', `${cleanUrl.pathname}${cleanUrl.search}${cleanUrl.hash}`);
+	}
+</script>

@@ -7,6 +7,7 @@ import '../styles/global.css';
 import SiteSearch from '../components/SiteSearch.astro';
 import UiIcon from '../components/UiIcon.astro';
 import AcquisitionTelemetry from '../components/AcquisitionTelemetry.astro';
+import McpCanonicalTelemetry from '../components/McpCanonicalTelemetry.astro';
 import { resolveDocumentTitle } from '../domain/metadata';
 import { socialCardKey } from '../domain/social-card';
 import { serializeJsonLd } from '../domain/structured-data';
@@ -136,6 +137,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 		<script is:inline type="application/ld+json" set:html={serializeJsonLd(websiteJsonLd)} />
 		{breadcrumbJsonLd && <script is:inline type="application/ld+json" set:html={serializeJsonLd(breadcrumbJsonLd)} />}
 		<title>{documentTitle}</title>
+		<McpCanonicalTelemetry />
 	</head>
 	<body>
 		<a class="skip-link" href="#contenu">{lang === 'en' ? 'Skip to content' : 'Aller au contenu'}</a>
