@@ -75,25 +75,33 @@ import product74 from './kaeser-eurocomp-epc-840-100';
 import product75 from './kaeser-eurocomp-epc-840-250';
 import product76 from './kaeser-eurocomp-epc-840-250-vertical';
 import product77 from './kaeser-eurocomp-epc-840-g';
-import product78 from './metabo-basic-160-6-w-of';
-import product79 from './metabo-basic-220-24-of-silent';
-import product80 from './metabo-basic-250-24-w';
-import product81 from './metabo-basic-250-24-w-of';
-import product82 from './metabo-basic-250-50-w';
-import product83 from './metabo-basic-250-50-w-of';
-import product84 from './metabo-basic-280-50-w-of';
-import product85 from './metabo-mega-350-100-d';
-import product86 from './metabo-mega-350-100-w';
-import product87 from './metabo-mega-350-50-w';
-import product88 from './metabo-mega-400-50-d';
-import product89 from './metabo-mega-400-50-w';
-import product90 from './metabo-mega-580-200-d';
-import product91 from './metabo-mega-650-270-d';
-import product92 from './metabo-mega-700-90-d';
-import product93 from './metabo-power-160-5-18-ltx-bl-of';
-import product94 from './metabo-power-180-5-w-of';
-import product95 from './metabo-power-250-10-w-of';
-import product96 from './metabo-power-280-20-w-of';
+import product78 from './mecafer-fifty-50l-2hp';
+import product79 from './metabo-basic-160-6-w-of';
+import product80 from './metabo-basic-220-24-of-silent';
+import product81 from './metabo-basic-250-24-w';
+import product82 from './metabo-basic-250-24-w-of';
+import product83 from './metabo-basic-250-50-w';
+import product84 from './metabo-basic-250-50-w-of';
+import product85 from './metabo-basic-280-50-w-of';
+import product86 from './metabo-mega-350-100-d';
+import product87 from './metabo-mega-350-100-w';
+import product88 from './metabo-mega-350-50-w';
+import product89 from './metabo-mega-400-50-d';
+import product90 from './metabo-mega-400-50-w';
+import product91 from './metabo-mega-580-200-d';
+import product92 from './metabo-mega-650-270-d';
+import product93 from './metabo-mega-700-90-d';
+import product94 from './metabo-power-160-5-18-ltx-bl-of';
+import product95 from './metabo-power-180-5-w-of';
+import product96 from './metabo-power-250-10-w-of';
+import product97 from './metabo-power-280-20-w-of';
+import product98 from './michelin-mb50';
+import product99 from './nuair-siltek-tb-50-d';
+import product100 from './parkside-psko-248-b1';
+import product101 from './prodif-sil750v';
+import product102 from './revolution-air-superboxy-2l';
+import product103 from './scheppach-hc51v';
+import product104 from './stanley-dn200-10-5';
 
 export const rawCompressors = [
 	product1,
@@ -192,4 +200,12 @@ export const rawCompressors = [
 	product94,
 	product95,
 	product96,
+	product97,
+	product98,
+	product99,
+	product100,
+	product101,
+	product102,
+	product103,
+	product104,
 ];

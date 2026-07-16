@@ -4170,7 +4170,263 @@
         "confidence": "A",
         "notes": "Débits déclarés comme mesurés selon ISO 1217 ; dimensions, masse, acoustique et alimentation reprises du tableau constructeur."
       }
+    },
+    {
+      "id": "added:mecafer-163157:mecafer-163157-official:2026-07-16",
+      "evidenceId": "mecafer-163157-official",
+      "productId": "mecafer-163157",
+      "productType": "tool",
+      "occurredAt": "2026-07-16",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "76721151b55f21b7f0bbf19e4ac88760d5362987e4e28281619891ee337df808",
+      "snapshot": {
+        "id": "mecafer-163157-official",
+        "sourceUrl": "https://www.mecafer.com/accessoires-compresseurs/cle-a-choc-pro-1-2-",
+        "sourceLabel": "Mecafer, fiche clé à chocs Pro 163157",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-16",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:mecafer-fifty-50l-2hp:mecafer-425090-official:2026-07-16",
+      "evidenceId": "mecafer-425090-official",
+      "productId": "mecafer-fifty-50l-2hp",
+      "productType": "compressor",
+      "occurredAt": "2026-07-16",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6070066badf639c90edd8f922bdbb1ebaf12a3f92b66fa57c7177908527a13d5",
+      "snapshot": {
+        "id": "mecafer-425090-official",
+        "sourceUrl": "https://www.mecafer.com/compresseurs/compresseur-fifty-50l-2hp",
+        "sourceLabel": "Mecafer, fiche officielle Fifty 50 L",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-16",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:michelin-mb50:michelin-mb50-merchant:2026-07-16",
+      "evidenceId": "michelin-mb50-merchant",
+      "productId": "michelin-mb50",
+      "productType": "compressor",
+      "occurredAt": "2026-07-16",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6779487954521fcd47a367421efb99af636ae1da13251789108fc2cb702132e3",
+      "snapshot": {
+        "id": "michelin-mb50-merchant",
+        "sourceUrl": "https://www.leroymerlin.fr/produits/compresseur-50l-2cv-8-bars-mb50-michelin-66415496.html",
+        "sourceLabel": "Leroy Merlin, fiche Michelin MB50",
+        "sourceType": "merchant",
+        "retrievedAt": "2026-07-16",
+        "confidence": "C",
+        "notes": "La pression associée au débit restitué n’est pas publiée."
+      }
+    },
+    {
+      "id": "added:nuair-siltek-tb-50-d:nuair-siltek-brochure:2026-07-16",
+      "evidenceId": "nuair-siltek-brochure",
+      "productId": "nuair-siltek-tb-50-d",
+      "productType": "compressor",
+      "occurredAt": "2026-07-16",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "692ed1d2e85e167c172ab6a86fe8da221e0c22b0612c0523183e7b7dfa9e0193",
+      "snapshot": {
+        "id": "nuair-siltek-brochure",
+        "sourceUrl": "https://www.nuair.it/index.php/en/products/piston-compressors/standard-range/item/download/211_5c4af607a87834a0b44ec71f33187d0a",
+        "sourceLabel": "Nuair, catalogue compresseurs SILTEK",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-16",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:parkside-pdsp-1000-e6:parkside-pdsp-lidl:2026-07-16",
+      "evidenceId": "parkside-pdsp-lidl",
+      "productId": "parkside-pdsp-1000-e6",
+      "productType": "tool",
+      "occurredAt": "2026-07-16",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "f8c79844a7446490f2505ba7f2d7a92df2ab5b92acaa9e0f7490c14fd78c349f",
+      "snapshot": {
+        "id": "parkside-pdsp-lidl",
+        "sourceUrl": "https://www.lidl.de/p/parkside-druckluft-sandstrahlpistole-pdsp-1000-e6/p100398458",
+        "sourceLabel": "Lidl Allemagne, fiche officielle Parkside PDSP 1000 E6",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-16",
+        "confidence": "B",
+        "notes": "La consommation et la pression sont publiées comme valeurs maximales."
+      }
+    },
+    {
+      "id": "added:parkside-psko-248-b1:parkside-psko-lidl:2026-07-16",
+      "evidenceId": "parkside-psko-lidl",
+      "productId": "parkside-psko-248-b1",
+      "productType": "compressor",
+      "occurredAt": "2026-07-16",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8bb592603eaf1ee2f4e86a978de5564e261d71fff605d3cfbb01c4ffee629dbd",
+      "snapshot": {
+        "id": "parkside-psko-lidl",
+        "sourceUrl": "https://www.lidl.fr/p/parkside-compresseur-silencieux-psko-248-b1-8-bar-24-l-1100-w/p100398873",
+        "sourceLabel": "Lidl France, fiche officielle Parkside PSKO 248 B1",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-16",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:parkside-psko-248-b1:parkside-psko-manual:2026-07-16",
+      "evidenceId": "parkside-psko-manual",
+      "productId": "parkside-psko-248-b1",
+      "productType": "compressor",
+      "occurredAt": "2026-07-16",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "517206c740a5db7f238dab7fe339b9e735e465492661b950743f9dd44405428b",
+      "snapshot": {
+        "id": "parkside-psko-manual",
+        "sourceUrl": "https://manuals.sit-connect.com/public/articlemanual/bb5c7c29-2231-4e4d-bcc9-6dc70716ac20.pdf",
+        "sourceLabel": "Parkside, notice PSKO 248 B1 IAN 525254_2504",
+        "sourceType": "manual",
+        "retrievedAt": "2026-07-16",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:prodif-sil750v:prodif-sil750v-merchant:2026-07-16",
+      "evidenceId": "prodif-sil750v-merchant",
+      "productId": "prodif-sil750v",
+      "productType": "compressor",
+      "occurredAt": "2026-07-16",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "af7f70fad759d6dfd196e8b74d74aee9ce9f2162ef686b480cf30fef38383961",
+      "snapshot": {
+        "id": "prodif-sil750v-merchant",
+        "sourceUrl": "https://www.leroymerlin.fr/produits/compresseur-50l-2cv-8-bars-sans-huile-sil750v-prodif-91651543.html",
+        "sourceLabel": "Leroy Merlin, fiche SIL750V sans huile",
+        "sourceType": "merchant",
+        "retrievedAt": "2026-07-16",
+        "confidence": "B",
+        "notes": "Source secondaire pour le type sans huile."
+      }
+    },
+    {
+      "id": "added:prodif-sil750v:prodif-sil750v-v3:2026-07-16",
+      "evidenceId": "prodif-sil750v-v3",
+      "productId": "prodif-sil750v",
+      "productType": "compressor",
+      "occurredAt": "2026-07-16",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "34b1ed41d08081a19ea94d7f1bf748180936bb3060dfb07b850aba31b7bcbe0a",
+      "snapshot": {
+        "id": "prodif-sil750v-v3",
+        "sourceUrl": "https://prodif.com/wp-content/uploads/2024/02/PROD_Fiche-Pack-SIL750V-V3MD.pdf",
+        "sourceLabel": "Prodif, fiche SIL750V V3",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-16",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:revolution-air-superboxy-2l:revolution-air-425018-official:2026-07-16",
+      "evidenceId": "revolution-air-425018-official",
+      "productId": "revolution-air-superboxy-2l",
+      "productType": "compressor",
+      "occurredAt": "2026-07-16",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d336f911d89821521e7edfd7aacf3a2d3112f86679d39d3c368438ff00bfb3fe",
+      "snapshot": {
+        "id": "revolution-air-425018-official",
+        "sourceUrl": "https://www.mecafer.com/compresseurs/compresseur-superboxy-2l-15hp",
+        "sourceLabel": "Mecafer, fiche officielle SuperBoxy",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-16",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:scheppach-7906100715:scheppach-7906100715-official:2026-07-16",
+      "evidenceId": "scheppach-7906100715-official",
+      "productId": "scheppach-7906100715",
+      "productType": "tool",
+      "occurredAt": "2026-07-16",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7e6c77025d8f1e1cc707c662314e3ef4573ce1e858af9f2f0c657b7f75d90e06",
+      "snapshot": {
+        "id": "scheppach-7906100715-official",
+        "sourceUrl": "https://shop.scheppach.com/Zubehoer-Set-Druckluftnagler-scheppach/7906100715",
+        "sourceLabel": "Scheppach, boutique fabricant 7906100715",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-16",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:scheppach-7906100719:scheppach-7906100719-official:2026-07-16",
+      "evidenceId": "scheppach-7906100719-official",
+      "productId": "scheppach-7906100719",
+      "productType": "tool",
+      "occurredAt": "2026-07-16",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "f1558bb78dc738083c21788d31045a9e5d6c6981bf226dedecc8d2499c6e5a2a",
+      "snapshot": {
+        "id": "scheppach-7906100719-official",
+        "sourceUrl": "https://shop.scheppach.com/Zubehoer-Set-Druckluftschleifer-Scheppach-max.-6-3-bar-Luftbedarf-OE-93-4-L-min-max.-10.000-min-1-OE-150-mm/7906100719",
+        "sourceLabel": "Scheppach, boutique fabricant 7906100719",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-16",
+        "confidence": "A",
+        "notes": "La fiche présente une incohérence 140/150 mm sur le diamètre."
+      }
+    },
+    {
+      "id": "added:scheppach-hc51v:scheppach-hc51v-official:2026-07-16",
+      "evidenceId": "scheppach-hc51v-official",
+      "productId": "scheppach-hc51v",
+      "productType": "compressor",
+      "occurredAt": "2026-07-16",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8b368f24d6edf69c7279217c1cb033a6cada3499bece1d3711ef44351bd3dd5c",
+      "snapshot": {
+        "id": "scheppach-hc51v-official",
+        "sourceUrl": "https://shop.scheppach.com/Kompressor-stehend-HC51V-scheppach-10-bar-50L-Kessel-230V-1500W-oelfrei-wartungsarm/59061649969",
+        "sourceLabel": "Scheppach, boutique fabricant HC51V",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-16",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:stanley-dn200-10-5:stanley-dn200-official:2026-07-16",
+      "evidenceId": "stanley-dn200-official",
+      "productId": "stanley-dn200-10-5",
+      "productType": "compressor",
+      "occurredAt": "2026-07-16",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "66604b8b183e4fc63d3c335eab66dbcf72bdafc3156b050a6b00653d87716c44",
+      "snapshot": {
+        "id": "stanley-dn200-official",
+        "sourceUrl": "https://www.mecafer.com/compresseurs/compresseur-coaxial-non-lubrifie-5l-15hp",
+        "sourceLabel": "Mecafer, distributeur de la gamme Stanley",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-16",
+        "confidence": "A"
+      }
     }
   ],
-  "historyVersion": "6394b4669b7658556ab73fdc701b2a18e106741610bf1656a9521df82d1e9636"
+  "historyVersion": "f23bc7bd36864f8b09f58d3fcab5dbb10fbf546b7fbd38fe3c885983968e9ebe"
 }

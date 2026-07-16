@@ -182,6 +182,18 @@ export const productSeoTitles: Record<string, string> = {
 	'chicago-pneumatic-cp749': 'CP749 : débit en charge et couple | CompatAir',
 	'chicago-pneumatic-cp8252-p': 'CP8252-P : débit en charge et couple | CompatAir',
 	'chicago-pneumatic-cp9541': 'CP9541 : débit en charge et couple | CompatAir',
+	'mecafer-fifty-50l-2hp': 'Mecafer Fifty 50 L : débit restitué | CompatAir',
+	'stanley-dn200-10-5': 'Stanley DN200/10/5 : débit restitué | CompatAir',
+	'revolution-air-superboxy-2l': 'SuperBoxy 2 L : débit restitué | CompatAir',
+	'scheppach-hc51v': 'Scheppach HC51V : débit restitué | CompatAir',
+	'parkside-psko-248-b1': 'Parkside PSKO 248 B1 : débit réel | CompatAir',
+	'michelin-mb50': 'Michelin MB50 : débit non documenté | CompatAir',
+	'prodif-sil750v': 'Prodif SIL750V : débit non documenté | CompatAir',
+	'nuair-siltek-tb-50-d': 'Nuair SILTEK TB 50 D : débit aspiré | CompatAir',
+	'mecafer-163157': 'Mecafer 163157 : débit et pression | CompatAir',
+	'scheppach-7906100715': 'Cloueur Scheppach : air par tir | CompatAir',
+	'scheppach-7906100719': 'Ponceuse Scheppach : débit et pression | CompatAir',
+	'parkside-pdsp-1000-e6': 'Parkside PDSP 1000 E6 : débit maximal | CompatAir',
 };
 
 export const toolUseSeoTitles: Record<string, string> = {
@@ -271,6 +283,10 @@ export const toolUseSeoTitles: Record<string, string> = {
 	'chicago-pneumatic-cp749': 'CP749 : quel compresseur ? | CompatAir',
 	'chicago-pneumatic-cp8252-p': 'CP8252-P : quel compresseur ? | CompatAir',
 	'chicago-pneumatic-cp9541': 'CP9541 : quel compresseur ? | CompatAir',
+	'mecafer-163157': 'Mecafer 163157 : quel compresseur ? | CompatAir',
+	'scheppach-7906100715': 'Cloueur Scheppach : quel compresseur ? | CompatAir',
+	'scheppach-7906100719': 'Ponceuse Scheppach : quel compresseur ? | CompatAir',
+	'parkside-pdsp-1000-e6': 'Parkside PDSP 1000 E6 : quel compresseur ?',
 };
 
 export function productSeoTitle(productId: string) {

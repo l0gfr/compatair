@@ -1,0 +1,11 @@
+const product = {
+		id: 'scheppach-7906100719', slug: 'ponceuse-orbitale-scheppach-7906100719', categoryId: 'ponceuse-orbitale', category: 'Ponceuse orbitale', label: 'Ponceuse orbitale pneumatique Scheppach', brand: 'Scheppach', model: 'Druckluftschleifer', mpn: '7906100719', ean: '4046664041979',
+		demandModel: 'fixed-flow', workingPressureBar: { min: 6.3, typical: 6.3, max: 6.3 }, airflowLpm: { min: 93.4, typical: 93.4, max: 93.4 }, usagePattern: 'continuous', confidence: 'A',
+		image: { src: '/images/products/scheppach-7906100719.webp', alt: 'Ponceuse orbitale pneumatique Scheppach 7906100719', sourceUrl: 'https://shop.scheppach.com/Zubehoer-Set-Druckluftschleifer-Scheppach-max.-6-3-bar-Luftbedarf-OE-93-4-L-min-max.-10.000-min-1-OE-150-mm/7906100719', sourceLabel: 'Visuel officiel Scheppach' },
+		editorial: { overview: 'La ponceuse orbitale Scheppach demande 93,4 L/min à 6,3 bar. Comme le ponçage peut être prolongé, le profil retient un usage continu et exige que le compresseur tienne ce débit restitué.', verifiedFacts: ['Scheppach publie une consommation de 93,4 L/min et une pression maximale de 6,3 bar.', 'La vitesse maximale annoncée est de 10 000 tr/min.'], limitations: ['La fiche ne publie qu’un point de consommation.', 'Le titre de la page mentionne 150 mm alors que le champ technique courant indique un plateau de 140 mm.'] },
+		specifications: [{ label: 'Plateau', value: '140 mm dans le champ technique de la fiche', evidenceIds: ['scheppach-7906100719-official'] }, { label: 'Poids', value: '1,8 kg', evidenceIds: ['scheppach-7906100719-official'] }],
+		evidence: [{ id: 'scheppach-7906100719-official', sourceUrl: 'https://shop.scheppach.com/Zubehoer-Set-Druckluftschleifer-Scheppach-max.-6-3-bar-Luftbedarf-OE-93-4-L-min-max.-10.000-min-1-OE-150-mm/7906100719', sourceLabel: 'Scheppach, boutique fabricant 7906100719', sourceType: 'manufacturer', retrievedAt: '2026-07-16', confidence: 'A', notes: 'La fiche présente une incohérence 140/150 mm sur le diamètre.' }],
+		fieldSources: { airflowLpm: ['scheppach-7906100719-official'], workingPressureBar: ['scheppach-7906100719-official'] }, notes: ['Le profil conserve la valeur technique de 140 mm et signale l’écart du titre.'],
+	};
+
+export default product;

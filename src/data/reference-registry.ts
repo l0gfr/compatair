@@ -144,7 +144,19 @@ const baselineMpnByProduct = {
 	'metabo-ssp-1000': '601569000',
 } as const;
 
-const laterObservations: Array<{ productId: string; mpn: string; observedAt: string; kind: 'added' | 'changed' }> = [];
+const laterObservations: Array<{ productId: string; mpn: string; observedAt: string; kind: 'added' | 'changed' }> = [
+	{ productId: 'mecafer-fifty-50l-2hp', mpn: '425090', observedAt: '2026-07-16', kind: 'added' },
+	{ productId: 'michelin-mb50', mpn: 'MB50', observedAt: '2026-07-16', kind: 'added' },
+	{ productId: 'nuair-siltek-tb-50-d', mpn: 'B2DC504NUA', observedAt: '2026-07-16', kind: 'added' },
+	{ productId: 'parkside-psko-248-b1', mpn: 'HG12899', observedAt: '2026-07-16', kind: 'added' },
+	{ productId: 'prodif-sil750v', mpn: 'SIL750V', observedAt: '2026-07-16', kind: 'added' },
+	{ productId: 'revolution-air-superboxy-2l', mpn: '425018', observedAt: '2026-07-16', kind: 'added' },
+	{ productId: 'scheppach-hc51v', mpn: '59061649969', observedAt: '2026-07-16', kind: 'added' },
+	{ productId: 'stanley-dn200-10-5', mpn: 'DN200-10-5', observedAt: '2026-07-16', kind: 'added' },
+	{ productId: 'mecafer-163157', mpn: '163157', observedAt: '2026-07-16', kind: 'added' },
+	{ productId: 'scheppach-7906100715', mpn: '7906100715', observedAt: '2026-07-16', kind: 'added' },
+	{ productId: 'scheppach-7906100719', mpn: '7906100719', observedAt: '2026-07-16', kind: 'added' },
+];
 
 export const referenceRegistry = referenceRegistrySchema.parse({
 	schemaVersion: '1.0.0',
