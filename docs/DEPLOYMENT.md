@@ -176,36 +176,15 @@ sudo systemctl status compatair-stats.service --no-pager
 
 ### Drill de panne isolé
 
-Le drill ne doit jamais être exécuté sur `/var/www/html/compatair`. Il utilise une racine, un port, une unité systemd, un état et un vhost locaux distincts. Préparer une première fois la copie staging depuis une release saine :
+Le drill ne doit jamais être exécuté sur `/var/www/html/compatair`. Il utilise une racine, un port, une unité systemd, un état et un vhost locaux distincts. L'installateur vérifie le SHA actif, refuse d'écraser un staging divergent, installe les frontières fixes puis exécute immédiatement le drill :
 
 ```bash
-release=$(cat /var/www/html/compatair/DEPLOYED_SHA)
-sudo install -d -o compatair-deploy -g www-data -m 2755 /var/www/html/compatair-staging/releases
-sudo cp -a "/var/www/html/compatair/releases/$release" "/var/www/html/compatair-staging/releases/$release"
-sudo chown -R compatair-deploy:www-data "/var/www/html/compatair-staging/releases/$release"
-sudo ln -sfn "/var/www/html/compatair-staging/releases/$release" /var/www/html/compatair-staging/current
-printf '%s\n' "$release" | sudo tee /var/www/html/compatair-staging/DEPLOYED_SHA > /dev/null
-sudo chown compatair-deploy:www-data /var/www/html/compatair-staging/DEPLOYED_SHA
-sudo install -o root -g root -m 644 deploy/systemd/compatair-mcp-staging.service /etc/systemd/system/compatair-mcp-staging.service
-sudo install -o root -g root -m 644 deploy/apache/compatair-staging.conf.example /etc/apache2/sites-available/compatair-staging.conf
-sudo ln -sfn /etc/apache2/sites-available/compatair-staging.conf /etc/apache2/sites-enabled/compatair-staging.conf
-printf '%s\n' 'compatair-deploy ALL=(root) NOPASSWD: /bin/systemctl restart compatair-mcp-staging.service' | sudo tee /etc/sudoers.d/compatair-mcp-staging-drill > /dev/null
-sudo chmod 440 /etc/sudoers.d/compatair-mcp-staging-drill
-sudo visudo -cf /etc/sudoers.d/compatair-mcp-staging-drill
-sudo systemctl daemon-reload
-sudo systemctl enable --now compatair-mcp-staging.service
-sudo apache2ctl configtest
-sudo systemctl reload apache2
-curl --fail http://127.0.0.1:8788/health
+sudo bash deploy/server/install-staging-drill.sh
 ```
 
 Le drill exécute ensuite réellement un MCP invalide, une configuration Apache rejetée, une interruption `TERM` juste après le changement de lien et un échec du smoke post-activation. Après chaque défaut, il exige le retour au SHA initial et une santé MCP valide. Chaque preuve JSON `1.1.0` est conservée avec le mode `0600` sous `/var/lib/compatair-staging/failure-drills/` :
 
-```bash
-sudo bash deploy/server/staging-failure-drill.sh
-```
-
-Cette commande est une opération serveur explicite. Les tests locaux vérifient le contrat et la syntaxe, mais ne sont pas présentés comme la preuve du drill systemd/Apache réel. Une évolution majeure du serveur MCP est refusée par le déploiement si le dernier drill réussi date de plus de 90 jours.
+Chaque réexécution de l'installateur compare le staging à la release active avant de lancer l'exercice. Cette commande est une opération serveur explicite. Les tests locaux vérifient le contrat et la syntaxe, mais ne sont pas présentés comme la preuve du drill systemd/Apache réel. Une évolution majeure du serveur MCP est refusée par le déploiement si le dernier drill réussi date de plus de 90 jours.
 
 ### Garde transactionnel de production
 

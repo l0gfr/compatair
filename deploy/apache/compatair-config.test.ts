@@ -51,6 +51,31 @@ describe('CompatAir Apache CSP', () => {
 		expect(config).toContain('<Location "/api/v1/compatibility/receipts/verify">');
 	});
 
+	it('excludes only the MCP UCP profile field from the conflicting LFI and RFI rules', () => {
+		const mcpLocation = config.match(
+			/<Location "\/mcp">([\s\S]*?)<\/Location>/,
+		)?.[1];
+		expect(mcpLocation).toBeDefined();
+		expect(mcpLocation).toContain('LimitRequestBody 65536');
+		expect(mcpLocation).not.toContain('SecRule');
+		expect(config).toContain('<IfModule security2_module>');
+		expect(config).toContain('SecRule REQUEST_URI "@streq /mcp"');
+		expect(config).toContain('id:1001001');
+		expect(config).toContain('id:1001002');
+		expect(config).toContain('phase:1,pass,t:none,nolog');
+		expect(config).toContain(
+			'ctl:ruleRemoveTargetById=930120;ARGS_NAMES:params.arguments.meta.ucp-agent.profile',
+		);
+		expect(config).toContain(
+			'ctl:ruleRemoveTargetById=931130;ARGS:params.arguments.meta.ucp-agent.profile',
+		);
+		expect(config).not.toContain('ctl:ruleRemoveById');
+		expect(config).not.toContain('SecRuleEngine Off');
+		expect(config.indexOf('id:1001001')).toBeLessThan(config.indexOf('ProxyPass /mcp '));
+		expect(config.match(/ruleRemoveTargetById=930120/g)).toHaveLength(1);
+		expect(config.match(/ruleRemoveTargetById=931130/g)).toHaveLength(1);
+	});
+
 	it('sets browser isolation and disables script attributes', () => {
 		expect(config).toContain('Cross-Origin-Opener-Policy "same-origin"');
 		expect(config).toContain('Cross-Origin-Resource-Policy "same-origin"');

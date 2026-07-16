@@ -69,5 +69,8 @@ describe('release boundary policy', () => {
 		expect(apache).toContain('Header always set Cache-Control "no-store"');
 		expect(apache).toContain('<Location "/api/v1/compatibility/receipts/verify">');
 		expect(apache).toContain('LimitRequestBody 65536');
+		expect(apache).toContain('ctl:ruleRemoveTargetById=930120;ARGS_NAMES:params.arguments.meta.ucp-agent.profile');
+		expect(apache).toContain('ctl:ruleRemoveTargetById=931130;ARGS:params.arguments.meta.ucp-agent.profile');
+		expect(deploy).toContain('scripts/smoke-live-http.mjs');
 	});
 });

@@ -30,6 +30,14 @@
 	LimitRequestLine 2048
 	LimitRequestFields 50
 	LimitRequestFieldSize 8190
+	<IfModule security2_module>
+		# This phase-1 exclusion must live at VirtualHost scope: ModSecurity 2.9
+		# does not run phase-1 rules from a Location context early enough. The UCP
+		# discovery contract requires this exact JSON field to contain an HTTPS URL.
+		# Keep both LFI and RFI rules active for every other name and value.
+		SecRule REQUEST_URI "@streq /mcp" "id:1001001,phase:1,pass,t:none,nolog,ctl:ruleRemoveTargetById=930120;ARGS_NAMES:params.arguments.meta.ucp-agent.profile"
+		SecRule REQUEST_URI "@streq /mcp" "id:1001002,phase:1,pass,t:none,nolog,ctl:ruleRemoveTargetById=931130;ARGS:params.arguments.meta.ucp-agent.profile"
+	</IfModule>
 
     RewriteEngine On
     RewriteCond %{HTTP_HOST} !^compatair\.fr$ [NC]
