@@ -21,4 +21,15 @@ describe('staging failure drill contract', () => {
 		expect(drill.match(/assert_restored/g)?.length).toBeGreaterThanOrEqual(3);
 		expect(drill).toContain('/var/lib/compatair-staging/failure-drills');
 	});
+
+	it('rejects failures caused by the wrong mechanism', () => {
+		expect(drill).toContain('deploy_script=/usr/local/libexec/compatair/staging-deploy-remote.sh');
+		expect(drill).toContain("stat -c '%u:%g:%a' \"$deploy_script\") != '0:0:755'");
+		expect(drill).toContain('require_expected_failure "$invalid_mcp_log" "$invalid_mcp_status" 1');
+		expect(drill).toContain('require_expected_failure "$invalid_vhost_log" "$invalid_vhost_status" 1');
+		expect(drill).toContain('require_expected_failure "$interrupted_log" "$interrupted_status" 143');
+		expect(drill).toContain('require_expected_failure "$public_smoke_log" "$public_smoke_status" 1');
+		expect(drill).toContain('"schemaVersion": "1.2.0"');
+		expect(drill).toContain('"failureStatusCodes"');
+	});
 });

@@ -9,6 +9,10 @@ staging_service=compatair-mcp-staging.service
 staging_vhost=/etc/apache2/sites-available/compatair-staging.conf
 staging_vhost_link=/etc/apache2/sites-enabled/compatair-staging.conf
 node_binary=/opt/compatair/node/bin/node
+staging_libexec=/usr/local/libexec/compatair
+staging_deploy_script="$staging_libexec/staging-deploy-remote.sh"
+drill_verifier="$staging_libexec/verify-drill-report.mjs"
+drill_assertion=/usr/local/sbin/compatair-assert-recent-drill
 sudoers_file=/etc/sudoers.d/compatair-mcp-staging-drill
 service_file=/etc/systemd/system/compatair-mcp-staging.service
 
@@ -25,19 +29,21 @@ for required in \
 	"$repo_root/deploy/systemd/compatair-mcp-staging.service" \
 	"$repo_root/scripts/deploy-remote.sh" \
 	"$script_dir/install-apache-vhost.sh" \
-	"$script_dir/staging-failure-drill.sh"; do
+	"$script_dir/staging-failure-drill.sh" \
+	"$script_dir/verify-drill-report.mjs" \
+	"$script_dir/assert-recent-drill.sh"; do
 	test -f "$required"
 done
 test -x "$node_binary"
 test "$($node_binary -p 'process.versions.node.split(".")[0]')" = 24
 
-for directory in "$staging_root" "$staging_root/releases"; do
+for directory in "$staging_root" "$staging_root/releases" "$staging_libexec"; do
 	if [[ -L "$directory" || ( -e "$directory" && ! -d "$directory" ) ]]; then
 		echo "Refusing an unexpected staging directory path: $directory" >&2
 		exit 1
 	fi
 done
-for regular_target in "$staging_root/DEPLOYED_SHA" "$sudoers_file" "$service_file"; do
+for regular_target in "$staging_root/DEPLOYED_SHA" "$staging_deploy_script" "$drill_verifier" "$drill_assertion" "$sudoers_file" "$service_file"; do
 	if [[ -L "$regular_target" || ( -e "$regular_target" && ! -f "$regular_target" ) ]]; then
 		echo "Refusing an unexpected staging configuration path: $regular_target" >&2
 		exit 1
@@ -69,6 +75,19 @@ cleanup() {
 }
 trap cleanup EXIT
 
+wait_for_staging_health() {
+	local attempt
+	for ((attempt = 1; attempt <= 15; attempt++)); do
+		if curl --fail --silent --max-time 2 http://127.0.0.1:8788/health > /dev/null; then
+			return 0
+		fi
+		sleep 1
+	done
+
+	echo "Staging MCP did not become healthy after 15 health checks" >&2
+	curl --fail --silent --show-error --max-time 5 http://127.0.0.1:8788/health > /dev/null
+}
+
 if [[ -e "$staging_release" ]]; then
 	if [[ ! -d "$staging_release" || -L "$staging_release" ]] || ! diff -qr -- "$production_release" "$staging_release" > /dev/null; then
 		echo "The existing staging baseline differs from production; refusing to overwrite it" >&2
@@ -90,6 +109,10 @@ printf '%s\n' "$release" > "$staging_root/DEPLOYED_SHA"
 chown compatair-deploy:www-data "$staging_root/DEPLOYED_SHA"
 chmod 644 "$staging_root/DEPLOYED_SHA"
 
+install -d -o root -g root -m 755 "$staging_libexec"
+install -o root -g root -m 755 "$repo_root/scripts/deploy-remote.sh" "$staging_deploy_script"
+install -o root -g root -m 644 "$script_dir/verify-drill-report.mjs" "$drill_verifier"
+install -o root -g root -m 755 "$script_dir/assert-recent-drill.sh" "$drill_assertion"
 install -o root -g root -m 644 "$repo_root/deploy/systemd/compatair-mcp-staging.service" "$service_file"
 sudoers_candidate=$(mktemp /etc/sudoers.d/.compatair-mcp-staging-drill.XXXXXX)
 printf '%s\n' 'compatair-deploy ALL=(root) NOPASSWD: /bin/systemctl restart compatair-mcp-staging.service' > "$sudoers_candidate"
@@ -107,8 +130,8 @@ systemctl reload apache2
 systemctl daemon-reload
 systemctl enable "$staging_service"
 systemctl restart "$staging_service"
-curl --fail --silent --show-error --max-time 5 http://127.0.0.1:8788/health > /dev/null
+wait_for_staging_health
 
 bash "$script_dir/staging-failure-drill.sh"
-/usr/local/sbin/compatair-assert-recent-drill
+"$drill_assertion"
 echo "CompatAir isolated staging installed and failure drill verified."
