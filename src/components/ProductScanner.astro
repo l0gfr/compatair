@@ -288,7 +288,7 @@
 			insufficientCards = result.insufficient.map(({ compressor, result }) => ({ product: compressor, type: 'compressor', result, requiredPressureBar, qualityGrade: pairGrade(product.confidence, compressor.confidence) }));
 			setText('[data-can-label]', 'Compresseurs compatibles'); setText('[data-cannot-label]', 'Compresseurs incompatibles');
 			setText('[data-compatible-label]', 'Compresseurs compatibles'); setText('[data-incompatible-label]', 'Compresseurs incompatibles');
-			setText('[data-primary-title]', 'Trois meilleurs compresseurs compatibles');
+			setText('[data-primary-title]', 'Trois compresseurs compatibles les plus proches du besoin');
 			const section = query<HTMLElement>('[data-unlocks-section]'); if (section) section.hidden = true;
 			const compare = query<HTMLAnchorElement>('[data-compare]'); const topIds = sortCompatible(compatibleCards).slice(0, 3).map(({ product }) => product.id);
 			if (compare) { compare.hidden = topIds.length < 2; compare.textContent = topIds.length >= 3 ? 'Comparer les trois compresseurs compatibles' : 'Comparer les deux compresseurs compatibles'; compare.href = `/comparateur/#ids=${topIds.join(',')}`; }
@@ -297,7 +297,7 @@
 
 		compatibleCards = sortCompatible(compatibleCards);
 		if (match.type === 'compressor') setText('[data-primary-title]', compatibleCards.length >= 3 ? 'Trois outils alimentables en priorité' : compatibleCards.length === 0 ? 'Aucun outil alimentable confirmé' : `${compatibleCards.length} outil${compatibleCards.length > 1 ? 's' : ''} alimentable${compatibleCards.length > 1 ? 's' : ''}`);
-		else setText('[data-primary-title]', compatibleCards.length >= 3 ? 'Trois meilleurs compresseurs compatibles' : compatibleCards.length === 0 ? 'Aucun compresseur compatible confirmé' : `${compatibleCards.length} compresseur${compatibleCards.length > 1 ? 's' : ''} compatible${compatibleCards.length > 1 ? 's' : ''}`);
+		else setText('[data-primary-title]', compatibleCards.length >= 3 ? 'Trois compresseurs compatibles les plus proches du besoin' : compatibleCards.length === 0 ? 'Aucun compresseur compatible confirmé' : `${compatibleCards.length} compresseur${compatibleCards.length > 1 ? 's' : ''} compatible${compatibleCards.length > 1 ? 's' : ''}`);
 		setText('[data-compatible-count]', String(compatibleCards.length)); setText('[data-incompatible-count]', String(incompatibleCards.length)); setText('[data-insufficient-count]', String(insufficientCards.length));
 		setText('[data-can-title]', `${compatibleCards.length} résultat(s) confirmé(s)`); setText('[data-cannot-title]', `${incompatibleCards.length} incompatibilité(s) confirmée(s)`);
 		renderCards('[data-primary-results]', compatibleCards.slice(0, 3), 'Aucun résultat compatible ne peut être confirmé avec les données publiées.');

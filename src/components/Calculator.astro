@@ -110,14 +110,16 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 </template>
 
 <datalist id="calculator-tools">
-	{tools.map((tool) => <option value={`${tool.brand} ${tool.model}${tool.mpn ? ` · MPN ${tool.mpn}` : ''}${tool.ean ? ` · EAN ${tool.ean}` : ''}`} data-id={tool.id} data-demand-model={tool.demandModel} data-airflow={tool.demandModel === 'fixed-flow' ? tool.airflowLpm.typical : undefined} data-pressure={tool.workingPressureBar.typical} data-air-per-action={tool.demandModel === 'per-action' ? tool.airPerActionLiters : undefined} data-action-label={tool.demandModel === 'per-action' ? tool.actionLabel : undefined}>{tool.label} · {toolDemandLabel(tool)} · {toolPressureLabel(tool)}</option>)}
+	{tools.map((tool) => <option value={`${tool.brand} ${tool.model}${tool.mpn ? ` · MPN ${tool.mpn}` : ''}${tool.ean ? ` · EAN ${tool.ean}` : ''}`} data-id={tool.id} data-identifiers={JSON.stringify([tool.id, tool.mpn, tool.ean, ...tool.identifierAliases.map((alias) => alias.value)].filter(Boolean))} data-demand-model={tool.demandModel} data-airflow={tool.demandModel === 'fixed-flow' ? tool.airflowLpm.typical : undefined} data-pressure={tool.workingPressureBar.typical} data-air-per-action={tool.demandModel === 'per-action' ? tool.airPerActionLiters : undefined} data-action-label={tool.demandModel === 'per-action' ? tool.actionLabel : undefined}>{tool.label} · {toolDemandLabel(tool)} · {toolPressureLabel(tool)}</option>)}
 </datalist>
 <datalist id="calculator-compressors">
-	<option value="Caractéristiques personnalisées" data-id="custom">Saisie personnalisée</option>
-	{compressors.map((compressor) => <option value={`${compressor.brand} ${compressor.model}${compressor.mpn ? ` · MPN ${compressor.mpn}` : ''}${compressor.ean ? ` · EAN ${compressor.ean}` : ''}`} data-id={compressor.id}>{compressorDisplayName(compressor)}</option>)}
+	<option value="Caractéristiques personnalisées" data-id="custom" data-identifiers={JSON.stringify(['custom'])}>Saisie personnalisée</option>
+	{compressors.map((compressor) => <option value={`${compressor.brand} ${compressor.model}${compressor.mpn ? ` · MPN ${compressor.mpn}` : ''}${compressor.ean ? ` · EAN ${compressor.ean}` : ''}`} data-id={compressor.id} data-identifiers={JSON.stringify([compressor.id, compressor.mpn, compressor.ean, compressor.gtin, ...compressor.identifierAliases.map((alias) => alias.value)].filter(Boolean))}>{compressorDisplayName(compressor)}</option>)}
 </datalist>
 
 <script>
+	import { resolveExactCatalogSearch } from '../domain/catalog-search';
+
 	type Compressor = import('../domain/runtime-catalog').RuntimeCompressor;
 	type ToolProfile = import('../domain/runtime-catalog').RuntimeToolProfile;
 	type PassportConfiguration = import('../domain/passport').PassportConfiguration;
@@ -189,7 +191,15 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	let lastContribution: { config: NonNullable<ReturnType<typeof configFromForm>>; result: SizingResult } | undefined;
 
 	function optionById(list: HTMLDataListElement | null, id: string) { return [...(list?.options ?? [])].find((option) => option.dataset.id === id); }
-	function optionByValue(list: HTMLDataListElement | null, value: string) { const normalized = value.trim().toLocaleLowerCase('fr-FR'); return [...(list?.options ?? [])].find((option) => option.value.trim().toLocaleLowerCase('fr-FR') === normalized); }
+	function optionByInput(list: HTMLDataListElement | null, value: string) {
+		const options = [...(list?.options ?? [])];
+		const id = resolveExactCatalogSearch(value, options.map((option) => ({
+			id: option.dataset.id ?? '',
+			value: option.value,
+			identifiers: JSON.parse(option.dataset.identifiers ?? '[]') as string[],
+		})));
+		return id ? options.find((option) => option.dataset.id === id) : undefined;
+	}
 	function syncSingleToolUi() {
 		const single = (rows?.children.length ?? 0) <= 1;
 		const modeField = root?.querySelector<HTMLElement>('[data-mode-field]'); if (modeField) modeField.hidden = single;
@@ -205,7 +215,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	}
 	function syncCompressorSearch() {
 		const hidden = form?.querySelector<HTMLInputElement>('[data-compressor-id]'); const search = form?.querySelector<HTMLInputElement>('[data-compressor-search]'); if (!hidden || !search) return;
-		const option = optionByValue(compressorDatalist, search.value); hidden.value = option?.dataset.id ?? '';
+		const option = optionByInput(compressorDatalist, search.value); hidden.value = option?.dataset.id ?? '';
 		const custom = root?.querySelector<HTMLElement>('[data-custom-compressor]'); if (custom) custom.hidden = hidden.value !== 'custom';
 	}
 
@@ -242,7 +252,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	}
 	function syncToolSearch(row: HTMLElement) {
 		const search = row.querySelector<HTMLInputElement>('[data-tool-search]')!; const hidden = row.querySelector<HTMLInputElement>('[data-tool]')!;
-		const option = optionByValue(toolDatalist, search.value);
+		const option = optionByInput(toolDatalist, search.value);
 		hidden.value = option?.dataset.id ?? '';
 		for (const key of ['demandModel', 'airflow', 'pressure', 'airPerAction', 'actionLabel'] as const) {
 			const value = option?.dataset[key]; if (value === undefined) delete hidden.dataset[key]; else hidden.dataset[key] = value;
