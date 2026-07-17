@@ -245,15 +245,41 @@ async function writeAggregate(filePath, state) {
 	await rename(temporaryPath, filePath);
 }
 
+/** @param {{ filePath?: string, secretFilePath?: string, configuredSecret?: string, catalog?: any, clock?: () => Date }} options */
 export function createMcpTelemetryStore({ filePath = undefined, secretFilePath = undefined, configuredSecret = undefined, catalog = { compressors: [], tools: [] }, clock = () => new Date() } = {}) {
 	let queue = Promise.resolve();
 	let statePromise = readAggregate(filePath);
 	let secretPromise = readOrCreateSecret(secretFilePath, configuredSecret);
+	let pendingEvents = [];
+	let scheduledFlush;
+	function scheduleFlush() {
+		if (!scheduledFlush) {
+			scheduledFlush = new Promise((resolve, reject) => {
+				setImmediate(() => {
+					const batch = pendingEvents;
+					pendingEvents = [];
+					scheduledFlush = undefined;
+					queue = queue.then(async () => {
+						let next = await statePromise;
+						for (const event of batch) next = aggregateMcpTelemetry(next, event, clock());
+						await writeAggregate(filePath, next);
+						statePromise = Promise.resolve(next);
+					});
+					queue.then(resolve, reject);
+				});
+			});
+		}
+		return scheduledFlush;
+	}
+	async function waitForIdle() {
+		while (scheduledFlush) await scheduledFlush;
+		await queue;
+	}
 	return {
 		enabled: Boolean(filePath),
 		async actorId(address, userAgent) { return callerFingerprint(await secretPromise, address, userAgent); },
-		async record(event) { queue = queue.then(async () => { const next = aggregateMcpTelemetry(await statePromise, event, clock()); await writeAggregate(filePath, next); statePromise = Promise.resolve(next); }); await queue; },
-		async snapshot() { await queue; return structuredClone(await statePromise); },
-		async publicReport() { await queue; return buildPublicMcpUsageReport(await statePromise, catalog); },
+		async record(event) { pendingEvents.push(event); await scheduleFlush(); },
+		async snapshot() { await waitForIdle(); return structuredClone(await statePromise); },
+		async publicReport() { await waitForIdle(); return buildPublicMcpUsageReport(await statePromise, catalog); },
 	};
 }

@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DirectoryPagination from './DirectoryPagination.astro';
+import { sourceDirectory, sourceDirectoryCounts, sourceTypeLabel } from '../data/source-directory';
+import { paginate } from '../domain/pagination';
+
+interface Props { currentPage: number }
+const { currentPage } = Astro.props;
+const directory = paginate(sourceDirectory, currentPage);
+const title = currentPage === 1 ? 'Sources et niveaux de fiabilité | CompatAir' : `Sources et fiabilité – page ${currentPage} | CompatAir`;
+const description = currentPage === 1
+	? 'Origine des données CompatAir, critères des niveaux A à D, dates de vérification et traitement des informations manquantes.'
+	: `Répertoire des sources CompatAir, page ${currentPage} sur ${directory.totalPages}, classé par niveau de fiabilité, nature et date de consultation.`;
+const breadcrumbs = [{ name: 'Sources et fiabilité', path: '/sources-fiabilite/' }, ...(currentPage > 1 ? [{ name: `Page ${currentPage}`, path: `/sources-fiabilite/page/${currentPage}/` }] : [])];
+const formatDate = (date: string) => date.split('-').reverse().join('/');
+---
+<BaseLayout title={title} description={description} imagePath="/social/sources-fiabilite.png" breadcrumbs={breadcrumbs}>
+	<article class="container content legal-content"><p class="eyebrow">Origine des informations</p><h1>D’où viennent les données CompatAir&nbsp;?</h1><p class="lead">{sourceDirectory.length} documents distincts étayent les fiches actuelles. Ils sont classés par fiabilité A à D, puis par nature de source et par date de consultation la plus récente.</p>
+		{currentPage === 1 ? <>
+			<h2>Comment lire les lettres A à D</h2><dl class="confidence-scale"><div><dt>A</dt><dd>La documentation du fabricant indique clairement la valeur et ses conditions d’utilisation.</dd></div><div><dt>B</dt><dd>La source officielle est incomplète ou demande un calcul entre deux points publiés, appelé <a href="/glossaire/#interpolation">interpolation</a>.</dd></div><div><dt>C</dt><dd>La donnée est ambiguë, difficile à comparer ou insuffisante pour confirmer une compatibilité.</dd></div><div><dt>D</dt><dd>L’information n’est pas confirmée par le fabricant. Elle ne suffit pas à produire un résultat positif.</dd></div></dl>
+			<h2>Règles de publication</h2><ul><li>Le <a href="/glossaire/#debit-aspire">débit aspiré</a> ne remplace jamais le <a href="/glossaire/#debit-restitue">débit restitué</a>.</li><li>L’<a href="/glossaire/#interpolation">interpolation</a> reste limitée à l’intervalle compris entre deux points documentés.</li><li>Une valeur de prix ou de disponibilité ne sera publiée qu’avec sa date de collecte.</li><li>Une correction modifiant un résultat doit être relue et testée avant publication.</li><li>Les sources marchandes peuvent documenter une offre, mais pas remplacer une source technique plus adaptée.</li></ul>
+		</> : <p class="directory-return"><a href="/sources-fiabilite/">← Revenir aux critères de fiabilité et aux règles de publication</a></p>}
+		<h2>{currentPage === 1 ? 'Documents consultés pour les fiches actuelles' : `Documents consultés · page ${currentPage}`}</h2>
+		<div class="source-directory-summary" aria-label="Répartition des documents par fiabilité">{(['A', 'B', 'C', 'D'] as const).map((confidence) => <span data-confidence={confidence}><strong>{sourceDirectoryCounts[confidence]}</strong> fiabilité {confidence}</span>)}</div>
+		<p class="directory-sort-note">Ordre affiché : fiabilité A à D, documentation constructeur avant les autres natures, puis consultation la plus récente.</p>
+		<DirectoryPagination basePath="/sources-fiabilite/" currentPage={currentPage} totalPages={directory.totalPages} firstItem={directory.firstItem} lastItem={directory.lastItem} totalItems={directory.totalItems} itemLabel="documents" />
+		<div class="source-register">{directory.items.map((source) => <article><div class="source-register-heading"><span class="source-confidence" data-confidence={source.confidence}>Fiabilité {source.confidence}</span><span>{sourceTypeLabel[source.sourceType]}</span></div><strong>{source.sourceLabel}</strong><span>Consultée le {formatDate(source.retrievedAt)}</span><a href={source.sourceUrl} rel="nofollow noopener" target="_blank">Consulter la source</a></article>)}</div>
+		<DirectoryPagination basePath="/sources-fiabilite/" currentPage={currentPage} totalPages={directory.totalPages} firstItem={directory.firstItem} lastItem={directory.lastItem} totalItems={directory.totalItems} itemLabel="documents" />
+		{currentPage === 1 && <><h2>Demander une correction</h2><p>Une source plus récente ou plus précise peut être proposée sur la <a href="/contact/">page de correction des données</a>. Le signalement doit identifier le modèle, la caractéristique et le document concerné.</p></>}
+	</article>
+</BaseLayout>

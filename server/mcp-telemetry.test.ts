@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { aggregateMcpTelemetry, buildPublicMcpUsageReport, callerFingerprint, classifyMcpClient, classifyMcpOutcome, extractMcpDemand, truncateNetworkAddress } from './mcp-telemetry.mjs';
+import { aggregateMcpTelemetry, buildPublicMcpUsageReport, callerFingerprint, classifyMcpClient, classifyMcpOutcome, createMcpTelemetryStore, extractMcpDemand, truncateNetworkAddress } from './mcp-telemetry.mjs';
 
 const empty = { schemaVersion: '1.0.0', updatedAt: null, totalEvents: 0, weeks: [], actors: [] };
 const actor = 'a'.repeat(64);
@@ -55,5 +55,11 @@ describe('MCP privacy-safe telemetry', () => {
 		expect(report.totals).toMatchObject({ initializations: 10, tool_calls: 10, estimated_callers: 5, recurrent_callers: 5, recurrent_integrations: 5 });
 		expect(report.clients).toEqual([{ family: 'claude', initializations: 10 }]);
 		expect(report.products).toEqual([{ type: 'tool', id: 'tool-a', requests: 10, label: 'Clé A' }]);
+	});
+
+	it('preserves every tool call when concurrent writes are coalesced', async () => {
+		const store = createMcpTelemetryStore({ catalog, configuredSecret: 'test-secret-with-at-least-sixteen-bytes', clock: () => new Date('2026-07-15T12:00:00Z') });
+		await Promise.all(Array.from({ length: 25 }, () => store.record({ type: 'tool_call', actorId: actor, toolName: 'check_compatibility', outcome: 'success', canonicalIssued: true, products: [], compatibilities: [] })));
+		expect(await store.snapshot()).toMatchObject({ totalEvents: 25, weeks: [{ calls: 25, outcomes: { success: 25 } }], actors: [{ id: actor, calls: 25 }] });
 	});
 });

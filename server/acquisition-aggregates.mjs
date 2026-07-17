@@ -80,16 +80,37 @@ async function writeAggregate(filePath, state) {
 export function createAcquisitionAggregateStore({ filePath = undefined, clock = () => new Date() } = {}) {
 	let queue = Promise.resolve();
 	let statePromise = readAggregate(filePath);
+	let pendingEvents = [];
+	let scheduledFlush;
+	function scheduleFlush() {
+		if (!scheduledFlush) {
+			scheduledFlush = new Promise((resolve, reject) => {
+				setImmediate(() => {
+					const batch = pendingEvents;
+					pendingEvents = [];
+					scheduledFlush = undefined;
+					queue = queue.then(async () => {
+						let next = await statePromise;
+						for (const event of batch) next = aggregateAcquisition(next, event, clock());
+						await writeAggregate(filePath, next);
+						statePromise = Promise.resolve(next);
+					});
+					queue.then(resolve, reject);
+				});
+			});
+		}
+		return scheduledFlush;
+	}
+	async function waitForIdle() {
+		while (scheduledFlush) await scheduledFlush;
+		await queue;
+	}
 	return {
 		enabled: Boolean(filePath),
 		async record(event) {
-			queue = queue.then(async () => {
-				const next = aggregateAcquisition(await statePromise, event, clock());
-				await writeAggregate(filePath, next);
-				statePromise = Promise.resolve(next);
-			});
-			await queue;
+			pendingEvents.push(event);
+			await scheduleFlush();
 		},
-		async snapshot() { await queue; return structuredClone(await statePromise); },
+		async snapshot() { await waitForIdle(); return structuredClone(await statePromise); },
 	};
 }

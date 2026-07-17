@@ -24,6 +24,28 @@ export const evidenceHistorySchema = z.object({
 export type EvidenceHistory = z.infer<typeof evidenceHistorySchema>;
 export type EvidenceHistoryEvent = z.infer<typeof evidenceHistoryEventSchema>;
 
+export const evidenceHistoryKindPriority: Record<EvidenceHistoryEvent['kind'], number> = {
+	withdrawn: 0,
+	corrected: 1,
+	added: 2,
+	verified: 3,
+	baseline: 4,
+};
+
+export const evidenceHistoryKindLabel: Record<EvidenceHistoryEvent['kind'], string> = {
+	withdrawn: 'Source retirée',
+	corrected: 'Correction',
+	added: 'Ajout',
+	verified: 'Revérification',
+	baseline: 'Première vérification',
+};
+
+export function compareEvidenceHistoryEvents(a: EvidenceHistoryEvent, b: EvidenceHistoryEvent) {
+	return b.occurredAt.localeCompare(a.occurredAt)
+		|| evidenceHistoryKindPriority[a.kind] - evidenceHistoryKindPriority[b.kind]
+		|| b.id.localeCompare(a.id);
+}
+
 export function evidenceFingerprint(productId: string, evidence: EvidenceHistoryEvent['snapshot']) {
 	return createHash('sha256').update(JSON.stringify({ productId, evidence })).digest('hex');
 }
@@ -35,7 +57,7 @@ export function historyFingerprint(history: Omit<EvidenceHistory, 'historyVersio
 export function historyForProduct(history: EvidenceHistory, productId: string) {
 	return history.events
 		.filter((event) => event.productId === productId)
-		.sort((a, b) => b.occurredAt.localeCompare(a.occurredAt) || b.id.localeCompare(a.id));
+		.sort(compareEvidenceHistoryEvents);
 }
 
 export function assertHistoryExtends(previous: EvidenceHistory, current: EvidenceHistory) {

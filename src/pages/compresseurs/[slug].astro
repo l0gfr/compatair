@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductImage from '../../components/ProductImage.astro';
 import { compressors, tools } from '../../data/catalog';
+import { evidenceHistoryProductHref } from '../../data/evidence-history-directory';
 import { productSeoTitle } from '../../data/product-seo-titles';
 import { toolDemandLabel, toolPressureLabel } from '../../domain/tool-demand';
 import { activeOffers, merchants } from '../../data/offers';
@@ -17,6 +18,7 @@ export function getStaticPaths() {
 
 const { compressor } = Astro.props;
 const displayName = compressorDisplayName(compressor);
+const historyHref = evidenceHistoryProductHref(compressor.id);
 const verifiedAt = latestEvidenceDate(compressor);
 const compatibility = createCompressorCompatibilitySummary(compressor, tools);
 const productOffers = activeOffers.filter((offer) => offer.productId === compressor.id);
@@ -64,6 +66,6 @@ const productJsonLd = productOffers.length ? {
 		<section class="related-reading"><h2>Approfondir avant de choisir</h2><div class="link-cards">{compressor.phase === 'three-phase' && <a href="/guides/compresseur-triphase-ou-monophase-atelier/"><strong>Triphasé ou monophasé</strong><span>Vérifier l’alimentation de l’atelier sans la confondre avec le débit disponible.</span></a>}<a href="/guides/debit-restitue-fad-vs-debit-aspire/"><strong>Quel débit faut-il regarder&nbsp;?</strong><span>Distinguer le débit réellement disponible du chiffre commercial aspiré.</span></a><a href="/guides/choisir-volume-cuve-24-50-90-litres/"><strong>Comprendre le rôle de la cuve</strong><span>Distinguer stockage d’air et capacité de production.</span></a><a href="/methodologie/"><strong>Comment CompatAir calcule le résultat</strong><span>Voir les données utilisées et les limites du calcul.</span></a></div></section>
 		<section class="editorial-section"><h2>Offres marchandes</h2>{productOffers.length ? <div class="offer-list">{productOffers.map((offer) => <a href={`/go/${offer.id}`} rel="sponsored nofollow noopener"><span><strong>{merchants.find((item) => item.id === offer.merchantId)?.name} · {offer.productName}</strong><small>Référence de l’offre {offer.merchantProductId} · collectée le {new Date(offer.collectedAt).toLocaleDateString('fr-FR')} · {offer.availability}</small></span><strong>{offer.priceEur.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' })}</strong></a>)}</div> : <div class="status-callout"><strong>Aucune offre vérifiée</strong><span>Les partenaires marchands ne sont pas encore raccordés. Aucun prix ou lien d’achat n’est inventé.</span></div>}</section>
 		<section class="editorial-section"><h2>Modèles proches à comparer</h2><p>Cette sélection rapproche uniquement le volume de cuve et la pression maximale. Elle ne signifie pas que les modèles offrent les mêmes possibilités.</p><div class="link-cards">{alternatives.map((item) => <a href={`/compresseurs/${item.slug}/`}><strong>{compressorDisplayName(item)}</strong><span>{item.tankLiters} L · {item.maxPressureBar} bar · fiabilité des données {item.confidence}</span></a>)}</div><div class="actions"><a class="button" href={`/comparateur/#ids=${compressor.id},${alternatives[0].id}`}>Comparer côte à côte</a></div></section>
-		<section class="sources-panel"><h2>Sources et réserves</h2>{compressor.evidence.map((evidence) => <p><a href={evidence.sourceUrl} rel="nofollow noopener" target="_blank">{evidence.sourceLabel}</a> · consultée le {evidence.retrievedAt.split('-').reverse().join('/')} · fiabilité {evidence.confidence}</p>)}{compressor.notes.map((note) => <p>{note}</p>)}<p><a href={`/preuves/#${compressor.id}`}>Voir les documents et dates vérifiés pour cette référence</a></p></section>
+		<section class="sources-panel"><h2>Sources et réserves</h2>{compressor.evidence.map((evidence) => <p><a href={evidence.sourceUrl} rel="nofollow noopener" target="_blank">{evidence.sourceLabel}</a> · consultée le {evidence.retrievedAt.split('-').reverse().join('/')} · fiabilité {evidence.confidence}</p>)}{compressor.notes.map((note) => <p>{note}</p>)}<p><a href={historyHref}>Voir les documents et dates vérifiés pour cette référence</a></p></section>
 	</article>
 </BaseLayout>

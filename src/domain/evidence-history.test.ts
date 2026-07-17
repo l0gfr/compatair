@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { compressors, tools } from '../data/catalog';
 import { evidenceHistory } from '../data/evidence-history';
-import { assertEvidenceHistoryIntegrity, assertHistoryExtends, historyForProduct } from './evidence-history';
+import { assertEvidenceHistoryIntegrity, assertHistoryExtends, compareEvidenceHistoryEvents, evidenceHistoryKindPriority, historyForProduct } from './evidence-history';
 
 describe('public evidence history', () => {
 	it('covers every current proof with a matching immutable snapshot', () => {
@@ -20,5 +20,16 @@ describe('public evidence history', () => {
 		const events = historyForProduct(evidenceHistory, 'einhell-tc-ac-240-50-10-of');
 		expect(events.length).toBeGreaterThan(0);
 		expect(events[0].kind).toBe('baseline');
+	});
+
+	it('orders same-day events by public usefulness', () => {
+		const sample = evidenceHistory.events[0];
+		const events = [
+			{ ...sample, id: 'baseline', kind: 'baseline' as const },
+			{ ...sample, id: 'added', kind: 'added' as const },
+			{ ...sample, id: 'corrected', kind: 'corrected' as const },
+		].sort(compareEvidenceHistoryEvents);
+		expect(events.map((event) => event.kind)).toEqual(['corrected', 'added', 'baseline']);
+		expect(evidenceHistoryKindPriority.corrected).toBeLessThan(evidenceHistoryKindPriority.baseline);
 	});
 });

@@ -72,9 +72,19 @@ export function createSitemapLastmodResolver({ root = process.cwd(), gitDate } =
 			sources.add(`src/data/products/tools/${match[1]}.ts`);
 			sources.add('src/data/catalog.ts');
 		}
+		if (/^\/preuves\/page\/\d+\/$/.test(pathname)) {
+			sources.add('src/pages/preuves/page/[page].astro');
+			sources.add('src/components/EvidenceHistoryDirectory.astro');
+			sources.add('src/data/evidence-history-directory.ts');
+		}
+		if (/^\/sources-fiabilite\/page\/\d+\/$/.test(pathname)) {
+			sources.add('src/pages/sources-fiabilite/page/[page].astro');
+			sources.add('src/components/SourceReliabilityDirectory.astro');
+			sources.add('src/data/source-directory.ts');
+		}
 		if (pathname.startsWith('/marques/')) sources.add('src/pages/marques/[brand].astro');
 		if (pathname.startsWith('/guides/metiers/')) sources.add('src/pages/guides/metiers/[metier].astro');
-		if (catalogDrivenPaths.has(pathname) || pathname.startsWith('/comparatifs/') || pathname.startsWith('/marques/')) {
+		if (catalogDrivenPaths.has(pathname) || pathname === '/sources-fiabilite/' || pathname.startsWith('/preuves/page/') || pathname.startsWith('/sources-fiabilite/page/') || pathname.startsWith('/comparatifs/') || pathname.startsWith('/marques/')) {
 			for (const source of catalogSources) sources.add(source);
 		}
 

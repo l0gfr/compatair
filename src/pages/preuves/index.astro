@@ -1,25 +1,4 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { compressors, tools } from '../../data/catalog';
-import { evidenceHistory } from '../../data/evidence-history';
-import { historyForProduct } from '../../domain/evidence-history';
-
-const products = [
-	...compressors.map((product) => ({ product, type: 'compressor' as const, href: `/compresseurs/${product.slug}/` })),
-	...tools.map((product) => ({ product, type: 'tool' as const, href: `/outils-pneumatiques/${product.slug}/` })),
-];
-const formatDate = (date: string) => new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
+import EvidenceHistoryDirectory from '../../components/EvidenceHistoryDirectory.astro';
 ---
-<BaseLayout title="Documents et dates vérifiés | CompatAir" description="Retrouvez les documents techniques utilisés par CompatAir, leur date de consultation et les corrections apportées." breadcrumbs={[{ name: 'Documents vérifiés', path: '/preuves/' }]}>
-	<section class="page-hero compact"><div class="container"><p class="eyebrow">Documents vérifiés et dates de consultation</p><h1>Retrouver les sources de chaque produit</h1><p class="lead">{evidenceHistory.events.length} vérifications sont conservées pour {products.length} produits. Chaque entrée indique le document consulté, sa date et la fiabilité accordée à l’information.</p></div></section>
-	<section class="section"><div class="container history-intro">
-		<div class="callout"><h2>Un point de départ déclaré, pas un passé reconstruit</h2><p>L’historique public commence le {formatDate(evidenceHistory.startedAt)}. Les sources présentes ce jour-là sont marquées «&nbsp;première vérification&nbsp;». CompatAir ne fabrique pas rétroactivement des modifications antérieures. Toute évolution suivante ajoute une entrée sans effacer les précédentes.</p></div>
-		<p><a class="button secondary" href="/sources-fiabilite/">Comprendre comment les sources sont utilisées</a></p>
-	</div></section>
-	<section class="section history-section"><div class="container"><div class="split-head"><div><p class="eyebrow">Historique non réécrit</p><h2>Tous les documents par produit</h2></div><p>Chaque nouvelle vérification ajoute une entrée sans supprimer les précédentes.</p></div>
-		<div class="history-list">{products.map(({ product, type, href }) => {
-			const events = historyForProduct(evidenceHistory, product.id);
-			return <article id={product.id} class="history-product"><header><div><p class="guide-meta">{type === 'compressor' ? 'Compresseur' : 'Outil'} · {product.brand}</p><h3><a href={href}>{product.model}</a></h3></div><strong>{events.length} vérification{events.length > 1 ? 's' : ''}</strong></header><ol>{events.map((event) => <li><div><span class="history-kind">{event.kind === 'baseline' ? 'Première vérification' : event.kind === 'added' ? 'Ajout' : event.kind === 'verified' ? 'Vérification' : event.kind === 'corrected' ? 'Correction' : 'Source retirée'}</span><time datetime={event.occurredAt}>{formatDate(event.occurredAt)}</time></div><h4>{event.snapshot.sourceLabel}</h4><p>{event.summary}</p><p class="history-meta">Consultée le {formatDate(event.snapshot.retrievedAt)} · fiabilité {event.snapshot.confidence}</p><a href={event.snapshot.sourceUrl} rel="nofollow noopener" target="_blank">Consulter la source</a></li>)}</ol></article>;
-		})}</div>
-	</div></section>
-</BaseLayout>
+<EvidenceHistoryDirectory currentPage={1} />

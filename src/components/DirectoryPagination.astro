@@ -1,0 +1,34 @@
+---
+import { directoryPageHref, paginationItems } from '../domain/pagination';
+
+interface Props {
+	basePath: string;
+	currentPage: number;
+	totalPages: number;
+	firstItem: number;
+	lastItem: number;
+	totalItems: number;
+	itemLabel: string;
+}
+
+const { basePath, currentPage, totalPages, firstItem, lastItem, totalItems, itemLabel } = Astro.props;
+const items = paginationItems(currentPage, totalPages);
+---
+<nav class="directory-pagination" aria-label={`Pagination des ${itemLabel}`}>
+	<p><strong>{firstItem}–{lastItem}</strong> sur {totalItems} {itemLabel} · page {currentPage} sur {totalPages}</p>
+	<div class="directory-pagination-links">
+		{currentPage > 1
+			? <a class="directory-page-direction" rel="prev" href={directoryPageHref(basePath, currentPage - 1)}>← Précédente</a>
+			: <span class="directory-page-direction is-disabled" aria-disabled="true">← Précédente</span>}
+		<ol>
+			{items.map((item) => <li>{item.type === 'ellipsis'
+				? <span class="directory-page-gap" aria-hidden="true">…</span>
+				: item.page === currentPage
+					? <span class="directory-page-number is-current" aria-current="page">{item.page}</span>
+					: <a class="directory-page-number" href={directoryPageHref(basePath, item.page)} aria-label={`Page ${item.page}`}>{item.page}</a>}</li>)}
+		</ol>
+		{currentPage < totalPages
+			? <a class="directory-page-direction" rel="next" href={directoryPageHref(basePath, currentPage + 1)}>Suivante →</a>
+			: <span class="directory-page-direction is-disabled" aria-disabled="true">Suivante →</span>}
+	</div>
+</nav>

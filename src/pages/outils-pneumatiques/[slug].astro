@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductImage from '../../components/ProductImage.astro';
 import { compressors, tools } from '../../data/catalog';
+import { evidenceHistoryProductHref } from '../../data/evidence-history-directory';
 import { activeOffers } from '../../data/offers';
 import { productSeoTitle } from '../../data/product-seo-titles';
 import { toolGuidePath } from '../../data/tool-guide-links';
@@ -12,6 +13,7 @@ import { latestEvidenceDate } from '../../domain/provenance';
 
 export function getStaticPaths() { return tools.map((tool) => ({ params: { slug: tool.slug }, props: { tool } })); }
 const { tool } = Astro.props;
+const historyHref = evidenceHistoryProductHref(tool.id);
 const verifiedAt = latestEvidenceDate(tool);
 const fixedFlow = isFixedFlowTool(tool);
 const availableProductIds = new Set(activeOffers.map((offer) => offer.productId));
@@ -47,6 +49,6 @@ const relatedGuide = toolGuidePath(tool);
 
 		<section class="related-reading"><h2>Guides liés à cet outil</h2><div class="link-cards"><a href={`/quel-compresseur-pour/${tool.slug}/`}><strong>Quel compresseur pour {tool.model}&nbsp;?</strong><span>Consulter la page d’usage calculée pour cette référence.</span></a><a href={relatedGuide}><strong>Guide d’usage associé</strong><span>Approfondir le besoin en air de cette catégorie d’outil.</span></a><a href="/guides/diametre-longueur-flexible-air-comprime/"><strong>Flexible et raccords</strong><span>Comprendre pourquoi le réseau peut réduire la pression disponible.</span></a><a href="/guides/debit-restitue-fad-vs-debit-aspire/"><strong>Débit restitué ou aspiré</strong><span>Comparer le bon chiffre à la consommation publiée.</span></a></div></section>
 
-		<section class="sources-panel"><h2>Source et réserves</h2>{tool.evidence.map((evidence) => <p><a href={evidence.sourceUrl} rel="nofollow noopener" target="_blank">{evidence.sourceLabel}</a> · consultée le {evidence.retrievedAt.split('-').reverse().join('/')} · fiabilité {evidence.confidence}</p>)}{tool.notes.map((note) => <p>{note}</p>)}<p><a href={`/preuves/#${tool.id}`}>Voir les documents et dates vérifiés pour cette référence</a></p></section>
+		<section class="sources-panel"><h2>Source et réserves</h2>{tool.evidence.map((evidence) => <p><a href={evidence.sourceUrl} rel="nofollow noopener" target="_blank">{evidence.sourceLabel}</a> · consultée le {evidence.retrievedAt.split('-').reverse().join('/')} · fiabilité {evidence.confidence}</p>)}{tool.notes.map((note) => <p>{note}</p>)}<p><a href={historyHref}>Voir les documents et dates vérifiés pour cette référence</a></p></section>
 	</article>
 </BaseLayout>

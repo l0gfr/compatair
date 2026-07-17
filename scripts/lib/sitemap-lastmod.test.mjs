@@ -22,4 +22,14 @@ describe('sitemap lastmod', () => {
 		const resolver = createSitemapLastmodResolver({ gitDate: (files) => dates.get(files.join(',')) });
 		expect(resolver('https://compatair.fr/compresseurs/exemple/')).toBe('2026-07-12T10:00:00+00:00');
 	});
+
+	it('relie les pages de répertoire paginées à leur composant et au catalogue', () => {
+		const resolver = createSitemapLastmodResolver({ gitDate: (files) => {
+			expect(files).toContain('src/pages/preuves/page/[page].astro');
+			expect(files).toContain('src/components/EvidenceHistoryDirectory.astro');
+			expect(files).toContain('src/data/catalog.ts');
+			return '2026-07-17T10:00:00+00:00';
+		} });
+		expect(resolver('https://compatair.fr/preuves/page/2/')).toBe('2026-07-17T10:00:00+00:00');
+	});
 });

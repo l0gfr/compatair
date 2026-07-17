@@ -1,0 +1,12 @@
+---
+import SourceReliabilityDirectory from '../../../components/SourceReliabilityDirectory.astro';
+import { sourceDirectoryTotalPages } from '../../../data/source-directory';
+
+export function getStaticPaths() {
+	return Array.from({ length: Math.max(0, sourceDirectoryTotalPages - 1) }, (_, index) => ({ params: { page: String(index + 2) }, props: { currentPage: index + 2 } }));
+}
+
+interface Props { currentPage: number }
+const { currentPage } = Astro.props;
+---
+<SourceReliabilityDirectory currentPage={currentPage} />

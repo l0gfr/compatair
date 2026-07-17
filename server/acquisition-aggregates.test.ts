@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { aggregateAcquisition, validateAcquisitionEvent } from './acquisition-aggregates.mjs';
+import { aggregateAcquisition, createAcquisitionAggregateStore, validateAcquisitionEvent } from './acquisition-aggregates.mjs';
 import { buildAcquisitionReport } from '../scripts/lib/report-acquisition.mjs';
 
 const empty = { schemaVersion: '1.0.0', updatedAt: null, totalEvents: 0, buckets: [] };
@@ -20,5 +20,11 @@ describe('privacy-safe acquisition aggregation', () => {
 			expect.objectContaining({ channel: 'mcp', decision_requests: 1, insufficient_data_rate: 1, citation_acknowledged: 0, citation_acknowledgement_rate: 0 }),
 			expect.objectContaining({ channel: 'agent_referral', views: 1 }),
 		]));
+	});
+
+	it('preserves every event when concurrent writes are coalesced', async () => {
+		const store = createAcquisitionAggregateStore({ clock: () => new Date('2026-07-15T12:00:00Z') });
+		await Promise.all(Array.from({ length: 25 }, () => store.record({ channel: 'api', template: 'compatibility', action: 'decision_request', outcome: 'success' })));
+		expect(await store.snapshot()).toMatchObject({ totalEvents: 25, buckets: [{ channel: 'api', template: 'compatibility', action: 'decision_request', outcome: 'success', count: 25 }] });
 	});
 });
