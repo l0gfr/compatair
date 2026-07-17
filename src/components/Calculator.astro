@@ -18,12 +18,13 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		</fieldset>
 
 		<div class="field-row">
-			<div class="field"><label for="mode">Organisation</label><select id="mode" name="mode"><option value="successive">Utilisation successive</option><option value="simultaneous">Utilisation simultanée</option></select></div>
+			<div class="field" data-mode-field hidden><label for="mode">Organisation</label><select id="mode" name="mode"><option value="successive">Utilisation successive</option><option value="simultaneous">Utilisation simultanée</option></select></div>
 			<div class="field"><label for="session">Durée de session</label><div class="input-unit"><input id="session" name="session" type="number" min="1" max="1440" value="30" /><span>min</span></div></div>
 		</div>
 
 		<details class="calculator-details">
-			<summary>Flexible et réseau</summary>
+			<summary>Options avancées : marge, flexible et réseau</summary>
+			<label class="margin-control details-body" for="margin"><span>Réserve de débit souhaitée</span><output data-margin-output>25 %</output><input id="margin" name="margin" type="range" min="0" max="50" step="5" value="25" /></label>
 			<div class="field-row details-body"><div class="field"><label for="hose-length">Longueur du flexible</label><div class="input-unit"><input id="hose-length" name="hoseLength" type="number" min="0" max="500" step="0.5" value="10" /><span>m</span></div></div><div class="field"><label for="hose-diameter">Diamètre intérieur</label><div class="input-unit"><input id="hose-diameter" name="hoseDiameter" type="number" min="1" max="100" step="0.5" value="9" /><span>mm</span></div></div></div>
 			<div class="field-row details-body"><div class="field"><label for="measured-pressure-drop">Chute de pression mesurée en charge</label><div class="input-unit"><input id="measured-pressure-drop" name="measuredPressureDrop" type="number" min="0" max="50" step="0.01" inputmode="decimal" /><span>bar</span></div></div><div class="field"><label for="measured-leak">Débit de fuite mesuré</label><div class="input-unit"><input id="measured-leak" name="measuredLeak" type="number" min="0" max="10000" step="0.1" inputmode="decimal" /><span>L/min</span></div></div></div>
 			<div class="field details-body"><label for="supply-pressure">Pression réglée ou mesurée disponible</label><div class="input-unit"><input id="supply-pressure" name="supplyPressure" type="number" min="0.1" max="50" step="0.01" inputmode="decimal" /><span>bar</span></div><small>Mesurez en charge. La recommandation ne dépassera jamais la pression maximale publiée de la machine.</small></div>
@@ -34,7 +35,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 
 		<fieldset class="calculator-fieldset">
 			<legend>Compresseur à vérifier</legend>
-			<div class="field"><label for="compressor">Modèle ou saisie personnalisée</label><select id="compressor" name="compressor"><option value="">Aucun, calculer seulement le besoin</option>{compressors.map((compressor) => <option value={compressor.id}>{compressorDisplayName(compressor)}</option>)}<option value="custom">Caractéristiques personnalisées</option></select></div>
+			<div class="field autocomplete-field"><label for="compressor-search">Rechercher par marque, modèle, MPN ou EAN</label><input id="compressor-search" data-compressor-search type="search" list="calculator-compressors" autocomplete="off" placeholder="Ex. Metabo Basic 250, 601532000…" /><input data-compressor-id name="compressor" type="hidden" value="" /><small>Laissez vide pour calculer seulement le besoin.</small></div>
 			<div class="custom-compressor" data-custom-compressor hidden>
 				<div class="field-row"><div class="field"><label for="custom-pressure">Pression maximale</label><div class="input-unit"><input id="custom-pressure" name="customPressure" type="number" min="0.1" max="50" step="0.1" value="8" /><span>bar</span></div></div><div class="field"><label for="custom-fad">Débit réellement restitué à la pression demandée</label><div class="input-unit"><input id="custom-fad" name="customFad" type="number" min="1" max="20000" step="1" /><span>L/min</span></div></div></div>
 				<div class="field-row"><div class="field"><label for="custom-tank">Volume de cuve</label><div class="input-unit"><input id="custom-tank" name="customTank" type="number" min="0" max="20000" step="1" /><span>L</span></div></div><div class="field"><label for="custom-duty">Temps maximal de fonctionnement publié</label><div class="input-unit"><input id="custom-duty" name="customDuty" type="number" min="1" max="100" step="1" value="100" /><span>%</span></div></div></div>
@@ -42,26 +43,31 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 			</div>
 		</fieldset>
 
-		<label class="margin-control" for="margin"><span>Réserve de débit souhaitée</span><output data-margin-output>25 %</output><input id="margin" name="margin" type="range" min="0" max="50" step="5" value="25" /></label>
 		<p class="form-disclaimer">La fréquence d’utilisation vient de vos réponses. CompatAir signale les pertes possibles dans les tuyaux et les raccords, mais ne les invente pas lorsqu’aucune mesure n’est disponible.</p>
-		<label class="demand-contribution">
-			<input type="checkbox" data-demand-contribution />
-			<span><strong>Aider à choisir les prochaines références étudiées</strong><small>Si vous cochez cette case, CompatAir compte uniquement les outils choisis et des tranches larges de débit, pression et durée. Aucun texte libre, valeur personnalisée exacte, cookie, adresse IP ou configuration complète n’est conservé dans ces statistiques.</small></span>
-		</label>
 		<p class="form-error" role="alert" data-form-error hidden></p>
 		<button class="button primary" type="submit">Vérifier la configuration</button>
 	</form>
 
 	<div class="calculator-output" aria-live="polite" data-calculator-output hidden>
 		<div class="report-header" aria-hidden="true"><div><strong>CompatAir</strong><span>Vérification de votre configuration</span></div><div><span>Calcul CompatAir</span><span data-report-date></span></div></div>
-		<div class="result-summary"><div><p class="eyebrow">Résultat</p><span class="verdict-large" data-verdict></span></div><strong data-required-flow></strong><p data-result-context></p></div>
-		<div class="result-section configuration-summary" data-configuration-summary></div>
-		<div class="result-metrics" data-result-metrics></div>
+		<div class="result-summary">
+			<div><p class="eyebrow">Réponse</p><span class="verdict-large" data-verdict></span></div>
+			<strong data-required-flow></strong><p data-result-context></p>
+			<dl class="answer-first-grid">
+				<div><dt>Modèle vérifié</dt><dd data-answer-model></dd></div>
+				<div><dt>Besoin</dt><dd data-answer-need></dd></div>
+				<div><dt>Débit disponible</dt><dd data-answer-available></dd></div>
+				<div><dt>Marge</dt><dd data-answer-margin></dd></div>
+				<div class="answer-reserve"><dt>Principale réserve</dt><dd data-answer-reserve></dd></div>
+			</dl>
+		</div>
+		<details class="result-section result-disclosure"><summary>Configuration analysée</summary><div class="configuration-summary" data-configuration-summary></div></details>
+		<details class="result-section result-disclosure"><summary>Métriques détaillées</summary><div class="result-metrics" data-result-metrics></div></details>
 		<div class="result-section" data-evaluated-result></div>
 		<div class="result-section counterfactual-section" data-counterfactual><p class="eyebrow">Recommandation contrefactuelle</p><h3>Le plus petit changement vérifié</h3><div data-counterfactual-result></div><p class="counterfactual-boundary" data-counterfactual-boundary></p></div>
-		<div class="result-section"><h3>Accessoires et raccordement</h3><ul data-accessories></ul></div>
+		<details class="result-section result-disclosure"><summary>Accessoires et raccordement</summary><ul data-accessories></ul></details>
 		<div class="result-section recommendation-section"><p class="eyebrow">Aide à la décision</p><h3>Recommandations prioritaires</h3><p data-result-coverage></p><div class="priority-list" data-priority-list></div></div>
-		<details class="result-section result-inventory" open>
+		<details class="result-section result-inventory">
 			<summary>Explorer les {compressors.length} compresseurs documentés</summary>
 			<p>Les modèles sont regroupés selon le résultat, la réserve disponible et la fiabilité des données. Une information absente reste signalée comme telle.</p>
 			<div class="result-filters" role="group" aria-label="Filtrer les compresseurs par résultat">
@@ -74,7 +80,11 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 			<p class="filter-empty" data-filter-empty hidden>Aucun compresseur dans cette catégorie.</p>
 			<div class="result-list" data-result-list></div>
 		</details>
-		<div class="result-section"><h3>Hypothèses et avertissements</h3><ul data-assumptions></ul></div>
+		<details class="result-section result-disclosure"><summary>Hypothèses et avertissements</summary><ul data-assumptions></ul></details>
+		<label class="demand-contribution">
+			<input type="checkbox" data-demand-contribution />
+			<span><strong>Aider à choisir les prochaines références étudiées</strong><small>Après lecture du résultat, vous pouvez partager uniquement les outils choisis et des tranches larges de débit, pression et durée. Aucun texte libre, valeur personnalisée exacte, cookie, adresse IP ou configuration complète n’est conservé.</small></span>
+		</label>
 		<div class="share-row"><a class="button primary" href="/passeport/" data-create-passport>Créer une fiche partageable</a><button class="button" type="button" data-share>Copier le lien</button><button class="button" type="button" data-copy-summary>Copier la synthèse</button><button class="button" type="button" data-print>Imprimer le calcul</button><span role="status" data-share-status></span></div>
 		<p class="calculator-note">Le lien copié contient votre configuration, mais celle-ci n’est ni envoyée ni enregistrée sur le serveur CompatAir.</p>
 	</div>
@@ -82,7 +92,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 
 	<template data-demand-template>
 		<div class="demand-row demand-card">
-			<div class="field demand-tool"><label data-label="outil">Outil</label><select data-tool>{tools.map((tool) => <option value={tool.id} data-demand-model={tool.demandModel} data-airflow={tool.demandModel === 'fixed-flow' ? tool.airflowLpm.typical : undefined} data-pressure={tool.workingPressureBar.typical} data-air-per-action={tool.demandModel === 'per-action' ? tool.airPerActionLiters : undefined} data-action-label={tool.demandModel === 'per-action' ? tool.actionLabel : undefined}>{tool.label} · {toolDemandLabel(tool)} · {toolPressureLabel(tool)}</option>)}</select></div>
+		<div class="field demand-tool autocomplete-field"><label data-label="outil">Rechercher l’outil par marque, modèle, MPN ou EAN</label><input data-tool-search type="search" list="calculator-tools" autocomplete="off" placeholder="Ex. Einhell TC-PW 340…" /><input data-tool type="hidden" /></div>
 		<div class="field"><label data-label="nombre">Nombre</label><input data-quantity type="number" min="1" max="20" value="1" /></div>
 		<button type="button" class="remove-demand" data-remove-tool aria-label="Supprimer cet outil">×</button>
 		<div class="demand-parameters" data-demand-parameters>
@@ -98,6 +108,14 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		</div>
 	</div>
 </template>
+
+<datalist id="calculator-tools">
+	{tools.map((tool) => <option value={`${tool.brand} ${tool.model}${tool.mpn ? ` · MPN ${tool.mpn}` : ''}${tool.ean ? ` · EAN ${tool.ean}` : ''}`} data-id={tool.id} data-demand-model={tool.demandModel} data-airflow={tool.demandModel === 'fixed-flow' ? tool.airflowLpm.typical : undefined} data-pressure={tool.workingPressureBar.typical} data-air-per-action={tool.demandModel === 'per-action' ? tool.airPerActionLiters : undefined} data-action-label={tool.demandModel === 'per-action' ? tool.actionLabel : undefined}>{tool.label} · {toolDemandLabel(tool)} · {toolPressureLabel(tool)}</option>)}
+</datalist>
+<datalist id="calculator-compressors">
+	<option value="Caractéristiques personnalisées" data-id="custom">Saisie personnalisée</option>
+	{compressors.map((compressor) => <option value={`${compressor.brand} ${compressor.model}${compressor.mpn ? ` · MPN ${compressor.mpn}` : ''}${compressor.ean ? ` · EAN ${compressor.ean}` : ''}`} data-id={compressor.id}>{compressorDisplayName(compressor)}</option>)}
+</datalist>
 
 <script>
 	type Compressor = import('../domain/runtime-catalog').RuntimeCompressor;
@@ -154,8 +172,13 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	const list = root?.querySelector<HTMLElement>('[data-result-list]');
 	const priorityList = root?.querySelector<HTMLElement>('[data-priority-list]');
 	const evaluated = root?.querySelector<HTMLElement>('[data-evaluated-result]');
+	const toolDatalist = document.querySelector<HTMLDataListElement>('#calculator-tools');
+	const compressorDatalist = document.querySelector<HTMLDataListElement>('#calculator-compressors');
+	const setText = (selector: string, value: string) => { const element = root?.querySelector<HTMLElement>(selector); if (element) element.textContent = value; };
 	const labels = { continuous: 'Compatible en continu', intermittent: 'Compatible par intermittence', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' } as const;
 	const rank = { continuous: 0, intermittent: 1, insufficient_data: 2, incompatible: 3 } as const;
+	const dataQualityLabel = (grade: 'A' | 'B' | 'C' | 'D') => grade === 'A' ? 'Source constructeur complète' : grade === 'B' ? 'Source constructeur partielle' : grade === 'C' ? 'Source insuffisante pour conclure' : 'Source non confirmée';
+	const responseQualityLabel = (quality: SizingResult['confidence']) => quality === 'high' ? 'Réponse étayée' : quality === 'medium' ? 'Réponse à confirmer' : 'Réponse limitée';
 	type Candidate = { compressor: (typeof compressors)[number]; result: SizingResult; availableFadLpm?: number; marginCovered: boolean };
 	let demandIndex = 0;
 	let currentFilter: keyof typeof labels | 'all' = 'all';
@@ -163,6 +186,28 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	const recordedFunnelSteps = new Set<'started' | 'completed'>();
 	const recordedCounterfactualSteps = new Set<string>();
 	let pendingCounterfactualFamily: CounterfactualKind | undefined;
+	let lastContribution: { config: NonNullable<ReturnType<typeof configFromForm>>; result: SizingResult } | undefined;
+
+	function optionById(list: HTMLDataListElement | null, id: string) { return [...(list?.options ?? [])].find((option) => option.dataset.id === id); }
+	function optionByValue(list: HTMLDataListElement | null, value: string) { const normalized = value.trim().toLocaleLowerCase('fr-FR'); return [...(list?.options ?? [])].find((option) => option.value.trim().toLocaleLowerCase('fr-FR') === normalized); }
+	function syncSingleToolUi() {
+		const single = (rows?.children.length ?? 0) <= 1;
+		const modeField = root?.querySelector<HTMLElement>('[data-mode-field]'); if (modeField) modeField.hidden = single;
+		if (single) { const mode = form?.elements.namedItem('mode'); if (mode instanceof HTMLSelectElement) mode.value = 'successive'; }
+	}
+	function setCompressorSelection(id: string) {
+		const hidden = form?.querySelector<HTMLInputElement>('[data-compressor-id]'); const search = form?.querySelector<HTMLInputElement>('[data-compressor-search]');
+		if (!hidden || !search) return false;
+		const option = id ? optionById(compressorDatalist, id) : undefined;
+		hidden.value = option?.dataset.id ?? ''; search.value = option?.value ?? '';
+		const custom = root?.querySelector<HTMLElement>('[data-custom-compressor]'); if (custom) custom.hidden = hidden.value !== 'custom';
+		return id === '' || Boolean(option);
+	}
+	function syncCompressorSearch() {
+		const hidden = form?.querySelector<HTMLInputElement>('[data-compressor-id]'); const search = form?.querySelector<HTMLInputElement>('[data-compressor-search]'); if (!hidden || !search) return;
+		const option = optionByValue(compressorDatalist, search.value); hidden.value = option?.dataset.id ?? '';
+		const custom = root?.querySelector<HTMLElement>('[data-custom-compressor]'); if (custom) custom.hidden = hidden.value !== 'custom';
+	}
 
 	function recordFunnelStep(step: 'started' | 'completed') {
 		if (recordedFunnelSteps.has(step) || !navigator.sendBeacon) return;
@@ -181,29 +226,41 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	}
 
 	function updateDemandMode(row: HTMLElement) {
-		const selected = row.querySelector<HTMLSelectElement>('[data-tool]')!.selectedOptions[0];
+		const selected = row.querySelector<HTMLInputElement>('[data-tool]')!;
 		const demandModel = selected.dataset.demandModel;
 		row.querySelector<HTMLElement>('[data-fixed-fields]')!.hidden = demandModel !== 'fixed-flow';
 		row.querySelector<HTMLElement>('[data-action-fields]')!.hidden = demandModel !== 'per-action';
 		row.querySelector<HTMLElement>('[data-inflation-fields]')!.hidden = demandModel !== 'variable-volume';
 		const note = row.querySelector<HTMLElement>('[data-demand-note]')!;
-		note.textContent = demandModel === 'fixed-flow'
+		note.textContent = !demandModel
+			? 'Commencez à saisir puis choisissez une référence exacte dans les suggestions.'
+			: demandModel === 'fixed-flow'
 			? `${selected.dataset.airflow} L/min documentés à ${selected.dataset.pressure} bar.`
 			: demandModel === 'per-action'
 				? `${Number(selected.dataset.airPerAction).toLocaleString('fr-FR')} L par ${selected.dataset.actionLabel} à ${selected.dataset.pressure} bar. La cadence est obligatoire et reste une saisie utilisateur.`
 				: `Aucun volume de pneumatique n’est déduit du modèle. Volume, pressions et temps doivent être saisis.`;
+	}
+	function syncToolSearch(row: HTMLElement) {
+		const search = row.querySelector<HTMLInputElement>('[data-tool-search]')!; const hidden = row.querySelector<HTMLInputElement>('[data-tool]')!;
+		const option = optionByValue(toolDatalist, search.value);
+		hidden.value = option?.dataset.id ?? '';
+		for (const key of ['demandModel', 'airflow', 'pressure', 'airPerAction', 'actionLabel'] as const) {
+			const value = option?.dataset[key]; if (value === undefined) delete hidden.dataset[key]; else hidden.dataset[key] = value;
+		}
+		updateDemandMode(row);
 	}
 
 	function addDemand(toolId?: string, quantity = 1, saved: any = {}) {
 		if (!rows || !template || rows.children.length >= 8) return;
 		const fragment = template.content.cloneNode(true) as DocumentFragment;
 		const row = fragment.querySelector<HTMLElement>('.demand-row')!;
-		const select = row.querySelector<HTMLSelectElement>('[data-tool]')!;
+		const search = row.querySelector<HTMLInputElement>('[data-tool-search]')!;
+		const selectedTool = row.querySelector<HTMLInputElement>('[data-tool]')!;
 		const quantityInput = row.querySelector<HTMLInputElement>('[data-quantity]')!;
 		const dutySelect = row.querySelector<HTMLSelectElement>('[data-duty]')!;
 		const rowIndex = demandIndex++;
 		const controls = [
-			[select, 'outil'], [quantityInput, 'nombre'], [dutySelect, 'frequence'],
+			[search, 'outil'], [quantityInput, 'nombre'], [dutySelect, 'frequence'],
 			[row.querySelector<HTMLInputElement>('[data-cadence]')!, 'cadence'],
 			[row.querySelector<HTMLInputElement>('[data-volume]')!, 'volume'],
 			[row.querySelector<HTMLInputElement>('[data-initial-pressure]')!, 'initiale'],
@@ -214,7 +271,8 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 			control.id = `demande-${rowIndex}-${suffix}`;
 			row.querySelector<HTMLLabelElement>(`label[data-label="${suffix}"]`)!.htmlFor = control.id;
 		}
-		if (toolId && [...select.options].some((option) => option.value === toolId)) select.value = toolId;
+		const toolOption = toolId ? optionById(toolDatalist, toolId) : undefined;
+		search.value = toolOption?.value ?? '';
 		quantityInput.value = String(quantity);
 		dutySelect.value = String(saved.dutyFactor ?? 1);
 		row.querySelector<HTMLInputElement>('[data-cadence]')!.value = saved.actionsPerMinute ?? '';
@@ -222,10 +280,12 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		row.querySelector<HTMLInputElement>('[data-initial-pressure]')!.value = saved.initialPressureBar ?? '';
 		row.querySelector<HTMLInputElement>('[data-target-pressure]')!.value = saved.targetPressureBar ?? '';
 		row.querySelector<HTMLInputElement>('[data-duration-seconds]')!.value = saved.targetMinutes ? String(saved.targetMinutes * 60) : '';
-		select.addEventListener('change', () => updateDemandMode(row));
-		row.querySelector('[data-remove-tool]')?.addEventListener('click', () => { if (rows.children.length > 1) row.remove(); });
-		updateDemandMode(row);
+		search.addEventListener('input', () => syncToolSearch(row));
+		search.addEventListener('change', () => syncToolSearch(row));
+		row.querySelector('[data-remove-tool]')?.addEventListener('click', () => { if (rows.children.length > 1) { row.remove(); syncSingleToolUi(); } });
+		if (toolOption) { selectedTool.value = toolOption.dataset.id ?? ''; syncToolSearch(row); } else updateDemandMode(row);
 		rows.append(fragment);
+		syncSingleToolUi();
 	}
 
 	function readNumber(data: FormData, key: string) {
@@ -244,8 +304,9 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		if (!form || !rows) return undefined;
 		const data = new FormData(form);
 		const demands = [...rows.querySelectorAll<HTMLElement>('.demand-row')].map((row) => {
-			const id = row.querySelector<HTMLSelectElement>('[data-tool]')!.value;
-			const tool = tools.find((item) => item.id === id)!;
+			const id = row.querySelector<HTMLInputElement>('[data-tool]')!.value;
+			const tool = tools.find((item) => item.id === id);
+			if (!tool) throw new Error('Sélectionnez une référence d’outil dans les suggestions.');
 			const quantity = Number(row.querySelector<HTMLInputElement>('[data-quantity]')!.value);
 			if (!Number.isInteger(quantity) || quantity < 1 || quantity > 20) throw new Error('Le nombre d’outils doit être compris entre 1 et 20.');
 			if (tool.demandModel === 'fixed-flow') { const dutyFactor = Number(row.querySelector<HTMLSelectElement>('[data-duty]')!.value); if (![.1, .3, .6, 1].includes(dutyFactor)) throw new Error('La fréquence sélectionnée est invalide.'); return { model: 'fixed-flow' as const, id, flowLpm: tool.airflowLpm.typical, pressureBar: tool.workingPressureBar.typical, quantity, dutyFactor }; }
@@ -279,7 +340,10 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		if (fittingCount !== undefined && !Number.isInteger(fittingCount)) throw new Error('Le nombre de raccords doit être entier.');
 		const filtration = String(data.get('filtration')); if (!['unknown', 'none', 'particle', 'water-separator', 'coalescing', 'dryer'].includes(filtration)) throw new Error('La filtration sélectionnée est invalide.');
 		const usageProfile = String(data.get('usageProfile')); if (!['occasional', 'intermittent', 'sustained', 'mixed'].includes(usageProfile)) throw new Error('Le profil d’utilisation est invalide.');
-		const selectedCompressor = String(data.get('compressor') ?? ''); if (!['', 'custom', ...compressors.map((item) => item.id)].includes(selectedCompressor)) throw new Error('Le compresseur sélectionné est invalide.');
+		const selectedCompressor = String(data.get('compressor') ?? '');
+		const compressorSearch = form.querySelector<HTMLInputElement>('[data-compressor-search]');
+		if (compressorSearch?.value.trim() && !selectedCompressor) throw new Error('Sélectionnez une référence de compresseur dans les suggestions.');
+		if (!['', 'custom', ...compressors.map((item) => item.id)].includes(selectedCompressor)) throw new Error('Le compresseur sélectionné est invalide.');
 		const custom = selectedCompressor === 'custom' ? { maxPressureBar: requireRange(readNumber(data, 'customPressure'), .1, 50, 'La pression maximale personnalisée'), availableFadLpm: requireRange(readNumber(data, 'customFad'), 1, 20_000, 'Le débit réellement restitué', true), tankLiters: requireRange(readNumber(data, 'customTank'), 0, 20_000, 'Le volume personnalisé', true), dutyCycle: requireRange((readNumber(data, 'customDuty') ?? 100) / 100, .01, 1, 'Le temps maximal de fonctionnement'), cutInPressureBar: requireRange(readNumber(data, 'customCutIn'), 0, 50, 'La pression de réenclenchement', true), cutOutPressureBar: requireRange(readNumber(data, 'customCutOut'), .1, 50, 'La pression d’arrêt', true) } : {};
 		if (custom.cutInPressureBar !== undefined && custom.cutOutPressureBar !== undefined && custom.cutInPressureBar >= custom.cutOutPressureBar) throw new Error('La pression de réenclenchement doit être inférieure à la pression d’arrêt.');
 		return parsePassportConfiguration({ demands, mode, safetyMargin, sessionMinutes, hoseLengthMeters, hoseInnerDiameterMm, measuredPressureDropBar, measuredLeakLpm, supplyPressureBar, networkDistanceMeters, fittingStandard, fittingCount, filtration, usageProfile, selectedCompressor, custom }, new Set(compressors.map((item) => item.id)), new Set(tools.map((item) => item.id)));
@@ -317,13 +381,31 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 			['Pression disponible', result.availablePressureBar !== undefined ? `${result.availablePressureBar.toLocaleString('fr-FR')} bar` : 'Données insuffisantes'],
 			['Fuite mesurée incluse', result.measuredLeakLpm !== undefined ? `${result.measuredLeakLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min` : 'Non mesurée'],
 			['Cuve recommandée', result.recommendedTankLiters !== undefined ? `${Math.round(result.recommendedTankLiters)} L` : 'Non déterminable sans durée de rafale'],
-			['Confiance', result.confidence === 'high' ? 'Élevée' : result.confidence === 'medium' ? 'Moyenne' : 'Faible'],
+			['Qualité de la réponse', responseQualityLabel(result.confidence)],
 			['Facteur limitant', result.limitingFactor === 'flow' ? 'Débit' : result.limitingFactor === 'pressure' ? 'Pression' : result.limitingFactor === 'duty_cycle' ? 'Cycle du compresseur' : result.limitingFactor === 'data' ? 'Données manquantes' : 'Aucun identifié'],
 			...(result.usableTankAirLiters !== undefined ? [['Réserve utile', `${Math.round(result.usableTankAirLiters)} L d’air libre`]] : []),
 			...(result.estimatedWorkMinutes !== undefined ? [['Travail estimé', `${result.estimatedWorkMinutes.toFixed(1)} min`]] : []),
 			...(result.estimatedRecoveryMinutes !== undefined ? [['Récupération estimée', `${result.estimatedRecoveryMinutes.toFixed(1)} min`]] : []),
 		];
 		metrics.replaceChildren(...values.map(([label, value]) => { const div = document.createElement('div'); const small = document.createElement('small'); const strong = document.createElement('strong'); small.textContent = label; strong.textContent = value; div.append(small, strong); return div; }));
+	}
+	function renderAnswerFirst(config: NonNullable<ReturnType<typeof configFromForm>>, base: SizingResult, result: SizingResult) {
+		const compressor = config.selectedCompressor && config.selectedCompressor !== 'custom' ? compressors.find((item) => item.id === config.selectedCompressor) : undefined;
+		const available = config.selectedCompressor === 'custom' ? config.custom.availableFadLpm : compressor ? interpolateFad(compressor, base.requiredPressureBar) : undefined;
+		const model = config.selectedCompressor === 'custom' ? 'Compresseur personnalisé' : compressor ? `${compressor.brand} ${compressor.model} · ${dataQualityLabel(compressor.confidence)}` : 'Aucun compresseur sélectionné';
+		const marginCovered = available !== undefined && available >= base.recommendedFadLpm;
+		const reserve = !config.selectedCompressor ? 'Sélectionnez un compresseur pour obtenir un verdict sur une machine.'
+			: available !== undefined && !marginCovered && (result.verdict === 'continuous' || result.verdict === 'intermittent') ? `Le besoin nominal passe, mais la marge de ${Math.round(config.safetyMargin * 100)} % n’est pas entièrement couverte.`
+			: result.limitingFactor === 'pressure' ? 'La pression disponible ou maximale est insuffisante.'
+				: result.limitingFactor === 'flow' ? 'Le débit restitué disponible est insuffisant.'
+					: result.limitingFactor === 'duty_cycle' ? 'Le cycle de fonctionnement limite la durée possible.'
+						: result.limitingFactor === 'data' ? 'Le débit restitué n’est pas documenté à la pression demandée.'
+							: result.verdict === 'intermittent' ? 'Usage couvert uniquement par intermittence.' : 'Aucune réserve bloquante dans les données déclarées.';
+		setText('[data-answer-model]', model);
+		setText('[data-answer-need]', `${base.recommendedFadLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min à ${base.requiredPressureBar.toLocaleString('fr-FR')} bar`);
+		setText('[data-answer-available]', available === undefined ? `Non vérifiable à ${base.requiredPressureBar.toLocaleString('fr-FR')} bar` : `${available.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min à ${base.requiredPressureBar.toLocaleString('fr-FR')} bar`);
+		setText('[data-answer-margin]', `${Math.round(config.safetyMargin * 100)} % demandée · ${available === undefined ? 'couverture indéterminée' : marginCovered ? 'couverte' : 'non couverte'}`);
+		setText('[data-answer-reserve]', reserve);
 	}
 
 	function applyCounterfactual(candidate: CounterfactualCandidate) {
@@ -339,27 +421,26 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		if (candidate.kind === 'simultaneity') return setField('mode', candidate.afterValue);
 		if (candidate.kind === 'leak') return setField('measuredLeak', candidate.afterValue);
 		if (candidate.kind === 'cadence') {
-			const row = [...(rows?.querySelectorAll<HTMLElement>('.demand-row') ?? [])].find((item) => item.querySelector<HTMLSelectElement>('[data-tool]')?.value === candidate.demandId);
+			const row = [...(rows?.querySelectorAll<HTMLElement>('.demand-row') ?? [])].find((item) => item.querySelector<HTMLInputElement>('[data-tool]')?.value === candidate.demandId);
 			const cadence = row?.querySelector<HTMLInputElement>('[data-cadence]');
 			if (!cadence) return false;
 			cadence.value = String(candidate.afterValue);
 			return true;
 		}
 		const selected = candidate.machineId ?? String(candidate.afterValue);
-		if (!setField('compressor', selected)) return false;
-		const custom = root?.querySelector<HTMLElement>('[data-custom-compressor]');
-		if (custom) custom.hidden = true;
-		return true;
+		return setCompressorSelection(selected);
 	}
 
 	function renderCounterfactual(report: CounterfactualReport) {
+		const section = root?.querySelector<HTMLElement>('[data-counterfactual]');
 		const target = root?.querySelector<HTMLElement>('[data-counterfactual-result]');
 		const boundary = root?.querySelector<HTMLElement>('[data-counterfactual-boundary]');
 		if (!target || !boundary) return;
 		if (report.status === 'already_possible') {
-			const message = document.createElement('p'); message.textContent = 'La configuration déclarée est déjà utilisable selon le moteur. Aucun changement n’est nécessaire pour obtenir un verdict continu ou intermittent.';
-			target.replaceChildren(message); boundary.textContent = report.definition; return;
+			if (section) section.hidden = true;
+			target.replaceChildren(); boundary.textContent = ''; return;
 		}
+		if (section) section.hidden = false;
 		const candidate = report.recommendation;
 		if (!candidate) {
 			const message = document.createElement('p'); message.className = 'decision-empty'; message.textContent = 'Aucun changement unique n’est démontré suffisant avec les données disponibles. CompatAir ne combine pas plusieurs hypothèses et ne transforme pas une mesure absente en conseil.';
@@ -440,8 +521,9 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		const head = document.createElement('div'); head.className = 'result-card-head';
 		const title = document.createElement('h4'); const link = document.createElement('a'); link.href = `/compresseurs/${compressor.slug}/`; link.textContent = `${compressor.brand} ${compressor.model}`; title.append(link);
 		const badge = document.createElement('span'); badge.className = 'verdict-badge'; badge.textContent = resultLabel(result); head.append(title, badge);
-		const detail = document.createElement('p'); detail.textContent = result.verdict === 'insufficient_data' ? `Débit réellement restitué non vérifiable à ${result.requiredPressureBar} bar · fiabilité des données ${compressor.confidence}.` : `${interpolateFad(compressor, result.requiredPressureBar)?.toFixed(0) ?? 'Débit inconnu'} L/min documentés · cuve ${compressor.tankLiters} L · fiabilité des données ${compressor.confidence}.`;
-		article.append(head, detail);
+		const detail = document.createElement('p'); detail.textContent = result.verdict === 'insufficient_data' ? `Débit réellement restitué non vérifiable à ${result.requiredPressureBar} bar · ${dataQualityLabel(compressor.confidence)}.` : `${interpolateFad(compressor, result.requiredPressureBar)?.toFixed(0) ?? 'Débit inconnu'} L/min disponibles à ${result.requiredPressureBar} bar · ${dataQualityLabel(compressor.confidence)}.`;
+		const quality = document.createElement('details'); quality.className = 'result-card-quality'; const qualitySummary = document.createElement('summary'); qualitySummary.textContent = 'Détail qualité'; const qualityDetail = document.createElement('span'); qualityDetail.textContent = `Grade technique ${compressor.confidence}.`;
+		quality.append(qualitySummary, qualityDetail); article.append(head, detail, quality);
 		if (proofToolId) { const proofLink = document.createElement('a'); proofLink.className = 'result-proof-link'; proofLink.href = `/graphe-preuve/#compresseur=${encodeURIComponent(compressor.id)}&outil=${encodeURIComponent(proofToolId)}`; proofLink.textContent = 'Remonter aux preuves'; article.append(proofLink); }
 		return article;
 	}
@@ -488,9 +570,10 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	function restoreConfig(config: PassportConfiguration) {
 		if (!form || !rows) return;
 		rows.replaceChildren(); for (const demand of config.demands.slice(0, 8)) addDemand(demand.id, demand.quantity, demand);
-		for (const [name, value] of Object.entries({ mode: config.mode, margin: config.safetyMargin * 100, session: config.sessionMinutes, hoseLength: config.hoseLengthMeters, hoseDiameter: config.hoseInnerDiameterMm, measuredPressureDrop: config.measuredPressureDropBar, measuredLeak: config.measuredLeakLpm, supplyPressure: config.supplyPressureBar, networkDistance: config.networkDistanceMeters, fittingStandard: config.fittingStandard, fittingCount: config.fittingCount, filtration: config.filtration, usageProfile: config.usageProfile, compressor: config.selectedCompressor, customPressure: config.custom?.maxPressureBar, customFad: config.custom?.availableFadLpm, customTank: config.custom?.tankLiters, customDuty: config.custom?.dutyCycle ? config.custom.dutyCycle * 100 : undefined, customCutIn: config.custom?.cutInPressureBar, customCutOut: config.custom?.cutOutPressureBar })) { const field = form.elements.namedItem(name); if (field instanceof HTMLInputElement || field instanceof HTMLSelectElement) field.value = value === undefined ? '' : String(value); }
-		form.querySelector<HTMLElement>('[data-custom-compressor]')!.hidden = config.selectedCompressor !== 'custom';
+		for (const [name, value] of Object.entries({ mode: config.mode, margin: config.safetyMargin * 100, session: config.sessionMinutes, hoseLength: config.hoseLengthMeters, hoseDiameter: config.hoseInnerDiameterMm, measuredPressureDrop: config.measuredPressureDropBar, measuredLeak: config.measuredLeakLpm, supplyPressure: config.supplyPressureBar, networkDistance: config.networkDistanceMeters, fittingStandard: config.fittingStandard, fittingCount: config.fittingCount, filtration: config.filtration, usageProfile: config.usageProfile, customPressure: config.custom?.maxPressureBar, customFad: config.custom?.availableFadLpm, customTank: config.custom?.tankLiters, customDuty: config.custom?.dutyCycle ? config.custom.dutyCycle * 100 : undefined, customCutIn: config.custom?.cutInPressureBar, customCutOut: config.custom?.cutOutPressureBar })) { const field = form.elements.namedItem(name); if (field instanceof HTMLInputElement || field instanceof HTMLSelectElement) field.value = value === undefined ? '' : String(value); }
+		setCompressorSelection(config.selectedCompressor ?? '');
 		root?.querySelector<HTMLOutputElement>('[data-margin-output]')!.replaceChildren(`${Math.round(config.safetyMargin * 100)} %`);
+		syncSingleToolUi();
 	}
 
 	function flowBucket(value: number) {
@@ -530,7 +613,8 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	root?.querySelector('[data-add-tool]')?.addEventListener('click', () => addDemand());
 	form?.addEventListener('input', () => recordFunnelStep('started'), { once: true });
 	form?.addEventListener('change', () => recordFunnelStep('started'), { once: true });
-	form?.querySelector<HTMLSelectElement>('[name="compressor"]')?.addEventListener('change', (event: Event) => { root!.querySelector<HTMLElement>('[data-custom-compressor]')!.hidden = (event.target as HTMLSelectElement).value !== 'custom'; });
+	form?.querySelector<HTMLInputElement>('[data-compressor-search]')?.addEventListener('input', syncCompressorSearch);
+	form?.querySelector<HTMLInputElement>('[data-compressor-search]')?.addEventListener('change', syncCompressorSearch);
 	form?.querySelector<HTMLInputElement>('[name="margin"]')?.addEventListener('input', (event: Event) => { root!.querySelector<HTMLOutputElement>('[data-margin-output]')!.value = `${(event.target as HTMLInputElement).value} %`; });
 
 	const legacyParameters = new URLSearchParams(window.location.search);
@@ -539,8 +623,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	const initialParameters = hasFragmentPrefill ? fragmentParameters : legacyParameters;
 	const requestedTool = initialParameters.get('outil') ?? undefined;
 	const requestedCompressor = initialParameters.get('compresseur') ?? undefined;
-	const initialToolSelect = template?.content.querySelector<HTMLSelectElement>('[data-tool]');
-	const initialTool = requestedTool && initialToolSelect && [...initialToolSelect.options].some((option) => option.value === requestedTool) ? requestedTool : undefined;
+	const initialTool = requestedTool && optionById(toolDatalist, requestedTool) ? requestedTool : undefined;
 	async function initializeCalculator() {
 		if (window.location.hash.startsWith('#config=')) {
 			await loadCalculatorRuntime();
@@ -548,9 +631,8 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 			if (hashConfig) { restoreConfig(hashConfig); return; }
 		}
 		addDemand(initialTool);
-		const compressorSelect = form?.querySelector<HTMLSelectElement>('[name="compressor"]');
-		const initialCompressor = requestedCompressor && compressorSelect && [...compressorSelect.options].some((option) => option.value === requestedCompressor) ? requestedCompressor : undefined;
-		if (initialCompressor && compressorSelect && [...compressorSelect.options].some((option) => option.value === initialCompressor)) compressorSelect.value = initialCompressor;
+		const initialCompressor = requestedCompressor && optionById(compressorDatalist, requestedCompressor) ? requestedCompressor : undefined;
+		if (initialCompressor) setCompressorSelection(initialCompressor);
 		if (!hasFragmentPrefill && (legacyParameters.has('outil') || legacyParameters.has('compresseur'))) {
 			const normalized = new URLSearchParams();
 			if (initialTool) normalized.set('outil', initialTool);
@@ -578,8 +660,8 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 			root?.querySelector<HTMLElement>('[data-required-flow]')!.replaceChildren(`${result.recommendedFadLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min recommandés`);
 			const hasInflation = config.demands.some((demand) => demand.model === 'inflation');
 			root?.querySelector<HTMLElement>('[data-result-context]')!.replaceChildren(result.flowBasis === 'documented-continuous' ? `${Math.round(result.peakFlowLpm)} L/min de pointe, ${Math.round(result.averageFlowLpm)} L/min en moyenne, à ${result.requiredPressureBar} bar.` : hasInflation ? `${result.peakFlowLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min de besoin moyen idéalisé à ${result.requiredPressureBar.toLocaleString('fr-FR')} bar. Le temps réel et les restrictions ne sont pas modélisés.` : `${result.peakFlowLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min de besoin moyen calculé à ${result.requiredPressureBar.toLocaleString('fr-FR')} bar. La pointe instantanée n’est pas modélisée.`);
-			renderConfiguration(config); renderMetrics(result); renderWarnings(result); renderAccessories(config);
-			if (config.selectedCompressor) { const title = document.createElement('h3'); title.textContent = 'Compresseur vérifié'; const p = document.createElement('p'); p.textContent = resultLabel(result); evaluated.replaceChildren(title, p); } else evaluated.replaceChildren();
+			renderAnswerFirst(config, base, result); renderConfiguration(config); renderMetrics(result); renderWarnings(result); renderAccessories(config);
+			evaluated.replaceChildren();
 
 			const confidenceRank = { A: 0, B: 1, C: 2, D: 3 } as const;
 			const candidates: Candidate[] = compressors.map((compressor) => {
@@ -602,7 +684,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 			window.history.replaceState(null, '', `${window.location.pathname}#config=${encodedConfig}`);
 			const envelope = await createPassportEnvelope(config, compressors, tools, CATALOG_VERIFIED_AT);
 			root?.querySelector<HTMLAnchorElement>('[data-create-passport]')?.setAttribute('href', `/passeport/#passport=${encodePassportEnvelope(envelope)}`);
-			contributeDemand(config, base);
+			lastContribution = { config, result: base }; contributeDemand(config, base);
 			recordFunnelStep('completed');
 			if (appliedCounterfactualFamily) recordCounterfactualStep('recalculation_succeeded', appliedCounterfactualFamily);
 			output.hidden = false; output.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
@@ -615,6 +697,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	});
 
 	for (const button of root?.querySelectorAll<HTMLButtonElement>('[data-result-filter]') ?? []) button.addEventListener('click', () => setResultFilter(button.dataset.resultFilter as keyof typeof labels | 'all'));
+	root?.querySelector<HTMLInputElement>('[data-demand-contribution]')?.addEventListener('change', (event) => { if ((event.target as HTMLInputElement).checked && lastContribution) contributeDemand(lastContribution.config, lastContribution.result); });
 	root?.querySelector('[data-print]')?.addEventListener('click', () => window.print());
 	root?.querySelector('[data-copy-summary]')?.addEventListener('click', async () => { if (!lastSummary) return; await navigator.clipboard.writeText(lastSummary); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'Synthèse copiée'; });
 	root?.querySelector('[data-share]')?.addEventListener('click', async () => { await loadCalculatorRuntime(); const config = configFromForm(); if (!config) return; const url = `${location.origin}${location.pathname}#config=${encodePassportConfiguration(config)}`; await navigator.clipboard.writeText(url); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'Lien copié'; });

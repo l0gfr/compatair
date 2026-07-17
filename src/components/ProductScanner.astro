@@ -1,51 +1,86 @@
 <div class="scanner" data-scanner>
 	<form class="scanner-form" data-scanner-form>
-		<div class="scanner-photo">
-			<div class="scanner-preview" data-preview>
-				<span>Photo locale</span>
-				<strong>Aucune plaque chargée</strong>
-			</div>
-			<div>
-				<label class="button" for="scanner-photo">Photographier ou choisir une image</label>
-				<input id="scanner-photo" data-photo type="file" accept="image/jpeg,image/png,image/webp,image/gif" capture="environment" />
-				<button class="button subtle" type="button" data-read-photo disabled>Proposer un identifiant</button>
-				<p class="scanner-local-note">L’image reste dans ce navigateur. Elle n’est ni envoyée, ni enregistrée.</p>
-			</div>
-		</div>
-
 		<div class="scanner-confirmation">
 			<div class="field">
-				<label for="scanner-identifier">Référence ou numéro de code-barres à confirmer</label>
+				<label for="scanner-identifier">Numéro indiqué sur l’étiquette</label>
 				<input id="scanner-identifier" data-identifier type="text" maxlength="160" autocomplete="off" placeholder="Ex. 4010393 ou 4006825597295" required />
-				<small data-candidate-origin>Saisie manuelle.</small>
+				<small data-candidate-origin>Saisissez la référence fabricant, le MPN, l’EAN ou le GTIN.</small>
 			</div>
-			<button class="button primary" type="submit">Confirmer et vérifier</button>
+			<button class="button primary" type="submit">Identifier la référence</button>
 		</div>
+
+		<details class="scanner-photo-details">
+			<summary>Utiliser une photo</summary>
+			<div class="scanner-photo">
+				<div class="scanner-preview" data-preview>
+					<span>Photo locale</span>
+					<strong>Aucune plaque chargée</strong>
+				</div>
+				<div>
+					<label class="button" for="scanner-photo">Photographier ou choisir une image</label>
+					<input id="scanner-photo" data-photo type="file" accept="image/jpeg,image/png,image/webp,image/gif" capture="environment" />
+					<button class="button subtle" type="button" data-read-photo disabled>Lire le numéro</button>
+					<p class="scanner-local-note">L’image reste dans ce navigateur. Elle n’est ni envoyée, ni enregistrée.</p>
+				</div>
+			</div>
+		</details>
 		<p class="scanner-status" role="status" data-status></p>
 		<p class="form-error" role="alert" data-error hidden></p>
 	</form>
 
 	<section class="scanner-result" data-result hidden>
 		<header class="scanner-result-head">
-			<div><p class="eyebrow">Modèle identifié après confirmation</p><h2 data-product-name></h2><p data-match></p></div>
+			<div>
+				<p class="eyebrow">Produit reconnu</p>
+				<h2 data-product-name></h2>
+				<div class="scanner-quality-line">
+					<span class="scanner-match-badge" data-match-badge>Correspondance exacte par référence fabricant</span>
+					<span data-source-verified></span>
+				</div>
+				<p data-match-detail></p>
+			</div>
 			<a class="button" data-product-link href="/">Voir la fiche et ses sources</a>
 		</header>
-		<div class="scanner-result-grid">
-			<section class="scanner-result-panel can"><span>Peut alimenter</span><h3 data-can-title></h3><ul data-can></ul></section>
-			<section class="scanner-result-panel cannot"><span>Ne peut pas alimenter</span><h3 data-cannot-title></h3><ul data-cannot></ul></section>
+
+		<div class="scanner-decision">
+			<div class="scanner-published-need">
+				<p class="eyebrow" data-published-label>Besoin publié</p>
+				<strong data-published-value></strong>
+			</div>
+			<dl class="scanner-counts" aria-label="Résumé des résultats">
+				<div><dt data-compatible-count>0</dt><dd data-compatible-label>Compatibles</dd></div>
+				<div><dt data-incompatible-count>0</dt><dd data-incompatible-label>Incompatibles</dd></div>
+				<div><dt data-insufficient-count>0</dt><dd>Indéterminés</dd></div>
+			</dl>
+			<section class="scanner-top-results">
+				<p class="eyebrow">Décision immédiate</p>
+				<h3 data-primary-title>Trois meilleurs résultats compatibles</h3>
+				<div class="scanner-result-cards" data-primary-results></div>
+			</section>
+			<div class="scanner-result-actions">
+				<a class="button primary" data-compare href="/comparateur/" hidden>Comparer les trois compresseurs compatibles</a>
+				<a class="button" data-refine href="/calculateur/">Affiner avec ma durée d’utilisation, mon flexible ou plusieurs outils</a>
+				<button class="button subtle" type="button" data-toggle-all aria-expanded="false">Voir tous les résultats</button>
+			</div>
 		</div>
-		<section class="scanner-result-panel uncertain"><span>Données insuffisantes</span><h3>CompatAir refuse de conclure</h3><ul data-insufficient></ul></section>
-		<section class="scanner-unlocks" data-unlocks-section>
-			<p class="eyebrow">Solutions possibles</p>
-			<h3>Un tuyau adapté ou un autre compresseur</h3>
-			<div data-unlocks></div>
-		</section>
-		<section class="scanner-evidence"><h3>Sources du modèle identifié</h3><div data-evidence></div></section>
+
+		<div class="scanner-all-results" data-all-results hidden>
+			<section class="scanner-result-panel can"><span data-can-label>Compatibles</span><h3 data-can-title></h3><div class="scanner-result-cards compact" data-can></div></section>
+			<section class="scanner-result-panel cannot"><span data-cannot-label>Incompatibles</span><h3 data-cannot-title></h3><div class="scanner-result-cards compact" data-cannot></div></section>
+			<section class="scanner-result-panel uncertain"><span>Données insuffisantes</span><h3>CompatAir refuse de conclure</h3><div class="scanner-result-cards compact" data-insufficient></div></section>
+			<section class="scanner-unlocks" data-unlocks-section>
+				<p class="eyebrow">Solutions possibles</p>
+				<h3>Un tuyau adapté ou un autre compresseur</h3>
+				<div data-unlocks></div>
+			</section>
+			<details class="scanner-evidence"><summary>Sources du modèle identifié</summary><div data-evidence></div></details>
+		</div>
 	</section>
 </div>
 
 <script>
 	import type { Compressor, ToolProfile } from '../domain/catalog';
+	import type { CompatibilityResult } from '../domain/compatibility';
 	import { isImageWithinPixelBudget, readImageDimensions, type ImageDimensions } from '../domain/image-dimensions';
 	import { compressorCapabilities, identifyProducts, toolCompatibleCompressors } from '../domain/product-identification';
 
@@ -53,6 +88,8 @@
 	type Detector = { detect(source: ImageBitmap): Promise<DetectorResult[]> };
 	type DetectorConstructor = new (options?: { formats?: string[] }) => Detector;
 	type DetectionWindow = Window & typeof globalThis & { BarcodeDetector?: DetectorConstructor; TextDetector?: DetectorConstructor };
+	type ResultProduct = Compressor | ToolProfile;
+	type ResultCard = { product: ResultProduct; type: 'compressor' | 'tool'; result: CompatibilityResult; requiredPressureBar?: number; qualityGrade?: ResultProduct['confidence'] };
 
 	const root = document.querySelector<HTMLElement>('[data-scanner]');
 	const form = root?.querySelector<HTMLFormElement>('[data-scanner-form]');
@@ -68,7 +105,11 @@
 	const query = <T extends Element>(selector: string) => root?.querySelector<T>(selector);
 	const setText = (selector: string, value: string) => { const element = query<HTMLElement>(selector); if (element) element.textContent = value; };
 	const linkFor = (type: 'compressor' | 'tool', slug: string) => type === 'compressor' ? `/compresseurs/${slug}/` : `/outils-pneumatiques/${slug}/`;
-	const verdictLabel = (verdict: string) => verdict === 'continuous' ? 'continu' : verdict === 'intermittent' ? 'intermittent' : verdict === 'incompatible' ? 'incompatible' : 'données insuffisantes';
+	const verdictLabel = (verdict: CompatibilityResult['verdict']) => verdict === 'continuous' ? 'Compatible en continu' : verdict === 'intermittent' ? 'Compatible par intermittence' : verdict === 'incompatible' ? 'Incompatible' : 'Données insuffisantes';
+	const dataQualityLabel = (grade: ResultProduct['confidence']) => grade === 'A' ? 'Source constructeur complète' : grade === 'B' ? 'Source constructeur partielle' : grade === 'C' ? 'Source insuffisante pour conclure' : 'Source non confirmée';
+	const confidenceRank = { A: 0, B: 1, C: 2, D: 3 } as const;
+	const resultRank = { continuous: 0, intermittent: 1, incompatible: 2, insufficient_data: 3 } as const;
+
 	function loadCatalog() {
 		catalogPromise ??= fetch('/data/catalog.json', { credentials: 'same-origin', headers: { Accept: 'application/json' } }).then(async (response) => {
 			if (!response.ok) throw new Error('catalog_unavailable');
@@ -80,24 +121,53 @@
 		return catalogPromise;
 	}
 
-	function renderList(targetSelector: string, values: Array<{ label: string; href?: string; suffix?: string }>, empty: string) {
-		const target = query<HTMLUListElement>(targetSelector);
-		if (!target) return;
-		target.replaceChildren();
-		for (const value of values.length ? values : [{ label: empty }]) {
-			const item = document.createElement('li');
-			if (value.href) { const link = document.createElement('a'); link.href = value.href; link.textContent = value.label; item.append(link); }
-			else item.textContent = value.label;
-			if (value.suffix) item.append(document.createTextNode(` · ${value.suffix}`));
-			target.append(item);
+	function formatNumber(value: number) { return value.toLocaleString('fr-FR', { maximumFractionDigits: 1 }); }
+	function productName(product: ResultProduct) { return 'label' in product ? product.label : `${product.brand} ${product.model}`; }
+	function resultPressure(product: ResultProduct) { return 'workingPressureBar' in product ? product.workingPressureBar.typical : undefined; }
+	function pairGrade(first: ResultProduct['confidence'], second: ResultProduct['confidence']) { return confidenceRank[first] >= confidenceRank[second] ? first : second; }
+	function renderResultCard({ product, type, result, requiredPressureBar, qualityGrade = product.confidence }: ResultCard) {
+		const article = document.createElement('article'); article.className = `scanner-result-card verdict-${result.verdict}`;
+		const head = document.createElement('div'); head.className = 'scanner-card-head';
+		const title = document.createElement('h4'); const link = document.createElement('a'); link.href = linkFor(type, product.slug); link.textContent = productName(product); title.append(link);
+		const badge = document.createElement('span'); badge.className = 'verdict-badge'; badge.textContent = verdictLabel(result.verdict); head.append(title, badge);
+		const pressure = resultPressure(product) ?? requiredPressureBar;
+		const flow = document.createElement('p');
+		flow.textContent = result.availableFadLpm === undefined
+			? `Débit disponible non vérifiable${pressure !== undefined ? ` à ${formatNumber(pressure)} bar` : ''}.`
+			: `${formatNumber(result.availableFadLpm)} L/min disponibles${pressure !== undefined ? ` à ${formatNumber(pressure)} bar` : ''}.`;
+		const quality = document.createElement('details'); quality.className = 'scanner-card-quality';
+		const summary = document.createElement('summary'); summary.textContent = dataQualityLabel(qualityGrade);
+		const detail = document.createElement('span'); detail.textContent = `Grade technique ${qualityGrade} pour le couple vérifié. Le détail des sources reste disponible sur les fiches.`;
+		quality.append(summary, detail); article.append(head, flow, quality); return article;
+	}
+	function renderCards(selector: string, cards: ResultCard[], empty: string) {
+		const target = query<HTMLElement>(selector); if (!target) return;
+		if (!cards.length) { const message = document.createElement('p'); message.className = 'decision-empty'; message.textContent = empty; target.replaceChildren(message); return; }
+		target.replaceChildren(...cards.map(renderResultCard));
+	}
+	function sortCompatible(cards: ResultCard[]) {
+		return [...cards].sort((a, b) => resultRank[a.result.verdict] - resultRank[b.result.verdict]
+			|| confidenceRank[a.qualityGrade ?? a.product.confidence] - confidenceRank[b.qualityGrade ?? b.product.confidence]
+			|| Math.abs((a.result.availableFadLpm ?? Number.POSITIVE_INFINITY) - (a.result.requiredFadLpm ?? 0)) - Math.abs((b.result.availableFadLpm ?? Number.POSITIVE_INFINITY) - (b.result.requiredFadLpm ?? 0)));
+	}
+	function publishedNeed(product: ResultProduct, type: 'compressor' | 'tool') {
+		if (type === 'compressor') {
+			const compressor = product as Compressor;
+			setText('[data-published-label]', 'Capacité publiée');
+			setText('[data-published-value]', compressor.fadCurve.length ? compressor.fadCurve.map((point) => `${formatNumber(point.litersPerMinute)} L/min à ${formatNumber(point.pressureBar)} bar`).join(' · ') : 'Aucun débit restitué exploitable publié.');
+			return;
 		}
+		const tool = product as ToolProfile;
+		setText('[data-published-label]', 'Besoin publié');
+		if (tool.demandModel === 'fixed-flow') setText('[data-published-value]', `${formatNumber(tool.airflowLpm.typical)} L/min à ${formatNumber(tool.workingPressureBar.typical)} bar.`);
+		else if (tool.demandModel === 'per-action') setText('[data-published-value]', `${formatNumber(tool.airPerActionLiters)} L par ${tool.actionLabel} à ${formatNumber(tool.workingPressureBar.typical)} bar ; cadence à préciser.`);
+		else setText('[data-published-value]', `${tool.demandExplanation} Pression maximale publiée : ${formatNumber(tool.workingPressureBar.max)} bar.`);
 	}
 
 	async function inspectImage(file: File) {
 		const header = new Uint8Array(await file.slice(0, 1_048_576).arrayBuffer());
 		return readImageDimensions(header);
 	}
-
 	function resizedDimensions(dimensions: ImageDimensions, maximumEdge = 2_048) {
 		const scale = Math.min(1, maximumEdge / Math.max(dimensions.width, dimensions.height));
 		return { width: Math.max(1, Math.round(dimensions.width * scale)), height: Math.max(1, Math.round(dimensions.height * scale)) };
@@ -124,11 +194,9 @@
 			photoBitmap = bitmap;
 			const preview = query<HTMLElement>('[data-preview]');
 			if (preview) {
-				const canvas = document.createElement('canvas');
-				canvas.width = bitmap.width; canvas.height = bitmap.height;
+				const canvas = document.createElement('canvas'); canvas.width = bitmap.width; canvas.height = bitmap.height;
 				canvas.setAttribute('role', 'img'); canvas.setAttribute('aria-label', 'Aperçu local réduit de la plaque à lire');
-				canvas.getContext('2d')?.drawImage(bitmap, 0, 0);
-				preview.replaceChildren(canvas);
+				canvas.getContext('2d')?.drawImage(bitmap, 0, 0); preview.replaceChildren(canvas);
 			}
 			if (readPhoto) readPhoto.disabled = false;
 			setText('[data-status]', `Image ${dimensions.width} × ${dimensions.height} px contrôlée puis réduite localement pour la lecture.`);
@@ -142,8 +210,7 @@
 	readPhoto?.addEventListener('click', async () => {
 		const bitmap = photoBitmap;
 		if (!bitmap || !identifier || !readPhoto) return;
-		readPhoto.disabled = true;
-		setText('[data-status]', 'Lecture locale en cours…');
+		readPhoto.disabled = true; setText('[data-status]', 'Lecture locale en cours…');
 		try {
 			await loadCatalog();
 			const detectionWindow = window as DetectionWindow;
@@ -162,73 +229,90 @@
 			const proposal = proposals.find((item) => identifyProducts(item.value, compressors, tools).length > 0) ?? proposals[0];
 			if (proposal) {
 				identifier.value = proposal.value;
-				setText('[data-candidate-origin]', `Proposition issue de ${proposal.origin}, non validée. Vérifiez la plaque puis confirmez.`);
-				setText('[data-status]', 'Un identifiant a été proposé. Aucun modèle n’est validé tant que vous ne cliquez pas sur « Confirmer et vérifier ».');
-			} else {
-				setText('[data-status]', 'Aucune référence lisible n’a été trouvée. Saisissez le numéro ou le code-barres visible sur l’étiquette.');
-			}
-		} catch {
-			setText('[data-status]', 'La lecture automatique locale n’est pas disponible pour cette image. Saisissez l’identifiant visible.');
-		} finally { readPhoto.disabled = false; }
+				setText('[data-candidate-origin]', `Proposition issue de ${proposal.origin}, non validée. Vérifiez l’étiquette puis confirmez.`);
+				setText('[data-status]', 'Un numéro a été proposé. Aucun modèle n’est validé tant que vous ne cliquez pas sur « Identifier la référence ».');
+			} else setText('[data-status]', 'Aucune référence lisible n’a été trouvée. Saisissez le numéro visible sur l’étiquette.');
+		} catch { setText('[data-status]', 'La lecture automatique locale n’est pas disponible pour cette image. Saisissez l’identifiant visible.'); }
+		finally { readPhoto.disabled = false; }
+	});
+
+	query<HTMLButtonElement>('[data-toggle-all]')?.addEventListener('click', () => {
+		const target = query<HTMLElement>('[data-all-results]'); const button = query<HTMLButtonElement>('[data-toggle-all]'); if (!target || !button) return;
+		const expanded = button.getAttribute('aria-expanded') === 'true'; target.hidden = expanded; button.setAttribute('aria-expanded', String(!expanded)); button.textContent = expanded ? 'Voir tous les résultats' : 'Réduire les résultats';
 	});
 
 	form?.addEventListener('submit', async (event) => {
 		event.preventDefault();
-		const error = query<HTMLElement>('[data-error]');
-		if (error) error.hidden = true;
+		const error = query<HTMLElement>('[data-error]'); if (error) error.hidden = true;
 		try { await loadCatalog(); }
-		catch {
-			if (error) { error.hidden = false; error.textContent = 'Le catalogue technique est momentanément indisponible. Réessayez dans quelques instants.'; }
-			return;
-		}
+		catch { if (error) { error.hidden = false; error.textContent = 'Le catalogue technique est momentanément indisponible. Réessayez dans quelques instants.'; } return; }
 		const matches = identifyProducts(identifier?.value ?? '', compressors, tools);
 		if (matches.length !== 1) {
-			if (error) { error.hidden = false; error.textContent = matches.length > 1 ? 'Identifiant ambigu : vérifiez la marque et le modèle sur la plaque.' : 'Aucun modèle ne correspond exactement à cet identifiant validé.'; }
-			query<HTMLElement>('[data-result]')?.setAttribute('hidden', '');
-			return;
+			if (error) { error.hidden = false; error.textContent = matches.length > 1 ? 'Identifiant ambigu : vérifiez la marque et le modèle sur l’étiquette.' : 'Aucun modèle ne correspond exactement à cet identifiant.'; }
+			query<HTMLElement>('[data-result]')?.setAttribute('hidden', ''); return;
 		}
-		const match = matches[0];
-		const product = match.product;
+		const match = matches[0]; const product = match.product;
 		setText('[data-product-name]', `${product.brand} ${product.model}`);
-		setText('[data-match]', `Correspondance exacte par ${match.matchedBy.toUpperCase()} ${match.matchedValue}.`);
+		setText('[data-match-badge]', match.matchedBy === 'ean' || match.matchedBy === 'gtin' ? 'Correspondance exacte par code produit fabricant' : 'Correspondance exacte par référence fabricant');
+		setText('[data-match-detail]', `${match.matchedBy.toUpperCase()} ${match.matchedValue} · ${dataQualityLabel(product.confidence)}.`);
+		const sourceDates = product.evidence.filter((source) => source.sourceType === 'manufacturer' || source.sourceType === 'manual').map((source) => source.retrievedAt).sort();
+		const verifiedAt = sourceDates.at(-1) ?? product.evidence.map((source) => source.retrievedAt).sort().at(-1);
+		setText('[data-source-verified]', verifiedAt ? `Source constructeur vérifiée le ${new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long' }).format(new Date(`${verifiedAt}T12:00:00Z`))}` : 'Date de vérification indisponible');
 		query<HTMLAnchorElement>('[data-product-link]')?.setAttribute('href', linkFor(match.type, product.slug));
+		publishedNeed(product, match.type);
 
+		let compatibleCards: ResultCard[] = []; let incompatibleCards: ResultCard[] = []; let insufficientCards: ResultCard[] = [];
 		if (match.type === 'compressor') {
+			const result = compressorCapabilities(product as Compressor, compressors, tools);
+			compatibleCards = result.compatible.map(({ tool, result }) => ({ product: tool, type: 'tool', result, qualityGrade: pairGrade(product.confidence, tool.confidence) }));
+			incompatibleCards = result.incompatible.map(({ tool, result }) => ({ product: tool, type: 'tool', result, qualityGrade: pairGrade(product.confidence, tool.confidence) }));
+			insufficientCards = result.insufficient.map(({ tool, result }) => ({ product: tool, type: 'tool', result, qualityGrade: pairGrade(product.confidence, tool.confidence) }));
+			setText('[data-can-label]', 'Outils alimentables'); setText('[data-cannot-label]', 'Outils incompatibles');
+			setText('[data-compatible-label]', 'Outils alimentables'); setText('[data-incompatible-label]', 'Outils incompatibles');
+			setText('[data-primary-title]', 'Trois outils alimentables en priorité');
 			const unlockSection = query<HTMLElement>('[data-unlocks-section]'); if (unlockSection) unlockSection.hidden = false;
-			const result = compressorCapabilities(product as (typeof compressors)[number], compressors, tools);
-			setText('[data-can-title]', `${result.compatible.length} outil(s) couvert(s)`);
-			setText('[data-cannot-title]', `${result.incompatible.length} outil(s) incompatibles`);
-			renderList('[data-can]', result.compatible.map(({ tool, result: verdict }) => ({ label: tool.label, href: linkFor('tool', tool.slug), suffix: verdictLabel(verdict.verdict) })), 'Aucun outil compatible ne peut encore être confirmé.');
-			renderList('[data-cannot]', result.incompatible.map(({ tool, result: verdict }) => ({ label: tool.label, href: linkFor('tool', tool.slug), suffix: verdict.limitingFactor === 'pressure' ? 'pression insuffisante' : 'débit insuffisant' })), 'Aucun outil incompatible ne peut être confirmé.');
-			renderList('[data-insufficient]', result.insufficient.map(({ tool }) => ({ label: tool.label, href: linkFor('tool', tool.slug) })), 'Aucun cas à données insuffisantes.');
 			const unlocks = query<HTMLElement>('[data-unlocks]');
-			if (unlocks) {
-				unlocks.replaceChildren(...result.unlocks.map((unlock) => {
-					const article = document.createElement('article');
-					const title = document.createElement('strong'); title.textContent = unlock.toolLabel;
-					const hose = document.createElement('p'); hose.textContent = unlock.hoseAdvice;
-					const alternatives = document.createElement('p'); alternatives.textContent = unlock.alternativeCompressors.length ? `Compresseurs documentés qui débloquent l’usage : ${unlock.alternativeCompressors.map((item) => item.label).join(', ')}.` : 'Aucun compresseur alternatif concluant dans le catalogue actuel.';
-					article.append(title, hose, alternatives); return article;
-				}));
-			}
+			if (unlocks) unlocks.replaceChildren(...result.unlocks.map((unlock) => {
+				const article = document.createElement('article'); const title = document.createElement('strong'); title.textContent = unlock.toolLabel;
+				const hose = document.createElement('p'); hose.textContent = unlock.hoseAdvice;
+				const alternatives = document.createElement('p'); alternatives.textContent = unlock.alternativeCompressors.length ? `Compresseurs documentés qui débloquent l’usage : ${unlock.alternativeCompressors.map((item) => item.label).join(', ')}.` : 'Aucun compresseur alternatif concluant dans le catalogue actuel.';
+				article.append(title, hose, alternatives); return article;
+			}));
+			const compare = query<HTMLAnchorElement>('[data-compare]'); if (compare) compare.hidden = true;
+			query<HTMLAnchorElement>('[data-refine]')?.setAttribute('href', `/calculateur/#compresseur=${encodeURIComponent(product.id)}`);
 		} else {
-			const result = toolCompatibleCompressors(product as (typeof tools)[number], compressors);
-			setText('[data-can-title]', `${result.compatible.length} compresseur(s) compatibles`);
-			setText('[data-cannot-title]', `${result.incompatible.length} compresseur(s) incompatibles`);
-			renderList('[data-can]', result.compatible.map(({ compressor, result: verdict }) => ({ label: `${compressor.brand} ${compressor.model}`, href: linkFor('compressor', compressor.slug), suffix: verdictLabel(verdict.verdict) })), 'Aucun compresseur compatible ne peut encore être confirmé.');
-			renderList('[data-cannot]', result.incompatible.map(({ compressor, result: verdict }) => ({ label: `${compressor.brand} ${compressor.model}`, href: linkFor('compressor', compressor.slug), suffix: verdict.limitingFactor === 'pressure' ? 'pression insuffisante' : 'débit insuffisant' })), 'Aucun compresseur incompatible ne peut être confirmé.');
-			renderList('[data-insufficient]', result.insufficient.map(({ compressor }) => ({ label: `${compressor.brand} ${compressor.model}`, href: linkFor('compressor', compressor.slug) })), 'Aucun cas à données insuffisantes.');
+			const result = toolCompatibleCompressors(product as ToolProfile, compressors);
+			const requiredPressureBar = (product as ToolProfile).workingPressureBar.typical;
+			compatibleCards = result.compatible.map(({ compressor, result }) => ({ product: compressor, type: 'compressor', result, requiredPressureBar, qualityGrade: pairGrade(product.confidence, compressor.confidence) }));
+			incompatibleCards = result.incompatible.map(({ compressor, result }) => ({ product: compressor, type: 'compressor', result, requiredPressureBar, qualityGrade: pairGrade(product.confidence, compressor.confidence) }));
+			insufficientCards = result.insufficient.map(({ compressor, result }) => ({ product: compressor, type: 'compressor', result, requiredPressureBar, qualityGrade: pairGrade(product.confidence, compressor.confidence) }));
+			setText('[data-can-label]', 'Compresseurs compatibles'); setText('[data-cannot-label]', 'Compresseurs incompatibles');
+			setText('[data-compatible-label]', 'Compresseurs compatibles'); setText('[data-incompatible-label]', 'Compresseurs incompatibles');
+			setText('[data-primary-title]', 'Trois meilleurs compresseurs compatibles');
 			const section = query<HTMLElement>('[data-unlocks-section]'); if (section) section.hidden = true;
+			const compare = query<HTMLAnchorElement>('[data-compare]'); const topIds = sortCompatible(compatibleCards).slice(0, 3).map(({ product }) => product.id);
+			if (compare) { compare.hidden = topIds.length < 2; compare.textContent = topIds.length >= 3 ? 'Comparer les trois compresseurs compatibles' : 'Comparer les deux compresseurs compatibles'; compare.href = `/comparateur/#ids=${topIds.join(',')}`; }
+			query<HTMLAnchorElement>('[data-refine]')?.setAttribute('href', `/calculateur/#outil=${encodeURIComponent(product.id)}`);
 		}
+
+		compatibleCards = sortCompatible(compatibleCards);
+		if (match.type === 'compressor') setText('[data-primary-title]', compatibleCards.length >= 3 ? 'Trois outils alimentables en priorité' : compatibleCards.length === 0 ? 'Aucun outil alimentable confirmé' : `${compatibleCards.length} outil${compatibleCards.length > 1 ? 's' : ''} alimentable${compatibleCards.length > 1 ? 's' : ''}`);
+		else setText('[data-primary-title]', compatibleCards.length >= 3 ? 'Trois meilleurs compresseurs compatibles' : compatibleCards.length === 0 ? 'Aucun compresseur compatible confirmé' : `${compatibleCards.length} compresseur${compatibleCards.length > 1 ? 's' : ''} compatible${compatibleCards.length > 1 ? 's' : ''}`);
+		setText('[data-compatible-count]', String(compatibleCards.length)); setText('[data-incompatible-count]', String(incompatibleCards.length)); setText('[data-insufficient-count]', String(insufficientCards.length));
+		setText('[data-can-title]', `${compatibleCards.length} résultat(s) confirmé(s)`); setText('[data-cannot-title]', `${incompatibleCards.length} incompatibilité(s) confirmée(s)`);
+		renderCards('[data-primary-results]', compatibleCards.slice(0, 3), 'Aucun résultat compatible ne peut être confirmé avec les données publiées.');
+		renderCards('[data-can]', compatibleCards, 'Aucun résultat compatible confirmé.');
+		renderCards('[data-cannot]', incompatibleCards, 'Aucune incompatibilité confirmée.');
+		renderCards('[data-insufficient]', insufficientCards, 'Aucun résultat indéterminé.');
 
 		const evidence = query<HTMLElement>('[data-evidence]');
-		if (evidence) {
-			evidence.replaceChildren(...product.evidence.map((source) => {
-				const link = document.createElement('a'); link.href = source.sourceUrl; link.rel = 'noreferrer'; link.textContent = `${source.sourceLabel} · ${source.retrievedAt} · fiabilité ${source.confidence}`; return link;
-			}));
-		}
+		if (evidence) evidence.replaceChildren(...product.evidence.map((source) => {
+			const link = document.createElement('a'); link.href = source.sourceUrl; link.rel = 'noreferrer'; link.textContent = `${source.sourceLabel} · vérifiée le ${source.retrievedAt} · ${dataQualityLabel(source.confidence)} (grade ${source.confidence})`; return link;
+		}));
+		const allResults = query<HTMLElement>('[data-all-results]'); if (allResults) allResults.hidden = true;
+		const toggle = query<HTMLButtonElement>('[data-toggle-all]'); if (toggle) { toggle.setAttribute('aria-expanded', 'false'); toggle.textContent = 'Voir tous les résultats'; }
 		query<HTMLElement>('[data-result]')?.removeAttribute('hidden');
-		query<HTMLElement>('[data-result]')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		query<HTMLElement>('[data-result]')?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
 	});
 
 	window.addEventListener('pagehide', () => photoBitmap?.close(), { once: true });
