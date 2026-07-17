@@ -15,10 +15,12 @@ describe('Lighthouse CI summary', () => {
 		const summary = summarizeLighthouseReports([
 			report('/', '2026-07-15T10:00:00Z', .8, 2400, .08, 180),
 			report('/', '2026-07-15T10:01:00Z', 1, 1800, .02, 20),
+			report('/previous-campaign/', '2026-07-15T09:52:00Z', .4, 5000, .4, 800),
 			report('/old/', '2026-07-14T10:00:00Z', .1, 9000, .9, 2000),
 		]);
 		expect(summary.reportCount).toBe(2);
 		expect(summary.pages['/']).toMatchObject({ runs: 2, categories: { performance: 90 }, labMetrics: { largestContentfulPaintMs: 2100, cumulativeLayoutShift: .05, totalBlockingTimeMs: 100 } });
+		expect(summary.pages['/previous-campaign/']).toBeUndefined();
 		expect(summary.pages['/old/']).toBeUndefined();
 		expect(summary.fieldCoreWebVitals.status).toBe('not_measured_here');
 	});

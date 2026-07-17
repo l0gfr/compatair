@@ -8,8 +8,11 @@ const median = (values) => {
 export function summarizeLighthouseReports(reports) {
 	const valid = reports.filter((report) => report && typeof report.finalUrl === 'string' && !Number.isNaN(Date.parse(report.fetchTime)));
 	if (!valid.length) throw new Error('Aucun rapport Lighthouse exploitable.');
-	const latestFetch = Math.max(...valid.map((report) => Date.parse(report.fetchTime)));
-	const currentRun = valid.filter((report) => Date.parse(report.fetchTime) >= latestFetch - 30 * 60 * 1000);
+	const chronological = [...valid].sort((left, right) => Date.parse(left.fetchTime) - Date.parse(right.fetchTime));
+	let currentRunStart = chronological.length - 1;
+	while (currentRunStart > 0 && Date.parse(chronological[currentRunStart].fetchTime) - Date.parse(chronological[currentRunStart - 1].fetchTime) <= 5 * 60 * 1000) currentRunStart--;
+	const currentRun = chronological.slice(currentRunStart);
+	const latestFetch = Date.parse(currentRun.at(-1).fetchTime);
 	const grouped = Map.groupBy(currentRun, (report) => new URL(report.finalUrl).pathname);
 	const pages = Object.fromEntries([...grouped].sort(([left], [right]) => left.localeCompare(right)).map(([path, pageReports]) => {
 		const auditValues = (audit) => pageReports.map((report) => report.audits?.[audit]?.numericValue).filter(Number.isFinite);
