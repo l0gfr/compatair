@@ -32,6 +32,7 @@
     "catalog:index": "node scripts/catalog.mjs index",
     "catalog:add": "node scripts/catalog.mjs add",
     "catalog:history": "node scripts/append-catalog-evidence.mjs",
+		"indexnow:submit": "node scripts/submit-indexnow.mjs",
     "audit:dist": "node scripts/audit-dist.mjs",
     "archive:verify": "bash scripts/verify-source-archive.sh",
 		"seo:verify-live": "node scripts/verify-live-seo.mjs",

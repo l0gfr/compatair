@@ -78,6 +78,7 @@ if (deployWorkflow.includes(`grep -Fq 'Scanner et vérifier'`)) errors.push('.gi
 if (!deployWorkflow.includes('COMPATAIR_RELEASE_SHA: ${{ github.sha }}')) errors.push('.github/workflows/deploy-production.yml: injection du SHA de release absente');
 if (!deployWorkflow.includes('COMPATAIR_EXPECTED_RELEASE_SHA: ${{ github.sha }}')) errors.push('.github/workflows/deploy-production.yml: SHA attendu absent de la vérification live');
 if (!deployWorkflow.includes('node scripts/verify-live-seo.mjs')) errors.push('.github/workflows/deploy-production.yml: vérification SEO live absente');
+if (!deployWorkflow.includes('pnpm indexnow:submit')) errors.push('.github/workflows/deploy-production.yml: notification IndexNow absente');
 if (/curl[^\n]*\|\s*grep\s+-Fq/.test(deployWorkflow)) errors.push('.github/workflows/deploy-production.yml: curl ne doit pas être pipé vers grep -q avec retry-all-errors');
 if (deployWorkflow.includes('IGNORECASE')) errors.push('.github/workflows/deploy-production.yml: IGNORECASE n’est pas portable avec awk sur les runners Ubuntu');
 for (const [file, workflow] of [['.github/workflows/ci.yml', ciWorkflow], ['.github/workflows/deploy-production.yml', deployWorkflow]]) {

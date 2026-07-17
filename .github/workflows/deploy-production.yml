@@ -262,6 +262,11 @@ jobs:
           node scripts/smoke-live-http.mjs
           node scripts/verify-live-seo.mjs
 
+      - name: Notify IndexNow of changed canonical URLs
+        env:
+          INDEXNOW_BASE_SHA: ${{ github.event.before }}
+        run: pnpm indexnow:submit
+
       - name: Archive signed production invariants
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:

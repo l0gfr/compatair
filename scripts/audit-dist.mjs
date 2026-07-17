@@ -145,8 +145,14 @@ if (artifactPaths.has('/sitemap-index.xml')) {
 		const childPath = join(root, basename(url.pathname));
 		if (!artifactPaths.has(`/${basename(url.pathname)}`)) { errors.push(`sitemap-index.xml: fichier enfant absent ${url.pathname}`); continue; }
 		const child = await readFile(childPath, 'utf8');
-		for (const match of child.matchAll(/<loc>([^<]+)<\/loc>/g)) {
-			const value = decodeXml(match[1]);
+		for (const match of child.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
+			const location = match[1].match(/<loc>([^<]+)<\/loc>/)?.[1];
+			const lastmod = match[1].match(/<lastmod>([^<]+)<\/lastmod>/)?.[1];
+			if (!location) { errors.push(`${basename(childPath)}: entrée sans URL`); continue; }
+			const value = decodeXml(location);
+			const modifiedAt = lastmod ? Date.parse(lastmod) : Number.NaN;
+			if (!Number.isFinite(modifiedAt)) errors.push(`${basename(childPath)}: lastmod absent ou invalide pour ${value}`);
+			else if (modifiedAt > Date.now() + 5 * 60 * 1000) errors.push(`${basename(childPath)}: lastmod futur pour ${value}`);
 			try {
 				const pageUrl = new URL(value);
 				if (pageUrl.origin !== siteOrigin) errors.push(`${basename(childPath)}: origine externe ${value}`);
