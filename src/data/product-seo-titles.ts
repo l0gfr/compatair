@@ -10,6 +10,8 @@ export const productSeoTitles: Record<string, string> = {
 	'atlas-copco-ab25e100': 'Atlas Copco AB25E100 : débit restitué | CompatAir',
 	'atlas-copco-ab30e100': 'Atlas Copco AB30E100 : débit restitué | CompatAir',
 	'atlas-copco-ab40e100t': 'Atlas Copco AB40E100T : débit restitué | CompatAir',
+	'atlas-copco-lz-10-10-bm': 'Atlas Copco LZ 10-10 BM : FAD 930 L/min | CompatAir',
+	'atlas-copco-lz-20-10-bm': 'Atlas Copco LZ 20-10 BM : FAD 1 860 L/min | CompatAir',
 	'boge-po-1-l': 'BOGE PO 1 L : débit restitué | CompatAir',
 	'boge-po-2-l': 'BOGE PO 2 L : débit restitué | CompatAir',
 	'boge-po-3-l-10-bar': 'BOGE PO 3 L 10 bar : débit restitué | CompatAir',

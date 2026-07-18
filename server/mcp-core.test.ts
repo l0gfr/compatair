@@ -24,7 +24,7 @@ describe('MCP core', () => {
 	});
 	it('sizes a per-action demand only from an explicit cadence', () => {
 		const response: any = core.handle({ jsonrpc: '2.0', id: 5, method: 'tools/call', params: { name: 'size_compressor', arguments: { demands: [{ model: 'per-action', litersPerAction: .66, actionsPerMinute: 30, pressureBar: 6.3 }] } } });
-		expect(response.result.structuredContent.engineVersion).toBe('1.2.0');
+		expect(response.result.structuredContent.engineVersion).toBe('1.3.0');
 		expect(response.result.structuredContent.sizing.peakFlowLpm).toBeCloseTo(19.8, 10);
 		expect(response.result.structuredContent.sizing.flowBasis).toBe('derived-average');
 	});

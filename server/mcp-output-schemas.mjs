@@ -84,6 +84,7 @@ const receiptSchema = strict({
 const evaluationSchema = strict({
 	verdict: { type: 'string', enum: ENGINE_VERDICTS }, limitingFactor: string, requiredFadLpm: number, availableFadLpm: number,
 	effectiveAverageCapacityLpm: number, requiredPressureBar: number, demandFlowLpm: number, recommendedFadLpm: number,
+	availableFadBasis: { type: 'string', enum: ['exact', 'interpolated', 'higher-pressure-bound'] }, availableFadReferencePressureBar: number,
 	marginPercent: number, calculationVersion: string, warnings: stringArray, limitations: stringArray, mode: { type: 'string', enum: ['simultaneous', 'successive'] },
 }, ['verdict']);
 const candidateSchema = strict({ compressor: productSummarySchema, evaluation: evaluationSchema, air_supply_verdict: scopedVerdictSchema }, ['compressor', 'evaluation']);

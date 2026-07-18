@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import type { Compressor, ToolProfile } from './catalog';
-import { interpolateFad } from './compatibility';
+import { resolveAvailableFad } from './compatibility';
 import { CALCULATION_VERSION, sizeConfiguration, sizingInputSchema, type SizingResult } from './sizing';
 
 function isHttpsUrl(value: string) { try { return new URL(value).protocol === 'https:'; } catch { return false; } }
@@ -208,11 +208,12 @@ export async function createPassportReport(input: unknown, compressors: Passport
 	const configuration = parsePassportConfiguration(input, new Set(compressors.map((item) => item.id)), new Set(tools.map((item) => item.id)));
 	const base = sizeConfiguration(configuration);
 	const selected = compressors.find((item) => item.id === configuration.selectedCompressor);
+	const selectedFadResolution = selected ? resolveAvailableFad(selected, base.requiredPressureBar) : undefined;
 	const compressorInput = configuration.selectedCompressor === 'custom'
 		? configuration.custom.maxPressureBar !== undefined ? { ...configuration.custom, maxPressureBar: configuration.custom.maxPressureBar } : undefined
 		: selected ? {
 			maxPressureBar: selected.maxPressureBar,
-			availableFadLpm: interpolateFad(selected, base.requiredPressureBar),
+			availableFadLpm: selectedFadResolution?.litersPerMinute,
 			tankLiters: selected.tankLiters,
 			dutyCycle: selected.dutyCycle,
 		} : undefined;
@@ -247,6 +248,9 @@ export async function createPassportReport(input: unknown, compressors: Passport
 	}
 	const warnings = [...new Set([
 		...result.warnings,
+		...(selectedFadResolution?.basis === 'higher-pressure-bound'
+			? [`Borne conservatrice : ${selectedFadResolution.litersPerMinute.toLocaleString('fr-FR')} L/min mesurés à ${selectedFadResolution.referencePressureBar?.toLocaleString('fr-FR')} bar sont retenus pour le besoin à ${base.requiredPressureBar.toLocaleString('fr-FR')} bar.`]
+			: []),
 		'Les pertes du tuyau, des raccords, du filtre et du détendeur ne sont pas soustraites sans courbe fabricant ou mesure en charge.',
 		'Le Passeport décrit la configuration déclarée. Il ne certifie ni l’installation, ni la conformité réglementaire, ni l’état réel du matériel.',
 	])];

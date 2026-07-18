@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const CALCULATION_VERSION = '1.2.0' as const;
+export const CALCULATION_VERSION = '1.3.0' as const;
 export const STANDARD_ATMOSPHERE_BAR = 1.01325 as const;
 
 const fixedFlowDemandSchema = z.object({

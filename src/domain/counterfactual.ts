@@ -1,4 +1,4 @@
-import { interpolateFad } from './compatibility';
+import { resolveAvailableFad } from './compatibility';
 import { sizeConfiguration, sizingInputSchema, type SizingInput, type SizingResult } from './sizing';
 
 export type CounterfactualKind = 'pressure' | 'flexible' | 'simultaneity' | 'leak' | 'cadence' | 'machine';
@@ -45,7 +45,7 @@ function machineInput(machine: CounterfactualMachine, requiredPressureBar: numbe
 	const availableFadLpm = ['C', 'D'].includes(machine.confidence ?? '')
 		? undefined
 		: machine.fadCurve
-			? interpolateFad({ fadCurve: machine.fadCurve }, requiredPressureBar)
+			? resolveAvailableFad({ fadCurve: machine.fadCurve }, requiredPressureBar)?.litersPerMinute
 			: machine.documentedFadPressureBar !== undefined && samePressure(machine.documentedFadPressureBar, requiredPressureBar)
 				? machine.availableFadLpm
 				: undefined;

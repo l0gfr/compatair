@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 import { UCP_CAPABILITY_NAME, UCP_CAPABILITY_VERSION, UCP_PROTOCOL_VERSION } from './ucp-core.mjs';
 import { CORE_TOOL_NAMES, LEGACY_SUCCESSORS, outputSchemas, receiptSchema } from './mcp-output-schemas.mjs';
 
-const ENGINE_VERSION = '1.2.0';
+const ENGINE_VERSION = '1.3.0';
 const MCP_SERVER_VERSION = '2.1.0';
 const METHOD_VERSION = '2026.07';
 const VERDICT_SCHEMA_VERSION = '2.0.0';
@@ -169,6 +169,18 @@ function interpolateFad(compressor, pressureBar) {
 	return lower.litersPerMinute + ((pressureBar - lower.pressureBar) / (upper.pressureBar - lower.pressureBar)) * (upper.litersPerMinute - lower.litersPerMinute);
 }
 
+function resolveAvailableFad(compressor, pressureBar) {
+	const curve = [...(compressor.fadCurve ?? [])].sort((a, b) => a.pressureBar - b.pressureBar);
+	if (!curve.length) return undefined;
+	const exact = curve.find((point) => point.pressureBar === pressureBar);
+	if (exact) return { litersPerMinute: exact.litersPerMinute, basis: 'exact', referencePressureBar: exact.pressureBar };
+	const interpolated = interpolateFad(compressor, pressureBar);
+	if (interpolated !== undefined) return { litersPerMinute: interpolated, basis: 'interpolated' };
+	const lowestHigherPressurePoint = curve.find((point) => point.pressureBar > pressureBar);
+	if (!lowestHigherPressurePoint) return undefined;
+	return { litersPerMinute: lowestHigherPressurePoint.litersPerMinute, basis: 'higher-pressure-bound', referencePressureBar: lowestHigherPressurePoint.pressureBar };
+}
+
 function compatibility(compressor, tool, safetyMargin = .25) {
 	if (tool.demandModel !== 'fixed-flow') return {
 		verdict: 'insufficient_data',
@@ -178,14 +190,19 @@ function compatibility(compressor, tool, safetyMargin = .25) {
 	};
 	const requiredFadLpm = tool.airflowLpm.typical * (1 + safetyMargin);
 	if (compressor.maxPressureBar < tool.workingPressureBar.typical) return { verdict: 'incompatible', limitingFactor: 'pressure', requiredFadLpm, calculationVersion: ENGINE_VERSION };
-	const availableFadLpm = interpolateFad(compressor, tool.workingPressureBar.typical);
+	const fadResolution = resolveAvailableFad(compressor, tool.workingPressureBar.typical);
+	const availableFadLpm = fadResolution?.litersPerMinute;
 	if (availableFadLpm === undefined || ['C', 'D'].includes(compressor.confidence)) return { verdict: 'insufficient_data', limitingFactor: 'data', requiredFadLpm, calculationVersion: ENGINE_VERSION };
 	const effectiveAverageCapacityLpm = availableFadLpm * (compressor.dutyCycle ?? 1);
 	const continuous = availableFadLpm >= tool.airflowLpm.typical && effectiveAverageCapacityLpm >= tool.airflowLpm.typical;
 	return {
 		verdict: continuous ? 'continuous' : 'incompatible', limitingFactor: continuous ? undefined : compressor.dutyCycle && effectiveAverageCapacityLpm < tool.airflowLpm.typical ? 'duty_cycle' : 'flow',
 		requiredFadLpm, availableFadLpm, effectiveAverageCapacityLpm, marginPercent: ((availableFadLpm - tool.airflowLpm.typical) / tool.airflowLpm.typical) * 100,
-		warnings: continuous && availableFadLpm < requiredFadLpm ? [`Le débit nominal est couvert, mais la marge recommandée de ${Math.round(safetyMargin * 100)} % n’est pas atteinte.`] : [],
+		availableFadBasis: fadResolution.basis, availableFadReferencePressureBar: fadResolution.referencePressureBar,
+		warnings: [
+			...(continuous && availableFadLpm < requiredFadLpm ? [`Le débit nominal est couvert, mais la marge recommandée de ${Math.round(safetyMargin * 100)} % n’est pas atteinte.`] : []),
+			...(fadResolution.basis === 'higher-pressure-bound' ? [`Borne conservatrice : ${availableFadLpm} L/min mesurés à ${fadResolution.referencePressureBar} bar sont retenus pour le besoin à ${tool.workingPressureBar.typical} bar ; aucun point de courbe n’est inventé.`] : []),
+		],
 		calculationVersion: ENGINE_VERSION,
 	};
 }
@@ -202,18 +219,21 @@ function evaluateSystem(compressor, selectedTools, mode = 'successive') {
 		: Math.max(...selectedTools.map((tool) => tool.airflowLpm.typical));
 	const recommendedFadLpm = demandFlowLpm * 1.25;
 	if (compressor.maxPressureBar < requiredPressureBar) return { verdict: 'incompatible', limitingFactor: 'pressure', requiredPressureBar, demandFlowLpm, recommendedFadLpm, limitations, mode };
-	const availableFadLpm = ['C', 'D'].includes(compressor.confidence) ? undefined : interpolateFad(compressor, requiredPressureBar);
+	const fadResolution = ['C', 'D'].includes(compressor.confidence) ? undefined : resolveAvailableFad(compressor, requiredPressureBar);
+	const availableFadLpm = fadResolution?.litersPerMinute;
 	if (availableFadLpm === undefined) {
 		limitations.push('Le FAD du compresseur à la pression demandée est absent ou insuffisamment fiable.');
 		return { verdict: 'insufficient_data', limitingFactor: 'data', requiredPressureBar, demandFlowLpm, recommendedFadLpm, limitations, mode };
 	}
 	const effectiveAverageCapacityLpm = availableFadLpm * (compressor.dutyCycle ?? 1);
+	if (fadResolution.basis === 'higher-pressure-bound') limitations.push(`Borne conservatrice : ${availableFadLpm} L/min mesurés à ${fadResolution.referencePressureBar} bar sont retenus pour le besoin à ${requiredPressureBar} bar ; aucun point de courbe n’est inventé.`);
 	const verdict = availableFadLpm >= demandFlowLpm && effectiveAverageCapacityLpm >= demandFlowLpm ? 'continuous' : 'incompatible';
 	if (verdict === 'continuous' && availableFadLpm < recommendedFadLpm) limitations.push('Le débit demandé est couvert, mais la réserve recommandée de 25 % n’est pas atteinte.');
 	if (verdict === 'incompatible') limitations.push(effectiveAverageCapacityLpm < demandFlowLpm ? 'La capacité moyenne documentée ne couvre pas la demande.' : 'Le débit de pointe documenté ne couvre pas la demande.');
 	return {
 		verdict, limitingFactor: verdict === 'incompatible' ? compressor.dutyCycle && effectiveAverageCapacityLpm < demandFlowLpm ? 'duty_cycle' : 'flow' : undefined,
-		requiredPressureBar, demandFlowLpm, recommendedFadLpm, availableFadLpm, effectiveAverageCapacityLpm, limitations, mode,
+		requiredPressureBar, demandFlowLpm, recommendedFadLpm, availableFadLpm, effectiveAverageCapacityLpm,
+		availableFadBasis: fadResolution.basis, availableFadReferencePressureBar: fadResolution.referencePressureBar, limitations, mode,
 	};
 }
 

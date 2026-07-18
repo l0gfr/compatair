@@ -30,7 +30,7 @@ La fiche officielle de la [Metabo DS 14](https://www.metabo.com/za/en/tools/comp
 
 Le besoin nominal de 340 L/min est la donnée constructeur. Avec la [marge indicative](/glossaire/#marge-compatair) de 25 % affichée par CompatAir, le seuil devient `340 × 1,25 = 425 L/min`. Cette majoration ne doit pas être présentée comme une prescription Metabo.
 
-Le débit à comparer est le [débit restitué du compresseur](/guides/debit-restitue-fad-vs-debit-aspire/) à 6,2 bar. Une valeur de remplissage, un débit aspiré ou un point FAD publié à une autre pression ne répondent pas seuls à la question.
+Le débit à comparer est le [débit restitué du compresseur](/guides/debit-restitue-fad-vs-debit-aspire/) à 6,2 bar. Une valeur de remplissage ou un débit aspiré ne répondent pas à la question. Un point FAD mesuré au-dessus de 6,2 bar peut seulement servir de borne conservatrice, avec sa pression d’origine affichée.
 
 ## Exemple : 203 L/min disponibles pour 340 demandés
 
@@ -61,7 +61,7 @@ Vérifiez la pression à l’entrée de la visseuse pendant qu’elle consomme d
 - exiger un FAD documenté à 6,2 bar ;
 - rechercher 340 L/min pour le besoin nominal ;
 - lire 425 L/min comme le seuil interne avec marge ;
-- ne pas réutiliser un point FAD publié à une autre pression ;
+- utiliser un point FAD à pression supérieure uniquement comme borne conservatrice explicite ;
 - contrôler flexible, raccords, filtration et pression en charge ;
 - saisir une cadence seulement si l’usage réel est connu.
 

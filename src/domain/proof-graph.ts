@@ -1,5 +1,5 @@
 import type { Compressor, ToolProfile } from './catalog';
-import { evaluateCompatibility, interpolateFad, type CompatibilityResult, type CompatibilityVerdict } from './compatibility';
+import { evaluateCompatibility, resolveAvailableFad, type CompatibilityResult, type CompatibilityVerdict, type FadResolutionBasis } from './compatibility';
 
 export type ProofGraphLayer = 'verdict' | 'calculation' | 'field' | 'evidence' | 'version';
 export type ProofGraphNode = {
@@ -18,6 +18,8 @@ export type PublishedVerdictPair = {
 	limitingFactor?: 'flow' | 'pressure' | 'tank' | 'duty_cycle' | 'data';
 	requiredFadLpm?: number;
 	availableFadLpm?: number;
+	availableFadBasis?: FadResolutionBasis;
+	availableFadReferencePressureBar?: number;
 	marginPercent?: number;
 };
 
@@ -40,6 +42,7 @@ export function createProofGraph(
 ) {
 	const calculated = evaluateCompatibility(compressor, tool);
 	const result = publishedPair ?? calculated;
+	const fadResolution = resolveAvailableFad(compressor, tool.workingPressureBar.typical ?? -1);
 	const nodes: ProofGraphNode[] = [];
 	const edges: ProofGraphEdge[] = [];
 	const nodeIds = new Set<string>();
@@ -76,7 +79,7 @@ export function createProofGraph(
 
 	addNode({ id: 'verdict:published', layer: 'verdict', kind: result.verdict, label: 'Verdict publié', value: verdictLabels[result.verdict], detail: `Confiance ${result.confidence}. Facteur limitant : ${result.limitingFactor ?? 'aucun identifié'}.` });
 	addNode({ id: 'calculation:required-fad', layer: 'calculation', kind: 'required-fad', label: 'FAD recommandé', value: formatNumber(result.requiredFadLpm, 'L/min'), detail: 'Consommation publiée de l’outil majorée par la réserve de dimensionnement sélectionnée.' });
-	addNode({ id: 'calculation:available-fad', layer: 'calculation', kind: 'available-fad', label: 'FAD disponible', value: formatNumber(result.availableFadLpm, 'L/min'), detail: `Débit restitué recherché à ${tool.workingPressureBar.typical ?? 'une pression non documentée'} bar, sans extrapolation hors de la courbe publiée.` });
+	addNode({ id: 'calculation:available-fad', layer: 'calculation', kind: 'available-fad', label: 'FAD disponible', value: formatNumber(result.availableFadLpm, 'L/min'), detail: fadResolution?.basis === 'higher-pressure-bound' ? `Borne conservatrice issue du point publié à ${fadResolution.referencePressureBar} bar pour un besoin à ${tool.workingPressureBar.typical} bar ; aucun point de courbe n’est inventé.` : `Débit restitué recherché à ${tool.workingPressureBar.typical ?? 'une pression non documentée'} bar par valeur exacte ou interpolation entre deux points publiés.` });
 	addNode({ id: 'calculation:margin', layer: 'calculation', kind: 'margin', label: 'Écart au besoin brut', value: result.marginPercent === undefined ? 'Non calculable' : `${result.marginPercent.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} %`, detail: 'Écart entre le FAD disponible et la consommation brute publiée de l’outil.' });
 	addEdge('calculation:required-fad', 'verdict:published', 'fixe le seuil');
 	addEdge('calculation:available-fad', 'verdict:published', 'est comparé au seuil');
@@ -85,11 +88,11 @@ export function createProofGraph(
 	const airflow = tool.demandModel === 'fixed-flow' ? `${tool.airflowLpm.typical.toLocaleString('fr-FR')} L/min` : 'Débit minute non documenté';
 	const airflowField = addField('tool', 'airflowLpm', 'Consommation de l’outil', airflow, `${tool.brand} ${tool.model} · modèle de demande ${tool.demandModel}.`);
 	const pressureField = addField('tool', 'workingPressureBar', 'Pression de travail', tool.workingPressureBar.typical === undefined ? 'Non documentée' : `${tool.workingPressureBar.typical.toLocaleString('fr-FR')} bar`, 'La pression sert à choisir le point FAD comparable sur le compresseur.');
-	const curveField = addField('compressor', 'fadCurve', 'Courbe FAD du compresseur', compressor.fadCurve.length ? compressor.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ') : 'Aucun point publié', 'Seuls les points documentés et l’interpolation entre deux points sont autorisés.');
+	const curveField = addField('compressor', 'fadCurve', 'Courbe FAD du compresseur', compressor.fadCurve.length ? compressor.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ') : 'Aucun point publié', 'Sont autorisés : valeur exacte, interpolation entre deux points et borne conservatrice issue d’un point mesuré à une pression supérieure au besoin.');
 	const maxPressureField = addField('compressor', 'maxPressureBar', 'Pression maximale', `${compressor.maxPressureBar.toLocaleString('fr-FR')} bar`, 'Une pression maximale inférieure au besoin rend la configuration incompatible.');
 	addEdge(airflowField, 'calculation:required-fad', 'alimente');
 	addEdge(pressureField, 'calculation:available-fad', 'sélectionne la pression');
-	addEdge(curveField, 'calculation:available-fad', 'permet interpolation ou valeur exacte');
+	addEdge(curveField, 'calculation:available-fad', 'permet valeur exacte, interpolation ou borne conservatrice');
 	addEdge(maxPressureField, 'verdict:published', 'borne la pression');
 
 	addNode({ id: 'version:catalog', layer: 'version', kind: 'catalog', label: 'Version du catalogue', value: shortVersion(versions.catalogVersion), detail: versions.catalogVersion });
@@ -116,7 +119,7 @@ export function createProofGraph(
 		edges,
 		recalculatedMatchesSnapshot,
 		simulationDefaults: {
-			compressorFadLpm: interpolateFad(compressor, tool.workingPressureBar.typical ?? -1),
+			compressorFadLpm: fadResolution?.litersPerMinute,
 			toolAirflowLpm: tool.demandModel === 'fixed-flow' ? tool.airflowLpm.typical : undefined,
 			toolPressureBar: tool.workingPressureBar.typical,
 			safetyMarginPercent: 25,

@@ -125,7 +125,7 @@
       },
       "EngineEvaluation": {
         "type": "object", "required": ["verdict"],
-        "properties": { "id": { "type": "string" }, "compressorId": { "type": "string" }, "toolId": { "type": "string" }, "verdict": { "enum": ["continuous", "intermittent", "incompatible", "insufficient_data"] }, "confidence": { "enum": ["high", "medium", "low"] }, "limitingFactor": { "type": "string" }, "requiredFadLpm": { "type": "number" }, "availableFadLpm": { "type": "number" }, "marginPercent": { "type": "number" }, "calculationVersion": { "type": "string" }, "warnings": { "type": "array", "items": { "type": "string" } } },
+        "properties": { "id": { "type": "string" }, "compressorId": { "type": "string" }, "toolId": { "type": "string" }, "verdict": { "enum": ["continuous", "intermittent", "incompatible", "insufficient_data"] }, "confidence": { "enum": ["high", "medium", "low"] }, "limitingFactor": { "type": "string" }, "requiredFadLpm": { "type": "number" }, "availableFadLpm": { "type": "number" }, "availableFadBasis": { "enum": ["exact", "interpolated", "higher-pressure-bound"] }, "availableFadReferencePressureBar": { "type": "number" }, "marginPercent": { "type": "number" }, "calculationVersion": { "type": "string" }, "warnings": { "type": "array", "items": { "type": "string" } } },
         "additionalProperties": false
       },
       "CompatibilityResult": {

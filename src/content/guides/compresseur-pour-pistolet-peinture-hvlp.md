@@ -33,7 +33,7 @@ Cette marge est une convention interne, pas une spécification ABAC. Un compress
 
 ## Refuser les comparaisons incomplètes
 
-Un débit restitué publié uniquement à 7 bar ne doit pas être automatiquement recopié à 4 bar. CompatAir n’interpole que si deux points constructeur encadrent la pression recherchée. Avec un seul point à une autre pression, le résultat reste « données insuffisantes ».
+Un débit restitué publié uniquement à 7 bar ne doit pas être recopié comme s’il avait été mesuré à 4 bar. CompatAir peut toutefois conserver ce débit à 7 bar comme borne conservatrice pour un besoin inférieur, en affichant la pression de mesure. Cette règle ne remplace ni une courbe complète ni la vérification des pertes du réseau.
 
 Le [débit aspiré](/guides/debit-restitue-fad-vs-debit-aspire/) ne remplace pas non plus le FAD. La valeur comparable est l’air effectivement délivré dans des conditions documentées.
 

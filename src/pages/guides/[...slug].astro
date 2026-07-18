@@ -3,7 +3,7 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { compressors, tools } from '../../data/catalog';
 import { activeOffers } from '../../data/offers';
-import { evaluateCompatibility } from '../../domain/compatibility';
+import { compatibilityFadLabel, evaluateCompatibility } from '../../domain/compatibility';
 import { guideAudiences, guideMetiers } from '../../domain/editorial-taxonomy';
 import { compressorDisplayName } from '../../domain/product-display';
 import { rankCompatibleCompressors } from '../../domain/seo-selection';
@@ -97,7 +97,7 @@ const articleJsonLd = {
 				<h2 id="guide-next-step-title">Vérifier ce guide avec un outil réel</h2>
 				{relatedTool ? (
 					<>
-						<p>Le profil publié de <strong>{relatedTool.label}</strong> est déjà disponible. Le calculateur compare son besoin au débit restitué documenté, à la même pression.</p>
+						<p>Le profil publié de <strong>{relatedTool.label}</strong> est déjà disponible. Le calculateur compare son besoin au débit restitué documenté, avec la pression et la base de comparaison visibles.</p>
 						<div class="actions">
 							<a class="button primary" href={`/calculateur/#outil=${relatedTool.id}`}>Tester cet outil</a>
 							<a class="button" href={`/outils-pneumatiques/${relatedTool.slug}/`}>Voir la fiche outil</a>
@@ -109,7 +109,7 @@ const articleJsonLd = {
 									{compatibleCompressors.map(({ compressor, result }) => (
 										<a href={`/calculateur/#outil=${encodeURIComponent(relatedTool.id)}&compresseur=${encodeURIComponent(compressor.id)}`}>
 												<strong>{compressorDisplayName(compressor)}</strong>
-											<span>{Math.round(result.availableFadLpm!)} L/min restitués documentés à la pression de l’outil</span>
+											<span>{compatibilityFadLabel(result, relatedTool.workingPressureBar.typical!)}</span>
 										</a>
 									))}
 								</div>

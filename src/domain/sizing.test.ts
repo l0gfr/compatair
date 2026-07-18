@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { inflationFreeAirLiters, perActionAverageFlow, sizeAirDemand, sizeConfiguration, usableTankAir } from './sizing';
 import { barToPsi, cfmToLitersPerMinute, litersPerMinuteToCfm, litersPerSecondToLitersPerMinute, psiToBar } from './units';
 import { compressors, tools } from '../data/catalog';
-import { evaluateCompatibility, interpolateFad } from './compatibility';
+import { evaluateCompatibility, interpolateFad, resolveAvailableFad } from './compatibility';
 
 describe('unit conversions', () => {
 	it('round-trips pressure', () => {
@@ -32,16 +32,24 @@ describe('compatibility engine', () => {
 		expect(evaluateCompatibility(compressor!, tool!).verdict).toBe('insufficient_data');
 	});
 
-	it('does not reuse a single FAD point at another pressure', () => {
+	it('uses a higher-pressure FAD point only as an explicit conservative bound', () => {
 		const compressor = compressors.find((item) => item.id === 'abac-atf-s-3-24');
 		const tool = tools.find((item) => item.id === 'einhell-tc-pe-150');
-		expect(evaluateCompatibility(compressor!, tool!).verdict).toBe('insufficient_data');
+		const result = evaluateCompatibility(compressor!, tool!);
+		expect(result.verdict).toBe('continuous');
+		expect(result.availableFadLpm).toBe(150);
+		expect(result.availableFadBasis).toBe('higher-pressure-bound');
+		expect(result.availableFadReferencePressureBar).toBe(10);
+		expect(result.warnings.at(-1)).toContain('Borne conservatrice');
 	});
 
-	it('keeps the new Metabo single-point profiles strict at 6.3 bar', () => {
+	it('does not turn a conservative bound below nominal demand into compatibility', () => {
 		const compressor = compressors.find((item) => item.id === 'metabo-basic-250-50-w');
 		const tool = tools.find((item) => item.id === 'einhell-tc-pe-150');
-		expect(evaluateCompatibility(compressor!, tool!).verdict).toBe('insufficient_data');
+		const result = evaluateCompatibility(compressor!, tool!);
+		expect(result.verdict).toBe('incompatible');
+		expect(result.availableFadLpm).toBe(95);
+		expect(result.availableFadBasis).toBe('higher-pressure-bound');
 	});
 
 	it('keeps the new Metabo industrial point bound to its documented pressure', () => {
@@ -49,6 +57,7 @@ describe('compatibility engine', () => {
 		expect(compressor).toBeDefined();
 		expect(interpolateFad(compressor!, 8.8)).toBe(360);
 		expect(interpolateFad(compressor!, 7)).toBeUndefined();
+		expect(resolveAvailableFad(compressor!, 7)).toMatchObject({ litersPerMinute: 360, basis: 'higher-pressure-bound', referencePressureBar: 8.8 });
 	});
 
 	it('keeps each ABAC industrial FAD bound to its documented pressure', () => {
@@ -82,13 +91,17 @@ describe('compatibility engine', () => {
 			expect(compressor!.tankLiters).toBe(100);
 			expect(interpolateFad(compressor!, 7)).toBe(fad);
 			expect(interpolateFad(compressor!, 6.3)).toBeUndefined();
+			expect(resolveAvailableFad(compressor!, 6.3)).toMatchObject({ litersPerMinute: fad, basis: 'higher-pressure-bound', referencePressureBar: 7 });
 		}
 	});
 
-	it('does not reuse an 8 bar compressor point for a 6.2 bar ratchet', () => {
+	it('uses an 8 bar compressor point as a visible lower bound for a 6.2 bar ratchet', () => {
 		const compressor = compressors.find((item) => item.id === 'metabo-mega-400-50-w');
 		const tool = tools.find((item) => item.id === 'metabo-drs-68-set');
-		expect(evaluateCompatibility(compressor!, tool!).verdict).toBe('insufficient_data');
+		const result = evaluateCompatibility(compressor!, tool!);
+		expect(result.verdict).toBe('continuous');
+		expect(result.availableFadBasis).toBe('higher-pressure-bound');
+		expect(result.availableFadReferencePressureBar).toBe(8);
 	});
 
 	it('rejects the new air screwdriver when a comparable curve is below its demand', () => {
@@ -100,7 +113,7 @@ describe('compatibility engine', () => {
 	});
 
 	it('exposes the expanded sourced catalog', () => {
-		expect(compressors).toHaveLength(104);
+		expect(compressors).toHaveLength(106);
 		expect(tools).toHaveLength(90);
 	});
 
@@ -142,7 +155,7 @@ describe('air demand sizing', () => {
 		expect(sizeAirDemand({ toolFlowLpm: 200, safetyMargin: 0.25 })).toEqual({
 			peakFlowLpm: 200,
 			recommendedFadLpm: 250,
-			calculationVersion: '1.2.0',
+			calculationVersion: '1.3.0',
 		});
 	});
 

@@ -198,7 +198,7 @@
       "properties": {
         "change": { "type": "object", "required": ["field", "from", "to"], "properties": { "field": { "const": "compressorId" }, "from": { "type": "string" }, "to": { "type": "string" } }, "additionalProperties": false },
         "compressor": { "$ref": "#/$defs/ProductSummary" },
-        "evaluation": { "type": "object", "required": ["verdict"], "properties": { "verdict": { "enum": ["continuous", "intermittent", "incompatible", "insufficient_data"] }, "limitingFactor": { "type": "string" }, "requiredPressureBar": { "type": "number" }, "demandFlowLpm": { "type": "number" }, "recommendedFadLpm": { "type": "number" }, "availableFadLpm": { "type": "number" }, "effectiveAverageCapacityLpm": { "type": "number" }, "limitations": { "type": "array", "items": { "type": "string" } }, "mode": { "enum": ["successive", "simultaneous"] } }, "additionalProperties": false },
+        "evaluation": { "type": "object", "required": ["verdict"], "properties": { "verdict": { "enum": ["continuous", "intermittent", "incompatible", "insufficient_data"] }, "limitingFactor": { "type": "string" }, "requiredPressureBar": { "type": "number" }, "demandFlowLpm": { "type": "number" }, "recommendedFadLpm": { "type": "number" }, "availableFadLpm": { "type": "number" }, "availableFadBasis": { "enum": ["exact", "interpolated", "higher-pressure-bound"] }, "availableFadReferencePressureBar": { "type": "number" }, "effectiveAverageCapacityLpm": { "type": "number" }, "limitations": { "type": "array", "items": { "type": "string" } }, "mode": { "enum": ["successive", "simultaneous"] } }, "additionalProperties": false },
         "air_supply_verdict": { "$ref": "#/$defs/ScopedVerdict" }
       },
       "additionalProperties": false

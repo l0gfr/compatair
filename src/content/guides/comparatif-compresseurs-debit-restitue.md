@@ -52,7 +52,7 @@ Le besoin d’un outil doit associer un débit en litres par minute et une press
 
 Les fiches qui ne donnent qu’un point de débit restitué restent utilisables, mais uniquement à la pression de ce point. Une valeur publiée à 8 bar ne prouve pas le débit disponible à 6,2 bar. CompatAir refuse cette extrapolation.
 
-Lorsqu’une courbe contient plusieurs points, CompatAir peut calculer une <a href="/glossaire/#interpolation">valeur intermédiaire</a> uniquement entre deux pressions documentées. La courbe n’est jamais prolongée en dessous du premier point ou au-delà du dernier.
+Lorsqu’une courbe contient plusieurs points, CompatAir peut calculer une <a href="/glossaire/#interpolation">valeur intermédiaire</a> uniquement entre deux pressions documentées. Pour une pression inférieure au premier point, CompatAir conserve ce débit mesuré comme borne conservatrice et affiche sa pression d’origine ; il ne calcule pas une valeur extrapolée. Au-delà du dernier point, le résultat reste indéterminé.
 
 ## Lire les résultats sans surinterpréter la cuve
 

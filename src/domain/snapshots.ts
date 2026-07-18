@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import type { Compressor, ToolProfile } from './catalog';
 import { buildNormalizedCatalog } from './catalog-normalization';
 import { evaluateCompatibility, type CompatibilityVerdict } from './compatibility';
+import type { FadResolutionBasis } from './compatibility';
 import { CALCULATION_VERSION } from './sizing';
 
 function version(value: unknown) {
@@ -34,7 +35,10 @@ export type VerdictSnapshotPair = {
 	limitingFactor?: 'flow' | 'pressure' | 'tank' | 'duty_cycle' | 'data';
 	requiredFadLpm?: number;
 	availableFadLpm?: number;
+	availableFadBasis?: FadResolutionBasis;
+	availableFadReferencePressureBar?: number;
 	marginPercent?: number;
+	warnings: string[];
 };
 
 export function createVerdictSnapshot(input: {
@@ -56,7 +60,10 @@ export function createVerdictSnapshot(input: {
 				...(result.limitingFactor ? { limitingFactor: result.limitingFactor } : {}),
 				...(result.requiredFadLpm !== undefined ? { requiredFadLpm: result.requiredFadLpm } : {}),
 				...(result.availableFadLpm !== undefined ? { availableFadLpm: result.availableFadLpm } : {}),
+				...(result.availableFadBasis ? { availableFadBasis: result.availableFadBasis } : {}),
+				...(result.availableFadReferencePressureBar !== undefined ? { availableFadReferencePressureBar: result.availableFadReferencePressureBar } : {}),
 				...(result.marginPercent !== undefined ? { marginPercent: result.marginPercent } : {}),
+				warnings: result.warnings,
 			};
 		}));
 	const summary = pairs.reduce<Record<CompatibilityVerdict, number>>((counts, pair) => {

@@ -30,7 +30,7 @@
   "limitations": ["Actual hose pressure losses remain unknown without installed length, internal diameter, fittings and measurement or a documented system curve."],
   "next_actions": ["https://compatair.fr/graphe-preuve/"],
   "catalogVersion": "d7f4e09e8697ad7dcea1e903edcfb47bff8f828cc9b56fb8af88d0ac1236a5dd",
-  "engineVersion": "1.2.0",
+  "engineVersion": "1.3.0",
   "security": { "access": "anonymous_read_only", "accepts_pii": false, "accepts_payment": false, "mutates_commerce_state": false },
   "limits": ["Actual hose pressure losses remain unknown without installed length, internal diameter, fittings and measurement or a documented system curve."],
   "alternatives": [],

@@ -2,6 +2,13 @@ import type { Compressor, ToolProfile } from './catalog';
 import { CALCULATION_VERSION, sizeConfiguration } from './sizing';
 
 export type CompatibilityVerdict = 'continuous' | 'intermittent' | 'incompatible' | 'insufficient_data';
+export type FadResolutionBasis = 'exact' | 'interpolated' | 'higher-pressure-bound';
+
+export type FadResolution = {
+	litersPerMinute: number;
+	basis: FadResolutionBasis;
+	referencePressureBar?: number;
+};
 
 export type CompatibilityResult = {
 	verdict: CompatibilityVerdict;
@@ -10,6 +17,8 @@ export type CompatibilityResult = {
 	requiredFadLpm?: number;
 	averageDemandLpm?: number;
 	availableFadLpm?: number;
+	availableFadBasis?: FadResolutionBasis;
+	availableFadReferencePressureBar?: number;
 	marginPercent?: number;
 	warnings: string[];
 	calculationVersion: typeof CALCULATION_VERSION;
@@ -31,6 +40,30 @@ export function interpolateFad(compressor: Pick<Compressor, 'fadCurve'>, pressur
 	return lower.litersPerMinute + ratio * (upper.litersPerMinute - lower.litersPerMinute);
 }
 
+export function resolveAvailableFad(compressor: Pick<Compressor, 'fadCurve'>, pressureBar: number): FadResolution | undefined {
+	const curve = [...compressor.fadCurve].sort((a, b) => a.pressureBar - b.pressureBar);
+	if (curve.length === 0) return undefined;
+	const exact = curve.find((point) => point.pressureBar === pressureBar);
+	if (exact) return { litersPerMinute: exact.litersPerMinute, basis: 'exact', referencePressureBar: exact.pressureBar };
+	const interpolated = interpolateFad(compressor, pressureBar);
+	if (interpolated !== undefined) return { litersPerMinute: interpolated, basis: 'interpolated' };
+	const lowestHigherPressurePoint = curve.find((point) => point.pressureBar > pressureBar);
+	if (!lowestHigherPressurePoint) return undefined;
+	return {
+		litersPerMinute: lowestHigherPressurePoint.litersPerMinute,
+		basis: 'higher-pressure-bound',
+		referencePressureBar: lowestHigherPressurePoint.pressureBar,
+	};
+}
+
+export function compatibilityFadLabel(result: Pick<CompatibilityResult, 'availableFadLpm' | 'availableFadBasis' | 'availableFadReferencePressureBar'>, requestedPressureBar: number): string {
+	if (result.availableFadLpm === undefined) return `Débit non vérifiable à ${requestedPressureBar.toLocaleString('fr-FR')} bar`;
+	const flow = Math.round(result.availableFadLpm).toLocaleString('fr-FR');
+	if (result.availableFadBasis === 'higher-pressure-bound') return `${flow} L/min mesurés à ${result.availableFadReferencePressureBar?.toLocaleString('fr-FR')} bar, borne conservatrice pour ${requestedPressureBar.toLocaleString('fr-FR')} bar`;
+	if (result.availableFadBasis === 'interpolated') return `${flow} L/min interpolés à ${requestedPressureBar.toLocaleString('fr-FR')} bar`;
+	return `${flow} L/min documentés à ${requestedPressureBar.toLocaleString('fr-FR')} bar`;
+}
+
 export function evaluateCompatibility(
 	compressor: Compressor,
 	tool: ToolProfile,
@@ -43,8 +76,9 @@ export function evaluateCompatibility(
 			: tool.demandExplanation;
 		return { verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data', warnings: [warning], calculationVersion: CALCULATION_VERSION };
 	}
-	const documentedFad = interpolateFad(compressor, tool.workingPressureBar.typical);
-	const usableFad = ['C', 'D'].includes(compressor.confidence) ? undefined : documentedFad;
+	const fadResolution = resolveAvailableFad(compressor, tool.workingPressureBar.typical);
+	const usableResolution = ['C', 'D'].includes(compressor.confidence) ? undefined : fadResolution;
+	const usableFad = usableResolution?.litersPerMinute;
 	const sizing = sizeConfiguration({
 		demands: [{
 			id: tool.id,
@@ -72,7 +106,14 @@ export function evaluateCompatibility(
 		averageDemandLpm: sizing.averageFlowLpm,
 		availableFadLpm: usableFad,
 		marginPercent: usableFad === undefined ? undefined : ((usableFad - sizing.peakFlowLpm) / sizing.peakFlowLpm) * 100,
-		warnings: sizing.warnings,
+		...(usableResolution ? { availableFadBasis: usableResolution.basis } : {}),
+		...(usableResolution?.referencePressureBar !== undefined ? { availableFadReferencePressureBar: usableResolution.referencePressureBar } : {}),
+		warnings: [
+			...sizing.warnings,
+			...(usableResolution?.basis === 'higher-pressure-bound'
+				? [`Borne conservatrice : ${usableResolution.litersPerMinute.toLocaleString('fr-FR')} L/min mesurés à ${usableResolution.referencePressureBar?.toLocaleString('fr-FR')} bar sont retenus pour le besoin à ${tool.workingPressureBar.typical.toLocaleString('fr-FR')} bar ; aucun point de courbe n’est inventé.`]
+				: []),
+		],
 		calculationVersion: sizing.calculationVersion,
 	};
 }

@@ -34,7 +34,7 @@ Cette majoration n’est pas une exigence d’Einhell. Elle rend visible une ré
 
 La recommandation de cuve de 50 litres figure dans la notice de l’outil. Elle ne prouve pas qu’un compresseur donné restitue 142 L/min à 6,3 bar. Deux appareils dotés d’une cuve de même volume peuvent avoir des courbes de débit différentes.
 
-La cuve fournit une réserve temporaire. Le moteur doit ensuite reconstituer cette réserve. Pour juger un fonctionnement durable, il faut donc connaître le FAD à la pression demandée et le cycle de service autorisé du compresseur.
+La cuve fournit une réserve temporaire. Le moteur doit ensuite reconstituer cette réserve. Pour juger un fonctionnement durable, il faut donc connaître le FAD à la pression demandée, ou disposer d’un FAD mesuré à pression supérieure exploitable comme borne conservatrice, ainsi que le cycle de service autorisé du compresseur.
 
 ## Flexible et raccords
 

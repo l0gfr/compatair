@@ -46,4 +46,33 @@ describe('evaluateCompatibility avec plusieurs modèles de demande', () => {
 		expect(result.requiredFadLpm).toBeUndefined();
 		expect(result.warnings[0]).toContain('volume à gonfler');
 	});
+
+	it('rend la provenance de la borne FAD Atlas Copco inspectable', () => {
+		const compressor = compressors.find((item) => item.id === 'atlas-copco-lz-10-10-bm')!;
+		const tool = tools.find((item) => item.id === 'chicago-pneumatic-cp7748')!;
+		const result = evaluateCompatibility(compressor, tool);
+
+		expect(result).toMatchObject({
+			verdict: 'continuous',
+			availableFadLpm: 930,
+			availableFadBasis: 'higher-pressure-bound',
+			availableFadReferencePressureBar: 7,
+			calculationVersion: '1.3.0',
+		});
+		expect(result.warnings).toContainEqual(expect.stringContaining('aucun point de courbe n’est inventé'));
+	});
+
+	it('couvre un large éventail de clés à chocs sans masquer le cas à 8 bar', () => {
+		const impactWrenches = tools.filter((tool) => tool.categoryId === 'cle-a-chocs');
+		const compatibleCount = (compressorId: string) => {
+			const compressor = compressors.find((item) => item.id === compressorId)!;
+			return impactWrenches.filter((tool) => evaluateCompatibility(compressor, tool).verdict === 'continuous').length;
+		};
+
+		expect(impactWrenches).toHaveLength(25);
+		expect(compatibleCount('atlas-copco-lz-10-10-bm')).toBe(22);
+		expect(compatibleCount('atlas-copco-lz-20-10-bm')).toBe(24);
+		const eightBarTool = impactWrenches.find((tool) => tool.id === 'einhell-tc-pw-610-compact')!;
+		expect(evaluateCompatibility(compressors.find((item) => item.id === 'atlas-copco-lz-20-10-bm')!, eightBarTool).verdict).toBe('insufficient_data');
+	});
 });

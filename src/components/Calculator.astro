@@ -132,7 +132,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	let CALCULATION_VERSION = '';
 	let compressors: Compressor[] = [];
 	let tools: ToolProfile[] = [];
-	let interpolateFad: typeof import('../domain/compatibility').interpolateFad;
+	let resolveAvailableFad: typeof import('../domain/compatibility').resolveAvailableFad;
 	let createPassportEnvelope: typeof import('../domain/passport').createPassportEnvelope;
 	let decodePassportConfiguration: typeof import('../domain/passport').decodePassportConfiguration;
 	let encodePassportConfiguration: typeof import('../domain/passport').encodePassportConfiguration;
@@ -154,7 +154,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 			CALCULATION_VERSION = sizing.CALCULATION_VERSION;
 			compressors = catalog.compressors;
 			tools = catalog.tools;
-			interpolateFad = compatibility.interpolateFad;
+			resolveAvailableFad = compatibility.resolveAvailableFad;
 			createPassportEnvelope = passport.createPassportEnvelope;
 			decodePassportConfiguration = passport.decodePassportConfiguration;
 			encodePassportConfiguration = passport.encodePassportConfiguration;
@@ -364,7 +364,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		if (config.selectedCompressor === 'custom') return config.custom.maxPressureBar ? config.custom : undefined;
 		const compressor = compressors.find((item) => item.id === config.selectedCompressor);
 		if (!compressor) return undefined;
-		return { maxPressureBar: compressor.maxPressureBar, availableFadLpm: interpolateFad(compressor, requiredPressureBar), tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle };
+		return { maxPressureBar: compressor.maxPressureBar, availableFadLpm: resolveAvailableFad(compressor, requiredPressureBar)?.litersPerMinute, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle };
 	}
 
 	function counterfactualMachine(config: NonNullable<ReturnType<typeof configFromForm>>, requiredPressureBar: number): CounterfactualMachine | undefined {
@@ -401,7 +401,8 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	}
 	function renderAnswerFirst(config: NonNullable<ReturnType<typeof configFromForm>>, base: SizingResult, result: SizingResult) {
 		const compressor = config.selectedCompressor && config.selectedCompressor !== 'custom' ? compressors.find((item) => item.id === config.selectedCompressor) : undefined;
-		const available = config.selectedCompressor === 'custom' ? config.custom.availableFadLpm : compressor ? interpolateFad(compressor, base.requiredPressureBar) : undefined;
+		const availableResolution = compressor ? resolveAvailableFad(compressor, base.requiredPressureBar) : undefined;
+		const available = config.selectedCompressor === 'custom' ? config.custom.availableFadLpm : availableResolution?.litersPerMinute;
 		const model = config.selectedCompressor === 'custom' ? 'Compresseur personnalisé' : compressor ? `${compressor.brand} ${compressor.model} · ${dataQualityLabel(compressor.confidence)}` : 'Aucun compresseur sélectionné';
 		const marginCovered = available !== undefined && available >= base.recommendedFadLpm;
 		const reserve = !config.selectedCompressor ? 'Sélectionnez un compresseur pour obtenir un verdict sur une machine.'
@@ -413,7 +414,11 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 							: result.verdict === 'intermittent' ? 'Usage couvert uniquement par intermittence.' : 'Aucune réserve bloquante dans les données déclarées.';
 		setText('[data-answer-model]', model);
 		setText('[data-answer-need]', `${base.recommendedFadLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min à ${base.requiredPressureBar.toLocaleString('fr-FR')} bar`);
-		setText('[data-answer-available]', available === undefined ? `Non vérifiable à ${base.requiredPressureBar.toLocaleString('fr-FR')} bar` : `${available.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min à ${base.requiredPressureBar.toLocaleString('fr-FR')} bar`);
+		setText('[data-answer-available]', available === undefined
+			? `Non vérifiable à ${base.requiredPressureBar.toLocaleString('fr-FR')} bar`
+			: availableResolution?.basis === 'higher-pressure-bound'
+				? `${available.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min, borne issue de la mesure à ${availableResolution.referencePressureBar?.toLocaleString('fr-FR')} bar pour le besoin à ${base.requiredPressureBar.toLocaleString('fr-FR')} bar`
+				: `${available.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min à ${base.requiredPressureBar.toLocaleString('fr-FR')} bar`);
 		setText('[data-answer-margin]', `${Math.round(config.safetyMargin * 100)} % demandée · ${available === undefined ? 'couverture indéterminée' : marginCovered ? 'couverte' : 'non couverte'}`);
 		setText('[data-answer-reserve]', reserve);
 	}
@@ -527,11 +532,16 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	}
 
 	function renderResultCard(compressor: (typeof compressors)[number], result: SizingResult, proofToolId?: string) {
+		const fadResolution = resolveAvailableFad(compressor, result.requiredPressureBar);
 		const article = document.createElement('article'); article.className = `result-card verdict-${result.verdict}`; article.dataset.verdict = result.verdict;
 		const head = document.createElement('div'); head.className = 'result-card-head';
 		const title = document.createElement('h4'); const link = document.createElement('a'); link.href = `/compresseurs/${compressor.slug}/`; link.textContent = `${compressor.brand} ${compressor.model}`; title.append(link);
 		const badge = document.createElement('span'); badge.className = 'verdict-badge'; badge.textContent = resultLabel(result); head.append(title, badge);
-		const detail = document.createElement('p'); detail.textContent = result.verdict === 'insufficient_data' ? `Débit réellement restitué non vérifiable à ${result.requiredPressureBar} bar · ${dataQualityLabel(compressor.confidence)}.` : `${interpolateFad(compressor, result.requiredPressureBar)?.toFixed(0) ?? 'Débit inconnu'} L/min disponibles à ${result.requiredPressureBar} bar · ${dataQualityLabel(compressor.confidence)}.`;
+		const detail = document.createElement('p'); detail.textContent = result.verdict === 'insufficient_data'
+			? `Débit réellement restitué non vérifiable à ${result.requiredPressureBar} bar · ${dataQualityLabel(compressor.confidence)}.`
+			: fadResolution?.basis === 'higher-pressure-bound'
+				? `${fadResolution.litersPerMinute.toFixed(0)} L/min mesurés à ${fadResolution.referencePressureBar} bar, retenus comme borne conservatrice pour ${result.requiredPressureBar} bar · ${dataQualityLabel(compressor.confidence)}.`
+				: `${fadResolution?.litersPerMinute.toFixed(0) ?? 'Débit inconnu'} L/min disponibles à ${result.requiredPressureBar} bar · ${dataQualityLabel(compressor.confidence)}.`;
 		const quality = document.createElement('details'); quality.className = 'result-card-quality'; const qualitySummary = document.createElement('summary'); qualitySummary.textContent = 'Détail qualité'; const qualityDetail = document.createElement('span'); qualityDetail.textContent = `Grade technique ${compressor.confidence}.`;
 		quality.append(qualitySummary, qualityDetail); article.append(head, detail, quality);
 		if (proofToolId) { const proofLink = document.createElement('a'); proofLink.className = 'result-proof-link'; proofLink.href = `/graphe-preuve/#compresseur=${encodeURIComponent(compressor.id)}&outil=${encodeURIComponent(proofToolId)}`; proofLink.textContent = 'Remonter aux preuves'; article.append(proofLink); }
@@ -675,7 +685,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 
 			const confidenceRank = { A: 0, B: 1, C: 2, D: 3 } as const;
 			const candidates: Candidate[] = compressors.map((compressor) => {
-				const availableFadLpm = interpolateFad(compressor, base.requiredPressureBar);
+				const availableFadLpm = resolveAvailableFad(compressor, base.requiredPressureBar)?.litersPerMinute;
 				const candidateResult = sizeConfiguration({ ...config, compressor: { maxPressureBar: compressor.maxPressureBar, availableFadLpm, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle } } as any);
 				return { compressor, result: candidateResult, availableFadLpm, marginCovered: availableFadLpm !== undefined && availableFadLpm >= base.recommendedFadLpm };
 			}).sort((a, b) => rank[a.result.verdict] - rank[b.result.verdict]

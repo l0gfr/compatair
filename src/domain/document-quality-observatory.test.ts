@@ -14,7 +14,7 @@ describe('document quality observatory', () => {
 		expect(observatory.metrics.correctionLeadTime).toMatchObject({ status: 'measured', medianDays: 0, measuredCount: 1, excludedLegacyCount: 5 });
 		expect(observatory.metrics.multiPressureFad.eligibleCount).toBe(compressors.length);
 		expect(observatory.metrics.multiPressureFad.availableCount).toBe(compressors.filter((item) => item.fadCurve.length >= 2).length);
-		expect(observatory.metrics.referenceStability).toMatchObject({ status: 'baseline', changeCount: 0, missingBaselineCount: 0 });
+		expect(observatory.metrics.referenceStability).toMatchObject({ status: 'measured', changeCount: 0, missingBaselineCount: 0 });
 		expect(observatory.metrics.contradictionResponses).toMatchObject({ answeredCount: 4, totalCount: 4, responseRate: 100 });
 		expect(observatory.measurementProgram).toMatchObject({ baseline: { period: '2026-07', kind: 'baseline' }, trend: { status: 'insufficient_data', periodCount: 1 }, targets: { multiPressureFad: { status: 'pending_trend', targetPercent: null }, referenceBaselineCoverage: { targetPercent: 100 }, contradictionResponses: { targetPercent: 100 } } });
 	});

@@ -4426,7 +4426,83 @@
         "retrievedAt": "2026-07-16",
         "confidence": "A"
       }
+    },
+    {
+      "id": "added:atlas-copco-lz-10-10-bm:atlas-copco-lz-7-20-official-brochure:2026-07-18",
+      "evidenceId": "atlas-copco-lz-7-20-official-brochure",
+      "productId": "atlas-copco-lz-10-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-07-18",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "89620cc08cd2ddcfb1a2c296955cace85ced6379aab40994dcb4a2aefdccfe82",
+      "snapshot": {
+        "id": "atlas-copco-lz-7-20-official-brochure",
+        "sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/compressor-technique/industrial-air/documents/leaflets/compressors/lz_7-20/LZ_7-20_antwerp_leaflet_EN_2935080544.pdf",
+        "sourceLabel": "Atlas Copco, brochure officielle LZ 7-20, tableau des performances et conditions de référence page 7",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-18",
+        "confidence": "A",
+        "notes": "Le tableau publie les variantes LZ 7-10, LZ 10-10, LZ 15-10 et LZ 20-10 à 50/60 Hz ; le FAD est déclaré mesuré à 7 bar selon ISO 1217 Ed. 3 annexe C."
+      }
+    },
+    {
+      "id": "added:atlas-copco-lz-10-10-bm:atlas-copco-lz-current-product-page:2026-07-18",
+      "evidenceId": "atlas-copco-lz-current-product-page",
+      "productId": "atlas-copco-lz-10-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-07-18",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "63835607293cb827dfcdb3ead99d2b6a41ed9168b1cd32f090dc737bcb6b6338",
+      "snapshot": {
+        "id": "atlas-copco-lz-current-product-page",
+        "sourceUrl": "https://www.atlascopco.com/en-in/compressors/products/air-compressor/oil-free-air-compressors/lz-premium",
+        "sourceLabel": "Atlas Copco, page produit actuelle LZ Premium",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-18",
+        "confidence": "A",
+        "notes": "La page actuelle maintient la gamme LZ dans le catalogue Atlas Copco et publie une plage de 11 à 31 L/s, 4 à 10 bar, 5,5 à 15 kW, avec options 400 V."
+      }
+    },
+    {
+      "id": "added:atlas-copco-lz-20-10-bm:atlas-copco-lz-7-20-official-brochure:2026-07-18",
+      "evidenceId": "atlas-copco-lz-7-20-official-brochure",
+      "productId": "atlas-copco-lz-20-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-07-18",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "84f3198c9f52bd7070dbf9b5c6cc9368c1e0a74bd5d93c07d2ee322524ac965c",
+      "snapshot": {
+        "id": "atlas-copco-lz-7-20-official-brochure",
+        "sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/compressor-technique/industrial-air/documents/leaflets/compressors/lz_7-20/LZ_7-20_antwerp_leaflet_EN_2935080544.pdf",
+        "sourceLabel": "Atlas Copco, brochure officielle LZ 7-20, tableau des performances et conditions de référence page 7",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-18",
+        "confidence": "A",
+        "notes": "Le tableau publie les variantes LZ 7-10, LZ 10-10, LZ 15-10 et LZ 20-10 à 50/60 Hz ; le FAD est déclaré mesuré à 7 bar selon ISO 1217 Ed. 3 annexe C."
+      }
+    },
+    {
+      "id": "added:atlas-copco-lz-20-10-bm:atlas-copco-lz-current-product-page:2026-07-18",
+      "evidenceId": "atlas-copco-lz-current-product-page",
+      "productId": "atlas-copco-lz-20-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-07-18",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7895f4e5434265ee1a8ca004d7310e7f10345585e54fd9e73c289d4735a3b574",
+      "snapshot": {
+        "id": "atlas-copco-lz-current-product-page",
+        "sourceUrl": "https://www.atlascopco.com/en-in/compressors/products/air-compressor/oil-free-air-compressors/lz-premium",
+        "sourceLabel": "Atlas Copco, page produit actuelle LZ Premium",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-18",
+        "confidence": "A",
+        "notes": "La page actuelle maintient la gamme LZ dans le catalogue Atlas Copco et publie une plage de 11 à 31 L/s, 4 à 10 bar, 5,5 à 15 kW, avec options 400 V."
+      }
     }
   ],
-  "historyVersion": "f23bc7bd36864f8b09f58d3fcab5dbb10fbf546b7fbd38fe3c885983968e9ebe"
+  "historyVersion": "3b853facb572b3adfa1f1c631b9026d1468bf6b266d913962d8bb05fec473f03"
 }
