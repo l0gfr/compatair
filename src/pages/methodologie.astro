@@ -1,13 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import InstitutionalHero from '../components/InstitutionalHero.astro';
 import { CALCULATION_VERSION } from '../domain/sizing';
 
 const METHOD_VERSION = '2026.07';
 ---
 <BaseLayout title="Comment fonctionne CompatAir ? | CompatAir" description="Comment CompatAir vérifie si un compresseur peut alimenter un outil, à partir de données constructeur identifiées et sans inventer les informations manquantes.">
-	<article class="container content">
-		<p class="eyebrow">Comment le résultat est obtenu</p>
-		<h1>Comment CompatAir vérifie une configuration</h1>
+	<InstitutionalHero eyebrow="Comment le résultat est obtenu" title="Une méthode déterministe, lisible et versionnée" lead="CompatAir part du besoin publié pour l’outil, le compare au débit réellement disponible du compresseur et conserve les règles exactes qui ont produit le résultat." primaryHref="#methode" primaryLabel="Lire la méthode" items={[{ label: 'Données identifiées', detail: 'Référence, source et date de consultation' }, { label: 'Calcul reproductible', detail: 'Les mêmes données donnent le même résultat' }, { label: 'Limites visibles', detail: 'Une donnée absente reste insuffisante' }]} />
+	<article class="container content institutional-content" id="methode">
 		<p><strong>Version publique de la méthode&nbsp;:</strong> <code>{METHOD_VERSION}</code> · <strong>version du moteur de calcul&nbsp;:</strong> <code>{CALCULATION_VERSION}</code>. Ces identifiants sont conservés dans les réponses machine afin qu’un résultat puisse être rattaché aux règles qui l’ont produit.</p>
 		<p>CompatAir part du besoin publié pour l’outil, puis le compare au <a href="/glossaire/#debit-restitue">débit réellement disponible</a> du compresseur. Le moteur utilise un point FAD à la même <a href="/glossaire/#pression-travail">pression d’utilisation</a>, une interpolation encadrée ou, pour un besoin inférieur au premier point publié, ce point comme borne conservatrice. Le <a href="/glossaire/#debit-aspire">débit aspiré</a>, souvent mis en avant dans les fiches commerciales, n’est pas utilisé à sa place.</p>
 		<h2>Qui produit et relit l’information</h2>

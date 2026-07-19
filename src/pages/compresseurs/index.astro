@@ -44,13 +44,35 @@ const compressorListJsonLd = {
 		const pagination = document.querySelector<HTMLElement>('[data-pagination]');
 		const fields = { brand: document.querySelector<HTMLSelectElement>('[data-filter-brand]'), tank: document.querySelector<HTMLSelectElement>('[data-filter-tank]'), pressure: document.querySelector<HTMLSelectElement>('[data-filter-pressure]'), oil: document.querySelector<HTMLSelectElement>('[data-filter-oil]'), noise: document.querySelector<HTMLSelectElement>('[data-filter-noise]'), sort: document.querySelector<HTMLSelectElement>('[data-catalog-sort]') };
 		let page = 1; const pageSize = 6;
+		function pageButton(label: string, target: number, ariaLabel: string, current = false) {
+			const button = document.createElement('button');
+			button.type = 'button';
+			button.textContent = label;
+			button.setAttribute('aria-label', ariaLabel);
+			button.setAttribute('aria-current', current ? 'page' : 'false');
+			button.addEventListener('click', () => { page = target; refresh(); });
+			return button;
+		}
+		function paginationItems(pages: number) {
+			const items: Array<HTMLElement> = [];
+			if (page > 1) items.push(pageButton('←', page - 1, 'Page précédente'));
+			const visible = Array.from({ length: pages }, (_, index) => index + 1).filter((number) => number === 1 || number === pages || Math.abs(number - page) <= 2);
+			let previous = 0;
+			for (const number of visible) {
+				if (number - previous > 1) { const gap = document.createElement('span'); gap.textContent = '…'; gap.setAttribute('aria-hidden', 'true'); items.push(gap); }
+				items.push(pageButton(String(number), number, `Page ${number}`, number === page));
+				previous = number;
+			}
+			if (page < pages) items.push(pageButton('→', page + 1, 'Page suivante'));
+			return items;
+		}
 		function refresh() {
 			const filtered = cards.filter((card) => (!fields.brand?.value || card.dataset.brand === fields.brand.value) && Number(card.dataset.tank) >= Number(fields.tank?.value ?? 0) && Number(card.dataset.pressure) >= Number(fields.pressure?.value ?? 0) && (!fields.oil?.value || card.dataset.oil === fields.oil.value) && (!fields.noise?.value || (card.dataset.noise !== '' && Number(card.dataset.noise) <= Number(fields.noise.value))));
 			const sort = fields.sort?.value; filtered.sort((a, b) => sort === 'tank-desc' ? Number(b.dataset.tank) - Number(a.dataset.tank) : sort === 'noise-asc' ? (Number(a.dataset.noise || 999) - Number(b.dataset.noise || 999)) : sort === 'pressure-desc' ? Number(b.dataset.pressure) - Number(a.dataset.pressure) : String(a.dataset.confidence).localeCompare(String(b.dataset.confidence)));
 			for (const card of filtered) grid?.append(card); const pages = Math.max(1, Math.ceil(filtered.length / pageSize)); page = Math.min(page, pages);
 			for (const card of cards) card.hidden = !filtered.includes(card) || filtered.indexOf(card) < (page - 1) * pageSize || filtered.indexOf(card) >= page * pageSize;
 			if (count) count.textContent = `${filtered.length} résultat${filtered.length > 1 ? 's' : ''}`;
-			if (pagination) { pagination.replaceChildren(...Array.from({ length: pages }, (_, index) => { const button = document.createElement('button'); button.type = 'button'; button.textContent = String(index + 1); button.setAttribute('aria-current', page === index + 1 ? 'page' : 'false'); button.addEventListener('click', () => { page = index + 1; refresh(); }); return button; })); }
+			if (pagination) pagination.replaceChildren(...paginationItems(pages));
 		}
 		for (const field of Object.values(fields)) field?.addEventListener('change', () => { page = 1; refresh(); });
 		document.querySelector('[data-reset-filters]')?.addEventListener('click', () => { for (const field of Object.values(fields)) if (field) field.selectedIndex = 0; page = 1; refresh(); });

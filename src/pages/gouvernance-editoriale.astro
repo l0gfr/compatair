@@ -1,11 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import InstitutionalHero from '../components/InstitutionalHero.astro';
 ---
 <BaseLayout title="Gouvernance éditoriale | CompatAir" description="Rôles, contrôles, indépendance et limites de la rédaction CompatAir, avec un statut de revue explicite pour chaque guide." imagePath="/social/methodologie.png" breadcrumbs={[{ name: 'Gouvernance éditoriale', path: '/gouvernance-editoriale/' }]}>
-	<article class="container content">
-		<p class="eyebrow">Responsabilité éditoriale</p>
-		<h1>Qui écrit, qui relit, qui décide</h1>
-		<p class="lead">CompatAir distingue la rédaction, les contrôles automatisés et une éventuelle revue professionnelle externe. Aucun rôle n’est attribué à une personne qui ne l’a pas accepté.</p>
+	<InstitutionalHero eyebrow="Responsabilité éditoriale" title="Qui écrit, qui relit, qui décide" lead="CompatAir distingue la rédaction, les contrôles automatisés et une éventuelle revue professionnelle externe. Aucun rôle n’est attribué à une personne qui ne l’a pas accepté." primaryHref="#gouvernance" primaryLabel="Voir les responsabilités" items={[{ label: 'Rédaction identifiée', detail: 'Sources, dates et limites publiées' }, { label: 'Contrôles séparés', detail: 'Relecture humaine et tests automatisés' }, { label: 'Verdict indépendant', detail: 'Aucune offre ne modifie le calcul' }]} />
+	<article class="container content institutional-content" id="gouvernance">
 
 		<div class="status-callout"><strong>Statut actuel</strong><span>Les guides font l’objet d’une relecture éditoriale interne et de contrôles techniques automatisés. Aucune validation professionnelle externe n’est actuellement revendiquée.</span></div>
 

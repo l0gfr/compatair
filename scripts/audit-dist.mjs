@@ -50,6 +50,7 @@ const datasetDistributionRequirements = new Map([
 	['barometre-transparence/index.html', ['/data/transparency-barometer.json', '/data/transparency-barometer.csv']],
 	['observatoire-qualite-documentaire/index.html', ['/data/document-quality-observatory.json', '/data/document-quality-observatory.csv']],
 ]);
+const tradeGuidePaths = ['garage-automobile', 'carrosserie-peinture', 'menuiserie-agencement', 'maintenance-industrielle'];
 const compressorIdentityPages = new Map();
 let largestInitialPageScriptBudget = { bytes: 0, label: '', modules: 0 };
 let largestOnDemandPageScriptBudget = { bytes: 0, label: '', modules: 0 };
@@ -352,11 +353,23 @@ else {
 	const snapshot = JSON.parse(await readFile(join(root, '/data/transparency-barometer.json'), 'utf8'));
 	const html = await readFile(join(root, '/barometre-transparence/index.html'), 'utf8');
 	const unpublishedMessage = 'Classement non publié à ce stade';
+	for (const marker of ['barometer-score-model', 'barometer-summary', 'DEUX MESURES SÉPARÉES', 'Une note de documentation, pas un palmarès de machines']) {
+		if (!html.includes(marker)) errors.push(`baromètre: explication visuelle absente ${marker}`);
+	}
 	if (snapshot.rankingPublished && html.includes(unpublishedMessage)) errors.push('baromètre: le rendu affirme que le classement n’est pas publié alors que le snapshot publie des rangs officiels');
 	if (!snapshot.rankingPublished && !html.includes(unpublishedMessage)) errors.push('baromètre: l’avertissement de classement non publié manque alors que le snapshot est provisoire');
 	for (const brand of snapshot.brands ?? []) {
 		if (brand.status === 'official' && !html.includes(`<span class="barometer-rank">#${brand.rank}</span>`)) errors.push(`baromètre: rang officiel rendu absent pour ${brand.brand}`);
 		if (brand.status !== 'official' && !html.includes(`<span class="barometer-rank">Provisoire</span>`)) errors.push(`baromètre: statut provisoire rendu absent pour ${brand.brand}`);
+	}
+}
+
+for (const tradeGuidePath of tradeGuidePaths) {
+	const artifactPath = `/guides/metiers/${tradeGuidePath}/index.html`;
+	if (!artifactPaths.has(artifactPath)) { errors.push(`guide métier: page absente ${tradeGuidePath}`); continue; }
+	const html = await readFile(join(root, artifactPath), 'utf8');
+	for (const marker of [`data-trade-guide="${tradeGuidePath}"`, 'trade-instrument', 'trade-process', 'trade-check-grid', 'Limite publiée', 'Dossiers techniques']) {
+		if (!html.includes(marker)) errors.push(`guide métier ${tradeGuidePath}: structure longue absente ${marker}`);
 	}
 }
 
@@ -379,6 +392,7 @@ else {
 		if (program.history.length < 2 && program.trend.status !== 'insufficient_data') errors.push('observatoire documentaire: tendance revendiquée avec moins de deux périodes');
 		if (!html.includes('data-observatory-program') || !html.includes('Ligne de base') || !html.includes('Objectifs internes')) errors.push('observatoire documentaire: programme de mesure absent du rendu');
 	}
+	for (const marker of ['data-observatory-visual', 'data-observatory-answer', 'Quatre mesures, sans note globale artificielle']) if (!html.includes(marker)) errors.push(`observatoire documentaire: hiérarchie visuelle absente ${marker}`);
 }
 
 if (!artifactPaths.has('/data/contradiction-radar.json') || !artifactPaths.has('/radar-contradictions/index.html')) errors.push('radar des contradictions: snapshot ou page rendue absent');
@@ -389,6 +403,7 @@ else {
 	if (JSON.stringify(snapshot.channels) !== JSON.stringify(expectedChannels)) errors.push('radar des contradictions: quatre canaux obligatoires absents ou réordonnés');
 	if (snapshot.summary?.totalCount !== snapshot.records?.length) errors.push('radar des contradictions: résumé incohérent');
 	if (!html.includes('Aucune valeur versée dans ce canal.')) errors.push('radar des contradictions: état de canal vide absent du rendu');
+	for (const marker of ['data-radar-visual', 'data-contradiction-radar', 'Chaque affirmation reste attachée à sa source']) if (!html.includes(marker)) errors.push(`radar des contradictions: hiérarchie visuelle absente ${marker}`);
 	for (const record of snapshot.records ?? []) {
 		if (!html.includes(record.subject)) errors.push(`radar des contradictions: entrée absente du rendu ${record.id}`);
 		if ((record.claims?.length ?? 0) < 2) errors.push(`radar des contradictions: moins de deux affirmations ${record.id}`);
@@ -396,6 +411,17 @@ else {
 		if (record.decision?.outcome === 'retain_claim' && !record.claims.some((claim) => claim.id === record.decision.selectedClaimId)) errors.push(`radar des contradictions: décision sans affirmation ${record.id}`);
 		if (record.decision?.outcome !== 'retain_claim' && record.decision?.selectedClaimId !== null) errors.push(`radar des contradictions: fusion silencieuse possible ${record.id}`);
 	}
+}
+
+const evidenceDirectoryHtml = artifactPaths.has('/preuves/index.html') ? await readFile(join(root, '/preuves/index.html'), 'utf8') : '';
+for (const marker of ['data-evidence-visual', 'data-evidence-register', 'Un point de départ déclaré']) if (!evidenceDirectoryHtml.includes(marker)) errors.push(`historique des preuves: structure publique absente ${marker}`);
+
+const sourceDirectoryHtml = artifactPaths.has('/sources-fiabilite/index.html') ? await readFile(join(root, '/sources-fiabilite/index.html'), 'utf8') : '';
+for (const marker of ['data-source-confidence-visual', 'data-source-register', 'Une lettre technique, un libellé humain']) if (!sourceDirectoryHtml.includes(marker)) errors.push(`sources et fiabilité: structure publique absente ${marker}`);
+
+for (const path of ['/methodologie/index.html', '/gouvernance-editoriale/index.html', '/affiliation/index.html', '/corrections/index.html', '/contact/index.html']) {
+	if (!artifactPaths.has(path)) errors.push(`page institutionnelle: page absente ${path}`);
+	else if (!(await readFile(join(root, path), 'utf8')).includes('institutional-map')) errors.push(`page institutionnelle: harmonisation visuelle absente ${path}`);
 }
 
 if (!artifactPaths.has('/graphe-preuve/index.html')) errors.push('graphe de preuve: page rendue absente');
@@ -453,6 +479,7 @@ for (const file of htmlFiles) {
 			compressorIdentityPages.set(identityKey, siblings);
 		}
 	}
+	if (/^(compresseurs|outils-pneumatiques)\/[^/]+\/index\.html$/.test(label) && !html.includes('data-product-answer')) errors.push(`${label}: synthèse produit answer-first absente`);
 	if (html.includes('data-search-index=')) errors.push(`${label}: index de recherche dupliqué dans le HTML`);
 	if (html.includes('href="/compatibilite/')) errors.push(`${label}: lien vers une page de couple statique interdite`);
 	for (const wording of forbiddenPublicWording) if (html.includes(wording)) errors.push(`${label}: formulation interne interdite « ${wording} »`);

@@ -1,15 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import InstitutionalHero from '../components/InstitutionalHero.astro';
 import { documentQualityLedger } from '../data/document-quality-ledger';
 const correctionsByDate = new Map<string, typeof documentQualityLedger.corrections>();
 for (const correction of documentQualityLedger.corrections) correctionsByDate.set(correction.resolvedAt, [...(correctionsByDate.get(correction.resolvedAt) ?? []), correction]);
 const formatDate = (date: string) => new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
 ---
 <BaseLayout title="Journal public des corrections | CompatAir" description="Corrections de données, de calcul et de présentation publiées par CompatAir, avec leur portée et leur date." breadcrumbs={[{ name: 'Journal des corrections', path: '/corrections/' }]}>
-	<article class="container content legal-content">
-		<p class="eyebrow">Traçabilité éditoriale</p>
-		<h1>Journal public des corrections</h1>
-		<p class="lead">Ce journal recense les erreurs publiques corrigées lorsqu’elles peuvent modifier la compréhension du catalogue, d’un résultat ou des engagements de CompatAir. Les versions successives des sources sont conservées séparément dans l’<a href="/preuves/">historique public des documents vérifiés</a>.</p>
+	<InstitutionalHero eyebrow="Traçabilité éditoriale" title="Corriger sans effacer le chemin parcouru" lead="Le journal recense les corrections qui peuvent modifier la compréhension du catalogue, d’un résultat ou des engagements de CompatAir. Les versions successives des sources restent conservées séparément." primaryHref="#journal" primaryLabel="Consulter le journal" items={[{ label: 'Erreur identifiée', detail: 'Valeur, résultat ou promesse concernée' }, { label: 'Impact expliqué', detail: 'La portée de la correction est publiée' }, { label: 'Historique conservé', detail: 'Les preuves successives restent accessibles' }]} />
+	<article class="container content institutional-content correction-journal" id="journal">
+		<p>Les versions successives des sources sont conservées dans l’<a href="/preuves/">historique public des documents vérifiés</a>.</p>
 
 		{[...correctionsByDate.entries()].sort(([a], [b]) => b.localeCompare(a)).map(([date, corrections]) => <><h2>{formatDate(date)}</h2><ul>{corrections.map((correction) => <li><strong>{correction.title}.</strong> {correction.summary} {correction.impact}</li>)}</ul></>)}
 

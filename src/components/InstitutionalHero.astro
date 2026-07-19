@@ -1,0 +1,32 @@
+---
+interface HeroItem {
+	label: string;
+	detail: string;
+}
+
+interface Props {
+	eyebrow: string;
+	title: string;
+	lead: string;
+	items: HeroItem[];
+	primaryHref?: string;
+	primaryLabel?: string;
+}
+
+const { eyebrow, title, lead, items, primaryHref, primaryLabel } = Astro.props;
+---
+<section class="page-hero institutional-hero">
+	<div class="container institutional-hero-grid">
+		<div>
+			<p class="eyebrow">{eyebrow}</p>
+			<h1>{title}</h1>
+			<p class="lead">{lead}</p>
+			{primaryHref && primaryLabel && <div class="hero-actions"><a class="button primary" href={primaryHref}>{primaryLabel}</a></div>}
+		</div>
+		<div class="institutional-map" aria-label="Principes essentiels de cette page">
+			<header><span><i></i> Cadre public</span><strong>COMPATAIR</strong></header>
+			<ol>{items.map((item, index) => <li><span>0{index + 1}</span><div><strong>{item.label}</strong><small>{item.detail}</small></div></li>)}</ol>
+			<footer>Comprendre <b>→</b> vérifier <b>→</b> corriger</footer>
+		</div>
+	</div>
+</section>
