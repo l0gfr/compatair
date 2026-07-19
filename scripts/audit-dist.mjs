@@ -523,6 +523,7 @@ for (const file of htmlFiles) {
 		if (!html.includes('data-product-decision-hero')) errors.push(`${label}: héros décisionnel produit absent`);
 		if (!html.includes('data-product-decision')) errors.push(`${label}: réponse produit immédiate absente`);
 	}
+	if (/^compresseurs\/[^/]+\/index\.html$/.test(label) && !html.includes('data-static-compatibility-results')) errors.push(`${label}: compteur de résultats statiques requis par le smoke live absent`);
 	if (/^quel-compresseur-pour\/[^/]+\/index\.html$/.test(label) && !html.includes('data-use-decision-page')) errors.push(`${label}: page d’usage décisionnelle absente`);
 	if (html.includes('data-search-index=')) errors.push(`${label}: index de recherche dupliqué dans le HTML`);
 	if (html.includes('href="/compatibilite/')) errors.push(`${label}: lien vers une page de couple statique interdite`);
