@@ -2,9 +2,19 @@
 import { compressors, tools } from '../data/catalog';
 import { compressorDisplayName } from '../domain/product-display';
 import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
+import UiIcon from './UiIcon.astro';
 ---
 
 <div class="calculator calculator-v2" data-calculator>
+	<aside class="calculator-scenario-context" data-scenario-context hidden>
+		<div class="calculator-scenario-context-head">
+			<span><UiIcon name="compass" size={24} /></span>
+			<div><p class="eyebrow">Scénario métier prérempli</p><h2 data-scenario-title></h2><p>La référence vient du catalogue vérifié. Les valeurs d’usage ci-dessous sont des hypothèses de départ modifiables, jamais des données constructeur silencieuses.</p></div>
+		</div>
+		<div class="calculator-scenario-context-meta" data-scenario-meta></div>
+		<ul data-scenario-assumptions></ul>
+		<footer><a class="text-link" data-scenario-back href="/guides/professionnels/">Revenir au guide métier</a><a href="/calculateur/">Repartir d’une configuration vide</a></footer>
+	</aside>
 	<form class="calculator-form" data-calculator-form>
 		<div class="calculator-form-head">
 			<div><p class="eyebrow">Configuration simple</p><h2>Décrire le besoin réel</h2><small>Commencez par un outil. Le reste est facultatif.</small></div>
@@ -61,6 +71,10 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 				<div class="answer-reserve"><dt>Principale réserve</dt><dd data-answer-reserve></dd></div>
 			</dl>
 		</div>
+		<nav class="calculator-scenario-result-links" data-scenario-result-links aria-label="Continuer le parcours métier" hidden>
+			<a class="button primary" data-scenario-result-back href="/guides/professionnels/">Relire le scénario métier</a>
+			<a class="button" data-scenario-result-proof href="/graphe-preuve/">Voir les preuves de l’outil</a>
+		</nav>
 		<details class="result-section result-disclosure"><summary>Configuration analysée</summary><div class="configuration-summary" data-configuration-summary></div></details>
 		<details class="result-section result-disclosure"><summary>Métriques détaillées</summary><div class="result-metrics" data-result-metrics></div></details>
 		<div class="result-section" data-evaluated-result></div>
@@ -120,6 +134,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 <script>
 	import { resolveExactCatalogSearch } from '../domain/catalog-search';
 	import { sourceQualityDetail, sourceQualityLabel } from '../domain/source-quality';
+	import { getTradeScenarioPreset } from '../domain/trade-scenario-prefill';
 
 	type Compressor = import('../domain/runtime-catalog').RuntimeCompressor;
 	type ToolProfile = import('../domain/runtime-catalog').RuntimeToolProfile;
@@ -204,6 +219,30 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		const single = (rows?.children.length ?? 0) <= 1;
 		const modeField = root?.querySelector<HTMLElement>('[data-mode-field]'); if (modeField) modeField.hidden = single;
 		if (single) { const mode = form?.elements.namedItem('mode'); if (mode instanceof HTMLSelectElement) mode.value = 'successive'; }
+	}
+	function setNamedInput(name: string, value: string) {
+		const input = form?.elements.namedItem(name);
+		if (input instanceof HTMLInputElement || input instanceof HTMLSelectElement) input.value = value;
+	}
+	function renderScenarioContext(preset: NonNullable<ReturnType<typeof getTradeScenarioPreset>>) {
+		const panel = root?.querySelector<HTMLElement>('[data-scenario-context]');
+		if (!panel) return;
+		panel.dataset.scenarioId = preset.id;
+		setText('[data-scenario-title]', preset.title);
+		const meta = panel.querySelector<HTMLElement>('[data-scenario-meta]');
+		meta?.replaceChildren();
+		for (const label of [`Session ${preset.sessionMinutes} min`, `Flexible ${preset.hoseLengthMeters} m`, `Diamètre ${preset.hoseDiameterMm} mm`]) {
+			const item = document.createElement('span'); item.textContent = label; meta?.append(item);
+		}
+		const assumptions = panel.querySelector<HTMLElement>('[data-scenario-assumptions]');
+		assumptions?.replaceChildren();
+		for (const label of preset.assumptions) { const item = document.createElement('li'); item.textContent = label; assumptions?.append(item); }
+		panel.querySelector<HTMLAnchorElement>('[data-scenario-back]')?.setAttribute('href', `/guides/metiers/${preset.metierId}/#scenarios`);
+		panel.hidden = false;
+		const resultLinks = root?.querySelector<HTMLElement>('[data-scenario-result-links]');
+		resultLinks?.querySelector<HTMLAnchorElement>('[data-scenario-result-back]')?.setAttribute('href', `/guides/metiers/${preset.metierId}/#scenarios`);
+		resultLinks?.querySelector<HTMLAnchorElement>('[data-scenario-result-proof]')?.setAttribute('href', `/graphe-preuve/#outil=${encodeURIComponent(preset.toolId)}`);
+		if (resultLinks) resultLinks.hidden = false;
 	}
 	function setCompressorSelection(id: string) {
 		const hidden = form?.querySelector<HTMLInputElement>('[data-compressor-id]'); const search = form?.querySelector<HTMLInputElement>('[data-compressor-search]');
@@ -641,19 +680,40 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	form?.querySelector<HTMLInputElement>('[name="margin"]')?.addEventListener('input', (event: Event) => { root!.querySelector<HTMLOutputElement>('[data-margin-output]')!.value = `${(event.target as HTMLInputElement).value} %`; });
 
 	const legacyParameters = new URLSearchParams(window.location.search);
-	const fragmentParameters = window.location.hash.startsWith('#config=') ? new URLSearchParams() : new URLSearchParams(window.location.hash.slice(1));
-	const hasFragmentPrefill = fragmentParameters.has('outil') || fragmentParameters.has('compresseur');
+	const fragmentParameters = new URLSearchParams(window.location.hash.slice(1));
+	const sharedConfiguration = fragmentParameters.get('config');
+	const scenarioPreset = getTradeScenarioPreset(fragmentParameters.get('scenario'));
+	const hasFragmentPrefill = Boolean(scenarioPreset) || fragmentParameters.has('outil') || fragmentParameters.has('compresseur');
 	const initialParameters = hasFragmentPrefill ? fragmentParameters : legacyParameters;
-	const requestedTool = initialParameters.get('outil') ?? undefined;
+	const requestedTool = scenarioPreset?.toolId ?? initialParameters.get('outil') ?? undefined;
 	const requestedCompressor = initialParameters.get('compresseur') ?? undefined;
 	const initialTool = requestedTool && optionById(toolDatalist, requestedTool) ? requestedTool : undefined;
 	async function initializeCalculator() {
-		if (window.location.hash.startsWith('#config=')) {
+		if (sharedConfiguration) {
 			await loadCalculatorRuntime();
-			const hashConfig = validateSharedConfig(decodePassportConfiguration(window.location.hash.slice(8)));
-			if (hashConfig) { restoreConfig(hashConfig); return; }
+			const hashConfig = validateSharedConfig(decodePassportConfiguration(sharedConfiguration));
+			if (hashConfig) {
+				restoreConfig(hashConfig);
+				if (scenarioPreset) renderScenarioContext(scenarioPreset);
+				return;
+			}
 		}
-		addDemand(initialTool);
+		addDemand(initialTool, 1, scenarioPreset ? {
+			dutyFactor: scenarioPreset.dutyFactor,
+			actionsPerMinute: scenarioPreset.actionsPerMinute,
+			volumeLiters: scenarioPreset.inflation?.volumeLiters,
+			initialPressureBar: scenarioPreset.inflation?.initialPressureBar,
+			targetPressureBar: scenarioPreset.inflation?.targetPressureBar,
+			targetMinutes: scenarioPreset.inflation ? scenarioPreset.inflation.durationSeconds / 60 : undefined,
+		} : {});
+		if (scenarioPreset) {
+			setNamedInput('session', String(scenarioPreset.sessionMinutes));
+			setNamedInput('hoseLength', String(scenarioPreset.hoseLengthMeters));
+			setNamedInput('hoseDiameter', String(scenarioPreset.hoseDiameterMm));
+			setNamedInput('mode', scenarioPreset.mode);
+			const details = root?.querySelector<HTMLDetailsElement>('.calculator-details'); if (details) details.open = true;
+			renderScenarioContext(scenarioPreset);
+		}
 		const initialCompressor = requestedCompressor && optionById(compressorDatalist, requestedCompressor) ? requestedCompressor : undefined;
 		if (initialCompressor) setCompressorSelection(initialCompressor);
 		if (!hasFragmentPrefill && (legacyParameters.has('outil') || legacyParameters.has('compresseur'))) {
@@ -704,7 +764,8 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 			const proofToolId = config.demands.length === 1 && config.demands[0].model === 'fixed-flow' ? config.demands[0].id : undefined;
 			currentFilter = 'all'; renderCandidateResults(candidates, proofToolId); lastSummary = buildSummary(config, result, candidates);
 			const encodedConfig = encodePassportConfiguration(config);
-			window.history.replaceState(null, '', `${window.location.pathname}#config=${encodedConfig}`);
+			const scenarioSuffix = scenarioPreset ? `&scenario=${encodeURIComponent(scenarioPreset.id)}` : '';
+			window.history.replaceState(null, '', `${window.location.pathname}#config=${encodedConfig}${scenarioSuffix}`);
 			const envelope = await createPassportEnvelope(config, compressors, tools, CATALOG_VERIFIED_AT);
 			root?.querySelector<HTMLAnchorElement>('[data-create-passport]')?.setAttribute('href', `/passeport/#passport=${encodePassportEnvelope(envelope)}`);
 			lastContribution = { config, result: base }; contributeDemand(config, base);
@@ -723,5 +784,5 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	root?.querySelector<HTMLInputElement>('[data-demand-contribution]')?.addEventListener('change', (event) => { if ((event.target as HTMLInputElement).checked && lastContribution) contributeDemand(lastContribution.config, lastContribution.result); });
 	root?.querySelector('[data-print]')?.addEventListener('click', () => window.print());
 	root?.querySelector('[data-copy-summary]')?.addEventListener('click', async () => { if (!lastSummary) return; await navigator.clipboard.writeText(lastSummary); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'Synthèse copiée'; });
-	root?.querySelector('[data-share]')?.addEventListener('click', async () => { await loadCalculatorRuntime(); const config = configFromForm(); if (!config) return; const url = `${location.origin}${location.pathname}#config=${encodePassportConfiguration(config)}`; await navigator.clipboard.writeText(url); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'Lien copié'; });
+	root?.querySelector('[data-share]')?.addEventListener('click', async () => { await loadCalculatorRuntime(); const config = configFromForm(); if (!config) return; const scenarioSuffix = scenarioPreset ? `&scenario=${encodeURIComponent(scenarioPreset.id)}` : ''; const url = `${location.origin}${location.pathname}#config=${encodePassportConfiguration(config)}${scenarioSuffix}`; await navigator.clipboard.writeText(url); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'Lien copié'; });
 </script>

@@ -1,4 +1,5 @@
 import type { GuideMetierId } from '../domain/editorial-taxonomy';
+import type { TradeScenarioId } from '../domain/trade-scenario-prefill';
 
 type MetierDecision = {
 	title: string;
@@ -18,11 +19,10 @@ type MetierCheckpoint = {
 };
 
 type MetierScenario = {
-	title: string;
+	presetId: TradeScenarioId;
 	context: string;
 	question: string;
 	decision: string;
-	toolId: string;
 	toolLabel: string;
 };
 
@@ -105,27 +105,24 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 			intro: 'Un atelier peut réunir des outils à impulsion, des usages continus et des opérations de gonflage. Les additionner sans scénario produit un besoin artificiel. Les ignorer produit une installation fragile. Le dossier relie donc chaque poste à sa référence, chaque chevauchement à l’organisation réelle et chaque verdict à une mesure possible.',
 			scenarios: [
 				{
-					title: 'Service roues et clé à chocs',
+					presetId: 'garage-service-roues',
 					context: 'La clé travaille par séquences courtes, mais le poste peut se répéter et partager le réseau avec un autre opérateur.',
 					question: 'La pression reste-t-elle suffisante au raccord pendant l’effort, avec les autres postes réellement actifs ?',
 					decision: 'Tester la référence exacte, décrire la coactivité puis comparer la pression au poste avec un point mesuré en amont.',
-					toolId: 'chicago-pneumatic-cp7748',
 					toolLabel: 'Tester la CP7748',
 				},
 				{
-					title: 'Gonflage et contrôle de pression',
+					presetId: 'garage-gonflage-temporise',
 					context: 'Un pistolet de gonflage ne publie pas nécessairement un débit fixe. Le besoin dépend alors du volume, de la pression initiale, de la pression visée et du temps accepté.',
 					question: 'Les paramètres de la roue et la durée cible sont-ils connus, au lieu d’être remplacés par une moyenne de catégorie ?',
 					decision: 'Renseigner les paramètres transitoires dans le calculateur et conserver un résultat indéterminé lorsqu’un volume nécessaire manque.',
-					toolId: 'einhell-4137000-manometre',
 					toolLabel: 'Préparer un scénario de gonflage',
 				},
 				{
-					title: 'Ponçage ou préparation prolongée',
+					presetId: 'garage-poncage-prolonge',
 					context: 'Un outil utilisé plusieurs minutes peut devenir le poste dimensionnant, même si une clé à chocs paraît plus spectaculaire.',
 					question: 'Le compresseur tient-il le débit demandé pendant la durée prévue et dans son cycle de service documenté ?',
 					decision: 'Traiter ce poste comme un besoin continu, puis vérifier séparément récupération, échauffement et pression en bout de flexible.',
-					toolId: 'metabo-dsx-150',
 					toolLabel: 'Tester la DSX 150',
 				},
 			],
@@ -187,9 +184,9 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 			updatedAt: '2026-07-19',
 			intro: 'Le poste roues concentre souvent de fortes demandes transitoires, mais il ne résume pas l’atelier. Le gonflage suit une logique volume-temps et un cadre de prévention propre. Les autres outils peuvent imposer une charge plus longue. Ce dossier construit donc trois scénarios séparés avant de vérifier leur éventuelle coactivité.',
 			scenarios: [
-				{ title: 'Dépose de roues avec une CP5000', context: 'Chicago Pneumatic publie pour cette référence une consommation en charge et un flexible associés à une pression dynamique. Ces valeurs décrivent la clé lorsqu’elle travaille.', question: 'La production et le passage complet maintiennent-ils le besoin en charge au raccord pendant une séquence représentative ?', decision: 'Comparer les 25 L/s publiés, soit 1 500 L/min, au FAD disponible près de 6,3 bar, puis mesurer la pression au poste.', toolId: 'chicago-pneumatic-cp5000', toolLabel: 'Tester la CP5000' },
-				{ title: 'Maintenance lourde avec une CP7776', context: 'Une seconde clé de 1 pouce peut publier un autre débit. Le carré d’entraînement ne permet donc pas de recopier le scénario précédent.', question: 'Le calcul conserve-t-il les 15 L/s en charge et le flexible de 13 mm sur 5 m propres à cette référence ?', decision: 'Créer un scénario distinct, puis additionner les deux clés uniquement si leur coactivité est réellement possible.', toolId: 'chicago-pneumatic-cp7776', toolLabel: 'Tester la CP7776' },
-				{ title: 'Gonflage d’un pneu poids lourd', context: 'Le gonflage ne publie pas nécessairement un débit fixe. La demande dépend du volume interne, des pressions initiale et finale et du temps accepté.', question: 'Le poste réunit-il les données de calcul et les conditions de gonflage à distance prévues pour la catégorie de pneumatique ?', decision: 'Traiter capacité pneumatique et aménagement de sécurité dans deux preuves séparées, puis garder toute entrée inconnue visible.', toolId: 'einhell-4137000-manometre', toolLabel: 'Préparer le scénario de gonflage' },
+				{ presetId: 'poids-lourds-cp5000', context: 'Chicago Pneumatic publie pour cette référence une consommation en charge et un flexible associés à une pression dynamique. Ces valeurs décrivent la clé lorsqu’elle travaille.', question: 'La production et le passage complet maintiennent-ils le besoin en charge au raccord pendant une séquence représentative ?', decision: 'Comparer les 25 L/s publiés, soit 1 500 L/min, au FAD disponible près de 6,3 bar, puis mesurer la pression au poste.', toolLabel: 'Tester la CP5000' },
+				{ presetId: 'poids-lourds-cp7776', context: 'Une seconde clé de 1 pouce peut publier un autre débit. Le carré d’entraînement ne permet donc pas de recopier le scénario précédent.', question: 'Le calcul conserve-t-il les 15 L/s en charge et le flexible de 13 mm sur 5 m propres à cette référence ?', decision: 'Créer un scénario distinct, puis additionner les deux clés uniquement si leur coactivité est réellement possible.', toolLabel: 'Tester la CP7776' },
+				{ presetId: 'poids-lourds-gonflage', context: 'Le gonflage ne publie pas nécessairement un débit fixe. La demande dépend du volume interne, des pressions initiale et finale et du temps accepté.', question: 'Le poste réunit-il les données de calcul et les conditions de gonflage à distance prévues pour la catégorie de pneumatique ?', decision: 'Traiter capacité pneumatique et aménagement de sécurité dans deux preuves séparées, puis garder toute entrée inconnue visible.', toolLabel: 'Préparer le scénario de gonflage' },
 			],
 			airPath: [
 				{ title: 'Production', role: 'Fournir un débit restitué documenté pour la pointe et la charge soutenue étudiées.', verify: 'FAD à pression comparable, commande et limite de service.' },
@@ -250,27 +247,24 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 			intro: 'Dans un atelier de carrosserie, la production d’air, sa distribution, sa pureté et la ventilation du procédé répondent à des preuves différentes. Une machine capable d’alimenter un pistolet ne démontre ni la pression réellement disponible à sa gâchette, ni la qualité de l’air, ni la maîtrise des risques liés au poste de peinture.',
 			scenarios: [
 				{
-					title: 'Pulvérisation avec un pistolet HVLP identifié',
+					presetId: 'carrosserie-hvlp',
 					context: 'La technologie HVLP ne fournit pas un débit universel. Le modèle exact, son réglage et sa pression d’entrée restent déterminants.',
 					question: 'Le FAD disponible couvre-t-il la référence pendant la phase réelle de pulvérisation, avec la pression vérifiée au pistolet ?',
 					decision: 'Comparer le besoin publié du pistolet au compresseur, puis contrôler la pression dynamique après le traitement et le flexible.',
-					toolId: 'abac-g-550f',
 					toolLabel: 'Tester le G-550F',
 				},
 				{
-					title: 'Retouche avec un pistolet LVLP identifié',
+					presetId: 'carrosserie-lvlp',
 					context: 'Un besoin inférieur sur une référence précise peut changer le choix de production, sans autoriser une généralisation à toute la famille LVLP.',
 					question: 'La comparaison conserve-t-elle le modèle, la pression et la source au lieu de classer les technologies par sigle ?',
 					decision: 'Comparer la référence séparément, puis vérifier que la chaîne de traitement reste dimensionnée pour son débit réel.',
-					toolId: 'metabo-fsp-600-lvlp',
 					toolLabel: 'Tester le FSP 600 LVLP',
 				},
 				{
-					title: 'Ponçage continu avant mise en peinture',
+					presetId: 'carrosserie-poncage',
 					context: 'Le ponçage peut partager la production avec la préparation ou une autre zone et devenir le besoin continu dominant.',
 					question: 'Le scénario sépare-t-il alimentation pneumatique, aspiration des poussières et ventilation du local ?',
 					decision: 'Calculer le débit de l’outil, valider son réseau d’air et traiter la maîtrise des poussières dans un circuit de preuve distinct.',
-					toolId: 'metabo-dsx-150',
 					toolLabel: 'Tester la DSX 150',
 				},
 			],
@@ -327,6 +321,43 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 			{ title: 'Nettoyage', question: 'Le nettoyage est-il modélisé comme une opération définie ?', action: 'Décrire l’équipement, le temps et l’alternative prévue au lieu d’ajouter un forfait d’air arbitraire.' },
 		],
 		boundary: 'Le métier ne fournit aucune consommation moyenne universelle. Chaque conversion dépend de la référence, de l’unité publiée et d’une cadence déclarée. Une hypothèse utile reste présentée comme une hypothèse.',
+		longform: {
+			readingTime: 19,
+			updatedAt: '2026-07-19',
+			intro: 'Un atelier bois peut alterner clouage par impulsions, vissage, ponçage continu et finition. Une valeur par tir ne devient un débit moyen qu’après ajout d’une cadence déclarée. Le parcours conserve donc l’unité constructeur, rend l’hypothèse de production modifiable et traite séparément les usages continus et la qualité d’air de finition.',
+			scenarios: [
+				{ presetId: 'menuiserie-clouage-tc-pn-50', context: 'La TC-PN 50 publie un volume par tir. Le calculateur doit donc recevoir une cadence de travail explicite au lieu d’une consommation moyenne inventée.', question: 'La cadence proposée correspond-elle à une séquence observée, et la récupération reste-t-elle suffisante entre les tirs ?', decision: 'Commencer avec 30 tirs/min comme hypothèse visible, la remplacer par la cadence réelle, puis contrôler la pression et la récupération sur une série représentative.', toolLabel: 'Calculer le clouage TC-PN 50' },
+				{ presetId: 'menuiserie-clouage-scheppach', context: 'La Scheppach 7906100715 publie 1,5 L par tir et une plage de pression. Ces données ne décrivent ni la cadence, ni les chevauchements avec un second poste.', question: 'Le calcul conserve-t-il la consommation propre à cette référence et une cadence déclarée par l’atelier ?', decision: 'Tester séparément la cadence nominale et une pointe plausible, sans confondre débit moyen calculé et pointe instantanée.', toolLabel: 'Calculer la Scheppach 7906100715' },
+				{ presetId: 'menuiserie-poncage-continu', context: 'La DSX 150 publie un débit fixe en fonctionnement. Elle peut donc devenir plus exigeante qu’un cloueur lorsque le ponçage dure ou chevauche une autre opération.', question: 'Le compresseur tient-il le débit pendant toute la séquence et son cycle de service couvre-t-il la session ?', decision: 'Traiter le ponçage comme un scénario continu, puis vérifier aspiration des poussières et qualité de finition dans des preuves séparées.', toolLabel: 'Tester le ponçage DSX 150' },
+			],
+			airPath: [
+				{ title: 'Production', role: 'Fournir le débit restitué nécessaire aux scénarios impulsionnels et continus.', verify: 'FAD, pression utile, récupération et cycle de service.' },
+				{ title: 'Stockage et traitement', role: 'Stabiliser le besoin sans attribuer à la cuve un débit continu qu’elle ne produit pas.', verify: 'Volume utile, purge, filtration et conditions de maintenance.' },
+				{ title: 'Distribution d’atelier', role: 'Acheminer l’air jusqu’aux postes sans restriction cachée ni contamination du circuit de finition.', verify: 'Branches, matériaux, diamètres, raccords et pertes mesurées.' },
+				{ title: 'Poste de travail', role: 'Régler et raccorder chaque outil selon sa référence et son mode de consommation.', verify: 'Flexible, pression dynamique, lubrification et cadence.' },
+				{ title: 'Opération', role: 'Relier la demande à une série de tirs, une durée de ponçage ou une phase de finition décrite.', verify: 'Séquence, résultat, coactivité et limites consignés.' },
+			],
+			evidence: [
+				{ decision: 'Clouage ou agrafage', required: 'Volume par tir, pression et cadence', source: 'Notice fabricant et scénario déclaré', whenMissing: 'Ne pas convertir en litres par minute.' },
+				{ decision: 'Usage continu', required: 'Débit en charge, durée et cycle de service', source: 'Fiche outil et documentation compresseur', whenMissing: 'Conserver la tenue de la session indéterminée.' },
+				{ decision: 'Coactivité', required: 'Postes réellement capables de fonctionner ensemble', source: 'Organisation et observation de l’atelier', whenMissing: 'Publier des scénarios séparés.' },
+				{ decision: 'Distribution', required: 'Passage et pression pendant l’usage', source: 'Schéma et mesure au poste', whenMissing: 'Ne pas attribuer la chute au seul compresseur.' },
+				{ decision: 'Finition', required: 'Exigence de pureté et contrôle adapté', source: 'Procédé, produit et mesure', whenMissing: 'Ne revendiquer aucune qualité finale.' },
+			],
+			fieldPlan: [
+				{ moment: 'Inventaire', title: 'Séparer les unités', action: 'Relever volume par tir, débit en charge, pression et flexible sans les normaliser prématurément.', record: 'Référence, valeur, unité, source et date.' },
+				{ moment: 'Observation', title: 'Chronométrer une série', action: 'Compter les tirs ou mesurer la durée continue sur une opération représentative.', record: 'Cadence, durée, pauses et résultat.' },
+				{ moment: 'Conception', title: 'Distinguer les branches', action: 'Tracer clouage, ponçage et finition avec leurs traitements et restrictions.', record: 'Plan, diamètres, longueurs et organes.' },
+				{ moment: 'Essai', title: 'Mesurer au poste', action: 'Contrôler la pression pendant la série ou le ponçage, puis observer la récupération.', record: 'Instrument, point, conditions et résultat.' },
+				{ moment: 'Évolution', title: 'Rejouer la cadence', action: 'Recalculer après changement de référence, de cadence, de flexible ou de coactivité.', record: 'Version du scénario et nouvelle décision.' },
+			],
+			sources: [
+				{ label: 'Einhell France, TC-PN 50 4137790', url: 'https://www.einhell.fr/p/4137790-tc-pn-50/', scope: 'Référence, pression maximale, passage minimal et accès à la notice du premier scénario.' },
+				{ label: 'Scheppach, 7906100715', url: 'https://shop.scheppach.com/Zubehoer-Set-Druckluftnagler-scheppach/7906100715', scope: 'Volume par tir, plage de pression et flexible recommandé du second scénario.' },
+				{ label: 'Metabo, DSX 150 601558000', url: 'https://de.metabo.com/de/maschinen/trennen-schleifen-fraesen/holzbearbeitung/exzenterschleifer/dsx-150-601558000-druckluft-exzenterschleifer.html', scope: 'Débit et pression attribués à la ponceuse du scénario continu.' },
+				{ label: 'INRS, réduction du bruit des cloueurs pneumatiques', url: 'https://www.inrs.fr/publications/bdd/techniques-reduction-bruit/FicheBruitAG.html?refINRS=BRUIT_FicheBruit_61', scope: 'Origines du bruit d’un cloueur et solutions portant notamment sur l’échappement.' },
+			],
+		},
 	},
 	'btp-chantier': {
 		verdict: 'Sur chantier, la bonne configuration doit être compatible, transportable, raccordable et vérifiable au point d’usage.',
@@ -357,9 +388,9 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 			updatedAt: '2026-07-19',
 			intro: 'Sur chantier, deux erreurs se cumulent facilement : choisir une machine sur son débit aspiré et choisir un outil sur son seul nom de catégorie. Le dossier repart de trois références dont les modes de consommation diffèrent, puis suit l’air dans une installation mobile sans confondre calcul de capacité et prévention des risques.',
 			scenarios: [
-				{ title: 'Burineur CP7110 en séquence soutenue', context: 'Chicago Pneumatic publie une consommation en charge de 6,9 L/s, une pression dynamique de 6,3 bar et un flexible intérieur minimal de 10 mm sur 5 m.', question: 'La production maintient-elle 414 L/min au voisinage de 6,3 bar au raccord pendant la durée réellement prévue ?', decision: 'Comparer le besoin en charge au FAD, documenter toute longueur supplémentaire et contrôler la pression pendant le travail.', toolId: 'chicago-pneumatic-cp7110', toolLabel: 'Tester le CP7110' },
-				{ title: 'Clouage mobile avec la TC-PN 50', context: 'La notice publie environ 0,66 litre par tir. Le besoin moyen dépend donc d’une cadence déclarée, tandis que la pointe reste une contrainte séparée.', question: 'La cadence, la pression, le flexible et le niveau de service attendu sont-ils explicitement définis ?', decision: 'Calculer le volume moyen à partir des tirs par minute, puis vérifier récupération et pression sur une séquence réelle.', toolId: 'einhell-tc-pn-50', toolLabel: 'Préparer le scénario de clouage' },
-				{ title: 'Burineur TC-PC 45 comme cas limite', context: 'La fiche publie 113 L/min à 6,3 bar et un flexible de 9 mm, mais la notice précise que l’appareil n’est pas conçu pour un usage professionnel ou industriel.', question: 'La décision distingue-t-elle la possibilité pneumatique de l’adéquation au service et aux conditions du chantier ?', decision: 'Utiliser la référence comme exemple de calcul, sans la recommander pour un usage professionnel que sa notice exclut.', toolId: 'einhell-tc-pc-45', toolLabel: 'Examiner le cas TC-PC 45' },
+				{ presetId: 'btp-burineur-cp7110', context: 'Chicago Pneumatic publie une consommation en charge de 6,9 L/s, une pression dynamique de 6,3 bar et un flexible intérieur minimal de 10 mm sur 5 m.', question: 'La production maintient-elle 414 L/min au voisinage de 6,3 bar au raccord pendant la durée réellement prévue ?', decision: 'Comparer le besoin en charge au FAD, documenter toute longueur supplémentaire et contrôler la pression pendant le travail.', toolLabel: 'Tester le CP7110' },
+				{ presetId: 'btp-clouage-mobile', context: 'La notice publie environ 0,66 litre par tir. Le besoin moyen dépend donc d’une cadence déclarée, tandis que la pointe reste une contrainte séparée.', question: 'La cadence, la pression, le flexible et le niveau de service attendu sont-ils explicitement définis ?', decision: 'Calculer le volume moyen à partir des tirs par minute, puis vérifier récupération et pression sur une séquence réelle.', toolLabel: 'Préparer le scénario de clouage' },
+				{ presetId: 'btp-burineur-cas-limite', context: 'La fiche publie 113 L/min à 6,3 bar et un flexible de 9 mm, mais la notice précise que l’appareil n’est pas conçu pour un usage professionnel ou industriel.', question: 'La décision distingue-t-elle la possibilité pneumatique de l’adéquation au service et aux conditions du chantier ?', decision: 'Utiliser la référence comme exemple de calcul, sans la recommander pour un usage professionnel que sa notice exclut.', toolLabel: 'Examiner le cas TC-PC 45' },
 			],
 			airPath: [
 				{ title: 'Source mobile', role: 'Produire le débit restitué nécessaire dans les conditions d’alimentation et d’environnement prévues.', verify: 'FAD, pression, durée admissible, énergie et implantation.' },
@@ -415,5 +446,42 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 			{ title: 'Changement d’actif', question: 'Une nouvelle référence modifie-t-elle le besoin, la qualité ou le point de contrôle ?', action: 'Rejouer la décision avec la nouvelle source au lieu de recopier la valeur de l’équipement remplacé.' },
 		],
 		boundary: 'Un historique ne prouve pas à lui seul la performance actuelle. Chaque conclusion doit rester reliée à une période, un état du réseau et une méthode de mesure. Une dérive non mesurée ne reçoit pas de valeur artificielle.',
+		longform: {
+			readingTime: 20,
+			updatedAt: '2026-07-19',
+			intro: 'La maintenance industrielle ne se réduit pas à additionner des consommations nominales. Un scénario exploitable relie la référence de l’outil, sa durée, les autres postes actifs, l’état du réseau et une ligne de base mesurée. Les trois cas ci-dessous servent de configurations de départ, puis chaque intervention doit conserver ce qui a été observé avant et après.',
+			scenarios: [
+				{ presetId: 'maintenance-meulage-continu', context: 'La Metabo DW 125 publie une consommation continue de 500 L/min à 6,2 bar. Une longue intervention peut donc devenir la charge de référence du secteur.', question: 'La production, le traitement et la distribution tiennent-ils le débit pendant toute la session sans chute au poste ?', decision: 'Tester une session continue, comparer le FAD et le cycle de service, puis consigner la pression avant et après la branche étudiée.', toolLabel: 'Établir la ligne de base DW 125' },
+				{ presetId: 'maintenance-derouillage', context: 'Le CP7120 publie 7,4 L/s, soit 444 L/min, avec un passage associé. Une fréquence de travail reste toutefois propre à l’intervention.', question: 'La fréquence proposée et la longueur du passage décrivent-elles la séquence réelle ?', decision: 'Commencer avec une hypothèse soutenue, la corriger par observation et mesurer la pression pendant une phase représentative.', toolLabel: 'Tester le dérouillage CP7120' },
+				{ presetId: 'maintenance-vissage-serie', context: 'La Metabo DS 14 publie un débit en charge. Le nombre de cycles ne transforme pas cette valeur constructeur, mais il modifie le besoin moyen et la coactivité.', question: 'Le scénario sépare-t-il consommation en charge, fréquence d’usage et postes simultanés ?', decision: 'Conserver le débit publié, rendre la fréquence modifiable et créer un second scénario si un autre outil fonctionne réellement en même temps.', toolLabel: 'Préparer le vissage DS 14' },
+			],
+			airPath: [
+				{ title: 'Production', role: 'Répondre aux charges normales, pointes et modes de secours explicitement décrits.', verify: 'FAD, commandes, consignes et limites de service.' },
+				{ title: 'Traitement', role: 'Maintenir la qualité requise sans ajouter une perte de charge non suivie.', verify: 'Capacité, point de fonctionnement, entretien et contrôles.' },
+				{ title: 'Réseau', role: 'Distribuer l’air avec des secteurs, restrictions et fuites identifiables.', verify: 'Plan à jour, mesures de pression et campagne de fuites.' },
+				{ title: 'Actif', role: 'Relier chaque outil ou machine à une référence, un mode et une criticité.', verify: 'Identifiant stable, source, réglage et scénario de fonctionnement.' },
+				{ title: 'Historique', role: 'Comparer l’état avant intervention, l’action et la mesure après.', verify: 'Date, méthode, résultat, limite et prochaine vérification.' },
+			],
+			evidence: [
+				{ decision: 'Charge de référence', required: 'Outils actifs, durée et pression', source: 'Scénario versionné et fiches fabricants', whenMissing: 'Ne pas présenter la puissance installée comme un besoin.' },
+				{ decision: 'Capacité disponible', required: 'FAD et cycle de service au régime étudié', source: 'Documentation de la production', whenMissing: 'Conserver le verdict indéterminé.' },
+				{ decision: 'État du réseau', required: 'Pression, fuites et restrictions localisées', source: 'Mesures comparables et plan', whenMissing: 'Ne pas attribuer la dérive à un composant unique.' },
+				{ decision: 'Effet de l’intervention', required: 'Mesure avant et après dans des conditions comparables', source: 'Compte rendu de maintenance', whenMissing: 'Ne pas déclarer l’amélioration acquise.' },
+				{ decision: 'Nouvel actif', required: 'Référence et profil de charge propres', source: 'Notice et essai de mise en service', whenMissing: 'Ne pas recopier le profil de l’actif remplacé.' },
+			],
+			fieldPlan: [
+				{ moment: 'Baseline', title: 'Fixer les conditions', action: 'Nommer charge, pression, secteurs, température et instruments avant de comparer.', record: 'Périmètre, date et état initial.' },
+				{ moment: 'Diagnostic', title: 'Localiser avant de corriger', action: 'Comparer amont, aval et point d’usage pendant le même scénario.', record: 'Points, valeurs et incertitudes.' },
+				{ moment: 'Intervention', title: 'Tracer l’action', action: 'Identifier le composant, la consigne ou la fuite traitée sans écraser l’état précédent.', record: 'Action, responsable et heure.' },
+				{ moment: 'Vérification', title: 'Rejouer la ligne de base', action: 'Répéter la mesure dans des conditions comparables et noter les écarts restants.', record: 'Avant, après, limite et décision.' },
+				{ moment: 'Exploitation', title: 'Planifier le prochain contrôle', action: 'Relier criticité, dérive observée et périodicité sans inventer un intervalle universel.', record: 'Déclencheur et date prévue.' },
+			],
+			sources: [
+				{ label: 'Metabo, DW 125 601556000', url: 'https://www.metabo.com/com/es/maquinas/cortar-rectificar-fresar/amoladoras-angulares/amoladoras-angulares-de-o100-150-mm/dw-125-amoladora-angular-neumatica/601556000', scope: 'Débit et pression de la meuleuse du scénario continu.' },
+				{ label: 'Chicago Pneumatic, CP7120 8941071200', url: 'https://tools.cp.com/en-uk/products/compression-tools/cp7120-needle-scaler-sku8941071200', scope: 'Consommation en charge, pression dynamique et passage minimal du dérouilleur à aiguilles.' },
+				{ label: 'Metabo, DS 14 604117000', url: 'https://www.metabo.com/za/en/tools/compressed-air/compressed-air-tools/air-screwdriver/ds-14-604117000-air-screwdriver.html', scope: 'Débit et pression de la visseuse du troisième scénario.' },
+				{ label: 'U.S. Department of Energy, Compressed Air Systems', url: 'https://www.energy.gov/cmei/ito/compressed-air-systems', scope: 'Approche système, fuites, maintenance préventive, qualité d’air, stockage et commandes.' },
+			],
+		},
 	},
 };

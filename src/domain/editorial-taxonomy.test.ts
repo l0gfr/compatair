@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { metierGuideProfiles } from '../data/metier-guides';
 import { guideAudienceIds, guideAudiences, guideMetierIds, guideMetiers } from './editorial-taxonomy';
+import { tradeScenarioPresets } from './trade-scenario-prefill';
 
 describe('editorial taxonomy', () => {
 	it('keeps audience and profession identifiers unique', () => {
@@ -26,11 +27,12 @@ describe('editorial taxonomy', () => {
 		}
 	});
 
-	it.each(['atelier-poids-lourds', 'btp-chantier'] as const)('publishes a sourced long-form extension for %s', (id) => {
+	it.each(guideMetierIds)('publishes a sourced long-form extension for %s', (id) => {
 		const longform = metierGuideProfiles[id].longform;
 		expect(longform).toBeDefined();
 		expect(longform!.scenarios).toHaveLength(3);
 		expect(longform!.sources.length).toBeGreaterThanOrEqual(4);
-		expect(new Set(longform!.scenarios.map((scenario) => scenario.toolId)).size).toBe(3);
+		expect(new Set(longform!.scenarios.map((scenario) => tradeScenarioPresets[scenario.presetId].toolId)).size).toBe(3);
+		for (const scenario of longform!.scenarios) expect(tradeScenarioPresets[scenario.presetId].metierId).toBe(id);
 	});
 });

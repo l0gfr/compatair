@@ -1,6 +1,7 @@
 ---
 import type { MetierLongform } from '../data/metier-guides';
 import type { GuideMetierId } from '../domain/editorial-taxonomy';
+import { tradeScenarioCalculatorHref, tradeScenarioPresets } from '../domain/trade-scenario-prefill';
 import UiIcon from './UiIcon.astro';
 
 type Props = {
@@ -36,16 +37,20 @@ const updatedLabel = longform.updatedAt.split('-').reverse().join('/');
 				<p>Chaque cas part d’une référence déjà documentée. Le calculateur apporte une réponse technique, puis le contrôle terrain confirme ce que le réseau livre réellement.</p>
 			</header>
 			<div class="trade-scenario-grid">
-				{longform.scenarios.map((scenario, index) => (
+				{longform.scenarios.map((scenario, index) => {
+					const preset = tradeScenarioPresets[scenario.presetId];
+					return (
 					<article>
 						<header><span>{String(index + 1).padStart(2, '0')}</span><UiIcon name="tools" size={24} /></header>
-						<h3>{scenario.title}</h3>
+						<h3>{preset.title}</h3>
 						<p>{scenario.context}</p>
 						<div><strong>Question décisive</strong><p>{scenario.question}</p></div>
 						<div><strong>Décision</strong><p>{scenario.decision}</p></div>
-						<a class="text-link" href={`/calculateur/#outil=${scenario.toolId}`}>{scenario.toolLabel}<UiIcon name="arrow" size={16} /></a>
+						<ul class="trade-scenario-preset" aria-label="Préremplissage proposé"><li>{preset.sessionMinutes} min</li><li>{preset.hoseLengthMeters} m · Ø {preset.hoseDiameterMm} mm</li></ul>
+						<a class="text-link" href={tradeScenarioCalculatorHref(scenario.presetId)}>{scenario.toolLabel}<UiIcon name="arrow" size={16} /></a>
 					</article>
-				))}
+					);
+				})}
 			</div>
 		</div>
 	</section>

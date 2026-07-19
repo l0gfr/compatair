@@ -60,6 +60,14 @@ const datasetDistributionRequirements = new Map([
 	['observatoire-qualite-documentaire/index.html', ['/data/document-quality-observatory.json', '/data/document-quality-observatory.csv']],
 ]);
 const tradeGuidePaths = ['garage-automobile', 'atelier-poids-lourds', 'carrosserie-peinture', 'menuiserie-agencement', 'btp-chantier', 'maintenance-industrielle'];
+const actionableGuidePaths = [
+	'flexible-air-comprime-chantier-25-50-metres',
+	'cadence-clouage-pneumatique-chantier',
+	'choisir-compresseur-mobile-chantier-fad-autonomie',
+	'cle-a-chocs-1-pouce-poids-lourds-debit-flexible',
+	'atelier-poids-lourds-plusieurs-baies-simultaneite',
+	'gonflage-grand-volume-poids-lourds-temps-securite',
+];
 const compressorIdentityPages = new Map();
 let largestInitialPageScriptBudget = { bytes: 0, label: '', modules: 0 };
 let largestOnDemandPageScriptBudget = { bytes: 0, label: '', modules: 0 };
@@ -344,7 +352,7 @@ for (const [path, requiredColumns] of csvArtifacts) {
 if (!artifactPaths.has('/calculateur/index.html')) errors.push('recommandation contrefactuelle: calculateur rendu absent');
 else {
 	const calculatorHtml = await readFile(join(root, '/calculateur/index.html'), 'utf8');
-	for (const marker of ['data-counterfactual', 'data-counterfactual-result', 'data-counterfactual-boundary', 'data-decision-answer-first', 'Une référence brute est acceptée', 'Trois compresseurs compatibles les plus proches du besoin', 'name="measuredPressureDrop"', 'name="measuredLeak"', 'name="supplyPressure"']) {
+	for (const marker of ['data-counterfactual', 'data-counterfactual-result', 'data-counterfactual-boundary', 'data-decision-answer-first', 'data-scenario-context', 'data-scenario-result-links', 'Une référence brute est acceptée', 'Trois compresseurs compatibles les plus proches du besoin', 'name="measuredPressureDrop"', 'name="measuredLeak"', 'name="supplyPressure"']) {
 		if (!calculatorHtml.includes(marker)) errors.push(`recommandation contrefactuelle: marqueur absent ${marker}`);
 	}
 }
@@ -396,12 +404,21 @@ for (const tradeGuidePath of tradeGuidePaths) {
 	for (const marker of [`data-trade-guide="${tradeGuidePath}"`, 'trade-instrument', 'trade-process', 'trade-check-grid', 'Limite publiée', 'Dossiers techniques']) {
 		if (!html.includes(marker)) errors.push(`guide métier ${tradeGuidePath}: structure longue absente ${marker}`);
 	}
-	if (['garage-automobile', 'atelier-poids-lourds', 'carrosserie-peinture', 'btp-chantier'].includes(tradeGuidePath)) {
+	{
 		for (const marker of [`data-trade-longform="${tradeGuidePath}"`, 'trade-scenario-grid', 'trade-air-map', 'trade-evidence-table-wrap', 'trade-field-timeline', 'trade-source-grid', 'Sources primaires']) {
 			if (!html.includes(marker)) errors.push(`guide métier ${tradeGuidePath}: dossier approfondi absent ${marker}`);
 		}
-		if ((html.match(/href="\/calculateur\/#outil=/g) ?? []).length < 3) errors.push(`guide métier ${tradeGuidePath}: trois scénarios préremplis requis`);
+		if ((html.match(/href="\/calculateur\/#scenario=/g) ?? []).length < 3) errors.push(`guide métier ${tradeGuidePath}: trois scénarios métier préremplis requis`);
 		if ((html.match(/rel="noopener"/g) ?? []).length < 4) errors.push(`guide métier ${tradeGuidePath}: quatre sources primaires reliées requises`);
+	}
+}
+
+for (const actionableGuidePath of actionableGuidePaths) {
+	const artifactPath = `/guides/${actionableGuidePath}/index.html`;
+	if (!artifactPaths.has(artifactPath)) { errors.push(`guide actionnable: page absente ${actionableGuidePath}`); continue; }
+	const html = await readFile(join(root, artifactPath), 'utf8');
+	for (const marker of ['data-guide-audiences="professionnel"', 'article-infographic', '/calculateur/#scenario=', 'Vérifier ce guide avec un outil réel']) {
+		if (!html.includes(marker)) errors.push(`guide actionnable ${actionableGuidePath}: marqueur absent ${marker}`);
 	}
 }
 
