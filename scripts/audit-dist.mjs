@@ -466,6 +466,9 @@ for (const file of htmlFiles) {
 		if (!html.includes('href="/gouvernance-editoriale/"')) errors.push(`${label}: lien vers le protocole de gouvernance éditoriale absent`);
 	}
 	if (label === 'professionnels/index.html') {
+		if (!html.includes('data-pro-value-network')) errors.push(`${label}: schéma de valeur fabricants-distributeurs absent`);
+		if (!html.includes('data-pro-collaboration')) errors.push(`${label}: parcours de collaboration professionnelle absent`);
+		if (!html.includes('Il ne choisit pas le verdict')) errors.push(`${label}: frontière d’indépendance professionnelle absente`);
 		const widgetTag = html.match(/<script[^>]+src="\/widget\/v1\.0\.0\/compatair-widget\.js"[^>]*>/)?.[0];
 		if (!widgetTag) errors.push(`${label}: widget immuable absent`);
 		else {

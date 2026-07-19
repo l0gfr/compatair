@@ -1,20 +1,468 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import UiIcon from '../components/UiIcon.astro';
+import { compressors, tools } from '../data/catalog';
+import { evidenceHistory } from '../data/evidence-history';
+import { sourceDirectory } from '../data/source-directory';
+
+const totalProducts = compressors.length + tools.length;
+const formatNumber = (value: number) => new Intl.NumberFormat('fr-FR').format(value);
 ---
 
-<BaseLayout title="Widget et API pour marchands pneumatiques | CompatAir" description="Intégrez un verdict de compatibilité sourcé sur une fiche marchande grâce au widget et à l’API CompatAir." canonicalPath="/professionnels/">
-	<section class="page-hero compact pro-hero"><div class="container split-head"><div><p class="eyebrow">CompatAir pour les professionnels</p><h1>Une réponse technique sur la fiche produit</h1><p class="lead">Le widget et l’API permettent aux marchands d’afficher une compatibilité fondée sur des données sourcées. Une éventuelle commission d’affiliation ne change jamais le résultat.</p></div><div class="passport-privacy-note"><strong>Version d’essai disponible</strong><p>L’API publique et le widget fonctionnent sans garantie contractuelle de disponibilité. Un volume de requêtes convenu, l’assistance, l’historique et les exports relèvent d’une offre professionnelle.</p></div></div></section>
-	<section class="section"><div class="container b2b-grid">
-		<article class="b2b-card"><p class="eyebrow">Module pour fiche produit</p><h2>« Ce compresseur convient-il à mon outil ? »</h2><p>Cette démonstration interroge le même service que l’intégration finale. Si le service est indisponible, elle affiche l’erreur au lieu d’inventer une réponse.</p><div id="merchant-widget-demo" class="widget-demo-live"></div><script is:inline src="/widget/v1.0.0/compatair-widget.js" integrity="sha384-pZVA7LPRTtlWQ/eeRb84bAhHdWq1X1ISb/iW+VWmtmFAj7tyo3afdACxYMo3VZF1" crossorigin="anonymous" data-target="merchant-widget-demo" data-compressor-id="einhell-tc-ac-240-50-10-of" data-tool-id="einhell-tc-pe-150" defer></script></article>
-		<article class="b2b-card"><p class="eyebrow">Connexion au catalogue</p><h2>Une réponse stable pour chaque comparaison</h2><p>Une requête fournit le verdict, la raison d’une éventuelle limite, les versions du calcul et les sources. Le calcul reste géré par CompatAir : une correction de donnée peut être répercutée sans modifier le site du marchand.</p><a class="button" href="/api/">Lire la documentation API</a></article>
-	</div></section>
-	<section class="section integration-section"><div class="container"><div class="section-head"><p class="eyebrow">Intégration</p><h2>Deux identifiants, aucun verdict commercial</h2></div><pre><code>&lt;script
-  src="https://compatair.fr/widget/v1.0.0/compatair-widget.js"
-  integrity="sha384-pZVA7LPRTtlWQ/eeRb84bAhHdWq1X1ISb/iW+VWmtmFAj7tyo3afdACxYMo3VZF1"
-  crossorigin="anonymous"
-  data-compressor-id="einhell-tc-ac-240-50-10-of"
-	 data-tool-id="einhell-tc-pe-150"
-	 data-target="compatibility-result"
-	 defer&gt;&lt;/script&gt;</code></pre><p>Le site marchand doit autoriser le chargement du script et les requêtes vers <code>https://compatair.fr</code>. Dans une politique de sécurité du contenu, ces autorisations correspondent à <code>script-src</code> et <code>connect-src</code>. Le module isole ses styles grâce au Shadow DOM, n’écrit aucun cookie et ne transmet que les deux identifiants techniques.</p></div></section>
-	<section class="section b2b-boundary"><div class="container callout"><div><p class="eyebrow">Services professionnels</p><h2>Une intégration fiable, avec un verdict indépendant</h2><p>Les offres professionnelles peuvent couvrir la disponibilité du service, le suivi des données et l’accompagnement à l’intégration. Elles n’achètent ni un classement ni une compatibilité favorable.</p></div><ul><li>Volume de requêtes et disponibilité convenus</li><li>Alertes lors d’une modification des données</li><li>Exports prêts à intégrer et documentation technique</li><li>Ajout prioritaire de références, soumis aux mêmes règles de preuve</li></ul></div></section>
+<BaseLayout
+	title="Fabricants et distributeurs | CompatAir"
+	description="CompatAir aide fabricants et distributeurs à transformer leurs documents techniques en catalogues fiables, vérifiables et utiles pour orienter le client final."
+	canonicalPath="/professionnels/"
+	imageAlt="CompatAir relie documents techniques, catalogue structuré et décisions de compatibilité"
+	breadcrumbs={[{ name: 'Fabricants et distributeurs', path: '/professionnels/' }]}
+>
+	<div class="pro-page">
+		<section class="pro-hero" data-professional-page>
+			<div class="container pro-hero-grid">
+				<div class="pro-hero-copy">
+					<p class="pro-kicker">CompatAir pour les fabricants et distributeurs</p>
+					<h1>Faire d’un catalogue technique un <em>outil de décision.</em></h1>
+					<p class="pro-lead">CompatAir transforme des caractéristiques dispersées en informations structurées, sourcées et directement utiles au choix. Notre rôle&nbsp;: relier l’identité exacte d’un produit, ses documents, ses performances publiées et les besoins réels du client, sans confondre donnée technique, argument commercial et calcul.</p>
+					<div class="pro-actions">
+						<a class="button primary" href="mailto:contact@l0g.fr?subject=Collaboration%20professionnelle%20CompatAir">Parler de votre catalogue <UiIcon name="arrow" size={17} /></a>
+						<a class="pro-text-link" href="#notre-apport">Découvrir notre apport</a>
+					</div>
+					<ul class="pro-hero-principles" aria-label="Principes de collaboration">
+						<li><UiIcon name="check" size={17} /> Chaque donnée critique reliée à une source</li>
+						<li><UiIcon name="shield" size={17} /> Aucune estimation silencieuse</li>
+						<li><UiIcon name="scale" size={17} /> Verdict indépendant de la relation commerciale</li>
+					</ul>
+				</div>
+
+				<div class="pro-system-map" id="chaine-confiance" data-pro-value-network>
+					<header><span><i></i> Chaîne de confiance</span><strong>DOCUMENT → DÉCISION</strong></header>
+					<svg viewBox="0 0 620 470" role="img" aria-labelledby="pro-map-title pro-map-description">
+						<title id="pro-map-title">Du document constructeur à la décision client</title>
+						<desc id="pro-map-description">Les documents, références et mesures alimentent un catalogue structuré, puis un moteur de compatibilité diffusé sur les fiches produit, les API et les assistants.</desc>
+						<defs>
+							<linearGradient id="pro-map-line" x1="0" x2="1"><stop stop-color="#d3eb56" /><stop offset="1" stop-color="#4ca77f" /></linearGradient>
+							<filter id="pro-map-glow"><feGaussianBlur stdDeviation="4" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+						</defs>
+						<g class="pro-map-grid"><path d="M20 95H600M20 190H600M20 285H600M20 380H600M120 25V445M240 25V445M360 25V445M480 25V445" /></g>
+						<g class="pro-map-links"><path d="M145 100C220 100 222 205 292 205" /><path d="M145 215C220 215 225 205 292 205" /><path d="M145 330C220 330 222 205 292 205" /><path d="M390 205C455 205 450 100 500 100" /><path d="M390 205C455 205 450 215 500 215" /><path d="M390 205C455 205 450 330 500 330" /></g>
+						<g class="pro-map-source"><rect x="34" y="65" width="112" height="70" rx="12" /><text x="50" y="90">01 / SOURCES</text><text class="pro-map-main" x="50" y="115">Documents</text></g>
+						<g class="pro-map-source"><rect x="34" y="180" width="112" height="70" rx="12" /><text x="50" y="205">02 / IDENTITÉ</text><text class="pro-map-main" x="50" y="230">MPN · EAN</text></g>
+						<g class="pro-map-source"><rect x="34" y="295" width="112" height="70" rx="12" /><text x="50" y="320">03 / MESURES</text><text class="pro-map-main" x="50" y="345">Débit · bar</text></g>
+						<g class="pro-map-core" filter="url(#pro-map-glow)"><circle cx="340" cy="205" r="74" /><circle cx="340" cy="205" r="51" /><text x="340" y="188" text-anchor="middle">COMPATAIR</text><text class="pro-map-core-main" x="340" y="216" text-anchor="middle">Catalogue</text><text class="pro-map-core-main" x="340" y="238" text-anchor="middle">vérifiable</text></g>
+						<g class="pro-map-output"><rect x="500" y="65" width="88" height="70" rx="12" /><text x="544" y="91" text-anchor="middle">FICHE</text><text class="pro-map-main" x="544" y="116" text-anchor="middle">Produit</text></g>
+						<g class="pro-map-output"><rect x="500" y="180" width="88" height="70" rx="12" /><text x="544" y="206" text-anchor="middle">SERVICE</text><text class="pro-map-main" x="544" y="231" text-anchor="middle">API</text></g>
+						<g class="pro-map-output"><rect x="500" y="295" width="88" height="70" rx="12" /><text x="544" y="321" text-anchor="middle">CONSEIL</text><text class="pro-map-main" x="544" y="346" text-anchor="middle">Client</text></g>
+						<g class="pro-map-status"><circle cx="53" cy="414" r="5" /><text x="68" y="419">Source, règle et limite restent visibles</text></g>
+					</svg>
+					<div class="pro-system-mobile" role="img" aria-label="Les documents, identifiants et mesures alimentent un catalogue CompatAir vérifiable, puis les fiches produit, les API et le conseil client.">
+						<div><span>Documents</span><span>MPN · EAN</span><span>Débit · bar</span></div>
+						<b>Structurer et relier <i aria-hidden="true">↓</i></b>
+						<strong><small>COMPATAIR</small> Catalogue vérifiable</strong>
+						<b>Calculer sans inventer <i aria-hidden="true">↓</i></b>
+						<div><span>Fiche produit</span><span>API</span><span>Conseil client</span></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="pro-metrics" aria-label="État du corpus CompatAir">
+			<div class="container">
+				<div><strong>{formatNumber(totalProducts)}</strong><span>références documentées</span></div>
+				<div><strong>{formatNumber(sourceDirectory.length)}</strong><span>documents distincts reliés</span></div>
+				<div><strong>{formatNumber(evidenceHistory.events.length)}</strong><span>vérifications conservées</span></div>
+				<div><strong>4</strong><span>verdicts explicites, dont «&nbsp;données insuffisantes&nbsp;»</span></div>
+			</div>
+		</section>
+
+		<section class="pro-section pro-intro" id="notre-apport">
+			<div class="container pro-intro-grid">
+				<header class="pro-section-head">
+					<p class="pro-index">01 / Le problème que nous résolvons</p>
+					<h2>Un bon catalogue ne contient pas seulement plus de données. Il permet de comprendre <em>ce qu’elles autorisent.</em></h2>
+				</header>
+				<div class="pro-intro-copy">
+					<p>Une référence, un débit, une pression ou une capacité de cuve n’aident réellement le client que si le modèle est identifié sans ambiguïté, si la nature de la mesure est claire et si la valeur peut être rattachée au bon document. Or les informations utiles vivent souvent dans plusieurs fiches, notices, tableaux ou marchés, avec des unités et des niveaux de précision différents.</p>
+					<p>CompatAir construit la couche qui manque entre la documentation et le choix&nbsp;: un référentiel technique où chaque produit, champ critique, source et règle de calcul restent reliés. Le catalogue devient alors exploitable par un conseiller, une fiche e-commerce, un outil de comparaison ou un assistant, sans perdre le contexte qui rend la réponse défendable.</p>
+				</div>
+				<div class="pro-friction-list">
+					<article><span>01</span><h3>Identités ambiguës</h3><p>Variantes proches, noms commerciaux réutilisés, MPN ou EAN absents compliquent le rattachement à la bonne fiche.</p></article>
+					<article><span>02</span><h3>Mesures non comparables</h3><p>Débit aspiré, débit restitué, pression de mesure et consommation d’outil ne décrivent pas la même réalité.</p></article>
+					<article><span>03</span><h3>Silences documentaires</h3><p>Une valeur manquante ou contradictoire doit rester visible au lieu d’être remplacée par une moyenne ou une hypothèse cachée.</p></article>
+					<article><span>04</span><h3>Conseil déconnecté</h3><p>Sans relation entre produit, besoin et preuve, la fiche informe mais n’aide pas à décider.</p></article>
+				</div>
+			</div>
+		</section>
+
+		<section class="pro-section pro-audiences" id="fabricants-distributeurs">
+			<div class="container">
+				<header class="pro-section-head pro-section-head-split">
+					<div><p class="pro-index">02 / Deux métiers, un même enjeu</p><h2>Rendre la promesse technique lisible jusqu’au client final.</h2></div>
+					<p>Fabricant et distributeur n’ont pas le même rôle. CompatAir organise leur information autour d’un langage commun, sans effacer l’origine de la donnée ni la responsabilité de chacun.</p>
+				</header>
+				<div class="pro-audience-grid">
+					<article class="pro-audience-card manufacturer">
+						<header><span><UiIcon name="gauge" size={25} /></span><p>Pour les fabricants</p><strong>Rendre la performance publiée exploitable</strong></header>
+						<ul>
+							<li>Relier chaque variante à son identité exacte et à ses documents de référence.</li>
+							<li>Présenter les caractéristiques qui changent réellement le dimensionnement&nbsp;: débit restitué, pression, cycle de service et limites.</li>
+							<li>Repérer les champs absents, les contradictions entre documents et les mélanges possibles entre marchés ou versions.</li>
+							<li>Rendre une mise à jour traçable et identifier les décisions qui devront être recalculées.</li>
+						</ul>
+						<a href="/barometre-transparence/">Voir comment nous mesurons la transparence documentaire <UiIcon name="arrow" size={15} /></a>
+					</article>
+					<article class="pro-audience-card distributor">
+						<header><span><UiIcon name="database" size={25} /></span><p>Pour les distributeurs</p><strong>Passer de la fiche produit à l’orientation</strong></header>
+						<ul>
+							<li>Rattacher les offres à la référence technique exacte grâce aux identifiants fabricant et codes produit.</li>
+							<li>Ajouter à la fiche un verdict compréhensible, sa raison et les données qui le soutiennent.</li>
+							<li>Distinguer clairement le prix et la disponibilité des caractéristiques qui déterminent la compatibilité.</li>
+							<li>Diffuser la même logique dans le site, les outils internes, l’API ou les parcours agentiques.</li>
+						</ul>
+						<a href="/affiliation/">Comprendre la séparation entre offre et verdict <UiIcon name="arrow" size={15} /></a>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="pro-section pro-process" id="methode">
+			<div class="container">
+				<header class="pro-section-head pro-section-head-split">
+					<div><p class="pro-index">03 / Notre méthode</p><h2>Du corpus documentaire à une réponse vérifiable.</h2></div>
+					<p>Le traitement reste déterministe&nbsp;: une même configuration et une même version des données produisent le même résultat. Une lacune importante produit «&nbsp;données insuffisantes&nbsp;», jamais un chiffre inventé.</p>
+				</header>
+				<ol class="pro-process-track">
+					<li><span>01</span><div><h3>Cadrer le portefeuille</h3><p>Marques, familles, variantes, marchés, identifiants et documents à couvrir sont définis avant l’intégration.</p></div></li>
+					<li><span>02</span><div><h3>Cartographier les preuves</h3><p>Chaque donnée critique est reliée à sa source, sa date de consultation et son niveau de qualité.</p></div></li>
+					<li><span>03</span><div><h3>Structurer sans extrapoler</h3><p>Unités, dénominations et champs sont harmonisés. Les absences et contradictions restent explicites.</p></div></li>
+					<li><span>04</span><div><h3>Appliquer les règles</h3><p>Le besoin de l’outil est comparé au débit disponible à la pression demandée, avec méthode et limites publiées.</p></div></li>
+					<li><span>05</span><div><h3>Publier et maintenir</h3><p>Widget, API, exports et registres utilisent le même noyau. Les corrections restent datées et consultables.</p></div></li>
+				</ol>
+				<div class="pro-process-links"><a href="/methodologie/">Lire la méthode de calcul</a><a href="/sources-fiabilite/">Examiner les niveaux de source</a><a href="/preuves/">Parcourir l’historique des preuves</a></div>
+			</div>
+		</section>
+
+		<section class="pro-section pro-blueprint" id="architecture">
+			<div class="container pro-blueprint-grid">
+				<div class="pro-blueprint-copy">
+					<p class="pro-index">04 / Une infrastructure, plusieurs usages</p>
+					<h2>Un même référentiel technique pour tous les points de contact.</h2>
+					<p>CompatAir ne produit pas une réponse différente pour le catalogue, le vendeur et l’assistant. Les mêmes identifiants, sources, versions et règles alimentent chaque canal. Cela limite la dérive entre une fiche mise à jour, un export ancien et un conseil donné ailleurs.</p>
+					<ul>
+						<li><UiIcon name="check" size={18} /><span><strong>Référentiel structuré&nbsp;:</strong> produits, variantes, champs et sources reliés.</span></li>
+						<li><UiIcon name="check" size={18} /><span><strong>Moteur déterministe&nbsp;:</strong> verdict, besoin, débit disponible, marge et limites.</span></li>
+						<li><UiIcon name="check" size={18} /><span><strong>Contrats publics&nbsp;:</strong> API, widget et formats machine documentés.</span></li>
+						<li><UiIcon name="check" size={18} /><span><strong>Cycle de correction&nbsp;:</strong> historique, changement et impact conservés.</span></li>
+					</ul>
+				</div>
+				<div class="pro-stack" aria-label="Architecture des services CompatAir">
+					<div class="pro-stack-channels"><span>Fiche produit</span><span>Conseiller</span><span>API</span><span>Agent IA</span></div>
+					<div class="pro-stack-layer decision"><small>COUCHE DE DÉCISION</small><strong>Compatibilité + explication + limites</strong><i></i></div>
+					<div class="pro-stack-layer engine"><small>MOTEUR VERSIONNÉ</small><strong>Pression · débit · usage · marge</strong><i></i></div>
+					<div class="pro-stack-layer data"><small>CATALOGUE DE PREUVE</small><strong>Identités · champs · sources · dates</strong><i></i></div>
+					<footer><span>Fabricant</span><b>Documentation vérifiée</b><span>Distributeur</span></footer>
+				</div>
+			</div>
+		</section>
+
+		<section class="pro-section pro-outcomes" id="livrables">
+			<div class="container">
+				<header class="pro-section-head"><p class="pro-index">05 / Ce que la collaboration produit</p><h2>Des livrables utiles au catalogue, et une meilleure réponse pour l’acheteur.</h2></header>
+				<div class="pro-outcome-grid">
+					<article><span><UiIcon name="database" size={24} /></span><h3>Audit de couverture</h3><p>État des identifiants, sources, données indispensables, contradictions et niveaux de précision sur le périmètre convenu.</p></article>
+					<article><span><UiIcon name="book" size={24} /></span><h3>Catalogue enrichi</h3><p>Fiches structurées où les caractéristiques critiques restent reliées aux documents qui les publient.</p></article>
+					<article><span><UiIcon name="calculator" size={24} /></span><h3>Décisions intégrables</h3><p>Verdicts reproductibles pour une configuration précise, avec valeurs utilisées, règles et réserves.</p></article>
+					<article><span><UiIcon name="compass" size={24} /></span><h3>Parcours d’orientation</h3><p>Réponses lisibles sur une fiche, dans un comparateur ou au sein d’un outil d’aide à la vente.</p></article>
+					<article><span><UiIcon name="shield" size={24} /></span><h3>Suivi des corrections</h3><p>Évolution datée des données et identification des résultats qui dépendent d’une information modifiée.</p></article>
+					<article><span><UiIcon name="scale" size={24} /></span><h3>Cadre de confiance</h3><p>Séparation explicite des données techniques, des offres commerciales et du verdict de compatibilité.</p></article>
+				</div>
+				<div class="pro-customer-result">
+					<header><p class="pro-index">Côté client final</p><h3>Une réponse courte, mais vérifiable.</h3></header>
+					<div><span>01</span><p><strong>Le produit exact</strong> est reconnu grâce à sa référence, pas seulement à un nom ressemblant.</p></div>
+					<div><span>02</span><p><strong>Le verdict est expliqué</strong> par le besoin, la pression et le débit disponible.</p></div>
+					<div><span>03</span><p><strong>La qualité de la réponse est visible</strong> avec ses sources, ses dates et ses limites.</p></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="pro-section pro-demo" id="demonstration">
+			<div class="container">
+				<header class="pro-section-head pro-section-head-split">
+					<div><p class="pro-index">06 / Voir la réponse en situation</p><h2>Un module directement sur la fiche produit.</h2></div>
+					<p>Cette démonstration interroge le même service que l’intégration finale. Si le service est indisponible ou si les données ne suffisent pas, elle expose la limite au lieu de fabriquer une réponse.</p>
+				</header>
+				<div class="pro-demo-grid">
+					<article class="pro-widget-card">
+						<header><span><i></i> Démonstration en direct</span><strong>COMPRESSEUR × OUTIL</strong></header>
+						<div id="merchant-widget-demo" class="widget-demo-live"></div>
+						<script is:inline src="/widget/v1.0.0/compatair-widget.js" integrity="sha384-pZVA7LPRTtlWQ/eeRb84bAhHdWq1X1ISb/iW+VWmtmFAj7tyo3afdACxYMo3VZF1" crossorigin="anonymous" data-target="merchant-widget-demo" data-compressor-id="einhell-tc-ac-240-50-10-of" data-tool-id="einhell-tc-pe-150" defer></script>
+					</article>
+					<article class="pro-integration-card">
+						<p class="pro-index">Intégration progressive</p>
+						<h3>Commencer par le bon niveau.</h3>
+						<ol><li><span>01</span><div><strong>Widget</strong><p>Ajouter une réponse visible sur une fiche avec peu de JavaScript.</p></div></li><li><span>02</span><div><strong>API</strong><p>Composer l’expérience dans votre propre interface et conserver les champs de preuve.</p></div></li><li><span>03</span><div><strong>Exports et suivi</strong><p>Synchroniser un périmètre de références et suivre les données qui évoluent.</p></div></li></ol>
+						<div class="pro-integration-actions"><a class="button primary" href="/api/">Documentation API</a><a class="button" href="/mcp-documentation/">Accès pour agents</a></div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="pro-section pro-boundary" id="independance">
+			<div class="container pro-boundary-grid">
+				<header><p class="pro-index">07 / Une coopération sans confusion des rôles</p><h2>Le partenaire améliore la donnée. Il ne choisit pas le verdict.</h2><p>Notre indépendance ne s’oppose pas à la collaboration&nbsp;: elle en fixe les règles pour que l’information reste crédible auprès du client final.</p></header>
+				<div class="pro-role-columns">
+					<section><span>Le partenaire apporte</span><ul><li>les identifiants et documents officiels&nbsp;;</li><li>la connaissance des variantes et marchés&nbsp;;</li><li>les mises à jour et corrections documentées&nbsp;;</li><li>le contexte d’intégration et les besoins de diffusion.</li></ul></section>
+					<section><span>CompatAir conserve</span><ul><li>la structure du référentiel et les règles de calcul&nbsp;;</li><li>l’évaluation de la qualité et de la suffisance des sources&nbsp;;</li><li>le traitement public des contradictions et limites&nbsp;;</li><li>l’indépendance du verdict et de son classement technique.</li></ul></section>
+				</div>
+				<footer><UiIcon name="scale" size={22} /><p>Une rémunération peut financer l’intégration, le suivi, le support ou un niveau de service convenu. Elle n’achète jamais une valeur technique, un résultat favorable ou une place dans le classement.</p></footer>
+			</div>
+		</section>
+
+		<section class="pro-section pro-collaboration" id="collaboration" data-pro-collaboration>
+			<div class="container">
+				<header class="pro-section-head pro-section-head-split"><div><p class="pro-index">08 / Travailler ensemble</p><h2>Partir d’un périmètre concret, puis industrialiser ce qui est prouvé.</h2></div><p>Une collaboration peut porter sur une gamme, un catalogue distributeur ou un canal précis. Le niveau de service, les volumes, les délais et les responsabilités sont définis dans le cadre convenu.</p></header>
+				<div class="pro-collaboration-grid">
+					<article><span>01</span><h3>Référencement documentaire</h3><p>Structurer une gamme, rattacher ses documents et rendre visibles les données manquantes avant toute promesse d’intégration.</p></article>
+					<article><span>02</span><h3>Intégration catalogue</h3><p>Relier les références du partenaire au widget, à l’API ou à des exports adaptés à son parcours client.</p></article>
+					<article><span>03</span><h3>Suivi de portefeuille</h3><p>Organiser les mises à jour, corrections, alertes et recalculs sur un périmètre maintenu dans le temps.</p></article>
+				</div>
+				<div class="pro-final-cta">
+					<div><p class="pro-index">Votre catalogue peut déjà servir de point de départ</p><h2>Montrez-nous une gamme, ses documents et le parcours que vous voulez améliorer.</h2></div>
+					<div><a class="button primary" href="mailto:contact@l0g.fr?subject=Collaboration%20professionnelle%20CompatAir">Échanger avec CompatAir <UiIcon name="arrow" size={17} /></a><a href="/observatoire-qualite-documentaire/">Voir comment nous mesurons notre propre qualité</a></div>
+				</div>
+			</div>
+		</section>
+	</div>
 </BaseLayout>
+
+<style>
+	.pro-page { --pro-ink: #102a20; --pro-muted: #4e655a; --pro-paper: #f4f1e9; --pro-line: rgba(16,42,32,.18); overflow: hidden; background: var(--pro-paper); }
+	.pro-hero { position: relative; padding: clamp(4rem, 8vw, 7.5rem) 0 clamp(4rem, 7vw, 6.5rem); background: radial-gradient(circle at 15% 15%, rgba(211,235,86,.15), transparent 24rem), linear-gradient(112deg, #f7f4ec 0 63%, #e9eee5 63%); }
+	.pro-hero::before { position: absolute; inset: 0; opacity: .32; background-image: linear-gradient(rgba(16,42,32,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(16,42,32,.055) 1px, transparent 1px); background-size: 44px 44px; mask-image: linear-gradient(90deg, transparent, black); content: ''; pointer-events: none; }
+	.pro-hero-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(390px, .92fr); gap: clamp(3rem, 6vw, 6rem); align-items: center; }
+	.pro-kicker, .pro-index { margin: 0 0 1rem; color: var(--brand); font: 820 .68rem/1.4 ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; }
+	.pro-hero h1 { max-width: 770px; color: var(--pro-ink); font-size: clamp(3rem, 5.3vw, 5.15rem); font-weight: 470; line-height: .94; letter-spacing: -.045em; }
+	.pro-hero h1 em, .pro-section-head h2 em { color: var(--brand); font-weight: inherit; }
+	.pro-lead { max-width: 760px; margin: 2rem 0 0; color: var(--pro-muted); font-size: clamp(1.05rem, 1.55vw, 1.22rem); line-height: 1.75; }
+	.pro-actions { display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; align-items: center; margin-top: 2.2rem; }
+	.pro-actions .button { padding-inline: 1.3rem; }
+	.pro-text-link { color: var(--pro-ink); font-size: .86rem; font-weight: 780; text-decoration-thickness: 1px; text-underline-offset: .35em; }
+	.pro-hero-principles { display: flex; flex-wrap: wrap; gap: .75rem 1.3rem; margin: 2.3rem 0 0; padding: 1.3rem 0 0; border-top: 1px solid var(--pro-line); list-style: none; }
+	.pro-hero-principles li { display: flex; gap: .45rem; align-items: center; color: #385247; font-size: .7rem; font-weight: 720; }
+	.pro-hero-principles :global(.ui-icon) { color: var(--brand); }
+	.pro-system-map { position: relative; overflow: hidden; border: 1px solid rgba(211,235,86,.38); border-radius: 1.25rem; color: white; background: radial-gradient(circle at 50% 42%, #244e3b, #10281e 57%, #091c14); box-shadow: 0 30px 70px rgba(14,42,30,.22); }
+	.pro-system-map > header, .pro-widget-card > header { display: flex; justify-content: space-between; gap: 1rem; padding: .85rem 1rem; border-bottom: 1px solid rgba(255,255,255,.13); color: #9cb2a7; font: 750 .58rem/1.3 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+	.pro-system-map > header span, .pro-widget-card > header span { display: flex; align-items: center; gap: .5rem; }
+	.pro-system-map > header i, .pro-widget-card > header i { width: .48rem; height: .48rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 .22rem rgba(211,235,86,.1), 0 0 .8rem rgba(211,235,86,.55); }
+	.pro-system-map > header strong { color: var(--accent); }
+	.pro-system-map svg { display: block; width: 100%; height: auto; }
+	.pro-system-mobile { display: none; }
+	.pro-map-grid path { fill: none; stroke: rgba(255,255,255,.055); stroke-width: 1; }
+	.pro-map-links path { fill: none; stroke: url(#pro-map-line); stroke-width: 2; stroke-dasharray: 5 7; opacity: .72; }
+	.pro-map-source rect, .pro-map-output rect { fill: rgba(255,255,255,.055); stroke: rgba(255,255,255,.18); }
+	.pro-map-source text, .pro-map-output text { fill: #91aa9e; font: 700 10px ui-monospace, monospace; letter-spacing: 1px; }
+	.pro-map-source .pro-map-main, .pro-map-output .pro-map-main { fill: #f4f8f4; font: 720 14px "Manrope Variable", sans-serif; letter-spacing: 0; }
+	.pro-map-core circle:first-child { fill: rgba(211,235,86,.08); stroke: rgba(211,235,86,.46); }
+	.pro-map-core circle:nth-child(2) { fill: #102c20; stroke: rgba(255,255,255,.14); }
+	.pro-map-core text { fill: var(--accent); font: 800 10px ui-monospace, monospace; letter-spacing: 1.4px; }
+	.pro-map-core .pro-map-core-main { fill: white; font: 600 17px "Newsreader Variable", serif; letter-spacing: 0; }
+	.pro-map-status circle { fill: var(--accent); }
+	.pro-map-status text { fill: #a9bcb2; font: 650 11px "Manrope Variable", sans-serif; }
+
+	.pro-metrics { border-block: 1px solid var(--pro-line); background: #0e281e; color: white; }
+	.pro-metrics .container { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+	.pro-metrics .container > div { display: grid; gap: .45rem; min-height: 8.8rem; align-content: center; padding: 1.5rem; border-left: 1px solid rgba(255,255,255,.12); }
+	.pro-metrics .container > div:last-child { border-right: 1px solid rgba(255,255,255,.12); }
+	.pro-metrics strong { color: var(--accent); font: 520 clamp(2rem, 4vw, 3.2rem)/1 "Newsreader Variable", serif; }
+	.pro-metrics span { max-width: 13rem; color: #afc1b7; font-size: .72rem; line-height: 1.5; }
+
+	.pro-section { padding: clamp(5rem, 9vw, 8.5rem) 0; scroll-margin-top: 5.2rem; }
+	.pro-section-head { max-width: 910px; margin-bottom: clamp(2.5rem, 5vw, 4.5rem); }
+	.pro-section-head h2 { margin: 0; color: var(--pro-ink); font-size: clamp(2.35rem, 4vw, 4rem); font-weight: 480; line-height: 1; letter-spacing: -.035em; }
+	.pro-section-head-split { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(280px, .6fr); gap: clamp(2rem, 6vw, 6rem); max-width: none; align-items: end; }
+	.pro-section-head-split p:last-child { margin: 0 0 .25rem; color: var(--pro-muted); line-height: 1.72; }
+	.pro-intro { background: #f8f6f0; }
+	.pro-intro-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(320px, .72fr); gap: 2rem clamp(3rem, 8vw, 8rem); }
+	.pro-intro-grid .pro-section-head { grid-column: 1; margin: 0; }
+	.pro-intro-grid .pro-section-head h2 { font-size: clamp(2.4rem, 4.2vw, 4.15rem); }
+	.pro-intro-copy { grid-column: 2; align-self: end; }
+	.pro-intro-copy p { margin: 0 0 1.25rem; color: var(--pro-muted); line-height: 1.8; }
+	.pro-friction-list { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 3rem; border-block: 1px solid var(--pro-line); }
+	.pro-friction-list article { position: relative; padding: 1.8rem 1.5rem 2rem; border-left: 1px solid var(--pro-line); }
+	.pro-friction-list article:last-child { border-right: 1px solid var(--pro-line); }
+	.pro-friction-list span { color: var(--brand); font: 800 .64rem/1 ui-monospace, monospace; }
+	.pro-friction-list h3 { margin: 2rem 0 .7rem; font-size: 1.35rem; }
+	.pro-friction-list p { margin: 0; color: var(--pro-muted); font-size: .82rem; line-height: 1.65; }
+
+	.pro-audiences { background: linear-gradient(180deg, #eeeae1, #f4f1e9); }
+	.pro-audience-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+	.pro-audience-card { position: relative; overflow: hidden; padding: clamp(2rem, 4vw, 3.2rem); border: 1px solid var(--pro-line); border-radius: 1.25rem; background: #fdfcf7; box-shadow: 0 22px 55px rgba(16,42,32,.08); }
+	.pro-audience-card::after { position: absolute; right: -5rem; top: -5rem; width: 13rem; height: 13rem; border: 1px solid rgba(25,112,79,.13); border-radius: 50%; box-shadow: 0 0 0 2rem rgba(25,112,79,.035), 0 0 0 4rem rgba(25,112,79,.02); content: ''; }
+	.pro-audience-card.distributor { color: white; background: radial-gradient(circle at 90% 0, #28553f, transparent 20rem), #10291f; }
+	.pro-audience-card > header { position: relative; z-index: 1; display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; padding-bottom: 2rem; border-bottom: 1px solid var(--pro-line); }
+	.pro-audience-card.distributor > header { border-color: rgba(255,255,255,.14); }
+	.pro-audience-card > header > span { grid-row: 1 / 3; display: grid; width: 3.2rem; height: 3.2rem; place-items: center; border-radius: 50%; color: var(--brand); background: var(--accent-soft); }
+	.pro-audience-card header p { margin: .15rem 0 0; color: var(--brand); font: 820 .66rem/1.3 ui-monospace, monospace; letter-spacing: .09em; text-transform: uppercase; }
+	.pro-audience-card.distributor header p { color: var(--accent); }
+	.pro-audience-card header strong { font: 520 clamp(1.55rem, 2.6vw, 2.2rem)/1.08 "Newsreader Variable", serif; }
+	.pro-audience-card ul { position: relative; z-index: 1; display: grid; gap: .85rem; margin: 2rem 0; padding: 0; list-style: none; }
+	.pro-audience-card li { padding-left: 1.35rem; color: var(--pro-muted); line-height: 1.68; }
+	.pro-audience-card li::before { position: absolute; margin: .7rem 0 0 -1.35rem; width: .45rem; height: .45rem; border-radius: 50%; background: var(--brand); content: ''; }
+	.pro-audience-card.distributor li { color: #c7d5cd; }
+	.pro-audience-card.distributor li::before { background: var(--accent); }
+	.pro-audience-card > a { position: relative; z-index: 1; display: inline-flex; gap: .55rem; align-items: center; color: var(--brand-dark); font-size: .77rem; font-weight: 780; text-underline-offset: .25em; }
+	.pro-audience-card.distributor > a { color: var(--accent); }
+
+	.pro-process { color: white; background: #0d251b; }
+	.pro-process .pro-index, .pro-blueprint .pro-index { color: var(--accent); }
+	.pro-process .pro-section-head h2 { color: white; }
+	.pro-process .pro-section-head-split p:last-child { color: #aec0b6; }
+	.pro-process-track { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 0; padding: 0; border-block: 1px solid rgba(255,255,255,.14); list-style: none; counter-reset: none; }
+	.pro-process-track li { position: relative; min-height: 20rem; padding: 1.5rem; border-left: 1px solid rgba(255,255,255,.14); }
+	.pro-process-track li:last-child { border-right: 1px solid rgba(255,255,255,.14); }
+	.pro-process-track li::after { position: absolute; left: 1.5rem; top: 5.5rem; width: calc(100% - 1.5rem); height: 1px; background: linear-gradient(90deg, var(--accent), rgba(211,235,86,.15)); content: ''; }
+	.pro-process-track li > span { color: var(--accent); font: 800 .65rem/1 ui-monospace, monospace; }
+	.pro-process-track li div { padding-top: 6rem; }
+	.pro-process-track h3 { margin: 0 0 .8rem; color: white; font-size: 1.42rem; }
+	.pro-process-track p { margin: 0; color: #aebfb6; font-size: .78rem; line-height: 1.68; }
+	.pro-process-links { display: flex; flex-wrap: wrap; gap: .8rem 2rem; margin-top: 2rem; }
+	.pro-process-links a { color: #d7e3dc; font-size: .77rem; font-weight: 760; text-underline-offset: .28em; }
+
+	.pro-blueprint { background: #e8eee6; }
+	.pro-blueprint-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(400px, 1.2fr); gap: clamp(3rem, 8vw, 8rem); align-items: center; }
+	.pro-blueprint-copy h2 { margin: .3rem 0 1.5rem; font-size: clamp(2.35rem, 4vw, 3.9rem); }
+	.pro-blueprint-copy > p:not(.pro-index) { color: var(--pro-muted); line-height: 1.78; }
+	.pro-blueprint-copy ul { display: grid; gap: 1rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+	.pro-blueprint-copy li { display: flex; gap: .75rem; align-items: flex-start; color: var(--pro-muted); font-size: .86rem; line-height: 1.55; }
+	.pro-blueprint-copy li :global(.ui-icon) { margin-top: .15rem; color: var(--brand); }
+	.pro-blueprint-copy li strong { color: var(--pro-ink); }
+	.pro-stack { padding: clamp(1.2rem, 3vw, 2rem); border: 1px solid rgba(16,42,32,.18); border-radius: 1.3rem; background: #f9faf5; box-shadow: 0 28px 65px rgba(16,42,32,.12); }
+	.pro-stack-channels { display: grid; grid-template-columns: repeat(4, 1fr); gap: .55rem; margin-bottom: 1.3rem; }
+	.pro-stack-channels span { padding: .75rem .45rem; border: 1px solid var(--pro-line); border-radius: .55rem; color: var(--brand-dark); background: white; font-size: .62rem; font-weight: 800; text-align: center; }
+	.pro-stack-layer { position: relative; display: grid; gap: .3rem; margin-top: .65rem; padding: 1.25rem 1.4rem; border-radius: .75rem; color: white; }
+	.pro-stack-layer small { color: #a8bdb2; font: 770 .58rem/1 ui-monospace, monospace; letter-spacing: .1em; }
+	.pro-stack-layer strong { font-size: .86rem; }
+	.pro-stack-layer i { position: absolute; right: 1.3rem; top: 50%; width: .55rem; height: .55rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 .7rem rgba(211,235,86,.6); transform: translateY(-50%); }
+	.pro-stack-layer.decision { background: #174b37; }
+	.pro-stack-layer.engine { margin-inline: 1.2rem; background: #123629; }
+	.pro-stack-layer.data { margin-inline: 2.4rem; background: #0d281e; }
+	.pro-stack footer { display: flex; justify-content: space-between; gap: 1rem; margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--pro-line); color: var(--pro-muted); font-size: .62rem; }
+	.pro-stack footer b { color: var(--brand); text-transform: uppercase; }
+
+	.pro-outcomes { background: #f8f6f0; }
+	.pro-outcome-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--pro-line); border-left: 1px solid var(--pro-line); }
+	.pro-outcome-grid article { min-height: 16.5rem; padding: 1.8rem; border-right: 1px solid var(--pro-line); border-bottom: 1px solid var(--pro-line); }
+	.pro-outcome-grid article > span { display: grid; width: 3rem; height: 3rem; place-items: center; border-radius: 50%; color: var(--brand); background: #e4ece2; }
+	.pro-outcome-grid h3 { margin: 2rem 0 .65rem; font-size: 1.42rem; }
+	.pro-outcome-grid p { margin: 0; color: var(--pro-muted); font-size: .82rem; line-height: 1.67; }
+	.pro-customer-result { display: grid; grid-template-columns: 1.1fr repeat(3, minmax(0, .8fr)); margin-top: 3rem; border: 1px solid var(--pro-line); background: #efede5; }
+	.pro-customer-result > * { padding: 1.6rem; border-left: 1px solid var(--pro-line); }
+	.pro-customer-result > *:first-child { border-left: 0; }
+	.pro-customer-result header h3 { margin: .3rem 0 0; font-size: 1.55rem; }
+	.pro-customer-result > div span { color: var(--brand); font: 800 .62rem/1 ui-monospace, monospace; }
+	.pro-customer-result > div p { margin: 1.4rem 0 0; color: var(--pro-muted); font-size: .76rem; line-height: 1.62; }
+	.pro-customer-result strong { color: var(--pro-ink); }
+
+	.pro-demo { background: #e8eee6; }
+	.pro-demo-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(330px, .75fr); gap: 1.2rem; align-items: start; }
+	.pro-widget-card, .pro-integration-card { overflow: hidden; border: 1px solid var(--pro-line); border-radius: 1.2rem; background: white; box-shadow: 0 20px 50px rgba(16,42,32,.08); }
+	.pro-widget-card > header { color: #afc1b7; background: #10291f; }
+	.pro-widget-card > header strong { color: var(--accent); }
+	.pro-widget-card .widget-demo-live { min-height: 270px; padding: 1.2rem; }
+	.pro-integration-card { padding: clamp(1.8rem, 4vw, 2.7rem); }
+	.pro-integration-card h3 { margin: .3rem 0 2rem; font-size: 2rem; }
+	.pro-integration-card ol { display: grid; gap: 0; margin: 0; padding: 0; border-top: 1px solid var(--pro-line); list-style: none; }
+	.pro-integration-card li { display: grid; grid-template-columns: 2.6rem 1fr; gap: 1rem; padding: 1.2rem 0; border-bottom: 1px solid var(--pro-line); }
+	.pro-integration-card li > span { color: var(--brand); font: 800 .65rem/1.4 ui-monospace, monospace; }
+	.pro-integration-card li strong { color: var(--pro-ink); }
+	.pro-integration-card li p { margin: .3rem 0 0; color: var(--pro-muted); font-size: .78rem; line-height: 1.58; }
+	.pro-integration-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.5rem; }
+
+	.pro-boundary { color: white; background: #0c241a; }
+	.pro-boundary-grid { display: grid; grid-template-columns: minmax(0, .7fr) minmax(400px, 1.3fr); gap: 2rem clamp(3rem, 8vw, 8rem); }
+	.pro-boundary header h2 { margin: .3rem 0 1.4rem; color: white; font-size: clamp(2.4rem, 4vw, 4rem); }
+	.pro-boundary header > p:last-child { color: #afc0b7; line-height: 1.75; }
+	.pro-boundary .pro-index { color: var(--accent); }
+	.pro-role-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid rgba(255,255,255,.14); }
+	.pro-role-columns section { padding: 2rem; }
+	.pro-role-columns section + section { border-left: 1px solid rgba(255,255,255,.14); background: rgba(211,235,86,.045); }
+	.pro-role-columns span { color: var(--accent); font: 800 .65rem/1.3 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+	.pro-role-columns ul { display: grid; gap: .85rem; margin: 1.8rem 0 0; padding-left: 1.1rem; color: #c4d1ca; font-size: .8rem; line-height: 1.62; }
+	.pro-role-columns li::marker { color: var(--accent); }
+	.pro-boundary-grid > footer { grid-column: 1 / -1; display: flex; gap: 1rem; align-items: flex-start; padding: 1.3rem 1.5rem; border-left: 4px solid var(--accent); color: #d8e2dc; background: rgba(255,255,255,.06); }
+	.pro-boundary-grid > footer :global(.ui-icon) { flex: 0 0 auto; color: var(--accent); }
+	.pro-boundary-grid > footer p { margin: 0; font-size: .82rem; line-height: 1.7; }
+
+	.pro-collaboration { background: #f4f1e9; }
+	.pro-collaboration-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--pro-line); }
+	.pro-collaboration-grid article { padding: 2rem; border-left: 1px solid var(--pro-line); }
+	.pro-collaboration-grid article:last-child { border-right: 1px solid var(--pro-line); }
+	.pro-collaboration-grid span { color: var(--brand); font: 800 .65rem/1 ui-monospace, monospace; }
+	.pro-collaboration-grid h3 { margin: 2.5rem 0 .7rem; font-size: 1.5rem; }
+	.pro-collaboration-grid p { margin: 0; color: var(--pro-muted); font-size: .82rem; line-height: 1.68; }
+	.pro-final-cta { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, .55fr); gap: 3rem; align-items: end; margin-top: clamp(4rem, 8vw, 7rem); padding: clamp(2rem, 5vw, 4rem); border: 1px solid rgba(255,255,255,.1); border-radius: 1.4rem; color: white; background: radial-gradient(circle at 90% 10%, #2b5b44, transparent 22rem), #10291f; box-shadow: 0 28px 70px rgba(16,42,32,.17); }
+	.pro-final-cta .pro-index { color: var(--accent); }
+	.pro-final-cta h2 { margin: .3rem 0 0; color: white; font-size: clamp(2rem, 3.4vw, 3.2rem); }
+	.pro-final-cta > div:last-child { display: grid; gap: 1rem; justify-items: start; }
+	.pro-final-cta > div:last-child > a:not(.button) { color: #d5e0da; font-size: .73rem; font-weight: 750; text-underline-offset: .25em; }
+
+	@media (max-width: 980px) {
+		.pro-hero { background: radial-gradient(circle at 15% 15%, rgba(211,235,86,.15), transparent 24rem), #f7f4ec; }
+		.pro-hero-grid, .pro-blueprint-grid, .pro-boundary-grid { grid-template-columns: 1fr; }
+		.pro-system-map { width: min(640px, 100%); }
+		.pro-metrics .container, .pro-friction-list, .pro-outcome-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+		.pro-metrics .container > div:nth-child(3) { border-top: 1px solid rgba(255,255,255,.12); }
+		.pro-metrics .container > div:nth-child(4) { border-top: 1px solid rgba(255,255,255,.12); border-right: 1px solid rgba(255,255,255,.12); }
+		.pro-intro-grid { grid-template-columns: 1fr; }
+		.pro-intro-grid .pro-section-head, .pro-intro-copy { grid-column: 1; }
+		.pro-process-track { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+		.pro-process-track li { min-height: 17rem; border-bottom: 1px solid rgba(255,255,255,.14); }
+		.pro-process-track li:nth-child(even) { border-right: 1px solid rgba(255,255,255,.14); }
+		.pro-customer-result { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+		.pro-customer-result > *:nth-child(3) { border-left: 0; border-top: 1px solid var(--pro-line); }
+		.pro-customer-result > *:nth-child(4) { border-top: 1px solid var(--pro-line); }
+	}
+
+	@media (max-width: 720px) {
+		.pro-hero { padding-top: 3.2rem; }
+		.pro-hero-grid { gap: 3rem; }
+		.pro-hero h1 { font-size: clamp(2.6rem, 12.8vw, 3.5rem); line-height: .98; }
+		.pro-hero-principles { display: grid; }
+		.pro-system-map > header strong { display: none; }
+		.pro-system-map svg { display: none; }
+		.pro-system-mobile { display: grid; gap: .8rem; padding: 1rem; }
+		.pro-system-mobile > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .45rem; }
+		.pro-system-mobile > div span { display: grid; min-height: 3.3rem; place-items: center; padding: .55rem .3rem; border: 1px solid rgba(255,255,255,.16); border-radius: .55rem; color: #dce6e0; background: rgba(255,255,255,.05); font-size: .62rem; font-weight: 750; text-align: center; }
+		.pro-system-mobile > b { display: flex; gap: .5rem; align-items: center; justify-content: center; color: #9fb3a8; font: 700 .57rem/1.3 ui-monospace, monospace; letter-spacing: .07em; text-transform: uppercase; }
+		.pro-system-mobile > b i { color: var(--accent); font-style: normal; }
+		.pro-system-mobile > strong { display: grid; gap: .25rem; padding: 1.15rem; border: 1px solid rgba(211,235,86,.38); border-radius: .8rem; color: white; background: rgba(211,235,86,.08); font: 560 1.3rem/1.1 "Newsreader Variable", serif; text-align: center; box-shadow: inset 0 0 2rem rgba(211,235,86,.05); }
+		.pro-system-mobile > strong small { color: var(--accent); font: 800 .58rem/1.3 ui-monospace, monospace; letter-spacing: .1em; }
+		.pro-metrics .container { grid-template-columns: 1fr 1fr; }
+		.pro-metrics .container > div { min-height: 8rem; padding: 1.2rem; }
+		.pro-metrics strong { font-size: 2.2rem; }
+		.pro-section { padding-block: 4.5rem; }
+		.pro-section-head-split, .pro-audience-grid, .pro-demo-grid, .pro-final-cta { grid-template-columns: 1fr; }
+		.pro-section-head h2, .pro-intro-grid .pro-section-head h2 { font-size: clamp(2.15rem, 10vw, 3rem); }
+		.pro-friction-list, .pro-outcome-grid, .pro-collaboration-grid { grid-template-columns: 1fr; }
+		.pro-friction-list article, .pro-friction-list article:last-child, .pro-collaboration-grid article, .pro-collaboration-grid article:last-child { border-right: 1px solid var(--pro-line); }
+		.pro-friction-list article + article { border-top: 1px solid var(--pro-line); }
+		.pro-process-track { grid-template-columns: 1fr; }
+		.pro-process-track li, .pro-process-track li:nth-child(even), .pro-process-track li:last-child { min-height: auto; padding: 1.4rem; border-right: 1px solid rgba(255,255,255,.14); }
+		.pro-process-track li::after { left: 1.4rem; top: 4rem; width: 1px; height: calc(100% - 4rem); background: linear-gradient(var(--accent), rgba(211,235,86,.1)); }
+		.pro-process-track li div { padding: 2rem 0 1rem 2.2rem; }
+		.pro-stack-channels { grid-template-columns: repeat(2, 1fr); }
+		.pro-stack-layer.engine, .pro-stack-layer.data { margin-inline: 0; }
+		.pro-stack footer { align-items: center; flex-direction: column; }
+		.pro-customer-result { grid-template-columns: 1fr; }
+		.pro-customer-result > *, .pro-customer-result > *:nth-child(3), .pro-customer-result > *:nth-child(4) { border-top: 1px solid var(--pro-line); border-left: 0; }
+		.pro-customer-result > *:first-child { border-top: 0; }
+		.pro-role-columns { grid-template-columns: 1fr; }
+		.pro-role-columns section + section { border-top: 1px solid rgba(255,255,255,.14); border-left: 0; }
+		.pro-collaboration-grid article + article { border-top: 1px solid var(--pro-line); }
+		.pro-final-cta { gap: 2rem; }
+		.pro-final-cta .button { width: 100%; }
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.pro-page * { scroll-behavior: auto; }
+	}
+</style>
