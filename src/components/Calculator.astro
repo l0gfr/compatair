@@ -80,7 +80,7 @@ import UiIcon from './UiIcon.astro';
 		<div class="result-section" data-evaluated-result></div>
 		<div class="result-section counterfactual-section" data-counterfactual><p class="eyebrow">Recommandation contrefactuelle</p><h3>Le plus petit changement vérifié</h3><div data-counterfactual-result></div><p class="counterfactual-boundary" data-counterfactual-boundary></p></div>
 		<details class="result-section result-disclosure"><summary>Accessoires et raccordement</summary><ul data-accessories></ul></details>
-		<div class="result-section recommendation-section"><p class="eyebrow">Aide à la décision</p><h3>Trois compresseurs compatibles les plus proches du besoin</h3><p>Compatibilité, qualité des données et proximité du débit structurent cette sélection technique.</p><p data-result-coverage></p><div class="priority-list" data-priority-list></div></div>
+		<div class="result-section recommendation-section"><p class="eyebrow">Aide à la décision</p><h3>Trois compresseurs compatibles les plus proches du besoin</h3><p>Compatibilité, qualité des données et proximité du débit structurent cette sélection technique.</p><p data-result-coverage></p><div class="priority-list" data-priority-list></div><a class="button primary recommendation-compare-cta" data-contextual-compare href="/comparateur/" hidden>Comparer ces trois compresseurs pour ce besoin</a></div>
 		<details class="result-section result-inventory">
 			<summary>Explorer les {compressors.length} compresseurs documentés</summary>
 			<p>Les modèles sont regroupés selon le résultat, la réserve disponible et la fiabilité des données. Une information absente reste signalée comme telle.</p>
@@ -189,6 +189,7 @@ import UiIcon from './UiIcon.astro';
 	const output = root?.querySelector<HTMLElement>('[data-calculator-output]');
 	const list = root?.querySelector<HTMLElement>('[data-result-list]');
 	const priorityList = root?.querySelector<HTMLElement>('[data-priority-list]');
+	const contextualCompareLink = root?.querySelector<HTMLAnchorElement>('[data-contextual-compare]');
 	const evaluated = root?.querySelector<HTMLElement>('[data-evaluated-result]');
 	const toolDatalist = document.querySelector<HTMLDataListElement>('#calculator-tools');
 	const compressorDatalist = document.querySelector<HTMLDataListElement>('#calculator-compressors');
@@ -200,6 +201,7 @@ import UiIcon from './UiIcon.astro';
 	let demandIndex = 0;
 	let currentFilter: keyof typeof labels | 'all' = 'all';
 	let lastSummary = '';
+	let lastPriorityIds: string[] = [];
 	const recordedFunnelSteps = new Set<'started' | 'completed'>();
 	const recordedCounterfactualSteps = new Set<string>();
 	let pendingCounterfactualFamily: CounterfactualKind | undefined;
@@ -606,6 +608,7 @@ import UiIcon from './UiIcon.astro';
 		const coverage = root?.querySelector<HTMLElement>('[data-result-coverage]');
 		if (coverage) coverage.textContent = `${counts.continuous} en continu · ${counts.intermittent} par intermittence · ${counts.insufficient_data} en données insuffisantes · ${counts.incompatible} incompatibles.`;
 		const priority = candidates.filter(({ result }) => result.verdict === 'continuous' || result.verdict === 'intermittent').slice(0, 3);
+		lastPriorityIds = priority.map(({ compressor }) => compressor.id);
 		if (priority.length) priorityList.replaceChildren(...priority.map(({ compressor, result }) => renderResultCard(compressor, result, proofToolId)));
 		else { const message = document.createElement('p'); message.className = 'decision-empty'; message.textContent = 'Aucun compresseur actuellement étudié ne peut être recommandé pour cette configuration. Une information manquante n’est jamais transformée en recommandation.'; priorityList.replaceChildren(message); }
 		list.replaceChildren(...candidates.map(({ compressor, result }) => renderResultCard(compressor, result, proofToolId)));
@@ -766,8 +769,19 @@ import UiIcon from './UiIcon.astro';
 			const encodedConfig = encodePassportConfiguration(config);
 			const scenarioSuffix = scenarioPreset ? `&scenario=${encodeURIComponent(scenarioPreset.id)}` : '';
 			window.history.replaceState(null, '', `${window.location.pathname}#config=${encodedConfig}${scenarioSuffix}`);
+			if (contextualCompareLink) {
+				contextualCompareLink.hidden = lastPriorityIds.length < 2;
+				if (lastPriorityIds.length >= 2) {
+					const comparison = new URLSearchParams({ ids: lastPriorityIds.join(','), config: encodedConfig });
+					if (scenarioPreset) comparison.set('scenario', scenarioPreset.id);
+					contextualCompareLink.href = `/comparateur/#${comparison.toString()}`;
+					contextualCompareLink.textContent = lastPriorityIds.length === 3
+						? 'Comparer ces trois compresseurs pour ce besoin'
+						: 'Comparer ces deux compresseurs pour ce besoin';
+				}
+			}
 			const envelope = await createPassportEnvelope(config, compressors, tools, CATALOG_VERIFIED_AT);
-			root?.querySelector<HTMLAnchorElement>('[data-create-passport]')?.setAttribute('href', `/passeport/#passport=${encodePassportEnvelope(envelope)}`);
+			root?.querySelector<HTMLAnchorElement>('[data-create-passport]')?.setAttribute('href', `/passeport/#passport=${encodePassportEnvelope(envelope)}${scenarioPreset ? `&scenario=${encodeURIComponent(scenarioPreset.id)}` : ''}`);
 			lastContribution = { config, result: base }; contributeDemand(config, base);
 			recordFunnelStep('completed');
 			if (appliedCounterfactualFamily) recordCounterfactualStep('recalculation_succeeded', appliedCounterfactualFamily);

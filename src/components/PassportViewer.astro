@@ -126,7 +126,7 @@
 		}
 	}
 
-	function renderPassport(report: PassportReport, currentUrl: string) {
+	function renderPassport(report: PassportReport, currentUrl: string, scenarioId?: string) {
 			setText('[data-compressor]', report.compressorLabel);
 			setText('[data-verdict]', passportVerdictLabel(report.result));
 			query<HTMLElement>('[data-verdict]')?.setAttribute('data-status', report.result.verdict);
@@ -171,7 +171,7 @@
 				if (!report.sources.length) sourcesPanel.textContent = 'Aucune source constructeur liée à cette configuration.';
 			}
 
-			query<HTMLAnchorElement>('[data-edit]')?.setAttribute('href', `/calculateur/#config=${encodePassportConfiguration(report.configuration)}`);
+		query<HTMLAnchorElement>('[data-edit]')?.setAttribute('href', `/calculateur/#config=${encodePassportConfiguration(report.configuration)}${scenarioId ? `&scenario=${encodeURIComponent(scenarioId)}` : ''}`);
 			const copyButton = query<HTMLButtonElement>('[data-copy]');
 			if (copyButton) copyButton.onclick = async () => {
 				await navigator.clipboard.writeText(currentUrl);
@@ -203,7 +203,10 @@
 		const empty = query<HTMLElement>('[data-passport-empty]');
 		const documentPanel = query<HTMLElement>('[data-passport-document]');
 		const loading = query<HTMLElement>('[data-passport-loading]');
-		const encoded = new URLSearchParams(location.hash.slice(1)).get('passport');
+		const fragment = new URLSearchParams(location.hash.slice(1));
+		const encoded = fragment.get('passport');
+		const rawScenarioId = fragment.get('scenario');
+		const scenarioId = rawScenarioId && /^[a-z0-9-]{1,160}$/.test(rawScenarioId) ? rawScenarioId : undefined;
 		const envelope = encoded ? decodePassportEnvelope(encoded) : undefined;
 		const legacyConfiguration = encoded && !envelope ? decodePassportConfiguration(encoded) : undefined;
 		if ((!envelope && !legacyConfiguration) || !encoded) {
@@ -214,12 +217,12 @@
 		}
 
 		try {
-			const currentUrl = `${location.origin}/passeport/#passport=${encoded}`;
+			const currentUrl = `${location.origin}/passeport/#passport=${encoded}${scenarioId ? `&scenario=${encodeURIComponent(scenarioId)}` : ''}`;
 			if (envelope) {
 				const original = await reportFromPassportEnvelope(envelope);
 				const choice = query<HTMLElement>('[data-version-choice]');
 				if (choice) choice.hidden = false;
-				const showOriginal = () => { renderPassport(original, currentUrl); setText('[data-version-note]', `Rapport original du ${original.generatedAt.slice(0, 10)}, catalogue ${original.catalogVerifiedAt}.`); };
+				const showOriginal = () => { renderPassport(original, currentUrl, scenarioId); setText('[data-version-note]', `Rapport original du ${original.generatedAt.slice(0, 10)}, catalogue ${original.catalogVerifiedAt}.`); };
 				const originalButton = query<HTMLButtonElement>('[data-show-original]');
 				const currentButton = query<HTMLButtonElement>('[data-show-current]');
 				if (originalButton) originalButton.onclick = showOriginal;
@@ -234,7 +237,7 @@
 						try {
 							const { catalogVerifiedAt, compressors, tools } = await loadCurrentCatalog();
 							const current = await createPassportReport(envelope.configuration, compressors, tools, catalogVerifiedAt);
-							renderPassport(current, currentUrl);
+							renderPassport(current, currentUrl, scenarioId);
 							setText('[data-version-note]', `Simulation actuelle, catalogue ${current.catalogVerifiedAt}. L’URL originale n’est pas modifiée.`);
 							currentButton.disabled = false;
 						} catch {
@@ -247,7 +250,7 @@
 			} else {
 				const { catalogVerifiedAt, compressors, tools } = await loadCurrentCatalog();
 				const current = await createPassportReport(legacyConfiguration, compressors, tools, catalogVerifiedAt);
-				renderPassport(current, currentUrl);
+				renderPassport(current, currentUrl, scenarioId);
 				const choice = query<HTMLElement>('[data-version-choice]');
 				if (choice) choice.hidden = false;
 				setText('[data-version-note]', 'Ancien format : seule la configuration était conservée. Ce rapport est recalculé avec le catalogue actuel.');

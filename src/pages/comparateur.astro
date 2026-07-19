@@ -32,6 +32,22 @@ import { compressorDisplayName } from '../domain/product-display';
 					<div class="compare-selected-grid" data-compare-selected></div>
 				</section>
 
+				<p class="compare-context-error" data-context-error role="alert" hidden></p>
+				<section class="compare-context-section" data-context-section hidden aria-labelledby="compare-context-title">
+					<header class="compare-context-heading">
+						<div><p class="decision-index">Même besoin, mêmes règles</p><h2 id="compare-context-title" data-context-title>Comparaison contextualisée par le besoin</h2></div>
+						<span data-context-status>Chargement du scénario…</span>
+					</header>
+					<div class="compare-context-need" data-context-need></div>
+					<p class="compare-context-order">L’ordre vient de la sélection technique du calculateur. Il ne constitue ni une note commerciale ni un classement absolu.</p>
+					<div class="compare-context-cards" data-context-cards></div>
+					<aside class="compare-context-choice" data-context-choice hidden>
+						<div><span>Modèle retenu</span><strong data-context-choice-label></strong><p>Le besoin, les hypothèses et les limites restent identiques. Seule la machine sélectionnée est appliquée.</p></div>
+						<div><a class="button" data-context-edit href="/calculateur/">Vérifier ce choix dans le calculateur</a><button class="button primary" type="button" data-context-passport>Créer le Passeport de cette configuration</button></div>
+						<span class="compare-context-action-status" data-context-action-status role="status"></span>
+					</aside>
+				</section>
+
 				<section class="compare-output-section" data-compare-output-section hidden>
 					<header><div><p class="decision-index">Lecture côte à côte</p><h2>Les écarts utiles, sans note commerciale.</h2></div><button class="button" type="button" data-copy-comparison>Copier le lien</button></header>
 					<span class="compare-copy-status" data-copy-status role="status"></span>
@@ -62,6 +78,7 @@ import { compressorDisplayName } from '../domain/product-display';
 		noiseDb: item.noiseDb,
 		confidence: item.confidence,
 		status: item.status,
+		sourceVerifiedAt: item.evidence.map((evidence) => evidence.retrievedAt).sort().at(-1),
 	})))}></div>
 
 	<script>
@@ -85,6 +102,20 @@ import { compressorDisplayName } from '../domain/product-display';
 			noiseDb?: number;
 			confidence: 'A' | 'B' | 'C' | 'D';
 			status: string;
+			sourceVerifiedAt?: string;
+		};
+		type PassportConfiguration = import('../domain/passport').PassportConfiguration;
+		type RuntimeCatalog = import('../domain/runtime-catalog').RuntimeCatalog;
+		type ContextualModule = typeof import('../domain/contextual-comparison');
+		type PassportModule = typeof import('../domain/passport');
+
+		type ContextState = {
+			configuration: PassportConfiguration;
+			catalog: RuntimeCatalog;
+			comparison: ContextualModule;
+			passport: PassportModule;
+			scenarioId?: string;
+			scenarioTitle?: string;
 		};
 
 		const root = document.querySelector<HTMLElement>('[data-compare-page]');
@@ -97,12 +128,29 @@ import { compressorDisplayName } from '../domain/product-display';
 		const output = root?.querySelector<HTMLElement>('[data-compare-output]');
 		const outputSection = root?.querySelector<HTMLElement>('[data-compare-output-section]');
 		const help = root?.querySelector<HTMLElement>('[data-compare-help]');
+		const contextSection = root?.querySelector<HTMLElement>('[data-context-section]');
+		const contextError = root?.querySelector<HTMLElement>('[data-context-error]');
+		const contextNeed = root?.querySelector<HTMLElement>('[data-context-need]');
+		const contextCards = root?.querySelector<HTMLElement>('[data-context-cards]');
+		const contextChoice = root?.querySelector<HTMLElement>('[data-context-choice]');
+		const initialFragment = new URLSearchParams(location.hash.slice(1));
+		const encodedContext = initialFragment.get('config') ?? '';
+		const initialScenarioId = initialFragment.get('scenario') ?? undefined;
 		const idsFromLocation = () => (new URLSearchParams(location.hash.slice(1)).get('ids')?.split(',') ?? []).filter((id, index, ids) => data.some((item) => item.id === id) && ids.indexOf(id) === index).slice(0, 3);
 		let selectedIds = idsFromLocation();
+		let retainedId = '';
+		let contextState: ContextState | undefined;
+
+		const format = (value: number, maximumFractionDigits = 0) => value.toLocaleString('fr-FR', { maximumFractionDigits });
+		const selectedConfiguration = (compressorId: string) => contextState ? { ...contextState.configuration, selectedCompressor: compressorId, custom: {} } : undefined;
 
 		function updateLocation() {
-			const fragment = selectedIds.length ? `#ids=${selectedIds.join(',')}` : '';
-			history.replaceState(null, '', `${location.pathname}${fragment}`);
+			const fragment = new URLSearchParams();
+			if (selectedIds.length) fragment.set('ids', selectedIds.join(','));
+			if (encodedContext) fragment.set('config', encodedContext);
+			if (initialScenarioId) fragment.set('scenario', initialScenarioId);
+			const serialized = fragment.toString();
+			history.replaceState(null, '', `${location.pathname}${serialized ? `#${serialized}` : ''}`);
 		}
 
 		function selectedCard(item: CompressorSummary, index: number) {
@@ -149,11 +197,116 @@ import { compressorDisplayName } from '../domain/product-display';
 			table.append(thead, tbody); output.replaceChildren(table); outputSection.hidden = false;
 		}
 
+		function definitionItem(term: string, value: string, className?: string) {
+			const item = document.createElement('div'); if (className) item.className = className;
+			const dt = document.createElement('dt'); dt.textContent = term;
+			const dd = document.createElement('dd'); dd.textContent = value;
+			item.append(dt, dd); return item;
+		}
+
+		function signedMargin(lpm: number | undefined, percent: number | undefined) {
+			if (lpm === undefined || percent === undefined) return 'Non calculable';
+			const lpmSign = lpm >= 0 ? '+' : '';
+			const percentSign = percent >= 0 ? '+' : '';
+			return `${lpmSign}${format(lpm)} L/min (${percentSign}${format(percent, 1)} %)`;
+		}
+
+		function renderContextNeedPanel() {
+			if (!contextState || !contextNeed) return;
+			const firstCompressor = contextState.catalog.compressors.find((item) => selectedIds.includes(item.id));
+			if (!firstCompressor) { contextNeed.replaceChildren(); return; }
+			const base = contextState.comparison.evaluateContextualCompressor(contextState.configuration, firstCompressor).base;
+			const toolLabels = contextState.configuration.demands.map((demand) => contextState!.catalog.tools.find((tool) => tool.id === demand.id)?.label ?? demand.id);
+			const list = document.createElement('dl'); list.className = 'compare-context-need-grid';
+			list.append(
+				definitionItem('Outils et scénario', toolLabels.join(' · '), 'is-wide'),
+				definitionItem('Besoin du scénario', `${format(base.peakFlowLpm, 1)} L/min à ${format(base.requiredPressureBar, 1)} bar`),
+				definitionItem('Cible avec réserve', `${format(base.recommendedFadLpm, 1)} L/min · ${Math.round(contextState.configuration.safetyMargin * 100)} %`),
+				definitionItem('Organisation', `${contextState.configuration.mode === 'simultaneous' ? 'Simultanée' : 'Successive'} · session ${contextState.configuration.sessionMinutes} min`),
+				definitionItem('Base du débit', base.flowBasis === 'documented-continuous' ? 'Débit en charge publié' : 'Moyenne calculée depuis les hypothèses', 'is-wide'),
+			);
+			contextNeed.replaceChildren(list);
+		}
+
+		function contextCard(summary: CompressorSummary, compressor: RuntimeCatalog['compressors'][number]) {
+			const evaluation = contextState!.comparison.evaluateContextualCompressor(contextState!.configuration, compressor);
+			const article = document.createElement('article'); article.className = `compare-context-card verdict-${evaluation.result.verdict}`; article.dataset.contextId = summary.id;
+			if (retainedId === summary.id) article.classList.add('is-retained');
+			const header = document.createElement('header');
+			const identity = document.createElement('div'); const brand = document.createElement('span'); brand.textContent = summary.brand; const title = document.createElement('h3'); const link = document.createElement('a'); link.href = `/compresseurs/${summary.slug}/`; link.textContent = summary.displayName; title.append(link); identity.append(brand, title);
+			const verdict = document.createElement('strong'); verdict.className = 'compare-context-verdict'; verdict.textContent = contextState!.comparison.contextualVerdictLabel(evaluation.result); header.append(identity, verdict);
+			const flow = document.createElement('div'); flow.className = 'compare-context-flow';
+			const flowLabel = document.createElement('p'); flowLabel.textContent = contextState!.comparison.contextualFadLabel(evaluation);
+			const meter = document.createElement('meter'); meter.min = 0; meter.max = Math.max(evaluation.base.recommendedFadLpm, evaluation.availableFad?.litersPerMinute ?? 0, 1); meter.value = evaluation.availableFad?.litersPerMinute ?? 0; meter.setAttribute('aria-label', `Débit disponible de ${summary.displayName}`);
+			const targets = document.createElement('small'); targets.textContent = `Besoin ${format(evaluation.base.peakFlowLpm)} · cible avec réserve ${format(evaluation.base.recommendedFadLpm)} L/min`;
+			flow.append(flowLabel, meter, targets);
+			const details = document.createElement('dl'); details.className = 'compare-context-metrics';
+			details.append(
+				definitionItem('Marge sur le besoin', signedMargin(evaluation.nominalMarginLpm, evaluation.nominalMarginPercent)),
+				definitionItem('Réserve demandée', evaluation.reserveGapLpm === undefined ? 'Non calculable' : `${evaluation.reserveGapLpm >= 0 ? '+' : ''}${format(evaluation.reserveGapLpm)} L/min · ${evaluation.reserveCovered ? 'couverte' : 'non couverte'}`),
+				definitionItem('Cycle de service publié', compressor.dutyCycle === undefined ? 'Non documenté' : `${Math.round(compressor.dutyCycle * 100)} % · capacité moyenne ${format(evaluation.effectiveAverageCapacityLpm ?? 0)} L/min`),
+				definitionItem('Qualité des données', sourceQualityDetail(compressor.confidence)),
+				definitionItem('Source vérifiée le', summary.sourceVerifiedAt ?? compressor.evidence.map((item) => item.retrievedAt).sort().at(-1) ?? 'Date indisponible'),
+			);
+			const reserve = document.createElement('p'); reserve.className = 'compare-context-reserve'; const reserveLabel = document.createElement('strong'); reserveLabel.textContent = 'Principale réserve'; reserve.append(reserveLabel, ` ${evaluation.primaryReserve}`);
+			const actions = document.createElement('footer');
+			const proof = document.createElement('a'); const toolId = contextState!.configuration.demands.length === 1 ? contextState!.configuration.demands[0].id : undefined; proof.href = `/graphe-preuve/#compresseur=${encodeURIComponent(summary.id)}${toolId ? `&outil=${encodeURIComponent(toolId)}` : ''}`; proof.textContent = 'Remonter aux preuves';
+			const retain = document.createElement('button'); retain.type = 'button'; retain.className = 'button'; retain.dataset.retainId = summary.id; retain.setAttribute('aria-pressed', String(retainedId === summary.id)); retain.textContent = retainedId === summary.id ? 'Modèle retenu' : 'Retenir ce modèle';
+			actions.append(proof, retain); article.append(header, flow, details, reserve, actions); return article;
+		}
+
+		function renderChoice() {
+			if (!contextChoice || !contextState || !retainedId) { if (contextChoice) contextChoice.hidden = true; return; }
+			const compressor = data.find((item) => item.id === retainedId);
+			const configuration = selectedConfiguration(retainedId);
+			if (!compressor || !configuration) { contextChoice.hidden = true; return; }
+			contextChoice.hidden = false;
+			const label = contextChoice.querySelector<HTMLElement>('[data-context-choice-label]'); if (label) label.textContent = compressor.displayName;
+			const encoded = contextState.passport.encodePassportConfiguration(configuration);
+			const target = new URLSearchParams({ config: encoded }); if (contextState.scenarioId) target.set('scenario', contextState.scenarioId);
+			contextChoice.querySelector<HTMLAnchorElement>('[data-context-edit]')?.setAttribute('href', `/calculateur/#${target.toString()}`);
+		}
+
+		function renderContext(selected: CompressorSummary[]) {
+			if (!contextState || !contextCards) return;
+			if (retainedId && !selected.some((item) => item.id === retainedId)) retainedId = '';
+			renderContextNeedPanel();
+			contextCards.replaceChildren(...selected.map((summary) => {
+				const compressor = contextState!.catalog.compressors.find((item) => item.id === summary.id);
+				return compressor ? contextCard(summary, compressor) : document.createElement('span');
+			}));
+			renderChoice();
+		}
+
 		function refresh() {
 			const selected = selectedIds.map((id) => data.find((item) => item.id === id)).filter((item): item is CompressorSummary => Boolean(item));
 			selectedTarget?.replaceChildren(...selected.map(selectedCard), ...Array.from({ length: 3 - selected.length }, (_, offset) => placeholder(selected.length + offset)));
 			if (help) help.textContent = selected.length < 2 ? `${selected.length}/3 · ajoutez encore ${2 - selected.length} modèle${selected.length === 0 ? 's' : ''}` : `${selected.length}/3 · ${selected.length === 2 ? 'comparaison prête, un troisième modèle reste possible' : 'comparaison complète'}`;
-			renderTable(selected); updateLocation();
+			renderTable(selected); renderContext(selected); updateLocation();
+		}
+
+		async function initializeContext() {
+			if (!encodedContext || !contextSection) return;
+			contextSection.hidden = false;
+			try {
+				const [catalog, comparison, passport, scenarios] = await Promise.all([
+					import('../domain/runtime-catalog').then(({ loadRuntimeCatalog }) => loadRuntimeCatalog()),
+					import('../domain/contextual-comparison'),
+					import('../domain/passport'),
+					import('../domain/trade-scenario-prefill'),
+				]);
+				const decoded = passport.decodePassportConfiguration(encodedContext);
+				if (!decoded) throw new Error('Le besoin transmis est invalide ou incomplet.');
+				const configuration = passport.parsePassportConfiguration(decoded, new Set(catalog.compressors.map((item) => item.id)), new Set(catalog.tools.map((item) => item.id)));
+				const preset = scenarios.getTradeScenarioPreset(initialScenarioId);
+				contextState = { configuration, catalog, comparison, passport, scenarioId: preset?.id, scenarioTitle: preset?.title };
+				const title = contextSection.querySelector<HTMLElement>('[data-context-title]'); if (title) title.textContent = preset ? `Comparer pour le scénario « ${preset.title} »` : 'Comparer pour le besoin transmis par le calculateur';
+				const status = contextSection.querySelector<HTMLElement>('[data-context-status]'); if (status) status.textContent = `Catalogue vérifié le ${catalog.catalogVerifiedAt}`;
+				refresh();
+			} catch (contextFailure) {
+				contextSection.hidden = true;
+				if (contextError) { contextError.hidden = false; contextError.textContent = contextFailure instanceof Error ? contextFailure.message : 'Le besoin transmis ne peut pas être vérifié.'; }
+			}
 		}
 
 		form?.addEventListener('submit', (event) => {
@@ -171,6 +324,26 @@ import { compressorDisplayName } from '../domain/product-display';
 			selectedIds = selectedIds.filter((id) => id !== button.dataset.removeId); refresh();
 		});
 
+		contextCards?.addEventListener('click', (event) => {
+			const button = (event.target as Element).closest<HTMLButtonElement>('[data-retain-id]'); if (!button?.dataset.retainId) return;
+			retainedId = button.dataset.retainId; refresh(); contextChoice?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
+		});
+
+		contextChoice?.querySelector<HTMLButtonElement>('[data-context-passport]')?.addEventListener('click', async (event) => {
+			if (!contextState || !retainedId) return;
+			const button = event.currentTarget as HTMLButtonElement;
+			const status = contextChoice.querySelector<HTMLElement>('[data-context-action-status]');
+			button.disabled = true; if (status) status.textContent = 'Création locale du Passeport…';
+			try {
+				const configuration = selectedConfiguration(retainedId); if (!configuration) return;
+				const envelope = await contextState.passport.createPassportEnvelope(configuration, contextState.catalog.compressors, contextState.catalog.tools, contextState.catalog.catalogVerifiedAt);
+				const passport = new URLSearchParams({ passport: contextState.passport.encodePassportEnvelope(envelope) }); if (contextState.scenarioId) passport.set('scenario', contextState.scenarioId);
+				location.assign(`/passeport/#${passport.toString()}`);
+			} catch {
+				button.disabled = false; if (status) status.textContent = 'Le Passeport n’a pas pu être créé. Le lien vers le calculateur reste disponible.';
+			}
+		});
+
 		root?.querySelector('[data-copy-comparison]')?.addEventListener('click', async () => {
 			await navigator.clipboard.writeText(location.href);
 			const status = root.querySelector<HTMLElement>('[data-copy-status]'); if (status) status.textContent = 'Lien copié';
@@ -178,5 +351,6 @@ import { compressorDisplayName } from '../domain/product-display';
 		window.addEventListener('hashchange', () => { selectedIds = idsFromLocation(); refresh(); });
 
 		refresh();
+		void initializeContext();
 	</script>
 </BaseLayout>
