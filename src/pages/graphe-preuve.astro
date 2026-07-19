@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import TechnicalSurfaceNav from '../components/TechnicalSurfaceNav.astro';
 import { compressors, tools } from '../data/catalog';
 import { compressorDisplayName } from '../domain/product-display';
 
@@ -16,6 +17,7 @@ const layers = [
 ---
 <BaseLayout title="Graphe de preuve interactif | CompatAir" description="Remontez d’un verdict CompatAir vers ses calculs, champs, documents et versions, puis simulez une correction sans modifier les données publiées." breadcrumbs={[{ name: 'Graphe de preuve', path: '/graphe-preuve/' }]}>
 	<section class="page-hero proof-graph-hero"><div class="container"><p class="eyebrow">Du verdict jusqu’au document</p><h1>Graphe de preuve interactif</h1><p class="lead">Choisissez un couple. Le graphe relie le verdict publié aux calculs, aux champs utilisés, aux documents qui les soutiennent et aux versions exactes. La simulation crée une copie locale éphémère&nbsp;: elle ne corrige ni le catalogue ni le verdict officiel.</p></div></section>
+	<TechnicalSurfaceNav current="proof" />
 
 	<section class="section proof-graph-section"><div class="container" data-proof-graph data-catalog-source="/data/catalog.json" data-verdict-source="/data/verdicts.json" data-default-compressor={defaultCompressorId} data-default-tool={defaultToolId}>
 		<form class="proof-graph-picker" data-graph-picker>

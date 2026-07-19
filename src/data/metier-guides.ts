@@ -17,6 +17,52 @@ type MetierCheckpoint = {
 	action: string;
 };
 
+type MetierScenario = {
+	title: string;
+	context: string;
+	question: string;
+	decision: string;
+	toolId: string;
+	toolLabel: string;
+};
+
+type MetierAirStage = {
+	title: string;
+	role: string;
+	verify: string;
+};
+
+type MetierEvidence = {
+	decision: string;
+	required: string;
+	source: string;
+	whenMissing: string;
+};
+
+type MetierFieldStep = {
+	moment: string;
+	title: string;
+	action: string;
+	record: string;
+};
+
+type MetierSource = {
+	label: string;
+	url: string;
+	scope: string;
+};
+
+export type MetierLongform = {
+	readingTime: number;
+	updatedAt: string;
+	intro: string;
+	scenarios: MetierScenario[];
+	airPath: MetierAirStage[];
+	evidence: MetierEvidence[];
+	fieldPlan: MetierFieldStep[];
+	sources: MetierSource[];
+};
+
 export type MetierGuideProfile = {
 	verdict: string;
 	verdictDetail: string;
@@ -25,6 +71,7 @@ export type MetierGuideProfile = {
 	steps: MetierStep[];
 	checkpoints: MetierCheckpoint[];
 	boundary: string;
+	longform?: MetierLongform;
 };
 
 export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
@@ -52,6 +99,64 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 			{ title: 'Plusieurs opérateurs', question: 'Quels postes peuvent réellement fonctionner ensemble ?', action: 'Construire au moins un scénario nominal et un scénario de pointe explicitement décrits.' },
 		],
 		boundary: 'Une page métier ne remplace pas la donnée de la référence. Si la pression, la consommation ou le débit restitué manque, le résultat reste indéterminé jusqu’à obtention d’une source ou d’une mesure exploitable.',
+		longform: {
+			readingTime: 18,
+			updatedAt: '2026-07-19',
+			intro: 'Un atelier peut réunir des outils à impulsion, des usages continus et des opérations de gonflage. Les additionner sans scénario produit un besoin artificiel. Les ignorer produit une installation fragile. Le dossier relie donc chaque poste à sa référence, chaque chevauchement à l’organisation réelle et chaque verdict à une mesure possible.',
+			scenarios: [
+				{
+					title: 'Service roues et clé à chocs',
+					context: 'La clé travaille par séquences courtes, mais le poste peut se répéter et partager le réseau avec un autre opérateur.',
+					question: 'La pression reste-t-elle suffisante au raccord pendant l’effort, avec les autres postes réellement actifs ?',
+					decision: 'Tester la référence exacte, décrire la coactivité puis comparer la pression au poste avec un point mesuré en amont.',
+					toolId: 'chicago-pneumatic-cp7748',
+					toolLabel: 'Tester la CP7748',
+				},
+				{
+					title: 'Gonflage et contrôle de pression',
+					context: 'Un pistolet de gonflage ne publie pas nécessairement un débit fixe. Le besoin dépend alors du volume, de la pression initiale, de la pression visée et du temps accepté.',
+					question: 'Les paramètres de la roue et la durée cible sont-ils connus, au lieu d’être remplacés par une moyenne de catégorie ?',
+					decision: 'Renseigner les paramètres transitoires dans le calculateur et conserver un résultat indéterminé lorsqu’un volume nécessaire manque.',
+					toolId: 'einhell-4137000-manometre',
+					toolLabel: 'Préparer un scénario de gonflage',
+				},
+				{
+					title: 'Ponçage ou préparation prolongée',
+					context: 'Un outil utilisé plusieurs minutes peut devenir le poste dimensionnant, même si une clé à chocs paraît plus spectaculaire.',
+					question: 'Le compresseur tient-il le débit demandé pendant la durée prévue et dans son cycle de service documenté ?',
+					decision: 'Traiter ce poste comme un besoin continu, puis vérifier séparément récupération, échauffement et pression en bout de flexible.',
+					toolId: 'metabo-dsx-150',
+					toolLabel: 'Tester la DSX 150',
+				},
+			],
+			airPath: [
+				{ title: 'Production', role: 'Fournir un débit restitué documenté à une pression comparable au besoin.', verify: 'Courbe FAD, cycle de service et conditions de publication.' },
+				{ title: 'Traitement', role: 'Séparer les fonctions nécessaires sans confondre filtration, séchage et stockage.', verify: 'Composants identifiés, état et perte de charge observée.' },
+				{ title: 'Distribution', role: 'Transporter le débit vers les zones de travail avec des restrictions maîtrisées.', verify: 'Plan du réseau, diamètres, longueurs, dérivations et enrouleurs.' },
+				{ title: 'Poste', role: 'Réguler et raccorder l’outil dans sa configuration réelle.', verify: 'Flexible, raccord, régulateur et pression pendant l’écoulement.' },
+				{ title: 'Usage', role: 'Produire le travail attendu selon une durée, une cadence et une coactivité déclarées.', verify: 'Référence, séquence d’usage et observation datée.' },
+			],
+			evidence: [
+				{ decision: 'Besoin de chaque outil', required: 'Pression, consommation et mode de consommation', source: 'Notice ou fiche fabricant de la référence', whenMissing: 'Ne pas substituer une valeur de catégorie ou d’un modèle voisin.' },
+				{ decision: 'Besoin de l’atelier', required: 'Durées, cadences et chevauchements possibles', source: 'Scénarios déclarés par l’atelier', whenMissing: 'Calculer des scénarios séparés plutôt qu’une simultanéité totale arbitraire.' },
+				{ decision: 'Capacité du compresseur', required: 'Débit restitué à la pression utile et limite de service', source: 'Documentation constructeur actuelle', whenMissing: 'Conserver le verdict données insuffisantes.' },
+				{ decision: 'Capacité du réseau', required: 'Pression sous débit aux points significatifs', source: 'Mesures comparables et datées', whenMissing: 'Localiser la restriction avant de relever la consigne du compresseur.' },
+				{ decision: 'Validation du poste', required: 'Résultat sur une séquence représentative', source: 'Essai terrain consigné', whenMissing: 'Présenter la compatibilité documentaire comme non confirmée sur installation.' },
+			],
+			fieldPlan: [
+				{ moment: 'Avant le calcul', title: 'Photographier et nommer', action: 'Relever les plaques, notices, raccords et organes traversés par chaque poste.', record: 'Référence, unité, source et date.' },
+				{ moment: 'Avant l’achat', title: 'Rejouer les journées réelles', action: 'Décrire un scénario nominal, une pointe plausible et les usages qui ne se chevauchent jamais.', record: 'Outils actifs, durée, cadence et opérateurs.' },
+				{ moment: 'À la réception', title: 'Contrôler la configuration', action: 'Comparer la machine, le traitement et les accessoires livrés avec la configuration étudiée.', record: 'Modèle exact, réglages et écarts constatés.' },
+				{ moment: 'À la mise en service', title: 'Mesurer sous débit', action: 'Relever la pression en amont et au poste pendant une séquence représentative.', record: 'Points, instruments, conditions et résultats.' },
+				{ moment: 'Après évolution', title: 'Recalculer au lieu de recopier', action: 'Rejouer le besoin lorsqu’un outil, un flexible, un poste ou l’organisation change.', record: 'Version du scénario et décision mise à jour.' },
+			],
+			sources: [
+				{ label: 'INRS, fiches de poste garages automobiles et poids lourds', url: 'https://www.inrs.fr/metiers/commerce-service/garage/garage-fiches-de-poste.html', scope: 'Repérage des opérations et risques propres aux postes de mécanique, pneumatiques, tôlerie-peinture et soufflage.' },
+				{ label: 'U.S. Department of Energy, Compressed Air Systems', url: 'https://www.energy.gov/cmei/ito/compressed-air-systems', scope: 'Approche système, profils de pression, qualité d’air, stockage, fuites et maintenance.' },
+				{ label: 'Chicago Pneumatic, CP7748', url: 'https://tools.cp.com/en/products/impactwrenches/cp7748-sku8941077481', scope: 'Caractéristiques attribuées à la référence utilisée dans le scénario de clé à chocs.' },
+				{ label: 'Einhell France, manomètre 4137000', url: 'https://www.einhell.fr/p/4137000-manometre/', scope: 'Référence de gonflage dont la fiche ne fournit pas un débit fixe exploitable.' },
+			],
+		},
 	},
 	'carrosserie-peinture': {
 		verdict: 'La peinture exige de vérifier séparément quantité d’air, pression dynamique et qualité d’air.',
@@ -77,6 +182,64 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 			{ title: 'Phase de pulvérisation', question: 'Le scénario couvre-t-il la durée et les autres consommateurs simultanés ?', action: 'Tester une séquence représentative et consigner les variations de pression.' },
 		],
 		boundary: 'CompatAir peut structurer la décision et comparer des données publiées. Le site ne certifie pas une qualité d’air au point d’usage sans mesure adaptée et ne remplace ni la notice du produit appliqué, ni les exigences du procédé de peinture.',
+		longform: {
+			readingTime: 20,
+			updatedAt: '2026-07-19',
+			intro: 'Dans un atelier de carrosserie, la production d’air, sa distribution, sa pureté et la ventilation du procédé répondent à des preuves différentes. Une machine capable d’alimenter un pistolet ne démontre ni la pression réellement disponible à sa gâchette, ni la qualité de l’air, ni la maîtrise des risques liés au poste de peinture.',
+			scenarios: [
+				{
+					title: 'Pulvérisation avec un pistolet HVLP identifié',
+					context: 'La technologie HVLP ne fournit pas un débit universel. Le modèle exact, son réglage et sa pression d’entrée restent déterminants.',
+					question: 'Le FAD disponible couvre-t-il la référence pendant la phase réelle de pulvérisation, avec la pression vérifiée au pistolet ?',
+					decision: 'Comparer le besoin publié du pistolet au compresseur, puis contrôler la pression dynamique après le traitement et le flexible.',
+					toolId: 'abac-g-550f',
+					toolLabel: 'Tester le G-550F',
+				},
+				{
+					title: 'Retouche avec un pistolet LVLP identifié',
+					context: 'Un besoin inférieur sur une référence précise peut changer le choix de production, sans autoriser une généralisation à toute la famille LVLP.',
+					question: 'La comparaison conserve-t-elle le modèle, la pression et la source au lieu de classer les technologies par sigle ?',
+					decision: 'Comparer la référence séparément, puis vérifier que la chaîne de traitement reste dimensionnée pour son débit réel.',
+					toolId: 'metabo-fsp-600-lvlp',
+					toolLabel: 'Tester le FSP 600 LVLP',
+				},
+				{
+					title: 'Ponçage continu avant mise en peinture',
+					context: 'Le ponçage peut partager la production avec la préparation ou une autre zone et devenir le besoin continu dominant.',
+					question: 'Le scénario sépare-t-il alimentation pneumatique, aspiration des poussières et ventilation du local ?',
+					decision: 'Calculer le débit de l’outil, valider son réseau d’air et traiter la maîtrise des poussières dans un circuit de preuve distinct.',
+					toolId: 'metabo-dsx-150',
+					toolLabel: 'Tester la DSX 150',
+				},
+			],
+			airPath: [
+				{ title: 'Production', role: 'Fournir le débit restitué nécessaire aux usages réellement simultanés.', verify: 'FAD publié à une pression comparable et limite de service.' },
+				{ title: 'Refroidissement et séparation', role: 'Évacuer les condensats formés sans revendiquer une pureté finale.', verify: 'Fonction de chaque organe, purge et conditions de fonctionnement.' },
+				{ title: 'Séchage et filtration', role: 'Répondre à une exigence attribuée pour l’eau, l’huile et les particules.', verify: 'Exigence du procédé, capacité, entretien et méthode de contrôle.' },
+				{ title: 'Distribution dédiée', role: 'Acheminer l’air traité sans recréer une restriction ou une contamination non maîtrisée.', verify: 'Matériaux, dérivations, pertes de charge et état du réseau.' },
+				{ title: 'Point d’usage', role: 'Réguler, mesurer et raccorder le pistolet dans sa configuration de travail.', verify: 'Pression dynamique, flexible, raccords et contrôle qualité adapté.' },
+			],
+			evidence: [
+				{ decision: 'Débit du pistolet', required: 'Consommation, pression et réglage publiés pour le modèle', source: 'Fiche ou notice fabricant', whenMissing: 'Ne pas appliquer une valeur HVLP ou LVLP générique.' },
+				{ decision: 'Qualité d’air requise', required: 'Niveau demandé pour particules, eau et huile', source: 'Procédé, produit appliqué ou cahier des charges', whenMissing: 'Décrire le traitement sans annoncer une classe de conformité.' },
+				{ decision: 'Traitement installé', required: 'Fonction, capacité et entretien de chaque organe', source: 'Notices des composants et dossier de maintenance', whenMissing: 'Ne pas considérer le mot filtre ou sécheur comme une preuve suffisante.' },
+				{ decision: 'Pression disponible', required: 'Pression au raccord pendant la pulvérisation', source: 'Mesure dynamique datée', whenMissing: 'La pression réglée à vide ne valide pas le poste.' },
+				{ decision: 'Résultat au point d’usage', required: 'Contrôle adapté au défaut recherché', source: 'Méthode, instrument et résultat consignés', whenMissing: 'Aucune pureté finale ni conformité de procédé n’est revendiquée.' },
+			],
+			fieldPlan: [
+				{ moment: 'Cadrage', title: 'Décrire le procédé', action: 'Séparer préparation, pulvérisation, nettoyage du matériel, séchage et ponçage.', record: 'Produits, postes, références et exigences associées.' },
+				{ moment: 'Dimensionnement', title: 'Tracer les trois exigences', action: 'Calculer le débit, fixer la pression dynamique et identifier séparément la qualité d’air demandée.', record: 'Source et statut de chaque exigence.' },
+				{ moment: 'Conception', title: 'Dessiner la chaîne complète', action: 'Positionner production, séparation, séchage, filtration, distribution, régulation et contrôle final.', record: 'Schéma, composants et fonctions déclarées.' },
+				{ moment: 'Mise en service', title: 'Tester au point d’usage', action: 'Mesurer pendant une phase représentative et rechercher chaque défaut avec une méthode adaptée.', record: 'Conditions, instruments, résultats et limites.' },
+				{ moment: 'Exploitation', title: 'Conserver l’historique', action: 'Relier entretien, changement de filtre, purge, dérive et nouveau contrôle.', record: 'Avant, action, après et prochaine vérification.' },
+			],
+			sources: [
+				{ label: 'INRS, Carrosserie, guide pratique de ventilation n° 24', url: 'https://www.inrs.fr/media.html?refINRS=ED+6406', scope: 'Prévention des risques liés aux agents chimiques par la ventilation en carrosserie-réparation de véhicules légers.' },
+				{ label: 'ISO, ISO 8573-1:2010', url: 'https://www.iso.org/fr/standard/46418.html', scope: 'Classement séparé des polluants et classes de pureté de l’air comprimé.' },
+				{ label: 'ABAC, pistolet G-550F', url: 'https://shop.abacaircompressors.com/en-GB/products/2809913544/paint-spray-gun-g-550f', scope: 'Caractéristiques attribuées au pistolet HVLP utilisé dans le scénario.' },
+				{ label: 'Metabo, FSP 600 LVLP', url: 'https://de.metabo.com/de/maschinen/druckluft/druckluft-werkzeuge/druckluft-farbspritzpistolen/fsp-600-lvlp-601578000-druckluft-farbspritzpistole.html', scope: 'Caractéristiques attribuées au pistolet LVLP utilisé dans le scénario.' },
+			],
+		},
 	},
 	'menuiserie-agencement': {
 		verdict: 'Le clouage, la finition et les usages continus doivent être dimensionnés comme des besoins différents.',

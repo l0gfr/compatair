@@ -13,6 +13,16 @@ describe('sitemap lastmod', () => {
 		expect(resolver('https://compatair.fr/contact/')).toBe('2026-07-10T08:00:00+00:00');
 	});
 
+	it('conserve une date pour une nouvelle surface de confiance avant son premier commit', () => {
+		const resolver = createSitemapLastmodResolver({ gitDate: (files) => {
+			expect(files).toContain('src/pages/confiance.astro');
+			expect(files).toContain('src/components/InstitutionalHero.astro');
+			expect(files).toContain('src/layouts/BaseLayout.astro');
+			return '2026-07-19T15:00:00+00:00';
+		} });
+		expect(resolver('https://compatair.fr/confiance/')).toBe('2026-07-19T15:00:00+00:00');
+	});
+
 	it('associe une page guide à son contenu éditorial', () => {
 		const resolver = createSitemapLastmodResolver({ gitDate: (files) => dates.get(files.join(',')) });
 		expect(resolver('https://compatair.fr/guides/exemple/')).toBe('2026-07-11T09:00:00+00:00');

@@ -1,12 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import TechnicalHero from '../components/TechnicalHero.astro';
+import TechnicalSurfaceNav from '../components/TechnicalSurfaceNav.astro';
 ---
 
 <BaseLayout title="API CompatAir : décisions et preuves" description="API HTTP versionnée de CompatAir pour compatibilité, recherche plein texte, preuves, changefeed et enrichissement UCP en lecture seule." canonicalPath="/api/">
-	<section class="page-hero compact"><div class="container"><p class="eyebrow">CompatAir API 1.0</p><h1>Des décisions techniques, pas un simple catalogue</h1><p class="lead">L’API répond aux questions de compatibilité, expose les preuves utilisées, recherche le corpus publié et permet aux agents de suivre les changements. Chaque décision reste versionnée, limitée et citable.</p></div></section>
+	<TechnicalHero eyebrow="CompatAir API 1.0" title="Des décisions techniques, pas un simple catalogue" lead="L’API répond aux questions de compatibilité, expose les preuves utilisées, recherche le corpus publié et permet aux agents de suivre les changements. Chaque décision reste versionnée, limitée et citable." facts={[{ label: 'Mode', value: 'Lecture seule' }, { label: 'Contrat', value: 'OpenAPI public' }, { label: 'Débit public', value: '120 requêtes/minute/adresse' }, { label: 'Verdict', value: 'Portées séparées et limites visibles' }]} actions={[{ href: '#requete', label: 'Tester une requête', primary: true }, { href: '/openapi/compatair-2026-07-15.json', label: 'Ouvrir l’OpenAPI' }]} flow={['Produits identifiés', 'Méthode versionnée', 'Réponse citable']} />
+	<TechnicalSurfaceNav current="api" />
 	<article class="container content api-documentation">
 		<div class="status-callout"><strong>Adresse publique en version d’essai</strong><code>GET https://compatair.fr/api/v1/compatibility</code><span>Consultation uniquement, limitée à 120 requêtes par minute et par adresse. Une offre professionnelle pourra prévoir un autre volume, une assistance et un historique distinct.</span></div>
-		<h2>Requête</h2>
+		<h2 id="requete">Requête</h2>
 		<pre><code>curl --get 'https://compatair.fr/api/v1/compatibility' \
   --data-urlencode 'compressorId=einhell-tc-ac-240-50-10-of' \
   --data-urlencode 'toolId=einhell-tc-pe-150'</code></pre>

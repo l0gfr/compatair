@@ -20,6 +20,7 @@ const staticCards: SocialCard[] = [
 	{ path: '/compatibilite/', kicker: 'Compatibilité CompatAir', title: 'Compresseur et outil pneumatique', subtitle: 'Résultat, débit, pression, limites et sources' },
 	{ path: '/compresseurs/', kicker: 'Catalogue', title: 'Compresseurs documentés', subtitle: 'Débit restitué, pression, cuve et limites' },
 	{ path: '/confidentialite/', kicker: 'Confiance', title: 'Politique de confidentialité', subtitle: 'Données traitées, finalités et droits' },
+	{ path: '/confiance/', kicker: 'Méthode et preuves', title: 'Centre de confiance CompatAir', subtitle: 'Comprendre, remonter et vérifier chaque décision' },
 	{ path: '/contact/', kicker: 'Correction', title: 'Signaler une donnée', subtitle: 'Proposer une source ou corriger une caractéristique' },
 	{ path: '/cookies/', kicker: 'Confidentialité', title: 'Politique relative aux cookies', subtitle: 'Aucun cookie publicitaire côté navigateur' },
 	{ path: '/corrections/', kicker: 'Suivi public', title: 'Journal public des corrections', subtitle: 'Valeurs, résultats et promesses mesurables' },

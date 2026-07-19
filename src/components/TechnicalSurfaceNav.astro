@@ -1,0 +1,22 @@
+---
+interface Props {
+	current?: 'api' | 'mcp' | 'ucp' | 'receipt' | 'impact' | 'proof';
+}
+
+const { current } = Astro.props;
+const links = [
+	{ id: 'api', href: '/api/', label: 'API' },
+	{ id: 'mcp', href: '/mcp-documentation/', label: 'MCP' },
+	{ id: 'ucp', href: '/ucp/', label: 'UCP' },
+	{ id: 'receipt', href: '/recu-compatibilite/', label: 'Reçu vérifiable' },
+	{ id: 'impact', href: '/impact-compatibilite/', label: 'Flux d’impact' },
+	{ id: 'proof', href: '/graphe-preuve/', label: 'Graphe de preuve' },
+] as const;
+---
+<nav class="technical-surface-nav" aria-label="Surfaces techniques CompatAir" data-technical-surface-nav>
+	<div class="container">
+		<strong>Contrats publics</strong>
+		<div>{links.map((link) => <a href={link.href} aria-current={current === link.id ? 'page' : undefined}>{link.label}</a>)}</div>
+		<a class="technical-trust-link" href="/confiance/">Centre de confiance</a>
+	</div>
+</nav>

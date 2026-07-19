@@ -1,0 +1,43 @@
+---
+import UiIcon from './UiIcon.astro';
+
+interface Fact {
+	label: string;
+	value: string;
+}
+
+interface Action {
+	href: string;
+	label: string;
+	primary?: boolean;
+}
+
+interface Props {
+	eyebrow: string;
+	title: string;
+	lead: string;
+	facts: Fact[];
+	actions?: Action[];
+	flow?: [string, string, string];
+}
+
+const { eyebrow, title, lead, facts, actions = [], flow = ['Entrée identifiée', 'Contrat versionné', 'Résultat vérifiable'] } = Astro.props;
+---
+<section class="technical-hero" data-technical-surface>
+	<div class="container technical-hero-grid">
+		<div class="technical-hero-copy">
+			<p class="technical-kicker">{eyebrow}</p>
+			<h1>{title}</h1>
+			<p class="lead">{lead}</p>
+			{actions.length > 0 && <div class="technical-actions">{actions.map((action) => <a class:list={['button', action.primary && 'primary']} href={action.href}>{action.label}{action.primary && <UiIcon name="arrow" size={16} />}</a>)}</div>}
+		</div>
+		<aside class="technical-contract-map" aria-label="Chaîne de vérification de cette surface">
+			<header><span><i></i> Surface publique</span><strong>READ ONLY</strong></header>
+			<div class="technical-flow" role="img" aria-label={`${flow[0]}, puis ${flow[1]}, puis ${flow[2]}`}>
+				{flow.map((step, index) => <div><span>0{index + 1}</span><strong>{step}</strong>{index < flow.length - 1 && <b aria-hidden="true">→</b>}</div>)}
+			</div>
+			<dl>{facts.map((fact) => <div><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl>
+			<footer><UiIcon name="shield" size={16} /> Source, version et limite restent liées</footer>
+		</aside>
+	</div>
+</section>

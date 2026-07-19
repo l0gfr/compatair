@@ -1,11 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import TechnicalHero from '../components/TechnicalHero.astro';
+import TechnicalSurfaceNav from '../components/TechnicalSurfaceNav.astro';
 ---
 
 <BaseLayout title="Reçu de compatibilité vérifiable | CompatAir" description="Vérifier l’intégrité d’un reçu CompatAir qui fige configuration, portées de verdict, méthode, catalogue, sources, empreinte et date." canonicalPath="/recu-compatibilite/" alternates={[{ hreflang: 'fr-FR', path: '/recu-compatibilite/' }, { hreflang: 'en', path: '/en/compatibility-receipt/' }]}>
-	<section class="page-hero compact"><div class="container"><p class="eyebrow">Compatibility Receipt 1.0</p><h1>Figer une décision sans demander de croire CompatAir sur parole</h1><p class="lead">Chaque décision technique peut embarquer un reçu déterministe avec les deux portées de verdict, la configuration, les versions, les sources, la date et une empreinte SHA-256.</p></div></section>
+	<TechnicalHero eyebrow="Compatibility Receipt 1.0" title="Figer une décision sans demander de croire CompatAir sur parole" lead="Chaque décision technique peut embarquer un reçu déterministe avec les deux portées de verdict, la configuration, les versions, les sources, la date et une empreinte SHA-256." facts={[{ label: 'Format', value: 'JSON portable' }, { label: 'Intégrité', value: 'Empreinte SHA-256' }, { label: 'Traitement', value: 'Aucun stockage du reçu' }, { label: 'Portée', value: 'Contenu intact, pas identité signée' }]} actions={[{ href: '#verifier', label: 'Vérifier un reçu', primary: true }, { href: '/schemas/compatibility-receipt-1.0.0.json', label: 'Voir le schéma' }]} flow={['Décision publiée', 'Empreinte calculée', 'Intégrité contrôlée']} />
+	<TechnicalSurfaceNav current="receipt" />
 	<article class="container content api-documentation">
-		<h2>Vérifier un reçu</h2><p>Collez uniquement un objet <code>compatibility_receipt</code> émis par l’API ou MCP. N’ajoutez aucune donnée personnelle&nbsp;: le vérificateur n’en attend pas, ne conserve pas le reçu et n’appelle aucune URL qu’il contient.</p>
+		<h2 id="verifier">Vérifier un reçu</h2><p>Collez uniquement un objet <code>compatibility_receipt</code> émis par l’API ou MCP. N’ajoutez aucune donnée personnelle&nbsp;: le vérificateur n’en attend pas, ne conserve pas le reçu et n’appelle aucune URL qu’il contient.</p>
 		<form data-receipt-verifier>
 			<label for="receipt-json"><strong>Reçu JSON</strong></label>
 			<textarea id="receipt-json" name="receipt" rows="14" required spellcheck="false" placeholder='{"schema_version":"1.0.0",...}'></textarea>

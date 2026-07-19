@@ -197,7 +197,9 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 					</section>
 					<section class="footer-block">
 						<header><span class="footer-icon"><UiIcon name="database" /></span><h2>Comment nous vérifions</h2></header>
+						<a href="/confiance/"><span>Centre de confiance</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/methodologie/"><span>Comment fonctionne CompatAir</span><UiIcon name="arrow" size={15} /></a>
+						{lang === 'fr' && <a href="/api/"><span>API et contrats publics</span><UiIcon name="arrow" size={15} /></a>}
 						<a href={lang === 'en' ? '/en/mcp/' : '/mcp-documentation/'}><span>{lang === 'en' ? 'MCP for AI agents' : 'MCP pour agents IA'}</span><UiIcon name="arrow" size={15} /></a>
 						{lang === 'fr' && <a href="/agents/"><span>CompatAir pour les agents</span><UiIcon name="arrow" size={15} /></a>}
 						<a href={lang === 'en' ? '/en/ucp/' : '/ucp/'}><span>{lang === 'en' ? 'UCP compatibility service' : 'UCP pour commerce agentique'}</span><UiIcon name="arrow" size={15} /></a>
@@ -214,6 +216,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 					</section>
 					<section class="footer-block">
 						<header><span class="footer-icon"><UiIcon name="shield" /></span><h2>Confiance</h2></header>
+						<a href="/confiance/"><span>Vue d’ensemble</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/affiliation/"><span>Affiliation et indépendance</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/contact/"><span>Signaler une donnée</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/securite/"><span>Signaler une vulnérabilité</span><UiIcon name="arrow" size={15} /></a>

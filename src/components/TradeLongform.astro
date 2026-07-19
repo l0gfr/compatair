@@ -1,0 +1,125 @@
+---
+import type { MetierLongform } from '../data/metier-guides';
+import type { GuideMetierId } from '../domain/editorial-taxonomy';
+import UiIcon from './UiIcon.astro';
+
+type Props = {
+	longform: MetierLongform;
+	metier: GuideMetierId;
+};
+
+const { longform, metier } = Astro.props;
+const updatedLabel = longform.updatedAt.split('-').reverse().join('/');
+---
+
+<div class="trade-longform" data-trade-longform={metier}>
+	<section class="trade-deep-intro" aria-labelledby="trade-deep-title">
+		<div class="container trade-deep-intro-grid">
+			<div>
+				<p class="trade-index">03 / Dossier approfondi</p>
+				<h2 id="trade-deep-title">Du besoin déclaré à une preuve au poste.</h2>
+				<p>{longform.intro}</p>
+			</div>
+			<dl aria-label="Informations sur le dossier">
+				<div><dt>Lecture</dt><dd>{longform.readingTime} min</dd></div>
+				<div><dt>Mise à jour</dt><dd>{updatedLabel}</dd></div>
+				<div><dt>Scénarios</dt><dd>{longform.scenarios.length} cas guidés</dd></div>
+				<div><dt>Sources</dt><dd>{longform.sources.length} références</dd></div>
+			</dl>
+		</div>
+	</section>
+
+	<section class="trade-section trade-scenarios" id="scenarios">
+		<div class="container">
+			<header class="trade-section-head trade-section-head-split">
+				<div><p class="trade-index">04 / Scénarios de travail</p><h2>Trois situations, trois questions différentes.</h2></div>
+				<p>Chaque cas part d’une référence déjà documentée. Le calculateur apporte une réponse technique, puis le contrôle terrain confirme ce que le réseau livre réellement.</p>
+			</header>
+			<div class="trade-scenario-grid">
+				{longform.scenarios.map((scenario, index) => (
+					<article>
+						<header><span>{String(index + 1).padStart(2, '0')}</span><UiIcon name="tools" size={24} /></header>
+						<h3>{scenario.title}</h3>
+						<p>{scenario.context}</p>
+						<div><strong>Question décisive</strong><p>{scenario.question}</p></div>
+						<div><strong>Décision</strong><p>{scenario.decision}</p></div>
+						<a class="text-link" href={`/calculateur/#outil=${scenario.toolId}`}>{scenario.toolLabel}<UiIcon name="arrow" size={16} /></a>
+					</article>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="trade-section trade-air-path" id="chaine-air">
+		<div class="container">
+			<header class="trade-section-head trade-section-head-split">
+				<div><p class="trade-index">05 / Chaîne d’air</p><h2>Suivre la preuve jusqu’au point d’utilisation.</h2></div>
+				<p>Une valeur à la sortie du compresseur ne décrit pas automatiquement ce qui arrive au poste. Chaque maillon possède une fonction et un contrôle distincts.</p>
+			</header>
+			<div class="trade-air-map" role="list" aria-label="Chaîne de production et de distribution de l’air comprimé">
+				{longform.airPath.map((stage, index) => (
+					<article role="listitem">
+						<span>{String(index + 1).padStart(2, '0')}</span>
+						<h3>{stage.title}</h3>
+						<p>{stage.role}</p>
+						<small><UiIcon name="gauge" size={15} />{stage.verify}</small>
+					</article>
+				))}
+			</div>
+			<p class="trade-air-boundary"><UiIcon name="shield" size={22} /><span><strong>Deux conclusions restent séparées.</strong> Une compatibilité calculée porte sur les données publiées. Une validation sur installation exige une mesure réalisée dans les conditions décrites.</span></p>
+		</div>
+	</section>
+
+	<section class="trade-section trade-evidence-matrix" id="preuves-metier">
+		<div class="container">
+			<header class="trade-section-head trade-section-head-split">
+				<div><p class="trade-index">06 / Matrice de preuve</p><h2>Ce qu’il faut savoir avant de conclure.</h2></div>
+				<p>La colonne de droite n’est pas une solution de remplacement. Elle indique le comportement attendu lorsque la preuve nécessaire n’existe pas encore.</p>
+			</header>
+			<div class="trade-evidence-table-wrap" tabindex="0" role="region" aria-label="Matrice de preuve, défilement horizontal possible">
+				<table>
+					<thead><tr><th>Décision</th><th>Donnée nécessaire</th><th>Preuve attendue</th><th>Si elle manque</th></tr></thead>
+					<tbody>{longform.evidence.map((item) => <tr><th>{item.decision}</th><td>{item.required}</td><td>{item.source}</td><td>{item.whenMissing}</td></tr>)}</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<section class="trade-section trade-field-plan" id="plan-controle">
+		<div class="container trade-field-plan-grid">
+			<header class="trade-section-head">
+				<p class="trade-index">07 / Plan de contrôle</p>
+				<h2>Un dossier qui reste utile après l’achat.</h2>
+				<p>Le contrôle commence avant le calcul et reprend chaque fois que le poste, le réseau ou l’organisation évolue.</p>
+				<a class="button primary" href="/calculateur/">Construire la configuration</a>
+			</header>
+			<ol class="trade-field-timeline">
+				{longform.fieldPlan.map((step, index) => (
+					<li>
+						<span>{String(index + 1).padStart(2, '0')}</span>
+						<div><small>{step.moment}</small><h3>{step.title}</h3><p>{step.action}</p><strong>{step.record}</strong></div>
+					</li>
+				))}
+			</ol>
+		</div>
+	</section>
+
+	<section class="trade-section trade-primary-sources" id="sources-metier">
+		<div class="container">
+			<header class="trade-section-head trade-section-head-split">
+				<div><p class="trade-index">08 / Sources primaires</p><h2>Une source, un périmètre explicite.</h2></div>
+				<p>Ces références cadrent le dossier. Les valeurs propres à une machine ou à un outil restent reliées à sa fiche exacte dans le catalogue CompatAir.</p>
+			</header>
+			<div class="trade-source-grid">
+				{longform.sources.map((source, index) => (
+					<a href={source.url} rel="noopener">
+						<span>{String(index + 1).padStart(2, '0')}</span>
+						<strong>{source.label}</strong>
+						<small>{source.scope}</small>
+						<b>Consulter la source <UiIcon name="arrow" size={15} /></b>
+					</a>
+				))}
+			</div>
+		</div>
+	</section>
+</div>

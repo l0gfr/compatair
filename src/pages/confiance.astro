@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import InstitutionalHero from '../components/InstitutionalHero.astro';
+import UiIcon from '../components/UiIcon.astro';
+
+const commitments = [
+	{ icon: 'database', title: 'Une donnée garde son origine', detail: 'La référence, le document, la date et la qualité restent accessibles depuis la fiche ou la décision.' },
+	{ icon: 'calculator', title: 'Une règle garde sa version', detail: 'Le moteur est déterministe. Une même configuration et les mêmes snapshots produisent le même résultat.' },
+	{ icon: 'shield', title: 'Une limite reste visible', detail: 'Une information indispensable absente produit données insuffisantes, jamais une estimation silencieuse.' },
+	{ icon: 'scale', title: 'Le commerce reste séparé', detail: 'Prix, disponibilité ou commission peuvent suivre la décision, mais ne déterminent ni le verdict ni son ordre technique.' },
+] as const;
+
+const proofSurfaces = [
+	{ href: '/sources-fiabilite/', index: '01', label: 'Sources et fiabilité', detail: 'Comprendre la provenance, la fraîcheur et le libellé humain associé à la qualité des données.' },
+	{ href: '/preuves/', index: '02', label: 'Historique des preuves', detail: 'Retrouver les documents, dates de première vérification, ajouts et contrôles successifs.' },
+	{ href: '/radar-contradictions/', index: '03', label: 'Radar des contradictions', detail: 'Comparer des affirmations concurrentes sans les fusionner ni choisir silencieusement.' },
+	{ href: '/observatoire-qualite-documentaire/', index: '04', label: 'Observatoire documentaire', detail: 'Mesurer la couverture, les délais et les fragilités du corpus CompatAir.' },
+	{ href: '/corrections/', index: '05', label: 'Journal des corrections', detail: 'Publier les changements qui affectent une valeur, un résultat ou une promesse mesurable.' },
+	{ href: '/graphe-preuve/', index: '06', label: 'Graphe de preuve', detail: 'Remonter d’un verdict jusqu’aux calculs, champs, documents et versions.' },
+];
+
+const technicalSurfaces = [
+	{ href: '/api/', label: 'API HTTP', meta: 'OpenAPI', detail: 'Compatibilité, recherche, preuves et changefeed en lecture seule.' },
+	{ href: '/mcp-documentation/', label: 'Serveur MCP', meta: 'Streamable HTTP', detail: 'Outils et ressources pour agents, avec réponses structurées et URLs canoniques.' },
+	{ href: '/ucp/', label: 'Capability UCP', meta: 'REST + MCP', detail: 'Décision de compatibilité pour le commerce agentique, sans paiement ni mutation marchande.' },
+	{ href: '/recu-compatibilite/', label: 'Reçu vérifiable', meta: 'SHA-256', detail: 'Configuration, verdicts, versions, sources, date et empreinte dans un objet portable.' },
+	{ href: '/impact-compatibilite/', label: 'Flux d’impact', meta: 'JSON + NDJSON', detail: 'Identifier les décisions à recalculer lorsqu’une preuve évolue.' },
+];
+---
+<BaseLayout title="Centre de confiance | CompatAir" description="Méthode, gouvernance, sources, corrections, sécurité et contrats publics permettant de vérifier les décisions CompatAir." canonicalPath="/confiance/" breadcrumbs={[{ name: 'Centre de confiance', path: '/confiance/' }]}>
+	<div class="trust-center" data-trust-center>
+		<InstitutionalHero eyebrow="Méthode, preuves et contrats publics" title="Ne pas demander de croire. Donner les moyens de vérifier." lead="CompatAir sépare la donnée publiée, la règle de calcul, la décision technique et l’offre marchande. Ce centre rassemble les pages humaines et les contrats machine qui permettent de contrôler cette séparation." primaryHref="#engagements" primaryLabel="Voir le cadre de confiance" items={[{ label: 'Comprendre', detail: 'Méthode, rôles et limites publiés' }, { label: 'Remonter', detail: 'Verdict, calcul, champ et document reliés' }, { label: 'Contrôler', detail: 'Contrats versionnés et corrections datées' }]} />
+
+		<section class="trust-commitments" id="engagements">
+			<div class="container">
+				<header class="trust-section-head"><p class="trust-index">01 / Engagements vérifiables</p><h2>Quatre séparations protègent la décision.</h2><p>La confiance ne repose pas sur un badge isolé. Elle vient de frontières compréhensibles, puis de surfaces publiques qui permettent de les contrôler.</p></header>
+				<div class="trust-commitment-grid">{commitments.map((item, index) => <article><span><UiIcon name={item.icon} size={23} /></span><small>0{index + 1}</small><h3>{item.title}</h3><p>{item.detail}</p></article>)}</div>
+			</div>
+		</section>
+
+		<section class="trust-chain" aria-labelledby="trust-chain-title">
+			<div class="container">
+				<header class="trust-section-head light"><p class="trust-index">02 / Chaîne de décision</p><h2 id="trust-chain-title">Chaque conclusion doit pouvoir revenir à son point de départ.</h2></header>
+				<div class="trust-chain-map" role="img" aria-label="Un document identifié soutient une donnée structurée, utilisée par une règle versionnée pour produire un verdict et un reçu vérifiable.">
+					<div><span>01</span><strong>Document</strong><small>URL, date, marché</small></div><b>→</b>
+					<div><span>02</span><strong>Donnée</strong><small>Valeur, unité, qualité</small></div><b>→</b>
+					<div><span>03</span><strong>Règle</strong><small>Méthode, version, limite</small></div><b>→</b>
+					<div><span>04</span><strong>Verdict</strong><small>Portée et réserve</small></div><b>→</b>
+					<div><span>05</span><strong>Preuve portable</strong><small>URL, reçu, empreinte</small></div>
+				</div>
+				<p class="trust-chain-boundary"><UiIcon name="shield" size={19} /><span><strong>Frontière publiée.</strong> Une compatibilité documentaire n’est pas une mesure sur installation. Les deux conclusions restent séparées.</span></p>
+			</div>
+		</section>
+
+		<section class="trust-directory">
+			<div class="container">
+				<header class="trust-section-head"><p class="trust-index">03 / Registres publics</p><h2>Examiner les preuves, les contradictions et les corrections.</h2></header>
+				<div class="trust-proof-grid">{proofSurfaces.map((surface) => <a href={surface.href}><span>{surface.index}</span><div><h3>{surface.label}</h3><p>{surface.detail}</p></div><b aria-hidden="true">→</b></a>)}</div>
+			</div>
+		</section>
+
+		<section class="trust-technical">
+			<div class="container trust-technical-grid">
+				<header><p class="trust-index">04 / Contrats techniques</p><h2>La même décision pour le site, les intégrations et les agents.</h2><p>Ces surfaces ne créent pas un second moteur. Elles exposent les mêmes identifiants, règles, versions, sources et limites sous des formats adaptés à chaque intégration.</p><a class="button primary" href="/api/">Commencer par l’API <UiIcon name="arrow" size={16} /></a></header>
+				<div class="trust-technical-stack">{technicalSurfaces.map((surface, index) => <a href={surface.href}><span>0{index + 1}</span><div><small>{surface.meta}</small><strong>{surface.label}</strong><p>{surface.detail}</p></div><b aria-hidden="true">↗</b></a>)}</div>
+			</div>
+		</section>
+
+		<section class="trust-governance">
+			<div class="container">
+				<header class="trust-section-head"><p class="trust-index">05 / Responsabilités et recours</p><h2>Savoir qui maintient, comment signaler et où se situent les limites.</h2></header>
+				<div class="trust-governance-grid">
+					<a href="/methodologie/"><UiIcon name="calculator" size={24} /><strong>Méthode de calcul</strong><span>Règles, hypothèses, versions et résultats possibles.</span></a>
+					<a href="/gouvernance-editoriale/"><UiIcon name="book" size={24} /><strong>Gouvernance éditoriale</strong><span>Rédaction, relecture, contrôle automatisé et absence de validation externe.</span></a>
+					<a href="/affiliation/"><UiIcon name="scale" size={24} /><strong>Affiliation et indépendance</strong><span>Séparation entre verdict, classement technique et offre commerciale.</span></a>
+					<a href="/confidentialite/"><UiIcon name="shield" size={24} /><strong>Confidentialité</strong><span>Données traitées, statistiques agrégées et droits applicables.</span></a>
+					<a href="/securite/"><UiIcon name="shield" size={24} /><strong>Sécurité</strong><span>Cadre de signalement responsable d’une vulnérabilité.</span></a>
+					<a href="/contact/"><UiIcon name="compass" size={24} /><strong>Signaler une donnée</strong><span>Proposer une source plus récente ou corriger une caractéristique.</span></a>
+				</div>
+			</div>
+		</section>
+	</div>
+</BaseLayout>

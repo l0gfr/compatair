@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import GuideCard from '../../../components/GuideCard.astro';
 import MetierIcon from '../../../components/MetierIcon.astro';
+import TradeLongform from '../../../components/TradeLongform.astro';
 import UiIcon from '../../../components/UiIcon.astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { metierGuideProfiles } from '../../../data/metier-guides';
@@ -23,10 +24,26 @@ const itemListJsonLd = {
 	name: definition.title,
 	itemListElement: guides.map((guide, index) => ({ '@type': 'ListItem', position: index + 1, name: guide.data.title, url: `https://compatair.fr/guides/${guide.id}/` })),
 };
+const tradeGuideJsonLd = profile.longform ? {
+	'@context': 'https://schema.org',
+	'@type': 'TechArticle',
+	headline: definition.title,
+	description: definition.description,
+	dateModified: `${profile.longform.updatedAt}T00:00:00+02:00`,
+	timeRequired: `PT${profile.longform.readingTime}M`,
+	mainEntityOfPage: `https://compatair.fr/guides/metiers/${metier}/`,
+	url: `https://compatair.fr/guides/metiers/${metier}/`,
+	inLanguage: 'fr-FR',
+	isAccessibleForFree: true,
+	citation: profile.longform.sources.map((source) => source.url),
+	author: { '@type': 'Organization', '@id': 'https://compatair.fr/#organization', name: 'CompatAir', url: 'https://compatair.fr/' },
+	publisher: { '@type': 'Organization', '@id': 'https://compatair.fr/#organization', name: 'CompatAir', url: 'https://compatair.fr/' },
+} : undefined;
 ---
 
 <BaseLayout title={definition.title} editorialTitle={definition.seoTitle} description={definition.description} imagePath="/social/guides.png" breadcrumbs={[{ name: 'Guides', path: '/guides/' }, { name: 'Professionnels', path: '/guides/professionnels/' }, { name: definition.label, path: `/guides/metiers/${metier}/` }]}>
 	<script is:inline type="application/ld+json" set:html={serializeJsonLd(itemListJsonLd)} />
+	{tradeGuideJsonLd && <script is:inline type="application/ld+json" set:html={serializeJsonLd(tradeGuideJsonLd)} />}
 	<div class="trade-guide" data-trade-guide={metier}>
 		<section class="trade-hero" data-editorial-hub={metier}>
 			<div class="container trade-hero-grid">
@@ -34,7 +51,7 @@ const itemListJsonLd = {
 					<p class="trade-index">Guides par métier / {definition.label}</p>
 					<h1>{definition.title}</h1>
 					<p class="trade-lead">{definition.description}</p>
-					<div class="actions"><a class="button primary" href="/calculateur/">Vérifier une configuration</a><a class="button" href="#methode">Lire la méthode complète</a></div>
+					<div class="actions"><a class="button primary" href="/calculateur/">Vérifier une configuration</a><a class="button" href={profile.longform ? '#scenarios' : '#methode'}>{profile.longform ? 'Voir les cas de travail' : 'Lire la méthode complète'}</a></div>
 					<ul class="trade-principles">{profile.principles.map((principle) => <li><UiIcon name="check" size={16} />{principle}</li>)}</ul>
 				</div>
 				<div class="trade-instrument" aria-label={`Cadre de décision pour ${definition.label}`}>
@@ -46,18 +63,20 @@ const itemListJsonLd = {
 			</div>
 		</section>
 
-		<nav class="trade-toc" aria-label="Sommaire du guide métier"><div class="container"><strong>Dans ce guide</strong><a href="#reponse">Réponse directe</a><a href="#decisions">Décisions</a><a href="#methode">Méthode</a><a href="#controles">Contrôles</a><a href="#dossiers">Dossiers techniques</a></div></nav>
+		<nav class="trade-toc" aria-label="Sommaire du guide métier"><div class="container"><strong>Dans ce guide</strong><a href="#reponse">Réponse directe</a><a href="#decisions">Décisions</a>{profile.longform && <><a href="#scenarios">Scénarios</a><a href="#chaine-air">Chaîne d’air</a><a href="#preuves-metier">Preuves</a><a href="#plan-controle">Plan de contrôle</a></>}<a href="#methode">Méthode</a><a href="#controles">Contrôles</a><a href="#dossiers">Dossiers techniques</a>{profile.longform && <a href="#sources-metier">Sources</a>}</div></nav>
 
 		<section class="trade-answer" id="reponse"><div class="container trade-answer-grid"><p class="trade-index">01 / Réponse directe</p><div><h2>{profile.verdict}</h2><p>{profile.verdictDetail}</p></div><aside><strong>Principe non négociable</strong><p>Une donnée absente reste absente. Une page métier organise les questions et les preuves, elle n’invente pas la consommation d’une catégorie d’outils.</p></aside></div></section>
 
 		<section class="trade-section" id="decisions"><div class="container"><header class="trade-section-head"><p class="trade-index">02 / Décider avant d’acheter</p><h2>Les quatre décisions qui structurent le projet.</h2></header><div class="trade-decision-grid">{profile.decisions.map((decision, index) => <article><span>{String(index + 1).padStart(2, '0')}</span><h3>{decision.title}</h3><p>{decision.description}</p></article>)}</div></div></section>
 
-		<section class="trade-section trade-method" id="methode"><div class="container"><header class="trade-section-head trade-section-head-split"><div><p class="trade-index">03 / Méthode complète</p><h2>Une chaîne de décision qui reste vérifiable.</h2></div><p>Chaque étape produit une preuve ou une hypothèse nommée. La conclusion peut ainsi être recalculée lorsqu’un outil, un poste ou une source change.</p></header><ol class="trade-process">{profile.steps.map((step, index) => <li><span>{String(index + 1).padStart(2, '0')}</span><div><h3>{step.title}</h3><p>{step.description}</p><small>{step.proof}</small></div></li>)}</ol></div></section>
+		{profile.longform && <TradeLongform longform={profile.longform} metier={metier} />}
 
-		<section class="trade-section trade-checks" id="controles"><div class="container"><header class="trade-section-head trade-section-head-split"><div><p class="trade-index">04 / Points de contrôle</p><h2>Les questions qui évitent les faux raccourcis.</h2></div><p>Ces contrôles servent à révéler une donnée manquante, un mauvais niveau de comparaison ou un scénario d’usage encore flou.</p></header><div class="trade-check-grid">{profile.checkpoints.map((checkpoint, index) => <article><span>{String(index + 1).padStart(2, '0')}</span><h3>{checkpoint.title}</h3><p><strong>Question.</strong> {checkpoint.question}</p><p><strong>Action.</strong> {checkpoint.action}</p></article>)}</div><div class="trade-boundary"><UiIcon name="shield" size={28} /><div><strong>Limite publiée</strong><p>{profile.boundary}</p></div></div></div></section>
+		<section class="trade-section trade-method" id="methode"><div class="container"><header class="trade-section-head trade-section-head-split"><div><p class="trade-index">{profile.longform ? '09' : '03'} / Méthode complète</p><h2>Une chaîne de décision qui reste vérifiable.</h2></div><p>Chaque étape produit une preuve ou une hypothèse nommée. La conclusion peut ainsi être recalculée lorsqu’un outil, un poste ou une source change.</p></header><ol class="trade-process">{profile.steps.map((step, index) => <li><span>{String(index + 1).padStart(2, '0')}</span><div><h3>{step.title}</h3><p>{step.description}</p><small>{step.proof}</small></div></li>)}</ol></div></section>
 
-		<section class="trade-section trade-library" id="dossiers"><div class="container"><header class="trade-section-head trade-section-head-split"><div><p class="trade-index">05 / Dossiers techniques</p><h2>{guides.length} guides pour aller jusqu’au terrain.</h2></div><p>Les guides peuvent être longs lorsqu’une procédure, un cas limite ou une méthode de mesure l’exige. Chaque chiffre technique reste attribué à sa source et à sa référence.</p></header><div class="guide-grid">{guides.map((guide) => <GuideCard guide={guide} />)}</div></div></section>
+		<section class="trade-section trade-checks" id="controles"><div class="container"><header class="trade-section-head trade-section-head-split"><div><p class="trade-index">{profile.longform ? '10' : '04'} / Points de contrôle</p><h2>Les questions qui évitent les faux raccourcis.</h2></div><p>Ces contrôles servent à révéler une donnée manquante, un mauvais niveau de comparaison ou un scénario d’usage encore flou.</p></header><div class="trade-check-grid">{profile.checkpoints.map((checkpoint, index) => <article><span>{String(index + 1).padStart(2, '0')}</span><h3>{checkpoint.title}</h3><p><strong>Question.</strong> {checkpoint.question}</p><p><strong>Action.</strong> {checkpoint.action}</p></article>)}</div><div class="trade-boundary"><UiIcon name="shield" size={28} /><div><strong>Limite publiée</strong><p>{profile.boundary}</p></div></div></div></section>
 
-		<section class="trade-section related-professions"><div class="container"><header class="trade-section-head"><p class="trade-index">06 / Contextes voisins</p><h2>Explorer les autres parcours métiers.</h2></header><div class="editorial-path-grid">{guideMetierIds.filter((item) => item !== metier).map((item) => <a href={`/guides/metiers/${item}/`}><MetierIcon metier={item} /><span>Parcours métier</span><strong>{guideMetiers[item].label}</strong><small>{guideMetiers[item].description}</small></a>)}</div></div></section>
+		<section class="trade-section trade-library" id="dossiers"><div class="container"><header class="trade-section-head trade-section-head-split"><div><p class="trade-index">{profile.longform ? '11' : '05'} / Dossiers techniques</p><h2>{guides.length} guides pour aller jusqu’au terrain.</h2></div><p>Les guides peuvent être longs lorsqu’une procédure, un cas limite ou une méthode de mesure l’exige. Chaque chiffre technique reste attribué à sa source et à sa référence.</p></header><div class="guide-grid">{guides.map((guide) => <GuideCard guide={guide} />)}</div></div></section>
+
+		<section class="trade-section related-professions"><div class="container"><header class="trade-section-head"><p class="trade-index">{profile.longform ? '12' : '06'} / Contextes voisins</p><h2>Explorer les autres parcours métiers.</h2></header><div class="editorial-path-grid">{guideMetierIds.filter((item) => item !== metier).map((item) => <a href={`/guides/metiers/${item}/`}><MetierIcon metier={item} /><span>Parcours métier</span><strong>{guideMetiers[item].label}</strong><small>{guideMetiers[item].description}</small></a>)}</div></div></section>
 	</div>
 </BaseLayout>

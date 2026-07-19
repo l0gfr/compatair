@@ -396,6 +396,13 @@ for (const tradeGuidePath of tradeGuidePaths) {
 	for (const marker of [`data-trade-guide="${tradeGuidePath}"`, 'trade-instrument', 'trade-process', 'trade-check-grid', 'Limite publiée', 'Dossiers techniques']) {
 		if (!html.includes(marker)) errors.push(`guide métier ${tradeGuidePath}: structure longue absente ${marker}`);
 	}
+	if (['garage-automobile', 'carrosserie-peinture'].includes(tradeGuidePath)) {
+		for (const marker of [`data-trade-longform="${tradeGuidePath}"`, 'trade-scenario-grid', 'trade-air-map', 'trade-evidence-table-wrap', 'trade-field-timeline', 'trade-source-grid', 'Sources primaires']) {
+			if (!html.includes(marker)) errors.push(`guide métier ${tradeGuidePath}: dossier approfondi absent ${marker}`);
+		}
+		if ((html.match(/href="\/calculateur\/#outil=/g) ?? []).length < 3) errors.push(`guide métier ${tradeGuidePath}: trois scénarios préremplis requis`);
+		if ((html.match(/rel="noopener"/g) ?? []).length < 4) errors.push(`guide métier ${tradeGuidePath}: quatre sources primaires reliées requises`);
+	}
 }
 
 if (!artifactPaths.has('/data/document-quality-observatory.json') || !artifactPaths.has('/observatoire-qualite-documentaire/index.html')) errors.push('observatoire documentaire: snapshot ou page rendue absent');
@@ -444,9 +451,20 @@ for (const marker of ['data-evidence-visual', 'data-evidence-register', 'Un poin
 const sourceDirectoryHtml = artifactPaths.has('/sources-fiabilite/index.html') ? await readFile(join(root, '/sources-fiabilite/index.html'), 'utf8') : '';
 for (const marker of ['data-source-confidence-visual', 'data-source-register', 'Une lettre technique, un libellé humain']) if (!sourceDirectoryHtml.includes(marker)) errors.push(`sources et fiabilité: structure publique absente ${marker}`);
 
-for (const path of ['/methodologie/index.html', '/gouvernance-editoriale/index.html', '/affiliation/index.html', '/corrections/index.html', '/contact/index.html']) {
+for (const path of ['/methodologie/index.html', '/gouvernance-editoriale/index.html', '/affiliation/index.html', '/corrections/index.html', '/contact/index.html', '/confidentialite/index.html', '/cookies/index.html', '/securite/index.html']) {
 	if (!artifactPaths.has(path)) errors.push(`page institutionnelle: page absente ${path}`);
 	else if (!(await readFile(join(root, path), 'utf8')).includes('institutional-map')) errors.push(`page institutionnelle: harmonisation visuelle absente ${path}`);
+}
+
+if (!artifactPaths.has('/confiance/index.html')) errors.push('centre de confiance: page rendue absente');
+else {
+	const html = await readFile(join(root, '/confiance/index.html'), 'utf8');
+	for (const marker of ['data-trust-center', 'trust-chain-map', 'trust-proof-grid', 'trust-technical-stack', 'contact@l0g.fr']) if (!html.includes(marker)) errors.push(`centre de confiance: marqueur absent ${marker}`);
+}
+
+for (const path of ['/api/index.html', '/mcp-documentation/index.html', '/ucp/index.html', '/agents/index.html', '/recu-compatibilite/index.html', '/impact-compatibilite/index.html', '/graphe-preuve/index.html']) {
+	if (!artifactPaths.has(path)) errors.push(`surface technique: page absente ${path}`);
+	else if (!(await readFile(join(root, path), 'utf8')).includes('data-technical-surface-nav')) errors.push(`surface technique: navigation commune absente ${path}`);
 }
 
 if (!artifactPaths.has('/graphe-preuve/index.html')) errors.push('graphe de preuve: page rendue absente');

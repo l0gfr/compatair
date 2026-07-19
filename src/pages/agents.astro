@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import TechnicalSurfaceNav from '../components/TechnicalSurfaceNav.astro';
 import { callToolCurl, claudeProjectConfig, mcpEndpoint } from '../data/mcp-documentation';
 
 const contracts = [
@@ -30,6 +31,7 @@ const contracts = [
 			</aside>
 		</div>
 	</section>
+	<TechnicalSurfaceNav current="mcp" />
 
 	<section class="container agent-section" id="statistiques">
 		<header class="agent-section-head"><p class="eyebrow">Preuve d’usage</p><h2>Statistiques MCP anonymisées</h2><p>Fenêtre glissante de 91 jours. Les petits cohortes sont masquées. Un lien canonique émis n’est pas compté comme consulté tant que l’URL attribuée n’a pas réellement été ouverte.</p></header>

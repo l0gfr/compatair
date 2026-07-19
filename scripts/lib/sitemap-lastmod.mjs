@@ -48,6 +48,10 @@ export function createSitemapLastmodResolver({ root = process.cwd(), gitDate } =
 		const sources = new Set();
 		const staticSource = routeSource(pathname, root);
 		if (staticSource) sources.add(staticSource);
+		if (pathname === '/confiance/') {
+			sources.add('src/components/InstitutionalHero.astro');
+			sources.add('src/layouts/BaseLayout.astro');
+		}
 
 		let match = pathname.match(/^\/guides\/([^/]+)\/$/);
 		if (match && !['metiers', 'particuliers', 'professionnels'].includes(match[1])) {
