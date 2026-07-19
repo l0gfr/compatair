@@ -59,7 +59,7 @@ const datasetDistributionRequirements = new Map([
 	['barometre-transparence/index.html', ['/data/transparency-barometer.json', '/data/transparency-barometer.csv']],
 	['observatoire-qualite-documentaire/index.html', ['/data/document-quality-observatory.json', '/data/document-quality-observatory.csv']],
 ]);
-const tradeGuidePaths = ['garage-automobile', 'carrosserie-peinture', 'menuiserie-agencement', 'maintenance-industrielle'];
+const tradeGuidePaths = ['garage-automobile', 'atelier-poids-lourds', 'carrosserie-peinture', 'menuiserie-agencement', 'btp-chantier', 'maintenance-industrielle'];
 const compressorIdentityPages = new Map();
 let largestInitialPageScriptBudget = { bytes: 0, label: '', modules: 0 };
 let largestOnDemandPageScriptBudget = { bytes: 0, label: '', modules: 0 };
@@ -396,7 +396,7 @@ for (const tradeGuidePath of tradeGuidePaths) {
 	for (const marker of [`data-trade-guide="${tradeGuidePath}"`, 'trade-instrument', 'trade-process', 'trade-check-grid', 'Limite publiée', 'Dossiers techniques']) {
 		if (!html.includes(marker)) errors.push(`guide métier ${tradeGuidePath}: structure longue absente ${marker}`);
 	}
-	if (['garage-automobile', 'carrosserie-peinture'].includes(tradeGuidePath)) {
+	if (['garage-automobile', 'atelier-poids-lourds', 'carrosserie-peinture', 'btp-chantier'].includes(tradeGuidePath)) {
 		for (const marker of [`data-trade-longform="${tradeGuidePath}"`, 'trade-scenario-grid', 'trade-air-map', 'trade-evidence-table-wrap', 'trade-field-timeline', 'trade-source-grid', 'Sources primaires']) {
 			if (!html.includes(marker)) errors.push(`guide métier ${tradeGuidePath}: dossier approfondi absent ${marker}`);
 		}
@@ -478,8 +478,10 @@ const editorialHubs = new Map([
 	['/guides/particuliers/index.html', 'particulier'],
 	['/guides/professionnels/index.html', 'professionnel'],
 	['/guides/metiers/garage-automobile/index.html', 'garage-automobile'],
+	['/guides/metiers/atelier-poids-lourds/index.html', 'atelier-poids-lourds'],
 	['/guides/metiers/carrosserie-peinture/index.html', 'carrosserie-peinture'],
 	['/guides/metiers/menuiserie-agencement/index.html', 'menuiserie-agencement'],
+	['/guides/metiers/btp-chantier/index.html', 'btp-chantier'],
 	['/guides/metiers/maintenance-industrielle/index.html', 'maintenance-industrielle'],
 ]);
 for (const [path, marker] of editorialHubs) {

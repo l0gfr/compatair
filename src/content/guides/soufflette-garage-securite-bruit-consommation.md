@@ -5,7 +5,7 @@ description: "Choisir et contrôler une soufflette à partir de sa tâche, d’u
 pubDate: 2026-07-15
 category: "Utiliser"
 audiences: [professionnel]
-metiers: [garage-automobile, maintenance-industrielle]
+metiers: [garage-automobile, atelier-poids-lourds, maintenance-industrielle]
 readingTime: 9
 sources:
   - https://www.inrs.fr/publications/bdd/techniques-reduction-bruit/FicheBruitAG.html?refINRS=BRUIT_FicheBruit_69

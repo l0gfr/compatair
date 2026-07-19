@@ -5,7 +5,7 @@ description: "Organiser un poste de gonflage à partir des préconisations INRS,
 pubDate: 2026-07-15
 category: "Installer"
 audiences: [professionnel]
-metiers: [garage-automobile]
+metiers: [garage-automobile, atelier-poids-lourds]
 readingTime: 13
 sources:
   - https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-961.pdf

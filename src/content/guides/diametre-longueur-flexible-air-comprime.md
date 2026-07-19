@@ -4,7 +4,7 @@ description: "Longueur, diamètre intérieur et raccords réduisent la pression 
 pubDate: 2026-07-13
 category: Installer
 audiences: [particulier, professionnel]
-metiers: []
+metiers: [btp-chantier]
 readingTime: 6
 featured: true
 sources:

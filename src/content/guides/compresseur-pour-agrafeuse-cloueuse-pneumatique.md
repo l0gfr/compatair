@@ -4,7 +4,7 @@ description: "Calcul du débit moyen à partir du volume d’air par tir et de l
 pubDate: 2026-07-13
 category: "Choisir"
 audiences: [particulier, professionnel]
-metiers: [menuiserie-agencement]
+metiers: [menuiserie-agencement, btp-chantier]
 readingTime: 8
 featured: false
 relatedCalculatorTool: einhell-tc-pn-50

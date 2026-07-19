@@ -5,7 +5,7 @@ description: "Dossier de dimensionnement d’un poste de roues poids lourds fond
 pubDate: 2026-07-15
 category: "Choisir"
 audiences: [professionnel]
-metiers: [garage-automobile]
+metiers: [garage-automobile, atelier-poids-lourds]
 readingTime: 14
 featured: true
 sources:

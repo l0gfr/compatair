@@ -4,7 +4,7 @@ description: "Concevoir le trajet entre compresseur et outils sans masquer les p
 pubDate: 2026-07-13
 category: "Installer"
 audiences: [professionnel]
-metiers: [garage-automobile, carrosserie-peinture, menuiserie-agencement, maintenance-industrielle]
+metiers: [garage-automobile, atelier-poids-lourds, carrosserie-peinture, menuiserie-agencement, btp-chantier, maintenance-industrielle]
 readingTime: 13
 featured: true
 sources:

@@ -4,7 +4,7 @@ description: "Additionnez uniquement les consommations réellement simultanées 
 pubDate: 2026-07-13
 category: "Utiliser"
 audiences: [professionnel]
-metiers: [garage-automobile, carrosserie-peinture, menuiserie-agencement, maintenance-industrielle]
+metiers: [garage-automobile, atelier-poids-lourds, carrosserie-peinture, menuiserie-agencement, btp-chantier, maintenance-industrielle]
 readingTime: 6
 featured: false
 sources:

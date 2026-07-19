@@ -4,7 +4,7 @@ description: "La pression maximale de la cuve ne dit pas ce qui arrive à l’ou
 pubDate: 2026-07-13
 category: Comprendre
 audiences: [particulier, professionnel]
-metiers: []
+metiers: [btp-chantier]
 readingTime: 6
 sources:
   - https://www.einhell.fr/p/4133330-tc-pe-150/

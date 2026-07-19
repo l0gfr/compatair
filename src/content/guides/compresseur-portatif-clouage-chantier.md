@@ -5,7 +5,7 @@ description: "Étude documentée d’un compresseur sur batterie et d’une agra
 pubDate: 2026-07-15
 category: "Choisir"
 audiences: [professionnel]
-metiers: [menuiserie-agencement]
+metiers: [menuiserie-agencement, btp-chantier]
 readingTime: 14
 sources:
   - https://www.einhell.fr/p/4020410-te-ac-18-75-li-of-solo/

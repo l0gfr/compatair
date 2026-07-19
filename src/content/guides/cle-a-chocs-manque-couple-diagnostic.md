@@ -5,7 +5,7 @@ description: "Une méthode d’atelier pour séparer pression dynamique, débit,
 pubDate: 2026-07-15
 category: "Utiliser"
 audiences: [professionnel]
-metiers: [garage-automobile, maintenance-industrielle]
+metiers: [garage-automobile, atelier-poids-lourds, maintenance-industrielle]
 readingTime: 12
 relatedCalculatorTool: chicago-pneumatic-cp7748
 sources:

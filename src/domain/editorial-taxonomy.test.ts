@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { metierGuideProfiles } from '../data/metier-guides';
 import { guideAudienceIds, guideAudiences, guideMetierIds, guideMetiers } from './editorial-taxonomy';
 
 describe('editorial taxonomy', () => {
@@ -14,5 +15,22 @@ describe('editorial taxonomy', () => {
 		];
 		expect(new Set(titles).size).toBe(titles.length);
 		for (const title of titles) expect(title.length).toBeLessThanOrEqual(60);
+	});
+
+	it('publishes a complete decision profile for every profession', () => {
+		for (const id of guideMetierIds) {
+			const profile = metierGuideProfiles[id];
+			expect(profile).toBeDefined();
+			expect(profile.decisions).toHaveLength(4);
+			expect(profile.steps.length).toBeGreaterThanOrEqual(5);
+		}
+	});
+
+	it.each(['atelier-poids-lourds', 'btp-chantier'] as const)('publishes a sourced long-form extension for %s', (id) => {
+		const longform = metierGuideProfiles[id].longform;
+		expect(longform).toBeDefined();
+		expect(longform!.scenarios).toHaveLength(3);
+		expect(longform!.sources.length).toBeGreaterThanOrEqual(4);
+		expect(new Set(longform!.scenarios.map((scenario) => scenario.toolId)).size).toBe(3);
 	});
 });

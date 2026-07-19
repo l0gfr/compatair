@@ -4,7 +4,7 @@ description: "Méthode factuelle pour comparer la consommation d’une clé à c
 pubDate: 2026-07-13
 category: "Choisir"
 audiences: [particulier, professionnel]
-metiers: [garage-automobile]
+metiers: [garage-automobile, atelier-poids-lourds]
 readingTime: 7
 featured: false
 relatedCalculatorTool: einhell-tc-pw-340

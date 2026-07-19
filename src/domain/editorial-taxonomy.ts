@@ -19,8 +19,10 @@ export const guideAudiences: Record<GuideAudienceId, { label: string; title: str
 
 export const guideMetierIds = [
 	'garage-automobile',
+	'atelier-poids-lourds',
 	'carrosserie-peinture',
 	'menuiserie-agencement',
+	'btp-chantier',
 	'maintenance-industrielle',
 ] as const;
 
@@ -33,6 +35,12 @@ export const guideMetiers: Record<GuideMetierId, { label: string; title: string;
 		seoTitle: 'Guides garage automobile et air comprimé | CompatAir',
 		description: 'Relier chaque poste, outil et flexible à son besoin documenté, puis traiter la simultanéité et les pertes du réseau.',
 	},
+	'atelier-poids-lourds': {
+		label: 'Atelier poids lourds',
+		title: 'Air comprimé pour l’atelier poids lourds',
+		seoTitle: 'Air comprimé pour atelier poids lourds | CompatAir',
+		description: 'Dimensionner les postes roues, le gonflage et les outils à forte demande à partir des références exactes, des séquences de travail et des mesures sous débit.',
+	},
 	'carrosserie-peinture': {
 		label: 'Carrosserie et peinture',
 		title: 'Air comprimé pour la carrosserie et la peinture',
@@ -44,6 +52,12 @@ export const guideMetiers: Record<GuideMetierId, { label: string; title: string;
 		title: 'Air comprimé pour la menuiserie et l’agencement',
 		seoTitle: 'Guides air comprimé pour menuiserie | CompatAir',
 		description: 'Dimensionner les usages de clouage, d’agrafage, de finition et d’atelier à partir des références réellement utilisées.',
+	},
+	'btp-chantier': {
+		label: 'BTP et chantier',
+		title: 'Air comprimé pour le BTP et le chantier',
+		seoTitle: 'Air comprimé pour BTP et chantier | CompatAir',
+		description: 'Relier outils percussifs, clouage et postes mobiles à une production réellement transportable, un flexible adapté et un plan de contrôle au point d’usage.',
 	},
 	'maintenance-industrielle': {
 		label: 'Maintenance industrielle',

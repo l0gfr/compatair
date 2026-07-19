@@ -5,7 +5,7 @@ description: "Méthode de contrôle du diamètre intérieur, de la longueur et d
 pubDate: 2026-07-15
 category: "Installer"
 audiences: [professionnel]
-metiers: [garage-automobile, maintenance-industrielle]
+metiers: [garage-automobile, atelier-poids-lourds, maintenance-industrielle]
 readingTime: 11
 sources:
   - https://tools.cp.com/en-ca/products/impactwrenches/cp7748-sku8941077481
