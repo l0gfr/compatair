@@ -26,7 +26,11 @@
 			const query = normalized(search?.value ?? '');
 			const filtered = cards.filter((card) => {
 				if (query && !normalized(card.dataset.search ?? '').includes(query)) return false;
-				return filters.every((filter) => !filter.value || card.dataset[filter.dataset.directoryFilter ?? ''] === filter.value);
+				return filters.every((filter) => {
+					if (!filter.value) return true;
+					const value = card.dataset[filter.dataset.directoryFilter ?? ''] ?? '';
+					return value === filter.value || value.split(/\s+/).includes(filter.value);
+				});
 			});
 			filtered.sort((a, b) => {
 				const mode = sort?.value ?? 'confidence';
@@ -36,6 +40,7 @@
 				};
 				if (mode === 'primary-desc') return primary(b, -1) - primary(a, -1) || String(a.dataset.sortName).localeCompare(String(b.dataset.sortName), 'fr');
 				if (mode === 'primary-asc') return primary(a, Number.MAX_SAFE_INTEGER) - primary(b, Number.MAX_SAFE_INTEGER) || String(a.dataset.sortName).localeCompare(String(b.dataset.sortName), 'fr');
+				if (mode === 'reading-asc') return Number(a.dataset.sortReading ?? Number.MAX_SAFE_INTEGER) - Number(b.dataset.sortReading ?? Number.MAX_SAFE_INTEGER) || String(a.dataset.sortName).localeCompare(String(b.dataset.sortName), 'fr');
 				if (mode === 'name') return String(a.dataset.sortName).localeCompare(String(b.dataset.sortName), 'fr');
 				return String(a.dataset.sortConfidence).localeCompare(String(b.dataset.sortConfidence)) || String(a.dataset.sortName).localeCompare(String(b.dataset.sortName), 'fr');
 			});

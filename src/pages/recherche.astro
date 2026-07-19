@@ -1,26 +1,72 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HubSignalVisual from '../components/HubSignalVisual.astro';
+import UiIcon from '../components/UiIcon.astro';
 import { guideAudiences, guideMetiers } from '../domain/editorial-taxonomy';
 import { compressors, tools } from '../data/catalog';
 import { toolSearchText } from '../domain/tool-demand';
 import { glossaryTerms } from '../data/glossary';
 const guides = await getCollection('guides');
 const items = [
-	...compressors.map((item) => ({ title: `${item.brand} ${item.model}`, type: 'Compresseur', url: `/compresseurs/${item.slug}/`, text: `${item.brand} ${item.model} ${item.tankLiters} litres ${item.maxPressureBar} bar ${item.mpn ?? ''}` })),
-	...tools.map((item) => ({ title: item.label, type: 'Outil pneumatique', url: `/outils-pneumatiques/${item.slug}/`, text: toolSearchText(item) })),
-	...guides.map((item) => ({ title: item.data.title, type: 'Guide', url: `/guides/${item.id}/`, text: `${item.data.title} ${item.data.description} ${item.data.category} ${item.data.audiences.map((audience) => guideAudiences[audience].label).join(' ')} ${item.data.metiers.map((metier) => guideMetiers[metier].label).join(' ')}` })),
-	...glossaryTerms.map((item) => ({ title: item.term, type: 'Glossaire', url: `/glossaire/#${item.slug}`, text: `${item.term} ${item.definition}` })),
+	...compressors.map((item) => ({ title: `${item.brand} ${item.model}`, type: 'Compresseur', typeId: 'compresseur', url: `/compresseurs/${item.slug}/`, text: `${item.brand} ${item.model} ${item.id} ${item.tankLiters} litres ${item.maxPressureBar} bar ${item.mpn ?? ''} ${item.ean ?? ''} ${item.gtin ?? ''} ${item.identifierAliases.map((alias) => alias.value).join(' ')}`, summary: `${item.tankLiters} L · ${item.maxPressureBar} bar · ${item.fadCurve.length ? `${item.fadCurve.length} point${item.fadCurve.length > 1 ? 's' : ''} FAD` : 'FAD non publié'}` })),
+	...tools.map((item) => ({ title: item.label, type: 'Outil pneumatique', typeId: 'outil', url: `/outils-pneumatiques/${item.slug}/`, text: `${toolSearchText(item)} ${item.id} ${item.mpn ?? ''} ${item.ean ?? ''} ${item.identifierAliases.map((alias) => alias.value).join(' ')}`, summary: `${item.category} · ${item.brand} · ${item.mpn ? `MPN ${item.mpn}` : 'référence documentée'}` })),
+	...guides.map((item) => ({ title: item.data.title, type: 'Guide', typeId: 'guide', url: `/guides/${item.id}/`, text: `${item.data.title} ${item.data.description} ${item.data.category} ${item.data.audiences.map((audience) => guideAudiences[audience].label).join(' ')} ${item.data.metiers.map((metier) => guideMetiers[metier].label).join(' ')}`, summary: `${item.data.category} · ${item.data.readingTime} min · ${item.data.description}` })),
+	...glossaryTerms.map((item) => ({ title: item.term, type: 'Glossaire', typeId: 'glossaire', url: `/glossaire/#${item.slug}`, text: `${item.term} ${item.definition}`, summary: item.definition })),
 ];
+const searchPaths = [
+	{ icon: 'tools', label: 'Numéro sur une étiquette', title: 'Identifier une référence', href: '/scanner/' },
+	{ icon: 'calculator', label: 'Outil ou configuration', title: 'Vérifier un besoin', href: '/calculateur/' },
+	{ icon: 'scale', label: 'Plusieurs compresseurs', title: 'Comparer des modèles', href: '/comparatifs/' },
+	{ icon: 'book', label: 'Mot technique', title: 'Ouvrir le glossaire', href: '/glossaire/' },
+] as const;
 ---
 <BaseLayout title="Recherche technique | CompatAir" description="Recherchez dans les compresseurs, outils pneumatiques, guides et définitions publiés par CompatAir." noindex breadcrumbs={[{ name: 'Recherche', path: '/recherche/' }]}>
-	<section class="page-hero compact"><div class="container"><p class="eyebrow">Recherche globale</p><h1>Trouver une donnée vérifiée</h1><p class="lead">La recherche couvre uniquement les fiches et contenus effectivement publiés.</p></div></section>
-	<section class="section"><div class="container search-page"><label for="page-search">Modèle, outil, usage ou question</label><input id="page-search" type="search" autofocus placeholder="Ex. sablage, Einhell, débit, pression" data-page-search /><p data-search-count>{items.length} pages et définitions disponibles</p><div class="search-page-results" data-page-results>{items.map((item) => <a href={item.url} data-search-item data-search-text={item.text}><span>{item.type}</span><strong>{item.title}</strong></a>)}</div></div></section>
+	<section class="page-hero compact hub-hero" data-discovery-hub="recherche"><div class="container hub-hero-grid"><div><p class="eyebrow">Recherche globale</p><h1>Trouver une donnée vérifiée</h1><p class="lead">La recherche couvre uniquement les fiches et contenus effectivement publiés. Une référence exacte reste le chemin le plus court lorsqu’elle est disponible.</p><div class="actions"><a class="button primary" href="#recherche-technique">Rechercher dans le corpus</a><a class="button" href="/scanner/">Identifier une référence</a></div></div><HubSignalVisual mode="search" count={items.length} title="entrées interrogeables" secondary="produits, guides et définitions" /></div></section>
+	<section class="section hub-intent-section search-shortcuts"><div class="container"><div class="section-head split-head"><div><p class="eyebrow">Avant la recherche globale</p><h2>Choisir la surface la plus directe</h2></div><p>Le moteur global sert à explorer. Pour identifier, calculer ou comparer, les parcours dédiés produisent une réponse plus structurée.</p></div><div class="hub-intent-grid">{searchPaths.map((path, index) => <a href={path.href}><span class="hub-intent-index">0{index + 1}</span><UiIcon name={path.icon} size={28} /><p>{path.label}</p><h3>{path.title}</h3><small>Accéder directement au bon outil CompatAir.</small><strong>Continuer →</strong></a>)}</div></div></section>
+	<section class="section search-hub-section" id="recherche-technique" data-search-hub><div class="container search-page"><div class="search-hub-head"><div><p class="product-decision-index">Corpus public</p><h2>Rechercher sans dérouler {items.length} entrées</h2></div><p>Deux caractères suffisent. Les résultats sont limités à dix-huit par écran et peuvent être filtrés par type.</p></div><label for="page-search">Modèle, outil, usage ou question</label><input id="page-search" type="search" autofocus placeholder="Ex. sablage, Einhell, débit, pression" data-page-search /><div class="search-type-filters" role="group" aria-label="Filtrer les résultats par type"><button type="button" class="active" data-search-type="">Tout</button><button type="button" data-search-type="compresseur">Compresseurs</button><button type="button" data-search-type="outil">Outils</button><button type="button" data-search-type="guide">Guides</button><button type="button" data-search-type="glossaire">Glossaire</button></div><div class="search-suggestions" data-search-suggestions><strong>Essayez une recherche</strong><div><button type="button" data-search-suggestion="sablage">Sablage</button><button type="button" data-search-suggestion="pression dynamique">Pression dynamique</button><button type="button" data-search-suggestion="garage automobile">Garage automobile</button><button type="button" data-search-suggestion="Einhell 4138540">Einhell 4138540</button></div></div><p class="search-count" data-search-count>Saisissez au moins deux caractères.</p><div class="search-page-results" data-page-results>{items.map((item) => <a href={item.url} data-search-item data-search-text={item.text} data-search-type-id={item.typeId} hidden><span>{item.type}</span><strong>{item.title}</strong><small>{item.summary}</small></a>)}</div><div class="search-empty" data-search-empty hidden><strong>Aucun résultat dans le corpus publié.</strong><p>Essayez une référence plus courte, un nom de marque ou un terme technique. Une absence de résultat n’est pas remplacée par une suggestion inventée.</p></div><button class="button search-more" type="button" data-search-more hidden>Afficher plus de résultats</button></div></section>
 	<script>
 		const input = document.querySelector<HTMLInputElement>('[data-page-search]');
 		const entries = [...document.querySelectorAll<HTMLElement>('[data-search-item]')];
 		const count = document.querySelector<HTMLElement>('[data-search-count]');
+		const suggestions = document.querySelector<HTMLElement>('[data-search-suggestions]');
+		const empty = document.querySelector<HTMLElement>('[data-search-empty]');
+		const more = document.querySelector<HTMLButtonElement>('[data-search-more]');
+		const typeButtons = [...document.querySelectorAll<HTMLButtonElement>('[data-search-type]')];
 		const normalize = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-		input?.addEventListener('input', () => { const query = normalize(input.value.trim()); let visible = 0; for (const entry of entries) { const match = !query || normalize(entry.dataset.searchText ?? '').includes(query); entry.hidden = !match; if (match) visible++; } if (count) count.textContent = `${visible} résultat${visible > 1 ? 's' : ''}`; });
+		let activeType = '';
+		let limit = 18;
+		function refresh() {
+			const query = normalize(input?.value.trim() ?? '');
+			const tokens = query.split(/\s+/).filter(Boolean);
+			const ready = query.length >= 2;
+			const matches = ready ? entries.filter((entry) => {
+				const text = normalize(entry.dataset.searchText ?? '');
+				return (!activeType || entry.dataset.searchTypeId === activeType) && tokens.every((token) => text.includes(token));
+			}) : [];
+			for (const entry of entries) entry.hidden = !matches.slice(0, limit).includes(entry);
+			if (count) count.textContent = ready ? `${matches.length} résultat${matches.length > 1 ? 's' : ''}${matches.length > limit ? ` · ${limit} affichés` : ''}` : 'Saisissez au moins deux caractères.';
+			if (suggestions) suggestions.hidden = ready;
+			if (empty) empty.hidden = !ready || matches.length > 0;
+			if (more) more.hidden = matches.length <= limit;
+		}
+		input?.addEventListener('input', () => { limit = 18; refresh(); });
+		for (const button of typeButtons) button.addEventListener('click', () => {
+			activeType = button.dataset.searchType ?? '';
+			limit = 18;
+			for (const candidate of typeButtons) candidate.classList.toggle('active', candidate === button);
+			refresh();
+		});
+		for (const button of document.querySelectorAll<HTMLButtonElement>('[data-search-suggestion]')) button.addEventListener('click', () => {
+			if (!input) return;
+			input.value = button.dataset.searchSuggestion ?? '';
+			input.focus();
+			limit = 18;
+			refresh();
+		});
+		more?.addEventListener('click', () => { limit += 18; refresh(); });
+		const initialQuery = new URLSearchParams(location.search).get('q');
+		if (initialQuery && input) input.value = initialQuery;
+		refresh();
 	</script>
 </BaseLayout>

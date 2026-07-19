@@ -1,0 +1,36 @@
+---
+type HubMode = 'guides' | 'search' | 'glossary';
+
+type Props = {
+	mode: HubMode;
+	count: number;
+	title: string;
+	secondary?: string;
+};
+
+const { mode, count, title, secondary } = Astro.props;
+const steps = mode === 'guides'
+	? ['Besoin', 'Méthode', 'Décision']
+	: mode === 'search'
+		? ['Question', 'Corpus', 'Réponse']
+		: ['Terme', 'Définition', 'Source'];
+---
+
+<aside class:list={['hub-signal-visual', `is-${mode}`]} aria-label={title} data-hub-signal={mode}>
+	<header><span><i></i> CompatAir / orientation</span><strong>{String(count).padStart(2, '0')}</strong></header>
+	<div class="hub-signal-map" aria-hidden="true">
+		<svg viewBox="0 0 520 210" role="presentation" focusable="false">
+			<path class="hub-signal-line" d="M78 107 C145 32 205 182 262 107 S380 32 442 107" />
+			<path class="hub-signal-trace" d="M78 107 C145 32 205 182 262 107 S380 32 442 107" />
+			{steps.map((step, index) => {
+				const x = [78, 262, 442][index];
+				return <g transform={`translate(${x} 107)`}>
+					<circle r={index === 1 ? 37 : 29} />
+					<circle class="hub-signal-core" r={index === 1 ? 10 : 8} />
+					<text y={index === 1 ? 66 : 58} text-anchor="middle">{step}</text>
+				</g>;
+			})}
+		</svg>
+	</div>
+	<footer><span><b>{count}</b> {title}</span>{secondary && <strong>{secondary}</strong>}</footer>
+</aside>

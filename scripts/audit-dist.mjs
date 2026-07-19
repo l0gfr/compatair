@@ -487,6 +487,23 @@ for (const [path, marker] of editorialHubs) {
 	else if (!(await readFile(join(root, path), 'utf8')).includes(`data-editorial-hub="${marker}"`)) errors.push(`parcours éditorial: marqueur absent ${path}`);
 }
 
+const discoveryHubs = new Map([
+	['/guides/index.html', ['data-discovery-hub="guides"', 'data-hub-signal="guides"', 'data-guide-directory', 'data-directory-pagination']],
+	['/guides/particuliers/index.html', ['data-hub-signal="guides"', 'data-guide-directory', 'data-directory-pagination']],
+	['/guides/professionnels/index.html', ['data-hub-signal="guides"', 'data-guide-directory', 'data-directory-pagination']],
+	['/comparatifs/index.html', ['data-discovery-hub="comparatifs"', 'comparison-summary']],
+	['/marques/index.html', ['data-discovery-hub="marques"', 'data-directory-pagination']],
+	['/glossaire/index.html', ['data-discovery-hub="glossaire"', 'data-glossary-hub', 'data-glossary-search']],
+	['/recherche/index.html', ['data-discovery-hub="recherche"', 'data-search-hub', 'data-search-more']],
+]);
+for (const [path, markers] of discoveryHubs) {
+	if (!artifactPaths.has(path)) errors.push(`hub de découverte: page rendue absente ${path}`);
+	else {
+		const html = await readFile(join(root, path), 'utf8');
+		for (const marker of markers) if (!html.includes(marker)) errors.push(`hub de découverte ${path}: marqueur absent ${marker}`);
+	}
+}
+
 const decisionDirectoryPages = new Map([
 	['/compresseurs/index.html', ['data-filter-search', 'data-pagination']],
 	['/outils-pneumatiques/index.html', ['data-directory-browser', 'data-directory-pagination']],

@@ -1,0 +1,73 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import DirectoryBrowser from './DirectoryBrowser.astro';
+import { guideAudienceIds, guideAudiences, guideMetierIds, guideMetiers } from '../domain/editorial-taxonomy';
+
+type Props = {
+	guides: CollectionEntry<'guides'>[];
+	title: string;
+	description: string;
+	eyebrow?: string;
+	id?: string;
+	context?: 'all' | 'particulier' | 'professionnel';
+	pageSize?: number;
+};
+
+const {
+	guides,
+	title,
+	description,
+	eyebrow = 'Bibliothèque complète',
+	id = 'bibliotheque',
+	context = 'all',
+	pageSize = 9,
+} = Astro.props;
+const categories = [...new Set(guides.map((guide) => guide.data.category))].sort((a, b) => a.localeCompare(b, 'fr'));
+const availableMetiers = guideMetierIds.filter((metier) => guides.some((guide) => guide.data.metiers.includes(metier)));
+const availableAudiences = guideAudienceIds.filter((audience) => guides.some((guide) => guide.data.audiences.includes(audience)));
+---
+
+<section class="section guide-directory" id={id} data-guide-directory data-directory-browser data-page-size={pageSize}>
+	<div class="container">
+		<header class="product-section-head">
+			<div><p class="product-decision-index">{eyebrow}</p><h2>{title}</h2></div>
+			<p>{description}</p>
+		</header>
+		<div class="directory-controls guide-directory-controls">
+			<div class="field directory-search"><label for={`${id}-search`}>Question, usage ou terme</label><input id={`${id}-search`} type="search" placeholder="Ex. sablage, flexible, pression" data-directory-search /></div>
+			<div class="field"><label for={`${id}-category`}>Étape</label><select id={`${id}-category`} data-directory-filter="category"><option value="">Toutes</option>{categories.map((category) => <option value={category}>{category}</option>)}</select></div>
+			{context === 'all'
+				? <div class="field"><label for={`${id}-audience`}>Public</label><select id={`${id}-audience`} data-directory-filter="audience"><option value="">Tous</option>{availableAudiences.map((audience) => <option value={audience}>{guideAudiences[audience].label}</option>)}</select></div>
+				: <div class="field"><label for={`${id}-metier`}>Métier</label><select id={`${id}-metier`} data-directory-filter="metier"><option value="">Tous les contextes</option>{availableMetiers.map((metier) => <option value={metier}>{guideMetiers[metier].label}</option>)}</select></div>}
+			<div class="field"><label for={`${id}-sort`}>Trier</label><select id={`${id}-sort`} data-directory-sort><option value="primary-desc">Plus récents</option><option value="reading-asc">Lecture la plus courte</option><option value="name">Titre</option></select></div>
+			<button class="inline-action" type="button" data-directory-reset>Réinitialiser</button>
+		</div>
+		<p class="directory-count" data-directory-count>{guides.length} résultats</p>
+		<div class="guide-directory-grid" data-directory-grid>
+			{guides.map((guide, index) => <article
+				class="guide-directory-card"
+				data-directory-card
+				data-search={`${guide.data.title} ${guide.data.description} ${guide.data.category} ${guide.data.audiences.map((audience) => guideAudiences[audience].label).join(' ')} ${guide.data.metiers.map((metier) => guideMetiers[metier].label).join(' ')}`}
+				data-category={guide.data.category}
+				data-audience={guide.data.audiences.join(' ')}
+				data-metier={guide.data.metiers.join(' ')}
+				data-sort-name={guide.data.title}
+				data-sort-confidence="A"
+				data-sort-primary={guide.data.pubDate.valueOf()}
+				data-sort-reading={guide.data.readingTime}
+			>
+				<span class="guide-directory-index">{String(index + 1).padStart(2, '0')}</span>
+				<p class="guide-meta">{guide.data.category} · {guide.data.readingTime} min</p>
+				<h3><a href={`/guides/${guide.id}/`}>{guide.data.title}</a></h3>
+				<p>{guide.data.description}</p>
+				<div class="guide-directory-tags" aria-label="Publics et métiers">
+					{guide.data.audiences.map((audience) => <span>{guideAudiences[audience].label}</span>)}
+					{guide.data.metiers.slice(0, 2).map((metier) => <span>{guideMetiers[metier].label}</span>)}
+				</div>
+				<a class="text-link" href={`/guides/${guide.id}/`}>Lire le guide</a>
+			</article>)}
+		</div>
+		<nav class="catalog-pagination" aria-label="Pagination des guides" data-directory-pagination></nav>
+	</div>
+	<DirectoryBrowser />
+</section>

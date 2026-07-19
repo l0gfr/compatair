@@ -1,9 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HubSignalVisual from '../components/HubSignalVisual.astro';
+import UiIcon from '../components/UiIcon.astro';
 import { glossarySources, glossaryTerms } from '../data/glossary';
 import { serializeJsonLd } from '../domain/structured-data';
 
 const letters = [...new Set(glossaryTerms.map((item) => item.term.normalize('NFD').replace(/[\u0300-\u036f]/g, '').charAt(0).toUpperCase()))];
+const glossaryPaths = [
+	{ icon: 'gauge', eyebrow: 'Comparer un débit', title: 'Performance et capacité', detail: 'FAD, débit restitué, débit aspiré et puissance spécifique.', href: '#fad' },
+	{ icon: 'scale', eyebrow: 'Lire une pression', title: 'Pression et conditions', detail: 'Pression de travail, dynamique, relative et absolue.', href: '#pression-travail' },
+	{ icon: 'database', eyebrow: 'Diagnostiquer le réseau', title: 'Distribution et qualité', detail: 'Chute de pression, filtration, humidité et point de rosée.', href: '#chute-pression' },
+] as const;
 const termSetJsonLd = {
 	'@context': 'https://schema.org',
 	'@type': 'DefinedTermSet',
@@ -22,12 +29,47 @@ const termSetJsonLd = {
 
 <BaseLayout title="Glossaire de l’air comprimé : FAD, bar, débit et pression | CompatAir" description="Définitions sourcées du FAD, débit restitué, pression dynamique, point de rosée, simultanéité et ISO 8573-1 pour l’air comprimé." breadcrumbs={[{ name: 'Glossaire', path: '/glossaire/' }]}>
 	<script is:inline type="application/ld+json" set:html={serializeJsonLd(termSetJsonLd)} />
-	<section class="page-hero compact"><div class="container"><p class="eyebrow">{glossaryTerms.length} définitions sourcées</p><h1>Le glossaire de l’air comprimé</h1><p class="lead">Un vocabulaire précis pour comparer des compresseurs, lire une fiche technique et diagnostiquer un réseau sans confondre pression, débit et conditions de référence.</p></div></section>
-	<div class="container glossary-layout">
-		<nav class="glossary-index" aria-label="Index alphabétique"><strong>Accès rapide</strong><div>{letters.map((letter) => <a href={`#lettre-${letter}`}>{letter}</a>)}</div><p>Utilisez aussi la recherche de votre navigateur pour trouver un terme.</p></nav>
+	<section class="page-hero compact hub-hero" data-discovery-hub="glossaire"><div class="container hub-hero-grid"><div><p class="eyebrow">{glossaryTerms.length} définitions sourcées</p><h1>Le glossaire de l’air comprimé</h1><p class="lead">Un vocabulaire précis pour comparer des compresseurs, lire une fiche technique et diagnostiquer un réseau sans confondre pression, débit et conditions de référence.</p><div class="actions"><a class="button primary" href="#recherche-glossaire">Rechercher un terme</a><a class="button" href="/methodologie/">Voir la méthode</a></div></div><HubSignalVisual mode="glossary" count={glossaryTerms.length} title="définitions sourcées" secondary={`${Object.keys(glossarySources).length} sources de référence`} /></div></section>
+	<section class="section hub-intent-section glossary-paths"><div class="container"><div class="section-head split-head"><div><p class="eyebrow">Trois familles de lecture</p><h2>Entrer par la confusion à résoudre</h2></div><p>Ces raccourcis ouvrent des définitions précises. Ils ne remplacent pas les conditions et unités de la source citée.</p></div><div class="hub-intent-grid is-three">{glossaryPaths.map((path, index) => <a href={path.href}><span class="hub-intent-index">0{index + 1}</span><UiIcon name={path.icon} size={28} /><p>{path.eyebrow}</p><h3>{path.title}</h3><small>{path.detail}</small><strong>Voir les termes →</strong></a>)}</div></div></section>
+	<div class="container glossary-layout" data-glossary-hub>
+		<nav class="glossary-index" aria-label="Index alphabétique"><strong>Rechercher</strong><label class="sr-only" for="glossary-search">Terme ou définition</label><input id="glossary-search" type="search" placeholder="Ex. FAD, pression, humidité" data-glossary-search /><p data-glossary-count>{glossaryTerms.length} définitions disponibles</p><strong>Accès alphabétique</strong><div>{letters.map((letter) => <a href={`#lettre-${letter}`} data-glossary-letter-link={letter}>{letter}</a>)}</div><p>Chaque lettre se déplie à la demande pour garder une vue d’ensemble courte.</p></nav>
 		<div class="glossary-main">
-			{letters.map((letter) => <section class="glossary-letter" id={`lettre-${letter}`}><header><span>{letter}</span><h2>Termes en {letter}</h2></header><div class="glossary-grid">{glossaryTerms.filter((item) => item.term.normalize('NFD').replace(/[\u0300-\u036f]/g, '').charAt(0).toUpperCase() === letter).map((item) => { const source = glossarySources[item.source]; return <article class="glossary-card" id={item.slug}><h3>{item.term}</h3><p>{item.definition}</p><div class="glossary-links"><a href={source.url} rel={source.url.startsWith('http') ? 'noopener' : undefined} target={source.url.startsWith('http') ? '_blank' : undefined}>Source</a>{item.related && <a href={item.related.href}>{item.related.label}</a>}</div></article> })}</div></section>)}
+			{letters.map((letter, index) => { const terms = glossaryTerms.filter((item) => item.term.normalize('NFD').replace(/[\u0300-\u036f]/g, '').charAt(0).toUpperCase() === letter); return <details class="glossary-letter" id={`lettre-${letter}`} open={index === 0} data-glossary-letter data-default-open={index === 0 ? 'true' : 'false'}><summary><span>{letter}</span><h2>Termes en {letter}</h2><small>{terms.length} définition{terms.length > 1 ? 's' : ''}</small></summary><div class="glossary-grid">{terms.map((item) => { const source = glossarySources[item.source]; return <article class="glossary-card" id={item.slug} data-glossary-term data-glossary-text={`${item.term} ${item.definition}`}><h3>{item.term}</h3><p>{item.definition}</p><div class="glossary-links"><a href={source.url} rel={source.url.startsWith('http') ? 'noopener' : undefined} target={source.url.startsWith('http') ? '_blank' : undefined}>Source</a>{item.related && <a href={item.related.href}>{item.related.label}</a>}</div></article> })}</div></details> })}
 			<section class="glossary-sources"><h2>Sources de référence</h2><ul>{Object.values(glossarySources).map((source) => <li><a href={source.url} rel={source.url.startsWith('http') ? 'noopener' : undefined} target={source.url.startsWith('http') ? '_blank' : undefined}>{source.label}</a></li>)}</ul></section>
 		</div>
 	</div>
+	<script>
+		const normalize = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('fr').trim();
+		const input = document.querySelector<HTMLInputElement>('[data-glossary-search]');
+		const groups = [...document.querySelectorAll<HTMLDetailsElement>('[data-glossary-letter]')];
+		const terms = [...document.querySelectorAll<HTMLElement>('[data-glossary-term]')];
+		const count = document.querySelector<HTMLElement>('[data-glossary-count]');
+		function revealHash() {
+			const target = location.hash ? document.querySelector<HTMLElement>(location.hash) : null;
+			const group = target?.closest<HTMLDetailsElement>('[data-glossary-letter]');
+			if (group) group.open = true;
+		}
+		function refreshGlossary() {
+			const query = normalize(input?.value ?? '');
+			let visible = 0;
+			for (const term of terms) {
+				const match = !query || normalize(term.dataset.glossaryText ?? '').includes(query);
+				term.hidden = !match;
+				if (match) visible++;
+			}
+			for (const group of groups) {
+				const matches = [...group.querySelectorAll<HTMLElement>('[data-glossary-term]')].filter((term) => !term.hidden).length;
+				group.hidden = matches === 0;
+				group.open = query ? matches > 0 : group.dataset.defaultOpen === 'true';
+			}
+			if (count) count.textContent = `${visible} définition${visible > 1 ? 's' : ''}`;
+		}
+		input?.addEventListener('input', refreshGlossary);
+		for (const link of document.querySelectorAll<HTMLAnchorElement>('[data-glossary-letter-link]')) link.addEventListener('click', () => {
+			const group = document.querySelector<HTMLDetailsElement>(`#lettre-${link.dataset.glossaryLetterLink}`);
+			if (group) group.open = true;
+		});
+		addEventListener('hashchange', revealHash);
+		revealHash();
+	</script>
 </BaseLayout>

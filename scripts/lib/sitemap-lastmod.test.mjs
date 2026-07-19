@@ -28,6 +28,18 @@ describe('sitemap lastmod', () => {
 		expect(resolver('https://compatair.fr/guides/exemple/')).toBe('2026-07-11T09:00:00+00:00');
 	});
 
+	it('relie les hubs de guides à leur navigation et au corpus éditorial', () => {
+		const resolver = createSitemapLastmodResolver({ gitDate: (files) => {
+			expect(files).toContain('src/pages/guides/index.astro');
+			expect(files).toContain('src/components/HubSignalVisual.astro');
+			expect(files).toContain('src/components/GuideDirectory.astro');
+			expect(files).toContain('src/components/DirectoryBrowser.astro');
+			expect(files.some((file) => file.startsWith('src/content/guides/'))).toBe(true);
+			return '2026-07-19T17:00:00+00:00';
+		} });
+		expect(resolver('https://compatair.fr/guides/')).toBe('2026-07-19T17:00:00+00:00');
+	});
+
 	it('associe une fiche compresseur à sa fiche source et au catalogue', () => {
 		const resolver = createSitemapLastmodResolver({ gitDate: (files) => dates.get(files.join(',')) });
 		expect(resolver('https://compatair.fr/compresseurs/exemple/')).toBe('2026-07-12T10:00:00+00:00');

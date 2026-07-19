@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process';
-import { existsSync } from 'node:fs';
+import { existsSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const catalogSources = [
@@ -30,6 +30,9 @@ function latest(values) {
 
 export function createSitemapLastmodResolver({ root = process.cwd(), gitDate } = {}) {
 	const cache = new Map();
+	const guideContentSources = existsSync(resolve(root, 'src/content/guides'))
+		? readdirSync(resolve(root, 'src/content/guides')).filter((file) => file.endsWith('.md')).map((file) => `src/content/guides/${file}`)
+		: [];
 	const resolveGitDate = gitDate ?? ((files) => {
 		const existing = files.filter((file) => existsSync(resolve(root, file)));
 		if (!existing.length) return undefined;
@@ -52,6 +55,13 @@ export function createSitemapLastmodResolver({ root = process.cwd(), gitDate } =
 			sources.add('src/components/InstitutionalHero.astro');
 			sources.add('src/layouts/BaseLayout.astro');
 		}
+		if (['/guides/', '/guides/particuliers/', '/guides/professionnels/'].includes(pathname)) {
+			sources.add('src/components/HubSignalVisual.astro');
+			sources.add('src/components/GuideDirectory.astro');
+			sources.add('src/components/DirectoryBrowser.astro');
+			for (const source of guideContentSources) sources.add(source);
+		}
+		if (['/glossaire/', '/recherche/'].includes(pathname)) sources.add('src/components/HubSignalVisual.astro');
 
 		let match = pathname.match(/^\/guides\/([^/]+)\/$/);
 		if (match && !['metiers', 'particuliers', 'professionnels'].includes(match[1])) {
@@ -87,7 +97,10 @@ export function createSitemapLastmodResolver({ root = process.cwd(), gitDate } =
 			sources.add('src/data/source-directory.ts');
 		}
 		if (pathname.startsWith('/marques/')) sources.add('src/pages/marques/[brand].astro');
-		if (pathname.startsWith('/guides/metiers/')) sources.add('src/pages/guides/metiers/[metier].astro');
+		if (pathname.startsWith('/guides/metiers/')) {
+			sources.add('src/pages/guides/metiers/[metier].astro');
+			for (const source of guideContentSources) sources.add(source);
+		}
 		if (catalogDrivenPaths.has(pathname) || pathname === '/sources-fiabilite/' || pathname.startsWith('/preuves/page/') || pathname.startsWith('/sources-fiabilite/page/') || pathname.startsWith('/comparatifs/') || pathname.startsWith('/marques/')) {
 			for (const source of catalogSources) sources.add(source);
 		}

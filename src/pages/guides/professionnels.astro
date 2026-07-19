@@ -1,7 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
-import GuideCard from '../../components/GuideCard.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import GuideDirectory from '../../components/GuideDirectory.astro';
+import HubSignalVisual from '../../components/HubSignalVisual.astro';
+import MetierIcon from '../../components/MetierIcon.astro';
 import { guideAudiences, guideMetierIds, guideMetiers } from '../../domain/editorial-taxonomy';
 import { serializeJsonLd } from '../../domain/structured-data';
 
@@ -19,7 +21,7 @@ const itemListJsonLd = {
 
 <BaseLayout title={definition.title} editorialTitle={definition.seoTitle} description={definition.description} imagePath="/social/guides.png" breadcrumbs={[{ name: 'Guides', path: '/guides/' }, { name: definition.label, path: '/guides/professionnels/' }]}>
 	<script is:inline type="application/ld+json" set:html={serializeJsonLd(itemListJsonLd)} />
-	<section class="page-hero compact audience-hero" data-editorial-hub="professionnel"><div class="container"><p class="eyebrow">Parcours professionnel</p><h1>{definition.title}</h1><p class="lead">{definition.description}</p><div class="actions"><a class="button primary" href="/calculateur/">Dimensionner une configuration</a><a class="button" href="/guides/particuliers/">Voir le parcours particulier</a></div></div></section>
-	<section class="section metier-gateway"><div class="container"><div class="section-head"><p class="eyebrow">Entrer par le métier</p><h2>Quatre contextes, les mêmes règles de preuve</h2><p>Ces pages regroupent les guides utiles à un contexte de travail. Elles ne remplacent jamais la notice de la référence réellement utilisée.</p></div><div class="editorial-path-grid">{guideMetierIds.map((metier) => <a href={`/guides/metiers/${metier}/`}><span>{guides.filter((guide) => guide.data.metiers.includes(metier)).length} guides</span><strong>{guideMetiers[metier].label}</strong><small>{guideMetiers[metier].description}</small></a>)}</div></div></section>
-	<section class="section"><div class="container"><div class="section-head split-head"><div><p class="eyebrow">Bibliothèque professionnelle</p><h2>{guides.length} guides classés pour ce parcours</h2></div><p>Les sujets transversaux et les dossiers métiers sont réunis ici sans créer de copie éditoriale ni d’URL concurrente.</p></div><div class="guide-grid">{guides.map((guide) => <GuideCard guide={guide} />)}</div></div></section>
+	<section class="page-hero compact audience-hero hub-hero" data-editorial-hub="professionnel"><div class="container hub-hero-grid"><div><p class="eyebrow">Parcours professionnel</p><h1>{definition.title}</h1><p class="lead">{definition.description}</p><div class="actions"><a class="button primary" href="#metiers">Entrer par mon métier</a><a class="button" href="/professionnels/">Travailler avec CompatAir</a></div></div><HubSignalVisual mode="guides" count={guides.length} title="guides professionnels" secondary={`${guideMetierIds.length} contextes métiers`} /></div></section>
+	<section class="section metier-gateway" id="metiers"><div class="container"><div class="section-head"><p class="eyebrow">Entrer par le métier</p><h2>Quatre contextes, les mêmes règles de preuve</h2><p>Ces pages regroupent les guides utiles à un contexte de travail. Elles ne remplacent jamais la notice de la référence réellement utilisée.</p></div><div class="editorial-path-grid">{guideMetierIds.map((metier) => <a href={`/guides/metiers/${metier}/`}><MetierIcon metier={metier} /><span>{guides.filter((guide) => guide.data.metiers.includes(metier)).length} guides</span><strong>{guideMetiers[metier].label}</strong><small>{guideMetiers[metier].description}</small></a>)}</div></div></section>
+	<GuideDirectory guides={guides} context="professionnel" title={`${guides.length} guides professionnels, filtrables par métier`} description="Les sujets transversaux et les dossiers métiers sont réunis sans copie éditoriale ni URL concurrente. Neuf guides sont affichés à la fois." />
 </BaseLayout>
