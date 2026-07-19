@@ -1,5 +1,6 @@
 import { passportVerdictLabel, type PassportReport } from './passport';
 import { commissioningVerdictLabel, type CommissioningAssessment } from './commissioning';
+import { assessOperationCheck, maintenanceActionLabel, operationLogSchema, operationVerdictLabel, type OperationLog } from './operation-monitoring';
 
 const PAGE_WIDTH = 595;
 const PAGE_HEIGHT = 842;
@@ -69,9 +70,13 @@ function installationStatusLabel(item: PassportReport['installationPlan']['items
 	return item.completed ? 'MESURE RENSEIGNEE' : 'A MESURER SUR SITE';
 }
 
-export function createPassportPdf(report: PassportReport, passportUrl: string, options: { commissioningAssessment?: CommissioningAssessment } = {}) {
+export function createPassportPdf(report: PassportReport, passportUrl: string, options: { commissioningAssessment?: CommissioningAssessment; operationLog?: OperationLog } = {}) {
 	const commissioningAssessment = options.commissioningAssessment;
-	const documentLabel = commissioningAssessment ? 'RECU DE RECETTE TERRAIN' : 'PASSEPORT COMPATAIR';
+	const operationLog = options.operationLog ? operationLogSchema.parse(options.operationLog) : undefined;
+	if (operationLog && operationLog.passportId !== report.passportId) throw new Error('Le carnet ne correspond pas au Passeport exporté.');
+	const operationAssessments = operationLog?.entries.map((entry) => ({ entry, assessment: assessOperationCheck(report, operationLog, entry) })) ?? [];
+	const latestOperationAssessment = operationAssessments.at(-1)?.assessment;
+	const documentLabel = operationLog ? "CARNET D'EXPLOITATION" : commissioningAssessment ? 'RECU DE RECETTE TERRAIN' : 'PASSEPORT COMPATAIR';
 	const pages: string[][] = [];
 	let page: string[];
 	let y: number;
@@ -80,7 +85,7 @@ export function createPassportPdf(report: PassportReport, passportUrl: string, o
 			'0.063 0.157 0.118 rg 0 794 595 48 re f',
 			'0.827 0.922 0.337 rg 52 811 18 3 re f',
 			`BT /F2 15 Tf 1 1 1 rg 1 0 0 1 80 808 Tm (${pdfLiteral('CompatAir')}) Tj ET`,
-			`BT /F1 8 Tf 0.78 0.84 0.80 rg 1 0 0 1 432 808 Tm (${pdfLiteral(commissioningAssessment ? `Recette ${commissioningAssessment.version}` : `Passeport ${report.schemaVersion}`)}) Tj ET`,
+			`BT /F1 8 Tf 0.78 0.84 0.80 rg 1 0 0 1 432 808 Tm (${pdfLiteral(operationLog ? `Suivi ${operationLog.version}` : commissioningAssessment ? `Recette ${commissioningAssessment.version}` : `Passeport ${report.schemaVersion}`)}) Tj ET`,
 		];
 		pages.push(page);
 		y = 770;
@@ -116,7 +121,7 @@ export function createPassportPdf(report: PassportReport, passportUrl: string, o
 	addPage();
 	addTextLine(documentLabel, 9, true, '0.10 0.44 0.31', MARGIN, 26);
 	addParagraph(report.compressorLabel, { size: 25, bold: true, color: '0.063 0.157 0.118', spacing: 9 });
-	addParagraph(commissioningAssessment ? commissioningVerdictLabel(commissioningAssessment.verdict) : passportVerdictLabel(report.result), { size: 14, bold: true, color: report.result.verdict === 'incompatible' ? '0.64 0.18 0.16' : '0.10 0.44 0.31', spacing: 6 });
+	addParagraph(latestOperationAssessment ? operationVerdictLabel(latestOperationAssessment.verdict) : operationLog ? 'Carnet prêt pour un premier contrôle' : commissioningAssessment ? commissioningVerdictLabel(commissioningAssessment.verdict) : passportVerdictLabel(report.result), { size: 14, bold: true, color: latestOperationAssessment?.verdict === 'degradation_observed' || report.result.verdict === 'incompatible' ? '0.64 0.18 0.16' : '0.10 0.44 0.31', spacing: 6 });
 	addParagraph(`Identifiant ${report.passportId} - moteur ${report.calculationVersion} - catalogue vérifié le ${report.catalogVerifiedAt}.`, { size: 8.5, color: '0.33 0.40 0.35', spacing: 12 });
 
 	if (commissioningAssessment) {
@@ -128,6 +133,31 @@ export function createPassportPdf(report: PassportReport, passportUrl: string, o
 		addBullet(`Fuite intégrée au besoin : ${commissioningAssessment.comparison.measuredLeakLpm === undefined ? 'non mesurée' : `${formatNumber(commissioningAssessment.comparison.measuredLeakLpm)} L/min`}.`);
 		for (const check of commissioningAssessment.checks) addBullet(`${check.completed ? 'RENSEIGNE' : 'A COMPLETER'} - ${check.label}. ${check.value}`);
 		if (report.configuration.commissioning?.note) addParagraph(`Contexte déclaré : ${report.configuration.commissioning.note}`, { size: 8.5, color: '0.33 0.40 0.35', spacing: 8 });
+	}
+
+	if (operationLog) {
+		const baseline = report.configuration.commissioning!;
+		const baselineDrop = baseline.sourcePressureBar !== undefined && baseline.toolPressureBar !== undefined ? baseline.sourcePressureBar - baseline.toolPressureBar : undefined;
+		addHeading("Carnet d'exploitation");
+		addParagraph(`Recette initiale du ${operationLog.baselineObservedOn} - ${operationLog.entries.length} contrôle${operationLog.entries.length > 1 ? 's' : ''} conservé${operationLog.entries.length > 1 ? 's' : ''}.`, { size: 10, bold: true, color: '0.063 0.157 0.118', spacing: 8 });
+		addBullet(`Référence : source ${baseline.sourcePressureBar === undefined ? 'non mesurée' : `${formatNumber(baseline.sourcePressureBar, 2)} bar`} - poste ${baseline.toolPressureBar === undefined ? 'non mesuré' : `${formatNumber(baseline.toolPressureBar, 2)} bar`} - chute ${baselineDrop === undefined ? 'non mesurée' : `${formatNumber(baselineDrop, 2)} bar`} - fuite ${baseline.measuredLeakLpm === undefined ? 'non mesurée' : `${formatNumber(baseline.measuredLeakLpm)} L/min`}.`);
+		addBullet('Seuils de signalement CompatAir : écart de pression supérieur à 0,1 bar ou hausse de fuite supérieure à 5 L/min. Ces seuils ne sont pas des limites constructeur.');
+		if (!operationAssessments.length) addParagraph('Aucun contrôle périodique n’est encore enregistré dans ce carnet.', { size: 9, color: '0.33 0.40 0.35', spacing: 8 });
+		for (const { entry, assessment } of [...operationAssessments].reverse()) {
+			addParagraph(`${entry.observedOn} - ${operationVerdictLabel(assessment.verdict)}`, { size: 10, bold: true, color: assessment.verdict === 'degradation_observed' ? '0.64 0.18 0.16' : assessment.verdict === 'stable' ? '0.10 0.44 0.31' : '0.42 0.40 0.31', spacing: 3 });
+			addParagraph(assessment.primaryFinding, { size: 8.5, spacing: 4 });
+			addBullet(`Source ${entry.sourcePressureBar === undefined ? 'non mesurée' : `${formatNumber(entry.sourcePressureBar, 2)} bar`} - poste ${entry.toolPressureBar === undefined ? 'non mesuré' : `${formatNumber(entry.toolPressureBar, 2)} bar`} - chute ${assessment.comparison.currentPressureDropBar === undefined ? 'non mesurée' : `${formatNumber(assessment.comparison.currentPressureDropBar, 2)} bar`} - fuite ${entry.measuredLeakLpm === undefined ? 'non mesurée' : `${formatNumber(entry.measuredLeakLpm)} L/min`}.`);
+			addBullet(`${entry.operatingHours === undefined ? 'Compteur non renseigné' : `Compteur ${formatNumber(entry.operatingHours)} h`} - ${maintenanceActionLabel(entry.maintenanceAction)}.`);
+			for (const signal of assessment.signals) addBullet(`${signal.level === 'critical' ? 'CRITIQUE' : 'SIGNAL'} - ${signal.label}. ${signal.finding}`);
+			for (const action of assessment.actions) addBullet(`Action : ${action}`);
+			if (entry.note) addParagraph(`Note déclarée : ${entry.note}`, { size: 8.5, color: '0.33 0.40 0.35', spacing: 7 });
+		}
+		if (operationAssessments.length) {
+			const schedule = operationAssessments.at(-1)!.assessment.maintenance;
+			addParagraph(`${schedule.label}. ${schedule.finding} ${schedule.action}`, { size: 8.5, bold: true, color: '0.42 0.31 0.11', spacing: 8 });
+		} else {
+			addParagraph('Échéance constructeur non documentée. Consigner l’intervalle exact depuis la notice du modèle ; CompatAir ne lui substitue aucun intervalle générique.', { size: 8.5, bold: true, color: '0.42 0.31 0.11', spacing: 8 });
+		}
 	}
 
 	addHeading("Plan d'installation et de mise en service");
@@ -180,7 +210,7 @@ export function createPassportPdf(report: PassportReport, passportUrl: string, o
 
 	addHeading('URL versionnée');
 	addParagraph(passportUrl, { size: 6.5, color: '0.33 0.40 0.35', spacing: 8 });
-	addParagraph(`Ce document est produit localement dans le navigateur. Le rapport, sa configuration et ses codes de contrôle restent après le caractère # de l’URL et ne sont pas envoyés au serveur. ${commissioningAssessment ? 'Le reçu constate les valeurs saisies et le résultat du moteur ; il ne constitue ni une réception réglementaire, ni une certification, ni une autorisation d’usage.' : 'Le Passeport ne remplace ni une mesure en charge, ni la notice constructeur, ni une vérification réglementaire.'}`, { size: 8.5, color: '0.33 0.40 0.35' });
+	addParagraph(`Ce document est produit localement dans le navigateur. Le rapport, sa configuration et ses codes de contrôle restent après le caractère # de l’URL et ne sont pas envoyés au serveur. ${operationLog ? "Le carnet compare les valeurs déclarées à la recette initiale ; il ne certifie ni l'état du matériel, ni la conformité de l'installation, ni une échéance d'entretien." : commissioningAssessment ? 'Le reçu constate les valeurs saisies et le résultat du moteur ; il ne constitue ni une réception réglementaire, ni une certification, ni une autorisation d’usage.' : 'Le Passeport ne remplace ni une mesure en charge, ni la notice constructeur, ni une vérification réglementaire.'}`, { size: 8.5, color: '0.33 0.40 0.35' });
 
 	for (const [index, commands] of pages.entries()) {
 		commands.push(`0.82 0.86 0.83 RG 52 42 491 0.5 re S`);
@@ -200,7 +230,7 @@ export function createPassportPdf(report: PassportReport, passportUrl: string, o
 	}
 	objects[2] = `<< /Type /Pages /Kids [${pageReferences.join(' ')}] /Count ${pages.length} >>`;
 	const infoObject = objects.length;
-	objects.push(`<< /Title (${pdfLiteral(commissioningAssessment ? 'Reçu de recette terrain CompatAir' : 'Passeport CompatAir')}) /Subject (${pdfLiteral(report.passportId)}) /Author (${pdfLiteral('CompatAir')}) /Creator (${pdfLiteral(`CompatAir Passeport ${report.schemaVersion}`)}) >>`);
+	objects.push(`<< /Title (${pdfLiteral(operationLog ? "Carnet d'exploitation CompatAir" : commissioningAssessment ? 'Reçu de recette terrain CompatAir' : 'Passeport CompatAir')}) /Subject (${pdfLiteral(report.passportId)}) /Author (${pdfLiteral('CompatAir')}) /Creator (${pdfLiteral(`CompatAir Passeport ${report.schemaVersion}`)}) >>`);
 
 	const parts: Uint8Array[] = [bytes('%PDF-1.4\n%âãÏÓ\n')];
 	const offsets = [0];

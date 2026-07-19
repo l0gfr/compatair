@@ -1,0 +1,364 @@
+<section class="operation-shell" data-operation-root aria-live="polite">
+	<div class="operation-loading" data-operation-loading>
+		<p class="eyebrow">Ouverture locale</p>
+		<h2>Chargement du carnet…</h2>
+		<p>Le Passeport et les relevés enregistrés sur cet appareil sont contrôlés.</p>
+	</div>
+
+	<div class="operation-empty" data-operation-empty hidden>
+		<p class="eyebrow">Aucun Passeport chargé</p>
+		<h2>Partez d’une recette terrain</h2>
+		<p data-operation-error>Cette page attend un Passeport dont la mise en service a déjà été évaluée.</p>
+		<a class="button primary" href="/calculateur/" data-operation-empty-action>Ouvrir le calculateur</a>
+	</div>
+
+	<div class="operation-workspace" data-operation-workspace hidden>
+		<header class="operation-context">
+			<div>
+				<p class="eyebrow">Installation suivie</p>
+				<h2 data-context-compressor></h2>
+				<p data-context-tools></p>
+			</div>
+			<dl>
+				<div><dt>Recette initiale</dt><dd data-context-baseline-date></dd></div>
+				<div><dt>Besoin publié</dt><dd data-context-need></dd></div>
+				<div><dt>Passeport</dt><dd data-context-id></dd></div>
+			</dl>
+		</header>
+
+		<section class="operation-baseline" aria-labelledby="operation-baseline-title">
+			<header><div><p class="eyebrow">Point zéro</p><h2 id="operation-baseline-title">La recette qui sert de référence</h2></div><a href="/mise-en-service/" data-new-baseline>Créer une nouvelle recette</a></header>
+			<dl>
+				<div><dt>Pression source</dt><dd data-baseline-source></dd></div>
+				<div><dt>Pression au poste</dt><dd data-baseline-tool></dd></div>
+				<div><dt>Chute observée</dt><dd data-baseline-drop></dd></div>
+				<div><dt>Fuite mesurée</dt><dd data-baseline-leak></dd></div>
+			</dl>
+			<p>Une modification du compresseur, du réglage, du trajet, des raccords, du traitement d’air ou de l’outil impose une nouvelle recette au lieu d’une comparaison trompeuse.</p>
+		</section>
+
+		<div class="operation-main-grid">
+			<form class="operation-form" data-operation-form novalidate>
+				<header>
+					<p class="eyebrow">Nouveau contrôle</p>
+					<h2>Reproduire le protocole initial</h2>
+					<p>Renseignez uniquement des valeurs réellement relevées pendant le même essai. Les seuils signalent un écart ; ils ne remplacent ni la notice ni un diagnostic.</p>
+				</header>
+
+				<fieldset>
+					<legend><span>01</span><strong>Contexte comparable</strong></legend>
+					<div class="operation-field-grid">
+						<label>Date du contrôle<input type="date" name="observedOn" required /></label>
+						<label>Compteur d’heures <span>facultatif</span><input inputmode="decimal" type="number" name="operatingHours" min="0" max="10000000" step="0.1" placeholder="Heures affichées par la machine" /></label>
+						<label class="is-wide">Note de contexte <span>facultative</span><textarea name="note" maxlength="600" rows="3" placeholder="Usage, réglage, anomalie sonore ou condition utile pour reproduire le contrôle"></textarea></label>
+					</div>
+					<div class="operation-check-inputs">
+						<label><input type="checkbox" name="configurationUnchanged" /> <span><strong>Configuration inchangée depuis la recette</strong><small>Même compresseur, réglage, trajet, raccords, traitement d’air et scénario d’outil.</small></span></label>
+						<label><input type="checkbox" name="representativeUseObserved" /> <span><strong>Contrôle réalisé sous charge représentative</strong><small>Les deux pressions correspondent à une même phase d’utilisation comparable.</small></span></label>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend><span>02</span><strong>Mesures du jour</strong></legend>
+					<div class="operation-field-grid thirds">
+						<label>Pression à la source <span>bar</span><input inputmode="decimal" type="number" name="sourcePressureBar" min="0.01" max="50" step="0.01" /></label>
+						<label>Pression au poste <span>bar</span><input inputmode="decimal" type="number" name="toolPressureBar" min="0.01" max="50" step="0.01" /></label>
+						<label>Débit de fuite <span>L/min</span><input inputmode="decimal" type="number" name="measuredLeakLpm" min="0" max="10000" step="0.1" /></label>
+					</div>
+					<output class="operation-derived" data-operation-derived>Chute mesurée : en attente des deux pressions.</output>
+				</fieldset>
+
+				<fieldset>
+					<legend><span>03</span><strong>Intervention déclarée</strong></legend>
+					<div class="operation-field-grid">
+						<label>Action depuis le dernier contrôle<select name="maintenanceAction"><option value="none">Aucune intervention déclarée</option><option value="drain">Purge ou vidange</option><option value="filter">Filtre contrôlé ou remplacé</option><option value="lubrication">Lubrification</option><option value="other">Autre intervention</option></select></label>
+						<div class="operation-maintenance-warning"><strong>Échéance constructeur non documentée</strong><p>Le carnet enregistre votre déclaration, mais ne crée aucun intervalle générique. Reprenez la valeur exacte de la notice du modèle.</p></div>
+					</div>
+				</fieldset>
+
+				<div class="operation-submit">
+					<button class="button primary" type="submit">Comparer à la recette initiale</button>
+					<p>Le relevé est conservé uniquement dans le stockage local de ce navigateur.</p>
+				</div>
+				<p class="operation-form-error" role="alert" data-operation-form-error hidden></p>
+			</form>
+
+			<aside class="operation-protocol" aria-label="Règles de comparaison">
+				<p class="eyebrow">Règles publiques</p>
+				<h2>Un signal, pas un diagnostic automatique.</h2>
+				<div><strong>0,1 bar</strong><span>écart de pression déclenchant un signal</span></div>
+				<div><strong>5 L/min</strong><span>hausse de fuite déclenchant un signal</span></div>
+				<ul>
+					<li>La pression utile reste comparée au besoin publié de l’outil.</li>
+					<li>Une configuration modifiée rend l’ancienne référence non comparable.</li>
+					<li>Une valeur absente reste absente : aucune moyenne ne la remplace.</li>
+				</ul>
+				<a href="/guides/diagnostiquer-chute-pression-air-comprime/">Comprendre une dérive de pression</a>
+			</aside>
+		</div>
+
+		<article class="operation-result" data-operation-result hidden>
+			<header data-operation-status>
+				<div><p class="eyebrow">Réponse du contrôle</p><h2 data-operation-verdict></h2><p data-operation-finding></p></div>
+				<div class="operation-result-date"><strong data-operation-date></strong><span>relevé comparé</span></div>
+			</header>
+			<dl class="operation-metrics">
+				<div><dt>Pression source</dt><dd data-metric-source></dd></div>
+				<div><dt>Pression au poste</dt><dd data-metric-tool></dd></div>
+				<div><dt>Chute mesurée</dt><dd data-metric-drop></dd></div>
+				<div><dt>Fuite mesurée</dt><dd data-metric-leak></dd></div>
+			</dl>
+			<div class="operation-result-grid">
+				<section><p class="eyebrow">Signaux observés</p><div class="operation-signals" data-operation-signals></div></section>
+				<section><p class="eyebrow">Actions à mener</p><ul data-operation-actions></ul><div class="operation-maintenance-result"><strong data-maintenance-label></strong><p data-maintenance-finding></p><small data-maintenance-action></small></div></section>
+			</div>
+		</article>
+
+		<section class="operation-history" aria-labelledby="operation-history-title">
+			<header>
+				<div><p class="eyebrow">Carnet local</p><h2 id="operation-history-title">Contrôles conservés sur cet appareil</h2><p data-history-summary></p></div>
+				<div class="operation-history-actions">
+					<button class="button" type="button" data-download-operation-pdf>Télécharger le PDF</button>
+					<button class="button" type="button" data-download-operation-json>Exporter le JSON</button>
+					<button class="button danger" type="button" data-clear-operation-log>Effacer le carnet</button>
+				</div>
+			</header>
+			<div class="operation-history-list" data-operation-history-list></div>
+			<p class="operation-history-empty" data-operation-history-empty>Ajoutez un premier contrôle pour commencer la chronologie.</p>
+			<footer><span role="status" data-operation-action-status></span><p>CompatAir ne reçoit ni les mesures, ni les notes, ni le carnet exporté.</p></footer>
+		</section>
+	</div>
+</section>
+
+<script>
+	import { appendOperationCheck, assessOperationCheck, createOperationLog, maintenanceActionLabel, operationCheckSchema, operationVerdictLabel, parseOperationLogJson, removeOperationCheck, type OperationAssessment, type OperationCheck, type OperationLog } from '../domain/operation-monitoring';
+	import { createPassportReport, decodePassportConfiguration, decodePassportEnvelope, reportFromPassportEnvelope, type PassportReport } from '../domain/passport';
+
+	const root = document.querySelector<HTMLElement>('[data-operation-root]');
+	const query = <T extends Element>(selector: string) => root?.querySelector<T>(selector);
+	const setText = (selector: string, value: string) => { const element = query<HTMLElement>(selector); if (element) element.textContent = value; };
+	const format = (value: number, digits = 1) => value.toLocaleString('fr-FR', { maximumFractionDigits: digits });
+	const value = (number: number | undefined, unit: string, digits = 1) => number === undefined ? 'Non mesuré' : `${format(number, digits)} ${unit}`;
+	let report: PassportReport;
+	let operationLog: OperationLog;
+	let passportUrl = '';
+	let monitoringUrl = '';
+
+	function localToday() {
+		const date = new Date();
+		return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+	}
+
+	function optionalNumber(form: FormData, name: string) {
+		const raw = form.get(name);
+		if (typeof raw !== 'string' || raw.trim() === '') return undefined;
+		const parsed = Number(raw);
+		return Number.isFinite(parsed) ? parsed : undefined;
+	}
+
+	function pressureDrop(source: number | undefined, tool: number | undefined) {
+		return source === undefined || tool === undefined ? undefined : Math.round((source - tool) * 1_000) / 1_000;
+	}
+
+	function formatDate(date: string) {
+		return new Date(`${date}T12:00:00`).toLocaleDateString('fr-FR', { day: '2-digit', month: 'long', year: 'numeric' });
+	}
+
+	function deltaValue(current: number | undefined, difference: number | undefined, unit: string, digits = 2) {
+		if (current === undefined) return 'Non mesuré';
+		if (difference === undefined) return `${format(current, digits)} ${unit}`;
+		const sign = difference > 0 ? '+' : '';
+		return `${format(current, digits)} ${unit} · ${sign}${format(difference, digits)} ${unit}`;
+	}
+
+	function storageKey() { return `compatair:operation-log:${report.passportId}`; }
+
+	function saveLog(message: string) {
+		try {
+			localStorage.setItem(storageKey(), JSON.stringify(operationLog));
+			setText('[data-operation-action-status]', message);
+		} catch {
+			setText('[data-operation-action-status]', 'Le stockage local est indisponible. Exportez le JSON pour conserver ce carnet.');
+		}
+	}
+
+	function checkFromForm(form: HTMLFormElement): OperationCheck {
+		const data = new FormData(form);
+		return operationCheckSchema.parse({
+			id: crypto.randomUUID(), observedOn: data.get('observedOn'), recordedAt: new Date().toISOString(),
+			sourcePressureBar: optionalNumber(data, 'sourcePressureBar'), toolPressureBar: optionalNumber(data, 'toolPressureBar'),
+			measuredLeakLpm: optionalNumber(data, 'measuredLeakLpm'), operatingHours: optionalNumber(data, 'operatingHours'),
+			representativeUseObserved: data.get('representativeUseObserved') === 'on',
+			configurationUnchanged: data.get('configurationUnchanged') === 'on', maintenanceAction: data.get('maintenanceAction'),
+			note: typeof data.get('note') === 'string' && String(data.get('note')).trim() ? String(data.get('note')).trim() : undefined,
+		});
+	}
+
+	function updateDerivedDrop() {
+		const form = query<HTMLFormElement>('[data-operation-form]');
+		if (!form) return;
+		const data = new FormData(form);
+		const source = optionalNumber(data, 'sourcePressureBar');
+		const tool = optionalNumber(data, 'toolPressureBar');
+		setText('[data-operation-derived]', source === undefined || tool === undefined
+			? 'Chute mesurée : en attente des deux pressions.'
+			: tool > source
+				? 'Mesure incohérente : la pression au poste dépasse la pression à la source.'
+				: `Chute mesurée : ${format(source - tool, 2)} bar.`);
+	}
+
+	function renderList(selector: string, items: string[], empty: string) {
+		const list = query<HTMLUListElement>(selector);
+		if (!list) return;
+		list.replaceChildren();
+		for (const current of items.length ? items : [empty]) { const item = document.createElement('li'); item.textContent = current; list.append(item); }
+	}
+
+	function renderAssessment(assessment: OperationAssessment, check: OperationCheck, scroll = true) {
+		const panel = query<HTMLElement>('[data-operation-result]');
+		const head = query<HTMLElement>('[data-operation-status]');
+		if (head) head.dataset.status = assessment.verdict;
+		setText('[data-operation-verdict]', operationVerdictLabel(assessment.verdict));
+		setText('[data-operation-finding]', assessment.primaryFinding);
+		setText('[data-operation-date]', formatDate(check.observedOn));
+		setText('[data-metric-source]', deltaValue(assessment.comparison.currentSourcePressureBar, assessment.comparison.sourcePressureDeltaBar, 'bar'));
+		setText('[data-metric-tool]', deltaValue(assessment.comparison.currentToolPressureBar, assessment.comparison.toolPressureDeltaBar, 'bar'));
+		setText('[data-metric-drop]', deltaValue(assessment.comparison.currentPressureDropBar, assessment.comparison.pressureDropDeltaBar, 'bar'));
+		setText('[data-metric-leak]', deltaValue(assessment.comparison.currentLeakLpm, assessment.comparison.leakDeltaLpm, 'L/min', 1));
+		const signals = query<HTMLElement>('[data-operation-signals]');
+		if (signals) {
+			signals.replaceChildren();
+			if (!assessment.signals.length) {
+				const empty = document.createElement('p'); empty.className = 'operation-no-signal'; empty.textContent = assessment.verdict === 'stable' ? 'Aucun écart ne dépasse les seuils de signalement.' : 'Aucun signal calculé faute de données comparables.'; signals.append(empty);
+			}
+			for (const signal of assessment.signals) {
+				const article = document.createElement('article'); article.dataset.level = signal.level;
+				const marker = document.createElement('span'); marker.textContent = signal.level === 'critical' ? '!' : '↗';
+				const body = document.createElement('div'); const title = document.createElement('strong'); title.textContent = signal.label;
+				const finding = document.createElement('p'); finding.textContent = signal.finding; body.append(title, finding); article.append(marker, body); signals.append(article);
+			}
+		}
+		renderList('[data-operation-actions]', assessment.actions, 'Reprendre les mesures dans des conditions comparables.');
+		setText('[data-maintenance-label]', assessment.maintenance.label);
+		setText('[data-maintenance-finding]', assessment.maintenance.finding);
+		setText('[data-maintenance-action]', assessment.maintenance.action);
+		if (panel) { panel.hidden = false; if (scroll) panel.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+	}
+
+	function renderHistory() {
+		const list = query<HTMLElement>('[data-operation-history-list]');
+		const empty = query<HTMLElement>('[data-operation-history-empty]');
+		if (!list || !empty) return;
+		list.replaceChildren();
+		empty.hidden = operationLog.entries.length > 0;
+		setText('[data-history-summary]', `${operationLog.entries.length} contrôle${operationLog.entries.length > 1 ? 's' : ''} après la recette du ${formatDate(operationLog.baselineObservedOn)}.`);
+		for (const check of [...operationLog.entries].reverse()) {
+			const assessment = assessOperationCheck(report, operationLog, check);
+			const article = document.createElement('article'); article.dataset.verdict = assessment.verdict;
+			const header = document.createElement('header');
+			const date = document.createElement('div'); const time = document.createElement('time'); time.dateTime = check.observedOn; time.textContent = formatDate(check.observedOn);
+			const label = document.createElement('strong'); label.textContent = operationVerdictLabel(assessment.verdict); date.append(time, label);
+			const remove = document.createElement('button'); remove.type = 'button'; remove.dataset.deleteOperation = check.id; remove.textContent = 'Supprimer'; header.append(date, remove);
+			const metrics = document.createElement('dl');
+			for (const [term, description] of [
+				['Poste', value(check.toolPressureBar, 'bar', 2)],
+				['Chute', value(assessment.comparison.currentPressureDropBar, 'bar', 2)],
+				['Fuite', value(check.measuredLeakLpm, 'L/min')],
+				['Compteur', value(check.operatingHours, 'h')],
+			] as const) { const row = document.createElement('div'); const dt = document.createElement('dt'); dt.textContent = term; const dd = document.createElement('dd'); dd.textContent = description; row.append(dt, dd); metrics.append(row); }
+			const intervention = document.createElement('p'); intervention.textContent = maintenanceActionLabel(check.maintenanceAction);
+			if (check.note) { const note = document.createElement('p'); note.className = 'operation-history-note'; note.textContent = check.note; article.append(header, metrics, intervention, note); }
+			else article.append(header, metrics, intervention);
+			article.addEventListener('click', () => renderAssessment(assessment, check));
+			remove.addEventListener('click', (event) => {
+				event.stopPropagation(); operationLog = removeOperationCheck(operationLog, check.id); saveLog('Relevé supprimé du stockage local.'); renderHistory();
+				if (!operationLog.entries.length) { const result = query<HTMLElement>('[data-operation-result]'); if (result) result.hidden = true; }
+			});
+			list.append(article);
+		}
+	}
+
+	function renderBaseline() {
+		const baseline = report.configuration.commissioning!;
+		setText('[data-baseline-source]', value(baseline.sourcePressureBar, 'bar', 2));
+		setText('[data-baseline-tool]', value(baseline.toolPressureBar, 'bar', 2));
+		setText('[data-baseline-drop]', value(pressureDrop(baseline.sourcePressureBar, baseline.toolPressureBar), 'bar', 2));
+		setText('[data-baseline-leak]', value(baseline.measuredLeakLpm, 'L/min'));
+	}
+
+	function downloadBlob(contents: BlobPart, type: string, filename: string) {
+		const objectUrl = URL.createObjectURL(new Blob([contents], { type }));
+		const link = document.createElement('a'); link.href = objectUrl; link.download = filename; link.click();
+		setTimeout(() => URL.revokeObjectURL(objectUrl), 1_000);
+	}
+
+	async function load() {
+		const params = new URLSearchParams(location.hash.slice(1));
+		const encoded = params.get('passport');
+		const envelope = encoded ? decodePassportEnvelope(encoded) : undefined;
+		const legacy = encoded && !envelope ? decodePassportConfiguration(encoded) : undefined;
+		if (!encoded || (!envelope && !legacy)) {
+			if (encoded) setText('[data-operation-error]', 'Le lien du Passeport est invalide, incomplet ou utilise un format non reconnu.');
+			query<HTMLElement>('[data-operation-loading]')!.hidden = true; query<HTMLElement>('[data-operation-empty]')!.hidden = false; return;
+		}
+		try {
+			if (envelope) report = await reportFromPassportEnvelope(envelope);
+			else {
+				const { loadRuntimeCatalog } = await import('../domain/runtime-catalog');
+				const catalog = await loadRuntimeCatalog();
+				report = await createPassportReport(legacy!, catalog.compressors, catalog.tools, catalog.catalogVerifiedAt);
+			}
+			passportUrl = `${location.origin}/passeport/#passport=${encoded}`;
+			monitoringUrl = `${location.origin}/suivi-exploitation/#passport=${encoded}`;
+			if (!report.configuration.commissioning) {
+				setText('[data-operation-error]', 'Ce Passeport ne contient pas encore de recette terrain. Validez d’abord les mesures de mise en service.');
+				const action = query<HTMLAnchorElement>('[data-operation-empty-action]'); if (action) { action.href = `${location.origin}/mise-en-service/#passport=${encoded}`; action.textContent = 'Réaliser la recette terrain'; }
+				query<HTMLElement>('[data-operation-loading]')!.hidden = true; query<HTMLElement>('[data-operation-empty]')!.hidden = false; return;
+			}
+			setText('[data-context-compressor]', report.compressorLabel); setText('[data-context-tools]', report.toolLabels.join(' · '));
+			setText('[data-context-baseline-date]', formatDate(report.configuration.commissioning.observedOn));
+			setText('[data-context-need]', `${format(report.result.recommendedFadLpm)} L/min à ${format(report.result.requiredPressureBar, 2)} bar`);
+			setText('[data-context-id]', report.passportId.slice(0, 12));
+			query<HTMLAnchorElement>('[data-new-baseline]')?.setAttribute('href', `${location.origin}/mise-en-service/#passport=${encoded}`);
+			const stored = localStorage.getItem(storageKey()); const parsed = stored ? parseOperationLogJson(stored) : undefined;
+			operationLog = parsed?.success && parsed.data.passportId === report.passportId && parsed.data.baselineObservedOn === report.configuration.commissioning.observedOn
+				? parsed.data : createOperationLog(report);
+			renderBaseline(); renderHistory();
+			const date = query<HTMLInputElement>('[name="observedOn"]'); if (date) { date.value = localToday(); date.min = report.configuration.commissioning.observedOn; date.max = localToday(); }
+			query<HTMLElement>('[data-operation-loading]')!.hidden = true; query<HTMLElement>('[data-operation-workspace]')!.hidden = false;
+		} catch (error) {
+			setText('[data-operation-error]', error instanceof Error ? error.message : 'Le carnet ne peut pas être ouvert.');
+			query<HTMLElement>('[data-operation-loading]')!.hidden = true; query<HTMLElement>('[data-operation-empty]')!.hidden = false;
+		}
+	}
+
+	query<HTMLInputElement>('[name="sourcePressureBar"]')?.addEventListener('input', updateDerivedDrop);
+	query<HTMLInputElement>('[name="toolPressureBar"]')?.addEventListener('input', updateDerivedDrop);
+	query<HTMLFormElement>('[data-operation-form]')?.addEventListener('submit', (event) => {
+		event.preventDefault(); const form = event.currentTarget as HTMLFormElement; const errorPanel = query<HTMLElement>('[data-operation-form-error]'); if (errorPanel) errorPanel.hidden = true;
+		try {
+			const check = checkFromForm(form); operationLog = appendOperationCheck(operationLog, check); const assessment = assessOperationCheck(report, operationLog, check);
+			saveLog(`Contrôle du ${formatDate(check.observedOn)} enregistré localement.`); renderHistory(); renderAssessment(assessment, check);
+		} catch (error) {
+			if (errorPanel) { errorPanel.textContent = error instanceof Error ? error.message : 'Le contrôle ne peut pas être évalué.'; errorPanel.hidden = false; errorPanel.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+		}
+	});
+	query<HTMLButtonElement>('[data-download-operation-json]')?.addEventListener('click', () => {
+		const artifact = { artifactType: 'compatair-operation-log', schemaVersion: operationLog.version, exportedAt: new Date().toISOString(), passport: { id: report.passportId, compressor: report.compressorLabel, tools: report.toolLabels, baselineObservedOn: operationLog.baselineObservedOn }, log: operationLog };
+		downloadBlob(JSON.stringify(artifact, null, 2), 'application/json', `carnet-compatair-${report.passportId.slice(0, 16)}.json`); setText('[data-operation-action-status]', 'Carnet JSON exporté localement.');
+	});
+	query<HTMLButtonElement>('[data-download-operation-pdf]')?.addEventListener('click', async (event) => {
+		const button = event.currentTarget as HTMLButtonElement; button.disabled = true; setText('[data-operation-action-status]', 'Préparation locale du carnet PDF…');
+		try {
+			const { createPassportPdf } = await import('../domain/passport-pdf');
+			downloadBlob(createPassportPdf(report, monitoringUrl || passportUrl, { operationLog }), 'application/pdf', `carnet-compatair-${report.passportId.slice(0, 16)}.pdf`); setText('[data-operation-action-status]', 'Carnet PDF généré localement.');
+		} catch { setText('[data-operation-action-status]', 'La création du PDF a échoué. Le JSON reste disponible.'); }
+		finally { button.disabled = false; }
+	});
+	query<HTMLButtonElement>('[data-clear-operation-log]')?.addEventListener('click', () => {
+		if (!window.confirm('Effacer tous les contrôles conservés pour ce Passeport sur cet appareil ?')) return;
+		operationLog = createOperationLog(report); saveLog('Carnet local effacé.'); renderHistory(); const result = query<HTMLElement>('[data-operation-result]'); if (result) result.hidden = true;
+	});
+
+	void load();
+</script>

@@ -34,6 +34,19 @@ describe('sitemap lastmod', () => {
 		expect(resolver('https://compatair.fr/mise-en-service/')).toBe('2026-07-19T20:00:00+00:00');
 	});
 
+	it('relie le suivi périodique à la recette et au Passeport', () => {
+		const resolver = createSitemapLastmodResolver({ gitDate: (files) => {
+			expect(files).toContain('src/pages/suivi-exploitation.astro');
+			expect(files).toContain('src/pages/mise-en-service.astro');
+			expect(files).toContain('src/components/CommissioningViewer.astro');
+			expect(files).toContain('src/pages/passeport.astro');
+			expect(files).toContain('src/components/PassportViewer.astro');
+			expect(files).toContain('src/domain/commissioning.ts');
+			return '2026-07-20T08:00:00+00:00';
+		} });
+		expect(resolver('https://compatair.fr/suivi-exploitation/')).toBe('2026-07-20T08:00:00+00:00');
+	});
+
 	it('associe une page guide à son contenu éditorial', () => {
 		const resolver = createSitemapLastmodResolver({ gitDate: (files) => dates.get(files.join(',')) });
 		expect(resolver('https://compatair.fr/guides/exemple/')).toBe('2026-07-11T09:00:00+00:00');

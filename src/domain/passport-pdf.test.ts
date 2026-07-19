@@ -38,4 +38,25 @@ describe('CompatAir passport PDF', () => {
 		expect(text).toContain('Réponse de recette');
 		expect(text).toContain('ni une réception réglementaire');
 	});
+
+	it('exports a local operation log with its baseline, checks and maintenance boundary', () => {
+		const report = {
+			schemaVersion: '1.0.0', calculationVersion: '1.3.0', catalogVerifiedAt: '2026-07-19', passportId: 'c'.repeat(64), generatedAt: '2026-07-19T10:00:00.000Z',
+			configuration: { demands: [{ model: 'fixed-flow', id: 'tool', flowLpm: 100, pressureBar: 6.3, quantity: 1, dutyFactor: 1 }], mode: 'successive', safetyMargin: .25, sessionMinutes: 30, fittingStandard: 'euro-7.2', fittingCount: 4, filtration: 'particle', usageProfile: 'sustained', selectedCompressor: 'compressor', custom: {}, commissioning: { version: '1.0.0', observedOn: '2026-07-19', sourcePressureBar: 7, toolPressureBar: 6.5, measuredLeakLpm: 0, fittingStandard: 'euro-7.2', fittingCount: 4, filtration: 'particle', siteLocationChecked: true, manufacturerInstructionsLocated: true, representativeUseObserved: true } },
+			result: { verdict: 'continuous', peakFlowLpm: 100, averageFlowLpm: 100, recommendedFadLpm: 125, requiredPressureBar: 6.8, toolPressureBar: 6.3, confidence: 'high', hypotheses: [], warnings: [], flowBasis: 'documented-continuous', calculationVersion: '1.3.0' },
+			compressorLabel: 'Compresseur test', toolLabels: ['Outil test'], availableFadLpm: 140, nominalMarginPercent: 40, compatAirMarginCovered: true,
+			sources: [], warnings: [], missingData: [], possibleUpgrades: [],
+			installationPlan: { version: '1.0.0', primaryReserve: 'Mesures renseignées.', items: [], counts: { sourceConfirmed: 0, siteMeasurements: 0, siteCompleted: 0, undocumented: 0 } },
+		} satisfies PassportReport;
+		const operationLog = {
+			version: '1.0.0' as const, passportId: report.passportId, baselineObservedOn: '2026-07-19', createdAt: '2026-07-19T10:00:00.000Z', updatedAt: '2026-08-19T10:00:00.000Z',
+			entries: [{ id: 'check-1', observedOn: '2026-08-19', recordedAt: '2026-08-19T10:00:00.000Z', sourcePressureBar: 7, toolPressureBar: 6.5, measuredLeakLpm: 0, operatingHours: 120, representativeUseObserved: true, configurationUnchanged: true, maintenanceAction: 'drain' as const }],
+		};
+		const text = new TextDecoder('latin1').decode(createPassportPdf(report, 'https://compatair.fr/suivi-exploitation/#passport=fixture', { operationLog }));
+		expect(text).toContain("CARNET D'EXPLOITATION");
+		expect(text).toContain("Carnet d'exploitation");
+		expect(text).toContain('Purge ou vidange déclarée');
+		expect(text).toContain('Échéance constructeur non documentée');
+		expect(text).toContain("ne certifie ni l'état du matériel");
+	});
 });

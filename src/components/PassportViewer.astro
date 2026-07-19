@@ -32,6 +32,7 @@
 
 		<div class="passport-actions">
 			<a class="button primary" href="/mise-en-service/" data-commission>Valider sur site</a>
+			<a class="button primary" href="/suivi-exploitation/" data-monitoring hidden>Suivre dans le temps</a>
 			<button class="button" type="button" data-download>Télécharger le dossier PDF</button>
 			<button class="button" type="button" data-print-plan>Imprimer la checklist</button>
 			<button class="button" type="button" data-copy>Copier le lien</button>
@@ -270,6 +271,11 @@
 			if (commissioningLink) {
 				commissioningLink.href = currentUrl.replace('/passeport/#', '/mise-en-service/#');
 				commissioningLink.textContent = commissioning ? 'Reprendre la recette terrain' : 'Valider sur site';
+			}
+			const monitoringLink = query<HTMLAnchorElement>('[data-monitoring]');
+			if (monitoringLink) {
+				monitoringLink.hidden = !commissioning;
+				if (commissioning) monitoringLink.href = currentUrl.replace('/passeport/#', '/suivi-exploitation/#');
 			}
 			const copyButton = query<HTMLButtonElement>('[data-copy]');
 			if (copyButton) copyButton.onclick = async () => {

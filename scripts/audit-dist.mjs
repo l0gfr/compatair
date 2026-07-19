@@ -376,7 +376,7 @@ else {
 if (!artifactPaths.has('/passeport/index.html')) errors.push('plan installation: Passeport rendu absent');
 else {
 	const passportHtml = await readFile(join(root, '/passeport/index.html'), 'utf8');
-	for (const marker of ['data-installation-plan', 'data-plan-before-purchase', 'data-plan-before-commissioning', 'data-commission', '/mise-en-service/', 'Plan d’installation contextualisé', 'Confirmé par une source', 'À mesurer sur site', 'Non documenté', 'Imprimer la checklist', 'Valider sur site']) {
+	for (const marker of ['data-installation-plan', 'data-plan-before-purchase', 'data-plan-before-commissioning', 'data-commission', 'data-monitoring', '/mise-en-service/', '/suivi-exploitation/', 'Plan d’installation contextualisé', 'Confirmé par une source', 'À mesurer sur site', 'Non documenté', 'Imprimer la checklist', 'Valider sur site', 'Suivre dans le temps']) {
 		if (!passportHtml.includes(marker)) errors.push(`plan installation: marqueur absent ${marker}`);
 	}
 }
@@ -384,8 +384,16 @@ else {
 if (!artifactPaths.has('/mise-en-service/index.html')) errors.push('recette terrain: page rendue absente');
 else {
 	const commissioningHtml = await readFile(join(root, '/mise-en-service/index.html'), 'utf8');
-	for (const marker of ['data-commissioning-root', 'data-commissioning-form', 'data-derived-drop', 'data-commissioning-result', 'data-updated-passport', 'Évaluer la mise en service', 'Télécharger le reçu PDF', 'ne certifie pas l’installation']) {
+	for (const marker of ['data-commissioning-root', 'data-commissioning-form', 'data-derived-drop', 'data-commissioning-result', 'data-updated-passport', 'data-start-monitoring', '/suivi-exploitation/', 'Évaluer la mise en service', 'Planifier un prochain contrôle', 'Télécharger le reçu PDF', 'ne certifie pas l’installation']) {
 		if (!commissioningHtml.includes(marker)) errors.push(`recette terrain: marqueur absent ${marker}`);
+	}
+}
+
+if (!artifactPaths.has('/suivi-exploitation/index.html')) errors.push('suivi exploitation: page rendue absente');
+else {
+	const operationHtml = await readFile(join(root, '/suivi-exploitation/index.html'), 'utf8');
+	for (const marker of ['data-operation-root', 'data-operation-form', 'data-operation-result', 'data-operation-history-list', 'data-download-operation-pdf', 'data-download-operation-json', 'Comparer à la recette initiale', 'Échéance constructeur non documentée', '0,1 bar', '5 L/min']) {
+		if (!operationHtml.includes(marker)) errors.push(`suivi exploitation: marqueur absent ${marker}`);
 	}
 }
 

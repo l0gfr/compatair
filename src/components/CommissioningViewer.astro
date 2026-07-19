@@ -116,7 +116,8 @@
 				<section><p class="eyebrow">Prochaines actions</p><ul data-receipt-actions></ul><div class="commissioning-guide-links" data-receipt-guides></div></section>
 			</div>
 			<footer>
-				<a class="button primary" href="/passeport/" data-updated-passport>Ouvrir le Passeport mis à jour</a>
+				<a class="button primary" href="/suivi-exploitation/" data-start-monitoring>Planifier un prochain contrôle</a>
+				<a class="button" href="/passeport/" data-updated-passport>Ouvrir le Passeport mis à jour</a>
 				<button class="button" type="button" data-download-receipt>Télécharger le reçu PDF</button>
 				<button class="button" type="button" data-copy-receipt>Copier le lien du dossier</button>
 				<span role="status" data-receipt-action-status></span>
@@ -141,6 +142,7 @@
 	let updatedReport: PassportReport | undefined;
 	let updatedAssessment: CommissioningAssessment | undefined;
 	let updatedPassportUrl = '';
+	let updatedMonitoringUrl = '';
 
 	function optionalNumber(form: FormData, name: string) {
 		const raw = form.get(name);
@@ -249,6 +251,7 @@
 			for (const guide of assessment.guides) { const link = document.createElement('a'); link.href = guide.path; link.textContent = guide.label; guides.append(link); }
 		}
 		query<HTMLAnchorElement>('[data-updated-passport]')?.setAttribute('href', updatedPassportUrl);
+		query<HTMLAnchorElement>('[data-start-monitoring]')?.setAttribute('href', updatedMonitoringUrl);
 		if (panel) { panel.hidden = false; panel.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
 		setText('[data-receipt-action-status]', `Reçu daté du ${report.configuration.commissioning?.observedOn}.`);
 	}
@@ -264,6 +267,7 @@
 			const envelope = await createPassportEnvelope(configuration, catalog.compressors, catalog.tools, catalog.catalogVerifiedAt);
 			const encoded = encodePassportEnvelope(envelope);
 			updatedPassportUrl = `${location.origin}/passeport/#passport=${encoded}`;
+			updatedMonitoringUrl = `${location.origin}/suivi-exploitation/#passport=${encoded}`;
 			updatedReport = report;
 			updatedAssessment = assessment;
 			renderAssessment(assessment, report);
