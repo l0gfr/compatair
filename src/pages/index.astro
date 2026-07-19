@@ -34,20 +34,20 @@ const comparisonCount = tools.length * compressors.length;
 
 					<aside class="home-command-center" data-home-command-center aria-label="Poste de contrôle CompatAir">
 						<header>
-							<div><span class="home-live-dot" aria-hidden="true"></span><strong>CompatAir / Control</strong></div>
-							<small>Source → calcul → verdict</small>
+							<div><span class="home-live-dot" aria-hidden="true"></span><strong>CompatAir / Décision</strong></div>
+							<small>Identifier → vérifier → comparer</small>
 						</header>
-						<a class="home-command-primary" href="/calculateur/">
-							<span class="home-command-code">01 / Moteur déterministe</span>
-							<strong>Vérifier une configuration</strong>
-							<p>Dimensionnez l’usage, puis voyez le plus petit changement qui le rend possible.</p>
-							<footer><span>Contrefactuel + Passeport local</span><b aria-hidden="true">→</b></footer>
+						<a class="home-command-primary" href="/scanner/">
+							<span class="home-command-code">01 / Point de départ recommandé</span>
+							<strong>Identifier la référence exacte</strong>
+							<p>Recopiez le numéro de l’étiquette. Outil ou compresseur, la fiche et ses compatibilités apparaissent sans choisir de catégorie.</p>
+							<footer><span>MPN · EAN · GTIN · photo locale</span><b aria-hidden="true">→</b></footer>
 						</a>
-						<nav class="home-command-grid" aria-label="Fonctionnalités distinctives CompatAir">
-							<a href="/radar-contradictions/"><span>02 / Radar</span><strong>Contradictions</strong><small>Notice ↔ fabricant ↔ terrain</small><b aria-hidden="true">↗</b></a>
-							<a href="/graphe-preuve/"><span>03 / Preuve</span><strong>Graphe interactif</strong><small>Verdict → champ → document</small><b aria-hidden="true">↗</b></a>
-							<a href="/scanner/"><span>04 / Identifier</span><strong>Scanner exact</strong><small>MPN, EAN, photo ou code-barres</small><b aria-hidden="true">↗</b></a>
-							<a href="/observatoire-qualite-documentaire/"><span>05 / Qualité</span><strong>Observatoire</strong><small>Corrections et stabilité suivies</small><b aria-hidden="true">↗</b></a>
+						<nav class="home-command-grid" aria-label="Parcours de décision CompatAir">
+							<a href="/calculateur/"><span>02 / Dimensionner</span><strong>Vérifier mon besoin</strong><small>Usage, marge, flexible et plusieurs outils</small><b aria-hidden="true">↗</b></a>
+							<a href="/comparateur/"><span>03 / Rapprocher</span><strong>Comparer 2 ou 3 modèles</strong><small>Caractéristiques et sources côte à côte</small><b aria-hidden="true">↗</b></a>
+							<a href="/graphe-preuve/"><span>04 / Prouver</span><strong>Remonter aux documents</strong><small>Verdict → champ → source datée</small><b aria-hidden="true">↗</b></a>
+							<a href="/guides/"><span>05 / Comprendre</span><strong>Guides de terrain</strong><small>Métiers, usages et méthode</small><b aria-hidden="true">↗</b></a>
 						</nav>
 						<footer class="home-command-status">
 							<div><small>Corpus</small><strong>{comparisonCount.toLocaleString('fr-FR')}</strong><span>couples auditables</span></div>
@@ -177,6 +177,7 @@ const comparisonCount = tools.length * compressors.length;
 					<a href="/outils-pneumatiques/"><span>Outils pneumatiques</span><strong>{tools.length} références</strong><b>→</b></a>
 					<a href="/sources-fiabilite/"><span>Fiabilité</span><strong>Origine et qualité des données</strong><b>→</b></a>
 					<a href="/observatoire-qualite-documentaire/"><span>Observatoire</span><strong>Corrections, références et contradictions</strong><b>→</b></a>
+					<a href="/radar-contradictions/"><span>Radar</span><strong>Valeurs concurrentes et donnée retenue</strong><b>→</b></a>
 					<a href="/barometre-transparence/"><span>Transparence</span><strong>Données publiées par marque</strong><b>→</b></a>
 					<a href="/professionnels/"><span>Professionnels</span><strong>Améliorer et intégrer votre catalogue</strong><b>→</b></a>
 				</nav>

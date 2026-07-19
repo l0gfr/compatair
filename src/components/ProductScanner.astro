@@ -1,5 +1,6 @@
 <div class="scanner" data-scanner>
 	<form class="scanner-form" data-scanner-form>
+		<header class="scanner-form-head"><span>01</span><div><p>Référence exacte</p><strong>Un numéro, aucune catégorie à choisir</strong></div><small>Mode recommandé</small></header>
 		<div class="scanner-confirmation">
 			<div class="field">
 				<label for="scanner-identifier">Numéro indiqué sur l’étiquette</label>
@@ -83,6 +84,7 @@
 	import type { CompatibilityResult } from '../domain/compatibility';
 	import { isImageWithinPixelBudget, readImageDimensions, type ImageDimensions } from '../domain/image-dimensions';
 	import { compressorCapabilities, identifyProducts, toolCompatibleCompressors } from '../domain/product-identification';
+	import { sourceQualityDetail, sourceQualityLabel } from '../domain/source-quality';
 
 	type DetectorResult = { rawValue?: string };
 	type Detector = { detect(source: ImageBitmap): Promise<DetectorResult[]> };
@@ -106,7 +108,6 @@
 	const setText = (selector: string, value: string) => { const element = query<HTMLElement>(selector); if (element) element.textContent = value; };
 	const linkFor = (type: 'compressor' | 'tool', slug: string) => type === 'compressor' ? `/compresseurs/${slug}/` : `/outils-pneumatiques/${slug}/`;
 	const verdictLabel = (verdict: CompatibilityResult['verdict']) => verdict === 'continuous' ? 'Compatible en continu' : verdict === 'intermittent' ? 'Compatible par intermittence' : verdict === 'incompatible' ? 'Incompatible' : 'Données insuffisantes';
-	const dataQualityLabel = (grade: ResultProduct['confidence']) => grade === 'A' ? 'Source constructeur complète' : grade === 'B' ? 'Source constructeur partielle' : grade === 'C' ? 'Source insuffisante pour conclure' : 'Source non confirmée';
 	const confidenceRank = { A: 0, B: 1, C: 2, D: 3 } as const;
 	const resultRank = { continuous: 0, intermittent: 1, incompatible: 2, insufficient_data: 3 } as const;
 
@@ -136,8 +137,8 @@
 			? `Débit disponible non vérifiable${pressure !== undefined ? ` à ${formatNumber(pressure)} bar` : ''}.`
 			: `${formatNumber(result.availableFadLpm)} L/min disponibles${pressure !== undefined ? ` à ${formatNumber(pressure)} bar` : ''}.`;
 		const quality = document.createElement('details'); quality.className = 'scanner-card-quality';
-		const summary = document.createElement('summary'); summary.textContent = dataQualityLabel(qualityGrade);
-		const detail = document.createElement('span'); detail.textContent = `Grade technique ${qualityGrade} pour le couple vérifié. Le détail des sources reste disponible sur les fiches.`;
+		const summary = document.createElement('summary'); summary.textContent = sourceQualityLabel(qualityGrade);
+		const detail = document.createElement('span'); detail.textContent = `${sourceQualityDetail(qualityGrade)} pour le couple vérifié. Le détail des sources reste disponible sur les fiches.`;
 		quality.append(summary, detail); article.append(head, flow, quality); return article;
 	}
 	function renderCards(selector: string, cards: ResultCard[], empty: string) {
@@ -254,7 +255,7 @@
 		const match = matches[0]; const product = match.product;
 		setText('[data-product-name]', `${product.brand} ${product.model}`);
 		setText('[data-match-badge]', match.matchedBy === 'ean' || match.matchedBy === 'gtin' ? 'Correspondance exacte par code produit fabricant' : 'Correspondance exacte par référence fabricant');
-		setText('[data-match-detail]', `${match.matchedBy.toUpperCase()} ${match.matchedValue} · ${dataQualityLabel(product.confidence)}.`);
+		setText('[data-match-detail]', `${match.matchedBy.toUpperCase()} ${match.matchedValue} · ${sourceQualityLabel(product.confidence)}.`);
 		const sourceDates = product.evidence.filter((source) => source.sourceType === 'manufacturer' || source.sourceType === 'manual').map((source) => source.retrievedAt).sort();
 		const verifiedAt = sourceDates.at(-1) ?? product.evidence.map((source) => source.retrievedAt).sort().at(-1);
 		setText('[data-source-verified]', verifiedAt ? `Source constructeur vérifiée le ${new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long' }).format(new Date(`${verifiedAt}T12:00:00Z`))}` : 'Date de vérification indisponible');
@@ -307,7 +308,7 @@
 
 		const evidence = query<HTMLElement>('[data-evidence]');
 		if (evidence) evidence.replaceChildren(...product.evidence.map((source) => {
-			const link = document.createElement('a'); link.href = source.sourceUrl; link.rel = 'noreferrer'; link.textContent = `${source.sourceLabel} · vérifiée le ${source.retrievedAt} · ${dataQualityLabel(source.confidence)} (grade ${source.confidence})`; return link;
+			const link = document.createElement('a'); link.href = source.sourceUrl; link.rel = 'noreferrer'; link.textContent = `${source.sourceLabel} · vérifiée le ${source.retrievedAt} · ${sourceQualityDetail(source.confidence)}`; return link;
 		}));
 		const allResults = query<HTMLElement>('[data-all-results]'); if (allResults) allResults.hidden = true;
 		const toggle = query<HTMLButtonElement>('[data-toggle-all]'); if (toggle) { toggle.setAttribute('aria-expanded', 'false'); toggle.textContent = 'Voir tous les résultats'; }

@@ -1,16 +1,182 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import DecisionHeroVisual from '../components/DecisionHeroVisual.astro';
 import { compressors } from '../data/catalog';
 import { compressorDisplayName } from '../domain/product-display';
 ---
+
 <BaseLayout title="Comparer des compresseurs | CompatAir" description="Comparez deux ou trois compresseurs sur leurs caractéristiques et leurs limites documentaires." noindex breadcrumbs={[{ name: 'Comparateur', path: '/comparateur/' }]}>
-	<section class="page-hero compact"><div class="container"><p class="eyebrow">Comparer les modèles côte à côte</p><h1>Comparer deux ou trois compresseurs</h1><p class="lead">Choisissez les modèles pour voir leurs caractéristiques au même endroit. Une information absente reste marquée «&nbsp;non documentée&nbsp;» et n’est jamais remplacée par une note commerciale.</p><p><a href="/guides/debit-restitue-fad-vs-debit-aspire/">Comprendre quel débit comparer</a> ou <a href="/calculateur/">vérifier vos propres outils</a>.</p></div></section>
-	<section class="section"><div class="container compare-page"><div class="compare-selector" data-compare-selector>{compressors.map((item) => <label><input type="checkbox" value={item.id} data-compare-option /> {compressorDisplayName(item)}</label>)}</div><p data-compare-help>Sélectionnez deux ou trois modèles.</p><div class="compare-table-wrap" data-compare-output></div><button class="button" type="button" data-copy-comparison>Copier le lien</button><span data-copy-status role="status"></span></div></section>
-	<div hidden data-compressor-data={JSON.stringify(compressors.map((item) => ({ id: item.id, slug: item.slug, displayName: compressorDisplayName(item), tankLiters: item.tankLiters, maxPressureBar: item.maxPressureBar, intakeFlowLpm: item.intakeFlowLpm, fadCurve: item.fadCurve, dutyCycle: item.dutyCycle, oilType: item.oilType, noiseDb: item.noiseDb, confidence: item.confidence, status: item.status })))}></div>
+	<div class="decision-page compare-page-shell">
+		<section class="decision-hero">
+			<div class="container decision-hero-grid">
+				<div class="decision-hero-copy"><p class="decision-index">03 / Comparer les solutions</p><h1>Deux ou trois compresseurs, sur des données <em>réellement comparables.</em></h1><p>Ajoutez les références par marque, modèle, MPN ou EAN. CompatAir aligne les caractéristiques publiées, distingue le débit aspiré du débit restitué et laisse chaque information manquante visible.</p><div class="decision-hero-points"><span>2 à 3 modèles</span><span>Débits avec pression</span><span>Qualité des sources</span></div></div>
+				<DecisionHeroVisual mode="compare" />
+			</div>
+		</section>
+
+		<section class="section compare-workspace-section" data-compare-page>
+			<div class="container">
+				<header class="decision-section-head"><p class="decision-index">Sélection</p><h2>Ajoutez uniquement les modèles qui vous intéressent.</h2><p>Une sélection transmise depuis le scanner est déjà remplie. Sinon, recherchez une référence exacte ci-dessous.</p></header>
+				<div class="compare-workspace">
+					<form class="compare-search-panel" data-compare-form>
+						<label for="compare-search">Marque, modèle, MPN ou EAN</label>
+						<div><input id="compare-search" data-compare-search type="search" list="compare-compressors" autocomplete="off" placeholder="Ex. Metabo Basic 250 ou 601532000" /><button class="button primary" type="submit">Ajouter</button></div>
+						<small>La référence brute est acceptée. CompatAir exige une correspondance exacte.</small>
+						<p class="form-error" role="alert" data-compare-error hidden></p>
+					</form>
+					<aside class="compare-rule"><span>Règle de lecture</span><strong>Comparer n’est pas classer.</strong><p>Cette page ne désigne pas un «&nbsp;meilleur&nbsp;» produit. Elle rend les écarts techniques et documentaires lisibles pour votre usage.</p><a href="/calculateur/">Vérifier un besoin précis →</a></aside>
+				</div>
+
+				<section class="compare-selection" aria-labelledby="compare-selection-title">
+					<header><div><p class="decision-index">Modèles retenus</p><h3 id="compare-selection-title">Votre comparaison</h3></div><span data-compare-help>Sélectionnez deux ou trois modèles.</span></header>
+					<div class="compare-selected-grid" data-compare-selected></div>
+				</section>
+
+				<section class="compare-output-section" data-compare-output-section hidden>
+					<header><div><p class="decision-index">Lecture côte à côte</p><h2>Les écarts utiles, sans note commerciale.</h2></div><button class="button" type="button" data-copy-comparison>Copier le lien</button></header>
+					<span class="compare-copy-status" data-copy-status role="status"></span>
+					<div class="compare-table-wrap" data-compare-output></div>
+					<footer><p><strong>À retenir&nbsp;:</strong> le débit aspiré décrit l’entrée de la pompe. Pour vérifier un outil, utilisez le débit réellement restitué à la pression demandée.</p><a href="/guides/debit-restitue-fad-vs-debit-aspire/">Comprendre la différence</a></footer>
+				</section>
+			</div>
+		</section>
+	</div>
+
+	<datalist id="compare-compressors">
+		{compressors.map((item) => <option value={`${item.brand} ${item.model}${item.mpn ? ` · MPN ${item.mpn}` : ''}${item.ean ? ` · EAN ${item.ean}` : ''}`}>{compressorDisplayName(item)}</option>)}
+	</datalist>
+	<div hidden data-compressor-data={JSON.stringify(compressors.map((item) => ({
+		id: item.id,
+		slug: item.slug,
+		displayName: compressorDisplayName(item),
+		searchValue: `${item.brand} ${item.model}${item.mpn ? ` · MPN ${item.mpn}` : ''}${item.ean ? ` · EAN ${item.ean}` : ''}`,
+		identifiers: [item.id, item.mpn, item.ean, item.gtin, ...item.identifierAliases.map((alias) => alias.value)].filter(Boolean),
+		brand: item.brand,
+		model: item.model,
+		tankLiters: item.tankLiters,
+		maxPressureBar: item.maxPressureBar,
+		intakeFlowLpm: item.intakeFlowLpm,
+		fadCurve: item.fadCurve,
+		dutyCycle: item.dutyCycle,
+		oilType: item.oilType,
+		noiseDb: item.noiseDb,
+		confidence: item.confidence,
+		status: item.status,
+	})))}></div>
+
 	<script>
-		const dataElement = document.querySelector<HTMLElement>('[data-compressor-data]'); const data = JSON.parse(dataElement?.dataset.compressorData ?? '[]'); const boxes = [...document.querySelectorAll<HTMLInputElement>('[data-compare-option]')]; const output = document.querySelector<HTMLElement>('[data-compare-output]'); const help = document.querySelector<HTMLElement>('[data-compare-help]');
-		const initial = new URLSearchParams(location.hash.slice(1)).get('ids')?.split(',') ?? []; for (const box of boxes) box.checked = initial.includes(box.value);
-		function refresh() { const ids = boxes.filter((box) => box.checked).map((box) => box.value); if (ids.length > 3) { const last = boxes.findLast((box) => box.checked); if (last) last.checked = false; return refresh(); } history.replaceState(null, '', ids.length ? `#ids=${ids.join(',')}` : location.pathname); const selected = ids.map((id) => data.find((item: any) => item.id === id)).filter(Boolean); if (help) help.textContent = selected.length < 2 ? 'Sélectionnez encore un modèle.' : `${selected.length} modèles comparés`; if (!output || selected.length < 2) { output?.replaceChildren(); return; } const rows = [['Volume de cuve', (item: any) => `${item.tankLiters} L`], ['Pression maximale', (item: any) => `${item.maxPressureBar} bar`], ['Débit aspiré', (item: any) => item.intakeFlowLpm ? `${item.intakeFlowLpm} L/min, non utilisé pour le résultat` : 'Non documenté'], ['Débit réellement restitué', (item: any) => item.fadCurve.length ? item.fadCurve.map((point: any) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ') : 'Non documenté'], ['Temps maximal de fonctionnement', (item: any) => item.dutyCycle ? `${Math.round(item.dutyCycle * 100)} %` : 'Non documenté'], ['Lubrification', (item: any) => item.oilType === 'oil-free' ? 'Sans huile' : 'Lubrifié'], ['Bruit publié', (item: any) => item.noiseDb ? `${item.noiseDb} dB` : 'Non documenté'], ['Fiabilité des données', (item: any) => item.confidence]]; const table = document.createElement('table'); table.className = 'compare-table'; const thead = document.createElement('thead'); const hr = document.createElement('tr'); hr.append(document.createElement('th'), ...selected.map((item: any) => { const th = document.createElement('th'); const a = document.createElement('a'); a.href = `/compresseurs/${item.slug}/`; a.textContent = item.displayName; th.append(a); return th; })); thead.append(hr); const tbody = document.createElement('tbody'); for (const [label, read] of rows as any) { const tr = document.createElement('tr'); const th = document.createElement('th'); th.textContent = label; tr.append(th, ...selected.map((item: any) => { const td = document.createElement('td'); td.textContent = read(item); return td; })); tbody.append(tr); } table.append(thead, tbody); output.replaceChildren(table); }
-		for (const box of boxes) box.addEventListener('change', refresh); refresh(); document.querySelector('[data-copy-comparison]')?.addEventListener('click', async () => { await navigator.clipboard.writeText(location.href); document.querySelector<HTMLElement>('[data-copy-status]')!.textContent = 'Lien copié'; });
+		import { resolveExactCatalogSearch } from '../domain/catalog-search';
+		import { sourceQualityDetail, sourceQualityLabel } from '../domain/source-quality';
+
+		type CompressorSummary = {
+			id: string;
+			slug: string;
+			displayName: string;
+			searchValue: string;
+			identifiers: string[];
+			brand: string;
+			model: string;
+			tankLiters: number;
+			maxPressureBar: number;
+			intakeFlowLpm?: number;
+			fadCurve: Array<{ litersPerMinute: number; pressureBar: number }>;
+			dutyCycle?: number;
+			oilType: 'oil-free' | 'lubricated';
+			noiseDb?: number;
+			confidence: 'A' | 'B' | 'C' | 'D';
+			status: string;
+		};
+
+		const root = document.querySelector<HTMLElement>('[data-compare-page]');
+		const dataElement = document.querySelector<HTMLElement>('[data-compressor-data]');
+		const data = JSON.parse(dataElement?.dataset.compressorData ?? '[]') as CompressorSummary[];
+		const form = root?.querySelector<HTMLFormElement>('[data-compare-form]');
+		const search = root?.querySelector<HTMLInputElement>('[data-compare-search]');
+		const error = root?.querySelector<HTMLElement>('[data-compare-error]');
+		const selectedTarget = root?.querySelector<HTMLElement>('[data-compare-selected]');
+		const output = root?.querySelector<HTMLElement>('[data-compare-output]');
+		const outputSection = root?.querySelector<HTMLElement>('[data-compare-output-section]');
+		const help = root?.querySelector<HTMLElement>('[data-compare-help]');
+		const idsFromLocation = () => (new URLSearchParams(location.hash.slice(1)).get('ids')?.split(',') ?? []).filter((id, index, ids) => data.some((item) => item.id === id) && ids.indexOf(id) === index).slice(0, 3);
+		let selectedIds = idsFromLocation();
+
+		function updateLocation() {
+			const fragment = selectedIds.length ? `#ids=${selectedIds.join(',')}` : '';
+			history.replaceState(null, '', `${location.pathname}${fragment}`);
+		}
+
+		function selectedCard(item: CompressorSummary, index: number) {
+			const article = document.createElement('article'); article.className = 'compare-selected-card';
+			const number = document.createElement('span'); number.textContent = `0${index + 1}`;
+			const copy = document.createElement('div');
+			const brand = document.createElement('small'); brand.textContent = item.brand;
+			const title = document.createElement('strong'); title.textContent = item.displayName;
+			const quality = document.createElement('p'); quality.textContent = sourceQualityLabel(item.confidence);
+			copy.append(brand, title, quality);
+			const remove = document.createElement('button'); remove.type = 'button'; remove.dataset.removeId = item.id; remove.setAttribute('aria-label', `Retirer ${item.displayName}`); remove.textContent = '×';
+			article.append(number, copy, remove); return article;
+		}
+
+		function placeholder(index: number) {
+			const article = document.createElement('article'); article.className = 'compare-selected-card is-empty';
+			const number = document.createElement('span'); number.textContent = `0${index + 1}`;
+			const copy = document.createElement('div'); const title = document.createElement('strong'); title.textContent = index < 2 ? 'Modèle requis' : 'Troisième modèle facultatif'; const detail = document.createElement('p'); detail.textContent = 'Utilisez la recherche ci-dessus.'; copy.append(title, detail); article.append(number, copy); return article;
+		}
+
+		function valueCell(value: string, className?: string) {
+			const td = document.createElement('td'); td.textContent = value; if (className) td.className = className; return td;
+		}
+
+		function renderTable(selected: CompressorSummary[]) {
+			if (!output || !outputSection) return;
+			if (selected.length < 2) { output.replaceChildren(); outputSection.hidden = true; return; }
+			const rows: Array<[string, (item: CompressorSummary) => string, string?]> = [
+				['Volume de cuve', (item) => `${item.tankLiters} L`],
+				['Pression maximale', (item) => `${item.maxPressureBar} bar`],
+				['Débit réellement restitué', (item) => item.fadCurve.length ? item.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ') : 'Non documenté', 'is-primary'],
+				['Débit aspiré', (item) => item.intakeFlowLpm ? `${item.intakeFlowLpm} L/min · non utilisé pour le verdict` : 'Non documenté', 'is-secondary'],
+				['Temps maximal de fonctionnement', (item) => item.dutyCycle ? `${Math.round(item.dutyCycle * 100)} %` : 'Non documenté'],
+				['Lubrification', (item) => item.oilType === 'oil-free' ? 'Sans huile' : 'Lubrifié'],
+				['Bruit publié', (item) => item.noiseDb ? `${item.noiseDb} dB` : 'Non documenté'],
+				['Qualité des données', (item) => sourceQualityDetail(item.confidence), 'is-quality'],
+			];
+			const table = document.createElement('table'); table.className = 'compare-table';
+			const thead = document.createElement('thead'); const heading = document.createElement('tr'); const corner = document.createElement('th'); corner.textContent = 'Caractéristique'; heading.append(corner);
+			for (const item of selected) { const th = document.createElement('th'); const link = document.createElement('a'); link.href = `/compresseurs/${item.slug}/`; link.textContent = item.displayName; const quality = document.createElement('small'); quality.textContent = sourceQualityLabel(item.confidence); th.append(link, quality); heading.append(th); }
+			thead.append(heading);
+			const tbody = document.createElement('tbody');
+			for (const [label, read, className] of rows) { const row = document.createElement('tr'); if (className) row.className = className; const th = document.createElement('th'); th.textContent = label; row.append(th, ...selected.map((item) => valueCell(read(item), read(item) === 'Non documenté' ? 'is-missing' : undefined))); tbody.append(row); }
+			table.append(thead, tbody); output.replaceChildren(table); outputSection.hidden = false;
+		}
+
+		function refresh() {
+			const selected = selectedIds.map((id) => data.find((item) => item.id === id)).filter((item): item is CompressorSummary => Boolean(item));
+			selectedTarget?.replaceChildren(...selected.map(selectedCard), ...Array.from({ length: 3 - selected.length }, (_, offset) => placeholder(selected.length + offset)));
+			if (help) help.textContent = selected.length < 2 ? `${selected.length}/3 · ajoutez encore ${2 - selected.length} modèle${selected.length === 0 ? 's' : ''}` : `${selected.length}/3 · ${selected.length === 2 ? 'comparaison prête, un troisième modèle reste possible' : 'comparaison complète'}`;
+			renderTable(selected); updateLocation();
+		}
+
+		form?.addEventListener('submit', (event) => {
+			event.preventDefault(); if (!search || !error) return;
+			const id = resolveExactCatalogSearch(search.value, data.map((item) => ({ id: item.id, value: item.searchValue, identifiers: item.identifiers })));
+			error.hidden = true;
+			if (!id) { error.textContent = 'Aucun modèle ne correspond exactement à cette saisie. Choisissez une suggestion ou vérifiez la référence.'; error.hidden = false; return; }
+			if (selectedIds.includes(id)) { error.textContent = 'Ce modèle est déjà dans la comparaison.'; error.hidden = false; return; }
+			if (selectedIds.length >= 3) { error.textContent = 'Retirez un modèle avant d’en ajouter un autre.'; error.hidden = false; return; }
+			selectedIds.push(id); search.value = ''; refresh();
+		});
+
+		selectedTarget?.addEventListener('click', (event) => {
+			const button = (event.target as Element).closest<HTMLButtonElement>('[data-remove-id]'); if (!button?.dataset.removeId) return;
+			selectedIds = selectedIds.filter((id) => id !== button.dataset.removeId); refresh();
+		});
+
+		root?.querySelector('[data-copy-comparison]')?.addEventListener('click', async () => {
+			await navigator.clipboard.writeText(location.href);
+			const status = root.querySelector<HTMLElement>('[data-copy-status]'); if (status) status.textContent = 'Lien copié';
+		});
+		window.addEventListener('hashchange', () => { selectedIds = idsFromLocation(); refresh(); });
+
+		refresh();
 	</script>
 </BaseLayout>

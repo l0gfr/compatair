@@ -1,17 +1,17 @@
 ---
 import Calculator from '../components/Calculator.astro';
+import DecisionHeroVisual from '../components/DecisionHeroVisual.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Quel compresseur pour vos outils ? | CompatAir" description="Indiquez vos outils et votre façon de les utiliser pour vérifier le débit nécessaire et les compresseurs capables de les alimenter.">
-	<section class="page-hero compact">
-		<div class="container">
-			<p class="eyebrow">Vérifier vos outils et votre compresseur</p>
-			<h1>Votre compresseur peut-il alimenter vos outils&nbsp;?</h1>
-			<p class="lead">Choisissez vos outils, indiquez s’ils fonctionnent ensemble et précisez la durée d’utilisation. CompatAir calcule le besoin en air puis le compare au <a href="/glossaire/#fad">débit réellement disponible</a> du compresseur. Les données manquantes restent clairement signalées.</p>
-		</div>
-	</section>
-	<section class="section calculator-section">
-		<div class="container"><Calculator /></div>
-	</section>
+	<div class="decision-page calculator-page">
+		<section class="decision-hero">
+			<div class="container decision-hero-grid">
+				<div class="decision-hero-copy"><p class="decision-index">02 / Vérifier une configuration</p><h1>Décrire l’usage, puis lire la réponse <em>avant les détails.</em></h1><p>Choisissez un outil, ou saisissez directement son MPN ou son EAN, puis ajoutez un compresseur si vous souhaitez vérifier une machine précise. La marge de 25&nbsp;% est déjà appliquée au <a href="/glossaire/#fad">débit réellement restitué</a> et les réglages de réseau restent facultatifs.</p><div class="decision-hero-points"><span>Un outil suffit</span><span>Marge 25&nbsp;% par défaut</span><span>Aucune donnée inventée</span></div></div>
+				<DecisionHeroVisual mode="calculate" />
+			</div>
+		</section>
+		<section class="section calculator-section"><div class="container"><header class="decision-section-head"><p class="decision-index">Calcul expliqué</p><h2>Commencez avec ce que vous connaissez.</h2><p>Les paramètres avancés ne sont utiles que pour affiner une première réponse avec votre durée, votre flexible, votre réseau ou plusieurs outils.</p></header><Calculator /></div></section>
+	</div>
 </BaseLayout>

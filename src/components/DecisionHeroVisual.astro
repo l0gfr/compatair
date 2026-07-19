@@ -1,0 +1,75 @@
+---
+type Mode = 'identify' | 'calculate' | 'compare';
+
+const { mode } = Astro.props as { mode: Mode };
+const content = {
+	identify: {
+		code: 'IDENTIFIER',
+		start: 'ÉTIQUETTE',
+		middle: 'RÉFÉRENCE',
+		end: 'PRODUIT EXACT',
+		caption: 'Numéro fabricant → fiche vérifiée',
+	},
+	calculate: {
+		code: 'DIMENSIONNER',
+		start: 'OUTIL',
+		middle: 'BESOIN',
+		end: 'VERDICT',
+		caption: 'Pression + débit + usage → réponse',
+	},
+	compare: {
+		code: 'COMPARER',
+		start: '2–3 MODÈLES',
+		middle: 'MÊMES UNITÉS',
+		end: 'ÉCARTS LISIBLES',
+		caption: 'Caractéristiques sourcées, côte à côte',
+	},
+}[mode];
+---
+
+<aside class:list={['decision-hero-visual', `is-${mode}`]} aria-label={content.caption} data-decision-visual={mode}>
+	<header><span><i></i> CompatAir / décision</span><strong>{content.code}</strong></header>
+	<svg viewBox="0 0 620 330" role="img" aria-labelledby={`decision-title-${mode} decision-desc-${mode}`}>
+		<title id={`decision-title-${mode}`}>{content.caption}</title>
+		<desc id={`decision-desc-${mode}`}>Trois étapes relient l’information de départ à une réponse vérifiable.</desc>
+		<defs>
+			<linearGradient id={`decision-line-${mode}`} x1="0" x2="1"><stop stop-color="#d3eb56" /><stop offset="1" stop-color="#4ca77f" /></linearGradient>
+			<filter id={`decision-glow-${mode}`}><feGaussianBlur stdDeviation="5" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+		</defs>
+		<g class="decision-grid"><path d="M20 70H600M20 165H600M20 260H600M120 25V305M240 25V305M360 25V305M480 25V305" /></g>
+		<path class="decision-flow" d="M145 165H270M350 165H475" />
+		<g class="decision-node start"><rect x="30" y="120" width="145" height="90" rx="14" /><text x="102" y="151" text-anchor="middle">01 / DÉPART</text><text class="main" x="102" y="180" text-anchor="middle">{content.start}</text></g>
+		<g class="decision-core" filter={`url(#decision-glow-${mode})`}><circle cx="310" cy="165" r="66" /><circle cx="310" cy="165" r="45" /><text x="310" y="154" text-anchor="middle">02 / COMPATAIR</text><text class="main" x="310" y="180" text-anchor="middle">{content.middle}</text></g>
+		<g class="decision-node end"><rect x="445" y="120" width="145" height="90" rx="14" /><text x="517" y="151" text-anchor="middle">03 / RÉPONSE</text><text class="main" x="517" y="180" text-anchor="middle">{content.end}</text></g>
+		<g class="decision-status"><circle cx="41" cy="288" r="5" /><text x="55" y="293">Source, calcul et limite restent visibles</text></g>
+	</svg>
+	<footer><span>{content.caption}</span><b aria-hidden="true">→</b></footer>
+</aside>
+
+<style>
+	.decision-hero-visual { position: relative; overflow: hidden; border: 1px solid rgba(211,235,86,.34); border-radius: 1.2rem; color: white; background: radial-gradient(circle at 100% 0, rgba(211,235,86,.14), transparent 18rem), #0b2118; box-shadow: 0 24px 55px rgba(8,30,20,.24); }
+	.decision-hero-visual::before { position: absolute; inset: 0; opacity: .13; background-image: linear-gradient(rgba(211,235,86,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(211,235,86,.18) 1px, transparent 1px); background-size: 24px 24px; mask-image: linear-gradient(135deg, transparent 18%, black); content: ''; pointer-events: none; }
+	.decision-hero-visual > * { position: relative; z-index: 1; }
+	header, footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 1rem; font: 780 .58rem/1.3 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+	header { border-bottom: 1px solid rgba(255,255,255,.11); }
+	header span { display: flex; align-items: center; gap: .55rem; color: #cbd9d1; }
+	header i { width: .46rem; height: .46rem; border-radius: 50%; background: #d3eb56; box-shadow: 0 0 0 .22rem rgba(211,235,86,.1), 0 0 1rem rgba(211,235,86,.55); }
+	header strong, footer b { color: #d3eb56; }
+	footer { border-top: 1px solid rgba(255,255,255,.11); color: #9fb2a7; }
+	footer b { font-size: 1rem; }
+	svg { display: block; width: 100%; height: auto; }
+	.decision-grid { fill: none; stroke: rgba(255,255,255,.055); stroke-width: 1; }
+	.decision-flow { fill: none; stroke: url(#decision-line-identify); stroke-width: 2.5; stroke-dasharray: 7 6; }
+	.is-calculate .decision-flow { stroke: url(#decision-line-calculate); }
+	.is-compare .decision-flow { stroke: url(#decision-line-compare); }
+	.decision-node rect { fill: rgba(255,255,255,.035); stroke: rgba(201,220,208,.34); }
+	.decision-node.end rect { stroke: rgba(211,235,86,.55); }
+	.decision-node text, .decision-core text, .decision-status text { fill: #8fa69a; font: 700 10px ui-monospace, monospace; letter-spacing: .06em; }
+	.decision-node .main { fill: #eff5f1; font: 800 13px "Manrope Variable", sans-serif; letter-spacing: .01em; }
+	.decision-core circle:first-child { fill: rgba(211,235,86,.055); stroke: rgba(211,235,86,.26); }
+	.decision-core circle:nth-child(2) { fill: #17382a; stroke: #d3eb56; }
+	.decision-core .main { fill: #fff; font: 800 12px "Manrope Variable", sans-serif; letter-spacing: 0; }
+	.decision-status circle { fill: #d3eb56; }
+	.decision-status text { fill: #829b8e; }
+	@media (max-width: 560px) { .decision-node.start { transform: translateX(18px); } .decision-node.end { transform: translateX(-18px); } .decision-node rect { width: 125px; } .decision-node.end rect { x: 465px; } .decision-node.end text { x: 527px; } }
+</style>

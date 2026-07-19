@@ -7,12 +7,12 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 <div class="calculator calculator-v2" data-calculator>
 	<form class="calculator-form" data-calculator-form>
 		<div class="calculator-form-head">
-			<div><p class="eyebrow">Configuration</p><h2>Décrire le besoin réel</h2></div>
-			<span class="version-chip">Calcul expliqué</span>
+			<div><p class="eyebrow">Configuration simple</p><h2>Décrire le besoin réel</h2><small>Commencez par un outil. Le reste est facultatif.</small></div>
+			<span class="version-chip">Réponse expliquée</span>
 		</div>
 
 		<fieldset class="calculator-fieldset">
-			<legend>Outils utilisés</legend>
+			<legend><span>01</span> Outils utilisés</legend>
 			<div data-demand-rows></div>
 			<button class="inline-action" type="button" data-add-tool>+ Ajouter un outil</button>
 		</fieldset>
@@ -34,8 +34,8 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		</details>
 
 		<fieldset class="calculator-fieldset">
-			<legend>Compresseur à vérifier</legend>
-			<div class="field autocomplete-field"><label for="compressor-search">Rechercher par marque, modèle, MPN ou EAN</label><input id="compressor-search" data-compressor-search type="search" list="calculator-compressors" autocomplete="off" placeholder="Ex. Metabo Basic 250, 601532000…" /><input data-compressor-id name="compressor" type="hidden" value="" /><small>Laissez vide pour calculer seulement le besoin.</small></div>
+			<legend><span>02</span> Compresseur à vérifier <small>facultatif</small></legend>
+			<div class="field autocomplete-field"><label for="compressor-search">Rechercher par marque, modèle, MPN ou EAN</label><input id="compressor-search" data-compressor-search type="search" list="calculator-compressors" autocomplete="off" placeholder="Ex. Metabo Basic 250, 601532000…" /><input data-compressor-id name="compressor" type="hidden" value="" /><small data-compressor-selection-note>Une référence brute est acceptée. Laissez vide pour calculer seulement le besoin.</small></div>
 			<div class="custom-compressor" data-custom-compressor hidden>
 				<div class="field-row"><div class="field"><label for="custom-pressure">Pression maximale</label><div class="input-unit"><input id="custom-pressure" name="customPressure" type="number" min="0.1" max="50" step="0.1" value="8" /><span>bar</span></div></div><div class="field"><label for="custom-fad">Débit réellement restitué à la pression demandée</label><div class="input-unit"><input id="custom-fad" name="customFad" type="number" min="1" max="20000" step="1" /><span>L/min</span></div></div></div>
 				<div class="field-row"><div class="field"><label for="custom-tank">Volume de cuve</label><div class="input-unit"><input id="custom-tank" name="customTank" type="number" min="0" max="20000" step="1" /><span>L</span></div></div><div class="field"><label for="custom-duty">Temps maximal de fonctionnement publié</label><div class="input-unit"><input id="custom-duty" name="customDuty" type="number" min="1" max="100" step="1" value="100" /><span>%</span></div></div></div>
@@ -45,12 +45,12 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 
 		<p class="form-disclaimer">La fréquence d’utilisation vient de vos réponses. CompatAir signale les pertes possibles dans les tuyaux et les raccords, mais ne les invente pas lorsqu’aucune mesure n’est disponible.</p>
 		<p class="form-error" role="alert" data-form-error hidden></p>
-		<button class="button primary" type="submit">Vérifier la configuration</button>
+		<button class="button primary calculator-submit" type="submit"><span>Obtenir ma réponse</span><b aria-hidden="true">→</b></button>
 	</form>
 
 	<div class="calculator-output" aria-live="polite" data-calculator-output hidden>
 		<div class="report-header" aria-hidden="true"><div><strong>CompatAir</strong><span>Vérification de votre configuration</span></div><div><span>Calcul CompatAir</span><span data-report-date></span></div></div>
-		<div class="result-summary">
+		<div class="result-summary" data-decision-answer-first>
 			<div><p class="eyebrow">Réponse</p><span class="verdict-large" data-verdict></span></div>
 			<strong data-required-flow></strong><p data-result-context></p>
 			<dl class="answer-first-grid">
@@ -66,7 +66,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		<div class="result-section" data-evaluated-result></div>
 		<div class="result-section counterfactual-section" data-counterfactual><p class="eyebrow">Recommandation contrefactuelle</p><h3>Le plus petit changement vérifié</h3><div data-counterfactual-result></div><p class="counterfactual-boundary" data-counterfactual-boundary></p></div>
 		<details class="result-section result-disclosure"><summary>Accessoires et raccordement</summary><ul data-accessories></ul></details>
-		<div class="result-section recommendation-section"><p class="eyebrow">Aide à la décision</p><h3>Recommandations prioritaires</h3><p data-result-coverage></p><div class="priority-list" data-priority-list></div></div>
+		<div class="result-section recommendation-section"><p class="eyebrow">Aide à la décision</p><h3>Trois compresseurs compatibles les plus proches du besoin</h3><p>Compatibilité, qualité des données et proximité du débit structurent cette sélection technique.</p><p data-result-coverage></p><div class="priority-list" data-priority-list></div></div>
 		<details class="result-section result-inventory">
 			<summary>Explorer les {compressors.length} compresseurs documentés</summary>
 			<p>Les modèles sont regroupés selon le résultat, la réserve disponible et la fiabilité des données. Une information absente reste signalée comme telle.</p>
@@ -119,6 +119,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 
 <script>
 	import { resolveExactCatalogSearch } from '../domain/catalog-search';
+	import { sourceQualityDetail, sourceQualityLabel } from '../domain/source-quality';
 
 	type Compressor = import('../domain/runtime-catalog').RuntimeCompressor;
 	type ToolProfile = import('../domain/runtime-catalog').RuntimeToolProfile;
@@ -179,7 +180,6 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 	const setText = (selector: string, value: string) => { const element = root?.querySelector<HTMLElement>(selector); if (element) element.textContent = value; };
 	const labels = { continuous: 'Compatible en continu', intermittent: 'Compatible par intermittence', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' } as const;
 	const rank = { continuous: 0, intermittent: 1, insufficient_data: 2, incompatible: 3 } as const;
-	const dataQualityLabel = (grade: 'A' | 'B' | 'C' | 'D') => grade === 'A' ? 'Source constructeur complète' : grade === 'B' ? 'Source constructeur partielle' : grade === 'C' ? 'Source insuffisante pour conclure' : 'Source non confirmée';
 	const responseQualityLabel = (quality: SizingResult['confidence']) => quality === 'high' ? 'Réponse étayée' : quality === 'medium' ? 'Réponse à confirmer' : 'Réponse limitée';
 	type Candidate = { compressor: (typeof compressors)[number]; result: SizingResult; availableFadLpm?: number; marginCovered: boolean };
 	let demandIndex = 0;
@@ -211,12 +211,15 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		const option = id ? optionById(compressorDatalist, id) : undefined;
 		hidden.value = option?.dataset.id ?? ''; search.value = option?.value ?? '';
 		const custom = root?.querySelector<HTMLElement>('[data-custom-compressor]'); if (custom) custom.hidden = hidden.value !== 'custom';
+		const note = root?.querySelector<HTMLElement>('[data-compressor-selection-note]'); if (note) note.textContent = option ? `Référence reconnue directement : ${option.textContent?.trim() || option.value}.` : 'Une référence brute est acceptée. Laissez vide pour calculer seulement le besoin.';
 		return id === '' || Boolean(option);
 	}
 	function syncCompressorSearch() {
 		const hidden = form?.querySelector<HTMLInputElement>('[data-compressor-id]'); const search = form?.querySelector<HTMLInputElement>('[data-compressor-search]'); if (!hidden || !search) return;
 		const option = optionByInput(compressorDatalist, search.value); hidden.value = option?.dataset.id ?? '';
 		const custom = root?.querySelector<HTMLElement>('[data-custom-compressor]'); if (custom) custom.hidden = hidden.value !== 'custom';
+		const note = root?.querySelector<HTMLElement>('[data-compressor-selection-note]');
+		if (note) note.textContent = !search.value.trim() ? 'Une référence brute est acceptée. Laissez vide pour calculer seulement le besoin.' : option ? `Référence reconnue directement : ${option.textContent?.trim() || option.value}.` : 'Référence non reconnue : choisissez une suggestion ou vérifiez le numéro.';
 	}
 
 	function recordFunnelStep(step: 'started' | 'completed') {
@@ -403,7 +406,7 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		const compressor = config.selectedCompressor && config.selectedCompressor !== 'custom' ? compressors.find((item) => item.id === config.selectedCompressor) : undefined;
 		const availableResolution = compressor ? resolveAvailableFad(compressor, base.requiredPressureBar) : undefined;
 		const available = config.selectedCompressor === 'custom' ? config.custom.availableFadLpm : availableResolution?.litersPerMinute;
-		const model = config.selectedCompressor === 'custom' ? 'Compresseur personnalisé' : compressor ? `${compressor.brand} ${compressor.model} · ${dataQualityLabel(compressor.confidence)}` : 'Aucun compresseur sélectionné';
+		const model = config.selectedCompressor === 'custom' ? 'Compresseur personnalisé' : compressor ? `${compressor.brand} ${compressor.model} · ${sourceQualityLabel(compressor.confidence)}` : 'Aucun compresseur sélectionné';
 		const marginCovered = available !== undefined && available >= base.recommendedFadLpm;
 		const reserve = !config.selectedCompressor ? 'Sélectionnez un compresseur pour obtenir un verdict sur une machine.'
 			: available !== undefined && !marginCovered && (result.verdict === 'continuous' || result.verdict === 'intermittent') ? `Le besoin nominal passe, mais la marge de ${Math.round(config.safetyMargin * 100)} % n’est pas entièrement couverte.`
@@ -538,11 +541,11 @@ import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 		const title = document.createElement('h4'); const link = document.createElement('a'); link.href = `/compresseurs/${compressor.slug}/`; link.textContent = `${compressor.brand} ${compressor.model}`; title.append(link);
 		const badge = document.createElement('span'); badge.className = 'verdict-badge'; badge.textContent = resultLabel(result); head.append(title, badge);
 		const detail = document.createElement('p'); detail.textContent = result.verdict === 'insufficient_data'
-			? `Débit réellement restitué non vérifiable à ${result.requiredPressureBar} bar · ${dataQualityLabel(compressor.confidence)}.`
+			? `Débit réellement restitué non vérifiable à ${result.requiredPressureBar} bar · ${sourceQualityLabel(compressor.confidence)}.`
 			: fadResolution?.basis === 'higher-pressure-bound'
-				? `${fadResolution.litersPerMinute.toFixed(0)} L/min mesurés à ${fadResolution.referencePressureBar} bar, retenus comme borne conservatrice pour ${result.requiredPressureBar} bar · ${dataQualityLabel(compressor.confidence)}.`
-				: `${fadResolution?.litersPerMinute.toFixed(0) ?? 'Débit inconnu'} L/min disponibles à ${result.requiredPressureBar} bar · ${dataQualityLabel(compressor.confidence)}.`;
-		const quality = document.createElement('details'); quality.className = 'result-card-quality'; const qualitySummary = document.createElement('summary'); qualitySummary.textContent = 'Détail qualité'; const qualityDetail = document.createElement('span'); qualityDetail.textContent = `Grade technique ${compressor.confidence}.`;
+				? `${fadResolution.litersPerMinute.toFixed(0)} L/min mesurés à ${fadResolution.referencePressureBar} bar, retenus comme borne conservatrice pour ${result.requiredPressureBar} bar · ${sourceQualityLabel(compressor.confidence)}.`
+				: `${fadResolution?.litersPerMinute.toFixed(0) ?? 'Débit inconnu'} L/min disponibles à ${result.requiredPressureBar} bar · ${sourceQualityLabel(compressor.confidence)}.`;
+		const quality = document.createElement('details'); quality.className = 'result-card-quality'; const qualitySummary = document.createElement('summary'); qualitySummary.textContent = sourceQualityLabel(compressor.confidence); const qualityDetail = document.createElement('span'); qualityDetail.textContent = sourceQualityDetail(compressor.confidence);
 		quality.append(qualitySummary, qualityDetail); article.append(head, detail, quality);
 		if (proofToolId) { const proofLink = document.createElement('a'); proofLink.className = 'result-proof-link'; proofLink.href = `/graphe-preuve/#compresseur=${encodeURIComponent(compressor.id)}&outil=${encodeURIComponent(proofToolId)}`; proofLink.textContent = 'Remonter aux preuves'; article.append(proofLink); }
 		return article;
