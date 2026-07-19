@@ -62,6 +62,30 @@ describe('evaluateCompatibility avec plusieurs modèles de demande', () => {
 		expect(result.warnings).toContainEqual(expect.stringContaining('aucun point de courbe n’est inventé'));
 	});
 
+	it('couvre les quatre puissances LZ documentées dans la brochure constructeur', () => {
+		expect(compressors.filter((item) => item.variant?.familyId === 'atlas-copco-lz-base-mounted').map((item) => item.id).sort()).toEqual([
+			'atlas-copco-lz-10-10-bm',
+			'atlas-copco-lz-15-10-bm',
+			'atlas-copco-lz-20-10-bm',
+			'atlas-copco-lz-7-10-bm',
+		]);
+	});
+
+	it('utilise le point officiel Einhell à 7 bar sans prolonger la courbe', () => {
+		const compressor = compressors.find((item) => item.id === 'einhell-tc-ac-190-of-set')!;
+		expect(interpolateFad(compressor, 6.3)).toBeCloseTo(61.53, 2);
+		expect(interpolateFad(compressor, 7)).toBe(55);
+		expect(interpolateFad(compressor, 8)).toBeUndefined();
+	});
+
+	it('ajoute des stations BOGE concluantes à 8 bar dans toute la plage de débit', () => {
+		const eightBarTool = tools.find((tool) => tool.id === 'einhell-tc-pw-610-compact')!;
+		const lowFlow = compressors.find((item) => item.id === 'boge-po-1-lr-50')!;
+		const highFlow = compressors.find((item) => item.id === 'boge-po-8-ltr-270')!;
+		expect(evaluateCompatibility(lowFlow, eightBarTool).verdict).toBe('incompatible');
+		expect(evaluateCompatibility(highFlow, eightBarTool)).toMatchObject({ verdict: 'continuous', availableFadLpm: 1336, availableFadBasis: 'exact' });
+	});
+
 	it('couvre un large éventail de clés à chocs sans masquer le cas à 8 bar', () => {
 		const impactWrenches = tools.filter((tool) => tool.categoryId === 'cle-a-chocs');
 		const compatibleCount = (compressorId: string) => {

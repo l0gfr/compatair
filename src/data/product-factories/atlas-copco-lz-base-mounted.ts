@@ -4,15 +4,16 @@ const brochureUrl = 'https://www.atlascopco.com/content/dam/atlas-copco/compress
 const currentRangeUrl = 'https://www.atlascopco.com/en-in/compressors/products/air-compressor/oil-free-air-compressors/lz-premium';
 
 type AtlasCopcoLzData = {
-	id: 'atlas-copco-lz-10-10-bm' | 'atlas-copco-lz-20-10-bm';
-	model: 'LZ 10-10 BM' | 'LZ 20-10 BM';
-	fadLpmAtSevenBar: 930 | 1860;
-	powerKw: 7.5 | 15;
-	noiseDb: 69 | 76;
+	id: 'atlas-copco-lz-7-10-bm' | 'atlas-copco-lz-10-10-bm' | 'atlas-copco-lz-15-10-bm' | 'atlas-copco-lz-20-10-bm';
+	model: 'LZ 7-10 BM' | 'LZ 10-10 BM' | 'LZ 15-10 BM' | 'LZ 20-10 BM';
+	fadLpmAtSevenBar: 660 | 930 | 1320 | 1860;
+	powerKw: 5.5 | 7.5 | 11 | 15;
+	noiseDb: 67 | 69 | 74 | 76;
 	dimensions: string;
 	imageSrc: string;
 	imageSourceUrl: string;
 	imageSourceLabel: string;
+	imageIsFamilyVisual?: boolean;
 };
 
 export function atlasCopcoLzBaseMounted(data: AtlasCopcoLzData) {
@@ -58,6 +59,7 @@ export function atlasCopcoLzBaseMounted(data: AtlasCopcoLzData) {
 			limitations: [
 				'Le FAD est documenté à 7 bar : CompatAir peut l’utiliser comme borne conservatrice pour un besoin inférieur, mais ne l’utilise jamais pour un outil demandant plus de 7 bar.',
 				'La version BM est livrée sans réservoir ; le stockage, le traitement d’air et les protections de l’installation doivent être dimensionnés séparément.',
+				...(data.imageIsFamilyVisual ? ['Le visuel officiel illustre la gamme LZ 7-20 et peut différer dans certains détails de cette puissance.'] : []),
 			],
 		},
 		specifications: [

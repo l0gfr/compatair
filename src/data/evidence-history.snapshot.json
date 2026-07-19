@@ -4502,7 +4502,558 @@
         "confidence": "A",
         "notes": "La page actuelle maintient la gamme LZ dans le catalogue Atlas Copco et publie une plage de 11 à 31 L/s, 4 à 10 bar, 5,5 à 15 kW, avec options 400 V."
       }
+    },
+    {
+      "id": "added:atlas-copco-lz-15-10-bm:atlas-copco-lz-7-20-official-brochure:2026-07-19",
+      "evidenceId": "atlas-copco-lz-7-20-official-brochure",
+      "productId": "atlas-copco-lz-15-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9fca8a577e9472bbcb405bb3c32c7628245e70dc5910ea0624048b41d6822f42",
+      "snapshot": {
+        "id": "atlas-copco-lz-7-20-official-brochure",
+        "sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/compressor-technique/industrial-air/documents/leaflets/compressors/lz_7-20/LZ_7-20_antwerp_leaflet_EN_2935080544.pdf",
+        "sourceLabel": "Atlas Copco, brochure officielle LZ 7-20, tableau des performances et conditions de référence page 7",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-18",
+        "confidence": "A",
+        "notes": "Le tableau publie les variantes LZ 7-10, LZ 10-10, LZ 15-10 et LZ 20-10 à 50/60 Hz ; le FAD est déclaré mesuré à 7 bar selon ISO 1217 Ed. 3 annexe C."
+      }
+    },
+    {
+      "id": "added:atlas-copco-lz-15-10-bm:atlas-copco-lz-current-product-page:2026-07-19",
+      "evidenceId": "atlas-copco-lz-current-product-page",
+      "productId": "atlas-copco-lz-15-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a7bfcb4a27ea27ee90c90908b313cbd496bc254f1e06ebe56d51b468049b710f",
+      "snapshot": {
+        "id": "atlas-copco-lz-current-product-page",
+        "sourceUrl": "https://www.atlascopco.com/en-in/compressors/products/air-compressor/oil-free-air-compressors/lz-premium",
+        "sourceLabel": "Atlas Copco, page produit actuelle LZ Premium",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-18",
+        "confidence": "A",
+        "notes": "La page actuelle maintient la gamme LZ dans le catalogue Atlas Copco et publie une plage de 11 à 31 L/s, 4 à 10 bar, 5,5 à 15 kW, avec options 400 V."
+      }
+    },
+    {
+      "id": "added:atlas-copco-lz-7-10-bm:atlas-copco-lz-7-20-official-brochure:2026-07-19",
+      "evidenceId": "atlas-copco-lz-7-20-official-brochure",
+      "productId": "atlas-copco-lz-7-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "00ac5109eea8866f49a7a151e6aac1e55dbe6a7a4845106bb1c8adae5a9f09da",
+      "snapshot": {
+        "id": "atlas-copco-lz-7-20-official-brochure",
+        "sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/compressor-technique/industrial-air/documents/leaflets/compressors/lz_7-20/LZ_7-20_antwerp_leaflet_EN_2935080544.pdf",
+        "sourceLabel": "Atlas Copco, brochure officielle LZ 7-20, tableau des performances et conditions de référence page 7",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-18",
+        "confidence": "A",
+        "notes": "Le tableau publie les variantes LZ 7-10, LZ 10-10, LZ 15-10 et LZ 20-10 à 50/60 Hz ; le FAD est déclaré mesuré à 7 bar selon ISO 1217 Ed. 3 annexe C."
+      }
+    },
+    {
+      "id": "added:atlas-copco-lz-7-10-bm:atlas-copco-lz-current-product-page:2026-07-19",
+      "evidenceId": "atlas-copco-lz-current-product-page",
+      "productId": "atlas-copco-lz-7-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "47d834b5c9763e3f470168637d0b7acf6e57262f82cb6702440bfd425f11cbf2",
+      "snapshot": {
+        "id": "atlas-copco-lz-current-product-page",
+        "sourceUrl": "https://www.atlascopco.com/en-in/compressors/products/air-compressor/oil-free-air-compressors/lz-premium",
+        "sourceLabel": "Atlas Copco, page produit actuelle LZ Premium",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-18",
+        "confidence": "A",
+        "notes": "La page actuelle maintient la gamme LZ dans le catalogue Atlas Copco et publie une plage de 11 à 31 L/s, 4 à 10 bar, 5,5 à 15 kW, avec options 400 V."
+      }
+    },
+    {
+      "id": "added:boge-po-1-lr-50:boge-po-current-range-2026:2026-07-19",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-1-lr-50",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "25d49e85d913aee72ee8891a863ee97b45e076cedd7f9c84021e1c37a5392351",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "La page actuelle présente 36 variantes, dont les configurations sur réservoir et doubles, avec une plage publiée jusqu’à 1 336 L/min."
+      }
+    },
+    {
+      "id": "added:boge-po-1-lr-50:boge-po-fr-official-brochure-2026:2026-07-19",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-1-lr-50",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7d5d5e31d81f9529eddcad27d7d0cbc1dc2a2c327ae76d9370472e1d1ff71b07",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://www.boge.com/sites/default/files/382-fr-po-series_6.pdf",
+        "sourceLabel": "BOGE, brochure officielle française série PO, tableaux des variantes LR et LTR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:boge-po-1-ltr-160:boge-po-current-range-2026:2026-07-19",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-1-ltr-160",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ed1ea4dd1c82f157872e34db2911b24cd1d9986f172dc23bfcd8b23e8ca7b00d",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "La page actuelle présente 36 variantes, dont les configurations sur réservoir et doubles, avec une plage publiée jusqu’à 1 336 L/min."
+      }
+    },
+    {
+      "id": "added:boge-po-1-ltr-160:boge-po-fr-official-brochure-2026:2026-07-19",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-1-ltr-160",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "4ca841ed0b534d7b76831e160b4a363174eaeaf8cccf1291032b33edc8d0ce5f",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://www.boge.com/sites/default/files/382-fr-po-series_6.pdf",
+        "sourceLabel": "BOGE, brochure officielle française série PO, tableaux des variantes LR et LTR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:boge-po-2-lr-50:boge-po-current-range-2026:2026-07-19",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-2-lr-50",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "97d15cb15be2cbf12ced566899000ae34af407416f1fafd075933053a9142cc2",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "La page actuelle présente 36 variantes, dont les configurations sur réservoir et doubles, avec une plage publiée jusqu’à 1 336 L/min."
+      }
+    },
+    {
+      "id": "added:boge-po-2-lr-50:boge-po-fr-official-brochure-2026:2026-07-19",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-2-lr-50",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7f75665219064539e74f403aad1c10177796db8b205ef2e1abd285e4f82635dd",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://www.boge.com/sites/default/files/382-fr-po-series_6.pdf",
+        "sourceLabel": "BOGE, brochure officielle française série PO, tableaux des variantes LR et LTR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:boge-po-2-ltr-160:boge-po-current-range-2026:2026-07-19",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-2-ltr-160",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ebd80870f1c7b0e91724a6f3e8e6fef7ef063f41a828fc62fde705e308278ddc",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "La page actuelle présente 36 variantes, dont les configurations sur réservoir et doubles, avec une plage publiée jusqu’à 1 336 L/min."
+      }
+    },
+    {
+      "id": "added:boge-po-2-ltr-160:boge-po-fr-official-brochure-2026:2026-07-19",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-2-ltr-160",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "db928e1336f8b295c79c9f845b95026b237913d84b0d0b2e4b15df09b4cc9b47",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://www.boge.com/sites/default/files/382-fr-po-series_6.pdf",
+        "sourceLabel": "BOGE, brochure officielle française série PO, tableaux des variantes LR et LTR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:boge-po-3-lr-90:boge-po-current-range-2026:2026-07-19",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-3-lr-90",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "73503c5d7a43763df0c97e2c90daffca009c2e291543b0362332fff167064b11",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "La page actuelle présente 36 variantes, dont les configurations sur réservoir et doubles, avec une plage publiée jusqu’à 1 336 L/min."
+      }
+    },
+    {
+      "id": "added:boge-po-3-lr-90:boge-po-fr-official-brochure-2026:2026-07-19",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-3-lr-90",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8539723fd0f559aedd41c34482d31ca4abc10c74597eb9efd722fee2010de993",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://www.boge.com/sites/default/files/382-fr-po-series_6.pdf",
+        "sourceLabel": "BOGE, brochure officielle française série PO, tableaux des variantes LR et LTR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:boge-po-3-ltr-270:boge-po-current-range-2026:2026-07-19",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-3-ltr-270",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "429ff40b03422bd2e5db5e22e069d76339dc2edfab5e34f0d4277a5c77d8d8f8",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "La page actuelle présente 36 variantes, dont les configurations sur réservoir et doubles, avec une plage publiée jusqu’à 1 336 L/min."
+      }
+    },
+    {
+      "id": "added:boge-po-3-ltr-270:boge-po-fr-official-brochure-2026:2026-07-19",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-3-ltr-270",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b7ab012e97b0eb9064db526970dda85eaef2f9d4e35fba9fb8598b1c6dab99d8",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://www.boge.com/sites/default/files/382-fr-po-series_6.pdf",
+        "sourceLabel": "BOGE, brochure officielle française série PO, tableaux des variantes LR et LTR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:boge-po-4-lr-90:boge-po-current-range-2026:2026-07-19",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-4-lr-90",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "58fbc9697e9d735c7f20078f7b2b87b81d9c98a466f7f6602f2475062250866f",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "La page actuelle présente 36 variantes, dont les configurations sur réservoir et doubles, avec une plage publiée jusqu’à 1 336 L/min."
+      }
+    },
+    {
+      "id": "added:boge-po-4-lr-90:boge-po-fr-official-brochure-2026:2026-07-19",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-4-lr-90",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a71fe2d7d119b9dafb9c4b72eabc0e69be5bad859730b778dd5e4824ff1d90fa",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://www.boge.com/sites/default/files/382-fr-po-series_6.pdf",
+        "sourceLabel": "BOGE, brochure officielle française série PO, tableaux des variantes LR et LTR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:boge-po-4-ltr-270:boge-po-current-range-2026:2026-07-19",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-4-ltr-270",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2af8089d72babee7d1bbc51dd3f1e0007d0854389ea50bdd04e06ecc34dee8bd",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "La page actuelle présente 36 variantes, dont les configurations sur réservoir et doubles, avec une plage publiée jusqu’à 1 336 L/min."
+      }
+    },
+    {
+      "id": "added:boge-po-4-ltr-270:boge-po-fr-official-brochure-2026:2026-07-19",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-4-ltr-270",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "50b7a193868268521c3d4cafc889fe312b6e9f59e40952822e0a15ac378e2594",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://www.boge.com/sites/default/files/382-fr-po-series_6.pdf",
+        "sourceLabel": "BOGE, brochure officielle française série PO, tableaux des variantes LR et LTR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:boge-po-6-lr-160:boge-po-current-range-2026:2026-07-19",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-6-lr-160",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "abfc30deeb4f9100a1d7755645ce48d50f885ee9294d788069121dc27f8bc8c7",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "La page actuelle présente 36 variantes, dont les configurations sur réservoir et doubles, avec une plage publiée jusqu’à 1 336 L/min."
+      }
+    },
+    {
+      "id": "added:boge-po-6-lr-160:boge-po-fr-official-brochure-2026:2026-07-19",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-6-lr-160",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "30da57094c6020ef61ed0d9ec3c6251bff2de084b8617169609ee6dea09d699d",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://www.boge.com/sites/default/files/382-fr-po-series_6.pdf",
+        "sourceLabel": "BOGE, brochure officielle française série PO, tableaux des variantes LR et LTR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:boge-po-6-ltr-270:boge-po-current-range-2026:2026-07-19",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-6-ltr-270",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c3c7af9a193338ae6476e0245e5fa719d9bf6798c3eb2cdca06f7e5edd772953",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "La page actuelle présente 36 variantes, dont les configurations sur réservoir et doubles, avec une plage publiée jusqu’à 1 336 L/min."
+      }
+    },
+    {
+      "id": "added:boge-po-6-ltr-270:boge-po-fr-official-brochure-2026:2026-07-19",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-6-ltr-270",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "234ec64ad5224ea2664a2bbe05fa1a49f6a8bb975eeddb6763ca46d9b4e86c45",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://www.boge.com/sites/default/files/382-fr-po-series_6.pdf",
+        "sourceLabel": "BOGE, brochure officielle française série PO, tableaux des variantes LR et LTR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:boge-po-8-lr-160:boge-po-current-range-2026:2026-07-19",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-8-lr-160",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5c216b17858594cf6844bb3e0d34d9f40a2458302954f489121091cc1e537194",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "La page actuelle présente 36 variantes, dont les configurations sur réservoir et doubles, avec une plage publiée jusqu’à 1 336 L/min."
+      }
+    },
+    {
+      "id": "added:boge-po-8-lr-160:boge-po-fr-official-brochure-2026:2026-07-19",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-8-lr-160",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "22da21f03c4eac0d80f4b30e50bb8003c8eee35af9cf7adf9c509b804f1a5fbc",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://www.boge.com/sites/default/files/382-fr-po-series_6.pdf",
+        "sourceLabel": "BOGE, brochure officielle française série PO, tableaux des variantes LR et LTR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:boge-po-8-ltr-270:boge-po-current-range-2026:2026-07-19",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-8-ltr-270",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6c410853bb3c3020739cca758b3d0bcdae4776c978b6385eedeaca991e4c9435",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "La page actuelle présente 36 variantes, dont les configurations sur réservoir et doubles, avec une plage publiée jusqu’à 1 336 L/min."
+      }
+    },
+    {
+      "id": "added:boge-po-8-ltr-270:boge-po-fr-official-brochure-2026:2026-07-19",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-8-ltr-270",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "4df69f2f53e509d5e7ba4a9661ba4b6dc895dd26bd752716c077557ad580af0e",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://www.boge.com/sites/default/files/382-fr-po-series_6.pdf",
+        "sourceLabel": "BOGE, brochure officielle française série PO, tableaux des variantes LR et LTR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "corrected:einhell-tc-ac-190-of-set:einhell-4020660-official:2026-07-19",
+      "evidenceId": "einhell-4020660-official",
+      "productId": "einhell-tc-ac-190-of-set",
+      "productType": "compressor",
+      "occurredAt": "2026-07-19",
+      "kind": "corrected",
+      "summary": "Ajout du point officiel Einhell à 7 bar et actualisation de la source constructeur.",
+      "fingerprint": "0deaab9102bbc05b8da11d49e485fa68a61d0f372aca6bea868c1ff3cb782336",
+      "snapshot": {
+        "id": "einhell-4020660-official",
+        "sourceUrl": "https://www.einhell.fr/p/4020660-tc-ac-190-of-set/",
+        "sourceLabel": "Einhell France, fiche produit officielle TC-AC 190 OF Set",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-19",
+        "confidence": "A",
+        "notes": "La section Informations techniques publie explicitement 165 L/min à 0 bar, 83 L/min à 4 bar et 55 L/min à 7 bar."
+      }
     }
   ],
-  "historyVersion": "3b853facb572b3adfa1f1c631b9026d1468bf6b266d913962d8bb05fec473f03"
+  "historyVersion": "495121b2c317c78cbefddd5bc206a7ea054496e3ed39e778ceb5c60bf8d255fc"
 }
