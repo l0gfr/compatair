@@ -12,7 +12,8 @@ describe('runtime catalog', () => {
 		expect(runtime.compressors).toHaveLength(compressors.length);
 		expect(runtime.tools).toHaveLength(tools.length);
 		expect(runtime.compressors[0]).not.toHaveProperty('editorial');
-		expect(runtime.tools[0]).not.toHaveProperty('fieldSources');
+		expect(runtime.tools[0].fieldSources).toEqual(expect.any(Object));
+		expect(runtime.tools[0]).not.toHaveProperty('notes');
 		expect(runtimeCatalogSchema.parse(runtime)).toEqual(runtime);
 	});
 

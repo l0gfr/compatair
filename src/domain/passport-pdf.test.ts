@@ -11,11 +11,13 @@ describe('CompatAir passport PDF', () => {
 			compressorLabel: 'Compresseur test', toolLabels: ['Outil test'], availableFadLpm: 140, nominalMarginPercent: 40, compatAirMarginCovered: true,
 			sources: [{ id: 'source', productId: 'tool', productLabel: 'Outil test', label: 'Notice officielle', url: 'https://example.com/manual.pdf', retrievedAt: '2026-07-14', confidence: 'A' }],
 			warnings: ['Mesurer la pression en charge.'], missingData: [], possibleUpgrades: ['Conserver le suivi.'],
+			installationPlan: { version: '1.0.0', primaryReserve: 'Mesurer la pression en charge.', items: [{ id: 'loaded-pressure-test', phase: 'before-commissioning', status: 'site-measurement', completed: false, title: 'Pression mesurée en charge au poste', summary: 'Mesure absente.', action: 'Mesurer au raccord de l’outil.', sourceRefs: [] }], counts: { sourceConfirmed: 0, siteMeasurements: 1, siteCompleted: 0, undocumented: 0 } },
 		} satisfies PassportReport;
 		const pdf = createPassportPdf(report, 'https://compatair.fr/passeport/#passport=fixture');
 		const text = new TextDecoder('latin1').decode(pdf);
 		expect(text.startsWith('%PDF-1.4')).toBe(true);
 		expect(text).toContain('PASSEPORT COMPATAIR');
+		expect(text).toContain("Plan d'installation et de mise en service");
 		expect(text).toContain('/Type /Page');
 		expect(text.endsWith('%%EOF\n')).toBe(true);
 		expect(pdf.length).toBeGreaterThan(2_000);

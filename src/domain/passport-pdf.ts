@@ -62,6 +62,12 @@ function filtrationLabel(value: PassportReport['configuration']['filtration']) {
 	return { unknown: 'Non renseignée', none: 'Aucune déclarée', particle: 'Filtration particulaire', 'water-separator': "Séparateur d'eau", coalescing: 'Filtration coalescente', dryer: 'Sécheur' }[value];
 }
 
+function installationStatusLabel(item: PassportReport['installationPlan']['items'][number]) {
+	if (item.status === 'source-confirmed') return 'CONFIRME PAR UNE SOURCE';
+	if (item.status === 'undocumented') return 'NON DOCUMENTE';
+	return item.completed ? 'MESURE RENSEIGNEE' : 'A MESURER SUR SITE';
+}
+
 export function createPassportPdf(report: PassportReport, passportUrl: string) {
 	const pages: string[][] = [];
 	let page: string[];
@@ -109,6 +115,16 @@ export function createPassportPdf(report: PassportReport, passportUrl: string) {
 	addParagraph(report.compressorLabel, { size: 25, bold: true, color: '0.063 0.157 0.118', spacing: 9 });
 	addParagraph(passportVerdictLabel(report.result), { size: 14, bold: true, color: report.result.verdict === 'incompatible' ? '0.64 0.18 0.16' : '0.10 0.44 0.31', spacing: 6 });
 	addParagraph(`Identifiant ${report.passportId} - moteur ${report.calculationVersion} - catalogue vérifié le ${report.catalogVerifiedAt}.`, { size: 8.5, color: '0.33 0.40 0.35', spacing: 12 });
+
+	addHeading("Plan d'installation et de mise en service");
+	addParagraph(`Principale réserve : ${report.installationPlan.primaryReserve}`, { size: 10, bold: true, color: '0.063 0.157 0.118', spacing: 8 });
+	addParagraph(`${report.installationPlan.counts.sourceConfirmed} contrôles confirmés par une source - ${report.installationPlan.counts.siteCompleted}/${report.installationPlan.counts.siteMeasurements} mesures terrain renseignées - ${report.installationPlan.counts.undocumented} points non documentés.`, { size: 8.5, color: '0.33 0.40 0.35', spacing: 8 });
+	for (const [phase, phaseLabel] of [['before-purchase', 'AVANT ACHAT'], ['before-commissioning', 'AVANT PREMIERE UTILISATION']] as const) {
+		addParagraph(phaseLabel, { size: 9, bold: true, color: '0.10 0.44 0.31', spacing: 4 });
+		for (const item of report.installationPlan.items.filter((entry) => entry.phase === phase)) {
+			addBullet(`${installationStatusLabel(item)} - ${item.title}. ${item.summary} Action : ${item.action}`);
+		}
+	}
 
 	addHeading('Synthèse des calculs');
 	addBullet(`Débit de pointe ou de dimensionnement : ${formatNumber(report.result.peakFlowLpm)} L/min.`);

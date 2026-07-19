@@ -31,14 +31,37 @@
 		</div>
 
 		<div class="passport-actions">
-			<button class="button primary" type="button" data-download>Télécharger le PDF</button>
+			<button class="button primary" type="button" data-download>Télécharger le dossier PDF</button>
+			<button class="button" type="button" data-print-plan>Imprimer la checklist</button>
 			<button class="button" type="button" data-copy>Copier le lien</button>
 			<a class="button" href="/calculateur/" data-edit>Modifier</a>
 			<span role="status" data-action-status></span>
 		</div>
 
+		<section class="passport-section passport-installation-plan" data-installation-plan>
+			<header><span>01</span><div><p class="eyebrow">Du choix à la mise en service</p><h3>Plan d’installation contextualisé</h3></div></header>
+			<div class="installation-plan-answer">
+				<div><small>Principale réserve</small><strong data-plan-reserve></strong></div>
+				<dl>
+					<div><dt>Confirmés par une source</dt><dd data-plan-source-count></dd></div>
+					<div><dt>Mesures terrain renseignées</dt><dd data-plan-site-count></dd></div>
+					<div><dt>Non documentés</dt><dd data-plan-undocumented-count></dd></div>
+				</dl>
+			</div>
+			<div class="installation-plan-legend" aria-label="Légende des statuts">
+				<span data-plan-status="source-confirmed">Confirmé par une source</span>
+				<span data-plan-status="site-measurement">À mesurer sur site</span>
+				<span data-plan-status="undocumented">Non documenté</span>
+			</div>
+			<div class="installation-plan-phases">
+				<section aria-labelledby="plan-before-purchase"><header><span>Avant achat</span><h4 id="plan-before-purchase">Valider la machine et ses interfaces</h4></header><div data-plan-before-purchase></div></section>
+				<section aria-labelledby="plan-before-commissioning"><header><span>Avant première utilisation</span><h4 id="plan-before-commissioning">Contrôler l’installation réelle</h4></header><div data-plan-before-commissioning></div></section>
+			</div>
+			<p class="installation-plan-boundary">Une case cochée correspond soit à une caractéristique reliée à sa source, soit à une mesure déjà renseignée dans le calculateur. Elle ne constitue pas une certification de l’installation.</p>
+		</section>
+
 		<section class="passport-section passport-calculations">
-			<header><span>01</span><h3>Calculs et marges</h3></header>
+			<header><span>02</span><h3>Calculs et marges</h3></header>
 			<dl class="passport-metrics">
 				<div><dt>Débit de pointe</dt><dd data-peak></dd></div>
 				<div><dt>Débit moyen</dt><dd data-average></dd></div>
@@ -52,7 +75,7 @@
 
 		<div class="passport-two-columns">
 			<section class="passport-section">
-				<header><span>02</span><h3>Installation déclarée</h3></header>
+				<header><span>03</span><h3>Installation déclarée</h3></header>
 				<dl class="passport-details">
 					<div><dt>Outils</dt><dd data-tools></dd></div>
 					<div><dt>Organisation</dt><dd data-mode></dd></div>
@@ -68,24 +91,24 @@
 			</section>
 
 			<section class="passport-section passport-watch">
-				<header><span>03</span><h3>Points de vigilance</h3></header>
+				<header><span>04</span><h3>Points de vigilance</h3></header>
 				<ul data-warnings></ul>
 			</section>
 		</div>
 
 		<div class="passport-two-columns">
 			<section class="passport-section">
-				<header><span>04</span><h3>Évolutions possibles</h3></header>
+				<header><span>05</span><h3>Évolutions possibles</h3></header>
 				<ul data-upgrades></ul>
 			</section>
 			<section class="passport-section passport-missing">
-				<header><span>05</span><h3>Données manquantes</h3></header>
+				<header><span>06</span><h3>Données manquantes</h3></header>
 				<ul data-missing></ul>
 			</section>
 		</div>
 
 		<section class="passport-section">
-			<header><span>06</span><h3>Sources liées</h3></header>
+			<header><span>07</span><h3>Sources liées</h3></header>
 			<div class="passport-sources" data-sources></div>
 		</section>
 
@@ -126,7 +149,53 @@
 		}
 	}
 
+	function renderInstallationPlan(report: PassportReport) {
+		const plan = report.installationPlan;
+		setText('[data-plan-reserve]', plan.primaryReserve);
+		setText('[data-plan-source-count]', String(plan.counts.sourceConfirmed));
+		setText('[data-plan-site-count]', `${plan.counts.siteCompleted}/${plan.counts.siteMeasurements}`);
+		setText('[data-plan-undocumented-count]', String(plan.counts.undocumented));
+		const sourceByRef = new Map(report.sources.map((source) => [`${source.productId}:${source.id}`, source]));
+		const statusLabel = (item: typeof plan.items[number]) => item.status === 'source-confirmed'
+			? 'Confirmé par une source'
+			: item.status === 'undocumented'
+				? 'Non documenté'
+				: item.completed ? 'Mesure renseignée' : 'À mesurer sur site';
+		const renderPhase = (selector: string, phase: typeof plan.items[number]['phase']) => {
+			const target = query<HTMLElement>(selector);
+			if (!target) return;
+			target.replaceChildren();
+			for (const item of plan.items.filter((entry) => entry.phase === phase)) {
+				const article = document.createElement('article');
+				article.className = 'installation-plan-item';
+				article.dataset.planStatus = item.status;
+				article.dataset.planCompleted = String(item.completed);
+				const checkbox = document.createElement('input');
+				checkbox.type = 'checkbox'; checkbox.checked = item.completed; checkbox.disabled = true;
+				checkbox.setAttribute('aria-label', item.completed ? `${item.title} : contrôle renseigné` : `${item.title} : contrôle restant`);
+				const body = document.createElement('div');
+				const head = document.createElement('header');
+				const title = document.createElement('h5'); title.textContent = item.title;
+				const badge = document.createElement('span'); badge.textContent = statusLabel(item); badge.dataset.planStatus = item.status;
+				head.append(title, badge);
+				const summary = document.createElement('p'); summary.textContent = item.summary;
+				const action = document.createElement('p'); action.className = 'installation-plan-action'; const actionLabel = document.createElement('strong'); actionLabel.textContent = 'Action'; action.append(actionLabel, ` ${item.action}`);
+				const links = document.createElement('footer');
+				for (const sourceRef of item.sourceRefs) {
+					const source = sourceByRef.get(sourceRef); if (!source) continue;
+					const link = document.createElement('a'); link.href = source.url; link.rel = 'noreferrer'; link.textContent = `Source · ${source.productLabel}`; links.append(link);
+				}
+				if (item.guidePath && item.guideLabel) { const guide = document.createElement('a'); guide.href = item.guidePath; guide.textContent = item.guideLabel; links.append(guide); }
+				body.append(head, summary, action); if (links.childElementCount) body.append(links);
+				article.append(checkbox, body); target.append(article);
+			}
+		};
+		renderPhase('[data-plan-before-purchase]', 'before-purchase');
+		renderPhase('[data-plan-before-commissioning]', 'before-commissioning');
+	}
+
 	function renderPassport(report: PassportReport, currentUrl: string, scenarioId?: string) {
+			renderInstallationPlan(report);
 			setText('[data-compressor]', report.compressorLabel);
 			setText('[data-verdict]', passportVerdictLabel(report.result));
 			query<HTMLElement>('[data-verdict]')?.setAttribute('data-status', report.result.verdict);
@@ -197,6 +266,8 @@
 					downloadButton.disabled = false;
 				}
 			};
+			const printButton = query<HTMLButtonElement>('[data-print-plan]');
+			if (printButton) printButton.onclick = () => window.print();
 	}
 
 	async function loadPassport() {

@@ -13,6 +13,8 @@ const runtimeEvidenceSchema = z.object({
 	confidence: z.enum(['A', 'B', 'C', 'D']),
 });
 
+const runtimeFieldSourcesSchema = z.record(z.string(), z.array(z.string().min(1).max(160)).max(20));
+
 const runtimeCompressorSchema = z.object({
 	id: z.string().regex(/^[a-z0-9-]{1,160}$/),
 	slug: z.string().regex(/^[a-z0-9-]+$/),
@@ -22,8 +24,13 @@ const runtimeCompressorSchema = z.object({
 	fadCurve: z.array(z.object({ pressureBar: z.number().nonnegative().max(50), litersPerMinute: z.number().positive().max(20_000) })),
 	tankLiters: z.number().nonnegative().max(20_000),
 	dutyCycle: z.number().positive().max(1).optional(),
+	voltage: z.string().min(1).max(160).optional(),
+	phase: z.enum(['single-phase', 'three-phase']).optional(),
+	powerKw: z.number().positive().max(10_000).optional(),
+	noiseDb: z.number().positive().max(300).optional(),
 	confidence: z.enum(['A', 'B', 'C', 'D']),
 	evidence: z.array(runtimeEvidenceSchema).min(1),
+	fieldSources: runtimeFieldSourcesSchema.default({}),
 });
 
 const runtimeToolBaseSchema = z.object({
@@ -33,8 +40,11 @@ const runtimeToolBaseSchema = z.object({
 	model: z.string().min(1).max(240),
 	connectorSize: z.string().max(160).optional(),
 	filtrationRequirement: z.string().max(500).optional(),
+	lubricationRequirement: z.string().max(500).optional(),
+	recommendedHose: z.object({ innerDiameterMm: z.number().positive().max(100).optional(), maximumLengthMeters: z.number().positive().max(500).optional() }).optional(),
 	confidence: z.enum(['A', 'B', 'C', 'D']),
 	evidence: z.array(runtimeEvidenceSchema).min(1),
+	fieldSources: runtimeFieldSourcesSchema.default({}),
 });
 
 const workingPressureSchema = z.object({
@@ -84,6 +94,10 @@ function projectEvidence(evidence: Compressor['evidence'][number]) {
 	};
 }
 
+function projectFieldSources(fieldSources: Record<string, string[]>, fields: string[]) {
+	return Object.fromEntries(fields.flatMap((field) => fieldSources[field]?.length ? [[field, fieldSources[field]]] : []));
+}
+
 export function createRuntimeCatalog(compressors: Compressor[], tools: ToolProfile[], catalogVerifiedAt: string, catalogVersion: string): RuntimeCatalog {
 	return runtimeCatalogSchema.parse({
 		schemaVersion: RUNTIME_CATALOG_SCHEMA_VERSION,
@@ -98,8 +112,13 @@ export function createRuntimeCatalog(compressors: Compressor[], tools: ToolProfi
 			fadCurve: item.fadCurve,
 			tankLiters: item.tankLiters,
 			dutyCycle: item.dutyCycle,
+			voltage: item.voltage,
+			phase: item.phase,
+			powerKw: item.powerKw,
+			noiseDb: item.noiseDb,
 			confidence: item.confidence,
 			evidence: item.evidence.map(projectEvidence),
+			fieldSources: projectFieldSources(item.fieldSources, ['fadCurve', 'maxPressureBar', 'voltage', 'phase', 'powerKw', 'noiseDb']),
 		})),
 		tools: tools.map((item) => ({
 			id: item.id,
@@ -108,8 +127,11 @@ export function createRuntimeCatalog(compressors: Compressor[], tools: ToolProfi
 			model: item.model,
 			connectorSize: item.connectorSize,
 			filtrationRequirement: item.filtrationRequirement,
+			lubricationRequirement: item.lubricationRequirement,
+			recommendedHose: item.recommendedHose,
 			confidence: item.confidence,
 			evidence: item.evidence.map(projectEvidence),
+			fieldSources: projectFieldSources(item.fieldSources, ['connectorSize', 'filtrationRequirement', 'lubricationRequirement', 'recommendedHose']),
 			demandModel: item.demandModel,
 			workingPressureBar: item.workingPressureBar,
 			...(item.demandModel === 'fixed-flow' ? { airflowLpm: item.airflowLpm } : {}),

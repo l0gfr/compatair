@@ -680,6 +680,42 @@ h3 { font-weight: 560; }
 .passport-metrics dt { color: var(--muted); font-size: .7rem; font-weight: 780; text-transform: uppercase; }
 .passport-metrics dd { margin: .35rem 0 0; font-weight: 850; }
 .passport-confidence { margin: 1rem 0 0; color: var(--brand); font-size: .82rem; font-weight: 800; }
+.passport-installation-plan { padding: clamp(1.4rem, 3.5vw, 3rem); background: #edf2e9; }
+.passport-installation-plan > header { align-items: flex-start; }
+.passport-installation-plan > header > div { display: grid; gap: .15rem; }
+.passport-installation-plan > header .eyebrow { margin: 0; font-size: .6rem; }
+.installation-plan-answer { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(340px, .75fr); color: white; background: #102a20; }
+.installation-plan-answer > div { display: grid; align-content: center; gap: .55rem; min-height: 10rem; padding: clamp(1.2rem, 3vw, 2rem); border-right: 1px solid rgba(255,255,255,.12); }
+.installation-plan-answer small { color: var(--accent); font: 820 .62rem/1.3 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+.installation-plan-answer strong { max-width: 760px; color: white; font: 510 clamp(1.25rem, 2.5vw, 2rem)/1.2 var(--font-display); }
+.installation-plan-answer dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; }
+.installation-plan-answer dl div { display: grid; align-content: center; min-width: 0; padding: 1rem; border-right: 1px solid rgba(255,255,255,.1); }
+.installation-plan-answer dl div:last-child { border-right: 0; }
+.installation-plan-answer dt { color: #a8bbb0; font-size: .6rem; font-weight: 780; line-height: 1.35; text-transform: uppercase; }
+.installation-plan-answer dd { margin: .5rem 0 0; color: var(--accent); font: 560 1.75rem/1 var(--font-display); }
+.installation-plan-legend { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0; }
+.installation-plan-legend span, .installation-plan-item header span { width: fit-content; padding: .35rem .5rem; border: 1px solid #b8c8ba; color: #245d43; background: #e7f3e6; font-size: .58rem; font-weight: 850; letter-spacing: .035em; text-transform: uppercase; }
+.installation-plan-legend [data-plan-status="site-measurement"], .installation-plan-item header [data-plan-status="site-measurement"] { border-color: #e1bd81; color: #7a4a0d; background: #fff0d7; }
+.installation-plan-legend [data-plan-status="undocumented"], .installation-plan-item header [data-plan-status="undocumented"] { border-color: #cabdb2; color: #695341; background: #eee8df; }
+.installation-plan-phases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid #cad4ca; background: white; }
+.installation-plan-phases > section { min-width: 0; }
+.installation-plan-phases > section + section { border-left: 1px solid #cad4ca; }
+.installation-plan-phases > section > header { min-height: 7.5rem; padding: 1.2rem; color: white; background: #173b2c; }
+.installation-plan-phases > section:nth-child(2) > header { background: #22553f; }
+.installation-plan-phases > section > header span { color: var(--accent); font: 820 .6rem/1.3 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+.installation-plan-phases > section > header h4 { max-width: 420px; margin: .45rem 0 0; color: white; font: 520 1.4rem/1.18 var(--font-display); }
+.installation-plan-item { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .8rem; min-width: 0; padding: 1rem 1.1rem; border-bottom: 1px solid #d9e0d8; background: white; }
+.installation-plan-item:last-child { border-bottom: 0; }
+.installation-plan-item > input { width: 1.05rem; height: 1.05rem; margin-top: .15rem; accent-color: var(--brand); opacity: 1; }
+.installation-plan-item > div { min-width: 0; }
+.installation-plan-item header { display: flex; align-items: flex-start; justify-content: space-between; gap: .7rem; }
+.installation-plan-item h5 { margin: 0; color: #173b2c; font-size: .84rem; line-height: 1.35; }
+.installation-plan-item p { margin: .45rem 0 0; color: #5b6e63; font-size: .72rem; line-height: 1.55; }
+.installation-plan-item .installation-plan-action { color: #354d40; }
+.installation-plan-action strong { color: var(--brand-dark); font-size: .62rem; letter-spacing: .045em; text-transform: uppercase; }
+.installation-plan-item footer { display: flex; flex-wrap: wrap; gap: .35rem .8rem; margin-top: .65rem; }
+.installation-plan-item footer a { overflow-wrap: anywhere; color: var(--brand); font-size: .64rem; font-weight: 800; text-underline-offset: .2em; }
+.installation-plan-boundary { margin: 1rem 0 0; padding-left: .8rem; border-left: 3px solid var(--brand); color: #5d7066; font-size: .72rem; }
 .passport-two-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-bottom: 1px solid var(--line); }
 .passport-two-columns .passport-section { border-bottom: 0; }
 .passport-two-columns .passport-section + .passport-section { border-left: 1px solid var(--line); }
@@ -1867,6 +1903,8 @@ details.glossary-letter[hidden] { display: none; }
 	.proof-simulation form .button { grid-column: 1 / -1; }
 	.passport-head { grid-template-columns: 1fr; }
 	.passport-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.installation-plan-answer { grid-template-columns: 1fr; }
+	.installation-plan-answer > div { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.12); }
 	.scanner-result-cards, .scanner-result-cards.compact { grid-template-columns: 1fr; }
 }
 
@@ -1926,6 +1964,9 @@ details.glossary-letter[hidden] { display: none; }
 	.proof-node-detail > *, .proof-node-detail h3, .proof-node-detail ul { grid-column: 1; }
 	.passport-two-columns, .passport-offer-grid, .passport-sources { grid-template-columns: 1fr; }
 	.passport-two-columns .passport-section + .passport-section { border-top: 1px solid var(--line); border-left: 0; }
+	.installation-plan-phases { grid-template-columns: 1fr; }
+	.installation-plan-phases > section + section { border-top: 1px solid #cad4ca; border-left: 0; }
+	.installation-plan-item header { flex-direction: column; }
 	.barometer-brand header { grid-template-columns: auto 1fr; }
 	.barometer-brand header > strong { grid-column: 2; }
 	.history-product > header { flex-direction: column; }
@@ -1970,6 +2011,9 @@ details.glossary-letter[hidden] { display: none; }
 	.article-head { padding-block: 1.75rem; }
 	.guide-compatible-results .link-cards { grid-template-columns: 1fr; }
 	.passport-metrics, .passport-identity { grid-template-columns: 1fr; }
+	.installation-plan-answer dl { grid-template-columns: 1fr; }
+	.installation-plan-answer dl div { min-height: 5.2rem; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+	.installation-plan-answer dl div:last-child { border-bottom: 0; }
 	.passport-actions .button { width: 100%; }
 	.passport-details div { grid-template-columns: 1fr; gap: .2rem; }
 	.scanner-photo, .scanner-confirmation, .scanner-result-head, .scanner-unlocks [data-unlocks], .b2b-grid { grid-template-columns: 1fr; }
@@ -2127,7 +2171,7 @@ details.glossary-letter[hidden] { display: none; }
 	body { color: #101813; background: white; font-size: 10pt; }
 	.article-infographic { overflow: visible; }
 	.article-infographic > svg { width: 100%; max-width: 100%; }
-	.site-header, .site-footer, .page-hero, .calculator-form, .share-row, .calculator-note, .result-inventory { display: none !important; }
+	.site-header, .site-footer, .page-hero, .calculator-form, .share-row, .calculator-note, .result-inventory, .passport-actions, .passport-version-choice, .passport-offers { display: none !important; }
 	.section, .calculator-section { padding: 0 !important; }
 	.container { width: 100% !important; max-width: none !important; }
 	.calculator, .calculator-v2 { display: block; }
@@ -2146,5 +2190,14 @@ details.glossary-letter[hidden] { display: none; }
 	.priority-list { grid-template-columns: 1fr; gap: .4rem; }
 	.priority-list .result-card { padding: .55rem; box-shadow: none; }
 	.result-card a { color: #101813; text-decoration: none; }
+	.passport-viewer-section { padding: 0 !important; }
+	.passport-document { overflow: visible; border: 0; border-radius: 0; box-shadow: none; }
+	.passport-head { padding: 1rem; break-inside: avoid; }
+	.passport-section { padding: .8rem; }
+	.passport-installation-plan { background: white; }
+	.installation-plan-answer, .installation-plan-phases, .installation-plan-item { break-inside: avoid; }
+	.installation-plan-answer strong { font-size: 14pt; }
+	.installation-plan-item { padding: .55rem; }
+	.installation-plan-item p { font-size: 7.5pt; }
 	a[href]::after { content: none !important; }
 }

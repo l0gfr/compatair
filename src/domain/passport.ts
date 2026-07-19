@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import type { Compressor, ToolProfile } from './catalog';
 import { resolveAvailableFad } from './compatibility';
+import { createInstallationPlan, installationPlanSchema, type InstallationPlan } from './installation-plan';
 import { CALCULATION_VERSION, sizeConfiguration, sizingInputSchema, type SizingResult } from './sizing';
 
 function isHttpsUrl(value: string) { try { return new URL(value).protocol === 'https:'; } catch { return false; } }
@@ -71,6 +72,7 @@ export type PassportReport = {
 	warnings: string[];
 	missingData: string[];
 	possibleUpgrades: string[];
+	installationPlan: InstallationPlan;
 };
 
 const passportSourceSchema = z.object({
@@ -95,6 +97,7 @@ const passportInputSnapshotSchema = z.object({
 	compressorLabel: z.string().min(1).max(240), toolLabels: z.array(z.string().min(1).max(240)).max(20),
 	availableFadLpm: z.number().positive().max(20_000).optional(), nominalMarginPercent: z.number().optional(), compatAirMarginCovered: z.boolean().optional(),
 	sources: z.array(passportSourceSchema).max(100), warnings: z.array(z.string().max(2_000)).max(100), missingData: z.array(z.string().max(2_000)).max(100), possibleUpgrades: z.array(z.string().max(2_000)).max(100),
+	installationPlan: installationPlanSchema.optional(),
 });
 
 export const passportEnvelopeSchema = z.object({
@@ -108,8 +111,8 @@ export const passportEnvelopeSchema = z.object({
 export type PassportEnvelope = z.infer<typeof passportEnvelopeSchema>;
 
 type PassportCatalogEvidence = Pick<Compressor['evidence'][number], 'id' | 'sourceUrl' | 'sourceLabel' | 'retrievedAt' | 'confidence'>;
-type PassportCompressor = Pick<Compressor, 'id' | 'brand' | 'model' | 'maxPressureBar' | 'fadCurve' | 'tankLiters' | 'dutyCycle'> & { evidence: PassportCatalogEvidence[] };
-type PassportTool = Pick<ToolProfile, 'id' | 'brand' | 'model' | 'label' | 'connectorSize' | 'filtrationRequirement'> & { evidence: PassportCatalogEvidence[] };
+type PassportCompressor = Pick<Compressor, 'id' | 'brand' | 'model' | 'maxPressureBar' | 'fadCurve' | 'tankLiters' | 'dutyCycle' | 'voltage' | 'phase' | 'powerKw' | 'noiseDb' | 'fieldSources'> & { evidence: PassportCatalogEvidence[] };
+type PassportTool = Pick<ToolProfile, 'id' | 'brand' | 'model' | 'label' | 'connectorSize' | 'filtrationRequirement' | 'lubricationRequirement' | 'recommendedHose' | 'fieldSources'> & { evidence: PassportCatalogEvidence[] };
 
 function encodeUrlPayload(value: unknown) {
 	const bytes = new TextEncoder().encode(JSON.stringify(value));
@@ -173,6 +176,7 @@ function inputSnapshotFromReport(report: PassportReport) {
 		compressorLabel: report.compressorLabel, toolLabels: report.toolLabels, availableFadLpm: report.availableFadLpm,
 		nominalMarginPercent: report.nominalMarginPercent, compatAirMarginCovered: report.compatAirMarginCovered,
 		sources: report.sources, warnings: report.warnings, missingData: report.missingData, possibleUpgrades: report.possibleUpgrades,
+		installationPlan: report.installationPlan,
 	};
 }
 
@@ -190,10 +194,20 @@ export async function createPassportEnvelope(input: unknown, compressors: Passpo
 export async function reportFromPassportEnvelope(input: PassportEnvelope): Promise<PassportReport> {
 	const envelope = passportEnvelopeSchema.parse(input);
 	if (!await verifyPassportEnvelope(envelope)) throw new Error('L’empreinte du Passeport ne correspond pas à son contenu.');
-	return {
+	const report = {
 		schemaVersion: envelope.passportSchemaVersion, calculationVersion: envelope.calculationVersion as typeof CALCULATION_VERSION,
 		catalogVerifiedAt: envelope.catalogVersion, passportId: envelope.reportDigest, generatedAt: envelope.createdAt,
 		configuration: envelope.configuration, result: envelope.resultSnapshot as SizingResult, ...envelope.inputSnapshot,
+	};
+	return {
+		...report,
+		installationPlan: report.installationPlan ?? createInstallationPlan({
+			configuration: report.configuration,
+			result: report.result,
+			tools: [],
+			availableFadLpm: report.availableFadLpm,
+			compatAirMarginCovered: report.compatAirMarginCovered,
+		}),
 	};
 }
 
@@ -262,6 +276,8 @@ export async function createPassportReport(input: unknown, compressors: Passport
 	if (configuration.fittingStandard === 'unknown' || configuration.fittingCount === undefined) possibleUpgrades.push('Inventorier les raccords, coupleurs, vannes et détendeurs puis mesurer la pression en charge de part et d’autre des restrictions.');
 	if (configuration.filtration === 'unknown') possibleUpgrades.push('Définir la qualité d’air requise par chaque usage avant de choisir filtre ou sécheur.');
 	if (!possibleUpgrades.length) possibleUpgrades.push('Conserver une mesure périodique de la pression en charge et réviser le Passeport lorsque le réseau ou les outils changent.');
+	const compatAirMarginCovered = availableFadLpm === undefined ? undefined : availableFadLpm >= result.recommendedFadLpm;
+	const installationPlan = createInstallationPlan({ configuration, result, compressor: selected, tools: selectedTools, availableFadLpm, compatAirMarginCovered });
 	return {
 		schemaVersion: PASSPORT_SCHEMA_VERSION,
 		calculationVersion: CALCULATION_VERSION,
@@ -274,10 +290,11 @@ export async function createPassportReport(input: unknown, compressors: Passport
 		toolLabels: selectedTools.map((tool) => tool.label),
 		availableFadLpm,
 		nominalMarginPercent,
-		compatAirMarginCovered: availableFadLpm === undefined ? undefined : availableFadLpm >= result.recommendedFadLpm,
+		compatAirMarginCovered,
 		sources,
 		warnings,
 		missingData: [...new Set(missingData)],
 		possibleUpgrades: [...new Set(possibleUpgrades)],
+		installationPlan,
 	};
 }

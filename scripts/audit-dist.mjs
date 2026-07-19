@@ -352,7 +352,7 @@ for (const [path, requiredColumns] of csvArtifacts) {
 if (!artifactPaths.has('/calculateur/index.html')) errors.push('recommandation contrefactuelle: calculateur rendu absent');
 else {
 	const calculatorHtml = await readFile(join(root, '/calculateur/index.html'), 'utf8');
-	for (const marker of ['data-counterfactual', 'data-counterfactual-result', 'data-counterfactual-boundary', 'data-decision-answer-first', 'data-scenario-context', 'data-scenario-result-links', 'data-contextual-compare', 'Une référence brute est acceptée', 'Trois compresseurs compatibles les plus proches du besoin', 'Comparer ces trois compresseurs pour ce besoin', 'name="measuredPressureDrop"', 'name="measuredLeak"', 'name="supplyPressure"']) {
+	for (const marker of ['data-counterfactual', 'data-counterfactual-result', 'data-counterfactual-boundary', 'data-decision-answer-first', 'data-scenario-context', 'data-scenario-result-links', 'data-contextual-compare', 'Une référence brute est acceptée', 'Trois compresseurs compatibles les plus proches du besoin', 'Comparer ces trois compresseurs pour ce besoin', 'Préparer mon installation', 'name="measuredPressureDrop"', 'name="measuredLeak"', 'name="supplyPressure"']) {
 		if (!calculatorHtml.includes(marker)) errors.push(`recommandation contrefactuelle: marqueur absent ${marker}`);
 	}
 }
@@ -368,8 +368,16 @@ else {
 if (!artifactPaths.has('/comparateur/index.html')) errors.push('parcours de décision: comparateur rendu absent');
 else {
 	const comparisonHtml = await readFile(join(root, '/comparateur/index.html'), 'utf8');
-	for (const marker of ['data-decision-visual="compare"', 'data-compare-search', 'data-compare-selected', 'data-context-section', 'data-context-need', 'data-context-cards', 'data-context-passport', 'Même besoin, mêmes règles', 'Comparer n’est pas classer', 'La référence brute est acceptée']) {
+	for (const marker of ['data-decision-visual="compare"', 'data-compare-search', 'data-compare-selected', 'data-context-section', 'data-context-need', 'data-context-cards', 'data-context-passport', 'Même besoin, mêmes règles', 'Comparer n’est pas classer', 'La référence brute est acceptée', 'Préparer l’installation de ce modèle']) {
 		if (!comparisonHtml.includes(marker)) errors.push(`parcours de décision comparateur: marqueur absent ${marker}`);
+	}
+}
+
+if (!artifactPaths.has('/passeport/index.html')) errors.push('plan installation: Passeport rendu absent');
+else {
+	const passportHtml = await readFile(join(root, '/passeport/index.html'), 'utf8');
+	for (const marker of ['data-installation-plan', 'data-plan-before-purchase', 'data-plan-before-commissioning', 'Plan d’installation contextualisé', 'Confirmé par une source', 'À mesurer sur site', 'Non documenté', 'Imprimer la checklist']) {
+		if (!passportHtml.includes(marker)) errors.push(`plan installation: marqueur absent ${marker}`);
 	}
 }
 

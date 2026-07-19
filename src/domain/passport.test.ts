@@ -25,6 +25,29 @@ describe('CompatAir passport', () => {
 		expect(report.result.calculationVersion).toBe('1.3.0');
 		expect(report.sources.length).toBeGreaterThanOrEqual(2);
 		expect(report.warnings.join(' ')).toContain('ne sont pas soustraites');
+		expect(report.installationPlan.items.some((item) => item.id === 'capacity-at-working-pressure')).toBe(true);
+		expect(report.installationPlan.items.find((item) => item.id === 'installed-hose')).toMatchObject({ status: 'site-measurement', completed: true });
+		expect(report.installationPlan.counts.siteCompleted).toBeGreaterThan(0);
+	});
+
+	it('separates sourced facts, site measurements and undocumented installation points', async () => {
+		const report = await createPassportReport({
+			...configuration,
+			demands: [{ model: 'fixed-flow' as const, id: 'metabo-drs-68-set', flowLpm: 220, pressureBar: 6.2, quantity: 1, dutyFactor: 1 }],
+			selectedCompressor: 'kaeser-eurocomp-epc-440-100',
+			hoseLengthMeters: undefined,
+			hoseInnerDiameterMm: undefined,
+			measuredPressureDropBar: undefined,
+			supplyPressureBar: undefined,
+		}, compressors, tools, CATALOG_VERIFIED_AT);
+		const capacity = report.installationPlan.items.find((item) => item.id === 'capacity-at-working-pressure');
+		const pressureTest = report.installationPlan.items.find((item) => item.id === 'loaded-pressure-test');
+		const maintenance = report.installationPlan.items.find((item) => item.id === 'maintenance-baseline');
+		expect(capacity).toMatchObject({ status: 'source-confirmed', completed: true });
+		expect(capacity?.sourceRefs.length).toBeGreaterThan(0);
+		expect(pressureTest).toMatchObject({ status: 'site-measurement', completed: false });
+		expect(maintenance).toMatchObject({ status: 'undocumented', completed: false });
+		expect(report.installationPlan.primaryReserve).toContain('chute de pression');
 	});
 
 	it('keeps the original report immutable when the current catalog changes', async () => {
