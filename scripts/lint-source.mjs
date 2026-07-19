@@ -65,6 +65,23 @@ for (const file of publicWordingFiles) {
 	const text = await readFile(file, 'utf8');
 	for (const phrase of forbiddenPublicPhrases) if (text.includes(phrase)) errors.push(`${file}: vocabulaire public trop interne (${phrase})`);
 }
+const publicContactEmail = 'contact@l0g.fr';
+const deprecatedPublicContactEmail = ['admin', 'toonux.com'].join('@');
+const contactSurfaceFiles = [
+	'src/layouts/BaseLayout.astro',
+	'src/pages/contact.astro',
+	'src/pages/securite.astro',
+	'src/pages/confidentialite.astro',
+	'src/pages/mentions-legales.astro',
+	'public/.well-known/security.txt',
+	'contracts/mcp/SECURITY.md',
+	'contracts/ucp/SECURITY.md',
+];
+for (const file of contactSurfaceFiles) {
+	const text = await readFile(file, 'utf8');
+	if (!text.includes(publicContactEmail)) errors.push(`${file}: adresse de contact publique absente ou incorrecte`);
+	if (text.includes(deprecatedPublicContactEmail)) errors.push(`${file}: ancienne adresse de contact publique interdite`);
+}
 const baseLayout = await readFile('src/layouts/BaseLayout.astro', 'utf8');
 for (const fontPreload of ['manropeLatinWghtUrl', 'newsreaderLatinWghtUrl']) {
 	if (!baseLayout.includes(`rel="preload" href={${fontPreload}} as="font"`)) errors.push(`src/layouts/BaseLayout.astro: préchargement de police manquant (${fontPreload})`);

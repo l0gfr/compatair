@@ -1,4 +1,4 @@
-Contact: mailto:admin@toonux.com
+Contact: mailto:contact@l0g.fr
 Preferred-Languages: fr, en
 Canonical: https://compatair.fr/.well-known/security.txt
 Policy: https://compatair.fr/securite/

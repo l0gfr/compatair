@@ -4,8 +4,8 @@ import type { GuideAudienceId } from './editorial-taxonomy';
 import { latestEvidenceDate } from './provenance';
 
 export const TOOL_DETAIL_EXAMPLE_LIMIT = 5;
-export const USE_PAGE_COMPATIBLE_LIMIT = 20;
-export const USE_PAGE_INCOMPATIBLE_LIMIT = 5;
+export const USE_PAGE_COMPATIBLE_LIMIT = 3;
+export const USE_PAGE_INCOMPATIBLE_LIMIT = 3;
 export const COMPRESSOR_COMPATIBLE_EXAMPLE_LIMIT = 5;
 export const COMPRESSOR_INCOMPATIBLE_EXAMPLE_LIMIT = 3;
 export const STATIC_COMPATIBILITY_RESULT_LIMIT = 30;

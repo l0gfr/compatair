@@ -23,7 +23,7 @@ const maximumEditorialProductInternalLinks = 120;
 const maximumStaticCompatibilityResultsBySection = new Map([
 	['compresseurs', 8],
 	['outils-pneumatiques', 5],
-	['quel-compresseur-pour', 25],
+	['quel-compresseur-pour', 6],
 ]);
 const maximumHtmlArtifactBytes = 64 * 1024 * 1024;
 const maximumTotalArtifactBytes = 96 * 1024 * 1024;
@@ -40,6 +40,15 @@ const forbiddenPublicWording = [
 	'au moment du build',
 	'marge interne',
 ];
+const publicContactEmail = 'contact@l0g.fr';
+const deprecatedPublicContactEmail = ['admin', 'toonux.com'].join('@');
+const requiredPublicContactPages = new Set([
+	'affiliation/index.html',
+	'contact/index.html',
+	'securite/index.html',
+	'confidentialite/index.html',
+	'mentions-legales/index.html',
+]);
 const glossaryLinkRequirements = new Map([
 	['index.html', ['/glossaire/#fad', '/glossaire/#debit-aspire', '/glossaire/#interpolation']],
 	['calculateur/index.html', ['/glossaire/#fad']],
@@ -177,7 +186,7 @@ const securityTxtPath = '/.well-known/security.txt';
 if (!artifactPaths.has(securityTxtPath)) errors.push(`${securityTxtPath}: canal de signalement absent`);
 else {
 	const securityTxt = await readFile(join(root, securityTxtPath), 'utf8');
-	if (!securityTxt.includes('Contact: mailto:admin@toonux.com')) errors.push(`${securityTxtPath}: contact de sécurité absent`);
+	if (!securityTxt.includes('Contact: mailto:contact@l0g.fr')) errors.push(`${securityTxtPath}: contact de sécurité absent ou incorrect`);
 	if (!securityTxt.includes(`Canonical: ${siteOrigin}${securityTxtPath}`)) errors.push(`${securityTxtPath}: URL canonique absente`);
 	if (!securityTxt.includes(`Policy: ${siteOrigin}/securite/`)) errors.push(`${securityTxtPath}: politique de divulgation absente`);
 	const expires = securityTxt.match(/^Expires:\s*(.+)$/m)?.[1];
@@ -460,6 +469,20 @@ for (const [path, marker] of editorialHubs) {
 	else if (!(await readFile(join(root, path), 'utf8')).includes(`data-editorial-hub="${marker}"`)) errors.push(`parcours éditorial: marqueur absent ${path}`);
 }
 
+const decisionDirectoryPages = new Map([
+	['/compresseurs/index.html', ['data-filter-search', 'data-pagination']],
+	['/outils-pneumatiques/index.html', ['data-directory-browser', 'data-directory-pagination']],
+	['/marques/index.html', ['data-directory-browser', 'data-directory-pagination']],
+	['/comparatifs/compresseurs-debit-restitue/index.html', ['data-comparison-directory', 'data-directory-pagination']],
+]);
+for (const [path, markers] of decisionDirectoryPages) {
+	if (!artifactPaths.has(path)) errors.push(`catalogue décisionnel: page rendue absente ${path}`);
+	else {
+		const html = await readFile(join(root, path), 'utf8');
+		for (const marker of markers) if (!html.includes(marker)) errors.push(`catalogue décisionnel ${path}: marqueur absent ${marker}`);
+	}
+}
+
 for (const file of htmlFiles) {
 	const html = await readFile(file, 'utf8');
 	const label = relative(root, file);
@@ -495,9 +518,16 @@ for (const file of htmlFiles) {
 			compressorIdentityPages.set(identityKey, siblings);
 		}
 	}
-	if (/^(compresseurs|outils-pneumatiques)\/[^/]+\/index\.html$/.test(label) && !html.includes('data-product-answer')) errors.push(`${label}: synthèse produit answer-first absente`);
+	if (/^(compresseurs|outils-pneumatiques)\/[^/]+\/index\.html$/.test(label)) {
+		if (!html.includes('data-product-answer')) errors.push(`${label}: synthèse produit answer-first absente`);
+		if (!html.includes('data-product-decision-hero')) errors.push(`${label}: héros décisionnel produit absent`);
+		if (!html.includes('data-product-decision')) errors.push(`${label}: réponse produit immédiate absente`);
+	}
+	if (/^quel-compresseur-pour\/[^/]+\/index\.html$/.test(label) && !html.includes('data-use-decision-page')) errors.push(`${label}: page d’usage décisionnelle absente`);
 	if (html.includes('data-search-index=')) errors.push(`${label}: index de recherche dupliqué dans le HTML`);
 	if (html.includes('href="/compatibilite/')) errors.push(`${label}: lien vers une page de couple statique interdite`);
+	if (html.includes(deprecatedPublicContactEmail)) errors.push(`${label}: ancienne adresse de contact publique interdite`);
+	if (requiredPublicContactPages.has(label) && !html.includes(publicContactEmail)) errors.push(`${label}: adresse de contact publique absente ou incorrecte`);
 	for (const wording of forbiddenPublicWording) if (html.includes(wording)) errors.push(`${label}: formulation interne interdite « ${wording} »`);
 	for (const href of glossaryLinkRequirements.get(label) ?? []) if (!html.includes(`href="${href}"`)) errors.push(`${label}: lien de glossaire requis absent ${href}`);
 	if (isCompatibilityDetail && !noindex) errors.push(`${label}: un couple produit-outil doit rester noindex`);

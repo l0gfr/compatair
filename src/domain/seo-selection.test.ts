@@ -28,7 +28,8 @@ describe('sélections SEO de compatibilité', () => {
 		const summary = createToolCompatibilitySummary(compressors, tool);
 		expect(summary.examples.length).toBeGreaterThanOrEqual(3);
 		expect(summary.examples.length).toBeLessThanOrEqual(5);
-		expect(summary.compatibleSelection.length + summary.incompatibleSelection.length).toBeLessThanOrEqual(25);
+		expect(summary.compatibleSelection.length).toBeLessThanOrEqual(3);
+		expect(summary.incompatibleSelection.length).toBeLessThanOrEqual(3);
 		expect(summary.counts.compatible + summary.counts.incompatible + summary.counts.insufficient).toBe(compressors.length);
 	});
 

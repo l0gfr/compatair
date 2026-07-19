@@ -1,0 +1,76 @@
+<script>
+	function normalized(value: string) {
+		return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('fr').trim();
+	}
+	function makePageButton(label: string, target: number, current: boolean, refresh: () => void, setPage: (page: number) => void) {
+		const button = document.createElement('button');
+		button.type = 'button';
+		button.textContent = label;
+		button.setAttribute('aria-label', label === '←' ? 'Page précédente' : label === '→' ? 'Page suivante' : `Page ${label}`);
+		if (current) button.setAttribute('aria-current', 'page');
+		button.addEventListener('click', () => { setPage(target); refresh(); });
+		return button;
+	}
+	for (const scope of document.querySelectorAll<HTMLElement>('[data-directory-browser]')) {
+		const cards = [...scope.querySelectorAll<HTMLElement>('[data-directory-card]')];
+		const grid = scope.querySelector<HTMLElement>('[data-directory-grid]');
+		const count = scope.querySelector<HTMLElement>('[data-directory-count]');
+		const pagination = scope.querySelector<HTMLElement>('[data-directory-pagination]');
+		const search = scope.querySelector<HTMLInputElement>('[data-directory-search]');
+		const sort = scope.querySelector<HTMLSelectElement>('[data-directory-sort]');
+		const filters = [...scope.querySelectorAll<HTMLSelectElement>('[data-directory-filter]')];
+		const pageSize = Number(scope.dataset.pageSize ?? 9);
+		let page = 1;
+		const setPage = (value: number) => { page = value; };
+		function refresh() {
+			const query = normalized(search?.value ?? '');
+			const filtered = cards.filter((card) => {
+				if (query && !normalized(card.dataset.search ?? '').includes(query)) return false;
+				return filters.every((filter) => !filter.value || card.dataset[filter.dataset.directoryFilter ?? ''] === filter.value);
+			});
+			filtered.sort((a, b) => {
+				const mode = sort?.value ?? 'confidence';
+				const primary = (card: HTMLElement, fallback: number) => {
+					const value = card.dataset.sortPrimary;
+					return value === undefined || value === '' ? fallback : Number(value);
+				};
+				if (mode === 'primary-desc') return primary(b, -1) - primary(a, -1) || String(a.dataset.sortName).localeCompare(String(b.dataset.sortName), 'fr');
+				if (mode === 'primary-asc') return primary(a, Number.MAX_SAFE_INTEGER) - primary(b, Number.MAX_SAFE_INTEGER) || String(a.dataset.sortName).localeCompare(String(b.dataset.sortName), 'fr');
+				if (mode === 'name') return String(a.dataset.sortName).localeCompare(String(b.dataset.sortName), 'fr');
+				return String(a.dataset.sortConfidence).localeCompare(String(b.dataset.sortConfidence)) || String(a.dataset.sortName).localeCompare(String(b.dataset.sortName), 'fr');
+			});
+			for (const card of filtered) grid?.append(card);
+			const pages = Math.max(1, Math.ceil(filtered.length / pageSize));
+			page = Math.min(page, pages);
+			for (const card of cards) {
+				const index = filtered.indexOf(card);
+				card.hidden = index < 0 || index < (page - 1) * pageSize || index >= page * pageSize;
+			}
+			if (count) count.textContent = `${filtered.length} résultat${filtered.length > 1 ? 's' : ''}`;
+			if (pagination) {
+				const items: HTMLElement[] = [];
+				if (page > 1) items.push(makePageButton('←', page - 1, false, refresh, setPage));
+				const visible = Array.from({ length: pages }, (_, index) => index + 1).filter((number) => number === 1 || number === pages || Math.abs(number - page) <= 2);
+				let previous = 0;
+				for (const number of visible) {
+					if (number - previous > 1) { const gap = document.createElement('span'); gap.textContent = '…'; gap.setAttribute('aria-hidden', 'true'); items.push(gap); }
+					items.push(makePageButton(String(number), number, number === page, refresh, setPage));
+					previous = number;
+				}
+				if (page < pages) items.push(makePageButton('→', page + 1, false, refresh, setPage));
+				pagination.replaceChildren(...items);
+			}
+		}
+		search?.addEventListener('input', () => { page = 1; refresh(); });
+		sort?.addEventListener('change', () => { page = 1; refresh(); });
+		for (const filter of filters) filter.addEventListener('change', () => { page = 1; refresh(); });
+		scope.querySelector('[data-directory-reset]')?.addEventListener('click', () => {
+			if (search) search.value = '';
+			if (sort) sort.selectedIndex = 0;
+			for (const filter of filters) filter.selectedIndex = 0;
+			page = 1;
+			refresh();
+		});
+		refresh();
+	}
+</script>

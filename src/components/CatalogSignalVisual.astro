@@ -1,0 +1,24 @@
+---
+const { mode, count, secondaryCount, title } = Astro.props as {
+	mode: 'compressors' | 'tools' | 'brands' | 'comparison';
+	count: number;
+	secondaryCount?: number;
+	title: string;
+};
+const labels = mode === 'compressors'
+	? ['RÉFÉRENCE', 'FAD + PRESSION', 'DÉCISION']
+	: mode === 'tools'
+		? ['OUTIL', 'BESOIN PUBLIÉ', 'COMPRESSEURS']
+		: mode === 'brands'
+			? ['FABRICANT', 'DOCUMENTS', 'COUVERTURE']
+			: ['MODÈLES', 'MÊMES UNITÉS', 'ÉCARTS'];
+---
+
+<aside class:list={['catalog-signal-visual', `is-${mode}`]} aria-label={title}>
+	<header><span><i></i> CompatAir / corpus</span><strong>{count} entrées</strong></header>
+	<div class="catalog-signal-flow">
+		{labels.map((label, index) => <div><span>0{index + 1}</span><b>{label}</b><i></i></div>)}
+	</div>
+	<div class="catalog-signal-gauge" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+	<footer><b>{count}</b> {title}{secondaryCount !== undefined && <span><b>{secondaryCount}</b> catégories</span>}</footer>
+</aside>

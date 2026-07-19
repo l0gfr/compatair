@@ -1,0 +1,55 @@
+---
+import ProductImage from './ProductImage.astro';
+
+type ProductImageData = { src: string; alt: string; sourceUrl: string; sourceLabel: string };
+type Metric = { label: string; value: string; detail?: string };
+type Action = { href: string; label: string; primary?: boolean };
+
+const {
+	kind,
+	eyebrow,
+	title,
+	lead,
+	reference,
+	image,
+	qualityLabel,
+	verifiedDate,
+	metrics,
+	actions,
+} = Astro.props as {
+	kind: 'Compresseur' | 'Outil pneumatique';
+	eyebrow: string;
+	title: string;
+	lead: string;
+	reference: string;
+	image: ProductImageData;
+	qualityLabel: string;
+	verifiedDate: string;
+	metrics: Metric[];
+	actions: Action[];
+};
+---
+
+<header class="product-decision-hero" data-product-decision-hero>
+	<div class="product-decision-copy">
+		<p class="product-decision-index">Fiche vérifiée / {kind}</p>
+		<p class="eyebrow">{eyebrow}</p>
+		<h1>{title}</h1>
+		<p class="lead">{lead}</p>
+		<p class="product-reference">{reference}</p>
+		<div class="product-decision-actions">
+			{actions.map((action) => <a class:list={['button', action.primary && 'primary']} href={action.href}>{action.label}</a>)}
+		</div>
+	</div>
+	<aside class="product-decision-instrument" aria-label={`Vue documentée du produit ${title}`}>
+		<header><span><i></i> CompatAir / fiche</span><strong>{kind}</strong></header>
+		<div class="product-decision-image"><ProductImage image={image} eager /></div>
+		<div class="product-decision-trace">
+			<span>Source</span><strong>{qualityLabel}</strong>
+			<small>Vérifiée le {verifiedDate}</small>
+		</div>
+	</aside>
+	<dl class="product-answer-strip" data-product-answer aria-label={`Informations essentielles sur ce ${kind.toLowerCase()}`}>
+		{metrics.map((metric) => <div><dt>{metric.label}</dt><dd>{metric.value}</dd>{metric.detail && <small>{metric.detail}</small>}</div>)}
+	</dl>
+</header>

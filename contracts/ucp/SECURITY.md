@@ -6,4 +6,4 @@ Platform profile URLs are treated as hostile input: HTTPS only, no credentials, 
 
 HTTP Message Signatures received by the public compatibility endpoint do not grant privileges and are not represented as verified authentication. No webhook or state-changing UCP operation is exposed.
 
-Report vulnerabilities privately to `admin@toonux.com`; do not include secrets or personal data.
+Report vulnerabilities privately to `contact@l0g.fr`; do not include secrets or personal data.
