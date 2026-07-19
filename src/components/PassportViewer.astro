@@ -31,12 +31,23 @@
 		</div>
 
 		<div class="passport-actions">
-			<button class="button primary" type="button" data-download>Télécharger le dossier PDF</button>
+			<a class="button primary" href="/mise-en-service/" data-commission>Valider sur site</a>
+			<button class="button" type="button" data-download>Télécharger le dossier PDF</button>
 			<button class="button" type="button" data-print-plan>Imprimer la checklist</button>
 			<button class="button" type="button" data-copy>Copier le lien</button>
 			<a class="button" href="/calculateur/" data-edit>Modifier</a>
 			<span role="status" data-action-status></span>
 		</div>
+
+		<section class="passport-commissioning-summary" data-passport-commissioning hidden>
+			<div><p class="eyebrow">Recette terrain enregistrée</p><h3 data-commissioning-verdict></h3><p data-commissioning-finding></p></div>
+			<dl>
+				<div><dt>Date du relevé</dt><dd data-commissioning-date></dd></div>
+				<div><dt>Pression au poste</dt><dd data-commissioning-pressure></dd></div>
+				<div><dt>Fuite intégrée</dt><dd data-commissioning-leak></dd></div>
+				<div><dt>Contrôles renseignés</dt><dd data-commissioning-count></dd></div>
+			</dl>
+		</section>
 
 		<section class="passport-section passport-installation-plan" data-installation-plan>
 			<header><span>01</span><div><p class="eyebrow">Du choix à la mise en service</p><h3>Plan d’installation contextualisé</h3></div></header>
@@ -121,6 +132,7 @@
 </section>
 
 <script>
+	import { assessCommissioning, commissioningVerdictLabel } from '../domain/commissioning';
 	import { createPassportReport, decodePassportConfiguration, decodePassportEnvelope, encodePassportConfiguration, passportVerdictLabel, reportFromPassportEnvelope, type PassportReport } from '../domain/passport';
 
 	const root = document.querySelector<HTMLElement>('[data-passport-root]');
@@ -196,6 +208,19 @@
 
 	function renderPassport(report: PassportReport, currentUrl: string, scenarioId?: string) {
 			renderInstallationPlan(report);
+			const commissioningPanel = query<HTMLElement>('[data-passport-commissioning]');
+			const commissioning = report.configuration.commissioning;
+			if (commissioningPanel) commissioningPanel.hidden = !commissioning;
+			if (commissioning) {
+				const assessment = assessCommissioning(report, commissioning);
+				commissioningPanel?.setAttribute('data-status', assessment.verdict);
+				setText('[data-commissioning-verdict]', commissioningVerdictLabel(assessment.verdict));
+				setText('[data-commissioning-finding]', assessment.primaryFinding);
+				setText('[data-commissioning-date]', commissioning.observedOn);
+				setText('[data-commissioning-pressure]', commissioning.toolPressureBar === undefined ? 'Non renseignée' : `${format(commissioning.toolPressureBar, 2)} bar`);
+				setText('[data-commissioning-leak]', commissioning.measuredLeakLpm === undefined ? 'Non mesurée' : `${format(commissioning.measuredLeakLpm)} L/min`);
+				setText('[data-commissioning-count]', `${assessment.counts.completed}/${assessment.counts.total}`);
+			}
 			setText('[data-compressor]', report.compressorLabel);
 			setText('[data-verdict]', passportVerdictLabel(report.result));
 			query<HTMLElement>('[data-verdict]')?.setAttribute('data-status', report.result.verdict);
@@ -241,6 +266,11 @@
 			}
 
 		query<HTMLAnchorElement>('[data-edit]')?.setAttribute('href', `/calculateur/#config=${encodePassportConfiguration(report.configuration)}${scenarioId ? `&scenario=${encodeURIComponent(scenarioId)}` : ''}`);
+			const commissioningLink = query<HTMLAnchorElement>('[data-commission]');
+			if (commissioningLink) {
+				commissioningLink.href = currentUrl.replace('/passeport/#', '/mise-en-service/#');
+				commissioningLink.textContent = commissioning ? 'Reprendre la recette terrain' : 'Valider sur site';
+			}
 			const copyButton = query<HTMLButtonElement>('[data-copy]');
 			if (copyButton) copyButton.onclick = async () => {
 				await navigator.clipboard.writeText(currentUrl);

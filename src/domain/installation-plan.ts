@@ -195,9 +195,11 @@ export function createInstallationPlan(input: InstallationPlanInput): Installati
 			sourceRefs: noiseSources,
 		},
 		{
-			id: 'site-location', phase: 'before-purchase', status: 'site-measurement', completed: false,
+			id: 'site-location', phase: 'before-purchase', status: 'site-measurement', completed: configuration.commissioning?.siteLocationChecked ?? false,
 			title: 'Emplacement, ventilation et accès',
-			summary: 'Les dégagements, la ventilation, la stabilité du support et l’accès pour l’entretien dépendent du site réel.',
+			summary: configuration.commissioning?.siteLocationChecked
+				? `Contrôle avec la notice déclaré réalisé le ${configuration.commissioning.observedOn}.`
+				: 'Les dégagements, la ventilation, la stabilité du support et l’accès pour l’entretien dépendent du site réel.',
 			action: 'Contrôler le local avec la notice de la référence retenue avant de fixer la machine ou de commander le raccordement.',
 			sourceRefs: [],
 		},
@@ -254,9 +256,11 @@ export function createInstallationPlan(input: InstallationPlanInput): Installati
 			guideLabel: 'Mesurer les fuites',
 		},
 		{
-			id: 'maintenance-baseline', phase: 'before-commissioning', status: 'undocumented', completed: false,
+			id: 'maintenance-baseline', phase: 'before-commissioning', status: 'undocumented', completed: configuration.commissioning?.manufacturerInstructionsLocated ?? false,
 			title: 'Purge et maintenance initiales',
-			summary: 'Le calendrier de purge, les consommables et les opérations propres au modèle ne sont pas structurés dans ce Passeport.',
+			summary: configuration.commissioning?.manufacturerInstructionsLocated
+				? `La notice et les premières échéances ont été déclarées retrouvées lors de la recette du ${configuration.commissioning.observedOn}. Leur contenu reste celui du constructeur.`
+				: 'Le calendrier de purge, les consommables et les opérations propres au modèle ne sont pas structurés dans ce Passeport.',
 			action: 'Reprendre exclusivement la notice de la référence et consigner la première échéance avant la mise en service.',
 			sourceRefs: [],
 			guidePath: '/guides/entretien-compresseur-purge-condensats/',

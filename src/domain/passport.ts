@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import type { Compressor, ToolProfile } from './catalog';
+import { commissioningRecordSchema } from './commissioning';
 import { resolveAvailableFad } from './compatibility';
 import { createInstallationPlan, installationPlanSchema, type InstallationPlan } from './installation-plan';
 import { CALCULATION_VERSION, sizeConfiguration, sizingInputSchema, type SizingResult } from './sizing';
@@ -36,6 +37,7 @@ export const passportConfigurationSchema = z.object({
 	usageProfile: z.enum(['occasional', 'intermittent', 'sustained', 'mixed']).default('mixed'),
 	selectedCompressor: z.string().max(160).default(''),
 	custom: customCompressorSchema,
+	commissioning: commissioningRecordSchema.optional(),
 }).superRefine((value, context) => {
 	if (value.selectedCompressor === 'custom' && value.custom.maxPressureBar === undefined) context.addIssue({ code: 'custom', message: 'La pression maximale du compresseur personnalisé est obligatoire.', path: ['custom', 'maxPressureBar'] });
 	if (value.custom.cutInPressureBar !== undefined && value.custom.cutOutPressureBar !== undefined && value.custom.cutInPressureBar >= value.custom.cutOutPressureBar) context.addIssue({ code: 'custom', message: 'La pression de réenclenchement doit être inférieure à la pression d’arrêt.', path: ['custom', 'cutInPressureBar'] });
@@ -107,6 +109,8 @@ export const passportEnvelopeSchema = z.object({
 	evidenceFingerprints: z.array(z.object({ id: z.string().min(1).max(400), fingerprint: z.string().regex(/^[a-f0-9]{64}$/) })).max(100),
 	reportDigest: z.string().regex(/^[a-f0-9]{64}$/),
 });
+
+const passportUnsignedEnvelopeSchema = passportEnvelopeSchema.omit({ reportDigest: true });
 
 export type PassportEnvelope = z.infer<typeof passportEnvelopeSchema>;
 
@@ -184,10 +188,10 @@ export async function createPassportEnvelope(input: unknown, compressors: Passpo
 	const report = await createPassportReport(input, compressors, tools, catalogVersion, createdAt);
 	const inputSnapshot = inputSnapshotFromReport(report);
 	const evidenceFingerprints = await Promise.all(report.sources.map(async (source) => ({ id: `${source.productId}:${source.id}`, fingerprint: await sha256(source) })));
-	const unsigned = {
+	const unsigned = passportUnsignedEnvelopeSchema.parse({
 		passportSchemaVersion: PASSPORT_ENVELOPE_SCHEMA_VERSION, createdAt, catalogVersion, calculationVersion: report.calculationVersion,
 		configuration: report.configuration, inputSnapshot, resultSnapshot: report.result, evidenceFingerprints,
-	};
+	});
 	return passportEnvelopeSchema.parse({ ...unsigned, reportDigest: await sha256(unsigned) });
 }
 

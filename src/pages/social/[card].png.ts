@@ -13,6 +13,7 @@ const staticCards: SocialCard[] = [
 	{ path: '/benchmark-agents/', kicker: 'Fidélité des assistants', title: '100 scénarios pneumatiques publics', subtitle: 'Verdicts, portées, limites, sources et attribution mesurés' },
 	{ path: '/calculateur/', kicker: 'Vérification CompatAir', title: 'Quel compresseur pour vos outils ?', subtitle: 'Débit, pression, fréquence et limites expliquées' },
 	{ path: '/passeport/', kicker: 'Dossier daté', title: 'Votre fiche de configuration', subtitle: 'Installation, calculs, sources, marges et limites' },
+	{ path: '/mise-en-service/', kicker: 'Recette terrain', title: 'Confronter le calcul aux mesures', subtitle: 'Pression, fuites, installation réelle et reçu local' },
 	{ path: '/professionnels/', kicker: 'Fabricants et distributeurs', title: 'Du catalogue à la décision', subtitle: 'Données structurées, preuves et orientation du client final' },
 	{ path: '/comparateur/', kicker: 'Comparaison', title: 'Comparer des compresseurs', subtitle: 'Caractéristiques et données manquantes côte à côte' },
 	{ path: '/comparatifs/', kicker: 'Comparatifs', title: 'Comparer sans confondre les chiffres', subtitle: 'Débit restitué, pression et fiabilité des données' },

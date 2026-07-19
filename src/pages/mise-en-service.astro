@@ -1,0 +1,31 @@
+---
+import CommissioningViewer from '../components/CommissioningViewer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+	title="Valider une mise en service sur site | CompatAir"
+	description="Confrontez le besoin calculé aux pressions, fuites, flexibles et raccords réellement observés, puis générez un reçu local non certifiant."
+	canonicalPath="/mise-en-service/"
+>
+	<section class="commissioning-hero">
+		<div class="container commissioning-hero-grid">
+			<div>
+				<p class="eyebrow">Recette terrain</p>
+				<h1>Du dimensionnement à la <em>mesure réelle.</em></h1>
+				<p class="lead">Le Passeport fournit le scénario. Vous renseignez ce qui est installé et mesuré sous charge. CompatAir recalcule alors la pression, le débit et la marge sans inventer les pertes du réseau.</p>
+			</div>
+			<div class="commissioning-hero-graphic" aria-label="Le besoin publié est confronté aux mesures terrain avant un reçu local.">
+				<span>01 <strong>Besoin publié</strong><small>outil · débit · pression</small></span>
+				<i>→</i>
+				<span>02 <strong>Mesures terrain</strong><small>source · poste · fuite</small></span>
+				<i>→</i>
+				<span>03 <strong>Reçu local</strong><small>verdict · réserve · actions</small></span>
+			</div>
+		</div>
+	</section>
+
+	<section class="section commissioning-viewer-section">
+		<div class="container"><CommissioningViewer /></div>
+	</section>
+</BaseLayout>

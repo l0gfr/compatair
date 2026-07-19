@@ -1,0 +1,333 @@
+<section class="commissioning-shell" data-commissioning-root aria-live="polite">
+	<div class="commissioning-loading" data-commissioning-loading>
+		<p class="eyebrow">Ouverture locale</p>
+		<h2>Chargement du Passeport…</h2>
+		<p>La configuration est lue depuis le fragment privé de votre lien.</p>
+	</div>
+
+	<div class="commissioning-empty" data-commissioning-empty hidden>
+		<p class="eyebrow">Aucun Passeport chargé</p>
+		<h2>Partez d’une installation préparée</h2>
+		<p data-commissioning-error>Cette recette attend un lien créé depuis le Passeport CompatAir.</p>
+		<a class="button primary" href="/calculateur/">Ouvrir le calculateur</a>
+	</div>
+
+	<div class="commissioning-workspace" data-commissioning-workspace hidden>
+		<header class="commissioning-context">
+			<div>
+				<p class="eyebrow">Configuration à éprouver</p>
+				<h2 data-context-compressor></h2>
+				<p data-context-tools></p>
+			</div>
+			<dl>
+				<div><dt>Besoin publié</dt><dd data-context-need></dd></div>
+				<div><dt>Débit documenté</dt><dd data-context-fad></dd></div>
+				<div><dt>Passeport</dt><dd data-context-id></dd></div>
+			</dl>
+		</header>
+
+		<div class="commissioning-layout">
+			<form class="commissioning-form" data-commissioning-form novalidate>
+				<header>
+					<p class="eyebrow">Relevé terrain</p>
+					<h2>Décrire ce qui est réellement installé</h2>
+					<p>Utilisez des valeurs relevées pendant le même essai représentatif. Une case confirme uniquement votre déclaration.</p>
+				</header>
+
+				<fieldset>
+					<legend><span>01</span><strong>Conditions de l’essai</strong></legend>
+					<div class="commissioning-field-grid">
+						<label>Date du relevé<input type="date" name="observedOn" required /></label>
+						<label class="is-wide">Note de contexte <span>facultative</span><textarea name="note" maxlength="600" rows="3" placeholder="Outil utilisé, réglage, séquence ou condition utile pour reproduire l’essai"></textarea></label>
+					</div>
+					<div class="commissioning-check-inputs">
+						<label><input type="checkbox" name="representativeUseObserved" /> <span><strong>Essai représentatif réalisé</strong><small>L’outil fonctionnait réellement pendant les relevés de pression.</small></span></label>
+						<label><input type="checkbox" name="siteLocationChecked" /> <span><strong>Implantation contrôlée avec la notice</strong><small>Stabilité, ventilation, dégagements et accès ont été relus pour ce modèle.</small></span></label>
+						<label><input type="checkbox" name="manufacturerInstructionsLocated" /> <span><strong>Consignes initiales retrouvées</strong><small>Purge, opérations initiales et première échéance restent celles de la notice.</small></span></label>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend><span>02</span><strong>Pression pendant le même essai</strong></legend>
+					<p class="commissioning-help">Relevez la pression à la source puis au raccord de l’outil pendant une phase comparable. CompatAir calcule la différence ; il ne l’estime pas.</p>
+					<div class="commissioning-field-grid">
+						<label>Pression à la source <span>bar</span><input inputmode="decimal" type="number" name="sourcePressureBar" min="0.01" max="50" step="0.01" placeholder="7,00" /></label>
+						<label>Pression au poste <span>bar</span><input inputmode="decimal" type="number" name="toolPressureBar" min="0.01" max="50" step="0.01" placeholder="6,30" /></label>
+					</div>
+					<output class="commissioning-derived" data-derived-drop>Chute mesurée : en attente des deux pressions.</output>
+				</fieldset>
+
+				<fieldset>
+					<legend><span>03</span><strong>Trajet d’air installé</strong></legend>
+					<div class="commissioning-field-grid thirds">
+						<label>Longueur flexible <span>m</span><input inputmode="decimal" type="number" name="hoseLengthMeters" min="0" max="500" step="0.1" /></label>
+						<label>Diamètre intérieur <span>mm</span><input inputmode="decimal" type="number" name="hoseInnerDiameterMm" min="0.1" max="100" step="0.1" /></label>
+						<label>Distance totale <span>m</span><input inputmode="decimal" type="number" name="networkDistanceMeters" min="0" max="2000" step="0.1" /></label>
+						<label>Standard des raccords<select name="fittingStandard"><option value="unknown">Non identifié</option><option value="euro-7.2">Euro 7,2 mm</option><option value="iso-6150-b">ISO 6150-B</option><option value="other">Autre standard</option></select></label>
+						<label>Nombre d’éléments<input inputmode="numeric" type="number" name="fittingCount" min="0" max="200" step="1" /></label>
+						<label>Traitement principal<select name="filtration"><option value="unknown">Non identifié</option><option value="none">Aucun déclaré</option><option value="particle">Filtration particulaire</option><option value="water-separator">Séparateur d’eau</option><option value="coalescing">Filtration coalescente</option><option value="dryer">Sécheur</option></select></label>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend><span>04</span><strong>Fuites intégrées au besoin</strong></legend>
+					<div class="commissioning-field-grid">
+						<label>Débit de fuite mesuré ou borné <span>L/min</span><input inputmode="decimal" type="number" name="measuredLeakLpm" min="0" max="10000" step="0.1" placeholder="0 si la mesure borne la fuite à zéro" /></label>
+						<div class="commissioning-inline-note"><strong>Zéro est une mesure</strong><p>Ne saisissez 0 que si votre protocole permet réellement de borner la fuite à zéro. Laisser vide signifie « non mesuré ».</p></div>
+					</div>
+				</fieldset>
+
+				<div class="commissioning-submit">
+					<button class="button primary" type="submit">Évaluer la mise en service</button>
+					<p>Le calcul et le PDF restent sur cet appareil. Aucune mesure n’est envoyée à CompatAir.</p>
+				</div>
+				<p class="commissioning-form-error" role="alert" data-form-error hidden></p>
+			</form>
+
+			<aside class="commissioning-protocol" aria-label="Protocole de mesure">
+				<p class="eyebrow">Protocole minimal</p>
+				<h2>Comparer des valeurs prises dans les mêmes conditions.</h2>
+				<ol>
+					<li><span>01</span><p>Stabiliser le réglage et préparer l’usage représentatif.</p></li>
+					<li><span>02</span><p>Relever source et poste pendant la même phase de charge.</p></li>
+					<li><span>03</span><p>Conserver le trajet, les restrictions et la filtration réellement présents.</p></li>
+					<li><span>04</span><p>Ajouter la fuite mesurée au besoin au lieu de la cacher dans la marge.</p></li>
+				</ol>
+				<a href="/guides/mesurer-pression-dynamique-pistolet-peinture/">Voir un exemple de mesure dynamique</a>
+				<p class="commissioning-boundary"><strong>Ce parcours ne certifie pas l’installation.</strong> Il confronte une configuration déclarée aux données constructeur et aux mesures saisies.</p>
+			</aside>
+		</div>
+
+		<article class="commissioning-result" data-commissioning-result hidden>
+			<header data-receipt-status>
+				<div><p class="eyebrow">Réponse de recette</p><h2 data-receipt-label></h2><p data-receipt-finding></p></div>
+				<div class="commissioning-completion"><strong data-check-count></strong><span>contrôles renseignés</span></div>
+			</header>
+			<dl class="commissioning-metrics">
+				<div><dt>Besoin au poste</dt><dd data-metric-pressure-need></dd></div>
+				<div><dt>Mesure au poste</dt><dd data-metric-pressure-tool></dd></div>
+				<div><dt>Chute observée</dt><dd data-metric-drop></dd></div>
+				<div><dt>FAD recommandé</dt><dd data-metric-recommended></dd></div>
+				<div><dt>FAD documenté</dt><dd data-metric-available></dd></div>
+				<div><dt>Fuite intégrée</dt><dd data-metric-leak></dd></div>
+			</dl>
+			<div class="commissioning-result-grid">
+				<section><p class="eyebrow">Contrôles</p><div class="commissioning-check-results" data-check-results></div></section>
+				<section><p class="eyebrow">Prochaines actions</p><ul data-receipt-actions></ul><div class="commissioning-guide-links" data-receipt-guides></div></section>
+			</div>
+			<footer>
+				<a class="button primary" href="/passeport/" data-updated-passport>Ouvrir le Passeport mis à jour</a>
+				<button class="button" type="button" data-download-receipt>Télécharger le reçu PDF</button>
+				<button class="button" type="button" data-copy-receipt>Copier le lien du dossier</button>
+				<span role="status" data-receipt-action-status></span>
+			</footer>
+			<p class="commissioning-legal-boundary">Le reçu constate les valeurs saisies et le résultat du moteur CompatAir à cette date. Il ne constitue ni une réception réglementaire, ni une certification, ni une autorisation d’usage.</p>
+		</article>
+	</div>
+</section>
+
+<script>
+	import { assessCommissioning, commissioningRecordSchema, commissioningVerdictLabel, configurationFromCommissioning, type CommissioningAssessment, type CommissioningRecord } from '../domain/commissioning';
+	import { createPassportEnvelope, createPassportReport, decodePassportConfiguration, decodePassportEnvelope, encodePassportEnvelope, reportFromPassportEnvelope, type PassportConfiguration, type PassportReport } from '../domain/passport';
+	import { loadRuntimeCatalog, type RuntimeCatalog } from '../domain/runtime-catalog';
+
+	const root = document.querySelector<HTMLElement>('[data-commissioning-root]');
+	const query = <T extends Element>(selector: string) => root?.querySelector<T>(selector);
+	const setText = (selector: string, value: string) => { const element = query<HTMLElement>(selector); if (element) element.textContent = value; };
+	const format = (value: number, digits = 1) => value.toLocaleString('fr-FR', { maximumFractionDigits: digits });
+	const value = (number: number | undefined, unit: string, digits = 1) => number === undefined ? 'Non renseigné' : `${format(number, digits)} ${unit}`;
+	let catalog: RuntimeCatalog;
+	let baseConfiguration: PassportConfiguration;
+	let updatedReport: PassportReport | undefined;
+	let updatedAssessment: CommissioningAssessment | undefined;
+	let updatedPassportUrl = '';
+
+	function optionalNumber(form: FormData, name: string) {
+		const raw = form.get(name);
+		if (typeof raw !== 'string' || raw.trim() === '') return undefined;
+		const parsed = Number(raw);
+		return Number.isFinite(parsed) ? parsed : undefined;
+	}
+
+	function localToday() {
+		const date = new Date();
+		return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+	}
+
+	function setControl(name: string, current: string | number | boolean | undefined) {
+		const control = query<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>(`[name="${name}"]`);
+		if (!control) return;
+		if (control instanceof HTMLInputElement && control.type === 'checkbox') control.checked = current === true;
+		else control.value = current === undefined ? '' : String(current);
+	}
+
+	function initialRecord(configuration: PassportConfiguration): CommissioningRecord {
+		if (configuration.commissioning) return configuration.commissioning;
+		const sourcePressureBar = configuration.supplyPressureBar;
+		const toolPressureBar = sourcePressureBar !== undefined && configuration.measuredPressureDropBar !== undefined
+			? Math.max(0.01, sourcePressureBar - configuration.measuredPressureDropBar)
+			: undefined;
+		return commissioningRecordSchema.parse({
+			version: '1.0.0', observedOn: localToday(), sourcePressureBar, toolPressureBar,
+			measuredLeakLpm: configuration.measuredLeakLpm,
+			hoseLengthMeters: configuration.hoseLengthMeters, hoseInnerDiameterMm: configuration.hoseInnerDiameterMm,
+			networkDistanceMeters: configuration.networkDistanceMeters, fittingStandard: configuration.fittingStandard,
+			fittingCount: configuration.fittingCount, filtration: configuration.filtration,
+			siteLocationChecked: false, manufacturerInstructionsLocated: false, representativeUseObserved: false,
+		});
+	}
+
+	function prefill(record: CommissioningRecord) {
+		for (const [name, current] of Object.entries(record)) setControl(name, current);
+		const date = query<HTMLInputElement>('[name="observedOn"]');
+		if (date) date.max = localToday();
+		updateDerivedDrop();
+	}
+
+	function updateDerivedDrop() {
+		const form = query<HTMLFormElement>('[data-commissioning-form]');
+		if (!form) return;
+		const data = new FormData(form);
+		const source = optionalNumber(data, 'sourcePressureBar');
+		const tool = optionalNumber(data, 'toolPressureBar');
+		setText('[data-derived-drop]', source === undefined || tool === undefined
+			? 'Chute mesurée : en attente des deux pressions.'
+			: tool > source
+				? 'Mesure incohérente : la pression au poste dépasse la pression à la source.'
+				: `Chute mesurée : ${format(source - tool, 2)} bar.`);
+	}
+
+	function recordFromForm(form: HTMLFormElement) {
+		const data = new FormData(form);
+		return commissioningRecordSchema.parse({
+			version: '1.0.0', observedOn: data.get('observedOn'),
+			sourcePressureBar: optionalNumber(data, 'sourcePressureBar'), toolPressureBar: optionalNumber(data, 'toolPressureBar'),
+			measuredLeakLpm: optionalNumber(data, 'measuredLeakLpm'), hoseLengthMeters: optionalNumber(data, 'hoseLengthMeters'),
+			hoseInnerDiameterMm: optionalNumber(data, 'hoseInnerDiameterMm'), networkDistanceMeters: optionalNumber(data, 'networkDistanceMeters'),
+			fittingStandard: data.get('fittingStandard'), fittingCount: optionalNumber(data, 'fittingCount'), filtration: data.get('filtration'),
+			siteLocationChecked: data.get('siteLocationChecked') === 'on',
+			manufacturerInstructionsLocated: data.get('manufacturerInstructionsLocated') === 'on',
+			representativeUseObserved: data.get('representativeUseObserved') === 'on',
+			note: typeof data.get('note') === 'string' && String(data.get('note')).trim() ? String(data.get('note')).trim() : undefined,
+		});
+	}
+
+	function renderList(selector: string, values: string[], empty: string) {
+		const list = query<HTMLUListElement>(selector);
+		if (!list) return;
+		list.replaceChildren();
+		for (const current of values.length ? values : [empty]) { const item = document.createElement('li'); item.textContent = current; list.append(item); }
+	}
+
+	function renderAssessment(assessment: CommissioningAssessment, report: PassportReport) {
+		const panel = query<HTMLElement>('[data-commissioning-result]');
+		const head = query<HTMLElement>('[data-receipt-status]');
+		if (head) head.dataset.status = assessment.verdict;
+		setText('[data-receipt-label]', commissioningVerdictLabel(assessment.verdict));
+		setText('[data-receipt-finding]', assessment.primaryFinding);
+		setText('[data-check-count]', `${assessment.counts.completed}/${assessment.counts.total}`);
+		setText('[data-metric-pressure-need]', value(assessment.comparison.requiredToolPressureBar, 'bar', 2));
+		setText('[data-metric-pressure-tool]', value(assessment.comparison.toolPressureBar, 'bar', 2));
+		setText('[data-metric-drop]', value(assessment.comparison.pressureDropBar, 'bar', 2));
+		setText('[data-metric-recommended]', value(assessment.comparison.recommendedFadLpm, 'L/min'));
+		setText('[data-metric-available]', value(assessment.comparison.availableFadLpm, 'L/min'));
+		setText('[data-metric-leak]', value(assessment.comparison.measuredLeakLpm, 'L/min'));
+		const checks = query<HTMLElement>('[data-check-results]');
+		if (checks) {
+			checks.replaceChildren();
+			for (const check of assessment.checks) {
+				const article = document.createElement('article'); article.dataset.completed = String(check.completed);
+				const marker = document.createElement('span'); marker.textContent = check.completed ? '✓' : '•';
+				const body = document.createElement('div'); const title = document.createElement('strong'); title.textContent = check.label;
+				const detail = document.createElement('p'); detail.textContent = check.value; body.append(title, detail); article.append(marker, body); checks.append(article);
+			}
+		}
+		renderList('[data-receipt-actions]', assessment.actions, 'Conserver les mesures avec le dossier.');
+		const guides = query<HTMLElement>('[data-receipt-guides]');
+		if (guides) {
+			guides.replaceChildren();
+			for (const guide of assessment.guides) { const link = document.createElement('a'); link.href = guide.path; link.textContent = guide.label; guides.append(link); }
+		}
+		query<HTMLAnchorElement>('[data-updated-passport]')?.setAttribute('href', updatedPassportUrl);
+		if (panel) { panel.hidden = false; panel.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+		setText('[data-receipt-action-status]', `Reçu daté du ${report.configuration.commissioning?.observedOn}.`);
+	}
+
+	async function evaluate(form: HTMLFormElement) {
+		const errorPanel = query<HTMLElement>('[data-form-error]');
+		if (errorPanel) errorPanel.hidden = true;
+		try {
+			const record = recordFromForm(form);
+			const configuration = configurationFromCommissioning(baseConfiguration, record);
+			const report = await createPassportReport(configuration, catalog.compressors, catalog.tools, catalog.catalogVerifiedAt);
+			const assessment = assessCommissioning(report, record);
+			const envelope = await createPassportEnvelope(configuration, catalog.compressors, catalog.tools, catalog.catalogVerifiedAt);
+			const encoded = encodePassportEnvelope(envelope);
+			updatedPassportUrl = `${location.origin}/passeport/#passport=${encoded}`;
+			updatedReport = report;
+			updatedAssessment = assessment;
+			renderAssessment(assessment, report);
+		} catch (error) {
+			if (errorPanel) {
+				errorPanel.textContent = error instanceof Error ? error.message : 'Les mesures ne peuvent pas être évaluées.';
+				errorPanel.hidden = false;
+				errorPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+			}
+		}
+	}
+
+	async function load() {
+		const params = new URLSearchParams(location.hash.slice(1));
+		const encoded = params.get('passport');
+		const envelope = encoded ? decodePassportEnvelope(encoded) : undefined;
+		const legacy = encoded && !envelope ? decodePassportConfiguration(encoded) : undefined;
+		if (!encoded || (!envelope && !legacy)) {
+			if (encoded) setText('[data-commissioning-error]', 'Le lien du Passeport est invalide, incomplet ou utilise un format non reconnu.');
+			query<HTMLElement>('[data-commissioning-loading]')!.hidden = true;
+			query<HTMLElement>('[data-commissioning-empty]')!.hidden = false;
+			return;
+		}
+		try {
+			catalog = await loadRuntimeCatalog();
+			baseConfiguration = envelope ? (await reportFromPassportEnvelope(envelope)).configuration : legacy!;
+			const report = await createPassportReport(baseConfiguration, catalog.compressors, catalog.tools, catalog.catalogVerifiedAt);
+			setText('[data-context-compressor]', report.compressorLabel);
+			setText('[data-context-tools]', report.toolLabels.join(' · '));
+			setText('[data-context-need]', `${format(report.result.recommendedFadLpm)} L/min à ${format(report.result.requiredPressureBar, 2)} bar`);
+			setText('[data-context-fad]', report.availableFadLpm === undefined ? 'Donnée insuffisante' : `${format(report.availableFadLpm)} L/min`);
+			setText('[data-context-id]', report.passportId.slice(0, 12));
+			prefill(initialRecord(baseConfiguration));
+			query<HTMLElement>('[data-commissioning-loading]')!.hidden = true;
+			query<HTMLElement>('[data-commissioning-workspace]')!.hidden = false;
+		} catch (error) {
+			setText('[data-commissioning-error]', error instanceof Error ? error.message : 'Le Passeport ne peut pas être ouvert.');
+			query<HTMLElement>('[data-commissioning-loading]')!.hidden = true;
+			query<HTMLElement>('[data-commissioning-empty]')!.hidden = false;
+		}
+	}
+
+	query<HTMLInputElement>('[name="sourcePressureBar"]')?.addEventListener('input', updateDerivedDrop);
+	query<HTMLInputElement>('[name="toolPressureBar"]')?.addEventListener('input', updateDerivedDrop);
+	query<HTMLFormElement>('[data-commissioning-form]')?.addEventListener('submit', (event) => { event.preventDefault(); void evaluate(event.currentTarget as HTMLFormElement); });
+	query<HTMLButtonElement>('[data-copy-receipt]')?.addEventListener('click', async () => {
+		if (!updatedPassportUrl) return;
+		await navigator.clipboard.writeText(updatedPassportUrl);
+		setText('[data-receipt-action-status]', 'Lien du Passeport mis à jour copié.');
+	});
+	query<HTMLButtonElement>('[data-download-receipt]')?.addEventListener('click', async (event) => {
+		if (!updatedReport || !updatedAssessment || !updatedPassportUrl) return;
+		const button = event.currentTarget as HTMLButtonElement; button.disabled = true;
+		setText('[data-receipt-action-status]', 'Préparation locale du reçu PDF…');
+		try {
+			const { createPassportPdf } = await import('../domain/passport-pdf');
+			const pdf = createPassportPdf(updatedReport, updatedPassportUrl, { commissioningAssessment: updatedAssessment });
+			const objectUrl = URL.createObjectURL(new Blob([pdf], { type: 'application/pdf' }));
+			const link = document.createElement('a'); link.href = objectUrl; link.download = `recu-recette-compatair-${updatedReport.passportId.slice(0, 16)}.pdf`; link.click();
+			setTimeout(() => URL.revokeObjectURL(objectUrl), 1_000);
+			setText('[data-receipt-action-status]', 'Reçu PDF généré localement.');
+		} catch { setText('[data-receipt-action-status]', 'La création du reçu PDF a échoué. Le Passeport mis à jour reste disponible.'); }
+		finally { button.disabled = false; }
+	});
+
+	void load();
+</script>

@@ -376,8 +376,16 @@ else {
 if (!artifactPaths.has('/passeport/index.html')) errors.push('plan installation: Passeport rendu absent');
 else {
 	const passportHtml = await readFile(join(root, '/passeport/index.html'), 'utf8');
-	for (const marker of ['data-installation-plan', 'data-plan-before-purchase', 'data-plan-before-commissioning', 'Plan d’installation contextualisé', 'Confirmé par une source', 'À mesurer sur site', 'Non documenté', 'Imprimer la checklist']) {
+	for (const marker of ['data-installation-plan', 'data-plan-before-purchase', 'data-plan-before-commissioning', 'data-commission', '/mise-en-service/', 'Plan d’installation contextualisé', 'Confirmé par une source', 'À mesurer sur site', 'Non documenté', 'Imprimer la checklist', 'Valider sur site']) {
 		if (!passportHtml.includes(marker)) errors.push(`plan installation: marqueur absent ${marker}`);
+	}
+}
+
+if (!artifactPaths.has('/mise-en-service/index.html')) errors.push('recette terrain: page rendue absente');
+else {
+	const commissioningHtml = await readFile(join(root, '/mise-en-service/index.html'), 'utf8');
+	for (const marker of ['data-commissioning-root', 'data-commissioning-form', 'data-derived-drop', 'data-commissioning-result', 'data-updated-passport', 'Évaluer la mise en service', 'Télécharger le reçu PDF', 'ne certifie pas l’installation']) {
+		if (!commissioningHtml.includes(marker)) errors.push(`recette terrain: marqueur absent ${marker}`);
 	}
 }
 

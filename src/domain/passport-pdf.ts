@@ -1,4 +1,5 @@
 import { passportVerdictLabel, type PassportReport } from './passport';
+import { commissioningVerdictLabel, type CommissioningAssessment } from './commissioning';
 
 const PAGE_WIDTH = 595;
 const PAGE_HEIGHT = 842;
@@ -68,7 +69,9 @@ function installationStatusLabel(item: PassportReport['installationPlan']['items
 	return item.completed ? 'MESURE RENSEIGNEE' : 'A MESURER SUR SITE';
 }
 
-export function createPassportPdf(report: PassportReport, passportUrl: string) {
+export function createPassportPdf(report: PassportReport, passportUrl: string, options: { commissioningAssessment?: CommissioningAssessment } = {}) {
+	const commissioningAssessment = options.commissioningAssessment;
+	const documentLabel = commissioningAssessment ? 'RECU DE RECETTE TERRAIN' : 'PASSEPORT COMPATAIR';
 	const pages: string[][] = [];
 	let page: string[];
 	let y: number;
@@ -77,7 +80,7 @@ export function createPassportPdf(report: PassportReport, passportUrl: string) {
 			'0.063 0.157 0.118 rg 0 794 595 48 re f',
 			'0.827 0.922 0.337 rg 52 811 18 3 re f',
 			`BT /F2 15 Tf 1 1 1 rg 1 0 0 1 80 808 Tm (${pdfLiteral('CompatAir')}) Tj ET`,
-			`BT /F1 8 Tf 0.78 0.84 0.80 rg 1 0 0 1 449 808 Tm (${pdfLiteral(`Passeport ${report.schemaVersion}`)}) Tj ET`,
+			`BT /F1 8 Tf 0.78 0.84 0.80 rg 1 0 0 1 432 808 Tm (${pdfLiteral(commissioningAssessment ? `Recette ${commissioningAssessment.version}` : `Passeport ${report.schemaVersion}`)}) Tj ET`,
 		];
 		pages.push(page);
 		y = 770;
@@ -111,10 +114,21 @@ export function createPassportPdf(report: PassportReport, passportUrl: string) {
 	};
 
 	addPage();
-	addTextLine('PASSEPORT COMPATAIR', 9, true, '0.10 0.44 0.31', MARGIN, 26);
+	addTextLine(documentLabel, 9, true, '0.10 0.44 0.31', MARGIN, 26);
 	addParagraph(report.compressorLabel, { size: 25, bold: true, color: '0.063 0.157 0.118', spacing: 9 });
-	addParagraph(passportVerdictLabel(report.result), { size: 14, bold: true, color: report.result.verdict === 'incompatible' ? '0.64 0.18 0.16' : '0.10 0.44 0.31', spacing: 6 });
+	addParagraph(commissioningAssessment ? commissioningVerdictLabel(commissioningAssessment.verdict) : passportVerdictLabel(report.result), { size: 14, bold: true, color: report.result.verdict === 'incompatible' ? '0.64 0.18 0.16' : '0.10 0.44 0.31', spacing: 6 });
 	addParagraph(`Identifiant ${report.passportId} - moteur ${report.calculationVersion} - catalogue vérifié le ${report.catalogVerifiedAt}.`, { size: 8.5, color: '0.33 0.40 0.35', spacing: 12 });
+
+	if (commissioningAssessment) {
+		addHeading('Réponse de recette');
+		addParagraph(commissioningAssessment.primaryFinding, { size: 10, bold: true, color: '0.063 0.157 0.118', spacing: 8 });
+		addParagraph(`Relevé déclaré le ${report.configuration.commissioning?.observedOn ?? report.generatedAt.slice(0, 10)} - ${commissioningAssessment.counts.completed}/${commissioningAssessment.counts.total} contrôles renseignés.`, { size: 8.5, color: '0.33 0.40 0.35', spacing: 8 });
+		addBullet(`Pression demandée au poste : ${commissioningAssessment.comparison.requiredToolPressureBar === undefined ? 'non renseignée' : `${formatNumber(commissioningAssessment.comparison.requiredToolPressureBar, 2)} bar`}.`);
+		addBullet(`Pression mesurée au poste : ${commissioningAssessment.comparison.toolPressureBar === undefined ? 'non renseignée' : `${formatNumber(commissioningAssessment.comparison.toolPressureBar, 2)} bar`} - chute observée ${commissioningAssessment.comparison.pressureDropBar === undefined ? 'non renseignée' : `${formatNumber(commissioningAssessment.comparison.pressureDropBar, 2)} bar`}.`);
+		addBullet(`Fuite intégrée au besoin : ${commissioningAssessment.comparison.measuredLeakLpm === undefined ? 'non mesurée' : `${formatNumber(commissioningAssessment.comparison.measuredLeakLpm)} L/min`}.`);
+		for (const check of commissioningAssessment.checks) addBullet(`${check.completed ? 'RENSEIGNE' : 'A COMPLETER'} - ${check.label}. ${check.value}`);
+		if (report.configuration.commissioning?.note) addParagraph(`Contexte déclaré : ${report.configuration.commissioning.note}`, { size: 8.5, color: '0.33 0.40 0.35', spacing: 8 });
+	}
 
 	addHeading("Plan d'installation et de mise en service");
 	addParagraph(`Principale réserve : ${report.installationPlan.primaryReserve}`, { size: 10, bold: true, color: '0.063 0.157 0.118', spacing: 8 });
@@ -166,7 +180,7 @@ export function createPassportPdf(report: PassportReport, passportUrl: string) {
 
 	addHeading('URL versionnée');
 	addParagraph(passportUrl, { size: 6.5, color: '0.33 0.40 0.35', spacing: 8 });
-	addParagraph('Ce document est produit localement dans le navigateur. Le rapport original, sa configuration et ses codes de contrôle restent après le caractère # de l’URL et ne sont pas envoyés au serveur. Le Passeport ne remplace ni une mesure en charge, ni la notice constructeur, ni une vérification réglementaire.', { size: 8.5, color: '0.33 0.40 0.35' });
+	addParagraph(`Ce document est produit localement dans le navigateur. Le rapport, sa configuration et ses codes de contrôle restent après le caractère # de l’URL et ne sont pas envoyés au serveur. ${commissioningAssessment ? 'Le reçu constate les valeurs saisies et le résultat du moteur ; il ne constitue ni une réception réglementaire, ni une certification, ni une autorisation d’usage.' : 'Le Passeport ne remplace ni une mesure en charge, ni la notice constructeur, ni une vérification réglementaire.'}`, { size: 8.5, color: '0.33 0.40 0.35' });
 
 	for (const [index, commands] of pages.entries()) {
 		commands.push(`0.82 0.86 0.83 RG 52 42 491 0.5 re S`);
@@ -186,7 +200,7 @@ export function createPassportPdf(report: PassportReport, passportUrl: string) {
 	}
 	objects[2] = `<< /Type /Pages /Kids [${pageReferences.join(' ')}] /Count ${pages.length} >>`;
 	const infoObject = objects.length;
-	objects.push(`<< /Title (${pdfLiteral('Passeport CompatAir')}) /Subject (${pdfLiteral(report.passportId)}) /Author (${pdfLiteral('CompatAir')}) /Creator (${pdfLiteral(`CompatAir Passeport ${report.schemaVersion}`)}) >>`);
+	objects.push(`<< /Title (${pdfLiteral(commissioningAssessment ? 'Reçu de recette terrain CompatAir' : 'Passeport CompatAir')}) /Subject (${pdfLiteral(report.passportId)}) /Author (${pdfLiteral('CompatAir')}) /Creator (${pdfLiteral(`CompatAir Passeport ${report.schemaVersion}`)}) >>`);
 
 	const parts: Uint8Array[] = [bytes('%PDF-1.4\n%âãÏÓ\n')];
 	const offsets = [0];
