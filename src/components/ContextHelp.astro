@@ -1,0 +1,26 @@
+---
+import { contextualHelpTopics, type ContextualHelpTopic } from '../domain/contextual-help';
+
+type Props = {
+	topic: ContextualHelpTopic;
+	compact?: boolean;
+};
+
+const { topic, compact = false } = Astro.props;
+const help = contextualHelpTopics[topic];
+---
+
+<details class:list={['context-help', compact && 'is-compact']} data-context-help={topic}>
+	<summary><span aria-hidden="true">?</span> Pourquoi&nbsp;?</summary>
+	<div class="context-help-panel">
+		<header><small>Aide au calcul</small><h3>{help.label}</h3></header>
+		<dl>
+			<div><dt>Définition</dt><dd>{help.definition}</dd></div>
+			<div><dt>Influence sur la réponse</dt><dd>{help.influence}</dd></div>
+			<div><dt>Où trouver la valeur</dt><dd>{help.location}</dd></div>
+			<div><dt>Exemple</dt><dd>{help.example.replace(/^Exemple :\s*/, '')}</dd></div>
+			<div><dt>Si la donnée manque</dt><dd>{help.missing}</dd></div>
+		</dl>
+		<a href={help.glossaryHref}>Lire la définition complète dans le glossaire →</a>
+	</div>
+</details>

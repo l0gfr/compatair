@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ContextHelp from '../components/ContextHelp.astro';
 import DecisionHeroVisual from '../components/DecisionHeroVisual.astro';
 import { compressors } from '../data/catalog';
 import { compressorDisplayName } from '../domain/product-display';
@@ -18,7 +19,7 @@ import { compressorDisplayName } from '../domain/product-display';
 			<div class="container">
 				<header class="decision-section-head"><p class="decision-index">Sélection</p><h2>Ajoutez uniquement les modèles qui vous intéressent.</h2><p>Une sélection transmise depuis le scanner est déjà remplie. Sinon, recherchez une référence exacte ci-dessous.</p></header>
 				<div class="compare-workspace">
-					<form class="compare-search-panel" data-compare-form>
+				<form class="compare-search-panel" id="compare-form" data-compare-form>
 						<label for="compare-search">Marque, modèle, MPN ou EAN</label>
 						<div><input id="compare-search" data-compare-search type="search" list="compare-compressors" autocomplete="off" placeholder="Ex. Metabo Basic 250 ou 601532000" /><button class="button primary" type="submit">Ajouter</button></div>
 						<small>La référence brute est acceptée. CompatAir exige une correspondance exacte.</small>
@@ -27,7 +28,7 @@ import { compressorDisplayName } from '../domain/product-display';
 					<aside class="compare-rule"><span>Règle de lecture</span><strong>Comparer n’est pas classer.</strong><p>Cette page ne désigne pas un «&nbsp;meilleur&nbsp;» produit. Elle rend les écarts techniques et documentaires lisibles pour votre usage.</p><a href="/calculateur/">Vérifier un besoin précis →</a></aside>
 				</div>
 
-				<section class="compare-selection" aria-labelledby="compare-selection-title">
+				<section class="compare-selection" id="compare-selection" aria-labelledby="compare-selection-title">
 					<header><div><p class="decision-index">Modèles retenus</p><h3 id="compare-selection-title">Votre comparaison</h3></div><span data-compare-help>Sélectionnez deux ou trois modèles.</span></header>
 					<div class="compare-selected-grid" data-compare-selected></div>
 				</section>
@@ -48,12 +49,23 @@ import { compressorDisplayName } from '../domain/product-display';
 					<div class="compare-context-cards" data-context-cards></div>
 				</section>
 
-				<section class="compare-output-section" data-compare-output-section hidden>
+				<section class="compare-output-section" id="compare-answer" data-compare-output-section hidden>
+					<nav class="result-local-nav compare-result-nav" data-compare-result-nav aria-label="Navigation dans la comparaison" hidden>
+						<a href="#compare-answer" data-compare-scroll="compare-answer" aria-current="location"><span>01</span> Réponse</a>
+						<a href="#compare-selection" data-compare-scroll="compare-selection"><span>02</span> Sélection</a>
+						<a href="#compare-limits" data-compare-scroll="compare-limits"><span>03</span> Limites</a>
+						<a href="#compare-sources" data-compare-scroll="compare-sources" data-open-compare-sources><span>04</span> Sources</a>
+					</nav>
 					<header><div><p class="decision-index">Lecture côte à côte</p><h2>Les écarts utiles, sans note commerciale.</h2></div><button class="button" type="button" data-copy-comparison>Copier le lien</button></header>
 					<span class="compare-copy-status" data-copy-status role="status"></span>
 					<div class="compare-table-wrap" data-compare-output></div>
-					<footer><p><strong>À retenir&nbsp;:</strong> le débit aspiré décrit l’entrée de la pompe. Pour vérifier un outil, utilisez le débit réellement restitué à la pression demandée.</p><a href="/guides/debit-restitue-fad-vs-debit-aspire/">Comprendre la différence</a></footer>
+					<footer id="compare-limits"><p><strong>À retenir&nbsp;:</strong> le débit aspiré décrit l’entrée de la pompe. Pour vérifier un outil, utilisez le débit réellement restitué à la pression demandée.</p><a href="/guides/debit-restitue-fad-vs-debit-aspire/">Comprendre la différence</a></footer>
+					<details class="compare-source-guide" id="compare-sources"><summary>Sources et règle documentaire</summary><div><ContextHelp topic="sourceQuality" /><p>Les données sont alignées sans combler les absences. Ouvrez chaque fiche pour retrouver les documents et leurs dates de vérification.</p><a class="text-link" href="/sources-fiabilite/">Consulter la méthode de fiabilité →</a></div></details>
 				</section>
+				<aside class="mobile-primary-action" data-compare-mobile-action aria-label="Action principale">
+					<a class="button primary" href="#compare-form" data-compare-scroll="compare-form" data-compare-mobile-submit>Choisir les modèles</a>
+					<a class="button primary" href="#compare-answer" data-compare-scroll="compare-answer" data-compare-mobile-result hidden>Voir la comparaison</a>
+				</aside>
 			</div>
 		</section>
 	</div>
@@ -134,6 +146,9 @@ import { compressorDisplayName } from '../domain/product-display';
 		const contextNeed = root?.querySelector<HTMLElement>('[data-context-need]');
 		const contextCards = root?.querySelector<HTMLElement>('[data-context-cards]');
 		const contextChoice = root?.querySelector<HTMLElement>('[data-context-choice]');
+		const resultNav = root?.querySelector<HTMLElement>('[data-compare-result-nav]');
+		const mobileSubmit = root?.querySelector<HTMLElement>('[data-compare-mobile-submit]');
+		const mobileResult = root?.querySelector<HTMLAnchorElement>('[data-compare-mobile-result]');
 		const initialFragment = new URLSearchParams(location.hash.slice(1));
 		const encodedContext = initialFragment.get('config') ?? '';
 		const initialScenarioId = initialFragment.get('scenario') ?? undefined;
@@ -312,6 +327,10 @@ import { compressorDisplayName } from '../domain/product-display';
 			const selected = selectedIds.map((id) => data.find((item) => item.id === id)).filter((item): item is CompressorSummary => Boolean(item));
 			selectedTarget?.replaceChildren(...selected.map(selectedCard), ...Array.from({ length: 3 - selected.length }, (_, offset) => placeholder(selected.length + offset)));
 			if (help) help.textContent = selected.length < 2 ? `${selected.length}/3 · ajoutez encore ${2 - selected.length} modèle${selected.length === 0 ? 's' : ''}` : `${selected.length}/3 · ${selected.length === 2 ? 'comparaison prête, un troisième modèle reste possible' : 'comparaison complète'}`;
+			const ready = selected.length >= 2;
+			if (resultNav) resultNav.hidden = !ready;
+			if (mobileSubmit) mobileSubmit.hidden = ready;
+			if (mobileResult) mobileResult.hidden = !ready;
 			renderTable(selected); renderContext(selected); updateLocation(); publishJourneyContext(selected);
 		}
 
@@ -379,6 +398,12 @@ import { compressorDisplayName } from '../domain/product-display';
 		root?.querySelector('[data-copy-comparison]')?.addEventListener('click', async () => {
 			await navigator.clipboard.writeText(location.href);
 			const status = root.querySelector<HTMLElement>('[data-copy-status]'); if (status) status.textContent = 'Lien copié';
+		});
+		for (const link of root?.querySelectorAll<HTMLAnchorElement>('[data-compare-scroll]') ?? []) link.addEventListener('click', (event) => {
+			const target = document.getElementById(link.dataset.compareScroll ?? ''); if (!target) return;
+			event.preventDefault();
+			if (link.hasAttribute('data-open-compare-sources')) { const sources = document.querySelector<HTMLDetailsElement>('#compare-sources'); if (sources) sources.open = true; }
+			target.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
 		});
 		window.addEventListener('hashchange', () => { selectedIds = idsFromLocation(); refresh(); });
 

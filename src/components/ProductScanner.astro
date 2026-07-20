@@ -1,5 +1,9 @@
+---
+import ContextHelp from './ContextHelp.astro';
+---
+
 <div class="scanner" data-scanner data-decision-visual="identify">
-	<form class="scanner-form" data-scanner-form>
+	<form class="scanner-form" id="scanner-form" data-scanner-form>
 		<header class="scanner-form-head"><span>01</span><div><p>Référence exacte</p><strong>Un numéro, aucune catégorie à choisir</strong></div><small>Mode recommandé</small></header>
 		<div class="scanner-confirmation">
 			<div class="field">
@@ -38,7 +42,7 @@
 		</section>
 	</form>
 
-	<section class="scanner-result" data-result hidden>
+	<section class="scanner-result" id="scanner-answer" data-result hidden>
 		<header class="scanner-result-head">
 			<div>
 				<p class="eyebrow">Produit reconnu</p>
@@ -51,6 +55,13 @@
 			</div>
 			<a class="button" data-product-link href="/">Voir la fiche et ses sources</a>
 		</header>
+
+		<nav class="result-local-nav" aria-label="Navigation dans la réponse">
+			<a href="#scanner-answer" data-result-scroll="scanner-answer" aria-current="location"><span>01</span> Réponse</a>
+			<a href="#scanner-selection" data-result-scroll="scanner-selection"><span>02</span> Sélection</a>
+			<a href="#scanner-limits" data-result-scroll="scanner-limits" data-expand-results><span>03</span> Limites</a>
+			<a href="#scanner-sources" data-result-scroll="scanner-sources" data-expand-results data-open-sources><span>04</span> Sources</a>
+		</nav>
 
 		<div class="scanner-decision">
 			<div class="scanner-published-need">
@@ -67,7 +78,7 @@
 				<p data-resolution-note-detail></p>
 				<a class="button primary" data-resolution-note-action href="/calculateur/">Débloquer le calcul</a>
 			</div>
-			<section class="scanner-top-results">
+			<section class="scanner-top-results" id="scanner-selection">
 				<p class="eyebrow">Décision immédiate</p>
 				<h3 data-primary-title>Trois meilleurs résultats compatibles</h3>
 				<p class="scanner-ranking-note" data-ranking-note hidden></p>
@@ -83,15 +94,19 @@
 		<div class="scanner-all-results" data-all-results hidden>
 			<section class="scanner-result-panel can"><span data-can-label>Compatibles</span><h3 data-can-title></h3><div class="scanner-result-cards compact" data-can></div></section>
 			<section class="scanner-result-panel cannot"><span data-cannot-label>Incompatibles</span><h3 data-cannot-title></h3><div class="scanner-result-cards compact" data-cannot></div></section>
-			<section class="scanner-result-panel uncertain"><span>À compléter</span><h3>La donnée minimale pour conclure</h3><div class="scanner-result-cards compact" data-insufficient></div></section>
+			<section class="scanner-result-panel uncertain" id="scanner-limits"><span>À compléter</span><h3>La donnée minimale pour conclure</h3><div class="scanner-result-cards compact" data-insufficient></div></section>
 			<section class="scanner-unlocks" data-unlocks-section>
 				<p class="eyebrow">Solutions possibles</p>
 				<h3>Un tuyau adapté ou un autre compresseur</h3>
 				<div data-unlocks></div>
 			</section>
-			<details class="scanner-evidence"><summary>Sources du modèle identifié</summary><div data-evidence></div></details>
+			<details class="scanner-evidence" id="scanner-sources"><summary>Sources du modèle identifié</summary><ContextHelp topic="sourceQuality" compact /><div data-evidence></div></details>
 		</div>
 	</section>
+	<aside class="mobile-primary-action" data-scanner-mobile-action aria-label="Action principale">
+		<button class="button primary" type="submit" form="scanner-form" data-scanner-mobile-submit>Identifier la référence</button>
+		<a class="button primary" href="#scanner-selection" data-result-scroll="scanner-selection" data-scanner-mobile-result hidden>Voir la sélection</a>
+	</aside>
 </div>
 
 <script>
@@ -117,6 +132,8 @@
 	const photo = root?.querySelector<HTMLInputElement>('[data-photo]');
 	const readPhoto = root?.querySelector<HTMLButtonElement>('[data-read-photo]');
 	const identifier = root?.querySelector<HTMLInputElement>('[data-identifier]');
+	const mobileSubmit = root?.querySelector<HTMLButtonElement>('[data-scanner-mobile-submit]');
+	const mobileResult = root?.querySelector<HTMLAnchorElement>('[data-scanner-mobile-result]');
 	let compressors: Compressor[] = [];
 	let tools: ToolProfile[] = [];
 	let catalogPromise: Promise<void> | undefined;
@@ -280,6 +297,21 @@
 		const details = query<HTMLDetailsElement>('.scanner-photo-details');
 		if (details) { details.open = true; details.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' }); }
 	});
+	for (const link of root?.querySelectorAll<HTMLAnchorElement>('[data-result-scroll]') ?? []) link.addEventListener('click', (event) => {
+		const targetId = link.dataset.resultScroll ?? '';
+		if (link.pathname !== location.pathname || link.hash !== `#${targetId}`) return;
+		if (link.hasAttribute('data-expand-results')) {
+			const allResults = query<HTMLElement>('[data-all-results]');
+			const toggle = query<HTMLButtonElement>('[data-toggle-all]');
+			if (allResults) allResults.hidden = false;
+			if (toggle) { toggle.setAttribute('aria-expanded', 'true'); toggle.textContent = 'Réduire les résultats'; }
+		}
+		if (link.hasAttribute('data-open-sources')) { const sources = query<HTMLDetailsElement>('#scanner-sources'); if (sources) sources.open = true; }
+		const target = document.getElementById(targetId);
+		if (!target) return;
+		event.preventDefault();
+		target.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+	});
 
 	form?.addEventListener('submit', async (event) => {
 		event.preventDefault();
@@ -294,7 +326,10 @@
 			setText('[data-recovery-title]', matches.length > 1 ? 'Plusieurs fiches utilisent cet identifiant : ajoutez la marque ou le modèle.' : 'Retrouvez le bon numéro sans deviner le produit.');
 			const search = query<HTMLAnchorElement>('[data-recovery-search]');
 			if (search) search.href = `/recherche/?q=${encodeURIComponent(identifier?.value.trim() ?? '')}#recherche-technique`;
-			query<HTMLElement>('[data-result]')?.setAttribute('hidden', ''); return;
+			query<HTMLElement>('[data-result]')?.setAttribute('hidden', '');
+			if (mobileSubmit) mobileSubmit.hidden = false;
+			if (mobileResult) mobileResult.hidden = true;
+			return;
 		}
 		const match = matches[0]; const product = match.product;
 		const scannerHref = scannerReferenceUrl(location.pathname, identifier?.value ?? match.matchedValue);
@@ -411,6 +446,14 @@
 		const allResults = query<HTMLElement>('[data-all-results]'); if (allResults) allResults.hidden = true;
 		const toggle = query<HTMLButtonElement>('[data-toggle-all]'); if (toggle) { toggle.setAttribute('aria-expanded', 'false'); toggle.textContent = 'Voir tous les résultats'; }
 		query<HTMLElement>('[data-result]')?.removeAttribute('hidden');
+		if (mobileSubmit) mobileSubmit.hidden = true;
+		if (mobileResult) {
+			mobileResult.hidden = false;
+			const compare = query<HTMLAnchorElement>('[data-compare]');
+			const resolutionAction = query<HTMLAnchorElement>('[data-resolution-note-action]');
+			mobileResult.href = compare && !compare.hidden ? compare.href : resolutionAction && !resolutionAction.closest<HTMLElement>('[data-resolution-note]')?.hidden ? resolutionAction.href : '#scanner-selection';
+			mobileResult.textContent = compare && !compare.hidden ? 'Comparer les solutions' : resolutionAction && !resolutionAction.closest<HTMLElement>('[data-resolution-note]')?.hidden ? resolutionAction.textContent ?? 'Continuer' : 'Voir la sélection';
+		}
 		window.dispatchEvent(new CustomEvent(JOURNEY_CONTEXT_EVENT, { detail: {
 			stage: 'identified',
 			reference: match.matchedValue,

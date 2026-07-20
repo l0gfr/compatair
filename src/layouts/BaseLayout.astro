@@ -59,28 +59,48 @@ const socialImage = new URL(imagePath ?? `/social/${socialCardKey(canonical.path
 const currentPath = Astro.url.pathname;
 const currentYear = new Date().getFullYear();
 const catalogReferenceCount = compressors.length + tools.length;
+const isCurrent = (href: string) => currentPath.startsWith(href);
+type DecisionStep = { id: string; label: string; short: string; href: string; state: 'completed' | 'current' | 'available' };
+const journeySteps = [
+	{ id: 'identify', label: 'Identifier', short: 'Identifier', href: '/scanner/' },
+	{ id: 'size', label: 'Dimensionner', short: 'Besoin', href: '/calculateur/' },
+	{ id: 'compare', label: 'Comparer', short: 'Comparer', href: '/comparateur/' },
+	{ id: 'prepare', label: 'Préparer', short: 'Préparer', href: '/passeport/' },
+	{ id: 'verify', label: 'Vérifier sur le terrain', short: 'Terrain', href: '/mise-en-service/' },
+] as const;
+const actionIndex = currentPath.startsWith('/scanner/') ? 0
+	: currentPath.startsWith('/calculateur/') ? 1
+		: currentPath.startsWith('/comparateur/') ? 2
+			: currentPath.startsWith('/passeport/') ? 3
+				: ['/mise-en-service/', '/suivi-exploitation/', '/diagnostic-intervention/', '/maintenance-preventive/'].some((path) => currentPath.startsWith(path)) ? 4
+					: -1;
+const completeJourneyIsRelevant = actionIndex >= 0 || ['/professionnels/', '/guides/professionnels/', '/guides/metiers/'].some((path) => currentPath.startsWith(path));
+const frenchSteps = (completeJourneyIsRelevant ? journeySteps : journeySteps.slice(0, 3)).map((step, index): DecisionStep => ({
+	...step,
+	state: actionIndex < 0 ? 'available' : index < actionIndex ? 'completed' : index === actionIndex ? 'current' : 'available',
+}));
 const decisionRail = lang === 'en'
 	? {
 		label: 'CompatAir decision line',
 		name: 'CA / PNEUMATIC DECISION',
 		steps: [
-			{ label: 'Exact reference', short: 'Reference' },
-			{ label: 'Published need', short: 'Need' },
-			{ label: 'Traceable verdict', short: 'Verdict' },
-		],
-		status: 'Independent · sourced',
+			{ id: 'identify', label: 'Identify', short: 'Identify', href: '/scanner/', state: 'available' },
+			{ id: 'size', label: 'Size', short: 'Need', href: '/calculateur/', state: 'available' },
+			{ id: 'compare', label: 'Compare', short: 'Compare', href: '/comparateur/', state: 'available' },
+		] satisfies DecisionStep[],
+		next: { label: 'Start with a reference', href: '/scanner/' },
 	}
 	: {
 		label: 'Ligne de décision CompatAir',
-		name: 'CA / DÉCISION PNEUMATIQUE',
-		steps: [
-			{ label: 'Référence exacte', short: 'Référence' },
-			{ label: 'Besoin publié', short: 'Besoin' },
-			{ label: 'Verdict traçable', short: 'Verdict' },
-		],
-		status: 'Indépendant · sourcé',
+		name: completeJourneyIsRelevant ? 'CA / PARCOURS DE DÉCISION' : 'CA / DÉCISION PNEUMATIQUE',
+		steps: frenchSteps,
+		next: actionIndex === 0 ? { label: 'Étape actuelle · identifier', href: '#contenu' }
+			: actionIndex === 1 ? { label: 'Étape actuelle · dimensionner', href: '#contenu' }
+				: actionIndex === 2 ? { label: 'Étape actuelle · comparer', href: '#contenu' }
+					: actionIndex === 3 ? { label: 'Étape actuelle · préparer', href: '#contenu' }
+						: actionIndex === 4 ? { label: 'Étape actuelle · terrain', href: '#contenu' }
+							: { label: 'Commencer · identifier', href: '/scanner/' },
 	};
-const isCurrent = (href: string) => currentPath.startsWith(href);
 const exploreItems = [
 	{ href: '/compresseurs/', label: 'Compresseurs', detail: 'Débits et sources documentés' },
 	{ href: '/outils-pneumatiques/', label: 'Outils pneumatiques', detail: 'Besoins publiés par usage' },
@@ -196,7 +216,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 							<a href="/calculateur/"><strong>Vérifier un besoin</strong><small>Outil, usage et compresseur</small></a>
 						</div>
 						<a href="/guides/" aria-current={isCurrent('/guides/') ? 'page' : undefined}>Guides</a>
-						<a href="/professionnels/" aria-current={isCurrent('/professionnels/') ? 'page' : undefined}>Professionnels</a>
+						<a class="mobile-pro-link" href="/professionnels/" aria-current={isCurrent('/professionnels/') ? 'page' : undefined}><strong>Professionnels</strong><small>Catalogues, distribution et ateliers</small></a>
 						<details class="mobile-explore"><summary>Explorer le corpus</summary><div>{exploreItems.map((item) => <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>)}</div></details>
 						<a href="/recherche/">Rechercher sur le site</a>
 						<a href="/methodologie/">Méthode et fiabilité</a>
@@ -204,11 +224,11 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 					</div>
 				</details>
 			</nav>
-			<div class="decision-rail" aria-label={decisionRail.label}>
+			<div class:list={['decision-rail', completeJourneyIsRelevant && 'is-complete-journey']} aria-label={decisionRail.label} data-decision-rail>
 				<div class="container decision-rail-inner">
 					<strong class="decision-rail-name">{decisionRail.name}</strong>
-					<ol>{decisionRail.steps.map((step, index) => <li><span>0{index + 1}</span><b class="decision-rail-full">{step.label}</b><b class="decision-rail-short">{step.short}</b></li>)}</ol>
-					<span class="decision-rail-status"><i aria-hidden="true"></i>{decisionRail.status}</span>
+					<ol>{decisionRail.steps.map((step, index) => <li data-decision-step={step.id} data-state={step.state}><a href={step.href} aria-current={step.state === 'current' ? 'step' : undefined}><span>0{index + 1}</span><b class="decision-rail-full">{step.label}</b><b class="decision-rail-short">{step.short}</b></a></li>)}</ol>
+					<a class="decision-rail-status" data-decision-next href={decisionRail.next.href}><i aria-hidden="true"></i><span>{decisionRail.next.label}</span></a>
 				</div>
 			</div>
 		</header>
