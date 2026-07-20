@@ -58,6 +58,27 @@ const socialImage = new URL(imagePath ?? `/social/${socialCardKey(canonical.path
 const currentPath = Astro.url.pathname;
 const currentYear = new Date().getFullYear();
 const catalogReferenceCount = compressors.length + tools.length;
+const decisionRail = lang === 'en'
+	? {
+		label: 'CompatAir decision line',
+		name: 'CA / PNEUMATIC DECISION',
+		steps: [
+			{ label: 'Exact reference', short: 'Reference' },
+			{ label: 'Published need', short: 'Need' },
+			{ label: 'Traceable verdict', short: 'Verdict' },
+		],
+		status: 'Independent · sourced',
+	}
+	: {
+		label: 'Ligne de décision CompatAir',
+		name: 'CA / DÉCISION PNEUMATIQUE',
+		steps: [
+			{ label: 'Référence exacte', short: 'Référence' },
+			{ label: 'Besoin publié', short: 'Besoin' },
+			{ label: 'Verdict traçable', short: 'Verdict' },
+		],
+		status: 'Indépendant · sourcé',
+	};
 const navItems = [
 	{ href: '/guides/', label: 'Guides' },
 	{ href: '/glossaire/', label: 'Glossaire' },
@@ -170,6 +191,13 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 					</div>
 				</details>
 			</nav>
+			<div class="decision-rail" aria-label={decisionRail.label}>
+				<div class="container decision-rail-inner">
+					<strong class="decision-rail-name">{decisionRail.name}</strong>
+					<ol>{decisionRail.steps.map((step, index) => <li><span>0{index + 1}</span><b class="decision-rail-full">{step.label}</b><b class="decision-rail-short">{step.short}</b></li>)}</ol>
+					<span class="decision-rail-status"><i aria-hidden="true"></i>{decisionRail.status}</span>
+				</div>
+			</div>
 		</header>
 		<main id="contenu"><slot /></main>
 		<footer class="site-footer" aria-label="Pied de page">

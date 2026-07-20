@@ -3247,6 +3247,212 @@ body {
 	.catalog-card-register small { max-width: 7.5rem; line-height: 1.35; text-align: right; }
 }
 
+/* Signature CompatAir III : la ligne de décision devient l'élément propriétaire du site. */
+.site-header {
+	border-bottom: 0;
+	color: white;
+	background:
+		linear-gradient(90deg, rgba(211,235,86,.045) 1px, transparent 1px) 0 0 / 44px 100%,
+		radial-gradient(circle at 8% -80%, rgba(46,132,94,.34), transparent 22rem),
+		rgba(7,24,17,.97);
+	box-shadow: 0 18px 48px rgba(6,23,16,.16);
+}
+.site-header::after { display: none; }
+.nav { min-height: 76px; }
+.brand { color: white; }
+.brand-symbol {
+	color: #245c47;
+	filter: drop-shadow(0 0 0 rgba(0,0,0,0));
+}
+.brand-wordmark > span { color: #f6f8f2; }
+.brand-wordmark strong { color: var(--accent); }
+.brand-name small { color: #91a79b; }
+.brand-corpus { border-left-color: rgba(255,255,255,.16); }
+.brand-corpus small { color: #718a7d; }
+.brand-corpus strong { color: white; }
+.brand-corpus i { color: var(--accent); }
+
+.nav-links a, .site-search summary { color: #bdcac3; }
+.nav-links a:hover, .nav-links a.active, .site-search summary:hover { color: white; }
+.nav-links a::after, .site-search summary::after { background: var(--accent); }
+.nav-cta,
+.button.primary {
+	color: #092218;
+	border-color: var(--accent);
+	background: linear-gradient(112deg, #d9f15e, #bcd841 74%);
+	box-shadow: 0 14px 30px rgba(177,207,53,.18), inset 0 1px 0 rgba(255,255,255,.52);
+}
+.nav-cta:hover, .nav-cta.active,
+.button.primary:hover {
+	color: #061a12;
+	border-color: #e4f77e;
+	background: linear-gradient(112deg, #e1f56f, #c7e148 74%);
+}
+.button.primary small,
+.home-identify-cta small { color: rgba(9,34,24,.72); }
+.button.primary:focus-visible, .nav-cta:focus-visible {
+	box-shadow: inset 0 0 0 2px #092218, 0 0 0 3px var(--accent), 0 14px 30px rgba(177,207,53,.2);
+}
+
+.decision-rail {
+	position: relative;
+	border-top: 1px solid rgba(255,255,255,.105);
+	border-bottom: 1px solid rgba(211,235,86,.28);
+	background:
+		repeating-linear-gradient(90deg, transparent 0 21px, rgba(211,235,86,.13) 21px 22px, transparent 22px 43px),
+		#0b2b1e;
+}
+.decision-rail::before {
+	position: absolute;
+	right: 0;
+	top: -1px;
+	width: clamp(5rem, 12vw, 12rem);
+	height: 2px;
+	background: var(--accent);
+	content: "";
+}
+.decision-rail-inner {
+	display: grid;
+	grid-template-columns: minmax(9rem, .72fr) minmax(29rem, 1.45fr) minmax(9rem, .72fr);
+	gap: 1.5rem;
+	align-items: center;
+	min-height: 30px;
+	font-family: var(--font-mono);
+	text-transform: uppercase;
+}
+.decision-rail-name {
+	color: #7f998b;
+	font-size: .47rem;
+	letter-spacing: .13em;
+}
+.decision-rail ol {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.decision-rail ol::before {
+	position: absolute;
+	right: 8%;
+	top: 50%;
+	left: 8%;
+	height: 1px;
+	background: linear-gradient(90deg, rgba(211,235,86,.4), var(--accent) 50%, rgba(211,235,86,.4));
+	content: "";
+}
+.decision-rail li {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	gap: .42rem;
+	align-items: center;
+	color: #d6e0da;
+	font-size: .52rem;
+	font-weight: 760;
+	letter-spacing: .075em;
+	white-space: nowrap;
+}
+.decision-rail li::before {
+	z-index: 1;
+	width: .38rem;
+	height: .38rem;
+	border: 2px solid #0b2b1e;
+	border-radius: 50%;
+	background: var(--accent);
+	box-shadow: 0 0 0 1px rgba(211,235,86,.45), 0 0 .75rem rgba(211,235,86,.25);
+	content: "";
+}
+.decision-rail li span { color: #6f8e7e; font-size: .44rem; }
+.decision-rail li b { font: inherit; }
+.decision-rail-short { display: none; }
+.decision-rail-status {
+	display: inline-flex;
+	justify-self: end;
+	gap: .45rem;
+	align-items: center;
+	color: #a9bcb2;
+	font-size: .47rem;
+	font-weight: 780;
+	letter-spacing: .09em;
+	white-space: nowrap;
+}
+.decision-rail-status i {
+	width: .38rem;
+	height: .38rem;
+	border-radius: 50%;
+	background: var(--accent);
+	box-shadow: 0 0 .8rem rgba(211,235,86,.5);
+}
+
+.home-command-center,
+.decision-visual,
+.institutional-map,
+.technical-contract-map,
+.barometer-score-model,
+.catalog-signal-visual,
+.hub-signal-visual,
+.product-decision-instrument {
+	border-color: rgba(211,235,86,.43);
+	background-image:
+		linear-gradient(rgba(211,235,86,.048) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(211,235,86,.048) 1px, transparent 1px),
+		radial-gradient(circle at 78% 12%, rgba(47,128,90,.3), transparent 17rem),
+		linear-gradient(145deg, #102e22, #071a12 72%);
+	background-size: 22px 22px, 22px 22px, auto, auto;
+	box-shadow: 0 38px 88px rgba(5,24,16,.28), inset 0 1px 0 rgba(255,255,255,.075);
+}
+.home-command-center > header,
+.institutional-map > header,
+.technical-contract-map > header,
+.catalog-signal-visual > header,
+.hub-signal-visual > header,
+.product-decision-instrument > header {
+	box-shadow: inset 3.5rem 2px 0 var(--accent), inset 7.2rem 2px 0 rgba(56,151,107,.72);
+}
+
+.card::before, .guide-card::before, .product-card::before {
+	width: clamp(4.5rem, 34%, 10rem);
+	background: linear-gradient(90deg, var(--accent) 0 24%, transparent 24% 29%, #62ad83 29% 61%, transparent 61% 66%, var(--brand) 66%);
+}
+.page-hero::after {
+	width: 28px;
+	background:
+		repeating-linear-gradient(to bottom, rgba(16,42,32,.36) 0 1px, transparent 1px 12px) left / 8px 100% no-repeat,
+		repeating-linear-gradient(to bottom, rgba(16,42,32,.14) 0 1px, transparent 1px 6px) right / 18px 100% no-repeat;
+	box-shadow: none;
+}
+
+@media (min-width: 1320px) {
+	body::before, body::after { top: 107px; }
+}
+
+@media (max-width: 1100px) {
+	.nav { min-height: 70px; }
+	.mobile-menu summary {
+		color: #082117;
+		border: 1px solid var(--accent);
+		background: var(--accent);
+	}
+	.mobile-menu summary span,
+	.mobile-menu summary span::before,
+	.mobile-menu summary span::after { background: #082117; }
+	.decision-rail-inner { grid-template-columns: 1fr; min-height: 29px; }
+	.decision-rail-name, .decision-rail-status { display: none; }
+	.decision-rail ol { width: min(39rem, 100%); margin-inline: auto; }
+}
+
+@media (max-width: 620px) {
+	.brand-name small { max-width: 12rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+	.decision-rail-inner { width: calc(100% - 1rem); }
+	.decision-rail li { gap: .28rem; font-size: .5rem; letter-spacing: .055em; }
+	.decision-rail li span { display: none; }
+	.decision-rail li::before { width: .32rem; height: .32rem; }
+	.decision-rail-full { display: none; }
+	.decision-rail-short { display: inline; }
+}
+
 @page { size: A4; margin: 14mm; }
 @media print {
 	:root { color-scheme: light; }
