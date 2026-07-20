@@ -2,7 +2,7 @@
 	const searchParameters = new URLSearchParams(location.search);
 	const trackedTool = searchParameters.get('via') === 'mcp' ? searchParameters.get('tool') : null;
 	if (trackedTool && /^[a-z0-9_]{1,80}$/.test(trackedTool)) {
-		const canonicalEvent = { event: 'mcp_canonical_follow', schemaVersion: '1.0.0', tool: trackedTool };
+		const canonicalEvent = { event: 'mcp_canonical_follow', schemaVersion: '2.0.0', tool: trackedTool };
 		const payload = JSON.stringify(canonicalEvent);
 		const beaconAccepted = typeof navigator.sendBeacon === 'function'
 			&& navigator.sendBeacon('/events', new Blob([payload], { type: 'application/json' }));

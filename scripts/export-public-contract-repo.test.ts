@@ -13,7 +13,7 @@ describe('minimal public contract repository export', () => {
 		const output = join(root, 'repo');
 		const exported = spawnSync(process.execPath, [new URL('./export-public-contract-repo.mjs', import.meta.url).pathname, output], { encoding: 'utf8' });
 		expect(exported.status, exported.stderr).toBe(0);
-		expect(JSON.parse(readFileSync(join(output, 'server.json'), 'utf8')).version).toBe('2.1.0');
+		expect(JSON.parse(readFileSync(join(output, 'server.json'), 'utf8')).version).toBe('3.0.0');
 		expect(JSON.parse(readFileSync(join(output, 'SYNC_MANIFEST.json'), 'utf8')).files.length).toBeGreaterThanOrEqual(16);
 		expect(() => readFileSync(join(output, 'server/mcp-core.mjs'))).toThrow();
 		const tested = spawnSync(process.execPath, ['--test', 'tests/verify-contracts.mjs', 'ucp/tests/verify-contracts.mjs'], { cwd: output, encoding: 'utf8' });

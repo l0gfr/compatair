@@ -55,6 +55,11 @@ export function createSitemapLastmodResolver({ root = process.cwd(), gitDate } =
 			sources.add('src/components/InstitutionalHero.astro');
 			sources.add('src/layouts/BaseLayout.astro');
 		}
+		if (pathname === '/compatibilite-versions/') {
+			sources.add('src/pages/mcp-documentation.astro');
+			sources.add('src/data/mcp-documentation.ts');
+			sources.add('package.json');
+		}
 		if (pathname === '/mise-en-service/') {
 			sources.add('src/pages/passeport.astro');
 			sources.add('src/components/PassportViewer.astro');

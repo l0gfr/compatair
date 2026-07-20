@@ -1,11 +1,13 @@
 import { createPublicKey, verify as verifySignature } from 'node:crypto';
 import { readdir, readFile } from 'node:fs/promises';
+import { classifyNpmAdvisories } from './lib/advisory-policy.mjs';
 
 const REGISTRY = 'https://registry.npmjs.org';
 const QUARANTINE_MS = 24 * 60 * 60 * 1000;
 const RECENT_WINDOW_MS = 72 * 60 * 60 * 1000;
 const EXPECTED_BUILD_ALLOWLIST = new Set(['esbuild']);
 const EXPECTED_OVERRIDES = new Map([['tmp', '0.2.7'], ['uuid', '11.1.1']]);
+const EXPECTED_RELEASE_AGE_EXCLUSIONS = new Set();
 const LIFECYCLE_SCRIPTS = ['preinstall', 'install', 'postinstall'];
 
 const registryMode = process.argv.includes('--registry');
@@ -51,6 +53,25 @@ function parseOverrides(source) {
   }
 
   return overrides;
+}
+
+function parseYamlList(source, key) {
+  const lines = source.split('\n');
+  const values = new Set();
+  let inList = false;
+
+  for (const line of lines) {
+    if (line === `${key}:`) {
+      inList = true;
+      continue;
+    }
+    if (inList && /^\S/.test(line) && line.trim()) break;
+    if (!inList) continue;
+    const match = line.match(/^\s{2}-\s*(['"]?)(.+?)\1\s*$/);
+    if (match) values.add(match[2]);
+  }
+
+  return values;
 }
 
 function unquoteYamlKey(value) {
@@ -230,6 +251,16 @@ for (const [name, version] of overrides) {
   if (EXPECTED_OVERRIDES.get(name) !== version) failures.push(`override pnpm inattendu: ${name}@${version}`);
 }
 
+const releaseAgeExclusions = parseYamlList(workspace, 'minimumReleaseAgeExclude');
+const unexpectedReleaseAgeExclusions = setDifference(releaseAgeExclusions, EXPECTED_RELEASE_AGE_EXCLUSIONS);
+const missingReleaseAgeExclusions = setDifference(EXPECTED_RELEASE_AGE_EXCLUSIONS, releaseAgeExclusions);
+if (unexpectedReleaseAgeExclusions.length) {
+  failures.push(`exceptions de quarantaine pnpm inattendues: ${unexpectedReleaseAgeExclusions.join(', ')}`);
+}
+if (missingReleaseAgeExclusions.length) {
+  failures.push(`exceptions de quarantaine pnpm attendues mais absentes: ${missingReleaseAgeExclusions.join(', ')}`);
+}
+
 const allowedBuilds = parseAllowedBuilds(workspace);
 const unexpectedBuilds = setDifference(allowedBuilds, EXPECTED_BUILD_ALLOWLIST);
 const missingBuilds = setDifference(EXPECTED_BUILD_ALLOWLIST, allowedBuilds);
@@ -255,18 +286,18 @@ if (invalidIntegrity.length) {
 console.log(`Lockfile: ${lockedPackages.length} versions, intégrités SHA-512 présentes: ${lockedPackages.length - invalidIntegrity.length}/${lockedPackages.length}.`);
 console.log(`Scripts d'installation autorisés: ${[...allowedBuilds].sort().join(', ') || 'aucun'}.`);
 console.log(`Overrides pnpm contrôlés depuis pnpm-workspace.yaml: ${[...overrides].map(([name, version]) => `${name}@${version}`).join(', ') || 'aucun'}.`);
+console.log(`Exceptions de quarantaine pnpm contrôlées: ${[...releaseAgeExclusions].sort().join(', ') || 'aucune'}.`);
 
 if (advisoryMode) {
   try {
     const response = await fetchBulkAdvisories(lockedPackages);
-    const advisories = Object.entries(response).flatMap(([packageName, entries]) => (entries ?? []).map((entry) => ({ packageName, ...entry })));
-    const severityRank = new Map([['info', 0], ['low', 1], ['moderate', 2], ['high', 3], ['critical', 4]]);
-    const blocking = advisories.filter((entry) => (severityRank.get(entry.severity) ?? 5) >= severityRank.get('high'));
-    console.log(`Avis npm (endpoint bulk): ${advisories.length} signalé(s), dont ${blocking.length} de sévérité haute ou critique.`);
+    const directRuntimeDependencies = new Set(Object.keys(packageJson.dependencies ?? {}));
+    const { advisories, blocking } = classifyNpmAdvisories(response, directRuntimeDependencies);
+    console.log(`Avis npm (endpoint bulk): ${advisories.length} signalé(s), dont ${blocking.length} bloquant(s) selon la politique runtime.`);
     for (const advisory of advisories) {
       const message = `${advisory.packageName}: ${advisory.severity} ${advisory.title} (${advisory.url})`;
       if (blocking.includes(advisory)) failures.push(`vulnérabilité npm: ${message}`);
-      else warnings.push(`vulnérabilité npm sous le seuil high: ${message}`);
+      else warnings.push(`vulnérabilité npm transitive sous le seuil high: ${message}`);
     }
   } catch (error) {
     failures.push(`endpoint npm Bulk Advisory inaccessible ou invalide: ${error.message}`);

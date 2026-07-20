@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { spawn } from 'node:child_process';
-import { copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { copyFileSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { createServer } from 'node:net';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -118,7 +118,7 @@ describe('MCP HTTP boundary helpers', () => {
 		const result = await new Promise<{ status: number; body: string }>((resolve) => {
 			let status = 0; let body = '';
 			const request = {
-				url: '/mcp', method: 'POST', headers: { accept: 'application/json, text/event-stream', 'content-type': 'application/json' }, socket: { remoteAddress: '127.0.0.1' },
+				url: '/mcp/legacy', method: 'POST', headers: { accept: 'application/json, text/event-stream', 'content-type': 'application/json' }, socket: { remoteAddress: '127.0.0.1' },
 				async *[Symbol.asyncIterator]() { yield Buffer.from(payload); },
 			};
 			const response = { setTimeout() {}, writeHead(value: number) { status = value; }, end(value = '') { body += value; resolve({ status, body }); }, destroy() {} };
@@ -207,7 +207,7 @@ describe('MCP HTTP boundary helpers', () => {
 		const requestTool = (name: string) => new Promise<number>((resolve) => {
 			const payload = JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/call', params: { name, arguments: { productId: 'product-a' } } });
 			const request = {
-				url: '/mcp', method: 'POST', headers: { accept: 'application/json, text/event-stream', 'content-type': 'application/json' }, socket: { remoteAddress: '127.0.0.1' },
+				url: name === 'find_offers' ? '/mcp/legacy' : '/mcp', method: 'POST', headers: { accept: 'application/json, text/event-stream', 'content-type': 'application/json' }, socket: { remoteAddress: '127.0.0.1' },
 				async *[Symbol.asyncIterator]() { yield Buffer.from(payload); },
 			};
 			const response = { setTimeout() {}, writeHead(value: number) { resolve(value); }, end() {}, destroy() {} };
@@ -237,7 +237,7 @@ describe('MCP HTTP boundary helpers', () => {
 			const result = JSON.parse(toolCall.body).result.structuredContent;
 			expect(result.verdict).toBe('insufficient_data');
 			expect(result.canonical_follow_url).toContain('via=mcp&tool=identify_product');
-			const followPayload = JSON.stringify({ event: 'mcp_canonical_follow', schemaVersion: '1.0.0', tool: 'identify_product' });
+			const followPayload = JSON.stringify({ event: 'mcp_canonical_follow', schemaVersion: '2.0.0', tool: 'identify_product' });
 			expect((await call({ url: '/events', method: 'POST', headers: { origin: 'https://compatair.fr', 'content-type': 'application/json', 'user-agent': 'Claude Code/1.2.3' }, socket: { remoteAddress: '192.0.2.42' }, async *[Symbol.asyncIterator]() { yield Buffer.from(followPayload); } })).status).toBe(204);
 			const report = await call({ url: '/data/mcp-usage.json', method: 'GET', headers: {}, socket: { remoteAddress: '127.0.0.1' } });
 			expect(JSON.parse(report.body)).toMatchObject({ totals: { initializations: 1, tool_calls: 1, insufficient_data: 1, canonical_follows: 1, estimated_callers: null }, tools: [{ name: 'identify_product', calls: 1, insufficient_data: 1, canonical_issued: 1, canonical_follows: 1 }] });
@@ -486,7 +486,7 @@ describe('MCP HTTP boundary helpers', () => {
 		const current = join(directory, 'current');
 		mkdirSync(join(release, '_server'), { recursive: true });
 		mkdirSync(join(release, 'data'), { recursive: true });
-		for (const file of ['mcp-server.mjs', 'mcp-core.mjs', 'mcp-output-schemas.mjs', 'ucp-core.mjs', 'demand-aggregates.mjs', 'product-funnel-aggregates.mjs', 'acquisition-aggregates.mjs', 'mcp-telemetry.mjs']) copyFileSync(join(process.cwd(), 'server', file), join(release, '_server', file));
+		for (const file of readdirSync(join(process.cwd(), 'server')).filter((name) => name.endsWith('.mjs'))) copyFileSync(join(process.cwd(), 'server', file), join(release, '_server', file));
 		writeFileSync(join(release, 'data', 'catalog.json'), JSON.stringify({ catalogVersion: 'catalog-test', compressors: [], tools: [] }));
 		writeFileSync(join(release, 'data', 'verdicts.json'), JSON.stringify({ catalogVersion: 'catalog-test', verdictVersion: 'verdict-test', calculationVersion: '1.2.0', pairs: [] }));
 		writeFileSync(join(release, 'data', 'offers.json'), JSON.stringify({ offers: [], snapshotVersion: 'empty' }));

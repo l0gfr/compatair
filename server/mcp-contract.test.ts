@@ -11,7 +11,7 @@ describe('MCP public publication contract', () => {
 	it('declares the public Streamable HTTP remote with the current registry schema', () => {
 		expect(manifest).toMatchObject({
 			$schema: 'https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json',
-			name: 'io.github.bluetouff/compatair', version: '2.1.0',
+			name: 'io.github.bluetouff/compatair', version: '3.0.0',
 			remotes: [{ type: 'streamable-http', url: 'https://compatair.fr/mcp' }],
 		});
 		expect(manifest).not.toHaveProperty('packages');

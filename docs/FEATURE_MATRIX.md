@@ -28,8 +28,9 @@
 - contribution facultative aux priorités du catalogue, agrégée sans événement brut, cookie, identifiant de navigateur ni adresse IP persistée ;
 - rapport privé de priorisation avec seuil minimal de cinq contributions par dimension, couverture pondérée par la demande observée et objectif opérationnel explicite de 80 % ;
 - funnel du calculateur agrégé sans URL, referrer, cookie ni identifiant, avec affichage, famille fermée, sélection et recalcul réussi de la recommandation contrefactuelle, rapport privé et contrôle de cohérence des taux ;
-- serveur MCP Streamable HTTP en lecture seule, huit tools core, neuf outils historiques explicitement legacy avec successeur, tools spécialisés et bridge UCP, onze ressources, trois prompts, un schéma de sortie fermé par tool, deux portées de verdict, reçus vérifiables, pagination, quotas, limite de taille, contrôle Origin, santé et métriques agrégées ;
+- serveur MCP Streamable HTTP en lecture seule, sept tools decision-core sur l’endpoint principal, quatre tools avancés et neuf outils historiques sur des endpoints séparés, bridge UCP, onze ressources, trois prompts, enveloppes de sortie compactes dans `tools/list`, contrats exhaustifs en ressource, deux portées de verdict, reçus vérifiables, pagination, quotas, limite de taille, contrôle Origin, santé et télémétrie qualifiée ;
 - benchmark public de fidélité des agents avec 100 scénarios déterministes, évaluateur local et leaderboard soumis à une preuve d’exécution complète ;
+- banc MCP distinct de 50 requêtes pour mesurer la sélection du profil, du tool et des arguments sur au moins deux couples modèle-client-tokenizer, sans score public simulé ;
 - Compatibility Impact Feed JSON/NDJSON reliant les changements de preuve aux produits, portefeuilles et couples à recalculer sans inventer de delta avant/après ;
 - acquisition agrégée séparant organic, agent/referral, widget, API, MCP et UCP par gabarit, sans URL, referrer brut, cookie ni identifiant ;
 - workflows CI, déploiement, sécurité, snapshot et disponibilité, avec permissions minimales et actions épinglées ;

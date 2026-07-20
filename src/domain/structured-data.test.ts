@@ -3,7 +3,7 @@ import { serializeJsonLd } from './structured-data';
 
 describe('serializeJsonLd', () => {
 	it('neutralise les caractères interprétés par le parseur HTML sans altérer le JSON', () => {
-		const value = { label: '<balise>&contenu', separator: '\u2028' };
+		const value = { label: '</script><script>alert(1)</script><balise>&contenu', separator: '\u2028' };
 		const serialized = serializeJsonLd(value);
 
 		expect(serialized).not.toMatch(/[<>&\u2028\u2029]/);

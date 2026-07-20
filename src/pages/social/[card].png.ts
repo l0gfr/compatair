@@ -21,6 +21,7 @@ const staticCards: SocialCard[] = [
 	{ path: '/comparateur/', kicker: 'Comparaison', title: 'Comparer des compresseurs', subtitle: 'Caractéristiques et données manquantes côte à côte' },
 	{ path: '/comparatifs/', kicker: 'Comparatifs', title: 'Comparer sans confondre les chiffres', subtitle: 'Débit restitué, pression et fiabilité des données' },
 	{ path: '/comparatifs/compresseurs-debit-restitue/', kicker: 'Comparatif factuel', title: 'Compresseurs par débit restitué', subtitle: 'Chaque valeur reste liée à sa pression publiée' },
+	{ path: '/compatibilite-versions/', kicker: 'Contrats publics', title: 'Une version, une frontière précise', subtitle: 'Produit, MCP, moteur, méthode et schémas sans ambiguïté' },
 	{ path: '/compatibilite/', kicker: 'Compatibilité CompatAir', title: 'Compresseur et outil pneumatique', subtitle: 'Résultat, débit, pression, limites et sources' },
 	{ path: '/compresseurs/', kicker: 'Catalogue', title: 'Compresseurs documentés', subtitle: 'Débit restitué, pression, cuve et limites' },
 	{ path: '/confidentialite/', kicker: 'Confiance', title: 'Politique de confidentialité', subtitle: 'Données traitées, finalités et droits' },

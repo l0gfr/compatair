@@ -159,14 +159,8 @@ jobs:
 
       - name: Package immutable release
         run: |
-          install -D -m 644 server/mcp-core.mjs dist/_server/mcp-core.mjs
-          install -D -m 644 server/mcp-output-schemas.mjs dist/_server/mcp-output-schemas.mjs
-          install -D -m 644 server/ucp-core.mjs dist/_server/ucp-core.mjs
-          install -D -m 644 server/demand-aggregates.mjs dist/_server/demand-aggregates.mjs
-          install -D -m 644 server/product-funnel-aggregates.mjs dist/_server/product-funnel-aggregates.mjs
-          install -D -m 644 server/acquisition-aggregates.mjs dist/_server/acquisition-aggregates.mjs
-          install -D -m 644 server/mcp-telemetry.mjs dist/_server/mcp-telemetry.mjs
-          install -D -m 644 server/mcp-server.mjs dist/_server/mcp-server.mjs
+          install -d -m 755 dist/_server
+          install -m 644 server/*.mjs dist/_server/
           install -D -m 644 scripts/generate-private-weekly-report.mjs dist/_ops/generate-private-weekly-report.mjs
           install -D -m 644 scripts/lib/rank-demand.mjs dist/_ops/lib/rank-demand.mjs
           install -D -m 644 scripts/lib/report-product-funnel.mjs dist/_ops/lib/report-product-funnel.mjs

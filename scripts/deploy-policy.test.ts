@@ -72,5 +72,17 @@ describe('release boundary policy', () => {
 		expect(apache).toContain('ctl:ruleRemoveTargetById=930120;ARGS_NAMES:params.arguments.meta.ucp-agent.profile');
 		expect(apache).toContain('ctl:ruleRemoveTargetById=931130;ARGS:params.arguments.meta.ucp-agent.profile');
 		expect(deploy).toContain('scripts/smoke-live-http.mjs');
+		expect(workflow).toContain('install -m 644 server/*.mjs dist/_server/');
+	});
+
+	it('keeps the public browser boundary closed against script injection', () => {
+		const publicCsp = apache.split('\n').find((line) => line.includes('Content-Security-Policy') && line.includes('script-src-attr')) ?? '';
+		expect(publicCsp).toContain("default-src 'self'");
+		expect(publicCsp).toContain("script-src 'self'");
+		expect(publicCsp).toContain("script-src-attr 'none'");
+		expect(publicCsp).toContain("object-src 'none'");
+		expect(publicCsp).toContain("base-uri 'none'");
+		expect(publicCsp).toContain("frame-ancestors 'none'");
+		expect(publicCsp).not.toContain("script-src 'self' 'unsafe-inline'");
 	});
 });

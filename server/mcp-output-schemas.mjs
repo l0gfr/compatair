@@ -125,12 +125,44 @@ const commonProperties = {
 const commonRequired = ['verdict', 'verdict_scope', 'verdict_schema_version', 'canonical_url', 'product_urls', 'source_urls', 'method_version', 'catalog_version', 'observed_at', 'limitations', 'next_actions', 'catalogVersion', 'engineVersion'];
 const output = (extra = {}, required = []) => strict({ ...commonProperties, ...extra }, [...commonRequired, ...required]);
 
+// The complete schemas remain available through compatair://responses/schema and
+// the versioned HTTP/OpenAPI contracts. tools/list deliberately exposes only the
+// stable decision envelope: outputSchema is optional in MCP and duplicating the
+// complete graph, evidence and receipt schemas in every tool definition imposes
+// a large context cost on clients before the first useful call.
+const compactScopedVerdictSchema = {
+	type: 'object',
+	properties: {
+		schema_version: { const: '2.0.0' },
+		scope: { type: 'string', enum: VERDICT_SCOPES },
+		verdict: { type: 'string', enum: PUBLIC_VERDICTS },
+		engine_verdict: { type: 'string', enum: ENGINE_VERDICTS },
+		limitations: stringArray,
+	},
+	required: ['schema_version', 'scope', 'verdict', 'limitations'],
+	additionalProperties: true,
+};
+const compactOutput = (extra = {}, required = []) => ({
+	type: 'object',
+	properties: {
+		verdict: { type: 'string', enum: PUBLIC_VERDICTS },
+		verdict_scope: { type: 'string', enum: VERDICT_SCOPES },
+		canonical_url: uri,
+		limitations: stringArray,
+		next_actions: stringArray,
+		...extra,
+	},
+	required: ['verdict', 'verdict_scope', 'canonical_url', 'limitations', 'next_actions', ...required],
+	additionalProperties: true,
+});
+
 const decisionProperties = {
 	overall_system_verdict: scopedVerdictSchema, air_supply_verdict: scopedVerdictSchema, compatibility: scopedVerdictSchema,
 	compatibility_receipt: receiptSchema,
 };
 
 const outputSchemas = {
+	orient_decision: output({ profile: { type: 'string', enum: ['core', 'extended', 'legacy'] }, recommended_tool: string, required_inputs: stringArray, endpoint: uri }, ['profile', 'recommended_tool', 'required_inputs', 'endpoint']),
 	search_tools: output({ tools: { type: 'array', items: toolSchema }, nextCursor: string }),
 	get_tool_requirements: output({ tool: toolSchema }),
 	search_compressors: output({ compressors: { type: 'array', items: compressorSchema }, nextCursor: string }),
@@ -162,11 +194,32 @@ const outputSchemas = {
 	}),
 };
 
-export const CORE_TOOL_NAMES = ['identify_product', 'evaluate_air_compatibility', 'build_complete_air_system', 'find_compatible_alternatives', 'get_compatibility_evidence', 'search_knowledge', 'get_current_offers', 'get_changefeed'];
+export const DECISION_CORE_TOOL_NAMES = ['orient_decision', 'identify_product', 'evaluate_air_compatibility', 'build_complete_air_system', 'find_compatible_alternatives', 'search_knowledge', 'get_current_offers'];
+export const EXTENDED_TOOL_NAMES = ['get_compatibility_evidence', 'explain_compatibility_verdict', 'compare_complete_systems', 'get_changefeed'];
 export const LEGACY_SUCCESSORS = {
 	search_tools: 'identify_product', get_tool_requirements: 'identify_product', search_compressors: 'identify_product', get_compressor_specs: 'identify_product',
 	size_compressor: 'build_complete_air_system', check_compatibility: 'evaluate_air_compatibility', compare_compressors: 'compare_complete_systems',
 	find_accessories: 'build_complete_air_system', find_offers: 'get_current_offers',
+};
+
+export const LEGACY_TOOL_NAMES = Object.keys(LEGACY_SUCCESSORS);
+export const TOOL_PROFILE_NAMES = {
+	core: DECISION_CORE_TOOL_NAMES,
+	extended: EXTENDED_TOOL_NAMES,
+	legacy: LEGACY_TOOL_NAMES,
+};
+
+export const compactOutputSchemas = {
+	orient_decision: compactOutput({
+		profile: { type: 'string', enum: ['core', 'extended', 'legacy'] }, recommended_tool: string,
+		required_inputs: stringArray, endpoint: uri,
+	}, ['profile', 'recommended_tool', 'required_inputs', 'endpoint']),
+	identify_product: compactOutput({ matches: { type: 'array', items: { type: 'object', properties: { id: string, type: { type: 'string', enum: ['compressor', 'tool'] }, match_confidence: { type: 'string', enum: ['exact', 'candidate'] }, canonical_url: uri }, required: ['id', 'type', 'match_confidence', 'canonical_url'], additionalProperties: true } } }),
+	evaluate_air_compatibility: compactOutput({ overall_system_verdict: compactScopedVerdictSchema, air_supply_verdict: compactScopedVerdictSchema }, ['overall_system_verdict', 'air_supply_verdict']),
+	build_complete_air_system: compactOutput({ overall_system_verdict: compactScopedVerdictSchema, air_supply_verdict: compactScopedVerdictSchema, configuration_id: string }, ['overall_system_verdict', 'air_supply_verdict']),
+	find_compatible_alternatives: compactOutput({ air_supply_verdict: compactScopedVerdictSchema, alternatives: { type: 'array', items: { type: 'object', additionalProperties: true } } }, ['air_supply_verdict', 'alternatives']),
+	search_knowledge: compactOutput({ items: { type: 'array', items: { type: 'object', additionalProperties: true } } }),
+	get_current_offers: compactOutput({ offers: { type: 'array', items: { type: 'object', additionalProperties: true } } }),
 };
 
 export { PUBLIC_VERDICTS, VERDICT_SCOPES, outputSchemas, scopedVerdictSchema, receiptSchema, airGraphSchema, componentsSchema, alternativeSchema };

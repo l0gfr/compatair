@@ -1,9 +1,10 @@
 import { createHash } from 'node:crypto';
 import { UCP_CAPABILITY_NAME, UCP_CAPABILITY_VERSION, UCP_PROTOCOL_VERSION } from './ucp-core.mjs';
-import { CORE_TOOL_NAMES, LEGACY_SUCCESSORS, outputSchemas, receiptSchema } from './mcp-output-schemas.mjs';
+import { DECISION_CORE_TOOL_NAMES, EXTENDED_TOOL_NAMES, LEGACY_SUCCESSORS, LEGACY_TOOL_NAMES, outputSchemas, receiptSchema, TOOL_PROFILE_NAMES } from './mcp-output-schemas.mjs';
+import { allToolDefinitions, mcpPrompts, mcpResources } from './mcp-tool-manifest.mjs';
 
 const ENGINE_VERSION = '1.3.0';
-const MCP_SERVER_VERSION = '2.1.0';
+const MCP_SERVER_VERSION = '3.0.0';
 const METHOD_VERSION = '2026.07';
 const VERDICT_SCHEMA_VERSION = '2.0.0';
 const PROTOCOL_VERSION = '2025-11-25';
@@ -81,6 +82,7 @@ function validDemand(item) {
 function validToolArguments(name, args) {
 	if (!isRecord(args)) return false;
 	switch (name) {
+		case 'orient_decision': return hasOnlyKeys(args, ['goal']) && ['identify', 'evaluate', 'find_solution', 'knowledge', 'offers', 'evidence', 'compare', 'changes', 'legacy'].includes(args.goal);
 		case 'search_tools': return hasOnlyKeys(args, ['query', 'category', 'cursor', 'limit'])
 			&& (args.query === undefined || isShortString(args.query)) && (args.category === undefined || isShortString(args.category))
 			&& (args.cursor === undefined || isShortString(args.cursor)) && isOptionalInteger(args.limit, 1, 50);
@@ -127,6 +129,10 @@ function validToolArguments(name, args) {
 			&& args.productIds.every((id) => isShortString(id) && id.length > 0) && isOptionalShortString(args.cursor) && isOptionalInteger(args.limit, 1, 50);
 		case 'get_changefeed': return hasOnlyKeys(args, ['since', 'cursor', 'limit']) && isOptionalShortString(args.since) && isOptionalShortString(args.cursor) && isOptionalInteger(args.limit, 1, 20);
 		case 'evaluate_air_compatibility': {
+			if (hasOnlyKeys(args, ['compressorId', 'toolIds', 'mode'])) return isShortString(args.compressorId) && args.compressorId.length > 0
+				&& Array.isArray(args.toolIds) && args.toolIds.length >= 1 && args.toolIds.length <= 20
+				&& args.toolIds.every((id) => isShortString(id) && id.length > 0)
+				&& (args.mode === undefined || ['simultaneous', 'successive'].includes(args.mode));
 			if (!hasOnlyKeys(args, ['meta', 'ucp', 'intent', 'configuration', 'constraints', 'requested_outputs']) || !isRecord(args.meta) || !hasOnlyKeys(args.meta, ['ucp-agent']) || !isRecord(args.meta['ucp-agent']) || !hasOnlyKeys(args.meta['ucp-agent'], ['profile']) || !isOptionalUrlString(args.meta['ucp-agent'].profile)) return false;
 			if (!isRecord(args.ucp) || !hasOnlyKeys(args.ucp, ['version']) || args.ucp.version !== UCP_PROTOCOL_VERSION) return false;
 			const intent = args.intent ?? 'will_it_work';
@@ -391,91 +397,6 @@ function identifyCandidates(catalog, args) {
 	}).filter((match) => match.confidence).sort((left, right) => (left.confidence === 'exact' ? -1 : 1) - (right.confidence === 'exact' ? -1 : 1));
 }
 
-const legacyToolDefinitions = [
-	['search_tools', 'Rechercher des outils pneumatiques documentés.', { query: { type: 'string' }, category: { type: 'string' }, cursor: { type: 'string' }, limit: { type: 'integer', minimum: 1, maximum: 50 } }],
-	['get_tool_requirements', 'Retourner les exigences publiées d’un outil.', { id: { type: 'string' } }, ['id']],
-	['search_compressors', 'Rechercher des compresseurs selon des critères techniques.', { query: { type: 'string' }, minTankLiters: { type: 'number', minimum: 0 }, minPressureBar: { type: 'number', minimum: 0 }, oilType: { type: 'string', enum: ['oil', 'oil-free'] }, cursor: { type: 'string' }, limit: { type: 'integer', minimum: 1, maximum: 50 } }],
-	['get_compressor_specs', 'Retourner les caractéristiques et sources d’un compresseur.', { id: { type: 'string' } }, ['id']],
-	['size_compressor', 'Dimensionner un débit continu, un besoin par action ou un gonflage paramétré.', { demands: { type: 'array', minItems: 1, maxItems: 20, items: { oneOf: [
-		{ type: 'object', properties: { model: { type: 'string', enum: ['fixed-flow'] }, flowLpm: { type: 'number', exclusiveMinimum: 0 }, pressureBar: { type: 'number', exclusiveMinimum: 0 }, quantity: { type: 'integer', minimum: 1, maximum: 20 }, dutyFactor: { type: 'number', exclusiveMinimum: 0, maximum: 1 } }, required: ['flowLpm', 'pressureBar'], additionalProperties: false },
-		{ type: 'object', properties: { model: { type: 'string', enum: ['per-action'] }, litersPerAction: { type: 'number', exclusiveMinimum: 0 }, actionsPerMinute: { type: 'number', exclusiveMinimum: 0 }, pressureBar: { type: 'number', exclusiveMinimum: 0 }, quantity: { type: 'integer', minimum: 1, maximum: 20 } }, required: ['model', 'litersPerAction', 'actionsPerMinute', 'pressureBar'], additionalProperties: false },
-		{ type: 'object', properties: { model: { type: 'string', enum: ['inflation'] }, volumeLiters: { type: 'number', exclusiveMinimum: 0 }, initialPressureBar: { type: 'number', minimum: 0 }, targetPressureBar: { type: 'number', exclusiveMinimum: 0 }, targetMinutes: { type: 'number', exclusiveMinimum: 0 }, quantity: { type: 'integer', minimum: 1, maximum: 20 } }, required: ['model', 'volumeLiters', 'initialPressureBar', 'targetPressureBar', 'targetMinutes'], additionalProperties: false },
-	] } }, mode: { type: 'string', enum: ['simultaneous', 'successive'] }, safetyMargin: { type: 'number', minimum: 0, maximum: 1 }, measuredLeakLpm: { type: 'number', minimum: 0, maximum: 10000 }, measuredPressureDropBar: { type: 'number', minimum: 0, maximum: 50 } }, ['demands']],
-	['check_compatibility', 'Comparer un compresseur et un outil avec un verdict normalisé.', { compressorId: { type: 'string' }, toolId: { type: 'string' }, safetyMargin: { type: 'number', minimum: 0, maximum: 1 } }, ['compressorId', 'toolId']],
-	['compare_compressors', 'Comparer deux ou trois compresseurs sans score commercial.', { ids: { type: 'array', minItems: 2, maxItems: 3, items: { type: 'string' } } }, ['ids']],
-	['find_accessories', 'Retourner uniquement les raccords ou accessoires documentés pour un outil.', { toolId: { type: 'string' } }, ['toolId']],
-	['find_offers', 'Retourner les offres actives issues de flux autorisés.', { productId: { type: 'string' }, cursor: { type: 'string' }, limit: { type: 'integer', minimum: 1, maximum: 50 } }, ['productId']],
-];
-
-const airGraphToolDefinitions = [
-	['evaluate_air_compatibility', 'UCP read-only compatibility decision for one documented compressor and one or more pneumatic tools. It never accepts identity, payment, checkout or order data.', {
-		meta: { type: 'object', properties: { 'ucp-agent': { type: 'object', properties: { profile: { type: 'string', format: 'uri', maxLength: MAX_URL_TEXT } }, required: ['profile'], additionalProperties: false } }, required: ['ucp-agent'], additionalProperties: false },
-		ucp: { type: 'object', properties: { version: { type: 'string', const: UCP_PROTOCOL_VERSION } }, required: ['version'], additionalProperties: false },
-		intent: { type: 'string', enum: ['will_it_work', 'explain_limits', 'find_minimal_change', 'build_complete_system'] },
-		configuration: { type: 'object', properties: { compressor: { type: 'object', properties: { id: { type: 'string' } }, required: ['id'], additionalProperties: false }, tools: { type: 'array', minItems: 1, maxItems: 20, items: { type: 'object', properties: { id: { type: 'string' } }, required: ['id'], additionalProperties: false } }, mode: { type: 'string', enum: ['simultaneous', 'successive'] } }, required: ['tools'], additionalProperties: false },
-		constraints: { type: 'object', properties: { max_total_minor: { type: 'integer', minimum: 0, maximum: 100000000 }, currency: { type: 'string', const: 'EUR' }, minimum_merchants: { type: 'integer', minimum: 1, maximum: 10 }, country: { type: 'string', const: 'FR' } }, additionalProperties: false },
-		requested_outputs: { type: 'array', maxItems: 7, uniqueItems: true, items: { type: 'string', enum: ['compatibility', 'mandatory_accessories', 'limits', 'alternatives', 'complete_configuration', 'attribution', 'evidence'] } },
-	}, ['meta', 'ucp', 'configuration']],
-	['identify_product', 'Identify a catalog product from a name, CompatAir or merchant URL, EAN/GTIN, MPN, reference, or stable CompatAir ID. No network fetch is performed.', {
-		query: { type: 'string', maxLength: MAX_SHORT_TEXT }, url: { type: 'string', maxLength: MAX_URL_TEXT }, ean: { type: 'string', maxLength: MAX_SHORT_TEXT }, reference: { type: 'string', maxLength: MAX_SHORT_TEXT }, limit: { type: 'integer', minimum: 1, maximum: 10 },
-	}],
-	['build_complete_air_system', 'Build a source-backed compressor, pneumatic tool, hose, connector, filtration and lubrication system. Missing component data stays explicit.', {
-		toolIds: { type: 'array', minItems: 1, maxItems: 20, items: { type: 'string' } }, mode: { type: 'string', enum: ['simultaneous', 'successive'] }, compressorId: { type: 'string' }, limit: { type: 'integer', minimum: 1, maximum: 10 },
-	}, ['toolIds']],
-	['explain_compatibility_verdict', 'Explain each documented pressure, flow, duty-cycle or missing-data factor behind a published compatibility verdict.', {
-		compressorId: { type: 'string' }, toolId: { type: 'string' },
-	}, ['compressorId', 'toolId']],
-	['find_compatible_alternatives', 'Find the smallest verified compressor substitution for an incompatible documented system. Commercial commission never affects ordering.', {
-		compressorId: { type: 'string' }, toolIds: { type: 'array', minItems: 1, maxItems: 20, items: { type: 'string' } }, mode: { type: 'string', enum: ['simultaneous', 'successive'] }, limit: { type: 'integer', minimum: 1, maximum: 10 },
-	}, ['compressorId', 'toolIds']],
-	['compare_complete_systems', 'Compare two to five complete configurations on documented technical facts without a commercial score.', {
-		systems: { type: 'array', minItems: 2, maxItems: 5, items: { type: 'object', properties: { compressorId: { type: 'string' }, toolIds: { type: 'array', minItems: 1, maxItems: 20, items: { type: 'string' } }, mode: { type: 'string', enum: ['simultaneous', 'successive'] } }, required: ['compressorId', 'toolIds'], additionalProperties: false } },
-	}, ['systems']],
-	['get_compatibility_evidence', 'Return the exact characteristics, evidence references, source URLs and AirGraph edges used for one compatibility result.', {
-		compressorId: { type: 'string' }, toolId: { type: 'string' },
-	}, ['compressorId', 'toolId']],
-	['search_knowledge', 'Search the published CompatAir guides, glossary, methods and product pages. The server never fetches arbitrary external content.', {
-		query: { type: 'string', maxLength: MAX_SHORT_TEXT }, type: { type: 'string', enum: ['Guide', 'Glossaire', 'Compresseur', 'Outil'] }, locale: { type: 'string', enum: ['fr', 'en'] }, cursor: { type: 'string' }, limit: { type: 'integer', minimum: 1, maximum: 20 },
-	}, ['query']],
-	['get_current_offers', 'Return dated current prices and availability separately from technical verdicts. Only allowlisted, fresh merchant destinations are returned.', {
-		productIds: { type: 'array', minItems: 1, maxItems: 20, items: { type: 'string' } }, cursor: { type: 'string' }, limit: { type: 'integer', minimum: 1, maximum: 50 },
-	}, ['productIds']],
-	['get_changefeed', 'Return catalog, method and offer snapshot changes visible since a date or version supplied by the client.', {
-		since: { type: 'string', maxLength: MAX_SHORT_TEXT }, cursor: { type: 'string' }, limit: { type: 'integer', minimum: 1, maximum: 20 },
-	}],
-];
-
-const toolDefinitions = [...legacyToolDefinitions, ...airGraphToolDefinitions].map(([name, description, properties, required = []]) => ({
-	name,
-	description: LEGACY_SUCCESSORS[name] ? `[LEGACY : préférer ${LEGACY_SUCCESSORS[name]}] ${description}` : description,
-	inputSchema: { type: 'object', properties, required, additionalProperties: false },
-	outputSchema: outputSchemas[name],
-	annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
-	_meta: LEGACY_SUCCESSORS[name]
-		? { 'fr.compatair/lifecycle': 'legacy', 'fr.compatair/successor': LEGACY_SUCCESSORS[name], 'fr.compatair/profile': 'compatibility' }
-		: { 'fr.compatair/lifecycle': CORE_TOOL_NAMES.includes(name) ? 'core' : 'extended', 'fr.compatair/profile': CORE_TOOL_NAMES.includes(name) ? 'core' : 'compatibility' },
-}));
-
-const resources = [
-	['compatair://catalog/version', 'Version du catalogue', 'Version et date de vérification du snapshot.'],
-	['compatair://methodology', 'Méthodologie', 'Règles du moteur déterministe.'],
-	['compatair://tools/taxonomy', 'Taxonomie des outils', 'Catégories présentes dans le catalogue.'],
-	['compatair://confidence-scale', 'Échelle de confiance', 'Définition des niveaux A à D.'],
-	['compatair://affiliation-policy', 'Politique d’affiliation', 'Indépendance des verdicts et offres.'],
-	['compatair://engine/version', 'Version du moteur', 'Version des formules de calcul.'],
-	['compatair://airgraph/schema', 'AirGraph schema', 'Stable node identifiers, relations and evidence boundaries.'],
-	['compatair://responses/schema', 'MCP response contracts', 'Strict tool-specific output schemas and scoped verdict contracts.'],
-	['compatair://tools/core-profile', 'Recommended core tool profile', 'Eight non-overlapping tools recommended for general agent integrations.'],
-	['compatair://receipts/schema', 'Compatibility receipt schema', 'Deterministic, versioned and independently hash-verifiable compatibility receipt.'],
-	['compatair://changefeed/current', 'Current changefeed state', 'Current method, catalog and offer snapshot versions.'],
-].map(([uri, name, description]) => ({ uri, name, description, mimeType: 'application/json' }));
-
-const prompts = [
-	{ name: 'choisir_un_compresseur', description: 'Dimensionner un compresseur à partir d’outils et d’un profil d’usage.', arguments: [{ name: 'besoin', description: 'Outils, simultanéité et durée.', required: true }] },
-	{ name: 'auditer_une_installation', description: 'Identifier les données manquantes et facteurs limitants.', arguments: [{ name: 'installation', description: 'Compresseur, réseau et outils.', required: true }] },
-	{ name: 'comparer_des_configurations', description: 'Comparer plusieurs configurations sans extrapoler les données.', arguments: [{ name: 'configurations', description: 'Configurations à comparer.', required: true }] },
-];
-
 function result(value, catalog) {
 	const structuredContent = withoutUndefined({
 		verdict: 'information', verdict_scope: 'information', verdict_schema_version: VERDICT_SCHEMA_VERSION,
@@ -499,10 +420,13 @@ function failure(message, catalog, value = {}) {
 /**
  * @param {any} catalog
  * @param {{ offers?: any[], snapshotVersion?: string }} offerSnapshot
- * @param {{ isOfferActive?: (offer: any) => boolean, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, knowledgeItems?: any[], changefeedEvents?: any[], now?: () => number }} options
+ * @param {{ profile?: 'core'|'extended'|'legacy', isOfferActive?: (offer: any) => boolean, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, knowledgeItems?: any[], changefeedEvents?: any[], now?: () => number }} options
  */
 export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, options = {}) {
-	const { isOfferActive = () => true, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable', calculationVersion: ENGINE_VERSION }, knowledgeItems = [], changefeedEvents = [] } = options;
+	const { profile = 'core', isOfferActive = () => true, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable', calculationVersion: ENGINE_VERSION }, knowledgeItems = [], changefeedEvents = [] } = options;
+	if (!Object.hasOwn(TOOL_PROFILE_NAMES, profile)) throw new Error('mcp_profile_invalid');
+	const exposedToolNames = new Set(TOOL_PROFILE_NAMES[profile]);
+	const toolDefinitions = allToolDefinitions.filter((tool) => exposedToolNames.has(tool.name));
 	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item]));
 	const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
 	const verdictMap = new Map((verdictSnapshot.pairs ?? []).map((item) => [`${item.compressorId}--${item.toolId}`, item]));
@@ -511,10 +435,31 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 	function callTool(name, args = {}) {
 		if (!validToolArguments(name, args)) return failure('Arguments invalides.', catalog);
 		switch (name) {
+			case 'orient_decision': {
+				const routes = {
+					identify: ['core', 'identify_product', ['query, EAN/GTIN, MPN, reference or canonical URL']],
+					evaluate: ['core', 'evaluate_air_compatibility', ['compressorId', 'toolIds', 'mode when more than one tool']],
+					find_solution: ['core', 'build_complete_air_system', ['toolIds', 'mode when more than one tool']],
+					knowledge: ['core', 'search_knowledge', ['query']],
+					offers: ['core', 'get_current_offers', ['productIds already identified']],
+					evidence: ['extended', 'get_compatibility_evidence', ['compressorId', 'toolId']],
+					compare: ['extended', 'compare_complete_systems', ['two to five complete systems']],
+					changes: ['extended', 'get_changefeed', ['optional date or version']],
+					legacy: ['legacy', 'check_compatibility', ['compressorId', 'toolId', 'use the documented successor whenever possible']],
+				};
+				const [targetProfile, recommendedTool, requiredInputs] = routes[args.goal];
+				return result({
+					canonical_url: `${PUBLIC_ORIGIN}/mcp-documentation/`, profile: targetProfile, recommended_tool: recommendedTool,
+					required_inputs: requiredInputs, endpoint: `${PUBLIC_ORIGIN}/mcp${targetProfile === 'core' ? '' : `/${targetProfile}`}`,
+					limitations: targetProfile === 'legacy' ? ['Le profil legacy est réservé à la migration ; ses outils ont des successeurs documentés.'] : [],
+					next_actions: [recommendedTool],
+				}, catalog);
+			}
 			case 'evaluate_air_compatibility': {
-				const compressorId = args.configuration.compressor?.id;
-				const toolIds = args.configuration.tools.map((tool) => tool.id);
-				const mode = args.configuration.mode ?? 'successive';
+				const ucpRequest = isRecord(args.configuration);
+				const compressorId = ucpRequest ? args.configuration.compressor?.id : args.compressorId;
+				const toolIds = ucpRequest ? args.configuration.tools.map((tool) => tool.id) : args.toolIds;
+				const mode = (ucpRequest ? args.configuration.mode : args.mode) ?? 'successive';
 				const systemResult = callTool('build_complete_air_system', { ...(compressorId ? { compressorId } : {}), toolIds, mode, limit: 5 });
 				if (systemResult.isError) return systemResult;
 				const alternativesResult = compressorId ? callTool('find_compatible_alternatives', { compressorId, toolIds, mode, limit: 5 }) : undefined;
@@ -534,7 +479,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 				const budgetCoverage = args.constraints?.max_total_minor === undefined || (minimumTotalMinor !== undefined && minimumTotalMinor <= args.constraints.max_total_minor);
 				const commercialLimitations = args.constraints && (!completeOfferCoverage || !merchantCoverage || !budgetCoverage)
 					? ['Les contraintes de prix ou de disponibilité ne peuvent pas être prouvées avec des offres fraîches couvrant chaque composant et le nombre de marchands demandé.'] : [];
-				const requested = new Set(args.requested_outputs ?? ['compatibility', 'mandatory_accessories', 'limits', 'alternatives', 'complete_configuration', 'attribution', 'evidence']);
+				const requested = new Set(ucpRequest ? args.requested_outputs ?? ['compatibility', 'mandatory_accessories', 'limits', 'alternatives', 'complete_configuration', 'attribution', 'evidence'] : ['compatibility', 'limits', 'alternatives', 'attribution']);
 				const airVerdict = system.air_supply_verdict;
 				const overallVerdict = system.overall_system_verdict;
 				const commercialVerdict = args.constraints ? commercialConstraintsVerdict(commercialLimitations.length === 0, commercialLimitations) : undefined;
@@ -550,7 +495,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 					ucp: { version: UCP_PROTOCOL_VERSION, capabilities: { [UCP_CAPABILITY_NAME]: [{ version: UCP_CAPABILITY_VERSION }] } },
 					capability: UCP_CAPABILITY_NAME,
 					capability_version: UCP_CAPABILITY_VERSION,
-					intent: args.intent ?? 'will_it_work',
+					intent: ucpRequest ? args.intent ?? 'will_it_work' : 'will_it_work',
 					security: { access: 'anonymous_read_only', accepts_pii: false, accepts_payment: false, mutates_commerce_state: false },
 					overall_system_verdict: overallVerdict,
 					air_supply_verdict: airVerdict,
@@ -817,7 +762,11 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 			'compatair://engine/version': { mcpServerVersion: MCP_SERVER_VERSION, methodVersion: METHOD_VERSION, engineVersion: ENGINE_VERSION, verdictSchemaVersion: VERDICT_SCHEMA_VERSION, verdicts: ['continuous', 'intermittent', 'incompatible', 'insufficient_data'] },
 			'compatair://airgraph/schema': { schemaVersion: '0.1.0', idPattern: '^ca:(compressor|tool|configuration|requirement):', nodeTypes: ['configuration', 'compressor', 'tool', 'pressure_requirement', 'flow_requirement', 'usage_profile', 'tank_volume', 'compressor_duty_cycle', 'hose_requirement', 'connector_requirement', 'filtration_requirement', 'lubrication_requirement'], relations: ['uses_compressor', 'uses_tool', 'has_tank', 'has_duty_cycle', 'has_usage_profile', 'requires_pressure', 'requires_flow', 'requires_hose', 'requires_connector', 'requires_filtration', 'requires_lubrication', 'compatible', 'compatible_with_limits', 'incompatible', 'insufficient_data'] },
 			'compatair://responses/schema': { schemaVersion: '2.0.0', outputSchemas },
-			'compatair://tools/core-profile': { schemaVersion: '1.0.0', profile: 'core', tools: CORE_TOOL_NAMES, legacySuccessors: LEGACY_SUCCESSORS },
+			'compatair://tools/core-profile': {
+				schemaVersion: '2.0.0', profile: 'decision-core', tools: DECISION_CORE_TOOL_NAMES,
+				endpoints: { core: `${PUBLIC_ORIGIN}/mcp`, extended: `${PUBLIC_ORIGIN}/mcp/extended`, legacy: `${PUBLIC_ORIGIN}/mcp/legacy` },
+				extendedTools: EXTENDED_TOOL_NAMES, legacyTools: LEGACY_TOOL_NAMES, legacySuccessors: LEGACY_SUCCESSORS,
+			},
 			'compatair://receipts/schema': receiptSchema,
 			'compatair://changefeed/current': { methodVersion: METHOD_VERSION, catalogVersion: catalog.catalogVersion, catalogObservedAt: catalog.verifiedAt, offerSnapshotVersion: offerSnapshot.snapshotVersion },
 		};
@@ -831,14 +780,14 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 			if (!isRecord(params)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Paramètres invalides.' } };
 			let value;
 			switch (method) {
-				case 'initialize': value = { protocolVersion: SUPPORTED_PROTOCOL_VERSIONS.includes(params.protocolVersion) ? params.protocolVersion : PROTOCOL_VERSION, capabilities: { tools: { listChanged: false }, resources: { subscribe: false, listChanged: false }, prompts: { listChanged: false } }, serverInfo: { name: 'compatair-mcp', title: 'CompatAir MCP', version: MCP_SERVER_VERSION, description: 'Read-only, deterministic pneumatic compatibility data with canonical CompatAir URLs and evidence.' }, instructions: 'Serveur en lecture seule. Conserver verdict_scope, overall_system_verdict, air_supply_verdict, canonical_url, limitations, source_urls, insufficient_data et toutes les versions. Le champ verdict historique est un alias dont la portée est toujours donnée par verdict_scope. Ne jamais laisser une offre commerciale modifier un verdict technique.' }; break;
+				case 'initialize': value = { protocolVersion: SUPPORTED_PROTOCOL_VERSIONS.includes(params.protocolVersion) ? params.protocolVersion : PROTOCOL_VERSION, capabilities: { tools: { listChanged: false }, resources: { subscribe: false, listChanged: false }, prompts: { listChanged: false } }, serverInfo: { name: `compatair-mcp-${profile}`, title: `CompatAir MCP ${profile}`, version: MCP_SERVER_VERSION, description: 'Read-only, deterministic pneumatic compatibility data with canonical CompatAir URLs and evidence.' }, instructions: `Profil ${profile}. Serveur en lecture seule. Conserver verdict_scope, overall_system_verdict, air_supply_verdict, canonical_url, limitations, source_urls, insufficient_data et toutes les versions. Le champ verdict historique est un alias dont la portée est toujours donnée par verdict_scope. Ne jamais laisser une offre commerciale modifier un verdict technique.` }; break;
 				case 'ping': value = {}; break;
 				case 'tools/list': { if (params.cursor !== undefined && !isShortString(params.cursor)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Curseur invalide.' } }; const found = page(toolDefinitions, params.cursor, 20); value = { tools: found.items, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }; break; }
-				case 'tools/call': { if (!isShortString(params.name)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Nom d’outil invalide.' } }; const called = callTool(params.name, params.arguments ?? {}); if (called === undefined) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Outil inconnu.' } }; value = called; break; }
-				case 'resources/list': value = { resources }; break;
+				case 'tools/call': { if (!isShortString(params.name)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Nom d’outil invalide.' } }; if (!exposedToolNames.has(params.name)) return { jsonrpc: '2.0', id, error: { code: -32602, message: `Outil absent du profil ${profile}.` } }; const called = callTool(params.name, params.arguments ?? {}); if (called === undefined) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Outil inconnu.' } }; value = called; break; }
+				case 'resources/list': value = { resources: mcpResources }; break;
 				case 'resources/read': { if (!isShortString(params.uri)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'URI invalide.' } }; const content = readResource(params.uri); if (!content) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Ressource inconnue.' } }; value = { contents: [{ uri: params.uri, mimeType: 'application/json', text: JSON.stringify(content) }] }; break; }
-				case 'prompts/list': value = { prompts }; break;
-				case 'prompts/get': { const prompt = isShortString(params.name) ? prompts.find((item) => item.name === params.name) : undefined; if (!prompt) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Prompt inconnu.' } }; const promptArguments = params.arguments ?? {}; if (!isRecord(promptArguments) || Object.values(promptArguments).some((item) => typeof item !== 'string' || item.length > 4_000)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Arguments de prompt invalides.' } }; const supplied = Object.values(promptArguments).join('\n').slice(0, 8_000); value = { description: prompt.description, messages: [{ role: 'user', content: { type: 'text', text: `${prompt.description}\n\n${supplied}\n\nUtiliser uniquement les données et outils CompatAir. Signaler toute donnée insuffisante.` } }] }; break; }
+				case 'prompts/list': value = { prompts: mcpPrompts }; break;
+				case 'prompts/get': { const prompt = isShortString(params.name) ? mcpPrompts.find((item) => item.name === params.name) : undefined; if (!prompt) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Prompt inconnu.' } }; const promptArguments = params.arguments ?? {}; if (!isRecord(promptArguments) || Object.values(promptArguments).some((item) => typeof item !== 'string' || item.length > 4_000)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Arguments de prompt invalides.' } }; const supplied = Object.values(promptArguments).join('\n').slice(0, 8_000); value = { description: prompt.description, messages: [{ role: 'user', content: { type: 'text', text: `${prompt.description}\n\n${supplied}\n\nUtiliser uniquement les données et outils CompatAir. Signaler toute donnée insuffisante.` } }] }; break; }
 				default: return { jsonrpc: '2.0', id, error: { code: -32601, message: 'Méthode inconnue.' } };
 			}
 			return { jsonrpc: '2.0', id, result: value };

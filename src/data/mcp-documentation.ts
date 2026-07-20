@@ -1,4 +1,6 @@
 export const mcpEndpoint = 'https://compatair.fr/mcp';
+export const mcpExtendedEndpoint = 'https://compatair.fr/mcp/extended';
+export const mcpLegacyEndpoint = 'https://compatair.fr/mcp/legacy';
 export const mcpHealthEndpoint = 'https://compatair.fr/mcp-health';
 
 export const initializeCurl = `curl --request POST 'https://compatair.fr/mcp' \\
@@ -190,6 +192,7 @@ export const resultEnvelope = `{
 }`;
 
 export const airGraphTools = [
+	'orient_decision',
   'identify_product',
   'build_complete_air_system',
   'explain_compatibility_verdict',
@@ -214,13 +217,19 @@ export const legacyTools = [
 ] as const;
 
 export const coreTools = [
+	'orient_decision',
   'identify_product',
   'evaluate_air_compatibility',
   'build_complete_air_system',
   'find_compatible_alternatives',
-  'get_compatibility_evidence',
   'search_knowledge',
   'get_current_offers',
+] as const;
+
+export const extendedTools = [
+  'get_compatibility_evidence',
+  'explain_compatibility_verdict',
+  'compare_complete_systems',
   'get_changefeed',
 ] as const;
 

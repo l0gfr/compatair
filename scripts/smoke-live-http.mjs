@@ -97,6 +97,9 @@ for (const [label, pathname, marker] of [
 	['schéma reçu', '/schemas/compatibility-receipt-1.0.0.json', 'receipt_id'],
 	['benchmark agents', '/benchmark-agents/', '100 scénarios'],
 	['benchmark JSON', '/data/agent-fidelity-benchmark.json', '"scenarioCount":100'],
+	['benchmark de sélection MCP', '/data/mcp-agent-selection-benchmark.json', '"caseCount": 50'],
+	['matrice des versions', '/compatibilite-versions/', 'Une version, une frontière précise'],
+	['matrice des versions JSON', '/data/version-compatibility.json', '"MCP server"'],
 	['leaderboard agents', '/data/agent-fidelity-leaderboard.json', 'awaiting_reproducible_submissions'],
 	['Compatibility Impact Feed', '/data/compatibility-impact-feed.json', 'requires_recalculation'],
 	['Compatibility Impact Feed EN', '/en/compatibility-impact-feed/', 'Know which decisions require recalculation'],
@@ -145,20 +148,45 @@ if (mcpEnabled) {
 		assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
 		const health = JSON.parse(body);
 		assert(health.status === 'ok', `status MCP attendu ok, reçu ${JSON.stringify(health.status)}`);
-		assert(health.mcpServerVersion === '2.1.0', `version MCP attendue 2.1.0, reçue ${JSON.stringify(health.mcpServerVersion)}`);
+		assert(health.mcpServerVersion === '3.0.0', `version MCP attendue 3.0.0, reçue ${JSON.stringify(health.mcpServerVersion)}`);
 		assert(health.protocolVersion === '2025-11-25', `protocole MCP inattendu ${JSON.stringify(health.protocolVersion)}`);
 		assert(health.methodVersion === '2026.07', `méthode MCP inattendue ${JSON.stringify(health.methodVersion)}`);
 		assert(typeof health.verdictVersion === 'string' && health.verdictVersion.length > 0, 'verdictVersion MCP absente');
-		assert(health.mcpTelemetry?.enabled === true && health.mcpTelemetry?.schemaVersion === '1.0.0', 'télémétrie MCP inactive');
+		assert(health.mcpProfiles?.core?.tools === 7 && health.mcpProfiles.core.manifestBytes < 50_000, 'profil decision-core hors budget');
+		assert(health.mcpProfiles?.extended?.tools === 4 && health.mcpProfiles?.legacy?.tools === 9, 'profils MCP incomplets');
+		assert(health.mcpTelemetry?.enabled === true && health.mcpTelemetry?.schemaVersion === '2.0.0', 'télémétrie MCP inactive');
 	});
 
 	await check('statistiques MCP publiques', '/data/mcp-usage.json', ({ body, response }) => {
 		assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
 		const report = JSON.parse(body);
-		assert(report.schema_version === '1.0.0', 'schéma de statistiques MCP inattendu');
+		assert(report.schema_version === '2.0.0', 'schéma de statistiques MCP inattendu');
 		assert(report.minimum_public_cohort === 5, 'seuil public MCP inattendu');
 		assert(typeof report.totals?.tool_calls === 'number', 'total d’appels MCP absent');
 	});
+
+	for (const [label, pathname, expectedTools, maximumBytes] of [
+		['manifest MCP decision-core', '/mcp', 7, 50_000],
+		['manifest MCP étendu', '/mcp/extended', 4, 20_000],
+		['manifest MCP legacy', '/mcp/legacy', 9, 30_000],
+	]) {
+		await check(label, pathname, ({ body, response }) => {
+			assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
+			assert(response.headers.get('content-type')?.includes('application/json'), `réponse MCP non JSON: ${response.headers.get('content-type')}`);
+			const result = JSON.parse(body);
+			assert(result.jsonrpc === '2.0' && result.id === 'deploy-tools-list', 'enveloppe tools/list invalide');
+			assert(Array.isArray(result.result?.tools) && result.result.tools.length === expectedTools, `${expectedTools} tools attendus, ${result.result?.tools?.length ?? 0} reçus`);
+			assert(Buffer.byteLength(body) < maximumBytes, `manifest trop lourd: ${Buffer.byteLength(body)} octets pour un budget de ${maximumBytes}`);
+		}, {
+			method: 'POST',
+			headers: {
+				Accept: 'application/json, text/event-stream',
+				'Content-Type': 'application/json',
+				'MCP-Protocol-Version': '2025-11-25',
+			},
+			requestBody: JSON.stringify({ jsonrpc: '2.0', id: 'deploy-tools-list', method: 'tools/list', params: {} }),
+		});
+	}
 
 	await check(
 		'API de compatibilité',

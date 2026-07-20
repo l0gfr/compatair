@@ -1,6 +1,6 @@
 # Publication au Registry MCP officiel
 
-État vérifié le 16 juillet 2026 : `io.github.bluetouff/compatair` version `2.1.0` est publié dans le Registry MCP officiel avec le serveur distant Streamable HTTP `https://compatair.fr/mcp`. Le manifeste source reste `server.json` et `pnpm registry:verify` vérifie la réponse publique du Registry.
+État historique vérifié le 16 juillet 2026 : `io.github.bluetouff/compatair` version `2.1.0` est publié dans le Registry MCP officiel avec le serveur distant Streamable HTTP `https://compatair.fr/mcp`. Le manifeste source prépare désormais la version majeure `3.0.0` et son profil decision-core ; cette version ne doit être présentée comme publiée qu’après activation live du même SHA, publication Registry immuable et succès de `pnpm registry:verify`.
 
 Le Registry est encore en preview. Les métadonnées publiées deviennent publiques sous CC0, une version publiée est immuable et la suppression n’est pas actuellement garantie. Toute nouvelle version doit donc être relue et incrémentée avant sa publication propriétaire.
 

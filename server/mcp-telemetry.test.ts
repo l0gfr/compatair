@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { aggregateMcpTelemetry, buildPublicMcpUsageReport, callerFingerprint, classifyMcpClient, classifyMcpOutcome, createMcpTelemetryStore, extractMcpDemand, truncateNetworkAddress } from './mcp-telemetry.mjs';
+import { aggregateMcpTelemetry, buildPublicMcpUsageReport, callerFingerprint, classifyMcpClient, classifyMcpOutcome, classifyMcpOutcomes, classifyMcpTrafficHint, createMcpTelemetryStore, extractMcpDemand, mcpRequestFingerprint, truncateNetworkAddress } from './mcp-telemetry.mjs';
 
 const empty = { schemaVersion: '1.0.0', updatedAt: null, totalEvents: 0, weeks: [], actors: [] };
 const actor = 'a'.repeat(64);
@@ -23,6 +23,11 @@ describe('MCP privacy-safe telemetry', () => {
 		expect(classifyMcpOutcome({ result: { structuredContent: { verdict: 'incompatible' }, isError: false } })).toBe('success');
 		expect(classifyMcpOutcome({ result: { structuredContent: { verdict: 'insufficient_data' }, isError: false } })).toBe('insufficient_data');
 		expect(classifyMcpOutcome({ error: { code: -32602 } })).toBe('error');
+		expect(classifyMcpOutcomes({ result: { structuredContent: { verdict: 'insufficient_data', air_supply_verdict: { verdict: 'compatible' }, overall_system_verdict: { verdict: 'insufficient_data' } }, isError: false } })).toEqual({ primary: 'insufficient_data', air_supply: 'success', complete_air_system: 'insufficient_data' });
+		expect(classifyMcpTrafficHint('CompatAir deployment smoke')).toBe('smoke_ci');
+		expect(classifyMcpTrafficHint('CompatAir MCP profile contract smoke')).toBe('smoke_ci');
+		expect(classifyMcpTrafficHint('Mozilla/5.0')).toBeUndefined();
+		expect(mcpRequestFingerprint(Buffer.alloc(32, 2), 'evaluate_air_compatibility', { b: 2, a: 1 })).toBe(mcpRequestFingerprint(Buffer.alloc(32, 2), 'evaluate_air_compatibility', { a: 1, b: 2 }));
 	});
 
 	it('extracts only catalog-backed products and compatibility pairs', () => {
@@ -35,10 +40,10 @@ describe('MCP privacy-safe telemetry', () => {
 
 	it('counts initializations, tool outcomes, demand and attributed canonical follows', () => {
 		let state: any = aggregateMcpTelemetry(empty, { type: 'initialize', actorId: actor, clientFamily: 'claude' }, new Date('2026-07-13T12:00:00Z'));
-		state = aggregateMcpTelemetry(state, { type: 'tool_call', actorId: actor, toolName: 'check_compatibility', outcome: 'insufficient_data', canonicalIssued: true, products: [{ type: 'compressor', id: 'compressor-a' }, { type: 'tool', id: 'tool-a' }], compatibilities: [{ compressorId: 'compressor-a', toolId: 'tool-a' }] }, new Date('2026-07-13T12:01:00Z'));
+		state = aggregateMcpTelemetry(state, { type: 'tool_call', actorId: actor, toolName: 'check_compatibility', outcome: 'insufficient_data', scopedOutcomes: { air_supply: 'success', complete_air_system: 'insufficient_data' }, profile: 'legacy', requestHash: 'b'.repeat(64), canonicalIssued: true, products: [{ type: 'compressor', id: 'compressor-a' }, { type: 'tool', id: 'tool-a' }], compatibilities: [{ compressorId: 'compressor-a', toolId: 'tool-a' }] }, new Date('2026-07-13T12:01:00Z'));
 		state = aggregateMcpTelemetry(state, { type: 'canonical_follow', actorId: actor, toolName: 'check_compatibility' }, new Date('2026-07-14T12:00:00Z'));
 		expect(state.totalEvents).toBe(3);
-		expect(state.weeks[0]).toMatchObject({ initializations: 1, calls: 1, clientInfoDeclared: 1, outcomes: { success: 0, insufficient_data: 1, error: 0 }, canonicalFollows: 1 });
+		expect(state.weeks[0]).toMatchObject({ initializations: 1, calls: 1, clientInfoDeclared: 1, outcomes: { success: 0, insufficient_data: 1, error: 0 }, traffic: { plausible_session: 1 }, scopedOutcomes: { air_supply: { success: 1 }, complete_air_system: { insufficient_data: 1 } }, canonicalFollows: 1 });
 		expect(state.actors[0].days).toEqual(['2026-07-13', '2026-07-14']);
 	});
 
@@ -54,7 +59,17 @@ describe('MCP privacy-safe telemetry', () => {
 		const report = buildPublicMcpUsageReport(state, catalog);
 		expect(report.totals).toMatchObject({ initializations: 10, tool_calls: 10, estimated_callers: 5, recurrent_callers: 5, recurrent_integrations: 5 });
 		expect(report.clients).toEqual([{ family: 'claude', initializations: 10 }]);
+		expect(report.decision_usage).toEqual({ tool_calls: 10, share_of_all_calls: 1 });
 		expect(report.products).toEqual([{ type: 'tool', id: 'tool-a', requests: 10, label: 'Clé A' }]);
+	});
+
+	it('separates deployment smoke and automatic retries from plausible decision usage', () => {
+		let state: any = empty;
+		state = aggregateMcpTelemetry(state, { type: 'tool_call', actorId: actor, toolName: 'evaluate_air_compatibility', outcome: 'insufficient_data', trafficHint: 'smoke_ci', requestHash: 'c'.repeat(64), products: [], compatibilities: [] }, new Date('2026-07-13T12:00:00Z'));
+		state = aggregateMcpTelemetry(state, { type: 'tool_call', actorId: actor, toolName: 'evaluate_air_compatibility', outcome: 'insufficient_data', requestHash: 'c'.repeat(64), products: [], compatibilities: [] }, new Date('2026-07-13T12:00:10Z'));
+		const report = buildPublicMcpUsageReport(state, catalog);
+		expect(report.traffic_classes).toMatchObject({ smoke_ci: 1, automatic_retry: 1, plausible_session: 0 });
+		expect(report.decision_usage.tool_calls).toBe(0);
 	});
 
 	it('preserves every tool call when concurrent writes are coalesced', async () => {

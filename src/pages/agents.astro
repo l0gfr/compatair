@@ -34,25 +34,26 @@ const contracts = [
 	<TechnicalSurfaceNav current="mcp" />
 
 	<section class="container agent-section" id="statistiques">
-		<header class="agent-section-head"><p class="eyebrow">Preuve d’usage</p><h2>Statistiques MCP anonymisées</h2><p>Fenêtre glissante de 91 jours. Les petits cohortes sont masquées. Un lien canonique émis n’est pas compté comme consulté tant que l’URL attribuée n’a pas réellement été ouverte.</p></header>
+		<header class="agent-section-head"><p class="eyebrow">Observabilité qualifiée</p><h2>Statistiques MCP anonymisées</h2><p>Fenêtre glissante de 91 jours. Le rapport sépare les appels bruts des sessions plausibles, smoke de déploiement, répétitions automatiques et probes. Ces classes sont des heuristiques d’exploitation, jamais la preuve qu’un appelant est humain.</p></header>
 		<div class="agent-stats" data-agent-stats aria-live="polite">
 			<article><span>Initialisations</span><strong data-stat="initializations">...</strong></article>
-			<article><span>Appels de tools</span><strong data-stat="tool_calls">...</strong></article>
-			<article><span>Taux de succès</span><strong data-stat="success_rate">...</strong></article>
-			<article><span>Données insuffisantes</span><strong data-stat="insufficient_data_rate">...</strong></article>
-			<article><span>Taux d’erreur</span><strong data-stat="error_rate">...</strong></article>
+			<article><span>Appels bruts</span><strong data-stat="tool_calls">...</strong></article>
+			<article><span>Sessions plausibles</span><strong data-stat="decision_usage.tool_calls">...</strong></article>
+			<article><span>Smoke CI</span><strong data-stat="traffic_classes.smoke_ci">...</strong></article>
+			<article><span>Répétitions automatiques</span><strong data-stat="traffic_classes.automatic_retry">...</strong></article>
+			<article><span>Probes détectés</span><strong data-stat="traffic_classes.probe">...</strong></article>
 			<article><span>Appelants estimés</span><strong data-stat="estimated_callers">...</strong></article>
 			<article><span>Appelants récurrents</span><strong data-stat="recurrent_callers">...</strong></article>
 			<article><span>Intégrations récurrentes</span><strong data-stat="recurrent_integrations">...</strong></article>
 		</div>
 		<p class="agent-stats-status" data-stats-status>Chargement du rapport agrégé...</p>
 		<div class="agent-tables">
-			<section><h3>Tools les plus appelés</h3><div class="agent-table-wrap"><table><thead><tr><th>Tool</th><th>Appels</th><th>Succès</th><th>Insuffisant</th><th>Erreurs</th></tr></thead><tbody data-tool-rows></tbody></table></div></section>
+			<section><h3>Tools les plus appelés</h3><div class="agent-table-wrap"><table><thead><tr><th>Tool</th><th>Appels</th><th>Plausibles</th><th>Smoke</th><th>Probe</th></tr></thead><tbody data-tool-rows></tbody></table></div></section>
 			<section><h3>Clients déclarés via clientInfo</h3><div class="agent-table-wrap"><table><thead><tr><th>Famille</th><th>Initialisations</th></tr></thead><tbody data-client-rows></tbody></table></div></section>
 			<section><h3>Produits les plus demandés</h3><div class="agent-table-wrap"><table><thead><tr><th>Produit</th><th>Demandes</th></tr></thead><tbody data-product-rows></tbody></table></div></section>
 			<section><h3>Compatibilités les plus demandées</h3><div class="agent-table-wrap"><table><thead><tr><th>Compresseur</th><th>Outil</th><th>Demandes</th></tr></thead><tbody data-compatibility-rows></tbody></table></div></section>
 		</div>
-		<p class="agent-method"><strong>Ce qui est mesuré.</strong> Un « appelant » est une estimation issue d’un préfixe réseau tronqué et d’une famille d’agent utilisateur, protégés par HMAC. Ce n’est ni une personne identifiée ni un compte. « Récurrent » signifie actif pendant au moins deux jours distincts. <a href="/confidentialite/">Lire le cadre de confidentialité</a>.</p>
+		<p class="agent-method"><strong>Ce qui est mesuré.</strong> Un « appelant » est une estimation issue d’un préfixe réseau tronqué et d’une famille d’agent utilisateur, protégés par HMAC. Ce n’est ni une personne identifiée ni un compte. Les produits et couples ne sont publiés qu’à partir des sessions plausibles et au-dessus du seuil de cohorte. Les verdicts <code>air_supply</code> et <code>complete_air_system</code> sont comptés séparément dans le JSON source. <a href="/confidentialite/">Lire le cadre de confidentialité</a>.</p>
 	</section>
 
 	<section class="agent-dark" id="connexion">
@@ -91,18 +92,19 @@ const contracts = [
 	const formatCount = (value: unknown) => typeof value === 'number' ? new Intl.NumberFormat('fr-FR').format(value) : 'Masqué';
 	const formatRate = (value: unknown) => typeof value === 'number' ? new Intl.NumberFormat('fr-FR', { style: 'percent', maximumFractionDigits: 1 }).format(value) : 'Indisponible';
 	const addCell = (row: HTMLTableRowElement, value: string) => { const cell = document.createElement('td'); cell.textContent = value; row.append(cell); };
+	const readPath = (value: unknown, path: string) => path.split('.').reduce<unknown>((current, key) => current && typeof current === 'object' ? (current as Record<string, unknown>)[key] : undefined, value);
 	try {
 		const response = await fetch('/data/mcp-usage.json', { headers: { Accept: 'application/json' } });
 		if (!response.ok) throw new Error('report_unavailable');
 		const report = await response.json();
 		for (const element of root?.querySelectorAll<HTMLElement>('[data-stat]') ?? []) {
 			const key = element.dataset.stat ?? '';
-			const value = report.totals?.[key];
+			const value = key.includes('.') ? readPath(report, key) : report.totals?.[key];
 			element.textContent = key.endsWith('_rate') ? formatRate(value) : formatCount(value);
 		}
 		for (const tool of (report.tools ?? []).slice(0, 10)) {
 			const row = document.createElement('tr');
-			addCell(row, tool.name); addCell(row, formatCount(tool.calls)); addCell(row, formatRate(tool.success_rate)); addCell(row, formatRate(tool.insufficient_data_rate)); addCell(row, formatRate(tool.error_rate)); toolRows?.append(row);
+			addCell(row, tool.name); addCell(row, formatCount(tool.calls)); addCell(row, formatCount(tool.traffic?.plausible_session)); addCell(row, formatCount(tool.traffic?.smoke_ci)); addCell(row, formatCount(tool.traffic?.probe)); toolRows?.append(row);
 		}
 		for (const client of (report.clients ?? []).slice(0, 10)) {
 			const row = document.createElement('tr'); addCell(row, client.family); addCell(row, formatCount(client.initializations)); clientRows?.append(row);

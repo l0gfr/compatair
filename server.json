@@ -7,7 +7,7 @@
     "url": "https://github.com/bluetouff/compatair-mcp",
     "source": "github"
   },
-  "version": "2.1.0",
+  "version": "3.0.0",
   "remotes": [
     {
       "type": "streamable-http",

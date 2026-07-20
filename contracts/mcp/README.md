@@ -4,7 +4,10 @@ This is the source directory for the minimal public `bluetouff/compatair-mcp` re
 
 Published contract:
 
-- Streamable HTTP endpoint: `https://compatair.fr/mcp`
+- decision-core Streamable HTTP endpoint: `https://compatair.fr/mcp`
+- extended endpoint: `https://compatair.fr/mcp/extended`
+- legacy migration endpoint: `https://compatair.fr/mcp/legacy`
+- MCP server version: `3.0.0`
 - method version: `2026.07`
 - response schema: `schemas/result.schema.json`
 - AirGraph schema: `schemas/airgraph.schema.json`
@@ -16,3 +19,5 @@ The deterministic public export also includes the UCP capability contracts under
 Run the dependency-free contract checks with `npm test`.
 
 No open-source license is granted by this repository. The files are public for inspection and integration against the published contracts; all other rights are reserved unless stated otherwise.
+
+The public version matrix is available at `https://compatair.fr/data/version-compatibility.json`. A reusable license for OpenAPI, JSON Schema or future SDK material requires a separate explicit owner decision and does not imply licensing the proprietary catalog.

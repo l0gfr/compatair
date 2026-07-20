@@ -47,8 +47,8 @@ function validate(schema: any, value: any, path = '$'): string[] {
 
 describe('MCP tool-specific output schemas', () => {
 	it('publishes one closed schema per tool without additionalProperties=true', () => {
-		expect(Object.keys(outputSchemas)).toHaveLength(19);
-		expect(new Set(Object.values(outputSchemas)).size).toBe(19);
+		expect(Object.keys(outputSchemas)).toHaveLength(20);
+		expect(new Set(Object.values(outputSchemas)).size).toBe(20);
 		for (const [name, schema] of Object.entries(outputSchemas)) expect(inspect(schema), name).toEqual([]);
 	});
 
@@ -69,11 +69,14 @@ describe('MCP tool-specific output schemas', () => {
 		const firstCompressor = compressors[0]!;
 		const secondCompressor = compressors[1]!;
 		const catalog = { catalogVersion: 'contract-test', schemaVersion: '2.0.0', verifiedAt: '2026-07-15', compressors, tools };
-		const core = createMcpCore(catalog, { snapshotVersion: 'offers-test', offers: [{ id: 'offer-a', productId: firstCompressor.id, url: 'https://merchant.example/unsafe' }] }, {
+		const options = {
 			knowledgeItems: [{ id: 'guide:test:fr', type: 'Guide', locale: 'fr', title: 'Débit FAD', description: 'Guide test', url: 'https://compatair.fr/guides/test/', keywords: 'débit FAD', observed_at: '2026-07-15', source_urls: ['https://manufacturer.example/manual'], content_sha256: 'a'.repeat(64), translation: { status: 'source' } }],
 			isOfferActive: () => true,
-		});
+		};
+		const profiles = ['core', 'extended', 'legacy'].map((profile) => createMcpCore(catalog, { snapshotVersion: 'offers-test', offers: [{ id: 'offer-a', productId: firstCompressor.id, url: 'https://merchant.example/unsafe' }] }, { ...options, profile: profile as 'core'|'extended'|'legacy' }));
+		const call = (name: string, args: unknown) => profiles.find((candidate) => candidate.handle({ jsonrpc: '2.0', id: 'list', method: 'tools/list' })!.result.tools.some((tool: any) => tool.name === name))!.handle({ jsonrpc: '2.0', id: name, method: 'tools/call', params: { name, arguments: args } });
 		const calls: Record<string, unknown> = {
+			orient_decision: { goal: 'evaluate' },
 			search_tools: {}, get_tool_requirements: { id: fixedFlowTool.id }, search_compressors: {}, get_compressor_specs: { id: firstCompressor.id },
 			size_compressor: { demands: [{ flowLpm: 100, pressureBar: 6 }] }, check_compatibility: { compressorId: firstCompressor.id, toolId: fixedFlowTool.id },
 			compare_compressors: { ids: [firstCompressor.id, secondCompressor.id] }, find_accessories: { toolId: fixedFlowTool.id }, find_offers: { productId: firstCompressor.id },
@@ -85,7 +88,7 @@ describe('MCP tool-specific output schemas', () => {
 			evaluate_air_compatibility: { meta: { 'ucp-agent': { profile: 'https://compatair.fr/examples/ucp/platform-profile.json' } }, ucp: { version: '2026-04-08' }, intent: 'will_it_work', configuration: { compressor: { id: firstCompressor.id }, tools: [{ id: fixedFlowTool.id }], mode: 'successive' } },
 		};
 		for (const [name, args] of Object.entries(calls)) {
-			const response: any = core.handle({ jsonrpc: '2.0', id: name, method: 'tools/call', params: { name, arguments: args } });
+			const response: any = call(name, args);
 			expect(response.result.isError, name).not.toBe(true);
 			expect(validate((outputSchemas as Record<string, any>)[name], response.result.structuredContent), name).toEqual([]);
 		}

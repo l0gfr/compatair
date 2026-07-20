@@ -7,7 +7,7 @@ import { createMcpCore, ENGINE_VERSION, MCP_SERVER_VERSION, METHOD_VERSION, PROT
 import { createDemandAggregateStore, DEMAND_EVENT_SCHEMA_VERSION, isValidCalculationVersion, validateDemandEvent } from './demand-aggregates.mjs';
 import { createProductFunnelAggregateStore, PRODUCT_FUNNEL_SCHEMA_VERSION, validateProductFunnelEvent } from './product-funnel-aggregates.mjs';
 import { ACQUISITION_SCHEMA_VERSION, createAcquisitionAggregateStore, validateAcquisitionEvent } from './acquisition-aggregates.mjs';
-import { classifyMcpClient, classifyMcpOutcome, createMcpTelemetryStore, extractMcpDemand, MCP_TELEMETRY_SCHEMA_VERSION } from './mcp-telemetry.mjs';
+import { classifyMcpClient, classifyMcpOutcomes, classifyMcpTrafficHint, createMcpTelemetryStore, extractMcpDemand, MCP_TELEMETRY_SCHEMA_VERSION } from './mcp-telemetry.mjs';
 import { authorizeUcpRequest, createUcpError, createUcpToolArguments, fetchPublicUcpProfile, ucpErrorStatus, validateUcpEvaluationRequest } from './ucp-core.mjs';
 
 const BODY_LIMIT = 65_536;
@@ -162,7 +162,12 @@ function isJsonContentType(request) {
  * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, knowledgeItems?: any[], changefeedEvents?: any[], allowedOrigins: Set<string>, demandAggregatePath?: string, productFunnelAggregatePath?: string, acquisitionAggregatePath?: string, mcpTelemetryPath?: string, mcpTelemetrySecretPath?: string, mcpTelemetrySecret?: string, proxyManagesApiHeaders?: boolean, now?: () => number, fetchUcpProfile?: (url: URL) => Promise<any>, recordAffiliateClick?: (offerId: string) => void, recordToolCall?: (toolName: string) => void }} options
  */
 export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable', calculationVersion: ENGINE_VERSION }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, knowledgeItems = [], changefeedEvents = [], allowedOrigins, demandAggregatePath = undefined, productFunnelAggregatePath = undefined, acquisitionAggregatePath = undefined, mcpTelemetryPath = undefined, mcpTelemetrySecretPath = undefined, mcpTelemetrySecret = undefined, proxyManagesApiHeaders = false, now = Date.now, fetchUcpProfile = fetchPublicUcpProfile, recordAffiliateClick = () => {}, recordToolCall = () => {} }) {
-	const core = createMcpCore(catalog, offerSnapshot, { isOfferActive: (offer) => isFreshOfferSnapshot(offer, now()) && allowedOfferRedirect(offer) !== undefined, verdictSnapshot, knowledgeItems, changefeedEvents, now });
+	const coreOptions = { isOfferActive: (offer) => isFreshOfferSnapshot(offer, now()) && allowedOfferRedirect(offer) !== undefined, verdictSnapshot, knowledgeItems, changefeedEvents, now };
+	const mcpProfiles = {
+		core: createMcpCore(catalog, offerSnapshot, { ...coreOptions, profile: 'core' }),
+		extended: createMcpCore(catalog, offerSnapshot, { ...coreOptions, profile: 'extended' }),
+		legacy: createMcpCore(catalog, offerSnapshot, { ...coreOptions, profile: 'legacy' }),
+	};
 	const authoritativeCalculationVersion = isValidCalculationVersion(verdictSnapshot.calculationVersion) ? verdictSnapshot.calculationVersion : ENGINE_VERSION;
 	const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
 	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item]));
@@ -175,10 +180,14 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 	const productFunnelStore = createProductFunnelAggregateStore({ filePath: productFunnelAggregatePath });
 	const acquisitionStore = createAcquisitionAggregateStore({ filePath: acquisitionAggregatePath });
 	const telemetryStore = createMcpTelemetryStore({ filePath: mcpTelemetryPath, secretFilePath: mcpTelemetrySecretPath, configuredSecret: mcpTelemetrySecret, catalog });
-	const listedTools = core.handle({ jsonrpc: '2.0', id: 'telemetry-tools', method: 'tools/list', params: {} });
-	const knownToolNames = new Set((listedTools?.result?.tools ?? []).map((tool) => tool.name));
+	const mcpProfileMetrics = Object.fromEntries(Object.entries(mcpProfiles).map(([profile, profileCore]) => {
+		const listed = profileCore.handle({ jsonrpc: '2.0', id: 'health-tools-list', method: 'tools/list', params: {} });
+		return [profile, { endpoint: `/mcp${profile === 'core' ? '' : `/${profile}`}`, tools: listed?.result?.tools?.length ?? 0, manifestBytes: Buffer.byteLength(JSON.stringify(listed)) }];
+	}));
+	const knownToolNames = new Set(Object.values(mcpProfiles).flatMap((profileCore) => profileCore.handle({ jsonrpc: '2.0', id: 'telemetry-tools', method: 'tools/list', params: {} })?.result?.tools?.map((tool) => tool.name) ?? []));
 	function callPublicTool(name, args) {
-		const response = core.handle({ jsonrpc: '2.0', id: 'http-api', method: 'tools/call', params: { name, arguments: args } });
+		const profileCore = Object.values(mcpProfiles).find((candidate) => candidate.handle({ jsonrpc: '2.0', id: 'profile-lookup', method: 'tools/list', params: {} })?.result?.tools?.some((tool) => tool.name === name));
+		const response = profileCore?.handle({ jsonrpc: '2.0', id: 'http-api', method: 'tools/call', params: { name, arguments: args } });
 		return response?.result;
 	}
 	function resolveProductLocator(locator) {
@@ -230,7 +239,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 		let url;
 		try { url = new URL(request.url, 'http://localhost'); } catch { return json(response, 400, { error: 'invalid_request_target' }); }
 
-		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', mcpServerVersion: MCP_SERVER_VERSION, protocolVersion: PROTOCOL_VERSION, methodVersion: METHOD_VERSION, catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, verdictVersion: verdictSnapshot.verdictVersion, knowledgeItems: knowledgeItems.length, changefeedEvents: changefeedEvents.length, ucp: { readOnlyCompatibility: true }, demandAggregation: { enabled: demandStore.enabled, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION }, productFunnelAggregation: { enabled: productFunnelStore.enabled, schemaVersion: PRODUCT_FUNNEL_SCHEMA_VERSION }, acquisitionAggregation: { enabled: acquisitionStore.enabled, schemaVersion: ACQUISITION_SCHEMA_VERSION }, mcpTelemetry: { enabled: telemetryStore.enabled, schemaVersion: MCP_TELEMETRY_SCHEMA_VERSION } });
+		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', mcpServerVersion: MCP_SERVER_VERSION, protocolVersion: PROTOCOL_VERSION, methodVersion: METHOD_VERSION, catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, verdictVersion: verdictSnapshot.verdictVersion, knowledgeItems: knowledgeItems.length, changefeedEvents: changefeedEvents.length, mcpProfiles: mcpProfileMetrics, ucp: { readOnlyCompatibility: true }, demandAggregation: { enabled: demandStore.enabled, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION }, productFunnelAggregation: { enabled: productFunnelStore.enabled, schemaVersion: PRODUCT_FUNNEL_SCHEMA_VERSION }, acquisitionAggregation: { enabled: acquisitionStore.enabled, schemaVersion: ACQUISITION_SCHEMA_VERSION }, mcpTelemetry: { enabled: telemetryStore.enabled, schemaVersion: MCP_TELEMETRY_SCHEMA_VERSION } });
 
 		if (url.pathname === '/data/mcp-usage.json') {
 			if (!['GET', 'HEAD'].includes(request.method ?? '')) return json(response, 405, { error: 'method_not_allowed' }, { Allow: 'GET, HEAD' });
@@ -428,7 +437,8 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			return response.end();
 		}
 
-		if (url.pathname !== '/mcp') return json(response, 404, { error: 'not_found' });
+		const mcpProfile = url.pathname === '/mcp' ? 'core' : url.pathname === '/mcp/extended' ? 'extended' : url.pathname === '/mcp/legacy' ? 'legacy' : undefined;
+		if (!mcpProfile) return json(response, 404, { error: 'not_found' });
 		if (!isAllowedOrigin(request, allowedOrigins)) return json(response, 403, { error: 'origin_forbidden' });
 		if (request.method !== 'POST') return json(response, 405, { error: 'method_not_allowed' }, { Allow: 'POST' });
 		const accept = request.headers.accept ?? '';
@@ -436,12 +446,12 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 		if (!isJsonContentType(request)) return json(response, 415, { error: 'content_type_must_be_json' });
 		const protocol = request.headers['mcp-protocol-version'];
 		if (protocol && ![PROTOCOL_VERSION, '2025-06-18', '2025-03-26'].includes(protocol)) return json(response, 400, { error: 'unsupported_protocol_version' });
-		if (!allow(`mcp:${clientAddress(request)}`)) return json(response, 429, { error: 'rate_limited' }, { 'Retry-After': '60' });
+		if (!allow(`mcp:${mcpProfile}:${clientAddress(request)}`)) return json(response, 429, { error: 'rate_limited' }, { 'Retry-After': '60' });
 		try {
 			const message = await readJsonBody(request);
 			const idIsValid = message?.id === undefined || message.id === null || (typeof message.id === 'string' && message.id.length <= 128) || (typeof message.id === 'number' && Number.isFinite(message.id));
 			if (!message || typeof message !== 'object' || Array.isArray(message) || message.jsonrpc !== '2.0' || typeof message.method !== 'string' || message.method.length > 128 || !idIsValid) return json(response, 400, { jsonrpc: '2.0', id: null, error: { code: -32600, message: 'Requête JSON-RPC invalide.' } });
-			if (message.method === 'tools/call' && message.params?.name === 'evaluate_air_compatibility') {
+			if (message.method === 'tools/call' && message.params?.name === 'evaluate_air_compatibility' && message.params?.arguments?.meta?.['ucp-agent']) {
 				const profileUrl = message.params?.arguments?.meta?.['ucp-agent']?.profile;
 				const syntheticRequest = { headers: { 'ucp-agent': typeof profileUrl === 'string' ? `profile="${profileUrl}"` : undefined } };
 				try { await authorizeUcpRequest(syntheticRequest, message.params?.arguments, fetchUcpProfile); }
@@ -451,7 +461,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 				}
 			}
 			counters.rpc++;
-			const result = core.handle(message);
+			const result = mcpProfiles[mcpProfile].handle(message);
 			if (message.method === 'initialize' && result && !result.error) {
 				await recordTelemetry({ type: 'initialize', actorId: await telemetryActorId(request), clientFamily: classifyMcpClient(message.params?.clientInfo) });
 			}
@@ -464,7 +474,15 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 					result.result.content = [{ type: 'text', text: JSON.stringify(result.result.structuredContent) }];
 				}
 				const demand = extractMcpDemand(toolName, message.params?.arguments, result.result?.structuredContent, catalog);
-				await recordTelemetry({ type: 'tool_call', actorId: await telemetryActorId(request), toolName, outcome: classifyMcpOutcome(result), canonicalIssued: Boolean(followUrl), ...demand });
+				const outcomes = classifyMcpOutcomes(result);
+				await recordTelemetry({
+					type: 'tool_call', actorId: await telemetryActorId(request), toolName,
+					outcome: outcomes === 'error' ? 'error' : outcomes.primary,
+					scopedOutcomes: outcomes === 'error' ? {} : { air_supply: outcomes.air_supply, complete_air_system: outcomes.complete_air_system },
+					trafficHint: classifyMcpTrafficHint(request.headers['user-agent']),
+					requestHash: await telemetryStore.requestHash(toolName, message.params?.arguments), profile: mcpProfile,
+					canonicalIssued: Boolean(followUrl), ...demand,
+				});
 				if (!result.error) {
 					recordToolCall(message.params.name);
 					await recordAcquisition({ channel: 'mcp', template: message.params.name === 'evaluate_air_compatibility' ? 'compatibility' : 'other', action: 'decision_request', outcome: acquisitionOutcome(result.result?.structuredContent) });

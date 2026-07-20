@@ -8,13 +8,16 @@ import {
 	claudeCli,
 	claudeProjectConfig,
 	coreTools,
+	extendedTools,
 	geminiJavaScript,
 	geminiPython,
 	initializeCurl,
 	legacyTools,
 	listToolsCurl,
 	mcpEndpoint,
+	mcpExtendedEndpoint,
 	mcpHealthEndpoint,
+	mcpLegacyEndpoint,
 	mcpPrompts,
 	mcpResources,
 	resultEnvelope,
@@ -30,7 +33,7 @@ const alternates = [
 
 <BaseLayout
 	title="MCP CompatAir : documentation pour agents IA"
-	description="Installer et intégrer le serveur MCP Streamable HTTP CompatAir, comprendre ses 19 tools, l’AirGraph, UCP, les preuves et le modèle de sécurité."
+	description="Installer le profil decision-core du serveur MCP CompatAir, puis charger les outils avancés ou legacy seulement lorsqu’ils sont nécessaires."
 	canonicalPath="/mcp-documentation/"
 	alternates={alternates}
 	breadcrumbs={[{ name: 'Documentation MCP', path: '/mcp-documentation/' }]}
@@ -51,8 +54,8 @@ const alternates = [
 			<dl class="mcp-facts">
 				<div><dt>Endpoint</dt><dd><code>{mcpEndpoint}</code></dd></div>
 				<div><dt>Transport</dt><dd>Streamable HTTP · JSON-RPC 2.0</dd></div>
-				<div><dt>Surface</dt><dd>19 tools · 11 ressources · 3 prompts</dd></div>
-				<div><dt>Contrats</dt><dd>MCP 2.1.0 · verdicts 2.0.0 · méthode 2026.07</dd></div>
+				<div><dt>Surface principale</dt><dd>7 tools decision-core · 12,8 Ko mesurés</dd></div>
+				<div><dt>Contrats</dt><dd>MCP 3.0.0 · verdicts 2.0.0 · méthode 2026.07</dd></div>
 				<div><dt>Authentification</dt><dd>Aucune · données publiques · lecture seule</dd></div>
 				<div><dt>État</dt><dd><a href={mcpHealthEndpoint}>Versions exposées par le service</a></dd></div>
 			</dl>
@@ -99,7 +102,7 @@ const alternates = [
 					<article><strong>Commerce isolé</strong><p>Prix et disponibilité passent par des tools séparés. Une commission ne peut ni créer ni modifier un verdict.</p></article>
 					<article><strong>Versions explicites</strong><p>Méthode, catalogue et observation voyagent avec le résultat et sont consultables par changefeed.</p></article>
 					<article><strong>Identifiants stables</strong><p>Produits et configurations reçoivent un CompatAir ID indépendant du nom commercial affiché.</p></article>
-					<article><strong>Sélection sans ambiguïté</strong><p>Huit tools forment le profil <code>core</code>. Les neuf anciens tools sont marqués <code>legacy</code> avec un successeur explicite.</p></article>
+					<article><strong>Sélection progressive</strong><p>Sept tools forment le profil <code>decision-core</code>. Quatre tools avancés et neuf tools legacy vivent sur des endpoints séparés.</p></article>
 				</div>
 			</section>
 
@@ -192,13 +195,15 @@ const alternates = [
 			</section>
 
 			<section id="tools">
-				<p class="eyebrow">Surface MCP 2.1.0</p>
-				<h2>19 tools, 11 ressources et 3 prompts</h2>
-				<p class="mcp-section-intro">Les tools historiques couvrent la recherche, le dimensionnement et la compatibilité unitaire. La couche AirGraph permet l’identification multi-identifiants, l’explication, les systèmes complets, les corrections minimales et la synchronisation.</p>
+				<p class="eyebrow">Surface MCP 3.0.0</p>
+				<h2>Une surface principale courte, deux extensions explicites</h2>
+				<p class="mcp-section-intro">Un client généraliste n’ingère que sept schémas compacts. Les contrats exhaustifs restent lisibles dans <code>compatair://responses/schema</code>. Les outils d’audit et de synchronisation passent par le profil extended ; les anciens contrats passent par legacy.</p>
+				<div class="mcp-table-wrap"><table><thead><tr><th>Profil</th><th>Endpoint</th><th>Usage</th></tr></thead><tbody><tr><td>decision-core</td><td><code>{mcpEndpoint}</code></td><td>Orientation, identification, décision, système, alternatives, corpus et offres.</td></tr><tr><td>extended</td><td><code>{mcpExtendedEndpoint}</code></td><td>Preuves détaillées, explication, comparaison complète et changefeed.</td></tr><tr><td>legacy</td><td><code>{mcpLegacyEndpoint}</code></td><td>Migration temporaire des neuf anciens tools et successeurs explicites.</td></tr></tbody></table></div>
 				<div class="mcp-table-wrap">
 					<table>
 						<thead><tr><th>Tool AirGraph</th><th>Ce qu’il apporte</th></tr></thead>
 						<tbody>
+							<tr><td><code>orient_decision</code></td><td>Retourne le plus petit tool et le profil adaptés lorsque la prochaine action n’est pas évidente.</td></tr>
 							<tr><td><code>evaluate_air_compatibility</code></td><td>Expose la capability UCP <code>fr.compatair.air.compatibility</code> pour répondre à une intention métier et enrichir une transaction sans toucher au checkout.</td></tr>
 							<tr><td><code>identify_product</code></td><td>Retrouve un produit par nom, URL, EAN/GTIN, MPN, référence ou CompatAir ID sans télécharger l’URL fournie.</td></tr>
 							<tr><td><code>build_complete_air_system</code></td><td>Assemble compresseur, outils, flexible, raccords, filtration et lubrification uniquement depuis les exigences documentées.</td></tr>
@@ -213,12 +218,15 @@ const alternates = [
 					</table>
 				</div>
 
-				<h3>Profil core recommandé</h3>
-				<p>Pour réduire les erreurs de sélection, une intégration généraliste devrait exposer d’abord ces huit tools. Le profil est aussi lisible dans <code>compatair://tools/core-profile</code>.</p>
+				<h3>Profil decision-core recommandé</h3>
+				<p>Une intégration généraliste ne charge que ces sept tools. Le profil, ses endpoints et les successeurs legacy sont aussi lisibles dans <code>compatair://tools/core-profile</code>.</p>
 				<ul class="mcp-tool-list">{coreTools.map((tool) => <li><code>{tool}</code></li>)}</ul>
 
+				<h3>Tools avancés à charger à la demande</h3>
+				<ul class="mcp-tool-list">{extendedTools.map((tool) => <li><code>{tool}</code></li>)}</ul>
+
 				<h3>Tools historiques maintenus</h3>
-				<p>Ils restent compatibles, mais chaque définition porte <code>fr.compatair/lifecycle=legacy</code> et un <code>fr.compatair/successor</code> explicite.</p>
+				<p>Ils restent disponibles sur <code>{mcpLegacyEndpoint}</code>, mais chaque définition porte <code>fr.compatair/lifecycle=legacy</code> et un <code>fr.compatair/successor</code> explicite.</p>
 				<ul class="mcp-tool-list">{legacyTools.map((tool) => <li><code>{tool}</code></li>)}</ul>
 
 				<h3>Ressources de contexte</h3>
@@ -246,7 +254,7 @@ const alternates = [
 					<article><strong>Exigence</strong><p><code>ca:requirement:&lt;id&gt;</code> porte une pression, un débit ou un composant documenté.</p></article>
 				</div>
 				<p>Une exigence absente reste absente. Par exemple, CompatAir ne déduit pas une perte de charge à partir d’un flexible inconnu et ne transforme pas un débit aspiré en FAD. Le graphe encode aussi cette absence dans <code>limitations</code>.</p>
-				<p>Les décisions peuvent être figées dans un <a href="/recu-compatibilite/"><code>compatibility_receipt</code></a>. La fidélité des assistants se mesure sur le <a href="/benchmark-agents/">benchmark public de 100 scénarios</a>, et les changements de preuve sont reliés aux portefeuilles dans le <a href="/impact-compatibilite/">Compatibility Impact Feed</a>.</p>
+				<p>Les décisions peuvent être figées dans un <a href="/recu-compatibilite/"><code>compatibility_receipt</code></a>. La fidélité des réponses se mesure sur le <a href="/benchmark-agents/">benchmark public de 100 scénarios</a>. La sélection du bon profil et du bon tool MCP se teste séparément sur le <a href="/data/mcp-agent-selection-benchmark.json">banc de 50 requêtes agentiques</a>, sans publier de score avant exécution avec de vrais modèles et tokenizers. Les changements de preuve sont reliés aux portefeuilles dans le <a href="/impact-compatibilite/">Compatibility Impact Feed</a>.</p>
 			</section>
 
 			<section id="securite">
@@ -335,19 +343,19 @@ const alternates = [
 				<p>Le manifeste de registre versionné avec CompatAir déclare le remote officiel sous la propriété <code>remotes</code>&nbsp;:</p>
 				<pre><code>{`{
   "name": "io.github.bluetouff/compatair",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "remotes": [{
     "type": "streamable-http",
     "url": "https://compatair.fr/mcp"
   }]
 }`}</code></pre>
-				<div class="mcp-note"><p>CompatAir MCP <code>2.1.0</code> est publié dans le Registry MCP officiel sous <code>io.github.bluetouff/compatair</code>, avec le remote Streamable HTTP <code>https://compatair.fr/mcp</code>. Le dépôt conserve un contrôle automatisé qui exige une correspondance exacte entre le nom, la version, le transport et cette URL.</p></div>
+				<div class="mcp-note"><p>CompatAir MCP <code>3.0.0</code> conserve <code>https://compatair.fr/mcp</code> comme remote principal du Registry. Le dépôt exige une correspondance exacte entre la version du manifeste, la version retournée par <code>initialize</code> et l’entrée Registry avant de considérer la publication complète.</p></div>
 				<div class="mcp-principles">
 					<article><strong>Pour un agent</strong><p><a href="/llms.txt">llms.txt</a> résume les règles non négociables et les points d’entrée.</p></article>
-					<article><strong>Pour une intégration</strong><p><a href="/schemas/mcp-result-2026.07.json">Enveloppe commune</a>, schémas fermés par tool, <a href="/schemas/airgraph-0.1.0.json">AirGraph</a> et <a href="/schemas/compatibility-receipt-1.0.0.json">reçus</a> sont servis à leurs URI stables.</p></article>
+					<article><strong>Pour une intégration</strong><p><a href="/schemas/mcp-result-2026.07.json">Enveloppe commune</a>, contrats exhaustifs par tool en ressource, <a href="/schemas/airgraph-0.1.0.json">AirGraph</a> et <a href="/schemas/compatibility-receipt-1.0.0.json">reçus</a> sont servis à leurs URI stables.</p></article>
 					<article><strong>Pour un cache</strong><p><code>get_changefeed</code> et <code>compatair://changefeed/current</code> exposent les versions visibles.</p></article>
 				</div>
-				<p>Le contrat textuel complet reste disponible dans <a href="/llms-full.txt">llms-full.txt</a>.</p>
+				<p>Le contrat textuel complet reste disponible dans <a href="/llms-full.txt">llms-full.txt</a>. La <a href="/compatibilite-versions/">matrice de compatibilité des versions</a> distingue version produit, serveur MCP, moteur, méthode et schémas.</p>
 				<h3>Sources normatives et intégrations</h3>
 				<ul class="mcp-source-list">
 					<li><a href="https://modelcontextprotocol.io/registry/remote-servers" rel="noopener">MCP Registry · publication des serveurs distants</a></li>

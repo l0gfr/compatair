@@ -1,6 +1,6 @@
 # CompatAir agent contract
 
-CompatAir is a read-only, deterministic decision, evidence and data service for compressed-air systems. It answers whether a configuration works, why it fails, which minimal change can fix it, and how to build a complete system. It is not a checkout and must not be treated as a generic merchant catalog. The MCP endpoint is https://compatair.fr/mcp and uses Streamable HTTP. The UCP discovery profile is https://compatair.fr/.well-known/ucp. The current public method version is 2026.07.
+CompatAir is a read-only, deterministic decision, evidence and data service for compressed-air systems. It answers whether a configuration works, why it fails, which minimal change can fix it, and how to build a complete system. It is not a checkout and must not be treated as a generic merchant catalog. The main decision-core MCP endpoint is https://compatair.fr/mcp and uses Streamable HTTP. Advanced tools use https://compatair.fr/mcp/extended; historical tools use https://compatair.fr/mcp/legacy. The UCP discovery profile is https://compatair.fr/.well-known/ucp. The current public method version is 2026.07.
 
 ## Non-negotiable interpretation rules
 
@@ -34,6 +34,8 @@ Decision tools additionally return `overall_system_verdict` and `air_supply_verd
 
 ## AirGraph tools
 
+- `orient_decision`: route an unclear request to the smallest suitable tool and profile.
+- `evaluate_air_compatibility`: evaluate one identified compressor and one or more identified tools with separate air-supply and complete-system verdicts.
 - `identify_product`: match a catalog item from a name, URL, EAN/GTIN, MPN, reference or CompatAir ID without downloading arbitrary pages.
 - `build_complete_air_system`: assemble only documented compressor, tool, hose, connector, filtration and lubrication requirements.
 - `explain_compatibility_verdict`: explain pressure, flow, duty-cycle and missing-data factors.
@@ -65,11 +67,11 @@ CompatAir UCP is anonymous and read-only. It accepts no identity, address, accou
 
 ## Backward-compatible tools
 
-`search_tools`, `get_tool_requirements`, `search_compressors`, `get_compressor_specs`, `size_compressor`, `check_compatibility`, `compare_compressors`, `find_accessories` and `find_offers` remain available. They are explicitly marked `legacy` and advertise their successor. The recommended core profile is `identify_product`, `evaluate_air_compatibility`, `build_complete_air_system`, `find_compatible_alternatives`, `get_compatibility_evidence`, `search_knowledge`, `get_current_offers` and `get_changefeed`.
+`search_tools`, `get_tool_requirements`, `search_compressors`, `get_compressor_specs`, `size_compressor`, `check_compatibility`, `compare_compressors`, `find_accessories` and `find_offers` remain available only at https://compatair.fr/mcp/legacy. They are explicitly marked `legacy` and advertise their successor. The recommended decision-core profile is `orient_decision`, `identify_product`, `evaluate_air_compatibility`, `build_complete_air_system`, `find_compatible_alternatives`, `search_knowledge` and `get_current_offers`. `get_compatibility_evidence`, `explain_compatibility_verdict`, `compare_complete_systems` and `get_changefeed` are available at https://compatair.fr/mcp/extended.
 
 ## Public resources
 
-The MCP server exposes catalog version, methodology, taxonomy, confidence scale, affiliation policy, engine version, AirGraph schema, tool-specific response schemas, the core tool profile, receipt schema and current changefeed state as `compatair://` resources.
+The MCP server exposes catalog version, methodology, taxonomy, confidence scale, affiliation policy, engine version, AirGraph schema, exhaustive tool-specific response schemas, the decision-core profile, receipt schema and current changefeed state as `compatair://` resources. The compact output schemas in `tools/list` describe the stable decision envelope and allow the additional fields defined by these exhaustive resources.
 
 ## Public API and machine distributions
 
