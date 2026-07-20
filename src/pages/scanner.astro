@@ -1,18 +1,16 @@
 ---
 import ProductScanner from '../components/ProductScanner.astro';
-import DecisionHeroVisual from '../components/DecisionHeroVisual.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Scanner une plaque compresseur ou outil | CompatAir" description="Identifiez un compresseur ou un outil par référence fabricant, code produit ou lecture locale d’une photo, puis vérifiez ses compatibilités et ses sources." canonicalPath="/scanner/">
 	<div class="decision-page scanner-page">
-		<section class="decision-hero">
-			<div class="container decision-hero-grid">
-				<div class="decision-hero-copy"><p class="decision-index">01 / Identifier une référence</p><h1>Le numéro de l’étiquette suffit pour <em>commencer.</em></h1><p>Saisissez une référence fabricant, un MPN ou un EAN. CompatAir ne cherche pas un produit ressemblant&nbsp;: la réponse apparaît uniquement si l’identifiant correspond exactement à une fiche documentée.</p><div class="decision-hero-points"><span>Outil ou compresseur</span><span>Réponse immédiate</span><span>Sources datées</span></div></div>
-				<DecisionHeroVisual mode="identify" />
+		<section class="decision-hero scanner-action-hero" data-compatair-surface="scanner">
+			<div class="container scanner-action-grid">
+				<div class="decision-hero-copy scanner-action-copy"><p class="decision-index">01 / Identifier une référence</p><h1>Le numéro de l’étiquette suffit pour <em>commencer.</em></h1><p>Saisissez une référence fabricant, un MPN ou un EAN. La réponse apparaît uniquement si l’identifiant correspond exactement à une fiche documentée.</p><div class="decision-hero-points"><span>Outil ou compresseur</span><span>Réponse immédiate</span><span>Sources datées</span></div></div>
+				<ProductScanner />
 			</div>
 		</section>
-		<section class="section scanner-section" data-compatair-surface="scanner"><div class="container"><header class="decision-section-head"><p class="decision-index">Saisie principale</p><h2>Recopiez le numéro, sans choisir une catégorie.</h2><p>Le type de produit est déterminé par la référence reconnue. La photo reste une aide secondaire si le numéro est difficile à lire.</p></header><ProductScanner /></div></section>
 		<section class="section scanner-method"><div class="container decision-assurance"><header><p class="decision-index">Frontière de confiance</p><h2>Une photo propose un numéro. Elle n’identifie jamais seule le produit.</h2></header><div class="decision-assurance-grid"><article><span>01</span><h3>Traitement local</h3><p>L’image reste dans votre navigateur et n’est ni envoyée ni enregistrée.</p></article><article><span>02</span><h3>Confirmation explicite</h3><p>Vous relisez le numéro proposé avant toute recherche dans le catalogue.</p></article><article><span>03</span><h3>Correspondance exacte</h3><p>Aucune ressemblance visuelle ou textuelle approximative ne devient un résultat.</p></article><article><span>04</span><h3>Limites visibles</h3><p>Une donnée absente reste indéterminée et ne devient jamais une estimation silencieuse.</p></article></div></div></section>
 	</div>
 </BaseLayout>

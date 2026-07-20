@@ -83,6 +83,7 @@ import { compressorDisplayName } from '../domain/product-display';
 
 	<script>
 		import { resolveExactCatalogSearch } from '../domain/catalog-search';
+		import { JOURNEY_CONTEXT_EVENT } from '../domain/journey-context';
 		import { sourceQualityDetail, sourceQualityLabel } from '../domain/source-quality';
 
 		type CompressorSummary = {
@@ -278,11 +279,40 @@ import { compressorDisplayName } from '../domain/product-display';
 			renderChoice();
 		}
 
+		function publishJourneyContext(selected: CompressorSummary[]) {
+			if (selected.length < 2) return;
+			let needLabel: string | null = null;
+			let journeyProduct: { id: string; label: string; type: 'tool' } | null = null;
+			if (contextState) {
+				const firstCompressor = contextState.catalog.compressors.find((item) => selected.some((candidate) => candidate.id === item.id));
+				if (firstCompressor) {
+					const base = contextState.comparison.evaluateContextualCompressor(contextState.configuration, firstCompressor).base;
+					needLabel = `${format(base.recommendedFadLpm, 1)} L/min recommandés à ${format(base.requiredPressureBar, 1)} bar`;
+				}
+				if (contextState.configuration.demands.length === 1) {
+					const tool = contextState.catalog.tools.find((item) => item.id === contextState!.configuration.demands[0].id);
+					if (tool) journeyProduct = { id: tool.id, label: tool.label, type: 'tool' };
+				}
+			}
+			const currentHref = `${location.pathname}${location.hash}`;
+			window.dispatchEvent(new CustomEvent(JOURNEY_CONTEXT_EVENT, { detail: {
+				stage: 'compared',
+				reference: null,
+				product: journeyProduct,
+				needLabel,
+				configuration: encodedContext || null,
+				compressorIds: selected.map((item) => item.id),
+				retainedCompressorId: retainedId || null,
+				continueHref: currentHref,
+				editHref: encodedContext ? `/calculateur/#config=${encodedContext}${initialScenarioId ? `&scenario=${encodeURIComponent(initialScenarioId)}` : ''}` : currentHref,
+			} }));
+		}
+
 		function refresh() {
 			const selected = selectedIds.map((id) => data.find((item) => item.id === id)).filter((item): item is CompressorSummary => Boolean(item));
 			selectedTarget?.replaceChildren(...selected.map(selectedCard), ...Array.from({ length: 3 - selected.length }, (_, offset) => placeholder(selected.length + offset)));
 			if (help) help.textContent = selected.length < 2 ? `${selected.length}/3 · ajoutez encore ${2 - selected.length} modèle${selected.length === 0 ? 's' : ''}` : `${selected.length}/3 · ${selected.length === 2 ? 'comparaison prête, un troisième modèle reste possible' : 'comparaison complète'}`;
-			renderTable(selected); renderContext(selected); updateLocation();
+			renderTable(selected); renderContext(selected); updateLocation(); publishJourneyContext(selected);
 		}
 
 		async function initializeContext() {

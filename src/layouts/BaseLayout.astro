@@ -7,6 +7,7 @@ import '../styles/global.css';
 import SiteSearch from '../components/SiteSearch.astro';
 import UiIcon from '../components/UiIcon.astro';
 import BrandMark from '../components/BrandMark.astro';
+import JourneyContextBar from '../components/JourneyContextBar.astro';
 import AcquisitionTelemetry from '../components/AcquisitionTelemetry.astro';
 import McpCanonicalTelemetry from '../components/McpCanonicalTelemetry.astro';
 import { compressors, tools } from '../data/catalog';
@@ -79,15 +80,15 @@ const decisionRail = lang === 'en'
 		],
 		status: 'Indépendant · sourcé',
 	};
-const navItems = [
-	{ href: '/guides/', label: 'Guides' },
-	{ href: '/glossaire/', label: 'Glossaire' },
-	{ href: '/compresseurs/', label: 'Compresseurs' },
-	{ href: '/outils-pneumatiques/', label: 'Outils' },
-	{ href: '/scanner/', label: 'Scanner' },
-	{ href: '/methodologie/', label: 'Comment ça marche' },
-];
 const isCurrent = (href: string) => currentPath.startsWith(href);
+const exploreItems = [
+	{ href: '/compresseurs/', label: 'Compresseurs', detail: 'Débits et sources documentés' },
+	{ href: '/outils-pneumatiques/', label: 'Outils pneumatiques', detail: 'Besoins publiés par usage' },
+	{ href: '/marques/', label: 'Marques', detail: 'Couverture des catalogues' },
+	{ href: '/glossaire/', label: 'Glossaire', detail: 'Définitions techniques sourcées' },
+];
+const exploreIsCurrent = exploreItems.some((item) => isCurrent(item.href));
+const journeyContextIsRelevant = ['/scanner/', '/calculateur/', '/comparateur/'].some((path) => currentPath.startsWith(path));
 const websiteJsonLd = {
 	'@context': 'https://schema.org',
 	'@graph': [
@@ -175,19 +176,31 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 					<span class="brand-corpus" aria-label={`${catalogReferenceCount} références documentées`}><small>Corpus</small><strong>{catalogReferenceCount}</strong><i>réf.</i></span>
 				</div>
 				<div class="desktop-nav">
-					<div class="nav-links">{navItems.map((item) => <a href={item.href} class:list={{ active: isCurrent(item.href) }} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>)}</div>
+					<div class="nav-links nav-task-links">
+						<a class:list={['nav-cta', isCurrent('/scanner/') && 'active']} href="/scanner/" aria-current={isCurrent('/scanner/') ? 'page' : undefined}>Identifier</a>
+						<a href="/calculateur/" class:list={{ active: isCurrent('/calculateur/') }} aria-current={isCurrent('/calculateur/') ? 'page' : undefined}>Vérifier un besoin</a>
+						<details class:list={['nav-explorer', exploreIsCurrent && 'active']}>
+							<summary>Explorer <span aria-hidden="true">⌄</span></summary>
+							<div class="nav-explorer-panel">{exploreItems.map((item) => <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}><strong>{item.label}</strong><small>{item.detail}</small></a>)}</div>
+						</details>
+						<a href="/guides/" class:list={{ active: isCurrent('/guides/') }} aria-current={isCurrent('/guides/') ? 'page' : undefined}>Guides</a>
+						<a href="/professionnels/" class:list={{ active: isCurrent('/professionnels/') }} aria-current={isCurrent('/professionnels/') ? 'page' : undefined}>Professionnels</a>
+					</div>
 					<SiteSearch />
-					<a class:list={['nav-cta', isCurrent('/calculateur/') && 'active']} href="/calculateur/">Vérifier mon besoin <span aria-hidden="true">→</span></a>
 				</div>
 				<details class="mobile-menu">
 					<summary>Menu <span aria-hidden="true"></span></summary>
 					<div class="mobile-menu-panel">
-						<div class="mobile-menu-priority" aria-label="Parcours professionnels">
-							<a href="/guides/professionnels/"><strong>Professionnels</strong><small>Ateliers, métiers et réseaux d’air</small></a>
-							<a href="/professionnels/"><strong>Fabricants et distributeurs</strong><small>Améliorer et intégrer un catalogue</small></a>
+						<div class="mobile-menu-priority" aria-label="Commencer">
+							<a href="/scanner/"><strong>Identifier une référence</strong><small>Numéro fabricant, MPN ou EAN</small></a>
+							<a href="/calculateur/"><strong>Vérifier un besoin</strong><small>Outil, usage et compresseur</small></a>
 						</div>
-						{navItems.map((item) => <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>)}
-						<a href="/recherche/">Recherche</a><a href="/calculateur/">Vérifier mon besoin</a><a href="/passeport/" aria-current={isCurrent('/passeport/') ? 'page' : undefined}>Conserver une configuration</a>
+						<a href="/guides/" aria-current={isCurrent('/guides/') ? 'page' : undefined}>Guides</a>
+						<a href="/professionnels/" aria-current={isCurrent('/professionnels/') ? 'page' : undefined}>Professionnels</a>
+						<details class="mobile-explore"><summary>Explorer le corpus</summary><div>{exploreItems.map((item) => <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>)}</div></details>
+						<a href="/recherche/">Rechercher sur le site</a>
+						<a href="/methodologie/">Méthode et fiabilité</a>
+						<a href="/passeport/" aria-current={isCurrent('/passeport/') ? 'page' : undefined}>Conserver une configuration</a>
 					</div>
 				</details>
 			</nav>
@@ -199,6 +212,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 				</div>
 			</div>
 		</header>
+		{journeyContextIsRelevant && <JourneyContextBar />}
 		<main id="contenu"><slot /></main>
 		<footer class="site-footer" aria-label="Pied de page">
 			<div class="container footer-shell">
@@ -216,59 +230,37 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 					</div>
 				</div>
 
-				<nav class="footer-directory" aria-label="Navigation du pied de page">
+				<nav class="footer-directory footer-directory-primary" aria-label="Navigation principale du pied de page">
 					<section class="footer-block">
 						<header><span class="footer-icon"><UiIcon name="compass" /></span><h2>Explorer</h2></header>
 						<a href="/compresseurs/"><span>Compresseurs</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/outils-pneumatiques/"><span>Outils pneumatiques</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/marques/"><span>Marques documentées</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/guides/"><span>Guides techniques</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/guides/particuliers/"><span>Guides particuliers</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/guides/professionnels/"><span>Guides professionnels</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/glossaire/"><span>Glossaire sourcé</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/professionnels/"><span>Professionnels</span><UiIcon name="arrow" size={15} /></a>
 					</section>
 					<section class="footer-block">
-						<header><span class="footer-icon"><UiIcon name="calculator" /></span><h2>Choisir et vérifier</h2></header>
+						<header><span class="footer-icon"><UiIcon name="calculator" /></span><h2>Décider</h2></header>
+						<a href="/scanner/"><span>Identifier une référence</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/calculateur/"><span>Vérifier une configuration</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/comparateur/"><span>Comparer des modèles</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/passeport/"><span>Conserver une configuration</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/mise-en-service/"><span>Valider la mise en service</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/suivi-exploitation/"><span>Suivre une installation</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/diagnostic-intervention/"><span>Diagnostiquer un écart</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/maintenance-preventive/"><span>Planifier la maintenance</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/scanner/"><span>Identifier un modèle</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/comparateur/"><span>Comparer des modèles</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/comparatifs/"><span>Comparer les données utiles</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/recherche/"><span>Rechercher sur le site</span><UiIcon name="arrow" size={15} /></a>
-					</section>
-					<section class="footer-block">
-						<header><span class="footer-icon"><UiIcon name="database" /></span><h2>Comment nous vérifions</h2></header>
-						<a href="/confiance/"><span>Centre de confiance</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/methodologie/"><span>Comment fonctionne CompatAir</span><UiIcon name="arrow" size={15} /></a>
-						{lang === 'fr' && <a href="/api/"><span>API et contrats publics</span><UiIcon name="arrow" size={15} /></a>}
-						<a href={lang === 'en' ? '/en/mcp/' : '/mcp-documentation/'}><span>{lang === 'en' ? 'MCP for AI agents' : 'MCP pour agents IA'}</span><UiIcon name="arrow" size={15} /></a>
-						{lang === 'fr' && <a href="/agents/"><span>CompatAir pour les agents</span><UiIcon name="arrow" size={15} /></a>}
-						<a href={lang === 'en' ? '/en/ucp/' : '/ucp/'}><span>{lang === 'en' ? 'UCP compatibility service' : 'UCP pour commerce agentique'}</span><UiIcon name="arrow" size={15} /></a>
-						<a href={lang === 'en' ? '/en/agent-fidelity-benchmark/' : '/benchmark-agents/'}><span>{lang === 'en' ? 'Agent fidelity benchmark' : 'Benchmark de fidélité des agents'}</span><UiIcon name="arrow" size={15} /></a>
-						<a href={lang === 'en' ? '/en/compatibility-receipt/' : '/recu-compatibilite/'}><span>{lang === 'en' ? 'Verifiable compatibility receipts' : 'Reçus de compatibilité vérifiables'}</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/sources-fiabilite/"><span>Sources et fiabilité</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/preuves/"><span>Documents et dates vérifiés</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/radar-contradictions/"><span>Radar des contradictions</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/graphe-preuve/"><span>Graphe de preuve</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/observatoire-qualite-documentaire/"><span>Observatoire documentaire</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/barometre-transparence/"><span>Baromètre de transparence</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/corrections/"><span>Journal des corrections</span><UiIcon name="arrow" size={15} /></a>
-						<a href={lang === 'en' ? '/en/compatibility-impact-feed/' : '/impact-compatibilite/'}><span>Compatibility Impact Feed</span><UiIcon name="arrow" size={15} /></a>
 					</section>
 					<section class="footer-block">
 						<header><span class="footer-icon"><UiIcon name="shield" /></span><h2>Confiance</h2></header>
-						<a href="/confiance/"><span>Vue d’ensemble</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/confiance/"><span>Centre de confiance</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/methodologie/"><span>Comment fonctionne CompatAir</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/sources-fiabilite/"><span>Sources et fiabilité</span><UiIcon name="arrow" size={15} /></a>
+						<a href="/preuves/"><span>Documents et dates vérifiés</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/affiliation/"><span>Affiliation et indépendance</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/contact/"><span>Signaler une donnée</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/securite/"><span>Signaler une vulnérabilité</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/confidentialite/"><span>Confidentialité</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/professionnels/"><span>Fabricants et distributeurs</span><UiIcon name="arrow" size={15} /></a>
 					</section>
 				</nav>
+				<div class="footer-resource-drawers">
+					<details><summary>Parcours et ressources complémentaires <span>+</span></summary><div><a href="/guides/particuliers/">Guides particuliers</a><a href="/guides/professionnels/">Guides professionnels</a><a href="/glossaire/">Glossaire</a><a href="/comparatifs/">Comparatifs</a><a href="/suivi-exploitation/">Suivi d’exploitation</a><a href="/diagnostic-intervention/">Diagnostic et intervention</a><a href="/maintenance-preventive/">Maintenance préventive</a><a href="/recherche/">Recherche globale</a></div></details>
+					<details><summary>Ressources techniques et transparence <span>+</span></summary><div>{lang === 'fr' && <a href="/api/">API et contrats publics</a>}<a href={lang === 'en' ? '/en/mcp/' : '/mcp-documentation/'}>MCP pour agents IA</a>{lang === 'fr' && <a href="/agents/">CompatAir pour les agents</a>}<a href={lang === 'en' ? '/en/ucp/' : '/ucp/'}>UCP</a><a href={lang === 'en' ? '/en/agent-fidelity-benchmark/' : '/benchmark-agents/'}>Benchmark des agents</a><a href={lang === 'en' ? '/en/compatibility-receipt/' : '/recu-compatibilite/'}>Reçus de compatibilité</a><a href="/radar-contradictions/">Radar des contradictions</a><a href="/graphe-preuve/">Graphe de preuve</a><a href="/observatoire-qualite-documentaire/">Observatoire documentaire</a><a href="/barometre-transparence/">Baromètre de transparence</a><a href="/corrections/">Journal des corrections</a><a href={lang === 'en' ? '/en/compatibility-impact-feed/' : '/impact-compatibilite/'}>Compatibility Impact Feed</a><a href="/securite/">Sécurité</a><a href="/confidentialite/">Confidentialité</a></div></details>
+				</div>
 
 				<div class="footer-bottomline">
 					<p>CompatAir © {currentYear} · sans compte · sans publicité ciblée</p>

@@ -1,4 +1,4 @@
-<div class="scanner" data-scanner>
+<div class="scanner" data-scanner data-decision-visual="identify">
 	<form class="scanner-form" data-scanner-form>
 		<header class="scanner-form-head"><span>01</span><div><p>Référence exacte</p><strong>Un numéro, aucune catégorie à choisir</strong></div><small>Mode recommandé</small></header>
 		<div class="scanner-confirmation">
@@ -27,6 +27,15 @@
 		</details>
 		<p class="scanner-status" role="status" data-status></p>
 		<p class="form-error" role="alert" data-error hidden></p>
+		<section class="scanner-recovery" data-recovery aria-labelledby="scanner-recovery-title" hidden>
+			<div><p>Référence non reconnue</p><h3 id="scanner-recovery-title" data-recovery-title>Retrouvez le bon numéro sans deviner le produit.</h3><small>Vérifiez le MPN, la référence fabricant, l’EAN ou le GTIN indiqué sur l’étiquette.</small></div>
+			<div class="scanner-recovery-actions">
+				<button class="button" type="button" data-recovery-photo>Utiliser une photo</button>
+				<a class="button" data-recovery-search href="/recherche/">Rechercher par marque ou modèle</a>
+				<a class="button" href="/calculateur/">Décrire mon usage</a>
+				<a class="text-link" href="/contact/#signaler-donnee">Signaler une référence absente</a>
+			</div>
+		</section>
 	</form>
 
 	<section class="scanner-result" data-result hidden>
@@ -90,6 +99,8 @@
 	import type { CompatibilityResult } from '../domain/compatibility';
 	import { explainDecisionDataGap } from '../domain/decision-resolution';
 	import { isImageWithinPixelBudget, readImageDimensions, type ImageDimensions } from '../domain/image-dimensions';
+	import { JOURNEY_CONTEXT_EVENT } from '../domain/journey-context';
+	import { encodePassportConfiguration } from '../domain/passport';
 	import { compressorCapabilities, identifyProducts, toolCompatibleCompressors } from '../domain/product-identification';
 	import { scannerComparisonHref, scannerConfigurationForTool, scannerReferenceFromHash, scannerReferenceUrl } from '../domain/scanner-journey';
 	import { sourceQualityDetail, sourceQualityLabel } from '../domain/source-quality';
@@ -174,15 +185,19 @@
 	function publishedNeed(product: ResultProduct, type: 'compressor' | 'tool') {
 		if (type === 'compressor') {
 			const compressor = product as Compressor;
+			const value = compressor.fadCurve.length ? compressor.fadCurve.map((point) => `${formatNumber(point.litersPerMinute)} L/min à ${formatNumber(point.pressureBar)} bar`).join(' · ') : 'Aucun débit restitué exploitable publié.';
 			setText('[data-published-label]', 'Capacité publiée');
-			setText('[data-published-value]', compressor.fadCurve.length ? compressor.fadCurve.map((point) => `${formatNumber(point.litersPerMinute)} L/min à ${formatNumber(point.pressureBar)} bar`).join(' · ') : 'Aucun débit restitué exploitable publié.');
-			return;
+			setText('[data-published-value]', value);
+			return value;
 		}
 		const tool = product as ToolProfile;
+		let value: string;
 		setText('[data-published-label]', 'Besoin publié');
-		if (tool.demandModel === 'fixed-flow') setText('[data-published-value]', `${formatNumber(tool.airflowLpm.typical)} L/min à ${formatNumber(tool.workingPressureBar.typical)} bar · cible de classement ${formatNumber(tool.airflowLpm.typical * 1.25)} L/min avec 25 % de réserve.`);
-		else if (tool.demandModel === 'per-action') setText('[data-published-value]', `${formatNumber(tool.airPerActionLiters)} L par ${tool.actionLabel} à ${formatNumber(tool.workingPressureBar.typical)} bar ; cadence à préciser.`);
-		else setText('[data-published-value]', `${tool.demandExplanation} Pression maximale publiée : ${formatNumber(tool.workingPressureBar.max)} bar.`);
+		if (tool.demandModel === 'fixed-flow') value = `${formatNumber(tool.airflowLpm.typical)} L/min à ${formatNumber(tool.workingPressureBar.typical)} bar · cible de classement ${formatNumber(tool.airflowLpm.typical * 1.25)} L/min avec 25 % de réserve.`;
+		else if (tool.demandModel === 'per-action') value = `${formatNumber(tool.airPerActionLiters)} L par ${tool.actionLabel} à ${formatNumber(tool.workingPressureBar.typical)} bar ; cadence à préciser.`;
+		else value = `${tool.demandExplanation} Pression maximale publiée : ${formatNumber(tool.workingPressureBar.max)} bar.`;
+		setText('[data-published-value]', value);
+		return value;
 	}
 
 	async function inspectImage(file: File) {
@@ -261,19 +276,29 @@
 		const target = query<HTMLElement>('[data-all-results]'); const button = query<HTMLButtonElement>('[data-toggle-all]'); if (!target || !button) return;
 		const expanded = button.getAttribute('aria-expanded') === 'true'; target.hidden = expanded; button.setAttribute('aria-expanded', String(!expanded)); button.textContent = expanded ? 'Voir tous les résultats' : 'Réduire les résultats';
 	});
+	query<HTMLButtonElement>('[data-recovery-photo]')?.addEventListener('click', () => {
+		const details = query<HTMLDetailsElement>('.scanner-photo-details');
+		if (details) { details.open = true; details.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' }); }
+	});
 
 	form?.addEventListener('submit', async (event) => {
 		event.preventDefault();
 		const error = query<HTMLElement>('[data-error]'); if (error) error.hidden = true;
+		const recovery = query<HTMLElement>('[data-recovery]'); if (recovery) recovery.hidden = true;
 		try { await loadCatalog(); }
 		catch { if (error) { error.hidden = false; error.textContent = 'Le catalogue technique est momentanément indisponible. Réessayez dans quelques instants.'; } return; }
 		const matches = identifyProducts(identifier?.value ?? '', compressors, tools);
 		if (matches.length !== 1) {
 			if (error) { error.hidden = false; error.textContent = matches.length > 1 ? 'Identifiant ambigu : vérifiez la marque et le modèle sur l’étiquette.' : 'Aucun modèle ne correspond exactement à cet identifiant.'; }
+			if (recovery) recovery.hidden = false;
+			setText('[data-recovery-title]', matches.length > 1 ? 'Plusieurs fiches utilisent cet identifiant : ajoutez la marque ou le modèle.' : 'Retrouvez le bon numéro sans deviner le produit.');
+			const search = query<HTMLAnchorElement>('[data-recovery-search]');
+			if (search) search.href = `/recherche/?q=${encodeURIComponent(identifier?.value.trim() ?? '')}#recherche-technique`;
 			query<HTMLElement>('[data-result]')?.setAttribute('hidden', ''); return;
 		}
 		const match = matches[0]; const product = match.product;
-		history.replaceState(null, '', scannerReferenceUrl(location.pathname, identifier?.value ?? match.matchedValue));
+		const scannerHref = scannerReferenceUrl(location.pathname, identifier?.value ?? match.matchedValue);
+		history.replaceState(null, '', scannerHref);
 		setResolutionNote();
 		const rankingNote = query<HTMLElement>('[data-ranking-note]'); if (rankingNote) rankingNote.hidden = true;
 		setText('[data-product-name]', `${product.brand} ${product.model}`);
@@ -283,7 +308,10 @@
 		const verifiedAt = sourceDates.at(-1) ?? product.evidence.map((source) => source.retrievedAt).sort().at(-1);
 		setText('[data-source-verified]', verifiedAt ? `Source constructeur vérifiée le ${new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long' }).format(new Date(`${verifiedAt}T12:00:00Z`))}` : 'Date de vérification indisponible');
 		query<HTMLAnchorElement>('[data-product-link]')?.setAttribute('href', linkFor(match.type, product.slug));
-		publishedNeed(product, match.type);
+		const publishedNeedLabel = publishedNeed(product, match.type);
+		let journeyCompressorIds: string[] = [];
+		let journeyConfiguration: string | undefined;
+		let journeyContinueHref = linkFor(match.type, product.slug);
 
 		let compatibleCards: ResultCard[] = []; let incompatibleCards: ResultCard[] = []; let insufficientCards: ResultCard[] = [];
 		if (match.type === 'compressor') {
@@ -304,6 +332,7 @@
 			}));
 			const compare = query<HTMLAnchorElement>('[data-compare]'); if (compare) compare.hidden = true;
 			const calculatorHref = `/calculateur/#compresseur=${encodeURIComponent(product.id)}`;
+			journeyContinueHref = calculatorHref;
 			query<HTMLAnchorElement>('[data-refine]')?.setAttribute('href', calculatorHref);
 			if (!compatibleCards.length && insufficientCards.length) {
 				const sample = insufficientCards[0]?.result;
@@ -328,12 +357,15 @@
 			const section = query<HTMLElement>('[data-unlocks-section]'); if (section) section.hidden = true;
 			const compare = query<HTMLAnchorElement>('[data-compare]'); const topIds = sortCompatible(compatibleCards).slice(0, 3).map(({ product }) => product.id);
 			const comparisonConfiguration = scannerConfigurationForTool(product as ToolProfile);
+			journeyCompressorIds = topIds;
+			journeyConfiguration = comparisonConfiguration ? encodePassportConfiguration(comparisonConfiguration) : undefined;
 			if (compare) {
 				compare.hidden = topIds.length < 2 || !comparisonConfiguration;
 				compare.textContent = topIds.length >= 3 ? 'Comparer les trois compresseurs compatibles' : 'Comparer les deux compresseurs compatibles';
 				if (topIds.length >= 2 && comparisonConfiguration) compare.href = scannerComparisonHref(topIds, comparisonConfiguration);
 			}
 			const calculatorHref = `/calculateur/#outil=${encodeURIComponent(product.id)}`;
+			journeyContinueHref = compare && !compare.hidden ? compare.getAttribute('href') ?? calculatorHref : calculatorHref;
 			query<HTMLAnchorElement>('[data-refine]')?.setAttribute('href', calculatorHref);
 			const tool = product as ToolProfile;
 			if (rankingNote && tool.demandModel === 'fixed-flow') {
@@ -379,6 +411,17 @@
 		const allResults = query<HTMLElement>('[data-all-results]'); if (allResults) allResults.hidden = true;
 		const toggle = query<HTMLButtonElement>('[data-toggle-all]'); if (toggle) { toggle.setAttribute('aria-expanded', 'false'); toggle.textContent = 'Voir tous les résultats'; }
 		query<HTMLElement>('[data-result]')?.removeAttribute('hidden');
+		window.dispatchEvent(new CustomEvent(JOURNEY_CONTEXT_EVENT, { detail: {
+			stage: 'identified',
+			reference: match.matchedValue,
+			product: { id: product.id, label: `${product.brand} ${product.model}`, type: match.type },
+			needLabel: publishedNeedLabel.replace(/[.;]\s*$/, ''),
+			configuration: journeyConfiguration ?? null,
+			compressorIds: journeyCompressorIds.length ? journeyCompressorIds : null,
+			retainedCompressorId: null,
+			continueHref: journeyContinueHref,
+			editHref: scannerHref,
+		} }));
 		query<HTMLElement>('[data-result]')?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
 	});
 

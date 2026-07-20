@@ -26,7 +26,10 @@ function loadSearchIndex() {
 
 const normalizeSearch = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 searchRoot?.addEventListener('toggle', () => {
-	if (searchRoot instanceof HTMLDetailsElement && searchRoot.open) void loadSearchIndex().catch(() => undefined);
+	if (searchRoot instanceof HTMLDetailsElement && searchRoot.open) {
+		void loadSearchIndex().catch(() => undefined);
+		requestAnimationFrame(() => searchInput?.focus());
+	}
 });
 searchInput?.addEventListener('input', async () => {
 	if (!searchResults) return;
@@ -54,4 +57,11 @@ searchInput?.addEventListener('input', async () => {
 		.map(({ item }) => item);
 	if (!matches.length) { const p = document.createElement('p'); p.textContent = 'Aucun résultat dans les données publiées.'; searchResults.replaceChildren(p); return; }
 	searchResults.replaceChildren(...matches.map((item) => { const link = document.createElement('a'); link.href = item.url; const strong = document.createElement('strong'); const small = document.createElement('small'); strong.textContent = item.title; small.textContent = item.type; link.append(strong, small); return link; }));
+});
+
+document.addEventListener('keydown', (event) => {
+	if (!searchRoot || !(searchRoot instanceof HTMLDetailsElement)) return;
+	const target = event.target as HTMLElement | null;
+	if (event.key !== '/' || target?.matches('input, textarea, select, [contenteditable="true"]') || event.metaKey || event.ctrlKey || event.altKey) return;
+	event.preventDefault(); searchRoot.open = true; searchInput?.focus();
 });
