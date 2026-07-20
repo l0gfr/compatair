@@ -26,8 +26,8 @@ export type TradeScenarioPreset = {
 export const tradeScenarioPresets = {
 	'garage-service-roues': {
 		id: 'garage-service-roues', metierId: 'garage-automobile', title: 'Service roues et clé à chocs', toolId: 'chicago-pneumatic-cp7748',
-		sessionMinutes: 30, hoseLengthMeters: 5, hoseDiameterMm: 10, mode: 'successive', dutyFactor: 0.3,
-		assumptions: ['Fréquence intermittente de 30 % proposée pour démarrer.', 'Flexible de 5 m et 10 mm à confirmer sur le poste réel.'],
+		sessionMinutes: 30, hoseLengthMeters: 5, hoseDiameterMm: 10, mode: 'successive', dutyFactor: 1,
+		assumptions: ['Le besoin en charge publié est conservé sans facteur réducteur ; la cadence réelle s’étudie séparément.', 'Flexible de 5 m et 10 mm à confirmer sur le poste réel.'],
 	},
 	'garage-gonflage-temporise': {
 		id: 'garage-gonflage-temporise', metierId: 'garage-automobile', title: 'Gonflage et contrôle de pression', toolId: 'einhell-4137000-manometre',
@@ -42,13 +42,13 @@ export const tradeScenarioPresets = {
 	},
 	'poids-lourds-cp5000': {
 		id: 'poids-lourds-cp5000', metierId: 'atelier-poids-lourds', title: 'Dépose de roues avec une CP5000', toolId: 'chicago-pneumatic-cp5000',
-		sessionMinutes: 45, hoseLengthMeters: 5, hoseDiameterMm: 13, mode: 'successive', dutyFactor: 0.3,
-		assumptions: ['Fréquence intermittente de 30 % proposée, sans modifier la consommation en charge publiée.', 'Passage de 13 mm sur 5 m repris comme configuration de départ de la référence.'],
+		sessionMinutes: 45, hoseLengthMeters: 5, hoseDiameterMm: 13, mode: 'successive', dutyFactor: 1,
+		assumptions: ['Le besoin en charge publié est conservé sans facteur réducteur ; la séquence réelle s’étudie séparément.', 'Passage de 13 mm sur 5 m repris comme configuration de départ de la référence.'],
 	},
 	'poids-lourds-cp7776': {
 		id: 'poids-lourds-cp7776', metierId: 'atelier-poids-lourds', title: 'Maintenance lourde avec une CP7776', toolId: 'chicago-pneumatic-cp7776',
-		sessionMinutes: 45, hoseLengthMeters: 5, hoseDiameterMm: 13, mode: 'successive', dutyFactor: 0.3,
-		assumptions: ['Fréquence intermittente de 30 % proposée pour une première lecture.', 'Flexible de 13 mm sur 5 m repris comme point de départ documenté.'],
+		sessionMinutes: 45, hoseLengthMeters: 5, hoseDiameterMm: 13, mode: 'successive', dutyFactor: 1,
+		assumptions: ['Le besoin en charge publié est conservé sans facteur réducteur ; la séquence réelle s’étudie séparément.', 'Flexible de 13 mm sur 5 m repris comme point de départ documenté.'],
 	},
 	'poids-lourds-gonflage': {
 		id: 'poids-lourds-gonflage', metierId: 'atelier-poids-lourds', title: 'Gonflage d’un pneumatique poids lourd', toolId: 'einhell-4137000-manometre',
@@ -86,10 +86,10 @@ export const tradeScenarioPresets = {
 		sessionMinutes: 60, hoseLengthMeters: 10, hoseDiameterMm: 9, mode: 'successive', dutyFactor: 1,
 		assumptions: ['Fonctionnement continu proposé pour distinguer ce poste du clouage par action.', 'Session de 60 min à rapprocher du cycle de service documenté du compresseur.'],
 	},
-	'btp-burineur-cp7110': {
-		id: 'btp-burineur-cp7110', metierId: 'btp-chantier', title: 'Burineur CP7110 en séquence soutenue', toolId: 'chicago-pneumatic-cp7110',
-		sessionMinutes: 20, hoseLengthMeters: 5, hoseDiameterMm: 10, mode: 'successive', dutyFactor: 0.6,
-		assumptions: ['Fréquence soutenue de 60 % proposée pour représenter une séquence avec reprises.', 'Flexible de 10 mm sur 5 m repris comme configuration documentée de départ.'],
+	'btp-burineur-dmh-30': {
+		id: 'btp-burineur-dmh-30', metierId: 'btp-chantier', title: 'Burinage léger de maçonnerie avec le DMH 30 Set', toolId: 'metabo-dmh-30-set',
+		sessionMinutes: 20, hoseLengthMeters: 5, hoseDiameterMm: 10, mode: 'successive', dutyFactor: 1,
+		assumptions: ['Le besoin publié de 280 L/min à 6,2 bar est conservé sans facteur réducteur.', 'La session de 20 minutes et le flexible de 5 m sont à remplacer par la configuration réellement déployée.'],
 	},
 	'btp-clouage-mobile': {
 		id: 'btp-clouage-mobile', metierId: 'btp-chantier', title: 'Clouage mobile avec la TC-PN 50', toolId: 'einhell-tc-pn-50',
@@ -98,8 +98,8 @@ export const tradeScenarioPresets = {
 	},
 	'btp-burineur-cas-limite': {
 		id: 'btp-burineur-cas-limite', metierId: 'btp-chantier', title: 'Burineur TC-PC 45 comme cas limite', toolId: 'einhell-tc-pc-45',
-		sessionMinutes: 15, hoseLengthMeters: 5, hoseDiameterMm: 9, mode: 'successive', dutyFactor: 0.3,
-		assumptions: ['Fréquence intermittente de 30 % proposée uniquement pour le calcul.', 'La notice exclut l’usage professionnel ou industriel : le préremplissage ne vaut pas recommandation de service.'],
+		sessionMinutes: 15, hoseLengthMeters: 5, hoseDiameterMm: 9, mode: 'successive', dutyFactor: 1,
+		assumptions: ['Le besoin en charge publié est conservé sans facteur réducteur.', 'La notice exclut l’usage professionnel ou industriel : le préremplissage ne vaut pas recommandation de service.'],
 	},
 	'maintenance-meulage-continu': {
 		id: 'maintenance-meulage-continu', metierId: 'maintenance-industrielle', title: 'Meulage continu avec la Metabo DW 125', toolId: 'metabo-dw-125',
@@ -108,13 +108,13 @@ export const tradeScenarioPresets = {
 	},
 	'maintenance-derouillage': {
 		id: 'maintenance-derouillage', metierId: 'maintenance-industrielle', title: 'Dérouillage intermittent avec le CP7120', toolId: 'chicago-pneumatic-cp7120',
-		sessionMinutes: 30, hoseLengthMeters: 5, hoseDiameterMm: 10, mode: 'successive', dutyFactor: 0.6,
-		assumptions: ['Fréquence de 60 % proposée pour une séquence d’intervention soutenue.', 'Flexible de 10 mm sur 5 m repris comme configuration documentée de départ.'],
+		sessionMinutes: 30, hoseLengthMeters: 5, hoseDiameterMm: 10, mode: 'successive', dutyFactor: 1,
+		assumptions: ['Le besoin en charge publié est conservé sans facteur réducteur ; les phases s’étudient séparément.', 'Flexible de 10 mm sur 5 m repris comme configuration documentée de départ.'],
 	},
 	'maintenance-vissage-serie': {
 		id: 'maintenance-vissage-serie', metierId: 'maintenance-industrielle', title: 'Vissage en série avec la Metabo DS 14', toolId: 'metabo-ds-14',
-		sessionMinutes: 60, hoseLengthMeters: 10, hoseDiameterMm: 9, mode: 'successive', dutyFactor: 0.6,
-		assumptions: ['Fréquence de 60 % proposée comme hypothèse de travail.', 'La coactivité avec d’autres postes doit être ajoutée comme un scénario distinct.'],
+		sessionMinutes: 60, hoseLengthMeters: 10, hoseDiameterMm: 9, mode: 'successive', dutyFactor: 1,
+		assumptions: ['Le besoin en charge publié est conservé sans facteur réducteur ; la cadence se mesure séparément.', 'La coactivité avec d’autres postes doit être ajoutée comme un scénario distinct.'],
 	},
 } as const satisfies Record<string, TradeScenarioPreset>;
 

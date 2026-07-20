@@ -3,129 +3,92 @@ title: "Burineur pneumatique sur chantier : débit, flexible et durée de travai
 seoTitle: "Burineur pneumatique de chantier : méthode"
 description: "Méthode sourcée pour alimenter un burineur pneumatique sur chantier, vérifier le débit en charge, le flexible, la durée et les limites d’usage."
 pubDate: 2026-07-19
+updatedDate: 2026-07-20
 category: "Choisir"
 audiences: [professionnel]
 metiers: [btp-chantier]
 readingTime: 15
 featured: true
-relatedCalculatorTool: chicago-pneumatic-cp7110
+relatedCalculatorTool: metabo-dmh-30-set
 sources:
-  - https://tools.cp.com/en/products/percussivetools/cp7110-sku8941071101
+  - https://www.metabo.com/ua/uk/instrumenty/pnevmatyka/pnevmatychni-instrumenty/pnevmatychni-vidbiini-molotky/dmh-30-set-604115500-pnevmatychnyi-vidbiinyi-molotok.html
   - https://www.einhell.fr/p/4139040-tc-pc-45
   - https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ajnagqqlfl4l5dvdmthveb042c/4139040_21022_001_SPK2.pdf
   - https://www.inrs.fr/media.html?refINRS=ED+6342
 ---
 
-Un burineur pneumatique ne se choisit pas sur la seule pression maximale du compresseur. La réponse utile réunit quatre preuves : la consommation en charge de la référence, le débit restitué disponible à cette pression, le passage du flexible réellement déployé et la durée de travail prévue. Le bruit, les vibrations et le domaine d’usage de la notice restent des décisions séparées.
+Un burineur pneumatique de chantier ne se choisit pas sur le seul mot « burineur » ni sur la pression maximale d’un compresseur. La réponse utile réunit cinq preuves : l’usage prévu par le fabricant, la consommation de la référence, le débit restitué disponible à cette pression, le passage réellement déployé et la durée de travail. Le bruit, les vibrations et la prévention restent des décisions séparées.
 
 ## Réponse directe
 
-Pour le [Chicago Pneumatic CP7110](https://tools.cp.com/en/products/percussivetools/cp7110-sku8941071101), la fiche fabricant publie **6,9 L/s en charge**, **6,3 bar de pression dynamique maximale** et un flexible d’au moins **10 mm de diamètre intérieur sur 5 m**. La conversion exacte donne `6,9 × 60 = 414 L/min`.
+Le [Metabo DMH 30 Set](https://www.metabo.com/ua/uk/instrumenty/pnevmatyka/pnevmatychni-instrumenty/pnevmatychni-vidbiini-molotky/dmh-30-set-604115500-pnevmatychnyi-vidbiinyi-molotok.html), MPN **604115500**, est présenté par son fabricant pour la maçonnerie, les briques, le béton cellulaire, la dépose d’enduit ou de carrelage et les travaux de burinage légers. Sa fiche publie une consommation de **280 L/min** à une pression de service de **6,2 bar**.
 
-Le compresseur doit donc publier un débit restitué exploitable près de 6,3 bar. Un débit aspiré supérieur à 414 L/min ne démontre pas cette capacité. Une cuve importante peut retarder une chute de pression, mais elle ne produit pas le débit continu manquant.
+La première comparaison porte donc sur 280 L/min face au [débit restitué ou FAD](/guides/debit-restitue-fad-vs-debit-aspire/) du compresseur près de 6,2 bar. Le débit aspiré et la taille de cuve ne répondent pas à cette question. La seconde vérification porte sur la tenue de la séquence et la pression réellement disponible au raccord.
 
 | Décision | Preuve minimale |
 | --- | --- |
-| L’outil est documenté | MPN, débit en charge, pression et flexible |
-| La production est comparable | FAD à une pression proche de 6,3 bar |
-| La séquence est tenable | durée de frappe et récupération observées |
-| Le poste est alimenté | pression mesurée au raccord pendant l’effort |
-| Le service est adapté | domaine d’usage et limites de la notice |
+| L’outil correspond à la tâche | usage prévu, matériau et accessoire |
+| Le besoin est documenté | 280 L/min à 6,2 bar pour le DMH 30 Set |
+| La production est comparable | FAD à une pression proche de 6,2 bar |
+| La distribution est cohérente | longueur, diamètre intérieur, raccords et traitement |
+| La séquence tient | pression sous débit, durée, récupération et cycle de service |
+| La prévention est instruite | émissions, durée réelle et mesures de réduction |
 
 <div class="article-infographic" tabindex="0" role="group" aria-label="Infographie technique défilable horizontalement sur petit écran">
 <svg viewBox="0 0 760 360" role="img" aria-labelledby="chisel-flow-title chisel-flow-desc" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:1.5rem">
-  <title id="chisel-flow-title">Deux burineurs, deux demandes publiées</title><desc id="chisel-flow-desc">Le TC-PC 45 est publié à 113 litres par minute et le CP7110 à 414 litres par minute, tous deux à 6,3 bar. La comparaison illustre la nécessité de conserver la référence exacte.</desc>
+  <title id="chisel-flow-title">Deux burineurs, deux demandes et deux domaines de service</title><desc id="chisel-flow-desc">Le TC-PC 45 est publié à 113 litres par minute et le DMH 30 Set à 280 litres par minute. La notice du premier exclut l’usage professionnel, le second vise des travaux légers de maçonnerie.</desc>
   <rect width="760" height="360" rx="22" fill="#10281e"/>
-  <text x="40" y="47" fill="#d3eb56" font-size="15" font-weight="700">LA CATÉGORIE NE FOURNIT PAS LE DÉBIT</text>
-  <text x="40" y="88" fill="white" font-size="25" font-weight="700">Même pression publiée, demandes différentes</text>
-  <text x="40" y="143" fill="#bed0c6" font-size="15">Einhell TC-PC 45</text><rect x="220" y="119" width="155" height="37" rx="8" fill="#6f8f7e"/><text x="391" y="145" fill="white" font-size="18" font-weight="700">113 L/min</text>
-  <text x="40" y="213" fill="#bed0c6" font-size="15">Chicago Pneumatic CP7110</text><rect x="220" y="189" width="455" height="37" rx="8" fill="#d3eb56"/><text x="526" y="215" fill="#10281e" font-size="18" font-weight="700">414 L/min</text>
-  <line x1="220" y1="266" x2="675" y2="266" stroke="#789586" stroke-width="2"/><text x="220" y="291" fill="#bed0c6" font-size="13">0</text><text x="659" y="291" fill="#bed0c6" font-size="13">414</text>
-  <text x="40" y="330" fill="#bed0c6" font-size="13">Valeurs fabricant à 6,3 bar. Elles ne prouvent ni la même intensité de service, ni la même exposition.</text>
+  <text x="40" y="47" fill="#d3eb56" font-size="15" font-weight="700">LA CATÉGORIE NE FOURNIT PAS LA RÉPONSE</text>
+  <text x="40" y="88" fill="white" font-size="25" font-weight="700">Débit et domaine d’usage restent liés à la référence</text>
+  <text x="40" y="143" fill="#bed0c6" font-size="15">Einhell TC-PC 45</text><rect x="220" y="119" width="184" height="37" rx="8" fill="#6f8f7e"/><text x="420" y="145" fill="white" font-size="18" font-weight="700">113 L/min</text>
+  <text x="40" y="213" fill="#bed0c6" font-size="15">Metabo DMH 30 Set</text><rect x="220" y="189" width="455" height="37" rx="8" fill="#d3eb56"/><text x="526" y="215" fill="#10281e" font-size="18" font-weight="700">280 L/min</text>
+  <text x="40" y="274" fill="#bed0c6" font-size="13">TC-PC 45 : usage professionnel exclu par la notice</text>
+  <text x="40" y="303" fill="#bed0c6" font-size="13">DMH 30 Set : maçonnerie et burinage léger déclarés par Metabo</text>
+  <text x="40" y="334" fill="#bed0c6" font-size="13">Une compatibilité pneumatique ne modifie jamais le domaine d’usage du fabricant.</text>
 </svg>
 </div>
 
-## La référence vient avant la catégorie
+## Commencer par l’opération réelle
 
-Le mot « burineur » décrit une fonction, pas une consommation. Le [TC-PC 45 d’Einhell](https://www.einhell.fr/p/4139040-tc-pc-45) est publié à **113 L/min sous 6,3 bar**, avec un flexible intérieur minimal de **9 mm**. Le CP7110 demande 414 L/min à la même pression, avec 10 mm sur 5 m.
+« Buriner sur chantier » reste trop vague. Il faut nommer le matériau, le résultat attendu, l’accessoire, la durée et l’intensité. La fiche du DMH 30 Set couvre des travaux légers de maçonnerie. Elle ne permet pas d’étendre silencieusement la conclusion à la démolition lourde ou à un autre marteau pneumatique.
 
-Le rapport entre ces deux débits vaut environ `414 ÷ 113 = 3,66`. Ce calcul ne classe pas les outils et ne compare pas leur productivité. Il démontre seulement qu’une moyenne de catégorie détruirait l’information nécessaire au dimensionnement.
+Le [TC-PC 45 d’Einhell](https://www.einhell.fr/p/4139040-tc-pc-45) illustre l’autre limite. Il est publié à **113 L/min sous 6,3 bar**, mais sa [notice](https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ajnagqqlfl4l5dvdmthveb042c/4139040_21022_001_SPK2.pdf) précise qu’il n’est pas conçu pour une exploitation professionnelle, artisanale ou industrielle. Un compresseur capable de l’alimenter ne le transforme donc pas en choix professionnel valide.
 
-La [notice du TC-PC 45](https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ajnagqqlfl4l5dvdmthveb042c/4139040_21022_001_SPK2.pdf) ajoute une limite décisive : le fabricant n’a pas conçu cet appareil pour une exploitation professionnelle, artisanale ou industrielle. Même si un compresseur pouvait fournir 113 L/min à 6,3 bar, cette compatibilité pneumatique ne constituerait donc pas une recommandation pour un chantier professionnel.
+## Comparer au débit restitué
 
-## Comparer le débit disponible au bon endroit
+Le besoin du DMH 30 Set est publié à 280 L/min et 6,2 bar. Côté compresseur, trois situations existent :
 
-La consommation du CP7110 est publiée en charge. Côté compresseur, il faut rechercher un [débit restitué ou FAD](/guides/debit-restitue-fad-vs-debit-aspire/) à une pression proche de 6,3 bar. Trois cas se présentent :
-
-1. le fabricant publie directement un point FAD à 6 ou 7 bar, la comparaison est possible avec le contexte exact ;
-2. deux points encadrent 6,3 bar, CompatAir peut appliquer une interpolation explicitement signalée ;
+1. un point FAD est publié à une pression proche, la comparaison documentaire est possible ;
+2. deux points FAD encadrent 6,2 bar, une interpolation peut être affichée comme telle ;
 3. seul le débit aspiré ou un débit sans pression est disponible, le verdict reste `insufficient_data`.
 
-La [marge CompatAir](/glossaire/#marge-compatair) ne répare pas une donnée manquante. Elle s’applique après la construction d’un besoin nominal documenté. Le [calculateur](/calculateur/#outil=chicago-pneumatic-cp7110) permet de tester la référence, mais la durée réelle et l’état du réseau doivent ensuite être contrôlés sur site.
+La [marge CompatAir](/glossaire/#marge-compatair) s’applique après la construction du besoin documenté. Elle ne répare pas une donnée absente. Le [scénario métier DMH 30 Set](/calculateur/#scenario=btp-burineur-dmh-30) conserve le débit en charge sans facteur réducteur. La durée et les phases de travail restent à décrire séparément.
 
-## Décrire la séquence au lieu d’inventer un facteur d’usage
+## Ne pas inventer un facteur d’utilisation
 
-Une valeur en charge décrit la phase où l’outil consomme. Elle ne dit pas combien de minutes l’opérateur maintient la gâchette, ni combien de temps la production récupère entre deux phases.
+Une consommation publiée décrit l’outil en fonctionnement. Elle ne fournit ni le temps de gâchette cumulé, ni les pauses, ni la coactivité. Réduire automatiquement 280 L/min avec un pourcentage métier créerait une précision fictive.
 
-Pour une tâche représentative, consignez :
+Pour une séquence représentative, consignez le matériau, l’accessoire, la durée cumulée de frappe, les pauses, les autres consommateurs actifs, la pression sous débit et le temps de récupération. Le dimensionnement continu conserve le besoin en charge. Une analyse transitoire peut ensuite utiliser les durées observées et le stockage réellement disponible.
 
-- le matériau et l’accessoire utilisés ;
-- la durée cumulée de frappe sur une séquence ;
-- la durée des pauses entre deux phases ;
-- les autres consommateurs actifs au même moment ;
-- la pression avant et pendant l’effort ;
-- le moment où le compresseur redémarre et celui où il récupère.
+## Le flexible fait partie de l’essai
 
-Un cycle bref peut utiliser le stockage disponible. Une séquence soutenue dépend rapidement du débit restitué et du cycle de service du compresseur. Il faut conserver ces deux scénarios au lieu de réduire arbitrairement les 414 L/min par un taux générique.
+Le passage complet comprend la sortie de production, le traitement, chaque coupleur, les rallonges et le flexible terminal. Une longueur choisie pour l’organisation du chantier n’est pas une recommandation du fabricant de l’outil.
 
-## Le flexible fait partie du poste
+Mesurez la pression pendant la frappe. Une lecture à vide ne localise aucune restriction. Deux mesures comparables, en amont de la distribution puis au raccord, permettent de distinguer un manque de production d’une perte créée par le réseau mobile. Le guide [flexible de chantier sur 25 ou 50 mètres](/guides/flexible-air-comprime-chantier-25-50-metres/) détaille ce contrôle.
 
-La recommandation de 10 mm sur 5 m du CP7110 décrit une configuration précise. Elle ne valide pas automatiquement 20 m de flexible, un enrouleur, plusieurs coupleurs ou une réduction juste avant l’outil.
+## Les vibrations forment un dossier distinct
 
-Avant l’essai, dessinez le passage complet : sortie de production, traitement, raccords, rallonges, diamètre intérieur de chaque tronçon et outil. La [méthode de dimensionnement des flexibles](/guides/diametre-longueur-flexible-air-comprime/) explique pourquoi la longueur et les restrictions doivent rester visibles.
+Le guide [INRS ED 6342](https://www.inrs.fr/media.html?refINRS=ED+6342) relie l’exposition mains-bras à l’émission de la machine et à la durée réelle d’utilisation. Matériau, accessoire, entretien et organisation influencent aussi le risque.
 
-Mesurez ensuite la pression pendant que le burineur travaille. Une lecture stable à vide ne localise aucune perte. Deux mesures comparables, l’une en amont du flexible et l’autre au raccord, permettent de distinguer une production insuffisante d’une chute créée par la distribution.
-
-## Bruit et vibrations ne se déduisent pas du débit
-
-La fiche CP7110 publie une vibration de **6 m/s²** et une puissance acoustique de **109 dB(A)**. La notice TC-PC 45 publie une vibration de **18,2 m/s² avec une incertitude de 1,5 m/s²**, un niveau de pression acoustique de **99 dB(A)** et une puissance acoustique de **110 dB(A)**.
-
-Ces valeurs sont propres aux références et aux méthodes déclarées. Elles ne deviennent pas automatiquement l’exposition quotidienne d’un opérateur. La durée, le matériau, l’accessoire, l’entretien et le mode de travail comptent aussi.
-
-Le guide [INRS ED 6342 sur les vibrations mains-bras](https://www.inrs.fr/media.html?refINRS=ED+6342) demande de partir d’une analyse du risque, de faciliter le choix et l’utilisation de machines moins vibrantes, puis d’optimiser les mesures techniques ou organisationnelles. Le calcul de compatibilité pneumatique et l’évaluation de l’exposition restent donc deux dossiers reliés, mais distincts.
+Une valeur vibratoire issue d’une fiche constructeur n’est donc pas une exposition quotidienne. CompatAir peut conserver cette donnée avec sa référence et sa méthode, mais le verdict pneumatique ne vaut pas évaluation du risque.
 
 ## Plan de contrôle avant chantier
 
-### 1. Identifier
+1. **Décrire** : tâche, matériau, accessoire, durée, zone et coactivité.
+2. **Identifier** : modèle, MPN, notice, pression, consommation et limites d’usage.
+3. **Calculer** : besoin en charge face au FAD à une pression comparable.
+4. **Déployer** : longueur réelle, diamètre intérieur, raccords, traitement et protection du flexible.
+5. **Essayer** : pression sous débit, durée utile, récupération et résultat obtenu.
+6. **Séparer les verdicts** : capacité pneumatique, adéquation de service, tenue de la séquence et prévention.
 
-Photographiez la plaque et conservez MPN, notice, date de consultation et accessoire monté. Une référence voisine ne remplace pas la source du modèle utilisé.
-
-### 2. Calculer
-
-Comparez la consommation en charge au FAD disponible à la pression utile. Ajoutez uniquement les consommateurs réellement simultanés et gardez les hypothèses visibles.
-
-### 3. Déployer
-
-Mesurez la longueur réellement nécessaire. Vérifiez le diamètre intérieur, les coupleurs, l’état du flexible, son cheminement et les prescriptions de lubrification.
-
-### 4. Essayer
-
-Reproduisez une séquence courte mais représentative. Relevez pression dynamique, temps de fonctionnement, récupération et tout écart entre le résultat attendu et le résultat observé.
-
-### 5. Séparer les verdicts
-
-Publiez au moins quatre conclusions : capacité pneumatique, adéquation du domaine d’usage, tenue de la séquence et prévention. Un résultat positif sur la première ne doit jamais masquer une réserve sur les trois autres.
-
-## Ce que le dossier d’achat doit conserver
-
-| Champ | Exemple de preuve |
-| --- | --- |
-| Outil | CP7110, MPN 8941071101 |
-| Besoin | 6,9 L/s en charge, soit 414 L/min, à 6,3 bar |
-| Passage publié | flexible intérieur 10 mm sur 5 m |
-| Compresseur | FAD sourcé à une pression comparable |
-| Scénario | matériau, accessoire, durée et coactivité |
-| Contrôle | pression au raccord pendant la frappe |
-| Prévention | notice, évaluation du risque et mesures retenues |
-
-Ce dossier permet de recalculer la décision si l’outil, le flexible, la production ou le mode opératoire change. Il évite surtout qu’un chiffre correct soit utilisé hors de son contexte.
+Un dossier professionnel est recevable lorsque chacune de ces conclusions possède sa propre preuve. Un résultat positif sur le débit ne masque jamais une restriction de notice ou un contrôle terrain encore absent.

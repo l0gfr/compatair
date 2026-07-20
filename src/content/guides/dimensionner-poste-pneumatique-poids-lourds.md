@@ -3,6 +3,7 @@ title: "Dimensionner un poste pneumatique pour poids lourds à partir de la clé
 seoTitle: "Poste pneumatique poids lourds : dimensionnement"
 description: "Dossier de dimensionnement d’un poste de roues poids lourds fondé sur la consommation en charge, la pression et le flexible de la référence utilisée."
 pubDate: 2026-07-15
+updatedDate: 2026-07-20
 category: "Choisir"
 audiences: [professionnel]
 metiers: [garage-automobile, atelier-poids-lourds]
@@ -12,10 +13,12 @@ sources:
   - https://tools.cp.com/fr-fr/products/impactwrenches/cp5000-skuT024585
   - https://tools.cp.com/en-ca/products/impactwrenches/cp7748-sku8941077481
   - https://www.atlascopco.com/en-uk/compressors/air-compressor-blog/sizing-compressed-air-pipe
-  - https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-961.pdf
+  - https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-961/ed961.pdf
 ---
 
 Le carré d’entraînement et le couple maximal ne dimensionnent pas, à eux seuls, le réseau d’un poste poids lourds. La demande d’air se construit avec la clé réellement installée, sa pression en fonctionnement, son flexible, la cadence du poste et les autres consommateurs présents au même moment.
+
+La clé à chocs intervient pour la dépose et l’approche. Elle ne valide pas le serrage final. Le guide INRS ED 961 demande d’effectuer ce serrage avec une clé dynamométrique ou une douille de serrage contrôlée. La compatibilité pneumatique et la conformité du couple sont donc deux verdicts distincts.
 
 ## Un exemple documenté : la CP5000
 
@@ -40,6 +43,18 @@ Pour mesurer l’écart d’échelle, la [CP7748](https://tools.cp.com/en-ca/pro
   <path d="M140 230h480" stroke="#7c9588" stroke-width="2"/><circle cx="140" cy="230" r="5" fill="#19704f"/><circle cx="380" cy="230" r="5" fill="#19704f"/><circle cx="620" cy="230" r="5" fill="#19704f"/><text x="140" y="263" text-anchor="middle" fill="#143426" font-size="14" font-weight="700">Flexible 13 mm / 5 m</text><text x="380" y="263" text-anchor="middle" fill="#143426" font-size="14" font-weight="700">6,3 bar en charge</text><text x="620" y="263" text-anchor="middle" fill="#143426" font-size="14" font-weight="700">FAD comparable</text><text x="38" y="326" fill="#56685e" font-size="14">Toute donnée absente reste visible : elle n’est pas remplacée par un profil « poids lourds ».</text>
 </svg>
 </div>
+
+## Dépose, approche et serrage final : trois étapes distinctes
+
+Le débit en charge de la CP5000 dimensionne la phase pendant laquelle la clé travaille. Il ne prouve pas que le couple appliqué à la roue correspond à la prescription du constructeur du véhicule ou de l’équipement.
+
+Le dossier de poste doit séparer :
+
+1. la **dépose**, avec la clé et sa demande pneumatique ;
+2. l’**approche**, sans présenter le réglage de la clé comme une mesure de couple ;
+3. le **serrage final contrôlé**, selon la procédure et le couple prescrits, avec l’outil adapté.
+
+Cette séparation évite un faux raccourci fréquent : un compresseur capable d’alimenter une clé de 1 pouce ne certifie ni le serrage final ni l’étalonnage de l’outil de contrôle.
 
 ## Décrire une séquence réelle de travail
 
@@ -78,7 +93,7 @@ Sans point FAD exploitable, on peut documenter la demande du poste, mais pas con
 
 ## Ne pas mélanger dimensionnement et sécurité du gonflage
 
-Un poste de roues ne se résume pas à la clé. Le guide INRS [ED 961 sur les opérations d’entretien des pneumatiques](https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-961.pdf) traite séparément le gonflage, la position de l’opérateur, la longueur du tuyau et l’emploi d’une cage pour certaines catégories de pneus.
+Un poste de roues ne se résume pas à la clé. Le guide INRS [ED 961 sur les opérations d’entretien des pneumatiques](https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-961/ed961.pdf) traite séparément le gonflage, la position de l’opérateur, la longueur du tuyau et l’emploi d’une cage pour certaines catégories de pneus.
 
 Ces règles n’augmentent pas le débit calculé de la clé, mais elles modifient l’aménagement du poste. Le flexible de gonflage, sa commande et sa zone de sécurité ne doivent pas être confondus avec le flexible d’alimentation de la CP5000. Le dossier [organiser un poste de gonflage](/guides/poste-gonflage-pneus-atelier-mesure-securite/) reprend ce volet.
 
@@ -93,4 +108,4 @@ Un poste est documenté lorsque l’atelier peut expliquer la demande, retrouver
 - [Chicago Pneumatic, fiche officielle CP5000](https://tools.cp.com/fr-fr/products/impactwrenches/cp5000-skuT024585)
 - [Chicago Pneumatic, fiche officielle CP7748](https://tools.cp.com/en-ca/products/impactwrenches/cp7748-sku8941077481)
 - [Atlas Copco, dimensionnement des canalisations d’air comprimé](https://www.atlascopco.com/en-uk/compressors/air-compressor-blog/sizing-compressed-air-pipe)
-- [INRS, ED 961, Opérations d’entretien et de remplacement des pneumatiques](https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-961.pdf)
+- [INRS, ED 961, Opérations d’entretien et de remplacement des pneumatiques](https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-961/ed961.pdf)

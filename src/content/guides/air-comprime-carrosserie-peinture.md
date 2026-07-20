@@ -1,21 +1,26 @@
 ---
 title: "Air comprimé en carrosserie et peinture : débit, pression et qualité séparés"
 seoTitle: "Air comprimé carrosserie et peinture | CompatAir"
-description: "Dimensionner un poste de peinture à partir du pistolet exact, de sa pression dynamique et de la qualité d’air requise, sans valeur HVLP générique."
+description: "Dimensionner l’air procédé d’un poste de peinture sans le confondre avec la ventilation de la cabine ni l’air respirable d’un appareil à adduction."
 pubDate: 2026-07-15
+updatedDate: 2026-07-20
 category: "Choisir"
 audiences: [professionnel]
 metiers: [carrosserie-peinture]
-readingTime: 8
+readingTime: 11
 featured: true
 sources:
   - https://www.sata.com/en-us/satajet-5000-b-hvlp-nozzle-1.3-rps-multi-purpose-cup-0.3-l-0.6-l-0.9-l-each-1x-swivel-joint/210765
   - https://www.sata.com/en-gb/premium-spray-gun-for-small-area-applications-in-automotive-finishes-sataminijet-4400-b-hvlp-0.8-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/204180
   - https://www.iso.org/fr/standard/46418.html
   - https://www.atlascopco.com/en-ca/compressors/wiki/compressed-air-articles/choosing-a-dryer
+  - https://www.inrs.fr/media.html?refINRS=ED+6406
+  - https://www.inrs.fr/media.html?refINRS=ED+6106
 ---
 
 HVLP décrit une technologie de buse, pas le débit complet d’un poste. Celui-ci se lit sur la référence du pistolet, avec sa [pression dynamique à l’entrée](/glossaire/#pression-dynamique). La qualité d’air relève d’une seconde question, fixée par le procédé au point d’utilisation.
+
+Trois fonctions ne doivent jamais être confondues : l’air procédé qui alimente le pistolet, la ventilation qui capte et évacue les polluants, et l’air respirable d’un appareil de protection à adduction lorsqu’il est retenu. Un verdict positif sur la première ne valide aucune des deux autres.
 
 <svg viewBox="0 0 760 320" role="img" aria-labelledby="paint-shop-title paint-shop-desc" xmlns="http://www.w3.org/2000/svg">
   <title id="paint-shop-title">Trois contrôles séparés pour un poste de peinture</title><desc id="paint-shop-desc">Le débit du pistolet, la pression dynamique au raccord et la qualité de l’air sont vérifiés séparément avant le verdict.</desc>
@@ -29,6 +34,20 @@ HVLP décrit une technologie de buse, pas le débit complet d’un poste. Celui-
 SATA publie **430 L/min** et une pression d’entrée dynamique recommandée de **2 bar** pour le [SATAjet 5000 B HVLP](https://www.sata.com/en-us/satajet-5000-b-hvlp-nozzle-1.3-rps-multi-purpose-cup-0.3-l-0.6-l-0.9-l-each-1x-swivel-joint/210765). La fiche du [SATAminijet 4400 B HVLP](https://www.sata.com/en-gb/premium-spray-gun-for-small-area-applications-in-automotive-finishes-sataminijet-4400-b-hvlp-0.8-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/204180) indique **120 L/min**, également à **2 bar**.
 
 Les 310 L/min d’écart appartiennent à cette comparaison et à elle seule. Ils montrent pourquoi le modèle et sa source doivent accompagner chaque point de fonctionnement. Étendre cet écart à tous les pistolets HVLP serait abusif.
+
+## Air procédé, ventilation et air respirable : trois preuves
+
+Le guide [INRS ED 6406](https://www.inrs.fr/media.html?refINRS=ED+6406) décrit le travail de carrosserie comme une succession d’opérations : nettoyage, ponçage, préparation des produits, masticage, pulvérisation, séchage et nettoyage du matériel. Il traite la ventilation et le captage selon ces opérations. Le débit du pistolet ne dimensionne pas la ventilation de la cabine.
+
+Lorsqu’un appareil de protection respiratoire à adduction d’air est utilisé, le guide [INRS ED 6106](https://www.inrs.fr/media.html?refINRS=ED+6106) place son choix, son emploi et son entretien dans un dossier propre. L’air industriel filtré pour la peinture ne devient pas respirable par simple déclaration.
+
+| Fonction | Preuve attendue | Ce qu’elle ne prouve pas |
+| --- | --- | --- |
+| Air procédé | débit, pression dynamique, pureté demandée au pistolet | ventilation ou protection respiratoire |
+| Ventilation et captage | conception, débit de ventilation et contrôle du dispositif | alimentation du pistolet |
+| Air respirable | appareil, source, qualité et maintenance conformes à son cadre d’emploi | qualité de finition ou FAD du compresseur procédé |
+
+Ces fonctions peuvent interagir dans l’atelier, mais elles conservent leurs prescriptions et leurs contrôles. CompatAir ne doit jamais fusionner leurs verdicts.
 
 ## La pression utile se lit pendant la pulvérisation
 
@@ -67,3 +86,5 @@ Une case vide laisse le verdict incomplet. Elle appelle la bonne fiche ou une me
 - [SATA, SATAminijet 4400 B HVLP](https://www.sata.com/en-gb/premium-spray-gun-for-small-area-applications-in-automotive-finishes-sataminijet-4400-b-hvlp-0.8-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/204180)
 - [ISO, ISO 8573-1:2010](https://www.iso.org/fr/standard/46418.html)
 - [Atlas Copco, choisir un sécheur d’air comprimé](https://www.atlascopco.com/en-ca/compressors/wiki/compressed-air-articles/choosing-a-dryer)
+- [INRS, ED 6406, Carrosserie, guide pratique de ventilation](https://www.inrs.fr/media.html?refINRS=ED+6406)
+- [INRS, ED 6106, Les appareils de protection respiratoire](https://www.inrs.fr/media.html?refINRS=ED+6106)

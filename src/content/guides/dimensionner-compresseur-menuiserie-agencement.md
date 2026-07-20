@@ -3,6 +3,7 @@ title: "Dimensionner l’air comprimé en menuiserie et agencement sans cadence 
 seoTitle: "Compresseur pour menuiserie | CompatAir"
 description: "Méthode pour traiter clouage, agrafage et finition à partir du volume par tir, de la cadence explicite et des autres usages réellement simultanés."
 pubDate: 2026-07-15
+updatedDate: 2026-07-20
 category: "Choisir"
 audiences: [professionnel]
 metiers: [menuiserie-agencement]
@@ -13,9 +14,12 @@ sources:
   - https://www.einhell.fr/p/4137790-tc-pn-50/
   - https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ngovue839t5o7dugodnovh8q57/4137790_11018_001_SPK2.pdf
   - https://www.atlascopco.com/en-uk/compressors/air-compressor-blog/sizing-compressed-air-pipe
+  - https://www.inrs.fr/risques/poussieres-bois/ce-qu-il-faut-retenir.html
 ---
 
 Une agrafeuse peut annoncer un [volume d’air par action](/glossaire/#volume-par-action), là où un autre outil publie des litres par minute. Pour rapprocher ces deux écritures, l’atelier doit fournir sa cadence. L’intitulé « menuiserie » n’indique ni ce rythme ni le nombre de postes actifs ensemble.
+
+La TC-PN 50 sert ici uniquement d’exemple arithmétique parce que sa notice publie un volume par tir. La même notice exclut l’utilisation professionnelle, artisanale ou industrielle. CompatAir ne la recommande donc pas pour équiper un atelier professionnel.
 
 <svg viewBox="0 0 760 310" role="img" aria-labelledby="joinery-title joinery-desc" xmlns="http://www.w3.org/2000/svg">
   <title id="joinery-title">Calcul explicite d’un besoin par action</title><desc id="joinery-desc">Le volume d’air publié par tir est multiplié par une cadence renseignée pour produire un débit moyen de scénario.</desc>
@@ -29,6 +33,8 @@ Une agrafeuse peut annoncer un [volume d’air par action](/glossaire/#volume-pa
 La [fiche Einhell TC-PN 50](https://www.einhell.fr/p/4137790-tc-pn-50/) identifie le modèle ; sa [notice](https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ngovue839t5o7dugodnovh8q57/4137790_11018_001_SPK2.pdf) apporte les grandeurs utiles : environ **0,66 litre par tir**, **6,3 bar** recommandés, **8,3 bar** au maximum et un flexible de **9 mm** de diamètre intérieur.
 
 Reste une inconnue : le nombre de tirs par minute. Une fois renseigné, le débit moyen suit la formule `volume par tir × cadence`. Cette cadence décrit le scénario de travail ; la fiche fabricant, elle, demeure à 0,66 litre par tir.
+
+Cette conversion ne répond qu’au besoin pneumatique. Pour un achat métier, il faut ensuite sélectionner une référence dont le fabricant couvre l’usage professionnel prévu et recommencer le calcul avec ses propres données.
 
 ## Une minute de travail n’est pas un flux uniforme
 
@@ -53,6 +59,12 @@ Les 9 mm de flexible viennent de la notice TC-PN 50 et restent attachés à ce m
 
 Atlas Copco recommande de limiter les pertes et de traiter séparément la canalisation fixe, les flexibles et les raccords dans son guide de [dimensionnement des conduites](https://www.atlascopco.com/en-uk/compressors/air-compressor-blog/sizing-compressed-air-pipe). Une mesure dynamique au poste permet ensuite de vérifier le résultat réel.
 
+## Le nettoyage des poussières de bois n’est pas un forfait de soufflette
+
+L’[INRS](https://www.inrs.fr/risques/poussieres-bois/ce-qu-il-faut-retenir.html) place le captage à la source au premier plan et demande un nettoyage par aspiration. Le balai et la soufflette remettent les poussières en suspension et ne doivent pas devenir un besoin d’air ajouté par défaut au profil de l’atelier.
+
+Le dimensionnement sépare donc alimentation des outils, aspiration des poussières et nettoyage. Un compresseur capable d’alimenter une ponceuse ne démontre aucune performance du dispositif de captage.
+
 ## Rejouer le calcul après un changement de cadence
 
 Ouvrez le [calculateur avec la TC-PN 50](/calculateur/#outil=einhell-tc-pn-50), renseignez la cadence et les usages simultanés, puis choisissez un compresseur dont le débit restitué est documenté à la pression nécessaire. Le dossier doit exposer séparément :
@@ -70,3 +82,4 @@ Une autre cadence devient alors une variante du scénario, pas une réécriture 
 - [Einhell, fiche officielle TC-PN 50](https://www.einhell.fr/p/4137790-tc-pn-50/)
 - [Einhell, notice TC-PN 50](https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ngovue839t5o7dugodnovh8q57/4137790_11018_001_SPK2.pdf)
 - [Atlas Copco, dimensionnement des canalisations d’air comprimé](https://www.atlascopco.com/en-uk/compressors/air-compressor-blog/sizing-compressed-air-pipe)
+- [INRS, Poussières de bois](https://www.inrs.fr/risques/poussieres-bois/ce-qu-il-faut-retenir.html)

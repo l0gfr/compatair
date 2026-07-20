@@ -46,16 +46,26 @@ type MetierFieldStep = {
 	record: string;
 };
 
+type MetierOperation = {
+	title: string;
+	airRole: string;
+	decision: string;
+	boundary: string;
+	sources: string[];
+};
+
 type MetierSource = {
 	label: string;
 	url: string;
 	scope: string;
+	verifiedAt: string;
 };
 
 export type MetierLongform = {
 	readingTime: number;
 	updatedAt: string;
 	intro: string;
+	operations: MetierOperation[];
 	scenarios: MetierScenario[];
 	airPath: MetierAirStage[];
 	evidence: MetierEvidence[];
@@ -101,8 +111,14 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 		boundary: 'Une page métier ne remplace pas la donnée de la référence. Si la pression, la consommation ou le débit restitué manque, le résultat reste indéterminé jusqu’à obtention d’une source ou d’une mesure exploitable.',
 		longform: {
 			readingTime: 18,
-			updatedAt: '2026-07-19',
+			updatedAt: '2026-07-20',
 			intro: 'Un atelier peut réunir des outils à impulsion, des usages continus et des opérations de gonflage. Les additionner sans scénario produit un besoin artificiel. Les ignorer produit une installation fragile. Le dossier relie donc chaque poste à sa référence, chaque chevauchement à l’organisation réelle et chaque verdict à une mesure possible.',
+			operations: [
+				{ title: 'Dépose et approche des roues', airRole: 'Alimenter la clé identifiée pendant ses phases en charge.', decision: 'Dimensionner sur le débit publié, la pression dynamique, le passage et la coactivité réelle.', boundary: 'La compatibilité de la clé ne valide pas le serrage final : celui-ci suit le couple prescrit et un outil de serrage contrôlé.', sources: ['Chicago Pneumatic CP7748', 'INRS ED 961'] },
+				{ title: 'Gonflage et contrôle', airRole: 'Fournir le volume d’air dans le temps accepté, à la pression prescrite.', decision: 'Renseigner volume, pressions initiale et finale, durée cible et organisation sûre du poste.', boundary: 'Le calcul pneumatique ne valide ni l’état du pneumatique, ni la procédure, ni les protections du poste.', sources: ['INRS ED 961', 'Einhell 4137000'] },
+				{ title: 'Ponçage et préparation', airRole: 'Soutenir un outil dont l’usage prolongé peut dimensionner la production.', decision: 'Comparer débit en charge, durée, cycle de service et pression au poste.', boundary: 'L’alimentation de l’outil ne démontre pas la maîtrise des poussières ni l’adéquation du captage.', sources: ['INRS garages', 'DOE Compressed Air Systems'] },
+				{ title: 'Usages partagés de l’atelier', airRole: 'Desservir plusieurs postes selon l’organisation réellement observable.', decision: 'Construire un scénario nominal et une pointe plausible, sans additionner tout l’inventaire.', boundary: 'Une marge générique ne remplace ni un scénario de coactivité ni une mesure sous débit.', sources: ['INRS garages', 'DOE Compressed Air Systems'] },
+			],
 			scenarios: [
 				{
 					presetId: 'garage-service-roues',
@@ -148,10 +164,11 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 				{ moment: 'Après évolution', title: 'Recalculer au lieu de recopier', action: 'Rejouer le besoin lorsqu’un outil, un flexible, un poste ou l’organisation change.', record: 'Version du scénario et décision mise à jour.' },
 			],
 			sources: [
-				{ label: 'INRS, fiches de poste garages automobiles et poids lourds', url: 'https://www.inrs.fr/metiers/commerce-service/garage/garage-fiches-de-poste.html', scope: 'Repérage des opérations et risques propres aux postes de mécanique, pneumatiques, tôlerie-peinture et soufflage.' },
-				{ label: 'U.S. Department of Energy, Compressed Air Systems', url: 'https://www.energy.gov/cmei/ito/compressed-air-systems', scope: 'Approche système, profils de pression, qualité d’air, stockage, fuites et maintenance.' },
-				{ label: 'Chicago Pneumatic, CP7748', url: 'https://tools.cp.com/en/products/impactwrenches/cp7748-sku8941077481', scope: 'Caractéristiques attribuées à la référence utilisée dans le scénario de clé à chocs.' },
-				{ label: 'Einhell France, manomètre 4137000', url: 'https://www.einhell.fr/p/4137000-manometre/', scope: 'Référence de gonflage dont la fiche ne fournit pas un débit fixe exploitable.' },
+				{ label: 'INRS, fiches de poste garages automobiles et poids lourds', url: 'https://www.inrs.fr/metiers/commerce-service/garage/garage-fiches-de-poste.html', scope: 'Repérage des opérations et risques propres aux postes de mécanique, pneumatiques, tôlerie-peinture et soufflage.', verifiedAt: '2026-07-20' },
+				{ label: 'INRS, Opérations d’entretien et de remplacement des pneumatiques, ED 961', url: 'https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-961/ed961.pdf', scope: 'Séparation entre dépose ou approche à la clé à chocs, serrage final au couple et organisation sûre du gonflage.', verifiedAt: '2026-07-20' },
+				{ label: 'U.S. Department of Energy, Compressed Air Systems', url: 'https://www.energy.gov/cmei/ito/compressed-air-systems', scope: 'Approche système, profils de pression, qualité d’air, stockage, fuites et maintenance.', verifiedAt: '2026-07-20' },
+				{ label: 'Chicago Pneumatic, CP7748', url: 'https://tools.cp.com/en/products/impactwrenches/cp7748-sku8941077481', scope: 'Caractéristiques attribuées à la référence utilisée dans le scénario de clé à chocs.', verifiedAt: '2026-07-20' },
+				{ label: 'Einhell France, manomètre 4137000', url: 'https://www.einhell.fr/p/4137000-manometre/', scope: 'Référence de gonflage dont la fiche ne fournit pas un débit fixe exploitable.', verifiedAt: '2026-07-20' },
 			],
 		},
 	},
@@ -181,8 +198,14 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 		boundary: 'Le terme poids lourds ne fournit aucune consommation technique. CompatAir ne remplace ni la notice de la référence, ni l’évaluation des risques du poste, ni les prescriptions du fabricant de pneumatiques. Une capacité documentaire reste à confirmer sur l’installation.',
 		longform: {
 			readingTime: 20,
-			updatedAt: '2026-07-19',
+			updatedAt: '2026-07-20',
 			intro: 'Le poste roues concentre souvent de fortes demandes transitoires, mais il ne résume pas l’atelier. Le gonflage suit une logique volume-temps et un cadre de prévention propre. Les autres outils peuvent imposer une charge plus longue. Ce dossier construit donc trois scénarios séparés avant de vérifier leur éventuelle coactivité.',
+			operations: [
+				{ title: 'Dépose et approche d’une roue', airRole: 'Alimenter la clé de 1 pouce pendant la phase en charge documentée.', decision: 'Conserver le modèle, le débit en charge, la pression et le passage constructeur.', boundary: 'L’INRS réserve le serrage final à la clé dynamométrique ou à une douille de serrage contrôlée, pas à la clé à chocs.', sources: ['Chicago Pneumatic CP5000 et CP7776', 'INRS ED 961'] },
+				{ title: 'Serrage final au couple', airRole: 'Aucun débit universel ne peut être déduit du couple prescrit.', decision: 'Appliquer la procédure du véhicule ou de l’équipement et contrôler l’outil de serrage.', boundary: 'Un compresseur compatible avec la clé de dépose ne prouve ni le couple final ni sa conformité.', sources: ['INRS ED 961'] },
+				{ title: 'Gonflage poids lourds', airRole: 'Fournir un volume dans un temps défini à la pression prescrite.', decision: 'Séparer le calcul volume-temps de l’aménagement de gonflage à distance et des protections.', boundary: 'Le diamètre commercial du pneu ne suffit pas à déterminer son volume interne ou une procédure sûre.', sources: ['INRS ED 961'] },
+				{ title: 'Coactivité multi-baies', airRole: 'Desservir clés, maintenance et gonflage lorsqu’ils se chevauchent réellement.', decision: 'Observer les séquences, puis calculer séparément le nominal et la pointe justifiée.', boundary: 'Le carré d’entraînement, la puissance installée ou le nombre de baies ne fournissent pas le débit.', sources: ['INRS garages', 'Mesures atelier'] },
+			],
 			scenarios: [
 				{ presetId: 'poids-lourds-cp5000', context: 'Chicago Pneumatic publie pour cette référence une consommation en charge et un flexible associés à une pression dynamique. Ces valeurs décrivent la clé lorsqu’elle travaille.', question: 'La production et le passage complet maintiennent-ils le besoin en charge au raccord pendant une séquence représentative ?', decision: 'Comparer les 25 L/s publiés, soit 1 500 L/min, au FAD disponible près de 6,3 bar, puis mesurer la pression au poste.', toolLabel: 'Tester la CP5000' },
 				{ presetId: 'poids-lourds-cp7776', context: 'Une seconde clé de 1 pouce peut publier un autre débit. Le carré d’entraînement ne permet donc pas de recopier le scénario précédent.', question: 'Le calcul conserve-t-il les 15 L/s en charge et le flexible de 13 mm sur 5 m propres à cette référence ?', decision: 'Créer un scénario distinct, puis additionner les deux clés uniquement si leur coactivité est réellement possible.', toolLabel: 'Tester la CP7776' },
@@ -210,10 +233,10 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 				{ moment: 'Évolution', title: 'Rejouer les scénarios', action: 'Recalculer après ajout d’un poste, changement de clé ou modification du réseau.', record: 'Version, écart et décision mise à jour.' },
 			],
 			sources: [
-				{ label: 'INRS, Opérations d’entretien et de remplacement des pneumatiques, ED 961', url: 'https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-961/ed961.pdf', scope: 'Organisation du gonflage, distances conseillées, protections et limites propres aux catégories de pneumatiques.' },
-				{ label: 'INRS, fiches de poste garages automobiles et poids lourds', url: 'https://www.inrs.fr/metiers/commerce-service/garage/garage-fiches-de-poste', scope: 'Cartographie des opérations de mécanique, pneumatiques et risques transversaux d’un atelier poids lourds.' },
-				{ label: 'Chicago Pneumatic, CP5000 T024585', url: 'https://tools.cp.com/en/products/impactwrenches/cp5000-skuT024585', scope: 'Consommation en charge, pression, flexible et caractéristiques de la clé du premier scénario.' },
-				{ label: 'Chicago Pneumatic, CP7776 8941077760', url: 'https://tools.cp.com/en/products/impactwrenches/cp7776-sku8941077760', scope: 'Données attribuées à la seconde clé de 1 pouce afin d’éviter une moyenne de catégorie.' },
+				{ label: 'INRS, Opérations d’entretien et de remplacement des pneumatiques, ED 961', url: 'https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-961/ed961.pdf', scope: 'Dépose, serrage final contrôlé, organisation du gonflage, protections et limites propres aux catégories de pneumatiques.', verifiedAt: '2026-07-20' },
+				{ label: 'INRS, fiches de poste garages automobiles et poids lourds', url: 'https://www.inrs.fr/metiers/commerce-service/garage/garage-fiches-de-poste', scope: 'Cartographie des opérations de mécanique, pneumatiques et risques transversaux d’un atelier poids lourds.', verifiedAt: '2026-07-20' },
+				{ label: 'Chicago Pneumatic, CP5000 T024585', url: 'https://tools.cp.com/en/products/impactwrenches/cp5000-skuT024585', scope: 'Consommation en charge, pression, flexible et caractéristiques de la clé du premier scénario.', verifiedAt: '2026-07-20' },
+				{ label: 'Chicago Pneumatic, CP7776 8941077760', url: 'https://tools.cp.com/en/products/impactwrenches/cp7776-sku8941077760', scope: 'Données attribuées à la seconde clé de 1 pouce afin d’éviter une moyenne de catégorie.', verifiedAt: '2026-07-20' },
 			],
 		},
 	},
@@ -243,8 +266,14 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 		boundary: 'CompatAir peut structurer la décision et comparer des données publiées. Le site ne certifie pas une qualité d’air au point d’usage sans mesure adaptée et ne remplace ni la notice du produit appliqué, ni les exigences du procédé de peinture.',
 		longform: {
 			readingTime: 20,
-			updatedAt: '2026-07-19',
+			updatedAt: '2026-07-20',
 			intro: 'Dans un atelier de carrosserie, la production d’air, sa distribution, sa pureté et la ventilation du procédé répondent à des preuves différentes. Une machine capable d’alimenter un pistolet ne démontre ni la pression réellement disponible à sa gâchette, ni la qualité de l’air, ni la maîtrise des risques liés au poste de peinture.',
+			operations: [
+				{ title: 'Préparation et ponçage', airRole: 'Alimenter la ponceuse selon son débit en charge et la durée de la séquence.', decision: 'Dimensionner le poste pneumatique et le captage des poussières comme deux fonctions distinctes.', boundary: 'Le débit disponible pour l’outil ne prouve pas l’efficacité du captage ni la maîtrise de l’exposition.', sources: ['INRS ED 6406', 'Metabo DSX 150'] },
+				{ title: 'Préparation des produits', airRole: 'L’air comprimé n’est pas la preuve principale de maîtrise du poste.', decision: 'Traiter ventilation, captage et produits selon la tâche et l’évaluation des risques.', boundary: 'Une bonne qualité d’air procédé ne remplace pas la ventilation du local ou du poste de préparation.', sources: ['INRS ED 6406'] },
+				{ title: 'Pulvérisation', airRole: 'Fournir au pistolet le débit et la pression dynamique publiés, après traitement et distribution.', decision: 'Comparer la référence exacte au FAD, puis mesurer la pression pendant la pulvérisation.', boundary: 'La compatibilité pistolet-compresseur ne valide ni le renouvellement d’air de la cabine ni la protection respiratoire.', sources: ['ABAC G-550F', 'Metabo FSP 600 LVLP', 'INRS ED 6406'] },
+				{ title: 'Protection respiratoire à adduction d’air', airRole: 'Fournir un air respirable par un système dédié lorsque cet équipement est retenu.', decision: 'Appliquer les exigences propres à l’appareil, à la source d’air et à sa maintenance.', boundary: 'L’air de pulvérisation ou l’air industriel traité ne doit jamais être déclaré respirable par simple analogie.', sources: ['INRS ED 6106'] },
+			],
 			scenarios: [
 				{
 					presetId: 'carrosserie-hvlp',
@@ -290,10 +319,11 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 				{ moment: 'Exploitation', title: 'Conserver l’historique', action: 'Relier entretien, changement de filtre, purge, dérive et nouveau contrôle.', record: 'Avant, action, après et prochaine vérification.' },
 			],
 			sources: [
-				{ label: 'INRS, Carrosserie, guide pratique de ventilation n° 24', url: 'https://www.inrs.fr/media.html?refINRS=ED+6406', scope: 'Prévention des risques liés aux agents chimiques par la ventilation en carrosserie-réparation de véhicules légers.' },
-				{ label: 'ISO, ISO 8573-1:2010', url: 'https://www.iso.org/fr/standard/46418.html', scope: 'Classement séparé des polluants et classes de pureté de l’air comprimé.' },
-				{ label: 'ABAC, pistolet G-550F', url: 'https://shop.abacaircompressors.com/en-GB/products/2809913544/paint-spray-gun-g-550f', scope: 'Caractéristiques attribuées au pistolet HVLP utilisé dans le scénario.' },
-				{ label: 'Metabo, FSP 600 LVLP', url: 'https://de.metabo.com/de/maschinen/druckluft/druckluft-werkzeuge/druckluft-farbspritzpistolen/fsp-600-lvlp-601578000-druckluft-farbspritzpistole.html', scope: 'Caractéristiques attribuées au pistolet LVLP utilisé dans le scénario.' },
+				{ label: 'INRS, Carrosserie, guide pratique de ventilation n° 24', url: 'https://www.inrs.fr/media.html?refINRS=ED+6406', scope: 'Opérations de carrosserie, captage et ventilation pour la prévention des risques liés aux agents chimiques.', verifiedAt: '2026-07-20' },
+				{ label: 'INRS, Les appareils de protection respiratoire, ED 6106', url: 'https://www.inrs.fr/media.html?refINRS=ED+6106', scope: 'Choix, emploi et maintenance des appareils, dont les systèmes à adduction d’air comprimé.', verifiedAt: '2026-07-20' },
+				{ label: 'ISO, ISO 8573-1:2010', url: 'https://www.iso.org/fr/standard/46418.html', scope: 'Classement séparé des polluants et classes de pureté de l’air comprimé.', verifiedAt: '2026-07-20' },
+				{ label: 'ABAC, pistolet G-550F', url: 'https://shop.abacaircompressors.com/en-GB/products/2809913544/paint-spray-gun-g-550f', scope: 'Caractéristiques attribuées au pistolet HVLP utilisé dans le scénario.', verifiedAt: '2026-07-20' },
+				{ label: 'Metabo, FSP 600 LVLP', url: 'https://de.metabo.com/de/maschinen/druckluft/druckluft-werkzeuge/druckluft-farbspritzpistolen/fsp-600-lvlp-601578000-druckluft-farbspritzpistole.html', scope: 'Caractéristiques attribuées au pistolet LVLP utilisé dans le scénario.', verifiedAt: '2026-07-20' },
 			],
 		},
 	},
@@ -323,10 +353,16 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 		boundary: 'Le métier ne fournit aucune consommation moyenne universelle. Chaque conversion dépend de la référence, de l’unité publiée et d’une cadence déclarée. Une hypothèse utile reste présentée comme une hypothèse.',
 		longform: {
 			readingTime: 19,
-			updatedAt: '2026-07-19',
+			updatedAt: '2026-07-20',
 			intro: 'Un atelier bois peut alterner clouage par impulsions, vissage, ponçage continu et finition. Une valeur par tir ne devient un débit moyen qu’après ajout d’une cadence déclarée. Le parcours conserve donc l’unité constructeur, rend l’hypothèse de production modifiable et traite séparément les usages continus et la qualité d’air de finition.',
+			operations: [
+				{ title: 'Clouage et agrafage', airRole: 'Fournir le volume par action et permettre la récupération à la cadence réellement observée.', decision: 'Conserver le volume par tir de la référence et saisir une cadence explicite.', boundary: 'La TC-PN 50 sert ici d’exemple de calcul ; sa notice exclut l’usage professionnel, artisanal ou industriel.', sources: ['Einhell TC-PN 50', 'Scheppach 7906100715'] },
+				{ title: 'Ponçage pneumatique', airRole: 'Alimenter un usage prolongé selon son débit en charge.', decision: 'Comparer débit, durée, coactivité et cycle de service de la production.', boundary: 'L’alimentation de la ponceuse ne valide pas le captage des poussières de bois.', sources: ['Metabo DSX 150', 'INRS poussières de bois'] },
+				{ title: 'Finition', airRole: 'Fournir débit, pression dynamique et qualité d’air conformes au procédé documenté.', decision: 'Identifier le pistolet, le produit, le traitement et la branche utilisée.', boundary: 'Aucune classe de pureté ou qualité de finition ne peut être revendiquée sans exigence et contrôle adaptés.', sources: ['Procédé fabricant', 'ISO 8573-1'] },
+				{ title: 'Nettoyage de l’atelier', airRole: 'La soufflette n’est pas retenue comme moyen de nettoyage des poussières de bois.', decision: 'Prévoir le captage à la source et le nettoyage par aspiration.', boundary: 'L’INRS demande d’éviter balai et soufflette, qui remettent les poussières en suspension.', sources: ['INRS poussières de bois'] },
+			],
 			scenarios: [
-				{ presetId: 'menuiserie-clouage-tc-pn-50', context: 'La TC-PN 50 publie un volume par tir. Le calculateur doit donc recevoir une cadence de travail explicite au lieu d’une consommation moyenne inventée.', question: 'La cadence proposée correspond-elle à une séquence observée, et la récupération reste-t-elle suffisante entre les tirs ?', decision: 'Commencer avec 30 tirs/min comme hypothèse visible, la remplacer par la cadence réelle, puis contrôler la pression et la récupération sur une série représentative.', toolLabel: 'Calculer le clouage TC-PN 50' },
+				{ presetId: 'menuiserie-clouage-tc-pn-50', context: 'La TC-PN 50 publie un volume par tir mais sa notice exclut l’usage professionnel, artisanal ou industriel. Elle illustre donc la méthode de conversion, pas une recommandation métier.', question: 'La cadence proposée correspond-elle à une séquence observée, et la référence retenue est-elle autorisée pour le service visé ?', decision: 'Utiliser ce cas pour comprendre le calcul, puis retenir une référence professionnelle documentée et contrôler pression et récupération sur une série réelle.', toolLabel: 'Examiner le calcul TC-PN 50' },
 				{ presetId: 'menuiserie-clouage-scheppach', context: 'La Scheppach 7906100715 publie 1,5 L par tir et une plage de pression. Ces données ne décrivent ni la cadence, ni les chevauchements avec un second poste.', question: 'Le calcul conserve-t-il la consommation propre à cette référence et une cadence déclarée par l’atelier ?', decision: 'Tester séparément la cadence nominale et une pointe plausible, sans confondre débit moyen calculé et pointe instantanée.', toolLabel: 'Calculer la Scheppach 7906100715' },
 				{ presetId: 'menuiserie-poncage-continu', context: 'La DSX 150 publie un débit fixe en fonctionnement. Elle peut donc devenir plus exigeante qu’un cloueur lorsque le ponçage dure ou chevauche une autre opération.', question: 'Le compresseur tient-il le débit pendant toute la séquence et son cycle de service couvre-t-il la session ?', decision: 'Traiter le ponçage comme un scénario continu, puis vérifier aspiration des poussières et qualité de finition dans des preuves séparées.', toolLabel: 'Tester le ponçage DSX 150' },
 			],
@@ -352,10 +388,13 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 				{ moment: 'Évolution', title: 'Rejouer la cadence', action: 'Recalculer après changement de référence, de cadence, de flexible ou de coactivité.', record: 'Version du scénario et nouvelle décision.' },
 			],
 			sources: [
-				{ label: 'Einhell France, TC-PN 50 4137790', url: 'https://www.einhell.fr/p/4137790-tc-pn-50/', scope: 'Référence, pression maximale, passage minimal et accès à la notice du premier scénario.' },
-				{ label: 'Scheppach, 7906100715', url: 'https://shop.scheppach.com/Zubehoer-Set-Druckluftnagler-scheppach/7906100715', scope: 'Volume par tir, plage de pression et flexible recommandé du second scénario.' },
-				{ label: 'Metabo, DSX 150 601558000', url: 'https://de.metabo.com/de/maschinen/trennen-schleifen-fraesen/holzbearbeitung/exzenterschleifer/dsx-150-601558000-druckluft-exzenterschleifer.html', scope: 'Débit et pression attribués à la ponceuse du scénario continu.' },
-				{ label: 'INRS, réduction du bruit des cloueurs pneumatiques', url: 'https://www.inrs.fr/publications/bdd/techniques-reduction-bruit/FicheBruitAG.html?refINRS=BRUIT_FicheBruit_61', scope: 'Origines du bruit d’un cloueur et solutions portant notamment sur l’échappement.' },
+				{ label: 'Einhell France, TC-PN 50 4137790', url: 'https://www.einhell.fr/p/4137790-tc-pn-50/', scope: 'Identification de la référence et accès à sa documentation.', verifiedAt: '2026-07-20' },
+				{ label: 'Einhell, notice TC-PN 50 4137790', url: 'https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ngovue839t5o7dugodnovh8q57/4137790_11018_001_SPK2.pdf', scope: 'Volume par tir, pression, flexible et exclusion de l’usage professionnel, artisanal ou industriel.', verifiedAt: '2026-07-20' },
+				{ label: 'Scheppach, 7906100715', url: 'https://shop.scheppach.com/Zubehoer-Set-Druckluftnagler-scheppach/7906100715', scope: 'Volume par tir, plage de pression et flexible recommandé du second scénario.', verifiedAt: '2026-07-20' },
+				{ label: 'Metabo, DSX 150 601558000', url: 'https://de.metabo.com/de/maschinen/trennen-schleifen-fraesen/holzbearbeitung/exzenterschleifer/dsx-150-601558000-druckluft-exzenterschleifer.html', scope: 'Débit et pression attribués à la ponceuse du scénario continu.', verifiedAt: '2026-07-20' },
+				{ label: 'INRS, Poussières de bois', url: 'https://www.inrs.fr/risques/poussieres-bois/ce-qu-il-faut-retenir.html', scope: 'Captage à la source et nettoyage par aspiration ; exclusion du balai et de la soufflette pour les poussières de bois.', verifiedAt: '2026-07-20' },
+				{ label: 'ISO, ISO 8573-1:2010', url: 'https://www.iso.org/fr/standard/46418.html', scope: 'Classement séparé des particules, de l’eau et de l’huile lorsqu’une exigence de pureté est attribuée au procédé.', verifiedAt: '2026-07-20' },
+				{ label: 'INRS, réduction du bruit des cloueurs pneumatiques', url: 'https://www.inrs.fr/publications/bdd/techniques-reduction-bruit/FicheBruitAG.html?refINRS=BRUIT_FicheBruit_61', scope: 'Origines du bruit d’un cloueur et solutions portant notamment sur l’échappement.', verifiedAt: '2026-07-20' },
 			],
 		},
 	},
@@ -385,10 +424,16 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 		boundary: 'CompatAir vérifie une relation pneumatique à partir de données publiées. Le site ne valide ni l’aptitude générale d’un matériel au chantier, ni l’exposition d’un opérateur, ni un mode opératoire. Ces décisions exigent la notice, l’évaluation des risques et les contrôles propres au site.',
 		longform: {
 			readingTime: 21,
-			updatedAt: '2026-07-19',
+			updatedAt: '2026-07-20',
 			intro: 'Sur chantier, deux erreurs se cumulent facilement : choisir une machine sur son débit aspiré et choisir un outil sur son seul nom de catégorie. Le dossier repart de trois références dont les modes de consommation diffèrent, puis suit l’air dans une installation mobile sans confondre calcul de capacité et prévention des risques.',
+			operations: [
+				{ title: 'Burinage léger de maçonnerie', airRole: 'Alimenter la référence pendant la frappe à la pression de service publiée.', decision: 'Partir d’un outil dont le fabricant vise explicitement maçonnerie, briques, béton cellulaire et dépose légère.', boundary: 'Le DMH 30 Set est documenté pour ces travaux légers ; cela ne l’étend pas à la démolition lourde.', sources: ['Metabo DMH 30 Set'] },
+				{ title: 'Clouage mobile', airRole: 'Fournir un volume par tir et permettre la récupération à une cadence déclarée.', decision: 'Relever une cadence et sélectionner une référence dont le domaine d’usage couvre réellement le chantier.', boundary: 'Le cas TC-PN 50 illustre le calcul mais sa notice exclut l’usage professionnel, artisanal ou industriel.', sources: ['Einhell TC-PN 50'] },
+				{ title: 'Distribution mobile', airRole: 'Transporter le débit sur le flexible réellement déployé.', decision: 'Conserver diamètre intérieur, longueur, coupleurs, protection et pression sous débit.', boundary: 'La configuration constructeur de l’outil ne valide pas automatiquement 25 ou 50 mètres de rallonge.', sources: ['Notices fabricants', 'Mesure chantier'] },
+				{ title: 'Exposition au bruit et aux vibrations', airRole: 'Le débit alimente l’outil mais ne détermine pas l’exposition quotidienne.', decision: 'Relier émission, durée réelle, matériau, accessoire et organisation du travail.', boundary: 'Une valeur vibratoire fabricant n’est pas une dose journalière ; elle alimente une évaluation distincte.', sources: ['INRS ED 6342'] },
+			],
 			scenarios: [
-				{ presetId: 'btp-burineur-cp7110', context: 'Chicago Pneumatic publie une consommation en charge de 6,9 L/s, une pression dynamique de 6,3 bar et un flexible intérieur minimal de 10 mm sur 5 m.', question: 'La production maintient-elle 414 L/min au voisinage de 6,3 bar au raccord pendant la durée réellement prévue ?', decision: 'Comparer le besoin en charge au FAD, documenter toute longueur supplémentaire et contrôler la pression pendant le travail.', toolLabel: 'Tester le CP7110' },
+				{ presetId: 'btp-burineur-dmh-30', context: 'Metabo prévoit le DMH 30 Set pour la maçonnerie, les briques, le béton cellulaire, la dépose d’enduit ou de carrelage et le burinage léger. La fiche publie 280 L/min à 6,2 bar.', question: 'La production maintient-elle 280 L/min au voisinage de 6,2 bar au raccord pendant la séquence réellement prévue ?', decision: 'Comparer le besoin en charge au FAD, documenter le flexible déployé et contrôler la pression pendant le travail.', toolLabel: 'Tester le DMH 30 Set' },
 				{ presetId: 'btp-clouage-mobile', context: 'La notice publie environ 0,66 litre par tir. Le besoin moyen dépend donc d’une cadence déclarée, tandis que la pointe reste une contrainte séparée.', question: 'La cadence, la pression, le flexible et le niveau de service attendu sont-ils explicitement définis ?', decision: 'Calculer le volume moyen à partir des tirs par minute, puis vérifier récupération et pression sur une séquence réelle.', toolLabel: 'Préparer le scénario de clouage' },
 				{ presetId: 'btp-burineur-cas-limite', context: 'La fiche publie 113 L/min à 6,3 bar et un flexible de 9 mm, mais la notice précise que l’appareil n’est pas conçu pour un usage professionnel ou industriel.', question: 'La décision distingue-t-elle la possibilité pneumatique de l’adéquation au service et aux conditions du chantier ?', decision: 'Utiliser la référence comme exemple de calcul, sans la recommander pour un usage professionnel que sa notice exclut.', toolLabel: 'Examiner le cas TC-PC 45' },
 			],
@@ -414,11 +459,12 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 				{ moment: 'Retour de chantier', title: 'Conserver les écarts', action: 'Noter restrictions, incidents, dérives et modifications nécessaires avant le prochain usage.', record: 'Avant, constat, action et nouvelle décision.' },
 			],
 			sources: [
-				{ label: 'Chicago Pneumatic, CP7110 8941071101', url: 'https://tools.cp.com/en/products/percussivetools/cp7110-sku8941071101', scope: 'Consommation en charge, pression dynamique, flexible, bruit et vibrations du burineur professionnel du premier scénario.' },
-				{ label: 'Einhell France, TC-PN 50 4137790', url: 'https://www.einhell.fr/p/4137790-tc-pn-50/', scope: 'Référence de clouage dont le besoin est publié par action et doit être relié à une cadence explicite.' },
-				{ label: 'Einhell, notice TC-PC 45 4139040', url: 'https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ajnagqqlfl4l5dvdmthveb042c/4139040_21022_001_SPK2.pdf', scope: 'Débit, pression, flexible, émissions et restriction d’usage professionnel du cas limite.' },
-				{ label: 'INRS, Vibrations mains-bras, ED 6342', url: 'https://www.inrs.fr/media.html?refINRS=ED+6342', scope: 'Méthode de prévention fondée sur l’analyse du risque, le choix et l’utilisation des machines.' },
-				{ label: 'INRS, choix de cloueurs moins bruyants', url: 'https://www.inrs.fr/publications/bdd/techniques-reduction-bruit/FicheBruitAG.html?refINRS=BRUIT_FicheBruit_61', scope: 'Origines du bruit d’un cloueur pneumatique et intérêt du traitement acoustique de l’échappement.' },
+				{ label: 'Metabo, DMH 30 Set 604115500', url: 'https://www.metabo.com/ua/uk/instrumenty/pnevmatyka/pnevmatychni-instrumenty/pnevmatychni-vidbiini-molotky/dmh-30-set-604115500-pnevmatychnyi-vidbiinyi-molotok.html', scope: 'Domaine d’usage chantier, consommation de 280 L/min et pression de service de 6,2 bar du premier scénario.', verifiedAt: '2026-07-20' },
+				{ label: 'Einhell France, TC-PN 50 4137790', url: 'https://www.einhell.fr/p/4137790-tc-pn-50/', scope: 'Identification de la référence de clouage utilisée comme exemple de calcul.', verifiedAt: '2026-07-20' },
+				{ label: 'Einhell, notice TC-PN 50 4137790', url: 'https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ngovue839t5o7dugodnovh8q57/4137790_11018_001_SPK2.pdf', scope: 'Volume par tir, pression, flexible et exclusion de l’usage professionnel, artisanal ou industriel.', verifiedAt: '2026-07-20' },
+				{ label: 'Einhell, notice TC-PC 45 4139040', url: 'https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ajnagqqlfl4l5dvdmthveb042c/4139040_21022_001_SPK2.pdf', scope: 'Débit, pression, flexible, émissions et restriction d’usage professionnel du cas limite.', verifiedAt: '2026-07-20' },
+				{ label: 'INRS, Vibrations mains-bras, ED 6342', url: 'https://www.inrs.fr/media.html?refINRS=ED+6342', scope: 'Évaluation de l’exposition à partir de l’émission et de la durée réelle, puis prévention à la source.', verifiedAt: '2026-07-20' },
+				{ label: 'INRS, choix de cloueurs moins bruyants', url: 'https://www.inrs.fr/publications/bdd/techniques-reduction-bruit/FicheBruitAG.html?refINRS=BRUIT_FicheBruit_61', scope: 'Origines du bruit d’un cloueur pneumatique et intérêt du traitement acoustique de l’échappement.', verifiedAt: '2026-07-20' },
 			],
 		},
 	},
@@ -448,11 +494,17 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 		boundary: 'Un historique ne prouve pas à lui seul la performance actuelle. Chaque conclusion doit rester reliée à une période, un état du réseau et une méthode de mesure. Une dérive non mesurée ne reçoit pas de valeur artificielle.',
 		longform: {
 			readingTime: 20,
-			updatedAt: '2026-07-19',
+			updatedAt: '2026-07-20',
 			intro: 'La maintenance industrielle ne se réduit pas à additionner des consommations nominales. Un scénario exploitable relie la référence de l’outil, sa durée, les autres postes actifs, l’état du réseau et une ligne de base mesurée. Les trois cas ci-dessous servent de configurations de départ, puis chaque intervention doit conserver ce qui a été observé avant et après.',
+			operations: [
+				{ title: 'Établir une ligne de base', airRole: 'Fournir un profil de pression, débit et charge comparable dans le temps.', decision: 'Nommer le périmètre, les conditions, les instruments et l’état du réseau avant d’interpréter une dérive.', boundary: 'La puissance installée et un relevé isolé ne décrivent pas la demande utile du système.', sources: ['DOE Compressed Air Systems'] },
+				{ title: 'Rechercher fuites et usages inadaptés', airRole: 'Rendre visibles les pertes et les consommations sans valeur de production.', decision: 'Séparer détection, quantification, correction et mesure après intervention.', boundary: 'Une fuite détectée mais non quantifiée ne reçoit pas une économie estimée silencieusement.', sources: ['DOE Compressed Air Systems'] },
+				{ title: 'Intervenir sur l’installation', airRole: 'L’énergie pneumatique fait partie des énergies à maîtriser avant l’intervention.', decision: 'Appliquer la procédure de consignation, dissiper les énergies résiduelles et vérifier l’état sûr.', boundary: 'Un arrêt de production ou une pression nulle sur un manomètre isolé ne prouve pas à lui seul la consignation.', sources: ['INRS ED 6109'] },
+				{ title: 'Revalider après intervention', airRole: 'Rejouer le même scénario pour comparer l’état avant et après.', decision: 'Conserver action, conditions, mesures, incertitudes et prochaine vérification.', boundary: 'Une amélioration déclarée sans mesure comparable reste une hypothèse, pas un résultat.', sources: ['DOE Compressed Air Systems', 'Compte rendu terrain'] },
+			],
 			scenarios: [
 				{ presetId: 'maintenance-meulage-continu', context: 'La Metabo DW 125 publie une consommation continue de 500 L/min à 6,2 bar. Une longue intervention peut donc devenir la charge de référence du secteur.', question: 'La production, le traitement et la distribution tiennent-ils le débit pendant toute la session sans chute au poste ?', decision: 'Tester une session continue, comparer le FAD et le cycle de service, puis consigner la pression avant et après la branche étudiée.', toolLabel: 'Établir la ligne de base DW 125' },
-				{ presetId: 'maintenance-derouillage', context: 'Le CP7120 publie 7,4 L/s, soit 444 L/min, avec un passage associé. Une fréquence de travail reste toutefois propre à l’intervention.', question: 'La fréquence proposée et la longueur du passage décrivent-elles la séquence réelle ?', decision: 'Commencer avec une hypothèse soutenue, la corriger par observation et mesurer la pression pendant une phase représentative.', toolLabel: 'Tester le dérouillage CP7120' },
+				{ presetId: 'maintenance-derouillage', context: 'Le CP7120 publie 7,4 L/s, soit 444 L/min, avec un passage associé. La fréquence de travail reste propre à l’intervention et ne réduit pas la demande en charge.', question: 'La durée et la longueur du passage décrivent-elles la séquence réelle ?', decision: 'Conserver le débit constructeur en charge, décrire les phases par observation et mesurer la pression pendant une phase représentative.', toolLabel: 'Tester le dérouillage CP7120' },
 				{ presetId: 'maintenance-vissage-serie', context: 'La Metabo DS 14 publie un débit en charge. Le nombre de cycles ne transforme pas cette valeur constructeur, mais il modifie le besoin moyen et la coactivité.', question: 'Le scénario sépare-t-il consommation en charge, fréquence d’usage et postes simultanés ?', decision: 'Conserver le débit publié, rendre la fréquence modifiable et créer un second scénario si un autre outil fonctionne réellement en même temps.', toolLabel: 'Préparer le vissage DS 14' },
 			],
 			airPath: [
@@ -477,10 +529,11 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 				{ moment: 'Exploitation', title: 'Planifier le prochain contrôle', action: 'Relier criticité, dérive observée et périodicité sans inventer un intervalle universel.', record: 'Déclencheur et date prévue.' },
 			],
 			sources: [
-				{ label: 'Metabo, DW 125 601556000', url: 'https://www.metabo.com/com/es/maquinas/cortar-rectificar-fresar/amoladoras-angulares/amoladoras-angulares-de-o100-150-mm/dw-125-amoladora-angular-neumatica/601556000', scope: 'Débit et pression de la meuleuse du scénario continu.' },
-				{ label: 'Chicago Pneumatic, CP7120 8941071200', url: 'https://tools.cp.com/en-uk/products/compression-tools/cp7120-needle-scaler-sku8941071200', scope: 'Consommation en charge, pression dynamique et passage minimal du dérouilleur à aiguilles.' },
-				{ label: 'Metabo, DS 14 604117000', url: 'https://www.metabo.com/za/en/tools/compressed-air/compressed-air-tools/air-screwdriver/ds-14-604117000-air-screwdriver.html', scope: 'Débit et pression de la visseuse du troisième scénario.' },
-				{ label: 'U.S. Department of Energy, Compressed Air Systems', url: 'https://www.energy.gov/cmei/ito/compressed-air-systems', scope: 'Approche système, fuites, maintenance préventive, qualité d’air, stockage et commandes.' },
+				{ label: 'Metabo, DW 125 601556000', url: 'https://www.metabo.com/com/es/maquinas/cortar-rectificar-fresar/amoladoras-angulares/amoladoras-angulares-de-o100-150-mm/dw-125-amoladora-angular-neumatica/601556000', scope: 'Débit et pression de la meuleuse du scénario continu.', verifiedAt: '2026-07-20' },
+				{ label: 'Chicago Pneumatic, CP7120 8941071200', url: 'https://tools.cp.com/en-uk/products/compression-tools/cp7120-needle-scaler-sku8941071200', scope: 'Consommation en charge, pression dynamique et passage minimal du dérouilleur à aiguilles.', verifiedAt: '2026-07-20' },
+				{ label: 'Metabo, DS 14 604117000', url: 'https://www.metabo.com/za/en/tools/compressed-air/compressed-air-tools/air-screwdriver/ds-14-604117000-air-screwdriver.html', scope: 'Débit et pression de la visseuse du troisième scénario.', verifiedAt: '2026-07-20' },
+				{ label: 'U.S. Department of Energy, Compressed Air Systems', url: 'https://www.energy.gov/cmei/ito/compressed-air-systems', scope: 'Approche système, fuites, maintenance préventive, qualité d’air, stockage et commandes.', verifiedAt: '2026-07-20' },
+				{ label: 'INRS, Consignations et déconsignations, ED 6109', url: 'https://www.inrs.fr/media.html?refINRS=ED+6109', scope: 'Principes de maîtrise des énergies avant intervention et vérification de l’état sûr.', verifiedAt: '2026-07-20' },
 			],
 		},
 	},

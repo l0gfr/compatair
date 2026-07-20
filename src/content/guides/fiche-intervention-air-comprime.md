@@ -16,6 +16,7 @@ relatedGuides:
 sources:
   - https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf
   - https://www.iso.org/fr/standard/46580.html
+  - https://www.inrs.fr/media.html?refINRS=ED+6109
 ---
 
 Une fiche d’intervention ne sert pas seulement à prouver qu’un technicien est passé. Elle doit montrer ce qui a déclenché l’action, ce qui a été observé avant, ce qui a réellement été fait, puis ce que la même mesure indique après l’intervention.
@@ -82,7 +83,9 @@ La partie diagnostic réunit les contrôles réalisés et leur résultat. Elle d
 
 La partie action décrit ensuite ce qui a réellement été fait : réglage, nettoyage, réparation, remplacement, isolement, mise à jour documentaire ou aucune action. Pour une pièce, conservez sa référence et la notice appliquée lorsque ces informations sont disponibles.
 
-Toute opération sur un équipement électrique, sous pression ou susceptible de redémarrer relève des personnes compétentes et des procédures de consignation du site. CompatAir décrit le dossier de preuve, pas la séquence de mise en sécurité.
+Toute opération sur un équipement électrique, sous pression ou susceptible de redémarrer relève des personnes compétentes et des procédures de consignation du site. Le guide [INRS ED 6109](https://www.inrs.fr/media.html?refINRS=ED+6109) cadre la maîtrise des énergies avant intervention et la vérification de l’état sûr. CompatAir décrit le dossier de preuve, pas une procédure de mise en sécurité applicable à toutes les installations.
+
+La fiche doit toutefois attester que la procédure applicable a été identifiée et exécutée par les personnes compétentes. L’arrêt d’une machine ou une pression nulle observée en un seul point ne prouve pas à lui seul la dissipation des énergies résiduelles ni l’impossibilité d’un redémarrage.
 
 ## Enregistrer les écarts au plan
 
@@ -135,3 +138,4 @@ La structure suivante peut être transposée dans une GMAO, un tableur ou un for
 
 - [U.S. Department of Energy, Improving Compressed Air System Performance, version 3](https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf)
 - [ISO 11011:2013, Air comprimé, efficacité énergétique, évaluation](https://www.iso.org/fr/standard/46580.html)
+- [INRS, ED 6109, Consignations et déconsignations](https://www.inrs.fr/media.html?refINRS=ED+6109)

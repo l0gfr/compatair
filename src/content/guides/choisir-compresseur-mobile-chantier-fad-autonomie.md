@@ -3,14 +3,15 @@ title: "Choisir un compresseur mobile de chantier : FAD, énergie, autonomie et 
 seoTitle: "Compresseur mobile chantier : FAD et autonomie"
 description: "Cahier des charges pour un compresseur mobile de chantier fondé sur le débit restitué, la pression, l’énergie, la distribution et un essai reproductible."
 pubDate: 2026-07-19
+updatedDate: 2026-07-20
 category: "Choisir"
 audiences: [professionnel]
 metiers: [btp-chantier]
 readingTime: 16
 featured: true
-relatedCalculatorTool: chicago-pneumatic-cp7110
+relatedCalculatorTool: metabo-dmh-30-set
 sources:
-  - https://tools.cp.com/en/products/percussivetools/cp7110-sku8941071101
+  - https://www.metabo.com/ua/uk/instrumenty/pnevmatyka/pnevmatychni-instrumenty/pnevmatychni-vidbiini-molotky/dmh-30-set-604115500-pnevmatychnyi-vidbiinyi-molotok.html
   - https://nz.kaeser.com/download.ashx?id=tcm%3A152-215460
   - https://www.atlascopco.com/en-in/construction-equipment/products/mobile-air-compressors/electric-compressor/h250-vsd
   - https://www.atlascopco.com/content/dam/atlas-copco/construction-technique/portable-energy/documents/downloads-web-campaigns/focus-5-lez/focus%205%20low%20emission%20zone%20guide%20english.pdf
@@ -47,9 +48,9 @@ La démarche tient en cinq questions :
 
 ## Construire la demande depuis l’outil
 
-La fiche du [Chicago Pneumatic CP7110](https://tools.cp.com/en/products/percussivetools/cp7110-sku8941071101) publie 6,9 L/s en charge à 6,3 bar, soit 414 L/min, et un diamètre intérieur minimal de 10 mm sur 5 m. Cette valeur décrit une référence déterminée, pas tous les burineurs.
+La fiche du [Metabo DMH 30 Set](https://www.metabo.com/ua/uk/instrumenty/pnevmatyka/pnevmatychni-instrumenty/pnevmatychni-vidbiini-molotky/dmh-30-set-604115500-pnevmatychnyi-vidbiinyi-molotok.html) publie **280 L/min à 6,2 bar**. Le fabricant vise explicitement la maçonnerie, les briques, le béton cellulaire, la dépose d’enduit ou de carrelage et le burinage léger. Cette valeur et ce domaine décrivent une référence déterminée, pas tous les burineurs.
 
-Le [scénario métier CP7110](/calculateur/#scenario=btp-burineur-cp7110) propose 20 minutes, 60 % d’utilisation et 5 mètres comme hypothèses modifiables. Le débit en charge reste une donnée fabricant. La fréquence et la durée décrivent le travail envisagé. Ne confondez pas les deux niveaux.
+Le [scénario métier DMH 30 Set](/calculateur/#scenario=btp-burineur-dmh-30) conserve les 280 L/min sans facteur réducteur. La durée de 20 minutes et les 5 mètres de flexible sont des paramètres modifiables. La valeur constructeur et la séquence envisagée restent deux niveaux distincts.
 
 Pour plusieurs outils, ne sommez que les usages réellement simultanés. Conservez aussi un scénario de pointe si deux équipes peuvent se chevaucher, même brièvement.
 

@@ -3,14 +3,15 @@ title: "Flexible d’air comprimé de 25 ou 50 mètres sur chantier : méthode d
 seoTitle: "Flexible air chantier 25 ou 50 m : méthode"
 description: "Méthode de chantier pour passer d’un flexible constructeur court à 25 ou 50 mètres sans inventer la perte de charge ni masquer les raccords."
 pubDate: 2026-07-19
+updatedDate: 2026-07-20
 category: "Installer"
 audiences: [professionnel]
 metiers: [btp-chantier]
 readingTime: 14
 featured: true
-relatedCalculatorTool: chicago-pneumatic-cp7110
+relatedCalculatorTool: metabo-dmh-30-set
 sources:
-  - https://tools.cp.com/en/products/percussivetools/cp7110-sku8941071101
+  - https://www.metabo.com/ua/uk/instrumenty/pnevmatyka/pnevmatychni-instrumenty/pnevmatychni-vidbiini-molotky/dmh-30-set-604115500-pnevmatychnyi-vidbiinyi-molotok.html
   - https://www.einhell.fr/p/4137790-tc-pn-50/
   - https://shop.scheppach.com/Zubehoer-Set-Druckluftnagler-scheppach/7906100715
   - https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6282/ed6282.pdf
@@ -45,7 +46,7 @@ Sur chantier, traitez la rallonge comme un sous-ensemble à qualifier :
 
 ## Partir de la référence exacte
 
-La fiche du [Chicago Pneumatic CP7110](https://tools.cp.com/en/products/percussivetools/cp7110-sku8941071101) publie une consommation en charge de 6,9 L/s, soit 414 L/min, à 6,3 bar, avec un diamètre intérieur minimal de 10 mm pour 5 m. Cette combinaison forme un point de départ documenté. Elle ne constitue pas une autorisation implicite d’ajouter 45 mètres.
+La fiche du [Metabo DMH 30 Set](https://www.metabo.com/ua/uk/instrumenty/pnevmatyka/pnevmatychni-instrumenty/pnevmatychni-vidbiini-molotky/dmh-30-set-604115500-pnevmatychnyi-vidbiinyi-molotok.html) publie une consommation de **280 L/min à 6,2 bar** et un embout de flexible de 10 mm. Cette combinaison forme un point de départ documenté. La fiche ne transforme pas pour autant une rallonge de 25 ou 50 mètres en configuration validée.
 
 La [TC-PN 50 d’Einhell](https://www.einhell.fr/p/4137790-tc-pn-50/) publie pour sa part un diamètre intérieur minimal de 9 mm et une pression maximale de 8,3 bar. Le [kit de clouage Scheppach 7906100715](https://shop.scheppach.com/Zubehoer-Set-Druckluftnagler-scheppach/7906100715) recommande 10 mm et publie 1,5 L par tir entre 4,7 et 7,5 bar. Même pour une fonction proche, le passage et la demande ne sont donc pas interchangeables.
 
@@ -67,11 +68,11 @@ Deux tronçons de diamètres différents doivent rester deux lignes. Le plus pet
 
 ## Ne pas inventer une perte de charge
 
-La perte dépend du débit. Un flexible peut sembler correct avec une soufflette brève et devenir limitant avec un burineur à 414 L/min. Elle dépend aussi du diamètre réel, de la rugosité, de la température et des singularités. Sans ces entrées, un pourcentage universel serait une hypothèse silencieuse.
+La perte dépend du débit. Un flexible peut sembler correct avec une demande faible et devenir limitant avec un burineur à 280 L/min. Elle dépend aussi du diamètre réel, de la rugosité, de la température et des singularités. Sans ces entrées, un pourcentage universel serait une hypothèse silencieuse.
 
 Le calculateur CompatAir accepte la longueur et le diamètre comme contexte, mais ne transforme pas ces deux nombres en perte exacte. Il signale la contrainte et permet d’ajouter une chute mesurée. C’est volontaire : une valeur mesurée sur la configuration réelle est plus défendable qu’un coefficient appliqué à un flexible inconnu.
 
-[Ouvrir le scénario CP7110 avec le flexible constructeur](/calculateur/#scenario=btp-burineur-cp7110), puis modifiez la longueur pour représenter le chantier. La réponse doit rester un point de préparation tant que la pression en charge n’a pas été relevée.
+[Ouvrir le scénario DMH 30 Set](/calculateur/#scenario=btp-burineur-dmh-30), puis modifiez la longueur pour représenter le chantier. La réponse doit rester un point de préparation tant que la pression en charge n’a pas été relevée.
 
 ## Réceptionner 25 mètres
 

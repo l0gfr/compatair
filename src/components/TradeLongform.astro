@@ -30,10 +30,32 @@ const updatedLabel = longform.updatedAt.split('-').reverse().join('/');
 		</div>
 	</section>
 
+	<section class="trade-section trade-operations" id="operations">
+		<div class="container">
+			<header class="trade-section-head trade-section-head-split">
+				<div><p class="trade-index">04 / Carte des opérations</p><h2>Partir du travail réel, pas d’une catégorie d’outils.</h2></div>
+				<p>Chaque opération sépare le rôle de l’air comprimé, la décision qu’il permet d’instruire et ce qu’un calcul de débit ne prouve jamais à lui seul.</p>
+			</header>
+			<div class="trade-operation-grid">
+				{longform.operations.map((operation, index) => (
+					<article>
+						<header><span>{String(index + 1).padStart(2, '0')}</span><strong>{operation.title}</strong></header>
+						<dl>
+							<div><dt>Rôle de l’air</dt><dd>{operation.airRole}</dd></div>
+							<div><dt>Décision métier</dt><dd>{operation.decision}</dd></div>
+							<div><dt>Limite</dt><dd>{operation.boundary}</dd></div>
+						</dl>
+						<p>Sources&nbsp;: {operation.sources.join(' · ')}</p>
+					</article>
+				))}
+			</div>
+		</div>
+	</section>
+
 	<section class="trade-section trade-scenarios" id="scenarios">
 		<div class="container">
 			<header class="trade-section-head trade-section-head-split">
-				<div><p class="trade-index">04 / Scénarios de travail</p><h2>Trois situations, trois questions différentes.</h2></div>
+				<div><p class="trade-index">05 / Scénarios de travail</p><h2>Trois situations, trois questions différentes.</h2></div>
 				<p>Chaque cas part d’une référence déjà documentée. Le calculateur apporte une réponse technique, puis le contrôle terrain confirme ce que le réseau livre réellement.</p>
 			</header>
 			<div class="trade-scenario-grid">
@@ -58,7 +80,7 @@ const updatedLabel = longform.updatedAt.split('-').reverse().join('/');
 	<section class="trade-section trade-air-path" id="chaine-air">
 		<div class="container">
 			<header class="trade-section-head trade-section-head-split">
-				<div><p class="trade-index">05 / Chaîne d’air</p><h2>Suivre la preuve jusqu’au point d’utilisation.</h2></div>
+				<div><p class="trade-index">06 / Chaîne d’air</p><h2>Suivre la preuve jusqu’au point d’utilisation.</h2></div>
 				<p>Une valeur à la sortie du compresseur ne décrit pas automatiquement ce qui arrive au poste. Chaque maillon possède une fonction et un contrôle distincts.</p>
 			</header>
 			<div class="trade-air-map" role="list" aria-label="Chaîne de production et de distribution de l’air comprimé">
@@ -78,7 +100,7 @@ const updatedLabel = longform.updatedAt.split('-').reverse().join('/');
 	<section class="trade-section trade-evidence-matrix" id="preuves-metier">
 		<div class="container">
 			<header class="trade-section-head trade-section-head-split">
-				<div><p class="trade-index">06 / Matrice de preuve</p><h2>Ce qu’il faut savoir avant de conclure.</h2></div>
+				<div><p class="trade-index">07 / Matrice de preuve</p><h2>Ce qu’il faut savoir avant de conclure.</h2></div>
 				<p>La colonne de droite n’est pas une solution de remplacement. Elle indique le comportement attendu lorsque la preuve nécessaire n’existe pas encore.</p>
 			</header>
 			<div class="trade-evidence-table-wrap" tabindex="0" role="region" aria-label="Matrice de preuve, défilement horizontal possible">
@@ -93,7 +115,7 @@ const updatedLabel = longform.updatedAt.split('-').reverse().join('/');
 	<section class="trade-section trade-field-plan" id="plan-controle">
 		<div class="container trade-field-plan-grid">
 			<header class="trade-section-head">
-				<p class="trade-index">07 / Plan de contrôle</p>
+				<p class="trade-index">08 / Plan de contrôle</p>
 				<h2>Un dossier qui reste utile après l’achat.</h2>
 				<p>Le contrôle commence avant le calcul et reprend chaque fois que le poste, le réseau ou l’organisation évolue.</p>
 				<a class="button primary" href="/calculateur/">Construire la configuration</a>
@@ -112,7 +134,7 @@ const updatedLabel = longform.updatedAt.split('-').reverse().join('/');
 	<section class="trade-section trade-primary-sources" id="sources-metier">
 		<div class="container">
 			<header class="trade-section-head trade-section-head-split">
-				<div><p class="trade-index">08 / Sources primaires</p><h2>Une source, un périmètre explicite.</h2></div>
+				<div><p class="trade-index">09 / Sources primaires</p><h2>Une source, un périmètre explicite.</h2></div>
 				<p>Ces références cadrent le dossier. Les valeurs propres à une machine ou à un outil restent reliées à sa fiche exacte dans le catalogue CompatAir.</p>
 			</header>
 			<div class="trade-source-grid">
@@ -121,6 +143,7 @@ const updatedLabel = longform.updatedAt.split('-').reverse().join('/');
 						<span>{String(index + 1).padStart(2, '0')}</span>
 						<strong>{source.label}</strong>
 						<small>{source.scope}</small>
+						<em>Vérifiée le {source.verifiedAt.split('-').reverse().join('/')}</em>
 						<b>Consulter la source <UiIcon name="arrow" size={15} /></b>
 					</a>
 				))}
