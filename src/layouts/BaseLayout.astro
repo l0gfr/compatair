@@ -9,6 +9,7 @@ import UiIcon from '../components/UiIcon.astro';
 import BrandMark from '../components/BrandMark.astro';
 import AcquisitionTelemetry from '../components/AcquisitionTelemetry.astro';
 import McpCanonicalTelemetry from '../components/McpCanonicalTelemetry.astro';
+import { compressors, tools } from '../data/catalog';
 import { resolveDocumentTitle } from '../domain/metadata';
 import { socialCardKey } from '../domain/social-card';
 import { serializeJsonLd } from '../domain/structured-data';
@@ -56,6 +57,7 @@ const alternateLinks = alternates.length
 const socialImage = new URL(imagePath ?? `/social/${socialCardKey(canonical.pathname)}.png`, Astro.site);
 const currentPath = Astro.url.pathname;
 const currentYear = new Date().getFullYear();
+const catalogReferenceCount = compressors.length + tools.length;
 const navItems = [
 	{ href: '/guides/', label: 'Guides' },
 	{ href: '/glossaire/', label: 'Glossaire' },
@@ -147,7 +149,10 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 		<a class="skip-link" href="#contenu">{lang === 'en' ? 'Skip to content' : 'Aller au contenu'}</a>
 		<header class="site-header">
 			<nav class="container nav" aria-label="Navigation principale">
-				<a class="brand" href="/" aria-label="CompatAir, accueil"><BrandMark /><span class="brand-name"><span class="brand-wordmark"><span>Compat</span><strong>Air</strong></span><small>Quel compresseur pour vos outils&nbsp;?</small></span></a>
+				<div class="brand-cluster">
+					<a class="brand" href="/" aria-label="CompatAir, accueil"><BrandMark /><span class="brand-name"><span class="brand-wordmark"><span>Compat</span><strong>Air</strong></span><small>Quel compresseur pour vos outils&nbsp;?</small></span></a>
+					<span class="brand-corpus" aria-label={`${catalogReferenceCount} références documentées`}><small>Corpus</small><strong>{catalogReferenceCount}</strong><i>réf.</i></span>
+				</div>
 				<div class="desktop-nav">
 					<div class="nav-links">{navItems.map((item) => <a href={item.href} class:list={{ active: isCurrent(item.href) }} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>)}</div>
 					<SiteSearch />
@@ -174,7 +179,8 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 						<BrandMark class="footer-mark" />
 						<span><strong><span>Compat</span><b>Air</b></strong><small>Quel compresseur pour vos outils&nbsp;?</small></span>
 					</a>
-					<p>CompatAir vérifie quel compresseur peut alimenter vos outils à partir de données constructeur clairement identifiées.</p>
+					<div class="footer-statement"><span>Décision technique / source vérifiable</span><p>Une référence exacte, un besoin publié, une réponse traçable.</p></div>
+					<nav class="footer-quick-routes" aria-label="Accès rapides"><a href="/scanner/"><small>01</small><span>Identifier</span></a><a href="/calculateur/"><small>02</small><span>Dimensionner</span></a><a href="/comparateur/"><small>03</small><span>Comparer</span></a></nav>
 					<div class="footer-assurances" aria-label="Principes CompatAir">
 						<span><UiIcon name="check" size={16} /> Données sourcées</span>
 						<span><UiIcon name="shield" size={16} /> Aucune donnée inventée</span>
