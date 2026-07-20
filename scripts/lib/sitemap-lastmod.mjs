@@ -91,6 +91,10 @@ export function createSitemapLastmodResolver({ root = process.cwd(), gitDate } =
 			sources.add('src/components/DirectoryBrowser.astro');
 			for (const source of guideContentSources) sources.add(source);
 		}
+		if (pathname.startsWith('/guides/dossiers/')) {
+			sources.add('src/components/GuideSeriesCallout.astro');
+			for (const source of guideContentSources) sources.add(source);
+		}
 		if (['/glossaire/', '/recherche/'].includes(pathname)) sources.add('src/components/HubSignalVisual.astro');
 
 		let match = pathname.match(/^\/guides\/([^/]+)\/$/);

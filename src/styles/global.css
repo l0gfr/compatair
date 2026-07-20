@@ -17,6 +17,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 
 html { background: var(--paper); scroll-behavior: smooth; }
 
@@ -276,6 +277,9 @@ h3 { font-weight: 560; }
 .margin-control { display: grid; grid-template-columns: 1fr auto; gap: .45rem 1rem; margin: 1rem 0; font-weight: 750; }
 .margin-control input { grid-column: 1 / -1; accent-color: var(--brand); }
 .verdict-large { display: inline-block; margin-bottom: .8rem; padding: .35rem .65rem; border-radius: 999px; color: white; background: var(--brand); font-size: .78rem; font-weight: 850; }
+.result-summary[data-decision-state="need"] .verdict-large { color: #173727; background: var(--accent); }
+.result-summary[data-decision-state="indeterminate"] .verdict-large { color: #513415; background: #f6d99a; }
+.result-summary[data-decision-state="incompatible"] .verdict-large { color: #fff; background: #9b3f2f; }
 .result-metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: .65rem; margin: 1rem 0; }
 .result-metrics > div { display: grid; padding: .8rem; border: 1px solid var(--line); border-radius: .7rem; background: var(--paper); }
 .result-metrics small { color: var(--muted); }
@@ -300,6 +304,9 @@ h3 { font-weight: 560; }
 .configuration-meta { margin: .75rem 0 0; padding-top: .75rem; border-top: 1px solid var(--line); color: var(--ink) !important; font-weight: 750; }
 .recommendation-section { padding: 1.2rem; border: 1px solid #aec7b8; border-radius: 1rem; background: linear-gradient(145deg, #edf5ef, #fbfcf8); }
 .recommendation-section h3 { margin-top: 0; font-size: 1.45rem; }
+.resolution-gap { display: grid; gap: .35rem; margin: 1rem 0; padding: .9rem 1rem; border-left: 5px solid #d29439; color: #543816; background: #fff8e9; }
+.resolution-gap p, .resolution-proof { margin: 0; }
+.resolution-proof { color: var(--muted); font-size: .84rem; }
 .counterfactual-section { padding: 1.2rem; border: 1px solid #9fb58c; border-radius: 1rem; background: linear-gradient(145deg, #f2f6e7, #fbfcf8); }
 .counterfactual-section h3 { margin-top: 0; font-size: 1.45rem; }
 .counterfactual-action { display: block; color: var(--brand-dark); font-family: var(--font-display); font-size: 1.12rem; line-height: 1.35; }
@@ -1037,6 +1044,10 @@ h3 { font-weight: 560; }
 .scanner-counts div { display: grid; gap: .2rem; padding: 1rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--paper); }
 .scanner-counts dt { color: var(--brand); font: 700 clamp(1.5rem, 3vw, 2.1rem)/1 var(--font-display); }
 .scanner-counts dd { margin: 0; color: var(--muted); font-size: .78rem; font-weight: 800; }
+.scanner-resolution-note { display: grid; justify-items: start; gap: .55rem; padding: 1.15rem; border: 1px solid #dcb873; border-left: 6px solid #d29439; border-radius: .7rem; color: #503616; background: linear-gradient(135deg, #fff7e6, #fffdf7); }
+.scanner-resolution-note strong { color: #3f2c14; font-size: clamp(1.05rem, 2vw, 1.3rem); }
+.scanner-resolution-note p { max-width: 72ch; margin: 0; }
+.scanner-resolution-note .button { margin-top: .2rem; }
 .scanner-top-results h3 { margin: .3rem 0 1rem; }
 .scanner-result-actions { display: flex; flex-wrap: wrap; gap: .7rem; align-items: center; }
 .scanner-result-actions .button { text-align: center; }
@@ -1826,6 +1837,9 @@ h3 { font-weight: 560; }
 .product-verdict-counts > div:last-child { border-right: 1px solid var(--editorial-line); }
 .product-verdict-counts strong { font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 520; }
 .product-verdict-counts span { color: var(--editorial-muted); font-size: .72rem; font-weight: 760; text-transform: uppercase; }
+.product-resolution-callout { display: grid; justify-items: start; gap: .65rem; margin: -1rem 0 2rem; padding: 1.2rem; border: 1px solid #d2af70; border-left: 6px solid #c9872f; color: #4c3519; background: #fff8e9; }
+.product-resolution-callout strong { color: #342411; font-size: clamp(1.05rem, 2vw, 1.35rem); }
+.product-resolution-callout p { max-width: 75ch; margin: 0; }
 .product-decision-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 1rem; border-top: 1px solid var(--editorial-line); border-left: 1px solid var(--editorial-line); }
 .product-decision-cards article { display: grid; min-height: 15rem; align-content: start; gap: 1rem; padding: 1.4rem; border-right: 1px solid var(--editorial-line); border-bottom: 1px solid var(--editorial-line); background: #fdfcf7; }
 .product-decision-cards article > span { color: var(--brand); font: 800 .65rem/1 ui-monospace, monospace; }

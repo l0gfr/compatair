@@ -51,8 +51,13 @@
 			<dl class="scanner-counts" aria-label="Résumé des résultats">
 				<div><dt data-compatible-count>0</dt><dd data-compatible-label>Compatibles</dd></div>
 				<div><dt data-incompatible-count>0</dt><dd data-incompatible-label>Incompatibles</dd></div>
-				<div><dt data-insufficient-count>0</dt><dd>Indéterminés</dd></div>
+				<div><dt data-insufficient-count>0</dt><dd>À compléter</dd></div>
 			</dl>
+			<div class="scanner-resolution-note" data-resolution-note hidden>
+				<strong data-resolution-note-title></strong>
+				<p data-resolution-note-detail></p>
+				<a class="button primary" data-resolution-note-action href="/calculateur/">Débloquer le calcul</a>
+			</div>
 			<section class="scanner-top-results">
 				<p class="eyebrow">Décision immédiate</p>
 				<h3 data-primary-title>Trois meilleurs résultats compatibles</h3>
@@ -68,7 +73,7 @@
 		<div class="scanner-all-results" data-all-results hidden>
 			<section class="scanner-result-panel can"><span data-can-label>Compatibles</span><h3 data-can-title></h3><div class="scanner-result-cards compact" data-can></div></section>
 			<section class="scanner-result-panel cannot"><span data-cannot-label>Incompatibles</span><h3 data-cannot-title></h3><div class="scanner-result-cards compact" data-cannot></div></section>
-			<section class="scanner-result-panel uncertain"><span>Données insuffisantes</span><h3>CompatAir refuse de conclure</h3><div class="scanner-result-cards compact" data-insufficient></div></section>
+			<section class="scanner-result-panel uncertain"><span>À compléter</span><h3>La donnée minimale pour conclure</h3><div class="scanner-result-cards compact" data-insufficient></div></section>
 			<section class="scanner-unlocks" data-unlocks-section>
 				<p class="eyebrow">Solutions possibles</p>
 				<h3>Un tuyau adapté ou un autre compresseur</h3>
@@ -82,6 +87,7 @@
 <script>
 	import type { Compressor, ToolProfile } from '../domain/catalog';
 	import type { CompatibilityResult } from '../domain/compatibility';
+	import { explainDecisionDataGap } from '../domain/decision-resolution';
 	import { isImageWithinPixelBudget, readImageDimensions, type ImageDimensions } from '../domain/image-dimensions';
 	import { compressorCapabilities, identifyProducts, toolCompatibleCompressors } from '../domain/product-identification';
 	import { sourceQualityDetail, sourceQualityLabel } from '../domain/source-quality';
@@ -133,7 +139,9 @@
 		const badge = document.createElement('span'); badge.className = 'verdict-badge'; badge.textContent = verdictLabel(result.verdict); head.append(title, badge);
 		const pressure = resultPressure(product) ?? requiredPressureBar;
 		const flow = document.createElement('p');
-		flow.textContent = result.availableFadLpm === undefined
+		flow.textContent = result.verdict === 'insufficient_data' && result.warnings.length
+			? result.warnings[0]
+			: result.availableFadLpm === undefined
 			? `Débit disponible non vérifiable${pressure !== undefined ? ` à ${formatNumber(pressure)} bar` : ''}.`
 			: `${formatNumber(result.availableFadLpm)} L/min disponibles${pressure !== undefined ? ` à ${formatNumber(pressure)} bar` : ''}.`;
 		const quality = document.createElement('details'); quality.className = 'scanner-card-quality';
@@ -150,6 +158,16 @@
 		return [...cards].sort((a, b) => resultRank[a.result.verdict] - resultRank[b.result.verdict]
 			|| confidenceRank[a.qualityGrade ?? a.product.confidence] - confidenceRank[b.qualityGrade ?? b.product.confidence]
 			|| Math.abs((a.result.availableFadLpm ?? Number.POSITIVE_INFINITY) - (a.result.requiredFadLpm ?? 0)) - Math.abs((b.result.availableFadLpm ?? Number.POSITIVE_INFINITY) - (b.result.requiredFadLpm ?? 0)));
+	}
+	function setResolutionNote(title?: string, detail?: string, href = '/calculateur/', action = 'Débloquer le calcul') {
+		const note = query<HTMLElement>('[data-resolution-note]');
+		if (!note) return;
+		note.hidden = !title;
+		if (!title) return;
+		setText('[data-resolution-note-title]', title);
+		setText('[data-resolution-note-detail]', detail ?? '');
+		const link = query<HTMLAnchorElement>('[data-resolution-note-action]');
+		if (link) { link.href = href; link.textContent = action; }
 	}
 	function publishedNeed(product: ResultProduct, type: 'compressor' | 'tool') {
 		if (type === 'compressor') {
@@ -253,6 +271,7 @@
 			query<HTMLElement>('[data-result]')?.setAttribute('hidden', ''); return;
 		}
 		const match = matches[0]; const product = match.product;
+		setResolutionNote();
 		setText('[data-product-name]', `${product.brand} ${product.model}`);
 		setText('[data-match-badge]', match.matchedBy === 'ean' || match.matchedBy === 'gtin' ? 'Correspondance exacte par code produit fabricant' : 'Correspondance exacte par référence fabricant');
 		setText('[data-match-detail]', `${match.matchedBy.toUpperCase()} ${match.matchedValue} · ${sourceQualityLabel(product.confidence)}.`);
@@ -280,7 +299,19 @@
 				article.append(title, hose, alternatives); return article;
 			}));
 			const compare = query<HTMLAnchorElement>('[data-compare]'); if (compare) compare.hidden = true;
-			query<HTMLAnchorElement>('[data-refine]')?.setAttribute('href', `/calculateur/#compresseur=${encodeURIComponent(product.id)}`);
+			const calculatorHref = `/calculateur/#compresseur=${encodeURIComponent(product.id)}`;
+			query<HTMLAnchorElement>('[data-refine]')?.setAttribute('href', calculatorHref);
+			if (!compatibleCards.length && insufficientCards.length) {
+				const sample = insufficientCards[0]?.result;
+				const samplePressure = tools.find((tool) => tool.demandModel === 'fixed-flow')?.workingPressureBar.typical ?? 6;
+				const gap = sample ? explainDecisionDataGap(product as Compressor, samplePressure, sample) : undefined;
+				setResolutionNote(
+					'Ce compresseur ne peut pas être dimensionné avec les données publiées',
+					`${gap?.detail ?? 'Son débit réellement restitué exploitable manque.'} Choisissez maintenant l’outil à alimenter : le calculateur conservera ce modèle comme non vérifiable et proposera les compresseurs documentés qui couvrent réellement le besoin.`,
+					calculatorHref,
+					'Choisir mon outil et trouver des alternatives',
+				);
+			}
 		} else {
 			const result = toolCompatibleCompressors(product as ToolProfile, compressors);
 			const requiredPressureBar = (product as ToolProfile).workingPressureBar.typical;
@@ -293,12 +324,34 @@
 			const section = query<HTMLElement>('[data-unlocks-section]'); if (section) section.hidden = true;
 			const compare = query<HTMLAnchorElement>('[data-compare]'); const topIds = sortCompatible(compatibleCards).slice(0, 3).map(({ product }) => product.id);
 			if (compare) { compare.hidden = topIds.length < 2; compare.textContent = topIds.length >= 3 ? 'Comparer les trois compresseurs compatibles' : 'Comparer les deux compresseurs compatibles'; compare.href = `/comparateur/#ids=${topIds.join(',')}`; }
-			query<HTMLAnchorElement>('[data-refine]')?.setAttribute('href', `/calculateur/#outil=${encodeURIComponent(product.id)}`);
+			const calculatorHref = `/calculateur/#outil=${encodeURIComponent(product.id)}`;
+			query<HTMLAnchorElement>('[data-refine]')?.setAttribute('href', calculatorHref);
+			const tool = product as ToolProfile;
+			if (tool.demandModel === 'per-action') setResolutionNote(
+				'Une cadence réelle suffit à débloquer la sélection',
+				`La source publie ${formatNumber(tool.airPerActionLiters)} L par ${tool.actionLabel}, mais pas votre rythme d’usage. Saisissez les ${tool.actionLabel}s par minute : CompatAir calculera le besoin puis n’affichera comme solutions que les compresseurs vérifiables.`,
+				calculatorHref,
+				'Saisir ma cadence et voir les solutions',
+			);
+			else if (tool.demandModel === 'variable-volume') setResolutionNote(
+				'Volume, pression et temps cible débloquent la sélection',
+				'La consommation dépend du volume réellement gonflé et du temps souhaité. Ces valeurs d’usage ne sont pas inventées : une fois saisies, les compresseurs sont recalculés avec leur FAD documenté.',
+				calculatorHref,
+				'Décrire mon usage et voir les solutions',
+			);
 		}
 
 		compatibleCards = sortCompatible(compatibleCards);
-		if (match.type === 'compressor') setText('[data-primary-title]', compatibleCards.length >= 3 ? 'Trois outils alimentables en priorité' : compatibleCards.length === 0 ? 'Aucun outil alimentable confirmé' : `${compatibleCards.length} outil${compatibleCards.length > 1 ? 's' : ''} alimentable${compatibleCards.length > 1 ? 's' : ''}`);
-		else setText('[data-primary-title]', compatibleCards.length >= 3 ? 'Trois compresseurs compatibles les plus proches du besoin' : compatibleCards.length === 0 ? 'Aucun compresseur compatible confirmé' : `${compatibleCards.length} compresseur${compatibleCards.length > 1 ? 's' : ''} compatible${compatibleCards.length > 1 ? 's' : ''}`);
+		if (match.type === 'compressor') setText('[data-primary-title]', compatibleCards.length >= 3 ? 'Trois outils alimentables en priorité' : compatibleCards.length === 0 && insufficientCards.length ? 'Choisissez votre outil pour obtenir des alternatives vérifiées' : compatibleCards.length === 0 ? 'Aucun outil alimentable confirmé' : `${compatibleCards.length} outil${compatibleCards.length > 1 ? 's' : ''} alimentable${compatibleCards.length > 1 ? 's' : ''}`);
+		else {
+			const tool = product as ToolProfile;
+			setText('[data-primary-title]', compatibleCards.length >= 3
+				? 'Trois compresseurs compatibles les plus proches du besoin'
+				: compatibleCards.length === 0 && tool.demandModel === 'per-action' ? 'Précisez votre cadence pour obtenir des compresseurs valides'
+					: compatibleCards.length === 0 && tool.demandModel === 'variable-volume' ? 'Décrivez le volume à gonfler pour obtenir des compresseurs valides'
+						: compatibleCards.length === 0 ? 'Aucun compresseur compatible confirmé'
+							: `${compatibleCards.length} compresseur${compatibleCards.length > 1 ? 's' : ''} compatible${compatibleCards.length > 1 ? 's' : ''}`);
+		}
 		setText('[data-compatible-count]', String(compatibleCards.length)); setText('[data-incompatible-count]', String(incompatibleCards.length)); setText('[data-insufficient-count]', String(insufficientCards.length));
 		setText('[data-can-title]', `${compatibleCards.length} résultat(s) confirmé(s)`); setText('[data-cannot-title]', `${incompatibleCards.length} incompatibilité(s) confirmée(s)`);
 		renderCards('[data-primary-results]', compatibleCards.slice(0, 3), 'Aucun résultat compatible ne peut être confirmé avec les données publiées.');

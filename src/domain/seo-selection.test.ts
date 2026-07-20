@@ -23,6 +23,18 @@ describe('sélections SEO de compatibilité', () => {
 		expect(ranked.map((item) => item.compressor.id)).toEqual(['accessible', 'oversized', 'industrial']);
 	});
 
+	it('classe la qualité documentaire avant la proximité de débit et ignore la présence d’une offre', () => {
+		const base = compressors[0];
+		const complete = { ...base, id: 'complete', model: 'Complete', confidence: 'A' as const };
+		const partial = { ...base, id: 'partial', model: 'Partial', confidence: 'B' as const };
+		const ranked = rankCompatibleCompressors([
+			{ compressor: partial, result: continuousResult(101) },
+			{ compressor: complete, result: continuousResult(120) },
+		], { availableProductIds: new Set(['partial']) });
+
+		expect(ranked.map((item) => item.compressor.id)).toEqual(['complete', 'partial']);
+	});
+
 	it('borne les résultats statiques des fiches outil et pages d’usage', () => {
 		const tool = tools.find((item) => item.demandModel === 'fixed-flow')!;
 		const summary = createToolCompatibilitySummary(compressors, tool);

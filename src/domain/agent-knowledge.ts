@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
 import type { CollectionEntry } from 'astro:content';
 import type { Compressor, ToolProfile } from './catalog';
+import { guideAudiences, guideMetiers, guideSeries } from './editorial-taxonomy';
 
 type GlossaryEntry = { term: string; slug: string; definition: string };
 
@@ -37,9 +38,15 @@ export function createAgentKnowledge(input: {
 }) {
 	const frenchGuides: AgentKnowledgeItem[] = input.guides.map((guide) => {
 		const body = (guide.body ?? '').trim();
+		const keywords = [
+			guide.data.category,
+			...guide.data.audiences.map((audience) => guideAudiences[audience].label),
+			...guide.data.metiers.map((metier) => guideMetiers[metier].label),
+			...(guide.data.series ? [guideSeries[guide.data.series].title] : []),
+		].join(' ');
 		return {
 			id: `guide:${guide.id}:fr`, type: 'Guide', locale: 'fr', title: guide.data.title, description: guide.data.description,
-			url: `https://compatair.fr/guides/${guide.id}/`, keywords: `${guide.data.category} ${guide.data.audiences.join(' ')} ${guide.data.metiers.join(' ')}`,
+			url: `https://compatair.fr/guides/${guide.id}/`, keywords,
 			observed_at: (guide.data.updatedDate ?? guide.data.pubDate).toISOString().slice(0, 10), source_urls: unique(guide.data.sources),
 			content_sha256: hash(body), body_markdown: body, translation: { status: 'source' },
 		};

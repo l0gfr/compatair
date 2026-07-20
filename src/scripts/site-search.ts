@@ -36,7 +36,22 @@ searchInput?.addEventListener('input', async () => {
 	try { items = await loadSearchIndex(); }
 	catch { const p = document.createElement('p'); p.textContent = 'Recherche momentanément indisponible.'; searchResults.replaceChildren(p); return; }
 	if (query !== normalizeSearch(searchInput.value.trim())) return;
-	const matches = items.filter((item) => normalizeSearch(`${item.title} ${item.keywords}`).includes(query)).slice(0, 7);
+	const tokens = query.split(/\s+/).filter(Boolean);
+	const matches = items
+		.map((item) => {
+			const title = normalizeSearch(item.title);
+			const corpus = normalizeSearch(`${item.title} ${item.keywords}`);
+			if (!tokens.every((token) => corpus.includes(token))) return undefined;
+			const score = Number(title === query) * 100
+				+ Number(title.startsWith(query)) * 40
+				+ tokens.filter((token) => title.includes(token)).length * 8
+				+ Number(corpus.includes(query)) * 4;
+			return { item, score };
+		})
+		.filter((match): match is { item: SearchItem; score: number } => Boolean(match))
+		.sort((left, right) => right.score - left.score || left.item.title.localeCompare(right.item.title, 'fr'))
+		.slice(0, 7)
+		.map(({ item }) => item);
 	if (!matches.length) { const p = document.createElement('p'); p.textContent = 'Aucun résultat dans les données publiées.'; searchResults.replaceChildren(p); return; }
 	searchResults.replaceChildren(...matches.map((item) => { const link = document.createElement('a'); link.href = item.url; const strong = document.createElement('strong'); const small = document.createElement('small'); strong.textContent = item.title; small.textContent = item.type; link.append(strong, small); return link; }));
 });

@@ -20,6 +20,8 @@
 ## Public data and methods
 
 - [Compatibility methodology](https://compatair.fr/methodologie/)
+- [Audit, monitoring and preventive maintenance corpus](https://compatair.fr/guides/dossiers/audit-suivi-maintenance-air-comprime/)
+- [Compressed-air system audit protocol](https://compatair.fr/guides/audit-reseau-air-comprime-protocole-mesures/)
 - [Source reliability policy](https://compatair.fr/sources-fiabilite/)
 - [Proof graph](https://compatair.fr/graphe-preuve/)
 - [Public API OpenAPI](https://compatair.fr/openapi/compatair-2026-07-15.json)

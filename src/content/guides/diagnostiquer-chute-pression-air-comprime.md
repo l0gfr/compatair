@@ -2,11 +2,17 @@
 title: "Chute de pression d’air comprimé : construire un profil et trouver la restriction"
 description: "Mesurer la pression du compresseur jusqu’à l’outil pour localiser les pertes dans les filtres, conduites, raccords et flexibles sans augmenter le réglage au hasard."
 pubDate: 2026-07-13
+updatedDate: 2026-07-20
 category: "Installer"
 audiences: [professionnel]
 metiers: [garage-automobile, carrosserie-peinture, menuiserie-agencement, maintenance-industrielle]
 readingTime: 12
 featured: false
+series: audit-suivi-maintenance-air-comprime
+relatedGuides:
+  - audit-reseau-air-comprime-protocole-mesures
+  - indicateurs-maintenance-air-comprime
+  - fiche-intervention-air-comprime
 sources:
   - https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf

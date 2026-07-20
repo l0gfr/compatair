@@ -68,6 +68,17 @@ const actionableGuidePaths = [
 	'atelier-poids-lourds-plusieurs-baies-simultaneite',
 	'gonflage-grand-volume-poids-lourds-temps-securite',
 ];
+const maintenanceSeriesId = 'audit-suivi-maintenance-air-comprime';
+const maintenanceSeriesGuidePaths = [
+	'audit-reseau-air-comprime-protocole-mesures',
+	'fiche-intervention-air-comprime',
+	'indicateurs-maintenance-air-comprime',
+	'maintenance-preventive-reseau-air-comprime',
+	'diagnostiquer-chute-pression-air-comprime',
+	'mesurer-temps-charge-vide-compresseur',
+	'detecter-mesurer-fuites-air-comprime',
+	'qualite-air-comprime-iso-8573-1',
+];
 const compressorIdentityPages = new Map();
 let largestInitialPageScriptBudget = { bytes: 0, label: '', modules: 0 };
 let largestOnDemandPageScriptBudget = { bytes: 0, label: '', modules: 0 };
@@ -263,6 +274,10 @@ else {
 	searchIndexBytesGzip = gzipSync(searchIndexBytes).byteLength;
 	if (!Array.isArray(searchIndex) || searchIndex.some((item) => !item.title || !item.type || !item.url || typeof item.keywords !== 'string')) errors.push('data/search-index.json: structure invalide');
 	if (searchIndexBytesGzip > maximumSearchIndexBytesGzip) errors.push(`data/search-index.json: ${Math.ceil(searchIndexBytesGzip / 1024)} Ko gzip, budget ${maximumSearchIndexBytesGzip / 1024} Ko dépassé`);
+	for (const guidePath of maintenanceSeriesGuidePaths.slice(0, 3)) {
+		const item = searchIndex.find((entry) => entry.url === `/guides/${guidePath}/`);
+		if (!item || !item.keywords.includes('Audit, suivi et maintenance')) errors.push(`data/search-index.json: contexte de série absent pour ${guidePath}`);
+	}
 }
 
 const machineDataPaths = [
@@ -460,6 +475,26 @@ for (const actionableGuidePath of actionableGuidePaths) {
 	for (const marker of ['data-guide-audiences="professionnel"', 'article-infographic', '/calculateur/#scenario=', 'Vérifier ce guide avec un outil réel']) {
 		if (!html.includes(marker)) errors.push(`guide actionnable ${actionableGuidePath}: marqueur absent ${marker}`);
 	}
+}
+
+const maintenanceSeriesHubPath = '/guides/dossiers/audit-suivi-maintenance-air-comprime/index.html';
+if (!artifactPaths.has(maintenanceSeriesHubPath)) errors.push('dossier audit et maintenance: page rendue absente');
+else {
+	const html = await readFile(join(root, maintenanceSeriesHubPath), 'utf8');
+	for (const marker of [`data-editorial-series="${maintenanceSeriesId}"`, 'Quatre statuts, aucune moyenne trompeuse', 'Créer le point zéro', 'Contre-mesure']) {
+		if (!html.includes(marker)) errors.push(`dossier audit et maintenance: marqueur absent ${marker}`);
+	}
+	for (const guidePath of maintenanceSeriesGuidePaths) if (!html.includes(`href="/guides/${guidePath}/"`)) errors.push(`dossier audit et maintenance: guide non relié ${guidePath}`);
+}
+for (const guidePath of maintenanceSeriesGuidePaths) {
+	const artifactPath = `/guides/${guidePath}/index.html`;
+	if (!artifactPaths.has(artifactPath)) { errors.push(`dossier audit et maintenance: guide absent ${guidePath}`); continue; }
+	const html = await readFile(join(root, artifactPath), 'utf8');
+	if (!html.includes(`data-guide-series="${maintenanceSeriesId}"`) || !html.includes('href="/guides/dossiers/audit-suivi-maintenance-air-comprime/"')) errors.push(`dossier audit et maintenance: appartenance de série absente ${guidePath}`);
+}
+for (const path of ['/mise-en-service/index.html', '/suivi-exploitation/index.html', '/diagnostic-intervention/index.html', '/maintenance-preventive/index.html']) {
+	if (!artifactPaths.has(path)) errors.push(`parcours terrain: page absente ${path}`);
+	else if (!(await readFile(join(root, path), 'utf8')).includes('data-lifecycle-guides=')) errors.push(`parcours terrain: passerelle éditoriale absente ${path}`);
 }
 
 if (!artifactPaths.has('/data/document-quality-observatory.json') || !artifactPaths.has('/observatoire-qualite-documentaire/index.html')) errors.push('observatoire documentaire: snapshot ou page rendue absent');

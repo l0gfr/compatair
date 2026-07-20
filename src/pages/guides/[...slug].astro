@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { compressors, tools } from '../../data/catalog';
 import { activeOffers } from '../../data/offers';
 import { compatibilityFadLabel, evaluateCompatibility } from '../../domain/compatibility';
-import { guideAudiences, guideMetiers } from '../../domain/editorial-taxonomy';
+import { guideAudiences, guideMetiers, guideSeries } from '../../domain/editorial-taxonomy';
 import { compressorDisplayName } from '../../domain/product-display';
 import { rankCompatibleCompressors } from '../../domain/seo-selection';
 import { serializeJsonLd } from '../../domain/structured-data';
@@ -17,11 +17,14 @@ export async function getStaticPaths() {
 const { guide } = Astro.props;
 const { Content, headings } = await render(guide);
 const allGuides = await getCollection('guides');
+const series = guide.data.series ? guideSeries[guide.data.series] : undefined;
 const relatedGuides = allGuides
 	.filter((item) => item.id !== guide.id)
 	.map((item) => ({
 		item,
-		score: item.data.metiers.filter((metier) => guide.data.metiers.includes(metier)).length * 4
+		score: Number(guide.data.relatedGuides.includes(item.id)) * 24
+			+ Number(Boolean(guide.data.series && item.data.series === guide.data.series)) * 12
+			+ item.data.metiers.filter((metier) => guide.data.metiers.includes(metier)).length * 4
 			+ item.data.audiences.filter((audience) => guide.data.audiences.includes(audience)).length
 			+ Number(item.data.category === guide.data.category),
 	}))
@@ -70,6 +73,7 @@ const articleJsonLd = {
 		...guide.data.metiers.map((metier) => ({ '@type': 'Thing', name: guideMetiers[metier].label, url: `https://compatair.fr/guides/metiers/${metier}/` })),
 		...(relatedTool ? [{ '@type': 'Thing', name: relatedTool.label, url: `https://compatair.fr/outils-pneumatiques/${relatedTool.slug}/` }] : []),
 	],
+	isPartOf: series ? { '@type': 'CreativeWorkSeries', name: series.title, url: `https://compatair.fr${series.path}` } : undefined,
 	author: { '@type': 'Organization', '@id': 'https://compatair.fr/#organization', name: 'CompatAir', url: 'https://compatair.fr/' },
 	reviewedBy: externallyReviewed ? { '@type': 'Person', name: guide.data.reviewer, jobTitle: guide.data.reviewerRole } : undefined,
 	publisher: { '@type': 'Organization', '@id': 'https://compatair.fr/#organization', name: 'CompatAir', url: 'https://compatair.fr/' },
@@ -90,7 +94,7 @@ const articleJsonLd = {
 	<article class="container editorial-layout" data-guide-audiences={guide.data.audiences.join(' ')} data-guide-metiers={guide.data.metiers.join(' ')}>
 		<div class="editorial-main">
 			<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/guides/">Guides</a><span>/</span><span>{guide.data.category}</span></nav>
-			<header class="article-head"><p class="eyebrow">{guide.data.category}</p><div class="article-taxonomy" aria-label="Publics et métiers">{guide.data.audiences.map((audience) => <a href={`/guides/${guideAudiences[audience].label.toLocaleLowerCase('fr-FR')}/`}>{guideAudiences[audience].label}</a>)}{guide.data.metiers.map((metier) => <a href={`/guides/metiers/${metier}/`}>{guideMetiers[metier].label}</a>)}</div><h1>{guide.data.title}</h1><p class="lead">{guide.data.description}</p><p class="article-byline" data-review-status={guide.data.reviewStatus}>Publié le {published} · Lecture {guide.data.readingTime} minutes · Rédaction <a href="/gouvernance-editoriale/">{guide.data.author}</a> · {externallyReviewed ? <>Revue technique par {guide.data.reviewer}, {guide.data.reviewerRole}</> : <>Relecture éditoriale interne, sans validation professionnelle externe</>}</p></header>
+			<header class="article-head"><p class="eyebrow">{guide.data.category}</p><div class="article-taxonomy" aria-label="Publics, métiers et dossier">{series && <a href={series.path} data-guide-series={guide.data.series}>{series.label}</a>}{guide.data.audiences.map((audience) => <a href={`/guides/${guideAudiences[audience].label.toLocaleLowerCase('fr-FR')}/`}>{guideAudiences[audience].label}</a>)}{guide.data.metiers.map((metier) => <a href={`/guides/metiers/${metier}/`}>{guideMetiers[metier].label}</a>)}</div><h1>{guide.data.title}</h1><p class="lead">{guide.data.description}</p><p class="article-byline" data-review-status={guide.data.reviewStatus}>Publié le {published} · Lecture {guide.data.readingTime} minutes · Rédaction <a href="/gouvernance-editoriale/">{guide.data.author}</a> · {externallyReviewed ? <>Revue technique par {guide.data.reviewer}, {guide.data.reviewerRole}</> : <>Relecture éditoriale interne, sans validation professionnelle externe</>}</p></header>
 			<div class="article-body"><Content /></div>
 			<section class="guide-next-step" aria-labelledby="guide-next-step-title">
 				<p class="eyebrow">Vérifier sur des données réelles</p>
@@ -131,6 +135,6 @@ const articleJsonLd = {
 			</section>
 			{relatedGuides.length > 0 && <section class="related-reading"><h2>Continuer sur ce sujet</h2><div class="link-cards">{relatedGuides.map((item) => <a href={`/guides/${item.id}/`}><strong>{item.data.title}</strong><span>{item.data.description}</span></a>)}</div></section>}
 		</div>
-		<aside class="article-aside" aria-label="Sommaire"><strong>Dans ce dossier</strong><ol>{headings.filter((heading) => heading.depth === 2).map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol><a class="button primary" href="/calculateur/">Ouvrir le calculateur</a><a class="aside-secondary" href="/glossaire/">Consulter le glossaire</a></aside>
+		<aside class="article-aside" aria-label="Sommaire"><strong>Dans ce dossier</strong><ol>{headings.filter((heading) => heading.depth === 2).map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol>{series && <a class="aside-secondary" href={series.path}>Voir toute la série</a>}<a class="button primary" href="/calculateur/">Ouvrir le calculateur</a><a class="aside-secondary" href="/glossaire/">Consulter le glossaire</a></aside>
 	</article>
 </BaseLayout>

@@ -2,11 +2,16 @@
 title: "Qualité de l’air comprimé et ISO 8573-1 : particules, eau et huile sans raccourci"
 description: "Comprendre ce que classe réellement ISO 8573-1, où spécifier la qualité de l’air et pourquoi filtre, sécheur et compresseur sans huile ne sont pas interchangeables."
 pubDate: 2026-07-13
+updatedDate: 2026-07-20
 category: "Comprendre"
 audiences: [professionnel]
 metiers: [carrosserie-peinture, maintenance-industrielle]
 readingTime: 11
 featured: false
+series: audit-suivi-maintenance-air-comprime
+relatedGuides:
+  - audit-reseau-air-comprime-protocole-mesures
+  - indicateurs-maintenance-air-comprime
 sources:
   - https://www.iso.org/fr/standard/46418.html
   - https://www.cagi.org/resource-library

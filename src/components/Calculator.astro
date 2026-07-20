@@ -64,12 +64,22 @@ import UiIcon from './UiIcon.astro';
 			<div><p class="eyebrow">Réponse</p><span class="verdict-large" data-verdict></span></div>
 			<strong data-required-flow></strong><p data-result-context></p>
 			<dl class="answer-first-grid">
-				<div><dt>Modèle vérifié</dt><dd data-answer-model></dd></div>
+				<div><dt data-answer-model-label>Modèle vérifié</dt><dd data-answer-model></dd></div>
 				<div><dt>Besoin</dt><dd data-answer-need></dd></div>
-				<div><dt>Débit disponible</dt><dd data-answer-available></dd></div>
+				<div><dt data-answer-available-label>Débit disponible</dt><dd data-answer-available></dd></div>
 				<div><dt>Marge</dt><dd data-answer-margin></dd></div>
 				<div class="answer-reserve"><dt>Principale réserve</dt><dd data-answer-reserve></dd></div>
 			</dl>
+		</div>
+		<div class="result-section recommendation-section" data-resolution-section>
+			<p class="eyebrow" data-resolution-eyebrow>Aide à la décision</p>
+			<h3 data-resolution-title>Trois compresseurs compatibles les plus proches du besoin</h3>
+			<p data-resolution-summary>Compatibilité, qualité des données et proximité du débit structurent cette sélection technique.</p>
+			<div class="resolution-gap" data-resolution-gap hidden><strong data-resolution-gap-title></strong><p data-resolution-gap-detail></p></div>
+			<p class="resolution-proof">Sélection stricte : verdict concluant, FAD exploitable à la pression demandée et source technique de grade A ou B.</p>
+			<p data-result-coverage></p>
+			<div class="priority-list" data-priority-list></div>
+			<a class="button primary recommendation-compare-cta" data-contextual-compare href="/comparateur/" hidden>Comparer ces trois compresseurs pour ce besoin</a>
 		</div>
 		<nav class="calculator-scenario-result-links" data-scenario-result-links aria-label="Continuer le parcours métier" hidden>
 			<a class="button primary" data-scenario-result-back href="/guides/professionnels/">Relire le scénario métier</a>
@@ -80,7 +90,6 @@ import UiIcon from './UiIcon.astro';
 		<div class="result-section" data-evaluated-result></div>
 		<div class="result-section counterfactual-section" data-counterfactual><p class="eyebrow">Recommandation contrefactuelle</p><h3>Le plus petit changement vérifié</h3><div data-counterfactual-result></div><p class="counterfactual-boundary" data-counterfactual-boundary></p></div>
 		<details class="result-section result-disclosure"><summary>Accessoires et raccordement</summary><ul data-accessories></ul></details>
-		<div class="result-section recommendation-section"><p class="eyebrow">Aide à la décision</p><h3>Trois compresseurs compatibles les plus proches du besoin</h3><p>Compatibilité, qualité des données et proximité du débit structurent cette sélection technique.</p><p data-result-coverage></p><div class="priority-list" data-priority-list></div><a class="button primary recommendation-compare-cta" data-contextual-compare href="/comparateur/" hidden>Comparer ces trois compresseurs pour ce besoin</a></div>
 		<details class="result-section result-inventory">
 			<summary>Explorer les {compressors.length} compresseurs documentés</summary>
 			<p>Les modèles sont regroupés selon le résultat, la réserve disponible et la fiabilité des données. Une information absente reste signalée comme telle.</p>
@@ -133,6 +142,7 @@ import UiIcon from './UiIcon.astro';
 
 <script>
 	import { resolveExactCatalogSearch } from '../domain/catalog-search';
+	import { createDecisionResolution, explainDecisionDataGap, rankDecisionCandidates } from '../domain/decision-resolution';
 	import { sourceQualityDetail, sourceQualityLabel } from '../domain/source-quality';
 	import { getTradeScenarioPreset } from '../domain/trade-scenario-prefill';
 
@@ -144,6 +154,7 @@ import UiIcon from './UiIcon.astro';
 	type CounterfactualCandidate = import('../domain/counterfactual').CounterfactualCandidate;
 	type CounterfactualKind = import('../domain/counterfactual').CounterfactualKind;
 	type CounterfactualMachine = import('../domain/counterfactual').CounterfactualMachine;
+	type DecisionResolutionStatus = import('../domain/decision-resolution').DecisionResolutionStatus;
 	let CATALOG_VERIFIED_AT = '';
 	let CALCULATION_VERSION = '';
 	let compressors: Compressor[] = [];
@@ -195,7 +206,6 @@ import UiIcon from './UiIcon.astro';
 	const compressorDatalist = document.querySelector<HTMLDataListElement>('#calculator-compressors');
 	const setText = (selector: string, value: string) => { const element = root?.querySelector<HTMLElement>(selector); if (element) element.textContent = value; };
 	const labels = { continuous: 'Compatible en continu', intermittent: 'Compatible par intermittence', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' } as const;
-	const rank = { continuous: 0, intermittent: 1, insufficient_data: 2, incompatible: 3 } as const;
 	const responseQualityLabel = (quality: SizingResult['confidence']) => quality === 'high' ? 'Réponse étayée' : quality === 'medium' ? 'Réponse à confirmer' : 'Réponse limitée';
 	type Candidate = { compressor: (typeof compressors)[number]; result: SizingResult; availableFadLpm?: number; marginCovered: boolean };
 	let demandIndex = 0;
@@ -408,7 +418,10 @@ import UiIcon from './UiIcon.astro';
 		if (config.selectedCompressor === 'custom') return config.custom.maxPressureBar ? config.custom : undefined;
 		const compressor = compressors.find((item) => item.id === config.selectedCompressor);
 		if (!compressor) return undefined;
-		return { maxPressureBar: compressor.maxPressureBar, availableFadLpm: resolveAvailableFad(compressor, requiredPressureBar)?.litersPerMinute, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle };
+		const availableFadLpm = compressor.confidence === 'A' || compressor.confidence === 'B'
+			? resolveAvailableFad(compressor, requiredPressureBar)?.litersPerMinute
+			: undefined;
+		return { maxPressureBar: compressor.maxPressureBar, availableFadLpm, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle };
 	}
 
 	function counterfactualMachine(config: NonNullable<ReturnType<typeof configFromForm>>, requiredPressureBar: number): CounterfactualMachine | undefined {
@@ -445,7 +458,7 @@ import UiIcon from './UiIcon.astro';
 	}
 	function renderAnswerFirst(config: NonNullable<ReturnType<typeof configFromForm>>, base: SizingResult, result: SizingResult) {
 		const compressor = config.selectedCompressor && config.selectedCompressor !== 'custom' ? compressors.find((item) => item.id === config.selectedCompressor) : undefined;
-		const availableResolution = compressor ? resolveAvailableFad(compressor, base.requiredPressureBar) : undefined;
+		const availableResolution = compressor && (compressor.confidence === 'A' || compressor.confidence === 'B') ? resolveAvailableFad(compressor, base.requiredPressureBar) : undefined;
 		const available = config.selectedCompressor === 'custom' ? config.custom.availableFadLpm : availableResolution?.litersPerMinute;
 		const model = config.selectedCompressor === 'custom' ? 'Compresseur personnalisé' : compressor ? `${compressor.brand} ${compressor.model} · ${sourceQualityLabel(compressor.confidence)}` : 'Aucun compresseur sélectionné';
 		const marginCovered = available !== undefined && available >= base.recommendedFadLpm;
@@ -600,18 +613,79 @@ import UiIcon from './UiIcon.astro';
 		const empty = root?.querySelector<HTMLElement>('[data-filter-empty]'); if (empty) empty.hidden = visible > 0;
 	}
 
-	function renderCandidateResults(candidates: Candidate[], proofToolId?: string) {
+	function renderDecisionResolution(
+		config: NonNullable<ReturnType<typeof configFromForm>>,
+		base: SizingResult,
+		result: SizingResult,
+		status: DecisionResolutionStatus,
+		verifiedCount: number,
+	) {
+		const selectedCompressor = config.selectedCompressor && config.selectedCompressor !== 'custom'
+			? compressors.find((item) => item.id === config.selectedCompressor)
+			: undefined;
+		const hasSelectedCompressor = Boolean(config.selectedCompressor);
+		const summary = root?.querySelector<HTMLElement>('[data-decision-answer-first]');
+		if (summary) summary.dataset.decisionState = !hasSelectedCompressor
+			? 'need'
+			: result.verdict === 'insufficient_data' ? 'indeterminate'
+				: result.verdict === 'incompatible' ? 'incompatible' : 'verified';
+		setText('[data-verdict]', !hasSelectedCompressor
+			? 'Besoin calculé'
+			: result.verdict === 'insufficient_data' ? 'Modèle choisi non vérifiable' : resultLabel(result));
+		setText('[data-answer-model-label]', hasSelectedCompressor ? 'Modèle vérifié' : 'Machine évaluée');
+		setText('[data-answer-available-label]', hasSelectedCompressor ? 'Débit disponible' : 'Solutions vérifiées');
+		if (!hasSelectedCompressor) {
+			setText('[data-answer-model]', 'Aucune machine imposée');
+			setText('[data-answer-available]', verifiedCount ? `${verifiedCount} références recalculées avec un verdict concluant` : 'Aucune référence concluante dans le catalogue actuel');
+			setText('[data-answer-margin]', `${Math.round(config.safetyMargin * 100)} % appliquée au besoin calculé`);
+			setText('[data-answer-reserve]', verifiedCount ? 'Les trois solutions documentées les plus proches sont présentées juste ci-dessous.' : 'Le besoin sort du domaine actuellement documenté.');
+		}
+
+		const titles: Record<DecisionResolutionStatus, string> = {
+			need_sized: `${verifiedCount} compresseur${verifiedCount > 1 ? 's' : ''} documenté${verifiedCount > 1 ? 's' : ''} couvre${verifiedCount > 1 ? 'nt' : ''} ce besoin`,
+			selected_verified: 'Le modèle choisi est vérifié ; voici les alternatives les plus proches',
+			verified_alternatives: `${verifiedCount} alternative${verifiedCount > 1 ? 's' : ''} vérifiée${verifiedCount > 1 ? 's' : ''} pour sortir de l’impasse`,
+			measurement_required: 'Aucune alternative vérifiée : une mesure ou une source est nécessaire',
+			no_verified_solution: 'Aucun compresseur documenté ne couvre ce besoin dans le catalogue actuel',
+		};
+		const summaries: Record<DecisionResolutionStatus, string> = {
+			need_sized: 'Aucune machine n’est validée implicitement : le besoin est calculé, puis les références ci-dessous sont recalculées une par une avec leurs données publiées.',
+			selected_verified: 'Le verdict du modèle choisi reste prioritaire. Cette sélection permet de comparer des solutions techniques proches, sans classement commercial absolu.',
+			verified_alternatives: result.verdict === 'incompatible'
+				? 'Le modèle choisi reste incompatible. Les références ci-dessous ont chacune obtenu un verdict concluant pour la même configuration.'
+				: 'Le modèle choisi reste indéterminé. Les références ci-dessous disposent, elles, des données nécessaires pour conclure sur la même configuration.',
+			measurement_required: 'CompatAir ne remplace pas une donnée absente par une estimation. La donnée minimale à obtenir est indiquée ci-dessous.',
+			no_verified_solution: 'Le besoin calculé dépasse ou sort du domaine documenté des références étudiées. Aucune machine n’est affichée comme solution par défaut.',
+		};
+		setText('[data-resolution-eyebrow]', status === 'selected_verified' ? 'Choix alternatif' : status === 'need_sized' ? 'Solutions vérifiées' : 'Sortie décisionnelle');
+		setText('[data-resolution-title]', titles[status]);
+		setText('[data-resolution-summary]', summaries[status]);
+
+		const gapPanel = root?.querySelector<HTMLElement>('[data-resolution-gap]');
+		const gap = result.verdict === 'insufficient_data' && hasSelectedCompressor
+			? explainDecisionDataGap(selectedCompressor, base.requiredPressureBar, result)
+			: undefined;
+		if (gapPanel) gapPanel.hidden = !gap;
+		if (gap) {
+			setText('[data-resolution-gap-title]', gap.title);
+			setText('[data-resolution-gap-detail]', `${gap.detail} Les alternatives affichées ne dépendent pas de cette donnée manquante.`);
+		}
+	}
+
+	function renderCandidateResults(config: NonNullable<ReturnType<typeof configFromForm>>, base: SizingResult, result: SizingResult, candidates: Candidate[], proofToolId?: string) {
 		if (!list || !priorityList) return;
+		const resolution = createDecisionResolution({ hasSelectedCompressor: Boolean(config.selectedCompressor), selectedResult: result, candidates });
 		const counts: Record<keyof typeof labels, number> = { continuous: 0, intermittent: 0, incompatible: 0, insufficient_data: 0 };
-		for (const candidate of candidates) counts[candidate.result.verdict] += 1;
-		for (const [key, count] of Object.entries({ all: candidates.length, ...counts })) root?.querySelector<HTMLElement>(`[data-result-count="${key}"]`)?.replaceChildren(String(count));
+		for (const candidate of resolution.rankedCandidates) counts[candidate.result.verdict] += 1;
+		for (const [key, count] of Object.entries({ all: resolution.rankedCandidates.length, ...counts })) root?.querySelector<HTMLElement>(`[data-result-count="${key}"]`)?.replaceChildren(String(count));
 		const coverage = root?.querySelector<HTMLElement>('[data-result-coverage]');
-		if (coverage) coverage.textContent = `${counts.continuous} en continu · ${counts.intermittent} par intermittence · ${counts.insufficient_data} en données insuffisantes · ${counts.incompatible} incompatibles.`;
-		const priority = candidates.filter(({ result }) => result.verdict === 'continuous' || result.verdict === 'intermittent').slice(0, 3);
+		if (coverage) coverage.textContent = `${resolution.verifiedCandidates.length} solution(s) vérifiée(s) · ${counts.insufficient_data} à documenter · ${counts.incompatible} incompatibles.`;
+		const priority = resolution.verifiedCandidates.slice(0, 3);
 		lastPriorityIds = priority.map(({ compressor }) => compressor.id);
 		if (priority.length) priorityList.replaceChildren(...priority.map(({ compressor, result }) => renderResultCard(compressor, result, proofToolId)));
 		else { const message = document.createElement('p'); message.className = 'decision-empty'; message.textContent = 'Aucun compresseur actuellement étudié ne peut être recommandé pour cette configuration. Une information manquante n’est jamais transformée en recommandation.'; priorityList.replaceChildren(message); }
-		list.replaceChildren(...candidates.map(({ compressor, result }) => renderResultCard(compressor, result, proofToolId)));
+		renderDecisionResolution(config, base, result, resolution.status, resolution.verifiedCandidates.length);
+		list.replaceChildren(...resolution.rankedCandidates.map(({ compressor, result }) => renderResultCard(compressor, result, proofToolId)));
 		setResultFilter(currentFilter);
 	}
 
@@ -742,22 +816,20 @@ import UiIcon from './UiIcon.astro';
 			const base = sizeConfiguration(config as any);
 			const selected = compressorInput(config, base.requiredPressureBar);
 			const result = sizeConfiguration({ ...config, compressor: selected } as any);
-			root?.querySelector<HTMLElement>('[data-verdict]')!.replaceChildren(resultLabel(result));
 			root?.querySelector<HTMLElement>('[data-required-flow]')!.replaceChildren(`${result.recommendedFadLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min recommandés`);
 			const hasInflation = config.demands.some((demand) => demand.model === 'inflation');
 			root?.querySelector<HTMLElement>('[data-result-context]')!.replaceChildren(result.flowBasis === 'documented-continuous' ? `${Math.round(result.peakFlowLpm)} L/min de pointe, ${Math.round(result.averageFlowLpm)} L/min en moyenne, à ${result.requiredPressureBar} bar.` : hasInflation ? `${result.peakFlowLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min de besoin moyen idéalisé à ${result.requiredPressureBar.toLocaleString('fr-FR')} bar. Le temps réel et les restrictions ne sont pas modélisés.` : `${result.peakFlowLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min de besoin moyen calculé à ${result.requiredPressureBar.toLocaleString('fr-FR')} bar. La pointe instantanée n’est pas modélisée.`);
 			renderAnswerFirst(config, base, result); renderConfiguration(config); renderMetrics(result); renderWarnings(result); renderAccessories(config);
 			evaluated.replaceChildren();
 
-			const confidenceRank = { A: 0, B: 1, C: 2, D: 3 } as const;
 			const candidates: Candidate[] = compressors.map((compressor) => {
-				const availableFadLpm = resolveAvailableFad(compressor, base.requiredPressureBar)?.litersPerMinute;
+				const availableFadLpm = compressor.confidence === 'A' || compressor.confidence === 'B'
+					? resolveAvailableFad(compressor, base.requiredPressureBar)?.litersPerMinute
+					: undefined;
 				const candidateResult = sizeConfiguration({ ...config, compressor: { maxPressureBar: compressor.maxPressureBar, availableFadLpm, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle } } as any);
 				return { compressor, result: candidateResult, availableFadLpm, marginCovered: availableFadLpm !== undefined && availableFadLpm >= base.recommendedFadLpm };
-			}).sort((a, b) => rank[a.result.verdict] - rank[b.result.verdict]
-				|| Number(b.marginCovered) - Number(a.marginCovered)
-				|| confidenceRank[a.compressor.confidence] - confidenceRank[b.compressor.confidence]
-				|| Math.abs((a.availableFadLpm ?? Number.POSITIVE_INFINITY) - base.recommendedFadLpm) - Math.abs((b.availableFadLpm ?? Number.POSITIVE_INFINITY) - base.recommendedFadLpm));
+			});
+			const rankedCandidates = rankDecisionCandidates(candidates);
 			const counterfactual = createCounterfactualRecommendation({
 				configuration: config,
 				selectedMachine: counterfactualMachine(config, base.requiredPressureBar),
@@ -765,7 +837,7 @@ import UiIcon from './UiIcon.astro';
 			});
 			renderCounterfactual(counterfactual);
 			const proofToolId = config.demands.length === 1 && config.demands[0].model === 'fixed-flow' ? config.demands[0].id : undefined;
-			currentFilter = 'all'; renderCandidateResults(candidates, proofToolId); lastSummary = buildSummary(config, result, candidates);
+			currentFilter = 'all'; renderCandidateResults(config, base, result, rankedCandidates, proofToolId); lastSummary = buildSummary(config, result, rankedCandidates);
 			const encodedConfig = encodePassportConfiguration(config);
 			const scenarioSuffix = scenarioPreset ? `&scenario=${encodeURIComponent(scenarioPreset.id)}` : '';
 			window.history.replaceState(null, '', `${window.location.pathname}#config=${encodedConfig}${scenarioSuffix}`);

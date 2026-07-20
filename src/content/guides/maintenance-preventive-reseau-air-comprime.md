@@ -3,11 +3,18 @@ title: "Maintenance préventive d’un réseau d’air comprimé : preuves, mesu
 seoTitle: "Maintenance réseau d’air comprimé | CompatAir"
 description: "Organiser une maintenance reproductible du compresseur au point d’usage, sans calendrier universel ni économie de fuite estimée sans mesure."
 pubDate: 2026-07-15
+updatedDate: 2026-07-20
 category: "Utiliser"
 audiences: [professionnel]
 metiers: [maintenance-industrielle]
 readingTime: 9
 featured: true
+series: audit-suivi-maintenance-air-comprime
+relatedGuides:
+  - audit-reseau-air-comprime-protocole-mesures
+  - indicateurs-maintenance-air-comprime
+  - fiche-intervention-air-comprime
+  - detecter-mesurer-fuites-air-comprime
 sources:
   - https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air_sourcebook.pdf
   - https://www.energy.gov/cmei/ito/compressed-air-systems

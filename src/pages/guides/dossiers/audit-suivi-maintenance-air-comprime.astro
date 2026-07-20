@@ -1,0 +1,166 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import UiIcon from '../../../components/UiIcon.astro';
+import { guideSeries } from '../../../domain/editorial-taxonomy';
+import { serializeJsonLd } from '../../../domain/structured-data';
+
+const seriesId = 'audit-suivi-maintenance-air-comprime' as const;
+const series = guideSeries[seriesId];
+const guides = (await getCollection('guides', ({ data }) => data.series === seriesId))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const byId = new Map(guides.map((guide) => [guide.id, guide]));
+const stages = ([
+	{
+		index: '01', icon: 'compass', label: 'Cadrer', title: 'Établir le périmètre et la ligne de base',
+		description: 'Décrire alimentation, transmission, demande, scénarios et instruments avant de comparer une seule valeur.',
+		ids: ['audit-reseau-air-comprime-protocole-mesures'],
+	},
+	{
+		index: '02', icon: 'gauge', label: 'Mesurer', title: 'Observer le service et localiser les écarts',
+		description: 'Relier pression dynamique, états machine et qualité d’air au scénario réellement observé.',
+		ids: ['diagnostiquer-chute-pression-air-comprime', 'mesurer-temps-charge-vide-compresseur', 'qualite-air-comprime-iso-8573-1'],
+	},
+	{
+		index: '03', icon: 'database', label: 'Suivre', title: 'Détecter une dérive comparable',
+		description: 'Lire les tendances sans score opaque et distinguer la demande productive des pertes établies.',
+		ids: ['indicateurs-maintenance-air-comprime', 'detecter-mesurer-fuites-air-comprime'],
+	},
+	{
+		index: '04', icon: 'check', label: 'Agir', title: 'Intervenir, contre-mesurer et préparer la suite',
+		description: 'Conserver le diagnostic, l’action réelle, le résultat et l’échéance issue d’une source explicite.',
+		ids: ['fiche-intervention-air-comprime', 'maintenance-preventive-reseau-air-comprime'],
+	},
+] as const).map((stage) => ({ ...stage, guides: stage.ids.flatMap((id) => {
+	const guide = byId.get(id);
+	return guide ? [guide] : [];
+}) }));
+const collectionJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'CollectionPage',
+	name: series.title,
+	description: series.description,
+	url: `https://compatair.fr${series.path}`,
+	mainEntity: {
+		'@type': 'ItemList',
+		itemListElement: guides.map((guide, index) => ({
+			'@type': 'ListItem',
+			position: index + 1,
+			name: guide.data.title,
+			url: `https://compatair.fr/guides/${guide.id}/`,
+		})),
+	},
+};
+---
+
+<BaseLayout
+	title="Audit et maintenance d’un réseau d’air comprimé | CompatAir"
+	description="Un parcours professionnel pour auditer un réseau d’air comprimé, établir une ligne de base, suivre les dérives et vérifier chaque intervention."
+	imagePath="/social/guides__utiliser.png"
+	breadcrumbs={[{ name: 'Guides', path: '/guides/' }, { name: 'Dossiers', path: '/guides/professionnels/' }, { name: series.label, path: series.path }]}
+>
+	<script is:inline type="application/ld+json" set:html={serializeJsonLd(collectionJsonLd)} />
+	<main data-editorial-series={seriesId}>
+		<section class="series-hero">
+			<div class="container series-hero-grid">
+				<div>
+					<p class="eyebrow">Dossier professionnel · {guides.length} guides reliés</p>
+					<h1>De la ligne de base à la maintenance vérifiée.</h1>
+					<p class="lead">Un parcours continu pour mesurer le système réel, qualifier une dérive, documenter l’action et comparer l’après à l’avant. Chaque étape conserve ses sources, ses unités et ses limites.</p>
+					<div class="actions"><a class="button primary" href="/guides/audit-reseau-air-comprime-protocole-mesures/">Commencer l’audit</a><a class="button" href="#parcours">Voir les quatre étapes</a></div>
+				</div>
+				<div class="series-instrument" aria-label="Le parcours relie cadrage, mesure, suivi et intervention.">
+					<header><span>PARCOURS</span><strong>AUDIT · SUIVI · ACTION</strong></header>
+					<div>{stages.map((stage) => <span><b>{stage.index}</b><small>{stage.label}</small></span>)}</div>
+					<svg viewBox="0 0 520 158" role="img" aria-label="Une ligne de mesure progresse vers une contre-mesure vérifiée."><path d="M18 122C92 122 104 42 172 72s84 58 150 4 88-30 180-46" fill="none" stroke="#d3eb56" stroke-width="5" stroke-linecap="round"/><path d="M18 122h484" stroke="rgba(255,255,255,.18)" stroke-width="2" stroke-dasharray="6 8"/><g fill="#fff"><circle cx="18" cy="122" r="7"/><circle cx="172" cy="72" r="7"/><circle cx="322" cy="76" r="7"/><circle cx="502" cy="30" r="7"/></g></svg>
+					<footer><span>Ligne de base</span><b>→</b><span>Dérive</span><b>→</b><strong>Contre-mesure</strong></footer>
+				</div>
+			</div>
+		</section>
+
+		<section class="section series-principles">
+			<div class="container">
+				<header class="product-section-head"><div><p class="product-decision-index">Règle de lecture</p><h2>Quatre statuts, aucune moyenne trompeuse</h2></div><p>Le dossier sépare ce qui provient d’une source, ce qui a été observé, ce qui est calculé et ce qui reste à confirmer.</p></header>
+				<div class="series-principle-grid">
+					<article><span>01</span><strong>Publié</strong><p>Valeur reliée à une notice, une fiche fabricant ou une source normative identifiée.</p></article>
+					<article><span>02</span><strong>Mesuré</strong><p>Valeur brute avec point, instrument, scénario, unité et horodatage.</p></article>
+					<article><span>03</span><strong>Calculé</strong><p>Résultat reproductible dont les entrées et la méthode restent visibles.</p></article>
+					<article><span>04</span><strong>À confirmer</strong><p>Hypothèse, donnée partielle ou comparaison impossible conservée comme telle.</p></article>
+				</div>
+			</div>
+		</section>
+
+		<section class="section series-path" id="parcours">
+			<div class="container">
+				<header class="product-section-head"><div><p class="product-decision-index">Parcours complet</p><h2>Lire dans l’ordre, intervenir au bon endroit</h2></div><p>Chaque guide possède sa propre intention. La page d’audit cadre le système, les satellites approfondissent une tâche sans recopier le dossier principal.</p></header>
+				<div class="series-stage-list">
+					{stages.map((stage) => <section class="series-stage" data-series-stage={stage.index}>
+						<header><span>{stage.index}</span><UiIcon name={stage.icon} size={28} /><div><p>{stage.label}</p><h2>{stage.title}</h2><small>{stage.description}</small></div></header>
+						<div class="series-guide-grid">{stage.guides.map((guide) => <article><p>{guide.data.category} · {guide.data.readingTime} min</p><h3><a href={`/guides/${guide.id}/`}>{guide.data.title}</a></h3><small>{guide.data.description}</small><a class="text-link" href={`/guides/${guide.id}/`}>Lire ce guide</a></article>)}</div>
+					</section>)}
+				</div>
+			</div>
+		</section>
+
+		<section class="section series-tools">
+			<div class="container">
+				<header class="product-section-head"><div><p class="product-decision-index">Passer au terrain</p><h2>Quatre outils locaux, le même fil de preuve</h2></div><p>Les données restent dans le navigateur. Chaque parcours organise la comparaison sans déclarer une cause ou un intervalle que vos preuves ne permettent pas d’établir.</p></header>
+				<div class="series-tool-grid">
+					<a href="/mise-en-service/"><span>01</span><strong>Créer le point zéro</strong><small>Recette et mesures initiales</small></a>
+					<a href="/suivi-exploitation/"><span>02</span><strong>Rejouer les contrôles</strong><small>Évolution et écarts comparables</small></a>
+					<a href="/diagnostic-intervention/"><span>03</span><strong>Fermer une intervention</strong><small>Action et contre-mesure</small></a>
+					<a href="/maintenance-preventive/"><span>04</span><strong>Planifier sans inventer</strong><small>Échéances et récurrences</small></a>
+				</div>
+			</div>
+		</section>
+	</main>
+</BaseLayout>
+
+<style>
+	.series-hero { padding: clamp(5rem, 9vw, 8rem) 0 4rem; background: radial-gradient(circle at 77% 22%, rgba(211,235,86,.13), transparent 28%), linear-gradient(135deg, #0e241b, #17382b); color: white; overflow: hidden; }
+	.series-hero-grid { display: grid; grid-template-columns: minmax(0, 1.04fr) minmax(360px, .96fr); gap: clamp(2.5rem, 6vw, 6rem); align-items: center; }
+	.series-hero h1 { color: white; max-width: 780px; margin: .7rem 0 1.25rem; }
+	.series-hero .lead { color: #cfddd5; max-width: 760px; }
+	.series-instrument { background: rgba(8,22,16,.8); border: 1px solid rgba(211,235,86,.26); border-radius: 24px; padding: 1.4rem; box-shadow: 0 28px 70px rgba(0,0,0,.28); }
+	.series-instrument header, .series-instrument footer { display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-size: .72rem; letter-spacing: .12em; }
+	.series-instrument header span { color: #d3eb56; }
+	.series-instrument > div { display: grid; grid-template-columns: repeat(4, 1fr); gap: .65rem; margin: 1.4rem 0 .5rem; }
+	.series-instrument > div span { padding: .8rem; border: 1px solid rgba(255,255,255,.13); border-radius: 12px; display: grid; gap: .2rem; }
+	.series-instrument b { color: #d3eb56; }
+	.series-instrument small { color: #c9d6cf; }
+	.series-instrument svg { width: 100%; height: auto; }
+	.series-instrument footer { color: #b7c8bf; }
+	.series-instrument footer strong { color: white; }
+	.series-principles { background: #f3f5ef; }
+	.series-principle-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+	.series-principle-grid article { background: white; border: 1px solid rgba(20,52,38,.12); border-radius: 18px; padding: 1.5rem; }
+	.series-principle-grid span { color: #19704f; font-weight: 800; font-size: .8rem; }
+	.series-principle-grid strong { display: block; font-family: var(--font-display); font-size: 1.35rem; margin: .8rem 0 .45rem; color: #143426; }
+	.series-principle-grid p { margin: 0; color: #56685e; font-size: .92rem; }
+	.series-stage-list { display: grid; gap: 1.25rem; }
+	.series-stage { display: grid; grid-template-columns: minmax(260px, .7fr) minmax(0, 1.3fr); gap: 2rem; padding: clamp(1.4rem, 3vw, 2.4rem); border: 1px solid rgba(20,52,38,.14); border-radius: 24px; background: linear-gradient(135deg, #fff, #f4f7f1); }
+	.series-stage > header { display: grid; grid-template-columns: auto auto 1fr; gap: .8rem; align-items: start; }
+	.series-stage > header > span { color: #19704f; font-weight: 800; }
+	.series-stage > header p { color: #19704f; text-transform: uppercase; letter-spacing: .1em; font-size: .73rem; font-weight: 800; margin: 0 0 .45rem; }
+	.series-stage > header h2 { font-size: clamp(1.45rem, 2.5vw, 2.2rem); margin: 0 0 .65rem; }
+	.series-stage > header small { color: #56685e; line-height: 1.6; }
+	.series-guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+	.series-guide-grid article { background: white; padding: 1.25rem; border-radius: 16px; box-shadow: 0 10px 28px rgba(16,40,30,.07); display: flex; flex-direction: column; }
+	.series-guide-grid article:first-child:last-child { grid-column: 1 / -1; }
+	.series-guide-grid p { color: #19704f; font-size: .76rem; font-weight: 800; margin: 0 0 .6rem; }
+	.series-guide-grid h3 { font-size: 1.15rem; margin: 0 0 .6rem; }
+	.series-guide-grid h3 a { color: #143426; text-decoration: none; }
+	.series-guide-grid small { color: #56685e; line-height: 1.55; flex: 1; }
+	.series-guide-grid .text-link { margin-top: 1rem; }
+	.series-tools { background: #10281e; color: white; }
+	.series-tools h2, .series-tools .product-decision-index { color: white; }
+	.series-tools .product-section-head > p { color: #c8d7cf; }
+	.series-tool-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+	.series-tool-grid a { padding: 1.4rem; border: 1px solid rgba(211,235,86,.22); border-radius: 18px; color: white; text-decoration: none; display: grid; gap: .55rem; background: rgba(255,255,255,.035); }
+	.series-tool-grid a:hover { border-color: #d3eb56; transform: translateY(-2px); }
+	.series-tool-grid span { color: #d3eb56; font-weight: 800; }
+	.series-tool-grid strong { font-family: var(--font-display); font-size: 1.25rem; }
+	.series-tool-grid small { color: #b9cac1; }
+	@media (max-width: 920px) { .series-hero-grid, .series-stage { grid-template-columns: 1fr; } .series-principle-grid, .series-tool-grid { grid-template-columns: repeat(2, 1fr); } }
+	@media (max-width: 620px) { .series-hero { padding-top: 3.5rem; } .series-hero-grid { gap: 2rem; } .series-instrument > div { grid-template-columns: repeat(2, 1fr); } .series-principle-grid, .series-guide-grid, .series-tool-grid { grid-template-columns: 1fr; } .series-stage > header { grid-template-columns: auto 1fr; } .series-stage > header div { grid-column: 1 / -1; } }
+</style>

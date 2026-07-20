@@ -1,7 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
-import { guideAudienceIds, guideMetierIds } from './domain/editorial-taxonomy';
+import { guideAudienceIds, guideMetierIds, guideSeriesIds } from './domain/editorial-taxonomy';
 
 const guides = defineCollection({
 	loader: glob({ base: './src/content/guides', pattern: '**/*.md' }),
@@ -21,6 +21,8 @@ const guides = defineCollection({
 		reviewer: z.string().min(2).optional(),
 		reviewerRole: z.string().min(2).optional(),
 		relatedCalculatorTool: z.string().optional(),
+		series: z.enum(guideSeriesIds).optional(),
+		relatedGuides: z.array(z.string().regex(/^[a-z0-9-]+$/)).max(6).default([]),
 		sources: z.array(z.url()).min(1),
 	}).superRefine((guide, context) => {
 		if (new Set(guide.audiences).size !== guide.audiences.length) {

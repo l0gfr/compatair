@@ -3,10 +3,16 @@ title: "Mesurer les temps en charge et à vide d’un compresseur avant de régl
 seoTitle: "Mesurer charge et marche à vide compresseur"
 description: "Protocole de relevé des états charge, marche à vide et arrêt pour établir un profil avant toute modification de pression ou de temporisation."
 pubDate: 2026-07-15
+updatedDate: 2026-07-20
 category: "Utiliser"
 audiences: [professionnel]
 metiers: [maintenance-industrielle]
 readingTime: 13
+series: audit-suivi-maintenance-air-comprime
+relatedGuides:
+  - audit-reseau-air-comprime-protocole-mesures
+  - indicateurs-maintenance-air-comprime
+  - fiche-intervention-air-comprime
 sources:
   - https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf
   - https://www.cagi.org/performance-verification

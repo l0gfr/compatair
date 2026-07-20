@@ -1,5 +1,18 @@
 export const guideAudienceIds = ['particulier', 'professionnel'] as const;
 
+export const guideSeriesIds = ['audit-suivi-maintenance-air-comprime'] as const;
+
+export type GuideSeriesId = (typeof guideSeriesIds)[number];
+
+export const guideSeries: Record<GuideSeriesId, { label: string; title: string; description: string; path: string }> = {
+	'audit-suivi-maintenance-air-comprime': {
+		label: 'Audit, suivi et maintenance',
+		title: 'Audit, suivi et maintenance d’un réseau d’air comprimé',
+		description: 'Établir une ligne de base, lire une dérive, documenter l’intervention et vérifier le retour à une situation maîtrisée.',
+		path: '/guides/dossiers/audit-suivi-maintenance-air-comprime/',
+	},
+};
+
 export type GuideAudienceId = (typeof guideAudienceIds)[number];
 
 export const guideAudiences: Record<GuideAudienceId, { label: string; title: string; seoTitle: string; description: string }> = {

@@ -1,0 +1,29 @@
+---
+type Props = { guideCount: number; compact?: boolean };
+const { guideCount, compact = false } = Astro.props;
+---
+
+<section class:list={["section", "guide-series-callout", { compact }]} data-guide-series-callout>
+	<div class="container">
+		<a href="/guides/dossiers/audit-suivi-maintenance-air-comprime/">
+			<div><p>Dossier professionnel · {guideCount} guides reliés</p><h2>Audit, suivi et maintenance d’un réseau d’air comprimé</h2><small>De la ligne de base à la contre-mesure : un parcours continu qui sépare données publiées, mesures, calculs et hypothèses.</small></div>
+			<span><b>01</b><i></i><b>02</b><i></i><b>03</b><i></i><b>04</b></span>
+			<strong>Explorer le dossier →</strong>
+		</a>
+	</div>
+</section>
+
+<style>
+	.guide-series-callout { background: #f3f5ef; }
+	.guide-series-callout.compact { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+	.guide-series-callout a { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: clamp(1.5rem, 4vw, 4rem); align-items: center; padding: clamp(1.5rem, 3vw, 2.4rem); border-radius: 24px; background: #10281e; color: white; text-decoration: none; box-shadow: 0 20px 52px rgba(16,40,30,.14); }
+	.guide-series-callout p { color: #d3eb56; font-size: .76rem; font-weight: 800; text-transform: uppercase; letter-spacing: .09em; margin: 0 0 .55rem; }
+	.guide-series-callout h2 { color: white; margin: 0 0 .55rem; font-size: clamp(1.55rem, 3vw, 2.5rem); }
+	.guide-series-callout small { color: #c8d7cf; line-height: 1.55; }
+	.guide-series-callout span { display: flex; align-items: center; gap: .45rem; color: #d3eb56; }
+	.guide-series-callout span i { width: 20px; height: 1px; background: rgba(211,235,86,.45); }
+	.guide-series-callout span b { font-size: .7rem; }
+	.guide-series-callout > div > a > strong { color: #d3eb56; white-space: nowrap; }
+	.guide-series-callout a:hover { transform: translateY(-2px); }
+	@media (max-width: 820px) { .guide-series-callout a { grid-template-columns: 1fr; } .guide-series-callout > div > a > strong { white-space: normal; } }
+</style>

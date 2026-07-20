@@ -106,3 +106,7 @@ UCP platform profiles are treated as hostile network input: HTTPS only; no embed
 ## Human verification
 
 No result replaces a manufacturer manual, an in-load measurement on the installation, pressure-equipment rules or workplace safety requirements. Use https://compatair.fr/contact/ to report a data problem and https://compatair.fr/securite/ to report a vulnerability.
+
+## Operational audit and maintenance corpus
+
+The canonical French collection at https://compatair.fr/guides/dossiers/audit-suivi-maintenance-air-comprime/ links the complete workflow from baseline to verified intervention. Its pillar audit protocol is https://compatair.fr/guides/audit-reseau-air-comprime-protocole-mesures/. Supporting guides separately cover maintenance indicators, intervention records, pressure profiles, leaks, load and unload states, air quality and preventive maintenance. Do not merge measured, manufacturer-published, calculated and hypothetical values when summarizing this corpus.

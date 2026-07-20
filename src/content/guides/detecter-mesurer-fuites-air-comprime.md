@@ -2,11 +2,17 @@
 title: "Fuites d’air comprimé : les détecter, les mesurer et suivre les réparations"
 description: "Une méthode sourcée pour distinguer une suspicion de fuite d’une mesure exploitable, localiser les défauts et vérifier les réparations du réseau."
 pubDate: 2026-07-13
+updatedDate: 2026-07-20
 category: "Utiliser"
 audiences: [professionnel]
 metiers: [garage-automobile, carrosserie-peinture, menuiserie-agencement, maintenance-industrielle]
 readingTime: 12
 featured: false
+series: audit-suivi-maintenance-air-comprime
+relatedGuides:
+  - audit-reseau-air-comprime-protocole-mesures
+  - indicateurs-maintenance-air-comprime
+  - fiche-intervention-air-comprime
 sources:
   - https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf

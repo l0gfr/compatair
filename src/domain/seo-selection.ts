@@ -33,20 +33,17 @@ function compressorLabel(compressor: Compressor) {
 
 export function rankCompatibleCompressors(matches: ToolCompatibilityMatch[], options: RankingOptions = {}) {
 	const audiences = options.audiences ?? ['particulier', 'professionnel'];
-	const availableProductIds = options.availableProductIds ?? new Set<string>();
 	return [...matches].sort((a, b) => {
-		const audienceDifference = audiencePenalty(a.compressor, audiences) - audiencePenalty(b.compressor, audiences);
-		if (audienceDifference) return audienceDifference;
 		const verdictDifference = verdictRank[a.result.verdict] - verdictRank[b.result.verdict];
 		if (verdictDifference) return verdictDifference;
+		const confidenceDifference = confidenceRank[a.compressor.confidence] - confidenceRank[b.compressor.confidence];
+		if (confidenceDifference) return confidenceDifference;
+		const audienceDifference = audiencePenalty(a.compressor, audiences) - audiencePenalty(b.compressor, audiences);
+		if (audienceDifference) return audienceDifference;
 		const flowDifference = (a.result.availableFadLpm ?? Number.POSITIVE_INFINITY) - (b.result.availableFadLpm ?? Number.POSITIVE_INFINITY);
 		if (flowDifference) return flowDifference;
 		const tankDifference = a.compressor.tankLiters - b.compressor.tankLiters;
 		if (tankDifference) return tankDifference;
-		const availabilityDifference = Number(availableProductIds.has(b.compressor.id)) - Number(availableProductIds.has(a.compressor.id));
-		if (availabilityDifference) return availabilityDifference;
-		const confidenceDifference = confidenceRank[a.compressor.confidence] - confidenceRank[b.compressor.confidence];
-		if (confidenceDifference) return confidenceDifference;
 		const freshnessDifference = latestEvidenceDate(b.compressor).localeCompare(latestEvidenceDate(a.compressor));
 		return freshnessDifference || compressorLabel(a.compressor).localeCompare(compressorLabel(b.compressor), 'fr');
 	});
