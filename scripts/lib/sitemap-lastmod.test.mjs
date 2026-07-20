@@ -47,6 +47,35 @@ describe('sitemap lastmod', () => {
 		expect(resolver('https://compatair.fr/suivi-exploitation/')).toBe('2026-07-20T08:00:00+00:00');
 	});
 
+	it('relie le diagnostic d’intervention au suivi et à ses exports', () => {
+		const resolver = createSitemapLastmodResolver({ gitDate: (files) => {
+			expect(files).toContain('src/pages/diagnostic-intervention.astro');
+			expect(files).toContain('src/pages/suivi-exploitation.astro');
+			expect(files).toContain('src/components/OperationMonitoringViewer.astro');
+			expect(files).toContain('src/domain/operation-monitoring.ts');
+			expect(files).toContain('src/domain/intervention.ts');
+			expect(files).toContain('src/domain/passport-pdf.ts');
+			return '2026-07-20T12:00:00+00:00';
+		} });
+		expect(resolver('https://compatair.fr/diagnostic-intervention/')).toBe('2026-07-20T12:00:00+00:00');
+	});
+
+	it('relie la maintenance préventive aux mesures, interventions et exports', () => {
+		const resolver = createSitemapLastmodResolver({ gitDate: (files) => {
+			expect(files).toContain('src/pages/maintenance-preventive.astro');
+			expect(files).toContain('src/pages/diagnostic-intervention.astro');
+			expect(files).toContain('src/components/InterventionViewer.astro');
+			expect(files).toContain('src/pages/suivi-exploitation.astro');
+			expect(files).toContain('src/components/OperationMonitoringViewer.astro');
+			expect(files).toContain('src/domain/operation-monitoring.ts');
+			expect(files).toContain('src/domain/intervention.ts');
+			expect(files).toContain('src/domain/preventive-maintenance.ts');
+			expect(files).toContain('src/domain/passport-pdf.ts');
+			return '2026-07-20T16:00:00+00:00';
+		} });
+		expect(resolver('https://compatair.fr/maintenance-preventive/')).toBe('2026-07-20T16:00:00+00:00');
+	});
+
 	it('associe une page guide à son contenu éditorial', () => {
 		const resolver = createSitemapLastmodResolver({ gitDate: (files) => dates.get(files.join(',')) });
 		expect(resolver('https://compatair.fr/guides/exemple/')).toBe('2026-07-11T09:00:00+00:00');

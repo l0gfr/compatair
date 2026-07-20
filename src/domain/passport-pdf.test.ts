@@ -58,5 +58,35 @@ describe('CompatAir passport PDF', () => {
 		expect(text).toContain('Purge ou vidange déclarée');
 		expect(text).toContain('Échéance constructeur non documentée');
 		expect(text).toContain("ne certifie ni l'état du matériel");
+
+		const operationLogWithIntervention = {
+			...operationLog,
+			updatedAt: '2026-08-22T10:00:00.000Z',
+			entries: [
+				...operationLog.entries,
+				{ id: 'degraded', observedOn: '2026-08-20', recordedAt: '2026-08-20T10:00:00.000Z', sourcePressureBar: 7, toolPressureBar: 6, measuredLeakLpm: 12, operatingHours: 125, representativeUseObserved: true, configurationUnchanged: true, maintenanceAction: 'none' as const },
+				{ id: 'counter', observedOn: '2026-08-22', recordedAt: '2026-08-22T10:00:00.000Z', sourcePressureBar: 7, toolPressureBar: 6.5, measuredLeakLpm: 0, operatingHours: 126, representativeUseObserved: true, configurationUnchanged: true, maintenanceAction: 'other' as const },
+			],
+		};
+		const interventionLog = {
+			version: '1.0.0' as const, passportId: report.passportId, createdAt: '2026-08-20T10:00:00.000Z', updatedAt: '2026-08-22T10:00:00.000Z',
+			entries: [{ id: 'repair-1', sourceCheckId: 'degraded', counterCheckId: 'counter', performedOn: '2026-08-21', recordedAt: '2026-08-22T10:00:00.000Z', category: 'hose_or_fitting' as const, actionDescription: 'Raccord remplacé après localisation de la perte.', diagnostics: [{ id: 'section-loss' as const, status: 'anomaly_measured' as const, note: 'Perte localisée au raccord.' }] }],
+		};
+		const interventionText = new TextDecoder('latin1').decode(createPassportPdf(report, 'https://compatair.fr/diagnostic-intervention/#passport=fixture', { operationLog: operationLogWithIntervention, interventionLog }));
+		expect(interventionText).toContain("DOSSIER D'INTERVENTION");
+		expect(interventionText).toContain("Dossiers d'intervention");
+		expect(interventionText).toContain('Écart clôturé après contre-mesure');
+		expect(interventionText).toContain('il ne certifie ni la cause');
+
+		const maintenanceLog = {
+			version: '1.0.0' as const, passportId: report.passportId, createdAt: '2026-08-22T10:00:00.000Z', updatedAt: '2026-08-23T10:00:00.000Z',
+			tasks: [{ id: 'filter', label: 'Contrôler le filtre', category: 'filter' as const, scheduleSource: 'manufacturer' as const, sourceReference: 'Notice modèle, chapitre entretien', dueOn: '2026-09-01', createdAt: '2026-08-22T10:00:00.000Z', active: true }],
+			records: [{ id: 'maintenance-1', taskLabel: 'Purge du réservoir', category: 'drain' as const, performedOn: '2026-08-23', recordedAt: '2026-08-23T10:00:00.000Z', result: 'completed' as const, actionDescription: 'Purge réalisée et résultat contrôlé.', operatingHours: 130 }],
+		};
+		const maintenanceText = new TextDecoder('latin1').decode(createPassportPdf(report, 'https://compatair.fr/maintenance-preventive/#passport=fixture', { operationLog: operationLogWithIntervention, interventionLog, maintenanceLog }));
+		expect(maintenanceText).toContain('PLAN DE MAINTENANCE');
+		expect(maintenanceText).toContain('Maintenance préventive');
+		expect(maintenanceText).toContain('Notice modèle, chapitre entretien');
+		expect(maintenanceText).toContain('ne prescrit aucun intervalle');
 	});
 });

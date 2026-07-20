@@ -1,0 +1,33 @@
+---
+import PreventiveMaintenanceViewer from '../components/PreventiveMaintenanceViewer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+	title="Planifier la maintenance préventive | CompatAir"
+	description="Transformez les contrôles, dérives et interventions d’une installation en plan de maintenance local, daté et fondé sur des échéances explicitement déclarées."
+	canonicalPath="/maintenance-preventive/"
+>
+	<section class="maintenance-hero">
+		<div class="container maintenance-hero-grid">
+			<div>
+				<p class="eyebrow">Du diagnostic ponctuel à la maintenance préventive</p>
+				<h1>Voir ce qui revient. <em>Agir avant la prochaine dérive.</em></h1>
+				<p class="lead">CompatAir rassemble mesures, échéances déclarées et actions réellement réalisées. Il met les priorités en ordre sans inventer un intervalle constructeur ni transformer une récurrence en cause certaine.</p>
+			</div>
+			<div class="maintenance-hero-graphic" aria-label="Les mesures et les échéances déclarées alimentent un plan, des actions et un historique vérifiable.">
+				<div><span>01</span><strong>Mesures</strong><small>même protocole</small></div>
+				<i>+</i>
+				<div><span>02</span><strong>Échéances</strong><small>notice ou règle déclarée</small></div>
+				<i>→</i>
+				<div><span>03</span><strong>Priorités</strong><small>calcul déterministe</small></div>
+				<i>→</i>
+				<div><span>04</span><strong>Actions</strong><small>preuve conservée</small></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section maintenance-viewer-section">
+		<div class="container"><PreventiveMaintenanceViewer /></div>
+	</section>
+</BaseLayout>

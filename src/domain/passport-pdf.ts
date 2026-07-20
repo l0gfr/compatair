@@ -1,6 +1,8 @@
 import { passportVerdictLabel, type PassportReport } from './passport';
 import { commissioningVerdictLabel, type CommissioningAssessment } from './commissioning';
 import { assessOperationCheck, maintenanceActionLabel, operationLogSchema, operationVerdictLabel, type OperationLog } from './operation-monitoring';
+import { assessIntervention, diagnosticObservationLabel, interventionCategoryLabel, interventionLogSchema, interventionOutcomeLabel, type InterventionLog } from './intervention';
+import { assessPreventiveMaintenance, maintenanceCategoryLabel, maintenanceLogSchema, maintenanceRecordResultLabel, maintenanceStatusLabel, type MaintenanceLog } from './preventive-maintenance';
 
 const PAGE_WIDTH = 595;
 const PAGE_HEIGHT = 842;
@@ -70,13 +72,22 @@ function installationStatusLabel(item: PassportReport['installationPlan']['items
 	return item.completed ? 'MESURE RENSEIGNEE' : 'A MESURER SUR SITE';
 }
 
-export function createPassportPdf(report: PassportReport, passportUrl: string, options: { commissioningAssessment?: CommissioningAssessment; operationLog?: OperationLog } = {}) {
+export function createPassportPdf(report: PassportReport, passportUrl: string, options: { commissioningAssessment?: CommissioningAssessment; operationLog?: OperationLog; interventionLog?: InterventionLog; maintenanceLog?: MaintenanceLog } = {}) {
 	const commissioningAssessment = options.commissioningAssessment;
 	const operationLog = options.operationLog ? operationLogSchema.parse(options.operationLog) : undefined;
 	if (operationLog && operationLog.passportId !== report.passportId) throw new Error('Le carnet ne correspond pas au Passeport exporté.');
+	const interventionLog = options.interventionLog ? interventionLogSchema.parse(options.interventionLog) : undefined;
+	if (interventionLog && interventionLog.passportId !== report.passportId) throw new Error('Le dossier d’intervention ne correspond pas au Passeport exporté.');
+	if (interventionLog && !operationLog) throw new Error('Le carnet d’exploitation est requis pour exporter les interventions.');
+	const maintenanceLog = options.maintenanceLog ? maintenanceLogSchema.parse(options.maintenanceLog) : undefined;
+	if (maintenanceLog && maintenanceLog.passportId !== report.passportId) throw new Error('Le plan de maintenance ne correspond pas au Passeport exporté.');
+	if (maintenanceLog && (!operationLog || !interventionLog)) throw new Error('Le carnet d’exploitation et les interventions sont requis pour exporter la maintenance.');
 	const operationAssessments = operationLog?.entries.map((entry) => ({ entry, assessment: assessOperationCheck(report, operationLog, entry) })) ?? [];
 	const latestOperationAssessment = operationAssessments.at(-1)?.assessment;
-	const documentLabel = operationLog ? "CARNET D'EXPLOITATION" : commissioningAssessment ? 'RECU DE RECETTE TERRAIN' : 'PASSEPORT COMPATAIR';
+	const interventionAssessments = interventionLog?.entries.map((entry) => ({ entry, assessment: assessIntervention(report, operationLog!, entry) })) ?? [];
+	const latestInterventionAssessment = interventionAssessments.at(-1)?.assessment;
+	const maintenanceAssessment = maintenanceLog ? assessPreventiveMaintenance(report, operationLog!, interventionLog!, maintenanceLog, new Date().toISOString().slice(0, 10)) : undefined;
+	const documentLabel = maintenanceLog ? 'PLAN DE MAINTENANCE' : interventionLog ? "DOSSIER D'INTERVENTION" : operationLog ? "CARNET D'EXPLOITATION" : commissioningAssessment ? 'RECU DE RECETTE TERRAIN' : 'PASSEPORT COMPATAIR';
 	const pages: string[][] = [];
 	let page: string[];
 	let y: number;
@@ -85,7 +96,7 @@ export function createPassportPdf(report: PassportReport, passportUrl: string, o
 			'0.063 0.157 0.118 rg 0 794 595 48 re f',
 			'0.827 0.922 0.337 rg 52 811 18 3 re f',
 			`BT /F2 15 Tf 1 1 1 rg 1 0 0 1 80 808 Tm (${pdfLiteral('CompatAir')}) Tj ET`,
-			`BT /F1 8 Tf 0.78 0.84 0.80 rg 1 0 0 1 432 808 Tm (${pdfLiteral(operationLog ? `Suivi ${operationLog.version}` : commissioningAssessment ? `Recette ${commissioningAssessment.version}` : `Passeport ${report.schemaVersion}`)}) Tj ET`,
+			`BT /F1 8 Tf 0.78 0.84 0.80 rg 1 0 0 1 432 808 Tm (${pdfLiteral(maintenanceLog ? `Maintenance ${maintenanceLog.version}` : interventionLog ? `Intervention ${interventionLog.version}` : operationLog ? `Suivi ${operationLog.version}` : commissioningAssessment ? `Recette ${commissioningAssessment.version}` : `Passeport ${report.schemaVersion}`)}) Tj ET`,
 		];
 		pages.push(page);
 		y = 770;
@@ -121,7 +132,7 @@ export function createPassportPdf(report: PassportReport, passportUrl: string, o
 	addPage();
 	addTextLine(documentLabel, 9, true, '0.10 0.44 0.31', MARGIN, 26);
 	addParagraph(report.compressorLabel, { size: 25, bold: true, color: '0.063 0.157 0.118', spacing: 9 });
-	addParagraph(latestOperationAssessment ? operationVerdictLabel(latestOperationAssessment.verdict) : operationLog ? 'Carnet prêt pour un premier contrôle' : commissioningAssessment ? commissioningVerdictLabel(commissioningAssessment.verdict) : passportVerdictLabel(report.result), { size: 14, bold: true, color: latestOperationAssessment?.verdict === 'degradation_observed' || report.result.verdict === 'incompatible' ? '0.64 0.18 0.16' : '0.10 0.44 0.31', spacing: 6 });
+	addParagraph(maintenanceAssessment ? maintenanceStatusLabel(maintenanceAssessment.status) : latestInterventionAssessment ? interventionOutcomeLabel(latestInterventionAssessment.outcome) : latestOperationAssessment ? operationVerdictLabel(latestOperationAssessment.verdict) : operationLog ? 'Carnet prêt pour un premier contrôle' : commissioningAssessment ? commissioningVerdictLabel(commissioningAssessment.verdict) : passportVerdictLabel(report.result), { size: 14, bold: true, color: maintenanceAssessment?.status === 'action_required' || latestInterventionAssessment?.outcome === 'not_resolved' || latestInterventionAssessment?.outcome === 'insufficient_data' || latestOperationAssessment?.verdict === 'degradation_observed' || report.result.verdict === 'incompatible' ? '0.64 0.18 0.16' : '0.10 0.44 0.31', spacing: 6 });
 	addParagraph(`Identifiant ${report.passportId} - moteur ${report.calculationVersion} - catalogue vérifié le ${report.catalogVerifiedAt}.`, { size: 8.5, color: '0.33 0.40 0.35', spacing: 12 });
 
 	if (commissioningAssessment) {
@@ -158,6 +169,51 @@ export function createPassportPdf(report: PassportReport, passportUrl: string, o
 		} else {
 			addParagraph('Échéance constructeur non documentée. Consigner l’intervalle exact depuis la notice du modèle ; CompatAir ne lui substitue aucun intervalle générique.', { size: 8.5, bold: true, color: '0.42 0.31 0.11', spacing: 8 });
 		}
+	}
+
+	if (interventionLog) {
+		addHeading("Dossiers d'intervention");
+		addParagraph(`${interventionLog.entries.length} intervention${interventionLog.entries.length > 1 ? 's' : ''} consignée${interventionLog.entries.length > 1 ? 's' : ''}. Chaque issue est recalculée depuis le contrôle déclencheur et la contre-mesure.`, { size: 10, bold: true, color: '0.063 0.157 0.118', spacing: 8 });
+		if (!interventionAssessments.length) addParagraph('Aucune intervention n’est encore enregistrée dans ce dossier.', { size: 9, color: '0.33 0.40 0.35', spacing: 8 });
+		for (const { entry, assessment } of [...interventionAssessments].reverse()) {
+			const source = operationLog!.entries.find((check) => check.id === entry.sourceCheckId)!;
+			const counter = operationLog!.entries.find((check) => check.id === entry.counterCheckId)!;
+			addParagraph(`${entry.performedOn} - ${interventionOutcomeLabel(assessment.outcome)}`, { size: 10, bold: true, color: assessment.outcome === 'resolved' ? '0.10 0.44 0.31' : assessment.outcome === 'improved' ? '0.42 0.31 0.11' : '0.64 0.18 0.16', spacing: 3 });
+			addParagraph(assessment.primaryFinding, { size: 8.5, spacing: 4 });
+			addBullet(`${interventionCategoryLabel(entry.category)} - ${entry.actionDescription}`);
+			addBullet(`Diagnostic : ${assessment.diagnostic.completedCount}/${assessment.diagnostic.steps.length} contrôles réalisés - ${assessment.diagnostic.anomalyCount} anomalie${assessment.diagnostic.anomalyCount > 1 ? 's' : ''} déclarée${assessment.diagnostic.anomalyCount > 1 ? 's' : ''}. ${assessment.diagnostic.conclusion}`);
+			for (const observation of entry.diagnostics) {
+				const step = assessment.diagnostic.steps.find((candidate) => candidate.id === observation.id);
+				if (step) addBullet(`${step.label} : ${diagnosticObservationLabel(observation.status)}${observation.note ? ` - ${observation.note}` : ''}.`);
+			}
+			addBullet(`Avant : source ${source.sourcePressureBar === undefined ? 'non mesurée' : `${formatNumber(source.sourcePressureBar, 2)} bar`} - poste ${source.toolPressureBar === undefined ? 'non mesuré' : `${formatNumber(source.toolPressureBar, 2)} bar`} - fuite ${source.measuredLeakLpm === undefined ? 'non mesurée' : `${formatNumber(source.measuredLeakLpm)} L/min`}.`);
+			addBullet(`Après : source ${counter.sourcePressureBar === undefined ? 'non mesurée' : `${formatNumber(counter.sourcePressureBar, 2)} bar`} - poste ${counter.toolPressureBar === undefined ? 'non mesuré' : `${formatNumber(counter.toolPressureBar, 2)} bar`} - fuite ${counter.measuredLeakLpm === undefined ? 'non mesurée' : `${formatNumber(counter.measuredLeakLpm)} L/min`}.`);
+			for (const action of assessment.actions) addBullet(`Suite : ${action}`);
+		}
+		addParagraph('Une amélioration ne clôt pas un écart tant qu’un signal reste présent. Le dossier ne certifie ni la cause, ni la réparation, ni la conformité de l’installation.', { size: 8.5, bold: true, color: '0.42 0.31 0.11', spacing: 8 });
+	}
+
+	if (maintenanceLog && maintenanceAssessment) {
+		addHeading('Maintenance préventive');
+		addParagraph(maintenanceAssessment.primaryFinding, { size: 10, bold: true, color: maintenanceAssessment.status === 'action_required' ? '0.64 0.18 0.16' : '0.063 0.157 0.118', spacing: 8 });
+		addBullet(`${maintenanceAssessment.counts.overdue} échéance${maintenanceAssessment.counts.overdue > 1 ? 's' : ''} dépassée${maintenanceAssessment.counts.overdue > 1 ? 's' : ''} - ${maintenanceAssessment.counts.due} atteinte${maintenanceAssessment.counts.due > 1 ? 's' : ''} - ${maintenanceAssessment.counts.recurringSignals} signal${maintenanceAssessment.counts.recurringSignals > 1 ? 's' : ''} récurrent${maintenanceAssessment.counts.recurringSignals > 1 ? 's' : ''}.`);
+		addBullet(maintenanceAssessment.currentOperatingHours === undefined ? 'Dernier compteur d’heures : non renseigné.' : `Dernier compteur déclaré : ${formatNumber(maintenanceAssessment.currentOperatingHours)} h.`);
+		for (const recommendation of maintenanceAssessment.recommendations) addBullet(`${recommendation.priority === 'critical' ? 'PRIORITE' : recommendation.priority === 'attention' ? 'ATTENTION' : 'PLAN'} - ${recommendation.label}. ${recommendation.finding} Action : ${recommendation.action}`);
+		addParagraph('Échéances actives', { size: 10, bold: true, color: '0.063 0.157 0.118', spacing: 4 });
+		if (!maintenanceAssessment.tasks.length) addParagraph('Aucune échéance issue d’une notice ou d’une règle de site n’est structurée.', { size: 8.5, color: '0.33 0.40 0.35', spacing: 7 });
+		for (const task of maintenanceAssessment.tasks) {
+			addBullet(`${task.statusLabel.toUpperCase()} - ${maintenanceCategoryLabel(task.category)} - ${task.label}. ${task.statusFinding}`);
+			addParagraph(`Source déclarée : ${task.sourceReference}${task.note ? ` - ${task.note}` : ''}`, { size: 8, color: '0.33 0.40 0.35', spacing: 5 });
+		}
+		addParagraph('Actions consignées', { size: 10, bold: true, color: '0.063 0.157 0.118', spacing: 4 });
+		if (!maintenanceLog.records.length) addParagraph('Aucune action préventive n’est encore consignée.', { size: 8.5, color: '0.33 0.40 0.35', spacing: 7 });
+		for (const record of [...maintenanceLog.records].reverse()) {
+			addParagraph(`${record.performedOn} - ${maintenanceRecordResultLabel(record.result)}`, { size: 9.5, bold: true, color: record.result === 'partial' ? '0.42 0.31 0.11' : '0.10 0.44 0.31', spacing: 3 });
+			addBullet(`${maintenanceCategoryLabel(record.category)} - ${record.taskLabel}. ${record.actionDescription}`);
+			if (record.operatingHours !== undefined) addBullet(`Compteur déclaré au moment de l’action : ${formatNumber(record.operatingHours)} h.`);
+			if (record.evidenceNote) addParagraph(`Preuve ou observation déclarée : ${record.evidenceNote}`, { size: 8, color: '0.33 0.40 0.35', spacing: 5 });
+		}
+		addParagraph('CompatAir calcule le statut depuis les mesures et les échéances déclarées. Il ne prescrit aucun intervalle générique, ne qualifie pas une cause mécanique et ne remplace ni la notice, ni les contrôles de sécurité applicables.', { size: 8.5, bold: true, color: '0.42 0.31 0.11', spacing: 8 });
 	}
 
 	addHeading("Plan d'installation et de mise en service");
@@ -210,7 +266,7 @@ export function createPassportPdf(report: PassportReport, passportUrl: string, o
 
 	addHeading('URL versionnée');
 	addParagraph(passportUrl, { size: 6.5, color: '0.33 0.40 0.35', spacing: 8 });
-	addParagraph(`Ce document est produit localement dans le navigateur. Le rapport, sa configuration et ses codes de contrôle restent après le caractère # de l’URL et ne sont pas envoyés au serveur. ${operationLog ? "Le carnet compare les valeurs déclarées à la recette initiale ; il ne certifie ni l'état du matériel, ni la conformité de l'installation, ni une échéance d'entretien." : commissioningAssessment ? 'Le reçu constate les valeurs saisies et le résultat du moteur ; il ne constitue ni une réception réglementaire, ni une certification, ni une autorisation d’usage.' : 'Le Passeport ne remplace ni une mesure en charge, ni la notice constructeur, ni une vérification réglementaire.'}`, { size: 8.5, color: '0.33 0.40 0.35' });
+	addParagraph(`Ce document est produit localement dans le navigateur. Le rapport, sa configuration et ses codes de contrôle restent après le caractère # de l’URL et ne sont pas envoyés au serveur. ${maintenanceLog ? 'Le plan ordonne des données déclarées et des mesures ; il ne prescrit aucun intervalle, ne prouve aucune cause mécanique et ne remplace pas la notice constructeur.' : interventionLog ? "Le dossier distingue signaux, contrôles, action déclarée et contre-mesure ; il ne certifie ni la cause, ni la réparation, ni la conformité de l'installation." : operationLog ? "Le carnet compare les valeurs déclarées à la recette initiale ; il ne certifie ni l'état du matériel, ni la conformité de l'installation, ni une échéance d'entretien." : commissioningAssessment ? 'Le reçu constate les valeurs saisies et le résultat du moteur ; il ne constitue ni une réception réglementaire, ni une certification, ni une autorisation d’usage.' : 'Le Passeport ne remplace ni une mesure en charge, ni la notice constructeur, ni une vérification réglementaire.'}`, { size: 8.5, color: '0.33 0.40 0.35' });
 
 	for (const [index, commands] of pages.entries()) {
 		commands.push(`0.82 0.86 0.83 RG 52 42 491 0.5 re S`);
@@ -230,7 +286,7 @@ export function createPassportPdf(report: PassportReport, passportUrl: string, o
 	}
 	objects[2] = `<< /Type /Pages /Kids [${pageReferences.join(' ')}] /Count ${pages.length} >>`;
 	const infoObject = objects.length;
-	objects.push(`<< /Title (${pdfLiteral(operationLog ? "Carnet d'exploitation CompatAir" : commissioningAssessment ? 'Reçu de recette terrain CompatAir' : 'Passeport CompatAir')}) /Subject (${pdfLiteral(report.passportId)}) /Author (${pdfLiteral('CompatAir')}) /Creator (${pdfLiteral(`CompatAir Passeport ${report.schemaVersion}`)}) >>`);
+	objects.push(`<< /Title (${pdfLiteral(maintenanceLog ? 'Plan de maintenance CompatAir' : interventionLog ? "Dossier d'intervention CompatAir" : operationLog ? "Carnet d'exploitation CompatAir" : commissioningAssessment ? 'Reçu de recette terrain CompatAir' : 'Passeport CompatAir')}) /Subject (${pdfLiteral(report.passportId)}) /Author (${pdfLiteral('CompatAir')}) /Creator (${pdfLiteral(`CompatAir Passeport ${report.schemaVersion}`)}) >>`);
 
 	const parts: Uint8Array[] = [bytes('%PDF-1.4\n%âãÏÓ\n')];
 	const offsets = [0];

@@ -15,6 +15,8 @@ const staticCards: SocialCard[] = [
 	{ path: '/passeport/', kicker: 'Dossier daté', title: 'Votre fiche de configuration', subtitle: 'Installation, calculs, sources, marges et limites' },
 	{ path: '/mise-en-service/', kicker: 'Recette terrain', title: 'Confronter le calcul aux mesures', subtitle: 'Pression, fuites, installation réelle et reçu local' },
 	{ path: '/suivi-exploitation/', kicker: 'Après la mise en service', title: 'Voir ce qui dérive dans le temps', subtitle: 'Référence initiale, contrôles comparables et carnet local' },
+	{ path: '/diagnostic-intervention/', kicker: 'De la dérive à l’intervention', title: 'Fermer la boucle par la mesure', subtitle: 'Diagnostic guidé, action consignée et contre-mesure' },
+	{ path: '/maintenance-preventive/', kicker: 'Maintenance préventive', title: 'Agir avant la prochaine dérive', subtitle: 'Échéances déclarées, récurrences mesurées et actions tracées' },
 	{ path: '/professionnels/', kicker: 'Fabricants et distributeurs', title: 'Du catalogue à la décision', subtitle: 'Données structurées, preuves et orientation du client final' },
 	{ path: '/comparateur/', kicker: 'Comparaison', title: 'Comparer des compresseurs', subtitle: 'Caractéristiques et données manquantes côte à côte' },
 	{ path: '/comparatifs/', kicker: 'Comparatifs', title: 'Comparer sans confondre les chiffres', subtitle: 'Débit restitué, pression et fiabilité des données' },

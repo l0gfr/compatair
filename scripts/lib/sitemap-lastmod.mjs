@@ -68,6 +68,23 @@ export function createSitemapLastmodResolver({ root = process.cwd(), gitDate } =
 			sources.add('src/domain/commissioning.ts');
 			sources.add('src/domain/passport.ts');
 		}
+		if (pathname === '/diagnostic-intervention/') {
+			sources.add('src/pages/suivi-exploitation.astro');
+			sources.add('src/components/OperationMonitoringViewer.astro');
+			sources.add('src/domain/operation-monitoring.ts');
+			sources.add('src/domain/intervention.ts');
+			sources.add('src/domain/passport-pdf.ts');
+		}
+		if (pathname === '/maintenance-preventive/') {
+			sources.add('src/pages/diagnostic-intervention.astro');
+			sources.add('src/components/InterventionViewer.astro');
+			sources.add('src/pages/suivi-exploitation.astro');
+			sources.add('src/components/OperationMonitoringViewer.astro');
+			sources.add('src/domain/operation-monitoring.ts');
+			sources.add('src/domain/intervention.ts');
+			sources.add('src/domain/preventive-maintenance.ts');
+			sources.add('src/domain/passport-pdf.ts');
+		}
 		if (['/guides/', '/guides/particuliers/', '/guides/professionnels/'].includes(pathname)) {
 			sources.add('src/components/HubSignalVisual.astro');
 			sources.add('src/components/GuideDirectory.astro');

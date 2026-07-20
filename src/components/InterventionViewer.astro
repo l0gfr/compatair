@@ -1,0 +1,364 @@
+<section class="intervention-shell" data-intervention-root aria-live="polite">
+	<div class="intervention-loading" data-intervention-loading>
+		<p class="eyebrow">Ouverture locale</p>
+		<h2>Chargement du dossier…</h2>
+		<p>Le Passeport, le carnet et le contrôle à diagnostiquer sont vérifiés sur cet appareil.</p>
+	</div>
+
+	<div class="intervention-empty" data-intervention-empty hidden>
+		<p class="eyebrow">Aucun écart exploitable</p>
+		<h2>Partez d’un contrôle dégradé</h2>
+		<p data-intervention-error>Cette page attend un contrôle périodique présentant une dégradation mesurée.</p>
+		<a class="button primary" href="/suivi-exploitation/" data-intervention-empty-action>Ouvrir le suivi d’exploitation</a>
+	</div>
+
+	<div class="intervention-workspace" data-intervention-workspace hidden>
+		<header class="intervention-context">
+			<div>
+				<p class="eyebrow">Écart à traiter</p>
+				<h2 data-context-compressor></h2>
+				<p data-context-tools></p>
+			</div>
+			<dl>
+				<div><dt>Contrôle déclencheur</dt><dd data-context-check-date></dd></div>
+				<div><dt>Signaux ouverts</dt><dd data-context-signal-count></dd></div>
+				<div><dt>Passeport</dt><dd data-context-id></dd></div>
+			</dl>
+		</header>
+
+		<section class="intervention-source" aria-labelledby="intervention-source-title">
+			<header>
+				<div><p class="eyebrow">Avant intervention</p><h2 id="intervention-source-title">Ce qui est mesuré, et seulement cela</h2></div>
+				<a href="/suivi-exploitation/" data-return-monitoring>Revenir au carnet</a>
+			</header>
+			<div class="intervention-source-grid">
+				<dl>
+					<div><dt>Pression source</dt><dd data-source-pressure></dd></div>
+					<div><dt>Pression au poste</dt><dd data-source-tool></dd></div>
+					<div><dt>Chute mesurée</dt><dd data-source-drop></dd></div>
+					<div><dt>Fuite mesurée</dt><dd data-source-leak></dd></div>
+				</dl>
+				<div class="intervention-source-signals" data-source-signals></div>
+			</div>
+			<p class="intervention-boundary"><strong>Aucune cause n’est déduite automatiquement.</strong> Les signaux déterminent les contrôles à réaliser, pas la pièce à remplacer.</p>
+		</section>
+
+		<form class="intervention-form" data-intervention-form novalidate>
+			<header>
+				<p class="eyebrow">Dossier d’intervention</p>
+				<h2>Localiser, agir, mesurer à nouveau</h2>
+				<p>Chaque étape conserve la différence entre une anomalie mesurée, un contrôle sans anomalie et un point non vérifié.</p>
+			</header>
+
+			<fieldset>
+				<legend><span>01</span><strong>Diagnostic guidé par les signaux</strong></legend>
+				<div class="diagnostic-step-list" data-diagnostic-steps></div>
+				<label class="intervention-wide-field">Conclusion du diagnostic <span>facultative</span><textarea name="diagnosticConclusion" maxlength="600" rows="3" placeholder="Cause localisée, hypothèse encore ouverte ou limite du contrôle"></textarea></label>
+			</fieldset>
+
+			<fieldset>
+				<legend><span>02</span><strong>Intervention réellement effectuée</strong></legend>
+				<div class="intervention-field-grid">
+					<label>Date de l’intervention<input type="date" name="performedOn" required /></label>
+					<label>Famille d’action<select name="category" required>
+						<option value="adjustment">Réglage ou consigne</option>
+						<option value="leak_repair">Réparation de fuite</option>
+						<option value="filter_service">Filtre ou traitement d’air</option>
+						<option value="hose_or_fitting">Flexible ou raccord</option>
+						<option value="compressor_service">Intervention sur le compresseur</option>
+						<option value="configuration_change">Modification de configuration</option>
+						<option value="other">Autre intervention</option>
+					</select></label>
+					<label class="is-wide">Action consignée<textarea name="actionDescription" maxlength="600" rows="4" required placeholder="Décrire ce qui a réellement été réglé, réparé, nettoyé ou remplacé"></textarea></label>
+				</div>
+				<p class="intervention-safety-note"><strong>La notice et les règles de sécurité restent prioritaires.</strong> CompatAir structure les observations ; il ne prescrit ni démontage, ni réglage hors spécification.</p>
+			</fieldset>
+
+			<fieldset>
+				<legend><span>03</span><strong>Contre-mesure selon le protocole initial</strong></legend>
+				<div class="intervention-field-grid thirds">
+					<label>Date de la contre-mesure<input type="date" name="observedOn" required /></label>
+					<label>Pression à la source <span>bar</span><input inputmode="decimal" type="number" name="sourcePressureBar" min="0.01" max="50" step="0.01" /></label>
+					<label>Pression au poste <span>bar</span><input inputmode="decimal" type="number" name="toolPressureBar" min="0.01" max="50" step="0.01" /></label>
+					<label>Débit de fuite <span>L/min</span><input inputmode="decimal" type="number" name="measuredLeakLpm" min="0" max="10000" step="0.1" /></label>
+					<label>Compteur d’heures <span>facultatif</span><input inputmode="decimal" type="number" name="operatingHours" min="0" max="10000000" step="0.1" /></label>
+					<output class="intervention-derived" data-intervention-derived>Chute mesurée : en attente des deux pressions.</output>
+				</div>
+				<div class="intervention-check-inputs">
+					<label><input type="checkbox" name="configurationUnchanged" /> <span><strong>Configuration inchangée pendant l’intervention</strong><small>Même machine, trajet, traitement d’air et scénario ; sinon une nouvelle recette est nécessaire.</small></span></label>
+					<label><input type="checkbox" name="representativeUseObserved" /> <span><strong>Contre-mesure réalisée sous charge représentative</strong><small>Les deux pressions correspondent à la même phase d’utilisation.</small></span></label>
+				</div>
+			</fieldset>
+
+			<div class="intervention-submit">
+				<button class="button primary" type="submit">Évaluer la contre-mesure</button>
+				<p>Le dossier et la contre-mesure restent dans le stockage local de ce navigateur.</p>
+			</div>
+			<p class="intervention-form-error" role="alert" data-intervention-form-error hidden></p>
+		</form>
+
+		<article class="intervention-result" data-intervention-result hidden>
+			<header data-intervention-status>
+				<div><p class="eyebrow">Réponse après intervention</p><h2 data-intervention-outcome></h2><p data-intervention-finding></p></div>
+				<div class="intervention-result-date"><strong data-intervention-date></strong><span>contre-mesure</span></div>
+			</header>
+			<div class="intervention-before-after">
+				<div><span>Mesure</span><strong>Avant</strong><strong>Après</strong></div>
+				<div><span>Pression source</span><b data-before-source></b><b data-after-source></b></div>
+				<div><span>Pression au poste</span><b data-before-tool></b><b data-after-tool></b></div>
+				<div><span>Chute mesurée</span><b data-before-drop></b><b data-after-drop></b></div>
+				<div><span>Fuite mesurée</span><b data-before-leak></b><b data-after-leak></b></div>
+			</div>
+			<div class="intervention-result-grid">
+				<section><p class="eyebrow">Qualité du diagnostic</p><strong data-diagnostic-summary></strong><p data-diagnostic-conclusion></p><div data-remaining-signals></div></section>
+				<section><p class="eyebrow">Suite décisionnelle</p><ul data-intervention-actions></ul><p class="intervention-result-boundary">Une amélioration ne clôt pas l’écart tant qu’un signal reste présent.</p></section>
+			</div>
+			<footer><div><a class="button primary" href="/maintenance-preventive/" data-result-maintenance>Planifier la maintenance</a><a class="button" href="/suivi-exploitation/" data-result-monitoring>Revenir au suivi</a></div><span>Le résultat vaut pour le scénario et les mesures déclarés.</span></footer>
+		</article>
+
+		<section class="intervention-history" aria-labelledby="intervention-history-title">
+			<header>
+				<div><p class="eyebrow">Historique local</p><h2 id="intervention-history-title">Interventions liées à ce Passeport</h2><p data-intervention-history-summary></p></div>
+				<div class="intervention-history-actions">
+					<button class="button" type="button" data-download-intervention-pdf>Télécharger le dossier PDF</button>
+					<button class="button" type="button" data-download-intervention-json>Exporter le JSON</button>
+				</div>
+			</header>
+			<div class="intervention-history-list" data-intervention-history-list></div>
+			<p class="intervention-history-empty" data-intervention-history-empty>Aucune intervention n’est encore consignée pour ce Passeport.</p>
+			<footer><span role="status" data-intervention-action-status></span><p>CompatAir ne reçoit ni le diagnostic, ni l’action, ni les mesures exportées.</p></footer>
+		</section>
+	</div>
+</section>
+
+<script>
+	import { appendIntervention, assessIntervention, createInterventionLog, diagnosticStepsForAssessment, interventionCategoryLabel, interventionLogSchema, interventionOutcomeLabel, interventionRecordSchema, parseInterventionLogJson, removeIntervention, type DiagnosticObservation, type InterventionAssessment, type InterventionLog, type InterventionRecord } from '../domain/intervention';
+	import { appendOperationCheck, assessOperationCheck, operationCheckSchema, parseOperationLogJson, removeOperationCheck, type OperationAssessment, type OperationCheck, type OperationLog } from '../domain/operation-monitoring';
+	import { createPassportReport, decodePassportConfiguration, decodePassportEnvelope, reportFromPassportEnvelope, type PassportReport } from '../domain/passport';
+
+	const root = document.querySelector<HTMLElement>('[data-intervention-root]');
+	const query = <T extends Element>(selector: string) => root?.querySelector<T>(selector);
+	const setText = (selector: string, text: string) => { const element = query<HTMLElement>(selector); if (element) element.textContent = text; };
+	const format = (value: number, digits = 1) => value.toLocaleString('fr-FR', { maximumFractionDigits: digits });
+	const metric = (value: number | undefined, unit: string, digits = 1) => value === undefined ? 'Non mesuré' : `${format(value, digits)} ${unit}`;
+	let report: PassportReport;
+	let operationLog: OperationLog;
+	let interventionLog: InterventionLog;
+	let sourceCheck: OperationCheck;
+	let sourceAssessment: OperationAssessment;
+	let encodedPassport = '';
+
+	function localToday() {
+		const date = new Date();
+		return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+	}
+
+	function formatDate(date: string) {
+		return new Date(`${date}T12:00:00`).toLocaleDateString('fr-FR', { day: '2-digit', month: 'long', year: 'numeric' });
+	}
+
+	function optionalNumber(data: FormData, name: string) {
+		const raw = data.get(name);
+		if (typeof raw !== 'string' || raw.trim() === '') return undefined;
+		const parsed = Number(raw);
+		return Number.isFinite(parsed) ? parsed : undefined;
+	}
+
+	function monitoringUrl() { return `${location.origin}/suivi-exploitation/#passport=${encodedPassport}`; }
+	function maintenanceUrl() { return `${location.origin}/maintenance-preventive/#passport=${encodedPassport}`; }
+	function interventionUrl(checkId = sourceCheck.id) { return `${location.origin}/diagnostic-intervention/#passport=${encodedPassport}&check=${checkId}`; }
+	function operationStorageKey() { return `compatair:operation-log:${report.passportId}`; }
+	function interventionStorageKey() { return `compatair:intervention-log:${report.passportId}`; }
+
+	function saveLogs(message: string) {
+		try {
+			localStorage.setItem(operationStorageKey(), JSON.stringify(operationLog));
+			localStorage.setItem(interventionStorageKey(), JSON.stringify(interventionLog));
+			setText('[data-intervention-action-status]', message);
+		} catch {
+			setText('[data-intervention-action-status]', 'Le stockage local est indisponible. Exportez le JSON pour conserver ce dossier.');
+		}
+	}
+
+	function downloadBlob(contents: BlobPart, type: string, filename: string) {
+		const objectUrl = URL.createObjectURL(new Blob([contents], { type }));
+		const link = document.createElement('a'); link.href = objectUrl; link.download = filename; link.click();
+		setTimeout(() => URL.revokeObjectURL(objectUrl), 1_000);
+	}
+
+	function setEmpty(message: string, actionLabel = 'Ouvrir le suivi d’exploitation', actionHref = '/suivi-exploitation/') {
+		setText('[data-intervention-error]', message);
+		const action = query<HTMLAnchorElement>('[data-intervention-empty-action]');
+		if (action) { action.textContent = actionLabel; action.href = actionHref; }
+		query<HTMLElement>('[data-intervention-loading]')!.hidden = true;
+		query<HTMLElement>('[data-intervention-empty]')!.hidden = false;
+	}
+
+	function updateDerivedDrop() {
+		const form = query<HTMLFormElement>('[data-intervention-form]');
+		if (!form) return;
+		const data = new FormData(form); const source = optionalNumber(data, 'sourcePressureBar'); const tool = optionalNumber(data, 'toolPressureBar');
+		setText('[data-intervention-derived]', source === undefined || tool === undefined
+			? 'Chute mesurée : en attente des deux pressions.'
+			: tool > source ? 'Mesure incohérente : la pression au poste dépasse la pression à la source.' : `Chute mesurée : ${format(source - tool, 2)} bar.`);
+	}
+
+	function renderSource() {
+		setText('[data-context-compressor]', report.compressorLabel);
+		setText('[data-context-tools]', report.toolLabels.join(' · '));
+		setText('[data-context-check-date]', formatDate(sourceCheck.observedOn));
+		setText('[data-context-signal-count]', `${sourceAssessment.signals.length} ${sourceAssessment.signals.length > 1 ? 'signaux' : 'signal'}`);
+		setText('[data-context-id]', report.passportId.slice(0, 12));
+		setText('[data-source-pressure]', metric(sourceCheck.sourcePressureBar, 'bar', 2));
+		setText('[data-source-tool]', metric(sourceCheck.toolPressureBar, 'bar', 2));
+		setText('[data-source-drop]', metric(sourceAssessment.comparison.currentPressureDropBar, 'bar', 2));
+		setText('[data-source-leak]', metric(sourceCheck.measuredLeakLpm, 'L/min'));
+		const signalList = query<HTMLElement>('[data-source-signals]');
+		if (signalList) {
+			signalList.replaceChildren();
+			for (const signal of sourceAssessment.signals) {
+				const article = document.createElement('article'); article.dataset.level = signal.level;
+				const marker = document.createElement('span'); marker.textContent = signal.level === 'critical' ? '!' : '↗';
+				const body = document.createElement('div'); const title = document.createElement('strong'); title.textContent = signal.label;
+				const finding = document.createElement('p'); finding.textContent = signal.finding; body.append(title, finding); article.append(marker, body); signalList.append(article);
+			}
+		}
+		for (const selector of ['[data-return-monitoring]', '[data-result-monitoring]']) query<HTMLAnchorElement>(selector)?.setAttribute('href', monitoringUrl());
+		query<HTMLAnchorElement>('[data-result-maintenance]')?.setAttribute('href', maintenanceUrl());
+	}
+
+	function renderDiagnosticSteps() {
+		const container = query<HTMLElement>('[data-diagnostic-steps]');
+		if (!container) return;
+		container.replaceChildren();
+		for (const [index, step] of diagnosticStepsForAssessment(sourceAssessment).entries()) {
+			const article = document.createElement('article'); article.dataset.diagnosticId = step.id;
+			const header = document.createElement('header'); const number = document.createElement('span'); number.textContent = String(index + 1).padStart(2, '0');
+			const titleWrap = document.createElement('div'); const title = document.createElement('strong'); title.textContent = step.label; const why = document.createElement('p'); why.textContent = step.why; titleWrap.append(title, why); header.append(number, titleWrap);
+			const action = document.createElement('p'); action.className = 'diagnostic-action'; action.textContent = step.action;
+			const fields = document.createElement('div'); fields.className = 'diagnostic-fields';
+			const statusLabel = document.createElement('label'); statusLabel.textContent = 'Résultat consigné';
+			const select = document.createElement('select'); select.name = `diagnostic:${step.id}`;
+			for (const [value, label] of [['not_checked', 'Non contrôlé'], ['checked_no_anomaly', 'Contrôlé sans anomalie observée'], ['anomaly_measured', 'Anomalie mesurée ou localisée']] as const) { const option = document.createElement('option'); option.value = value; option.textContent = label; select.append(option); }
+			statusLabel.append(select);
+			const noteLabel = document.createElement('label'); noteLabel.textContent = 'Observation facultative'; const note = document.createElement('input'); note.name = `diagnostic-note:${step.id}`; note.maxLength = 400; note.placeholder = 'Valeur, emplacement ou limite constatée'; noteLabel.append(note); fields.append(statusLabel, noteLabel);
+			article.append(header, action, fields);
+			if (step.guideHref) { const guide = document.createElement('a'); guide.href = step.guideHref; guide.textContent = 'Ouvrir le protocole détaillé →'; article.append(guide); }
+			container.append(article);
+		}
+	}
+
+	function counterCheckFromForm(data: FormData): OperationCheck {
+		const category = data.get('category');
+		const maintenanceAction = category === 'filter_service' ? 'filter' : category === 'other' ? 'other' : 'other';
+		return operationCheckSchema.parse({
+			id: crypto.randomUUID(), observedOn: data.get('observedOn'), recordedAt: new Date().toISOString(),
+			sourcePressureBar: optionalNumber(data, 'sourcePressureBar'), toolPressureBar: optionalNumber(data, 'toolPressureBar'), measuredLeakLpm: optionalNumber(data, 'measuredLeakLpm'), operatingHours: optionalNumber(data, 'operatingHours'),
+			representativeUseObserved: data.get('representativeUseObserved') === 'on', configurationUnchanged: data.get('configurationUnchanged') === 'on', maintenanceAction,
+			note: `Contre-mesure après intervention : ${String(data.get('actionDescription') || '').trim()}`,
+		});
+	}
+
+	function recordFromForm(data: FormData, counterCheckId: string): InterventionRecord {
+		const diagnostics: DiagnosticObservation[] = diagnosticStepsForAssessment(sourceAssessment).map((step) => {
+			const note = String(data.get(`diagnostic-note:${step.id}`) || '').trim();
+			return { id: step.id, status: String(data.get(`diagnostic:${step.id}`) || 'not_checked') as DiagnosticObservation['status'], note: note || undefined };
+		});
+		const conclusion = String(data.get('diagnosticConclusion') || '').trim();
+		return interventionRecordSchema.parse({
+			id: crypto.randomUUID(), sourceCheckId: sourceCheck.id, counterCheckId, performedOn: data.get('performedOn'), recordedAt: new Date().toISOString(), category: data.get('category'),
+			actionDescription: String(data.get('actionDescription') || '').trim(), diagnosticConclusion: conclusion || undefined, diagnostics,
+		});
+	}
+
+	function renderActions(actions: string[]) {
+		const list = query<HTMLUListElement>('[data-intervention-actions]'); if (!list) return; list.replaceChildren();
+		for (const action of actions) { const item = document.createElement('li'); item.textContent = action; list.append(item); }
+	}
+
+	function renderRemainingSignals(assessment: InterventionAssessment) {
+		const container = query<HTMLElement>('[data-remaining-signals]'); if (!container) return; container.replaceChildren();
+		if (!assessment.remainingSignals.length) { const p = document.createElement('p'); p.className = 'intervention-no-signal'; p.textContent = 'Aucun signal ne reste ouvert avec cette contre-mesure.'; container.append(p); return; }
+		for (const signal of assessment.remainingSignals) { const p = document.createElement('p'); const strong = document.createElement('strong'); strong.textContent = signal.label; p.append(strong, document.createTextNode(` : ${signal.finding}`)); container.append(p); }
+	}
+
+	function renderAssessment(record: InterventionRecord, assessment: InterventionAssessment, scroll = true) {
+		const counter = operationLog.entries.find((entry) => entry.id === record.counterCheckId)!;
+		const panel = query<HTMLElement>('[data-intervention-result]'); const header = query<HTMLElement>('[data-intervention-status]'); if (header) header.dataset.status = assessment.outcome;
+		setText('[data-intervention-outcome]', interventionOutcomeLabel(assessment.outcome)); setText('[data-intervention-finding]', assessment.primaryFinding); setText('[data-intervention-date]', formatDate(counter.observedOn));
+		setText('[data-before-source]', metric(sourceCheck.sourcePressureBar, 'bar', 2)); setText('[data-after-source]', metric(counter.sourcePressureBar, 'bar', 2));
+		setText('[data-before-tool]', metric(sourceCheck.toolPressureBar, 'bar', 2)); setText('[data-after-tool]', metric(counter.toolPressureBar, 'bar', 2));
+		setText('[data-before-drop]', metric(assessment.sourceAssessment.comparison.currentPressureDropBar, 'bar', 2)); setText('[data-after-drop]', metric(assessment.counterAssessment.comparison.currentPressureDropBar, 'bar', 2));
+		setText('[data-before-leak]', metric(sourceCheck.measuredLeakLpm, 'L/min')); setText('[data-after-leak]', metric(counter.measuredLeakLpm, 'L/min'));
+		setText('[data-diagnostic-summary]', `${assessment.diagnostic.completedCount}/${assessment.diagnostic.steps.length} contrôles réalisés · ${assessment.diagnostic.anomalyCount} anomalie${assessment.diagnostic.anomalyCount > 1 ? 's' : ''} déclarée${assessment.diagnostic.anomalyCount > 1 ? 's' : ''}`);
+		setText('[data-diagnostic-conclusion]', assessment.diagnostic.conclusion); renderRemainingSignals(assessment); renderActions(assessment.actions);
+		if (panel) { panel.hidden = false; if (scroll) panel.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+	}
+
+	function renderHistory() {
+		const list = query<HTMLElement>('[data-intervention-history-list]'); const empty = query<HTMLElement>('[data-intervention-history-empty]'); if (!list || !empty) return;
+		list.replaceChildren(); empty.hidden = interventionLog.entries.length > 0;
+		setText('[data-intervention-history-summary]', `${interventionLog.entries.length} intervention${interventionLog.entries.length > 1 ? 's' : ''} consignée${interventionLog.entries.length > 1 ? 's' : ''} localement.`);
+		for (const record of [...interventionLog.entries].reverse()) {
+			try {
+				const assessment = assessIntervention(report, operationLog, record); const article = document.createElement('article'); article.dataset.outcome = assessment.outcome;
+				const header = document.createElement('header'); const date = document.createElement('div'); const time = document.createElement('time'); time.dateTime = record.performedOn; time.textContent = formatDate(record.performedOn); const label = document.createElement('strong'); label.textContent = interventionOutcomeLabel(assessment.outcome); date.append(time, label);
+				const remove = document.createElement('button'); remove.type = 'button'; remove.textContent = 'Supprimer'; header.append(date, remove);
+				const category = document.createElement('p'); category.textContent = interventionCategoryLabel(record.category); const action = document.createElement('p'); action.className = 'intervention-history-action'; action.textContent = record.actionDescription;
+				const quality = document.createElement('small'); quality.textContent = `${assessment.diagnostic.completedCount}/${assessment.diagnostic.steps.length} contrôles diagnostic`;
+				article.append(header, category, action, quality); article.addEventListener('click', () => renderAssessment(record, assessment));
+				remove.addEventListener('click', (event) => { event.stopPropagation(); interventionLog = removeIntervention(interventionLog, record.id); operationLog = removeOperationCheck(operationLog, record.counterCheckId); saveLogs('Dossier et contre-mesure supprimés du stockage local.'); renderHistory(); const result = query<HTMLElement>('[data-intervention-result]'); if (result) result.hidden = true; });
+				list.append(article);
+			} catch { /* Un dossier orphelin reste absent de l’affichage décisionnel. */ }
+		}
+	}
+
+	async function load() {
+		const params = new URLSearchParams(location.hash.slice(1)); encodedPassport = params.get('passport') || ''; const requestedCheckId = params.get('check');
+		const envelope = encodedPassport ? decodePassportEnvelope(encodedPassport) : undefined; const legacy = encodedPassport && !envelope ? decodePassportConfiguration(encodedPassport) : undefined;
+		if (!encodedPassport || (!envelope && !legacy)) { setEmpty(encodedPassport ? 'Le lien du Passeport est invalide ou incomplet.' : 'Ouvrez ce parcours depuis un contrôle dégradé du carnet.'); return; }
+		try {
+			if (envelope) report = await reportFromPassportEnvelope(envelope);
+			else { const { loadRuntimeCatalog } = await import('../domain/runtime-catalog'); const catalog = await loadRuntimeCatalog(); report = await createPassportReport(legacy!, catalog.compressors, catalog.tools, catalog.catalogVerifiedAt); }
+			if (!report.configuration.commissioning) { setEmpty('Ce Passeport ne contient pas de recette terrain.', 'Réaliser la recette terrain', `${location.origin}/mise-en-service/#passport=${encodedPassport}`); return; }
+			const storedOperation = localStorage.getItem(operationStorageKey()); const parsedOperation = storedOperation ? parseOperationLogJson(storedOperation) : undefined;
+			if (!parsedOperation?.success || parsedOperation.data.passportId !== report.passportId) { setEmpty('Le carnet local de ce Passeport est absent sur cet appareil.', 'Ouvrir le suivi d’exploitation', monitoringUrl()); return; }
+			operationLog = parsedOperation.data;
+			const candidates = operationLog.entries.filter((entry) => assessOperationCheck(report, operationLog, entry).verdict === 'degradation_observed');
+			sourceCheck = (requestedCheckId ? candidates.find((entry) => entry.id === requestedCheckId) : undefined) || candidates.at(-1)!;
+			if (!sourceCheck) { setEmpty('Aucun contrôle du carnet ne présente une dégradation mesurée.', 'Ajouter un contrôle périodique', monitoringUrl()); return; }
+			sourceAssessment = assessOperationCheck(report, operationLog, sourceCheck);
+			const storedInterventions = localStorage.getItem(interventionStorageKey()); const parsedInterventions = storedInterventions ? parseInterventionLogJson(storedInterventions) : undefined;
+			interventionLog = parsedInterventions?.success && parsedInterventions.data.passportId === report.passportId ? parsedInterventions.data : createInterventionLog(report);
+			renderSource(); renderDiagnosticSteps(); renderHistory();
+			const today = localToday(); const performed = query<HTMLInputElement>('[name="performedOn"]'); const observed = query<HTMLInputElement>('[name="observedOn"]');
+			if (performed) { performed.value = today; performed.min = sourceCheck.observedOn; performed.max = today; }
+			if (observed) { observed.value = today; observed.min = sourceCheck.observedOn; observed.max = today; }
+			query<HTMLElement>('[data-intervention-loading]')!.hidden = true; query<HTMLElement>('[data-intervention-workspace]')!.hidden = false;
+			const latest = [...interventionLog.entries].reverse().find((entry) => entry.sourceCheckId === sourceCheck.id); if (latest) renderAssessment(latest, assessIntervention(report, operationLog, latest), false);
+		} catch (error) { setEmpty(error instanceof Error ? error.message : 'Le dossier ne peut pas être ouvert.'); }
+	}
+
+	query<HTMLInputElement>('[name="sourcePressureBar"]')?.addEventListener('input', updateDerivedDrop);
+	query<HTMLInputElement>('[name="toolPressureBar"]')?.addEventListener('input', updateDerivedDrop);
+	query<HTMLInputElement>('[name="performedOn"]')?.addEventListener('input', (event) => { const observed = query<HTMLInputElement>('[name="observedOn"]'); if (observed) { observed.min = (event.currentTarget as HTMLInputElement).value || sourceCheck.observedOn; if (observed.value < observed.min) observed.value = observed.min; } });
+	query<HTMLFormElement>('[data-intervention-form]')?.addEventListener('submit', (event) => {
+		event.preventDefault(); const form = event.currentTarget as HTMLFormElement; const errorPanel = query<HTMLElement>('[data-intervention-form-error]'); if (errorPanel) errorPanel.hidden = true;
+		try {
+			const data = new FormData(form); const counter = counterCheckFromForm(data); const nextOperationLog = appendOperationCheck(operationLog, counter); const record = recordFromForm(data, counter.id); const assessment = assessIntervention(report, nextOperationLog, record); const nextInterventionLog = appendIntervention(interventionLog, record);
+			operationLog = nextOperationLog; interventionLog = nextInterventionLog; saveLogs(`Intervention du ${formatDate(record.performedOn)} et contre-mesure enregistrées localement.`); renderHistory(); renderAssessment(record, assessment);
+		} catch (error) { if (errorPanel) { errorPanel.textContent = error instanceof Error ? error.message : 'Le dossier ne peut pas être évalué.'; errorPanel.hidden = false; errorPanel.scrollIntoView({ behavior: 'smooth', block: 'center' }); } }
+	});
+	query<HTMLButtonElement>('[data-download-intervention-json]')?.addEventListener('click', () => {
+		const validated = interventionLogSchema.parse(interventionLog); const artifact = { artifactType: 'compatair-intervention-log', schemaVersion: validated.version, exportedAt: new Date().toISOString(), passport: { id: report.passportId, compressor: report.compressorLabel, tools: report.toolLabels }, operationLog, interventionLog: validated };
+		downloadBlob(JSON.stringify(artifact, null, 2), 'application/json', `interventions-compatair-${report.passportId.slice(0, 16)}.json`); setText('[data-intervention-action-status]', 'Dossier JSON exporté localement.');
+	});
+	query<HTMLButtonElement>('[data-download-intervention-pdf]')?.addEventListener('click', async (event) => {
+		const button = event.currentTarget as HTMLButtonElement; button.disabled = true; setText('[data-intervention-action-status]', 'Préparation locale du dossier PDF…');
+		try { const { createPassportPdf } = await import('../domain/passport-pdf'); downloadBlob(createPassportPdf(report, interventionUrl(), { operationLog, interventionLog }), 'application/pdf', `interventions-compatair-${report.passportId.slice(0, 16)}.pdf`); setText('[data-intervention-action-status]', 'Dossier PDF généré localement.'); }
+		catch { setText('[data-intervention-action-status]', 'La création du PDF a échoué. Le JSON reste disponible.'); }
+		finally { button.disabled = false; }
+	});
+
+	void load();
+</script>

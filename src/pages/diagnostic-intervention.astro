@@ -1,0 +1,30 @@
+---
+import InterventionViewer from '../components/InterventionViewer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+	title="Diagnostiquer et clôturer un écart | CompatAir"
+	description="Transformez une dérive mesurée en diagnostic guidé, intervention consignée et contre-mesure comparable, sans inventer la cause de l’écart."
+	canonicalPath="/diagnostic-intervention/"
+>
+	<section class="intervention-hero">
+		<div class="container intervention-hero-grid">
+			<div>
+				<p class="eyebrow">De la dérive à l’intervention</p>
+				<h1>Mesurer l’écart. <em>Fermer la boucle.</em></h1>
+				<p class="lead">CompatAir ordonne les contrôles, conserve l’action réellement menée et compare l’avant à l’après. Une cause non vérifiée reste une cause non établie.</p>
+			</div>
+			<div class="intervention-hero-graphic" aria-label="Un signal mesuré conduit à un diagnostic, une intervention et une contre-mesure.">
+				<div><span>01</span><strong>Signal</strong><small>écart mesuré</small></div><i>→</i>
+				<div><span>02</span><strong>Diagnostic</strong><small>cause non supposée</small></div><i>→</i>
+				<div><span>03</span><strong>Action</strong><small>intervention consignée</small></div><i>→</i>
+				<div><span>04</span><strong>Contre-mesure</strong><small>écart clos ou ouvert</small></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section intervention-viewer-section">
+		<div class="container"><InterventionViewer /></div>
+	</section>
+</BaseLayout>

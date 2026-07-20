@@ -33,6 +33,7 @@
 		<div class="passport-actions">
 			<a class="button primary" href="/mise-en-service/" data-commission>Valider sur site</a>
 			<a class="button primary" href="/suivi-exploitation/" data-monitoring hidden>Suivre dans le temps</a>
+			<a class="button" href="/maintenance-preventive/" data-maintenance hidden>Planifier la maintenance</a>
 			<button class="button" type="button" data-download>Télécharger le dossier PDF</button>
 			<button class="button" type="button" data-print-plan>Imprimer la checklist</button>
 			<button class="button" type="button" data-copy>Copier le lien</button>
@@ -276,6 +277,11 @@
 			if (monitoringLink) {
 				monitoringLink.hidden = !commissioning;
 				if (commissioning) monitoringLink.href = currentUrl.replace('/passeport/#', '/suivi-exploitation/#');
+			}
+			const maintenanceLink = query<HTMLAnchorElement>('[data-maintenance]');
+			if (maintenanceLink) {
+				maintenanceLink.hidden = !commissioning;
+				if (commissioning) maintenanceLink.href = currentUrl.replace('/passeport/#', '/maintenance-preventive/#');
 			}
 			const copyButton = query<HTMLButtonElement>('[data-copy]');
 			if (copyButton) copyButton.onclick = async () => {

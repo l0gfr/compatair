@@ -112,6 +112,7 @@
 				<section><p class="eyebrow">Signaux observés</p><div class="operation-signals" data-operation-signals></div></section>
 				<section><p class="eyebrow">Actions à mener</p><ul data-operation-actions></ul><div class="operation-maintenance-result"><strong data-maintenance-label></strong><p data-maintenance-finding></p><small data-maintenance-action></small></div></section>
 			</div>
+			<footer><div><a class="button primary" href="/diagnostic-intervention/" data-diagnose-link hidden>Diagnostiquer cet écart</a><a class="button" href="/maintenance-preventive/" data-operation-maintenance>Planifier la maintenance</a></div><span>Le diagnostic part des signaux mesurés et exige une contre-mesure.</span></footer>
 		</article>
 
 		<section class="operation-history" aria-labelledby="operation-history-title">
@@ -143,6 +144,7 @@
 	let operationLog: OperationLog;
 	let passportUrl = '';
 	let monitoringUrl = '';
+	let encodedPassport = '';
 
 	function localToday() {
 		const date = new Date();
@@ -172,6 +174,7 @@
 	}
 
 	function storageKey() { return `compatair:operation-log:${report.passportId}`; }
+	function diagnosisUrl(checkId: string) { return `${location.origin}/diagnostic-intervention/#passport=${encodedPassport}&check=${checkId}`; }
 
 	function saveLog(message: string) {
 		try {
@@ -242,6 +245,8 @@
 		setText('[data-maintenance-label]', assessment.maintenance.label);
 		setText('[data-maintenance-finding]', assessment.maintenance.finding);
 		setText('[data-maintenance-action]', assessment.maintenance.action);
+		const diagnoseLink = query<HTMLAnchorElement>('[data-diagnose-link]');
+		if (diagnoseLink) { diagnoseLink.hidden = assessment.verdict !== 'degradation_observed'; diagnoseLink.href = diagnosisUrl(check.id); }
 		if (panel) { panel.hidden = false; if (scroll) panel.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
 	}
 
@@ -267,8 +272,9 @@
 				['Compteur', value(check.operatingHours, 'h')],
 			] as const) { const row = document.createElement('div'); const dt = document.createElement('dt'); dt.textContent = term; const dd = document.createElement('dd'); dd.textContent = description; row.append(dt, dd); metrics.append(row); }
 			const intervention = document.createElement('p'); intervention.textContent = maintenanceActionLabel(check.maintenanceAction);
-			if (check.note) { const note = document.createElement('p'); note.className = 'operation-history-note'; note.textContent = check.note; article.append(header, metrics, intervention, note); }
-			else article.append(header, metrics, intervention);
+			const diagnose = document.createElement('a'); diagnose.className = 'operation-history-diagnose'; diagnose.href = diagnosisUrl(check.id); diagnose.textContent = 'Diagnostiquer cet écart →'; diagnose.hidden = assessment.verdict !== 'degradation_observed'; diagnose.addEventListener('click', (event) => event.stopPropagation());
+			if (check.note) { const note = document.createElement('p'); note.className = 'operation-history-note'; note.textContent = check.note; article.append(header, metrics, intervention, note, diagnose); }
+			else article.append(header, metrics, intervention, diagnose);
 			article.addEventListener('click', () => renderAssessment(assessment, check));
 			remove.addEventListener('click', (event) => {
 				event.stopPropagation(); operationLog = removeOperationCheck(operationLog, check.id); saveLog('Relevé supprimé du stockage local.'); renderHistory();
@@ -295,6 +301,7 @@
 	async function load() {
 		const params = new URLSearchParams(location.hash.slice(1));
 		const encoded = params.get('passport');
+		encodedPassport = encoded || '';
 		const envelope = encoded ? decodePassportEnvelope(encoded) : undefined;
 		const legacy = encoded && !envelope ? decodePassportConfiguration(encoded) : undefined;
 		if (!encoded || (!envelope && !legacy)) {
@@ -310,6 +317,7 @@
 			}
 			passportUrl = `${location.origin}/passeport/#passport=${encoded}`;
 			monitoringUrl = `${location.origin}/suivi-exploitation/#passport=${encoded}`;
+			query<HTMLAnchorElement>('[data-operation-maintenance]')?.setAttribute('href', `${location.origin}/maintenance-preventive/#passport=${encoded}`);
 			if (!report.configuration.commissioning) {
 				setText('[data-operation-error]', 'Ce Passeport ne contient pas encore de recette terrain. Validez d’abord les mesures de mise en service.');
 				const action = query<HTMLAnchorElement>('[data-operation-empty-action]'); if (action) { action.href = `${location.origin}/mise-en-service/#passport=${encoded}`; action.textContent = 'Réaliser la recette terrain'; }

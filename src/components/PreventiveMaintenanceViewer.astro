@@ -1,0 +1,358 @@
+<section class="maintenance-shell" data-maintenance-root aria-live="polite">
+	<div class="maintenance-loading" data-maintenance-loading>
+		<p class="eyebrow">Ouverture locale</p>
+		<h2>Lecture du plan de maintenance…</h2>
+		<p>Le Passeport, le carnet d’exploitation et les interventions conservés sur cet appareil sont contrôlés.</p>
+	</div>
+
+	<section class="maintenance-onboarding" data-maintenance-onboarding hidden>
+		<div>
+			<p class="eyebrow">Aucune installation ouverte</p>
+			<h2>Ajoutez un Passeport déjà mis en service</h2>
+			<p data-maintenance-error>Ouvrez cette page depuis le suivi ou collez le lien privé d’un Passeport. Son contenu reste après le caractère # et n’est pas transmis au serveur.</p>
+		</div>
+		<a class="button primary" href="/passeport/">Ouvrir les Passeports</a>
+	</section>
+
+	<div class="maintenance-workspace" data-maintenance-workspace hidden>
+		<header class="maintenance-context">
+			<div>
+				<p class="eyebrow">Installation active</p>
+				<h2 data-maintenance-compressor></h2>
+				<p data-maintenance-tools></p>
+			</div>
+			<dl>
+				<div><dt>Recette initiale</dt><dd data-maintenance-baseline></dd></div>
+				<div><dt>Dernier compteur</dt><dd data-maintenance-hours></dd></div>
+				<div><dt>Passeport</dt><dd data-maintenance-passport-id></dd></div>
+			</dl>
+		</header>
+
+		<section class="maintenance-answer" data-maintenance-answer>
+			<header data-maintenance-status>
+				<div><p class="eyebrow">État calculé aujourd’hui</p><h2 data-maintenance-verdict></h2><p data-maintenance-finding></p></div>
+				<div class="maintenance-answer-actions">
+					<a class="button primary" href="/suivi-exploitation/" data-maintenance-monitoring>Ajouter un contrôle</a>
+					<button class="button" type="button" data-print-maintenance>Imprimer la fiche atelier</button>
+				</div>
+			</header>
+			<div class="maintenance-kpis">
+				<article><span>Échéances dépassées</span><strong data-count-overdue></strong><small>dates ou compteurs déclarés</small></article>
+				<article><span>Échéances atteintes</span><strong data-count-due></strong><small>à consigner maintenant</small></article>
+				<article><span>Signaux récurrents</span><strong data-count-recurring></strong><small>au moins deux observations</small></article>
+				<article><span>Actions conservées</span><strong data-count-records></strong><small>dans ce navigateur</small></article>
+			</div>
+		</section>
+
+		<div class="maintenance-decision-grid">
+			<section class="maintenance-priorities" aria-labelledby="maintenance-priorities-title">
+				<header><p class="eyebrow">Answer first</p><h2 id="maintenance-priorities-title">Ce qui demande une action</h2><p>Le motif visible distingue mesure, échéance déclarée et donnée manquante.</p></header>
+				<div data-maintenance-recommendations></div>
+			</section>
+			<section class="maintenance-recurrence" aria-labelledby="maintenance-recurrence-title">
+				<header><p class="eyebrow">Récurrence mesurée</p><h2 id="maintenance-recurrence-title">Un signal répété n’est pas encore une cause</h2></header>
+				<div data-maintenance-recurrence-list></div>
+				<p class="maintenance-method-boundary">CompatAir marque une récurrence à partir de deux contrôles portant le même signal. Ce repère sert à comparer les contextes ; il ne prouve ni l’origine ni la criticité mécanique.</p>
+			</section>
+		</div>
+
+		<section class="maintenance-trends" aria-labelledby="maintenance-trends-title">
+			<header>
+				<div><p class="eyebrow">Avant, pendant, après</p><h2 id="maintenance-trends-title">Comparer les périodes avec les valeurs exactes</h2><p>La recette reste le point zéro. Les contrôles incomplets restent visibles sans être reliés artificiellement.</p></div>
+				<a href="/suivi-exploitation/" data-maintenance-trends-link>Ouvrir le carnet complet →</a>
+			</header>
+			<div class="maintenance-chart-grid" data-maintenance-charts></div>
+			<div class="maintenance-trend-table-wrap"><table><thead><tr><th>Date</th><th>Pression au poste</th><th>Chute</th><th>Fuite</th><th>Compteur</th><th>Lecture</th></tr></thead><tbody data-maintenance-trend-body></tbody></table></div>
+		</section>
+
+		<section class="maintenance-plan" aria-labelledby="maintenance-plan-title">
+			<header>
+				<div><p class="eyebrow">Échéances explicites</p><h2 id="maintenance-plan-title">Plan déclaré pour cette installation</h2><p>Chaque ligne doit citer la notice du modèle ou la règle de site qui fournit l’échéance. CompatAir n’ajoute aucun intervalle générique.</p></div>
+				<span data-maintenance-task-summary></span>
+			</header>
+			<div class="maintenance-task-list" data-maintenance-task-list></div>
+			<p class="maintenance-task-empty" data-maintenance-task-empty>Aucune échéance structurée. Commencez par la prochaine date ou valeur de compteur réellement publiée.</p>
+			<details class="maintenance-form-disclosure" data-maintenance-task-disclosure>
+				<summary>Ajouter une échéance sourcée</summary>
+				<form data-maintenance-task-form novalidate>
+					<div class="maintenance-field-grid">
+						<label class="is-wide">Action planifiée<input name="label" required minlength="3" maxlength="160" placeholder="Ex. Contrôler le filtre d’admission" /></label>
+						<label>Famille<select name="category" required><option value="inspection">Inspection</option><option value="drain">Purge ou vidange</option><option value="filter">Filtre ou traitement d’air</option><option value="lubrication">Lubrification</option><option value="leak_control">Contrôle des fuites</option><option value="hose_or_fitting">Flexible ou raccord</option><option value="compressor_service">Entretien du compresseur</option><option value="other">Autre action</option></select></label>
+						<label>Origine de l’échéance<select name="scheduleSource" required><option value="manufacturer">Notice constructeur</option><option value="site_rule">Règle de site déclarée</option></select></label>
+						<label class="is-wide">Référence exacte<input name="sourceReference" required minlength="3" maxlength="400" placeholder="Titre de notice, chapitre, page ou identifiant de procédure" /></label>
+						<label>Date d’échéance <span>au moins un des deux champs</span><input type="date" name="dueOn" /></label>
+						<label>Compteur d’échéance <span>heures machine</span><input type="number" inputmode="decimal" name="dueOperatingHours" min="0" max="10000000" step="0.1" /></label>
+						<label class="is-wide">Précision facultative<textarea name="note" maxlength="600" rows="3" placeholder="Condition particulière explicitement prévue par la source"></textarea></label>
+					</div>
+					<p class="maintenance-form-error" data-maintenance-task-error hidden></p>
+					<footer><p>La date et le compteur saisis sont des données déclarées. Leur origine reste visible dans le plan.</p><button class="button primary" type="submit">Enregistrer l’échéance</button></footer>
+				</form>
+			</details>
+		</section>
+
+		<section class="maintenance-record" aria-labelledby="maintenance-record-title">
+			<header><p class="eyebrow">Fiche d’intervention</p><h2 id="maintenance-record-title">Consigner ce qui a réellement été fait</h2><p>Une action terminée doit recevoir sa prochaine échéance exacte ou être clôturée. Une action partielle conserve l’échéance actuelle.</p></header>
+			<form data-maintenance-record-form novalidate>
+				<div class="maintenance-field-grid">
+					<label class="is-wide">Échéance concernée<select name="taskId" data-maintenance-task-select><option value="">Action non planifiée</option></select></label>
+					<label data-unplanned-label>Libellé de l’action<input name="taskLabel" minlength="3" maxlength="160" placeholder="Action non planifiée" /></label>
+					<label data-unplanned-category>Famille<select name="recordCategory"><option value="inspection">Inspection</option><option value="drain">Purge ou vidange</option><option value="filter">Filtre ou traitement d’air</option><option value="lubrication">Lubrification</option><option value="leak_control">Contrôle des fuites</option><option value="hose_or_fitting">Flexible ou raccord</option><option value="compressor_service">Entretien du compresseur</option><option value="other">Autre action</option></select></label>
+					<label>Date de réalisation<input type="date" name="performedOn" required /></label>
+					<label>Compteur relevé <span>facultatif</span><input type="number" inputmode="decimal" name="operatingHours" min="0" max="10000000" step="0.1" /></label>
+					<label>Résultat<select name="result"><option value="completed">Action terminée</option><option value="no_action_required">Contrôle réalisé, aucune action nécessaire</option><option value="partial">Action partielle</option></select></label>
+					<label class="is-wide">Action réellement menée<textarea name="actionDescription" required minlength="3" maxlength="800" rows="4" placeholder="Pièce, contrôle, réglage ou constat effectivement réalisé"></textarea></label>
+					<label class="is-wide">Preuve ou observation <span>facultative</span><textarea name="evidenceNote" maxlength="600" rows="3" placeholder="Référence de rapport, valeur mesurée ou limite du contrôle"></textarea></label>
+				</div>
+				<fieldset class="maintenance-next-schedule" data-next-schedule hidden>
+					<legend>Suite de l’échéance sélectionnée</legend>
+					<div class="maintenance-field-grid">
+						<label>Prochaine date exacte<input type="date" name="nextDueOn" /></label>
+						<label>Prochain compteur exact<input type="number" inputmode="decimal" name="nextDueOperatingHours" min="0" max="10000000" step="0.1" /></label>
+						<label class="maintenance-close-task"><input type="checkbox" name="closeTask" /> <span><strong>Clôturer cette tâche</strong><small>À utiliser si la source ne prévoit aucune nouvelle échéance.</small></span></label>
+					</div>
+				</fieldset>
+				<p class="maintenance-form-error" data-maintenance-record-error hidden></p>
+				<footer><p>La fiche est enregistrée localement et rejoint la chronologie de l’installation.</p><button class="button primary" type="submit">Consigner l’action</button></footer>
+			</form>
+		</section>
+
+		<section class="maintenance-timeline" aria-labelledby="maintenance-timeline-title">
+			<header>
+				<div><p class="eyebrow">Traçabilité locale</p><h2 id="maintenance-timeline-title">De la recette aux actions préventives</h2><p data-maintenance-history-summary></p></div>
+				<div class="maintenance-export-actions"><button class="button" type="button" data-print-maintenance-copy>Imprimer la fiche atelier</button><button class="button" type="button" data-download-maintenance-json>Exporter le dossier JSON</button></div>
+			</header>
+			<div data-maintenance-timeline-list></div>
+			<footer><span role="status" data-maintenance-action-status></span><p>CompatAir ne reçoit ni le plan, ni les compteurs, ni les actions exportées.</p></footer>
+		</section>
+	</div>
+
+	<section class="maintenance-portfolio" data-maintenance-portfolio hidden aria-labelledby="maintenance-portfolio-title">
+		<header><div><p class="eyebrow">Petit parc local</p><h2 id="maintenance-portfolio-title">Installations enregistrées sur cet appareil</h2><p>Jusqu’à 20 Passeports, sans compte et sans synchronisation serveur.</p></div></header>
+		<form data-maintenance-add-form><label>Lien privé du Passeport<input name="passportLink" required autocomplete="off" placeholder="https://compatair.fr/passeport/#passport=…" /></label><button class="button primary" type="submit">Ajouter au parc</button></form>
+		<p class="maintenance-form-error" data-maintenance-add-error hidden></p>
+		<div class="maintenance-portfolio-list" data-maintenance-portfolio-list></div>
+		<p class="maintenance-portfolio-empty" data-maintenance-portfolio-empty>Aucun Passeport n’est encore enregistré sur cet appareil.</p>
+	</section>
+</section>
+
+<script>
+	import { createInterventionLog, parseInterventionLogJson, type InterventionLog } from '../domain/intervention';
+	import { assessOperationCheck, createOperationLog, operationVerdictLabel, parseOperationLogJson, type OperationLog } from '../domain/operation-monitoring';
+	import { createPassportReport, decodePassportConfiguration, decodePassportEnvelope, reportFromPassportEnvelope, type PassportReport } from '../domain/passport';
+	import {
+		appendMaintenanceRecord, appendMaintenanceTask, assessPreventiveMaintenance, createMaintenanceLog, createMaintenancePortfolio,
+		maintenanceCategoryLabel, maintenanceLogSchema, maintenanceStatusLabel, maintenanceTaskSchema,
+		parseMaintenanceLogJson, parseMaintenancePortfolioJson, removeMaintenancePortfolioEntry, removeMaintenanceRecord, removeMaintenanceTask,
+		upsertMaintenancePortfolioEntry, type MaintenanceAssessment, type MaintenanceLog, type MaintenancePortfolio,
+	} from '../domain/preventive-maintenance';
+
+	type EquipmentBundle = { report: PassportReport; encodedPassport: string; operationLog: OperationLog; interventionLog: InterventionLog; maintenanceLog: MaintenanceLog; assessment: MaintenanceAssessment };
+	const root = document.querySelector<HTMLElement>('[data-maintenance-root]');
+	const query = <T extends Element>(selector: string) => root?.querySelector<T>(selector);
+	const setText = (selector: string, text: string) => { const element = query<HTMLElement>(selector); if (element) element.textContent = text; };
+	const PORTFOLIO_KEY = 'compatair:maintenance-portfolio';
+	let portfolio: MaintenancePortfolio;
+	let current: EquipmentBundle | undefined;
+
+	function localToday() {
+		const date = new Date();
+		return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+	}
+
+	function format(value: number, digits = 1) { return value.toLocaleString('fr-FR', { maximumFractionDigits: digits }); }
+	function metric(value: number | undefined, unit: string, digits = 1) { return value === undefined ? 'Non mesuré' : `${format(value, digits)} ${unit}`; }
+	function formatDate(date: string) { return new Date(`${date}T12:00:00`).toLocaleDateString('fr-FR', { day: '2-digit', month: 'long', year: 'numeric' }); }
+	function optionalNumber(data: FormData, name: string) { const raw = data.get(name); if (typeof raw !== 'string' || raw.trim() === '') return undefined; const number = Number(raw); return Number.isFinite(number) ? number : undefined; }
+	function optionalText(data: FormData, name: string) { const value = String(data.get(name) ?? '').trim(); return value || undefined; }
+	function operationKey(passportId: string) { return `compatair:operation-log:${passportId}`; }
+	function interventionKey(passportId: string) { return `compatair:intervention-log:${passportId}`; }
+	function maintenanceKey(passportId: string) { return `compatair:maintenance-log:${passportId}`; }
+	function maintenanceUrl(encoded: string) { return `${location.origin}/maintenance-preventive/#passport=${encoded}`; }
+	function monitoringUrl(encoded: string) { return `${location.origin}/suivi-exploitation/#passport=${encoded}`; }
+
+	async function resolveReport(encoded: string) {
+		const envelope = decodePassportEnvelope(encoded);
+		const legacy = envelope ? undefined : decodePassportConfiguration(encoded);
+		if (!envelope && !legacy) throw new Error('Le lien du Passeport est invalide, incomplet ou utilise un format non reconnu.');
+		if (envelope) return reportFromPassportEnvelope(envelope);
+		const { loadRuntimeCatalog } = await import('../domain/runtime-catalog');
+		const catalog = await loadRuntimeCatalog();
+		return createPassportReport(legacy!, catalog.compressors, catalog.tools, catalog.catalogVerifiedAt);
+	}
+
+	function loadPortfolio() {
+		const stored = localStorage.getItem(PORTFOLIO_KEY);
+		const parsed = stored ? parseMaintenancePortfolioJson(stored) : undefined;
+		return parsed?.success ? parsed.data : createMaintenancePortfolio();
+	}
+
+	function savePortfolio() {
+		localStorage.setItem(PORTFOLIO_KEY, JSON.stringify(portfolio));
+	}
+
+	function saveMaintenance(message: string) {
+		if (!current) return;
+		localStorage.setItem(maintenanceKey(current.report.passportId), JSON.stringify(current.maintenanceLog));
+		setText('[data-maintenance-action-status]', message);
+	}
+
+	async function loadBundle(encodedPassport: string): Promise<EquipmentBundle> {
+		const report = await resolveReport(encodedPassport);
+		if (!report.configuration.commissioning) throw new Error('Ce Passeport ne contient pas encore de recette terrain.');
+		const storedOperation = localStorage.getItem(operationKey(report.passportId));
+		const parsedOperation = storedOperation ? parseOperationLogJson(storedOperation) : undefined;
+		const operationLog = parsedOperation?.success && parsedOperation.data.passportId === report.passportId && parsedOperation.data.baselineObservedOn === report.configuration.commissioning.observedOn
+			? parsedOperation.data : createOperationLog(report);
+		const storedIntervention = localStorage.getItem(interventionKey(report.passportId));
+		const parsedIntervention = storedIntervention ? parseInterventionLogJson(storedIntervention) : undefined;
+		const interventionLog = parsedIntervention?.success && parsedIntervention.data.passportId === report.passportId ? parsedIntervention.data : createInterventionLog(report);
+		const storedMaintenance = localStorage.getItem(maintenanceKey(report.passportId));
+		const parsedMaintenance = storedMaintenance ? parseMaintenanceLogJson(storedMaintenance) : undefined;
+		const maintenanceLog = parsedMaintenance?.success && parsedMaintenance.data.passportId === report.passportId ? parsedMaintenance.data : createMaintenanceLog(report);
+		const assessment = assessPreventiveMaintenance(report, operationLog, interventionLog, maintenanceLog, localToday());
+		return { report, encodedPassport, operationLog, interventionLog, maintenanceLog, assessment };
+	}
+
+	function extractEncodedPassport(input: string) {
+		const trimmed = input.trim();
+		if (/^[A-Za-z0-9_-]{1,64000}$/.test(trimmed)) return trimmed;
+		try { return new URLSearchParams(new URL(trimmed, location.origin).hash.slice(1)).get('passport') || ''; }
+		catch { return ''; }
+	}
+
+	function createTextElement(tag: string, text: string, className?: string) {
+		const element = document.createElement(tag); element.textContent = text; if (className) element.className = className; return element;
+	}
+
+	function renderRecommendations() {
+		if (!current) return;
+		const container = query<HTMLElement>('[data-maintenance-recommendations]'); if (!container) return; container.replaceChildren();
+		for (const item of current.assessment.recommendations) {
+			const article = document.createElement('article'); article.dataset.priority = item.priority;
+			const head = document.createElement('div'); const basis = createTextElement('span', item.basis === 'measurement' ? 'Mesure' : item.basis === 'declared_schedule' ? 'Échéance déclarée' : 'Donnée manquante'); const title = createTextElement('strong', item.label); head.append(basis, title);
+			article.append(head, createTextElement('p', item.finding), createTextElement('small', item.action));
+			if (item.href) { const link = document.createElement('a'); link.className = 'button'; link.href = item.href.replace('{passport}', current.encodedPassport); link.textContent = 'Ouvrir le parcours'; article.append(link); }
+			container.append(article);
+		}
+	}
+
+	function renderRecurrences() {
+		if (!current) return;
+		const container = query<HTMLElement>('[data-maintenance-recurrence-list]'); if (!container) return; container.replaceChildren();
+		if (!current.assessment.recurringSignals.length) { container.append(createTextElement('p', 'Aucun signal n’apparaît dans au moins deux contrôles comparables.', 'maintenance-recurrence-empty')); return; }
+		for (const signal of current.assessment.recurringSignals) {
+			const article = document.createElement('article'); const count = createTextElement('strong', String(signal.count)); const body = document.createElement('div'); body.append(createTextElement('b', signal.label), createTextElement('p', `Du ${formatDate(signal.firstObservedOn)} au ${formatDate(signal.lastObservedOn)}.`)); article.append(count, body); container.append(article);
+		}
+	}
+
+	function chart(title: string, unit: string, values: Array<{ date: string; value?: number }>) {
+		const article = document.createElement('article'); article.append(createTextElement('strong', title));
+		const available = values.filter((point): point is { date: string; value: number } => point.value !== undefined).slice(-7);
+		if (available.length < 2) { article.append(createTextElement('p', 'Au moins deux valeurs sont nécessaires pour tracer une évolution.')); return article; }
+		const maximum = Math.max(...available.map((point) => point.value)); const bars = document.createElement('div'); bars.className = 'maintenance-trend-bars';
+		for (const point of available) { const column = document.createElement('span'); const bar = document.createElement('i'); bar.style.height = `${Math.max(8, point.value / (maximum || 1) * 100)}%`; column.title = `${formatDate(point.date)} : ${format(point.value, 2)} ${unit}`; column.append(bar, createTextElement('b', format(point.value, 2)), createTextElement('small', point.date.slice(5))); bars.append(column); }
+		article.append(bars, createTextElement('small', `${available.length} valeurs · dernière : ${format(available.at(-1)!.value, 2)} ${unit}`)); return article;
+	}
+
+	function renderTrends() {
+		if (!current) return;
+		const baseline = current.report.configuration.commissioning!;
+		const points = [{
+			date: baseline.observedOn, tool: baseline.toolPressureBar,
+			drop: baseline.sourcePressureBar === undefined || baseline.toolPressureBar === undefined ? undefined : baseline.sourcePressureBar - baseline.toolPressureBar,
+			leak: baseline.measuredLeakLpm, hours: undefined, verdict: 'Point zéro',
+		}, ...current.operationLog.entries.map((check) => {
+			const assessment = assessOperationCheck(current!.report, current!.operationLog, check);
+			return { date: check.observedOn, tool: check.toolPressureBar, drop: assessment.comparison.currentPressureDropBar, leak: check.measuredLeakLpm, hours: check.operatingHours, verdict: operationVerdictLabel(assessment.verdict) };
+		})];
+		const charts = query<HTMLElement>('[data-maintenance-charts]'); if (charts) { charts.replaceChildren(chart('Pression au poste', 'bar', points.map((point) => ({ date: point.date, value: point.tool }))), chart('Chute source / poste', 'bar', points.map((point) => ({ date: point.date, value: point.drop }))), chart('Débit de fuite', 'L/min', points.map((point) => ({ date: point.date, value: point.leak })))); }
+		const body = query<HTMLTableSectionElement>('[data-maintenance-trend-body]'); if (!body) return; body.replaceChildren();
+		for (const point of [...points].reverse()) { const row = document.createElement('tr'); for (const text of [formatDate(point.date), metric(point.tool, 'bar', 2), metric(point.drop, 'bar', 2), metric(point.leak, 'L/min'), metric(point.hours, 'h'), point.verdict]) row.append(createTextElement('td', text)); body.append(row); }
+	}
+
+	function renderTasks() {
+		if (!current) return;
+		const list = query<HTMLElement>('[data-maintenance-task-list]'); const empty = query<HTMLElement>('[data-maintenance-task-empty]'); const select = query<HTMLSelectElement>('[data-maintenance-task-select]'); if (!list || !empty || !select) return;
+		list.replaceChildren(); select.replaceChildren(new Option('Action non planifiée', ''));
+		empty.hidden = current.assessment.tasks.length > 0; setText('[data-maintenance-task-summary]', `${current.assessment.tasks.length} échéance${current.assessment.tasks.length > 1 ? 's' : ''} active${current.assessment.tasks.length > 1 ? 's' : ''}`);
+		for (const task of current.assessment.tasks) {
+			const article = document.createElement('article'); article.dataset.status = task.status;
+			const head = document.createElement('header'); const title = document.createElement('div'); title.append(createTextElement('span', maintenanceCategoryLabel(task.category)), createTextElement('strong', task.label)); const status = createTextElement('b', task.statusLabel); head.append(title, status);
+			const source = createTextElement('p', task.sourceReference, 'maintenance-task-source'); const finding = createTextElement('p', task.statusFinding); const actions = document.createElement('footer');
+			const record = document.createElement('button'); record.type = 'button'; record.className = 'button'; record.textContent = 'Consigner cette action'; record.addEventListener('click', () => { select.value = task.id; updateRecordTask(); query<HTMLElement>('[data-maintenance-record-form]')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+			const remove = document.createElement('button'); remove.type = 'button'; remove.className = 'maintenance-task-remove'; remove.textContent = 'Retirer du plan'; remove.addEventListener('click', () => { current!.maintenanceLog = removeMaintenanceTask(current!.maintenanceLog, task.id); refreshCurrent('Échéance retirée du plan local.'); }); actions.append(record, remove); article.append(head, source, finding, actions); list.append(article);
+			select.append(new Option(`${task.label} · ${task.statusLabel}`, task.id));
+		}
+	}
+
+	function renderTimeline() {
+		if (!current) return;
+		const list = query<HTMLElement>('[data-maintenance-timeline-list]'); if (!list) return; list.replaceChildren(); setText('[data-maintenance-history-summary]', `${current.assessment.timeline.length} événements, dont ${current.maintenanceLog.records.length} actions de maintenance.`);
+		for (const entry of current.assessment.timeline) {
+			const article = document.createElement('article'); article.dataset.type = entry.type; article.dataset.status = entry.status;
+			const marker = createTextElement('span', entry.type === 'commissioning' ? '00' : entry.type === 'operation_check' ? 'M' : entry.type === 'intervention' ? 'I' : 'A');
+			const body = document.createElement('div'); const head = document.createElement('header'); const title = createTextElement('strong', entry.label); const time = document.createElement('time'); time.dateTime = entry.date; time.textContent = formatDate(entry.date); head.append(title, time); body.append(head, createTextElement('p', entry.detail)); if (entry.operatingHours !== undefined) body.append(createTextElement('small', `Compteur déclaré : ${format(entry.operatingHours)} h`));
+			if (entry.type === 'maintenance') { const remove = document.createElement('button'); remove.type = 'button'; remove.textContent = 'Supprimer cette action'; remove.addEventListener('click', () => { current!.maintenanceLog = removeMaintenanceRecord(current!.maintenanceLog, entry.id); refreshCurrent('Action retirée de l’historique local.'); }); body.append(remove); }
+			article.append(marker, body); list.append(article);
+		}
+	}
+
+	function renderCurrent() {
+		if (!current) return;
+		setText('[data-maintenance-compressor]', current.report.compressorLabel); setText('[data-maintenance-tools]', current.report.toolLabels.join(' · ')); setText('[data-maintenance-baseline]', formatDate(current.report.configuration.commissioning!.observedOn)); setText('[data-maintenance-hours]', metric(current.assessment.currentOperatingHours, 'h')); setText('[data-maintenance-passport-id]', current.report.passportId.slice(0, 12));
+		setText('[data-maintenance-verdict]', maintenanceStatusLabel(current.assessment.status)); setText('[data-maintenance-finding]', current.assessment.primaryFinding); const status = query<HTMLElement>('[data-maintenance-status]'); if (status) status.dataset.status = current.assessment.status;
+		setText('[data-count-overdue]', String(current.assessment.counts.overdue)); setText('[data-count-due]', String(current.assessment.counts.due)); setText('[data-count-recurring]', String(current.assessment.counts.recurringSignals)); setText('[data-count-records]', String(current.assessment.counts.maintenanceRecords));
+		for (const selector of ['[data-maintenance-monitoring]', '[data-maintenance-trends-link]']) query<HTMLAnchorElement>(selector)?.setAttribute('href', monitoringUrl(current.encodedPassport));
+		renderRecommendations(); renderRecurrences(); renderTrends(); renderTasks(); renderTimeline();
+		const date = query<HTMLInputElement>('[name="performedOn"]'); if (date && !date.value) { date.value = localToday(); date.min = current.report.configuration.commissioning!.observedOn; date.max = localToday(); }
+	}
+
+	function refreshCurrent(message: string) {
+		if (!current) return; saveMaintenance(message); current.assessment = assessPreventiveMaintenance(current.report, current.operationLog, current.interventionLog, current.maintenanceLog, localToday()); renderCurrent(); void renderPortfolio();
+	}
+
+	function updateRecordTask() {
+		if (!current) return;
+		const select = query<HTMLSelectElement>('[data-maintenance-task-select]'); const next = query<HTMLElement>('[data-next-schedule]'); const label = query<HTMLInputElement>('[name="taskLabel"]'); const category = query<HTMLSelectElement>('[name="recordCategory"]'); const task = current.maintenanceLog.tasks.find((item) => item.id === select?.value);
+		if (next) next.hidden = !task; if (label) { label.value = task?.label ?? ''; label.readOnly = Boolean(task); label.required = !task; } if (category) { category.value = task?.category ?? 'inspection'; category.disabled = Boolean(task); }
+	}
+
+	async function renderPortfolio() {
+		const panel = query<HTMLElement>('[data-maintenance-portfolio]'); const list = query<HTMLElement>('[data-maintenance-portfolio-list]'); const empty = query<HTMLElement>('[data-maintenance-portfolio-empty]'); if (!panel || !list || !empty) return; panel.hidden = false; list.replaceChildren(); empty.hidden = portfolio.entries.length > 0;
+		const cards = await Promise.all(portfolio.entries.map(async (entry) => {
+			const article = document.createElement('article'); if (entry.passportId === current?.report.passportId) article.dataset.active = 'true';
+			try {
+				const bundle = entry.passportId === current?.report.passportId ? current : await loadBundle(entry.encodedPassport); if (!bundle) throw new Error('Passeport indisponible'); article.dataset.status = bundle.assessment.status;
+				const head = document.createElement('header'); const title = document.createElement('div'); title.append(createTextElement('strong', entry.alias || bundle.report.compressorLabel), createTextElement('span', bundle.report.toolLabels.join(' · '))); const badge = createTextElement('b', maintenanceStatusLabel(bundle.assessment.status)); head.append(title, badge);
+				const counts = createTextElement('p', `${bundle.assessment.counts.overdue} dépassée · ${bundle.assessment.counts.due} atteinte · ${bundle.assessment.counts.recurringSignals} récurrence`);
+				const actions = document.createElement('footer'); const open = document.createElement('a'); open.className = 'button'; open.href = maintenanceUrl(entry.encodedPassport); open.textContent = entry.passportId === current?.report.passportId ? 'Installation ouverte' : 'Ouvrir'; const remove = document.createElement('button'); remove.type = 'button'; remove.textContent = 'Retirer du parc'; remove.addEventListener('click', () => { portfolio = removeMaintenancePortfolioEntry(portfolio, entry.passportId); savePortfolio(); void renderPortfolio(); }); actions.append(open, remove); article.append(head, counts, actions);
+			} catch { article.dataset.status = 'insufficient_data'; article.append(createTextElement('strong', entry.alias || `Passeport ${entry.passportId.slice(0, 12)}`), createTextElement('p', 'Ce Passeport ne peut plus être relu sur cet appareil.')); }
+			return article;
+		}));
+		list.append(...cards);
+	}
+
+	async function openPassportInput(value: string) {
+		const encoded = extractEncodedPassport(value); if (!encoded) throw new Error('Collez un lien CompatAir contenant #passport=… ou le code brut du Passeport.');
+		const report = await resolveReport(encoded); if (!report.configuration.commissioning) throw new Error('Ce Passeport doit d’abord passer par la recette terrain.'); const now = new Date().toISOString(); const existing = portfolio.entries.find((entry) => entry.passportId === report.passportId);
+		portfolio = upsertMaintenancePortfolioEntry(portfolio, { passportId: report.passportId, encodedPassport: encoded, alias: existing?.alias, addedAt: existing?.addedAt ?? now, lastOpenedAt: now }, now); savePortfolio(); location.href = maintenanceUrl(encoded);
+	}
+
+	query<HTMLFormElement>('[data-maintenance-add-form]')?.addEventListener('submit', async (event) => { event.preventDefault(); const error = query<HTMLElement>('[data-maintenance-add-error]'); if (error) error.hidden = true; try { await openPassportInput(String(new FormData(event.currentTarget as HTMLFormElement).get('passportLink') ?? '')); } catch (caught) { if (error) { error.textContent = caught instanceof Error ? caught.message : 'Le Passeport ne peut pas être ajouté.'; error.hidden = false; } } });
+	query<HTMLFormElement>('[data-maintenance-task-form]')?.addEventListener('submit', (event) => { event.preventDefault(); if (!current) return; const error = query<HTMLElement>('[data-maintenance-task-error]'); if (error) error.hidden = true; try { const data = new FormData(event.currentTarget as HTMLFormElement); const task = maintenanceTaskSchema.parse({ id: crypto.randomUUID(), label: data.get('label'), category: data.get('category'), scheduleSource: data.get('scheduleSource'), sourceReference: data.get('sourceReference'), dueOn: optionalText(data, 'dueOn'), dueOperatingHours: optionalNumber(data, 'dueOperatingHours'), note: optionalText(data, 'note'), createdAt: new Date().toISOString(), active: true }); current.maintenanceLog = appendMaintenanceTask(current.maintenanceLog, task); (event.currentTarget as HTMLFormElement).reset(); refreshCurrent(`Échéance « ${task.label} » enregistrée localement.`); } catch (caught) { if (error) { error.textContent = caught instanceof Error ? caught.message : 'L’échéance ne peut pas être enregistrée.'; error.hidden = false; } } });
+	query<HTMLSelectElement>('[data-maintenance-task-select]')?.addEventListener('change', updateRecordTask);
+	query<HTMLFormElement>('[data-maintenance-record-form]')?.addEventListener('submit', (event) => { event.preventDefault(); if (!current) return; const error = query<HTMLElement>('[data-maintenance-record-error]'); if (error) error.hidden = true; try { const form = event.currentTarget as HTMLFormElement; const data = new FormData(form); const task = current.maintenanceLog.tasks.find((item) => item.id === data.get('taskId')); const taskLabel = task?.label ?? String(data.get('taskLabel') ?? '').trim(); const category = task?.category ?? data.get('recordCategory'); const record = { id: crypto.randomUUID(), taskId: task?.id, taskLabel, category, performedOn: data.get('performedOn'), recordedAt: new Date().toISOString(), operatingHours: optionalNumber(data, 'operatingHours'), result: data.get('result'), actionDescription: data.get('actionDescription'), evidenceNote: optionalText(data, 'evidenceNote') }; current.maintenanceLog = appendMaintenanceRecord(current.maintenanceLog, { record, nextDueOn: task ? optionalText(data, 'nextDueOn') : undefined, nextDueOperatingHours: task ? optionalNumber(data, 'nextDueOperatingHours') : undefined, closeTask: task ? data.get('closeTask') === 'on' : false }); form.reset(); updateRecordTask(); refreshCurrent(`Action « ${taskLabel} » consignée localement.`); } catch (caught) { if (error) { error.textContent = caught instanceof Error ? caught.message : 'L’action ne peut pas être enregistrée.'; error.hidden = false; error.scrollIntoView({ behavior: 'smooth', block: 'center' }); } } });
+	query<HTMLButtonElement>('[data-print-maintenance]')?.addEventListener('click', () => window.print());
+	query<HTMLButtonElement>('[data-print-maintenance-copy]')?.addEventListener('click', () => window.print());
+	query<HTMLButtonElement>('[data-download-maintenance-json]')?.addEventListener('click', () => { if (!current) return; const validated = maintenanceLogSchema.parse(current.maintenanceLog); const artifact = { artifactType: 'compatair-preventive-maintenance', schemaVersion: validated.version, exportedAt: new Date().toISOString(), passport: { id: current.report.passportId, compressor: current.report.compressorLabel, tools: current.report.toolLabels }, assessment: current.assessment, operationLog: current.operationLog, interventionLog: current.interventionLog, maintenanceLog: validated }; const blob = new Blob([JSON.stringify(artifact, null, 2)], { type: 'application/json' }); const url = URL.createObjectURL(blob); const link = document.createElement('a'); link.href = url; link.download = `maintenance-compatair-${current.report.passportId.slice(0, 16)}.json`; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1_000); setText('[data-maintenance-action-status]', 'Dossier JSON exporté localement.'); });
+	async function load() {
+		try { portfolio = loadPortfolio(); } catch { portfolio = createMaintenancePortfolio(); }
+		const encoded = new URLSearchParams(location.hash.slice(1)).get('passport') || '';
+		if (!encoded) { query<HTMLElement>('[data-maintenance-loading]')!.hidden = true; query<HTMLElement>('[data-maintenance-onboarding]')!.hidden = false; await renderPortfolio(); return; }
+		try {
+			current = await loadBundle(encoded); const now = new Date().toISOString(); const existing = portfolio.entries.find((entry) => entry.passportId === current!.report.passportId); portfolio = upsertMaintenancePortfolioEntry(portfolio, { passportId: current.report.passportId, encodedPassport: encoded, alias: existing?.alias, addedAt: existing?.addedAt ?? now, lastOpenedAt: now }, now); savePortfolio(); renderCurrent(); query<HTMLElement>('[data-maintenance-loading]')!.hidden = true; query<HTMLElement>('[data-maintenance-workspace]')!.hidden = false; await renderPortfolio();
+		} catch (caught) { setText('[data-maintenance-error]', caught instanceof Error ? caught.message : 'Le plan de maintenance ne peut pas être ouvert.'); query<HTMLElement>('[data-maintenance-loading]')!.hidden = true; query<HTMLElement>('[data-maintenance-onboarding]')!.hidden = false; await renderPortfolio(); }
+	}
+
+	void load();
+</script>

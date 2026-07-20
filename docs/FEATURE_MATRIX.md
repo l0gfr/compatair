@@ -12,6 +12,8 @@
 - recommandation contrefactuelle déterministe : recherche du plus petit changement unique vérifié sur la pression disponible, la chute mesurée du réseau, la simultanéité, les fuites mesurées, la cadence explicite ou la machine documentée ;
 - dossier de dimensionnement local avec synthèse de configuration, recommandations prioritaires, filtres par verdict et copie texte ;
 - Passeport CompatAir gratuit : installation encodée dans une URL versionnée, recalcul local, sources, marges, points de vigilance, évolutions possibles, données manquantes et PDF généré dans le navigateur ;
+- carnet d’exploitation local avec recette de référence, contrôles périodiques, signaux de dérive explicites, diagnostic guidé par famille d’écart, intervention consignée, contre-mesure et clôture déterministe en PDF ou JSON ;
+- plan de maintenance préventive local : échéances datées ou liées au compteur depuis une source déclarée, alertes sans intervalle inventé, récurrences mesurées, chronologie, fiche atelier imprimable, export JSON et petit parc de 20 Passeports ;
 - Scanner et vérifier : saisie exacte MPN/EAN, photo locale, lecture code-barres et OCR natif lorsque disponible, confirmation humaine obligatoire, preuves et compatibilités recalculées ;
 - API HTTP `v1` de compatibilité en lecture seule et widget marchand sans cookie, tous deux fondés sur le même moteur et les mêmes sources ;
 - frontière produit explicite : aucune sauvegarde serveur dans la version gratuite ; la sauvegarde de plusieurs ateliers, les exports de dossiers et les alertes restent le périmètre envisagé d’une version professionnelle non disponible ;

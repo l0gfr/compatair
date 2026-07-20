@@ -376,7 +376,7 @@ else {
 if (!artifactPaths.has('/passeport/index.html')) errors.push('plan installation: Passeport rendu absent');
 else {
 	const passportHtml = await readFile(join(root, '/passeport/index.html'), 'utf8');
-	for (const marker of ['data-installation-plan', 'data-plan-before-purchase', 'data-plan-before-commissioning', 'data-commission', 'data-monitoring', '/mise-en-service/', '/suivi-exploitation/', 'Plan d’installation contextualisé', 'Confirmé par une source', 'À mesurer sur site', 'Non documenté', 'Imprimer la checklist', 'Valider sur site', 'Suivre dans le temps']) {
+	for (const marker of ['data-installation-plan', 'data-plan-before-purchase', 'data-plan-before-commissioning', 'data-commission', 'data-monitoring', 'data-maintenance', '/mise-en-service/', '/suivi-exploitation/', '/maintenance-preventive/', 'Plan d’installation contextualisé', 'Confirmé par une source', 'À mesurer sur site', 'Non documenté', 'Imprimer la checklist', 'Valider sur site', 'Suivre dans le temps', 'Planifier la maintenance']) {
 		if (!passportHtml.includes(marker)) errors.push(`plan installation: marqueur absent ${marker}`);
 	}
 }
@@ -392,8 +392,24 @@ else {
 if (!artifactPaths.has('/suivi-exploitation/index.html')) errors.push('suivi exploitation: page rendue absente');
 else {
 	const operationHtml = await readFile(join(root, '/suivi-exploitation/index.html'), 'utf8');
-	for (const marker of ['data-operation-root', 'data-operation-form', 'data-operation-result', 'data-operation-history-list', 'data-download-operation-pdf', 'data-download-operation-json', 'Comparer à la recette initiale', 'Échéance constructeur non documentée', '0,1 bar', '5 L/min']) {
+	for (const marker of ['data-operation-root', 'data-operation-form', 'data-operation-result', 'data-operation-history-list', 'data-download-operation-pdf', 'data-download-operation-json', 'data-diagnose-link', 'data-operation-maintenance', '/diagnostic-intervention/', '/maintenance-preventive/', 'Comparer à la recette initiale', 'Diagnostiquer cet écart', 'Planifier la maintenance', 'Échéance constructeur non documentée', '0,1 bar', '5 L/min']) {
 		if (!operationHtml.includes(marker)) errors.push(`suivi exploitation: marqueur absent ${marker}`);
+	}
+}
+
+if (!artifactPaths.has('/diagnostic-intervention/index.html')) errors.push('diagnostic intervention: page rendue absente');
+else {
+	const interventionHtml = await readFile(join(root, '/diagnostic-intervention/index.html'), 'utf8');
+	for (const marker of ['data-intervention-root', 'data-intervention-form', 'data-diagnostic-steps', 'data-intervention-result', 'data-intervention-history-list', 'data-download-intervention-pdf', 'data-download-intervention-json', 'data-result-maintenance', '/maintenance-preventive/', 'Évaluer la contre-mesure', 'Aucune cause n’est déduite automatiquement', 'Une amélioration ne clôt pas l’écart', 'Planifier la maintenance']) {
+		if (!interventionHtml.includes(marker)) errors.push(`diagnostic intervention: marqueur absent ${marker}`);
+	}
+}
+
+if (!artifactPaths.has('/maintenance-preventive/index.html')) errors.push('maintenance préventive: page rendue absente');
+else {
+	const maintenanceHtml = await readFile(join(root, '/maintenance-preventive/index.html'), 'utf8');
+	for (const marker of ['data-maintenance-root', 'data-maintenance-answer', 'data-maintenance-recommendations', 'data-maintenance-charts', 'data-maintenance-task-form', 'data-maintenance-record-form', 'data-maintenance-timeline-list', 'data-maintenance-portfolio-list', 'data-print-maintenance-copy', 'data-download-maintenance-json', 'Imprimer la fiche atelier', 'aucun intervalle générique', 'Un signal répété n’est pas encore une cause', 'Jusqu’à 20 Passeports']) {
+		if (!maintenanceHtml.includes(marker)) errors.push(`maintenance préventive: marqueur absent ${marker}`);
 	}
 }
 
