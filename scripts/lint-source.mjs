@@ -86,6 +86,19 @@ const baseLayout = await readFile('src/layouts/BaseLayout.astro', 'utf8');
 for (const fontPreload of ['manropeLatinWghtUrl', 'newsreaderLatinWghtUrl']) {
 	if (!baseLayout.includes(`rel="preload" href={${fontPreload}} as="font"`)) errors.push(`src/layouts/BaseLayout.astro: préchargement de police manquant (${fontPreload})`);
 }
+const globalStyles = await readFile('src/styles/global.css', 'utf8');
+if (!globalStyles.includes('--accent-ink: #092218;')) errors.push('src/styles/global.css: couleur de texte sombre dédiée au fond fluo absente');
+for (const match of globalStyles.matchAll(/([^{}]+)\{([^{}]+)\}/g)) {
+	const selector = match[1].trim().replaceAll(/\s+/g, ' ');
+	const declarations = match[2];
+	if (/background(?:-color)?\s*:\s*var\(--accent\)\s*;/.test(declarations) && /color\s*:\s*(?:white|#fff(?:fff)?)\s*;/.test(declarations)) {
+		errors.push(`src/styles/global.css: texte clair interdit sur fond fluo (${selector})`);
+	}
+}
+const instrumentHeaderRule = globalStyles.match(/\.home-command-center > header,[\s\S]*?\.product-decision-instrument > header \{([\s\S]*?)\}/)?.[1] ?? '';
+for (const match of instrumentHeaderRule.matchAll(/inset\s+([0-9]*\.?[0-9]+)rem\s+/g)) {
+	if (Number(match[1]) > .75) errors.push('src/styles/global.css: bande fluo d’instrument trop large, elle passerait derrière le libellé');
+}
 const scannerPage = await readFile('src/pages/scanner.astro', 'utf8');
 if (!scannerPage.includes('data-compatair-surface="scanner"')) errors.push('src/pages/scanner.astro: marqueur de vérification stable manquant');
 const deployWorkflow = await readFile('.github/workflows/deploy-production.yml', 'utf8');
