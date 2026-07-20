@@ -224,16 +224,16 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 					</div>
 				</details>
 			</nav>
-			<div class:list={['decision-rail', completeJourneyIsRelevant && 'is-complete-journey']} aria-label={decisionRail.label} data-decision-rail>
+			<nav class:list={['decision-rail', completeJourneyIsRelevant && 'is-complete-journey']} aria-label={decisionRail.label} data-decision-rail>
 				<div class="container decision-rail-inner">
 					<strong class="decision-rail-name">{decisionRail.name}</strong>
 					<ol>{decisionRail.steps.map((step, index) => <li data-decision-step={step.id} data-state={step.state}><a href={step.href} aria-current={step.state === 'current' ? 'step' : undefined}><span>0{index + 1}</span><b class="decision-rail-full">{step.label}</b><b class="decision-rail-short">{step.short}</b></a></li>)}</ol>
 					<a class="decision-rail-status" data-decision-next href={decisionRail.next.href}><i aria-hidden="true"></i><span>{decisionRail.next.label}</span></a>
 				</div>
-			</div>
+			</nav>
 		</header>
 		{journeyContextIsRelevant && <JourneyContextBar />}
-		<main id="contenu"><slot /></main>
+		<main id="contenu" tabindex="-1"><slot /></main>
 		<footer class="site-footer" aria-label="Pied de page">
 			<div class="container footer-shell">
 				<div class="footer-topline">

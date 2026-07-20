@@ -88,6 +88,12 @@ for (const fontPreload of ['manropeLatinWghtUrl', 'newsreaderLatinWghtUrl']) {
 }
 const globalStyles = await readFile('src/styles/global.css', 'utf8');
 if (!globalStyles.includes('--accent-ink: #092218;')) errors.push('src/styles/global.css: couleur de texte sombre dédiée au fond fluo absente');
+for (const token of ['--focus-ring:', '--state-success:', '--state-warning:', '--state-danger:']) {
+	if (!globalStyles.includes(token)) errors.push(`src/styles/global.css: jeton UI premium manquant (${token})`);
+}
+for (const accessibilityContract of ['@media (prefers-reduced-motion: reduce)', '@media (prefers-contrast: more)', '@media (forced-colors: active)']) {
+	if (!globalStyles.includes(accessibilityContract)) errors.push(`src/styles/global.css: contrat d’accessibilité manquant (${accessibilityContract})`);
+}
 for (const match of globalStyles.matchAll(/([^{}]+)\{([^{}]+)\}/g)) {
 	const selector = match[1].trim().replaceAll(/\s+/g, ' ');
 	const declarations = match[2];
@@ -101,6 +107,16 @@ for (const match of instrumentHeaderRule.matchAll(/inset\s+([0-9]*\.?[0-9]+)rem\
 }
 const scannerPage = await readFile('src/pages/scanner.astro', 'utf8');
 if (!scannerPage.includes('data-compatair-surface="scanner"')) errors.push('src/pages/scanner.astro: marqueur de vérification stable manquant');
+if (!baseLayout.includes('<nav class:list={[\'decision-rail\'')) errors.push('src/layouts/BaseLayout.astro: la progression doit rester une région de navigation');
+if (!baseLayout.includes('<main id="contenu" tabindex="-1">')) errors.push('src/layouts/BaseLayout.astro: la cible du lien d’évitement doit rester focalisable');
+for (const [file, markers] of Object.entries({
+	'src/components/ProductScanner.astro': ['aria-busy', 'aria-errormessage', 'data-ui-state'],
+	'src/components/Calculator.astro': ['aria-busy', 'aria-live="polite"', 'data-ui-state'],
+	'src/pages/comparateur.astro': ['aria-errormessage', 'aria-live="polite"', 'data-ui-state'],
+})) {
+	const source = await readFile(file, 'utf8');
+	for (const marker of markers) if (!source.includes(marker)) errors.push(`${file}: retour d’état accessible manquant (${marker})`);
+}
 const deployWorkflow = await readFile('.github/workflows/deploy-production.yml', 'utf8');
 const ciWorkflow = await readFile('.github/workflows/ci.yml', 'utf8');
 if (!deployWorkflow.includes('node scripts/smoke-live-http.mjs')) errors.push('.github/workflows/deploy-production.yml: smoke HTTP live Node absent');

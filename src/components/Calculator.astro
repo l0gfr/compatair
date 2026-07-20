@@ -6,7 +6,7 @@ import ContextHelp from './ContextHelp.astro';
 import UiIcon from './UiIcon.astro';
 ---
 
-<div class="calculator calculator-v2" data-calculator>
+<div class="calculator calculator-v2" data-calculator data-ui-state="idle">
 	<aside class="calculator-scenario-context" data-scenario-context hidden>
 		<div class="calculator-scenario-context-head">
 			<span><UiIcon name="compass" size={24} /></span>
@@ -16,7 +16,7 @@ import UiIcon from './UiIcon.astro';
 		<ul data-scenario-assumptions></ul>
 		<footer><a class="text-link" data-scenario-back href="/guides/professionnels/">Revenir au guide métier</a><a href="/calculateur/">Repartir d’une configuration vide</a></footer>
 	</aside>
-	<form class="calculator-form" id="calculator-form" data-calculator-form>
+	<form class="calculator-form" id="calculator-form" data-calculator-form aria-describedby="calculator-form-status calculator-form-error">
 		<div class="calculator-form-head">
 			<div><p class="eyebrow">Configuration simple</p><h2>Décrire le besoin réel</h2><small>Commencez par un outil. Le reste est facultatif.</small></div>
 			<span class="version-chip">Réponse expliquée</span>
@@ -56,8 +56,9 @@ import UiIcon from './UiIcon.astro';
 		</fieldset>
 
 		<p class="form-disclaimer">La fréquence d’utilisation vient de vos réponses. CompatAir signale les pertes possibles dans les tuyaux et les raccords, mais ne les invente pas lorsqu’aucune mesure n’est disponible.</p>
-		<p class="form-error" role="alert" data-form-error hidden></p>
-		<button class="button primary calculator-submit" type="submit"><span>Obtenir ma réponse</span><b aria-hidden="true">→</b></button>
+		<p class="calculation-status" id="calculator-form-status" role="status" aria-live="polite" aria-atomic="true" data-calculation-status></p>
+		<p class="form-error" id="calculator-form-error" role="alert" aria-atomic="true" data-form-error hidden></p>
+		<button class="button primary calculator-submit" type="submit" data-calculator-submit><span>Obtenir ma réponse</span><b aria-hidden="true">→</b></button>
 	</form>
 
 	<div class="calculator-output" id="calculator-answer" aria-live="polite" data-calculator-output hidden>
@@ -121,7 +122,7 @@ import UiIcon from './UiIcon.astro';
 		<p class="calculator-note">Le lien copié contient votre configuration, mais celle-ci n’est ni envoyée ni enregistrée sur le serveur CompatAir.</p>
 	</div>
 	<aside class="mobile-primary-action" data-calculator-mobile-action aria-label="Action principale">
-		<button class="button primary" type="submit" form="calculator-form" data-calculator-mobile-submit>Obtenir ma réponse</button>
+		<button class="button primary" type="submit" form="calculator-form" data-calculator-submit data-calculator-mobile-submit>Obtenir ma réponse</button>
 		<a class="button primary" href="#calculator-selection" data-calculator-scroll="calculator-selection" data-calculator-mobile-result hidden>Voir les solutions</a>
 	</aside>
 </div>
@@ -218,6 +219,18 @@ import UiIcon from './UiIcon.astro';
 	const priorityList = root?.querySelector<HTMLElement>('[data-priority-list]');
 	const contextualCompareLink = root?.querySelector<HTMLAnchorElement>('[data-contextual-compare]');
 	const mobileSubmit = root?.querySelector<HTMLButtonElement>('[data-calculator-mobile-submit]');
+	const calculatorSubmitButtons = [...(root?.querySelectorAll<HTMLButtonElement>('[data-calculator-submit]') ?? [])];
+	function setCalculatorUiState(state: 'idle' | 'loading' | 'success' | 'error', message = '') {
+		if (root) root.dataset.uiState = state;
+		form?.setAttribute('aria-busy', String(state === 'loading'));
+		for (const button of calculatorSubmitButtons) {
+			button.disabled = state === 'loading';
+			const label = button.querySelector<HTMLElement>('span');
+			if (label) label.textContent = state === 'loading' ? 'Calcul en cours…' : 'Obtenir ma réponse';
+			else button.textContent = state === 'loading' ? 'Calcul en cours…' : 'Obtenir ma réponse';
+		}
+		const status = root?.querySelector<HTMLElement>('[data-calculation-status]'); if (status) status.textContent = message;
+	}
 	const mobileResult = root?.querySelector<HTMLAnchorElement>('[data-calculator-mobile-result]');
 	const evaluated = root?.querySelector<HTMLElement>('[data-evaluated-result]');
 	const toolDatalist = document.querySelector<HTMLDataListElement>('#calculator-tools');
@@ -823,13 +836,14 @@ import UiIcon from './UiIcon.astro';
 
 	form?.addEventListener('submit', async (event) => {
 		event.preventDefault(); if (!output || !list || !evaluated) return;
+		setCalculatorUiState('loading', 'Calcul du besoin et vérification des compresseurs documentés…');
 		const appliedCounterfactualFamily = pendingCounterfactualFamily;
 		pendingCounterfactualFamily = undefined;
 		recordFunnelStep('started');
 		const errorTarget = root?.querySelector<HTMLElement>('[data-form-error]');
 		try {
 			await loadCalculatorRuntime();
-			const config = configFromForm(); if (!config) return;
+			const config = configFromForm(); if (!config) { setCalculatorUiState('error', 'La configuration doit être complétée avant le calcul.'); return; }
 			if (errorTarget) { errorTarget.hidden = true; errorTarget.textContent = ''; }
 			const base = sizeConfiguration(config as any);
 			const selected = compressorInput(config, base.requiredPressureBar);
@@ -898,12 +912,14 @@ import UiIcon from './UiIcon.astro';
 				mobileResult.href = contextualCompareLink && !contextualCompareLink.hidden ? contextualCompareLink.href : '#calculator-selection';
 				mobileResult.textContent = contextualCompareLink && !contextualCompareLink.hidden ? 'Comparer les solutions' : 'Voir les solutions';
 			}
+			setCalculatorUiState('success', `Réponse calculée. ${lastPriorityIds.length} solution${lastPriorityIds.length > 1 ? 's' : ''} prioritaire${lastPriorityIds.length > 1 ? 's' : ''} affichée${lastPriorityIds.length > 1 ? 's' : ''}.`);
 			output.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
 		} catch (error) {
 			if (!errorTarget) return;
 			errorTarget.textContent = error instanceof Error ? error.message : 'La configuration contient une valeur invalide.';
 			errorTarget.hidden = false;
-			errorTarget.scrollIntoView({ behavior: 'smooth', block: 'center' });
+			setCalculatorUiState('error', 'Le calcul n’a pas abouti. Corrigez la valeur signalée.');
+			errorTarget.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
 		}
 	});
 

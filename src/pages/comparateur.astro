@@ -15,21 +15,21 @@ import { compressorDisplayName } from '../domain/product-display';
 			</div>
 		</section>
 
-		<section class="section compare-workspace-section" data-compare-page>
+		<section class="section compare-workspace-section" data-compare-page data-ui-state="idle">
 			<div class="container">
 				<header class="decision-section-head"><p class="decision-index">Sélection</p><h2>Ajoutez uniquement les modèles qui vous intéressent.</h2><p>Une sélection transmise depuis le scanner est déjà remplie. Sinon, recherchez une référence exacte ci-dessous.</p></header>
 				<div class="compare-workspace">
-				<form class="compare-search-panel" id="compare-form" data-compare-form>
+					<form class="compare-search-panel" id="compare-form" data-compare-form aria-describedby="compare-search-help compare-error">
 						<label for="compare-search">Marque, modèle, MPN ou EAN</label>
-						<div><input id="compare-search" data-compare-search type="search" list="compare-compressors" autocomplete="off" placeholder="Ex. Metabo Basic 250 ou 601532000" /><button class="button primary" type="submit">Ajouter</button></div>
-						<small>La référence brute est acceptée. CompatAir exige une correspondance exacte.</small>
-						<p class="form-error" role="alert" data-compare-error hidden></p>
+						<div><input id="compare-search" data-compare-search type="search" list="compare-compressors" autocomplete="off" placeholder="Ex. Metabo Basic 250 ou 601532000" aria-describedby="compare-search-help" /><button class="button primary" type="submit">Ajouter</button></div>
+						<small id="compare-search-help">La référence brute est acceptée. CompatAir exige une correspondance exacte.</small>
+						<p class="form-error" id="compare-error" role="alert" aria-atomic="true" data-compare-error hidden></p>
 					</form>
 					<aside class="compare-rule"><span>Règle de lecture</span><strong>Comparer n’est pas classer.</strong><p>Cette page ne désigne pas un «&nbsp;meilleur&nbsp;» produit. Elle rend les écarts techniques et documentaires lisibles pour votre usage.</p><a href="/calculateur/">Vérifier un besoin précis →</a></aside>
 				</div>
 
 				<section class="compare-selection" id="compare-selection" aria-labelledby="compare-selection-title">
-					<header><div><p class="decision-index">Modèles retenus</p><h3 id="compare-selection-title">Votre comparaison</h3></div><span data-compare-help>Sélectionnez deux ou trois modèles.</span></header>
+					<header><div><p class="decision-index">Modèles retenus</p><h3 id="compare-selection-title">Votre comparaison</h3></div><span role="status" aria-live="polite" aria-atomic="true" data-compare-help>Sélectionnez deux ou trois modèles.</span></header>
 					<div class="compare-selected-grid" data-compare-selected></div>
 				</section>
 
@@ -49,7 +49,7 @@ import { compressorDisplayName } from '../domain/product-display';
 					<div class="compare-context-cards" data-context-cards></div>
 				</section>
 
-				<section class="compare-output-section" id="compare-answer" data-compare-output-section hidden>
+				<section class="compare-output-section" id="compare-answer" aria-live="polite" data-compare-output-section hidden>
 					<nav class="result-local-nav compare-result-nav" data-compare-result-nav aria-label="Navigation dans la comparaison" hidden>
 						<a href="#compare-answer" data-compare-scroll="compare-answer" aria-current="location"><span>01</span> Réponse</a>
 						<a href="#compare-selection" data-compare-scroll="compare-selection"><span>02</span> Sélection</a>
@@ -328,6 +328,7 @@ import { compressorDisplayName } from '../domain/product-display';
 			selectedTarget?.replaceChildren(...selected.map(selectedCard), ...Array.from({ length: 3 - selected.length }, (_, offset) => placeholder(selected.length + offset)));
 			if (help) help.textContent = selected.length < 2 ? `${selected.length}/3 · ajoutez encore ${2 - selected.length} modèle${selected.length === 0 ? 's' : ''}` : `${selected.length}/3 · ${selected.length === 2 ? 'comparaison prête, un troisième modèle reste possible' : 'comparaison complète'}`;
 			const ready = selected.length >= 2;
+			if (root) root.dataset.uiState = ready ? 'success' : selected.length ? 'active' : 'idle';
 			if (resultNav) resultNav.hidden = !ready;
 			if (mobileSubmit) mobileSubmit.hidden = ready;
 			if (mobileResult) mobileResult.hidden = !ready;
@@ -361,10 +362,11 @@ import { compressorDisplayName } from '../domain/product-display';
 		form?.addEventListener('submit', (event) => {
 			event.preventDefault(); if (!search || !error) return;
 			const id = resolveExactCatalogSearch(search.value, data.map((item) => ({ id: item.id, value: item.searchValue, identifiers: item.identifiers })));
-			error.hidden = true;
-			if (!id) { error.textContent = 'Aucun modèle ne correspond exactement à cette saisie. Choisissez une suggestion ou vérifiez la référence.'; error.hidden = false; return; }
-			if (selectedIds.includes(id)) { error.textContent = 'Ce modèle est déjà dans la comparaison.'; error.hidden = false; return; }
-			if (selectedIds.length >= 3) { error.textContent = 'Retirez un modèle avant d’en ajouter un autre.'; error.hidden = false; return; }
+			error.hidden = true; search.removeAttribute('aria-invalid'); search.removeAttribute('aria-errormessage');
+			const reject = (message: string) => { error.textContent = message; error.hidden = false; search.setAttribute('aria-invalid', 'true'); search.setAttribute('aria-errormessage', 'compare-error'); if (root) root.dataset.uiState = 'error'; };
+			if (!id) { reject('Aucun modèle ne correspond exactement à cette saisie. Choisissez une suggestion ou vérifiez la référence.'); return; }
+			if (selectedIds.includes(id)) { reject('Ce modèle est déjà dans la comparaison.'); return; }
+			if (selectedIds.length >= 3) { reject('Retirez un modèle avant d’en ajouter un autre.'); return; }
 			selectedIds.push(id); search.value = ''; refresh();
 		});
 

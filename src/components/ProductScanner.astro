@@ -2,16 +2,16 @@
 import ContextHelp from './ContextHelp.astro';
 ---
 
-<div class="scanner" data-scanner data-decision-visual="identify">
-	<form class="scanner-form" id="scanner-form" data-scanner-form>
+<div class="scanner" data-scanner data-decision-visual="identify" data-ui-state="idle">
+	<form class="scanner-form" id="scanner-form" data-scanner-form aria-describedby="scanner-status scanner-error">
 		<header class="scanner-form-head"><span>01</span><div><p>Référence exacte</p><strong>Un numéro, aucune catégorie à choisir</strong></div><small>Mode recommandé</small></header>
 		<div class="scanner-confirmation">
 			<div class="field">
 				<label for="scanner-identifier">Numéro indiqué sur l’étiquette</label>
-				<input id="scanner-identifier" data-identifier type="text" maxlength="160" autocomplete="off" placeholder="Ex. 4010393 ou 4006825597295" required />
-				<small data-candidate-origin>Saisissez la référence fabricant, le MPN, l’EAN ou le GTIN.</small>
+				<input id="scanner-identifier" data-identifier type="text" maxlength="160" autocomplete="off" placeholder="Ex. 4010393 ou 4006825597295" aria-describedby="scanner-identifier-help" required />
+				<small id="scanner-identifier-help" data-candidate-origin>Saisissez la référence fabricant, le MPN, l’EAN ou le GTIN.</small>
 			</div>
-			<button class="button primary" type="submit">Identifier la référence</button>
+			<button class="button primary" type="submit" data-scanner-submit>Identifier la référence</button>
 		</div>
 
 		<details class="scanner-photo-details">
@@ -29,8 +29,8 @@ import ContextHelp from './ContextHelp.astro';
 				</div>
 			</div>
 		</details>
-		<p class="scanner-status" role="status" data-status></p>
-		<p class="form-error" role="alert" data-error hidden></p>
+		<p class="scanner-status" id="scanner-status" role="status" aria-live="polite" aria-atomic="true" data-status></p>
+		<p class="form-error" id="scanner-error" role="alert" aria-atomic="true" data-error hidden></p>
 		<section class="scanner-recovery" data-recovery aria-labelledby="scanner-recovery-title" hidden>
 			<div><p>Référence non reconnue</p><h3 id="scanner-recovery-title" data-recovery-title>Retrouvez le bon numéro sans deviner le produit.</h3><small>Vérifiez le MPN, la référence fabricant, l’EAN ou le GTIN indiqué sur l’étiquette.</small></div>
 			<div class="scanner-recovery-actions">
@@ -104,7 +104,7 @@ import ContextHelp from './ContextHelp.astro';
 		</div>
 	</section>
 	<aside class="mobile-primary-action" data-scanner-mobile-action aria-label="Action principale">
-		<button class="button primary" type="submit" form="scanner-form" data-scanner-mobile-submit>Identifier la référence</button>
+		<button class="button primary" type="submit" form="scanner-form" data-scanner-submit data-scanner-mobile-submit>Identifier la référence</button>
 		<a class="button primary" href="#scanner-selection" data-result-scroll="scanner-selection" data-scanner-mobile-result hidden>Voir la sélection</a>
 	</aside>
 </div>
@@ -134,6 +134,7 @@ import ContextHelp from './ContextHelp.astro';
 	const identifier = root?.querySelector<HTMLInputElement>('[data-identifier]');
 	const mobileSubmit = root?.querySelector<HTMLButtonElement>('[data-scanner-mobile-submit]');
 	const mobileResult = root?.querySelector<HTMLAnchorElement>('[data-scanner-mobile-result]');
+	const submitButtons = [...(root?.querySelectorAll<HTMLButtonElement>('[data-scanner-submit]') ?? [])];
 	let compressors: Compressor[] = [];
 	let tools: ToolProfile[] = [];
 	let catalogPromise: Promise<void> | undefined;
@@ -142,6 +143,16 @@ import ContextHelp from './ContextHelp.astro';
 
 	const query = <T extends Element>(selector: string) => root?.querySelector<T>(selector);
 	const setText = (selector: string, value: string) => { const element = query<HTMLElement>(selector); if (element) element.textContent = value; };
+	function setScannerUiState(state: 'idle' | 'loading' | 'success' | 'error', message = '') {
+		if (root) root.dataset.uiState = state;
+		form?.setAttribute('aria-busy', String(state === 'loading'));
+		for (const button of submitButtons) { button.disabled = state === 'loading'; button.textContent = state === 'loading' ? 'Recherche en cours…' : 'Identifier la référence'; }
+		if (identifier) {
+			if (state === 'error') { identifier.setAttribute('aria-invalid', 'true'); identifier.setAttribute('aria-errormessage', 'scanner-error'); }
+			else { identifier.removeAttribute('aria-invalid'); identifier.removeAttribute('aria-errormessage'); }
+		}
+		if (message) setText('[data-status]', message);
+	}
 	const linkFor = (type: 'compressor' | 'tool', slug: string) => type === 'compressor' ? `/compresseurs/${slug}/` : `/outils-pneumatiques/${slug}/`;
 	const verdictLabel = (verdict: CompatibilityResult['verdict']) => verdict === 'continuous' ? 'Compatible en continu' : verdict === 'intermittent' ? 'Compatible par intermittence' : verdict === 'incompatible' ? 'Incompatible' : 'Données insuffisantes';
 	const confidenceRank = { A: 0, B: 1, C: 2, D: 3 } as const;
@@ -317,8 +328,9 @@ import ContextHelp from './ContextHelp.astro';
 		event.preventDefault();
 		const error = query<HTMLElement>('[data-error]'); if (error) error.hidden = true;
 		const recovery = query<HTMLElement>('[data-recovery]'); if (recovery) recovery.hidden = true;
+		setScannerUiState('loading', 'Recherche de la référence exacte dans le catalogue vérifié…');
 		try { await loadCatalog(); }
-		catch { if (error) { error.hidden = false; error.textContent = 'Le catalogue technique est momentanément indisponible. Réessayez dans quelques instants.'; } return; }
+		catch { if (error) { error.hidden = false; error.textContent = 'Le catalogue technique est momentanément indisponible. Réessayez dans quelques instants.'; } setScannerUiState('error', 'Recherche interrompue.'); return; }
 		const matches = identifyProducts(identifier?.value ?? '', compressors, tools);
 		if (matches.length !== 1) {
 			if (error) { error.hidden = false; error.textContent = matches.length > 1 ? 'Identifiant ambigu : vérifiez la marque et le modèle sur l’étiquette.' : 'Aucun modèle ne correspond exactement à cet identifiant.'; }
@@ -329,6 +341,7 @@ import ContextHelp from './ContextHelp.astro';
 			query<HTMLElement>('[data-result]')?.setAttribute('hidden', '');
 			if (mobileSubmit) mobileSubmit.hidden = false;
 			if (mobileResult) mobileResult.hidden = true;
+			setScannerUiState('error', matches.length > 1 ? 'Plusieurs correspondances demandent une précision.' : 'Référence absente du catalogue vérifié.');
 			return;
 		}
 		const match = matches[0]; const product = match.product;
@@ -465,6 +478,7 @@ import ContextHelp from './ContextHelp.astro';
 			continueHref: journeyContinueHref,
 			editHref: scannerHref,
 		} }));
+		setScannerUiState('success', `Référence reconnue : ${product.brand} ${product.model}. La réponse est affichée.`);
 		query<HTMLElement>('[data-result]')?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
 	});
 
