@@ -5053,7 +5053,547 @@
         "confidence": "A",
         "notes": "La section Informations techniques publie explicitement 165 L/min à 0 bar, 83 L/min à 4 bar et 55 L/min à 7 bar."
       }
+    },
+    {
+      "id": "added:beta-1947:beta-1947-manufacturer-2026:2026-07-20",
+      "evidenceId": "beta-1947-manufacturer-2026",
+      "productId": "beta-1947",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "3c1bb0b9288a17c39bf283e715b28180dc2c78fbaf379986352ab2b9b9cc95fb",
+      "snapshot": {
+        "id": "beta-1947-manufacturer-2026",
+        "sourceUrl": "https://www.beta-tools.com/en/products/pneumatic-tools/special-tools/bonding-gun.html",
+        "sourceLabel": "Beta Tools, fiche officielle 1947",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:beta-1947h:beta-1947h-manufacturer-2026:2026-07-20",
+      "evidenceId": "beta-1947h-manufacturer-2026",
+      "productId": "beta-1947h",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "65e2d8e2a5e634eb768d029ab558e1dd77c97191eaf9730ebc086e3e3c6b5c40",
+      "snapshot": {
+        "id": "beta-1947h-manufacturer-2026",
+        "sourceUrl": "https://www.beta-tools.com/en/products/pneumatic-tools/special-tools/bonding-gun-13345.html",
+        "sourceLabel": "Beta Tools, fiche officielle 1947H",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp1114r09:chicago-pneumatic-cp1114r09-manufacturer-2026:2026-07-20",
+      "evidenceId": "chicago-pneumatic-cp1114r09-manufacturer-2026",
+      "productId": "chicago-pneumatic-cp1114r09",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "69866fc8a712ea995a306dcdbe025b70cb70b8dfc6f5464c2f4867a685f20c2a",
+      "snapshot": {
+        "id": "chicago-pneumatic-cp1114r09-manufacturer-2026",
+        "sourceUrl": "https://tools.cp.com/en/products/drills/cp1114r09-sku6151580320",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP1114R09",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp2136:chicago-pneumatic-cp2136-manufacturer-2026:2026-07-20",
+      "evidenceId": "chicago-pneumatic-cp2136-manufacturer-2026",
+      "productId": "chicago-pneumatic-cp2136",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "834d855a50f55d4e9922418cfd56d4bc7aac006771cbb5c6853fa15bfebc6d5d",
+      "snapshot": {
+        "id": "chicago-pneumatic-cp2136-manufacturer-2026",
+        "sourceUrl": "https://tools.cp.com/en-us/products/screwdrivers/cp2136-sku8941021360",
+        "sourceLabel": "Chicago Pneumatic, fiche CP2136 et catalogue General Industry 2026",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp2141:chicago-pneumatic-cp2141-manufacturer-2026:2026-07-20",
+      "evidenceId": "chicago-pneumatic-cp2141-manufacturer-2026",
+      "productId": "chicago-pneumatic-cp2141",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "81ce51f44225afccc9d03c8563965152a979f346a12f592a1256edc4a6ecd75e",
+      "snapshot": {
+        "id": "chicago-pneumatic-cp2141-manufacturer-2026",
+        "sourceUrl": "https://tools.cp.com/en-us/products/screwdrivers/cp2141-sku8941021410",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP2141",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp2780:chicago-pneumatic-cp2780-manufacturer-2026:2026-07-20",
+      "evidenceId": "chicago-pneumatic-cp2780-manufacturer-2026",
+      "productId": "chicago-pneumatic-cp2780",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b0532f871ea34e22931954006dcd0576bb50aba00a87a5833e80fe89d0eca5f6",
+      "snapshot": {
+        "id": "chicago-pneumatic-cp2780-manufacturer-2026",
+        "sourceUrl": "https://tools.cp.com/en-uk/products/screwdrivers/cp2780-sku6151922780",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP2780",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp2822:chicago-pneumatic-cp2822-manufacturer-2026:2026-07-20",
+      "evidenceId": "chicago-pneumatic-cp2822-manufacturer-2026",
+      "productId": "chicago-pneumatic-cp2822",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1631f3fbe584d9df8bdbb8814adcf754ca06b6415f45f68ff720e9e79378399f",
+      "snapshot": {
+        "id": "chicago-pneumatic-cp2822-manufacturer-2026",
+        "sourceUrl": "https://tools.cp.com/en-us/products/screwdrivers/cp2822-sku6151630090",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP2822",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9885:chicago-pneumatic-cp9885-manufacturer-2026:2026-07-20",
+      "evidenceId": "chicago-pneumatic-cp9885-manufacturer-2026",
+      "productId": "chicago-pneumatic-cp9885",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "39028854645bfabf0add19497c9d29fdb478dafdd0858fd160bda7b5f63a5596",
+      "snapshot": {
+        "id": "chicago-pneumatic-cp9885-manufacturer-2026",
+        "sourceUrl": "https://tools.cp.com/en-us/products/speciality-tools-11006.12049/cp9885-sku6151979885",
+        "sourceLabel": "Chicago Pneumatic, fiche CP9885 et catalogue General Industry 2026",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9886:chicago-pneumatic-cp9886-manufacturer-2026:2026-07-20",
+      "evidenceId": "chicago-pneumatic-cp9886-manufacturer-2026",
+      "productId": "chicago-pneumatic-cp9886",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9c8a6141f407619bd9f0816ca21125b0af372e705589b529a04176e573862a62",
+      "snapshot": {
+        "id": "chicago-pneumatic-cp9886-manufacturer-2026",
+        "sourceUrl": "https://tools.cp.com/en-us/products/compression-tools/cp9886-sku8941098860",
+        "sourceLabel": "Chicago Pneumatic, gamme CP988 et catalogue General Industry 2026",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9887:chicago-pneumatic-cp9887-manufacturer-2026:2026-07-20",
+      "evidenceId": "chicago-pneumatic-cp9887-manufacturer-2026",
+      "productId": "chicago-pneumatic-cp9887",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "81bdac288e0488f20e3c84e1facd492f900754b73dcc753afb668438083ab832",
+      "snapshot": {
+        "id": "chicago-pneumatic-cp9887-manufacturer-2026",
+        "sourceUrl": "https://tools.cp.com/en-us/products/compression-tools/cp9887-sku8941098870",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP9887",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9888:chicago-pneumatic-cp9888-manufacturer-2026:2026-07-20",
+      "evidenceId": "chicago-pneumatic-cp9888-manufacturer-2026",
+      "productId": "chicago-pneumatic-cp9888",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "90cd53bd9616d029c20c8ea233b077053f910f9f6547c394c93c7a09f5448298",
+      "snapshot": {
+        "id": "chicago-pneumatic-cp9888-manufacturer-2026",
+        "sourceUrl": "https://tools.cp.com/en-uk/products/compression-tools/cp9888-sku8941098880",
+        "sourceLabel": "Chicago Pneumatic, fiche officielle CP9888",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:hazet-9037spc:hazet-9037spc-manufacturer-2026:2026-07-20",
+      "evidenceId": "hazet-9037spc-manufacturer-2026",
+      "productId": "hazet-9037spc",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "3aef8f5af24c91b8df330763bfe23a768687ea811215dda3c1167b32753179e2",
+      "snapshot": {
+        "id": "hazet-9037spc-manufacturer-2026",
+        "sourceUrl": "https://www.hazet.de/asset/download/e707c8c0-39e3-45ee-8f54-8e0f140f80c5",
+        "sourceLabel": "HAZET, manuel officiel 9037SPC, édition 2025",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:hazet-9045p-1:hazet-9045p-1-manufacturer-2026:2026-07-20",
+      "evidenceId": "hazet-9045p-1-manufacturer-2026",
+      "productId": "hazet-9045p-1",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "75354ec66b6f43f9e4af22369caf27b16e0934a4eb36484439e9405ba8570428",
+      "snapshot": {
+        "id": "hazet-9045p-1-manufacturer-2026",
+        "sourceUrl": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/accessories-connectors/product/ean-4000896209590",
+        "sourceLabel": "HAZET, fiche officielle et fiche technique 9045P-1",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:ks-tools-515-1909:ks-tools-515-1909-manufacturer-2026:2026-07-20",
+      "evidenceId": "ks-tools-515-1909-manufacturer-2026",
+      "productId": "ks-tools-515-1909",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2511e6d31d92713c82927b994c3fe7e39acf46c49a673838c77b93e1b71c98eb",
+      "snapshot": {
+        "id": "ks-tools-515-1909-manufacturer-2026",
+        "sourceUrl": "https://www.kstools.com/en/products/special-tools-for-passenger-cars-and-light-commercial-vans/bodywork-and-interior/surface-treatment/5967/pneumatic-sand-blaster-260-mm",
+        "sourceLabel": "KS Tools, fiche officielle 515.1909",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:ks-tools-515-1919:ks-tools-515-1919-manufacturer-2026:2026-07-20",
+      "evidenceId": "ks-tools-515-1919-manufacturer-2026",
+      "productId": "ks-tools-515-1919",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c372f187eb9207a038aac801c9c4868a380f40358961702ed5a47d2fd3ebb52e",
+      "snapshot": {
+        "id": "ks-tools-515-1919-manufacturer-2026",
+        "sourceUrl": "https://www.kstools.com/en/products/special-tools-for-commercial-vehicle/general-workshop-requirements/workshop-equipment/12672/soda-pneumatic-cleaning-gun-1000-ml",
+        "sourceLabel": "KS Tools, fiche officielle 515.1919",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:metabo-bp-10:metabo-bp-10-manufacturer-2026:2026-07-20",
+      "evidenceId": "metabo-bp-10-manufacturer-2026",
+      "productId": "metabo-bp-10",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c52b8bf70148ac74af16e480d555e4bb107a37e9839979072dac5e68d2794520",
+      "snapshot": {
+        "id": "metabo-bp-10-manufacturer-2026",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/uk/070_news/03_catalogue_logos/METABO_CORDED_RANGE_2025_A5_web_version.pdf",
+        "sourceLabel": "Metabo, catalogue officiel 2025, BP 10",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:metabo-bp-210:metabo-bp-210-manufacturer-2026:2026-07-20",
+      "evidenceId": "metabo-bp-210-manufacturer-2026",
+      "productId": "metabo-bp-210",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "63ff5f63a20709df53aa2d66cd44157f6ee4a9014cae632aa5d02779168d466d",
+      "snapshot": {
+        "id": "metabo-bp-210-manufacturer-2026",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/uk/070_news/03_catalogue_logos/METABO_CORDED_RANGE_2025_A5_web_version.pdf",
+        "sourceLabel": "Metabo, catalogue officiel 2025, BP 210",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:metabo-bp-500:metabo-bp-500-manufacturer-2026:2026-07-20",
+      "evidenceId": "metabo-bp-500-manufacturer-2026",
+      "productId": "metabo-bp-500",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "eadb60670a15eacf8ba4086704511bc4e4d78998068bbb95b0c4f9e914eea9e9",
+      "snapshot": {
+        "id": "metabo-bp-500-manufacturer-2026",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/uk/070_news/03_catalogue_logos/METABO_CORDED_RANGE_2025_A5_web_version.pdf",
+        "sourceLabel": "Metabo, catalogue officiel 2025, BP 500",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:metabo-bpa-15:metabo-bpa-15-manufacturer-2026:2026-07-20",
+      "evidenceId": "metabo-bpa-15-manufacturer-2026",
+      "productId": "metabo-bpa-15",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "3bcc73a53f5a6f6347fffc1602271286a92c54197edbf55e22bb96f7fbbe5198",
+      "snapshot": {
+        "id": "metabo-bpa-15-manufacturer-2026",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/uk/070_news/03_catalogue_logos/METABO_CORDED_RANGE_2025_A5_web_version.pdf",
+        "sourceLabel": "Metabo, catalogue officiel 2025, BPA 15",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:metabo-dkg-80-16:metabo-dkg-80-16-manufacturer-2026:2026-07-20",
+      "evidenceId": "metabo-dkg-80-16-manufacturer-2026",
+      "productId": "metabo-dkg-80-16",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b78b599ec1f0775de35ab313705e5f1cc66ee8b03250c51803edc8684e4e8290",
+      "snapshot": {
+        "id": "metabo-dkg-80-16-manufacturer-2026",
+        "sourceUrl": "https://www.metabo.com/dk/da/maskiner/trykluft/trykluftvaerktoj/tryklufthaeftepistoler-sompistoler/dkg-80-16-601564500-tryklufthaeftepistol.html",
+        "sourceLabel": "Metabo, fiche officielle DKG 80/16",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:metabo-dkng-40-50:metabo-dkng-40-50-manufacturer-2026:2026-07-20",
+      "evidenceId": "metabo-dkng-40-50-manufacturer-2026",
+      "productId": "metabo-dkng-40-50",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "84de69ebb99294c0cdb77cca7f1f2d29bb03d6618a770f9f86b32dcfd2319153",
+      "snapshot": {
+        "id": "metabo-dkng-40-50-manufacturer-2026",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/uk/070_news/03_catalogue_logos/METABO_CORDED_RANGE_2025_A5_web_version.pdf",
+        "sourceLabel": "Metabo, catalogue officiel 2025, agrafeuses-cloueuses pneumatiques",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:metabo-dkp-310:metabo-dkp-310-manufacturer-2026:2026-07-20",
+      "evidenceId": "metabo-dkp-310-manufacturer-2026",
+      "productId": "metabo-dkp-310",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a0ae02207f4545e3a17bd311015520f19ad78f3287523d406dce968b34018d3a",
+      "snapshot": {
+        "id": "metabo-dkp-310-manufacturer-2026",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/uk/070_news/03_catalogue_logos/METABO_CORDED_RANGE_2025_A5_web_version.pdf",
+        "sourceLabel": "Metabo, catalogue officiel 2025, DKP 310",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:metabo-dsn-50:metabo-dsn-50-manufacturer-2026:2026-07-20",
+      "evidenceId": "metabo-dsn-50-manufacturer-2026",
+      "productId": "metabo-dsn-50",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7912a8b7a98e6151931e1a5054eeace6ebc6112b8d3399f6a4b4216f2d6d6f66",
+      "snapshot": {
+        "id": "metabo-dsn-50-manufacturer-2026",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/uk/070_news/03_catalogue_logos/METABO_CORDED_RANGE_2025_A5_web_version.pdf",
+        "sourceLabel": "Metabo, catalogue officiel 2025, cloueuses pneumatiques",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:metabo-fsp-600-hvlp:metabo-fsp-600-hvlp-manufacturer-2026:2026-07-20",
+      "evidenceId": "metabo-fsp-600-hvlp-manufacturer-2026",
+      "productId": "metabo-fsp-600-hvlp",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b042ba908569d76585126265fd24fc0cd167213d45661e1d3ce277be9fce69de",
+      "snapshot": {
+        "id": "metabo-fsp-600-hvlp-manufacturer-2026",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/uk/070_news/03_catalogue_logos/METABO_CORDED_RANGE_2025_A5_web_version.pdf",
+        "sourceLabel": "Metabo, catalogue officiel 2025, FSP 600 HVLP",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:metabo-rf-60:metabo-rf-60-manufacturer-2026:2026-07-20",
+      "evidenceId": "metabo-rf-60-manufacturer-2026",
+      "productId": "metabo-rf-60",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "47e111c9d041166f176325549685ff4afb4469cdfcf949a63afbc6cd584bc7f4",
+      "snapshot": {
+        "id": "metabo-rf-60-manufacturer-2026",
+        "sourceUrl": "https://uk.metabo.com/en/tools/compressed-air/compressed-air-tools/air-tyre-inflation-pressure-gauges/rf-60-602233000-compressed-air-tyre-inflation-pressure-gauge.html",
+        "sourceLabel": "Metabo, fiche officielle RF 60",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:metabo-rf-60-g:metabo-rf-60-g-manufacturer-2026:2026-07-20",
+      "evidenceId": "metabo-rf-60-g-manufacturer-2026",
+      "productId": "metabo-rf-60-g",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2b3f88b817304a1d0afd3b0e3e0970239fdc2c14b1ed9dfd5532a9ba066b2295",
+      "snapshot": {
+        "id": "metabo-rf-60-g-manufacturer-2026",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/uk/070_news/03_catalogue_logos/METABO_CORDED_RANGE_2025_A5_web_version.pdf",
+        "sourceLabel": "Metabo, catalogue officiel 2025, RF 60 G",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:metabo-rf-80-d:metabo-rf-80-d-manufacturer-2026:2026-07-20",
+      "evidenceId": "metabo-rf-80-d-manufacturer-2026",
+      "productId": "metabo-rf-80-d",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8ba04023a88c40eb28517f95a01342c05f301c93e0437f85a772b2cc29e50eef",
+      "snapshot": {
+        "id": "metabo-rf-80-d-manufacturer-2026",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/uk/070_news/03_catalogue_logos/METABO_CORDED_RANGE_2025_A5_web_version.pdf",
+        "sourceLabel": "Metabo, catalogue officiel 2025, RF 80 D",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:metabo-rf-80-g:metabo-rf-80-g-manufacturer-2026:2026-07-20",
+      "evidenceId": "metabo-rf-80-g-manufacturer-2026",
+      "productId": "metabo-rf-80-g",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b8dc99602b8496bd6361d9c48ef56a01c57ac5da67808cd9966bad42c89b2264",
+      "snapshot": {
+        "id": "metabo-rf-80-g-manufacturer-2026",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/uk/070_news/03_catalogue_logos/METABO_CORDED_RANGE_2025_A5_web_version.pdf",
+        "sourceLabel": "Metabo, catalogue officiel 2025, RF 80 G",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:sata-jet-x-hvlp-1200170:sata-jet-x-hvlp-1200170-manufacturer-2026:2026-07-20",
+      "evidenceId": "sata-jet-x-hvlp-1200170-manufacturer-2026",
+      "productId": "sata-jet-x-hvlp-1200170",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c2f2a145f9e6fd0e27471f4c4692d629f9592a40964b6216c6c50097ae07531d",
+      "snapshot": {
+        "id": "sata-jet-x-hvlp-1200170-manufacturer-2026",
+        "sourceUrl": "https://www.sata.com/en/premium-spray-gun-for-automotive-refinish-jet-x-hvlp-1.3-i-control-nozzle-basic-suitable-for-water-and-solvent-based-basecoats-as-well-as-1k-2k-topcoat-systems/1200170",
+        "sourceLabel": "SATA, fiche officielle jet X HVLP 1200170",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:sata-minijet-4400-b-hvlp-204180:sata-minijet-4400-b-hvlp-204180-manufacturer-2026:2026-07-20",
+      "evidenceId": "sata-minijet-4400-b-hvlp-204180-manufacturer-2026",
+      "productId": "sata-minijet-4400-b-hvlp-204180",
+      "productType": "tool",
+      "occurredAt": "2026-07-20",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "35c9e75579c4bb913c546f54cbb9f50dfb45d9962dff77d7a55f76885fa19205",
+      "snapshot": {
+        "id": "sata-minijet-4400-b-hvlp-204180-manufacturer-2026",
+        "sourceUrl": "https://www.sata.com/en-ca/premium-spray-gun-for-small-area-applications-in-automotive-finishes-sataminijet-4400-b-hvlp-0.8-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/204180",
+        "sourceLabel": "SATA, fiche officielle SATAminijet 4400 B HVLP 204180",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-07-20",
+        "confidence": "A"
+      }
     }
   ],
-  "historyVersion": "495121b2c317c78cbefddd5bc206a7ea054496e3ed39e778ceb5c60bf8d255fc"
+  "historyVersion": "25989b97c9b142539d63db0c551907d4ec43317af382eaa6d8791af4bc72cfb0"
 }

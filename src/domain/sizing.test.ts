@@ -114,7 +114,7 @@ describe('compatibility engine', () => {
 
 	it('exposes the expanded sourced catalog', () => {
 		expect(compressors).toHaveLength(120);
-		expect(tools).toHaveLength(90);
+		expect(tools).toHaveLength(120);
 	});
 
 	it('validates a new multipoint profile only from its interpolated FAD', () => {
