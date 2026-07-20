@@ -167,6 +167,7 @@ import UiIcon from './UiIcon.astro';
 	let parsePassportConfiguration: typeof import('../domain/passport').parsePassportConfiguration;
 	let sizeConfiguration: typeof import('../domain/sizing').sizeConfiguration;
 	let createCounterfactualRecommendation: typeof import('../domain/counterfactual').createCounterfactualRecommendation;
+	let shouldEvaluateCounterfactual: typeof import('../domain/counterfactual').shouldEvaluateCounterfactual;
 	let runtimePromise: Promise<void> | undefined;
 
 	function loadCalculatorRuntime() {
@@ -189,6 +190,7 @@ import UiIcon from './UiIcon.astro';
 			parsePassportConfiguration = passport.parsePassportConfiguration;
 			sizeConfiguration = sizing.sizeConfiguration;
 			createCounterfactualRecommendation = counterfactual.createCounterfactualRecommendation;
+			shouldEvaluateCounterfactual = counterfactual.shouldEvaluateCounterfactual;
 		});
 		return runtimePromise;
 	}
@@ -503,12 +505,12 @@ import UiIcon from './UiIcon.astro';
 		return setCompressorSelection(selected);
 	}
 
-	function renderCounterfactual(report: CounterfactualReport) {
+	function renderCounterfactual(report?: CounterfactualReport) {
 		const section = root?.querySelector<HTMLElement>('[data-counterfactual]');
 		const target = root?.querySelector<HTMLElement>('[data-counterfactual-result]');
 		const boundary = root?.querySelector<HTMLElement>('[data-counterfactual-boundary]');
 		if (!target || !boundary) return;
-		if (report.status === 'already_possible') {
+		if (!report || report.status === 'already_possible') {
 			if (section) section.hidden = true;
 			target.replaceChildren(); boundary.textContent = ''; return;
 		}
@@ -830,12 +832,14 @@ import UiIcon from './UiIcon.astro';
 				return { compressor, result: candidateResult, availableFadLpm, marginCovered: availableFadLpm !== undefined && availableFadLpm >= base.recommendedFadLpm };
 			});
 			const rankedCandidates = rankDecisionCandidates(candidates);
-			const counterfactual = createCounterfactualRecommendation({
-				configuration: config,
-				selectedMachine: counterfactualMachine(config, base.requiredPressureBar),
-				machines: compressors.map((compressor) => ({ id: compressor.id, label: `${compressor.brand} ${compressor.model}`, maxPressureBar: compressor.maxPressureBar, confidence: compressor.confidence, fadCurve: compressor.fadCurve, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle })),
-			});
-			renderCounterfactual(counterfactual);
+			if (shouldEvaluateCounterfactual(config.selectedCompressor)) {
+				const counterfactual = createCounterfactualRecommendation({
+					configuration: config,
+					selectedMachine: counterfactualMachine(config, base.requiredPressureBar),
+					machines: compressors.map((compressor) => ({ id: compressor.id, label: `${compressor.brand} ${compressor.model}`, maxPressureBar: compressor.maxPressureBar, confidence: compressor.confidence, fadCurve: compressor.fadCurve, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle })),
+				});
+				renderCounterfactual(counterfactual);
+			} else renderCounterfactual();
 			const proofToolId = config.demands.length === 1 && config.demands[0].model === 'fixed-flow' ? config.demands[0].id : undefined;
 			currentFilter = 'all'; renderCandidateResults(config, base, result, rankedCandidates, proofToolId); lastSummary = buildSummary(config, result, rankedCandidates);
 			const encodedConfig = encodePassportConfiguration(config);

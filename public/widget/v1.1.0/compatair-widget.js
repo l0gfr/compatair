@@ -1,4 +1,4 @@
-/* CompatAir widget API v1 */
+/* CompatAir widget API v1.1.0 */
 (function () {
 	'use strict';
 	var ID_PATTERN = /^[a-z0-9-]{1,160}$/;
@@ -7,7 +7,7 @@
 	var currentScript = document.currentScript;
 
 	function widgetOrigin(script) {
-		try { return new URL(script && script.src ? script.src : 'https://compatair.fr/widget/v1/compatair-widget.js', document.baseURI).origin; }
+		try { return new URL(script && script.src ? script.src : 'https://compatair.fr/widget/v1.1.0/compatair-widget.js', document.baseURI).origin; }
 		catch (_) { return 'https://compatair.fr'; }
 	}
 
@@ -54,7 +54,7 @@
 		var question = document.createElement('p'); question.className = 'q'; question.textContent = 'Ce compresseur convient-il à cet outil ?';
 		var verdict = document.createElement('p'); verdict.className = 'verdict';
 		var detail = document.createElement('p'); detail.className = 'detail';
-		var link = document.createElement('a'); link.className = 'link'; link.target = '_blank'; link.rel = 'noopener noreferrer'; link.textContent = 'Voir le calcul et les sources';
+		var link = document.createElement('a'); link.className = 'link'; link.target = '_blank'; link.rel = 'noopener noreferrer'; link.textContent = 'Compléter le calcul';
 		var note = document.createElement('p'); note.className = 'note'; note.textContent = 'Verdict indépendant des offres et commissions marchandes.';
 		top.append(brand, version); box.append(top, question, verdict, detail, link, note); shadow.append(style, box);
 		return { shadow: shadow, version: version, verdict: verdict, detail: detail, link: link };

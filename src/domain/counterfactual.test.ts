@@ -1,11 +1,17 @@
 import { describe, expect, it } from 'vitest';
-import { createCounterfactualRecommendation, type CounterfactualMachine } from './counterfactual';
+import { createCounterfactualRecommendation, shouldEvaluateCounterfactual, type CounterfactualMachine } from './counterfactual';
 
 const machine = (id: string, points: Array<[number, number]>, maxPressureBar = 10): CounterfactualMachine => ({
 	id, label: id, maxPressureBar, fadCurve: points.map(([pressureBar, litersPerMinute]) => ({ pressureBar, litersPerMinute })),
 });
 
 describe('counterfactual recommendation', () => {
+	it('is only evaluated after a compressor has been selected', () => {
+		expect(shouldEvaluateCounterfactual(undefined)).toBe(false);
+		expect(shouldEvaluateCounterfactual('')).toBe(false);
+		expect(shouldEvaluateCounterfactual('einhell-tc-ac-240-50-10-of')).toBe(true);
+	});
+
 	it('proves that switching simultaneous tools to successive use is sufficient', () => {
 		const report = createCounterfactualRecommendation({
 			configuration: { demands: [{ id: 'a', flowLpm: 60, pressureBar: 6 }, { id: 'b', flowLpm: 60, pressureBar: 6 }], mode: 'simultaneous' },

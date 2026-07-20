@@ -89,7 +89,14 @@ jobs:
             available=false
             echo "::warning::Mode récupération actif : la référence Git et les empreintes épinglées restent obligatoires, les comparaisons live sont ignorées."
           fi
+          current_widget_available=false
+          if curl --fail --silent --show-error --max-time 20 https://compatair.fr/widget/v1.1.0/compatair-widget.js -o previous-compatair-widget-v1.1.0.js; then
+            current_widget_available=true
+          else
+            rm -f previous-compatair-widget-v1.1.0.js
+          fi
           echo "available=$available" >> "$GITHUB_OUTPUT"
+          echo "current_widget_available=$current_widget_available" >> "$GITHUB_OUTPUT"
 
       - name: Enforce live append-only evidence history
         if: steps.production-invariants.outputs.available == 'true'
@@ -102,6 +109,10 @@ jobs:
       - name: Enforce immutable live widget
         if: steps.production-invariants.outputs.available == 'true'
         run: cmp --silent previous-compatair-widget.js dist/widget/v1.0.0/compatair-widget.js
+
+      - name: Enforce current immutable live widget
+        if: steps.production-invariants.outputs.current_widget_available == 'true'
+        run: cmp --silent previous-compatair-widget-v1.1.0.js dist/widget/v1.1.0/compatair-widget.js
 
       - name: Sign published data snapshots
         env:
@@ -277,6 +288,7 @@ jobs:
             dist/data/signatures.json
             dist/data/signing-keys.json
             dist/widget/v1.0.0/compatair-widget.js
+            dist/widget/v1.1.0/compatair-widget.js
             config/immutable-assets.json
           if-no-files-found: error
           retention-days: 90

@@ -37,6 +37,10 @@ export type CounterfactualReport = {
 	definition: string;
 };
 
+export function shouldEvaluateCounterfactual(selectedMachineId: string | null | undefined) {
+	return Boolean(selectedMachineId?.trim());
+}
+
 const isPossible = (result: SizingResult) => result.verdict === 'continuous' || result.verdict === 'intermittent';
 const samePressure = (left: number, right: number) => Math.abs(left - right) < 1e-6;
 const score = (before: number, after: number) => Number((Math.abs(before - after) / Math.max(Math.abs(before), Math.abs(after), 0.001)).toFixed(6));

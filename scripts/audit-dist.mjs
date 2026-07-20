@@ -127,13 +127,15 @@ await walk(root);
 const socialImageCount = [...artifactPaths].filter((path) => /^\/social\/[^/]+\.png$/.test(path)).length;
 if (socialImageCount > maximumSocialImageCount) errors.push(`social: ${socialImageCount} cartes générées, plafond ${maximumSocialImageCount} dépassé`);
 
-const immutableWidgetPath = '/widget/v1.0.0/compatair-widget.js';
-let immutableWidgetIntegrity = '';
-if (!artifactPaths.has(immutableWidgetPath)) errors.push(`${immutableWidgetPath}: widget immuable absent`);
-else {
-	immutableWidgetIntegrity = `sha384-${createHash('sha384').update(await readFile(join(root, immutableWidgetPath))).digest('base64')}`;
-	if (immutableAssetManifest.assets?.[immutableWidgetPath] !== immutableWidgetIntegrity) errors.push(`${immutableWidgetPath}: contenu différent de l’empreinte historique épinglée`);
+const professionalWidgetPath = '/widget/v1.1.0/compatair-widget.js';
+let professionalWidgetIntegrity = '';
+for (const [immutablePath, expectedIntegrity] of Object.entries(immutableAssetManifest.assets ?? {})) {
+	if (!artifactPaths.has(immutablePath)) { errors.push(`${immutablePath}: ressource immuable absente`); continue; }
+	const integrity = `sha384-${createHash('sha384').update(await readFile(join(root, immutablePath))).digest('base64')}`;
+	if (expectedIntegrity !== integrity) errors.push(`${immutablePath}: contenu différent de l’empreinte historique épinglée`);
+	if (immutablePath === professionalWidgetPath) professionalWidgetIntegrity = integrity;
 }
+if (!professionalWidgetIntegrity) errors.push(`${professionalWidgetPath}: widget professionnel courant absent du manifeste immuable`);
 
 async function scriptClosure(entryPaths, includeDynamicImports) {
 	const modules = new Set();
@@ -672,11 +674,11 @@ for (const file of htmlFiles) {
 		if (!html.includes('data-pro-value-network')) errors.push(`${label}: schéma de valeur fabricants-distributeurs absent`);
 		if (!html.includes('data-pro-collaboration')) errors.push(`${label}: parcours de collaboration professionnelle absent`);
 		if (!html.includes('Il ne choisit pas le verdict')) errors.push(`${label}: frontière d’indépendance professionnelle absente`);
-		const widgetTag = html.match(/<script[^>]+src="\/widget\/v1\.0\.0\/compatair-widget\.js"[^>]*>/)?.[0];
+		const widgetTag = html.match(/<script[^>]+src="\/widget\/v1\.1\.0\/compatair-widget\.js"[^>]*>/)?.[0];
 		if (!widgetTag) errors.push(`${label}: widget immuable absent`);
 		else {
 			const integrity = widgetTag.match(/\sintegrity="([^"]+)"/)?.[1];
-			if (!integrity || integrity !== immutableWidgetIntegrity) errors.push(`${label}: empreinte SRI du widget absente ou invalide`);
+			if (!integrity || integrity !== professionalWidgetIntegrity) errors.push(`${label}: empreinte SRI du widget absente ou invalide`);
 			if (!/\scrossorigin="anonymous"/.test(widgetTag)) errors.push(`${label}: crossorigin anonyme requis pour le widget SRI`);
 		}
 	}

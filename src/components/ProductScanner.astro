@@ -61,6 +61,7 @@
 			<section class="scanner-top-results">
 				<p class="eyebrow">Décision immédiate</p>
 				<h3 data-primary-title>Trois meilleurs résultats compatibles</h3>
+				<p class="scanner-ranking-note" data-ranking-note hidden></p>
 				<div class="scanner-result-cards" data-primary-results></div>
 			</section>
 			<div class="scanner-result-actions">
@@ -90,6 +91,7 @@
 	import { explainDecisionDataGap } from '../domain/decision-resolution';
 	import { isImageWithinPixelBudget, readImageDimensions, type ImageDimensions } from '../domain/image-dimensions';
 	import { compressorCapabilities, identifyProducts, toolCompatibleCompressors } from '../domain/product-identification';
+	import { scannerComparisonHref, scannerConfigurationForTool, scannerReferenceFromHash, scannerReferenceUrl } from '../domain/scanner-journey';
 	import { sourceQualityDetail, sourceQualityLabel } from '../domain/source-quality';
 
 	type DetectorResult = { rawValue?: string };
@@ -178,7 +180,7 @@
 		}
 		const tool = product as ToolProfile;
 		setText('[data-published-label]', 'Besoin publié');
-		if (tool.demandModel === 'fixed-flow') setText('[data-published-value]', `${formatNumber(tool.airflowLpm.typical)} L/min à ${formatNumber(tool.workingPressureBar.typical)} bar.`);
+		if (tool.demandModel === 'fixed-flow') setText('[data-published-value]', `${formatNumber(tool.airflowLpm.typical)} L/min à ${formatNumber(tool.workingPressureBar.typical)} bar · cible de classement ${formatNumber(tool.airflowLpm.typical * 1.25)} L/min avec 25 % de réserve.`);
 		else if (tool.demandModel === 'per-action') setText('[data-published-value]', `${formatNumber(tool.airPerActionLiters)} L par ${tool.actionLabel} à ${formatNumber(tool.workingPressureBar.typical)} bar ; cadence à préciser.`);
 		else setText('[data-published-value]', `${tool.demandExplanation} Pression maximale publiée : ${formatNumber(tool.workingPressureBar.max)} bar.`);
 	}
@@ -271,7 +273,9 @@
 			query<HTMLElement>('[data-result]')?.setAttribute('hidden', ''); return;
 		}
 		const match = matches[0]; const product = match.product;
+		history.replaceState(null, '', scannerReferenceUrl(location.pathname, identifier?.value ?? match.matchedValue));
 		setResolutionNote();
+		const rankingNote = query<HTMLElement>('[data-ranking-note]'); if (rankingNote) rankingNote.hidden = true;
 		setText('[data-product-name]', `${product.brand} ${product.model}`);
 		setText('[data-match-badge]', match.matchedBy === 'ean' || match.matchedBy === 'gtin' ? 'Correspondance exacte par code produit fabricant' : 'Correspondance exacte par référence fabricant');
 		setText('[data-match-detail]', `${match.matchedBy.toUpperCase()} ${match.matchedValue} · ${sourceQualityLabel(product.confidence)}.`);
@@ -323,10 +327,19 @@
 			setText('[data-primary-title]', 'Trois compresseurs compatibles les plus proches du besoin');
 			const section = query<HTMLElement>('[data-unlocks-section]'); if (section) section.hidden = true;
 			const compare = query<HTMLAnchorElement>('[data-compare]'); const topIds = sortCompatible(compatibleCards).slice(0, 3).map(({ product }) => product.id);
-			if (compare) { compare.hidden = topIds.length < 2; compare.textContent = topIds.length >= 3 ? 'Comparer les trois compresseurs compatibles' : 'Comparer les deux compresseurs compatibles'; compare.href = `/comparateur/#ids=${topIds.join(',')}`; }
+			const comparisonConfiguration = scannerConfigurationForTool(product as ToolProfile);
+			if (compare) {
+				compare.hidden = topIds.length < 2 || !comparisonConfiguration;
+				compare.textContent = topIds.length >= 3 ? 'Comparer les trois compresseurs compatibles' : 'Comparer les deux compresseurs compatibles';
+				if (topIds.length >= 2 && comparisonConfiguration) compare.href = scannerComparisonHref(topIds, comparisonConfiguration);
+			}
 			const calculatorHref = `/calculateur/#outil=${encodeURIComponent(product.id)}`;
 			query<HTMLAnchorElement>('[data-refine]')?.setAttribute('href', calculatorHref);
 			const tool = product as ToolProfile;
+			if (rankingNote && tool.demandModel === 'fixed-flow') {
+				rankingNote.hidden = false;
+				rankingNote.textContent = `Ordre technique : compatibilité, qualité des données, couverture de la cible de ${formatNumber(tool.airflowLpm.typical * 1.25)} L/min avec 25 % de réserve, puis proximité du débit. Ce n’est pas un classement commercial.`;
+			}
 			if (tool.demandModel === 'per-action') setResolutionNote(
 				'Une cadence réelle suffit à débloquer la sélection',
 				`La source publie ${formatNumber(tool.airPerActionLiters)} L par ${tool.actionLabel}, mais pas votre rythme d’usage. Saisissez les ${tool.actionLabel}s par minute : CompatAir calculera le besoin puis n’affichera comme solutions que les compresseurs vérifiables.`,
@@ -370,4 +383,15 @@
 	});
 
 	window.addEventListener('pagehide', () => photoBitmap?.close(), { once: true });
+
+	function restoreScannerResult() {
+		const reference = scannerReferenceFromHash(location.hash);
+		const result = query<HTMLElement>('[data-result]');
+		if (!reference || !identifier || !form || !result?.hasAttribute('hidden')) return;
+		identifier.value = reference;
+		form.requestSubmit();
+	}
+
+	queueMicrotask(restoreScannerResult);
+	window.addEventListener('pageshow', restoreScannerResult);
 </script>

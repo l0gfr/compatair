@@ -17,8 +17,8 @@ Une erreur réseau, un produit inconnu ou une donnée technique manquante ne doi
 
 ```html
 <script
-  src="https://compatair.fr/widget/v1.0.0/compatair-widget.js"
-  integrity="sha384-pZVA7LPRTtlWQ/eeRb84bAhHdWq1X1ISb/iW+VWmtmFAj7tyo3afdACxYMo3VZF1"
+  src="https://compatair.fr/widget/v1.1.0/compatair-widget.js"
+  integrity="sha384-RNDfsRN7I47L6J+UJ+DY9tbkGqq4RaPm8qHCBoL74Qw3tEg7nv+ccAwYR8Vy9Yx7"
   crossorigin="anonymous"
   data-target="compatibility-result"
   data-compressor-id="einhell-tc-ac-240-50-10-of"
@@ -26,7 +26,7 @@ Une erreur réseau, un produit inconnu ou une donnée technique manquante ne doi
   defer></script>
 ```
 
-Le chemin `v1.0.0` est immuable et son empreinte SRI doit rester épinglée par l’intégrateur. Ses octets reconnaissent encore les anciennes pages de détail afin que les réponses API déjà mises en cache continuent de fonctionner ; le serveur redirige ces URL exactes vers le calculateur et répond `410` aux références inconnues. Le chemin historique `v1` reste disponible comme alias mutable, n’accepte plus que l’URL actuelle du calculateur et ne doit pas être utilisé pour une nouvelle intégration reproductible.
+Le chemin `v1.1.0` est immuable et son empreinte SRI doit rester épinglée par l’intégrateur. Il accepte le contrat de réponse courant `2.0.0`, conserve la compatibilité avec les réponses `1.0.0` encore en cache et n’autorise comme continuation que le calculateur CompatAir sur la même origine. L’ancien `v1.0.0` reste immuable pour les intégrations existantes. Le chemin historique `v1` reste disponible comme alias mutable et ne doit pas être utilisé pour une nouvelle intégration reproductible.
 
 Le script appelle l’API depuis son origine, isole son style dans un Shadow DOM et ne transmet que les identifiants techniques. Le marchand doit autoriser `https://compatair.fr` dans ses directives CSP `script-src` et `connect-src`.
 

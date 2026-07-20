@@ -40,12 +40,12 @@ import { compressorDisplayName } from '../domain/product-display';
 					</header>
 					<div class="compare-context-need" data-context-need></div>
 					<p class="compare-context-order">L’ordre vient de la sélection technique du calculateur. Il ne constitue ni une note commerciale ni un classement absolu.</p>
-					<div class="compare-context-cards" data-context-cards></div>
-					<aside class="compare-context-choice" data-context-choice hidden>
+					<aside class="compare-context-choice" data-context-choice aria-live="polite" tabindex="-1" hidden>
 						<div><span>Modèle retenu</span><strong data-context-choice-label></strong><p>Le besoin, les hypothèses et les limites restent identiques. CompatAir peut maintenant distinguer ce qui est sourcé, ce qui doit être mesuré et ce qui manque avant la mise en service.</p></div>
 						<div><a class="button" data-context-edit href="/calculateur/">Vérifier ce choix dans le calculateur</a><button class="button primary" type="button" data-context-passport>Préparer l’installation de ce modèle</button></div>
 						<span class="compare-context-action-status" data-context-action-status role="status"></span>
 					</aside>
+					<div class="compare-context-cards" data-context-cards></div>
 				</section>
 
 				<section class="compare-output-section" data-compare-output-section hidden>
@@ -300,7 +300,7 @@ import { compressorDisplayName } from '../domain/product-display';
 				const configuration = passport.parsePassportConfiguration(decoded, new Set(catalog.compressors.map((item) => item.id)), new Set(catalog.tools.map((item) => item.id)));
 				const preset = scenarios.getTradeScenarioPreset(initialScenarioId);
 				contextState = { configuration, catalog, comparison, passport, scenarioId: preset?.id, scenarioTitle: preset?.title };
-				const title = contextSection.querySelector<HTMLElement>('[data-context-title]'); if (title) title.textContent = preset ? `Comparer pour le scénario « ${preset.title} »` : 'Comparer pour le besoin transmis par le calculateur';
+				const title = contextSection.querySelector<HTMLElement>('[data-context-title]'); if (title) title.textContent = preset ? `Comparer pour le scénario « ${preset.title} »` : 'Comparer pour le besoin transmis';
 				const status = contextSection.querySelector<HTMLElement>('[data-context-status]'); if (status) status.textContent = `Catalogue vérifié le ${catalog.catalogVerifiedAt}`;
 				refresh();
 			} catch (contextFailure) {
@@ -326,7 +326,9 @@ import { compressorDisplayName } from '../domain/product-display';
 
 		contextCards?.addEventListener('click', (event) => {
 			const button = (event.target as Element).closest<HTMLButtonElement>('[data-retain-id]'); if (!button?.dataset.retainId) return;
-			retainedId = button.dataset.retainId; refresh(); contextChoice?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
+			retainedId = button.dataset.retainId; refresh();
+			contextChoice?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
+			contextChoice?.focus({ preventScroll: true });
 		});
 
 		contextChoice?.querySelector<HTMLButtonElement>('[data-context-passport]')?.addEventListener('click', async (event) => {
