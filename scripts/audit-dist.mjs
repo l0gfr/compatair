@@ -27,6 +27,7 @@ const maximumStaticCompatibilityResultsBySection = new Map([
 ]);
 const maximumHtmlArtifactBytes = 64 * 1024 * 1024;
 const maximumTotalArtifactBytes = 96 * 1024 * 1024;
+const maximumJourneyVideoBytes = 16 * 1024 * 1024;
 // Les pages produits réutilisent des cartes de catalogue afin que le temps de build ne croisse pas avec chaque référence.
 const maximumSocialImageCount = 80;
 const forbiddenPublicWording = [
@@ -436,9 +437,16 @@ else {
 if (!artifactPaths.has('/index.html')) errors.push('poste de contrôle: accueil rendu absent');
 else {
 	const homeHtml = await readFile(join(root, '/index.html'), 'utf8');
-	for (const marker of ['data-home-command-center', '/calculateur/', '/radar-contradictions/', '/graphe-preuve/', '/scanner/', '/observatoire-qualite-documentaire/', 'Ce que CompatAir vérifie']) {
+	for (const marker of ['data-home-command-center', 'data-home-video-stage', 'data-home-video-launch', '/media/compatair-parcours-utilisateur-complet.mp4', 'requestFullscreen', 'webkitEnterFullscreen', 'is-fallback-fullscreen', '/calculateur/', '/radar-contradictions/', '/graphe-preuve/', '/scanner/', '/observatoire-qualite-documentaire/', 'Ce que CompatAir vérifie']) {
 		if (!homeHtml.includes(marker)) errors.push(`poste de contrôle: accès ou marqueur absent ${marker}`);
 	}
+}
+
+const journeyVideoPath = '/media/compatair-parcours-utilisateur-complet.mp4';
+if (!artifactPaths.has(journeyVideoPath)) errors.push(`parcours vidéo: ressource absente ${journeyVideoPath}`);
+else {
+	const journeyVideoInfo = await lstat(join(root, journeyVideoPath));
+	if (journeyVideoInfo.size > maximumJourneyVideoBytes) errors.push(`parcours vidéo: ${Math.ceil(journeyVideoInfo.size / 1024 / 1024)} Mo, budget ${maximumJourneyVideoBytes / 1024 / 1024} Mo dépassé`);
 }
 
 if (!artifactPaths.has('/data/transparency-barometer.json') || !artifactPaths.has('/barometre-transparence/index.html')) errors.push('baromètre: snapshot ou page rendue absent');
