@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { SizingResult } from './sizing';
-import { createDecisionResolution, explainDecisionDataGap, isVerifiedDecisionCandidate, rankDecisionCandidates } from './decision-resolution';
+import { createDecisionResolution, explainDecisionDataGap, filterDecisionCandidatesByContext, isVerifiedDecisionCandidate, rankDecisionCandidates, type DecisionCandidate } from './decision-resolution';
 
 const result = (verdict: SizingResult['verdict'], recommendedFadLpm = 125): SizingResult => ({
 	verdict,
@@ -15,7 +15,7 @@ const result = (verdict: SizingResult['verdict'], recommendedFadLpm = 125): Sizi
 	calculationVersion: '1.3.0',
 });
 
-const candidate = (id: string, availableFadLpm: number | undefined, confidence: 'A' | 'B' | 'C' | 'D' = 'A', verdict: SizingResult['verdict'] = 'continuous') => ({
+const candidate = (id: string, availableFadLpm: number | undefined, confidence: 'A' | 'B' | 'C' | 'D' = 'A', verdict: SizingResult['verdict'] = 'continuous'): DecisionCandidate => ({
 	compressor: { id, confidence, fadCurve: availableFadLpm === undefined ? [] : [{ pressureBar: 6, litersPerMinute: availableFadLpm }] },
 	result: result(verdict),
 	availableFadLpm,
@@ -51,6 +51,28 @@ describe('résolution décisionnelle sans donnée inventée', () => {
 		});
 		expect(resolution.status).toBe('verified_alternatives');
 		expect(resolution.verifiedCandidates).toHaveLength(1);
+	});
+
+	it('écarte le triphasé et les machines fixes lorsque le contexte particulier les exclut', () => {
+		const singlePhaseBase = candidate('single-phase-mobile', 130);
+		const singlePhaseMobile: DecisionCandidate = { ...singlePhaseBase, compressor: { ...singlePhaseBase.compressor, phase: 'single-phase', mobility: 'mobile' } };
+		const threePhaseBase = candidate('three-phase-fixed', 130);
+		const threePhaseFixed: DecisionCandidate = { ...threePhaseBase, compressor: { ...threePhaseBase.compressor, phase: 'three-phase', mobility: 'fixed' } };
+		expect(filterDecisionCandidatesByContext([threePhaseFixed, singlePhaseMobile], {
+			powerSupply: 'single-phase-230v',
+			mobility: 'portable-or-mobile',
+		}).map(({ compressor }) => compressor.id)).toEqual(['single-phase-mobile']);
+	});
+
+	it('n’affirme pas qu’une solution respecte un budget sans offre vérifiée', () => {
+		const withoutOffer = candidate('without-offer', 130);
+		const withinBudget = { ...candidate('within-budget', 130), lowestVerifiedPriceEur: 299 };
+		const overBudget = { ...candidate('over-budget', 130), lowestVerifiedPriceEur: 799 };
+		expect(filterDecisionCandidatesByContext([withoutOffer, overBudget, withinBudget], {
+			powerSupply: 'any',
+			mobility: 'any',
+			maximumBudgetEur: 500,
+		}).map(({ compressor }) => compressor.id)).toEqual(['within-budget']);
 	});
 
 	it('nomme le FAD manquant sans utiliser le débit aspiré', () => {

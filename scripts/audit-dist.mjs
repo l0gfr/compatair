@@ -372,7 +372,7 @@ for (const [path, requiredColumns] of csvArtifacts) {
 if (!artifactPaths.has('/calculateur/index.html')) errors.push('recommandation contrefactuelle: calculateur rendu absent');
 else {
 	const calculatorHtml = await readFile(join(root, '/calculateur/index.html'), 'utf8');
-	for (const marker of ['data-counterfactual', 'data-counterfactual-result', 'data-counterfactual-boundary', 'data-decision-answer-first', 'data-scenario-context', 'data-scenario-result-links', 'data-contextual-compare', 'Une référence brute est acceptée', 'Trois compresseurs compatibles les plus proches du besoin', 'Comparer ces trois compresseurs pour ce besoin', 'Préparer mon installation', 'name="measuredPressureDrop"', 'name="measuredLeak"', 'name="supplyPressure"']) {
+	for (const marker of ['data-counterfactual', 'data-counterfactual-result', 'data-counterfactual-boundary', 'data-decision-answer-first', 'data-scenario-context', 'data-scenario-result-links', 'data-contextual-compare', 'data-result-mode="essential"', 'name="buyerProfile"', 'name="powerSupply"', 'name="mobilityFilter"', 'name="maximumBudget"', 'Une référence brute est acceptée', 'Trois solutions adaptées à votre contexte', 'Comparer ces trois compresseurs pour ce besoin', 'Préparer mon installation', 'manomètre et un essai avec l’outil en charge', 'name="measuredPressureDrop"', 'name="measuredLeak"', 'name="supplyPressure"']) {
 		if (!calculatorHtml.includes(marker)) errors.push(`recommandation contrefactuelle: marqueur absent ${marker}`);
 	}
 }
@@ -404,7 +404,7 @@ else {
 if (!artifactPaths.has('/mise-en-service/index.html')) errors.push('recette terrain: page rendue absente');
 else {
 	const commissioningHtml = await readFile(join(root, '/mise-en-service/index.html'), 'utf8');
-	for (const marker of ['data-commissioning-root', 'data-commissioning-form', 'data-derived-drop', 'data-commissioning-result', 'data-updated-passport', 'data-start-monitoring', '/suivi-exploitation/', 'Évaluer la mise en service', 'Planifier un prochain contrôle', 'Télécharger le reçu PDF', 'ne certifie pas l’installation']) {
+	for (const marker of ['data-commissioning-root', 'data-commissioning-form', 'data-derived-drop', 'data-commissioning-result', 'data-updated-passport', 'data-start-monitoring', 'data-commissioning-prerequisites', '/suivi-exploitation/', 'Évaluer la mise en service', 'Planifier un prochain contrôle', 'Télécharger le reçu PDF', 'essai réel en charge', 'ne certifie pas l’installation']) {
 		if (!commissioningHtml.includes(marker)) errors.push(`recette terrain: marqueur absent ${marker}`);
 	}
 }

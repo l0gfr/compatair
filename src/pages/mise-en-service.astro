@@ -27,7 +27,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	</section>
 
 	<section class="section commissioning-viewer-section">
-		<div class="container"><CommissioningViewer /></div>
+		<div class="container">
+			<aside class="commissioning-prerequisites" data-commissioning-prerequisites>
+				<p class="eyebrow">Matériel nécessaire avant de commencer</p>
+				<h2>La recette exige un essai réel en charge.</h2>
+				<ul>
+					<li>un manomètre adapté à la plage de pression, ou deux pour relever simultanément la source et le poste&nbsp;;</li>
+					<li>le compresseur, le flexible, les raccords et l’outil dans leur configuration finale&nbsp;;</li>
+					<li>un essai avec l’outil en fonctionnement, pas une pression relevée à vide&nbsp;;</li>
+					<li>une mesure de fuite en L/min, ou une borne obtenue par un protocole documenté.</li>
+				</ul>
+				<p>Si ces éléments ne sont pas disponibles, conservez le Passeport comme checklist et reportez la recette. CompatAir ne remplacera pas les mesures manquantes par une estimation.</p>
+			</aside>
+			<CommissioningViewer />
+		</div>
 	</section>
 	<EditorialSeriesBridge stage="commissioning" />
 </BaseLayout>

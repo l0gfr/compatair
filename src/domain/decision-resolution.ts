@@ -5,6 +5,8 @@ export type DecisionCompressor = {
 	id: string;
 	confidence: SourceQualityGrade;
 	fadCurve: Array<{ pressureBar: number; litersPerMinute: number }>;
+	phase?: 'single-phase' | 'three-phase';
+	mobility?: 'portable' | 'mobile' | 'fixed';
 };
 
 export type DecisionCandidate<T extends DecisionCompressor = DecisionCompressor> = {
@@ -12,6 +14,13 @@ export type DecisionCandidate<T extends DecisionCompressor = DecisionCompressor>
 	result: SizingResult;
 	availableFadLpm?: number;
 	marginCovered: boolean;
+	lowestVerifiedPriceEur?: number;
+};
+
+export type DecisionContext = {
+	powerSupply: 'single-phase-230v' | 'any';
+	mobility: 'portable' | 'portable-or-mobile' | 'any';
+	maximumBudgetEur?: number;
 };
 
 export type DecisionResolutionStatus =
@@ -44,6 +53,20 @@ export function rankDecisionCandidates<T extends DecisionCompressor>(candidates:
 		|| Math.abs((a.availableFadLpm ?? Number.POSITIVE_INFINITY) - a.result.recommendedFadLpm)
 			- Math.abs((b.availableFadLpm ?? Number.POSITIVE_INFINITY) - b.result.recommendedFadLpm)
 		|| a.compressor.id.localeCompare(b.compressor.id, 'fr'));
+}
+
+export function filterDecisionCandidatesByContext<T extends DecisionCompressor>(
+	candidates: DecisionCandidate<T>[],
+	context: DecisionContext,
+) {
+	return candidates.filter((candidate) => {
+		if (!isVerifiedDecisionCandidate(candidate)) return false;
+		if (context.powerSupply === 'single-phase-230v' && candidate.compressor.phase !== 'single-phase') return false;
+		if (context.mobility === 'portable' && candidate.compressor.mobility !== 'portable') return false;
+		if (context.mobility === 'portable-or-mobile' && candidate.compressor.mobility !== 'portable' && candidate.compressor.mobility !== 'mobile') return false;
+		if (context.maximumBudgetEur !== undefined && (candidate.lowestVerifiedPriceEur === undefined || candidate.lowestVerifiedPriceEur > context.maximumBudgetEur)) return false;
+		return true;
+	}).sort((a, b) => Number(b.lowestVerifiedPriceEur !== undefined) - Number(a.lowestVerifiedPriceEur !== undefined));
 }
 
 export function createDecisionResolution<T extends DecisionCompressor>(input: {

@@ -10,6 +10,7 @@ describe('runtime catalog', () => {
 	it('projects the validated source catalog without editorial payloads', () => {
 		const runtime = createRuntimeCatalog(compressors, tools, CATALOG_VERIFIED_AT, catalogVersion);
 		expect(runtime.compressors).toHaveLength(compressors.length);
+		expect(runtime.compressors.some((compressor) => compressor.mobility)).toBe(true);
 		expect(runtime.tools).toHaveLength(tools.length);
 		expect(runtime.compressors[0]).not.toHaveProperty('editorial');
 		expect(runtime.tools[0].fieldSources).toEqual(expect.any(Object));

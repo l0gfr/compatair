@@ -3,11 +3,24 @@ import { compressors, tools } from '../data/catalog';
 import { catalogSearchIdentifiers } from '../domain/catalog-search';
 import { compressorDisplayName } from '../domain/product-display';
 import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
+import { activeOffers, merchants } from '../data/offers';
+import { serializeJsonLd } from '../domain/structured-data';
 import ContextHelp from './ContextHelp.astro';
 import UiIcon from './UiIcon.astro';
+
+const commercialOffers = activeOffers
+	.filter((offer) => offer.availability === 'in_stock' || offer.availability === 'preorder')
+	.map((offer) => ({
+		id: offer.id,
+		productId: offer.productId,
+		merchantName: merchants.find((merchant) => merchant.id === offer.merchantId)?.name ?? 'Vendeur vérifié',
+		priceEur: offer.priceEur,
+		collectedAt: offer.collectedAt,
+	}));
 ---
 
 <div class="calculator calculator-v2" data-calculator data-ui-state="idle">
+	<script is:inline type="application/json" data-commercial-offers set:html={serializeJsonLd(commercialOffers)} />
 	<aside class="calculator-scenario-context" data-scenario-context hidden>
 		<div class="calculator-scenario-context-head">
 			<span><UiIcon name="compass" size={24} /></span>
@@ -46,8 +59,20 @@ import UiIcon from './UiIcon.astro';
 			<div class="field details-body"><label for="filtration">Filtration ou séchage déclaré</label><select id="filtration" name="filtration"><option value="unknown">Non renseigné</option><option value="none">Aucun traitement déclaré</option><option value="particle">Filtration particulaire</option><option value="water-separator">Séparateur d’eau</option><option value="coalescing">Filtration coalescente</option><option value="dryer">Sécheur</option></select></div>
 		</details>
 
-		<fieldset class="calculator-fieldset">
-			<legend><span>02</span> Compresseur à vérifier <small>facultatif</small></legend>
+		<fieldset class="calculator-fieldset calculator-context-fieldset">
+			<legend><span>02</span> Votre contexte</legend>
+			<p class="context-filter-intro">Ces critères filtrent les trois solutions prioritaires. Ils ne modifient jamais le verdict technique.</p>
+			<div class="context-filter-grid">
+				<div class="field"><label for="buyer-profile">Profil</label><select id="buyer-profile" name="buyerProfile" data-buyer-profile><option value="particular" selected>Particulier</option><option value="professional">Atelier / professionnel</option></select></div>
+				<div class="field"><label for="power-supply">Alimentation</label><select id="power-supply" name="powerSupply"><option value="single-phase-230v" selected>230 V monophasé uniquement</option><option value="any">Toutes, triphasé compris</option></select></div>
+				<div class="field"><label for="mobility-filter">Mobilité</label><select id="mobility-filter" name="mobilityFilter"><option value="portable-or-mobile" selected>Portable ou mobile</option><option value="portable">Portable uniquement</option><option value="any">Indifférent, fixe compris</option></select></div>
+				<div class="field"><label for="maximum-budget">Budget maximal <small>facultatif</small></label><div class="input-unit"><input id="maximum-budget" name="maximumBudget" type="number" min="1" max="1000000" step="1" inputmode="numeric" /><span>€</span></div></div>
+			</div>
+			<small class="context-filter-note">Un budget n’écarte une référence que si CompatAir dispose d’une offre datée et vérifiée. Sans offre, aucun prix n’est supposé.</small>
+		</fieldset>
+
+		<fieldset class="calculator-fieldset calculator-compressor-fieldset">
+			<legend><span>03</span> Compresseur à vérifier <small>facultatif</small></legend>
 			<div class="field autocomplete-field"><label for="compressor-search">Rechercher par marque, modèle, MPN, EAN/GTIN ou SKU</label><input id="compressor-search" data-compressor-search type="search" list="calculator-compressors" autocomplete="off" placeholder="Ex. Metabo Basic 250, 601532000…" /><input data-compressor-id name="compressor" type="hidden" value="" /><small data-compressor-selection-note>Une référence brute est acceptée. Laissez vide pour calculer seulement le besoin.</small></div>
 			<div class="custom-compressor" data-custom-compressor hidden>
 				<div class="field-row"><div class="field"><label for="custom-pressure">Pression maximale</label><div class="input-unit"><input id="custom-pressure" name="customPressure" type="number" min="0.1" max="50" step="0.1" value="8" /><span>bar</span></div></div><div class="field"><div class="field-label-help"><label for="custom-fad">Débit réellement restitué à la pression demandée</label><ContextHelp topic="fad" compact /></div><div class="input-unit"><input id="custom-fad" name="customFad" type="number" min="1" max="20000" step="1" /><span>L/min</span></div></div></div>
@@ -63,6 +88,7 @@ import UiIcon from './UiIcon.astro';
 	</form>
 
 	<div class="calculator-output" id="calculator-answer" aria-live="polite" data-calculator-output hidden>
+		<fieldset class="result-mode-switch"><legend>Affichage</legend><label><input type="radio" name="resultDetail" value="essential" data-result-mode="essential" checked /> Essentiel</label><label><input type="radio" name="resultDetail" value="expert" data-result-mode="expert" /> Expert</label></fieldset>
 		<div class="report-header" aria-hidden="true"><div><strong>CompatAir</strong><span>Vérification de votre configuration</span></div><div><span>Calcul CompatAir</span><span data-report-date></span></div></div>
 		<div class="result-summary" data-decision-answer-first>
 			<div><p class="eyebrow">Réponse</p><span class="verdict-large" data-verdict></span></div>
@@ -75,7 +101,7 @@ import UiIcon from './UiIcon.astro';
 				<div class="answer-reserve"><dt>Principale réserve</dt><dd data-answer-reserve></dd></div>
 			</dl>
 		</div>
-		<nav class="result-local-nav" aria-label="Navigation dans la réponse">
+		<nav class="result-local-nav result-expert-only" aria-label="Navigation dans la réponse">
 			<a href="#calculator-answer" data-calculator-scroll="calculator-answer" aria-current="location"><span>01</span> Réponse</a>
 			<a href="#calculator-selection" data-calculator-scroll="calculator-selection"><span>02</span> Sélection</a>
 			<a href="#calculator-limits" data-calculator-scroll="calculator-limits"><span>03</span> Limites</a>
@@ -83,24 +109,24 @@ import UiIcon from './UiIcon.astro';
 		</nav>
 		<div class="result-section recommendation-section" id="calculator-selection" data-resolution-section>
 			<p class="eyebrow" data-resolution-eyebrow>Aide à la décision</p>
-			<h3 data-resolution-title>Trois compresseurs compatibles les plus proches du besoin</h3>
-			<p data-resolution-summary>Compatibilité, qualité des données et proximité du débit structurent cette sélection technique.</p>
+			<h3 data-resolution-title>Trois solutions adaptées à votre contexte</h3>
+			<p data-resolution-summary>Compatibilité, contraintes d’installation et présence d’une offre vérifiée structurent cette sélection.</p>
 			<div class="resolution-gap" data-resolution-gap hidden><strong data-resolution-gap-title></strong><p data-resolution-gap-detail></p></div>
 			<p class="resolution-proof">Sélection stricte : verdict concluant, FAD exploitable à la pression demandée et source technique de grade A ou B.</p>
 			<p data-result-coverage></p>
 			<div class="priority-list" data-priority-list></div>
 			<a class="button primary recommendation-compare-cta" data-contextual-compare href="/comparateur/" hidden>Comparer ces trois compresseurs pour ce besoin</a>
 		</div>
-		<nav class="calculator-scenario-result-links" data-scenario-result-links aria-label="Continuer le parcours métier" hidden>
+		<nav class="calculator-scenario-result-links result-expert-only" data-scenario-result-links aria-label="Continuer le parcours métier" hidden>
 			<a class="button primary" data-scenario-result-back href="/guides/professionnels/">Relire le scénario métier</a>
 			<a class="button" data-scenario-result-proof href="/graphe-preuve/">Voir les preuves de l’outil</a>
 		</nav>
-		<details class="result-section result-disclosure"><summary>Configuration analysée</summary><div class="configuration-summary" data-configuration-summary></div></details>
-		<details class="result-section result-disclosure"><summary>Métriques détaillées</summary><div class="result-metrics" data-result-metrics></div></details>
-		<div class="result-section" data-evaluated-result></div>
-		<div class="result-section counterfactual-section" data-counterfactual><p class="eyebrow">Recommandation contrefactuelle</p><h3>Le plus petit changement vérifié</h3><div data-counterfactual-result></div><p class="counterfactual-boundary" data-counterfactual-boundary></p></div>
-		<details class="result-section result-disclosure"><summary>Accessoires et raccordement</summary><ul data-accessories></ul></details>
-		<details class="result-section result-inventory">
+		<details class="result-section result-disclosure result-expert-only"><summary>Configuration analysée</summary><div class="configuration-summary" data-configuration-summary></div></details>
+		<details class="result-section result-disclosure result-expert-only"><summary>Métriques détaillées</summary><div class="result-metrics" data-result-metrics></div></details>
+		<div class="result-section result-expert-only" data-evaluated-result></div>
+		<div class="result-section counterfactual-section result-expert-only" data-counterfactual><p class="eyebrow">Recommandation contrefactuelle</p><h3>Le plus petit changement vérifié</h3><div data-counterfactual-result></div><p class="counterfactual-boundary" data-counterfactual-boundary></p></div>
+		<details class="result-section result-disclosure result-expert-only"><summary>Accessoires et raccordement</summary><ul data-accessories></ul></details>
+		<details class="result-section result-inventory result-expert-only">
 			<summary>Explorer les {compressors.length} compresseurs documentés</summary>
 			<p>Les modèles sont regroupés selon le résultat, la réserve disponible et la fiabilité des données. Une information absente reste signalée comme telle.</p>
 			<div class="result-filters" role="group" aria-label="Filtrer les compresseurs par résultat">
@@ -113,14 +139,15 @@ import UiIcon from './UiIcon.astro';
 			<p class="filter-empty" data-filter-empty hidden>Aucun compresseur dans cette catégorie.</p>
 			<div class="result-list" data-result-list></div>
 		</details>
-		<details class="result-section result-disclosure" id="calculator-limits"><summary>Hypothèses et avertissements</summary><ul data-assumptions></ul></details>
-		<details class="result-section result-disclosure result-source-guide" id="calculator-sources"><summary>Sources et qualité documentaire</summary><div><ContextHelp topic="sourceQuality" /><p>Chaque carte de résultat affiche un libellé humain. Le grade technique et la date de vérification restent accessibles dans le détail de la fiche.</p><a class="text-link" href="/sources-fiabilite/">Consulter les sources et leur fiabilité →</a></div></details>
-		<label class="demand-contribution">
+		<details class="result-section result-disclosure result-expert-only" id="calculator-limits"><summary>Hypothèses et avertissements</summary><ul data-assumptions></ul></details>
+		<details class="result-section result-disclosure result-source-guide result-expert-only" id="calculator-sources"><summary>Sources et qualité documentaire</summary><div><ContextHelp topic="sourceQuality" /><p>Chaque carte de résultat affiche un libellé humain. Le grade technique et la date de vérification restent accessibles dans le détail de la fiche.</p><a class="text-link" href="/sources-fiabilite/">Consulter les sources et leur fiabilité →</a></div></details>
+		<label class="demand-contribution result-expert-only">
 			<input type="checkbox" data-demand-contribution />
 			<span><strong>Aider à choisir les prochaines références étudiées</strong><small>Après lecture du résultat, vous pouvez partager uniquement les outils choisis et des tranches larges de débit, pression et durée. Aucun texte libre, valeur personnalisée exacte, cookie, adresse IP ou configuration complète n’est conservé.</small></span>
 		</label>
-		<div class="share-row"><a class="button primary" href="/passeport/" data-create-passport>Préparer mon installation</a><button class="button" type="button" data-share>Copier le lien</button><button class="button" type="button" data-copy-summary>Copier la synthèse</button><button class="button" type="button" data-print>Imprimer le calcul</button><span role="status" data-share-status></span></div>
-		<p class="calculator-note">Le lien copié contient votre configuration, mais celle-ci n’est ni envoyée ni enregistrée sur le serveur CompatAir.</p>
+		<div class="passport-readiness-note"><strong>Avant la recette terrain</strong><span>Prévoyez un manomètre et un essai avec l’outil en charge ; la pression et les fuites devront être mesurées, pas estimées.</span></div>
+		<div class="share-row"><a class="button primary" href="/passeport/" data-create-passport>Préparer mon installation</a><button class="button result-expert-only" type="button" data-share>Copier le lien</button><button class="button result-expert-only" type="button" data-copy-summary>Copier la synthèse</button><button class="button result-expert-only" type="button" data-print>Imprimer le calcul</button><span role="status" data-share-status></span></div>
+		<p class="calculator-note result-expert-only">Le lien copié contient votre configuration, mais celle-ci n’est ni envoyée ni enregistrée sur le serveur CompatAir.</p>
 	</div>
 	<aside class="mobile-primary-action" data-calculator-mobile-action aria-label="Action principale">
 		<button class="button primary" type="submit" form="calculator-form" data-calculator-submit data-calculator-mobile-submit>Obtenir ma réponse</button>
@@ -157,7 +184,7 @@ import UiIcon from './UiIcon.astro';
 
 <script>
 	import { resolveExactCatalogSearch } from '../domain/catalog-search';
-	import { createDecisionResolution, explainDecisionDataGap, rankDecisionCandidates } from '../domain/decision-resolution';
+	import { createDecisionResolution, explainDecisionDataGap, filterDecisionCandidatesByContext, rankDecisionCandidates } from '../domain/decision-resolution';
 	import { JOURNEY_CONTEXT_EVENT } from '../domain/journey-context';
 	import { sourceQualityDetail, sourceQualityLabel } from '../domain/source-quality';
 	import { getTradeScenarioPreset } from '../domain/trade-scenario-prefill';
@@ -171,6 +198,8 @@ import UiIcon from './UiIcon.astro';
 	type CounterfactualKind = import('../domain/counterfactual').CounterfactualKind;
 	type CounterfactualMachine = import('../domain/counterfactual').CounterfactualMachine;
 	type DecisionResolutionStatus = import('../domain/decision-resolution').DecisionResolutionStatus;
+	type DecisionContext = import('../domain/decision-resolution').DecisionContext;
+	type CommercialOffer = { id: string; productId: string; merchantName: string; priceEur: number; collectedAt: string };
 	let CATALOG_VERIFIED_AT = '';
 	let CALCULATION_VERSION = '';
 	let compressors: Compressor[] = [];
@@ -212,6 +241,11 @@ import UiIcon from './UiIcon.astro';
 	}
 
 	const root = document.querySelector<HTMLElement>('[data-calculator]');
+	const commercialOffers = (() => {
+		const element = root?.querySelector<HTMLScriptElement>('[data-commercial-offers]');
+		if (!element?.textContent) return [] as CommercialOffer[];
+		try { return JSON.parse(element.textContent) as CommercialOffer[]; } catch { return [] as CommercialOffer[]; }
+	})();
 	const form = root?.querySelector<HTMLFormElement>('[data-calculator-form]');
 	const rows = root?.querySelector<HTMLElement>('[data-demand-rows]');
 	const template = document.querySelector<HTMLTemplateElement>('[data-demand-template]');
@@ -246,7 +280,7 @@ import UiIcon from './UiIcon.astro';
 	const setText = (selector: string, value: string) => { const element = root?.querySelector<HTMLElement>(selector); if (element) element.textContent = value; };
 	const labels = { continuous: 'Compatible en continu', intermittent: 'Compatible par intermittence', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' } as const;
 	const responseQualityLabel = (quality: SizingResult['confidence']) => quality === 'high' ? 'Réponse étayée' : quality === 'medium' ? 'Réponse à confirmer' : 'Réponse limitée';
-	type Candidate = { compressor: (typeof compressors)[number]; result: SizingResult; availableFadLpm?: number; marginCovered: boolean };
+	type Candidate = { compressor: (typeof compressors)[number]; result: SizingResult; availableFadLpm?: number; marginCovered: boolean; lowestVerifiedPriceEur?: number; commercialOffer?: CommercialOffer };
 	let demandIndex = 0;
 	let currentFilter: keyof typeof labels | 'all' = 'all';
 	let lastSummary = '';
@@ -326,6 +360,33 @@ import UiIcon from './UiIcon.astro';
 	function resultLabel(result: SizingResult) {
 		if (result.flowBasis === 'documented-continuous') return labels[result.verdict];
 		return result.verdict === 'continuous' ? 'Débit moyen couvert' : result.verdict === 'intermittent' ? 'Débit moyen couvert avec réserve' : labels[result.verdict];
+	}
+	function simpleResultLabel(result: SizingResult) {
+		if (result.verdict === 'continuous' || result.verdict === 'intermittent') return 'Compatible';
+		return result.verdict === 'incompatible' ? 'Non compatible' : 'À confirmer';
+	}
+	function decisionContextFromForm(): DecisionContext {
+		if (!form) return { powerSupply: 'single-phase-230v', mobility: 'portable-or-mobile' };
+		const data = new FormData(form);
+		const powerSupply = String(data.get('powerSupply'));
+		const mobility = String(data.get('mobilityFilter'));
+		if (powerSupply !== 'single-phase-230v' && powerSupply !== 'any') throw new Error('Le filtre d’alimentation est invalide.');
+		if (mobility !== 'portable' && mobility !== 'portable-or-mobile' && mobility !== 'any') throw new Error('Le filtre de mobilité est invalide.');
+		const maximumBudgetEur = readNumber(data, 'maximumBudget');
+		if (maximumBudgetEur !== undefined && (maximumBudgetEur < 1 || maximumBudgetEur > 1_000_000)) throw new Error('Budget invalide.');
+		return { powerSupply, mobility, maximumBudgetEur };
+	}
+	function decisionContextLabel(context: DecisionContext) {
+		return [
+			context.powerSupply === 'single-phase-230v' ? '230 V monophasé' : 'toutes alimentations',
+			context.mobility === 'portable' ? 'portable' : context.mobility === 'portable-or-mobile' ? 'portable ou mobile' : 'mobilité indifférente',
+			...(context.maximumBudgetEur !== undefined ? [`budget ≤ ${context.maximumBudgetEur.toLocaleString('fr-FR')} € avec offre vérifiée`] : []),
+		].join(' · ');
+	}
+	function commercialOfferFor(productId: string) {
+		return commercialOffers
+			.filter((offer) => offer.productId === productId)
+			.sort((a, b) => a.priceEur - b.priceEur)[0];
 	}
 
 	function updateDemandMode(row: HTMLElement) {
@@ -627,19 +688,30 @@ import UiIcon from './UiIcon.astro';
 		if (reportDate) reportDate.textContent = new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeStyle: 'short' }).format(new Date());
 	}
 
-	function renderResultCard(compressor: (typeof compressors)[number], result: SizingResult, proofToolId?: string) {
+	function renderResultCard(candidate: Candidate, proofToolId?: string) {
+		const { compressor, result, commercialOffer } = candidate;
 		const fadResolution = resolveAvailableFad(compressor, result.requiredPressureBar);
 		const article = document.createElement('article'); article.className = `result-card verdict-${result.verdict}`; article.dataset.verdict = result.verdict;
 		const head = document.createElement('div'); head.className = 'result-card-head';
 		const title = document.createElement('h4'); const link = document.createElement('a'); link.href = `/compresseurs/${compressor.slug}/`; link.textContent = `${compressor.brand} ${compressor.model}`; title.append(link);
-		const badge = document.createElement('span'); badge.className = 'verdict-badge'; badge.textContent = resultLabel(result); head.append(title, badge);
+		const badge = document.createElement('span'); badge.className = 'verdict-badge'; badge.textContent = simpleResultLabel(result); head.append(title, badge);
 		const detail = document.createElement('p'); detail.textContent = result.verdict === 'insufficient_data'
 			? `Débit réellement restitué non vérifiable à ${result.requiredPressureBar} bar · ${sourceQualityLabel(compressor.confidence)}.`
 			: fadResolution?.basis === 'higher-pressure-bound'
 				? `${fadResolution.litersPerMinute.toFixed(0)} L/min mesurés à ${fadResolution.referencePressureBar} bar, retenus comme borne conservatrice pour ${result.requiredPressureBar} bar · ${sourceQualityLabel(compressor.confidence)}.`
 				: `${fadResolution?.litersPerMinute.toFixed(0) ?? 'Débit inconnu'} L/min disponibles à ${result.requiredPressureBar} bar · ${sourceQualityLabel(compressor.confidence)}.`;
 		const quality = document.createElement('details'); quality.className = 'result-card-quality'; const qualitySummary = document.createElement('summary'); qualitySummary.textContent = sourceQualityLabel(compressor.confidence); const qualityDetail = document.createElement('span'); qualityDetail.textContent = sourceQualityDetail(compressor.confidence);
-		quality.append(qualitySummary, qualityDetail); article.append(head, detail, quality);
+		const installation = document.createElement('p'); installation.className = 'result-card-installation'; installation.textContent = `${compressor.phase === 'single-phase' ? 'Monophasé' : compressor.phase === 'three-phase' ? 'Triphasé' : 'Alimentation non documentée'}${compressor.voltage ? ` · ${compressor.voltage}` : ''} · ${compressor.mobility === 'portable' ? 'portable' : compressor.mobility === 'mobile' ? 'mobile' : compressor.mobility === 'fixed' ? 'fixe' : 'mobilité non documentée'}`;
+		quality.append(qualitySummary, qualityDetail); article.append(head, detail, installation, quality);
+		const commerce = document.createElement('div'); commerce.className = `result-commerce ${commercialOffer ? 'has-offer' : 'no-offer'}`;
+		if (commercialOffer) {
+			const offerLink = document.createElement('a'); offerLink.href = `/go/${commercialOffer.id}`; offerLink.rel = 'sponsored nofollow noopener'; offerLink.textContent = `Voir l’offre chez ${commercialOffer.merchantName} · ${commercialOffer.priceEur.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' })}`;
+			const freshness = document.createElement('small'); freshness.textContent = `Offre vérifiée le ${new Date(commercialOffer.collectedAt).toLocaleDateString('fr-FR')}`;
+			commerce.append(offerLink, freshness);
+		} else {
+			const unavailable = document.createElement('span'); unavailable.textContent = 'Aucun vendeur vérifié pour cette référence.'; commerce.append(unavailable);
+		}
+		article.append(commerce);
 		if (proofToolId) { const proofLink = document.createElement('a'); proofLink.className = 'result-proof-link'; proofLink.href = `/graphe-preuve/#compresseur=${encodeURIComponent(compressor.id)}&outil=${encodeURIComponent(proofToolId)}`; proofLink.textContent = 'Remonter aux preuves'; article.append(proofLink); }
 		return article;
 	}
@@ -658,6 +730,8 @@ import UiIcon from './UiIcon.astro';
 		result: SizingResult,
 		status: DecisionResolutionStatus,
 		verifiedCount: number,
+		context: DecisionContext,
+		priorityCount: number,
 	) {
 		const selectedCompressor = config.selectedCompressor && config.selectedCompressor !== 'custom'
 			? compressors.find((item) => item.id === config.selectedCompressor)
@@ -668,27 +742,28 @@ import UiIcon from './UiIcon.astro';
 			? 'need'
 			: result.verdict === 'insufficient_data' ? 'indeterminate'
 				: result.verdict === 'incompatible' ? 'incompatible' : 'verified';
-		setText('[data-verdict]', !hasSelectedCompressor
+		const simpleVerdict = !hasSelectedCompressor
 			? 'Besoin calculé'
-			: result.verdict === 'insufficient_data' ? 'Modèle choisi non vérifiable' : resultLabel(result));
+			: simpleResultLabel(result);
+		setText('[data-verdict]', simpleVerdict);
 		setText('[data-answer-model-label]', hasSelectedCompressor ? 'Modèle vérifié' : 'Machine évaluée');
 		setText('[data-answer-available-label]', hasSelectedCompressor ? 'Débit disponible' : 'Solutions vérifiées');
 		if (!hasSelectedCompressor) {
 			setText('[data-answer-model]', 'Aucune machine imposée');
-			setText('[data-answer-available]', verifiedCount ? `${verifiedCount} références recalculées avec un verdict concluant` : 'Aucune référence concluante dans le catalogue actuel');
+			setText('[data-answer-available]', priorityCount ? `${priorityCount} solution${priorityCount > 1 ? 's' : ''} affichée${priorityCount > 1 ? 's' : ''} ci-dessous` : verifiedCount ? 'Élargissez les filtres' : 'Aucune solution documentée');
 			setText('[data-answer-margin]', `${Math.round(config.safetyMargin * 100)} % appliquée au besoin calculé`);
-			setText('[data-answer-reserve]', verifiedCount ? 'Les trois solutions documentées les plus proches sont présentées juste ci-dessous.' : 'Le besoin sort du domaine actuellement documenté.');
+			setText('[data-answer-reserve]', priorityCount ? decisionContextLabel(context) : verifiedCount ? 'Des solutions techniques existent hors de ce contexte.' : 'Besoin hors du domaine documenté.');
 		}
 
 		const titles: Record<DecisionResolutionStatus, string> = {
-			need_sized: `${verifiedCount} compresseur${verifiedCount > 1 ? 's' : ''} documenté${verifiedCount > 1 ? 's' : ''} couvre${verifiedCount > 1 ? 'nt' : ''} ce besoin`,
-			selected_verified: 'Le modèle choisi est vérifié ; voici les alternatives les plus proches',
-			verified_alternatives: `${verifiedCount} alternative${verifiedCount > 1 ? 's' : ''} vérifiée${verifiedCount > 1 ? 's' : ''} pour sortir de l’impasse`,
+			need_sized: priorityCount === 3 ? 'Trois solutions adaptées à votre contexte' : priorityCount ? `${priorityCount} solution${priorityCount > 1 ? 's' : ''} adaptée${priorityCount > 1 ? 's' : ''} à votre contexte` : 'Aucune solution ne respecte tous vos filtres',
+			selected_verified: priorityCount ? 'Le modèle choisi est vérifié ; voici les solutions adaptées' : 'Le modèle choisi est vérifié, sans alternative dans ce contexte',
+			verified_alternatives: priorityCount === 3 ? 'Trois solutions adaptées pour sortir de l’impasse' : priorityCount ? `${priorityCount} solution${priorityCount > 1 ? 's' : ''} adaptée${priorityCount > 1 ? 's' : ''} pour sortir de l’impasse` : 'Des alternatives techniques existent, mais pas dans ce contexte',
 			measurement_required: 'Aucune alternative vérifiée : une mesure ou une source est nécessaire',
 			no_verified_solution: 'Aucun compresseur documenté ne couvre ce besoin dans le catalogue actuel',
 		};
 		const summaries: Record<DecisionResolutionStatus, string> = {
-			need_sized: 'Aucune machine n’est validée implicitement : le besoin est calculé, puis les références ci-dessous sont recalculées une par une avec leurs données publiées.',
+			need_sized: priorityCount ? `Filtres appliqués : ${decisionContextLabel(context)}.` : context.maximumBudgetEur !== undefined && commercialOffers.length === 0 ? 'Le budget ne peut pas être vérifié : aucune offre marchande active n’est actuellement disponible.' : `Aucune référence vérifiée ne correspond à la fois au besoin et aux filtres : ${decisionContextLabel(context)}.`,
 			selected_verified: 'Le verdict du modèle choisi reste prioritaire. Cette sélection permet de comparer des solutions techniques proches, sans classement commercial absolu.',
 			verified_alternatives: result.verdict === 'incompatible'
 				? 'Le modèle choisi reste incompatible. Les références ci-dessous ont chacune obtenu un verdict concluant pour la même configuration.'
@@ -711,21 +786,23 @@ import UiIcon from './UiIcon.astro';
 		}
 	}
 
-	function renderCandidateResults(config: NonNullable<ReturnType<typeof configFromForm>>, base: SizingResult, result: SizingResult, candidates: Candidate[], proofToolId?: string) {
+	function renderCandidateResults(config: NonNullable<ReturnType<typeof configFromForm>>, base: SizingResult, result: SizingResult, candidates: Candidate[], context: DecisionContext, proofToolId?: string) {
 		if (!list || !priorityList) return;
 		const resolution = createDecisionResolution({ hasSelectedCompressor: Boolean(config.selectedCompressor), selectedResult: result, candidates });
 		const counts: Record<keyof typeof labels, number> = { continuous: 0, intermittent: 0, incompatible: 0, insufficient_data: 0 };
 		for (const candidate of resolution.rankedCandidates) counts[candidate.result.verdict] += 1;
 		for (const [key, count] of Object.entries({ all: resolution.rankedCandidates.length, ...counts })) root?.querySelector<HTMLElement>(`[data-result-count="${key}"]`)?.replaceChildren(String(count));
 		const coverage = root?.querySelector<HTMLElement>('[data-result-coverage]');
-		if (coverage) coverage.textContent = `${resolution.verifiedCandidates.length} solution(s) vérifiée(s) · ${counts.insufficient_data} à documenter · ${counts.incompatible} incompatibles.`;
-		const priority = resolution.verifiedCandidates.slice(0, 3);
+		const contextualCandidates = filterDecisionCandidatesByContext(resolution.rankedCandidates, context) as Candidate[];
+		const priority = contextualCandidates.slice(0, 3);
+		if (coverage) coverage.textContent = priority.length ? `${priority.length} solution${priority.length > 1 ? 's' : ''} affichée${priority.length > 1 ? 's' : ''} pour ce contexte. L’inventaire complet reste disponible en mode expert.` : 'Aucune solution affichée avec ces filtres. Élargissez l’alimentation, la mobilité ou retirez le budget.';
 		lastPriorityIds = priority.map(({ compressor }) => compressor.id);
-		if (priority.length) priorityList.replaceChildren(...priority.map(({ compressor, result }) => renderResultCard(compressor, result, proofToolId)));
+		if (priority.length) priorityList.replaceChildren(...priority.map((candidate) => renderResultCard(candidate, proofToolId)));
 		else { const message = document.createElement('p'); message.className = 'decision-empty'; message.textContent = 'Aucun compresseur actuellement étudié ne peut être recommandé pour cette configuration. Une information manquante n’est jamais transformée en recommandation.'; priorityList.replaceChildren(message); }
-		renderDecisionResolution(config, base, result, resolution.status, resolution.verifiedCandidates.length);
-		list.replaceChildren(...resolution.rankedCandidates.map(({ compressor, result }) => renderResultCard(compressor, result, proofToolId)));
+		renderDecisionResolution(config, base, result, resolution.status, resolution.verifiedCandidates.length, context, priority.length);
+		list.replaceChildren(...resolution.rankedCandidates.map((candidate) => renderResultCard(candidate, proofToolId)));
 		setResultFilter(currentFilter);
+		return priority;
 	}
 
 	function buildSummary(config: NonNullable<ReturnType<typeof configFromForm>>, result: SizingResult, candidates: Candidate[]) {
@@ -829,6 +906,9 @@ import UiIcon from './UiIcon.astro';
 			setNamedInput('hoseLength', String(scenarioPreset.hoseLengthMeters));
 			setNamedInput('hoseDiameter', String(scenarioPreset.hoseDiameterMm));
 			setNamedInput('mode', scenarioPreset.mode);
+			setNamedInput('buyerProfile', 'professional');
+			setNamedInput('powerSupply', 'any');
+			setNamedInput('mobilityFilter', 'any');
 			const details = root?.querySelector<HTMLDetailsElement>('.calculator-details'); if (details) details.open = true;
 			renderScenarioContext(scenarioPreset);
 		}
@@ -870,9 +950,11 @@ import UiIcon from './UiIcon.astro';
 					? resolveAvailableFad(compressor, base.requiredPressureBar)?.litersPerMinute
 					: undefined;
 				const candidateResult = sizeConfiguration({ ...config, compressor: { maxPressureBar: compressor.maxPressureBar, availableFadLpm, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle } } as any);
-				return { compressor, result: candidateResult, availableFadLpm, marginCovered: availableFadLpm !== undefined && availableFadLpm >= base.recommendedFadLpm };
+				const commercialOffer = commercialOfferFor(compressor.id);
+				return { compressor, result: candidateResult, availableFadLpm, marginCovered: availableFadLpm !== undefined && availableFadLpm >= base.recommendedFadLpm, lowestVerifiedPriceEur: commercialOffer?.priceEur, commercialOffer };
 			});
 			const rankedCandidates = rankDecisionCandidates(candidates);
+			const decisionContext = decisionContextFromForm();
 			if (shouldEvaluateCounterfactual(config.selectedCompressor)) {
 				const counterfactual = createCounterfactualRecommendation({
 					configuration: config,
@@ -882,7 +964,9 @@ import UiIcon from './UiIcon.astro';
 				renderCounterfactual(counterfactual);
 			} else renderCounterfactual();
 			const proofToolId = config.demands.length === 1 && config.demands[0].model === 'fixed-flow' ? config.demands[0].id : undefined;
-			currentFilter = 'all'; renderCandidateResults(config, base, result, rankedCandidates, proofToolId); lastSummary = buildSummary(config, result, rankedCandidates);
+			currentFilter = 'all';
+			const priorityCandidates = renderCandidateResults(config, base, result, rankedCandidates, decisionContext, proofToolId) ?? [];
+			lastSummary = buildSummary(config, result, priorityCandidates);
 			const encodedConfig = encodePassportConfiguration(config);
 			const scenarioSuffix = scenarioPreset ? `&scenario=${encodeURIComponent(scenarioPreset.id)}` : '';
 			window.history.replaceState(null, '', `${window.location.pathname}#config=${encodedConfig}${scenarioSuffix}`);
@@ -935,6 +1019,14 @@ import UiIcon from './UiIcon.astro';
 	});
 
 	for (const button of root?.querySelectorAll<HTMLButtonElement>('[data-result-filter]') ?? []) button.addEventListener('click', () => setResultFilter(button.dataset.resultFilter as keyof typeof labels | 'all'));
+	root?.querySelector<HTMLSelectElement>('[data-buyer-profile]')?.addEventListener('change', (event) => {
+		const professional = (event.target as HTMLSelectElement).value === 'professional';
+		setNamedInput('powerSupply', professional ? 'any' : 'single-phase-230v');
+		setNamedInput('mobilityFilter', professional ? 'any' : 'portable-or-mobile');
+	});
+	for (const control of root?.querySelectorAll<HTMLInputElement | HTMLSelectElement>('[name="buyerProfile"], [name="powerSupply"], [name="mobilityFilter"], [name="maximumBudget"]') ?? []) control.addEventListener('change', () => {
+		if (output && !output.hidden && root?.dataset.uiState !== 'loading') form?.requestSubmit();
+	});
 	for (const link of root?.querySelectorAll<HTMLAnchorElement>('[data-calculator-scroll]') ?? []) link.addEventListener('click', (event) => {
 		if (!link.hash.startsWith('#calculator-')) return;
 		const target = document.querySelector<HTMLElement>(link.hash); if (!target) return;

@@ -264,6 +264,11 @@ h3 { font-weight: 560; }
 .version-chip { flex: 0 0 auto; padding: .32rem .55rem; border-radius: 999px; color: var(--brand-dark); background: var(--accent-soft); font: 800 .7rem/1.2 ui-monospace, monospace; }
 .calculator-fieldset { min-width: 0; margin: 0 0 1.1rem; padding: 1rem; border: 1px solid var(--line); border-radius: 1rem; }
 .calculator-fieldset legend { padding: 0 .4rem; font-weight: 800; }
+.context-filter-intro { margin: 0 0 .9rem; color: var(--muted); font-size: .78rem; }
+.context-filter-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+.context-filter-grid .field { margin: 0; }
+.context-filter-grid label small { color: var(--muted); font-weight: 600; }
+.context-filter-note { display: block; margin-top: .8rem; color: var(--muted); line-height: 1.5; }
 .autocomplete-field input[type="search"] { min-height: 48px; }
 .autocomplete-field small { color: var(--muted); }
 .demand-row { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 90px 32px; gap: .65rem; align-items: end; margin-bottom: .75rem; padding: .8rem; border: 1px solid var(--line); border-radius: .8rem; background: rgba(244,246,239,.6); }
@@ -303,6 +308,10 @@ h3 { font-weight: 560; }
 .answer-first-grid .answer-reserve { grid-column: 1 / -1; border-left: 5px solid var(--accent); }
 .result-card-quality summary { color: var(--brand-dark); font-size: .72rem; font-weight: 850; cursor: pointer; }
 .result-card-quality span { display: block; margin-top: .3rem; color: var(--muted); font-size: .72rem; }
+.result-card-installation { color: var(--ink) !important; font-size: .76rem !important; font-weight: 750; }
+.result-commerce { display: grid; gap: .25rem; margin-top: .75rem; padding-top: .75rem; border-top: 1px solid var(--line); font-size: .75rem; }
+.result-commerce a { width: fit-content; color: var(--brand-dark); font-weight: 850; text-underline-offset: .2em; }
+.result-commerce small, .result-commerce.no-offer span { color: var(--muted); }
 .result-card h4 { margin: 0; font-size: 1rem; }
 .result-card.verdict-intermittent { border-left-color: #d38b32; }
 .report-header { display: none; }
@@ -322,6 +331,13 @@ h3 { font-weight: 560; }
 .counterfactual-boundary { margin-bottom: 0; padding-top: .75rem; border-top: 1px solid rgba(77,105,76,.2); font-size: .76rem !important; }
 .priority-list { display: grid; gap: .75rem; margin-top: 1rem; }
 .priority-list .result-card { background: white; box-shadow: var(--shadow-sm); }
+.result-mode-switch { display: flex; align-items: center; justify-content: flex-end; gap: .35rem; margin: 0 0 .75rem; padding: 0; border: 0; }
+.result-mode-switch legend { margin-right: .25rem; color: var(--muted); font-size: .7rem; font-weight: 800; }
+.result-mode-switch label { padding: .4rem .65rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); background: white; font: 800 .7rem/1.2 inherit; cursor: pointer; }
+.result-mode-switch input { width: .8rem; height: .8rem; margin: 0 .15rem 0 0; accent-color: var(--brand); }
+.calculator-output:has([data-result-mode="essential"]:checked) .result-expert-only { display: none !important; }
+.passport-readiness-note { display: grid; gap: .25rem; margin-top: 1.3rem; padding: .9rem 1rem; border-left: 4px solid var(--warning); background: #fff8e8; }
+.passport-readiness-note span { color: var(--muted); font-size: .78rem; line-height: 1.55; }
 .recommendation-compare-cta { width: fit-content; margin-top: 1rem; }
 .decision-empty { margin: .8rem 0 0; padding: .9rem; border: 1px solid #d9b69e; border-radius: .75rem; color: #76401e !important; background: #fff7ee; }
 .result-inventory { padding-top: .25rem; border-top: 1px solid var(--line); }
@@ -660,6 +676,8 @@ h3 { font-weight: 560; }
 .taxonomy-grid span.documented { color: var(--brand); font-weight: 800; }
 
 .passport-hero { padding-bottom: 3rem; }
+.passport-prerequisites { grid-column: 1 / -1; padding: 1rem 1.15rem; border: 1px solid rgba(255,255,255,.18); border-left: 5px solid var(--accent); color: white; background: rgba(5,20,14,.35); }
+.passport-prerequisites p { margin: .4rem 0 0; color: #bfd0c6; font-size: .82rem; line-height: 1.6; }
 .passport-privacy-note { max-width: 390px; padding: 1.25rem 1.35rem; border: 1px solid rgba(25,112,79,.16); border-radius: 1rem; background: rgba(253,254,250,.72); box-shadow: var(--shadow-sm); }
 .passport-privacy-note strong { color: var(--brand); font-size: .82rem; letter-spacing: .04em; text-transform: uppercase; }
 .passport-privacy-note p { margin: .45rem 0 0; color: var(--muted); font-size: .88rem; }
@@ -785,6 +803,11 @@ h3 { font-weight: 560; }
 .commissioning-hero-graphic strong { margin-top: .7rem; color: white; font: 540 1.1rem/1.2 var(--font-display); }
 .commissioning-hero-graphic small { margin-top: .45rem; color: #9bb0a4; font: 700 .6rem/1.45 ui-monospace, monospace; }
 .commissioning-hero-graphic i { display: grid; place-items: center; color: var(--accent); font-style: normal; }
+.commissioning-prerequisites { margin-bottom: 1.5rem; padding: clamp(1.1rem, 3vw, 1.6rem); border: 1px solid var(--line); border-left: 6px solid var(--warning); background: #fff8e8; }
+.commissioning-prerequisites .eyebrow { margin: 0; color: #76521f; }
+.commissioning-prerequisites h2 { margin: .45rem 0 .8rem; font-size: clamp(1.35rem, 3vw, 2rem); }
+.commissioning-prerequisites ul { display: grid; gap: .4rem; margin: 0; padding-left: 1.2rem; }
+.commissioning-prerequisites > p:last-child { margin: .8rem 0 0; color: var(--muted); font-size: .82rem; line-height: 1.6; }
 .commissioning-viewer-section { padding-top: 1.5rem; background: #edf1e9; }
 .commissioning-shell { min-height: 320px; }
 .commissioning-loading, .commissioning-empty { padding: clamp(2rem, 5vw, 4rem); border: 1px solid var(--line); border-radius: 1.4rem; background: var(--panel); box-shadow: var(--shadow-sm); text-align: center; }
@@ -1191,6 +1214,7 @@ h3 { font-weight: 560; }
 	}
 	.calculator-page .calculator:not([data-ui-state="success"]) .calculator-form-head,
 	.calculator-page .calculator:not([data-ui-state="success"]) .calculator-form > .calculator-details,
+	.calculator-page .calculator:not([data-ui-state="success"]) .calculator-form > .calculator-context-fieldset,
 	.calculator-page .calculator:not([data-ui-state="success"]) .calculator-form > .form-disclaimer,
 	.calculator-page .calculator:not([data-ui-state="success"]) .calculator-form > .calculation-status,
 	.calculator-page .calculator:not([data-ui-state="success"]) .calculator-form > .form-error,
@@ -2257,6 +2281,8 @@ details.glossary-letter[hidden] { display: none; }
 	.decision-assurance-grid article { min-height: 0; }
 	.decision-assurance-grid h3 { margin-top: 1.2rem; }
 	.calculator-page .calculator-form, .calculator-page .calculator-output { border-radius: 0; }
+	.context-filter-grid { grid-template-columns: 1fr; }
+	.result-mode-switch { justify-content: flex-start; }
 	.calculator-scenario-context { margin-inline: -.25rem; padding: 1.25rem; border-left-width: 4px; }
 	.calculator-scenario-context-head { grid-template-columns: 1fr; }
 	.calculator-scenario-context-head > span { width: 2.6rem; height: 2.6rem; }
