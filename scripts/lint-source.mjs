@@ -119,6 +119,24 @@ for (const [file, markers] of Object.entries({
 }
 const deployWorkflow = await readFile('.github/workflows/deploy-production.yml', 'utf8');
 const ciWorkflow = await readFile('.github/workflows/ci.yml', 'utf8');
+const securityWorkflow = await readFile('.github/workflows/security.yml', 'utf8');
+const monitorWorkflow = await readFile('.github/workflows/monitor.yml', 'utf8');
+const syncDataWorkflow = await readFile('.github/workflows/sync-data.yml', 'utf8');
+const dependabotConfig = await readFile('.github/dependabot.yml', 'utf8');
+const workflowSources = [ciWorkflow, deployWorkflow, securityWorkflow, monitorWorkflow, syncDataWorkflow];
+const countPolicy = (source, pattern) => [...source.matchAll(pattern)].length;
+if (countPolicy(dependabotConfig, /^\s*open-pull-requests-limit:\s*0\s*$/gm) !== 2) errors.push('.github/dependabot.yml: les mises à jour de versions doivent rester désactivées pour npm et github-actions');
+if (countPolicy(dependabotConfig, /^\s*rebase-strategy:\s*disabled\s*$/gm) !== 2) errors.push('.github/dependabot.yml: le rebase automatique doit rester désactivé pour chaque écosystème');
+if (countPolicy(dependabotConfig, /^\s*applies-to:\s*security-updates\s*$/gm) !== 2) errors.push('.github/dependabot.yml: les correctifs doivent rester groupés par écosystème et limités aux vulnérabilités');
+if (countPolicy(dependabotConfig, /^\s*-\s*'\*'\s*$/gm) !== 2) errors.push('.github/dependabot.yml: chaque groupe de sécurité doit couvrir toutes les dépendances de son écosystème');
+for (const [file, workflow] of [['.github/workflows/ci.yml', ciWorkflow], ['.github/workflows/security.yml', securityWorkflow]]) {
+	if (!workflow.includes('cancel-in-progress: true')) errors.push(`${file}: les exécutions de PR obsolètes doivent être annulées`);
+	const timeout = Number(workflow.match(/timeout-minutes:\s*(\d+)/)?.[1]);
+	if (!Number.isInteger(timeout) || timeout <= 0 || timeout > 15) errors.push(`${file}: durée maximale absente ou supérieure à 15 minutes`);
+}
+if (/(?:^|\n)\s*pull_request(?:_target)?:/m.test(deployWorkflow)) errors.push('.github/workflows/deploy-production.yml: un événement de PR ne doit jamais déclencher un déploiement');
+if (workflowSources.some((workflow) => /(?:^|\n)\s*workflow_run:/m.test(workflow))) errors.push('.github/workflows: aucun rerun automatique après échec ou fin de workflow n’est autorisé');
+if (workflowSources.some((workflow) => /enablePullRequestAutoMerge|gh\s+pr\s+merge\s+--auto|rerun-failed-jobs/.test(workflow))) errors.push('.github/workflows: auto-merge et rerun automatique sont interdits');
 if (!deployWorkflow.includes('node scripts/smoke-live-http.mjs')) errors.push('.github/workflows/deploy-production.yml: smoke HTTP live Node absent');
 if (deployWorkflow.includes(`grep -Fq 'Scanner et vérifier'`)) errors.push('.github/workflows/deploy-production.yml: contrôle de production couplé au wording public du scanner');
 if (!deployWorkflow.includes('COMPATAIR_RELEASE_SHA: ${{ github.sha }}')) errors.push('.github/workflows/deploy-production.yml: injection du SHA de release absente');

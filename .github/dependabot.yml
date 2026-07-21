@@ -7,12 +7,14 @@ updates:
       day: monday
       time: '05:20'
       timezone: Europe/Paris
-    open-pull-requests-limit: 5
+    # Required by Dependabot even though ordinary version-update PRs are disabled.
+    open-pull-requests-limit: 0
+    rebase-strategy: disabled
     groups:
-      production-dependencies:
-        dependency-type: production
-      development-dependencies:
-        dependency-type: development
+      npm-security-fixes:
+        applies-to: security-updates
+        patterns:
+          - '*'
   - package-ecosystem: github-actions
     directory: /
     schedule:
@@ -20,4 +22,11 @@ updates:
       day: monday
       time: '05:40'
       timezone: Europe/Paris
-    open-pull-requests-limit: 3
+    # Required by Dependabot even though ordinary version-update PRs are disabled.
+    open-pull-requests-limit: 0
+    rebase-strategy: disabled
+    groups:
+      github-actions-security-fixes:
+        applies-to: security-updates
+        patterns:
+          - '*'
