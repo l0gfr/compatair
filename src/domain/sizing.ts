@@ -164,7 +164,7 @@ export function sizeConfiguration(input: SizingInput): SizingResult {
 	for (const demand of value.demands) {
 		if (demand.model === 'per-action') {
 			const average = perActionAverageFlow(demand.litersPerAction, demand.actionsPerMinute, demand.quantity);
-			hypotheses.push(`${demand.quantity} outil(s) à ${demand.litersPerAction.toLocaleString('fr-FR')} L par action et ${demand.actionsPerMinute.toLocaleString('fr-FR')} action(s)/min donnent ${average.toLocaleString('fr-FR', { maximumFractionDigits: 2 })} L/min en moyenne.`);
+			hypotheses.push(`Besoin de l’outil : ${demand.quantity} × ${demand.litersPerAction.toLocaleString('fr-FR')} L par action, à ${demand.actionsPerMinute.toLocaleString('fr-FR')} action(s)/min, donnent ${average.toLocaleString('fr-FR', { maximumFractionDigits: 2 })} L/min en moyenne.`);
 			warnings.push('Le calcul par action ne décrit pas le débit instantané au déclenchement. Le flexible, les raccords et la réserve locale doivent être vérifiés séparément.');
 		}
 		if (demand.model === 'inflation') {

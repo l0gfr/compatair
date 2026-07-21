@@ -1,5 +1,6 @@
 ---
 import { compressors, tools } from '../data/catalog';
+import { catalogSearchIdentifiers } from '../domain/catalog-search';
 import { compressorDisplayName } from '../domain/product-display';
 import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 import ContextHelp from './ContextHelp.astro';
@@ -147,11 +148,11 @@ import UiIcon from './UiIcon.astro';
 </template>
 
 <datalist id="calculator-tools">
-	{tools.map((tool) => <option value={`${tool.brand} ${tool.model}${tool.mpn ? ` · MPN ${tool.mpn}` : ''}${tool.ean ? ` · EAN ${tool.ean}` : ''}`} data-id={tool.id} data-identifiers={JSON.stringify([tool.id, tool.mpn, tool.ean, tool.gtin, ...tool.distributorSkus.map((identifier) => identifier.sku), ...tool.identifierAliases.map((alias) => alias.value)].filter(Boolean))} data-demand-model={tool.demandModel} data-airflow={tool.demandModel === 'fixed-flow' ? tool.airflowLpm.typical : undefined} data-pressure={tool.workingPressureBar.typical} data-air-per-action={tool.demandModel === 'per-action' ? tool.airPerActionLiters : undefined} data-action-label={tool.demandModel === 'per-action' ? tool.actionLabel : undefined}>{tool.label} · {toolDemandLabel(tool)} · {toolPressureLabel(tool)}</option>)}
+	{tools.map((tool) => <option value={`${tool.brand} ${tool.model}${tool.mpn ? ` · MPN ${tool.mpn}` : ''}${tool.ean ? ` · EAN ${tool.ean}` : ''}`} data-id={tool.id} data-identifiers={JSON.stringify(catalogSearchIdentifiers(tool.brand, tool.model, [tool.label, tool.id, tool.mpn, tool.ean, tool.gtin, ...tool.distributorSkus.map((identifier) => identifier.sku), ...tool.identifierAliases.map((alias) => alias.value)]))} data-demand-model={tool.demandModel} data-airflow={tool.demandModel === 'fixed-flow' ? tool.airflowLpm.typical : undefined} data-pressure={tool.workingPressureBar.typical} data-air-per-action={tool.demandModel === 'per-action' ? tool.airPerActionLiters : undefined} data-action-label={tool.demandModel === 'per-action' ? tool.actionLabel : undefined}>{tool.label} · {toolDemandLabel(tool)} · {toolPressureLabel(tool)}</option>)}
 </datalist>
 <datalist id="calculator-compressors">
 	<option value="Caractéristiques personnalisées" data-id="custom" data-identifiers={JSON.stringify(['custom'])}>Saisie personnalisée</option>
-	{compressors.map((compressor) => <option value={`${compressor.brand} ${compressor.model}${compressor.mpn ? ` · MPN ${compressor.mpn}` : ''}${compressor.ean ? ` · EAN ${compressor.ean}` : ''}`} data-id={compressor.id} data-identifiers={JSON.stringify([compressor.id, compressor.mpn, compressor.ean, compressor.gtin, ...compressor.distributorSkus.map((identifier) => identifier.sku), ...compressor.identifierAliases.map((alias) => alias.value)].filter(Boolean))}>{compressorDisplayName(compressor)}</option>)}
+	{compressors.map((compressor) => <option value={`${compressor.brand} ${compressor.model}${compressor.mpn ? ` · MPN ${compressor.mpn}` : ''}${compressor.ean ? ` · EAN ${compressor.ean}` : ''}`} data-id={compressor.id} data-identifiers={JSON.stringify(catalogSearchIdentifiers(compressor.brand, compressor.model, [compressorDisplayName(compressor), compressor.id, compressor.mpn, compressor.ean, compressor.gtin, ...compressor.distributorSkus.map((identifier) => identifier.sku), ...compressor.identifierAliases.map((alias) => alias.value)]))}>{compressorDisplayName(compressor)}</option>)}
 </datalist>
 
 <script>
@@ -230,6 +231,13 @@ import UiIcon from './UiIcon.astro';
 			else button.textContent = state === 'loading' ? 'Calcul en cours…' : 'Obtenir ma réponse';
 		}
 		const status = root?.querySelector<HTMLElement>('[data-calculation-status]'); if (status) status.textContent = message;
+	}
+	function clearFormError() {
+		const error = root?.querySelector<HTMLElement>('[data-form-error]');
+		if (!error || error.hidden) return;
+		error.hidden = true;
+		error.textContent = '';
+		if (root?.dataset.uiState === 'error') setCalculatorUiState('idle');
 	}
 	const mobileResult = root?.querySelector<HTMLAnchorElement>('[data-calculator-mobile-result]');
 	const evaluated = root?.querySelector<HTMLElement>('[data-evaluated-result]');
@@ -332,7 +340,7 @@ import UiIcon from './UiIcon.astro';
 			: demandModel === 'fixed-flow'
 			? `${selected.dataset.airflow} L/min documentés à ${selected.dataset.pressure} bar.`
 			: demandModel === 'per-action'
-				? `${Number(selected.dataset.airPerAction).toLocaleString('fr-FR')} L par ${selected.dataset.actionLabel} à ${selected.dataset.pressure} bar. La cadence est obligatoire et reste une saisie utilisateur.`
+				? `Donnée constructeur de l’outil : ${Number(selected.dataset.airPerAction).toLocaleString('fr-FR')} L d’air par ${selected.dataset.actionLabel} à ${selected.dataset.pressure} bar. La cadence est obligatoire et reste une saisie utilisateur.`
 				: `Aucun volume de pneumatique n’est déduit du modèle. Volume, pressions et temps doivent être saisis.`;
 	}
 	function syncToolSearch(row: HTMLElement) {
@@ -592,7 +600,7 @@ import UiIcon from './UiIcon.astro';
 	function demandDescription(demand: NonNullable<ReturnType<typeof configFromForm>>['demands'][number]) {
 		const tool = tools.find((item) => item.id === demand.id)!;
 		if (demand.model === 'fixed-flow') return `${demand.quantity} × ${tool.label} · fréquence ${Math.round(demand.dutyFactor * 100)} % · ${demand.flowLpm} L/min à ${demand.pressureBar} bar`;
-		if (demand.model === 'per-action') { const actionLabel = tool.demandModel === 'per-action' ? tool.actionLabel : 'action'; return `${demand.quantity} × ${tool.label} · ${demand.actionsPerMinute.toLocaleString('fr-FR')} ${actionLabel}/min · ${demand.litersPerAction.toLocaleString('fr-FR')} L/${actionLabel}`; }
+		if (demand.model === 'per-action') { const actionLabel = tool.demandModel === 'per-action' ? tool.actionLabel : 'action'; return `Outil : ${demand.quantity} × ${tool.label} · cadence saisie ${demand.actionsPerMinute.toLocaleString('fr-FR')} ${actionLabel}/min · consommation publiée ${demand.litersPerAction.toLocaleString('fr-FR')} L/${actionLabel}`; }
 		return `${demand.quantity} × ${tool.label} · ${demand.volumeLiters.toLocaleString('fr-FR')} L de ${demand.initialPressureBar} à ${demand.targetPressureBar} bar en ${(demand.targetMinutes * 60).toLocaleString('fr-FR', { maximumFractionDigits: 0 })} s`;
 	}
 
@@ -783,6 +791,8 @@ import UiIcon from './UiIcon.astro';
 	root?.querySelector('[data-add-tool]')?.addEventListener('click', () => addDemand());
 	form?.addEventListener('input', () => recordFunnelStep('started'), { once: true });
 	form?.addEventListener('change', () => recordFunnelStep('started'), { once: true });
+	form?.addEventListener('input', clearFormError);
+	form?.addEventListener('change', clearFormError);
 	form?.querySelector<HTMLInputElement>('[data-compressor-search]')?.addEventListener('input', syncCompressorSearch);
 	form?.querySelector<HTMLInputElement>('[data-compressor-search]')?.addEventListener('change', syncCompressorSearch);
 	form?.querySelector<HTMLInputElement>('[name="margin"]')?.addEventListener('input', (event: Event) => { root!.querySelector<HTMLOutputElement>('[data-margin-output]')!.value = `${(event.target as HTMLInputElement).value} %`; });
@@ -836,6 +846,7 @@ import UiIcon from './UiIcon.astro';
 
 	form?.addEventListener('submit', async (event) => {
 		event.preventDefault(); if (!output || !list || !evaluated) return;
+		clearFormError();
 		setCalculatorUiState('loading', 'Calcul du besoin et vérification des compresseurs documentés…');
 		const appliedCounterfactualFamily = pendingCounterfactualFamily;
 		pendingCounterfactualFamily = undefined;

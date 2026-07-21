@@ -36,6 +36,7 @@ const verifiedDateLabel = verifiedAt.split('-').reverse().join('/');
 	pageType="product"
 	imagePath="/social/outils-pneumatiques.png"
 	imageAlt="Catalogue des outils pneumatiques documentés par CompatAir"
+	preloadImagePath={tool.image.src}
 	modifiedDate={new Date(verifiedAt)}
 	breadcrumbs={[{ name: 'Outils pneumatiques', path: '/outils-pneumatiques/' }, { name: tool.label, path: `/outils-pneumatiques/${tool.slug}/` }]}
 >

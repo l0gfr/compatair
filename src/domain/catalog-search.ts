@@ -4,6 +4,14 @@ export type CatalogSearchCandidate = {
 	identifiers: string[];
 };
 
+export function catalogSearchIdentifiers(
+	brand: string,
+	model: string,
+	identifiers: Array<string | undefined>,
+) {
+	return [...new Set([`${brand} ${model}`, ...identifiers].map((value) => value?.trim()).filter((value): value is string => Boolean(value)))];
+}
+
 function normalizeExactSearchValue(value: string) {
 	return value.trim().toLocaleLowerCase('fr-FR');
 }

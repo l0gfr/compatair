@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { resolveExactCatalogSearch, type CatalogSearchCandidate } from './catalog-search';
+import { catalogSearchIdentifiers, resolveExactCatalogSearch, type CatalogSearchCandidate } from './catalog-search';
 
 const candidates: CatalogSearchCandidate[] = [
 	{
@@ -25,5 +25,15 @@ describe('exact catalog search', () => {
 	it('does not turn a partial or ambiguous identifier into a selection', () => {
 		expect(resolveExactCatalogSearch('TC-PP 220', candidates)).toBeUndefined();
 		expect(resolveExactCatalogSearch('4138540', [...candidates, { id: 'duplicate', value: 'Doublon', identifiers: ['4138540'] }])).toBeUndefined();
+	});
+
+	it('accepts the exact brand and model without requiring the enriched browser suggestion', () => {
+		const candidate: CatalogSearchCandidate = {
+			id: 'einhell-tc-pw-340',
+			value: 'Einhell TC-PW 340 · MPN 4138950 · EAN 4006825639995',
+			identifiers: catalogSearchIdentifiers('Einhell', 'TC-PW 340', ['einhell-tc-pw-340', '4138950', '4006825639995']),
+		};
+
+		expect(resolveExactCatalogSearch('Einhell TC-PW 340', [candidate])).toBe('einhell-tc-pw-340');
 	});
 });

@@ -72,7 +72,7 @@ export function evaluateCompatibility(
 	const safetyMargin = input.safetyMargin ?? .25;
 	if (tool.demandModel !== 'fixed-flow') {
 		const warning = tool.demandModel === 'per-action'
-			? `La source publie ${tool.airPerActionLiters} litre par ${tool.actionLabel}. Un rythme d’actions par minute est nécessaire pour calculer un débit.`
+			? `La source de l’outil ${tool.label} publie ${tool.airPerActionLiters.toLocaleString('fr-FR')} litre d’air par ${tool.actionLabel}. Une cadence réelle de cet outil est nécessaire pour calculer un débit par minute.`
 			: tool.demandExplanation;
 		return { verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data', warnings: [warning], calculationVersion: CALCULATION_VERSION };
 	}

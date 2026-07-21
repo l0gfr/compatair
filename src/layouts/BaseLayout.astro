@@ -26,6 +26,7 @@ type Props = {
 	pageType?: 'website' | 'article' | 'product';
 	imagePath?: string;
 	imageAlt?: string;
+	preloadImagePath?: string;
 	issueDate?: Date;
 	modifiedDate?: Date;
 	breadcrumbs?: Array<{ name: string; path: string }>;
@@ -42,6 +43,7 @@ const {
 	pageType = 'website',
 	imagePath,
 	imageAlt,
+	preloadImagePath,
 	issueDate,
 	modifiedDate,
 	breadcrumbs = [],
@@ -165,6 +167,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 		<link rel="manifest" href="/site.webmanifest" />
 		<link rel="preload" href={manropeLatinWghtUrl} as="font" type="font/woff2" crossorigin="anonymous" />
 		<link rel="preload" href={newsreaderLatinWghtUrl} as="font" type="font/woff2" crossorigin="anonymous" />
+		{preloadImagePath && <link rel="preload" href={preloadImagePath} as="image" fetchpriority="high" />}
 		<meta property="og:type" content={pageType} />
 		<meta property="og:locale" content={lang === 'en' ? 'en_US' : 'fr_FR'} />
 		<meta property="og:site_name" content="CompatAir" />

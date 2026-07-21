@@ -55,6 +55,7 @@ const productJsonLd = productOffers.length ? {
 	pageType="product"
 	imagePath="/social/compresseurs.png"
 	imageAlt="Catalogue des compresseurs documentés par CompatAir"
+	preloadImagePath={compressor.image.src}
 	modifiedDate={new Date(verifiedAt)}
 	breadcrumbs={[{ name: 'Compresseurs', path: '/compresseurs/' }, { name: displayName, path: `/compresseurs/${compressor.slug}/` }]}
 >
