@@ -36,7 +36,7 @@ const packageSource = JSON.parse(await readFile(resolve(root, 'contracts/mcp/pac
 await writeFile(resolve(output, 'package.json'), `${JSON.stringify({ ...packageSource, scripts: { test: 'node --test tests/verify-contracts.mjs ucp/tests/verify-contracts.mjs' } }, null, 2)}\n`);
 const manifestFiles = [...files.map(([, target]) => target), 'package.json'].sort();
 const manifest = {
-	schemaVersion: '1.0.0', source: 'https://github.com/bluetouff/compatair', serverVersion: JSON.parse(await readFile(resolve(output, 'server.json'), 'utf8')).version,
+	schemaVersion: '1.0.0', source: 'https://github.com/l0gfr/compatair', serverVersion: JSON.parse(await readFile(resolve(output, 'server.json'), 'utf8')).version,
 	files: await Promise.all(manifestFiles.map(async (path) => ({ path, sha256: createHash('sha256').update(await readFile(resolve(output, path))).digest('hex') }))),
 };
 await writeFile(resolve(output, 'SYNC_MANIFEST.json'), `${JSON.stringify(manifest, null, 2)}\n`);
