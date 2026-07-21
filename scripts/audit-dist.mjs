@@ -437,8 +437,11 @@ else {
 if (!artifactPaths.has('/index.html')) errors.push('poste de contrôle: accueil rendu absent');
 else {
 	const homeHtml = await readFile(join(root, '/index.html'), 'utf8');
-	for (const marker of ['data-home-command-center', 'data-home-video-stage', 'data-home-video-launch', '/media/compatair-parcours-utilisateur-complet.mp4', 'requestFullscreen', 'webkitEnterFullscreen', 'is-fallback-fullscreen', '/calculateur/', '/radar-contradictions/', '/graphe-preuve/', '/scanner/', '/observatoire-qualite-documentaire/', 'Ce que CompatAir vérifie']) {
+	for (const marker of ['data-home-command-center', 'data-home-video-stage', 'data-home-video', '/media/compatair-parcours-utilisateur-complet.mp4', 'controls', 'playsinline', 'Lancez-la directement dans la page', '/calculateur/', '/radar-contradictions/', '/graphe-preuve/', '/scanner/', '/observatoire-qualite-documentaire/', 'Ce que CompatAir vérifie']) {
 		if (!homeHtml.includes(marker)) errors.push(`poste de contrôle: accès ou marqueur absent ${marker}`);
+	}
+	for (const forbiddenMarker of ['data-home-video-launch', 'requestFullscreen', 'webkitEnterFullscreen', 'is-fallback-fullscreen']) {
+		if (homeHtml.includes(forbiddenMarker)) errors.push(`poste de contrôle: lancement plein écran automatique encore présent ${forbiddenMarker}`);
 	}
 }
 

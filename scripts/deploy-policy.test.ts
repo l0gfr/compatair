@@ -83,6 +83,8 @@ describe('release boundary policy', () => {
 		expect(publicCsp).toContain("object-src 'none'");
 		expect(publicCsp).toContain("base-uri 'none'");
 		expect(publicCsp).toContain("frame-ancestors 'none'");
+		expect(publicCsp).toContain("media-src 'self'");
+		expect(publicCsp).not.toContain("media-src 'none'");
 		expect(publicCsp).not.toContain("script-src 'self' 'unsafe-inline'");
 	});
 });

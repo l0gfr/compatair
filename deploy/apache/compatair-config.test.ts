@@ -28,6 +28,12 @@ describe('CompatAir Apache CSP', () => {
 		expect(config).toContain("frame-ancestors 'none'");
 	});
 
+	it('allows public video only from the same origin', () => {
+		const publicCsp = config.split('\n').find((line) => line.includes('Content-Security-Policy') && line.includes('script-src-attr')) ?? '';
+		expect(publicCsp).toContain("media-src 'self'");
+		expect(publicCsp).not.toContain("media-src 'none'");
+	});
+
 	it('blocks executable release internals and hidden paths', () => {
 		expect(config).toContain('^/(?:_server)(?:/|$)');
 		const hiddenPathPattern = [...config.matchAll(/<LocationMatch "([^"]+)">([\s\S]*?)<\/LocationMatch>/g)]
