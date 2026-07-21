@@ -6,6 +6,7 @@ strictStorePkgContentCheck: true
 saveExact: true
 
 overrides:
+  fast-uri: '3.1.4'
   tmp: '0.2.7'
   uuid: '11.1.1'
 
