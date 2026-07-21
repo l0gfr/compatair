@@ -13,7 +13,7 @@ const brands = [...new Set([...compressors.map((item) => item.brand), ...tools.m
 	return { brand, compressors: brandCompressors.length, tools: brandTools.length, documentedFad, total: brandCompressors.length + brandTools.length };
 });
 const brandPaths = [
-	{ icon: 'tools', label: 'MPN ou EAN disponible', title: 'Identifier une référence', detail: 'Retrouver le produit exact avant d’interpréter la couverture de sa marque.', href: '/scanner/' },
+	{ icon: 'tools', label: 'MPN, EAN/GTIN ou SKU', title: 'Identifier une référence', detail: 'Retrouver le produit exact avant d’interpréter la couverture de sa marque.', href: '/scanner/' },
 	{ icon: 'database', label: 'Qualité du catalogue', title: 'Lire l’observatoire', detail: 'Comparer la présence des données nécessaires sans noter la qualité des produits.', href: '/observatoire-qualite-documentaire/' },
 	{ icon: 'shield', label: 'Fabricant ou distributeur', title: 'Améliorer un catalogue', detail: 'Relier références, documents et caractéristiques utiles au choix final.', href: '/professionnels/' },
 ] as const;

@@ -12,6 +12,7 @@ export type NormalizedProduct = {
 		normalizedMpn?: string;
 		ean?: string;
 		gtin?: string;
+		distributorSkus: Array<{ distributorId: string; sku: string; normalizedSku: string; evidenceIds: string[] }>;
 		aliases: Array<{ type: 'mpn' | 'ean' | 'gtin' | 'legacy_mpn'; value: string; normalizedValue: string; evidenceIds: string[] }>;
 	};
 	variant?: CatalogProduct['variant'];
@@ -27,6 +28,17 @@ export function normalizeMpn(value: string) {
 
 export function normalizeTradeItem(value: string) {
 	return value.replace(/\D/g, '');
+}
+
+export function normalizeDistributorSku(value: string) {
+	return value.normalize('NFKC').trim().toUpperCase().replace(/\s+/g, ' ');
+}
+
+export function sourceRoleForEvidence(evidence: CatalogProduct['evidence'][number]) {
+	if (evidence.sourceRole) return evidence.sourceRole;
+	if (evidence.sourceType === 'manufacturer' || evidence.sourceType === 'manual') return 'primary' as const;
+	if (evidence.sourceType === 'measured') return 'independent_corroboration' as const;
+	return 'secondary' as const;
 }
 
 export function isValidTradeItem(value: string) {
@@ -52,7 +64,8 @@ export function normalizeProduct(product: CatalogProduct, type: 'compressor' | '
 		identity: {
 			...(product.mpn ? { mpn: product.mpn, normalizedMpn: normalizeMpn(product.mpn) } : {}),
 			...(product.ean ? { ean: normalizeTradeItem(product.ean) } : {}),
-			...('gtin' in product && product.gtin ? { gtin: normalizeTradeItem(product.gtin) } : {}),
+			...(product.gtin ? { gtin: normalizeTradeItem(product.gtin) } : {}),
+			distributorSkus: product.distributorSkus.map((identifier) => ({ ...identifier, normalizedSku: normalizeDistributorSku(identifier.sku) })),
 			aliases: product.identifierAliases.map((alias) => ({
 				...alias,
 				normalizedValue: alias.type === 'mpn' || alias.type === 'legacy_mpn' ? normalizeMpn(alias.value) : normalizeTradeItem(alias.value),
@@ -64,6 +77,8 @@ export function normalizeProduct(product: CatalogProduct, type: 'compressor' | '
 			fieldEvidenceIds: {
 				mpn: evidenceIdsForField(product, 'mpn'),
 				ean: evidenceIdsForField(product, 'ean'),
+				gtin: evidenceIdsForField(product, 'gtin'),
+				distributorSkus: product.distributorSkus.flatMap((identifier) => identifier.evidenceIds),
 				...(type === 'compressor'
 					? { fadCurve: evidenceIdsForField(product, 'fadCurve'), maxPressureBar: evidenceIdsForField(product, 'maxPressureBar') }
 					: { workingPressureBar: evidenceIdsForField(product, 'workingPressureBar'), airflowLpm: evidenceIdsForField(product, 'airflowLpm') }),
@@ -78,7 +93,7 @@ export function buildNormalizedCatalog(compressors: Compressor[], tools: ToolPro
 		...tools.map((product) => normalizeProduct(product, 'tool')),
 	];
 	const sourceIndex = Object.fromEntries(
-		[...compressors, ...tools].flatMap((product) => product.evidence).map((evidence) => [evidence.id, evidence]),
+		[...compressors, ...tools].flatMap((product) => product.evidence).map((evidence) => [evidence.id, { ...evidence, sourceRole: sourceRoleForEvidence(evidence) }]),
 	);
 	const variantFamilies = Object.values(Object.groupBy(products.filter((product) => product.variant), (product) => product.variant!.familyId))
 		.map((members) => ({ familyId: members![0].variant!.familyId, productIds: members!.map((member) => member.id) }));
@@ -91,6 +106,7 @@ export function assertNormalizedCatalogIntegrity(compressors: Compressor[], tool
 	const ids = new Set<string>();
 	const tradeItems = new Map<string, string>();
 	const brandMpns = new Map<string, string>();
+	const distributorSkus = new Map<string, string>();
 	const evidenceById = new Map<string, string>();
 	for (const product of products) {
 		if (ids.has(product.id)) errors.push(`Identifiant produit dupliqué : ${product.id}`);
@@ -99,18 +115,25 @@ export function assertNormalizedCatalogIntegrity(compressors: Compressor[], tool
 			for (const evidenceId of evidenceIds) if (!product.evidence.some((item) => item.id === evidenceId)) errors.push(`${product.id} référence une preuve inconnue : ${evidenceId}`);
 		}
 		for (const specification of product.specifications) for (const evidenceId of specification.evidenceIds) if (!product.evidence.some((item) => item.id === evidenceId)) errors.push(`${product.id} référence une preuve de spécification inconnue : ${evidenceId}`);
+		for (const identifier of product.distributorSkus) {
+			for (const evidenceId of identifier.evidenceIds) if (!product.evidence.some((item) => item.id === evidenceId)) errors.push(`${product.id} référence une preuve de SKU inconnue : ${evidenceId}`);
+			const key = `${identifier.distributorId}:${normalizeDistributorSku(identifier.sku)}`;
+			const previous = distributorSkus.get(key);
+			if (previous && previous !== product.id) errors.push(`SKU distributeur dupliqué : ${identifier.distributorId}/${identifier.sku} (${previous}, ${product.id})`);
+			distributorSkus.set(key, product.id);
+		}
 		for (const evidence of product.evidence) {
 			const serialized = JSON.stringify(evidence);
 			const previous = evidenceById.get(evidence.id);
 			if (previous && previous !== serialized) errors.push(`Identifiant de preuve réutilisé avec un contenu différent : ${evidence.id}`);
 			evidenceById.set(evidence.id, serialized);
 		}
-		if (product.ean) {
-			const ean = normalizeTradeItem(product.ean);
-			if (!isValidTradeItem(ean)) errors.push(`EAN/GTIN invalide : ${ean} (${product.id})`);
-			const previous = tradeItems.get(ean);
-			if (previous && previous !== product.id) errors.push(`EAN/GTIN dupliqué : ${ean} (${previous}, ${product.id})`);
-			tradeItems.set(ean, product.id);
+		for (const tradeItem of [product.ean, product.gtin].filter((value): value is string => Boolean(value))) {
+			const normalized = normalizeTradeItem(tradeItem);
+			if (!isValidTradeItem(normalized)) errors.push(`EAN/GTIN invalide : ${normalized} (${product.id})`);
+			const previous = tradeItems.get(normalized);
+			if (previous && previous !== product.id) errors.push(`EAN/GTIN dupliqué : ${normalized} (${previous}, ${product.id})`);
+			tradeItems.set(normalized, product.id);
 		}
 		if (product.mpn) {
 			const key = `${product.brand.toUpperCase()}:${normalizeMpn(product.mpn)}`;

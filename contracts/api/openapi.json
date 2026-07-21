@@ -4,7 +4,7 @@
   "info": {
     "title": "CompatAir public decision API",
     "version": "2026-07-15",
-    "description": "Read-only compatibility, evidence, full-text knowledge and changefeed API. Technical verdicts are independent from offers."
+    "description": "Read-only compatibility, evidence, full-text knowledge and changefeed API. Technical verdicts are independent from offers. Dataset scope: 14,400 explorable combinations, including 13,080 audited fixed-flow verdicts and 1,320 parametric combinations that require action rate or volume and target time."
   },
   "servers": [{ "url": "https://compatair.fr" }],
   "paths": {
@@ -17,7 +17,7 @@
           { "name": "toolId", "in": "query", "required": true, "schema": { "type": "string", "pattern": "^[a-z0-9-]{1,160}$" } },
           { "name": "channel", "in": "query", "required": false, "description": "Closed attribution hint used by the official embedded widget only.", "schema": { "const": "widget" } }
         ],
-        "responses": { "200": { "description": "Deterministic compatibility result with sources and proof URL", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CompatibilityResult" } } } }, "400": { "$ref": "#/components/responses/BadRequest" }, "404": { "$ref": "#/components/responses/NotFound" }, "429": { "$ref": "#/components/responses/RateLimited" }, "503": { "description": "Published verdict snapshot unavailable", "headers": { "Retry-After": { "schema": { "type": "integer", "const": 60 } } }, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } },
+        "responses": { "200": { "description": "Deterministic result. Fixed-flow pairs use the 13,080-verdict audited snapshot. For a parametric tool, this ID-only endpoint returns insufficient_data; the calculator, MCP or UCP interface must receive explicit action rate or volume and target time.", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CompatibilityResult" } } } }, "400": { "$ref": "#/components/responses/BadRequest" }, "404": { "$ref": "#/components/responses/NotFound" }, "429": { "$ref": "#/components/responses/RateLimited" }, "503": { "description": "Published verdict snapshot unavailable", "headers": { "Retry-After": { "schema": { "type": "integer", "const": 60 } } }, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } },
         "security": []
       }
     },
@@ -114,13 +114,21 @@
         "additionalProperties": false
       },
       "ProductIdentity": {
-        "type": "object", "required": ["id", "brand", "model", "slug"],
-        "properties": { "id": { "type": "string" }, "brand": { "type": "string" }, "model": { "type": "string" }, "label": { "type": "string" }, "slug": { "type": "string" } },
+        "type": "object", "required": ["id", "brand", "model", "slug", "identifiers"],
+        "properties": { "id": { "type": "string" }, "brand": { "type": "string" }, "model": { "type": "string" }, "label": { "type": "string" }, "slug": { "type": "string" }, "identifiers": { "$ref": "#/components/schemas/MerchantIdentifiers" } },
+        "additionalProperties": false
+      },
+      "MerchantIdentifiers": {
+        "type": "object", "required": ["distributor_skus"],
+        "properties": {
+          "mpn": { "type": "string" }, "normalized_mpn": { "type": "string" }, "ean": { "type": "string", "pattern": "^\\d{8,14}$" }, "gtin": { "type": "string", "pattern": "^\\d{8,14}$" },
+          "distributor_skus": { "type": "array", "items": { "type": "object", "required": ["distributor_id", "sku", "normalized_sku"], "properties": { "distributor_id": { "type": "string" }, "sku": { "type": "string" }, "normalized_sku": { "type": "string" } }, "additionalProperties": false } }
+        },
         "additionalProperties": false
       },
       "EvidenceSource": {
-        "type": "object", "required": ["id", "label", "url", "retrievedAt", "confidence"],
-        "properties": { "id": { "type": "string" }, "label": { "type": "string" }, "url": { "type": "string", "format": "uri" }, "retrievedAt": { "type": "string", "format": "date" }, "confidence": { "enum": ["A", "B", "C", "D"] } },
+        "type": "object", "required": ["id", "label", "url", "sourceType", "sourceRole", "retrievedAt", "confidence"],
+        "properties": { "id": { "type": "string" }, "label": { "type": "string" }, "url": { "type": "string", "format": "uri" }, "sourceType": { "enum": ["manufacturer", "manual", "merchant", "measured"] }, "sourceRole": { "enum": ["primary", "independent_corroboration", "secondary"] }, "retrievedAt": { "type": "string", "format": "date" }, "confidence": { "enum": ["A", "B", "C", "D"] } },
         "additionalProperties": false
       },
       "EngineEvaluation": {

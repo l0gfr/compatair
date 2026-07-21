@@ -60,7 +60,7 @@ export function createAgentKnowledge(input: {
 	const products: AgentKnowledgeItem[] = [
 		...input.compressors.map((item): AgentKnowledgeItem => {
 			const description = `${item.brand} ${item.model}; ${item.tankLiters} L; ${item.maxPressureBar} bar; FAD curve source-linked.`;
-			return { id: `compressor:${item.id}:fr`, type: 'Compresseur', locale: 'fr', title: `${item.brand} ${item.model}`, description, url: `https://compatair.fr/compresseurs/${item.slug}/`, keywords: `${item.mpn ?? ''} ${item.ean ?? ''} ${item.tankLiters} litres ${item.maxPressureBar} bar`, observed_at: input.observedAt, source_urls: unique(item.evidence.map((evidence) => evidence.sourceUrl)), content_sha256: hash(description), translation: { status: 'source' } };
+			return { id: `compressor:${item.id}:fr`, type: 'Compresseur', locale: 'fr', title: `${item.brand} ${item.model}`, description, url: `https://compatair.fr/compresseurs/${item.slug}/`, keywords: `${item.mpn ?? ''} ${item.ean ?? ''} ${item.gtin ?? ''} ${item.distributorSkus.map((identifier) => identifier.sku).join(' ')} ${item.tankLiters} litres ${item.maxPressureBar} bar`, observed_at: input.observedAt, source_urls: unique(item.evidence.map((evidence) => evidence.sourceUrl)), content_sha256: hash(description), translation: { status: 'source' } };
 		}),
 		...input.tools.map((item): AgentKnowledgeItem => {
 			const pressure = item.workingPressureBar.typical ?? item.workingPressureBar.max;
@@ -70,7 +70,7 @@ export function createAgentKnowledge(input: {
 					? `${item.airPerActionLiters} L/${item.actionLabel}`
 					: item.demandExplanation;
 			const description = `${item.label}; ${pressure} bar; ${demand}.`;
-			return { id: `tool:${item.id}:fr`, type: 'Outil', locale: 'fr', title: item.label, description, url: `https://compatair.fr/outils-pneumatiques/${item.slug}/`, keywords: `${item.brand} ${item.model} ${item.mpn ?? ''} ${item.ean ?? ''} ${item.category}`, observed_at: input.observedAt, source_urls: unique(item.evidence.map((evidence) => evidence.sourceUrl)), content_sha256: hash(description), translation: { status: 'source' } };
+			return { id: `tool:${item.id}:fr`, type: 'Outil', locale: 'fr', title: item.label, description, url: `https://compatair.fr/outils-pneumatiques/${item.slug}/`, keywords: `${item.brand} ${item.model} ${item.mpn ?? ''} ${item.ean ?? ''} ${item.gtin ?? ''} ${item.distributorSkus.map((identifier) => identifier.sku).join(' ')} ${item.category}`, observed_at: input.observedAt, source_urls: unique(item.evidence.map((evidence) => evidence.sourceUrl)), content_sha256: hash(description), translation: { status: 'source' } };
 		}),
 	];
 	const glossary: AgentKnowledgeItem[] = input.glossary.map((item) => ({

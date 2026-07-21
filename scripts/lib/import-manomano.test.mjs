@@ -54,6 +54,14 @@ describe('import du flux ManoMano Awin', () => {
 		expect(result.offers[0]).toMatchObject({ productId: 'compressor-a', merchantProductId: 'MM-ALIAS' });
 	});
 
+	it('apparie le product_id uniquement à un SKU ManoMano déjà sourcé dans le catalogue', () => {
+		const catalogWithSku = { compressors: [{ id: 'compressor-a', distributorSkus: [{ distributorId: 'manomano-fr', sku: 'MM-EXACT-42' }] }], tools: [] };
+		const csv = 'product_id,product_name,price,deep_link,image_url\nMM-EXACT-42,Compresseur,149.90,https://www.awin1.com/pclick.php?p=42&m=17547,https://cdn.example.test/mm.webp';
+		const result = importManoManoFeed({ bytes: Buffer.from(csv), fileName: 'manomano.csv', catalog: catalogWithSku, collectedAt: '2026-07-14T09:00:00.000Z' });
+		expect(result.offers[0]).toMatchObject({ productId: 'compressor-a', merchantProductId: 'MM-EXACT-42', identifiers: { distributorSku: 'MM-EXACT-42' } });
+		expect(result.report.matches[0].matchedBy).toEqual(['distributor_sku']);
+	});
+
 	it('refuse une date de collecte future au-delà de la tolérance d’horloge', () => {
 		const csv = 'product_id,product_name,price,deep_link,image_url,mpn\nMM-1,Compresseur,149.90,https://www.awin1.com/pclick.php?p=42&m=17547,https://cdn.example.test/mm.webp,4010393';
 		const now = Date.parse('2026-07-15T09:00:00.000Z');

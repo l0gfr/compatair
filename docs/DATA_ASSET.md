@@ -10,11 +10,12 @@ Le catalogue technique est physiquement découpé en un fichier par référence 
 
 - EAN et GTIN réduits à leur forme numérique canonique ;
 - MPN normalisés pour l’appariement exact sans séparateur ni différence de casse ;
+- SKU distributeur normalisés sans supprimer leur ponctuation signifiante, toujours rattachés à un distributeur et à une preuve ;
 - alias acceptés uniquement avec un identifiant de preuve ;
 - familles de variantes explicites lorsqu’elles sont documentées ;
 - index de sources et rattachement des champs critiques à leurs preuves.
 
-Le validateur bloque les identifiants dupliqués, les références vers une preuve inconnue et les caractéristiques critiques sans provenance.
+Le validateur bloque les identifiants dupliqués, les références vers une preuve inconnue et les caractéristiques critiques sans provenance. La vue `quality.field_coverage` mesure séparément, pour chaque champ et son propre dénominateur, la présence, le rattachement explicite à une preuve, la source primaire et la corroboration indépendante. Une source marchande reste secondaire ; elle n’est pas requalifiée en corroboration indépendante.
 
 L’ajout d’une référence passe par les commandes reproductibles suivantes :
 
@@ -34,7 +35,9 @@ Le baromètre annuel est calculé uniquement depuis les compresseurs et preuves 
 
 ## Verdicts versionnés
 
-`/data/verdicts.json` contient toutes les paires entre un compresseur et un outil à débit fixe, y compris `insufficient_data`. Le snapshot lie :
+Le catalogue contient actuellement 120 compresseurs et 120 outils, soit 14 400 combinaisons explorables. Ce nombre ne décrit pas 14 400 verdicts pré-calculés. `/data/verdicts.json` contient les 13 080 paires entre les 120 compresseurs et les 109 outils à débit fixe, y compris `insufficient_data`. Les 11 autres outils représentent 1 320 combinaisons paramétriques qui exigent une cadence ou un volume et un temps cible avant calcul.
+
+Le snapshot fixe publie 4 673 verdicts « compatible en continu », 7 803 « incompatible » et 604 « données insuffisantes », soit 95,4 % de paires conclusives. La part d’incompatibilités décrit la valeur de filtrage d’un catalogue inter-marques large ; elle ne constitue pas une mesure de performance du moteur. Le snapshot lie :
 
 - la version du catalogue ;
 - la version du moteur ;
@@ -42,6 +45,18 @@ Le baromètre annuel est calculé uniquement depuis les compresseurs et preuves 
 - un `verdictVersion` SHA-256 reproductible.
 
 Le workflow quotidien compare ce snapshot à la production et conserve le rapport pendant 30 jours.
+
+## Rôle des sources et fraîcheur
+
+Chaque preuve publiée porte un rôle calculé et explicite dans les distributions machine :
+
+- `primary` pour une fiche ou une notice émise par l’entité responsable du produit ;
+- `independent_corroboration` pour une mesure documentée distincte du fabricant et du vendeur ;
+- `secondary` pour une source marchande ou une autre reprise, qui ne vaut pas corroboration indépendante.
+
+Le rôle ne remplace pas le grade A à D : l’origine et la capacité de la source à soutenir le champ restent deux dimensions séparées.
+
+`/data/freshness.json` publie le SLA de fraîcheur par type de donnée. Il compare la date observée à la date du build, donne l’âge, l’âge maximal, le déclencheur de mise à jour, le comportement en cas de dépassement et le statut `current`, `stale` ou `unavailable`. La variable CI `COMPAT_AIR_PUBLICATION_DATE` peut figer la date d’évaluation au format `YYYY-MM-DD`. Les limites sont de 90 jours pour le catalogue technique, les identifiants marchands, les preuves, les verdicts fixes, les benchmarks et le flux d’impact ; 365 jours pour les connaissances éditoriales ; 48 heures pour les offres. Ce SLA porte sur la revue ou le retrait de la donnée, pas sur la disponibilité de l’API.
 
 ## AirGraph et contrat MCP
 

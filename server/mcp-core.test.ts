@@ -115,6 +115,11 @@ describe('MCP core', () => {
 		const response: any = core.handle({ jsonrpc: '2.0', id: 16, method: 'tools/call', params: { name: 'identify_product', arguments: { reference: 'ca:tool:einhell-tc-pe-150' } } });
 		expect(response.result.structuredContent.matches).toContainEqual(expect.objectContaining({ id: 'einhell-tc-pe-150', match_confidence: 'exact' }));
 	});
+	it('identifies an evidenced distributor SKU exactly', () => {
+		const product = compressors.find((item) => item.distributorSkus.length)!;
+		const response: any = core.handle({ jsonrpc: '2.0', id: 17, method: 'tools/call', params: { name: 'identify_product', arguments: { reference: product.distributorSkus[0].sku } } });
+		expect(response.result.structuredContent.matches).toContainEqual(expect.objectContaining({ id: product.id, match_confidence: 'exact', distributor_skus: expect.arrayContaining([expect.objectContaining({ sku: product.distributorSkus[0].sku })]) }));
+	});
 	it('builds only documented AirGraph nodes and keeps missing network components explicit', () => {
 		const response: any = core.handle({ jsonrpc: '2.0', id: 13, method: 'tools/call', params: { name: 'build_complete_air_system', arguments: { toolIds: ['einhell-tc-pe-150'], mode: 'successive', limit: 2 } } });
 		expect(response.result.structuredContent.configuration_id).toMatch(/^ca:configuration:[a-f0-9]{24}$/);

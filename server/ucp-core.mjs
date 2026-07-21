@@ -251,7 +251,7 @@ export function createUcpError(code) {
 		profile_unreachable: 'The platform profile could not be fetched safely.',
 		version_unsupported: `Only UCP ${UCP_PROTOCOL_VERSION} is supported.`,
 		capabilities_incompatible: `The platform profile does not advertise ${UCP_CAPABILITY_NAME} ${UCP_CAPABILITY_VERSION}.`,
-		product_unresolved: 'A product locator was unknown or ambiguous. Supply one exact CompatAir ID, EAN, MPN, reference or merchant URL.',
+		product_unresolved: 'A product locator was unknown or ambiguous. Supply one exact CompatAir ID, EAN/GTIN, MPN, evidenced distributor SKU, reference or merchant URL.',
 		body_too_large: 'The UCP request body exceeds the 64 KiB limit.',
 		content_type_unsupported: 'The UCP request must use application/json.',
 		rate_limited: 'The per-address UCP request limit has been exceeded. Retry after 60 seconds.',

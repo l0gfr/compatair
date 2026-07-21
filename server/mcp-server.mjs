@@ -17,6 +17,23 @@ const MAX_RATE_ENTRIES = 10_000;
 const MAXIMUM_OFFER_AGE_MS = 48 * 60 * 60 * 1_000;
 const MAXIMUM_OFFER_CLOCK_SKEW_MS = 5 * 60 * 1_000;
 
+function normalizeMpn(value) { return String(value ?? '').normalize('NFKC').toUpperCase().replace(/[^A-Z0-9]/g, ''); }
+function normalizeDistributorSku(value) { return String(value ?? '').normalize('NFKC').trim().toUpperCase().replace(/\s+/g, ' '); }
+function sourceRole(source) {
+	if (['primary', 'independent_corroboration', 'secondary'].includes(source?.sourceRole)) return source.sourceRole;
+	if (source?.sourceType === 'manufacturer' || source?.sourceType === 'manual') return 'primary';
+	if (source?.sourceType === 'measured') return 'independent_corroboration';
+	return 'secondary';
+}
+function productIdentifiers(product, normalized) {
+	return {
+		...(product.mpn ? { mpn: product.mpn, normalized_mpn: normalized?.identity?.normalizedMpn ?? normalizeMpn(product.mpn) } : {}),
+		...(product.ean ? { ean: product.ean } : {}),
+		...(product.gtin ? { gtin: product.gtin } : {}),
+		distributor_skus: (product.distributorSkus ?? []).map((identifier) => ({ distributor_id: identifier.distributorId, sku: identifier.sku, normalized_sku: normalizeDistributorSku(identifier.sku) })),
+	};
+}
+
 function json(response, status, value, headers = {}, options = {}) {
 	const payload = JSON.stringify(value);
 	const securityHeaders = options.omitContentTypeOptions ? {} : { 'X-Content-Type-Options': 'nosniff' };
@@ -173,6 +190,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item]));
 	const compressorBySlug = new Map((catalog.compressors ?? []).map((item) => [item.slug, item]));
 	const toolBySlug = new Map((catalog.tools ?? []).map((item) => [item.slug, item]));
+	const normalizedProductMap = new Map((catalog.normalized?.products ?? []).map((item) => [item.id, item]));
 	const verdictMap = new Map((verdictSnapshot.pairs ?? []).map((item) => [`${item.compressorId}--${item.toolId}`, item]));
 	const allow = createRateLimiter();
 	const counters = { rpc: 0, errors: 0 };
@@ -280,7 +298,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			const evaluation = snapshotPair ?? { verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data' };
 			const detailsUrl = `https://compatair.fr/calculateur/?outil=${encodeURIComponent(tool.id)}&compresseur=${encodeURIComponent(compressor.id)}`;
 			const proofUrl = `https://compatair.fr/graphe-preuve/?compresseur=${encodeURIComponent(compressor.id)}&outil=${encodeURIComponent(tool.id)}`;
-			const sources = [...(compressor.evidence ?? []), ...(tool.evidence ?? [])].map((source) => ({ id: source.id, label: source.sourceLabel, url: source.sourceUrl, retrievedAt: source.retrievedAt, confidence: source.confidence }));
+			const sources = [...(compressor.evidence ?? []), ...(tool.evidence ?? [])].map((source) => ({ id: source.id, label: source.sourceLabel, url: source.sourceUrl, sourceType: source.sourceType, sourceRole: sourceRole(source), retrievedAt: source.retrievedAt, confidence: source.confidence }));
 			const limitations = Array.isArray(evaluation.warnings) ? evaluation.warnings : [];
 			const decision = callPublicTool('check_compatibility', { compressorId, toolId })?.structuredContent;
 			if (!decision || decision.error) return apiJson(503, { error: 'compatibility_decision_unavailable' }, { ...corsHeaders, 'Retry-After': '60' });
@@ -293,8 +311,8 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 				limitations, next_actions: [proofUrl],
 				schemaVersion: '2.0.0', catalogVersion: catalog.catalogVersion, catalogVerifiedAt: catalog.verifiedAt, verdictVersion: verdictSnapshot.verdictVersion, calculationVersion: authoritativeCalculationVersion,
 				input: { compressorId, toolId },
-				compressor: { id: compressor.id, brand: compressor.brand, model: compressor.model, slug: compressor.slug },
-				tool: { id: tool.id, brand: tool.brand, model: tool.model, label: tool.label, slug: tool.slug },
+				compressor: { id: compressor.id, brand: compressor.brand, model: compressor.model, slug: compressor.slug, identifiers: productIdentifiers(compressor, normalizedProductMap.get(compressor.id)) },
+				tool: { id: tool.id, brand: tool.brand, model: tool.model, label: tool.label, slug: tool.slug, identifiers: productIdentifiers(tool, normalizedProductMap.get(tool.id)) },
 				compatibility: decision.compatibility,
 				overall_system_verdict: decision.overall_system_verdict,
 				air_supply_verdict: decision.air_supply_verdict,

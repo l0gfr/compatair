@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TechnicalSurfaceNav from '../components/TechnicalSurfaceNav.astro';
+import { compressors, tools } from '../data/catalog';
+import { createCatalogScope } from '../domain/data-governance';
 import {
 	agentsJavaScript,
 	agentsPython,
@@ -23,6 +25,9 @@ import {
 	resultEnvelope,
 } from '../data/mcp-documentation';
 import '../styles/mcp-reference.css';
+
+const catalogScope = createCatalogScope(compressors, tools);
+const formatNumber = (value: number) => value.toLocaleString('fr-FR');
 
 const alternates = [
 	{ hreflang: 'fr-FR', path: '/mcp-documentation/' },
@@ -56,6 +61,7 @@ const alternates = [
 				<div><dt>Transport</dt><dd>Streamable HTTP · JSON-RPC 2.0</dd></div>
 				<div><dt>Surface principale</dt><dd>7 tools decision-core · 12,8 Ko mesurés</dd></div>
 				<div><dt>Contrats</dt><dd>MCP 3.0.0 · verdicts 2.0.0 · méthode 2026.07</dd></div>
+				<div><dt>Périmètre</dt><dd>{formatNumber(catalogScope.explorable_combination_count)} explorables · {formatNumber(catalogScope.fixed_verdict_count)} verdicts fixes</dd></div>
 				<div><dt>Authentification</dt><dd>Aucune · données publiques · lecture seule</dd></div>
 				<div><dt>État</dt><dd><a href={mcpHealthEndpoint}>Versions exposées par le service</a></dd></div>
 			</dl>
@@ -91,6 +97,7 @@ const alternates = [
 				<p class="eyebrow">Le différenciateur vérifiable</p>
 				<h2>Un service de décision technique, pas une surcouche conversationnelle</h2>
 				<p class="mcp-section-intro">CompatAir ne demande jamais au modèle de deviner si deux produits fonctionnent ensemble. Le serveur expose les entrées, la méthode, le verdict, les limites, les sources et la page web correspondante dans une réponse structurée.</p>
+				<p><strong>{formatNumber(catalogScope.explorable_combination_count)} combinaisons sont explorables, pas pré-calculées.</strong> Le snapshot contient {formatNumber(catalogScope.fixed_verdict_count)} verdicts audités pour les {catalogScope.fixed_flow_tool_count} outils à débit fixe. Les {formatNumber(catalogScope.parametric_combination_count)} combinaisons restantes exigent une cadence ou un volume et un temps cible. Le catalogue machine publie aussi les MPN normalisés, EAN/GTIN, SKU distributeur sourcés, la couverture champ par champ, le rôle des sources et le SLA de fraîcheur.</p>
 				<div class="mcp-stat-grid">
 					<div><strong>Déterministe</strong><span>Une même paire et un même snapshot produisent le même verdict.</span></div>
 					<div><strong>Sourcé</strong><span>Les caractéristiques critiques conservent leurs documents et dates d’observation.</span></div>
@@ -205,7 +212,7 @@ const alternates = [
 						<tbody>
 							<tr><td><code>orient_decision</code></td><td>Retourne le plus petit tool et le profil adaptés lorsque la prochaine action n’est pas évidente.</td></tr>
 							<tr><td><code>evaluate_air_compatibility</code></td><td>Expose la capability UCP <code>fr.compatair.air.compatibility</code> pour répondre à une intention métier et enrichir une transaction sans toucher au checkout.</td></tr>
-							<tr><td><code>identify_product</code></td><td>Retrouve un produit par nom, URL, EAN/GTIN, MPN, référence ou CompatAir ID sans télécharger l’URL fournie.</td></tr>
+							<tr><td><code>identify_product</code></td><td>Retrouve un produit par nom, URL, EAN/GTIN, MPN, SKU distributeur sourcé, référence ou CompatAir ID sans télécharger l’URL fournie.</td></tr>
 							<tr><td><code>build_complete_air_system</code></td><td>Assemble compresseur, outils, flexible, raccords, filtration et lubrification uniquement depuis les exigences documentées.</td></tr>
 							<tr><td><code>explain_compatibility_verdict</code></td><td>Décompose pression, débit, cycle d’utilisation et données manquantes.</td></tr>
 							<tr><td><code>find_compatible_alternatives</code></td><td>Propose la plus petite substitution de compresseur vérifiée, sans ordre influencé par une commission.</td></tr>

@@ -11,6 +11,8 @@ import { activeOffers, merchants } from './offers';
 import { toolTaxonomy } from './taxonomy';
 import { agentFidelityBenchmark, agentFidelityLeaderboard } from './agent-fidelity';
 import { compatibilityImpactFeed } from './compatibility-impact';
+import { evaluateFreshness, freshnessPolicy } from '../domain/data-governance';
+import { sourceRoleForEvidence } from '../domain/catalog-normalization';
 
 function sha256(value: string) {
 	return createHash('sha256').update(value).digest('hex');
@@ -69,13 +71,15 @@ function createDcatCatalog(input: { integrity: Array<{ path: string; sha256: str
 }
 
 export async function buildMachinePublication() {
+	const evaluatedAt = process.env.COMPAT_AIR_PUBLICATION_DATE ?? new Date().toISOString().slice(0, 10);
+	if (!/^\d{4}-\d{2}-\d{2}$/.test(evaluatedAt)) throw new Error('COMPAT_AIR_PUBLICATION_DATE doit respecter YYYY-MM-DD.');
 	const guides = await getCollection('guides');
 	const knowledge = createAgentKnowledge({ guides, compressors, tools, glossary: glossaryTerms, observedAt: CATALOG_VERIFIED_AT, englishGuides: englishAgentGuides });
 	const knowledgeVersion = agentKnowledgeVersion(knowledge);
 	const catalog = createCatalogSnapshot({ compressors, tools, toolTaxonomy, verifiedAt: CATALOG_VERIFIED_AT });
 	const offerData = { schemaVersion: '1.1.0', offers: activeOffers, merchants: merchants.map(({ id, name }) => ({ id, name })) };
 	const offerVersion = sha256(json(offerData));
-	const offerObservedAt = latest(activeOffers.map((offer) => offer.collectedAt), CATALOG_VERIFIED_AT);
+	const offerObservedAt = latest(activeOffers.map((offer) => offer.collectedAt.slice(0, 10)), CATALOG_VERIFIED_AT);
 	const changefeed = createPublicChangefeed({
 		catalogVersion: catalog.catalogVersion, catalogObservedAt: CATALOG_VERIFIED_AT, evidenceVersion: evidenceHistory.historyVersion,
 		knowledgeVersion, offerVersion, offerObservedAt,
@@ -87,7 +91,7 @@ export async function buildMachinePublication() {
 	const citations = evidenceHistory.events.map((event) => ({
 		citation_id: `ca:citation:${event.fingerprint}`, compat_air_id: `ca:${event.productType}:${event.productId}`, evidence_id: event.evidenceId,
 		observed_at: event.occurredAt, kind: event.kind, source_label: event.snapshot.sourceLabel, source_url: event.snapshot.sourceUrl,
-		source_type: event.snapshot.sourceType, confidence: event.snapshot.confidence, content_sha256: event.fingerprint,
+		source_type: event.snapshot.sourceType, source_role: sourceRoleForEvidence(event.snapshot), confidence: event.snapshot.confidence, content_sha256: event.fingerprint,
 		canonical_url: event.productType === 'compressor'
 			? `https://compatair.fr/compresseurs/${compressors.find((item) => item.id === event.productId)?.slug ?? ''}/`
 			: `https://compatair.fr/outils-pneumatiques/${tools.find((item) => item.id === event.productId)?.slug ?? ''}/`,
@@ -108,17 +112,22 @@ export async function buildMachinePublication() {
 	]);
 	const distributionIntegrity = [...bytes].map(([path, content]) => ({ path, sha256: sha256(content), bytes: Buffer.byteLength(content) }));
 	const latestGuideAt = latest(guides.map((guide) => (guide.data.updatedDate ?? guide.data.pubDate).toISOString().slice(0, 10)), CATALOG_VERIFIED_AT);
-	const freshness = {
-		schemaVersion: '1.0.0', evaluated_at: CATALOG_VERIFIED_AT,
+	const freshnessData = {
+		schemaVersion: '2.0.0',
+		evaluated_at: evaluatedAt,
+		sla_scope: 'Âge maximal avant revue ou retrait explicite ; ce SLA de données ne constitue pas un SLA de disponibilité de l’API.',
 		datasets: [
-			{ id: 'catalog', path: '/data/catalog.json', observed_at: CATALOG_VERIFIED_AT, maximum_age_days: 90, status: 'current' },
-			{ id: 'evidence', path: '/data/evidence-history.json', observed_at: CATALOG_VERIFIED_AT, maximum_age_days: 90, status: 'current' },
-			{ id: 'knowledge', path: '/data/agent-knowledge.json', observed_at: latestGuideAt, maximum_age_days: 365, status: 'current' },
-			{ id: 'offers', path: '/data/offers.json', observed_at: offerObservedAt, maximum_age_hours: 48, status: activeOffers.length ? 'current' : 'unavailable' },
-			{ id: 'agent-fidelity-benchmark', path: '/data/agent-fidelity-benchmark.json', observed_at: CATALOG_VERIFIED_AT, maximum_age_days: 90, status: 'current' },
-			{ id: 'compatibility-impact-feed', path: '/data/compatibility-impact-feed.json', observed_at: CATALOG_VERIFIED_AT, maximum_age_days: 90, status: 'current' },
+			evaluateFreshness({ policy: freshnessPolicy('technical_catalog'), path: '/data/catalog.json', observedAt: CATALOG_VERIFIED_AT, evaluatedAt }),
+			evaluateFreshness({ policy: freshnessPolicy('merchant_identifiers'), path: '/data/catalog.json#normalized.products[].identity', observedAt: CATALOG_VERIFIED_AT, evaluatedAt }),
+			evaluateFreshness({ policy: freshnessPolicy('technical_evidence'), path: '/data/evidence-history.json', observedAt: CATALOG_VERIFIED_AT, evaluatedAt }),
+			evaluateFreshness({ policy: freshnessPolicy('fixed_verdicts'), path: '/data/verdicts.json', observedAt: CATALOG_VERIFIED_AT, evaluatedAt }),
+			evaluateFreshness({ policy: freshnessPolicy('editorial_knowledge'), path: '/data/agent-knowledge.json', observedAt: latestGuideAt, evaluatedAt }),
+			evaluateFreshness({ policy: freshnessPolicy('commercial_offers'), path: '/data/offers.json', observedAt: offerObservedAt, evaluatedAt, available: activeOffers.length > 0 }),
+			evaluateFreshness({ policy: freshnessPolicy('agent_benchmark'), path: '/data/agent-fidelity-benchmark.json', observedAt: CATALOG_VERIFIED_AT, evaluatedAt }),
+			evaluateFreshness({ policy: freshnessPolicy('compatibility_impact'), path: '/data/compatibility-impact-feed.json', observedAt: CATALOG_VERIFIED_AT, evaluatedAt }),
 		],
 	};
+	const freshness = { freshnessVersion: sha256(json(freshnessData)), ...freshnessData };
 	const manifest = {
 		schemaVersion: '1.0.0', knowledgeVersion, catalogVersion: catalog.catalogVersion, observed_at: CATALOG_VERIFIED_AT,
 		records: knowledge.length, languages: {

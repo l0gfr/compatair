@@ -244,20 +244,23 @@ if (generatedAffiliateRedirectPages.length > 0) errors.push(`affiliation: ${gene
 if (htmlArtifactBytes > maximumHtmlArtifactBytes) errors.push(`artifact: HTML ${Math.ceil(htmlArtifactBytes / 1024 / 1024)} Mo, budget ${maximumHtmlArtifactBytes / 1024 / 1024} Mo dépassé`);
 if (totalArtifactBytes > maximumTotalArtifactBytes) errors.push(`artifact: poids total ${Math.ceil(totalArtifactBytes / 1024 / 1024)} Mo, budget ${maximumTotalArtifactBytes / 1024 / 1024} Mo dépassé`);
 
-let verifiedCompatibilityPairs = 0;
+let explorableCompatibilityPairs = 0;
+let parametricCompatibilityPairs = 0;
 if (!artifactPaths.has('/data/catalog.json') || !artifactPaths.has('/data/verdicts.json')) errors.push('data: catalogue ou verdicts absents pour contrôler les URL de compatibilité');
 else {
 	const catalog = JSON.parse(await readFile(join(root, '/data/catalog.json'), 'utf8'));
 	publishedCatalogVersion = catalog.catalogVersion ?? '';
 	const verdicts = JSON.parse(await readFile(join(root, '/data/verdicts.json'), 'utf8'));
 	fixedFlowCompatibilityPairs = verdicts.pairs?.length ?? 0;
+	parametricCompatibilityPairs = catalog.scope?.parametric_combination_count ?? 0;
 	conclusiveCompatibilityPairs = (verdicts.pairs ?? []).filter((item) => item.verdict !== 'insufficient_data').length;
 	const verdictMap = new Map((verdicts.pairs ?? []).map((item) => [`${item.compressorId}--${item.toolId}`, item]));
 	for (const compressor of catalog.compressors ?? []) for (const tool of catalog.tools ?? []) {
 		const pair = verdictMap.get(`${compressor.id}--${tool.id}`);
 		if (tool.demandModel === 'fixed-flow' && !pair) errors.push(`verdicts: couple à débit fixe absent ${compressor.id}--${tool.id}`);
-		verifiedCompatibilityPairs += 1;
+		explorableCompatibilityPairs += 1;
 	}
+	if (catalog.scope?.explorable_combination_count !== explorableCompatibilityPairs || catalog.scope?.fixed_verdict_count !== fixedFlowCompatibilityPairs || fixedFlowCompatibilityPairs + parametricCompatibilityPairs !== explorableCompatibilityPairs) errors.push('data: partition explorables/verdicts fixes/paramétriques incohérente');
 }
 
 if (!artifactPaths.has('/data/runtime-catalog.json')) errors.push('data: catalogue d’exécution absent');
@@ -827,4 +830,4 @@ if (errors.length) {
 	process.exit(1);
 }
 const conclusiveCoverage = fixedFlowCompatibilityPairs ? (conclusiveCompatibilityPairs / fixedFlowCompatibilityPairs * 100).toFixed(1).replace('.', ',') : '0,0';
-console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, ${verifiedCompatibilityPairs} couples conservés dans le snapshot sans page HTML quadratique, couverture conclusive ${conclusiveCoverage} % (${conclusiveCompatibilityPairs}/${fixedFlowCompatibilityPairs} couples à débit fixe), ${socialImageCount} cartes sociales et titres ≤ ${maximumDocumentTitleLength} caractères. Artifact ${Math.ceil(totalArtifactBytes / 1024 / 1024)} Mo dont ${Math.ceil(htmlArtifactBytes / 1024 / 1024)} Mo de HTML, sous les budgets de ${maximumTotalArtifactBytes / 1024 / 1024} et ${maximumHtmlArtifactBytes / 1024 / 1024} Mo ; index de recherche ${Math.ceil(searchIndexBytesGzip / 1024)} Ko gzip. JavaScript initial ≤ ${maximumInitialPageScriptBytesGzip / 1024} Ko gzip (maximum ${Math.ceil(largestInitialPageScriptBudget.bytes / 1024)} Ko sur ${largestInitialPageScriptBudget.label}, Passeport ${Math.ceil(passportInitialScriptBudget.bytes / 1024)} Ko sous son budget de ${maximumPassportInitialScriptBytesGzip / 1024} Ko) ; total à la demande ≤ ${maximumOnDemandPageScriptBytesGzip / 1024} Ko (Calculateur ${Math.ceil(calculatorOnDemandScriptBudget.bytes / 1024)} Ko, Passeport ${Math.ceil(passportOnDemandScriptBudget.bytes / 1024)} Ko, maximum global ${Math.ceil(largestOnDemandPageScriptBudget.bytes / 1024)} Ko sur ${largestOnDemandPageScriptBudget.label}) ; catalogue d’exécution ${Math.ceil(runtimeCatalogBytesGzip / 1024)} Ko sous son budget de ${maximumRuntimeCatalogBytesGzip / 1024} Ko. Widget immuable et SRI vérifiés.`);
+console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, ${explorableCompatibilityPairs} combinaisons explorables dont ${fixedFlowCompatibilityPairs} verdicts fixes audités et ${parametricCompatibilityPairs} combinaisons paramétriques, sans page HTML quadratique ; couverture conclusive ${conclusiveCoverage} % (${conclusiveCompatibilityPairs}/${fixedFlowCompatibilityPairs} couples à débit fixe), ${socialImageCount} cartes sociales et titres ≤ ${maximumDocumentTitleLength} caractères. Artifact ${Math.ceil(totalArtifactBytes / 1024 / 1024)} Mo dont ${Math.ceil(htmlArtifactBytes / 1024 / 1024)} Mo de HTML, sous les budgets de ${maximumTotalArtifactBytes / 1024 / 1024} et ${maximumHtmlArtifactBytes / 1024 / 1024} Mo ; index de recherche ${Math.ceil(searchIndexBytesGzip / 1024)} Ko gzip. JavaScript initial ≤ ${maximumInitialPageScriptBytesGzip / 1024} Ko gzip (maximum ${Math.ceil(largestInitialPageScriptBudget.bytes / 1024)} Ko sur ${largestInitialPageScriptBudget.label}, Passeport ${Math.ceil(passportInitialScriptBudget.bytes / 1024)} Ko sous son budget de ${maximumPassportInitialScriptBytesGzip / 1024} Ko) ; total à la demande ≤ ${maximumOnDemandPageScriptBytesGzip / 1024} Ko (Calculateur ${Math.ceil(calculatorOnDemandScriptBudget.bytes / 1024)} Ko, Passeport ${Math.ceil(passportOnDemandScriptBudget.bytes / 1024)} Ko, maximum global ${Math.ceil(largestOnDemandPageScriptBudget.bytes / 1024)} Ko sur ${largestOnDemandPageScriptBudget.label}) ; catalogue d’exécution ${Math.ceil(runtimeCatalogBytesGzip / 1024)} Ko sous son budget de ${maximumRuntimeCatalogBytesGzip / 1024} Ko. Widget immuable et SRI vérifiés.`);

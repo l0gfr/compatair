@@ -57,10 +57,22 @@ function publicVerdict(verdict) {
 	return 'information';
 }
 function sourceUrls(products) { return unique(products.flatMap((product) => (product?.evidence ?? []).map((item) => item.sourceUrl))); }
+function sourceRole(evidence) {
+	if (['primary', 'independent_corroboration', 'secondary'].includes(evidence?.sourceRole)) return evidence.sourceRole;
+	if (evidence?.sourceType === 'manufacturer' || evidence?.sourceType === 'manual') return 'primary';
+	if (evidence?.sourceType === 'measured') return 'independent_corroboration';
+	return 'secondary';
+}
+function publicEvidence(evidence) { return { ...evidence, sourceRole: sourceRole(evidence) }; }
+function normalizedMpn(value) { return String(value ?? '').normalize('NFKC').toUpperCase().replace(/[^A-Z0-9]/g, ''); }
+function normalizedDistributorSku(value) { return String(value ?? '').normalize('NFKC').trim().toUpperCase().replace(/\s+/g, ' '); }
+function publicProduct(item) { return { ...item, evidence: (item.evidence ?? []).map(publicEvidence) }; }
 function productSummary(type, item) {
 	return {
 		compat_air_id: compatAirId(type, item.id), type, id: item.id, slug: item.slug, brand: item.brand, model: item.model,
-		...(item.label ? { label: item.label } : {}), ...(item.mpn ? { mpn: item.mpn } : {}), ...(item.ean ? { ean: item.ean } : {}),
+		...(item.label ? { label: item.label } : {}), ...(item.mpn ? { mpn: item.mpn, normalized_mpn: normalizedMpn(item.mpn) } : {}),
+		...(item.ean ? { ean: item.ean } : {}), ...(item.gtin ? { gtin: item.gtin } : {}),
+		distributor_skus: (item.distributorSkus ?? []).map((identifier) => ({ distributor_id: identifier.distributorId, sku: identifier.sku, normalized_sku: normalizedDistributorSku(identifier.sku) })),
 		canonical_url: productUrl(type, item),
 	};
 }
@@ -389,7 +401,7 @@ function identifyCandidates(catalog, args) {
 	}
 	const inputs = unique(rawInputs.map(normalizedText).filter(Boolean));
 	return products.map(({ type, item }) => {
-		const identifiers = [item.id, item.slug, item.ean, item.gtin, item.mpn, ...(item.identifierAliases ?? []).map((alias) => alias.value)].filter(Boolean);
+		const identifiers = [item.id, item.slug, item.ean, item.gtin, item.mpn, ...(item.distributorSkus ?? []).map((identifier) => identifier.sku), ...(item.identifierAliases ?? []).map((alias) => alias.value)].filter(Boolean);
 		const exact = inputs.some((input) => identifiers.some((identifier) => normalizedText(identifier) === input));
 		const label = normalizedText(`${item.brand} ${item.model} ${item.label ?? ''}`);
 		const candidate = !exact && inputs.some((input) => input.length >= 4 && input.split(' ').every((token) => label.includes(token)));
@@ -437,7 +449,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 		switch (name) {
 			case 'orient_decision': {
 				const routes = {
-					identify: ['core', 'identify_product', ['query, EAN/GTIN, MPN, reference or canonical URL']],
+					identify: ['core', 'identify_product', ['query, EAN/GTIN, MPN, evidenced distributor SKU, reference or canonical URL']],
 					evaluate: ['core', 'evaluate_air_compatibility', ['compressorId', 'toolIds', 'mode when more than one tool']],
 					find_solution: ['core', 'build_complete_air_system', ['toolIds', 'mode when more than one tool']],
 					knowledge: ['core', 'search_knowledge', ['query']],
@@ -518,21 +530,21 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 				const q = String(args.query ?? '').toLowerCase();
 				const values = catalog.tools.filter((item) => (!q || `${item.label} ${item.category} ${item.brand} ${item.model}`.toLowerCase().includes(q)) && (!args.category || item.category === args.category));
 				const found = page(values, args.cursor, args.limit);
-				return result({ canonical_url: `${PUBLIC_ORIGIN}/outils-pneumatiques/`, product_urls: found.items.map((item) => productUrl('tool', item)), source_urls: sourceUrls(found.items), tools: found.items.map((item) => ({ ...item, compat_air_id: compatAirId('tool', item.id), canonical_url: productUrl('tool', item) })), ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog);
+				return result({ canonical_url: `${PUBLIC_ORIGIN}/outils-pneumatiques/`, product_urls: found.items.map((item) => productUrl('tool', item)), source_urls: sourceUrls(found.items), tools: found.items.map((item) => ({ ...publicProduct(item), compat_air_id: compatAirId('tool', item.id), canonical_url: productUrl('tool', item) })), ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog);
 			}
 			case 'get_tool_requirements': {
 				const item = toolMap.get(args.id);
-				return item ? result({ canonical_url: productUrl('tool', item), product_urls: [productUrl('tool', item)], source_urls: sourceUrls([item]), tool: { ...item, compat_air_id: compatAirId('tool', item.id), canonical_url: productUrl('tool', item) } }, catalog) : failure('Outil inconnu.', catalog, { canonical_url: `${PUBLIC_ORIGIN}/scanner/`, next_actions: ['Vérifier la référence avec identify_product.'] });
+				return item ? result({ canonical_url: productUrl('tool', item), product_urls: [productUrl('tool', item)], source_urls: sourceUrls([item]), tool: { ...publicProduct(item), compat_air_id: compatAirId('tool', item.id), canonical_url: productUrl('tool', item) } }, catalog) : failure('Outil inconnu.', catalog, { canonical_url: `${PUBLIC_ORIGIN}/scanner/`, next_actions: ['Vérifier la référence avec identify_product.'] });
 			}
 			case 'search_compressors': {
 				const q = String(args.query ?? '').toLowerCase();
 				const values = catalog.compressors.filter((item) => (!q || `${item.brand} ${item.model} ${item.mpn ?? ''}`.toLowerCase().includes(q)) && (!args.minTankLiters || item.tankLiters >= args.minTankLiters) && (!args.minPressureBar || item.maxPressureBar >= args.minPressureBar) && (!args.oilType || item.oilType === args.oilType));
 				const found = page(values, args.cursor, args.limit);
-				return result({ canonical_url: `${PUBLIC_ORIGIN}/compresseurs/`, product_urls: found.items.map((item) => productUrl('compressor', item)), source_urls: sourceUrls(found.items), compressors: found.items.map((item) => ({ ...item, compat_air_id: compatAirId('compressor', item.id), canonical_url: productUrl('compressor', item) })), ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog);
+				return result({ canonical_url: `${PUBLIC_ORIGIN}/compresseurs/`, product_urls: found.items.map((item) => productUrl('compressor', item)), source_urls: sourceUrls(found.items), compressors: found.items.map((item) => ({ ...publicProduct(item), compat_air_id: compatAirId('compressor', item.id), canonical_url: productUrl('compressor', item) })), ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog);
 			}
 			case 'get_compressor_specs': {
 				const item = compressorMap.get(args.id);
-				return item ? result({ canonical_url: productUrl('compressor', item), product_urls: [productUrl('compressor', item)], source_urls: sourceUrls([item]), compressor: { ...item, compat_air_id: compatAirId('compressor', item.id), canonical_url: productUrl('compressor', item) } }, catalog) : failure('Compresseur inconnu.', catalog, { canonical_url: `${PUBLIC_ORIGIN}/scanner/`, next_actions: ['Vérifier la référence avec identify_product.'] });
+				return item ? result({ canonical_url: productUrl('compressor', item), product_urls: [productUrl('compressor', item)], source_urls: sourceUrls([item]), compressor: { ...publicProduct(item), compat_air_id: compatAirId('compressor', item.id), canonical_url: productUrl('compressor', item) } }, catalog) : failure('Compresseur inconnu.', catalog, { canonical_url: `${PUBLIC_ORIGIN}/scanner/`, next_actions: ['Vérifier la référence avec identify_product.'] });
 			}
 			case 'size_compressor': {
 				const mode = args.mode === 'simultaneous' ? 'simultaneous' : 'successive';
@@ -585,7 +597,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 			}
 			case 'compare_compressors': {
 				const values = args.ids.map((id) => compressorMap.get(id));
-				return values.some((item) => !item) ? failure('Un compresseur est inconnu.', catalog) : result({ canonical_url: `${PUBLIC_ORIGIN}/comparateur/`, product_urls: values.map((item) => productUrl('compressor', item)), source_urls: sourceUrls(values), compressors: values }, catalog);
+				return values.some((item) => !item) ? failure('Un compresseur est inconnu.', catalog) : result({ canonical_url: `${PUBLIC_ORIGIN}/comparateur/`, product_urls: values.map((item) => productUrl('compressor', item)), source_urls: sourceUrls(values), compressors: values.map(publicProduct) }, catalog);
 			}
 			case 'find_accessories': {
 				const tool = toolMap.get(args.toolId);
@@ -607,7 +619,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 				const exact = found.filter((item) => item.confidence === 'exact');
 				const definitive = exact.length === 1;
 				const matches = found.map(({ type, item, confidence }) => ({ ...productSummary(type, item), match_confidence: confidence }));
-				return result({ verdict: found.length ? 'information' : 'insufficient_data', canonical_url: definitive ? productUrl(exact[0].type, exact[0].item) : `${PUBLIC_ORIGIN}/scanner/`, product_urls: found.map(({ type, item }) => productUrl(type, item)), source_urls: sourceUrls(found.map(({ item }) => item)), limitations: definitive ? [] : found.length ? ['Plusieurs candidats ou une correspondance textuelle non unique : aucune identité certaine n’est affirmée.'] : ['Aucun identifiant ou libellé du catalogue ne correspond. Aucune page distante n’a été téléchargée.'], next_actions: definitive ? [] : ['Fournir un EAN/GTIN, un MPN ou une référence constructeur exacte.'], matches }, catalog);
+				return result({ verdict: found.length ? 'information' : 'insufficient_data', canonical_url: definitive ? productUrl(exact[0].type, exact[0].item) : `${PUBLIC_ORIGIN}/scanner/`, product_urls: found.map(({ type, item }) => productUrl(type, item)), source_urls: sourceUrls(found.map(({ item }) => item)), limitations: definitive ? [] : found.length ? ['Plusieurs candidats ou une correspondance textuelle non unique : aucune identité certaine n’est affirmée.'] : ['Aucun identifiant ou libellé du catalogue ne correspond. Aucune page distante n’a été téléchargée.'], next_actions: definitive ? [] : ['Fournir un EAN/GTIN, un MPN, un SKU distributeur sourcé ou une référence constructeur exacte.'], matches }, catalog);
 			}
 			case 'build_complete_air_system': {
 				const tools = selectedProducts(args.toolIds);
@@ -665,7 +677,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 					limitations: airVerdict.limitations, next_actions: [proofUrl(compressor, tool)], compatibility: airVerdict,
 					overall_system_verdict: overallVerdict, air_supply_verdict: airVerdict,
 					compatibility_receipt: compatibilityReceipt(catalog, { configurationId, overallSystemVerdict: overallVerdict, airSupplyVerdict: airVerdict, canonicalUrl, sources }),
-					factors, evidence: { compressor: compressor.evidence, tool: tool.evidence, field_sources: { compressor: compressor.fieldSources ?? {}, tool: tool.fieldSources ?? {} } }, airgraph: airGraph(compressor, [tool], evaluation, configurationId),
+					factors, evidence: { compressor: compressor.evidence.map(publicEvidence), tool: tool.evidence.map(publicEvidence), field_sources: { compressor: compressor.fieldSources ?? {}, tool: tool.fieldSources ?? {} } }, airgraph: airGraph(compressor, [tool], evaluation, configurationId),
 				}, catalog);
 			}
 			case 'find_compatible_alternatives': {

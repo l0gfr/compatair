@@ -1,12 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import UiIcon from '../components/UiIcon.astro';
-import { compressors, tools } from '../data/catalog';
-import { evidenceHistory } from '../data/evidence-history';
-import { sourceDirectory } from '../data/source-directory';
+import { CATALOG_VERIFIED_AT, compressors, tools } from '../data/catalog';
+import { toolTaxonomy } from '../data/taxonomy';
+import { createCatalogSnapshot, createVerdictSnapshot } from '../domain/snapshots';
 
 const totalProducts = compressors.length + tools.length;
 const formatNumber = (value: number) => new Intl.NumberFormat('fr-FR').format(value);
+const catalogSnapshot = createCatalogSnapshot({ compressors, tools, toolTaxonomy, verifiedAt: CATALOG_VERIFIED_AT });
+const verdictSnapshot = createVerdictSnapshot({ compressors, tools, catalogVersion: catalogSnapshot.catalogVersion, verifiedAt: CATALOG_VERIFIED_AT });
+const scope = verdictSnapshot.scope;
+const identityCoverage = catalogSnapshot.quality.field_coverage.filter((row) => ['normalizedMpn', 'ean', 'gtin', 'distributorSku'].includes(row.field));
 ---
 
 <BaseLayout
@@ -46,7 +50,7 @@ const formatNumber = (value: number) => new Intl.NumberFormat('fr-FR').format(va
 						<g class="pro-map-grid"><path d="M20 95H600M20 190H600M20 285H600M20 380H600M120 25V445M240 25V445M360 25V445M480 25V445" /></g>
 						<g class="pro-map-links"><path d="M145 100C220 100 222 205 292 205" /><path d="M145 215C220 215 225 205 292 205" /><path d="M145 330C220 330 222 205 292 205" /><path d="M390 205C455 205 450 100 500 100" /><path d="M390 205C455 205 450 215 500 215" /><path d="M390 205C455 205 450 330 500 330" /></g>
 						<g class="pro-map-source"><rect x="34" y="65" width="112" height="70" rx="12" /><text x="50" y="90">01 / SOURCES</text><text class="pro-map-main" x="50" y="115">Documents</text></g>
-						<g class="pro-map-source"><rect x="34" y="180" width="112" height="70" rx="12" /><text x="50" y="205">02 / IDENTITÉ</text><text class="pro-map-main" x="50" y="230">MPN · EAN</text></g>
+						<g class="pro-map-source"><rect x="34" y="180" width="112" height="70" rx="12" /><text x="50" y="205">02 / IDENTITÉ</text><text class="pro-map-main" x="50" y="230">MPN · GTIN · SKU</text></g>
 						<g class="pro-map-source"><rect x="34" y="295" width="112" height="70" rx="12" /><text x="50" y="320">03 / MESURES</text><text class="pro-map-main" x="50" y="345">Débit · bar</text></g>
 						<g class="pro-map-core" filter="url(#pro-map-glow)"><circle cx="340" cy="205" r="74" /><circle cx="340" cy="205" r="51" /><text x="340" y="188" text-anchor="middle">COMPATAIR</text><text class="pro-map-core-main" x="340" y="216" text-anchor="middle">Catalogue</text><text class="pro-map-core-main" x="340" y="238" text-anchor="middle">vérifiable</text></g>
 						<g class="pro-map-output"><rect x="500" y="65" width="88" height="70" rx="12" /><text x="544" y="91" text-anchor="middle">FICHE</text><text class="pro-map-main" x="544" y="116" text-anchor="middle">Produit</text></g>
@@ -55,7 +59,7 @@ const formatNumber = (value: number) => new Intl.NumberFormat('fr-FR').format(va
 						<g class="pro-map-status"><circle cx="53" cy="414" r="5" /><text x="68" y="419">Source, règle et limite restent visibles</text></g>
 					</svg>
 					<div class="pro-system-mobile" role="img" aria-label="Les documents, identifiants et mesures alimentent un catalogue CompatAir vérifiable, puis les fiches produit, les API et le conseil client.">
-						<div><span>Documents</span><span>MPN · EAN</span><span>Débit · bar</span></div>
+						<div><span>Documents</span><span>MPN · GTIN · SKU</span><span>Débit · bar</span></div>
 						<b>Structurer et relier <i aria-hidden="true">↓</i></b>
 						<strong><small>COMPATAIR</small> Catalogue vérifiable</strong>
 						<b>Calculer sans inventer <i aria-hidden="true">↓</i></b>
@@ -68,9 +72,22 @@ const formatNumber = (value: number) => new Intl.NumberFormat('fr-FR').format(va
 		<section class="pro-metrics" aria-label="État du corpus CompatAir">
 			<div class="container">
 				<div><strong>{formatNumber(totalProducts)}</strong><span>références documentées</span></div>
-				<div><strong>{formatNumber(sourceDirectory.length)}</strong><span>documents distincts reliés</span></div>
-				<div><strong>{formatNumber(evidenceHistory.events.length)}</strong><span>vérifications conservées</span></div>
-				<div><strong>4</strong><span>verdicts explicites, dont «&nbsp;données insuffisantes&nbsp;»</span></div>
+				<div><strong>{formatNumber(scope.explorable_combination_count)}</strong><span>combinaisons explorables</span></div>
+				<div><strong>{formatNumber(scope.fixed_verdict_count)}</strong><span>verdicts fixes audités</span></div>
+				<div><strong>{formatNumber(scope.parametric_combination_count)}</strong><span>combinaisons paramétriques, calculées après saisie</span></div>
+			</div>
+		</section>
+
+		<section class="pro-section pro-data-proof" aria-labelledby="pro-data-proof-title">
+			<div class="container">
+				<header class="pro-section-head pro-section-head-split"><div><p class="pro-index">Périmètre public vérifiable</p><h2 id="pro-data-proof-title">{formatNumber(scope.explorable_combination_count)} possibilités, dont {formatNumber(scope.fixed_verdict_count)} verdicts fixes.</h2></div><p>Les {scope.parametric_tool_count} outils restants ne reçoivent pas un verdict pré-calculé&nbsp;: leurs {formatNumber(scope.parametric_combination_count)} combinaisons exigent une cadence ou un volume et un temps cible. Le snapshot fixe est conclusif à {verdictSnapshot.conclusive.percentage.toLocaleString('fr-FR')}&nbsp;%.</p></header>
+				<div class="pro-data-ledger">
+					<article><span>Compatible en continu</span><strong>{formatNumber(verdictSnapshot.summary.continuous)}</strong></article>
+					<article><span>Incompatible</span><strong>{formatNumber(verdictSnapshot.summary.incompatible)}</strong><small>Valeur de filtrage du corpus, pas mauvaise performance du moteur.</small></article>
+					<article><span>Données insuffisantes</span><strong>{formatNumber(verdictSnapshot.summary.insufficient_data)}</strong></article>
+				</div>
+				<div class="pro-identity-coverage"><header><div><p class="pro-index">Identifiants marchands</p><h3>Couverture réellement publiée</h3></div><p>Le MPN est normalisé pour l’appariement exact. EAN, GTIN et SKU distributeur ne sont ajoutés qu’avec leur preuve.</p></header><div>{identityCoverage.map((row) => <article><span>{row.label}</span><strong>{row.populated_count}/{row.eligible_count}</strong><small>{row.population_coverage_percent?.toLocaleString('fr-FR') ?? 'non mesuré'} % du corpus · {row.independently_corroborated_count} corroboré{row.independently_corroborated_count > 1 ? 's' : ''} indépendamment</small></article>)}</div></div>
+				<p class="pro-data-proof-links"><a href="/sources-fiabilite/#couverture">Couverture complète champ par champ</a><a href="/sources-fiabilite/#sla-fraicheur">SLA de fraîcheur par type de donnée</a><a href="/data/catalog.json">Snapshot catalogue JSON</a><a href="/data/verdicts.json">Snapshot de verdicts JSON</a></p>
 			</div>
 		</section>
 
@@ -103,7 +120,7 @@ const formatNumber = (value: number) => new Intl.NumberFormat('fr-FR').format(va
 					<article class="pro-audience-card manufacturer">
 						<header><span><UiIcon name="gauge" size={25} /></span><p>Pour les fabricants</p><strong>Rendre la performance publiée exploitable</strong></header>
 						<ul>
-							<li>Relier chaque variante à son identité exacte et à ses documents de référence.</li>
+							<li>Relier chaque variante à son identité exacte, à sa source primaire et, lorsqu’elle existe, à une corroboration indépendante.</li>
 							<li>Présenter les caractéristiques qui changent réellement le dimensionnement&nbsp;: débit restitué, pression, cycle de service et limites.</li>
 							<li>Repérer les champs absents, les contradictions entre documents et les mélanges possibles entre marchés ou versions.</li>
 							<li>Rendre une mise à jour traçable et identifier les décisions qui devront être recalculées.</li>
@@ -113,7 +130,7 @@ const formatNumber = (value: number) => new Intl.NumberFormat('fr-FR').format(va
 					<article class="pro-audience-card distributor">
 						<header><span><UiIcon name="database" size={25} /></span><p>Pour les distributeurs</p><strong>Passer de la fiche produit à l’orientation</strong></header>
 						<ul>
-							<li>Rattacher les offres à la référence technique exacte grâce aux identifiants fabricant et codes produit.</li>
+							<li>Rattacher les offres à la référence technique exacte grâce au MPN normalisé, à l’EAN/GTIN et au SKU distributeur sourcé.</li>
 							<li>Ajouter à la fiche un verdict compréhensible, sa raison et les données qui le soutiennent.</li>
 							<li>Distinguer clairement le prix et la disponibilité des caractéristiques qui déterminent la compatibilité.</li>
 							<li>Diffuser la même logique dans le site, les outils internes, l’API ou les parcours agentiques.</li>
@@ -274,6 +291,21 @@ const formatNumber = (value: number) => new Intl.NumberFormat('fr-FR').format(va
 	.pro-metrics .container > div:last-child { border-right: 1px solid rgba(255,255,255,.12); }
 	.pro-metrics strong { color: var(--accent); font: 520 clamp(2rem, 4vw, 3.2rem)/1 "Newsreader Variable", serif; }
 	.pro-metrics span { max-width: 13rem; color: #afc1b7; font-size: .72rem; line-height: 1.5; }
+	.pro-data-proof { border-bottom: 1px solid var(--pro-line); background: #eef2e9; }
+	.pro-data-ledger { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--pro-line); border-left: 1px solid var(--pro-line); background: #f9faf5; }
+	.pro-data-ledger article { display: grid; gap: .45rem; min-height: 10rem; align-content: center; padding: 1.4rem; border-right: 1px solid var(--pro-line); border-bottom: 1px solid var(--pro-line); }
+	.pro-data-ledger span, .pro-identity-coverage article span { color: var(--brand); font: 800 .62rem/1.3 ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+	.pro-data-ledger strong { font: 520 clamp(2.2rem, 4vw, 3.4rem)/1 "Newsreader Variable", serif; }
+	.pro-data-ledger small, .pro-identity-coverage small { color: var(--pro-muted); font-size: .68rem; line-height: 1.5; }
+	.pro-identity-coverage { margin-top: 2rem; padding: clamp(1.3rem, 3vw, 2rem); border: 1px solid var(--pro-line); background: #f9faf5; }
+	.pro-identity-coverage > header { display: flex; justify-content: space-between; gap: 2rem; align-items: end; }
+	.pro-identity-coverage h3 { margin: 0; font-size: clamp(1.6rem, 3vw, 2.4rem); }
+	.pro-identity-coverage > header > p { max-width: 540px; margin: 0; color: var(--pro-muted); line-height: 1.65; }
+	.pro-identity-coverage > div { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 1.4rem; border-top: 1px solid var(--pro-line); border-left: 1px solid var(--pro-line); }
+	.pro-identity-coverage article { display: grid; gap: .35rem; padding: 1rem; border-right: 1px solid var(--pro-line); border-bottom: 1px solid var(--pro-line); }
+	.pro-identity-coverage article strong { font-size: 1.3rem; }
+	.pro-data-proof-links { display: flex; flex-wrap: wrap; gap: .8rem 1.4rem; margin: 1.5rem 0 0; }
+	.pro-data-proof-links a { color: var(--brand-dark); font-size: .75rem; font-weight: 800; text-underline-offset: .25em; }
 
 	.pro-section { padding: clamp(5rem, 9vw, 8.5rem) 0; scroll-margin-top: 5.2rem; }
 	.pro-section-head { max-width: 910px; margin-bottom: clamp(2.5rem, 5vw, 4.5rem); }
@@ -411,6 +443,7 @@ const formatNumber = (value: number) => new Intl.NumberFormat('fr-FR').format(va
 		.pro-hero-grid, .pro-blueprint-grid, .pro-boundary-grid { grid-template-columns: 1fr; }
 		.pro-system-map { width: min(640px, 100%); }
 		.pro-metrics .container, .pro-friction-list, .pro-outcome-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+		.pro-identity-coverage > div { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 		.pro-metrics .container > div:nth-child(3) { border-top: 1px solid rgba(255,255,255,.12); }
 		.pro-metrics .container > div:nth-child(4) { border-top: 1px solid rgba(255,255,255,.12); border-right: 1px solid rgba(255,255,255,.12); }
 		.pro-intro-grid { grid-template-columns: 1fr; }
@@ -440,6 +473,9 @@ const formatNumber = (value: number) => new Intl.NumberFormat('fr-FR').format(va
 		.pro-metrics .container { grid-template-columns: 1fr 1fr; }
 		.pro-metrics .container > div { min-height: 8rem; padding: 1.2rem; }
 		.pro-metrics strong { font-size: 2.2rem; }
+		.pro-data-ledger { grid-template-columns: 1fr; }
+		.pro-identity-coverage > header { align-items: flex-start; flex-direction: column; }
+		.pro-identity-coverage > div { grid-template-columns: 1fr; }
 		.pro-section { padding-block: 4.5rem; }
 		.pro-section-head-split, .pro-audience-grid, .pro-demo-grid, .pro-final-cta { grid-template-columns: 1fr; }
 		.pro-section-head h2, .pro-intro-grid .pro-section-head h2 { font-size: clamp(2.15rem, 10vw, 3rem); }

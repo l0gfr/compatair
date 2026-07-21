@@ -247,8 +247,8 @@ describe('MCP HTTP boundary helpers', () => {
 	it('serves the versioned compatibility API with CORS and source evidence', async () => {
 		const catalog = {
 			catalogVersion: 'catalog-test', verifiedAt: '2026-07-14',
-			compressors: [{ id: 'compressor-a', slug: 'compressor-a', brand: 'A', model: 'A1', maxPressureBar: 10, fadCurve: [{ pressureBar: 6, litersPerMinute: 200 }], confidence: 'A', evidence: [{ id: 'source-c', sourceLabel: 'Source C', sourceUrl: 'https://example.com/c', retrievedAt: '2026-07-14', confidence: 'A' }] }],
-			tools: [{ id: 'tool-a', slug: 'tool-a', brand: 'B', model: 'B1', label: 'Outil B1', demandModel: 'fixed-flow', workingPressureBar: { typical: 6 }, airflowLpm: { typical: 100 }, confidence: 'A', evidence: [{ id: 'source-t', sourceLabel: 'Source T', sourceUrl: 'https://example.com/t', retrievedAt: '2026-07-14', confidence: 'A' }] }],
+			compressors: [{ id: 'compressor-a', slug: 'compressor-a', brand: 'A', model: 'A1', mpn: 'A-1', distributorSkus: [{ distributorId: 'merchant-a', sku: 'SKU 42', evidenceIds: ['source-c'] }], maxPressureBar: 10, fadCurve: [{ pressureBar: 6, litersPerMinute: 200 }], confidence: 'A', evidence: [{ id: 'source-c', sourceLabel: 'Source C', sourceUrl: 'https://example.com/c', sourceType: 'manufacturer', retrievedAt: '2026-07-14', confidence: 'A' }] }],
+			tools: [{ id: 'tool-a', slug: 'tool-a', brand: 'B', model: 'B1', label: 'Outil B1', gtin: '12345670', distributorSkus: [], demandModel: 'fixed-flow', workingPressureBar: { typical: 6 }, airflowLpm: { typical: 100 }, confidence: 'A', evidence: [{ id: 'source-t', sourceLabel: 'Source T', sourceUrl: 'https://example.com/t', sourceType: 'measured', retrievedAt: '2026-07-14', confidence: 'A' }] }],
 		} as any;
 		const verdictSnapshot = { verdictVersion: 'verdict-test', calculationVersion: '1.2.0', pairs: [{ id: 'compressor-a--tool-a', compressorId: 'compressor-a', toolId: 'tool-a', verdict: 'continuous', confidence: 'high', requiredFadLpm: 125, availableFadLpm: 200 }] };
 		const server = createCompatAirServer({ catalog, verdictSnapshot, allowedOrigins: new Set(['https://compatair.fr']) });
@@ -260,8 +260,8 @@ describe('MCP HTTP boundary helpers', () => {
 		});
 		expect(result.status).toBe(200);
 		expect(result.headers['Access-Control-Allow-Origin']).toBe('*');
-		expect(JSON.parse(result.body)).toMatchObject({ schemaVersion: '2.0.0', verdict_scope: 'air_supply', verdictVersion: 'verdict-test', calculationVersion: '1.2.0', compatibility: { schema_version: '2.0.0', scope: 'air_supply', verdict: 'compatible', engine_verdict: 'continuous' }, overall_system_verdict: { scope: 'complete_air_system', verdict: 'insufficient_data' }, detailsUrl: 'https://compatair.fr/calculateur/?outil=tool-a&compresseur=compressor-a', proofUrl: 'https://compatair.fr/graphe-preuve/?compresseur=compressor-a&outil=tool-a' });
-		expect(JSON.parse(result.body).sources).toHaveLength(2);
+		expect(JSON.parse(result.body)).toMatchObject({ schemaVersion: '2.0.0', verdict_scope: 'air_supply', verdictVersion: 'verdict-test', calculationVersion: '1.2.0', compressor: { identifiers: { mpn: 'A-1', normalized_mpn: 'A1', distributor_skus: [{ distributor_id: 'merchant-a', sku: 'SKU 42', normalized_sku: 'SKU 42' }] } }, tool: { identifiers: { gtin: '12345670', distributor_skus: [] } }, compatibility: { schema_version: '2.0.0', scope: 'air_supply', verdict: 'compatible', engine_verdict: 'continuous' }, overall_system_verdict: { scope: 'complete_air_system', verdict: 'insufficient_data' }, detailsUrl: 'https://compatair.fr/calculateur/?outil=tool-a&compresseur=compressor-a', proofUrl: 'https://compatair.fr/graphe-preuve/?compresseur=compressor-a&outil=tool-a' });
+		expect(JSON.parse(result.body).sources).toEqual(expect.arrayContaining([expect.objectContaining({ id: 'source-c', sourceRole: 'primary' }), expect.objectContaining({ id: 'source-t', sourceRole: 'independent_corroboration' })]));
 	});
 
 	it('attributes only the closed official widget hint to the widget channel', async () => {

@@ -10,6 +10,12 @@ describe('product identification', () => {
 		expect(identifyProducts('TC-AC 240', compressors, tools)).toEqual([]);
 	});
 
+	it('matches a distributor SKU only when it is explicitly attached to a catalog product', () => {
+		const tool = { ...tools[0], distributorSkus: [{ distributorId: 'merchant-test', sku: 'SKU 12-AB', evidenceIds: [tools[0].evidence[0].id] }] };
+		expect(identifyProducts(' sku 12-ab ', [], [tool])).toEqual([expect.objectContaining({ matchedBy: 'distributor_sku', product: expect.objectContaining({ id: tool.id }) })]);
+		expect(identifyProducts('SKU 12-AC', [], [tool])).toEqual([]);
+	});
+
 	it('keeps incompatible and insufficient-data tools separate', () => {
 		const compressor = compressors.find((item) => item.id === 'einhell-tc-ac-240-50-10-of')!;
 		const result = compressorCapabilities(compressor, compressors, tools);

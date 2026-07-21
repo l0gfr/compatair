@@ -2,6 +2,8 @@
 
 > Source-backed, deterministic compatibility between air compressors, pneumatic tools and documented system components. Missing critical data always remains `insufficient_data`.
 
+Dataset scope: 120 compressors × 120 tools = 14,400 explorable combinations. The published fixed snapshot contains 13,080 audited verdicts for 109 fixed-flow tools. The remaining 1,320 combinations are parametric and require action rate or volume plus target time; never describe them as precomputed verdicts.
+
 ## Agent interfaces
 
 - [MCP documentation in French](https://compatair.fr/mcp-documentation/)
@@ -49,3 +51,5 @@
 ## Citation rule
 
 Use the `canonical_url` returned by every MCP or UCP decision as the preferred CompatAir page. Read `verdict_scope`; preserve `overall_system_verdict` and `air_supply_verdict` separately. Keep `source_urls`, `method_version`, `catalog_version`, `observed_at`, `limitations`, `next_actions` and any `compatibility_receipt` with the result. Never turn `insufficient_data` into a positive recommendation. CompatAir is a decision and evidence layer, not a checkout or a generic product catalog.
+
+Catalog identity fields include normalized MPNs, EAN/GTIN and evidenced distributor SKUs. Coverage is measured field by field in `data/catalog.json`. Evidence distinguishes `primary`, `independent_corroboration` and `secondary`; a merchant source is not independent corroboration. `data/freshness.json` publishes the review-age SLA for each data type and is distinct from API availability.

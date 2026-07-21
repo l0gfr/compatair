@@ -4,7 +4,7 @@ const [file = 'dist/data/catalog.json'] = process.argv.slice(2);
 const snapshot = JSON.parse(await readFile(file, 'utf8'));
 const errors = [];
 if (!/^\d+\.\d+\.\d+$/.test(snapshot.schemaVersion ?? '')) errors.push('schemaVersion invalide');
-if (!/^[a-f0-9]{64}$/.test(snapshot.catalogVersion ?? snapshot.snapshotVersion ?? snapshot.historyVersion ?? snapshot.barometerVersion ?? snapshot.observatoryVersion ?? snapshot.radarVersion ?? '')) errors.push('version de snapshot absente');
+if (!/^[a-f0-9]{64}$/.test(snapshot.catalogVersion ?? snapshot.snapshotVersion ?? snapshot.historyVersion ?? snapshot.barometerVersion ?? snapshot.observatoryVersion ?? snapshot.radarVersion ?? snapshot.freshnessVersion ?? '')) errors.push('version de snapshot absente');
 if (snapshot.compressors) {
 	const ids = new Set();
 	for (const item of snapshot.compressors) {
@@ -20,6 +20,21 @@ if (snapshot.tools) {
 		if (item.demandModel === 'fixed-flow' && (item.airflowLpm?.typical <= 0 || item.workingPressureBar?.typical <= 0)) errors.push(`profil à débit fixe impossible : ${item.id}`);
 		if (item.demandModel === 'per-action' && (item.airPerActionLiters <= 0 || item.workingPressureBar?.typical <= 0)) errors.push(`profil par action impossible : ${item.id}`);
 		if (item.demandModel === 'variable-volume' && (!item.demandExplanation || item.workingPressureBar?.max <= 0)) errors.push(`profil à volume variable impossible : ${item.id}`);
+	}
+}
+if (snapshot.scope?.explorable_combination_count !== undefined) {
+	const scope = snapshot.scope;
+	if (scope.explorable_combination_count !== scope.compressor_count * scope.tool_count) errors.push('périmètre explorable incohérent');
+	if (scope.fixed_verdict_count !== scope.compressor_count * scope.fixed_flow_tool_count) errors.push('périmètre fixe incohérent');
+	if (scope.parametric_combination_count !== scope.compressor_count * scope.parametric_tool_count) errors.push('périmètre paramétrique incohérent');
+	if (scope.fixed_verdict_count + scope.parametric_combination_count !== scope.explorable_combination_count) errors.push('partition fixe/paramétrique incohérente');
+}
+if (snapshot.quality?.field_coverage) {
+	for (const row of snapshot.quality.field_coverage) {
+		if (row.populated_count > row.eligible_count) errors.push(`couverture de population incohérente : ${row.field}`);
+		if (row.explicitly_sourced_count > row.populated_count) errors.push(`couverture sourcée incohérente : ${row.field}`);
+		if (row.primary_source_count > row.populated_count) errors.push(`couverture primaire incohérente : ${row.field}`);
+		if (row.independently_corroborated_count > row.populated_count) errors.push(`corroboration indépendante incohérente : ${row.field}`);
 	}
 }
 if (snapshot.offers) {
@@ -44,6 +59,23 @@ if (snapshot.pairs) {
 		if (!pair.compressorId || !pair.toolId) errors.push(`couple incomplet : ${pair.id}`);
 	}
 	for (const [verdict, count] of Object.entries(summary)) if (snapshot.summary?.[verdict] !== count) errors.push(`résumé incohérent pour ${verdict}`);
+	if (snapshot.scope?.fixed_verdict_count !== snapshot.pairs.length) errors.push('le snapshot de verdicts ne correspond pas au périmètre fixe');
+	const conclusiveCount = snapshot.pairs.length - summary.insufficient_data;
+	const conclusivePercentage = snapshot.pairs.length ? Number((conclusiveCount / snapshot.pairs.length * 100).toFixed(1)) : 0;
+	if (snapshot.conclusive?.count !== conclusiveCount || snapshot.conclusive?.percentage !== conclusivePercentage) errors.push('taux conclusif incohérent');
+}
+if (snapshot.datasets) {
+	const ids = new Set();
+	for (const dataset of snapshot.datasets) {
+		if (ids.has(dataset.id)) errors.push(`SLA de fraîcheur dupliqué : ${dataset.id}`); ids.add(dataset.id);
+		if (!['current', 'stale', 'unavailable'].includes(dataset.status)) errors.push(`statut de fraîcheur invalide : ${dataset.id}`);
+		if (!Number.isInteger(dataset.age_hours) || dataset.age_hours < 0) errors.push(`âge de fraîcheur invalide : ${dataset.id}`);
+		const maximumAgeHours = dataset.maximum_age_hours ?? dataset.maximum_age_days * 24;
+		if (!Number.isFinite(maximumAgeHours) || maximumAgeHours <= 0) errors.push(`seuil de fraîcheur invalide : ${dataset.id}`);
+		if (!dataset.refresh_trigger || !dataset.breach_behavior) errors.push(`SLA de fraîcheur incomplet : ${dataset.id}`);
+		if (dataset.status === 'current' && dataset.age_hours > maximumAgeHours) errors.push(`donnée hors SLA marquée courante : ${dataset.id}`);
+		if (dataset.status === 'stale' && dataset.age_hours <= maximumAgeHours) errors.push(`donnée dans le SLA marquée périmée : ${dataset.id}`);
+	}
 }
 if (snapshot.events) {
 	const ids = new Set();

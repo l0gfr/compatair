@@ -8,6 +8,7 @@ const MAXIMUM_CLOCK_SKEW_MS = 5 * 60 * 1_000;
 function normalizeHeader(value) { return value.trim().toLowerCase().replace(/^\uFEFF/, ''); }
 function normalizeGtin(value) { const raw = String(value ?? '').trim(); if (!/^[0-9\s-]+$/.test(raw)) return undefined; const digits = raw.replace(/[\s-]/g, ''); return /^\d{8,14}$/.test(digits) ? digits : undefined; }
 function normalizeMpn(value) { const normalized = String(value ?? '').trim().toUpperCase().replace(/[^A-Z0-9]/g, ''); return normalized || undefined; }
+function normalizeDistributorSku(value) { const normalized = String(value ?? '').normalize('NFKC').trim().toUpperCase().replace(/\s+/g, ' '); return normalized || undefined; }
 
 function detectDelimiter(text) {
 	const line = text.split(/\r?\n/, 1)[0] ?? '';
@@ -37,14 +38,22 @@ export function parseDelimited(text, delimiter = detectDelimiter(text)) {
 
 function indexCatalog(catalog) {
 	const products = [...(catalog.compressors ?? []), ...(catalog.tools ?? [])];
-	const indexes = { gtin: new Map(), mpn: new Map() };
+	const indexes = { gtin: new Map(), mpn: new Map(), sku: new Map() };
 	for (const product of products) {
 		for (const value of [product.ean, product.gtin].map(normalizeGtin).filter(Boolean)) addIndex(indexes.gtin, value, product.id);
 		const mpn = normalizeMpn(product.mpn); if (mpn) addIndex(indexes.mpn, mpn, product.id);
+		for (const identifier of product.distributorSkus ?? []) {
+			const sku = normalizeDistributorSku(identifier.sku);
+			if (sku) addIndex(indexes.sku, `${identifier.distributorId}:${sku}`, product.id);
+		}
 	}
 	for (const product of catalog.normalized?.products ?? []) {
 		for (const value of [product.identity?.ean, product.identity?.gtin].map(normalizeGtin).filter(Boolean)) addIndex(indexes.gtin, value, product.id);
 		const mpn = normalizeMpn(product.identity?.mpn); if (mpn) addIndex(indexes.mpn, mpn, product.id);
+		for (const identifier of product.identity?.distributorSkus ?? []) {
+			const sku = normalizeDistributorSku(identifier.sku);
+			if (sku) addIndex(indexes.sku, `${identifier.distributorId}:${sku}`, product.id);
+		}
 		for (const alias of product.identity?.aliases ?? []) {
 			if (alias.type === 'ean' || alias.type === 'gtin') { const value = normalizeGtin(alias.value); if (value) addIndex(indexes.gtin, value, product.id); }
 			else { const value = normalizeMpn(alias.value); if (value) addIndex(indexes.mpn, value, product.id); }
@@ -58,11 +67,13 @@ function addIndex(index, key, productId) {
 }
 
 function matchProduct(row, indexes) {
-	const identifiers = { ean: normalizeGtin(row.ean), gtin: normalizeGtin(row.gtin), mpn: String(row.mpn ?? '').trim() || undefined };
+	const identifiers = { ean: normalizeGtin(row.ean), gtin: normalizeGtin(row.gtin), mpn: String(row.mpn ?? '').trim() || undefined, distributorSku: String(row.product_id ?? '').trim() || undefined };
 	const candidates = new Set(); const matchedBy = new Set(); let ambiguous = false;
 	for (const [kind, gtin] of [['ean', identifiers.ean], ['gtin', identifiers.gtin]].filter(([, value]) => Boolean(value))) { const ids = indexes.gtin.get(gtin); if (ids?.size > 1) ambiguous = true; if (ids?.size) matchedBy.add(kind); for (const id of ids ?? []) candidates.add(id); }
 	const normalizedMpn = normalizeMpn(identifiers.mpn); const mpnIds = normalizedMpn ? indexes.mpn.get(normalizedMpn) : undefined;
 	if (mpnIds?.size > 1) ambiguous = true; if (mpnIds?.size) matchedBy.add('mpn'); for (const id of mpnIds ?? []) candidates.add(id);
+	const normalizedSku = normalizeDistributorSku(identifiers.distributorSku); const skuIds = normalizedSku ? indexes.sku.get(`manomano-fr:${normalizedSku}`) : undefined;
+	if (skuIds?.size > 1) ambiguous = true; if (skuIds?.size) matchedBy.add('distributor_sku'); for (const id of skuIds ?? []) candidates.add(id);
 	if (ambiguous || candidates.size > 1) return { error: 'identifier_conflict' };
 	if (candidates.size === 0) return { identifiers, unmatched: true };
 	return { identifiers, productId: [...candidates][0], matchedBy: [...matchedBy] };

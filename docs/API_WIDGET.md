@@ -45,4 +45,4 @@ Le client valide le schéma minimal, le verdict et l’URL de suite. La réponse
 
 ## Frontière commerciale
 
-La bêta publique ne promet ni SLA, ni quota réservé, ni support. Ces éléments, les exports, les historiques et les alertes relèvent d’une future offre professionnelle. Une relation commerciale ne peut pas modifier le verdict.
+La bêta publique ne promet ni SLA de disponibilité de l’API, ni quota réservé, ni support. Ces éléments, les exports, les historiques et les alertes relèvent d’une future offre professionnelle. Le SLA public de fraîcheur des données reste distinct et consultable dans `/data/freshness.json`. Une relation commerciale ne peut pas modifier le verdict.

@@ -25,7 +25,7 @@ export const offerSchema = z.object({
 	collectedAt: z.iso.datetime(),
 	sourceId: z.string().min(1).max(500),
 	sourceChecksum: z.string().regex(/^[a-f0-9]{64}$/),
-	identifiers: z.object({ ean: z.string().regex(/^\d{8,14}$/).optional(), gtin: z.string().regex(/^\d{8,14}$/).optional(), mpn: z.string().min(1).max(200).optional() }),
+	identifiers: z.object({ ean: z.string().regex(/^\d{8,14}$/).optional(), gtin: z.string().regex(/^\d{8,14}$/).optional(), mpn: z.string().min(1).max(200).optional(), distributorSku: z.string().min(1).max(200).optional() }),
 });
 
 export type Merchant = z.infer<typeof merchantSchema>;

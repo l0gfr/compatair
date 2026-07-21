@@ -9,7 +9,7 @@ import ContextHelp from './ContextHelp.astro';
 			<div class="field">
 				<label for="scanner-identifier">Numéro indiqué sur l’étiquette</label>
 				<input id="scanner-identifier" data-identifier type="text" maxlength="160" autocomplete="off" placeholder="Ex. 4010393 ou 4006825597295" aria-describedby="scanner-identifier-help" required />
-				<small id="scanner-identifier-help" data-candidate-origin>Saisissez la référence fabricant, le MPN, l’EAN ou le GTIN.</small>
+				<small id="scanner-identifier-help" data-candidate-origin>Saisissez la référence fabricant, le MPN, l’EAN, le GTIN ou un SKU distributeur documenté.</small>
 			</div>
 			<button class="button primary" type="submit" data-scanner-submit>Identifier la référence</button>
 		</div>
@@ -32,7 +32,7 @@ import ContextHelp from './ContextHelp.astro';
 		<p class="scanner-status" id="scanner-status" role="status" aria-live="polite" aria-atomic="true" data-status></p>
 		<p class="form-error" id="scanner-error" role="alert" aria-atomic="true" data-error hidden></p>
 		<section class="scanner-recovery" data-recovery aria-labelledby="scanner-recovery-title" hidden>
-			<div><p>Référence non reconnue</p><h3 id="scanner-recovery-title" data-recovery-title>Retrouvez le bon numéro sans deviner le produit.</h3><small>Vérifiez le MPN, la référence fabricant, l’EAN ou le GTIN indiqué sur l’étiquette.</small></div>
+			<div><p>Référence non reconnue</p><h3 id="scanner-recovery-title" data-recovery-title>Retrouvez le bon numéro sans deviner le produit.</h3><small>Vérifiez le MPN, la référence fabricant, l’EAN, le GTIN ou le SKU indiqué par le distributeur.</small></div>
 			<div class="scanner-recovery-actions">
 				<button class="button" type="button" data-recovery-photo>Utiliser une photo</button>
 				<a class="button" data-recovery-search href="/recherche/">Rechercher par marque ou modèle</a>
@@ -350,7 +350,11 @@ import ContextHelp from './ContextHelp.astro';
 		setResolutionNote();
 		const rankingNote = query<HTMLElement>('[data-ranking-note]'); if (rankingNote) rankingNote.hidden = true;
 		setText('[data-product-name]', `${product.brand} ${product.model}`);
-		setText('[data-match-badge]', match.matchedBy === 'ean' || match.matchedBy === 'gtin' ? 'Correspondance exacte par code produit fabricant' : 'Correspondance exacte par référence fabricant');
+		setText('[data-match-badge]', match.matchedBy === 'ean' || match.matchedBy === 'gtin'
+			? 'Correspondance exacte par code produit fabricant'
+			: match.matchedBy === 'distributor_sku'
+				? 'Correspondance exacte par SKU distributeur documenté'
+				: 'Correspondance exacte par référence fabricant');
 		setText('[data-match-detail]', `${match.matchedBy.toUpperCase()} ${match.matchedValue} · ${sourceQualityLabel(product.confidence)}.`);
 		const sourceDates = product.evidence.filter((source) => source.sourceType === 'manufacturer' || source.sourceType === 'manual').map((source) => source.retrievedAt).sort();
 		const verifiedAt = sourceDates.at(-1) ?? product.evidence.map((source) => source.retrievedAt).sort().at(-1);

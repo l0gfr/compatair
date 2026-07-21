@@ -10,7 +10,7 @@ import { compressorDisplayName } from '../domain/product-display';
 	<div class="decision-page compare-page-shell">
 		<section class="decision-hero">
 			<div class="container decision-hero-grid">
-				<div class="decision-hero-copy"><p class="decision-index">03 / Comparer les solutions</p><h1>Deux ou trois compresseurs, sur des données <em>réellement comparables.</em></h1><p>Ajoutez les références par marque, modèle, MPN ou EAN. CompatAir aligne les caractéristiques publiées, distingue le débit aspiré du débit restitué et laisse chaque information manquante visible.</p><div class="decision-hero-points"><span>2 à 3 modèles</span><span>Débits avec pression</span><span>Qualité des sources</span></div></div>
+				<div class="decision-hero-copy"><p class="decision-index">03 / Comparer les solutions</p><h1>Deux ou trois compresseurs, sur des données <em>réellement comparables.</em></h1><p>Ajoutez les références par marque, modèle, MPN, EAN/GTIN ou SKU distributeur sourcé. CompatAir aligne les caractéristiques publiées, distingue le débit aspiré du débit restitué et laisse chaque information manquante visible.</p><div class="decision-hero-points"><span>2 à 3 modèles</span><span>Débits avec pression</span><span>Qualité des sources</span></div></div>
 				<DecisionHeroVisual mode="compare" />
 			</div>
 		</section>
@@ -20,7 +20,7 @@ import { compressorDisplayName } from '../domain/product-display';
 				<header class="decision-section-head"><p class="decision-index">Sélection</p><h2>Ajoutez uniquement les modèles qui vous intéressent.</h2><p>Une sélection transmise depuis le scanner est déjà remplie. Sinon, recherchez une référence exacte ci-dessous.</p></header>
 				<div class="compare-workspace">
 					<form class="compare-search-panel" id="compare-form" data-compare-form aria-describedby="compare-search-help compare-error">
-						<label for="compare-search">Marque, modèle, MPN ou EAN</label>
+						<label for="compare-search">Marque, modèle, MPN, EAN/GTIN ou SKU</label>
 						<div><input id="compare-search" data-compare-search type="search" list="compare-compressors" autocomplete="off" placeholder="Ex. Metabo Basic 250 ou 601532000" aria-describedby="compare-search-help" /><button class="button primary" type="submit">Ajouter</button></div>
 						<small id="compare-search-help">La référence brute est acceptée. CompatAir exige une correspondance exacte.</small>
 						<p class="form-error" id="compare-error" role="alert" aria-atomic="true" data-compare-error hidden></p>
@@ -78,7 +78,7 @@ import { compressorDisplayName } from '../domain/product-display';
 		slug: item.slug,
 		displayName: compressorDisplayName(item),
 		searchValue: `${item.brand} ${item.model}${item.mpn ? ` · MPN ${item.mpn}` : ''}${item.ean ? ` · EAN ${item.ean}` : ''}`,
-		identifiers: [item.id, item.mpn, item.ean, item.gtin, ...item.identifierAliases.map((alias) => alias.value)].filter(Boolean),
+		identifiers: [item.id, item.mpn, item.ean, item.gtin, ...item.distributorSkus.map((identifier) => identifier.sku), ...item.identifierAliases.map((alias) => alias.value)].filter(Boolean),
 		brand: item.brand,
 		model: item.model,
 		tankLiters: item.tankLiters,

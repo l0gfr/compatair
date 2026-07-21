@@ -1,11 +1,11 @@
 import type { Compressor, ToolProfile } from './catalog';
-import { isValidTradeItem, normalizeMpn, normalizeTradeItem } from './catalog-normalization';
+import { isValidTradeItem, normalizeDistributorSku, normalizeMpn, normalizeTradeItem } from './catalog-normalization';
 import { evaluateCompatibility, type CompatibilityResult } from './compatibility';
 
 export type IdentifiedProduct = {
 	type: 'compressor' | 'tool';
 	product: Compressor | ToolProfile;
-	matchedBy: 'ean' | 'gtin' | 'mpn' | 'alias';
+	matchedBy: 'ean' | 'gtin' | 'mpn' | 'distributor_sku' | 'alias';
 	matchedValue: string;
 };
 
@@ -22,6 +22,7 @@ function identifierValues(product: Compressor | ToolProfile) {
 		...(product.ean ? [{ kind: 'ean' as const, raw: product.ean, normalized: normalizeTradeItem(product.ean) }] : []),
 		...('gtin' in product && product.gtin ? [{ kind: 'gtin' as const, raw: product.gtin, normalized: normalizeTradeItem(product.gtin) }] : []),
 		...(product.mpn ? [{ kind: 'mpn' as const, raw: product.mpn, normalized: normalizeMpn(product.mpn) }] : []),
+		...product.distributorSkus.map((identifier) => ({ kind: 'distributor_sku' as const, raw: identifier.sku, normalized: normalizeDistributorSku(identifier.sku) })),
 		...product.identifierAliases.map((alias) => ({ kind: 'alias' as const, raw: alias.value, normalized: alias.type === 'ean' || alias.type === 'gtin' ? normalizeTradeItem(alias.value) : normalizeMpn(alias.value) })),
 	];
 }
@@ -31,6 +32,7 @@ export function identifyProducts(rawIdentifier: string, compressors: Compressor[
 	if (!input || input.length > 160) return [];
 	const tradeItem = normalizeTradeItem(input);
 	const normalizedMpn = normalizeMpn(input);
+	const normalizedDistributorSku = normalizeDistributorSku(input);
 	const useTradeItem = /^\D*\d[\d\s-]*$/.test(input) && isValidTradeItem(tradeItem);
 	const products = [
 		...compressors.map((product) => ({ type: 'compressor' as const, product })),
@@ -39,6 +41,7 @@ export function identifyProducts(rawIdentifier: string, compressors: Compressor[
 	return products.flatMap(({ type, product }) => {
 		const match = identifierValues(product).find((identifier) => {
 			if (identifier.kind === 'ean' || identifier.kind === 'gtin') return useTradeItem && identifier.normalized === tradeItem;
+			if (identifier.kind === 'distributor_sku') return identifier.normalized === normalizedDistributorSku;
 			return identifier.normalized === normalizedMpn;
 		});
 		return match ? [{ type, product, matchedBy: match.kind, matchedValue: match.raw }] : [];

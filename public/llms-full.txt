@@ -2,13 +2,15 @@
 
 CompatAir is a read-only, deterministic decision, evidence and data service for compressed-air systems. It answers whether a configuration works, why it fails, which minimal change can fix it, and how to build a complete system. It is not a checkout and must not be treated as a generic merchant catalog. The main decision-core MCP endpoint is https://compatair.fr/mcp and uses Streamable HTTP. Advanced tools use https://compatair.fr/mcp/extended; historical tools use https://compatair.fr/mcp/legacy. The UCP discovery profile is https://compatair.fr/.well-known/ucp. The current public method version is 2026.07.
 
+The catalog has 120 compressors and 120 tools: 14,400 explorable combinations. This is not a claim of 14,400 precomputed verdicts. The fixed snapshot contains 13,080 audited verdicts for 109 fixed-flow tools; 1,320 combinations across 11 tools require action rate or volume and target time. The fixed mix is 4,673 continuous, 7,803 incompatible and 604 insufficient-data pairs, or 95.4% conclusive. A high incompatible share is filtering value in a broad cross-brand corpus, not an API performance metric.
+
 ## Non-negotiable interpretation rules
 
 1. Never present intake displacement as delivered free air (FAD).
 2. Compare FAD at the pressure required by the pneumatic tool.
 3. Preserve `insufficient_data` whenever a critical characteristic is absent, ambiguous or insufficiently sourced.
 4. Treat prices and availability as dated commercial observations. They never alter a technical verdict.
-5. Cite the returned `canonical_url` for the CompatAir result and retain the returned `source_urls` for primary evidence.
+5. Cite the returned `canonical_url` for the CompatAir result and retain the returned `source_urls`. Inspect `source_role`; do not assume every URL is primary evidence.
 6. State every returned limitation. Do not silently estimate hose pressure drop, leakage, duty cycle, action rate or inflation time.
 7. Stable product IDs use `ca:compressor:<id>` and `ca:tool:<id>`. Stable system IDs use `ca:configuration:<digest>`.
 8. Product URLs are identifiers only. CompatAir does not fetch arbitrary product URLs during identification or evaluation.
@@ -36,7 +38,7 @@ Decision tools additionally return `overall_system_verdict` and `air_supply_verd
 
 - `orient_decision`: route an unclear request to the smallest suitable tool and profile.
 - `evaluate_air_compatibility`: evaluate one identified compressor and one or more identified tools with separate air-supply and complete-system verdicts.
-- `identify_product`: match a catalog item from a name, URL, EAN/GTIN, MPN, reference or CompatAir ID without downloading arbitrary pages.
+- `identify_product`: match a catalog item from a name, URL, EAN/GTIN, MPN, evidenced distributor SKU, reference or CompatAir ID without downloading arbitrary pages.
 - `build_complete_air_system`: assemble only documented compressor, tool, hose, connector, filtration and lubrication requirements.
 - `explain_compatibility_verdict`: explain pressure, flow, duty-cycle and missing-data factors.
 - `find_compatible_alternatives`: find a verified compressor substitution; no commission-based order.
@@ -74,6 +76,8 @@ CompatAir UCP is anonymous and read-only. It accepts no identity, address, accou
 The MCP server exposes catalog version, methodology, taxonomy, confidence scale, affiliation policy, engine version, AirGraph schema, exhaustive tool-specific response schemas, the decision-core profile, receipt schema and current changefeed state as `compatair://` resources. The compact output schemas in `tools/list` describe the stable decision envelope and allow the additional fields defined by these exhaustive resources.
 
 ## Public API and machine distributions
+
+Catalog identities expose normalized MPNs, EAN/GTIN and evidenced distributor SKUs. `data/catalog.json` publishes field-level population, explicit-source, primary-source and independent-corroboration coverage with denominators. Evidence roles are `primary`, `independent_corroboration` and `secondary`; commercial secondary evidence is never promoted to independent corroboration. `data/freshness.json` publishes maximum review age, refresh trigger, breach behavior and current status per data type; this data-freshness SLA is not an API-availability SLA.
 
 - Complete OpenAPI: https://compatair.fr/openapi/compatair-2026-07-15.json
 - UCP OpenAPI: https://compatair.fr/openapi/ucp-2026-07-15.json

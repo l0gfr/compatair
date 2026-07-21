@@ -14,13 +14,16 @@ const strict = (properties, required = []) => ({ type: 'object', properties, req
 const evidenceSchema = strict({
 	id: string, sourceUrl: uri, sourceLabel: string,
 	sourceType: { type: 'string', enum: ['manufacturer', 'manual', 'merchant', 'measured'] },
+	sourceRole: { type: 'string', enum: ['primary', 'independent_corroboration', 'secondary'] },
 	retrievedAt: { type: 'string', format: 'date' }, confidence: { type: 'string', enum: ['A', 'B', 'C', 'D'] }, notes: string,
-}, ['id', 'sourceUrl', 'sourceLabel', 'sourceType', 'retrievedAt', 'confidence']);
+}, ['id', 'sourceUrl', 'sourceLabel', 'sourceType', 'sourceRole', 'retrievedAt', 'confidence']);
 
 const imageSchema = strict({ src: string, alt: string, sourceUrl: uri, sourceLabel: string }, ['src', 'alt', 'sourceUrl', 'sourceLabel']);
 const editorialSchema = strict({ overview: string, verifiedFacts: stringArray, limitations: stringArray }, ['overview', 'verifiedFacts', 'limitations']);
 const specificationSchema = strict({ label: string, value: string, evidenceIds: stringArray }, ['label', 'value', 'evidenceIds']);
 const aliasSchema = strict({ type: { type: 'string', enum: ['mpn', 'ean', 'gtin', 'legacy_mpn'] }, value: string, evidenceIds: stringArray }, ['type', 'value', 'evidenceIds']);
+const distributorSkuSchema = strict({ distributorId: string, sku: string, evidenceIds: stringArray }, ['distributorId', 'sku', 'evidenceIds']);
+const publicDistributorSkuSchema = strict({ distributor_id: string, sku: string, normalized_sku: string }, ['distributor_id', 'sku', 'normalized_sku']);
 const variantSchema = strict({ familyId: string, label: string, distinguishingAttributes: { type: 'object', additionalProperties: string } }, ['familyId', 'label', 'distinguishingAttributes']);
 const rangeSchema = strict({ min: number, typical: number, max: number }, ['max']);
 const hoseSchema = strict({ innerDiameterMm: number, maximumLengthMeters: number });
@@ -28,7 +31,7 @@ const fadPointSchema = strict({ pressureBar: number, litersPerMinute: number }, 
 
 const productBase = {
 	id: string, slug: string, brand: string, model: string, label: string, category: string, categoryId: string,
-	mpn: string, ean: string, gtin: string, identifierAliases: { type: 'array', items: aliasSchema }, variant: variantSchema,
+	mpn: string, ean: string, gtin: string, distributorSkus: { type: 'array', items: distributorSkuSchema }, identifierAliases: { type: 'array', items: aliasSchema }, variant: variantSchema,
 	confidence: { type: 'string', enum: ['A', 'B', 'C', 'D'] }, status: { type: 'string', enum: ['active', 'discontinued', 'unknown'] },
 	image: imageSchema, editorial: editorialSchema, specifications: { type: 'array', items: specificationSchema },
 	evidence: { type: 'array', items: evidenceSchema }, fieldSources: { type: 'object', additionalProperties: { type: 'array', items: string } }, notes: stringArray,
@@ -48,8 +51,8 @@ const toolSchema = strict({
 
 const productSummarySchema = strict({
 	compat_air_id: string, type: { type: 'string', enum: ['compressor', 'tool'] }, id: string, slug: string, brand: string, model: string,
-	label: string, mpn: string, ean: string, canonical_url: uri, match_confidence: { type: 'string', enum: ['exact', 'candidate'] },
-}, ['compat_air_id', 'type', 'id', 'slug', 'brand', 'model', 'canonical_url']);
+	label: string, mpn: string, normalized_mpn: string, ean: string, gtin: string, distributor_skus: { type: 'array', items: publicDistributorSkuSchema }, canonical_url: uri, match_confidence: { type: 'string', enum: ['exact', 'candidate'] },
+}, ['compat_air_id', 'type', 'id', 'slug', 'brand', 'model', 'distributor_skus', 'canonical_url']);
 
 const verdictMetricsSchema = strict({
 	required_fad_lpm: nullableNumber, available_fad_lpm: nullableNumber, effective_average_capacity_lpm: nullableNumber,
@@ -102,7 +105,7 @@ const offerSchema = strict({
 	id: string, productId: string, merchantId: string, merchantProductId: string, productName: string, imageUrl: uri, url: uri,
 	priceEur: number, shippingEur: number, availability: { type: 'string', enum: ['in_stock', 'out_of_stock', 'preorder', 'unknown'] },
 	collectedAt: string, sourceId: string, sourceChecksum: string,
-	identifiers: strict({ ean: string, gtin: string, mpn: string }),
+	identifiers: strict({ ean: string, gtin: string, mpn: string, distributorSku: string }),
 }, ['id', 'productId', 'url']);
 const changeSchema = strict({ id: string, type: string, version: string, observed_at: { type: 'string', format: 'date' }, summary: string, breaking: { type: 'boolean' }, canonical_url: uri, affected_product_ids: stringArray, decision_impact: string }, ['id', 'type', 'version', 'observed_at', 'summary']);
 const knowledgeSchema = strict({

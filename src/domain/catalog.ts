@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 export const confidenceSchema = z.enum(['A', 'B', 'C', 'D']);
+export const sourceRoleSchema = z.enum(['primary', 'independent_corroboration', 'secondary']);
 function isHttpsUrl(value: string) { try { return new URL(value).protocol === 'https:'; } catch { return false; } }
 export const httpsUrlSchema = z.url().max(4_096).refine(isHttpsUrl, 'URL HTTPS obligatoire');
 const productIdSchema = z.string().regex(/^[a-z0-9-]{1,160}$/);
@@ -10,6 +11,7 @@ export const evidenceSchema = z.object({
 	sourceUrl: httpsUrlSchema,
 	sourceLabel: z.string().min(1),
 	sourceType: z.enum(['manufacturer', 'manual', 'merchant', 'measured']),
+	sourceRole: sourceRoleSchema.optional(),
 	retrievedAt: z.iso.date(),
 	confidence: confidenceSchema,
 	notes: z.string().optional(),
@@ -34,6 +36,12 @@ const additionalSpecificationSchema = z.object({
 	evidenceIds: z.array(z.string().min(1)).min(1),
 });
 
+const distributorSkuSchema = z.object({
+	distributorId: z.string().regex(/^[a-z0-9-]{1,120}$/),
+	sku: z.string().min(1).max(160),
+	evidenceIds: z.array(z.string().min(1)).min(1),
+});
+
 export const compressorSchema = z.object({
 	id: productIdSchema,
 	slug: z.string().regex(/^[a-z0-9-]+$/),
@@ -42,6 +50,7 @@ export const compressorSchema = z.object({
 	mpn: z.string().optional(),
 	ean: z.string().regex(/^\d{8,14}$/).optional(),
 	gtin: z.string().regex(/^\d{8,14}$/).optional(),
+	distributorSkus: z.array(distributorSkuSchema).default([]),
 	identifierAliases: z.array(z.object({
 		type: z.enum(['mpn', 'ean', 'gtin', 'legacy_mpn']),
 		value: z.string().min(1),
@@ -97,6 +106,8 @@ const toolBaseSchema = z.object({
 	model: z.string().min(1),
 	mpn: z.string().optional(),
 	ean: z.string().regex(/^\d{8,14}$/).optional(),
+	gtin: z.string().regex(/^\d{8,14}$/).optional(),
+	distributorSkus: z.array(distributorSkuSchema).default([]),
 	identifierAliases: z.array(z.object({
 		type: z.enum(['mpn', 'ean', 'gtin', 'legacy_mpn']),
 		value: z.string().min(1),
