@@ -4,10 +4,22 @@ import { describe, expect, it } from 'vitest';
 const deploy = readFileSync(new URL('./deploy-remote.sh', import.meta.url), 'utf8');
 const rollback = readFileSync(new URL('./rollback-remote.sh', import.meta.url), 'utf8');
 const workflow = readFileSync(new URL('../.github/workflows/deploy-production.yml', import.meta.url), 'utf8');
+const monitorWorkflow = readFileSync(new URL('../.github/workflows/monitor.yml', import.meta.url), 'utf8');
+const snapshotWorkflow = readFileSync(new URL('../.github/workflows/sync-data.yml', import.meta.url), 'utf8');
+const securityWorkflow = readFileSync(new URL('../.github/workflows/security.yml', import.meta.url), 'utf8');
 const apache = readFileSync(new URL('../deploy/apache/compatair.fr.conf.example', import.meta.url), 'utf8');
 const releaseRoute = readFileSync(new URL('../src/pages/data/release.json.ts', import.meta.url), 'utf8');
 
 describe('release boundary policy', () => {
+	it('does not spend private-runner minutes on unsolicited schedules', () => {
+		for (const scheduledWorkflow of [monitorWorkflow, snapshotWorkflow, securityWorkflow]) {
+			expect(scheduledWorkflow).not.toMatch(/^\s+schedule:/m);
+		}
+		expect(monitorWorkflow).toContain('workflow_dispatch:');
+		expect(snapshotWorkflow).toContain('workflow_dispatch:');
+		expect(securityWorkflow).toContain('workflow_dispatch:');
+	});
+
 	it('pins deployment and rollback to the dedicated CompatAir root', () => {
 		for (const source of [deploy, rollback, workflow]) expect(source).toContain('/var/www/html/compatair');
 		expect(deploy).not.toContain('^/var/www/html/[A-Za-z0-9._/-]+$');

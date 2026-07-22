@@ -1,8 +1,7 @@
 name: Validate data snapshot
 
 on:
-  schedule:
-    - cron: '42 3 * * *'
+  # Intentionally manual: scheduled GitHub-hosted runners consume the private repository quota.
   workflow_dispatch:
 
 permissions:
