@@ -72,7 +72,22 @@ await check(
 	{ attempts: 8 },
 );
 
-await check('accueil', '/', status(200));
+await check('accueil avec lecteur vidéo natif', '/', ({ body, response }) => {
+	assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
+	assert(body.includes('<video data-home-video controls'), 'lecteur vidéo natif avec contrôles absent de l’accueil');
+	assert(!body.includes('data-home-video-launch'), 'ancien lancement plein écran encore présent');
+	assert(response.headers.get('content-security-policy')?.includes("media-src 'self'"), 'CSP media-src self absente de l’accueil');
+});
+
+await check('vidéo du parcours en lecture partielle', '/media/compatair-parcours-utilisateur-complet.mp4', ({ body, response }) => {
+	assert(response.status === 206, `HTTP partiel attendu 206, reçu ${response.status}`);
+	assert(response.headers.get('content-type')?.includes('video/mp4'), `type vidéo inattendu: ${response.headers.get('content-type')}`);
+	assert(response.headers.get('content-range')?.startsWith('bytes 0-31/'), `Content-Range vidéo inattendu: ${response.headers.get('content-range')}`);
+	assert(body.includes('ftyp'), 'signature MP4 ftyp absente des premiers octets');
+	assert(response.headers.get('content-security-policy')?.includes("media-src 'self'"), 'CSP media-src self absente de la vidéo');
+}, {
+	headers: { Range: 'bytes=0-31' },
+});
 await check('robots', '/robots.txt', bodyContains('https://compatair.fr/sitemap-index.xml'));
 await check('sitemap', '/sitemap-index.xml', status(200));
 

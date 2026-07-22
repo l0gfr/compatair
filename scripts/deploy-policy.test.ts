@@ -9,6 +9,7 @@ const snapshotWorkflow = readFileSync(new URL('../.github/workflows/sync-data.ym
 const securityWorkflow = readFileSync(new URL('../.github/workflows/security.yml', import.meta.url), 'utf8');
 const apache = readFileSync(new URL('../deploy/apache/compatair.fr.conf.example', import.meta.url), 'utf8');
 const releaseRoute = readFileSync(new URL('../src/pages/data/release.json.ts', import.meta.url), 'utf8');
+const liveSmoke = readFileSync(new URL('./smoke-live-http.mjs', import.meta.url), 'utf8');
 
 describe('release boundary policy', () => {
 	it('does not spend private-runner minutes on unsolicited schedules', () => {
@@ -85,6 +86,15 @@ describe('release boundary policy', () => {
 		expect(apache).toContain('ctl:ruleRemoveTargetById=931130;ARGS:params.arguments.meta.ucp-agent.profile');
 		expect(deploy).toContain('scripts/smoke-live-http.mjs');
 		expect(workflow).toContain('install -m 644 server/*.mjs dist/_server/');
+	});
+
+	it('proves the homepage video contract before accepting a release', () => {
+		expect(liveSmoke).toContain('<video data-home-video controls');
+		expect(liveSmoke).toContain('data-home-video-launch');
+		expect(liveSmoke).toContain("media-src 'self'");
+		expect(liveSmoke).toContain("Range: 'bytes=0-31'");
+		expect(liveSmoke).toContain('response.status === 206');
+		expect(liveSmoke).toContain("body.includes('ftyp')");
 	});
 
 	it('keeps the public browser boundary closed against script injection', () => {
