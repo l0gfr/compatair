@@ -1,6 +1,7 @@
 ---
 title: "Bruit d’un compresseur : comment comparer les décibels sans se tromper"
-description: "Un nombre en dB n’est comparable que si l’indicateur et les conditions de mesure sont identiques. Distinguez pression et puissance acoustiques."
+seoTitle: "Bruit d’un compresseur : comparer les dB | CompatAir"
+description: "Comparez le bruit de deux compresseurs sans confondre LpA et LwA : indicateur, distance, protocole et limites des mentions « Silent »."
 pubDate: 2026-07-13
 updatedDate: 2026-07-14
 category: "Comprendre"

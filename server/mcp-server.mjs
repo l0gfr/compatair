@@ -7,7 +7,7 @@ import { createMcpCore, ENGINE_VERSION, MCP_SERVER_VERSION, METHOD_VERSION, PROT
 import { createDemandAggregateStore, DEMAND_EVENT_SCHEMA_VERSION, isValidCalculationVersion, validateDemandEvent } from './demand-aggregates.mjs';
 import { createProductFunnelAggregateStore, PRODUCT_FUNNEL_SCHEMA_VERSION, validateProductFunnelEvent } from './product-funnel-aggregates.mjs';
 import { ACQUISITION_SCHEMA_VERSION, createAcquisitionAggregateStore, validateAcquisitionEvent } from './acquisition-aggregates.mjs';
-import { classifyMcpClient, classifyMcpOutcomes, classifyMcpTrafficHint, createMcpTelemetryStore, extractMcpDemand, MCP_TELEMETRY_SCHEMA_VERSION } from './mcp-telemetry.mjs';
+import { classifyMcpClient, classifyMcpErrorCode, classifyMcpOutcomes, classifyMcpTrafficHint, createMcpTelemetryStore, extractMcpDemand, MCP_TELEMETRY_EVENT_SCHEMA_VERSION, MCP_TELEMETRY_SCHEMA_VERSION } from './mcp-telemetry.mjs';
 import { authorizeUcpRequest, createUcpError, createUcpToolArguments, fetchPublicUcpProfile, ucpErrorStatus, validateUcpEvaluationRequest } from './ucp-core.mjs';
 
 const BODY_LIMIT = 65_536;
@@ -423,7 +423,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			if (!allow(`events:${clientAddress(request)}`)) return json(response, 429, { error: 'rate_limited' }, { 'Retry-After': '60' });
 			try {
 				const event = await readJsonBody(request);
-				if (event?.event === 'mcp_canonical_follow' && event.schemaVersion === MCP_TELEMETRY_SCHEMA_VERSION && typeof event.tool === 'string' && knownToolNames.has(event.tool) && Object.keys(event).length === 3) {
+				if (event?.event === 'mcp_canonical_follow' && event.schemaVersion === MCP_TELEMETRY_EVENT_SCHEMA_VERSION && typeof event.tool === 'string' && knownToolNames.has(event.tool) && Object.keys(event).length === 3) {
 					await recordTelemetry({ type: 'canonical_follow', actorId: await telemetryActorId(request), toolName: event.tool });
 					response.writeHead(204, { 'Cache-Control': 'no-store' });
 					return response.end();
@@ -496,6 +496,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 				await recordTelemetry({
 					type: 'tool_call', actorId: await telemetryActorId(request), toolName,
 					outcome: outcomes === 'error' ? 'error' : outcomes.primary,
+					errorCode: classifyMcpErrorCode(result),
 					scopedOutcomes: outcomes === 'error' ? {} : { air_supply: outcomes.air_supply, complete_air_system: outcomes.complete_air_system },
 					trafficHint: classifyMcpTrafficHint(request.headers['user-agent']),
 					requestHash: await telemetryStore.requestHash(toolName, message.params?.arguments), profile: mcpProfile,

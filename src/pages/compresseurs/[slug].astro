@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductDecisionHero from '../../components/ProductDecisionHero.astro';
 import { compressors, tools } from '../../data/catalog';
 import { evidenceHistoryProductHref } from '../../data/evidence-history-directory';
-import { productSeoTitle } from '../../data/product-seo-titles';
+import { productSeoDescription, productSeoTitle } from '../../data/product-seo-titles';
 import { toolDemandLabel, toolPressureLabel } from '../../domain/tool-demand';
 import { activeOffers, merchants } from '../../data/offers';
 import { latestEvidenceDate } from '../../domain/provenance';
@@ -51,7 +51,7 @@ const productJsonLd = productOffers.length ? {
 <BaseLayout
 	title={`${compressor.brand} ${compressor.model} : débit et compatibilité | CompatAir`}
 	editorialTitle={productSeoTitle(compressor.id)}
-	description={`Analyse du ${displayName} : cuve ${compressor.tankLiters} L, pression ${compressor.maxPressureBar} bar et débit restitué sourcé.`}
+	description={productSeoDescription(compressor.id, `Analyse du ${displayName} : cuve ${compressor.tankLiters} L, pression ${compressor.maxPressureBar} bar et débit restitué sourcé.`)}
 	pageType="product"
 	imagePath="/social/compresseurs.png"
 	imageAlt="Catalogue des compresseurs documentés par CompatAir"

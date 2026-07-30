@@ -11,7 +11,7 @@ export const versionCompatibility = {
 	interfaces: [
 		{ name: 'MCP server', version: '3.0.0', compatibility: 'Major decision-core contract. The main tools/list surface contains seven tools.' },
 		{ name: 'MCP protocol', version: '2025-11-25', compatibility: 'Preferred negotiation revision; 2025-06-18 and 2025-03-26 remain accepted.' },
-		{ name: 'MCP telemetry', version: '2.0.0', compatibility: 'Separates smoke CI, retries, probes, plausible sessions, unknown and historical traffic.' },
+		{ name: 'MCP telemetry', version: '2.1.0', compatibility: 'Separates traffic classes and publishes an exact traffic × tool × outcome × normalized error-code breakdown for newly recorded calls.' },
 		{ name: 'HTTP API', version: 'v1', compatibility: 'Read-only compatibility, search, evidence, changefeed and receipt verification routes.' },
 		{ name: 'UCP protocol', version: '2026-04-08', compatibility: 'Read-only pneumatic compatibility capability.' },
 		{ name: 'UCP capability', version: '2026-07-15', compatibility: 'fr.compatair.air.compatibility.' },

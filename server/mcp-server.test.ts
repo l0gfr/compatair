@@ -240,7 +240,12 @@ describe('MCP HTTP boundary helpers', () => {
 			const followPayload = JSON.stringify({ event: 'mcp_canonical_follow', schemaVersion: '2.0.0', tool: 'identify_product' });
 			expect((await call({ url: '/events', method: 'POST', headers: { origin: 'https://compatair.fr', 'content-type': 'application/json', 'user-agent': 'Claude Code/1.2.3' }, socket: { remoteAddress: '192.0.2.42' }, async *[Symbol.asyncIterator]() { yield Buffer.from(followPayload); } })).status).toBe(204);
 			const report = await call({ url: '/data/mcp-usage.json', method: 'GET', headers: {}, socket: { remoteAddress: '127.0.0.1' } });
-			expect(JSON.parse(report.body)).toMatchObject({ totals: { initializations: 1, tool_calls: 1, insufficient_data: 1, canonical_follows: 1, estimated_callers: null }, tools: [{ name: 'identify_product', calls: 1, insufficient_data: 1, canonical_issued: 1, canonical_follows: 1 }] });
+			expect(JSON.parse(report.body)).toMatchObject({
+				schema_version: '2.1.0',
+				totals: { initializations: 1, tool_calls: 1, insufficient_data: 1, canonical_follows: 1, estimated_callers: null },
+				tool_outcome_breakdown: [{ traffic_class: 'plausible_session', tool: 'identify_product', outcome: 'insufficient_data', error_code: null, calls: 1 }],
+				tools: [{ name: 'identify_product', calls: 1, insufficient_data: 1, canonical_issued: 1, canonical_follows: 1 }],
+			});
 		} finally { rmSync(directory, { recursive: true, force: true }); }
 	});
 

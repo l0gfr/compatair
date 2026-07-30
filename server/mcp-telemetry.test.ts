@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { aggregateMcpTelemetry, buildPublicMcpUsageReport, callerFingerprint, classifyMcpClient, classifyMcpOutcome, classifyMcpOutcomes, classifyMcpTrafficHint, createMcpTelemetryStore, extractMcpDemand, mcpRequestFingerprint, truncateNetworkAddress } from './mcp-telemetry.mjs';
+import { aggregateMcpTelemetry, buildPublicMcpUsageReport, callerFingerprint, classifyMcpClient, classifyMcpErrorCode, classifyMcpOutcome, classifyMcpOutcomes, classifyMcpTrafficHint, createMcpTelemetryStore, extractMcpDemand, mcpRequestFingerprint, truncateNetworkAddress } from './mcp-telemetry.mjs';
 
 const empty = { schemaVersion: '1.0.0', updatedAt: null, totalEvents: 0, weeks: [], actors: [] };
 const actor = 'a'.repeat(64);
@@ -24,6 +24,9 @@ describe('MCP privacy-safe telemetry', () => {
 		expect(classifyMcpOutcome({ result: { structuredContent: { verdict: 'insufficient_data' }, isError: false } })).toBe('insufficient_data');
 		expect(classifyMcpOutcome({ error: { code: -32602 } })).toBe('error');
 		expect(classifyMcpOutcomes({ result: { structuredContent: { verdict: 'insufficient_data', air_supply_verdict: { verdict: 'compatible' }, overall_system_verdict: { verdict: 'insufficient_data' } }, isError: false } })).toEqual({ primary: 'insufficient_data', air_supply: 'success', complete_air_system: 'insufficient_data' });
+		expect(classifyMcpErrorCode({ error: { code: -32602 } })).toBe('jsonrpc_-32602');
+		expect(classifyMcpErrorCode({ result: { structuredContent: { error: { code: 'invalid_arguments' } }, isError: true } })).toBe('tool_invalid_arguments');
+		expect(classifyMcpErrorCode({ result: { structuredContent: { verdict: 'compatible' }, isError: false } })).toBeNull();
 		expect(classifyMcpTrafficHint('CompatAir deployment smoke')).toBe('smoke_ci');
 		expect(classifyMcpTrafficHint('CompatAir MCP profile contract smoke')).toBe('smoke_ci');
 		expect(classifyMcpTrafficHint('Mozilla/5.0')).toBeUndefined();
@@ -44,6 +47,9 @@ describe('MCP privacy-safe telemetry', () => {
 		state = aggregateMcpTelemetry(state, { type: 'canonical_follow', actorId: actor, toolName: 'check_compatibility' }, new Date('2026-07-14T12:00:00Z'));
 		expect(state.totalEvents).toBe(3);
 		expect(state.weeks[0]).toMatchObject({ initializations: 1, calls: 1, clientInfoDeclared: 1, outcomes: { success: 0, insufficient_data: 1, error: 0 }, traffic: { plausible_session: 1 }, scopedOutcomes: { air_supply: { success: 1 }, complete_air_system: { insufficient_data: 1 } }, canonicalFollows: 1 });
+		expect(buildPublicMcpUsageReport(state, catalog).tool_outcome_breakdown).toEqual([
+			{ traffic_class: 'plausible_session', tool: 'check_compatibility', outcome: 'insufficient_data', error_code: null, calls: 1 },
+		]);
 		expect(state.actors[0].days).toEqual(['2026-07-13', '2026-07-14']);
 	});
 
@@ -70,6 +76,40 @@ describe('MCP privacy-safe telemetry', () => {
 		const report = buildPublicMcpUsageReport(state, catalog);
 		expect(report.traffic_classes).toMatchObject({ smoke_ci: 1, automatic_retry: 1, plausible_session: 0 });
 		expect(report.decision_usage.tool_calls).toBe(0);
+		expect(report.tool_outcome_breakdown).toEqual([
+			{ traffic_class: 'automatic_retry', tool: 'evaluate_air_compatibility', outcome: 'insufficient_data', error_code: null, calls: 1 },
+			{ traffic_class: 'smoke_ci', tool: 'evaluate_air_compatibility', outcome: 'insufficient_data', error_code: null, calls: 1 },
+		]);
+	});
+
+	it('keeps pre-2.1 calls explicitly unclassified instead of inferring a joint distribution', () => {
+		const historical = {
+			schemaVersion: '2.0.0', updatedAt: '2026-07-13T12:00:00.000Z', totalEvents: 1,
+			weeks: [{
+				week: '2026-07-13', initializations: 0, calls: 1, clientInfoDeclared: 0,
+				outcomes: { success: 0, insufficient_data: 0, error: 1 },
+				traffic: { smoke_ci: 0, automatic_retry: 0, probe: 0, plausible_session: 0, unknown: 1, historical_unclassified: 0 },
+				scopedOutcomes: { air_supply: { success: 0, insufficient_data: 0, error: 0 }, complete_air_system: { success: 0, insufficient_data: 0, error: 0 } },
+				canonicalFollows: 0, clients: [],
+				tools: [{
+					name: 'orient_decision', calls: 1, outcomes: { success: 0, insufficient_data: 0, error: 1 },
+					traffic: { smoke_ci: 0, automatic_retry: 0, probe: 0, plausible_session: 0, unknown: 1, historical_unclassified: 0 },
+					scopedOutcomes: { air_supply: { success: 0, insufficient_data: 0, error: 0 }, complete_air_system: { success: 0, insufficient_data: 0, error: 0 } },
+					profiles: { core: 1 }, canonicalIssued: 0, canonicalFollows: 0,
+				}],
+				products: [], compatibilities: [],
+			}],
+			actors: [{
+				id: actor, firstSeen: '2026-07-13T12:00:00.000Z', lastSeen: '2026-07-13T12:00:00.000Z',
+				days: ['2026-07-13'], initializations: 0, calls: 1, clients: [],
+				lastRequestHash: null, lastRequestAt: '2026-07-13T12:00:00.000Z', repeatedRequestCount: 1,
+			}],
+		};
+		const report = buildPublicMcpUsageReport(historical, catalog);
+		expect(report.schema_version).toBe('2.1.0');
+		expect(report.tool_outcome_breakdown).toEqual([
+			{ traffic_class: 'historical_unclassified', tool: 'orient_decision', outcome: 'unclassified', error_code: 'not_recorded', calls: 1 },
+		]);
 	});
 
 	it('preserves every tool call when concurrent writes are coalesced', async () => {

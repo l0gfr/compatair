@@ -20,6 +20,7 @@ describe('MCP core', () => {
 		const [decisionCore, extended, legacy] = core.profiles.map((profile: any) => profile.handle({ jsonrpc: '2.0', id: 2, method: 'tools/list' }).result.tools);
 		expect(decisionCore).toHaveLength(7);
 		expect(decisionCore.map((tool: any) => tool.name)).toEqual(['orient_decision', 'evaluate_air_compatibility', 'identify_product', 'build_complete_air_system', 'find_compatible_alternatives', 'search_knowledge', 'get_current_offers']);
+		expect(decisionCore.find((tool: any) => tool.name === 'build_complete_air_system').description).toContain('real network pressure loss is verified');
 		expect(extended).toHaveLength(4);
 		expect(legacy).toHaveLength(9);
 		expect([...decisionCore, ...extended, ...legacy].every((tool: any) => tool.annotations.readOnlyHint && tool.outputSchema.required.includes('canonical_url'))).toBe(true);

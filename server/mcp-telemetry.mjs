@@ -1,11 +1,15 @@
 import { createHash, createHmac, randomBytes } from 'node:crypto';
 import { readFile, rename, writeFile } from 'node:fs/promises';
 
-export const MCP_TELEMETRY_SCHEMA_VERSION = '2.0.0';
+export const MCP_TELEMETRY_SCHEMA_VERSION = '2.1.0';
+export const MCP_TELEMETRY_EVENT_SCHEMA_VERSION = '2.0.0';
 export const MCP_TELEMETRY_RETENTION_DAYS = 91;
 export const MCP_TELEMETRY_MINIMUM_PUBLIC_COHORT = 5;
 export const MCP_TRAFFIC_CLASSES = ['smoke_ci', 'automatic_retry', 'probe', 'plausible_session', 'unknown', 'historical_unclassified'];
 
+const PREVIOUS_MCP_TELEMETRY_SCHEMA_VERSION = '2.0.0';
+const MCP_OUTCOME_BREAKDOWN_VALUES = ['success', 'insufficient_data', 'error', 'unclassified'];
+const MCP_ERROR_CODE_PATTERN = /^[a-z][a-z0-9_-]{0,79}$/;
 const CLIENT_FAMILIES = [
 	['chatgpt', /chatgpt|openai/i],
 	['claude', /claude|anthropic/i],
@@ -41,6 +45,10 @@ function sortAggregate(value) {
 	for (const week of value.weeks) {
 		week.clients.sort((left, right) => left.family.localeCompare(right.family));
 		week.tools.sort((left, right) => left.name.localeCompare(right.name));
+		for (const tool of week.tools) tool.outcomeBreakdown.sort((left, right) =>
+			left.trafficClass.localeCompare(right.trafficClass)
+			|| left.outcome.localeCompare(right.outcome)
+			|| left.errorCode.localeCompare(right.errorCode));
 		week.products.sort((left, right) => left.type.localeCompare(right.type) || left.id.localeCompare(right.id));
 		week.compatibilities.sort((left, right) => left.compressorId.localeCompare(right.compressorId) || left.toolId.localeCompare(right.toolId));
 	}
@@ -107,6 +115,17 @@ export function classifyMcpOutcome(result) {
 	return outcomes === 'error' ? 'error' : outcomes.primary;
 }
 
+export function classifyMcpErrorCode(result) {
+	const jsonRpcCode = result?.error?.code;
+	if (Number.isSafeInteger(jsonRpcCode)) return `jsonrpc_${jsonRpcCode}`;
+	if (result?.error) return 'jsonrpc_error';
+	const toolCode = result?.result?.structuredContent?.error?.code;
+	if (typeof toolCode === 'string' && /^[a-z][a-z0-9_]{0,63}$/.test(toolCode)) return `tool_${toolCode}`;
+	if (result?.result?.structuredContent?.error) return 'structured_error';
+	if (result?.result?.isError) return 'tool_error';
+	return null;
+}
+
 export function extractMcpDemand(toolName, args, structuredContent, catalog) {
 	const compressorIds = new Set((catalog?.compressors ?? []).map((item) => item.id));
 	const toolIds = new Set((catalog?.tools ?? []).map((item) => item.id));
@@ -159,7 +178,7 @@ export function extractMcpDemand(toolName, args, structuredContent, catalog) {
 function migrateV1Aggregate(value) {
 	if (!value || value.schemaVersion !== '1.0.0' || !Array.isArray(value.weeks) || !Array.isArray(value.actors)) return value;
 	return {
-		...structuredClone(value), schemaVersion: MCP_TELEMETRY_SCHEMA_VERSION,
+		...structuredClone(value), schemaVersion: PREVIOUS_MCP_TELEMETRY_SCHEMA_VERSION,
 		weeks: value.weeks.map((week) => ({
 			...week, traffic: { ...emptyTrafficCounters(), historical_unclassified: week.calls }, scopedOutcomes: emptyScopedCounters(),
 			tools: week.tools.map((tool) => ({ ...tool, traffic: { ...emptyTrafficCounters(), historical_unclassified: tool.calls }, scopedOutcomes: emptyScopedCounters(), profiles: {} })),
@@ -170,12 +189,39 @@ function migrateV1Aggregate(value) {
 	};
 }
 
+function migrateV2Aggregate(value) {
+	if (!value || value.schemaVersion !== PREVIOUS_MCP_TELEMETRY_SCHEMA_VERSION || !Array.isArray(value.weeks) || !Array.isArray(value.actors)) return value;
+	return {
+		...structuredClone(value), schemaVersion: MCP_TELEMETRY_SCHEMA_VERSION,
+		weeks: value.weeks.map((week) => ({
+			...week,
+			tools: week.tools.map((tool) => ({
+				...tool,
+				outcomeBreakdown: tool.calls > 0 ? [{
+					trafficClass: 'historical_unclassified',
+					outcome: 'unclassified',
+					errorCode: 'not_recorded',
+					calls: tool.calls,
+				}] : [],
+			})),
+		})),
+	};
+}
+
 function validCounters(value) { return value && ['success', 'insufficient_data', 'error'].every((key) => isCount(value[key])); }
 function validTraffic(value) { return value && MCP_TRAFFIC_CLASSES.every((key) => isCount(value[key])); }
 function validScoped(value) { return value && validCounters(value.air_supply) && validCounters(value.complete_air_system); }
+function validOutcomeBreakdown(value, expectedCalls) {
+	return Array.isArray(value)
+		&& value.every((row) => row && MCP_TRAFFIC_CLASSES.includes(row.trafficClass)
+			&& MCP_OUTCOME_BREAKDOWN_VALUES.includes(row.outcome)
+			&& typeof row.errorCode === 'string' && MCP_ERROR_CODE_PATTERN.test(row.errorCode)
+			&& isCount(row.calls))
+		&& value.reduce((sum, row) => sum + row.calls, 0) === expectedCalls;
+}
 
 function normalizeAggregate(input) {
-	const value = migrateV1Aggregate(input);
+	const value = migrateV2Aggregate(migrateV1Aggregate(input));
 	if (!value || typeof value !== 'object' || Array.isArray(value) || value.schemaVersion !== MCP_TELEMETRY_SCHEMA_VERSION || !Array.isArray(value.weeks) || !Array.isArray(value.actors)) return undefined;
 	if (!isCount(value.totalEvents) || (value.updatedAt !== null && !isIsoDate(value.updatedAt))) return undefined;
 	for (const week of value.weeks) {
@@ -183,7 +229,7 @@ function normalizeAggregate(input) {
 		if (!validCounters(week.outcomes) || !validTraffic(week.traffic) || !validScoped(week.scopedOutcomes)) return undefined;
 		if (![week.clients, week.tools, week.products, week.compatibilities].every(Array.isArray)) return undefined;
 		if (week.clients.some((row) => typeof row.family !== 'string' || !isCount(row.initializations))) return undefined;
-		if (week.tools.some((row) => typeof row.name !== 'string' || !isCount(row.calls) || !isCount(row.canonicalIssued) || !isCount(row.canonicalFollows) || !validCounters(row.outcomes) || !validTraffic(row.traffic) || !validScoped(row.scopedOutcomes) || !row.profiles || typeof row.profiles !== 'object')) return undefined;
+		if (week.tools.some((row) => typeof row.name !== 'string' || !isCount(row.calls) || !isCount(row.canonicalIssued) || !isCount(row.canonicalFollows) || !validCounters(row.outcomes) || !validTraffic(row.traffic) || !validScoped(row.scopedOutcomes) || !row.profiles || typeof row.profiles !== 'object' || !validOutcomeBreakdown(row.outcomeBreakdown, row.calls))) return undefined;
 		if (week.products.some((row) => !['compressor', 'tool'].includes(row.type) || typeof row.id !== 'string' || !isCount(row.requests) || !isCount(row.plausibleRequests))) return undefined;
 		if (week.compatibilities.some((row) => typeof row.compressorId !== 'string' || typeof row.toolId !== 'string' || !isCount(row.requests) || !isCount(row.plausibleRequests))) return undefined;
 	}
@@ -216,7 +262,7 @@ export function aggregateMcpTelemetry(state, event, now = new Date()) {
 		if (!actor.clients.includes(family)) actor.clients.push(family);
 	} else {
 		const name = typeof event.toolName === 'string' && /^[a-z0-9_]{1,80}$/.test(event.toolName) ? event.toolName : 'unknown';
-		const tool = incrementRow(week.tools, (item) => item.name === name, () => ({ name, calls: 0, outcomes: emptyCounters(), traffic: emptyTrafficCounters(), scopedOutcomes: emptyScopedCounters(), profiles: {}, canonicalIssued: 0, canonicalFollows: 0 }));
+		const tool = incrementRow(week.tools, (item) => item.name === name, () => ({ name, calls: 0, outcomes: emptyCounters(), traffic: emptyTrafficCounters(), scopedOutcomes: emptyScopedCounters(), outcomeBreakdown: [], profiles: {}, canonicalIssued: 0, canonicalFollows: 0 }));
 		if (event.type === 'canonical_follow') { week.canonicalFollows += 1; tool.canonicalFollows += 1; }
 		else {
 			if (!validOutcome(event.outcome)) throw new Error('mcp_telemetry_event_invalid');
@@ -232,6 +278,12 @@ export function aggregateMcpTelemetry(state, event, now = new Date()) {
 			actor.lastRequestAt = now.toISOString();
 			week.calls += 1; actor.calls += 1; tool.calls += 1; incrementOutcome(week.outcomes, event.outcome); incrementOutcome(tool.outcomes, event.outcome);
 			week.traffic[trafficClass] += 1; tool.traffic[trafficClass] += 1;
+			const errorCode = event.outcome === 'error' && typeof event.errorCode === 'string' && event.errorCode !== 'none' && MCP_ERROR_CODE_PATTERN.test(event.errorCode)
+				? event.errorCode
+				: event.outcome === 'error' ? 'unclassified_error' : 'none';
+			incrementRow(tool.outcomeBreakdown,
+				(item) => item.trafficClass === trafficClass && item.outcome === event.outcome && item.errorCode === errorCode,
+				() => ({ trafficClass, outcome: event.outcome, errorCode, calls: 0 })).calls += 1;
 			for (const scope of ['air_supply', 'complete_air_system']) {
 				const outcome = event.scopedOutcomes?.[scope];
 				if (validOutcome(outcome)) { incrementOutcome(week.scopedOutcomes[scope], outcome); incrementOutcome(tool.scopedOutcomes[scope], outcome); }
@@ -282,25 +334,42 @@ export function buildPublicMcpUsageReport(state, catalog, minimumCohort = MCP_TE
 	const clients = sumRows(value.weeks, ['family'], 'clients', 'initializations').filter((row) => row.initializations >= minimumCohort);
 	const tools = new Map();
 	for (const week of value.weeks) for (const source of week.tools) {
-		const row = tools.get(source.name) ?? { name: source.name, calls: 0, success: 0, insufficient_data: 0, errors: 0, traffic: emptyTrafficCounters(), scoped_outcomes: emptyScopedCounters(), profiles: {}, canonical_issued: 0, canonical_follows: 0 };
+		const row = tools.get(source.name) ?? { name: source.name, calls: 0, success: 0, insufficient_data: 0, errors: 0, traffic: emptyTrafficCounters(), scoped_outcomes: emptyScopedCounters(), outcome_breakdown: [], profiles: {}, canonical_issued: 0, canonical_follows: 0 };
 		row.calls += source.calls; row.success += source.outcomes.success; row.insufficient_data += source.outcomes.insufficient_data; row.errors += source.outcomes.error; row.canonical_issued += source.canonicalIssued; row.canonical_follows += source.canonicalFollows; tools.set(source.name, row);
 		for (const name of MCP_TRAFFIC_CLASSES) row.traffic[name] += source.traffic[name];
 		for (const scope of ['air_supply', 'complete_air_system']) for (const outcome of ['success', 'insufficient_data', 'error']) row.scoped_outcomes[scope][outcome] += source.scopedOutcomes[scope][outcome];
+		for (const breakdown of source.outcomeBreakdown) {
+			incrementRow(row.outcome_breakdown,
+				(item) => item.traffic_class === breakdown.trafficClass && item.outcome === breakdown.outcome && item.error_code === breakdown.errorCode,
+				() => ({ traffic_class: breakdown.trafficClass, outcome: breakdown.outcome, error_code: breakdown.errorCode, calls: 0 })).calls += breakdown.calls;
+		}
 		for (const [profile, count] of Object.entries(source.profiles)) row.profiles[profile] = (row.profiles[profile] ?? 0) + count;
 	}
-	const toolRows = [...tools.values()].sort((left, right) => right.calls - left.calls || left.name.localeCompare(right.name)).map((row) => ({ ...row, success_rate: ratio(row.success, row.calls), insufficient_data_rate: ratio(row.insufficient_data, row.calls), error_rate: ratio(row.errors, row.calls), canonical_follow_rate: ratio(row.canonical_follows, row.canonical_issued) }));
+	const toolValues = [...tools.values()].sort((left, right) => right.calls - left.calls || left.name.localeCompare(right.name));
+	const toolOutcomeBreakdown = toolValues.flatMap((row) => row.outcome_breakdown.map((breakdown) => ({
+		traffic_class: breakdown.traffic_class,
+		tool: row.name,
+		outcome: breakdown.outcome,
+		error_code: breakdown.error_code === 'none' ? null : breakdown.error_code,
+		calls: breakdown.calls,
+	}))).sort((left, right) => left.traffic_class.localeCompare(right.traffic_class)
+		|| left.tool.localeCompare(right.tool)
+		|| left.outcome.localeCompare(right.outcome)
+		|| (left.error_code ?? '').localeCompare(right.error_code ?? ''));
+	const toolRows = toolValues.map(({ outcome_breakdown: _outcomeBreakdown, ...row }) => ({ ...row, success_rate: ratio(row.success, row.calls), insufficient_data_rate: ratio(row.insufficient_data, row.calls), error_rate: ratio(row.errors, row.calls), canonical_follow_rate: ratio(row.canonical_follows, row.canonical_issued) }));
 	const plausibleProducts = sumRows(value.weeks, ['type', 'id'], 'products', 'plausibleRequests').filter((row) => row.plausibleRequests >= minimumCohort).slice(0, 20).map((row) => ({ type: row.type, id: row.id, requests: row.plausibleRequests, label: row.type === 'compressor' ? compressorLabels.get(row.id) ?? row.id : toolLabels.get(row.id) ?? row.id }));
 	const plausibleCompatibilities = sumRows(value.weeks, ['compressorId', 'toolId'], 'compatibilities', 'plausibleRequests').filter((row) => row.plausibleRequests >= minimumCohort).slice(0, 20).map((row) => ({ compressorId: row.compressorId, toolId: row.toolId, requests: row.plausibleRequests, compressor: compressorLabels.get(row.compressorId) ?? row.compressorId, tool: toolLabels.get(row.toolId) ?? row.toolId }));
 	const decisionCalls = traffic.plausible_session;
 	return {
 		schema_version: MCP_TELEMETRY_SCHEMA_VERSION, updated_at: value.updatedAt, retention_days: MCP_TELEMETRY_RETENTION_DAYS, minimum_public_cohort: minimumCohort,
-		measurement: { users: 'Estimated anonymous callers, not identified people.', recurrent: 'At least two calls or initializations on at least two distinct days.', decision_calls: 'Only plausible sessions; CI smoke, repeated retries, probes, unknown and historical unclassified traffic are reported separately.', canonical_follows: 'Attributed consultations through canonical_follow_url; URL emission alone is never counted as a follow.' },
+		measurement: { users: 'Estimated anonymous callers, not identified people.', recurrent: 'At least two calls or initializations on at least two distinct days.', decision_calls: 'Only plausible sessions; CI smoke, repeated retries, probes, unknown and historical unclassified traffic are reported separately.', tool_outcome_breakdown: 'Exact traffic class × tool × outcome × normalized error code counts. Calls predating schema 2.1.0 remain explicitly unclassified.', canonical_follows: 'Attributed consultations through canonical_follow_url; URL emission alone is never counted as a follow.' },
 		totals: { initializations: totals.initializations, tool_calls: totals.calls, success: totals.success, insufficient_data: totals.insufficientData, errors: totals.errors, success_rate: ratio(totals.success, totals.calls), insufficient_data_rate: ratio(totals.insufficientData, totals.calls), error_rate: ratio(totals.errors, totals.calls), client_info_declared: totals.clientInfoDeclared, client_info_declaration_rate: ratio(totals.clientInfoDeclared, totals.initializations), canonical_follows: totals.canonicalFollows, estimated_callers: publishCount(actors.length), recurrent_callers: publishCount(recurrentActors.length), recurrent_integrations: publishCount(recurrentIntegrations.length) },
 		decision_usage: { tool_calls: decisionCalls, share_of_all_calls: ratio(decisionCalls, totals.calls) },
 		traffic_classes: traffic,
 		scoped_outcomes: scopedOutcomes,
+		tool_outcome_breakdown: toolOutcomeBreakdown,
 		clients, tools: toolRows, products: plausibleProducts, compatibilities: plausibleCompatibilities,
-		limitations: ['Traffic classes are heuristic observability labels, never proof that a caller is human.', 'The deployment smoke label relies on the exact operational user agent and is not an authentication mechanism.', 'Small client, product and compatibility cohorts are withheld.', 'A returned canonical URL is not counted as consulted until the attributed URL is actually opened.'],
+		limitations: ['Traffic classes are heuristic observability labels, never proof that a caller is human.', 'The deployment smoke label relies on the exact operational user agent and is not an authentication mechanism.', 'Calls recorded before telemetry schema 2.1.0 have no recoverable joint traffic/tool/outcome/error distribution and remain grouped as unclassified.', 'Small client, product and compatibility cohorts are withheld.', 'A returned canonical URL is not counted as consulted until the attributed URL is actually opened.'],
 	};
 }
 

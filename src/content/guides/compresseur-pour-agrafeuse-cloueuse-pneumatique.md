@@ -1,6 +1,7 @@
 ---
 title: "Quel compresseur pour une agrafeuse-cloueuse pneumatique ?"
-description: "Calcul du débit moyen à partir du volume d’air par tir et de la cadence, avec les limites à connaître pour dimensionner une agrafeuse pneumatique."
+seoTitle: "Compresseur pour cloueuse pneumatique : calcul | CompatAir"
+description: "Calculez le débit d’une agrafeuse-cloueuse à partir des litres par tir et de votre cadence, puis vérifiez le FAD du compresseur à 6,3 bar."
 pubDate: 2026-07-13
 category: "Choisir"
 audiences: [particulier, professionnel]

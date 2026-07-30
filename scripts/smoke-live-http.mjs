@@ -169,15 +169,17 @@ if (mcpEnabled) {
 		assert(typeof health.verdictVersion === 'string' && health.verdictVersion.length > 0, 'verdictVersion MCP absente');
 		assert(health.mcpProfiles?.core?.tools === 7 && health.mcpProfiles.core.manifestBytes < 50_000, 'profil decision-core hors budget');
 		assert(health.mcpProfiles?.extended?.tools === 4 && health.mcpProfiles?.legacy?.tools === 9, 'profils MCP incomplets');
-		assert(health.mcpTelemetry?.enabled === true && health.mcpTelemetry?.schemaVersion === '2.0.0', 'télémétrie MCP inactive');
+		assert(health.mcpTelemetry?.enabled === true && health.mcpTelemetry?.schemaVersion === '2.1.0', 'télémétrie MCP inactive');
 	});
 
 	await check('statistiques MCP publiques', '/data/mcp-usage.json', ({ body, response }) => {
 		assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
 		const report = JSON.parse(body);
-		assert(report.schema_version === '2.0.0', 'schéma de statistiques MCP inattendu');
+		assert(report.schema_version === '2.1.0', 'schéma de statistiques MCP inattendu');
 		assert(report.minimum_public_cohort === 5, 'seuil public MCP inattendu');
 		assert(typeof report.totals?.tool_calls === 'number', 'total d’appels MCP absent');
+		assert(Array.isArray(report.tool_outcome_breakdown), 'croisement trafic × outil × résultat × erreur absent');
+		assert(report.tool_outcome_breakdown.reduce((total, row) => total + row.calls, 0) === report.totals.tool_calls, 'croisement MCP non réconcilié avec le total des appels');
 	});
 
 	for (const [label, pathname, expectedTools, maximumBytes] of [

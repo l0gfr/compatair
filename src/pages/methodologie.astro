@@ -5,7 +5,7 @@ import { CALCULATION_VERSION } from '../domain/sizing';
 
 const METHOD_VERSION = '2026.07';
 ---
-<BaseLayout title="Comment fonctionne CompatAir ? | CompatAir" description="Comment CompatAir vérifie si un compresseur peut alimenter un outil, à partir de données constructeur identifiées et sans inventer les informations manquantes.">
+<BaseLayout title="Méthode de calcul compresseur-outil | CompatAir" description="Découvrez comment CompatAir compare le besoin d’un outil au débit FAD d’un compresseur : sources constructeur, calcul reproductible et limites explicites.">
 	<InstitutionalHero eyebrow="Comment le résultat est obtenu" title="Une méthode déterministe, lisible et versionnée" lead="CompatAir part du besoin publié pour l’outil, le compare au débit réellement disponible du compresseur et conserve les règles exactes qui ont produit le résultat." primaryHref="#methode" primaryLabel="Lire la méthode" items={[{ label: 'Données identifiées', detail: 'Référence, source et date de consultation' }, { label: 'Calcul reproductible', detail: 'Les mêmes données donnent le même résultat' }, { label: 'Limites visibles', detail: 'Une donnée absente reste insuffisante' }]} />
 	<article class="container content institutional-content" id="methode">
 		<p><strong>Version publique de la méthode&nbsp;:</strong> <code>{METHOD_VERSION}</code> · <strong>version du moteur de calcul&nbsp;:</strong> <code>{CALCULATION_VERSION}</code>. Ces identifiants sont conservés dans les réponses machine afin qu’un résultat puisse être rattaché aux règles qui l’ont produit.</p>

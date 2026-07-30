@@ -202,7 +202,7 @@ export const productSeoTitles: Record<string, string> = {
 	'stanley-dn200-10-5': 'Stanley DN200/10/5 : débit restitué | CompatAir',
 	'revolution-air-superboxy-2l': 'SuperBoxy 2 L : débit restitué | CompatAir',
 	'scheppach-hc51v': 'Scheppach HC51V : débit restitué | CompatAir',
-	'parkside-psko-248-b1': 'Parkside PSKO 248 B1 : débit réel | CompatAir',
+	'parkside-psko-248-b1': 'Parkside PSKO 248 B1 : débit FAD et bruit | CompatAir',
 	'michelin-mb50': 'Michelin MB50 : débit non documenté | CompatAir',
 	'prodif-sil750v': 'Prodif SIL750V : débit non documenté | CompatAir',
 	'nuair-siltek-tb-50-d': 'Nuair SILTEK TB 50 D : débit aspiré | CompatAir',
@@ -240,6 +240,11 @@ export const productSeoTitles: Record<string, string> = {
 	'beta-1947h': 'Beta 1947H : débit et pression | CompatAir',
 	'hazet-9045p-1': 'HAZET 9045P-1 : débit et pression | CompatAir',
 	'hazet-9037spc': 'HAZET 9037SPC : air par rivet | CompatAir',
+};
+
+/** Descriptions ciblées lorsque la description générique masque une donnée décisionnelle déjà sourcée. */
+export const productSeoDescriptions: Partial<Record<string, string>> = {
+	'parkside-psko-248-b1': 'Parkside PSKO 248 B1 : FAD 149 L/min à 1 bar, 117 à 4 bar et 85 à 7 bar, cuve 24 L, 71,9 dB(A) LpA et sources officielles.',
 };
 
 export const toolUseSeoTitles: Record<string, string> = {
@@ -369,6 +374,10 @@ export function productSeoTitle(productId: string) {
 	const title = productSeoTitles[productId];
 	if (!title) throw new Error(`Titre SEO éditorial absent : ${productId}`);
 	return title;
+}
+
+export function productSeoDescription(productId: string, fallback: string) {
+	return productSeoDescriptions[productId] ?? fallback;
 }
 
 export function toolUseSeoTitle(productId: string) {

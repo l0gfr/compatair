@@ -213,7 +213,7 @@ const alternates = [
 							<tr><td><code>orient_decision</code></td><td>Retourne le plus petit tool et le profil adaptés lorsque la prochaine action n’est pas évidente.</td></tr>
 							<tr><td><code>evaluate_air_compatibility</code></td><td>Expose la capability UCP <code>fr.compatair.air.compatibility</code> pour répondre à une intention métier et enrichir une transaction sans toucher au checkout.</td></tr>
 							<tr><td><code>identify_product</code></td><td>Retrouve un produit par nom, URL, EAN/GTIN, MPN, SKU distributeur sourcé, référence ou CompatAir ID sans télécharger l’URL fournie.</td></tr>
-							<tr><td><code>build_complete_air_system</code></td><td>Assemble compresseur, outils, flexible, raccords, filtration et lubrification uniquement depuis les exigences documentées.</td></tr>
+							<tr><td><code>build_complete_air_system</code></td><td>Assemble compresseur, outils, flexible, raccords, filtration et lubrification uniquement depuis les exigences documentées. Le verdict système complet reste <code>insufficient_data</code> tant que les pertes réelles du réseau ne sont pas vérifiées.</td></tr>
 							<tr><td><code>explain_compatibility_verdict</code></td><td>Décompose pression, débit, cycle d’utilisation et données manquantes.</td></tr>
 							<tr><td><code>find_compatible_alternatives</code></td><td>Propose la plus petite substitution de compresseur vérifiée, sans ordre influencé par une commission.</td></tr>
 							<tr><td><code>compare_complete_systems</code></td><td>Compare de deux à cinq configurations techniques sans score commercial.</td></tr>

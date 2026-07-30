@@ -6,7 +6,12 @@ const REGISTRY = 'https://registry.npmjs.org';
 const QUARANTINE_MS = 24 * 60 * 60 * 1000;
 const RECENT_WINDOW_MS = 72 * 60 * 60 * 1000;
 const EXPECTED_BUILD_ALLOWLIST = new Set(['esbuild']);
-const EXPECTED_OVERRIDES = new Map([['fast-uri', '3.1.4'], ['tmp', '0.2.7'], ['uuid', '11.1.1']]);
+const EXPECTED_OVERRIDES = new Map([
+  ['brace-expansion', '5.0.8'],
+  ['fast-uri', '3.1.4'],
+  ['tmp', '0.2.7'],
+  ['uuid', '11.1.1'],
+]);
 const EXPECTED_RELEASE_AGE_EXCLUSIONS = new Set();
 const LIFECYCLE_SCRIPTS = ['preinstall', 'install', 'postinstall'];
 

@@ -50,10 +50,11 @@ const contracts = [
 		<div class="agent-tables">
 			<section><h3>Tools les plus appelés</h3><div class="agent-table-wrap"><table><thead><tr><th>Tool</th><th>Appels</th><th>Plausibles</th><th>Smoke</th><th>Probe</th></tr></thead><tbody data-tool-rows></tbody></table></div></section>
 			<section><h3>Clients déclarés via clientInfo</h3><div class="agent-table-wrap"><table><thead><tr><th>Famille</th><th>Initialisations</th></tr></thead><tbody data-client-rows></tbody></table></div></section>
+			<section class="agent-breakdown-table"><h3>Classe de trafic × tool × résultat × code d’erreur</h3><div class="agent-table-wrap"><table><thead><tr><th>Classe</th><th>Tool</th><th>Résultat</th><th>Code d’erreur</th><th>Appels</th></tr></thead><tbody data-outcome-rows></tbody></table></div></section>
 			<section><h3>Produits les plus demandés</h3><div class="agent-table-wrap"><table><thead><tr><th>Produit</th><th>Demandes</th></tr></thead><tbody data-product-rows></tbody></table></div></section>
 			<section><h3>Compatibilités les plus demandées</h3><div class="agent-table-wrap"><table><thead><tr><th>Compresseur</th><th>Outil</th><th>Demandes</th></tr></thead><tbody data-compatibility-rows></tbody></table></div></section>
 		</div>
-		<p class="agent-method"><strong>Ce qui est mesuré.</strong> Un « appelant » est une estimation issue d’un préfixe réseau tronqué et d’une famille d’agent utilisateur, protégés par HMAC. Ce n’est ni une personne identifiée ni un compte. Les produits et couples ne sont publiés qu’à partir des sessions plausibles et au-dessus du seuil de cohorte. Les verdicts <code>air_supply</code> et <code>complete_air_system</code> sont comptés séparément dans le JSON source. <a href="/confidentialite/">Lire le cadre de confidentialité</a>.</p>
+		<p class="agent-method"><strong>Ce qui est mesuré.</strong> Un « appelant » est une estimation issue d’un préfixe réseau tronqué et d’une famille d’agent utilisateur, protégés par HMAC. Ce n’est ni une personne identifiée ni un compte. Les produits et couples ne sont publiés qu’à partir des sessions plausibles et au-dessus du seuil de cohorte. Le croisement classe × tool × résultat × erreur est exact pour les appels enregistrés depuis le schéma 2.1.0 ; l’historique antérieur reste explicitement non classé. Les verdicts <code>air_supply</code> et <code>complete_air_system</code> sont comptés séparément dans le JSON source. <a href="/confidentialite/">Lire le cadre de confidentialité</a>.</p>
 	</section>
 
 	<section class="agent-dark" id="connexion">
@@ -87,6 +88,7 @@ const contracts = [
 	const status = document.querySelector<HTMLElement>('[data-stats-status]');
 	const toolRows = document.querySelector<HTMLTableSectionElement>('[data-tool-rows]');
 	const clientRows = document.querySelector<HTMLTableSectionElement>('[data-client-rows]');
+	const outcomeRows = document.querySelector<HTMLTableSectionElement>('[data-outcome-rows]');
 	const productRows = document.querySelector<HTMLTableSectionElement>('[data-product-rows]');
 	const compatibilityRows = document.querySelector<HTMLTableSectionElement>('[data-compatibility-rows]');
 	const formatCount = (value: unknown) => typeof value === 'number' ? new Intl.NumberFormat('fr-FR').format(value) : 'Masqué';
@@ -109,6 +111,10 @@ const contracts = [
 		for (const client of (report.clients ?? []).slice(0, 10)) {
 			const row = document.createElement('tr'); addCell(row, client.family); addCell(row, formatCount(client.initializations)); clientRows?.append(row);
 		}
+		for (const outcome of [...(report.tool_outcome_breakdown ?? [])].sort((left, right) => right.calls - left.calls).slice(0, 20)) {
+			const row = document.createElement('tr');
+			addCell(row, outcome.traffic_class); addCell(row, outcome.tool); addCell(row, outcome.outcome); addCell(row, outcome.error_code ?? 'Aucun'); addCell(row, formatCount(outcome.calls)); outcomeRows?.append(row);
+		}
 		for (const product of (report.products ?? []).slice(0, 10)) {
 			const row = document.createElement('tr'); addCell(row, product.label); addCell(row, formatCount(product.requests)); productRows?.append(row);
 		}
@@ -117,6 +123,7 @@ const contracts = [
 		}
 		if (toolRows && !toolRows.children.length) { const row = document.createElement('tr'); const cell = document.createElement('td'); cell.colSpan = 5; cell.textContent = 'Pas encore assez de données.'; row.append(cell); toolRows.append(row); }
 		if (clientRows && !clientRows.children.length) { const row = document.createElement('tr'); const cell = document.createElement('td'); cell.colSpan = 2; cell.textContent = 'Cohortes encore inférieures au seuil public.'; row.append(cell); clientRows.append(row); }
+		if (outcomeRows && !outcomeRows.children.length) { const row = document.createElement('tr'); const cell = document.createElement('td'); cell.colSpan = 5; cell.textContent = 'Aucun appel classé à ce stade.'; row.append(cell); outcomeRows.append(row); }
 		if (productRows && !productRows.children.length) { const row = document.createElement('tr'); const cell = document.createElement('td'); cell.colSpan = 2; cell.textContent = 'Cohortes encore inférieures au seuil public.'; row.append(cell); productRows.append(row); }
 		if (compatibilityRows && !compatibilityRows.children.length) { const row = document.createElement('tr'); const cell = document.createElement('td'); cell.colSpan = 3; cell.textContent = 'Cohortes encore inférieures au seuil public.'; row.append(cell); compatibilityRows.append(row); }
 		if (status) status.textContent = report.updated_at ? `Rapport mis à jour le ${new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeStyle: 'short' }).format(new Date(report.updated_at))}.` : 'Instrumentation active, aucun appel agrégé à ce stade.';
@@ -146,6 +153,7 @@ const contracts = [
 	.agent-stats-status { color: var(--muted); font-size: .8rem; }
 	.agent-tables, .agent-code-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
 	.agent-tables > section { min-width: 0; padding: 1.25rem; border: 1px solid var(--line); background: var(--panel); }
+	.agent-tables > .agent-breakdown-table { grid-column: 1 / -1; }
 	.agent-tables h3 { margin-top: 0; }
 	.agent-table-wrap { overflow-x: auto; }
 	.agent-table-wrap table { width: 100%; border-collapse: collapse; font-size: .78rem; }

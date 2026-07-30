@@ -56,6 +56,40 @@ const glossaryLinkRequirements = new Map([
 	['methodologie/index.html', ['/glossaire/#debit-restitue', '/glossaire/#debit-aspire', '/glossaire/#interpolation', '/glossaire/#fad']],
 	['sources-fiabilite/index.html', ['/glossaire/#debit-restitue', '/glossaire/#debit-aspire', '/glossaire/#interpolation']],
 ]);
+const searchOpportunityMetadata = new Map([
+	['index.html', {
+		title: 'CompatAir : quel compresseur pour vos outils ?',
+		description: 'Vérifiez si un compresseur peut alimenter vos outils pneumatiques : débit restitué (FAD), pression, sources constructeur et données manquantes visibles.',
+	}],
+	['calculateur/index.html', {
+		title: 'Calculateur compresseur : débit FAD et outils | CompatAir',
+		description: 'Sélectionnez vos outils et votre compresseur pour vérifier le débit restitué, la pression et la marge. Toute donnée technique manquante reste explicitement indéterminée.',
+	}],
+	['guides/index.html', {
+		title: 'Guides compresseur et outils pneumatiques | CompatAir',
+		description: 'Choisissez et utilisez un compresseur avec des guides sourcés sur le débit FAD, la cuve, le flexible, le bruit et les besoins des outils pneumatiques.',
+	}],
+	['methodologie/index.html', {
+		title: 'Méthode de calcul compresseur-outil | CompatAir',
+		description: 'Découvrez comment CompatAir compare le besoin d’un outil au débit FAD d’un compresseur : sources constructeur, calcul reproductible et limites explicites.',
+	}],
+	['guides/compresseur-pour-agrafeuse-cloueuse-pneumatique/index.html', {
+		title: 'Compresseur pour cloueuse pneumatique : calcul | CompatAir',
+		description: 'Calculez le débit d’une agrafeuse-cloueuse à partir des litres par tir et de votre cadence, puis vérifiez le FAD du compresseur à 6,3 bar.',
+	}],
+	['guides/bruit-compresseur-lire-decibels/index.html', {
+		title: 'Bruit d’un compresseur : comparer les dB | CompatAir',
+		description: 'Comparez le bruit de deux compresseurs sans confondre LpA et LwA : indicateur, distance, protocole et limites des mentions « Silent ».',
+	}],
+	['guides/debit-restitue-fad-vs-debit-aspire/index.html', {
+		title: 'Débit FAD ou débit aspiré : lequel comparer ? | CompatAir',
+		description: 'FAD, débit aspiré et débit de remplissage ne mesurent pas la même chose. Identifiez le chiffre à comparer au besoin de votre outil et à quelle pression.',
+	}],
+	['compresseurs/parkside-psko-248-b1/index.html', {
+		title: 'Parkside PSKO 248 B1 : débit FAD et bruit | CompatAir',
+		description: 'Parkside PSKO 248 B1 : FAD 149 L/min à 1 bar, 117 à 4 bar et 85 à 7 bar, cuve 24 L, 71,9 dB(A) LpA et sources officielles.',
+	}],
+]);
 const datasetDistributionRequirements = new Map([
 	['barometre-transparence/index.html', ['/data/transparency-barometer.json', '/data/transparency-barometer.csv']],
 	['observatoire-qualite-documentaire/index.html', ['/data/document-quality-observatory.json', '/data/document-quality-observatory.csv']],
@@ -706,6 +740,11 @@ for (const file of htmlFiles) {
 	if (!description) errors.push(`${label}: description absente`);
 	else if (descriptions.has(description)) errors.push(`${label}: description dupliquée avec ${descriptions.get(description)}`);
 	else descriptions.set(description, label);
+	const expectedSearchMetadata = searchOpportunityMetadata.get(label);
+	if (expectedSearchMetadata) {
+		if (decodeXml(title ?? '') !== expectedSearchMetadata.title) errors.push(`${label}: title de l’opportunité Search Console inattendu`);
+		if (decodeXml(description ?? '') !== expectedSearchMetadata.description) errors.push(`${label}: description de l’opportunité Search Console inattendue`);
+	}
 	if ((html.match(/<h1(?:\s|>)/g) ?? []).length !== 1) errors.push(`${label}: un H1 exactement est requis`);
 	if (!canonical) errors.push(`${label}: canonical absent`);
 	else {

@@ -1,6 +1,7 @@
 ---
 title: "Débit restitué FAD ou débit aspiré : le chiffre qui dimensionne vraiment un compresseur"
-description: "Le débit aspiré décrit l’entrée de la pompe. Le FAD mesure l’air réellement disponible : voici comment lire une fiche sans surévaluer un compresseur."
+seoTitle: "Débit FAD ou débit aspiré : lequel comparer ? | CompatAir"
+description: "FAD, débit aspiré et débit de remplissage ne mesurent pas la même chose. Identifiez le chiffre à comparer au besoin de votre outil et à quelle pression."
 pubDate: 2026-07-13
 category: Comprendre
 audiences: [particulier, professionnel]
