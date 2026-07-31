@@ -8,6 +8,7 @@ import { toolDemandLabel, toolPressureLabel } from '../../domain/tool-demand';
 import { activeOffers, merchants } from '../../data/offers';
 import { latestEvidenceDate } from '../../domain/provenance';
 import { offerJsonLd } from '../../domain/product-structured-data';
+import { brandSlug } from '../../domain/brand';
 import { compressorDisplayName } from '../../domain/product-display';
 import { createCompressorCompatibilitySummary } from '../../domain/seo-selection';
 import { serializeJsonLd } from '../../domain/structured-data';
@@ -57,11 +58,15 @@ const productJsonLd = productOffers.length ? {
 	imageAlt="Catalogue des compresseurs documentés par CompatAir"
 	preloadImagePath={compressor.image.src}
 	modifiedDate={new Date(verifiedAt)}
-	breadcrumbs={[{ name: 'Compresseurs', path: '/compresseurs/' }, { name: displayName, path: `/compresseurs/${compressor.slug}/` }]}
+	breadcrumbs={[
+		{ name: 'Compresseurs', path: '/compresseurs/' },
+		{ name: compressor.brand, path: `/marques/${brandSlug(compressor.brand)}/` },
+		{ name: displayName, path: `/compresseurs/${compressor.slug}/` },
+	]}
 >
 	{productJsonLd && <script is:inline type="application/ld+json" set:html={serializeJsonLd(productJsonLd)} />}
 	<article class="container product-detail" data-product-brand={compressor.brand} data-product-model={compressor.model} data-product-mpn={compressor.mpn ?? ''}>
-		<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/compresseurs/">Compresseurs</a><span>/</span><span>{displayName}</span></nav>
+		<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/compresseurs/">Compresseurs</a><span>/</span><a data-product-brand-link href={`/marques/${brandSlug(compressor.brand)}/`}>{compressor.brand}</a><span>/</span><span>{displayName}</span></nav>
 		<ProductDecisionHero
 			kind="Compresseur"
 			eyebrow="Débit, pression et usages vérifiés"

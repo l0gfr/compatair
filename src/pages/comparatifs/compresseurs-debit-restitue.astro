@@ -1,27 +1,111 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CatalogSignalVisual from '../../components/CatalogSignalVisual.astro';
-import DirectoryBrowser from '../../components/DirectoryBrowser.astro';
 import { compressors, tools } from '../../data/catalog';
+import { brandSlug } from '../../domain/brand';
 import { getCatalogMetrics } from '../../domain/catalog-insights';
 import { compressorDisplayName } from '../../domain/product-display';
+import { serializeJsonLd } from '../../domain/structured-data';
 import { sourceQualityLabel } from '../../domain/source-quality';
 
 const documented = compressors.filter((item) => item.fadCurve.length > 0);
 const incomplete = compressors.filter((item) => item.fadCurve.length === 0);
 const metrics = getCatalogMetrics(compressors, tools);
+const brandGroups = [...new Set(compressors.map((item) => item.brand))]
+	.sort((left, right) => left.localeCompare(right, 'fr'))
+	.map((brand) => {
+		const items = compressors.filter((item) => item.brand === brand);
+		return {
+			brand,
+			count: items.length,
+			documented: items.filter((item) => item.fadCurve.length > 0).length,
+			multiplePoints: items.filter((item) => item.fadCurve.length > 1).length,
+		};
+	});
+const brandListJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'ItemList',
+	name: 'Comparatifs de débit restitué par marque',
+	itemListElement: brandGroups.map((group, index) => ({
+		'@type': 'ListItem',
+		position: index + 1,
+		name: `Débit restitué des compresseurs ${group.brand}`,
+		url: `https://compatair.fr/comparatifs/compresseurs-debit-restitue/marque/${brandSlug(group.brand)}/`,
+	})),
+};
 ---
 
-<BaseLayout title="Comparatif des compresseurs par débit restitué | CompatAir" description={`Tableau recherché et paginé des débits réellement restitués publiés pour ${compressors.length} compresseurs, avec pression et qualité documentaire.`} breadcrumbs={[{ name: 'Comparatifs', path: '/comparatifs/' }, { name: 'Débit restitué', path: '/comparatifs/compresseurs-debit-restitue/' }]}>
-	<article class="fad-comparison-page" data-comparison-directory>
-		<section class="page-hero compact catalog-hero"><div class="container catalog-hero-grid"><div><p class="product-decision-index">Comparatif documentaire / FAD</p><p class="eyebrow">Débit réellement disponible</p><h1>Comparer les compresseurs sans perdre la pression de vue</h1><p class="lead">Deux débits ne sont comparables que si leur pression est indiquée. Recherchez un modèle, triez les points publiés et ouvrez sa fiche pour remonter à la source.</p><div class="hero-actions"><a class="button primary" href="/comparateur/">Comparer deux ou trois modèles</a><a class="button" href="/guides/debit-restitue-fad-vs-debit-aspire/">Comprendre le FAD</a></div></div><CatalogSignalVisual mode="comparison" count={documented.length} secondaryCount={incomplete.length} title="compresseurs avec FAD" /></div></section>
-		<section class="catalog-summary-band"><div class="container"><div><strong>{metrics.fadDocumentation.multiplePoints}</strong><span>plusieurs points FAD</span></div><div><strong>{metrics.fadDocumentation.singlePoint}</strong><span>un point FAD</span></div><div><strong>{metrics.fadDocumentation.withoutPoint}</strong><span>non classables</span></div><div><strong>{metrics.fixedFlowToolCount}</strong><span>outils calculables</span></div></div></section>
+<BaseLayout
+	title="Comparatif des compresseurs par débit restitué | CompatAir"
+	description={`Comparez le débit réellement restitué de ${compressors.length} compresseurs dans des tableaux par marque, avec pression, source et données non classables visibles.`}
+	breadcrumbs={[{ name: 'Comparatifs', path: '/comparatifs/' }, { name: 'Débit restitué', path: '/comparatifs/compresseurs-debit-restitue/' }]}
+>
+	<script is:inline type="application/ld+json" set:html={serializeJsonLd(brandListJsonLd)} />
+	<article class="fad-comparison-page" data-comparison-directory data-directory-hub="fad-by-brand">
+		<section class="page-hero compact catalog-hero">
+			<div class="container catalog-hero-grid">
+				<div>
+					<p class="product-decision-index">Comparatif documentaire / FAD</p>
+					<p class="eyebrow">Débit réellement disponible</p>
+					<h1>Comparer les compresseurs sans perdre la pression de vue</h1>
+					<p class="lead">Deux débits ne sont comparables que si leur pression est indiquée. Choisissez une marque pour ouvrir son tableau de points publiés et remonter à chaque fiche source.</p>
+					<div class="hero-actions"><a class="button primary" href="/comparateur/">Comparer deux ou trois modèles</a><a class="button" href="/guides/debit-restitue-fad-vs-debit-aspire/">Comprendre le FAD</a></div>
+				</div>
+				<CatalogSignalVisual mode="comparison" count={documented.length} secondaryCount={incomplete.length} title="compresseurs avec FAD" />
+			</div>
+		</section>
 
-		<section class="section" data-directory-browser data-page-size="18"><div class="container"><header class="product-section-head"><div><p class="product-decision-index">01 / Points documentés</p><h2>{documented.length} compresseurs avec un débit exploitable</h2></div><p>Le tri utilise les valeurs publiées. Il ne ramène pas artificiellement tous les débits à une pression commune.</p></header><div class="directory-controls"><div class="field directory-search"><label for="fad-search">Marque, modèle ou référence</label><input id="fad-search" type="search" placeholder="Ex. ABAC ou 601532000" data-directory-search /></div><div class="field"><label for="fad-sort">Trier</label><select id="fad-sort" data-directory-sort><option value="confidence">Qualité des données</option><option value="primary-asc">Débit maximal croissant</option><option value="primary-desc">Débit maximal décroissant</option><option value="name">Nom</option></select></div><button class="inline-action" type="button" data-directory-reset>Réinitialiser</button></div><p class="directory-count" data-directory-count>{documented.length} résultats</p><div class="compare-table-wrap"><table class="compare-table"><thead><tr><th>Modèle</th><th>Cuve</th><th>Pression maximale</th><th>Débit réellement restitué</th><th>Qualité des données</th></tr></thead><tbody data-directory-grid>{documented.map((item) => <tr data-directory-card data-search={`${item.brand} ${item.model} ${item.mpn ?? ''} ${item.ean ?? ''} ${item.gtin ?? ''}`} data-sort-name={compressorDisplayName(item)} data-sort-confidence={item.confidence} data-sort-primary={Math.max(...item.fadCurve.map((point) => point.litersPerMinute))}><th><a href={`/compresseurs/${item.slug}/`}>{compressorDisplayName(item)}</a></th><td>{item.tankLiters} L</td><td>{item.maxPressureBar} bar</td><td>{item.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ')}</td><td>{sourceQualityLabel(item.confidence)}<small>Grade {item.confidence}</small></td></tr>)}</tbody></table></div><nav class="catalog-pagination" aria-label="Pagination des compresseurs avec FAD" data-directory-pagination></nav></div></section>
+		<section class="catalog-summary-band">
+			<div class="container">
+				<div><strong>{metrics.fadDocumentation.multiplePoints}</strong><span>plusieurs points FAD</span></div>
+				<div><strong>{metrics.fadDocumentation.singlePoint}</strong><span>un point FAD</span></div>
+				<div><strong>{metrics.fadDocumentation.withoutPoint}</strong><span>non classables</span></div>
+				<div><strong>{brandGroups.length}</strong><span>tableaux par marque</span></div>
+			</div>
+		</section>
 
-		<section class="section incomplete-reference-section"><div class="container"><header class="product-section-head"><div><p class="product-decision-index">02 / Non classables</p><h2>{incomplete.length} référence{incomplete.length > 1 ? 's' : ''} sans débit restitué exploitable</h2></div><p>Ces modèles ne sont pas replacés dans le classement à partir du débit aspiré.</p></header><div class="incomplete-reference-grid">{incomplete.map((item) => <a href={`/compresseurs/${item.slug}/`}><span>{item.brand}</span><strong>{compressorDisplayName(item)}</strong><small>{sourceQualityLabel(item.confidence)} · donnée FAD manquante</small></a>)}</div></div></section>
+		<section class="section catalog-directory">
+			<div class="container">
+				<header class="product-section-head">
+					<div><p class="product-decision-index">01 / Tableaux comparables</p><h2>Ouvrir le débit restitué par fabricant</h2></div>
+					<p>Chaque tableau conserve les pressions d’origine. Aucun débit n’est ramené artificiellement à une pression commune et le débit aspiré ne remplace jamais le FAD.</p>
+				</header>
+				<div class="hub-intent-grid">
+					{brandGroups.map((group, index) => (
+						<a href={`/comparatifs/compresseurs-debit-restitue/marque/${brandSlug(group.brand)}/`}>
+							<span class="hub-intent-index">{String(index + 1).padStart(2, '0')}</span>
+							<p>{group.documented}/{group.count} avec FAD</p>
+							<h3>{group.brand}</h3>
+							<small>{group.count} compresseur{group.count > 1 ? 's' : ''} dans le corpus · {group.multiplePoints} référence{group.multiplePoints > 1 ? 's' : ''} avec plusieurs pressions publiées.</small>
+							<strong>Ouvrir le tableau →</strong>
+						</a>
+					))}
+				</div>
+			</div>
+		</section>
 
-		<section class="section tool-verdict-directory" data-directory-browser data-page-size="18"><div class="container"><header class="product-section-head"><div><p class="product-decision-index">03 / Par outil</p><h2>Lire la couverture de chaque besoin publié</h2></div><p>Cette table résume les verdicts du corpus. La page d’usage conserve seulement quelques exemples représentatifs.</p></header><div class="directory-controls"><div class="field directory-search"><label for="tool-verdict-search">Outil ou catégorie</label><input id="tool-verdict-search" type="search" data-directory-search /></div><div class="field"><label for="tool-verdict-sort">Trier</label><select id="tool-verdict-sort" data-directory-sort><option value="primary-desc">Compatibles en continu</option><option value="primary-asc">Moins de compatibles</option><option value="name">Nom</option></select></div><button class="inline-action" type="button" data-directory-reset>Réinitialiser</button></div><p class="directory-count" data-directory-count>{metrics.toolVerdicts.length} résultats</p><div class="compare-table-wrap"><table class="compare-table"><thead><tr><th>Outil</th><th>Compatibles en continu</th><th>Incompatibles</th><th>Données insuffisantes</th><th>Décisions calculables</th></tr></thead><tbody data-directory-grid>{metrics.toolVerdicts.map((summary) => <tr data-directory-card data-search={`${summary.tool.label} ${summary.tool.category}`} data-sort-name={summary.tool.label} data-sort-confidence="A" data-sort-primary={summary.continuous}><th><a href={`/quel-compresseur-pour/${summary.tool.slug}/`}>{summary.tool.label}</a></th><td>{summary.continuous}</td><td>{summary.incompatible}</td><td>{summary.insufficientData}</td><td>{summary.verdictable}</td></tr>)}</tbody></table></div><nav class="catalog-pagination" aria-label="Pagination de la couverture par outil" data-directory-pagination></nav><p class="comparison-editorial-link">Le <a href="/guides/comparatif-compresseurs-debit-restitue/">dossier éditorial complet</a> explique les limites de chaque comparaison.</p></div></section>
-		<DirectoryBrowser />
+		{incomplete.length > 0 && (
+			<section class="section incomplete-reference-section">
+				<div class="container">
+					<header class="product-section-head">
+						<div><p class="product-decision-index">02 / Non classables</p><h2>{incomplete.length} référence{incomplete.length > 1 ? 's' : ''} sans débit restitué exploitable</h2></div>
+						<p>Ces modèles restent publiés avec leur lacune au lieu d’être replacés dans le classement à partir du débit aspiré.</p>
+					</header>
+					<div class="incomplete-reference-grid">
+						{incomplete.map((item) => <a href={`/compresseurs/${item.slug}/`}><span>{item.brand}</span><strong>{compressorDisplayName(item)}</strong><small>{sourceQualityLabel(item.confidence)} · donnée FAD manquante</small></a>)}
+					</div>
+				</div>
+			</section>
+		)}
+
+		<section class="section tool-verdict-directory">
+			<div class="container">
+				<header class="product-section-head">
+					<div><p class="product-decision-index">03 / Passer au besoin réel</p><h2>Le tableau ne remplace pas le calcul de compatibilité</h2></div>
+					<p>Le débit FAD classe une documentation. Le verdict dépend aussi de la pression et de la consommation de l’outil choisi.</p>
+				</header>
+				<div class="actions"><a class="button primary" href="/outils-pneumatiques/">Choisir un outil par usage</a><a class="button" href="/guides/comparatif-compresseurs-debit-restitue/">Lire le dossier éditorial</a></div>
+			</div>
+		</section>
 	</article>
 </BaseLayout>

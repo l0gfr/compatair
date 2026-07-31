@@ -113,12 +113,16 @@ export function createSitemapLastmodResolver({ root = process.cwd(), gitDate } =
 			sources.add(`src/data/products/compressors/${match[1]}.ts`);
 			sources.add('src/data/catalog.ts');
 		}
-		match = pathname.match(/^\/outils-pneumatiques\/([^/]+)\/$/);
-		if (match) {
-			sources.add('src/pages/outils-pneumatiques/[slug].astro');
-			sources.add(`src/data/products/tools/${match[1]}.ts`);
-			sources.add('src/data/catalog.ts');
-		}
+			match = pathname.match(/^\/outils-pneumatiques\/([^/]+)\/$/);
+			if (match) {
+				sources.add('src/pages/outils-pneumatiques/[slug].astro');
+				sources.add(`src/data/products/tools/${match[1]}.ts`);
+				sources.add('src/data/catalog.ts');
+			}
+			if (pathname.startsWith('/outils-pneumatiques/usages/')) {
+				sources.add('src/pages/outils-pneumatiques/usages/[usage].astro');
+				sources.add('src/data/taxonomy.ts');
+			}
 		match = pathname.match(/^\/quel-compresseur-pour\/([^/]+)\/$/);
 		if (match) {
 			sources.add('src/pages/quel-compresseur-pour/[slug].astro');
@@ -140,7 +144,7 @@ export function createSitemapLastmodResolver({ root = process.cwd(), gitDate } =
 			sources.add('src/pages/guides/metiers/[metier].astro');
 			for (const source of guideContentSources) sources.add(source);
 		}
-		if (catalogDrivenPaths.has(pathname) || pathname === '/sources-fiabilite/' || pathname.startsWith('/preuves/page/') || pathname.startsWith('/sources-fiabilite/page/') || pathname.startsWith('/comparatifs/') || pathname.startsWith('/marques/')) {
+			if (catalogDrivenPaths.has(pathname) || pathname === '/sources-fiabilite/' || pathname.startsWith('/preuves/page/') || pathname.startsWith('/sources-fiabilite/page/') || pathname.startsWith('/comparatifs/') || pathname.startsWith('/marques/') || pathname.startsWith('/outils-pneumatiques/usages/')) {
 			for (const source of catalogSources) sources.add(source);
 		}
 

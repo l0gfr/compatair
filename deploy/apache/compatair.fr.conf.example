@@ -13,6 +13,7 @@
     CustomLog ${APACHE_LOG_DIR}/compatair-access.log combined
 
     RewriteEngine On
+    RewriteRule ^/(?:sitemap\.xml|sitemap_index\.xml)$ https://compatair.fr/sitemap-index.xml [R=301,L,NE]
     RewriteCond %{REQUEST_URI} !^/.well-known/acme-challenge/
     RewriteRule ^ https://compatair.fr%{REQUEST_URI} [R=301,L,NE]
 
@@ -40,6 +41,7 @@
 	</IfModule>
 
     RewriteEngine On
+    RewriteRule ^/(?:sitemap\.xml|sitemap_index\.xml)$ https://compatair.fr/sitemap-index.xml [R=301,L,NE]
     RewriteCond %{HTTP_HOST} !^compatair\.fr$ [NC]
     RewriteRule ^ https://compatair.fr%{REQUEST_URI} [R=301,L,NE]
 

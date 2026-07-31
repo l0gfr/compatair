@@ -6,6 +6,7 @@ import { evidenceHistoryProductHref } from '../../data/evidence-history-director
 import { activeOffers } from '../../data/offers';
 import { productSeoTitle } from '../../data/product-seo-titles';
 import { toolGuidePath } from '../../data/tool-guide-links';
+import { brandSlug } from '../../domain/brand';
 import { compressorDisplayName } from '../../domain/product-display';
 import { createToolCompatibilitySummary } from '../../domain/seo-selection';
 import { isFixedFlowTool, toolDemandLabel, toolPressureLabel } from '../../domain/tool-demand';
@@ -38,10 +39,14 @@ const verifiedDateLabel = verifiedAt.split('-').reverse().join('/');
 	imageAlt="Catalogue des outils pneumatiques documentés par CompatAir"
 	preloadImagePath={tool.image.src}
 	modifiedDate={new Date(verifiedAt)}
-	breadcrumbs={[{ name: 'Outils pneumatiques', path: '/outils-pneumatiques/' }, { name: tool.label, path: `/outils-pneumatiques/${tool.slug}/` }]}
+	breadcrumbs={[
+		{ name: 'Outils pneumatiques', path: '/outils-pneumatiques/' },
+		{ name: tool.brand, path: `/marques/${brandSlug(tool.brand)}/` },
+		{ name: tool.label, path: `/outils-pneumatiques/${tool.slug}/` },
+	]}
 >
-	<article class="container product-detail">
-		<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/outils-pneumatiques/">Outils pneumatiques</a><span>/</span><span>{tool.label}</span></nav>
+	<article class="container product-detail" data-product-brand={tool.brand}>
+		<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/outils-pneumatiques/">Outils pneumatiques</a><span>/</span><a data-product-brand-link href={`/marques/${brandSlug(tool.brand)}/`}>{tool.brand}</a><span>/</span><span>{tool.label}</span></nav>
 		<ProductDecisionHero
 			kind="Outil pneumatique"
 			eyebrow="Besoin en air et pression vérifiés"

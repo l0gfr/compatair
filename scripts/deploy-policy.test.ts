@@ -88,6 +88,13 @@ describe('release boundary policy', () => {
 		expect(workflow).toContain('install -m 644 server/*.mjs dist/_server/');
 	});
 
+	it('redirects legacy sitemap aliases to the generated sitemap index', () => {
+		const redirect = 'RewriteRule ^/(?:sitemap\\.xml|sitemap_index\\.xml)$ https://compatair.fr/sitemap-index.xml [R=301,L,NE]';
+		expect(apache.split(redirect).length - 1).toBe(2);
+		expect(liveSmoke).toContain("for (const alias of ['/sitemap.xml', '/sitemap_index.xml'])");
+		expect(liveSmoke).toContain("'https://compatair.fr/sitemap-index.xml'");
+	});
+
 	it('proves the homepage video contract before accepting a release', () => {
 		expect(liveSmoke).toContain('<video data-home-video controls');
 		expect(liveSmoke).toContain('data-home-video-launch');

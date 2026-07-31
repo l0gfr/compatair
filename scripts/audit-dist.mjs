@@ -3,6 +3,8 @@ import { lstat, readdir, readFile } from 'node:fs/promises';
 import { basename, join, relative, resolve } from 'node:path';
 import { gzipSync } from 'node:zlib';
 import { readImageDimensions } from '../src/domain/image-dimensions.ts';
+import { toolUsageTaxonomy } from '../src/data/taxonomy.ts';
+import { brandSlug } from '../src/domain/brand.ts';
 import { parseJavaScriptModuleSpecifiers } from './lib/javascript-module-graph.mjs';
 
 const root = resolve('dist');
@@ -18,8 +20,8 @@ const maximumPassportInitialScriptBytesGzip = 45 * 1024;
 const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
 const maximumRuntimeCatalogBytesGzip = 32 * 1024;
 const maximumSearchIndexBytesGzip = 64 * 1024;
-const maximumEditorialProductInternalLinksBeforeWarning = 100;
-const maximumEditorialProductInternalLinks = 120;
+const maximumIndexableInternalDestinationsBeforeWarning = 100;
+const maximumIndexableInternalDestinations = 120;
 const maximumStaticCompatibilityResultsBySection = new Map([
 	['compresseurs', 8],
 	['outils-pneumatiques', 5],
@@ -149,6 +151,11 @@ async function walk(directory) {
 
 function decodeXml(value) {
 	return value.replaceAll('&amp;', '&').replaceAll('&lt;', '<').replaceAll('&gt;', '>').replaceAll('&quot;', '"').replaceAll('&apos;', "'");
+}
+
+function normalizeInternalDestination(pathname) {
+	if (pathname === '/' || pathname.endsWith('/') || /\.[a-z0-9]+$/i.test(pathname)) return pathname;
+	return `${pathname}/`;
 }
 
 function jsonLdNodes(value) {
@@ -649,10 +656,10 @@ for (const [path, markers] of discoveryHubs) {
 }
 
 const decisionDirectoryPages = new Map([
-	['/compresseurs/index.html', ['data-filter-search', 'data-pagination']],
-	['/outils-pneumatiques/index.html', ['data-directory-browser', 'data-directory-pagination']],
+	['/compresseurs/index.html', ['data-directory-hub="compressors-by-brand"']],
+	['/outils-pneumatiques/index.html', ['data-directory-hub="tools-by-usage"']],
 	['/marques/index.html', ['data-directory-browser', 'data-directory-pagination']],
-	['/comparatifs/compresseurs-debit-restitue/index.html', ['data-comparison-directory', 'data-directory-pagination']],
+	['/comparatifs/compresseurs-debit-restitue/index.html', ['data-comparison-directory', 'data-directory-hub="fad-by-brand"']],
 ]);
 for (const [path, markers] of decisionDirectoryPages) {
 	if (!artifactPaths.has(path)) errors.push(`catalogue décisionnel: page rendue absente ${path}`);
@@ -660,6 +667,32 @@ for (const [path, markers] of decisionDirectoryPages) {
 		const html = await readFile(join(root, path), 'utf8');
 		for (const marker of markers) if (!html.includes(marker)) errors.push(`catalogue décisionnel ${path}: marqueur absent ${marker}`);
 	}
+}
+
+const renderedCatalog = JSON.parse(await readFile(join(root, '/data/catalog.json'), 'utf8'));
+const toolDirectoryHtml = await readFile(join(root, '/outils-pneumatiques/index.html'), 'utf8');
+for (const usage of toolUsageTaxonomy) {
+	const usageCount = (renderedCatalog.tools ?? []).filter((tool) => usage.categoryIds.includes(tool.categoryId)).length;
+	if (usageCount === 0) continue;
+	const path = `/outils-pneumatiques/usages/${usage.id}/`;
+	if (!sitePaths.has(path)) errors.push(`architecture outils: répertoire d’usage absent ${path}`);
+	else {
+		const html = await readFile(join(root, `${path}index.html`), 'utf8');
+		if (!html.includes(`data-tool-usage-hub="${usage.id}"`)) errors.push(`architecture outils: marqueur d’usage absent ${path}`);
+	}
+	if (!toolDirectoryHtml.includes(`href="${path}"`)) errors.push(`architecture outils: usage non relié depuis le hub ${path}`);
+}
+
+const fadDirectoryHtml = await readFile(join(root, '/comparatifs/compresseurs-debit-restitue/index.html'), 'utf8');
+const compressorBrands = [...new Set((renderedCatalog.compressors ?? []).map((compressor) => compressor.brand))];
+for (const brand of compressorBrands) {
+	const path = `/comparatifs/compresseurs-debit-restitue/marque/${brandSlug(brand)}/`;
+	if (!sitePaths.has(path)) errors.push(`architecture FAD: tableau de marque absent ${path}`);
+	else {
+		const html = await readFile(join(root, `${path}index.html`), 'utf8');
+		if (!html.includes(`data-fad-brand-directory="${brandSlug(brand)}"`)) errors.push(`architecture FAD: marqueur de tableau absent ${path}`);
+	}
+	if (!fadDirectoryHtml.includes(`href="${path}"`)) errors.push(`architecture FAD: marque non reliée depuis le hub ${path}`);
 }
 
 for (const file of htmlFiles) {
@@ -697,11 +730,14 @@ for (const file of htmlFiles) {
 			compressorIdentityPages.set(identityKey, siblings);
 		}
 	}
-	if (/^(compresseurs|outils-pneumatiques)\/[^/]+\/index\.html$/.test(label)) {
-		if (!html.includes('data-product-answer')) errors.push(`${label}: synthèse produit answer-first absente`);
-		if (!html.includes('data-product-decision-hero')) errors.push(`${label}: héros décisionnel produit absent`);
-		if (!html.includes('data-product-decision')) errors.push(`${label}: réponse produit immédiate absente`);
-	}
+		if (/^(compresseurs|outils-pneumatiques)\/[^/]+\/index\.html$/.test(label)) {
+			if (!html.includes('data-product-answer')) errors.push(`${label}: synthèse produit answer-first absente`);
+			if (!html.includes('data-product-decision-hero')) errors.push(`${label}: héros décisionnel produit absent`);
+			if (!html.includes('data-product-decision')) errors.push(`${label}: réponse produit immédiate absente`);
+			const productBrand = decodeXml(html.match(/data-product-brand="([^"]+)"/)?.[1] ?? '');
+			const expectedBrandPath = productBrand ? `/marques/${brandSlug(productBrand)}/` : '';
+			if (!expectedBrandPath || !html.includes(`data-product-brand-link href="${expectedBrandPath}"`)) errors.push(`${label}: lien vers la page marque absent`);
+		}
 	if (/^compresseurs\/[^/]+\/index\.html$/.test(label) && !html.includes('data-static-compatibility-results')) errors.push(`${label}: compteur de résultats statiques requis par le smoke live absent`);
 	if (/^quel-compresseur-pour\/[^/]+\/index\.html$/.test(label) && !html.includes('data-use-decision-page')) errors.push(`${label}: page d’usage décisionnelle absente`);
 	if (html.includes('data-search-index=')) errors.push(`${label}: index de recherche dupliqué dans le HTML`);
@@ -803,17 +839,18 @@ for (const file of htmlFiles) {
 	}
 
 	const sourcePath = label === 'index.html' ? '/' : `/${label.replace(/index\.html$/, '')}`;
-	let internalLinkCount = 0;
-	for (const match of html.matchAll(/<a\s+[^>]*href="([^"]+)"/g)) {
-		let target;
-		try { target = new URL(decodeXml(match[1]), siteOrigin); } catch { continue; }
-		if (target.origin !== siteOrigin) continue;
-		internalLinkCount += 1;
-		if (['/calculateur/', '/graphe-preuve/'].includes(target.pathname) && target.search) errors.push(`${label}: lien de préremplissage bloqué par robots.txt ${match[1]}`);
-		if (!noindex && indexablePaths.has(sourcePath) && target.pathname !== sourcePath && incomingIndexableLinks.has(target.pathname)) incomingIndexableLinks.set(target.pathname, incomingIndexableLinks.get(target.pathname) + 1);
-	}
-	if (isEditorialProductPage && internalLinkCount > maximumEditorialProductInternalLinks) errors.push(`${label}: ${internalLinkCount} liens internes, plafond ${maximumEditorialProductInternalLinks} dépassé`);
-	else if (isEditorialProductPage && internalLinkCount > maximumEditorialProductInternalLinksBeforeWarning) warnings.push(`${label}: ${internalLinkCount} liens internes, seuil d’alerte ${maximumEditorialProductInternalLinksBeforeWarning} dépassé`);
+		const internalDestinations = new Set();
+		for (const match of html.matchAll(/<a\s+[^>]*href="([^"]+)"/g)) {
+			let target;
+			try { target = new URL(decodeXml(match[1]), siteOrigin); } catch { continue; }
+			if (target.origin !== siteOrigin) continue;
+			const targetPath = normalizeInternalDestination(target.pathname);
+			if (targetPath !== sourcePath) internalDestinations.add(targetPath);
+			if (['/calculateur/', '/graphe-preuve/'].includes(target.pathname) && target.search) errors.push(`${label}: lien de préremplissage bloqué par robots.txt ${match[1]}`);
+			if (!noindex && indexablePaths.has(sourcePath) && targetPath !== sourcePath && incomingIndexableLinks.has(targetPath)) incomingIndexableLinks.set(targetPath, incomingIndexableLinks.get(targetPath) + 1);
+		}
+		if (!noindex && indexablePaths.has(sourcePath) && internalDestinations.size > maximumIndexableInternalDestinations) errors.push(`${label}: ${internalDestinations.size} destinations internes uniques, plafond ${maximumIndexableInternalDestinations} dépassé`);
+		else if (!noindex && indexablePaths.has(sourcePath) && internalDestinations.size > maximumIndexableInternalDestinationsBeforeWarning) warnings.push(`${label}: ${internalDestinations.size} destinations internes uniques, seuil d’alerte ${maximumIndexableInternalDestinationsBeforeWarning} dépassé`);
 
 	for (const match of html.matchAll(/<a\s+([^>]*href="(\/go\/[^"]+)"[^>]*)>/g)) {
 		const attributes = match[1];

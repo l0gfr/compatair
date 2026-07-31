@@ -1,94 +1,85 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CatalogSignalVisual from '../../components/CatalogSignalVisual.astro';
-import ProductImage from '../../components/ProductImage.astro';
 import { compressors } from '../../data/catalog';
 import { brandSlug } from '../../domain/brand';
-import { compressorDisplayName } from '../../domain/product-display';
 import { serializeJsonLd } from '../../domain/structured-data';
-import { sourceQualityLabel } from '../../domain/source-quality';
-const brands = [...new Set(compressors.map((item) => item.brand))].sort();
+
+const brandGroups = [...new Set(compressors.map((item) => item.brand))]
+	.sort((left, right) => left.localeCompare(right, 'fr'))
+	.map((brand) => {
+		const items = compressors.filter((item) => item.brand === brand);
+		return {
+			brand,
+			count: items.length,
+			documentedFad: items.filter((item) => item.fadCurve.length > 0).length,
+			multipleFad: items.filter((item) => item.fadCurve.length > 1).length,
+			highConfidence: items.filter((item) => item.confidence === 'A' || item.confidence === 'B').length,
+		};
+	});
 const documentedFadCount = compressors.filter((item) => item.fadCurve.length > 0).length;
-const compressorListJsonLd = {
-	'@context': 'https://schema.org', '@type': 'ItemList', name: 'Compresseurs documentés par CompatAir',
-	itemListElement: compressors.map((compressor, index) => ({ '@type': 'ListItem', position: index + 1, name: compressorDisplayName(compressor), url: `https://compatair.fr/compresseurs/${compressor.slug}/` })),
+const brandListJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'ItemList',
+	name: 'Compresseurs documentés classés par fabricant',
+	itemListElement: brandGroups.map((group, index) => ({
+		'@type': 'ListItem',
+		position: index + 1,
+		name: `Compresseurs ${group.brand}`,
+		url: `https://compatair.fr/marques/${brandSlug(group.brand)}/`,
+	})),
 };
 ---
 
-<BaseLayout title="Compresseurs d’air vérifiés | CompatAir" description="Consultez le débit réellement restitué, la pression, la cuve et les données manquantes de chaque compresseur étudié par CompatAir." breadcrumbs={[{ name: 'Compresseurs', path: '/compresseurs/' }]}>
-	<script is:inline type="application/ld+json" set:html={serializeJsonLd(compressorListJsonLd)} />
-	<section class="page-hero compact catalog-hero"><div class="container catalog-hero-grid"><div><p class="product-decision-index">Catalogue technique / Compresseurs</p><p class="eyebrow">Débits réellement disponibles</p><h1>{compressors.length} compresseurs, classés par données utiles</h1><p class="lead">Cherchez une référence, filtrez les caractéristiques documentées et comparez le débit réellement restitué avec sa pression. Une fiche manquante reste visible comme telle.</p><div class="hero-actions"><a class="button primary" href="/calculateur/">Vérifier avec mes outils</a><a class="button" href="/comparateur/">Comparer deux ou trois modèles</a></div></div><CatalogSignalVisual mode="compressors" count={compressors.length} secondaryCount={brands.length} title="compresseurs documentés" /></div></section>
-	<section class="catalog-summary-band"><div class="container"><div><strong>{documentedFadCount}</strong><span>débits FAD documentés</span></div><div><strong>{compressors.length - documentedFadCount}</strong><span>références à compléter</span></div><div><strong>{brands.length}</strong><span>fabricants suivis</span></div><div><strong>0</strong><span>débit aspiré utilisé comme verdict</span></div></div></section>
-	<section class="section catalog-directory"><div class="container"><header class="product-section-head"><div><p class="product-decision-index">Explorer le corpus</p><h2>Rechercher un compresseur documenté</h2></div><p>Le tri par défaut place d’abord les sources les plus complètes. Les filtres ne transforment jamais une donnée absente en estimation.</p></header><div class="catalog-layout">
-		<aside class="catalog-filters" aria-label="Filtres du catalogue">
-			<header class="catalog-filter-head"><span>CA / Paramètres</span><h2>Affiner le corpus</h2><small>7 critères</small></header>
-			<div class="field"><label for="filter-search">Marque, modèle, MPN, EAN/GTIN ou SKU</label><input id="filter-search" type="search" placeholder="Ex. 601532000" data-filter-search /></div>
-			<div class="field"><label for="filter-brand">Marque</label><select id="filter-brand" data-filter-brand><option value="">Toutes</option>{brands.map((brand) => <option value={brand}>{brand}</option>)}</select></div>
-			<div class="field"><label for="filter-tank">Cuve minimale</label><select id="filter-tank" data-filter-tank><option value="0">Toutes</option><option value="24">24 L</option><option value="50">50 L</option><option value="90">90 L</option></select></div>
-			<div class="field"><label for="filter-pressure">Pression minimale</label><select id="filter-pressure" data-filter-pressure><option value="0">Toutes</option><option value="8">8 bar</option><option value="10">10 bar</option></select></div>
-			<div class="field"><label for="filter-oil">Lubrification</label><select id="filter-oil" data-filter-oil><option value="">Toutes</option><option value="oil-free">Sans huile</option><option value="oil">Lubrifié</option></select></div>
-			<div class="field"><label for="filter-noise">Bruit publié maximal</label><select id="filter-noise" data-filter-noise><option value="">Tous ou inconnu</option><option value="60">60 dB</option><option value="70">70 dB</option><option value="80">80 dB</option></select></div>
-			<div class="field"><label for="catalog-sort">Trier</label><select id="catalog-sort" data-catalog-sort><option value="confidence">Qualité des données</option><option value="fad-asc">Débit documenté croissant</option><option value="fad-desc">Débit documenté décroissant</option><option value="tank-desc">Volume de cuve</option><option value="noise-asc">Bruit publié</option><option value="pressure-desc">Pression maximale</option></select></div>
-			<button type="button" class="inline-action" data-reset-filters>Réinitialiser</button>
-		</aside>
-		<div class="catalog-main"><div class="catalog-toolbar"><p data-catalog-count>{compressors.length} résultats</p><a class="button" data-compare-link href="/comparateur/" aria-disabled="true">Comparer <span data-compare-count>0</span>/3</a></div><div class="product-grid" data-product-grid>
-		{compressors.map((compressor, index) => (
-			<article class="product-card catalog-product-card" data-product-card data-id={compressor.id} data-search={`${compressor.brand} ${compressor.model} ${compressor.mpn ?? ''} ${compressor.ean ?? ''} ${compressor.gtin ?? ''} ${compressor.distributorSkus.map((identifier) => identifier.sku).join(' ')} ${compressor.identifierAliases.map((alias) => alias.value).join(' ')}`.toLocaleLowerCase('fr')} data-brand={compressor.brand} data-tank={compressor.tankLiters} data-pressure={compressor.maxPressureBar} data-oil={compressor.oilType} data-noise={compressor.noiseDb ?? ''} data-fad={compressor.fadCurve.length ? Math.max(...compressor.fadCurve.map((point) => point.litersPerMinute)) : ''} data-confidence={compressor.confidence}>
-				<header class="catalog-card-register"><span>CA / C-{String(index + 1).padStart(3, '0')}</span><small>Compresseur documenté</small></header>
-				<a class="product-card-image" href={`/compresseurs/${compressor.slug}/`} aria-label={`Voir la fiche ${compressorDisplayName(compressor)}`}><ProductImage image={compressor.image} compact /></a>
-					<p class="product-brand"><a href={`/marques/${brandSlug(compressor.brand)}/`}>{compressor.brand}</a></p>
-				<h2><a href={`/compresseurs/${compressor.slug}/`}>{compressorDisplayName(compressor).replace(`${compressor.brand} `, '')}</a></h2>
-				<dl class="spec-list"><div><dt>Cuve</dt><dd>{compressor.tankLiters} L</dd></div><div><dt>Pression max.</dt><dd>{compressor.maxPressureBar} bar</dd></div><div><dt>Source</dt><dd>{sourceQualityLabel(compressor.confidence)}</dd></div></dl>
-				<p class="catalog-card-signal">{compressor.fadCurve.length ? compressor.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).slice(0, 2).join(' · ') : 'Aucun point de débit restitué exploitable'}</p>
-				<p class:list={['data-status', compressor.fadCurve.length ? 'verified' : 'missing']}>{compressor.fadCurve.length ? 'Débit réellement restitué documenté' : 'Débit réellement restitué à confirmer'}</p>
-				<label class="compare-check"><input type="checkbox" value={compressor.id} data-compare-checkbox /> Ajouter au comparateur</label>
-			</article>
-		))}
-		</div><nav class="catalog-pagination" aria-label="Pagination du catalogue" data-pagination></nav></div></div></div></section>
-	<script>
-		const cards = [...document.querySelectorAll<HTMLElement>('[data-product-card]')];
-		const grid = document.querySelector<HTMLElement>('[data-product-grid]');
-		const count = document.querySelector<HTMLElement>('[data-catalog-count]');
-		const pagination = document.querySelector<HTMLElement>('[data-pagination]');
-		const search = document.querySelector<HTMLInputElement>('[data-filter-search]');
-		const fields = { brand: document.querySelector<HTMLSelectElement>('[data-filter-brand]'), tank: document.querySelector<HTMLSelectElement>('[data-filter-tank]'), pressure: document.querySelector<HTMLSelectElement>('[data-filter-pressure]'), oil: document.querySelector<HTMLSelectElement>('[data-filter-oil]'), noise: document.querySelector<HTMLSelectElement>('[data-filter-noise]'), sort: document.querySelector<HTMLSelectElement>('[data-catalog-sort]') };
-		let page = 1; const pageSize = 8;
-		function pageButton(label: string, target: number, ariaLabel: string, current = false) {
-			const button = document.createElement('button');
-			button.type = 'button';
-			button.textContent = label;
-			button.setAttribute('aria-label', ariaLabel);
-			button.setAttribute('aria-current', current ? 'page' : 'false');
-			button.addEventListener('click', () => { page = target; refresh(); });
-			return button;
-		}
-		function paginationItems(pages: number) {
-			const items: Array<HTMLElement> = [];
-			if (page > 1) items.push(pageButton('←', page - 1, 'Page précédente'));
-			const visible = Array.from({ length: pages }, (_, index) => index + 1).filter((number) => number === 1 || number === pages || Math.abs(number - page) <= 2);
-			let previous = 0;
-			for (const number of visible) {
-				if (number - previous > 1) { const gap = document.createElement('span'); gap.textContent = '…'; gap.setAttribute('aria-hidden', 'true'); items.push(gap); }
-				items.push(pageButton(String(number), number, `Page ${number}`, number === page));
-				previous = number;
-			}
-			if (page < pages) items.push(pageButton('→', page + 1, 'Page suivante'));
-			return items;
-		}
-		function refresh() {
-			const query = (search?.value ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('fr').trim();
-			const filtered = cards.filter((card) => (!query || (card.dataset.search ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(query)) && (!fields.brand?.value || card.dataset.brand === fields.brand.value) && Number(card.dataset.tank) >= Number(fields.tank?.value ?? 0) && Number(card.dataset.pressure) >= Number(fields.pressure?.value ?? 0) && (!fields.oil?.value || card.dataset.oil === fields.oil.value) && (!fields.noise?.value || (card.dataset.noise !== '' && Number(card.dataset.noise) <= Number(fields.noise.value))));
-			const sort = fields.sort?.value; filtered.sort((a, b) => sort === 'tank-desc' ? Number(b.dataset.tank) - Number(a.dataset.tank) : sort === 'noise-asc' ? (Number(a.dataset.noise || 999) - Number(b.dataset.noise || 999)) : sort === 'pressure-desc' ? Number(b.dataset.pressure) - Number(a.dataset.pressure) : sort === 'fad-asc' ? Number(a.dataset.fad || 999999) - Number(b.dataset.fad || 999999) : sort === 'fad-desc' ? Number(b.dataset.fad || -1) - Number(a.dataset.fad || -1) : String(a.dataset.confidence).localeCompare(String(b.dataset.confidence)));
-			for (const card of filtered) grid?.append(card); const pages = Math.max(1, Math.ceil(filtered.length / pageSize)); page = Math.min(page, pages);
-			for (const card of cards) card.hidden = !filtered.includes(card) || filtered.indexOf(card) < (page - 1) * pageSize || filtered.indexOf(card) >= page * pageSize;
-			if (count) count.textContent = `${filtered.length} résultat${filtered.length > 1 ? 's' : ''}`;
-			if (pagination) pagination.replaceChildren(...paginationItems(pages));
-		}
-		for (const field of Object.values(fields)) field?.addEventListener('change', () => { page = 1; refresh(); });
-		search?.addEventListener('input', () => { page = 1; refresh(); });
-		document.querySelector('[data-reset-filters]')?.addEventListener('click', () => { for (const field of Object.values(fields)) if (field) field.selectedIndex = 0; if (search) search.value = ''; page = 1; refresh(); });
-		const boxes = [...document.querySelectorAll<HTMLInputElement>('[data-compare-checkbox]')]; const link = document.querySelector<HTMLAnchorElement>('[data-compare-link]'); const compareCount = document.querySelector('[data-compare-count]');
-		for (const box of boxes) box.addEventListener('change', () => { const selected = boxes.filter((item) => item.checked); if (selected.length > 3) { box.checked = false; return; } if (compareCount) compareCount.textContent = String(selected.length); if (link) { link.href = selected.length >= 2 ? `/comparateur/#ids=${selected.map((item) => item.value).join(',')}` : '/comparateur/'; link.setAttribute('aria-disabled', selected.length >= 2 ? 'false' : 'true'); } });
-		refresh();
-	</script>
+<BaseLayout
+	title="Compresseurs d’air par marque | CompatAir"
+	description={`Explorez ${compressors.length} compresseurs classés par fabricant : débit restitué, pression, cuve, identifiants et données manquantes reliés à leurs sources.`}
+	breadcrumbs={[{ name: 'Compresseurs', path: '/compresseurs/' }]}
+>
+	<script is:inline type="application/ld+json" set:html={serializeJsonLd(brandListJsonLd)} />
+	<section class="page-hero compact catalog-hero">
+		<div class="container catalog-hero-grid">
+			<div>
+				<p class="product-decision-index">Catalogue technique / Compresseurs</p>
+				<p class="eyebrow">Un répertoire par fabricant</p>
+				<h1>{compressors.length} compresseurs, organisés en {brandGroups.length} marques</h1>
+				<p class="lead">Ouvrez la page d’un fabricant pour rechercher une référence exacte et contrôler ses données publiées. Le comparatif FAD reste séparé afin de ne jamais confondre classement documentaire et catalogue de marque.</p>
+				<div class="hero-actions"><a class="button primary" href="/calculateur/">Vérifier avec mes outils</a><a class="button" href="/comparatifs/compresseurs-debit-restitue/">Comparer les débits FAD</a></div>
+			</div>
+			<CatalogSignalVisual mode="compressors" count={compressors.length} secondaryCount={brandGroups.length} title="compresseurs documentés" />
+		</div>
+	</section>
+
+	<section class="catalog-summary-band">
+		<div class="container">
+			<div><strong>{documentedFadCount}</strong><span>débits FAD documentés</span></div>
+			<div><strong>{compressors.length - documentedFadCount}</strong><span>références à compléter</span></div>
+			<div><strong>{brandGroups.length}</strong><span>fabricants suivis</span></div>
+			<div><strong>0</strong><span>débit aspiré utilisé comme verdict</span></div>
+		</div>
+	</section>
+
+	<section class="section catalog-directory" data-directory-hub="compressors-by-brand">
+		<div class="container">
+			<header class="product-section-head">
+				<div><p class="product-decision-index">Explorer le corpus</p><h2>Choisir une marque ou rechercher une référence</h2></div>
+				<p>Chaque page marque réunit les modèles sourcés et leurs lacunes. La recherche globale retrouve aussi les MPN, EAN/GTIN et SKU documentés.</p>
+			</header>
+			<form class="directory-controls brand-controls" action="/recherche/" method="get">
+				<div class="field directory-search"><label for="compressor-directory-search">Marque, modèle, MPN, EAN/GTIN ou SKU</label><input id="compressor-directory-search" name="q" type="search" placeholder="Ex. 601532000 ou EPC 840" required minlength="2" /></div>
+				<button class="button primary" type="submit">Rechercher la référence</button>
+			</form>
+			<div class="hub-intent-grid">
+				{brandGroups.map((group, index) => (
+					<a href={`/marques/${brandSlug(group.brand)}/`}>
+						<span class="hub-intent-index">{String(index + 1).padStart(2, '0')}</span>
+						<p>{group.count} modèle{group.count > 1 ? 's' : ''} documenté{group.count > 1 ? 's' : ''}</p>
+						<h3>{group.brand}</h3>
+						<small>{group.documentedFad}/{group.count} avec FAD · {group.multipleFad} avec plusieurs pressions · {group.highConfidence} source{group.highConfidence > 1 ? 's' : ''} de grade A ou B.</small>
+						<strong>Ouvrir la page marque →</strong>
+					</a>
+				))}
+			</div>
+		</div>
+	</section>
 </BaseLayout>

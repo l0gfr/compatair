@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import CatalogSignalVisual from '../../../../components/CatalogSignalVisual.astro';
+import DirectoryBrowser from '../../../../components/DirectoryBrowser.astro';
+import { compressors } from '../../../../data/catalog';
+import { brandSlug } from '../../../../domain/brand';
+import { compressorDisplayName } from '../../../../domain/product-display';
+import { serializeJsonLd } from '../../../../domain/structured-data';
+import { sourceQualityLabel } from '../../../../domain/source-quality';
+
+export function getStaticPaths() {
+	const brands = [...new Set(compressors.map((item) => item.brand))];
+	return brands.map((brand) => ({ params: { brand: brandSlug(brand) }, props: { brand } }));
+}
+
+const { brand } = Astro.props;
+const brandCompressors = compressors.filter((item) => item.brand === brand);
+const documented = brandCompressors.filter((item) => item.fadCurve.length > 0);
+const incomplete = brandCompressors.filter((item) => item.fadCurve.length === 0);
+const multiplePoints = documented.filter((item) => item.fadCurve.length > 1).length;
+const itemListJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'ItemList',
+	name: `Débit restitué des compresseurs ${brand}`,
+	itemListElement: brandCompressors.map((item, index) => ({
+		'@type': 'ListItem',
+		position: index + 1,
+		name: compressorDisplayName(item),
+		url: `https://compatair.fr/compresseurs/${item.slug}/`,
+	})),
+};
+---
+
+<BaseLayout
+	title={`Débit restitué ${brand} : comparatif | CompatAir`}
+	description={`Tableau des débits FAD publiés pour ${brand} : ${documented.length}/${brandCompressors.length} compresseurs classables, avec pression et qualité documentaire.`}
+	imagePath="/social/comparatifs.png"
+	imageAlt="Comparatifs documentaires CompatAir"
+	breadcrumbs={[
+		{ name: 'Comparatifs', path: '/comparatifs/' },
+		{ name: 'Débit restitué', path: '/comparatifs/compresseurs-debit-restitue/' },
+		{ name: brand, path: `/comparatifs/compresseurs-debit-restitue/marque/${brandSlug(brand)}/` },
+	]}
+>
+	<script is:inline type="application/ld+json" set:html={serializeJsonLd(itemListJsonLd)} />
+	<article class="fad-comparison-page" data-fad-brand-directory={brandSlug(brand)}>
+		<section class="page-hero compact catalog-hero">
+			<div class="container catalog-hero-grid">
+				<div>
+					<p class="product-decision-index">Comparatif FAD / {brand}</p>
+					<p class="eyebrow">Pressions d’origine conservées</p>
+					<h1>Débit restitué des compresseurs {brand}</h1>
+					<p class="lead">{documented.length} référence{documented.length > 1 ? 's' : ''} sur {brandCompressors.length} dispose{documented.length > 1 ? 'nt' : ''} d’au moins un point FAD exploitable. Le tableau affiche chaque pression publiée sans conversion silencieuse.</p>
+					<div class="hero-actions"><a class="button primary" href={`/marques/${brandSlug(brand)}/`}>Voir toute la page marque</a><a class="button" href="/comparatifs/compresseurs-debit-restitue/">Changer de marque</a></div>
+				</div>
+				<CatalogSignalVisual mode="comparison" count={documented.length} secondaryCount={incomplete.length} title={`compresseurs ${brand} avec FAD`} />
+			</div>
+		</section>
+
+		<section class="catalog-summary-band">
+			<div class="container">
+				<div><strong>{brandCompressors.length}</strong><span>références suivies</span></div>
+				<div><strong>{documented.length}</strong><span>FAD exploitables</span></div>
+				<div><strong>{multiplePoints}</strong><span>mesures multi-pression</span></div>
+				<div><strong>{incomplete.length}</strong><span>non classables</span></div>
+			</div>
+		</section>
+
+		<section class="section" data-directory-browser data-page-size="18">
+			<div class="container">
+				<header class="product-section-head">
+					<div><p class="product-decision-index">Tableau documentaire</p><h2>{documented.length} compresseur{documented.length > 1 ? 's' : ''} avec débit publié</h2></div>
+					<p>Le tri utilise le débit maximal parmi les points publiés, tout en laissant sa pression visible dans la cellule.</p>
+				</header>
+				<div class="directory-controls brand-controls">
+					<div class="field directory-search"><label for={`fad-search-${brandSlug(brand)}`}>Modèle ou référence</label><input id={`fad-search-${brandSlug(brand)}`} type="search" data-directory-search /></div>
+					<div class="field"><label for={`fad-sort-${brandSlug(brand)}`}>Trier</label><select id={`fad-sort-${brandSlug(brand)}`} data-directory-sort><option value="confidence">Qualité des données</option><option value="primary-asc">Débit maximal croissant</option><option value="primary-desc">Débit maximal décroissant</option><option value="name">Nom</option></select></div>
+					<button class="inline-action" type="button" data-directory-reset>Réinitialiser</button>
+				</div>
+				<p class="directory-count" data-directory-count>{documented.length} résultats</p>
+				<div class="compare-table-wrap">
+					<table class="compare-table">
+						<thead><tr><th>Modèle</th><th>Cuve</th><th>Pression maximale</th><th>Débit réellement restitué</th><th>Qualité des données</th></tr></thead>
+						<tbody data-directory-grid>
+							{documented.map((item) => (
+								<tr
+									data-directory-card
+									data-search={`${item.brand} ${item.model} ${item.mpn ?? ''} ${item.ean ?? ''} ${item.gtin ?? ''}`}
+									data-sort-name={compressorDisplayName(item)}
+									data-sort-confidence={item.confidence}
+									data-sort-primary={Math.max(...item.fadCurve.map((point) => point.litersPerMinute))}
+								>
+									<th><a href={`/compresseurs/${item.slug}/`}>{compressorDisplayName(item)}</a></th>
+									<td>{item.tankLiters} L</td>
+									<td>{item.maxPressureBar} bar</td>
+									<td>{item.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ')}</td>
+									<td>{sourceQualityLabel(item.confidence)}<small>Grade {item.confidence}</small></td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+				</div>
+				<nav class="catalog-pagination" aria-label={`Pagination des compresseurs ${brand}`} data-directory-pagination></nav>
+			</div>
+		</section>
+
+		{incomplete.length > 0 && (
+			<section class="section incomplete-reference-section">
+				<div class="container">
+					<header class="product-section-head">
+						<div><p class="product-decision-index">Non classables</p><h2>Références sans FAD exploitable</h2></div>
+						<p>Le débit aspiré ne remplace pas le débit restitué manquant.</p>
+					</header>
+					<div class="incomplete-reference-grid">{incomplete.map((item) => <a href={`/compresseurs/${item.slug}/`}><span>{item.brand}</span><strong>{compressorDisplayName(item)}</strong><small>{sourceQualityLabel(item.confidence)} · donnée FAD manquante</small></a>)}</div>
+				</div>
+			</section>
+		)}
+		<DirectoryBrowser />
+	</article>
+</BaseLayout>

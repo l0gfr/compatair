@@ -108,6 +108,16 @@ describe('sitemap lastmod', () => {
 		expect(resolver('https://compatair.fr/compresseurs/exemple/')).toBe('2026-07-12T10:00:00+00:00');
 	});
 
+	it('relie un répertoire d’usage à sa route, sa taxonomie et au catalogue', () => {
+		const resolver = createSitemapLastmodResolver({ gitDate: (files) => {
+			expect(files).toContain('src/pages/outils-pneumatiques/usages/[usage].astro');
+			expect(files).toContain('src/data/taxonomy.ts');
+			expect(files).toContain('src/data/catalog.ts');
+			return '2026-07-31T07:00:00+00:00';
+		} });
+		expect(resolver('https://compatair.fr/outils-pneumatiques/usages/serrage/')).toBe('2026-07-31T07:00:00+00:00');
+	});
+
 	it('relie les pages de répertoire paginées à leur composant et au catalogue', () => {
 		const resolver = createSitemapLastmodResolver({ gitDate: (files) => {
 			expect(files).toContain('src/pages/preuves/page/[page].astro');

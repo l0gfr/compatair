@@ -90,6 +90,14 @@ await check('vidéo du parcours en lecture partielle', '/media/compatair-parcour
 });
 await check('robots', '/robots.txt', bodyContains('https://compatair.fr/sitemap-index.xml'));
 await check('sitemap', '/sitemap-index.xml', status(200));
+for (const alias of ['/sitemap.xml', '/sitemap_index.xml']) {
+	await check(`alias sitemap ${alias}`, alias, ({ response, url }) => {
+		assert(response.status === 301, `HTTP attendu 301, reçu ${response.status}`);
+		const location = response.headers.get('location');
+		assert(location, 'header Location absent');
+		assert(new URL(location, url).href === 'https://compatair.fr/sitemap-index.xml', `Location sitemap inattendue ${location}`);
+	});
+}
 
 for (const [label, pathname, marker] of [
 	['scanner', '/scanner/', 'data-compatair-surface="scanner"'],

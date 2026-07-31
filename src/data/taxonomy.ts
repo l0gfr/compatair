@@ -44,23 +44,122 @@ export function toolCategoryLabel(categoryId: ToolCategoryId) {
  * HVLP et LVLP restent deux familles techniques mais répondent au même usage de
  * mise en peinture. Ce niveau est celui affiché dans « Usages suivis ».
  */
-export const toolUsageTaxonomy: ReadonlyArray<{
+export const toolUsageTaxonomy = [
+	{
+		id: 'serrage',
+		label: 'Serrer et desserrer',
+		seoTitle: 'Outils pneumatiques de serrage',
+		description: 'Clés à chocs et clés à cliquet regroupées par besoin en air, pression publiée et qualité documentaire.',
+		categoryIds: ['cle-a-chocs', 'cle-a-cliquet'],
+	},
+	{
+		id: 'vissage',
+		label: 'Visser et assembler',
+		seoTitle: 'Visseuses pneumatiques',
+		description: 'Visseuses documentées avec leur consommation publiée et les limites nécessaires au dimensionnement.',
+		categoryIds: ['visseuse'],
+	},
+	{
+		id: 'percage',
+		label: 'Percer',
+		seoTitle: 'Perceuses pneumatiques',
+		description: 'Perceuses pneumatiques classées par référence, débit demandé, pression de travail et niveau de preuve.',
+		categoryIds: ['perceuse'],
+	},
+	{
+		id: 'soufflage',
+		label: 'Souffler et nettoyer',
+		seoTitle: 'Soufflettes pneumatiques',
+		description: 'Soufflettes et besoins de nettoyage à l’air comprimé, sans convertir une donnée absente en estimation.',
+		categoryIds: ['soufflette'],
+	},
+	{
+		id: 'gonflage',
+		label: 'Gonfler et contrôler la pression',
+		seoTitle: 'Outils pneumatiques de gonflage',
+		description: 'Pistolets de gonflage et manomètres documentés pour relier pression, débit et usage réel.',
+		categoryIds: ['gonflage'],
+	},
+	{
+		id: 'fixation',
+		label: 'Clouer et agrafer',
+		seoTitle: 'Cloueurs et agrafeuses pneumatiques',
+		description: 'Cloueurs et agrafeuses dont la consommation par minute ou par action reste explicitement distinguée.',
+		categoryIds: ['agrafeuse-cloueuse'],
+	},
+	{
+		id: 'meulage',
+		label: 'Meuler et limer',
+		seoTitle: 'Meuleuses et limes pneumatiques',
+		description: 'Meuleuses et limes à bande regroupées pour comparer leurs besoins publiés sans effacer leur famille technique.',
+		categoryIds: ['meuleuse', 'lime-bande'],
+	},
+	{
+		id: 'finition',
+		label: 'Poncer et polir',
+		seoTitle: 'Ponceuses et polisseuses pneumatiques',
+		description: 'Ponceuses orbitales, à bande et polisseuses reliées à leurs caractéristiques et sources fabricant.',
+		categoryIds: ['ponceuse-bande', 'ponceuse-orbitale', 'polisseuse'],
+	},
+	{
+		id: 'burinage',
+		label: 'Buriner et dérouiller',
+		seoTitle: 'Burineurs et dérouilleurs pneumatiques',
+		description: 'Marteaux-burineurs et dérouilleurs à aiguilles classés par besoin en air et pression de travail.',
+		categoryIds: ['burineur', 'derouilleur-a-aiguilles'],
+	},
+	{
+		id: 'decoupe',
+		label: 'Découper les matériaux',
+		seoTitle: 'Outils pneumatiques de découpe',
+		description: 'Cisailles, grignoteuses, scies et tronçonneuses regroupées sans fusionner leurs caractéristiques propres.',
+		categoryIds: ['cisaille', 'grignoteuse', 'scie', 'tronconneuse'],
+	},
+	{
+		id: 'peinture',
+		label: 'Appliquer une peinture',
+		seoTitle: 'Pistolets à peinture pneumatiques',
+		description: 'Pistolets HVLP et LVLP distingués par technologie, consommation publiée et exigences de qualité d’air.',
+		categoryIds: ['pistolet-peinture-hvlp', 'pistolet-peinture-lvlp'],
+	},
+	{
+		id: 'sablage',
+		label: 'Décaper par projection',
+		seoTitle: 'Pistolets de sablage pneumatiques',
+		description: 'Outils de sablage regroupés par référence et besoin en air, avec les données manquantes laissées visibles.',
+		categoryIds: ['sableuse'],
+	},
+	{
+		id: 'cartouche',
+		label: 'Extruder mastics et colles',
+		seoTitle: 'Pistolets pneumatiques à cartouche',
+		description: 'Pistolets à cartouche documentés pour comparer consommation, pression et rythme d’utilisation.',
+		categoryIds: ['pistolet-cartouche'],
+	},
+	{
+		id: 'rivetage',
+		label: 'Riveter et sertir',
+		seoTitle: 'Riveteuses pneumatiques',
+		description: 'Riveteuses regroupées par besoin en air, pression publiée, référence fabricant et qualité de source.',
+		categoryIds: ['riveteuse'],
+	},
+] as const satisfies ReadonlyArray<{
 	id: string;
 	label: string;
+	seoTitle: string;
+	description: string;
 	categoryIds: readonly ToolCategoryId[];
-}> = [
-	{ id: 'serrage', label: 'Serrer et desserrer', categoryIds: ['cle-a-chocs', 'cle-a-cliquet'] },
-	{ id: 'vissage', label: 'Visser et assembler', categoryIds: ['visseuse'] },
-	{ id: 'percage', label: 'Percer', categoryIds: ['perceuse'] },
-	{ id: 'soufflage', label: 'Souffler et nettoyer', categoryIds: ['soufflette'] },
-	{ id: 'gonflage', label: 'Gonfler et contrôler la pression', categoryIds: ['gonflage'] },
-	{ id: 'fixation', label: 'Clouer et agrafer', categoryIds: ['agrafeuse-cloueuse'] },
-	{ id: 'meulage', label: 'Meuler et limer', categoryIds: ['meuleuse', 'lime-bande'] },
-	{ id: 'finition', label: 'Poncer et polir', categoryIds: ['ponceuse-bande', 'ponceuse-orbitale', 'polisseuse'] },
-	{ id: 'burinage', label: 'Buriner et dérouiller', categoryIds: ['burineur', 'derouilleur-a-aiguilles'] },
-	{ id: 'decoupe', label: 'Découper les matériaux', categoryIds: ['cisaille', 'grignoteuse', 'scie', 'tronconneuse'] },
-	{ id: 'peinture', label: 'Appliquer une peinture', categoryIds: ['pistolet-peinture-hvlp', 'pistolet-peinture-lvlp'] },
-	{ id: 'sablage', label: 'Décaper par projection', categoryIds: ['sableuse'] },
-	{ id: 'cartouche', label: 'Extruder mastics et colles', categoryIds: ['pistolet-cartouche'] },
-	{ id: 'rivetage', label: 'Riveter et sertir', categoryIds: ['riveteuse'] },
-] as const;
+}>;
+
+export type ToolUsage = (typeof toolUsageTaxonomy)[number];
+export type ToolUsageId = ToolUsage['id'];
+
+export function toolUsageForCategory(categoryId: ToolCategoryId) {
+	const usage = toolUsageTaxonomy.find((item) => item.categoryIds.some((candidate) => candidate === categoryId));
+	if (!usage) throw new Error(`Usage d’outil inconnu pour la catégorie : ${categoryId}`);
+	return usage;
+}
+
+export function toolUsagePath(categoryId: ToolCategoryId) {
+	return `/outils-pneumatiques/usages/${toolUsageForCategory(categoryId).id}/` as const;
+}
