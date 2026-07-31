@@ -3,9 +3,11 @@ import { readFile, rename, writeFile } from 'node:fs/promises';
 export const ACQUISITION_SCHEMA_VERSION = '1.0.0';
 export const ACQUISITION_CHANNELS = ['organic', 'agent_referral', 'referral', 'direct', 'widget', 'api', 'mcp', 'ucp'];
 export const ACQUISITION_TEMPLATES = ['home', 'calculator', 'compatibility', 'compressor', 'tool', 'guide', 'mcp_docs', 'ucp_docs', 'api_docs', 'benchmark', 'receipt', 'offers', 'other'];
-export const ACQUISITION_ACTIONS = ['view', 'decision_request', 'canonical_follow', 'offer_outbound', 'conversion', 'citation_acknowledged'];
+export const ACQUISITION_ACTIONS = ['view', 'calculator_intent', 'merchant_interest', 'decision_request', 'canonical_follow', 'offer_outbound', 'conversion', 'citation_acknowledged'];
 export const ACQUISITION_OUTCOMES = ['success', 'insufficient_data', 'incompatible', 'error', 'unknown'];
 const publicChannels = new Set(['organic', 'agent_referral', 'referral', 'direct', 'widget']);
+const calculatorIntentTemplates = new Set(['home', 'compatibility', 'compressor', 'tool', 'guide', 'benchmark', 'receipt', 'offers', 'other']);
+const merchantInterestTemplates = new Set(['calculator', 'compressor']);
 const channelSet = new Set(ACQUISITION_CHANNELS);
 const templateSet = new Set(ACQUISITION_TEMPLATES);
 const actionSet = new Set(ACQUISITION_ACTIONS);
@@ -38,7 +40,11 @@ export function validateAcquisitionEvent(value) {
 	if (!value || typeof value !== 'object' || Array.isArray(value)) return undefined;
 	const allowed = ['event', 'schemaVersion', 'channel', 'template', 'action', 'outcome'];
 	if (Object.keys(value).length !== allowed.length || Object.keys(value).some((key) => !allowed.includes(key))) return undefined;
-	if (value.event !== 'acquisition_aggregate' || value.schemaVersion !== ACQUISITION_SCHEMA_VERSION || !publicChannels.has(value.channel) || value.action !== 'view' || value.outcome !== 'unknown') return undefined;
+	if (value.event !== 'acquisition_aggregate' || value.schemaVersion !== ACQUISITION_SCHEMA_VERSION || !publicChannels.has(value.channel) || value.outcome !== 'unknown') return undefined;
+	const publicActionAllowed = value.action === 'view'
+		|| (value.action === 'calculator_intent' && calculatorIntentTemplates.has(value.template))
+		|| (value.action === 'merchant_interest' && merchantInterestTemplates.has(value.template));
+	if (!publicActionAllowed) return undefined;
 	const event = { channel: value.channel, template: value.template, action: value.action, outcome: value.outcome };
 	return validEvent(event) ? event : undefined;
 }

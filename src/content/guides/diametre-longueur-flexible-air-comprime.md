@@ -7,6 +7,7 @@ audiences: [particulier, professionnel]
 metiers: [btp-chantier]
 readingTime: 6
 featured: true
+relatedCalculatorTool: einhell-tc-pe-150
 sources:
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
   - https://www.einhell.fr/p/4133330-tc-pe-150/

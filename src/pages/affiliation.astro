@@ -1,11 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import InstitutionalHero from '../components/InstitutionalHero.astro';
+import { activeOffers } from '../data/offers';
 ---
 <BaseLayout title="Affiliation et indépendance | CompatAir" description="Comment CompatAir finance son service sans laisser les commissions influencer les résultats de compatibilité.">
 	<InstitutionalHero eyebrow="Modèle économique" title="Le verdict technique reste indépendant" lead="Une offre marchande peut financer le service après le calcul. Elle ne peut ni fournir une donnée technique critique, ni modifier un verdict, ni changer l’ordre technique des résultats." primaryHref="#independance" primaryLabel="Lire nos engagements" items={[{ label: 'Calcul en premier', detail: 'La compatibilité précède toute offre' }, { label: 'Données séparées', detail: 'Prix et disponibilité restent marchands' }, { label: 'Lien signalé', detail: 'Toute commission potentielle est visible' }]} />
 	<article class="container content institutional-content" id="independance">
 		<p>CompatAir pourra percevoir une commission lorsqu’un achat est réalisé après un lien marchand signalé. Cette commission ne modifie ni le prix payé, ni le calcul de compatibilité.</p>
+		<div class="status-callout"><strong>État actuel : {activeOffers.length} offre marchande active</strong><span>{activeOffers.length ? 'Chaque offre active reste datée, attribuée et séparée du verdict.' : 'Aucun lien d’affiliation n’est actuellement présenté comme une offre disponible.'}</span></div>
 		<h2>Le résultat passe avant les offres</h2><p>La compatibilité est vérifiée avant la sélection des offres. Une commission plus élevée ne peut pas transformer un produit incompatible en recommandation.</p>
 		<h2>Les prix restent séparés des données techniques</h2><p>Un partenaire marchand peut fournir un prix, une disponibilité, une image et un lien d’achat. Il ne peut ni fournir ni modifier le <a href="/glossaire/#debit-restitue">débit réellement restitué</a>, la <a href="/glossaire/#pression-travail">pression d’utilisation</a>, la fiabilité des sources ou le résultat. Une offre n’est publiée que si sa référence correspond exactement au produit étudié.</p>
 		<h2>Des liens commerciaux clairement signalés</h2><p>Les offres afficheront le nom du marchand, la date de collecte et la disponibilité connue. Un lien permettant à CompatAir de percevoir une commission sera présenté comme un lien commercial.</p>

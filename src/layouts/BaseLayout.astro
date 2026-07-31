@@ -9,6 +9,8 @@ import UiIcon from '../components/UiIcon.astro';
 import BrandMark from '../components/BrandMark.astro';
 import JourneyContextBar from '../components/JourneyContextBar.astro';
 import AcquisitionTelemetry from '../components/AcquisitionTelemetry.astro';
+import CalculatorAcquisitionTelemetry from '../components/CalculatorAcquisitionTelemetry.astro';
+import CommercialIntentTelemetry from '../components/CommercialIntentTelemetry.astro';
 import McpCanonicalTelemetry from '../components/McpCanonicalTelemetry.astro';
 import { compressors, tools } from '../data/catalog';
 import { resolveDocumentTitle } from '../domain/metadata';
@@ -59,6 +61,7 @@ const alternateLinks = alternates.length
 	];
 const socialImage = new URL(imagePath ?? `/social/${socialCardKey(canonical.pathname)}.png`, Astro.site);
 const currentPath = Astro.url.pathname;
+const commercialIntentTelemetryEnabled = currentPath === '/' || ['/compresseurs/', '/outils-pneumatiques/', '/guides/', '/offres/', '/comparatifs/'].some((path) => currentPath.startsWith(path));
 const currentYear = new Date().getFullYear();
 const catalogReferenceCount = compressors.length + tools.length;
 const isCurrent = (href: string) => currentPath.startsWith(href);
@@ -291,6 +294,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 				</div>
 			</div>
 		</footer>
-		<AcquisitionTelemetry />
+		{currentPath.startsWith('/calculateur/') ? <CalculatorAcquisitionTelemetry /> : <AcquisitionTelemetry />}
+		{commercialIntentTelemetryEnabled && <CommercialIntentTelemetry />}
 	</body>
 </html>

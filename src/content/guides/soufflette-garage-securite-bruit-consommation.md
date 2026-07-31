@@ -7,6 +7,7 @@ category: "Utiliser"
 audiences: [professionnel]
 metiers: [garage-automobile, atelier-poids-lourds, maintenance-industrielle]
 readingTime: 9
+relatedCalculatorTool: metabo-bp-200
 sources:
   - https://www.inrs.fr/publications/bdd/techniques-reduction-bruit/FicheBruitAG.html?refINRS=BRUIT_FicheBruit_69
   - https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-6282.pdf

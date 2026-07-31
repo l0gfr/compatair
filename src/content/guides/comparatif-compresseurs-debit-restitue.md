@@ -8,6 +8,7 @@ audiences: [particulier, professionnel]
 metiers: []
 readingTime: 9
 featured: true
+relatedCalculatorTool: einhell-tc-pe-150
 sources:
   - https://www.metabo.com/t3/fileadmin/metabo/com_en/070_news/03_catalogue_logos/201605_Druckluftkompetenz_en.pdf
   - https://www.einhell.de/p/4007361-tc-ac-270-50-10/

@@ -4,29 +4,21 @@
 	try { if (referrer) referrerUrl = new URL(referrer); } catch {}
 	const isProductionHost = location.hostname === 'compatair.fr' || location.hostname === 'www.compatair.fr';
 	if (isProductionHost && (!referrerUrl || referrerUrl.origin !== location.origin)) {
-		const host = referrerUrl?.hostname.toLowerCase() ?? '';
-		const agentHosts = ['chatgpt.com', 'claude.ai', 'gemini.google.com', 'perplexity.ai', 'copilot.microsoft.com'];
-		const searchHosts = ['google.', 'bing.com', 'duckduckgo.com', 'qwant.com', 'ecosia.org', 'search.brave.com'];
+		const host = referrerUrl?.hostname ?? '';
 		const channel = !referrerUrl ? 'direct'
-			: agentHosts.some((candidate) => host === candidate || host.endsWith(`.${candidate}`)) ? 'agent_referral'
-				: searchHosts.some((candidate) => host === candidate || host.includes(candidate)) ? 'organic' : 'referral';
-		const path = location.pathname;
-		const template = path === '/' ? 'home'
-			: path.startsWith('/calculateur/') ? 'calculator'
-			: path.startsWith('/compresseurs/') ? 'compressor'
-			: path.startsWith('/outils-pneumatiques/') ? 'tool'
-			: path.startsWith('/guides/') ? 'guide'
-			: path === '/mcp-documentation/' || path === '/en/mcp/' || path === '/agents/' ? 'mcp_docs'
-			: path === '/ucp/' || path === '/en/ucp/' ? 'ucp_docs'
-			: path === '/api/' ? 'api_docs'
-			: path.startsWith('/benchmark-agents/') || path.startsWith('/en/agent-fidelity-benchmark/') ? 'benchmark'
-			: path.startsWith('/recu-compatibilite/') || path.startsWith('/en/compatibility-receipt/') ? 'receipt'
-			: path.startsWith('/offres/') ? 'offers' : 'other';
+			: /(^|\.)(chatgpt\.com|claude\.ai|gemini\.google\.com|perplexity\.ai|copilot\.microsoft\.com)$/.test(host) ? 'agent_referral'
+				: /(^|\.)(bing\.com|duckduckgo\.com|qwant\.com|ecosia\.org|search\.brave\.com)$|(^|\.)google\./.test(host) ? 'organic' : 'referral';
+		try { sessionStorage.setItem('ca:acquisition', channel); } catch {}
+		const segments = location.pathname.split('/').filter(Boolean);
+		const templateBySegment: Record<string, string> = { calculateur: 'calculator', compresseurs: 'compressor', 'outils-pneumatiques': 'tool', guides: 'guide', 'mcp-documentation': 'mcp_docs', agents: 'mcp_docs', ucp: 'ucp_docs', api: 'api_docs', 'benchmark-agents': 'benchmark', 'recu-compatibilite': 'receipt', offres: 'offers' };
+		const template = !segments.length ? 'home' : segments[0] === 'en'
+			? ({ mcp: 'mcp_docs', ucp: 'ucp_docs', 'agent-fidelity-benchmark': 'benchmark', 'compatibility-receipt': 'receipt' }[segments[1]] ?? 'other')
+			: templateBySegment[segments[0]] ?? 'other';
 		const event = { event: 'acquisition_aggregate', schemaVersion: '1.0.0', channel, template, action: 'view', outcome: 'unknown' };
 		const send = () => {
 			if (navigator.sendBeacon) navigator.sendBeacon('/events', new Blob([JSON.stringify(event)], { type: 'application/json' }));
 		};
-		if (typeof window.requestIdleCallback === 'function') window.requestIdleCallback(send, { timeout: 2_000 });
-		else globalThis.setTimeout(send, 0);
+		if (window.requestIdleCallback) window.requestIdleCallback(send, { timeout: 2_000 });
+		else setTimeout(send, 0);
 	}
 </script>

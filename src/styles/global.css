@@ -312,6 +312,10 @@ h3 { font-weight: 560; }
 .result-commerce { display: grid; gap: .25rem; margin-top: .75rem; padding-top: .75rem; border-top: 1px solid var(--line); font-size: .75rem; }
 .result-commerce a { width: fit-content; color: var(--brand-dark); font-weight: 850; text-underline-offset: .2em; }
 .result-commerce small, .result-commerce.no-offer span { color: var(--muted); }
+.merchant-interest-control { display: grid; justify-items: start; gap: .4rem; margin-top: .55rem; }
+.merchant-interest-control .button { min-height: 40px; padding: .58rem .8rem; color: var(--brand-dark); background: white; cursor: pointer; }
+.merchant-interest-control .button:disabled { opacity: .72; transform: none; cursor: default; }
+.merchant-interest-control small { color: var(--muted); font-size: .72rem; }
 .result-card h4 { margin: 0; font-size: 1rem; }
 .result-card.verdict-intermittent { border-left-color: #d38b32; }
 .report-header { display: none; }

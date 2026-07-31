@@ -160,6 +160,14 @@ pnpm data:report-funnel -- /chemin/prive/product-funnel-aggregates.json
 
 Le rapport `product-funnel-report.json` refuse de publier un taux lorsque les compteurs sont incohérents, par exemple si des pertes réseau conduisent à plus de complétions reçues que de démarrages.
 
+Pour préparer une candidature d’affiliation sans déclarer une disponibilité marchande non vérifiée, produire la shortlist privée à partir du catalogue construit et d’un export GSC daté :
+
+```bash
+pnpm data:report-affiliate-readiness -- --catalog dist/data/catalog.json --offers dist/data/offers.json --gsc-pages /chemin/prive/gsc_pages.csv --gsc-dates /chemin/prive/gsc_dates.csv --gsc-start YYYY-MM-DD --gsc-end YYYY-MM-DD --acquisition /chemin/prive/acquisition-aggregates.json --funnel /chemin/prive/product-funnel-aggregates.json --output /chemin/prive/affiliate-readiness.json
+```
+
+Les options `--acquisition`, `--funnel` et `--indexation` sont facultatives : leur absence produit un statut `partial` et une anomalie d’accès explicite, jamais une valeur de remplacement. Les totaux GSC utilisent la dimension date ; la dimension page sert au classement et tout écart entre les deux agrégations est signalé. Le classement retient uniquement les compresseurs actifs appariables par EAN, GTIN, MPN ou SKU distributeur exact. Il privilégie ensuite les signaux GSC observés puis la qualité d’appariement et de preuve ; une référence sans offre datée reste `not_verified`.
+
 ## Statistiques privées sans cookie
 
 Le rapport GoAccess est généré à partir du journal Apache de CompatAir, sans JavaScript de suivi côté visiteur. Les adresses IP sont anonymisées au niveau 2, les paramètres d’URL sont supprimés et seules les données des 90 derniers jours sont affichées.

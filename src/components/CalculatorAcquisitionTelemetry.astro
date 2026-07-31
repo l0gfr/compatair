@@ -1,0 +1,15 @@
+<script>
+	if (location.hostname === 'compatair.fr' || location.hostname === 'www.compatair.fr') {
+		let externalEntry = !document.referrer;
+		let host = '';
+		try { const referrer = new URL(document.referrer); externalEntry = referrer.origin !== location.origin; host = referrer.hostname.toLowerCase(); } catch {}
+		if (externalEntry) {
+			const channel = !host ? 'direct'
+				: /(^|\.)(chatgpt\.com|claude\.ai|gemini\.google\.com|perplexity\.ai|copilot\.microsoft\.com)$/.test(host) ? 'agent_referral'
+					: /(^|\.)(bing\.com|duckduckgo\.com|qwant\.com|ecosia\.org|search\.brave\.com)$|(^|\.)google\./.test(host) ? 'organic' : 'referral';
+			try { sessionStorage.setItem('ca:acquisition', channel); } catch {}
+			const payload = { event: 'acquisition_aggregate', schemaVersion: '1.0.0', channel, template: 'calculator', action: 'view', outcome: 'unknown' };
+			if (navigator.sendBeacon) navigator.sendBeacon('/events', new Blob([JSON.stringify(payload)], { type: 'application/json' }));
+		}
+	}
+</script>

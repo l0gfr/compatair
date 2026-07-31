@@ -141,6 +141,7 @@ const commercialOffers = activeOffers
 		</details>
 		<details class="result-section result-disclosure result-expert-only" id="calculator-limits"><summary>Hypothèses et avertissements</summary><ul data-assumptions></ul></details>
 		<details class="result-section result-disclosure result-source-guide result-expert-only" id="calculator-sources"><summary>Sources et qualité documentaire</summary><div><ContextHelp topic="sourceQuality" /><p>Chaque carte de résultat affiche un libellé humain. Le grade technique et la date de vérification restent accessibles dans le détail de la fiche.</p><a class="text-link" href="/sources-fiabilite/">Consulter les sources et leur fiabilité →</a></div></details>
+		<div class="merchant-interest-control calculator-merchant-interest"><button class="button" type="button" data-calculator-merchant-interest aria-pressed="false">Je veux des options d’achat vérifiées</button><small aria-live="polite">Signal anonyme, sans référence produit ni donnée du calcul.</small></div>
 		<label class="demand-contribution result-expert-only">
 			<input type="checkbox" data-demand-contribution />
 			<span><strong>Aider à choisir les prochaines références étudiées</strong><small>Après lecture du résultat, vous pouvez partager uniquement les outils choisis et des tranches larges de débit, pression et durée. Aucun texte libre, valeur personnalisée exacte, cookie, adresse IP ou configuration complète n’est conservé.</small></span>
@@ -289,6 +290,15 @@ const commercialOffers = activeOffers
 	const recordedCounterfactualSteps = new Set<string>();
 	let pendingCounterfactualFamily: CounterfactualKind | undefined;
 	let lastContribution: { config: NonNullable<ReturnType<typeof configFromForm>>; result: SizingResult } | undefined;
+	const merchantInterestButton = root?.querySelector<HTMLButtonElement>('[data-calculator-merchant-interest]');
+	merchantInterestButton?.addEventListener('click', () => {
+		if (!navigator.sendBeacon) return;
+		let channel = 'direct'; try { channel = sessionStorage.getItem('ca:acquisition') ?? channel; } catch {}
+		const payload = { event: 'acquisition_aggregate', schemaVersion: '1.0.0', channel, template: 'calculator', action: 'merchant_interest', outcome: 'unknown' };
+		if (!navigator.sendBeacon('/events', new Blob([JSON.stringify(payload)], { type: 'application/json' }))) return;
+		merchantInterestButton.disabled = true; merchantInterestButton.setAttribute('aria-pressed', 'true');
+		if (merchantInterestButton.nextElementSibling) merchantInterestButton.nextElementSibling.textContent = 'Merci. Signal anonyme envoyé.';
+	}, { once: true });
 
 	function optionById(list: HTMLDataListElement | null, id: string) { return [...(list?.options ?? [])].find((option) => option.dataset.id === id); }
 	function optionByInput(list: HTMLDataListElement | null, value: string) {

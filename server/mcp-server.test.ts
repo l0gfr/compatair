@@ -181,6 +181,27 @@ describe('MCP HTTP boundary helpers', () => {
 		} finally { rmSync(directory, { recursive: true, force: true }); }
 	});
 
+	it('persists merchant interest without accepting a product reference', async () => {
+		const directory = mkdtempSync(join(tmpdir(), 'compatair-acquisition-http-'));
+		const acquisitionAggregatePath = join(directory, 'acquisition.json');
+		try {
+			const server = createCompatAirServer({ catalog: { catalogVersion: 'test', compressors: [], tools: [] }, allowedOrigins: new Set(['https://compatair.fr']), acquisitionAggregatePath });
+			const call = (payload: string) => new Promise<number>((resolve) => {
+				const request = {
+					url: '/events', method: 'POST', headers: { origin: 'https://compatair.fr', 'content-type': 'application/json' }, socket: { remoteAddress: '127.0.0.1' },
+					async *[Symbol.asyncIterator]() { yield Buffer.from(payload); },
+				};
+				const response = { setTimeout() {}, writeHead(value: number) { resolve(value); }, end() {}, destroy() {} };
+				server.emit('request', request, response);
+			});
+			const accepted = JSON.stringify({ event: 'acquisition_aggregate', schemaVersion: '1.0.0', channel: 'organic', template: 'compressor', action: 'merchant_interest', outcome: 'unknown' });
+			const rejected = JSON.stringify({ event: 'acquisition_aggregate', schemaVersion: '1.0.0', channel: 'organic', template: 'compressor', action: 'merchant_interest', outcome: 'unknown', productId: 'compressor-a' });
+			expect(await call(accepted)).toBe(204);
+			expect(await call(rejected)).toBe(400);
+			expect(JSON.parse(readFileSync(acquisitionAggregatePath, 'utf8'))).toMatchObject({ totalEvents: 1, buckets: [{ channel: 'organic', template: 'compressor', action: 'merchant_interest', outcome: 'unknown', count: 1 }] });
+		} finally { rmSync(directory, { recursive: true, force: true }); }
+	});
+
 	it('rejects a demand aggregate from a non-authoritative calculation version', async () => {
 		const directory = mkdtempSync(join(tmpdir(), 'compatair-demand-http-'));
 		const demandAggregatePath = join(directory, 'demand.json');

@@ -23,6 +23,7 @@
     "data:rank-demand": "node scripts/rank-demand.mjs",
     "data:report-funnel": "node scripts/report-product-funnel.mjs",
     "data:report-acquisition": "node scripts/report-acquisition.mjs",
+    "data:report-affiliate-readiness": "node scripts/report-affiliate-readiness.mjs",
     "benchmark:evaluate": "node scripts/evaluate-agent-fidelity.mjs",
     "benchmark:mcp-manifest": "node scripts/verify-mcp-manifest-budget.mjs",
     "benchmark:mcp-agent": "node scripts/evaluate-mcp-agent-selection.mjs",
