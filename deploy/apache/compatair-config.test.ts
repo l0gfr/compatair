@@ -35,7 +35,7 @@ describe('CompatAir Apache CSP', () => {
 	});
 
 	it('blocks executable release internals and hidden paths', () => {
-		expect(config).toContain('^/(?:_server)(?:/|$)');
+		expect(config).toContain('^/(?:_ops|_server)(?:/|$)');
 		const hiddenPathPattern = [...config.matchAll(/<LocationMatch "([^"]+)">([\s\S]*?)<\/LocationMatch>/g)]
 			.find(([, pattern, body]) => pattern.includes('well-known/') && pattern.includes('security') && pattern.includes('ucp') && body.includes('Require all denied'))?.[1];
 		expect(hiddenPathPattern).toBeDefined();

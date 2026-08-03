@@ -141,7 +141,7 @@
 		Header always set Access-Control-Allow-Origin "*"
 		Header always set Cross-Origin-Resource-Policy "cross-origin"
 	</LocationMatch>
-	<LocationMatch "^/(?:_server)(?:/|$)">
+	<LocationMatch "^/(?:_ops|_server)(?:/|$)">
 		Require all denied
 	</LocationMatch>
 	<LocationMatch "^(?!/\.well-known/(?:security\.txt|ucp)$).*\/\.">

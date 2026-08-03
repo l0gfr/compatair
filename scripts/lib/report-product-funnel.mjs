@@ -1,4 +1,12 @@
-import { normalizeProductFunnelAggregate, PRODUCT_FUNNEL_FAMILIES, PRODUCT_FUNNEL_SCHEMA_VERSION } from '../../server/product-funnel-aggregates.mjs';
+import { existsSync } from 'node:fs';
+
+const sourceAggregateModule = new URL('../../server/product-funnel-aggregates.mjs', import.meta.url);
+const releaseAggregateModule = new URL('../../_server/product-funnel-aggregates.mjs', import.meta.url);
+const {
+	normalizeProductFunnelAggregate,
+	PRODUCT_FUNNEL_FAMILIES,
+	PRODUCT_FUNNEL_SCHEMA_VERSION,
+} = await import((existsSync(sourceAggregateModule) ? sourceAggregateModule : releaseAggregateModule).href);
 
 function boundedRate(numerator, denominator, warnings, label) {
 	if (numerator > denominator) {

@@ -90,6 +90,9 @@ await check('vidéo du parcours en lecture partielle', '/media/compatair-parcour
 });
 await check('robots', '/robots.txt', bodyContains('https://compatair.fr/sitemap-index.xml'));
 await check('sitemap', '/sitemap-index.xml', status(200));
+for (const pathname of ['/_ops/generate-private-weekly-report.mjs', '/_server/mcp-server.mjs']) {
+	await check(`interne privé ${pathname}`, pathname, status(403));
+}
 for (const alias of ['/sitemap.xml', '/sitemap_index.xml']) {
 	await check(`alias sitemap ${alias}`, alias, ({ response, url }) => {
 		assert(response.status === 301, `HTTP attendu 301, reçu ${response.status}`);
