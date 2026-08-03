@@ -6,18 +6,18 @@ if [[ ${EUID:-$(id -u)} -ne 0 ]]; then
 	exit 2
 fi
 
-version="24.18.0"
+version="24.18.1"
 node_arch=""
 archive_sha256=""
 
 case "$(dpkg --print-architecture)" in
 	amd64)
 		node_arch="x64"
-		archive_sha256="55aa7153f9d88f28d765fcdad5ae6945b5c0f98a36881703817e4c450fa76742"
+		archive_sha256="d6c664df3f3f61458e8c277585571328522d705166723a7c7823a9253a4d15a0"
 		;;
 	arm64)
 		node_arch="arm64"
-		archive_sha256="58c9520501f6ae2b52d5b210444e24b9d0c029a58c5011b797bc1fe7105886f6"
+		archive_sha256="7201e3a09dc825bac57867c81913e2b8f0ef87d04cb9082af4cda82f6ff3d88c"
 		;;
 	*)
 		echo "Unsupported architecture. CompatAir supports Debian amd64 and arm64." >&2

@@ -19,12 +19,14 @@ describe('UCP trust boundary', () => {
 			'profile="https://user:secret@agent.example/profile"',
 			'profile="https://agent.example:8443/profile"',
 			'profile="https://localhost/profile"',
+			'profile="https://127.0.0.1/profile"',
+			'profile="https://[2606:4700:4700::1111]/profile"',
 			'profile="https://agent.example/profile"; extra="x"',
 		]) expect(parseUcpAgentHeader(value)).toBeUndefined();
 	});
 
 	it('rejects private, local, documentation and transition network addresses', () => {
-		for (const address of ['127.0.0.1', '10.0.0.1', '172.16.0.1', '192.168.1.1', '169.254.1.1', '100.64.0.1', '192.0.2.1', '192.88.99.1', '198.51.100.2', '203.0.113.2', '::1', 'fd00::1', 'fe80::1', '64:ff9b::a00:1', '100::1', '2001:db8::1', '::ffff:127.0.0.1']) expect(isPublicNetworkAddress(address), address).toBe(false);
+		for (const address of ['127.0.0.1', '10.0.0.1', '172.16.0.1', '192.168.1.1', '169.254.1.1', '100.64.0.1', '192.0.2.1', '192.88.99.1', '198.51.100.2', '203.0.113.2', '::1', 'fd00::1', 'fe80::1', 'fec0::1', '64:ff9b::a00:1', '100::1', '2001::1', '2001:20::1', '2001:db8::1', '2002:7f00:1::', '3fff::1', '5f00::1', '::ffff:127.0.0.1', '::ffff:7f00:1', '::ffff:0:7f00:1']) expect(isPublicNetworkAddress(address), address).toBe(false);
 		expect(isPublicNetworkAddress('1.1.1.1')).toBe(true);
 		expect(isPublicNetworkAddress('192.0.1.1')).toBe(true);
 		expect(isPublicNetworkAddress('198.51.99.1')).toBe(true);

@@ -1,6 +1,6 @@
 import { lookup } from 'node:dns/promises';
 import { request as httpsRequest } from 'node:https';
-import { isIP } from 'node:net';
+import { BlockList, isIP } from 'node:net';
 
 export const UCP_PROTOCOL_VERSION = '2026-04-08';
 export const UCP_CAPABILITY_VERSION = '2026-07-15';
@@ -13,6 +13,28 @@ const PROFILE_TIMEOUT_MS = 3_000;
 const PROFILE_CACHE_TTL_MS = 5 * 60 * 1_000;
 const PROFILE_CACHE_LIMIT = 1_000;
 const profileCache = new Map();
+const nonPublicIpv6 = new BlockList();
+for (const [network, prefix] of [
+	['::', 128],
+	['::1', 128],
+	['::ffff:0:0', 96],
+	['::ffff:0:0:0', 96],
+	['64:ff9b::', 96],
+	['64:ff9b:1::', 48],
+	['100::', 64],
+	['2001::', 32],
+	['2001:2::', 48],
+	['2001:10::', 28],
+	['2001:20::', 28],
+	['2001:db8::', 32],
+	['2002::', 16],
+	['3fff::', 20],
+	['5f00::', 16],
+	['fc00::', 7],
+	['fe80::', 10],
+	['fec0::', 10],
+	['ff00::', 8],
+]) nonPublicIpv6.addSubnet(network, prefix, 'ipv6');
 
 export const samplePlatformProfile = {
 	ucp: {
@@ -62,13 +84,7 @@ function isPublicIpv4(address) {
 }
 
 function isPublicIpv6(address) {
-	const normalized = address.toLowerCase();
-	if (normalized === '::' || normalized === '::1') return false;
-	if (normalized.startsWith('fc') || normalized.startsWith('fd') || /^fe[89ab]/.test(normalized) || normalized.startsWith('ff')) return false;
-	const mapped = normalized.match(/::ffff:(\d+\.\d+\.\d+\.\d+)$/)?.[1];
-	if (mapped) return isPublicIpv4(mapped);
-	if (normalized.startsWith('64:ff9b:') || normalized.startsWith('100:') || normalized.startsWith('2001:2:') || normalized.startsWith('2001:db8:') || /^2001:1[0-9a-f]:/.test(normalized)) return false;
-	return true;
+	return !nonPublicIpv6.check(address, 'ipv6');
 }
 
 export function isPublicNetworkAddress(address) {
@@ -84,6 +100,8 @@ export function parseUcpAgentHeader(value) {
 	try { url = new URL(match[1]); } catch { return undefined; }
 	if (url.protocol !== 'https:' || url.username || url.password || url.hash || url.port) return undefined;
 	if (url.hostname.length > 253 || /(?:^|\.)(?:localhost|local|internal)$/i.test(url.hostname)) return undefined;
+	const hostname = url.hostname.startsWith('[') && url.hostname.endsWith(']') ? url.hostname.slice(1, -1) : url.hostname;
+	if (isIP(hostname)) return undefined;
 	return url;
 }
 
