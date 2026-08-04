@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
 	authorizeUcpRequest,
+	buildPinnedProfileRequestOptions,
 	createUcpError,
 	isPublicNetworkAddress,
 	parseUcpAgentHeader,
@@ -31,6 +32,21 @@ describe('UCP trust boundary', () => {
 		expect(isPublicNetworkAddress('192.0.1.1')).toBe(true);
 		expect(isPublicNetworkAddress('198.51.99.1')).toBe(true);
 		expect(isPublicNetworkAddress('2606:4700:4700::1111')).toBe(true);
+	});
+
+	it('connects only to the prevalidated public address while preserving TLS identity', () => {
+		const options = buildPinnedProfileRequestOptions(new URL('https://agent.example/.well-known/ucp?version=1'), '1.1.1.1', 4);
+		expect(options).toMatchObject({
+			hostname: '1.1.1.1',
+			family: 4,
+			port: 443,
+			servername: 'agent.example',
+			path: '/.well-known/ucp?version=1',
+			headers: { Host: 'agent.example' },
+			agent: false,
+		});
+		expect(() => buildPinnedProfileRequestOptions(new URL('https://agent.example/profile'), '127.0.0.1', 4)).toThrow('profile_not_trusted');
+		expect(() => buildPinnedProfileRequestOptions(new URL('https://agent.example/profile'), '2606:4700:4700::1111', 4)).toThrow('profile_not_trusted');
 	});
 
 	it('requires a matching platform capability and version', async () => {

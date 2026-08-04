@@ -1,3 +1,5 @@
+import { decodeXmlEntities, extractH1Text } from './markup-text.mjs';
+
 export const detailPagePolicies = [
 	{ pattern: /^\/compresseurs\/[^/]+\/$/, maximumStaticResults: 8, requireStaticResults: true },
 	{ pattern: /^\/outils-pneumatiques\/[^/]+\/$/, maximumStaticResults: 5, requireStaticResults: false },
@@ -7,7 +9,7 @@ export const detailPagePolicies = [
 export const maximumInternalLinks = 120;
 
 export function decodeXml(value) {
-	return value.replaceAll('&amp;', '&').replaceAll('&lt;', '<').replaceAll('&gt;', '>').replaceAll('&quot;', '"').replaceAll('&apos;', "'");
+	return decodeXmlEntities(value);
 }
 
 export function extractSitemapLocations(xml) {
@@ -15,7 +17,7 @@ export function extractSitemapLocations(xml) {
 }
 
 export function extractH1(html) {
-	return decodeXml(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1]?.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() ?? '');
+	return decodeXml(extractH1Text(html)).replace(/\s+/g, ' ').trim();
 }
 
 export function extractStaticResultCount(html) {

@@ -71,9 +71,49 @@ export function truncateNetworkAddress(address) {
 	return 'unknown';
 }
 
+function isAsciiWhitespace(character) {
+	return character === ' ' || character === '\t' || character === '\n' || character === '\r' || character === '\f';
+}
+
 function normalizeUserAgent(value) {
 	if (typeof value !== 'string') return 'unknown';
-	return value.toLowerCase().replace(/\d+(?:\.\d+)+/g, '#').replace(/\s+/g, ' ').trim().slice(0, 160) || 'unknown';
+	const input = value.toLowerCase().slice(0, 512);
+	let normalized = '';
+	let pendingSpace = false;
+	for (let index = 0; index < input.length && normalized.length < 160;) {
+		const character = input[index];
+		if (isAsciiWhitespace(character)) {
+			pendingSpace = normalized.length > 0;
+			index += 1;
+			continue;
+		}
+		if (pendingSpace) {
+			normalized += ' ';
+			pendingSpace = false;
+			if (normalized.length >= 160) break;
+		}
+		if (character >= '0' && character <= '9') {
+			const start = index;
+			while (index < input.length && input[index] >= '0' && input[index] <= '9') index += 1;
+			let versionEnd = index;
+			let segments = 0;
+			while (input[versionEnd] === '.' && input[versionEnd + 1] >= '0' && input[versionEnd + 1] <= '9') {
+				segments += 1;
+				versionEnd += 2;
+				while (versionEnd < input.length && input[versionEnd] >= '0' && input[versionEnd] <= '9') versionEnd += 1;
+			}
+			if (segments > 0) {
+				normalized += '#';
+				index = versionEnd;
+			} else {
+				normalized += input.slice(start, index);
+			}
+			continue;
+		}
+		normalized += character;
+		index += 1;
+	}
+	return normalized.slice(0, 160) || 'unknown';
 }
 
 export function callerFingerprint(secret, address, userAgent) {

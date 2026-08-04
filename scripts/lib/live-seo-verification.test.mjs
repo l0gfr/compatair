@@ -10,9 +10,13 @@ import {
 
 describe('vérification SEO de la surface live', () => {
 	it('lit les marqueurs de rendu sans dépendre du texte adjacent', () => {
-		const html = '<h1>KAESER <span>EPC</span> à cuve verticale</h1><div data-static-compatibility-results data-result-count="8"></div>';
+		const html = '<h1 data-label=">">KAESER <span title=">">EPC</span> à cuve verticale</h1><div data-static-compatibility-results data-result-count="8"></div>';
 		expect(extractH1(html)).toBe('KAESER EPC à cuve verticale');
 		expect(extractStaticResultCount(html)).toBe(8);
+	});
+
+	it('décode les entités XML une seule fois', () => {
+		expect(extractH1('<h1>&amp;lt;air&amp;gt; &amp; fiable</h1>')).toBe('&lt;air&gt; & fiable');
 	});
 
 	it('compte uniquement les liens internes', () => {

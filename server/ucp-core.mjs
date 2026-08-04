@@ -92,17 +92,20 @@ export function isPublicNetworkAddress(address) {
 	return family === 4 ? isPublicIpv4(address) : family === 6 ? isPublicIpv6(address) : false;
 }
 
+function isTrustedProfileUrl(url) {
+	if (!(url instanceof URL) || url.protocol !== 'https:' || url.username || url.password || url.hash || url.port) return false;
+	if (url.hostname.length > 253 || /(?:^|\.)(?:localhost|local|internal)$/i.test(url.hostname)) return false;
+	const hostname = url.hostname.startsWith('[') && url.hostname.endsWith(']') ? url.hostname.slice(1, -1) : url.hostname;
+	return isIP(hostname) === 0;
+}
+
 export function parseUcpAgentHeader(value) {
 	if (typeof value !== 'string' || value.length > 2_048) return undefined;
 	const match = value.match(/^profile="([^"\\\r\n]{1,2000})"$/);
 	if (!match) return undefined;
 	let url;
 	try { url = new URL(match[1]); } catch { return undefined; }
-	if (url.protocol !== 'https:' || url.username || url.password || url.hash || url.port) return undefined;
-	if (url.hostname.length > 253 || /(?:^|\.)(?:localhost|local|internal)$/i.test(url.hostname)) return undefined;
-	const hostname = url.hostname.startsWith('[') && url.hostname.endsWith(']') ? url.hostname.slice(1, -1) : url.hostname;
-	if (isIP(hostname)) return undefined;
-	return url;
+	return isTrustedProfileUrl(url) ? url : undefined;
 }
 
 function validatePlatformProfile(profile) {
@@ -119,14 +122,30 @@ function validatePlatformProfile(profile) {
 	return profile;
 }
 
+export function buildPinnedProfileRequestOptions(url, address, family) {
+	if (!isTrustedProfileUrl(url)) throw new Error('invalid_profile_url');
+	if (!isPublicNetworkAddress(address) || isIP(address) !== family) throw new Error('profile_not_trusted');
+	return {
+		protocol: 'https:',
+		hostname: address,
+		family,
+		port: 443,
+		servername: url.hostname,
+		path: `${url.pathname}${url.search}`,
+		method: 'GET',
+		headers: {
+			Accept: 'application/json',
+			Host: url.host,
+			'User-Agent': 'CompatAir-UCP-Discovery/2026.07',
+		},
+		timeout: PROFILE_TIMEOUT_MS,
+		agent: false,
+	};
+}
+
 function readProfileResponse(url, address, family) {
 	return new Promise((resolve, reject) => {
-		const request = httpsRequest(url, {
-			method: 'GET',
-			headers: { Accept: 'application/json', 'User-Agent': 'CompatAir-UCP-Discovery/2026.07' },
-			lookup: (_hostname, _options, callback) => callback(null, address, family),
-			timeout: PROFILE_TIMEOUT_MS,
-		}, (response) => {
+		const request = httpsRequest(buildPinnedProfileRequestOptions(url, address, family), (response) => {
 			if (response.statusCode !== 200) { response.resume(); reject(new Error('profile_unreachable')); return; }
 			const contentType = String(response.headers['content-type'] ?? '').toLowerCase();
 			if (!/^application\/(?:[a-z0-9.+-]*\+)?json(?:\s*;|$)/.test(contentType)) { response.resume(); reject(new Error('profile_unreachable')); return; }
@@ -150,7 +169,7 @@ function readProfileResponse(url, address, family) {
 }
 
 export async function fetchPublicUcpProfile(url, now = Date.now()) {
-	if (!(url instanceof URL)) throw new Error('invalid_profile_url');
+	if (!isTrustedProfileUrl(url)) throw new Error('invalid_profile_url');
 	if (url.href === UCP_SAMPLE_PLATFORM_PROFILE_URL) return samplePlatformProfile;
 	const cached = profileCache.get(url.href);
 	if (cached && now - cached.storedAt <= PROFILE_CACHE_TTL_MS) return cached.profile;

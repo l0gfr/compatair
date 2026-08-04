@@ -17,6 +17,7 @@ describe('MCP privacy-safe telemetry', () => {
 		expect(truncateNetworkAddress('2001:db8:1234:abcd::42')).toBe('2001:db8:1234:abcd::/64');
 		expect(callerFingerprint(Buffer.alloc(32, 1), '192.0.2.42', 'Agent/1.2.3')).toMatch(/^[a-f0-9]{64}$/);
 		expect(callerFingerprint(Buffer.alloc(32, 1), '192.0.2.99', 'Agent/9.8.7')).toBe(callerFingerprint(Buffer.alloc(32, 1), '192.0.2.42', 'Agent/1.2.3'));
+		expect(callerFingerprint(Buffer.alloc(32, 1), '192.0.2.42', `Agent/${'1.'.repeat(100_000)}1`)).toMatch(/^[a-f0-9]{64}$/);
 	});
 
 	it('classifies tool outcomes without treating incompatibility as an execution error', () => {

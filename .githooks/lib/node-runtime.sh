@@ -57,3 +57,7 @@ resolve_node_for_major() {
 
 	return 1
 }
+
+if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
+	resolve_node_for_major "${1:-}"
+fi

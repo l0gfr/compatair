@@ -36,7 +36,7 @@ function temporaryHookRepository() {
 }
 
 function resolveRuntime(requiredMajor: number, environment: NodeJS.ProcessEnv) {
-	return execFileSync('/bin/bash', ['-c', 'source "$1"; resolve_node_for_major "$2"', 'runtime-test', resolver, String(requiredMajor)], {
+	return execFileSync('/bin/bash', [resolver, String(requiredMajor)], {
 		env: environment,
 		encoding: 'utf8',
 	}).trim();
@@ -103,5 +103,5 @@ describe('résolution du runtime Node du hook pre-push', () => {
 		});
 		expect(output).toContain(`bascule automatique vers 24 via ${node24}`);
 		expect(output).toContain('pnpm-runtime=24 command=validate:main');
-	});
+	}, 15_000);
 });

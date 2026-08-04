@@ -1,6 +1,7 @@
 import { execFileSync } from 'node:child_process';
 import { readFile } from 'node:fs/promises';
 import { basename, join } from 'node:path';
+import { decodeXmlEntities } from './lib/markup-text.mjs';
 
 const root = process.cwd();
 const config = JSON.parse(await readFile(join(root, 'config/indexnow.json'), 'utf8'));
@@ -12,7 +13,7 @@ function git(...args) {
 }
 
 function xml(value) {
-	return value.replaceAll('&amp;', '&').replaceAll('&lt;', '<').replaceAll('&gt;', '>').replaceAll('&quot;', '"').replaceAll('&apos;', "'");
+	return decodeXmlEntities(value);
 }
 
 async function sitemapEntries() {

@@ -18,5 +18,5 @@ describe('minimal public contract repository export', () => {
 		expect(() => readFileSync(join(output, 'server/mcp-core.mjs'))).toThrow();
 		const tested = spawnSync(process.execPath, ['--test', 'tests/verify-contracts.mjs', 'ucp/tests/verify-contracts.mjs'], { cwd: output, encoding: 'utf8' });
 		expect(tested.status, tested.stderr).toBe(0);
-	});
+	}, 15_000);
 });

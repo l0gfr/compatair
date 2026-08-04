@@ -6,6 +6,7 @@ import { readImageDimensions } from '../src/domain/image-dimensions.ts';
 import { toolUsageTaxonomy } from '../src/data/taxonomy.ts';
 import { brandSlug } from '../src/domain/brand.ts';
 import { parseJavaScriptModuleSpecifiers } from './lib/javascript-module-graph.mjs';
+import { decodeXmlEntities as decodeXml, extractH1Text } from './lib/markup-text.mjs';
 
 const root = resolve('dist');
 const siteOrigin = 'https://compatair.fr';
@@ -147,10 +148,6 @@ async function walk(directory) {
 			else if (name.endsWith('.html')) htmlFiles.push(file);
 		}
 	}
-}
-
-function decodeXml(value) {
-	return value.replaceAll('&amp;', '&').replaceAll('&lt;', '<').replaceAll('&gt;', '>').replaceAll('&quot;', '"').replaceAll('&apos;', "'");
 }
 
 function normalizeInternalDestination(pathname) {
@@ -718,7 +715,7 @@ for (const file of htmlFiles) {
 		const brand = decodeXml(html.match(/data-product-brand="([^"]*)"/)?.[1] ?? '');
 		const model = decodeXml(html.match(/data-product-model="([^"]*)"/)?.[1] ?? '');
 		const mpn = decodeXml(html.match(/data-product-mpn="([^"]*)"/)?.[1] ?? '');
-		const h1 = decodeXml(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1]?.replace(/<[^>]+>/g, '').trim() ?? '');
+		const h1 = decodeXml(extractH1Text(html).trim());
 		if (!brand || !model || !h1) errors.push(`${label}: identité produit rendue incomplète`);
 		else {
 			const identityKey = `${brand.toLocaleLowerCase('fr-FR')}\u0000${model.toLocaleLowerCase('fr-FR')}`;
@@ -821,7 +818,16 @@ for (const file of htmlFiles) {
 	const breadcrumb = structuredNodes.find((node) => node['@type'] === 'BreadcrumbList');
 	if (breadcrumb) {
 		const items = breadcrumb.itemListElement;
-		if (!Array.isArray(items) || items.some((item, index) => item.position !== index + 1 || !item.name || !item.item?.startsWith(siteOrigin))) errors.push(`${label}: BreadcrumbList incomplet ou incohérent`);
+		const hasExpectedOrigin = (value) => {
+			if (typeof value !== 'string') return false;
+			try {
+				const url = new URL(value);
+				return url.origin === siteOrigin && !url.username && !url.password;
+			} catch {
+				return false;
+			}
+		};
+		if (!Array.isArray(items) || items.some((item, index) => item.position !== index + 1 || !item.name || !hasExpectedOrigin(item.item))) errors.push(`${label}: BreadcrumbList incomplet ou incohérent`);
 	}
 	if (html.includes('<meta property="og:type" content="article">')) {
 		const article = structuredNodes.find((node) => ['Article', 'TechArticle', 'NewsArticle'].includes(node['@type']));
