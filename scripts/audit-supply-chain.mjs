@@ -7,8 +7,10 @@ const QUARANTINE_MS = 24 * 60 * 60 * 1000;
 const RECENT_WINDOW_MS = 72 * 60 * 60 * 1000;
 const EXPECTED_BUILD_ALLOWLIST = new Set(['esbuild']);
 const EXPECTED_OVERRIDES = new Map([
-  ['brace-expansion', '5.0.8'],
-  ['fast-uri', '3.1.4'],
+  ['brace-expansion', '5.0.9'],
+  ['fast-uri', '3.1.5'],
+  ['ip-address', '10.3.1'],
+  ['postcss', '8.5.23'],
   ['tmp', '0.2.7'],
   ['uuid', '11.1.1'],
 ]);
