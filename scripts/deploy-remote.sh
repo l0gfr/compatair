@@ -112,7 +112,7 @@ run_public_smoke() {
 	local smoke_script="$script_dir/scripts/smoke-live-http.mjs"
 	local seo_script="$script_dir/scripts/verify-live-seo.mjs"
 	local mcp_enabled=false
-	if [[ ! -x "$node_binary" || ! -f "$smoke_script" || ! -f "$seo_script" || ! -f "$script_dir/scripts/lib/live-seo-verification.mjs" ]]; then
+	if [[ ! -x "$node_binary" || ! -f "$smoke_script" || ! -f "$seo_script" || ! -f "$script_dir/scripts/lib/live-seo-verification.mjs" || ! -f "$script_dir/scripts/lib/markup-text.mjs" ]]; then
 		echo "The production smoke runtime is incomplete" >&2
 		return 1
 	fi

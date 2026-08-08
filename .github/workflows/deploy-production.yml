@@ -171,7 +171,8 @@ jobs:
             deploy \
             scripts/smoke-live-http.mjs \
             scripts/verify-live-seo.mjs \
-            scripts/lib/live-seo-verification.mjs
+            scripts/lib/live-seo-verification.mjs \
+            scripts/lib/markup-text.mjs
           sha256sum "compatair-admin-${GITHUB_SHA}.tar.gz" > "compatair-admin-${GITHUB_SHA}.tar.gz.sha256"
 
       - name: Upload release artifact

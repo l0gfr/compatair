@@ -85,7 +85,9 @@ describe('release boundary policy', () => {
 		expect(apache).toContain('ctl:ruleRemoveTargetById=930120;ARGS_NAMES:params.arguments.meta.ucp-agent.profile');
 		expect(apache).toContain('ctl:ruleRemoveTargetById=931130;ARGS:params.arguments.meta.ucp-agent.profile');
 		expect(deploy).toContain('scripts/smoke-live-http.mjs');
+		expect(deploy).toContain('scripts/lib/markup-text.mjs');
 		expect(workflow).toContain('install -m 644 server/*.mjs dist/_server/');
+		expect(workflow).toMatch(/scripts\/lib\/live-seo-verification\.mjs \\\n\s+scripts\/lib\/markup-text\.mjs/);
 	});
 
 	it('redirects legacy sitemap aliases to the generated sitemap index', () => {
