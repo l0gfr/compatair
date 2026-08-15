@@ -6,17 +6,20 @@ const REGISTRY = 'https://registry.npmjs.org';
 const QUARANTINE_MS = 24 * 60 * 60 * 1000;
 const RECENT_WINDOW_MS = 72 * 60 * 60 * 1000;
 const EXPECTED_BUILD_ALLOWLIST = new Set(['esbuild']);
+const DISALLOWED_LOCKED_PACKAGES = new Set(['extract-zip']);
 const EXPECTED_OVERRIDES = new Map([
+  ['@puppeteer/browsers', '3.2.0'],
   ['brace-expansion', '5.0.9'],
   ['fast-uri', '3.1.5'],
   ['ip-address', '10.3.1'],
   ['js-yaml@3', '3.15.1'],
   ['js-yaml@4', '4.3.1'],
-  ['nanoid@3', '3.3.17'],
+  ['nanoid@3', '3.3.18'],
   ['postcss', '8.5.23'],
   ['tmp', '0.2.7'],
   ['uuid', '11.1.1'],
 ]);
+const EXPECTED_TRUST_POLICY_EXCLUSIONS = new Set(['chokidar@4.0.3', 'semver@5.7.2', 'semver@6.3.1']);
 const EXPECTED_RELEASE_AGE_EXCLUSIONS = new Set();
 const LIFECYCLE_SCRIPTS = ['preinstall', 'install', 'postinstall'];
 
@@ -271,6 +274,16 @@ if (missingReleaseAgeExclusions.length) {
   failures.push(`exceptions de quarantaine pnpm attendues mais absentes: ${missingReleaseAgeExclusions.join(', ')}`);
 }
 
+const trustPolicyExclusions = parseYamlList(workspace, 'trustPolicyExclude');
+const unexpectedTrustPolicyExclusions = setDifference(trustPolicyExclusions, EXPECTED_TRUST_POLICY_EXCLUSIONS);
+const missingTrustPolicyExclusions = setDifference(EXPECTED_TRUST_POLICY_EXCLUSIONS, trustPolicyExclusions);
+if (unexpectedTrustPolicyExclusions.length) {
+  failures.push(`exceptions de confiance pnpm inattendues: ${unexpectedTrustPolicyExclusions.join(', ')}`);
+}
+if (missingTrustPolicyExclusions.length) {
+  failures.push(`exceptions de confiance pnpm attendues mais absentes: ${missingTrustPolicyExclusions.join(', ')}`);
+}
+
 const allowedBuilds = parseAllowedBuilds(workspace);
 const unexpectedBuilds = setDifference(allowedBuilds, EXPECTED_BUILD_ALLOWLIST);
 const missingBuilds = setDifference(EXPECTED_BUILD_ALLOWLIST, allowedBuilds);
@@ -293,10 +306,16 @@ if (invalidIntegrity.length) {
   failures.push(`${invalidIntegrity.length} paquet(s) sans intégrité SHA-512: ${invalidIntegrity.slice(0, 10).map(({ name, version }) => `${name}@${version}`).join(', ')}`);
 }
 
+const disallowedLockedPackages = lockedPackages.filter(({ name }) => DISALLOWED_LOCKED_PACKAGES.has(name));
+if (disallowedLockedPackages.length) {
+  failures.push(`paquet(s) sans correctif amont interdit(s): ${disallowedLockedPackages.map(({ name, version }) => `${name}@${version}`).join(', ')}`);
+}
+
 console.log(`Lockfile: ${lockedPackages.length} versions, intégrités SHA-512 présentes: ${lockedPackages.length - invalidIntegrity.length}/${lockedPackages.length}.`);
 console.log(`Scripts d'installation autorisés: ${[...allowedBuilds].sort().join(', ') || 'aucun'}.`);
 console.log(`Overrides pnpm contrôlés depuis pnpm-workspace.yaml: ${[...overrides].map(([name, version]) => `${name}@${version}`).join(', ') || 'aucun'}.`);
 console.log(`Exceptions de quarantaine pnpm contrôlées: ${[...releaseAgeExclusions].sort().join(', ') || 'aucune'}.`);
+console.log(`Exceptions de confiance pnpm contrôlées: ${[...trustPolicyExclusions].sort().join(', ') || 'aucune'}.`);
 
 if (advisoryMode) {
   try {
