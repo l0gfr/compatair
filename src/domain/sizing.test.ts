@@ -113,8 +113,31 @@ describe('compatibility engine', () => {
 	});
 
 	it('exposes the expanded sourced catalog', () => {
-		expect(compressors).toHaveLength(120);
-		expect(tools).toHaveLength(120);
+		expect(compressors).toHaveLength(140);
+		expect(tools).toHaveLength(160);
+	});
+
+	it('keeps the new ABAC Tech flows bound to the documented 7 bar point', () => {
+		const lubricated = compressors.find((item) => item.id === 'abac-atl-10-10-pp');
+		const oilFree = compressors.find((item) => item.id === 'abac-atf-10-10-bm');
+		expect(lubricated).toBeDefined();
+		expect(oilFree).toBeDefined();
+		expect(lubricated!.intakeFlowLpm).toBeUndefined();
+		expect(interpolateFad(lubricated!, 7)).toBe(942);
+		expect(interpolateFad(lubricated!, 10)).toBeUndefined();
+		expect(interpolateFad(oilFree!, 7)).toBe(930);
+		expect(interpolateFad(oilFree!, 10)).toBeUndefined();
+	});
+
+	it('preserves the Chicago Pneumatic load flow and 6.3 bar scope', () => {
+		const impact = tools.find((item) => item.id === 'chicago-pneumatic-cp6763-d18d');
+		const drill = tools.find((item) => item.id === 'chicago-pneumatic-cp785qc');
+		expect(impact?.demandModel).toBe('fixed-flow');
+		expect(drill?.demandModel).toBe('fixed-flow');
+		if (impact?.demandModel !== 'fixed-flow' || drill?.demandModel !== 'fixed-flow') throw new Error('Profils Chicago Pneumatic fixes attendus.');
+		expect(impact.workingPressureBar).toEqual({ min: 6.3, typical: 6.3, max: 6.3 });
+		expect(impact.airflowLpm).toEqual({ min: 1158, typical: 1158, max: 1158 });
+		expect(drill.airflowLpm).toEqual({ min: 360, typical: 360, max: 360 });
 	});
 
 	it('validates a new multipoint profile only from its interpolated FAD', () => {

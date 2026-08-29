@@ -16,7 +16,7 @@ describe('document quality observatory', () => {
 		expect(observatory.metrics.multiPressureFad.availableCount).toBe(compressors.filter((item) => item.fadCurve.length >= 2).length);
 		expect(observatory.metrics.referenceStability).toMatchObject({ status: 'measured', changeCount: 0, missingBaselineCount: 0 });
 		expect(observatory.metrics.contradictionResponses).toMatchObject({ answeredCount: 4, totalCount: 4, responseRate: 100 });
-		expect(observatory.measurementProgram).toMatchObject({ baseline: { period: '2026-07', kind: 'baseline' }, trend: { status: 'insufficient_data', periodCount: 1 }, targets: { multiPressureFad: { status: 'pending_trend', targetPercent: null }, referenceBaselineCoverage: { targetPercent: 100 }, contradictionResponses: { targetPercent: 100 } } });
+		expect(observatory.measurementProgram).toMatchObject({ baseline: { period: '2026-07', kind: 'baseline' }, trend: { status: 'measured', periodCount: 2, fromPeriod: '2026-07', toPeriod: '2026-08' }, targets: { multiPressureFad: { status: 'pending_trend', targetPercent: null }, referenceBaselineCoverage: { targetPercent: 100 }, contradictionResponses: { targetPercent: 100 } } });
 	});
 
 	it('requires a current MPN observation and valid contradiction sources', () => {
@@ -31,12 +31,12 @@ describe('document quality observatory', () => {
 			...documentQualityLedger,
 			corrections: [...documentQualityLedger.corrections, { id: 'measured-example', title: 'Exemple mesuré', openedAt: '2026-07-15', resolvedAt: '2026-07-17', summary: 'Cycle daté.', impact: 'Mesure testée.' }],
 		};
-		const measured = createDocumentQualityObservatory(compressors, tools, ledger, referenceRegistry, '2026-07-17', documentQualityHistory);
+		const measured = createDocumentQualityObservatory(compressors, tools, ledger, referenceRegistry, CATALOG_VERIFIED_AT, documentQualityHistory);
 		expect(measured.metrics.correctionLeadTime).toMatchObject({ status: 'measured', medianDays: 1, measuredCount: 2 });
 	});
 
 	it('requires immutable monthly periods in chronological order', () => {
 		expect(() => documentQualityHistorySchema.parse({ ...documentQualityHistory, snapshots: [...documentQualityHistory.snapshots, { ...documentQualityHistory.snapshots[0], kind: 'monthly' }] })).toThrow();
-		expect(() => createDocumentQualityObservatory(compressors, tools, documentQualityLedger, referenceRegistry, '2026-08-01', documentQualityHistory)).toThrow('Snapshot mensuel documentaire manquant pour 2026-08');
+		expect(() => createDocumentQualityObservatory(compressors, tools, documentQualityLedger, referenceRegistry, '2026-09-01', documentQualityHistory)).toThrow('Snapshot mensuel documentaire manquant pour 2026-09');
 	});
 });

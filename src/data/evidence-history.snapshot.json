@@ -5593,7 +5593,1607 @@
         "retrievedAt": "2026-07-20",
         "confidence": "A"
       }
+    },
+    {
+      "id": "added:abac-atf-10-10-bm:abac-4116002408-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002408-catalog-2025",
+      "productId": "abac-atf-10-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e53888375d4f9b5808237514f163ba21bb96f7809e2e8840008248aee12e0603",
+      "snapshot": {
+        "id": "abac-4116002408-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATF-BM, page 20",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATF 10 10 BM vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atf-10-10-bm:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atf-10-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "caf1f87174cda027d82c6f55a7740648f8fc4d33171b235c004a3fbfeb999442",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atf-10-10-pp:abac-4116002405-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002405-catalog-2025",
+      "productId": "abac-atf-10-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "dbf07672fbaa7eb4973f052fa776dba92307789ec6ed110cd175f396d553b33e",
+      "snapshot": {
+        "id": "abac-4116002405-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATF-PP, page 20",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATF 10 10 PP vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atf-10-10-pp:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atf-10-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "28380591f477eb825ba71fd149ec694e96233214c8d50821bf555f5fa892a829",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atf-2-10-bm:abac-4116002329-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002329-catalog-2025",
+      "productId": "abac-atf-2-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0ea2e101a09682caef272f2fa1118a1deb2beed740d3dbd469c8a7c115464023",
+      "snapshot": {
+        "id": "abac-4116002329-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATF-BM, page 20",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATF 2 10 BM vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atf-2-10-bm:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atf-2-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0b4df489c17b19bdb0a1d677eca8146cb15b56434e0d7afa439f9ba2660beabb",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atf-2-10-pp:abac-4116002333-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002333-catalog-2025",
+      "productId": "abac-atf-2-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b722dcb23dfe33e35b190fa2e563c14e28da61a5e94d7f73844a23e6880552a1",
+      "snapshot": {
+        "id": "abac-4116002333-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATF-PP, page 20",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATF 2 10 PP vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atf-2-10-pp:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atf-2-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "fa6cc999744a9a14bd2554793191ee00970e1d0aec4840f57e5aa17670e599bb",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atf-3-10-bm:abac-4116002355-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002355-catalog-2025",
+      "productId": "abac-atf-3-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "48996c3450584171781a1c046791e8e4e885b3e6fbc517e92f90322fbc984479",
+      "snapshot": {
+        "id": "abac-4116002355-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATF-BM, page 20",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATF 3 10 BM vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atf-3-10-bm:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atf-3-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0ad872724f23522a91ae60b412dbaf97c14b29bbdf569736e6a44301870e07dd",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atf-3-10-pp:abac-4116002352-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002352-catalog-2025",
+      "productId": "abac-atf-3-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "17345af982fb3793a0c142d383f6001f751cf8f99d63dff597675232f92c9830",
+      "snapshot": {
+        "id": "abac-4116002352-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATF-PP, page 20",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATF 3 10 PP vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atf-3-10-pp:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atf-3-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0a6c49e35d505be8de85b0607770dc786eb86a9bd5ea42f35bb86a39f7b4617d",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atf-5-5-10-bm:abac-4116002381-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002381-catalog-2025",
+      "productId": "abac-atf-5-5-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "3c9580cadb994cff25bd0fcf1ffec1baf1bb3df5c00477e92267c75186aa05bb",
+      "snapshot": {
+        "id": "abac-4116002381-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATF-BM, page 20",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATF 5.5 10 BM vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atf-5-5-10-bm:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atf-5-5-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d5d4e9c8d33995911e6cfe0ebc21283bf87681264bea166d7eebd4892efa5cfb",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atf-5-5-10-pp:abac-4116002369-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002369-catalog-2025",
+      "productId": "abac-atf-5-5-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "4b11ade9869bb5aa1de70c94c8918478e83cc262418421a1114cba224bcded89",
+      "snapshot": {
+        "id": "abac-4116002369-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATF-PP, page 20",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATF 5.5 10 PP vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atf-5-5-10-pp:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atf-5-5-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "874c36d7bb96898dff182bd841354994356fb99d71c06db81e7068633b09a160",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atf-7-5-10-bm:abac-4116002398-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002398-catalog-2025",
+      "productId": "abac-atf-7-5-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "bd093c33eac250665457d81f0d7e99b6b41d59d88879056fb3c150754b5beb4f",
+      "snapshot": {
+        "id": "abac-4116002398-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATF-BM, page 20",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATF 7.5 10 BM vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atf-7-5-10-bm:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atf-7-5-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "594fe9bd7468825d4134e319012187833cca20ac8c35ee85699d2a0a87bbea1f",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atf-7-5-10-pp:abac-4116002392-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002392-catalog-2025",
+      "productId": "abac-atf-7-5-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "390a7d6e843c919b0cb4bd4c2b4716dbac0c61d9070dbbb0ebc32d96910bfc1f",
+      "snapshot": {
+        "id": "abac-4116002392-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATF-PP, page 20",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATF 7.5 10 PP vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atf-7-5-10-pp:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atf-7-5-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e1d20c3100e60b0c8aae184c182706da136518b185b6fe7164d7f79ee1b48ecd",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atl-10-10-bm:abac-4116002407-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002407-catalog-2025",
+      "productId": "abac-atl-10-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "4fc55fe7edf728481d793e5ed35a49e605baf43672f890a6bd35e75a4b0688ea",
+      "snapshot": {
+        "id": "abac-4116002407-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATL-BM, page 18",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATL 10 10 BM vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atl-10-10-bm:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atl-10-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "fb536f4a8145b3c7cd0e798340b617ae41c1584c37d66d436a6ac7f8d3e1724d",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atl-10-10-pp:abac-4116002402-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002402-catalog-2025",
+      "productId": "abac-atl-10-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5a8e38df22846ef02f6adacc5ff52fc2fc2ed0b912ac241368fbeab48b15d393",
+      "snapshot": {
+        "id": "abac-4116002402-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATL-PP, page 18",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATL 10 10 PP vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atl-10-10-pp:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atl-10-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "39b9189bcfed0583febf1a94ac69bff6a0ef6bccb6f57fea1298d126fdb7cbb3",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atl-2-10-bm:abac-4116002322-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002322-catalog-2025",
+      "productId": "abac-atl-2-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "beaef3446c635a121d9006b7da4853ed60c7e5b37a0d12f0cd421af39fa6923b",
+      "snapshot": {
+        "id": "abac-4116002322-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATL-BM, page 18",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATL 2 10 BM vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atl-2-10-bm:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atl-2-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b506cc28abb95e7088bb1d32027875cd20ee9922856cc3304b3810f04b2563c5",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atl-2-10-pp:abac-4116002326-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002326-catalog-2025",
+      "productId": "abac-atl-2-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9f665b31c3e95f040966b1bf3974fe6d51b56eb9ae1f5d6683ee2fff6ff00344",
+      "snapshot": {
+        "id": "abac-4116002326-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATL-PP, page 18",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATL 2 10 PP vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atl-2-10-pp:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atl-2-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a01e81a741ccf25fb02aac080770cf5b41973ea22598839417655120c275aacf",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atl-3-10-bm:abac-4116002353-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002353-catalog-2025",
+      "productId": "abac-atl-3-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "68569d1f074b5e588d0dae95c4bf132168e6f8c9820005315bcf45a4241ca3e3",
+      "snapshot": {
+        "id": "abac-4116002353-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATL-BM, page 18",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATL 3 10 BM vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atl-3-10-bm:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atl-3-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "28d111e088b54d7801d7d5da41160e29a322b3a6d1e5843832a705fbdfdd9a2e",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atl-3-10-pp:abac-4116002343-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002343-catalog-2025",
+      "productId": "abac-atl-3-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9558ef5c43eade12f79eb3512c5cf232082e0f4139a35338ca15db2821d63db1",
+      "snapshot": {
+        "id": "abac-4116002343-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATL-PP, page 18",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATL 3 10 PP vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atl-3-10-pp:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atl-3-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ed4b8f9c31b937cdac387996511b4ad3feaff0c88c3165a5c42118c766fc472a",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atl-5-5-10-bm:abac-4116002375-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002375-catalog-2025",
+      "productId": "abac-atl-5-5-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b831c180c70a643b3bf62011628dc03cca6310cd8a9b6c653076afd3d9d3d1bb",
+      "snapshot": {
+        "id": "abac-4116002375-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATL-BM, page 18",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATL 5.5 10 BM vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atl-5-5-10-bm:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atl-5-5-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2baa0fa9c06bf35af2ae18d7f20fa2ee3939484bad3bdcc8abf511976fcb39df",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atl-5-5-10-pp:abac-4116002360-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002360-catalog-2025",
+      "productId": "abac-atl-5-5-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "72ec112ded5b473e00036470cd35ab49a0939bc418f0c6daa5cde89449618e0e",
+      "snapshot": {
+        "id": "abac-4116002360-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATL-PP, page 18",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATL 5.5 10 PP vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atl-5-5-10-pp:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atl-5-5-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1720a812a4c512b42044ab8d6105363795ffc7d26c412eb4dc6c12a42342cd64",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atl-7-5-10-bm:abac-4116002394-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002394-catalog-2025",
+      "productId": "abac-atl-7-5-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e72159adacdad51319294f86c3d302e5f6478e2376def7ab4f677ec42c4ca181",
+      "snapshot": {
+        "id": "abac-4116002394-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATL-BM, page 18",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATL 7.5 10 BM vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atl-7-5-10-bm:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atl-7-5-10-bm",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e7c25f89a0327e7866f02cddad2adda7e7f48068ae8e80febb62a8391f84d42d",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:abac-atl-7-5-10-pp:abac-4116002389-catalog-2025:2026-08-29",
+      "evidenceId": "abac-4116002389-catalog-2025",
+      "productId": "abac-atl-7-5-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "65bb81cee41f548895d2719b68b3cc131501d8b01556b74f1d46735bb10b032e",
+      "snapshot": {
+        "id": "abac-4116002389-catalog-2025",
+        "sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf",
+        "sourceLabel": "ABAC, Catalogue général 2025, ATL-PP, page 18",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Ligne ATL 7.5 10 PP vérifiée dans le tableau officiel : numéro de pièce, débit, lubrification, puissance, régime, alimentation, pression, bruit, dimensions et poids."
+      }
+    },
+    {
+      "id": "added:abac-atl-7-5-10-pp:schneider-industrial-tech-2023-atl-atf-flow-pressure:2026-08-29",
+      "evidenceId": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+      "productId": "abac-atl-7-5-10-pp",
+      "productType": "compressor",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "79d75cb20a45aae68a84c3fc097b918e95b9613d3bab5e8818ffefb662d9019a",
+      "snapshot": {
+        "id": "schneider-industrial-tech-2023-atl-atf-flow-pressure",
+        "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/produkte/2023-09_SD-Industrial-Tech_FINAL_SCREEN.pdf",
+        "sourceLabel": "Schneider Airsystems, documentation technique Industrial Tech ATL et ATF",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Les tableaux techniques des familles ATL et ATF publient les débits des groupes au point de service de 7 bar."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp1014p05:cp-6151580190-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-6151580190-general-industry-2026",
+      "productId": "chicago-pneumatic-cp1014p05",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "70d30c86409306a9059bea3d4d7e4ab184ddeb13d6ee669d22c4a7e90ac3aedd",
+      "snapshot": {
+        "id": "cp-6151580190-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP1014P05, page 158",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp1014p24:cp-6151580050-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-6151580050-general-industry-2026",
+      "productId": "chicago-pneumatic-cp1014p24",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "abef3823784edd59e829ee6078b4a0a24edc30ded74a2ab513e5646eef60400a",
+      "snapshot": {
+        "id": "cp-6151580050-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP1014P24, page 157",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp1014p33:cp-6151580030-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-6151580030-general-industry-2026",
+      "productId": "chicago-pneumatic-cp1014p33",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "033a5efecbc3616296d36070785b13dc6446f297b605fc1029feb06f723e266d",
+      "snapshot": {
+        "id": "cp-6151580030-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP1014P33, page 157",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp1014p45:cp-6151580010-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-6151580010-general-industry-2026",
+      "productId": "chicago-pneumatic-cp1014p45",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "f417ba1bef4dd65630571deed4c0207852ed3793742e8239e24bededa0c94348",
+      "snapshot": {
+        "id": "cp-6151580010-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP1014P45, page 157",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp6060-p15h:cp-6151590090-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-6151590090-general-industry-2026",
+      "productId": "chicago-pneumatic-cp6060-p15h",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e62f4ba048c34e2036985bddfb84554375ccb8ab649d7d66be660ac73e2919bc",
+      "snapshot": {
+        "id": "cp-6151590090-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP6060-P15H, page 30",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp6060-p15r:cp-6151590100-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-6151590100-general-industry-2026",
+      "productId": "chicago-pneumatic-cp6060-p15r",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0ffcea08b9c08273c232976e5562994ffe2e2fe5bcd54145bc960f82f4078e06",
+      "snapshot": {
+        "id": "cp-6151590100-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP6060-P15R, page 30",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp6070-p15h:cp-6151590110-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-6151590110-general-industry-2026",
+      "productId": "chicago-pneumatic-cp6070-p15h",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1a6dca2e2d11e1da359ec2c443c4e2590657967c0fe798d136a7c0f1b247d018",
+      "snapshot": {
+        "id": "cp-6151590110-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP6070-P15H, page 32",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp6500-rs:cp-t025214-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-t025214-general-industry-2026",
+      "productId": "chicago-pneumatic-cp6500-rs",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "f1ab1b433e38d53f83094558026d9a9f0a1af5ed5aeaed8834521e609fc3a86b",
+      "snapshot": {
+        "id": "cp-t025214-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP6500-RS, page 24",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp6500-rsr:cp-t025216-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-t025216-general-industry-2026",
+      "productId": "chicago-pneumatic-cp6500-rsr",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "89ccd5c03f197cc73d7fb326b9ba7d41c13ab465cc5f909b4fc3a8b26e5d2b8f",
+      "snapshot": {
+        "id": "cp-t025216-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP6500-RSR, page 24",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp6738-p05r:cp-6151590560-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-6151590560-general-industry-2026",
+      "productId": "chicago-pneumatic-cp6738-p05r",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "df663ff228cde33f84d886fd00d3f7250e525b9251de8b9cdba4cdb6f681ef5b",
+      "snapshot": {
+        "id": "cp-6151590560-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP6738-P05R, page 24",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp6763:cp-6151590400-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-6151590400-general-industry-2026",
+      "productId": "chicago-pneumatic-cp6763",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a69a9a495f4e4dc1c260940109ae053b7b944f3161c5c994e460b6abd75bf3d2",
+      "snapshot": {
+        "id": "cp-6151590400-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP6763, page 29",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp6763-d18d:cp-6151590640-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-6151590640-general-industry-2026",
+      "productId": "chicago-pneumatic-cp6763-d18d",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "251cd0d58aff39f7bc5a8375526e14088f286d85037f7665852a65e795884c70",
+      "snapshot": {
+        "id": "cp-6151590640-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP6763-D18D, page 29",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp6768ex-p18d:cp-6151590580-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-6151590580-general-industry-2026",
+      "productId": "chicago-pneumatic-cp6768ex-p18d",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "f12f465c0056ebe5520c311345d2cc6fc75d959410ea009f62f0a4fdcc9553be",
+      "snapshot": {
+        "id": "cp-6151590580-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP6768EX-P18D, page 30",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7729:cp-8941077290-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-8941077290-general-industry-2026",
+      "productId": "chicago-pneumatic-cp7729",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "63f70a04e7a65a4f039ab4e6d8a6faab5ba09e291d06b397ca9ec037d60259cf",
+      "snapshot": {
+        "id": "cp-8941077290-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP7729, page 21",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7729-p:cp-8941077292-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-8941077292-general-industry-2026",
+      "productId": "chicago-pneumatic-cp7729-p",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e1e90c25425dd9f897ed1653b992005622e743dccf94f63ec75c2afbfda9b325",
+      "snapshot": {
+        "id": "cp-8941077292-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP7729-P, page 21",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp772h:cp-t024598-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-t024598-general-industry-2026",
+      "productId": "chicago-pneumatic-cp772h",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e4758b964cb7bf5efe31279e69b4a8c373a4ab710c0321b9acc8b41702dae6fe",
+      "snapshot": {
+        "id": "cp-t024598-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP772H, page 27",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7732c:cp-8941077321-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-8941077321-general-industry-2026",
+      "productId": "chicago-pneumatic-cp7732c",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "38bd7728cb9f685ea214d2d56926f15688605bc14993d050b6b652ec1f97dc3c",
+      "snapshot": {
+        "id": "cp-8941077321-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP7732C, page 20",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7763:cp-8941077630-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-8941077630-general-industry-2026",
+      "productId": "chicago-pneumatic-cp7763",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8857eaa1264b77fc51e2dd77d5566b1f9c2afca2de2b01c7e022239690e268d1",
+      "snapshot": {
+        "id": "cp-8941077630-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP7763, page 27",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7769:cp-8941077691-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-8941077691-general-industry-2026",
+      "productId": "chicago-pneumatic-cp7769",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9db524ad47f8a81b560cc809cfdc3d9ee5e83732af8c5e943540ae00e409efcf",
+      "snapshot": {
+        "id": "cp-8941077691-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP7769, page 28",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7769-p:cp-8941077692-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-8941077692-general-industry-2026",
+      "productId": "chicago-pneumatic-cp7769-p",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ece47d108e0169aa6d10b4a4f8123644b143a67c5fa86f2745a100d66b57231d",
+      "snapshot": {
+        "id": "cp-8941077692-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP7769-P, page 28",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7829:cp-8941078293-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-8941078293-general-industry-2026",
+      "productId": "chicago-pneumatic-cp7829",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "606fa9e37fc276a4521f89fa53ea916c6779ff4ddb3ca0f399f74caed0bc5fd6",
+      "snapshot": {
+        "id": "cp-8941078293-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP7829, page 40",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7829h:cp-8941078294-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-8941078294-general-industry-2026",
+      "productId": "chicago-pneumatic-cp7829h",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9415ccb02b730dc82707de7747b6df06079a3ce169c412d72c1acc393019f32a",
+      "snapshot": {
+        "id": "cp-8941078294-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP7829H, page 40",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7830hq:cp-8941078308-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-8941078308-general-industry-2026",
+      "productId": "chicago-pneumatic-cp7830hq",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1c78e7da0e2d299abc2da5a9068552292f4e2543a55456455b446dc7e8d6aea1",
+      "snapshot": {
+        "id": "cp-8941078308-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP7830HQ, page 41",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7830q:cp-8941078306-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-8941078306-general-industry-2026",
+      "productId": "chicago-pneumatic-cp7830q",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d6447c8c53d42782ab19a3a65ce54ae47720ddac63ab020088b34df264c9fd3e",
+      "snapshot": {
+        "id": "cp-8941078306-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP7830Q, page 40",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp785qc:cp-t024242-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-t024242-general-industry-2026",
+      "productId": "chicago-pneumatic-cp785qc",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c51730c46a986093c13c8ecfaea05a7138415bcca8b6ffc733e49b745eb27712",
+      "snapshot": {
+        "id": "cp-t024242-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP785QC, page 158",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp789r-26:cp-t025180-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-t025180-general-industry-2026",
+      "productId": "chicago-pneumatic-cp789r-26",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2d9da74d15cb9811483db2bada81489b99ad8bddaebc5733ef74ae1aaff4db27",
+      "snapshot": {
+        "id": "cp-t025180-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP789R-26, page 160",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp8222-r:cp-6151590230-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-6151590230-general-industry-2026",
+      "productId": "chicago-pneumatic-cp8222-r",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9318e715a7d0bc43e146331aaf50ce32d16dc7bcc7b032076c93e6c77e6b666b",
+      "snapshot": {
+        "id": "cp-6151590230-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP8222-R, page 19",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp825c:cp-8941082511-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-8941082511-general-industry-2026",
+      "productId": "chicago-pneumatic-cp825c",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "168ce7fd01f314eaf81af1302db3c06cf50bfc55219e1da030fdd7f4b36cd0a3",
+      "snapshot": {
+        "id": "cp-8941082511-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP825C, page 39",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp826t:cp-t025075-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-t025075-general-industry-2026",
+      "productId": "chicago-pneumatic-cp826t",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d1114603fd05d160f9e71279b13bce5209a1c73d0ed4e8b6e4a99320e29b2ea1",
+      "snapshot": {
+        "id": "cp-t025075-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP826T, page 39",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp8272-d:cp-6151590260-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-6151590260-general-industry-2026",
+      "productId": "chicago-pneumatic-cp8272-d",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "13bf2b60ccfb9ebf846a2c244438f362a6992d5f7c0d147ea45163218e93056f",
+      "snapshot": {
+        "id": "cp-6151590260-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP8272-D, page 28",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp8272-p:cp-6151590220-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-6151590220-general-industry-2026",
+      "productId": "chicago-pneumatic-cp8272-p",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d4d2326c19bc9fc92a8a651c32516c3b58200cd6862ae8e15d75db27cc46edc4",
+      "snapshot": {
+        "id": "cp-6151590220-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP8272-P, page 28",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp828:cp-t022708-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-t022708-general-industry-2026",
+      "productId": "chicago-pneumatic-cp828",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "f6ab0c294904ccc31ac902d977ad0f78c95d0157c08fcb250769f8fbc3006c84",
+      "snapshot": {
+        "id": "cp-t022708-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP828, page 41",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp828h:cp-t022970-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-t022970-general-industry-2026",
+      "productId": "chicago-pneumatic-cp828h",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "dde2c6e01513a82f5a710060c3ec4166f377e7b86139f6b5a11da78e6d3d6da7",
+      "snapshot": {
+        "id": "cp-t022970-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP828H, page 41",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp886:cp-t024240-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-t024240-general-industry-2026",
+      "productId": "chicago-pneumatic-cp886",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "fafdac4d52497caa6281e783b86b7a224e2c77b0b9e3f0833b9ce17791057983",
+      "snapshot": {
+        "id": "cp-t024240-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP886, page 41",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp886h:cp-t024391-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-t024391-general-industry-2026",
+      "productId": "chicago-pneumatic-cp886h",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "febd79c10b70516622a8a8cb85b6b4d8322daf29f3aa17987d63921135b5786f",
+      "snapshot": {
+        "id": "cp-t024391-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP886H, page 41",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9285c:cp-8941092850-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-8941092850-general-industry-2026",
+      "productId": "chicago-pneumatic-cp9285c",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "47aac7c5f731c9e9bc6a290a0a8569717488d10842e6b63d72e0abc4bf93eb9d",
+      "snapshot": {
+        "id": "cp-8941092850-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP9285C, page 158",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9286c:cp-8941092860-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-8941092860-general-industry-2026",
+      "productId": "chicago-pneumatic-cp9286c",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "87f0931eb69786a14b074e722ed1518019d5cc3deb8ec90348805c5e714ad84d",
+      "snapshot": {
+        "id": "cp-8941092860-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP9286C, page 161",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9287c:cp-8941092870-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-8941092870-general-industry-2026",
+      "productId": "chicago-pneumatic-cp9287c",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a18d044a4f7dc86b61e47d6f1c25bdbfdda8fd8a0f24d11534f3a49816996edf",
+      "snapshot": {
+        "id": "cp-8941092870-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP9287C, page 158",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9288c:cp-8941092880-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-8941092880-general-industry-2026",
+      "productId": "chicago-pneumatic-cp9288c",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9ee1c707d116ddd9e1c96eebb97c8750effb85ecb107ab048394f85389012421",
+      "snapshot": {
+        "id": "cp-8941092880-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP9288C, page 161",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp9561:cp-6151909561-general-industry-2026:2026-08-29",
+      "evidenceId": "cp-6151909561-general-industry-2026",
+      "productId": "chicago-pneumatic-cp9561",
+      "productType": "tool",
+      "occurredAt": "2026-08-29",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "80ab83cef479516b6bad899e87a143a2db5265a9f4dcefc283884d92f12520e3",
+      "snapshot": {
+        "id": "cp-6151909561-general-industry-2026",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf",
+        "sourceLabel": "Chicago Pneumatic, General Industry Catalog v4.04.2026, CP9561, page 28",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-08-29",
+        "confidence": "A",
+        "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
+      }
     }
   ],
-  "historyVersion": "25989b97c9b142539d63db0c551907d4ec43317af382eaa6d8791af4bc72cfb0"
+  "historyVersion": "92406e56a34a8093d6f0205c4606afc50fb1b02994246b230f8c04f42346b010"
 }
