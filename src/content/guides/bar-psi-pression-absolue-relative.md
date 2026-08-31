@@ -1,7 +1,9 @@
 ---
 title: "Bar, psi, pression absolue et pression relative : convertir sans fausser le calcul"
-description: "Comprendre les références de pression, convertir bar, kPa et psi, puis éviter les erreurs de comparaison entre manomètres, débits et documents constructeurs."
+seoTitle: "1 bar en L/min ? Pression, débit et PSI | CompatAir"
+description: "Un bar ne se convertit pas en litres par minute : pression et débit mesurent deux grandeurs différentes. Convertissez bar, kPa et psi sans fausser le calcul."
 pubDate: 2026-07-13
+updatedDate: 2026-08-31
 category: "Comprendre"
 audiences: [particulier, professionnel]
 metiers: []
@@ -13,7 +15,13 @@ sources:
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
 ---
 
-Une conversion correcte ne consiste pas seulement à multiplier un nombre. Il faut d’abord savoir si la pression est absolue ou relative, si elle décrit une limite maximale ou un point de travail et à quel endroit elle est mesurée.
+Non. Un bar ne se convertit pas en litres par minute. Dans le [guide d’unités du NIST](https://physics.nist.gov/cuu/pdf/sp811.pdf), le bar mesure une pression ; le litre par minute exprime un volume par unité de temps. Relier les deux exige de connaître au minimum le système, les conditions de référence et le point de mesure.
+
+## Peut-on convertir 1 bar en litres par minute ?
+
+Il n’existe pas de facteur de conversion universel entre ces deux grandeurs. Le [Compressed Air Manual d’Atlas Copco](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf) documente notamment l’effet du dimensionnement du réseau et des pertes de charge sur la pression disponible et le débit. Une conversion correcte ne consiste donc pas seulement à multiplier un nombre.
+
+Il faut d’abord savoir si la pression est absolue ou relative, si elle décrit une limite maximale ou un point de travail et à quel endroit elle est mesurée.
 
 Le [NIST](https://physics.nist.gov/cuu/pdf/sp811.pdf) donne les facteurs de conversion vers le pascal. Le [CAGI](https://www.cagi.org/resource-library) distingue la pression absolue, mesurée depuis le vide, et la pression indiquée par la plupart des manomètres, mesurée par rapport à l’atmosphère.
 

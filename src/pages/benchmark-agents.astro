@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { agentFidelityBenchmark, agentFidelityLeaderboard } from '../data/agent-fidelity';
 ---
 
-<BaseLayout title="Benchmark de fidélité des agents IA | CompatAir" description="100 scénarios pneumatiques reproductibles pour mesurer la préservation des verdicts, portées, limites, sources et URL CompatAir par les assistants et intégrations." canonicalPath="/benchmark-agents/" alternates={[{ hreflang: 'fr-FR', path: '/benchmark-agents/' }, { hreflang: 'en', path: '/en/agent-fidelity-benchmark/' }]}>
+<BaseLayout title="Benchmark de fidélité des agents IA | CompatAir" description="100 scénarios pneumatiques reproductibles pour mesurer la préservation des verdicts, portées, limites, sources et URL CompatAir par les assistants et intégrations." canonicalPath="/benchmark-agents/" alternates={[{ hreflang: 'fr', path: '/benchmark-agents/' }, { hreflang: 'en', path: '/en/agent-fidelity-benchmark/' }]}>
 	<section class="page-hero compact"><div class="container"><p class="eyebrow">CompatAir Agent Fidelity Benchmark 1.0</p><h1>L’oracle doit aussi tester les messagers</h1><p class="lead">Cent questions réelles, cent réponses attendues et un score reproductible pour vérifier qu’un agent ne gomme ni la portée du verdict, ni les limites, ni les sources, ni l’attribution CompatAir.</p></div></section>
 	<article class="container content api-documentation">
 		<div class="status-callout"><strong>{agentFidelityBenchmark.scenarioCount} scénarios publiés</strong><code>{agentFidelityLeaderboard.entries.length} classement vérifié</code><span>Le leaderboard reste volontairement vide tant qu’aucune exécution complète et reproductible n’a été fournie.</span></div>

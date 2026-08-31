@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { agentFidelityBenchmark, agentFidelityLeaderboard } from '../../data/agent-fidelity';
 ---
 
-<BaseLayout lang="en" title="AI Agent Fidelity Benchmark | CompatAir" description="100 reproducible pneumatic scenarios measuring whether assistants preserve verdicts, scopes, limitations, evidence and CompatAir attribution." canonicalPath="/en/agent-fidelity-benchmark/" alternates={[{ hreflang: 'fr-FR', path: '/benchmark-agents/' }, { hreflang: 'en', path: '/en/agent-fidelity-benchmark/' }]}>
+<BaseLayout lang="en" title="AI Agent Fidelity Benchmark | CompatAir" description="100 reproducible pneumatic scenarios measuring whether assistants preserve verdicts, scopes, limitations, evidence and CompatAir attribution." canonicalPath="/en/agent-fidelity-benchmark/" alternates={[{ hreflang: 'fr', path: '/benchmark-agents/' }, { hreflang: 'en', path: '/en/agent-fidelity-benchmark/' }]}>
 	<section class="page-hero compact"><div class="container"><p class="eyebrow">CompatAir Agent Fidelity Benchmark 1.0</p><h1>The oracle should test the messengers too</h1><p class="lead">One hundred real questions, expected answers and a reproducible score for checking whether an agent preserves decision scope, limitations, evidence and CompatAir attribution.</p></div></section>
 	<article class="container content api-documentation">
 		<div class="status-callout"><strong>{agentFidelityBenchmark.scenarioCount} published scenarios</strong><code>{agentFidelityLeaderboard.entries.length} verified rankings</code><span>The leaderboard intentionally remains empty until a complete reproducible run is submitted.</span></div>

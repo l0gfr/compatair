@@ -56,7 +56,7 @@ const canonical = new URL(canonicalPath, Astro.site);
 const alternateLinks = alternates.length
 	? alternates.map((item) => ({ hreflang: item.hreflang, href: new URL(item.path, Astro.site).toString() }))
 	: [
-		{ hreflang: lang === 'en' ? 'en' : 'fr-FR', href: canonical.toString() },
+		{ hreflang: lang === 'en' ? 'en' : 'fr', href: canonical.toString() },
 		{ hreflang: 'x-default', href: canonical.toString() },
 	];
 const socialImage = new URL(imagePath ?? `/social/${socialCardKey(canonical.pathname)}.png`, Astro.site);
@@ -121,8 +121,12 @@ const websiteJsonLd = {
 			'@type': 'Organization',
 			'@id': 'https://compatair.fr/#organization',
 			name: 'CompatAir',
+			alternateName: 'CompatAir.fr',
 			url: 'https://compatair.fr/',
+			logo: 'https://compatair.fr/favicon-512.png',
+			description: 'Service indépendant de vérification de compatibilité entre compresseurs et outils pneumatiques.',
 			email: 'contact@l0g.fr',
+			sameAs: ['https://github.com/l0gfr/compatair'],
 		},
 		{
 			'@type': 'WebSite',
@@ -270,22 +274,17 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 						<a href="/scanner/"><span>Identifier une référence</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/calculateur/"><span>Vérifier une configuration</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/comparateur/"><span>Comparer des modèles</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/passeport/"><span>Conserver une configuration</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/mise-en-service/"><span>Valider la mise en service</span><UiIcon name="arrow" size={15} /></a>
 					</section>
 					<section class="footer-block">
 						<header><span class="footer-icon"><UiIcon name="shield" /></span><h2>Confiance</h2></header>
 						<a href="/confiance/"><span>Centre de confiance</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/methodologie/"><span>Comment fonctionne CompatAir</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/sources-fiabilite/"><span>Sources et fiabilité</span><UiIcon name="arrow" size={15} /></a>
-						<a href="/preuves/"><span>Documents et dates vérifiés</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/affiliation/"><span>Affiliation et indépendance</span><UiIcon name="arrow" size={15} /></a>
 						<a href="/contact/"><span>Signaler une donnée</span><UiIcon name="arrow" size={15} /></a>
 					</section>
 				</nav>
 				<div class="footer-resource-drawers">
-					<details><summary>Parcours et ressources complémentaires <span>+</span></summary><div><a href="/guides/particuliers/">Guides particuliers</a><a href="/guides/professionnels/">Guides professionnels</a><a href="/glossaire/">Glossaire</a><a href="/comparatifs/">Comparatifs</a><a href="/suivi-exploitation/">Suivi d’exploitation</a><a href="/diagnostic-intervention/">Diagnostic et intervention</a><a href="/maintenance-preventive/">Maintenance préventive</a><a href="/recherche/">Recherche globale</a></div></details>
-					<details><summary>Ressources techniques et transparence <span>+</span></summary><div>{lang === 'fr' && <a href="/api/">API et contrats publics</a>}<a href={lang === 'en' ? '/en/mcp/' : '/mcp-documentation/'}>MCP pour agents IA</a>{lang === 'fr' && <a href="/agents/">CompatAir pour les agents</a>}<a href={lang === 'en' ? '/en/ucp/' : '/ucp/'}>UCP</a><a href={lang === 'en' ? '/en/agent-fidelity-benchmark/' : '/benchmark-agents/'}>Benchmark des agents</a><a href={lang === 'en' ? '/en/compatibility-receipt/' : '/recu-compatibilite/'}>Reçus de compatibilité</a><a href="/radar-contradictions/">Radar des contradictions</a><a href="/graphe-preuve/">Graphe de preuve</a><a href="/observatoire-qualite-documentaire/">Observatoire documentaire</a><a href="/barometre-transparence/">Baromètre de transparence</a><a href="/corrections/">Journal des corrections</a><a href={lang === 'en' ? '/en/compatibility-impact-feed/' : '/impact-compatibilite/'}>Compatibility Impact Feed</a><a href="/securite/">Sécurité</a><a href="/confidentialite/">Confidentialité</a></div></details>
+					<details><summary>Ressources complémentaires <span>+</span></summary><div><a href="/glossaire/">Glossaire</a><a href="/corrections/">Journal des corrections</a></div></details>
 				</div>
 
 				<div class="footer-bottomline">

@@ -105,14 +105,15 @@ const articleJsonLd = {
 						<div class="actions">
 							<a class="button primary" href={`/calculateur/#outil=${relatedTool.id}`}>Tester cet outil</a>
 							<a class="button" href={`/outils-pneumatiques/${relatedTool.slug}/`}>Voir la fiche outil</a>
+							<a class="button" href={`/quel-compresseur-pour/${relatedTool.slug}/`}>Voir la sélection de compresseurs</a>
 						</div>
 						{compatibleCompressors.length > 0 ? (
 							<div class="guide-compatible-results">
 									<h3>Compresseurs déjà confirmés pour un usage continu</h3><p>La sélection privilégie l’audience du guide, une alimentation cohérente et le plus petit débit documenté réellement suffisant.</p>
 								<div class="link-cards">
 									{compatibleCompressors.map(({ compressor, result }) => (
-										<a href={`/calculateur/#outil=${encodeURIComponent(relatedTool.id)}&compresseur=${encodeURIComponent(compressor.id)}`}>
-												<strong>{compressorDisplayName(compressor)}</strong>
+										<a href={`/compresseurs/${compressor.slug}/`}>
+											<strong>{compressorDisplayName(compressor)}</strong>
 											<span>{compatibilityFadLabel(result, relatedTool.workingPressureBar.typical!)}</span>
 										</a>
 									))}

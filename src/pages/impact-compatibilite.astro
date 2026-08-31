@@ -5,7 +5,7 @@ import TechnicalSurfaceNav from '../components/TechnicalSurfaceNav.astro';
 import { compatibilityImpactFeed } from '../data/compatibility-impact';
 ---
 
-<BaseLayout title="Compatibility Impact Feed | CompatAir" description="Flux machine des ajouts et corrections de preuve susceptibles d’affecter les décisions de compatibilité d’un portefeuille fabricant ou marchand." canonicalPath="/impact-compatibilite/" alternates={[{ hreflang: 'fr-FR', path: '/impact-compatibilite/' }, { hreflang: 'en', path: '/en/compatibility-impact-feed/' }]}>
+<BaseLayout title="Compatibility Impact Feed | CompatAir" description="Flux machine des ajouts et corrections de preuve susceptibles d’affecter les décisions de compatibilité d’un portefeuille fabricant ou marchand." canonicalPath="/impact-compatibilite/" alternates={[{ hreflang: 'fr', path: '/impact-compatibilite/' }, { hreflang: 'en', path: '/en/compatibility-impact-feed/' }]}>
 	<TechnicalHero eyebrow="fr.compatair.compatibility-impact 1.0" title="Savoir quelles décisions doivent être recalculées" lead="Le Compatibility Impact Feed relie chaque ajout ou correction de preuve aux produits, portefeuilles et couples de compatibilité concernés." facts={[{ label: 'Événements', value: `${compatibilityImpactFeed.events.length} réévaluables` }, { label: 'Formats', value: 'JSON et NDJSON' }, { label: 'État', value: 'Recalcul requis' }, { label: 'Frontière', value: 'Aucun delta sans ancien snapshot' }]} actions={[{ href: '#utilite', label: 'Comprendre le flux', primary: true }, { href: '/data/compatibility-impact-feed.json', label: 'Ouvrir le JSON' }]} flow={['Preuve modifiée', 'Dépendances trouvées', 'Recalcul demandé']} />
 	<TechnicalSurfaceNav current="impact" />
 	<article class="container content api-documentation">

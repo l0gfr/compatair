@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout lang="en" title="Verifiable compatibility receipt | CompatAir" description="Verify the integrity of a CompatAir receipt freezing configuration, scoped verdicts, method, catalog, evidence, hash and date." canonicalPath="/en/compatibility-receipt/" alternates={[{ hreflang: 'fr-FR', path: '/recu-compatibilite/' }, { hreflang: 'en', path: '/en/compatibility-receipt/' }]}>
+<BaseLayout lang="en" title="Verifiable compatibility receipt | CompatAir" description="Verify the integrity of a CompatAir receipt freezing configuration, scoped verdicts, method, catalog, evidence, hash and date." canonicalPath="/en/compatibility-receipt/" alternates={[{ hreflang: 'fr', path: '/recu-compatibilite/' }, { hreflang: 'en', path: '/en/compatibility-receipt/' }]}>
 	<section class="page-hero compact"><div class="container"><p class="eyebrow">Compatibility Receipt 1.0</p><h1>Freeze a decision without asking anyone to trust a screenshot</h1><p class="lead">A technical decision can carry a deterministic receipt containing both verdict scopes, configuration, versions, evidence URLs, date and SHA-256 integrity hash.</p></div></section>
 	<article class="container content api-documentation">
 		<h2>Verify a receipt</h2><p>Paste only a <code>compatibility_receipt</code> object emitted by the API or MCP. Do not add personal data: the verifier expects none, stores nothing and never fetches a URL contained in the receipt.</p>

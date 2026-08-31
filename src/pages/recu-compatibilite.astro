@@ -4,7 +4,7 @@ import TechnicalHero from '../components/TechnicalHero.astro';
 import TechnicalSurfaceNav from '../components/TechnicalSurfaceNav.astro';
 ---
 
-<BaseLayout title="Reçu de compatibilité vérifiable | CompatAir" description="Vérifier l’intégrité d’un reçu CompatAir qui fige configuration, portées de verdict, méthode, catalogue, sources, empreinte et date." canonicalPath="/recu-compatibilite/" alternates={[{ hreflang: 'fr-FR', path: '/recu-compatibilite/' }, { hreflang: 'en', path: '/en/compatibility-receipt/' }]}>
+<BaseLayout title="Reçu de compatibilité vérifiable | CompatAir" description="Vérifier l’intégrité d’un reçu CompatAir qui fige configuration, portées de verdict, méthode, catalogue, sources, empreinte et date." canonicalPath="/recu-compatibilite/" alternates={[{ hreflang: 'fr', path: '/recu-compatibilite/' }, { hreflang: 'en', path: '/en/compatibility-receipt/' }]}>
 	<TechnicalHero eyebrow="Compatibility Receipt 1.0" title="Figer une décision sans demander de croire CompatAir sur parole" lead="Chaque décision technique peut embarquer un reçu déterministe avec les deux portées de verdict, la configuration, les versions, les sources, la date et une empreinte SHA-256." facts={[{ label: 'Format', value: 'JSON portable' }, { label: 'Intégrité', value: 'Empreinte SHA-256' }, { label: 'Traitement', value: 'Aucun stockage du reçu' }, { label: 'Portée', value: 'Contenu intact, pas identité signée' }]} actions={[{ href: '#verifier', label: 'Vérifier un reçu', primary: true }, { href: '/schemas/compatibility-receipt-1.0.0.json', label: 'Voir le schéma' }]} flow={['Décision publiée', 'Empreinte calculée', 'Intégrité contrôlée']} />
 	<TechnicalSurfaceNav current="receipt" />
 	<article class="container content api-documentation">

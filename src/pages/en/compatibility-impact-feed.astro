@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { compatibilityImpactFeed } from '../../data/compatibility-impact';
 ---
 
-<BaseLayout lang="en" title="Agent Compatibility Impact Feed | CompatAir" description="Machine-readable evidence changes mapped to compatibility decisions requiring recalculation across manufacturer and merchant portfolios." canonicalPath="/en/compatibility-impact-feed/" alternates={[{ hreflang: 'fr-FR', path: '/impact-compatibilite/' }, { hreflang: 'en', path: '/en/compatibility-impact-feed/' }]}>
+<BaseLayout lang="en" title="Agent Compatibility Impact Feed | CompatAir" description="Machine-readable evidence changes mapped to compatibility decisions requiring recalculation across manufacturer and merchant portfolios." canonicalPath="/en/compatibility-impact-feed/" alternates={[{ hreflang: 'fr', path: '/impact-compatibilite/' }, { hreflang: 'en', path: '/en/compatibility-impact-feed/' }]}>
 	<section class="page-hero compact"><div class="container"><p class="eyebrow">fr.compatair.compatibility-impact 1.0</p><h1>Know which decisions require recalculation</h1><p class="lead">The Compatibility Impact Feed maps each evidence addition or correction to affected products, portfolios and compatibility pairs.</p></div></section>
 	<article class="container content api-documentation">
 		<div class="status-callout"><strong>{compatibilityImpactFeed.events.length} recalculable events</strong><code>{compatibilityImpactFeed.verdictVersion.slice(0, 12)}…</code><span>Current verdict version. No before/after change is claimed without a previous signed snapshot.</span></div>

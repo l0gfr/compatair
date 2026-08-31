@@ -12,7 +12,11 @@ export default defineConfig({
 		serialize: createSitemapSerializer(),
 		filter: (page) => {
 			const pathname = new URL(page).pathname;
-			return !pathname.startsWith('/compatibilite/') && !pathname.startsWith('/go/') && !['/410/', '/comparateur/', '/offres/', '/recherche/', '/securite/'].includes(pathname);
+			return !pathname.startsWith('/compatibilite/')
+				&& !pathname.startsWith('/go/')
+				&& !pathname.startsWith('/preuves/page/')
+				&& !pathname.startsWith('/sources-fiabilite/page/')
+				&& !['/410/', '/comparateur/', '/offres/', '/recherche/', '/securite/'].includes(pathname);
 		},
 	})],
 	build: {
