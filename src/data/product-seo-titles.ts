@@ -304,6 +304,19 @@ export const productSeoTitles: Record<string, string> = {
 
 /** Descriptions ciblées lorsque la description générique masque une donnée décisionnelle déjà sourcée. */
 export const productSeoDescriptions: Partial<Record<string, string>> = {
+	'revolution-air-superboxy-2l': 'Revolution’Air SuperBoxy 2 L : débit restitué de 105 L/min à 3 bar et 85 L/min à 7 bar, sans huile, portable, avec limites et source fabricant vérifiée.',
+	'einhell-te-ac-135-24-silent-plus': 'Einhell TE-AC 135/24 Silent Plus : débits restitués de 105 L/min à 0 bar, 73 à 4 bar et 55 à 7 bar, cuve 24 L, sans huile, selon la fiche du fabricant.',
+	'einhell-tc-ac-200-24-8-of': 'Einhell TC-AC 200/24/8 OF : débits restitués de 110 L/min à 0 bar, 70 à 4 bar et 45 à 7 bar, cuve 24 L, sans huile, données fabricant, cycle de service 100 %.',
+	'atlas-copco-lz-10-10-bm': 'Atlas Copco LZ 10-10 BM : FAD de 930 L/min à 7 bar selon ISO 1217, compresseur fixe sans huile, 10 bar, 400 V triphasé, sans réservoir, cycle continu.',
+	'atlas-copco-lz-15-10-bm': 'Atlas Copco LZ 15-10 BM : FAD de 1 320 L/min à 7 bar selon ISO 1217, compresseur fixe sans huile, 10 bar, 400 V triphasé, sans réservoir, cycle continu.',
+	'mecafer-fifty-50l-2hp': 'Mecafer Fifty 50 L 2 HP : débits restitués de 140 L/min à 3 bar et 126 L/min à 7 bar, sans huile, 10 bar maximum, données fabricant et limites explicites.',
+	'einhell-tc-ac-190-of-set': 'Einhell TC-AC 190 OF Set : débits restitués de 165 L/min à 0 bar, 83 à 4 bar et 55 à 7 bar, modèle portable sans cuve, source officielle et limites explicites.',
+	'kaeser-eurocomp-epc-550-2-g': 'KAESER EUROCOMP EPC 550-2-G : débits de 460 L/min à 8 bar et 450 L/min à 12 bar selon ISO 1217, groupe fixe 15 bar sans réservoir, 400 V, deux cylindres.',
+	'kaeser-eurocomp-epc-1000-2-g': 'KAESER EUROCOMP EPC 1000-2-G : débits de 836 L/min à 8 bar et 820 L/min à 12 bar selon ISO 1217, groupe fixe 15 bar sans réservoir, 400 V, deux cylindres.',
+	'einhell-pressito-18-25-hybrid': 'Einhell PRESSITO 18/25 Hybrid : débits de 19 L/min à 0 bar, 12 à 4 bar et 10 à 7 bar, gonfleur portable sans cuve sur batterie ou secteur, 11 bar maximum.',
+	'atlas-copco-ab30e100': 'Atlas Copco AB30E100 : débit restitué de 305 L/min à 7 bar, cuve 100 L, moteur 2,2 kW monophasé, 10 bar maximum, modèle mobile et lubrifié, source fabricant.',
+	'atlas-copco-ab25e100': 'Atlas Copco AB25E100 : débit restitué de 172 L/min à 7 bar, cuve 100 L, moteur 1,85 kW monophasé, 10 bar maximum, modèle mobile et lubrifié, source fabricant.',
+	'kaeser-eurocomp-epc-440-g': 'KAESER EUROCOMP EPC 440-G : débits de 280 L/min à 6 bar et 260 L/min à 8 bar selon ISO 1217, groupe fixe 10 bar sans réservoir, 400 V, deux cylindres, 50 kg.',
 	'parkside-psko-248-b1': 'Parkside PSKO 248 B1 : FAD 149 L/min à 1 bar, 117 à 4 bar et 85 à 7 bar, cuve 24 L, 71,9 dB(A) LpA et sources officielles.',
 };
 
