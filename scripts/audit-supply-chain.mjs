@@ -10,12 +10,13 @@ const DISALLOWED_LOCKED_PACKAGES = new Set(['extract-zip']);
 const EXPECTED_OVERRIDES = new Map([
   ['@puppeteer/browsers', '3.2.0'],
   ['brace-expansion', '5.0.9'],
-  ['fast-uri', '3.1.5'],
+  ['fast-uri', '3.1.6'],
   ['ip-address', '10.3.1'],
   ['js-yaml@3', '3.15.1'],
   ['js-yaml@4', '4.3.1'],
   ['nanoid@3', '3.3.18'],
   ['postcss', '8.5.23'],
+  ['qs', '6.16.0'],
   ['tmp', '0.2.7'],
   ['uuid', '11.1.1'],
 ]);
