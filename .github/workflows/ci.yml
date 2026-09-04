@@ -45,6 +45,8 @@ jobs:
         run: pnpm validate:full
 
       - name: Audit production dependencies
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: pnpm security:audit
 
       - name: Check generated HTML and internal links

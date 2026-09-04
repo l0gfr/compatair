@@ -33,6 +33,8 @@ jobs:
       - name: Verify lockfile, registry signatures and install-script policy
         run: pnpm security:registry
       - name: Audit production dependencies
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: pnpm security:audit
       - name: Record production licenses
         run: pnpm licenses list --prod --json > production-licenses.json

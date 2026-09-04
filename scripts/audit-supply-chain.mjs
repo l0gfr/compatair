@@ -1,6 +1,7 @@
 import { createPublicKey, verify as verifySignature } from 'node:crypto';
 import { readdir, readFile } from 'node:fs/promises';
 import { classifyNpmAdvisories } from './lib/advisory-policy.mjs';
+import { fetchGitHubAdvisories } from './lib/github-advisory-client.mjs';
 
 const REGISTRY = 'https://registry.npmjs.org';
 const QUARANTINE_MS = 24 * 60 * 60 * 1000;
@@ -159,23 +160,6 @@ async function fetchJson(url) {
   return response.json();
 }
 
-async function fetchBulkAdvisories(packages) {
-  const versionsByName = new Map();
-  for (const { name, version } of packages) {
-    if (!versionsByName.has(name)) versionsByName.set(name, new Set());
-    versionsByName.get(name).add(version);
-  }
-  const payload = Object.fromEntries([...versionsByName].map(([name, versions]) => [name, [...versions].sort()]));
-  const response = await fetch(`${REGISTRY}/-/npm/v1/security/advisories/bulk`, {
-    method: 'POST',
-    headers: { accept: 'application/json', 'content-type': 'application/json' },
-    body: JSON.stringify(payload),
-    signal: AbortSignal.timeout(30_000),
-  });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
-  return response.json();
-}
-
 async function mapWithConcurrency(values, concurrency, callback) {
   const results = new Array(values.length);
   let cursor = 0;
@@ -320,17 +304,17 @@ console.log(`Exceptions de confiance pnpm contrôlées: ${[...trustPolicyExclusi
 
 if (advisoryMode) {
   try {
-    const response = await fetchBulkAdvisories(lockedPackages);
+    const response = await fetchGitHubAdvisories(lockedPackages);
     const directRuntimeDependencies = new Set(Object.keys(packageJson.dependencies ?? {}));
     const { advisories, blocking } = classifyNpmAdvisories(response, directRuntimeDependencies);
-    console.log(`Avis npm (endpoint bulk): ${advisories.length} signalé(s), dont ${blocking.length} bloquant(s) selon la politique runtime.`);
+    console.log(`Avis GitHub Advisory Database: ${advisories.length} signalé(s), dont ${blocking.length} bloquant(s) selon la politique runtime.`);
     for (const advisory of advisories) {
       const message = `${advisory.packageName}: ${advisory.severity} ${advisory.title} (${advisory.url})`;
       if (blocking.includes(advisory)) failures.push(`vulnérabilité npm: ${message}`);
       else warnings.push(`vulnérabilité npm transitive sous le seuil high: ${message}`);
     }
   } catch (error) {
-    failures.push(`endpoint npm Bulk Advisory inaccessible ou invalide: ${error.message}`);
+    failures.push(`GitHub Advisory Database inaccessible ou invalide: ${error.message}`);
   }
 }
 
