@@ -1,6 +1,6 @@
 ---
 import { compressors, tools } from '../data/catalog';
-import { catalogSearchIdentifiers } from '../domain/catalog-search';
+import { catalogSearchIdentifiers, compactCatalogOptionIdentifiers } from '../domain/catalog-search';
 import { compressorDisplayName } from '../domain/product-display';
 import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 import { activeOffers, merchants } from '../data/offers';
@@ -176,15 +176,21 @@ const commercialOffers = activeOffers
 </template>
 
 <datalist id="calculator-tools">
-	{tools.map((tool) => <option value={`${tool.brand} ${tool.model}${tool.mpn ? ` · MPN ${tool.mpn}` : ''}${tool.ean ? ` · EAN ${tool.ean}` : ''}`} data-id={tool.id} data-identifiers={JSON.stringify(catalogSearchIdentifiers(tool.brand, tool.model, [tool.label, tool.id, tool.mpn, tool.ean, tool.gtin, ...tool.distributorSkus.map((identifier) => identifier.sku), ...tool.identifierAliases.map((alias) => alias.value)]))} data-demand-model={tool.demandModel} data-airflow={tool.demandModel === 'fixed-flow' ? tool.airflowLpm.typical : undefined} data-pressure={tool.workingPressureBar.typical} data-air-per-action={tool.demandModel === 'per-action' ? tool.airPerActionLiters : undefined} data-action-label={tool.demandModel === 'per-action' ? tool.actionLabel : undefined}>{tool.label} · {toolDemandLabel(tool)} · {toolPressureLabel(tool)}</option>)}
+	{tools.map((tool) => {
+		const value = `${tool.brand} ${tool.model}${tool.mpn ? ` · MPN ${tool.mpn}` : ''}${tool.ean ? ` · EAN ${tool.ean}` : ''}`;
+		return <option value={value} data-id={tool.id} data-identifiers={JSON.stringify(compactCatalogOptionIdentifiers(tool.id, value, catalogSearchIdentifiers(tool.brand, tool.model, [tool.label, tool.id, tool.mpn, tool.ean, tool.gtin, ...tool.distributorSkus.map((identifier) => identifier.sku), ...tool.identifierAliases.map((alias) => alias.value)])))} data-demand-model={tool.demandModel} data-airflow={tool.demandModel === 'fixed-flow' ? tool.airflowLpm.typical : undefined} data-pressure={tool.workingPressureBar.typical} data-air-per-action={tool.demandModel === 'per-action' ? tool.airPerActionLiters : undefined} data-action-label={tool.demandModel === 'per-action' ? tool.actionLabel : undefined}>{tool.label} · {toolDemandLabel(tool)} · {toolPressureLabel(tool)}</option>;
+	})}
 </datalist>
 <datalist id="calculator-compressors">
 	<option value="Caractéristiques personnalisées" data-id="custom" data-identifiers={JSON.stringify(['custom'])}>Saisie personnalisée</option>
-	{compressors.map((compressor) => <option value={`${compressor.brand} ${compressor.model}${compressor.mpn ? ` · MPN ${compressor.mpn}` : ''}${compressor.ean ? ` · EAN ${compressor.ean}` : ''}`} data-id={compressor.id} data-identifiers={JSON.stringify(catalogSearchIdentifiers(compressor.brand, compressor.model, [compressorDisplayName(compressor), compressor.id, compressor.mpn, compressor.ean, compressor.gtin, ...compressor.distributorSkus.map((identifier) => identifier.sku), ...compressor.identifierAliases.map((alias) => alias.value)]))}>{compressorDisplayName(compressor)}</option>)}
+	{compressors.map((compressor) => {
+		const value = `${compressor.brand} ${compressor.model}${compressor.mpn ? ` · MPN ${compressor.mpn}` : ''}${compressor.ean ? ` · EAN ${compressor.ean}` : ''}`;
+		return <option value={value} data-id={compressor.id} data-identifiers={JSON.stringify(compactCatalogOptionIdentifiers(compressor.id, value, catalogSearchIdentifiers(compressor.brand, compressor.model, [compressorDisplayName(compressor), compressor.id, compressor.mpn, compressor.ean, compressor.gtin, ...compressor.distributorSkus.map((identifier) => identifier.sku), ...compressor.identifierAliases.map((alias) => alias.value)])))}>{compressorDisplayName(compressor)}</option>;
+	})}
 </datalist>
 
 <script>
-	import { resolveExactCatalogSearch } from '../domain/catalog-search';
+	import { catalogOptionIdentifiers, resolveExactCatalogSearch } from '../domain/catalog-search';
 	import { createDecisionResolution, explainDecisionDataGap, filterDecisionCandidatesByContext, rankDecisionCandidates } from '../domain/decision-resolution';
 	import { JOURNEY_CONTEXT_EVENT } from '../domain/journey-context';
 	import { sourceQualityDetail, sourceQualityLabel } from '../domain/source-quality';
@@ -306,7 +312,7 @@ const commercialOffers = activeOffers
 		const id = resolveExactCatalogSearch(value, options.map((option) => ({
 			id: option.dataset.id ?? '',
 			value: option.value,
-			identifiers: JSON.parse(option.dataset.identifiers ?? '[]') as string[],
+			identifiers: catalogOptionIdentifiers(option.dataset.id ?? '', option.value, JSON.parse(option.dataset.identifiers ?? '[]') as string[]),
 		})));
 		return id ? options.find((option) => option.dataset.id === id) : undefined;
 	}

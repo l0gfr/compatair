@@ -23,6 +23,9 @@ export default defineConfig({
 		assets: '_assets',
 	},
 	vite: {
-		build: { assetsInlineLimit: 0 },
+		build: {
+			// Inline small stylesheets to avoid a blocking request; keep scripts and images external.
+			assetsInlineLimit: (filePath, content) => filePath.endsWith('.css') && content.length < 4096,
+		},
 	},
 });
