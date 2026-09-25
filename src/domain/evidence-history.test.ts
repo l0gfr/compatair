@@ -19,7 +19,10 @@ describe('public evidence history', () => {
 	it('returns a reverse chronological product timeline', () => {
 		const events = historyForProduct(evidenceHistory, 'einhell-tc-ac-240-50-10-of');
 		expect(events.length).toBeGreaterThan(0);
-		expect(events[0].kind).toBe('baseline');
+		expect(events.at(-1)!.kind).toBe('baseline');
+		expect(events[0].occurredAt).toBe('2026-09-25');
+		expect(events.some((event) => event.kind === 'corrected')).toBe(true);
+		expect(events.map((event) => event.occurredAt)).toEqual(events.map((event) => event.occurredAt).sort().reverse());
 	});
 
 	it('orders same-day events by public usefulness', () => {

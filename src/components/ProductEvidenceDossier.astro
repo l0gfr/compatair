@@ -1,0 +1,19 @@
+---
+import type { Compressor, ToolProfile } from '../domain/catalog';
+import { assertDecisionPageValue } from '../domain/decision-dossier';
+import { contradictionRadar } from '../data/contradiction-radar';
+import { evidenceHistoryProductHref } from '../data/evidence-history-directory';
+interface Props { product: Compressor | ToolProfile; }
+const { product } = Astro.props;
+const sources = assertDecisionPageValue(product);
+const contradictions = contradictionRadar.records.filter((record) => record.productId === product.id);
+---
+<section class="editorial-section" data-decision-evidence={product.id}>
+	<h2>Les preuves derrière la réponse</h2>
+	<p>Référence étudiée : <strong>{product.brand} {product.model}</strong>{product.mpn && <> · MPN {product.mpn}</>}. Les données publiées et les calculs CompatAir restent distincts. Aucun essai physique de ce modèle n’est revendiqué.</p>
+	<div class="evidence-grid"><div class="fact-box"><h3>Particularités de cette référence</h3><ul>{product.editorial.verifiedFacts.map((fact) => <li>{fact}</li>)}</ul></div><div class="limit-box"><h3>Ce qui limite la conclusion</h3><ul>{product.editorial.limitations.map((limit) => <li>{limit}</li>)}</ul></div></div>
+	<h3>Sources du débit et de la pression</h3>
+	{sources.map((source) => <p><a href={source.sourceUrl} target="_blank" rel="noopener noreferrer">{source.sourceLabel}</a> · consultée le {source.retrievedAt.split('-').reverse().join('/')}{source.notes && <> · {source.notes}</>}</p>)}
+	{contradictions.length > 0 && <div class="limit-box"><h3>Désaccords documentés pour cette référence</h3>{contradictions.map((record) => <div><p><strong>{record.subject}</strong> : {record.contradiction}</p><p>{record.response}</p></div>)}<a href="/radar-contradictions/">Examiner les affirmations et leur arbitrage</a></div>}
+	<div class="actions"><a href={evidenceHistoryProductHref(product.id)}>Historique des preuves de cette référence</a><a href="/graphe-preuve/">Comprendre l’effet des données sur le verdict</a></div>
+</section>

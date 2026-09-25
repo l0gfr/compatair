@@ -1,0 +1,7 @@
+---
+import { comparisonsForProduct, decisionComparisons } from '../data/decision-comparisons';
+interface Props { productId?: string; }
+const { productId } = Astro.props;
+const pages = productId ? comparisonsForProduct(productId) : decisionComparisons;
+---
+{pages.length > 0 && <section class="related-reading" data-decision-comparison-links><h2>Comparer pour un usage précis</h2><div class="link-cards">{pages.map((page) => <a href={`/comparatifs/${page.slug}/`}><strong>{page.question}</strong><span>{page.description}</span></a>)}</div></section>}

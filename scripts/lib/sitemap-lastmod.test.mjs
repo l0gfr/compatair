@@ -103,9 +103,12 @@ describe('sitemap lastmod', () => {
 		expect(resolver('https://compatair.fr/guides/dossiers/audit-suivi-maintenance-air-comprime/')).toBe('2026-07-20T18:00:00+00:00');
 	});
 
-	it('associe une fiche compresseur à sa fiche source et au catalogue', () => {
-		const resolver = createSitemapLastmodResolver({ gitDate: (files) => dates.get(files.join(',')) });
-		expect(resolver('https://compatair.fr/compresseurs/exemple/')).toBe('2026-07-12T10:00:00+00:00');
+	it('associe une fiche compresseur à ses données et à son dossier décisionnel', () => {
+		const resolver = createSitemapLastmodResolver({ gitDate: (files) => {
+			expect(files).toEqual(expect.arrayContaining(['src/pages/compresseurs/[slug].astro', 'src/data/products/compressors/exemple.ts', 'src/data/catalog.ts', 'src/domain/decision-dossier.ts', 'src/components/ProductEvidenceDossier.astro', 'src/data/document-quality-ledger.ts']));
+			return '2026-09-25T10:00:00+00:00';
+		} });
+		expect(resolver('https://compatair.fr/compresseurs/exemple/')).toBe('2026-09-25T10:00:00+00:00');
 	});
 
 	it('relie un répertoire d’usage à sa route, sa taxonomie et au catalogue', () => {

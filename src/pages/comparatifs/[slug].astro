@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import DecisionComparisonLinks from '../../components/DecisionComparisonLinks.astro';
+import { decisionComparisons, resolveDecisionComparison } from '../../data/decision-comparisons';
+import { compatibilityFadLabel } from '../../domain/compatibility';
+import { compressorDisplayName } from '../../domain/product-display';
+import { toolDemandLabel, toolPressureLabel } from '../../domain/tool-demand';
+
+export function getStaticPaths() {
+	return decisionComparisons.map((page) => ({ params: { slug: page.slug }, props: { page, comparison: resolveDecisionComparison(page) } }));
+}
+const { page, comparison } = Astro.props;
+const verdictLabels = { continuous: 'Débit suffisant', intermittent: 'Usage intermittent seulement', incompatible: 'Incompatible dans ce scénario', insufficient_data: 'Données insuffisantes' };
+---
+<BaseLayout title={page.title} editorialTitle={page.title} description={page.description} imagePath="/social/comparatifs.png" imageAlt="CompatAir : comparatifs techniques de compresseurs" breadcrumbs={[{ name: 'Comparatifs', path: '/comparatifs/' }, { name: page.question, path: `/comparatifs/${page.slug}/` }]}>
+	<article class="container decision-comparison" data-decision-comparison={page.slug}>
+		<header class="page-hero compact"><p class="eyebrow">Comparaison technique documentée</p><h1>{page.question}</h1><p class="lead">{page.answer}</p><p>Analyse des données publiées, sans essai physique ni note commerciale. L’ordre des modèles est éditorial et ne constitue pas un classement.</p></header>
+		<section class="editorial-section"><h2>Deux besoins, deux réponses</h2><div class="link-cards">{comparison.selectedTools.map((tool) => <a href={`/quel-compresseur-pour/${tool.slug}/`}><strong>{tool.label}</strong><span>{toolDemandLabel(tool)} · {toolPressureLabel(tool)}</span><span>Voir les compresseurs adaptés à cette référence</span></a>)}</div></section>
+		<section class="editorial-section" data-static-compatibility-results data-result-count={comparison.rows.length * comparison.selectedTools.length}><h2>Le débit disponible face au besoin</h2><p>Un seul outil à la fois, au débit et à la pression typiques publiés. La réserve recommandée de 25 % est affichée séparément du seuil nominal : son absence est signalée dans les conditions. « Débit suffisant » reste soumis au cycle de service, au réseau et aux réserves indiquées.</p>
+			<div class="comparison-grid">{comparison.rows.map(({ compressor, matches }) => <article class="comparison-card"><h3><a href={`/compresseurs/${compressor.slug}/`}>{compressorDisplayName(compressor)}</a></h3><p>{compressor.tankLiters} L · {compressor.maxPressureBar} bar maximum · {compressor.oilType === 'oil-free' ? 'sans huile' : 'lubrifié'}</p><p><strong>FAD publié :</strong> {compressor.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' ; ')}</p><p><strong>Cycle de service :</strong> {compressor.dutyCycle === undefined ? 'non documenté' : `${Math.round(compressor.dutyCycle * 100)} %`}</p>
+				{matches.map(({ tool, result }) => <section class="comparison-result" data-verdict={result.verdict}><h4>{tool.model}</h4><strong>{verdictLabels[result.verdict]}</strong><p>{compatibilityFadLabel(result, tool.workingPressureBar.typical)}</p><p>Besoin avec réserve : {result.requiredFadLpm?.toLocaleString('fr-FR')} L/min.</p>{result.warnings.length > 0 && <details><summary>Conditions et réserves</summary><ul>{result.warnings.map((warning) => <li>{warning}</li>)}</ul></details>}<a href={`/calculateur/#outil=${tool.id}&compresseur=${compressor.id}`}>Adapter à mon usage</a></section>)}
+				<details><summary>Sources du compresseur</summary>{compressor.evidence.map((source) => <p><a href={source.sourceUrl} rel="noopener noreferrer" target="_blank">{source.sourceLabel}</a> · consultée le {source.retrievedAt}</p>)}</details>
+			</article>)}</div>
+		</section>
+		<section class="editorial-section"><h2>Ce qui change la décision</h2><p>{page.distinction}</p><p>Une interpolation est un calcul entre points publiés, pas une mesure. Une borne conservatrice reprend un débit publié à une pression supérieure. Au-delà du dernier point documenté, aucune extrapolation n’est faite.</p><div class="actions"><a class="button" href={page.guidePath}>Approfondir le dimensionnement</a><a class="button" href="/methodologie/">Contrôler la méthode</a><a class="button" href="/professionnels/#dimensionnement-atelier">Préparer un besoin d’atelier</a></div></section>
+		<section class="sources-panel"><h2>Sources des besoins d’air</h2>{comparison.selectedTools.map((tool) => <div><h3><a href={`/outils-pneumatiques/${tool.slug}/`}>{tool.label}</a></h3>{tool.evidence.map((source) => <p><a href={source.sourceUrl} rel="noopener noreferrer" target="_blank">{source.sourceLabel}</a> · consultée le {source.retrievedAt}</p>)}</div>)}</section>
+		<DecisionComparisonLinks />
+	</article>
+</BaseLayout>
+<style>
+	.decision-comparison { padding-bottom: 4rem; }
+	.comparison-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+	.comparison-card { min-width: 0; padding: clamp(1rem, 3vw, 2rem); border: 1px solid var(--line, #cbd4cb); border-radius: 1rem; background: var(--surface, #fff); overflow-wrap: anywhere; }
+	.comparison-card h3 { margin-top: 0; }
+	.comparison-result { border-top: 1px solid var(--line, #cbd4cb); padding-block: 1rem; }
+	.comparison-result h4 { margin: 0 0 .5rem; }
+	.comparison-result p { margin-block: .65rem; }
+	details { margin-block: 1rem; }
+	summary { cursor: pointer; font-weight: 700; }
+	@media (max-width: 720px) { .comparison-grid { grid-template-columns: 1fr; } }
+</style>

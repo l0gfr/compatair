@@ -80,5 +80,25 @@ export const documentQualityLedger = documentQualityLedgerSchema.parse({
 			],
 			decision: { outcome: 'retain_claim', selectedClaimId: 'cp7731c-product-page-9000' },
 		},
+		{
+			id: 'cp7732c-loaded-airflow-web-leaflet', productId: 'chicago-pneumatic-cp7732c', observedAt: '2026-09-25', answeredAt: '2026-09-25', status: 'answered',
+			subject: 'Consommation en charge CP7732C', contradiction: 'La fiche web affiche 10 L/s en charge (600 L/min), la brochure 10,2 L/s (612 L/min) pour le même MPN 8941077321.',
+			response: 'Le calcul conserve 612 L/min, valeur documentée la plus exigeante, sans présenter l’écart comme un arrondi confirmé. La consommation moyenne de 2,6 L/s n’est pas substituée au besoin en charge.',
+			sourceIds: ['cp7732c-leaflet-2016-reviewed-2026-09-25', 'cp7732c-web-2026-09-25'], field: { key: 'airflowLpm.typical', label: 'Consommation en charge', unit: 'L/min' },
+			claims: [
+				{ id: 'cp7732c-leaflet-612', evidenceId: 'cp7732c-leaflet-2016-reviewed-2026-09-25', channel: 'manual', locator: 'Page 2, ligne CP7732C, colonne Air cons. @ load : 10,2 L/s × 60', value: '612 L/min', normalizedValue: 612, observedAt: '2026-09-25' },
+				{ id: 'cp7732c-web-600', evidenceId: 'cp7732c-web-2026-09-25', channel: 'manufacturer', locator: 'Technical Specifications, Air consumption at load : 10 L/s × 60', value: '600 L/min', normalizedValue: 600, observedAt: '2026-09-25' },
+			], decision: { outcome: 'retain_claim', selectedClaimId: 'cp7732c-leaflet-612' },
+		},
+		{
+			id: 'einhell-4010393-merchant-weight', productId: 'einhell-tc-ac-240-50-10-of', observedAt: '2026-09-25', answeredAt: '2026-09-25', status: 'answered',
+			subject: 'Poids du TC-AC 240/50/10 OF', contradiction: 'La fiche fabricant publie 22,24 kg ; la fiche Fnac Marketplace du même EAN affiche 2 234 kg dans les caractéristiques.',
+			response: 'CompatAir retient les 22,24 kg de la fiche fabricant. La cause de l’écart marchand n’est pas établie ; cette divergence ne modifie pas le verdict de débit.',
+			sourceIds: ['einhell-4010393-official', 'einhell-4010393-fnac-2026-09-25'], field: { key: 'weightKg', label: 'Poids', unit: 'kg' },
+			claims: [
+				{ id: 'einhell-weight-22-24', evidenceId: 'einhell-4010393-official', channel: 'manufacturer', locator: 'Informations techniques, Poids du produit', value: '22,24 kg', normalizedValue: 22.24, observedAt: '2026-09-25' },
+				{ id: 'fnac-weight-2234', evidenceId: 'einhell-4010393-fnac-2026-09-25', channel: 'merchant', locator: 'Caractéristiques, Poids du produit ; EAN 4006825597295', value: '2 234 kg', normalizedValue: 2234, observedAt: '2026-09-25' },
+			], decision: { outcome: 'retain_claim', selectedClaimId: 'einhell-weight-22-24' },
+		},
 	],
 });

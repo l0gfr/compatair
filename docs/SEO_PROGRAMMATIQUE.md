@@ -5,7 +5,7 @@ Les verdicts compresseur-outil répondent à un besoin produit réel, mais leur 
 ## Frontière d’indexation
 
 - Les fiches de compresseur et d’outil restent indexables lorsqu’elles possèdent des données et sources propres.
-- Les pages « quel compresseur pour… » restent indexables : chacune agrège un besoin constructeur distinct et le classement complet du catalogue.
+- Les pages « quel compresseur pour… » restent indexables : chacune agrège un besoin constructeur distinct, les effectifs par verdict du catalogue et une sélection bornée de résultats expliqués.
 - Aucune page statique n’est générée sous `/compatibilite/` et aucun lien interne nouveau ne doit cibler cet espace retiré.
 - Une ancienne URL exacte dont les deux slugs existent encore reçoit une redirection permanente vers le calculateur prérempli avec les identifiants canoniques dans le fragment d’URL.
 - Une URL ancienne inconnue, ambiguë ou mal formée reçoit une réponse `410 Gone` ciblée. Les paramètres de suivi d’une URL connue sont supprimés lors de la redirection canonique.
@@ -14,6 +14,16 @@ Les verdicts compresseur-outil répondent à un besoin produit réel, mais leur 
 - Les premières pages de `/preuves/` et `/sources-fiabilite/` restent indexables. Leurs pages 2 et suivantes conservent les liens de parcours, mais publient `noindex,follow` et restent hors sitemap afin de ne pas multiplier les entrées de répertoire sans intention de recherche propre.
 
 Cette séparation évite une croissance quadratique du HTML. Le corpus indexable reste centré sur les pages qui apportent une synthèse ou une information propre, tandis que le contrat machine décrit explicitement le grain fixe ou paramétrique de chaque décision.
+
+## Dossiers et comparatifs documentés
+
+Les 140 fiches compresseurs et les 160 pages d’usage réutilisent les références existantes. Le build refuse une référence dépourvue de synthèse propre, de deux faits éditoriaux, de limites ou de sources rattachées à ses champs critiques. Le dossier relie les preuves datées, les contradictions arbitrées, l’historique et les besoins voisins. Les 11 outils paramétriques conservent leur demande de cadence ou de volume : aucun débit d’usage n’est inventé.
+
+Les comparatifs supplémentaires proviennent exclusivement de la sélection explicite de `src/data/decision-comparisons.ts`. Chacun porte une question et une conclusion propres, au maximum quatre compresseurs et deux besoins documentés, sans note globale ni gagnant universel. Ils utilisent le moteur déterministe existant. Les mentions de FAD distinguent point publié, interpolation et borne conservatrice ; une réserve recommandée ne devient pas silencieusement le seuil nominal de compatibilité.
+
+Les liens d’achat directs sont sélectionnés par identité produit et EAN, datés, limités à des hôtes HTTPS autorisés et masqués après 90 jours. Ils ne promettent ni stock, ni prix, ni accord marchand, et ne participent jamais au verdict ou à l’ordre des résultats.
+
+Pour prioriser les pages existantes, utiliser un export Search Console de performances par page et requête. Un export de couverture ne donne pas de positions. Les requêtes du serveur, notamment celles des robots et du MCP, ne mesurent pas des visiteurs humains ou une demande de recherche. Les exports de trafic bruts restent hors du dépôt.
 
 ## Contrat de migration et widgets
 

@@ -139,6 +139,16 @@ export function createSitemapLastmodResolver({ root = process.cwd(), gitDate } =
 			sources.add('src/components/SourceReliabilityDirectory.astro');
 			sources.add('src/data/source-directory.ts');
 		}
+		if (pathname.startsWith('/comparatifs/')) {
+			sources.add('src/pages/comparatifs/[slug].astro');
+			sources.add('src/data/decision-comparisons.ts');
+		}
+		if (/^\/(compresseurs|quel-compresseur-pour)\/[^/]+\/$/.test(pathname)) {
+			sources.add('src/domain/decision-dossier.ts');
+			sources.add('src/components/ProductEvidenceDossier.astro');
+			sources.add('src/data/document-quality-ledger.ts');
+			sources.add('src/data/direct-purchase-links.ts');
+		}
 		if (pathname.startsWith('/marques/')) sources.add('src/pages/marques/[brand].astro');
 		if (pathname.startsWith('/guides/metiers/')) {
 			sources.add('src/pages/guides/metiers/[metier].astro');

@@ -7193,7 +7193,82 @@
         "confidence": "A",
         "notes": "Valeurs lues dans la ligne métrique du tableau officiel ; pression de référence 90 psi (6,3 bar) indiquée au pied du même tableau."
       }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7732c:cp7732c-leaflet-2016-reviewed-2026-09-25:2026-09-25",
+      "evidenceId": "cp7732c-leaflet-2016-reviewed-2026-09-25",
+      "productId": "chicago-pneumatic-cp7732c",
+      "productType": "tool",
+      "occurredAt": "2026-09-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "dcd16eb1a11377564cb165f00b7ba1193457c133052375fdc0ef2f99ee6d3c86",
+      "snapshot": {
+        "id": "cp7732c-leaflet-2016-reviewed-2026-09-25",
+        "sourceUrl": "https://tools.cp.com/content/dam/brands/Chicago%20Pneumatic/cp-tools-literature/leaflets-and-brochures/cp7732c-impact-wrench/CP7732C_Leaflet_EN.pdf",
+        "sourceLabel": "Chicago Pneumatic, brochure CP7732C (2016), page 2",
+        "sourceType": "manual",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "La ligne du MPN 8941077321 distingue 2,6 L/s moyens et 10,2 L/s en charge, sous 6,3 bar."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp7732c:cp7732c-web-2026-09-25:2026-09-25",
+      "evidenceId": "cp7732c-web-2026-09-25",
+      "productId": "chicago-pneumatic-cp7732c",
+      "productType": "tool",
+      "occurredAt": "2026-09-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6cea1f5b40baea865f1580490b084ae16a3a3232dd86938cb2d633baee11b1c8",
+      "snapshot": {
+        "id": "cp7732c-web-2026-09-25",
+        "sourceUrl": "https://tools.cp.com/en/products/impactwrenches/cp7732c-sku8941077321",
+        "sourceLabel": "Chicago Pneumatic, fiche CP7732C, données métriques",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "La fiche affiche 10 L/s en charge et 14 L/s à vide ; aucun arrondi explicatif n’est indiqué."
+      }
+    },
+    {
+      "id": "added:einhell-tc-ac-240-50-10-of:einhell-4010393-fnac-2026-09-25:2026-09-25",
+      "evidenceId": "einhell-4010393-fnac-2026-09-25",
+      "productId": "einhell-tc-ac-240-50-10-of",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "added",
+      "summary": "Fiche marchande ajoutée pour documenter un écart avec la source fabricant.",
+      "fingerprint": "063ee8c9715b2815ba5267c1e91ab6a5473dd5c8c17095a9336428b0356520bb",
+      "snapshot": {
+        "id": "einhell-4010393-fnac-2026-09-25",
+        "sourceUrl": "https://www.fnac.com/mp28853330/Compresseur-d-air-TH-AC-240-50-10-sans-huile-Einhell/w-4",
+        "sourceLabel": "Fnac Marketplace, caractéristiques de la référence EAN 4006825597295",
+        "sourceType": "merchant",
+        "retrievedAt": "2026-09-25",
+        "confidence": "C",
+        "notes": "Désaccord sur le poids : 2 234 kg affichés. Cette valeur ne sert pas au dimensionnement."
+      }
+    },
+    {
+      "id": "corrected:einhell-tc-ac-240-50-10-of:einhell-4010393-official:2026-09-25",
+      "evidenceId": "einhell-4010393-official",
+      "productId": "einhell-tc-ac-240-50-10-of",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Relecture de la fiche fabricant Einhell et ajout des preuves distinctes des écarts CP7732C et Fnac.",
+      "fingerprint": "3b7d6286872a24578641693644ea2bea505f3b4ea8ef94a15ec68fd2fd4ea4a3",
+      "snapshot": {
+        "id": "einhell-4010393-official",
+        "sourceUrl": "https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of",
+        "sourceLabel": "Einhell France, fiche produit officielle",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A"
+      }
     }
   ],
-  "historyVersion": "92406e56a34a8093d6f0205c4606afc50fb1b02994246b230f8c04f42346b010"
+  "historyVersion": "19b58c48945d665d53086ed399bafdae1ca3278bf4b143e7ffbd95656ea6991f"
 }

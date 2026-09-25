@@ -29,7 +29,7 @@ describe('public catalog scope copy', () => {
 		const expectedScope = `${fr(scope.explorable_combination_count)} combinaisons explorables`;
 		const expectedFixed = `${fr(scope.fixed_verdict_count)} verdicts fixes`;
 		const expectedParametric = `${fr(scope.parametric_combination_count)} combinaisons paramétriques`;
-		for (const path of ['README.md', 'docs/DATA_ASSET.md', 'docs/SEO_PROGRAMMATIQUE.md', 'docs/FEATURE_MATRIX.md']) {
+		for (const path of ['docs/DEVELOPMENT.md', 'docs/DATA_ASSET.md', 'docs/SEO_PROGRAMMATIQUE.md', 'docs/FEATURE_MATRIX.md']) {
 			const content = read(path);
 			expect(content, path).toContain(expectedScope);
 			expect(content, path).toContain(expectedFixed);
