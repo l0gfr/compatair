@@ -22,6 +22,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
@@ -43,6 +44,17 @@ jobs:
 
       - name: Validate source, tests, build and snapshots
         run: pnpm validate:full
+
+      - name: Preserve source versions already published on the PR base
+        if: github.event_name == 'pull_request'
+        env:
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          [[ "$PR_BASE_SHA" =~ ^[0-9a-f]{40}$ ]]
+          git show "${PR_BASE_SHA}:src/data/evidence-history.snapshot.json" > /tmp/evidence-baseline.json
+          git show "${PR_BASE_SHA}:src/data/document-quality-observatory-history.snapshot.json" > /tmp/observatory-baseline.json
+          node scripts/assert-evidence-history-extension.mjs /tmp/evidence-baseline.json dist/data/evidence-history.json
+          node scripts/assert-observatory-history-extension.mjs /tmp/observatory-baseline.json dist/data/document-quality-observatory.json
 
       - name: Audit production dependencies
         env:

@@ -1,7 +1,8 @@
 name: Production availability
 
 on:
-  # Intentionally manual: scheduled GitHub-hosted runners consume the private repository quota.
+  schedule:
+    - cron: '23 5 * * *'
   workflow_dispatch:
 
 permissions:

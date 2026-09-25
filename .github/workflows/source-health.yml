@@ -1,0 +1,62 @@
+name: Source link health
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/data/**'
+      - 'src/content/guides/**'
+      - 'src/pages/compresseurs/**'
+      - 'scripts/check-source-links.mjs'
+      - 'scripts/lib/source-link-health*'
+      - 'server/ucp-core.mjs'
+      - '.github/workflows/source-health.yml'
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: source-link-health
+  cancel-in-progress: false
+
+jobs:
+  sources:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout versioned sources
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          check-latest: false
+      - name: Install pinned dependencies
+        run: |
+          npm install --global --ignore-scripts pnpm@10.34.4
+          pnpm install --frozen-lockfile
+          pnpm security:supply-chain
+      - name: Validate source consistency
+        run: |
+          pnpm catalog:check
+          pnpm audit:editorial
+          pnpm test
+      - name: Build the exact source inventory
+        run: pnpm build
+      - name: Check external sources and purchase links
+        run: pnpm sources:check
+      - name: Save anomaly evidence only on failure
+        if: ${{ failure() && hashFiles('source-health-report.json') != '' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: source-anomalies-${{ github.sha }}-${{ github.run_id }}
+          path: source-health-report.json
+          if-no-files-found: error
+          retention-days: 30

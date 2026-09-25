@@ -38,6 +38,7 @@
     "indexnow:submit": "node scripts/submit-indexnow.mjs",
     "audit:dist": "node scripts/audit-dist.mjs",
     "audit:editorial": "node scripts/audit-editorial-sources.mjs",
+    "sources:check": "node scripts/check-source-links.mjs",
     "archive:verify": "bash scripts/verify-source-archive.sh",
     "seo:verify-live": "node scripts/verify-live-seo.mjs",
     "lint:source": "node scripts/lint-source.mjs",

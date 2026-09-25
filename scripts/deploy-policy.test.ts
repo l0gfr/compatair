@@ -12,13 +12,26 @@ const releaseRoute = readFileSync(new URL('../src/pages/data/release.json.ts', i
 const liveSmoke = readFileSync(new URL('./smoke-live-http.mjs', import.meta.url), 'utf8');
 
 describe('release boundary policy', () => {
-	it('does not spend private-runner minutes on unsolicited schedules', () => {
-		for (const scheduledWorkflow of [monitorWorkflow, snapshotWorkflow, securityWorkflow]) {
+	it('limits the requested automatic monitoring to availability and source health', () => {
+		for (const scheduledWorkflow of [snapshotWorkflow, securityWorkflow]) {
 			expect(scheduledWorkflow).not.toMatch(/^\s+schedule:/m);
 		}
+		expect(monitorWorkflow).toContain("cron: '23 5 * * *'");
 		expect(monitorWorkflow).toContain('workflow_dispatch:');
 		expect(snapshotWorkflow).toContain('workflow_dispatch:');
 		expect(securityWorkflow).toContain('workflow_dispatch:');
+	});
+
+	it('guards source history before merging and reports source anomalies without success messages', () => {
+		const ci = readFileSync(new URL('../.github/workflows/ci.yml', import.meta.url), 'utf8');
+		const health = readFileSync(new URL('../.github/workflows/source-health.yml', import.meta.url), 'utf8');
+		expect(ci).toContain('PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}');
+		expect(ci).toContain('node scripts/assert-evidence-history-extension.mjs /tmp/evidence-baseline.json');
+		expect(ci).toContain('node scripts/assert-observatory-history-extension.mjs /tmp/observatory-baseline.json');
+		expect(health).toContain("cron: '17 6 * * 1'");
+		expect(health).toContain('contents: read');
+		expect(health).toContain("failure() && hashFiles('source-health-report.json') != ''");
+		expect(health).not.toContain('secrets.');
 	});
 
 	it('pins deployment and rollback to the dedicated CompatAir root', () => {
