@@ -66,8 +66,8 @@ export async function followSource(value, method, probe = requestSource) {
 function outcome(result) {
 	if (result.status >= 200 && result.status < 300) return 'reachable';
 	if ([404, 410].includes(result.status)) return 'broken';
-	if ([401, 403, 429].includes(result.status)) return 'unverified';
-	return 'unavailable';
+	if (result.status >= 500 && result.status < 600) return 'unavailable';
+	return 'unverified';
 }
 
 export async function checkSource(value, { probe = requestSource, wait = pause } = {}) {

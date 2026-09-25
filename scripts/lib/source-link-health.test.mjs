@@ -57,7 +57,7 @@ describe('source link health', () => {
 		expect((await checkSource('https://example.com/', { probe: async () => ({ status: ++count < 3 ? 404 : 200 }), wait: async () => {} })).state).toBe('reachable');
 	});
 	it('does not classify access denial, throttling or a network failure as a dead source', async () => {
-		for (const status of [401, 403, 429]) expect((await checkSource('https://example.com/', { probe: async () => ({ status }) })).state).toBe('unverified');
+		for (const status of [400, 401, 403, 405, 429, 451, 468]) expect((await checkSource('https://example.com/', { probe: async () => ({ status }) })).state).toBe('unverified');
 		expect((await checkSource('https://example.com/', { probe: async () => { throw new Error('ETIMEDOUT'); } })).state).toBe('unverified');
 		expect((await checkSource('https://example.com/', { probe: async () => { throw new Error('unsafe_address'); } })).state).toBe('unsafe');
 	});

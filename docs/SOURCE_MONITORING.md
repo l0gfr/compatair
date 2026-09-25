@@ -13,7 +13,7 @@ Le workflow `Source link health` se déclenche sur les modifications concernées
 - Un `HEAD` en erreur 404, 410, 405 ou 501 est vérifié par `GET`.
 - Un lien déclaré mort doit encore répondre 404 ou 410 à une seconde vérification `GET`.
 - Un service répondant toujours en erreur après une seconde tentative est signalé comme indisponible, séparément des liens morts.
-- Les refus d’accès 401/403, limites 429, erreurs DNS et délais dépassés restent non vérifiés. Ils ne deviennent ni des liens morts ni des sources valides. Un audit entièrement non vérifiable échoue.
+- Les refus d’accès 401/403, limites 429, autres codes 4xx hors 404/410, erreurs DNS et délais dépassés restent non vérifiés. Ils ne deviennent ni des liens morts ni des sources valides. Un audit entièrement non vérifiable échoue.
 - Les redirections sont bornées et revalidées. HTTP, identifiants dans les URL, adresses privées et métadonnées réseau sont refusés. La connexion est épinglée à l’adresse IP publique vérifiée, avec validation TLS du nom d’origine. Les corps des réponses sont interrompus : aucun téléchargement intégral de PDF n’est nécessaire.
 
 Le contrôle vérifie l’accessibilité HTTP, pas la permanence du contenu : une page d’erreur répondant 200 ou une fiche modifiée requiert encore une relecture documentaire.
