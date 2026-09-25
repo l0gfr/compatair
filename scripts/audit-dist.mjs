@@ -5,7 +5,7 @@ import { gzipSync } from 'node:zlib';
 import { readImageDimensions } from '../src/domain/image-dimensions.ts';
 import { toolUsageTaxonomy } from '../src/data/taxonomy.ts';
 import { brandSlug } from '../src/domain/brand.ts';
-import { FAD_COMPARISON_PAGE_SIZE } from '../src/domain/pagination.ts';
+import { FAD_COMPARISON_PAGE_SIZE, TOOL_USAGE_PAGE_SIZE } from '../src/domain/pagination.ts';
 import { parseJavaScriptModuleSpecifiers } from './lib/javascript-module-graph.mjs';
 import { decodeXmlEntities as decodeXml, extractH1Text } from './lib/markup-text.mjs';
 
@@ -20,7 +20,8 @@ const maximumDocumentTitleLength = 60;
 const maximumInitialPageScriptBytesGzip = 50 * 1024;
 const maximumPassportInitialScriptBytesGzip = 45 * 1024;
 const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
-const maximumRuntimeCatalogBytesGzip = 32 * 1024;
+// 750 références : 42 Ko gzip de données calculateur ; les budgets JavaScript restent inchangés.
+const maximumRuntimeCatalogBytesGzip = 48 * 1024;
 const maximumSearchIndexBytesGzip = 64 * 1024;
 const maximumIndexableInternalDestinationsBeforeWarning = 100;
 const maximumIndexableInternalDestinations = 120;
@@ -30,7 +31,8 @@ const maximumStaticCompatibilityResultsBySection = new Map([
 	['quel-compresseur-pour', 6],
 ]);
 const maximumHtmlArtifactBytes = 64 * 1024 * 1024;
-const maximumTotalArtifactBytes = 96 * 1024 * 1024;
+// 119 500 verdicts publics complets et 750 fiches : artefact mesuré à 150 Mo.
+const maximumTotalArtifactBytes = 160 * 1024 * 1024;
 const maximumJourneyVideoBytes = 16 * 1024 * 1024;
 // Les pages produits réutilisent des cartes de catalogue afin que le temps de build ne croisse pas avec chaque référence.
 const maximumSocialImageCount = 80;
@@ -670,7 +672,8 @@ for (const [path, markers] of decisionDirectoryPages) {
 const renderedCatalog = JSON.parse(await readFile(join(root, '/data/catalog.json'), 'utf8'));
 const toolDirectoryHtml = await readFile(join(root, '/outils-pneumatiques/index.html'), 'utf8');
 for (const usage of toolUsageTaxonomy) {
-	const usageCount = (renderedCatalog.tools ?? []).filter((tool) => usage.categoryIds.includes(tool.categoryId)).length;
+	const usageTools = (renderedCatalog.tools ?? []).filter((tool) => usage.categoryIds.includes(tool.categoryId));
+	const usageCount = usageTools.length;
 	if (usageCount === 0) continue;
 	const path = `/outils-pneumatiques/usages/${usage.id}/`;
 	if (!sitePaths.has(path)) errors.push(`architecture outils: répertoire d’usage absent ${path}`);
@@ -679,6 +682,17 @@ for (const usage of toolUsageTaxonomy) {
 		if (!html.includes(`data-tool-usage-hub="${usage.id}"`)) errors.push(`architecture outils: marqueur d’usage absent ${path}`);
 	}
 	if (!toolDirectoryHtml.includes(`href="${path}"`)) errors.push(`architecture outils: usage non relié depuis le hub ${path}`);
+	const pageCount = Math.ceil(usageCount / TOOL_USAGE_PAGE_SIZE);
+	for (let page = 1; page <= pageCount; page += 1) {
+		const pagePath = page === 1 ? path : `${path}page/${page}/`;
+		if (!sitePaths.has(pagePath)) { errors.push(`architecture outils: page absente ${pagePath}`); continue; }
+		const html = await readFile(join(root, `${pagePath}index.html`), 'utf8');
+		for (const item of usageTools.slice((page - 1) * TOOL_USAGE_PAGE_SIZE, page * TOOL_USAGE_PAGE_SIZE)) {
+			if (!html.includes(`href="/outils-pneumatiques/${item.slug}/"`)) errors.push(`architecture outils: référence absente de ${pagePath}: ${item.id}`);
+		}
+		if (page < pageCount && !html.includes(`href="${path}page/${page + 1}/"`)) errors.push(`architecture outils: page suivante inaccessible depuis ${pagePath}`);
+	}
+
 }
 
 const fadDirectoryHtml = await readFile(join(root, '/comparatifs/compresseurs-debit-restitue/index.html'), 'utf8');

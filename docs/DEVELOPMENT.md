@@ -26,7 +26,7 @@ Le site est généré statiquement dans `dist/`. La logique métier se trouve da
 L'import du flux produits ManoMano est décrit dans [docs/MANOMANO_IMPORT.md](docs/MANOMANO_IMPORT.md).
 La normalisation, les snapshots de verdicts et la demande agrégée sont décrits dans [docs/DATA_ASSET.md](docs/DATA_ASSET.md). La frontière d’indexation des pages générées est définie dans [docs/SEO_PROGRAMMATIQUE.md](docs/SEO_PROGRAMMATIQUE.md).
 
-Le périmètre public distingue explicitement 62 379 combinaisons explorables, 59 750 verdicts fixes audités et 2 629 combinaisons paramétriques nécessitant une cadence ou un volume. Le snapshot catalogue publie aussi la couverture champ par champ des EAN/GTIN, MPN normalisés, SKU distributeur et données techniques, avec source primaire, corroboration indépendante et SLA de fraîcheur séparés.
+Le périmètre public distingue explicitement 122 129 combinaisons explorables, 119 500 verdicts fixes audités et 2 629 combinaisons paramétriques nécessitant une cadence ou un volume. Le snapshot catalogue publie aussi la couverture champ par champ des EAN/GTIN, MPN normalisés, SKU distributeur et données techniques, avec source primaire, corroboration indépendante et SLA de fraîcheur séparés.
 L’API publique et les deux modes d’intégration du widget marchand sont décrits dans [docs/API_WIDGET.md](docs/API_WIDGET.md).
 
 ## Catalogue pilote

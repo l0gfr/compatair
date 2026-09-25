@@ -8,7 +8,7 @@ describe('catalog insights', () => {
 		const metrics = getCatalogMetrics(compressors, tools);
 		expect(metrics.compressorCount).toBe(compressors.length);
 		expect(metrics.toolCount).toBe(tools.length);
-		expect(metrics.toolCount).toBe(261);
+		expect(metrics.toolCount).toBe(511);
 		expect(metrics.compatibilityPageCount).toBeGreaterThan(0);
 	});
 

@@ -1,0 +1,114 @@
+const product = {
+	"id": "chicago-pneumatic-cp7783",
+	"slug": "cle-a-chocs-chicago-pneumatic-cp7783",
+	"categoryId": "cle-a-chocs",
+	"category": "Clé à chocs",
+	"label": "Clé à chocs Chicago Pneumatic CP7783",
+	"brand": "Chicago Pneumatic",
+	"model": "CP7783",
+	"mpn": "8941077830",
+	"distributorSkus": [],
+	"identifierAliases": [],
+	"connectorSize": "Entrée 1/2 pouce ; flexible intérieur 10 mm, longueur non précisée",
+	"usagePattern": "burst",
+	"recommendedHose": {
+		"innerDiameterMm": 10
+	},
+	"confidence": "A",
+	"image": {
+		"src": "/images/products/chicago-pneumatic-cp7783-catalogue-2026.webp",
+		"alt": "Repères techniques CP7783 : 1 140 L/min en charge à 6,3 bar",
+		"sourceUrl": "https://tools.cp.com/content/dam/pim/itba/cp/literature/catalogs/General-Industry_catalog_CP_EN.pdf#page=33",
+		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Chicago Pneumatic"
+	},
+	"editorial": {
+		"overview": "CP7783, référence 8941077830, demande 1 140 L/min en charge à 6,3 bar selon le catalogue Chicago Pneumatic v6.08.2026, page 33. Vitesse à vide : 6 200 tr/min. Couple maximal en marche arrière : 2400 Nm.",
+		"verifiedFacts": [
+			"Vitesse à vide : 6 200 tr/min.",
+			"Couple maximal en marche arrière : 2400 Nm.",
+			"Longueur publiée : 350 mm.",
+			"Poids publié : 8,4 kg.",
+			"Entrée d’air 1/2 pouce ; flexible intérieur de 10 mm publié par le fabricant."
+		],
+		"limitations": [
+			"Le débit utilisé est la consommation en charge du tableau constructeur à 6,3 bar. Aucune réduction arbitraire pour usage intermittent n’est appliquée.",
+			"Le diamètre intérieur de flexible publié est de 10 mm, sans longueur associée dans ce tableau. La perte de pression du réseau reste à vérifier pour votre installation.",
+			"Référence issue du catalogue international v6.08.2026. La configuration livrée, les normes applicables et la disponibilité en France restent à confirmer avec le fournisseur."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Vitesse à vide",
+			"value": "6 200 tr/min",
+			"evidenceIds": [
+				"cp-catalog-202608-8941077830"
+			]
+		},
+		{
+			"label": "Couple maximal en marche arrière",
+			"value": "2400 Nm",
+			"evidenceIds": [
+				"cp-catalog-202608-8941077830"
+			]
+		},
+		{
+			"label": "Longueur publiée",
+			"value": "350 mm",
+			"evidenceIds": [
+				"cp-catalog-202608-8941077830"
+			]
+		},
+		{
+			"label": "Poids publié",
+			"value": "8,4 kg",
+			"evidenceIds": [
+				"cp-catalog-202608-8941077830"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "cp-catalog-202608-8941077830",
+			"sourceUrl": "https://tools.cp.com/content/dam/pim/itba/cp/literature/catalogs/General-Industry_catalog_CP_EN.pdf#page=33",
+			"sourceLabel": "Chicago Pneumatic, catalogue v6.08.2026, p. 33, réf. 8941077830",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-25",
+			"confidence": "A",
+			"notes": "Colonne AIR CONS. @LOAD : 19 L/s × 60 = 1140 L/min. Note de tableau : 90 PSI (6,3 bar). Valeurs brutes et empreinte PDF versionnées."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"cp-catalog-202608-8941077830"
+		],
+		"airflowLpm": [
+			"cp-catalog-202608-8941077830"
+		],
+		"workingPressureBar": [
+			"cp-catalog-202608-8941077830"
+		],
+		"connectorSize": [
+			"cp-catalog-202608-8941077830"
+		],
+		"recommendedHose": [
+			"cp-catalog-202608-8941077830"
+		]
+	},
+	"notes": [
+		"Caractéristiques déclarées par le fabricant ; CompatAir n’a pas réalisé de mesure physique de cet outil.",
+		"Source versionnée : catalogue v6.08.2026, page 33, référence 8941077830."
+	],
+	"demandModel": "fixed-flow",
+	"workingPressureBar": {
+		"min": 6.3,
+		"typical": 6.3,
+		"max": 6.3
+	},
+	"airflowLpm": {
+		"min": 1140,
+		"typical": 1140,
+		"max": 1140
+	}
+};
+
+export default product;

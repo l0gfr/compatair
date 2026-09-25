@@ -1,0 +1,20 @@
+---
+import ToolUsageDirectoryPage from '../../../../../components/ToolUsageDirectoryPage.astro';
+import { tools } from '../../../../../data/catalog';
+import { toolUsageTaxonomy } from '../../../../../data/taxonomy';
+import { TOOL_USAGE_PAGE_SIZE } from '../../../../../domain/pagination';
+
+export function getStaticPaths() {
+	return toolUsageTaxonomy.flatMap((usage) => {
+		const count = tools.filter((tool) => usage.categoryIds.some((categoryId) => categoryId === tool.categoryId)).length;
+		const totalPages = Math.ceil(count / TOOL_USAGE_PAGE_SIZE);
+		return Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => ({
+			params: { usage: usage.id, page: String(index + 2) },
+			props: { usage, page: index + 2 },
+		}));
+	});
+}
+
+const { usage, page } = Astro.props;
+---
+<ToolUsageDirectoryPage usage={usage} page={page} />

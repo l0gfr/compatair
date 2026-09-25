@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CatalogSignalVisual from './CatalogSignalVisual.astro';
+import DirectoryBrowser from './DirectoryBrowser.astro';
+import DirectoryPagination from './DirectoryPagination.astro';
+import { paginate, TOOL_USAGE_PAGE_SIZE } from '../domain/pagination';
+import ProductImage from './ProductImage.astro';
+import { tools } from '../data/catalog';
+import { toolTaxonomy, toolUsageTaxonomy } from '../data/taxonomy';
+import { brandSlug } from '../domain/brand';
+import { serializeJsonLd } from '../domain/structured-data';
+import { sourceQualityLabel } from '../domain/source-quality';
+import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
+
+interface Props {
+	usage: (typeof toolUsageTaxonomy)[number];
+	page?: number;
+}
+
+const { usage, page = 1 } = Astro.props;
+const usageTools = tools.filter((tool) => usage.categoryIds.some((categoryId) => categoryId === tool.categoryId));
+const pagination = paginate(usageTools, page, TOOL_USAGE_PAGE_SIZE);
+const basePath = `/outils-pneumatiques/usages/${usage.id}/`;
+const pageBrands = [...new Set(pagination.items.map((item) => item.brand))].sort();
+const brands = [...new Set(usageTools.map((item) => item.brand))].sort();
+const fixedFlowCount = usageTools.filter((item) => item.demandModel === 'fixed-flow').length;
+const categories = toolTaxonomy.filter((category) => usage.categoryIds.some((categoryId) => categoryId === category.id));
+const toolListJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'ItemList',
+	name: usage.seoTitle,
+	itemListElement: pagination.items.map((tool, index) => ({
+		'@type': 'ListItem',
+		position: pagination.firstItem + index,
+		name: tool.label,
+		url: `https://compatair.fr/outils-pneumatiques/${tool.slug}/`,
+	})),
+};
+---
+
+<BaseLayout
+	title={page === 1 ? `${usage.seoTitle} | CompatAir` : `${usage.label} : outils, page ${page} | CompatAir`}
+	description={`${usage.description} ${usageTools.length} références sourcées à explorer avant de choisir un compresseur.${page > 1 ? ` Page ${page} sur ${pagination.totalPages}.` : ''}`}
+	imagePath="/social/outils-pneumatiques.png"
+	imageAlt="Catalogue des outils pneumatiques documentés par CompatAir"
+	breadcrumbs={[
+		{ name: 'Outils pneumatiques', path: '/outils-pneumatiques/' },
+		{ name: usage.label, path: `/outils-pneumatiques/usages/${usage.id}/` },
+	]}
+>
+	<script is:inline type="application/ld+json" set:html={serializeJsonLd(toolListJsonLd)} />
+	<article data-tool-usage-hub={usage.id}>
+		<section class="page-hero compact catalog-hero">
+			<div class="container catalog-hero-grid">
+				<div>
+					<p class="product-decision-index">Outils pneumatiques / Usage</p>
+					<p class="eyebrow">{categories.map((category) => category.label).join(' · ')}</p>
+					<h1>{usage.label} avec {usageTools.length} outils documentés{page > 1 ? ` : page ${page}` : ''}</h1>
+					<p class="lead">{usage.description} Ouvrez une fiche pour accéder ensuite à la sélection de compresseurs calculée pour cette référence.</p>
+					<div class="hero-actions"><a class="button primary" href="/calculateur/">Calculer ma configuration</a><a class="button" href="/outils-pneumatiques/">Voir tous les usages</a></div>
+				</div>
+				<CatalogSignalVisual mode="tools" count={usageTools.length} secondaryCount={brands.length} title="références dans cet usage" />
+			</div>
+		</section>
+
+		<section class="catalog-summary-band">
+			<div class="container">
+				<div><strong>{usageTools.length}</strong><span>références sourcées</span></div>
+				<div><strong>{fixedFlowCount}</strong><span>besoins minute publiés</span></div>
+				<div><strong>{usageTools.length - fixedFlowCount}</strong><span>rythmes à préciser</span></div>
+				<div><strong>{brands.length}</strong><span>fabricants suivis</span></div>
+			</div>
+		</section>
+
+		<section class="section catalog-directory" data-directory-browser data-page-size={TOOL_USAGE_PAGE_SIZE}>
+			<div class="container">
+				<header class="product-section-head">
+					<div><p class="product-decision-index">Répertoire documenté</p><h2>Comparer les références de cet usage</h2></div>
+					<p>Le tri porte sur les données publiées. Une consommation par action ou une valeur absente reste à compléter dans le calculateur.</p>
+				</header>
+				<div class="directory-controls">
+					<div class="field directory-search"><label for={`usage-search-${usage.id}`}>Rechercher dans cette page</label><input id={`usage-search-${usage.id}`} type="search" data-directory-search /></div>
+					<div class="field"><label for={`usage-brand-${usage.id}`}>Marque</label><select id={`usage-brand-${usage.id}`} data-directory-filter="brand"><option value="">Toutes</option>{pageBrands.map((brand) => <option value={brand}>{brand}</option>)}</select></div>
+					<div class="field"><label for={`usage-sort-${usage.id}`}>Trier</label><select id={`usage-sort-${usage.id}`} data-directory-sort><option value="confidence">Qualité des données</option><option value="primary-asc">Besoin croissant</option><option value="primary-desc">Besoin décroissant</option><option value="name">Nom</option></select></div>
+					<button type="button" class="inline-action" data-directory-reset>Réinitialiser</button>
+				</div>
+				<p class="directory-count" data-directory-count>{pagination.items.length} résultats</p>
+				<div class="product-grid directory-product-grid" data-directory-grid>
+					{pagination.items.map((tool, index) => (
+						<article
+							class="product-card catalog-product-card"
+							data-directory-card
+							data-brand={tool.brand}
+							data-search={`${tool.brand} ${tool.model} ${tool.label} ${tool.mpn ?? ''} ${tool.ean ?? ''} ${tool.gtin ?? ''} ${tool.distributorSkus.map((identifier) => identifier.sku).join(' ')} ${tool.identifierAliases.map((alias) => alias.value).join(' ')}`}
+							data-sort-name={tool.label}
+							data-sort-confidence={tool.confidence}
+							data-sort-primary={tool.demandModel === 'fixed-flow' ? tool.airflowLpm.typical : ''}
+						>
+							<header class="catalog-card-register"><span>CA / U-{String(pagination.firstItem + index).padStart(3, '0')}</span><small>{usage.label}</small></header>
+							<a class="product-card-image" href={`/outils-pneumatiques/${tool.slug}/`} aria-label={`Voir la fiche ${tool.label}`}><ProductImage image={tool.image} compact /></a>
+							<p class="product-brand"><a href={`/marques/${brandSlug(tool.brand)}/`}>{tool.brand}</a> · {tool.category}</p>
+							<h2><a href={`/outils-pneumatiques/${tool.slug}/`}>{tool.label}</a></h2>
+							<dl class="spec-list">
+								<div><dt>Besoin d’air</dt><dd>{toolDemandLabel(tool)}</dd></div>
+								<div><dt>Pression</dt><dd>{toolPressureLabel(tool)}</dd></div>
+								<div><dt>Source</dt><dd>{sourceQualityLabel(tool.confidence)}</dd></div>
+							</dl>
+							<p class:list={['data-status', tool.demandModel === 'fixed-flow' ? 'verified' : 'missing']}>{tool.demandModel === 'fixed-flow' ? 'Besoin par minute directement calculable' : 'Fréquence d’usage nécessaire au calcul'}</p>
+							<div class="catalog-card-actions"><a href={`/calculateur/#outil=${tool.id}`}>Calculer cette configuration</a></div>
+						</article>
+					))}
+				</div>
+				<DirectoryPagination basePath={basePath} currentPage={page} totalPages={pagination.totalPages} firstItem={pagination.firstItem} lastItem={pagination.lastItem} totalItems={pagination.totalItems} itemLabel="outils" />
+			</div>
+		</section>
+		<DirectoryBrowser />
+	</article>
+</BaseLayout>
