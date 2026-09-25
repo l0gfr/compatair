@@ -94,9 +94,9 @@ describe('evaluateCompatibility avec plusieurs modèles de demande', () => {
 			return impactWrenches.filter((tool) => evaluateCompatibility(compressor, tool).verdict === 'continuous').length;
 		};
 
-		expect(impactWrenches).toHaveLength(78);
-		expect(compatibleCount('atlas-copco-lz-10-10-bm')).toBe(46);
-		expect(compatibleCount('atlas-copco-lz-20-10-bm')).toBe(72);
+		expect(impactWrenches).toHaveLength(88);
+		expect(compatibleCount('atlas-copco-lz-10-10-bm')).toBe(53);
+		expect(compatibleCount('atlas-copco-lz-20-10-bm')).toBe(82);
 		const eightBarTool = impactWrenches.find((tool) => tool.id === 'einhell-tc-pw-610-compact')!;
 		expect(evaluateCompatibility(compressors.find((item) => item.id === 'atlas-copco-lz-20-10-bm')!, eightBarTool).verdict).toBe('insufficient_data');
 	});

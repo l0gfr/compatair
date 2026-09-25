@@ -16,7 +16,7 @@ export async function renderCpTechnicalCard(product, labels = {}) {
 	const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
 <rect width="1200" height="800" fill="#f0f1e9"/><rect x="44" y="44" width="1112" height="712" rx="18" fill="#fffef9" stroke="#c7d0c6" stroke-width="2"/>
 <g font-family="Arial, sans-serif" fill="#11251c"><rect x="82" y="90" width="8" height="32" fill="#166b4b"/>
-<text x="108" y="117" font-size="26" letter-spacing="2">CHICAGO PNEUMATIC</text>
+<text x="108" y="117" font-size="26" letter-spacing="2">${xml(product.brand.toUpperCase())}</text>
 <text x="82" y="210" font-size="${product.model.length > 26 ? 42 : 54}" font-weight="700">${xml(product.model)}</text>
 <text x="82" y="262" font-size="24" fill="#53665b">Référence fabricant ${xml(product.mpn)}</text>
 <line x1="82" y1="306" x2="1118" y2="306" stroke="#c7d0c6" stroke-width="2"/>
