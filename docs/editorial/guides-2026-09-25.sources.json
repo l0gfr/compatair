@@ -1,0 +1,558 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-09-25",
+  "reviewType": "internal_editorial",
+  "externalProfessionalValidation": false,
+  "physicalTestsPerformed": false,
+  "hashScope": "SHA-256 of the fetched HTML or PDF body. Dynamic pages may change hashes without a change to technical data. Source documents are not redistributed.",
+  "sources": [
+    {
+      "id": "einhell",
+      "url": "https://www.einhell.fr/p/4010393/",
+      "resolvedUrl": "https://www.einhell.fr/p/4010393/",
+      "httpStatus": 200,
+      "sha256": "9746caa3a242392730193a1621be113ec842ebe8c015a3b0de56529836d0f747",
+      "bytes": 283579,
+      "consultedOn": "2026-09-25",
+      "scope": "4010393: 107 L/min at 4 bar, 76 L/min at 7 bar; regulated outlet pressure gauge.",
+      "guides": [
+        "compresseur-ne-monte-plus-en-pression",
+        "consommation-moyenne-en-charge-cle-a-chocs"
+      ]
+    },
+    {
+      "id": "einhell-manual",
+      "url": "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nupse59f8t4htfeoh3u5gifg65/4010393_11027_001_SPK2.pdf",
+      "resolvedUrl": "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nupse59f8t4htfeoh3u5gifg65/4010393_11027_001_SPK2.pdf",
+      "httpStatus": 200,
+      "sha256": "7af21f1efb6ac0e93ec4dde3af06bac34efdacf3d177a6e71dce6c9fb2c99356",
+      "bytes": 1721705,
+      "consultedOn": "2026-09-25",
+      "scope": "4010393 manual dated 2018-03-19, pages 17 and 19: minimum +5 C; long extension leads and voltage drop; approximate 8/10 bar switching; troubleshooting categories. Applicability must match the appliance.",
+      "guides": [
+        "compresseur-ne-demarre-plus-froid-rallonge",
+        "compresseur-ne-monte-plus-en-pression"
+      ]
+    },
+    {
+      "id": "cp-leaflet",
+      "url": "https://tools.cp.com/content/dam/brands/Chicago%20Pneumatic/cp-tools-literature/leaflets-and-brochures/cp7732c-impact-wrench/CP7732C_Leaflet_EN.pdf",
+      "resolvedUrl": "https://tools.cp.com/content/dam/brands/Chicago%20Pneumatic/cp-tools-literature/leaflets-and-brochures/cp7732c-impact-wrench/CP7732C_Leaflet_EN.pdf",
+      "httpStatus": 200,
+      "sha256": "fa8cb07f6a1d385d4e8094da06fc186cdaaf28c36cffc333dd30d6138eb53711",
+      "bytes": 1173580,
+      "consultedOn": "2026-09-25",
+      "scope": "2016 leaflet page 2, MPN 8941077321: average 2.6 L/s and loaded 10.2 L/s, 6.3 bar. No duty-cycle protocol inferred.",
+      "guides": [
+        "consommation-moyenne-en-charge-cle-a-chocs"
+      ]
+    },
+    {
+      "id": "cp7732",
+      "url": "https://tools.cp.com/en/products/impactwrenches/cp7732c-sku8941077321",
+      "resolvedUrl": "https://tools.cp.com/en/products/impactwrenches/cp7732c-sku8941077321",
+      "httpStatus": 200,
+      "sha256": "d2964662bde3a8eb43ea727a4752f8bfa236fa8f1f261fe3d2d9ab1d5d87d465",
+      "bytes": 336197,
+      "consultedOn": "2026-09-25",
+      "scope": "MPN 8941077321: loaded 10 L/s, free speed 14 L/s; reverse torque 625 Nm; forward range 70-387 Nm; not torque limited; mechanism lubrication grease. Discrepancy with leaflet preserved.",
+      "guides": [
+        "cle-a-chocs-couple-serrage-roues-dynamometrique",
+        "compresseur-ne-monte-plus-en-pression",
+        "consommation-moyenne-en-charge-cle-a-chocs",
+        "huile-cle-a-chocs-pneumatique-lubrification"
+      ]
+    },
+    {
+      "id": "cp-torque",
+      "url": "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940176240.pdf",
+      "resolvedUrl": "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940176240.pdf",
+      "httpStatus": 200,
+      "sha256": "cd1da8c0dd183e5a8af2b200749bc925660583ba268bc2b7ad4b3a25816368f9",
+      "bytes": 3374877,
+      "consultedOn": "2026-09-25",
+      "scope": "CP7748TL/CP7748TL-2 manual 8940176240 page 6: initial wheel-fastener tightening only; final tightening with calibrated torque wrench per vehicle manufacturer.",
+      "guides": [
+        "cle-a-chocs-couple-serrage-roues-dynamometrique"
+      ]
+    },
+    {
+      "id": "cp-lube",
+      "url": "https://tools.cp.com/en-au/expert-corner/blog/improve-the-durability-of-your-impact-wrench-by-lubricating-the-airline-and-impact-mechanism",
+      "resolvedUrl": "https://tools.cp.com/en-au/expert-corner/blog/improve-the-durability-of-your-impact-wrench-by-lubricating-the-airline-and-impact-mechanism",
+      "httpStatus": 200,
+      "sha256": "9e52a2b9a53470eb33cbb7d1c43908e7f73df454ec49f6ed74b59d067ddb9456",
+      "bytes": 241500,
+      "consultedOn": "2026-09-25",
+      "scope": "Independent air-motor and impact-mechanism lubrication; grease versus oil bath depends on construction.",
+      "guides": [
+        "huile-cle-a-chocs-pneumatique-lubrification"
+      ]
+    },
+    {
+      "id": "cp7748-manual",
+      "url": "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940169372.pdf",
+      "resolvedUrl": "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940169372.pdf",
+      "httpStatus": 200,
+      "sha256": "2d6f6b4fdbc8f82480bfadb155ddf6a50ef122dc9c144432301ffc8f02f2f25a",
+      "bytes": 3514534,
+      "consultedOn": "2026-09-25",
+      "scope": "CP7748 manual 8940169372 Lubrication section: SAE #10, line lubricator at two drops per minute. Not a universal dosage.",
+      "guides": [
+        "huile-cle-a-chocs-pneumatique-lubrification"
+      ]
+    },
+    {
+      "id": "cejn-thread",
+      "url": "https://www.cejn.com/guides-support/toolbox/thread-standards/",
+      "resolvedUrl": "https://www.cejn.com/guides-support/toolbox/thread-standards/",
+      "httpStatus": 200,
+      "sha256": "30d7ce0c79142f2fd1e7734d405cdb712437d31c4832fcb91d8a9548ebbc1a07",
+      "bytes": 158408,
+      "consultedOn": "2026-09-25",
+      "scope": "G parallel, R and NPT thread families and their standards. Nominal size does not identify the interface.",
+      "guides": [
+        "raccord-air-comprime-bsp-npt-1-4"
+      ]
+    },
+    {
+      "id": "cejn-profile",
+      "url": "https://www.cejn.com/guides-support/toolbox/compressed-air-nipple-guide/",
+      "resolvedUrl": "https://www.cejn.com/guides-support/toolbox/compressed-air-nipple-guide/",
+      "httpStatus": 200,
+      "sha256": "b7242d3182090c25e869de7bd961985dfdc0c8dadb1a7d900fc64f7e619f3492",
+      "bytes": 155719,
+      "consultedOn": "2026-09-25",
+      "scope": "Several quick-coupling nipple profiles; profile distinct from connection thread.",
+      "guides": [
+        "raccord-air-comprime-bsp-npt-1-4"
+      ]
+    },
+    {
+      "id": "cejn-conversion",
+      "url": "https://www.cejn.com/guides-support/toolbox/conversion-tables/",
+      "resolvedUrl": "https://www.cejn.com/guides-support/toolbox/conversion-tables/",
+      "httpStatus": 200,
+      "sha256": "7ac471122e2b32ada741c633485918090ae87f06f249afb0c1028d22daf3e5fe",
+      "bytes": 158323,
+      "consultedOn": "2026-09-25",
+      "scope": "Unit conversion factors, including rounded 28.32 L/min per CFM and 25.4 mm per inch.",
+      "guides": [
+        "convertir-cfm-l-min-nl-min-air-comprime",
+        "meuleuse-pneumatique-pince-6-mm-ou-1-4"
+      ]
+    },
+    {
+      "id": "ralston",
+      "url": "https://www.ralstoninst.com/news/story/the-difference-between-npt-bspp-and-bspt-seals",
+      "resolvedUrl": "https://www.ralstoninst.com/news/story/the-difference-between-npt-bspp-and-bspt-seals",
+      "httpStatus": 200,
+      "sha256": "ff68f596f57fc59fdb9d872b17f555e1f03d495447bfa04d8aa5d6e12f49c8f7",
+      "bytes": 244786,
+      "consultedOn": "2026-09-25",
+      "scope": "NPT versus BSPT geometry, 60 versus 55 degrees; BSPP sealing surfaces. Starting a thread does not establish compatibility.",
+      "guides": [
+        "raccord-air-comprime-bsp-npt-1-4"
+      ]
+    },
+    {
+      "id": "atlas-flow",
+      "url": "https://www.atlascopco.com/en-in/compressors/wiki/compressed-air-articles/physics-physicalunits2",
+      "resolvedUrl": "https://www.atlascopco.com/en-in/compressors/wiki/compressed-air-articles/physics-physicalunits2",
+      "httpStatus": 200,
+      "sha256": "b71a66eef0c540a91c274a348594a63e72eef9620bd129baae65c4c811d00044",
+      "bytes": 233622,
+      "consultedOn": "2026-09-25",
+      "scope": "Normal/standard flow requires identified reference pressure and temperature; no universal Nl/min to L/min coefficient inferred.",
+      "guides": [
+        "convertir-cfm-l-min-nl-min-air-comprime"
+      ]
+    },
+    {
+      "id": "atlas-dryer",
+      "url": "https://www.atlascopco.com/en-uk/compressors/wiki/compressed-air-articles/choosing-a-dryer",
+      "resolvedUrl": "https://www.atlascopco.com/en-uk/compressors/wiki/compressed-air-articles/choosing-a-dryer",
+      "httpStatus": 200,
+      "sha256": "3aa21dbf23f9405aefbc619b86b7bf85c864c5a951d7c0d00091bf84027dc5b2",
+      "bytes": 226524,
+      "consultedOn": "2026-09-25",
+      "scope": "Refrigerated and adsorption dryer principles, pressure dew point and regeneration methods. Around +3 C is indicative, not a model guarantee.",
+      "guides": [
+        "secheur-air-comprime-atelier-non-chauffe"
+      ]
+    },
+    {
+      "id": "cagi",
+      "url": "https://www.cagi.org/resource-library",
+      "resolvedUrl": "https://www.cagi.org/resource-library",
+      "httpStatus": 200,
+      "sha256": "5e1eb558c1132e8160502091694aa7b7d6765a40b4dfd3427c389313b5e9c84a",
+      "bytes": 179753,
+      "consultedOn": "2026-09-25",
+      "scope": "Glossary entries for capacity, receivers, FAD, CFM/ACFM/SCFM and pressure dew point.",
+      "guides": [
+        "consommation-moyenne-en-charge-cle-a-chocs",
+        "convertir-cfm-l-min-nl-min-air-comprime",
+        "secheur-air-comprime-atelier-non-chauffe"
+      ]
+    },
+    {
+      "id": "fuji6",
+      "url": "https://www.fujitools.com/en/products/5412105865",
+      "resolvedUrl": "https://www.fujitools.com/en/products/5412105865",
+      "httpStatus": 200,
+      "sha256": "ee111572a8cbfd658182dcf280b1bc6dd5ef7fb00f283db43551755421f1d8f6",
+      "bytes": 413174,
+      "consultedOn": "2026-09-25",
+      "scope": "Exact MPN 5412105865 FG-26H-10 6 product object: 6 mm collet, 24000 rpm, 9.7 L/s loaded consumption. Other product objects on the same web page excluded.",
+      "guides": [
+        "meuleuse-pneumatique-pince-6-mm-ou-1-4",
+        "raccord-air-comprime-bsp-npt-1-4"
+      ]
+    },
+    {
+      "id": "fuji14",
+      "url": "https://www.fujitools.com/en/products/5412105867",
+      "resolvedUrl": "https://www.fujitools.com/en/products/5412105867",
+      "httpStatus": 200,
+      "sha256": "fc52af31814c5f8f1e8369c31112179989151b85e147388c7b062fb9a53b6d93",
+      "bytes": 439899,
+      "consultedOn": "2026-09-25",
+      "scope": "Exact MPN 5412105867 FG-26H-10 1-4 product object: 6.35 mm collet, 24000 rpm, 9.7 L/s loaded consumption. Other product objects on the same web page excluded.",
+      "guides": [
+        "meuleuse-pneumatique-pince-6-mm-ou-1-4",
+        "raccord-air-comprime-bsp-npt-1-4"
+      ]
+    },
+    {
+      "id": "fuji-notice",
+      "url": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/update2025/fa-20-4-423/9502000609_05.pdf",
+      "resolvedUrl": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/update2025/fa-20-4-423/9502000609_05.pdf",
+      "httpStatus": 200,
+      "sha256": "67dab0073dd09577c528de27c6a1e5553b471cd451a99301b8962a23f17983a4",
+      "bytes": 1995577,
+      "consultedOn": "2026-09-25",
+      "scope": "Manual 9502000609 revision 05, pages 2-3: 6.3 bar operating maximum, motor ISO VG 32 prescription, isolation before accessory changes and accessory suitability.",
+      "guides": [
+        "huile-cle-a-chocs-pneumatique-lubrification",
+        "meuleuse-pneumatique-pince-6-mm-ou-1-4",
+        "raccord-air-comprime-bsp-npt-1-4"
+      ]
+    },
+    {
+      "id": "metabo",
+      "url": "https://de.metabo.com/de/maschinen/trennen-schleifen-fraesen/holzbearbeitung/exzenterschleifer/dsx-150-601558000-druckluft-exzenterschleifer.html",
+      "resolvedUrl": "https://www.metabo.com/de/de/maschinen/trennen-schleifen-fraesen/holzbearbeitung/exzenterschleifer/dsx-150-druckluft-exzenterschleifer/601558000",
+      "httpStatus": 200,
+      "sha256": "9e461484f4dc89ca6a5693ca4277f0748ac2df4e468c3a907176a2c7ba17f41c",
+      "bytes": 197772,
+      "consultedOn": "2026-09-25",
+      "scope": "DSX 150 MPN 601558000: 150 mm pad, 5 mm stroke, 12000 rpm, 550 L/min, 6.2 bar; 25 mm extraction connection and six-hole pad.",
+      "guides": [
+        "ponceuse-orbitale-2-5-5-8-mm-choisir"
+      ]
+    },
+    {
+      "id": "mirka",
+      "url": "https://www.mirka.com/en-gb/products/power-tools/pneumatic-sanders/",
+      "resolvedUrl": "https://www.mirka.com/en-gb/products/power-tools/pneumatic-sanders/",
+      "httpStatus": 200,
+      "sha256": "6f513685c95291d1851babde6cee4e8037cb829cff06aa5febe2e4f4461ab075",
+      "bytes": 696772,
+      "consultedOn": "2026-09-25",
+      "scope": "Pneumatic-sander orbit guidance: 2.5 mm primer/post-paint, 5 mm general sanding, 8 mm aggressive work/paint removal. No universal air-consumption or grit rule inferred.",
+      "guides": [
+        "ponceuse-orbitale-2-5-5-8-mm-choisir"
+      ]
+    },
+    {
+      "id": "atlas-cold",
+      "url": "https://www.atlascopco.com/en-ca/compressors/air-dryers-compressed-air",
+      "resolvedUrl": "https://www.atlascopco.com/en-ca/compressors/air-dryers-compressed-air",
+      "httpStatus": 200,
+      "sha256": "2f295127515e4b7c1db4977ddbd72432e676efafa342e3bcf0bca21525a004fc",
+      "bytes": 56466,
+      "consultedOn": "2026-09-25",
+      "scope": "Dryer technologies and intended environments; dryer ambient limits and downstream pressure-dew-point requirements are separate checks.",
+      "guides": [
+        "secheur-air-comprime-atelier-non-chauffe"
+      ]
+    },
+    {
+      "id": "abac-troubleshooting",
+      "url": "https://www.abacaircompressors.com/en-africa/blog/air-compressor-troubleshooting",
+      "resolvedUrl": "https://www.abacaircompressors.com/en-africa/blog/air-compressor-troubleshooting",
+      "httpStatus": 200,
+      "sha256": "493ddb8f6381020d79d1e40042a0f4a130ce203e9d4518c4971eec9761a98fce",
+      "bytes": 135371,
+      "consultedOn": "2026-09-25",
+      "scope": "Possible causes of no-start and insufficient pressure: supply voltage, extension leads, demand beyond capacity, leakage and restrictions. Not an individual diagnosis.",
+      "guides": [
+        "compresseur-ne-demarre-plus-froid-rallonge",
+        "compresseur-ne-monte-plus-en-pression"
+      ]
+    },
+    {
+      "id": "inrs-electrical",
+      "url": "https://www.inrs.fr/risques/electriques/operations-installations.html",
+      "resolvedUrl": "https://www.inrs.fr/risques/electriques/operations-installations.html",
+      "httpStatus": 200,
+      "sha256": "3c233e10dbf6afe0a239001ef461fdd8625740536038e049dfc9d2372db45c80",
+      "bytes": 121846,
+      "verificationNote": "Retrieved with curl using system certificate validation; Python trust store rejected the certificate chain. TLS verification was never disabled.",
+      "consultedOn": "2026-09-25",
+      "scope": "Electrical operations require appropriate competence and authorization; no live-testing or internal electrical repair instructions reproduced.",
+      "guides": [
+        "compresseur-ne-demarre-plus-froid-rallonge"
+      ]
+    },
+    {
+      "id": "einhell-service",
+      "url": "https://www.einhell.fr/services/",
+      "resolvedUrl": "https://www.einhell.fr/services/",
+      "httpStatus": 200,
+      "sha256": "1d714075767758665a21c219689e7b83cc67623221150b083914751169e61925",
+      "bytes": 176068,
+      "consultedOn": "2026-09-25",
+      "scope": "Manufacturer service, repair and spare-part entry point.",
+      "guides": [
+        "compresseur-ne-demarre-plus-froid-rallonge"
+      ]
+    },
+    {
+      "id": "cp-limited",
+      "url": "https://tools.cp.com/pt-pt/expert-corner/blog/the-nuts-and-bolts-of-pneumatic-torque-limited-impact-wrenches-how-to-prevent-overtightening",
+      "resolvedUrl": "https://tools.cp.com/pt-pt/expert-corner/blog/the-nuts-and-bolts-of-pneumatic-torque-limited-impact-wrenches-how-to-prevent-overtightening",
+      "httpStatus": 200,
+      "sha256": "4ee4b341a99f2fdf6ba9a1ad407361fff2447a2f2d1b1401c50519009e546afc",
+      "bytes": 230135,
+      "consultedOn": "2026-09-25",
+      "scope": "Torque-limited impact wrench role and final tightening according to vehicle instructions.",
+      "guides": [
+        "cle-a-chocs-couple-serrage-roues-dynamometrique"
+      ]
+    },
+    {
+      "id": "pferd",
+      "url": "https://assets.pferd.com/pfd/products/pdfs/safety_pdf_catalog_3.pdf",
+      "resolvedUrl": "https://assets.pferd.com/pfd/products/pdfs/safety_pdf_catalog_3.pdf",
+      "httpStatus": 200,
+      "sha256": "617093ae69d2b32af34ff5ae9f8e42a29dfff563389c42e909e33ef4e2be374f",
+      "bytes": 259894,
+      "consultedOn": "2026-09-25",
+      "scope": "Mounted-point safety, page 1: permissible speed depends on shape, dimensions, shank diameter and unsupported shank length.",
+      "guides": [
+        "meuleuse-pneumatique-pince-6-mm-ou-1-4"
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "slug": "cle-a-chocs-couple-serrage-roues-dynamometrique",
+      "title": "Clé à chocs et roues : couple de desserrage, approche et serrage final",
+      "sources": [
+        "https://tools.cp.com/en/products/impactwrenches/cp7732c-sku8941077321",
+        "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940176240.pdf",
+        "https://tools.cp.com/pt-pt/expert-corner/blog/the-nuts-and-bolts-of-pneumatic-torque-limited-impact-wrenches-how-to-prevent-overtightening"
+      ],
+      "relatedGuides": [
+        "compresseur-pour-cle-a-chocs-pneumatique",
+        "cle-a-chocs-manque-couple-diagnostic",
+        "huile-cle-a-chocs-pneumatique-lubrification"
+      ],
+      "contextualInbound": [
+        "cle-a-chocs-manque-couple-diagnostic",
+        "dimensionner-compresseur-garage-automobile",
+        "compresseur-pour-cle-a-chocs-pneumatique"
+      ],
+      "inlineSvgCount": 1
+    },
+    {
+      "slug": "compresseur-ne-demarre-plus-froid-rallonge",
+      "title": "Compresseur qui ne démarre plus : froid, rallonge ou panne électrique ?",
+      "sources": [
+        "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nupse59f8t4htfeoh3u5gifg65/4010393_11027_001_SPK2.pdf",
+        "https://www.abacaircompressors.com/en-africa/blog/air-compressor-troubleshooting",
+        "https://www.inrs.fr/risques/electriques/operations-installations.html",
+        "https://www.einhell.fr/services/"
+      ],
+      "relatedGuides": [
+        "compresseur-ne-monte-plus-en-pression",
+        "compresseur-triphase-ou-monophase-atelier",
+        "entretien-compresseur-purge-condensats"
+      ],
+      "contextualInbound": [
+        "compresseur-triphase-ou-monophase-atelier",
+        "entretien-compresseur-purge-condensats",
+        "choisir-compresseur-garage-bricolage"
+      ],
+      "inlineSvgCount": 1
+    },
+    {
+      "slug": "compresseur-ne-monte-plus-en-pression",
+      "title": "Compresseur qui ne monte plus en pression : localiser le problème avant réparation",
+      "sources": [
+        "https://www.abacaircompressors.com/en-africa/blog/air-compressor-troubleshooting",
+        "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nupse59f8t4htfeoh3u5gifg65/4010393_11027_001_SPK2.pdf",
+        "https://www.einhell.fr/p/4010393/",
+        "https://tools.cp.com/en/products/impactwrenches/cp7732c-sku8941077321"
+      ],
+      "relatedGuides": [
+        "diagnostiquer-chute-pression-air-comprime",
+        "compresseur-ne-demarre-plus-froid-rallonge",
+        "detecter-mesurer-fuites-air-comprime"
+      ],
+      "contextualInbound": [
+        "entretien-compresseur-purge-condensats",
+        "compresseur-ne-demarre-plus-froid-rallonge",
+        "diagnostiquer-chute-pression-air-comprime",
+        "choisir-compresseur-garage-bricolage"
+      ],
+      "inlineSvgCount": 1
+    },
+    {
+      "slug": "consommation-moyenne-en-charge-cle-a-chocs",
+      "title": "Clé à chocs : consommation moyenne ou en charge pour choisir le compresseur ?",
+      "sources": [
+        "https://tools.cp.com/content/dam/brands/Chicago%20Pneumatic/cp-tools-literature/leaflets-and-brochures/cp7732c-impact-wrench/CP7732C_Leaflet_EN.pdf",
+        "https://tools.cp.com/en/products/impactwrenches/cp7732c-sku8941077321",
+        "https://www.einhell.fr/p/4010393/",
+        "https://www.cagi.org/resource-library"
+      ],
+      "relatedGuides": [
+        "compresseur-pour-cle-a-chocs-pneumatique",
+        "convertir-cfm-l-min-nl-min-air-comprime",
+        "cle-a-chocs-manque-couple-diagnostic"
+      ],
+      "contextualInbound": [
+        "convertir-cfm-l-min-nl-min-air-comprime",
+        "dimensionner-compresseur-garage-automobile",
+        "compresseur-ne-monte-plus-en-pression",
+        "compresseur-pour-cle-a-chocs-pneumatique"
+      ],
+      "inlineSvgCount": 1
+    },
+    {
+      "slug": "convertir-cfm-l-min-nl-min-air-comprime",
+      "title": "CFM, L/min, Nl/min : convertir un débit d’air sans fausser la comparaison",
+      "sources": [
+        "https://www.cejn.com/guides-support/toolbox/conversion-tables/",
+        "https://www.cagi.org/resource-library",
+        "https://www.atlascopco.com/en-in/compressors/wiki/compressed-air-articles/physics-physicalunits2"
+      ],
+      "relatedGuides": [
+        "debit-restitue-fad-vs-debit-aspire",
+        "bar-psi-pression-absolue-relative",
+        "consommation-moyenne-en-charge-cle-a-chocs"
+      ],
+      "contextualInbound": [
+        "bar-psi-pression-absolue-relative",
+        "debit-restitue-fad-vs-debit-aspire",
+        "consommation-moyenne-en-charge-cle-a-chocs"
+      ],
+      "inlineSvgCount": 1
+    },
+    {
+      "slug": "huile-cle-a-chocs-pneumatique-lubrification",
+      "title": "Quelle huile pour une clé à chocs pneumatique, et où faut-il lubrifier ?",
+      "sources": [
+        "https://tools.cp.com/en-au/expert-corner/blog/improve-the-durability-of-your-impact-wrench-by-lubricating-the-airline-and-impact-mechanism",
+        "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940169372.pdf",
+        "https://tools.cp.com/en/products/impactwrenches/cp7732c-sku8941077321",
+        "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/update2025/fa-20-4-423/9502000609_05.pdf"
+      ],
+      "relatedGuides": [
+        "groupe-frl-filtre-regulateur-lubrificateur",
+        "cle-a-chocs-manque-couple-diagnostic",
+        "separer-air-finition-et-clouage-atelier-bois"
+      ],
+      "contextualInbound": [
+        "cle-a-chocs-manque-couple-diagnostic",
+        "groupe-frl-filtre-regulateur-lubrificateur"
+      ],
+      "inlineSvgCount": 1
+    },
+    {
+      "slug": "meuleuse-pneumatique-pince-6-mm-ou-1-4",
+      "title": "Meuleuse droite pneumatique : pince de 6 mm ou 1/4 pouce, laquelle choisir ?",
+      "sources": [
+        "https://www.fujitools.com/en/products/5412105865",
+        "https://www.fujitools.com/en/products/5412105867",
+        "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/update2025/fa-20-4-423/9502000609_05.pdf",
+        "https://assets.pferd.com/pfd/products/pdfs/safety_pdf_catalog_3.pdf",
+        "https://www.cejn.com/guides-support/toolbox/conversion-tables/"
+      ],
+      "relatedGuides": [
+        "compresseur-pour-meuleuse-pneumatique",
+        "raccord-air-comprime-bsp-npt-1-4",
+        "convertir-cfm-l-min-nl-min-air-comprime"
+      ],
+      "contextualInbound": [
+        "pression-travail-6-3-bar-outils-pneumatiques",
+        "raccord-air-comprime-bsp-npt-1-4",
+        "compresseur-pour-meuleuse-pneumatique"
+      ],
+      "inlineSvgCount": 1
+    },
+    {
+      "slug": "ponceuse-orbitale-2-5-5-8-mm-choisir",
+      "title": "Ponceuse pneumatique : orbite de 2,5, 5 ou 8 mm pour quel travail ?",
+      "sources": [
+        "https://www.mirka.com/en-gb/products/power-tools/pneumatic-sanders/",
+        "https://de.metabo.com/de/maschinen/trennen-schleifen-fraesen/holzbearbeitung/exzenterschleifer/dsx-150-601558000-druckluft-exzenterschleifer.html"
+      ],
+      "relatedGuides": [
+        "compresseur-pour-ponceuse-pneumatique",
+        "ponceuse-pneumatique-bois-aspiration-poussieres",
+        "ponceuse-delta-carrosserie-debit-continu"
+      ],
+      "contextualInbound": [
+        "compresseur-pour-ponceuse-pneumatique",
+        "ponceuse-pneumatique-bois-aspiration-poussieres"
+      ],
+      "inlineSvgCount": 1
+    },
+    {
+      "slug": "raccord-air-comprime-bsp-npt-1-4",
+      "title": "Raccord d’air comprimé 1/4 : BSP, NPT et profil rapide, que vérifier ?",
+      "sources": [
+        "https://www.cejn.com/guides-support/toolbox/thread-standards/",
+        "https://www.cejn.com/guides-support/toolbox/compressed-air-nipple-guide/",
+        "https://www.ralstoninst.com/news/story/the-difference-between-npt-bspp-and-bspt-seals",
+        "https://www.fujitools.com/en/products/5412105865",
+        "https://www.fujitools.com/en/products/5412105867",
+        "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/update2025/fa-20-4-423/9502000609_05.pdf"
+      ],
+      "relatedGuides": [
+        "diametre-longueur-flexible-air-comprime",
+        "flexible-enrouleur-raccords-garage-debit",
+        "meuleuse-pneumatique-pince-6-mm-ou-1-4"
+      ],
+      "contextualInbound": [
+        "diametre-longueur-flexible-air-comprime",
+        "meuleuse-pneumatique-pince-6-mm-ou-1-4",
+        "flexible-enrouleur-raccords-garage-debit"
+      ],
+      "inlineSvgCount": 1
+    },
+    {
+      "slug": "secheur-air-comprime-atelier-non-chauffe",
+      "title": "Sécheur frigorifique ou adsorption dans un atelier non chauffé ?",
+      "sources": [
+        "https://www.atlascopco.com/en-uk/compressors/wiki/compressed-air-articles/choosing-a-dryer",
+        "https://www.atlascopco.com/en-ca/compressors/air-dryers-compressed-air",
+        "https://www.cagi.org/resource-library"
+      ],
+      "relatedGuides": [
+        "point-rosee-secheur-filtre-air-comprime",
+        "qualite-air-comprime-iso-8573-1",
+        "entretien-compresseur-purge-condensats"
+      ],
+      "contextualInbound": [
+        "qualite-air-comprime-iso-8573-1",
+        "point-rosee-secheur-filtre-air-comprime"
+      ],
+      "inlineSvgCount": 1
+    }
+  ]
+}

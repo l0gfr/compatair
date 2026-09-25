@@ -3,6 +3,7 @@ title: "Ponceuse pneumatique en menuiserie : dimensionner l’air et l’aspirat
 seoTitle: "Ponceuse pneumatique bois : air et aspiration"
 description: "Dossier professionnel fondé sur la Festool LEX 3 150/5 et les recommandations INRS pour ne pas confondre alimentation pneumatique et captage des poussières."
 pubDate: 2026-07-15
+updatedDate: 2026-09-25
 category: "Installer"
 audiences: [professionnel]
 metiers: [menuiserie-agencement]
@@ -12,6 +13,7 @@ sources:
   - https://www.festool.fr/produits/ponceuses-%C3%A9lectriques/ponceuses-pneumatiques/575081---lex-3-1505
   - https://www.inrs.fr/metiers/metiers-du-bois/transformation-du-bois/poussiere/prevenir
   - https://www.inrs.fr/metiers/metiers-du-bois/transformation-du-bois/poussiere/ventilation-aspiration
+relatedGuides: [ponceuse-orbitale-2-5-5-8-mm-choisir]
 ---
 
 Sur une ponceuse pneumatique aspirante, deux réseaux travaillent côte à côte : l’air comprimé entraîne l’outil, l’aspiration évacue les poussières. Une alimentation correcte ne prouve pas que le captage est efficace, et un bon extracteur ne compense pas une chute de pression au moteur.
@@ -65,6 +67,10 @@ L’INRS demande de tenir à jour un dossier descriptif de l’installation d’
 L’INRS demande un nettoyage par aspiration, sans balai ni soufflette. Cette règle concerne les surfaces de travail et le dépôt de poussières ; elle ne doit pas être contournée au motif que la ponceuse possède déjà une aspiration intégrée.
 
 Le guide [nettoyer l’atelier bois sans soufflette](/guides/nettoyer-atelier-bois-sans-soufflette/) transforme cette exigence en contrôle de fin de poste. L’aspiration au plateau réduit les émissions à la source, mais le nettoyage et la maintenance du système restent nécessaires.
+
+## Comparer les configurations de ponçage
+
+Le dossier [choisir une orbite de 2,5, 5 ou 8 mm](/guides/ponceuse-orbitale-2-5-5-8-mm-choisir/) propose un relevé d’essai avec machine, plateau, abrasif et aspiration identifiés. Le résultat de finition et la capacité de captage restent deux validations distinctes.
 
 ## Sources
 

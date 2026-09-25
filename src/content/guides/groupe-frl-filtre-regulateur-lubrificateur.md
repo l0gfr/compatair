@@ -3,18 +3,19 @@ title: "Groupe FRL : filtre, régulateur, lubrificateur, ordre, réglage et entr
 seoTitle: "Groupe FRL : ordre, réglage et entretien"
 description: "Installer et entretenir un groupe FRL sans lubrifier tous les usages : ordre des modules, sens du débit, pression, condensats et contrôle des pertes."
 pubDate: 2026-08-28
+updatedDate: 2026-09-25
 category: "Installer"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, carrosserie-peinture, maintenance-industrielle]
 readingTime: 14
 featured: false
-relatedGuides: [qualite-air-comprime-iso-8573-1, diagnostiquer-chute-pression-air-comprime, point-rosee-secheur-filtre-air-comprime]
 sources:
   - https://www.cp.com/content/dam/pim/itba/cp/technical-documents/update2024/frl/6159990240_02.pdf
   - https://www.parker.com/content/dam/Parker-com/Literature/Literature-Files/pneumatic/Instruction-sheets/FRL/Service_Lubricators.pdf
   - https://www.parker.com/content/dam/Parker-com/Literature/Literature-Files/pneumatic/Literature/FRL/0700P/0700P_General_Industrial.pdf
   - https://tools.cp.com/en-us/products/sanders/pistol-sanders
   - https://www.cp.com/content/dam/pim/itba/cp/technical-documents/2050499083.pdf
+relatedGuides: [huile-cle-a-chocs-pneumatique-lubrification, qualite-air-comprime-iso-8573-1, diagnostiquer-chute-pression-air-comprime, point-rosee-secheur-filtre-air-comprime]
 ---
 
 Un groupe FRL associe un **filtre**, un **régulateur** et un **lubrificateur**. Ces trois fonctions ne sont pas automatiquement requises sur chaque branche. Le filtre ne remplace pas un sécheur, le régulateur ne crée pas de débit et le lubrificateur ne doit être installé que si l’équipement aval et le procédé acceptent l’huile.
@@ -117,6 +118,10 @@ Avant ouverture, les notices CP et Parker demandent de couper l’alimentation e
 8. Consigner le résultat et retirer le groupe du service si son fonctionnement reste anormal.
 
 Un FRL bien monté n’est pas une preuve suffisante de qualité d’air. Le procédé doit toujours relier filtre, séchage, huile, débit et pression à ses propres exigences.
+
+## Appliquer la lubrification à une clé identifiée
+
+Le dossier [huile de clé à chocs : moteur et mécanisme de frappe](/guides/huile-cle-a-chocs-pneumatique-lubrification/) distingue les zones d’entretien et les prescriptions documentées. Un réglage de lubrificateur ne remplace pas l’entretien complet de l’outil.
 
 ## Sources
 

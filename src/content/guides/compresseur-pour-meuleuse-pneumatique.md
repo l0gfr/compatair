@@ -2,6 +2,7 @@
 title: "Quel compresseur pour une meuleuse pneumatique ?"
 description: "Comparaison à pression égale des besoins des Einhell TC-PA 50 et TC-PP 220, avec calculs reproductibles à partir des courbes constructeur."
 pubDate: 2026-07-13
+updatedDate: 2026-09-25
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [maintenance-industrielle]
@@ -13,6 +14,7 @@ sources:
   - https://www.einhell.fr/p/4138540-tc-pp-220/
   - https://www.einhell.fr/p/4010800-te-ac-430-90-10/
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
+relatedGuides: [meuleuse-pneumatique-pince-6-mm-ou-1-4]
 ---
 
 Une meuleuse pneumatique impose de comparer deux valeurs à la même pression. L’[Einhell TC-PA 50](https://www.einhell.fr/p/4138550-tc-pa-50/) consomme 113 L/min à 6,3 bar. La [TC-PP 220](https://www.einhell.fr/p/4138540-tc-pp-220/) demande 128 L/min à 6,3 bar.
@@ -51,6 +53,10 @@ Ce débit couvre les deux consommations nominales et leurs seuils CompatAir resp
 Une valeur publiée à 6,4 bar ne doit pas être automatiquement recopiée à 6,3 bar lorsqu’elle constitue l’unique point disponible. CompatAir classe alors le résultat en données insuffisantes. Cette règle évite de fabriquer une courbe à partir d’un seul point.
 
 Le flexible reste également déterminant. Sans diamètre intérieur, longueur et données de perte, le calculateur ne retranche aucun débit ou bar forfaitaire.
+
+## Choisir la bonne variante de meuleuse
+
+Le dossier [pince de 6 mm ou 1/4 pouce](/guides/meuleuse-pneumatique-pince-6-mm-ou-1-4/) compare deux variantes Fuji et relie diamètre de tige, vitesse admissible et besoin d’air. La compatibilité pneumatique reste distincte de celle de l’accessoire.
 
 ## Sources
 

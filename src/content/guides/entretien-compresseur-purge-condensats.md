@@ -2,6 +2,7 @@
 title: "Entretenir un compresseur d’air : purge, cuve, filtres et contrôles à documenter"
 description: "Construire un entretien traçable à partir de la notice du modèle : condensats, inspection de cuve, soupape, filtration et conditions d’installation."
 pubDate: 2026-07-13
+updatedDate: 2026-09-25
 category: "Utiliser"
 audiences: [particulier, professionnel]
 metiers: [maintenance-industrielle]
@@ -11,6 +12,7 @@ sources:
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
   - https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nupse59f8t4htfeoh3u5gifg65/4010393_11027_001_SPK2.pdf
+relatedGuides: [compresseur-ne-monte-plus-en-pression]
 ---
 
 Un calendrier d’entretien générique ne remplace pas la notice du compresseur. La technologie, le cycle de fonctionnement, le [traitement et l’architecture du réseau](/guides/installer-reseau-air-comprime-atelier/), les conditions d’installation et les exigences du fabricant déterminent les contrôles à réaliser.
@@ -114,6 +116,10 @@ Le registre ne remplace ni la notice ni une inspection réglementaire. Il rend s
 CompatAir ne publie pas une fréquence universelle de vidange d’huile, de remplacement de filtre ou de contrôle de soupape. Ces valeurs dépendent du modèle. Le site ne donne pas non plus de procédure de réparation d’une cuve sous pression.
 
 La règle éditoriale est la même que pour le débit : lorsqu’une donnée n’est pas documentée pour la référence, elle reste absente.
+
+## Documenter une panne après entretien
+
+Une pression qui ne revient pas appelle le [parcours de diagnostic production, fuite et distribution](/guides/compresseur-ne-monte-plus-en-pression/). Si le moteur ne part pas, utilisez plutôt le dossier [absence de démarrage et conditions d’alimentation](/guides/compresseur-ne-demarre-plus-froid-rallonge/).
 
 ## Sources
 

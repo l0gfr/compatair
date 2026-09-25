@@ -2,6 +2,7 @@
 title: "Quel compresseur pour une clé à chocs pneumatique ?"
 description: "Méthode factuelle pour comparer la consommation d’une clé à chocs au débit restitué d’un compresseur, avec l’exemple Einhell TC-PW 340."
 pubDate: 2026-07-13
+updatedDate: 2026-09-25
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, atelier-poids-lourds]
@@ -11,6 +12,7 @@ relatedCalculatorTool: einhell-tc-pw-340
 sources:
   - https://www.einhell.fr/p/4138950-tc-pw-340/
   - https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_c7bjdn248d2dret4jdk27m9377/4138950_21022_002_SPK2.pdf
+relatedGuides: [consommation-moyenne-en-charge-cle-a-chocs]
 ---
 
 Le bon critère n’est pas le volume de la cuve pris isolément. Il faut comparer la consommation publiée de la clé au [débit restitué du compresseur](/guides/debit-restitue-fad-vs-debit-aspire/), à une pression comparable.
@@ -41,6 +43,10 @@ La cuve fournit une réserve temporaire. Le moteur doit ensuite reconstituer cet
 La notice indique un flexible de 9 mm de diamètre intérieur. Une longueur importante, un raccord étroit, un filtre colmaté ou un détendeur sous-dimensionné peuvent créer une chute de pression. CompatAir conserve la longueur et le diamètre saisis, mais ne retranche aucun bar arbitraire sans courbe ou mesure.
 
 Utilisez le [calculateur avec la TC-PW 340 préchargée](/calculateur/#outil=einhell-tc-pw-340), puis vérifiez la source de chaque compresseur proposé. Le guide sur le [diamètre et la longueur du flexible](/guides/diametre-longueur-flexible-air-comprime/) complète cette vérification.
+
+## Lire la consommation et préparer le serrage
+
+Avant de retenir un débit, distinguez la [consommation moyenne de la consommation en charge](/guides/consommation-moyenne-en-charge-cle-a-chocs/). Pour un poste roues, vérifiez séparément le [rôle de la clé à chocs et le serrage final à la clé dynamométrique](/guides/cle-a-chocs-couple-serrage-roues-dynamometrique/).
 
 ## Sources
 

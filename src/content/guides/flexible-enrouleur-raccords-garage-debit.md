@@ -3,6 +3,7 @@ title: "Flexible, enrouleur et raccords de garage : retrouver le débit perdu"
 seoTitle: "Flexible et enrouleur de garage : éviter les pertes"
 description: "Méthode de contrôle du diamètre intérieur, de la longueur et des raccords à partir de deux clés documentées et de mesures sous débit au poste."
 pubDate: 2026-07-15
+updatedDate: 2026-09-25
 category: "Installer"
 audiences: [professionnel]
 metiers: [garage-automobile, atelier-poids-lourds, maintenance-industrielle]
@@ -11,6 +12,7 @@ sources:
   - https://tools.cp.com/en-ca/products/impactwrenches/cp7748-sku8941077481
   - https://tools.cp.com/fr-fr/products/impactwrenches/cp5000-skuT024585
   - https://www.atlascopco.com/en-uk/compressors/air-compressor-blog/sizing-compressed-air-pipe
+relatedGuides: [raccord-air-comprime-bsp-npt-1-4]
 ---
 
 Un enrouleur est souvent décrit par sa longueur extérieure, alors que l’outil « voit » un passage complet : conduite, vanne, pivot, flexible, coupleurs et adaptateurs. Le diagnostic commence par le diamètre intérieur et la pression en fonctionnement, puis remonte composant par composant.
@@ -64,6 +66,10 @@ Pour une CP5000, un enrouleur annoncé « compatible outils pneumatiques » sans
 La réception se fait au raccord, outil en charge. Si la pression manque, comparez les points amont avant de relever la consigne du compresseur. Augmenter toute la centrale pour compenser un raccord restrictif déplace le problème et peut exposer d’autres branches à une pression inutilement élevée.
 
 Le dossier [clé à chocs qui manque de force](/guides/cle-a-chocs-manque-couple-diagnostic/) propose la séquence complète. Une fois le trajet corrigé, rejouez la mesure et archivez l’avant/après avec les références remplacées.
+
+## Identifier le raccord avant de le remplacer
+
+Le guide [raccord d’air 1/4 : BSP, NPT et profil rapide](/guides/raccord-air-comprime-bsp-npt-1-4/) aide à préparer une commande complète. Il distingue l’identification mécanique du contrôle de débit du montage.
 
 ## Sources
 

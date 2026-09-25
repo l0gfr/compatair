@@ -2,7 +2,7 @@
 title: "Compresseur triphasé ou monophasé : comment choisir pour un atelier ?"
 description: "Alimentation, débit restitué, puissance et installation : les critères vérifiables pour choisir un compresseur triphasé ou monophasé en atelier."
 pubDate: 2026-07-14
-updatedDate: 2026-07-14
+updatedDate: 2026-09-25
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [maintenance-industrielle]
@@ -16,6 +16,7 @@ sources:
   - https://shop.abacaircompressors.com/en-FR/products/4116001463/atf-55-270d-10-400350yd-ce
   - https://www.enedis.fr/faq/compteur-electrique/comment-choisir-un-sous-compteur-electrique
   - https://www.promotelec.com/professionnels/fiche/la-difference-entre-le-monophase-et-le-triphase/
+relatedGuides: [compresseur-ne-demarre-plus-froid-rallonge]
 ---
 
 Un compresseur triphasé n’est pas automatiquement meilleur qu’un compresseur monophasé. Le choix dépend d’abord de l’alimentation disponible dans l’atelier et de la plaque du moteur. La performance pneumatique doit ensuite être comparée séparément, avec le débit restitué à la pression utile.
@@ -88,6 +89,10 @@ Le guide [24, 50 ou 90 litres](/guides/choisir-volume-cuve-24-50-90-litres/) exp
 - ne pas acheter un triphasé sur la seule base du débit aspiré.
 
 Consultez la [fiche du Mega 580-200 D](/compresseurs/metabo-mega-580-200-d/), la [fiche de l’ATL 5.5 270](/compresseurs/abac-atl-5-5-270/) ou ouvrez le [comparateur triphasé](/comparateur/#ids=metabo-mega-580-200-d,abac-atl-5-5-270,abac-atf-5-5-270d) pour afficher les données côte à côte.
+
+## Si le compresseur ne démarre pas
+
+Le guide [démarrage, froid, rallonge et panne électrique](/guides/compresseur-ne-demarre-plus-froid-rallonge/) organise les observations à transmettre au technicien. Il ne remplace pas l’étude du circuit ni les protections par un réglage improvisé.
 
 ## Sources
 

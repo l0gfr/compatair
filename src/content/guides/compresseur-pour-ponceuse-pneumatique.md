@@ -2,6 +2,7 @@
 title: "Quel compresseur pour une ponceuse pneumatique ?"
 description: "Une ponceuse exige un débit durable, pas seulement une grande cuve. Dimensionnez le FAD, le cycle de service et le flexible à partir d’un cas vérifié."
 pubDate: 2026-07-13
+updatedDate: 2026-09-25
 category: Choisir
 audiences: [particulier, professionnel]
 metiers: [carrosserie-peinture, menuiserie-agencement]
@@ -12,6 +13,7 @@ sources:
   - https://www.einhell.fr/p/4133330-tc-pe-150/
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
   - https://www.einhell.fr/p/4010800-te-ac-430-90-10/
+relatedGuides: [ponceuse-orbitale-2-5-5-8-mm-choisir]
 ---
 
 Le ponçage pneumatique est un excellent révélateur des limites d’un compresseur. Contrairement à une agrafeuse, la ponceuse consomme de l’air pendant une grande partie du temps de travail. Une grosse cuve peut retarder la baisse de pression, mais le débit restitué doit finir par suivre.
@@ -42,6 +44,10 @@ L’[Einhell TE-AC 430/90/10](https://www.einhell.fr/p/4010800-te-ac-430-90-10/)
 4. Traitement de l’air adapté à la finition et entretien régulier du condensat.
 
 Une autre ponceuse peut consommer beaucoup plus. Relevez toujours sa propre fiche technique. Le [profil complet de la TC-PE 150](/outils-pneumatiques/ponceuse-excentrique-einhell-tc-pe-150/) et le [calculateur CompatAir](/calculateur/#outil=einhell-tc-pe-150) permettent de reproduire ce raisonnement.
+
+## Choisir d’abord l’opération de ponçage
+
+Avant de comparer les besoins d’air, le guide [orbite de 2,5, 5 ou 8 mm](/guides/ponceuse-orbitale-2-5-5-8-mm-choisir/) aide à définir le travail recherché. Il distingue plateau, orbite et consommation à partir des repères Mirka et de la DSX 150.
 
 ## Sources
 

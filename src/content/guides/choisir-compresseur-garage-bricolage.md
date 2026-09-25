@@ -3,6 +3,7 @@ title: "Choisir un compresseur pour le garage et le bricolage sans liste d’usa
 seoTitle: "Compresseur garage et bricolage | CompatAir"
 description: "Partir de vos outils exacts, de leur cadence et du débit restitué pour choisir un compresseur domestique sans raccourci par la cuve."
 pubDate: 2026-07-15
+updatedDate: 2026-09-25
 category: "Choisir"
 audiences: [particulier]
 metiers: []
@@ -14,6 +15,7 @@ sources:
   - https://www.einhell.fr/p/4137790-tc-pn-50/
   - https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ngovue839t5o7dugodnovh8q57/4137790_11018_001_SPK2.pdf
   - https://www.atlascopco.com/en-us/compressors/wiki/compressed-air-articles/what-is-an-air-receiver
+relatedGuides: [compresseur-ne-demarre-plus-froid-rallonge]
 ---
 
 Dans un garage domestique, « 24 ou 50 litres ? » arrive trop tôt. Commencez par les outils exacts, leur pression et la durée d’utilisation prévue. La [cuve](/glossaire/#cuve) entre ensuite dans le raisonnement comme réserve ; elle n’ajoute pas de production permanente.
@@ -61,6 +63,10 @@ Le guide [24, 50 ou 90 litres](/guides/choisir-volume-cuve-24-50-90-litres/) exp
 Ouvrez la [TC-PA 50 dans le calculateur](/calculateur/#outil=einhell-tc-pa-50), puis choisissez un modèle documenté. Recommencez avec chaque outil envisagé. Si deux outils doivent réellement fonctionner ensemble, utilisez le mode multi-outils ; sinon, comparez-les séparément.
 
 Une case vide indique l’étape suivante : retrouver la notice ou effectuer une mesure. Elle ne valide pas un achat par ressemblance.
+
+## Avant de remplacer une machine existante
+
+Si l’achat est motivé par une panne, commencez par distinguer un [compresseur qui ne démarre plus](/guides/compresseur-ne-demarre-plus-froid-rallonge/) d’un [compresseur qui ne monte plus en pression](/guides/compresseur-ne-monte-plus-en-pression/). Ces dossiers aident à décrire le problème avant de choisir une réparation ou un autre équipement.
 
 ## Sources
 

@@ -3,6 +3,7 @@ title: "Débit restitué FAD ou débit aspiré : le chiffre qui dimensionne vrai
 seoTitle: "Débit FAD ou débit aspiré : lequel comparer ? | CompatAir"
 description: "FAD, débit aspiré et débit de remplissage ne mesurent pas la même chose. Identifiez le chiffre à comparer au besoin de votre outil et à quelle pression."
 pubDate: 2026-07-13
+updatedDate: 2026-09-25
 category: Comprendre
 audiences: [particulier, professionnel]
 metiers: []
@@ -13,6 +14,7 @@ sources:
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
   - https://fr.metabo.com/fr/machines/air-comprime/compresseurs/compresseurs-d-atelier-mobiles/mega-350-100-w-601538000-compresseur.html
+relatedGuides: [convertir-cfm-l-min-nl-min-air-comprime]
 ---
 
 Deux compresseurs peuvent afficher 240 ou 320 litres par minute en gros caractères et livrer des performances très différentes à l’outil. La raison tient au point de mesure. Le débit aspiré est mesuré à l’entrée du groupe de compression. Le débit restitué, désigné **FAD** pour *Free Air Delivery* dans le manuel Atlas Copco cité en source, représente l’air effectivement fourni après les pertes propres à la compression.
@@ -47,6 +49,10 @@ Si la fiche ne publie que le débit aspiré, le produit reste consultable, mais 
 4. Le cycle du compresseur permet-il de tenir le rythme moyen ?
 
 La cuve intervient ensuite comme réserve temporaire. Elle ne corrige pas un débit durablement insuffisant. Pour tester une combinaison précise, utilisez le [calculateur CompatAir](/calculateur/).
+
+## Comparer des fiches exprimées dans des unités différentes
+
+Une fois la nature du débit identifiée, utilisez le [tableau CFM, L/s, L/min et m³/h](/guides/convertir-cfm-l-min-nl-min-air-comprime/). Il conserve les conditions de référence et explique pourquoi Nl/min et L/min ne se remplacent pas par une conversion universelle.
 
 ## Sources
 

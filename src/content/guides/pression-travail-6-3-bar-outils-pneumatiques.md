@@ -2,6 +2,7 @@
 title: "Pourquoi tant d’outils pneumatiques travaillent à 6,3 bar"
 description: "La pression maximale de la cuve ne dit pas ce qui arrive à l’outil. Comprenez la pression de service, le détendeur et la marge réseau autour de 6,3 bar."
 pubDate: 2026-07-13
+updatedDate: 2026-09-25
 category: Comprendre
 audiences: [particulier, professionnel]
 metiers: [btp-chantier]
@@ -10,6 +11,7 @@ sources:
   - https://www.einhell.fr/p/4133330-tc-pe-150/
   - https://www.einhell.fr/p/4138540-tc-pp-220/
   - https://www.atlascopco.com/en-gr/compressors/wiki/compressed-air-articles/calculating-working-pressure
+relatedGuides: [meuleuse-pneumatique-pince-6-mm-ou-1-4]
 ---
 
 La valeur de 6,3 bar apparaît sur plusieurs fiches d’outils pneumatiques étudiées par CompatAir, notamment les Einhell TC-PE 150 et TC-PP 220. Elle désigne leur pression de service publiée. Ce n’est pas la pression maximale du réservoir.
@@ -39,6 +41,10 @@ Augmenter la consigne sollicite davantage le compresseur et peut dépasser la li
 ## Méthode CompatAir
 
 Le moteur rejette une combinaison si la pression maximale du compresseur est inférieure à la pression typique de l’outil. Il calcule ensuite le débit disponible au même point de pression. Une fiche qui ne documente le débit qu’à 4 bar ne permet pas d’affirmer ce qui reste à 6,3 ou 7 bar.
+
+## Relier pression et montage réel
+
+L’exemple des [meuleuses Fuji à pince de 6 mm ou 1/4](/guides/meuleuse-pneumatique-pince-6-mm-ou-1-4/) montre comment relier la notice de pression à une variante exacte. Le débit calculé ne dispense pas de vérifier pince, accessoire et vitesse.
 
 ## Sources
 

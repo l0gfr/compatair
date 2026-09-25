@@ -2,20 +2,18 @@
 title: "Qualité de l’air comprimé et ISO 8573-1 : particules, eau et huile sans raccourci"
 description: "Comprendre ce que classe réellement ISO 8573-1, où spécifier la qualité de l’air et pourquoi filtre, sécheur et compresseur sans huile ne sont pas interchangeables."
 pubDate: 2026-07-13
-updatedDate: 2026-07-20
+updatedDate: 2026-09-25
 category: "Comprendre"
 audiences: [professionnel]
 metiers: [carrosserie-peinture, maintenance-industrielle]
 readingTime: 11
 featured: false
 series: audit-suivi-maintenance-air-comprime
-relatedGuides:
-  - audit-reseau-air-comprime-protocole-mesures
-  - indicateurs-maintenance-air-comprime
 sources:
   - https://www.iso.org/fr/standard/46418.html
   - https://www.cagi.org/resource-library
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
+relatedGuides: [secheur-air-comprime-atelier-non-chauffe, audit-reseau-air-comprime-protocole-mesures, indicateurs-maintenance-air-comprime]
 ---
 
 Dire qu’un compresseur fournit de l’air propre ne décrit pas une qualité mesurable. Il faut identifier les contaminants concernés, le niveau requis, le lieu où ce niveau doit être atteint et la méthode de vérification.
@@ -103,6 +101,10 @@ Une spécification utile répond à cinq questions :
 5. Selon quelle méthode sera-t-elle vérifiée ?
 
 Si l’une de ces réponses manque, l’expression air propre reste trop vague pour accepter une installation.
+
+## Définir le besoin d’eau en ambiance froide
+
+Pour une conduite exposée à l’hiver, préparez le besoin avec le guide [séchage de l’air en atelier non chauffé](/guides/secheur-air-comprime-atelier-non-chauffe/). Les scénarios de température y sont explicitement distingués des performances garanties d’un sécheur.
 
 ## Sources
 

@@ -2,20 +2,17 @@
 title: "Chute de pression d’air comprimé : construire un profil et trouver la restriction"
 description: "Mesurer la pression du compresseur jusqu’à l’outil pour localiser les pertes dans les filtres, conduites, raccords et flexibles sans augmenter le réglage au hasard."
 pubDate: 2026-07-13
-updatedDate: 2026-07-20
+updatedDate: 2026-09-25
 category: "Installer"
 audiences: [professionnel]
 metiers: [garage-automobile, carrosserie-peinture, menuiserie-agencement, maintenance-industrielle]
 readingTime: 12
 featured: false
 series: audit-suivi-maintenance-air-comprime
-relatedGuides:
-  - audit-reseau-air-comprime-protocole-mesures
-  - indicateurs-maintenance-air-comprime
-  - fiche-intervention-air-comprime
 sources:
   - https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
+relatedGuides: [compresseur-ne-monte-plus-en-pression, audit-reseau-air-comprime-protocole-mesures, indicateurs-maintenance-air-comprime, fiche-intervention-air-comprime]
 ---
 
 Un manomètre à 8 bar sur la cuve ne prouve pas que l’outil reçoit 6,3 bar pendant qu’il consomme de l’air. Entre les deux se trouvent éventuellement un sécheur, des filtres, une conduite, des vannes, un régulateur, des raccords et un flexible. Chacun peut contribuer à la chute de pression.
@@ -114,6 +111,10 @@ Le profil permet de séparer :
 Il peut aussi révéler une demande excessive causée par des [fuites](/guides/detecter-mesurer-fuites-air-comprime/) ou des usages simultanés.
 
 Le diagnostic devient défendable lorsque le schéma, les instruments, les conditions et les valeurs brutes sont conservés. Sans ces éléments, l’écart constaté ne peut pas être reproduit.
+
+## Quand le problème semble venir du compresseur
+
+Si la cuve elle-même paraît ne plus charger, le guide [compresseur qui ne monte plus en pression](/guides/compresseur-ne-monte-plus-en-pression/) sépare production, réglage de sortie et demande excessive. Identifiez le rôle du manomètre avant d’attribuer sa lecture au réservoir.
 
 ## Sources
 

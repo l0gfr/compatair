@@ -3,6 +3,7 @@ title: "Dimensionner un compresseur pour un garage automobile, poste par poste"
 seoTitle: "Compresseur pour garage automobile | CompatAir"
 description: "Méthode sourcée pour relever les besoins des outils d’un garage, traiter leur simultanéité et contrôler le réseau sans consommation métier inventée."
 pubDate: 2026-07-15
+updatedDate: 2026-09-25
 category: "Choisir"
 audiences: [professionnel]
 metiers: [garage-automobile]
@@ -13,6 +14,7 @@ sources:
   - https://tools.cp.com/fr-fr/products/impactwrenches/cp7748-sku8941077481
   - https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940169372.pdf
   - https://www.atlascopco.com/en-uk/compressors/air-compressor-blog/sizing-compressed-air-pipe
+relatedGuides: [consommation-moyenne-en-charge-cle-a-chocs]
 ---
 
 Dans un garage, la demande d’air se construit poste par poste. L’inventaire des références utilisées vient d’abord, suivi de leur [consommation en charge](/glossaire/#consommation-en-charge), des chevauchements réels entre postes et, enfin, de la pression disponible là où chaque outil travaille.
@@ -62,6 +64,10 @@ Pour recalculer la configuration après un changement d’outil ou de poste, con
 - les points FAD du compresseur et les hypothèses réglables.
 
 Ainsi, une nouvelle cadence ou un poste supplémentaire produit un nouveau calcul, sans retoucher la preuve d’origine.
+
+## Documenter le poste roues
+
+Le cas de la CP7732C permet de [distinguer moyenne, charge et marche à vide](/guides/consommation-moyenne-en-charge-cle-a-chocs/) avant de calculer le besoin d’air. La [lecture des couples de clé à chocs](/guides/cle-a-chocs-couple-serrage-roues-dynamometrique/) complète le dossier de poste pour séparer alimentation pneumatique et serrage final.
 
 ## Sources
 

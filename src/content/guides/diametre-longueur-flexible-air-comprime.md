@@ -2,6 +2,7 @@
 title: "Flexible d’air comprimé : choisir le diamètre et la longueur sans perdre la pression"
 description: "Longueur, diamètre intérieur et raccords réduisent la pression disponible. Voici comment éviter qu’un bon compresseur devienne mauvais au bout du flexible."
 pubDate: 2026-07-13
+updatedDate: 2026-09-25
 category: Installer
 audiences: [particulier, professionnel]
 metiers: [btp-chantier]
@@ -12,6 +13,7 @@ sources:
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
   - https://www.einhell.fr/p/4133330-tc-pe-150/
   - https://www.atlascopco.com/en-us/compressors/general/100-psi-air-compressor
+relatedGuides: [raccord-air-comprime-bsp-npt-1-4]
 ---
 
 Un outil peut manquer de force alors que le manomètre du compresseur affiche la bonne pression. Le problème se situe souvent entre les deux : flexible trop long, diamètre intérieur trop faible, raccord rapide restrictif ou filtre sous-dimensionné.
@@ -43,6 +45,10 @@ Un flexible de 10 mm associé à un raccord dont le passage interne est beaucoup
 CompatAir ne chiffre plus une perte de flexible sans données suffisantes. Le calculateur compare le FAD du compresseur et la consommation de l’outil à pression égale, puis signale que le réseau reste à vérifier. Une future estimation exigera au minimum la courbe ou les caractéristiques techniques du flexible et des raccords.
 
 Testez votre installation avec le [calculateur de flexible et de compresseur](/calculateur/).
+
+## Commander les bonnes connexions
+
+Avant de choisir les extrémités du flexible, identifiez le [filetage BSP ou NPT et le profil de raccord rapide](/guides/raccord-air-comprime-bsp-npt-1-4/). La taille nominale 1/4 ne décrit pas à elle seule ces interfaces.
 
 ## Sources
 

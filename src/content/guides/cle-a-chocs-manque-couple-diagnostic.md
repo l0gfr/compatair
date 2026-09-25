@@ -3,6 +3,7 @@ title: "Clé à chocs qui manque de force : diagnostiquer sans accuser le compre
 seoTitle: "Clé à chocs sans force : diagnostic atelier"
 description: "Une méthode d’atelier pour séparer pression dynamique, débit, flexible, raccords et état de la clé lorsqu’un desserrage devient irrégulier."
 pubDate: 2026-07-15
+updatedDate: 2026-09-25
 category: "Utiliser"
 audiences: [professionnel]
 metiers: [garage-automobile, atelier-poids-lourds, maintenance-industrielle]
@@ -11,6 +12,7 @@ relatedCalculatorTool: chicago-pneumatic-cp7748
 sources:
   - https://tools.cp.com/en-ca/products/impactwrenches/cp7748-sku8941077481
   - https://www.atlascopco.com/en-uk/compressors/air-compressor-blog/sizing-compressed-air-pipe
+relatedGuides: [huile-cle-a-chocs-pneumatique-lubrification]
 ---
 
 Une clé à chocs qui « manque de force » ne désigne pas encore une panne. Le symptôme peut venir de l’alimentation, de l’outil, du raccordement ou de l’assemblage à desserrer. Un diagnostic exploitable commence donc par une référence précise et des observations réalisées pendant que la clé consomme de l’air.
@@ -84,6 +86,10 @@ Une fiche courte suffit si elle conserve les preuves utiles :
 - opérations de maintenance réalisées sur l’outil.
 
 Ce dossier transforme « la clé manque de force » en anomalie localisée. Il permet aussi de vérifier une modification sans écraser le relevé initial.
+
+## Compléter le dossier de la clé
+
+Pour vérifier l’entretien, séparez la [lubrification du moteur et du mécanisme de frappe](/guides/huile-cle-a-chocs-pneumatique-lubrification/). Pour les roues, distinguez aussi [couple annoncé et serrage final prescrit](/guides/cle-a-chocs-couple-serrage-roues-dynamometrique/) : une alimentation rétablie ne valide pas l’assemblage.
 
 ## Sources
 
