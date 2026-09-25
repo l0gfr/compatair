@@ -1,0 +1,873 @@
+{
+  "schemaVersion": "1.0.0",
+  "repairs": [
+    {
+      "oldUrl": "https://at.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/basic-250-50-w-601534000-kompressor.html",
+      "newUrl": "https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/2023_Sortimentsuebersicht_AT-screen.pdf#page=95",
+      "verifiedAt": "2026-09-25",
+      "httpStatus": 200,
+      "sourceSha256": "b0b0c98899841132a34135e867ebc4a9426abe9f38b833e043611a3783983c24",
+      "review": "Catalogue officiel Metabo Autriche 2023 : référence exacte, débit effectif à 80 % de la pression maximale, aspiration, cuve et masse. Les caractéristiques complémentaires sont rattachées séparément à la brochure technique 2016.",
+      "references": [
+        {
+          "productId": "metabo-basic-250-50-w",
+          "evidenceId": "metabo-601534000-official",
+          "retrievedAt": "2026-07-14"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nnrb9og2096uv1uqjn9o92jo34/4020655_21023_001_DE_TC_AC_190_6_8_OF.pdf",
+      "newUrl": "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_4hdl8mkd5p79n2v95l65f4th1c?attachment;filename=4020655_21023_001_SPK13.pdf",
+      "verifiedAt": "2026-09-25",
+      "httpStatus": 200,
+      "sourceSha256": "5dfea7e94eb162444cf62170bb69cfba6b67063f09743a067f49af5c60a9febc",
+      "review": "Notice TC-AC 190/6/8 OF, article 4020655, I-Nr 21023 : 55 L/min à 7 bar et 77 L/min à 4 bar.",
+      "references": [
+        {
+          "productId": "einhell-tc-ac-190-6-8-of",
+          "evidenceId": "einhell-4020655-manual",
+          "retrievedAt": "2026-07-15"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://de.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/basic-250-24-w-601533000-kompressor.html",
+      "newUrl": "https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/2023_Sortimentsuebersicht_AT-screen.pdf#page=95",
+      "verifiedAt": "2026-09-25",
+      "httpStatus": 200,
+      "sourceSha256": "b0b0c98899841132a34135e867ebc4a9426abe9f38b833e043611a3783983c24",
+      "review": "Catalogue officiel Metabo Autriche 2023 : référence exacte, débit effectif à 80 % de la pression maximale, aspiration, cuve et masse. Les caractéristiques complémentaires sont rattachées séparément à la brochure technique 2016.",
+      "references": [
+        {
+          "productId": "metabo-basic-250-24-w",
+          "evidenceId": "metabo-601533000-official",
+          "retrievedAt": "2026-07-14"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://de.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/mega-400-50-d-601537000-kompressor.html",
+      "newUrl": "https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/2023_Sortimentsuebersicht_AT-screen.pdf#page=97",
+      "verifiedAt": "2026-09-25",
+      "httpStatus": 200,
+      "sourceSha256": "b0b0c98899841132a34135e867ebc4a9426abe9f38b833e043611a3783983c24",
+      "review": "Catalogue officiel Metabo Autriche 2023 : référence exacte, débit effectif à 80 % de la pression maximale, aspiration, cuve et masse. Les caractéristiques complémentaires sont rattachées séparément à la brochure technique 2016.",
+      "references": [
+        {
+          "productId": "metabo-mega-400-50-d",
+          "evidenceId": "metabo-601537000-official",
+          "retrievedAt": "2026-07-15"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://shop.abacaircompressors.com/en-US/products/4116000868/atf-s-3-24-10-230150-ce",
+      "newUrl": "https://shop.abacaircompressors.com/en-INT/products/4116000868/atf-s-3-24-10-230150-ce",
+      "verifiedAt": "2026-09-25",
+      "httpStatus": 200,
+      "sourceSha256": "546e052af0fb3e329e1a6ece5ef54a09d8a0e107b85fec225afc7b0d5cfe5010",
+      "review": "Même référence fabricant, nouvelle adresse vérifiée par lecture de la fiche.",
+      "references": [
+        {
+          "guide": "compresseur-sans-huile-ou-lubrifie.md"
+        },
+        {
+          "productId": "abac-atf-s-3-24",
+          "evidenceId": "abac-4116000868-official",
+          "retrievedAt": "2026-07-13"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://shop.abacaircompressors.com/en-US/products/4116000871/atf-s-4-100-10-400350-ce",
+      "newUrl": "https://shop.abacaircompressors.com/en-INT/products/4116000871/atf-s-4-100-10-400350-ce",
+      "verifiedAt": "2026-09-25",
+      "httpStatus": 200,
+      "sourceSha256": "2ac063331c61a7745ebe6eb969775e9759e7049d9bed27e8a0f50fbf022e85c7",
+      "review": "Même référence fabricant, nouvelle adresse vérifiée par lecture de la fiche.",
+      "references": [
+        {
+          "guide": "compresseur-triphase-ou-monophase-atelier.md"
+        },
+        {
+          "productId": "abac-atf-s-4-100",
+          "evidenceId": "abac-4116000871-official",
+          "retrievedAt": "2026-07-14"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://shop.abacaircompressors.com/en-US/products/4116000880/atf-s-3-50-10-230150-ce",
+      "newUrl": "https://shop.abacaircompressors.com/en-INT/products/4116000880/atf-s-3-50-10-230150-ce",
+      "verifiedAt": "2026-09-25",
+      "httpStatus": 200,
+      "sourceSha256": "a16ec8057eccb840e3f7b91c0ae8b5d2fe3198e85f5b1466638103a6ae81e74d",
+      "review": "Même référence fabricant, nouvelle adresse vérifiée par lecture de la fiche.",
+      "references": [
+        {
+          "guide": "choisir-volume-cuve-24-50-90-litres.md"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://shop.abacaircompressors.com/nl-NL/products/4116000874/atf-s-3-50-10-230150-ce-uk",
+      "newUrl": "https://shop.abacaircompressors.com/en-INT/products/4116000874/atf-s-3-50-10-230150-ce-uk",
+      "verifiedAt": "2026-09-25",
+      "httpStatus": 200,
+      "sourceSha256": "5b1f4c4618364791f468eb09ad1c4f08f503f5ad4363eb3cc601f25cb5f9bd07",
+      "review": "Même référence fabricant, nouvelle adresse vérifiée par lecture de la fiche.",
+      "references": [
+        {
+          "productId": "abac-atf-s-3-50",
+          "evidenceId": "abac-4116000874-official",
+          "retrievedAt": "2026-07-13"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://shop.schneider-airsystems.com/en-GB/products/1121580510/unm-stb-660-10-10",
+      "newUrl": "https://shop.schneider-airsystems.com/en-DE/products/1121580510/unm-stb-660-10-10",
+      "verifiedAt": "2026-09-25",
+      "httpStatus": 200,
+      "sourceSha256": "a0b0d8b13b94d16b38e5934653b499f55be74c56e02d88cefa9214b596287d98",
+      "review": "Référence 1121580510, champ Lubrication = Oil Lubricated. Cette preuve ne remplace pas le catalogue 2025 pour les autres caractéristiques.",
+      "references": [
+        {
+          "productId": "schneider-unm-stb-1000-10-10-c",
+          "evidenceId": "schneider-unm-stb-lubrication",
+          "retrievedAt": "2026-09-25"
+        },
+        {
+          "productId": "schneider-unm-stb-1000-10-10",
+          "evidenceId": "schneider-unm-stb-lubrication",
+          "retrievedAt": "2026-09-25"
+        },
+        {
+          "productId": "schneider-unm-stb-1000-15-10-c",
+          "evidenceId": "schneider-unm-stb-lubrication",
+          "retrievedAt": "2026-09-25"
+        },
+        {
+          "productId": "schneider-unm-stb-1000-15-10",
+          "evidenceId": "schneider-unm-stb-lubrication",
+          "retrievedAt": "2026-09-25"
+        },
+        {
+          "productId": "schneider-unm-stb-1250-10-10-c",
+          "evidenceId": "schneider-unm-stb-lubrication",
+          "retrievedAt": "2026-09-25"
+        },
+        {
+          "productId": "schneider-unm-stb-1250-10-10",
+          "evidenceId": "schneider-unm-stb-lubrication",
+          "retrievedAt": "2026-09-25"
+        },
+        {
+          "productId": "schneider-unm-stb-580-15-10-xs",
+          "evidenceId": "schneider-unm-stb-lubrication",
+          "retrievedAt": "2026-09-25"
+        },
+        {
+          "productId": "schneider-unm-stb-580-15-10",
+          "evidenceId": "schneider-unm-stb-lubrication",
+          "retrievedAt": "2026-09-25"
+        },
+        {
+          "productId": "schneider-unm-stb-660-10-10-xs",
+          "evidenceId": "schneider-unm-stb-lubrication",
+          "retrievedAt": "2026-09-25"
+        },
+        {
+          "productId": "schneider-unm-stb-660-10-10",
+          "evidenceId": "schneider-unm-stb-lubrication",
+          "retrievedAt": "2026-09-25"
+        },
+        {
+          "productId": "schneider-unm-stb-780-15-10-c",
+          "evidenceId": "schneider-unm-stb-lubrication",
+          "retrievedAt": "2026-09-25"
+        },
+        {
+          "productId": "schneider-unm-stb-780-15-10",
+          "evidenceId": "schneider-unm-stb-lubrication",
+          "retrievedAt": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/france/doc/catalogue_2024_abac_web%201.pdf",
+      "newUrl": "https://www.abacaircompressors.com/en-uk/products/abac-tech/industrial-user/low-pressure-atl",
+      "verifiedAt": "2026-09-25",
+      "httpStatus": 200,
+      "sourceSha256": "31449e5c225ebe07f9d278dedd9bbd7a4d0d792bd92c6d797ce48df5497fe339",
+      "review": "Tableau ATL : référence 4116001437, cuve 270 L, 702 L/min, 5,5 kW et 187 kg. La pression de restitution reste sourcée par le document Schneider séparé.",
+      "references": [
+        {
+          "guide": "comparatif-compresseurs-debit-restitue.md"
+        },
+        {
+          "productId": "abac-atl-7-5-270",
+          "evidenceId": "abac-catalog-2024-atl",
+          "retrievedAt": "2026-07-14"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.boge.com/sites/default/files/382-fr-po-series_6.pdf",
+      "newUrl": "https://granzow.dk/Files/Images/Granzow/Datablade/Brochure/382-EN-PO-Series.pdf",
+      "verifiedAt": "2026-09-25",
+      "httpStatus": 200,
+      "sourceSha256": "63afae41d6264f1c4afa0ea6d76bfb124840ff2b3e87eca318756474304e68f3",
+      "review": "Brochure constructeur BOGE en anglais, copie hébergée par Granzow, tableau p. 7 des douze configurations LR/LTR. La pression PO 1 LTR est recoupée avec la table actuelle BOGE.",
+      "references": [
+        {
+          "productId": "boge-po-1-lr-50",
+          "evidenceId": "boge-po-fr-official-brochure-2026",
+          "retrievedAt": "2026-07-19"
+        },
+        {
+          "productId": "boge-po-1-ltr-160",
+          "evidenceId": "boge-po-fr-official-brochure-2026",
+          "retrievedAt": "2026-07-19"
+        },
+        {
+          "productId": "boge-po-2-lr-50",
+          "evidenceId": "boge-po-fr-official-brochure-2026",
+          "retrievedAt": "2026-07-19"
+        },
+        {
+          "productId": "boge-po-2-ltr-160",
+          "evidenceId": "boge-po-fr-official-brochure-2026",
+          "retrievedAt": "2026-07-19"
+        },
+        {
+          "productId": "boge-po-3-lr-90",
+          "evidenceId": "boge-po-fr-official-brochure-2026",
+          "retrievedAt": "2026-07-19"
+        },
+        {
+          "productId": "boge-po-3-ltr-270",
+          "evidenceId": "boge-po-fr-official-brochure-2026",
+          "retrievedAt": "2026-07-19"
+        },
+        {
+          "productId": "boge-po-4-lr-90",
+          "evidenceId": "boge-po-fr-official-brochure-2026",
+          "retrievedAt": "2026-07-19"
+        },
+        {
+          "productId": "boge-po-4-ltr-270",
+          "evidenceId": "boge-po-fr-official-brochure-2026",
+          "retrievedAt": "2026-07-19"
+        },
+        {
+          "productId": "boge-po-6-lr-160",
+          "evidenceId": "boge-po-fr-official-brochure-2026",
+          "retrievedAt": "2026-07-19"
+        },
+        {
+          "productId": "boge-po-6-ltr-270",
+          "evidenceId": "boge-po-fr-official-brochure-2026",
+          "retrievedAt": "2026-07-19"
+        },
+        {
+          "productId": "boge-po-8-lr-160",
+          "evidenceId": "boge-po-fr-official-brochure-2026",
+          "retrievedAt": "2026-07-19"
+        },
+        {
+          "productId": "boge-po-8-ltr-270",
+          "evidenceId": "boge-po-fr-official-brochure-2026",
+          "retrievedAt": "2026-07-19"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air_sourcebook.pdf",
+      "newUrl": "https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf",
+      "verifiedAt": "2026-09-25",
+      "httpStatus": 200,
+      "sourceSha256": "deeaf015ddfa026330f3ff9af877395c0b92e095851ed2c585afaf2d36b77e19",
+      "review": "Publication institutionnelle du DOE : Improving Compressed Air System Performance, sections maintenance et approche système.",
+      "references": [
+        {
+          "guide": "atelier-poids-lourds-plusieurs-baies-simultaneite.md"
+        },
+        {
+          "guide": "maintenance-preventive-reseau-air-comprime.md"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.metabo.com/com/en/products/tools/compressed-air/compressors/mobile-workshop-compressors/basic-250-24-w-of-compressor/601532000",
+      "newUrl": "https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/2023_Sortimentsuebersicht_AT-screen.pdf#page=95",
+      "verifiedAt": "2026-09-25",
+      "httpStatus": 200,
+      "sourceSha256": "b0b0c98899841132a34135e867ebc4a9426abe9f38b833e043611a3783983c24",
+      "review": "Catalogue officiel Metabo Autriche 2023 : référence exacte, débit effectif à 80 % de la pression maximale, aspiration, cuve et masse. Les caractéristiques complémentaires sont rattachées séparément à la brochure technique 2016.",
+      "references": [
+        {
+          "productId": "metabo-basic-250-24-w-of",
+          "evidenceId": "metabo-601532000-official",
+          "retrievedAt": "2026-07-15"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.metabo.com/com/en/products/tools/compressed-air/compressors/mobile-workshop-compressors/basic-250-50-w-of-compressor/601535000",
+      "newUrl": "https://www.metabo.com/nl/nl/machines/perslucht/compressoren/mobiele-compressoren-voor-de-bouw/basic-250-50-w-of-compressor/601535000",
+      "verifiedAt": "2026-09-25",
+      "httpStatus": 200,
+      "sourceSha256": "33a22cad74fa5f1df4be01cb4a0c2338c9d9def628fedfa2bfe21ee9ec5dcd6d",
+      "review": "Même référence fabricant, nouvelle adresse vérifiée par lecture de la fiche.",
+      "references": [
+        {
+          "productId": "metabo-basic-250-50-w-of",
+          "evidenceId": "metabo-601535000-official",
+          "retrievedAt": "2026-07-15"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.metabo.com/com/en/products/tools/compressed-air/compressors/mobile-workshop-compressors/basic-280-50-w-of-compressor/601529000",
+      "newUrl": "https://www.metabo.com/sk/sk/stroje/stlaceny-vzduch/kompresory/mobilne-kompresory/basic-280-50-w-of-601529000-kompresor.html",
+      "verifiedAt": "2026-09-25",
+      "httpStatus": 200,
+      "sourceSha256": "4b94713e37f27d9d40f5dea6d0702cde6bca6001396e8e380184c10ab9f2ac88",
+      "review": "Même référence fabricant, nouvelle adresse vérifiée par lecture de la fiche.",
+      "references": [
+        {
+          "productId": "metabo-basic-280-50-w-of",
+          "evidenceId": "metabo-601529000-official",
+          "retrievedAt": "2026-07-15"
+        }
+      ]
+    }
+  ],
+  "preservedTechnicalValues": [
+    {
+      "id": "abac-atf-s-3-24",
+      "mpn": "4116000868",
+      "tankLiters": 24,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 10,
+          "litersPerMinute": 150
+        }
+      ],
+      "dutyCycle": 1,
+      "oilType": "oil-free"
+    },
+    {
+      "id": "abac-atf-s-3-50",
+      "mpn": "4116000874",
+      "tankLiters": 50,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 10,
+          "litersPerMinute": 150
+        }
+      ],
+      "dutyCycle": 1,
+      "oilType": "oil-free"
+    },
+    {
+      "id": "abac-atf-s-4-100",
+      "mpn": "4116000871",
+      "tankLiters": 90,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 10,
+          "litersPerMinute": 170
+        }
+      ],
+      "intakeFlowLpm": 480,
+      "dutyCycle": 1,
+      "oilType": "oil-free",
+      "powerKw": 3.2,
+      "phase": "three-phase"
+    },
+    {
+      "id": "abac-atl-7-5-270",
+      "mpn": "4116001437",
+      "tankLiters": 270,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 7,
+          "litersPerMinute": 702
+        }
+      ],
+      "intakeFlowLpm": 1146,
+      "dutyCycle": 1,
+      "oilType": "oil",
+      "powerKw": 5.5,
+      "phase": "three-phase"
+    },
+    {
+      "id": "boge-po-1-lr-50",
+      "tankLiters": 50,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 8,
+          "litersPerMinute": 70
+        }
+      ],
+      "oilType": "oil-free",
+      "powerKw": 0.75
+    },
+    {
+      "id": "boge-po-1-ltr-160",
+      "tankLiters": 160,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 8,
+          "litersPerMinute": 140
+        }
+      ],
+      "oilType": "oil-free",
+      "powerKw": 1.5
+    },
+    {
+      "id": "boge-po-2-lr-50",
+      "tankLiters": 50,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 8,
+          "litersPerMinute": 150
+        }
+      ],
+      "oilType": "oil-free",
+      "powerKw": 1.5
+    },
+    {
+      "id": "boge-po-2-ltr-160",
+      "tankLiters": 160,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 8,
+          "litersPerMinute": 300
+        }
+      ],
+      "oilType": "oil-free",
+      "powerKw": 3
+    },
+    {
+      "id": "boge-po-3-lr-90",
+      "tankLiters": 90,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 8,
+          "litersPerMinute": 246
+        }
+      ],
+      "oilType": "oil-free",
+      "powerKw": 2.2
+    },
+    {
+      "id": "boge-po-3-ltr-270",
+      "tankLiters": 270,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 8,
+          "litersPerMinute": 492
+        }
+      ],
+      "oilType": "oil-free",
+      "powerKw": 4.4
+    },
+    {
+      "id": "boge-po-4-lr-90",
+      "tankLiters": 90,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 8,
+          "litersPerMinute": 362
+        }
+      ],
+      "oilType": "oil-free",
+      "powerKw": 3
+    },
+    {
+      "id": "boge-po-4-ltr-270",
+      "tankLiters": 270,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 8,
+          "litersPerMinute": 724
+        }
+      ],
+      "oilType": "oil-free",
+      "powerKw": 6
+    },
+    {
+      "id": "boge-po-6-lr-160",
+      "tankLiters": 160,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 8,
+          "litersPerMinute": 512
+        }
+      ],
+      "oilType": "oil-free",
+      "powerKw": 4
+    },
+    {
+      "id": "boge-po-6-ltr-270",
+      "tankLiters": 270,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 8,
+          "litersPerMinute": 1024
+        }
+      ],
+      "oilType": "oil-free",
+      "powerKw": 8
+    },
+    {
+      "id": "boge-po-8-lr-160",
+      "tankLiters": 160,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 8,
+          "litersPerMinute": 668
+        }
+      ],
+      "oilType": "oil-free",
+      "powerKw": 5.5
+    },
+    {
+      "id": "boge-po-8-ltr-270",
+      "tankLiters": 270,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 8,
+          "litersPerMinute": 1336
+        }
+      ],
+      "oilType": "oil-free",
+      "powerKw": 11
+    },
+    {
+      "id": "einhell-tc-ac-190-6-8-of",
+      "mpn": "4020655",
+      "tankLiters": 6,
+      "maxPressureBar": 8,
+      "fadCurve": [
+        {
+          "pressureBar": 0,
+          "litersPerMinute": 130
+        },
+        {
+          "pressureBar": 4,
+          "litersPerMinute": 77
+        },
+        {
+          "pressureBar": 7,
+          "litersPerMinute": 55
+        }
+      ],
+      "intakeFlowLpm": 190,
+      "oilType": "oil-free",
+      "powerKw": 1.2,
+      "phase": "single-phase"
+    },
+    {
+      "id": "metabo-basic-250-24-w",
+      "mpn": "601533000",
+      "tankLiters": 24,
+      "maxPressureBar": 8,
+      "fadCurve": [
+        {
+          "pressureBar": 6.4,
+          "litersPerMinute": 95
+        }
+      ],
+      "intakeFlowLpm": 200,
+      "oilType": "oil",
+      "powerKw": 1.5,
+      "phase": "single-phase"
+    },
+    {
+      "id": "metabo-basic-250-24-w-of",
+      "mpn": "601532000",
+      "tankLiters": 24,
+      "maxPressureBar": 8,
+      "fadCurve": [
+        {
+          "pressureBar": 6.4,
+          "litersPerMinute": 100
+        }
+      ],
+      "intakeFlowLpm": 220,
+      "oilType": "oil-free",
+      "powerKw": 1.5,
+      "phase": "single-phase"
+    },
+    {
+      "id": "metabo-basic-250-50-w",
+      "mpn": "601534000",
+      "tankLiters": 50,
+      "maxPressureBar": 8,
+      "fadCurve": [
+        {
+          "pressureBar": 6.4,
+          "litersPerMinute": 95
+        }
+      ],
+      "intakeFlowLpm": 200,
+      "oilType": "oil",
+      "powerKw": 1.5,
+      "phase": "single-phase"
+    },
+    {
+      "id": "metabo-basic-250-50-w-of",
+      "mpn": "601535000",
+      "tankLiters": 50,
+      "maxPressureBar": 8,
+      "fadCurve": [
+        {
+          "pressureBar": 6.4,
+          "litersPerMinute": 100
+        }
+      ],
+      "intakeFlowLpm": 220,
+      "oilType": "oil-free",
+      "powerKw": 1.5,
+      "phase": "single-phase"
+    },
+    {
+      "id": "metabo-basic-280-50-w-of",
+      "mpn": "601529000",
+      "tankLiters": 50,
+      "maxPressureBar": 8,
+      "fadCurve": [
+        {
+          "pressureBar": 6.4,
+          "litersPerMinute": 130
+        }
+      ],
+      "intakeFlowLpm": 280,
+      "oilType": "oil-free",
+      "powerKw": 1.7,
+      "phase": "single-phase"
+    },
+    {
+      "id": "metabo-mega-400-50-d",
+      "mpn": "601537000",
+      "tankLiters": 50,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 8,
+          "litersPerMinute": 260
+        }
+      ],
+      "intakeFlowLpm": 400,
+      "oilType": "oil",
+      "powerKw": 2.2,
+      "phase": "three-phase"
+    },
+    {
+      "id": "schneider-unm-stb-1000-10-10",
+      "mpn": "1122030303",
+      "tankLiters": 10,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 9,
+          "litersPerMinute": 785
+        }
+      ],
+      "intakeFlowLpm": 1070,
+      "oilType": "oil",
+      "powerKw": 5.5
+    },
+    {
+      "id": "schneider-unm-stb-1000-10-10-c",
+      "mpn": "1122030304",
+      "tankLiters": 10,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 9,
+          "litersPerMinute": 785
+        }
+      ],
+      "intakeFlowLpm": 1070,
+      "oilType": "oil",
+      "powerKw": 5.5
+    },
+    {
+      "id": "schneider-unm-stb-1000-15-10",
+      "mpn": "1122030305",
+      "tankLiters": 10,
+      "maxPressureBar": 15,
+      "fadCurve": [
+        {
+          "pressureBar": 14,
+          "litersPerMinute": 790
+        }
+      ],
+      "intakeFlowLpm": 1000,
+      "oilType": "oil",
+      "powerKw": 7.5
+    },
+    {
+      "id": "schneider-unm-stb-1000-15-10-c",
+      "mpn": "1122030306",
+      "tankLiters": 10,
+      "maxPressureBar": 15,
+      "fadCurve": [
+        {
+          "pressureBar": 14,
+          "litersPerMinute": 790
+        }
+      ],
+      "intakeFlowLpm": 1000,
+      "oilType": "oil",
+      "powerKw": 7.5
+    },
+    {
+      "id": "schneider-unm-stb-1250-10-10",
+      "mpn": "1122030307",
+      "tankLiters": 10,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 9,
+          "litersPerMinute": 980
+        }
+      ],
+      "intakeFlowLpm": 1250,
+      "oilType": "oil",
+      "powerKw": 7.5
+    },
+    {
+      "id": "schneider-unm-stb-1250-10-10-c",
+      "mpn": "1122030308",
+      "tankLiters": 10,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 9,
+          "litersPerMinute": 980
+        }
+      ],
+      "intakeFlowLpm": 1250,
+      "oilType": "oil",
+      "powerKw": 7.5
+    },
+    {
+      "id": "schneider-unm-stb-580-15-10",
+      "mpn": "1121580509",
+      "tankLiters": 10,
+      "maxPressureBar": 15,
+      "fadCurve": [
+        {
+          "pressureBar": 14,
+          "litersPerMinute": 470
+        }
+      ],
+      "intakeFlowLpm": 580,
+      "oilType": "oil",
+      "powerKw": 4
+    },
+    {
+      "id": "schneider-unm-stb-580-15-10-xs",
+      "mpn": "1122030302",
+      "tankLiters": 10,
+      "maxPressureBar": 15,
+      "fadCurve": [
+        {
+          "pressureBar": 14,
+          "litersPerMinute": 470
+        }
+      ],
+      "intakeFlowLpm": 580,
+      "oilType": "oil",
+      "powerKw": 4
+    },
+    {
+      "id": "schneider-unm-stb-660-10-10",
+      "mpn": "1121580510",
+      "tankLiters": 10,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 9,
+          "litersPerMinute": 520
+        }
+      ],
+      "intakeFlowLpm": 660,
+      "oilType": "oil",
+      "powerKw": 4
+    },
+    {
+      "id": "schneider-unm-stb-660-10-10-xs",
+      "mpn": "1122030301",
+      "tankLiters": 10,
+      "maxPressureBar": 10,
+      "fadCurve": [
+        {
+          "pressureBar": 9,
+          "litersPerMinute": 520
+        }
+      ],
+      "intakeFlowLpm": 660,
+      "oilType": "oil",
+      "powerKw": 4
+    },
+    {
+      "id": "schneider-unm-stb-780-15-10",
+      "mpn": "1122030309",
+      "tankLiters": 10,
+      "maxPressureBar": 15,
+      "fadCurve": [
+        {
+          "pressureBar": 14,
+          "litersPerMinute": 570
+        }
+      ],
+      "intakeFlowLpm": 830,
+      "oilType": "oil",
+      "powerKw": 5.5
+    },
+    {
+      "id": "schneider-unm-stb-780-15-10-c",
+      "mpn": "1122030310",
+      "tankLiters": 10,
+      "maxPressureBar": 15,
+      "fadCurve": [
+        {
+          "pressureBar": 14,
+          "litersPerMinute": 570
+        }
+      ],
+      "intakeFlowLpm": 830,
+      "oilType": "oil",
+      "powerKw": 5.5
+    }
+  ],
+  "metadataCorrections": [
+    "Metabo Basic 250-24 W et Basic 250-50 W : niveau sonore non retenu, car les éditions divergent.",
+    "EAN des Metabo 601533000, 601534000 et 601537000 retirés faute de confirmation dans les documents de remplacement.",
+    "Metabo 601535000 : LpA actualisé de 84 à 82 dB(A), conformément à la fiche fabricant consultée."
+  ]
+}

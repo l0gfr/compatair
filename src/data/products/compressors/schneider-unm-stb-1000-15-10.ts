@@ -82,7 +82,7 @@ const product = {
 		},
 		{
 			"id": "schneider-unm-stb-lubrication",
-			"sourceUrl": "https://shop.schneider-airsystems.com/en-GB/products/1121580510/unm-stb-660-10-10",
+			"sourceUrl": "https://shop.schneider-airsystems.com/en-DE/products/1121580510/unm-stb-660-10-10",
 			"sourceLabel": "Schneider, gamme UNM STB, lubrification à huile",
 			"sourceType": "manufacturer",
 			"retrievedAt": "2026-09-25",

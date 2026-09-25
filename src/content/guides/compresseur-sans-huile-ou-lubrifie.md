@@ -11,7 +11,7 @@ sources:
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
   - https://www.einhell.fr/p/4010800-te-ac-430-90-10/
-  - https://shop.abacaircompressors.com/en-US/products/4116000868/atf-s-3-24-10-230150-ce
+  - https://shop.abacaircompressors.com/en-INT/products/4116000868/atf-s-3-24-10-230150-ce
 ---
 
 « Sans huile » et « lubrifié » décrivent la manière dont le groupe de compression est conçu. Ces mentions ne donnent directement ni le débit restitué, ni le niveau sonore, ni la durée d’utilisation possible avec un outil.
@@ -34,7 +34,7 @@ Cette distinction ne signifie pas qu’un modèle sans huile ne possède aucune 
 
 L’[Einhell TC-AC 240/50/10 OF](https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of) est sans huile. Sa fiche publie 240 L/min aspirés, mais 107 L/min à 4 bar et 76 L/min à 7 bar. La mention « OF » ne dispense donc pas de lire la courbe de débit.
 
-L’[ABAC ATF-S 3 24](https://shop.abacaircompressors.com/en-US/products/4116000868/atf-s-3-24-10-230150-ce) est également sans huile. ABAC publie 150 L/min de FAD à 10 bar et un cycle de 100 %. Deux compresseurs sans huile peuvent donc avoir des caractéristiques très différentes.
+L’[ABAC ATF-S 3 24](https://shop.abacaircompressors.com/en-INT/products/4116000868/atf-s-3-24-10-230150-ce) est également sans huile. ABAC publie 150 L/min de FAD à 10 bar et un cycle de 100 %. Deux compresseurs sans huile peuvent donc avoir des caractéristiques très différentes.
 
 ## Exemple lubrifié
 
@@ -56,4 +56,4 @@ Une recommandation qui se limite à « prenez sans huile » ou « prenez lubrifi
 - [Atlas Copco, Compressed Air Manual, 9e édition](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf)
 - [Einhell, TC-AC 240/50/10 OF](https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of)
 - [Einhell, TE-AC 430/90/10](https://www.einhell.fr/p/4010800-te-ac-430-90-10/)
-- [ABAC, ATF-S 3 24](https://shop.abacaircompressors.com/en-US/products/4116000868/atf-s-3-24-10-230150-ce)
+- [ABAC, ATF-S 3 24](https://shop.abacaircompressors.com/en-INT/products/4116000868/atf-s-3-24-10-230150-ce)

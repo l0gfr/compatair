@@ -11,7 +11,7 @@ featured: false
 sources:
   - https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html
   - https://at.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/mega-400-50-w-601536000-kompressor.html
-  - https://shop.abacaircompressors.com/en-US/products/4116000871/atf-s-4-100-10-400350-ce
+  - https://shop.abacaircompressors.com/en-INT/products/4116000871/atf-s-4-100-10-400350-ce
   - https://shop.abacaircompressors.com/en-GB/products/4116001436/atl-55-270-10-400350-ce
   - https://shop.abacaircompressors.com/en-FR/products/4116001463/atf-55-270d-10-400350yd-ce
   - https://www.enedis.fr/faq/compteur-electrique/comment-choisir-un-sous-compteur-electrique
@@ -93,7 +93,7 @@ Consultez la [fiche du Mega 580-200 D](/compresseurs/metabo-mega-580-200-d/), la
 
 - [Metabo, Mega 580-200 D triphasé](https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html)
 - [Metabo, Mega 400-50 W monophasé](https://at.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/mega-400-50-w-601536000-kompressor.html)
-- [ABAC, ATF-S 4 100 triphasé](https://shop.abacaircompressors.com/en-US/products/4116000871/atf-s-4-100-10-400350-ce)
+- [ABAC, ATF-S 4 100 triphasé](https://shop.abacaircompressors.com/en-INT/products/4116000871/atf-s-4-100-10-400350-ce)
 - [ABAC, ATL 5.5 270 triphasé](https://shop.abacaircompressors.com/en-GB/products/4116001436/atl-55-270-10-400350-ce)
 - [ABAC, ATF 5.5 270D triphasé](https://shop.abacaircompressors.com/en-FR/products/4116001463/atf-55-270d-10-400350yd-ce)
 - [Enedis, choix d’un sous-compteur monophasé ou triphasé](https://www.enedis.fr/faq/compteur-electrique/comment-choisir-un-sous-compteur-electrique)

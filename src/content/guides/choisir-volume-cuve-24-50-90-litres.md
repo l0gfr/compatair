@@ -10,7 +10,7 @@ featured: true
 sources:
   - https://www.atlascopco.com/en-us/compressors/wiki/compressed-air-articles/what-is-an-air-receiver
   - https://www.atlascopco.com/fr-fr/compressors/wiki/compressed-air-articles/displacement-compressors-regulation
-  - https://shop.abacaircompressors.com/en-US/products/4116000880/atf-s-3-50-10-230150-ce
+  - https://shop.abacaircompressors.com/en-INT/products/4116000880/atf-s-3-50-10-230150-ce
   - https://www.einhell.fr/p/4010800-te-ac-430-90-10/
 ---
 
@@ -30,7 +30,7 @@ Une étiquette « 24 L » ou « 50 L » ne permet pas, seule, de conclure qu’u
 
 ## Exemple : même FAD, deux volumes
 
-Le catalogue officiel [ABAC Tech ATF-S](https://shop.abacaircompressors.com/en-US/products/4116000880/atf-s-3-50-10-230150-ce) liste des variantes de 24 et 50 litres annoncées toutes deux à 150 L/min de FAD à la pression maximale. Le volume change, le FAD publié ne change pas. Cet exemple suffit à invalider l’idée qu’une cuve plus grande implique automatiquement davantage de débit.
+Le catalogue officiel [ABAC Tech ATF-S](https://shop.abacaircompressors.com/en-INT/products/4116000880/atf-s-3-50-10-230150-ce) liste des variantes de 24 et 50 litres annoncées toutes deux à 150 L/min de FAD à la pression maximale. Le volume change, le FAD publié ne change pas. Cet exemple suffit à invalider l’idée qu’une cuve plus grande implique automatiquement davantage de débit.
 
 ## 90 litres : tampon, pas permis de surconsommer
 
@@ -50,5 +50,5 @@ Consultez les [compresseurs documentés](/compresseurs/) ou simulez votre outil 
 
 - [Atlas Copco, rôle et dimensionnement d’un réservoir d’air](https://www.atlascopco.com/en-us/compressors/wiki/compressed-air-articles/what-is-an-air-receiver)
 - [Atlas Copco, régulation des compresseurs volumétriques](https://www.atlascopco.com/fr-fr/compressors/wiki/compressed-air-articles/displacement-compressors-regulation)
-- [ABAC, variantes ATF-S 24 et 50 litres](https://shop.abacaircompressors.com/en-US/products/4116000880/atf-s-3-50-10-230150-ce)
+- [ABAC, variantes ATF-S 24 et 50 litres](https://shop.abacaircompressors.com/en-INT/products/4116000880/atf-s-3-50-10-230150-ce)
 - [Einhell, TE-AC 430/90/10](https://www.einhell.fr/p/4010800-te-ac-430-90-10/)

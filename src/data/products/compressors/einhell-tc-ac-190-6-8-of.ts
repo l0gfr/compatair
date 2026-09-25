@@ -39,7 +39,7 @@ const product = {
 	],
 	evidence: [
 		{ id: pageEvidenceId, sourceUrl: 'https://www.einhell.de/p/4020655-tc-ac-190-6-8-of/', sourceLabel: 'Einhell Allemagne, fiche officielle TC-AC 190/6/8 OF', sourceType: 'manufacturer', retrievedAt: '2026-07-15', confidence: 'A', notes: 'Référence fabricant, caractéristiques produit, débits aspiré et restitué.' },
-		{ id: manualEvidenceId, sourceUrl: 'https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nnrb9og2096uv1uqjn9o92jo34/4020655_21023_001_DE_TC_AC_190_6_8_OF.pdf', sourceLabel: 'Einhell, documentation officielle TC-AC 190/6/8 OF', sourceType: 'manual', retrievedAt: '2026-07-15', confidence: 'A' },
+		{ id: manualEvidenceId, sourceUrl: 'https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_4hdl8mkd5p79n2v95l65f4th1c?attachment;filename=4020655_21023_001_SPK13.pdf', sourceLabel: 'Einhell, documentation officielle TC-AC 190/6/8 OF', sourceType: 'manual', retrievedAt: '2026-09-25', confidence: 'A' },
 	],
 	fieldSources: { mpn: [pageEvidenceId], tankLiters: [pageEvidenceId, manualEvidenceId], maxPressureBar: [pageEvidenceId, manualEvidenceId], fadCurve: [pageEvidenceId, manualEvidenceId], intakeFlowLpm: [pageEvidenceId, manualEvidenceId], oilType: [pageEvidenceId, manualEvidenceId], noiseDb: [pageEvidenceId, manualEvidenceId], powerKw: [pageEvidenceId, manualEvidenceId], weightKg: [pageEvidenceId], mobility: [pageEvidenceId], voltage: [pageEvidenceId, manualEvidenceId], phase: [pageEvidenceId, manualEvidenceId], status: [pageEvidenceId] },
 	notes: ['Le débit aspiré de 190 L/min n’est jamais utilisé comme débit restitué.'],

@@ -13,7 +13,7 @@ sources:
   - https://tools.cp.com/tr-tr/products/impactwrenches/cp5000-skuT024585
   - https://tools.cp.com/en-us/products/impactwrenches/cp7776-sku8941077760
   - https://www.energy.gov/cmei/ito/compressed-air-systems
-  - https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air_sourcebook.pdf
+  - https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf
   - https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6282/ed6282.pdf
 ---
 
@@ -87,7 +87,7 @@ La production doit couvrir le débit durable attendu. Le stockage amortit certai
 
 Une grande cuve ne compense pas durablement un manque de FAD. Un compresseur suffisamment dimensionné ne corrige pas un coupleur restrictif. Un réseau généreux ne résout pas une stratégie de commande incohérente entre plusieurs machines.
 
-Le programme du département américain de l’Énergie sur les [systèmes d’air comprimé](https://www.energy.gov/cmei/ito/compressed-air-systems) encourage une lecture système intégrant demande, fuites, stockage, commande et maintenance. Son [sourcebook](https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air_sourcebook.pdf) fournit une méthode générale. Utilisez ces documents pour structurer l’audit, puis revenez aux données des équipements exacts.
+Le programme du département américain de l’Énergie sur les [systèmes d’air comprimé](https://www.energy.gov/cmei/ito/compressed-air-systems) encourage une lecture système intégrant demande, fuites, stockage, commande et maintenance. Son [sourcebook](https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf) fournit une méthode générale. Utilisez ces documents pour structurer l’audit, puis revenez aux données des équipements exacts.
 
 ## Ajouter les fuites mesurées
 

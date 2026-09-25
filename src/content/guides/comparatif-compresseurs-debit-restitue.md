@@ -13,7 +13,7 @@ sources:
   - https://www.metabo.com/t3/fileadmin/metabo/com_en/070_news/03_catalogue_logos/201605_Druckluftkompetenz_en.pdf
   - https://www.einhell.de/p/4007361-tc-ac-270-50-10/
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/australia/documents/AB-series-brochure.pdf
-  - https://www.abacaircompressors.com/content/dam/brands/ABAC/france/doc/catalogue_2024_abac_web%201.pdf
+  - https://www.abacaircompressors.com/en-uk/products/abac-tech/industrial-user/low-pressure-atl
 ---
 
 Un comparatif de compresseurs peut reprendre des chiffres exacts et produire malgré tout une conclusion fausse. Le problème apparaît lorsqu’il classe les modèles par débit aspiré, mélange des débits publiés à des pressions différentes ou suppose qu’une grande cuve corrige un déficit permanent de débit.
@@ -74,4 +74,4 @@ Cette mise à jour automatique évite qu’un nouvel outil ou un nouveau compres
 - [Metabo, documentation technique des outils et compresseurs pneumatiques](https://www.metabo.com/t3/fileadmin/metabo/com_en/070_news/03_catalogue_logos/201605_Druckluftkompetenz_en.pdf)
 - [Einhell, fiche officielle TC-AC 270/50/10](https://www.einhell.de/p/4007361-tc-ac-270-50-10/)
 - [Atlas Copco, brochure officielle AB Series](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/australia/documents/AB-series-brochure.pdf)
-- [ABAC France, catalogue officiel](https://www.abacaircompressors.com/content/dam/brands/ABAC/france/doc/catalogue_2024_abac_web%201.pdf)
+- [ABAC, tableau officiel de la gamme ATL](https://www.abacaircompressors.com/en-uk/products/abac-tech/industrial-user/low-pressure-atl)

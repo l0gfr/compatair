@@ -1,6 +1,6 @@
 const brochureEvidenceId = 'boge-po-fr-official-brochure-2026';
 const currentRangeEvidenceId = 'boge-po-current-range-2026';
-const brochureUrl = 'https://www.boge.com/sites/default/files/382-fr-po-series_6.pdf';
+const brochureUrl = 'https://granzow.dk/Files/Images/Granzow/Datablade/Brochure/382-EN-PO-Series.pdf';
 const currentRangeUrl = 'https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/';
 
 type BogePoReceiverMountedData = {
@@ -56,6 +56,8 @@ export function bogePoReceiverMounted(data: BogePoReceiverMountedData) {
 				'Un seul point de débit effectif est publié : aucune courbe complète ne peut être reconstruite au-delà de la borne documentée à 8 bar.',
 				'Le visuel officiel illustre la gamme PO et peut différer dans certains détails de cette configuration sur réservoir.',
 				'La tension, la phase, le sécheur et les options doivent être confirmés sur la configuration commandée.',
+				'Les dimensions et masses décrivent la configuration de la brochure historique ; la gamme actuelle propose aussi d’autres réservoirs.',
+				...(data.id === 'boge-po-1-ltr-160' ? ['La brochure affiche 15 bar et 145 psig pour le PO 1 LTR, une incohérence. La table actuelle BOGE confirme 10 bar ; cette pression est retenue.'] : []),
 			],
 		},
 		specifications: [
@@ -71,9 +73,9 @@ export function bogePoReceiverMounted(data: BogePoReceiverMountedData) {
 			{
 				id: brochureEvidenceId,
 				sourceUrl: brochureUrl,
-				sourceLabel: 'BOGE, brochure officielle française série PO, tableaux des variantes LR et LTR',
+				sourceLabel: 'BOGE, brochure série PO en anglais, p. 7, copie hébergée par Granzow',
 				sourceType: 'manufacturer',
-				retrievedAt: '2026-07-19',
+				retrievedAt: '2026-09-25',
 				confidence: 'A',
 				notes: 'Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale.',
 			},
@@ -82,15 +84,15 @@ export function bogePoReceiverMounted(data: BogePoReceiverMountedData) {
 				sourceUrl: currentRangeUrl,
 				sourceLabel: 'BOGE France, gamme actuelle de compresseurs à pistons sans huile PO',
 				sourceType: 'manufacturer',
-				retrievedAt: '2026-07-19',
+				retrievedAt: '2026-09-25',
 				confidence: 'A',
-				notes: 'La page actuelle présente 36 variantes, dont les configurations sur réservoir et doubles, avec une plage publiée jusqu’à 1 336 L/min.',
+				notes: 'Table technique actuelle recoupée : 36 variantes, configurations LR et LTR, débit à 50 Hz et pression maximale 10 bar pour les variantes retenues. Les dimensions et masses historiques restent rattachées à la brochure.',
 			},
 		],
 		fieldSources: {
 			tankLiters: [brochureEvidenceId],
 			maxPressureBar: [brochureEvidenceId, currentRangeEvidenceId],
-			fadCurve: [brochureEvidenceId],
+			fadCurve: [brochureEvidenceId, currentRangeEvidenceId],
 			oilType: [brochureEvidenceId, currentRangeEvidenceId],
 			powerKw: [brochureEvidenceId],
 			weightKg: [brochureEvidenceId],

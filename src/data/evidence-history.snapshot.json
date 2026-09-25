@@ -17433,7 +17433,974 @@
         "confidence": "A",
         "notes": "Colonne AIR CONS. @LOAD : 12 L/s × 60 = 720 L/min. Note de tableau : 90 PSI (6,3 bar). Valeurs brutes et empreinte PDF versionnées."
       }
+    },
+    {
+      "id": "corrected:abac-atf-s-3-24:abac-4116000868-official:2026-09-25",
+      "evidenceId": "abac-4116000868-official",
+      "productId": "abac-atf-s-3-24",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "d2148b31658760343a61300f3dd5dfcc68884f5d5bc9bec2aa03f72f50e59759",
+      "snapshot": {
+        "id": "abac-4116000868-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/4116000868/atf-s-3-24-10-230150-ce",
+        "sourceLabel": "ABAC, catalogue produit officiel",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "FAD annoncé à la pression maximale pour la variante 24 L."
+      }
+    },
+    {
+      "id": "corrected:abac-atf-s-3-50:abac-4116000874-official:2026-09-25",
+      "evidenceId": "abac-4116000874-official",
+      "productId": "abac-atf-s-3-50",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "a5bed06ba25e6b278b785a234a51c6dcf98dd28af006ea83afda3414e3cec8c6",
+      "snapshot": {
+        "id": "abac-4116000874-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/4116000874/atf-s-3-50-10-230150-ce-uk",
+        "sourceLabel": "ABAC, catalogue produit officiel",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "FAD annoncé à la pression maximale."
+      }
+    },
+    {
+      "id": "corrected:abac-atf-s-4-100:abac-4116000871-official:2026-09-25",
+      "evidenceId": "abac-4116000871-official",
+      "productId": "abac-atf-s-4-100",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "5ef467c90c80a8e3930bcd4a40923d8de018f0e53a1691a29bb8df46ba8c5aed",
+      "snapshot": {
+        "id": "abac-4116000871-official",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/4116000871/atf-s-4-100-10-400350-ce",
+        "sourceLabel": "ABAC, fiche produit officielle ATF-S 4 100",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "FAD publié à 10 bar. La table technique indique 90 L tandis que le résumé de page indique 100 L."
+      }
+    },
+    {
+      "id": "corrected:abac-atl-7-5-270:abac-catalog-2024-atl:2026-09-25",
+      "evidenceId": "abac-catalog-2024-atl",
+      "productId": "abac-atl-7-5-270",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "0d9c6564135da66b41d0f5868b4a6d0bdeb1c5fcac87afbfdd91d7dbb2cea2e8",
+      "snapshot": {
+        "id": "abac-catalog-2024-atl",
+        "sourceUrl": "https://www.abacaircompressors.com/en-uk/products/abac-tech/industrial-user/low-pressure-atl",
+        "sourceLabel": "ABAC, tableau officiel de la gamme ATL, référence 4116001437",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "corrected:boge-po-1-lr-50:boge-po-current-range-2026:2026-09-25",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-1-lr-50",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "af23a3bcfc77defd0b344088c58e67443875021f3e7b5c6e049cd212507a3cef",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Table technique actuelle recoupée : 36 variantes, configurations LR et LTR, débit à 50 Hz et pression maximale 10 bar pour les variantes retenues. Les dimensions et masses historiques restent rattachées à la brochure."
+      }
+    },
+    {
+      "id": "corrected:boge-po-1-lr-50:boge-po-fr-official-brochure-2026:2026-09-25",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-1-lr-50",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "49720ac4dd788115965db637bd9f28705a958b85037a8a1da23ebf494aabd7b8",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://granzow.dk/Files/Images/Granzow/Datablade/Brochure/382-EN-PO-Series.pdf",
+        "sourceLabel": "BOGE, brochure série PO en anglais, p. 7, copie hébergée par Granzow",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "corrected:boge-po-1-ltr-160:boge-po-current-range-2026:2026-09-25",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-1-ltr-160",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "4501a3ae0bcc971a9a2d9bf9595dba20735103e1b12b618a7eb761126b8e95f5",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Table technique actuelle recoupée : 36 variantes, configurations LR et LTR, débit à 50 Hz et pression maximale 10 bar pour les variantes retenues. Les dimensions et masses historiques restent rattachées à la brochure."
+      }
+    },
+    {
+      "id": "corrected:boge-po-1-ltr-160:boge-po-fr-official-brochure-2026:2026-09-25",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-1-ltr-160",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "83d0edb8aba217e796b9a482dec293789bfb640d4570e5d6a3a39acf611433d4",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://granzow.dk/Files/Images/Granzow/Datablade/Brochure/382-EN-PO-Series.pdf",
+        "sourceLabel": "BOGE, brochure série PO en anglais, p. 7, copie hébergée par Granzow",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "corrected:boge-po-2-lr-50:boge-po-current-range-2026:2026-09-25",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-2-lr-50",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "3cfc9b46703bfeeb19dfe3113017a5d5e298538af6cece43856a86c9a061aa85",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Table technique actuelle recoupée : 36 variantes, configurations LR et LTR, débit à 50 Hz et pression maximale 10 bar pour les variantes retenues. Les dimensions et masses historiques restent rattachées à la brochure."
+      }
+    },
+    {
+      "id": "corrected:boge-po-2-lr-50:boge-po-fr-official-brochure-2026:2026-09-25",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-2-lr-50",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "c866c09ac677ce4feb0b0d6de9427876035b11dccfb038ad790a1cdb637216a6",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://granzow.dk/Files/Images/Granzow/Datablade/Brochure/382-EN-PO-Series.pdf",
+        "sourceLabel": "BOGE, brochure série PO en anglais, p. 7, copie hébergée par Granzow",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "corrected:boge-po-2-ltr-160:boge-po-current-range-2026:2026-09-25",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-2-ltr-160",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "5ee43d1785e064d148fbb071c36607b9b4ab9510cefad894693f9c60f759ce8b",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Table technique actuelle recoupée : 36 variantes, configurations LR et LTR, débit à 50 Hz et pression maximale 10 bar pour les variantes retenues. Les dimensions et masses historiques restent rattachées à la brochure."
+      }
+    },
+    {
+      "id": "corrected:boge-po-2-ltr-160:boge-po-fr-official-brochure-2026:2026-09-25",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-2-ltr-160",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "0babd35dffb8fd843def52abef4a6b93b13ac3a90a494aad2d0835086c0562db",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://granzow.dk/Files/Images/Granzow/Datablade/Brochure/382-EN-PO-Series.pdf",
+        "sourceLabel": "BOGE, brochure série PO en anglais, p. 7, copie hébergée par Granzow",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "corrected:boge-po-3-lr-90:boge-po-current-range-2026:2026-09-25",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-3-lr-90",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "a4a52c76d334611127392e567127f9326e48794cc2a86f59a4da3a39a73019aa",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Table technique actuelle recoupée : 36 variantes, configurations LR et LTR, débit à 50 Hz et pression maximale 10 bar pour les variantes retenues. Les dimensions et masses historiques restent rattachées à la brochure."
+      }
+    },
+    {
+      "id": "corrected:boge-po-3-lr-90:boge-po-fr-official-brochure-2026:2026-09-25",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-3-lr-90",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "37c707f45e64e1794cdefdbc3a4213e4987fcfab0d4bcdbc7dbc2cd26c3ce016",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://granzow.dk/Files/Images/Granzow/Datablade/Brochure/382-EN-PO-Series.pdf",
+        "sourceLabel": "BOGE, brochure série PO en anglais, p. 7, copie hébergée par Granzow",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "corrected:boge-po-3-ltr-270:boge-po-current-range-2026:2026-09-25",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-3-ltr-270",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "22956ffafbd468ee37c1540012de7e1b337ed3d16956a3d603961b9615bec6ed",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Table technique actuelle recoupée : 36 variantes, configurations LR et LTR, débit à 50 Hz et pression maximale 10 bar pour les variantes retenues. Les dimensions et masses historiques restent rattachées à la brochure."
+      }
+    },
+    {
+      "id": "corrected:boge-po-3-ltr-270:boge-po-fr-official-brochure-2026:2026-09-25",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-3-ltr-270",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "fa453eb6f16ddc508ea9d1b515e6ca30448c36e11ba4f846af0ee610de3a0065",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://granzow.dk/Files/Images/Granzow/Datablade/Brochure/382-EN-PO-Series.pdf",
+        "sourceLabel": "BOGE, brochure série PO en anglais, p. 7, copie hébergée par Granzow",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "corrected:boge-po-4-lr-90:boge-po-current-range-2026:2026-09-25",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-4-lr-90",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "2fbb0df0ae848179efa44ef03539d51156f7b3a59788088fde72286c19ff2308",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Table technique actuelle recoupée : 36 variantes, configurations LR et LTR, débit à 50 Hz et pression maximale 10 bar pour les variantes retenues. Les dimensions et masses historiques restent rattachées à la brochure."
+      }
+    },
+    {
+      "id": "corrected:boge-po-4-lr-90:boge-po-fr-official-brochure-2026:2026-09-25",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-4-lr-90",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "e2468aa32ecf7257b2c5238f8bcfbae89cb8958aba26024c7231119ae6da2f98",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://granzow.dk/Files/Images/Granzow/Datablade/Brochure/382-EN-PO-Series.pdf",
+        "sourceLabel": "BOGE, brochure série PO en anglais, p. 7, copie hébergée par Granzow",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "corrected:boge-po-4-ltr-270:boge-po-current-range-2026:2026-09-25",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-4-ltr-270",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "4a383398427cc32ba1463598467787ab4f57949e0eb5cdf878ef994061dbfca3",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Table technique actuelle recoupée : 36 variantes, configurations LR et LTR, débit à 50 Hz et pression maximale 10 bar pour les variantes retenues. Les dimensions et masses historiques restent rattachées à la brochure."
+      }
+    },
+    {
+      "id": "corrected:boge-po-4-ltr-270:boge-po-fr-official-brochure-2026:2026-09-25",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-4-ltr-270",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "9e6948936b46e3452ea4378a81b35342d31c424750afd96a9de5a01859ad3eba",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://granzow.dk/Files/Images/Granzow/Datablade/Brochure/382-EN-PO-Series.pdf",
+        "sourceLabel": "BOGE, brochure série PO en anglais, p. 7, copie hébergée par Granzow",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "corrected:boge-po-6-lr-160:boge-po-current-range-2026:2026-09-25",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-6-lr-160",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "e437b2a8420fd1072f1a00c33255698a5c5a5ea9813bb01fe5cb7b4520ae072d",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Table technique actuelle recoupée : 36 variantes, configurations LR et LTR, débit à 50 Hz et pression maximale 10 bar pour les variantes retenues. Les dimensions et masses historiques restent rattachées à la brochure."
+      }
+    },
+    {
+      "id": "corrected:boge-po-6-lr-160:boge-po-fr-official-brochure-2026:2026-09-25",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-6-lr-160",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "20918131a3965f15f38519fec88e18a6a3cedb8686d1500761c269baf974f8fe",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://granzow.dk/Files/Images/Granzow/Datablade/Brochure/382-EN-PO-Series.pdf",
+        "sourceLabel": "BOGE, brochure série PO en anglais, p. 7, copie hébergée par Granzow",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "corrected:boge-po-6-ltr-270:boge-po-current-range-2026:2026-09-25",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-6-ltr-270",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "41a7e57fff166037fcff58a0c0be3f58d1e7a381a05660bb7e64eb9ac0660c3c",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Table technique actuelle recoupée : 36 variantes, configurations LR et LTR, débit à 50 Hz et pression maximale 10 bar pour les variantes retenues. Les dimensions et masses historiques restent rattachées à la brochure."
+      }
+    },
+    {
+      "id": "corrected:boge-po-6-ltr-270:boge-po-fr-official-brochure-2026:2026-09-25",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-6-ltr-270",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "fbb1723e81e1e354e6d8292746a7b3b2f95d0a044a9d419fc41368391d3dd69c",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://granzow.dk/Files/Images/Granzow/Datablade/Brochure/382-EN-PO-Series.pdf",
+        "sourceLabel": "BOGE, brochure série PO en anglais, p. 7, copie hébergée par Granzow",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "corrected:boge-po-8-lr-160:boge-po-current-range-2026:2026-09-25",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-8-lr-160",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "89f74c3a5d0d87cdb5086d5d775ae04d2c0c6d72eebab249fedb7f8b06060661",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Table technique actuelle recoupée : 36 variantes, configurations LR et LTR, débit à 50 Hz et pression maximale 10 bar pour les variantes retenues. Les dimensions et masses historiques restent rattachées à la brochure."
+      }
+    },
+    {
+      "id": "corrected:boge-po-8-lr-160:boge-po-fr-official-brochure-2026:2026-09-25",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-8-lr-160",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "1950c9758f3b38cbd00d04c4b3ccda124bd720c539b4bfa9f6dd7e3f5b593ff4",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://granzow.dk/Files/Images/Granzow/Datablade/Brochure/382-EN-PO-Series.pdf",
+        "sourceLabel": "BOGE, brochure série PO en anglais, p. 7, copie hébergée par Granzow",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "corrected:boge-po-8-ltr-270:boge-po-current-range-2026:2026-09-25",
+      "evidenceId": "boge-po-current-range-2026",
+      "productId": "boge-po-8-ltr-270",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "689dfb0f3cd4185b0bccaf6aed7c1c9b2aaa69f9197ada3e27346d7574830de8",
+      "snapshot": {
+        "id": "boge-po-current-range-2026",
+        "sourceUrl": "https://www.boge.com/fr-fr/produits/compresseurs/compresseurs-a-piston/serie-po-jusqu-a-11-kw-/",
+        "sourceLabel": "BOGE France, gamme actuelle de compresseurs à pistons sans huile PO",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Table technique actuelle recoupée : 36 variantes, configurations LR et LTR, débit à 50 Hz et pression maximale 10 bar pour les variantes retenues. Les dimensions et masses historiques restent rattachées à la brochure."
+      }
+    },
+    {
+      "id": "corrected:boge-po-8-ltr-270:boge-po-fr-official-brochure-2026:2026-09-25",
+      "evidenceId": "boge-po-fr-official-brochure-2026",
+      "productId": "boge-po-8-ltr-270",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "336862068c3c31f7d368a4abe59b420d00860e4970902cb3be2d92866a9757fb",
+      "snapshot": {
+        "id": "boge-po-fr-official-brochure-2026",
+        "sourceUrl": "https://granzow.dk/Files/Images/Granzow/Datablade/Brochure/382-EN-PO-Series.pdf",
+        "sourceLabel": "BOGE, brochure série PO en anglais, p. 7, copie hébergée par Granzow",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif 50 Hz, pression maximale, cuve, puissance, dimensions et masse repris des tableaux constructeur ; le débit est mesuré selon VDMA 4362 à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "corrected:einhell-tc-ac-190-6-8-of:einhell-4020655-manual:2026-09-25",
+      "evidenceId": "einhell-4020655-manual",
+      "productId": "einhell-tc-ac-190-6-8-of",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "094e2fd3a7f47371e15286e38d99cef34a9f847ddab5c88ef960c2cc580ed67e",
+      "snapshot": {
+        "id": "einhell-4020655-manual",
+        "sourceUrl": "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_4hdl8mkd5p79n2v95l65f4th1c?attachment;filename=4020655_21023_001_SPK13.pdf",
+        "sourceLabel": "Einhell, documentation officielle TC-AC 190/6/8 OF",
+        "sourceType": "manual",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "corrected:metabo-basic-250-24-w:metabo-601533000-official:2026-09-25",
+      "evidenceId": "metabo-601533000-official",
+      "productId": "metabo-basic-250-24-w",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "3dcdbb31fc85f82df3c8bb556b594883c42b70a69c6b9712e2dfbfe86138be1f",
+      "snapshot": {
+        "id": "metabo-601533000-official",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/2023_Sortimentsuebersicht_AT-screen.pdf#page=95",
+        "sourceLabel": "Metabo, catalogue Autriche 2023, référence 601533000",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:metabo-basic-250-24-w:metabo-601533000-technical-brochure-2016:2026-09-25",
+      "evidenceId": "metabo-601533000-technical-brochure-2016",
+      "productId": "metabo-basic-250-24-w",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d8ab2402223ea646afed9b6761a0237dc223ede81fe419859492a2f402cd5164",
+      "snapshot": {
+        "id": "metabo-601533000-technical-brochure-2016",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/com_en/070_news/03_catalogue_logos/201605_Druckluftkompetenz_en.pdf#page=26",
+        "sourceLabel": "Metabo, brochure technique air comprimé 2016, p. 51",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Complément historique : puissance, lubrification et phase. Les éditions peuvent différer pour le bruit ; aucune mise à jour acoustique silencieuse."
+      }
+    },
+    {
+      "id": "corrected:metabo-basic-250-24-w-of:metabo-601532000-official:2026-09-25",
+      "evidenceId": "metabo-601532000-official",
+      "productId": "metabo-basic-250-24-w-of",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "56983815ad91480b5af622d9f2e1bdcc4dd12068cbceb2ac71e5112052e4da18",
+      "snapshot": {
+        "id": "metabo-601532000-official",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/2023_Sortimentsuebersicht_AT-screen.pdf#page=95",
+        "sourceLabel": "Metabo, catalogue Autriche 2023, référence 601532000",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de 8 bar."
+      }
+    },
+    {
+      "id": "added:metabo-basic-250-24-w-of:metabo-601532000-technical-brochure-2016:2026-09-25",
+      "evidenceId": "metabo-601532000-technical-brochure-2016",
+      "productId": "metabo-basic-250-24-w-of",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b7e12918bc9fa21d7d0eee77d2bcc823fd4c79e173df26382ac0d3734c2833dd",
+      "snapshot": {
+        "id": "metabo-601532000-technical-brochure-2016",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/com_en/070_news/03_catalogue_logos/201605_Druckluftkompetenz_en.pdf#page=26",
+        "sourceLabel": "Metabo, brochure technique air comprimé 2016, p. 51",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Complément historique : puissance, lubrification et phase. Les éditions peuvent différer pour le bruit ; aucune mise à jour acoustique silencieuse."
+      }
+    },
+    {
+      "id": "corrected:metabo-basic-250-50-w:metabo-601534000-official:2026-09-25",
+      "evidenceId": "metabo-601534000-official",
+      "productId": "metabo-basic-250-50-w",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "742148eafc3e4f4c6ddd199b809f0596dabe33201efe46920925b8e7616750e9",
+      "snapshot": {
+        "id": "metabo-601534000-official",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/2023_Sortimentsuebersicht_AT-screen.pdf#page=95",
+        "sourceLabel": "Metabo, catalogue Autriche 2023, référence 601534000",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:metabo-basic-250-50-w:metabo-601534000-technical-brochure-2016:2026-09-25",
+      "evidenceId": "metabo-601534000-technical-brochure-2016",
+      "productId": "metabo-basic-250-50-w",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9f84f8bfd84ffee4fe7bc6f8d80e7ccc896cd8cad5f644955b058cffe5bd160d",
+      "snapshot": {
+        "id": "metabo-601534000-technical-brochure-2016",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/com_en/070_news/03_catalogue_logos/201605_Druckluftkompetenz_en.pdf#page=26",
+        "sourceLabel": "Metabo, brochure technique air comprimé 2016, p. 51",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Complément historique : puissance, lubrification et phase. Les éditions peuvent différer pour le bruit ; aucune mise à jour acoustique silencieuse."
+      }
+    },
+    {
+      "id": "corrected:metabo-basic-250-50-w-of:metabo-601535000-official:2026-09-25",
+      "evidenceId": "metabo-601535000-official",
+      "productId": "metabo-basic-250-50-w-of",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "36143641598c197467a6173ade8904b4c26ef5b9c020acae055a0769494e4a80",
+      "snapshot": {
+        "id": "metabo-601535000-official",
+        "sourceUrl": "https://www.metabo.com/nl/nl/machines/perslucht/compressoren/mobiele-compressoren-voor-de-bouw/basic-250-50-w-of-compressor/601535000",
+        "sourceLabel": "Metabo, fiche officielle Basic 250-50 W OF",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de 8 bar."
+      }
+    },
+    {
+      "id": "corrected:metabo-basic-280-50-w-of:metabo-601529000-official:2026-09-25",
+      "evidenceId": "metabo-601529000-official",
+      "productId": "metabo-basic-280-50-w-of",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "7f3c0bae3a14341ee065cf3b8b3bf2b921f74ad599bb33f82855b5d0c0402c8e",
+      "snapshot": {
+        "id": "metabo-601529000-official",
+        "sourceUrl": "https://www.metabo.com/sk/sk/stroje/stlaceny-vzduch/kompresory/mobilne-kompresory/basic-280-50-w-of-601529000-kompresor.html",
+        "sourceLabel": "Metabo, fiche officielle Basic 280-50 W OF",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "corrected:metabo-mega-400-50-d:metabo-601537000-official:2026-09-25",
+      "evidenceId": "metabo-601537000-official",
+      "productId": "metabo-mega-400-50-d",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "32e4f89ae7dab4c38d10f319cb08e95237037a943940382e74bb12a4836c5c46",
+      "snapshot": {
+        "id": "metabo-601537000-official",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/2023_Sortimentsuebersicht_AT-screen.pdf#page=97",
+        "sourceLabel": "Metabo, catalogue Autriche 2023, référence 601537000",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de 10 bar."
+      }
+    },
+    {
+      "id": "added:metabo-mega-400-50-d:metabo-601537000-technical-brochure-2016:2026-09-25",
+      "evidenceId": "metabo-601537000-technical-brochure-2016",
+      "productId": "metabo-mega-400-50-d",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0312cac27b836263916fe461db0474868249dc352083b3e9c1eaaa9af68f3b13",
+      "snapshot": {
+        "id": "metabo-601537000-technical-brochure-2016",
+        "sourceUrl": "https://www.metabo.com/t3/fileadmin/metabo/com_en/070_news/03_catalogue_logos/201605_Druckluftkompetenz_en.pdf#page=29",
+        "sourceLabel": "Metabo, brochure technique air comprimé 2016, p. 57",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Complément historique : puissance, lubrification et phase. Les éditions peuvent différer pour le bruit ; aucune mise à jour acoustique silencieuse."
+      }
+    },
+    {
+      "id": "corrected:schneider-unm-stb-1000-10-10:schneider-unm-stb-lubrication:2026-09-25",
+      "evidenceId": "schneider-unm-stb-lubrication",
+      "productId": "schneider-unm-stb-1000-10-10",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "c7adc59744ed68470c013b48c706bab835ffc17a45cabbbd346145ec5a735203",
+      "snapshot": {
+        "id": "schneider-unm-stb-lubrication",
+        "sourceUrl": "https://shop.schneider-airsystems.com/en-DE/products/1121580510/unm-stb-660-10-10",
+        "sourceLabel": "Schneider, gamme UNM STB, lubrification à huile",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Source utilisée pour la lubrification seulement ; les autres caractéristiques proviennent du tableau du catalogue 2025."
+      }
+    },
+    {
+      "id": "corrected:schneider-unm-stb-1000-10-10-c:schneider-unm-stb-lubrication:2026-09-25",
+      "evidenceId": "schneider-unm-stb-lubrication",
+      "productId": "schneider-unm-stb-1000-10-10-c",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "5d1a2f4ec105f8fe61d599f8cc78f9c376fcc85f36991710ee654057eeacb264",
+      "snapshot": {
+        "id": "schneider-unm-stb-lubrication",
+        "sourceUrl": "https://shop.schneider-airsystems.com/en-DE/products/1121580510/unm-stb-660-10-10",
+        "sourceLabel": "Schneider, gamme UNM STB, lubrification à huile",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Source utilisée pour la lubrification seulement ; les autres caractéristiques proviennent du tableau du catalogue 2025."
+      }
+    },
+    {
+      "id": "corrected:schneider-unm-stb-1000-15-10:schneider-unm-stb-lubrication:2026-09-25",
+      "evidenceId": "schneider-unm-stb-lubrication",
+      "productId": "schneider-unm-stb-1000-15-10",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "8aa8a0baa0832e00fca4772d70cf66d36f58fe94e31e623d96bd83d017948a1d",
+      "snapshot": {
+        "id": "schneider-unm-stb-lubrication",
+        "sourceUrl": "https://shop.schneider-airsystems.com/en-DE/products/1121580510/unm-stb-660-10-10",
+        "sourceLabel": "Schneider, gamme UNM STB, lubrification à huile",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Source utilisée pour la lubrification seulement ; les autres caractéristiques proviennent du tableau du catalogue 2025."
+      }
+    },
+    {
+      "id": "corrected:schneider-unm-stb-1000-15-10-c:schneider-unm-stb-lubrication:2026-09-25",
+      "evidenceId": "schneider-unm-stb-lubrication",
+      "productId": "schneider-unm-stb-1000-15-10-c",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "72670f4bf210d37c6b04bbbf3a97c4f71ee3f278b17dec836289af12329d3467",
+      "snapshot": {
+        "id": "schneider-unm-stb-lubrication",
+        "sourceUrl": "https://shop.schneider-airsystems.com/en-DE/products/1121580510/unm-stb-660-10-10",
+        "sourceLabel": "Schneider, gamme UNM STB, lubrification à huile",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Source utilisée pour la lubrification seulement ; les autres caractéristiques proviennent du tableau du catalogue 2025."
+      }
+    },
+    {
+      "id": "corrected:schneider-unm-stb-1250-10-10:schneider-unm-stb-lubrication:2026-09-25",
+      "evidenceId": "schneider-unm-stb-lubrication",
+      "productId": "schneider-unm-stb-1250-10-10",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "12bb9cfe1d7e48e681d989b93ad99ceaa5d4a89b700a23ed95b4fd281aea9b08",
+      "snapshot": {
+        "id": "schneider-unm-stb-lubrication",
+        "sourceUrl": "https://shop.schneider-airsystems.com/en-DE/products/1121580510/unm-stb-660-10-10",
+        "sourceLabel": "Schneider, gamme UNM STB, lubrification à huile",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Source utilisée pour la lubrification seulement ; les autres caractéristiques proviennent du tableau du catalogue 2025."
+      }
+    },
+    {
+      "id": "corrected:schneider-unm-stb-1250-10-10-c:schneider-unm-stb-lubrication:2026-09-25",
+      "evidenceId": "schneider-unm-stb-lubrication",
+      "productId": "schneider-unm-stb-1250-10-10-c",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "c36fe79532e0d968f48b2f2f55845649e349616626c13ef4ad32476dc94cab74",
+      "snapshot": {
+        "id": "schneider-unm-stb-lubrication",
+        "sourceUrl": "https://shop.schneider-airsystems.com/en-DE/products/1121580510/unm-stb-660-10-10",
+        "sourceLabel": "Schneider, gamme UNM STB, lubrification à huile",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Source utilisée pour la lubrification seulement ; les autres caractéristiques proviennent du tableau du catalogue 2025."
+      }
+    },
+    {
+      "id": "corrected:schneider-unm-stb-580-15-10:schneider-unm-stb-lubrication:2026-09-25",
+      "evidenceId": "schneider-unm-stb-lubrication",
+      "productId": "schneider-unm-stb-580-15-10",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "837d533b299237c5dba25273cd8dc146758df83bfa3ae629765900de6c181a3c",
+      "snapshot": {
+        "id": "schneider-unm-stb-lubrication",
+        "sourceUrl": "https://shop.schneider-airsystems.com/en-DE/products/1121580510/unm-stb-660-10-10",
+        "sourceLabel": "Schneider, gamme UNM STB, lubrification à huile",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Source utilisée pour la lubrification seulement ; les autres caractéristiques proviennent du tableau du catalogue 2025."
+      }
+    },
+    {
+      "id": "corrected:schneider-unm-stb-580-15-10-xs:schneider-unm-stb-lubrication:2026-09-25",
+      "evidenceId": "schneider-unm-stb-lubrication",
+      "productId": "schneider-unm-stb-580-15-10-xs",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "95428b0c4fadd72c3a3b2518fe7ea91ed4d984a844f7e4dfa20e01ed69a26159",
+      "snapshot": {
+        "id": "schneider-unm-stb-lubrication",
+        "sourceUrl": "https://shop.schneider-airsystems.com/en-DE/products/1121580510/unm-stb-660-10-10",
+        "sourceLabel": "Schneider, gamme UNM STB, lubrification à huile",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Source utilisée pour la lubrification seulement ; les autres caractéristiques proviennent du tableau du catalogue 2025."
+      }
+    },
+    {
+      "id": "corrected:schneider-unm-stb-660-10-10:schneider-unm-stb-lubrication:2026-09-25",
+      "evidenceId": "schneider-unm-stb-lubrication",
+      "productId": "schneider-unm-stb-660-10-10",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "ee96101462de22e6564fb8dfc1b62650f7baaebfd504883bd7990324c05e6da4",
+      "snapshot": {
+        "id": "schneider-unm-stb-lubrication",
+        "sourceUrl": "https://shop.schneider-airsystems.com/en-DE/products/1121580510/unm-stb-660-10-10",
+        "sourceLabel": "Schneider, gamme UNM STB, lubrification à huile",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Source utilisée pour la lubrification seulement ; les autres caractéristiques proviennent du tableau du catalogue 2025."
+      }
+    },
+    {
+      "id": "corrected:schneider-unm-stb-660-10-10-xs:schneider-unm-stb-lubrication:2026-09-25",
+      "evidenceId": "schneider-unm-stb-lubrication",
+      "productId": "schneider-unm-stb-660-10-10-xs",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "87475d706f1343036c19a5be0b56c76d0363f11220fed769cc7b033fe42f0088",
+      "snapshot": {
+        "id": "schneider-unm-stb-lubrication",
+        "sourceUrl": "https://shop.schneider-airsystems.com/en-DE/products/1121580510/unm-stb-660-10-10",
+        "sourceLabel": "Schneider, gamme UNM STB, lubrification à huile",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Source utilisée pour la lubrification seulement ; les autres caractéristiques proviennent du tableau du catalogue 2025."
+      }
+    },
+    {
+      "id": "corrected:schneider-unm-stb-780-15-10:schneider-unm-stb-lubrication:2026-09-25",
+      "evidenceId": "schneider-unm-stb-lubrication",
+      "productId": "schneider-unm-stb-780-15-10",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "a21bd322f8612b6c72b060ce4a7dbb3dc8fa5263eabd85bbb7b20dafb3f9a6ba",
+      "snapshot": {
+        "id": "schneider-unm-stb-lubrication",
+        "sourceUrl": "https://shop.schneider-airsystems.com/en-DE/products/1121580510/unm-stb-660-10-10",
+        "sourceLabel": "Schneider, gamme UNM STB, lubrification à huile",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Source utilisée pour la lubrification seulement ; les autres caractéristiques proviennent du tableau du catalogue 2025."
+      }
+    },
+    {
+      "id": "corrected:schneider-unm-stb-780-15-10-c:schneider-unm-stb-lubrication:2026-09-25",
+      "evidenceId": "schneider-unm-stb-lubrication",
+      "productId": "schneider-unm-stb-780-15-10-c",
+      "productType": "compressor",
+      "occurredAt": "2026-09-25",
+      "kind": "corrected",
+      "summary": "Réparation des liens sources devenus 404 : nouvelles URL vérifiées sur les références exactes, provenance et portée des documents explicites.",
+      "fingerprint": "860374ab600de27e4233fce45fc810fc5577c3d6137c2e3a14c26ed83f8b261b",
+      "snapshot": {
+        "id": "schneider-unm-stb-lubrication",
+        "sourceUrl": "https://shop.schneider-airsystems.com/en-DE/products/1121580510/unm-stb-660-10-10",
+        "sourceLabel": "Schneider, gamme UNM STB, lubrification à huile",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Source utilisée pour la lubrification seulement ; les autres caractéristiques proviennent du tableau du catalogue 2025."
+      }
     }
   ],
-  "historyVersion": "6cf76fd4d1be29d499e7eb774af7d323a868ab2fbaa3122f3c029cf64124f75e"
+  "historyVersion": "b940e8de34a710b7e2bfdcbd7772a589ce3c2ab70968fb2081889f9389f58938"
 }

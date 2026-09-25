@@ -16,7 +16,7 @@ relatedGuides:
   - fiche-intervention-air-comprime
   - detecter-mesurer-fuites-air-comprime
 sources:
-  - https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air_sourcebook.pdf
+  - https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf
   - https://www.energy.gov/cmei/ito/compressed-air-systems
   - https://www.cagi.org/working-with-compressed-air
 ---
@@ -31,7 +31,7 @@ Une maintenance utile laisse des traces exploitables : le composant visé, la no
 
 ## Le calendrier appartient à la machine
 
-Le [Compressed Air Sourcebook du Department of Energy américain](https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air_sourcebook.pdf) rassemble les composantes courantes d’un programme de maintenance. Il renvoie néanmoins aux recommandations du fabricant et aux conditions d’exploitation pour les tâches applicables.
+Le [Compressed Air Sourcebook du Department of Energy américain](https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf) rassemble les composantes courantes d’un programme de maintenance. Il renvoie néanmoins aux recommandations du fabricant et aux conditions d’exploitation pour les tâches applicables.
 
 Un registre solide rattache donc chaque intervalle à la notice, à sa version et, lorsque l’information existe, au compteur de la machine. Une échéance dépourvue de cette filiation reste à documenter.
 
@@ -74,6 +74,6 @@ Les snapshots mensuels de l’[observatoire documentaire](/observatoire-qualite-
 
 ## Sources
 
-- [US Department of Energy, Compressed Air System Sourcebook](https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air_sourcebook.pdf)
+- [US Department of Energy, Compressed Air System Sourcebook](https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf)
 - [US Department of Energy, Compressed Air Systems](https://www.energy.gov/cmei/ito/compressed-air-systems)
 - [Compressed Air and Gas Institute, Working with Compressed Air](https://www.cagi.org/working-with-compressed-air)
