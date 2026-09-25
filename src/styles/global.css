@@ -215,8 +215,8 @@ h3 { font-weight: 560; }
 .footer-block h2 { margin: 0; color: #f4f8f5; font: 800 .72rem/1.2 "Manrope Variable", sans-serif; letter-spacing: .08em; text-transform: uppercase; }
 .footer-block > a { display: flex; align-items: center; justify-content: space-between; gap: .7rem; padding: .65rem .15rem; border-top: 1px solid rgba(255,255,255,.07); color: #aebfb5; font-size: .75rem; text-decoration: none; transition: color .18s ease, padding-left .18s ease; }
 .footer-block > a:hover { padding-left: .35rem; color: white; }
-.footer-block > a .ui-icon { color: #62776b; transition: color .18s ease, transform .18s ease; }
-.footer-block > a:hover .ui-icon { color: var(--accent); transform: translateX(2px); }
+.footer-block > a .footer-arrow { color: #62776b; transition: color .18s ease, transform .18s ease; }
+.footer-block > a:hover .footer-arrow { color: var(--accent); transform: translateX(2px); }
 .footer-bottomline { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,.1); color: #748a7e; font-size: .68rem; }
 .footer-bottomline p { margin: 0; }
 .footer-bottomline div { display: flex; flex-wrap: wrap; gap: 1rem; }
@@ -3613,7 +3613,7 @@ body {
 .scanner-recovery-actions .text-link { align-self: center; padding: .45rem; color: #7d3b1e; font-size: .64rem; font-weight: 760; }
 .scanner-method { padding-top: clamp(2.5rem, 5vw, 5rem); }
 
-.footer-directory-primary { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.footer-directory-primary { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .footer-resource-drawers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; padding-bottom: 1.7rem; }
 .footer-resource-drawers details { border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.025); }
 .footer-resource-drawers summary { display: flex; justify-content: space-between; gap: 1rem; align-items: center; padding: .9rem 1rem; color: #dbe5df; font-size: .7rem; font-weight: 780; cursor: pointer; list-style: none; }
@@ -3626,6 +3626,7 @@ body {
 
 @media (max-width: 1100px) {
 	:root { --sticky-header-height: 100px; }
+	.footer-directory-primary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.scanner-action-grid { grid-template-columns: minmax(0, .7fr) minmax(460px, 1.3fr); gap: 2rem; }
 	.mobile-menu .mobile-explore { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 	.mobile-menu .mobile-explore > summary { padding: .72rem .8rem; border: 0; border-radius: 0; color: var(--muted); background: transparent; font-size: .88rem; font-weight: 680; }
