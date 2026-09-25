@@ -27,12 +27,15 @@ describe('immutable catalog and verdict snapshots', () => {
 	});
 
 	it('binds every snapshot verdict to the deterministic engine output', () => {
+		const compressorById = new Map(compressors.map((item) => [item.id, item]));
+		const toolById = new Map(tools.map((item) => [item.id, item]));
 		for (const pair of verdicts.pairs) {
-			const compressor = compressors.find((item) => item.id === pair.compressorId)!;
-			const tool = tools.find((item) => item.id === pair.toolId)!;
-			expect(pair.verdict).toBe(evaluateCompatibility(compressor, tool).verdict);
+			const compressor = compressorById.get(pair.compressorId)!;
+			const tool = toolById.get(pair.toolId)!;
+			expect(pair.verdict, pair.id).toBe(evaluateCompatibility(compressor, tool).verdict);
 		}
-	});
+		// Tous les couples restent vérifiés ; réserver le temps nécessaire au runner CI.
+	}, 20_000);
 
 	it('accounts for every pair in the summary', () => {
 		expect(Object.values(verdicts.summary).reduce((total, value) => total + value, 0)).toBe(verdicts.pairs.length);
