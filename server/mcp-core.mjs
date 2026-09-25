@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { verdictIndex } from './verdict-snapshot.mjs';
 import { UCP_CAPABILITY_NAME, UCP_CAPABILITY_VERSION, UCP_PROTOCOL_VERSION } from './ucp-core.mjs';
 import { DECISION_CORE_TOOL_NAMES, EXTENDED_TOOL_NAMES, LEGACY_SUCCESSORS, LEGACY_TOOL_NAMES, outputSchemas, receiptSchema, TOOL_PROFILE_NAMES } from './mcp-output-schemas.mjs';
 import { allToolDefinitions, mcpPrompts, mcpResources } from './mcp-tool-manifest.mjs';
@@ -441,8 +442,8 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 	const toolDefinitions = allToolDefinitions.filter((tool) => exposedToolNames.has(tool.name));
 	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item]));
 	const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
-	const verdictMap = new Map((verdictSnapshot.pairs ?? []).map((item) => [`${item.compressorId}--${item.toolId}`, item]));
-	function publishedCompatibility(compressor, tool) { return verdictMap.get(`${compressor.id}--${tool.id}`) ?? compatibility(compressor, tool); }
+	const verdictMap = verdictIndex(verdictSnapshot);
+	function publishedCompatibility(compressor, tool) { return verdictMap.get(compressor.id, tool.id) ?? compatibility(compressor, tool); }
 	function selectedProducts(toolIds) { return toolIds.map((id) => toolMap.get(id)); }
 	function callTool(name, args = {}) {
 		if (!validToolArguments(name, args)) return failure('Arguments invalides.', catalog);

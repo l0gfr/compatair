@@ -3,6 +3,7 @@ import { realpathSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { readVerdictSnapshot, verdictIndex } from './verdict-snapshot.mjs';
 import { createMcpCore, ENGINE_VERSION, MCP_SERVER_VERSION, METHOD_VERSION, PROTOCOL_VERSION, verifyCompatibilityReceipt } from './mcp-core.mjs';
 import { createDemandAggregateStore, DEMAND_EVENT_SCHEMA_VERSION, isValidCalculationVersion, validateDemandEvent } from './demand-aggregates.mjs';
 import { createProductFunnelAggregateStore, PRODUCT_FUNNEL_SCHEMA_VERSION, validateProductFunnelEvent } from './product-funnel-aggregates.mjs';
@@ -191,7 +192,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 	const compressorBySlug = new Map((catalog.compressors ?? []).map((item) => [item.slug, item]));
 	const toolBySlug = new Map((catalog.tools ?? []).map((item) => [item.slug, item]));
 	const normalizedProductMap = new Map((catalog.normalized?.products ?? []).map((item) => [item.id, item]));
-	const verdictMap = new Map((verdictSnapshot.pairs ?? []).map((item) => [`${item.compressorId}--${item.toolId}`, item]));
+	const verdictMap = verdictIndex(verdictSnapshot);
 	const allow = createRateLimiter();
 	const counters = { rpc: 0, errors: 0 };
 	const demandStore = createDemandAggregateStore({ filePath: demandAggregatePath, catalog });
@@ -293,7 +294,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			const compressor = compressorMap.get(compressorId);
 			const tool = toolMap.get(toolId);
 			if (!compressor || !tool) return apiJson(404, { error: 'product_not_found' }, corsHeaders);
-			const snapshotPair = verdictMap.get(`${compressorId}--${toolId}`);
+			const snapshotPair = verdictMap.get(compressorId, toolId);
 			if (tool.demandModel === 'fixed-flow' && !snapshotPair) return apiJson(503, { error: 'verdict_snapshot_unavailable' }, { ...corsHeaders, 'Retry-After': '60' });
 			const evaluation = snapshotPair ?? { verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data' };
 			const detailsUrl = `https://compatair.fr/calculateur/?outil=${encodeURIComponent(tool.id)}&compresseur=${encodeURIComponent(compressor.id)}`;
@@ -548,7 +549,7 @@ async function start() {
 	const mcpTelemetrySecretPath = process.env.COMPAT_AIR_MCP_TELEMETRY_SECRET_FILE || (mcpTelemetryPath ? resolve(dirname(mcpTelemetryPath), '.mcp-telemetry-secret') : undefined);
 	const proxyManagesApiHeaders = process.env.COMPAT_AIR_PROXY_MANAGES_API_HEADERS === '1';
 	const catalog = JSON.parse(await readFile(catalogPath, 'utf8'));
-	const verdictSnapshot = JSON.parse(await readFile(verdictsPath, 'utf8'));
+	const verdictSnapshot = await readVerdictSnapshot(verdictsPath);
 	if (verdictSnapshot.catalogVersion !== catalog.catalogVersion || !Array.isArray(verdictSnapshot.pairs) || !isValidCalculationVersion(verdictSnapshot.calculationVersion)) throw new Error('Le snapshot de verdicts ne correspond pas au catalogue.');
 	let offerSnapshot = { offers: [], snapshotVersion: 'empty' };
 	try { offerSnapshot = JSON.parse(await readFile(offersPath, 'utf8')); } catch {}
