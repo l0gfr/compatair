@@ -25,6 +25,23 @@ describe('runtime catalog', () => {
 		expect(() => runtimeCatalogSchema.parse(invalid)).toThrow();
 	});
 
+	it('retains every runtime field citation while excluding unrelated compressor evidence', () => {
+		const runtime = createRuntimeCatalog(compressors, tools, CATALOG_VERIFIED_AT, catalogVersion);
+		for (const compressor of runtime.compressors) {
+			const ids = new Set(compressor.evidence.map((source) => source.id));
+			for (const sourceId of Object.values(compressor.fieldSources).flat()) expect(ids.has(sourceId)).toBe(true);
+		}
+		const schneider = runtime.compressors.find((item) => item.id === 'schneider-unm-sts-660-10-90')!;
+		expect(schneider.evidence.map((source) => source.id)).toEqual(['schneider-2025-1121580537']);
+		expect(schneider.fieldSources.fadCurve).toEqual(['schneider-2025-1121580537']);
+		expect(compressors.find((item) => item.id === schneider.id)!.evidence).toHaveLength(2);
+		const legacy = { ...compressors[0], fieldSources: {} };
+		expect(createRuntimeCatalog([legacy], [], CATALOG_VERIFIED_AT, catalogVersion).compressors[0].evidence).toHaveLength(legacy.evidence.length);
+		const separateTankSource = { ...compressors[0].evidence[0], id: 'tank-only' };
+		const withTankSource = { ...compressors[0], evidence: [...compressors[0].evidence, separateTankSource], fieldSources: { ...compressors[0].fieldSources, tankLiters: ['tank-only'] } };
+		expect(createRuntimeCatalog([withTankSource], [], CATALOG_VERIFIED_AT, catalogVersion).compressors[0].evidence.some((source) => source.id === 'tank-only')).toBe(true);
+	});
+
 	it('loads and validates the same-origin execution snapshot', async () => {
 		const runtime = createRuntimeCatalog(compressors, tools, CATALOG_VERIFIED_AT, catalogVersion);
 		const fetchMock = vi.fn().mockResolvedValue(new Response(JSON.stringify(runtime)));

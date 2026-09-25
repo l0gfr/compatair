@@ -137,7 +137,106 @@ import product136 from './parkside-psko-248-b1';
 import product137 from './prodif-sil750v';
 import product138 from './revolution-air-superboxy-2l';
 import product139 from './scheppach-hc51v';
-import product140 from './stanley-dn200-10-5';
+import product140 from './schneider-cpm-220-9-20-wsof';
+import product141 from './schneider-sem-110-10-6-wof';
+import product142 from './schneider-unm-220-9-25-wsof';
+import product143 from './schneider-unm-220-9-50-wsof';
+import product144 from './schneider-unm-240-8-40-w-clean';
+import product145 from './schneider-unm-240-8-40-wxm-clean';
+import product146 from './schneider-unm-240-8-40-wxs-clean';
+import product147 from './schneider-unm-240-8-40-wxsm-clean';
+import product148 from './schneider-unm-360-8-40-w-clean';
+import product149 from './schneider-unm-360-8-40-wxm-clean';
+import product150 from './schneider-unm-360-8-40-wxs-clean';
+import product151 from './schneider-unm-360-8-40-wxsm-clean';
+import product152 from './schneider-unm-720-8-90-d-clean';
+import product153 from './schneider-unm-720-8-90-dxm-clean';
+import product154 from './schneider-unm-stb-1000-10-10';
+import product155 from './schneider-unm-stb-1000-10-10-c';
+import product156 from './schneider-unm-stb-1000-15-10';
+import product157 from './schneider-unm-stb-1000-15-10-c';
+import product158 from './schneider-unm-stb-1250-10-10';
+import product159 from './schneider-unm-stb-1250-10-10-c';
+import product160 from './schneider-unm-stb-580-15-10';
+import product161 from './schneider-unm-stb-580-15-10-xs';
+import product162 from './schneider-unm-stb-660-10-10';
+import product163 from './schneider-unm-stb-660-10-10-xs';
+import product164 from './schneider-unm-stb-780-15-10';
+import product165 from './schneider-unm-stb-780-15-10-c';
+import product166 from './schneider-unm-sth-650-10-180';
+import product167 from './schneider-unm-stl-1000-10-270';
+import product168 from './schneider-unm-stl-1000-10-270-c';
+import product169 from './schneider-unm-stl-1000-10-500';
+import product170 from './schneider-unm-stl-1000-10-500-c';
+import product171 from './schneider-unm-stl-1000-15-270';
+import product172 from './schneider-unm-stl-1000-15-270-c';
+import product173 from './schneider-unm-stl-1000-15-500';
+import product174 from './schneider-unm-stl-1000-15-500-c';
+import product175 from './schneider-unm-stl-1250-10-270';
+import product176 from './schneider-unm-stl-1250-10-270-c';
+import product177 from './schneider-unm-stl-1250-10-500-c';
+import product178 from './schneider-unm-stl-580-15-270';
+import product179 from './schneider-unm-stl-580-15-270-xs';
+import product180 from './schneider-unm-stl-580-15-500';
+import product181 from './schneider-unm-stl-660-10-270';
+import product182 from './schneider-unm-stl-660-10-270-xs';
+import product183 from './schneider-unm-stl-660-10-500';
+import product184 from './schneider-unm-stl-660-10-500-xs';
+import product185 from './schneider-unm-stl-780-15-270';
+import product186 from './schneider-unm-stl-780-15-270-c';
+import product187 from './schneider-unm-stl-780-15-500';
+import product188 from './schneider-unm-stl-780-15-500-c';
+import product189 from './schneider-unm-sts-1000-10-270';
+import product190 from './schneider-unm-sts-1000-10-270-c';
+import product191 from './schneider-unm-sts-1000-10-270-xdk';
+import product192 from './schneider-unm-sts-1000-10-270-xdkc';
+import product193 from './schneider-unm-sts-1000-10-500';
+import product194 from './schneider-unm-sts-1000-10-500-c';
+import product195 from './schneider-unm-sts-1000-10-500-xdk';
+import product196 from './schneider-unm-sts-1000-10-500-xdkc';
+import product197 from './schneider-unm-sts-1000-10-90-c';
+import product198 from './schneider-unm-sts-1000-15-270';
+import product199 from './schneider-unm-sts-1000-15-270-c';
+import product200 from './schneider-unm-sts-1000-15-270-xdkc';
+import product201 from './schneider-unm-sts-1000-15-500';
+import product202 from './schneider-unm-sts-1000-15-500-c';
+import product203 from './schneider-unm-sts-1000-15-500-xdk';
+import product204 from './schneider-unm-sts-1000-15-500-xdkc';
+import product205 from './schneider-unm-sts-1250-10-270';
+import product206 from './schneider-unm-sts-1250-10-270-c';
+import product207 from './schneider-unm-sts-1250-10-270-xdk';
+import product208 from './schneider-unm-sts-1250-10-270-xdkc';
+import product209 from './schneider-unm-sts-1250-10-500';
+import product210 from './schneider-unm-sts-1250-10-500-c';
+import product211 from './schneider-unm-sts-1250-10-500-xdkc';
+import product212 from './schneider-unm-sts-1250-10-90-c';
+import product213 from './schneider-unm-sts-580-15-270';
+import product214 from './schneider-unm-sts-580-15-270-xdk';
+import product215 from './schneider-unm-sts-580-15-270-xs';
+import product216 from './schneider-unm-sts-580-15-270-xsdk';
+import product217 from './schneider-unm-sts-580-15-500';
+import product218 from './schneider-unm-sts-580-15-500-xdk';
+import product219 from './schneider-unm-sts-580-15-500-xs';
+import product220 from './schneider-unm-sts-580-15-500-xsdk';
+import product221 from './schneider-unm-sts-630-10-270-base';
+import product222 from './schneider-unm-sts-660-10-270';
+import product223 from './schneider-unm-sts-660-10-270-xdk';
+import product224 from './schneider-unm-sts-660-10-270-xs';
+import product225 from './schneider-unm-sts-660-10-270-xsdk';
+import product226 from './schneider-unm-sts-660-10-500';
+import product227 from './schneider-unm-sts-660-10-500-xdk';
+import product228 from './schneider-unm-sts-660-10-500-xs';
+import product229 from './schneider-unm-sts-660-10-500-xsdk';
+import product230 from './schneider-unm-sts-660-10-90';
+import product231 from './schneider-unm-sts-660-10-90-xs';
+import product232 from './schneider-unm-sts-780-15-270';
+import product233 from './schneider-unm-sts-780-15-270-c';
+import product234 from './schneider-unm-sts-780-15-270-xdkc';
+import product235 from './schneider-unm-sts-780-15-500';
+import product236 from './schneider-unm-sts-780-15-500-c';
+import product237 from './schneider-unm-sts-780-15-500-xdk';
+import product238 from './schneider-unm-sts-780-15-500-xdkc';
+import product239 from './stanley-dn200-10-5';
 
 export const rawCompressors = [
 	product1,
@@ -280,4 +379,103 @@ export const rawCompressors = [
 	product138,
 	product139,
 	product140,
+	product141,
+	product142,
+	product143,
+	product144,
+	product145,
+	product146,
+	product147,
+	product148,
+	product149,
+	product150,
+	product151,
+	product152,
+	product153,
+	product154,
+	product155,
+	product156,
+	product157,
+	product158,
+	product159,
+	product160,
+	product161,
+	product162,
+	product163,
+	product164,
+	product165,
+	product166,
+	product167,
+	product168,
+	product169,
+	product170,
+	product171,
+	product172,
+	product173,
+	product174,
+	product175,
+	product176,
+	product177,
+	product178,
+	product179,
+	product180,
+	product181,
+	product182,
+	product183,
+	product184,
+	product185,
+	product186,
+	product187,
+	product188,
+	product189,
+	product190,
+	product191,
+	product192,
+	product193,
+	product194,
+	product195,
+	product196,
+	product197,
+	product198,
+	product199,
+	product200,
+	product201,
+	product202,
+	product203,
+	product204,
+	product205,
+	product206,
+	product207,
+	product208,
+	product209,
+	product210,
+	product211,
+	product212,
+	product213,
+	product214,
+	product215,
+	product216,
+	product217,
+	product218,
+	product219,
+	product220,
+	product221,
+	product222,
+	product223,
+	product224,
+	product225,
+	product226,
+	product227,
+	product228,
+	product229,
+	product230,
+	product231,
+	product232,
+	product233,
+	product234,
+	product235,
+	product236,
+	product237,
+	product238,
+	product239,
 ];

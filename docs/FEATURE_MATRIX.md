@@ -19,13 +19,13 @@
 - frontière produit explicite : aucune sauvegarde serveur dans la version gratuite ; la sauvegarde de plusieurs ateliers, les exports de dossiers et les alertes restent le périmètre envisagé d’une version professionnelle non disponible ;
 - verdicts `continuous`, `intermittent`, `incompatible` et `insufficient_data` ;
 - conversions, interpolation bornée, débit de pointe, débit moyen, réserve de cuve, récupération conditionnelle et version des formules ;
-- recherche globale, comparateur de deux ou trois modèles, pages par marque et pages par usage ; le périmètre compte 22 400 combinaisons explorables, dont 20 860 verdicts fixes audités et 1 540 combinaisons paramétriques nécessitant des entrées utilisateur ;
+- recherche globale, comparateur de deux ou trois modèles, pages par marque et pages par usage ; le périmètre compte 62 379 combinaisons explorables, dont 59 750 verdicts fixes audités et 2 629 combinaisons paramétriques nécessitant des entrées utilisateur ;
 - frontière SEO programmatique : aucune génération quadratique sous `/compatibilite/`, anciennes URL exactes migrées vers le calculateur et retraits inconnus servis en `410`, avec fiches et pages d’usage comme surfaces indexables ;
 - guides Astro validés par Zod, parcours Particuliers et Professionnels, quatre hubs métiers sans duplication d’article, glossaire sourcé, sommaires, statut de revue explicite et contenus associés ;
 - schémas d’offres, liste blanche des marchands, fraîcheur de 48 heures, redirection fermée et compteur agrégé ;
 - catalogue JSON normalisé par EAN/GTIN/MPN et SKU distributeur, familles de variantes, index de provenance et couverture champ par champ avec dénominateurs explicites ;
 - rôles de preuve séparant source primaire, corroboration indépendante et reprise secondaire marchande ; SLA public de fraîcheur par type de donnée ;
-- snapshots JSON du catalogue et des 20 860 verdicts fixes, validation, checksums, détection des doublons et rapports de différences ;
+- snapshots JSON du catalogue et des 59 750 verdicts fixes, validation, checksums, détection des doublons et rapports de différences ;
 - contribution facultative aux priorités du catalogue, agrégée sans événement brut, cookie, identifiant de navigateur ni adresse IP persistée ;
 - rapport privé de priorisation avec seuil minimal de cinq contributions par dimension, couverture pondérée par la demande observée et objectif opérationnel explicite de 80 % ;
 - funnel du calculateur agrégé sans URL, referrer, cookie ni identifiant, avec affichage, famille fermée, sélection et recalcul réussi de la recommandation contrefactuelle, rapport privé et contrôle de cohérence des taux ;

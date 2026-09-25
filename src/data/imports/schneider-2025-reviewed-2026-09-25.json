@@ -1,0 +1,2370 @@
+{
+  "sourceUrl": "https://www.schneider-airsystems.de/content/dam/brands/schneider/documents/catalogs-brochures/Schneider%20airsystems-Gesamtkatalog-2025-DE-SCREEN.pdf",
+  "sourceSha256": "8a4c8bb35268578e1a95b9e81783a27d8a6ddc9339883f91bcf0e63aedcdf5b2",
+  "edition": "2025",
+  "observedAt": "2026-09-25",
+  "columns": {
+    "standard": [
+      "pressureBar",
+      "intakeLpm",
+      "deliveredLpm",
+      "powerKw",
+      "rpm",
+      "tankLiters",
+      "weightKg",
+      "soundPressureDbA",
+      "dimensionsMm"
+    ],
+    "clean": [
+      "pressureBar",
+      "intakeLpm",
+      "deliveredLpm",
+      "powerKw",
+      "voltage",
+      "rpm",
+      "tankLiters",
+      "weightKg",
+      "soundPressureDbA",
+      "dimensionsMm"
+    ],
+    "unqualified": [
+      "pressureBar",
+      "intakeLpm",
+      "fillingLpmWithoutPressure",
+      "powerKw",
+      "voltage",
+      "rpm",
+      "tankLiters",
+      "weightKg",
+      "soundPressure4mDbA",
+      "soundPowerDbA",
+      "dimensionsMm"
+    ]
+  },
+  "rows": [
+    {
+      "model": "UNM STS 660-10-90",
+      "mpn": "1121580537",
+      "page": 46,
+      "rawColumns": [
+        "10",
+        "660",
+        "520",
+        "4",
+        "1.025",
+        "90",
+        "123",
+        "78",
+        "750x705x1.170"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 660-10-270",
+      "mpn": "1121570213",
+      "page": 46,
+      "rawColumns": [
+        "10",
+        "660",
+        "520",
+        "4",
+        "1.025",
+        "270",
+        "170",
+        "78",
+        "750x705x1.800"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 660-10-500",
+      "mpn": "1121580534",
+      "page": 46,
+      "rawColumns": [
+        "10",
+        "660",
+        "520",
+        "4",
+        "1.025",
+        "500",
+        "215",
+        "78",
+        "850x850x1.945"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 580-15-270",
+      "mpn": "1121570238",
+      "page": 46,
+      "rawColumns": [
+        "15",
+        "580",
+        "470",
+        "4",
+        "915",
+        "270",
+        "177",
+        "78",
+        "750x705x1.800"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 580-15-500",
+      "mpn": "1121580531",
+      "page": 46,
+      "rawColumns": [
+        "15",
+        "580",
+        "470",
+        "4",
+        "915",
+        "500",
+        "230",
+        "78",
+        "850x850x1.945"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1000-10-270",
+      "mpn": "1121570227",
+      "page": 46,
+      "rawColumns": [
+        "10",
+        "1.070",
+        "785",
+        "5,5",
+        "1.260",
+        "270",
+        "206",
+        "82",
+        "920x705x1.800"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1000-10-500",
+      "mpn": "1121580523",
+      "page": 46,
+      "rawColumns": [
+        "10",
+        "1.070",
+        "785",
+        "5,5",
+        "1.260",
+        "500",
+        "251",
+        "82",
+        "920x850x1.950"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 780-15-270",
+      "mpn": "1121570242",
+      "page": 46,
+      "rawColumns": [
+        "15",
+        "830",
+        "570",
+        "5,5",
+        "980",
+        "270",
+        "213",
+        "80",
+        "920x705x1.800"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 780-15-500",
+      "mpn": "1121580539",
+      "page": 46,
+      "rawColumns": [
+        "15",
+        "830",
+        "570",
+        "5,5",
+        "980",
+        "500",
+        "266",
+        "80",
+        "920x850x1.950"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1250-10-270",
+      "mpn": "1121570234",
+      "page": 46,
+      "rawColumns": [
+        "10",
+        "1.250",
+        "980",
+        "7,5",
+        "1.240",
+        "270",
+        "246",
+        "84",
+        "975x705x1.875"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1250-10-500",
+      "mpn": "1121580529",
+      "page": 46,
+      "rawColumns": [
+        "10",
+        "1.250",
+        "980",
+        "7,5",
+        "1.240",
+        "500",
+        "291",
+        "84",
+        "975x850x2.020"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1000-15-270",
+      "mpn": "1121570230",
+      "page": 46,
+      "rawColumns": [
+        "15",
+        "1.000",
+        "790",
+        "7,5",
+        "995",
+        "270",
+        "253",
+        "82",
+        "975x705x1.875"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1000-15-500",
+      "mpn": "1121580526",
+      "page": 46,
+      "rawColumns": [
+        "15",
+        "1.000",
+        "790",
+        "7,5",
+        "995",
+        "500",
+        "306",
+        "82",
+        "975x850x2.020"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1000-10-90 C",
+      "mpn": "1121560023",
+      "page": 46,
+      "rawColumns": [
+        "10",
+        "1.070",
+        "785",
+        "5,5",
+        "1.260",
+        "90",
+        "159",
+        "82",
+        "920x705x1.170"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1000-10-270 C",
+      "mpn": "1121570228",
+      "page": 46,
+      "rawColumns": [
+        "10",
+        "1.070",
+        "785",
+        "5,5",
+        "1.260",
+        "270",
+        "206",
+        "82",
+        "920x705x1.800"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1000-10-500 C",
+      "mpn": "1121580524",
+      "page": 46,
+      "rawColumns": [
+        "10",
+        "1.070",
+        "785",
+        "5,5",
+        "1.260",
+        "500",
+        "251",
+        "82",
+        "920x850x1.950"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 780-15-270 C",
+      "mpn": "1121570243",
+      "page": 46,
+      "rawColumns": [
+        "15",
+        "830",
+        "570",
+        "5,5",
+        "980",
+        "270",
+        "213",
+        "80",
+        "920x705x1.800"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 780-15-500 C",
+      "mpn": "1121580540",
+      "page": 46,
+      "rawColumns": [
+        "15",
+        "830",
+        "570",
+        "5,5",
+        "980",
+        "500",
+        "266",
+        "80",
+        "920x850x1.950"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1250-10-90 C",
+      "mpn": "1121560022",
+      "page": 46,
+      "rawColumns": [
+        "10",
+        "1.250",
+        "980",
+        "7,5",
+        "1.240",
+        "90",
+        "199",
+        "84",
+        "975x705x1.245"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1250-10-270 C",
+      "mpn": "1121570235",
+      "page": 46,
+      "rawColumns": [
+        "10",
+        "1.250",
+        "980",
+        "7,5",
+        "1.240",
+        "270",
+        "246",
+        "84",
+        "975x705x1.875"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1250-10-500 C",
+      "mpn": "1121580530",
+      "page": 46,
+      "rawColumns": [
+        "10",
+        "1.250",
+        "980",
+        "7,5",
+        "1.240",
+        "500",
+        "291",
+        "84",
+        "975x850x2.020"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1000-15-270 C",
+      "mpn": "1121570231",
+      "page": 46,
+      "rawColumns": [
+        "15",
+        "1.000",
+        "790",
+        "7,5",
+        "995",
+        "270",
+        "253",
+        "82",
+        "975x705x1.875"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1000-15-500 C",
+      "mpn": "1121580527",
+      "page": 46,
+      "rawColumns": [
+        "15",
+        "1.000",
+        "790",
+        "7,5",
+        "995",
+        "500",
+        "306",
+        "82",
+        "975x850x2.020"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 660-10-90 XS",
+      "mpn": "1121580538",
+      "page": 47,
+      "rawColumns": [
+        "10",
+        "660",
+        "520",
+        "4",
+        "1.025",
+        "90",
+        "162",
+        "69",
+        "775x740x1.275"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 660-10-270 XS",
+      "mpn": "1121570241",
+      "page": 47,
+      "rawColumns": [
+        "10",
+        "660",
+        "520",
+        "4",
+        "1.025",
+        "270",
+        "209",
+        "69",
+        "775x740x1.905"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 660-10-500 XS",
+      "mpn": "1121580536",
+      "page": 47,
+      "rawColumns": [
+        "10",
+        "660",
+        "520",
+        "4",
+        "1.025",
+        "500",
+        "254",
+        "69",
+        "850x850x2.055"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 580-15-270 XS",
+      "mpn": "1121570240",
+      "page": 47,
+      "rawColumns": [
+        "15",
+        "580",
+        "470",
+        "4",
+        "915",
+        "270",
+        "216",
+        "69",
+        "775x740x1.905"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 580-15-500 XS",
+      "mpn": "1121580533",
+      "page": 47,
+      "rawColumns": [
+        "15",
+        "580",
+        "470",
+        "4",
+        "915",
+        "500",
+        "269",
+        "69",
+        "850x850x2.055"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 660-10-270 XDK",
+      "mpn": "1121570207",
+      "page": 48,
+      "rawColumns": [
+        "10",
+        "660",
+        "520",
+        "4",
+        "1.025",
+        "270",
+        "206",
+        "78",
+        "945x705x1.800"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 660-10-500 XDK",
+      "mpn": "1121580535",
+      "page": 48,
+      "rawColumns": [
+        "10",
+        "660",
+        "520",
+        "4",
+        "1.025",
+        "500",
+        "251",
+        "78",
+        "1.070x850x1.945"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 580-15-270 XDK",
+      "mpn": "1121570239",
+      "page": 48,
+      "rawColumns": [
+        "15",
+        "580",
+        "470",
+        "4",
+        "915",
+        "270",
+        "213",
+        "78",
+        "945x705x1.800"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 580-15-500 XDK",
+      "mpn": "1121580532",
+      "page": 48,
+      "rawColumns": [
+        "15",
+        "580",
+        "470",
+        "4",
+        "915",
+        "500",
+        "266",
+        "78",
+        "1.070x850x1.945"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1000-10-270 XDK",
+      "mpn": "1121570204",
+      "page": 48,
+      "rawColumns": [
+        "10",
+        "1.070",
+        "785",
+        "5,5",
+        "1.260",
+        "270",
+        "241",
+        "82",
+        "1.020x705x1.800"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1000-10-500 XDK",
+      "mpn": "1121580503",
+      "page": 48,
+      "rawColumns": [
+        "10",
+        "1.070",
+        "785",
+        "5,5",
+        "1.260",
+        "500",
+        "286",
+        "82",
+        "1.100x850x1.950"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 780-15-500 XDK",
+      "mpn": "1121580504",
+      "page": 48,
+      "rawColumns": [
+        "15",
+        "830",
+        "570",
+        "5,5",
+        "980",
+        "500",
+        "301",
+        "80",
+        "1.100x850x1.950"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1250-10-270 XDK",
+      "mpn": "1121570206",
+      "page": 48,
+      "rawColumns": [
+        "10",
+        "1.250",
+        "980",
+        "7,5",
+        "1.240",
+        "270",
+        "283",
+        "84",
+        "1.070x705x1.875"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1000-15-500 XDK",
+      "mpn": "1121580506",
+      "page": 48,
+      "rawColumns": [
+        "15",
+        "1.000",
+        "790",
+        "7,5",
+        "995",
+        "500",
+        "343",
+        "82",
+        "1.145x850x2.020"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1000-10-270 XDKC",
+      "mpn": "1121570229",
+      "page": 48,
+      "rawColumns": [
+        "10",
+        "1.070",
+        "785",
+        "5,5",
+        "1.260",
+        "270",
+        "241",
+        "82",
+        "1.020x705x1.800"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1000-10-500 XDKC",
+      "mpn": "1121580525",
+      "page": 48,
+      "rawColumns": [
+        "10",
+        "1.070",
+        "785",
+        "5,5",
+        "1.260",
+        "500",
+        "286",
+        "82",
+        "1.100x850x1.950"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 780-15-270 XDKC",
+      "mpn": "1121570244",
+      "page": 48,
+      "rawColumns": [
+        "15",
+        "830",
+        "570",
+        "5,5",
+        "980",
+        "270",
+        "248",
+        "80",
+        "1.020x705x1.800"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 780-15-500 XDKC",
+      "mpn": "1121580541",
+      "page": 48,
+      "rawColumns": [
+        "15",
+        "830",
+        "570",
+        "5,5",
+        "980",
+        "500",
+        "301",
+        "80",
+        "1.100x850x1.950"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1250-10-270 XDKC",
+      "mpn": "1121570236",
+      "page": 48,
+      "rawColumns": [
+        "10",
+        "1.250",
+        "980",
+        "7,5",
+        "1.240",
+        "270",
+        "283",
+        "84",
+        "1.070x705x1.875"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1250-10-500 XDKC",
+      "mpn": "1121580505",
+      "page": 48,
+      "rawColumns": [
+        "10",
+        "1.250",
+        "980",
+        "7,5",
+        "1.240",
+        "500",
+        "328",
+        "84",
+        "1.145x850x2.020"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1000-15-270 XDKC",
+      "mpn": "1121570233",
+      "page": 48,
+      "rawColumns": [
+        "15",
+        "1.000",
+        "790",
+        "7,5",
+        "995",
+        "270",
+        "290",
+        "82",
+        "1.070x705x1.875"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 1000-15-500 XDKC",
+      "mpn": "1121580528",
+      "page": 48,
+      "rawColumns": [
+        "15",
+        "1.000",
+        "790",
+        "7,5",
+        "995",
+        "500",
+        "343",
+        "82",
+        "1.145x850x2.020"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 660-10-270 XSDK",
+      "mpn": "1121570201",
+      "page": 49,
+      "rawColumns": [
+        "10",
+        "660",
+        "520",
+        "4",
+        "1.025",
+        "270",
+        "245",
+        "69",
+        "960x740x1.905"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 660-10-500 XSDK",
+      "mpn": "1121580501",
+      "page": 49,
+      "rawColumns": [
+        "10",
+        "660",
+        "520",
+        "4",
+        "1.025",
+        "500",
+        "290",
+        "69",
+        "1.070x850x2.055"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 580-15-270 XSDK",
+      "mpn": "1121570202",
+      "page": 49,
+      "rawColumns": [
+        "15",
+        "580",
+        "470",
+        "4",
+        "915",
+        "270",
+        "252",
+        "69",
+        "960x740x1.905"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 580-15-500 XSDK",
+      "mpn": "1121580502",
+      "page": 49,
+      "rawColumns": [
+        "15",
+        "580",
+        "470",
+        "4",
+        "915",
+        "500",
+        "305",
+        "69",
+        "1.070x850x2.055"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 660-10-270",
+      "mpn": "1121570208",
+      "page": 50,
+      "rawColumns": [
+        "10",
+        "660",
+        "520",
+        "4",
+        "1.025",
+        "270",
+        "174",
+        "78",
+        "1.620x515x1.205"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 660-10-500",
+      "mpn": "1121580520",
+      "page": 50,
+      "rawColumns": [
+        "10",
+        "660",
+        "520",
+        "4",
+        "1.025",
+        "500",
+        "228",
+        "78",
+        "1.950x625x1.305"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 580-15-270",
+      "mpn": "1121570222",
+      "page": 50,
+      "rawColumns": [
+        "15",
+        "580",
+        "470",
+        "4",
+        "915",
+        "270",
+        "188",
+        "78",
+        "1.620x515x1.205"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 580-15-500",
+      "mpn": "1121580518",
+      "page": 50,
+      "rawColumns": [
+        "15",
+        "580",
+        "470",
+        "4",
+        "915",
+        "500",
+        "244",
+        "78",
+        "1.950x625x1.305"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 1000-10-270",
+      "mpn": "1121570215",
+      "page": 50,
+      "rawColumns": [
+        "10",
+        "1.070",
+        "785",
+        "5,5",
+        "1.260",
+        "270",
+        "210",
+        "82",
+        "1.620x555x1.220"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 1000-10-500",
+      "mpn": "1121580512",
+      "page": 50,
+      "rawColumns": [
+        "10",
+        "1.070",
+        "785",
+        "5,5",
+        "1.260",
+        "500",
+        "264",
+        "82",
+        "1.950x625x1.320"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 780-15-270",
+      "mpn": "1121570225",
+      "page": 50,
+      "rawColumns": [
+        "15",
+        "780",
+        "640",
+        "5,5",
+        "830",
+        "270",
+        "224",
+        "80",
+        "1.620x555x1.220"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 780-15-500",
+      "mpn": "1121580521",
+      "page": 50,
+      "rawColumns": [
+        "15",
+        "780",
+        "640",
+        "5,5",
+        "830",
+        "500",
+        "266",
+        "80",
+        "1.950x625x1.320"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 1250-10-270",
+      "mpn": "1121570219",
+      "page": 50,
+      "rawColumns": [
+        "10",
+        "1.250",
+        "980",
+        "7,5",
+        "1.240",
+        "270",
+        "250",
+        "84",
+        "1.620x555x1.285"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 1000-15-270",
+      "mpn": "1121570217",
+      "page": 50,
+      "rawColumns": [
+        "15",
+        "1.000",
+        "790",
+        "7,5",
+        "995",
+        "270",
+        "264",
+        "82",
+        "1.620x555x1.285"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 1000-15-500",
+      "mpn": "1121580514",
+      "page": 50,
+      "rawColumns": [
+        "15",
+        "1.000",
+        "790",
+        "7,5",
+        "995",
+        "500",
+        "320",
+        "82",
+        "1.950x625x1.380"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 1000-10-270 C",
+      "mpn": "1121570216",
+      "page": 50,
+      "rawColumns": [
+        "10",
+        "1.070",
+        "785",
+        "5,5",
+        "1.260",
+        "270",
+        "210",
+        "82",
+        "1.620x555x1.220"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 1000-10-500 C",
+      "mpn": "1121580513",
+      "page": 50,
+      "rawColumns": [
+        "10",
+        "1.070",
+        "785",
+        "5,5",
+        "1.260",
+        "500",
+        "264",
+        "82",
+        "1.950x625x1.320"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 780-15-270 C",
+      "mpn": "1121570226",
+      "page": 50,
+      "rawColumns": [
+        "15",
+        "780",
+        "640",
+        "5,5",
+        "830",
+        "270",
+        "224",
+        "80",
+        "1.620x555x1.220"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 780-15-500 C",
+      "mpn": "1121580522",
+      "page": 50,
+      "rawColumns": [
+        "15",
+        "780",
+        "640",
+        "5,5",
+        "830",
+        "500",
+        "266",
+        "80",
+        "1.950x625x1.320"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 1250-10-270 C",
+      "mpn": "1121570220",
+      "page": 50,
+      "rawColumns": [
+        "10",
+        "1.250",
+        "980",
+        "7,5",
+        "1.240",
+        "270",
+        "250",
+        "84",
+        "1.620x555x1.285"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 1250-10-500 C",
+      "mpn": "1121580517",
+      "page": 50,
+      "rawColumns": [
+        "10",
+        "1.250",
+        "980",
+        "7,5",
+        "1.240",
+        "500",
+        "304",
+        "84",
+        "1.950x625x1.380"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 1000-15-270 C",
+      "mpn": "1121570218",
+      "page": 50,
+      "rawColumns": [
+        "15",
+        "1.000",
+        "790",
+        "7,5",
+        "995",
+        "270",
+        "264",
+        "82",
+        "1.620x555x1.285"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 1000-15-500 C",
+      "mpn": "1121580515",
+      "page": 50,
+      "rawColumns": [
+        "15",
+        "1.000",
+        "790",
+        "7,5",
+        "995",
+        "500",
+        "320",
+        "82",
+        "1.950x625x1.380"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 660-10-270 XS",
+      "mpn": "1121570224",
+      "page": 51,
+      "rawColumns": [
+        "10",
+        "660",
+        "520",
+        "4",
+        "1.025",
+        "270",
+        "213",
+        "69",
+        "1.620x600x1.315"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 660-10-500 XS",
+      "mpn": "1121580507",
+      "page": 51,
+      "rawColumns": [
+        "10",
+        "660",
+        "520",
+        "4",
+        "1.025",
+        "500",
+        "267",
+        "69",
+        "1.950x670x1.415"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STL 580-15-270 XS",
+      "mpn": "1121570209",
+      "page": 51,
+      "rawColumns": [
+        "15",
+        "580",
+        "470",
+        "4",
+        "915",
+        "270",
+        "227",
+        "69",
+        "1.620x600x1.315"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STB 660-10-10",
+      "mpn": "1121580510",
+      "page": 52,
+      "rawColumns": [
+        "10",
+        "660",
+        "520",
+        "4",
+        "1.025",
+        "10",
+        "94",
+        "78",
+        "945x605x690"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://shop.schneider-airsystems.com/en-GB/products/1121580510/unm-stb-660-10-10",
+        "label": "Schneider, gamme UNM STB, lubrification à huile",
+        "type": "manufacturer"
+      }
+    },
+    {
+      "model": "UNM STB 580-15-10",
+      "mpn": "1121580509",
+      "page": 52,
+      "rawColumns": [
+        "15",
+        "580",
+        "470",
+        "4",
+        "915",
+        "10",
+        "94",
+        "78",
+        "945x605x690"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://shop.schneider-airsystems.com/en-GB/products/1121580510/unm-stb-660-10-10",
+        "label": "Schneider, gamme UNM STB, lubrification à huile",
+        "type": "manufacturer"
+      }
+    },
+    {
+      "model": "UNM STB 1000-10-10",
+      "mpn": "1122030303",
+      "page": 52,
+      "rawColumns": [
+        "10",
+        "1.070",
+        "785",
+        "5,5",
+        "1.260",
+        "10",
+        "130",
+        "82",
+        "950x650x720"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://shop.schneider-airsystems.com/en-GB/products/1121580510/unm-stb-660-10-10",
+        "label": "Schneider, gamme UNM STB, lubrification à huile",
+        "type": "manufacturer"
+      }
+    },
+    {
+      "model": "UNM STB 780-15-10",
+      "mpn": "1122030309",
+      "page": 52,
+      "rawColumns": [
+        "15",
+        "830",
+        "570",
+        "5,5",
+        "980",
+        "10",
+        "130",
+        "80",
+        "950x650x720"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://shop.schneider-airsystems.com/en-GB/products/1121580510/unm-stb-660-10-10",
+        "label": "Schneider, gamme UNM STB, lubrification à huile",
+        "type": "manufacturer"
+      }
+    },
+    {
+      "model": "UNM STB 1250-10-10",
+      "mpn": "1122030307",
+      "page": 52,
+      "rawColumns": [
+        "10",
+        "1.250",
+        "980",
+        "7,5",
+        "1.240",
+        "10",
+        "170",
+        "84",
+        "1.005x650x770"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://shop.schneider-airsystems.com/en-GB/products/1121580510/unm-stb-660-10-10",
+        "label": "Schneider, gamme UNM STB, lubrification à huile",
+        "type": "manufacturer"
+      }
+    },
+    {
+      "model": "UNM STB 1000-15-10",
+      "mpn": "1122030305",
+      "page": 52,
+      "rawColumns": [
+        "15",
+        "1.000",
+        "790",
+        "7,5",
+        "995",
+        "10",
+        "170",
+        "82",
+        "1.005x650x770"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://shop.schneider-airsystems.com/en-GB/products/1121580510/unm-stb-660-10-10",
+        "label": "Schneider, gamme UNM STB, lubrification à huile",
+        "type": "manufacturer"
+      }
+    },
+    {
+      "model": "UNM STB 1000-10-10 C",
+      "mpn": "1122030304",
+      "page": 52,
+      "rawColumns": [
+        "10",
+        "1.070",
+        "785",
+        "5,5",
+        "1.260",
+        "10",
+        "130",
+        "82",
+        "950x650x720"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://shop.schneider-airsystems.com/en-GB/products/1121580510/unm-stb-660-10-10",
+        "label": "Schneider, gamme UNM STB, lubrification à huile",
+        "type": "manufacturer"
+      }
+    },
+    {
+      "model": "UNM STB 780-15-10 C",
+      "mpn": "1122030310",
+      "page": 52,
+      "rawColumns": [
+        "15",
+        "830",
+        "570",
+        "5,5",
+        "980",
+        "10",
+        "130",
+        "80",
+        "950x650x720"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://shop.schneider-airsystems.com/en-GB/products/1121580510/unm-stb-660-10-10",
+        "label": "Schneider, gamme UNM STB, lubrification à huile",
+        "type": "manufacturer"
+      }
+    },
+    {
+      "model": "UNM STB 1250-10-10 C",
+      "mpn": "1122030308",
+      "page": 52,
+      "rawColumns": [
+        "10",
+        "1.250",
+        "980",
+        "7,5",
+        "1.240",
+        "10",
+        "170",
+        "84",
+        "1.005x650x770"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://shop.schneider-airsystems.com/en-GB/products/1121580510/unm-stb-660-10-10",
+        "label": "Schneider, gamme UNM STB, lubrification à huile",
+        "type": "manufacturer"
+      }
+    },
+    {
+      "model": "UNM STB 1000-15-10 C",
+      "mpn": "1122030306",
+      "page": 52,
+      "rawColumns": [
+        "15",
+        "1.000",
+        "790",
+        "7,5",
+        "995",
+        "10",
+        "170",
+        "82",
+        "1.005x650x770"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://shop.schneider-airsystems.com/en-GB/products/1121580510/unm-stb-660-10-10",
+        "label": "Schneider, gamme UNM STB, lubrification à huile",
+        "type": "manufacturer"
+      }
+    },
+    {
+      "model": "UNM STB 660-10-10 XS",
+      "mpn": "1122030301",
+      "page": 52,
+      "rawColumns": [
+        "10",
+        "660",
+        "520",
+        "4",
+        "1.025",
+        "10",
+        "133",
+        "69",
+        "920x700x820"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 1,
+      "oilEvidence": {
+        "url": "https://shop.schneider-airsystems.com/en-GB/products/1121580510/unm-stb-660-10-10",
+        "label": "Schneider, gamme UNM STB, lubrification à huile",
+        "type": "manufacturer"
+      }
+    },
+    {
+      "model": "UNM STB 580-15-10 XS",
+      "mpn": "1122030302",
+      "page": 52,
+      "rawColumns": [
+        "15",
+        "580",
+        "470",
+        "4",
+        "915",
+        "10",
+        "133",
+        "69",
+        "920x700x820"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 1,
+      "oilEvidence": {
+        "url": "https://shop.schneider-airsystems.com/en-GB/products/1121580510/unm-stb-660-10-10",
+        "label": "Schneider, gamme UNM STB, lubrification à huile",
+        "type": "manufacturer"
+      }
+    },
+    {
+      "model": "UNM STH 650-10-180",
+      "mpn": "1121560024",
+      "page": 53,
+      "rawColumns": [
+        "10",
+        "650",
+        "520",
+        "4",
+        "1.025",
+        "2x90",
+        "175",
+        "83",
+        "1.200x800x1.240"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 0,
+      "oilEvidence": {
+        "url": "https://j-kesselshop.cstatic.io/media/pdf/H11201757454f67a427e.pdf",
+        "label": "Schneider, notice originale UNM STH 650-10-180, entretien de la lubrification",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM STS 630-10-270 Base",
+      "mpn": "1121570203",
+      "page": 53,
+      "rawColumns": [
+        "10",
+        "630",
+        "500",
+        "4",
+        "970",
+        "270",
+        "169",
+        "77",
+        "750x705x1.800"
+      ],
+      "flowBasis": "ISO1217-published-pressure-minus-1-bar",
+      "oilType": "oil",
+      "imageIndex": 1,
+      "oilEvidence": {
+        "url": "https://www.j-kesselshop.de/media/pdf/H863000_Betriebsanleitung_Schneider.pdf#page=14",
+        "label": "Schneider, notice originale UNM STS/STL, entretien de la lubrification, p. II/4",
+        "type": "manual"
+      }
+    },
+    {
+      "model": "UNM 240-8-40 W Clean",
+      "mpn": "DGKH332000",
+      "page": 68,
+      "rawColumns": [
+        "8",
+        "240",
+        "170",
+        "1,5",
+        "230",
+        "1.450",
+        "40",
+        "46",
+        "66",
+        "600x410x770"
+      ],
+      "flowBasis": "published-at-5-bar",
+      "oilType": "oil-free",
+      "imageIndex": 0
+    },
+    {
+      "model": "UNM 240-8-40 WXM Clean",
+      "mpn": "DGKH332010",
+      "page": 68,
+      "rawColumns": [
+        "8",
+        "240",
+        "152",
+        "1,5",
+        "230",
+        "1.450",
+        "40",
+        "50",
+        "66",
+        "710x410x770"
+      ],
+      "flowBasis": "published-at-5-bar",
+      "oilType": "oil-free",
+      "imageIndex": 1
+    },
+    {
+      "model": "UNM 240-8-40 WXS Clean",
+      "mpn": "DGKH332100",
+      "page": 69,
+      "rawColumns": [
+        "8",
+        "240",
+        "170",
+        "1,5",
+        "230",
+        "1.450",
+        "40",
+        "50",
+        "56",
+        "600x460x890"
+      ],
+      "flowBasis": "published-at-5-bar",
+      "oilType": "oil-free",
+      "imageIndex": 0
+    },
+    {
+      "model": "UNM 240-8-40 WXSM Clean",
+      "mpn": "DGKH332110",
+      "page": 69,
+      "rawColumns": [
+        "8",
+        "240",
+        "152",
+        "1,5",
+        "230",
+        "1.450",
+        "40",
+        "54",
+        "56",
+        "710x460x890"
+      ],
+      "flowBasis": "published-at-5-bar",
+      "oilType": "oil-free",
+      "imageIndex": 1
+    },
+    {
+      "model": "UNM 360-8-40 W Clean",
+      "mpn": "DGKH342000",
+      "page": 70,
+      "rawColumns": [
+        "8",
+        "360",
+        "250",
+        "2,2",
+        "230",
+        "1.450",
+        "40",
+        "54",
+        "66",
+        "600x410x810"
+      ],
+      "flowBasis": "published-at-5-bar",
+      "oilType": "oil-free",
+      "imageIndex": 0
+    },
+    {
+      "model": "UNM 360-8-40 WXM Clean",
+      "mpn": "DGKH342010",
+      "page": 70,
+      "rawColumns": [
+        "8",
+        "360",
+        "225",
+        "2,2",
+        "230",
+        "1.450",
+        "40",
+        "58",
+        "66",
+        "710x410x810"
+      ],
+      "flowBasis": "published-at-5-bar",
+      "oilType": "oil-free",
+      "imageIndex": 1
+    },
+    {
+      "model": "UNM 360-8-40 WXS Clean",
+      "mpn": "DGKH342100",
+      "page": 70,
+      "rawColumns": [
+        "8",
+        "360",
+        "250",
+        "2,2",
+        "230",
+        "1.450",
+        "40",
+        "102",
+        "53",
+        "490x720x890"
+      ],
+      "flowBasis": "published-at-5-bar",
+      "oilType": "oil-free",
+      "imageIndex": 2
+    },
+    {
+      "model": "UNM 360-8-40 WXSM Clean",
+      "mpn": "DGKH342110",
+      "page": 70,
+      "rawColumns": [
+        "8",
+        "360",
+        "225",
+        "2,2",
+        "230",
+        "1.450",
+        "40",
+        "106",
+        "53",
+        "490x720x890"
+      ],
+      "flowBasis": "published-at-5-bar",
+      "oilType": "oil-free",
+      "imageIndex": 3
+    },
+    {
+      "model": "UNM 720-8-90 D Clean",
+      "mpn": "DGKH362000",
+      "page": 71,
+      "rawColumns": [
+        "8",
+        "720",
+        "500",
+        "2x2,2",
+        "400",
+        "1.450",
+        "90",
+        "113",
+        "69",
+        "1.100x600x820"
+      ],
+      "flowBasis": "published-at-5-bar",
+      "oilType": "oil-free",
+      "imageIndex": 0
+    },
+    {
+      "model": "UNM 720-8-90 DXM Clean",
+      "mpn": "DGKH362010",
+      "page": 71,
+      "rawColumns": [
+        "8",
+        "720",
+        "450",
+        "2x2,2",
+        "400",
+        "1.450",
+        "90",
+        "118",
+        "69",
+        "1.100x630x820"
+      ],
+      "flowBasis": "published-at-5-bar",
+      "oilType": "oil-free",
+      "imageIndex": 1
+    },
+    {
+      "model": "SEM 110-10-6 WOF",
+      "mpn": "4116000663",
+      "page": 39,
+      "rawColumns": [
+        "10",
+        "108",
+        "60",
+        "0,75",
+        "230",
+        "1.450",
+        "6",
+        "20",
+        "59",
+        "79",
+        "449x262x436"
+      ],
+      "flowBasis": "filling-without-pressure",
+      "oilType": "oil-free",
+      "imageIndex": 0
+    },
+    {
+      "model": "UNM 220-9-25 WSOF",
+      "mpn": "1129741354",
+      "page": 41,
+      "rawColumns": [
+        "9",
+        "230",
+        "95",
+        "1,5",
+        "230",
+        "1.420",
+        "24",
+        "24",
+        "62",
+        "85",
+        "616x300x574"
+      ],
+      "flowBasis": "filling-without-pressure",
+      "oilType": "oil-free",
+      "imageIndex": 0
+    },
+    {
+      "model": "UNM 220-9-50 WSOF",
+      "mpn": "1129741355",
+      "page": 41,
+      "rawColumns": [
+        "9",
+        "230",
+        "95",
+        "1,5",
+        "230",
+        "1.420",
+        "50",
+        "24",
+        "62",
+        "85",
+        "806x385x609"
+      ],
+      "flowBasis": "filling-without-pressure",
+      "oilType": "oil-free",
+      "imageIndex": 0
+    },
+    {
+      "model": "CPM 220-9-20 WSOF",
+      "mpn": "1129741353",
+      "page": 42,
+      "rawColumns": [
+        "9",
+        "230",
+        "95",
+        "1,5",
+        "230",
+        "1.420",
+        "20",
+        "33",
+        "62",
+        "85",
+        "479x385x793"
+      ],
+      "flowBasis": "filling-without-pressure",
+      "oilType": "oil-free",
+      "imageIndex": 0
+    }
+  ]
+}

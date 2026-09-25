@@ -7,16 +7,16 @@ import { decisionComparisons, resolveDecisionComparison } from '../data/decision
 import { directPurchaseLinks, directPurchaseLinkSchema, purchaseLinksForProduct } from '../data/direct-purchase-links';
 
 describe('pages de décision sourcées', () => {
-	it('reconcilie la photographie mensuelle avec les mesures courantes', () => {
+	it('conserve la photographie mensuelle après un élargissement du catalogue', () => {
 		const metrics = documentQualityObservatory.metrics;
-		expect(documentQualityHistory.snapshots.at(-1)!.metrics).toEqual({
-			correctionMedianDays: metrics.correctionLeadTime.medianDays,
-			measurableCorrectionCount: metrics.correctionLeadTime.measuredCount,
-			multiPressureFadPercentage: metrics.multiPressureFad.percentage,
-			referenceBaselineCoveragePercent: Math.round((metrics.referenceStability.monitoredCount - metrics.referenceStability.missingBaselineCount) / metrics.referenceStability.monitoredCount * 100),
-			referenceChangeCount: metrics.referenceStability.changeCount,
-			contradictionResponseRate: metrics.contradictionResponses.responseRate,
+		// Cette photographie a été publiée avant l'ajout des 200 références du soir.
+		// Son dénominateur historique ne doit pas être remplacé par le catalogue courant.
+		expect(documentQualityHistory.snapshots.at(-1)).toMatchObject({
+			capturedAt: '2026-09-25',
+			metrics: { multiPressureFadPercentage: 47, referenceBaselineCoveragePercent: 100 },
 		});
+		expect(metrics.multiPressureFad.percentage).toBe(Math.round(compressors.filter((item) => item.fadCurve.length >= 2).length / compressors.length * 100));
+		expect(metrics.referenceStability.missingBaselineCount).toBe(0);
 	});
 
 	it('exige un dossier et des preuves résolues pour chaque référence du catalogue', () => {

@@ -98,7 +98,7 @@ const toolBaseSchema = z.object({
 		'gonflage', 'lime-bande', 'meuleuse', 'perceuse', 'pistolet-cartouche',
 		'pistolet-peinture-hvlp', 'pistolet-peinture-lvlp', 'polisseuse', 'ponceuse-bande',
 		'ponceuse-orbitale', 'riveteuse', 'sableuse', 'scie', 'soufflette', 'tronconneuse',
-		'grignoteuse', 'visseuse',
+		'grignoteuse', 'visseuse', 'ponceuse-vibrante', 'ponceuse-rotative', 'fouloir', 'graveur',
 	]),
 	category: z.string().min(1),
 	label: z.string().min(1),

@@ -1,4 +1,8 @@
 export const toolTaxonomy = [
+	{ id: 'fouloir', label: 'Fouloir pneumatique', aliases: ['Fouloir de fonderie'] },
+	{ id: 'graveur', label: 'Graveur pneumatique', aliases: ['Stylo graveur'] },
+	{ id: 'ponceuse-vibrante', label: 'Ponceuse vibrante', aliases: [] },
+	{ id: 'ponceuse-rotative', label: 'Ponceuse rotative', aliases: [] },
 	{ id: 'cle-a-chocs', label: 'Clé à chocs', aliases: ['Clé à choc pneumatique'] },
 	{ id: 'cle-a-cliquet', label: 'Clé à cliquet pneumatique', aliases: [] },
 	{ id: 'visseuse', label: 'Visseuse pneumatique', aliases: [] },
@@ -45,6 +49,14 @@ export function toolCategoryLabel(categoryId: ToolCategoryId) {
  * mise en peinture. Ce niveau est celui affiché dans « Usages suivis ».
  */
 export const toolUsageTaxonomy = [
+	{
+		id: 'fonderie', label: 'Tasser le sable de fonderie', seoTitle: 'Fouloirs pneumatiques de fonderie',
+		description: 'Fouloirs classés par consommation en charge, pression et dimensions publiées.', categoryIds: ['fouloir'],
+	},
+	{
+		id: 'gravure', label: 'Graver et marquer', seoTitle: 'Graveurs pneumatiques',
+		description: 'Stylos graveurs pneumatiques avec besoin en air et pression documentés.', categoryIds: ['graveur'],
+	},
 	{
 		id: 'serrage',
 		label: 'Serrer et desserrer',
@@ -99,7 +111,7 @@ export const toolUsageTaxonomy = [
 		label: 'Poncer et polir',
 		seoTitle: 'Ponceuses et polisseuses pneumatiques',
 		description: 'Ponceuses orbitales, à bande et polisseuses reliées à leurs caractéristiques et sources fabricant.',
-		categoryIds: ['ponceuse-bande', 'ponceuse-orbitale', 'polisseuse'],
+		categoryIds: ['ponceuse-bande', 'ponceuse-orbitale', 'ponceuse-vibrante', 'ponceuse-rotative', 'polisseuse'],
 	},
 	{
 		id: 'burinage',

@@ -19,6 +19,8 @@ export const toolGuideByCategoryId: Partial<Record<ToolProfile['categoryId'], `/
 	polisseuse: '/guides/compresseur-ponceuse-bande-lime-polisseuse-pneumatique/',
 	'ponceuse-bande': '/guides/compresseur-ponceuse-bande-lime-polisseuse-pneumatique/',
 	'ponceuse-orbitale': '/guides/compresseur-pour-ponceuse-pneumatique/',
+	'ponceuse-vibrante': '/guides/compresseur-pour-ponceuse-pneumatique/',
+	'ponceuse-rotative': '/guides/compresseur-pour-ponceuse-pneumatique/',
 	sableuse: '/guides/compresseur-pour-sablage-pneumatique/',
 	scie: '/guides/compresseur-pour-scie-sabre-pneumatique/',
 	soufflette: '/guides/soufflette-garage-securite-bruit-consommation/',

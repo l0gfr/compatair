@@ -5,6 +5,7 @@ import { gzipSync } from 'node:zlib';
 import { readImageDimensions } from '../src/domain/image-dimensions.ts';
 import { toolUsageTaxonomy } from '../src/data/taxonomy.ts';
 import { brandSlug } from '../src/domain/brand.ts';
+import { FAD_COMPARISON_PAGE_SIZE } from '../src/domain/pagination.ts';
 import { parseJavaScriptModuleSpecifiers } from './lib/javascript-module-graph.mjs';
 import { decodeXmlEntities as decodeXml, extractH1Text } from './lib/markup-text.mjs';
 
@@ -690,6 +691,17 @@ for (const brand of compressorBrands) {
 		if (!html.includes(`data-fad-brand-directory="${brandSlug(brand)}"`)) errors.push(`architecture FAD: marqueur de tableau absent ${path}`);
 	}
 	if (!fadDirectoryHtml.includes(`href="${path}"`)) errors.push(`architecture FAD: marque non reliée depuis le hub ${path}`);
+	const documented = renderedCatalog.compressors.filter((item) => item.brand === brand && item.fadCurve.length > 0);
+	const pageCount = Math.max(1, Math.ceil(documented.length / FAD_COMPARISON_PAGE_SIZE));
+	for (let page = 1; page <= pageCount; page += 1) {
+		const pagePath = page === 1 ? path : `${path}page/${page}/`;
+		if (!sitePaths.has(pagePath)) { errors.push(`architecture FAD: page absente ${pagePath}`); continue; }
+		const html = await readFile(join(root, `${pagePath}index.html`), 'utf8');
+		for (const item of documented.slice((page - 1) * FAD_COMPARISON_PAGE_SIZE, page * FAD_COMPARISON_PAGE_SIZE)) {
+			if (!html.includes(`href="/compresseurs/${item.slug}/"`)) errors.push(`architecture FAD: référence absente de ${pagePath}: ${item.id}`);
+		}
+		if (page < pageCount && !html.includes(`href="${path}page/${page + 1}/"`)) errors.push(`architecture FAD: page suivante inaccessible depuis ${pagePath}`);
+	}
 }
 
 for (const file of htmlFiles) {

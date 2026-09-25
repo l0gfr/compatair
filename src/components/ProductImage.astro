@@ -7,5 +7,5 @@ const { width, height } = productImageDimensions(image.src);
 ---
 <figure class:list={['product-visual', compact && 'compact']}>
 	<img src={image.src} alt={image.alt} width={width} height={height} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchpriority={eager ? 'high' : 'auto'} />
-	{!compact && <figcaption>Photo : <a href={image.sourceUrl} rel="nofollow noopener" target="_blank">{image.sourceLabel}</a></figcaption>}
+	{!compact && <figcaption>Visuel : <a href={image.sourceUrl} rel="nofollow noopener" target="_blank">{image.sourceLabel}</a></figcaption>}
 </figure>

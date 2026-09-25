@@ -1,0 +1,16 @@
+---
+import FadBrandDirectoryPage from '../../../../../../components/FadBrandDirectoryPage.astro';
+import { compressors } from '../../../../../../data/catalog';
+import { brandSlug } from '../../../../../../domain/brand';
+import { FAD_COMPARISON_PAGE_SIZE } from '../../../../../../domain/pagination';
+
+export function getStaticPaths() {
+	return [...new Set(compressors.map((item) => item.brand))].flatMap((brand) => {
+		const count = compressors.filter((item) => item.brand === brand && item.fadCurve.length > 0).length;
+		const pages = Math.max(1, Math.ceil(count / FAD_COMPARISON_PAGE_SIZE));
+		return Array.from({ length: pages - 1 }, (_, index) => ({ params: { brand: brandSlug(brand), page: String(index + 2) }, props: { brand, page: index + 2 } }));
+	});
+}
+const { brand, page } = Astro.props;
+---
+<FadBrandDirectoryPage brand={brand} page={page} />

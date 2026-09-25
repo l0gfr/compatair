@@ -1,4 +1,5 @@
 export const DIRECTORY_PAGE_SIZE = 20;
+export const FAD_COMPARISON_PAGE_SIZE = 48;
 
 export type PaginationItem =
 	| { type: 'page'; page: number }

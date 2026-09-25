@@ -99,6 +99,15 @@ function projectFieldSources(fieldSources: Record<string, string[]>, fields: str
 	return Object.fromEntries(fields.flatMap((field) => fieldSources[field]?.length ? [[field, fieldSources[field]]] : []));
 }
 
+const compressorRuntimeFields = ['fadCurve', 'maxPressureBar', 'voltage', 'phase', 'powerKw', 'noiseDb', 'mobility'];
+
+function compressorRuntimeEvidence(item: Compressor) {
+	const ids = new Set(Object.values(projectFieldSources(item.fieldSources, [...compressorRuntimeFields, 'tankLiters', 'dutyCycle'])).flat());
+	// Les preuves de champs absents de ce payload restent dans le catalogue complet.
+	// Les anciennes fiches sans attribution par champ conservent leurs sources.
+	return (ids.size ? item.evidence.filter((evidence) => ids.has(evidence.id)) : item.evidence).map(projectEvidence);
+}
+
 export function createRuntimeCatalog(compressors: Compressor[], tools: ToolProfile[], catalogVerifiedAt: string, catalogVersion: string): RuntimeCatalog {
 	return runtimeCatalogSchema.parse({
 		schemaVersion: RUNTIME_CATALOG_SCHEMA_VERSION,
@@ -119,8 +128,8 @@ export function createRuntimeCatalog(compressors: Compressor[], tools: ToolProfi
 			noiseDb: item.noiseDb,
 			mobility: item.mobility,
 			confidence: item.confidence,
-			evidence: item.evidence.map(projectEvidence),
-			fieldSources: projectFieldSources(item.fieldSources, ['fadCurve', 'maxPressureBar', 'voltage', 'phase', 'powerKw', 'noiseDb', 'mobility']),
+			evidence: compressorRuntimeEvidence(item),
+			fieldSources: projectFieldSources(item.fieldSources, compressorRuntimeFields),
 		})),
 		tools: tools.map((item) => ({
 			id: item.id,

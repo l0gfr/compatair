@@ -2,7 +2,7 @@
 
 CompatAir is a read-only, deterministic decision, evidence and data service for compressed-air systems. It answers whether a configuration works, why it fails, which minimal change can fix it, and how to build a complete system. It is not a checkout and must not be treated as a generic merchant catalog. The main decision-core MCP endpoint is https://compatair.fr/mcp and uses Streamable HTTP. Advanced tools use https://compatair.fr/mcp/extended; historical tools use https://compatair.fr/mcp/legacy. The UCP discovery profile is https://compatair.fr/.well-known/ucp. The current public method version is 2026.07.
 
-The catalog has 140 compressors and 160 tools: 22,400 explorable combinations. This is not a claim of 22,400 precomputed verdicts. The fixed snapshot contains 20,860 audited verdicts for 149 fixed-flow tools; 1,540 combinations across 11 tools require action rate or volume and target time. The fixed mix is 7,014 continuous, 13,022 incompatible and 824 insufficient-data pairs, or 96.0% conclusive. A high incompatible share is filtering value in a broad cross-brand corpus, not an API performance metric.
+The catalog has 239 compressors and 261 tools: 62,379 explorable combinations. This is not a claim of 62,379 precomputed verdicts. The fixed snapshot contains 59,750 audited verdicts for 250 fixed-flow tools; 2,629 combinations across 11 tools require action rate or volume and target time. The fixed mix is 23,190 continuous, 31,892 incompatible and 4,668 insufficient-data pairs, or 92.2% conclusive. A high incompatible share is filtering value in a broad cross-brand corpus, not an API performance metric.
 
 ## Non-negotiable interpretation rules
 
