@@ -39,9 +39,9 @@ describe('immutable catalog and verdict snapshots', () => {
 
 	it('accounts for every pair in the summary', () => {
 		expect(Object.values(verdicts.summary).reduce((total, value) => total + value, 0)).toBe(verdicts.pairs.length);
-		expect(verdicts.summary).toEqual({ continuous: 77_231, intermittent: 0, incompatible: 198_851, insufficient_data: 22_668 });
-		expect(verdicts.conclusive).toEqual({ count: 276_082, percentage: 92.4 });
-		expect(verdicts.scope).toMatchObject({ explorable_combination_count: 301_379, fixed_verdict_count: 298_750, parametric_combination_count: 2_629 });
+		expect(verdicts.summary).toEqual({ continuous: 114_636, intermittent: 0, incompatible: 271_946, insufficient_data: 31_668 });
+		expect(verdicts.conclusive).toEqual({ count: 386_582, percentage: 92.4 });
+		expect(verdicts.scope).toMatchObject({ explorable_combination_count: 420_879, fixed_verdict_count: 418_250, parametric_combination_count: 2_629 });
 		expect(verdicts.verdictVersion).toMatch(/^[a-f0-9]{64}$/);
 	});
 });

@@ -22,9 +22,9 @@ const maximumDocumentTitleLength = 60;
 const maximumInitialPageScriptBytesGzip = 50 * 1024;
 const maximumPassportInitialScriptBytesGzip = 45 * 1024;
 const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
-// 1 500 références : 73 Ko gzip de données calculateur ; les budgets JavaScript restent inchangés.
-const maximumRuntimeCatalogBytesGzip = 80 * 1024;
-const maximumSearchIndexBytesGzip = 64 * 1024;
+// 2 000 références : 101 Ko gzip de données calculateur ; les budgets JavaScript restent inchangés.
+const maximumRuntimeCatalogBytesGzip = 104 * 1024;
+const maximumSearchIndexBytesGzip = 80 * 1024;
 const maximumIndexableInternalDestinationsBeforeWarning = 100;
 const maximumIndexableInternalDestinations = 120;
 const maximumStaticCompatibilityResultsBySection = new Map([
@@ -32,9 +32,9 @@ const maximumStaticCompatibilityResultsBySection = new Map([
 	['outils-pneumatiques', 5],
 	['quel-compresseur-pour', 6],
 ]);
-const maximumHtmlArtifactBytes = 96 * 1024 * 1024;
-// 298 750 verdicts publics complets et 1 500 fiches : artefact mesuré à 306 Mo, dont 85 Mo de HTML.
-const maximumTotalArtifactBytes = 336 * 1024 * 1024;
+const maximumHtmlArtifactBytes = 128 * 1024 * 1024;
+// 418 250 verdicts publics complets et 2 000 fiches : artefact mesuré à 420 Mo, dont 115 Mo de HTML.
+const maximumTotalArtifactBytes = 464 * 1024 * 1024;
 const maximumJourneyVideoBytes = 16 * 1024 * 1024;
 // Les pages produits réutilisent des cartes de catalogue afin que le temps de build ne croisse pas avec chaque référence.
 const maximumSocialImageCount = 80;

@@ -71,7 +71,7 @@ export function buildCatalogIndexSource(kind, files) {
 	const names = files.map((file) => basename(file, '.ts')).sort();
 	const imports = names.map((name, index) => `import product${index + 1} from './${name}';`).join('\n');
 	const entries = names.map((_, index) => `\tproduct${index + 1},`).join('\n');
-	return `${imports}\n\nexport const ${exportName} = [\n${entries}\n];\n`;
+	return `${imports}\n\n// Raw records are validated by the catalog schema before use.\nexport const ${exportName} = Array.of<unknown>(\n${entries}\n);\n`;
 }
 
 export async function loadCatalogProducts(root, kind) {

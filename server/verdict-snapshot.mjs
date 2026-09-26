@@ -2,15 +2,41 @@ import { createReadStream } from 'node:fs';
 
 const indexes = new WeakMap();
 
-// Pair ids repeat two already interned identifiers. Derive them only on output.
+// Pair ids and calculation payloads repeat across tools with the same demand.
+// Share immutable payloads; materialize complete records only for serialization.
+const payloadFields = new Set(['verdict', 'confidence', 'limitingFactor', 'requiredFadLpm', 'averageDemandLpm', 'availableFadLpm', 'availableFadBasis', 'availableFadReferencePressureBar', 'marginPercent', 'warnings', 'calculationVersion']);
 class CompactPair {
+	#payload;
+	constructor(compressorId, toolId, payload) {
+		this.compressorId = compressorId;
+		this.toolId = toolId;
+		this.#payload = payload;
+	}
 	get id() { return `${this.compressorId}--${this.toolId}`; }
-	toJSON() { return { id: this.id, ...this }; }
+	get verdict() { return this.#payload.verdict; }
+	get confidence() { return this.#payload.confidence; }
+	get limitingFactor() { return this.#payload.limitingFactor; }
+	get requiredFadLpm() { return this.#payload.requiredFadLpm; }
+	get averageDemandLpm() { return this.#payload.averageDemandLpm; }
+	get availableFadLpm() { return this.#payload.availableFadLpm; }
+	get availableFadBasis() { return this.#payload.availableFadBasis; }
+	get availableFadReferencePressureBar() { return this.#payload.availableFadReferencePressureBar; }
+	get marginPercent() { return this.#payload.marginPercent; }
+	get warnings() { return this.#payload.warnings; }
+	get calculationVersion() { return this.#payload.calculationVersion; }
+	toJSON() { return { id: this.id, compressorId: this.compressorId, toolId: this.toolId, ...this.#payload }; }
 }
-function compactPair(pair) {
-	if (Object.keys(pair)[0] !== 'id' || pair.id !== `${pair.compressorId}--${pair.toolId}` || Object.hasOwn(pair, 'toJSON')) return pair;
-	const { id: _id, ...fields } = pair;
-	return Object.setPrototypeOf(fields, CompactPair.prototype);
+function compactPair(pair, payloads) {
+	const keys = Object.keys(pair);
+	if (keys.slice(0, 3).join(',') !== 'id,compressorId,toolId' || pair.id !== `${pair.compressorId}--${pair.toolId}` || keys.slice(3).some(key => !payloadFields.has(key))) return pair;
+	const { id: _id, compressorId, toolId, ...fields } = pair;
+	const key = JSON.stringify(fields);
+	let payload = payloads.get(key);
+	if (!payload) {
+		payload = fields;
+		if (payloads.size < 20_000) payloads.set(key, payload);
+	}
+	return new CompactPair(compressorId, toolId, payload);
 }
 
 export function verdictIndex(snapshot) {
@@ -51,6 +77,7 @@ export async function readVerdictSnapshot(path, { compactIds = false } = {}) {
 	const pairs = [];
 	const strings = new Map();
 	const warningLists = new Map();
+	const payloads = new Map();
 	const intern = (value) => {
 		if (typeof value !== 'string') return value;
 		const existing = strings.get(value);
@@ -100,7 +127,7 @@ export async function readVerdictSnapshot(path, { compactIds = false } = {}) {
 						}
 						pair.warnings = warnings;
 					}
-					pairs.push(compactIds ? compactPair(pair) : pair);
+					pairs.push(compactIds ? compactPair(pair, payloads) : pair);
 					buffer = buffer.slice(position);
 					position = 0;
 					state = 'comma';

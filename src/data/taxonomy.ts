@@ -1,4 +1,8 @@
 export const toolTaxonomy = [
+	{ id: 'boulonneuse', label: 'Boulonneuse pneumatique', aliases: [] },
+	{ id: 'cle-a-impulsions', label: 'Clé à impulsions pneumatique', aliases: [] },
+	{ id: 'taraudeuse', label: 'Taraudeuse pneumatique', aliases: [] },
+	{ id: 'marteau-a-river', label: 'Marteau à river pneumatique', aliases: [] },
 	{ id: 'fouloir', label: 'Fouloir pneumatique', aliases: ['Fouloir de fonderie'] },
 	{ id: 'graveur', label: 'Graveur pneumatique', aliases: ['Stylo graveur'] },
 	{ id: 'ponceuse-vibrante', label: 'Ponceuse vibrante', aliases: [] },
@@ -61,8 +65,8 @@ export const toolUsageTaxonomy = [
 		id: 'serrage',
 		label: 'Serrer et desserrer',
 		seoTitle: 'Outils pneumatiques de serrage',
-		description: 'Clés à chocs et clés à cliquet regroupées par besoin en air, pression publiée et qualité documentaire.',
-		categoryIds: ['cle-a-chocs', 'cle-a-cliquet'],
+		description: 'Clés à chocs, clés à cliquet, boulonneuses et clés à impulsions regroupées par besoin en air, pression publiée et qualité documentaire.',
+		categoryIds: ['cle-a-chocs', 'cle-a-cliquet', 'boulonneuse', 'cle-a-impulsions'],
 	},
 	{
 		id: 'vissage',
@@ -73,10 +77,10 @@ export const toolUsageTaxonomy = [
 	},
 	{
 		id: 'percage',
-		label: 'Percer',
-		seoTitle: 'Perceuses pneumatiques',
-		description: 'Perceuses pneumatiques classées par référence, débit demandé, pression de travail et niveau de preuve.',
-		categoryIds: ['perceuse'],
+		label: 'Percer et tarauder',
+		seoTitle: 'Perceuses et taraudeuses pneumatiques',
+		description: 'Perceuses et taraudeuses pneumatiques classées par référence, débit demandé, pression de travail et niveau de preuve.',
+		categoryIds: ['perceuse', 'taraudeuse'],
 	},
 	{
 		id: 'soufflage',
@@ -151,9 +155,9 @@ export const toolUsageTaxonomy = [
 	{
 		id: 'rivetage',
 		label: 'Riveter et sertir',
-		seoTitle: 'Riveteuses pneumatiques',
-		description: 'Riveteuses regroupées par besoin en air, pression publiée, référence fabricant et qualité de source.',
-		categoryIds: ['riveteuse'],
+		seoTitle: 'Riveteuses et marteaux à river pneumatiques',
+		description: 'Riveteuses et marteaux à river regroupés par besoin en air, pression publiée, référence fabricant et qualité de source.',
+		categoryIds: ['riveteuse', 'marteau-a-river'],
 	},
 ] as const satisfies ReadonlyArray<{
 	id: string;

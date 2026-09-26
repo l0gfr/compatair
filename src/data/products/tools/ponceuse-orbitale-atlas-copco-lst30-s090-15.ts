@@ -1,0 +1,185 @@
+// Source facts: atlas-copco-reviewed-2026-09-26.json.
+const product = {
+  "id": "atlas-copco-8423036198",
+  "slug": "ponceuse-orbitale-atlas-copco-lst30-s090-15",
+  "categoryId": "ponceuse-orbitale",
+  "category": "Ponceuse orbitale pneumatique",
+  "label": "Ponceuse orbitale pneumatique Atlas Copco LST30 S090-15",
+  "brand": "Atlas Copco",
+  "model": "LST30 S090-15",
+  "mpn": "8423036198",
+  "variant": {
+    "familyId": "atlas-copco-20543270155",
+    "label": "LST30 S090-15",
+    "distinguishingAttributes": {
+      "Vitesse maximale à vide": "9000 tr/min",
+      "Puissance maximale": "0,3 kW",
+      "Masse": "1,1 kg",
+      "Longueur": "175 mm",
+      "Forme": "Vertical",
+      "Filetage de broche": "5/16-24 UNF",
+      "Dimensions du plateau": "150 mm",
+      "Diamètre d’orbite": "8 mm",
+      "Hauteur au-dessus de la broche": "118 mm",
+      "Consommation à vide": "450 L/min (7.5 l/s)",
+      "Pression de référence des performances": "6,3 bar"
+    }
+  },
+  "demandModel": "fixed-flow",
+  "workingPressureBar": {
+    "min": 6.3,
+    "typical": 6.3,
+    "max": 6.3
+  },
+  "airflowLpm": {
+    "min": 450,
+    "typical": 450,
+    "max": 450
+  },
+  "usagePattern": "continuous",
+  "confidence": "A",
+  "recommendedHose": {
+    "innerDiameterMm": 8
+  },
+  "image": {
+    "src": "/images/products/atlas-copco-8423036198-technical.webp",
+    "alt": "Atlas Copco LST30 S090-15, référence 8423036198 : 450 L/min à vide, référence 6,3 bar",
+    "sourceUrl": "https://www.atlascopco.com/en-ca/itba/products/material-removal-tools/surface-sanding-and-polishing/lst30-s090-15-sku8423036198",
+    "sourceLabel": "Repères techniques CompatAir d’après Atlas Copco"
+  },
+  "editorial": {
+    "overview": "Atlas Copco LST30 S090-15, référence 8423036198, demande 450 L/min à vide selon la fiche fabricant. Le dimensionnement utilise la pression de référence de 6,3 bar documentée dans le catalogue Industrial Tools and Solutions UK. Vitesse maximale à vide : 9000 tr/min. Puissance maximale : 0,3 kW.",
+    "verifiedFacts": [
+      "Vitesse maximale à vide : 9000 tr/min.",
+      "Puissance maximale : 0,3 kW.",
+      "Masse : 1,1 kg.",
+      "Longueur : 175 mm.",
+      "Consommation à vide : 450 L/min, convertis depuis 7.5 l/s.",
+      "Flexible recommandé : 8 mm de diamètre intérieur."
+    ],
+    "limitations": [
+      "La consommation à vide reste celle du fabricant. Aucun cycle de travail supposé ne la réduit dans le scénario de référence.",
+      "La pression de référence provient du catalogue UK, page 3, recoupé avec la référence individuelle. Le document ne fournit pas de courbe débit-pression pour cette fiche. Une évolution de la notice du modèle doit entraîner une nouvelle vérification.",
+      "Ces valeurs déclarées ne constituent pas un essai physique de CompatAir. La fiche internationale ne prouve ni un stock actuel en France ni le contenu de l’offre d’un vendeur.",
+      "La longueur du flexible n’est pas spécifiée ici. Le diamètre seul ne permet pas de valider les pertes du réseau."
+    ]
+  },
+  "specifications": [
+    {
+      "label": "Vitesse maximale à vide",
+      "value": "9000 tr/min",
+      "evidenceIds": [
+        "atlas-copco-8423036198-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Puissance maximale",
+      "value": "0,3 kW",
+      "evidenceIds": [
+        "atlas-copco-8423036198-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Masse",
+      "value": "1,1 kg",
+      "evidenceIds": [
+        "atlas-copco-8423036198-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Longueur",
+      "value": "175 mm",
+      "evidenceIds": [
+        "atlas-copco-8423036198-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Forme",
+      "value": "Vertical",
+      "evidenceIds": [
+        "atlas-copco-8423036198-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Filetage de broche",
+      "value": "5/16-24 UNF",
+      "evidenceIds": [
+        "atlas-copco-8423036198-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Dimensions du plateau",
+      "value": "150 mm",
+      "evidenceIds": [
+        "atlas-copco-8423036198-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Diamètre d’orbite",
+      "value": "8 mm",
+      "evidenceIds": [
+        "atlas-copco-8423036198-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Hauteur au-dessus de la broche",
+      "value": "118 mm",
+      "evidenceIds": [
+        "atlas-copco-8423036198-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Consommation à vide",
+      "value": "450 L/min (7.5 l/s)",
+      "evidenceIds": [
+        "atlas-copco-8423036198-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Pression de référence des performances",
+      "value": "6,3 bar",
+      "evidenceIds": [
+        "atlas-copco-8423036198-catalogue-uk"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "atlas-copco-8423036198-fiche-fabricant",
+      "sourceUrl": "https://www.atlascopco.com/en-ca/itba/products/material-removal-tools/surface-sanding-and-polishing/lst30-s090-15-sku8423036198",
+      "sourceLabel": "Atlas Copco, LST30 S090-15, 8423036198",
+      "sourceType": "manufacturer",
+      "retrievedAt": "2026-09-26",
+      "confidence": "A",
+      "notes": "Caractéristiques individuelles versionnées, valeurs sources en L/s et CFM, empreinte SHA-256 de la fiche consultée."
+    },
+    {
+      "id": "atlas-copco-8423036198-catalogue-uk",
+      "sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=224",
+      "sourceLabel": "Atlas Copco, Industrial Tools and Solutions UK, page PDF 224 ; conditions page 3",
+      "sourceType": "manufacturer",
+      "retrievedAt": "2026-09-26",
+      "confidence": "A",
+      "notes": "Référence 8423036198 présente au tableau. Conditions générales : air détendu à la pression atmosphérique, pression de travail 6,3 bar sauf exception. Le millésime de cette édition n’est pas affirmé."
+    }
+  ],
+  "fieldSources": {
+    "mpn": [
+      "atlas-copco-8423036198-fiche-fabricant",
+      "atlas-copco-8423036198-catalogue-uk"
+    ],
+    "airflowLpm": [
+      "atlas-copco-8423036198-fiche-fabricant"
+    ],
+    "workingPressureBar": [
+      "atlas-copco-8423036198-catalogue-uk"
+    ],
+    "recommendedHose": [
+      "atlas-copco-8423036198-fiche-fabricant"
+    ]
+  },
+  "notes": [
+    "Le verdict concerne l’alimentation en air. Les exigences de couple, d’accessoire et de sécurité restent celles de la notice de l’outil."
+  ]
+};
+export default product;

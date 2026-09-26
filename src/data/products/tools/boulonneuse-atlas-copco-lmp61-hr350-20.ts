@@ -1,0 +1,200 @@
+// Source facts: atlas-copco-reviewed-2026-09-26.json.
+const product = {
+  "id": "atlas-copco-8431080425",
+  "slug": "boulonneuse-atlas-copco-lmp61-hr350-20",
+  "categoryId": "boulonneuse",
+  "category": "Boulonneuse pneumatique",
+  "label": "Boulonneuse pneumatique Atlas Copco LMP61 HR350-20",
+  "brand": "Atlas Copco",
+  "model": "LMP61 HR350-20",
+  "mpn": "8431080425",
+  "variant": {
+    "familyId": "atlas-copco-7781200779",
+    "label": "LMP61 HR350-20",
+    "distinguishingAttributes": {
+      "Vitesse à vide": "650 tr/min",
+      "Couple maximal de la plage": "350 Nm",
+      "Couple minimal de la plage": "200 Nm",
+      "Couple maximal à 6,3 bar": "350 Nm",
+      "Masse": "3,9 kg",
+      "Longueur": "275 mm",
+      "Carré d’entraînement": "3/4 pouce",
+      "Forme": "Poignée revolver",
+      "Réversible": "Oui",
+      "Arrêt automatique": "Non",
+      "Consommation à vide": "1 200 L/min (20 l/s)",
+      "Pression maximale admise": "7 bar",
+      "Pression de référence des performances": "6,3 bar"
+    }
+  },
+  "demandModel": "fixed-flow",
+  "workingPressureBar": {
+    "min": 6.3,
+    "typical": 6.3,
+    "max": 7
+  },
+  "airflowLpm": {
+    "min": 1200,
+    "typical": 1200,
+    "max": 1200
+  },
+  "usagePattern": "intermittent",
+  "confidence": "A",
+  "connectorSize": "Entrée 3/8 pouce (norme de filetage non précisée)",
+  "image": {
+    "src": "/images/products/atlas-copco-8431080425-technical.webp",
+    "alt": "Atlas Copco LMP61 HR350-20, référence 8431080425 : 1 200 L/min à vide, référence 6,3 bar",
+    "sourceUrl": "https://www.atlascopco.com/en-ca/itba/products/bolt-tightening-solutions/continuous-rotation/lmp61-hr350-20-sku8431080425",
+    "sourceLabel": "Repères techniques CompatAir d’après Atlas Copco"
+  },
+  "editorial": {
+    "overview": "Atlas Copco LMP61 HR350-20, référence 8431080425, demande 1 200 L/min à vide selon la fiche fabricant. Le dimensionnement utilise la pression de référence de 6,3 bar documentée dans le catalogue Industrial Tools and Solutions UK. Vitesse à vide : 650 tr/min. Couple maximal de la plage : 350 Nm.",
+    "verifiedFacts": [
+      "Vitesse à vide : 650 tr/min.",
+      "Couple maximal de la plage : 350 Nm.",
+      "Couple minimal de la plage : 200 Nm.",
+      "Couple maximal à 6,3 bar : 350 Nm.",
+      "Consommation à vide : 1 200 L/min, convertis depuis 20 l/s."
+    ],
+    "limitations": [
+      "La consommation à vide reste celle du fabricant. Aucun cycle de travail supposé ne la réduit dans le scénario de référence.",
+      "La pression maximale admise de 7 bar n’est pas la pression de référence du débit. Aucune consommation à 7 bar n’est extrapolée.",
+      "La pression de référence provient du catalogue UK, page 3, recoupé avec la référence individuelle. Le document ne fournit pas de courbe débit-pression pour cette fiche. Une évolution de la notice du modèle doit entraîner une nouvelle vérification.",
+      "Ces valeurs déclarées ne constituent pas un essai physique de CompatAir. La fiche internationale ne prouve ni un stock actuel en France ni le contenu de l’offre d’un vendeur.",
+      "Le flexible doit être confirmé dans la notice individuelle avant installation."
+    ]
+  },
+  "specifications": [
+    {
+      "label": "Vitesse à vide",
+      "value": "650 tr/min",
+      "evidenceIds": [
+        "atlas-copco-8431080425-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Couple maximal de la plage",
+      "value": "350 Nm",
+      "evidenceIds": [
+        "atlas-copco-8431080425-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Couple minimal de la plage",
+      "value": "200 Nm",
+      "evidenceIds": [
+        "atlas-copco-8431080425-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Couple maximal à 6,3 bar",
+      "value": "350 Nm",
+      "evidenceIds": [
+        "atlas-copco-8431080425-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Masse",
+      "value": "3,9 kg",
+      "evidenceIds": [
+        "atlas-copco-8431080425-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Longueur",
+      "value": "275 mm",
+      "evidenceIds": [
+        "atlas-copco-8431080425-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Carré d’entraînement",
+      "value": "3/4 pouce",
+      "evidenceIds": [
+        "atlas-copco-8431080425-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Forme",
+      "value": "Poignée revolver",
+      "evidenceIds": [
+        "atlas-copco-8431080425-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Réversible",
+      "value": "Oui",
+      "evidenceIds": [
+        "atlas-copco-8431080425-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Arrêt automatique",
+      "value": "Non",
+      "evidenceIds": [
+        "atlas-copco-8431080425-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Consommation à vide",
+      "value": "1 200 L/min (20 l/s)",
+      "evidenceIds": [
+        "atlas-copco-8431080425-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Pression maximale admise",
+      "value": "7 bar",
+      "evidenceIds": [
+        "atlas-copco-8431080425-fiche-fabricant"
+      ]
+    },
+    {
+      "label": "Pression de référence des performances",
+      "value": "6,3 bar",
+      "evidenceIds": [
+        "atlas-copco-8431080425-catalogue-uk"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "atlas-copco-8431080425-fiche-fabricant",
+      "sourceUrl": "https://www.atlascopco.com/en-ca/itba/products/bolt-tightening-solutions/continuous-rotation/lmp61-hr350-20-sku8431080425",
+      "sourceLabel": "Atlas Copco, LMP61 HR350-20, 8431080425",
+      "sourceType": "manufacturer",
+      "retrievedAt": "2026-09-26",
+      "confidence": "A",
+      "notes": "Caractéristiques individuelles versionnées, valeurs sources en L/s et CFM, empreinte SHA-256 de la fiche consultée."
+    },
+    {
+      "id": "atlas-copco-8431080425-catalogue-uk",
+      "sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=55",
+      "sourceLabel": "Atlas Copco, Industrial Tools and Solutions UK, page PDF 55 ; conditions page 3",
+      "sourceType": "manufacturer",
+      "retrievedAt": "2026-09-26",
+      "confidence": "A",
+      "notes": "Référence 8431080425 présente au tableau. Conditions générales : air détendu à la pression atmosphérique, pression de travail 6,3 bar sauf exception. Le millésime de cette édition n’est pas affirmé."
+    }
+  ],
+  "fieldSources": {
+    "mpn": [
+      "atlas-copco-8431080425-fiche-fabricant",
+      "atlas-copco-8431080425-catalogue-uk"
+    ],
+    "airflowLpm": [
+      "atlas-copco-8431080425-fiche-fabricant"
+    ],
+    "workingPressureBar": [
+      "atlas-copco-8431080425-catalogue-uk",
+      "atlas-copco-8431080425-fiche-fabricant"
+    ],
+    "connectorSize": [
+      "atlas-copco-8431080425-fiche-fabricant"
+    ]
+  },
+  "notes": [
+    "Le verdict concerne l’alimentation en air. Les exigences de couple, d’accessoire et de sécurité restent celles de la notice de l’outil."
+  ]
+};
+export default product;

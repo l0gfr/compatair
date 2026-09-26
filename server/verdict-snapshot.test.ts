@@ -54,6 +54,22 @@ describe('bounded verdict snapshot loading', () => {
 		expect(({} as Record<string, unknown>).polluted).toBeUndefined();
 	});
 
+	it('shares identical calculation payloads while keeping each product identity and omission intact', async () => {
+		const pairs = [
+			{ id: 'a--b', compressorId: 'a', toolId: 'b', verdict: 'continuous', requiredFadLpm: 123.45, warnings: ['source'] },
+			{ id: 'c--d', compressorId: 'c', toolId: 'd', verdict: 'continuous', requiredFadLpm: 123.45, warnings: ['source'] },
+			{ id: 'a--e', compressorId: 'a', toolId: 'e', verdict: 'insufficient_data', warnings: [] },
+			{ id: 'a--f', toolId: 'f', compressorId: 'a', verdict: 'continuous' },
+		];
+		const text = JSON.stringify({ pairs });
+		const snapshot = await readVerdictSnapshot(await fixture(text), { compactIds: true });
+		expect(Object.getPrototypeOf(snapshot.pairs[0])).toBe(Object.getPrototypeOf(snapshot.pairs[1]));
+		expect(snapshot.pairs[0].requiredFadLpm).toBe(123.45);
+		expect(snapshot.pairs[2].requiredFadLpm).toBeUndefined();
+		expect(JSON.stringify(snapshot)).toBe(text);
+		for (const pair of pairs) expect(verdictIndex(snapshot).get(pair.compressorId, pair.toolId)).toEqual(pair);
+	});
+
 	it('accepts empty snapshots and standard JSON whitespace', async () => {
 		expect(await readVerdictSnapshot(await fixture(' { "catalogVersion": "test", "pairs" : [ ] }\r\n'))).toEqual({ catalogVersion: 'test', pairs: [] });
 	});

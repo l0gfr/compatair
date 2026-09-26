@@ -238,7 +238,8 @@ import product237 from './schneider-unm-sts-780-15-500-xdk';
 import product238 from './schneider-unm-sts-780-15-500-xdkc';
 import product239 from './stanley-dn200-10-5';
 
-export const rawCompressors = [
+// Raw records are validated by the catalog schema before use.
+export const rawCompressors = Array.of<unknown>(
 	product1,
 	product2,
 	product3,
@@ -478,4 +479,4 @@ export const rawCompressors = [
 	product237,
 	product238,
 	product239,
-];
+);

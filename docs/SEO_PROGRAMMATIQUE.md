@@ -1,6 +1,6 @@
 # Politique de SEO programmatique
 
-Les verdicts compresseur-outil répondent à un besoin produit réel, mais leur nombre croît comme le produit du nombre de compresseurs par le nombre d’outils. CompatAir expose 301 379 combinaisons explorables : le snapshot auditable conserve 298 750 verdicts fixes, tandis que 2 629 combinaisons paramétriques exigent une cadence ou un volume et un temps cible. Le calculateur et les interfaces MCP/UCP traitent ces paramètres sans générer un fichier HTML par résultat ; l’endpoint API HTTP limité aux identifiants répond `insufficient_data` pour ces outils.
+Les verdicts compresseur-outil répondent à un besoin produit réel, mais leur nombre croît comme le produit du nombre de compresseurs par le nombre d’outils. CompatAir expose 420 879 combinaisons explorables : le snapshot auditable conserve 418 250 verdicts fixes, tandis que 2 629 combinaisons paramétriques exigent une cadence ou un volume et un temps cible. Le calculateur et les interfaces MCP/UCP traitent ces paramètres sans générer un fichier HTML par résultat ; l’endpoint API HTTP limité aux identifiants répond `insufficient_data` pour ces outils.
 
 ## Frontière d’indexation
 
@@ -10,7 +10,7 @@ Les verdicts compresseur-outil répondent à un besoin produit réel, mais leur 
 - Une ancienne URL exacte dont les deux slugs existent encore reçoit une redirection permanente vers le calculateur prérempli avec les identifiants canoniques dans le fragment d’URL.
 - Une URL ancienne inconnue, ambiguë ou mal formée reçoit une réponse `410 Gone` ciblée. Les paramètres de suivi d’une URL connue sont supprimés lors de la redirection canonique.
 - Les couples restent exclus du sitemap et ne publient pas de balisage `TechArticle` destiné à enrichir leur présence dans les résultats.
-- Le snapshot `/data/verdicts.json` conserve les 298 750 couples à débit fixe pour l’audit, l’historique et les usages machine. Les 2 629 combinaisons paramétriques sont calculées seulement après saisie de leurs paramètres.
+- Le snapshot `/data/verdicts.json` conserve les 418 250 couples à débit fixe pour l’audit, l’historique et les usages machine. Les 2 629 combinaisons paramétriques sont calculées seulement après saisie de leurs paramètres.
 - Les premières pages de `/preuves/` et `/sources-fiabilite/` restent indexables. Leurs pages 2 et suivantes conservent les liens de parcours, mais publient `noindex,follow` et restent hors sitemap afin de ne pas multiplier les entrées de répertoire sans intention de recherche propre.
 
 Cette séparation évite une croissance quadratique du HTML. Le corpus indexable reste centré sur les pages qui apportent une synthèse ou une information propre, tandis que le contrat machine décrit explicitement le grain fixe ou paramétrique de chaque décision.
