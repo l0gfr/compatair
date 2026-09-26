@@ -1,5 +1,6 @@
-import { readFile } from 'node:fs/promises';
+import { open, readFile } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
+import { verifySnapshotRange } from './lib/live-seo-verification.mjs';
 
 const origin = new URL(process.env.COMPATAIR_SITE_ORIGIN ?? 'https://compatair.fr').origin;
 const expectedSha = process.env.COMPATAIR_EXPECTED_RELEASE_SHA;
@@ -37,8 +38,9 @@ async function check(label, pathname, inspect, { attempts = 3, method = 'GET', h
 				redirect: 'manual',
 				signal: AbortSignal.timeout(20_000),
 			});
-			const body = await response.text();
-			await inspect({ body, response, url });
+			const bytes = Buffer.from(await response.arrayBuffer());
+			const body = new TextDecoder().decode(bytes);
+			await inspect({ body, bytes, response, url });
 			console.log(`OK ${label}`);
 			return;
 		} catch (error) {
@@ -108,7 +110,6 @@ for (const [label, pathname, marker] of [
 	['widget immuable', '/widget/v1.0.0/compatair-widget.js', 'CompatAir widget API v1'],
 	['catalogue', '/data/catalog.json', 'catalogVersion'],
 	['catalogue runtime', '/data/runtime-catalog.json', 'catalogVersion'],
-	['verdicts', '/data/verdicts.json', 'verdictVersion'],
 	['observatoire', '/data/document-quality-observatory.json', 'observatoryVersion'],
 	['radar JSON', '/data/contradiction-radar.json', 'radarVersion'],
 	['radar public', '/radar-contradictions/', 'Radar des contradictions'],
@@ -138,6 +139,21 @@ for (const [label, pathname, marker] of [
 ]) {
 	await check(label, pathname, bodyContains(marker));
 }
+
+// The full signed snapshot is validated before activation. Probe the exact release
+// prefix and total size over HTTP without downloading hundreds of megabytes again.
+const verdictLocation = releaseDirectory ? new URL('data/verdicts.json', pathToFileURL(`${releaseDirectory}/`)) : new URL('../dist/data/verdicts.json', import.meta.url);
+const verdictFile = await open(verdictLocation, 'r');
+let verdictPrefix, verdictBytes;
+try {
+	verdictBytes = (await verdictFile.stat()).size;
+	verdictPrefix = Buffer.alloc(Math.min(65_536, verdictBytes));
+	const { bytesRead } = await verdictFile.read(verdictPrefix, 0, verdictPrefix.length, 0);
+	assert(bytesRead === verdictPrefix.length && bytesRead > 0, 'préfixe de verdicts local incomplet');
+} finally { await verdictFile.close(); }
+await check('verdicts, plage exacte de la release', '/data/verdicts.json', ({ bytes, response }) => {
+	verifySnapshotRange({ status: response.status, contentRange: response.headers.get('content-range'), contentType: response.headers.get('content-type'), bytes }, verdictPrefix, verdictBytes);
+}, { headers: { Range: `bytes=0-${verdictPrefix.length - 1}` } });
 
 const legacyPath = '/compatibilite/einhell-tc-ac-240-50-10-of--ponceuse-excentrique-einhell-tc-pe-150/';
 const legacyTarget = 'https://compatair.fr/calculateur/#outil=einhell-tc-pe-150&compresseur=einhell-tc-ac-240-50-10-of';

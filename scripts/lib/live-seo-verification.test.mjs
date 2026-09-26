@@ -6,9 +6,23 @@ import {
 	extractStaticResultCount,
 	verifyDetailPage,
 	verifyReleasePayload,
+	verifySnapshotRange,
 } from './live-seo-verification.mjs';
 
 describe('vérification SEO de la surface live', () => {
+	it('vérifie les octets et la taille du snapshot sans décoder une séquence UTF-8 coupée', () => {
+		const prefix = Buffer.from('débit').subarray(0, 2);
+		expect(() => verifySnapshotRange({ status: 206, contentRange: 'bytes 0-1/12345', contentType: 'application/json; charset=utf-8', bytes: prefix }, prefix, 12345)).not.toThrow();
+	});
+	it('refuse une plage ignorée, déplacée ou une taille provenant d’une autre release', () => {
+		const prefix = Buffer.from('{"version":');
+		const response = { status: 206, contentRange: `bytes 0-${prefix.length - 1}/12345`, contentType: 'application/json', bytes: prefix };
+		for (const patch of [{ status: 200 }, { contentRange: 'bytes 1-11/12345' }, { contentRange: `bytes 0-${prefix.length - 1}/54321` }, { contentType: 'text/html' }]) expect(() => verifySnapshotRange({ ...response, ...patch }, prefix, 12345)).toThrow();
+	});
+	it('refuse des octets modifiés ou tronqués même avec des en-têtes corrects', () => {
+		const prefix = Buffer.from('{"version":');
+		for (const bytes of [Buffer.from('{"versiOn":'), prefix.subarray(0, -1)]) expect(() => verifySnapshotRange({ status: 206, contentRange: `bytes 0-${prefix.length - 1}/12345`, contentType: 'application/json', bytes }, prefix, 12345)).toThrow('octets différents');
+	});
 	it('lit les marqueurs de rendu sans dépendre du texte adjacent', () => {
 		const html = '<h1 data-label=">">KAESER <span title=">">EPC</span> à cuve verticale</h1><div data-static-compatibility-results data-result-count="8"></div>';
 		expect(extractH1(html)).toBe('KAESER EPC à cuve verticale');

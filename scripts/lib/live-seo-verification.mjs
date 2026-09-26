@@ -60,6 +60,13 @@ export function verifyReleasePayload(payload, expectedSha) {
 	if (payload?.gitSha !== expectedSha) throw new Error(`release.json: SHA ${payload?.gitSha ?? 'absent'} différent de ${expectedSha}`);
 }
 
+export function verifySnapshotRange({ status, contentRange, contentType, bytes }, expectedPrefix, totalBytes) {
+	if (status !== 206) throw new Error('snapshot: réponse partielle 206 requise');
+	if (contentType?.split(';')[0].trim() !== 'application/json') throw new Error('snapshot: type JSON requis');
+	if (!expectedPrefix.length || totalBytes < expectedPrefix.length || contentRange !== `bytes 0-${expectedPrefix.length - 1}/${totalBytes}`) throw new Error('snapshot: plage ou taille différente de la release');
+	if (!Buffer.from(bytes).equals(expectedPrefix)) throw new Error('snapshot: octets différents de la release');
+}
+
 export function verifyDetailPage(pathname, html, origin) {
 	const policy = detailPagePolicies.find((item) => item.pattern.test(pathname));
 	if (!policy) return undefined;
