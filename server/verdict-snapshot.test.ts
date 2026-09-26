@@ -2,7 +2,7 @@ import { mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
-import { readVerdictSnapshot, verdictIndex } from './verdict-snapshot.mjs';
+import { readVerdictSnapshot, verdictIndex, verdictStorageStats } from './verdict-snapshot.mjs';
 
 const directories: string[] = [];
 async function fixture(text: string) {
@@ -15,13 +15,35 @@ async function fixture(text: string) {
 afterEach(async () => { await Promise.all(directories.splice(0).map((directory) => rm(directory, { recursive: true, force: true }))); });
 
 describe('bounded verdict snapshot loading', () => {
-	it('verifies an unsorted matrix and preserves exact bytes and lookup identities across blocks', async () => {
+	it.each([[1, 1], [1, 5], [5, 1]])('compacts a degenerate %i by %i matrix', async (compressorCount, toolCount) => {
+		const pairs = Array.from({ length: toolCount }, (_, t) => Array.from({ length: compressorCount }, (_, c) => ({ id: `c${c}--t${t}`, compressorId: `c${c}`, toolId: `t${t}`, verdict: 'continuous' }))).flat();
+		const text = JSON.stringify({ scope: { compressor_count: compressorCount, fixed_flow_tool_count: toolCount, fixed_verdict_count: pairs.length }, pairs });
+		const snapshot = await readVerdictSnapshot(await fixture(text), { compactIds: true });
+		expect(verdictStorageStats(snapshot).layout).toBe('tool-major');
+		expect(JSON.stringify(snapshot)).toBe(text);
+		for (const pair of pairs) expect(verdictIndex(snapshot).get(pair.compressorId, pair.toolId)).toEqual(pair);
+	});
+
+	it('falls back losslessly when a tool-major matrix becomes irregular after the first block', async () => {
+		const pairs = Array.from({ length: 130 }, (_, t) => Array.from({ length: 130 }, (_, c) => ({ id: `c${c}--t${t}`, compressorId: `c${c}`, toolId: `t${t}`, verdict: 'continuous' }))).flat();
+		pairs[pairs.length - 1] = { ...pairs[0], verdict: 'incompatible' };
+		const text = JSON.stringify({ scope: { compressor_count: 130, fixed_flow_tool_count: 130, fixed_verdict_count: pairs.length }, pairs });
+		const snapshot = await readVerdictSnapshot(await fixture(text), { compactIds: true });
+		expect(verdictStorageStats(snapshot).layout).toBe('general');
+		expect(JSON.stringify(snapshot)).toBe(text);
+		expect(verdictIndex(snapshot).get('c0', 't0')).toEqual(pairs.at(-1));
+		expect(verdictIndex(snapshot).get('c129', 't129')).toBeUndefined();
+	});
+
+	it.each(['tool-major', 'compressor-major'])('verifies a %s matrix and preserves exact bytes and lookup identities across blocks', async (layout) => {
 		const compressors = Array.from({ length: 52 }, (_, i) => `c${51 - i}`);
 		const tools = Array.from({ length: 337 }, (_, i) => `t${336 - i}`);
-		const pairs = compressors.flatMap(compressorId => tools.map(toolId => ({ id: `${compressorId}--${toolId}`, compressorId, toolId, verdict: 'continuous', warnings: ['débit'] })));
+		const pair = (compressorId: string, toolId: string) => ({ id: `${compressorId}--${toolId}`, compressorId, toolId, verdict: 'continuous', warnings: ['débit'] });
+		const pairs = layout === 'tool-major' ? tools.flatMap(toolId => compressors.map(compressorId => pair(compressorId, toolId))) : compressors.flatMap(compressorId => tools.map(toolId => pair(compressorId, toolId)));
 		const text = JSON.stringify({ scope: { compressor_count: compressors.length, fixed_flow_tool_count: tools.length, fixed_verdict_count: pairs.length }, pairs });
 		const snapshot = await readVerdictSnapshot(await fixture(text), { compactIds: true });
 		expect(JSON.stringify(snapshot)).toBe(text);
+		expect(verdictStorageStats(snapshot)).toEqual({ layout, pairs: pairs.length, cellBytes: Math.ceil(pairs.length / 16_384) * 16_384 * 4 });
 		const lookup = verdictIndex(snapshot);
 		for (const position of [0, 336, 337, 16_383, 16_384, pairs.length - 1]) {
 			const pair = pairs[position];
@@ -43,6 +65,7 @@ describe('bounded verdict snapshot loading', () => {
 		const text = JSON.stringify({ scope: { compressor_count: 2, fixed_flow_tool_count: 2, fixed_verdict_count: 4 }, pairs });
 		const snapshot = await readVerdictSnapshot(await fixture(text), { compactIds: true });
 		expect(JSON.stringify(snapshot)).toBe(text);
+		expect(verdictStorageStats(snapshot).layout).toBe('general');
 		for (const pair of pairs) {
 			const expected = pairs.findLast(p => p.compressorId === pair.compressorId && p.toolId === pair.toolId);
 			expect(verdictIndex(snapshot).get(pair.compressorId, pair.toolId)).toEqual(expected);

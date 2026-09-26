@@ -29,32 +29,54 @@ class CompactPair {
 }
 // A declared matrix is used only after every identity and row is verified.
 // Irregular snapshots retain the general representation and lookup semantics.
-function verifiedGrid(scope) {
-	const rows = scope?.compressor_count, columns = scope?.fixed_flow_tool_count;
+function gridCandidate(scope, toolMajor) {
+	const rows = toolMajor ? scope?.fixed_flow_tool_count : scope?.compressor_count;
+	const columns = toolMajor ? scope?.compressor_count : scope?.fixed_flow_tool_count;
 	if (!Number.isSafeInteger(rows) || !Number.isSafeInteger(columns) || rows < 1 || columns < 1
 		|| rows * columns > 10_000_000 || scope.fixed_verdict_count !== rows * columns) return undefined;
-	const compressors = [], tools = [], compressorPositions = new Map(), toolPositions = new Map();
+	const rowIds = [], columnIds = [], rowPositions = new Map(), columnPositions = new Map();
 	return {
 		length: rows * columns,
+		order: toolMajor ? 'tool-major' : 'compressor-major',
 		accept(index, compressorId, toolId) {
+			const rowId = toolMajor ? toolId : compressorId, columnId = toolMajor ? compressorId : toolId;
 			const row = Math.floor(index / columns), column = index % columns;
 			if (row >= rows) return false;
 			if (row === 0) {
-				if (toolPositions.has(toolId)) return false;
-				tools.push(toolId); toolPositions.set(toolId, column);
-			} else if (tools[column] !== toolId) return false;
+				if (columnPositions.has(columnId)) return false;
+				columnIds.push(columnId); columnPositions.set(columnId, column);
+			} else if (columnIds[column] !== columnId) return false;
 			if (column === 0) {
-				if (compressorPositions.has(compressorId)) return false;
-				compressors.push(compressorId); compressorPositions.set(compressorId, row);
-			} else if (compressors[row] !== compressorId) return false;
+				if (rowPositions.has(rowId)) return false;
+				rowIds.push(rowId); rowPositions.set(rowId, row);
+			} else if (rowIds[row] !== rowId) return false;
 			return true;
 		},
-		compressorId: index => compressors[Math.floor(index / columns)],
-		toolId: index => tools[index % columns],
+		compressorId: index => toolMajor ? columnIds[index % columns] : rowIds[Math.floor(index / columns)],
+		toolId: index => toolMajor ? rowIds[Math.floor(index / columns)] : columnIds[index % columns],
 		locate(compressorId, toolId) {
-			const row = compressorPositions.get(compressorId), column = toolPositions.get(toolId);
+			const row = rowPositions.get(toolMajor ? toolId : compressorId), column = columnPositions.get(toolMajor ? compressorId : toolId);
 			return row === undefined || column === undefined ? undefined : row * columns + column;
 		},
+	};
+}
+
+function verifiedGrid(scope) {
+	let candidates = [gridCandidate(scope, true), gridCandidate(scope, false)].filter(Boolean);
+	if (!candidates.length) return undefined;
+	return {
+		length: candidates[0].length,
+		get order() { return candidates[0].order; },
+		accept(index, compressorId, toolId) {
+			const accepted = candidates.filter(candidate => candidate.accept(index, compressorId, toolId));
+			// Keep the previous identity map available for lossless fallback.
+			if (!accepted.length) return false;
+			candidates = accepted;
+			return true;
+		},
+		compressorId: index => candidates[0].compressorId(index),
+		toolId: index => candidates[0].toolId(index),
+		locate: (compressorId, toolId) => candidates[0].locate(compressorId, toolId),
 	};
 }
 
@@ -134,10 +156,17 @@ function packedPairWriter(scope) {
 				set() { throw new Error('verdict_snapshot_immutable'); },
 				deleteProperty() { throw new Error('verdict_snapshot_immutable'); },
 			});
-			packedArrays.set(pairs, { get, length, compressorId: compressorAt, toolId: toolAt, locate: grid?.locate });
+			packedArrays.set(pairs, { get, length, compressorId: compressorAt, toolId: toolAt, locate: grid?.locate,
+				layout: grid?.order ?? 'general', cellBytes: blocks.reduce((total, block) => total + block.byteLength, 0) });
 			return pairs;
 		},
 	};
+}
+
+// Observability for the real storage path, rather than only equivalent API output.
+export function verdictStorageStats(snapshot) {
+	const packed = packedArrays.get(snapshot.pairs);
+	return packed ? { layout: packed.layout, cellBytes: packed.cellBytes, pairs: packed.length } : { layout: 'objects', pairs: snapshot.pairs.length };
 }
 
 export function verdictIndex(snapshot) {

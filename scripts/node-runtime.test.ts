@@ -1,4 +1,4 @@
-import { chmodSync, copyFileSync, mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { chmodSync, copyFileSync, existsSync, mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { execFileSync } from 'node:child_process';
@@ -24,14 +24,15 @@ function fakePnpm(directory: string) {
 	return executable;
 }
 
-function temporaryHookRepository() {
+function temporaryHookRepository(inheritedEnvironment: NodeJS.ProcessEnv = process.env) {
 	const root = mkdtempSync(join(tmpdir(), 'compatair-pre-push-repository-'));
 	temporaryDirectories.push(root);
 	mkdirSync(join(root, '.githooks', 'lib'), { recursive: true });
 	copyFileSync(hook, join(root, '.githooks', 'pre-push'));
 	copyFileSync(resolver, join(root, '.githooks', 'lib', 'node-runtime.sh'));
 	copyFileSync(resolve('.nvmrc'), join(root, '.nvmrc'));
-	execFileSync('git', ['init', '--quiet'], { cwd: root });
+	const env = Object.fromEntries(Object.entries(inheritedEnvironment).filter(([key]) => !key.startsWith('GIT_')));
+	execFileSync('git', ['init', '--quiet'], { cwd: root, env });
 	return root;
 }
 
@@ -47,6 +48,15 @@ afterEach(() => {
 });
 
 describe('résolution du runtime Node du hook pre-push', () => {
+	it('isole le dépôt temporaire des variables Git exportées par un worktree', () => {
+		const foreign = mkdtempSync(join(tmpdir(), 'compatair-foreign-git-'));
+		temporaryDirectories.push(foreign);
+		const gitDir = join(foreign, 'git'), commonDir = join(foreign, 'common');
+		const root = temporaryHookRepository({ ...process.env, GIT_DIR: gitDir, GIT_COMMON_DIR: commonDir, GIT_WORK_TREE: foreign });
+		expect(existsSync(join(root, '.git', 'HEAD'))).toBe(true);
+		expect(existsSync(gitDir)).toBe(false);
+		expect(existsSync(commonDir)).toBe(false);
+	});
 	it('sélectionne l’override compatible quand le Node du PATH est trop récent', () => {
 		const root = mkdtempSync(join(tmpdir(), 'compatair-node-runtime-'));
 		temporaryDirectories.push(root);

@@ -2,6 +2,11 @@
 set -Eeuo pipefail
 
 repo_root=$(git rev-parse --show-toplevel)
+# Worktree hooks export Git variables pointing at the caller's repository.
+# All operations below use explicit -C roots, including a disposable repository.
+while IFS= read -r git_variable; do
+	if [[ "$git_variable" == GIT_* ]]; then unset "$git_variable"; fi
+done < <(git rev-parse --local-env-vars)
 temporary_root=$(mktemp -d "${TMPDIR:-/tmp}/compatair-source-archive.XXXXXX")
 trap 'rm -rf -- "$temporary_root"' EXIT
 

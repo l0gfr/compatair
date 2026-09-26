@@ -28,22 +28,57 @@ function latest(values) {
 	return values.filter(Boolean).sort().at(-1);
 }
 
+export function createGitDateResolver(root) {
+	const cache = new Map();
+	let recent;
+	// Git hooks export repository-specific variables. Always resolve the explicit
+	// root, including when a test or source-archive build uses another repository.
+	const env = Object.fromEntries(Object.entries(process.env).filter(([key]) => !key.startsWith('GIT_')));
+	const git = args => execFileSync('git', args, { cwd: root, env, encoding: 'utf8', maxBuffer: 16 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'] }).trimEnd();
+	return files => {
+		const existing = files.filter(file => existsSync(resolve(root, file)));
+		if (!existing.length) return undefined;
+		const key = JSON.stringify([...existing].sort());
+		if (cache.has(key)) return cache.get(key);
+		if (!recent) {
+			recent = new Map();
+			try {
+				// A linear prefix has the exact same first matching commit as
+				// `git log -1 -- paths`. Older/merged history keeps the original
+				// per-query traversal rather than approximating merge semantics.
+				const merge = git(['rev-list', '--first-parent', '--merges', '-1', 'HEAD']);
+				const range = merge ? `${merge}..HEAD` : 'HEAD';
+				// Three NULs delimit commits; a Git filename cannot contain NUL.
+				const history = git(['log', '--format=%x00%x00%x00%cI', '--name-only', '--no-renames', '-z', range]);
+				let rank = 0;
+				for (const record of history.split(/\0{3,}/).filter(Boolean)) {
+					const [date, ...paths] = record.split('\0');
+					if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+-]\d{2}:\d{2}$/.test(date)) throw new Error('Invalid Git date');
+					for (const raw of paths) {
+						const path = raw.replace(/^\n/, '');
+						if (path && !recent.has(path)) recent.set(path, { date, rank });
+					}
+					rank++;
+				}
+			} catch { recent.clear(); }
+		}
+		const first = existing.map(file => recent.get(file)).filter(Boolean).sort((a, b) => a.rank - b.rank)[0];
+		let date = first?.date;
+		if (!date) {
+			try { date = git(['log', '-1', '--format=%cI', '--', ...existing]) || undefined; }
+			catch { /* A source archive without Git has no invented lastmod. */ }
+		}
+		cache.set(key, date);
+		return date;
+	};
+}
+
 export function createSitemapLastmodResolver({ root = process.cwd(), gitDate } = {}) {
 	const cache = new Map();
 	const guideContentSources = existsSync(resolve(root, 'src/content/guides'))
 		? readdirSync(resolve(root, 'src/content/guides')).filter((file) => file.endsWith('.md')).map((file) => `src/content/guides/${file}`)
 		: [];
-	const resolveGitDate = gitDate ?? ((files) => {
-		const existing = files.filter((file) => existsSync(resolve(root, file)));
-		if (!existing.length) return undefined;
-		try {
-			return execFileSync('git', ['log', '-1', '--format=%cI', '--', ...existing], {
-				cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'],
-			}).trim() || undefined;
-		} catch {
-			return undefined;
-		}
-	});
+	const resolveGitDate = gitDate ?? createGitDateResolver(root);
 
 	return (pageUrl) => {
 		const pathname = new URL(pageUrl).pathname;

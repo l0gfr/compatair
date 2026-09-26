@@ -12,13 +12,19 @@ function fixture() {
 }
 
 describe('bounded Actions storage cleanup', () => {
+	it('retains only the latest main calculation cache and leaves PR caches alone', () => {
+		const input = fixture();
+		input.caches.push(...[0, 1, 2].map(index => ({ id: 100 + index, key: `compatair-verdict-v1-Linux-24.19.0-${String(index).repeat(64)}`, ref: 'refs/heads/main', created_at: `2026-09-${26 - index}T01:00:00Z` })));
+		input.caches.push({ ...input.caches.at(-1), id: 200, ref: 'refs/pull/42/merge' });
+		expect(planActionsStorage(input).deleteCaches.map(cache => cache.id)).toEqual([1, 2, 3, 101, 102]);
+	});
 	it('preserves production, rollback, signed invariants and source/security evidence', () => {
 		const input = fixture();
 		input.artifacts.push({ id: 99, name: 'sarif-artifact', workflow_run: input.runs[2] });
 		const plan = planActionsStorage(input);
 		expect(plan.protectedShas).toEqual(shas.slice(0, 2));
 		expect(plan.deleteArtifacts.map((artifact) => artifact.name)).toEqual(shas.slice(2).flatMap((sha) => [`compatair-production-${sha}`, `lighthouse-production-${sha}`]));
-		expect(plan.deleteCaches.map((cache) => cache.id)).toEqual([2, 3]);
+		expect(plan.deleteCaches.map((cache) => cache.id)).toEqual([1, 2, 3]);
 	});
 	it('refuses cleanup when the live SHA, production archive or rollback identity is unavailable', () => {
 		expect(() => planActionsStorage({ ...fixture(), liveSha: shas[1] })).toThrow(/Live release/);
@@ -50,6 +56,6 @@ describe('bounded Actions storage cleanup', () => {
 		const plan = planActionsStorage(input);
 		expect(plan.deleteArtifacts.some((artifact) => artifact.name === `lighthouse-production-${shas[2]}`)).toBe(false);
 		expect(plan.deleteArtifacts.some((artifact) => artifact.name === `compatair-production-${shas[2]}`)).toBe(true);
-		expect(plan.deleteCaches.map((cache) => cache.id)).toEqual([2, 3]);
+		expect(plan.deleteCaches.map((cache) => cache.id)).toEqual([1, 2, 3]);
 	});
 });

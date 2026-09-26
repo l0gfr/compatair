@@ -6,6 +6,7 @@ import { streamedVerdictBuild } from './scripts/lib/streamed-verdict-build.mjs';
 const verdictStage = fileURLToPath(new URL('./.astro/verdicts.build.json', import.meta.url));
 import { createSitemapSerializer } from './scripts/lib/sitemap-lastmod.mjs';
 import { isIndexablePath } from './scripts/lib/indexation-build.mjs';
+import { verdictCacheConfig } from './scripts/lib/verdict-cache-config.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -27,6 +28,15 @@ export default defineConfig({
 	},
 	vite: {
 		define: { __COMPATAIR_VERDICT_STAGE__: JSON.stringify(verdictStage) },
+		plugins: [{
+			name: 'compatair-build-calculation-cache',
+			// Development HMR may replace the engine without restarting the config.
+			// Only a fresh production build may persist calculations under this key.
+			apply: 'build',
+			config() {
+				return { define: { __COMPATAIR_VERDICT_CACHE__: JSON.stringify(verdictCacheConfig(fileURLToPath(new URL('.', import.meta.url)))) } };
+			},
+		}],
 		build: {
 			// Inline small stylesheets to avoid a blocking request; keep scripts and images external.
 			assetsInlineLimit: (filePath, content) => filePath.endsWith('.css') && content.length < 4096,

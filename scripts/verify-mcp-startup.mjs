@@ -3,13 +3,16 @@ import { createHash } from 'node:crypto';
 import { createReadStream } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { createCompatAirServer } from '../server/mcp-server.mjs';
-import { readVerdictSnapshot, verdictIndex } from '../server/verdict-snapshot.mjs';
+import { readVerdictSnapshot, verdictIndex, verdictStorageStats } from '../server/verdict-snapshot.mjs';
 
 const startedAt = performance.now();
 const catalog = JSON.parse(await readFile('dist/data/catalog.json', 'utf8'));
 const snapshot = await readVerdictSnapshot('dist/data/verdicts.json', { compactIds: true });
 assert.equal(snapshot.catalogVersion, catalog.catalogVersion);
 assert.equal(snapshot.pairs.length, snapshot.scope.fixed_verdict_count);
+const storage = verdictStorageStats(snapshot);
+assert.equal(storage.layout, 'tool-major', 'Published verdicts must use the verified compact matrix');
+assert.ok(storage.cellBytes < snapshot.pairs.length * 4 + 65_536, 'Matrix cells must occupy four bytes each, with one partial block');
 const { pairs, ...metadata } = snapshot;
 const lookup = verdictIndex(snapshot);
 const offerSnapshot = JSON.parse(await readFile('dist/data/offers.json', 'utf8'));
@@ -44,3 +47,4 @@ for await (const chunk of createReadStream('dist/data/verdicts.json')) original.
 assert.equal(reconstructed.digest('hex'), original.digest('hex'), 'Streaming and indexed lookups must preserve the complete published snapshot byte for byte');
 
 console.log(`MCP startup verified: ${pairs.length} exact verdicts, three shared profiles, HTTP health and API in ${startupSeconds.toFixed(1)} s, peak ${peakMiB.toFixed(1)} MiB < 256 MiB.`);
+console.log(`Verdict storage: ${storage.layout}, ${(storage.cellBytes / 1024 / 1024).toFixed(1)} MiB of matrix cells.`);
