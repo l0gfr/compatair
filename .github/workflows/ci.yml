@@ -5,6 +5,11 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      upload_preview:
+        description: Conserver une archive du site pendant 2 jours
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -77,20 +82,34 @@ jobs:
       - name: Summarize Lighthouse laboratory metrics
         run: pnpm lighthouse:summary
 
-      - name: Upload Lighthouse reports
-        if: ${{ always() && hashFiles('.lighthouseci/reports/**') != '' }}
+      - name: Upload compact Lighthouse summary
+        if: ${{ always() && hashFiles('.lighthouseci/reports/summary.json') != '' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: lighthouse-summary-${{ github.sha }}
+          path: |
+            .lighthouseci/reports/summary.json
+            .lighthouseci/reports/crux-summary.json
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+
+      - name: Upload full Lighthouse diagnostics on failure
+        if: ${{ failure() && hashFiles('.lighthouseci/reports/**') != '' }}
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: lighthouse-${{ github.sha }}
           path: .lighthouseci/reports/
           if-no-files-found: error
-          retention-days: 7
+          retention-days: 3
+          compression-level: 9
 
-      - name: Upload pull request preview
-        if: github.event_name == 'pull_request'
+      - name: Upload requested site preview
+        if: github.event_name == 'workflow_dispatch' && inputs.upload_preview
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: compatair-preview-${{ github.event.pull_request.number }}
+          name: compatair-preview-${{ github.run_id }}
           path: dist/
           if-no-files-found: error
-          retention-days: 7
+          retention-days: 2
+          compression-level: 9

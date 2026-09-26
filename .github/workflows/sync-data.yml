@@ -79,4 +79,5 @@ jobs:
             offers-diff.json
             verdicts-diff.json
           if-no-files-found: error
-          retention-days: 30
+          retention-days: 3
+          compression-level: 9

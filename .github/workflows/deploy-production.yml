@@ -150,14 +150,27 @@ jobs:
           CRUX_API_KEY: ${{ secrets.CRUX_API_KEY }}
         run: pnpm crux:report
 
-      - name: Upload Lighthouse reports
-        if: ${{ always() && hashFiles('.lighthouseci/reports/**') != '' }}
+      - name: Upload compact Lighthouse summary
+        if: ${{ always() && hashFiles('.lighthouseci/reports/summary.json') != '' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: lighthouse-summary-production-${{ github.sha }}
+          path: |
+            .lighthouseci/reports/summary.json
+            .lighthouseci/reports/crux-summary.json
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+
+      - name: Upload full Lighthouse diagnostics on failure
+        if: ${{ failure() && hashFiles('.lighthouseci/reports/**') != '' }}
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: lighthouse-production-${{ github.sha }}
           path: .lighthouseci/reports/
           if-no-files-found: error
-          retention-days: 7
+          retention-days: 3
+          compression-level: 9
 
       - name: Package immutable release
         run: |
@@ -187,7 +200,8 @@ jobs:
             compatair-admin-${{ github.sha }}.tar.gz
             compatair-admin-${{ github.sha }}.tar.gz.sha256
           if-no-files-found: error
-          retention-days: 30
+          retention-days: 7
+          compression-level: 0
 
       - name: Configure SSH
         env:
@@ -292,3 +306,26 @@ jobs:
     environment:
       name: production
       url: https://compatair.fr
+
+  storage:
+    needs: validate
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - name: Checkout trusted main policy
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          check-latest: false
+      - name: Keep production, rollback and compact evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/prune-actions-storage.mjs --apply

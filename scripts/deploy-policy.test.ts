@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
+import { parseDocument } from 'yaml';
 
 const deploy = readFileSync(new URL('./deploy-remote.sh', import.meta.url), 'utf8');
 const rollback = readFileSync(new URL('./rollback-remote.sh', import.meta.url), 'utf8');
@@ -12,6 +13,20 @@ const releaseRoute = readFileSync(new URL('../src/pages/data/release.json.ts', i
 const liveSmoke = readFileSync(new URL('./smoke-live-http.mjs', import.meta.url), 'utf8');
 
 describe('release boundary policy', () => {
+	it('isolates storage deletion from build and deployment credentials', () => {
+		const config = parseDocument(workflow).toJS();
+		expect(config.permissions).toEqual({ contents: 'read' });
+		expect(config.jobs.storage.needs).toBe('validate');
+		expect(config.jobs.storage.if).toBe("github.ref == 'refs/heads/main'");
+		expect(config.jobs.storage.permissions).toEqual({ contents: 'read', actions: 'write' });
+		expect(JSON.stringify(config.jobs.storage)).not.toContain('secrets.');
+		const uploadSteps = config.jobs.validate.steps.filter((step: { uses?: string }) => step.uses?.startsWith('actions/upload-artifact@'));
+		for (const step of uploadSteps) {
+			expect(step.with['retention-days']).toBeLessThanOrEqual(step.with.name.startsWith('compatair-invariants-') ? 90 : 7);
+			if (step.with.path === '.lighthouseci/reports/') expect(step.if).toContain('failure()');
+		}
+	});
+
 	it('limits the requested automatic monitoring to availability and source health', () => {
 		for (const scheduledWorkflow of [snapshotWorkflow, securityWorkflow]) {
 			expect(scheduledWorkflow).not.toMatch(/^\s+schedule:/m);

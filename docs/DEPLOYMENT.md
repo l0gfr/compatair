@@ -125,6 +125,16 @@ Les URL `/go/<offer-id>` sont également réservées au service Node. Aucune pag
 
 ## Récupération des invariants
 
+### Stockage GitHub Actions
+
+Après une activation vérifiée, un job séparé nettoie uniquement les anciennes archives `compatair-production-*`, les rapports Lighthouse complets devenus inutiles et les caches CodeQL redondants. Il exige que le SHA public soit celui du workflow et protège la production ainsi que le dernier autre déploiement réussi. Les exécutions en cours, les artefacts inconnus, les preuves de sources, les résultats de sécurité et les invariants signés ne sont jamais ciblés. Seul ce job, exécuté depuis `main` après validation, reçoit `actions: write`; il ne reçoit aucun secret de déploiement. Il conserve les deux bases CodeQL les plus récentes par famille de cache sur `main`.
+
+Les archives de release expirent après 7 jours dans GitHub. Les releases installées sur le serveur et la procédure de rollback restent indépendantes de cette copie temporaire. Les invariants signés restent conservés 90 jours. Lighthouse produit un résumé compact conservé 7 jours; les rapports complets sont joints uniquement en cas d'échec et expirent après 3 jours. Une prévisualisation complète du site est facultative via `CI` / `workflow_dispatch` / `upload_preview` et expire après 2 jours. Les snapshots manuels expirent après 3 jours et les rapports de licences après 7 jours. Les archives gzip ne sont pas recompressées par Actions.
+
+Le nettoyage ne lance ni build ni analyse IA et ne crée aucun artefact supplémentaire. Un dépassement de 512 Mio pour les artefacts ou les caches produit un avertissement, sans supprimer les preuves protégées. La limite native des caches retournée par GitHub pour ce dépôt est de 10 Go; elle ne constitue pas le budget cible. Le nettoyage après déploiement évite d'attendre son éviction automatique. Aucun workflow ne publie de package npm ou de conteneur, et `package.json` conserve `private: true`.
+
+Pour inspecter la sélection sans suppression, utiliser `GITHUB_REPOSITORY=l0gfr/compatair GITHUB_SHA=<sha-public> node scripts/prune-actions-storage.mjs` avec une authentification GitHub CLI. Ajouter `--apply` uniquement pour appliquer cette même politique. Références : [artefacts Actions](https://docs.github.com/en/rest/actions/artifacts), [caches Actions](https://docs.github.com/en/rest/actions/cache), [compression et rétention](https://github.com/actions/upload-artifact#inputs).
+
 Chaque déploiement compare l’historique candidat avec le snapshot du commit Git précédent avant de consulter la production. Cette référence indépendante reste disponible lorsqu’un incident rend le site public inaccessible. Après signature, le workflow conserve aussi pendant 90 jours un artefact GitHub Actions dédié avec l’historique, son manifeste Ed25519, les clés publiques, le widget versionné et son empreinte épinglée.
 
 Un push normal continue d’échouer si les invariants live ne peuvent pas être téléchargés. Pour restaurer le service pendant une panne, lancer manuellement `Deploy production` avec l’option `recovery_mode`. Ce mode est refusé sur un push automatique, reste visible dans le journal GitHub Actions et conserve les contrôles Git, SRI, tests, signatures et audits. Après restauration, relancer un déploiement normal afin de confirmer les comparaisons avec la surface live.
