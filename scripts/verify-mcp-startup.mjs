@@ -3,19 +3,20 @@ import { createHash } from 'node:crypto';
 import { createReadStream } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { createCompatAirServer } from '../server/mcp-server.mjs';
-import { readVerdictSnapshot } from '../server/verdict-snapshot.mjs';
+import { readVerdictSnapshot, verdictIndex } from '../server/verdict-snapshot.mjs';
 
 const catalog = JSON.parse(await readFile('dist/data/catalog.json', 'utf8'));
 const snapshot = await readVerdictSnapshot('dist/data/verdicts.json', { compactIds: true });
 assert.equal(snapshot.catalogVersion, catalog.catalogVersion);
 assert.equal(snapshot.pairs.length, snapshot.scope.fixed_verdict_count);
 const { pairs, ...metadata } = snapshot;
+const lookup = verdictIndex(snapshot);
 const reconstructed = createHash('sha256').update(`${JSON.stringify(metadata).slice(0, -1)},"pairs":[`);
-for (let index = 0; index < pairs.length; index++) reconstructed.update(`${index ? ',' : ''}${JSON.stringify(pairs[index])}`);
+for (let index = 0; index < pairs.length; index++) reconstructed.update(`${index ? ',' : ''}${JSON.stringify(lookup.get(pairs[index].compressorId, pairs[index].toolId))}`);
 reconstructed.update(']}');
 const original = createHash('sha256');
 for await (const chunk of createReadStream('dist/data/verdicts.json')) original.update(chunk);
-assert.equal(reconstructed.digest('hex'), original.digest('hex'), 'Streaming must preserve the complete published snapshot byte for byte');
+assert.equal(reconstructed.digest('hex'), original.digest('hex'), 'Streaming and indexed lookups must preserve the complete published snapshot byte for byte');
 
 const offerSnapshot = JSON.parse(await readFile('dist/data/offers.json', 'utf8'));
 const knowledgeItems = JSON.parse(await readFile('dist/data/agent-knowledge.json', 'utf8'));

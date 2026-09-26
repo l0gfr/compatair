@@ -91,4 +91,13 @@ describe('bounded verdict snapshot loading', () => {
 		expect(index.get('missing', 'c')).toBeUndefined();
 		expect(verdictIndex({ pairs: [] }).get('a--b', 'c')).toBeUndefined();
 	});
+
+	it('finds unsorted boundary keys and keeps the last duplicate without reordering the snapshot', () => {
+		const pairs = ['z', 'a', 'm', 'm', '__proto__'].map((toolId, index) => ({ compressorId: 'c', toolId, verdict: String(index) }));
+		const original = [...pairs];
+		const lookup = verdictIndex({ pairs });
+		for (const position of [0, 1, 3, 4]) expect(lookup.get('c', pairs[position].toolId)).toBe(pairs[position]);
+		for (const missing of ['', 'b', 'zz']) expect(lookup.get('c', missing)).toBeUndefined();
+		expect(pairs).toEqual(original);
+	});
 });

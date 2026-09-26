@@ -19,11 +19,23 @@ export function verdictIndex(snapshot) {
 		const compressors = new Map();
 		for (const pair of snapshot.pairs ?? []) {
 			let tools = compressors.get(pair.compressorId);
-			if (!tools) { tools = new Map(); compressors.set(pair.compressorId, tools); }
-			tools.set(pair.toolId, pair);
+			if (!tools) { tools = []; compressors.set(pair.compressorId, tools); }
+			tools.push(pair);
 		}
+		// Sorted references avoid a second hash-table entry for every verdict.
+		for (const tools of compressors.values()) tools.sort((a, b) => a.toolId < b.toolId ? -1 : a.toolId > b.toolId ? 1 : 0);
 		index = { get: (compressorId, toolId) => {
-			const pair = compressors.get(compressorId)?.get(toolId);
+			const tools = compressors.get(compressorId);
+			if (!tools) return undefined;
+			let low = 0;
+			let high = tools.length;
+			while (low < high) {
+				const middle = Math.floor((low + high) / 2);
+				if (tools[middle].toolId <= toolId) low = middle + 1;
+				else high = middle;
+			}
+			const pair = tools[low - 1];
+			if (pair?.toolId !== toolId) return undefined;
 			return pair instanceof CompactPair ? pair.toJSON() : pair;
 		} };
 		indexes.set(snapshot, index);
