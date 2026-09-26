@@ -1,0 +1,643 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-09-26",
+  "reviewType": "internal_editorial",
+  "assistedByAI": true,
+  "externalProfessionalValidation": false,
+  "physicalTestsPerformed": false,
+  "hashScope": "SHA-256 des corps HTML/PDF téléchargés directement ; les sources consultées uniquement via lecteur web ne reçoivent pas de hash fictif. Documents originaux non redistribués.",
+  "publicationScope": {
+    "guidesBefore": 101,
+    "guidesAdded": 10,
+    "guidesAfter": 111,
+    "newProductPages": 0
+  },
+  "qualityPolicy": {
+    "purpose": "Répondre à des décisions techniques distinctes pour les utilisateurs de CompatAir. Aucun objectif de nombre de mots ni promesse de classement.",
+    "officialReferences": [
+      "https://developers.google.com/search/docs/essentials/spam-policies",
+      "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+    ],
+    "controls": [
+      "Revue des sujets proches existants avant rédaction",
+      "Valeur propre documentée pour chaque guide",
+      "Caractéristiques, hypothèses et calculs séparés",
+      "Aucune déclinaison automatique par mot-clé ou localité",
+      "Aucun classement ou essai de produit inventé",
+      "20 liens contextuels depuis 17 guides existants",
+      "Mentions d’assistance IA et limites de revue visibles"
+    ],
+    "limitation": "Ces contrôles éditoriaux ne certifient ni l’indexation ni une classification de Google."
+  },
+  "sources": [
+    {
+      "id": "sata-hvlp",
+      "url": "https://www.sata.com/en-ca/premium-spray-gun-for-small-area-applications-in-automotive-finishes-sataminijet-4400-b-hvlp-0.8-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/204180",
+      "resolvedUrl": "https://www.sata.com/en-ca/premium-spray-gun-for-small-area-applications-in-automotive-finishes-sataminijet-4400-b-hvlp-0.8-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/204180",
+      "httpStatus": 200,
+      "sha256": "76e9d72198b0fe8a663784918b90a24602cd5412983dddbce270c478689fe54c",
+      "bytes": 1027034,
+      "consultedOn": "2026-09-26",
+      "scope": "Référence 204180, buse 0.8 standard ; valeur impériale 0.14 psi incohérente avec 2 bar signalée et écartée.",
+      "guides": [
+        "sata-minijet-4400-b-hvlp-rp-compresseur"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "exair-cold",
+      "url": "https://www.exair.com/media/productcms/pdf/ColdGunAirCoolantSystems2_1.pdf",
+      "resolvedUrl": "https://www.exair.com/media/productcms/pdf/ColdGunAirCoolantSystems2_1.pdf",
+      "httpStatus": 200,
+      "sha256": "ef4ac4eaa71fb4786f805b1e4c453f9c7c166ae27696c5e1d7b5a1e3a147adcb",
+      "bytes": 6281915,
+      "consultedOn": "2026-09-26",
+      "scope": "Page PDF 8 (imprimée 217) vérifiée visuellement : 5215/5315 425 SLPM, 5230/5330 850 SLPM à 6,9 bar. Configurations une/deux sorties page 9, pas de performance thermique de terrain inventée.",
+      "guides": [
+        "pistolet-air-froid-exair-cold-gun-compresseur"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "schmalz",
+      "url": "https://pimmedia.schmalz.com/MAM_Library/Dokumente/Datenblatt_Produktfamilie/0_/050/05050/ff4cfffb7ff4_Datasheet_Basic%20Ejectors%20SBPL_en-EN.pdf",
+      "resolvedUrl": "https://pimmedia.schmalz.com/MAM_Library/Dokumente/Datenblatt_Produktfamilie/0_/050/05050/ff4cfffb7ff4_Datasheet_Basic%20Ejectors%20SBPL_en-EN.pdf",
+      "httpStatus": 200,
+      "sha256": "6fdbbbdaabea774a6889b50eac6d75799c28691a1e01401072ca6badb03e19df",
+      "bytes": 2451610,
+      "consultedOn": "2026-09-26",
+      "scope": "Fiche générée le 28 juillet 2026 ; page PDF 4 vérifiée visuellement, notes de consommation à la pression optimale et plage 2–6 bar conservées. HF/HV et aspiration/air prélevé séparés.",
+      "guides": [
+        "ejecteur-vide-schmalz-sbpl-consommation"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "aro-data",
+      "url": "https://azure-na-assets.contentstack.com/v3/assets/blt7de7417393caec8b/blt4a7f56f74475fc47/67bdfdd19f36a11cbf1a81eb/15268519.pdf",
+      "resolvedUrl": "https://azure-na-assets.contentstack.com/v3/assets/blt7de7417393caec8b/blt4a7f56f74475fc47/67bdfdd19f36a11cbf1a81eb/15268519.pdf",
+      "httpStatus": 200,
+      "sha256": "16eb912c90a1f737ac409e0b0a389002bbbdf75808044a2d29dfdeee23dd6762",
+      "bytes": 248199,
+      "consultedOn": "2026-09-26",
+      "scope": "Révision G, 7 août 2015 ; page PDF 2 vérifiée visuellement : courbes eau à température ambiante, débit liquide, pression d’alimentation et consommation d’air distincts. Aucun point interpolé annoncé comme exact.",
+      "guides": [
+        "pompe-membrane-aro-66605-debit-air"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "aro-manual",
+      "url": "https://azure-na-assets.contentstack.com/v3/assets/blt7de7417393caec8b/blt19a8e75e4a73440a/67bdfdcd018e20f8fa627222/99449712.pdf",
+      "resolvedUrl": "https://azure-na-assets.contentstack.com/v3/assets/blt7de7417393caec8b/blt19a8e75e4a73440a/67bdfdcd018e20f8fa627222/99449712.pdf",
+      "httpStatus": 200,
+      "sha256": "5eb2d0d4a01f33c126e6ebd0cdd6f23ab411360d462dddfeff5e3c6b699d7f70",
+      "bytes": 1009034,
+      "consultedOn": "2026-09-26",
+      "scope": "Référence et matériaux applicables, avertissements de compatibilité fluide ; pas de validation chimique générale.",
+      "guides": [
+        "pompe-membrane-aro-66605-debit-air"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "beko-drain",
+      "url": "https://www.beko-technologies.com/en-en/products/condensate-technology/condensate-drain/",
+      "resolvedUrl": "https://www.beko-technologies.com/en-en/products/condensate-technology/condensate-drain/",
+      "httpStatus": 200,
+      "sha256": "747fff94f165bc5356ae6ab41bf05809394b3fa70acc42e12eb0e7d766e52b36",
+      "bytes": 634944,
+      "consultedOn": "2026-09-26",
+      "scope": "Capteur capacitif et commande à niveau ; revendication fabricant sans perte rapprochée de la notice nuancée.",
+      "guides": [
+        "purgeur-condensats-temporise-detection-niveau"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "beko-manual",
+      "url": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/bekomat_su/bekomat_32u_manual_en_01-1611_v01.pdf",
+      "resolvedUrl": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/bekomat_su/bekomat_32u_manual_en_01-1611_v01.pdf",
+      "httpStatus": 200,
+      "sha256": "e70966db184cc13f922bb54e27b4109662cf733fa2cf57747f5237f9f3715550",
+      "bytes": 997444,
+      "consultedOn": "2026-09-26",
+      "scope": "32U, utilisation conforme et exclusions : pratiquement sans perte d’air, alimentation/pression requises, modèle non adapté au gel ; pas de qualité d’air garantie par le purgeur seul.",
+      "guides": [
+        "purgeur-condensats-temporise-detection-niveau"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "kaeser-treatment",
+      "url": "https://us.kaeser.com/download.ashx?id=tcm%3A46-37748",
+      "resolvedUrl": "https://us.kaeser.com/download.ashx?id=tcm%3A46-37748",
+      "httpStatus": 200,
+      "sha256": "75f2e09c122ef551fb40c947ba2da0fd28ed18f19d65baea062d15e2ae29d272",
+      "bytes": 2020588,
+      "consultedOn": "2026-09-26",
+      "scope": "Page PDF 8 vérifiée visuellement : jusqu’à 15 % aux conditions nominales des familles heatless ; aucun taux universel ni ROI déduit.",
+      "guides": [
+        "secheur-adsorption-air-purge-debit-net"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "kaeser-dryer",
+      "url": "https://us.kaeser.com/compressed-air-resources/compressed-air-tips/compressed-air-treatment-guide/dryer-selection-guide.aspx",
+      "resolvedUrl": "https://us.kaeser.com/compressed-air-resources/compressed-air-tips/compressed-air-treatment-guide/dryer-selection-guide.aspx",
+      "httpStatus": 200,
+      "sha256": "70fd0450ae792727ecb886ee35cf27c8820f319eb5e145c3811316abb670a175",
+      "bytes": 59678,
+      "consultedOn": "2026-09-26",
+      "scope": "Principe de régénération, adsorption et familles de sécheurs. Calculs de purge explicitement hypothétiques.",
+      "guides": [
+        "secheur-adsorption-air-purge-debit-net"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "iwata-manual",
+      "url": "https://www.iwata-airbrush.com/mm5/graphics/00000001/ECL101-IM-SBS.pdf",
+      "scope": "Notice Eclipse, pages 6 et 8 et diagnostic 11–12 : CS distingué du BCS ; aucune donnée de débit créée. Document consulté par outil web.",
+      "guides": [
+        "compresseur-aerographe-iwata-eclipse-hp-cs"
+      ],
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "official_document_via_web_reader",
+      "rawBodySha256Available": false,
+      "directFetchStatus": 403,
+      "limitation": "Contenu vérifié via lecteur web ; aucun hash du corps HTTP ni succès du téléchargement direct revendiqué."
+    },
+    {
+      "id": "iwata-faq",
+      "url": "https://www.iwata-airbrush.com/frequently-asked-questions.html",
+      "scope": "Pression de travail lue pendant le passage d’air ; influence du matériau. Consultation par outil web, sans contourner le 403 du téléchargement direct.",
+      "guides": [
+        "compresseur-aerographe-iwata-eclipse-hp-cs"
+      ],
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "official_document_via_web_reader",
+      "rawBodySha256Available": false,
+      "directFetchStatus": 403,
+      "limitation": "Contenu vérifié via lecteur web ; aucun hash du corps HTTP ni succès du téléchargement direct revendiqué."
+    },
+    {
+      "id": "iwata-cs",
+      "url": "https://www.iwata-airbrush.com/iwata-eclipse-hp-cs.html",
+      "scope": "ECL4500, 25–35 psi ; aucune consommation L/min indiquée. Page officielle vérifiée avec l’outil web, téléchargement direct refusé 403.",
+      "guides": [
+        "compresseur-aerographe-iwata-eclipse-hp-cs"
+      ],
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "official_document_via_web_reader",
+      "rawBodySha256Available": false,
+      "directFetchStatus": 403,
+      "limitation": "Contenu vérifié via lecteur web ; aucun hash du corps HTTP ni succès du téléchargement direct revendiqué."
+    },
+    {
+      "id": "atlas-performance",
+      "url": "https://www.atlascopco.com/en-us/itba/industry-solutions/Airmotors/technicalguide/performance",
+      "resolvedUrl": "https://www.atlascopco.com/en-us/itba/industry-solutions/Airmotors/technicalguide/performance",
+      "httpStatus": 200,
+      "sha256": "575721766871c53b4c7b9c56d1596967355f5b954e19c269e20a55b169302a41",
+      "bytes": 170049,
+      "consultedOn": "2026-09-26",
+      "scope": "Point de fonctionnement, vitesse libre, couple minimal au départ et calage. Incohérence de légende kW pour une formule donnant W explicitement signalée.",
+      "guides": [
+        "moteur-pneumatique-couple-demarrage-debit"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "atlas-choice",
+      "url": "https://www.atlascopco.com/en-uk/itba/industry-solutions/airmotors/technicalguide/choose-air-motor",
+      "resolvedUrl": "https://www.atlascopco.com/en-uk/itba/industry-solutions/airmotors/technicalguide/choose-air-motor",
+      "httpStatus": 200,
+      "sha256": "d13aff005cecc10bb73a0f623b35961152872f7eb4f6733a0d21ff82e65e43e6",
+      "bytes": 150298,
+      "consultedOn": "2026-09-26",
+      "scope": "Choix du rapport et point de fonctionnement ; aucune recommandation de modèle sans besoin mécanique défini.",
+      "guides": [
+        "moteur-pneumatique-couple-demarrage-debit"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "atlas-motor",
+      "url": "https://www.atlascopco.com/content/dam/pim/itba/atlas-copco/leaflets/global-leaflets/Leaflet-AtlasCopco-Pocket-Guide-to-Air-motors.pdf",
+      "resolvedUrl": "https://www.atlascopco.com/content/dam/pim/itba/atlas-copco/leaflets/global-leaflets/Leaflet-AtlasCopco-Pocket-Guide-to-Air-motors.pdf",
+      "httpStatus": 200,
+      "sha256": "5a4711833e12b55d513b3e95c191d6c691fc0c038711b04842f3357f077bd494",
+      "bytes": 6999088,
+      "consultedOn": "2026-09-26",
+      "scope": "Pocket Guide, données à 6,3 bar ; exemple page 19 : 314 W, couples de démarrage 26,8 et 44 Nm pour besoin 35 Nm. Exemple constructeur séparé du scénario CompatAir.",
+      "guides": [
+        "moteur-pneumatique-couple-demarrage-debit"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "facom-manual",
+      "url": "https://www.facom.com/GLOBALBOM/XJ/379A/1/Instruction_Manual/EN/379A_1206.pdf",
+      "resolvedUrl": "https://www.facom.com/GLOBALBOM/XJ/379A/1/Instruction_Manual/EN/379A_1206.pdf",
+      "httpStatus": 200,
+      "sha256": "dcb2e47c59cb76a97d63b67053b5564173a3327ccee2bcd74bed123b6212c1d0",
+      "bytes": 965545,
+      "consultedOn": "2026-09-26",
+      "scope": "NU-379A/1206 datée du 27 novembre 2006 ; page PDF 2 vérifiée visuellement : 100 L/min à 6 bar, 1 cm³/coup et 70 coups/min. Accessoires et pressions de ligne non attribués à l’outil.",
+      "guides": [
+        "compresseur-graisseuse-pneumatique-facom-379a"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "sata-rp",
+      "url": "https://www.sata.com/en-us/premium-spray-gun-for-spot-repairs-in-automotive-finishes-sataminijet-4400-b-rp-0.3-sr-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/1114149",
+      "resolvedUrl": "https://www.sata.com/en-us/premium-spray-gun-for-spot-repairs-in-automotive-finishes-sataminijet-4400-b-rp-0.3-sr-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/1114149",
+      "httpStatus": 200,
+      "sha256": "90eca7cd4b4f65a1e14a3cfe9cb1ebc03c3fc5689bd1aa76992dcfba1eb4449f",
+      "bytes": 1046012,
+      "consultedOn": "2026-09-26",
+      "scope": "Référence 1114149, buse 0.3 SR ; 200 L/min, pression recommandée 2,5 bar ; pas de comparaison de finition entre buses différentes.",
+      "guides": [
+        "sata-minijet-4400-b-hvlp-rp-compresseur"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "sata-manual",
+      "url": "https://www.sata.com/media/75/3e/88/1790259012/BETRIEBSANLEITUNG-SATAMINIJET-4400-B.PDF.PDF?ts=1790259012",
+      "resolvedUrl": "https://www.sata.com/media/75/3e/88/1790259012/BETRIEBSANLEITUNG-SATAMINIJET-4400-B.PDF.PDF?ts=1790259012",
+      "httpStatus": 200,
+      "sha256": "85aee6624745e906471c3dba783ee2e826ab26a1641b007c965e88ddccdbc73f",
+      "bytes": 9866023,
+      "consultedOn": "2026-09-26",
+      "scope": "Page PDF 146 vérifiée visuellement : 120 Nl/min à 2 bar HVLP, 200 Nl/min à 2,5 bar RP ; pression d’entrée distincte du maximum. Pages 145 à 150 lues pour le contexte.",
+      "guides": [
+        "sata-minijet-4400-b-hvlp-rp-compresseur"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "vp-shop",
+      "url": "https://shop.vpinstruments.com/wpfd_file/manual-vpflowscope-m-thermal-in-line/",
+      "resolvedUrl": "https://shop.vpinstruments.com/wpfd_file/manual-vpflowscope-m-thermal-in-line/",
+      "httpStatus": 200,
+      "sha256": "739f7b22184d015acc2586d9aec245d2ead93414d014304cd968fe9745cf8f6f",
+      "bytes": 94413,
+      "consultedOn": "2026-09-26",
+      "scope": "Page officielle de téléchargement reliant le manuel Thermal In-line effectivement consulté.",
+      "guides": [
+        "debitmetre-air-comprime-diametre-conditions-reference"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "jorc-fluidrain",
+      "url": "https://www.jorc.com/en/products/condensate-drains/timer-drains/fluidrain/",
+      "scope": "Fiche actuelle, ouverture 0,5–10 s et fermeture 0,5–45 min. Consultation web réussie ; téléchargement direct 429, aucun réglage prescrit à partir des bornes.",
+      "guides": [
+        "purgeur-condensats-temporise-detection-niveau"
+      ],
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "official_document_via_web_reader",
+      "rawBodySha256Available": false,
+      "directFetchStatus": 429,
+      "limitation": "Contenu vérifié via lecteur web ; aucun hash du corps HTTP ni succès du téléchargement direct revendiqué."
+    },
+    {
+      "id": "facom-product",
+      "url": "https://www.facom.com/product/379a/pneumatic-grease-gun-capacity-500-cm3-or-400-g-grease",
+      "resolvedUrl": "https://www.facom.com/product/379a/pneumatic-grease-gun-capacity-500-cm3-or-400-g-grease",
+      "httpStatus": 200,
+      "sha256": "91571a9e5e163020f4238cd35398359e240a6df32a829d7f7568789e11db3af7",
+      "bytes": 104682,
+      "consultedOn": "2026-09-26",
+      "scope": "Fiche actuelle 379A : plage 2–8 bar, 6 bar recommandés, 1 cm³/coup, remplissage et capacité. Aucune pression de graisse en sortie extrapolée.",
+      "guides": [
+        "compresseur-graisseuse-pneumatique-facom-379a"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "vp-inline",
+      "url": "https://shop.vpinstruments.com/download/162/manual/15114/manual-vpflowscope-m-thermal-in-line.pdf",
+      "resolvedUrl": "https://shop.vpinstruments.com/download/162/manual/15114/manual-vpflowscope-m-thermal-in-line.pdf",
+      "httpStatus": 200,
+      "sha256": "9d5f81ed23b030c0b393a1904f330aafb10f5ea67560e7f1ff44a38125d0adfd",
+      "bytes": 918463,
+      "consultedOn": "2026-09-26",
+      "scope": "MAN-VP-SMTI-EN, révision 2500 du 4 avril 2025. Pages 9–10 références de volume ; page 16 contrôlée visuellement pour 30D/10D après coude simple ; page 17 dépressurisation. Modèle Thermal In-line explicite.",
+      "guides": [
+        "debitmetre-air-comprime-diametre-conditions-reference"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    }
+  ],
+  "guides": [
+    {
+      "slug": "sata-minijet-4400-b-hvlp-rp-compresseur",
+      "title": "SATAminijet 4400 B HVLP ou RP : quel compresseur pour les retouches ?",
+      "sources": [
+        "https://www.sata.com/media/75/3e/88/1790259012/BETRIEBSANLEITUNG-SATAMINIJET-4400-B.PDF.PDF?ts=1790259012",
+        "https://www.sata.com/en-ca/premium-spray-gun-for-small-area-applications-in-automotive-finishes-sataminijet-4400-b-hvlp-0.8-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/204180",
+        "https://www.sata.com/en-us/premium-spray-gun-for-spot-repairs-in-automotive-finishes-sataminijet-4400-b-rp-0.3-sr-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/1114149"
+      ],
+      "sourceIds": [
+        "sata-manual",
+        "sata-hvlp",
+        "sata-rp"
+      ],
+      "uniqueValue": "Comparaison HVLP/RP aux pressions distinctes, calcul de volume par séquence, anomalie bar/psi et référence de buse explicitement séparées.",
+      "nearestExistingGuides": [
+        "pistolet-lvlp-vs-hvlp-compresseur",
+        "compresseur-pour-pistolet-peinture-hvlp",
+        "peindre-meuble-compresseur-pistolet"
+      ],
+      "contextualInbound": [
+        "pistolet-lvlp-vs-hvlp-compresseur",
+        "mesurer-pression-dynamique-pistolet-peinture"
+      ],
+      "internalReview": {
+        "distinctIntentCheckedAgainstExistingGuides": true,
+        "noPhysicalTestClaim": true,
+        "calculationsLabelled": true,
+        "sourcesAttachedToClaims": true,
+        "contextualInboundCount": 2
+      }
+    },
+    {
+      "slug": "compresseur-aerographe-iwata-eclipse-hp-cs",
+      "title": "Quel compresseur pour un aérographe Iwata Eclipse HP-CS ?",
+      "sources": [
+        "https://www.iwata-airbrush.com/iwata-eclipse-hp-cs.html",
+        "https://www.iwata-airbrush.com/frequently-asked-questions.html",
+        "https://www.iwata-airbrush.com/mm5/graphics/00000001/ECL101-IM-SBS.pdf"
+      ],
+      "sourceIds": [
+        "iwata-cs",
+        "iwata-faq",
+        "iwata-manual"
+      ],
+      "uniqueValue": "Absence de débit conservée, pression dynamique HP-CS séparée des autres Eclipse, protocole de choix et diagnostic sans seuil L/min inventé.",
+      "nearestExistingGuides": [
+        "compresseur-pour-pistolet-peinture-hvlp",
+        "mesurer-pression-dynamique-pistolet-peinture"
+      ],
+      "contextualInbound": [
+        "mesurer-pression-dynamique-pistolet-peinture",
+        "choisir-compresseur-silencieux-atelier"
+      ],
+      "internalReview": {
+        "distinctIntentCheckedAgainstExistingGuides": true,
+        "noPhysicalTestClaim": true,
+        "calculationsLabelled": true,
+        "sourcesAttachedToClaims": true,
+        "contextualInboundCount": 2
+      }
+    },
+    {
+      "slug": "moteur-pneumatique-couple-demarrage-debit",
+      "title": "Moteur pneumatique : dimensionner le couple de démarrage et le débit d’air",
+      "sources": [
+        "https://www.atlascopco.com/en-us/itba/industry-solutions/Airmotors/technicalguide/performance",
+        "https://www.atlascopco.com/en-uk/itba/industry-solutions/airmotors/technicalguide/choose-air-motor",
+        "https://www.atlascopco.com/content/dam/pim/itba/atlas-copco/leaflets/global-leaflets/Leaflet-AtlasCopco-Pocket-Guide-to-Air-motors.pdf"
+      ],
+      "sourceIds": [
+        "atlas-performance",
+        "atlas-choice",
+        "atlas-motor"
+      ],
+      "uniqueValue": "Point mécanique calculé, couple garanti au départ distinct du calage, cycle de débit et correction explicite de l’unité W/kW dans une source.",
+      "nearestExistingGuides": [
+        "compresseur-pour-visseuse-pneumatique",
+        "comparer-puissance-specifique-compresseurs"
+      ],
+      "contextualInbound": [
+        "compresseur-pour-visseuse-pneumatique",
+        "comparer-puissance-specifique-compresseurs"
+      ],
+      "internalReview": {
+        "distinctIntentCheckedAgainstExistingGuides": true,
+        "noPhysicalTestClaim": true,
+        "calculationsLabelled": true,
+        "sourcesAttachedToClaims": true,
+        "contextualInboundCount": 2
+      }
+    },
+    {
+      "slug": "pompe-membrane-aro-66605-debit-air",
+      "title": "Pompe à membrane ARO 66605 : lire la courbe pour dimensionner l’air comprimé",
+      "sources": [
+        "https://azure-na-assets.contentstack.com/v3/assets/blt7de7417393caec8b/blt4a7f56f74475fc47/67bdfdd19f36a11cbf1a81eb/15268519.pdf",
+        "https://azure-na-assets.contentstack.com/v3/assets/blt7de7417393caec8b/blt19a8e75e4a73440a/67bdfdcd018e20f8fa627222/99449712.pdf"
+      ],
+      "sourceIds": [
+        "aro-data",
+        "aro-manual"
+      ],
+      "uniqueValue": "Lecture multi-axes de la 66605, plage documentaire conservée, conversion encadrée et séparation entre durée de transfert et volume d’air.",
+      "nearestExistingGuides": [
+        "dimensionner-compresseur-garage-automobile",
+        "convertir-cfm-l-min-nl-min-air-comprime"
+      ],
+      "contextualInbound": [
+        "dimensionner-compresseur-garage-automobile",
+        "utiliser-plusieurs-outils-pneumatiques"
+      ],
+      "internalReview": {
+        "distinctIntentCheckedAgainstExistingGuides": true,
+        "noPhysicalTestClaim": true,
+        "calculationsLabelled": true,
+        "sourcesAttachedToClaims": true,
+        "contextualInboundCount": 2
+      }
+    },
+    {
+      "slug": "ejecteur-vide-schmalz-sbpl-consommation",
+      "title": "Éjecteur de vide Schmalz SBPL : quel débit demander au compresseur ?",
+      "sources": [
+        "https://pimmedia.schmalz.com/MAM_Library/Dokumente/Datenblatt_Produktfamilie/0_/050/05050/ff4cfffb7ff4_Datasheet_Basic%20Ejectors%20SBPL_en-EN.pdf"
+      ],
+      "sourceIds": [
+        "schmalz"
+      ],
+      "uniqueValue": "Distinction aspiration/consommation/vide, HF/HV selon porosité, bilan de quatre éjecteurs et cycle hypothétique explicite sans certification de levage.",
+      "nearestExistingGuides": [
+        "amplificateur-air-exair-consommation-debit",
+        "utiliser-plusieurs-outils-pneumatiques"
+      ],
+      "contextualInbound": [
+        "amplificateur-air-exair-consommation-debit",
+        "dimensionner-compresseur-menuiserie-agencement"
+      ],
+      "internalReview": {
+        "distinctIntentCheckedAgainstExistingGuides": true,
+        "noPhysicalTestClaim": true,
+        "calculationsLabelled": true,
+        "sourcesAttachedToClaims": true,
+        "contextualInboundCount": 2
+      }
+    },
+    {
+      "slug": "pistolet-air-froid-exair-cold-gun-compresseur",
+      "title": "EXAIR Cold Gun 5215 et 5230 : consommation d’air et choix du compresseur",
+      "sources": [
+        "https://www.exair.com/media/productcms/pdf/ColdGunAirCoolantSystems2_1.pdf"
+      ],
+      "sourceIds": [
+        "exair-cold"
+      ],
+      "uniqueValue": "Modèles à une/deux sorties distingués, volume par opération, comparaison sur service rendu et absence de ROI ou refroidissement mesuré inventé.",
+      "nearestExistingGuides": [
+        "amplificateur-air-exair-consommation-debit",
+        "comparer-puissance-specifique-compresseurs"
+      ],
+      "contextualInbound": [
+        "amplificateur-air-exair-consommation-debit",
+        "mesurer-temps-charge-vide-compresseur"
+      ],
+      "internalReview": {
+        "distinctIntentCheckedAgainstExistingGuides": true,
+        "noPhysicalTestClaim": true,
+        "calculationsLabelled": true,
+        "sourcesAttachedToClaims": true,
+        "contextualInboundCount": 2
+      }
+    },
+    {
+      "slug": "secheur-adsorption-air-purge-debit-net",
+      "title": "Sécheur par adsorption : calculer l’air de purge et le débit net disponible",
+      "sources": [
+        "https://us.kaeser.com/download.ashx?id=tcm%3A46-37748",
+        "https://us.kaeser.com/compressed-air-resources/compressed-air-tips/compressed-air-treatment-guide/dryer-selection-guide.aspx"
+      ],
+      "sourceIds": [
+        "kaeser-treatment",
+        "kaeser-dryer"
+      ],
+      "uniqueValue": "Bilan entrée/purge/sortie avec division par 0,85, contre-exemple ajout 15 %, purge fixe à charge partielle et grille contractuelle.",
+      "nearestExistingGuides": [
+        "point-rosee-secheur-filtre-air-comprime",
+        "dimensionner-secheur-frigorifique-ete"
+      ],
+      "contextualInbound": [
+        "point-rosee-secheur-filtre-air-comprime",
+        "secheur-air-comprime-atelier-non-chauffe"
+      ],
+      "internalReview": {
+        "distinctIntentCheckedAgainstExistingGuides": true,
+        "noPhysicalTestClaim": true,
+        "calculationsLabelled": true,
+        "sourcesAttachedToClaims": true,
+        "contextualInboundCount": 2
+      }
+    },
+    {
+      "slug": "purgeur-condensats-temporise-detection-niveau",
+      "title": "Purgeur de condensats temporisé ou à détection de niveau : comment choisir ?",
+      "sources": [
+        "https://www.beko-technologies.com/en-en/products/condensate-technology/condensate-drain/",
+        "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/bekomat_su/bekomat_32u_manual_en_01-1611_v01.pdf",
+        "https://www.jorc.com/en/products/condensate-drains/timer-drains/fluidrain/"
+      ],
+      "sourceIds": [
+        "beko-drain",
+        "beko-manual",
+        "jorc-fluidrain"
+      ],
+      "uniqueValue": "Comparaison des commandes, distinction temps ouvert/air réellement perdu, limites spécifiques du 32U et protocole de réception.",
+      "nearestExistingGuides": [
+        "entretien-compresseur-purge-condensats",
+        "separateur-huile-eau-condensats-compresseur"
+      ],
+      "contextualInbound": [
+        "entretien-compresseur-purge-condensats",
+        "separateur-huile-eau-condensats-compresseur"
+      ],
+      "internalReview": {
+        "distinctIntentCheckedAgainstExistingGuides": true,
+        "noPhysicalTestClaim": true,
+        "calculationsLabelled": true,
+        "sourcesAttachedToClaims": true,
+        "contextualInboundCount": 2
+      }
+    },
+    {
+      "slug": "debitmetre-air-comprime-diametre-conditions-reference",
+      "title": "Débitmètre d’air comprimé : diamètre intérieur, implantation et volume de référence",
+      "sources": [
+        "https://shop.vpinstruments.com/download/162/manual/15114/manual-vpflowscope-m-thermal-in-line.pdf",
+        "https://shop.vpinstruments.com/wpfd_file/manual-vpflowscope-m-thermal-in-line/"
+      ],
+      "sourceIds": [
+        "vp-inline",
+        "vp-shop"
+      ],
+      "uniqueValue": "Cas Thermal In-line exact, sensibilité diamètre au carré, conversion 0 °C/20 °C et réception documentée distincte de l’audit réseau général.",
+      "nearestExistingGuides": [
+        "audit-reseau-air-comprime-protocole-mesures",
+        "convertir-cfm-l-min-nl-min-air-comprime"
+      ],
+      "contextualInbound": [
+        "audit-reseau-air-comprime-protocole-mesures",
+        "convertir-cfm-l-min-nl-min-air-comprime"
+      ],
+      "internalReview": {
+        "distinctIntentCheckedAgainstExistingGuides": true,
+        "noPhysicalTestClaim": true,
+        "calculationsLabelled": true,
+        "sourcesAttachedToClaims": true,
+        "contextualInboundCount": 2
+      }
+    },
+    {
+      "slug": "compresseur-graisseuse-pneumatique-facom-379a",
+      "title": "Graisseuse pneumatique FACOM 379A : débit d’air, pression et cadence",
+      "sources": [
+        "https://www.facom.com/GLOBALBOM/XJ/379A/1/Instruction_Manual/EN/379A_1206.pdf",
+        "https://www.facom.com/product/379a/pneumatic-grease-gun-capacity-500-cm3-or-400-g-grease"
+      ],
+      "sourceIds": [
+        "facom-manual",
+        "facom-product"
+      ],
+      "uniqueValue": "Séparation air/graisse, source ancienne identifiée, calcul dosage/cadence, refus de déduire consommation par coup et interprétation des accessoires.",
+      "nearestExistingGuides": [
+        "dimensionner-compresseur-garage-automobile",
+        "groupe-frl-filtre-regulateur-lubrificateur"
+      ],
+      "contextualInbound": [
+        "dimensionner-compresseur-garage-automobile",
+        "dimensionner-poste-pneumatique-poids-lourds"
+      ],
+      "internalReview": {
+        "distinctIntentCheckedAgainstExistingGuides": true,
+        "noPhysicalTestClaim": true,
+        "calculationsLabelled": true,
+        "sourcesAttachedToClaims": true,
+        "contextualInboundCount": 2
+      }
+    }
+  ]
+}

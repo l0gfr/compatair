@@ -52,6 +52,8 @@ Toute intervention sur un équipement électrique ou sous pression relève de pe
 
 ## Choisir une fenêtre représentative
 
+Un consommateur intermittent doit être suivi sur son vrai cycle. Le [cas EXAIR Cold Gun](/guides/pistolet-air-froid-exair-cold-gun-compresseur/) illustre la différence entre demande instantanée, volume par opération et consommation horaire.
+
 Une heure calme peut surestimer la part à vide ; une heure de pointe peut la masquer. Couvrez les démarrages, la production stabilisée, les pauses, les changements d’équipe et l’arrêt. Si le site varie selon les jours, plusieurs fenêtres sont nécessaires.
 
 La durée de campagne est une décision de site. Elle doit permettre de capturer les cycles qui influencent la commande, sans présenter une journée isolée comme une année type.

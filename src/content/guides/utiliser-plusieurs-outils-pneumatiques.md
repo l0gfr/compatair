@@ -48,6 +48,8 @@ CompatAir n’applique pas de coefficient statistique universel. Le [manuel Atla
 
 ## Pressions différentes
 
+Avec une pompe de transfert, le point hydraulique détermine aussi le besoin d’alimentation. La [lecture de la courbe ARO 66605](/guides/pompe-membrane-aro-66605-debit-air/) permet de préparer ce poste sans additionner litres de liquide et litres d’air.
+
 Lorsque deux outils n’utilisent pas la même pression, additionner directement deux valeurs sans définir l’architecture du réseau peut masquer un problème. Le compresseur, le détendeur, les branches et les pertes doivent être considérés. Le calculateur actuel traite un outil à la fois et ne prétend pas modéliser ce réseau.
 
 ## Sources

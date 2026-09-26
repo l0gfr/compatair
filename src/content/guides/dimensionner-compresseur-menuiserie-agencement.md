@@ -44,6 +44,8 @@ Plusieurs cadences sont calculées dans le [guide de l’agrafeuse-cloueuse](/gu
 
 ## Dessiner une minute type de l’atelier
 
+Si la manutention emploie des ventouses alimentées par éjecteur, ajoutez leur commande au cycle. Le [dossier Schmalz SBPL](/guides/ejecteur-vide-schmalz-sbpl-consommation/) traite le bilan d’air et les limites liées à la porosité, sans valider le levage.
+
 Clouage, finition et outil rotatif suivent rarement la même séquence. Une chronologie d’une minute suffit souvent à poser les bonnes questions :
 
 1. quels outils peuvent débiter au même moment ;

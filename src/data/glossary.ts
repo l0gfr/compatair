@@ -1,4 +1,16 @@
 export const glossarySources = {
+	atlasMotorPerformance: {
+		label: 'Atlas Copco, performances des moteurs pneumatiques à palettes',
+		url: 'https://www.atlascopco.com/en-us/itba/industry-solutions/Airmotors/technicalguide/performance',
+	},
+	kaeserAdsorption: {
+		label: 'KAESER, guide de sélection des sécheurs',
+		url: 'https://us.kaeser.com/compressed-air-resources/compressed-air-tips/compressed-air-treatment-guide/dryer-selection-guide.aspx',
+	},
+	bekoLevelDrain: {
+		label: 'BEKO TECHNOLOGIES, principe des purgeurs BEKOMAT',
+		url: 'https://www.beko-technologies.com/en-en/products/condensate-technology/condensate-drain/',
+	},
 	exairAmplification: {
 		label: 'EXAIR, fonctionnement et rapport d’amplification',
 		url: 'https://blog.exair.com/2021/03/26/exairs-super-air-amplifier-amplification-ratios-explained/',
@@ -92,6 +104,9 @@ export type GlossaryTerm = {
 };
 
 export const glossaryTerms: GlossaryTerm[] = [
+	{ term: 'Couple minimal de démarrage', slug: 'couple-minimal-demarrage', definition: 'Plus faible couple disponible au départ d’un moteur pneumatique à palettes dans les conditions documentées, compte tenu de la position des palettes. Il se distingue du couple obtenu en freinant un moteur déjà en rotation jusqu’au calage.', source: 'atlasMotorPerformance', related: { label: 'Dimensionner un moteur pneumatique', href: '/guides/moteur-pneumatique-couple-demarrage-debit/' } },
+	{ term: 'Air de purge de régénération', slug: 'air-purge-regeneration', definition: 'Partie du flux utilisée pour régénérer le dessiccant d’un sécheur par adsorption. Le débit utile doit être distingué du débit entrant et le taux de purge conservé avec sa base de calcul et ses conditions.', source: 'kaeserAdsorption', related: { label: 'Calculer le débit net après séchage', href: '/guides/secheur-adsorption-air-purge-debit-net/' } },
+	{ term: 'Purgeur à détection de niveau', slug: 'purgeur-detection-niveau', definition: 'Dispositif qui commande l’évacuation des condensats à partir d’un niveau de liquide détecté. Sur le principe BEKOMAT documenté, un capteur capacitif pilote l’ouverture de la vanne ; les conditions et contrôles restent propres au modèle.', source: 'bekoLevelDrain', related: { label: 'Comparer temporisation et détection de niveau', href: '/guides/purgeur-condensats-temporise-detection-niveau/' } },
 	{ term: 'Amplificateur d’air', slug: 'amplificateur-air', definition: 'Dispositif dont un jet d’air comprimé entraîne de l’air ambiant pour accroître le volume total soufflé. Le débit du jet inclut cet air entraîné et ne correspond pas au débit d’air comprimé consommé.', source: 'exairAmplification', related: { label: 'Lire les débits EXAIR', href: '/guides/amplificateur-air-exair-consommation-debit/' } },
 	{ term: 'Facteur de correction d’un sécheur', slug: 'facteur-correction-secheur', definition: 'Coefficient constructeur reliant la capacité nominale d’un sécheur à ses conditions d’exploitation. Sa valeur et son sens d’application doivent être vérifiés dans la documentation de la gamme, sans transposition automatique entre marques.', source: 'kaeserDryerSizing', related: { label: 'Dimensionner le sécheur en été', href: '/guides/dimensionner-secheur-frigorifique-ete/' } },
 	{ term: 'Surpresseur pneumatique', slug: 'surpresseur-pneumatique', definition: 'Dispositif alimenté par de l’air comprimé qui fournit localement une pression supérieure. Le débit entrant, le débit sortant et le régime admissible sont des caractéristiques distinctes à vérifier pour la variante retenue.', source: 'festoDpa', related: { label: 'Pression et débit du Festo DPA', href: '/guides/surpresseur-pneumatique-festo-dpa-pression-debit/' } },

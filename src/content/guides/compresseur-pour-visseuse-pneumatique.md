@@ -47,6 +47,8 @@ Sans second point qui encadre 6,2 bar, CompatAir ne transpose pas les 360 L/min 
 
 ## La cadence réelle compte, mais ne doit pas être supposée
 
+Pour un entraînement intégré à une machine, la [lecture du couple de démarrage d’un moteur pneumatique](/guides/moteur-pneumatique-couple-demarrage-debit/) explique pourquoi un point de puissance ne suffit pas à garantir le départ sous charge.
+
 Une visseuse d’assemblage ne tourne pas nécessairement en permanence. La fiche produit publie un besoin en air, mais pas une chronologie complète des appuis sur la gâchette. Une cadence mesurée peut servir à étudier une utilisation intermittente, à condition de conserver séparément le besoin instantané.
 
 Le guide sur l’[utilisation de plusieurs outils pneumatiques](/guides/utiliser-plusieurs-outils-pneumatiques/) montre comment décrire la simultanéité sans réduire arbitrairement les consommations constructeur.

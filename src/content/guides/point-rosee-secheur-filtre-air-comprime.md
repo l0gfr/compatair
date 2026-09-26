@@ -58,6 +58,8 @@ CompatAir ne fixe pas un objectif universel. Une valeur trop élevée peut laiss
 
 ## Comprendre les familles de sécheurs
 
+Pour l’adsorption, le [calcul de l’air de purge et du débit net](/guides/secheur-adsorption-air-purge-debit-net/) précise la base du pourcentage et le bilan à demander au fournisseur avant de sélectionner le compresseur.
+
 Un sécheur frigorifique refroidit l’air pour faire condenser une partie de l’eau, puis la sépare. Sa performance dépend des conditions d’entrée et de refroidissement annoncées par le fabricant.
 
 Un sécheur par adsorption utilise un dessiccant pour retenir la vapeur d’eau. Le dessiccant doit être régénéré. Selon la technologie, cette régénération peut utiliser de l’air de purge, de la chaleur ou une combinaison de procédés.

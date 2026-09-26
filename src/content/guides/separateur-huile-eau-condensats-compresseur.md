@@ -24,6 +24,8 @@ Le [manuel d’air comprimé Atlas Copco](https://www.atlascopco.com/content/dam
 
 ## Séparateur d’eau dans l’air ou séparateur huile/eau ?
 
+En amont du traitement du liquide, le [choix du purgeur de condensats](/guides/purgeur-condensats-temporise-detection-niveau/) répond à la question du déclenchement et de la fiabilité de l’évacuation.
+
 Le vocabulaire des devis peut masquer deux fonctions. Notre grille de lecture consiste à demander **ce qui entre et ce qui sort** de l’équipement :
 
 | Équipement considéré | Question à poser au fournisseur |

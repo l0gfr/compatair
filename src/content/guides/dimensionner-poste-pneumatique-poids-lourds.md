@@ -58,6 +58,8 @@ Cette séparation évite un faux raccourci fréquent : un compresseur capable d�
 
 ## Décrire une séquence réelle de travail
 
+Si la baie comporte une graisseuse, son usage doit aussi apparaître dans la séquence. Le [guide de la FACOM 379A](/guides/compresseur-graisseuse-pneumatique-facom-379a/) précise les valeurs exploitables pour son alimentation et leurs limites.
+
 Le débit en charge répond à une phase de fonctionnement. Pour dimensionner le poste, observez une période représentative et consignez : durée d’appui, intervalle entre deux roues, enchaînement des véhicules et autres outils actifs. Une seconde clé, une soufflette ou un dispositif de gonflage peuvent se superposer à la demande principale.
 
 Deux scénarios doivent rester distincts :

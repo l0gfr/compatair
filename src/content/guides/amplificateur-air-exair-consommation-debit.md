@@ -60,6 +60,8 @@ Pour comparer avec un compresseur, conservez les [conditions standard des débit
 
 ## Comparer le travail rendu, pas seulement le rapport 18
 
+Pour un poste à ventouses, le [guide des éjecteurs Schmalz SBPL](/guides/ejecteur-vide-schmalz-sbpl-consommation/) distingue également les flux : aspiration côté vide et prélèvement côté air comprimé.
+
 Un rapport d’amplification ne démontre pas qu’un dispositif convient à toute pièce ou qu’il est le plus économique. Nous proposons de comparer les solutions sur le même résultat attendu : zone à traiter, distance, durée du soufflage et critère d’acceptation de la pièce. Sans cela, deux jets de volume différent ne répondent pas nécessairement à la même tâche.
 
 Pour un essai de sélection, conservez la référence, la configuration, la pression à l’entrée et le cycle. Faites constater le résultat par le responsable du procédé avant de comparer les consommations. Ce protocole est une proposition CompatAir ; aucune économie chiffrée n’a été mesurée ici.
@@ -71,6 +73,8 @@ Le principe décrit par EXAIR implique un mélange avec l’air du voisinage. Il
 Pour une application ayant une exigence de propreté, demandez une validation portant sur le flux qui atteint effectivement la pièce et sur l’environnement. Ne présentez pas le dispositif comme produisant un air respirable ou stérile sur la seule base du débit publié. Le [guide de qualité d’air](/guides/qualite-air-comprime-iso-8573-1/) permet de préciser les exigences à documenter.
 
 ## Les informations utiles dans une consultation fournisseur
+
+Pour un besoin de refroidissement local, le [dossier EXAIR Cold Gun](/guides/pistolet-air-froid-exair-cold-gun-compresseur/) étudie les références standard et High Power ainsi que le volume d’air par opération.
 
 Indiquez le nombre de postes, leur fonctionnement simultané, la pression disponible, le résultat demandé et la géométrie de l’application. Demandez ensuite la référence et la configuration proposées, leur consommation comprimée, les conditions de mesure du jet et le protocole de vérification.
 

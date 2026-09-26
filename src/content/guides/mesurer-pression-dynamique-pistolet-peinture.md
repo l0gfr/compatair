@@ -23,6 +23,8 @@ Une inscription « 2 bar » sur la fiche de poste ne suffit donc pas : il faut c
 
 ## Mesurer à l’entrée, pendant le passage d’air
 
+Le [cas SATAminijet 4400 B](/guides/sata-minijet-4400-b-hvlp-rp-compresseur/) applique ce contrôle à un pistolet de retouche, avec des besoins distincts entre HVLP et RP.
+
 La brochure officielle du [SATA adam 2](https://www.sata.com/assets/cms/2022/10/21/EN-SATA-DanAm-Brochure-SATA-adam-2-Flexibility-Digitalised-K-131862-4020-06-3_uid_6352a33f75bfa.pdf) décrit un micromètre numérique monté sur le pistolet et annonce un affichage de la pression d’entrée avec une précision de **± 0,05 bar**. Cette précision est une caractéristique de l’appareil documenté, pas celle de tout manomètre numérique.
 
 La mesure doit être lue avec le pistolet dans la condition de réglage prévue par sa notice. Une lecture hors débit renseigne la pression disponible avant ouverture ; elle ne confirme pas la pression dynamique demandée.
@@ -39,6 +41,8 @@ La mesure doit être lue avec le pistolet dans la condition de réglage prévue 
 </div>
 
 ## Construire un protocole qui peut être rejoué
+
+Pour un aérographe, le [guide Iwata Eclipse HP-CS](/guides/compresseur-aerographe-iwata-eclipse-hp-cs/) distingue le réglage de pression documenté et la consommation d’air non renseignée, sans extrapoler les besoins d’un pistolet HVLP.
 
 Avant la mesure, identifiez le pistolet, la buse, le flexible, le raccord, le filtre et le régulateur. Vérifiez l’état de l’instrument et notez son unité. Le relevé doit préciser :
 

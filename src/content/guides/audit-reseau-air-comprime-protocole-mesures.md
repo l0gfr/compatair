@@ -80,6 +80,8 @@ La durée utile dépend du cycle réel du site. Un exemple de trente minutes dan
 
 ## Construire le plan de mesure
 
+Avant d’exploiter les chiffres, vérifiez l’instrumentation : le [guide du débitmètre d’air comprimé](/guides/debitmetre-air-comprime-diametre-conditions-reference/) détaille l’effet du diamètre programmé, des longueurs droites et de la référence de volume.
+
 Le Sourcebook relie la ligne de base à la puissance, à la pression et au débit. Selon le périmètre, le plan peut aussi inclure température, point de rosée, états de commande et comptages de production. Chaque canal répond à une question différente.
 
 | Canal | Question traitée | Information à conserver |

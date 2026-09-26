@@ -44,6 +44,8 @@ La note de la fiche précise que la puissance à d’autres points dépend de la
 
 ## Refaire le calcul pour contrôler les unités
 
+La puissance mécanique d’un consommateur est une autre grandeur : le [guide du moteur pneumatique](/guides/moteur-pneumatique-couple-demarrage-debit/) vérifie la relation entre couple, vitesse, watts et kilowatts avant de passer au besoin d’air.
+
 La puissance spécifique s’obtient en divisant la puissance totale par le débit au même point. Avant de comparer, harmonisez les unités sans modifier les conditions de référence. Une fiche en kW/100 cfm et une autre en kW/(m³/min) peuvent être converties, mais la pression et le périmètre du package doivent rester visibles.
 
 Le formulaire d’exemple CAGI affiche 175 acfm, 36,12 kW et 20,64 kW/100 cfm à 125 psig. Le calcul `36,12 ÷ 175 × 100` retrouve 20,64. Ces chiffres illustrent le formulaire ABC fictif ; ils ne décrivent aucun modèle vendu.

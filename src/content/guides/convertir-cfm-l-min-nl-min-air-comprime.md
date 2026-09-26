@@ -72,6 +72,8 @@ Même après normalisation des unités, vérifiez aussi le régime de l’outil 
 
 ## Une feuille de comparaison qui reste vérifiable
 
+Pour les relevés sur site, le [cas VPFlowScope M Thermal In-line](/guides/debitmetre-air-comprime-diametre-conditions-reference/) montre comment deux paramètres de référence peuvent créer un écart apparent sans changement du débit massique.
+
 Pour chaque ligne de devis, gardez six colonnes : référence exacte, valeur et unité originales, libellé original, conditions, conversion réalisée, source et date. Ajoutez une colonne de conclusion laissée vide tant qu’un élément critique manque.
 
 Exemple de saisie proposé par CompatAir : « Outil A, 8 L/s en charge, pression indiquée dans la notice, conversion × 60, soit 480 L/min en charge ». La ligne du compresseur doit ensuite fournir son propre débit restitué à une pression comparable. Le nombre 480 ne suffit pas à choisir la machine.

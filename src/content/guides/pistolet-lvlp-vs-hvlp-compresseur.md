@@ -27,6 +27,8 @@ Deux produits documentés illustrent l’écart : Metabo publie **136 L/min à 1
 
 ## Lire la référence exacte
 
+Pour un poste de retouche, la [comparaison du SATAminijet 4400 B HVLP et RP](/guides/sata-minijet-4400-b-hvlp-rp-compresseur/) relie les deux versions à leurs points de pression respectifs et signale une conversion incohérente dans une fiche en ligne.
+
 La fiche Metabo du FSP 600 LVLP indique une consommation d’air de 136 L/min, une pression de service de 1,6 bar, un raccord de 1/4 pouce, un godet de 0,6 litre et une buse de 1,3 mm.
 
 La fiche et le catalogue ABAC du G-550F indiquent 220 L/min à 4 bar, un raccord de 1/4 pouce, un godet de 600 ml et une buse de 1,5 mm.

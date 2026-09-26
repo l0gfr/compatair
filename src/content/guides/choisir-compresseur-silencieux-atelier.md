@@ -44,6 +44,8 @@ Une cuve de 50 litres peut amortir une pointe plus longtemps qu’une cuve de 24
 
 ## Une sélection en quatre contrôles
 
+Si le poste visé est un aérographe, consultez le [dossier Iwata Eclipse HP-CS](/guides/compresseur-aerographe-iwata-eclipse-hp-cs/) pour préparer l’essai d’alimentation en complément de la comparaison acoustique.
+
 1. Relever la consommation et la pression de l’outil exact.
 2. Vérifier le débit restitué du compresseur à cette pression, par point direct ou interpolation bornée.
 3. Comparer uniquement des indicateurs acoustiques compatibles.

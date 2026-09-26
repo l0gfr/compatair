@@ -59,6 +59,8 @@ Ces températures sont des **hypothèses pédagogiques**, pas des mesures d’un
 
 ## Vérifier le débit utile après traitement
 
+Le [guide du débit net après un sécheur à adsorption](/guides/secheur-adsorption-air-purge-debit-net/) donne les formules et un contre-exemple montrant pourquoi ajouter simplement un pourcentage peut sous-estimer le besoin entrant.
+
 Le débit annoncé en tête de catalogue n’est pas forcément la capacité du sécheur dans votre installation. Demandez les conditions nominales et les corrections nécessaires pour la température d’entrée, la pression et la température ambiante. Une sélection sans ces données reste incomplète.
 
 L’adsorption appelle une question supplémentaire : la régénération consomme-t-elle de l’air comprimé, combien et quand ? Le débit de purge communiqué par le fabricant doit apparaître dans le bilan de la centrale. N’appliquez pas un pourcentage générique à toutes les technologies. Consignez aussi la perte de pression du traitement et la puissance électrique lorsqu’elle est pertinente.

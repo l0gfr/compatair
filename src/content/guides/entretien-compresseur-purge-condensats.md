@@ -49,6 +49,8 @@ CompatAir ne recommande pas de modifier le pressostat ou la soupape. La notice p
 
 ## Purger les condensats selon la notice
 
+Pour automatiser l’évacuation, le [comparatif purge temporisée et détection de niveau](/guides/purgeur-condensats-temporise-detection-niveau/) détaille les commandes, les contrôles et les données nécessaires avant de chiffrer une perte d’air.
+
 L’air aspiré contient de la vapeur d’eau. Lorsqu’il est comprimé puis refroidi, une partie de cette eau se condense. Atlas Copco décrit le réservoir comme une zone tampon qui refroidit l’air et collecte de la condensation. Le manuel indique qu’un dispositif de drainage est nécessaire.
 
 Pour le TC-AC 240/50/10 OF, Einhell demande de vidanger l’eau de condensation après chaque utilisation. La notice décrit l’ouverture du bouchon de vidange, l’inclinaison de la cuve pour placer ce bouchon au point le plus bas, l’écoulement complet et la fermeture.
