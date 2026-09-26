@@ -3,6 +3,7 @@ title: "Ventilation du local compresseur : éviter la recirculation d’air chau
 seoTitle: "Ventilation du local compresseur : éviter la surchauffe"
 description: "Entrée d’air, extraction, gaines, sécheur et accès maintenance : préparez l’implantation d’un compresseur sans inventer un débit de ventilation universel."
 pubDate: 2026-09-26
+updatedDate: 2026-09-26
 category: "Installer"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "garage-automobile", "menuiserie-agencement"]
@@ -19,6 +20,8 @@ sources:
 **Un local compresseur doit évacuer la chaleur produite sans renvoyer l’air chaud vers les admissions.** La taille de la pièce ou la présence d’une grille ne suffisent pas à démontrer que cette fonction est remplie. Le débit de ventilation et les contraintes de gaines doivent être définis pour les machines installées, dans leurs conditions d’utilisation.
 
 Le [guide d’implantation Atlas Copco](https://www.atlascopco.com/en-uk/compressors/compressed-air-tips/top-tip-room-layout-designing-your-compressor) recommande de traiter ensemble ventilation, propreté de l’air, accès de maintenance et évacuation des condensats. Le [Compressed Air Manual, 9e édition](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf), section 3.5.5, demande des informations de ventilation au fabricant et prend en compte les pertes de charge des conduits et grilles. Ce dossier transforme ces principes en questions concrètes pour un devis ou un diagnostic.
+
+Pour vérifier l’effet des conditions chaudes sur le traitement d’air, consultez le [dimensionnement du sécheur frigorifique en été](/guides/dimensionner-secheur-frigorifique-ete/), avec un calcul de capacité corrigée sourcé.
 
 ## Il existe deux circuits d’air à ne pas confondre
 

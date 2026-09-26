@@ -2,7 +2,7 @@
 title: "Qualité de l’air comprimé et ISO 8573-1 : particules, eau et huile sans raccourci"
 description: "Comprendre ce que classe réellement ISO 8573-1, où spécifier la qualité de l’air et pourquoi filtre, sécheur et compresseur sans huile ne sont pas interchangeables."
 pubDate: 2026-07-13
-updatedDate: 2026-09-25
+updatedDate: 2026-09-26
 category: "Comprendre"
 audiences: [professionnel]
 metiers: [carrosserie-peinture, maintenance-industrielle]
@@ -28,6 +28,8 @@ La page officielle de l’[ISO 8573-1:2010](https://www.iso.org/fr/standard/4641
   <circle cx="580" cy="170" r="88" fill="#28533f" stroke="#e39a5e" stroke-width="3"/><text x="580" y="158" text-anchor="middle" fill="white" font-size="21" font-weight="700">Huile</text><text x="580" y="187" text-anchor="middle" fill="#c7d6ce" font-size="14">formes mesurées</text></g>
   <text x="38" y="315" fill="#b9cac1" font-size="14">La classe requise vient de l’usage. La technologie du compresseur ne la détermine pas à elle seule.</text>
 </svg>
+
+Le [guide du Powermax45 SYNC](/guides/compresseur-decoupeur-plasma-powermax45-sync/) applique cette lecture à un découpeur plasma, avec les exigences de qualité d’air de sa notice et un écart documentaire sur le débit.
 
 ## Partir de l’usage final
 

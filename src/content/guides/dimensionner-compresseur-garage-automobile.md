@@ -3,7 +3,7 @@ title: "Dimensionner un compresseur pour un garage automobile, poste par poste"
 seoTitle: "Compresseur pour garage automobile | CompatAir"
 description: "Méthode sourcée pour relever les besoins des outils d’un garage, traiter leur simultanéité et contrôler le réseau sans consommation métier inventée."
 pubDate: 2026-07-15
-updatedDate: 2026-09-25
+updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [professionnel]
 metiers: [garage-automobile]
@@ -25,6 +25,8 @@ Dans un garage, la demande d’air se construit poste par poste. L’inventaire 
   <g font-size="15" font-weight="700"><rect x="38" y="85" width="155" height="95" rx="14" fill="#eef2e9"/><text x="58" y="120" fill="#143426">1. Références</text><text x="58" y="148" fill="#56685e" font-size="13">outil par outil</text><rect x="215" y="85" width="155" height="95" rx="14" fill="#eef2e9"/><text x="235" y="120" fill="#143426">2. Cadences</text><text x="235" y="148" fill="#56685e" font-size="13">et simultanéité</text><rect x="392" y="85" width="155" height="95" rx="14" fill="#eef2e9"/><text x="412" y="120" fill="#143426">3. Réseau</text><text x="412" y="148" fill="#56685e" font-size="13">pression en charge</text><rect x="569" y="85" width="153" height="95" rx="14" fill="#d3eb56"/><text x="589" y="120" fill="#143426">4. FAD</text><text x="589" y="148" fill="#56685e" font-size="13">à la même pression</text></g>
   <path d="M193 132h22m155 0h22m155 0h22" stroke="#e39a5e" stroke-width="3"/><text x="38" y="250" fill="white" font-size="17" font-weight="700">Une étiquette « garage » ne fournit ni L/min, ni cadence, ni simultanéité.</text><text x="38" y="286" fill="#b9cac1" font-size="14">Les données manquantes restent visibles jusqu’au relevé ou à la notice.</text>
 </svg>
+
+Un poste de detailing doit être décrit avec son outil exact. Le [guide Tornador Black Z-020RS et Classic Z-010RS](/guides/compresseur-pour-tornador-black-classic/) confronte les débits et pressions annoncés avant le choix du compresseur.
 
 ## La clé à chocs donne un point de départ, pas une moyenne métier
 

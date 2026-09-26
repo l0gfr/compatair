@@ -2,7 +2,7 @@
 title: "Quel compresseur pour une meuleuse pneumatique ?"
 description: "Comparaison à pression égale des besoins des Einhell TC-PA 50 et TC-PP 220, avec calculs reproductibles à partir des courbes constructeur."
 pubDate: 2026-07-13
-updatedDate: 2026-09-25
+updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [maintenance-industrielle]
@@ -27,6 +27,8 @@ Une meuleuse pneumatique impose de comparer deux valeurs à la même pression. L
   <text x="38" y="227" fill="#35473d" font-size="15">TC-PP 220</text><rect x="38" y="240" width="320" height="27" rx="6" fill="#c18a00"/><text x="369" y="260" fill="#102018" font-size="16">128 L/min</text>
   <text x="475" y="158" fill="#35473d" font-size="15">TE-AC 430/90/10</text><rect x="475" y="171" width="202" height="96" rx="8" fill="#2f7659"/><text x="496" y="224" fill="white" font-size="18" font-weight="700">202 L/min calculés</text>
 </svg>
+
+Pour une machine dédiée à la coupe, consultez le [guide des tronçonneuses CP861 et CP9116](/guides/compresseur-pour-tronconneuse-pneumatique/), qui distingue les consommations en charge et à vitesse libre.
 
 ## Deux outils proches, deux seuils distincts
 

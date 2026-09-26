@@ -1,0 +1,657 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-09-26",
+  "reviewType": "internal_editorial",
+  "externalProfessionalValidation": false,
+  "physicalTestsPerformed": false,
+  "hashScope": "SHA-256 des corps HTML/PDF consultés. Les pages dynamiques peuvent changer sans modification technique. Documents originaux non redistribués.",
+  "sources": [
+    {
+      "id": "altitude",
+      "url": "https://www.atlascopco.com/en-au/compressors/wiki/compressed-air-articles/dimensioning-compressor-installations-at-high-altitudes",
+      "resolvedUrl": "https://www.atlascopco.com/en-au/compressors/wiki/compressed-air-articles/dimensioning-compressor-installations-at-high-altitudes",
+      "httpStatus": 200,
+      "sha256": "e178db62011a262d67b79df445957bdec3413524dfd8aede46228aeeb14ce5ae",
+      "bytes": 307799,
+      "consultedOn": "2026-09-26",
+      "scope": "Pression ambiante, motorisation, refroidissement et paramètres de site ; aucune décote universelle appliquée au catalogue.",
+      "guides": [
+        "compresseur-altitude-chantier-montagne"
+      ]
+    },
+    {
+      "id": "atlas-manual",
+      "url": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/saudi-arabia/documents/Compressed_Air_Manual_tcm44-1249312.pdf",
+      "resolvedUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/saudi-arabia/documents/Compressed_Air_Manual_tcm44-1249312.pdf",
+      "httpStatus": 200,
+      "sha256": "0dff65cf0f56ae94036bed73bc8a7f90b58de6e58eb2413b8a6ab57ca372e9fb",
+      "bytes": 13131332,
+      "consultedOn": "2026-09-26",
+      "scope": "Chapitre 3.1.3 ; page PDF 72 vérifiée visuellement. Exemple générique piston mono-étagé 5 % FAD contre 17 % débit massique/normalisé, non extrapolé à un produit.",
+      "guides": [
+        "compresseur-altitude-chantier-montagne"
+      ]
+    },
+    {
+      "id": "cejn-catalogue",
+      "url": "https://www.cejn.com/globalassets/documents/brochures/pneumatic-range/pneumatic_catatalogue_fr.pdf",
+      "resolvedUrl": "https://www.cejn.com/globalassets/documents/brochures/pneumatic-range/pneumatic_catatalogue_fr.pdf",
+      "httpStatus": 200,
+      "sha256": "0fb5957d08efc2b184417675ebb0b5c1f630ceef1a57611dc515b034527365ce",
+      "bytes": 18065437,
+      "consultedOn": "2026-09-26",
+      "scope": "Page PDF 21 vérifiée visuellement : série320, profil7,4, DN7,6, 2250L/min à6bar/Δ0,5bar, service16bar versus éclatement140bar ; référence documentaire sans affirmer dernière édition.",
+      "guides": [
+        "raccord-rapide-securite-decompression-air-comprime"
+      ]
+    },
+    {
+      "id": "cejn-esafe",
+      "url": "https://www.cejn.com/en-us/products/pneumatics/esafe-couplings-nipples/",
+      "resolvedUrl": "https://www.cejn.com/en-us/products/pneumatics/esafe-couplings-nipples/",
+      "httpStatus": 200,
+      "sha256": "7da43e156c775811c147ac70174d19a56f4e1f2907f1424f8ec83fe39ef87f84",
+      "bytes": 181412,
+      "consultedOn": "2026-09-26",
+      "scope": "Fonction de décompression avant séparation ; aucune conformité de système complet déduite.",
+      "guides": [
+        "raccord-rapide-securite-decompression-air-comprime"
+      ]
+    },
+    {
+      "id": "cp861",
+      "url": "https://tools.cp.com/en-ca/products/specialtycutting/cp861-skuT022039",
+      "resolvedUrl": "https://tools.cp.com/en-ca/products/specialtycutting/cp861-skuT022039",
+      "httpStatus": 200,
+      "sha256": "6e960ecd0efd19d8a50860c964bfdce4e4214e6f2affc6c251cb664fd94995a5",
+      "bytes": 263701,
+      "consultedOn": "2026-09-26",
+      "scope": "75 mm, 20 000 tr/min, 4 L/s en charge ; champs flexible incohérents explicitement écartés.",
+      "guides": [
+        "compresseur-pour-tronconneuse-pneumatique"
+      ]
+    },
+    {
+      "id": "cp9116-detail",
+      "url": "https://tools.cp.com/en/products/specialtycutting/cp9116-sku8941091160",
+      "resolvedUrl": "https://tools.cp.com/en/products/specialtycutting/cp9116-sku8941091160",
+      "httpStatus": 200,
+      "sha256": "5ee9a0c1db1ffb0012df5465bd22a5d6ac28b50c5e03892b931a2b8766363cfb",
+      "bytes": 261252,
+      "consultedOn": "2026-09-26",
+      "scope": "100 mm, 14 000 tr/min, 3,3 L/s en charge, 17 L/s à vitesse libre ; disponibilité constructeur et champs inversés signalés.",
+      "guides": [
+        "compresseur-pour-tronconneuse-pneumatique"
+      ]
+    },
+    {
+      "id": "cp9116-manual",
+      "url": "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940172152.pdf",
+      "resolvedUrl": "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940172152.pdf",
+      "httpStatus": 200,
+      "sha256": "119ff874239a359b36ec37b265521550e7311debbc19af02bb165b1b71d8ae6c",
+      "bytes": 6982539,
+      "consultedOn": "2026-09-26",
+      "scope": "Page PDF 2 vérifiée visuellement : 3,3 Nl/s, 10 mm dans le schéma, pression sonore 86 et puissance sonore 97 dB(A). Pas de seuil universel de débit déduit.",
+      "guides": [
+        "compresseur-pour-tronconneuse-pneumatique"
+      ]
+    },
+    {
+      "id": "cp9361",
+      "url": "https://tools.cp.com/en/products/percussivetools/cp9361-skuT012644",
+      "resolvedUrl": "https://tools.cp.com/en/products/percussivetools/cp9361-skuT012644",
+      "httpStatus": 200,
+      "sha256": "3d81a2c0d13199613d10c1a04b5dc3be7ba29b034b8d960ed0fe4e43e9d39240",
+      "bytes": 273020,
+      "consultedOn": "2026-09-26",
+      "scope": "0,1 L/s en charge ; 6,3 bar maximum ; flexible minimal 5 mm pour 5 m ; emmanchement hexagonal et cadence.",
+      "guides": [
+        "compresseur-pour-graveur-pneumatique-cp9361"
+      ]
+    },
+    {
+      "id": "cp9361-manual",
+      "url": "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/P145929.pdf",
+      "resolvedUrl": "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/P145929.pdf",
+      "httpStatus": 200,
+      "sha256": "fe1e178d3a311633f05e55f8c0185f66c5119d3cbb387bec9e5cc13196bdf44c",
+      "bytes": 1929256,
+      "consultedOn": "2026-09-26",
+      "scope": "Tableau page PDF 2 vérifié visuellement : réel 6 L/min, moyennes 0,28 cfm et 0,75 L/min incohérentes ; aucune correction implicite.",
+      "guides": [
+        "compresseur-pour-graveur-pneumatique-cp9361"
+      ]
+    },
+    {
+      "id": "cp9882",
+      "url": "https://tools.cp.com/en/products/compression-tools/cp9882-sku8941098820",
+      "resolvedUrl": "https://tools.cp.com/en/products/compression-tools/cp9882-sku8941098820",
+      "httpStatus": 200,
+      "sha256": "19fb407dd8732ed3bb8795c2165265e3ea8183521e1743cc09f0fea23f05dbff",
+      "bytes": 274432,
+      "consultedOn": "2026-09-26",
+      "scope": "Fiche métrique : 1,9 L/s en charge ; capacité matière limitée ; pression maximale dynamique et flexible pour 5 m.",
+      "guides": [
+        "compresseur-pour-riveteuse-pneumatique"
+      ]
+    },
+    {
+      "id": "cp9882-manual",
+      "url": "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940169829.pdf",
+      "resolvedUrl": "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940169829.pdf",
+      "httpStatus": 200,
+      "sha256": "ecf600f048dd9fd41d2612f504355b40f8cb6ef7dc27a9b65df0dd2b11e8ac0b",
+      "bytes": 3326609,
+      "consultedOn": "2026-09-26",
+      "scope": "Notice et écart 90 psi/6,2 bar vis-à-vis du 6,3 bar de la fiche ; aucun réglage de surpression conseillé.",
+      "guides": [
+        "compresseur-pour-riveteuse-pneumatique"
+      ]
+    },
+    {
+      "id": "cp9886-metric",
+      "url": "https://tools.cp.com/en/products/compression-tools/cp9886-sku8941098860",
+      "resolvedUrl": "https://tools.cp.com/en/products/compression-tools/cp9886-sku8941098860",
+      "httpStatus": 200,
+      "sha256": "b479bb7ebdee12ef902f7c7e2b019331ad78d18b0e040093162ef0172b9f5b2b",
+      "bytes": 264908,
+      "consultedOn": "2026-09-26",
+      "scope": "4 L/s en charge ; rivets aveugles acier 5 mm ; aucune consommation par cycle déduite.",
+      "guides": [
+        "compresseur-pour-riveteuse-pneumatique"
+      ]
+    },
+    {
+      "id": "cp9888-metric",
+      "url": "https://tools.cp.com/en/products/compression-tools/cp9888-sku8941098880",
+      "resolvedUrl": "https://tools.cp.com/en/products/compression-tools/cp9888-sku8941098880",
+      "httpStatus": 200,
+      "sha256": "932eefa890db9885ccb3fd591db1c2e878f12172e3837ae06789610e0a404c2c",
+      "bytes": 264098,
+      "consultedOn": "2026-09-26",
+      "scope": "2,8 L/s en charge ; écrous à sertir M3 à M12, pas rivets aveugles.",
+      "guides": [
+        "compresseur-pour-riveteuse-pneumatique"
+      ]
+    },
+    {
+      "id": "exair-amplification",
+      "url": "https://blog.exair.com/2021/03/26/exairs-super-air-amplifier-amplification-ratios-explained/",
+      "resolvedUrl": "https://blog.exair.com/2021/03/26/exairs-super-air-amplifier-amplification-ratios-explained/",
+      "httpStatus": 200,
+      "sha256": "c4694ab22fb337722c7cc83ac54674ccc66366a235a383424e34c6dcd6a8a8a4",
+      "bytes": 206843,
+      "consultedOn": "2026-09-26",
+      "scope": "Principe d’entraînement ambiant et différence entre sortie et mesure à distance ; aucun pourcentage d’économie repris.",
+      "guides": [
+        "amplificateur-air-exair-consommation-debit"
+      ]
+    },
+    {
+      "id": "exair-catalogue",
+      "url": "https://www.exair.com/media/productcms/pdf/AirAmplifiers2_1.pdf",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.exair.com/media/productcms/pdf/AirAmplifiers2_1.pdf",
+      "consultedOn": "2026-09-26",
+      "sha256": "487e351c82543951c82076b4fbb22af9e018c57414b77f6432c5dec94fc88abe",
+      "bytes": 5375647,
+      "scope": "Pages PDF7 et8 inspectées visuellement. 120021 : 229/4132/12339SLPM, 5,5bar, cale0,08mm, ratio18. Pas de confusion entre jet et alimentation comprimée.",
+      "guides": [
+        "amplificateur-air-exair-consommation-debit"
+      ]
+    },
+    {
+      "id": "festo-additional",
+      "url": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/PRESSURE-BOOSTER-ADD_EN.PDF",
+      "resolvedUrl": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/PRESSURE-BOOSTER-ADD_EN.PDF",
+      "httpStatus": 200,
+      "sha256": "c57a05fde1ee1d763686756b25b94ec9353d8923850347979adc625210e3e402",
+      "bytes": 1280291,
+      "consultedOn": "2026-09-26",
+      "scope": "Édition04/2026 : usage intermittent, clapets, réservoir et décompression aval ; aucun plan de montage publié.",
+      "guides": [
+        "surpresseur-pneumatique-festo-dpa-pression-debit"
+      ]
+    },
+    {
+      "id": "festo-manual",
+      "url": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/DPA_EN.PDF",
+      "resolvedUrl": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/DPA_EN.PDF",
+      "httpStatus": 200,
+      "sha256": "adb6de3cff2edcc3a6c868434a30879f936870b999d5a711c1e99874ea333000",
+      "bytes": 4050367,
+      "consultedOn": "2026-09-26",
+      "scope": "Édition26/05/2026 ; principes p2 jusque2×p1 ; qin/qout séparés. Courbes théoriques p7 vérifiées visuellement, aucune interpolation de performance chiffrée.",
+      "guides": [
+        "surpresseur-pneumatique-festo-dpa-pression-debit"
+      ]
+    },
+    {
+      "id": "hypertherm-flow",
+      "url": "https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/jut1722548630709.html",
+      "resolvedUrl": "https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/jut1722548630709.html",
+      "httpStatus": 200,
+      "sha256": "e23ea30db147eb92a8691b219db806f65ada13afc858733e77311d0fc15cbe15",
+      "bytes": 26074,
+      "consultedOn": "2026-09-26",
+      "scope": "212,4 slpm en coupe/gougeage et 141,6 en marquage avec pressions propres ; slpm préservé.",
+      "guides": [
+        "compresseur-decoupeur-plasma-powermax45-sync"
+      ]
+    },
+    {
+      "id": "hypertherm-gas",
+      "url": "https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/ojy1722548627966.html",
+      "resolvedUrl": "https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/ojy1722548627966.html",
+      "httpStatus": 200,
+      "sha256": "5d47c98aa6da48f2c6fc24b1445dcb7816cdf5b91220e070892a2cf99d888660",
+      "bytes": 32333,
+      "consultedOn": "2026-09-26",
+      "scope": "Diamètres intérieurs 10 mm sous 15 m, 13 mm entre 15 et 30 m, maximum alimentation 9,3 bar ; pas assimilé à la pression de coupe.",
+      "guides": [
+        "compresseur-decoupeur-plasma-powermax45-sync"
+      ]
+    },
+    {
+      "id": "hypertherm-product",
+      "url": "https://www.hypertherm.com/hypertherm/powermax/powermax45-sync/",
+      "resolvedUrl": "https://www.hypertherm.com/hypertherm/powermax/powermax45-sync/",
+      "httpStatus": 200,
+      "sha256": "01fa4624c634ff188048fc3b6fe35375df173dce921c75518fd871c95f0428b6",
+      "bytes": 289389,
+      "consultedOn": "2026-09-26",
+      "scope": "188 L/min à 5,9 bar en désaccord avec la notice : aucun chiffre de substitution ou origine supposée.",
+      "guides": [
+        "compresseur-decoupeur-plasma-powermax45-sync"
+      ]
+    },
+    {
+      "id": "hypertherm-quality",
+      "url": "https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/eel1722548629387.html",
+      "resolvedUrl": "https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/eel1722548629387.html",
+      "httpStatus": 200,
+      "sha256": "37296e1d08e7047049953dce7bd1c95e0e4b445a5a50091ed5afc85f9fa7adc8",
+      "bytes": 30518,
+      "consultedOn": "2026-09-26",
+      "scope": "Recommandation ISO 1.4.2, PDP +3 °C et huile totale 0,1 mg/m³ ; aucune conformité de compresseur inventée.",
+      "guides": [
+        "compresseur-decoupeur-plasma-powermax45-sync"
+      ]
+    },
+    {
+      "id": "inrs-prevention",
+      "url": "https://www.inrs.fr/risques/vibration-membres-superieurs/prevention",
+      "resolvedUrl": "https://www.inrs.fr/risques/vibration-membres-superieurs/prevention",
+      "httpStatus": 200,
+      "sha256": "d938f84871ffdcb6284a88ebc90ccf41b4fc7ace6610c3ae53e869bc1a4b9ae0",
+      "bytes": 135517,
+      "consultedOn": "2026-09-26",
+      "scope": "Prévention fondée sur adaptation, entretien et organisation, sans homologation du poste.",
+      "guides": [
+        "compresseur-pour-graveur-pneumatique-cp9361"
+      ]
+    },
+    {
+      "id": "inrs-vibrations",
+      "url": "https://www.inrs.fr/risques/vibration-membres-superieurs/evaluation-risque",
+      "resolvedUrl": "https://www.inrs.fr/risques/vibration-membres-superieurs/evaluation-risque",
+      "httpStatus": 200,
+      "sha256": "ab406196b6feaa92d8e0f08bc3ac92a71cf2d376e3dffb6472747ae1ec59749e",
+      "bytes": 159107,
+      "consultedOn": "2026-09-26",
+      "scope": "Exposition A(8) liée à la durée effective et aux conditions ; aucun calcul réglementaire de durée autorisée.",
+      "guides": [
+        "compresseur-pour-graveur-pneumatique-cp9361"
+      ]
+    },
+    {
+      "id": "kaeser-sizing",
+      "url": "https://fr.kaeser.com/entreprise/blog/comment-dimensionner-un-secheur-frigorifique.aspx",
+      "resolvedUrl": "https://fr.kaeser.com/entreprise/blog/comment-dimensionner-un-secheur-frigorifique.aspx",
+      "httpStatus": 200,
+      "sha256": "fdcc26b984fe761bfdd31884a521d6e38b20031c28147342405699a894b6db1a",
+      "bytes": 52351,
+      "consultedOn": "2026-09-26",
+      "scope": "Exemple 10 m³/min, 6 bar(g), ambiance 35 °C, entrée 45 °C, facteurs 0,92, 0,92, 0,66. Calculs CompatAir identifiés ; facteurs non universels.",
+      "guides": [
+        "dimensionner-secheur-frigorifique-ete"
+      ]
+    },
+    {
+      "id": "tornador-black",
+      "url": "https://www.tornador.de/en/products/tornador-black-z-020rs/",
+      "resolvedUrl": "https://www.tornador.de/en/products/tornador-black-z-020rs/",
+      "httpStatus": 200,
+      "sha256": "b2121930f817d302aa826f916194d2eaff4c5b1cbea4ba14247af8f2367779a2",
+      "bytes": 159754,
+      "consultedOn": "2026-09-26",
+      "scope": "Z-020RS, 602420, environ 270 L/min sans pression associée explicite, maximum 6,5 bar ; puissance moteur non assimilée au FAD.",
+      "guides": [
+        "compresseur-pour-tornador-black-classic"
+      ]
+    },
+    {
+      "id": "tornador-classic",
+      "url": "https://www.tornador.de/en/products/tornador-classic-z-010rs/",
+      "resolvedUrl": "https://www.tornador.de/en/products/tornador-classic-z-010rs/",
+      "httpStatus": 200,
+      "sha256": "8bfbc28da1591d785b04a7935fed6be78d8f787ee6e60e92c5e96f8360f6f639",
+      "bytes": 159188,
+      "consultedOn": "2026-09-26",
+      "scope": "Z-010RS, 602410, 270 L/min à 7 bar ; différentes mentions de plage conservées comme point à clarifier.",
+      "guides": [
+        "compresseur-pour-tornador-black-classic"
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "slug": "compresseur-pour-riveteuse-pneumatique",
+      "title": "Riveteuse pneumatique CP9882, CP9886 et CP9888 : quel compresseur ?",
+      "wordCountApprox": 874,
+      "sourceSha256": "7452234d21a01230de99d5995a334c0bad53ddf544c5e6f87b5d6c2ce72cc73c",
+      "sourceIds": [
+        "cp9882",
+        "cp9886-metric",
+        "cp9888-metric",
+        "cp9882-manual"
+      ],
+      "sources": [
+        "https://tools.cp.com/en/products/compression-tools/cp9882-sku8941098820",
+        "https://tools.cp.com/en/products/compression-tools/cp9886-sku8941098860",
+        "https://tools.cp.com/en/products/compression-tools/cp9888-sku8941098880",
+        "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940169829.pdf"
+      ],
+      "contextualInbound": [
+        "compresseur-pour-marteau-a-river-pneumatique",
+        "visseuse-pneumatique-coupure-automatique"
+      ]
+    },
+    {
+      "slug": "compresseur-pour-graveur-pneumatique-cp9361",
+      "title": "Graveur pneumatique CP9361 : quel compresseur pour 6 L/min ?",
+      "wordCountApprox": 860,
+      "sourceSha256": "c4486dc74a0ca07186bb4cf7d5da93da97382b95478e3e4fdb315a931b861216",
+      "sourceIds": [
+        "cp9361",
+        "cp9361-manual",
+        "inrs-vibrations",
+        "inrs-prevention"
+      ],
+      "sources": [
+        "https://tools.cp.com/en/products/percussivetools/cp9361-skuT012644",
+        "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/P145929.pdf",
+        "https://www.inrs.fr/risques/vibration-membres-superieurs/evaluation-risque",
+        "https://www.inrs.fr/risques/vibration-membres-superieurs/prevention"
+      ],
+      "contextualInbound": [
+        "compresseur-pour-perceuse-pneumatique",
+        "burineur-pneumatique-chantier-debit-vibrations"
+      ]
+    },
+    {
+      "slug": "compresseur-pour-tronconneuse-pneumatique",
+      "title": "Tronçonneuse pneumatique CP861 ou CP9116 : débit, disque et compresseur",
+      "wordCountApprox": 868,
+      "sourceSha256": "b3f40aa3a73e1f2420bfe1ccc1a45ab22ef83b7e51b99160767c9f2744f54cb3",
+      "sourceIds": [
+        "cp861",
+        "cp9116-detail",
+        "cp9116-manual"
+      ],
+      "sources": [
+        "https://tools.cp.com/en-ca/products/specialtycutting/cp861-skuT022039",
+        "https://tools.cp.com/en/products/specialtycutting/cp9116-sku8941091160",
+        "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940172152.pdf"
+      ],
+      "contextualInbound": [
+        "compresseur-pour-meuleuse-pneumatique",
+        "compresseur-pour-cisaille-grignoteuse-pneumatique"
+      ]
+    },
+    {
+      "slug": "compresseur-pour-tornador-black-classic",
+      "title": "Quel compresseur pour Tornador Black Z-020RS ou Classic Z-010RS ?",
+      "wordCountApprox": 860,
+      "sourceSha256": "b895c5429f87f40479470acd5338cba5504a23a8a39208d6075f4e2274ac8c7e",
+      "sourceIds": [
+        "tornador-black",
+        "tornador-classic"
+      ],
+      "sources": [
+        "https://www.tornador.de/en/products/tornador-black-z-020rs/",
+        "https://www.tornador.de/en/products/tornador-classic-z-010rs/"
+      ],
+      "contextualInbound": [
+        "dimensionner-compresseur-garage-automobile",
+        "soufflette-garage-securite-bruit-consommation"
+      ]
+    },
+    {
+      "slug": "compresseur-decoupeur-plasma-powermax45-sync",
+      "title": "Compresseur pour découpe plasma Powermax45 SYNC : débit et qualité d’air",
+      "wordCountApprox": 846,
+      "sourceSha256": "96ab883a6ebb55bbd011a295c161491a4e17961345abbf10a3c4de89188ea6a0",
+      "sourceIds": [
+        "hypertherm-product",
+        "hypertherm-flow",
+        "hypertherm-quality",
+        "hypertherm-gas"
+      ],
+      "sources": [
+        "https://www.hypertherm.com/hypertherm/powermax/powermax45-sync/",
+        "https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/jut1722548630709.html",
+        "https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/eel1722548629387.html",
+        "https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/ojy1722548627966.html"
+      ],
+      "contextualInbound": [
+        "compresseur-pour-cisaille-grignoteuse-pneumatique",
+        "qualite-air-comprime-iso-8573-1"
+      ]
+    },
+    {
+      "slug": "compresseur-altitude-chantier-montagne",
+      "title": "Compresseur en altitude : débit, pression et choix pour un chantier en montagne",
+      "wordCountApprox": 906,
+      "sourceSha256": "08213850db5c0aad9c5bb9f2aa958d6a207ce181e653b89b31c93e1b7e6b761f",
+      "sourceIds": [
+        "altitude",
+        "atlas-manual"
+      ],
+      "sources": [
+        "https://www.atlascopco.com/en-au/compressors/wiki/compressed-air-articles/dimensioning-compressor-installations-at-high-altitudes",
+        "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/saudi-arabia/documents/Compressed_Air_Manual_tcm44-1249312.pdf"
+      ],
+      "contextualInbound": [
+        "choisir-compresseur-mobile-chantier-fad-autonomie",
+        "bar-psi-pression-absolue-relative"
+      ]
+    },
+    {
+      "slug": "dimensionner-secheur-frigorifique-ete",
+      "title": "Dimensionner un sécheur frigorifique en été : débit et facteurs de correction",
+      "wordCountApprox": 898,
+      "sourceSha256": "c73639ef8d1342c7045613d6fc9c8c34cc14bbfcca222d1076b9899c684324eb",
+      "sourceIds": [
+        "kaeser-sizing"
+      ],
+      "sources": [
+        "https://fr.kaeser.com/entreprise/blog/comment-dimensionner-un-secheur-frigorifique.aspx"
+      ],
+      "contextualInbound": [
+        "point-rosee-secheur-filtre-air-comprime",
+        "ventilation-local-compresseur-surchauffe"
+      ]
+    },
+    {
+      "slug": "raccord-rapide-securite-decompression-air-comprime",
+      "title": "Raccord rapide de sécurité : décompression, profil et débit d’air comprimé",
+      "wordCountApprox": 892,
+      "sourceSha256": "f2a41948e87eafeed477d600aa07ee65543fccf5b90836324d84024fa2825248",
+      "sourceIds": [
+        "cejn-esafe",
+        "cejn-catalogue"
+      ],
+      "sources": [
+        "https://www.cejn.com/en-us/products/pneumatics/esafe-couplings-nipples/",
+        "https://www.cejn.com/globalassets/documents/brochures/pneumatic-range/pneumatic_catatalogue_fr.pdf"
+      ],
+      "contextualInbound": [
+        "raccord-air-comprime-bsp-npt-1-4",
+        "flexible-enrouleur-raccords-garage-debit"
+      ]
+    },
+    {
+      "slug": "surpresseur-pneumatique-festo-dpa-pression-debit",
+      "title": "Surpresseur pneumatique Festo DPA : doubler la pression, mais à quel débit ?",
+      "wordCountApprox": 860,
+      "sourceSha256": "623ab5c9d1cc3352ad98b7179e3863e9ff08981346022b73b5bdfaf87e290d90",
+      "sourceIds": [
+        "festo-manual",
+        "festo-additional"
+      ],
+      "sources": [
+        "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/DPA_EN.PDF",
+        "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/PRESSURE-BOOSTER-ADD_EN.PDF"
+      ],
+      "contextualInbound": [
+        "bar-psi-pression-absolue-relative",
+        "stockage-primaire-secondaire-air-comprime"
+      ]
+    },
+    {
+      "slug": "amplificateur-air-exair-consommation-debit",
+      "title": "Amplificateur d’air EXAIR 120021 : consommation, débit soufflé et compresseur",
+      "wordCountApprox": 879,
+      "sourceSha256": "77365c3f3c49996115945bbdccdc4792def608f53e92541647901f573bdc8c55",
+      "sourceIds": [
+        "exair-catalogue",
+        "exair-amplification"
+      ],
+      "sources": [
+        "https://www.exair.com/media/productcms/pdf/AirAmplifiers2_1.pdf",
+        "https://blog.exair.com/2021/03/26/exairs-super-air-amplifier-amplification-ratios-explained/"
+      ],
+      "contextualInbound": [
+        "soufflette-garage-securite-bruit-consommation",
+        "utiliser-plusieurs-outils-pneumatiques"
+      ]
+    }
+  ],
+  "internalLinks": {
+    "existingGuidesUpdated": [
+      "compresseur-pour-marteau-a-river-pneumatique",
+      "visseuse-pneumatique-coupure-automatique",
+      "compresseur-pour-perceuse-pneumatique",
+      "burineur-pneumatique-chantier-debit-vibrations",
+      "compresseur-pour-meuleuse-pneumatique",
+      "compresseur-pour-cisaille-grignoteuse-pneumatique",
+      "dimensionner-compresseur-garage-automobile",
+      "soufflette-garage-securite-bruit-consommation",
+      "qualite-air-comprime-iso-8573-1",
+      "choisir-compresseur-mobile-chantier-fad-autonomie",
+      "bar-psi-pression-absolue-relative",
+      "point-rosee-secheur-filtre-air-comprime",
+      "ventilation-local-compresseur-surchauffe",
+      "raccord-air-comprime-bsp-npt-1-4",
+      "flexible-enrouleur-raccords-garage-debit",
+      "stockage-primaire-secondaire-air-comprime",
+      "utiliser-plusieurs-outils-pneumatiques"
+    ],
+    "toolCategories": [
+      "graveur",
+      "riveteuse",
+      "tronconneuse"
+    ],
+    "newGlossaryTerms": [
+      "amplificateur-air",
+      "facteur-correction-secheur",
+      "surpresseur-pneumatique"
+    ]
+  },
+  "calculationChecks": [
+    {
+      "expression": "1.9 * 60",
+      "result": 114,
+      "unit": "L/min",
+      "scope": "CP9882, conversion du débit en charge"
+    },
+    {
+      "expression": "0.1 * 60",
+      "result": 6,
+      "unit": "L/min",
+      "scope": "CP9361, consommation en charge"
+    },
+    {
+      "expression": "0.28 * 28.316846592",
+      "result": 7.92871704576,
+      "unit": "L/min",
+      "scope": "Contrôle de cohérence des deux valeurs moyennes CP9361, pas une valeur de sélection"
+    },
+    {
+      "expression": "17 * 60",
+      "result": 1020,
+      "unit": "L/min",
+      "scope": "CP9116, vitesse libre selon fiche actuelle"
+    },
+    {
+      "expression": "212.4 - 188",
+      "result": 24.4,
+      "unit": "L/min",
+      "scope": "Différence documentaire Hypertherm, sans réconciliation des conditions"
+    },
+    {
+      "expression": "(7 + 0.8) / 0.8",
+      "result": 9.75,
+      "unit": "ratio",
+      "scope": "Hypothèse pédagogique sans pertes, pas une altitude"
+    },
+    {
+      "expression": "0.92 * 0.92 * 0.66",
+      "result": 0.558624,
+      "unit": "factor",
+      "scope": "Exemple KAESER uniquement"
+    },
+    {
+      "expression": "10 * 0.558624",
+      "result": 5.58624,
+      "unit": "m³/min",
+      "scope": "Capacité corrigée hypothétique"
+    },
+    {
+      "expression": "10 / 0.558624",
+      "result": 17.90112848713983,
+      "unit": "m³/min",
+      "scope": "Capacité nominale calculée, environ17,90"
+    },
+    {
+      "expression": "229 * 2",
+      "result": 458,
+      "unit": "SLPM",
+      "scope": "Deux120021 simultanés aux conditions du tableau"
+    },
+    {
+      "expression": "458 * 15 / 60",
+      "result": 114.5,
+      "unit": "SLPM",
+      "scope": "Moyenne sur cycle hypothétique, pointe458préservée"
+    }
+  ],
+  "validation": {
+    "calculationChecksPassed": 11,
+    "responsiveViewports": [
+      {
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "guidesCheckedForPageOverflowAndSvgClipping": 10,
+    "externalSourceFetches": 26,
+    "sourceDocumentsCommitted": false
+  }
+}

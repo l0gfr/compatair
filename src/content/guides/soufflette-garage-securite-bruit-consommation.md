@@ -3,6 +3,7 @@ title: "Soufflette en garage : traiter le bruit, l’usage et la consommation sa
 seoTitle: "Soufflette de garage : bruit et consommation"
 description: "Choisir et contrôler une soufflette à partir de sa tâche, d’un essai acoustique documenté et de sa consommation propre, sans gain universel inventé."
 pubDate: 2026-07-15
+updatedDate: 2026-09-26
 category: "Utiliser"
 audiences: [professionnel]
 metiers: [garage-automobile, atelier-poids-lourds, maintenance-industrielle]
@@ -14,6 +15,8 @@ sources:
 ---
 
 Parce qu’elle intervient quelques secondes à la fois, la soufflette échappe facilement à l’inventaire des consommateurs. Sa répétition, son bruit et la diversité des buses imposent pourtant de traiter trois questions différentes : la tâche est-elle justifiée, la buse convient-elle et quelle consommation le modèle exact ajoute-t-il au réseau ?
+
+Pour d’autres usages du soufflage, consultez le [choix d’un compresseur pour Tornador](/guides/compresseur-pour-tornador-black-classic/) et la [lecture des débits d’un amplificateur EXAIR](/guides/amplificateur-air-exair-consommation-debit/). Leurs données ne se transposent pas à une soufflette classique.
 
 ## Un résultat INRS, dans les limites de son essai
 

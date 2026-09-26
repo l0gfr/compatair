@@ -3,6 +3,7 @@ title: "Visseuse pneumatique à coupure automatique : couple, débit et récepti
 seoTitle: "Visseuse à coupure : couple, débit et compresseur"
 description: "Comprendre la coupure automatique et préparer un poste de vissage fiable : exemples Atlas Copco LTV009, consommation à vide et contrôle du serrage."
 pubDate: 2026-09-26
+updatedDate: 2026-09-26
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "menuiserie-agencement"]
@@ -21,6 +22,8 @@ sources:
 Pour une visseuse pneumatique à coupure automatique, le bon achat ne se résume pas à « tant de Nm et un raccord 1/4 ». Il faut choisir une plage de couple, une géométrie d’accès, une alimentation et une méthode de réception du serrage. **La coupure arrête l’outil ; elle ne dispense pas de valider le résultat sur l’assemblage.**
 
 La [notice Atlas Copco LTV009 R05-6](https://picontent.atlascopco.com/cont/external/dir/93/578887947_B3720001_html5_external/en-US/print-section.html?section=all) demande de régler le couple en fonction du joint réel et de vérifier ce couple. Elle décrit aussi l’influence d’une chute de pression sur le fonctionnement. Ce document éclaire la méthode de contrôle ; ses réglages et pièces ne sont pas transposés aux autres LTV009.
+
+Pour préparer un poste combinant vissage et pose d’inserts, consultez aussi le [dimensionnement des riveteuses et sertisseuses d’écrous](/guides/compresseur-pour-riveteuse-pneumatique/). Les données doivent rester attachées à chaque opération.
 
 ## Entraînement direct, embrayage et coupure : demander le bon mécanisme
 

@@ -3,7 +3,7 @@ title: "Bar, psi, pression absolue et pression relative : convertir sans fausser
 seoTitle: "1 bar en L/min ? Pression, débit et PSI | CompatAir"
 description: "Un bar ne se convertit pas en litres par minute : pression et débit mesurent deux grandeurs différentes. Convertissez bar, kPa et psi sans fausser le calcul."
 pubDate: 2026-07-13
-updatedDate: 2026-09-25
+updatedDate: 2026-09-26
 category: "Comprendre"
 audiences: [particulier, professionnel]
 metiers: []
@@ -17,6 +17,8 @@ relatedGuides: [convertir-cfm-l-min-nl-min-air-comprime]
 ---
 
 Non. Un bar ne se convertit pas en litres par minute. Dans le [guide d’unités du NIST](https://physics.nist.gov/cuu/pdf/sp811.pdf), le bar mesure une pression ; le litre par minute exprime un volume par unité de temps. Relier les deux exige de connaître au minimum le système, les conditions de référence et le point de mesure.
+
+Le [calcul en altitude](/guides/compresseur-altitude-chantier-montagne/) illustre concrètement la différence entre consigne manométrique et rapport de compression. Le [guide du surpresseur Festo DPA](/guides/surpresseur-pneumatique-festo-dpa-pression-debit/) distingue aussi pression obtenue et débit disponible.
 
 ## Peut-on convertir 1 bar en litres par minute ?
 

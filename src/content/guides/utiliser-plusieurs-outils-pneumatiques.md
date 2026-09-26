@@ -2,6 +2,7 @@
 title: "Utiliser plusieurs outils pneumatiques : quels débits additionner ?"
 description: "Additionnez uniquement les consommations réellement simultanées et comparez leur somme au débit restitué à une pression commune."
 pubDate: 2026-07-13
+updatedDate: 2026-09-26
 category: "Utiliser"
 audiences: [professionnel]
 metiers: [garage-automobile, atelier-poids-lourds, carrosserie-peinture, menuiserie-agencement, btp-chantier, maintenance-industrielle]
@@ -24,6 +25,8 @@ Le dimensionnement de plusieurs outils dépend d’abord d’une question factue
   <text x="40" y="194" fill="#102018" font-size="23" font-weight="700">Besoin nominal : 228 L/min</text><text x="40" y="232" fill="#68776e" font-size="17">Seuil interne CompatAir : 228 × 1,25 = 285 L/min</text>
   <text x="40" y="270" fill="#68776e" font-size="15">Aucun facteur de simultanéité n’est inventé.</text>
 </svg>
+
+Un [amplificateur d’air EXAIR](/guides/amplificateur-air-exair-consommation-debit/) illustre un autre piège de cumul : le débit du jet total inclut de l’air ambiant et ne doit pas être additionné comme une consommation d’air comprimé.
 
 ## Cas vérifiable : ponceuse et meuleuse
 

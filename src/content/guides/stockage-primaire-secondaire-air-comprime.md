@@ -3,6 +3,7 @@ title: "Stockage primaire et secondaire d’air comprimé : placer la réserve s
 seoTitle: "Stockage primaire et secondaire air comprimé"
 description: "Distinguer réservoir principal et stockage local à partir de la durée d’un pic, de la plage de pression et de la stratégie de commande."
 pubDate: 2026-07-15
+updatedDate: 2026-09-26
 category: "Installer"
 audiences: [professionnel]
 metiers: [maintenance-industrielle]
@@ -13,6 +14,8 @@ sources:
 ---
 
 Une cuve ne corrige pas tous les déficits de débit. Sa valeur dépend de la quantité d’air utilisable entre deux pressions, du temps de l’événement et de l’endroit où elle est raccordée. Le stockage primaire soutient la stratégie de production ; un stockage secondaire peut isoler un usage intermittent au plus près de sa demande.
+
+Pour un besoin local à pression supérieure, le [guide du surpresseur Festo DPA](/guides/surpresseur-pneumatique-festo-dpa-pression-debit/) explique pourquoi il faut documenter ensemble le débit aval, l’air prélevé au réseau et la recharge.
 
 ## Le rôle du stockage primaire
 

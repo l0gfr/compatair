@@ -2,7 +2,7 @@
 title: "Point de rosée, sécheur et filtre : traiter l’humidité de l’air comprimé"
 description: "Distinguer eau liquide, vapeur, point de rosée sous pression, séparation, filtration et séchage pour choisir un traitement adapté à l’usage réel."
 pubDate: 2026-07-13
-updatedDate: 2026-09-25
+updatedDate: 2026-09-26
 category: "Installer"
 audiences: [professionnel]
 metiers: [carrosserie-peinture, maintenance-industrielle]
@@ -29,6 +29,8 @@ Le [CAGI](https://www.cagi.org/resource-library) définit le point de rosée sou
   <rect x="572" y="88" width="150" height="125" rx="15" fill="#d3eb56"/><text x="591" y="121" fill="#10281e" font-size="17" font-weight="700">Sécher</text><text x="591" y="153" fill="#28533f" font-size="13">Réduire la</text><text x="591" y="175" fill="#28533f" font-size="13">vapeur restante</text></g>
   <path d="M188 150h28m150 0h28m150 0h28" stroke="#e39a5e" stroke-width="3"/><text x="38" y="282" fill="#56685e" font-size="14">La qualité requise se vérifie au point défini, dans les conditions de pression annoncées.</text>
 </svg>
+
+La capacité doit également correspondre aux conditions d’exploitation : le [calcul d’un sécheur frigorifique en été](/guides/dimensionner-secheur-frigorifique-ete/) détaille un exemple constructeur et le sens des facteurs de correction.
 
 ## Pourquoi l’eau apparaît
 

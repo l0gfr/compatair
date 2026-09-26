@@ -3,7 +3,7 @@ title: "Burineur pneumatique sur chantier : débit, flexible et durée de travai
 seoTitle: "Burineur pneumatique de chantier : méthode"
 description: "Méthode sourcée pour alimenter un burineur pneumatique sur chantier, vérifier le débit en charge, le flexible, la durée et les limites d’usage."
 pubDate: 2026-07-19
-updatedDate: 2026-07-20
+updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [professionnel]
 metiers: [btp-chantier]
@@ -18,6 +18,8 @@ sources:
 ---
 
 Un burineur pneumatique de chantier ne se choisit pas sur le seul mot « burineur » ni sur la pression maximale d’un compresseur. La réponse utile réunit cinq preuves : l’usage prévu par le fabricant, la consommation de la référence, le débit restitué disponible à cette pression, le passage réellement déployé et la durée de travail. Le bruit, les vibrations et la prévention restent des décisions séparées.
+
+Pour le marquage fin, le [graveur pneumatique CP9361](/guides/compresseur-pour-graveur-pneumatique-cp9361/) illustre pourquoi une faible consommation d’air ne suffit pas à évaluer l’exposition aux vibrations.
 
 ## Réponse directe
 

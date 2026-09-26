@@ -3,6 +3,7 @@ title: "Marteau à river pneumatique : débit, compresseur et emmanchement"
 seoTitle: "Marteau à river : quel débit de compresseur ?"
 description: "RRH06P, RRH08P et RRN11P : consommations vérifiées, coups par minute, emmanchements 10 et 10,2 mm et méthode de dimensionnement de l’air."
 pubDate: 2026-09-26
+updatedDate: 2026-09-26
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "carrosserie-peinture"]
@@ -22,6 +23,8 @@ sources:
 Pour un marteau à river, **le nombre de coups par minute n’est ni le nombre de rivets posés ni une indication suffisante du débit d’air**. Les références étudiées l’illustrent : le RRN11P-01 annonce 3 960 coups/min et 204 L/min, tandis que le RRH08P annonce 1 440 coups/min et 600 L/min. Les performances concernent des outils différents ; elles ne constituent pas un classement d’efficacité de rivetage. [Atlas Copco RRN11P-01](https://www.atlascopco.com/en-ca/itba/products/material-removal-tools/riveting-systems/rrn11p-01-sku8426110105) ; [Atlas Copco RRH08P](https://www.atlascopco.com/en-ca/itba/products/material-removal-tools/riveting-systems/rrh08p-sku8426111109).
 
 Ce guide porte sur les marteaux à river à percussion et leurs bouterolles. Il ne dimensionne pas une riveteuse destinée à tirer la tige d’un rivet aveugle. Le choix du procédé, de la bouterolle et du rivet reste lié au dossier d’assemblage.
+
+Ce procédé se distingue du tirage de rivets aveugles et de la pose d’écrous à sertir : le [guide des riveteuses CP9882, CP9886 et CP9888](/guides/compresseur-pour-riveteuse-pneumatique/) traite ces opérations et leurs débits propres.
 
 ## Trois modèles, trois profils de consommation
 

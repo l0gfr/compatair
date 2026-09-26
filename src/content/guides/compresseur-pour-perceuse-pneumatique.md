@@ -19,6 +19,8 @@ sources:
 
 Une perceuse pneumatique ne se dimensionne ni avec la taille du mandrin, ni avec les litres de cuve, ni avec le seul débit aspiré du compresseur. Il faut la référence exacte, sa consommation d’air, sa pression de travail et les conditions de raccordement publiées. Deux perceuses de 10 mm présentes dans le catalogue CompatAir illustrent déjà un écart de 120 L/min.
 
+Si l’objectif est le marquage d’une pièce, le [guide du graveur CP9361](/guides/compresseur-pour-graveur-pneumatique-cp9361/) étudie le besoin d’air et les incohérences de sa notice, sans le confondre avec une perceuse.
+
 ## Réponse directe
 
 Le compresseur doit délivrer au moins le besoin en air de la perceuse à une pression compatible avec son point de service. Pour les deux références documentées ici :

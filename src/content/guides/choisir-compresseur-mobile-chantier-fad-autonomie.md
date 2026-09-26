@@ -3,7 +3,7 @@ title: "Choisir un compresseur mobile de chantier : FAD, énergie, autonomie et 
 seoTitle: "Compresseur mobile chantier : FAD et autonomie"
 description: "Cahier des charges pour un compresseur mobile de chantier fondé sur le débit restitué, la pression, l’énergie, la distribution et un essai reproductible."
 pubDate: 2026-07-19
-updatedDate: 2026-07-20
+updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [professionnel]
 metiers: [btp-chantier]
@@ -19,6 +19,8 @@ sources:
 ---
 
 Le mot « mobile » décrit un mode de déplacement, pas une capacité pneumatique. Pour choisir une production de chantier, il faut d’abord construire la demande des outils à la pression utile, puis traiter séparément l’énergie disponible, l’autonomie, les émissions, le bruit, la qualité d’air et la logistique.
+
+Pour un chantier en montagne, complétez le dossier avec le [guide du dimensionnement en altitude](/guides/compresseur-altitude-chantier-montagne/). Les conditions du groupe complet doivent être confirmées pour le site.
 
 ## Réponse directe
 

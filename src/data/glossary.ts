@@ -1,4 +1,16 @@
 export const glossarySources = {
+	exairAmplification: {
+		label: 'EXAIR, fonctionnement et rapport d’amplification',
+		url: 'https://blog.exair.com/2021/03/26/exairs-super-air-amplifier-amplification-ratios-explained/',
+	},
+	festoDpa: {
+		label: 'Festo, surpresseur DPA, documentation de mai 2026',
+		url: 'https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/DPA_EN.PDF',
+	},
+	kaeserDryerSizing: {
+		label: 'KAESER, dimensionnement d’un sécheur frigorifique',
+		url: 'https://fr.kaeser.com/entreprise/blog/comment-dimensionner-un-secheur-frigorifique.aspx',
+	},
 	cagi: {
 		label: 'CAGI, glossaire de l’air comprimé',
 		url: 'https://www.cagi.org/resource-library',
@@ -80,6 +92,9 @@ export type GlossaryTerm = {
 };
 
 export const glossaryTerms: GlossaryTerm[] = [
+	{ term: 'Amplificateur d’air', slug: 'amplificateur-air', definition: 'Dispositif dont un jet d’air comprimé entraîne de l’air ambiant pour accroître le volume total soufflé. Le débit du jet inclut cet air entraîné et ne correspond pas au débit d’air comprimé consommé.', source: 'exairAmplification', related: { label: 'Lire les débits EXAIR', href: '/guides/amplificateur-air-exair-consommation-debit/' } },
+	{ term: 'Facteur de correction d’un sécheur', slug: 'facteur-correction-secheur', definition: 'Coefficient constructeur reliant la capacité nominale d’un sécheur à ses conditions d’exploitation. Sa valeur et son sens d’application doivent être vérifiés dans la documentation de la gamme, sans transposition automatique entre marques.', source: 'kaeserDryerSizing', related: { label: 'Dimensionner le sécheur en été', href: '/guides/dimensionner-secheur-frigorifique-ete/' } },
+	{ term: 'Surpresseur pneumatique', slug: 'surpresseur-pneumatique', definition: 'Dispositif alimenté par de l’air comprimé qui fournit localement une pression supérieure. Le débit entrant, le débit sortant et le régime admissible sont des caractéristiques distinctes à vérifier pour la variante retenue.', source: 'festoDpa', related: { label: 'Pression et débit du Festo DPA', href: '/guides/surpresseur-pneumatique-festo-dpa-pression-debit/' } },
 	{ term: 'Aftercooler', slug: 'aftercooler', definition: 'Échangeur qui refroidit l’air à la sortie du compresseur. Le refroidissement peut faire condenser une partie de l’eau, ensuite séparée en aval.', source: 'cagi', related: { label: 'Condensats et entretien', href: '/guides/entretien-compresseur-purge-condensats/' } },
 	{ term: 'Air libre', slug: 'air-libre', definition: 'Air considéré aux conditions atmosphériques d’un lieu déterminé, avant l’effet du compresseur. Les conditions de référence doivent être précisées pour comparer des débits.', source: 'cagi' },
 	{ term: 'Atmosphère standard', slug: 'atmosphere-standard', definition: 'Unité de pression définie exactement à 101 325 pascals, soit 1,01325 bar. CompatAir utilise cette valeur de référence pour exprimer le volume d’air libre équivalent du calcul de gonflage.', source: 'nist', related: { label: 'Calculer un gonflage', href: '/guides/compresseur-pour-gonfler-pneus/' } },

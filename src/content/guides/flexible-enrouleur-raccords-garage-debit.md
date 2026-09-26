@@ -3,7 +3,7 @@ title: "Flexible, enrouleur et raccords de garage : retrouver le débit perdu"
 seoTitle: "Flexible et enrouleur de garage : éviter les pertes"
 description: "Méthode de contrôle du diamètre intérieur, de la longueur et des raccords à partir de deux clés documentées et de mesures sous débit au poste."
 pubDate: 2026-07-15
-updatedDate: 2026-09-25
+updatedDate: 2026-09-26
 category: "Installer"
 audiences: [professionnel]
 metiers: [garage-automobile, atelier-poids-lourds, maintenance-industrielle]
@@ -16,6 +16,8 @@ relatedGuides: [raccord-air-comprime-bsp-npt-1-4]
 ---
 
 Un enrouleur est souvent décrit par sa longueur extérieure, alors que l’outil « voit » un passage complet : conduite, vanne, pivot, flexible, coupleurs et adaptateurs. Le diagnostic commence par le diamètre intérieur et la pression en fonctionnement, puis remonte composant par composant.
+
+Le [guide des coupleurs de sécurité à décompression](/guides/raccord-rapide-securite-decompression-air-comprime/) explique comment lire un débit associé à une perte de charge et distinguer profil, filetage et pression de service.
 
 ## Deux clés, deux exigences publiées
 
