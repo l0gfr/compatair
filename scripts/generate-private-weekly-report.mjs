@@ -1,8 +1,13 @@
+import { existsSync } from 'node:fs';
 import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { buildAcquisitionReport } from './lib/report-acquisition.mjs';
 import { rankDemand } from './lib/rank-demand.mjs';
 import { reportProductFunnel } from './lib/report-product-funnel.mjs';
+
+const sourceVerdictModule = new URL('../server/verdict-snapshot.mjs', import.meta.url);
+const releaseVerdictModule = new URL('../_server/verdict-snapshot.mjs', import.meta.url);
+const { readVerdictSnapshot } = await import((existsSync(sourceVerdictModule) ? sourceVerdictModule : releaseVerdictModule).href);
 
 const families = ['pressure', 'flexible', 'simultaneity', 'leak', 'cadence', 'machine'];
 const emptyDemand = { schemaVersion: '1.0.0', updatedAt: null, totalContributions: 0, dimensions: { tools: {}, categories: {}, modes: {}, flowBuckets: {}, pressureBuckets: {}, sessionBuckets: {}, compressorSelections: {}, calculationVersions: {}, needProfiles: {} } };
@@ -23,7 +28,7 @@ const outputDirectory = resolve(process.env.COMPAT_AIR_PRIVATE_REPORTS ?? '/var/
 const now = new Date();
 
 const [demandAggregate, funnelAggregate, acquisitionAggregate, catalog, verdicts] = await Promise.all([
-	readJson(demandPath, emptyDemand), readJson(funnelPath, emptyFunnel), readJson(acquisitionPath, emptyAcquisition), readJson(catalogPath), readJson(verdictPath),
+	readJson(demandPath, emptyDemand), readJson(funnelPath, emptyFunnel), readJson(acquisitionPath, emptyAcquisition), readJson(catalogPath), readVerdictSnapshot(verdictPath, { compactIds: true }),
 ]);
 const demand = rankDemand({ aggregates: demandAggregate, catalog, verdicts, deficitLimit: 20 });
 const report = {

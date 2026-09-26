@@ -1,4 +1,4 @@
-import { copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { appendFileSync, copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -41,6 +41,7 @@ describe('private weekly operating report', () => {
 			copyFileSync(new URL(`./lib/${name}`, import.meta.url), join(libraryDirectory, name));
 		}
 		copyFileSync(new URL('../server/product-funnel-aggregates.mjs', import.meta.url), join(serverDirectory, 'product-funnel-aggregates.mjs'));
+		copyFileSync(new URL('../server/verdict-snapshot.mjs', import.meta.url), join(serverDirectory, 'verdict-snapshot.mjs'));
 
 		const files = {
 			demand: join(root, 'demand.json'), funnel: join(root, 'funnel.json'), acquisition: join(root, 'acquisition.json'),
@@ -61,4 +62,36 @@ describe('private weekly operating report', () => {
 			productFunnel: { schemaVersion: '2.0.0', totalEvents: 0 },
 		});
 	});
+
+	it('streams a snapshot larger than its heap and preserves priorities and the last report on truncated input', () => {
+		const root = mkdtempSync(join(tmpdir(), 'compatair-weekly-stream-')); roots.push(root);
+		const catalogPath = join(root, 'catalog.json');
+		const verdictPath = join(root, 'verdicts.json');
+		const demandPath = join(root, 'demand.json');
+		const reports = join(root, 'reports');
+		writeFileSync(catalogPath, JSON.stringify({ catalogVersion: 'catalog-test', compressors: [], tools: [{ id: 'tool', label: 'Outil' }] }));
+		writeFileSync(demandPath, JSON.stringify({ schemaVersion: '1.0.0', totalContributions: 10, dimensions: { tools: { tool: 10 } } }));
+		writeFileSync(verdictPath, '{"verdictVersion":"verdict-test","pairs":[');
+		const warnings = ['Documented boundary '.repeat(700)];
+		for (let index = 0; index < 5_000; index++) {
+			appendFileSync(verdictPath, `${index ? ',' : ''}${JSON.stringify({ id: `compressor-${index}--tool`, compressorId: `compressor-${index}`, toolId: 'tool', verdict: index % 2 ? 'continuous' : 'insufficient_data', requiredFadLpm: 250, warnings })}`);
+		}
+		appendFileSync(verdictPath, ']}');
+		const run = () => spawnSync(process.execPath, ['--max-old-space-size=48', new URL('./generate-private-weekly-report.mjs', import.meta.url).pathname], { encoding: 'utf8', env: {
+			...process.env, COMPAT_AIR_CATALOG: catalogPath, COMPAT_AIR_VERDICTS: verdictPath, COMPAT_AIR_DEMAND_AGGREGATES: demandPath,
+			COMPAT_AIR_PRODUCT_FUNNEL_AGGREGATES: join(root, 'missing-funnel.json'), COMPAT_AIR_ACQUISITION_AGGREGATES: join(root, 'missing-acquisition.json'), COMPAT_AIR_PRIVATE_REPORTS: reports,
+		} });
+		const result = run();
+		expect(result.status, result.stderr).toBe(0);
+		const previousReport = readFileSync(join(reports, 'latest.json'), 'utf8');
+		const report = JSON.parse(previousReport);
+		expect(report.demand.coverage).toMatchObject({ status: 'measured', weightedCoveragePercent: 50 });
+		expect(report.demand.priorities.candidateDeficitCount).toBe(2_500);
+		expect(report.actionQueue).toHaveLength(20);
+		writeFileSync(verdictPath, '{"verdictVersion":"broken","pairs":[');
+		const failed = run();
+		expect(failed.status).not.toBe(0);
+		expect(failed.stderr).toContain('verdict_snapshot_truncated');
+		expect(readFileSync(join(reports, 'latest.json'), 'utf8')).toBe(previousReport);
+	}, 20_000);
 });
