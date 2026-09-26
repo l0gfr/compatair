@@ -23,7 +23,9 @@ jobs:
   validate:
     if: github.ref == 'refs/heads/main' && vars.DEPLOY_ENABLED == 'true'
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    # The 5006-reference catalog includes 4.6 million signed verdicts.
+    # Keep every validation gate, with room for the measured hosted-runner build.
+    timeout-minutes: 35
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1

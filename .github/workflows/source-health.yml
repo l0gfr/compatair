@@ -26,9 +26,9 @@ jobs:
   sources:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
-    # Sequential manufacturer checks took 34 min before the September guide batch.
-    # Keep the per-host rate limit and allow room for the additional primary sources.
-    timeout-minutes: 40
+    # 2444 sources plus the complete build: keep one probe per host at a time.
+    # The larger catalog must not time out before reporting genuine anomalies.
+    timeout-minutes: 55
     steps:
       - name: Checkout versioned sources
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
