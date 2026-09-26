@@ -290,8 +290,8 @@ const commercialOffers = activeOffers
 	}
 	// Load the complete suggestions separately without blocking the first page render.
 	type ToolOption = [string, string, string, string[], Partial<Record<'demandModel' | 'airflow' | 'pressure' | 'airPerAction' | 'actionLabel', string | number>> | [number, number]];
-	const optionsPromise = new Promise<void>((resolve) => requestAnimationFrame(() => requestAnimationFrame(() => resolve())))
-		.then(() => loadCalculatorOptions<ToolOption[]>(document.querySelector<HTMLElement>('[data-calculator-tool-options]')?.dataset.integrity ?? '')).then((options) => {
+	async function loadToolOptions() {
+		const options = await loadCalculatorOptions<ToolOption[]>(document.querySelector<HTMLElement>('[data-calculator-tool-options]')?.dataset.integrity ?? '');
 		for (const [value, id, text, identifiers, demand] of options) {
 			const option = new Option(text, value);
 			option.dataset.id = id;
@@ -299,7 +299,7 @@ const commercialOffers = activeOffers
 			setDemandData(option, Array.isArray(demand) ? { demandModel: 'fixed-flow', airflow: demand[0], pressure: demand[1] } : demand);
 			toolDatalist?.append(option);
 		}
-	});
+	}
 
 	const setText = (selector: string, value: string) => { const element = root?.querySelector<HTMLElement>(selector); if (element) element.textContent = value; };
 	const labels = { continuous: 'Compatible en continu', intermittent: 'Compatible par intermittence', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' } as const;
@@ -914,7 +914,16 @@ const commercialOffers = activeOffers
 	const requestedTool = scenarioPreset?.toolId ?? initialParameters.get('outil') ?? undefined;
 	const requestedCompressor = initialParameters.get('compresseur') ?? undefined;
 	async function initializeCalculator() {
-		await optionsPromise;
+		if (!requestedTool && !requestedCompressor && !sharedConfiguration && form && 'IntersectionObserver' in window) {
+			await new Promise<void>((resolve) => {
+				const ready = () => { observer.disconnect(); form.removeEventListener('focusin', ready); form.removeEventListener('pointerdown', ready); resolve(); };
+				const observer = new IntersectionObserver((entries) => { if (entries.some((entry) => entry.isIntersecting)) ready(); }, { rootMargin: '200px' });
+				observer.observe(form);
+				form.addEventListener('focusin', ready, { once: true });
+				form.addEventListener('pointerdown', ready, { once: true });
+			});
+		}
+		await loadToolOptions();
 		const initialTool = requestedTool && optionById(toolDatalist, requestedTool) ? requestedTool : undefined;
 		if (sharedConfiguration) {
 			await loadCalculatorRuntime();
