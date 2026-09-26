@@ -37,15 +37,15 @@ exit "$result"
 
 for (const filename of ['deploy-remote.sh', 'rollback-remote.sh']) {
 	describe(`${filename} MCP health gate`, () => {
-		it('accepts a healthy service that needs longer than the former ten probes', () => {
-			const result = runHealthGate(filename, 12);
+		it('accepts a healthy service loading the expanded snapshot beyond sixty probes', () => {
+			const result = runHealthGate(filename, 120);
 			expect(result.status).toBe(0);
-			expect(result.stdout).toBe('0 12 11');
+			expect(result.stdout).toBe('0 120 119');
 		});
 		it('still fails after a bounded number of unsuccessful probes', () => {
 			const result = runHealthGate(filename, 1_000);
 			expect(result.status).toBe(1);
-			expect(result.stdout).toBe('1 61 60');
+			expect(result.stdout).toBe('1 181 180');
 		});
 		it('fails immediately when the service restart is rejected', () => {
 			const result = runHealthGate(filename, 1, 1);

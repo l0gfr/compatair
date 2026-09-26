@@ -15,6 +15,40 @@ async function fixture(text: string) {
 afterEach(async () => { await Promise.all(directories.splice(0).map((directory) => rm(directory, { recursive: true, force: true }))); });
 
 describe('bounded verdict snapshot loading', () => {
+	it('verifies an unsorted matrix and preserves exact bytes and lookup identities across blocks', async () => {
+		const compressors = Array.from({ length: 52 }, (_, i) => `c${51 - i}`);
+		const tools = Array.from({ length: 337 }, (_, i) => `t${336 - i}`);
+		const pairs = compressors.flatMap(compressorId => tools.map(toolId => ({ id: `${compressorId}--${toolId}`, compressorId, toolId, verdict: 'continuous', warnings: ['débit'] })));
+		const text = JSON.stringify({ scope: { compressor_count: compressors.length, fixed_flow_tool_count: tools.length, fixed_verdict_count: pairs.length }, pairs });
+		const snapshot = await readVerdictSnapshot(await fixture(text), { compactIds: true });
+		expect(JSON.stringify(snapshot)).toBe(text);
+		const lookup = verdictIndex(snapshot);
+		for (const position of [0, 336, 337, 16_383, 16_384, pairs.length - 1]) {
+			const pair = pairs[position];
+			expect(lookup.get(pair.compressorId, pair.toolId)).toEqual(pair);
+		}
+		expect(lookup.get('missing', tools[0])).toBeUndefined();
+		expect(lookup.get(compressors[0], 'missing')).toBeUndefined();
+	});
+
+	it.each([
+		[['a', 'z'], ['a', 'x'], ['b', 'x'], ['b', 'z']], // different column order
+		[['a', 'z'], ['b', 'x'], ['b', 'z'], ['b', 'x']], // different compressor inside a row
+		[['a', 'z'], ['a', 'x'], ['a', 'z'], ['a', 'x']], // duplicate row identities
+		[['a', 'z'], ['a', 'z'], ['b', 'z'], ['b', 'z']], // duplicate columns
+		[['a', 'z'], ['a', 'x'], ['b', 'z']], // incomplete matrix
+		[['a', 'z'], ['a', 'x'], ['b', 'z'], ['b', 'x'], ['c', 'z']], // extra row
+	].map(identities => ({ identities })))('preserves irregular data instead of trusting a declared matrix: $identities', async ({ identities }) => {
+		const pairs = identities.map(([compressorId, toolId], i) => ({ id: `${compressorId}--${toolId}`, compressorId, toolId, verdict: String(i) }));
+		const text = JSON.stringify({ scope: { compressor_count: 2, fixed_flow_tool_count: 2, fixed_verdict_count: 4 }, pairs });
+		const snapshot = await readVerdictSnapshot(await fixture(text), { compactIds: true });
+		expect(JSON.stringify(snapshot)).toBe(text);
+		for (const pair of pairs) {
+			const expected = pairs.findLast(p => p.compressorId === pair.compressorId && p.toolId === pair.toolId);
+			expect(verdictIndex(snapshot).get(pair.compressorId, pair.toolId)).toEqual(expected);
+		}
+	});
+
 	it('preserves every value across UTF-8, escape and stream boundaries', async () => {
 		const snapshot = {
 			catalogVersion: 'catalog-test', verdictVersion: 'verdict-test', calculationVersion: '1.3.0',

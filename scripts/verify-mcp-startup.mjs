@@ -5,6 +5,7 @@ import { readFile } from 'node:fs/promises';
 import { createCompatAirServer } from '../server/mcp-server.mjs';
 import { readVerdictSnapshot, verdictIndex } from '../server/verdict-snapshot.mjs';
 
+const startedAt = performance.now();
 const catalog = JSON.parse(await readFile('dist/data/catalog.json', 'utf8'));
 const snapshot = await readVerdictSnapshot('dist/data/verdicts.json', { compactIds: true });
 assert.equal(snapshot.catalogVersion, catalog.catalogVersion);
@@ -31,6 +32,7 @@ try {
 	await new Promise((resolve) => server.close(resolve));
 }
 const peakMiB = process.resourceUsage().maxRSS / 1024;
+const startupSeconds = (performance.now() - startedAt) / 1000;
 assert.ok(peakMiB < 256, `MCP startup exceeded the 256 MiB service budget: ${peakMiB.toFixed(1)} MiB`);
 // Measure real startup before the audit-only serialization of every pair.
 // The exhaustive byte-for-byte check still runs and must pass before success.
@@ -41,4 +43,4 @@ const original = createHash('sha256');
 for await (const chunk of createReadStream('dist/data/verdicts.json')) original.update(chunk);
 assert.equal(reconstructed.digest('hex'), original.digest('hex'), 'Streaming and indexed lookups must preserve the complete published snapshot byte for byte');
 
-console.log(`MCP startup verified: ${pairs.length} exact verdicts, three shared profiles, HTTP health and API, peak ${peakMiB.toFixed(1)} MiB < 256 MiB.`);
+console.log(`MCP startup verified: ${pairs.length} exact verdicts, three shared profiles, HTTP health and API in ${startupSeconds.toFixed(1)} s, peak ${peakMiB.toFixed(1)} MiB < 256 MiB.`);

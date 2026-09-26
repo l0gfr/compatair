@@ -29,9 +29,9 @@ restart_mcp_and_wait() {
 	if ! sudo -n /bin/systemctl restart compatair-mcp.service; then
 		return 1
 	fi
-	# Large, verified snapshots can take more than ten seconds to load.
+	# The 4.6-million-row snapshot exceeded 60 seconds on production.
 	# Keep a bounded health gate; never activate an unresponsive service.
-	for attempt in {1..60}; do
+	for attempt in {1..180}; do
 		if curl --fail --silent --max-time 2 http://127.0.0.1:8787/health > /dev/null; then
 			return 0
 		fi

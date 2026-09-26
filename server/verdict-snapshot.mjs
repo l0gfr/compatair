@@ -27,11 +27,43 @@ class CompactPair {
 	get calculationVersion() { return this.#payload.calculationVersion; }
 	toJSON() { return { id: this.id, compressorId: this.compressorId, toolId: this.toolId, ...this.#payload }; }
 }
-// Three integers per row replace millions of retained JavaScript objects.
+// A declared matrix is used only after every identity and row is verified.
+// Irregular snapshots retain the general representation and lookup semantics.
+function verifiedGrid(scope) {
+	const rows = scope?.compressor_count, columns = scope?.fixed_flow_tool_count;
+	if (!Number.isSafeInteger(rows) || !Number.isSafeInteger(columns) || rows < 1 || columns < 1
+		|| rows * columns > 10_000_000 || scope.fixed_verdict_count !== rows * columns) return undefined;
+	const compressors = [], tools = [], compressorPositions = new Map(), toolPositions = new Map();
+	return {
+		length: rows * columns,
+		accept(index, compressorId, toolId) {
+			const row = Math.floor(index / columns), column = index % columns;
+			if (row >= rows) return false;
+			if (row === 0) {
+				if (toolPositions.has(toolId)) return false;
+				tools.push(toolId); toolPositions.set(toolId, column);
+			} else if (tools[column] !== toolId) return false;
+			if (column === 0) {
+				if (compressorPositions.has(compressorId)) return false;
+				compressors.push(compressorId); compressorPositions.set(compressorId, row);
+			} else if (compressors[row] !== compressorId) return false;
+			return true;
+		},
+		compressorId: index => compressors[Math.floor(index / columns)],
+		toolId: index => tools[index % columns],
+		locate(compressorId, toolId) {
+			const row = compressorPositions.get(compressorId), column = toolPositions.get(toolId);
+			return row === undefined || column === undefined ? undefined : row * columns + column;
+		},
+	};
+}
+
+// One payload index per verified matrix cell; three integers for irregular rows.
 // Full records are reconstructed on access; the public JSON remains unchanged.
-function packedPairWriter() {
+function packedPairWriter(scope) {
 	const blockRows = 16_384;
-	const blocks = [], ids = [], idIndexes = new Map(), payloads = [], payloadIndexes = new Map();
+	let blocks = [], grid = verifiedGrid(scope);
+	const ids = [], idIndexes = new Map(), payloads = [], payloadIndexes = new Map();
 	let length = 0;
 	const shapes = [], shapeIndexes = new Map(), values = [], valueIndexes = new Map();
 	const encodeFields = fields => {
@@ -49,7 +81,19 @@ function packedPairWriter() {
 		if (!idIndexes.has(id)) { idIndexes.set(id, ids.length); ids.push(id); }
 		return idIndexes.get(id);
 	};
-	const cell = (row, field) => blocks[Math.floor(row / blockRows)][(row % blockRows) * 3 + field];
+	const writeGeneralRow = (row, compressorId, toolId, payloadIndex) => {
+		if (row % blockRows === 0) blocks.push(new Uint32Array(blockRows * 3));
+		const block = blocks[Math.floor(row / blockRows)], offset = (row % blockRows) * 3;
+		block[offset] = idIndex(compressorId); block[offset + 1] = idIndex(toolId); block[offset + 2] = payloadIndex;
+	};
+	const expandGrid = () => {
+		const previous = grid, payloadBlocks = blocks;
+		blocks = []; grid = undefined;
+		for (let row = 0; row < length; row++) writeGeneralRow(row, previous.compressorId(row), previous.toolId(row), payloadBlocks[Math.floor(row / blockRows)][row % blockRows]);
+	};
+	const cell = (row, field) => blocks[Math.floor(row / blockRows)][(row % blockRows) * (grid ? 1 : 3) + (grid ? 0 : field)];
+	const compressorAt = row => grid ? grid.compressorId(row) : ids[cell(row, 0)];
+	const toolAt = row => grid ? grid.toolId(row) : ids[cell(row, 1)];
 	return {
 		push(pair) {
 			if (length >= 10_000_000) throw new Error('verdict_snapshot_row_limit');
@@ -60,12 +104,15 @@ function packedPairWriter() {
 			const key = reconstructible ? `c${encodeFields(fields)}` : `r${JSON.stringify(pair)}`;
 			let payloadIndex = payloadIndexes.get(key);
 			if (payloadIndex === undefined) { payloadIndex = payloads.length; payloads.push(key); payloadIndexes.set(key, payloadIndex); }
-			if (length % blockRows === 0) blocks.push(new Uint32Array(blockRows * 3));
-			const block = blocks[Math.floor(length / blockRows)], offset = (length % blockRows) * 3;
-			block[offset] = idIndex(compressorId); block[offset + 1] = idIndex(toolId); block[offset + 2] = payloadIndex;
+			if (grid && !grid.accept(length, compressorId, toolId)) expandGrid();
+			if (grid) {
+				if (length % blockRows === 0) blocks.push(new Uint32Array(blockRows));
+				blocks[Math.floor(length / blockRows)][length % blockRows] = payloadIndex;
+			} else writeGeneralRow(length, compressorId, toolId, payloadIndex);
 			length++;
 		},
 		finish() {
+			if (grid && length !== grid.length) expandGrid();
 			payloadIndexes.clear(); idIndexes.clear(); shapeIndexes.clear(); valueIndexes.clear();
 			const decoded = new Map();
 			const get = row => {
@@ -77,7 +124,7 @@ function packedPairWriter() {
 					if (decoded.size >= 512) decoded.clear();
 					decoded.set(payloadIndex, payload);
 				}
-				return payloads[payloadIndex][0] === 'c' ? new CompactPair(ids[cell(row, 0)], ids[cell(row, 1)], payload) : payload;
+				return payloads[payloadIndex][0] === 'c' ? new CompactPair(compressorAt(row), toolAt(row), payload) : payload;
 			};
 			const numericIndex = key => typeof key === 'string' && /^(0|[1-9]\d*)$/.test(key) && Number(key) < length ? Number(key) : undefined;
 			const target = [];
@@ -87,7 +134,7 @@ function packedPairWriter() {
 				set() { throw new Error('verdict_snapshot_immutable'); },
 				deleteProperty() { throw new Error('verdict_snapshot_immutable'); },
 			});
-			packedArrays.set(pairs, { get, length, compressorId: row => ids[cell(row, 0)], toolId: row => ids[cell(row, 1)] });
+			packedArrays.set(pairs, { get, length, compressorId: compressorAt, toolId: toolAt, locate: grid?.locate });
 			return pairs;
 		},
 	};
@@ -97,6 +144,15 @@ export function verdictIndex(snapshot) {
 	let index = indexes.get(snapshot);
 	if (!index) {
 		const packed = packedArrays.get(snapshot.pairs);
+		if (packed?.locate) {
+			index = { get: (compressorId, toolId) => {
+				const row = packed.locate(compressorId, toolId);
+				const pair = row === undefined ? undefined : packed.get(row);
+				return pair instanceof CompactPair ? pair.toJSON() : pair;
+			} };
+			indexes.set(snapshot, index);
+			return index;
+		}
 		const compressors = new Map();
 		for (let row = 0; row < (snapshot.pairs?.length ?? 0); row++) {
 			const pair = packed ? undefined : snapshot.pairs[row];
@@ -143,7 +199,7 @@ export function verdictIndex(snapshot) {
 export async function readVerdictSnapshot(path, { compactIds = false } = {}) {
 	let buffer = '';
 	let metadata;
-	const pairs = compactIds ? packedPairWriter() : [];
+	let pairs = compactIds ? undefined : [];
 	const strings = new Map();
 	const warningLists = new Map();
 	const intern = (value) => {
@@ -168,6 +224,7 @@ export async function readVerdictSnapshot(path, { compactIds = false } = {}) {
 			}
 			if (marker.index > 64 * 1024) throw new Error('verdict_snapshot_header_invalid');
 			metadata = JSON.parse(`${buffer.slice(0, marker.index)}"pairs":[]}`);
+			if (compactIds) pairs = packedPairWriter(metadata.scope);
 			buffer = buffer.slice(marker.index + marker[0].length);
 		}
 		while (position < buffer.length) {
