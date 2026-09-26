@@ -96,7 +96,9 @@ restart_mcp_and_wait() {
 	if ! sudo -n /bin/systemctl restart "$mcp_service"; then
 		return 1
 	fi
-	for attempt in {1..10}; do
+	# Large, verified snapshots can take more than ten seconds to load.
+	# Keep a bounded health gate; never activate an unresponsive service.
+	for attempt in {1..60}; do
 		if curl --fail --silent --max-time 2 "$health_url" > /dev/null; then
 			return 0
 		fi
