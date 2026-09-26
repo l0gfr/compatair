@@ -22,7 +22,7 @@ describe('product identification', () => {
 		expect(result.incompatible.length).toBeGreaterThan(0);
 		expect(result.insufficient.length).toBeGreaterThan(0);
 		expect(result.unlocks.every((item) => item.hoseStatus === 'documented' || item.hoseAdvice.includes('ne peut être affirmé'))).toBe(true);
-	});
+	}, 20_000); // Full-catalog alternatives evaluate hundreds of thousands of pairs on CI.
 
 	it('lists compatible compressors for an identified fixed-flow tool', () => {
 		const tool = tools.find((item) => item.id === 'einhell-tc-pe-150')!;
