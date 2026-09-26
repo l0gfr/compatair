@@ -24,8 +24,8 @@ const maximumPassportInitialScriptBytesGzip = 45 * 1024;
 const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
 // Le chargement séparé des suggestions ajoute le contrôle SRI et les états d'échec.
 const maximumCalculatorOnDemandScriptBytesGzip = 58 * 1024;
-// 2 000 références : 101 Ko gzip de données calculateur ; le budget JavaScript initial reste inchangé.
-const maximumRuntimeCatalogBytesGzip = 104 * 1024;
+// 2 306 références : 115 Ko gzip mesurés ; aucun relèvement du budget JavaScript.
+const maximumRuntimeCatalogBytesGzip = 120 * 1024;
 const maximumSearchIndexBytesGzip = 80 * 1024;
 const maximumIndexableInternalDestinationsBeforeWarning = 100;
 const maximumIndexableInternalDestinations = 120;
@@ -34,9 +34,10 @@ const maximumStaticCompatibilityResultsBySection = new Map([
 	['outils-pneumatiques', 5],
 	['quel-compresseur-pour', 6],
 ]);
-const maximumHtmlArtifactBytes = 128 * 1024 * 1024;
-// 418 250 verdicts publics complets et 2 000 fiches : artefact mesuré à 420 Mo, dont 115 Mo de HTML.
-const maximumTotalArtifactBytes = 464 * 1024 * 1024;
+const maximumHtmlArtifactBytes = 136 * 1024 * 1024;
+// 920 706 verdicts publics complets : 679 Mo bruts, 129 Mo HTML et 95 Mo en archive.
+// Le workflow borne séparément l’archive envoyée à GitHub à 112 Mio.
+const maximumTotalArtifactBytes = 720 * 1024 * 1024;
 const maximumJourneyVideoBytes = 16 * 1024 * 1024;
 // Les pages produits réutilisent des cartes de catalogue afin que le temps de build ne croisse pas avec chaque référence.
 const maximumSocialImageCount = 80;

@@ -1,0 +1,117 @@
+const product = {
+	"id": "lacair-twinair-20-100-t",
+	"slug": "lacair-twinair-20-100-t",
+	"brand": "Lacair",
+	"model": "TwinAir 20/100 T",
+	"mpn": "463100",
+	"tankLiters": 100,
+	"maxPressureBar": 11,
+	"fadCurve": [
+		{
+			"pressureBar": 6,
+			"litersPerMinute": 250
+		}
+	],
+	"oilType": "oil",
+	"confidence": "A",
+	"status": "unknown",
+	"image": {
+		"src": "/images/products/lacair-twinair-20-100-t.webp",
+		"alt": "Repères techniques Lacair TwinAir 20/100 T, référence 463100",
+		"sourceUrl": "https://s3.eu-west-1.amazonaws.com/s37.lacme.com/crm/Catalogues/LACME%20-%20Catalogue%20Lacair%202026.pdf#page=25",
+		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+	},
+	"editorial": {
+		"overview": "Lacair TwinAir 20/100 T, référence 463100 : cuve de 100 L, pression maximale publiée de 11 bar. Le point documenté le plus élevé en pression fournit 250 L/min à 6 bar.",
+		"verifiedFacts": [
+			"Débit restitué publié : 250 L/min à 6 bar.",
+			"Pistons lubrifiés. Puissance moteur publiée : 2,2 kW.",
+			"Débit aspiré : 335 L/min, distinct du débit restitué.",
+			"Masse nette publiée : 85,5 kg.",
+			"Alimentation publiée : 400 V, triphasée."
+		],
+		"limitations": [
+			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
+			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
+			"Le point de débit à 6 bar ne suffit pas à valider un outil exigeant 6,3 ou 7 bar. Le moteur ne prolonge pas la courbe au-delà de ce point."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Conditions du débit",
+			"value": "Débit moyen restitué à 6 bar selon la note fabricant. Valeur L/min retenue sans recalcul depuis les m³/h arrondis.",
+			"evidenceIds": [
+				"lacair-463100-20260926"
+			]
+		},
+		{
+			"label": "Dimensions publiées",
+			"value": "106 x 51 x 91 cm",
+			"evidenceIds": [
+				"lacair-463100-20260926"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "lacair-463100-20260926",
+			"sourceUrl": "https://s3.eu-west-1.amazonaws.com/s37.lacme.com/crm/Catalogues/LACME%20-%20Catalogue%20Lacair%202026.pdf#page=25",
+			"sourceLabel": "Lacair / Lacmé, catalogue 2026, p. 25, réf. 463100",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Débit moyen restitué à 6 bar selon la note fabricant. Valeur L/min retenue sans recalcul depuis les m³/h arrondis."
+		},
+		{
+			"id": "lacair-463100-20260926-lubrification",
+			"sourceUrl": "https://s3.eu-west-1.amazonaws.com/s37.lacme.com/crm/Catalogues/LACME%20-%20Catalogue%20Lacair%202026.pdf#page=105",
+			"sourceLabel": "Lacair / Lacmé, catalogue 2026, lubrification, p. 105",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Source du mode de lubrification uniquement."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"lacair-463100-20260926"
+		],
+		"tankLiters": [
+			"lacair-463100-20260926"
+		],
+		"maxPressureBar": [
+			"lacair-463100-20260926"
+		],
+		"fadCurve": [
+			"lacair-463100-20260926"
+		],
+		"oilType": [
+			"lacair-463100-20260926-lubrification"
+		],
+		"intakeFlowLpm": [
+			"lacair-463100-20260926"
+		],
+		"powerKw": [
+			"lacair-463100-20260926"
+		],
+		"weightKg": [
+			"lacair-463100-20260926"
+		],
+		"voltage": [
+			"lacair-463100-20260926"
+		],
+		"phase": [
+			"lacair-463100-20260926"
+		]
+	},
+	"notes": [
+		"Caractéristiques déclarées par le fabricant. Les comparaisons dépendent des conditions de débit et de pression documentées."
+	],
+	"intakeFlowLpm": 335,
+	"powerKw": 2.2,
+	"weightKg": 85.5,
+	"voltage": "400 V",
+	"phase": "three-phase"
+};
+
+export default product;

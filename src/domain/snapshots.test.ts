@@ -35,13 +35,13 @@ describe('immutable catalog and verdict snapshots', () => {
 			expect(pair.verdict, pair.id).toBe(evaluateCompatibility(compressor, tool).verdict);
 		}
 		// Tous les couples restent vérifiés ; réserver le temps nécessaire au runner CI.
-	}, 20_000);
+	}, 60_000);
 
 	it('accounts for every pair in the summary', () => {
 		expect(Object.values(verdicts.summary).reduce((total, value) => total + value, 0)).toBe(verdicts.pairs.length);
-		expect(verdicts.summary).toEqual({ continuous: 114_636, intermittent: 0, incompatible: 271_946, insufficient_data: 31_668 });
-		expect(verdicts.conclusive).toEqual({ count: 386_582, percentage: 92.4 });
-		expect(verdicts.scope).toMatchObject({ explorable_combination_count: 420_879, fixed_verdict_count: 418_250, parametric_combination_count: 2_629 });
+		expect(verdicts.summary).toEqual({ continuous: 364_496, intermittent: 0, incompatible: 435_680, insufficient_data: 120_530 });
+		expect(verdicts.conclusive).toEqual({ count: 800_176, percentage: 86.9 });
+		expect(verdicts.scope).toMatchObject({ explorable_combination_count: 927_453, fixed_verdict_count: 920_706, parametric_combination_count: 6_747 });
 		expect(verdicts.verdictVersion).toMatch(/^[a-f0-9]{64}$/);
 	});
 });

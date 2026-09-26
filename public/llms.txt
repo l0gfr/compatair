@@ -2,7 +2,7 @@
 
 > Source-backed, deterministic compatibility between air compressors, pneumatic tools and documented system components. Missing critical data always remains `insufficient_data`.
 
-Dataset scope: 239 compressors × 1761 tools = 420,879 explorable combinations. The published fixed snapshot contains 418,250 audited verdicts for 1750 fixed-flow tools. The remaining 2,629 combinations are parametric and require action rate or volume plus target time; never describe them as precomputed verdicts.
+Dataset scope: 519 compressors × 1787 tools = 927,453 explorable combinations. The published fixed snapshot contains 920,706 audited verdicts for 1774 fixed-flow tools. The remaining 6,747 combinations are parametric and require action rate or volume plus target time; never describe them as precomputed verdicts.
 
 ## Agent interfaces
 

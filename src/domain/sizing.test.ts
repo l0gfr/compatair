@@ -113,8 +113,8 @@ describe('compatibility engine', () => {
 	});
 
 	it('exposes the expanded sourced catalog', () => {
-		expect(compressors).toHaveLength(239);
-		expect(tools).toHaveLength(1761);
+		expect(compressors).toHaveLength(519);
+		expect(tools).toHaveLength(1787);
 	});
 
 	it('keeps the new ABAC Tech flows bound to the documented 7 bar point', () => {

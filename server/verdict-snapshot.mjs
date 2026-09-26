@@ -34,7 +34,10 @@ function compactPair(pair, payloads) {
 	let payload = payloads.get(key);
 	if (!payload) {
 		payload = fields;
-		if (payloads.size < 20_000) payloads.set(key, payload);
+		// Keep sharing later catalogue entries after the bounded cache fills.
+		// Existing pairs retain their payload; only the lookup keys are evicted.
+		if (payloads.size >= 5_000) payloads.clear();
+		payloads.set(key, payload);
 	}
 	return new CompactPair(compressorId, toolId, payload);
 }

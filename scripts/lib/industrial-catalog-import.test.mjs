@@ -9,10 +9,10 @@ const atlas = JSON.parse(await readFile(new URL('../../src/data/imports/atlas-co
 const desoutter = JSON.parse(await readFile(new URL('../../src/data/imports/desoutter-reviewed-2026-09-26.json', import.meta.url)));
 
 describe('500 individually sourced industrial tools', () => {
-	it('keeps 2000 products and 500 distinct manufacturer references and technical profiles', () => {
+	it('keeps 2306 products and 500 distinct manufacturer references and technical profiles', () => {
 		expect(atlas.rows).toHaveLength(397);
 		expect(desoutter.rows).toHaveLength(103);
-		expect(tools.length + compressors.length).toBe(2000);
+		expect(tools.length + compressors.length).toBe(2306);
 		const profiles = [], ids = [];
 		for (const [snapshot, factory] of [[atlas, createAtlasCopcoToolDraft], [desoutter, createDesoutterToolDraft]]) for (const row of snapshot.rows) {
 			const p = factory(snapshot, row);

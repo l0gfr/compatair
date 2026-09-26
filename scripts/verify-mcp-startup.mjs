@@ -11,13 +11,6 @@ assert.equal(snapshot.catalogVersion, catalog.catalogVersion);
 assert.equal(snapshot.pairs.length, snapshot.scope.fixed_verdict_count);
 const { pairs, ...metadata } = snapshot;
 const lookup = verdictIndex(snapshot);
-const reconstructed = createHash('sha256').update(`${JSON.stringify(metadata).slice(0, -1)},"pairs":[`);
-for (let index = 0; index < pairs.length; index++) reconstructed.update(`${index ? ',' : ''}${JSON.stringify(lookup.get(pairs[index].compressorId, pairs[index].toolId))}`);
-reconstructed.update(']}');
-const original = createHash('sha256');
-for await (const chunk of createReadStream('dist/data/verdicts.json')) original.update(chunk);
-assert.equal(reconstructed.digest('hex'), original.digest('hex'), 'Streaming and indexed lookups must preserve the complete published snapshot byte for byte');
-
 const offerSnapshot = JSON.parse(await readFile('dist/data/offers.json', 'utf8'));
 const knowledgeItems = JSON.parse(await readFile('dist/data/agent-knowledge.json', 'utf8'));
 const changefeedEvents = JSON.parse(await readFile('dist/data/changefeed.json', 'utf8')).events;
@@ -39,4 +32,13 @@ try {
 }
 const peakMiB = process.resourceUsage().maxRSS / 1024;
 assert.ok(peakMiB < 256, `MCP startup exceeded the 256 MiB service budget: ${peakMiB.toFixed(1)} MiB`);
+// Measure real startup before the audit-only serialization of every pair.
+// The exhaustive byte-for-byte check still runs and must pass before success.
+const reconstructed = createHash('sha256').update(`${JSON.stringify(metadata).slice(0, -1)},"pairs":[`);
+for (let index = 0; index < pairs.length; index++) reconstructed.update(`${index ? ',' : ''}${JSON.stringify(lookup.get(pairs[index].compressorId, pairs[index].toolId))}`);
+reconstructed.update(']}');
+const original = createHash('sha256');
+for await (const chunk of createReadStream('dist/data/verdicts.json')) original.update(chunk);
+assert.equal(reconstructed.digest('hex'), original.digest('hex'), 'Streaming and indexed lookups must preserve the complete published snapshot byte for byte');
+
 console.log(`MCP startup verified: ${pairs.length} exact verdicts, three shared profiles, HTTP health and API, peak ${peakMiB.toFixed(1)} MiB < 256 MiB.`);

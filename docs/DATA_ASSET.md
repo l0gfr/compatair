@@ -35,9 +35,9 @@ Le baromètre annuel est calculé uniquement depuis les compresseurs et preuves 
 
 ## Verdicts versionnés
 
-Le catalogue contient actuellement 239 compresseurs et 1761 outils, soit 420 879 combinaisons explorables. Ce nombre ne décrit pas 420 879 verdicts pré-calculés. `/data/verdicts.json` contient les 418 250 verdicts fixes formés par les 239 compresseurs et les 1750 outils à débit fixe, y compris `insufficient_data`. Les 11 autres outils représentent 2 629 combinaisons paramétriques qui exigent une cadence ou un volume et un temps cible avant calcul.
+Le catalogue contient actuellement 519 compresseurs et 1787 outils, soit 927 453 combinaisons explorables. Ce nombre ne décrit pas 927 453 verdicts pré-calculés. `/data/verdicts.json` contient les 920 706 verdicts fixes formés par les 519 compresseurs et les 1774 outils à débit fixe, y compris `insufficient_data`. Les 13 autres outils représentent 6 747 combinaisons paramétriques qui exigent une cadence ou un volume et un temps cible avant calcul.
 
-Le snapshot fixe publie 77 231 verdicts « compatible en continu », 198 851 « incompatible » et 22 668 « données insuffisantes », soit 92,4 % de paires conclusives. La part d’incompatibilités décrit la valeur de filtrage d’un catalogue inter-marques large ; elle ne constitue pas une mesure de performance du moteur. Le snapshot lie :
+Le snapshot fixe publie 364 496 verdicts « compatible en continu », 435 680 « incompatible » et 120 530 « données insuffisantes », soit 86,9 % de paires conclusives. La part d’incompatibilités décrit la valeur de filtrage d’un catalogue inter-marques large ; elle ne constitue pas une mesure de performance du moteur. Le snapshot lie :
 
 - la version du catalogue ;
 - la version du moteur ;

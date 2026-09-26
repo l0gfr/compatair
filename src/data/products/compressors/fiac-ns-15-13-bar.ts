@@ -1,0 +1,106 @@
+const product = {
+	"id": "fiac-ns-15-13-bar",
+	"slug": "fiac-ns-15-13-bar",
+	"brand": "FIAC",
+	"model": "NS 15 13 bar",
+	"mpn": "4152040492",
+	"tankLiters": 0,
+	"maxPressureBar": 13,
+	"fadCurve": [
+		{
+			"pressureBar": 13,
+			"litersPerMinute": 1150
+		}
+	],
+	"oilType": "oil",
+	"confidence": "A",
+	"status": "unknown",
+	"image": {
+		"src": "/images/products/fiac-ns-15-13-bar.webp",
+		"alt": "Repères techniques FIAC NS 15 13 bar, référence 4152040492",
+		"sourceUrl": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf#page=18",
+		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+	},
+	"editorial": {
+		"overview": "FIAC NS 15 13 bar, référence 4152040492 : configuration sans cuve intégrée, pression maximale publiée de 13 bar. Le point documenté le plus élevé en pression fournit 1 150 L/min à 13 bar. Version sans sécheur intégré.",
+		"verifiedFacts": [
+			"Débit restitué publié : 1 150 L/min à 13 bar.",
+			"Vis lubrifiée, vitesse fixe. Puissance moteur publiée : 11 kW.",
+			"Alimentation publiée : 400 V / 50 Hz, triphasée."
+		],
+		"limitations": [
+			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
+			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Conditions du débit",
+			"value": "Free Air Delivery, ISO 1217 annexe C ; pression de service du tableau.",
+			"evidenceIds": [
+				"fiac-4152040492-20260926"
+			]
+		},
+		{
+			"label": "Équipement",
+			"value": "Version sans sécheur intégré.",
+			"evidenceIds": [
+				"fiac-4152040492-20260926"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "fiac-4152040492-20260926",
+			"sourceUrl": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf#page=18",
+			"sourceLabel": "FIAC, catalogue S226 R1, juin 2026, p. 18, réf. 4152040492",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Free Air Delivery, ISO 1217 annexe C ; pression de service du tableau."
+		},
+		{
+			"id": "fiac-4152040492-20260926-lubrification",
+			"sourceUrl": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf#page=17",
+			"sourceLabel": "FIAC, catalogue S226 R1, juin 2026, lubrification, p. 17",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Source du mode de lubrification uniquement."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"fiac-4152040492-20260926"
+		],
+		"tankLiters": [
+			"fiac-4152040492-20260926"
+		],
+		"maxPressureBar": [
+			"fiac-4152040492-20260926"
+		],
+		"fadCurve": [
+			"fiac-4152040492-20260926"
+		],
+		"oilType": [
+			"fiac-4152040492-20260926-lubrification"
+		],
+		"powerKw": [
+			"fiac-4152040492-20260926"
+		],
+		"voltage": [
+			"fiac-4152040492-20260926"
+		],
+		"phase": [
+			"fiac-4152040492-20260926"
+		]
+	},
+	"notes": [
+		"Caractéristiques déclarées par le fabricant. Les comparaisons dépendent des conditions de débit et de pression documentées."
+	],
+	"powerKw": 11,
+	"voltage": "400 V / 50 Hz",
+	"phase": "three-phase"
+};
+
+export default product;

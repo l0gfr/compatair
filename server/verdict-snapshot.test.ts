@@ -74,6 +74,20 @@ describe('bounded verdict snapshot loading', () => {
 		expect(await readVerdictSnapshot(await fixture(' { "catalogVersion": "test", "pairs" : [ ] }\r\n'))).toEqual({ catalogVersion: 'test', pairs: [] });
 	});
 
+	it('preserves the entire snapshot and indexed lookups across payload cache eviction', async () => {
+		const pairs = Array.from({ length: 10_010 }, (_, i) => ({
+			id: `a--t${i}`, compressorId: 'a', toolId: `t${i}`,
+			verdict: 'continuous', requiredFadLpm: i % 5_005, warnings: [],
+		}));
+		const text = JSON.stringify({ pairs });
+		const snapshot = await readVerdictSnapshot(await fixture(text), { compactIds: true });
+		expect(JSON.stringify(snapshot)).toBe(text);
+		const index = verdictIndex(snapshot);
+		for (const i of [0, 4_999, 5_000, 5_004, 5_005, 10_009]) {
+			expect(index.get('a', `t${i}`)).toEqual(pairs[i]);
+		}
+	});
+
 	it.each(['\\"', 'é'])('preserves a split escape or UTF-8 character at the chunk boundary: %s', async (boundary) => {
 		const prefix = '{"pairs":[{"compressorId":"a","toolId":"b","warnings":["';
 		const text = `${prefix}${'x'.repeat(65_535 - prefix.length)}${boundary}fin"]}]}`;

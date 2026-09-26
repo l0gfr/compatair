@@ -190,6 +190,16 @@ jobs:
             scripts/lib/markup-text.mjs
           sha256sum "compatair-admin-${GITHUB_SHA}.tar.gz" > "compatair-admin-${GITHUB_SHA}.tar.gz.sha256"
 
+      - name: Bound compressed release storage
+        shell: bash
+        run: |
+          release_bytes=$(wc -c < "compatair-${GITHUB_SHA}.tar.gz")
+          if (( release_bytes > 117440512 )); then
+            echo "Compressed release exceeds the 112 MiB GitHub storage budget" >&2
+            exit 1
+          fi
+          echo "Compressed release: ${release_bytes} bytes (limit 117440512)"
+
       - name: Upload release artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
