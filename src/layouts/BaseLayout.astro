@@ -90,6 +90,7 @@ const decisionRail = lang === 'en'
 	? {
 		label: 'CompatAir decision line',
 		name: 'CA / PNEUMATIC DECISION',
+		hint: 'Choose a step',
 		steps: [
 			{ id: 'identify', label: 'Identify', short: 'Identify', href: '/scanner/', state: 'available' },
 			{ id: 'size', label: 'Size', short: 'Need', href: '/calculateur/', state: 'available' },
@@ -100,6 +101,7 @@ const decisionRail = lang === 'en'
 	: {
 		label: 'Ligne de décision CompatAir',
 		name: completeJourneyIsRelevant ? 'CA / PARCOURS DE DÉCISION' : 'CA / DÉCISION PNEUMATIQUE',
+		hint: 'Choisir une étape',
 		steps: frenchSteps,
 		next: actionIndex === 0 ? { label: 'Étape actuelle · identifier', href: '#contenu' }
 			: actionIndex === 1 ? { label: 'Étape actuelle · dimensionner', href: '#contenu' }
@@ -238,8 +240,8 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 			</nav>
 			<nav class:list={['decision-rail', completeJourneyIsRelevant && 'is-complete-journey']} aria-label={decisionRail.label} data-decision-rail>
 				<div class="container decision-rail-inner">
-					<strong class="decision-rail-name">{decisionRail.name}</strong>
-					<ol>{decisionRail.steps.map((step, index) => <li data-decision-step={step.id} data-state={step.state}><a href={step.href} aria-current={step.state === 'current' ? 'step' : undefined}><span>0{index + 1}</span><b class="decision-rail-full">{step.label}</b><b class="decision-rail-short">{step.short}</b></a></li>)}</ol>
+					<div class="decision-rail-heading"><strong class="decision-rail-name">{decisionRail.name}</strong><span>{decisionRail.hint}</span></div>
+					<ol>{decisionRail.steps.map((step, index) => <li data-decision-step={step.id} data-state={step.state}><a href={step.href} aria-label={step.label === step.short ? step.label : `${step.label} · ${step.short}`} aria-current={step.state === 'current' ? 'step' : undefined}><span class="decision-step-number" aria-hidden="true">0{index + 1}</span><i class="decision-step-node" aria-hidden="true"></i><b class="decision-rail-full">{step.label}</b><b class="decision-rail-short">{step.short}</b></a></li>)}</ol>
 					<a class="decision-rail-status" data-decision-next href={decisionRail.next.href}><i aria-hidden="true"></i><span>{decisionRail.next.label}</span></a>
 				</div>
 			</nav>
