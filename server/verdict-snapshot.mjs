@@ -1,6 +1,7 @@
 import { createReadStream } from 'node:fs';
 
 const indexes = new WeakMap();
+const packedArrays = new WeakMap();
 
 // Pair ids and calculation payloads repeat across tools with the same demand.
 // Share immutable payloads; materialize complete records only for serialization.
@@ -26,33 +27,77 @@ class CompactPair {
 	get calculationVersion() { return this.#payload.calculationVersion; }
 	toJSON() { return { id: this.id, compressorId: this.compressorId, toolId: this.toolId, ...this.#payload }; }
 }
-function compactPair(pair, payloads) {
-	const keys = Object.keys(pair);
-	if (keys.slice(0, 3).join(',') !== 'id,compressorId,toolId' || pair.id !== `${pair.compressorId}--${pair.toolId}` || keys.slice(3).some(key => !payloadFields.has(key))) return pair;
-	const { id: _id, compressorId, toolId, ...fields } = pair;
-	const key = JSON.stringify(fields);
-	let payload = payloads.get(key);
-	if (!payload) {
-		payload = fields;
-		// Keep sharing later catalogue entries after the bounded cache fills.
-		// Existing pairs retain their payload; only the lookup keys are evicted.
-		if (payloads.size >= 5_000) payloads.clear();
-		payloads.set(key, payload);
-	}
-	return new CompactPair(compressorId, toolId, payload);
+// Three integers per row replace millions of retained JavaScript objects.
+// Full records are reconstructed on access; the public JSON remains unchanged.
+function packedPairWriter() {
+	const blockRows = 16_384;
+	const blocks = [], ids = [], idIndexes = new Map(), payloads = [], payloadIndexes = new Map();
+	let length = 0;
+	const idIndex = id => {
+		if (!idIndexes.has(id)) { idIndexes.set(id, ids.length); ids.push(id); }
+		return idIndexes.get(id);
+	};
+	const cell = (row, field) => blocks[Math.floor(row / blockRows)][(row % blockRows) * 3 + field];
+	return {
+		push(pair) {
+			if (length >= 10_000_000) throw new Error('verdict_snapshot_row_limit');
+			const keys = Object.keys(pair);
+			const reconstructible = keys.slice(0, 3).join(',') === 'id,compressorId,toolId'
+				&& pair.id === `${pair.compressorId}--${pair.toolId}` && keys.slice(3).every(key => payloadFields.has(key));
+			const { id: _id, compressorId, toolId, ...fields } = pair;
+			const key = `${reconstructible ? 'c' : 'r'}${JSON.stringify(reconstructible ? fields : pair)}`;
+			let payloadIndex = payloadIndexes.get(key);
+			if (payloadIndex === undefined) { payloadIndex = payloads.length; payloads.push(key); payloadIndexes.set(key, payloadIndex); }
+			if (length % blockRows === 0) blocks.push(new Uint32Array(blockRows * 3));
+			const block = blocks[Math.floor(length / blockRows)], offset = (length % blockRows) * 3;
+			block[offset] = idIndex(compressorId); block[offset + 1] = idIndex(toolId); block[offset + 2] = payloadIndex;
+			length++;
+		},
+		finish() {
+			payloadIndexes.clear(); idIndexes.clear();
+			const decoded = new Map();
+			const get = row => {
+				const payloadIndex = cell(row, 2);
+				let payload = decoded.get(payloadIndex);
+				if (!payload) {
+					payload = JSON.parse(payloads[payloadIndex].slice(1));
+					if (decoded.size >= 512) decoded.clear();
+					decoded.set(payloadIndex, payload);
+				}
+				return payloads[payloadIndex][0] === 'c' ? new CompactPair(ids[cell(row, 0)], ids[cell(row, 1)], payload) : payload;
+			};
+			const numericIndex = key => typeof key === 'string' && /^(0|[1-9]\d*)$/.test(key) && Number(key) < length ? Number(key) : undefined;
+			const target = []; target.length = length;
+			const pairs = new Proxy(target, {
+				get(array, key, receiver) { const row = numericIndex(key); return row === undefined ? Reflect.get(array, key, receiver) : get(row); },
+				has(array, key) { return numericIndex(key) !== undefined || Reflect.has(array, key); },
+				set() { throw new Error('verdict_snapshot_immutable'); },
+				deleteProperty() { throw new Error('verdict_snapshot_immutable'); },
+			});
+			packedArrays.set(pairs, { get, length, compressorId: row => ids[cell(row, 0)], toolId: row => ids[cell(row, 1)] });
+			return pairs;
+		},
+	};
 }
 
 export function verdictIndex(snapshot) {
 	let index = indexes.get(snapshot);
 	if (!index) {
+		const packed = packedArrays.get(snapshot.pairs);
 		const compressors = new Map();
-		for (const pair of snapshot.pairs ?? []) {
-			let tools = compressors.get(pair.compressorId);
-			if (!tools) { tools = []; compressors.set(pair.compressorId, tools); }
-			tools.push(pair);
+		for (let row = 0; row < (snapshot.pairs?.length ?? 0); row++) {
+			const pair = packed ? undefined : snapshot.pairs[row];
+			const compressorId = packed ? packed.compressorId(row) : pair.compressorId;
+			let tools = compressors.get(compressorId);
+			if (!tools) { tools = []; compressors.set(compressorId, tools); }
+			tools.push(packed ? row : pair);
 		}
+		const toolId = pair => packed ? packed.toolId(pair) : pair.toolId;
 		// Sorted references avoid a second hash-table entry for every verdict.
-		for (const tools of compressors.values()) tools.sort((a, b) => a.toolId < b.toolId ? -1 : a.toolId > b.toolId ? 1 : 0);
+		for (const [compressorId, tools] of compressors) {
+			tools.sort((a, b) => toolId(a) < toolId(b) ? -1 : toolId(a) > toolId(b) ? 1 : 0);
+			if (packed) compressors.set(compressorId, Uint32Array.from(tools));
+		}
 		index = { get: (compressorId, toolId) => {
 			const tools = compressors.get(compressorId);
 			if (!tools) return undefined;
@@ -60,10 +105,10 @@ export function verdictIndex(snapshot) {
 			let high = tools.length;
 			while (low < high) {
 				const middle = Math.floor((low + high) / 2);
-				if (tools[middle].toolId <= toolId) low = middle + 1;
+				if ((packed ? packed.toolId(tools[middle]) : tools[middle].toolId) <= toolId) low = middle + 1;
 				else high = middle;
 			}
-			const pair = tools[low - 1];
+			const pair = low === 0 ? undefined : packed ? packed.get(tools[low - 1]) : tools[low - 1];
 			if (pair?.toolId !== toolId) return undefined;
 			return pair instanceof CompactPair ? pair.toJSON() : pair;
 		} };
@@ -77,10 +122,9 @@ export function verdictIndex(snapshot) {
 export async function readVerdictSnapshot(path, { compactIds = false } = {}) {
 	let buffer = '';
 	let metadata;
-	const pairs = [];
+	const pairs = compactIds ? packedPairWriter() : [];
 	const strings = new Map();
 	const warningLists = new Map();
-	const payloads = new Map();
 	const intern = (value) => {
 		if (typeof value !== 'string') return value;
 		const existing = strings.get(value);
@@ -120,8 +164,8 @@ export async function readVerdictSnapshot(path, { compactIds = false } = {}) {
 					if (position > 1024 * 1024) throw new Error('verdict_snapshot_pair_too_large');
 					const pair = JSON.parse(buffer.slice(0, position));
 					if (!pair || Array.isArray(pair) || typeof pair.compressorId !== 'string' || typeof pair.toolId !== 'string') throw new Error('verdict_snapshot_pair_invalid');
-					for (const key of ['compressorId', 'toolId', 'verdict', 'confidence', 'limitingFactor', 'availableFadBasis']) if (Object.hasOwn(pair, key)) pair[key] = intern(pair[key]);
-					if (Array.isArray(pair.warnings)) {
+					if (!compactIds) for (const key of ['compressorId', 'toolId', 'verdict', 'confidence', 'limitingFactor', 'availableFadBasis']) if (Object.hasOwn(pair, key)) pair[key] = intern(pair[key]);
+					if (!compactIds && Array.isArray(pair.warnings)) {
 						const key = JSON.stringify(pair.warnings);
 						let warnings = warningLists.get(key);
 						if (!warnings) {
@@ -130,7 +174,7 @@ export async function readVerdictSnapshot(path, { compactIds = false } = {}) {
 						}
 						pair.warnings = warnings;
 					}
-					pairs.push(compactIds ? compactPair(pair, payloads) : pair);
+					pairs.push(pair);
 					buffer = buffer.slice(position);
 					position = 0;
 					state = 'comma';
@@ -151,5 +195,5 @@ export async function readVerdictSnapshot(path, { compactIds = false } = {}) {
 		else if (buffer.length > 1024 * 1024) throw new Error('verdict_snapshot_pair_too_large');
 	}
 	if (!metadata || state !== 'done') throw new Error('verdict_snapshot_truncated');
-	return { ...metadata, pairs };
+	return { ...metadata, pairs: compactIds ? pairs.finish() : pairs };
 }

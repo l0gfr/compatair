@@ -61,6 +61,13 @@ fi
 
 (cd "$(dirname "$archive")" && sha256sum --check "$(basename "$checksum_file")")
 
+# GNU tar detects gzip and xz on read, preserving rollback drill compatibility.
+case "$archive" in
+	*.tar.xz) command -v xz > /dev/null || { echo "xz is required to read this release" >&2; exit 2; } ;;
+	*.tar.gz) ;;
+	*) echo "Unsupported release archive format" >&2; exit 2 ;;
+esac
+archive_entries=$(tar -tf "$archive")
 while IFS= read -r entry; do
 	case "$entry" in
 		/*|../*|*/../*|*/..)
@@ -68,9 +75,9 @@ while IFS= read -r entry; do
 			exit 2
 			;;
 	esac
-done < <(tar -tzf "$archive")
+done <<< "$archive_entries"
 
-if tar -tvzf "$archive" | awk '$1 ~ /^[lhcbp]/ { found=1 } END { exit !found }'; then
+if tar -tvf "$archive" | awk '$1 ~ /^[lhcbp]/ { found=1 } END { exit !found }'; then
 	echo "Release archive contains a link or special file" >&2
 	exit 2
 fi
@@ -158,7 +165,7 @@ else
 		rm -rf -- "$incoming"
 	fi
 	install -d -m 755 "$incoming"
-	tar -xzf "$archive" -C "$incoming" --no-same-owner --no-same-permissions
+	tar -xf "$archive" -C "$incoming" --no-same-owner --no-same-permissions
 	test -f "$incoming/index.html"
 	mv "$incoming" "$release"
 fi

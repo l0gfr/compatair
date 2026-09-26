@@ -1,0 +1,4255 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-26",
+  "sourceUrl": "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf",
+  "sourceSha256": "148bffd1f4f011b88331146228570b08af3e3e6f8e897c608d42cfca2c7bd8bc",
+  "edition": "D25.01",
+  "tables": [
+    {
+      "id": "80-1",
+      "page": 80,
+      "bbox": [
+        34.102444444444444,
+        671.9733333333334,
+        548.7272727272727,
+        730.4366666666666
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Tool Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Tool\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "52515",
+          ".55 (410)",
+          "15,000",
+          "83 dB(A)",
+          "33 (934)",
+          "3/8 (10)",
+          "1/4\" NPT",
+          "5/8\"-11 Male",
+          "1.9 (0.8)",
+          "6 (152)",
+          "3-7/8 (98)"
+        ],
+        [
+          "52516",
+          ".55 (410)",
+          "15,000",
+          "83 dB(A)",
+          "33 (934)",
+          "3/8 (10)",
+          "1/4\" NPT",
+          "5/8\"-11 Male",
+          "1.9 (0.8)",
+          "6 (152)",
+          "3-7/8 (98)"
+        ],
+        [
+          "52518",
+          ".55 (410)",
+          "15,000",
+          "83 dB(A)",
+          "33 (934)",
+          "3/8 (10)",
+          "1/4\" NPT",
+          "M14x2",
+          "1.9 (0.8)",
+          "6 (152)",
+          "3-7/8 (98)"
+        ]
+      ]
+    },
+    {
+      "id": "89-0",
+      "page": 89,
+      "bbox": [
+        54.38977777777777,
+        420.56033333333335,
+        569.01,
+        453.5436666666667
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Tool Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Tool\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "50210",
+          ".4 (298)",
+          "15,000",
+          "86 dB(A)",
+          "21 (595)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "1/4\"-20 Male",
+          "1.7 (0.7)",
+          "9-3/4 (249)",
+          "3-7/8 (98)"
+        ]
+      ]
+    },
+    {
+      "id": "89-1",
+      "page": 89,
+      "bbox": [
+        54.38977777777777,
+        696.5603333333333,
+        569.01,
+        729.5436666666666
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Tool Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Tool\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "50570",
+          ".4 (298)",
+          "15,000",
+          "86 dB(A)",
+          "21 (595)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "1/4\"-20 Male",
+          "1.7 (0.7)",
+          "9-3/4 (249)",
+          "4-3/8 (109)"
+        ]
+      ]
+    },
+    {
+      "id": "90-0",
+      "page": 90,
+      "bbox": [
+        34.05485714285714,
+        358.3033333333333,
+        548.778,
+        391.2866666666667
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Tool Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Tool\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "50211",
+          ".4 (298)",
+          "15,000",
+          "83 dB(A)",
+          "21 (595)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "1/4\"-20 Male",
+          "1.7 (0.7)",
+          "10-1/2 (266)",
+          "3-7/8 (98)"
+        ]
+      ]
+    },
+    {
+      "id": "90-1",
+      "page": 90,
+      "bbox": [
+        34.05485714285714,
+        696.2343333333333,
+        548.778,
+        729.2176666666668
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Tool Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Tool\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "50561",
+          ".4 (298)",
+          "15,000",
+          "83 dB(A)",
+          "21 (595)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "1/4\"-20 Male",
+          "1.7 (0.7)",
+          "10-1/2 (266)",
+          "4-3/8 (109)"
+        ]
+      ]
+    },
+    {
+      "id": "92-0",
+      "page": 92,
+      "bbox": [
+        34.081125,
+        367.17333333333335,
+        548.7502000000001,
+        400.1566666666667
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Tool Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Tool\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "52597",
+          "1.3 (969)",
+          "6,000",
+          "76 dB(A)",
+          "40 (1,138)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "5/8\"-11 Male",
+          "5.8 (2.6)",
+          "14-5/8 (373)",
+          "3-7/8 (104)"
+        ]
+      ]
+    },
+    {
+      "id": "95-0",
+      "page": 95,
+      "bbox": [
+        54.3009,
+        648.6903333333333,
+        568.9816666666667,
+        732.6336666666666
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Tool Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Tool\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "52705",
+          ".4 (298)",
+          "15,000",
+          "77 dB(A)",
+          "24 (680)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "3/8\"-24 Male",
+          "1.6 (0.7)",
+          "8-1/4 (210)",
+          "2-5/8 (67)"
+        ],
+        [
+          "52710",
+          ".4 (298)",
+          "12,000",
+          "83 dB(A)",
+          "21 (595)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "3/8\"-24 Male",
+          "1.1 (0.5)",
+          "5-3/4 (146)",
+          "3 (76)"
+        ],
+        [
+          "52711",
+          ".4 (298)",
+          "15,000",
+          "85 dB(A)",
+          "21 (595)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "3/8\"-24 Male",
+          "1.1 (0.5)",
+          "5-3/4 (146)",
+          "3 (76)"
+        ],
+        [
+          "52712",
+          ".4 (298)",
+          "20,000",
+          "84 dB(A)",
+          "21 (595)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "3/8\"-24 Male",
+          "1.1 (0.5)",
+          "5-3/4 (146)",
+          "3 (76)"
+        ],
+        [
+          "57127",
+          ".55 (410)",
+          "15,000",
+          "84 dB(A)",
+          "33 (934)",
+          "3/8 (10)",
+          "1/4\" NPT",
+          "3/8\"-24 Male",
+          "1.9 (0.8)",
+          "6 (152)",
+          "3-7/8 (98)"
+        ]
+      ]
+    },
+    {
+      "id": "107-0",
+      "page": 107,
+      "bbox": [
+        54.37583333333333,
+        610.9673333333334,
+        568.9356,
+        733.1306666666668
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Tool Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Tool\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "52715",
+          "1.0 (744)",
+          "12,000",
+          "81 dB(A)",
+          "38 (1,076)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "3/8\"-24 Male",
+          "2.0 (198)",
+          "7-3/4 (198)",
+          "1-7/8 (48)"
+        ],
+        [
+          "52716",
+          "1.0 (744)",
+          "15,000",
+          "77 dB(A)",
+          "39 (1,104)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "3/8\"-24 Male",
+          "2.0 (198)",
+          "8-7/8 (225)",
+          "1-7/8 (48)"
+        ],
+        [
+          "52717",
+          "1.0 (744)",
+          "18,000",
+          "78 dB(A)",
+          "40 (1,133)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "3/8\"-24 Male",
+          "2.0 (198)",
+          "8-7/8 (225)",
+          "1-7/8 (48)"
+        ],
+        [
+          "52718",
+          "1.0 (744)",
+          "20,000",
+          "78 dB(A)",
+          "44 (1,256)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "3/8\"-24 Male",
+          "2.0 (198)",
+          "8-7/8 (225)",
+          "1-7/8 (48)"
+        ],
+        [
+          "52719",
+          "1.0 (744)",
+          "12,000",
+          "81 dB(A)",
+          "38 (1,076)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "3/8\"-24 Male",
+          "3.3 (1.5)",
+          "13-1/4 (335)",
+          "1-7/8 (48)"
+        ],
+        [
+          "52720",
+          "1.0 (744)",
+          "15,000",
+          "77 dB(A)",
+          "39 (1,104)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "3/8\"-24 Male",
+          "3.3 (1.5)",
+          "14-3/8 (365)",
+          "1-7/8 (48)"
+        ],
+        [
+          "52721",
+          "1.0 (744)",
+          "18,000",
+          "78 dB(A)",
+          "40 (1,133)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "3/8\"-24 Male",
+          "3.3 (1.5)",
+          "14-3/8 (365)",
+          "1-7/8 (48)"
+        ],
+        [
+          "52722",
+          "1.0 (744)",
+          "20,000",
+          "78 dB(A)",
+          "44 (1,256)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "3/8\"-24 Male",
+          "3.3 (1.5)",
+          "14-3/8 (365)",
+          "1-7/8 (48)"
+        ]
+      ]
+    },
+    {
+      "id": "108-0",
+      "page": 108,
+      "bbox": [
+        34.10375,
+        622.4963333333334,
+        548.6728333333334,
+        733.9196666666667
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Tool Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Tool\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "53521",
+          "1.0 (744)",
+          "3,400",
+          "79 dB(A)",
+          "41 (1,161)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "1/2\"-20 Male",
+          "5.5 (2.5)",
+          "19-3/4 (502)",
+          "1-7/8 (48)"
+        ],
+        [
+          "53522",
+          "1.0 (744)",
+          "3,400",
+          "79 dB(A)",
+          "41 (1,161)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "1/2\"-20 Male",
+          "7.6 (3.5)",
+          "28-1/8 (714)",
+          "1-7/8 (48)"
+        ],
+        [
+          "53523",
+          "1.0 (744)",
+          "3,400",
+          "79 dB(A)",
+          "41 (1,161)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "1/2\"-20 Male",
+          "9.75 (4.4)",
+          "36-1/2 (927)",
+          "1-7/8 (48)"
+        ],
+        [
+          "53531",
+          "1.0 (744)",
+          "18,000",
+          "75 dB(A)",
+          "41 (1,161)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "3/8\"-24 Male",
+          "4.8 (2.2)",
+          "18-3/8 (467)",
+          "1-7/8 (48)"
+        ],
+        [
+          "53532",
+          "1.0 (744)",
+          "18,000",
+          "75 dB(A)",
+          "41 (1,161)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "3/8\"-24 Male",
+          "6.9 (3.1)",
+          "26-3/4 (679)",
+          "1-7/8 (48)"
+        ],
+        [
+          "53533",
+          "1.0 (744)",
+          "18,000",
+          "75 dB(A)",
+          "41 (1,161)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "3/8\"-24 Male",
+          "8.9 (4.0)",
+          "35-1/8 (892)",
+          "1-7/8 (48)"
+        ],
+        [
+          "53783",
+          "0.7 (522)",
+          "20,000",
+          "80 dB(A)",
+          "39 (1,104)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "3/8\"-24 Male",
+          "3.9 (1.7)",
+          "12.7 (322)",
+          "1.7 (45)"
+        ]
+      ]
+    },
+    {
+      "id": "109-0",
+      "page": 109,
+      "bbox": [
+        54.308846153846154,
+        622.9733333333334,
+        568.9688000000001,
+        732.3966666666666
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Tool Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Tool\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "52420",
+          "0.5 (373)",
+          "20,000",
+          "82 dB(A)",
+          "28 (793)",
+          "3/8 (10)",
+          "1/4\" NPT",
+          "3/8\"-24 Male",
+          "2.2 (1.0)",
+          "6 (152)",
+          "5-1/2 (140)"
+        ],
+        [
+          "52434",
+          "0.5 (373)",
+          "20,000",
+          "81 dB(A)",
+          "27 (765)",
+          "3/8 (10)",
+          "1/4\" NPT",
+          "3/8\"-24 Male",
+          "2.0 (0.9)",
+          "6-3/8 (162)",
+          "3-1/8 (79)"
+        ],
+        [
+          "52435",
+          "0.5 (373)",
+          "20,000",
+          "77 dB(A)",
+          "27 (765)",
+          "3/8 (10)",
+          "1/4\" NPT",
+          "3/8\"-24 Male",
+          "2.3 (1.0)",
+          "8-1/2 (126)",
+          "3-1/8 (79)"
+        ],
+        [
+          "52439",
+          "0.4 (306)",
+          "12,000",
+          "83 dB(A)",
+          "21 (595)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "3/8\"-24 Male",
+          "1.6 (0.7)",
+          "8-1/2 (126)",
+          "3-1/8 (79)"
+        ],
+        [
+          "52576",
+          "1 (744)",
+          "15,000",
+          "77 dB(A)",
+          "39 (1,104)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "3/8\"-24 Male",
+          "4.0 (1.8)",
+          "14-7/8 (379)",
+          "3-1/8 (79)"
+        ],
+        [
+          "52577",
+          "1 (744)",
+          "18,000",
+          "78 dB(A)",
+          "40 (1,133)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "3/8\"-24 Male",
+          "4.0 (1.8)",
+          "14-7/8 (379)",
+          "3-1/8 (79)"
+        ],
+        [
+          "52578",
+          "1 (744)",
+          "20,000",
+          "78 dB(A)",
+          "44 (1,256)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "3/8\"-24 Male",
+          "4.0 (1.8)",
+          "14-7/8 (379)",
+          "3-1/8 (79)"
+        ]
+      ]
+    },
+    {
+      "id": "113-0",
+      "page": 113,
+      "bbox": [
+        53.675333333333334,
+        685.4143333333333,
+        568.4725,
+        731.1376666666666
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Tool Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Tool\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "52538",
+          "0.4 (298)",
+          "12,000",
+          "83 dB(A)",
+          "21 (595)",
+          "3/8 (10)",
+          "1/4\" NPT",
+          "3/8\"-24 Male",
+          "2 (.97)",
+          "8-5/8 (219)",
+          "4-3/8 (111)"
+        ],
+        [
+          "52537",
+          "1.0 (746)",
+          "18,000",
+          "79 dB(A)",
+          "41 (1,161)",
+          "3/8 (10)",
+          "3/8\" NPT",
+          "3/8\"-24 Male",
+          "3.75 (1.7)",
+          "14-5/8 (371)",
+          "4-1/2 (114)"
+        ]
+      ]
+    },
+    {
+      "id": "114-0",
+      "page": 114,
+      "bbox": [
+        34.02075,
+        696.7143333333333,
+        548.8363333333333,
+        729.6976666666666
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Collet Size",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Collet\nSize",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "52418",
+          "0.7 (522)",
+          "20,000",
+          "79 dB(A)",
+          "37 (1,048)",
+          "3/8 (10)",
+          "1/4\" NPT",
+          "3/8\"",
+          "3 (1.3)",
+          "10-15/16 (265)",
+          "5-1/4 (133)"
+        ]
+      ]
+    },
+    {
+      "id": "137-0",
+      "page": 137,
+      "bbox": [
+        54.35119999999999,
+        640.8103333333333,
+        568.9403333333333,
+        737.4936666666666
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Chuck Size",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Air Pressure PSIG (Bar)",
+        "Spindle Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Chuck\nSize",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Air Pressure\nPSIG (Bar)",
+          "Spindle\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "52903",
+          ".4 (298)",
+          "500",
+          "1/4\"",
+          "76 dB(A)",
+          "23 (651)",
+          "90 (6.2)",
+          "3/8\"-24 Male",
+          "3.7 (1.7)",
+          "10-1/2 (268)",
+          "11-3/4 (300)"
+        ],
+        [
+          "52904",
+          ".4 (298)",
+          "1,000",
+          "1/4\"",
+          "80 dB(A)",
+          "25 (708)",
+          "90 (6.2)",
+          "3/8\"-24 Male",
+          "3.7 (1.7)",
+          "10-1/2 (268)",
+          "11-3/4 (300)"
+        ],
+        [
+          "52905",
+          ".4 (298)",
+          "2,400",
+          "1/4\"",
+          "77 dB(A)",
+          "22 (623)",
+          "90 (6.2)",
+          "3/8\"-24 Male",
+          "3.1 (1.4)",
+          "10-1/2 (268)",
+          "11-3/4 (300)"
+        ],
+        [
+          "52906",
+          ".4 (298)",
+          "3,600",
+          "1/4\"",
+          "80 dB(A)",
+          "23 (651)",
+          "90 (6.2)",
+          "3/8\"-24 Male",
+          "3.1 (1.4)",
+          "10-1/2 (268)",
+          "11-3/4 (300)"
+        ],
+        [
+          "52907",
+          ".4 (298)",
+          "5,500",
+          "1/4\"",
+          "81 dB(A)",
+          "25 (708)",
+          "90 (6.2)",
+          "3/8\"-24 Male",
+          "3.1 (1.4)",
+          "10-1/2 (268)",
+          "11-3/4 (300)"
+        ],
+        [
+          "49135",
+          ".4 (298)",
+          "3,200",
+          "1/4\"",
+          "77 dB(A)",
+          "21 (595)",
+          "90 (6.2)",
+          "1/4\"-28 Female",
+          "2.0 (.9)",
+          "11-3/4 (276)",
+          "3-1/2 (90)"
+        ]
+      ]
+    },
+    {
+      "id": "163-0",
+      "page": 163,
+      "bbox": [
+        54.25,
+        685.6533333333333,
+        569.0646666666667,
+        731.3766666666667
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Tool Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Tool\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "53415",
+          ".4 (298)",
+          "3,200",
+          "82 dB(A)",
+          "21 (595)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "1/4\"-28 Male",
+          "1.9 (.9)",
+          "7 (289)",
+          "2-3/4 (70)"
+        ],
+        [
+          "53417",
+          ".4 (298)",
+          "3,200",
+          "81 dB(A)",
+          "21 (595)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "1/4\"-28 Male",
+          "1.9 (.9)",
+          "7 (289)",
+          "2-3/4 (70)"
+        ]
+      ]
+    },
+    {
+      "id": "166-0",
+      "page": 166,
+      "bbox": [
+        34.143166666666666,
+        613.6985384615384,
+        548.6782857142857,
+        735.8554615384614
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Pad Dia. Inch (mm)",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Tool Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Pad Dia.\nInch (mm)",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Tool\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "58460",
+          ".45 (336)",
+          "12,000",
+          "3 (76)",
+          "81 dB(A)",
+          "23 (651)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "5/16\"-24 Female",
+          "2.35 (1.0)",
+          "10-5/16 (263)",
+          "5-3/8 (137)"
+        ],
+        [
+          "58461",
+          ".45 (336)",
+          "12,000",
+          "3 (76)",
+          "86 dB(A)",
+          "23 (651)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "5/16\"-24 Female",
+          "2.35 (1.0)",
+          "10-5/16 (263)",
+          "5-3/8 (137)"
+        ],
+        [
+          "58465",
+          ".45 (336)",
+          "12,000",
+          "3-1/2 (89)",
+          "80 dB(A)",
+          "23 (651)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "5/16\"-24 Female",
+          "2.35 (1.0)",
+          "10-5/16 (263)",
+          "5-3/8 (137)"
+        ],
+        [
+          "58466",
+          ".45 (336)",
+          "12,000",
+          "3-1/2 (89)",
+          "85 dB(A)",
+          "23 (651)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "5/16\"-24 Female",
+          "2.35 (1.0)",
+          "10-5/16 (263)",
+          "5-3/8 (137)"
+        ],
+        [
+          "58430",
+          ".45 (336)",
+          "12,000",
+          "5 (127)",
+          "82 dB(A)",
+          "23 (651)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "5/16\"-24 Female",
+          "2.7 (1.2)",
+          "11-1/16 (280)",
+          "5-1/8 (131)"
+        ],
+        [
+          "58431",
+          ".45 (336)",
+          "12,000",
+          "5 (127)",
+          "82 dB(A)",
+          "23 (651)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "5/16\"-24 Female",
+          "2.6 (1.2)",
+          "11-1/16 (280)",
+          "5-1/8 (131)"
+        ],
+        [
+          "58435",
+          ".45 (336)",
+          "12,000",
+          "6 (152)",
+          "82 dB(A)",
+          "23 (651)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "5/16\"-24 Female",
+          "2.8 (1.2)",
+          "11-1/2 (293)",
+          "5-1/8 (131)"
+        ],
+        [
+          "58436",
+          ".45 (336)",
+          "12,000",
+          "6 (152)",
+          "85 dB(A)",
+          "23 (651)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "5/16\"-24 Female",
+          "2.7 (1.2)",
+          "11-1/2 (293)",
+          "5-1/8 (131)"
+        ]
+      ]
+    },
+    {
+      "id": "176-0",
+      "page": 176,
+      "bbox": [
+        34.08075,
+        658.1775454545455,
+        548.7495,
+        729.3884545454547
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "58500",
+          ".15 (112)",
+          "10,000",
+          "78 dB(A)",
+          "13 (368)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "1.6 (.7)",
+          "5-3/4 (147)",
+          "3-1/2 (91)"
+        ],
+        [
+          "58503",
+          ".15 (112)",
+          "10,000",
+          "78 dB(A)",
+          "13 (368)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "1.6 (.7)",
+          "6-1/4 (1857)",
+          "3-1/2 (91)"
+        ],
+        [
+          "58507",
+          ".15 (112)",
+          "10,000",
+          "79 dB(A)",
+          "13 (368)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "2.1 (.95)",
+          "7-1/16 (180)",
+          "3-3/4 (94)"
+        ],
+        [
+          "58509",
+          ".15 (112)",
+          "10,000",
+          "78 dB(A)",
+          "13 (368)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "1.6 (.7)",
+          "5-3/4 (147)",
+          "3-1/2 (91)"
+        ]
+      ]
+    },
+    {
+      "id": "177-0",
+      "page": 177,
+      "bbox": [
+        54.333555555555556,
+        647.8995454545454,
+        568.9588181818182,
+        731.8504545454546
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "58501",
+          ".15 (112)",
+          "10,000",
+          "75 dB(A)",
+          "13 (368)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "1.7 (.75)",
+          "8-1/4 (212)",
+          "3-1/2 (91)"
+        ],
+        [
+          "58502",
+          ".15 (112)",
+          "10,000",
+          "81 dB(A)",
+          "13 (368)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "1.6 (.7)",
+          "7 (180)",
+          "3-1/2 (91)"
+        ],
+        [
+          "58504",
+          ".15 (112)",
+          "10,000",
+          "75 dB(A)",
+          "13 (368)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "1.7 (.75)",
+          "8-3/4 (222)",
+          "3-3/4 (94)"
+        ],
+        [
+          "58505",
+          ".15 (112)",
+          "10,000",
+          "81 dB(A)",
+          "13 (368)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "1.6 (.7)",
+          "7-1/2 (190)",
+          "3-1/2 (91)"
+        ],
+        [
+          "58506",
+          ".15 (112)",
+          "10,000",
+          "81 dB(A)",
+          "13 (368)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "1.6 (.7)",
+          "8-3/4 (222)",
+          "3-1/2 (91)"
+        ]
+      ]
+    },
+    {
+      "id": "178-0",
+      "page": 178,
+      "bbox": [
+        34.04588888888889,
+        660.4395454545455,
+        548.7722727272727,
+        731.6504545454546
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Motor RPM",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Motor\nRPM",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "57400",
+          ".3 (186)",
+          "2,400",
+          "79 dB(A)",
+          "18 (510)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "2.6 (1.2)",
+          "7 (178)",
+          "3-3/4 (95)"
+        ],
+        [
+          "57401",
+          ".3 (186)",
+          "2,400",
+          "79 dB(A)",
+          "18 (510)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "2.6 (1.2)",
+          "7 (178)",
+          "3-3/4 (95)"
+        ],
+        [
+          "57404",
+          ".3 (186)",
+          "2,400",
+          "80 dB(A)",
+          "18 (510)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "2.6 (1.2)",
+          "7 (178)",
+          "3-3/4 (95)"
+        ],
+        [
+          "57407",
+          ".3 (186)",
+          "2,400",
+          "79 dB(A)",
+          "18 (510)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "2.6 (1.2)",
+          "7 (178)",
+          "3-3/4 (95)"
+        ]
+      ]
+    },
+    {
+      "id": "179-0",
+      "page": 179,
+      "bbox": [
+        54.25,
+        474.88954545454544,
+        569.0646666666667,
+        507.8804545454545
+      ],
+      "headers": [
+        "Model Number",
+        "Motor hp (W)",
+        "Strokes Per Minute",
+        "Sound Level",
+        "Maximum Air Flow SCFM (L/Min)",
+        "Hose I.D. Size Inch (mm)",
+        "Air Inlet Thread",
+        "Weight Pound (kg)",
+        "Length Inch (mm)",
+        "Height Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Motor\nhp (W)",
+          "Strokes\nPer Minute",
+          "Sound\nLevel",
+          "Maximum Air Flow\nSCFM (L/Min)",
+          "Hose I.D. Size\nInch (mm)",
+          "Air Inlet\nThread",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)",
+          "Height\nInch (mm)"
+        ],
+        [
+          "51350",
+          ".3 (186)",
+          "2,400",
+          "81 dB(A)",
+          "18 (510)",
+          "1/4 (6)",
+          "1/4\" NPT",
+          "3.1 (1.4)",
+          "11 (279)",
+          "3-3/4 (95)"
+        ]
+      ]
+    },
+    {
+      "id": "151-0",
+      "page": 151,
+      "bbox": [
+        54.44211764705882,
+        525.5915,
+        305.53225,
+        715.1564999999999
+      ],
+      "headers": [
+        "Model Number",
+        "Vacuum Style",
+        "Tool Dia. Inch (mm)",
+        "Dia. Orbit Inch (mm)",
+        "Sound Level",
+        "Weight Pound (kg)",
+        "Length Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Vacuum\nStyle",
+          "Tool Dia.\nInch (mm)",
+          "Dia. Orbit\nInch (mm)",
+          "Sound\nLevel",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)"
+        ],
+        [
+          "56800",
+          "Non-Vac",
+          "3-1/2 (89)",
+          "3/16 (5)",
+          "77 dB(A)",
+          "2.1 (1)",
+          "6 (152)"
+        ],
+        [
+          "56815",
+          "Non-Vac",
+          "5 (127)",
+          "3/16 (5)",
+          "80 dB(A)",
+          "2.1 (1)",
+          "6-1/2 (165)"
+        ],
+        [
+          "56826",
+          "Non-Vac",
+          "6 (152)",
+          "3/16 (5)",
+          "78 dB(A)",
+          "2.2 (1)",
+          "7 (178)"
+        ],
+        [
+          "56840",
+          "Non-Vac",
+          "3-1/2 (89)",
+          "3/32 (2.5)",
+          "76 dB(A)",
+          "2.1 (1)",
+          "6 (152)"
+        ],
+        [
+          "56850",
+          "Non-Vac",
+          "5 (127)",
+          "3/32 (2.5)",
+          "77 dB(A)",
+          "2.1 (1)",
+          "6-1/2 (165)"
+        ],
+        [
+          "56859",
+          "Non-Vac",
+          "6 (152)",
+          "3/32 (2.5)",
+          "76 dB(A)",
+          "2.2 (1)",
+          "7 (178)"
+        ],
+        [
+          "56870",
+          "Non-Vac",
+          "3-1/2 (89)",
+          "3/8 (10)",
+          "80 dB(A)",
+          "2.2 (1)",
+          "6 (152)"
+        ],
+        [
+          "56880",
+          "Non-Vac",
+          "5 (127)",
+          "3/8 (10)",
+          "78 dB(A)",
+          "2.3 (1)",
+          "6-1/2 (165)"
+        ],
+        [
+          "56890",
+          "Non-Vac",
+          "6 (152)",
+          "3/8 (10)",
+          "80 dB(A)",
+          "2.4 (1)",
+          "7 (178)"
+        ],
+        [
+          "56803",
+          "Self-Gen",
+          "3-1/2 (89)",
+          "3/16 (5)",
+          "84 dB(A)",
+          "2.1 (1)",
+          "8-1/4 (210)"
+        ],
+        [
+          "56818",
+          "Self-Gen",
+          "5 (127)",
+          "3/16 (5)",
+          "82 dB(A)",
+          "2.1 (1)",
+          "8-1/2 (216)"
+        ],
+        [
+          "56829",
+          "Self-Gen",
+          "6 (152)",
+          "3/16 (5)",
+          "85 dB(A)",
+          "2.3 (1)",
+          "9 (229)"
+        ],
+        [
+          "56843",
+          "Self-Gen",
+          "3-1/2 (89)",
+          "3/32 (2.5)",
+          "81 dB(A)",
+          "2.1 (1)",
+          "8-1/4 (210)"
+        ],
+        [
+          "56853",
+          "Self-Gen",
+          "5 (127)",
+          "3/32 (2.5)",
+          "83 dB(A)",
+          "2.1 (1)",
+          "8-1/2 (216)"
+        ]
+      ]
+    },
+    {
+      "id": "151-1",
+      "page": 151,
+      "bbox": [
+        317.6986666666667,
+        525.5915,
+        568.8428888888889,
+        703.2298333333333
+      ],
+      "headers": [
+        "Model Number",
+        "Vacuum Style",
+        "Tool Dia. Inch (mm)",
+        "Dia. Orbit Inch (mm)",
+        "Sound Level",
+        "Weight Pound (kg)",
+        "Length Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Vacuum\nStyle",
+          "Tool Dia.\nInch (mm)",
+          "Dia. Orbit\nInch (mm)",
+          "Sound\nLevel",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)"
+        ],
+        [
+          "56862",
+          "Self-Gen",
+          "6 (152)",
+          "3/32 (2.5)",
+          "84 dB(A)",
+          "2.3 (1)",
+          "9 (229)"
+        ],
+        [
+          "56873",
+          "Self-Gen",
+          "3-1/2 (89)",
+          "3/8 (10)",
+          "84 dB(A)",
+          "2.3 (1)",
+          "8-1/4 (210)"
+        ],
+        [
+          "56883",
+          "Self-Gen",
+          "5 (127)",
+          "3/8 (10)",
+          "85 dB(A)",
+          "2.3 (1)",
+          "8-1/2 (216)"
+        ],
+        [
+          "56893",
+          "Self-Gen",
+          "6 (152)",
+          "3/8 (10)",
+          "85 dB(A)",
+          "2.5 (1.1)",
+          "9 (229)"
+        ],
+        [
+          "56804",
+          "Central",
+          "3-1/2 (89)",
+          "3/16 (5)",
+          "79 dB(A)",
+          "2.1 (1)",
+          "7 (178)"
+        ],
+        [
+          "56819",
+          "Central",
+          "5 (127)",
+          "3/16 (5)",
+          "80 dB(A)",
+          "2.2 (1)",
+          "7-1/4 (184)"
+        ],
+        [
+          "56830",
+          "Central",
+          "6 (152)",
+          "3/16 (5)",
+          "81 dB(A)",
+          "2.3 (1)",
+          "7-3/4 (197)"
+        ],
+        [
+          "56844",
+          "Central",
+          "3-1/2 (89)",
+          "3/32 (2.5)",
+          "79 dB(A)",
+          "2.1 (1)",
+          "7 (178)"
+        ],
+        [
+          "56854",
+          "Central",
+          "5 (127)",
+          "3/32 (2.5)",
+          "80 dB(A)",
+          "2.2 (1)",
+          "7-1/4 (184)"
+        ],
+        [
+          "56863",
+          "Central",
+          "6 (152)",
+          "3/32 (2.5)",
+          "79 dB(A)",
+          "2.3 (1)",
+          "7-3/4 (197)"
+        ],
+        [
+          "56874",
+          "Central",
+          "3-1/2 (89)",
+          "3/8 (10)",
+          "80 dB(A)",
+          "2.3 (1)",
+          "7 (178)"
+        ],
+        [
+          "56884",
+          "Central",
+          "5 (127)",
+          "3/8 (10)",
+          "81 dB(A)",
+          "2.3 (1)",
+          "7-1/4 (184)"
+        ],
+        [
+          "56894",
+          "Central",
+          "6 (152)",
+          "3/8 (10)",
+          "84 dB(A)",
+          "2.4 (1)",
+          "7-3/4 (197)"
+        ]
+      ]
+    },
+    {
+      "id": "157-0",
+      "page": 157,
+      "bbox": [
+        54.45333333333333,
+        472.2775,
+        305.52599999999995,
+        709.9225
+      ],
+      "headers": [
+        "Model Number",
+        "Vacuum Style",
+        "Tool Dia. Inch (mm)",
+        "Dia. Orbit Inch (mm)",
+        "Sound Level",
+        "Weight Pound (kg)",
+        "Length Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Vacuum\nStyle",
+          "Tool Dia.\nInch (mm)",
+          "Dia. Orbit\nInch (mm)",
+          "Sound\nLevel",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)"
+        ],
+        [
+          "59000",
+          "Non-Vac",
+          "3-1/2 (89)",
+          "3/8 (10)",
+          "81 dB(A)",
+          "1.4 (.6)",
+          "6 (152)"
+        ],
+        [
+          "59005",
+          "Non-Vac",
+          "5 (127)",
+          "3/8 (10)",
+          "81 dB(A)",
+          "1.5 (.7)",
+          "6-1/2 (165)"
+        ],
+        [
+          "59010",
+          "Non-Vac",
+          "6 (152)",
+          "3/8 (10)",
+          "82 dB(A)",
+          "1.6 (.7)",
+          "7 (178)"
+        ],
+        [
+          "59015",
+          "Non-Vac",
+          "3-1/2 (89)",
+          "3/16 (5)",
+          "80 dB(A)",
+          "1.4 (.6)",
+          "6 (152)"
+        ],
+        [
+          "59020",
+          "Non-Vac",
+          "5 (127)",
+          "3/16 (5)",
+          "80 dB(A)",
+          "1.4 (.6)",
+          "6-1/2 (165)"
+        ],
+        [
+          "59025",
+          "Non-Vac",
+          "6 (152)",
+          "3/16 (5)",
+          "81 dB(A)",
+          "1.5 (.7)",
+          "7 (178)"
+        ],
+        [
+          "59030",
+          "Non-Vac",
+          "3-1/2 (89)",
+          "3/32 (2.5)",
+          "81 dB(A)",
+          "1.4 (.6)",
+          "6 (152)"
+        ],
+        [
+          "59035",
+          "Non-Vac",
+          "5 (127)",
+          "3/32 (2.5)",
+          "81 dB(A)",
+          "1.4 (.6)",
+          "6-1/2 (165)"
+        ],
+        [
+          "59040",
+          "Non-Vac",
+          "6 (152)",
+          "3/32 (2.5)",
+          "82 dB(A)",
+          "1.5 (.6)",
+          "7 (178)"
+        ],
+        [
+          "59100",
+          "Non-Vac",
+          "3 (76)",
+          "3/8 (10)",
+          "79 dB(A)",
+          "1.4 (.6)",
+          "6 (152)"
+        ],
+        [
+          "59105",
+          "Non-Vac",
+          "3 (76)",
+          "3/16 (5)",
+          "79 dB(A)",
+          "1.4 (.6)",
+          "6-1/2 (165)"
+        ],
+        [
+          "59110",
+          "Non-Vac",
+          "3 (76)",
+          "3/32 (2.5)",
+          "81 dB(A)",
+          "1.3 (.6)",
+          "7 (178)"
+        ],
+        [
+          "59003",
+          "Self-Gen",
+          "3-1/2 (89)",
+          "3/8 (10)",
+          "82 dB(A)",
+          "1.5 (.7)",
+          "8-1/2 (216)"
+        ],
+        [
+          "59008",
+          "Self-Gen",
+          "5 (127)",
+          "3/8 (10)",
+          "82 dB(A)",
+          "1.6 (.7)",
+          "8-1/2 (216)"
+        ],
+        [
+          "59013",
+          "Self-Gen",
+          "6 (152)",
+          "3/8 (10)",
+          "85 dB(A)",
+          "1.7 (.7)",
+          "9 (229)"
+        ],
+        [
+          "59018",
+          "Self-Gen",
+          "3-1/2 (89)",
+          "3/16 (5)",
+          "85 dB(A)",
+          "1.4 (.6)",
+          "8-1/2 (216)"
+        ],
+        [
+          "59023/58054",
+          "Self-Gen",
+          "5 (127)",
+          "3/16 (5)",
+          "82 dB(A)",
+          "1.5 (.7)",
+          "8-1/2 (216)"
+        ],
+        [
+          "59028",
+          "Self-Gen",
+          "6 (152)",
+          "3/16 (5)",
+          "85 dB(A)",
+          "1.6 (.7)",
+          "9 (229)"
+        ]
+      ]
+    },
+    {
+      "id": "157-1",
+      "page": 157,
+      "bbox": [
+        317.707,
+        472.2775,
+        568.8187826086958,
+        709.9225
+      ],
+      "headers": [
+        "Model Number",
+        "Vacuum Style",
+        "Tool Dia. Inch (mm)",
+        "Dia. Orbit Inch (mm)",
+        "Sound Level",
+        "Weight Pound (kg)",
+        "Length Inch (mm)"
+      ],
+      "rows": [
+        [
+          "Model\nNumber",
+          "Vacuum\nStyle",
+          "Tool Dia.\nInch (mm)",
+          "Dia. Orbit\nInch (mm)",
+          "Sound\nLevel",
+          "Weight\nPound (kg)",
+          "Length\nInch (mm)"
+        ],
+        [
+          "59033",
+          "Self-Gen",
+          "3-1/2 (89)",
+          "3/32 (2.5)",
+          "82 dB(A)",
+          "1.4 (.6)",
+          "8-1/2 (216)"
+        ],
+        [
+          "59038",
+          "Self-Gen",
+          "5 (127)",
+          "3/32 (2.5)",
+          "81 dB(A)",
+          "1.5 (.6)",
+          "8-1/2 (216)"
+        ],
+        [
+          "59043",
+          "Self-Gen",
+          "6 (152)",
+          "3/32 (2.5)",
+          "86 dB(A)",
+          "1.5 (.7)",
+          "9 (229)"
+        ],
+        [
+          "59103",
+          "Self-Gen",
+          "3 (76)",
+          "3/8 (10)",
+          "84 dB(A)",
+          "1.5 (.7)",
+          "8-1/2 (216)"
+        ],
+        [
+          "59108",
+          "Self-Gen",
+          "3 (76)",
+          "3/16 (5)",
+          "83 dB(A)",
+          "1.4 (.6)",
+          "8-1/2 (216)"
+        ],
+        [
+          "59113",
+          "Self-Gen",
+          "3 (76)",
+          "3/32 (2.5)",
+          "85 dB(A)",
+          "1.4 (.6)",
+          "9 (229)"
+        ],
+        [
+          "59004",
+          "Central",
+          "3-1/2 (89)",
+          "3/8 (10)",
+          "79 dB(A)",
+          "1.5 (.7)",
+          "7 (178)"
+        ],
+        [
+          "59009",
+          "Central",
+          "5 (127)",
+          "3/8 (10)",
+          "83 dB(A)",
+          "1.5 (.7)",
+          "7-1/4 (184)"
+        ],
+        [
+          "59014",
+          "Central",
+          "6 (152)",
+          "3/8 (10)",
+          "84 dB(A)",
+          "1.6 (.7)",
+          "7-3/4 (197)"
+        ],
+        [
+          "59019",
+          "Central",
+          "3-1/2 (89)",
+          "3/16 (5)",
+          "83 dB(A)",
+          "1.4 (.6)",
+          "7 (178)"
+        ],
+        [
+          "59024",
+          "Central",
+          "5 (127)",
+          "3/16 (5)",
+          "81 dB(A)",
+          "1.5 (.6)",
+          "7-1/4 (184)"
+        ],
+        [
+          "59029",
+          "Central",
+          "6 (152)",
+          "3/16 (5)",
+          "83 dB(A)",
+          "1.6 (.7)",
+          "7-3/4 (197)"
+        ],
+        [
+          "59034",
+          "Central",
+          "3-1/2 (89)",
+          "3/32 (2.5)",
+          "81 dB(A)",
+          "1.4 (.6)",
+          "7 (178)"
+        ],
+        [
+          "59039",
+          "Central",
+          "5 (127)",
+          "3/32 (2.5)",
+          "83 dB(A)",
+          "1.4 (.6)",
+          "7-1/4 (184)"
+        ],
+        [
+          "59044",
+          "Central",
+          "6 (152)",
+          "3/32 (2.5)",
+          "80 dB(A)",
+          "1.5 (.7)",
+          "7-3/4 (197)"
+        ],
+        [
+          "59104",
+          "Central",
+          "3 (76)",
+          "3/8 (10)",
+          "79 dB(A)",
+          "1.5 (.6)",
+          "7 (178)"
+        ],
+        [
+          "59109",
+          "Central",
+          "3 (76)",
+          "3/16 (5)",
+          "83 dB(A)",
+          "1.4 (.6)",
+          "7-1/4 (184)"
+        ],
+        [
+          "59114",
+          "Central",
+          "3 (76)",
+          "3/32 (2.5)",
+          "84 dB(A)",
+          "1.4 (.6)",
+          "7-3/4 (197)"
+        ]
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "pressureBasis": "page-note",
+      "model": "52518",
+      "page": 80,
+      "tableId": "80-1",
+      "rowIndex": 3,
+      "rawValues": [
+        "52518",
+        ".55 (410)",
+        "15,000",
+        "83 dB(A)",
+        "33 (934)",
+        "3/8 (10)",
+        "1/4\" NPT",
+        "M14x2",
+        "1.9 (0.8)",
+        "6 (152)",
+        "3-7/8 (98)"
+      ],
+      "fields": {
+        "Model Number": "52518",
+        "Motor hp (W)": ".55 (410)",
+        "Motor RPM": "15,000",
+        "Sound Level": "83 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "33 (934)",
+        "Hose I.D. Size Inch (mm)": "3/8 (10)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Tool Thread": "M14x2",
+        "Weight Pound (kg)": "1.9 (0.8)",
+        "Length Inch (mm)": "6 (152)",
+        "Height Inch (mm)": "3-7/8 (98)"
+      },
+      "categoryId": "ponceuse-rotative",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "33 (934)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "3/8 (10)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "50210",
+      "page": 89,
+      "tableId": "89-0",
+      "rowIndex": 1,
+      "rawValues": [
+        "50210",
+        ".4 (298)",
+        "15,000",
+        "86 dB(A)",
+        "21 (595)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "1/4\"-20 Male",
+        "1.7 (0.7)",
+        "9-3/4 (249)",
+        "3-7/8 (98)"
+      ],
+      "fields": {
+        "Model Number": "50210",
+        "Motor hp (W)": ".4 (298)",
+        "Motor RPM": "15,000",
+        "Sound Level": "86 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "21 (595)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Tool Thread": "1/4\"-20 Male",
+        "Weight Pound (kg)": "1.7 (0.7)",
+        "Length Inch (mm)": "9-3/4 (249)",
+        "Height Inch (mm)": "3-7/8 (98)"
+      },
+      "categoryId": "ponceuse-rotative",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "21 (595)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "50570",
+      "page": 89,
+      "tableId": "89-1",
+      "rowIndex": 1,
+      "rawValues": [
+        "50570",
+        ".4 (298)",
+        "15,000",
+        "86 dB(A)",
+        "21 (595)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "1/4\"-20 Male",
+        "1.7 (0.7)",
+        "9-3/4 (249)",
+        "4-3/8 (109)"
+      ],
+      "fields": {
+        "Model Number": "50570",
+        "Motor hp (W)": ".4 (298)",
+        "Motor RPM": "15,000",
+        "Sound Level": "86 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "21 (595)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Tool Thread": "1/4\"-20 Male",
+        "Weight Pound (kg)": "1.7 (0.7)",
+        "Length Inch (mm)": "9-3/4 (249)",
+        "Height Inch (mm)": "4-3/8 (109)"
+      },
+      "categoryId": "ponceuse-rotative",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "21 (595)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "50211",
+      "page": 90,
+      "tableId": "90-0",
+      "rowIndex": 1,
+      "rawValues": [
+        "50211",
+        ".4 (298)",
+        "15,000",
+        "83 dB(A)",
+        "21 (595)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "1/4\"-20 Male",
+        "1.7 (0.7)",
+        "10-1/2 (266)",
+        "3-7/8 (98)"
+      ],
+      "fields": {
+        "Model Number": "50211",
+        "Motor hp (W)": ".4 (298)",
+        "Motor RPM": "15,000",
+        "Sound Level": "83 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "21 (595)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Tool Thread": "1/4\"-20 Male",
+        "Weight Pound (kg)": "1.7 (0.7)",
+        "Length Inch (mm)": "10-1/2 (266)",
+        "Height Inch (mm)": "3-7/8 (98)"
+      },
+      "categoryId": "ponceuse-rotative",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "21 (595)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "50561",
+      "page": 90,
+      "tableId": "90-1",
+      "rowIndex": 1,
+      "rawValues": [
+        "50561",
+        ".4 (298)",
+        "15,000",
+        "83 dB(A)",
+        "21 (595)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "1/4\"-20 Male",
+        "1.7 (0.7)",
+        "10-1/2 (266)",
+        "4-3/8 (109)"
+      ],
+      "fields": {
+        "Model Number": "50561",
+        "Motor hp (W)": ".4 (298)",
+        "Motor RPM": "15,000",
+        "Sound Level": "83 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "21 (595)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Tool Thread": "1/4\"-20 Male",
+        "Weight Pound (kg)": "1.7 (0.7)",
+        "Length Inch (mm)": "10-1/2 (266)",
+        "Height Inch (mm)": "4-3/8 (109)"
+      },
+      "categoryId": "ponceuse-rotative",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "21 (595)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "52597",
+      "page": 92,
+      "tableId": "92-0",
+      "rowIndex": 1,
+      "rawValues": [
+        "52597",
+        "1.3 (969)",
+        "6,000",
+        "76 dB(A)",
+        "40 (1,138)",
+        "3/8 (10)",
+        "3/8\" NPT",
+        "5/8\"-11 Male",
+        "5.8 (2.6)",
+        "14-5/8 (373)",
+        "3-7/8 (104)"
+      ],
+      "fields": {
+        "Model Number": "52597",
+        "Motor hp (W)": "1.3 (969)",
+        "Motor RPM": "6,000",
+        "Sound Level": "76 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "40 (1,138)",
+        "Hose I.D. Size Inch (mm)": "3/8 (10)",
+        "Air Inlet Thread": "3/8\" NPT",
+        "Tool Thread": "5/8\"-11 Male",
+        "Weight Pound (kg)": "5.8 (2.6)",
+        "Length Inch (mm)": "14-5/8 (373)",
+        "Height Inch (mm)": "3-7/8 (104)"
+      },
+      "categoryId": "ponceuse-rotative",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "40 (1,138)",
+      "pressure": "90 (6.2)",
+      "inlet": "3/8\" NPT",
+      "hose": "3/8 (10)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "57127",
+      "page": 95,
+      "tableId": "95-0",
+      "rowIndex": 5,
+      "rawValues": [
+        "57127",
+        ".55 (410)",
+        "15,000",
+        "84 dB(A)",
+        "33 (934)",
+        "3/8 (10)",
+        "1/4\" NPT",
+        "3/8\"-24 Male",
+        "1.9 (0.8)",
+        "6 (152)",
+        "3-7/8 (98)"
+      ],
+      "fields": {
+        "Model Number": "57127",
+        "Motor hp (W)": ".55 (410)",
+        "Motor RPM": "15,000",
+        "Sound Level": "84 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "33 (934)",
+        "Hose I.D. Size Inch (mm)": "3/8 (10)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Tool Thread": "3/8\"-24 Male",
+        "Weight Pound (kg)": "1.9 (0.8)",
+        "Length Inch (mm)": "6 (152)",
+        "Height Inch (mm)": "3-7/8 (98)"
+      },
+      "categoryId": "meuleuse",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "33 (934)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "3/8 (10)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "52715",
+      "page": 107,
+      "tableId": "107-0",
+      "rowIndex": 1,
+      "rawValues": [
+        "52715",
+        "1.0 (744)",
+        "12,000",
+        "81 dB(A)",
+        "38 (1,076)",
+        "3/8 (10)",
+        "3/8\" NPT",
+        "3/8\"-24 Male",
+        "2.0 (198)",
+        "7-3/4 (198)",
+        "1-7/8 (48)"
+      ],
+      "fields": {
+        "Model Number": "52715",
+        "Motor hp (W)": "1.0 (744)",
+        "Motor RPM": "12,000",
+        "Sound Level": "81 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "38 (1,076)",
+        "Hose I.D. Size Inch (mm)": "3/8 (10)",
+        "Air Inlet Thread": "3/8\" NPT",
+        "Tool Thread": "3/8\"-24 Male",
+        "Weight Pound (kg)": "2.0 (198)",
+        "Length Inch (mm)": "7-3/4 (198)",
+        "Height Inch (mm)": "1-7/8 (48)"
+      },
+      "categoryId": "meuleuse",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "38 (1,076)",
+      "pressure": "90 (6.2)",
+      "inlet": "3/8\" NPT",
+      "hose": "3/8 (10)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "52716",
+      "page": 107,
+      "tableId": "107-0",
+      "rowIndex": 2,
+      "rawValues": [
+        "52716",
+        "1.0 (744)",
+        "15,000",
+        "77 dB(A)",
+        "39 (1,104)",
+        "3/8 (10)",
+        "3/8\" NPT",
+        "3/8\"-24 Male",
+        "2.0 (198)",
+        "8-7/8 (225)",
+        "1-7/8 (48)"
+      ],
+      "fields": {
+        "Model Number": "52716",
+        "Motor hp (W)": "1.0 (744)",
+        "Motor RPM": "15,000",
+        "Sound Level": "77 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "39 (1,104)",
+        "Hose I.D. Size Inch (mm)": "3/8 (10)",
+        "Air Inlet Thread": "3/8\" NPT",
+        "Tool Thread": "3/8\"-24 Male",
+        "Weight Pound (kg)": "2.0 (198)",
+        "Length Inch (mm)": "8-7/8 (225)",
+        "Height Inch (mm)": "1-7/8 (48)"
+      },
+      "categoryId": "meuleuse",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "39 (1,104)",
+      "pressure": "90 (6.2)",
+      "inlet": "3/8\" NPT",
+      "hose": "3/8 (10)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "52717",
+      "page": 107,
+      "tableId": "107-0",
+      "rowIndex": 3,
+      "rawValues": [
+        "52717",
+        "1.0 (744)",
+        "18,000",
+        "78 dB(A)",
+        "40 (1,133)",
+        "3/8 (10)",
+        "3/8\" NPT",
+        "3/8\"-24 Male",
+        "2.0 (198)",
+        "8-7/8 (225)",
+        "1-7/8 (48)"
+      ],
+      "fields": {
+        "Model Number": "52717",
+        "Motor hp (W)": "1.0 (744)",
+        "Motor RPM": "18,000",
+        "Sound Level": "78 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "40 (1,133)",
+        "Hose I.D. Size Inch (mm)": "3/8 (10)",
+        "Air Inlet Thread": "3/8\" NPT",
+        "Tool Thread": "3/8\"-24 Male",
+        "Weight Pound (kg)": "2.0 (198)",
+        "Length Inch (mm)": "8-7/8 (225)",
+        "Height Inch (mm)": "1-7/8 (48)"
+      },
+      "categoryId": "meuleuse",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "40 (1,133)",
+      "pressure": "90 (6.2)",
+      "inlet": "3/8\" NPT",
+      "hose": "3/8 (10)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "52718",
+      "page": 107,
+      "tableId": "107-0",
+      "rowIndex": 4,
+      "rawValues": [
+        "52718",
+        "1.0 (744)",
+        "20,000",
+        "78 dB(A)",
+        "44 (1,256)",
+        "3/8 (10)",
+        "3/8\" NPT",
+        "3/8\"-24 Male",
+        "2.0 (198)",
+        "8-7/8 (225)",
+        "1-7/8 (48)"
+      ],
+      "fields": {
+        "Model Number": "52718",
+        "Motor hp (W)": "1.0 (744)",
+        "Motor RPM": "20,000",
+        "Sound Level": "78 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "44 (1,256)",
+        "Hose I.D. Size Inch (mm)": "3/8 (10)",
+        "Air Inlet Thread": "3/8\" NPT",
+        "Tool Thread": "3/8\"-24 Male",
+        "Weight Pound (kg)": "2.0 (198)",
+        "Length Inch (mm)": "8-7/8 (225)",
+        "Height Inch (mm)": "1-7/8 (48)"
+      },
+      "categoryId": "meuleuse",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "44 (1,256)",
+      "pressure": "90 (6.2)",
+      "inlet": "3/8\" NPT",
+      "hose": "3/8 (10)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "53783",
+      "page": 108,
+      "tableId": "108-0",
+      "rowIndex": 7,
+      "rawValues": [
+        "53783",
+        "0.7 (522)",
+        "20,000",
+        "80 dB(A)",
+        "39 (1,104)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "3/8\"-24 Male",
+        "3.9 (1.7)",
+        "12.7 (322)",
+        "1.7 (45)"
+      ],
+      "fields": {
+        "Model Number": "53783",
+        "Motor hp (W)": "0.7 (522)",
+        "Motor RPM": "20,000",
+        "Sound Level": "80 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "39 (1,104)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Tool Thread": "3/8\"-24 Male",
+        "Weight Pound (kg)": "3.9 (1.7)",
+        "Length Inch (mm)": "12.7 (322)",
+        "Height Inch (mm)": "1.7 (45)"
+      },
+      "categoryId": "meuleuse",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "39 (1,104)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "52435",
+      "page": 109,
+      "tableId": "109-0",
+      "rowIndex": 3,
+      "rawValues": [
+        "52435",
+        "0.5 (373)",
+        "20,000",
+        "77 dB(A)",
+        "27 (765)",
+        "3/8 (10)",
+        "1/4\" NPT",
+        "3/8\"-24 Male",
+        "2.3 (1.0)",
+        "8-1/2 (126)",
+        "3-1/8 (79)"
+      ],
+      "fields": {
+        "Model Number": "52435",
+        "Motor hp (W)": "0.5 (373)",
+        "Motor RPM": "20,000",
+        "Sound Level": "77 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "27 (765)",
+        "Hose I.D. Size Inch (mm)": "3/8 (10)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Tool Thread": "3/8\"-24 Male",
+        "Weight Pound (kg)": "2.3 (1.0)",
+        "Length Inch (mm)": "8-1/2 (126)",
+        "Height Inch (mm)": "3-1/8 (79)"
+      },
+      "categoryId": "tronconneuse",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "27 (765)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "3/8 (10)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "52439",
+      "page": 109,
+      "tableId": "109-0",
+      "rowIndex": 4,
+      "rawValues": [
+        "52439",
+        "0.4 (306)",
+        "12,000",
+        "83 dB(A)",
+        "21 (595)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "3/8\"-24 Male",
+        "1.6 (0.7)",
+        "8-1/2 (126)",
+        "3-1/8 (79)"
+      ],
+      "fields": {
+        "Model Number": "52439",
+        "Motor hp (W)": "0.4 (306)",
+        "Motor RPM": "12,000",
+        "Sound Level": "83 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "21 (595)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Tool Thread": "3/8\"-24 Male",
+        "Weight Pound (kg)": "1.6 (0.7)",
+        "Length Inch (mm)": "8-1/2 (126)",
+        "Height Inch (mm)": "3-1/8 (79)"
+      },
+      "categoryId": "tronconneuse",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "21 (595)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "52538",
+      "page": 113,
+      "tableId": "113-0",
+      "rowIndex": 1,
+      "rawValues": [
+        "52538",
+        "0.4 (298)",
+        "12,000",
+        "83 dB(A)",
+        "21 (595)",
+        "3/8 (10)",
+        "1/4\" NPT",
+        "3/8\"-24 Male",
+        "2 (.97)",
+        "8-5/8 (219)",
+        "4-3/8 (111)"
+      ],
+      "fields": {
+        "Model Number": "52538",
+        "Motor hp (W)": "0.4 (298)",
+        "Motor RPM": "12,000",
+        "Sound Level": "83 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "21 (595)",
+        "Hose I.D. Size Inch (mm)": "3/8 (10)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Tool Thread": "3/8\"-24 Male",
+        "Weight Pound (kg)": "2 (.97)",
+        "Length Inch (mm)": "8-5/8 (219)",
+        "Height Inch (mm)": "4-3/8 (111)"
+      },
+      "categoryId": "tronconneuse",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "21 (595)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "3/8 (10)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "52418",
+      "page": 114,
+      "tableId": "114-0",
+      "rowIndex": 1,
+      "rawValues": [
+        "52418",
+        "0.7 (522)",
+        "20,000",
+        "79 dB(A)",
+        "37 (1,048)",
+        "3/8 (10)",
+        "1/4\" NPT",
+        "3/8\"",
+        "3 (1.3)",
+        "10-15/16 (265)",
+        "5-1/4 (133)"
+      ],
+      "fields": {
+        "Model Number": "52418",
+        "Motor hp (W)": "0.7 (522)",
+        "Motor RPM": "20,000",
+        "Sound Level": "79 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "37 (1,048)",
+        "Hose I.D. Size Inch (mm)": "3/8 (10)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Collet Size": "3/8\"",
+        "Weight Pound (kg)": "3 (1.3)",
+        "Length Inch (mm)": "10-15/16 (265)",
+        "Height Inch (mm)": "5-1/4 (133)"
+      },
+      "categoryId": "tronconneuse",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "37 (1,048)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "3/8 (10)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "table-cell",
+      "model": "49135",
+      "page": 137,
+      "tableId": "137-0",
+      "rowIndex": 6,
+      "rawValues": [
+        "49135",
+        ".4 (298)",
+        "3,200",
+        "1/4\"",
+        "77 dB(A)",
+        "21 (595)",
+        "90 (6.2)",
+        "1/4\"-28 Female",
+        "2.0 (.9)",
+        "11-3/4 (276)",
+        "3-1/2 (90)"
+      ],
+      "fields": {
+        "Model Number": "49135",
+        "Motor hp (W)": ".4 (298)",
+        "Motor RPM": "3,200",
+        "Chuck Size": "1/4\"",
+        "Sound Level": "77 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "21 (595)",
+        "Air Pressure PSIG (Bar)": "90 (6.2)",
+        "Spindle Thread": "1/4\"-28 Female",
+        "Weight Pound (kg)": "2.0 (.9)",
+        "Length Inch (mm)": "11-3/4 (276)",
+        "Height Inch (mm)": "3-1/2 (90)"
+      },
+      "categoryId": "perceuse",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "21 (595)",
+      "pressure": "90 (6.2)",
+      "inlet": null,
+      "hose": null,
+      "pageFacts": []
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "53415",
+      "page": 163,
+      "tableId": "163-0",
+      "rowIndex": 1,
+      "rawValues": [
+        "53415",
+        ".4 (298)",
+        "3,200",
+        "82 dB(A)",
+        "21 (595)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "1/4\"-28 Male",
+        "1.9 (.9)",
+        "7 (289)",
+        "2-3/4 (70)"
+      ],
+      "fields": {
+        "Model Number": "53415",
+        "Motor hp (W)": ".4 (298)",
+        "Motor RPM": "3,200",
+        "Sound Level": "82 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "21 (595)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Tool Thread": "1/4\"-28 Male",
+        "Weight Pound (kg)": "1.9 (.9)",
+        "Length Inch (mm)": "7 (289)",
+        "Height Inch (mm)": "2-3/4 (70)"
+      },
+      "categoryId": "ponceuse-orbitale",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "21 (595)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "58460",
+      "page": 166,
+      "tableId": "166-0",
+      "rowIndex": 1,
+      "rawValues": [
+        "58460",
+        ".45 (336)",
+        "12,000",
+        "3 (76)",
+        "81 dB(A)",
+        "23 (651)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "5/16\"-24 Female",
+        "2.35 (1.0)",
+        "10-5/16 (263)",
+        "5-3/8 (137)"
+      ],
+      "fields": {
+        "Model Number": "58460",
+        "Motor hp (W)": ".45 (336)",
+        "Motor RPM": "12,000",
+        "Pad Dia. Inch (mm)": "3 (76)",
+        "Sound Level": "81 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "23 (651)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Tool Thread": "5/16\"-24 Female",
+        "Weight Pound (kg)": "2.35 (1.0)",
+        "Length Inch (mm)": "10-5/16 (263)",
+        "Height Inch (mm)": "5-3/8 (137)"
+      },
+      "categoryId": "ponceuse-orbitale",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "23 (651)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "58465",
+      "page": 166,
+      "tableId": "166-0",
+      "rowIndex": 3,
+      "rawValues": [
+        "58465",
+        ".45 (336)",
+        "12,000",
+        "3-1/2 (89)",
+        "80 dB(A)",
+        "23 (651)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "5/16\"-24 Female",
+        "2.35 (1.0)",
+        "10-5/16 (263)",
+        "5-3/8 (137)"
+      ],
+      "fields": {
+        "Model Number": "58465",
+        "Motor hp (W)": ".45 (336)",
+        "Motor RPM": "12,000",
+        "Pad Dia. Inch (mm)": "3-1/2 (89)",
+        "Sound Level": "80 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "23 (651)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Tool Thread": "5/16\"-24 Female",
+        "Weight Pound (kg)": "2.35 (1.0)",
+        "Length Inch (mm)": "10-5/16 (263)",
+        "Height Inch (mm)": "5-3/8 (137)"
+      },
+      "categoryId": "ponceuse-orbitale",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "23 (651)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "58435",
+      "page": 166,
+      "tableId": "166-0",
+      "rowIndex": 7,
+      "rawValues": [
+        "58435",
+        ".45 (336)",
+        "12,000",
+        "6 (152)",
+        "82 dB(A)",
+        "23 (651)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "5/16\"-24 Female",
+        "2.8 (1.2)",
+        "11-1/2 (293)",
+        "5-1/8 (131)"
+      ],
+      "fields": {
+        "Model Number": "58435",
+        "Motor hp (W)": ".45 (336)",
+        "Motor RPM": "12,000",
+        "Pad Dia. Inch (mm)": "6 (152)",
+        "Sound Level": "82 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "23 (651)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Tool Thread": "5/16\"-24 Female",
+        "Weight Pound (kg)": "2.8 (1.2)",
+        "Length Inch (mm)": "11-1/2 (293)",
+        "Height Inch (mm)": "5-1/8 (131)"
+      },
+      "categoryId": "ponceuse-orbitale",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "23 (651)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "58500",
+      "page": 176,
+      "tableId": "176-0",
+      "rowIndex": 1,
+      "rawValues": [
+        "58500",
+        ".15 (112)",
+        "10,000",
+        "78 dB(A)",
+        "13 (368)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "1.6 (.7)",
+        "5-3/4 (147)",
+        "3-1/2 (91)"
+      ],
+      "fields": {
+        "Model Number": "58500",
+        "Motor hp (W)": ".15 (112)",
+        "Motor RPM": "10,000",
+        "Sound Level": "78 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "13 (368)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Weight Pound (kg)": "1.6 (.7)",
+        "Length Inch (mm)": "5-3/4 (147)",
+        "Height Inch (mm)": "3-1/2 (91)"
+      },
+      "categoryId": "ponceuse-vibrante",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "13 (368)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "58503",
+      "page": 176,
+      "tableId": "176-0",
+      "rowIndex": 2,
+      "rawValues": [
+        "58503",
+        ".15 (112)",
+        "10,000",
+        "78 dB(A)",
+        "13 (368)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "1.6 (.7)",
+        "6-1/4 (1857)",
+        "3-1/2 (91)"
+      ],
+      "fields": {
+        "Model Number": "58503",
+        "Motor hp (W)": ".15 (112)",
+        "Motor RPM": "10,000",
+        "Sound Level": "78 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "13 (368)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Weight Pound (kg)": "1.6 (.7)",
+        "Length Inch (mm)": "6-1/4 (1857)",
+        "Height Inch (mm)": "3-1/2 (91)"
+      },
+      "categoryId": "ponceuse-vibrante",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "13 (368)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "58501",
+      "page": 177,
+      "tableId": "177-0",
+      "rowIndex": 1,
+      "rawValues": [
+        "58501",
+        ".15 (112)",
+        "10,000",
+        "75 dB(A)",
+        "13 (368)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "1.7 (.75)",
+        "8-1/4 (212)",
+        "3-1/2 (91)"
+      ],
+      "fields": {
+        "Model Number": "58501",
+        "Motor hp (W)": ".15 (112)",
+        "Motor RPM": "10,000",
+        "Sound Level": "75 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "13 (368)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Weight Pound (kg)": "1.7 (.75)",
+        "Length Inch (mm)": "8-1/4 (212)",
+        "Height Inch (mm)": "3-1/2 (91)"
+      },
+      "categoryId": "ponceuse-vibrante",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "13 (368)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "58502",
+      "page": 177,
+      "tableId": "177-0",
+      "rowIndex": 2,
+      "rawValues": [
+        "58502",
+        ".15 (112)",
+        "10,000",
+        "81 dB(A)",
+        "13 (368)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "1.6 (.7)",
+        "7 (180)",
+        "3-1/2 (91)"
+      ],
+      "fields": {
+        "Model Number": "58502",
+        "Motor hp (W)": ".15 (112)",
+        "Motor RPM": "10,000",
+        "Sound Level": "81 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "13 (368)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Weight Pound (kg)": "1.6 (.7)",
+        "Length Inch (mm)": "7 (180)",
+        "Height Inch (mm)": "3-1/2 (91)"
+      },
+      "categoryId": "ponceuse-vibrante",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "13 (368)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "58505",
+      "page": 177,
+      "tableId": "177-0",
+      "rowIndex": 4,
+      "rawValues": [
+        "58505",
+        ".15 (112)",
+        "10,000",
+        "81 dB(A)",
+        "13 (368)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "1.6 (.7)",
+        "7-1/2 (190)",
+        "3-1/2 (91)"
+      ],
+      "fields": {
+        "Model Number": "58505",
+        "Motor hp (W)": ".15 (112)",
+        "Motor RPM": "10,000",
+        "Sound Level": "81 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "13 (368)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Weight Pound (kg)": "1.6 (.7)",
+        "Length Inch (mm)": "7-1/2 (190)",
+        "Height Inch (mm)": "3-1/2 (91)"
+      },
+      "categoryId": "ponceuse-vibrante",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "13 (368)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "58506",
+      "page": 177,
+      "tableId": "177-0",
+      "rowIndex": 5,
+      "rawValues": [
+        "58506",
+        ".15 (112)",
+        "10,000",
+        "81 dB(A)",
+        "13 (368)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "1.6 (.7)",
+        "8-3/4 (222)",
+        "3-1/2 (91)"
+      ],
+      "fields": {
+        "Model Number": "58506",
+        "Motor hp (W)": ".15 (112)",
+        "Motor RPM": "10,000",
+        "Sound Level": "81 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "13 (368)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Weight Pound (kg)": "1.6 (.7)",
+        "Length Inch (mm)": "8-3/4 (222)",
+        "Height Inch (mm)": "3-1/2 (91)"
+      },
+      "categoryId": "ponceuse-vibrante",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "13 (368)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "57400",
+      "page": 178,
+      "tableId": "178-0",
+      "rowIndex": 1,
+      "rawValues": [
+        "57400",
+        ".3 (186)",
+        "2,400",
+        "79 dB(A)",
+        "18 (510)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "2.6 (1.2)",
+        "7 (178)",
+        "3-3/4 (95)"
+      ],
+      "fields": {
+        "Model Number": "57400",
+        "Motor hp (W)": ".3 (186)",
+        "Motor RPM": "2,400",
+        "Sound Level": "79 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "18 (510)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Weight Pound (kg)": "2.6 (1.2)",
+        "Length Inch (mm)": "7 (178)",
+        "Height Inch (mm)": "3-3/4 (95)"
+      },
+      "categoryId": "ponceuse-vibrante",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "18 (510)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "pressureBasis": "page-note",
+      "model": "51350",
+      "page": 179,
+      "tableId": "179-0",
+      "rowIndex": 1,
+      "rawValues": [
+        "51350",
+        ".3 (186)",
+        "2,400",
+        "81 dB(A)",
+        "18 (510)",
+        "1/4 (6)",
+        "1/4\" NPT",
+        "3.1 (1.4)",
+        "11 (279)",
+        "3-3/4 (95)"
+      ],
+      "fields": {
+        "Model Number": "51350",
+        "Motor hp (W)": ".3 (186)",
+        "Strokes Per Minute": "2,400",
+        "Sound Level": "81 dB(A)",
+        "Maximum Air Flow SCFM (L/Min)": "18 (510)",
+        "Hose I.D. Size Inch (mm)": "1/4 (6)",
+        "Air Inlet Thread": "1/4\" NPT",
+        "Weight Pound (kg)": "3.1 (1.4)",
+        "Length Inch (mm)": "11 (279)",
+        "Height Inch (mm)": "3-3/4 (95)"
+      },
+      "categoryId": "ponceuse-vibrante",
+      "airflowBasis": "maximum",
+      "reviewedFlow": "18 (510)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)"
+      ]
+    },
+    {
+      "model": "56890",
+      "page": 151,
+      "tableId": "151-0",
+      "rowIndex": 9,
+      "rawValues": [
+        "56890",
+        "Non-Vac",
+        "6 (152)",
+        "3/8 (10)",
+        "80 dB(A)",
+        "2.4 (1)",
+        "7 (178)"
+      ],
+      "fields": {
+        "Model Number": "56890",
+        "Vacuum Style": "Non-Vac",
+        "Tool Dia. Inch (mm)": "6 (152)",
+        "Dia. Orbit Inch (mm)": "3/8 (10)",
+        "Sound Level": "80 dB(A)",
+        "Weight Pound (kg)": "2.4 (1)",
+        "Length Inch (mm)": "7 (178)"
+      },
+      "pressureBasis": "page-note",
+      "categoryId": "ponceuse-orbitale",
+      "airflowBasis": "published",
+      "reviewedFlow": "18 (510)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)",
+        "Air Inlet Thread 1/4\" NPT",
+        "Hose I.D. Size 1/4\" (6 mm)",
+        "Air Flow Rate 18 SCFM/510 L/Min",
+        "Motor .28 hp (209 W)",
+        "Motor 12,000 RPM"
+      ]
+    },
+    {
+      "model": "56894",
+      "page": 151,
+      "tableId": "151-1",
+      "rowIndex": 13,
+      "rawValues": [
+        "56894",
+        "Central",
+        "6 (152)",
+        "3/8 (10)",
+        "84 dB(A)",
+        "2.4 (1)",
+        "7-3/4 (197)"
+      ],
+      "fields": {
+        "Model Number": "56894",
+        "Vacuum Style": "Central",
+        "Tool Dia. Inch (mm)": "6 (152)",
+        "Dia. Orbit Inch (mm)": "3/8 (10)",
+        "Sound Level": "84 dB(A)",
+        "Weight Pound (kg)": "2.4 (1)",
+        "Length Inch (mm)": "7-3/4 (197)"
+      },
+      "pressureBasis": "page-note",
+      "categoryId": "ponceuse-orbitale",
+      "airflowBasis": "published",
+      "reviewedFlow": "18 (510)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)",
+        "Air Inlet Thread 1/4\" NPT",
+        "Hose I.D. Size 1/4\" (6 mm)",
+        "Air Flow Rate 18 SCFM/510 L/Min",
+        "Motor .28 hp (209 W)",
+        "Motor 12,000 RPM"
+      ]
+    },
+    {
+      "model": "59040",
+      "page": 157,
+      "tableId": "157-0",
+      "rowIndex": 9,
+      "rawValues": [
+        "59040",
+        "Non-Vac",
+        "6 (152)",
+        "3/32 (2.5)",
+        "82 dB(A)",
+        "1.5 (.6)",
+        "7 (178)"
+      ],
+      "fields": {
+        "Model Number": "59040",
+        "Vacuum Style": "Non-Vac",
+        "Tool Dia. Inch (mm)": "6 (152)",
+        "Dia. Orbit Inch (mm)": "3/32 (2.5)",
+        "Sound Level": "82 dB(A)",
+        "Weight Pound (kg)": "1.5 (.6)",
+        "Length Inch (mm)": "7 (178)"
+      },
+      "pressureBasis": "page-note",
+      "categoryId": "ponceuse-orbitale",
+      "airflowBasis": "published",
+      "reviewedFlow": "14 (396)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)",
+        "Air Inlet Thread 1/4\" NPT",
+        "Hose I.D. Size 1/4\" (6 mm)",
+        "Air Flow Rate 14 SCFM/396 L/Min",
+        "Motor .25 hp (186 W)",
+        "Motor 12,000 RPM"
+      ]
+    },
+    {
+      "model": "59013",
+      "page": 157,
+      "tableId": "157-0",
+      "rowIndex": 15,
+      "rawValues": [
+        "59013",
+        "Self-Gen",
+        "6 (152)",
+        "3/8 (10)",
+        "85 dB(A)",
+        "1.7 (.7)",
+        "9 (229)"
+      ],
+      "fields": {
+        "Model Number": "59013",
+        "Vacuum Style": "Self-Gen",
+        "Tool Dia. Inch (mm)": "6 (152)",
+        "Dia. Orbit Inch (mm)": "3/8 (10)",
+        "Sound Level": "85 dB(A)",
+        "Weight Pound (kg)": "1.7 (.7)",
+        "Length Inch (mm)": "9 (229)"
+      },
+      "pressureBasis": "page-note",
+      "categoryId": "ponceuse-orbitale",
+      "airflowBasis": "published",
+      "reviewedFlow": "14 (396)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)",
+        "Air Inlet Thread 1/4\" NPT",
+        "Hose I.D. Size 1/4\" (6 mm)",
+        "Air Flow Rate 14 SCFM/396 L/Min",
+        "Motor .25 hp (186 W)",
+        "Motor 12,000 RPM"
+      ]
+    },
+    {
+      "model": "59038",
+      "page": 157,
+      "tableId": "157-1",
+      "rowIndex": 2,
+      "rawValues": [
+        "59038",
+        "Self-Gen",
+        "5 (127)",
+        "3/32 (2.5)",
+        "81 dB(A)",
+        "1.5 (.6)",
+        "8-1/2 (216)"
+      ],
+      "fields": {
+        "Model Number": "59038",
+        "Vacuum Style": "Self-Gen",
+        "Tool Dia. Inch (mm)": "5 (127)",
+        "Dia. Orbit Inch (mm)": "3/32 (2.5)",
+        "Sound Level": "81 dB(A)",
+        "Weight Pound (kg)": "1.5 (.6)",
+        "Length Inch (mm)": "8-1/2 (216)"
+      },
+      "pressureBasis": "page-note",
+      "categoryId": "ponceuse-orbitale",
+      "airflowBasis": "published",
+      "reviewedFlow": "14 (396)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)",
+        "Air Inlet Thread 1/4\" NPT",
+        "Hose I.D. Size 1/4\" (6 mm)",
+        "Air Flow Rate 14 SCFM/396 L/Min",
+        "Motor .25 hp (186 W)",
+        "Motor 12,000 RPM"
+      ]
+    },
+    {
+      "model": "59024",
+      "page": 157,
+      "tableId": "157-1",
+      "rowIndex": 11,
+      "rawValues": [
+        "59024",
+        "Central",
+        "5 (127)",
+        "3/16 (5)",
+        "81 dB(A)",
+        "1.5 (.6)",
+        "7-1/4 (184)"
+      ],
+      "fields": {
+        "Model Number": "59024",
+        "Vacuum Style": "Central",
+        "Tool Dia. Inch (mm)": "5 (127)",
+        "Dia. Orbit Inch (mm)": "3/16 (5)",
+        "Sound Level": "81 dB(A)",
+        "Weight Pound (kg)": "1.5 (.6)",
+        "Length Inch (mm)": "7-1/4 (184)"
+      },
+      "pressureBasis": "page-note",
+      "categoryId": "ponceuse-orbitale",
+      "airflowBasis": "published",
+      "reviewedFlow": "14 (396)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)",
+        "Air Inlet Thread 1/4\" NPT",
+        "Hose I.D. Size 1/4\" (6 mm)",
+        "Air Flow Rate 14 SCFM/396 L/Min",
+        "Motor .25 hp (186 W)",
+        "Motor 12,000 RPM"
+      ]
+    },
+    {
+      "model": "59104",
+      "page": 157,
+      "tableId": "157-1",
+      "rowIndex": 16,
+      "rawValues": [
+        "59104",
+        "Central",
+        "3 (76)",
+        "3/8 (10)",
+        "79 dB(A)",
+        "1.5 (.6)",
+        "7 (178)"
+      ],
+      "fields": {
+        "Model Number": "59104",
+        "Vacuum Style": "Central",
+        "Tool Dia. Inch (mm)": "3 (76)",
+        "Dia. Orbit Inch (mm)": "3/8 (10)",
+        "Sound Level": "79 dB(A)",
+        "Weight Pound (kg)": "1.5 (.6)",
+        "Length Inch (mm)": "7 (178)"
+      },
+      "pressureBasis": "page-note",
+      "categoryId": "ponceuse-orbitale",
+      "airflowBasis": "published",
+      "reviewedFlow": "14 (396)",
+      "pressure": "90 (6.2)",
+      "inlet": "1/4\" NPT",
+      "hose": "1/4 (6)",
+      "pageFacts": [
+        "Air Pressure 90 PSIG (6.2 Bar)",
+        "Air Inlet Thread 1/4\" NPT",
+        "Hose I.D. Size 1/4\" (6 mm)",
+        "Air Flow Rate 14 SCFM/396 L/Min",
+        "Motor .25 hp (186 W)",
+        "Motor 12,000 RPM"
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "model": "15360",
+      "page": 21,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "34 (906)"
+    },
+    {
+      "model": "13200",
+      "page": 32,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "34 (952)"
+    },
+    {
+      "model": "13501",
+      "page": 32,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "34 (952)"
+    },
+    {
+      "model": "13521",
+      "page": 32,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "34 (952)"
+    },
+    {
+      "model": "13511",
+      "page": 32,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "34 (952)"
+    },
+    {
+      "model": "13531",
+      "page": 32,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "34 (952)"
+    },
+    {
+      "model": "13201",
+      "page": 33,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "35 (977)"
+    },
+    {
+      "model": "13202",
+      "page": 33,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "35 (977)"
+    },
+    {
+      "model": "13204",
+      "page": 33,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "35 (977)"
+    },
+    {
+      "model": "13205",
+      "page": 33,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "35 (977)"
+    },
+    {
+      "model": "58050",
+      "page": 39,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "24 (668)"
+    },
+    {
+      "model": "51706-51708",
+      "page": 48,
+      "reason": "Référence groupée, pas de MPN individuel confirmé."
+    },
+    {
+      "model": "51703-51705",
+      "page": 48,
+      "reason": "Référence groupée, pas de MPN individuel confirmé."
+    },
+    {
+      "model": "51730-51732",
+      "page": 48,
+      "reason": "Référence groupée, pas de MPN individuel confirmé."
+    },
+    {
+      "model": "51700-51702",
+      "page": 48,
+      "reason": "Référence groupée, pas de MPN individuel confirmé."
+    },
+    {
+      "model": "51810-51813",
+      "page": 48,
+      "reason": "Référence groupée, pas de MPN individuel confirmé."
+    },
+    {
+      "model": "47202",
+      "page": 54,
+      "reason": "Désaccord entre tableau et descriptif sur la puissance ou la vitesse."
+    },
+    {
+      "model": "52280",
+      "page": 64,
+      "reason": "Désaccord entre tableau et descriptif sur la puissance ou la vitesse."
+    },
+    {
+      "model": "52101",
+      "page": 65,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "35 (977)"
+    },
+    {
+      "model": "52102",
+      "page": 65,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "35 (977)"
+    },
+    {
+      "model": "56759",
+      "page": 72,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "35 (850)"
+    },
+    {
+      "model": "52405",
+      "page": 75,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "25 (793)"
+    },
+    {
+      "model": "52562",
+      "page": 81,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "39 (1,116)"
+    },
+    {
+      "model": "52564",
+      "page": 81,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "39 (1,116)"
+    },
+    {
+      "model": "51235",
+      "page": 87,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "20 (556)"
+    },
+    {
+      "model": "51236",
+      "page": 87,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "20 (556)"
+    },
+    {
+      "model": "51225",
+      "page": 88,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "20 (556)"
+    },
+    {
+      "model": "51226",
+      "page": 88,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "20 (556)"
+    },
+    {
+      "model": "51227",
+      "page": 88,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "20 (556)"
+    },
+    {
+      "model": "51230",
+      "page": 88,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "20 (556)"
+    },
+    {
+      "model": "51231",
+      "page": 88,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "20 (556)"
+    },
+    {
+      "model": "51232",
+      "page": 88,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "20 (556)"
+    },
+    {
+      "model": "47202",
+      "page": 125,
+      "reason": "Désaccord entre tableau et descriptif sur la puissance ou la vitesse."
+    },
+    {
+      "model": "52101",
+      "page": 125,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "35 (977)"
+    },
+    {
+      "model": "52102",
+      "page": 125,
+      "reason": "Unités de débit absentes ou contradictoires.",
+      "rawFlow": "35 (977)"
+    },
+    {
+      "model": "40335",
+      "page": 13,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "40353",
+      "page": 14,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "13401",
+      "page": 40,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "52051",
+      "page": 43,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "48345",
+      "page": 56,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "52297",
+      "page": 68,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "52635",
+      "page": 79,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "52516",
+      "page": 80,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "51479",
+      "page": 86,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "51604",
+      "page": 86,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "51605",
+      "page": 86,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "58455",
+      "page": 120,
+      "reason": "Unités de mm contradictoires : 1/4 (8)"
+    },
+    {
+      "model": "47200",
+      "page": 125,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "47201",
+      "page": 125,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "52100",
+      "page": 125,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57582",
+      "page": 152,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57584",
+      "page": 152,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57573",
+      "page": 153,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57575",
+      "page": 153,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57583",
+      "page": 153,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57585",
+      "page": 153,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "58411",
+      "page": 159,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "51411",
+      "page": 161,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "53417",
+      "page": 163,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "58461",
+      "page": 166,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "58466",
+      "page": 166,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "58431",
+      "page": 166,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "58443",
+      "page": 168,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "58444",
+      "page": 168,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "58017",
+      "page": 170,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "58000",
+      "page": 171,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57906",
+      "page": 172,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57922",
+      "page": 173,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57924",
+      "page": 173,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57926",
+      "page": 173,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57927",
+      "page": 173,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "58075",
+      "page": 174,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57928",
+      "page": 174,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57929",
+      "page": 174,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57801",
+      "page": 175,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57804",
+      "page": 175,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57814",
+      "page": 175,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "58509",
+      "page": 176,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57401",
+      "page": 178,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57404",
+      "page": 178,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "57407",
+      "page": 178,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "X52V",
+      "page": 155,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "X61V",
+      "page": 155,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "X51VHS",
+      "page": 155,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "X52HS",
+      "page": 155,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "X52VHS",
+      "page": 155,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "X61VHS",
+      "page": 155,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "X51ESD",
+      "page": 155,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "X52ESD",
+      "page": 155,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "X61ESD",
+      "page": 155,
+      "reason": "Doublon technique"
+    },
+    {
+      "model": "X62ESD",
+      "page": 155,
+      "reason": "Doublon technique"
+    }
+  ]
+}

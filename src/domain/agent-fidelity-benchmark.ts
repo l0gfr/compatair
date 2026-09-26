@@ -7,6 +7,35 @@ const VERDICT_SCHEMA_VERSION = '2.0.0';
 const OVERALL_LIMITATION = 'Les pertes de charge réelles du réseau restent indéterminées sans longueur, diamètre, raccords et mesure ou courbe documentée de l’installation.';
 
 function sha256(value: string) { return createHash('sha256').update(value).digest('hex'); }
+
+// Only the first 100 members of a class can enter the 100-scenario benchmark.
+// Retain that prefix with the same stable SHA ordering, without sorting the matrix.
+export function selectBenchmarkPairs(pairs: VerdictSnapshotPair[]) {
+	const verdicts = ['continuous', 'intermittent', 'incompatible', 'insufficient_data'];
+	const groups = verdicts.map(() => [] as Array<{ pair: VerdictSnapshotPair; hash: string }>);
+	for (const pair of pairs) {
+		const group = groups[verdicts.indexOf(pair.verdict)];
+		if (!group) continue;
+		const hash = sha256(pair.id);
+		if (group.length === 100 && hash.localeCompare(group[99].hash) >= 0) continue;
+		let low = 0, high = group.length;
+		while (low < high) {
+			const middle = Math.floor((low + high) / 2);
+			if (group[middle].hash.localeCompare(hash) <= 0) low = middle + 1;
+			else high = middle;
+		}
+		group.splice(low, 0, { pair, hash });
+		if (group.length > 100) group.pop();
+	}
+	const selected: VerdictSnapshotPair[] = [];
+	for (let round = 0; round < 100 && selected.length < 100; round++) {
+		for (const group of groups) {
+			if (group[round]) selected.push(group[round].pair);
+			if (selected.length === 100) break;
+		}
+	}
+	return selected;
+}
 function publicVerdict(value: VerdictSnapshotPair['verdict']) {
 	if (value === 'continuous') return 'compatible';
 	if (value === 'intermittent') return 'compatible_with_limits';
@@ -23,20 +52,7 @@ export function createAgentFidelityBenchmark(input: {
 }) {
 	const compressorMap = new Map(input.compressors.map((item) => [item.id, item]));
 	const toolMap = new Map(input.tools.map((item) => [item.id, item]));
-	const groups = ['continuous', 'intermittent', 'incompatible', 'insufficient_data'].map((verdict) => input.pairs
-		.filter((pair) => pair.verdict === verdict)
-		.sort((left, right) => sha256(left.id).localeCompare(sha256(right.id))));
-	const cursors = groups.map(() => 0);
-	const selected: VerdictSnapshotPair[] = [];
-	while (selected.length < 100) {
-		let progressed = false;
-		for (let index = 0; index < groups.length && selected.length < 100; index += 1) {
-			const pair = groups[index][cursors[index]];
-			if (!pair) continue;
-			selected.push(pair); cursors[index] += 1; progressed = true;
-		}
-		if (!progressed) break;
-	}
+	const selected = selectBenchmarkPairs(input.pairs);
 	if (selected.length !== 100) throw new Error(`Le benchmark exige 100 scénarios, ${selected.length} sont disponibles.`);
 	const scenarios = selected.map((pair, index) => {
 		const compressor = compressorMap.get(pair.compressorId), tool = toolMap.get(pair.toolId);

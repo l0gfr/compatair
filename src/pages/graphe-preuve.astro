@@ -49,11 +49,9 @@ const layers = [
 	<script>
 		type Compressor = import('../domain/catalog').Compressor;
 		type ToolProfile = import('../domain/catalog').ToolProfile;
-		type PublishedVerdictPair = import('../domain/proof-graph').PublishedVerdictPair & { compressorId: string; toolId: string };
 		type ProofGraph = ReturnType<typeof import('../domain/proof-graph').createProofGraph>;
 		type ProofCorrectionTarget = import('../domain/proof-graph').ProofCorrectionTarget;
 		type CatalogSnapshot = { catalogVersion: string; verifiedAt: string; compressors: Compressor[]; tools: ToolProfile[] };
-		type VerdictSnapshot = { verdictVersion: string; calculationVersion: string; pairs: PublishedVerdictPair[] };
 
 		const root = document.querySelector<HTMLElement>('[data-proof-graph]');
 		const picker = root?.querySelector<HTMLFormElement>('[data-graph-picker]');
@@ -68,7 +66,8 @@ const layers = [
 		const simulationResult = root?.querySelector<HTMLElement>('[data-simulation-result]');
 		const verdictLabels = { continuous: 'Compatible en continu', intermittent: 'Compatible par intermittence', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' } as const;
 		let catalog: CatalogSnapshot;
-		let verdicts: VerdictSnapshot;
+		let request: AbortController | undefined;
+		let validatePublishedDecision: typeof import('../domain/proof-graph').validatePublishedDecision;
 		let graph: ProofGraph;
 		let activeCompressor: Compressor;
 		let activeTool: ToolProfile;
@@ -131,18 +130,30 @@ const layers = [
 			if (!compressorSelect || !toolSelect) return undefined;
 			const compressor = catalog.compressors.find((item) => item.id === compressorSelect.value);
 			const tool = catalog.tools.find((item) => item.id === toolSelect.value);
-			const pair = verdicts.pairs.find((item) => item.compressorId === compressor?.id && item.toolId === tool?.id);
-			return compressor && tool ? { compressor, tool, pair } : undefined;
+			return compressor && tool ? { compressor, tool } : undefined;
 		}
 
-		function buildSelectedGraph() {
+		async function buildSelectedGraph() {
+			if (!catalog || !status) return;
 			const selected = selectedPair();
-			if (!selected || !status) return;
-			activeCompressor = selected.compressor; activeTool = selected.tool;
-			graph = createProofGraph(activeCompressor, activeTool, { catalogVersion: catalog.catalogVersion, verdictVersion: verdicts.verdictVersion, calculationVersion: verdicts.calculationVersion, verifiedAt: catalog.verifiedAt }, selected.pair);
-			const parameters = new URLSearchParams({ compresseur: activeCompressor.id, outil: activeTool.id });
-			window.history.replaceState(null, '', `${window.location.pathname}#${parameters}`);
-			renderGraph();
+			if (!selected) return;
+			request?.abort();
+			const currentRequest = new AbortController(); request = currentRequest;
+			for (const element of [canvas, summary, detail, simulation, simulationResult]) if (element) element.hidden = true;
+			status.textContent = 'Chargement du verdict et de sa version publiée…';
+			try {
+				const parameters = new URLSearchParams({ compressorId: selected.compressor.id, toolId: selected.tool.id });
+				const response = await fetch(`/api/v1/compatibility?${parameters}`, { signal: currentRequest.signal });
+				if (!response.ok) throw new Error('published_verdict_unavailable');
+				const decision = validatePublishedDecision(await response.json(), { catalogVersion: catalog.catalogVersion, compressorId: selected.compressor.id, toolId: selected.tool.id });
+				if (currentRequest !== request) return;
+				activeCompressor = selected.compressor; activeTool = selected.tool;
+				graph = createProofGraph(activeCompressor, activeTool, { catalogVersion: catalog.catalogVersion, verdictVersion: decision.verdictVersion, calculationVersion: decision.calculationVersion, verifiedAt: catalog.verifiedAt }, decision.engine_evaluation);
+				window.history.replaceState(null, '', `${window.location.pathname}#${new URLSearchParams({ compresseur: activeCompressor.id, outil: activeTool.id })}`);
+				renderGraph();
+			} catch {
+				if (currentRequest === request) status.textContent = 'Le verdict publié est indisponible ou sa version diffère du catalogue chargé. Rechargez la page avant de réessayer.';
+			}
 		}
 
 		function updateSimulationInput() {
@@ -167,20 +178,21 @@ const layers = [
 		async function initialize() {
 			if (!root || !compressorSelect || !toolSelect || !status) return;
 			try {
-				const [catalogResponse, verdictResponse, module] = await Promise.all([fetch('/data/catalog.json'), fetch('/data/verdicts.json'), import('../domain/proof-graph')]);
-				if (!catalogResponse.ok || !verdictResponse.ok) throw new Error('snapshot_unavailable');
-				[catalog, verdicts] = await Promise.all([catalogResponse.json() as Promise<CatalogSnapshot>, verdictResponse.json() as Promise<VerdictSnapshot>]);
+				const [catalogResponse, module] = await Promise.all([fetch('/data/catalog.json'), import('../domain/proof-graph')]);
+				if (!catalogResponse.ok) throw new Error('snapshot_unavailable');
+				catalog = await catalogResponse.json() as CatalogSnapshot;
+				validatePublishedDecision = module.validatePublishedDecision;
 				createProofGraph = module.createProofGraph; simulateProofCorrection = module.simulateProofCorrection;
 				const fragmentParameters = new URLSearchParams(window.location.hash.slice(1));
 				const parameters = fragmentParameters.has('compresseur') || fragmentParameters.has('outil') ? fragmentParameters : new URLSearchParams(window.location.search);
 				const requestedCompressor = parameters.get('compresseur'); const requestedTool = parameters.get('outil');
 				if (requestedCompressor && [...compressorSelect.options].some((option) => option.value === requestedCompressor)) compressorSelect.value = requestedCompressor;
 				if (requestedTool && [...toolSelect.options].some((option) => option.value === requestedTool)) toolSelect.value = requestedTool;
-				buildSelectedGraph();
+				await buildSelectedGraph();
 			} catch { status.textContent = 'Les snapshots nécessaires sont momentanément indisponibles. Aucun graphe de secours n’est fabriqué.'; }
 		}
 
-		picker?.addEventListener('submit', (event) => { event.preventDefault(); buildSelectedGraph(); });
+		picker?.addEventListener('submit', (event) => { event.preventDefault(); void buildSelectedGraph(); });
 		(simulationForm?.elements.namedItem('target') as HTMLSelectElement | null)?.addEventListener('change', updateSimulationInput);
 		simulationForm?.addEventListener('submit', (event) => {
 			event.preventDefault(); if (!simulationResult) return;

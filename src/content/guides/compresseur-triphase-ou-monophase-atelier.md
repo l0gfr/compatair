@@ -16,7 +16,7 @@ sources:
   - https://shop.abacaircompressors.com/en-FR/products/4116001463/atf-55-270d-10-400350yd-ce
   - https://www.enedis.fr/faq/compteur-electrique/comment-choisir-un-sous-compteur-electrique
   - https://www.promotelec.com/professionnels/fiche/la-difference-entre-le-monophase-et-le-triphase/
-relatedGuides: [compresseur-ne-demarre-plus-froid-rallonge]
+relatedGuides: ["compresseur-ne-demarre-plus-froid-rallonge", "compresseur-vis-230v-triphase", "compresseur-50hz-60hz-versions"]
 ---
 
 Un compresseur triphasé n’est pas automatiquement meilleur qu’un compresseur monophasé. Le choix dépend d’abord de l’alimentation disponible dans l’atelier et de la plaque du moteur. La performance pneumatique doit ensuite être comparée séparément, avec le débit restitué à la pression utile.
@@ -93,6 +93,8 @@ Consultez la [fiche du Mega 580-200 D](/compresseurs/metabo-mega-580-200-d/), la
 ## Si le compresseur ne démarre pas
 
 Le guide [démarrage, froid, rallonge et panne électrique](/guides/compresseur-ne-demarre-plus-froid-rallonge/) organise les observations à transmettre au technicien. Il ne remplace pas l’étude du circuit ni les protections par un réglage improvisé.
+
+Pour préciser le choix de la configuration, consultez [compresseur 230 V triphasé](/guides/compresseur-vis-230v-triphase/) et [versions 50 Hz et 60 Hz](/guides/compresseur-50hz-60hz-versions/).
 
 ## Sources
 

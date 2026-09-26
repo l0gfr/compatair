@@ -23,7 +23,14 @@ describe('immutable catalog and verdict snapshots', () => {
 	it('publishes every fixed-flow pair exactly once', () => {
 		const fixedTools = tools.filter((tool) => tool.demandModel === 'fixed-flow');
 		expect(verdicts.pairs).toHaveLength(compressors.length * fixedTools.length);
-		expect(new Set(verdicts.pairs.map((pair) => pair.id)).size).toBe(verdicts.pairs.length);
+		// Verify the complete Cartesian order without retaining millions of IDs.
+		expect(new Set(compressors.map((item) => item.id)).size).toBe(compressors.length);
+		expect(new Set(fixedTools.map((item) => item.id)).size).toBe(fixedTools.length);
+		for (let index = 0; index < verdicts.pairs.length; index++) {
+			const pair = verdicts.pairs[index];
+			if (pair.compressorId !== compressors[index % compressors.length].id
+				|| pair.toolId !== fixedTools[Math.floor(index / compressors.length)].id) throw new Error(`Couple désordonné ou dupliqué : ${index}`);
+		}
 	});
 
 	it('binds every snapshot verdict to the deterministic engine output', () => {
@@ -35,13 +42,13 @@ describe('immutable catalog and verdict snapshots', () => {
 			expect(pair.verdict, pair.id).toBe(evaluateCompatibility(compressor, tool).verdict);
 		}
 		// Tous les couples restent vérifiés ; réserver le temps nécessaire au runner CI.
-	}, 60_000);
+	}, 120_000);
 
 	it('accounts for every pair in the summary', () => {
 		expect(Object.values(verdicts.summary).reduce((total, value) => total + value, 0)).toBe(verdicts.pairs.length);
-		expect(verdicts.summary).toEqual({ continuous: 364_496, intermittent: 0, incompatible: 435_680, insufficient_data: 120_530 });
-		expect(verdicts.conclusive).toEqual({ count: 800_176, percentage: 86.9 });
-		expect(verdicts.scope).toMatchObject({ explorable_combination_count: 927_453, fixed_verdict_count: 920_706, parametric_combination_count: 6_747 });
+		expect(verdicts.summary).toEqual({ continuous: 871_499, intermittent: 0, incompatible: 610_377, insufficient_data: 153_130 });
+		expect(verdicts.conclusive).toEqual({ count: 1_481_876, percentage: 90.6 });
+		expect(verdicts.scope).toMatchObject({ explorable_combination_count: 1_644_353, fixed_verdict_count: 1_635_006, parametric_combination_count: 9_347 });
 		expect(verdicts.verdictVersion).toMatch(/^[a-f0-9]{64}$/);
 	});
 });

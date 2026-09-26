@@ -13,7 +13,7 @@ sources:
   - https://www.iso.org/fr/standard/46418.html
   - https://www.atlascopco.com/en-ca/compressors/wiki/compressed-air-articles/choosing-a-dryer
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
-relatedGuides: [secheur-air-comprime-atelier-non-chauffe]
+relatedGuides: ["secheur-air-comprime-atelier-non-chauffe", "airblok-dry-version-secheur-integre"]
 ---
 
 Une cuve purgée peut contenir de l’air encore chargé en vapeur d’eau. À l’inverse, un sécheur ne remplace pas les dispositifs destinés à évacuer l’eau déjà condensée. Pour choisir un traitement cohérent, il faut suivre l’eau depuis l’air ambiant jusqu’au point d’utilisation.
@@ -103,6 +103,8 @@ Pour prolonger cette vérification, vous pouvez [intégrer l’air de balayage d
 Avant de comparer deux hygromètres, consultez le [guide point de rosée atmosphérique ou sous pression](/guides/point-rosee-atmospherique-sous-pression-mesure/) et ses conditions de prélèvement.
 
 Si l’échappement givre, le [diagnostic du givrage des pompes pneumatiques](/guides/pompe-pneumatique-echappement-givre-air-sec/) distingue humidité interne et observation extérieure.
+
+Pour préciser le choix de la configuration, consultez [version Airblok DRY avec sécheur intégré](/guides/airblok-dry-version-secheur-integre/).
 
 ## Sources
 

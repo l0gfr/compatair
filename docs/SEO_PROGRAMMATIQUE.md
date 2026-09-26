@@ -2,7 +2,7 @@
 
 La [politique de montée progressive](SEO_CROISSANCE_ORGANIQUE.md) décrit le contrôle automatique ajouté au build : guides et fiches sont admis par lots, après analyse des sources et de la répétition. Son activation publique dépend du déploiement de cette version.
 
-Les verdicts compresseur-outil répondent à un besoin produit réel, mais leur nombre croît comme le produit du nombre de compresseurs par le nombre d’outils. CompatAir expose 927 453 combinaisons explorables : le snapshot auditable conserve 920 706 verdicts fixes, tandis que 6 747 combinaisons paramétriques exigent une cadence ou un volume et un temps cible. Le calculateur et les interfaces MCP/UCP traitent ces paramètres sans générer un fichier HTML par résultat ; l’endpoint API HTTP limité aux identifiants répond `insufficient_data` pour ces outils.
+Les verdicts compresseur-outil répondent à un besoin produit réel, mais leur nombre croît comme le produit du nombre de compresseurs par le nombre d’outils. CompatAir expose 1 644 353 combinaisons explorables : le snapshot auditable conserve 1 635 006 verdicts fixes, tandis que 9 347 combinaisons paramétriques exigent une cadence ou un volume et un temps cible. Le calculateur et les interfaces MCP/UCP traitent ces paramètres sans générer un fichier HTML par résultat ; l’endpoint API HTTP limité aux identifiants répond `insufficient_data` pour ces outils.
 
 ## Frontière d’indexation
 
@@ -12,14 +12,14 @@ Les verdicts compresseur-outil répondent à un besoin produit réel, mais leur 
 - Une ancienne URL exacte dont les deux slugs existent encore reçoit une redirection permanente vers le calculateur prérempli avec les identifiants canoniques dans le fragment d’URL.
 - Une URL ancienne inconnue, ambiguë ou mal formée reçoit une réponse `410 Gone` ciblée. Les paramètres de suivi d’une URL connue sont supprimés lors de la redirection canonique.
 - Les couples restent exclus du sitemap et ne publient pas de balisage `TechArticle` destiné à enrichir leur présence dans les résultats.
-- Le snapshot `/data/verdicts.json` conserve les 920 706 couples à débit fixe pour l’audit, l’historique et les usages machine. Les 6 747 combinaisons paramétriques sont calculées seulement après saisie de leurs paramètres.
+- Le snapshot `/data/verdicts.json` conserve les 1 635 006 couples à débit fixe pour l’audit, l’historique et les usages machine. Les 9 347 combinaisons paramétriques sont calculées seulement après saisie de leurs paramètres.
 - Les premières pages de `/preuves/` et `/sources-fiabilite/` restent indexables. Leurs pages 2 et suivantes conservent les liens de parcours, mais publient `noindex,follow` et restent hors sitemap afin de ne pas multiplier les entrées de répertoire sans intention de recherche propre.
 
 Cette séparation évite une croissance quadratique du HTML. Le corpus indexable reste centré sur les pages qui apportent une synthèse ou une information propre, tandis que le contrat machine décrit explicitement le grain fixe ou paramétrique de chaque décision.
 
 ## Dossiers et comparatifs documentés
 
-Les 519 fiches compresseurs et les 1787 pages d’usage réutilisent les références existantes. Le build refuse une référence dépourvue de synthèse propre, de deux faits éditoriaux, de limites ou de sources rattachées à ses champs critiques. Le dossier relie les preuves datées, les contradictions arbitrées, l’historique et les besoins voisins. Les 13 outils paramétriques conservent leur demande de cadence ou de volume : aucun débit d’usage n’est inventé.
+Les 719 fiches compresseurs et les 2287 pages d’usage réutilisent les références existantes. Le build refuse une référence dépourvue de synthèse propre, de deux faits éditoriaux, de limites ou de sources rattachées à ses champs critiques. Le dossier relie les preuves datées, les contradictions arbitrées, l’historique et les besoins voisins. Les 13 outils paramétriques conservent leur demande de cadence ou de volume : aucun débit d’usage n’est inventé.
 
 Les comparatifs supplémentaires proviennent exclusivement de la sélection explicite de `src/data/decision-comparisons.ts`. Chacun porte une question et une conclusion propres, au maximum quatre compresseurs et deux besoins documentés, sans note globale ni gagnant universel. Ils utilisent le moteur déterministe existant. Les mentions de FAD distinguent point publié, interpolation et borne conservatrice ; une réserve recommandée ne devient pas silencieusement le seuil nominal de compatibilité.
 

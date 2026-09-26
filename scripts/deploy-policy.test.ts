@@ -13,6 +13,17 @@ const releaseRoute = readFileSync(new URL('../src/pages/data/release.json.ts', i
 const liveSmoke = readFileSync(new URL('./smoke-live-http.mjs', import.meta.url), 'utf8');
 
 describe('release boundary policy', () => {
+	it('compresses the growing catalog within the existing release storage ceiling', () => {
+		expect(workflow).toContain('tar -C dist -cf - . | xz -T2 -6 > "compatair-${GITHUB_SHA}.tar.xz"');
+		expect(workflow).toContain('release_bytes > 117440512');
+		expect(workflow).toContain('compression-level: 0');
+		expect(deploy).toContain('*.tar.xz) command -v xz');
+		expect(deploy).toContain('*.tar.gz)');
+		expect(deploy).toContain('archive_entries=$(tar -tf "$archive")');
+		expect(deploy).toContain('tar -xf "$archive" -C "$incoming" --no-same-owner --no-same-permissions');
+		expect(deploy).toContain('Release archive contains a link or special file');
+	});
+
 	it('isolates storage deletion from build and deployment credentials', () => {
 		const config = parseDocument(workflow).toJS();
 		expect(config.permissions).toEqual({ contents: 'read' });

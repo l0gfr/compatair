@@ -13,6 +13,7 @@ sources:
   - https://www.metabo.com/za/en/tools/compressed-air/compressed-air-tools/air-screwdriver/ds-14-604117000-air-screwdriver.html
   - https://www.einhell.fr/p/4010800-te-ac-430-90-10/
   - https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html
+relatedGuides: ["visseuse-pneumatique-demarrage-appui-gachette", "boulonneuse-plage-couple-ressort-standard"]
 ---
 
 Une visseuse pneumatique peut demander beaucoup plus d’air qu’une clé à cliquet de même format apparent. Le bon compresseur se choisit à partir du besoin publié à la pression de travail, puis du débit restitué disponible à cette même pression.
@@ -71,6 +72,8 @@ Vérifiez la pression à l’entrée de la visseuse pendant qu’elle consomme d
 Testez la [DS 14 dans le calculateur](/calculateur/#outil=metabo-ds-14), consultez sa [fiche CompatAir](/outils-pneumatiques/visseuse-pneumatique-metabo-ds-14/) et comparez les contraintes d’un [compresseur triphasé d’atelier](/guides/compresseur-triphase-ou-monophase-atelier/).
 
 Pour une ligne d’assemblage, le guide des [visseuses pneumatiques à coupure automatique](/guides/visseuse-pneumatique-coupure-automatique/) précise comment comparer les plages de couple, conserver la mention « consommation à vide » et préparer le contrôle du serrage.
+
+Pour préciser le choix de la configuration, consultez [démarrage par appui ou par gâchette](/guides/visseuse-pneumatique-demarrage-appui-gachette/) et [plage de couple et ressort monté](/guides/boulonneuse-plage-couple-ressort-standard/).
 
 ## Sources
 

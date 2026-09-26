@@ -1,7 +1,11 @@
 import { readFile } from 'node:fs/promises';
+import { basename } from 'node:path';
+import { readVerdictSnapshot } from '../server/verdict-snapshot.mjs';
 
 const [file = 'dist/data/catalog.json'] = process.argv.slice(2);
-const snapshot = JSON.parse(await readFile(file, 'utf8'));
+const snapshot = basename(file) === 'verdicts.json'
+	? await readVerdictSnapshot(file, { compactIds: true })
+	: JSON.parse(await readFile(file, 'utf8'));
 const errors = [];
 if (!/^\d+\.\d+\.\d+$/.test(snapshot.schemaVersion ?? '')) errors.push('schemaVersion invalide');
 if (!/^[a-f0-9]{64}$/.test(snapshot.catalogVersion ?? snapshot.snapshotVersion ?? snapshot.historyVersion ?? snapshot.barometerVersion ?? snapshot.observatoryVersion ?? snapshot.radarVersion ?? snapshot.freshnessVersion ?? '')) errors.push('version de snapshot absente');

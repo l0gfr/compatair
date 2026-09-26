@@ -11,7 +11,7 @@
     "dev": "astro dev",
     "build": "node scripts/prepare-indexation.mjs && astro build",
     "check": "astro check",
-    "test": "vitest run",
+    "test": "vitest run --maxWorkers=2",
     "test:watch": "vitest",
     "contracts:check": "node --test contracts/mcp/tests/verify-contracts.mjs contracts/ucp/tests/verify-contracts.mjs",
     "validate": "pnpm catalog:check && pnpm audit:editorial && pnpm contracts:check && pnpm benchmark:mcp-manifest && pnpm check && pnpm test && pnpm build",

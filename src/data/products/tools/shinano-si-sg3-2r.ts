@@ -1,0 +1,124 @@
+const product = {
+	"id": "shinano-si-sg3-2r",
+	"slug": "shinano-si-sg3-2r",
+	"brand": "Shinano",
+	"model": "SI-SG3-2R",
+	"mpn": "SI-SG3-2R",
+	"categoryId": "meuleuse",
+	"category": "meuleuse",
+	"label": "Shinano SI-SG3-2R",
+	"demandModel": "fixed-flow",
+	"workingPressureBar": {
+		"min": 6.3,
+		"typical": 6.3,
+		"max": 6.3
+	},
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/shinano-si-sg3-2r.webp",
+		"alt": "Repères techniques Shinano SI-SG3-2R, référence SI-SG3-2R",
+		"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_Industrial-Air-Tools_2025.pdf#page=6",
+		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+	},
+	"editorial": {
+		"overview": "Shinano SI-SG3-2R, référence SI-SG3-2R. Le tableau fabricant publie 450 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 14600 tr/min. Puissance moteur publiée : 520 W.",
+		"verifiedFacts": [
+			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+			"Consommation fabricant publiée : 7.5 L/s, soit 450 L/min. Le tableau industriel ne précise pas s’il s’agit d’un maximum.",
+			"Référence fabricant : SI-SG3-2R.",
+			"Vitesse à vide publiée : 14600 tr/min.",
+			"Puissance moteur publiée : 520 W.",
+			"Montage et commande : Meuleuse droite, disque 65 mm ; broche W3/8-16."
+		],
+		"limitations": [
+			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Condition de pression",
+			"value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+			"evidenceIds": [
+				"shinano-si-sg3-2r-20260926-workingpressurebar-1"
+			]
+		},
+		{
+			"label": "Condition de consommation",
+			"value": "Consommation fabricant publiée : 7.5 L/s, soit 450 L/min. Le tableau industriel ne précise pas s’il s’agit d’un maximum.",
+			"evidenceIds": [
+				"shinano-si-sg3-2r-20260926"
+			]
+		},
+		{
+			"label": "Vitesse à vide publiée",
+			"value": "14600 tr/min",
+			"evidenceIds": [
+				"shinano-si-sg3-2r-20260926"
+			]
+		},
+		{
+			"label": "Puissance moteur publiée",
+			"value": "520 W",
+			"evidenceIds": [
+				"shinano-si-sg3-2r-20260926"
+			]
+		},
+		{
+			"label": "Montage et commande",
+			"value": "Meuleuse droite, disque 65 mm ; broche W3/8-16.",
+			"evidenceIds": [
+				"shinano-si-sg3-2r-20260926"
+			]
+		},
+		{
+			"label": "Masse publiée",
+			"value": "1520 g",
+			"evidenceIds": [
+				"shinano-si-sg3-2r-20260926"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "shinano-si-sg3-2r-20260926",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_Industrial-Air-Tools_2025.pdf#page=6",
+			"sourceLabel": "Shinano, Industrial Air Tools 2025, p. 6, réf. SI-SG3-2R",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation fabricant publiée : 7.5 L/s, soit 450 L/min. Le tableau industriel ne précise pas s’il s’agit d’un maximum."
+		},
+		{
+			"id": "shinano-si-sg3-2r-20260926-workingpressurebar-1",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"shinano-si-sg3-2r-20260926"
+		],
+		"workingPressureBar": [
+			"shinano-si-sg3-2r-20260926-workingpressurebar-1"
+		],
+		"airflowLpm": [
+			"shinano-si-sg3-2r-20260926"
+		]
+	},
+	"notes": [
+		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+	],
+	"airflowLpm": {
+		"min": 450,
+		"typical": 450,
+		"max": 450
+	}
+};
+
+export default product;

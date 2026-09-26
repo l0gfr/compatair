@@ -11,6 +11,7 @@ import { FAD_COMPARISON_PAGE_SIZE, GUIDE_DIRECTORY_PAGE_SIZE, TOOL_USAGE_PAGE_SI
 import { parseJavaScriptModuleSpecifiers } from './lib/javascript-module-graph.mjs';
 import { decodeXmlEntities as decodeXml, extractH1Text } from './lib/markup-text.mjs';
 import { createIndexationPolicy, validateBaseline, validateManifest } from './lib/indexation-policy.mjs';
+import { readVerdictSnapshot, verdictIndex } from '../server/verdict-snapshot.mjs';
 
 const root = resolve('dist');
 const siteOrigin = 'https://compatair.fr';
@@ -30,9 +31,10 @@ const maximumPassportInitialScriptBytesGzip = 45 * 1024;
 const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
 // Le chargement séparé des suggestions ajoute le contrôle SRI et les états d'échec.
 const maximumCalculatorOnDemandScriptBytesGzip = 58 * 1024;
-// 2 306 références : 115 Ko gzip mesurés ; aucun relèvement du budget JavaScript.
-const maximumRuntimeCatalogBytesGzip = 120 * 1024;
-const maximumSearchIndexBytesGzip = 80 * 1024;
+// 3 006 références : 139 Ko de données d'exécution et 92 Ko de recherche mesurés.
+// Ces plafonds concernent les données ; les budgets JavaScript restent distincts.
+const maximumRuntimeCatalogBytesGzip = 150 * 1024;
+const maximumSearchIndexBytesGzip = 100 * 1024;
 const maximumIndexableInternalDestinationsBeforeWarning = 100;
 const maximumIndexableInternalDestinations = 120;
 const maximumStaticCompatibilityResultsBySection = new Map([
@@ -40,10 +42,10 @@ const maximumStaticCompatibilityResultsBySection = new Map([
 	['outils-pneumatiques', 5],
 	['quel-compresseur-pour', 6],
 ]);
-const maximumHtmlArtifactBytes = 136 * 1024 * 1024;
-// 920 706 verdicts publics complets : 679 Mo bruts, 129 Mo HTML et 95 Mo en archive.
+const maximumHtmlArtifactBytes = 180 * 1024 * 1024;
+// 1 635 006 verdicts : 1 088 Mio bruts, 168 Mio HTML et 97 Mio en archive xz.
 // Le workflow borne séparément l’archive envoyée à GitHub à 112 Mio.
-const maximumTotalArtifactBytes = 720 * 1024 * 1024;
+const maximumTotalArtifactBytes = 1152 * 1024 * 1024;
 const maximumJourneyVideoBytes = 16 * 1024 * 1024;
 // Les pages produits réutilisent des cartes de catalogue afin que le temps de build ne croisse pas avec chaque référence.
 const maximumSocialImageCount = 80;
@@ -303,13 +305,13 @@ if (!artifactPaths.has('/data/catalog.json') || !artifactPaths.has('/data/verdic
 else {
 	const catalog = JSON.parse(await readFile(join(root, '/data/catalog.json'), 'utf8'));
 	publishedCatalogVersion = catalog.catalogVersion ?? '';
-	const verdicts = JSON.parse(await readFile(join(root, '/data/verdicts.json'), 'utf8'));
+	const verdicts = await readVerdictSnapshot(join(root, '/data/verdicts.json'), { compactIds: true });
 	fixedFlowCompatibilityPairs = verdicts.pairs?.length ?? 0;
 	parametricCompatibilityPairs = catalog.scope?.parametric_combination_count ?? 0;
-	conclusiveCompatibilityPairs = (verdicts.pairs ?? []).filter((item) => item.verdict !== 'insufficient_data').length;
-	const verdictMap = new Map((verdicts.pairs ?? []).map((item) => [`${item.compressorId}--${item.toolId}`, item]));
+	for (const pair of verdicts.pairs) if (pair.verdict !== 'insufficient_data') conclusiveCompatibilityPairs++;
+	const verdictMap = verdictIndex(verdicts);
 	for (const compressor of catalog.compressors ?? []) for (const tool of catalog.tools ?? []) {
-		const pair = verdictMap.get(`${compressor.id}--${tool.id}`);
+		const pair = verdictMap.get(compressor.id, tool.id);
 		if (tool.demandModel === 'fixed-flow' && !pair) errors.push(`verdicts: couple à débit fixe absent ${compressor.id}--${tool.id}`);
 		explorableCompatibilityPairs += 1;
 	}

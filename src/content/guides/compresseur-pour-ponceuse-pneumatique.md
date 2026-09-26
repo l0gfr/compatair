@@ -13,7 +13,7 @@ sources:
   - https://www.einhell.fr/p/4133330-tc-pe-150/
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
   - https://www.einhell.fr/p/4010800-te-ac-430-90-10/
-relatedGuides: [ponceuse-orbitale-2-5-5-8-mm-choisir]
+relatedGuides: ["ponceuse-orbitale-2-5-5-8-mm-choisir", "ponceuse-aspiration-autonome-centralisee", "ponceuse-rotation-forcee-double-action"]
 ---
 
 Le ponçage pneumatique est un excellent révélateur des limites d’un compresseur. Contrairement à une agrafeuse, la ponceuse consomme de l’air pendant une grande partie du temps de travail. Une grosse cuve peut retarder la baisse de pression, mais le débit restitué doit finir par suivre.
@@ -52,6 +52,8 @@ Avant de comparer les besoins d’air, le guide [orbite de 2,5, 5 ou 8 mm](/guid
 Pour les petites zones de carrosserie, consultez le dossier [mini-ponceuse 50/75 mm et compresseur](/guides/mini-ponceuse-pneumatique-50-75-mm-compresseur/). Il distingue la CP7200 orbitale de la CP7201 destinée au polissage et relève les ambiguïtés de leurs fiches.
 
 Le [comparatif ponceuse pneumatique ou électrique](/guides/ponceuse-pneumatique-ou-electrique-atelier/) propose un essai de travail commun et un bilan énergétique dont le périmètre reste explicite.
+
+Pour préciser le choix de la configuration, consultez [aspiration autonome ou centralisée](/guides/ponceuse-aspiration-autonome-centralisee/) et [rotation forcée et double action](/guides/ponceuse-rotation-forcee-double-action/).
 
 ## Sources
 

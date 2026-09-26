@@ -6,6 +6,10 @@ const identity = z.object({
 	brand: z.string().min(1), model: z.string().min(1), mpn: z.string().min(1),
 	sourceId: z.string().min(1), page: z.number().int().positive().optional(), rawLine: z.string().min(10),
 	flowBasis: z.string().min(10), limitations: z.array(z.string()),
+	specifications: z.array(z.object({ label: z.string().min(1), value: z.string().min(1) })).optional(),
+	fieldEvidence: z.partialRecord(z.enum(['oilType', 'workingPressureBar']), z.array(z.object({
+		sourceId: z.string().min(1), page: z.number().int().positive(), notes: z.string().min(10),
+	})).min(1)).optional(),
 });
 const compressorRow = identity.extend({
 	tankLiters: z.number().finite().nonnegative(), maxPressureBar: positive,
@@ -21,16 +25,23 @@ const toolRow = identity.extend({
 	workingPressureBar: pressure, pressureBasis: z.string().min(10),
 	airflowLpm: positive.optional(), airPerActionLiters: positive.optional(),
 });
-const hosts = new Set(['finicompressors.com', 'web.fiac.it', 's3.eu-west-1.amazonaws.com', 'www.senco.eu', 'shop.scheppach.com', 'www.mecafer.com', 'v3.pdf.bostitch.eu', 'bostitch.fr']);
+const hosts = new Set(['finicompressors.com', 'web.fiac.it', 's3.eu-west-1.amazonaws.com', 'www.senco.eu', 'shop.scheppach.com', 'www.mecafer.com', 'v3.pdf.bostitch.eu', 'bostitch.fr', 'shop.fiac.it', 'shop.abacaircompressors.com', 'shinanoinc.com', 'www.clecotools.com']);
 const slug = (s) => s.normalize('NFD').replaceAll(/\p{Diacritic}/gu, '').toLowerCase().replaceAll(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const format = (n) => n.toLocaleString('fr-FR', { maximumFractionDigits: 3 });
-function context(snapshot, row) {
+function sourceFor(snapshot, sourceId) {
 	if (snapshot.schemaVersion !== 1 || snapshot.observedAt !== '2026-09-26') throw new Error('Lot non revu');
-	const source = snapshot.sources.find(s => s.id === row.sourceId);
+	const source = snapshot.sources.find(s => s.id === sourceId);
 	if (!source || !/^[a-f0-9]{64}$/.test(source.sha256) || source.observedAt !== snapshot.observedAt) throw new Error('Preuve versionnée absente');
 	const url = new URL(source.url);
 	if (url.protocol !== 'https:' || !hosts.has(url.hostname) || url.username || url.password || url.port || url.search || url.hash) throw new Error('Source officielle invalide');
 	if (url.hostname === 's3.eu-west-1.amazonaws.com' && !url.pathname.startsWith('/s37.lacme.com/crm/Catalogues/')) throw new Error('Catalogue Lacmé non reconnu');
+	if (['shop.fiac.it', 'shop.abacaircompressors.com'].includes(url.hostname) && !/^\/en-(IT|INT|FR)\/products\/\d{10}(?:\/[a-z0-9-]+)?$/.test(url.pathname)) throw new Error('Fiche officielle non reconnue');
+	if (url.hostname === 'shinanoinc.com' && !/^\/wp-content\/uploads\/SHINANO_(General-Catalog|Industrial-Air-Tools)_2025\.pdf$/.test(url.pathname)) throw new Error('Catalogue Shinano non revu');
+	if (url.hostname === 'www.clecotools.com' && url.pathname !== '/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf') throw new Error('Catalogue Cleco non revu');
+	return source;
+}
+function context(snapshot, row) {
+	const source = sourceFor(snapshot, row.sourceId);
 	const id = slug(`${row.brand}-${row.model}`);
 	const evidenceId = slug(`${row.brand}-${row.mpn}-20260926`);
 	const sourceUrl = `${source.url}${row.page ? `#page=${row.page}` : ''}`;
@@ -40,6 +51,29 @@ function context(snapshot, row) {
 function imageFor(row, id, sourceUrl) {
 	return { src: `/images/products/${id}.webp`, alt: `Repères techniques ${row.brand} ${row.model}, référence ${row.mpn}`, sourceUrl, sourceLabel: 'Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit' };
 }
+
+function attachReviewedDetails(snapshot, row, product) {
+	const mainEvidence = product.evidence[0].id;
+	for (const [field, references] of Object.entries(row.fieldEvidence ?? {})) {
+		if (!(field in product)) throw new Error('Preuve attribuée à un champ absent');
+		const ids = references.map((reference, index) => {
+			const source = sourceFor(snapshot, reference.sourceId);
+			const id = `${mainEvidence}-${slug(field)}-${index + 1}`;
+			product.evidence.push({ id, sourceUrl: `${source.url}#page=${reference.page}`, sourceLabel: `${source.label}, p. ${reference.page}`, sourceType: 'manufacturer', retrievedAt: snapshot.observedAt, confidence: 'A', notes: reference.notes });
+			return id;
+		});
+		product.fieldSources[field] = ids;
+		if (field === 'workingPressureBar') product.specifications.find(spec => spec.label === 'Condition de pression').evidenceIds = ids;
+	}
+	for (const spec of row.specifications ?? []) product.specifications.push({ ...spec, evidenceIds: [mainEvidence] });
+	if (row.specifications?.length && 'demandModel' in product) {
+		const facts = row.specifications.slice(0, 3).map(spec => `${spec.label} : ${spec.value.replace(/[.!?]$/, "")}.`);
+		product.editorial.overview += ` ${facts.slice(0, 2).join(' ')}`;
+		product.editorial.verifiedFacts.push(...facts);
+	}
+	return product;
+}
+
 export function createMultiBrandCompressor(snapshot, input) {
 	const r = compressorRow.parse(input);
 	const { id, evidenceId, evidence, source, sourceUrl } = context(snapshot, r);
@@ -66,7 +100,7 @@ export function createMultiBrandCompressor(snapshot, input) {
 	};
 	p.fieldSources.oilType = [oilEvidenceId];
 	for (const field of ['intakeFlowLpm', 'powerKw', 'weightKg', 'voltage', 'phase', 'ean']) if (r[field] !== undefined) { p[field] = r[field]; p.fieldSources[field] = [evidenceId]; }
-	return p;
+	return attachReviewedDetails(snapshot, r, p);
 }
 export function createMultiBrandTool(snapshot, input) {
 	const r = toolRow.parse(input);
@@ -87,5 +121,5 @@ export function createMultiBrandTool(snapshot, input) {
 	};
 	if (perAction) { p.airPerActionLiters = r.airPerActionLiters; p.actionLabel = 'coup'; }
 	else p.airflowLpm = { min: r.airflowLpm, typical: r.airflowLpm, max: r.airflowLpm };
-	return p;
+	return attachReviewedDetails(snapshot, r, p);
 }

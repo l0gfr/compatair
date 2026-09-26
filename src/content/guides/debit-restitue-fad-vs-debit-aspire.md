@@ -14,7 +14,7 @@ sources:
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
   - https://fr.metabo.com/fr/machines/air-comprime/compresseurs/compresseurs-d-atelier-mobiles/mega-350-100-w-601538000-compresseur.html
-relatedGuides: [convertir-cfm-l-min-nl-min-air-comprime]
+relatedGuides: ["convertir-cfm-l-min-nl-min-air-comprime", "contradiction-debit-cfm-m3-min-catalogues"]
 ---
 
 Deux compresseurs peuvent afficher 240 ou 320 litres par minute en gros caractères et livrer des performances très différentes à l’outil. La raison tient au point de mesure. Le débit aspiré est mesuré à l’entrée du groupe de compression. Le débit restitué, désigné **FAD** pour *Free Air Delivery* dans le manuel Atlas Copco cité en source, représente l’air effectivement fourni après les pertes propres à la compression.
@@ -57,6 +57,8 @@ Une fois la nature du débit identifiée, utilisez le [tableau CFM, L/s, L/min e
 Pour une machine déjà utilisée, distinguez aussi la performance d’origine et l’état de l’exemplaire vendu. Le dossier [acheter un compresseur d’occasion](/guides/acheter-compresseur-occasion-controles-documents/) explique les preuves à demander avant de conclure à la compatibilité.
 
 Pour prolonger cette vérification, vous pouvez [interpréter un temps de remplissage de cuve sans le présenter comme du FAD](/guides/temps-remplissage-cuve-compresseur-debit/).
+
+Pour préciser le choix de la configuration, consultez [contradiction entre CFM et m³/min dans deux catalogues](/guides/contradiction-debit-cfm-m3-min-catalogues/).
 
 ## Sources
 

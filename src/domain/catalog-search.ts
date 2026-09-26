@@ -13,7 +13,7 @@ export function catalogSearchIdentifiers(
 }
 
 export function catalogOptionIdentifiers(id: string, value: string, extra: string[] = []) {
-	return [id, ...value.split(/ · (?:MPN|EAN) /), ...extra];
+	return [...new Set([id, ...value.split(/ · (?:MPN|EAN) /), ...extra].map((identifier) => identifier.trim()).filter(Boolean))];
 }
 
 export function compactCatalogOptionIdentifiers(id: string, value: string, identifiers: string[]) {

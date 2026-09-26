@@ -180,8 +180,8 @@ jobs:
           install -D -m 644 scripts/lib/rank-demand.mjs dist/_ops/lib/rank-demand.mjs
           install -D -m 644 scripts/lib/report-product-funnel.mjs dist/_ops/lib/report-product-funnel.mjs
           install -D -m 644 scripts/lib/report-acquisition.mjs dist/_ops/lib/report-acquisition.mjs
-          tar -C dist -czf "compatair-${GITHUB_SHA}.tar.gz" .
-          sha256sum "compatair-${GITHUB_SHA}.tar.gz" > "compatair-${GITHUB_SHA}.tar.gz.sha256"
+          tar -C dist -cf - . | xz -T2 -6 > "compatair-${GITHUB_SHA}.tar.xz"
+          sha256sum "compatair-${GITHUB_SHA}.tar.xz" > "compatair-${GITHUB_SHA}.tar.xz.sha256"
           tar -czf "compatair-admin-${GITHUB_SHA}.tar.gz" \
             deploy \
             scripts/smoke-live-http.mjs \
@@ -193,7 +193,7 @@ jobs:
       - name: Bound compressed release storage
         shell: bash
         run: |
-          release_bytes=$(wc -c < "compatair-${GITHUB_SHA}.tar.gz")
+          release_bytes=$(wc -c < "compatair-${GITHUB_SHA}.tar.xz")
           if (( release_bytes > 117440512 )); then
             echo "Compressed release exceeds the 112 MiB GitHub storage budget" >&2
             exit 1
@@ -205,8 +205,8 @@ jobs:
         with:
           name: compatair-production-${{ github.sha }}
           path: |
-            compatair-${{ github.sha }}.tar.gz
-            compatair-${{ github.sha }}.tar.gz.sha256
+            compatair-${{ github.sha }}.tar.xz
+            compatair-${{ github.sha }}.tar.xz.sha256
             compatair-admin-${{ github.sha }}.tar.gz
             compatair-admin-${{ github.sha }}.tar.gz.sha256
           if-no-files-found: error
@@ -282,12 +282,12 @@ jobs:
 
           retry_after_knock "Préparation du répertoire distant" ssh "${ssh_options[@]}" "$remote" "install -d -m 700 '$remote_dir'"
           retry_after_knock "Transfert des archives" scp "${scp_options[@]}" \
-            "compatair-${GITHUB_SHA}.tar.gz" "compatair-${GITHUB_SHA}.tar.gz.sha256" \
+            "compatair-${GITHUB_SHA}.tar.xz" "compatair-${GITHUB_SHA}.tar.xz.sha256" \
             "compatair-admin-${GITHUB_SHA}.tar.gz" "compatair-admin-${GITHUB_SHA}.tar.gz.sha256" \
             scripts/deploy-remote.sh \
             "${remote}:${remote_dir}/"
           retry_after_knock "Activation de la release" ssh "${ssh_options[@]}" "$remote" \
-            "cd '$remote_dir' && sha256sum --check 'compatair-admin-${GITHUB_SHA}.tar.gz.sha256' && tar -xzf 'compatair-admin-${GITHUB_SHA}.tar.gz' && bash '$remote_dir/deploy-remote.sh' '$remote_dir/compatair-${GITHUB_SHA}.tar.gz' '$remote_dir/compatair-${GITHUB_SHA}.tar.gz.sha256' '$DEPLOY_PATH' '$GITHUB_SHA'"
+            "cd '$remote_dir' && sha256sum --check 'compatair-admin-${GITHUB_SHA}.tar.gz.sha256' && tar -xzf 'compatair-admin-${GITHUB_SHA}.tar.gz' && bash '$remote_dir/deploy-remote.sh' '$remote_dir/compatair-${GITHUB_SHA}.tar.xz' '$remote_dir/compatair-${GITHUB_SHA}.tar.xz.sha256' '$DEPLOY_PATH' '$GITHUB_SHA'"
 
       - name: Verify live HTTPS surface
         env:

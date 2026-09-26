@@ -54,12 +54,14 @@ export function compressorCapabilities(compressor: Compressor, compressors: Comp
 	const incompatible = evaluated.filter(({ result }) => result.verdict === 'incompatible');
 	const insufficient = evaluated.filter(({ result }) => result.verdict === 'insufficient_data');
 	const unlocks: UnlockRecommendation[] = incompatible.map(({ tool }) => {
-		const alternativeCompressors = compressors
-			.filter((candidate) => candidate.id !== compressor.id)
-			.map((candidate) => ({ candidate, result: evaluateCompatibility(candidate, tool) }))
-			.filter(({ result }) => result.verdict === 'continuous' || result.verdict === 'intermittent')
-			.slice(0, 3)
-			.map(({ candidate, result }) => ({ id: candidate.id, label: `${candidate.brand} ${candidate.model}`, verdict: result.verdict }));
+		const alternativeCompressors: UnlockRecommendation['alternativeCompressors'] = [];
+		for (const candidate of compressors) {
+			if (candidate.id === compressor.id) continue;
+			const result = evaluateCompatibility(candidate, tool);
+			if (result.verdict !== 'continuous' && result.verdict !== 'intermittent') continue;
+			alternativeCompressors.push({ id: candidate.id, label: `${candidate.brand} ${candidate.model}`, verdict: result.verdict });
+			if (alternativeCompressors.length === 3) break;
+		}
 		const diameter = tool.recommendedHose?.innerDiameterMm;
 		const maximumLength = tool.recommendedHose?.maximumLengthMeters;
 		return {

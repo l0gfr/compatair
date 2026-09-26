@@ -1,0 +1,736 @@
+{
+  "sourceUrl": "https://tools.cp.com/content/dam/pim/itba/cp/literature/catalogs/General-Industry_catalog_CP_EN.pdf",
+  "sourceSha256": "3aa74571ca6f59e4341bfae4081921dbce238fa63763b80ec222b81b46783b0b",
+  "edition": "v6.08.2026",
+  "observedAt": "2026-09-25",
+  "tables": {
+    "111": {
+      "units": [
+        {
+          "label": "rpm",
+          "x": 175.75
+        },
+        {
+          "label": "hp",
+          "x": 204.09
+        },
+        {
+          "label": "W",
+          "x": 232.44
+        },
+        {
+          "label": "in.",
+          "x": 264.83
+        },
+        {
+          "label": "(mm)",
+          "x": 275.87
+        },
+        {
+          "label": "cfm",
+          "x": 311.82
+        },
+        {
+          "label": "l/s",
+          "x": 338.75
+        },
+        {
+          "label": "lb",
+          "x": 361.42
+        },
+        {
+          "label": "kg",
+          "x": 381.26
+        },
+        {
+          "label": "in.",
+          "x": 401.11
+        },
+        {
+          "label": "mm",
+          "x": 420.95
+        },
+        {
+          "label": "a",
+          "x": 456.38
+        },
+        {
+          "label": "ISO",
+          "x": 496.43
+        },
+        {
+          "label": "15744",
+          "x": 507.23
+        },
+        {
+          "label": "-",
+          "x": 514.94
+        },
+        {
+          "label": "dB(A)",
+          "x": 522.28
+        },
+        {
+          "label": "in.",
+          "x": 548.5
+        }
+      ],
+      "header": "MODEL PART NUMBER FREE POWER COLLET AIR CONS. NET WEIGHT LENGTH VIBRATION LEVEL SOUND SOUND AIR SPEED CAPACITY @LOAD ISO 28927 (M/S2) PRESS. POWER INLET",
+      "note": "All models: Hose int. 3/8” (10 mm) - @90 PSI (@6.3 Bar)"
+    },
+    "148": {
+      "units": [
+        {
+          "label": "rpm",
+          "x": 162.99
+        },
+        {
+          "label": "hp",
+          "x": 215.43
+        },
+        {
+          "label": "W",
+          "x": 238.11
+        },
+        {
+          "label": "in.",
+          "x": 257.96
+        },
+        {
+          "label": "mm",
+          "x": 274.97
+        },
+        {
+          "label": "in.",
+          "x": 297.64
+        },
+        {
+          "label": "cfm",
+          "x": 321.38
+        },
+        {
+          "label": "l/s",
+          "x": 340.52
+        },
+        {
+          "label": "lb",
+          "x": 359.3
+        },
+        {
+          "label": "kg",
+          "x": 377.72
+        },
+        {
+          "label": "in.",
+          "x": 398.99
+        },
+        {
+          "label": "mm",
+          "x": 423.08
+        },
+        {
+          "label": "a",
+          "x": 457.8
+        },
+        {
+          "label": "ISO",
+          "x": 490.76
+        },
+        {
+          "label": "15744",
+          "x": 501.56
+        },
+        {
+          "label": "-",
+          "x": 509.27
+        },
+        {
+          "label": "dB(A)",
+          "x": 516.61
+        },
+        {
+          "label": "in.",
+          "x": 537.87
+        }
+      ],
+      "header": "MODEL PART NUMBER FREE AUTO- POWER MAX WHEEL SPINDLE AIR CONS. NET WEIGHT LENGTH VIBRATION LEVEL SOUND SOUND AIR SPEED BALANCER CAPACITY THREAD @LOAD ISO 28927 (M/S2) PRESS. POWER INLET",
+      "note": "All models: Hose int. 3/8” (10 mm) - @90 PSI (@6.3 Bar)"
+    },
+    "149": {
+      "units": [
+        {
+          "label": "rpm",
+          "x": 174.33
+        },
+        {
+          "label": "hp",
+          "x": 225.35
+        },
+        {
+          "label": "W",
+          "x": 245.19
+        },
+        {
+          "label": "in.",
+          "x": 265.03
+        },
+        {
+          "label": "mm",
+          "x": 284.88
+        },
+        {
+          "label": "in.",
+          "x": 308.97
+        },
+        {
+          "label": "cfm",
+          "x": 333.07
+        },
+        {
+          "label": "l/s",
+          "x": 352.91
+        },
+        {
+          "label": "lb",
+          "x": 372.76
+        },
+        {
+          "label": "kg",
+          "x": 392.6
+        },
+        {
+          "label": "in.",
+          "x": 413.86
+        },
+        {
+          "label": "mm",
+          "x": 436.54
+        },
+        {
+          "label": "a",
+          "x": 469.14
+        },
+        {
+          "label": "ISO",
+          "x": 500.69
+        },
+        {
+          "label": "15744",
+          "x": 511.48
+        },
+        {
+          "label": "-",
+          "x": 519.19
+        },
+        {
+          "label": "dB(A)",
+          "x": 526.53
+        },
+        {
+          "label": "in.",
+          "x": 548.5
+        }
+      ],
+      "header": "MODEL PART NUMBER FREE AUTO- POWER MAX WHEEL SPINDLE AIR CONS. NET WEIGHT LENGTH VIBRATION LEVEL SOUND SOUND AIR SPEED BALANCER CAPACITY THREAD @LOAD ISO 28927 (M/S2) PRESS. POWER INLET",
+      "note": "All models: Hose int. 3/8” (10 mm) - @90 PSI (@6.3 Bar)"
+    }
+  },
+  "rows": [
+    {
+      "model": "CP3000-600CR",
+      "mpn": "6151600140",
+      "page": 111,
+      "categoryId": "meuleuse",
+      "rawRow": "CP3000-600CR 6151600140 60000 0.12 90 15/64 (6.0mm) 5.5 2.6 0.31 0.14 6.02 153 <2.5 71 82 1/4",
+      "rawColumns": {
+        "rpm_0": "60000",
+        "hp_1": "0.12",
+        "W_2": "90",
+        "in._3": "15/64",
+        "(mm)_4": "(6.0mm)",
+        "cfm_5": "5.5",
+        "l/s_6": "2.6",
+        "lb_7": "0.31",
+        "kg_8": "0.14",
+        "in._9": "6.02",
+        "mm_10": "153",
+        "a_11": "<2.5",
+        "ISO_12": "71",
+        "15744_13": "",
+        "-_14": "",
+        "dB(A)_15": "82",
+        "in._16": "1/4"
+      },
+      "loadedAirLs": "2.6",
+      "loadedAirCfm": "5.5",
+      "workingPressureBar": "6.3",
+      "hoseInnerMm": "10",
+      "inletInches": "1/4",
+      "freeSpeedRpm": "60000",
+      "powerW": "90",
+      "weightKg": "0.14",
+      "sourceNote": "All models: Hose int. 3/8” (10 mm) - @90 PSI (@6.3 Bar)",
+      "specifications": [
+        {
+          "label": "Pince : divergence documentaire",
+          "value": "À confirmer : texte 1/8 pouce, tableau 15/64 (6,0 mm) contradictoire"
+        },
+        {
+          "label": "Longueur publiée",
+          "value": "153 mm"
+        }
+      ],
+      "variantNote": "Le texte décrit une pince de 1/8 pouce pour cette référence, mais le tableau indique 15/64 (6,0 mm). Aucune dimension de pince unique n’est validée ; confirmation de la notice individuelle requise."
+    },
+    {
+      "model": "CP3340-SALAVAD",
+      "mpn": "6151609280",
+      "page": 148,
+      "categoryId": "meuleuse",
+      "rawRow": "CP3340-SALAVAD 6151609280 8500 No 4.56 3400 7 180 5/8-11 UNC 110 52 12.3 5.6 9.84 250 4.9 100 111 1/2",
+      "rawColumns": {
+        "rpm_0": "8500",
+        "hp_1": "No 4.56",
+        "W_2": "3400",
+        "in._3": "7",
+        "mm_4": "180",
+        "in._5": "5/8-11 UNC",
+        "cfm_6": "110",
+        "l/s_7": "52",
+        "lb_8": "12.3",
+        "kg_9": "5.6",
+        "in._10": "9.84",
+        "mm_11": "250",
+        "a_12": "4.9",
+        "ISO_13": "100",
+        "15744_14": "",
+        "-_15": "",
+        "dB(A)_16": "111",
+        "in._17": "1/2"
+      },
+      "loadedAirLs": "52",
+      "loadedAirCfm": "110",
+      "workingPressureBar": "6.3",
+      "hoseInnerMm": "10",
+      "inletInches": "1/2",
+      "freeSpeedRpm": "8500",
+      "powerW": "3400",
+      "weightKg": "5.6",
+      "sourceNote": "All models: Hose int. 3/8” (10 mm) - @90 PSI (@6.3 Bar)",
+      "specifications": [
+        {
+          "label": "Diamètre de roue publié",
+          "value": "180 mm"
+        },
+        {
+          "label": "Broche publiée",
+          "value": "5/8-11 UNC"
+        },
+        {
+          "label": "Longueur publiée",
+          "value": "250 mm"
+        }
+      ]
+    },
+    {
+      "model": "CP3340-SALAVEL",
+      "mpn": "6151609290",
+      "page": 148,
+      "categoryId": "meuleuse",
+      "rawRow": "CP3340-SALAVEL 6151609290 6000 No 4.56 3400 9 230 5/8-11 UNC 95 45 13.1 5.95 9.84 250 < 2.5 95 106 1/2",
+      "rawColumns": {
+        "rpm_0": "6000",
+        "hp_1": "No 4.56",
+        "W_2": "3400",
+        "in._3": "9",
+        "mm_4": "230",
+        "in._5": "5/8-11 UNC",
+        "cfm_6": "95",
+        "l/s_7": "45",
+        "lb_8": "13.1",
+        "kg_9": "5.95",
+        "in._10": "9.84",
+        "mm_11": "250",
+        "a_12": "< 2.5",
+        "ISO_13": "95",
+        "15744_14": "",
+        "-_15": "",
+        "dB(A)_16": "106",
+        "in._17": "1/2"
+      },
+      "loadedAirLs": "45",
+      "loadedAirCfm": "95",
+      "workingPressureBar": "6.3",
+      "hoseInnerMm": "10",
+      "inletInches": "1/2",
+      "freeSpeedRpm": "6000",
+      "powerW": "3400",
+      "weightKg": "5.95",
+      "sourceNote": "All models: Hose int. 3/8” (10 mm) - @90 PSI (@6.3 Bar)",
+      "specifications": [
+        {
+          "label": "Diamètre de roue publié",
+          "value": "230 mm"
+        },
+        {
+          "label": "Broche publiée",
+          "value": "5/8-11 UNC"
+        },
+        {
+          "label": "Longueur publiée",
+          "value": "250 mm"
+        }
+      ]
+    },
+    {
+      "model": "CP3340-SALAVET",
+      "mpn": "6151609270",
+      "page": 148,
+      "categoryId": "meuleuse",
+      "rawRow": "CP3340-SALAVET 6151609270 6000 No 4.56 3400 6 150 5/8-11 UNC 95 45 12.1 5.5 9.84 250 3.6 95 106 1/2",
+      "rawColumns": {
+        "rpm_0": "6000",
+        "hp_1": "No 4.56",
+        "W_2": "3400",
+        "in._3": "6",
+        "mm_4": "150",
+        "in._5": "5/8-11 UNC",
+        "cfm_6": "95",
+        "l/s_7": "45",
+        "lb_8": "12.1",
+        "kg_9": "5.5",
+        "in._10": "9.84",
+        "mm_11": "250",
+        "a_12": "3.6",
+        "ISO_13": "95",
+        "15744_14": "",
+        "-_15": "",
+        "dB(A)_16": "106",
+        "in._17": "1/2"
+      },
+      "loadedAirLs": "45",
+      "loadedAirCfm": "95",
+      "workingPressureBar": "6.3",
+      "hoseInnerMm": "10",
+      "inletInches": "1/2",
+      "freeSpeedRpm": "6000",
+      "powerW": "3400",
+      "weightKg": "5.5",
+      "sourceNote": "All models: Hose int. 3/8” (10 mm) - @90 PSI (@6.3 Bar)",
+      "specifications": [
+        {
+          "label": "Diamètre de roue publié",
+          "value": "150 mm"
+        },
+        {
+          "label": "Broche publiée",
+          "value": "5/8-11 UNC"
+        },
+        {
+          "label": "Longueur publiée",
+          "value": "250 mm"
+        }
+      ]
+    },
+    {
+      "model": "CP3340-SALAVADE",
+      "mpn": "6151609310",
+      "page": 148,
+      "categoryId": "meuleuse",
+      "rawRow": "CP3340-SALAVADE 6151609310 8500 No 4.56 3400 7 180 5/8-11 UNC 110 52 12.1 5.5 9.84 250 4.9 100 111 1/2",
+      "rawColumns": {
+        "rpm_0": "8500",
+        "hp_1": "No 4.56",
+        "W_2": "3400",
+        "in._3": "7",
+        "mm_4": "180",
+        "in._5": "5/8-11 UNC",
+        "cfm_6": "110",
+        "l/s_7": "52",
+        "lb_8": "12.1",
+        "kg_9": "5.5",
+        "in._10": "9.84",
+        "mm_11": "250",
+        "a_12": "4.9",
+        "ISO_13": "100",
+        "15744_14": "",
+        "-_15": "",
+        "dB(A)_16": "111",
+        "in._17": "1/2"
+      },
+      "loadedAirLs": "52",
+      "loadedAirCfm": "110",
+      "workingPressureBar": "6.3",
+      "hoseInnerMm": "10",
+      "inletInches": "1/2",
+      "freeSpeedRpm": "8500",
+      "powerW": "3400",
+      "weightKg": "5.5",
+      "sourceNote": "All models: Hose int. 3/8” (10 mm) - @90 PSI (@6.3 Bar)",
+      "specifications": [
+        {
+          "label": "Diamètre de roue publié",
+          "value": "180 mm"
+        },
+        {
+          "label": "Broche publiée",
+          "value": "5/8-11 UNC"
+        },
+        {
+          "label": "Longueur publiée",
+          "value": "250 mm"
+        }
+      ]
+    },
+    {
+      "model": "CP3340-SALAVELE",
+      "mpn": "6151609320",
+      "page": 148,
+      "categoryId": "meuleuse",
+      "rawRow": "CP3340-SALAVELE 6151609320 6000 No 4.56 3400 9 230 5/8-11 UNC 95 45 12.9 5.85 9.84 250 < 2.5 95 106 1/2",
+      "rawColumns": {
+        "rpm_0": "6000",
+        "hp_1": "No 4.56",
+        "W_2": "3400",
+        "in._3": "9",
+        "mm_4": "230",
+        "in._5": "5/8-11 UNC",
+        "cfm_6": "95",
+        "l/s_7": "45",
+        "lb_8": "12.9",
+        "kg_9": "5.85",
+        "in._10": "9.84",
+        "mm_11": "250",
+        "a_12": "< 2.5",
+        "ISO_13": "95",
+        "15744_14": "",
+        "-_15": "",
+        "dB(A)_16": "106",
+        "in._17": "1/2"
+      },
+      "loadedAirLs": "45",
+      "loadedAirCfm": "95",
+      "workingPressureBar": "6.3",
+      "hoseInnerMm": "10",
+      "inletInches": "1/2",
+      "freeSpeedRpm": "6000",
+      "powerW": "3400",
+      "weightKg": "5.85",
+      "sourceNote": "All models: Hose int. 3/8” (10 mm) - @90 PSI (@6.3 Bar)",
+      "specifications": [
+        {
+          "label": "Diamètre de roue publié",
+          "value": "230 mm"
+        },
+        {
+          "label": "Broche publiée",
+          "value": "5/8-11 UNC"
+        },
+        {
+          "label": "Longueur publiée",
+          "value": "250 mm"
+        }
+      ]
+    },
+    {
+      "model": "CP3349-SALAVADE",
+      "mpn": "6151609110",
+      "page": 149,
+      "categoryId": "meuleuse",
+      "rawRow": "CP3349-SALAVADE 6151609110 7700 No 4.02 3000 7 180 5/8-11 UNC 97 46 9.26 4.2 11.02 280 4.6 88 99 1/2",
+      "rawColumns": {
+        "rpm_0": "7700",
+        "hp_1": "No 4.02",
+        "W_2": "3000",
+        "in._3": "7",
+        "mm_4": "180",
+        "in._5": "5/8-11 UNC",
+        "cfm_6": "97",
+        "l/s_7": "46",
+        "lb_8": "9.26",
+        "kg_9": "4.2",
+        "in._10": "11.02",
+        "mm_11": "280",
+        "a_12": "4.6",
+        "ISO_13": "88",
+        "15744_14": "",
+        "-_15": "",
+        "dB(A)_16": "99",
+        "in._17": "1/2"
+      },
+      "loadedAirLs": "46",
+      "loadedAirCfm": "97",
+      "workingPressureBar": "6.3",
+      "hoseInnerMm": "10",
+      "inletInches": "1/2",
+      "freeSpeedRpm": "7700",
+      "powerW": "3000",
+      "weightKg": "4.2",
+      "sourceNote": "All models: Hose int. 3/8” (10 mm) - @90 PSI (@6.3 Bar)",
+      "specifications": [
+        {
+          "label": "Diamètre de roue publié",
+          "value": "180 mm"
+        },
+        {
+          "label": "Broche publiée",
+          "value": "5/8-11 UNC"
+        },
+        {
+          "label": "Longueur publiée",
+          "value": "280 mm"
+        }
+      ]
+    },
+    {
+      "model": "CP3349-SALAVELE",
+      "mpn": "6151609130",
+      "page": 149,
+      "categoryId": "meuleuse",
+      "rawRow": "CP3349-SALAVELE 6151609130 6500 No 4.02 3000 9 230 5/8-11 UNC 93 44 9.7 4.4 11.02 280 4 87 98 1/2",
+      "rawColumns": {
+        "rpm_0": "6500",
+        "hp_1": "No 4.02",
+        "W_2": "3000",
+        "in._3": "9",
+        "mm_4": "230",
+        "in._5": "5/8-11 UNC",
+        "cfm_6": "93",
+        "l/s_7": "44",
+        "lb_8": "9.7",
+        "kg_9": "4.4",
+        "in._10": "11.02",
+        "mm_11": "280",
+        "a_12": "4",
+        "ISO_13": "87",
+        "15744_14": "",
+        "-_15": "",
+        "dB(A)_16": "98",
+        "in._17": "1/2"
+      },
+      "loadedAirLs": "44",
+      "loadedAirCfm": "93",
+      "workingPressureBar": "6.3",
+      "hoseInnerMm": "10",
+      "inletInches": "1/2",
+      "freeSpeedRpm": "6500",
+      "powerW": "3000",
+      "weightKg": "4.4",
+      "sourceNote": "All models: Hose int. 3/8” (10 mm) - @90 PSI (@6.3 Bar)",
+      "specifications": [
+        {
+          "label": "Diamètre de roue publié",
+          "value": "230 mm"
+        },
+        {
+          "label": "Broche publiée",
+          "value": "5/8-11 UNC"
+        },
+        {
+          "label": "Longueur publiée",
+          "value": "280 mm"
+        }
+      ]
+    },
+    {
+      "model": "CP3349-SALAVETE",
+      "mpn": "6151609150",
+      "page": 149,
+      "categoryId": "meuleuse",
+      "rawRow": "CP3349-SALAVETE 6151609150 6000 No 4.02 3000 6 150 5/8-11 UNC 91 43 9.7 4.4 11.02 280 <2.5 84 95 1/2",
+      "rawColumns": {
+        "rpm_0": "6000",
+        "hp_1": "No 4.02",
+        "W_2": "3000",
+        "in._3": "6",
+        "mm_4": "150",
+        "in._5": "5/8-11 UNC",
+        "cfm_6": "91",
+        "l/s_7": "43",
+        "lb_8": "9.7",
+        "kg_9": "4.4",
+        "in._10": "11.02",
+        "mm_11": "280",
+        "a_12": "<2.5",
+        "ISO_13": "84",
+        "15744_14": "",
+        "-_15": "",
+        "dB(A)_16": "95",
+        "in._17": "1/2"
+      },
+      "loadedAirLs": "43",
+      "loadedAirCfm": "91",
+      "workingPressureBar": "6.3",
+      "hoseInnerMm": "10",
+      "inletInches": "1/2",
+      "freeSpeedRpm": "6000",
+      "powerW": "3000",
+      "weightKg": "4.4",
+      "sourceNote": "All models: Hose int. 3/8” (10 mm) - @90 PSI (@6.3 Bar)",
+      "specifications": [
+        {
+          "label": "Diamètre de roue publié",
+          "value": "150 mm"
+        },
+        {
+          "label": "Broche publiée",
+          "value": "5/8-11 UNC"
+        },
+        {
+          "label": "Longueur publiée",
+          "value": "280 mm"
+        }
+      ]
+    },
+    {
+      "model": "CP3349-SALABELE",
+      "mpn": "6151704740",
+      "page": 149,
+      "categoryId": "meuleuse",
+      "rawRow": "CP3349-SALABELE 6151704740 6500 No 3.89 2900 9 230 5/8-11 UNC 27 13 9.7 4.4 11.02 280 4 87 87 1/2",
+      "rawColumns": {
+        "rpm_0": "6500",
+        "hp_1": "No 3.89",
+        "W_2": "2900",
+        "in._3": "9",
+        "mm_4": "230",
+        "in._5": "5/8-11 UNC",
+        "cfm_6": "27",
+        "l/s_7": "13",
+        "lb_8": "9.7",
+        "kg_9": "4.4",
+        "in._10": "11.02",
+        "mm_11": "280",
+        "a_12": "4",
+        "ISO_13": "87",
+        "15744_14": "",
+        "-_15": "",
+        "dB(A)_16": "87",
+        "in._17": "1/2"
+      },
+      "loadedAirLs": "13",
+      "loadedAirCfm": "27",
+      "workingPressureBar": "6.3",
+      "hoseInnerMm": "10",
+      "inletInches": "1/2",
+      "freeSpeedRpm": "6500",
+      "powerW": "2900",
+      "weightKg": "4.4",
+      "sourceNote": "All models: Hose int. 3/8” (10 mm) - @90 PSI (@6.3 Bar)",
+      "specifications": [
+        {
+          "label": "Diamètre de roue publié",
+          "value": "230 mm"
+        },
+        {
+          "label": "Broche publiée",
+          "value": "5/8-11 UNC"
+        },
+        {
+          "label": "Longueur publiée",
+          "value": "280 mm"
+        }
+      ]
+    }
+  ]
+}

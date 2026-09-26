@@ -15,11 +15,21 @@ export function createCompatibilityImpactFeed(input: {
 }) {
 	const compressorMap = new Map(input.compressors.map((item) => [item.id, item]));
 	const toolMap = new Map(input.tools.map((item) => [item.id, item]));
+	const compressorSummaries = new Map<string, { count: number; distribution: Record<string, number> }>();
+	const toolSummaries = new Map<string, { count: number; distribution: Record<string, number> }>();
+	for (const pair of input.pairs) {
+		for (const [map, id] of [[compressorSummaries, pair.compressorId], [toolSummaries, pair.toolId]] as const) {
+			let summary = map.get(id);
+			if (!summary) { summary = { count: 0, distribution: {} }; map.set(id, summary); }
+			summary.count++;
+			summary.distribution[pair.verdict] = (summary.distribution[pair.verdict] ?? 0) + 1;
+		}
+	}
 	const events = input.events.filter((event) => event.kind !== 'baseline').map((event) => {
 		const product = event.productType === 'compressor' ? compressorMap.get(event.productId) : toolMap.get(event.productId);
 		if (!product) throw new Error(`Impact event references an unknown product: ${event.productId}`);
-		const affectedPairs = input.pairs.filter((pair) => event.productType === 'compressor' ? pair.compressorId === event.productId : pair.toolId === event.productId);
-		const currentVerdictDistribution = affectedPairs.reduce<Record<string, number>>((counts, pair) => { counts[pair.verdict] = (counts[pair.verdict] ?? 0) + 1; return counts; }, {});
+		const summary = (event.productType === 'compressor' ? compressorSummaries : toolSummaries).get(event.productId);
+		const currentVerdictDistribution = { ...summary?.distribution };
 		const merchantKeys = (input.merchantByProduct?.get(event.productId) ?? []).map((id) => `merchant:${id}`);
 		const slug = product.slug;
 		const canonicalUrl = event.productType === 'compressor' ? `https://compatair.fr/compresseurs/${slug}/` : `https://compatair.fr/outils-pneumatiques/${slug}/`;
@@ -30,7 +40,7 @@ export function createCompatibilityImpactFeed(input: {
 			source_label: event.snapshot.sourceLabel, evidence_fingerprint: event.fingerprint, summary: event.summary,
 			impact_assessment: {
 				status: 'requires_recalculation', decision_delta: 'not_available_without_previous_verdict_snapshot',
-				affected_pair_count: affectedPairs.length, current_verdict_distribution: currentVerdictDistribution,
+				affected_pair_count: summary?.count ?? 0, current_verdict_distribution: currentVerdictDistribution,
 				before_verdict_version: null, after_verdict_version: input.verdictVersion,
 			},
 			canonical_url: canonicalUrl,

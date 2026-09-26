@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-26",
+  "guides": [
+    {
+      "slug": "airblok-dry-version-secheur-integre",
+      "sources": [
+        "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf",
+        "https://shop.fiac.it/en-IT/products/4152026080/ax-103bd-dry-8-40050-ce"
+      ],
+      "contentSha256": "974970f2e2bd826ad399005f326349cdd5c8b882115ef59574e77ae67437f9a4"
+    },
+    {
+      "slug": "boulonneuse-bras-reaction-poids-configuration",
+      "sources": [
+        "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf"
+      ],
+      "contentSha256": "8353dafc8ac478fe0cc484475b81e646587f59ceade2049636aa8785f5526945"
+    },
+    {
+      "slug": "boulonneuse-cleco-selectork-reglage-air",
+      "sources": [
+        "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf"
+      ],
+      "contentSha256": "1d52a07c204785c560ae08e17cbb1aa5894f80adcb0e915d267a5b13e113efc9"
+    },
+    {
+      "slug": "boulonneuse-couple-maximal-limite-carre",
+      "sources": [
+        "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf"
+      ],
+      "contentSha256": "cefc7417b08bdade5b4d47159feed4d3bd732881d2eb92c1f09acf7ad356acf4"
+    },
+    {
+      "slug": "boulonneuse-plage-couple-ressort-standard",
+      "sources": [
+        "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf"
+      ],
+      "contentSha256": "0d386b4d019ad76b4cad53fb5d8d316ccd0ac5aa1cbf45c0b78d6eae5e8df8d3"
+    },
+    {
+      "slug": "bruit-outil-pneumatique-pression-puissance-acoustique",
+      "sources": [
+        "https://tools.cp.com/content/dam/pim/itba/cp/literature/catalogs/General-Industry_catalog_CP_EN.pdf",
+        "https://www.inrs.fr/risques/bruit/exposition-risque",
+        "https://www.inrs.fr/risques/bruit/demarche-prevention"
+      ],
+      "contentSha256": "aa4da1b3a9406f26a50f49f7097583dcfc0f7862db658fef66f344c13cd504c1"
+    },
+    {
+      "slug": "cisaille-grignoteuse-largeur-coupe",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "809a4bad21e73b74e387dfa3855741dc60929b82865270efb67caaae4db501ca"
+    },
+    {
+      "slug": "cle-a-chocs-enclume-longue-6-8-pouces",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "c7d5158098c4335c11d5042fdba1984485cc5ee1960909819aa704dc1f70c9b7"
+    },
+    {
+      "slug": "cle-a-chocs-gachette-interieure-exterieure",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "dd947b2dc4f5e28221a018697e5490f1ac60d822608d9cdfe470db2f88f8359a"
+    },
+    {
+      "slug": "cle-a-chocs-sr-marche-arriere-reglage",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "f0fbd5f4c019172a221339b38096d6f39c0c829e5c47afdbea25cbfca51c70b0"
+    },
+    {
+      "slug": "cle-a-chocs-twin-hammer-pinless-mecanisme",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "20ed8c3b658dd3f3f53f2463f9dc627aa0cde4c02afcde4dba4d0f71ebaaa518"
+    },
+    {
+      "slug": "cle-impulsions-consommation-vide-charge",
+      "sources": [
+        "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf"
+      ],
+      "contentSha256": "9962d331a202b4b403931fcb79f491a25ae2faab65547919eb45233837119ec5"
+    },
+    {
+      "slug": "compresseur-50hz-60hz-versions",
+      "sources": [
+        "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf"
+      ],
+      "contentSha256": "7e11cf8751b5f349cbb22cb58cc3c153c47deb86cb64a4671e089cf68961d411"
+    },
+    {
+      "slug": "compresseur-reference-erp-nom-commercial",
+      "sources": [
+        "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf",
+        "https://shop.fiac.it/en-IT/products/4152026070/ax-703bd-8-40050-ce"
+      ],
+      "contentSha256": "90981e3d04001843957cac66a50c254b5de90be83fbf82823bf5daa4ffdbe38e"
+    },
+    {
+      "slug": "compresseur-sur-chassis-sans-cuve",
+      "sources": [
+        "https://shop.fiac.it/en-IT/products/4152026070/ax-703bd-8-40050-ce"
+      ],
+      "contentSha256": "13578b6f4bbeb228b9fbf013f7fd1ef934b4a7393925eeaead559024c072e6e0"
+    },
+    {
+      "slug": "compresseur-vis-230v-triphase",
+      "sources": [
+        "https://shop.abacaircompressors.com/en-INT/products/4152054944/spinn22-8-40050k-e-ce"
+      ],
+      "contentSha256": "b8aa2b3bd280aaad5134f4f2f69053d860d024ee7e3b7397289c3386541bdf1f"
+    },
+    {
+      "slug": "compresseur-vis-8-10-13-bar-versions",
+      "sources": [
+        "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf"
+      ],
+      "contentSha256": "fc4cc2d58ba9b5a00808139a0d8ec0d43797018c02f1bd2d7413d7982156fad6"
+    },
+    {
+      "slug": "contradiction-debit-cfm-m3-min-catalogues",
+      "sources": [
+        "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf",
+        "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063"
+      ],
+      "contentSha256": "6cb1400dcc0c7aac3f49da925a4b406e5e2a36305401312e6fd8f318458e57fb"
+    },
+    {
+      "slug": "fiac-airblok-bd-dr-transmission",
+      "sources": [
+        "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf",
+        "https://shop.fiac.it/en-IT/products/4152035130/ax403dr-10-400-50-meaa"
+      ],
+      "contentSha256": "844c9723c9a1be37dcd9c86e815ae1ac271f5bd63ca58346e026f2bf1a6a85ec"
+    },
+    {
+      "slug": "fraiseuse-points-soudure-profondeur-si5800",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "a2f214947f9874c1dfd964f896160e60bf1e62fdcdc5e2b6b3a912f6d17f9218"
+    },
+    {
+      "slug": "lime-bande-pneumatique-largeur-longueur-abrasif",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "e1603f0fbf02c4a10e715e14b91572b71a12e2b52059e7bd88078fd8a1f09411"
+    },
+    {
+      "slug": "meuleuse-broche-m14-5-8-filetage",
+      "sources": [
+        "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf"
+      ],
+      "contentSha256": "1aad4692900484379cdd2ba2e803bce6d74384870489ad8c73c60465e47e319b"
+    },
+    {
+      "slug": "meuleuse-droite-basse-vitesse-5500",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf",
+        "https://assets.pferd.com/pfd/products/pdfs/safety_pdf_catalog_3.pdf"
+      ],
+      "contentSha256": "3cfa7d67bcba1592991ef44bc20c4e676b03bef336cefa77305f268ef9e2581b"
+    },
+    {
+      "slug": "meuleuse-pneumatique-vitesse-regulee-governor",
+      "sources": [
+        "https://tools.cp.com/content/dam/pim/itba/cp/literature/catalogs/General-Industry_catalog_CP_EN.pdf"
+      ],
+      "contentSha256": "7916aba3a56f933bdb95fa23ae96a72a5350ce29cda7867097b689ad6babc37c"
+    },
+    {
+      "slug": "meuleuse-verticale-fonderie-3kw-debit",
+      "sources": [
+        "https://tools.cp.com/content/dam/pim/itba/cp/literature/catalogs/General-Industry_catalog_CP_EN.pdf"
+      ],
+      "contentSha256": "557b54580c26fa4b29f145591e9c1de4be19a2d2a12beaa4e53170a73079c2f5"
+    },
+    {
+      "slug": "micro-meuleuse-50000-60000-tr-min",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf",
+        "https://tools.cp.com/content/dam/pim/itba/cp/literature/catalogs/General-Industry_catalog_CP_EN.pdf",
+        "https://assets.pferd.com/pfd/products/pdfs/safety_pdf_catalog_3.pdf"
+      ],
+      "contentSha256": "4c21711fd79115a120178bdd64d9179d42601211ad1ba4fffc88b0af7af75b6b"
+    },
+    {
+      "slug": "micro-poncage-vernis-ponceuse-30-mm",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "127735cbebf7d8c54719c353ea42ff54a9984cc43dddf8f11df97025a34682b2"
+    },
+    {
+      "slug": "mini-ponceuse-filetage-m6-unf-plateau",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "b5d10c2ffb127f7d2c981484fe1e42549803864b8997021cc6dfc8993de1bd1e"
+    },
+    {
+      "slug": "polisseuse-pneumatique-vitesse-2600-5000",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "bea8e72594ba1af6014a904bf401fb07bd6da2ffc28f970ae8e88272674abba3"
+    },
+    {
+      "slug": "ponceuse-aspiration-autonome-centralisee",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "812af2eda3cb6dfb56301ea2a5f3eefa4ad65cb35423f640e79f995b2c4ed64c"
+    },
+    {
+      "slug": "ponceuse-delta-oscillation-orbite-difference",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "0011f8e9bb0180a4af485e2c19d2d242b8d5f8a149d076a8a1305f78212db0b9"
+    },
+    {
+      "slug": "ponceuse-lineaire-long-board-course",
+      "sources": [
+        "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf"
+      ],
+      "contentSha256": "20d8445d5cf78989588c89fbf934504b460aac59c18652775810379a17bff592"
+    },
+    {
+      "slug": "ponceuse-pierre-a-eau-circuits-air-eau",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "0ec3dac0d2f30f692e95e11f1f306fc31b1ab6f578cd067fbfb79d45ea8621ce"
+    },
+    {
+      "slug": "ponceuse-plateau-adhesif-autoagrippant-reference",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "8d9b437900e5cca50b5c6b8f380cb90b386d16cfa9fcb7e16517f696fdec9ae6"
+    },
+    {
+      "slug": "ponceuse-rotation-forcee-double-action",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "1c21bf04a419577d81876fe39d416c922fcae8b0258cabae3dfdc267d630ddf7"
+    },
+    {
+      "slug": "ponceuse-vibrante-dimensions-plateau-feuille",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "fbf2f76717d1797ca3ff175e5e0faca65ee3d7509c855a9f2656a2e6afdb44b6"
+    },
+    {
+      "slug": "scie-lime-pneumatique-kit-embouts",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "374740185955797732a43c412dd658cf8c7c8eb4f8d2837b3f49e529d66ea79b"
+    },
+    {
+      "slug": "scie-pneumatique-moteur-rotatif-piston",
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"
+      ],
+      "contentSha256": "74c149837592e18b733c370d3a96b961c645b19c10cbf362dcba01bfcaf07ddc"
+    },
+    {
+      "slug": "vibrations-outils-emission-exposition-a8",
+      "sources": [
+        "https://www.inrs.fr/risques/vibration-membres-superieurs/evaluation-risque",
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf",
+        "https://www.inrs.fr/publications/outils/Osev-membres-superieurs"
+      ],
+      "contentSha256": "ef242e7f07ae069e95e4f7ea4d9d269dfb38259b5daf148cf258ffd7e75e0234"
+    },
+    {
+      "slug": "visseuse-pneumatique-demarrage-appui-gachette",
+      "sources": [
+        "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf"
+      ],
+      "contentSha256": "321cc7c38a9d238a61c6b439d8297615891169080f54f9c5f56e131b0d3382a6"
+    }
+  ]
+}

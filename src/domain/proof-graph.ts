@@ -1,4 +1,6 @@
 import type { Compressor, ToolProfile } from './catalog';
+import { z } from 'zod';
+import { CALCULATION_VERSION } from './sizing';
 import { evaluateCompatibility, resolveAvailableFad, type CompatibilityResult, type CompatibilityVerdict, type FadResolutionBasis } from './compatibility';
 
 export type ProofGraphLayer = 'verdict' | 'calculation' | 'field' | 'evidence' | 'version';
@@ -24,6 +26,30 @@ export type PublishedVerdictPair = {
 };
 
 type Versions = { catalogVersion: string; verdictVersion: string; calculationVersion: string; verifiedAt: string };
+
+const publishedDecisionSchema = z.object({
+	catalogVersion: z.string().regex(/^[a-f0-9]{64}$/),
+	verdictVersion: z.string().regex(/^[a-f0-9]{64}$/),
+	calculationVersion: z.literal(CALCULATION_VERSION),
+	input: z.object({ compressorId: z.string(), toolId: z.string() }),
+	engine_evaluation: z.object({
+		compressorId: z.string(), toolId: z.string(),
+		verdict: z.enum(['continuous', 'intermittent', 'incompatible', 'insufficient_data']),
+		confidence: z.enum(['high', 'medium', 'low']),
+		limitingFactor: z.enum(['flow', 'pressure', 'tank', 'duty_cycle', 'data']).optional(),
+		requiredFadLpm: z.number().nonnegative().optional(), availableFadLpm: z.number().nonnegative().optional(),
+		availableFadBasis: z.enum(['exact', 'interpolated', 'higher-pressure-bound']).optional(),
+		availableFadReferencePressureBar: z.number().nonnegative().optional(), marginPercent: z.number().optional(),
+	}),
+});
+
+export function validatePublishedDecision(value: unknown, expected: { catalogVersion: string; compressorId: string; toolId: string }) {
+	const decision = publishedDecisionSchema.parse(value);
+	if (decision.catalogVersion !== expected.catalogVersion || decision.input.compressorId !== expected.compressorId
+		|| decision.input.toolId !== expected.toolId || decision.engine_evaluation.compressorId !== expected.compressorId
+		|| decision.engine_evaluation.toolId !== expected.toolId) throw new Error('published_decision_version_or_pair_mismatch');
+	return decision;
+}
 
 const verdictLabels: Record<CompatibilityVerdict, string> = {
 	continuous: 'Compatible en continu',
