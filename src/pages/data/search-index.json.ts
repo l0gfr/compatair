@@ -21,9 +21,12 @@ export const GET: APIRoute = async () => {
 	].join(' ');
 	const items = [
 		...decisionComparisons.map((page) => ({ title: page.question, type: 'Comparatif', url: `/comparatifs/${page.slug}/`, keywords: page.description })),
-		...tools.map((item) => ({ title: `Quel compresseur pour ${item.brand} ${item.model} ?`, type: 'Sélection technique', url: `/quel-compresseur-pour/${item.slug}/`, keywords: toolSearchText(item) })),
+		// Keep each tool and its selection adjacent so compression can reuse their shared text.
+		...tools.flatMap((item) => [
+			{ title: `Quel compresseur pour ${item.brand} ${item.model} ?`, type: 'Sélection technique', url: `/quel-compresseur-pour/${item.slug}/`, keywords: toolSearchText(item) },
+			{ title: item.label, type: 'Outil', url: `/outils-pneumatiques/${item.slug}/`, keywords: toolSearchText(item) },
+		]),
 		...compressors.map((item) => ({ title: compressorDisplayName(item), type: 'Compresseur', url: `/compresseurs/${item.slug}/`, keywords: `${item.tankLiters} litres ${item.maxPressureBar} bar ${item.mpn ?? ''}` })),
-		...tools.map((item) => ({ title: item.label, type: 'Outil', url: `/outils-pneumatiques/${item.slug}/`, keywords: toolSearchText(item) })),
 		...guides.map((item) => ({ title: item.data.title, type: 'Guide', url: `/guides/${item.id}/`, keywords: guideKeywords(item) })),
 		...glossaryTerms.map((item) => ({ title: item.term, type: 'Glossaire', url: `/glossaire/#${item.slug}`, keywords: item.definition })),
 	];
