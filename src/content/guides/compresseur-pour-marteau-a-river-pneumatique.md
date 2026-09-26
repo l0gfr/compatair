@@ -53,7 +53,7 @@ Les fiches [RRN11P-01](https://www.atlascopco.com/en-ca/itba/products/material-r
 
 ## RRH06P : faut-il viser 540 ou 675 L/min ?
 
-**540 L/min est la consommation publiée.** Les 675 L/min obtenus par `540 × 1,25` sont un seuil de présélection avec la marge interne CompatAir de 25 %. De la même façon, le RRH08P conduit à 750 L/min avec cette marge, contre 600 L/min de besoin publié.
+**540 L/min est la consommation publiée.** Les 675 L/min obtenus par `540 × 1,25` sont un seuil de présélection avec la marge indicative CompatAir de 25 %. De la même façon, le RRH08P conduit à 750 L/min avec cette marge, contre 600 L/min de besoin publié.
 
 Dans les deux cas, comparez avec le [FAD documenté](/guides/debit-restitue-fad-vs-debit-aspire/) du compresseur, à la pression utile. Le résultat ne constitue pas une homologation de l’installation ni du procédé. Un atelier avec plusieurs marteaux doit aussi décrire la simultanéité ; une majoration forfaitaire ne suffit pas à couvrir un second opérateur.
 

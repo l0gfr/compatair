@@ -7,7 +7,7 @@ import { readImageDimensions } from '../src/domain/image-dimensions.ts';
 import { catalogOptionIdentifiers, catalogSearchIdentifiers } from '../src/domain/catalog-search.ts';
 import { toolUsageTaxonomy } from '../src/data/taxonomy.ts';
 import { brandSlug } from '../src/domain/brand.ts';
-import { FAD_COMPARISON_PAGE_SIZE, TOOL_USAGE_PAGE_SIZE } from '../src/domain/pagination.ts';
+import { FAD_COMPARISON_PAGE_SIZE, GUIDE_DIRECTORY_PAGE_SIZE, TOOL_USAGE_PAGE_SIZE } from '../src/domain/pagination.ts';
 import { parseJavaScriptModuleSpecifiers } from './lib/javascript-module-graph.mjs';
 import { decodeXmlEntities as decodeXml, extractH1Text } from './lib/markup-text.mjs';
 
@@ -741,6 +741,35 @@ for (const brand of compressorBrands) {
 		}
 		if (page < pageCount && !html.includes(`href="${path}page/${page + 1}/"`)) errors.push(`architecture FAD: page suivante inaccessible depuis ${pagePath}`);
 	}
+}
+
+// Every article must remain reachable through static library pages, including without JavaScript.
+const guideArticles = [];
+for (const path of sitePaths) {
+	if (!/^\/guides\/[^/]+\/$/.test(path)) continue;
+	const html = await readFile(join(root, `${path}index.html`), 'utf8');
+	const audiences = html.match(/data-guide-audiences="([^"]+)"/)?.[1];
+	if (audiences) guideArticles.push({ path, audiences: audiences.split(' ') });
+}
+for (const [basePath, audience] of [['/guides/', null], ['/guides/professionnels/', 'professionnel']]) {
+	const expected = new Set(guideArticles.filter((guide) => !audience || guide.audiences.includes(audience)).map((guide) => guide.path));
+	const seen = new Set();
+	const pageCount = Math.max(1, Math.ceil(expected.size / GUIDE_DIRECTORY_PAGE_SIZE));
+	for (let page = 1; page <= pageCount; page += 1) {
+		const path = page === 1 ? basePath : `${basePath}page/${page}/`;
+		if (!sitePaths.has(path)) { errors.push(`bibliothèque guides: page absente ${path}`); continue; }
+		const html = await readFile(join(root, `${path}index.html`), 'utf8');
+		const cards = [...html.matchAll(/<article\b[^>]*data-directory-card[^>]*>[\s\S]*?<\/article>/g)];
+		const expectedCount = Math.min(GUIDE_DIRECTORY_PAGE_SIZE, expected.size - (page - 1) * GUIDE_DIRECTORY_PAGE_SIZE);
+		if (cards.length !== expectedCount) errors.push(`bibliothèque guides: nombre de dossiers incorrect sur ${path}`);
+		for (const [card] of cards) {
+			const guidePath = card.match(/href="(\/guides\/[^/]+\/)"/)?.[1];
+			if (!expected.has(guidePath) || seen.has(guidePath)) errors.push(`bibliothèque guides: dossier inattendu ou dupliqué sur ${path}: ${guidePath}`);
+			seen.add(guidePath);
+		}
+		if (page < pageCount && !html.includes(`href="${basePath}page/${page + 1}/"`)) errors.push(`bibliothèque guides: page suivante inaccessible depuis ${path}`);
+	}
+	for (const path of expected) if (!seen.has(path)) errors.push(`bibliothèque guides: dossier inaccessible depuis ${basePath}: ${path}`);
 }
 
 for (const file of htmlFiles) {

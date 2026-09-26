@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import { GUIDE_DIRECTORY_PAGE_SIZE, paginate } from '../domain/pagination';
+
+interface Props { page?: number; }
+const { page = 1 } = Astro.props;
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GuideDirectory from './GuideDirectory.astro';
+import GuideSeriesCallout from './GuideSeriesCallout.astro';
+import HubSignalVisual from './HubSignalVisual.astro';
+import MetierIcon from './MetierIcon.astro';
+import { guideAudiences, guideMetierIds, guideMetiers } from '../domain/editorial-taxonomy';
+import { serializeJsonLd } from '../domain/structured-data';
+
+const audience = 'professionnel' as const;
+const definition = guideAudiences[audience];
+const guides = (await getCollection('guides', ({ data }) => data.audiences.includes(audience)))
+	.sort((a, b) => Number(b.data.featured) - Number(a.data.featured) || b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const pagination = paginate(guides, page, GUIDE_DIRECTORY_PAGE_SIZE);
+const maintenanceSeriesCount = guides.filter((guide) => guide.data.series === 'audit-suivi-maintenance-air-comprime').length;
+const itemListJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'ItemList',
+	name: definition.title,
+	itemListElement: pagination.items.map((guide, index) => ({ '@type': 'ListItem', position: pagination.firstItem + index, name: guide.data.title, url: `https://compatair.fr/guides/${guide.id}/` })),
+};
+---
+
+<BaseLayout title={page === 1 ? definition.title : `${definition.title} : page ${page}`} editorialTitle={page === 1 ? definition.seoTitle : `Guides air comprimé professionnels : page ${page}`} description={`${definition.description}${page > 1 ? ` Page ${page} sur ${pagination.totalPages}.` : ''}`} imagePath="/social/guides.png" breadcrumbs={[{ name: 'Guides', path: '/guides/' }, { name: definition.label, path: '/guides/professionnels/' }]}>
+	<script is:inline type="application/ld+json" set:html={serializeJsonLd(itemListJsonLd)} />
+	<section class="page-hero compact audience-hero hub-hero" data-editorial-hub="professionnel"><div class="container hub-hero-grid"><div><p class="eyebrow">Parcours professionnel</p><h1>{definition.title}{page > 1 ? ` : page ${page}` : ''}</h1><p class="lead">{definition.description}</p><div class="actions"><a class="button primary" href={page === 1 ? "#metiers" : "#bibliotheque"}>{page === 1 ? "Entrer par mon métier" : "Parcourir cette page"}</a><a class="button" href="/professionnels/">Travailler avec CompatAir</a></div></div><HubSignalVisual mode="guides" count={guides.length} title="guides professionnels" secondary={`${guideMetierIds.length} contextes métiers`} /></div></section>
+	{page === 1 && <>
+	<section class="section metier-gateway" id="metiers"><div class="container"><div class="section-head"><p class="eyebrow">Entrer par le métier</p><h2>{guideMetierIds.length} contextes, les mêmes règles de preuve</h2><p>Ces pages regroupent les guides utiles à un contexte de travail. Elles ne remplacent jamais la notice de la référence réellement utilisée.</p></div><div class="editorial-path-grid">{guideMetierIds.map((metier) => <a href={`/guides/metiers/${metier}/`}><MetierIcon metier={metier} /><span>{guides.filter((guide) => guide.data.metiers.includes(metier)).length} guides</span><strong>{guideMetiers[metier].label}</strong><small>{guideMetiers[metier].description}</small></a>)}</div></div></section>
+	<GuideSeriesCallout guideCount={maintenanceSeriesCount} compact />
+	</>}
+	<GuideDirectory guides={pagination.items} pagination={pagination} basePath="/guides/professionnels/" pageSize={GUIDE_DIRECTORY_PAGE_SIZE} context="professionnel" title={`${guides.length} guides professionnels, filtrables par métier`} description="Les sujets transversaux et les dossiers métiers sont réunis sans copie éditoriale ni URL concurrente. Parcourez les pages pour accéder à tous les guides, puis filtrez les dossiers affichés." />
+</BaseLayout>

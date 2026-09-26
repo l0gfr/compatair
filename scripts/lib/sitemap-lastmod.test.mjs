@@ -93,6 +93,21 @@ describe('sitemap lastmod', () => {
 		expect(resolver('https://compatair.fr/guides/')).toBe('2026-07-19T17:00:00+00:00');
 	});
 
+	it.each([
+		['/guides/page/2/', 'GuideLibraryPage', ''],
+		['/guides/professionnels/page/4/', 'GuideProfessionalLibraryPage', 'professionnels/'],
+	])('date la bibliothèque paginée %s avec ses guides et sa navigation', (path, component, directory) => {
+		const resolver = createSitemapLastmodResolver({ gitDate: (files) => {
+			expect(files).toContain(`src/components/${component}.astro`);
+			expect(files).toContain(`src/pages/guides/${directory}page/[page].astro`);
+			expect(files).toContain('src/components/DirectoryPagination.astro');
+			expect(files).toContain('src/domain/pagination.ts');
+			expect(files.some((file) => file.startsWith('src/content/guides/'))).toBe(true);
+			return '2026-09-26T08:00:00+00:00';
+		} });
+		expect(resolver(`https://compatair.fr${path}`)).toBe('2026-09-26T08:00:00+00:00');
+	});
+
 	it('relie un dossier éditorial à sa page, son appel et ses guides', () => {
 		const resolver = createSitemapLastmodResolver({ gitDate: (files) => {
 			expect(files).toContain('src/pages/guides/dossiers/audit-suivi-maintenance-air-comprime.astro');

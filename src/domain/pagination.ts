@@ -1,4 +1,5 @@
 export const DIRECTORY_PAGE_SIZE = 20;
+export const GUIDE_DIRECTORY_PAGE_SIZE = 27;
 export const FAD_COMPARISON_PAGE_SIZE = 48;
 export const TOOL_USAGE_PAGE_SIZE = 48;
 
