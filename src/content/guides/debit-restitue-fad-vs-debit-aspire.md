@@ -3,7 +3,7 @@ title: "Débit restitué FAD ou débit aspiré : le chiffre qui dimensionne vrai
 seoTitle: "Débit FAD ou débit aspiré : lequel comparer ? | CompatAir"
 description: "FAD, débit aspiré et débit de remplissage ne mesurent pas la même chose. Identifiez le chiffre à comparer au besoin de votre outil et à quelle pression."
 pubDate: 2026-07-13
-updatedDate: 2026-09-25
+updatedDate: 2026-09-26
 category: Comprendre
 audiences: [particulier, professionnel]
 metiers: []
@@ -53,6 +53,8 @@ La cuve intervient ensuite comme réserve temporaire. Elle ne corrige pas un dé
 ## Comparer des fiches exprimées dans des unités différentes
 
 Une fois la nature du débit identifiée, utilisez le [tableau CFM, L/s, L/min et m³/h](/guides/convertir-cfm-l-min-nl-min-air-comprime/). Il conserve les conditions de référence et explique pourquoi Nl/min et L/min ne se remplacent pas par une conversion universelle.
+
+Pour une machine déjà utilisée, distinguez aussi la performance d’origine et l’état de l’exemplaire vendu. Le dossier [acheter un compresseur d’occasion](/guides/acheter-compresseur-occasion-controles-documents/) explique les preuves à demander avant de conclure à la compatibilité.
 
 ## Sources
 

@@ -55,6 +55,18 @@ export const glossarySources = {
 		label: 'Atlas Copco, unités et conditions de débit',
 		url: 'https://www.atlascopco.com/en-in/compressors/wiki/compressed-air-articles/physics-physicalunits2',
 	},
+	cagiControls: {
+		label: 'CAGI, commandes et variation de vitesse',
+		url: 'https://www.cagi.org/assets/documents/pdfs/SystemControlsFAQs.pdf?updated=1657712700',
+	},
+	bekoCondensates: {
+		label: 'BEKO, choix du traitement des condensats',
+		url: 'https://www.beko-technologies.com/en-en/news-stories/detail/bekosplit-or-qwik-pure-how-to-find-the-perfect-system-for-your-condensate-treatment/',
+	},
+	atlasShutoff: {
+		label: 'Atlas Copco, notice LTV009 R05-6',
+		url: 'https://picontent.atlascopco.com/cont/external/dir/93/578887947_B3720001_html5_external/en-US/print-section.html?section=all',
+	},
 } as const;
 
 export type GlossarySourceKey = keyof typeof glossarySources;
@@ -84,6 +96,7 @@ export const glossaryTerms: GlossaryTerm[] = [
 	{ term: 'Consommation en charge', slug: 'consommation-en-charge', definition: 'Consommation publiée pendant le fonctionnement sous charge d’un outil. Ce libellé doit rester attaché à la référence et aux conditions du fabricant, sans être remplacé par une consommation moyenne.', source: 'cp', related: { label: 'Moyenne ou consommation en charge', href: '/guides/consommation-moyenne-en-charge-cle-a-chocs/' } },
 	{ term: 'Condensat', slug: 'condensat', definition: 'Liquide formé lorsque la vapeur d’eau contenue dans l’air se condense pendant le refroidissement ou dans le réseau. Sa gestion dépend de l’installation et des règles applicables.', source: 'atlas', related: { label: 'Purge et contrôles', href: '/guides/entretien-compresseur-purge-condensats/' } },
 	{ term: 'Coupleur rapide', slug: 'coupleur-rapide', definition: 'Raccord permettant de connecter et déconnecter rapidement un flexible ou un outil. Son passage interne et son état peuvent contribuer à la chute de pression.', source: 'atlas', related: { label: 'Flexible et raccords', href: '/guides/diametre-longueur-flexible-air-comprime/' } },
+	{ term: 'Coupure automatique', slug: 'coupure-automatique', definition: 'Sur un outil de serrage, fonction qui arrête automatiquement l’entraînement selon son mécanisme de commande. La présence de cette fonction ne constitue pas à elle seule une mesure enregistrée du couple obtenu sur chaque assemblage.', source: 'atlasShutoff', related: { label: 'Visseuses à coupure et contrôle du serrage', href: '/guides/visseuse-pneumatique-coupure-automatique/' } },
 	{ term: 'Cuve', slug: 'cuve', definition: 'Récipient qui stocke du gaz sous pression. Un réseau peut utiliser des réservoirs primaires et secondaires. La cuve amortit une demande, mais ne crée pas de débit continu.', source: 'cagi', related: { label: 'Rôle du volume de cuve', href: '/guides/choisir-volume-cuve-24-50-90-litres/' } },
 	{ term: 'Cycle de service', slug: 'cycle-service', definition: 'Part du temps pendant laquelle un équipement peut fonctionner dans les conditions définies par son fabricant. Sa valeur et sa période de référence doivent provenir de la notice du modèle.', source: 'atlas', related: { label: 'Comparer piston et vis', href: '/guides/compresseur-piston-ou-vis-profil-charge/' } },
 	{ term: 'Durée de session', slug: 'duree-session', definition: 'Temps total décrit pour un scénario d’utilisation, pauses et reprises comprises. CompatAir la traite comme une donnée d’usage déclarée, distincte du temps de marche réel et du cycle de service publié par le fabricant.', source: 'method', related: { label: 'Vérifier une configuration', href: '/calculateur/' } },
@@ -92,6 +105,7 @@ export const glossaryTerms: GlossaryTerm[] = [
 	{ term: 'Demande artificielle', slug: 'demande-artificielle', definition: 'Consommation supplémentaire créée par une pression du réseau supérieure au besoin réel, notamment sur les usages non régulés et les fuites.', source: 'doe', related: { label: 'Profil de pression', href: '/guides/diagnostiquer-chute-pression-air-comprime/' } },
 	{ term: 'Dessiccant', slug: 'dessiccant', definition: 'Matériau utilisé pour retenir l’humidité. Dans un sécheur par adsorption, sa surface poreuse attire l’eau et peut être régénérée selon la technologie.', source: 'cagi', related: { label: 'Point de rosée et sécheurs', href: '/guides/point-rosee-secheur-filtre-air-comprime/' } },
 	{ term: 'Extrapolation', slug: 'extrapolation', definition: 'Estimation effectuée en dehors de la plage couverte par les points connus. CompatAir ne prolonge pas une courbe constructeur hors de sa plage documentée.', source: 'method', related: { label: 'Règles du calculateur', href: '/methodologie/' } },
+	{ term: 'Émulsion stable', slug: 'emulsion-stable', definition: 'Dans un condensat huileux, mélange où l’huile reste finement dispersée dans l’eau. Un procédé adapté, validé sur le condensat concerné, est nécessaire lorsque la séparation physique seule ne suffit pas.', source: 'bekoCondensates', related: { label: 'Traitement huile/eau des condensats', href: '/guides/separateur-huile-eau-condensats-compresseur/' } },
 	{ term: 'FAD', slug: 'fad', definition: 'Free Air Delivered. Désignation anglaise du débit d’air libre effectivement délivré, rattaché à des conditions de référence et de mesure.', source: 'cagi', related: { label: 'Guide complet du FAD', href: '/guides/debit-restitue-fad-vs-debit-aspire/' } },
 	{ term: 'Facteur de simultanéité', slug: 'facteur-simultaneite', definition: 'Élément d’étude qui traduit le nombre de consommateurs susceptibles de fonctionner en même temps. Il doit être fondé sur le profil réel d’utilisation.', source: 'atlas', related: { label: 'Plusieurs outils', href: '/guides/utiliser-plusieurs-outils-pneumatiques/' } },
 	{ term: 'Flexible d’air comprimé', slug: 'flexible-air-comprime', definition: 'Conduite souple reliant une alimentation à un point d’usage. Sa longueur, son diamètre intérieur, ses raccords et son état peuvent contribuer à la chute de pression lorsque l’air circule.', source: 'atlasPiping', related: { label: 'Choisir le diamètre et la longueur', href: '/guides/diametre-longueur-flexible-air-comprime/' } },
@@ -130,4 +144,5 @@ export const glossaryTerms: GlossaryTerm[] = [
 	{ term: 'Stockage secondaire', slug: 'stockage-secondaire', definition: 'Réserve locale destinée à soutenir une charge intermittente ou critique près de son point d’utilisation. Sa recharge doit être étudiée afin de ne pas recréer une pointe sur le réseau.', source: 'doe', related: { label: 'Placer le stockage d’air', href: '/guides/stockage-primaire-secondaire-air-comprime/' } },
 	{ term: 'Plage de pression', slug: 'plage-pression', definition: 'Écart entre les pressions minimale et maximale de régulation d’un compresseur, souvent décrit par les seuils de démarrage et d’arrêt ou de charge et décharge.', source: 'cagi' },
 	{ term: 'Volume d’air par action', slug: 'volume-par-action', definition: 'Quantité d’air publiée pour une action unitaire, par exemple un tir. Sa conversion en débit moyen exige une cadence explicite et ne décrit pas à elle seule la pointe instantanée.', source: 'einhellManual', related: { label: 'Dimensionner le clouage et l’agrafage', href: '/guides/dimensionner-compresseur-menuiserie-agencement/' } },
+	{ term: 'VSD / VFD', slug: 'vsd-vfd', definition: 'Variation de vitesse commandée par la fréquence d’alimentation du moteur. Sur un compresseur, elle permet de moduler le débit pour suivre une pression cible, dans la plage de fonctionnement documentée du modèle.', source: 'cagiControls', related: { label: 'Quand choisir un compresseur à vitesse variable', href: '/guides/compresseur-vitesse-variable-vsd-rentabilite-atelier/' } },
 ];

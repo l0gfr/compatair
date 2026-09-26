@@ -2,7 +2,7 @@
 title: "Entretenir un compresseur d’air : purge, cuve, filtres et contrôles à documenter"
 description: "Construire un entretien traçable à partir de la notice du modèle : condensats, inspection de cuve, soupape, filtration et conditions d’installation."
 pubDate: 2026-07-13
-updatedDate: 2026-09-25
+updatedDate: 2026-09-26
 category: "Utiliser"
 audiences: [particulier, professionnel]
 metiers: [maintenance-industrielle]
@@ -120,6 +120,8 @@ La règle éditoriale est la même que pour le débit : lorsqu’une donnée n�
 ## Documenter une panne après entretien
 
 Une pression qui ne revient pas appelle le [parcours de diagnostic production, fuite et distribution](/guides/compresseur-ne-monte-plus-en-pression/). Si le moteur ne part pas, utilisez plutôt le dossier [absence de démarrage et conditions d’alimentation](/guides/compresseur-ne-demarre-plus-froid-rallonge/).
+
+Après la purge, le liquide collecté nécessite sa propre filière. Le dossier [séparateur huile/eau et condensats](/guides/separateur-huile-eau-condensats-compresseur/) distingue les mélanges séparables des émulsions stables et précise les questions à poser avant un rejet.
 
 ## Sources
 

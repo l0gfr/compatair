@@ -3,6 +3,7 @@ title: "Quel compresseur pour une perceuse pneumatique ?"
 seoTitle: "Compresseur pour perceuse pneumatique | CompatAir"
 description: "Choisir le compresseur d’une perceuse pneumatique à partir du débit en charge, de la pression dynamique, du flexible et de la notice du modèle exact."
 pubDate: 2026-08-28
+updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, carrosserie-peinture, maintenance-industrielle]
@@ -94,6 +95,8 @@ Le même manuel signale les risques de projection, d’enchevêtrement, de pouss
 8. Traiter séparément foret, pièce, couple de réaction, projections, bruit et poussières.
 
 Le [calculateur avec la CP785](/calculateur/#outil=chicago-pneumatic-cp785) conserve son besoin de 480 L/min à 6,3 bar. Pour une autre perceuse, chargez son propre profil plutôt que de réutiliser cette valeur comme moyenne de catégorie.
+
+Pour un poste qui réalise ensuite les filetages, comparez séparément les [taraudeuses LGB34 et LGB36 et leurs besoins d’air](/guides/compresseur-pour-taraudeuse-pneumatique/) : la vitesse de rotation ne permet pas de déduire leur consommation.
 
 ## Sources
 

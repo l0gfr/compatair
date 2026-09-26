@@ -2,7 +2,7 @@
 title: "Quel compresseur pour une clé à chocs pneumatique ?"
 description: "Méthode factuelle pour comparer la consommation d’une clé à chocs au débit restitué d’un compresseur, avec l’exemple Einhell TC-PW 340."
 pubDate: 2026-07-13
-updatedDate: 2026-09-25
+updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, atelier-poids-lourds]
@@ -47,6 +47,8 @@ Utilisez le [calculateur avec la TC-PW 340 préchargée](/calculateur/#outil=ein
 ## Lire la consommation et préparer le serrage
 
 Avant de retenir un débit, distinguez la [consommation moyenne de la consommation en charge](/guides/consommation-moyenne-en-charge-cle-a-chocs/). Pour un poste roues, vérifiez séparément le [rôle de la clé à chocs et le serrage final à la clé dynamométrique](/guides/cle-a-chocs-couple-serrage-roues-dynamometrique/).
+
+Pour un poste d’assemblage, examinez aussi la différence entre [clé à impulsions et clé à chocs](/guides/cle-a-impulsions-ou-cle-a-chocs-air-comprime/). La coupure automatique, la plage de couple et le contrôle du serrage sont des critères distincts du débit d’air.
 
 ## Sources
 

@@ -3,6 +3,7 @@ title: "Compresseur à piston ou à vis : décider selon le profil de charge"
 seoTitle: "Compresseur à piston ou à vis : comment choisir"
 description: "Comparer piston et vis sans règle simpliste, à partir du profil de demande, du cycle publié, des commandes, de la charge partielle et des coûts du site."
 pubDate: 2026-08-28
+updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [professionnel]
 metiers: [garage-automobile, atelier-poids-lourds, maintenance-industrielle]
@@ -131,6 +132,8 @@ La meilleure réponse peut être un piston, une vis, plusieurs machines séquenc
 9. Conserver les fiches, hypothèses, mesures et écarts dans le dossier de réception.
 
 Pour un parc existant, commencez par [mesurer les temps en charge et à vide](/guides/mesurer-temps-charge-vide-compresseur/). Si plusieurs machines sont présentes, le guide [séquencer plusieurs compresseurs](/guides/sequencer-plusieurs-compresseurs/) permet d’étudier base et appoint sans confondre capacité installée et capacité utile.
+
+Si l’offre comprend un variateur, poursuivez avec [quand choisir un compresseur à vitesse variable](/guides/compresseur-vitesse-variable-vsd-rentabilite-atelier/). Le dossier examine le débit minimal, les régimes de demande et un calcul annuel explicitement hypothétique.
 
 ## Sources
 

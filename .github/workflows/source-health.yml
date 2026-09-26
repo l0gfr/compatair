@@ -26,8 +26,9 @@ jobs:
   sources:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
-    # The 2,000-reference catalogue is checked sequentially per manufacturer.
-    timeout-minutes: 35
+    # Sequential manufacturer checks took 34 min before the September guide batch.
+    # Keep the per-host rate limit and allow room for the additional primary sources.
+    timeout-minutes: 40
     steps:
       - name: Checkout versioned sources
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1

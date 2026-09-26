@@ -3,7 +3,7 @@ title: "Groupe FRL : filtre, régulateur, lubrificateur, ordre, réglage et entr
 seoTitle: "Groupe FRL : ordre, réglage et entretien"
 description: "Installer et entretenir un groupe FRL sans lubrifier tous les usages : ordre des modules, sens du débit, pression, condensats et contrôle des pertes."
 pubDate: 2026-08-28
-updatedDate: 2026-09-25
+updatedDate: 2026-09-26
 category: "Installer"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, carrosserie-peinture, maintenance-industrielle]
@@ -122,6 +122,8 @@ Un FRL bien monté n’est pas une preuve suffisante de qualité d’air. Le pro
 ## Appliquer la lubrification à une clé identifiée
 
 Le dossier [huile de clé à chocs : moteur et mécanisme de frappe](/guides/huile-cle-a-chocs-pneumatique-lubrification/) distingue les zones d’entretien et les prescriptions documentées. Un réglage de lubrificateur ne remplace pas l’entretien complet de l’outil.
+
+Sur un poste de vissage, reliez le choix du traitement d’air aux exigences de la référence exacte. Le dossier [visseuses à coupure automatique et réception du poste](/guides/visseuse-pneumatique-coupure-automatique/) propose une grille de vérification de l’alimentation et du résultat.
 
 ## Sources
 

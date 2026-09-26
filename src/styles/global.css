@@ -614,6 +614,11 @@ h3 { font-weight: 560; }
 .article-body svg { display: block; width: 100%; height: auto; margin: 2.2rem 0 3rem; border: 1px solid rgba(20,52,38,.14); border-radius: 1.2rem; box-shadow: 0 18px 45px rgba(17,37,28,.1); }
 .article-infographic { margin: 2.2rem 0 3rem; }
 .article-infographic > svg { margin: 0; }
+.article-table-scroll { max-width: 100%; overflow-x: auto; margin: 1.8rem 0; overscroll-behavior-inline: contain; }
+.article-table-scroll:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.article-body .article-table-scroll > table { min-width: 38rem; margin: 0; }
+.article-table-hint { font-size: .82rem; }
+@media (min-width: 760px) { .article-table-hint { display: none; } }
 .guide-next-step, .editorial-main > .related-reading { margin: 0; padding: clamp(2rem, 4vw, 3rem) var(--article-gutter); border-top: 1px solid var(--line); }
 .guide-next-step { background: linear-gradient(145deg, rgba(232,241,225,.92), rgba(250,252,247,.98)); }
 .guide-next-step h2, .editorial-main > .related-reading h2 { margin: .35rem 0 1rem; font-size: clamp(1.8rem, 3.2vw, 2.45rem); font-weight: 540; }
@@ -3824,6 +3829,9 @@ body {
 	body::before, body::after { display: none !important; }
 	.article-infographic { overflow: visible; }
 	.article-infographic > svg { width: 100%; max-width: 100%; }
+	.article-table-scroll { overflow: visible; }
+	.article-body .article-table-scroll > table { min-width: 0; }
+	.article-table-hint { display: none; }
 	.site-header, .site-footer, .journey-context, .page-hero, .commissioning-hero, .operation-hero, .intervention-hero, .maintenance-hero, .calculator-form, .share-row, .calculator-note, .result-inventory, .passport-actions, .passport-version-choice, .passport-offers, .commissioning-context, .commissioning-layout, .commissioning-result > footer, .operation-context, .operation-main-grid, .operation-history-actions, .intervention-context, .intervention-form, .intervention-history-actions, .maintenance-context, .maintenance-answer-actions, .maintenance-form-disclosure, .maintenance-record, .maintenance-portfolio, .maintenance-export-actions, .mobile-primary-action, .result-local-nav { display: none !important; }
 	.maintenance-viewer-section { padding: 0 !important; background: white; }
 	.maintenance-workspace { display: block !important; }

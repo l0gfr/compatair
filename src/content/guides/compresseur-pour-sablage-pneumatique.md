@@ -2,6 +2,7 @@
 title: "Quel compresseur pour un pistolet de sablage pneumatique ?"
 description: "Le sablage demande beaucoup d’air. Étude factuelle du Metabo SSP 1000 à 300 L/min sous 7 bar et des limites des compresseurs documentés."
 pubDate: 2026-07-13
+updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [carrosserie-peinture, maintenance-industrielle]
@@ -49,6 +50,8 @@ Le [tableau dynamique des verdicts](/quel-compresseur-pour/pistolet-sablage-meta
 - traiter 375 L/min comme le seuil interne CompatAir, pas comme une exigence Metabo ;
 - vérifier le flexible et les raccords séparément ;
 - ne pas convertir le volume de cuve en compatibilité continue.
+
+Pour une installation à buse, utilisez aussi le [tableau diamètre, pression et consommation de sablage](/guides/buse-sablage-diametre-pression-debit-compresseur/). Il sépare le débit de la buse du besoin complet et montre pourquoi son usure mérite d’être suivie.
 
 ## Sources
 

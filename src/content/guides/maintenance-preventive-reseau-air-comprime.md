@@ -3,7 +3,7 @@ title: "Maintenance préventive d’un réseau d’air comprimé : preuves, mesu
 seoTitle: "Maintenance réseau d’air comprimé | CompatAir"
 description: "Organiser une maintenance reproductible du compresseur au point d’usage, sans calendrier universel ni économie de fuite estimée sans mesure."
 pubDate: 2026-07-15
-updatedDate: 2026-07-20
+updatedDate: 2026-09-26
 category: "Utiliser"
 audiences: [professionnel]
 metiers: [maintenance-industrielle]
@@ -71,6 +71,8 @@ Le [radar des contradictions](/radar-contradictions/) maintient cette séparatio
 Chaque ligne d’intervention devrait contenir : actif, composant, exigence de source, observation initiale, action, observation finale, écart, statut et prochaine échéance. Un statut « terminé » signifie que la vérification finale existe, pas seulement que la pièce a été remplacée.
 
 Les snapshots mensuels de l’[observatoire documentaire](/observatoire-qualite-documentaire/) peuvent suivre la stabilité des références et le délai de correction, tandis que le registre de maintenance conserve le détail opérationnel local.
+
+Ces relevés sont également utiles lors d’un changement d’équipement. La [checklist d’achat d’un compresseur d’occasion](/guides/acheter-compresseur-occasion-controles-documents/) aide à relier identité, historique, état et essai de réception.
 
 ## Sources
 

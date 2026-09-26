@@ -2,6 +2,7 @@
 title: "Choisir un compresseur d’air : la méthode complète, des outils au réseau"
 description: "Neuf étapes pour vérifier le débit, la pression, les usages simultanés, le réseau et les informations manquantes."
 pubDate: 2026-07-13
+updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: []
@@ -113,6 +114,8 @@ Un dimensionnement défendable doit permettre de répondre à neuf questions :
 9. Quelles données restent manquantes ?
 
 Si la réponse à la cinquième question manque, le modèle ne doit pas être déclaré compatible. C’est le point central de la méthode CompatAir.
+
+Pour les postes d’assemblage et d’usinage spécialisés, consultez les dossiers consacrés aux [taraudeuses pneumatiques](/guides/compresseur-pour-taraudeuse-pneumatique/) et aux [marteaux à river](/guides/compresseur-pour-marteau-a-river-pneumatique/). Ils distinguent les références exactes, le débit publié et les conditions de réception du poste.
 
 ## Sources
 

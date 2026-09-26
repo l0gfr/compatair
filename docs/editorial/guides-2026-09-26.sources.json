@@ -1,0 +1,649 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-09-26",
+  "reviewType": "internal_editorial",
+  "externalProfessionalValidation": false,
+  "physicalTestsPerformed": false,
+  "hashScope": "SHA-256 of retrieved HTML/PDF bodies, except Légifrance read through web browsing after automated403. Dynamic pages may change hashes without technical changes. Source documents are not redistributed.",
+  "sources": [
+    {
+      "id": "clemco-consumption",
+      "url": "https://www.clemcoindustries.com/s/Compressed_Air-wxh8.pdf",
+      "resolvedUrl": "https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/68b0667721b59a4cdb3646d6/1756391031561/Compressed_Air.pdf",
+      "httpStatus": 200,
+      "sha256": "794a12329885a9f659c533d215fab2bc5d3213d679b759a70bba91a2af1edf18",
+      "bytes": 90575,
+      "consultedOn": "2026-09-26",
+      "scope": "One-page table visually checked: nozzle numbers 2-5, air consumption rows at 60 and 100 psi; no universal machine or abrasive compatibility inferred.",
+      "guides": [
+        "buse-sablage-diametre-pression-debit-compresseur"
+      ]
+    },
+    {
+      "id": "clemco-wear",
+      "url": "https://www.clemcoindustries.com/s/NozzleWear.pdf",
+      "resolvedUrl": "https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/68af5eedfe5a1a7cc68ccd20/1756323565258/NozzleWear.pdf",
+      "httpStatus": 200,
+      "sha256": "07cb4cde71b881e08a040e608e76f3efba2f27ab725f10aaa768fbce094b8084",
+      "bytes": 56411,
+      "consultedOn": "2026-09-26",
+      "scope": "Nozzle orifice comparison: 81 to 137 cfm, approximately 69%; no wear duration inferred.",
+      "guides": [
+        "buse-sablage-diametre-pression-debit-compresseur"
+      ]
+    },
+    {
+      "id": "clemco-volume",
+      "url": "https://www.clemcoindustries.com/s/AirVolume_Est.pdf",
+      "resolvedUrl": "https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/68af5ea217fb1a67ddd400ef/1756323490904/AirVolume_Est.pdf",
+      "httpStatus": 200,
+      "sha256": "fb2b5bbbbc4f6be458e7c5209190f9bd1cbcd1231ef597aedc1f5d54af5d772a",
+      "bytes": 58680,
+      "consultedOn": "2026-09-26",
+      "scope": "Only separation of nozzle, auxiliary demand and reserve used; metric totals not reproduced.",
+      "guides": [
+        "buse-sablage-diametre-pression-debit-compresseur"
+      ]
+    },
+    {
+      "id": "clemco-charts",
+      "url": "https://www.clemcoindustries.com/charts",
+      "resolvedUrl": "https://www.clemcoindustries.com/charts",
+      "httpStatus": 200,
+      "sha256": "7289f1631c8faf53b41a5f736a8bb94783ec23feaee4b3dd3ab9f77bd1549af8",
+      "bytes": 1865464,
+      "consultedOn": "2026-09-26",
+      "scope": "Manufacturer reference charts and crystalline-silica warning; no job safety approval inferred.",
+      "guides": [
+        "buse-sablage-diametre-pression-debit-compresseur"
+      ]
+    },
+    {
+      "id": "cagi-rotary",
+      "url": "https://www.cagi.org/assets/documents/pdfs/RotarySelectionGuideFinalJune2022.pdf?updated=1658932519",
+      "resolvedUrl": "https://www.cagi.org/assets/documents/pdfs/RotarySelectionGuideFinalJune2022.pdf?updated=1658932519",
+      "httpStatus": 200,
+      "sha256": "e1810967e1c5d1b0081c49e269e584f00fa6333d5a40daece73346a85da321c3",
+      "bytes": 3720140,
+      "consultedOn": "2026-09-26",
+      "scope": "PDF pp.18-21: operating range/control gaps and installation environment. No universal savings percentage or minimum turndown used.",
+      "guides": [
+        "compresseur-vitesse-variable-vsd-rentabilite-atelier",
+        "ventilation-local-compresseur-surchauffe"
+      ]
+    },
+    {
+      "id": "cagi-controls",
+      "url": "https://www.cagi.org/assets/documents/pdfs/SystemControlsFAQs.pdf?updated=1657712700",
+      "resolvedUrl": "https://www.cagi.org/assets/documents/pdfs/SystemControlsFAQs.pdf?updated=1657712700",
+      "httpStatus": 200,
+      "sha256": "7dc1c483765123c1fc5d69cbc310451ebafcf1fdb42a3efd1202336213026428",
+      "bytes": 275509,
+      "consultedOn": "2026-09-26",
+      "scope": "VFD/VSD changes airend speed to follow demand at target pressure; load/unload distinction.",
+      "guides": [
+        "compresseur-vitesse-variable-vsd-rentabilite-atelier"
+      ]
+    },
+    {
+      "id": "atlas-room",
+      "url": "https://www.atlascopco.com/en-uk/compressors/compressed-air-tips/top-tip-room-layout-designing-your-compressor",
+      "resolvedUrl": "https://www.atlascopco.com/en-uk/compressors/compressed-air-tips/top-tip-room-layout-designing-your-compressor",
+      "httpStatus": 200,
+      "sha256": "427ef0420d76a6af7a0c88cd988a1832aa032dde965e7e7bd0edc58eb0f4002b",
+      "bytes": 161852,
+      "consultedOn": "2026-09-26",
+      "scope": "Ventilation layout, clean intake, service access; UK regulations not transposed to France.",
+      "guides": [
+        "ventilation-local-compresseur-surchauffe"
+      ]
+    },
+    {
+      "id": "atlas-manual",
+      "url": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf",
+      "resolvedUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf",
+      "httpStatus": 200,
+      "sha256": "fbc449f7eaf713ebde9583ee4ef7a2840412c0cecc8b825326be1de1fc35de1f",
+      "bytes": 7020524,
+      "consultedOn": "2026-09-26",
+      "scope": "9th edition, sections 2.4.1.1, 3.5.5 and 3.5.6: condensation, ventilation and internal vessel corrosion. No universal inspection interval inferred.",
+      "guides": [
+        "ventilation-local-compresseur-surchauffe",
+        "separateur-huile-eau-condensats-compresseur",
+        "acheter-compresseur-occasion-controles-documents"
+      ]
+    },
+    {
+      "id": "beko-compare",
+      "url": "https://www.beko-technologies.com/en-en/news-stories/detail/bekosplit-or-qwik-pure-how-to-find-the-perfect-system-for-your-condensate-treatment/",
+      "resolvedUrl": "https://www.beko-technologies.com/en-en/news-stories/detail/bekosplit-or-qwik-pure-how-to-find-the-perfect-system-for-your-condensate-treatment/",
+      "httpStatus": 200,
+      "sha256": "659d248e9dd43eda382c95fbc732eef12df02ee94e3f8394019a30c58808e29c",
+      "bytes": 494518,
+      "consultedOn": "2026-09-26",
+      "scope": "Different suitability for unstable mixtures and stable emulsions; analysis service. Foreign approvals not treated as French discharge permission.",
+      "guides": [
+        "separateur-huile-eau-condensats-compresseur"
+      ]
+    },
+    {
+      "id": "beko-qwik",
+      "url": "https://www.beko-technologies.com/en-en/products/condensate-technology/qwik-pure/",
+      "resolvedUrl": "https://www.beko-technologies.com/en-en/products/condensate-technology/qwik-pure/",
+      "httpStatus": 200,
+      "sha256": "d65bb37c4ee71b0e1ca7541647ad8e8a65a05c5381f248a45c4b0bf118b3ccda",
+      "bytes": 598514,
+      "consultedOn": "2026-09-26",
+      "scope": "Compressed air consumption exists; spent cartridges treated as oil-containing waste. No annual consumption invented.",
+      "guides": [
+        "separateur-huile-eau-condensats-compresseur"
+      ]
+    },
+    {
+      "id": "beko-split",
+      "url": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/bekosplit/bs12_ba_03-042_en_04_00.pdf",
+      "resolvedUrl": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/bekosplit/bs12_ba_03-042_en_04_00.pdf",
+      "httpStatus": 200,
+      "sha256": "2276462fe208e24763d39713f5bdfbbea3908475bedf4d21ad7fef04c399d664",
+      "bytes": 4971759,
+      "consultedOn": "2026-09-26",
+      "scope": "BS12 installation/operation manual section 3.3: reaction and filtration sequence, level/fault monitoring.",
+      "guides": [
+        "separateur-huile-eau-condensats-compresseur"
+      ]
+    },
+    {
+      "id": "inrs-used",
+      "url": "https://www.inrs.fr/risques/utilisation-machines/acquisition-revente-location",
+      "resolvedUrl": "https://www.inrs.fr/risques/utilisation-machines/acquisition-revente-location",
+      "httpStatus": 200,
+      "sha256": "d1c353ee90d78e0bbcf91dfaf5d416b7b3894abc4320017d0b11691e264cba50",
+      "bytes": 83389,
+      "consultedOn": "2026-09-26",
+      "scope": "Used-machine acquisition/transfer in the context described by INRS; document and actual condition distinguished.",
+      "guides": [
+        "acheter-compresseur-occasion-controles-documents"
+      ]
+    },
+    {
+      "id": "atlas-tools",
+      "url": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
+      "resolvedUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
+      "httpStatus": 200,
+      "sha256": "1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21",
+      "bytes": 41078692,
+      "consultedOn": "2026-09-26",
+      "scope": "PDF pp.3,5-6,242,263: reference 6.3 bar, tool families, riveting and tapping tables. Selected tables visually inspected; current web specifications used for exact variants.",
+      "guides": [
+        "compresseur-pour-taraudeuse-pneumatique",
+        "compresseur-pour-marteau-a-river-pneumatique",
+        "cle-a-impulsions-ou-cle-a-chocs-air-comprime",
+        "visseuse-pneumatique-coupure-automatique"
+      ]
+    },
+    {
+      "id": "cp7200",
+      "url": "https://tools.cp.com/en/products/sanders/cp7200-sku8941072001",
+      "resolvedUrl": "https://tools.cp.com/en/products/sanders/cp7200-sku8941072001",
+      "httpStatus": 200,
+      "sha256": "0579f6e2ce5ad0d8c94fb831d54e6b20322040a916a1d9987c62f29c2236997f",
+      "bytes": 262728,
+      "consultedOn": "2026-09-26",
+      "scope": "Exact SKU8941072001: 9.9 L/s under load, 6.3 bar max dynamic, 10mm hose at5m, orbital random2.5mm, 15000rpm. 50.75 field and rotary descriptor contradictions explicitly disclosed.",
+      "guides": [
+        "mini-ponceuse-pneumatique-50-75-mm-compresseur"
+      ]
+    },
+    {
+      "id": "cp7201",
+      "url": "https://tools.cp.com/en/products/sanders/cp7201-sku8941072014",
+      "resolvedUrl": "https://tools.cp.com/en/products/sanders/cp7201-sku8941072014",
+      "httpStatus": 200,
+      "sha256": "be29bc217365c10f9948962053690c6b345f11bdb3b83c38c890f4cfe401bd2b",
+      "bytes": 256414,
+      "consultedOn": "2026-09-26",
+      "scope": "Exact SKU8941072014: polisher, 8.5 L/s under load, 6.3 bar max dynamic, 10mm hose at5m,75mm,2500rpm. Conflicting1/1.9kg values not arbitrated.",
+      "guides": [
+        "mini-ponceuse-pneumatique-50-75-mm-compresseur"
+      ]
+    },
+    {
+      "id": "atlas-copco-8431036940",
+      "url": "https://www.atlascopco.com/en-ca/itba/products/assembly-solutions/pneumatic-assembly-tools/ep10xs-hr13-sku8431036940",
+      "resolvedUrl": "https://www.atlascopco.com/en-ca/itba/products/assembly-solutions/pneumatic-assembly-tools/ep10xs-hr13-sku8431036940",
+      "httpStatus": 200,
+      "sha256": "e0b75aa4c0f8f4d6e6c80e987101161ce6a8b357be70d6531486a1530bb1bb59",
+      "bytes": 352303,
+      "consultedOn": "2026-09-26",
+      "scope": "Exact manufacturer SKU: airflow qualifier and value, pressure, speed, torque/capacity and configuration fields used in the corresponding guide. No on-site performance inferred.",
+      "guides": [
+        "cle-a-impulsions-ou-cle-a-chocs-air-comprime"
+      ]
+    },
+    {
+      "id": "atlas-copco-8431038165",
+      "url": "https://www.atlascopco.com/en-ca/itba/products/assembly-solutions/pneumatic-assembly-tools/ep11pti100-hr13-mt-sku8431038165",
+      "resolvedUrl": "https://www.atlascopco.com/en-ca/itba/products/assembly-solutions/pneumatic-assembly-tools/ep11pti100-hr13-mt-sku8431038165",
+      "httpStatus": 200,
+      "sha256": "11d471f0bef28d907866538854cb3eb9b54cb10eb933846086930742f9fa4885",
+      "bytes": 417502,
+      "consultedOn": "2026-09-26",
+      "scope": "Exact manufacturer SKU: airflow qualifier and value, pressure, speed, torque/capacity and configuration fields used in the corresponding guide. No on-site performance inferred.",
+      "guides": [
+        "cle-a-impulsions-ou-cle-a-chocs-air-comprime"
+      ]
+    },
+    {
+      "id": "atlas-copco-8431027800",
+      "url": "https://www.atlascopco.com/en-ca/itba/products/assembly-solutions/pneumatic-assembly-tools/ltv009-r025-q-sku8431027800",
+      "resolvedUrl": "https://www.atlascopco.com/en-ca/itba/products/assembly-solutions/pneumatic-assembly-tools/ltv009-r025-q-sku8431027800",
+      "httpStatus": 200,
+      "sha256": "e3141d86bc51cf0e6278f4dc9c711747f9535487ecc3f108788fc4b91e45ed2e",
+      "bytes": 364079,
+      "consultedOn": "2026-09-26",
+      "scope": "Exact manufacturer SKU: airflow qualifier and value, pressure, speed, torque/capacity and configuration fields used in the corresponding guide. No on-site performance inferred.",
+      "guides": [
+        "visseuse-pneumatique-coupure-automatique"
+      ]
+    },
+    {
+      "id": "atlas-copco-8431027823",
+      "url": "https://www.atlascopco.com/en-ca/itba/products/assembly-solutions/pneumatic-assembly-tools/ltv009-r03-10-sku8431027823",
+      "resolvedUrl": "https://www.atlascopco.com/en-ca/itba/products/assembly-solutions/pneumatic-assembly-tools/ltv009-r03-10-sku8431027823",
+      "httpStatus": 200,
+      "sha256": "05d5f89df5b6cd356c279d96341f4c523a8ce3f2f873d5f23b85d3e82846ec08",
+      "bytes": 368040,
+      "consultedOn": "2026-09-26",
+      "scope": "Exact manufacturer SKU: airflow qualifier and value, pressure, speed, torque/capacity and configuration fields used in the corresponding guide. No on-site performance inferred.",
+      "guides": [
+        "visseuse-pneumatique-coupure-automatique"
+      ]
+    },
+    {
+      "id": "atlas-copco-8421031166",
+      "url": "https://www.atlascopco.com/en-ca/itba/products/drilling-solutions/lgb34-h007-sku8421031166",
+      "resolvedUrl": "https://www.atlascopco.com/en-ca/itba/products/drilling-solutions/lgb34-h007-sku8421031166",
+      "httpStatus": 200,
+      "sha256": "a875dc293a76559a8b6e87606b3725e8c6df2c47ab2daffabfde81c7387c5ae0",
+      "bytes": 363657,
+      "consultedOn": "2026-09-26",
+      "scope": "Exact manufacturer SKU: airflow qualifier and value, pressure, speed, torque/capacity and configuration fields used in the corresponding guide. No on-site performance inferred.",
+      "guides": [
+        "compresseur-pour-taraudeuse-pneumatique"
+      ]
+    },
+    {
+      "id": "atlas-copco-8421041100",
+      "url": "https://www.atlascopco.com/en-ca/itba/products/drilling-solutions/lgb36-h007q-sku8421041100",
+      "resolvedUrl": "https://www.atlascopco.com/en-ca/itba/products/drilling-solutions/lgb36-h007q-sku8421041100",
+      "httpStatus": 200,
+      "sha256": "b234120daeefe89156a83e02d92d9c17a1f1f385fd092ccd0f13ccdd99d01e60",
+      "bytes": 393217,
+      "consultedOn": "2026-09-26",
+      "scope": "Exact manufacturer SKU: airflow qualifier and value, pressure, speed, torque/capacity and configuration fields used in the corresponding guide. No on-site performance inferred.",
+      "guides": [
+        "compresseur-pour-taraudeuse-pneumatique"
+      ]
+    },
+    {
+      "id": "atlas-copco-8426111104",
+      "url": "https://www.atlascopco.com/en-ca/itba/products/material-removal-tools/riveting-systems/rrh06p-sku8426111104",
+      "resolvedUrl": "https://www.atlascopco.com/en-ca/itba/products/material-removal-tools/riveting-systems/rrh06p-sku8426111104",
+      "httpStatus": 200,
+      "sha256": "1d24aea88709df3868fc1efd7c70725c425e52db91535f054840dabc08c48af3",
+      "bytes": 385152,
+      "consultedOn": "2026-09-26",
+      "scope": "Exact manufacturer SKU: airflow qualifier and value, pressure, speed, torque/capacity and configuration fields used in the corresponding guide. No on-site performance inferred.",
+      "guides": [
+        "compresseur-pour-marteau-a-river-pneumatique"
+      ]
+    },
+    {
+      "id": "atlas-copco-8426111109",
+      "url": "https://www.atlascopco.com/en-ca/itba/products/material-removal-tools/riveting-systems/rrh08p-sku8426111109",
+      "resolvedUrl": "https://www.atlascopco.com/en-ca/itba/products/material-removal-tools/riveting-systems/rrh08p-sku8426111109",
+      "httpStatus": 200,
+      "sha256": "63065ff894aef4c0027fc63278b8911212ca7cf5f84aae2f4f1d6571b0270889",
+      "bytes": 385021,
+      "consultedOn": "2026-09-26",
+      "scope": "Exact manufacturer SKU: airflow qualifier and value, pressure, speed, torque/capacity and configuration fields used in the corresponding guide. No on-site performance inferred.",
+      "guides": [
+        "compresseur-pour-marteau-a-river-pneumatique"
+      ]
+    },
+    {
+      "id": "atlas-copco-8426110105",
+      "url": "https://www.atlascopco.com/en-ca/itba/products/material-removal-tools/riveting-systems/rrn11p-01-sku8426110105",
+      "resolvedUrl": "https://www.atlascopco.com/en-ca/itba/products/material-removal-tools/riveting-systems/rrn11p-01-sku8426110105",
+      "httpStatus": 200,
+      "sha256": "9f580ad9534b5a5ecbe03a188054e66c2d860449e7c13e9933fc7b3cf0fc3799",
+      "bytes": 366263,
+      "consultedOn": "2026-09-26",
+      "scope": "Exact manufacturer SKU: airflow qualifier and value, pressure, speed, torque/capacity and configuration fields used in the corresponding guide. No on-site performance inferred.",
+      "guides": [
+        "compresseur-pour-marteau-a-river-pneumatique"
+      ]
+    },
+    {
+      "id": "atlas-copco-8426110113",
+      "url": "https://www.atlascopco.com/en-ca/itba/products/material-removal-tools/riveting-systems/rrn11p-02-sku8426110113",
+      "resolvedUrl": "https://www.atlascopco.com/en-ca/itba/products/material-removal-tools/riveting-systems/rrn11p-02-sku8426110113",
+      "httpStatus": 200,
+      "sha256": "84719ea893f97eeca8b3646261e9522ab064224becade3911dbb12bf98327343",
+      "bytes": 382709,
+      "consultedOn": "2026-09-26",
+      "scope": "Exact manufacturer SKU: airflow qualifier and value, pressure, speed, torque/capacity and configuration fields used in the corresponding guide. No on-site performance inferred.",
+      "guides": [
+        "compresseur-pour-marteau-a-river-pneumatique"
+      ]
+    },
+    {
+      "id": "inrs-checks",
+      "url": "https://www.inrs.fr/risques/utilisation-machines/verifications-initiales-periodiques",
+      "resolvedUrl": "https://www.inrs.fr/risques/utilisation-machines/verifications-initiales-periodiques",
+      "httpStatus": 200,
+      "sha256": "b899396334980e5dcf2939073ccf50deffce92e0d87c4e69a3267c25448e93af",
+      "bytes": 86282,
+      "consultedOn": "2026-09-26",
+      "scope": "Different verification types, qualified personnel and treatment of findings; no universal vessel interval asserted.",
+      "guides": [
+        "acheter-compresseur-occasion-controles-documents"
+      ]
+    },
+    {
+      "id": "atlas-screw-manual",
+      "url": "https://picontent.atlascopco.com/cont/external/dir/93/578887947_B3720001_html5_external/en-US/print-section.html?section=all",
+      "resolvedUrl": "https://picontent.atlascopco.com/cont/external/dir/93/578887947_B3720001_html5_external/en-US/print-section.html?section=all",
+      "httpStatus": 200,
+      "sha256": "8242025dec386ba303efee90f5c7ab3cc09c540625fef75a81a3bc9fcaadc8ee",
+      "bytes": 54911,
+      "consultedOn": "2026-09-26",
+      "scope": "LTV009 R05-6 only: actual-joint torque check and effect of supply-pressure drop; adjustment procedure not copied to other LTV009 models.",
+      "guides": [
+        "visseuse-pneumatique-coupure-automatique"
+      ]
+    },
+    {
+      "id": "atlas-pulse-manual",
+      "url": "https://picontent.atlascopco.com/cont/external/dir/c1/2683698827_c0580001_html5_external/en-us/print-section.html?section=all",
+      "resolvedUrl": "https://picontent.atlascopco.com/cont/external/dir/c1/2683698827_c0580001_html5_external/en-us/print-section.html?section=all",
+      "httpStatus": 200,
+      "sha256": "0b21f0f3a164deedac4502d57ff0df35e2591d5836e0ecd9f9e209e60b459f9a",
+      "bytes": 94980,
+      "consultedOn": "2026-09-26",
+      "scope": "EP5PTI19 HR10-MT only: pressure reporting does not measure torque; diagnostic principles explicitly scoped, no settings copied to other pulse tools.",
+      "guides": [
+        "cle-a-impulsions-ou-cle-a-chocs-air-comprime"
+      ]
+    },
+    {
+      "id": "nist-b8",
+      "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "resolvedUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "httpStatus": 200,
+      "sha256": "0c4836d6480cf19d14d2d8f22a887c007b96f85285f14df1880aa10dc6d1be9e",
+      "bytes": 168968,
+      "consultedOn": "2026-09-26",
+      "scope": "Appendix B.8 international foot/inch and psi conversion factors; metric conversions calculated without changing gas reference conditions.",
+      "guides": [
+        "buse-sablage-diametre-pression-debit-compresseur"
+      ]
+    },
+    {
+      "id": "legifrance-effluent",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000023245101",
+      "consultedOn": "2026-09-26",
+      "httpStatus": 403,
+      "verificationNote": "Direct automated request returned HTTP 403. Current article text was read via web browsing on the official canonical page. No body hash asserted for this source.",
+      "scope": "CSP L1331-10: prior authorization of non-domestic effluent into public collection network and site-specific discharge conditions.",
+      "guides": [
+        "separateur-huile-eau-condensats-compresseur"
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "slug": "compresseur-pour-taraudeuse-pneumatique",
+      "title": "Quel compresseur pour une taraudeuse pneumatique LGB34 ou LGB36 ?",
+      "sources": [
+        "https://www.atlascopco.com/en-ca/itba/products/drilling-solutions/lgb34-h007-sku8421031166",
+        "https://www.atlascopco.com/en-ca/itba/products/drilling-solutions/lgb36-h007q-sku8421041100",
+        "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf"
+      ],
+      "relatedGuides": [
+        "compresseur-pour-perceuse-pneumatique",
+        "pression-travail-6-3-bar-outils-pneumatiques",
+        "utiliser-plusieurs-outils-pneumatiques"
+      ],
+      "inlineSvgCount": 1,
+      "wordCountBeforeSources": 981,
+      "contextualInbound": [
+        "compresseur-pour-perceuse-pneumatique",
+        "guide-complet-dimensionner-compresseur-air"
+      ],
+      "sourceSha256": "ea60c2944f75d33831ff46834ecf6ac5994202fd2a62924650c9f938c0aec653"
+    },
+    {
+      "slug": "compresseur-pour-marteau-a-river-pneumatique",
+      "title": "Marteau à river pneumatique : débit, compresseur et emmanchement",
+      "sources": [
+        "https://www.atlascopco.com/en-ca/itba/products/material-removal-tools/riveting-systems/rrn11p-01-sku8426110105",
+        "https://www.atlascopco.com/en-ca/itba/products/material-removal-tools/riveting-systems/rrh08p-sku8426111109",
+        "https://www.atlascopco.com/en-ca/itba/products/material-removal-tools/riveting-systems/rrh06p-sku8426111104",
+        "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
+        "https://www.atlascopco.com/en-ca/itba/products/material-removal-tools/riveting-systems/rrn11p-02-sku8426110113"
+      ],
+      "relatedGuides": [
+        "compresseur-pour-derouilleur-a-aiguilles",
+        "pression-travail-6-3-bar-outils-pneumatiques",
+        "diametre-longueur-flexible-air-comprime"
+      ],
+      "inlineSvgCount": 1,
+      "wordCountBeforeSources": 893,
+      "contextualInbound": [
+        "guide-complet-dimensionner-compresseur-air",
+        "compresseur-pour-derouilleur-a-aiguilles"
+      ],
+      "sourceSha256": "5fdc414cdf811d9e39fa72629a7ce7605ca4450b749bb1431bf74ed33ec455bd"
+    },
+    {
+      "slug": "cle-a-impulsions-ou-cle-a-chocs-air-comprime",
+      "title": "Clé à impulsions ou clé à chocs : couple, coupure et débit d’air",
+      "sources": [
+        "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
+        "https://www.atlascopco.com/en-ca/itba/products/assembly-solutions/pneumatic-assembly-tools/ep10xs-hr13-sku8431036940",
+        "https://www.atlascopco.com/en-ca/itba/products/assembly-solutions/pneumatic-assembly-tools/ep11pti100-hr13-mt-sku8431038165",
+        "https://picontent.atlascopco.com/cont/external/dir/c1/2683698827_c0580001_html5_external/en-us/print-section.html?section=all"
+      ],
+      "relatedGuides": [
+        "compresseur-pour-cle-a-chocs-pneumatique",
+        "consommation-moyenne-en-charge-cle-a-chocs",
+        "visseuse-pneumatique-coupure-automatique"
+      ],
+      "inlineSvgCount": 1,
+      "wordCountBeforeSources": 908,
+      "contextualInbound": [
+        "compresseur-pour-cle-a-chocs-pneumatique",
+        "cle-a-chocs-couple-serrage-roues-dynamometrique"
+      ],
+      "sourceSha256": "ebdd64411cc7c0aeb8ff2d7b069896e346c2e44b559b51094dcc724369cfdd99"
+    },
+    {
+      "slug": "visseuse-pneumatique-coupure-automatique",
+      "title": "Visseuse pneumatique à coupure automatique : couple, débit et réception",
+      "sources": [
+        "https://picontent.atlascopco.com/cont/external/dir/93/578887947_B3720001_html5_external/en-US/print-section.html?section=all",
+        "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
+        "https://www.atlascopco.com/en-ca/itba/products/assembly-solutions/pneumatic-assembly-tools/ltv009-r025-q-sku8431027800",
+        "https://www.atlascopco.com/en-ca/itba/products/assembly-solutions/pneumatic-assembly-tools/ltv009-r03-10-sku8431027823"
+      ],
+      "relatedGuides": [
+        "compresseur-pour-visseuse-pneumatique",
+        "cle-a-impulsions-ou-cle-a-chocs-air-comprime",
+        "groupe-frl-filtre-regulateur-lubrificateur"
+      ],
+      "inlineSvgCount": 1,
+      "wordCountBeforeSources": 969,
+      "contextualInbound": [
+        "compresseur-pour-visseuse-pneumatique",
+        "groupe-frl-filtre-regulateur-lubrificateur"
+      ],
+      "sourceSha256": "8ca7ea6a2ade5b66360e8c4029e881805025ceb60e563b8bd5266a7ec90ef8b6"
+    },
+    {
+      "slug": "mini-ponceuse-pneumatique-50-75-mm-compresseur",
+      "title": "Mini-ponceuse pneumatique 50/75 mm : quel compresseur pour les retouches ?",
+      "sources": [
+        "https://tools.cp.com/en/products/sanders/cp7200-sku8941072001",
+        "https://tools.cp.com/en/products/sanders/cp7201-sku8941072014"
+      ],
+      "relatedGuides": [
+        "compresseur-pour-ponceuse-pneumatique",
+        "ponceuse-orbitale-2-5-5-8-mm-choisir",
+        "compresseur-ponceuse-bande-lime-polisseuse-pneumatique"
+      ],
+      "inlineSvgCount": 1,
+      "wordCountBeforeSources": 937,
+      "contextualInbound": [
+        "compresseur-pour-ponceuse-pneumatique",
+        "compresseur-ponceuse-bande-lime-polisseuse-pneumatique"
+      ],
+      "sourceSha256": "5baf929241ef0612181b6f5add9566caa381cd66eab584c9b074be90f71213b8"
+    },
+    {
+      "slug": "buse-sablage-diametre-pression-debit-compresseur",
+      "title": "Buse de sablage : quel débit selon le diamètre et la pression ?",
+      "sources": [
+        "https://www.clemcoindustries.com/s/Compressed_Air-wxh8.pdf",
+        "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+        "https://www.clemcoindustries.com/s/NozzleWear.pdf",
+        "https://www.clemcoindustries.com/s/AirVolume_Est.pdf",
+        "https://www.clemcoindustries.com/charts"
+      ],
+      "relatedGuides": [
+        "compresseur-pour-sablage-pneumatique",
+        "convertir-cfm-l-min-nl-min-air-comprime",
+        "diametre-longueur-flexible-air-comprime"
+      ],
+      "inlineSvgCount": 1,
+      "wordCountBeforeSources": 1040,
+      "contextualInbound": [
+        "compresseur-pour-sablage-pneumatique",
+        "convertir-cfm-l-min-nl-min-air-comprime"
+      ],
+      "sourceSha256": "fea0e26ed6b16a349160e3041fe7839efb192694c5eeab918e0fcf3dbde22d30"
+    },
+    {
+      "slug": "compresseur-vitesse-variable-vsd-rentabilite-atelier",
+      "title": "Compresseur à vitesse variable : quand le VSD est-il utile en atelier ?",
+      "sources": [
+        "https://www.cagi.org/assets/documents/pdfs/SystemControlsFAQs.pdf?updated=1657712700",
+        "https://www.cagi.org/assets/documents/pdfs/RotarySelectionGuideFinalJune2022.pdf?updated=1658932519"
+      ],
+      "relatedGuides": [
+        "compresseur-piston-ou-vis-profil-charge",
+        "comparer-puissance-specifique-compresseurs",
+        "sequencer-plusieurs-compresseurs"
+      ],
+      "inlineSvgCount": 1,
+      "wordCountBeforeSources": 1031,
+      "contextualInbound": [
+        "compresseur-piston-ou-vis-profil-charge",
+        "sequencer-plusieurs-compresseurs"
+      ],
+      "sourceSha256": "152f0d5629e3dcc27516c2d5c81e15213e78272c9009bef682f669b501281211"
+    },
+    {
+      "slug": "ventilation-local-compresseur-surchauffe",
+      "title": "Ventilation du local compresseur : éviter la recirculation d’air chaud",
+      "sources": [
+        "https://www.atlascopco.com/en-uk/compressors/compressed-air-tips/top-tip-room-layout-designing-your-compressor",
+        "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf",
+        "https://www.cagi.org/assets/documents/pdfs/RotarySelectionGuideFinalJune2022.pdf?updated=1658932519"
+      ],
+      "relatedGuides": [
+        "installer-reseau-air-comprime-atelier",
+        "recuperation-chaleur-compresseur",
+        "compresseur-vitesse-variable-vsd-rentabilite-atelier"
+      ],
+      "inlineSvgCount": 1,
+      "wordCountBeforeSources": 1003,
+      "contextualInbound": [
+        "installer-reseau-air-comprime-atelier",
+        "recuperation-chaleur-compresseur"
+      ],
+      "sourceSha256": "fec280873e341d4af7085500859fc09ca9d0b13fa38f735d9945a63dc978b635"
+    },
+    {
+      "slug": "separateur-huile-eau-condensats-compresseur",
+      "title": "Séparateur huile/eau : comment traiter les condensats d’un compresseur ?",
+      "sources": [
+        "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf",
+        "https://www.beko-technologies.com/en-en/news-stories/detail/bekosplit-or-qwik-pure-how-to-find-the-perfect-system-for-your-condensate-treatment/",
+        "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/bekosplit/bs12_ba_03-042_en_04_00.pdf",
+        "https://www.beko-technologies.com/en-en/products/condensate-technology/qwik-pure/",
+        "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000023245101"
+      ],
+      "relatedGuides": [
+        "entretien-compresseur-purge-condensats",
+        "point-rosee-secheur-filtre-air-comprime",
+        "maintenance-preventive-reseau-air-comprime"
+      ],
+      "inlineSvgCount": 1,
+      "wordCountBeforeSources": 944,
+      "contextualInbound": [
+        "installer-reseau-air-comprime-atelier",
+        "entretien-compresseur-purge-condensats"
+      ],
+      "sourceSha256": "8c659238ba2580a398c70af33f12e8610acedd0253e3e0e97fc40b673404d057"
+    },
+    {
+      "slug": "acheter-compresseur-occasion-controles-documents",
+      "title": "Acheter un compresseur d’occasion : documents, débit et contrôles",
+      "sources": [
+        "https://www.inrs.fr/risques/utilisation-machines/acquisition-revente-location",
+        "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf",
+        "https://www.inrs.fr/risques/utilisation-machines/verifications-initiales-periodiques"
+      ],
+      "relatedGuides": [
+        "debit-restitue-fad-vs-debit-aspire",
+        "entretien-compresseur-purge-condensats",
+        "comparer-puissance-specifique-compresseurs"
+      ],
+      "inlineSvgCount": 1,
+      "wordCountBeforeSources": 1040,
+      "contextualInbound": [
+        "maintenance-preventive-reseau-air-comprime",
+        "debit-restitue-fad-vs-debit-aspire"
+      ],
+      "sourceSha256": "e22ac3fd257b127df2387b0101a582a98fcde440c9792f8a100b59d6e900bd54"
+    }
+  ],
+  "calculationChecks": {
+    "cfmToLpm": 28.316846592,
+    "nozzle60psiLpm": [
+      368,
+      850,
+      1529,
+      2520
+    ],
+    "nozzle100psiLpm": [
+      566,
+      1274,
+      2294,
+      3879
+    ],
+    "vsdHypotheticalKwh": [
+      16500,
+      14150
+    ],
+    "marginsAreCompatAirNotManufacturer": true
+  },
+  "editorialNotes": [
+    "Ten distinct decisions; no traffic or search-volume claims.",
+    "Current published technical qualifiers preserved: free speed vs under load vs unspecified operating state.",
+    "No generic tolerance or professional external review claimed.",
+    "Existing article-infographic component classes used; no new dependency or public bulk PDF snapshot.",
+    "Wide tables use keyboard-focusable scroll regions with a mobile hint and print reset."
+  ]
+}

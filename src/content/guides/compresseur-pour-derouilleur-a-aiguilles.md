@@ -3,6 +3,7 @@ title: "Quel compresseur pour un dérouilleur à aiguilles ?"
 seoTitle: "Compresseur pour dérouilleur à aiguilles | CompatAir"
 description: "Dimensionner l’air d’un dérouilleur à aiguilles à partir du modèle exact, avec les CP7115 et CP7120, leurs débits, flexibles et limites d’usage."
 pubDate: 2026-08-28
+updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [professionnel]
 metiers: [garage-automobile, carrosserie-peinture, maintenance-industrielle]
@@ -100,6 +101,8 @@ Une demande moyenne calculée depuis une durée observée peut servir à analyse
 8. Évaluer séparément vibrations, bruit, projections, poussières et ergonomie.
 
 Testez la [CP7120 dans le calculateur](/calculateur/#outil=chicago-pneumatic-cp7120), puis comparez-la à la CP7115. Le moteur doit conserver l’écart de 324 L/min entre les deux besoins et ne jamais le remplacer par une moyenne de catégorie.
+
+Un autre outil à percussion peut avoir un usage et une consommation très différents. Le dossier [marteaux à river RRH et RRN](/guides/compresseur-pour-marteau-a-river-pneumatique/) compare débit, énergie par coup et emmanchements sans transformer les coups par minute en cadence de production.
 
 ## Sources
 

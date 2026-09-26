@@ -3,6 +3,7 @@ title: "Récupération de chaleur sur compresseur : mesurer le gisement et le be
 seoTitle: "Récupération de chaleur compresseur : méthode"
 description: "Dossier pour séparer chaleur produite, fraction récupérable, besoin saisonnier et intégration avant de calculer une économie."
 pubDate: 2026-07-15
+updatedDate: 2026-09-26
 category: "Installer"
 audiences: [professionnel]
 metiers: [maintenance-industrielle]
@@ -58,6 +59,8 @@ La réception doit donc contrôler à la fois la chaleur livrée et les conditio
 Publiez une ligne de base avant travaux, puis des bilans mensuels : heures en charge, énergie électrique, chaleur récupérée, chaleur utile, taux d’utilisation et incidents. Une année partielle ne doit pas être extrapolée sans expliquer la saisonnalité.
 
 Cette série alimente l’[observatoire de la qualité documentaire](/observatoire-qualite-documentaire/) : la preuve ne se limite pas au pourcentage de brochure, elle suit la disponibilité réelle de la donnée et les corrections apportées au modèle.
+
+Le [guide de ventilation du local compresseur](/guides/ventilation-local-compresseur-surchauffe/) aide à préparer l’évacuation de chaleur, les pertes dans les conduits et la réception de l’installation, y compris lorsque le bâtiment ne demande pas de chauffage.
 
 ## Sources
 

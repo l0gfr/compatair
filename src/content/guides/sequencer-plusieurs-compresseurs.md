@@ -3,6 +3,7 @@ title: "Séquencer plusieurs compresseurs : base, appoint et pression réseau"
 seoTitle: "Séquencement de plusieurs compresseurs"
 description: "Méthode pour attribuer base et appoint, choisir les signaux et tester la séquence sans laisser plusieurs machines moduler en parallèle."
 pubDate: 2026-07-15
+updatedDate: 2026-09-26
 category: "Utiliser"
 audiences: [professionnel]
 metiers: [maintenance-industrielle]
@@ -67,6 +68,8 @@ Les pointes courtes doivent aussi être confrontées au [stockage primaire et se
 Équilibrer les heures peut simplifier la maintenance, mais ne doit pas ignorer les différences de puissance spécifique ou de plage. Une rotation calendaire aveugle peut placer en base une machine moins adaptée au point courant.
 
 Documentez la règle, les exceptions, la version du contrôleur et la date de toute modification. Les tendances de l’observatoire doivent séparer disponibilité, performance énergétique et stabilité de pression.
+
+L’ajout d’une machine à variateur demande aussi de vérifier la continuité des plages de débit. Le guide [VSD et profil de charge d’atelier](/guides/compresseur-vitesse-variable-vsd-rentabilite-atelier/) illustre le risque d’un intervalle mal couvert entre deux états de fonctionnement.
 
 ## Sources
 

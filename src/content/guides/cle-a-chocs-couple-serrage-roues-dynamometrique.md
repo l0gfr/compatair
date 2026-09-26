@@ -3,6 +3,7 @@ title: "Clé à chocs et roues : couple de desserrage, approche et serrage final
 seoTitle: "Clé à chocs : quel couple pour serrer une roue ?"
 description: "625 Nm annoncés ne sont pas un réglage de roue. Distinguez couple inverse, plage de travail et serrage final, avec les notices CP7732C et CP7748TL."
 pubDate: 2026-09-25
+updatedDate: 2026-09-26
 category: "Utiliser"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, atelier-poids-lourds]
@@ -77,3 +78,5 @@ Dans la fiche d’intervention, notez donc séparément l’identification de l�
 Le chiffre maximal peut participer au choix pour une opération de desserrage, avec les conditions de mesure et la référence précise. Il ne classe pas à lui seul les outils pour un poste roues. La procédure, l’accès, les accessoires admis, la maîtrise du serrage et la capacité d’alimentation font partie de la décision.
 
 Les sources ont été consultées le 25 septembre 2026. Les performances citées sont déclarées par Chicago Pneumatic ; aucun test de serrage ni classement terrain n’est revendiqué.
+
+Le dossier [clé à impulsions, coupure et alimentation](/guides/cle-a-impulsions-ou-cle-a-chocs-air-comprime/) prolonge cette distinction pour les outils d’assemblage : une fonction d’arrêt ne démontre pas à elle seule la mesure du couple final.

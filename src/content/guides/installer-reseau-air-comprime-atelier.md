@@ -2,6 +2,7 @@
 title: "Installer un réseau d’air comprimé dans un atelier : pression, diamètre, condensats et raccords"
 description: "Concevoir le trajet entre compresseur et outils sans masquer les pertes : architecture, diamètre intérieur, boucle, filtration, purge et points de contrôle."
 pubDate: 2026-07-13
+updatedDate: 2026-09-26
 category: "Installer"
 audiences: [professionnel]
 metiers: [garage-automobile, atelier-poids-lourds, carrosserie-peinture, menuiserie-agencement, btp-chantier, maintenance-industrielle]
@@ -102,6 +103,8 @@ Avant de considérer le réseau terminé, documentez :
 - la date des contrôles et opérations d’entretien.
 
 Ces mesures permettent de distinguer un compresseur insuffisant d’un réseau restrictif. Sans elles, remplacer la machine peut laisser le problème intact.
+
+L’implantation se complète par deux dossiers : [ventilation du local compresseur](/guides/ventilation-local-compresseur-surchauffe/) pour le chemin de l’air chaud, et [traitement huile/eau des condensats](/guides/separateur-huile-eau-condensats-compresseur/) pour le devenir du liquide collecté.
 
 ## Sources
 

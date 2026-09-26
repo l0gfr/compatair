@@ -3,6 +3,7 @@ title: "Ponceuse à bande, lime et polisseuse pneumatique : attention au débit 
 seoTitle: "Compresseur pour ponceuse à bande et polisseuse"
 description: "Comparer le débit en charge d’une lime, d’une ponceuse à bande ou d’une polisseuse pneumatique, sans confondre consommation à vide et besoin durable."
 pubDate: 2026-08-28
+updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, carrosserie-peinture, maintenance-industrielle]
@@ -106,6 +107,8 @@ La compatibilité pneumatique ne sélectionne ni la bande, ni sa vitesse admissi
 8. Consigner temps de sollicitation, temps à vide, récupération, qualité de surface et anomalies.
 
 Le [calculateur avec la CP9779](/calculateur/#outil=chicago-pneumatic-cp9779) doit conserver 1 680 L/min en charge. Pour la DBF 457, la CP7269P ou la CP9780, sélectionnez la référence correspondante plutôt qu’une valeur moyenne.
+
+Les retouches de petite surface font l’objet d’un dossier dédié : [mini-ponceuse et polisseuse pneumatiques de 50/75 mm](/guides/mini-ponceuse-pneumatique-50-75-mm-compresseur/), avec les débits documentés CP7200 et CP7201.
 
 ## Sources
 

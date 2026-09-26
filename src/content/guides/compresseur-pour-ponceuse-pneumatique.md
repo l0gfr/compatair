@@ -2,7 +2,7 @@
 title: "Quel compresseur pour une ponceuse pneumatique ?"
 description: "Une ponceuse exige un débit durable, pas seulement une grande cuve. Dimensionnez le FAD, le cycle de service et le flexible à partir d’un cas vérifié."
 pubDate: 2026-07-13
-updatedDate: 2026-09-25
+updatedDate: 2026-09-26
 category: Choisir
 audiences: [particulier, professionnel]
 metiers: [carrosserie-peinture, menuiserie-agencement]
@@ -48,6 +48,8 @@ Une autre ponceuse peut consommer beaucoup plus. Relevez toujours sa propre fich
 ## Choisir d’abord l’opération de ponçage
 
 Avant de comparer les besoins d’air, le guide [orbite de 2,5, 5 ou 8 mm](/guides/ponceuse-orbitale-2-5-5-8-mm-choisir/) aide à définir le travail recherché. Il distingue plateau, orbite et consommation à partir des repères Mirka et de la DSX 150.
+
+Pour les petites zones de carrosserie, consultez le dossier [mini-ponceuse 50/75 mm et compresseur](/guides/mini-ponceuse-pneumatique-50-75-mm-compresseur/). Il distingue la CP7200 orbitale de la CP7201 destinée au polissage et relève les ambiguïtés de leurs fiches.
 
 ## Sources
 

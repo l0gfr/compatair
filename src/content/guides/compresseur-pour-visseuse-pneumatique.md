@@ -2,6 +2,7 @@
 title: "Quel compresseur pour une visseuse pneumatique ?"
 description: "Comment dimensionner un compresseur pour une visseuse pneumatique sans confondre débit aspiré et débit restitué, avec l’exemple Metabo DS 14."
 pubDate: 2026-07-14
+updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [menuiserie-agencement, maintenance-industrielle]
@@ -66,6 +67,8 @@ Vérifiez la pression à l’entrée de la visseuse pendant qu’elle consomme d
 - saisir une cadence seulement si l’usage réel est connu.
 
 Testez la [DS 14 dans le calculateur](/calculateur/#outil=metabo-ds-14), consultez sa [fiche CompatAir](/outils-pneumatiques/visseuse-pneumatique-metabo-ds-14/) et comparez les contraintes d’un [compresseur triphasé d’atelier](/guides/compresseur-triphase-ou-monophase-atelier/).
+
+Pour une ligne d’assemblage, le guide des [visseuses pneumatiques à coupure automatique](/guides/visseuse-pneumatique-coupure-automatique/) précise comment comparer les plages de couple, conserver la mention « consommation à vide » et préparer le contrôle du serrage.
 
 ## Sources
 
