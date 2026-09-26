@@ -16,6 +16,7 @@ import { compressors, tools } from '../data/catalog';
 import { resolveDocumentTitle } from '../domain/metadata';
 import { socialCardKey } from '../domain/social-card';
 import { serializeJsonLd } from '../domain/structured-data';
+import { isIndexablePath } from '../../scripts/lib/indexation-build.mjs';
 
 type Props = {
 	title: string;
@@ -61,6 +62,7 @@ const alternateLinks = alternates.length
 	];
 const socialImage = new URL(imagePath ?? `/social/${socialCardKey(canonical.pathname)}.png`, Astro.site);
 const currentPath = Astro.url.pathname;
+const excludeFromIndex = noindex || !isIndexablePath(currentPath);
 const commercialIntentTelemetryEnabled = currentPath === '/' || ['/compresseurs/', '/outils-pneumatiques/', '/guides/', '/offres/', '/comparatifs/'].some((path) => currentPath.startsWith(path));
 const currentYear = new Date().getFullYear();
 const catalogReferenceCount = compressors.length + tools.length;
@@ -165,7 +167,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 		<meta name="compatair:title-source" content={resolvedTitle.source} />
 		<meta name="theme-color" content="#11251c" />
 		<meta name="description" content={description} />
-		<meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'} />
+		<meta name="robots" content={excludeFromIndex ? 'noindex,follow' : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'} />
 		<link rel="canonical" href={canonical} />
 		{alternateLinks.map((item) => <link rel="alternate" hreflang={item.hreflang} href={item.href} />)}
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />

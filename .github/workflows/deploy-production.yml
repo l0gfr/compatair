@@ -213,6 +213,9 @@ jobs:
           retention-days: 7
           compression-level: 0
 
+      - name: Verify SEO publication checkpoint before deployment
+        run: node scripts/verify-indexation-release.mjs
+
       - name: Configure SSH
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}

@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/prepare-indexation.mjs && astro build",
     "check": "astro check",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -42,6 +42,7 @@
     "sources:check": "node scripts/check-source-links.mjs",
     "archive:verify": "bash scripts/verify-source-archive.sh",
     "seo:verify-live": "node scripts/verify-live-seo.mjs",
+    "seo:prepare": "node scripts/prepare-indexation.mjs",
     "lint:source": "node scripts/lint-source.mjs",
     "lighthouse": "lhci autorun",
     "lighthouse:production": "lhci autorun",

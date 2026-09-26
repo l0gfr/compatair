@@ -60,6 +60,15 @@ export function verifyReleasePayload(payload, expectedSha) {
 	if (payload?.gitSha !== expectedSha) throw new Error(`release.json: SHA ${payload?.gitSha ?? 'absent'} différent de ${expectedSha}`);
 }
 
+export function verifyIndexationPage(pathname, html, indexable, sitemapUrls, origin) {
+	const robots = html.match(/<meta name="robots" content="([^"]+)"/)?.[1]?.split(',').map((rule) => rule.trim());
+	const expectedCanonical = new URL(pathname, origin).href;
+	const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
+	if (!robots || (indexable ? !robots.includes('index') || robots.includes('noindex') : !robots.includes('noindex'))) throw new Error(`${pathname}: directive robots inattendue`);
+	if (canonical !== expectedCanonical) throw new Error(`${pathname}: canonique différente de l’URL attendue`);
+	if (sitemapUrls.has(expectedCanonical) !== indexable) throw new Error(`${pathname}: présence dans le sitemap contraire à la politique`);
+}
+
 export function verifySnapshotRange({ status, contentRange, contentType, bytes }, expectedPrefix, totalBytes) {
 	if (status !== 206) throw new Error('snapshot: réponse partielle 206 requise');
 	if (contentType?.split(';')[0].trim() !== 'application/json') throw new Error('snapshot: type JSON requis');

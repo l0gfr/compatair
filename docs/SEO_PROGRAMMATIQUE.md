@@ -1,11 +1,13 @@
 # Politique de SEO programmatique
 
+La [politique de montée progressive](SEO_CROISSANCE_ORGANIQUE.md) décrit le contrôle automatique ajouté au build : guides et fiches sont admis par lots, après analyse des sources et de la répétition. Son activation publique dépend du déploiement de cette version.
+
 Les verdicts compresseur-outil répondent à un besoin produit réel, mais leur nombre croît comme le produit du nombre de compresseurs par le nombre d’outils. CompatAir expose 927 453 combinaisons explorables : le snapshot auditable conserve 920 706 verdicts fixes, tandis que 6 747 combinaisons paramétriques exigent une cadence ou un volume et un temps cible. Le calculateur et les interfaces MCP/UCP traitent ces paramètres sans générer un fichier HTML par résultat ; l’endpoint API HTTP limité aux identifiants répond `insufficient_data` pour ces outils.
 
 ## Frontière d’indexation
 
-- Les fiches de compresseur et d’outil restent indexables lorsqu’elles possèdent des données et sources propres.
-- Les pages « quel compresseur pour… » restent indexables : chacune agrège un besoin constructeur distinct, les effectifs par verdict du catalogue et une sélection bornée de résultats expliqués.
+- Les fiches de compresseur et d’outil déjà publiées sont conservées ; les nouvelles fiches passent par les critères et quotas automatiques de la politique de montée progressive.
+- Les pages « quel compresseur pour… » déjà publiées sont conservées. Les nouvelles restent en `noindex` tant que leur gabarit réutilise le dossier de la fiche outil sans apporter une réponse distincte.
 - Aucune page statique n’est générée sous `/compatibilite/` et aucun lien interne nouveau ne doit cibler cet espace retiré.
 - Une ancienne URL exacte dont les deux slugs existent encore reçoit une redirection permanente vers le calculateur prérempli avec les identifiants canoniques dans le fragment d’URL.
 - Une URL ancienne inconnue, ambiguë ou mal formée reçoit une réponse `410 Gone` ciblée. Les paramètres de suivi d’une URL connue sont supprimés lors de la redirection canonique.

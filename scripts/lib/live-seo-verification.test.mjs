@@ -7,9 +7,21 @@ import {
 	verifyDetailPage,
 	verifyReleasePayload,
 	verifySnapshotRange,
+	verifyIndexationPage,
 } from './live-seo-verification.mjs';
 
 describe('vérification SEO de la surface live', () => {
+	it('vérifie les admissions et attentes dans les robots, canoniques et sitemaps', () => {
+		const origin = 'https://compatair.fr';
+		const path = '/guides/exemple/';
+		const url = `${origin}${path}`;
+		const html = (robots) => `<meta name="robots" content="${robots}"><link rel="canonical" href="${url}">`;
+		expect(() => verifyIndexationPage(path, html('index,follow'), true, new Set([url]), origin)).not.toThrow();
+		expect(() => verifyIndexationPage(path, html('noindex,follow'), false, new Set(), origin)).not.toThrow();
+		expect(() => verifyIndexationPage(path, html('index,follow'), false, new Set(), origin)).toThrow('robots');
+		expect(() => verifyIndexationPage(path, html('noindex,follow'), false, new Set([url]), origin)).toThrow('sitemap');
+		expect(() => verifyIndexationPage(path, html('index,follow').replace(url, `${origin}/`), true, new Set([url]), origin)).toThrow('canonique');
+	});
 	it('vérifie les octets et la taille du snapshot sans décoder une séquence UTF-8 coupée', () => {
 		const prefix = Buffer.from('débit').subarray(0, 2);
 		expect(() => verifySnapshotRange({ status: 206, contentRange: 'bytes 0-1/12345', contentType: 'application/json; charset=utf-8', bytes: prefix }, prefix, 12345)).not.toThrow();

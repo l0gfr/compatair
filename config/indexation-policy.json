@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "paused": false,
+  "minimumDaysBetweenBatches": 7,
+  "stages": [
+    { "catalog": 50, "guides": 5 },
+    { "catalog": 100, "guides": 10 },
+    { "catalog": 150, "guides": 15 },
+    { "catalog": 200, "guides": 20 }
+  ],
+  "maximumTopicShare": 0.25,
+  "similarityThreshold": 0.82,
+  "containmentThreshold": 0.92
+}

@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { createSitemapSerializer } from './scripts/lib/sitemap-lastmod.mjs';
+import { isIndexablePath } from './scripts/lib/indexation-build.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,13 +11,12 @@ export default defineConfig({
 	integrations: [sitemap({
 		entryLimit: 5_000,
 		serialize: createSitemapSerializer(),
-		filter: (page) => {
-			const pathname = new URL(page).pathname;
-			return !pathname.startsWith('/compatibilite/')
-				&& !pathname.startsWith('/go/')
-				&& !pathname.startsWith('/preuves/page/')
-				&& !pathname.startsWith('/sources-fiabilite/page/')
-				&& !['/410/', '/comparateur/', '/offres/', '/recherche/', '/securite/'].includes(pathname);
+		filter: (page) => isIndexablePath(new URL(page).pathname),
+		chunks: {
+			guides: (item) => new URL(item.url).pathname.startsWith('/guides/') ? item : undefined,
+			compresseurs: (item) => new URL(item.url).pathname.startsWith('/compresseurs/') ? item : undefined,
+			outils: (item) => new URL(item.url).pathname.startsWith('/outils-pneumatiques/') ? item : undefined,
+			usages: (item) => new URL(item.url).pathname.startsWith('/quel-compresseur-pour/') ? item : undefined,
 		},
 	})],
 	build: {

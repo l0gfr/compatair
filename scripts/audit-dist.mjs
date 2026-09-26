@@ -10,12 +10,18 @@ import { brandSlug } from '../src/domain/brand.ts';
 import { FAD_COMPARISON_PAGE_SIZE, GUIDE_DIRECTORY_PAGE_SIZE, TOOL_USAGE_PAGE_SIZE } from '../src/domain/pagination.ts';
 import { parseJavaScriptModuleSpecifiers } from './lib/javascript-module-graph.mjs';
 import { decodeXmlEntities as decodeXml, extractH1Text } from './lib/markup-text.mjs';
+import { createIndexationPolicy, validateBaseline, validateManifest } from './lib/indexation-policy.mjs';
 
 const root = resolve('dist');
 const siteOrigin = 'https://compatair.fr';
 const errors = [];
 const warnings = [];
 const htmlFiles = [];
+const indexationBaseline = validateBaseline(JSON.parse(await readFile('config/indexation-baseline.json', 'utf8')));
+const indexationManifest = validateManifest(JSON.parse(await readFile(join(root, 'data/indexation.json'), 'utf8')), indexationBaseline);
+const indexationRelease = JSON.parse(await readFile(join(root, 'data/release.json'), 'utf8'));
+if (indexationManifest.gitSha !== indexationRelease.gitSha) throw new Error('Historique d’indexation et release différents.');
+const indexationAllows = createIndexationPolicy(indexationBaseline, indexationManifest);
 const artifactPaths = new Set();
 const productImageDimensionsBySource = new Map();
 const maximumDocumentTitleLength = 60;
@@ -795,6 +801,8 @@ for (const file of htmlFiles) {
 	const author = html.match(/<meta name="author" content="([^"]+)"/)?.[1];
 	const titleSource = html.match(/<meta name="compatair:title-source" content="([^"]+)"/)?.[1];
 	const noindex = robots.split(',').map((rule) => rule.trim()).includes('noindex');
+	const indexationPath = label === 'index.html' ? '/' : `/${label.replace(/index\.html$/, '')}`;
+	if (noindex === indexationAllows(indexationPath)) errors.push(`${label}: directive robots contraire à la politique d’indexation`);
 	const isCompatibilityDetail = label.startsWith('compatibilite/');
 	const isGuideArticle = /^guides\/[^/]+\/index\.html$/.test(label) && !['guides/particuliers/index.html', 'guides/professionnels/index.html'].includes(label);
 	const isEditorialProductPage = /^(compresseurs|outils-pneumatiques|quel-compresseur-pour)\/[^/]+\/index\.html$/.test(label);

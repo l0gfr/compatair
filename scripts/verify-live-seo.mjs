@@ -5,6 +5,7 @@ import {
 	extractSitemapLocations,
 	verifyDetailPage,
 	verifyReleasePayload,
+	verifyIndexationPage,
 } from './lib/live-seo-verification.mjs';
 
 const origin = new URL(process.env.COMPATAIR_SITE_ORIGIN ?? 'https://compatair.fr').origin;
@@ -75,12 +76,22 @@ const sitemapUrls = extractSitemapLocations(sitemapIndex);
 if (!sitemapUrls.length) throw new Error('sitemap-index.xml: aucun sitemap enfant');
 const pageUrls = new Set();
 for (const sitemapUrl of sitemapUrls) for (const pageUrl of extractSitemapLocations(await fetchText(new URL(sitemapUrl).pathname))) pageUrls.add(pageUrl);
+const indexation = JSON.parse(await fetchText('/data/indexation.json'));
+if (indexation.schemaVersion !== 1 || indexation.gitSha !== expectedSha || !Array.isArray(indexation.checks) || !indexation.checks.length || indexation.checks.length > 18) throw new Error('Historique SEO public absent ou incohérent.');
+for (const check of indexation.checks) {
+	if (!/^\/(?:[a-z0-9-]+\/)+$/.test(check.path) || typeof check.indexable !== 'boolean') throw new Error('Sonde d’indexation invalide.');
+	verifyIndexationPage(check.path, await fetchText(check.path), check.indexable, pageUrls, origin);
+}
 const detailPaths = [...pageUrls]
 	.map((url) => new URL(url).pathname)
 	.filter((pathname) => detailPagePolicies.some((policy) => policy.pattern.test(pathname)));
 if (!detailPaths.length) throw new Error('sitemap: aucune page détail à vérifier');
 
-const checked = await mapConcurrent(detailPaths, 10, async (pathname) => verifyDetailPage(pathname, await fetchText(pathname), origin));
+const checked = await mapConcurrent(detailPaths, 10, async (pathname) => {
+	const html = await fetchText(pathname);
+	verifyIndexationPage(pathname, html, true, pageUrls, origin);
+	return verifyDetailPage(pathname, html, origin);
+});
 const maximumObservedLinks = Math.max(...checked.map((item) => item?.internalLinks ?? 0));
 const maximumObservedResults = Math.max(...checked.map((item) => item?.staticResults ?? 0));
 console.log(`Surface SEO live vérifiée pour ${release.gitSha} : ${detailPaths.length} pages détail, ${maximumObservedLinks} liens internes maximum et ${maximumObservedResults} résultats statiques maximum.`);
