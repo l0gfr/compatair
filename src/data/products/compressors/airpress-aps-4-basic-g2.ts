@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 10,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-aps-4-basic-g2.webp",
@@ -53,7 +53,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "115 kg",
 			"evidenceIds": [
 				"airpress-362804m2-20260926"

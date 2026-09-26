@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 10,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-aps-60-ivr-x.webp",
@@ -81,7 +81,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "620 kg",
 			"evidenceIds": [
 				"airpress-369460-ivr-g2-20260926"

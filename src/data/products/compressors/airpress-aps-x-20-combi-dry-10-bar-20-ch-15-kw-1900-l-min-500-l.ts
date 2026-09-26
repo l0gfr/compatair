@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 10,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-aps-x-20-combi-dry-10-bar-20-ch-15-kw-1900-l-min-500-l.webp",
@@ -53,7 +53,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "570 kg",
 			"evidenceIds": [
 				"airpress-369020-p-20260926"

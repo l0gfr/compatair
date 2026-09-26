@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 10,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-hk-600-270-pro.webp",
@@ -54,7 +54,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "134 kg",
 			"evidenceIds": [
 				"airpress-360565-20260926"

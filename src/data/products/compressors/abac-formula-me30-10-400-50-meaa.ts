@@ -26,7 +26,7 @@ const product = {
 		"verifiedFacts": [
 			"Débit restitué publié : 4 560 L/min à 10 bar.",
 			"Compresseur lubrifié, réserve d’huile déclarée par le fabricant. Puissance moteur publiée : 30 kW.",
-			"Masse nette publiée : 707 kg.",
+			"Masse publiée : 707 kg.",
 			"Alimentation publiée : 400 V, 50 Hz, triphasée."
 		],
 		"limitations": [

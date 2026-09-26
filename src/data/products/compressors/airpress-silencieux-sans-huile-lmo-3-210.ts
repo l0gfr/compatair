@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 10,
 	"fadCurve": [],
 	"oilType": "oil-free",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-silencieux-sans-huile-lmo-3-210.webp",
@@ -54,7 +54,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "13 kg",
 			"evidenceIds": [
 				"airpress-36748-20260926"

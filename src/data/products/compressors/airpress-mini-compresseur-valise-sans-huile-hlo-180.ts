@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 8,
 	"fadCurve": [],
 	"oilType": "oil-free",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-mini-compresseur-valise-sans-huile-hlo-180.webp",
@@ -54,7 +54,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "6 kg",
 			"evidenceIds": [
 				"airpress-36942-20260926"

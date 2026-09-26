@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 10,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-mobile-a-essence-bm-50-410-honda-gp160-10-bar-4-8-ch-3-6-kw-247-l-min-50-l.webp",
@@ -53,7 +53,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "86 kg",
 			"evidenceIds": [
 				"airpress-36761-20260926"

@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 8,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/abac-spinn3-i-8-400-50.webp",
@@ -21,7 +21,7 @@ const product = {
 		"verifiedFacts": [
 			"Débit restitué à une pression de mesure précise : non documenté.",
 			"Compresseur lubrifié, réserve d’huile déclarée par le fabricant. Puissance moteur publiée : 3 kW.",
-			"Masse nette publiée : 125 kg.",
+			"Masse publiée : 125 kg.",
 			"Alimentation publiée : 400 V, 50 Hz, triphasée."
 		],
 		"limitations": [

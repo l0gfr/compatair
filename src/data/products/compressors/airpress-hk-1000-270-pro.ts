@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 11,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-hk-1000-270-pro.webp",
@@ -54,7 +54,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "160 kg",
 			"evidenceIds": [
 				"airpress-360650-20260926"

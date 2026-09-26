@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 13,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-ecopower-premium-10-pm-ivr.webp",
@@ -74,7 +74,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "208 kg",
 			"evidenceIds": [
 				"airpress-36410-dd-pm-20260926"

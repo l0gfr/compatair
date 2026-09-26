@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 13,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-aps-15-basic-364809-13.webp",
@@ -53,7 +53,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "185 kg",
 			"evidenceIds": [
 				"airpress-364809-13-20260926"

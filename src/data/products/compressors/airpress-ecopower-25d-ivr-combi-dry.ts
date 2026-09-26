@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 13,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-ecopower-25d-ivr-combi-dry.webp",
@@ -74,7 +74,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "550 kg",
 			"evidenceIds": [
 				"airpress-36679525-ivr-20260926"

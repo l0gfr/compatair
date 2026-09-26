@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 11,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-black-pro-nb7-500.webp",
@@ -54,7 +54,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "216 kg",
 			"evidenceIds": [
 				"airpress-360117-20260926"

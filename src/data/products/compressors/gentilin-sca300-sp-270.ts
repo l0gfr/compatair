@@ -26,7 +26,7 @@ const product = {
 		"verifiedFacts": [
 			"Débit restitué publié : 240 L/min à 8 bar.",
 			"Compresseur scroll sans huile. Puissance moteur publiée : 2,2 kW.",
-			"Masse nette publiée : 610 kg.",
+			"Masse publiée : 610 kg.",
 			"Alimentation publiée : 230 V, 50 Hz."
 		],
 		"limitations": [

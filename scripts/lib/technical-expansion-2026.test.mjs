@@ -18,6 +18,8 @@ describe('reviewed technical expansion of 2000 manufacturer references', () => {
  it('keeps unqualified flow out of the FAD curve and refuses a conclusive verdict', () => {
   const p = batch.compressors.find(x => x.brand === 'Airpress');
   expect(p.fadCurve).toEqual([]);
+  expect(p.confidence).toBe('B');
+  expect(p.specifications.some(s => s.label === 'Masse publiée (base non précisée)')).toBe(true);
   expect(p.specifications.some(s => s.label.includes('pression de mesure non précisée'))).toBe(true);
   expect(evaluateCompatibility(p, tools[0]).verdict).toBe('insufficient_data');
  });

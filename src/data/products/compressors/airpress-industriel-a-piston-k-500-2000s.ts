@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 14,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-industriel-a-piston-k-500-2000s.webp",
@@ -54,7 +54,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "390 kg",
 			"evidenceIds": [
 				"airpress-36526-n-20260926"

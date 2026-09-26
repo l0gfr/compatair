@@ -87,7 +87,15 @@ function validateTool(row) {
 }
 export function buildTechnicalExpansion(compressorSnapshot, toolSnapshot) {
  if (compressorSnapshot.rows.length !== 500 || toolSnapshot.rows.length !== 1500) throw new Error('Périmètre du lot technique modifié');
- const compressors = compressorSnapshot.rows.map(row => { validateCompressor(row); const product = createMultiBrandCompressor(compressorSnapshot, row); if (row.idSuffix) product.variant = { familyId: product.id.slice(0, -row.idSuffix.length - 1), label: `Référence ${row.mpn}`, distinguishingAttributes: { reference: row.mpn } }; return product; });
+ const compressors = compressorSnapshot.rows.map(row => {
+  validateCompressor(row);
+  const product = createMultiBrandCompressor(compressorSnapshot, row);
+  if (!product.fadCurve.length) product.confidence = 'B';
+  product.editorial.verifiedFacts = product.editorial.verifiedFacts.map(fact => fact.replace('Masse nette publiée', 'Masse publiée'));
+  if (row.brand === 'Airpress') product.specifications = product.specifications.map(spec => spec.label === 'Poids' ? { ...spec, label: 'Masse publiée (base non précisée)' } : spec);
+  if (row.idSuffix) product.variant = { familyId: product.id.slice(0, -row.idSuffix.length - 1), label: `Référence ${row.mpn}`, distinguishingAttributes: { reference: row.mpn } };
+  return product;
+ });
  const tools = toolSnapshot.rows.map(row => { validateTool(row); const product = createMultiBrandTool(toolSnapshot, row);
   const hose = row.specifications.find(spec => spec.label === 'Diamètre intérieur de flexible conseillé');
   if (hose) {

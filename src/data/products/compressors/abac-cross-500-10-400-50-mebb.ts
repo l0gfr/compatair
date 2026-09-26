@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 10,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/abac-cross-500-10-400-50-mebb.webp",
@@ -21,7 +21,7 @@ const product = {
 		"verifiedFacts": [
 			"Débit restitué à une pression de mesure précise : non documenté.",
 			"Compresseur lubrifié, réserve d’huile déclarée par le fabricant. Puissance moteur publiée : 4 kW.",
-			"Masse nette publiée : 99 kg.",
+			"Masse publiée : 99 kg.",
 			"Alimentation publiée : 400 V, 50 Hz, triphasée."
 		],
 		"limitations": [

@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 11,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-g-1500-500-pro.webp",
@@ -54,7 +54,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "263 kg",
 			"evidenceIds": [
 				"airpress-369673-20260926"

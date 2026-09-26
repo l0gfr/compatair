@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 13,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-aps-20-basic-combi-364860-13.webp",
@@ -53,7 +53,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "297 kg",
 			"evidenceIds": [
 				"airpress-364860-13-20260926"

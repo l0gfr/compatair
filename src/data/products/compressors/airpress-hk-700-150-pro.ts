@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 11,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-hk-700-150-pro.webp",
@@ -54,7 +54,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "145 kg",
 			"evidenceIds": [
 				"airpress-360643-20260926"

@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 10,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-mobile-a-essence-bm-17-17-550-honda-gx270-10-bar-8-4-ch-6-3-kw-403-l-min-2-x-17-l.webp",
@@ -53,7 +53,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "127 kg",
 			"evidenceIds": [
 				"airpress-36754-20260926"

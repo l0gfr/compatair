@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 10,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-mobile-a-essence-bm-22-320-honda-gp160-10-bar-4-8-ch-3-6-kw-220-l-min-22-l.webp",
@@ -46,7 +46,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "60 kg",
 			"evidenceIds": [
 				"airpress-36780-20260926"

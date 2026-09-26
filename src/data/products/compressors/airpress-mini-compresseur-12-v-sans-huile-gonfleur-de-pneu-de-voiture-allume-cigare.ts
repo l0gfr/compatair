@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 7,
 	"fadCurve": [],
 	"oilType": "oil-free",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-mini-compresseur-12-v-sans-huile-gonfleur-de-pneu-de-voiture-allume-cigare.webp",
@@ -54,7 +54,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "1,1 kg",
 			"evidenceIds": [
 				"airpress-36950-20260926"

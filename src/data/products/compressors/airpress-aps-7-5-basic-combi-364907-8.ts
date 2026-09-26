@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 8,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-aps-7-5-basic-combi-364907-8.webp",
@@ -53,7 +53,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "257 kg",
 			"evidenceIds": [
 				"airpress-364907-8-20260926"

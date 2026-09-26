@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 8.9,
 	"fadCurve": [],
 	"oilType": "oil-free",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-mini-compresseur-sur-batterie-compresseur-sans-fil-lmo-25.webp",
@@ -54,7 +54,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "0,7 kg 700 g",
 			"evidenceIds": [
 				"airpress-36951-20260926"

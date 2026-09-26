@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 10,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-mini-compresseur-a-essence-bm-4-275-honda-gp160-10-bar-4-8-cv-3-6-kw-200-l-min-4-l.webp",
@@ -46,7 +46,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "39 kg",
 			"evidenceIds": [
 				"airpress-36778-20260926"

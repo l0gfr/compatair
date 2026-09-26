@@ -8,7 +8,7 @@ const product = {
 	"maxPressureBar": 11,
 	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/airpress-insonorise-apz-500.webp",
@@ -54,7 +54,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Poids",
+			"label": "Masse publiée (base non précisée)",
 			"value": "147 kg",
 			"evidenceIds": [
 				"airpress-34250-s-20260926"

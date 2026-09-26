@@ -31,7 +31,7 @@ const product = {
 			"Débit restitué publié : 400 L/min à 5 bar ; 370 L/min à 8 bar.",
 			"Compresseur à pistons sans huile. Puissance moteur publiée : 4 kW.",
 			"Débit aspiré : 660 L/min, distinct du débit restitué.",
-			"Masse nette publiée : 131 kg.",
+			"Masse publiée : 131 kg.",
 			"Alimentation publiée : 400 V, 50 Hz."
 		],
 		"limitations": [
