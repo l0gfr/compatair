@@ -1,8 +1,8 @@
 ---
-import { compressors, tools } from '../data/catalog';
+import { compressors } from '../data/catalog';
+import { calculatorOptionsIntegrity } from '../data/calculator-options';
 import { catalogSearchIdentifiers, compactCatalogOptionIdentifiers } from '../domain/catalog-search';
 import { compressorDisplayName } from '../domain/product-display';
-import { toolDemandLabel, toolPressureLabel } from '../domain/tool-demand';
 import { activeOffers, merchants } from '../data/offers';
 import { serializeJsonLd } from '../domain/structured-data';
 import ContextHelp from './ContextHelp.astro';
@@ -18,14 +18,7 @@ const commercialOffers = activeOffers
 		collectedAt: offer.collectedAt,
 	}));
 
-const calculatorToolOptions = tools.map((tool) => {
-	const value = `${tool.brand} ${tool.model}${tool.mpn ? ` · MPN ${tool.mpn}` : ''}${tool.ean ? ` · EAN ${tool.ean}` : ''}`;
-	return [
-		value, tool.id, `${tool.label} · ${toolDemandLabel(tool)} · ${toolPressureLabel(tool)}`,
-		compactCatalogOptionIdentifiers(tool.id, value, catalogSearchIdentifiers(tool.brand, tool.model, [tool.label, tool.id, tool.mpn, tool.ean, tool.gtin, ...tool.distributorSkus.map((identifier) => identifier.sku), ...tool.identifierAliases.map((alias) => alias.value)])),
-		{ demandModel: tool.demandModel, airflow: tool.demandModel === 'fixed-flow' ? tool.airflowLpm.typical : undefined, pressure: tool.workingPressureBar.typical, airPerAction: tool.demandModel === 'per-action' ? tool.airPerActionLiters : undefined, actionLabel: tool.demandModel === 'per-action' ? tool.actionLabel : undefined },
-	];
-});
+
 ---
 
 <div class="calculator calculator-v2" data-calculator data-ui-state="idle">
@@ -48,7 +41,7 @@ const calculatorToolOptions = tools.map((tool) => {
 		<fieldset class="calculator-fieldset">
 			<legend><span>01</span> Outils utilisés</legend>
 			<div data-demand-rows></div>
-			<button class="inline-action" type="button" data-add-tool>+ Ajouter un outil</button>
+			<button class="inline-action" type="button" data-add-tool disabled>+ Ajouter un outil</button>
 		</fieldset>
 
 		<div class="field-row">
@@ -185,7 +178,7 @@ const calculatorToolOptions = tools.map((tool) => {
 </template>
 
 <datalist id="calculator-tools"></datalist>
-<script is:inline type="application/json" data-calculator-tool-options set:html={serializeJsonLd(calculatorToolOptions)} />
+<span hidden data-calculator-tool-options data-integrity={calculatorOptionsIntegrity}></span>
 <datalist id="calculator-compressors">
 	<option value="Caractéristiques personnalisées" data-id="custom" data-identifiers={JSON.stringify(['custom'])}>Saisie personnalisée</option>
 	{compressors.map((compressor) => {
@@ -195,6 +188,7 @@ const calculatorToolOptions = tools.map((tool) => {
 </datalist>
 
 <script>
+	import { loadCalculatorOptions } from '../domain/calculator-options-loader';
 	import { catalogOptionIdentifiers, resolveExactCatalogSearch } from '../domain/catalog-search';
 	import { createDecisionResolution, explainDecisionDataGap, filterDecisionCandidatesByContext, rankDecisionCandidates } from '../domain/decision-resolution';
 	import { JOURNEY_CONTEXT_EVENT } from '../domain/journey-context';
@@ -294,15 +288,18 @@ const calculatorToolOptions = tools.map((tool) => {
 			const value = source[key]; if (value === undefined) delete target.dataset[key]; else target.dataset[key] = String(value);
 		}
 	}
-	// Keep the embedded catalog compact; native suggestions are ready before prefill.
-	type ToolOption = [string, string, string, string[], Partial<Record<'demandModel' | 'airflow' | 'pressure' | 'airPerAction' | 'actionLabel', string | number>>];
-	for (const [value, id, text, identifiers, demand] of JSON.parse(document.querySelector('[data-calculator-tool-options]')?.textContent ?? '[]') as ToolOption[]) {
-		const option = new Option(text, value);
-		option.dataset.id = id;
-		option.dataset.identifiers = JSON.stringify(identifiers);
-		setDemandData(option, demand);
-		toolDatalist?.append(option);
-	}
+	// Load the complete suggestions separately without blocking the first page render.
+	type ToolOption = [string, string, string, string[], Partial<Record<'demandModel' | 'airflow' | 'pressure' | 'airPerAction' | 'actionLabel', string | number>> | [number, number]];
+	const optionsPromise = new Promise<void>((resolve) => requestAnimationFrame(() => requestAnimationFrame(() => resolve())))
+		.then(() => loadCalculatorOptions<ToolOption[]>(document.querySelector<HTMLElement>('[data-calculator-tool-options]')?.dataset.integrity ?? '')).then((options) => {
+		for (const [value, id, text, identifiers, demand] of options) {
+			const option = new Option(text, value);
+			option.dataset.id = id;
+			option.dataset.identifiers = JSON.stringify(identifiers);
+			setDemandData(option, Array.isArray(demand) ? { demandModel: 'fixed-flow', airflow: demand[0], pressure: demand[1] } : demand);
+			toolDatalist?.append(option);
+		}
+	});
 
 	const setText = (selector: string, value: string) => { const element = root?.querySelector<HTMLElement>(selector); if (element) element.textContent = value; };
 	const labels = { continuous: 'Compatible en continu', intermittent: 'Compatible par intermittence', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' } as const;
@@ -916,8 +913,9 @@ const calculatorToolOptions = tools.map((tool) => {
 	const initialParameters = hasFragmentPrefill ? fragmentParameters : legacyParameters;
 	const requestedTool = scenarioPreset?.toolId ?? initialParameters.get('outil') ?? undefined;
 	const requestedCompressor = initialParameters.get('compresseur') ?? undefined;
-	const initialTool = requestedTool && optionById(toolDatalist, requestedTool) ? requestedTool : undefined;
 	async function initializeCalculator() {
+		await optionsPromise;
+		const initialTool = requestedTool && optionById(toolDatalist, requestedTool) ? requestedTool : undefined;
 		if (sharedConfiguration) {
 			await loadCalculatorRuntime();
 			const hashConfig = validateSharedConfig(decodePassportConfiguration(sharedConfiguration));
@@ -956,7 +954,14 @@ const calculatorToolOptions = tools.map((tool) => {
 			window.history.replaceState(null, '', `${window.location.pathname}${fragment ? `#${fragment}` : ''}`);
 		}
 	}
-	void initializeCalculator();
+	setCalculatorUiState('loading', 'Chargement des références documentées…');
+	void initializeCalculator().then(() => {
+		const addButton = root?.querySelector<HTMLButtonElement>('[data-add-tool]'); if (addButton) addButton.disabled = false;
+		setCalculatorUiState('idle');
+	}).catch(() => {
+		setCalculatorUiState('error', 'Les références n’ont pas pu être chargées. Rechargez cette page pour réessayer.');
+		for (const button of calculatorSubmitButtons) button.disabled = true;
+	});
 
 	form?.addEventListener('submit', async (event) => {
 		event.preventDefault(); if (!output || !list || !evaluated) return;

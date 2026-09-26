@@ -22,7 +22,9 @@ const maximumDocumentTitleLength = 60;
 const maximumInitialPageScriptBytesGzip = 50 * 1024;
 const maximumPassportInitialScriptBytesGzip = 45 * 1024;
 const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
-// 2 000 références : 101 Ko gzip de données calculateur ; les budgets JavaScript restent inchangés.
+// Le chargement séparé des suggestions ajoute le contrôle SRI et les états d'échec.
+const maximumCalculatorOnDemandScriptBytesGzip = 58 * 1024;
+// 2 000 références : 101 Ko gzip de données calculateur ; le budget JavaScript initial reste inchangé.
 const maximumRuntimeCatalogBytesGzip = 104 * 1024;
 const maximumSearchIndexBytesGzip = 80 * 1024;
 const maximumIndexableInternalDestinationsBeforeWarning = 100;
@@ -417,8 +419,10 @@ if (!artifactPaths.has('/calculateur/index.html')) errors.push('recommandation c
 else {
 	const calculatorHtml = await readFile(join(root, '/calculateur/index.html'), 'utf8');
 	try {
-		const match = calculatorHtml.match(/<script\b[^>]*\bdata-calculator-tool-options(?:="[^"]*")?[^>]*>([\s\S]*?)<\/script>/i);
-		const options = JSON.parse(match?.[1] ?? 'null');
+		const optionsJson = await readFile(join(root, '/calculateur/options.json'), 'utf8');
+		const integrity = `sha256-${createHash('sha256').update(optionsJson).digest('base64')}`;
+		if (!calculatorHtml.includes(`data-integrity="${integrity}"`)) throw new Error('empreinte des suggestions absente ou incohérente');
+		const options = JSON.parse(optionsJson);
 		const catalogTools = JSON.parse(await readFile(join(root, '/data/catalog.json'), 'utf8')).tools;
 		if (!Array.isArray(options) || options.length !== catalogTools.length || new Set(options.map(row => row[1])).size !== catalogTools.length) throw new Error('références absentes ou dupliquées');
 		const byId = new Map(options.map(row => [row[1], row]));
@@ -430,7 +434,9 @@ else {
 			if (tool.workingPressureBar.typical !== undefined) expectedDemand.pressure = tool.workingPressureBar.typical;
 			if (tool.demandModel === 'fixed-flow') expectedDemand.airflow = tool.airflowLpm.typical;
 			if (tool.demandModel === 'per-action') { expectedDemand.airPerAction = tool.airPerActionLiters; expectedDemand.actionLabel = tool.actionLabel; }
-			if (!isDeepStrictEqual(row[4], expectedDemand)) throw new Error(`besoin altéré pour ${tool.id}`);
+			if (Array.isArray(row[4]) && (row[4].length !== 2 || !row[4].every(Number.isFinite))) throw new Error(`besoin compact invalide pour ${tool.id}`);
+			const actualDemand = Array.isArray(row[4]) ? { demandModel: 'fixed-flow', airflow: row[4][0], pressure: row[4][1] } : row[4];
+			if (!isDeepStrictEqual(actualDemand, expectedDemand)) throw new Error(`besoin altéré pour ${tool.id}`);
 		}
 	} catch (error) { errors.push(`calculateur: catalogue compact incohérent (${error.message})`); }
 	for (const marker of ['data-counterfactual', 'data-counterfactual-result', 'data-counterfactual-boundary', 'data-decision-answer-first', 'data-scenario-context', 'data-scenario-result-links', 'data-contextual-compare', 'data-result-mode="essential"', 'name="buyerProfile"', 'name="powerSupply"', 'name="mobilityFilter"', 'name="maximumBudget"', 'Une référence brute est acceptée', 'Trois solutions adaptées à votre contexte', 'Comparer ces trois compresseurs pour ce besoin', 'Préparer mon installation', 'manomètre et un essai avec l’outil en charge', 'name="measuredPressureDrop"', 'name="measuredLeak"', 'name="supplyPressure"']) {
@@ -950,7 +956,8 @@ for (const file of htmlFiles) {
 	if (label === 'passeport/index.html') passportOnDemandScriptBudget = onDemandScriptBudget;
 	if (initialScriptBudget.bytes > maximumInitialPageScriptBytesGzip) errors.push(`${label}: chargement JavaScript initial ${Math.ceil(initialScriptBudget.bytes / 1024)} Ko gzip sur ${initialScriptBudget.modules} modules, budget ${maximumInitialPageScriptBytesGzip / 1024} Ko dépassé`);
 	if (label === 'passeport/index.html' && initialScriptBudget.bytes > maximumPassportInitialScriptBytesGzip) errors.push(`${label}: chargement JavaScript initial ${Math.ceil(initialScriptBudget.bytes / 1024)} Ko gzip, budget Passeport ${maximumPassportInitialScriptBytesGzip / 1024} Ko dépassé`);
-	if (onDemandScriptBudget.bytes > maximumOnDemandPageScriptBytesGzip) errors.push(`${label}: graphe JavaScript total à la demande ${Math.ceil(onDemandScriptBudget.bytes / 1024)} Ko gzip sur ${onDemandScriptBudget.modules} modules, budget ${maximumOnDemandPageScriptBytesGzip / 1024} Ko dépassé`);
+	const pageOnDemandLimit = label === 'calculateur/index.html' ? maximumCalculatorOnDemandScriptBytesGzip : maximumOnDemandPageScriptBytesGzip;
+	if (onDemandScriptBudget.bytes > pageOnDemandLimit) errors.push(`${label}: graphe JavaScript total à la demande ${Math.ceil(onDemandScriptBudget.bytes / 1024)} Ko gzip sur ${onDemandScriptBudget.modules} modules, budget ${pageOnDemandLimit / 1024} Ko dépassé`);
 }
 
 for (const [path, incoming] of incomingIndexableLinks) if (incoming === 0) errors.push(`maillage interne: page indexable sans lien entrant HTML ${path}`);
@@ -968,4 +975,4 @@ if (errors.length) {
 	process.exit(1);
 }
 const conclusiveCoverage = fixedFlowCompatibilityPairs ? (conclusiveCompatibilityPairs / fixedFlowCompatibilityPairs * 100).toFixed(1).replace('.', ',') : '0,0';
-console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, ${explorableCompatibilityPairs} combinaisons explorables dont ${fixedFlowCompatibilityPairs} verdicts fixes audités et ${parametricCompatibilityPairs} combinaisons paramétriques, sans page HTML quadratique ; couverture conclusive ${conclusiveCoverage} % (${conclusiveCompatibilityPairs}/${fixedFlowCompatibilityPairs} couples à débit fixe), ${socialImageCount} cartes sociales et titres ≤ ${maximumDocumentTitleLength} caractères. Artifact ${Math.ceil(totalArtifactBytes / 1024 / 1024)} Mo dont ${Math.ceil(htmlArtifactBytes / 1024 / 1024)} Mo de HTML, sous les budgets de ${maximumTotalArtifactBytes / 1024 / 1024} et ${maximumHtmlArtifactBytes / 1024 / 1024} Mo ; index de recherche ${Math.ceil(searchIndexBytesGzip / 1024)} Ko gzip. JavaScript initial ≤ ${maximumInitialPageScriptBytesGzip / 1024} Ko gzip (maximum ${Math.ceil(largestInitialPageScriptBudget.bytes / 1024)} Ko sur ${largestInitialPageScriptBudget.label}, Passeport ${Math.ceil(passportInitialScriptBudget.bytes / 1024)} Ko sous son budget de ${maximumPassportInitialScriptBytesGzip / 1024} Ko) ; total à la demande ≤ ${maximumOnDemandPageScriptBytesGzip / 1024} Ko (Calculateur ${Math.ceil(calculatorOnDemandScriptBudget.bytes / 1024)} Ko, Passeport ${Math.ceil(passportOnDemandScriptBudget.bytes / 1024)} Ko, maximum global ${Math.ceil(largestOnDemandPageScriptBudget.bytes / 1024)} Ko sur ${largestOnDemandPageScriptBudget.label}) ; catalogue d’exécution ${Math.ceil(runtimeCatalogBytesGzip / 1024)} Ko sous son budget de ${maximumRuntimeCatalogBytesGzip / 1024} Ko. Widget immuable et SRI vérifiés.`);
+console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, ${explorableCompatibilityPairs} combinaisons explorables dont ${fixedFlowCompatibilityPairs} verdicts fixes audités et ${parametricCompatibilityPairs} combinaisons paramétriques, sans page HTML quadratique ; couverture conclusive ${conclusiveCoverage} % (${conclusiveCompatibilityPairs}/${fixedFlowCompatibilityPairs} couples à débit fixe), ${socialImageCount} cartes sociales et titres ≤ ${maximumDocumentTitleLength} caractères. Artifact ${Math.ceil(totalArtifactBytes / 1024 / 1024)} Mo dont ${Math.ceil(htmlArtifactBytes / 1024 / 1024)} Mo de HTML, sous les budgets de ${maximumTotalArtifactBytes / 1024 / 1024} et ${maximumHtmlArtifactBytes / 1024 / 1024} Mo ; index de recherche ${Math.ceil(searchIndexBytesGzip / 1024)} Ko gzip. JavaScript initial ≤ ${maximumInitialPageScriptBytesGzip / 1024} Ko gzip (maximum ${Math.ceil(largestInitialPageScriptBudget.bytes / 1024)} Ko sur ${largestInitialPageScriptBudget.label}, Passeport ${Math.ceil(passportInitialScriptBudget.bytes / 1024)} Ko sous son budget de ${maximumPassportInitialScriptBytesGzip / 1024} Ko) ; total à la demande ≤ ${maximumOnDemandPageScriptBytesGzip / 1024} Ko hors Calculateur (Calculateur ${Math.ceil(calculatorOnDemandScriptBudget.bytes / 1024)} Ko sous son budget de ${maximumCalculatorOnDemandScriptBytesGzip / 1024} Ko, Passeport ${Math.ceil(passportOnDemandScriptBudget.bytes / 1024)} Ko, maximum global ${Math.ceil(largestOnDemandPageScriptBudget.bytes / 1024)} Ko sur ${largestOnDemandPageScriptBudget.label}) ; catalogue d’exécution ${Math.ceil(runtimeCatalogBytesGzip / 1024)} Ko sous son budget de ${maximumRuntimeCatalogBytesGzip / 1024} Ko. Widget immuable et SRI vérifiés.`);

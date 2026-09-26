@@ -32,8 +32,12 @@ Les 1 000 nouvelles preuves et les 500 observations MPN sont ajoutées à leurs 
 
 ## Volume et mémoire
 
-Le build initial mesure 419 Mio, dont 114,4 Mio de HTML répartis sur 4 227 pages. Les plafonds d’artefact passent à 464 Mio au total et 128 Mio de HTML. Le catalogue du calculateur mesure 101 Kio gzip, sous un plafond de 104 Kio ; l’index de recherche mesure 74,8 Kio, sous un plafond de 80 Kio. Les budgets JavaScript, LCP et accessibilité restent inchangés.
+Le build initial mesure 419 Mio, dont 114,4 Mio de HTML répartis sur 4 227 pages. Les plafonds d’artefact passent à 464 Mio au total et 128 Mio de HTML. Le catalogue du calculateur mesure 101 Kio gzip, sous un plafond de 104 Kio ; l’index de recherche mesure 74,8 Kio, sous un plafond de 80 Kio. Les budgets JavaScript initial, LCP et accessibilité restent inchangés. Le plafond du JavaScript total à la demande du seul calculateur passe de 57 à 58 Kio pour le chargement vérifié des suggestions et la gestion explicite des échecs (58 667 octets mesurés).
 
 Le lecteur MCP partage les charges de calcul identiques derrière une classe à prototype unique, avec un cache borné à 20 000 entrées. Les identifiants compresseur et outil restent individuels. Les enregistrements atypiques, les extensions inconnues et les clés réservées conservent leur représentation d’origine. Le benchmark reconstruit le JSON complet depuis les recherches indexées et vérifie son empreinte, puis les réponses HTTP, sous le plafond de service existant de 256 Mio. Le moteur de calcul reste inchangé.
 
 Le benchmark à 2 000 références restitue les 418 250 verdicts à l’identique avec un pic de 225,3 Mio. Le contrôle de rendu à 390 px ne montre aucun débordement horizontal sur la fiche Desoutter vérifiée ; le calculateur préremplit la référence Atlas Copco testée et restitue sa cible de 1 650 L/min avec la réserve de 25 %.
+
+Les suggestions du calculateur sont servies séparément avec une empreinte SHA-256 vérifiée par le navigateur. Leur chargement commence après le premier affichage et précède tout préremplissage. Une indisponibilité, une empreinte incohérente ou un dépassement de délai bloque le calcul avec une erreur visible. Le HTML passe de 545 277 à 92 143 octets. Le contrôle Lighthouse ciblé mesure un LCP de 2,27 s, aucun décalage de mise en page et un score performance de 98/100.
+
+Le contrôle des 1 186 URL de sources ne confirme aucun lien mort. Les 502 sources propres au nouveau lot répondent, dont deux après un second contrôle. Douze sources Metabo antérieures renvoient HTTP 502 lors des deux contrôles ; onze autres sources antérieures restent non vérifiables automatiquement. Ces états ne sont pas requalifiés en succès.
