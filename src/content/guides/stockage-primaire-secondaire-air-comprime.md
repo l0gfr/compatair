@@ -60,6 +60,10 @@ Après installation, rejouez l’événement : pression au procédé, pression d
 
 Le dossier conserve la courbe avant/après. Une réserve qui évite la chute mais déclenche une machine supplémentaire à chaque recharge demande encore un réglage de stratégie.
 
+Pour prolonger cette vérification, vous pouvez [préparer le raccordement de deux compresseurs en parallèle](/guides/raccorder-deux-compresseurs-en-parallele/).
+
+Le [cas des vibreurs pneumatiques de trémie](/guides/vibreur-pneumatique-tremie-debit-compresseur/) illustre la différence entre appel instantané, durée d’activation et consommation moyenne.
+
 ## Sources
 
 - [U.S. Department of Energy, Improving Compressed Air System Performance](https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf)

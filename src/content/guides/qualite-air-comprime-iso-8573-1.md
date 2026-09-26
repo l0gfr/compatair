@@ -108,6 +108,10 @@ Si l’une de ces réponses manque, l’expression air propre reste trop vague p
 
 Pour une conduite exposée à l’hiver, préparez le besoin avec le guide [séchage de l’air en atelier non chauffé](/guides/secheur-air-comprime-atelier-non-chauffe/). Les scénarios de température y sont explicitement distingués des performances garanties d’un sécheur.
 
+Pour prolonger cette vérification, vous pouvez [distinguer charbon actif, vapeurs d’huile et filtration coalescente](/guides/filtre-charbon-actif-air-comprime-vapeurs-huile/) et [rédiger les exigences d’air au contact des aliments avec le responsable qualité](/guides/air-comprime-contact-alimentaire-exigences/).
+
+Pour un cabinet, le [guide de consultation d’une centrale d’air dentaire](/guides/compresseur-dentaire-debit-qualite-cabinet/) précise le périmètre normatif et les exigences à faire documenter.
+
 ## Sources
 
 - [ISO, ISO 8573-1:2010, Air comprimé, polluants et classes de pureté](https://www.iso.org/fr/standard/46418.html)

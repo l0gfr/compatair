@@ -2,7 +2,7 @@
 title: "Fuites d’air comprimé : les détecter, les mesurer et suivre les réparations"
 description: "Une méthode sourcée pour distinguer une suspicion de fuite d’une mesure exploitable, localiser les défauts et vérifier les réparations du réseau."
 pubDate: 2026-07-13
-updatedDate: 2026-07-20
+updatedDate: 2026-09-26
 category: "Utiliser"
 audiences: [professionnel]
 metiers: [garage-automobile, carrosserie-peinture, menuiserie-agencement, maintenance-industrielle]
@@ -91,6 +91,10 @@ Après une campagne importante, les réglages de commande peuvent nécessiter un
 Une fuite augmente la demande, mais une pression insuffisante à l’outil peut aussi provenir d’un [flexible restrictif](/guides/diametre-longueur-flexible-air-comprime/), d’un filtre chargé ou d’un débit compresseur insuffisant. Le dossier sur le [profil de pression](/guides/diagnostiquer-chute-pression-air-comprime/) permet de localiser l’endroit où la pression est perdue.
 
 La bonne séquence est donc : mesurer, localiser, réparer, vérifier, puis seulement reconsidérer la capacité du compresseur.
+
+Pour prolonger cette vérification, vous pouvez [organiser la coupure d’air des machines pendant les arrêts](/guides/couper-air-comprime-machine-arret-week-end/) et [distinguer refroidissement de la cuve et fuite après l’arrêt](/guides/compresseur-perd-pression-arret-fuite-refroidissement/).
+
+Pour un souffle localisé sur un détendeur, le [guide du régulateur qui fuit par l’évent](/guides/regulateur-air-comprime-fuit-event-decompression/) aide à identifier la version et le moment d’apparition.
 
 ## Sources
 

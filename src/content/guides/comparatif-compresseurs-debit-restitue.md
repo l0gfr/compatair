@@ -2,7 +2,7 @@
 title: "Comparatif de compresseurs : lire les débits restitués sans se tromper"
 description: "Comparez les compresseurs selon leur débit restitué à la pression demandée, avec des résultats recalculés depuis les données CompatAir."
 pubDate: 2026-07-13
-updatedDate: 2026-07-14
+updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: []
@@ -68,6 +68,8 @@ Un résultat « incompatible » signifie qu’une condition documentée échoue,
 La page publie trois éléments recalculés à chaque mise à jour : le niveau de documentation du débit restitué, le tableau complet des points débit-pression et le nombre de résultats continus, incompatibles ou insuffisants pour chaque outil à débit fixe.
 
 Cette mise à jour automatique évite qu’un nouvel outil ou un nouveau compresseur rende le texte faux. Les pages [« quel compresseur pour »](/outils-pneumatiques/) et les vérifications de [compatibilité](/calculateur/) utilisent les mêmes données et la même méthode.
+
+La [lecture détaillée d’une fiche CAGI](/guides/lire-fiche-cagi-compresseur-iso-1217/) aide à conserver pression, débit et puissance dans le périmètre exact du document.
 
 ## Sources
 

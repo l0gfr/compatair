@@ -56,6 +56,8 @@ Une fois la nature du débit identifiée, utilisez le [tableau CFM, L/s, L/min e
 
 Pour une machine déjà utilisée, distinguez aussi la performance d’origine et l’état de l’exemplaire vendu. Le dossier [acheter un compresseur d’occasion](/guides/acheter-compresseur-occasion-controles-documents/) explique les preuves à demander avant de conclure à la compatibilité.
 
+Pour prolonger cette vérification, vous pouvez [interpréter un temps de remplissage de cuve sans le présenter comme du FAD](/guides/temps-remplissage-cuve-compresseur-debit/).
+
 ## Sources
 
 - [Atlas Copco, Compressed Air Manual, 9e édition](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf)

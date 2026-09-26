@@ -1,4 +1,44 @@
 export const glossarySources = {
+	vaisalaDewSampling: {
+		label: 'Vaisala, mesure et prélèvement du point de rosée',
+		url: 'https://www.vaisala.com/sites/default/files/documents/CompAir-Sampling-Cell-AppNote-B211229EN.pdf',
+	},
+	bekoCoalescence: {
+		label: 'BEKO TECHNOLOGIES, fonctions du traitement d’air',
+		url: 'https://www.beko-technologies.com/en-en/know-how/compressed-air/compressed-air-treatment/',
+	},
+	schmalzVacuum: {
+		label: 'Schmalz, références de pression en technique du vide',
+		url: 'https://www.schmalz.com/en-tr/support/know-how/vacuum-knowledge/basic-knowledge/',
+	},
+	nioshSequential: {
+		label: 'NIOSH, sécurité des cloueurs et gâchette séquentielle complète',
+		url: 'https://www.cdc.gov/niosh/construction/nail-gun-safety/index.html',
+	},
+	festoAirConsumption: {
+		label: 'Festo, conditions générales et consommation des vérins',
+		url: 'https://www.festo.com/media/cms/media/mam_upload/market/Festo_General_operating_conditions_en.pdf',
+	},
+	smcMeterOut: {
+		label: 'SMC, série ASS, réglage à l’échappement',
+		url: 'https://static.smc.eu/pdf/ASS100_EU.pdf',
+	},
+	smcSilencer: {
+		label: 'SMC, silencieux et nettoyage de l’échappement',
+		url: 'https://www.smc.eu/en-gb/products/silencers-exhaust-cleaners~134605~nav',
+	},
+	canadaAirEnergy: {
+		label: 'Ressources naturelles Canada, efficacité des systèmes d’air comprimé',
+		url: 'https://natural-resources.canada.ca/energy-efficiency/energy-star/energy-efficiency-reference-guide-compressed-air',
+	},
+	kaeserMembrane: {
+		label: 'KAESER, sécheurs à membrane',
+		url: 'https://fr.kaeser.com/produits/traitement-d-air-comprime-et-condensats/secheurs/secheurs-a-membrane/',
+	},
+	parkerCarbon: {
+		label: 'Parker, traitement des vapeurs d’huile par charbon actif',
+		url: 'https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf',
+	},
 	atlasMotorPerformance: {
 		label: 'Atlas Copco, performances des moteurs pneumatiques à palettes',
 		url: 'https://www.atlascopco.com/en-us/itba/industry-solutions/Airmotors/technicalguide/performance',
@@ -104,6 +144,16 @@ export type GlossaryTerm = {
 };
 
 export const glossaryTerms: GlossaryTerm[] = [
+	{ term: 'Point de rosée atmosphérique', slug: 'point-rosee-atmospherique', definition: 'Température de rosée exprimée à la pression atmosphérique. Elle ne se compare pas directement à une mesure sous une autre pression sans connaître les conditions et la méthode de conversion.', source: 'vaisalaDewSampling', related: { label: 'Comparer deux points de rosée', href: '/guides/point-rosee-atmospherique-sous-pression-mesure/' } },
+	{ term: 'Coalescence', slug: 'coalescence', definition: 'Réunion de fines gouttelettes en gouttes plus grosses pour permettre leur séparation et leur évacuation. La filtration coalescente ne doit pas être assimilée à un traitement de la vapeur d’huile.', source: 'bekoCoalescence', related: { label: 'Distinguer séparation et filtration', href: '/guides/separateur-cyclonique-filtre-coalescent-differences/' } },
+	{ term: 'Vide relatif', slug: 'vide-relatif', definition: 'Pression inférieure à l’ambiance, exprimée par rapport à la pression atmosphérique locale prise comme zéro. Une valeur négative relative ne désigne pas une pression absolue négative.', source: 'schmalzVacuum', related: { label: 'Lire un affichage de vide', href: '/guides/vacuometre-vacuostat-bar-absolu-pourcentage-vide/' } },
+	{ term: 'Déclenchement séquentiel complet', slug: 'declenchement-sequentiel-complet', definition: 'Mode de déclenchement d’un cloueur exigeant une séquence définie du contact et de la gâchette pour chaque tir. Il se distingue d’un déclenchement par contact ; son fonctionnement exact doit être lu dans la notice.', source: 'nioshSequential', related: { label: 'Comparer les mécanismes de déclenchement', href: '/guides/cloueur-pneumatique-declenchement-sequentiel-contact/' } },
+	{ term: 'Cycle de vérin double effet', slug: 'cycle-verin-double-effet', definition: 'Aller-retour complet d’un vérin alimenté dans les deux sens. Le bilan d’air additionne les consommations de sortie et de rentrée ; la géométrie côté tige peut différer de celle côté fond.', source: 'festoAirConsumption', related: { label: 'Calculer les litres par cycle', href: '/guides/consommation-verin-pneumatique-double-effet/' } },
+	{ term: 'Réglage meter-out', slug: 'meter-out', definition: 'Réglage de vitesse qui agit sur le débit d’air sortant d’un actionneur. Il se distingue du réglage meter-in, placé sur l’admission ; le comportement dépend du circuit et des conditions initiales.', source: 'smcMeterOut', related: { label: 'Régler la vitesse d’un vérin', href: '/guides/regler-vitesse-verin-pneumatique-echappement/' } },
+	{ term: 'Contre-pression d’échappement', slug: 'contre-pression-echappement', definition: 'Pression rencontrée dans le trajet de sortie de l’air. Le choix d’un silencieux vise notamment à limiter cette contre-pression ; une mesure sur l’alimentation ne mesure pas l’échappement.', source: 'smcSilencer', related: { label: 'Examiner un silencieux colmaté', href: '/guides/silencieux-pneumatique-colmate-contre-pression/' } },
+	{ term: 'Demande artificielle', slug: 'demande-artificielle', definition: 'Consommation supplémentaire liée à une pression supérieure au besoin pour les usages non régulés. Sa réduction doit préserver les exigences des postes et ne se confond pas avec une mesure directe d’économie électrique.', source: 'canadaAirEnergy', related: { label: 'Étudier une réduction de pression', href: '/guides/baisser-pression-reseau-demande-artificielle/' } },
+	{ term: 'Air de balayage', slug: 'air-balayage-membrane', definition: 'Part du flux employée par un sécheur à membrane pour évacuer l’humidité séparée. Elle entre dans le bilan entre débit d’alimentation et débit utile ; sa valeur dépend du modèle et de ses conditions.', source: 'kaeserMembrane', related: { label: 'Dimensionner un sécheur à membrane', href: '/guides/secheur-membrane-air-comprime-debit-balayage/' } },
+	{ term: 'Adsorption sur charbon actif', slug: 'adsorption-charbon-actif', definition: 'Rétention de contaminants sur un matériau adsorbant, employée notamment contre les vapeurs d’huile dans l’air comprimé. Ce traitement ne doit pas être confondu avec la séparation des aérosols par coalescence.', source: 'parkerCarbon', related: { label: 'Distinguer vapeurs et aérosols d’huile', href: '/guides/filtre-charbon-actif-air-comprime-vapeurs-huile/' } },
 	{ term: 'Couple minimal de démarrage', slug: 'couple-minimal-demarrage', definition: 'Plus faible couple disponible au départ d’un moteur pneumatique à palettes dans les conditions documentées, compte tenu de la position des palettes. Il se distingue du couple obtenu en freinant un moteur déjà en rotation jusqu’au calage.', source: 'atlasMotorPerformance', related: { label: 'Dimensionner un moteur pneumatique', href: '/guides/moteur-pneumatique-couple-demarrage-debit/' } },
 	{ term: 'Air de purge de régénération', slug: 'air-purge-regeneration', definition: 'Partie du flux utilisée pour régénérer le dessiccant d’un sécheur par adsorption. Le débit utile doit être distingué du débit entrant et le taux de purge conservé avec sa base de calcul et ses conditions.', source: 'kaeserAdsorption', related: { label: 'Calculer le débit net après séchage', href: '/guides/secheur-adsorption-air-purge-debit-net/' } },
 	{ term: 'Purgeur à détection de niveau', slug: 'purgeur-detection-niveau', definition: 'Dispositif qui commande l’évacuation des condensats à partir d’un niveau de liquide détecté. Sur le principe BEKOMAT documenté, un capteur capacitif pilote l’ouverture de la vanne ; les conditions et contrôles restent propres au modèle.', source: 'bekoLevelDrain', related: { label: 'Comparer temporisation et détection de niveau', href: '/guides/purgeur-condensats-temporise-detection-niveau/' } },
@@ -132,7 +182,6 @@ export const glossaryTerms: GlossaryTerm[] = [
 	{ term: 'Durée de session', slug: 'duree-session', definition: 'Temps total décrit pour un scénario d’utilisation, pauses et reprises comprises. CompatAir la traite comme une donnée d’usage déclarée, distincte du temps de marche réel et du cycle de service publié par le fabricant.', source: 'method', related: { label: 'Vérifier une configuration', href: '/calculateur/' } },
 	{ term: 'Débit aspiré', slug: 'debit-aspire', definition: 'Débit entrant dans le compresseur ou son filtre d’admission dans des conditions données. Il ne décrit pas directement le débit utile disponible sous pression.', source: 'cagi', related: { label: 'Débit aspiré ou FAD', href: '/guides/debit-restitue-fad-vs-debit-aspire/' } },
 	{ term: 'Débit restitué', slug: 'debit-restitue', definition: 'Débit effectivement délivré par le compresseur, exprimé selon des conditions identifiées. C’est la donnée à rapprocher du besoin d’un outil à pression comparable.', source: 'cagi', related: { label: 'Comparer les débits restitués', href: '/guides/comparatif-compresseurs-debit-restitue/' } },
-	{ term: 'Demande artificielle', slug: 'demande-artificielle', definition: 'Consommation supplémentaire créée par une pression du réseau supérieure au besoin réel, notamment sur les usages non régulés et les fuites.', source: 'doe', related: { label: 'Profil de pression', href: '/guides/diagnostiquer-chute-pression-air-comprime/' } },
 	{ term: 'Dessiccant', slug: 'dessiccant', definition: 'Matériau utilisé pour retenir l’humidité. Dans un sécheur par adsorption, sa surface poreuse attire l’eau et peut être régénérée selon la technologie.', source: 'cagi', related: { label: 'Point de rosée et sécheurs', href: '/guides/point-rosee-secheur-filtre-air-comprime/' } },
 	{ term: 'Extrapolation', slug: 'extrapolation', definition: 'Estimation effectuée en dehors de la plage couverte par les points connus. CompatAir ne prolonge pas une courbe constructeur hors de sa plage documentée.', source: 'method', related: { label: 'Règles du calculateur', href: '/methodologie/' } },
 	{ term: 'Émulsion stable', slug: 'emulsion-stable', definition: 'Dans un condensat huileux, mélange où l’huile reste finement dispersée dans l’eau. Un procédé adapté, validé sur le condensat concerné, est nécessaire lorsque la séparation physique seule ne suffit pas.', source: 'bekoCondensates', related: { label: 'Traitement huile/eau des condensats', href: '/guides/separateur-huile-eau-condensats-compresseur/' } },

@@ -16,6 +16,7 @@ sources:
   - https://www.atlascopco.com/en-us/itba/industry-solutions/Airmotors/technicalguide/performance
   - https://www.atlascopco.com/en-uk/itba/industry-solutions/airmotors/technicalguide/choose-air-motor
   - https://www.atlascopco.com/content/dam/pim/itba/atlas-copco/leaflets/global-leaflets/Leaflet-AtlasCopco-Pocket-Guide-to-Air-motors.pdf
+updatedDate: 2026-09-26
 ---
 
 Un moteur pneumatique peut fournir la puissance voulue une fois lancé et **ne pas garantir le couple nécessaire au démarrage**. Pour un entraînement d’atelier, il faut donc vérifier au moins trois états : le départ sous charge, le point de travail et la vitesse libre éventuelle. Une seule valeur en kW ne suffit pas à choisir le moteur ni le compresseur.
@@ -69,6 +70,10 @@ Exigez une courbe pour la pression **à l’entrée du moteur pendant le fonctio
 La formule `π × M × n / 30`, avec M en N·m et n en tr/min, donne des **watts**. La page de performance affiche pourtant « kW » dans sa légende ; l’exemple chiffré du Pocket Guide, page 19, donne bien 314 W puis 0,314 kW. Nous explicitons ici la conversion par 1 000 pour éviter une erreur d’échelle.
 
 Avant de valider un entraînement, faites confirmer les efforts admissibles, la commande et les conditions de montage par l’intégrateur. Le calcul du couple et de l’air ne valide pas à lui seul la sécurité ni la tenue mécanique de la machine.
+
+Pour prolonger cette vérification, vous pouvez [relier diamètre, pression et force d’un vérin](/guides/force-verin-pneumatique-diametre-pression/).
+
+Pour un mouvement angulaire limité, le [guide des vérins rotatifs](/guides/verin-rotatif-pneumatique-couple-angle-inertie/) relie le couple, l’angle et le dossier d’inertie de la charge.
 
 ## Sources et méthode
 

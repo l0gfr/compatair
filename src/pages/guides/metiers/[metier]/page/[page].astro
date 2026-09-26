@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import GuideMetierLibraryPage from '../../../../../components/GuideMetierLibraryPage.astro';
+import { guideMetierIds } from '../../../../../domain/editorial-taxonomy';
+import { GUIDE_DIRECTORY_PAGE_SIZE } from '../../../../../domain/pagination';
+
+export async function getStaticPaths() {
+	const guides = await getCollection('guides');
+	return guideMetierIds.flatMap((metier) => {
+		const totalPages = Math.ceil(guides.filter(({ data }) => data.metiers.includes(metier)).length / GUIDE_DIRECTORY_PAGE_SIZE);
+		return Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => ({
+			params: { metier, page: String(index + 2) },
+			props: { metier, page: index + 2 },
+		}));
+	});
+}
+const { metier, page } = Astro.props;
+---
+<GuideMetierLibraryPage metier={metier} page={page} />

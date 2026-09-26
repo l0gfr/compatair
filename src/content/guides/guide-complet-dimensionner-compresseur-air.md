@@ -117,6 +117,12 @@ Si la réponse à la cinquième question manque, le modèle ne doit pas être d�
 
 Pour les postes d’assemblage et d’usinage spécialisés, consultez les dossiers consacrés aux [taraudeuses pneumatiques](/guides/compresseur-pour-taraudeuse-pneumatique/) et aux [marteaux à river](/guides/compresseur-pour-marteau-a-river-pneumatique/). Ils distinguent les références exactes, le débit publié et les conditions de réception du poste.
 
+Pour prolonger cette vérification, vous pouvez [calculer les litres d’air par cycle de vérin](/guides/consommation-verin-pneumatique-double-effet/) et [séparer débit d’azote produit, pureté et consommation d’air du générateur](/guides/generateur-azote-compresseur-debit-purete/).
+
+Le [cas d’alimentation d’une CNC Haas VF-4](/guides/compresseur-machine-cnc-haas-pression-debit/) distingue le débit publié, la pression minimale et le besoin des accessoires.
+
+Le [guide des pinces pneumatiques](/guides/pince-pneumatique-force-doigt-longueur-prehension/) examine une autre solution de préhension, avec la force par mors et la géométrie des doigts.
+
 ## Sources
 
 - [Atlas Copco, Compressed Air Manual, 9e édition, chapitres 3.1 et 3.6](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf)

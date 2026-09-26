@@ -53,6 +53,8 @@ Le [tableau dynamique des verdicts](/quel-compresseur-pour/pistolet-sablage-meta
 
 Pour une installation à buse, utilisez aussi le [tableau diamètre, pression et consommation de sablage](/guides/buse-sablage-diametre-pression-debit-compresseur/). Il sépare le débit de la buse du besoin complet et montre pourquoi son usure mérite d’être suivie.
 
+Pour prolonger cette vérification, vous pouvez [comparer le besoin d’une cabine à succion et d’une cabine sous pression](/guides/compresseur-cabine-sablage-succion-pression/) et [diagnostiquer une baisse d’efficacité liée à l’air, au média ou à l’usure](/guides/sableuse-perd-puissance-abrasif-humide-diagnostic/).
+
 ## Sources
 
 - [Metabo, SSP 1000](https://fr.metabo.com/fr/machines/air-comprime/outils-a-air-comprime/pistolets-de-sablage-a-air-comprime/ssp-1000-601569000-pistolet-de-sablage-a-air-comprime.html)

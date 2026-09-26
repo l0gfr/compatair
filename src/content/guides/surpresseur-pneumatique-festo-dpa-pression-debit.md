@@ -13,6 +13,7 @@ relatedGuides: ["stockage-primaire-secondaire-air-comprime", "bar-psi-pression-a
 sources:
   - https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/DPA_EN.PDF
   - https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/PRESSURE-BOOSTER-ADD_EN.PDF
+updatedDate: 2026-09-26
 ---
 
 **Un surpresseur pneumatique peut répondre à un besoin local de pression supérieure, mais il ne crée pas gratuitement du débit.** Pour la gamme DPA, Festo décrit un fonctionnement à double piston alimenté par l’air comprimé du réseau, avec une pression de sortie pouvant atteindre deux fois celle d’entrée. Le débit disponible dépend du point de fonctionnement et de la variante. [DPA, documentation du 26 mai 2026](https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/DPA_EN.PDF).
@@ -67,6 +68,8 @@ Faites définir le schéma, les organes de protection et la procédure de mise e
 Nous proposons de conserver la référence complète, la version du document, les pressions d’entrée et de sortie prévues, les deux débits, le cycle et le schéma validé. À la réception, confrontez le fonctionnement réel au scénario convenu et consignez les écarts.
 
 Si le débit aval garanti ou le temps de recharge restent inconnus, une pression atteinte à l’arrêt ne valide pas la production. Le [guide du stockage secondaire](/guides/stockage-primaire-secondaire-air-comprime/) complète cette analyse. Ne confondez pas ce surpresseur avec un [amplificateur d’air par entraînement](/guides/amplificateur-air-exair-consommation-debit/) : ce dernier augmente le volume du jet en mélangeant de l’air ambiant, selon un autre principe.
+
+Pour un mouvement angulaire limité, le [guide des vérins rotatifs](/guides/verin-rotatif-pneumatique-couple-angle-inertie/) relie le couple, l’angle et le dossier d’inertie de la charge.
 
 ## Sources et périmètre
 

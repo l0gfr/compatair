@@ -16,6 +16,7 @@ sources:
   - https://www.clemcoindustries.com/s/NozzleWear.pdf
   - https://www.clemcoindustries.com/s/AirVolume_Est.pdf
   - https://www.clemcoindustries.com/charts
+updatedDate: 2026-09-26
 ---
 
 **Le diamètre de la buse et la pression à la buse changent fortement le besoin d’air d’une installation de sablage.** Dans le tableau Clemco, une buse n° 3 demande 30 cfm à 60 psi, contre 54 cfm pour une n° 4 à la même pression. Cela représente environ **850 et 1 529 L/min**, avant de dimensionner les autres besoins de l’installation. [Clemco, tableau de consommation d’air et d’abrasif](https://www.clemcoindustries.com/s/Compressed_Air-wxh8.pdf).
@@ -87,6 +88,8 @@ Joignez ensuite le système de séchage envisagé et les conditions du site. La 
 Le tableau permet de chiffrer la baisse de consommation correspondant à un orifice plus petit. Il ne permet pas de conclure que le résultat de décapage ou la productivité restera identique. Faites valider la buse avec la sableuse, l’abrasif et le travail attendu, puis comparez le coût complet de l’opération.
 
 Pour les pistolets déjà documentés dans CompatAir, partez du [guide de compatibilité sablage](/guides/compresseur-pour-sablage-pneumatique/) et de leurs fiches exactes. Pour un système industriel à buse, exigez d’abord son point de fonctionnement documenté ; aucun classement de compresseurs ne compense cette donnée manquante.
+
+Pour prolonger cette vérification, vous pouvez [comparer le besoin d’une cabine à succion et d’une cabine sous pression](/guides/compresseur-cabine-sablage-succion-pression/) et [diagnostiquer une baisse d’efficacité liée à l’air, au média ou à l’usure](/guides/sableuse-perd-puissance-abrasif-humide-diagnostic/).
 
 ## Sources et périmètre
 

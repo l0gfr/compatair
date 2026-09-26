@@ -109,6 +109,8 @@ Cette discipline évite de produire un résultat numérique exact en apparence �
 
 Pour comparer ensuite les consommations et capacités, consultez les [conversions CFM, L/min et Nl/min](/guides/convertir-cfm-l-min-nl-min-air-comprime/). La pression absolue intervient dans les conditions de référence, même lorsque le devis affiche seulement un débit.
 
+Le [guide de lecture du vacuomètre et du vacuostat](/guides/vacuometre-vacuostat-bar-absolu-pourcentage-vide/) détaille les références absolue et relative avec un exemple de pourcentage de vide.
+
 ## Sources
 
 - [NIST, Guide for the Use of the International System of Units, facteurs de conversion](https://physics.nist.gov/cuu/pdf/sp811.pdf)

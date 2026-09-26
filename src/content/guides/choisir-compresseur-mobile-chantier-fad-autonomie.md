@@ -111,3 +111,5 @@ Préparez une séquence représentative avec l’outil, l’accessoire, le flexi
 | Exploitation | maintenance, transport et repli organisés |
 
 La production est retenue lorsque ces verdicts sont explicites. Une fiche indiquant seulement « compresseur mobile 7 bar » ne permet pas de défendre le choix.
+
+Pour prolonger cette vérification, vous pouvez [compter l’air de la pompe d’injection dans un projet d’hydrosablage](/guides/hydrosablage-compresseur-pompe-eau-debit/).

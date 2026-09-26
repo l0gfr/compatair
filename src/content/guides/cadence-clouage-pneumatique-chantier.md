@@ -14,6 +14,7 @@ sources:
   - https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ngovue839t5o7dugodnovh8q57/4137790_11018_001_SPK2.pdf
   - https://shop.scheppach.com/Zubehoer-Set-Druckluftnagler-scheppach/7906100715
   - https://www.inrs.fr/publications/bdd/techniques-reduction-bruit/FicheBruitAG.html?refINRS=BRUIT_FicheBruit_61
+updatedDate: 2026-09-26
 ---
 
 Une cloueuse consomme de l’air à chaque tir. Pour transformer une valeur en litres par tir en besoin moyen, il faut donc déclarer une cadence. Ce calcul est exact sur le plan arithmétique, mais il ne décrit pas à lui seul la pointe instantanée, la récupération de la cuve ou la qualité d’enfoncement.
@@ -97,3 +98,5 @@ N’extrapolez pas la performance acoustique d’une solution à un autre atelie
 Pour chaque campagne, enregistrez : référence, consommation publiée par tir, cadence moyenne, cadence de rafale, pression avant et pendant la séquence, longueur et diamètre intérieur du flexible, nombre de raccords, matériau, consommable, qualité observée et temps de récupération.
 
 Cette fiche permet de comparer deux configurations sans transformer une valeur par tir en promesse commerciale. Elle rend également le calcul rejouable lorsqu’un outil, un flexible ou une cadence change.
+
+Le [guide des déclenchements séquentiel et par contact](/guides/cloueur-pneumatique-declenchement-sequentiel-contact/) précise les mécanismes à identifier avant de choisir un cloueur.

@@ -12,6 +12,7 @@ reviewStatus: "internal"
 relatedGuides: ["point-rosee-secheur-filtre-air-comprime", "ventilation-local-compresseur-surchauffe", "secheur-air-comprime-atelier-non-chauffe"]
 sources:
   - https://fr.kaeser.com/entreprise/blog/comment-dimensionner-un-secheur-frigorifique.aspx
+updatedDate: 2026-09-26
 ---
 
 **Un sécheur annoncé pour 10 m³/min ne traite pas nécessairement 10 m³/min dans les conditions les plus chaudes de votre atelier.** KAESER publie un exemple où la pression d’entrée, la température ambiante et celle de l’air comprimé conduisent à trois corrections. Le constructeur précise que ses facteurs ne doivent pas être transposés aux autres marques. [KAESER, dimensionnement d’un sécheur frigorifique](https://fr.kaeser.com/entreprise/blog/comment-dimensionner-un-secheur-frigorifique.aspx).
@@ -84,6 +85,10 @@ Le [guide point de rosée et filtration](/guides/point-rosee-secheur-filtre-air-
 Nous proposons une fiche récapitulative contenant le débit et ses conditions de référence, les trois conditions d’entrée, le point de rosée demandé, les facteurs et leur source, la capacité corrigée du modèle proposé et les accessoires compris. Ajoutez la réponse écrite du fournisseur sur les points non documentés.
 
 Cela permet de comparer deux offres sur le service attendu. La simple égalité « débit du compresseur = débit nominal du sécheur » laisse précisément de côté ce que l’exemple chiffré vient de montrer.
+
+Pour prolonger cette vérification, vous pouvez [séparer débit d’azote produit, pureté et consommation d’air du générateur](/guides/generateur-azote-compresseur-debit-purete/).
+
+Le [guide du by-pass de sécheur](/guides/bypass-secheur-air-comprime-qualite-maintenance/) prépare la continuité des usages, les limites de qualité et le retour après maintenance.
 
 ## Sources et périmètre
 

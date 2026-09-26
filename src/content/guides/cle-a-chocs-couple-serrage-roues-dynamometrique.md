@@ -80,3 +80,5 @@ Le chiffre maximal peut participer au choix pour une opération de desserrage, a
 Les sources ont été consultées le 25 septembre 2026. Les performances citées sont déclarées par Chicago Pneumatic ; aucun test de serrage ni classement terrain n’est revendiqué.
 
 Le dossier [clé à impulsions, coupure et alimentation](/guides/cle-a-impulsions-ou-cle-a-chocs-air-comprime/) prolonge cette distinction pour les outils d’assemblage : une fonction d’arrêt ne démontre pas à elle seule la mesure du couple final.
+
+La [lecture des douilles à chocs et adaptateurs](/guides/douilles-choc-adaptateurs-carre-compatibilite/) complète le choix de la clé en distinguant l’interface mécanique et les données de couple.

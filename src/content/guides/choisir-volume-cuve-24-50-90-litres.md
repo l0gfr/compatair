@@ -12,6 +12,7 @@ sources:
   - https://www.atlascopco.com/fr-fr/compressors/wiki/compressed-air-articles/displacement-compressors-regulation
   - https://shop.abacaircompressors.com/en-INT/products/4116000880/atf-s-3-50-10-230150-ce
   - https://www.einhell.fr/p/4010800-te-ac-430-90-10/
+updatedDate: 2026-09-26
 ---
 
 La cuve est la caractéristique la plus visible d’un compresseur d’atelier. Elle est aussi l’une des plus mal interprétées. Un réservoir de 90 litres ne garantit pas un débit supérieur à celui d’un 50 litres. Il stocke davantage d’air comprimé et peut absorber une pointe plus longue, à condition que la pression reste suffisante pour l’outil.
@@ -45,6 +46,8 @@ La [régulation des compresseurs volumétriques](https://www.atlascopco.com/fr-f
 Choisissez d’abord le débit restitué nécessaire. Vérifiez ensuite la pression, le cycle de service et la taille de cuve adaptée au profil de consommation. Pour un outil continu, la pompe domine le choix. Pour un outil à impulsions, la cuve prend davantage d’importance.
 
 Consultez les [compresseurs documentés](/compresseurs/) ou simulez votre outil dans le [calculateur](/calculateur/).
+
+Pour prolonger cette vérification, vous pouvez [interpréter un temps de remplissage de cuve sans le présenter comme du FAD](/guides/temps-remplissage-cuve-compresseur-debit/).
 
 ## Sources
 

@@ -125,6 +125,12 @@ Le dossier [huile de clé à chocs : moteur et mécanisme de frappe](/guides/hui
 
 Sur un poste de vissage, reliez le choix du traitement d’air aux exigences de la référence exacte. Le dossier [visseuses à coupure automatique et réception du poste](/guides/visseuse-pneumatique-coupure-automatique/) propose une grille de vérification de l’alimentation et du résultat.
 
+Pour prolonger cette vérification, vous pouvez [comprendre le réglage de vitesse à l’échappement d’un vérin](/guides/regler-vitesse-verin-pneumatique-echappement/) et [interpréter la perte de pression d’un filtre sans en déduire sa pureté aval](/guides/filtre-air-comprime-perte-pression-remplacement/).
+
+Le [comparatif séparateur cyclonique et filtre coalescent](/guides/separateur-cyclonique-filtre-coalescent-differences/) distingue liquide, aérosol et vapeur pour clarifier les fonctions du traitement.
+
+Pour un souffle localisé sur un détendeur, le [guide du régulateur qui fuit par l’évent](/guides/regulateur-air-comprime-fuit-event-decompression/) aide à identifier la version et le moment d’apparition.
+
 ## Sources
 
 - [Chicago Pneumatic, instructions FRL, édition 2025-01](https://www.cp.com/content/dam/pim/itba/cp/technical-documents/update2024/frl/6159990240_02.pdf)

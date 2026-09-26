@@ -12,6 +12,7 @@ relatedCalculatorTool: einhell-tc-pn-50
 sources:
   - https://www.einhell.fr/p/4137790-tc-pn-50/
   - https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ngovue839t5o7dugodnovh8q57/4137790_11018_001_SPK2.pdf
+updatedDate: 2026-09-26
 ---
 
 Une agrafeuse-cloueuse peut être documentée en litres par tir plutôt qu’en litres par minute. Dans ce cas, la cadence doit rester une entrée explicite. Elle ne peut pas être devinée à partir du nom de l’outil.
@@ -48,6 +49,10 @@ Le calculateur affiche donc « débit moyen couvert » pour ce mode. Il ne trans
 Ouvrez le [calculateur avec la TC-PN 50](/calculateur/#outil=einhell-tc-pn-50), puis indiquez le nombre d’outils et votre cadence mesurée ou prévue. La consommation de 0,66 L par tir reste issue de la notice. Seule la cadence vient de votre scénario.
 
 Si vous ne connaissez pas encore la cadence, chronométrez une séquence représentative sans modifier les consignes de sécurité du fabricant. CompatAir ne fournit aucune cadence par défaut.
+
+Si les clous restent saillants, le [diagnostic pression, profondeur et fixations du cloueur](/guides/cloueur-clous-mal-enfonces-pression-profondeur/) permet de préparer une vérification ordonnée.
+
+Le [guide de compatibilité des agrafes](/guides/agrafes-pneumatiques-serie-couronne-longueur-compatibilite/) examine la série, la couronne et la longueur, avec des références documentées.
 
 ## Sources
 

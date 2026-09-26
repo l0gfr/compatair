@@ -52,6 +52,12 @@ Avec une pompe de transfert, le point hydraulique détermine aussi le besoin d�
 
 Lorsque deux outils n’utilisent pas la même pression, additionner directement deux valeurs sans définir l’architecture du réseau peut masquer un problème. Le compresseur, le détendeur, les branches et les pertes doivent être considérés. Le calculateur actuel traite un outil à la fois et ne prétend pas modéliser ce réseau.
 
+Pour prolonger cette vérification, vous pouvez [calculer les litres d’air par cycle de vérin](/guides/consommation-verin-pneumatique-double-effet/).
+
+Le [cas des vibreurs pneumatiques de trémie](/guides/vibreur-pneumatique-tremie-debit-compresseur/) illustre la différence entre appel instantané, durée d’activation et consommation moyenne.
+
+Le [guide simple effet, double effet et retour par ressort](/guides/verin-simple-double-effet-ressort-retour/) prépare la lecture du cycle avant d’établir le besoin pneumatique.
+
 ## Sources
 
 - [Atlas Copco, Compressed Air Manual, 9e édition](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf)

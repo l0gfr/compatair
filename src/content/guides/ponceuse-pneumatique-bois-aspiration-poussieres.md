@@ -3,7 +3,7 @@ title: "Ponceuse pneumatique en menuiserie : dimensionner l’air et l’aspirat
 seoTitle: "Ponceuse pneumatique bois : air et aspiration"
 description: "Dossier professionnel fondé sur la Festool LEX 3 150/5 et les recommandations INRS pour ne pas confondre alimentation pneumatique et captage des poussières."
 pubDate: 2026-07-15
-updatedDate: 2026-09-25
+updatedDate: 2026-09-26
 category: "Installer"
 audiences: [professionnel]
 metiers: [menuiserie-agencement]
@@ -71,6 +71,8 @@ Le guide [nettoyer l’atelier bois sans soufflette](/guides/nettoyer-atelier-bo
 ## Comparer les configurations de ponçage
 
 Le dossier [choisir une orbite de 2,5, 5 ou 8 mm](/guides/ponceuse-orbitale-2-5-5-8-mm-choisir/) propose un relevé d’essai avec machine, plateau, abrasif et aspiration identifiés. Le résultat de finition et la capacité de captage restent deux validations distinctes.
+
+Le [comparatif ponceuse pneumatique ou électrique](/guides/ponceuse-pneumatique-ou-electrique-atelier/) propose un essai de travail commun et un bilan énergétique dont le périmètre reste explicite.
 
 ## Sources
 

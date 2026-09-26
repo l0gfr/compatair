@@ -14,6 +14,7 @@ relatedGuides:
   - convertir-cfm-l-min-nl-min-air-comprime
 sources:
   - https://pimmedia.schmalz.com/MAM_Library/Dokumente/Datenblatt_Produktfamilie/0_/050/05050/ff4cfffb7ff4_Datasheet_Basic%20Ejectors%20SBPL_en-EN.pdf
+updatedDate: 2026-09-26
 ---
 
 Un éjecteur pneumatique produit du vide avec de l’air comprimé. Sur un **Schmalz SBPL 25 HV**, les **300 L/min de capacité d’aspiration** ne signifient pas que le compresseur doit fournir 300 L/min : la fiche indique séparément **105 L/min d’air consommé à la pression optimale**. Il faut conserver ces deux flux et leurs conditions.
@@ -75,6 +76,12 @@ Conservez le type de pièce, son état de surface, la configuration des ventouse
 Comparer un éjecteur avec une pompe à vide électrique demande un même résultat accepté : pièce, durée, niveau de vide et cadence. Le rapport entre litres aspirés et litres comprimés n’est pas un rendement énergétique complet. Il ne contient ni la dépense électrique de production d’air ni la qualité de la préhension.
 
 Une logique voisine existe pour les [amplificateurs d’air](/guides/amplificateur-air-exair-consommation-debit/) : un débit entraîné ou aspiré ne doit pas être présenté comme du FAD fourni sous pression. Pour votre dossier, gardez les deux colonnes distinctes jusqu’à la décision finale.
+
+Pour prolonger cette vérification, vous pouvez [préparer une préhension par le vide sur bois ou carton poreux](/guides/ventouse-piece-poreuse-debit-vide/).
+
+Le [guide des pinces pneumatiques](/guides/pince-pneumatique-force-doigt-longueur-prehension/) examine une autre solution de préhension, avec la force par mors et la géométrie des doigts.
+
+Le [guide de lecture du vacuomètre et du vacuostat](/guides/vacuometre-vacuostat-bar-absolu-pourcentage-vide/) détaille les références absolue et relative avec un exemple de pourcentage de vide.
 
 ## Sources et méthode
 

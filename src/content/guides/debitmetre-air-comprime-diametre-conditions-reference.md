@@ -15,6 +15,7 @@ relatedGuides:
 sources:
   - https://shop.vpinstruments.com/download/162/manual/15114/manual-vpflowscope-m-thermal-in-line.pdf
   - https://shop.vpinstruments.com/wpfd_file/manual-vpflowscope-m-thermal-in-line/
+updatedDate: 2026-09-26
 ---
 
 Un débitmètre peut afficher une valeur stable et produire un résultat faux pour votre comparaison. Trois contrôles viennent avant l’interprétation : **le diamètre intérieur programmé, la qualité de l’implantation et les conditions de référence du volume**. Nous les illustrons avec le VPFlowScope M **Thermal In-line**, sans transposer ses prescriptions aux autres modèles VPFlowScope.
@@ -72,6 +73,8 @@ Avant d’additionner les mesures, vérifiez la position des réservoirs et les 
 Nous proposons de conserver avec chaque export : modèle et référence de notice, numéro de configuration, diamètre saisi et document justificatif, emplacement sur le réseau, longueurs droites, sens de circulation, référence de volume, unité, horodatage et période d’acquisition. Ajoutez les états connus du contournement et du stockage.
 
 Cette fiche permet de distinguer une évolution du procédé d’une modification du paramétrage. Pour une comparaison avant/après, réutilisez la même frontière et les mêmes conventions ou explicitez la conversion. Sans cela, un tableau de bord très précis visuellement peut raconter une évolution qui n’a pas eu lieu.
+
+Pour prolonger cette vérification, vous pouvez [lire le débit nominal d’un distributeur avec ses conditions de mesure](/guides/choisir-distributeur-pneumatique-debit-nominal/).
 
 ## Sources et méthode
 

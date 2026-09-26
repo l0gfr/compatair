@@ -6,6 +6,7 @@ import { glossaryTerms } from '../../data/glossary';
 import { compressorDisplayName } from '../../domain/product-display';
 import { toolSearchText } from '../../domain/tool-demand';
 import { guideAudiences, guideMetiers, guideSeries } from '../../domain/editorial-taxonomy';
+import { compactSearchKeywords } from '../../domain/search-keywords';
 
 export const prerender = true;
 
@@ -30,7 +31,13 @@ export const GET: APIRoute = async () => {
 		...guides.map((item) => ({ title: item.data.title, type: 'Guide', url: `/guides/${item.id}/`, keywords: guideKeywords(item) })),
 		...glossaryTerms.map((item) => ({ title: item.term, type: 'Glossaire', url: `/glossaire/#${item.slug}`, keywords: item.definition })),
 	];
-	return new Response(JSON.stringify(items), {
+	const compactItems = items.map((item) => ({ ...item, keywords: compactSearchKeywords(item.title, item.keywords) }));
+	// Keep the series name as a phrase as well as its individual searchable tokens.
+	for (const guide of guides.filter((item) => item.data.series)) {
+		const item = compactItems.find((entry) => entry.url === `/guides/${guide.id}/`);
+		if (item && guide.data.series) item.keywords += ` ${guideSeries[guide.data.series].title}`;
+	}
+	return new Response(JSON.stringify(compactItems), {
 		headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=300' },
 	});
 };

@@ -1,0 +1,1499 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-09-26",
+  "reviewType": "internal_editorial",
+  "assistedByAI": true,
+  "externalProfessionalValidation": false,
+  "physicalTestsPerformed": false,
+  "hashScope": "SHA-256 des réponses HTML/PDF téléchargées directement. Aucun hash pour une consultation par lecteur web. Documents originaux non redistribués. Les hash de contenu des guides excluent toute modification ultérieure.",
+  "publicationScope": {
+    "guidesBefore": 111,
+    "guidesAdded": 25,
+    "guidesAfter": 136,
+    "newProductPages": 0,
+    "meaning": "Périmètre de ce lot uniquement ; d’autres travaux de catalogue sont présents dans le même répertoire."
+  },
+  "qualityPolicy": {
+    "purpose": "Questions techniques distinctes, réponses directes, limites explicites et exemples contrôlables. Aucun volume de recherche, classement ou taux de clic annoncé sans mesure.",
+    "controls": [
+      "Comparaison avec les 111 guides déjà présents",
+      "Citations primaires dans le texte et les métadonnées",
+      "Séparation des valeurs constructeur, calculs et propositions de protocole",
+      "25 SVG accessibles, dont 5 graphiques ou schémas liés aux données",
+      "50 liens contextuels depuis 41 guides existants",
+      "6 définitions sourcées et liens réciproques au glossaire",
+      "Aucune validation externe ni essai physique revendiqué"
+    ]
+  },
+  "sources": [
+    {
+      "id": "abac-trouble",
+      "url": "https://www.abacaircompressors.com/en-africa/blog/air-compressor-troubleshooting",
+      "resolvedUrl": "https://www.abacaircompressors.com/en-africa/blog/air-compressor-troubleshooting",
+      "httpStatus": 200,
+      "sha256": "9d2e365a535bd110e03cbe7d8071f2cbe15022932c3374a84546a0e627dddbdc",
+      "bytes": 135008,
+      "consultedOn": "2026-09-26",
+      "scope": "Causes possibles de traces d’huile et de défauts de pression, aucune panne déclarée sans observation.",
+      "guides": [
+        "compresseur-perd-pression-arret-fuite-refroidissement",
+        "huile-sortie-compresseur-air-comprime-diagnostic"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "atlas-backup",
+      "url": "https://www.atlascopco.com/en-uk/compressors/air-compressor-blog/challenger/backup",
+      "resolvedUrl": "https://www.atlascopco.com/en-uk/compressors/air-compressor-blog/challenger/backup",
+      "httpStatus": 200,
+      "sha256": "64c6ab45ec4f4c68a2ea87784e4f5bedd9acb7c2e1dc38098e6a7d7fa079e97c",
+      "bytes": 272931,
+      "consultedOn": "2026-09-26",
+      "scope": "Capacité supplémentaire et secours distingués ; calculs 2 × 200 L/min explicitement fictifs.",
+      "guides": [
+        "raccorder-deux-compresseurs-en-parallele"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "atlas-laser",
+      "url": "https://www.atlascopco.com/en-au/compressors/new-products-and-offers/local-offers/laser-cutting-excellence",
+      "resolvedUrl": "https://www.atlascopco.com/en-au/compressors/new-products-and-offers/local-offers/laser-cutting-excellence",
+      "httpStatus": 200,
+      "sha256": "f88495760ef6c32deee173cdb537b7825fc0c0508707b8486c09c50084c0c9c7",
+      "bytes": 50735,
+      "consultedOn": "2026-09-26",
+      "scope": "Qualité d’air de coupe et limites liées à l’oxygène ; promesses commerciales d’économie exclues.",
+      "guides": [
+        "compresseur-decoupe-laser-air-azote"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "atlas-nitrogen",
+      "url": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/mexico/compressor-technique/files-and-pdf/NGP%2B8-130%20EN.pdf",
+      "resolvedUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/mexico/compressor-technique/files-and-pdf/NGP%2B8-130%20EN.pdf",
+      "httpStatus": 200,
+      "sha256": "7b7d146219c0e2abebca652e54e21012d2a152e75996bc406cdfef22036ed516",
+      "bytes": 1308825,
+      "consultedOn": "2026-09-26",
+      "scope": "Table NGP 8+, page 2 ; capacité selon pureté, conditions 7 bar(g), 20 °C, [1:4:1], tolérance ±5 %. Nm³/h explicitement à 20 °C et 1 bar(a).",
+      "guides": [
+        "generateur-azote-compresseur-debit-purete"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "atlas-parallel",
+      "url": "https://www.atlascopco.com/en-ae/compressors/air-compressor-blog/multi-compressor-system",
+      "resolvedUrl": "https://www.atlascopco.com/en-ae/compressors/air-compressor-blog/multi-compressor-system",
+      "httpStatus": 200,
+      "sha256": "21ec7dcbccf5733a50a80e0d963c388f71810947aa39cc97df053e268ffe92e3",
+      "bytes": 159222,
+      "consultedOn": "2026-09-26",
+      "scope": "Coordination de plusieurs compresseurs ; pas de schéma de raccordement artisanal.",
+      "guides": [
+        "raccorder-deux-compresseurs-en-parallele"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "atlas-trouble",
+      "url": "https://www.atlascopco.com/en-us/compressors/air-compressor-blog/air-compressor-troubleshooting",
+      "resolvedUrl": "https://www.atlascopco.com/en-us/compressors/air-compressor-blog/air-compressor-troubleshooting",
+      "httpStatus": 200,
+      "sha256": "7685306561d8fa3446bc89a89cd0905f952d20d6fe4af027eb6680af0f54d7c7",
+      "bytes": 210762,
+      "consultedOn": "2026-09-26",
+      "scope": "Isolation et dépressurisation avant intervention interne selon la machine.",
+      "guides": [
+        "huile-sortie-compresseur-air-comprime-diagnostic"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "bcas-haccp",
+      "url": "https://www.bcas.org.uk/media/Download.aspx?MediaId=80",
+      "resolvedUrl": null,
+      "httpStatus": null,
+      "sha256": null,
+      "bytes": null,
+      "consultedOn": "2026-09-26",
+      "scope": "Fiche 701-4GB : HACCP et statut volontaire du guide alimentaire ; pas de classe réglementaire française inventée.",
+      "guides": [
+        "air-comprime-contact-alimentaire-exigences"
+      ],
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "directRetrievalLimitation": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+    },
+    {
+      "id": "canada-energy",
+      "url": "https://natural-resources.canada.ca/energy-efficiency/energy-star/energy-efficiency-reference-guide-compressed-air",
+      "resolvedUrl": "https://natural-resources.canada.ca/energy-efficiency/energy-star/energy-efficiency-reference-guide-compressed-air",
+      "httpStatus": 200,
+      "sha256": "87201887b890a04dc52896a1f7b106b71d16d7bd37a525112c30badb34fd8881",
+      "bytes": 171392,
+      "consultedOn": "2026-09-26",
+      "scope": "Demande artificielle, usages non régulés et pertes pendant les arrêts ; aucun pourcentage universel repris.",
+      "guides": [
+        "couper-air-comprime-machine-arret-week-end",
+        "baisser-pression-reseau-demande-artificielle"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "clemco-injector-current",
+      "url": "https://www.clemcoindustries.com/s/05539m.pdf",
+      "resolvedUrl": "https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/6854248b0344223ecfada681/1750344845552/05539m.pdf",
+      "httpStatus": 200,
+      "sha256": "21a7891a89c521ac2604bed0e406a6c5f222ce4df2bf112d38de13c3838410dd",
+      "bytes": 1059394,
+      "consultedOn": "2026-09-26",
+      "scope": "05539 Rev. F 09/21 : pompe à 30 cfm/100 psi, valeur distincte du besoin de buse ; prescriptions de raccordement d’eau citées sans tutoriel.",
+      "guides": [
+        "hydrosablage-compresseur-pompe-eau-debit"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "clemco-pressure",
+      "url": "https://www.clemcoindustries.com/s/30422BM-PULSAR-PLUS-III-P-VI-P-Rev-C.pdf",
+      "resolvedUrl": "https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/69b47af1fc2488789f5b36e4/1773435639066/30422BM+-+PULSAR+PLUS+III-P++VI-P+-+Rev+C.pdf",
+      "httpStatus": 200,
+      "sha256": "08b0df446a0eb5433836f95066a0677ca94f5359ad54a85848d978635b141c30",
+      "bytes": 5878474,
+      "consultedOn": "2026-09-26",
+      "scope": "Notice 30422 Rev. C 01/26 : réservoir sous pression et décolmatage par impulsions ; pas de transposition du tableau à succion.",
+      "guides": [
+        "compresseur-cabine-sablage-succion-pression"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "clemco-resp",
+      "url": "https://www.clemcoindustries.com/s/04143m.pdf",
+      "resolvedUrl": "https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/68542adfcc02100a18ad69e0/1750346463572/04143m.pdf",
+      "httpStatus": 200,
+      "sha256": "76e8c9691d2aa4dc5d38e43ed523aa146cf60d73efe59928ddc21dd399eb5a7f",
+      "bytes": 275720,
+      "consultedOn": "2026-09-26",
+      "scope": "CPF 20/80 : absence de détection/retrait du CO et d’autres gaz toxiques ; pas de seuil français déduit de la notice US.",
+      "guides": [
+        "air-respirable-compresseur-atelier-limites"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "clemco-suction",
+      "url": "https://www.clemcoindustries.com/s/30421m.pdf",
+      "resolvedUrl": "https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/6854538f0e62326ad7b00c36/1750356885904/30421m.pdf",
+      "httpStatus": 200,
+      "sha256": "3c274f5e54804a2102f26be483b1eccc1b354761e3b8a3922a6a4ab163b2a5c8",
+      "bytes": 4952166,
+      "consultedOn": "2026-09-26",
+      "scope": "Notice 30421 : section 1.12 figure 4, jets 1/8 et 5/32, buse 5/16, 21/32 cfm à 80 psi ; humidité et diagnostic section 8.",
+      "guides": [
+        "compresseur-cabine-sablage-succion-pression",
+        "sableuse-perd-puissance-abrasif-humide-diagnostic"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "clemco-wet-current",
+      "url": "https://www.clemcoindustries.com/s/28452m.pdf",
+      "resolvedUrl": "https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/68542559631a4c19d8972a23/1750345053613/28452m.pdf",
+      "httpStatus": 200,
+      "sha256": "f9b899822b409aa9357a1a3dc9bb12781cc16a44b7da1aa35aa41e2d3bf50e18",
+      "bytes": 2816612,
+      "consultedOn": "2026-09-26",
+      "scope": "Wetblast FLEX : contexte de mesure, usure de buse et exigences de protection ; distingué du Wetblast Injector.",
+      "guides": [
+        "sableuse-perd-puissance-abrasif-humide-diagnostic",
+        "hydrosablage-compresseur-pompe-eau-debit"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "doe-alternatives",
+      "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air2.pdf",
+      "resolvedUrl": "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air2.pdf",
+      "httpStatus": 200,
+      "sha256": "3072b67fdb70a1b7c3241ded8c5c78657daf8496ba2f710e7b5f2a6a55fb3f85",
+      "bytes": 268049,
+      "consultedOn": "2026-09-26",
+      "scope": "Fiche 2 : consommations des solutions alternatives à intégrer au bilan net ; pas de gains promis.",
+      "guides": [
+        "ventouse-piece-poreuse-debit-vide",
+        "couteau-air-comprime-ou-soufflante"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "doe-cost",
+      "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air1.pdf",
+      "resolvedUrl": "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air1.pdf",
+      "httpStatus": 200,
+      "sha256": "0578f6355ea4a070fdb1bbd7c952a109cac7b18219f462c3776da6eaf340aaec",
+      "bytes": 311418,
+      "consultedOn": "2026-09-26",
+      "scope": "Périmètre du coût électrique, durée et état de charge ; prix d’exemple ancien non réutilisé comme prix courant.",
+      "guides": [
+        "cout-metre-cube-air-comprime",
+        "secheur-membrane-air-comprime-debit-balayage"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "doe-enduse",
+      "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air10.pdf",
+      "resolvedUrl": "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air10.pdf",
+      "httpStatus": 200,
+      "sha256": "11d565d0f94073b32a6e8c7c0ae4d6474124275d1973e274670b482306d463cb",
+      "bytes": 252155,
+      "consultedOn": "2026-09-26",
+      "scope": "Exigences au point d’usage et restrictions de distribution.",
+      "guides": [
+        "choisir-distributeur-pneumatique-debit-nominal",
+        "cout-metre-cube-air-comprime"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "doe-lowpressure",
+      "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air11.pdf",
+      "resolvedUrl": "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air11.pdf",
+      "httpStatus": 200,
+      "sha256": "35d9a2d3a28326c94d617d28f2eca69f39702d0f557f4075aa4608cc820ea609",
+      "bytes": 252516,
+      "consultedOn": "2026-09-26",
+      "scope": "Fiche 11 : étude d’alternatives pour usages basse pression ; économies du cas historique non généralisées.",
+      "guides": [
+        "couteau-air-comprime-ou-soufflante"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "doe-pressure",
+      "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air8.pdf",
+      "resolvedUrl": "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air8.pdf",
+      "httpStatus": 200,
+      "sha256": "7c2e025951ac54b45aa0883f242890dde50b49abed98605a085840195bcf029a",
+      "bytes": 249217,
+      "consultedOn": "2026-09-26",
+      "scope": "Stockage et stabilisation des demandes intermittentes, pas de capacité de production créée.",
+      "guides": [
+        "baisser-pression-reseau-demande-artificielle"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "einhell-manual",
+      "url": "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nupse59f8t4htfeoh3u5gifg65/4010393_11027_001_SPK2.pdf",
+      "resolvedUrl": "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nupse59f8t4htfeoh3u5gifg65/4010393_11027_001_SPK2.pdf",
+      "httpStatus": 200,
+      "sha256": "7af21f1efb6ac0e93ec4dde3af06bac34efdacf3d177a6e71dce6c9fb2c99356",
+      "bytes": 1721705,
+      "consultedOn": "2026-09-26",
+      "scope": "Limites d’intervention sur une machine sous pression ; pas de procédure improvisée de démontage.",
+      "guides": [
+        "compresseur-perd-pression-arret-fuite-refroidissement"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "festo-calculator",
+      "url": "https://www.festo.com/ee/en/s/air-consumption",
+      "resolvedUrl": null,
+      "httpStatus": null,
+      "sha256": null,
+      "bytes": null,
+      "consultedOn": "2026-09-26",
+      "scope": "Géométries et paramètres du calculateur de consommation, pas de résultat inventé.",
+      "guides": [
+        "consommation-verin-pneumatique-double-effet"
+      ],
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "directRetrievalLimitation": "HTTP 403"
+    },
+    {
+      "id": "festo-flow",
+      "url": "https://www.festo.com/media/catalog/236149_documentation.pdf",
+      "resolvedUrl": null,
+      "httpStatus": null,
+      "sha256": null,
+      "bytes": null,
+      "consultedOn": "2026-09-26",
+      "scope": "Vanne manuelle HE citée pour les conditions p1=6 bar, p2=5 bar, DIN 1343 ; pas de sélection fictive d’électrovanne.",
+      "guides": [
+        "choisir-distributeur-pneumatique-debit-nominal"
+      ],
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "directRetrievalLimitation": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "festo-force",
+      "url": "https://www.festo.com/net/supportportal/files/10203/actuators",
+      "resolvedUrl": null,
+      "httpStatus": null,
+      "sha256": null,
+      "bytes": null,
+      "consultedOn": "2026-09-26",
+      "scope": "Effort sortie/rentrée, surfaces et flambage ; aucune charge admissible extrapolée.",
+      "guides": [
+        "force-verin-pneumatique-diametre-pression"
+      ],
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "directRetrievalLimitation": "HTTP 403"
+    },
+    {
+      "id": "festo-general",
+      "url": "https://www.festo.com/media/cms/media/mam_upload/market/Festo_General_operating_conditions_en.pdf",
+      "resolvedUrl": null,
+      "httpStatus": null,
+      "sha256": null,
+      "bytes": null,
+      "consultedOn": "2026-09-26",
+      "scope": "Exemple DNC-32-500, méthode géométrique et conditions générales ; approximation atmosphérique conservée.",
+      "guides": [
+        "consommation-verin-pneumatique-double-effet",
+        "force-verin-pneumatique-diametre-pression",
+        "tuyau-pvc-reseau-air-comprime-risques"
+      ],
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "directRetrievalLimitation": "HTTP 403"
+    },
+    {
+      "id": "festo-isolation",
+      "url": "https://press.festo.com/en/technologies-and-products-1/festo-adds-two-new-solutions-to-its-compressed-air-energy-saving-platform?country_code=hk",
+      "resolvedUrl": "https://press.festo.com/en/technologies-and-products-1/festo-adds-two-new-solutions-to-its-compressed-air-energy-saving-platform?country_code=hk",
+      "httpStatus": 200,
+      "sha256": "5dd60fcf0fd9462dc597e43babb6705a5220de533faeb780be8d752cf6d32c8b",
+      "bytes": 48986,
+      "consultedOn": "2026-09-26",
+      "scope": "MSE6-C2M, coupure et pression de veille ; économie distinguée de la consignation.",
+      "guides": [
+        "couper-air-comprime-machine-arret-week-end"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "festo-safety",
+      "url": "https://www.festo.com/PDF_Flip/safety/en/files/assets/basic-html/page49.html",
+      "resolvedUrl": null,
+      "httpStatus": null,
+      "sha256": null,
+      "bytes": null,
+      "consultedOn": "2026-09-26",
+      "scope": "Maintien de pression et limites des fonctions de sécurité dans le circuit présenté.",
+      "guides": [
+        "regler-vitesse-verin-pneumatique-echappement"
+      ],
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "directRetrievalLimitation": "HTTP 403"
+    },
+    {
+      "id": "inrs-page",
+      "url": "https://www.inrs.fr/media.html?refINRS=ED%206106",
+      "resolvedUrl": null,
+      "httpStatus": null,
+      "sha256": null,
+      "bytes": null,
+      "consultedOn": "2026-09-26",
+      "scope": "Notice descriptive INRS ED 6106 : choix, usage, entretien et situation de travail ; aucune déclaration de lecture intégrale du PDF.",
+      "guides": [
+        "air-respirable-compresseur-atelier-limites"
+      ],
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "directRetrievalLimitation": "Consultation par lecteur web, sans téléchargement direct conservé."
+    },
+    {
+      "id": "kaeser-filter",
+      "url": "https://au.kaeser.com/services/blog/why-do-i-need-to-service-my-compressed-air-filters.aspx",
+      "resolvedUrl": "https://au.kaeser.com/services/blog/why-do-i-need-to-service-my-compressed-air-filters.aspx",
+      "httpStatus": 200,
+      "sha256": "f7e2ff345c0e55693092907039147a1d0cbab412c360d8e0d0c928aa915773b7",
+      "bytes": 57890,
+      "consultedOn": "2026-09-26",
+      "scope": "Suivi des filtres et perte de pression ; pas de seuil de remplacement universel.",
+      "guides": [
+        "filtre-air-comprime-perte-pression-remplacement"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "kaeser-membrane",
+      "url": "https://fr.kaeser.com/produits/traitement-d-air-comprime-et-condensats/secheurs/secheurs-a-membrane/",
+      "resolvedUrl": "https://fr.kaeser.com/produits/traitement-d-air-comprime-et-condensats/secheurs/secheurs-a-membrane/",
+      "httpStatus": 200,
+      "sha256": "2c06c28ed49b4d32d4cbca680720eccd68bfbfeb0446ca3013564bf1b9552cd3",
+      "bytes": 65004,
+      "consultedOn": "2026-09-26",
+      "scope": "Séchage à membrane et air de balayage ; fonctions d’arrêt propres à l’équipement.",
+      "guides": [
+        "secheur-membrane-air-comprime-debit-balayage"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "metabo-fill",
+      "url": "https://www.metabo.com/com/en/tools/compressed-air/compressors/mobile-workshop-compressors/basic-220-24-of-silent-compressor/601593000",
+      "resolvedUrl": "https://www.metabo.com/com/en/tools/compressed-air/compressors/mobile-workshop-compressors/basic-220-24-of-silent-compressor/601593000",
+      "httpStatus": 200,
+      "sha256": "33e92f53a052d8c78f76ea02b4b6f0f41fc25944336e88ae1d925c63566a9c9f",
+      "bytes": 125366,
+      "consultedOn": "2026-09-26",
+      "scope": "Basic 220-24 OF Silent 601593000 : aspiré 220, remplissage 110, effectif 95 L/min à 80 % de 8 bar.",
+      "guides": [
+        "temps-remplissage-cuve-compresseur-debit"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "nasa-gas",
+      "url": "https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking_ppc/ideal_gases_under_constant.htm",
+      "resolvedUrl": "https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking_ppc/ideal_gases_under_constant.htm",
+      "httpStatus": 200,
+      "sha256": "8ee9e45af3e0f81755de3161a670f746fe93aefe09654b3fc36df42bc195a9be",
+      "bytes": 40686,
+      "consultedOn": "2026-09-26",
+      "scope": "Loi des gaz parfaits ; calculs pédagogiques CompatAir explicitement hypothétiques.",
+      "guides": [
+        "compresseur-perd-pression-arret-fuite-refroidissement",
+        "temps-remplissage-cuve-compresseur-debit"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "osha-pvc",
+      "url": "https://www.osha.gov/laws-regs/standardinterpretations/1991-02-28",
+      "resolvedUrl": null,
+      "httpStatus": null,
+      "sha256": null,
+      "bytes": null,
+      "consultedOn": "2026-09-26",
+      "scope": "Interprétation américaine de 1991 sur conduites thermoplastiques ; pas présentée comme réglementation française.",
+      "guides": [
+        "tuyau-pvc-reseau-air-comprime-risques"
+      ],
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "directRetrievalLimitation": "HTTP 403"
+    },
+    {
+      "id": "parker-carbon",
+      "url": "https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf",
+      "resolvedUrl": null,
+      "httpStatus": null,
+      "sha256": null,
+      "bytes": null,
+      "consultedOn": "2026-09-26",
+      "scope": "Capacité du charbon, traitement préalable, variables de durée et limites d’un indicateur différentiel.",
+      "guides": [
+        "filtre-charbon-actif-air-comprime-vapeurs-huile",
+        "filtre-air-comprime-perte-pression-remplacement"
+      ],
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "directRetrievalLimitation": "HTTP 403"
+    },
+    {
+      "id": "parker-quality",
+      "url": "https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/174004425_EN.PDF",
+      "resolvedUrl": null,
+      "httpStatus": null,
+      "sha256": null,
+      "bytes": null,
+      "consultedOn": "2026-09-26",
+      "scope": "Vapeurs/aérosols, origines de contamination et fonctions des traitements ; pas de pureté aval certifiée.",
+      "guides": [
+        "filtre-charbon-actif-air-comprime-vapeurs-huile",
+        "huile-sortie-compresseur-air-comprime-diagnostic",
+        "air-comprime-contact-alimentaire-exigences"
+      ],
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "directRetrievalLimitation": "HTTP 403"
+    },
+    {
+      "id": "schmalz-grip",
+      "url": "https://www.schmalz.com/site/binaries/content/assets/media/05_services/catalog/vg/area-layer-gripping-systems.pdf",
+      "resolvedUrl": "https://www.schmalz.com/site/binaries/content/assets/media/05_services/catalog/vg/area-layer-gripping-systems.pdf",
+      "httpStatus": 200,
+      "sha256": "99ad425f3e3a67f3f30f30df93b092ce435a12666192fe006e480a0336d3e898",
+      "bytes": 3593780,
+      "consultedOn": "2026-09-26",
+      "scope": "Brochure FXP/FMP de 2015 : génération externe, pièces poreuses et débit ; aucune reprise de benchmark commercial ni tenue garantie.",
+      "guides": [
+        "ventouse-piece-poreuse-debit-vide"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "smc-silencer",
+      "url": "https://static.smc.eu/pdf/PPE-Gg_EU.pdf",
+      "resolvedUrl": "https://static.smc.eu/pdf/PPE-Gg_EU.pdf",
+      "httpStatus": 200,
+      "sha256": "71ebc46e48691984d38666b1be63170b2b76fa9d4f007f48d3d1783580a3702d",
+      "bytes": 21696662,
+      "consultedOn": "2026-09-26",
+      "scope": "Précautions AN, remplacement en cas de colmatage et matériau non remplaçable, page PDF 354.",
+      "guides": [
+        "silencieux-pneumatique-colmate-contre-pression"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "smc-silencer-web",
+      "url": "https://www.smc.eu/en-gb/products/silencers-exhaust-cleaners~134605~nav",
+      "resolvedUrl": "https://www.smc.eu/en-gb/products/silencers-exhaust-cleaners~134605~nav",
+      "httpStatus": 200,
+      "sha256": "df3c656753404dc655a9ed7c25604a6a4fc38f438a54bef1f61852af7492f02d",
+      "bytes": 490378,
+      "consultedOn": "2026-09-26",
+      "scope": "Fonction acoustique, contre-pression et distinction avec nettoyage d’échappement.",
+      "guides": [
+        "silencieux-pneumatique-colmate-contre-pression"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "smc-speed",
+      "url": "https://static.smc.eu/pdf/ASS100_EU.pdf",
+      "resolvedUrl": "https://static.smc.eu/pdf/ASS100_EU.pdf",
+      "httpStatus": 200,
+      "sha256": "419c0d8d36bb2d8526b50290061444d001347ff40d4ead3fc1172bb3fc08daa9",
+      "bytes": 1006840,
+      "consultedOn": "2026-09-26",
+      "scope": "Série ASS, meter-in/meter-out et première mise en pression ; fonction spécifique non attribuée aux raccords ordinaires.",
+      "guides": [
+        "regler-vitesse-verin-pneumatique-echappement",
+        "silencieux-pneumatique-colmate-contre-pression"
+      ],
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true
+    },
+    {
+      "id": "trumpf-laser",
+      "url": "https://www.trumpf.com/en_GB/solutions/applications/laser-cutting/",
+      "resolvedUrl": null,
+      "httpStatus": null,
+      "sha256": null,
+      "bytes": null,
+      "consultedOn": "2026-09-26",
+      "scope": "Fonction des gaz selon le procédé ; aucune performance commerciale extrapolée.",
+      "guides": [
+        "compresseur-decoupe-laser-air-azote"
+      ],
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "directRetrievalLimitation": "Consultation par lecteur web, sans téléchargement direct conservé."
+    },
+    {
+      "id": "trumpf-manual",
+      "url": "https://www.trumpf.com/filestorage/TRUMPF_US/Landingpages/TruLaser_2030_fiber/pdfs/TruLaser-2030-Pre-Install-Manual.pdf",
+      "resolvedUrl": null,
+      "httpStatus": null,
+      "sha256": null,
+      "bytes": null,
+      "consultedOn": "2026-09-26",
+      "scope": "Section 3.3 du manuel TruLaser 2030 fiber : consommation dépendant de la buse, pression et durée ; référence aux tables technologiques.",
+      "guides": [
+        "compresseur-decoupe-laser-air-azote"
+      ],
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "directRetrievalLimitation": "Consultation par lecteur web, sans téléchargement direct conservé."
+    }
+  ],
+  "guides": [
+    {
+      "slug": "consommation-verin-pneumatique-double-effet",
+      "title": "Consommation d’un vérin pneumatique double effet : calculer les litres par cycle",
+      "seoTitle": "Consommation vérin double effet : calcul par cycle",
+      "sourceIds": [
+        "festo-general",
+        "festo-calculator"
+      ],
+      "relatedGuides": [
+        "force-verin-pneumatique-diametre-pression",
+        "choisir-distributeur-pneumatique-debit-nominal",
+        "utiliser-plusieurs-outils-pneumatiques"
+      ],
+      "wordsWithoutSources": 736,
+      "searchIntent": "Calculez le besoin d’air d’un vérin avec sa course, sa tige et sa cadence. Distinguez litres par cycle, débit moyen et débit de pointe du distributeur.",
+      "contentSha256": "89aedc298c0b0cd8c05403904f0fc1a6760f2acad05bbaa2cfec3130407cb2f0",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "force-verin-pneumatique-diametre-pression",
+      "title": "Force d’un vérin pneumatique : pression, diamètre et effort réellement disponible",
+      "seoTitle": "Force d’un vérin pneumatique : calcul et limites",
+      "sourceIds": [
+        "festo-force",
+        "festo-general"
+      ],
+      "relatedGuides": [
+        "consommation-verin-pneumatique-double-effet",
+        "regler-vitesse-verin-pneumatique-echappement",
+        "pression-travail-6-3-bar-outils-pneumatiques"
+      ],
+      "wordsWithoutSources": 695,
+      "searchIntent": "Comprenez la force en poussée et en traction, l’effet de la tige et les limites du calcul théorique avant de choisir le diamètre d’un vérin.",
+      "contentSha256": "811d5cc789319f0bed532e014f2cd1d980aea2a49e3a1cdfe41b48148cb9825d",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "regler-vitesse-verin-pneumatique-echappement",
+      "title": "Régler la vitesse d’un vérin pneumatique : admission, échappement et redémarrage",
+      "seoTitle": "Vitesse vérin pneumatique : admission ou échappement ?",
+      "sourceIds": [
+        "smc-speed",
+        "festo-safety"
+      ],
+      "relatedGuides": [
+        "force-verin-pneumatique-diametre-pression",
+        "silencieux-pneumatique-colmate-contre-pression",
+        "choisir-distributeur-pneumatique-debit-nominal"
+      ],
+      "wordsWithoutSources": 678,
+      "searchIntent": "Vérin trop rapide, irrégulier ou brutal au redémarrage : distinguez réglage du débit, pression, échappement et état initial des chambres.",
+      "contentSha256": "104b02268edfba4c81351ae151a44fa209615ada9d78f81a3e0a145fbf84f763",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "choisir-distributeur-pneumatique-debit-nominal",
+      "title": "Choisir un distributeur pneumatique : lire le débit nominal avant de remplacer une vanne",
+      "seoTitle": "Distributeur pneumatique : quel débit nominal choisir ?",
+      "sourceIds": [
+        "festo-flow",
+        "doe-enduse"
+      ],
+      "relatedGuides": [
+        "consommation-verin-pneumatique-double-effet",
+        "regler-vitesse-verin-pneumatique-echappement",
+        "raccord-air-comprime-bsp-npt-1-4"
+      ],
+      "wordsWithoutSources": 700,
+      "searchIntent": "Filetage identique, débit différent : lisez les conditions de pression, le sens de passage et le débit nominal avant de choisir un distributeur pneumatique.",
+      "contentSha256": "6d7aed2bb3b1265e4cbd8b46cea991095c3e2859ba2f45e46912bb660f0eccc2",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "silencieux-pneumatique-colmate-contre-pression",
+      "title": "Silencieux pneumatique colmaté : diagnostiquer une contre-pression à l’échappement",
+      "seoTitle": "Silencieux pneumatique colmaté : symptômes et contrôle",
+      "sourceIds": [
+        "smc-silencer-web",
+        "smc-speed",
+        "smc-silencer"
+      ],
+      "relatedGuides": [
+        "regler-vitesse-verin-pneumatique-echappement",
+        "choisir-distributeur-pneumatique-debit-nominal",
+        "maintenance-preventive-reseau-air-comprime"
+      ],
+      "wordsWithoutSources": 707,
+      "searchIntent": "Un vérin ralentit malgré une pression correcte ? Examinez l’échappement, la contre-pression et le silencieux sans supprimer durablement la réduction du bruit.",
+      "contentSha256": "ce7617ed471fb446f68f2d2f0c4c1d30970768d9038f1b4dd8bdbcd885921bb0",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "couper-air-comprime-machine-arret-week-end",
+      "title": "Faut-il couper l’air comprimé des machines la nuit et le week-end ?",
+      "seoTitle": "Couper l’air comprimé la nuit : méthode pour l’atelier",
+      "sourceIds": [
+        "festo-isolation",
+        "canada-energy"
+      ],
+      "relatedGuides": [
+        "detecter-mesurer-fuites-air-comprime",
+        "mesurer-temps-charge-vide-compresseur",
+        "regler-vitesse-verin-pneumatique-echappement"
+      ],
+      "wordsWithoutSources": 681,
+      "searchIntent": "Réduire la consommation hors production sans compromettre les fonctions machine : définir les zones, l’état de veille et les conditions de redémarrage.",
+      "contentSha256": "bc27153cb1a7db7fc97fd1cc08f31a5e080eeaee956fbcf1dab0c58870037da4",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "cout-metre-cube-air-comprime",
+      "title": "Combien coûte un mètre cube d’air comprimé ? Calculer avec les bonnes mesures",
+      "seoTitle": "Coût du m³ d’air comprimé : calcul kWh et euros",
+      "sourceIds": [
+        "doe-cost",
+        "doe-enduse"
+      ],
+      "relatedGuides": [
+        "comparer-puissance-specifique-compresseurs",
+        "debitmetre-air-comprime-diametre-conditions-reference",
+        "couper-air-comprime-machine-arret-week-end"
+      ],
+      "wordsWithoutSources": 698,
+      "searchIntent": "Calculez le coût énergétique de l’air comprimé à partir des kWh, du volume de référence et de votre facture, sans prix universel ni économies promises.",
+      "contentSha256": "a90e625f45bdc960168bf2dd04cc49374fa93b28ff78406e1222fb384b2a5ab9",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "baisser-pression-reseau-demande-artificielle",
+      "title": "Baisser la pression d’air comprimé : réduire la demande artificielle sans pénaliser les outils",
+      "seoTitle": "Baisser la pression d’air : quelle économie vérifier ?",
+      "sourceIds": [
+        "canada-energy",
+        "doe-pressure"
+      ],
+      "relatedGuides": [
+        "diagnostiquer-chute-pression-air-comprime",
+        "pression-travail-6-3-bar-outils-pneumatiques",
+        "stockage-primaire-secondaire-air-comprime"
+      ],
+      "wordsWithoutSources": 664,
+      "searchIntent": "Identifiez la demande artificielle, le poste critique et les mesures avant/après pour réduire la pression du réseau sans appliquer un gain forfaitaire.",
+      "contentSha256": "447ef9105daf1bfcc915ff8bf594e815c6d922beb78fef81adafa2adc1a08029",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "compresseur-perd-pression-arret-fuite-refroidissement",
+      "title": "Compresseur qui perd de la pression à l’arrêt : fuite ou refroidissement de la cuve ?",
+      "seoTitle": "Compresseur perd sa pression à l’arrêt : que vérifier ?",
+      "sourceIds": [
+        "nasa-gas",
+        "abac-trouble",
+        "einhell-manual"
+      ],
+      "relatedGuides": [
+        "compresseur-ne-monte-plus-en-pression",
+        "detecter-mesurer-fuites-air-comprime",
+        "temps-remplissage-cuve-compresseur-debit"
+      ],
+      "wordsWithoutSources": 693,
+      "searchIntent": "Une pression qui baisse après l’arrêt ne prouve pas à elle seule une fuite. Comparez température, manomètre et périmètre avant de demander une réparation.",
+      "contentSha256": "7f314e0d37129c763f77cf4ab91ab5309ba1f6a6ee08e6806ad8f24d9d7c7e2e",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "temps-remplissage-cuve-compresseur-debit",
+      "title": "Temps de remplissage d’une cuve de compresseur : que peut-on réellement en déduire ?",
+      "seoTitle": "Temps de remplissage cuve : estimer le débit sans piège",
+      "sourceIds": [
+        "metabo-fill",
+        "nasa-gas"
+      ],
+      "relatedGuides": [
+        "debit-restitue-fad-vs-debit-aspire",
+        "compresseur-perd-pression-arret-fuite-refroidissement",
+        "comparer-puissance-specifique-compresseurs"
+      ],
+      "wordsWithoutSources": 689,
+      "searchIntent": "Chronométrer une cuve peut aider au suivi, mais ne certifie pas le FAD. Découvrez le calcul simplifié, ses hypothèses et un exemple fabricant vérifiable.",
+      "contentSha256": "0410de3ed39f874d9a42848e0cc9ff38ed54820726f963a0ba37f6e7c93f6ed1",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "tuyau-pvc-reseau-air-comprime-risques",
+      "title": "Tuyau PVC pour l’air comprimé : pourquoi un marquage de pression d’eau ne suffit pas",
+      "seoTitle": "Tuyau PVC et air comprimé : quel réseau choisir ?",
+      "sourceIds": [
+        "osha-pvc",
+        "festo-general"
+      ],
+      "relatedGuides": [
+        "installer-reseau-air-comprime-atelier",
+        "raccord-air-comprime-bsp-npt-1-4",
+        "maintenance-preventive-reseau-air-comprime"
+      ],
+      "wordsWithoutSources": 664,
+      "searchIntent": "Un tuyau donné pour l’eau sous pression n’est pas automatiquement adapté à l’air comprimé. Vérifiez le domaine d’emploi et le système complet avant achat.",
+      "contentSha256": "9f56b22db2023ab3012e70b99d2c1dbb6141782fe5c2a3552665c8d54e8c2109",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "raccorder-deux-compresseurs-en-parallele",
+      "title": "Raccorder deux compresseurs en parallèle : peut-on réellement additionner leurs débits ?",
+      "seoTitle": "Deux compresseurs en parallèle : débit et précautions",
+      "sourceIds": [
+        "atlas-backup",
+        "atlas-parallel"
+      ],
+      "relatedGuides": [
+        "sequencer-plusieurs-compresseurs",
+        "utiliser-plusieurs-outils-pneumatiques",
+        "debit-restitue-fad-vs-debit-aspire"
+      ],
+      "wordsWithoutSources": 670,
+      "searchIntent": "Additionner deux débits exige des pressions et conditions comparables. Préparez le bilan, la commande et le scénario de secours avant tout raccordement.",
+      "contentSha256": "d2e76cc52503da528ae80d30de21998c5f15fdd3fc1b197cc03dce188aaf7517",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "secheur-membrane-air-comprime-debit-balayage",
+      "title": "Sécheur à membrane pour l’air comprimé : débit utile, balayage et point de rosée",
+      "seoTitle": "Sécheur à membrane : débit utile et air de balayage",
+      "sourceIds": [
+        "kaeser-membrane",
+        "doe-cost"
+      ],
+      "relatedGuides": [
+        "secheur-air-comprime-atelier-non-chauffe",
+        "secheur-adsorption-air-purge-debit-net",
+        "point-rosee-secheur-filtre-air-comprime"
+      ],
+      "wordsWithoutSources": 706,
+      "searchIntent": "Un sécheur à membrane peut fonctionner sans alimentation électrique, mais consomme de l’air de balayage. Vérifiez le débit net et le point de rosée requis.",
+      "contentSha256": "ff9e5f070196996572a767e3958f2d6f32fc66a35190eeb7d62a0c0ff1c51988",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "filtre-charbon-actif-air-comprime-vapeurs-huile",
+      "title": "Filtre à charbon actif pour l’air comprimé : traiter les vapeurs d’huile et prévoir le remplacement",
+      "seoTitle": "Charbon actif air comprimé : vapeurs d’huile et durée",
+      "sourceIds": [
+        "parker-carbon",
+        "parker-quality"
+      ],
+      "relatedGuides": [
+        "filtration-air-cabine-peinture-etages",
+        "qualite-air-comprime-iso-8573-1",
+        "filtre-air-comprime-perte-pression-remplacement"
+      ],
+      "wordsWithoutSources": 689,
+      "searchIntent": "Coalescence et charbon actif ne traitent pas la même forme d’huile. Définissez l’exigence, la protection amont et les critères de remplacement du charbon.",
+      "contentSha256": "03a25c319184cb806bd9cbc8c270071bfac8f16ced1934368d61ea2d435f6935",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "filtre-air-comprime-perte-pression-remplacement",
+      "title": "Filtre d’air comprimé : faut-il attendre une forte perte de pression pour le remplacer ?",
+      "seoTitle": "Filtre air comprimé : perte de pression et remplacement",
+      "sourceIds": [
+        "kaeser-filter",
+        "parker-carbon"
+      ],
+      "relatedGuides": [
+        "diagnostiquer-chute-pression-air-comprime",
+        "filtre-charbon-actif-air-comprime-vapeurs-huile",
+        "maintenance-preventive-reseau-air-comprime"
+      ],
+      "wordsWithoutSources": 683,
+      "searchIntent": "Une faible pression différentielle ne certifie pas la qualité de l’air. Croisez mesures sous débit, entretien fabricant et contrôles de contamination.",
+      "contentSha256": "c59311260d5e40411c085a7ab84168ca5fd88872b1da2b7f1f1d210a91fe7207",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "huile-sortie-compresseur-air-comprime-diagnostic",
+      "title": "Huile à la sortie du compresseur : localiser la contamination avant de changer les filtres",
+      "seoTitle": "Huile dans l’air comprimé : diagnostic au bon endroit",
+      "sourceIds": [
+        "abac-trouble",
+        "parker-quality",
+        "atlas-trouble"
+      ],
+      "relatedGuides": [
+        "huile-cle-a-chocs-pneumatique-lubrification",
+        "filtre-charbon-actif-air-comprime-vapeurs-huile",
+        "tester-contamination-air-avant-peinture"
+      ],
+      "wordsWithoutSources": 670,
+      "searchIntent": "Huile au raccord, dans le filtre ou sur la pièce : distinguez les origines possibles, la forme du contaminant et les vérifications utiles au réparateur.",
+      "contentSha256": "3503424741e4e1bd26a82180522c850d744f98c5984c974378f65e4a1120dbe0",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "air-comprime-contact-alimentaire-exigences",
+      "title": "Air comprimé au contact des aliments : rédiger une exigence vérifiable pour l’atelier",
+      "seoTitle": "Air comprimé alimentaire : qualité, contact et contrôle",
+      "sourceIds": [
+        "bcas-haccp",
+        "parker-quality"
+      ],
+      "relatedGuides": [
+        "qualite-air-comprime-iso-8573-1",
+        "compresseur-sans-huile-ou-lubrifie",
+        "filtre-charbon-actif-air-comprime-vapeurs-huile"
+      ],
+      "wordsWithoutSources": 692,
+      "searchIntent": "Contact avec aliments ou emballages : définissez les contaminants, le point de contrôle et les preuves attendues, sans classe universelle ni label improvisé.",
+      "contentSha256": "e815180909621a91900efb8433eb5663de2281d1a9200f7ef7bb90f7d3167db4",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "air-respirable-compresseur-atelier-limites",
+      "title": "Peut-on alimenter un masque avec un compresseur d’atelier ? Les limites de l’air respirable",
+      "seoTitle": "Air respirable : un compresseur d’atelier suffit-il ?",
+      "sourceIds": [
+        "inrs-page",
+        "clemco-resp"
+      ],
+      "relatedGuides": [
+        "qualite-air-comprime-iso-8573-1",
+        "compresseur-sans-huile-ou-lubrifie",
+        "filtration-air-cabine-peinture-etages"
+      ],
+      "wordsWithoutSources": 706,
+      "searchIntent": "Un filtre d’atelier et un compresseur sans huile ne prouvent pas que l’air est respirable. Identifiez les exigences du système complet avant tout raccordement.",
+      "contentSha256": "474614189a9a0e251ec040e4c93102614213080c216ab2c8551ee254e6469446",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "generateur-azote-compresseur-debit-purete",
+      "title": "Générateur d’azote : quel débit de compresseur selon la pureté demandée ?",
+      "seoTitle": "Générateur d’azote : débit d’air et pureté à distinguer",
+      "sourceIds": [
+        "atlas-nitrogen"
+      ],
+      "relatedGuides": [
+        "compresseur-decoupe-laser-air-azote",
+        "qualite-air-comprime-iso-8573-1",
+        "cout-metre-cube-air-comprime"
+      ],
+      "wordsWithoutSources": 771,
+      "searchIntent": "Le débit d’azote produit ne dimensionne pas le compresseur. Exemple NGP 8+, conditions de référence et données à demander pour une alimentation vérifiable.",
+      "contentSha256": "75cda3aee52339d6a9ed01f4660528a896c754ce4da454e93d7efbbd88823da4",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "compresseur-decoupe-laser-air-azote",
+      "title": "Compresseur pour découpe laser : distinguer air de service, air de coupe et azote",
+      "seoTitle": "Découpe laser : quel compresseur pour l’air ou l’azote ?",
+      "sourceIds": [
+        "trumpf-laser",
+        "trumpf-manual",
+        "atlas-laser"
+      ],
+      "relatedGuides": [
+        "generateur-azote-compresseur-debit-purete",
+        "compresseur-decoupeur-plasma-powermax45-sync",
+        "qualite-air-comprime-iso-8573-1"
+      ],
+      "wordsWithoutSources": 712,
+      "searchIntent": "Air de coupe, air de service et génération d’azote : identifiez le bon circuit et demandez débit, pression et qualité pour votre machine laser et vos pièces.",
+      "contentSha256": "85f7808130b5f8eaa0970063a7fd19d869877dcb78ef5d39875f1bd2eee2840b",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "compresseur-cabine-sablage-succion-pression",
+      "title": "Cabine de sablage à succion ou à pression : quel débit demander au compresseur ?",
+      "seoTitle": "Cabine de sablage : débit en succion ou sous pression",
+      "sourceIds": [
+        "clemco-suction",
+        "clemco-pressure"
+      ],
+      "relatedGuides": [
+        "buse-sablage-diametre-pression-debit-compresseur",
+        "sableuse-perd-puissance-abrasif-humide-diagnostic",
+        "compresseur-pour-sablage-pneumatique"
+      ],
+      "wordsWithoutSources": 727,
+      "searchIntent": "Le diamètre de sortie ne suffit pas à comparer deux cabines. Lisez le couple jet d’air et buse, la pression et les auxiliaires avant de choisir le compresseur.",
+      "contentSha256": "8e5394a949b4b91afc5c0ece2048340eead952fc1b628b8cd308e84aaf5bf71c",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "sableuse-perd-puissance-abrasif-humide-diagnostic",
+      "title": "Sableuse qui perd de la puissance : air, abrasif humide ou usure du pistolet ?",
+      "seoTitle": "Sableuse moins efficace : air, humidité ou buse usée ?",
+      "sourceIds": [
+        "clemco-suction",
+        "clemco-wet-current"
+      ],
+      "relatedGuides": [
+        "compresseur-cabine-sablage-succion-pression",
+        "buse-sablage-diametre-pression-debit-compresseur",
+        "point-rosee-secheur-filtre-air-comprime"
+      ],
+      "wordsWithoutSources": 702,
+      "searchIntent": "Pression qui chute, abrasif irrégulier, buse usée : préparez un diagnostic de cabine sans attribuer toute perte d’efficacité à un manque de compresseur.",
+      "contentSha256": "30ed57f9cd72b4325ac95e19d35165ccb397b7376993aa0f646e44313ba7295e",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "hydrosablage-compresseur-pompe-eau-debit",
+      "title": "Hydrosablage : compter l’air de la pompe à eau dans le besoin du compresseur",
+      "seoTitle": "Hydrosablage : débit du compresseur et pompe à eau",
+      "sourceIds": [
+        "clemco-injector-current",
+        "clemco-wet-current"
+      ],
+      "relatedGuides": [
+        "buse-sablage-diametre-pression-debit-compresseur",
+        "pompe-membrane-aro-66605-debit-air",
+        "choisir-compresseur-mobile-chantier-fad-autonomie"
+      ],
+      "wordsWithoutSources": 706,
+      "searchIntent": "Une pompe d’injection pneumatique peut consommer de l’air en plus de la buse. Exemple Wetblast Injector et méthode pour demander un bilan complet au fournisseur.",
+      "contentSha256": "ae6750d75cdebd543ebcef0de95039b8227f2643e951eb73e054c76cd99d21cc",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "ventouse-piece-poreuse-debit-vide",
+      "title": "Ventouse sur bois, carton ou pièce poreuse : quel débit de vide faut-il demander ?",
+      "seoTitle": "Ventouse et pièce poreuse : débit de vide et air moteur",
+      "sourceIds": [
+        "schmalz-grip",
+        "doe-alternatives"
+      ],
+      "relatedGuides": [
+        "ejecteur-vide-schmalz-sbpl-consommation",
+        "cout-metre-cube-air-comprime",
+        "dimensionner-compresseur-menuiserie-agencement"
+      ],
+      "wordsWithoutSources": 690,
+      "searchIntent": "Une pièce poreuse change le dossier de préhension. Distinguez débit aspiré, air moteur et tenue réelle avant de choisir un éjecteur ou une pompe à vide.",
+      "contentSha256": "c1dc9deecd61ad19c6fc40ec8ac2f92fbe3214eda162243ef8c0a78fb6cbe11d",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "couteau-air-comprime-ou-soufflante",
+      "title": "Couteau d’air comprimé ou soufflante : comparer le soufflage sur une même tâche",
+      "seoTitle": "Couteau d’air ou soufflante : débit et coût à comparer",
+      "sourceIds": [
+        "doe-lowpressure",
+        "doe-alternatives"
+      ],
+      "relatedGuides": [
+        "amplificateur-air-exair-consommation-debit",
+        "cout-metre-cube-air-comprime",
+        "baisser-pression-reseau-demande-artificielle"
+      ],
+      "wordsWithoutSources": 715,
+      "searchIntent": "Séchage, évacuation ou refroidissement : comparez air comprimé et soufflante sur le résultat utile, le cycle et l’énergie totale, sans pourcentage d’économie inventé.",
+      "contentSha256": "f69f43d45e6555aa9df8c7b04ec76438d81c2101287d7b669f083b51ec2749c1",
+      "originalSvgCount": 1
+    }
+  ],
+  "contextualBacklinks": [
+    {
+      "from": "utiliser-plusieurs-outils-pneumatiques",
+      "to": "consommation-verin-pneumatique-double-effet",
+      "anchor": "calculer les litres d’air par cycle de vérin"
+    },
+    {
+      "from": "guide-complet-dimensionner-compresseur-air",
+      "to": "consommation-verin-pneumatique-double-effet",
+      "anchor": "calculer les litres d’air par cycle de vérin"
+    },
+    {
+      "from": "pression-travail-6-3-bar-outils-pneumatiques",
+      "to": "force-verin-pneumatique-diametre-pression",
+      "anchor": "relier diamètre, pression et force d’un vérin"
+    },
+    {
+      "from": "moteur-pneumatique-couple-demarrage-debit",
+      "to": "force-verin-pneumatique-diametre-pression",
+      "anchor": "relier diamètre, pression et force d’un vérin"
+    },
+    {
+      "from": "diagnostiquer-chute-pression-air-comprime",
+      "to": "regler-vitesse-verin-pneumatique-echappement",
+      "anchor": "comprendre le réglage de vitesse à l’échappement d’un vérin"
+    },
+    {
+      "from": "groupe-frl-filtre-regulateur-lubrificateur",
+      "to": "regler-vitesse-verin-pneumatique-echappement",
+      "anchor": "comprendre le réglage de vitesse à l’échappement d’un vérin"
+    },
+    {
+      "from": "raccord-air-comprime-bsp-npt-1-4",
+      "to": "choisir-distributeur-pneumatique-debit-nominal",
+      "anchor": "lire le débit nominal d’un distributeur avec ses conditions de mesure"
+    },
+    {
+      "from": "debitmetre-air-comprime-diametre-conditions-reference",
+      "to": "choisir-distributeur-pneumatique-debit-nominal",
+      "anchor": "lire le débit nominal d’un distributeur avec ses conditions de mesure"
+    },
+    {
+      "from": "maintenance-preventive-reseau-air-comprime",
+      "to": "silencieux-pneumatique-colmate-contre-pression",
+      "anchor": "examiner un silencieux colmaté et la contre-pression d’échappement"
+    },
+    {
+      "from": "bruit-compresseur-lire-decibels",
+      "to": "silencieux-pneumatique-colmate-contre-pression",
+      "anchor": "examiner un silencieux colmaté et la contre-pression d’échappement"
+    },
+    {
+      "from": "detecter-mesurer-fuites-air-comprime",
+      "to": "couper-air-comprime-machine-arret-week-end",
+      "anchor": "organiser la coupure d’air des machines pendant les arrêts"
+    },
+    {
+      "from": "mesurer-temps-charge-vide-compresseur",
+      "to": "couper-air-comprime-machine-arret-week-end",
+      "anchor": "organiser la coupure d’air des machines pendant les arrêts"
+    },
+    {
+      "from": "comparer-puissance-specifique-compresseurs",
+      "to": "cout-metre-cube-air-comprime",
+      "anchor": "calculer le coût du mètre cube d’air sur un périmètre mesuré"
+    },
+    {
+      "from": "compresseur-vitesse-variable-vsd-rentabilite-atelier",
+      "to": "cout-metre-cube-air-comprime",
+      "anchor": "calculer le coût du mètre cube d’air sur un périmètre mesuré"
+    },
+    {
+      "from": "audit-reseau-air-comprime-protocole-mesures",
+      "to": "baisser-pression-reseau-demande-artificielle",
+      "anchor": "comprendre la demande artificielle avant de réduire la pression du réseau"
+    },
+    {
+      "from": "indicateurs-maintenance-air-comprime",
+      "to": "baisser-pression-reseau-demande-artificielle",
+      "anchor": "comprendre la demande artificielle avant de réduire la pression du réseau"
+    },
+    {
+      "from": "detecter-mesurer-fuites-air-comprime",
+      "to": "compresseur-perd-pression-arret-fuite-refroidissement",
+      "anchor": "distinguer refroidissement de la cuve et fuite après l’arrêt"
+    },
+    {
+      "from": "compresseur-ne-monte-plus-en-pression",
+      "to": "compresseur-perd-pression-arret-fuite-refroidissement",
+      "anchor": "distinguer refroidissement de la cuve et fuite après l’arrêt"
+    },
+    {
+      "from": "choisir-volume-cuve-24-50-90-litres",
+      "to": "temps-remplissage-cuve-compresseur-debit",
+      "anchor": "interpréter un temps de remplissage de cuve sans le présenter comme du FAD"
+    },
+    {
+      "from": "debit-restitue-fad-vs-debit-aspire",
+      "to": "temps-remplissage-cuve-compresseur-debit",
+      "anchor": "interpréter un temps de remplissage de cuve sans le présenter comme du FAD"
+    },
+    {
+      "from": "installer-reseau-air-comprime-atelier",
+      "to": "tuyau-pvc-reseau-air-comprime-risques",
+      "anchor": "vérifier pourquoi un tube PVC de plomberie ne valide pas un réseau d’air"
+    },
+    {
+      "from": "diametre-longueur-flexible-air-comprime",
+      "to": "tuyau-pvc-reseau-air-comprime-risques",
+      "anchor": "vérifier pourquoi un tube PVC de plomberie ne valide pas un réseau d’air"
+    },
+    {
+      "from": "sequencer-plusieurs-compresseurs",
+      "to": "raccorder-deux-compresseurs-en-parallele",
+      "anchor": "préparer le raccordement de deux compresseurs en parallèle"
+    },
+    {
+      "from": "stockage-primaire-secondaire-air-comprime",
+      "to": "raccorder-deux-compresseurs-en-parallele",
+      "anchor": "préparer le raccordement de deux compresseurs en parallèle"
+    },
+    {
+      "from": "secheur-adsorption-air-purge-debit-net",
+      "to": "secheur-membrane-air-comprime-debit-balayage",
+      "anchor": "intégrer l’air de balayage d’un sécheur à membrane"
+    },
+    {
+      "from": "point-rosee-secheur-filtre-air-comprime",
+      "to": "secheur-membrane-air-comprime-debit-balayage",
+      "anchor": "intégrer l’air de balayage d’un sécheur à membrane"
+    },
+    {
+      "from": "filtration-air-cabine-peinture-etages",
+      "to": "filtre-charbon-actif-air-comprime-vapeurs-huile",
+      "anchor": "distinguer charbon actif, vapeurs d’huile et filtration coalescente"
+    },
+    {
+      "from": "qualite-air-comprime-iso-8573-1",
+      "to": "filtre-charbon-actif-air-comprime-vapeurs-huile",
+      "anchor": "distinguer charbon actif, vapeurs d’huile et filtration coalescente"
+    },
+    {
+      "from": "groupe-frl-filtre-regulateur-lubrificateur",
+      "to": "filtre-air-comprime-perte-pression-remplacement",
+      "anchor": "interpréter la perte de pression d’un filtre sans en déduire sa pureté aval"
+    },
+    {
+      "from": "maintenance-preventive-reseau-air-comprime",
+      "to": "filtre-air-comprime-perte-pression-remplacement",
+      "anchor": "interpréter la perte de pression d’un filtre sans en déduire sa pureté aval"
+    },
+    {
+      "from": "tester-contamination-air-avant-peinture",
+      "to": "huile-sortie-compresseur-air-comprime-diagnostic",
+      "anchor": "localiser l’origine d’une trace d’huile dans l’air comprimé"
+    },
+    {
+      "from": "huile-cle-a-chocs-pneumatique-lubrification",
+      "to": "huile-sortie-compresseur-air-comprime-diagnostic",
+      "anchor": "localiser l’origine d’une trace d’huile dans l’air comprimé"
+    },
+    {
+      "from": "qualite-air-comprime-iso-8573-1",
+      "to": "air-comprime-contact-alimentaire-exigences",
+      "anchor": "rédiger les exigences d’air au contact des aliments avec le responsable qualité"
+    },
+    {
+      "from": "compresseur-sans-huile-ou-lubrifie",
+      "to": "air-comprime-contact-alimentaire-exigences",
+      "anchor": "rédiger les exigences d’air au contact des aliments avec le responsable qualité"
+    },
+    {
+      "from": "air-comprime-carrosserie-peinture",
+      "to": "air-respirable-compresseur-atelier-limites",
+      "anchor": "comprendre les limites d’un compresseur d’atelier pour l’air respirable"
+    },
+    {
+      "from": "compresseur-sans-huile-ou-lubrifie",
+      "to": "air-respirable-compresseur-atelier-limites",
+      "anchor": "comprendre les limites d’un compresseur d’atelier pour l’air respirable"
+    },
+    {
+      "from": "guide-complet-dimensionner-compresseur-air",
+      "to": "generateur-azote-compresseur-debit-purete",
+      "anchor": "séparer débit d’azote produit, pureté et consommation d’air du générateur"
+    },
+    {
+      "from": "dimensionner-secheur-frigorifique-ete",
+      "to": "generateur-azote-compresseur-debit-purete",
+      "anchor": "séparer débit d’azote produit, pureté et consommation d’air du générateur"
+    },
+    {
+      "from": "compresseur-decoupeur-plasma-powermax45-sync",
+      "to": "compresseur-decoupe-laser-air-azote",
+      "anchor": "identifier les circuits d’air et d’azote d’une découpe laser"
+    },
+    {
+      "from": "comparer-puissance-specifique-compresseurs",
+      "to": "compresseur-decoupe-laser-air-azote",
+      "anchor": "identifier les circuits d’air et d’azote d’une découpe laser"
+    },
+    {
+      "from": "compresseur-pour-sablage-pneumatique",
+      "to": "compresseur-cabine-sablage-succion-pression",
+      "anchor": "comparer le besoin d’une cabine à succion et d’une cabine sous pression"
+    },
+    {
+      "from": "buse-sablage-diametre-pression-debit-compresseur",
+      "to": "compresseur-cabine-sablage-succion-pression",
+      "anchor": "comparer le besoin d’une cabine à succion et d’une cabine sous pression"
+    },
+    {
+      "from": "compresseur-pour-sablage-pneumatique",
+      "to": "sableuse-perd-puissance-abrasif-humide-diagnostic",
+      "anchor": "diagnostiquer une baisse d’efficacité liée à l’air, au média ou à l’usure"
+    },
+    {
+      "from": "buse-sablage-diametre-pression-debit-compresseur",
+      "to": "sableuse-perd-puissance-abrasif-humide-diagnostic",
+      "anchor": "diagnostiquer une baisse d’efficacité liée à l’air, au média ou à l’usure"
+    },
+    {
+      "from": "pompe-membrane-aro-66605-debit-air",
+      "to": "hydrosablage-compresseur-pompe-eau-debit",
+      "anchor": "compter l’air de la pompe d’injection dans un projet d’hydrosablage"
+    },
+    {
+      "from": "choisir-compresseur-mobile-chantier-fad-autonomie",
+      "to": "hydrosablage-compresseur-pompe-eau-debit",
+      "anchor": "compter l’air de la pompe d’injection dans un projet d’hydrosablage"
+    },
+    {
+      "from": "ejecteur-vide-schmalz-sbpl-consommation",
+      "to": "ventouse-piece-poreuse-debit-vide",
+      "anchor": "préparer une préhension par le vide sur bois ou carton poreux"
+    },
+    {
+      "from": "dimensionner-compresseur-menuiserie-agencement",
+      "to": "ventouse-piece-poreuse-debit-vide",
+      "anchor": "préparer une préhension par le vide sur bois ou carton poreux"
+    },
+    {
+      "from": "amplificateur-air-exair-consommation-debit",
+      "to": "couteau-air-comprime-ou-soufflante",
+      "anchor": "comparer couteau d’air et soufflante sur une même tâche"
+    },
+    {
+      "from": "soufflette-garage-securite-bruit-consommation",
+      "to": "couteau-air-comprime-ou-soufflante",
+      "anchor": "comparer couteau d’air et soufflante sur une même tâche"
+    }
+  ],
+  "calculations": [
+    {
+      "guide": "consommation-verin-pneumatique-double-effet",
+      "inputs": {
+        "pistonMm": 32,
+        "rodMm": 12,
+        "strokeMm": 500,
+        "gaugeBar": 6
+      },
+      "extensionLiters": 2.8148670176164545,
+      "retractionLiters": 2.419026343264141,
+      "publishedRoundedCycleLiters": 5.234,
+      "hypotheticalCyclesPerMinute": 10,
+      "derivedLpm": 52.34
+    },
+    {
+      "guide": "force-verin-pneumatique-diametre-pression",
+      "inputs": {
+        "pistonMm": 40,
+        "rodMm": 16,
+        "gaugeBar": 6,
+        "friction": 0,
+        "backPressure": 0
+      },
+      "pushN": 753.9822368615503,
+      "pullN": 633.3450789637022
+    },
+    {
+      "guide": "compresseur-perd-pression-arret-fuite-refroidissement",
+      "inputs": {
+        "initialGaugeBar": 8,
+        "ambientAbsoluteBar": 1,
+        "initialCelsius": 40,
+        "finalCelsius": 20
+      },
+      "finalGaugeBar": 7.425195593166215
+    },
+    {
+      "guide": "temps-remplissage-cuve-compresseur-debit",
+      "inputs": {
+        "liters": 50,
+        "initialGaugeBar": 2,
+        "finalGaugeBar": 8,
+        "referenceAbsoluteBar": 1,
+        "minutes": 3
+      },
+      "derivedLpm": 100.0
+    },
+    {
+      "guide": "cout-metre-cube-air-comprime",
+      "inputs": {
+        "kWh": 120,
+        "referenceCubicMeters": 1000,
+        "illustrativeEurosPerKWh": 0.2
+      },
+      "kWhPerCubicMeter": 0.12,
+      "eurosPerCubicMeter": 0.024
+    }
+  ],
+  "excludedSourceAttempts": [
+    {
+      "id": "sata-resp",
+      "reason": "Redirection vers une page générique, écartée."
+    },
+    {
+      "id": "schmalz-calculator",
+      "reason": "Texte récupéré insuffisant, non utilisé."
+    },
+    {
+      "id": "inrs-resp",
+      "reason": "Échec de récupération PDF ; seule la page descriptive INRS est citée."
+    },
+    {
+      "ids": [
+        "clemco-wet",
+        "clemco-injector"
+      ],
+      "reason": "Anciens chemins inaccessibles ; remplacés par les notices exactes servies par le site officiel."
+    }
+  ],
+  "validation": {
+    "checkedAt": "2026-09-26T14:27:05.475306+00:00",
+    "nodeVersion": "24.19.0",
+    "sourceLint": "passed",
+    "editorialAudit": {
+      "guides": 136,
+      "declaredSourceEntries": 415,
+      "externalCitations": 751,
+      "status": "passed"
+    },
+    "astroCheck": {
+      "errors": 0,
+      "warnings": 0,
+      "existingHints": 5
+    },
+    "tests": {
+      "passed": 549,
+      "scope": "Suite complète du répertoire partagé, après correction du doublon de glossaire ; changement final limité aux métadonnées typographiques et à un libellé de tableau."
+    },
+    "build": {
+      "status": "passed",
+      "pages": 4684
+    },
+    "distAudit": {
+      "status": "passed",
+      "canonicalUrls": 4399,
+      "nonBlockingWarning": "Le hub maintenance-industrielle contient 120 destinations internes uniques, au plafond autorisé ; le seuil d’alerte est de 100."
+    },
+    "targetedStaticAudit": {
+      "guides": 25,
+      "backlinks": 50,
+      "checks": [
+        "unique h1",
+        "SEO title",
+        "description",
+        "canonical",
+        "sitemap",
+        "TechArticle citations",
+        "SVG accessible names",
+        "internal links and glossary anchors",
+        "source file hashes"
+      ],
+      "errors": []
+    },
+    "browser": {
+      "engine": "Chromium",
+      "widths": [
+        320,
+        390,
+        1440
+      ],
+      "views": 75,
+      "errors": [],
+      "checks": [
+        "document overflow",
+        "SVG width",
+        "SVG text bounds with site font",
+        "table bounds"
+      ],
+      "noJavaScript": {
+        "guide": "generateur-azote-compresseur-debit-purete",
+        "h1": 1,
+        "table": 1,
+        "sourceLinks": 2
+      },
+      "visualReview": "Captures mobiles et bureau relues sur les guides azote, vérin et cabine de sablage ; bornes des 25 SVG vérifiées avec Manrope."
+    },
+    "calculationsRecomputed": 5,
+    "cssSha256": "472ac3db327afda2f454bff771e1ba2e3c15fc54a748682d5d526dc910b3a2da",
+    "publication": "Ce lot reste local, non committé et non poussé."
+  }
+}

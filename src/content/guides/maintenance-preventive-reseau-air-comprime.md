@@ -74,6 +74,12 @@ Les snapshots mensuels de l’[observatoire documentaire](/observatoire-qualite-
 
 Ces relevés sont également utiles lors d’un changement d’équipement. La [checklist d’achat d’un compresseur d’occasion](/guides/acheter-compresseur-occasion-controles-documents/) aide à relier identité, historique, état et essai de réception.
 
+Pour prolonger cette vérification, vous pouvez [examiner un silencieux colmaté et la contre-pression d’échappement](/guides/silencieux-pneumatique-colmate-contre-pression/) et [interpréter la perte de pression d’un filtre sans en déduire sa pureté aval](/guides/filtre-air-comprime-perte-pression-remplacement/).
+
+Un souffle à la soupape relève du [guide de diagnostic de la soupape de sécurité](/guides/soupape-securite-compresseur-fuit-siffle/), avec les limites d’intervention de la notice.
+
+Le [guide du by-pass de sécheur](/guides/bypass-secheur-air-comprime-qualite-maintenance/) prépare la continuité des usages, les limites de qualité et le retour après maintenance.
+
 ## Sources
 
 - [US Department of Energy, Compressed Air System Sourcebook](https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf)

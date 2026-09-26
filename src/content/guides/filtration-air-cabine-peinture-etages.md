@@ -11,6 +11,7 @@ featured: true
 sources:
   - https://www.sata.com/fr-int/produits/filtration/serie-sata-filter-400/serie-sata-filter-400
   - https://www.iso.org/fr/standard/46418.html
+updatedDate: 2026-09-26
 ---
 
 Ajouter des bols en série ne documente pas la qualité de l’air. Chaque étage doit avoir une fonction, une référence, une capacité et un entretien définis. La comparaison avec le besoin du procédé s’effectue au point d’utilisation, sans transformer la composition d’un filtre en classe de pureté mesurée.
@@ -81,6 +82,10 @@ Lorsque la pression au pistolet baisse, comparez l’amont et l’aval de chaque
 Le dossier final doit permettre de répondre à cinq questions : quel procédé est alimenté, quelle qualité est exigée, quelle variante a été posée, quel débit la traverse et comment le résultat est-il contrôlé ? Une réponse manquante reste une action ouverte.
 
 Cette discipline évite qu’une succession de composants de qualité soit présentée comme une preuve de qualité de l’air final sans mesure ni exigence de référence.
+
+Pour prolonger cette vérification, vous pouvez [distinguer charbon actif, vapeurs d’huile et filtration coalescente](/guides/filtre-charbon-actif-air-comprime-vapeurs-huile/).
+
+Le [comparatif séparateur cyclonique et filtre coalescent](/guides/separateur-cyclonique-filtre-coalescent-differences/) distingue liquide, aérosol et vapeur pour clarifier les fonctions du traitement.
 
 ## Sources
 

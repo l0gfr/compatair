@@ -11,6 +11,7 @@ sources:
   - https://de.metabo.com/de/maschinen/druckluft/druckluft-werkzeuge/druckluft-farbspritzpistolen/fsp-600-lvlp-601578000-druckluft-farbspritzpistole.html
   - https://shop.abacaircompressors.com/en-GB/products/2809913544/paint-spray-gun-g-550f
   - https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf
+updatedDate: 2026-09-26
 ---
 
 Les étiquettes LVLP et HVLP donnent une indication sur la famille du pistolet, pas le débit que tout modèle de cette famille consommera. Le dimensionnement doit partir de la fiche de la référence exacte.
@@ -52,6 +53,8 @@ Le guide [qualité de l’air comprimé](/guides/qualite-air-comprime-iso-8573-1
 Sur ces deux références seulement, le FSP 600 LVLP publie un besoin inférieur au G-550F HVLP. La conclusion ne doit pas être généralisée à toutes les gammes. Pour acheter ou dimensionner, conserver quatre données ensemble : modèle exact, débit, pression et source.
 
 Le [guide du G-550F HVLP](/guides/compresseur-pour-pistolet-peinture-hvlp/) applique la marge CompatAir au modèle ABAC. La [fiche du FSP 600 LVLP](/outils-pneumatiques/pistolet-peinture-lvlp-metabo-fsp-600/) relie désormais son visuel et ses données critiques à la source officielle Metabo.
+
+Le [guide buse, chapeau et consommation d’air](/guides/buse-pistolet-peinture-chapeau-air-consommation/) montre comment comparer une configuration complète avec ses conditions constructeur.
 
 ## Sources
 

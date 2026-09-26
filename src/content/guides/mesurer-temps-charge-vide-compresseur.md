@@ -3,7 +3,7 @@ title: "Mesurer les temps en charge et à vide d’un compresseur avant de régl
 seoTitle: "Mesurer charge et marche à vide compresseur"
 description: "Protocole de relevé des états charge, marche à vide et arrêt pour établir un profil avant toute modification de pression ou de temporisation."
 pubDate: 2026-07-15
-updatedDate: 2026-07-20
+updatedDate: 2026-09-26
 category: "Utiliser"
 audiences: [professionnel]
 metiers: [maintenance-industrielle]
@@ -71,6 +71,10 @@ Une marche à vide prolongée peut provenir d’une temporisation, d’un stocka
 Si plusieurs machines partagent le réseau, poursuivez avec le protocole de [séquencement des compresseurs de base et d’appoint](/guides/sequencer-plusieurs-compresseurs/). Si le phénomène suit un appel bref, examinez séparément le [stockage primaire et secondaire](/guides/stockage-primaire-secondaire-air-comprime/).
 
 Avant toute modification, rapprochez le profil de la notice de commande, des limites du fabricant et du comportement des autres machines. Après correction, répétez la même fenêtre et comparez pression, disponibilité, énergie et nombre de démarrages. Un gain énergétique qui dégrade la pression du procédé n’est pas une recette achevée.
+
+Pour prolonger cette vérification, vous pouvez [organiser la coupure d’air des machines pendant les arrêts](/guides/couper-air-comprime-machine-arret-week-end/).
+
+Le [guide du pressostat et de son différentiel](/guides/pressostat-compresseur-pression-enclenchement-differentiel/) aide à lire les seuils d’enclenchement et d’arrêt sans improviser un réglage.
 
 ## Sources
 

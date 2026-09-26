@@ -13,6 +13,7 @@ relatedGuides: ["compresseur-piston-ou-vis-profil-charge", "comparer-puissance-s
 sources:
   - https://www.cagi.org/assets/documents/pdfs/SystemControlsFAQs.pdf?updated=1657712700
   - https://www.cagi.org/assets/documents/pdfs/RotarySelectionGuideFinalJune2022.pdf?updated=1658932519
+updatedDate: 2026-09-26
 ---
 
 **Un compresseur à vitesse variable peut être pertinent si la demande fluctue dans sa plage de régulation. Son seul sigle VSD ne prouve pas une économie pour votre atelier.** La comparaison doit porter sur le débit, la pression, les heures passées dans chaque régime et la puissance électrique absorbée.
@@ -87,6 +88,8 @@ Le [guide de ventilation du local](/guides/ventilation-local-compresseur-surchau
 Notre dossier d’achat proposé contient : une courbe ou des points de débit et puissance à la pression choisie ; la plage minimale/maximale ; la logique de commande aux faibles charges ; les hypothèses annuelles avec leurs relevés ; enfin les coûts d’entretien et les conditions de réception.
 
 Si l’offre ne donne qu’un pourcentage d’économie, demandez par rapport à quelle machine, quelle pression et quel profil. Une hypothèse documentée peut être discutée. Une économie sans scénario de référence ne permet pas de choisir.
+
+Pour prolonger cette vérification, vous pouvez [calculer le coût du mètre cube d’air sur un périmètre mesuré](/guides/cout-metre-cube-air-comprime/).
 
 ## Sources et périmètre
 

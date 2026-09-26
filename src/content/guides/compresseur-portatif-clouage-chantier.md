@@ -11,6 +11,7 @@ sources:
   - https://www.einhell.fr/p/4020410-te-ac-18-75-li-of-solo/
   - https://www.einhell.fr/p/4137790-tc-pn-50/
   - https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ngovue839t5o7dugodnovh8q57/4137790_11018_001_SPK2.pdf
+updatedDate: 2026-09-26
 ---
 
 La mobilité ne se résume pas à l’absence de câble. Un ensemble de clouage portatif doit tenir la cadence, la pression, l’autonomie et le niveau de service attendu. Deux produits peuvent sembler compatibles sur une image commerciale tout en restant inadaptés à une exploitation professionnelle soutenue.
@@ -78,6 +79,8 @@ Le dossier de sélection devrait exiger :
 - un protocole de sécurité et de maintenance attribuable.
 
 Ce filtre évite de confondre portabilité commerciale et capacité de production.
+
+Le [guide des déclenchements séquentiel et par contact](/guides/cloueur-pneumatique-declenchement-sequentiel-contact/) précise les mécanismes à identifier avant de choisir un cloueur.
 
 ## Sources
 

@@ -2,7 +2,7 @@
 title: "Chute de pression d’air comprimé : construire un profil et trouver la restriction"
 description: "Mesurer la pression du compresseur jusqu’à l’outil pour localiser les pertes dans les filtres, conduites, raccords et flexibles sans augmenter le réglage au hasard."
 pubDate: 2026-07-13
-updatedDate: 2026-09-25
+updatedDate: 2026-09-26
 category: "Installer"
 audiences: [professionnel]
 metiers: [garage-automobile, carrosserie-peinture, menuiserie-agencement, maintenance-industrielle]
@@ -115,6 +115,8 @@ Le diagnostic devient défendable lorsque le schéma, les instruments, les condi
 ## Quand le problème semble venir du compresseur
 
 Si la cuve elle-même paraît ne plus charger, le guide [compresseur qui ne monte plus en pression](/guides/compresseur-ne-monte-plus-en-pression/) sépare production, réglage de sortie et demande excessive. Identifiez le rôle du manomètre avant d’attribuer sa lecture au réservoir.
+
+Pour prolonger cette vérification, vous pouvez [comprendre le réglage de vitesse à l’échappement d’un vérin](/guides/regler-vitesse-verin-pneumatique-echappement/).
 
 ## Sources
 

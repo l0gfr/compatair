@@ -1,0 +1,1792 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-09-26",
+  "reviewType": "internal_editorial",
+  "assistedByAI": true,
+  "externalProfessionalValidation": false,
+  "physicalTestsPerformed": false,
+  "hashScope": "Empreintes des réponses réellement téléchargées et des guides à la fin de la revue. Une lecture web ne reçoit pas une empreinte fictive. Originaux constructeurs non redistribués. Les modifications ultérieures sont hors de ce relevé.",
+  "publicationScope": {
+    "guidesBefore": 136,
+    "guidesAdded": 30,
+    "guidesAfter": 166,
+    "previousUnpublishedBatch": 25,
+    "newProductPages": 0
+  },
+  "qualityPolicy": {
+    "purpose": "Intentions techniques distinctes, réponses directes et preuves primaires ; aucun volume de recherche, classement, taux de clic ou trafic futur inventé.",
+    "controls": [
+      "Comparaison des intentions avec les 136 guides existants",
+      "30 SVG accessibles, dont 4 schémas géométriques dédiés et 2 comparaisons de valeurs en barres",
+      "60 liens contextuels depuis 48 articles existants",
+      "4 définitions de glossaire sourcées avec liens réciproques",
+      "Pagination statique des six métiers, couverture auditée sans JavaScript",
+      "Exemples hypothétiques distingués des valeurs constructeur et des mesures réelles"
+    ]
+  },
+  "sources": [
+    {
+      "id": "almatec-manual",
+      "url": "https://www.psgdover.com/docs/default-source/almatec-docs/manuals/ahs_manual.pdf?sfvrsn=595cdc7a_15",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP Error 403: Forbidden",
+      "guides": [
+        "pompe-pneumatique-echappement-givre-air-sec"
+      ]
+    },
+    {
+      "id": "atlas-oil",
+      "url": "https://www.atlascopco.com/en-us/compressors/service/parts/compressor-oil",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "36b58f721c00c6be4f6b3976a52070ea4065d2346701e5ed6f243560151b0649",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.atlascopco.com/en-us/compressors/service/parts/compressor-oil",
+      "bytes": 293565,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "huile-compresseur-viscosite-reference-constructeur"
+      ]
+    },
+    {
+      "id": "atlas-paroil",
+      "url": "https://www.atlascopco.com/en-us/construction-equipment/service/fluids-and-lubricants-portfolio/compressor-oil/paroil-m",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "d80a3cd0dbc7feeb63365ab47adf054485d93f536947676d9e645ca4a5b4e870",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.atlascopco.com/en-us/construction-equipment/service/fluids-and-lubricants-portfolio/compressor-oil/paroil-m",
+      "bytes": 209430,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "huile-compresseur-viscosite-reference-constructeur"
+      ]
+    },
+    {
+      "id": "beko-bypass",
+      "url": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/dp-ra-20-960-r513a_iii_ba_05-317_en_00_00.pdf",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "046389bf2151c0ddace12f4f7c1473a860a7adf1f5220b6f535a2d2c5678c6f0",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/dp-ra-20-960-r513a_iii_ba_05-317_en_00_00.pdf",
+      "bytes": 5666529,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "bypass-secheur-air-comprime-qualite-maintenance"
+      ]
+    },
+    {
+      "id": "beko-bypass-product",
+      "url": "https://www.beko-technologies.us/en-us/products/compressed-air-dryers/energy-saving-refrigerant-dryers/",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "56261c744f50e80d63e63fe62009516369eb1c0261e4a4dc496567d74ed28b64",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.beko-technologies.us/en-us/products/compressed-air-dryers/energy-saving-refrigerant-dryers/",
+      "bytes": 301058,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "bypass-secheur-air-comprime-qualite-maintenance"
+      ]
+    },
+    {
+      "id": "beko-treatment",
+      "url": "https://www.beko-technologies.com/en-en/know-how/compressed-air/compressed-air-treatment/",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "cc246bcf216de954468c33be43ab10dc8b0fd594114b009cf1151cbc6fb8f449",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.beko-technologies.com/en-en/know-how/compressed-air/compressed-air-treatment/",
+      "bytes": 519418,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "separateur-cyclonique-filtre-coalescent-differences"
+      ]
+    },
+    {
+      "id": "binks-abc",
+      "url": "https://binks.com/support/resource-library/abcs-of-spray-finishing-1-239/",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "d69353dd192852bfe1f5383a11cb46403a07b2f98dd4a2d4976720ca8ac0d409",
+      "httpStatus": 200,
+      "resolvedUrl": "https://binks.com/fr/support/resource-library/abcs-of-spray-finishing-1-239/",
+      "bytes": 472947,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "pistolet-peinture-gravite-aspiration-cuve-pression",
+        "buse-pistolet-peinture-chapeau-air-consommation"
+      ]
+    },
+    {
+      "id": "binks-dv1s",
+      "url": "https://binks.com/support/resource-library/dv1-s-gravity-spray-gun-operation-manual/",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "2d798dfe87066aafca13ce691d0f3a95b0eeb20b30bcd9b0079030b47df017a7",
+      "httpStatus": 200,
+      "resolvedUrl": "https://binks.com/fr/support/resource-library/dv1-s-gravity-spray-gun-operation-manual/",
+      "bytes": 279448,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "buse-pistolet-peinture-chapeau-air-consommation"
+      ]
+    },
+    {
+      "id": "binks-faq",
+      "url": "https://binks.com/automotive-refinishing-equipment/",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "8301c1e81ab90064af5aa8b05fa553e49d07c1c464e0dc1c55bd61fa29753603",
+      "httpStatus": 200,
+      "resolvedUrl": "https://binks.com/automotive-refinishing-equipment/",
+      "bytes": 663269,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "pistolet-peinture-jet-deforme-crachote-diagnostic"
+      ]
+    },
+    {
+      "id": "binks-guide",
+      "url": "https://binks.com/support/resource-library/spray-gun-troubleshooting-preventative-maintenance-guide-sb-2-001/",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "d07de2dae9992d4bae9c291e1fa663ff56fe22968ce16765a9a7744f1015ac4d",
+      "httpStatus": 200,
+      "resolvedUrl": "https://binks.com/fr/support/resource-library/spray-gun-troubleshooting-preventative-maintenance-guide-sb-2-001/",
+      "bytes": 283920,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "pistolet-peinture-gravite-aspiration-cuve-pression",
+        "pistolet-peinture-jet-deforme-crachote-diagnostic"
+      ]
+    },
+    {
+      "id": "bostitch-80",
+      "url": "https://bostitch.fr/produits/specification-sheets/tools/21680b-e/",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "64d4885bfbec0b9b4aedddee4bd6e4dc097e665d93cbbb2e950dc1720e0597a8",
+      "httpStatus": 200,
+      "resolvedUrl": "https://bostitch.fr/produits/specification-sheets/tools/21680b-e/",
+      "bytes": 55260,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "agrafes-pneumatiques-serie-couronne-longueur-compatibilite"
+      ]
+    },
+    {
+      "id": "bostitch-manual",
+      "url": "https://s3-eu-west-1.amazonaws.com/media.bostitch.joltrouter.net/media/pdf/products/manuals/FT71444-c-1111_SBT_Manual_Manual_WMK.pdf",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP Error 403: Forbidden",
+      "guides": [
+        "cloueur-pneumatique-declenchement-sequentiel-contact",
+        "cloueur-clous-mal-enfonces-pression-profondeur"
+      ]
+    },
+    {
+      "id": "bostitch-product",
+      "url": "https://bostitch.fr/produits/details-de-l-outil/bt1855-e/",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "776dff122cf9066b2c8bb840ea2ad585280435528cbf2f689dd7c9690a43c2f4",
+      "httpStatus": 200,
+      "resolvedUrl": "https://bostitch.fr/produits/details-de-l-outil/bt1855-e/",
+      "bytes": 66381,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "cloueur-clous-mal-enfonces-pression-profondeur"
+      ]
+    },
+    {
+      "id": "bostitch-staples",
+      "url": "https://bostitch.fr/produits/appareils-de-fixation/agrafes-pour-travaux-legers/",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "3f73bdaccfceac754b2dfba019f8d830a550093373261edd46b892f992a841a0",
+      "httpStatus": 200,
+      "resolvedUrl": "https://bostitch.fr/produits/appareils-de-fixation/agrafes-pour-travaux-legers/",
+      "bytes": 48247,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "agrafes-pneumatiques-serie-couronne-longueur-compatibilite"
+      ]
+    },
+    {
+      "id": "cagi",
+      "url": "https://www.cagi.org/performance-verification-original",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "01e666617c0891c835559695417566252aefb75728364278ca2a1912e4c0d65b",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.cagi.org/performance-verification-original",
+      "bytes": 55037,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "lire-fiche-cagi-compresseur-iso-1217"
+      ]
+    },
+    {
+      "id": "cagi-fixed",
+      "url": "https://uploads.prod01.oregon.platform-os.com/instances/2032/assets/documents/pdfs/RotaryCompressorUniformTestMethod.pdf?updated=1788880181",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "973e8b67633aaf561a7d2678371a075286da9e08253aee86cab9e2359050055d",
+      "httpStatus": 200,
+      "resolvedUrl": "https://uploads.prod01.oregon.platform-os.com/instances/2032/assets/documents/pdfs/RotaryCompressorUniformTestMethod.pdf?updated=1788880181",
+      "bytes": 90886,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "lire-fiche-cagi-compresseur-iso-1217"
+      ]
+    },
+    {
+      "id": "cagi-vfd",
+      "url": "https://uploads.prod01.oregon.platform-os.com/instances/2032/assets/documents/pdfs/RotaryVFDCompressorsUniformTestMethod.pdf?updated=1788880181",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "c8a7584fbd0e6b5f5a3d5f51b07098b95cf6e67200e4b9f511cedf73080fa7e3",
+      "httpStatus": 200,
+      "resolvedUrl": "https://uploads.prod01.oregon.platform-os.com/instances/2032/assets/documents/pdfs/RotaryVFDCompressorsUniformTestMethod.pdf?updated=1788880181",
+      "bytes": 104532,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "lire-fiche-cagi-compresseur-iso-1217"
+      ]
+    },
+    {
+      "id": "condor",
+      "url": "https://condor-werke.de/en/products/pressure-switches/product/pressure-switch-mdr-2",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "1386df6fd15335d17a5921fa006295060ca634243b05b07e99ede36db8ffde66",
+      "httpStatus": 200,
+      "resolvedUrl": "https://condor-werke.de/en/products/pressure-switches/product/pressure-switch-mdr-2",
+      "bytes": 149674,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "pressostat-compresseur-pression-enclenchement-differentiel"
+      ]
+    },
+    {
+      "id": "condor-pdf",
+      "url": "https://condor-werke.de/fileadmin/content/PDF/Datenblaetter/Druckschalter/MDR-2/product-data-sheet-Condor-MDR-2.pdf",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "97d5074d30578a868ad731498a6e6a9a43f268e830fb892ecb2d4eae76c0c85e",
+      "httpStatus": 200,
+      "resolvedUrl": "https://condor-werke.de/fileadmin/content/PDF/Datenblaetter/Druckschalter/MDR-2/product-data-sheet-Condor-MDR-2.pdf",
+      "bytes": 808009,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "pressostat-compresseur-pression-enclenchement-differentiel"
+      ]
+    },
+    {
+      "id": "corghi",
+      "url": "https://www.corghi.com/en/product/a2025/",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "3b5428f8cff9fe3c601fc801e32b4c355a57f1b12610f3f69c061fe211dab48b",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.corghi.com/en/product/a2025/",
+      "bytes": 427993,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "compresseur-demonte-pneu-pression-consommation"
+      ]
+    },
+    {
+      "id": "corghi-current",
+      "url": "https://www.corghi.com/wp-content/uploads/2026/07/A2025_it_en.pdf",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "cac1db6a8320be3da3f052745b406cbe04a9673cdfc61561242382a9df195900",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.corghi.com/wp-content/uploads/2026/07/A2025_it_en.pdf",
+      "bytes": 1826378,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "compresseur-demonte-pneu-pression-consommation"
+      ]
+    },
+    {
+      "id": "duerr",
+      "url": "https://www.duerrdental.com/en/products/compressed-air/devices/tornado-compressors/",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "63f25d7cd7b03c34f8dc5db637d697ee34ce50eb7fed4b9b5911fe0060567393",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.duerrdental.com/en/products/compressed-air/devices/tornado-compressors/",
+      "bytes": 205900,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "compresseur-dentaire-debit-qualite-cabinet"
+      ]
+    },
+    {
+      "id": "einhell-manual",
+      "url": "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nupse59f8t4htfeoh3u5gifg65/4010393_11027_001_SPK2.pdf",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "7af21f1efb6ac0e93ec4dde3af06bac34efdacf3d177a6e71dce6c9fb2c99356",
+      "httpStatus": 200,
+      "resolvedUrl": "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nupse59f8t4htfeoh3u5gifg65/4010393_11027_001_SPK2.pdf",
+      "bytes": 1721705,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "soupape-securite-compresseur-fuit-siffle",
+        "cuve-compresseur-rouille-condensats-controle"
+      ]
+    },
+    {
+      "id": "festo-cylinder",
+      "url": "https://www.festo.com/us/en/c/products/actuators-and-drives/pneumatic-cylinders-id_pim135",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP Error 403: Forbidden",
+      "guides": [
+        "verin-simple-double-effet-ressort-retour"
+      ]
+    },
+    {
+      "id": "festo-dpca",
+      "url": "https://www.festo.com/media/catalog/204284_documentation.pdf",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP Error 403: Forbidden",
+      "guides": [
+        "verin-simple-double-effet-ressort-retour"
+      ]
+    },
+    {
+      "id": "festo-drvs",
+      "url": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Datasheet/FR_FR/1845719.pdf",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "6ba5bcee7f347e1552780b1d10d36fc8363b314edf242a09217e728ee8391c9e",
+      "httpStatus": 200,
+      "resolvedUrl": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Datasheet/FR_FR/1845719.pdf",
+      "bytes": 55863,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "verin-rotatif-pneumatique-couple-angle-inertie"
+      ]
+    },
+    {
+      "id": "festo-gripper",
+      "url": "https://www.festo.com/media/catalog/203154_documentation.pdf",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP Error 403: Forbidden",
+      "guides": [
+        "pince-pneumatique-force-doigt-longueur-prehension"
+      ]
+    },
+    {
+      "id": "festo-rotary",
+      "url": "https://www.festo.com/us/en/c/products/actuators-and-drives/pneumatic-cylinders/rotary-actuators-id_pim217",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP Error 403: Forbidden",
+      "guides": [
+        "verin-rotatif-pneumatique-couple-angle-inertie"
+      ]
+    },
+    {
+      "id": "festo-softstart",
+      "url": "https://www.festo.com/media/pim/789/D15000100122789.pdf",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP Error 403: Forbidden",
+      "guides": [
+        "vanne-demarrage-progressif-air-comprime-remise-pression"
+      ]
+    },
+    {
+      "id": "gaither",
+      "url": "https://gaithertool.com/content/TUV-BB3L2-6L2-10L2.manual-210305.pdf",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "9e65d14748fe6c16be7530df7f8873270fd1dae4c2da4e6f27fc8f2ca209d984",
+      "httpStatus": 200,
+      "resolvedUrl": "https://gaithertool.com/content/TUV-BB3L2-6L2-10L2.manual-210305.pdf",
+      "bytes": 3663591,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "booster-talonnage-tubeless-reserve-air-compresseur"
+      ]
+    },
+    {
+      "id": "haas",
+      "url": "https://www.haascnc.com/owners/pre-install-guide/mills-pre-install/VF-4.html",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP Error 403: Forbidden",
+      "guides": [
+        "compresseur-machine-cnc-haas-pression-debit"
+      ]
+    },
+    {
+      "id": "inrs-checks",
+      "url": "https://www.inrs.fr/risques/utilisation-machines/verifications-initiales-periodiques",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "b899396334980e5dcf2939073ccf50deffce92e0d87c4e69a3267c25448e93af",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.inrs.fr/risques/utilisation-machines/verifications-initiales-periodiques",
+      "bytes": 86282,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "cuve-compresseur-rouille-condensats-controle"
+      ]
+    },
+    {
+      "id": "ir-sockets",
+      "url": "https://irtoolhelp.ingersollrand.com/hc/en-us/articles/360013807334-How-can-impact-tools-deliver-torques-higher-than-the-socket-ratings",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "4c9bdc6ab5fe2fd8c96c348dfce22d27cdec422c0aaf47500a4276c5bcb49996",
+      "httpStatus": 200,
+      "resolvedUrl": "https://irtoolhelp.ingersollrand.com/hc/en-us/articles/360013807334-How-can-impact-tools-deliver-torques-higher-than-the-socket-ratings",
+      "bytes": 90082,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "douilles-choc-adaptateurs-carre-compatibilite"
+      ]
+    },
+    {
+      "id": "iso-dental",
+      "url": "https://www.iso.org/fr/standard/72421.html",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP Error 403: Forbidden",
+      "guides": [
+        "compresseur-dentaire-debit-qualite-cabinet"
+      ]
+    },
+    {
+      "id": "metabo-manual",
+      "url": "https://www.metabo-service.com/manuals/1151663628_00_0310_Sx_Ax_de_en_fr_nl_it_es_pt_da_no_sv_fi_hu_pl_el_%20Basic%20265.pdf",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "65313d7b6f31d112ee95654c61df05cbc9e6067d834491a17b1b1422a70dfc39",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.metabo-service.com/manuals/1151663628_00_0310_Sx_Ax_de_en_fr_nl_it_es_pt_da_no_sv_fi_hu_pl_el_%20Basic%20265.pdf",
+      "bytes": 2944370,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "pressostat-compresseur-pression-enclenchement-differentiel",
+        "soupape-securite-compresseur-fuit-siffle"
+      ]
+    },
+    {
+      "id": "mirka-deros",
+      "url": "https://www.mirka.com/en/p/Mirka-DEROS-650CV-EU-150---5",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "422fc0c50920834389344f188f7fc6ee781d0742723944ade1ade2469dcce515",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.mirka.com/en/p/Mirka-DEROS-650CV-EU-150---5/",
+      "bytes": 523050,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "ponceuse-pneumatique-ou-electrique-atelier"
+      ]
+    },
+    {
+      "id": "mirka-pros",
+      "url": "https://www.mirka.com/en-US/p/8995650111/",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "88aa452aba839d02c8fcabf806efe3c8efd95545cd104fa4f0f168aacd22151c",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.mirka.com/en-US/p/8995650111/",
+      "bytes": 452211,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "ponceuse-pneumatique-ou-electrique-atelier"
+      ]
+    },
+    {
+      "id": "netter-current",
+      "url": "https://www.nettervibration.com/files/NetterVibration/Products/NCT/Documents/TD_NCT_EN.pdf",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "0156489f82bd71ab4f4549bff03a258ab3bc461307cd8e1291bf5ec59f34eee2",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.nettervibration.com/files/NetterVibration/Products/NCT/Documents/TD_NCT_EN.pdf",
+      "bytes": 1105003,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "vibreur-pneumatique-tremie-debit-compresseur"
+      ]
+    },
+    {
+      "id": "netter-manual",
+      "url": "https://www.nettervibration.com/files/NetterVibration/Products/NCT/Documents/KBA_NCT_NCB_NCR-1882DE_EN.pdf",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "7b9ab3f9b533a7bca8a6f0842be27353196829753f40466570156cd57d3cf665",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.nettervibration.com/files/NetterVibration/Products/NCT/Documents/KBA_NCT_NCB_NCR-1882DE_EN.pdf",
+      "bytes": 861214,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "vibreur-pneumatique-tremie-debit-compresseur"
+      ]
+    },
+    {
+      "id": "niosh-trigger",
+      "url": "https://www.cdc.gov/niosh/construction/nail-gun-safety/index.html",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP Error 403: Forbidden",
+      "guides": [
+        "cloueur-pneumatique-declenchement-sequentiel-contact"
+      ]
+    },
+    {
+      "id": "schmalz-basics",
+      "url": "https://www.schmalz.com/en-tr/support/know-how/vacuum-knowledge/basic-knowledge/",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "ced08579027d629a0f42c3a215611db38121cdbee539f943147fa9228ab611b7",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.schmalz.com/en-tr/support/know-how/vacuum-knowledge/basic-knowledge",
+      "bytes": 768898,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "vacuometre-vacuostat-bar-absolu-pourcentage-vide"
+      ]
+    },
+    {
+      "id": "schmalz-vacuum",
+      "url": "https://www.schmalz.com/en-gb/support/know-how/glossary/vacuum",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "d530ce2cf163f69617503a0eb8cae7edd9e31e8a93050ebcc40d9c8ae4ebb80e",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.schmalz.com/en-gb/support/know-how/glossary/vacuum",
+      "bytes": 762893,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "vacuometre-vacuostat-bar-absolu-pourcentage-vide"
+      ]
+    },
+    {
+      "id": "senco-jams",
+      "url": "https://www.senco.com/senco-blogs/my-nailer-wont-fire-troubleshooting-common-causes-of-jams-and-misfires/",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "0a44dc44369d02e1024294a74f50dbcb2abddfddde0f1d7cc6dc69995e1b3c15",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.senco.com/senco-blogs/my-nailer-wont-fire-troubleshooting-common-causes-of-jams-and-misfires/",
+      "bytes": 115153,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "cloueur-clous-mal-enfonces-pression-profondeur"
+      ]
+    },
+    {
+      "id": "smc-ion",
+      "url": "https://www.smcworld.com/products/pickup/en-sg/ionizer/izn10eser_sp.html",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "37cc87736e2d6dc5f3c588c1915d1e34f78865b64f1b042eda77017b090d4da3",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.smcworld.com/products/pickup/en-sg/ionizer/izn10eser_sp.html",
+      "bytes": 165277,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "ioniseur-air-comprime-debit-neutralisation-electrostatique"
+      ]
+    },
+    {
+      "id": "smc-regulator",
+      "url": "https://www.smcworld.com/upfiles/manual/en-jp/files/AR-OMT0015.pdf",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "68d4aaf689c0b653dff9e0e22e6745b03d995d5574f8018d5f02b6bee3fb88ab",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.smcworld.com/upfiles/manual/en-jp/files/AR-OMT0015.pdf",
+      "bytes": 2595823,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "regulateur-air-comprime-fuit-event-decompression"
+      ]
+    },
+    {
+      "id": "trotec-manual",
+      "url": "https://www.troteclaser.com/static/pdf/speedy-400/8086-operating-manual-speedy-400-flexx-EN.pdf",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "10831d0b8a6e86fd9732204abca89f9fe3c00ef087893d3de17e9b42109a0754",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.troteclaser.com/static/pdf/speedy-400/8086-operating-manual-speedy-400-flexx-EN.pdf",
+      "bytes": 18013697,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "air-assist-laser-gravure-compresseur-pression"
+      ]
+    },
+    {
+      "id": "trotec-parameters",
+      "url": "https://www.troteclaser.com/en-ca/helpcenter/materials/laser-parameter/laser-parameters-definition",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "f9b526f0160a74fb6713db02a785142b8c931d7aa9171ac52b2b7b17dcb24d75",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.troteclaser.com/en-ca/helpcenter/materials/laser-parameter/laser-parameters-definition",
+      "bytes": 258167,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "air-assist-laser-gravure-compresseur-pression"
+      ]
+    },
+    {
+      "id": "vaisala-dew",
+      "url": "https://www.vaisala.com/en/blog/2019-09/what-dew-point-and-how-measure-it",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "4a67e5a793a84ea4b33b9441c0f83044c3fdfb12868d0a2ca37517faf7beb4f2",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.vaisala.com/en/blog/2019-09/what-dew-point-and-how-measure-it",
+      "bytes": 152287,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "point-rosee-atmospherique-sous-pression-mesure"
+      ]
+    },
+    {
+      "id": "vaisala-sampling",
+      "url": "https://www.vaisala.com/sites/default/files/documents/CompAir-Sampling-Cell-AppNote-B211229EN.pdf",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "060785919fcfb76c2d6129424dbfc8dd558e282f3b8d76981ed1bfc1baac92ab",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.vaisala.com/sites/default/files/documents/CompAir-Sampling-Cell-AppNote-B211229EN.pdf",
+      "bytes": 107283,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "point-rosee-atmospherique-sous-pression-mesure"
+      ]
+    },
+    {
+      "id": "wilden-ice",
+      "url": "https://www.psgdover.com/wilden/support/tech-support/troubleshooting/accu-flo-ads-troubleshooting-guide",
+      "consultedOn": "2026-09-26",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP Error 403: Forbidden",
+      "guides": [
+        "pompe-pneumatique-echappement-givre-air-sec"
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "slug": "compresseur-demonte-pneu-pression-consommation",
+      "title": "Quel compresseur pour un démonte-pneu : pression, consommation et talonnage",
+      "seoTitle": "Compresseur pour démonte-pneu : débit et pression",
+      "sourceIds": [
+        "corghi",
+        "corghi-current"
+      ],
+      "relatedGuides": [
+        "dimensionner-compresseur-garage-automobile",
+        "compresseur-pour-gonfler-pneus",
+        "flexible-enrouleur-raccords-garage-debit"
+      ],
+      "wordsWithoutSources": 744,
+      "searchIntent": "Préparez l’alimentation d’un démonte-pneu avec le cas Corghi A2025 : pression publiée, consommation manquante, options et simultanéité des postes.",
+      "evidenceScope": "A2025 : 10 bar publiés, options distinctes ; aucune consommation inventée ni conversion de puissance moteur en FAD.",
+      "figureType": "flow",
+      "contentSha256": "a819d757dbb7c80aeefc0dbac99393589dbb9cb2a47e46bffc4028533c121827",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "booster-talonnage-tubeless-reserve-air-compresseur",
+      "title": "Booster de talonnage tubeless : réserve d’air, recharge et choix du compresseur",
+      "seoTitle": "Booster de talonnage : réserve et besoin du compresseur",
+      "sourceIds": [
+        "gaither"
+      ],
+      "relatedGuides": [
+        "gonflage-grand-volume-poids-lourds-temps-securite",
+        "stockage-primaire-secondaire-air-comprime",
+        "compresseur-pour-gonfler-pneus"
+      ],
+      "wordsWithoutSources": 719,
+      "searchIntent": "Distinguez le volume d’un booster tubeless, sa recharge et le gonflage final. Exemple Bead Bazooka Gen2 et questions à poser pour équiper un atelier.",
+      "evidenceScope": "Volumes 3/6/10 L et recommandation cinq ans propres à Gaither ; pas de consigne de tir ni de pression universelle de gonflage.",
+      "figureType": "compare",
+      "contentSha256": "5bf4e0d87a5ae368851159d48fe9c2bc8ba1c312ac6fa57c8ba7d1f13db70ead",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "pistolet-peinture-gravite-aspiration-cuve-pression",
+      "title": "Pistolet peinture à gravité, à aspiration ou à cuve sous pression : que choisir ?",
+      "seoTitle": "Pistolet gravité, aspiration ou cuve sous pression ?",
+      "sourceIds": [
+        "binks-guide",
+        "binks-abc"
+      ],
+      "relatedGuides": [
+        "compresseur-pour-pistolet-peinture-hvlp",
+        "pistolet-lvlp-vs-hvlp-compresseur",
+        "peindre-meuble-compresseur-pistolet"
+      ],
+      "wordsWithoutSources": 723,
+      "searchIntent": "Comparez l’alimentation en peinture et le besoin d’air sans confondre gravité, aspiration, cuve sous pression et technologie HVLP. Grille de choix atelier.",
+      "evidenceScope": "Architecture des circuits source SB-2-001 et ABC ; pas de gain de transfert ou de débit universel attribué à la gravité.",
+      "figureType": "compare",
+      "contentSha256": "6422d8c0935e5a946e7cc0ac585e8d19a950d2581bc1e97b1a02a4ae5b54015e",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "pistolet-peinture-jet-deforme-crachote-diagnostic",
+      "title": "Pistolet peinture qui crache ou jet déformé : diagnostiquer avant de changer le compresseur",
+      "seoTitle": "Pistolet qui crache ou jet déformé : le diagnostic",
+      "sourceIds": [
+        "binks-guide",
+        "binks-faq"
+      ],
+      "relatedGuides": [
+        "mesurer-pression-dynamique-pistolet-peinture",
+        "tester-contamination-air-avant-peinture",
+        "filtration-air-cabine-peinture-etages"
+      ],
+      "wordsWithoutSources": 734,
+      "searchIntent": "Jet chargé d’un côté, pulvérisation saccadée ou débit irrégulier : séparez défaut de chapeau, alimentation en produit et chute de pression d’air.",
+      "evidenceScope": "SB-2-001 causes possibles, FAQ rotation du défaut ; aucune panne affirmée ni couple de serrage générique repris.",
+      "figureType": "flow",
+      "contentSha256": "212a04ce178861f7371f0ff9652a429715dcc30e127b94e47e6d3b6ac7b007e2",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "buse-pistolet-peinture-chapeau-air-consommation",
+      "title": "Buse de pistolet peinture : pourquoi son diamètre ne donne pas la consommation d’air",
+      "seoTitle": "Buse peinture et chapeau d’air : quel débit prévoir ?",
+      "sourceIds": [
+        "binks-dv1s",
+        "binks-abc"
+      ],
+      "relatedGuides": [
+        "pistolet-lvlp-vs-hvlp-compresseur",
+        "sata-minijet-4400-b-hvlp-rp-compresseur",
+        "mesurer-pression-dynamique-pistolet-peinture"
+      ],
+      "wordsWithoutSources": 699,
+      "searchIntent": "Le diamètre de buse décrit le circuit produit. Comparez les chapeaux DV1-S, leur pression et leur consommation pour préparer une configuration vérifiable.",
+      "evidenceScope": "DV1-S tableau1 : M1 50 L/min 1bar, S1 115 et S2 130 L/min 2bar ; pas de conversion diamètre-débit ni interpolation.",
+      "figureType": "bars",
+      "contentSha256": "262398c30e7619dd45e7207fc7bf57da4ba34900c25379496672f58f90da7a68",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "ponceuse-pneumatique-ou-electrique-atelier",
+      "title": "Ponceuse pneumatique ou électrique : comparer le poste complet en atelier",
+      "seoTitle": "Ponceuse pneumatique ou électrique : comment choisir ?",
+      "sourceIds": [
+        "mirka-pros",
+        "mirka-deros"
+      ],
+      "relatedGuides": [
+        "compresseur-pour-ponceuse-pneumatique",
+        "ponceuse-orbitale-2-5-5-8-mm-choisir",
+        "ponceuse-pneumatique-bois-aspiration-poussieres"
+      ],
+      "wordsWithoutSources": 718,
+      "searchIntent": "Comparez air comprimé et électrique sur un même travail de ponçage : aspiration, cadence, énergie mesurée et équipement déjà disponible dans l’atelier.",
+      "evidenceScope": "Mirka PROS et DEROS : type, plateau, orbite seulement ; pas de rendement, kWh ni coût d’usage inventés.",
+      "figureType": "compare",
+      "contentSha256": "e25b7f845a7a5b3699db82c98c29a7ebb0de95324b691b9b44e29b7db52d0b56",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "cloueur-pneumatique-declenchement-sequentiel-contact",
+      "title": "Cloueur pneumatique : déclenchement séquentiel ou par contact, quelles différences ?",
+      "seoTitle": "Cloueur séquentiel ou par contact : bien choisir",
+      "sourceIds": [
+        "niosh-trigger",
+        "bostitch-manual"
+      ],
+      "relatedGuides": [
+        "cadence-clouage-pneumatique-chantier",
+        "compresseur-portatif-clouage-chantier",
+        "compresseur-pour-agrafeuse-cloueuse-pneumatique"
+      ],
+      "wordsWithoutSources": 726,
+      "searchIntent": "Comprenez les modes de déclenchement d’un cloueur, leur identification et les questions de sécurité au poste, sans confondre cadence et consommation d’air.",
+      "evidenceScope": "Prévention NIOSH sans statistique ni transposition réglementaire ; notice Bostitch version spécifique, aucune modification de gâchette proposée.",
+      "figureType": "compare",
+      "contentSha256": "d3e2c9ab74b94007ce7fb6d9fc7f1d97e3048900c0c96f1c533fdc14ec377a04",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "cloueur-clous-mal-enfonces-pression-profondeur",
+      "title": "Cloueur : pourquoi les clous restent-ils mal enfoncés ? Pression, profondeur et fixations",
+      "seoTitle": "Clous mal enfoncés : pression ou réglage du cloueur ?",
+      "sourceIds": [
+        "bostitch-manual",
+        "bostitch-product",
+        "senco-jams"
+      ],
+      "relatedGuides": [
+        "compresseur-pour-agrafeuse-cloueuse-pneumatique",
+        "cadence-clouage-pneumatique-chantier",
+        "flexible-air-comprime-chantier-25-50-metres"
+      ],
+      "wordsWithoutSources": 695,
+      "searchIntent": "Un cloueur laisse les têtes dépasser ? Vérifiez la fixation, la profondeur et l’alimentation en air pendant la séquence avant d’augmenter la pression.",
+      "evidenceScope": "BT1855-E 4,8–8,3bar ; réglage profondeur distinct ; SENCO cause possible, aucune panne ou surpression prescrite.",
+      "figureType": "flow",
+      "contentSha256": "cf54ac18ad579afda8283a0aca717e47f6839f141a893f25117b69b7b609ebbf",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "agrafes-pneumatiques-serie-couronne-longueur-compatibilite",
+      "title": "Agrafes pneumatiques : série, couronne et longueur, vérifier la compatibilité",
+      "seoTitle": "Agrafes pneumatiques : série, largeur et compatibilité",
+      "sourceIds": [
+        "bostitch-staples",
+        "bostitch-80"
+      ],
+      "relatedGuides": [
+        "compresseur-pour-agrafeuse-cloueuse-pneumatique",
+        "dimensionner-compresseur-menuiserie-agencement",
+        "separer-air-finition-et-clouage-atelier-bois"
+      ],
+      "wordsWithoutSources": 694,
+      "searchIntent": "Deux agrafes de 10 mm peuvent être incompatibles. Comparez série, couronne, fil et finition avec les références Bostitch 80, 84 et l’agrafeuse 21680B-E.",
+      "evidenceScope": "Bostitch 80/84 références précises et 21680B-E ; aucune équivalence intermarque, charge d’assemblage ou classe de corrosion inventée.",
+      "figureType": "compare",
+      "contentSha256": "8a2ba2112839f14faf7aa435a5339507ecb40a8ff29bce6c3ab7cbc58e465e51",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "douilles-choc-adaptateurs-carre-compatibilite",
+      "title": "Douilles à choc et adaptateurs : le carré suffit-il à vérifier la compatibilité ?",
+      "seoTitle": "Douilles à choc et adaptateurs : vérifier le montage",
+      "sourceIds": [
+        "ir-sockets"
+      ],
+      "relatedGuides": [
+        "cle-a-chocs-couple-serrage-roues-dynamometrique",
+        "cle-a-chocs-manque-couple-diagnostic",
+        "cle-a-chocs-1-pouce-poids-lourds-debit-flexible"
+      ],
+      "wordsWithoutSources": 721,
+      "searchIntent": "Carré 1/2 ou 3/4, rallonge et douille : vérifiez la destination à choc, la retenue et les limites du montage sans confondre couple dynamique et serrage final.",
+      "evidenceScope": "IR : nature dynamique distincte et douilles à choc en bon état ; pas de classement métallurgique ou couple d’adaptateur inventé.",
+      "figureType": "flow",
+      "contentSha256": "934b67b386109e69e83ddff04c45b55c3e43c400496693e14d7d947921652bec",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "huile-compresseur-viscosite-reference-constructeur",
+      "title": "Quelle huile pour un compresseur : viscosité, référence et conditions d’usage",
+      "seoTitle": "Huile de compresseur : viscosité et référence à vérifier",
+      "sourceIds": [
+        "atlas-oil",
+        "atlas-paroil"
+      ],
+      "relatedGuides": [
+        "compresseur-sans-huile-ou-lubrifie",
+        "huile-cle-a-chocs-pneumatique-lubrification",
+        "maintenance-preventive-reseau-air-comprime"
+      ],
+      "wordsWithoutSources": 693,
+      "searchIntent": "SAE, ISO, huile minérale ou synthétique : vérifiez la prescription de votre compresseur, les conditions d’usage et la fiche du lubrifiant avant remplacement.",
+      "evidenceScope": "Paroil M : 46mm²/s40°C,7mm²/s100°C et plage spécifique ; aucune équivalence SAE/ISO ou périodicité générique.",
+      "figureType": "bars",
+      "contentSha256": "57ee7d77b2b1bc0d85d45e24ae07e5d73cc5887072399685efefbd9780338946",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "pressostat-compresseur-pression-enclenchement-differentiel",
+      "title": "Pressostat de compresseur : comprendre enclenchement, arrêt et différentiel",
+      "seoTitle": "Pressostat compresseur : seuils et différentiel",
+      "sourceIds": [
+        "condor",
+        "condor-pdf",
+        "metabo-manual"
+      ],
+      "relatedGuides": [
+        "compresseur-ne-demarre-plus-froid-rallonge",
+        "compresseur-ne-monte-plus-en-pression",
+        "choisir-volume-cuve-24-50-90-litres"
+      ],
+      "wordsWithoutSources": 690,
+      "searchIntent": "Un compresseur redémarre avant que la cuve soit vide : comprenez les deux seuils du pressostat, leur différentiel et les limites d’un diagnostic sans démontage.",
+      "evidenceScope": "Deux seuils et exemple6/8bar fictif ; contradiction Condor explicitée, aucune instruction de vis ou câblage.",
+      "figureType": "original_schematic",
+      "contentSha256": "85763ad3d5fe440bf7fbed7464b4cd5e1e5acb7483145239a49153fe370faed9",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "soupape-securite-compresseur-fuit-siffle",
+      "title": "Soupape de sécurité de compresseur qui fuit ou siffle : que vérifier ?",
+      "seoTitle": "Soupape compresseur qui fuit : observations et arrêt",
+      "sourceIds": [
+        "metabo-manual",
+        "einhell-manual"
+      ],
+      "relatedGuides": [
+        "compresseur-ne-monte-plus-en-pression",
+        "compresseur-perd-pression-arret-fuite-refroidissement",
+        "entretien-compresseur-purge-condensats"
+      ],
+      "wordsWithoutSources": 697,
+      "searchIntent": "Distinguez soupape de sécurité, purge et décharge du pressostat. Préparez un diagnostic sans boucher l’évent ni modifier le tarage de la cuve.",
+      "evidenceScope": "Rôle soupape et interdiction de déréglage sourcés ; aucune instruction de tarage, démontage, test de surpression.",
+      "figureType": "flow",
+      "contentSha256": "e83267e28c3d50aef3f727895289c79aaf9b601e450f090022c7b4c7e16f4816",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "cuve-compresseur-rouille-condensats-controle",
+      "title": "Cuve de compresseur rouillée : ce que la purge ne permet pas de vérifier",
+      "seoTitle": "Cuve compresseur rouillée : contrôle et conduite à tenir",
+      "sourceIds": [
+        "einhell-manual",
+        "inrs-checks"
+      ],
+      "relatedGuides": [
+        "entretien-compresseur-purge-condensats",
+        "acheter-compresseur-occasion-controles-documents",
+        "separateur-huile-eau-condensats-compresseur"
+      ],
+      "wordsWithoutSources": 700,
+      "searchIntent": "Rouille visible, condensats colorés ou historique absent : distinguez entretien, observation et contrôle de la cuve avant toute décision de remise en service.",
+      "evidenceScope": "Einhell corrosion et retrait ; INRS typologie générale seulement, pas de périodicité réglementaire inventée ni contrôle visuel assimilé à une résistance.",
+      "figureType": "flow",
+      "contentSha256": "64d9367c0473360d3c331aafd16c59d0bdadc865c2cd4d3dd844585f112ffe6d",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "lire-fiche-cagi-compresseur-iso-1217",
+      "title": "Lire une fiche CAGI de compresseur : débit, puissance absorbée et point de mesure",
+      "seoTitle": "Fiche CAGI compresseur : lire débit, puissance et limites",
+      "sourceIds": [
+        "cagi",
+        "cagi-fixed",
+        "cagi-vfd"
+      ],
+      "relatedGuides": [
+        "comparer-puissance-specifique-compresseurs",
+        "debit-restitue-fad-vs-debit-aspire",
+        "compresseur-vitesse-variable-vsd-rentabilite-atelier"
+      ],
+      "wordsWithoutSources": 699,
+      "searchIntent": "Décodez une fiche CAGI avec un exemple officiel : débit à pression donnée, puissance totale, marche sans débit et portée de la vérification ISO 1217.",
+      "evidenceScope": "Exemple CAGI explicitement fictif/nonvérifié ; 36,12/(175/100)=20,64 ; conditions acfm et annexes C/E conservées.",
+      "figureType": "flow",
+      "contentSha256": "9c65b6b17921deeb9c3160c1cf515f6e7869b021a7ed82602dc797d85c6e6a25",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "point-rosee-atmospherique-sous-pression-mesure",
+      "title": "Point de rosée atmosphérique ou sous pression : comparer deux mesures sans erreur",
+      "seoTitle": "Point de rosée : atmosphérique ou sous pression ?",
+      "sourceIds": [
+        "vaisala-dew",
+        "vaisala-sampling"
+      ],
+      "relatedGuides": [
+        "point-rosee-secheur-filtre-air-comprime",
+        "secheur-air-comprime-atelier-non-chauffe",
+        "qualite-air-comprime-iso-8573-1"
+      ],
+      "wordsWithoutSources": 720,
+      "searchIntent": "Deux hygromètres donnent des points de rosée différents ? Vérifiez la pression de mesure, le prélèvement et la stabilisation avant de déclarer le sécheur défaillant.",
+      "evidenceScope": "Pression de prélèvement et résultat séparés, aucun décalage fixe ou conversion de rosée sans conditions.",
+      "figureType": "compare",
+      "contentSha256": "c5d4f524db17bbc81056567157ad2a8b2ae07be9b40e2278cf725f4a16f84903",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "separateur-cyclonique-filtre-coalescent-differences",
+      "title": "Séparateur cyclonique ou filtre coalescent : quelles différences dans l’air comprimé ?",
+      "seoTitle": "Séparateur cyclonique ou filtre coalescent : différences",
+      "sourceIds": [
+        "beko-treatment"
+      ],
+      "relatedGuides": [
+        "groupe-frl-filtre-regulateur-lubrificateur",
+        "point-rosee-secheur-filtre-air-comprime",
+        "filtre-charbon-actif-air-comprime-vapeurs-huile"
+      ],
+      "wordsWithoutSources": 703,
+      "searchIntent": "Eau liquide, aérosols et vapeur ne se traitent pas de la même façon. Situez séparateur cyclonique, filtre coalescent et sécheur dans votre chaîne d’air.",
+      "evidenceScope": "BEKO distinction liquide/aérosols/vapeurs ; aucune classe ou efficacité générique ni ordre de traitement universel.",
+      "figureType": "flow",
+      "contentSha256": "2b8ca6c93f5cca1c9f7542badd50d7ba031d1f3dc2669f29576371d5408874bd",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "bypass-secheur-air-comprime-qualite-maintenance",
+      "title": "By-pass de sécheur d’air comprimé : que devient la qualité pendant la maintenance ?",
+      "seoTitle": "By-pass sécheur : pression disponible, qualité à vérifier",
+      "sourceIds": [
+        "beko-bypass-product",
+        "beko-bypass"
+      ],
+      "relatedGuides": [
+        "dimensionner-secheur-frigorifique-ete",
+        "qualite-air-comprime-iso-8573-1",
+        "maintenance-preventive-reseau-air-comprime"
+      ],
+      "wordsWithoutSources": 708,
+      "searchIntent": "Un by-pass peut maintenir l’air au réseau tout en contournant le traitement. Préparez les usages autorisés, le contrôle et le retour en service du sécheur.",
+      "evidenceScope": "Bypassexterne3vannes versusgazchaud clairementdistincts ; continuité de pression non assimilée à qualité/consignation.",
+      "figureType": "compare",
+      "contentSha256": "107910ca34b2af110fd2cf802d2a567819d7dee19316a31989c9a673f69547ed",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "compresseur-dentaire-debit-qualite-cabinet",
+      "title": "Compresseur dentaire : préparer le débit, la qualité d’air et le dossier d’installation",
+      "seoTitle": "Compresseur dentaire : débit et qualité à documenter",
+      "sourceIds": [
+        "iso-dental",
+        "duerr"
+      ],
+      "relatedGuides": [
+        "compresseur-sans-huile-ou-lubrifie",
+        "qualite-air-comprime-iso-8573-1",
+        "secheur-membrane-air-comprime-debit-balayage"
+      ],
+      "wordsWithoutSources": 716,
+      "searchIntent": "Préparez un achat de centrale d’air dentaire avec les besoins des unités, la simultanéité et le périmètre ISO 22052, sans assimiler un compresseur d’atelier.",
+      "evidenceScope": "ISO22052 résumépublic/périmètreextérieur exclusiontuyauterieCADCAM ; pas de seuils médicaux, stérilité ou certification inventés.",
+      "figureType": "flow",
+      "contentSha256": "21f64d19ab5862dcbd7ba782bf32c4977a77aa905d97f4dbb5bb14b9611a84e5",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "compresseur-machine-cnc-haas-pression-debit",
+      "title": "Quel compresseur pour une machine CNC Haas : pression, débit et accessoires",
+      "seoTitle": "Compresseur CNC Haas : débit, pression et installation",
+      "sourceIds": [
+        "haas"
+      ],
+      "relatedGuides": [
+        "guide-complet-dimensionner-compresseur-air",
+        "diagnostiquer-chute-pression-air-comprime",
+        "installer-reseau-air-comprime-atelier"
+      ],
+      "wordsWithoutSources": 738,
+      "searchIntent": "Lisez les besoins d’air d’une Haas VF-4 sans confondre pression minimale, débit publié et auxiliaires. Préparez le relevé et le scénario de réception.",
+      "evidenceScope": "VF4 113L/min@6,9bar distinct5,5barmin ; débitinconnuchangementoutil et options maintenuinconnu ; pas d’extrapolation toutesCNC.",
+      "figureType": "compare",
+      "contentSha256": "db189a369f3639f8a623db06e9d5a813c59a9017369b80d057acb8a535741d7c",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "air-assist-laser-gravure-compresseur-pression",
+      "title": "Air assist de laser de gravure : choisir le compresseur sans confondre les pressions",
+      "seoTitle": "Air assist laser : compresseur, pression et air sec",
+      "sourceIds": [
+        "trotec-manual",
+        "trotec-parameters"
+      ],
+      "relatedGuides": [
+        "compresseur-decoupe-laser-air-azote",
+        "point-rosee-secheur-filtre-air-comprime",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "wordsWithoutSources": 717,
+      "searchIntent": "Quel air fournir à un laser de gravure ? Lisez les limites du Gas-Kit Trotec, distinguez entrée et régulation, puis préparez un essai matière documenté.",
+      "evidenceScope": "Speedy400flexx GasKitlight airsec/sanshuile, régulateurmax0,4MPa ; aucune généralisation aux autres lasers ni débit FAD inventé.",
+      "figureType": "compare",
+      "contentSha256": "3f78a24dd6bece19ff57cee70220a6488ac85582c04e7a5fe3254905b5d205ef",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "ioniseur-air-comprime-debit-neutralisation-electrostatique",
+      "title": "Ioniseur à air comprimé : débit, qualité d’air et neutralisation électrostatique",
+      "seoTitle": "Ioniseur à air comprimé : débit et neutralisation",
+      "sourceIds": [
+        "smc-ion"
+      ],
+      "relatedGuides": [
+        "soufflette-garage-securite-bruit-consommation",
+        "couteau-air-comprime-ou-soufflante",
+        "qualite-air-comprime-iso-8573-1"
+      ],
+      "wordsWithoutSources": 683,
+      "searchIntent": "Choisir un ioniseur exige plus qu’une soufflette puissante. Examinez buse, distance, air propre et preuve de neutralisation avec le cas SMC IZN10E.",
+      "evidenceScope": "SMCIZN10E conditions buse/distance et airpurge conservées ; aucun débit inventé ni seuilESD universel.",
+      "figureType": "flow",
+      "contentSha256": "bcf2d5cd524649fa12a75c30032f6e9b14252e5df1f4570b784b981d842dadc8",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "vibreur-pneumatique-tremie-debit-compresseur",
+      "title": "Vibreur pneumatique de trémie : consommation d’air et choix du compresseur",
+      "seoTitle": "Vibreur pneumatique : débit d’air et compresseur",
+      "sourceIds": [
+        "netter-current",
+        "netter-manual"
+      ],
+      "relatedGuides": [
+        "utiliser-plusieurs-outils-pneumatiques",
+        "guide-complet-dimensionner-compresseur-air",
+        "diametre-longueur-flexible-air-comprime"
+      ],
+      "wordsWithoutSources": 699,
+      "searchIntent": "Comparez la consommation d’un vibreur de trémie à sa pression et à sa cadence. Exemple Netter NCT, avec distinction entre débit instantané et volume par cycle.",
+      "evidenceScope": "NCT1/NCT5 plages19–45/93–284Lmin conservées ; exemple240Lmin10s hypothétique ; pas de conversion silencieuse FAD.",
+      "figureType": "bars",
+      "contentSha256": "a802d0524ab38a1cc250f31f2bc516b43f7724cfacc386c6e6f69c2028bef327",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "verin-rotatif-pneumatique-couple-angle-inertie",
+      "title": "Vérin rotatif pneumatique : choisir avec le couple, l’angle et l’inertie",
+      "seoTitle": "Vérin rotatif : couple, angle et inertie à vérifier",
+      "sourceIds": [
+        "festo-drvs",
+        "festo-rotary"
+      ],
+      "relatedGuides": [
+        "moteur-pneumatique-couple-demarrage-debit",
+        "choisir-distributeur-pneumatique-debit-nominal",
+        "regler-vitesse-verin-pneumatique-echappement"
+      ],
+      "wordsWithoutSources": 713,
+      "searchIntent": "Un couple annoncé ne suffit pas à choisir un vérin oscillant. Lisez angle, inertie et charges avec le cas Festo DRVS-32-90-P, puis préparez le cycle réel.",
+      "evidenceScope": "DRVSexact90deg10Nm6bar0,02kgm2 ; inertie hypothétique masseponctuelle calculée, aucun dimensionnement validé.",
+      "figureType": "original_schematic",
+      "contentSha256": "20ac72b658b1c9faa5be4ac54f8e8e9f61fe638d9d224c0895ea77997bab0a31",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "pince-pneumatique-force-doigt-longueur-prehension",
+      "title": "Pince pneumatique : force par doigt, longueur des mors et maintien de la pièce",
+      "seoTitle": "Pince pneumatique : force par doigt et longueur des mors",
+      "sourceIds": [
+        "festo-gripper"
+      ],
+      "relatedGuides": [
+        "force-verin-pneumatique-diametre-pression",
+        "ventouse-piece-poreuse-debit-vide",
+        "choisir-distributeur-pneumatique-debit-nominal"
+      ],
+      "wordsWithoutSources": 767,
+      "searchIntent": "Force totale ou par doigt ? Lisez les courbes d’une pince pneumatique avec le bras de levier et le sens de préhension avant d’en déduire une capacité de maintien.",
+      "evidenceScope": "HGPT totale/par-mors et levier explicités ; aucune charge admissible ni friction inventée, aucun chiffre extrait graphiquement.",
+      "figureType": "original_schematic",
+      "contentSha256": "26ffa032e26b5ee63b17f47021beab9e7a2ed2e9560c35d9a81b002dee52815f",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "vacuometre-vacuostat-bar-absolu-pourcentage-vide",
+      "title": "Vacuomètre et vacuostat : comprendre les bar relatifs, absolus et le pourcentage de vide",
+      "seoTitle": "Vacuostat : −0,6 bar, pression absolue et % de vide",
+      "sourceIds": [
+        "schmalz-vacuum",
+        "schmalz-basics"
+      ],
+      "relatedGuides": [
+        "bar-psi-pression-absolue-relative",
+        "ejecteur-vide-schmalz-sbpl-consommation",
+        "ventouse-piece-poreuse-debit-vide"
+      ],
+      "wordsWithoutSources": 695,
+      "searchIntent": "Un affichage à −0,6 bar ne signifie pas une pression absolue négative. Comparez les références du vide avec un exemple calculé et préparez le relevé du capteur.",
+      "evidenceScope": "Exemplelocalhypothétique1barabs : −0,6barrel=0,4barabs=60% selonconventionannoncée ; aucunseuilpréhen­sion.",
+      "figureType": "original_schematic",
+      "contentSha256": "1cc062c80b156d174d08a543f01e7278d8269a0a67f8900bdefbdf136521fa20",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "regulateur-air-comprime-fuit-event-decompression",
+      "title": "Régulateur d’air comprimé qui fuit par l’évent : décompression ou défaut ?",
+      "seoTitle": "Régulateur qui fuit par l’évent : que vérifier ?",
+      "sourceIds": [
+        "smc-regulator"
+      ],
+      "relatedGuides": [
+        "groupe-frl-filtre-regulateur-lubrificateur",
+        "detecter-mesurer-fuites-air-comprime",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "wordsWithoutSources": 686,
+      "searchIntent": "Un régulateur peut évacuer de l’air selon sa conception, mais un souffle continu mérite un diagnostic. Identifiez version, moment et pression avant intervention.",
+      "evidenceScope": "SMCARvariantesdécompression/retour distinctes ; causes citées commepossibles ; aucunblocageévent/procéduredémontage.",
+      "figureType": "flow",
+      "contentSha256": "8d494211eb8c5ae44049ef6b399a74b32cda8e26d20ff0018f1f4d92073dc26a",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "verin-simple-double-effet-ressort-retour",
+      "title": "Vérin simple ou double effet : comprendre le retour par ressort et le besoin d’air",
+      "seoTitle": "Vérin simple ou double effet : quel retour prévoir ?",
+      "sourceIds": [
+        "festo-cylinder",
+        "festo-dpca"
+      ],
+      "relatedGuides": [
+        "force-verin-pneumatique-diametre-pression",
+        "consommation-verin-pneumatique-double-effet",
+        "regler-vitesse-verin-pneumatique-echappement"
+      ],
+      "wordsWithoutSources": 754,
+      "searchIntent": "Un vérin simple effet peut pousser ou tirer selon sa version. Comparez mouvement, ressort, circuit et consommation sans supposer une position de sécurité.",
+      "evidenceScope": "DPCAPtractiontigesortieparressort et Spoussée rentrer exacts ; ni force ressort ni économie ni failsafe inventés.",
+      "figureType": "compare",
+      "contentSha256": "008af5adcd3b3eb9830ad94e9700cc567a84d50501d9cfcf4bf53bc62cdb7600",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "vanne-demarrage-progressif-air-comprime-remise-pression",
+      "title": "Vanne de démarrage progressif : ce qu’elle change à la remise en pression",
+      "seoTitle": "Démarrage progressif pneumatique : rôle et limites",
+      "sourceIds": [
+        "festo-softstart"
+      ],
+      "relatedGuides": [
+        "couper-air-comprime-machine-arret-week-end",
+        "choisir-distributeur-pneumatique-debit-nominal",
+        "regler-vitesse-verin-pneumatique-echappement"
+      ],
+      "wordsWithoutSources": 727,
+      "searchIntent": "Une vanne de démarrage progressif contrôle la montée en pression. Comprenez le basculement, le volume aval et les vérifications à prévoir lors du redémarrage.",
+      "evidenceScope": "MSDLenviron50%avec tolérancespasunseuilcalibré ; aucuntempsuniversel ni PL/SILinventé.",
+      "figureType": "flow",
+      "contentSha256": "0fca8005f0be82436e8c869ef1258454065bfdc4960f2ec0db8c4178e0771259",
+      "originalSvgCount": 1
+    },
+    {
+      "slug": "pompe-pneumatique-echappement-givre-air-sec",
+      "title": "Échappement de pompe pneumatique qui givre : humidité, détente et diagnostic",
+      "seoTitle": "Pompe pneumatique qui givre : diagnostic de l’échappement",
+      "sourceIds": [
+        "wilden-ice",
+        "almatec-manual"
+      ],
+      "relatedGuides": [
+        "pompe-membrane-aro-66605-debit-air",
+        "silencieux-pneumatique-colmate-contre-pression",
+        "point-rosee-atmospherique-sous-pression-mesure"
+      ],
+      "wordsWithoutSources": 726,
+      "searchIntent": "Le givre sur une pompe ne prouve pas toujours un défaut du sécheur. Distinguez humidité interne, condensation extérieure et obstruction avec les notices fabricants.",
+      "evidenceScope": "Wilden glaceinterne/Almatecglaceextérieuremalgréairséché distinctes ; AHSsanshuile ; aucunchauffageoupressionuniversels.",
+      "figureType": "flow",
+      "contentSha256": "c6eac9988dcd3185cbe661321a4680c75455c48bdc52793cd536481a357ec2a1",
+      "originalSvgCount": 1
+    }
+  ],
+  "contextualBacklinks": [
+    {
+      "from": "dimensionner-compresseur-garage-automobile",
+      "to": "compresseur-demonte-pneu-pression-consommation",
+      "text": "Pour préparer l’alimentation de la machine de roues, consultez le [guide du démonte-pneu : pression publiée et consommation à documenter](/guides/compresseur-demonte-pneu-pression-consommation/)."
+    },
+    {
+      "from": "poste-gonflage-pneus-atelier-mesure-securite",
+      "to": "compresseur-demonte-pneu-pression-consommation",
+      "text": "Pour préparer l’alimentation de la machine de roues, consultez le [guide du démonte-pneu : pression publiée et consommation à documenter](/guides/compresseur-demonte-pneu-pression-consommation/)."
+    },
+    {
+      "from": "compresseur-pour-gonfler-pneus",
+      "to": "booster-talonnage-tubeless-reserve-air-compresseur",
+      "text": "Le [guide des boosters de talonnage tubeless](/guides/booster-talonnage-tubeless-reserve-air-compresseur/) distingue la réserve du dispositif, sa recharge et le gonflage final."
+    },
+    {
+      "from": "gonflage-grand-volume-poids-lourds-temps-securite",
+      "to": "booster-talonnage-tubeless-reserve-air-compresseur",
+      "text": "Le [guide des boosters de talonnage tubeless](/guides/booster-talonnage-tubeless-reserve-air-compresseur/) distingue la réserve du dispositif, sa recharge et le gonflage final."
+    },
+    {
+      "from": "compresseur-pour-pistolet-peinture-hvlp",
+      "to": "pistolet-peinture-gravite-aspiration-cuve-pression",
+      "text": "Le [comparatif gravité, aspiration et alimentation sous pression](/guides/pistolet-peinture-gravite-aspiration-cuve-pression/) aide à séparer le circuit de produit du circuit d’air."
+    },
+    {
+      "from": "peindre-meuble-compresseur-pistolet",
+      "to": "pistolet-peinture-gravite-aspiration-cuve-pression",
+      "text": "Le [comparatif gravité, aspiration et alimentation sous pression](/guides/pistolet-peinture-gravite-aspiration-cuve-pression/) aide à séparer le circuit de produit du circuit d’air."
+    },
+    {
+      "from": "mesurer-pression-dynamique-pistolet-peinture",
+      "to": "pistolet-peinture-jet-deforme-crachote-diagnostic",
+      "text": "Pour un jet irrégulier, le [diagnostic des déformations et crachotements du pistolet](/guides/pistolet-peinture-jet-deforme-crachote-diagnostic/) organise les observations avant intervention."
+    },
+    {
+      "from": "air-comprime-carrosserie-peinture",
+      "to": "pistolet-peinture-jet-deforme-crachote-diagnostic",
+      "text": "Pour un jet irrégulier, le [diagnostic des déformations et crachotements du pistolet](/guides/pistolet-peinture-jet-deforme-crachote-diagnostic/) organise les observations avant intervention."
+    },
+    {
+      "from": "pistolet-lvlp-vs-hvlp-compresseur",
+      "to": "buse-pistolet-peinture-chapeau-air-consommation",
+      "text": "Le [guide buse, chapeau et consommation d’air](/guides/buse-pistolet-peinture-chapeau-air-consommation/) montre comment comparer une configuration complète avec ses conditions constructeur."
+    },
+    {
+      "from": "sata-minijet-4400-b-hvlp-rp-compresseur",
+      "to": "buse-pistolet-peinture-chapeau-air-consommation",
+      "text": "Le [guide buse, chapeau et consommation d’air](/guides/buse-pistolet-peinture-chapeau-air-consommation/) montre comment comparer une configuration complète avec ses conditions constructeur."
+    },
+    {
+      "from": "compresseur-pour-ponceuse-pneumatique",
+      "to": "ponceuse-pneumatique-ou-electrique-atelier",
+      "text": "Le [comparatif ponceuse pneumatique ou électrique](/guides/ponceuse-pneumatique-ou-electrique-atelier/) propose un essai de travail commun et un bilan énergétique dont le périmètre reste explicite."
+    },
+    {
+      "from": "ponceuse-pneumatique-bois-aspiration-poussieres",
+      "to": "ponceuse-pneumatique-ou-electrique-atelier",
+      "text": "Le [comparatif ponceuse pneumatique ou électrique](/guides/ponceuse-pneumatique-ou-electrique-atelier/) propose un essai de travail commun et un bilan énergétique dont le périmètre reste explicite."
+    },
+    {
+      "from": "cadence-clouage-pneumatique-chantier",
+      "to": "cloueur-pneumatique-declenchement-sequentiel-contact",
+      "text": "Le [guide des déclenchements séquentiel et par contact](/guides/cloueur-pneumatique-declenchement-sequentiel-contact/) précise les mécanismes à identifier avant de choisir un cloueur."
+    },
+    {
+      "from": "compresseur-portatif-clouage-chantier",
+      "to": "cloueur-pneumatique-declenchement-sequentiel-contact",
+      "text": "Le [guide des déclenchements séquentiel et par contact](/guides/cloueur-pneumatique-declenchement-sequentiel-contact/) précise les mécanismes à identifier avant de choisir un cloueur."
+    },
+    {
+      "from": "compresseur-pour-agrafeuse-cloueuse-pneumatique",
+      "to": "cloueur-clous-mal-enfonces-pression-profondeur",
+      "text": "Si les clous restent saillants, le [diagnostic pression, profondeur et fixations du cloueur](/guides/cloueur-clous-mal-enfonces-pression-profondeur/) permet de préparer une vérification ordonnée."
+    },
+    {
+      "from": "dimensionner-compresseur-menuiserie-agencement",
+      "to": "cloueur-clous-mal-enfonces-pression-profondeur",
+      "text": "Si les clous restent saillants, le [diagnostic pression, profondeur et fixations du cloueur](/guides/cloueur-clous-mal-enfonces-pression-profondeur/) permet de préparer une vérification ordonnée."
+    },
+    {
+      "from": "compresseur-pour-agrafeuse-cloueuse-pneumatique",
+      "to": "agrafes-pneumatiques-serie-couronne-longueur-compatibilite",
+      "text": "Le [guide de compatibilité des agrafes](/guides/agrafes-pneumatiques-serie-couronne-longueur-compatibilite/) examine la série, la couronne et la longueur, avec des références documentées."
+    },
+    {
+      "from": "separer-air-finition-et-clouage-atelier-bois",
+      "to": "agrafes-pneumatiques-serie-couronne-longueur-compatibilite",
+      "text": "Le [guide de compatibilité des agrafes](/guides/agrafes-pneumatiques-serie-couronne-longueur-compatibilite/) examine la série, la couronne et la longueur, avec des références documentées."
+    },
+    {
+      "from": "cle-a-chocs-couple-serrage-roues-dynamometrique",
+      "to": "douilles-choc-adaptateurs-carre-compatibilite",
+      "text": "La [lecture des douilles à chocs et adaptateurs](/guides/douilles-choc-adaptateurs-carre-compatibilite/) complète le choix de la clé en distinguant l’interface mécanique et les données de couple."
+    },
+    {
+      "from": "cle-a-chocs-1-pouce-poids-lourds-debit-flexible",
+      "to": "douilles-choc-adaptateurs-carre-compatibilite",
+      "text": "La [lecture des douilles à chocs et adaptateurs](/guides/douilles-choc-adaptateurs-carre-compatibilite/) complète le choix de la clé en distinguant l’interface mécanique et les données de couple."
+    },
+    {
+      "from": "compresseur-sans-huile-ou-lubrifie",
+      "to": "huile-compresseur-viscosite-reference-constructeur",
+      "text": "Le [guide de choix d’huile pour compresseur](/guides/huile-compresseur-viscosite-reference-constructeur/) distingue référence, viscosité et domaine d’emploi sans proposer d’équivalence universelle."
+    },
+    {
+      "from": "entretien-compresseur-purge-condensats",
+      "to": "huile-compresseur-viscosite-reference-constructeur",
+      "text": "Le [guide de choix d’huile pour compresseur](/guides/huile-compresseur-viscosite-reference-constructeur/) distingue référence, viscosité et domaine d’emploi sans proposer d’équivalence universelle."
+    },
+    {
+      "from": "compresseur-ne-monte-plus-en-pression",
+      "to": "pressostat-compresseur-pression-enclenchement-differentiel",
+      "text": "Le [guide du pressostat et de son différentiel](/guides/pressostat-compresseur-pression-enclenchement-differentiel/) aide à lire les seuils d’enclenchement et d’arrêt sans improviser un réglage."
+    },
+    {
+      "from": "mesurer-temps-charge-vide-compresseur",
+      "to": "pressostat-compresseur-pression-enclenchement-differentiel",
+      "text": "Le [guide du pressostat et de son différentiel](/guides/pressostat-compresseur-pression-enclenchement-differentiel/) aide à lire les seuils d’enclenchement et d’arrêt sans improviser un réglage."
+    },
+    {
+      "from": "compresseur-ne-monte-plus-en-pression",
+      "to": "soupape-securite-compresseur-fuit-siffle",
+      "text": "Un souffle à la soupape relève du [guide de diagnostic de la soupape de sécurité](/guides/soupape-securite-compresseur-fuit-siffle/), avec les limites d’intervention de la notice."
+    },
+    {
+      "from": "maintenance-preventive-reseau-air-comprime",
+      "to": "soupape-securite-compresseur-fuit-siffle",
+      "text": "Un souffle à la soupape relève du [guide de diagnostic de la soupape de sécurité](/guides/soupape-securite-compresseur-fuit-siffle/), avec les limites d’intervention de la notice."
+    },
+    {
+      "from": "acheter-compresseur-occasion-controles-documents",
+      "to": "cuve-compresseur-rouille-condensats-controle",
+      "text": "Le [guide rouille, condensats et contrôle de cuve](/guides/cuve-compresseur-rouille-condensats-controle/) distingue l’observation d’un liquide de la preuve d’intégrité du réservoir."
+    },
+    {
+      "from": "entretien-compresseur-purge-condensats",
+      "to": "cuve-compresseur-rouille-condensats-controle",
+      "text": "Le [guide rouille, condensats et contrôle de cuve](/guides/cuve-compresseur-rouille-condensats-controle/) distingue l’observation d’un liquide de la preuve d’intégrité du réservoir."
+    },
+    {
+      "from": "comparer-puissance-specifique-compresseurs",
+      "to": "lire-fiche-cagi-compresseur-iso-1217",
+      "text": "La [lecture détaillée d’une fiche CAGI](/guides/lire-fiche-cagi-compresseur-iso-1217/) aide à conserver pression, débit et puissance dans le périmètre exact du document."
+    },
+    {
+      "from": "comparatif-compresseurs-debit-restitue",
+      "to": "lire-fiche-cagi-compresseur-iso-1217",
+      "text": "La [lecture détaillée d’une fiche CAGI](/guides/lire-fiche-cagi-compresseur-iso-1217/) aide à conserver pression, débit et puissance dans le périmètre exact du document."
+    },
+    {
+      "from": "point-rosee-secheur-filtre-air-comprime",
+      "to": "point-rosee-atmospherique-sous-pression-mesure",
+      "text": "Avant de comparer deux hygromètres, consultez le [guide point de rosée atmosphérique ou sous pression](/guides/point-rosee-atmospherique-sous-pression-mesure/) et ses conditions de prélèvement."
+    },
+    {
+      "from": "secheur-air-comprime-atelier-non-chauffe",
+      "to": "point-rosee-atmospherique-sous-pression-mesure",
+      "text": "Avant de comparer deux hygromètres, consultez le [guide point de rosée atmosphérique ou sous pression](/guides/point-rosee-atmospherique-sous-pression-mesure/) et ses conditions de prélèvement."
+    },
+    {
+      "from": "groupe-frl-filtre-regulateur-lubrificateur",
+      "to": "separateur-cyclonique-filtre-coalescent-differences",
+      "text": "Le [comparatif séparateur cyclonique et filtre coalescent](/guides/separateur-cyclonique-filtre-coalescent-differences/) distingue liquide, aérosol et vapeur pour clarifier les fonctions du traitement."
+    },
+    {
+      "from": "filtration-air-cabine-peinture-etages",
+      "to": "separateur-cyclonique-filtre-coalescent-differences",
+      "text": "Le [comparatif séparateur cyclonique et filtre coalescent](/guides/separateur-cyclonique-filtre-coalescent-differences/) distingue liquide, aérosol et vapeur pour clarifier les fonctions du traitement."
+    },
+    {
+      "from": "dimensionner-secheur-frigorifique-ete",
+      "to": "bypass-secheur-air-comprime-qualite-maintenance",
+      "text": "Le [guide du by-pass de sécheur](/guides/bypass-secheur-air-comprime-qualite-maintenance/) prépare la continuité des usages, les limites de qualité et le retour après maintenance."
+    },
+    {
+      "from": "maintenance-preventive-reseau-air-comprime",
+      "to": "bypass-secheur-air-comprime-qualite-maintenance",
+      "text": "Le [guide du by-pass de sécheur](/guides/bypass-secheur-air-comprime-qualite-maintenance/) prépare la continuité des usages, les limites de qualité et le retour après maintenance."
+    },
+    {
+      "from": "compresseur-sans-huile-ou-lubrifie",
+      "to": "compresseur-dentaire-debit-qualite-cabinet",
+      "text": "Pour un cabinet, le [guide de consultation d’une centrale d’air dentaire](/guides/compresseur-dentaire-debit-qualite-cabinet/) précise le périmètre normatif et les exigences à faire documenter."
+    },
+    {
+      "from": "qualite-air-comprime-iso-8573-1",
+      "to": "compresseur-dentaire-debit-qualite-cabinet",
+      "text": "Pour un cabinet, le [guide de consultation d’une centrale d’air dentaire](/guides/compresseur-dentaire-debit-qualite-cabinet/) précise le périmètre normatif et les exigences à faire documenter."
+    },
+    {
+      "from": "installer-reseau-air-comprime-atelier",
+      "to": "compresseur-machine-cnc-haas-pression-debit",
+      "text": "Le [cas d’alimentation d’une CNC Haas VF-4](/guides/compresseur-machine-cnc-haas-pression-debit/) distingue le débit publié, la pression minimale et le besoin des accessoires."
+    },
+    {
+      "from": "guide-complet-dimensionner-compresseur-air",
+      "to": "compresseur-machine-cnc-haas-pression-debit",
+      "text": "Le [cas d’alimentation d’une CNC Haas VF-4](/guides/compresseur-machine-cnc-haas-pression-debit/) distingue le débit publié, la pression minimale et le besoin des accessoires."
+    },
+    {
+      "from": "dimensionner-compresseur-menuiserie-agencement",
+      "to": "air-assist-laser-gravure-compresseur-pression",
+      "text": "Pour un autre procédé, le [guide de l’air assist d’un laser de gravure](/guides/air-assist-laser-gravure-compresseur-pression/) examine les limites propres au kit et la préparation de l’essai matière."
+    },
+    {
+      "from": "compresseur-decoupeur-plasma-powermax45-sync",
+      "to": "air-assist-laser-gravure-compresseur-pression",
+      "text": "Pour un autre procédé, le [guide de l’air assist d’un laser de gravure](/guides/air-assist-laser-gravure-compresseur-pression/) examine les limites propres au kit et la préparation de l’essai matière."
+    },
+    {
+      "from": "soufflette-garage-securite-bruit-consommation",
+      "to": "ioniseur-air-comprime-debit-neutralisation-electrostatique",
+      "text": "Lorsqu’une neutralisation électrostatique est recherchée, le [guide des ioniseurs à air comprimé](/guides/ioniseur-air-comprime-debit-neutralisation-electrostatique/) distingue la preuve de neutralisation de l’effet du souffle."
+    },
+    {
+      "from": "amplificateur-air-exair-consommation-debit",
+      "to": "ioniseur-air-comprime-debit-neutralisation-electrostatique",
+      "text": "Lorsqu’une neutralisation électrostatique est recherchée, le [guide des ioniseurs à air comprimé](/guides/ioniseur-air-comprime-debit-neutralisation-electrostatique/) distingue la preuve de neutralisation de l’effet du souffle."
+    },
+    {
+      "from": "utiliser-plusieurs-outils-pneumatiques",
+      "to": "vibreur-pneumatique-tremie-debit-compresseur",
+      "text": "Le [cas des vibreurs pneumatiques de trémie](/guides/vibreur-pneumatique-tremie-debit-compresseur/) illustre la différence entre appel instantané, durée d’activation et consommation moyenne."
+    },
+    {
+      "from": "stockage-primaire-secondaire-air-comprime",
+      "to": "vibreur-pneumatique-tremie-debit-compresseur",
+      "text": "Le [cas des vibreurs pneumatiques de trémie](/guides/vibreur-pneumatique-tremie-debit-compresseur/) illustre la différence entre appel instantané, durée d’activation et consommation moyenne."
+    },
+    {
+      "from": "moteur-pneumatique-couple-demarrage-debit",
+      "to": "verin-rotatif-pneumatique-couple-angle-inertie",
+      "text": "Pour un mouvement angulaire limité, le [guide des vérins rotatifs](/guides/verin-rotatif-pneumatique-couple-angle-inertie/) relie le couple, l’angle et le dossier d’inertie de la charge."
+    },
+    {
+      "from": "surpresseur-pneumatique-festo-dpa-pression-debit",
+      "to": "verin-rotatif-pneumatique-couple-angle-inertie",
+      "text": "Pour un mouvement angulaire limité, le [guide des vérins rotatifs](/guides/verin-rotatif-pneumatique-couple-angle-inertie/) relie le couple, l’angle et le dossier d’inertie de la charge."
+    },
+    {
+      "from": "ejecteur-vide-schmalz-sbpl-consommation",
+      "to": "pince-pneumatique-force-doigt-longueur-prehension",
+      "text": "Le [guide des pinces pneumatiques](/guides/pince-pneumatique-force-doigt-longueur-prehension/) examine une autre solution de préhension, avec la force par mors et la géométrie des doigts."
+    },
+    {
+      "from": "guide-complet-dimensionner-compresseur-air",
+      "to": "pince-pneumatique-force-doigt-longueur-prehension",
+      "text": "Le [guide des pinces pneumatiques](/guides/pince-pneumatique-force-doigt-longueur-prehension/) examine une autre solution de préhension, avec la force par mors et la géométrie des doigts."
+    },
+    {
+      "from": "bar-psi-pression-absolue-relative",
+      "to": "vacuometre-vacuostat-bar-absolu-pourcentage-vide",
+      "text": "Le [guide de lecture du vacuomètre et du vacuostat](/guides/vacuometre-vacuostat-bar-absolu-pourcentage-vide/) détaille les références absolue et relative avec un exemple de pourcentage de vide."
+    },
+    {
+      "from": "ejecteur-vide-schmalz-sbpl-consommation",
+      "to": "vacuometre-vacuostat-bar-absolu-pourcentage-vide",
+      "text": "Le [guide de lecture du vacuomètre et du vacuostat](/guides/vacuometre-vacuostat-bar-absolu-pourcentage-vide/) détaille les références absolue et relative avec un exemple de pourcentage de vide."
+    },
+    {
+      "from": "groupe-frl-filtre-regulateur-lubrificateur",
+      "to": "regulateur-air-comprime-fuit-event-decompression",
+      "text": "Pour un souffle localisé sur un détendeur, le [guide du régulateur qui fuit par l’évent](/guides/regulateur-air-comprime-fuit-event-decompression/) aide à identifier la version et le moment d’apparition."
+    },
+    {
+      "from": "detecter-mesurer-fuites-air-comprime",
+      "to": "regulateur-air-comprime-fuit-event-decompression",
+      "text": "Pour un souffle localisé sur un détendeur, le [guide du régulateur qui fuit par l’évent](/guides/regulateur-air-comprime-fuit-event-decompression/) aide à identifier la version et le moment d’apparition."
+    },
+    {
+      "from": "pression-travail-6-3-bar-outils-pneumatiques",
+      "to": "verin-simple-double-effet-ressort-retour",
+      "text": "Le [guide simple effet, double effet et retour par ressort](/guides/verin-simple-double-effet-ressort-retour/) prépare la lecture du cycle avant d’établir le besoin pneumatique."
+    },
+    {
+      "from": "utiliser-plusieurs-outils-pneumatiques",
+      "to": "verin-simple-double-effet-ressort-retour",
+      "text": "Le [guide simple effet, double effet et retour par ressort](/guides/verin-simple-double-effet-ressort-retour/) prépare la lecture du cycle avant d’établir le besoin pneumatique."
+    },
+    {
+      "from": "installer-reseau-air-comprime-atelier",
+      "to": "vanne-demarrage-progressif-air-comprime-remise-pression",
+      "text": "Le [guide des vannes de démarrage progressif](/guides/vanne-demarrage-progressif-air-comprime-remise-pression/) prépare les vérifications de pression et de comportement lors de la remise en service."
+    },
+    {
+      "from": "fiche-intervention-air-comprime",
+      "to": "vanne-demarrage-progressif-air-comprime-remise-pression",
+      "text": "Le [guide des vannes de démarrage progressif](/guides/vanne-demarrage-progressif-air-comprime-remise-pression/) prépare les vérifications de pression et de comportement lors de la remise en service."
+    },
+    {
+      "from": "pompe-membrane-aro-66605-debit-air",
+      "to": "pompe-pneumatique-echappement-givre-air-sec",
+      "text": "Si l’échappement givre, le [diagnostic du givrage des pompes pneumatiques](/guides/pompe-pneumatique-echappement-givre-air-sec/) distingue humidité interne et observation extérieure."
+    },
+    {
+      "from": "point-rosee-secheur-filtre-air-comprime",
+      "to": "pompe-pneumatique-echappement-givre-air-sec",
+      "text": "Si l’échappement givre, le [diagnostic du givrage des pompes pneumatiques](/guides/pompe-pneumatique-echappement-givre-air-sec/) distingue humidité interne et observation extérieure."
+    }
+  ],
+  "calculations": [
+    {
+      "guide": "lire-fiche-cagi-compresseur-iso-1217",
+      "calculation": "36.12 / (175 / 100)",
+      "result": 20.639999999999997,
+      "unit": "kW/100 cfm",
+      "scope": "Recalcul de la fiche pédagogique CAGI ABC Compressor, pas un essai produit."
+    },
+    {
+      "guide": "vibreur-pneumatique-tremie-debit-compresseur",
+      "calculation": "240 * 10 / 60",
+      "result": 40.0,
+      "unit": "L par activation, dans la même référence volumique",
+      "scope": "Exemple hypothétique, aucune valeur attribuée à une référence NCT."
+    },
+    {
+      "guide": "verin-rotatif-pneumatique-couple-angle-inertie",
+      "calculation": "J = m * r² ; m = 1 kg, r = 0.1 puis 0.2 m",
+      "results": [
+        0.010000000000000002,
+        0.04000000000000001
+      ],
+      "unit": "kg.m²",
+      "scope": "Masse ponctuelle hypothétique ; pas de validation mécanique."
+    },
+    {
+      "guide": "vacuometre-vacuostat-bar-absolu-pourcentage-vide",
+      "calculation": "1.00 - 0.60 ; (1.00 - 0.40) / 1.00 * 100",
+      "results": [
+        0.4,
+        60.0
+      ],
+      "units": [
+        "bar absolu",
+        "%"
+      ],
+      "scope": "Atmosphère locale supposée à 1 bar absolu, convention de pourcentage déclarée."
+    },
+    {
+      "guide": "pressostat-compresseur-pression-enclenchement-differentiel",
+      "calculation": "8 - 6",
+      "result": 2,
+      "unit": "bar",
+      "scope": "Seuils hypothétiques, aucune consigne de réglage."
+    }
+  ],
+  "sourceLimitations": [
+    "ISO 22052 : seul le domaine et le statut publics sont utilisés ; aucun seuil du texte intégral supposé.",
+    "La fiche CAGI ABC Compressor est pédagogique et non vérifiée indépendamment ; elle ne représente pas un produit testé.",
+    "Notice Condor MDR-2 : ambiguïté du texte de réglage signalée ; aucune direction de vissage prescrite.",
+    "Les exigences NIOSH sont présentées comme recommandations américaines, pas comme droit français.",
+    "Netter : référence volumique des L/min non convertie silencieusement en NL/min ou FAD.",
+    "Binks : les pages de bibliothèque incluent le texte des notices et renvoient aux documents originaux."
+  ],
+  "excludedSourceAttempts": [
+    {
+      "ids": [
+        "corghi-pdf",
+        "mirka-brochure"
+      ],
+      "reason": "Anciennes URL en échec, non utilisées."
+    },
+    {
+      "ids": [
+        "devilbiss-general",
+        "devilbiss-pattern",
+        "devilbiss-dv1",
+        "netter"
+      ],
+      "reason": "Redirections génériques ; remplacées par les documents exacts ou leurs pages de bibliothèque."
+    }
+  ],
+  "localValidation": {
+    "astroCheck": {
+      "errors": 0,
+      "warnings": 0,
+      "existingHints": 5
+    },
+    "build": {
+      "pages": 4725,
+      "canonicalUrls": 4440
+    },
+    "staticGuidePages": 30,
+    "staticContextualBacklinks": 60,
+    "newGuideBrowserViews": 90,
+    "previousBatchBrowserViewsRechecked": 75,
+    "viewportWidths": [
+      320,
+      390,
+      1440
+    ],
+    "tradePagesWithoutJavaScript": 14,
+    "searchQueries": 4,
+    "searchIndexGzipKiB": 77,
+    "searchIndexBudgetKiB": 80,
+    "visualReview": [
+      "Vacuomètre : héros bureau et figure mobile",
+      "Chapeaux DV1-S : pressions et barres",
+      "Pince : bras de levier et limites",
+      "Notice Condor : divergence relue sur le PDF page 7"
+    ],
+    "physicalTestsPerformed": false,
+    "fullSuite": {
+      "passed": 559,
+      "failed": 0,
+      "skipped": 0,
+      "durationSeconds": 85.75
+    }
+  }
+}

@@ -14,6 +14,7 @@ sources:
   - https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940169372.pdf
   - https://tools.cp.com/en/products/impactwrenches/cp7732c-sku8941077321
   - https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/update2025/fa-20-4-423/9502000609_05.pdf
+updatedDate: 2026-09-26
 ---
 
 **L’huile introduite par l’arrivée d’air ne remplace pas automatiquement la lubrification du mécanisme de frappe.** Avant de choisir un bidon, identifiez la zone à entretenir, la référence exacte de la clé et la prescription correspondante. C’est plus utile qu’une recommandation générique de « quelques gouttes » appliquée à tous les outils.
@@ -75,3 +76,5 @@ Une fiche courte peut comporter : MPN et série, document applicable, zone entre
 Cette séparation évite qu’un simple remplissage du lubrificateur soit enregistré comme une révision complète. Elle permet aussi au réparateur de comprendre ce qui a réellement été utilisé, au lieu de travailler sur l’indication imprécise « huile pour outils ».
 
 Sources consultées le 25 septembre 2026. Aucun intervalle ou dosage commun à l’ensemble du catalogue n’est déduit de ces exemples.
+
+Si de l’huile apparaît sur un poste qui n’en attend pas, commencez par [localiser l’origine de cette trace dans l’air comprimé](/guides/huile-sortie-compresseur-air-comprime-diagnostic/), en distinguant les branches volontairement lubrifiées du reste du réseau.

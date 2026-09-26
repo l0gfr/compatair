@@ -71,6 +71,8 @@ Documentez la règle, les exceptions, la version du contrôleur et la date de to
 
 L’ajout d’une machine à variateur demande aussi de vérifier la continuité des plages de débit. Le guide [VSD et profil de charge d’atelier](/guides/compresseur-vitesse-variable-vsd-rentabilite-atelier/) illustre le risque d’un intervalle mal couvert entre deux états de fonctionnement.
 
+Pour prolonger cette vérification, vous pouvez [préparer le raccordement de deux compresseurs en parallèle](/guides/raccorder-deux-compresseurs-en-parallele/).
+
 ## Sources
 
 - [U.S. Department of Energy, Improving Compressed Air System Performance](https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf)

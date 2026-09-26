@@ -125,6 +125,10 @@ Une pression qui ne revient pas appelle le [parcours de diagnostic production, f
 
 Après la purge, le liquide collecté nécessite sa propre filière. Le dossier [séparateur huile/eau et condensats](/guides/separateur-huile-eau-condensats-compresseur/) distingue les mélanges séparables des émulsions stables et précise les questions à poser avant un rejet.
 
+Le [guide de choix d’huile pour compresseur](/guides/huile-compresseur-viscosite-reference-constructeur/) distingue référence, viscosité et domaine d’emploi sans proposer d’équivalence universelle.
+
+Le [guide rouille, condensats et contrôle de cuve](/guides/cuve-compresseur-rouille-condensats-controle/) distingue l’observation d’un liquide de la preuve d’intégrité du réservoir.
+
 ## Sources
 
 - [Atlas Copco, Compressed Air Manual, 9e édition, sections 3.6.1.1 et 4.2.7](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf)

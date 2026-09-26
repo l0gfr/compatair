@@ -15,6 +15,7 @@ sources:
   - https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/jut1722548630709.html
   - https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/eel1722548629387.html
   - https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/ojy1722548627966.html
+updatedDate: 2026-09-26
 ---
 
 **Pour alimenter un Powermax45 SYNC, ne retenez pas un débit trouvé isolément sur une fiche commerciale.** Hypertherm affiche 188 L/min à 5,9 bar sur sa page produit, tandis que la notice en ligne indique 212,4 litres standard par minute à 5,9 bar pour la coupe. Cet écart doit être clarifié pour la référence et la révision concernées ; nous ne calculons pas une moyenne entre les deux. [Page produit](https://www.hypertherm.com/hypertherm/powermax/powermax45-sync/) ; [notice, pressions et débits d’entrée](https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/jut1722548630709.html).
@@ -73,6 +74,10 @@ Notre proposition de contrôle consiste à définir avant l’essai le mode util
 Distinguez le compte rendu sur l’air de celui sur la qualité de coupe. L’alimentation conforme ne suffit pas à attribuer toute anomalie de coupe au compresseur, et une coupe visuellement acceptable ne documente pas les trois classes de qualité d’air. Nous ne donnons aucune épaisseur de coupe garantie pour un compresseur particulier.
 
 Pour préparer un achat, transmettez les deux valeurs contradictoires au fournisseur et conservez sa réponse avec la notice. Cette clarification est plus utile qu’un classement « meilleur compresseur plasma » fondé sur la seule contenance d’une cuve.
+
+Pour un atelier équipé de plusieurs procédés, il faut aussi [identifier les circuits d’air et d’azote d’une découpe laser](/guides/compresseur-decoupe-laser-air-azote/) : les exigences du plasma ne se transposent pas à cette machine.
+
+Pour un autre procédé, le [guide de l’air assist d’un laser de gravure](/guides/air-assist-laser-gravure-compresseur-pression/) examine les limites propres au kit et la préparation de l’essai matière.
 
 ## Sources et périmètre
 

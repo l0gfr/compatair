@@ -13,6 +13,7 @@ relatedGuides: ["soufflette-garage-securite-bruit-consommation", "utiliser-plusi
 sources:
   - https://www.exair.com/media/productcms/pdf/AirAmplifiers2_1.pdf
   - https://blog.exair.com/2021/03/26/exairs-super-air-amplifier-amplification-ratios-explained/
+updatedDate: 2026-09-26
 ---
 
 **Les 4 132 SLPM annoncés en sortie d’un EXAIR 120021 ne sont pas 4 132 SLPM d’air comprimé produits pour le réseau.** Le tableau constructeur associe cette valeur à une consommation de 229 SLPM d’air comprimé, à 5,5 bar d’alimentation. Le jet entraîne de l’air ambiant ; les deux chiffres décrivent des flux différents. [EXAIR, tableau de performances, page PDF 8](https://www.exair.com/media/productcms/pdf/AirAmplifiers2_1.pdf).
@@ -79,6 +80,10 @@ Pour un besoin de refroidissement local, le [dossier EXAIR Cold Gun](/guides/pis
 Indiquez le nombre de postes, leur fonctionnement simultané, la pression disponible, le résultat demandé et la géométrie de l’application. Demandez ensuite la référence et la configuration proposées, leur consommation comprimée, les conditions de mesure du jet et le protocole de vérification.
 
 Le bon choix est celui dont le service attendu et le besoin d’air sont démontrés dans ce cadre. Une grande valeur de débit soufflé, prise sans son plan de mesure, n’est pas un argument suffisant pour sélectionner le compresseur.
+
+Pour prolonger cette vérification, vous pouvez [comparer couteau d’air et soufflante sur une même tâche](/guides/couteau-air-comprime-ou-soufflante/).
+
+Lorsqu’une neutralisation électrostatique est recherchée, le [guide des ioniseurs à air comprimé](/guides/ioniseur-air-comprime-debit-neutralisation-electrostatique/) distingue la preuve de neutralisation de l’effet du souffle.
 
 ## Sources et périmètre
 

@@ -98,6 +98,12 @@ Une dérive peut provenir d’un débit supérieur à la capacité du sécheur, 
 
 Le dossier [sécheur pour atelier non chauffé](/guides/secheur-air-comprime-atelier-non-chauffe/) applique ces notions au choix entre frigorifique, adsorption et traitement d’une branche. Il sépare point de rosée délivré et température ambiante admissible de la machine.
 
+Pour prolonger cette vérification, vous pouvez [intégrer l’air de balayage d’un sécheur à membrane](/guides/secheur-membrane-air-comprime-debit-balayage/).
+
+Avant de comparer deux hygromètres, consultez le [guide point de rosée atmosphérique ou sous pression](/guides/point-rosee-atmospherique-sous-pression-mesure/) et ses conditions de prélèvement.
+
+Si l’échappement givre, le [diagnostic du givrage des pompes pneumatiques](/guides/pompe-pneumatique-echappement-givre-air-sec/) distingue humidité interne et observation extérieure.
+
 ## Sources
 
 - [Compressed Air and Gas Institute, glossaire et traitement de l’air](https://www.cagi.org/resource-library)

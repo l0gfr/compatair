@@ -14,6 +14,7 @@ sources:
   - https://www.inrs.fr/risques/utilisation-machines/acquisition-revente-location
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
   - https://www.inrs.fr/risques/utilisation-machines/verifications-initiales-periodiques
+updatedDate: 2026-09-26
 ---
 
 **Un compresseur d’occasion qui monte en pression n’est pas encore un achat validé.** Il faut établir son identité, examiner les documents et l’état de l’ensemble, puis vérifier qu’il peut alimenter votre usage dans des conditions acceptables. Le prix affiché n’est comparable qu’après avoir identifié les travaux et équipements restant à prévoir.
@@ -81,6 +82,8 @@ Le [guide de ventilation du local](/guides/ventilation-local-compresseur-surchau
 L’[INRS, vérifications initiales et périodiques](https://www.inrs.fr/risques/utilisation-machines/verifications-initiales-periodiques), distingue plusieurs formes de vérification et demande de traiter les écarts constatés. Pour votre achat, transformez les points non résolus en réserves écrites : document absent, identification incomplète, essai non réalisé, maintenance à chiffrer ou anomalie à examiner.
 
 Notre règle de décision est simple : **une réserve critique non levée reste une réserve**. Une remise commerciale ne démontre ni l’état du réservoir ni le débit disponible. Une fois l’identité et les performances documentées, utilisez le [calculateur CompatAir](/calculateur/) pour l’alimentation de vos outils et prévoyez le [suivi d’entretien](/guides/entretien-compresseur-purge-condensats/) correspondant à la notice de l’exemplaire acheté.
+
+Le [guide rouille, condensats et contrôle de cuve](/guides/cuve-compresseur-rouille-condensats-controle/) distingue l’observation d’un liquide de la preuve d’intégrité du réservoir.
 
 ## Sources et périmètre
 

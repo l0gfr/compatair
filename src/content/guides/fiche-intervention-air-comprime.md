@@ -17,6 +17,7 @@ sources:
   - https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf
   - https://www.iso.org/fr/standard/46580.html
   - https://www.inrs.fr/media.html?refINRS=ED+6109
+updatedDate: 2026-09-26
 ---
 
 Une fiche d’intervention ne sert pas seulement à prouver qu’un technicien est passé. Elle doit montrer ce qui a déclenché l’action, ce qui a été observé avant, ce qui a réellement été fait, puis ce que la même mesure indique après l’intervention.
@@ -133,6 +134,8 @@ La structure suivante peut être transposée dans une GMAO, un tableur ou un for
 - contre-mesures et conditions ;
 - conclusion, limites et prochaine échéance ;
 - liens vers documents, photographies et dossiers connexes.
+
+Le [guide des vannes de démarrage progressif](/guides/vanne-demarrage-progressif-air-comprime-remise-pression/) prépare les vérifications de pression et de comportement lors de la remise en service.
 
 ## Sources
 

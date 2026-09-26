@@ -12,6 +12,7 @@ sources:
   - https://www.sata.com/en-dat/products/spray-guns/gravity-flow-cup-guns/satajet-1000-b-lignum-3/technical-data
   - https://www.sata.com/en-gb/premium-spray-gun-for-small-area-applications-in-automotive-finishes-sataminijet-4400-b-hvlp-0.8-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/204180
   - https://www.iso.org/fr/standard/46418.html
+updatedDate: 2026-09-26
 ---
 
 Le choix du compresseur arrive après celui du produit et du pistolet. Pour peindre un meuble, cette inversion évite de partir d’une cuve disponible puis de chercher à lui faire accepter n’importe quelle buse. HVLP et RP, à eux seuls, ne donnent aucun débit exploitable.
@@ -59,6 +60,8 @@ La préparation réunit :
 - l’exigence de qualité d’air, si elle est documentée.
 
 Sans débit exploitable à la pression demandée, la cuve ne permet pas de trancher. Il reste deux voies propres : une autre machine documentée, ou la courbe manquante du fabricant.
+
+Le [comparatif gravité, aspiration et alimentation sous pression](/guides/pistolet-peinture-gravite-aspiration-cuve-pression/) aide à séparer le circuit de produit du circuit d’air.
 
 ## Sources
 

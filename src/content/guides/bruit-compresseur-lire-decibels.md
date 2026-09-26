@@ -3,7 +3,7 @@ title: "Bruit d’un compresseur : comment comparer les décibels sans se trompe
 seoTitle: "Bruit d’un compresseur : comparer les dB | CompatAir"
 description: "Comparez le bruit de deux compresseurs sans confondre LpA et LwA : indicateur, distance, protocole et limites des mentions « Silent »."
 pubDate: 2026-07-13
-updatedDate: 2026-07-14
+updatedDate: 2026-09-26
 category: "Comprendre"
 audiences: [particulier, professionnel]
 metiers: [maintenance-industrielle]
@@ -58,6 +58,8 @@ Le bruit perçu dépend aussi de l’installation : local réverbérant, sol, vi
 - consulter la notice et les exigences de protection applicables.
 
 Pour passer de la lecture acoustique au choix d’un modèle, consultez le dossier [choisir un compresseur silencieux pour l’atelier](/guides/choisir-compresseur-silencieux-atelier/).
+
+Sur une machine pneumatique, la recherche de bruit peut aussi conduire à [examiner un silencieux colmaté et la contre-pression d’échappement](/guides/silencieux-pneumatique-colmate-contre-pression/), avec les contrôles prévus par la notice.
 
 ## Sources
 

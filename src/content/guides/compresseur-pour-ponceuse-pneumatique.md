@@ -51,6 +51,8 @@ Avant de comparer les besoins d’air, le guide [orbite de 2,5, 5 ou 8 mm](/guid
 
 Pour les petites zones de carrosserie, consultez le dossier [mini-ponceuse 50/75 mm et compresseur](/guides/mini-ponceuse-pneumatique-50-75-mm-compresseur/). Il distingue la CP7200 orbitale de la CP7201 destinée au polissage et relève les ambiguïtés de leurs fiches.
 
+Le [comparatif ponceuse pneumatique ou électrique](/guides/ponceuse-pneumatique-ou-electrique-atelier/) propose un essai de travail commun et un bilan énergétique dont le périmètre reste explicite.
+
 ## Sources
 
 - [Einhell, TC-PE 150](https://www.einhell.fr/p/4133330-tc-pe-150/)

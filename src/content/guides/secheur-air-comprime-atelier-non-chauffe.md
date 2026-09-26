@@ -12,6 +12,7 @@ sources:
   - https://www.atlascopco.com/en-uk/compressors/wiki/compressed-air-articles/choosing-a-dryer
   - https://www.atlascopco.com/en-ca/compressors/air-dryers-compressed-air
   - https://www.cagi.org/resource-library
+updatedDate: 2026-09-26
 ---
 
 **Un sécheur se choisit en fonction du point le plus froid du réseau et de la qualité exigée par le procédé.** Le chauffage du local compresseur ne suffit pas si une conduite traverse ensuite une zone froide. Inversement, l’expression « atelier non chauffé » ne permet pas de prescrire automatiquement un modèle par adsorption : la température réelle et les conditions garanties restent à établir.
@@ -80,3 +81,5 @@ La fiche de réception proposée par CompatAir rassemble : point de rosée requi
 Une réception réalisée en ambiance douce doit préciser ce qui est mesuré et ce qui reste couvert seulement par la garantie de performance du fournisseur. La [qualité selon ISO 8573-1](/guides/qualite-air-comprime-iso-8573-1/) se décrit contaminant par contaminant ; l’absence d’eau visible ne suffit pas à attester toute la qualité de l’air.
 
 Sources consultées le 25 septembre 2026. Les choix et scénarios présentés sont une méthode de préparation du besoin, sans prescription d’un sécheur particulier.
+
+Avant de comparer deux hygromètres, consultez le [guide point de rosée atmosphérique ou sous pression](/guides/point-rosee-atmospherique-sous-pression-mesure/) et ses conditions de prélèvement.

@@ -75,6 +75,8 @@ Ainsi, une nouvelle cadence ou un poste supplémentaire produit un nouveau calcu
 
 Le cas de la CP7732C permet de [distinguer moyenne, charge et marche à vide](/guides/consommation-moyenne-en-charge-cle-a-chocs/) avant de calculer le besoin d’air. La [lecture des couples de clé à chocs](/guides/cle-a-chocs-couple-serrage-roues-dynamometrique/) complète le dossier de poste pour séparer alimentation pneumatique et serrage final.
 
+Pour préparer l’alimentation de la machine de roues, consultez le [guide du démonte-pneu : pression publiée et consommation à documenter](/guides/compresseur-demonte-pneu-pression-consommation/).
+
 ## Sources
 
 - [Chicago Pneumatic, fiche officielle CP7748](https://tools.cp.com/fr-fr/products/impactwrenches/cp7748-sku8941077481)

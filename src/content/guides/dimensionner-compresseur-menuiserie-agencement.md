@@ -3,7 +3,7 @@ title: "Dimensionner l’air comprimé en menuiserie et agencement sans cadence 
 seoTitle: "Compresseur pour menuiserie | CompatAir"
 description: "Méthode pour traiter clouage, agrafage et finition à partir du volume par tir, de la cadence explicite et des autres usages réellement simultanés."
 pubDate: 2026-07-15
-updatedDate: 2026-07-20
+updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [professionnel]
 metiers: [menuiserie-agencement]
@@ -78,6 +78,12 @@ Ouvrez le [calculateur avec la TC-PN 50](/calculateur/#outil=einhell-tc-pn-50), 
 - les caractéristiques encore absentes.
 
 Une autre cadence devient alors une variante du scénario, pas une réécriture de la notice.
+
+Pour prolonger cette vérification, vous pouvez [préparer une préhension par le vide sur bois ou carton poreux](/guides/ventouse-piece-poreuse-debit-vide/).
+
+Si les clous restent saillants, le [diagnostic pression, profondeur et fixations du cloueur](/guides/cloueur-clous-mal-enfonces-pression-profondeur/) permet de préparer une vérification ordonnée.
+
+Pour un autre procédé, le [guide de l’air assist d’un laser de gravure](/guides/air-assist-laser-gravure-compresseur-pression/) examine les limites propres au kit et la préparation de l’essai matière.
 
 ## Sources
 

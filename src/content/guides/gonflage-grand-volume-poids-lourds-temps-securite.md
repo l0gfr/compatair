@@ -14,6 +14,7 @@ sources:
   - https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-961/ed961.pdf
   - https://www.einhell.fr/p/4137000-tire-pressure-gauge/
   - https://www.energy.gov/cmei/ito/compressed-air-systems
+updatedDate: 2026-09-26
 ---
 
 Un temps de gonflage exige quatre entrées : volume interne, pression initiale, pression cible et durée. La prévention exige en parallèle une procédure, une distance et des équipements adaptés à la catégorie de pneumatique. Un bon résultat de débit ne valide jamais la sécurité du poste.
@@ -108,3 +109,5 @@ Pour le matériel retenu, documentez plage, précision, commande à distance, ra
 | Procédure | surveillance, commande et arrêt sont-ils définis ? |
 
 Un poste n’est accepté que lorsque les deux tableaux sont traités. Cette séparation empêche qu’un calcul rapide masque une réserve de sécurité, ou qu’un aménagement correct soit confondu avec une capacité de production démontrée.
+
+Le [guide des boosters de talonnage tubeless](/guides/booster-talonnage-tubeless-reserve-air-compresseur/) distingue la réserve du dispositif, sa recharge et le gonflage final.

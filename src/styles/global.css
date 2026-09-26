@@ -606,7 +606,7 @@ h3 { font-weight: 560; }
 .article-body blockquote::before { position: absolute; left: 1.25rem; top: .55rem; color: var(--brand); content: "“"; font: 600 3.5rem/1 "Newsreader Variable", Georgia, serif; }
 .article-body blockquote p { margin: 0; color: var(--ink); font-weight: 700; }
 .article-body table { width: 100%; overflow: hidden; border: 1px solid var(--line); border-collapse: separate; border-spacing: 0; margin: 1.8rem 0; border-radius: .9rem; background: white; font-size: .88rem; box-shadow: var(--shadow-sm); }
-.article-body th, .article-body td { padding: .78rem; border: 0; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.article-body th, .article-body td { padding: .78rem; border: 0; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; overflow-wrap: anywhere; hyphens: auto; }
 .article-body th + th, .article-body td + td { border-left: 1px solid var(--line); }
 .article-body tr:last-child td { border-bottom: 0; }
 .article-body th { color: var(--ink); background: #e7eee4; font-size: .72rem; letter-spacing: .035em; text-transform: uppercase; }
@@ -614,6 +614,7 @@ h3 { font-weight: 560; }
 .article-body svg { display: block; width: 100%; height: auto; margin: 2.2rem 0 3rem; border: 1px solid rgba(20,52,38,.14); border-radius: 1.2rem; box-shadow: 0 18px 45px rgba(17,37,28,.1); }
 .article-infographic { margin: 2.2rem 0 3rem; }
 .article-infographic > svg { margin: 0; }
+.article-infographic.article-infographic--compact > svg { width: 100%; max-width: 520px; height: auto; margin-inline: auto; }
 .article-table-scroll { max-width: 100%; overflow-x: auto; margin: 1.8rem 0; overscroll-behavior-inline: contain; }
 .article-table-scroll:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
 .article-body .article-table-scroll > table { min-width: 38rem; margin: 0; }

@@ -12,6 +12,7 @@ sources:
   - https://www.cagi.org/performance-verification
   - https://www.cagi.org/assets/documents/pdfs/RotaryCompressorUniformTestMethodNotApplicable.pdf?updated=1731084220
   - https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf
+updatedDate: 2026-09-26
 ---
 
 Deux compresseurs de même puissance moteur peuvent livrer des débits différents, à des pressions différentes et avec des auxiliaires différents. La puissance spécifique rapproche la puissance totale du package et sa capacité au même point de fonctionnement. Elle ne dispense pas d’étudier le comportement à charge partielle.
@@ -67,6 +68,10 @@ Le dossier [mesurer les temps charge et à vide](/guides/mesurer-temps-charge-vi
 Une grille d’achat professionnelle devrait aligner, pour chaque modèle : fiche et statut de vérification, capacité, pression, puissance totale, puissance spécifique, puissance à débit nul, plage de régulation, traitement inclus, tension et hypothèses de disponibilité.
 
 Les coûts d’énergie se calculent ensuite avec les heures et tarifs du site. CompatAir ne fabrique pas une durée annuelle ou un prix de l’électricité par défaut.
+
+Pour prolonger cette vérification, vous pouvez [calculer le coût du mètre cube d’air sur un périmètre mesuré](/guides/cout-metre-cube-air-comprime/) et [identifier les circuits d’air et d’azote d’une découpe laser](/guides/compresseur-decoupe-laser-air-azote/).
+
+La [lecture détaillée d’une fiche CAGI](/guides/lire-fiche-cagi-compresseur-iso-1217/) aide à conserver pression, débit et puissance dans le périmètre exact du document.
 
 ## Sources
 

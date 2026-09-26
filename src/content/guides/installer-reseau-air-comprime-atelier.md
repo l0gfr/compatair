@@ -106,6 +106,12 @@ Ces mesures permettent de distinguer un compresseur insuffisant d’un réseau r
 
 L’implantation se complète par deux dossiers : [ventilation du local compresseur](/guides/ventilation-local-compresseur-surchauffe/) pour le chemin de l’air chaud, et [traitement huile/eau des condensats](/guides/separateur-huile-eau-condensats-compresseur/) pour le devenir du liquide collecté.
 
+Pour prolonger cette vérification, vous pouvez [vérifier pourquoi un tube PVC de plomberie ne valide pas un réseau d’air](/guides/tuyau-pvc-reseau-air-comprime-risques/).
+
+Le [cas d’alimentation d’une CNC Haas VF-4](/guides/compresseur-machine-cnc-haas-pression-debit/) distingue le débit publié, la pression minimale et le besoin des accessoires.
+
+Le [guide des vannes de démarrage progressif](/guides/vanne-demarrage-progressif-air-comprime-remise-pression/) prépare les vérifications de pression et de comportement lors de la remise en service.
+
 ## Sources
 
 - [Atlas Copco, Compressed Air Manual, 9e édition, chapitre 3.6](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf)

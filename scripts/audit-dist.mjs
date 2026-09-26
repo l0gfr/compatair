@@ -750,10 +750,16 @@ for (const path of sitePaths) {
 	if (!/^\/guides\/[^/]+\/$/.test(path)) continue;
 	const html = await readFile(join(root, `${path}index.html`), 'utf8');
 	const audiences = html.match(/data-guide-audiences="([^"]+)"/)?.[1];
-	if (audiences) guideArticles.push({ path, audiences: audiences.split(' ') });
+	const metiers = html.match(/data-guide-metiers="([^"]*)"/)?.[1] ?? '';
+	if (audiences) guideArticles.push({ path, audiences: audiences.split(' '), metiers: metiers.split(' ').filter(Boolean) });
 }
-for (const [basePath, audience] of [['/guides/', null], ['/guides/professionnels/', 'professionnel']]) {
-	const expected = new Set(guideArticles.filter((guide) => !audience || guide.audiences.includes(audience)).map((guide) => guide.path));
+const guideLibraries = [
+	{ basePath: '/guides/', accepts: () => true },
+	{ basePath: '/guides/professionnels/', accepts: (guide) => guide.audiences.includes('professionnel') },
+	...tradeGuidePaths.map((metier) => ({ basePath: `/guides/metiers/${metier}/`, accepts: (guide) => guide.metiers.includes(metier) })),
+];
+for (const { basePath, accepts } of guideLibraries) {
+	const expected = new Set(guideArticles.filter(accepts).map((guide) => guide.path));
 	const seen = new Set();
 	const pageCount = Math.max(1, Math.ceil(expected.size / GUIDE_DIRECTORY_PAGE_SIZE));
 	for (let page = 1; page <= pageCount; page += 1) {
@@ -771,6 +777,11 @@ for (const [basePath, audience] of [['/guides/', null], ['/guides/professionnels
 		if (page < pageCount && !html.includes(`href="${basePath}page/${page + 1}/"`)) errors.push(`bibliothèque guides: page suivante inaccessible depuis ${path}`);
 	}
 	for (const path of expected) if (!seen.has(path)) errors.push(`bibliothèque guides: dossier inaccessible depuis ${basePath}: ${path}`);
+	for (const path of sitePaths) {
+		if (!path.startsWith(`${basePath}page/`)) continue;
+		const pageNumber = Number(path.slice(`${basePath}page/`.length).replace(/\/$/, ''));
+		if (!Number.isInteger(pageNumber) || pageNumber < 2 || pageNumber > pageCount) errors.push(`bibliothèque guides: page superflue ${path}`);
+	}
 }
 
 for (const file of htmlFiles) {

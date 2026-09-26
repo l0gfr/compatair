@@ -79,6 +79,8 @@ La [notice Fuji, page 3](https://www.photos-videos.fujitools.com/content/dam/pim
 
 À réception, comparez les références livrées à votre commande avant montage. Un embout qui ressemble à l’ancien, une couleur ou une désignation commerciale ne remplace pas cette vérification.
 
+Pour prolonger cette vérification, vous pouvez [lire le débit nominal d’un distributeur avec ses conditions de mesure](/guides/choisir-distributeur-pneumatique-debit-nominal/).
+
 ## Sources et limites
 
 Les sources CEJN servent à identifier les familles et les profils ; Ralston explique les principes d’étanchéité. Les fiches et la notice Fuji concernent leurs références propres. Elles ne constituent pas une homologation de tous les adaptateurs disponibles. Documentation consultée le 25 septembre 2026.

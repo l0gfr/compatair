@@ -55,6 +55,10 @@ Conservez la référence de la buse, sa fiche, la pression réglée et le résul
 
 Pour un atelier du bois, la question est différente : l’INRS demande un nettoyage par aspiration, sans balai ni soufflette. Le dossier [nettoyer un atelier bois sans soufflette](/guides/nettoyer-atelier-bois-sans-soufflette/) traite ce périmètre séparément.
 
+Pour prolonger cette vérification, vous pouvez [comparer couteau d’air et soufflante sur une même tâche](/guides/couteau-air-comprime-ou-soufflante/).
+
+Lorsqu’une neutralisation électrostatique est recherchée, le [guide des ioniseurs à air comprimé](/guides/ioniseur-air-comprime-debit-neutralisation-electrostatique/) distingue la preuve de neutralisation de l’effet du souffle.
+
 ## Sources
 
 - [INRS, fiche 53, Utilisation de soufflettes silencieuses](https://www.inrs.fr/publications/bdd/techniques-reduction-bruit/FicheBruitAG.html?refINRS=BRUIT_FicheBruit_69)

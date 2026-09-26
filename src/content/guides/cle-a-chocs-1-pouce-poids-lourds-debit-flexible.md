@@ -14,6 +14,7 @@ sources:
   - https://tools.cp.com/en-us/products/impactwrenches/cp7776-sku8941077760
   - https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_vehicle-services/cp-vehicle-services-eng.pdf
   - https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-961/ed961.pdf
+updatedDate: 2026-09-26
 ---
 
 Le carré de 1 pouce ne dimensionne pas un poste poids lourds. Deux clés de la même marque et du même format peuvent publier des consommations en charge sensiblement différentes. Le réseau doit donc conserver le modèle exact, sa pression et son passage d’air.
@@ -89,3 +90,5 @@ Si gonflage et clé fonctionnent simultanément, construisez une ligne de demand
 | Limites | notice, prévention et usages non couverts |
 
 Une configuration est actionnable lorsque l’atelier peut la rejouer avec la même clé et le même chemin d’air. L’étiquette « 1 pouce » reste un identifiant mécanique, jamais une preuve de capacité pneumatique.
+
+La [lecture des douilles à chocs et adaptateurs](/guides/douilles-choc-adaptateurs-carre-compatibilite/) complète le choix de la clé en distinguant l’interface mécanique et les données de couple.

@@ -16,6 +16,7 @@ sources:
   - https://www.sata.com/media/75/3e/88/1790259012/BETRIEBSANLEITUNG-SATAMINIJET-4400-B.PDF.PDF?ts=1790259012
   - https://www.sata.com/en-ca/premium-spray-gun-for-small-area-applications-in-automotive-finishes-sataminijet-4400-b-hvlp-0.8-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/204180
   - https://www.sata.com/en-us/premium-spray-gun-for-spot-repairs-in-automotive-finishes-sataminijet-4400-b-rp-0.3-sr-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/1114149
+updatedDate: 2026-09-26
 ---
 
 Le **SATAminijet 4400 B HVLP demande 120 Nl/min à 2 bar**, contre **200 Nl/min à 2,5 bar pour la version RP**, aux points documentés dans la notice. Pour préparer un poste de retouche, commencez par identifier la version du pistolet : le nom « minijet » et la taille du godet ne suffisent pas à déterminer son besoin d’air.
@@ -77,6 +78,8 @@ Cela ne remet pas automatiquement en cause toutes les caractéristiques du produ
 Notre proposition de réception est simple : conserver les réglages validés pour la peinture, reproduire une séquence représentative et noter la pression dynamique, la durée totale, les pauses et les autres consommateurs actifs. Faire accepter le résultat de pulvérisation séparément du bilan d’air évite de transformer une compatibilité pneumatique en promesse de finition.
 
 Pour deux opérateurs, utilisez le [guide des pistolets simultanés](/guides/deux-pistolets-peinture-simultanes/) ; une moyenne d’utilisation ne remplace pas leur demande lorsque les deux gâchettes sont ouvertes.
+
+Le [guide buse, chapeau et consommation d’air](/guides/buse-pistolet-peinture-chapeau-air-consommation/) montre comment comparer une configuration complète avec ses conditions constructeur.
 
 ## Sources et méthode
 

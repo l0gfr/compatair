@@ -10,6 +10,7 @@ readingTime: 8
 sources:
   - https://www.sata.com/en-us/service/professional-knowledge/little-helper/
   - https://www.iso.org/fr/standard/46418.html
+updatedDate: 2026-09-26
 ---
 
 Un défaut de peinture ne prouve pas, à lui seul, que l’air comprimé est contaminé. Un test ciblé peut rechercher une trace au point d’utilisation, à condition de suivre le protocole de son support et de limiter la conclusion à ce qu’il montre.
@@ -43,6 +44,8 @@ Le rôle de chaque étage est traité séparément dans le guide sur la [filtrat
 Notez : référence et lot du support, point de prélèvement, pression, durée, distance, composants en amont, date, opérateur et photographie sous un éclairage défini. Ajoutez le support témoin si le protocole interne de l’atelier en prévoit un.
 
 Une correction doit être suivie du même essai, dans les mêmes conditions. L’avant et l’après restent deux enregistrements ; le second ne remplace pas le premier.
+
+Pour prolonger cette vérification, vous pouvez [localiser l’origine d’une trace d’huile dans l’air comprimé](/guides/huile-sortie-compresseur-air-comprime-diagnostic/).
 
 ## Sources
 

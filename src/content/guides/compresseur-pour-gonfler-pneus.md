@@ -13,6 +13,7 @@ sources:
   - https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors
   - https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking_ppc/ideal_gases_under_constant.htm
   - https://www.michelin.fr/auto/conseils/pression-pneus/gonfler-pneus
+updatedDate: 2026-09-26
 ---
 
 La pression cible ne suffit pas pour calculer un temps de gonflage. Il faut aussi connaître le volume interne à pressuriser, la pression initiale et le débit réellement disponible.
@@ -51,6 +52,8 @@ Le résultat est donc un besoin moyen idéalisé. Il permet de comparer des ordr
 La pression maximale de 8 bar publiée pour le pistolet Einhell est une limite de l’accessoire. Ce n’est pas la pression à appliquer automatiquement à un pneu. Michelin indique de respecter la pression recommandée par le constructeur du véhicule et de contrôler de préférence à froid.
 
 Utilisez le [calculateur de gonflage](/calculateur/#outil=einhell-4137000-manometre) uniquement avec un volume et des pressions que vous avez identifiés. Si le volume interne est inconnu, le site doit répondre « données insuffisantes » plutôt que d’en inventer un.
+
+Le [guide des boosters de talonnage tubeless](/guides/booster-talonnage-tubeless-reserve-air-compresseur/) distingue la réserve du dispositif, sa recharge et le gonflage final.
 
 ## Sources
 

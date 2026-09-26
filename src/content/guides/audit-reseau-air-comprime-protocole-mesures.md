@@ -19,6 +19,7 @@ sources:
   - https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf
   - https://www.iso.org/fr/standard/46580.html
   - https://www.cagi.org/assets/documents/pdfs/handbook/Chapter_4_handbook_Final2021.pdf
+updatedDate: 2026-09-26
 ---
 
 Un audit utile ne commence pas par une liste de compresseurs à remplacer. Il définit le périmètre du système, enregistre les conditions de production, mesure simultanément l’offre et la demande, puis établit une ligne de base contre laquelle chaque modification pourra être vérifiée.
@@ -140,6 +141,8 @@ Le [diagnostic d’intervention](/diagnostic-intervention/) part d’un contrôl
 Une action ne peut être comparée à la ligne de base que si le scénario, le périmètre et les instruments restent suffisamment proches. Si la production, le réseau ou la météo ont changé, le rapport le signale au lieu de présenter l’écart comme un effet certain.
 
 Trois issues sont possibles : l’écart est réduit dans les conditions comparables, l’écart demeure, ou la comparaison est impossible. La troisième issue doit rester `insufficient_data`. Elle appelle une nouvelle mesure, pas un verdict positif.
+
+Pour prolonger cette vérification, vous pouvez [comprendre la demande artificielle avant de réduire la pression du réseau](/guides/baisser-pression-reseau-demande-artificielle/).
 
 ## Sources
 

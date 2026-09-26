@@ -18,6 +18,7 @@ sources:
   - https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf
   - https://www.iso.org/fr/standard/46580.html
   - https://www.cagi.org/performance-verification
+updatedDate: 2026-09-26
 ---
 
 Un bon tableau de bord d’air comprimé ne réduit pas le réseau à une note. Il montre quelques grandeurs comparables dans le temps, leurs conditions de mesure, leur limite et l’action déclenchée lorsqu’une dérive est confirmée.
@@ -138,6 +139,8 @@ Le [suivi d’exploitation CompatAir](/suivi-exploitation/) conserve localement 
 Pour chaque ligne, conservez : nom, définition, unité, source, périmètre, scénario, fréquence, ligne de base, limite, dernière valeur, statut de qualité et action attendue. Affichez les données brutes à côté des ratios les plus importants.
 
 Le tableau de bord doit aussi permettre d’écrire « non mesuré » et « non comparable ». Masquer ces états derrière une moyenne ou une couleur verte produit une fausse certitude.
+
+Pour prolonger cette vérification, vous pouvez [comprendre la demande artificielle avant de réduire la pression du réseau](/guides/baisser-pression-reseau-demande-artificielle/).
 
 ## Sources
 

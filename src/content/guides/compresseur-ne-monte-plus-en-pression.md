@@ -13,6 +13,7 @@ sources:
   - https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nupse59f8t4htfeoh3u5gifg65/4010393_11027_001_SPK2.pdf
   - https://www.einhell.fr/p/4010393/
   - https://tools.cp.com/en/products/impactwrenches/cp7732c-sku8941077321
+updatedDate: 2026-09-26
 ---
 
 **Avant de conclure que la pompe est usée, identifiez où la pression manque et dans quelle situation.** Une cuve qui ne charge pas, une sortie régulée trop basse et une pression qui s’effondre uniquement lorsque l’outil travaille n’orientent pas le diagnostic de la même façon.
@@ -75,3 +76,9 @@ Demandez une conclusion liée à la preuve recueillie. Une fuite localisée appe
 Un chronométrage de remplissage peut être utile au suivi si les conditions sont reproductibles. Il ne constitue pas à lui seul un essai normalisé du FAD. Gardez l’état initial, les conditions et le résultat après intervention dans une [fiche d’intervention](/guides/fiche-intervention-air-comprime/), afin que la réparation puisse être évaluée sur le même symptôme.
 
 Sources consultées le 25 septembre 2026. Aucun diagnostic individuel ni essai physique n’est présenté comme réalisé par CompatAir.
+
+Pour prolonger cette vérification, vous pouvez [distinguer refroidissement de la cuve et fuite après l’arrêt](/guides/compresseur-perd-pression-arret-fuite-refroidissement/).
+
+Le [guide du pressostat et de son différentiel](/guides/pressostat-compresseur-pression-enclenchement-differentiel/) aide à lire les seuils d’enclenchement et d’arrêt sans improviser un réglage.
+
+Un souffle à la soupape relève du [guide de diagnostic de la soupape de sécurité](/guides/soupape-securite-compresseur-fuit-siffle/), avec les limites d’intervention de la notice.

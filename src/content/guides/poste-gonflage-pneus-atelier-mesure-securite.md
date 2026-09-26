@@ -10,6 +10,7 @@ readingTime: 13
 sources:
   - https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-961.pdf
   - https://www.einhell.fr/p/4137000-tire-pressure-gauge/
+updatedDate: 2026-09-26
 ---
 
 Le poste de gonflage réunit deux dossiers qui ne doivent pas se masquer : la prévention du risque pendant l’opération et la capacité à atteindre la pression prescrite dans le temps attendu. La pression maximale affichée sur un gonfleur ne suffit à valider ni l’un ni l’autre.
@@ -65,6 +66,8 @@ La pression cible vient de la documentation applicable au véhicule, à la roue 
 Le premier essai porte sur l’aménagement : position de l’opérateur, longueur utile, maintien de la commande, cage ou dispositif prévu, état du flexible et visibilité de l’indicateur.
 
 Le second porte sur la performance : pression initiale, pression finale, temps, nombre de roues, autres usages actifs et pression dynamique disponible. Séparer les deux feuilles évite qu’un temps satisfaisant fasse oublier un défaut de prévention, ou qu’un poste bien aménagé soit déclaré suffisamment alimenté sans mesure.
+
+Pour préparer l’alimentation de la machine de roues, consultez le [guide du démonte-pneu : pression publiée et consommation à documenter](/guides/compresseur-demonte-pneu-pression-consommation/).
 
 ## Sources
 
