@@ -3,18 +3,20 @@ import { z } from 'zod';
 const positive = z.number().finite().positive();
 const pressure = z.object({ min: positive, typical: positive, max: positive });
 const identity = z.object({
+	idSuffix: z.string().regex(/^[a-z0-9-]+$/).optional(),
 	brand: z.string().min(1), model: z.string().min(1), mpn: z.string().min(1),
 	sourceId: z.string().min(1), page: z.number().int().positive().optional(), rawLine: z.string().min(10),
 	flowBasis: z.string().min(10), limitations: z.array(z.string()),
 	specifications: z.array(z.object({ label: z.string().min(1), value: z.string().min(1) })).optional(),
 	fieldEvidence: z.partialRecord(z.enum(['oilType', 'workingPressureBar']), z.array(z.object({
-		sourceId: z.string().min(1), page: z.number().int().positive(), notes: z.string().min(10),
+		sourceId: z.string().min(1), page: z.number().int().positive().optional(), notes: z.string().min(10),
 	})).min(1)).optional(),
 });
 const compressorRow = identity.extend({
 	tankLiters: z.number().finite().nonnegative(), maxPressureBar: positive,
-	fadCurve: z.array(z.object({ pressureBar: positive, litersPerMinute: positive })).min(1),
+	fadCurve: z.array(z.object({ pressureBar: positive, litersPerMinute: positive })),
 	oilType: z.enum(['oil', 'oil-free']), oilSourcePage: z.number().int().positive().optional(),
+	dutyCycle: z.number().positive().max(1).optional(),
 	intakeFlowLpm: positive.optional(), powerKw: positive.optional(), weightKg: positive.optional(),
 	voltage: z.string().optional(), phase: z.enum(['single-phase', 'three-phase']).optional(),
 	ean: z.string().regex(/^\d{13}$/).optional(), dimensions: z.string().optional(),
@@ -25,7 +27,7 @@ const toolRow = identity.extend({
 	workingPressureBar: pressure, pressureBasis: z.string().min(10),
 	airflowLpm: positive.optional(), airPerActionLiters: positive.optional(),
 });
-const hosts = new Set(['finicompressors.com', 'web.fiac.it', 's3.eu-west-1.amazonaws.com', 'www.senco.eu', 'shop.scheppach.com', 'www.mecafer.com', 'v3.pdf.bostitch.eu', 'bostitch.fr', 'shop.fiac.it', 'shop.abacaircompressors.com', 'shinanoinc.com', 'www.clecotools.com']);
+const hosts = new Set(['finicompressors.com', 'web.fiac.it', 's3.eu-west-1.amazonaws.com', 'www.senco.eu', 'shop.scheppach.com', 'www.mecafer.com', 'v3.pdf.bostitch.eu', 'bostitch.fr', 'shop.fiac.it', 'shop.abacaircompressors.com', 'shinanoinc.com', 'www.clecotools.com', 'www.fiamgroup.com', 'www.deprag.com', 'www.rami-yokota.com', 'biax.de', 'airpress.fr', 'www.gentilinair.com', 'www.abacaircompressors.com', 'powertools.ingersollrand.com', 'ftp.salsify.com', 'www.rupes.com', 'www.nitto-kohki.eu']);
 const slug = (s) => s.normalize('NFD').replaceAll(/\p{Diacritic}/gu, '').toLowerCase().replaceAll(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const format = (n) => n.toLocaleString('fr-FR', { maximumFractionDigits: 3 });
 function sourceFor(snapshot, sourceId) {
@@ -42,7 +44,7 @@ function sourceFor(snapshot, sourceId) {
 }
 function context(snapshot, row) {
 	const source = sourceFor(snapshot, row.sourceId);
-	const id = slug(`${row.brand}-${row.model}`);
+	const id = slug(`${row.brand}-${row.model}${row.idSuffix ? `-${row.idSuffix}` : ''}`);
 	const evidenceId = slug(`${row.brand}-${row.mpn}-20260926`);
 	const sourceUrl = `${source.url}${row.page ? `#page=${row.page}` : ''}`;
 	const evidence = [{ id: evidenceId, sourceUrl, sourceLabel: `${source.label}${row.page ? `, p. ${row.page}` : ''}, réf. ${row.mpn}`, sourceType: 'manufacturer', retrievedAt: snapshot.observedAt, confidence: 'A', notes: row.flowBasis }];
@@ -59,7 +61,7 @@ function attachReviewedDetails(snapshot, row, product) {
 		const ids = references.map((reference, index) => {
 			const source = sourceFor(snapshot, reference.sourceId);
 			const id = `${mainEvidence}-${slug(field)}-${index + 1}`;
-			product.evidence.push({ id, sourceUrl: `${source.url}#page=${reference.page}`, sourceLabel: `${source.label}, p. ${reference.page}`, sourceType: 'manufacturer', retrievedAt: snapshot.observedAt, confidence: 'A', notes: reference.notes });
+			product.evidence.push({ id, sourceUrl: `${source.url}${reference.page ? `#page=${reference.page}` : ''}`, sourceLabel: `${source.label}${reference.page ? `, p. ${reference.page}` : ''}`, sourceType: 'manufacturer', retrievedAt: snapshot.observedAt, confidence: 'A', notes: reference.notes });
 			return id;
 		});
 		product.fieldSources[field] = ids;
@@ -90,16 +92,16 @@ export function createMultiBrandCompressor(snapshot, input) {
 		tankLiters: r.tankLiters, maxPressureBar: r.maxPressureBar, fadCurve: curve, oilType: r.oilType,
 		confidence: 'A', status: 'unknown', image: imageFor(r, id, sourceUrl),
 		editorial: {
-			overview: `${r.brand} ${r.model}, référence ${r.mpn} : ${r.tankLiters ? `cuve de ${format(r.tankLiters)} L` : 'configuration sans cuve intégrée'}, pression maximale publiée de ${format(r.maxPressureBar)} bar. Le point documenté le plus élevé en pression fournit ${format(last.litersPerMinute)} L/min à ${format(last.pressureBar)} bar. ${r.equipment}`.trim(),
-			verifiedFacts: [`Débit restitué publié : ${points.join(' ; ')}.`, `${r.technology}. ${r.powerKw ? `Puissance moteur publiée : ${format(r.powerKw)} kW.` : ''}`.trim(), ...(r.intakeFlowLpm ? [`Débit aspiré : ${format(r.intakeFlowLpm)} L/min, distinct du débit restitué.`] : []), ...(r.weightKg ? [`Masse nette publiée : ${format(r.weightKg)} kg.`] : []), ...(r.voltage ? [`Alimentation publiée : ${r.voltage}${r.phase === 'three-phase' ? ', triphasée' : r.phase === 'single-phase' ? ', monophasée' : ''}.`] : [])],
-			limitations: [curve.length === 1 ? 'Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.' : 'Les points proviennent de la fiche fabricant, pas d’un essai physique réalisé par CompatAir.', 'Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.', ...r.limitations],
+			overview: `${r.brand} ${r.model}, référence ${r.mpn} : ${r.tankLiters ? `cuve de ${format(r.tankLiters)} L` : 'configuration sans cuve intégrée'}, pression maximale publiée de ${format(r.maxPressureBar)} bar. ${last ? `Le point documenté le plus élevé en pression fournit ${format(last.litersPerMinute)} L/min à ${format(last.pressureBar)} bar.` : 'Aucun débit restitué relié à une pression de mesure n’est documenté ; la compatibilité pneumatique reste indéterminée.'} ${r.equipment}`.trim(),
+			verifiedFacts: [last ? `Débit restitué publié : ${points.join(' ; ')}.` : 'Débit restitué à une pression de mesure précise : non documenté.', `${r.technology}. ${r.powerKw ? `Puissance moteur publiée : ${format(r.powerKw)} kW.` : ''}`.trim(), ...(r.intakeFlowLpm ? [`Débit aspiré : ${format(r.intakeFlowLpm)} L/min, distinct du débit restitué.`] : []), ...(r.weightKg ? [`Masse nette publiée : ${format(r.weightKg)} kg.`] : []), ...(r.voltage ? [`Alimentation publiée : ${r.voltage}${r.phase === 'three-phase' ? ', triphasée' : r.phase === 'single-phase' ? ', monophasée' : ''}.`] : [])],
+			limitations: [!curve.length ? 'Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.' : curve.length === 1 ? 'Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.' : 'Les points proviennent de la fiche fabricant, pas d’un essai physique réalisé par CompatAir.', r.dutyCycle === undefined ? 'Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.' : 'Le taux de marche est celui déclaré par le fabricant ; les conditions de cycle et de température restent à respecter. La disponibilité commerciale reste à confirmer.', ...r.limitations],
 		},
 		specifications: [spec('Conditions du débit', r.flowBasis), ...(r.equipment ? [spec('Équipement', r.equipment)] : []), ...(r.dimensions ? [spec('Dimensions publiées', r.dimensions)] : [])], evidence,
 		fieldSources: Object.fromEntries(['mpn', 'tankLiters', 'maxPressureBar', 'fadCurve'].map(f => [f, [evidenceId]])),
 		notes: ['Caractéristiques déclarées par le fabricant. Les comparaisons dépendent des conditions de débit et de pression documentées.'],
 	};
 	p.fieldSources.oilType = [oilEvidenceId];
-	for (const field of ['intakeFlowLpm', 'powerKw', 'weightKg', 'voltage', 'phase', 'ean']) if (r[field] !== undefined) { p[field] = r[field]; p.fieldSources[field] = [evidenceId]; }
+	for (const field of ['intakeFlowLpm', 'powerKw', 'weightKg', 'voltage', 'phase', 'ean', 'dutyCycle']) if (r[field] !== undefined) { p[field] = r[field]; p.fieldSources[field] = [evidenceId]; }
 	return attachReviewedDetails(snapshot, r, p);
 }
 export function createMultiBrandTool(snapshot, input) {

@@ -9,7 +9,7 @@ metiers: ["maintenance-industrielle"]
 readingTime: 5
 featured: false
 reviewStatus: "internal"
-relatedGuides: ["compresseur-pour-perceuse-pneumatique", "burineur-pneumatique-chantier-debit-vibrations", "pression-travail-6-3-bar-outils-pneumatiques"]
+relatedGuides: ["compresseur-pour-perceuse-pneumatique", "burineur-pneumatique-chantier-debit-vibrations", "pression-travail-6-3-bar-outils-pneumatiques", "biax-gmd3-graveur-cadence-air"]
 relatedCalculatorTool: "chicago-pneumatic-cp9361"
 sources:
   - https://tools.cp.com/en/products/percussivetools/cp9361-skuT012644

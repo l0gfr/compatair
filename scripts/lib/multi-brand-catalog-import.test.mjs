@@ -11,8 +11,8 @@ describe('reviewed multi-brand expansion', () => {
 	it('reconstructs every new product from the versioned manufacturer facts', () => {
 		expect(snapshot.rows).toHaveLength(280);
 		expect(snapshot.toolRows).toHaveLength(26);
-		expect(compressors).toHaveLength(719);
-		expect(tools).toHaveLength(2287);
+		expect(compressors).toHaveLength(1219);
+		expect(tools).toHaveLength(3787);
 		for (const row of snapshot.rows) {
 			const p = compressorSchema.parse(createMultiBrandCompressor(snapshot, row));
 			expect(compressors.find(c => c.id === p.id), row.mpn).toEqual(p);
@@ -49,9 +49,15 @@ describe('reviewed multi-brand expansion', () => {
 		expect(lacme.workingPressureBar).toEqual({ min: 6, typical: 7, max: 7 });
 		expect(lacme.editorial.verifiedFacts.join(' ')).toContain('borne haute documentée');
 	});
+	it('keeps unknown FAD explicit and produces an insufficient-data verdict', () => {
+		const product = createMultiBrandCompressor(snapshot, { ...snapshot.rows[0], fadCurve: [] });
+		expect(product.fadCurve).toEqual([]);
+		expect(product.editorial.overview).toContain('indéterminée');
+		expect(evaluateCompatibility(product, tools[0]).verdict).toBe('insufficient_data');
+	});
 	it('rejects absent evidence, invalid units and physically inconsistent curves', () => {
 		const row = snapshot.rows[0];
-		for (const patch of [{ maxPressureBar: 0 }, { tankLiters: -1 }, { powerKw: '2.2 kW' }, { fadCurve: [] }, { fadCurve: [{ pressureBar: 99, litersPerMinute: 10 }] }, { fadCurve: [{ pressureBar: 2, litersPerMinute: 10 }, { pressureBar: 3, litersPerMinute: 20 }] }, { intakeFlowLpm: 1 }]) expect(() => createMultiBrandCompressor(snapshot, { ...row, ...patch })).toThrow();
+		for (const patch of [{ maxPressureBar: 0 }, { tankLiters: -1 }, { powerKw: '2.2 kW' }, { fadCurve: [{ pressureBar: 99, litersPerMinute: 10 }] }, { fadCurve: [{ pressureBar: 2, litersPerMinute: 10 }, { pressureBar: 3, litersPerMinute: 20 }] }, { intakeFlowLpm: 1 }]) expect(() => createMultiBrandCompressor(snapshot, { ...row, ...patch })).toThrow();
 		expect(() => createMultiBrandCompressor({ ...snapshot, sources: [] }, row)).toThrow();
 		for (const url of ['http://finicompressors.com/x', 'https://evil.example/x', 'https://s3.eu-west-1.amazonaws.com/other-bucket/x', 'https://finicompressors.com/x?token=test']) {
 			expect(() => createMultiBrandCompressor({ ...snapshot, sources: snapshot.sources.map(s => s.id === row.sourceId ? { ...s, url } : s) }, row)).toThrow();

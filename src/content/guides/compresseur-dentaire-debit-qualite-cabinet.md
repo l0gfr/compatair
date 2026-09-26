@@ -8,7 +8,7 @@ audiences: ["professionnel"]
 metiers: []
 readingTime: 4
 reviewStatus: "internal"
-relatedGuides: ["compresseur-sans-huile-ou-lubrifie", "qualite-air-comprime-iso-8573-1", "secheur-membrane-air-comprime-debit-balayage"]
+relatedGuides: ["compresseur-sans-huile-ou-lubrifie", "qualite-air-comprime-iso-8573-1", "secheur-membrane-air-comprime-debit-balayage", "gentilin-clinic-690-deux-references", "gentilin-clinic-dry-debit-net"]
 sources: ["https://www.iso.org/fr/standard/72421.html", "https://www.duerrdental.com/en/products/compressed-air/devices/tornado-compressors/"]
 ---
 

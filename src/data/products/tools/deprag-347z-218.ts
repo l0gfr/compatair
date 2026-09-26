@@ -1,0 +1,128 @@
+const product = {
+	"id": "deprag-347z-218",
+	"slug": "deprag-347z-218",
+	"brand": "DEPRAG",
+	"model": "347Z-218",
+	"mpn": "397063A",
+	"categoryId": "visseuse",
+	"category": "visseuse",
+	"label": "DEPRAG 347Z-218",
+	"demandModel": "fixed-flow",
+	"workingPressureBar": {
+		"min": 6.3,
+		"typical": 6.3,
+		"max": 6.3
+	},
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/deprag-347z-218.webp",
+		"alt": "Repères techniques DEPRAG 347Z-218, référence 397063A",
+		"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3430/D3430en.pdf#page=3",
+		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+	},
+	"editorial": {
+		"overview": "DEPRAG 347Z-218, référence 397063A. Le tableau fabricant publie 230 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple minimal : 0.3 Nm. Couple maximal, assemblage souple : 1 Nm.",
+		"verifiedFacts": [
+			"La note du tableau indique une pression de fonctionnement de 6,3 bar.",
+			"Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine.",
+			"Référence fabricant : 397063A.",
+			"Couple minimal : 0.3 Nm.",
+			"Couple maximal, assemblage souple : 1 Nm.",
+			"Couple maximal, assemblage dur : 1 Nm."
+		],
+		"limitations": [
+			"Le couple et la vitesse correspondent à la colonne de cette référence commande, pas à l’ensemble de la famille.",
+			"Les broches intégrées nécessitent aussi le dimensionnement des auxiliaires de l’installation, qui ne sont pas inclus dans la consommation du moteur de vissage."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Condition de pression",
+			"value": "La note du tableau indique une pression de fonctionnement de 6,3 bar.",
+			"evidenceIds": [
+				"deprag-397063a-20260926"
+			]
+		},
+		{
+			"label": "Condition de consommation",
+			"value": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine.",
+			"evidenceIds": [
+				"deprag-397063a-20260926"
+			]
+		},
+		{
+			"label": "Couple minimal",
+			"value": "0.3 Nm",
+			"evidenceIds": [
+				"deprag-397063a-20260926"
+			]
+		},
+		{
+			"label": "Couple maximal, assemblage souple",
+			"value": "1 Nm",
+			"evidenceIds": [
+				"deprag-397063a-20260926"
+			]
+		},
+		{
+			"label": "Couple maximal, assemblage dur",
+			"value": "1 Nm",
+			"evidenceIds": [
+				"deprag-397063a-20260926"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "1900 tr/min",
+			"evidenceIds": [
+				"deprag-397063a-20260926"
+			]
+		},
+		{
+			"label": "Démarrage / exécution du catalogue",
+			"value": "In combination with feeder",
+			"evidenceIds": [
+				"deprag-397063a-20260926"
+			]
+		},
+		{
+			"label": "Type de corps / rotation",
+			"value": "Driver",
+			"evidenceIds": [
+				"deprag-397063a-20260926"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "deprag-397063a-20260926",
+			"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3430/D3430en.pdf#page=3",
+			"sourceLabel": "DEPRAG, brochure technique D3430en, p. 3, réf. 397063A",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"deprag-397063a-20260926"
+		],
+		"workingPressureBar": [
+			"deprag-397063a-20260926"
+		],
+		"airflowLpm": [
+			"deprag-397063a-20260926"
+		]
+	},
+	"notes": [
+		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+	],
+	"airflowLpm": {
+		"min": 230,
+		"typical": 230,
+		"max": 230
+	}
+};
+
+export default product;

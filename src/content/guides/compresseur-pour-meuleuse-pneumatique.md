@@ -14,7 +14,7 @@ sources:
   - https://www.einhell.fr/p/4138540-tc-pp-220/
   - https://www.einhell.fr/p/4010800-te-ac-430-90-10/
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
-relatedGuides: ["meuleuse-pneumatique-pince-6-mm-ou-1-4", "meuleuse-pneumatique-vitesse-regulee-governor", "meuleuse-broche-m14-5-8-filetage"]
+relatedGuides: ["meuleuse-pneumatique-pince-6-mm-ou-1-4", "meuleuse-pneumatique-vitesse-regulee-governor", "meuleuse-broche-m14-5-8-filetage", "ingersoll-rand-m2-consommation-charge-vide", "nitto-myg40l-540-690-litres-minute"]
 ---
 
 Une meuleuse pneumatique impose de comparer deux valeurs à la même pression. L’[Einhell TC-PA 50](https://www.einhell.fr/p/4138550-tc-pa-50/) consomme 113 L/min à 6,3 bar. La [TC-PP 220](https://www.einhell.fr/p/4138540-tc-pp-220/) demande 128 L/min à 6,3 bar.

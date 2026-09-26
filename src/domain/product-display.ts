@@ -10,6 +10,8 @@ export function compressorInstallationForm(compressor: Compressor): 'cuve horizo
 
 export function compressorDisplayName(compressor: Compressor) {
 	const base = `${compressor.brand} ${compressor.model}`;
+	const reference = compressor.variant?.distinguishingAttributes.reference;
+	if (reference) return `${base} (réf. ${reference})`;
 	const installationForm = compressorInstallationForm(compressor);
 	return installationForm ? `${base} à ${installationForm}` : base;
 }

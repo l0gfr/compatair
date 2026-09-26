@@ -1,0 +1,128 @@
+const product = {
+	"id": "deprag-346-730-31ulv",
+	"slug": "deprag-346-730-31ulv",
+	"brand": "DEPRAG",
+	"model": "346-730-31ULV",
+	"mpn": "407285C",
+	"categoryId": "visseuse",
+	"category": "visseuse",
+	"label": "DEPRAG 346-730-31ULV",
+	"demandModel": "fixed-flow",
+	"workingPressureBar": {
+		"min": 6.3,
+		"typical": 6.3,
+		"max": 6.3
+	},
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/deprag-346-730-31ulv.webp",
+		"alt": "Repères techniques DEPRAG 346-730-31ULV, référence 407285C",
+		"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3130/D3130en.pdf#page=16",
+		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+	},
+	"editorial": {
+		"overview": "DEPRAG 346-730-31ULV, référence 407285C. Le tableau fabricant publie 450 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple minimal : 2.6 Nm. Couple maximal, assemblage souple : 8 Nm.",
+		"verifiedFacts": [
+			"La note du tableau indique une pression de fonctionnement de 6,3 bar.",
+			"Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine.",
+			"Référence fabricant : 407285C.",
+			"Couple minimal : 2.6 Nm.",
+			"Couple maximal, assemblage souple : 8 Nm.",
+			"Couple maximal, assemblage dur : 8 Nm."
+		],
+		"limitations": [
+			"Le couple et la vitesse correspondent à la colonne de cette référence commande, pas à l’ensemble de la famille.",
+			"Les broches intégrées nécessitent aussi le dimensionnement des auxiliaires de l’installation, qui ne sont pas inclus dans la consommation du moteur de vissage."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Condition de pression",
+			"value": "La note du tableau indique une pression de fonctionnement de 6,3 bar.",
+			"evidenceIds": [
+				"deprag-407285c-20260926"
+			]
+		},
+		{
+			"label": "Condition de consommation",
+			"value": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine.",
+			"evidenceIds": [
+				"deprag-407285c-20260926"
+			]
+		},
+		{
+			"label": "Couple minimal",
+			"value": "2.6 Nm",
+			"evidenceIds": [
+				"deprag-407285c-20260926"
+			]
+		},
+		{
+			"label": "Couple maximal, assemblage souple",
+			"value": "8 Nm",
+			"evidenceIds": [
+				"deprag-407285c-20260926"
+			]
+		},
+		{
+			"label": "Couple maximal, assemblage dur",
+			"value": "8 Nm",
+			"evidenceIds": [
+				"deprag-407285c-20260926"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "900 tr/min",
+			"evidenceIds": [
+				"deprag-407285c-20260926"
+			]
+		},
+		{
+			"label": "Démarrage / exécution du catalogue",
+			"value": "Remote Start in drive direction and in reverse",
+			"evidenceIds": [
+				"deprag-407285c-20260926"
+			]
+		},
+		{
+			"label": "Type de corps / rotation",
+			"value": "reversible, right shut-off",
+			"evidenceIds": [
+				"deprag-407285c-20260926"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "deprag-407285c-20260926",
+			"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3130/D3130en.pdf#page=16",
+			"sourceLabel": "DEPRAG, brochure technique D3130en, p. 16, réf. 407285C",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"deprag-407285c-20260926"
+		],
+		"workingPressureBar": [
+			"deprag-407285c-20260926"
+		],
+		"airflowLpm": [
+			"deprag-407285c-20260926"
+		]
+	},
+	"notes": [
+		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+	],
+	"airflowLpm": {
+		"min": 450,
+		"typical": 450,
+		"max": 450
+	}
+};
+
+export default product;

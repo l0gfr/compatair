@@ -7,7 +7,7 @@ category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 3
-relatedGuides: ["micro-meuleuse-50000-60000-tr-min", "meuleuse-pneumatique-pince-6-mm-ou-1-4"]
+relatedGuides: ["micro-meuleuse-50000-60000-tr-min", "meuleuse-pneumatique-pince-6-mm-ou-1-4", "biax-be805-ebavurage-lent-consommation"]
 sources: ["https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf", "https://assets.pferd.com/pfd/products/pdfs/safety_pdf_catalog_3.pdf"]
 ---
 

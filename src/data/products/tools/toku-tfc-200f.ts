@@ -1,0 +1,126 @@
+const product = {
+	"id": "toku-tfc-200f",
+	"slug": "toku-tfc-200f",
+	"brand": "Toku",
+	"model": "TFC-200F",
+	"mpn": "TFC-200F",
+	"categoryId": "burineur",
+	"category": "burineur",
+	"label": "Toku TFC-200F",
+	"demandModel": "fixed-flow",
+	"workingPressureBar": {
+		"min": 6.3,
+		"typical": 6.3,
+		"max": 6.3
+	},
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/toku-tfc-200f.webp",
+		"alt": "Repères techniques Toku TFC-200F, référence TFC-200F",
+		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=49",
+		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+	},
+	"editorial": {
+		"overview": "Toku TFC-200F, référence TFC-200F. Le tableau fabricant publie 246 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 1,1 kg. Diamètre intérieur de flexible conseillé : 6,5 mm.",
+		"verifiedFacts": [
+			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"Consommation publiée : 4.1 L/s, convertis en 246 L/min par multiplication par 60.",
+			"Référence fabricant : TFC-200F.",
+			"Masse publiée : 1,1 kg.",
+			"Diamètre intérieur de flexible conseillé : 6,5 mm.",
+			"Raccord pneumatique : PT 1/4\"."
+		],
+		"limitations": [
+			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
+			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Condition de pression",
+			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"evidenceIds": [
+				"toku-tfc-200f-20260926-workingpressurebar-1"
+			]
+		},
+		{
+			"label": "Condition de consommation",
+			"value": "Consommation publiée : 4.1 L/s, convertis en 246 L/min par multiplication par 60.",
+			"evidenceIds": [
+				"toku-tfc-200f-20260926"
+			]
+		},
+		{
+			"label": "Masse publiée",
+			"value": "1,1 kg",
+			"evidenceIds": [
+				"toku-tfc-200f-20260926"
+			]
+		},
+		{
+			"label": "Diamètre intérieur de flexible conseillé",
+			"value": "6,5 mm",
+			"evidenceIds": [
+				"toku-tfc-200f-20260926"
+			]
+		},
+		{
+			"label": "Raccord pneumatique",
+			"value": "PT 1/4\"",
+			"evidenceIds": [
+				"toku-tfc-200f-20260926"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "toku-tfc-200f-20260926",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=49",
+			"sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 49, réf. TFC-200F",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation publiée : 4.1 L/s, convertis en 246 L/min par multiplication par 60."
+		},
+		{
+			"id": "toku-tfc-200f-20260926-workingpressurebar-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+			"sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"toku-tfc-200f-20260926"
+		],
+		"workingPressureBar": [
+			"toku-tfc-200f-20260926-workingpressurebar-1"
+		],
+		"airflowLpm": [
+			"toku-tfc-200f-20260926"
+		],
+		"recommendedHose": [
+			"toku-tfc-200f-20260926"
+		],
+		"connectorSize": [
+			"toku-tfc-200f-20260926"
+		]
+	},
+	"notes": [
+		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+	],
+	"airflowLpm": {
+		"min": 246,
+		"typical": 246,
+		"max": 246
+	},
+	"recommendedHose": {
+		"innerDiameterMm": 6.5
+	},
+	"connectorSize": "PT 1/4\""
+};
+
+export default product;

@@ -11,7 +11,7 @@ const batch = buildIndustrialExpansion(inputs);
 describe('reviewed expansion of 200 compressors and 500 tools', () => {
  it('reconstructs all 700 unique manufacturer references and their published evidence', () => {
   expect(batch.compressors).toHaveLength(200); expect(batch.tools).toHaveLength(500);
-  expect(compressors).toHaveLength(719); expect(tools).toHaveLength(2287);
+  expect(compressors).toHaveLength(1219); expect(tools).toHaveLength(3787);
   const identified = [...compressors, ...tools].filter(p => p.mpn).map(p => `${p.brand.toLowerCase()}|${p.mpn.toLowerCase()}`);
   expect(new Set(identified).size).toBe(identified.length);
   for (const p of batch.compressors) expect(compressors.find(c => c.id === p.id), p.mpn).toEqual(compressorSchema.parse(p));

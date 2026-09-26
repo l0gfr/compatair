@@ -9,7 +9,7 @@ metiers: ["maintenance-industrielle", "garage-automobile"]
 readingTime: 6
 featured: false
 reviewStatus: "internal"
-relatedGuides: ["compresseur-pour-cle-a-chocs-pneumatique", "consommation-moyenne-en-charge-cle-a-chocs", "visseuse-pneumatique-coupure-automatique"]
+relatedGuides: ["compresseur-pour-cle-a-chocs-pneumatique", "consommation-moyenne-en-charge-cle-a-chocs", "visseuse-pneumatique-coupure-automatique", "yokota-yltx50a-pression-5-6-bar"]
 relatedCalculatorTool: "atlas-copco-8431038165"
 sources:
   - https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf

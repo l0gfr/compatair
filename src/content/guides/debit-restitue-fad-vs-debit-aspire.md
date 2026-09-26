@@ -14,7 +14,7 @@ sources:
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
   - https://fr.metabo.com/fr/machines/air-comprime/compresseurs/compresseurs-d-atelier-mobiles/mega-350-100-w-601538000-compresseur.html
-relatedGuides: ["convertir-cfm-l-min-nl-min-air-comprime", "contradiction-debit-cfm-m3-min-catalogues"]
+relatedGuides: ["convertir-cfm-l-min-nl-min-air-comprime", "contradiction-debit-cfm-m3-min-catalogues", "abac-cross-500-900-fad-maximal", "gentilin-ac200-debit-5-8-bar"]
 ---
 
 Deux compresseurs peuvent afficher 240 ou 320 litres par minute en gros caractères et livrer des performances très différentes à l’outil. La raison tient au point de mesure. Le débit aspiré est mesuré à l’entrée du groupe de compression. Le débit restitué, désigné **FAD** pour *Free Air Delivery* dans le manuel Atlas Copco cité en source, représente l’air effectivement fourni après les pertes propres à la compression.

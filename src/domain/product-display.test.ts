@@ -12,6 +12,13 @@ describe('compressorDisplayName', () => {
 		expect(compressorDisplayName(horizontal)).not.toBe(compressorDisplayName(vertical));
 	});
 
+	it('includes the reference when manufacturer names collide', () => {
+		const variants = compressors.filter((item) => item.brand === 'Airpress' && item.model === 'APS 10 Basic');
+		expect(variants.length).toBeGreaterThan(1);
+		expect(new Set(variants.map(compressorDisplayName)).size).toBe(variants.length);
+		for (const item of variants) expect(compressorDisplayName(item)).toContain(item.mpn);
+	});
+
 	it('garantit un libellé distinct quand marque et modèle sont identiques sans MPN distinct', () => {
 		const groups = Object.values(Object.groupBy(compressors, (item) => `${item.brand}\u0000${item.model}`));
 		for (const group of groups) {

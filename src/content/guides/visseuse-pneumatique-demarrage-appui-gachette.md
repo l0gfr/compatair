@@ -7,7 +7,7 @@ category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 3
-relatedGuides: ["visseuse-pneumatique-coupure-automatique", "compresseur-pour-visseuse-pneumatique"]
+relatedGuides: ["visseuse-pneumatique-coupure-automatique", "compresseur-pour-visseuse-pneumatique", "fiam-15c5ap250-15c5a-comparatif", "visseuse-quart-pouce-embout-raccord-air"]
 sources: ["https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf"]
 ---
 

@@ -7,7 +7,7 @@ category: "Comprendre"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture", "menuiserie-agencement"]
 readingTime: 3
-relatedGuides: ["ponceuse-orbitale-2-5-5-8-mm-choisir", "ponceuse-aspiration-autonome-centralisee"]
+relatedGuides: ["ponceuse-orbitale-2-5-5-8-mm-choisir", "ponceuse-aspiration-autonome-centralisee", "rupes-ak150a-ak200a-ponceuse-rotation"]
 sources: ["https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"]
 ---
 

@@ -77,8 +77,8 @@ export const runtimeCatalogSchema = z.object({
 	schemaVersion: z.literal(RUNTIME_CATALOG_SCHEMA_VERSION),
 	catalogVersion: z.string().regex(/^[a-f0-9]{64}$/),
 	catalogVerifiedAt: z.iso.date(),
-	compressors: z.array(runtimeCompressorSchema).max(1_000),
-	tools: z.array(runtimeToolSchema).max(3_000),
+	compressors: z.array(runtimeCompressorSchema).max(1_500),
+	tools: z.array(runtimeToolSchema).max(4_000),
 });
 
 export type RuntimeCatalog = z.infer<typeof runtimeCatalogSchema>;

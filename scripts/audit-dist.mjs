@@ -33,8 +33,8 @@ const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
 const maximumCalculatorOnDemandScriptBytesGzip = 58 * 1024;
 // 3 006 références : 139 Ko de données d'exécution et 92 Ko de recherche mesurés.
 // Ces plafonds concernent les données ; les budgets JavaScript restent distincts.
-const maximumRuntimeCatalogBytesGzip = 150 * 1024;
-const maximumSearchIndexBytesGzip = 100 * 1024;
+const maximumRuntimeCatalogBytesGzip = 230 * 1024;
+const maximumSearchIndexBytesGzip = 140 * 1024;
 const maximumIndexableInternalDestinationsBeforeWarning = 100;
 const maximumIndexableInternalDestinations = 120;
 const maximumStaticCompatibilityResultsBySection = new Map([
@@ -42,10 +42,10 @@ const maximumStaticCompatibilityResultsBySection = new Map([
 	['outils-pneumatiques', 5],
 	['quel-compresseur-pour', 6],
 ]);
-const maximumHtmlArtifactBytes = 180 * 1024 * 1024;
-// 1 635 006 verdicts : 1 088 Mio bruts, 168 Mio HTML et 97 Mio en archive xz.
-// Le workflow borne séparément l’archive envoyée à GitHub à 112 Mio.
-const maximumTotalArtifactBytes = 1152 * 1024 * 1024;
+const maximumHtmlArtifactBytes = 300 * 1024 * 1024;
+// 4 600 506 verdicts : 2 486 Mio bruts, 269 Mio HTML et 168 Mio en archive xz.
+// Le workflow borne séparément l’archive envoyée à GitHub à 176 Mio.
+const maximumTotalArtifactBytes = 2700 * 1024 * 1024;
 const maximumJourneyVideoBytes = 16 * 1024 * 1024;
 // Les pages produits réutilisent des cartes de catalogue afin que le temps de build ne croisse pas avec chaque référence.
 const maximumSocialImageCount = 80;
@@ -739,7 +739,8 @@ for (const brand of compressorBrands) {
 		if (!html.includes(`data-fad-brand-directory="${brandSlug(brand)}"`)) errors.push(`architecture FAD: marqueur de tableau absent ${path}`);
 	}
 	if (!fadDirectoryHtml.includes(`href="${path}"`)) errors.push(`architecture FAD: marque non reliée depuis le hub ${path}`);
-	const documented = renderedCatalog.compressors.filter((item) => item.brand === brand && item.fadCurve.length > 0);
+	const brandItems = renderedCatalog.compressors.filter((item) => item.brand === brand);
+	const documented = [...brandItems.filter((item) => item.fadCurve.length > 0), ...brandItems.filter((item) => item.fadCurve.length === 0)];
 	const pageCount = Math.max(1, Math.ceil(documented.length / FAD_COMPARISON_PAGE_SIZE));
 	for (let page = 1; page <= pageCount; page += 1) {
 		const pagePath = page === 1 ? path : `${path}page/${page}/`;

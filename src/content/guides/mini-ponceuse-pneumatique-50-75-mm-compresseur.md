@@ -9,7 +9,7 @@ metiers: ["carrosserie-peinture"]
 readingTime: 7
 featured: false
 reviewStatus: "internal"
-relatedGuides: ["compresseur-pour-ponceuse-pneumatique", "ponceuse-orbitale-2-5-5-8-mm-choisir", "compresseur-ponceuse-bande-lime-polisseuse-pneumatique"]
+relatedGuides: ["compresseur-pour-ponceuse-pneumatique", "ponceuse-orbitale-2-5-5-8-mm-choisir", "compresseur-ponceuse-bande-lime-polisseuse-pneumatique", "rupes-ra75-ta50-petite-ponceuse-air"]
 relatedCalculatorTool: "chicago-pneumatic-cp7201"
 sources:
   - https://tools.cp.com/en/products/sanders/cp7200-sku8941072001

@@ -8,7 +8,7 @@ audiences: ["particulier", "professionnel"]
 metiers: ["carrosserie-peinture", "menuiserie-agencement"]
 readingTime: 4
 reviewStatus: "internal"
-relatedGuides: ["compresseur-pour-ponceuse-pneumatique", "ponceuse-orbitale-2-5-5-8-mm-choisir", "ponceuse-pneumatique-bois-aspiration-poussieres"]
+relatedGuides: ["compresseur-pour-ponceuse-pneumatique", "ponceuse-orbitale-2-5-5-8-mm-choisir", "ponceuse-pneumatique-bois-aspiration-poussieres", "rupes-nitto-ponceuse-debit-max-vide"]
 sources: ["https://www.mirka.com/en-US/p/8995650111/", "https://www.mirka.com/en/p/Mirka-DEROS-650CV-EU-150---5"]
 ---
 

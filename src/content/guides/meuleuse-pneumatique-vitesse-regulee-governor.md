@@ -7,7 +7,7 @@ category: "Comprendre"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 3
-relatedGuides: ["meuleuse-verticale-fonderie-3kw-debit", "meuleuse-pneumatique-pince-6-mm-ou-1-4"]
+relatedGuides: ["meuleuse-verticale-fonderie-3kw-debit", "meuleuse-pneumatique-pince-6-mm-ou-1-4", "nitto-myg50-myg70-debit-meuleuse"]
 sources: ["https://tools.cp.com/content/dam/pim/itba/cp/literature/catalogs/General-Industry_catalog_CP_EN.pdf"]
 ---
 

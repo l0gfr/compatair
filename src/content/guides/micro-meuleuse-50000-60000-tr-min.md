@@ -7,7 +7,7 @@ category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 3
-relatedGuides: ["meuleuse-droite-basse-vitesse-5500", "meuleuse-pneumatique-pince-6-mm-ou-1-4"]
+relatedGuides: ["meuleuse-droite-basse-vitesse-5500", "meuleuse-pneumatique-pince-6-mm-ou-1-4", "biax-srd355-t365-micro-meuleuse"]
 sources: ["https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf", "https://tools.cp.com/content/dam/pim/itba/cp/literature/catalogs/General-Industry_catalog_CP_EN.pdf", "https://assets.pferd.com/pfd/products/pdfs/safety_pdf_catalog_3.pdf"]
 ---
 

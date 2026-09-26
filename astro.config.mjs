@@ -1,6 +1,9 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { fileURLToPath } from 'node:url';
+import { streamedVerdictBuild } from './scripts/lib/streamed-verdict-build.mjs';
+const verdictStage = fileURLToPath(new URL('./.astro/verdicts.build.json', import.meta.url));
 import { createSitemapSerializer } from './scripts/lib/sitemap-lastmod.mjs';
 import { isIndexablePath } from './scripts/lib/indexation-build.mjs';
 
@@ -8,7 +11,7 @@ import { isIndexablePath } from './scripts/lib/indexation-build.mjs';
 export default defineConfig({
 	site: 'https://compatair.fr',
 	output: 'static',
-	integrations: [sitemap({
+	integrations: [streamedVerdictBuild(verdictStage), sitemap({
 		entryLimit: 5_000,
 		serialize: createSitemapSerializer(),
 		filter: (page) => isIndexablePath(new URL(page).pathname),
@@ -23,6 +26,7 @@ export default defineConfig({
 		assets: '_assets',
 	},
 	vite: {
+		define: { __COMPATAIR_VERDICT_STAGE__: JSON.stringify(verdictStage) },
 		build: {
 			// Inline small stylesheets to avoid a blocking request; keep scripts and images external.
 			assetsInlineLimit: (filePath, content) => filePath.endsWith('.css') && content.length < 4096,

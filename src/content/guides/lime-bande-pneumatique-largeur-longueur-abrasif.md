@@ -7,7 +7,7 @@ category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "carrosserie-peinture"]
 readingTime: 4
-relatedGuides: ["compresseur-ponceuse-bande-lime-polisseuse-pneumatique", "meuleuse-pneumatique-pince-6-mm-ou-1-4"]
+relatedGuides: ["compresseur-ponceuse-bande-lime-polisseuse-pneumatique", "meuleuse-pneumatique-pince-6-mm-ou-1-4", "ingersoll-rand-g1-bande-12000-20000", "nitto-baby-belton-10-20-bandes"]
 sources: ["https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"]
 ---
 

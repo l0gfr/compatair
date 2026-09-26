@@ -7,7 +7,7 @@ category: "Comprendre"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 3
-relatedGuides: ["fiac-airblok-bd-dr-transmission", "contradiction-debit-cfm-m3-min-catalogues"]
+relatedGuides: ["fiac-airblok-bd-dr-transmission", "contradiction-debit-cfm-m3-min-catalogues", "acheter-outil-industriel-reference-documentation", "gentilin-c660-100-cuve-90-litres"]
 sources: ["https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf", "https://shop.fiac.it/en-IT/products/4152026070/ax-703bd-8-40050-ce"]
 ---
 

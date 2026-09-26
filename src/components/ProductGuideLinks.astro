@@ -1,0 +1,6 @@
+---
+import { guidesForProduct } from '../data/product-guides';
+interface Props { path: string }
+const guides = await guidesForProduct(Astro.props.path);
+---
+{guides.length > 0 && <section class="related-reading" data-product-specific-guides><h2>Dossiers consacrés à cette référence</h2><div class="link-cards">{guides.map((guide) => <a href={`/guides/${guide.slug}/`}><strong>{guide.title}</strong><span>{guide.description}</span></a>)}</div></section>}

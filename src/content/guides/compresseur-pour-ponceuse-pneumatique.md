@@ -13,7 +13,7 @@ sources:
   - https://www.einhell.fr/p/4133330-tc-pe-150/
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
   - https://www.einhell.fr/p/4010800-te-ac-430-90-10/
-relatedGuides: ["ponceuse-orbitale-2-5-5-8-mm-choisir", "ponceuse-aspiration-autonome-centralisee", "ponceuse-rotation-forcee-double-action"]
+relatedGuides: ["ponceuse-orbitale-2-5-5-8-mm-choisir", "ponceuse-aspiration-autonome-centralisee", "ponceuse-rotation-forcee-double-action", "nitto-aps125-150-compresseur-poncage"]
 ---
 
 Le ponçage pneumatique est un excellent révélateur des limites d’un compresseur. Contrairement à une agrafeuse, la ponceuse consomme de l’air pendant une grande partie du temps de travail. Une grosse cuve peut retarder la baisse de pression, mais le débit restitué doit finir par suivre.

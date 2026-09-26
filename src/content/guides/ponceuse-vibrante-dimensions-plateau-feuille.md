@@ -7,7 +7,7 @@ category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["menuiserie-agencement", "carrosserie-peinture"]
 readingTime: 3
-relatedGuides: ["ponceuse-plateau-adhesif-autoagrippant-reference", "compresseur-pour-ponceuse-pneumatique"]
+relatedGuides: ["ponceuse-plateau-adhesif-autoagrippant-reference", "compresseur-pour-ponceuse-pneumatique", "rupes-re21-rectangulaire-delta-compresseur"]
 sources: ["https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"]
 ---
 

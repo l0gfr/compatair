@@ -8,7 +8,7 @@ audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile"]
 readingTime: 4
 reviewStatus: "internal"
-relatedGuides: ["debit-restitue-fad-vs-debit-aspire", "compresseur-perd-pression-arret-fuite-refroidissement", "comparer-puissance-specifique-compresseurs"]
+relatedGuides: ["debit-restitue-fad-vs-debit-aspire", "compresseur-perd-pression-arret-fuite-refroidissement", "comparer-puissance-specifique-compresseurs", "gentilin-smart-225-250-reserve"]
 sources: ["https://www.metabo.com/com/en/tools/compressed-air/compressors/mobile-workshop-compressors/basic-220-24-of-silent-compressor/601593000", "https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking_ppc/ideal_gases_under_constant.htm"]
 ---
 

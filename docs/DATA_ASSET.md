@@ -35,7 +35,7 @@ Le baromètre annuel est calculé uniquement depuis les compresseurs et preuves 
 
 ## Verdicts versionnés
 
-Le catalogue contient actuellement 719 compresseurs et 2287 outils, soit 1 644 353 combinaisons explorables. Ce nombre ne décrit pas 1 644 353 verdicts pré-calculés. `/data/verdicts.json` contient les 1 635 006 verdicts fixes formés par les 719 compresseurs et les 2274 outils à débit fixe, y compris `insufficient_data`. Les 13 autres outils représentent 9 347 combinaisons paramétriques qui exigent une cadence ou un volume et un temps cible avant calcul.
+Le catalogue contient actuellement 1219 compresseurs et 3787 outils, soit 4 616 353 combinaisons explorables. Ce nombre ne décrit pas 4 616 353 verdicts pré-calculés. `/data/verdicts.json` contient les 4 600 506 verdicts fixes formés par les 1219 compresseurs et les 3774 outils à débit fixe, y compris `insufficient_data`. Les 13 autres outils représentent 15 847 combinaisons paramétriques qui exigent une cadence ou un volume et un temps cible avant calcul.
 
 Le snapshot fixe publie 871 499 verdicts « compatible en continu », 610 377 « incompatible » et 153 130 « données insuffisantes », soit 90,6 % de paires conclusives. La part d’incompatibilités décrit la valeur de filtrage d’un catalogue inter-marques large ; elle ne constitue pas une mesure de performance du moteur. Le snapshot lie :
 
@@ -76,7 +76,7 @@ Le benchmark de fidélité publie exactement 100 scénarios, un évaluateur repr
 
 ## Signature des publications
 
-Le déploiement de production signe octet pour octet, avec Ed25719, les six publications JSON : catalogue complet, catalogue d’exécution allégé, offres, verdicts, historique des preuves et baromètre. Le manifeste détaché est publié sous `/data/signatures.json`; le registre des clés publiques est disponible sous `/data/signing-keys.json`.
+Le déploiement de production signe octet pour octet, avec Ed25519, les six publications JSON : catalogue complet, catalogue d’exécution allégé, offres, verdicts, historique des preuves et baromètre. Le manifeste détaché est publié sous `/data/signatures.json`; le registre des clés publiques est disponible sous `/data/signing-keys.json`.
 
 La clé privée n’existe pas dans Git. Le workflow échoue si le secret GitHub `COMPATAIR_PUBLICATION_SIGNING_KEY` est absent ou si la clé ne correspond pas à l’empreinte publique enregistrée. La vérification locale d’un artifact signé s’effectue avec `pnpm data:verify-signatures`. Une rotation ajoute d’abord une nouvelle clé publique au registre ; une clé déjà utilisée ne doit pas être retirée, afin de préserver la vérification des publications archivées.
 

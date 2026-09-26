@@ -7,7 +7,7 @@ category: "Comprendre"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "carrosserie-peinture"]
 readingTime: 3
-relatedGuides: ["bruit-outil-pneumatique-pression-puissance-acoustique", "scie-pneumatique-moteur-rotatif-piston"]
+relatedGuides: ["bruit-outil-pneumatique-pression-puissance-acoustique", "scie-pneumatique-moteur-rotatif-piston", "nitto-jt10-jex2800a-derouillage"]
 sources: ["https://www.inrs.fr/risques/vibration-membres-superieurs/evaluation-risque", "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf", "https://www.inrs.fr/publications/outils/Osev-membres-superieurs"]
 ---
 

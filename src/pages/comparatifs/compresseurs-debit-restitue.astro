@@ -4,9 +4,7 @@ import CatalogSignalVisual from '../../components/CatalogSignalVisual.astro';
 import { compressors, tools } from '../../data/catalog';
 import { brandSlug } from '../../domain/brand';
 import { getCatalogMetrics } from '../../domain/catalog-insights';
-import { compressorDisplayName } from '../../domain/product-display';
 import { serializeJsonLd } from '../../domain/structured-data';
-import { sourceQualityLabel } from '../../domain/source-quality';
 
 const documented = compressors.filter((item) => item.fadCurve.length > 0);
 const incomplete = compressors.filter((item) => item.fadCurve.length === 0);
@@ -92,7 +90,7 @@ const brandListJsonLd = {
 						<p>Ces modèles restent publiés avec leur lacune au lieu d’être replacés dans le classement à partir du débit aspiré.</p>
 					</header>
 					<div class="incomplete-reference-grid">
-						{incomplete.map((item) => <a href={`/compresseurs/${item.slug}/`}><span>{item.brand}</span><strong>{compressorDisplayName(item)}</strong><small>{sourceQualityLabel(item.confidence)} · donnée FAD manquante</small></a>)}
+						{brandGroups.filter((group) => group.documented < group.count).map((group) => <a href={`/comparatifs/compresseurs-debit-restitue/marque/${brandSlug(group.brand)}/`}><strong>{group.brand}</strong><small>{group.count - group.documented} références sans point FAD documenté ; consulter les pages du tableau</small></a>)}
 					</div>
 				</div>
 			</section>

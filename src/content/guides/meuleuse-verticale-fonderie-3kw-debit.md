@@ -7,7 +7,7 @@ category: "Installer"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 3
-relatedGuides: ["meuleuse-pneumatique-vitesse-regulee-governor", "debit-restitue-fad-vs-debit-aspire"]
+relatedGuides: ["meuleuse-pneumatique-vitesse-regulee-governor", "debit-restitue-fad-vs-debit-aspire", "meuleuse-ir99-compresseur-800-litres"]
 sources: ["https://tools.cp.com/content/dam/pim/itba/cp/literature/catalogs/General-Industry_catalog_CP_EN.pdf"]
 ---
 

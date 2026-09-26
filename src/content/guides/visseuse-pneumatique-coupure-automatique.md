@@ -10,7 +10,7 @@ metiers: ["maintenance-industrielle", "menuiserie-agencement"]
 readingTime: 7
 featured: false
 reviewStatus: "internal"
-relatedGuides: ["compresseur-pour-visseuse-pneumatique", "cle-a-impulsions-ou-cle-a-chocs-air-comprime", "groupe-frl-filtre-regulateur-lubrificateur"]
+relatedGuides: ["compresseur-pour-visseuse-pneumatique", "cle-a-impulsions-ou-cle-a-chocs-air-comprime", "groupe-frl-filtre-regulateur-lubrificateur", "deprag-assemblage-dur-souple-couple", "deprag-microvisseuse-ncm-nm-conversion", "fiam-26c12a-26c12apa-reference-debit"]
 relatedCalculatorTool: "atlas-copco-8431027800"
 sources:
   - https://picontent.atlascopco.com/cont/external/dir/93/578887947_B3720001_html5_external/en-US/print-section.html?section=all

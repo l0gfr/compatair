@@ -7,7 +7,7 @@ category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture"]
 readingTime: 3
-relatedGuides: ["mini-ponceuse-filetage-m6-unf-plateau", "micro-poncage-vernis-ponceuse-30-mm"]
+relatedGuides: ["mini-ponceuse-filetage-m6-unf-plateau", "micro-poncage-vernis-ponceuse-30-mm", "rupes-lhr75-lh76p-polisseuse-air"]
 sources: ["https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"]
 ---
 

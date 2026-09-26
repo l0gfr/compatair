@@ -7,7 +7,7 @@ category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture", "menuiserie-agencement"]
 readingTime: 3
-relatedGuides: ["ponceuse-pneumatique-bois-aspiration-poussieres", "ponceuse-plateau-adhesif-autoagrippant-reference"]
+relatedGuides: ["ponceuse-pneumatique-bois-aspiration-poussieres", "ponceuse-plateau-adhesif-autoagrippant-reference", "rupes-rh323t-aspiration-contradiction"]
 sources: ["https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf"]
 ---
 

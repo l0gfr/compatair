@@ -13,7 +13,7 @@ sources:
   - https://www.metabo.com/za/en/tools/compressed-air/compressed-air-tools/air-screwdriver/ds-14-604117000-air-screwdriver.html
   - https://www.einhell.fr/p/4010800-te-ac-430-90-10/
   - https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html
-relatedGuides: ["visseuse-pneumatique-demarrage-appui-gachette", "boulonneuse-plage-couple-ressort-standard"]
+relatedGuides: ["visseuse-pneumatique-demarrage-appui-gachette", "boulonneuse-plage-couple-ressort-standard", "biax-gaf209-gaf513-microvissage", "fiam-cy9ram-wp-brochure-reference", "red-rooster-rri-sa40285w3-alimentation"]
 ---
 
 Une visseuse pneumatique peut demander beaucoup plus d’air qu’une clé à cliquet de même format apparent. Le bon compresseur se choisit à partir du besoin publié à la pression de travail, puis du débit restitué disponible à cette même pression.

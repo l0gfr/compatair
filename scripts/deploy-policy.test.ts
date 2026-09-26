@@ -13,9 +13,9 @@ const releaseRoute = readFileSync(new URL('../src/pages/data/release.json.ts', i
 const liveSmoke = readFileSync(new URL('./smoke-live-http.mjs', import.meta.url), 'utf8');
 
 describe('release boundary policy', () => {
-	it('compresses the growing catalog within the existing release storage ceiling', () => {
+	it('compresses the growing catalog within the bounded release storage ceiling', () => {
 		expect(workflow).toContain('tar -C dist -cf - . | xz -T2 -6 > "compatair-${GITHUB_SHA}.tar.xz"');
-		expect(workflow).toContain('release_bytes > 117440512');
+		expect(workflow).toContain('release_bytes > 184549376');
 		expect(workflow).toContain('compression-level: 0');
 		expect(deploy).toContain('*.tar.xz) command -v xz');
 		expect(deploy).toContain('*.tar.gz)');

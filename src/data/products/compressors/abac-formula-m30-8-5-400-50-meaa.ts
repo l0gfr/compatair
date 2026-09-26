@@ -1,0 +1,118 @@
+const product = {
+	"id": "abac-formula-m30-8-5-400-50-meaa",
+	"slug": "abac-formula-m30-8-5-400-50-meaa",
+	"brand": "ABAC",
+	"model": "FORMULA M30 8,5 400 50 MEAA",
+	"mpn": "4152034925",
+	"tankLiters": 0,
+	"maxPressureBar": 8.5,
+	"fadCurve": [
+		{
+			"pressureBar": 8.5,
+			"litersPerMinute": 5130
+		}
+	],
+	"oilType": "oil",
+	"confidence": "A",
+	"status": "unknown",
+	"image": {
+		"src": "/images/products/abac-formula-m30-8-5-400-50-meaa.webp",
+		"alt": "Repères techniques ABAC FORMULA M30 8,5 400 50 MEAA, référence 4152034925",
+		"sourceUrl": "https://shop.abacaircompressors.com/en-FR/products/4152034930/formula-m37-10-400-50-meaa",
+		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+	},
+	"editorial": {
+		"overview": "ABAC FORMULA M30 8,5 400 50 MEAA, référence 4152034925 : configuration sans cuve intégrée, pression maximale publiée de 8,5 bar. Le point documenté le plus élevé en pression fournit 5 130 L/min à 8,5 bar. Configuration fabricant : Base Mounted.",
+		"verifiedFacts": [
+			"Débit restitué publié : 5 130 L/min à 8,5 bar.",
+			"Compresseur lubrifié, réserve d’huile déclarée par le fabricant. Puissance moteur publiée : 30 kW.",
+			"Masse nette publiée : 589 kg.",
+			"Alimentation publiée : 400 V, 50 Hz, triphasée."
+		],
+		"limitations": [
+			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
+			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
+			"La version électrique et la pression de cette référence priment sur le nom de la gamme.",
+			"Les autres pressions ne sont pas extrapolées."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Conditions du débit",
+			"value": "La variante 4152034925 publie un FAD de 5130 L/min pour sa version de 8.5 bar.",
+			"evidenceIds": [
+				"abac-4152034925-20260926"
+			]
+		},
+		{
+			"label": "Équipement",
+			"value": "Configuration fabricant : Base Mounted.",
+			"evidenceIds": [
+				"abac-4152034925-20260926"
+			]
+		},
+		{
+			"label": "Dimensions publiées",
+			"value": "1330 × 830 × 1555 mm (L × l × H)",
+			"evidenceIds": [
+				"abac-4152034925-20260926"
+			]
+		},
+		{
+			"label": "Capacité d’huile publiée",
+			"value": "22 L",
+			"evidenceIds": [
+				"abac-4152034925-20260926"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "abac-4152034925-20260926",
+			"sourceUrl": "https://shop.abacaircompressors.com/en-FR/products/4152034930/formula-m37-10-400-50-meaa",
+			"sourceLabel": "ABAC, tableau des variantes de la fiche officielle, réf. 4152034925",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La variante 4152034925 publie un FAD de 5130 L/min pour sa version de 8.5 bar."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"abac-4152034925-20260926"
+		],
+		"tankLiters": [
+			"abac-4152034925-20260926"
+		],
+		"maxPressureBar": [
+			"abac-4152034925-20260926"
+		],
+		"fadCurve": [
+			"abac-4152034925-20260926"
+		],
+		"oilType": [
+			"abac-4152034925-20260926"
+		],
+		"powerKw": [
+			"abac-4152034925-20260926"
+		],
+		"weightKg": [
+			"abac-4152034925-20260926"
+		],
+		"voltage": [
+			"abac-4152034925-20260926"
+		],
+		"phase": [
+			"abac-4152034925-20260926"
+		]
+	},
+	"notes": [
+		"Caractéristiques déclarées par le fabricant. Les comparaisons dépendent des conditions de débit et de pression documentées."
+	],
+	"powerKw": 30,
+	"weightKg": 589,
+	"voltage": "400 V, 50 Hz",
+	"phase": "three-phase"
+};
+
+export default product;

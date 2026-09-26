@@ -8,7 +8,7 @@ audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "garage-automobile"]
 readingTime: 4
 reviewStatus: "internal"
-relatedGuides: ["comparer-puissance-specifique-compresseurs", "debit-restitue-fad-vs-debit-aspire", "compresseur-vitesse-variable-vsd-rentabilite-atelier"]
+relatedGuides: ["comparer-puissance-specifique-compresseurs", "debit-restitue-fad-vs-debit-aspire", "compresseur-vitesse-variable-vsd-rentabilite-atelier", "airpress-aps7-780-600-litres-minute"]
 sources: ["https://www.cagi.org/performance-verification-original", "https://uploads.prod01.oregon.platform-os.com/instances/2032/assets/documents/pdfs/RotaryCompressorUniformTestMethod.pdf?updated=1788880181", "https://uploads.prod01.oregon.platform-os.com/instances/2032/assets/documents/pdfs/RotaryVFDCompressorsUniformTestMethod.pdf?updated=1788880181"]
 ---
 
