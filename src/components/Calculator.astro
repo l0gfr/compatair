@@ -17,6 +17,15 @@ const commercialOffers = activeOffers
 		priceEur: offer.priceEur,
 		collectedAt: offer.collectedAt,
 	}));
+
+const calculatorToolOptions = tools.map((tool) => {
+	const value = `${tool.brand} ${tool.model}${tool.mpn ? ` · MPN ${tool.mpn}` : ''}${tool.ean ? ` · EAN ${tool.ean}` : ''}`;
+	return [
+		value, tool.id, `${tool.label} · ${toolDemandLabel(tool)} · ${toolPressureLabel(tool)}`,
+		compactCatalogOptionIdentifiers(tool.id, value, catalogSearchIdentifiers(tool.brand, tool.model, [tool.label, tool.id, tool.mpn, tool.ean, tool.gtin, ...tool.distributorSkus.map((identifier) => identifier.sku), ...tool.identifierAliases.map((alias) => alias.value)])),
+		{ demandModel: tool.demandModel, airflow: tool.demandModel === 'fixed-flow' ? tool.airflowLpm.typical : undefined, pressure: tool.workingPressureBar.typical, airPerAction: tool.demandModel === 'per-action' ? tool.airPerActionLiters : undefined, actionLabel: tool.demandModel === 'per-action' ? tool.actionLabel : undefined },
+	];
+});
 ---
 
 <div class="calculator calculator-v2" data-calculator data-ui-state="idle">
@@ -176,14 +185,7 @@ const commercialOffers = activeOffers
 </template>
 
 <datalist id="calculator-tools"></datalist>
-<script is:inline type="application/json" data-calculator-tool-options set:html={serializeJsonLd(tools.map((tool) => {
-	const value = `${tool.brand} ${tool.model}${tool.mpn ? ` · MPN ${tool.mpn}` : ''}${tool.ean ? ` · EAN ${tool.ean}` : ''}`;
-	return [
-		value, tool.id, `${tool.label} · ${toolDemandLabel(tool)} · ${toolPressureLabel(tool)}`,
-		compactCatalogOptionIdentifiers(tool.id, value, catalogSearchIdentifiers(tool.brand, tool.model, [tool.label, tool.id, tool.mpn, tool.ean, tool.gtin, ...tool.distributorSkus.map((identifier) => identifier.sku), ...tool.identifierAliases.map((alias) => alias.value)])),
-		{ demandModel: tool.demandModel, airflow: tool.demandModel === 'fixed-flow' ? tool.airflowLpm.typical : undefined, pressure: tool.workingPressureBar.typical, airPerAction: tool.demandModel === 'per-action' ? tool.airPerActionLiters : undefined, actionLabel: tool.demandModel === 'per-action' ? tool.actionLabel : undefined },
-	];
-}))} />
+<script is:inline type="application/json" data-calculator-tool-options set:html={serializeJsonLd(calculatorToolOptions)} />
 <datalist id="calculator-compressors">
 	<option value="Caractéristiques personnalisées" data-id="custom" data-identifiers={JSON.stringify(['custom'])}>Saisie personnalisée</option>
 	{compressors.map((compressor) => {
