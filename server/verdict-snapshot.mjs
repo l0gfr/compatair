@@ -2,6 +2,17 @@ import { createReadStream } from 'node:fs';
 
 const indexes = new WeakMap();
 
+// Pair ids repeat two already interned identifiers. Derive them only on output.
+class CompactPair {
+	get id() { return `${this.compressorId}--${this.toolId}`; }
+	toJSON() { return { id: this.id, ...this }; }
+}
+function compactPair(pair) {
+	if (Object.keys(pair)[0] !== 'id' || pair.id !== `${pair.compressorId}--${pair.toolId}` || Object.hasOwn(pair, 'toJSON')) return pair;
+	const { id: _id, ...fields } = pair;
+	return Object.setPrototypeOf(fields, CompactPair.prototype);
+}
+
 export function verdictIndex(snapshot) {
 	let index = indexes.get(snapshot);
 	if (!index) {
@@ -11,7 +22,10 @@ export function verdictIndex(snapshot) {
 			if (!tools) { tools = new Map(); compressors.set(pair.compressorId, tools); }
 			tools.set(pair.toolId, pair);
 		}
-		index = { get: (compressorId, toolId) => compressors.get(compressorId)?.get(toolId) };
+		index = { get: (compressorId, toolId) => {
+			const pair = compressors.get(compressorId)?.get(toolId);
+			return pair instanceof CompactPair ? pair.toJSON() : pair;
+		} };
 		indexes.set(snapshot, index);
 	}
 	return index;
@@ -19,7 +33,7 @@ export function verdictIndex(snapshot) {
 
 // The versioned snapshot stores metadata first and its pairs array last.
 // Parse one pair at a time so the complete JSON string never resides in memory.
-export async function readVerdictSnapshot(path) {
+export async function readVerdictSnapshot(path, { compactIds = false } = {}) {
 	let buffer = '';
 	let metadata;
 	const pairs = [];
@@ -74,7 +88,7 @@ export async function readVerdictSnapshot(path) {
 						}
 						pair.warnings = warnings;
 					}
-					pairs.push(pair);
+					pairs.push(compactIds ? compactPair(pair) : pair);
 					buffer = buffer.slice(position);
 					position = 0;
 					state = 'comma';

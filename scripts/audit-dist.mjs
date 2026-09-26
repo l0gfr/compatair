@@ -2,7 +2,9 @@ import { createHash } from 'node:crypto';
 import { lstat, readdir, readFile } from 'node:fs/promises';
 import { basename, join, relative, resolve } from 'node:path';
 import { gzipSync } from 'node:zlib';
+import { isDeepStrictEqual } from 'node:util';
 import { readImageDimensions } from '../src/domain/image-dimensions.ts';
+import { catalogOptionIdentifiers, catalogSearchIdentifiers } from '../src/domain/catalog-search.ts';
 import { toolUsageTaxonomy } from '../src/data/taxonomy.ts';
 import { brandSlug } from '../src/domain/brand.ts';
 import { FAD_COMPARISON_PAGE_SIZE, TOOL_USAGE_PAGE_SIZE } from '../src/domain/pagination.ts';
@@ -20,8 +22,8 @@ const maximumDocumentTitleLength = 60;
 const maximumInitialPageScriptBytesGzip = 50 * 1024;
 const maximumPassportInitialScriptBytesGzip = 45 * 1024;
 const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
-// 1 000 références : 55 Ko gzip de données calculateur ; les budgets JavaScript restent inchangés.
-const maximumRuntimeCatalogBytesGzip = 64 * 1024;
+// 1 500 références : 73 Ko gzip de données calculateur ; les budgets JavaScript restent inchangés.
+const maximumRuntimeCatalogBytesGzip = 80 * 1024;
 const maximumSearchIndexBytesGzip = 64 * 1024;
 const maximumIndexableInternalDestinationsBeforeWarning = 100;
 const maximumIndexableInternalDestinations = 120;
@@ -30,9 +32,9 @@ const maximumStaticCompatibilityResultsBySection = new Map([
 	['outils-pneumatiques', 5],
 	['quel-compresseur-pour', 6],
 ]);
-const maximumHtmlArtifactBytes = 64 * 1024 * 1024;
-// 179 250 verdicts publics complets et 1 000 fiches : artefact mesuré à 206 Mo.
-const maximumTotalArtifactBytes = 224 * 1024 * 1024;
+const maximumHtmlArtifactBytes = 96 * 1024 * 1024;
+// 298 750 verdicts publics complets et 1 500 fiches : artefact mesuré à 306 Mo, dont 85 Mo de HTML.
+const maximumTotalArtifactBytes = 336 * 1024 * 1024;
 const maximumJourneyVideoBytes = 16 * 1024 * 1024;
 // Les pages produits réutilisent des cartes de catalogue afin que le temps de build ne croisse pas avec chaque référence.
 const maximumSocialImageCount = 80;
@@ -414,6 +416,23 @@ for (const [path, requiredColumns] of csvArtifacts) {
 if (!artifactPaths.has('/calculateur/index.html')) errors.push('recommandation contrefactuelle: calculateur rendu absent');
 else {
 	const calculatorHtml = await readFile(join(root, '/calculateur/index.html'), 'utf8');
+	try {
+		const match = calculatorHtml.match(/<script\b[^>]*\bdata-calculator-tool-options(?:="[^"]*")?[^>]*>([\s\S]*?)<\/script>/i);
+		const options = JSON.parse(match?.[1] ?? 'null');
+		const catalogTools = JSON.parse(await readFile(join(root, '/data/catalog.json'), 'utf8')).tools;
+		if (!Array.isArray(options) || options.length !== catalogTools.length || new Set(options.map(row => row[1])).size !== catalogTools.length) throw new Error('références absentes ou dupliquées');
+		const byId = new Map(options.map(row => [row[1], row]));
+		for (const tool of catalogTools) {
+			const row = byId.get(tool.id);
+			const identifiers = catalogSearchIdentifiers(tool.brand, tool.model, [tool.label, tool.id, tool.mpn, tool.ean, tool.gtin, ...tool.distributorSkus.map(entry => entry.sku), ...tool.identifierAliases.map(entry => entry.value)]);
+			if (!row || !isDeepStrictEqual(new Set(catalogOptionIdentifiers(tool.id, row[0], row[3])), new Set(identifiers))) throw new Error(`identifiants altérés pour ${tool.id}`);
+			const expectedDemand = { demandModel: tool.demandModel };
+			if (tool.workingPressureBar.typical !== undefined) expectedDemand.pressure = tool.workingPressureBar.typical;
+			if (tool.demandModel === 'fixed-flow') expectedDemand.airflow = tool.airflowLpm.typical;
+			if (tool.demandModel === 'per-action') { expectedDemand.airPerAction = tool.airPerActionLiters; expectedDemand.actionLabel = tool.actionLabel; }
+			if (!isDeepStrictEqual(row[4], expectedDemand)) throw new Error(`besoin altéré pour ${tool.id}`);
+		}
+	} catch (error) { errors.push(`calculateur: catalogue compact incohérent (${error.message})`); }
 	for (const marker of ['data-counterfactual', 'data-counterfactual-result', 'data-counterfactual-boundary', 'data-decision-answer-first', 'data-scenario-context', 'data-scenario-result-links', 'data-contextual-compare', 'data-result-mode="essential"', 'name="buyerProfile"', 'name="powerSupply"', 'name="mobilityFilter"', 'name="maximumBudget"', 'Une référence brute est acceptée', 'Trois solutions adaptées à votre contexte', 'Comparer ces trois compresseurs pour ce besoin', 'Préparer mon installation', 'manomètre et un essai avec l’outil en charge', 'name="measuredPressureDrop"', 'name="measuredLeak"', 'name="supplyPressure"']) {
 		if (!calculatorHtml.includes(marker)) errors.push(`recommandation contrefactuelle: marqueur absent ${marker}`);
 	}

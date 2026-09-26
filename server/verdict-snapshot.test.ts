@@ -32,6 +32,28 @@ describe('bounded verdict snapshot loading', () => {
 		expect(loaded.pairs[0].warnings).toBe(loaded.pairs[899].warnings);
 	});
 
+	it('compacts only reconstructible ids without changing serialized bytes or API records', async () => {
+		const pairs = [
+			{ id: 'a--b', compressorId: 'a', toolId: 'b', verdict: 'continuous', warnings: ['é'] },
+			{ id: 'custom', compressorId: 'a', toolId: 'c', verdict: 'incompatible', extension: { source: 1 } },
+			{ compressorId: 'a', toolId: 'd', id: 'a--d', verdict: 'insufficient_data' },
+		];
+		const text = JSON.stringify({ catalogVersion: 'test', pairs });
+		const snapshot = await readVerdictSnapshot(await fixture(text), { compactIds: true });
+		expect(Object.hasOwn(snapshot.pairs[0], 'id')).toBe(false);
+		expect(snapshot.pairs[0].id).toBe('a--b');
+		expect(JSON.stringify(snapshot)).toBe(text);
+		for (const pair of pairs) expect(verdictIndex(snapshot).get(pair.compressorId, pair.toolId)).toEqual(pair);
+	});
+
+	it('preserves reserved JSON keys without invoking prototype setters', async () => {
+		const text = '{"pairs":[{"id":"a--b","compressorId":"a","toolId":"b","__proto__":{"polluted":true}},{"id":"a--c","compressorId":"a","toolId":"c","toJSON":"source value"}]}';
+		const snapshot = await readVerdictSnapshot(await fixture(text), { compactIds: true });
+		expect(JSON.stringify(snapshot)).toBe(text);
+		expect(Object.hasOwn(verdictIndex(snapshot).get('a', 'b'), '__proto__')).toBe(true);
+		expect(({} as Record<string, unknown>).polluted).toBeUndefined();
+	});
+
 	it('accepts empty snapshots and standard JSON whitespace', async () => {
 		expect(await readVerdictSnapshot(await fixture(' { "catalogVersion": "test", "pairs" : [ ] }\r\n'))).toEqual({ catalogVersion: 'test', pairs: [] });
 	});

@@ -9,9 +9,9 @@ const xml = (value) => String(value).replaceAll('&', '&amp;').replaceAll('<', '&
 const number = (value) => value.toLocaleString('fr-FR', { maximumFractionDigits: 3 });
 export async function renderCpTechnicalCard(product, labels = {}) {
 	const columns = [
-		{ x: 82, label: 'EN CHARGE', value: number(product.airflowLpm.typical), unit: 'L/min' },
+		{ x: 82, label: labels.airflow ?? 'EN CHARGE', value: number(product.airflowLpm.typical), unit: 'L/min' },
 		{ x: 460, label: labels.pressure ?? 'PRESSION MAX.', value: number(product.workingPressureBar.max), unit: labels.pressureUnit ?? 'bar dynamiques' },
-		{ x: 830, label: 'FLEXIBLE', value: number(product.recommendedHose.innerDiameterMm), unit: labels.hoseUnit ?? 'mm int. sur 5 m' },
+		{ x: 830, label: 'FLEXIBLE', value: product.recommendedHose?.innerDiameterMm ? number(product.recommendedHose.innerDiameterMm) : 'n.d.', unit: labels.hoseUnit ?? 'mm int. sur 5 m' },
 	];
 	const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
 <rect width="1200" height="800" fill="#f0f1e9"/><rect x="44" y="44" width="1112" height="712" rx="18" fill="#fffef9" stroke="#c7d0c6" stroke-width="2"/>

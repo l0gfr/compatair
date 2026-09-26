@@ -175,12 +175,15 @@ const commercialOffers = activeOffers
 	</div>
 </template>
 
-<datalist id="calculator-tools">
-	{tools.map((tool) => {
-		const value = `${tool.brand} ${tool.model}${tool.mpn ? ` · MPN ${tool.mpn}` : ''}${tool.ean ? ` · EAN ${tool.ean}` : ''}`;
-		return <option value={value} data-id={tool.id} data-identifiers={JSON.stringify(compactCatalogOptionIdentifiers(tool.id, value, catalogSearchIdentifiers(tool.brand, tool.model, [tool.label, tool.id, tool.mpn, tool.ean, tool.gtin, ...tool.distributorSkus.map((identifier) => identifier.sku), ...tool.identifierAliases.map((alias) => alias.value)])))} data-demand-model={tool.demandModel} data-airflow={tool.demandModel === 'fixed-flow' ? tool.airflowLpm.typical : undefined} data-pressure={tool.workingPressureBar.typical} data-air-per-action={tool.demandModel === 'per-action' ? tool.airPerActionLiters : undefined} data-action-label={tool.demandModel === 'per-action' ? tool.actionLabel : undefined}>{tool.label} · {toolDemandLabel(tool)} · {toolPressureLabel(tool)}</option>;
-	})}
-</datalist>
+<datalist id="calculator-tools"></datalist>
+<script is:inline type="application/json" data-calculator-tool-options set:html={serializeJsonLd(tools.map((tool) => {
+	const value = `${tool.brand} ${tool.model}${tool.mpn ? ` · MPN ${tool.mpn}` : ''}${tool.ean ? ` · EAN ${tool.ean}` : ''}`;
+	return [
+		value, tool.id, `${tool.label} · ${toolDemandLabel(tool)} · ${toolPressureLabel(tool)}`,
+		compactCatalogOptionIdentifiers(tool.id, value, catalogSearchIdentifiers(tool.brand, tool.model, [tool.label, tool.id, tool.mpn, tool.ean, tool.gtin, ...tool.distributorSkus.map((identifier) => identifier.sku), ...tool.identifierAliases.map((alias) => alias.value)])),
+		{ demandModel: tool.demandModel, airflow: tool.demandModel === 'fixed-flow' ? tool.airflowLpm.typical : undefined, pressure: tool.workingPressureBar.typical, airPerAction: tool.demandModel === 'per-action' ? tool.airPerActionLiters : undefined, actionLabel: tool.demandModel === 'per-action' ? tool.actionLabel : undefined },
+	];
+}))} />
 <datalist id="calculator-compressors">
 	<option value="Caractéristiques personnalisées" data-id="custom" data-identifiers={JSON.stringify(['custom'])}>Saisie personnalisée</option>
 	{compressors.map((compressor) => {
@@ -284,6 +287,21 @@ const commercialOffers = activeOffers
 	const evaluated = root?.querySelector<HTMLElement>('[data-evaluated-result]');
 	const toolDatalist = document.querySelector<HTMLDataListElement>('#calculator-tools');
 	const compressorDatalist = document.querySelector<HTMLDataListElement>('#calculator-compressors');
+	function setDemandData(target: HTMLElement, source: Record<string, string | number | undefined> = {}) {
+		for (const key of ['demandModel', 'airflow', 'pressure', 'airPerAction', 'actionLabel']) {
+			const value = source[key]; if (value === undefined) delete target.dataset[key]; else target.dataset[key] = String(value);
+		}
+	}
+	// Keep the embedded catalog compact; native suggestions are ready before prefill.
+	type ToolOption = [string, string, string, string[], Partial<Record<'demandModel' | 'airflow' | 'pressure' | 'airPerAction' | 'actionLabel', string | number>>];
+	for (const [value, id, text, identifiers, demand] of JSON.parse(document.querySelector('[data-calculator-tool-options]')?.textContent ?? '[]') as ToolOption[]) {
+		const option = new Option(text, value);
+		option.dataset.id = id;
+		option.dataset.identifiers = JSON.stringify(identifiers);
+		setDemandData(option, demand);
+		toolDatalist?.append(option);
+	}
+
 	const setText = (selector: string, value: string) => { const element = root?.querySelector<HTMLElement>(selector); if (element) element.textContent = value; };
 	const labels = { continuous: 'Compatible en continu', intermittent: 'Compatible par intermittence', incompatible: 'Incompatible', insufficient_data: 'Données insuffisantes' } as const;
 	const responseQualityLabel = (quality: SizingResult['confidence']) => quality === 'high' ? 'Réponse étayée' : quality === 'medium' ? 'Réponse à confirmer' : 'Réponse limitée';
@@ -417,16 +435,14 @@ const commercialOffers = activeOffers
 			: demandModel === 'fixed-flow'
 			? `${selected.dataset.airflow} L/min documentés à ${selected.dataset.pressure} bar.`
 			: demandModel === 'per-action'
-				? `Donnée constructeur de l’outil : ${Number(selected.dataset.airPerAction).toLocaleString('fr-FR')} L d’air par ${selected.dataset.actionLabel} à ${selected.dataset.pressure} bar. La cadence est obligatoire et reste une saisie utilisateur.`
+				? `Besoin publié : ${Number(selected.dataset.airPerAction).toLocaleString('fr-FR')} L d’air par ${selected.dataset.actionLabel} à ${selected.dataset.pressure} bar. Saisissez votre cadence réelle.`
 				: `Aucun volume de pneumatique n’est déduit du modèle. Volume, pressions et temps doivent être saisis.`;
 	}
 	function syncToolSearch(row: HTMLElement) {
 		const search = row.querySelector<HTMLInputElement>('[data-tool-search]')!; const hidden = row.querySelector<HTMLInputElement>('[data-tool]')!;
 		const option = optionByInput(toolDatalist, search.value);
 		hidden.value = option?.dataset.id ?? '';
-		for (const key of ['demandModel', 'airflow', 'pressure', 'airPerAction', 'actionLabel'] as const) {
-			const value = option?.dataset[key]; if (value === undefined) delete hidden.dataset[key]; else hidden.dataset[key] = value;
-		}
+		setDemandData(hidden, option?.dataset);
 		updateDemandMode(row);
 	}
 
@@ -784,8 +800,8 @@ const commercialOffers = activeOffers
 			verified_alternatives: result.verdict === 'incompatible'
 				? 'Le modèle choisi reste incompatible. Les références ci-dessous ont chacune obtenu un verdict concluant pour la même configuration.'
 				: 'Le modèle choisi reste indéterminé. Les références ci-dessous disposent, elles, des données nécessaires pour conclure sur la même configuration.',
-			measurement_required: 'CompatAir ne remplace pas une donnée absente par une estimation. La donnée minimale à obtenir est indiquée ci-dessous.',
-			no_verified_solution: 'Le besoin calculé dépasse ou sort du domaine documenté des références étudiées. Aucune machine n’est affichée comme solution par défaut.',
+			measurement_required: 'La donnée manquante reste indéterminée. La mesure ou la source à obtenir est indiquée ci-dessous.',
+			no_verified_solution: 'Ce besoin sort du domaine documenté. Aucune machine ne peut être recommandée.',
 		};
 		setText('[data-resolution-eyebrow]', status === 'selected_verified' ? 'Choix alternatif' : status === 'need_sized' ? 'Solutions vérifiées' : 'Sortie décisionnelle');
 		setText('[data-resolution-title]', titles[status]);
@@ -814,7 +830,7 @@ const commercialOffers = activeOffers
 		if (coverage) coverage.textContent = priority.length ? `${priority.length} solution${priority.length > 1 ? 's' : ''} affichée${priority.length > 1 ? 's' : ''} pour ce contexte. L’inventaire complet reste disponible en mode expert.` : 'Aucune solution affichée avec ces filtres. Élargissez l’alimentation, la mobilité ou retirez le budget.';
 		lastPriorityIds = priority.map(({ compressor }) => compressor.id);
 		if (priority.length) priorityList.replaceChildren(...priority.map((candidate) => renderResultCard(candidate, proofToolId)));
-		else { const message = document.createElement('p'); message.className = 'decision-empty'; message.textContent = 'Aucun compresseur actuellement étudié ne peut être recommandé pour cette configuration. Une information manquante n’est jamais transformée en recommandation.'; priorityList.replaceChildren(message); }
+		else { const message = document.createElement('p'); message.className = 'decision-empty'; message.textContent = 'Aucune recommandation documentée pour cette configuration et ces filtres. Une donnée manquante reste indéterminée.'; priorityList.replaceChildren(message); }
 		renderDecisionResolution(config, base, result, resolution.status, resolution.verifiedCandidates.length, context, priority.length);
 		list.replaceChildren(...resolution.rankedCandidates.map((candidate) => renderResultCard(candidate, proofToolId)));
 		setResultFilter(currentFilter);

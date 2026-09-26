@@ -42,6 +42,11 @@ describe('runtime catalog', () => {
 		expect(createRuntimeCatalog([withTankSource], [], CATALOG_VERIFIED_AT, catalogVersion).compressors[0].evidence.some((source) => source.id === 'tank-only')).toBe(true);
 	});
 
+	it('rejects tool arrays beyond the bounded 1500-entry runtime limit', () => {
+		const runtime = createRuntimeCatalog(compressors, tools, CATALOG_VERIFIED_AT, catalogVersion);
+		expect(() => runtimeCatalogSchema.parse({ ...runtime, tools: Array.from({ length: 1501 }, () => runtime.tools[0]) })).toThrow();
+	});
+
 	it('loads and validates the same-origin execution snapshot', async () => {
 		const runtime = createRuntimeCatalog(compressors, tools, CATALOG_VERIFIED_AT, catalogVersion);
 		const fetchMock = vi.fn().mockResolvedValue(new Response(JSON.stringify(runtime)));

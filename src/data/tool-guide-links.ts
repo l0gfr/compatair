@@ -23,6 +23,7 @@ export const toolGuideByCategoryId: Partial<Record<ToolProfile['categoryId'], `/
 	'ponceuse-rotative': '/guides/compresseur-pour-ponceuse-pneumatique/',
 	sableuse: '/guides/compresseur-pour-sablage-pneumatique/',
 	scie: '/guides/compresseur-pour-scie-sabre-pneumatique/',
+	tronconneuse: '/guides/compresseur-pour-meuleuse-pneumatique/',
 	soufflette: '/guides/soufflette-garage-securite-bruit-consommation/',
 	visseuse: '/guides/compresseur-pour-visseuse-pneumatique/',
 };

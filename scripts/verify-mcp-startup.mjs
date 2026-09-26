@@ -6,7 +6,7 @@ import { createCompatAirServer } from '../server/mcp-server.mjs';
 import { readVerdictSnapshot } from '../server/verdict-snapshot.mjs';
 
 const catalog = JSON.parse(await readFile('dist/data/catalog.json', 'utf8'));
-const snapshot = await readVerdictSnapshot('dist/data/verdicts.json');
+const snapshot = await readVerdictSnapshot('dist/data/verdicts.json', { compactIds: true });
 assert.equal(snapshot.catalogVersion, catalog.catalogVersion);
 assert.equal(snapshot.pairs.length, snapshot.scope.fixed_verdict_count);
 const { pairs, ...metadata } = snapshot;
@@ -30,7 +30,7 @@ try {
 	for (const pair of [pairs[0], pairs.at(-1)]) {
 		const response = await fetch(`${origin}/api/v1/compatibility?${new URLSearchParams({ compressorId: pair.compressorId, toolId: pair.toolId })}`);
 		assert.equal(response.status, 200);
-		assert.deepEqual((await response.json()).engine_evaluation, pair);
+		assert.deepEqual((await response.json()).engine_evaluation, JSON.parse(JSON.stringify(pair)));
 	}
 } finally {
 	server.closeAllConnections();
