@@ -8,11 +8,13 @@ import ContextHelp from './ContextHelp.astro';
 		<div class="scanner-confirmation">
 			<div class="field">
 				<label for="scanner-identifier">Numéro indiqué sur l’étiquette</label>
-				<input id="scanner-identifier" data-identifier type="text" maxlength="160" autocomplete="off" placeholder="Ex. 4010393 ou 4006825597295" aria-describedby="scanner-identifier-help" required />
+				<input id="scanner-identifier" data-identifier type="text" maxlength="160" autocomplete="off" list="scanner-photo-candidates" placeholder="Ex. 4010393 ou 4006825597295" aria-describedby="scanner-identifier-help" required />
+				<datalist id="scanner-photo-candidates" data-photo-candidates></datalist>
 				<small id="scanner-identifier-help" data-candidate-origin>Saisissez la référence fabricant, le MPN, l’EAN, le GTIN ou un SKU distributeur documenté.</small>
 			</div>
 			<button class="button primary" type="submit" data-scanner-submit>Identifier la référence</button>
 		</div>
+		<p class="scanner-local-note">La référence confirmée est envoyée à CompatAir pour rechercher sa fiche. <a href="/confidentialite/#recherches">Données utilisées</a>.</p>
 
 		<details class="scanner-photo-details">
 			<summary>Utiliser une photo</summary>
@@ -116,7 +118,7 @@ import ContextHelp from './ContextHelp.astro';
 	import { isImageWithinPixelBudget, readImageDimensions, type ImageDimensions } from '../domain/image-dimensions';
 	import { JOURNEY_CONTEXT_EVENT } from '../domain/journey-context';
 	import { encodePassportConfiguration } from '../domain/passport';
-	import { compressorCapabilities, identifyProducts, toolCompatibleCompressors } from '../domain/product-identification';
+	import { compressorCapabilities, identifyProducts, localIdentifierProposals, toolCompatibleCompressors } from '../domain/product-identification';
 	import { CALCULATION_VERSION } from '../../server/air-sizing.mjs';
 	import { scannerComparisonHref, scannerConfigurationForTool, scannerReferenceFromHash, scannerReferenceUrl } from '../domain/scanner-journey';
 	import { sourceQualityDetail, sourceQualityLabel } from '../domain/source-quality';
@@ -297,15 +299,14 @@ import ContextHelp from './ContextHelp.astro';
 			if (!proposals.length && detectionWindow.TextDetector) {
 				const detector = new detectionWindow.TextDetector();
 				const text = (await detector.detect(bitmap)).map((item) => item.rawValue ?? '').join(' ');
-				const tokens = text.toUpperCase().match(/[A-Z0-9][A-Z0-9._/-]{3,23}/g) ?? [];
-				let candidate: string | undefined;
-				for (const token of tokens.slice(0, 8)) { await loadCatalog(token); if (identifyProducts(token, compressors, tools).length) { candidate = token; break; } }
-				if (candidate) proposals.push({ value: candidate, origin: 'OCR local' });
+				for (const value of localIdentifierProposals(text)) proposals.push({ value, origin: 'OCR local' });
 			}
-			const proposal = proposals.find((item) => identifyProducts(item.value, compressors, tools).length > 0) ?? proposals[0];
+			const boundedProposals = proposals.filter((item) => item.value.length <= 160).slice(0, 16);
+			query<HTMLDataListElement>('[data-photo-candidates]')?.replaceChildren(...boundedProposals.map(({ value }) => { const option = document.createElement('option'); option.value = value; return option; }));
+			const proposal = boundedProposals[0];
 			if (proposal) {
 				identifier.value = proposal.value;
-				setText('[data-candidate-origin]', `Proposition issue de ${proposal.origin}, non validée. Vérifiez l’étiquette puis confirmez.`);
+				setText('[data-candidate-origin]', `Proposition issue de ${proposal.origin}, non validée. Vérifiez l’étiquette, choisissez ou corrigez le numéro puis confirmez.`);
 				setText('[data-status]', 'Un numéro a été proposé. Aucun modèle n’est validé tant que vous ne cliquez pas sur « Identifier la référence ».');
 			} else setText('[data-status]', 'Aucune référence lisible n’a été trouvée. Saisissez le numéro visible sur l’étiquette.');
 		} catch { setText('[data-status]', 'La lecture automatique locale n’est pas disponible pour cette image. Saisissez l’identifiant visible.'); }

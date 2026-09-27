@@ -9,6 +9,12 @@ export type IdentifiedProduct = {
 	matchedValue: string;
 };
 
+/** Local OCR suggestions only: the user must confirm before any catalog lookup. */
+export function localIdentifierProposals(text: string): string[] {
+	const tokens = text.slice(0, 32_768).toUpperCase().match(/[A-Z0-9][A-Z0-9._/-]*/g) ?? [];
+	return [...new Set(tokens.filter((token) => token.length >= 4 && token.length <= 24 && /\d/.test(token)))].slice(0, 16);
+}
+
 export type UnlockRecommendation = {
 	toolId: string;
 	toolLabel: string;

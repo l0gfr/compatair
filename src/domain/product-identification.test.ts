@@ -1,8 +1,15 @@
 import { describe, expect, it } from 'vitest';
 import { compressors, tools } from '../data/catalog';
-import { compressorCapabilities, identifyProducts, toolCompatibleCompressors } from './product-identification';
+import { compressorCapabilities, identifyProducts, localIdentifierProposals, toolCompatibleCompressors } from './product-identification';
 
 describe('product identification', () => {
+	it('keeps OCR proposals local, bounded and unconfirmed without truncating a long identifier', () => {
+		expect(localIdentifierProposals('COMPRESSEUR MPN 4010393 TC-AC 240/50/10 4010393')).toEqual(['4010393', '240/50/10']);
+		expect(localIdentifierProposals('A123456789012345678901234567890 12 bar')).toEqual([]);
+		expect(localIdentifierProposals(Array.from({ length: 30 }, (_, index) => `MPN-${index}`).join(' '))).toHaveLength(16);
+		expect(localIdentifierProposals(' '.repeat(32_768) + '4010393')).toEqual([]);
+	});
+
 	it('matches only a confirmed catalog MPN or valid EAN', () => {
 		expect(identifyProducts('4010393', compressors, tools)[0]?.product.id).toBe('einhell-tc-ac-240-50-10-of');
 		expect(identifyProducts('4006825597295', compressors, tools)[0]?.matchedBy).toBe('ean');
