@@ -292,48 +292,37 @@ jobs:
           DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
           DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
         run: |
-          [[ "$DEPLOY_HOST" =~ ^[A-Za-z0-9.-]+$ ]]
-          [[ "$DEPLOY_KNOCK_PORTS" =~ ^[0-9]{1,5}(\ [0-9]{1,5})*$ ]]
-          [[ "$DEPLOY_PATH" == "/var/www/html/compatair" ]]
+          set -Eeuo pipefail
+          [[ "$DEPLOY_HOST" =~ ^[A-Za-z0-9.-]+$ ]] || exit 2
+          [[ "$DEPLOY_KNOCK_PORTS" =~ ^[0-9]{1,5}(\ [0-9]{1,5})*$ ]] || exit 2
+          [[ "$DEPLOY_PORT" =~ ^[0-9]{1,5}$ ]] || exit 2
+          [[ "$DEPLOY_USER" =~ ^[a-z_][a-z0-9_-]*$ ]] || exit 2
+          [[ "$DEPLOY_PATH" == "/var/www/html/compatair" ]] || exit 2
+          [[ "$GITHUB_SHA" =~ ^[0-9a-f]{40}$ ]] || exit 2
           remote="${DEPLOY_USER}@${DEPLOY_HOST}"
           remote_dir="/home/${DEPLOY_USER}/compatair-deploy"
 
-          knock_server() {
-            read -ra knock_ports <<< "$DEPLOY_KNOCK_PORTS"
-            for port in "${knock_ports[@]}"; do
-              nc -z -w 1 "$DEPLOY_HOST" "$port" || true
-              sleep 1
-            done
-          }
+          for file in "compatair-${GITHUB_SHA}.tar.xz" "compatair-${GITHUB_SHA}.tar.xz.sha256" "compatair-admin-${GITHUB_SHA}.tar.gz" "compatair-admin-${GITHUB_SHA}.tar.gz.sha256" scripts/deploy-remote.sh; do
+            [[ -f "$file" && ! -L "$file" ]] || exit 2
+          done
 
-          retry_after_knock() {
-            local label=$1
-            shift
-            for attempt in 1 2 3; do
-              knock_server
-              if "$@"; then
-                return 0
-              fi
-              if (( attempt == 3 )); then
-                echo "::error::${label} a échoué après ${attempt} tentatives de port-knocking et connexion." >&2
-                return 1
-              fi
-              echo "::warning::${label} a échoué à la tentative ${attempt}; nouvel essai avec une séquence de port-knocking fraîche." >&2
-              sleep $((attempt * 5))
-            done
-          }
+          # One knock sequence and one SSH connection for transfer and activation.
+          # A transport failure requires an explicit operator-authorized rerun.
+          read -ra knock_ports <<< "$DEPLOY_KNOCK_PORTS"
+          for port in "${knock_ports[@]}"; do
+            nc -z -w 1 "$DEPLOY_HOST" "$port" || true
+            sleep 1
+          done
 
-          ssh_options=(-i "$HOME/.ssh/id_ed25519" -p "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=15 -o ConnectionAttempts=1 -o ServerAliveInterval=10 -o ServerAliveCountMax=2)
-          scp_options=(-i "$HOME/.ssh/id_ed25519" -P "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=15 -o ConnectionAttempts=1 -o ServerAliveInterval=10 -o ServerAliveCountMax=2)
+          ssh_options=(-T -i "$HOME/.ssh/id_ed25519" -p "$DEPLOY_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=15 -o ConnectionAttempts=1 -o ControlMaster=no -o ControlPath=none -o ServerAliveInterval=10 -o ServerAliveCountMax=2)
 
-          retry_after_knock "Préparation du répertoire distant" ssh "${ssh_options[@]}" "$remote" "install -d -m 700 '$remote_dir'"
-          retry_after_knock "Transfert des archives" scp "${scp_options[@]}" \
+          echo "Transfert et activation : une seule tentative de connexion SSH, sans relance automatique."
+          tar -cf - \
             "compatair-${GITHUB_SHA}.tar.xz" "compatair-${GITHUB_SHA}.tar.xz.sha256" \
             "compatair-admin-${GITHUB_SHA}.tar.gz" "compatair-admin-${GITHUB_SHA}.tar.gz.sha256" \
-            scripts/deploy-remote.sh \
-            "${remote}:${remote_dir}/"
-          retry_after_knock "Activation de la release" ssh "${ssh_options[@]}" "$remote" \
-            "cd '$remote_dir' && sha256sum --check 'compatair-admin-${GITHUB_SHA}.tar.gz.sha256' && tar -xzf 'compatair-admin-${GITHUB_SHA}.tar.gz' && bash '$remote_dir/deploy-remote.sh' '$remote_dir/compatair-${GITHUB_SHA}.tar.xz' '$remote_dir/compatair-${GITHUB_SHA}.tar.xz.sha256' '$DEPLOY_PATH' '$GITHUB_SHA'"
+            -C scripts deploy-remote.sh | \
+            ssh "${ssh_options[@]}" "$remote" \
+              "set -eu; umask 022; install -d -m 700 '$remote_dir' && cd '$remote_dir' && tar -xf - --no-same-owner --no-same-permissions && sha256sum --check 'compatair-admin-${GITHUB_SHA}.tar.gz.sha256' && tar -xzf 'compatair-admin-${GITHUB_SHA}.tar.gz' && bash '$remote_dir/deploy-remote.sh' '$remote_dir/compatair-${GITHUB_SHA}.tar.xz' '$remote_dir/compatair-${GITHUB_SHA}.tar.xz.sha256' '$DEPLOY_PATH' '$GITHUB_SHA'"
 
       - name: Verify live HTTPS surface
         env:

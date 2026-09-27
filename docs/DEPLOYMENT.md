@@ -2,6 +2,8 @@
 
 La production est déployée uniquement par `.github/workflows/deploy-production.yml` après un push sur `main`. Une branche ou une pull request ne peut pas accéder aux secrets de déploiement.
 
+Le transfert et l’activation utilisent une seule connexion SSH après une seule séquence de port-knocking. Aucun nouvel essai automatique n’est effectué : après un échec de transport, une relance attend la confirmation explicite de l’opérateur que l’accès est ouvert. Les contrôles de sommes de contrôle, l’activation atomique et le retour arrière restent exécutés dans cette session.
+
 ## Topologie retenue
 
 - racine Apache générale : `/var/www/html` ;
