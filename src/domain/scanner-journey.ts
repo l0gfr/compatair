@@ -30,7 +30,7 @@ export function scannerCompressorDataGap(compressor: Pick<Compressor, 'fadCurve'
 }
 
 export function scannerConfigurationForTool(tool: ToolProfile): PassportConfiguration | undefined {
-	if (tool.demandModel !== 'fixed-flow') return undefined;
+	if (tool.demandModel !== 'fixed-flow' || tool.airflowBasis === 'average') return undefined;
 	return parsePassportConfiguration({
 		demands: [{
 			model: 'fixed-flow',

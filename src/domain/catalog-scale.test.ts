@@ -16,7 +16,7 @@ describe('bounded catalog operations', () => {
 	});
 
 	const expected = { catalogVersion: 'a'.repeat(64), compressorId: 'c', toolId: 't' };
-	const decision = { catalogVersion: expected.catalogVersion, verdictVersion: 'b'.repeat(64), calculationVersion: '1.4.0', input: { compressorId: 'c', toolId: 't' }, engine_evaluation: { compressorId: 'c', toolId: 't', verdict: 'insufficient_data', confidence: 'low', limitingFactor: 'data' } };
+	const decision = { catalogVersion: expected.catalogVersion, verdictVersion: 'b'.repeat(64), calculationVersion: '1.4.1', input: { compressorId: 'c', toolId: 't' }, engine_evaluation: { compressorId: 'c', toolId: 't', verdict: 'insufficient_data', confidence: 'low', limitingFactor: 'data' } };
 	it('accepts an explicitly unavailable flow without inventing a value', () => {
 		expect(validatePublishedDecision(decision, expected).engine_evaluation).not.toHaveProperty('availableFadLpm');
 	});

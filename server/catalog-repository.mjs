@@ -165,7 +165,7 @@ export function openCatalogRepository(path) {
 }
 
 export function compactProductMatch({ type, item }) {
- return { id: item.id, type, title: item.label ?? `${item.brand} ${item.model}`, brand: item.brand, model: item.model, url: productUrl(type, item), identifiers: identifierValues(item), ...(type === 'tool' ? { demand: { demandModel: item.demandModel, ...(item.workingPressureBar?.typical ? { pressure: item.workingPressureBar.typical } : {}), ...(item.airflowLpm ? { airflow: item.airflowLpm.typical } : {}), ...(item.airPerActionLiters ? { airPerAction: item.airPerActionLiters, actionLabel: item.actionLabel } : {}) } } : {}) };
+ return { id: item.id, type, title: item.label ?? `${item.brand} ${item.model}`, brand: item.brand, model: item.model, url: productUrl(type, item), identifiers: identifierValues(item), ...(type === 'tool' ? { demand: { demandModel: item.demandModel, ...(item.workingPressureBar?.typical ? { pressure: item.workingPressureBar.typical } : {}), ...(item.airflowLpm ? { airflow: item.airflowLpm.typical, ...(item.airflowBasis ? { airflowBasis: item.airflowBasis } : {}) } : {}), ...(item.airPerActionLiters ? { airPerAction: item.airPerActionLiters, actionLabel: item.actionLabel } : {}) } } : {}) };
 }
 
 export function repositoryCatalog(repository) {

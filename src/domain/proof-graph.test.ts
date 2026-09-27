@@ -28,6 +28,14 @@ describe('interactive proof graph', () => {
 		expect(simulation.change).toContain('simulé');
 	});
 
+	it('labels an average consumption and never preloads it as a continuous demand', () => {
+		const averageTool = tools.find((item) => item.id === 'm7-nc-4255q')!;
+		const averageGraph = createProofGraph(compressor, averageTool, { catalogVersion: catalog.catalogVersion, verdictVersion: verdicts.verdictVersion, calculationVersion: verdicts.calculationVersion, verifiedAt: CATALOG_VERIFIED_AT });
+		expect(averageGraph.result.verdict).toBe('insufficient_data');
+		expect(averageGraph.simulationDefaults.toolAirflowLpm).toBeUndefined();
+		expect(averageGraph.nodes.some((node) => node.value.includes('en moyenne'))).toBe(true);
+	});
+
 	it('rejects invalid correction values', () => {
 		expect(() => simulateProofCorrection(compressor, tool, 'safety-margin', 101)).toThrow('100 %');
 		expect(() => simulateProofCorrection(compressor, tool, 'tool-airflow', 0)).toThrow('strictement positif');

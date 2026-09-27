@@ -138,6 +138,7 @@ const fixedFlowDemandSchema = z.object({
 	demandModel: z.literal('fixed-flow'),
 	workingPressureBar: z.object({ min: z.number().positive(), typical: z.number().positive(), max: z.number().positive() }),
 	airflowLpm: z.object({ min: z.number().positive(), typical: z.number().positive(), max: z.number().positive() }),
+	airflowBasis: z.literal('average').optional(),
 }).superRefine((demand, context) => {
 	if (demand.workingPressureBar.min > demand.workingPressureBar.typical || demand.workingPressureBar.typical > demand.workingPressureBar.max) context.addIssue({ code: 'custom', path: ['workingPressureBar'], message: 'La pression doit respecter min ≤ nominale ≤ max.' });
 	if (demand.airflowLpm.min > demand.airflowLpm.typical || demand.airflowLpm.typical > demand.airflowLpm.max) context.addIssue({ code: 'custom', path: ['airflowLpm'], message: 'Le débit doit respecter min ≤ nominal ≤ max.' });

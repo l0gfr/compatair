@@ -12,7 +12,7 @@ const result = (verdict: SizingResult['verdict'], recommendedFadLpm = 125): Sizi
 	hypotheses: [],
 	warnings: [],
 	flowBasis: 'documented-continuous',
-	calculationVersion: '1.4.0',
+	calculationVersion: '1.4.1',
 });
 
 const candidate = (id: string, availableFadLpm: number | undefined, confidence: 'A' | 'B' | 'C' | 'D' = 'A', verdict: SizingResult['verdict'] = 'continuous'): DecisionCandidate => ({

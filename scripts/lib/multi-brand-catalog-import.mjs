@@ -31,11 +31,12 @@ const hosts = new Set(['finicompressors.com', 'web.fiac.it', 's3.eu-west-1.amazo
 const slug = (s) => s.normalize('NFD').replaceAll(/\p{Diacritic}/gu, '').toLowerCase().replaceAll(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const format = (n) => n.toLocaleString('fr-FR', { maximumFractionDigits: 3 });
 function sourceFor(snapshot, sourceId) {
-	if (snapshot.schemaVersion !== 1 || snapshot.observedAt !== '2026-09-26') throw new Error('Lot non revu');
+	if (snapshot.schemaVersion !== 1 || !['2026-09-26', '2026-09-27'].includes(snapshot.observedAt)) throw new Error('Lot non revu');
 	const source = snapshot.sources.find(s => s.id === sourceId);
 	if (!source || !/^[a-f0-9]{64}$/.test(source.sha256) || source.observedAt !== snapshot.observedAt) throw new Error('Preuve versionnée absente');
 	const url = new URL(source.url);
-	if (url.protocol !== 'https:' || !hosts.has(url.hostname) || url.username || url.password || url.port || url.search || url.hash) throw new Error('Source officielle invalide');
+	const additionalHost = snapshot.observedAt === '2026-09-27' && ['www.stuermer-machines.com', 'www.nuair.pl', 'prebena.de', 'www.mighty-seven.com', 'cms.mirka.com'].includes(url.hostname);
+	if (url.protocol !== 'https:' || (!hosts.has(url.hostname) && !additionalHost) || url.username || url.password || url.port || url.search || url.hash) throw new Error('Source officielle invalide');
 	if (url.hostname === 's3.eu-west-1.amazonaws.com' && !url.pathname.startsWith('/s37.lacme.com/crm/Catalogues/')) throw new Error('Catalogue Lacmé non reconnu');
 	if (['shop.fiac.it', 'shop.abacaircompressors.com'].includes(url.hostname) && !/^\/en-(IT|INT|FR)\/products\/\d{10}(?:\/[a-z0-9-]+)?$/.test(url.pathname)) throw new Error('Fiche officielle non reconnue');
 	if (url.hostname === 'shinanoinc.com' && !/^\/wp-content\/uploads\/SHINANO_(General-Catalog|Industrial-Air-Tools)_2025\.pdf$/.test(url.pathname)) throw new Error('Catalogue Shinano non revu');
@@ -45,7 +46,7 @@ function sourceFor(snapshot, sourceId) {
 function context(snapshot, row) {
 	const source = sourceFor(snapshot, row.sourceId);
 	const id = slug(`${row.brand}-${row.model}${row.idSuffix ? `-${row.idSuffix}` : ''}`);
-	const evidenceId = slug(`${row.brand}-${row.mpn}-20260926`);
+	const evidenceId = slug(`${row.brand}-${row.mpn}-${snapshot.observedAt.replaceAll('-', '')}`);
 	const sourceUrl = `${source.url}${row.page ? `#page=${row.page}` : ''}`;
 	const evidence = [{ id: evidenceId, sourceUrl, sourceLabel: `${source.label}${row.page ? `, p. ${row.page}` : ''}, réf. ${row.mpn}`, sourceType: 'manufacturer', retrievedAt: snapshot.observedAt, confidence: 'A', notes: row.flowBasis }];
 	return { id, evidenceId, evidence, source, sourceUrl };

@@ -8,6 +8,7 @@ export function isFixedFlowTool(tool: ToolProfile): tool is FixedFlowTool {
 
 export function toolDemandLabel(tool: ToolProfile): string {
 	if (tool.demandModel === 'fixed-flow') {
+		if (tool.airflowBasis === 'average') return `${tool.airflowLpm.typical} L/min en moyenne`;
 		return tool.airflowLpm.min === tool.airflowLpm.max
 			? `${tool.airflowLpm.typical} L/min`
 			: `${tool.airflowLpm.min} à ${tool.airflowLpm.max} L/min`;

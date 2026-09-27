@@ -44,7 +44,7 @@ const compressorSchema = strict({
 }, ['id', 'slug', 'brand', 'model', 'tankLiters', 'maxPressureBar', 'fadCurve', 'oilType', 'confidence', 'image', 'editorial', 'specifications', 'evidence', 'fieldSources', 'notes']);
 const toolSchema = strict({
 	...productBase, demandModel: { type: 'string', enum: ['fixed-flow', 'per-action', 'variable-volume'] }, workingPressureBar: rangeSchema,
-	airflowLpm: rangeSchema, airPerActionLiters: number, actionLabel: string, demandExplanation: string, connectorSize: string,
+	airflowLpm: rangeSchema, airflowBasis: { const: 'average' }, airPerActionLiters: number, actionLabel: string, demandExplanation: string, connectorSize: string,
 	usagePattern: { type: 'string', enum: ['burst', 'intermittent', 'continuous'] }, dutyFactor: number,
 	filtrationRequirement: string, lubricationRequirement: string, recommendedHose: hoseSchema, minimumCompressorPowerKw: number,
 }, ['id', 'slug', 'categoryId', 'category', 'label', 'brand', 'model', 'demandModel', 'workingPressureBar', 'confidence', 'image', 'editorial', 'specifications', 'evidence', 'fieldSources', 'notes']);

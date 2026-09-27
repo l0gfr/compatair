@@ -14,6 +14,16 @@ function createTestCore(catalogValue: any, offers?: any, options: any = {}) {
 }
 const core = createTestCore(catalog);
 describe('MCP core', () => {
+	it('keeps both a single average-consumption tool and a complete system indeterminate', () => {
+		const compressorId = 'atlas-copco-lz-10-10-bm';
+		const toolId = 'm7-nc-4255q';
+		const single: any = core.handle({ jsonrpc: '2.0', id: 'average-single', method: 'tools/call', params: { name: 'check_compatibility', arguments: { compressorId, toolId } } });
+		expect(single.result.structuredContent.compatibility.verdict).toBe('insufficient_data');
+		const system: any = core.handle({ jsonrpc: '2.0', id: 'average-system', method: 'tools/call', params: { name: 'build_complete_air_system', arguments: { compressorId, toolIds: [toolId] } } });
+		expect(system.result.structuredContent.air_supply_verdict.verdict).toBe('insufficient_data');
+		expect(system.result.structuredContent.airgraph.nodes.some((node: any) => node.type === 'flow_requirement')).toBe(false);
+		expect(system.result.structuredContent.airgraph.edges.some((edge: any) => edge.relation === 'requires_flow')).toBe(false);
+	});
 	it('negotiates the current protocol and capabilities', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-11-25' } }); expect(response.result.protocolVersion).toBe('2025-11-25'); expect(response.result.serverInfo.version).toBe('3.0.0'); expect(response.result.capabilities.tools).toBeDefined(); });
 	it('negotiates a supported legacy protocol without lying to the client', () => { const response: any = core.handle({ jsonrpc: '2.0', id: 15, method: 'initialize', params: { protocolVersion: '2025-06-18' } }); expect(response.result.protocolVersion).toBe('2025-06-18'); });
 	it('lists a compact decision core and separates extended and legacy tools', () => {
@@ -43,7 +53,7 @@ describe('MCP core', () => {
 	});
 	it('sizes a per-action demand only from an explicit cadence', () => {
 		const response: any = core.handle({ jsonrpc: '2.0', id: 5, method: 'tools/call', params: { name: 'size_compressor', arguments: { demands: [{ model: 'per-action', litersPerAction: .66, actionsPerMinute: 30, pressureBar: 6.3 }] } } });
-		expect(response.result.structuredContent.engineVersion).toBe('1.4.0');
+		expect(response.result.structuredContent.engineVersion).toBe('1.4.1');
 		expect(response.result.structuredContent.sizing.peakFlowLpm).toBeCloseTo(19.8, 10);
 		expect(response.result.structuredContent.sizing.flowBasis).toBe('derived-average');
 	});

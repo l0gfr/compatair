@@ -273,7 +273,7 @@ if (mcpEnabled) {
 		assert(response.status === 200, `HTTP catalogue attendu 200, reçu ${response.status}`);
 		const result = JSON.parse(body);
 		assert(result.items?.some(item => item.id === 'einhell-tc-pe-150'), 'référence exacte absente de l’index');
-		assert(result.calculationVersion === '1.4.0' && /^[a-f0-9]{64}$/.test(result.catalogVersion), 'version de recherche incohérente');
+		assert(result.calculationVersion === '1.4.1' && /^[a-f0-9]{64}$/.test(result.catalogVersion), 'version de recherche incohérente');
 	});
 	await check('lecture ciblée versionnée', '/api/v1/search/products?ids=einhell-tc-pe-150', ({ body, response }) => {
 		assert(response.status === 200, `HTTP références attendu 200, reçu ${response.status}`);

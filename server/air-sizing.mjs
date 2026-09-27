@@ -1,6 +1,6 @@
 // Pure numerical core shared by the browser, static exports and the Node server.
 // Callers validate and normalize input at their boundary; no I/O or environment state here.
-export const CALCULATION_VERSION = '1.4.0';
+export const CALCULATION_VERSION = '1.4.1';
 export const STANDARD_ATMOSPHERE_BAR = 1.01325;
 function perActionAverageFlow(litersPerAction, actionsPerMinute, quantity) { return litersPerAction * actionsPerMinute * quantity; }
 function inflationFreeAirLiters(volumeLiters, initialGaugeBar, targetGaugeBar, quantity) { return volumeLiters * quantity * (targetGaugeBar - initialGaugeBar) / STANDARD_ATMOSPHERE_BAR; }

@@ -45,6 +45,11 @@ export function evaluateCompatibility(compressor, tool, input = {}) {
 			: tool.demandExplanation;
 		return { verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data', warnings: [warning], calculationVersion: CALCULATION_VERSION };
 	}
+	if (tool.airflowBasis === 'average') return {
+		verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data',
+		warnings: ['Le fabricant publie uniquement une consommation moyenne. Le débit en charge et les conditions du cycle sont nécessaires pour valider un usage continu ; aucune conversion vers un débit maximal n’est supposée.'],
+		calculationVersion: CALCULATION_VERSION,
+	};
 	const fadResolution = resolveAvailableFad(compressor, tool.workingPressureBar.typical);
 	const usableResolution = ['C', 'D'].includes(compressor.confidence) ? undefined : fadResolution;
 	const usableFad = usableResolution?.litersPerMinute;

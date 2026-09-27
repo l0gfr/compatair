@@ -285,7 +285,7 @@ const commercialOffers = activeOffers
 	const toolDatalist = document.querySelector<HTMLDataListElement>('#calculator-tools');
 	const compressorDatalist = document.querySelector<HTMLDataListElement>('#calculator-compressors');
 	function setDemandData(target: HTMLElement, source: Record<string, string | number | undefined> = {}) {
-		for (const key of ['demandModel', 'airflow', 'pressure', 'airPerAction', 'actionLabel']) {
+		for (const key of ['demandModel', 'airflow', 'airflowBasis', 'pressure', 'airPerAction', 'actionLabel']) {
 			const value = source[key]; if (value === undefined) delete target.dataset[key]; else target.dataset[key] = String(value);
 		}
 	}
@@ -465,6 +465,8 @@ const commercialOffers = activeOffers
 		const note = row.querySelector<HTMLElement>('[data-demand-note]')!;
 		note.textContent = !demandModel
 			? 'Commencez à saisir puis choisissez une référence exacte dans les suggestions.'
+			: selected.dataset.airflowBasis === 'average'
+			? 'Consommation moyenne : demandez le débit en charge et les conditions du cycle au fabricant. Le dimensionnement reste indéterminé.'
 			: demandModel === 'fixed-flow'
 			? `${selected.dataset.airflow} L/min documentés à ${selected.dataset.pressure} bar.`
 			: demandModel === 'per-action'
@@ -538,7 +540,7 @@ const commercialOffers = activeOffers
 			if (!tool) throw new Error('Sélectionnez une référence d’outil dans les suggestions.');
 			const quantity = Number(row.querySelector<HTMLInputElement>('[data-quantity]')!.value);
 			if (!Number.isInteger(quantity) || quantity < 1 || quantity > 20) throw new Error('Le nombre d’outils doit être compris entre 1 et 20.');
-			if (tool.demandModel === 'fixed-flow') { const dutyFactor = Number(row.querySelector<HTMLSelectElement>('[data-duty]')!.value); if (![.1, .3, .6, 1].includes(dutyFactor)) throw new Error('La fréquence sélectionnée est invalide.'); return { model: 'fixed-flow' as const, id, flowLpm: tool.airflowLpm.typical, pressureBar: tool.workingPressureBar.typical, quantity, dutyFactor }; }
+			if (tool.demandModel === 'fixed-flow') { if (tool.airflowBasis === 'average') throw new Error('Cette fiche publie une consommation moyenne. Demandez le débit en charge et les conditions du cycle au fabricant avant de dimensionner le compresseur.'); const dutyFactor = Number(row.querySelector<HTMLSelectElement>('[data-duty]')!.value); if (![.1, .3, .6, 1].includes(dutyFactor)) throw new Error('La fréquence sélectionnée est invalide.'); return { model: 'fixed-flow' as const, id, flowLpm: tool.airflowLpm.typical, pressureBar: tool.workingPressureBar.typical, quantity, dutyFactor }; }
 			if (tool.demandModel === 'per-action') {
 				const actionsPerMinute = Number(row.querySelector<HTMLInputElement>('[data-cadence]')!.value);
 				if (!Number.isFinite(actionsPerMinute) || actionsPerMinute <= 0 || actionsPerMinute > 10_000) throw new Error(`Saisissez une cadence valide pour ${tool.label}.`);

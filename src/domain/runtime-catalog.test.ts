@@ -15,11 +15,12 @@ describe('runtime catalog', () => {
 		expect(runtime.compressors[0]).not.toHaveProperty('editorial');
 		expect(runtime.tools[0].fieldSources).toEqual(expect.any(Object));
 		expect(runtime.tools[0]).not.toHaveProperty('notes');
-		expect(runtimeCatalogSchema.parse(runtime)).toEqual(runtime);
+		const browserBatch = { ...runtime, compressors: runtime.compressors.slice(0, 50), tools: runtime.tools.slice(0, 50) };
+		expect(runtimeCatalogSchema.parse(browserBatch)).toEqual(browserBatch);
 	});
 
 	it('rejects an untrusted or incomplete runtime snapshot', () => {
-		const runtime = createRuntimeCatalog(compressors, tools, CATALOG_VERIFIED_AT, catalogVersion);
+		const runtime = createRuntimeCatalog(compressors.slice(0, 50), tools.slice(0, 50), CATALOG_VERIFIED_AT, catalogVersion);
 		const invalid = structuredClone(runtime);
 		invalid.compressors[0].evidence[0].sourceUrl = 'javascript:alert(1)';
 		expect(() => runtimeCatalogSchema.parse(invalid)).toThrow();
@@ -54,8 +55,8 @@ describe('runtime catalog', () => {
 		expect(() => runtimeCatalogSchema.parse({ ...runtime, tools: Array.from({ length: 4001 }, () => runtime.tools[0]) })).toThrow();
 	});
 
-	it('loads and validates the same-origin execution snapshot', async () => {
-		const runtime = createRuntimeCatalog(compressors, tools, CATALOG_VERIFIED_AT, catalogVersion);
+	it('loads and validates a bounded same-origin execution snapshot', async () => {
+		const runtime = createRuntimeCatalog(compressors.slice(0, 50), tools.slice(0, 50), CATALOG_VERIFIED_AT, catalogVersion);
 		const fetchMock = vi.fn().mockResolvedValue(new Response(JSON.stringify(runtime)));
 		vi.stubGlobal('fetch', fetchMock);
 		await expect(loadRuntimeCatalog()).resolves.toEqual(runtime);

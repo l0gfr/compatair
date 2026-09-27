@@ -2,11 +2,16 @@ import { readFile, writeFile, access } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import sharp from 'sharp';
 import { buildTechnicalExpansion } from './lib/technical-expansion-2026.mjs';
+import { buildCatalogExpansion } from './lib/catalog-expansion-2026-09-27.mjs';
 import { loadCatalogProducts } from './lib/catalog-tooling.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const readSnapshot = async name => JSON.parse(await readFile(resolve(root, `src/data/imports/${name}-additional-2026-09-26.json`)));
-const expansion = buildTechnicalExpansion(await readSnapshot('technical-compressors'), await readSnapshot('technical-tools'));
+const args = process.argv.slice(2);
+if (args.length && (args.length !== 1 || args[0] !== '--batch=2026-09-27')) throw new Error('Lot non reconnu');
+const expansion = args.length
+ ? buildCatalogExpansion(...await Promise.all(['compressors', 'tools'].map(async kind => JSON.parse(await readFile(resolve(root, `src/data/imports/catalog-${kind}-2026-09-27.json`))))))
+ : buildTechnicalExpansion(await readSnapshot('technical-compressors'), await readSnapshot('technical-tools'));
 // Check the complete batch before writing any file. Re-running an identical import is allowed.
 for (const kind of ['compressors', 'tools']) {
  const { products } = await loadCatalogProducts(root, kind);
@@ -40,7 +45,7 @@ for (const kind of ['compressors', 'tools']) {
 			point ? ['DÉBIT RESTITUÉ', format(point.litersPerMinute), `L/min à ${format(point.pressureBar)} bar`] : ['FAD À PRESSION CONNUE', 'Non établi', 'Compatibilité indéterminée'],
 			['CUVE', format(p.tankLiters), 'litres'], ['PRESSION MAX.', format(p.maxPressureBar), 'bar'],
 		] : [
-			[p.demandModel === 'per-action' ? 'AIR PAR COUP' : 'CONSOMMATION', format(p.airPerActionLiters ?? p.airflowLpm.typical), p.demandModel === 'per-action' ? 'litres / coup' : 'L/min publiés'],
+			[p.demandModel === 'per-action' ? 'AIR PAR COUP' : p.airflowBasis === 'average' ? 'CONSOMMATION MOY.' : 'CONSOMMATION', format(p.airPerActionLiters ?? p.airflowLpm.typical), p.demandModel === 'per-action' ? 'litres / coup' : 'L/min publiés'],
 			['PRESSION RETENUE', format(p.workingPressureBar.typical), 'bar'], ['RÉFÉRENCE', p.mpn, 'fabricant'],
 		];
 		const displayName = p.model.length > 68 ? `${p.model.slice(0,65).trim()}…` : p.model;
@@ -62,4 +67,14 @@ for (const [variable, additions] of [['productSeoTitles', titles], ['toolUseSeoT
 	if (missing.length) seo = seo.replace(marker, `${marker}\n${missing.map(([id, title]) => `\t${JSON.stringify(id)}: ${JSON.stringify(title)},`).join('\n')}`);
 }
 await writeFile(seoPath, seo);
+const registryPath = resolve(root, 'src/data/reference-registry.ts');
+let registry = await readFile(registryPath, 'utf8');
+const registryMarker = "const laterObservations: Array<{ productId: string; mpn: string; observedAt: string; kind: 'added' | 'changed' }> = [";
+if (!registry.includes(registryMarker)) throw new Error('Registre des références absent');
+const newObservations = [...expansion.compressors, ...expansion.tools].filter(p => !registry.includes(`productId: ${JSON.stringify(p.id)},`));
+if (newObservations.length) {
+	const observedAt = args.length ? '2026-09-27' : '2026-09-26';
+	registry = registry.replace(registryMarker, `${registryMarker}\n${newObservations.map(p => `\t{ productId: ${JSON.stringify(p.id)}, mpn: ${JSON.stringify(p.mpn)}, observedAt: '${observedAt}', kind: 'added' },`).join('\n')}`);
+	await writeFile(registryPath, registry);
+}
 console.log(`${expansion.compressors.length} compresseurs et ${expansion.tools.length} outils importés, avec cartes techniques et titres explicites.`);

@@ -19,13 +19,13 @@
 - frontière produit explicite : aucune sauvegarde serveur dans la version gratuite ; la sauvegarde de plusieurs ateliers, les exports de dossiers et les alertes restent le périmètre envisagé d’une version professionnelle non disponible ;
 - verdicts `continuous`, `intermittent`, `incompatible` et `insufficient_data` ;
 - conversions, interpolation bornée, débit de pointe, débit moyen, réserve de cuve, récupération conditionnelle et version des formules ;
-- recherche globale, comparateur de deux ou trois modèles, pages par marque et pages par usage ; le périmètre compte 4 616 353 combinaisons explorables, dont 4 600 506 couples fixes calculables et 15 847 combinaisons paramétriques nécessitant des entrées utilisateur ;
+- recherche globale, comparateur de deux ou trois modèles, pages par marque et pages par usage ; le périmètre compte 6 083 253 combinaisons explorables, dont 5 975 409 couples fixes calculables et 107 844 combinaisons paramétriques nécessitant des entrées utilisateur ;
 - frontière SEO programmatique : aucune génération quadratique sous `/compatibilite/`, anciennes URL exactes migrées vers le calculateur et retraits inconnus servis en `410`, avec fiches et pages d’usage comme surfaces indexables ;
 - guides Astro validés par Zod, parcours Particuliers et Professionnels, quatre hubs métiers sans duplication d’article, glossaire sourcé, sommaires, statut de revue explicite et contenus associés ;
 - schémas d’offres, liste blanche des marchands, fraîcheur de 48 heures, redirection fermée et compteur agrégé ;
 - catalogue JSON normalisé par EAN/GTIN/MPN et SKU distributeur, familles de variantes, index de provenance et couverture champ par champ avec dénominateurs explicites ;
 - rôles de preuve séparant source primaire, corroboration indépendante et reprise secondaire marchande ; SLA public de fraîcheur par type de donnée ;
-- snapshot JSON du catalogue et manifeste des 4 600 506 couples fixes calculables, validation, checksums, détection des doublons et rapports de différences ;
+- snapshot JSON du catalogue et manifeste des 5 975 409 couples fixes calculables, validation, checksums, détection des doublons et rapports de différences ;
 - contribution facultative aux priorités du catalogue, agrégée sans événement brut, cookie, identifiant de navigateur ni adresse IP persistée ;
 - rapport privé de priorisation avec seuil minimal de cinq contributions par dimension, couverture pondérée par la demande observée et objectif opérationnel explicite de 80 % ;
 - funnel du calculateur agrégé sans URL, referrer, cookie ni identifiant, avec affichage, famille fermée, sélection et recalcul réussi de la recommandation contrefactuelle, rapport privé et contrôle de cohérence des taux ;

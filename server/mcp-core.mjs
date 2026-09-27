@@ -184,8 +184,8 @@ function compatibility(compressor, tool, safetyMargin = .25) {
 
 function evaluateSystem(compressor, selectedTools, mode = 'successive') {
 	const limitations = [];
-	if (selectedTools.some((tool) => tool.demandModel !== 'fixed-flow')) {
-		limitations.push('Au moins un outil ne publie pas un débit continu directement comparable ; une cadence ou un volume d’usage explicite est requis.');
+	if (selectedTools.some((tool) => tool.demandModel !== 'fixed-flow' || tool.airflowBasis === 'average')) {
+		limitations.push('Au moins un outil ne publie pas un débit continu directement comparable. Une consommation moyenne exige son cycle et son débit en charge ; une consommation par action ou par volume exige les paramètres d’usage.');
 		return { verdict: 'insufficient_data', limitingFactor: 'data', limitations, mode };
 	}
 	const requiredPressureBar = Math.max(...selectedTools.map((tool) => tool.workingPressureBar.typical));
@@ -216,7 +216,7 @@ function evaluateSystem(compressor, selectedTools, mode = 'successive') {
 }
 
 function systemCandidates(catalog, tools, mode, limit, excludedId) {
-	if (tools.some(tool => tool.demandModel !== 'fixed-flow')) return [];
+	if (tools.some(tool => tool.demandModel !== 'fixed-flow' || tool.airflowBasis === 'average')) return [];
 	const pressure = Math.max(...tools.map(tool => tool.workingPressureBar.typical));
 	const flow = mode === 'simultaneous' ? tools.reduce((sum, tool) => sum + tool.airflowLpm.typical, 0) : Math.max(...tools.map(tool => tool.airflowLpm.typical));
 	const products = catalog.repository ? catalog.repository.candidateCompressors(pressure, flow) : catalog.compressors ?? [];
@@ -330,7 +330,7 @@ function airGraph(compressor, selectedTools, evaluation, configurationId) {
 	];
 	const requirementNodes = selectedTools.flatMap((tool) => {
 		const nodes = [{ id: compatAirId('requirement', `${tool.id}:pressure`), type: 'pressure_requirement', value: tool.workingPressureBar.typical, unit: 'bar' }];
-		if (tool.demandModel === 'fixed-flow') nodes.push({ id: compatAirId('requirement', `${tool.id}:flow`), type: 'flow_requirement', value: tool.airflowLpm.typical, unit: 'L/min' });
+		if (tool.demandModel === 'fixed-flow' && tool.airflowBasis !== 'average') nodes.push({ id: compatAirId('requirement', `${tool.id}:flow`), type: 'flow_requirement', value: tool.airflowLpm.typical, unit: 'L/min' });
 		if (tool.usagePattern) nodes.push({ id: compatAirId('requirement', `${tool.id}:usage`), type: 'usage_profile', value: tool.usagePattern });
 		if (tool.recommendedHose) nodes.push({ id: compatAirId('requirement', `${tool.id}:hose`), type: 'hose_requirement', value: tool.recommendedHose });
 		if (tool.connectorSize) nodes.push({ id: compatAirId('requirement', `${tool.id}:connector`), type: 'connector_requirement', value: tool.connectorSize });
@@ -346,7 +346,7 @@ function airGraph(compressor, selectedTools, evaluation, configurationId) {
 	];
 	const requirementEdges = selectedTools.flatMap((tool) => [
 		{ from: compatAirId('tool', tool.id), to: compatAirId('requirement', `${tool.id}:pressure`), relation: 'requires_pressure' },
-		...(tool.demandModel === 'fixed-flow' ? [{ from: compatAirId('tool', tool.id), to: compatAirId('requirement', `${tool.id}:flow`), relation: 'requires_flow' }] : []),
+		...(tool.demandModel === 'fixed-flow' && tool.airflowBasis !== 'average' ? [{ from: compatAirId('tool', tool.id), to: compatAirId('requirement', `${tool.id}:flow`), relation: 'requires_flow' }] : []),
 		...(tool.usagePattern ? [{ from: compatAirId('tool', tool.id), to: compatAirId('requirement', `${tool.id}:usage`), relation: 'has_usage_profile' }] : []),
 		...(tool.recommendedHose ? [{ from: compatAirId('tool', tool.id), to: compatAirId('requirement', `${tool.id}:hose`), relation: 'requires_hose' }] : []),
 		...(tool.connectorSize ? [{ from: compatAirId('tool', tool.id), to: compatAirId('requirement', `${tool.id}:connector`), relation: 'requires_connector' }] : []),

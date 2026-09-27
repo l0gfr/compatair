@@ -1,0 +1,111 @@
+const product = {
+	"id": "aircraft-bps-soft-pro",
+	"slug": "aircraft-bps-soft-pro",
+	"brand": "Aircraft",
+	"model": "BPS Soft PRO",
+	"mpn": "2102130",
+	"categoryId": "soufflette",
+	"category": "soufflette",
+	"label": "Aircraft BPS Soft PRO",
+	"demandModel": "fixed-flow",
+	"workingPressureBar": {
+		"min": 6,
+		"typical": 6,
+		"max": 6
+	},
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/aircraft-bps-soft-pro.webp",
+		"alt": "Repères techniques Aircraft BPS Soft PRO, référence 2102130",
+		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/bps-soft-pro-2102130/",
+		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+	},
+	"editorial": {
+		"overview": "Aircraft BPS Soft PRO, référence 2102130. Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Diamètre de sortie de buse : 1.5 mm. Masse approximative : 0.08 kg.",
+		"verifiedFacts": [
+			"Pression de travail publiée : 6 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
+			"Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
+			"Référence fabricant : 2102130.",
+			"Diamètre de sortie de buse : 1.5 mm.",
+			"Masse approximative : 0.08 kg.",
+			"Type indiqué par le fabricant : Air gun."
+		],
+		"limitations": [
+			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
+			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Condition de pression",
+			"value": "Pression de travail publiée : 6 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
+			"evidenceIds": [
+				"aircraft-2102130-20260927"
+			]
+		},
+		{
+			"label": "Condition de consommation",
+			"value": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
+			"evidenceIds": [
+				"aircraft-2102130-20260927"
+			]
+		},
+		{
+			"label": "Diamètre de sortie de buse",
+			"value": "1.5 mm",
+			"evidenceIds": [
+				"aircraft-2102130-20260927"
+			]
+		},
+		{
+			"label": "Masse approximative",
+			"value": "0.08 kg",
+			"evidenceIds": [
+				"aircraft-2102130-20260927"
+			]
+		},
+		{
+			"label": "Type indiqué par le fabricant",
+			"value": "Air gun",
+			"evidenceIds": [
+				"aircraft-2102130-20260927"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "aircraft-2102130-20260927",
+			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/bps-soft-pro-2102130/",
+			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2102130, réf. 2102130",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-27",
+			"confidence": "A",
+			"notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"aircraft-2102130-20260927"
+		],
+		"workingPressureBar": [
+			"aircraft-2102130-20260927"
+		],
+		"airflowLpm": [
+			"aircraft-2102130-20260927"
+		],
+		"airflowBasis": [
+			"aircraft-2102130-20260927"
+		]
+	},
+	"notes": [
+		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+	],
+	"airflowLpm": {
+		"min": 150,
+		"typical": 150,
+		"max": 150
+	},
+	"airflowBasis": "average"
+};
+
+export default product;
