@@ -145494,7 +145494,230 @@
         "confidence": "A",
         "notes": "Le débit restitué indiqué sur la fiche n’est pas accompagné d’une pression de mesure explicite. Il est conservé comme valeur publiée, sans l’assimiler à un point de FAD utilisable pour la compatibilité."
       }
+    },
+    {
+      "id": "corrected:metabo-db-10:metabo-604120000-official:2026-09-27",
+      "evidenceId": "metabo-604120000-official",
+      "productId": "metabo-db-10",
+      "productType": "tool",
+      "occurredAt": "2026-09-27",
+      "kind": "corrected",
+      "summary": "Migration Metabo : ancienne URL régionale en erreur 502, nouvelle page officielle et caractéristiques relues le 27 septembre 2026 ; EAN reliés aux fiches PDF actuelles.",
+      "fingerprint": "863d25e526110d880513925d8147cffd0c4d610e859edcb8cfe19822c6bd1a28",
+      "snapshot": {
+        "id": "metabo-604120000-official",
+        "sourceUrl": "https://www.metabo.com/de/de/maschinen/bohren-schrauben-meisseln-ruehren/bohrmaschinen/db-10-druckluft-bohrmaschine/604120000",
+        "sourceLabel": "Metabo, fiche officielle DB 10",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-27",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "corrected:metabo-dbf-457:metabo-601559000-official:2026-09-27",
+      "evidenceId": "metabo-601559000-official",
+      "productId": "metabo-dbf-457",
+      "productType": "tool",
+      "occurredAt": "2026-09-27",
+      "kind": "corrected",
+      "summary": "Migration Metabo : ancienne URL régionale en erreur 502, nouvelle page officielle et caractéristiques relues le 27 septembre 2026 ; EAN reliés aux fiches PDF actuelles.",
+      "fingerprint": "3496a2dcd7d421d2ed44e3a874addc8fdd0f2bb186fc3e801684de1ba082ba14",
+      "snapshot": {
+        "id": "metabo-601559000-official",
+        "sourceUrl": "https://www.metabo.com/de/de/maschinen/trennen-schleifen-fraesen/edelstahl/bandfeilen/dbf-457-druckluft-bandfeile/601559000",
+        "sourceLabel": "Metabo, fiche officielle DBF 457",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-27",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:metabo-dg-25-set:metabo-604116500-datasheet-20260927:2026-09-27",
+      "evidenceId": "metabo-604116500-datasheet-20260927",
+      "productId": "metabo-dg-25-set",
+      "productType": "tool",
+      "occurredAt": "2026-09-27",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6db20115de5ba8f7a9eaa1af966f9f8e104c1805ac931b6cb1547398957831d9",
+      "snapshot": {
+        "id": "metabo-604116500-datasheet-20260927",
+        "sourceUrl": "https://be.prod.metabo.com/download/de/de/pdf/20897",
+        "sourceLabel": "Metabo, fiche PDF officielle 604116500 (EAN)",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-27",
+        "confidence": "A",
+        "notes": "EAN vérifié dans la fiche PDF liée par la nouvelle page officielle."
+      }
+    },
+    {
+      "id": "corrected:metabo-dg-25-set:metabo-604116500-official:2026-09-27",
+      "evidenceId": "metabo-604116500-official",
+      "productId": "metabo-dg-25-set",
+      "productType": "tool",
+      "occurredAt": "2026-09-27",
+      "kind": "corrected",
+      "summary": "Migration Metabo : ancienne URL régionale en erreur 502, nouvelle page officielle et caractéristiques relues le 27 septembre 2026 ; EAN reliés aux fiches PDF actuelles.",
+      "fingerprint": "8517036b5c01010d2c14eac0fb02afd02bd53f63e1da6ac52f0fa69fd77eda2b",
+      "snapshot": {
+        "id": "metabo-604116500-official",
+        "sourceUrl": "https://www.metabo.com/de/de/maschinen/trennen-schleifen-fraesen/metallbearbeitung/geradschleifer/dg-25-set-druckluft-geradschleifer/604116500",
+        "sourceLabel": "Metabo, fiche officielle DG 25 Set",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-27",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:metabo-fsp-600-lvlp:metabo-601578000-datasheet-20260927:2026-09-27",
+      "evidenceId": "metabo-601578000-datasheet-20260927",
+      "productId": "metabo-fsp-600-lvlp",
+      "productType": "tool",
+      "occurredAt": "2026-09-27",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c620c8a57d03332d69def9b8eb60d76d79506200a93de2326b60c2ed5907f932",
+      "snapshot": {
+        "id": "metabo-601578000-datasheet-20260927",
+        "sourceUrl": "https://be.prod.metabo.com/download/at/de/pdf/20974",
+        "sourceLabel": "Metabo, fiche PDF officielle 601578000 (EAN)",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-27",
+        "confidence": "A",
+        "notes": "EAN vérifié dans la fiche PDF liée par la nouvelle page officielle."
+      }
+    },
+    {
+      "id": "corrected:metabo-fsp-600-lvlp:metabo-601578000-official:2026-09-27",
+      "evidenceId": "metabo-601578000-official",
+      "productId": "metabo-fsp-600-lvlp",
+      "productType": "tool",
+      "occurredAt": "2026-09-27",
+      "kind": "corrected",
+      "summary": "Migration Metabo : ancienne URL régionale en erreur 502, nouvelle page officielle et caractéristiques relues le 27 septembre 2026 ; EAN reliés aux fiches PDF actuelles.",
+      "fingerprint": "fc90a5391bb4cb336779916bd8019fa629c7f0d9acbf94ac2be03db23e31707c",
+      "snapshot": {
+        "id": "metabo-601578000-official",
+        "sourceUrl": "https://www.metabo.com/at/de/maschinen/druckluft/druckluft-werkzeuge/druckluft-farbspritzpistolen/fsp-600-lvlp-druckluft-farbspritzpistole/601578000",
+        "sourceLabel": "Metabo, fiche officielle FSP 600 LVLP",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-27",
+        "confidence": "A"
+      }
+    },
+    {
+      "id": "added:metabo-power-180-5-w-of:metabo-601531000-datasheet-20260927:2026-09-27",
+      "evidenceId": "metabo-601531000-datasheet-20260927",
+      "productId": "metabo-power-180-5-w-of",
+      "productType": "compressor",
+      "occurredAt": "2026-09-27",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7cfd155a4924692ee45eb0ba5bc1cd1fce0d7077c080e053be722097e585727f",
+      "snapshot": {
+        "id": "metabo-601531000-datasheet-20260927",
+        "sourceUrl": "https://be.prod.metabo.com/download/com/en/pdf/20712",
+        "sourceLabel": "Metabo, fiche PDF officielle 601531000 (EAN)",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-27",
+        "confidence": "A",
+        "notes": "EAN vérifié dans la fiche PDF liée par la nouvelle page officielle."
+      }
+    },
+    {
+      "id": "corrected:metabo-power-180-5-w-of:metabo-601531000-official:2026-09-27",
+      "evidenceId": "metabo-601531000-official",
+      "productId": "metabo-power-180-5-w-of",
+      "productType": "compressor",
+      "occurredAt": "2026-09-27",
+      "kind": "corrected",
+      "summary": "Migration Metabo : ancienne URL régionale en erreur 502, nouvelle page officielle et caractéristiques relues le 27 septembre 2026 ; EAN reliés aux fiches PDF actuelles.",
+      "fingerprint": "f8e77846c8d2b5db48ebef8d23b1a9f1d6230a628c51486082046eae26cc12fb",
+      "snapshot": {
+        "id": "metabo-601531000-official",
+        "sourceUrl": "https://www.metabo.com/com/en/tools/compressed-air/compressors/construction-site-compressors/power-180-5-w-of-compressor/601531000",
+        "sourceLabel": "Metabo, fiche produit officielle Power 180-5 W OF",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-27",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de la pression maximale."
+      }
+    },
+    {
+      "id": "added:metabo-power-250-10-w-of:metabo-601544000-datasheet-20260927:2026-09-27",
+      "evidenceId": "metabo-601544000-datasheet-20260927",
+      "productId": "metabo-power-250-10-w-of",
+      "productType": "compressor",
+      "occurredAt": "2026-09-27",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0c3840d990bc37ad6b7cf2ab4fae4687ea738674d50f0348ed9393b108c5da7b",
+      "snapshot": {
+        "id": "metabo-601544000-datasheet-20260927",
+        "sourceUrl": "https://be.prod.metabo.com/download/de/de/pdf/20728",
+        "sourceLabel": "Metabo, fiche PDF officielle 601544000 (EAN)",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-27",
+        "confidence": "A",
+        "notes": "EAN vérifié dans la fiche PDF liée par la nouvelle page officielle."
+      }
+    },
+    {
+      "id": "corrected:metabo-power-250-10-w-of:metabo-601544000-official:2026-09-27",
+      "evidenceId": "metabo-601544000-official",
+      "productId": "metabo-power-250-10-w-of",
+      "productType": "compressor",
+      "occurredAt": "2026-09-27",
+      "kind": "corrected",
+      "summary": "Migration Metabo : ancienne URL régionale en erreur 502, nouvelle page officielle et caractéristiques relues le 27 septembre 2026 ; EAN reliés aux fiches PDF actuelles.",
+      "fingerprint": "a99fc540105acdd259fac34496aebc43aa5209a1e45ca4366acda19f85cdf184",
+      "snapshot": {
+        "id": "metabo-601544000-official",
+        "sourceUrl": "https://www.metabo.com/de/de/maschinen/druckluft/kompressoren/baustellen-kompressoren/power-250-10-w-of-kompressor/601544000",
+        "sourceLabel": "Metabo, fiche officielle Power 250-10 W OF",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-27",
+        "confidence": "A",
+        "notes": "Débit effectif publié à 80 % de 10 bar."
+      }
+    },
+    {
+      "id": "added:metabo-rf-60:metabo-602233000-datasheet-20260927:2026-09-27",
+      "evidenceId": "metabo-602233000-datasheet-20260927",
+      "productId": "metabo-rf-60",
+      "productType": "tool",
+      "occurredAt": "2026-09-27",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "3bccf5bf27e3a995f3e4796be6eefb4317d02257a7e8b622ca318d826e3c6784",
+      "snapshot": {
+        "id": "metabo-602233000-datasheet-20260927",
+        "sourceUrl": "https://be.prod.metabo.com/download/com/en/pdf/21010",
+        "sourceLabel": "Metabo, fiche PDF officielle 602233000 (EAN)",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-27",
+        "confidence": "A",
+        "notes": "EAN vérifié dans la fiche PDF liée par la nouvelle page officielle."
+      }
+    },
+    {
+      "id": "corrected:metabo-rf-60:metabo-rf-60-manufacturer-2026:2026-09-27",
+      "evidenceId": "metabo-rf-60-manufacturer-2026",
+      "productId": "metabo-rf-60",
+      "productType": "tool",
+      "occurredAt": "2026-09-27",
+      "kind": "corrected",
+      "summary": "Migration Metabo : ancienne URL régionale en erreur 502, nouvelle page officielle et caractéristiques relues le 27 septembre 2026 ; EAN reliés aux fiches PDF actuelles.",
+      "fingerprint": "27cb37b13e20b2034541bf25ad94234b0a6e800acf55e11eb0cc9ae22f82c42b",
+      "snapshot": {
+        "id": "metabo-rf-60-manufacturer-2026",
+        "sourceUrl": "https://www.metabo.com/com/en/tools/compressed-air/compressors/construction-site-compressors/rf-60-compressed-air-tyre-inflation-and-pressure-gauge/602233000",
+        "sourceLabel": "Metabo, fiche officielle RF 60",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-27",
+        "confidence": "A"
+      }
     }
   ],
-  "historyVersion": "4012a0cd45ba67e61e8be322955de6062414df59bfb82ce6404c555ff720d805"
+  "historyVersion": "c40fde057af46d7e8ed0691970a8e7223bdca8cbbd4cb69492db18d194a01ec1"
 }

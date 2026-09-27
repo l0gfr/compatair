@@ -20,7 +20,7 @@ const product = {
   "image": {
     "src": "/images/products/metabo-rf-60.webp",
     "alt": "Pistolet de gonflage Metabo RF 60",
-    "sourceUrl": "https://uk.metabo.com/en/tools/compressed-air/compressed-air-tools/air-tyre-inflation-pressure-gauges/rf-60-602233000-compressed-air-tyre-inflation-pressure-gauge.html",
+    "sourceUrl": "https://www.metabo.com/com/en/tools/compressed-air/compressors/construction-site-compressors/rf-60-compressed-air-tyre-inflation-and-pressure-gauge/602233000",
     "sourceLabel": "Visuel officiel Metabo RF 60"
   },
   "editorial": {
@@ -58,15 +58,25 @@ const product = {
   ],
   "evidence": [
     {
+      "id": "metabo-602233000-datasheet-20260927",
+      "sourceUrl": "https://be.prod.metabo.com/download/com/en/pdf/21010",
+      "sourceLabel": "Metabo, fiche PDF officielle 602233000 (EAN)",
+      "sourceType": "manufacturer",
+      "retrievedAt": "2026-09-27",
+      "confidence": "A",
+      "notes": "EAN vérifié dans la fiche PDF liée par la nouvelle page officielle."
+    },
+    {
       "id": "metabo-rf-60-manufacturer-2026",
-      "sourceUrl": "https://uk.metabo.com/en/tools/compressed-air/compressed-air-tools/air-tyre-inflation-pressure-gauges/rf-60-602233000-compressed-air-tyre-inflation-pressure-gauge.html",
+      "sourceUrl": "https://www.metabo.com/com/en/tools/compressed-air/compressors/construction-site-compressors/rf-60-compressed-air-tyre-inflation-and-pressure-gauge/602233000",
       "sourceLabel": "Metabo, fiche officielle RF 60",
       "sourceType": "manufacturer",
-      "retrievedAt": "2026-07-20",
+      "retrievedAt": "2026-09-27",
       "confidence": "A"
     }
   ],
   "fieldSources": {
+    "ean": ["metabo-602233000-datasheet-20260927"],
     "model": [
       "metabo-rf-60-manufacturer-2026"
     ],

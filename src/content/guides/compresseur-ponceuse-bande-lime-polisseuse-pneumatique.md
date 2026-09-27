@@ -12,7 +12,7 @@ featured: false
 relatedCalculatorTool: chicago-pneumatic-cp9779
 relatedGuides: [compresseur-pour-ponceuse-pneumatique, debit-restitue-fad-vs-debit-aspire, diametre-longueur-flexible-air-comprime]
 sources:
-  - https://ch.metabo.com/de/maschinen/trennen-schleifen-fraesen/metallbearbeitung/bandfeilen/dbf-457-601559000-druckluft-bandfeile.html
+  - https://www.metabo.com/de/de/maschinen/trennen-schleifen-fraesen/edelstahl/bandfeilen/dbf-457-druckluft-bandfeile/601559000
   - https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/Druckluft-Kompetenz-Broschuere_2016.pdf
   - https://tools.cp.com/en/products/sanders/cp7269p-sku8941078691
   - https://tools.cp.com/en/products/sanders/cp9779-sku6151939779
@@ -112,7 +112,7 @@ Les retouches de petite surface font l’objet d’un dossier dédié : [mini-po
 
 ## Sources
 
-- [Metabo, fiche officielle DBF 457 601559000](https://ch.metabo.com/de/maschinen/trennen-schleifen-fraesen/metallbearbeitung/bandfeilen/dbf-457-601559000-druckluft-bandfeile.html)
+- [Metabo, fiche officielle DBF 457 601559000](https://www.metabo.com/de/de/maschinen/trennen-schleifen-fraesen/edelstahl/bandfeilen/dbf-457-druckluft-bandfeile/601559000)
 - [Metabo, brochure Air System, DBF 457](https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/Druckluft-Kompetenz-Broschuere_2016.pdf)
 - [Chicago Pneumatic, fiche officielle CP7269P](https://tools.cp.com/en/products/sanders/cp7269p-sku8941078691)
 - [Chicago Pneumatic, fiche officielle CP9779](https://tools.cp.com/en/products/sanders/cp9779-sku6151939779)

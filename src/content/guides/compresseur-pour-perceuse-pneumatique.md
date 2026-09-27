@@ -14,7 +14,7 @@ relatedGuides: [debit-restitue-fad-vs-debit-aspire, diametre-longueur-flexible-a
 sources:
   - https://tools.cp.com/en-au/products/drills/cp785-skuT022698
   - https://www.cp.com/content/dam/pim/itba/cp/technical-documents/KF140145.pdf
-  - https://ch.metabo.com/de/maschinen/bohren-schrauben-meisseln-ruehren/bohrmaschinen/db-10-604120000-druckluft-bohrmaschine.html
+  - https://www.metabo.com/de/de/maschinen/bohren-schrauben-meisseln-ruehren/bohrmaschinen/db-10-druckluft-bohrmaschine/604120000
 ---
 
 Une perceuse pneumatique ne se dimensionne ni avec la taille du mandrin, ni avec les litres de cuve, ni avec le seul débit aspiré du compresseur. Il faut la référence exacte, sa consommation d’air, sa pression de travail et les conditions de raccordement publiées. Deux perceuses de 10 mm présentes dans le catalogue CompatAir illustrent déjà un écart de 120 L/min.
@@ -30,7 +30,7 @@ Le compresseur doit délivrer au moins le besoin en air de la perceuse à une pr
 | [Metabo DB 10](/outils-pneumatiques/perceuse-pneumatique-metabo-db-10/) | **360 L/min** | **6,2 bar** | mandrin 3 à 10 mm, 1 800 tr/min, réversible, raccord 1/4 pouce |
 | [Chicago Pneumatic CP785](/outils-pneumatiques/perceuse-chicago-pneumatic-cp785/) | **8 L/s, soit 480 L/min en charge** | **6,3 bar de pression dynamique maximale** | mandrin 10 mm, 2 400 tr/min, non réversible, flexible intérieur minimal de 10 mm sur 5 m |
 
-Les 480 L/min de la CP785 résultent de la conversion exacte `8 × 60`. Sa [fiche actuelle Chicago Pneumatic](https://tools.cp.com/en-au/products/drills/cp785-skuT022698) sépare bien la consommation en charge de la consommation à vitesse libre, publiée à 9,4 L/s. La [fiche Metabo DB 10](https://ch.metabo.com/de/maschinen/bohren-schrauben-meisseln-ruehren/bohrmaschinen/db-10-604120000-druckluft-bohrmaschine.html) publie 360 L/min à 6,2 bar.
+Les 480 L/min de la CP785 résultent de la conversion exacte `8 × 60`. Sa [fiche actuelle Chicago Pneumatic](https://tools.cp.com/en-au/products/drills/cp785-skuT022698) sépare bien la consommation en charge de la consommation à vitesse libre, publiée à 9,4 L/s. La [fiche Metabo DB 10](https://www.metabo.com/de/de/maschinen/bohren-schrauben-meisseln-ruehren/bohrmaschinen/db-10-druckluft-bohrmaschine/604120000) publie 360 L/min à 6,2 bar.
 
 La CP785 demande donc 120 L/min de plus que la DB 10, soit un tiers de plus rapporté aux 360 L/min de la Metabo. Cet écart ne prouve pas que l’une perce plus vite ou mieux. Le matériau, le diamètre et l’état du foret, la vitesse, le couple disponible et la conduite de l’opérateur ne sont pas ramenés à un essai commun.
 
@@ -104,4 +104,4 @@ Pour un poste qui réalise ensuite les filetages, comparez séparément les [tar
 
 - [Chicago Pneumatic, fiche officielle CP785 T022698](https://tools.cp.com/en-au/products/drills/cp785-skuT022698)
 - [Chicago Pneumatic, manuel CP785 Series](https://www.cp.com/content/dam/pim/itba/cp/technical-documents/KF140145.pdf)
-- [Metabo, fiche officielle DB 10 604120000](https://ch.metabo.com/de/maschinen/bohren-schrauben-meisseln-ruehren/bohrmaschinen/db-10-604120000-druckluft-bohrmaschine.html)
+- [Metabo, fiche officielle DB 10 604120000](https://www.metabo.com/de/de/maschinen/bohren-schrauben-meisseln-ruehren/bohrmaschinen/db-10-druckluft-bohrmaschine/604120000)

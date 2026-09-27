@@ -8,7 +8,7 @@ metiers: [carrosserie-peinture, menuiserie-agencement]
 readingTime: 7
 featured: true
 sources:
-  - https://de.metabo.com/de/maschinen/druckluft/druckluft-werkzeuge/druckluft-farbspritzpistolen/fsp-600-lvlp-601578000-druckluft-farbspritzpistole.html
+  - https://www.metabo.com/at/de/maschinen/druckluft/druckluft-werkzeuge/druckluft-farbspritzpistolen/fsp-600-lvlp-druckluft-farbspritzpistole/601578000
   - https://shop.abacaircompressors.com/en-GB/products/2809913544/paint-spray-gun-g-550f
   - https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf
 updatedDate: 2026-09-26
@@ -58,6 +58,6 @@ Le [guide buse, chapeau et consommation d’air](/guides/buse-pistolet-peinture-
 
 ## Sources
 
-- [Metabo, FSP 600 LVLP](https://de.metabo.com/de/maschinen/druckluft/druckluft-werkzeuge/druckluft-farbspritzpistolen/fsp-600-lvlp-601578000-druckluft-farbspritzpistole.html)
+- [Metabo, FSP 600 LVLP](https://www.metabo.com/at/de/maschinen/druckluft/druckluft-werkzeuge/druckluft-farbspritzpistolen/fsp-600-lvlp-druckluft-farbspritzpistole/601578000)
 - [ABAC, fiche officielle G-550F](https://shop.abacaircompressors.com/en-GB/products/2809913544/paint-spray-gun-g-550f)
 - [ABAC, catalogue France 2025](https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/fra/ABAC_catalogue_2025_FRA.pdf.coredownload.pdf)
