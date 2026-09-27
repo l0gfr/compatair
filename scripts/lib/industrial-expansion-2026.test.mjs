@@ -8,6 +8,7 @@ import { toolCategoryLabel } from '../../src/data/taxonomy';
 const read = async name => JSON.parse(await readFile(new URL(`../../src/data/imports/${name}-additional-2026-09-26.json`, import.meta.url)));
 const inputs = { industrial: await read('industrial'), cp: await read('chicago-pneumatic'), dynabrade: await read('dynabrade') };
 const batch = buildIndustrialExpansion(inputs);
+const dutyReview = JSON.parse(await readFile(new URL('../../src/data/imports/compressor-duty-reviewed-2026-09-27.json', import.meta.url)));
 describe('reviewed expansion of 200 compressors and 500 tools', () => {
  it('reconstructs all 700 unique manufacturer references and their published evidence', () => {
   expect(batch.compressors).toHaveLength(200); expect(batch.tools).toHaveLength(500);
@@ -20,7 +21,12 @@ describe('reviewed expansion of 200 compressors and 500 tools', () => {
  it('keeps current FIAC identity, exact electrical variants and single-pressure FAD', () => {
   expect(batch.compressors.find(p => p.mpn === '4152026070')).toMatchObject({model:'AX 703BD 8 400/50 CE', powerKw:5.6, tankLiters:0, fadCurve:[{pressureBar:8,litersPerMinute:880}]});
   expect(batch.compressors.find(p => p.mpn === '4152022526')).toMatchObject({voltage:'230 V, 50 Hz',phase:'three-phase',powerKw:5.5,fadCurve:[{pressureBar:8,litersPerMinute:846}]});
-  expect(batch.compressors.every(p => p.fadCurve.length === 1 && p.dutyCycle === undefined && p.status === 'unknown')).toBe(true);
+  expect(batch.compressors.every(p => p.fadCurve.length === 1 && p.status === 'unknown')).toBe(true);
+  for (const p of batch.compressors) {
+   const reviewed = dutyReview.rows.find(row => row.id === p.id);
+   expect(p.dutyCycle, p.id).toBe(reviewed?.dutyCycle);
+   if (reviewed) expect(p.evidence.find(e => p.fieldSources.dutyCycle.includes(e.id))).toMatchObject({ sourceType: 'manufacturer', retrievedAt: '2026-09-27' });
+  }
  });
  it('binds Shinano dynamic pressure to the separate instruction page and retains maximum demand', () => {
   const t=batch.tools.find(p => p.mpn === 'SI-3011A');
