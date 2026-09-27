@@ -37,7 +37,7 @@ Le baromètre annuel est calculé uniquement depuis les compresseurs et preuves 
 
 Le catalogue contient actuellement 1219 compresseurs et 3787 outils, soit 4 616 353 combinaisons explorables. Ce nombre ne décrit pas 4 616 353 verdicts pré-calculés. `/data/verdicts.json` contient les 4 600 506 verdicts fixes formés par les 1219 compresseurs et les 3774 outils à débit fixe, y compris `insufficient_data`. Les 13 autres outils représentent 15 847 combinaisons paramétriques qui exigent une cadence ou un volume et un temps cible avant calcul.
 
-Le snapshot fixe publie 871 499 verdicts « compatible en continu », 610 377 « incompatible » et 153 130 « données insuffisantes », soit 90,6 % de paires conclusives. La part d’incompatibilités décrit la valeur de filtrage d’un catalogue inter-marques large ; elle ne constitue pas une mesure de performance du moteur. Le snapshot lie :
+Le snapshot contrôlé le 27 septembre 2026 avec le moteur `1.4.0` publie 78 120 verdicts « compatible en continu », aucun « compatible par intermittence », 379 107 « incompatible » et 4 143 279 « données insuffisantes », soit 457 227 paires conclusives (9,9 %). Ces totaux proviennent des champs `summary` et `conclusive` du snapshot ; ils ne mesurent pas la précision du moteur. Une endurance absente reste inconnue, même lorsqu’un point FAD est documenté. Les compteurs doivent être relus après chaque évolution du catalogue ou du moteur. Le snapshot lie :
 
 - la version du catalogue ;
 - la version du moteur ;
@@ -60,7 +60,7 @@ Le rôle ne remplace pas le grade A à D : l’origine et la capacité de la sou
 
 ## AirGraph et contrat MCP
 
-Le serveur MCP utilise le snapshot de verdicts publié comme autorité par défaut. Il ne recalcule pas silencieusement un autre verdict lorsque la paire versionnée existe. Les produits conservent leurs identifiants de catalogue et reçoivent une forme globale stable `ca:compressor:<id>` ou `ca:tool:<id>`. Une configuration reçoit un identifiant `ca:configuration:<digest>` calculé uniquement depuis le compresseur, les outils triés et le mode d’usage.
+Le serveur MCP actif lit les références demandées dans l’index SQLite de la release et utilise le moteur commun pour calculer à la demande. Son cache borné dépend du catalogue, du moteur et des fiches complètes. Il ne charge plus l’export exhaustif au démarrage. Le chemin de migration historique conserve la lecture des snapshots et leur autorité lorsqu’une paire versionnée y existe. Les produits conservent leurs identifiants de catalogue et reçoivent une forme globale stable `ca:compressor:<id>` ou `ca:tool:<id>`. Une configuration reçoit un identifiant `ca:configuration:<digest>` calculé uniquement depuis le compresseur, les outils triés et le mode d’usage.
 
 Le contrat de verdict `2.0.0` sépare `air_supply_verdict` de `overall_system_verdict`. Le champ historique `verdict` reste disponible mais sa portée obligatoire voyage dans `verdict_scope`. Chaque tool publie son propre `outputSchema` fermé ; les structures de compatibilité, accessoires, alternatives, AirGraph, reçus et erreurs ne reposent plus sur un objet générique ouvert.
 

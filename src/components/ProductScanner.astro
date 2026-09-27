@@ -114,13 +114,12 @@ import ContextHelp from './ContextHelp.astro';
 <script>
 	import type { Compressor, ToolProfile } from '../domain/catalog';
 	import { compatibilityFadLabel, type CompatibilityResult } from '../domain/compatibility';
-	import { explainDecisionDataGap } from '../domain/decision-resolution';
 	import { isImageWithinPixelBudget, readImageDimensions, type ImageDimensions } from '../domain/image-dimensions';
 	import { JOURNEY_CONTEXT_EVENT } from '../domain/journey-context';
 	import { encodePassportConfiguration } from '../domain/passport';
 	import { compressorCapabilities, identifyProducts, localIdentifierProposals, toolCompatibleCompressors } from '../domain/product-identification';
 	import { CALCULATION_VERSION } from '../../server/air-sizing.mjs';
-	import { scannerComparisonHref, scannerConfigurationForTool, scannerReferenceFromHash, scannerReferenceUrl } from '../domain/scanner-journey';
+	import { scannerComparisonHref, scannerCompressorDataGap, scannerConfigurationForTool, scannerReferenceFromHash, scannerReferenceUrl } from '../domain/scanner-journey';
 	import { sourceQualityDetail, sourceQualityLabel } from '../domain/source-quality';
 
 	type DetectorResult = { rawValue?: string };
@@ -405,12 +404,10 @@ import ContextHelp from './ContextHelp.astro';
 			journeyContinueHref = calculatorHref;
 			query<HTMLAnchorElement>('[data-refine]')?.setAttribute('href', calculatorHref);
 			if (!compatibleCards.length && insufficientCards.length) {
-				const sample = insufficientCards[0]?.result;
-				const samplePressure = tools.find((tool) => tool.demandModel === 'fixed-flow')?.workingPressureBar.typical ?? 6;
-				const gap = sample ? explainDecisionDataGap(product as Compressor, samplePressure, sample) : undefined;
+				const gap = scannerCompressorDataGap(product as Compressor);
 				setResolutionNote(
-					'Ce compresseur ne peut pas être dimensionné avec les données publiées',
-					`${gap?.detail ?? 'Son débit réellement restitué exploitable manque.'} Choisissez maintenant l’outil à alimenter : le calculateur conservera ce modèle comme non vérifiable et proposera les compresseurs documentés qui couvrent réellement le besoin.`,
+					gap.title,
+					`${gap.detail} Choisissez l’outil à alimenter pour vérifier ce modèle dans votre scénario et rechercher des alternatives documentées.`,
 					calculatorHref,
 					'Choisir mon outil et trouver des alternatives',
 				);
