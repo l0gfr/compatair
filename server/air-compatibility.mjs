@@ -41,13 +41,13 @@ export function evaluateCompatibility(compressor, tool, input = {}) {
 	const safetyMargin = input.safetyMargin ?? .25;
 	if (tool.demandModel !== 'fixed-flow') {
 		const warning = tool.demandModel === 'per-action'
-			? `La source de l’outil ${tool.label} publie ${tool.airPerActionLiters.toLocaleString('fr-FR')} litre d’air par ${tool.actionLabel}. Une cadence réelle de cet outil est nécessaire pour calculer un débit par minute.`
+			? `La source de l’outil ${tool.label} publie ${tool.airPerActionLiters.toLocaleString('fr-FR')} litre d’air par ${tool.actionLabel}. Indiquez votre cadence pour calculer le débit par minute.`
 			: tool.demandExplanation;
 		return { verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data', warnings: [warning], calculationVersion: CALCULATION_VERSION };
 	}
 	if (tool.airflowBasis === 'average') return {
 		verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data',
-		warnings: ['Le fabricant publie uniquement une consommation moyenne. Le débit en charge et les conditions du cycle sont nécessaires pour valider un usage continu ; aucune conversion vers un débit maximal n’est supposée.'],
+		warnings: ['Débit moyen seul : cycle et débit en charge requis.'],
 		calculationVersion: CALCULATION_VERSION,
 	};
 	const fadResolution = resolveAvailableFad(compressor, tool.workingPressureBar.typical);
