@@ -76,7 +76,13 @@ Le benchmark de fidélité publie exactement 100 scénarios, un évaluateur repr
 
 ## Signature des publications
 
-Le déploiement de production signe octet pour octet, avec Ed25519, les six publications JSON : catalogue complet, catalogue d’exécution allégé, offres, verdicts, historique des preuves et baromètre. Le manifeste détaché est publié sous `/data/signatures.json`; le registre des clés publiques est disponible sous `/data/signing-keys.json`.
+Le déploiement de production authentifie les publications JSON et NDJSON énumérées dans `SIGNED_DATA_FILES` de `scripts/lib/publication-signatures.mjs`. Le manifeste détaché est publié sous `/data/signatures.json` ; le registre des clés publiques est disponible sous `/data/signing-keys.json`.
+
+Depuis le schéma `2.0.0`, SHA-256 est calculé sur les octets exacts de chaque fichier, par blocs, avec sa taille exacte. La signature Ed25519 porte sur l’encodage UTF-8 de `JSON.stringify(["compatair-file-sha256-v2", "2.0.0", keyId, createdAt, path, sizeBytes, sha256])`, dans cet ordre. Le manifeste annonce `signaturePayload: "compatair-file-sha256-v2"`. Le chemin, la taille, l’empreinte, la date de publication et l’identifiant de clé sont donc authentifiés ensemble. Il faut vérifier la signature puis recalculer l’empreinte **et** la taille du fichier reçu ; vérifier uniquement le manifeste ne prouve pas l’intégrité d’un téléchargement.
+
+Il s’agit d’une évolution majeure explicite du format : les anciennes signatures `1.0.0` portent directement sur tous les octets du fichier. Le vérificateur fourni continue à accepter ces archives selon leur sémantique originale. Un lecteur limité à `1.0.0` doit être mis à jour pour vérifier une publication `2.0.0` et doit refuser une version inconnue. L’algorithme et la clé Ed25519 restent inchangés. Aucune signature ancienne n’est réinterprétée comme une signature d’empreinte.
+
+Le test `pnpm benchmark:publication-signatures` crée un fichier synthétique creux de plus de 2 Gio, le signe, le vérifie et rejette une altération de son dernier octet, sous un plafond de 256 Mio de mémoire. La clé de test est éphémère et ne correspond à aucune clé de publication. Ce test contrôle le chemin de signature ; il ne supprime pas le coût de génération de l’export exhaustif historique.
 
 La clé privée n’existe pas dans Git. Le workflow échoue si le secret GitHub `COMPATAIR_PUBLICATION_SIGNING_KEY` est absent ou si la clé ne correspond pas à l’empreinte publique enregistrée. La vérification locale d’un artifact signé s’effectue avec `pnpm data:verify-signatures`. Une rotation ajoute d’abord une nouvelle clé publique au registre ; une clé déjà utilisée ne doit pas être retirée, afin de préserver la vérification des publications archivées.
 

@@ -79,6 +79,8 @@ contrat vers des partitions versionnées et un accès ciblé avant de viser des
 dizaines de millions de couples. Augmenter simplement les limites mémoire ne
 résout pas ce problème.
 
+Le manifeste de signature `2.0.0` calcule désormais les empreintes de fichiers en flux et authentifie le chemin, la taille et le SHA-256 par Ed25519. Le blocage de lecture au-delà de 2 Gio est couvert par une fixture réelle de cette taille, sous 256 Mio de mémoire. La génération et la distribution de l’export intégral demeurent distinctes de cette correction.
+
 Le mode incrémental expérimental d’Astro 7.2 est activé sur les fiches, usages et guides. Les clés couvrent les données, la navigation éditoriale, le groupe canonique, l’indexabilité et le jour UTC (offres datées). Astro ajoute l’empreinte des modules dépendants. Une modification du catalogue importé globalement peut encore invalider toute une famille : le rendu strictement limité à un produit n’est pas revendiqué. Le cache HTML est jetable, borné à 384 Mio, réservé aux builds main, et seule sa dernière copie est conservée dans Actions.
 
 ## Service indexé, moteur 1.4.0

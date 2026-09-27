@@ -114,7 +114,6 @@ for (const [label, pathname, marker] of [
 	['radar JSON', '/data/contradiction-radar.json', 'radarVersion'],
 	['radar public', '/radar-contradictions/', 'Radar des contradictions'],
 	['graphe de preuve', '/graphe-preuve/', 'data-proof-graph'],
-	['signatures', '/data/signatures.json', 'compatair-2026-01'],
 	['clés de signature', '/data/signing-keys.json', 'Ed25519'],
 	['documentation UCP FR', '/ucp/', 'fr.compatair.air.compatibility'],
 	['documentation UCP EN', '/en/ucp/', 'fr.compatair.air.compatibility'],
@@ -151,6 +150,14 @@ try {
 	const { bytesRead } = await verdictFile.read(verdictPrefix, 0, verdictPrefix.length, 0);
 	assert(bytesRead === verdictPrefix.length && bytesRead > 0, 'préfixe de verdicts local incomplet');
 } finally { await verdictFile.close(); }
+await check('signatures versionnées de la release', '/data/signatures.json', ({ body, response }) => {
+	assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
+	const manifest = JSON.parse(body);
+	assert(manifest.schemaVersion === '2.0.0' && manifest.algorithm === 'Ed25519' && manifest.signaturePayload === 'compatair-file-sha256-v2', 'format de signature v2 absent');
+	assert(manifest.keyId === 'compatair-2026-01', 'clé de publication inattendue');
+	const entries = manifest.files?.filter(entry => entry.path === '/data/verdicts.json');
+	assert(entries?.length === 1 && entries[0].sizeBytes === verdictBytes && /^[a-f0-9]{64}$/.test(entries[0].sha256) && Buffer.from(entries[0].signature, 'base64').length === 64, 'signature de l’export exhaustif absente ou incohérente');
+});
 await check('verdicts, plage exacte de la release', '/data/verdicts.json', ({ bytes, response }) => {
 	verifySnapshotRange({ status: response.status, contentRange: response.headers.get('content-range'), contentType: response.headers.get('content-type'), bytes }, verdictPrefix, verdictBytes);
 }, { headers: { Range: `bytes=0-${verdictPrefix.length - 1}` } });
