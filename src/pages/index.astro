@@ -4,7 +4,8 @@ import { getCollection } from 'astro:content';
 import { CATALOG_VERIFIED_AT, compressors, tools } from '../data/catalog';
 import { glossaryTerms } from '../data/glossary';
 import { toolTaxonomy } from '../data/taxonomy';
-import { createCatalogSnapshot, createVerdictSnapshot } from '../domain/snapshots';
+import { createCatalogSnapshot } from '../domain/snapshots';
+import { historicalVerdictAudit as verdictSnapshot, verdictPublication } from '../data/verdict-publication';
 
 const allGuides = await getCollection('guides');
 const featuredGuides = allGuides
@@ -13,8 +14,7 @@ const featuredGuides = allGuides
 	.slice(0, 4);
 const [leadGuide, ...secondaryGuides] = featuredGuides;
 const catalogSnapshot = createCatalogSnapshot({ compressors, tools, toolTaxonomy, verifiedAt: CATALOG_VERIFIED_AT });
-const verdictSnapshot = createVerdictSnapshot({ compressors, tools, catalogVersion: catalogSnapshot.catalogVersion, verifiedAt: catalogSnapshot.verifiedAt });
-const scope = verdictSnapshot.scope;
+const scope = catalogSnapshot.scope;
 const formatNumber = (value: number) => value.toLocaleString('fr-FR');
 ---
 
@@ -57,7 +57,7 @@ const formatNumber = (value: number) => value.toLocaleString('fr-FR');
 						</nav>
 						<footer class="home-command-status">
 							<div><small>Espace</small><strong>{formatNumber(scope.explorable_combination_count)}</strong><span>combinaisons explorables</span></div>
-							<div><small>Snapshot fixe</small><strong>{formatNumber(scope.fixed_verdict_count)}</strong><span>verdicts audités</span></div>
+							<div><small>Périmètre calculable</small><strong>{formatNumber(scope.fixed_verdict_count)}</strong><span>couples calculables</span></div>
 							<div><small>Paramétrique</small><strong>{formatNumber(scope.parametric_combination_count)}</strong><span>cadence ou volume requis</span></div>
 						</footer>
 					</aside>
@@ -79,7 +79,8 @@ const formatNumber = (value: number) => value.toLocaleString('fr-FR');
 					<div><dt>{allGuides.length}</dt><dd>guides<br />techniques</dd></div>
 				</dl>
 				<section class="home-snapshot-scope" aria-labelledby="home-snapshot-title">
-					<header><div><p>Snapshot public des verdicts</p><h2 id="home-snapshot-title">{formatNumber(scope.explorable_combination_count)} combinaisons explorables ne signifient pas {formatNumber(scope.explorable_combination_count)} verdicts pré-calculés.</h2></div><p>{scope.fixed_flow_tool_count} outils à débit fixe produisent {formatNumber(scope.fixed_verdict_count)} verdicts audités. Les {scope.parametric_tool_count} autres outils représentent {formatNumber(scope.parametric_combination_count)} combinaisons qui exigent une cadence ou un volume et un temps cible avant calcul.</p></header>
+					<header><div><p>Calcul à la demande et audit historique</p><h2 id="home-snapshot-title">{formatNumber(scope.explorable_combination_count)} combinaisons explorables ne signifient pas {formatNumber(scope.explorable_combination_count)} verdicts pré-calculés.</h2></div><p>{scope.fixed_flow_tool_count} outils à débit fixe produisent {formatNumber(scope.fixed_verdict_count)} couples calculables. Les {scope.parametric_tool_count} autres outils représentent {formatNumber(scope.parametric_combination_count)} combinaisons qui exigent une cadence ou un volume et un temps cible avant calcul.</p></header>
+					<p>Audit historique publié le {verdictSnapshot.publishedAt.slice(0, 10)}, sur {formatNumber(verdictSnapshot.scope.fixed_verdict_count)} couples. Cette répartition ne décrit pas les ajouts ultérieurs.</p>
 					<div class="home-verdict-mix">
 						<div><small>Compatible en continu</small><strong>{formatNumber(verdictSnapshot.summary.continuous)}</strong></div>
 						<div><small>Incompatible</small><strong>{formatNumber(verdictSnapshot.summary.incompatible)}</strong></div>
@@ -87,7 +88,7 @@ const formatNumber = (value: number) => value.toLocaleString('fr-FR');
 						<div><small>Verdicts conclusifs</small><strong>{verdictSnapshot.conclusive.percentage.toLocaleString('fr-FR')} %</strong></div>
 					</div>
 					<p class="home-snapshot-reading">La part d’incompatibilités décrit la valeur de filtrage d’un catalogue inter-marques très large. Elle ne mesure ni une panne du moteur ni une mauvaise performance du produit.</p>
-					<a href="/data/verdicts.json">Ouvrir le snapshot et ses dénominateurs →</a>
+					<a href={verdictPublication.legacyArchive.verdicts}>Consulter l’archive et ses dénominateurs →</a>
 				</section>
 			</div>
 		</section>

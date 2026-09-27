@@ -12,7 +12,6 @@ import AcquisitionTelemetry from '../components/AcquisitionTelemetry.astro';
 import CalculatorAcquisitionTelemetry from '../components/CalculatorAcquisitionTelemetry.astro';
 import CommercialIntentTelemetry from '../components/CommercialIntentTelemetry.astro';
 import McpCanonicalTelemetry from '../components/McpCanonicalTelemetry.astro';
-import { compressors, tools } from '../data/catalog';
 import { resolveDocumentTitle } from '../domain/metadata';
 import { socialCardKey } from '../domain/social-card';
 import { serializeJsonLd } from '../domain/structured-data';
@@ -65,7 +64,6 @@ const currentPath = Astro.url.pathname;
 const excludeFromIndex = noindex || !isIndexablePath(currentPath);
 const commercialIntentTelemetryEnabled = currentPath === '/' || ['/compresseurs/', '/outils-pneumatiques/', '/guides/', '/offres/', '/comparatifs/'].some((path) => currentPath.startsWith(path));
 const currentYear = new Date().getFullYear();
-const catalogReferenceCount = compressors.length + tools.length;
 const isCurrent = (href: string) => currentPath.startsWith(href);
 type DecisionStep = { id: string; label: string; short: string; href: string; state: 'completed' | 'current' | 'available' };
 const journeySteps = [
@@ -207,7 +205,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 			<nav class="container nav" aria-label="Navigation principale">
 				<div class="brand-cluster">
 					<a class="brand" href="/" aria-label="CompatAir, accueil"><BrandMark /><span class="brand-name"><span class="brand-wordmark"><span>Compat</span><strong>Air</strong></span><small>Quel compresseur pour vos outils&nbsp;?</small></span></a>
-					<span class="brand-corpus" aria-label={`${catalogReferenceCount} références documentées`}><small>Corpus</small><strong>{catalogReferenceCount}</strong><i>réf.</i></span>
+					<span class="brand-corpus" data-catalog-corpus aria-label="Corpus documenté"><small>Corpus</small><strong data-catalog-count>…</strong><i>réf.</i></span>
 				</div>
 				<div class="desktop-nav">
 					<div class="nav-links nav-task-links">
@@ -308,3 +306,11 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 		{commercialIntentTelemetryEnabled && <CommercialIntentTelemetry />}
 	</body>
 </html>
+
+<script>
+ fetch('/data/verdicts.json?schema=2', { credentials: 'omit', cache: 'no-cache' }).then(r => r.ok ? r.json() : null).then(data => {
+  const values = [data?.scope?.compressor_count, data?.scope?.tool_count];
+  const element = document.querySelector('[data-catalog-count]');
+  if (element && values.every(n => Number.isSafeInteger(n) && n >= 0) && Number.isSafeInteger(values[0] + values[1])) element.textContent = String(values[0] + values[1]);
+ }).catch(() => {});
+</script>

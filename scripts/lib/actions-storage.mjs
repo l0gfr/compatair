@@ -33,9 +33,10 @@ export function planActionsStorage({ artifacts, runs, caches, liveSha, expectedS
 		group.push(cache);
 		cacheGroups.set(match[1], group);
 	}
-	const pageCaches = caches.filter(cache => /^compatair-pages-v1-[A-Za-z0-9._-]+-[a-f0-9]{64}-[a-f0-9]{40}$/.test(cache.key) && cache.ref === 'refs/heads/main');
+	const pageCaches = caches.filter(cache => /^compatair-pages-v[12]-[A-Za-z0-9._-]+-[a-f0-9]{64}-[a-f0-9]{40}$/.test(cache.key) && cache.ref === 'refs/heads/main');
 	const verdictCaches = caches.filter(cache => /^compatair-verdict-v1-[A-Za-z0-9._-]+-[a-f0-9]{64}$/.test(cache.key) && cache.ref === 'refs/heads/main');
-	const deleteCaches = [...cacheGroups.values(), pageCaches].flatMap((group) => group
+	const calculationCaches = caches.filter(cache => /^compatair-page-calculations-v1-[A-Za-z0-9._-]+-[a-f0-9]{40}$/.test(cache.key) && cache.ref === 'refs/heads/main');
+	const deleteCaches = [...cacheGroups.values(), pageCaches, calculationCaches].flatMap((group) => group
 		.sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at)).slice(1));
 	// One latest calculation cache, independently bounded to 64 MiB by the
 	// writer. Never retain one full cache per catalog revision or commit.

@@ -10,14 +10,15 @@ type EvidenceEvent = {
 function portfolioKey(value: string) { return value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
 
 export function createCompatibilityImpactFeed(input: {
-	events: EvidenceEvent[]; compressors: Compressor[]; tools: ToolProfile[]; pairs: VerdictSnapshotPair[];
+	events: EvidenceEvent[]; compressors: Compressor[]; tools: ToolProfile[]; pairs?: VerdictSnapshotPair[];
 	catalogVersion: string; verdictVersion: string; observedAt: string; merchantByProduct?: Map<string, string[]>;
 }) {
+	const fixedToolCount = input.tools.filter(tool => tool.demandModel === 'fixed-flow').length;
 	const compressorMap = new Map(input.compressors.map((item) => [item.id, item]));
 	const toolMap = new Map(input.tools.map((item) => [item.id, item]));
 	const compressorSummaries = new Map<string, { count: number; distribution: Record<string, number> }>();
 	const toolSummaries = new Map<string, { count: number; distribution: Record<string, number> }>();
-	for (const pair of input.pairs) {
+	for (const pair of input.pairs ?? []) {
 		for (const [map, id] of [[compressorSummaries, pair.compressorId], [toolSummaries, pair.toolId]] as const) {
 			let summary = map.get(id);
 			if (!summary) { summary = { count: 0, distribution: {} }; map.set(id, summary); }
@@ -29,7 +30,9 @@ export function createCompatibilityImpactFeed(input: {
 		const product = event.productType === 'compressor' ? compressorMap.get(event.productId) : toolMap.get(event.productId);
 		if (!product) throw new Error(`Impact event references an unknown product: ${event.productId}`);
 		const summary = (event.productType === 'compressor' ? compressorSummaries : toolSummaries).get(event.productId);
-		const currentVerdictDistribution = { ...summary?.distribution };
+		const currentVerdictDistribution = input.pairs ? { ...summary?.distribution } : null;
+		const affectedFixedPairs = event.productType === 'compressor' ? fixedToolCount
+			: toolMap.get(event.productId)?.demandModel === 'fixed-flow' ? input.compressors.length : 0;
 		const merchantKeys = (input.merchantByProduct?.get(event.productId) ?? []).map((id) => `merchant:${id}`);
 		const slug = product.slug;
 		const canonicalUrl = event.productType === 'compressor' ? `https://compatair.fr/compresseurs/${slug}/` : `https://compatair.fr/outils-pneumatiques/${slug}/`;
@@ -40,14 +43,15 @@ export function createCompatibilityImpactFeed(input: {
 			source_label: event.snapshot.sourceLabel, evidence_fingerprint: event.fingerprint, summary: event.summary,
 			impact_assessment: {
 				status: 'requires_recalculation', decision_delta: 'not_available_without_previous_verdict_snapshot',
-				affected_pair_count: summary?.count ?? 0, current_verdict_distribution: currentVerdictDistribution,
+				affected_pair_count: input.pairs ? summary?.count ?? 0 : affectedFixedPairs, current_verdict_distribution: currentVerdictDistribution,
+				...(input.pairs ? {} : { distribution_status: 'not_materialized', affected_pair_definition: 'Potential fixed-flow pairs requiring reevaluation; no verdict distribution is inferred.' }),
 				before_verdict_version: null, after_verdict_version: input.verdictVersion,
 			},
 			canonical_url: canonicalUrl,
 		};
 	}).sort((left, right) => right.occurred_at.localeCompare(left.occurred_at) || left.impact_id.localeCompare(right.impact_id));
 	const data = {
-		schemaVersion: '1.0.0', feedId: 'fr.compatair.compatibility-impact', observedAt: input.observedAt,
+		schemaVersion: input.pairs ? '1.0.0' : '2.0.0', feedId: 'fr.compatair.compatibility-impact', observedAt: input.observedAt,
 		catalogVersion: input.catalogVersion, verdictVersion: input.verdictVersion,
 		policy: {
 			purpose: 'Alert manufacturer and merchant portfolios when evidence must be re-evaluated against compatibility decisions.',

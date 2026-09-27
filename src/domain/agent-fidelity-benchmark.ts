@@ -49,10 +49,11 @@ export function createAgentFidelityBenchmark(input: {
 	catalogVersion: string;
 	verdictVersion: string;
 	observedAt: string;
+	selection?: 'pinned-panel';
 }) {
 	const compressorMap = new Map(input.compressors.map((item) => [item.id, item]));
 	const toolMap = new Map(input.tools.map((item) => [item.id, item]));
-	const selected = selectBenchmarkPairs(input.pairs);
+	const selected = input.selection === 'pinned-panel' ? input.pairs : selectBenchmarkPairs(input.pairs);
 	if (selected.length !== 100) throw new Error(`Le benchmark exige 100 scénarios, ${selected.length} sont disponibles.`);
 	const scenarios = selected.map((pair, index) => {
 		const compressor = compressorMap.get(pair.compressorId), tool = toolMap.get(pair.toolId);
@@ -80,7 +81,7 @@ export function createAgentFidelityBenchmark(input: {
 		observedAt: input.observedAt, scenarioCount: scenarios.length,
 		methodology: {
 			purpose: 'Measure whether an agent preserves CompatAir decision scope, verdict, limitations, canonical attribution and evidence.',
-			selection: 'Deterministic round-robin sampling across available engine verdict classes after SHA-256 ordering of pair IDs.',
+			selection: input.selection === 'pinned-panel' ? 'Fixed panel of 100 source-linked pairs selected from release a97717c; only these pairs are recomputed with the current catalog and engine. This is not a measurement of the current full verdict distribution.' : 'Deterministic round-robin sampling across available engine verdict classes after SHA-256 ordering of pair IDs.',
 			leaderboardPolicy: 'Only reproducible runs with a complete response file, integration identity, model identifier, execution date and evaluator version are eligible.',
 		},
 		scenarios,

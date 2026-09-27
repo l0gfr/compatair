@@ -156,11 +156,27 @@ await check('signatures versionnées de la release', '/data/signatures.json', ({
 	assert(manifest.schemaVersion === '2.0.0' && manifest.algorithm === 'Ed25519' && manifest.signaturePayload === 'compatair-file-sha256-v2', 'format de signature v2 absent');
 	assert(manifest.keyId === 'compatair-2026-01', 'clé de publication inattendue');
 	const entries = manifest.files?.filter(entry => entry.path === '/data/verdicts.json');
-	assert(entries?.length === 1 && entries[0].sizeBytes === verdictBytes && /^[a-f0-9]{64}$/.test(entries[0].sha256) && Buffer.from(entries[0].signature, 'base64').length === 64, 'signature de l’export exhaustif absente ou incohérente');
+	assert(entries?.length === 1 && entries[0].sizeBytes === verdictBytes && /^[a-f0-9]{64}$/.test(entries[0].sha256) && Buffer.from(entries[0].signature, 'base64').length === 64, 'signature de la publication des verdicts absente ou incohérente');
 });
 await check('verdicts, plage exacte de la release', '/data/verdicts.json', ({ bytes, response }) => {
 	verifySnapshotRange({ status: response.status, contentRange: response.headers.get('content-range'), contentType: response.headers.get('content-type'), bytes }, verdictPrefix, verdictBytes);
 }, { headers: { Range: `bytes=0-${verdictPrefix.length - 1}` } });
+
+// v2 is a compact contract; rollback to the frozen v1 release remains supported.
+if (verdictBytes < 65_536 && JSON.parse(verdictPrefix.toString('utf8')).mode === 'on-demand') {
+ const publication = JSON.parse(verdictPrefix.toString('utf8'));
+ assert(publication.schemaVersion === '2.0.0' && publication.materializedPairCount === 0 && !('pairs' in publication), 'contrat de calcul à la demande invalide');
+ const archive = JSON.parse(await readFile(new URL('../config/legacy-verdict-archive.json', import.meta.url), 'utf8'));
+ assert(publication.legacyArchive.verdicts === `${archive.basePath}/verdicts.json`, 'archive historique inattendue');
+ await check('signatures de l’archive historique', `${archive.basePath}/signatures.json`, ({ body, response }) => {
+  assert(response.status === 200 && JSON.stringify(JSON.parse(body)) === JSON.stringify(archive.manifest), 'manifeste historique différent du manifeste épinglé');
+ });
+ const entry = archive.manifest.files.find(item => item.path === '/data/verdicts.json');
+ await check('export historique conservé', `${archive.basePath}/verdicts.json`, ({ body, response }) => {
+  assert(response.status === 206 && response.headers.get('content-range') === `bytes 0-1023/${entry.sizeBytes}`, 'taille historique incohérente');
+  assert(body.includes(archive.metadata.verdictVersion) && body.includes('"schemaVersion":"1.1.0"'), 'version historique incohérente');
+ }, { headers: { Range: 'bytes=0-1023' } });
+}
 
 const legacyPath = '/compatibilite/einhell-tc-ac-240-50-10-of--ponceuse-excentrique-einhell-tc-pe-150/';
 const legacyTarget = 'https://compatair.fr/calculateur/#outil=einhell-tc-pe-150&compresseur=einhell-tc-ac-240-50-10-of';

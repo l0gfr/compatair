@@ -20,9 +20,15 @@ describe('bounded Actions storage cleanup', () => {
 	});
 	it('retains only the latest disposable main page cache', () => {
 		const input = fixture();
-		input.caches.push(...[0, 1].map(index => ({ id: 300 + index, key: `compatair-pages-v1-Linux-${'a'.repeat(64)}-${String(index).repeat(40)}`, ref: 'refs/heads/main', created_at: `2026-09-${26 - index}T01:00:00Z` })));
+		input.caches.push(...[0, 1].map(index => ({ id: 300 + index, key: `compatair-pages-v${index === 0 ? 2 : 1}-Linux-${'a'.repeat(64)}-${String(index).repeat(40)}`, ref: 'refs/heads/main', created_at: `2026-09-${26 - index}T01:00:00Z` })));
 		expect(planActionsStorage(input).deleteCaches.map(cache => cache.id)).toContain(301);
 		expect(planActionsStorage(input).deleteCaches.map(cache => cache.id)).not.toContain(300);
+	});
+	it('retains the latest page calculation cache without deleting pull-request caches', () => {
+		const input = fixture();
+		input.caches.push(...[0, 1].map(index => ({ id: 400 + index, key: `compatair-page-calculations-v1-Linux-24.19.0-${shas[index]}`, ref: 'refs/heads/main', created_at: `2026-09-${26 - index}T01:00:00Z` })));
+		input.caches.push({ ...input.caches.at(-1), id: 402, ref: 'refs/pull/42/merge' });
+		expect(planActionsStorage(input).deleteCaches.map(cache => cache.id)).toEqual([1, 2, 3, 401]);
 	});
 	it('preserves production, rollback, signed invariants and source/security evidence', () => {
 		const input = fixture();

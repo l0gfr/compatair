@@ -3,13 +3,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import UiIcon from '../components/UiIcon.astro';
 import { CATALOG_VERIFIED_AT, compressors, tools } from '../data/catalog';
 import { toolTaxonomy } from '../data/taxonomy';
-import { createCatalogSnapshot, createVerdictSnapshot } from '../domain/snapshots';
+import { createCatalogSnapshot } from '../domain/snapshots';
+import { historicalVerdictAudit as verdictSnapshot, verdictPublication } from '../data/verdict-publication';
 
 const totalProducts = compressors.length + tools.length;
 const formatNumber = (value: number) => new Intl.NumberFormat('fr-FR').format(value);
 const catalogSnapshot = createCatalogSnapshot({ compressors, tools, toolTaxonomy, verifiedAt: CATALOG_VERIFIED_AT });
-const verdictSnapshot = createVerdictSnapshot({ compressors, tools, catalogVersion: catalogSnapshot.catalogVersion, verifiedAt: CATALOG_VERIFIED_AT });
-const scope = verdictSnapshot.scope;
+const scope = catalogSnapshot.scope;
 const identityCoverage = catalogSnapshot.quality.field_coverage.filter((row) => ['normalizedMpn', 'ean', 'gtin', 'distributorSku'].includes(row.field));
 ---
 
@@ -73,21 +73,22 @@ const identityCoverage = catalogSnapshot.quality.field_coverage.filter((row) => 
 			<div class="container">
 				<div><strong>{formatNumber(totalProducts)}</strong><span>références documentées</span></div>
 				<div><strong>{formatNumber(scope.explorable_combination_count)}</strong><span>combinaisons explorables</span></div>
-				<div><strong>{formatNumber(scope.fixed_verdict_count)}</strong><span>verdicts fixes audités</span></div>
+				<div><strong>{formatNumber(scope.fixed_verdict_count)}</strong><span>couples à débit fixe calculables</span></div>
 				<div><strong>{formatNumber(scope.parametric_combination_count)}</strong><span>combinaisons paramétriques, calculées après saisie</span></div>
 			</div>
 		</section>
 
 		<section class="pro-section pro-data-proof" aria-labelledby="pro-data-proof-title">
 			<div class="container">
-				<header class="pro-section-head pro-section-head-split"><div><p class="pro-index">Périmètre public vérifiable</p><h2 id="pro-data-proof-title">{formatNumber(scope.explorable_combination_count)} possibilités, dont {formatNumber(scope.fixed_verdict_count)} verdicts fixes.</h2></div><p>Les {scope.parametric_tool_count} outils restants ne reçoivent pas un verdict pré-calculé&nbsp;: leurs {formatNumber(scope.parametric_combination_count)} combinaisons exigent une cadence ou un volume et un temps cible. Le snapshot fixe est conclusif à {verdictSnapshot.conclusive.percentage.toLocaleString('fr-FR')}&nbsp;%.</p></header>
+				<header class="pro-section-head pro-section-head-split"><div><p class="pro-index">Périmètre public vérifiable</p><h2 id="pro-data-proof-title">{formatNumber(scope.explorable_combination_count)} possibilités, dont {formatNumber(scope.fixed_verdict_count)} couples à débit fixe.</h2></div><p>Les {scope.parametric_tool_count} outils restants ne reçoivent pas un verdict pré-calculé&nbsp;: leurs {formatNumber(scope.parametric_combination_count)} combinaisons exigent une cadence ou un volume et un temps cible. L’audit exhaustif publié le {verdictSnapshot.publishedAt.slice(0, 10)} était conclusif à {verdictSnapshot.conclusive.percentage.toLocaleString('fr-FR')}&nbsp;%.</p></header>
+				<p>Répartition historique sur {formatNumber(verdictSnapshot.scope.fixed_verdict_count)} couples, indépendante des ajouts au catalogue courant.</p>
 				<div class="pro-data-ledger">
 					<article><span>Compatible en continu</span><strong>{formatNumber(verdictSnapshot.summary.continuous)}</strong></article>
 					<article><span>Incompatible</span><strong>{formatNumber(verdictSnapshot.summary.incompatible)}</strong><small>Valeur de filtrage du corpus, pas mauvaise performance du moteur.</small></article>
 					<article><span>Données insuffisantes</span><strong>{formatNumber(verdictSnapshot.summary.insufficient_data)}</strong></article>
 				</div>
 				<div class="pro-identity-coverage"><header><div><p class="pro-index">Identifiants marchands</p><h3>Couverture réellement publiée</h3></div><p>Le MPN est normalisé pour l’appariement exact. EAN, GTIN et SKU distributeur ne sont ajoutés qu’avec leur preuve.</p></header><div>{identityCoverage.map((row) => <article><span>{row.label}</span><strong>{row.populated_count}/{row.eligible_count}</strong><small>{row.population_coverage_percent?.toLocaleString('fr-FR') ?? 'non mesuré'} % du corpus · {row.independently_corroborated_count} corroboré{row.independently_corroborated_count > 1 ? 's' : ''} indépendamment</small></article>)}</div></div>
-				<p class="pro-data-proof-links"><a href="/sources-fiabilite/#couverture">Couverture complète champ par champ</a><a href="/sources-fiabilite/#sla-fraicheur">SLA de fraîcheur par type de donnée</a><a href="/data/catalog.json">Snapshot catalogue JSON</a><a href="/data/verdicts.json">Snapshot de verdicts JSON</a></p>
+				<p class="pro-data-proof-links"><a href="/sources-fiabilite/#couverture">Couverture complète champ par champ</a><a href="/sources-fiabilite/#sla-fraicheur">SLA de fraîcheur par type de donnée</a><a href="/data/catalog.json">Catalogue JSON</a><a href={verdictPublication.legacyArchive.verdicts}>Audit historique signé</a></p>
 			</div>
 		</section>
 

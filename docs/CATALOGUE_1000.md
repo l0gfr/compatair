@@ -1,5 +1,7 @@
 # Extension du catalogue à 1 000 références
 
+Ce document décrit le lot historique du 25 septembre. Pour l’architecture actuelle et les caches de build, consulter [build-performance.md](build-performance.md).
+
 Lot du 25 septembre 2026 : 250 outils Fuji supplémentaires. Le catalogue compte 239 compresseurs et 761 outils. Les 750 références précédentes sont conservées.
 
 ## Contenu du lot

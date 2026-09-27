@@ -1,5 +1,6 @@
 import type { Compressor, ToolProfile } from './catalog';
-import { evaluateCompatibility, type CompatibilityResult } from './compatibility';
+import type { CompatibilityResult } from './compatibility';
+import { evaluatePageCompatibility as evaluateCompatibility, flushPageCalculations } from '../data/page-compatibility';
 import type { GuideAudienceId } from './editorial-taxonomy';
 import { latestEvidenceDate } from './provenance';
 
@@ -90,6 +91,7 @@ export function createToolCompatibilitySummary(
 	add(insufficient, 1);
 	add([...compatible, ...incompatible, ...insufficient], TOOL_DETAIL_EXAMPLE_LIMIT - examples.length);
 
+	flushPageCalculations();
 	return {
 		matches,
 		counts: {
@@ -141,6 +143,7 @@ export function createCompressorCompatibilitySummary(compressor: Compressor, too
 		}))
 		.sort((a, b) => b.compatible - a.compatible || a.category.localeCompare(b.category, 'fr'));
 
+	flushPageCalculations();
 	return {
 		matches,
 		counts: { compatible: compatible.length, incompatible: incompatible.length, insufficient: insufficient.length },

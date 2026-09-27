@@ -8,7 +8,7 @@ describe('interactive proof graph', () => {
 	const compressor = compressors.find((item) => item.id === 'einhell-te-ac-430-90-10')!;
 	const tool = tools.find((item) => item.id === 'einhell-tc-pw-340')!;
 	const catalog = createCatalogSnapshot({ compressors, tools, toolTaxonomy, verifiedAt: CATALOG_VERIFIED_AT });
-	const verdicts = createVerdictSnapshot({ compressors, tools, catalogVersion: catalog.catalogVersion, verifiedAt: CATALOG_VERIFIED_AT });
+	const verdicts = createVerdictSnapshot({ compressors: [compressor], tools: [tool], catalogVersion: catalog.catalogVersion, verifiedAt: CATALOG_VERIFIED_AT });
 	const pair = verdicts.pairs.find((item) => item.compressorId === compressor.id && item.toolId === tool.id)!;
 	const graph = createProofGraph(compressor, tool, { catalogVersion: catalog.catalogVersion, verdictVersion: verdicts.verdictVersion, calculationVersion: verdicts.calculationVersion, verifiedAt: CATALOG_VERIFIED_AT }, pair);
 

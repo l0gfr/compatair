@@ -35,16 +35,16 @@ Le baromètre annuel est calculé uniquement depuis les compresseurs et preuves 
 
 ## Verdicts versionnés
 
-Le catalogue contient actuellement 1219 compresseurs et 3787 outils, soit 4 616 353 combinaisons explorables. Ce nombre ne décrit pas 4 616 353 verdicts pré-calculés. `/data/verdicts.json` contient les 4 600 506 verdicts fixes formés par les 1219 compresseurs et les 3774 outils à débit fixe, y compris `insufficient_data`. Les 13 autres outils représentent 15 847 combinaisons paramétriques qui exigent une cadence ou un volume et un temps cible avant calcul.
+Le catalogue contient actuellement 1219 compresseurs et 3787 outils, soit 4 616 353 combinaisons explorables. Ce nombre ne décrit pas 4 616 353 verdicts pré-calculés. `/data/verdicts.json` décrit le périmètre des 4 600 506 couples fixes calculables formés par les 1219 compresseurs et les 3774 outils à débit fixe. Une requête insuffisamment documentée reçoit `insufficient_data`. Les 13 autres outils représentent 15 847 combinaisons paramétriques qui exigent une cadence ou un volume et un temps cible avant calcul.
 
-Le snapshot contrôlé le 27 septembre 2026 avec le moteur `1.4.0` publie 78 120 verdicts « compatible en continu », aucun « compatible par intermittence », 379 107 « incompatible » et 4 143 279 « données insuffisantes », soit 457 227 paires conclusives (9,9 %). Ces totaux proviennent des champs `summary` et `conclusive` du snapshot ; ils ne mesurent pas la précision du moteur. Une endurance absente reste inconnue, même lorsqu’un point FAD est documenté. Les compteurs doivent être relus après chaque évolution du catalogue ou du moteur. Le snapshot lie :
+L’archive publiée et contrôlée le 27 septembre 2026 utilise le catalogue du 26 septembre et le moteur `1.4.0`. Elle conserve 78 120 verdicts « compatible en continu », aucun « compatible par intermittence », 379 107 « incompatible » et 4 143 279 « données insuffisantes », soit 457 227 paires conclusives (9,9 %). Ces totaux proviennent des champs `summary` et `conclusive` du snapshot ; ils ne mesurent pas la précision du moteur. Une endurance absente reste inconnue, même lorsqu’un point FAD est documenté. Ces compteurs historiques restent attachés à cette archive ; aucune répartition courante n’est déduite pour les nouvelles versions du catalogue. Le snapshot lie :
 
 - la version du catalogue ;
 - la version du moteur ;
 - le verdict, son facteur limitant et les valeurs réellement comparées ;
 - un `verdictVersion` SHA-256 reproductible.
 
-Le workflow quotidien compare ce snapshot à la production et conserve le rapport pendant 30 jours.
+Le workflow de synchronisation compare les versions des manifestes. Il indique `not_materialized` pour les deltas de verdicts et ne déduit aucun changement technique d’une seule variation de version.
 
 ## Rôle des sources et fraîcheur
 
@@ -117,3 +117,5 @@ L'estimation des appelants repose sur un préfixe réseau tronqué et un agent u
 ## Offres ManoMano
 
 Le flux Awin enrichit uniquement la couche commerciale. L’appariement échoue sans EAN, GTIN ou MPN normalisé déjà relié à une fiche technique. Le prix, le stock ou la commission ne participent jamais au moteur de compatibilité.
+
+Publication des verdicts : `/data/verdicts.json` est désormais un manifeste de calcul à la demande (schéma 2.0.0), sans tableau `pairs`. La distribution exhaustive publiée le 27 septembre 2026 est historique. Le manifeste lie son archive immuable, son catalogue et ses signatures d’origine. Utiliser l’API pour les décisions courantes. Voir [performance du build](build-performance.md).

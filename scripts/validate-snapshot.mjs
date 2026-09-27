@@ -1,11 +1,13 @@
-import { readFile } from 'node:fs/promises';
-import { basename } from 'node:path';
+import { readFile, stat } from 'node:fs/promises';
+import { basename, dirname, join } from 'node:path';
+import { validateVerdictPublication } from '../server/verdict-publication.mjs';
 import { readVerdictSnapshot } from '../server/verdict-snapshot.mjs';
 
 const [file = 'dist/data/catalog.json'] = process.argv.slice(2);
-const snapshot = basename(file) === 'verdicts.json'
+const snapshot = basename(file) === 'verdicts.json' && (await stat(file)).size > 65_536
 	? await readVerdictSnapshot(file, { compactIds: true })
 	: JSON.parse(await readFile(file, 'utf8'));
+if (snapshot.mode === 'on-demand' || basename(file) === 'verdicts.json' && snapshot.schemaVersion === '2.0.0') validateVerdictPublication(snapshot, JSON.parse(await readFile(join(dirname(file), 'catalog.json'), 'utf8')));
 const errors = [];
 if (!/^\d+\.\d+\.\d+$/.test(snapshot.schemaVersion ?? '')) errors.push('schemaVersion invalide');
 if (!/^[a-f0-9]{64}$/.test(snapshot.catalogVersion ?? snapshot.snapshotVersion ?? snapshot.historyVersion ?? snapshot.barometerVersion ?? snapshot.observatoryVersion ?? snapshot.radarVersion ?? snapshot.freshnessVersion ?? '')) errors.push('version de snapshot absente');

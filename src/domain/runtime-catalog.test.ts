@@ -42,6 +42,13 @@ describe('runtime catalog', () => {
 		expect(createRuntimeCatalog([withTankSource], [], CATALOG_VERIFIED_AT, catalogVersion).compressors[0].evidence.some((source) => source.id === 'tank-only')).toBe(true);
 	});
 
+	it('publishes more than 4000 tools without widening the browser input limit', () => {
+		const expanded = Array.from({ length: 5000 }, (_, index) => ({ ...tools[0], id: `fixture-${index}` }));
+		const published = createRuntimeCatalog([], expanded, CATALOG_VERIFIED_AT, catalogVersion);
+		expect(published.tools).toHaveLength(5000);
+		expect(() => runtimeCatalogSchema.parse(published)).toThrow();
+	});
+
 	it('rejects tool arrays beyond the bounded 4000-entry runtime limit', () => {
 		const runtime = createRuntimeCatalog(compressors, tools, CATALOG_VERIFIED_AT, catalogVersion);
 		expect(() => runtimeCatalogSchema.parse({ ...runtime, tools: Array.from({ length: 4001 }, () => runtime.tools[0]) })).toThrow();

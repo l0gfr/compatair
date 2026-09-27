@@ -109,7 +109,12 @@ function compressorRuntimeEvidence(item: Compressor) {
 }
 
 export function createRuntimeCatalog(compressors: Compressor[], tools: ToolProfile[], catalogVerifiedAt: string, catalogVersion: string): RuntimeCatalog {
-	return runtimeCatalogSchema.parse({
+	// Bulk publication is not the bounded browser input contract. Interactive
+	// product requests remain limited to 50 references by the HTTP API.
+	return runtimeCatalogSchema.extend({
+		compressors: z.array(runtimeCompressorSchema).max(100_000),
+		tools: z.array(runtimeToolSchema).max(100_000),
+	}).parse({
 		schemaVersion: RUNTIME_CATALOG_SCHEMA_VERSION,
 		catalogVersion,
 		catalogVerifiedAt,

@@ -2,7 +2,7 @@
 
 La [politique de montée progressive](SEO_CROISSANCE_ORGANIQUE.md) décrit le contrôle automatique ajouté au build : guides et fiches sont admis par lots, après analyse des sources et de la répétition. Son activation publique dépend du déploiement de cette version.
 
-Les verdicts compresseur-outil répondent à un besoin produit réel, mais leur nombre croît comme le produit du nombre de compresseurs par le nombre d’outils. CompatAir expose 4 616 353 combinaisons explorables : le snapshot auditable conserve 4 600 506 verdicts fixes, tandis que 15 847 combinaisons paramétriques exigent une cadence ou un volume et un temps cible. Le calculateur et les interfaces MCP/UCP traitent ces paramètres sans générer un fichier HTML par résultat ; l’endpoint API HTTP limité aux identifiants répond `insufficient_data` pour ces outils.
+Les verdicts compresseur-outil répondent à un besoin produit réel, mais leur nombre croît comme le produit du nombre de compresseurs par le nombre d’outils. CompatAir expose 4 616 353 combinaisons explorables : le manifeste décrit 4 600 506 couples fixes calculables, tandis que 15 847 combinaisons paramétriques exigent une cadence ou un volume et un temps cible. Le calculateur et les interfaces MCP/UCP traitent ces paramètres sans générer un fichier HTML par résultat ; l’endpoint API HTTP limité aux identifiants répond `insufficient_data` pour ces outils.
 
 ## Frontière d’indexation
 
@@ -12,7 +12,7 @@ Les verdicts compresseur-outil répondent à un besoin produit réel, mais leur 
 - Une ancienne URL exacte dont les deux slugs existent encore reçoit une redirection permanente vers le calculateur prérempli avec les identifiants canoniques dans le fragment d’URL.
 - Une URL ancienne inconnue, ambiguë ou mal formée reçoit une réponse `410 Gone` ciblée. Les paramètres de suivi d’une URL connue sont supprimés lors de la redirection canonique.
 - Les couples restent exclus du sitemap et ne publient pas de balisage `TechArticle` destiné à enrichir leur présence dans les résultats.
-- Le snapshot `/data/verdicts.json` conserve les 4 600 506 couples à débit fixe pour l’audit, l’historique et les usages machine. Les 15 847 combinaisons paramétriques sont calculées seulement après saisie de leurs paramètres.
+- Le manifeste `/data/verdicts.json` décrit les 4 600 506 couples fixes calculables à la demande ; l’audit exhaustif antérieur est conservé dans une archive immuable. Les 15 847 combinaisons paramétriques sont calculées seulement après saisie de leurs paramètres.
 - Les premières pages de `/preuves/` et `/sources-fiabilite/` restent indexables. Leurs pages 2 et suivantes conservent les liens de parcours, mais publient `noindex,follow` et restent hors sitemap afin de ne pas multiplier les entrées de répertoire sans intention de recherche propre.
 
 Cette séparation évite une croissance quadratique du HTML. Le corpus indexable reste centré sur les pages qui apportent une synthèse ou une information propre, tandis que le contrat machine décrit explicitement le grain fixe ou paramétrique de chaque décision.
@@ -53,3 +53,5 @@ Les fiches outils et leurs pages d’usage ont des intentions distinctes : carac
 - une fiche produit ou une page d’usage retombe sur un titre automatiquement ajusté.
 
 Cette règle doit être réexaminée avant de pré-générer une éventuelle sous-sélection de couples à forte demande. Une page ne pourra devenir indexable que si elle apporte une valeur éditoriale propre, vérifiable et non produite uniquement par substitution de noms ou de chiffres.
+
+Publication des verdicts : `/data/verdicts.json` est désormais un manifeste de calcul à la demande (schéma 2.0.0), sans tableau `pairs`. La distribution exhaustive publiée le 27 septembre 2026 est historique. Le manifeste lie son archive immuable, son catalogue et ses signatures d’origine. Utiliser l’API pour les décisions courantes. Voir [performance du build](build-performance.md).

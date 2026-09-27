@@ -1,102 +1,164 @@
-# Calculs incrémentaux et capacité
+# Build incrémental et calcul à la demande
 
-Le build Astro réutilise un cache local dans `.astro/compatibility-cache-v1`.
-Il concerne le snapshot des compatibilités fixes, pas le rendu de toutes les
-pages ni les calculs interactifs du navigateur. Les tests du moteur restent
-exécutés sans ce cache.
+Le build courant ne produit plus l’export exhaustif compresseurs × outils.
+`/data/verdicts.json` publie un manifeste **2.0.0** : version du catalogue,
+version du moteur, périmètre calculable, endpoint HTTP et adresse de l’archive.
+Il n’expose ni tableau `pairs`, ni distribution globale supposée. Le nombre de
+couples calculables n’est pas un nombre de verdicts pré-calculés.
 
-## Invalidation
+## Décisions et versions
 
-Chaque compresseur et chaque outil est identifié par une empreinte de sa fiche
-complète, sources et confiance incluses. Une ligne compressée contient les
-résultats d'un outil pour les compresseurs du manifeste précédent. Les identités
-sont reconstruites dans l'ordre public habituel : outil, puis compresseur.
+L’API et MCP utilisent l’index SQLite et le même moteur déterministe. Un couple
+est évalué lorsqu’il est demandé. Une donnée insuffisante conserve le résultat
+`insufficient_data`. La version de décision lie le catalogue entier, la version
+du moteur et le mode de calcul. Le cache du service reste borné à 2 Mio ; le
+cache SQLite est borné à 8 Mio, mmap désactivé. Le redémarrage d’une release
+élimine les anciens résultats en mémoire. Aucune donnée d’un ancien catalogue
+n’est réétiquetée avec une nouvelle version.
 
-Avec un cache valide et un moteur inchangé :
+Le benchmark agent recalcule un panel explicite de 100 couples réels, sélectionné
+dans le précédent benchmark public. Il ne parcourt plus toute la matrice pour
+choisir ses cas. Un retrait de produit exige une révision explicite du panel.
+Ce panel teste la fidélité des réponses, pas la distribution du catalogue.
 
-| Modification | Calculs du snapshot à refaire |
-| --- | --- |
-| CSS, header, guide sans changement du catalogue | Aucun |
-| Un outil fixe ajouté ou modifié | Un par compresseur |
-| Un compresseur ajouté ou modifié | Un par outil fixe |
-| Retrait ou réorganisation de fiches | Aucun pour les fiches conservées |
-| Source ou confiance d'une fiche modifiée | Tous les couples de cette fiche |
-| Code du domaine, dépendances ou runtime modifiés | Tous |
+L’export d’exécution en masse est distinct du schéma borné accepté par le navigateur : la projection de build peut dépasser 4 000 outils, tandis que les requêtes interactives restent limitées à 50 références.
 
-L'empreinte du moteur couvre les fichiers de production de `src/domain`, le
-lockfile, la configuration du cache et les versions Node, V8 et ICU. Elle ne
-repose donc pas uniquement sur une augmentation manuelle de `CALCULATION_VERSION`.
-Une nouvelle date ou version de catalogue renouvelle les métadonnées et le hash
-public sans forcer le recalcul des couples dont les fiches sont identiques.
+Les rapports privés ne calculent que les outils ayant au moins cinq observations
+agrégées. En l’absence de demande mesurable, leur couverture reste indisponible.
+Le flux d’impact 2.0.0 compte les couples fixes potentiellement concernés par un
+changement ; `current_verdict_distribution` reste `null`, avec le statut
+`not_materialized`. Aucun changement de verdict n’est déduit d’une correction
+sans comparaison exacte avant/après.
 
-Les lignes sont vérifiées par SHA-256, taille maximale et schéma strict avant
-réutilisation. Un cache absent, incompatible, endommagé ou indisponible provoque
-une reconstruction, jamais un résultat approximatif. Les fichiers sont écrits
-atomiquement et les lignes obsolètes sont supprimées. Ce cache est jetable et
-ne fait pas partie des preuves documentaires ou des données publiées.
+## Cache des pages
 
-## Budget et CI
+Le mode incrémental d’Astro 7.2 vérifie le code des gabarits et les clés des routes.
+Les produits bruts, titres et historiques sont lus comme des entrées de données
+lors du build, hors du graphe global des modules. Les schémas de validation restent
+appliqués ; le développement conserve les imports habituels et le rechargement.
 
-Le cache sur disque est plafonné à 64 Mio. S'il dépasse ce budget, le build
-continue avec les calculs exacts, sans conserver de cache partiel. La CI de
-production restaure et sauvegarde uniquement ce répertoire, depuis `main`.
-Les PR peuvent le restaurer mais ne le sauvegardent jamais. Les tests du moteur
-restent à froid. Les données, tests, signatures,
-liens internes et Lighthouse restent contrôlés avant publication.
+Les clés couvrent la fiche complète, sources incluses, les titres propres au
+produit, son lien vers l’historique, la version du catalogue opposé utilisé pour
+les résultats, les alternatives effectivement affichées, les liens de lecture,
+la navigation éditoriale, l’indexabilité, le groupe canonique, le jour UTC et Node.
+Le code des offres, du moteur et des autres dépendances reste suivi par Astro.
+Une modification d’une source invalide donc les pages dont les preuves ou les
+résultats peuvent changer, même si aucune valeur numérique n’a changé.
 
-Le nettoyage GitHub conserve seulement le dernier cache de calcul de `main`,
-ainsi que le dernier cache CodeQL par famille, indépendamment des archives de
-production et de retour arrière. Il ne stocke
-ni `dist` ni l'export public monolithique dans le cache Actions.
+Les calculs des fiches disposent aussi d’un cache distinct de 64 Mio. Il lie
+chaque résultat aux fiches complètes des deux produits et à une empreinte du code
+du domaine, du moteur, du lockfile et de Node/V8/ICU. Les sources et la confiance
+font donc partie de l’invalidation. Les résultats identiques partagent une valeur
+dans une ligne compressée ; les empreintes des outils sont stockées une seule
+fois. Seules les lignes complètes sont persistées. Un build partiel conserve les
+lignes valides des pages restaurées. Une corruption, un lien symbolique, un
+changement du moteur ou un cache indisponible entraîne le calcul exact, jamais
+un résultat estimé. Le premier build à froid calcule les résultats nécessaires
+aux compteurs des fiches ; les suivants réutilisent les cellules inchangées.
+La ligne `[page-calculations]` et le benchmark rapportent ces calculs séparément
+des 100 cas du panel agent. Ce cache n’est pas publié.
 
-La ligne `[verdict-cache]` du build donne les nombres de couples réutilisés et
-calculés, les lignes invalides, les octets conservés et le temps du snapshot.
-Pour une comparaison reproductible, déplacer temporairement le répertoire de
-cache, lancer `pnpm build`, puis relancer sans modification. Comparer les logs
-et le SHA-256 de `dist/data/verdicts.json` ; les deux exports doivent être identiques.
+Les tableaux des groupes de variantes montrent au maximum douze références,
+dont la principale et celle consultée, avec le total du groupe et un accès au
+scanner. Leur rendu et leur clé ne recopient plus toute la liste sur chaque page.
 
-## Dates du sitemap
+Ajouter un outil peut modifier les compteurs de toutes les fiches compresseurs.
+Ajouter un compresseur peut modifier les sélections de tous les outils. Ces pages
+doivent être régénérées : le cache ne doit pas conserver des résultats périmés.
+Les hubs sans clé sont toujours reconstruits. Le compteur global du header est
+actualisé depuis le petit manifeste, pour ne pas imposer une modification de
+chaque HTML au seul changement du nombre de références.
 
-Le build lit en une fois les changements Git depuis le dernier merge. Pour cette
-portion linéaire de l'historique, la première modification d'un fichier permet
-de répondre aux requêtes `lastmod` sans relancer Git pour chaque URL. Le choix
-suit l'ordre de parcours des commits, même si leurs dates ne sont pas monotones.
-Les sources plus anciennes conservent la requête Git exacte, avec mémorisation
-par groupe de fichiers. Aucun horodatage de build ne remplace une date éditoriale.
+Le cache HTML est jetable, borné à 384 Mio et sauvegardé uniquement par `main`.
+Un cache absent ou trop grand produit un build complet. Les budgets de données suivent le nombre de références : les seuils de 260 Kio (export d’exécution gzip) et 140 Kio (recherche gzip) sont les bases à 5 006 références. Le plafond HTML est de 300 Mio plus 64 Kio par référence supplémentaire ; l’artefact courant est ramené de 2 700 à 600 Mio, plus 256 Kio par référence supplémentaire. Les plafonds JavaScript restent fixes. Les contrôles de données,
+de valeur propre, de sources, de sécurité, de liens et Lighthouse restent actifs.
 
-## Mémoire du serveur
+## Archive historique et migration
 
-Le serveur actif utilise l’index SQLite décrit ci-dessous. Le lecteur compact de
-la matrice historique reste disponible pour les exports et la migration ; il ne
-fait plus partie du démarrage normal du service.
+Le schéma 1.1.0 et ses 19 fichiers associés restent consultables sous :
 
-## Limites restantes
+`/data/archives/a97717c0a93a5d2e13295ad6c4f08eb68534770a/`
 
-Le cache évite les recalculs ; il n'élimine pas le coût cartésien de l'export JSON
-historique. Cet export est encore sérialisé, signé, contrôlé et distribué en
-entier. Le lecteur reste limité à dix millions de lignes. Il faut migrer ce
-contrat vers des partitions versionnées et un accès ciblé avant de viser des
-dizaines de millions de couples. Augmenter simplement les limites mémoire ne
-résout pas ce problème.
+Le manifeste courant lie `verdicts.json`, `catalog.json` et `signatures.json`
+dans ce répertoire. Les statistiques publiques issues de cet audit sont étiquetées
+historiques et datées ; elles ne décrivent pas les futures extensions du catalogue.
+Les signatures conservent leurs chemins originaux `/data/...` : pour vérifier
+l’archive, utiliser son répertoire comme racine des données avec le vérificateur.
 
-Le manifeste de signature `2.0.0` calcule désormais les empreintes de fichiers en flux et authentifie le chemin, la taille et le SHA-256 par Ed25519. Le blocage de lecture au-delà de 2 Gio est couvert par une fixture réelle de cette taille, sous 256 Mio de mémoire. La génération et la distribution de l’export intégral demeurent distinctes de cette correction.
+Avant l’activation, `preserve-verdict-archive.mjs` vérifie les signatures Ed25519,
+les empreintes complètes, les tailles et l’identité du manifeste épinglé. Il
+crée des liens physiques depuis la release précédente, sans symlink ni copie
+réseau. Les fichiers survivent au nettoyage de cette release. À chaque déploiement,
+les fichiers historiques sont revérifiés, mais ni recalculés ni réarchivés dans
+l’artefact de CI. Une source absente, modifiée ou non conforme bloque l’activation.
+Le déploiement conserve sa session SSH unique et son rollback atomique.
 
-Le mode incrémental expérimental d’Astro 7.2 est activé sur les fiches, usages et guides. Les clés couvrent les données, la navigation éditoriale, le groupe canonique, l’indexabilité et le jour UTC (offres datées). Astro ajoute l’empreinte des modules dépendants. Une modification du catalogue importé globalement peut encore invalider toute une famille : le rendu strictement limité à un produit n’est pas revendiqué. Le cache HTML est jetable, borné à 384 Mio, réservé aux builds main, et seule sa dernière copie est conservée dans Actions.
+Ce transfert initial exige la release historique ou une release contenant déjà
+son archive validée. Une installation neuve doit restaurer ces fichiers signés
+avant d’activer un manifeste qui les annonce. Ne jamais modifier ces fichiers en
+place : ils sont immuables et partagés par liens physiques.
 
-## Service indexé, moteur 1.4.0
+Pour les anciens consommateurs, migrer explicitement vers le manifeste 2.0.0 et
+l’API, ou utiliser l’archive avec son catalogue d’origine. L’URL courante change
+bien de schéma majeur ; elle ne prétend pas maintenir un tableau `pairs` en v2.
 
-Le serveur ouvre la base SQLite de la release et calcule les couples demandés avec le noyau commun. Ni les tableaux de produits ni la matrice publique ne sont chargés au démarrage. Le cache de résultats est borné à 2 Mio, le cache SQLite à 8 Mio, mmap désactivé. `pnpm benchmark:mcp-startup` contrôle l’API HTTP réelle sous un tas de 128 Mio et un RSS maximal de 256 Mio.
+## Export exhaustif explicite
 
-`pnpm benchmark:catalog-scale` mesure 10 000, 25 000, 50 000 et 100 000 références **synthétiques** dans des processus isolés. Les résultats sont dans `docs/catalog-scale-measurements.json`. Ce test porte sur l’index et le service ; il ne valide ni 100 000 pages HTML, ni une charge concurrente de production, ni un retour arrière à cette échelle. L’export JSON historique demeure sur le chemin de build. Sa migration contractuelle reste nécessaire pour supprimer ce dernier coût quadratique.
+```sh
+pnpm data:export-verdicts /tmp/compatibilites-hors-ligne.json dist/data/catalog.json
+```
 
-Documentation Astro utilisée : https://v7-2.previews.docs.astro.build/en/reference/experimental-flags/incremental-build/
+Cette commande vérifie la version du catalogue, calcule toute la matrice fixe et
+écrit en flux le format 1.1.0, avec la même empreinte que l’export historique.
+Elle exige un chemin distinct, refuse d’écraser un fichier et garde l’export hors
+de `dist` et `public`. Elle reste proportionnelle au nombre de couples et n’est
+appelée ni par le build, ni par le déploiement. L’export n’est pas signé
+automatiquement : une signature de publication nécessite la clé de l’opérateur.
+Le lecteur historique reste limité à dix millions de lignes.
 
-## Budgets du client mesurés le 27 septembre 2026
+## Mesures reproductibles
 
-Les contrôles de version du moteur et du catalogue, la provenance par champ et le calcul partagé portent le graphe JavaScript du calculateur à environ 60 Kio gzip, et ceux du Passeport, du diagnostic et du suivi à 58–59 Kio. Les plafonds de ces seuls parcours passent respectivement à 61 et 59 Kio ; la maintenance passe de 50 à 51 Kio au chargement initial. Le plafond de 57 Kio des autres parcours est conservé. Ces ajustements accompagnent le retrait du téléchargement obligatoire du catalogue complet et des suggestions globales, pas une hausse générale des budgets. Lighthouse reste bloquant.
+Mesure locale du 27 septembre 2026, Node 24.19.0 sur macOS arm64, de 5 006 à
+6 006 références. Les 1 000 outils ajoutés sont des fixtures synthétiques confinées
+à la copie temporaire. [Rapport chiffré](build-growth-measurements.json).
 
-Le plafond de l’artefact reste à 2 700 Mio. La formulation répétée de la borne conservatrice est raccourcie en conservant le FAD et les deux pressions ; les valeurs, sources et verdicts sont inchangés. Le format historique demeure coûteux et ne valide pas une capacité de 100 000 pages.
+| Génération Astro | Durée observée | Pages restaurées | Calculs de fiches nouveaux / réutilisés |
+| --- | ---: | ---: | ---: |
+| Catalogue initial, caches vides | 141,39 s | 0 | 4 616 353 / 0 |
+| Catalogue initial, caches chauds | 67,03 s | 9 049 | 0 / 0 |
+| Ajout des 1 000 outils | 146,45 s | 7 830 | 1 219 000 / 4 616 353 |
+| Catalogue étendu, caches chauds | 73,35 s | 11 049 | 0 / 0 |
+| Catalogue étendu, caches vides | 129,52 s | 0 | 5 835 353 / 0 |
 
-## Vérification locale du cache HTML
+Les **11 201 fichiers HTML** des quatre familles vérifiées sont identiques octet
+pour octet entre génération incrémentale et reconstruction à froid. Le manifeste
+reste à **1 353 octets**. Le cache des calculs reste inférieur à 15 Mo.
 
-Le 27 septembre 2026, sous Node 24.19.0 sur macOS arm64, le build après modification du moteur a pris 1 min 59 s. Le build suivant, sans changement de moteur ni de catalogue, a pris 51,21 s : 9 049 pages restaurées, 4 600 506 résultats fixes réutilisés et aucun résultat recalculé. Le SHA-256 de l’export intégral des verdicts, de la fiche Atlas Copco AB25E100 et du guide complet de dimensionnement est resté identique. Ce sont des mesures locales de deux exécutions, pas une garantie de durée en CI ou à une autre échelle.
+Il s’agit d’un passage local, avec d’autres contrôles locaux pendant certaines
+phases : ces durées ne prouvent pas que chaque build incrémental est plus rapide
+qu’un build complet. Elles prouvent la réutilisation des résultats et des pages,
+et l’égalité du rendu. La préparation d’indexation a pris 8,39 s puis 7,65 s,
+séparément ; les tests, SQLite, signatures et transfert en production ne sont
+pas inclus dans les durées Astro.
+
+```sh
+node scripts/benchmark-build-growth.mjs
+pnpm benchmark:mcp-startup
+pnpm benchmark:catalog-scale
+```
+
+Le premier script copie les sources dans un répertoire temporaire, crée uniquement
+là 1 000 références synthétiques d’outils, puis mesure le build de base à froid et
+à chaud, l’ajout incrémental et le catalogue étendu à froid et à chaud. Il compare
+les empreintes de toutes les fiches, pages d’usage et guides entre le résultat
+incrémental et le résultat complet. Il n’ajoute aucune référence réelle, ne publie
+rien et conserve ses logs et son rapport dans le répertoire affiché.
+
+Le benchmark de capacité SQLite à 100 000 références reste un test synthétique
+de l’index et du service, distinct du test de génération HTML. Aucun des deux
+ne constitue une garantie de durée sur un runner CI ni un test de trafic concurrent.
+
+Les dates `lastmod` du sitemap restent fondées sur l’historique Git et les dates
+éditoriales. Aucun horodatage de build ne remplace une date de source.
+
+Documentation : https://docs.astro.build/en/reference/experimental-flags/incremental-build/

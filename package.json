@@ -55,7 +55,8 @@
     "astro": "astro",
     "audit:page-value": "node scripts/audit-page-value.mjs",
     "benchmark:catalog-scale": "node scripts/benchmark-catalog-scale.mjs",
-    "benchmark:publication-signatures": "node --max-old-space-size=128 scripts/verify-publication-signature-scale.mjs"
+    "benchmark:publication-signatures": "node --max-old-space-size=128 scripts/verify-publication-signature-scale.mjs",
+    "data:export-verdicts": "node scripts/export-fixed-verdicts.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",

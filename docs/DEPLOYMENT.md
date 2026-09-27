@@ -157,7 +157,7 @@ pnpm build
 pnpm data:rank-demand -- /chemin/prive/demand-aggregates.json
 ```
 
-Le rapport `demand-priorities.json` exclut toute dimension comptant moins de cinq contributions. Il rapproche ensuite la demande agrégée du snapshot public `data/verdicts.json` et matérialise une file d’action bornée aux vingt couples insuffisants les plus demandés. Il fait aussi remonter les outils recherchés qui disposent du plus grand volume pondéré de couples encore insuffisants. Une seconde liste classe les compresseurs selon la somme de demande visible bloquée lorsque le besoin FAD de l’outil est déjà connu : elle sert à prioriser la recherche de courbes FAD et de pressions manquantes sans attribuer au compresseur une donnée absente côté outil.
+Le rapport `demand-priorities.json` exclut toute dimension comptant moins de cinq contributions. Il vérifie le manifeste public `data/verdicts.json` puis calcule uniquement les couples des outils ayant une demande agrégée publiable et matérialise une file d’action bornée aux vingt couples insuffisants les plus demandés. Il fait aussi remonter les outils recherchés qui disposent du plus grand volume pondéré de couples encore insuffisants. Une seconde liste classe les compresseurs selon la somme de demande visible bloquée lorsque le besoin FAD de l’outil est déjà connu : elle sert à prioriser la recherche de courbes FAD et de pressions manquantes sans attribuer au compresseur une donnée absente côté outil.
 
 La couverture pondérée vaut `somme(demande outil × couples concluants) / somme(demande outil × couples éligibles)`. L’objectif opérationnel est fixé à 80 %. Le rapport publie aussi la couverture non pondérée, la part des sélections d’outils effectivement visible après suppression et le nombre d’outils visibles sans verdict exploitable. En l’absence d’agrégats privés suffisants, le statut reste `insufficient_data` : le build public ne remplace jamais la demande observée par une pondération uniforme.
 
@@ -229,3 +229,7 @@ bash /home/bluetouff/compatair-deploy/rollback-remote.sh /var/www/html/compatair
 ```
 
 Le rollback ne reconstruit rien et ne modifie pas les anciennes releases.
+
+## Conservation de l’export historique
+
+Le déploiement vérifie puis rattache l’archive signée de la release `a97717c0a93a5d2e13295ad6c4f08eb68534770a` avant l’activation. Son absence bloque la publication du manifeste 2.0.0 qui l’annonce. Les fichiers sont immuables et liés physiquement entre releases ; ne jamais les modifier en place. Une nouvelle installation doit restaurer cette archive et ses signatures d’origine. Voir [build-performance.md](build-performance.md) pour le contrat, la migration et l’export exhaustif explicite. La session SSH unique reste inchangée.

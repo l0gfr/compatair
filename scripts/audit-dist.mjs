@@ -11,9 +11,15 @@ import { FAD_COMPARISON_PAGE_SIZE, GUIDE_DIRECTORY_PAGE_SIZE, TOOL_USAGE_PAGE_SI
 import { parseJavaScriptModuleSpecifiers } from './lib/javascript-module-graph.mjs';
 import { decodeXmlEntities as decodeXml, extractH1Text } from './lib/markup-text.mjs';
 import { createIndexationPolicy, validateBaseline, validateManifest } from './lib/indexation-policy.mjs';
-import { readVerdictSnapshot, verdictIndex } from '../server/verdict-snapshot.mjs';
+import { validateVerdictPublication } from '../server/verdict-publication.mjs';
+import legacyArchive from '../config/legacy-verdict-archive.json' with { type: 'json' };
+const archivePaths = new Set([...legacyArchive.manifest.files.map(entry => `${legacyArchive.basePath}/${entry.path.split('/').at(-1)}`), `${legacyArchive.basePath}/signatures.json`]);
 
 const root = resolve('dist');
+const auditedCatalog = JSON.parse(await readFile(join(root, 'data/catalog.json'), 'utf8'));
+const referenceCount = auditedCatalog.compressors.length + auditedCatalog.tools.length;
+const growthRatio = Math.max(1, referenceCount / 5_006);
+const addedReferences = Math.max(0, referenceCount - 5_006);
 const siteOrigin = 'https://compatair.fr';
 const errors = [];
 const warnings = [];
@@ -39,8 +45,8 @@ const maximumMaintenanceInitialScriptBytesGzip = 51 * 1024;
 // Ces plafonds concernent les données ; les budgets JavaScript restent distincts.
 // Export historique enrichi de la provenance par champ (253 KiB mesurés).
 // Les parcours interactifs utilisent désormais des réponses bornées par API.
-const maximumRuntimeCatalogBytesGzip = 260 * 1024;
-const maximumSearchIndexBytesGzip = 140 * 1024;
+const maximumRuntimeCatalogBytesGzip = Math.ceil(260 * 1024 * growthRatio);
+const maximumSearchIndexBytesGzip = Math.ceil(140 * 1024 * growthRatio);
 const maximumIndexableInternalDestinationsBeforeWarning = 100;
 const maximumIndexableInternalDestinations = 120;
 const maximumStaticCompatibilityResultsBySection = new Map([
@@ -48,10 +54,10 @@ const maximumStaticCompatibilityResultsBySection = new Map([
 	['outils-pneumatiques', 5],
 	['quel-compresseur-pour', 6],
 ]);
-const maximumHtmlArtifactBytes = 300 * 1024 * 1024;
-// 4 600 506 verdicts : 2 486 Mio bruts, 269 Mio HTML et 168 Mio en archive xz.
-// Le workflow borne séparément l’archive envoyée à GitHub à 176 Mio.
-const maximumTotalArtifactBytes = 2700 * 1024 * 1024;
+const maximumHtmlArtifactBytes = 300 * 1024 * 1024 + addedReferences * 64 * 1024;
+// Linear allowance for documented products and images, never for a Cartesian matrix.
+// The frozen archive is attached and verified separately on the production host.
+const maximumTotalArtifactBytes = 600 * 1024 * 1024 + addedReferences * 256 * 1024;
 const maximumJourneyVideoBytes = 16 * 1024 * 1024;
 // Les pages produits réutilisent des cartes de catalogue afin que le temps de build ne croisse pas avec chaque référence.
 const maximumSocialImageCount = 80;
@@ -150,7 +156,7 @@ let searchIndexBytesGzip = 0;
 let totalArtifactBytes = 0;
 let htmlArtifactBytes = 0;
 let fixedFlowCompatibilityPairs = 0;
-let conclusiveCompatibilityPairs = 0;
+
 let publishedCatalogVersion = '';
 const immutableAssetManifest = JSON.parse(await readFile(resolve('config/immutable-assets.json'), 'utf8'));
 
@@ -309,19 +315,14 @@ let explorableCompatibilityPairs = 0;
 let parametricCompatibilityPairs = 0;
 if (!artifactPaths.has('/data/catalog.json') || !artifactPaths.has('/data/verdicts.json')) errors.push('data: catalogue ou verdicts absents pour contrôler les URL de compatibilité');
 else {
-	const catalog = JSON.parse(await readFile(join(root, '/data/catalog.json'), 'utf8'));
+	const catalog = auditedCatalog;
 	publishedCatalogVersion = catalog.catalogVersion ?? '';
-	const verdicts = await readVerdictSnapshot(join(root, '/data/verdicts.json'), { compactIds: true });
-	fixedFlowCompatibilityPairs = verdicts.pairs?.length ?? 0;
-	parametricCompatibilityPairs = catalog.scope?.parametric_combination_count ?? 0;
-	for (const pair of verdicts.pairs) if (pair.verdict !== 'insufficient_data') conclusiveCompatibilityPairs++;
-	const verdictMap = verdictIndex(verdicts);
-	for (const compressor of catalog.compressors ?? []) for (const tool of catalog.tools ?? []) {
-		const pair = verdictMap.get(compressor.id, tool.id);
-		if (tool.demandModel === 'fixed-flow' && !pair) errors.push(`verdicts: couple à débit fixe absent ${compressor.id}--${tool.id}`);
-		explorableCompatibilityPairs += 1;
-	}
-	if (catalog.scope?.explorable_combination_count !== explorableCompatibilityPairs || catalog.scope?.fixed_verdict_count !== fixedFlowCompatibilityPairs || fixedFlowCompatibilityPairs + parametricCompatibilityPairs !== explorableCompatibilityPairs) errors.push('data: partition explorables/verdicts fixes/paramétriques incohérente');
+	const verdicts = JSON.parse(await readFile(join(root, '/data/verdicts.json'), 'utf8'));
+	validateVerdictPublication(verdicts, catalog);
+	fixedFlowCompatibilityPairs = catalog.compressors.length * catalog.tools.filter(tool => tool.demandModel === 'fixed-flow').length;
+	parametricCompatibilityPairs = catalog.compressors.length * catalog.tools.filter(tool => tool.demandModel !== 'fixed-flow').length;
+	explorableCompatibilityPairs = catalog.compressors.length * catalog.tools.length;
+	if (catalog.scope?.explorable_combination_count !== explorableCompatibilityPairs || catalog.scope?.fixed_verdict_count !== fixedFlowCompatibilityPairs || fixedFlowCompatibilityPairs + parametricCompatibilityPairs !== explorableCompatibilityPairs) errors.push('data: partition des couples calculables incohérente');
 }
 
 if (!artifactPaths.has('/data/runtime-catalog.json')) errors.push('data: catalogue d’exécution absent');
@@ -981,7 +982,7 @@ for (const file of htmlFiles) {
 		if (!value || value.startsWith('//') || value.startsWith('/_assets/') || value.startsWith('/images/') || value === '/favicon.svg' || value === '/favicon.ico') continue;
 		if (value.startsWith('/go/')) continue;
 		const local = value.endsWith('/') ? value : value.match(/\.[a-z0-9]+$/i) ? value : `${value}/`;
-		if (!sitePaths.has(local) && !artifactPaths.has(value) && !['/robots.txt', '/sitemap-index.xml', '/.well-known/security.txt'].includes(value)) errors.push(`${label}: lien interne introuvable ${value}`);
+		if (!sitePaths.has(local) && !artifactPaths.has(value) && !archivePaths.has(value) && !['/robots.txt', '/sitemap-index.xml', '/.well-known/security.txt'].includes(value)) errors.push(`${label}: lien interne introuvable ${value}`);
 	}
 	for (const match of html.matchAll(/<img\s+([^>]+)>/g)) {
 		const attributes = ` ${match[1]}`;
@@ -1034,5 +1035,5 @@ if (errors.length) {
 	console.error(errors.join('\n'));
 	process.exit(1);
 }
-const conclusiveCoverage = fixedFlowCompatibilityPairs ? (conclusiveCompatibilityPairs / fixedFlowCompatibilityPairs * 100).toFixed(1).replace('.', ',') : '0,0';
-console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, ${explorableCompatibilityPairs} combinaisons explorables dont ${fixedFlowCompatibilityPairs} verdicts fixes audités et ${parametricCompatibilityPairs} combinaisons paramétriques, sans page HTML quadratique ; couverture conclusive ${conclusiveCoverage} % (${conclusiveCompatibilityPairs}/${fixedFlowCompatibilityPairs} couples à débit fixe), ${socialImageCount} cartes sociales et titres ≤ ${maximumDocumentTitleLength} caractères. Artifact ${Math.ceil(totalArtifactBytes / 1024 / 1024)} Mo dont ${Math.ceil(htmlArtifactBytes / 1024 / 1024)} Mo de HTML, sous les budgets de ${maximumTotalArtifactBytes / 1024 / 1024} et ${maximumHtmlArtifactBytes / 1024 / 1024} Mo ; index de recherche ${Math.ceil(searchIndexBytesGzip / 1024)} Ko gzip. JavaScript initial : plafond général ${maximumInitialPageScriptBytesGzip / 1024} Ko, maintenance ${maximumMaintenanceInitialScriptBytesGzip / 1024} Ko (maximum ${Math.ceil(largestInitialPageScriptBudget.bytes / 1024)} Ko sur ${largestInitialPageScriptBudget.label}, Passeport ${Math.ceil(passportInitialScriptBudget.bytes / 1024)} Ko sous son budget de ${maximumPassportInitialScriptBytesGzip / 1024} Ko) ; à la demande : plafond général ${maximumOnDemandPageScriptBytesGzip / 1024} Ko, parcours versionnés ${maximumVersionedDecisionScriptBytesGzip / 1024} Ko (Calculateur ${Math.ceil(calculatorOnDemandScriptBudget.bytes / 1024)} Ko sous son budget de ${maximumCalculatorOnDemandScriptBytesGzip / 1024} Ko, Passeport ${Math.ceil(passportOnDemandScriptBudget.bytes / 1024)} Ko, maximum global ${Math.ceil(largestOnDemandPageScriptBudget.bytes / 1024)} Ko sur ${largestOnDemandPageScriptBudget.label}) ; catalogue d’exécution ${Math.ceil(runtimeCatalogBytesGzip / 1024)} Ko sous son budget de ${maximumRuntimeCatalogBytesGzip / 1024} Ko. Widget immuable et SRI vérifiés.`);
+
+console.log(`Audit réussi : ${htmlFiles.length} pages, ${sitemapUrls.size} URL canoniques, ${explorableCompatibilityPairs} combinaisons explorables dont ${fixedFlowCompatibilityPairs} couples fixes calculables à la demande et ${parametricCompatibilityPairs} combinaisons paramétriques, sans page HTML quadratique ; distribution globale non matérialisée, ${socialImageCount} cartes sociales et titres ≤ ${maximumDocumentTitleLength} caractères. Artifact ${Math.ceil(totalArtifactBytes / 1024 / 1024)} Mo dont ${Math.ceil(htmlArtifactBytes / 1024 / 1024)} Mo de HTML, sous les budgets de ${maximumTotalArtifactBytes / 1024 / 1024} et ${maximumHtmlArtifactBytes / 1024 / 1024} Mo ; index de recherche ${Math.ceil(searchIndexBytesGzip / 1024)} Ko gzip. JavaScript initial : plafond général ${maximumInitialPageScriptBytesGzip / 1024} Ko, maintenance ${maximumMaintenanceInitialScriptBytesGzip / 1024} Ko (maximum ${Math.ceil(largestInitialPageScriptBudget.bytes / 1024)} Ko sur ${largestInitialPageScriptBudget.label}, Passeport ${Math.ceil(passportInitialScriptBudget.bytes / 1024)} Ko sous son budget de ${maximumPassportInitialScriptBytesGzip / 1024} Ko) ; à la demande : plafond général ${maximumOnDemandPageScriptBytesGzip / 1024} Ko, parcours versionnés ${maximumVersionedDecisionScriptBytesGzip / 1024} Ko (Calculateur ${Math.ceil(calculatorOnDemandScriptBudget.bytes / 1024)} Ko sous son budget de ${maximumCalculatorOnDemandScriptBytesGzip / 1024} Ko, Passeport ${Math.ceil(passportOnDemandScriptBudget.bytes / 1024)} Ko, maximum global ${Math.ceil(largestOnDemandPageScriptBudget.bytes / 1024)} Ko sur ${largestOnDemandPageScriptBudget.label}) ; catalogue d’exécution ${Math.ceil(runtimeCatalogBytesGzip / 1024)} Ko sous son budget de ${maximumRuntimeCatalogBytesGzip / 1024} Ko. Widget immuable et SRI vérifiés.`);

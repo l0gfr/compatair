@@ -1,5 +1,6 @@
 ---
 import { pageBuildKey, guideNavigationVersion } from '../../domain/page-build-key';
+import { productBuildData, relatedToolsFor } from '../../data/product-build-key';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductImage from '../../components/ProductImage.astro';
 import ProductEvidenceDossier from '../../components/ProductEvidenceDossier.astro';
@@ -15,7 +16,7 @@ import { isFixedFlowTool, toolDemandLabel, toolPressureLabel } from '../../domai
 import { sourceQualityLabel } from '../../domain/source-quality';
 
 export async function getStaticPaths() {
- const navigationVersion = await guideNavigationVersion(); return tools.map((tool) => { assertDecisionPageValue(tool); return { params: { slug: tool.slug }, props: { tool }, cacheKey: pageBuildKey(`/quel-compresseur-pour/${tool.slug}/`, tool, navigationVersion) }; }); }
+ const navigationVersion = await guideNavigationVersion(); return tools.map((tool) => { assertDecisionPageValue(tool); return { params: { slug: tool.slug }, props: { tool }, cacheKey: pageBuildKey(`/quel-compresseur-pour/${tool.slug}/`, productBuildData(tool, 'use'), navigationVersion) }; }); }
 const { tool } = Astro.props;
 const fixedFlow = isFixedFlowTool(tool);
 const availableProductIds = new Set(activeOffers.map((offer) => offer.productId));
@@ -28,8 +29,7 @@ const targetFlow = fixedFlow ? tool.airflowLpm.typical * 1.25 : undefined;
 const comparisonIds = compatibility?.compatibleSelection.map(({ compressor }) => compressor.id).join(',') ?? '';
 const fiftyLiterMatches = compatibility?.matches.filter(({ compressor }) => compressor.tankLiters === 50) ?? [];
 const fiftyLiterCompatible = fiftyLiterMatches.filter(({ result }) => result.verdict === 'continuous' || result.verdict === 'intermittent').length;
-const relatedTools = tools.filter((item) => item.id !== tool.id && item.categoryId === tool.categoryId)
-	.sort((a, b) => (a.brand === tool.brand ? 0 : 1) - (b.brand === tool.brand ? 0 : 1) || a.label.localeCompare(b.label, 'fr')).slice(0, 3);
+const relatedTools = relatedToolsFor(tool);
 ---
 
 <BaseLayout title={`Quel compresseur pour ${tool.model} ? | CompatAir`} editorialTitle={toolUseSeoTitle(tool.id)} description={`${tool.label} : ${demandLabel}, ${pressureLabel}. Compresseurs adaptés, limites, preuves et alternatives pour cette référence exacte.`} imagePath="/social/compatibilite.png" imageAlt="Guide de compatibilité entre compresseurs et outils pneumatiques" breadcrumbs={[{ name: 'Outils pneumatiques', path: '/outils-pneumatiques/' }, { name: `Quel compresseur pour ${tool.model}`, path: pageUrl }]}>

@@ -2,6 +2,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { createHash } from 'node:crypto';
 import { CALCULATION_VERSION } from './air-sizing.mjs';
 import { evaluateCompatibility } from './air-compatibility.mjs';
+import { decisionVersion } from './verdict-publication.mjs';
 
 export const CATALOG_STORAGE_VERSION = '1.0.0';
 const normalize = value => String(value ?? '').normalize('NFKD').replace(/\p{M}/gu, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
@@ -174,5 +175,5 @@ export function repositoryCatalog(repository) {
 
 export function calculationSnapshotMetadata(repository) {
  return { pairs: [], catalogVersion: repository.metadata.catalogVersion, calculationVersion: CALCULATION_VERSION,
-  verdictVersion: digest({ catalogVersion: repository.metadata.catalogVersion, calculationVersion: CALCULATION_VERSION, mode: 'on-demand-v1' }) };
+  verdictVersion: decisionVersion(repository.metadata.catalogVersion) };
 }

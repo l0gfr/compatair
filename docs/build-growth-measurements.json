@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "synthetic": true,
+  "node": "v24.19.0",
+  "addedTools": 1000,
+  "phases": {
+    "prepare": {
+      "seconds": 8.39
+    },
+    "baselineCold": {
+      "seconds": 141.39,
+      "cachedPages": 0,
+      "pageCalculations": {
+        "calculated": 4616353,
+        "reused": 0,
+        "memoryHits": 9252210,
+        "invalidRows": 0,
+        "storedRows": 1219,
+        "bytes": 14399357,
+        "writable": true
+      },
+      "verdictBytes": 1353
+    },
+    "baselineWarm": {
+      "seconds": 67.03,
+      "cachedPages": 9049,
+      "pageCalculations": {
+        "calculated": 0,
+        "reused": 0,
+        "memoryHits": 0
+      },
+      "verdictBytes": 1353
+    },
+    "prepareGrowth": {
+      "seconds": 7.65
+    },
+    "growthIncremental": {
+      "seconds": 146.45,
+      "cachedPages": 7830,
+      "pageCalculations": {
+        "calculated": 1219000,
+        "reused": 4616353,
+        "memoryHits": 2438000,
+        "invalidRows": 0,
+        "storedRows": 1219,
+        "bytes": 14750826,
+        "writable": true
+      },
+      "verdictBytes": 1353
+    },
+    "growthWarm": {
+      "seconds": 73.35,
+      "cachedPages": 11049,
+      "pageCalculations": {
+        "calculated": 0,
+        "reused": 0,
+        "memoryHits": 0
+      },
+      "verdictBytes": 1353
+    },
+    "growthCold": {
+      "seconds": 129.52,
+      "cachedPages": 0,
+      "pageCalculations": {
+        "calculated": 5835353,
+        "reused": 0,
+        "memoryHits": 11690210,
+        "invalidRows": 0,
+        "storedRows": 1219,
+        "bytes": 14497091,
+        "writable": true
+      },
+      "verdictBytes": 1353
+    }
+  },
+  "checkedHtmlFiles": 11201,
+  "incrementalMatchesCold": true,
+  "differences": [],
+  "measuredAt": "2026-09-27",
+  "platform": "Darwin arm64",
+  "baselineReferences": 5006,
+  "extendedReferences": 6006,
+  "scope": "Astro generation only; preparation measured separately. Excludes CI tests, SQLite packaging, signatures and deployment.",
+  "limitations": "One local run, with other local checks during some phases. Synthetic fixed-flow tools. Durations are observations, not a speedup claim or CI SLA."
+}

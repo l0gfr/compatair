@@ -18,7 +18,7 @@ describe('private weekly operating report', () => {
 		writeFileSync(files.funnel, JSON.stringify({ schemaVersion: '2.0.0', updatedAt: null, totalEvents: 0, calculator: { started: 0, completed: 0 }, counterfactual: { displayed: 0, selected: 0, recalculated: 0, byFamily: Object.fromEntries(['pressure', 'flexible', 'simultaneity', 'leak', 'cadence', 'machine'].map((family) => [family, { displayed: 0, selected: 0, recalculated: 0 }])) } }));
 		writeFileSync(files.acquisition, JSON.stringify({ schemaVersion: '1.0.0', updatedAt: null, totalEvents: 0, buckets: [] }));
 		writeFileSync(files.catalog, JSON.stringify({ catalogVersion: 'catalog-test', compressors: [], tools: [] }));
-		writeFileSync(files.verdicts, JSON.stringify({ verdictVersion: 'verdict-test', pairs: [] }));
+		writeFileSync(files.verdicts, JSON.stringify({ catalogVersion: 'catalog-test', verdictVersion: 'verdict-test', pairs: [] }));
 		const result = spawnSync(process.execPath, [new URL('./generate-private-weekly-report.mjs', import.meta.url).pathname], { encoding: 'utf8', env: {
 			...process.env, COMPAT_AIR_DEMAND_AGGREGATES: files.demand, COMPAT_AIR_PRODUCT_FUNNEL_AGGREGATES: files.funnel,
 			COMPAT_AIR_ACQUISITION_AGGREGATES: files.acquisition, COMPAT_AIR_CATALOG: files.catalog, COMPAT_AIR_VERDICTS: files.verdicts, COMPAT_AIR_PRIVATE_REPORTS: files.reports,
@@ -42,6 +42,7 @@ describe('private weekly operating report', () => {
 		}
 		copyFileSync(new URL('../server/product-funnel-aggregates.mjs', import.meta.url), join(serverDirectory, 'product-funnel-aggregates.mjs'));
 		copyFileSync(new URL('../server/verdict-snapshot.mjs', import.meta.url), join(serverDirectory, 'verdict-snapshot.mjs'));
+		for (const name of ['demand-verdicts.mjs', 'verdict-publication.mjs', 'air-compatibility.mjs', 'air-sizing.mjs']) copyFileSync(new URL(`../server/${name}`, import.meta.url), join(serverDirectory, name));
 
 		const files = {
 			demand: join(root, 'demand.json'), funnel: join(root, 'funnel.json'), acquisition: join(root, 'acquisition.json'),
@@ -51,7 +52,7 @@ describe('private weekly operating report', () => {
 		writeFileSync(files.funnel, JSON.stringify({ schemaVersion: '2.0.0', updatedAt: null, totalEvents: 0, calculator: { started: 0, completed: 0 }, counterfactual: { displayed: 0, selected: 0, recalculated: 0, byFamily: Object.fromEntries(['pressure', 'flexible', 'simultaneity', 'leak', 'cadence', 'machine'].map((family) => [family, { displayed: 0, selected: 0, recalculated: 0 }])) } }));
 		writeFileSync(files.acquisition, JSON.stringify({ schemaVersion: '1.0.0', updatedAt: null, totalEvents: 0, buckets: [] }));
 		writeFileSync(files.catalog, JSON.stringify({ catalogVersion: 'catalog-test', compressors: [], tools: [] }));
-		writeFileSync(files.verdicts, JSON.stringify({ verdictVersion: 'verdict-test', pairs: [] }));
+		writeFileSync(files.verdicts, JSON.stringify({ catalogVersion: 'catalog-test', verdictVersion: 'verdict-test', pairs: [] }));
 		const result = spawnSync(process.execPath, [join(opsDirectory, 'generate-private-weekly-report.mjs')], { encoding: 'utf8', env: {
 			...process.env, COMPAT_AIR_DEMAND_AGGREGATES: files.demand, COMPAT_AIR_PRODUCT_FUNNEL_AGGREGATES: files.funnel,
 			COMPAT_AIR_ACQUISITION_AGGREGATES: files.acquisition, COMPAT_AIR_CATALOG: files.catalog, COMPAT_AIR_VERDICTS: files.verdicts, COMPAT_AIR_PRIVATE_REPORTS: files.reports,
@@ -71,7 +72,7 @@ describe('private weekly operating report', () => {
 		const reports = join(root, 'reports');
 		writeFileSync(catalogPath, JSON.stringify({ catalogVersion: 'catalog-test', compressors: [], tools: [{ id: 'tool', label: 'Outil' }] }));
 		writeFileSync(demandPath, JSON.stringify({ schemaVersion: '1.0.0', totalContributions: 10, dimensions: { tools: { tool: 10 } } }));
-		writeFileSync(verdictPath, '{"verdictVersion":"verdict-test","pairs":[');
+		writeFileSync(verdictPath, '{"catalogVersion":"catalog-test","verdictVersion":"verdict-test","pairs":[');
 		const warnings = ['Documented boundary '.repeat(700)];
 		for (let index = 0; index < 5_000; index++) {
 			appendFileSync(verdictPath, `${index ? ',' : ''}${JSON.stringify({ id: `compressor-${index}--tool`, compressorId: `compressor-${index}`, toolId: 'tool', verdict: index % 2 ? 'continuous' : 'insufficient_data', requiredFadLpm: 250, warnings })}`);

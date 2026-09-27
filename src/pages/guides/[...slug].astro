@@ -1,10 +1,12 @@
 ---
 import { getCollection, render } from 'astro:content';
 import { pageBuildKey, guideNavigationVersion } from '../../domain/page-build-key';
+import { compressorBuildVersion } from '../../data/product-build-key';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { compressors, tools } from '../../data/catalog';
 import { activeOffers } from '../../data/offers';
-import { compatibilityFadLabel, evaluateCompatibility } from '../../domain/compatibility';
+import { compatibilityFadLabel } from '../../domain/compatibility';
+import { evaluatePageCompatibility as evaluateCompatibility, flushPageCalculations } from '../../data/page-compatibility';
 import { guideAudiences, guideMetiers, guideSeries } from '../../domain/editorial-taxonomy';
 import { compressorDisplayName } from '../../domain/product-display';
 import { rankCompatibleCompressors } from '../../domain/seo-selection';
@@ -13,7 +15,7 @@ import { serializeJsonLd } from '../../domain/structured-data';
 export async function getStaticPaths() {
 	const guides = await getCollection('guides');
  const navigationVersion = await guideNavigationVersion();
-	return guides.map((guide) => ({ params: { slug: guide.id }, props: { guide }, cacheKey: pageBuildKey(`/guides/${guide.id}/`, { data: guide.data, body: guide.body }, navigationVersion) }));
+	return guides.map((guide) => ({ params: { slug: guide.id }, props: { guide }, cacheKey: pageBuildKey(`/guides/${guide.id}/`, { data: guide.data, body: guide.body, tool: tools.find(tool => tool.id === guide.data.relatedCalculatorTool), compressors: guide.data.relatedCalculatorTool ? compressorBuildVersion : null }, navigationVersion) }));
 }
 
 const { guide } = Astro.props;
@@ -46,6 +48,7 @@ const compatibleCompressors = relatedTool
 			})
 			.slice(0, 3)
 	: [];
+flushPageCalculations();
 const published = guide.data.pubDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 const externallyReviewed = guide.data.reviewStatus === 'external';
 const socialImageByCategory = {

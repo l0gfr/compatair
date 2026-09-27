@@ -5,7 +5,8 @@ import { handleCatalogRequest } from './catalog-http.mjs';
 import { readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { readVerdictSnapshot, verdictIndex } from './verdict-snapshot.mjs';
+import { readDecisionSnapshot } from './demand-verdicts.mjs';
+import { verdictIndex } from './verdict-snapshot.mjs';
 import { createMcpCore, ENGINE_VERSION, MCP_SERVER_VERSION, METHOD_VERSION, PROTOCOL_VERSION, verifyCompatibilityReceipt } from './mcp-core.mjs';
 import { createDemandAggregateStore, DEMAND_EVENT_SCHEMA_VERSION, isValidCalculationVersion, validateDemandEvent } from './demand-aggregates.mjs';
 import { createProductFunnelAggregateStore, PRODUCT_FUNNEL_SCHEMA_VERSION, validateProductFunnelEvent } from './product-funnel-aggregates.mjs';
@@ -565,7 +566,7 @@ async function start() {
 	const repositoryPath = resolve(dirname(catalogPath), '../_server/catalog.sqlite');
 	const repository = existsSync(repositoryPath) ? openCatalogRepository(repositoryPath) : undefined;
 	const catalog = repository ? repositoryCatalog(repository) : JSON.parse(await readFile(catalogPath, 'utf8'));
-	const verdictSnapshot = repository ? calculationSnapshotMetadata(repository) : await readVerdictSnapshot(verdictsPath, { compactIds: true });
+	const verdictSnapshot = repository ? calculationSnapshotMetadata(repository) : await readDecisionSnapshot(verdictsPath, catalog);
 	if (verdictSnapshot.catalogVersion !== catalog.catalogVersion || !Array.isArray(verdictSnapshot.pairs) || !isValidCalculationVersion(verdictSnapshot.calculationVersion)) throw new Error('Le snapshot de verdicts ne correspond pas au catalogue.');
 	let offerSnapshot = { offers: [], snapshotVersion: 'empty' };
 	try { offerSnapshot = JSON.parse(await readFile(offersPath, 'utf8')); } catch {}

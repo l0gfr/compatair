@@ -1,0 +1,408 @@
+{
+  "schemaVersion": "1.0.0",
+  "selectedFromCatalogVersion": "ff8edf80b5b076bcd022052c43fc450142fb0f6439b3bde1c9c1ae602c462c9a",
+  "selectedFromRelease": "a97717c0a93a5d2e13295ad6c4f08eb68534770a",
+  "selection": "Deterministic round-robin sampling across available engine verdict classes after SHA-256 ordering of pair IDs.",
+  "pairs": [
+    {
+      "compressor_id": "abac-atf-5-5-10-bm",
+      "tool_id": "shinano-si-1288"
+    },
+    {
+      "compressor_id": "gentilin-esk480-100-811610006",
+      "tool_id": "biax-gaf-505"
+    },
+    {
+      "compressor_id": "fini-plus-11-13-500-es",
+      "tool_id": "deprag-347-520-31uv"
+    },
+    {
+      "compressor_id": "abac-atf-10-10-bm",
+      "tool_id": "atlas-copco-8431026950"
+    },
+    {
+      "compressor_id": "gentilin-clinic-dry-4-40-hs",
+      "tool_id": "dynabrade-53077"
+    },
+    {
+      "compressor_id": "abac-spinn4e-10-400-50k-200-e",
+      "tool_id": "deprag-346-238-31u"
+    },
+    {
+      "compressor_id": "abac-atl-7-5-10-pp",
+      "tool_id": "deprag-347-228-31lv"
+    },
+    {
+      "compressor_id": "gentilin-smart-4-90",
+      "tool_id": "chicago-pneumatic-cp3t30-085ah7v"
+    },
+    {
+      "compressor_id": "fiac-ax-253bd-8-400-50-ce",
+      "tool_id": "atlas-copco-8431063110"
+    },
+    {
+      "compressor_id": "gentilin-esk660-200ve",
+      "tool_id": "fiam-scz5r"
+    },
+    {
+      "compressor_id": "gentilin-clinic-dry-8-90-hs",
+      "tool_id": "dynabrade-49440"
+    },
+    {
+      "compressor_id": "abac-cross-500-10-400-50-200-mebb",
+      "tool_id": "fiam-ihe45-mr"
+    },
+    {
+      "compressor_id": "gentilin-sca750-tp-270",
+      "tool_id": "cleco-88rsa-7c-3"
+    },
+    {
+      "compressor_id": "stanley-coaxial-sans-huile-6l-1-5hp",
+      "tool_id": "atlas-copco-8421040815"
+    },
+    {
+      "compressor_id": "airpress-aps-75-ivr-x-g2",
+      "tool_id": "fiam-15c5a150"
+    },
+    {
+      "compressor_id": "atlas-copco-lz-20-10-bm",
+      "tool_id": "atlas-copco-8431080007"
+    },
+    {
+      "compressor_id": "mecafer-blue-line-24l-2hp",
+      "tool_id": "dynabrade-x51"
+    },
+    {
+      "compressor_id": "abac-spinn-15-10-230-50-fm",
+      "tool_id": "cleco-19pca02q"
+    },
+    {
+      "compressor_id": "abac-atl-7-5-10-pp",
+      "tool_id": "dynabrade-57574"
+    },
+    {
+      "compressor_id": "gentilin-smart-2-50",
+      "tool_id": "atlas-copco-8431063335"
+    },
+    {
+      "compressor_id": "kaeser-eurocomp-epc-750-2-500",
+      "tool_id": "metabo-dkp-310"
+    },
+    {
+      "compressor_id": "abac-atf-10-10-pp",
+      "tool_id": "deprag-345-3008-31ul-hm"
+    },
+    {
+      "compressor_id": "gentilin-dc100-05",
+      "tool_id": "chicago-pneumatic-cp3019-20es"
+    },
+    {
+      "compressor_id": "fini-plus-8-13",
+      "tool_id": "fiam-ihe35a-mr-2cs"
+    },
+    {
+      "compressor_id": "abac-atf-7-5-10-pp",
+      "tool_id": "atlas-copco-8431027843"
+    },
+    {
+      "compressor_id": "gentilin-esk960-500",
+      "tool_id": "desoutter-6151761740"
+    },
+    {
+      "compressor_id": "airpress-hk-425-200-pro",
+      "tool_id": "red-rooster-rrg-1046al"
+    },
+    {
+      "compressor_id": "abac-atl-2-10-bm",
+      "tool_id": "abac-2809913206"
+    },
+    {
+      "compressor_id": "gentilin-dc100-05",
+      "tool_id": "fuji-fa-40-1-5-8"
+    },
+    {
+      "compressor_id": "airpress-ecopower-20b-dry",
+      "tool_id": "fiam-fde33pc"
+    },
+    {
+      "compressor_id": "abac-atf-10-10-bm",
+      "tool_id": "red-rooster-rri-30"
+    },
+    {
+      "compressor_id": "einhell-te-ac-430-90-10",
+      "tool_id": "chicago-pneumatic-cp3119-15es3"
+    },
+    {
+      "compressor_id": "airpress-mini-compresseur-sur-batterie-compresseur-sans-fil-lmo-25",
+      "tool_id": "fuji-fg-4hl-1f-n"
+    },
+    {
+      "compressor_id": "gentilin-sca750-tp-270",
+      "tool_id": "dynabrade-12204"
+    },
+    {
+      "compressor_id": "einhell-silenzzo-36-210",
+      "tool_id": "deprag-345-708-hm"
+    },
+    {
+      "compressor_id": "abac-spinn7-5-10-400-50-270-e",
+      "tool_id": "biax-srh-8-30-2"
+    },
+    {
+      "compressor_id": "abac-atl-10-10-bm",
+      "tool_id": "red-rooster-rri-t6250-5nv"
+    },
+    {
+      "compressor_id": "gentilin-dc100-05",
+      "tool_id": "atlas-copco-8421011016"
+    },
+    {
+      "compressor_id": "abac-spinn4e-8-400-50k-270-e",
+      "tool_id": "fuji-fa-40-1-5-8"
+    },
+    {
+      "compressor_id": "gentilin-esk660-10",
+      "tool_id": "fiam-15c5apa250"
+    },
+    {
+      "compressor_id": "mecafer-fifty-50l-2hp",
+      "tool_id": "shinano-si-4600"
+    },
+    {
+      "compressor_id": "lacair-fixair-40-300",
+      "tool_id": "dynabrade-54777"
+    },
+    {
+      "compressor_id": "gentilin-esk1320-500",
+      "tool_id": "deprag-346-230-31"
+    },
+    {
+      "compressor_id": "gentilin-csk330-50",
+      "tool_id": "chicago-pneumatic-cp3119-18-cnomo"
+    },
+    {
+      "compressor_id": "fini-micro-5-5-10-500-es",
+      "tool_id": "fiam-fse10pc"
+    },
+    {
+      "compressor_id": "abac-atl-7-5-10-bm",
+      "tool_id": "red-rooster-rri-70rgt"
+    },
+    {
+      "compressor_id": "gentilin-dc100-05",
+      "tool_id": "fuji-fg-5hl-11a"
+    },
+    {
+      "compressor_id": "metabo-basic-280-50-w-of",
+      "tool_id": "deprag-345-708-hm"
+    },
+    {
+      "compressor_id": "abac-atl-7-5-10-bm",
+      "tool_id": "atlas-copco-8431026949"
+    },
+    {
+      "compressor_id": "kaeser-eurocomp-epc-840-g",
+      "tool_id": "fuji-fa-20-2-6"
+    },
+    {
+      "compressor_id": "abac-spinn-11-8-400-50-tm500",
+      "tool_id": "cleco-64ttk1260d8"
+    },
+    {
+      "compressor_id": "gentilin-esk480-100-811610007",
+      "tool_id": "biax-gaa-209"
+    },
+    {
+      "compressor_id": "einhell-pressito-18-25",
+      "tool_id": "metabo-ds-14"
+    },
+    {
+      "compressor_id": "abac-genesis-5-5-10-400-50-500",
+      "tool_id": "cleco-19tca09q"
+    },
+    {
+      "compressor_id": "abac-atl-10-10-pp",
+      "tool_id": "nitto-kohki-mys-20l"
+    },
+    {
+      "compressor_id": "gentilin-smart-dry-4-90",
+      "tool_id": "fiam-26c12apa-250-3i"
+    },
+    {
+      "compressor_id": "lacair-twinair-55-500-t",
+      "tool_id": "chicago-pneumatic-cp3109-24es-cnomo"
+    },
+    {
+      "compressor_id": "gentilin-sca1000-tp-270",
+      "tool_id": "desoutter-2051476784"
+    },
+    {
+      "compressor_id": "gentilin-c330-100",
+      "tool_id": "desoutter-6151760790"
+    },
+    {
+      "compressor_id": "fiac-ns-10s-13-bar",
+      "tool_id": "chicago-pneumatic-cp3109-19es-cnomo"
+    },
+    {
+      "compressor_id": "abac-atl-7-5-270",
+      "tool_id": "biax-gaa-209"
+    },
+    {
+      "compressor_id": "einhell-te-ac-270-50-silent-plus",
+      "tool_id": "chicago-pneumatic-cp3330-salavele"
+    },
+    {
+      "compressor_id": "abac-spinn5-5-i-8-400-50-200",
+      "tool_id": "deprag-345-300-31u-hm"
+    },
+    {
+      "compressor_id": "abac-atf-5-5-10-pp",
+      "tool_id": "dynabrade-59035"
+    },
+    {
+      "compressor_id": "gentilin-clinic-dry-4-40-hs",
+      "tool_id": "nitto-kohki-myg-40l"
+    },
+    {
+      "compressor_id": "fiac-ns-20-270-l-13-bar",
+      "tool_id": "dynabrade-52436"
+    },
+    {
+      "compressor_id": "abac-atl-5-5-270",
+      "tool_id": "chicago-pneumatic-cp7737"
+    },
+    {
+      "compressor_id": "gentilin-csk330-03",
+      "tool_id": "fiam-fs65-90p"
+    },
+    {
+      "compressor_id": "abac-spinn7-5e-8-400-50-270-e",
+      "tool_id": "shinano-si-ag7-e5l"
+    },
+    {
+      "compressor_id": "atlas-copco-lz-7-10-bm",
+      "tool_id": "dynabrade-57500"
+    },
+    {
+      "compressor_id": "einhell-te-ac-270-24-10",
+      "tool_id": "red-rooster-rrg-515re"
+    },
+    {
+      "compressor_id": "fiac-ns-15-270-l-13-bar",
+      "tool_id": "deprag-345-508-31ul-hm"
+    },
+    {
+      "compressor_id": "gentilin-esk960-500",
+      "tool_id": "yokota-yrw-6"
+    },
+    {
+      "compressor_id": "einhell-tc-ac-190-24-8-i-of",
+      "tool_id": "red-rooster-rri-sp50416"
+    },
+    {
+      "compressor_id": "boge-po-6-ltr-270",
+      "tool_id": "fiam-26c5al"
+    },
+    {
+      "compressor_id": "abac-atl-5-5-10-pp",
+      "tool_id": "fiam-15c5ap"
+    },
+    {
+      "compressor_id": "gentilin-clinic-dry-4-40-hs",
+      "tool_id": "shinano-si-2012ex-6"
+    },
+    {
+      "compressor_id": "lacair-twinair-28-150-t",
+      "tool_id": "fiam-ihe25pa-mr-2cs"
+    },
+    {
+      "compressor_id": "abac-atf-5-5-10-bm",
+      "tool_id": "fiam-26c4apa-2000-r-2cs"
+    },
+    {
+      "compressor_id": "gentilin-c330-24",
+      "tool_id": "biax-srd-3-45-3"
+    },
+    {
+      "compressor_id": "abac-spinn-15-10-230-50-fm",
+      "tool_id": "biax-wrd-3-85-2"
+    },
+    {
+      "compressor_id": "abac-atf-7-5-10-pp",
+      "tool_id": "shinano-si-3113-6a"
+    },
+    {
+      "compressor_id": "lacair-twinair-23-200-m",
+      "tool_id": "nitto-kohki-aps-150"
+    },
+    {
+      "compressor_id": "airpress-portatif-silencieux-sans-huile-lmo-4-170",
+      "tool_id": "desoutter-2051472504"
+    },
+    {
+      "compressor_id": "abac-atf-5-5-10-pp",
+      "tool_id": "atlas-copco-8431027934"
+    },
+    {
+      "compressor_id": "gentilin-csk330-50",
+      "tool_id": "dynabrade-58504"
+    },
+    {
+      "compressor_id": "abac-spinn3-i-10-400-50-200",
+      "tool_id": "shinano-si-2110s"
+    },
+    {
+      "compressor_id": "abac-atf-5-5-10-pp",
+      "tool_id": "rupes-ra150a"
+    },
+    {
+      "compressor_id": "gentilin-esk480-100-811610007",
+      "tool_id": "fuji-fg-50y-1"
+    },
+    {
+      "compressor_id": "abac-spinn7-5-8-400-50-e",
+      "tool_id": "atlas-copco-8431037601"
+    },
+    {
+      "compressor_id": "abac-atf-7-5-10-pp",
+      "tool_id": "fiam-fs48-90p"
+    },
+    {
+      "compressor_id": "senco-pc1249",
+      "tool_id": "biax-wrh-6-20-3-z"
+    },
+    {
+      "compressor_id": "abac-spinn7-5-i-8-400-50",
+      "tool_id": "cleco-55rnal-2-4"
+    },
+    {
+      "compressor_id": "gentilin-ac600-40",
+      "tool_id": "nitto-kohki-fs-50a"
+    },
+    {
+      "compressor_id": "gentilin-clinic-8-90",
+      "tool_id": "chicago-pneumatic-cp1820r32"
+    },
+    {
+      "compressor_id": "senco-ac24016",
+      "tool_id": "lacme-perceuse-pro-13-mm-500-tr-min"
+    },
+    {
+      "compressor_id": "gentilin-sca550-tp-270",
+      "tool_id": "fiam-15c2apa-3i"
+    },
+    {
+      "compressor_id": "gentilin-c330-24",
+      "tool_id": "dynabrade-49440"
+    },
+    {
+      "compressor_id": "boge-po-2-ltr-160",
+      "tool_id": "chicago-pneumatic-cp5314-60"
+    },
+    {
+      "compressor_id": "abac-atf-5-5-270d",
+      "tool_id": "red-rooster-rri-sa11103"
+    }
+  ]
+}

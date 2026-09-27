@@ -187,6 +187,10 @@ if [[ "$deployment_profile" == production && -n "$previous_target" ]]; then
 	fi
 fi
 
+if [[ "$deployment_profile" == production ]]; then
+ /opt/compatair/node/bin/node "$script_dir/scripts/preserve-verdict-archive.mjs" "$previous_target" "$release"
+fi
+
 ln -sfn "$release" "$current.next"
 mv -Tf "$current.next" "$current"
 activation_pending=true

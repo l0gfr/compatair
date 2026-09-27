@@ -16,7 +16,7 @@ Published contract:
 
 The deterministic public export also includes the UCP capability contracts under `ucp/`. It is generated from an explicit allowlist and never contains the compatibility engine, merchant feeds or production configuration.
 
-Published dataset scope is 14,400 explorable compressor-tool combinations: 13,080 audited fixed-flow verdicts and 1,320 parametric combinations that require explicit action rate or volume and target time. Product identities expose normalized MPNs, EAN/GTIN and evidenced distributor SKUs. Evidence labels `primary`, `independent_corroboration` and `secondary` separately; field-level coverage and the data-type freshness SLA are published in the catalog and freshness snapshots.
+The current catalog and `/data/verdicts.json` manifest publish the calculable scope. Decisions are computed on demand; the manifest does not contain a `pairs` array or a global verdict distribution. Parametric combinations require explicit action rate or volume and target time. The manifest links the frozen, signed historical dataset and its original catalog. Product identities expose normalized MPNs, EAN/GTIN and evidenced distributor SKUs. Evidence labels `primary`, `independent_corroboration` and `secondary` separately; field-level coverage and the data-type freshness SLA are published in the catalog and freshness snapshots.
 
 Run the dependency-free contract checks with `npm test`.
 

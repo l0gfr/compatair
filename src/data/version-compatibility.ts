@@ -23,6 +23,8 @@ export const versionCompatibility = {
 		{ name: 'Compatibility receipt', version: '1.0.0', compatibility: 'Deterministic SHA-256 receipt contract.' },
 		{ name: 'AirGraph', version: '0.1.0', compatibility: 'Namespaced product, configuration, requirement and evidence graph.' },
 		{ name: 'Catalog', version: 'content-derived', compatibility: 'Snapshot identifier changes with normalized catalog content.' },
+		{ name: 'Verdict publication manifest', version: '2.0.0', compatibility: 'On-demand calculation contract and frozen archive links; no pairs array or global verdict distribution.' },
+		{ name: 'Compatibility Impact Feed', version: '2.0.0', compatibility: 'Potential affected fixed-flow pairs; current verdict distribution remains null until explicitly materialized.' },
 	],
 	mcpProfiles: [
 		{ profile: 'decision-core', endpoint: 'https://compatair.fr/mcp', tools: 7, purpose: 'Default model-facing decision surface.' },

@@ -1,6 +1,7 @@
 ---
 import ProductGuideLinks from '../../components/ProductGuideLinks.astro';
 import { pageBuildKey, guideNavigationVersion } from '../../domain/page-build-key';
+import { productBuildData, compressorAlternatives } from '../../data/product-build-key';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductDecisionHero from '../../components/ProductDecisionHero.astro';
 import ProductEvidenceDossier from '../../components/ProductEvidenceDossier.astro';
@@ -25,7 +26,7 @@ import { sourceRoleLabel } from '../../data/source-directory';
 
 export async function getStaticPaths() {
  const navigationVersion = await guideNavigationVersion();
-	return compressors.map((compressor) => { assertDecisionPageValue(compressor); return { params: { slug: compressor.slug }, props: { compressor }, cacheKey: pageBuildKey(`/compresseurs/${compressor.slug}/`, compressor, navigationVersion) }; });
+	return compressors.map((compressor) => { assertDecisionPageValue(compressor); return { params: { slug: compressor.slug }, props: { compressor }, cacheKey: pageBuildKey(`/compresseurs/${compressor.slug}/`, productBuildData(compressor, 'compressor'), navigationVersion) }; });
 }
 
 const { compressor } = Astro.props;
@@ -37,7 +38,7 @@ const staticCompatibilityResultCount = compatibility.compatibleExamples.slice(0,
 const productOffers = activeOffers.filter((offer) => offer.productId === compressor.id);
 const directLinks = purchaseLinksForProduct(compressor.id);
 const focusMatches = compatibility.matches.filter(({ tool }) => ['einhell-tc-pw-340', 'metabo-dsx-150'].includes(tool.id));
-const alternatives = compressors.filter((item) => item.id !== compressor.id && (item.confidence === 'A' || item.confidence === 'B') && item.fadCurve.length > 0).sort((a, b) => (Math.abs(a.tankLiters - compressor.tankLiters) + Math.abs(a.maxPressureBar - compressor.maxPressureBar) * 10) - (Math.abs(b.tankLiters - compressor.tankLiters) + Math.abs(b.maxPressureBar - compressor.maxPressureBar) * 10)).slice(0, 3);
+const alternatives = compressorAlternatives(compressor);
 const verifiedDateLabel = verifiedAt.split('-').reverse().join('/');
 const fadSummary = compressor.fadCurve.length
 	? `${compressor.fadCurve[0].litersPerMinute} L/min à ${compressor.fadCurve[0].pressureBar} bar${compressor.fadCurve.length > 1 ? ` + ${compressor.fadCurve.length - 1} autre${compressor.fadCurve.length > 2 ? 's' : ''} point${compressor.fadCurve.length > 2 ? 's' : ''}` : ''}`

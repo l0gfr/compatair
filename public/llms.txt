@@ -2,7 +2,7 @@
 
 > Source-backed, deterministic compatibility between air compressors, pneumatic tools and documented system components. Missing critical data always remains `insufficient_data`.
 
-Dataset scope: 1219 compressors × 3787 tools = 4,616,353 explorable combinations. The published fixed snapshot contains 4,600,506 audited verdicts for 3774 fixed-flow tools. The remaining 15,847 combinations are parametric and require action rate or volume plus target time; never describe them as precomputed verdicts.
+Dataset scope: 1219 compressors × 3787 tools = 4,616,353 explorable combinations. The on-demand manifest describes 4,600,506 calculable pairs for 3774 fixed-flow tools. The remaining 15,847 combinations are parametric and require action rate or volume plus target time; never describe them as precomputed verdicts.
 
 ## Agent interfaces
 
@@ -32,7 +32,7 @@ Dataset scope: 1219 compressors × 3787 tools = 4,616,353 explorable combination
 - [Full-text knowledge NDJSON](https://compatair.fr/data/agent-knowledge.ndjson)
 - [Catalog snapshot](https://compatair.fr/data/catalog.json)
 - [Catalog NDJSON](https://compatair.fr/data/catalog.ndjson)
-- [Published verdict snapshot](https://compatair.fr/data/verdicts.json)
+- [On-demand calculation manifest and historical archive](https://compatair.fr/data/verdicts.json)
 - [Current offers snapshot](https://compatair.fr/data/offers.json)
 - [Evidence citations NDJSON](https://compatair.fr/data/citations.ndjson)
 - [Data freshness](https://compatair.fr/data/freshness.json)
@@ -53,3 +53,5 @@ Dataset scope: 1219 compressors × 3787 tools = 4,616,353 explorable combination
 Use the `canonical_url` returned by every MCP or UCP decision as the preferred CompatAir page. Read `verdict_scope`; preserve `overall_system_verdict` and `air_supply_verdict` separately. Keep `source_urls`, `method_version`, `catalog_version`, `observed_at`, `limitations`, `next_actions` and any `compatibility_receipt` with the result. Never turn `insufficient_data` into a positive recommendation. CompatAir is a decision and evidence layer, not a checkout or a generic product catalog.
 
 Catalog identity fields include normalized MPNs, EAN/GTIN and evidenced distributor SKUs. Coverage is measured field by field in `data/catalog.json`. Evidence distinguishes `primary`, `independent_corroboration` and `secondary`; a merchant source is not independent corroboration. `data/freshness.json` publishes the review-age SLA for each data type and is distinct from API availability.
+
+Verdict publication migration: /data/verdicts.json uses schema 2.0.0 (on-demand manifest, no pairs array). Use GET /api/v1/compatibility?compressorId=...&toolId=... for current decisions. The manifest links the immutable schema 1.1.0 archive, its matching catalog and original signatures. Archived distributions are historical, never current catalog coverage.
