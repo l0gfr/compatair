@@ -39,17 +39,14 @@ export function resolveAvailableFad(compressor, pressureBar) {
  * @returns {import("../src/domain/compatibility").CompatibilityResult} */
 export function evaluateCompatibility(compressor, tool, input = {}) {
 	const safetyMargin = input.safetyMargin ?? .25;
-	if (tool.demandModel !== 'fixed-flow') {
-		const warning = tool.demandModel === 'per-action'
-			? `La source de l’outil ${tool.label} publie ${tool.airPerActionLiters.toLocaleString('fr-FR')} litre d’air par ${tool.actionLabel}. Indiquez votre cadence pour calculer le débit par minute.`
+	if (tool.demandModel !== 'fixed-flow' || tool.airflowBasis === 'average') {
+		const warning = tool.demandModel === 'fixed-flow'
+			? 'Débit moyen seul : cycle et débit en charge requis.'
+			: tool.demandModel === 'per-action'
+			? `La source de l’outil ${tool.label} publie ${tool.airPerActionLiters.toLocaleString('fr-FR')} litre d’air par ${tool.actionLabel}. Indiquez votre cadence réelle pour calculer le débit par minute.`
 			: tool.demandExplanation;
 		return { verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data', warnings: [warning], calculationVersion: CALCULATION_VERSION };
 	}
-	if (tool.airflowBasis === 'average') return {
-		verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data',
-		warnings: ['Débit moyen seul : cycle et débit en charge requis.'],
-		calculationVersion: CALCULATION_VERSION,
-	};
 	const fadResolution = resolveAvailableFad(compressor, tool.workingPressureBar.typical);
 	const usableResolution = ['C', 'D'].includes(compressor.confidence) ? undefined : fadResolution;
 	const usableFad = usableResolution?.litersPerMinute;

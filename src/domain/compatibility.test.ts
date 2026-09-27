@@ -35,7 +35,7 @@ describe('evaluateCompatibility avec plusieurs modèles de demande', () => {
 		expect(result.verdict).toBe('insufficient_data');
 		expect(result.requiredFadLpm).toBeUndefined();
 		expect(result.warnings[0]).toContain('La source de l’outil Agrafeuse-cloueuse Einhell TC-PN 50 publie 0,66 litre d’air par tir');
-		expect(result.warnings[0]).toContain('cadence réelle de cet outil');
+		expect(result.warnings[0]).toContain('Indiquez votre cadence réelle');
 	});
 
 	it('refuse d’inventer un débit de gonflage', () => {
