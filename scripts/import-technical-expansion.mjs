@@ -3,13 +3,16 @@ import { resolve } from 'node:path';
 import sharp from 'sharp';
 import { buildTechnicalExpansion } from './lib/technical-expansion-2026.mjs';
 import { buildCatalogExpansion } from './lib/catalog-expansion-2026-09-27.mjs';
+import { buildQualifiedTools } from './lib/qualified-tools-2026.mjs';
 import { loadCatalogProducts } from './lib/catalog-tooling.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const readSnapshot = async name => JSON.parse(await readFile(resolve(root, `src/data/imports/${name}-additional-2026-09-26.json`)));
 const args = process.argv.slice(2);
-if (args.length && (args.length !== 1 || args[0] !== '--batch=2026-09-27')) throw new Error('Lot non reconnu');
-const expansion = args.length
+if (args.length && (args.length !== 1 || !['--batch=2026-09-27', '--batch=qualified-tools-2026-09-27'].includes(args[0]))) throw new Error('Lot non reconnu');
+const expansion = args[0] === '--batch=qualified-tools-2026-09-27'
+ ? buildQualifiedTools(JSON.parse(await readFile(resolve(root, 'src/data/imports/qualified-tools-2026-09-27.json'))))
+ : args.length
  ? buildCatalogExpansion(...await Promise.all(['compressors', 'tools'].map(async kind => JSON.parse(await readFile(resolve(root, `src/data/imports/catalog-${kind}-2026-09-27.json`))))))
  : buildTechnicalExpansion(await readSnapshot('technical-compressors'), await readSnapshot('technical-tools'));
 // Check the complete batch before writing any file. Re-running an identical import is allowed.

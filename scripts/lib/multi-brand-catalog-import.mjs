@@ -37,7 +37,14 @@ function sourceFor(snapshot, sourceId) {
 	if (!source || !/^[a-f0-9]{64}$/.test(source.sha256) || source.observedAt !== snapshot.observedAt) throw new Error('Preuve versionnée absente');
 	const url = new URL(source.url);
 	const additionalHost = snapshot.observedAt === '2026-09-27' && ['www.stuermer-machines.com', 'www.nuair.pl', 'prebena.de', 'www.mighty-seven.com', 'cms.mirka.com'].includes(url.hostname);
-	if (url.protocol !== 'https:' || (!hosts.has(url.hostname) && !additionalHost) || url.username || url.password || url.port || url.search || url.hash) throw new Error('Source officielle invalide');
+	const qualifiedBatch = snapshot.batchId === 'qualified-tools-2026-09-27' && snapshot.observedAt === '2026-09-27';
+	const pferdPage = qualifiedBatch && url.hostname === 'fr.pferd.com' && /^\/fr\/[a-z0-9-]+$/.test(url.pathname)
+		&& [...url.searchParams].every(([key, value]) => /^a\[[a-z-]+\]$/.test(key) && value.length > 0 && value.length < 120);
+	const qualifiedSource = qualifiedBatch && (pferdPage
+		|| (url.hostname === 'viewer.ipaper.io' && url.pathname === '/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx')
+		|| (url.hostname === 'assets.pferd.com' && url.pathname === '/pfd/products/pdfs/katalog-9-update-2022-web-en.pdf')
+		|| (url.hostname === 'www.rodcraft.com' && /^\/en\/products\/\d{10}$/.test(url.pathname)));
+	if (url.protocol !== 'https:' || (!hosts.has(url.hostname) && !additionalHost && !qualifiedSource) || url.username || url.password || url.port || (url.search && !pferdPage) || url.hash) throw new Error('Source officielle invalide');
 	if (url.hostname === 's3.eu-west-1.amazonaws.com' && !url.pathname.startsWith('/s37.lacme.com/crm/Catalogues/')) throw new Error('Catalogue Lacmé non reconnu');
 	if (['shop.fiac.it', 'shop.abacaircompressors.com'].includes(url.hostname) && !/^\/en-(IT|INT|FR)\/products\/\d{10}(?:\/[a-z0-9-]+)?$/.test(url.pathname)) throw new Error('Fiche officielle non reconnue');
 	if (url.hostname === 'shinanoinc.com' && !/^\/wp-content\/uploads\/SHINANO_(General-Catalog|Industrial-Air-Tools)_2025\.pdf$/.test(url.pathname)) throw new Error('Catalogue Shinano non revu');

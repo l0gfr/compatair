@@ -84,7 +84,7 @@ describe('evaluateCompatibility avec plusieurs modèles de demande', () => {
 		const lowFlow = compressors.find((item) => item.id === 'boge-po-1-lr-50')!;
 		const highFlow = compressors.find((item) => item.id === 'boge-po-8-ltr-270')!;
 		expect(evaluateCompatibility(lowFlow, eightBarTool).verdict).toBe('incompatible');
-		expect(evaluateCompatibility(highFlow, eightBarTool)).toMatchObject({ verdict: 'insufficient_data', availableFadLpm: 1336, availableFadBasis: 'exact' });
+		expect(evaluateCompatibility(highFlow, eightBarTool)).toMatchObject({ verdict: 'continuous', availableFadLpm: 1336, availableFadBasis: 'exact' });
 	});
 
 	it('couvre un large éventail de clés à chocs sans masquer le cas à 8 bar', () => {

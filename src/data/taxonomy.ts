@@ -1,4 +1,8 @@
 export const toolTaxonomy = [
+	{ id: 'detoureuse', label: 'Détoureuse pneumatique', aliases: ['Affleureuse pneumatique'] },
+	{ id: 'araseuse-de-rivets', label: 'Araseuse de rivets pneumatique', aliases: [] },
+	{ id: 'lime-alternative', label: 'Lime alternative pneumatique', aliases: [] },
+	{ id: 'pistolet-nettoyage', label: 'Pistolet de nettoyage pneumatique', aliases: [] },
 	{ id: 'boulonneuse', label: 'Boulonneuse pneumatique', aliases: [] },
 	{ id: 'cle-a-impulsions', label: 'Clé à impulsions pneumatique', aliases: [] },
 	{ id: 'taraudeuse', label: 'Taraudeuse pneumatique', aliases: [] },
@@ -54,6 +58,10 @@ export function toolCategoryLabel(categoryId: ToolCategoryId) {
  */
 export const toolUsageTaxonomy = [
 	{
+		id: 'detourage', label: 'Détourer et araser', seoTitle: 'Détoureuses et araseuses pneumatiques',
+		description: 'Détoureuses et araseuses de rivets avec consommation maximale, pression, capacité et encombrement documentés.', categoryIds: ['detoureuse', 'araseuse-de-rivets'],
+	},
+	{
 		id: 'fonderie', label: 'Tasser le sable de fonderie', seoTitle: 'Fouloirs pneumatiques de fonderie',
 		description: 'Fouloirs classés par consommation en charge, pression et dimensions publiées.', categoryIds: ['fouloir'],
 	},
@@ -87,7 +95,7 @@ export const toolUsageTaxonomy = [
 		label: 'Souffler et nettoyer',
 		seoTitle: 'Soufflettes pneumatiques',
 		description: 'Soufflettes et besoins de nettoyage à l’air comprimé, sans convertir une donnée absente en estimation.',
-		categoryIds: ['soufflette'],
+		categoryIds: ['soufflette', 'pistolet-nettoyage'],
 	},
 	{
 		id: 'gonflage',
@@ -108,7 +116,7 @@ export const toolUsageTaxonomy = [
 		label: 'Meuler et limer',
 		seoTitle: 'Meuleuses et limes pneumatiques',
 		description: 'Meuleuses et limes à bande regroupées pour comparer leurs besoins publiés sans effacer leur famille technique.',
-		categoryIds: ['meuleuse', 'lime-bande'],
+		categoryIds: ['meuleuse', 'lime-bande', 'lime-alternative'],
 	},
 	{
 		id: 'finition',

@@ -1,3 +1,5 @@
+import { bogePoDutyEvidence, bogePoDutyFact, bogePoDutySpecification } from './boge-po-duty.ts';
+
 const brochureEvidenceId = 'boge-po-fr-official-brochure-2026';
 const currentRangeEvidenceId = 'boge-po-current-range-2026';
 const brochureUrl = 'https://granzow.dk/Files/Images/Granzow/Datablade/Brochure/382-EN-PO-Series.pdf';
@@ -35,6 +37,7 @@ export function bogePoReceiverMounted(data: BogePoReceiverMountedData) {
 		maxPressureBar: 10,
 		fadCurve: [{ pressureBar: 8, litersPerMinute: data.fadLpmAtEightBar }],
 		oilType: 'oil-free',
+		dutyCycle: 1,
 		powerKw: data.powerKw,
 		weightKg: data.weightKg,
 		mobility: 'fixed',
@@ -49,6 +52,7 @@ export function bogePoReceiverMounted(data: BogePoReceiverMountedData) {
 		editorial: {
 			overview: `Le BOGE ${data.model} est un ${configurationLabel} sans huile, avec une cuve de ${data.tankLiters} litres. BOGE publie un débit d’air effectif de ${data.fadLpmAtEightBar.toLocaleString('fr-FR')} L/min à 8 bar.`,
 			verifiedFacts: [
+				bogePoDutyFact,
 				`Le débit d’air effectif à 50 Hz est de ${data.fadLpmAtEightBar.toLocaleString('fr-FR')} L/min, mesuré selon VDMA 4362 à 80 % de la pression maximale de 10 bar.`,
 				`La puissance nominale totale est de ${String(data.powerKw).replace('.', ',')} kW, la masse publiée de ${data.weightKg} kg et l’encombrement de ${data.dimensions}.`,
 			],
@@ -61,6 +65,7 @@ export function bogePoReceiverMounted(data: BogePoReceiverMountedData) {
 			],
 		},
 		specifications: [
+			bogePoDutySpecification,
 			{ label: 'Débit d’air effectif à 50 Hz', value: `${data.fadLpmAtEightBar.toLocaleString('fr-FR')} L/min à 8 bar`, evidenceIds: [brochureEvidenceId] },
 			{ label: 'Méthode de mesure', value: 'VDMA 4362, à 80 % de la pression maximale', evidenceIds: [brochureEvidenceId] },
 			{ label: 'Configuration', value: isTwin ? 'Deux groupes sur réservoir horizontal' : 'Groupe sur réservoir horizontal', evidenceIds: [brochureEvidenceId, currentRangeEvidenceId] },
@@ -70,6 +75,7 @@ export function bogePoReceiverMounted(data: BogePoReceiverMountedData) {
 			{ label: 'Poids', value: `${data.weightKg} kg`, evidenceIds: [brochureEvidenceId] },
 		],
 		evidence: [
+			bogePoDutyEvidence,
 			{
 				id: brochureEvidenceId,
 				sourceUrl: brochureUrl,
@@ -90,6 +96,7 @@ export function bogePoReceiverMounted(data: BogePoReceiverMountedData) {
 			},
 		],
 		fieldSources: {
+			dutyCycle: [bogePoDutyEvidence.id],
 			tankLiters: [brochureEvidenceId],
 			maxPressureBar: [brochureEvidenceId, currentRangeEvidenceId],
 			fadCurve: [brochureEvidenceId, currentRangeEvidenceId],
@@ -98,7 +105,7 @@ export function bogePoReceiverMounted(data: BogePoReceiverMountedData) {
 			weightKg: [brochureEvidenceId],
 			mobility: [brochureEvidenceId],
 			status: [currentRangeEvidenceId],
-			specifications: [brochureEvidenceId, currentRangeEvidenceId],
+			specifications: [bogePoDutyEvidence.id, brochureEvidenceId, currentRangeEvidenceId],
 		},
 		notes: [
 			'Le point de débit reste attaché à sa pression de mesure de 8 bar ; aucune valeur n’est déduite à une autre pression.',
