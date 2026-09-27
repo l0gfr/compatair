@@ -28,6 +28,14 @@ try {
  assert.ok(Object.keys(evaluation).every(key => Object.hasOwn(contract.components.schemas.EngineEvaluation.properties, key)), 'The HTTP response must preserve the declared REST contract');
  const search = await fetch(`${origin}/api/v1/search/catalog?q=${encodeURIComponent(compressor.id)}`);
  assert.equal(search.status, 200); assert.ok((await search.json()).items.some(item => item.id === compressor.id));
+ const mcp = await fetch(`${origin}/mcp`, {
+  method: 'POST', headers: { Accept: 'application/json, text/event-stream', 'Content-Type': 'application/json' },
+  body: JSON.stringify({ jsonrpc: '2.0', id: 'startup-decision', method: 'tools/call', params: { name: 'evaluate_air_compatibility', arguments: { compressorId: compressor.id, toolIds: [tool.id] } } }),
+ });
+ assert.equal(mcp.status, 200, 'An indexed decision must survive the full MCP HTTP and telemetry path');
+ const rpc = await mcp.json();
+ assert.equal(rpc.error, undefined);
+ assert.equal(rpc.result?.structuredContent?.capability, 'fr.compatair.air.compatibility');
  const peakMiB = process.resourceUsage().maxRSS / 1024;
  assert.ok(peakMiB < 256, `MCP startup exceeded the 256 MiB service budget: ${peakMiB.toFixed(1)} MiB`);
  assert.equal(catalog.compressors.length + catalog.tools.length, 0, 'Startup must not preload the product corpus');

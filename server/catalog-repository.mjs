@@ -69,6 +69,7 @@ export function openCatalogRepository(path) {
  let cacheBytes = 0;
  const maximumCacheBytes = 2 * 1024 * 1024;
  const read = (id, type) => {
+  if (typeof id !== 'string') return undefined;
   const row = get.get(id);
   return row && (!type || type === row.type) ? JSON.parse(row.payload) : undefined;
  };
@@ -76,7 +77,7 @@ export function openCatalogRepository(path) {
   metadata,
   close() { db.close(); },
   get: read,
-  has(id, type) { const row = get.get(id); return Boolean(row && (!type || row.type === type)); },
+  has(id, type) { if (typeof id !== 'string') return false; const row = get.get(id); return Boolean(row && (!type || row.type === type)); },
   bySlug(type, slug) { const row = bySlug.get(type, slug); return row ? JSON.parse(row.payload) : undefined; },
   *iterate(type) { for (const row of rows.iterate(type)) yield JSON.parse(row.payload); },
   count(type) { return db.prepare('SELECT count(*) AS count FROM products WHERE type=?').get(type).count; },

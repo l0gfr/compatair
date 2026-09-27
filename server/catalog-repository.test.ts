@@ -5,6 +5,8 @@ import { afterAll, describe, expect, it } from 'vitest';
 import { openCatalogRepository, repositoryCatalog, writeCatalogDatabase } from './catalog-repository.mjs';
 import { handleCatalogRequest } from './catalog-http.mjs';
 import { createMcpCore } from './mcp-core.mjs';
+import { createCompatAirServer } from './mcp-server.mjs';
+import { extractMcpDemand } from './mcp-telemetry.mjs';
 import { evaluateCompatibility } from '../src/domain/compatibility';
 import { compressors, tools } from '../src/data/catalog';
 
@@ -18,6 +20,36 @@ const repository = openCatalogRepository(path);
 afterAll(() => { repository.close(); rmSync(directory, { recursive: true, force: true }); });
 
 describe('indexed and bounded catalog access', () => {
+ it('preserves Map lookup semantics for missing optional identifiers', () => {
+  for (const id of [undefined, null, 17, {}, [], 'unknown']) {
+   expect(repository.lookup('compressor').get(id)).toBeUndefined();
+   expect(repository.lookup('compressor').has(id)).toBe(false);
+  }
+  const compressorId = selectedCompressors[0].id, toolId = selectedTools[0].id;
+  expect(extractMcpDemand('evaluate_air_compatibility', { compressorId, toolIds: [toolId] }, {}, repositoryCatalog(repository))).toEqual({
+   products: [{ type: 'compressor', id: compressorId }, { type: 'tool', id: toolId }],
+   compatibilities: [{ compressorId, toolId }],
+  });
+ });
+ it.each(['compact', 'ucp'])('returns an indexed MCP decision through the complete HTTP %s path', async (format) => {
+  const compressorId = selectedCompressors[0].id, toolId = selectedTools[0].id;
+  const platformProfile = { ucp: { version: '2026-04-08', capabilities: { 'fr.compatair.air.compatibility': [{ version: '2026-07-15', spec: 'https://compatair.fr/en/ucp/', schema: 'https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json' }] } } };
+  const server = createCompatAirServer({ catalog: repositoryCatalog(repository), allowedOrigins: new Set(), fetchUcpProfile: async () => platformProfile });
+  const args = format === 'compact' ? { compressorId, toolIds: [toolId] } : {
+   meta: { 'ucp-agent': { profile: 'https://agent.example/profile' } }, ucp: { version: '2026-04-08' },
+   configuration: { compressor: { id: compressorId }, tools: [{ id: toolId }] },
+  };
+  const payload = JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/call', params: { name: 'evaluate_air_compatibility', arguments: args } });
+  const response = await new Promise<{ status: number; body: string }>((resolve) => {
+   let status = 0;
+   const request = { url: '/mcp', method: 'POST', headers: { accept: 'application/json, text/event-stream', 'content-type': 'application/json' }, socket: { remoteAddress: '127.0.0.1' }, async *[Symbol.asyncIterator]() { yield Buffer.from(payload); } };
+   server.emit('request', request, { setTimeout() {}, writeHead(value: number) { status = value; }, end(body = '') { resolve({ status, body }); }, destroy() {} });
+  });
+  expect(response.status).toBe(200);
+  const rpc = JSON.parse(response.body);
+  expect(rpc.error).toBeUndefined();
+  expect(rpc.result.structuredContent).toMatchObject({ capability: 'fr.compatair.air.compatibility', air_supply_verdict: { scope: 'air_supply' }, overall_system_verdict: { scope: 'complete_air_system' } });
+ });
  it('keeps original records and calculates a cache miss instead of losing the decision', () => {
   for (const compressor of selectedCompressors) for (const tool of selectedTools) {
    expect(repository.get(compressor.id)).toEqual(compressor);
