@@ -26,11 +26,12 @@ const product = {
 		"verifiedFacts": [
 			"Débit restitué publié : 2 400 L/min à 13 bar.",
 			"Vis lubrifiée, vitesse fixe. Puissance moteur publiée : 22 kW.",
-			"Masse nette publiée : 419 kg."
+			"Masse nette publiée : 419 kg.",
+			"Fonctionnement continu déclaré par le constructeur pour cette gamme ; taux de marche normalisé à 100 %."
 		],
 		"limitations": [
 			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
+			"Le fonctionnement continu est une déclaration de gamme ; respecter les conditions de la notice. La disponibilité commerciale reste à confirmer.",
 			"Le catalogue 04-2024 reste disponible sur le site fabricant. La disponibilité locale est à confirmer."
 		]
 	},
@@ -55,6 +56,13 @@ const product = {
 			"evidenceIds": [
 				"fini-v60qf92fnm760-20260926"
 			]
+		},
+		{
+			"label": "Taux de marche constructeur",
+			"value": "100 %, fonctionnement continu déclaré pour la gamme. Respecter les conditions de la notice de la référence.",
+			"evidenceIds": [
+				"fini-plus-22-13-continuous-duty-20260927"
+			]
 		}
 	],
 	"evidence": [
@@ -75,6 +83,15 @@ const product = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Source du mode de lubrification uniquement."
+		},
+		{
+			"id": "fini-plus-22-13-continuous-duty-20260927",
+			"sourceUrl": "https://finicompressors.com/wp-content/uploads/Catalogo-Micro-Plus_Fini_EN_04-2024_9990395.pdf#page=4",
+			"sourceLabel": "Fini, catalogue MICRO/PLUS 2,2–75 kW, avril 2024, p. 4",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-27",
+			"confidence": "A",
+			"notes": "Fonctionnement continu déclaré dans le catalogue MICRO/PLUS ; 112 MPN vérifiés dans les tableaux de cette même édition. Le fonctionnement continu est normalisé en taux de marche 1."
 		}
 	],
 	"fieldSources": {
@@ -98,13 +115,17 @@ const product = {
 		],
 		"weightKg": [
 			"fini-v60qf92fnm760-20260926"
+		],
+		"dutyCycle": [
+			"fini-plus-22-13-continuous-duty-20260927"
 		]
 	},
 	"notes": [
 		"Caractéristiques déclarées par le fabricant. Les comparaisons dépendent des conditions de débit et de pression documentées."
 	],
 	"powerKw": 22,
-	"weightKg": 419
+	"weightKg": 419,
+	"dutyCycle": 1
 };
 
 export default product;

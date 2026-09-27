@@ -27,11 +27,12 @@ const product = {
 			"Débit restitué publié : 272 L/min à 10 bar.",
 			"Compresseur lubrifié, réserve d’huile déclarée par le fabricant. Puissance moteur publiée : 2,2 kW.",
 			"Masse publiée : 112 kg.",
-			"Alimentation publiée : 230 V, 50 Hz, monophasée."
+			"Alimentation publiée : 230 V, 50 Hz, monophasée.",
+			"Fonctionnement continu déclaré par le constructeur pour cette gamme ; taux de marche normalisé à 100 %."
 		],
 		"limitations": [
 			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
+			"Le fonctionnement continu est une déclaration de gamme ; respecter les conditions de la notice. La disponibilité commerciale reste à confirmer.",
 			"La version électrique et la pression de cette référence priment sur le nom de la gamme.",
 			"Les autres pressions ne sont pas extrapolées."
 		]
@@ -64,6 +65,13 @@ const product = {
 			"evidenceIds": [
 				"abac-4152044020-20260926"
 			]
+		},
+		{
+			"label": "Taux de marche constructeur",
+			"value": "100 %, fonctionnement continu déclaré pour la gamme. Respecter les conditions de la notice de la référence.",
+			"evidenceIds": [
+				"abac-spinn-d2-2-90w10meaa230-1-50-continuous-duty-20260927"
+			]
 		}
 	],
 	"evidence": [
@@ -75,6 +83,15 @@ const product = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "La variante 4152044020 publie un FAD de 272 L/min pour sa version de 10 bar."
+		},
+		{
+			"id": "abac-spinn-d2-2-90w10meaa230-1-50-continuous-duty-20260927",
+			"sourceUrl": "https://www.abacaircompressors.com/en-international/products/screw-compressors",
+			"sourceLabel": "ABAC, gamme de compresseurs à vis SPINN, FORMULA et GENESIS",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-27",
+			"confidence": "A",
+			"notes": "Déclaration de la gamme ABAC à vis ; uniquement les références SPINN, FORMULA et GENESIS revues individuellement dans ce lot."
 		}
 	],
 	"fieldSources": {
@@ -104,6 +121,9 @@ const product = {
 		],
 		"phase": [
 			"abac-4152044020-20260926"
+		],
+		"dutyCycle": [
+			"abac-spinn-d2-2-90w10meaa230-1-50-continuous-duty-20260927"
 		]
 	},
 	"notes": [
@@ -112,7 +132,8 @@ const product = {
 	"powerKw": 2.2,
 	"weightKg": 112,
 	"voltage": "230 V, 50 Hz",
-	"phase": "single-phase"
+	"phase": "single-phase",
+	"dutyCycle": 1
 };
 
 export default product;

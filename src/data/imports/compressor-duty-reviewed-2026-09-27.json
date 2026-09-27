@@ -1,0 +1,3057 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "abac-screw",
+      "url": "https://www.abacaircompressors.com/en-international/products/screw-compressors",
+      "label": "ABAC, gamme de compresseurs à vis SPINN, FORMULA et GENESIS",
+      "observedAt": "2026-09-27",
+      "sha256": "569844dd1415002646c2c467bc96a952ecb1c86fe41cc4c6f516bc595271925b",
+      "basis": "up to a 100% continuous duty cycle",
+      "scope": "Déclaration de la gamme ABAC à vis ; uniquement les références SPINN, FORMULA et GENESIS revues individuellement dans ce lot."
+    },
+    {
+      "id": "fini-micro-plus",
+      "url": "https://finicompressors.com/wp-content/uploads/Catalogo-Micro-Plus_Fini_EN_04-2024_9990395.pdf#page=4",
+      "label": "Fini, catalogue MICRO/PLUS 2,2–75 kW, avril 2024, p. 4",
+      "observedAt": "2026-09-27",
+      "sha256": "d1bdadbeef3af341b420ed582f7b6738216f743f513f7ca6f3788b4eec6c07bd",
+      "basis": "Fini Screw Compressors are designed for continuous duty",
+      "scope": "Fonctionnement continu déclaré dans le catalogue MICRO/PLUS ; 112 MPN vérifiés dans les tableaux de cette même édition. Le fonctionnement continu est normalisé en taux de marche 1."
+    }
+  ],
+  "rows": [
+    {
+      "id": "abac-formula-11-10-400-50",
+      "brand": "ABAC",
+      "model": "FORMULA 11 10 400/50 ",
+      "mpn": "4152025390",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-11-13-400-50",
+      "brand": "ABAC",
+      "model": "FORMULA 11 13 400/50 ",
+      "mpn": "4152025391",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-11-8-400-50",
+      "brand": "ABAC",
+      "model": "FORMULA 11 8 400/50 ",
+      "mpn": "4152025389",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-5-5-10-400-50",
+      "brand": "ABAC",
+      "model": "FORMULA 5,5 10 400/50 ",
+      "mpn": "4152025385",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-5-5-8-400-50",
+      "brand": "ABAC",
+      "model": "FORMULA 5,5 8 400/50 ",
+      "mpn": "4152025384",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-7-5-10-400-50",
+      "brand": "ABAC",
+      "model": "FORMULA 7,5 10 400/50 ",
+      "mpn": "4152025387",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-7-5-13-400-50",
+      "brand": "ABAC",
+      "model": "FORMULA 7,5 13 400/50 ",
+      "mpn": "4152025388",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-7-5-8-400-50",
+      "brand": "ABAC",
+      "model": "FORMULA 7,5 8 400/50 ",
+      "mpn": "4152025386",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-e-11-10-400-50",
+      "brand": "ABAC",
+      "model": "FORMULA E 11 10 400/50 ",
+      "mpn": "4152025398",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-e-11-13-400-50",
+      "brand": "ABAC",
+      "model": "FORMULA E 11 13 400/50 ",
+      "mpn": "4152025399",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-e-11-8-400-50",
+      "brand": "ABAC",
+      "model": "FORMULA E 11 8 400/50 ",
+      "mpn": "4152025397",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-e-5-5-10-400-50",
+      "brand": "ABAC",
+      "model": "FORMULA E 5,5 10 400/50 ",
+      "mpn": "4152025393",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-e-5-5-8-400-50",
+      "brand": "ABAC",
+      "model": "FORMULA E 5,5 8 400/50 ",
+      "mpn": "4152025392",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-e-7-5-10-400-50",
+      "brand": "ABAC",
+      "model": "FORMULA E 7,5 10 400/50 ",
+      "mpn": "4152025395",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-e-7-5-13-400-50",
+      "brand": "ABAC",
+      "model": "FORMULA E 7,5 13 400/50 ",
+      "mpn": "4152025396",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-e-7-5-8-400-50",
+      "brand": "ABAC",
+      "model": "FORMULA E 7,5 8 400/50 ",
+      "mpn": "4152025394",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-m30-10-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA M30 10 400 50 MEAA",
+      "mpn": "4152034926",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-m30-13-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA M30 13 400 50 MEAA",
+      "mpn": "4152034927",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-m30-7-5-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA M30 7,5 400 50 MEAA",
+      "mpn": "4152034924",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-m30-8-5-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA M30 8,5 400 50 MEAA",
+      "mpn": "4152034925",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-m37-10-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA M37 10 400 50 MEAA",
+      "mpn": "4152034930",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-m37-13-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA M37 13 400 50 MEAA",
+      "mpn": "4152034931",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-m37-7-5-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA M37 7,5 400 50 MEAA",
+      "mpn": "4152034928",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-m37-8-5-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA M37 8,5 400 50 MEAA",
+      "mpn": "4152034929",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-m45-10-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA M45 10 400 50 MEAA",
+      "mpn": "4152034934",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-m45-13-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA M45 13 400 50 MEAA",
+      "mpn": "4152034935",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-m45-7-5-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA M45 7,5 400 50 MEAA",
+      "mpn": "4152034932",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-m45-8-5-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA M45 8,5 400 50 MEAA",
+      "mpn": "4152034933",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-m55-a-10-mebb-400",
+      "brand": "ABAC",
+      "model": "FORMULA M55 A 10 MEBB 400",
+      "mpn": "8153340075",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-m75-a-10-mebb-400",
+      "brand": "ABAC",
+      "model": "FORMULA M75 A 10 MEBB 400",
+      "mpn": "8153340078",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-me30-10-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA ME30 10 400 50 MEAA",
+      "mpn": "4152034956",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-me30-13-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA ME30 13 400 50 MEAA",
+      "mpn": "4152034957",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-me30-7-5-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA ME30 7,5 400 50 MEAA",
+      "mpn": "4152034954",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-me30-8-5-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA ME30 8,5 400 50 MEAA",
+      "mpn": "4152034955",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-me37-10-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA ME37 10 400 50 MEAA",
+      "mpn": "4152034960",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-me37-13-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA ME37 13 400 50 MEAA",
+      "mpn": "4152034961",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-me37-7-5-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA ME37 7,5 400 50 MEAA",
+      "mpn": "4152034958",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-me37-8-5-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA ME37 8,5 400 50 MEAA",
+      "mpn": "4152034959",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-me45-10-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA ME45 10 400 50 MEAA",
+      "mpn": "4152034964",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-me45-13-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA ME45 13 400 50 MEAA",
+      "mpn": "4152034965",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-me45-7-5-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA ME45 7,5 400 50 MEAA",
+      "mpn": "4152034962",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-formula-me45-8-5-400-50-meaa",
+      "brand": "ABAC",
+      "model": "FORMULA ME45 8,5 400 50 MEAA",
+      "mpn": "4152034963",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-genesis-11-10-400-50-500",
+      "brand": "ABAC",
+      "model": "GENESIS 11 10 400/50 500",
+      "mpn": "4152025414",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-genesis-11-13-400-50-500",
+      "brand": "ABAC",
+      "model": "GENESIS 11 13 400/50 500",
+      "mpn": "4152025415",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-genesis-11-8-400-50-500",
+      "brand": "ABAC",
+      "model": "GENESIS 11 8 400/50 500",
+      "mpn": "4152025413",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-genesis-5-5-10-400-50-500",
+      "brand": "ABAC",
+      "model": "GENESIS 5,5 10 400/50 500",
+      "mpn": "4152025409",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-genesis-5-5-8-400-50-500",
+      "brand": "ABAC",
+      "model": "GENESIS 5,5 8 400/50 500",
+      "mpn": "4152025408",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-genesis-7-5-10-400-50-500",
+      "brand": "ABAC",
+      "model": "GENESIS 7,5 10 400/50 500",
+      "mpn": "4152025411",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-genesis-7-5-13-400-50-500",
+      "brand": "ABAC",
+      "model": "GENESIS 7,5 13 400/50 500",
+      "mpn": "4152025412",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-genesis-7-5-8-400-50-500",
+      "brand": "ABAC",
+      "model": "GENESIS 7,5 8 400/50 500",
+      "mpn": "4152025410",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-10-230-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 11 10 230/50 FM",
+      "mpn": "4152022532",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-10-230-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 11 10 230/50 TM270",
+      "mpn": "4152022591",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-10-230-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 11 10 230/50 TM500",
+      "mpn": "4152022593",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-10-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 11 10 400/50 FM",
+      "mpn": "4152022543",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-10-400-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 11 10 400/50 TM270",
+      "mpn": "4152022629",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-10-400-50-tm270-sa",
+      "brand": "ABAC",
+      "model": "SPINN 11 10 400/50 TM270 SA",
+      "mpn": "4152022666",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-10-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 11 10 400/50 TM500",
+      "mpn": "4152022631",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-10-400-50-tm500-sa",
+      "brand": "ABAC",
+      "model": "SPINN 11 10 400/50 TM500 SA",
+      "mpn": "4152022668",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-13-230-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 11 13 230/50 FM",
+      "mpn": "4152022533",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-13-230-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 11 13 230/50 TM500",
+      "mpn": "4152022594",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-13-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 11 13 400/50 FM",
+      "mpn": "4152022544",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-13-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 11 13 400/50 TM500",
+      "mpn": "4152022632",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-8-230-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 11 8 230/50 FM",
+      "mpn": "4152022531",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-8-230-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 11 8 230/50 TM270",
+      "mpn": "4152022590",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-8-230-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 11 8 230/50 TM500",
+      "mpn": "4152022592",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-8-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 11 8 400/50 FM",
+      "mpn": "4152022542",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-8-400-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 11 8 400/50 TM270",
+      "mpn": "4152022628",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-8-400-50-tm270-sa",
+      "brand": "ABAC",
+      "model": "SPINN 11 8 400/50 TM270 SA",
+      "mpn": "4152022665",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-8-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 11 8 400/50 TM500",
+      "mpn": "4152022630",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11-8-400-50-tm500-sa",
+      "brand": "ABAC",
+      "model": "SPINN 11 8 400/50 TM500 SA",
+      "mpn": "4152022667",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11e-10-400-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 11E 10 400/50 TM270",
+      "mpn": "4152022648",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11e-10-400-50-tm270-sa",
+      "brand": "ABAC",
+      "model": "SPINN 11E 10 400/50 TM270 SA",
+      "mpn": "4152022682",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11e-10-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 11E 10 400/50 TM500",
+      "mpn": "4152022650",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11e-10-400-50-tm500-sa",
+      "brand": "ABAC",
+      "model": "SPINN 11E 10 400/50 TM500 SA",
+      "mpn": "4152022684",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11e-13-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 11E 13 400/50 TM500",
+      "mpn": "4152022651",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11e-8-400-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 11E 8 400/50 TM270",
+      "mpn": "4152022647",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11e-8-400-50-tm270-sa",
+      "brand": "ABAC",
+      "model": "SPINN 11E 8 400/50 TM270 SA",
+      "mpn": "4152022681",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11e-8-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 11E 8 400/50 TM500",
+      "mpn": "4152022649",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-11e-8-400-50-tm500-sa",
+      "brand": "ABAC",
+      "model": "SPINN 11E 8 400/50 TM500 SA",
+      "mpn": "4152022683",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-10-230-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 15 10 230/50 FM",
+      "mpn": "4152022535",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-10-230-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 15 10 230/50 TM270",
+      "mpn": "4152022596",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-10-230-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 15 10 230/50 TM500",
+      "mpn": "4152022598",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-10-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 15 10 400/50 FM",
+      "mpn": "4152022546",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-10-400-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 15 10 400/50 TM270",
+      "mpn": "4152022634",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-10-400-50-tm270-sa",
+      "brand": "ABAC",
+      "model": "SPINN 15 10 400/50 TM270 SA",
+      "mpn": "4152022670",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-10-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 15 10 400/50 TM500",
+      "mpn": "4152022636",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-10-400-50-tm500-sa",
+      "brand": "ABAC",
+      "model": "SPINN 15 10 400/50 TM500 SA",
+      "mpn": "4152022672",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-13-230-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 15 13 230/50 FM",
+      "mpn": "4152022536",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-13-230-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 15 13 230/50 TM500",
+      "mpn": "4152022599",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-13-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 15 13 400/50 FM",
+      "mpn": "4152022547",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-13-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 15 13 400/50 TM500",
+      "mpn": "4152022637",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-8-230-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 15 8 230/50 FM",
+      "mpn": "4152022534",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-8-230-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 15 8 230/50 TM270",
+      "mpn": "4152022595",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-8-230-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 15 8 230/50 TM500",
+      "mpn": "4152022597",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-8-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 15 8 400/50 FM",
+      "mpn": "4152022545",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-8-400-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 15 8 400/50 TM270",
+      "mpn": "4152022633",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-8-400-50-tm270-sa",
+      "brand": "ABAC",
+      "model": "SPINN 15 8 400/50 TM270 SA",
+      "mpn": "4152022669",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-8-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 15 8 400/50 TM500",
+      "mpn": "4152022635",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15-8-400-50-tm500-sa",
+      "brand": "ABAC",
+      "model": "SPINN 15 8 400/50 TM500 SA",
+      "mpn": "4152022671",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15e-10-400-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 15E 10 400/50 TM270",
+      "mpn": "4152022653",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15e-10-400-50-tm270-sa",
+      "brand": "ABAC",
+      "model": "SPINN 15E 10 400/50 TM270 SA",
+      "mpn": "4152022686",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15e-10-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 15E 10 400/50 TM500",
+      "mpn": "4152022655",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15e-10-400-50-tm500-sa",
+      "brand": "ABAC",
+      "model": "SPINN 15E 10 400/50 TM500 SA",
+      "mpn": "4152022688",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15e-13-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 15E 13 400/50 TM500",
+      "mpn": "4152022656",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15e-8-400-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 15E 8 400/50 TM270",
+      "mpn": "4152022652",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15e-8-400-50-tm270-sa",
+      "brand": "ABAC",
+      "model": "SPINN 15E 8 400/50 TM270 SA",
+      "mpn": "4152022685",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15e-8-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 15E 8 400/50 TM500",
+      "mpn": "4152022654",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15e-8-400-50-tm500-sa",
+      "brand": "ABAC",
+      "model": "SPINN 15E 8 400/50 TM500 SA",
+      "mpn": "4152022687",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15x-10-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 15X 10 400/50 FM",
+      "mpn": "4152028921",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15x-8-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 15X 8 400/50 FM",
+      "mpn": "4152028920",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15xe-10-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 15XE 10 400/50 FM",
+      "mpn": "4152028933",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15xe-10-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 15XE 10 400/50 TM500",
+      "mpn": "4152028945",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15xe-8-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 15XE 8 400/50 FM",
+      "mpn": "4152028932",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-15xe-8-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 15XE 8 400/50 TM500",
+      "mpn": "4152028944",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-18-10-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 18 10 400/50 FM",
+      "mpn": "4152028923",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-18-8-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 18 8 400/50 FM",
+      "mpn": "4152028922",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-18e-10-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 18E 10 400/50 FM",
+      "mpn": "4152028935",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-18e-10-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 18E 10 400/50 TM500",
+      "mpn": "4152028947",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-18e-8-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 18E 8 400/50 FM",
+      "mpn": "4152028934",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-18e-8-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 18E 8 400/50 TM500",
+      "mpn": "4152028946",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-22-10-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 22 10 400/50 FM",
+      "mpn": "4152028925",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-22-8-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 22 8 400/50 FM",
+      "mpn": "4152028924",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-22e-10-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 22E 10 400/50 FM",
+      "mpn": "4152028937",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-22e-10-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 22E 10 400/50 TM500",
+      "mpn": "4152028949",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-22e-8-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 22E 8 400/50 FM",
+      "mpn": "4152028936",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-22e-8-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 22E 8 400/50 TM500",
+      "mpn": "4152028948",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5x-10-230-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 5.5X 10 230/50 FM",
+      "mpn": "4152022527",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5x-10-230-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 5.5X 10 230/50 TM270",
+      "mpn": "4152022582",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5x-10-230-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 5.5X 10 230/50 TM500",
+      "mpn": "4152022584",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5x-10-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 5.5X 10 400/50 FM",
+      "mpn": "4152022538",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5x-10-400-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 5.5X 10 400/50 TM270",
+      "mpn": "4152022620",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5x-10-400-50-tm270-sa",
+      "brand": "ABAC",
+      "model": "SPINN 5.5X 10 400/50 TM270 SA",
+      "mpn": "4152022658",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5x-10-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 5.5X 10 400/50 TM500",
+      "mpn": "4152022622",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5x-10-400-50-tm500-sa",
+      "brand": "ABAC",
+      "model": "SPINN 5.5X 10 400/50 TM500 SA",
+      "mpn": "4152022660",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5x-8-230-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 5.5X 8 230/50 FM",
+      "mpn": "4152022526",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5x-8-230-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 5.5X 8 230/50 TM270",
+      "mpn": "4152022581",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5x-8-230-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 5.5X 8 230/50 TM500",
+      "mpn": "4152022583",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5x-8-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 5.5X 8 400/50 FM",
+      "mpn": "4152022537",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5x-8-400-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 5.5X 8 400/50 TM270",
+      "mpn": "4152022619",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5x-8-400-50-tm270-sa",
+      "brand": "ABAC",
+      "model": "SPINN 5.5X 8 400/50 TM270 SA",
+      "mpn": "4152022657",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5x-8-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 5.5X 8 400/50 TM500",
+      "mpn": "4152022621",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5x-8-400-50-tm500-sa",
+      "brand": "ABAC",
+      "model": "SPINN 5.5X 8 400/50 TM500 SA",
+      "mpn": "4152022659",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5xe-10-230-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 5.5XE 10 230/50 TM270",
+      "mpn": "4152022601",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5xe-10-230-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 5.5XE 10 230/50 TM500",
+      "mpn": "4152022603",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5xe-10-400-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 5.5XE 10 400/50 TM270",
+      "mpn": "4152022639",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5xe-10-400-50-tm270-sa",
+      "brand": "ABAC",
+      "model": "SPINN 5.5XE 10 400/50 TM270 SA",
+      "mpn": "4152022674",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5xe-10-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 5.5XE 10 400/50 TM500",
+      "mpn": "4152022641",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5xe-10-400-50-tm500-sa",
+      "brand": "ABAC",
+      "model": "SPINN 5.5XE 10 400/50 TM500 SA",
+      "mpn": "4152022676",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5xe-8-230-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 5.5XE 8 230/50 TM270",
+      "mpn": "4152022600",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5xe-8-230-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 5.5XE 8 230/50 TM500",
+      "mpn": "4152022602",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5xe-8-400-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 5.5XE 8 400/50 TM270",
+      "mpn": "4152022638",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5xe-8-400-50-tm270-sa",
+      "brand": "ABAC",
+      "model": "SPINN 5.5XE 8 400/50 TM270 SA",
+      "mpn": "4152022673",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5xe-8-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 5.5XE 8 400/50 TM500",
+      "mpn": "4152022640",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-5-5xe-8-400-50-tm500-sa",
+      "brand": "ABAC",
+      "model": "SPINN 5.5XE 8 400/50 TM500 SA",
+      "mpn": "4152022675",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-10-230-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 10 230/50 FM",
+      "mpn": "4152022529",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-10-230-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 10 230/50 TM270",
+      "mpn": "4152022586",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-10-230-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 10 230/50 TM500",
+      "mpn": "4152022588",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-10-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 10 400/50 FM",
+      "mpn": "4152022540",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-10-400-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 10 400/50 TM270",
+      "mpn": "4152022624",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-10-400-50-tm270-sa",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 10 400/50 TM270 SA",
+      "mpn": "4152022662",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-10-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 10 400/50 TM500",
+      "mpn": "4152022626",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-10-400-50-tm500-sa",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 10 400/50 TM500 SA",
+      "mpn": "4152022664",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-13-230-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 13 230/50 FM",
+      "mpn": "4152022530",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-13-230-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 13 230/50 TM500",
+      "mpn": "4152022589",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-13-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 13 400/50 FM",
+      "mpn": "4152022541",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-13-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 13 400/50 TM500",
+      "mpn": "4152022627",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-8-230-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 8 230/50 FM",
+      "mpn": "4152022528",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-8-230-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 8 230/50 TM270",
+      "mpn": "4152022585",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-8-230-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 8 230/50 TM500",
+      "mpn": "4152022587",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-8-400-50-fm",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 8 400/50 FM",
+      "mpn": "4152022539",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-8-400-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 8 400/50 TM270",
+      "mpn": "4152022623",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-8-400-50-tm270-sa",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 8 400/50 TM270 SA",
+      "mpn": "4152022661",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-8-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 8 400/50 TM500",
+      "mpn": "4152022625",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5x-8-400-50-tm500-sa",
+      "brand": "ABAC",
+      "model": "SPINN 7.5X 8 400/50 TM500 SA",
+      "mpn": "4152022663",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5xe-10-230-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 7.5XE 10 230/50 TM270",
+      "mpn": "4152022605",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5xe-10-230-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 7.5XE 10 230/50 TM500",
+      "mpn": "4152022607",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5xe-10-400-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 7.5XE 10 400/50 TM270",
+      "mpn": "4152022643",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5xe-10-400-50-tm270-sa",
+      "brand": "ABAC",
+      "model": "SPINN 7.5XE 10 400/50 TM270 SA",
+      "mpn": "4152022678",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5xe-10-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 7.5XE 10 400/50 TM500",
+      "mpn": "4152022645",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5xe-10-400-50-tm500-sa",
+      "brand": "ABAC",
+      "model": "SPINN 7.5XE 10 400/50 TM500 SA",
+      "mpn": "4152022680",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5xe-13-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 7.5XE 13 400/50 TM500",
+      "mpn": "4152022646",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5xe-8-230-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 7.5XE 8 230/50 TM270",
+      "mpn": "4152022604",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5xe-8-230-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 7.5XE 8 230/50 TM500",
+      "mpn": "4152022606",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5xe-8-400-50-tm270",
+      "brand": "ABAC",
+      "model": "SPINN 7.5XE 8 400/50 TM270",
+      "mpn": "4152022642",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5xe-8-400-50-tm270-sa",
+      "brand": "ABAC",
+      "model": "SPINN 7.5XE 8 400/50 TM270 SA",
+      "mpn": "4152022677",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5xe-8-400-50-tm500",
+      "brand": "ABAC",
+      "model": "SPINN 7.5XE 8 400/50 TM500",
+      "mpn": "4152022644",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-7-5xe-8-400-50-tm500-sa",
+      "brand": "ABAC",
+      "model": "SPINN 7.5XE 8 400/50 TM500 SA",
+      "mpn": "4152022679",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-d2-2-20010meaa230-1-50",
+      "brand": "ABAC",
+      "model": "SPINN D2.2 20010MEAA230/1/50",
+      "mpn": "4152044022",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-d2-2-200w10meaa230-1-50",
+      "brand": "ABAC",
+      "model": "SPINN D2.2 200W10MEAA230/1/50",
+      "mpn": "4152044021",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn-d2-2-90w10meaa230-1-50",
+      "brand": "ABAC",
+      "model": "SPINN D2.2 90W10MEAA230/1/50",
+      "mpn": "4152044020",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2-10-230-1-50k-200-e",
+      "brand": "ABAC",
+      "model": "SPINN2,2 10 230/1/50K 200 E",
+      "mpn": "4152055007",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2-10-230-1-50k-e",
+      "brand": "ABAC",
+      "model": "SPINN2,2 10 230/1/50K E",
+      "mpn": "4152055005",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2-10-400-50k-200-e",
+      "brand": "ABAC",
+      "model": "SPINN2,2 10 400/50K 200 E",
+      "mpn": "4152054947",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2-10-400-50k-270-e",
+      "brand": "ABAC",
+      "model": "SPINN2,2 10 400/50K 270 E",
+      "mpn": "4152054949",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2-10-400-50k-e",
+      "brand": "ABAC",
+      "model": "SPINN2,2 10 400/50K E",
+      "mpn": "4152054945",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2-8-230-1-50k-200-e",
+      "brand": "ABAC",
+      "model": "SPINN2,2 8 230/1/50K 200 E",
+      "mpn": "4152055006",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2-8-230-1-50k-e",
+      "brand": "ABAC",
+      "model": "SPINN2,2 8 230/1/50K E",
+      "mpn": "4152055004",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2-8-400-50k-200-e",
+      "brand": "ABAC",
+      "model": "SPINN2,2 8 400/50K 200 E",
+      "mpn": "4152054946",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2-8-400-50k-270-e",
+      "brand": "ABAC",
+      "model": "SPINN2,2 8 400/50K 270 E",
+      "mpn": "4152054948",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2-8-400-50k-e",
+      "brand": "ABAC",
+      "model": "SPINN2,2 8 400/50K E",
+      "mpn": "4152054944",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2e-10-400-50k-200-e",
+      "brand": "ABAC",
+      "model": "SPINN2,2E 10 400/50K 200 E",
+      "mpn": "4152054951",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2e-10-400-50k-270-e",
+      "brand": "ABAC",
+      "model": "SPINN2,2E 10 400/50K 270 E",
+      "mpn": "4152054953",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2e-8-230-1-50k-200-e",
+      "brand": "ABAC",
+      "model": "SPINN2,2E 8 230/1/50K 200 E",
+      "mpn": "4152055008",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2e-8-400-50k-200-c",
+      "brand": "ABAC",
+      "model": "SPINN2,2E 8 400/50K 200 C",
+      "mpn": "4152051950",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2e-8-400-50k-200-e",
+      "brand": "ABAC",
+      "model": "SPINN2,2E 8 400/50K 200 E",
+      "mpn": "4152054950",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2e-8-400-50k-270-e",
+      "brand": "ABAC",
+      "model": "SPINN2,2E 8 400/50K 270 E",
+      "mpn": "4152054952",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn2-2e10-230-1-50k-200-e",
+      "brand": "ABAC",
+      "model": "SPINN2,2E10 230/1/50K 200 E",
+      "mpn": "4152055009",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn3-10-400-50k-200-e",
+      "brand": "ABAC",
+      "model": "SPINN3 10 400/50K 200 E",
+      "mpn": "4152054957",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn3-10-400-50k-270-e",
+      "brand": "ABAC",
+      "model": "SPINN3 10 400/50K 270 E",
+      "mpn": "4152054959",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn3-10-400-50k-c",
+      "brand": "ABAC",
+      "model": "SPINN3 10 400/50K C",
+      "mpn": "4152051955",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn3-10-400-50k-e",
+      "brand": "ABAC",
+      "model": "SPINN3 10 400/50K E",
+      "mpn": "4152054955",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn3-8-400-50k-200-e",
+      "brand": "ABAC",
+      "model": "SPINN3 8 400/50K 200 E",
+      "mpn": "4152054956",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn3-8-400-50k-270-e",
+      "brand": "ABAC",
+      "model": "SPINN3 8 400/50K 270 E",
+      "mpn": "4152054958",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn3-8-400-50k-e",
+      "brand": "ABAC",
+      "model": "SPINN3 8 400/50K E",
+      "mpn": "4152054954",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn3e-10-400-50k-200-e",
+      "brand": "ABAC",
+      "model": "SPINN3E 10 400/50K 200 E",
+      "mpn": "4152054961",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn3e-10-400-50k-270-e",
+      "brand": "ABAC",
+      "model": "SPINN3E 10 400/50K 270 E",
+      "mpn": "4152054963",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn3e-8-400-50k-200-e",
+      "brand": "ABAC",
+      "model": "SPINN3E 8 400/50K 200 E",
+      "mpn": "4152054960",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn3e-8-400-50k-270-e",
+      "brand": "ABAC",
+      "model": "SPINN3E 8 400/50K 270 E",
+      "mpn": "4152054962",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4-10-400-50-200-e",
+      "brand": "ABAC",
+      "model": "SPINN4 10 400/50 200 E",
+      "mpn": "4152054977",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4-10-400-50-270-e",
+      "brand": "ABAC",
+      "model": "SPINN4 10 400/50 270 E",
+      "mpn": "4152054979",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4-10-400-50-e",
+      "brand": "ABAC",
+      "model": "SPINN4 10 400/50 E",
+      "mpn": "4152054975",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4-10-400-50k-200-e",
+      "brand": "ABAC",
+      "model": "SPINN4 10 400/50K 200 E",
+      "mpn": "4152054967",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4-10-400-50k-270-e",
+      "brand": "ABAC",
+      "model": "SPINN4 10 400/50K 270 E",
+      "mpn": "4152054969",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4-10-400-50k-c",
+      "brand": "ABAC",
+      "model": "SPINN4 10 400/50K C",
+      "mpn": "4152051965",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4-10-400-50k-e",
+      "brand": "ABAC",
+      "model": "SPINN4 10 400/50K E",
+      "mpn": "4152054965",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4-8-400-50-200-e",
+      "brand": "ABAC",
+      "model": "SPINN4 8 400/50 200 E",
+      "mpn": "4152054976",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4-8-400-50-270-e",
+      "brand": "ABAC",
+      "model": "SPINN4 8 400/50 270 E",
+      "mpn": "4152054978",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4-8-400-50-e",
+      "brand": "ABAC",
+      "model": "SPINN4 8 400/50 E",
+      "mpn": "4152054974",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4-8-400-50k-200-e",
+      "brand": "ABAC",
+      "model": "SPINN4 8 400/50K 200 E",
+      "mpn": "4152054966",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4-8-400-50k-270-e",
+      "brand": "ABAC",
+      "model": "SPINN4 8 400/50K 270 E",
+      "mpn": "4152054968",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4-8-400-50k-c",
+      "brand": "ABAC",
+      "model": "SPINN4 8 400/50K C",
+      "mpn": "4152051964",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4-8-400-50k-e",
+      "brand": "ABAC",
+      "model": "SPINN4 8 400/50K E",
+      "mpn": "4152054964",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4e-10-400-50-200-c",
+      "brand": "ABAC",
+      "model": "SPINN4E 10 400/50 200 C",
+      "mpn": "4152051981",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4e-10-400-50-200-e",
+      "brand": "ABAC",
+      "model": "SPINN4E 10 400/50 200 E",
+      "mpn": "4152054981",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4e-10-400-50-270-e",
+      "brand": "ABAC",
+      "model": "SPINN4E 10 400/50 270 E",
+      "mpn": "4152054983",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4e-10-400-50k-200-c",
+      "brand": "ABAC",
+      "model": "SPINN4E 10 400/50K 200 C",
+      "mpn": "4152051971",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4e-10-400-50k-200-e",
+      "brand": "ABAC",
+      "model": "SPINN4E 10 400/50K 200 E",
+      "mpn": "4152054971",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4e-10-400-50k-270-c",
+      "brand": "ABAC",
+      "model": "SPINN4E 10 400/50K 270 C",
+      "mpn": "4152051973",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4e-10-400-50k-270-e",
+      "brand": "ABAC",
+      "model": "SPINN4E 10 400/50K 270 E",
+      "mpn": "4152054973",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4e-8-400-50-200-e",
+      "brand": "ABAC",
+      "model": "SPINN4E 8 400/50 200 E",
+      "mpn": "4152054980",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4e-8-400-50-270-e",
+      "brand": "ABAC",
+      "model": "SPINN4E 8 400/50 270 E",
+      "mpn": "4152054982",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4e-8-400-50k-200-e",
+      "brand": "ABAC",
+      "model": "SPINN4E 8 400/50K 200 E",
+      "mpn": "4152054970",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn4e-8-400-50k-270-e",
+      "brand": "ABAC",
+      "model": "SPINN4E 8 400/50K 270 E",
+      "mpn": "4152054972",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn5-5-10-400-50-200-e",
+      "brand": "ABAC",
+      "model": "SPINN5,5 10 400/50 200 E",
+      "mpn": "4152054987",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn5-5-10-400-50-270-e",
+      "brand": "ABAC",
+      "model": "SPINN5,5 10 400/50 270 E",
+      "mpn": "4152054989",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn5-5-10-400-50-c",
+      "brand": "ABAC",
+      "model": "SPINN5,5 10 400/50 C",
+      "mpn": "4152051985",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn5-5-10-400-50-e",
+      "brand": "ABAC",
+      "model": "SPINN5,5 10 400/50 E",
+      "mpn": "4152054985",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn5-5-8-400-50-200-e",
+      "brand": "ABAC",
+      "model": "SPINN5,5 8 400/50 200 E",
+      "mpn": "4152054986",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn5-5-8-400-50-270-e",
+      "brand": "ABAC",
+      "model": "SPINN5,5 8 400/50 270 E",
+      "mpn": "4152054988",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn5-5-8-400-50-c",
+      "brand": "ABAC",
+      "model": "SPINN5,5 8 400/50 C",
+      "mpn": "4152051984",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn5-5-8-400-50-e",
+      "brand": "ABAC",
+      "model": "SPINN5,5 8 400/50 E",
+      "mpn": "4152054984",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn5-5e-10-400-50-200-e",
+      "brand": "ABAC",
+      "model": "SPINN5,5E 10 400/50 200 E",
+      "mpn": "4152054991",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn5-5e-10-400-50-270-c",
+      "brand": "ABAC",
+      "model": "SPINN5,5E 10 400/50 270 C",
+      "mpn": "4152051993",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn5-5e-10-400-50-270-e",
+      "brand": "ABAC",
+      "model": "SPINN5,5E 10 400/50 270 E",
+      "mpn": "4152054993",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn5-5e-8-400-50-200-e",
+      "brand": "ABAC",
+      "model": "SPINN5,5E 8 400/50 200 E",
+      "mpn": "4152054990",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn5-5e-8-400-50-270-e",
+      "brand": "ABAC",
+      "model": "SPINN5,5E 8 400/50 270 E",
+      "mpn": "4152054992",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn7-5-10-400-50-200-e",
+      "brand": "ABAC",
+      "model": "SPINN7,5 10 400/50 200 E",
+      "mpn": "4152054997",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn7-5-10-400-50-270-e",
+      "brand": "ABAC",
+      "model": "SPINN7,5 10 400/50 270 E",
+      "mpn": "4152054999",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn7-5-10-400-50-c",
+      "brand": "ABAC",
+      "model": "SPINN7,5 10 400/50 C",
+      "mpn": "4152051995",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn7-5-10-400-50-e",
+      "brand": "ABAC",
+      "model": "SPINN7,5 10 400/50 E",
+      "mpn": "4152054995",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn7-5-8-400-50-200-e",
+      "brand": "ABAC",
+      "model": "SPINN7,5 8 400/50 200 E",
+      "mpn": "4152054996",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn7-5-8-400-50-270-e",
+      "brand": "ABAC",
+      "model": "SPINN7,5 8 400/50 270 E",
+      "mpn": "4152054998",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn7-5-8-400-50-e",
+      "brand": "ABAC",
+      "model": "SPINN7,5 8 400/50 E",
+      "mpn": "4152054994",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn7-5e-10-400-50-200-e",
+      "brand": "ABAC",
+      "model": "SPINN7,5E 10 400/50 200 E",
+      "mpn": "4152055001",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn7-5e-10-400-50-270-e",
+      "brand": "ABAC",
+      "model": "SPINN7,5E 10 400/50 270 E",
+      "mpn": "4152055003",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn7-5e-8-400-50-200-e",
+      "brand": "ABAC",
+      "model": "SPINN7,5E 8 400/50 200 E",
+      "mpn": "4152055000",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "abac-spinn7-5e-8-400-50-270-e",
+      "brand": "ABAC",
+      "model": "SPINN7,5E 8 400/50 270 E",
+      "mpn": "4152055002",
+      "sourceId": "abac-screw",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-4-0-08",
+      "brand": "Fini",
+      "model": "MICRO 4.0-08",
+      "mpn": "V51JR92FNMA60",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-4-0-08-200",
+      "brand": "Fini",
+      "model": "MICRO 4.0-08-200",
+      "mpn": "V77JR92FNMA01",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-4-0-08-200-es",
+      "brand": "Fini",
+      "model": "MICRO 4.0-08-200 ES",
+      "mpn": "V77JR92FNMB01",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-4-0-10",
+      "brand": "Fini",
+      "model": "MICRO 4.0-10",
+      "mpn": "V51JP92FNMA60",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-4-0-10-200",
+      "brand": "Fini",
+      "model": "MICRO 4.0-10-200",
+      "mpn": "V77JP92FNMA01",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-4-0-10-200-es",
+      "brand": "Fini",
+      "model": "MICRO 4.0-10-200 ES",
+      "mpn": "V77JP92FNMB01",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-4-0-13",
+      "brand": "Fini",
+      "model": "MICRO 4.0-13",
+      "mpn": "V51JV92FNMA60",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-5-5-08",
+      "brand": "Fini",
+      "model": "MICRO 5.5-08",
+      "mpn": "V51JW92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-5-5-08-270",
+      "brand": "Fini",
+      "model": "MICRO 5.5-08-270",
+      "mpn": "V91JW92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-5-5-08-270-es",
+      "brand": "Fini",
+      "model": "MICRO 5.5-08-270 ES",
+      "mpn": "V91JW92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-5-5-08-500",
+      "brand": "Fini",
+      "model": "MICRO 5.5-08-500",
+      "mpn": "V83JW92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-5-5-08-500-es",
+      "brand": "Fini",
+      "model": "MICRO 5.5-08-500 ES",
+      "mpn": "V83JW92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-5-5-10",
+      "brand": "Fini",
+      "model": "MICRO 5.5-10",
+      "mpn": "V51JO92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-5-5-10-270",
+      "brand": "Fini",
+      "model": "MICRO 5.5-10-270",
+      "mpn": "V91JO92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-5-5-10-270-es",
+      "brand": "Fini",
+      "model": "MICRO 5.5-10-270 ES",
+      "mpn": "V91JO92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-5-5-10-500",
+      "brand": "Fini",
+      "model": "MICRO 5.5-10-500",
+      "mpn": "V83JO92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-5-5-10-500-es",
+      "brand": "Fini",
+      "model": "MICRO 5.5-10-500 ES",
+      "mpn": "V83JO92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-5-5-13",
+      "brand": "Fini",
+      "model": "MICRO 5.5-13",
+      "mpn": "V51JM92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-5-5-13-270-es",
+      "brand": "Fini",
+      "model": "MICRO 5.5-13-270 ES",
+      "mpn": "V91JM92FNM601",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-2-2-08",
+      "brand": "Fini",
+      "model": "MICRO SE 2.2-08",
+      "mpn": "V51JU72FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-2-2-08-200",
+      "brand": "Fini",
+      "model": "MICRO SE 2.2-08-200",
+      "mpn": "V77JU72FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-2-2-08-200-es",
+      "brand": "Fini",
+      "model": "MICRO SE 2.2-08-200 ES",
+      "mpn": "V77JU72FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-2-2-08-m",
+      "brand": "Fini",
+      "model": "MICRO SE 2.2-08 M",
+      "mpn": "V51JU60FNM560",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-2-2-10",
+      "brand": "Fini",
+      "model": "MICRO SE 2.2-10",
+      "mpn": "V51JT72FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-2-2-10-200",
+      "brand": "Fini",
+      "model": "MICRO SE 2.2-10-200",
+      "mpn": "V77JT72FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-2-2-10-200-es",
+      "brand": "Fini",
+      "model": "MICRO SE 2.2-10-200 ES",
+      "mpn": "V77JT72FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-2-2-10-200-es-m",
+      "brand": "Fini",
+      "model": "MICRO SE 2.2-10-200 ES M",
+      "mpn": "V77JT60FNM601",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-2-2-10-200-m",
+      "brand": "Fini",
+      "model": "MICRO SE 2.2-10-200 M",
+      "mpn": "V77JT60FNM501",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-2-2-10-m",
+      "brand": "Fini",
+      "model": "MICRO SE 2.2-10 M",
+      "mpn": "V51JT60FNM560",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-3-0-08",
+      "brand": "Fini",
+      "model": "MICRO SE 3.0-08",
+      "mpn": "V51JS72FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-3-0-08-200",
+      "brand": "Fini",
+      "model": "MICRO SE 3.0-08-200",
+      "mpn": "V77JS72FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-3-0-08-200-es",
+      "brand": "Fini",
+      "model": "MICRO SE 3.0-08-200 ES",
+      "mpn": "V77JS72FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-3-0-10",
+      "brand": "Fini",
+      "model": "MICRO SE 3.0-10",
+      "mpn": "V51JQ72FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-3-0-10-200",
+      "brand": "Fini",
+      "model": "MICRO SE 3.0-10-200",
+      "mpn": "V77JQ72FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-3-0-10-200-es",
+      "brand": "Fini",
+      "model": "MICRO SE 3.0-10-200 ES",
+      "mpn": "V77JQ72FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-4-0-08",
+      "brand": "Fini",
+      "model": "MICRO SE 4.0-08",
+      "mpn": "V51JR72FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-4-0-08-200",
+      "brand": "Fini",
+      "model": "MICRO SE 4.0-08-200",
+      "mpn": "V77JR72FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-4-0-08-200-es",
+      "brand": "Fini",
+      "model": "MICRO SE 4.0-08-200 ES",
+      "mpn": "V77JR72FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-4-0-10",
+      "brand": "Fini",
+      "model": "MICRO SE 4.0-10",
+      "mpn": "V51JP72FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-4-0-10-200",
+      "brand": "Fini",
+      "model": "MICRO SE 4.0-10-200",
+      "mpn": "V77JP72FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-micro-se-4-0-10-200-es",
+      "brand": "Fini",
+      "model": "MICRO SE 4.0-10-200 ES",
+      "mpn": "V77JP72FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-08",
+      "brand": "Fini",
+      "model": "PLUS 11-08",
+      "mpn": "V60NL92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-08-270",
+      "brand": "Fini",
+      "model": "PLUS 11-08-270",
+      "mpn": "V91NL92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-08-270-es",
+      "brand": "Fini",
+      "model": "PLUS 11-08-270 ES",
+      "mpn": "V91NL92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-08-500",
+      "brand": "Fini",
+      "model": "PLUS 11-08-500",
+      "mpn": "V83NL92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-08-500-es",
+      "brand": "Fini",
+      "model": "PLUS 11-08-500 ES",
+      "mpn": "V83NL92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-10",
+      "brand": "Fini",
+      "model": "PLUS 11-10",
+      "mpn": "V60NM92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-10-270",
+      "brand": "Fini",
+      "model": "PLUS 11-10-270",
+      "mpn": "V91NM92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-10-270-es",
+      "brand": "Fini",
+      "model": "PLUS 11-10-270 ES",
+      "mpn": "V91NM92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-10-500",
+      "brand": "Fini",
+      "model": "PLUS 11-10-500",
+      "mpn": "V83NM92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-10-500-es",
+      "brand": "Fini",
+      "model": "PLUS 11-10-500 ES",
+      "mpn": "V83NM92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-13",
+      "brand": "Fini",
+      "model": "PLUS 11-13",
+      "mpn": "V60NN92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-13-270",
+      "brand": "Fini",
+      "model": "PLUS 11-13-270",
+      "mpn": "V91NN92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-13-270-es",
+      "brand": "Fini",
+      "model": "PLUS 11-13-270 ES",
+      "mpn": "V91NN92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-13-500",
+      "brand": "Fini",
+      "model": "PLUS 11-13-500",
+      "mpn": "V83NN92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-13-500-es",
+      "brand": "Fini",
+      "model": "PLUS 11-13-500 ES",
+      "mpn": "V83NN92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-15",
+      "brand": "Fini",
+      "model": "PLUS 11-15",
+      "mpn": "V60NN92FNM960",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-15-270",
+      "brand": "Fini",
+      "model": "PLUS 11-15-270",
+      "mpn": "V91NN92FNM901",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-11-15-270-es",
+      "brand": "Fini",
+      "model": "PLUS 11-15-270 ES",
+      "mpn": "V91NN92FNM001",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-15-08",
+      "brand": "Fini",
+      "model": "PLUS 15-08",
+      "mpn": "V60NP92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-15-08-500",
+      "brand": "Fini",
+      "model": "PLUS 15-08-500",
+      "mpn": "V83NP92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-15-08-500-es",
+      "brand": "Fini",
+      "model": "PLUS 15-08-500 ES",
+      "mpn": "V83NP92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-15-10",
+      "brand": "Fini",
+      "model": "PLUS 15-10",
+      "mpn": "V60NQ92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-15-10-500",
+      "brand": "Fini",
+      "model": "PLUS 15-10-500",
+      "mpn": "V83NQ92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-15-10-500-es",
+      "brand": "Fini",
+      "model": "PLUS 15-10-500 ES",
+      "mpn": "V83NQ92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-15-13",
+      "brand": "Fini",
+      "model": "PLUS 15-13",
+      "mpn": "V60NR92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-15-13-500",
+      "brand": "Fini",
+      "model": "PLUS 15-13-500",
+      "mpn": "V83NR92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-15-13-500-es",
+      "brand": "Fini",
+      "model": "PLUS 15-13-500 ES",
+      "mpn": "V83NR92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-15-15",
+      "brand": "Fini",
+      "model": "PLUS 15-15",
+      "mpn": "V60NR92FNM960",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-15-15-500",
+      "brand": "Fini",
+      "model": "PLUS 15-15-500",
+      "mpn": "V83NR92FNM901",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-15-15-500-es",
+      "brand": "Fini",
+      "model": "PLUS 15-15-500 ES",
+      "mpn": "V83NR92FNM601",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-16-08",
+      "brand": "Fini",
+      "model": "PLUS 16-08",
+      "mpn": "V60NB92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-16-08-500",
+      "brand": "Fini",
+      "model": "PLUS 16-08-500",
+      "mpn": "V83NB92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-16-08-500-es",
+      "brand": "Fini",
+      "model": "PLUS 16-08-500 ES",
+      "mpn": "V83NB92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-16-10",
+      "brand": "Fini",
+      "model": "PLUS 16-10",
+      "mpn": "V60NY92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-16-10-500",
+      "brand": "Fini",
+      "model": "PLUS 16-10-500",
+      "mpn": "V83NY92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-16-10-500-es",
+      "brand": "Fini",
+      "model": "PLUS 16-10-500 ES",
+      "mpn": "V83NY92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-16-13",
+      "brand": "Fini",
+      "model": "PLUS 16-13",
+      "mpn": "V60NW92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-16-13-500",
+      "brand": "Fini",
+      "model": "PLUS 16-13-500",
+      "mpn": "V83NW92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-16-13-500-es",
+      "brand": "Fini",
+      "model": "PLUS 16-13-500 ES",
+      "mpn": "V83NW92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-18-5-08",
+      "brand": "Fini",
+      "model": "PLUS 18.5-08",
+      "mpn": "V60QA92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-18-5-08-es",
+      "brand": "Fini",
+      "model": "PLUS 18.5-08 ES",
+      "mpn": "V60QA92FNM860",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-18-5-10",
+      "brand": "Fini",
+      "model": "PLUS 18.5-10",
+      "mpn": "V60QB92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-18-5-10-es",
+      "brand": "Fini",
+      "model": "PLUS 18.5-10 ES",
+      "mpn": "V60QB92FNM860",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-18-5-13",
+      "brand": "Fini",
+      "model": "PLUS 18.5-13",
+      "mpn": "V60QC92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-18-5-13-es",
+      "brand": "Fini",
+      "model": "PLUS 18.5-13 ES",
+      "mpn": "V60QC92FNM860",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-18-5-15",
+      "brand": "Fini",
+      "model": "PLUS 18.5-15",
+      "mpn": "V60QC92FNM960",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-22-08",
+      "brand": "Fini",
+      "model": "PLUS 22-08",
+      "mpn": "V60QD92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-22-08-es",
+      "brand": "Fini",
+      "model": "PLUS 22-08 ES",
+      "mpn": "V60QD92FNM860",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-22-10",
+      "brand": "Fini",
+      "model": "PLUS 22-10",
+      "mpn": "V60QE92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-22-10-es",
+      "brand": "Fini",
+      "model": "PLUS 22-10 ES",
+      "mpn": "V60QE92FNM860",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-22-13",
+      "brand": "Fini",
+      "model": "PLUS 22-13",
+      "mpn": "V60QF92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-22-13-es",
+      "brand": "Fini",
+      "model": "PLUS 22-13 ES",
+      "mpn": "V60QF92FNM860",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-22-15",
+      "brand": "Fini",
+      "model": "PLUS 22-15",
+      "mpn": "V60QF92FNM960",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-08",
+      "brand": "Fini",
+      "model": "PLUS 8-08",
+      "mpn": "V60NG92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-08-270",
+      "brand": "Fini",
+      "model": "PLUS 8-08-270",
+      "mpn": "V91NG92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-08-270-es",
+      "brand": "Fini",
+      "model": "PLUS 8-08-270 ES",
+      "mpn": "V91NG92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-08-500",
+      "brand": "Fini",
+      "model": "PLUS 8-08-500",
+      "mpn": "V83NG92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-08-500-es",
+      "brand": "Fini",
+      "model": "PLUS 8-08-500 ES",
+      "mpn": "V83NG92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-10",
+      "brand": "Fini",
+      "model": "PLUS 8-10",
+      "mpn": "V60NH92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-10-270",
+      "brand": "Fini",
+      "model": "PLUS 8-10-270",
+      "mpn": "V91NH92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-10-270-es",
+      "brand": "Fini",
+      "model": "PLUS 8-10-270 ES",
+      "mpn": "V91NH92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-10-500",
+      "brand": "Fini",
+      "model": "PLUS 8-10-500",
+      "mpn": "V83NH92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-10-500-es",
+      "brand": "Fini",
+      "model": "PLUS 8-10-500 ES",
+      "mpn": "V83NH92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-13",
+      "brand": "Fini",
+      "model": "PLUS 8-13",
+      "mpn": "V60NI92FNM760",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-13-270",
+      "brand": "Fini",
+      "model": "PLUS 8-13-270",
+      "mpn": "V91NI92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-13-270-es",
+      "brand": "Fini",
+      "model": "PLUS 8-13-270 ES",
+      "mpn": "V91NI92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-13-500",
+      "brand": "Fini",
+      "model": "PLUS 8-13-500",
+      "mpn": "V83NI92FNM701",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-13-500-es",
+      "brand": "Fini",
+      "model": "PLUS 8-13-500 ES",
+      "mpn": "V83NI92FNM801",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-15",
+      "brand": "Fini",
+      "model": "PLUS 8-15",
+      "mpn": "V60NI92FNM960",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-15-270",
+      "brand": "Fini",
+      "model": "PLUS 8-15-270",
+      "mpn": "V91NI92FNM901",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    },
+    {
+      "id": "fini-plus-8-15-270-es",
+      "brand": "Fini",
+      "model": "PLUS 8-15-270 ES",
+      "mpn": "V91NI92FNM001",
+      "sourceId": "fini-micro-plus",
+      "dutyCycle": 1
+    }
+  ]
+}

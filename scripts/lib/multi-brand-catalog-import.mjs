@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { applyReviewedCompressorDuty } from './reviewed-compressor-duty.mjs';
 
 const positive = z.number().finite().positive();
 const pressure = z.object({ min: positive, typical: positive, max: positive });
@@ -103,7 +104,7 @@ export function createMultiBrandCompressor(snapshot, input) {
 	};
 	p.fieldSources.oilType = [oilEvidenceId];
 	for (const field of ['intakeFlowLpm', 'powerKw', 'weightKg', 'voltage', 'phase', 'ean', 'dutyCycle']) if (r[field] !== undefined) { p[field] = r[field]; p.fieldSources[field] = [evidenceId]; }
-	return attachReviewedDetails(snapshot, r, p);
+	return applyReviewedCompressorDuty(attachReviewedDetails(snapshot, r, p));
 }
 export function createMultiBrandTool(snapshot, input) {
 	const r = toolRow.parse(input);

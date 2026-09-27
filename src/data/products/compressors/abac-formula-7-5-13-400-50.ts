@@ -27,11 +27,12 @@ const product = {
 			"Débit restitué publié : 830 L/min à 13 bar.",
 			"Compresseur rotatif à vis lubrifié, famille FORMULA. Puissance moteur publiée : 7,5 kW.",
 			"Masse nette publiée : 246 kg.",
-			"Alimentation publiée : 400 V, 50 Hz, triphasée."
+			"Alimentation publiée : 400 V, 50 Hz, triphasée.",
+			"Fonctionnement continu déclaré par le constructeur pour cette gamme ; taux de marche normalisé à 100 %."
 		],
 		"limitations": [
 			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
+			"Le fonctionnement continu est une déclaration de gamme ; respecter les conditions de la notice. La disponibilité commerciale reste à confirmer.",
 			"Version électrique exacte à vérifier à la commande ; une alimentation 230 V peut être triphasée.",
 			"Le débit publié appartient à cette référence et à sa version de pression. Il ne définit pas une courbe complète."
 		]
@@ -57,6 +58,13 @@ const product = {
 			"evidenceIds": [
 				"abac-4152025388-20260926"
 			]
+		},
+		{
+			"label": "Taux de marche constructeur",
+			"value": "100 %, fonctionnement continu déclaré pour la gamme. Respecter les conditions de la notice de la référence.",
+			"evidenceIds": [
+				"abac-formula-7-5-13-400-50-continuous-duty-20260927"
+			]
 		}
 	],
 	"evidence": [
@@ -68,6 +76,15 @@ const product = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "FAD capacity (l/min) : 830 ; Max Working Pressure (bar) : 13, dans le tableau fabricant de la variante 4152025388. Valeur restituée, pas aspirée."
+		},
+		{
+			"id": "abac-formula-7-5-13-400-50-continuous-duty-20260927",
+			"sourceUrl": "https://www.abacaircompressors.com/en-international/products/screw-compressors",
+			"sourceLabel": "ABAC, gamme de compresseurs à vis SPINN, FORMULA et GENESIS",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-27",
+			"confidence": "A",
+			"notes": "Déclaration de la gamme ABAC à vis ; uniquement les références SPINN, FORMULA et GENESIS revues individuellement dans ce lot."
 		}
 	],
 	"fieldSources": {
@@ -97,6 +114,9 @@ const product = {
 		],
 		"phase": [
 			"abac-4152025388-20260926"
+		],
+		"dutyCycle": [
+			"abac-formula-7-5-13-400-50-continuous-duty-20260927"
 		]
 	},
 	"notes": [
@@ -105,7 +125,8 @@ const product = {
 	"powerKw": 7.5,
 	"weightKg": 246,
 	"voltage": "400 V, 50 Hz",
-	"phase": "three-phase"
+	"phase": "three-phase",
+	"dutyCycle": 1
 };
 
 export default product;

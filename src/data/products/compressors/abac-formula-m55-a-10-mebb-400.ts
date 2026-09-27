@@ -27,11 +27,12 @@ const product = {
 			"Débit restitué publié : 8 666 L/min à 10 bar.",
 			"Compresseur lubrifié, réserve d’huile déclarée par le fabricant. Puissance moteur publiée : 55 kW.",
 			"Masse publiée : 1 123 kg.",
-			"Alimentation publiée : 400 V, 50 Hz, triphasée."
+			"Alimentation publiée : 400 V, 50 Hz, triphasée.",
+			"Fonctionnement continu déclaré par le constructeur pour cette gamme ; taux de marche normalisé à 100 %."
 		],
 		"limitations": [
 			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
+			"Le fonctionnement continu est une déclaration de gamme ; respecter les conditions de la notice. La disponibilité commerciale reste à confirmer.",
 			"La version électrique et la pression de cette référence priment sur le nom de la gamme.",
 			"Les autres pressions ne sont pas extrapolées."
 		]
@@ -64,6 +65,13 @@ const product = {
 			"evidenceIds": [
 				"abac-8153340075-20260926"
 			]
+		},
+		{
+			"label": "Taux de marche constructeur",
+			"value": "100 %, fonctionnement continu déclaré pour la gamme. Respecter les conditions de la notice de la référence.",
+			"evidenceIds": [
+				"abac-formula-m55-a-10-mebb-400-continuous-duty-20260927"
+			]
 		}
 	],
 	"evidence": [
@@ -75,6 +83,15 @@ const product = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "La variante 8153340075 publie un FAD de 8666 L/min pour sa version de 10 bar."
+		},
+		{
+			"id": "abac-formula-m55-a-10-mebb-400-continuous-duty-20260927",
+			"sourceUrl": "https://www.abacaircompressors.com/en-international/products/screw-compressors",
+			"sourceLabel": "ABAC, gamme de compresseurs à vis SPINN, FORMULA et GENESIS",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-27",
+			"confidence": "A",
+			"notes": "Déclaration de la gamme ABAC à vis ; uniquement les références SPINN, FORMULA et GENESIS revues individuellement dans ce lot."
 		}
 	],
 	"fieldSources": {
@@ -104,6 +121,9 @@ const product = {
 		],
 		"phase": [
 			"abac-8153340075-20260926"
+		],
+		"dutyCycle": [
+			"abac-formula-m55-a-10-mebb-400-continuous-duty-20260927"
 		]
 	},
 	"notes": [
@@ -112,7 +132,8 @@ const product = {
 	"powerKw": 55,
 	"weightKg": 1123,
 	"voltage": "400 V, 50 Hz",
-	"phase": "three-phase"
+	"phase": "three-phase",
+	"dutyCycle": 1
 };
 
 export default product;

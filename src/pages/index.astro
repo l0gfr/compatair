@@ -5,7 +5,8 @@ import { CATALOG_VERIFIED_AT, compressors, tools } from '../data/catalog';
 import { glossaryTerms } from '../data/glossary';
 import { toolTaxonomy } from '../data/taxonomy';
 import { createCatalogSnapshot } from '../domain/snapshots';
-import { historicalVerdictAudit as verdictSnapshot, verdictPublication } from '../data/verdict-publication';
+import { verdictPublication } from '../data/verdict-publication';
+import { getCurrentVerdictAudit } from '../data/current-verdict-audit';
 
 const allGuides = await getCollection('guides');
 const featuredGuides = allGuides
@@ -15,6 +16,7 @@ const featuredGuides = allGuides
 const [leadGuide, ...secondaryGuides] = featuredGuides;
 const catalogSnapshot = createCatalogSnapshot({ compressors, tools, toolTaxonomy, verifiedAt: CATALOG_VERIFIED_AT });
 const scope = catalogSnapshot.scope;
+const verdictSnapshot = getCurrentVerdictAudit();
 const formatNumber = (value: number) => value.toLocaleString('fr-FR');
 ---
 
@@ -79,16 +81,16 @@ const formatNumber = (value: number) => value.toLocaleString('fr-FR');
 					<div><dt>{allGuides.length}</dt><dd>guides<br />techniques</dd></div>
 				</dl>
 				<section class="home-snapshot-scope" aria-labelledby="home-snapshot-title">
-					<header><div><p>Calcul à la demande et audit historique</p><h2 id="home-snapshot-title">{formatNumber(scope.explorable_combination_count)} combinaisons explorables ne signifient pas {formatNumber(scope.explorable_combination_count)} verdicts pré-calculés.</h2></div><p>{scope.fixed_flow_tool_count} outils à débit fixe produisent {formatNumber(scope.fixed_verdict_count)} couples calculables. Les {scope.parametric_tool_count} autres outils représentent {formatNumber(scope.parametric_combination_count)} combinaisons qui exigent une cadence ou un volume et un temps cible avant calcul.</p></header>
-					<p>Audit historique publié le {verdictSnapshot.publishedAt.slice(0, 10)}, sur {formatNumber(verdictSnapshot.scope.fixed_verdict_count)} couples. Cette répartition ne décrit pas les ajouts ultérieurs.</p>
+					<header><div><p>Catalogue actuel et décisions documentées</p><h2 id="home-snapshot-title">{formatNumber(scope.explorable_combination_count)} combinaisons explorables</h2></div><p>Chaque couple est évalué à partir du débit restitué, de la pression et du taux de marche documentés. Les {scope.parametric_tool_count} outils paramétriques exigent une cadence ou un volume et un temps cible avant calcul.</p></header>
+					<p>Audit du catalogue vérifié le {CATALOG_VERIFIED_AT}, sur {formatNumber(verdictSnapshot.pairCount)} couples à débit fixe. Les {formatNumber(scope.parametric_combination_count)} combinaisons paramétriques sont exclues de ce comptage.</p>
 					<div class="home-verdict-mix">
 						<div><small>Compatible en continu</small><strong>{formatNumber(verdictSnapshot.summary.continuous)}</strong></div>
 						<div><small>Incompatible</small><strong>{formatNumber(verdictSnapshot.summary.incompatible)}</strong></div>
 						<div><small>Données insuffisantes</small><strong>{formatNumber(verdictSnapshot.summary.insufficient_data)}</strong></div>
 						<div><small>Verdicts conclusifs</small><strong>{verdictSnapshot.conclusive.percentage.toLocaleString('fr-FR')} %</strong></div>
 					</div>
-					<p class="home-snapshot-reading">La part d’incompatibilités décrit la valeur de filtrage d’un catalogue inter-marques très large. Elle ne mesure ni une panne du moteur ni une mauvaise performance du produit.</p>
-					<a href={verdictPublication.legacyArchive.verdicts}>Consulter l’archive et ses dénominateurs →</a>
+					<p class="home-snapshot-reading">Un résultat « Données insuffisantes » indique ce qu’il reste à documenter : débit à la pression utile, taux de marche ou consommation en charge. Il ne signifie pas automatiquement que le couple est incompatible.</p>
+					<a href={verdictPublication.legacyArchive.verdicts}>Consulter l’audit historique archivé →</a>
 				</section>
 			</div>
 		</section>
