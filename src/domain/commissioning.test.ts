@@ -7,7 +7,7 @@ const baseConfiguration = {
 	demands: [{ model: 'fixed-flow' as const, id: 'einhell-tc-pe-150', flowLpm: 100, pressureBar: 6.3, quantity: 1, dutyFactor: 1 }],
 	mode: 'successive' as const, safetyMargin: 0.25, sessionMinutes: 30,
 	fittingStandard: 'unknown' as const, filtration: 'unknown' as const,
-	usageProfile: 'sustained' as const, selectedCompressor: 'kaeser-eurocomp-epc-440-100', custom: {},
+	usageProfile: 'sustained' as const, selectedCompressor: 'abac-atf-s-3-24', custom: {},
 };
 
 const completeRecord = {

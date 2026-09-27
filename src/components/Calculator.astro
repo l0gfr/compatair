@@ -1,8 +1,4 @@
 ---
-import { compressors } from '../data/catalog';
-import { calculatorOptionsIntegrity } from '../data/calculator-options';
-import { catalogSearchIdentifiers, compactCatalogOptionIdentifiers } from '../domain/catalog-search';
-import { compressorDisplayName } from '../domain/product-display';
 import { activeOffers, merchants } from '../data/offers';
 import { serializeJsonLd } from '../domain/structured-data';
 import ContextHelp from './ContextHelp.astro';
@@ -70,7 +66,7 @@ const commercialOffers = activeOffers
 				<div class="field"><label for="mobility-filter">Mobilité</label><select id="mobility-filter" name="mobilityFilter"><option value="portable-or-mobile" selected>Portable ou mobile</option><option value="portable">Portable uniquement</option><option value="any">Indifférent, fixe compris</option></select></div>
 				<div class="field"><label for="maximum-budget">Budget maximal <small>facultatif</small></label><div class="input-unit"><input id="maximum-budget" name="maximumBudget" type="number" min="1" max="1000000" step="1" inputmode="numeric" /><span>€</span></div></div>
 			</div>
-			<small class="context-filter-note">Un budget n’écarte une référence que si CompatAir dispose d’une offre datée et vérifiée. Sans offre, aucun prix n’est supposé.</small>
+			<small class="context-filter-note">Avec un budget, seules les références disposant d’une offre datée, vérifiée et dans cette limite sont proposées. Sans offre, aucun prix n’est supposé.</small>
 		</fieldset>
 
 		<fieldset class="calculator-fieldset calculator-compressor-fieldset">
@@ -78,7 +74,7 @@ const commercialOffers = activeOffers
 			<div class="field autocomplete-field"><label for="compressor-search">Rechercher par marque, modèle, MPN, EAN/GTIN ou SKU</label><input id="compressor-search" data-compressor-search type="search" list="calculator-compressors" autocomplete="off" placeholder="Ex. Metabo Basic 250, 601532000…" /><input data-compressor-id name="compressor" type="hidden" value="" /><small data-compressor-selection-note>Une référence brute est acceptée. Laissez vide pour calculer seulement le besoin.</small></div>
 			<div class="custom-compressor" data-custom-compressor hidden>
 				<div class="field-row"><div class="field"><label for="custom-pressure">Pression maximale</label><div class="input-unit"><input id="custom-pressure" name="customPressure" type="number" min="0.1" max="50" step="0.1" value="8" /><span>bar</span></div></div><div class="field"><div class="field-label-help"><label for="custom-fad">Débit réellement restitué à la pression demandée</label><ContextHelp topic="fad" compact /></div><div class="input-unit"><input id="custom-fad" name="customFad" type="number" min="1" max="20000" step="1" /><span>L/min</span></div></div></div>
-				<div class="field-row"><div class="field"><label for="custom-tank">Volume de cuve</label><div class="input-unit"><input id="custom-tank" name="customTank" type="number" min="0" max="20000" step="1" /><span>L</span></div></div><div class="field"><div class="field-label-help"><label for="custom-duty">Temps maximal de fonctionnement publié</label><ContextHelp topic="dutyCycle" compact /></div><div class="input-unit"><input id="custom-duty" name="customDuty" type="number" min="1" max="100" step="1" value="100" /><span>%</span></div></div></div>
+				<div class="field-row"><div class="field"><label for="custom-tank">Volume de cuve</label><div class="input-unit"><input id="custom-tank" name="customTank" type="number" min="0" max="20000" step="1" /><span>L</span></div></div><div class="field"><div class="field-label-help"><label for="custom-duty">Temps maximal de fonctionnement publié</label><ContextHelp topic="dutyCycle" compact /></div><div class="input-unit"><input id="custom-duty" name="customDuty" type="number" min="1" max="100" step="1" placeholder="Non documenté" /><span>%</span></div></div></div>
 				<div class="field-row"><div class="field"><label for="custom-cut-in">Pression de réenclenchement</label><div class="input-unit"><input id="custom-cut-in" name="customCutIn" type="number" min="0" max="50" step="0.1" /><span>bar</span></div></div><div class="field"><label for="custom-cut-out">Pression d’arrêt</label><div class="input-unit"><input id="custom-cut-out" name="customCutOut" type="number" min="0.1" max="50" step="0.1" /><span>bar</span></div></div></div>
 			</div>
 		</fieldset>
@@ -129,8 +125,8 @@ const commercialOffers = activeOffers
 		<div class="result-section counterfactual-section result-expert-only" data-counterfactual><p class="eyebrow">Recommandation contrefactuelle</p><h3>Le plus petit changement vérifié</h3><div data-counterfactual-result></div><p class="counterfactual-boundary" data-counterfactual-boundary></p></div>
 		<details class="result-section result-disclosure result-expert-only"><summary>Accessoires et raccordement</summary><ul data-accessories></ul></details>
 		<details class="result-section result-inventory result-expert-only">
-			<summary>Explorer les {compressors.length} compresseurs documentés</summary>
-			<p>Les modèles sont regroupés selon le résultat, la réserve disponible et la fiabilité des données. Une information absente reste signalée comme telle.</p>
+			<summary>Explorer les références présélectionnées</summary>
+			<p>Les références présélectionnées sont regroupées selon le résultat, la réserve disponible et la fiabilité des données. Une information absente reste signalée comme telle.</p>
 			<div class="result-filters" role="group" aria-label="Filtrer les compresseurs par résultat">
 				<button type="button" data-result-filter="all" aria-pressed="true">Tous <span data-result-count="all">0</span></button>
 				<button type="button" data-result-filter="continuous" aria-pressed="false">Continu <span data-result-count="continuous">0</span></button>
@@ -178,17 +174,12 @@ const commercialOffers = activeOffers
 </template>
 
 <datalist id="calculator-tools"></datalist>
-<span hidden data-calculator-tool-options data-integrity={calculatorOptionsIntegrity}></span>
 <datalist id="calculator-compressors">
 	<option value="Caractéristiques personnalisées" data-id="custom" data-identifiers={JSON.stringify(['custom'])}>Saisie personnalisée</option>
-	{compressors.map((compressor) => {
-		const value = `${compressor.brand} ${compressor.model}${compressor.mpn ? ` · MPN ${compressor.mpn}` : ''}${compressor.ean ? ` · EAN ${compressor.ean}` : ''}`;
-		return <option value={value} data-id={compressor.id} data-identifiers={JSON.stringify(compactCatalogOptionIdentifiers(compressor.id, value, catalogSearchIdentifiers(compressor.brand, compressor.model, [compressorDisplayName(compressor), compressor.id, compressor.mpn, compressor.ean, compressor.gtin, ...compressor.distributorSkus.map((identifier) => identifier.sku), ...compressor.identifierAliases.map((alias) => alias.value)])))}>{compressorDisplayName(compressor)}</option>;
-	})}
 </datalist>
 
 <script>
-	import { loadCalculatorOptions } from '../domain/calculator-options-loader';
+	import { searchCatalogProducts, loadRuntimeProducts, loadCandidateCompressors } from '../domain/catalog-client';
 	import { catalogOptionIdentifiers, resolveExactCatalogSearch } from '../domain/catalog-search';
 	import { createDecisionResolution, explainDecisionDataGap, filterDecisionCandidatesByContext, rankDecisionCandidates } from '../domain/decision-resolution';
 	import { JOURNEY_CONTEXT_EVENT } from '../domain/journey-context';
@@ -207,10 +198,13 @@ const commercialOffers = activeOffers
 	type DecisionContext = import('../domain/decision-resolution').DecisionContext;
 	type CommercialOffer = { id: string; productId: string; merchantName: string; priceEur: number; collectedAt: string };
 	let CATALOG_VERIFIED_AT = '';
+	let catalogVersion: string | undefined;
+	let candidateCoverage = '';
 	let CALCULATION_VERSION = '';
 	let compressors: Compressor[] = [];
 	let tools: ToolProfile[] = [];
 	let resolveAvailableFad: typeof import('../domain/compatibility').resolveAvailableFad;
+	let compatibilityFadLabel: typeof import('../domain/compatibility').compatibilityFadLabel;
 	let createPassportEnvelope: typeof import('../domain/passport').createPassportEnvelope;
 	let decodePassportConfiguration: typeof import('../domain/passport').decodePassportConfiguration;
 	let encodePassportConfiguration: typeof import('../domain/passport').encodePassportConfiguration;
@@ -221,19 +215,16 @@ const commercialOffers = activeOffers
 	let shouldEvaluateCounterfactual: typeof import('../domain/counterfactual').shouldEvaluateCounterfactual;
 	let runtimePromise: Promise<void> | undefined;
 
-	function loadCalculatorRuntime() {
+	async function loadCalculatorRuntime() {
 		runtimePromise ??= Promise.all([
-			import('../domain/runtime-catalog').then(({ loadRuntimeCatalog }) => loadRuntimeCatalog()),
 			import('../domain/compatibility'),
 			import('../domain/passport'),
 			import('../domain/sizing'),
 			import('../domain/counterfactual'),
-		]).then(([catalog, compatibility, passport, sizing, counterfactual]) => {
-			CATALOG_VERIFIED_AT = catalog.catalogVerifiedAt;
+		]).then(([compatibility, passport, sizing, counterfactual]) => {
 			CALCULATION_VERSION = sizing.CALCULATION_VERSION;
-			compressors = catalog.compressors;
-			tools = catalog.tools;
 			resolveAvailableFad = compatibility.resolveAvailableFad;
+			compatibilityFadLabel = compatibility.compatibilityFadLabel;
 			createPassportEnvelope = passport.createPassportEnvelope;
 			decodePassportConfiguration = passport.decodePassportConfiguration;
 			encodePassportConfiguration = passport.encodePassportConfiguration;
@@ -243,8 +234,18 @@ const commercialOffers = activeOffers
 			createCounterfactualRecommendation = counterfactual.createCounterfactualRecommendation;
 			shouldEvaluateCounterfactual = counterfactual.shouldEvaluateCounterfactual;
 		});
-		return runtimePromise;
+		await runtimePromise;
+		const ids = [...(rows?.querySelectorAll<HTMLInputElement>('[data-tool]') ?? [])].map(input => input.value);
+		ids.push(form?.querySelector<HTMLInputElement>('[data-compressor-id]')?.value ?? '');
+		if (ids.some(id => id && id !== 'custom')) await hydrateProducts(ids);
 	}
+	async function hydrateProducts(ids: string[]) {
+		const catalog = await loadRuntimeProducts(ids, catalogVersion);
+		catalogVersion = catalog.catalogVersion; CATALOG_VERIFIED_AT = catalog.catalogVerifiedAt;
+		compressors = [...new Map([...compressors, ...catalog.compressors].map(item => [item.id, item])).values()];
+		tools = [...new Map([...tools, ...catalog.tools].map(item => [item.id, item])).values()];
+	}
+
 
 	const root = document.querySelector<HTMLElement>('[data-calculator]');
 	const commercialOffers = (() => {
@@ -288,17 +289,50 @@ const commercialOffers = activeOffers
 			const value = source[key]; if (value === undefined) delete target.dataset[key]; else target.dataset[key] = String(value);
 		}
 	}
-	// Load the complete suggestions separately without blocking the first page render.
-	type ToolOption = [string, string, string, string[], Partial<Record<'demandModel' | 'airflow' | 'pressure' | 'airPerAction' | 'actionLabel', string | number>> | [number, number]];
-	async function loadToolOptions() {
-		const options = await loadCalculatorOptions<ToolOption[]>(document.querySelector<HTMLElement>('[data-calculator-tool-options]')?.dataset.integrity ?? '');
-		for (const [value, id, text, identifiers, demand] of options) {
-			const option = new Option(text, value);
-			option.dataset.id = id;
-			option.dataset.identifiers = JSON.stringify(identifiers);
-			setDemandData(option, Array.isArray(demand) ? { demandModel: 'fixed-flow', airflow: demand[0], pressure: demand[1] } : demand);
-			toolDatalist?.append(option);
+	function appendSearchOptions(list: HTMLDataListElement | null, items: Awaited<ReturnType<typeof searchCatalogProducts>>['items']) {
+		for (const item of items) {
+			if (optionById(list, item.id)) continue;
+			const option = new Option(item.title, `${item.title} · ${item.id}`);
+			option.dataset.id = item.id; option.dataset.identifiers = JSON.stringify(item.identifiers);
+			setDemandData(option, item.demand); list?.append(option);
 		}
+		const selected = new Set([...(rows?.querySelectorAll<HTMLInputElement>('[data-tool]') ?? [])].map(input => input.value));
+		selected.add(form?.querySelector<HTMLInputElement>('[data-compressor-id]')?.value ?? '');
+		for (const option of [...(list?.options ?? [])]) if (list!.options.length > 70 && !selected.has(option.dataset.id ?? '') && option.dataset.id !== 'custom') option.remove();
+	}
+	async function loadToolOptions() {
+		await loadCalculatorRuntime();
+		const shared = sharedConfiguration ? decodePassportConfiguration(sharedConfiguration) : undefined;
+		if (sharedConfiguration && !shared) throw new Error('Le lien de configuration est invalide.');
+		if (shared?.calculationVersion && shared.calculationVersion !== CALCULATION_VERSION) throw new Error('Cette configuration utilise un autre moteur. Le Passeport original conserve son résultat ; créez une nouvelle configuration pour un calcul actuel.');
+		if (shared?.catalogVersion) catalogVersion = shared.catalogVersion;
+		const ids = [...(shared?.demands.map(item => item.id) ?? []), shared?.selectedCompressor, requestedTool, requestedCompressor].filter((id): id is string => Boolean(id) && id !== 'custom');
+		for (const id of [...new Set(ids)]) {
+			const type = id === (shared?.selectedCompressor ?? requestedCompressor) ? 'compressor' : 'tool';
+			const found = await searchCatalogProducts(id, type);
+			if (catalogVersion && found.catalogVersion !== catalogVersion) throw new Error('Le catalogue a changé. Rechargez la page.');
+			catalogVersion = found.catalogVersion; CATALOG_VERIFIED_AT = found.catalogVerifiedAt;
+			appendSearchOptions(type === 'tool' ? toolDatalist : compressorDatalist, found.items);
+		}
+		if (ids.length) await hydrateProducts(ids);
+	}
+	const searchTimers = new WeakMap<HTMLInputElement, ReturnType<typeof setTimeout>>();
+	function refreshSuggestions(input: HTMLInputElement, type: 'compressor' | 'tool', sync: () => void) {
+		clearTimeout(searchTimers.get(input));
+		const query = input.value.trim();
+		if (optionByInput(type === 'tool' ? toolDatalist : compressorDatalist, query)) return;
+		input.dataset.verifiedCatalogQuery = ''; sync();
+		if (query.length < 2) return;
+		searchTimers.set(input, setTimeout(async () => {
+			try {
+				const found = await searchCatalogProducts(query, type);
+				if (input.value.trim() !== query) return;
+				if (catalogVersion && found.catalogVersion !== catalogVersion) throw new Error('Le catalogue a changé. Rechargez la page.');
+				catalogVersion = found.catalogVersion; CATALOG_VERIFIED_AT = found.catalogVerifiedAt;
+				appendSearchOptions(type === 'tool' ? toolDatalist : compressorDatalist, found.items);
+				input.dataset.verifiedCatalogQuery = query; sync();
+			} catch (error) { setCalculatorUiState('error', error instanceof Error ? error.message : 'Recherche indisponible.'); }
+		}, 180));
 	}
 
 	const setText = (selector: string, value: string) => { const element = root?.querySelector<HTMLElement>(selector); if (element) element.textContent = value; };
@@ -324,12 +358,12 @@ const commercialOffers = activeOffers
 	}, { once: true });
 
 	function optionById(list: HTMLDataListElement | null, id: string) { return [...(list?.options ?? [])].find((option) => option.dataset.id === id); }
-	function optionByInput(list: HTMLDataListElement | null, value: string) {
+	function optionByInput(list: HTMLDataListElement | null, value: string, verifiedIdentifier = false) {
 		const options = [...(list?.options ?? [])];
 		const id = resolveExactCatalogSearch(value, options.map((option) => ({
 			id: option.dataset.id ?? '',
 			value: option.value,
-			identifiers: catalogOptionIdentifiers(option.dataset.id ?? '', option.value, JSON.parse(option.dataset.identifiers ?? '[]') as string[]),
+			identifiers: verifiedIdentifier ? catalogOptionIdentifiers(option.dataset.id ?? '', option.value, JSON.parse(option.dataset.identifiers ?? '[]') as string[]) : [],
 		})));
 		return id ? options.find((option) => option.dataset.id === id) : undefined;
 	}
@@ -373,7 +407,7 @@ const commercialOffers = activeOffers
 	}
 	function syncCompressorSearch() {
 		const hidden = form?.querySelector<HTMLInputElement>('[data-compressor-id]'); const search = form?.querySelector<HTMLInputElement>('[data-compressor-search]'); if (!hidden || !search) return;
-		const option = optionByInput(compressorDatalist, search.value); hidden.value = option?.dataset.id ?? '';
+		const option = optionByInput(compressorDatalist, search.value, search.dataset.verifiedCatalogQuery === search.value.trim()); hidden.value = option?.dataset.id ?? '';
 		const custom = root?.querySelector<HTMLElement>('[data-custom-compressor]'); if (custom) custom.hidden = hidden.value !== 'custom';
 		const note = root?.querySelector<HTMLElement>('[data-compressor-selection-note]');
 		if (note) note.textContent = !search.value.trim() ? 'Une référence brute est acceptée. Laissez vide pour calculer seulement le besoin.' : option ? `Référence reconnue directement : ${option.textContent?.trim() || option.value}.` : 'Référence non reconnue : choisissez une suggestion ou vérifiez le numéro.';
@@ -439,7 +473,7 @@ const commercialOffers = activeOffers
 	}
 	function syncToolSearch(row: HTMLElement) {
 		const search = row.querySelector<HTMLInputElement>('[data-tool-search]')!; const hidden = row.querySelector<HTMLInputElement>('[data-tool]')!;
-		const option = optionByInput(toolDatalist, search.value);
+		const option = optionByInput(toolDatalist, search.value, search.dataset.verifiedCatalogQuery === search.value.trim());
 		hidden.value = option?.dataset.id ?? '';
 		setDemandData(hidden, option?.dataset);
 		updateDemandMode(row);
@@ -475,7 +509,7 @@ const commercialOffers = activeOffers
 		row.querySelector<HTMLInputElement>('[data-initial-pressure]')!.value = saved.initialPressureBar ?? '';
 		row.querySelector<HTMLInputElement>('[data-target-pressure]')!.value = saved.targetPressureBar ?? '';
 		row.querySelector<HTMLInputElement>('[data-duration-seconds]')!.value = saved.targetMinutes ? String(saved.targetMinutes * 60) : '';
-		search.addEventListener('input', () => syncToolSearch(row));
+		search.addEventListener('input', () => { syncToolSearch(row); refreshSuggestions(search, 'tool', () => syncToolSearch(row)); });
 		search.addEventListener('change', () => syncToolSearch(row));
 		row.querySelector('[data-remove-tool]')?.addEventListener('click', () => { if (rows.children.length > 1) { row.remove(); syncSingleToolUi(); } });
 		if (toolOption) { selectedTool.value = toolOption.dataset.id ?? ''; syncToolSearch(row); } else updateDemandMode(row);
@@ -539,9 +573,9 @@ const commercialOffers = activeOffers
 		const compressorSearch = form.querySelector<HTMLInputElement>('[data-compressor-search]');
 		if (compressorSearch?.value.trim() && !selectedCompressor) throw new Error('Sélectionnez une référence de compresseur dans les suggestions.');
 		if (!['', 'custom', ...compressors.map((item) => item.id)].includes(selectedCompressor)) throw new Error('Le compresseur sélectionné est invalide.');
-		const custom = selectedCompressor === 'custom' ? { maxPressureBar: requireRange(readNumber(data, 'customPressure'), .1, 50, 'La pression maximale personnalisée'), availableFadLpm: requireRange(readNumber(data, 'customFad'), 1, 20_000, 'Le débit réellement restitué', true), tankLiters: requireRange(readNumber(data, 'customTank'), 0, 20_000, 'Le volume personnalisé', true), dutyCycle: requireRange((readNumber(data, 'customDuty') ?? 100) / 100, .01, 1, 'Le temps maximal de fonctionnement'), cutInPressureBar: requireRange(readNumber(data, 'customCutIn'), 0, 50, 'La pression de réenclenchement', true), cutOutPressureBar: requireRange(readNumber(data, 'customCutOut'), .1, 50, 'La pression d’arrêt', true) } : {};
+		const custom = selectedCompressor === 'custom' ? { maxPressureBar: requireRange(readNumber(data, 'customPressure'), .1, 50, 'La pression maximale personnalisée'), availableFadLpm: requireRange(readNumber(data, 'customFad'), 1, 20_000, 'Le débit réellement restitué', true), tankLiters: requireRange(readNumber(data, 'customTank'), 0, 20_000, 'Le volume personnalisé', true), dutyCycle: readNumber(data, 'customDuty') === undefined ? undefined : requireRange(readNumber(data, 'customDuty')! / 100, .01, 1, 'Le temps maximal de fonctionnement'), cutInPressureBar: requireRange(readNumber(data, 'customCutIn'), 0, 50, 'La pression de réenclenchement', true), cutOutPressureBar: requireRange(readNumber(data, 'customCutOut'), .1, 50, 'La pression d’arrêt', true) } : {};
 		if (custom.cutInPressureBar !== undefined && custom.cutOutPressureBar !== undefined && custom.cutInPressureBar >= custom.cutOutPressureBar) throw new Error('La pression de réenclenchement doit être inférieure à la pression d’arrêt.');
-		return parsePassportConfiguration({ demands, mode, safetyMargin, sessionMinutes, hoseLengthMeters, hoseInnerDiameterMm, measuredPressureDropBar, measuredLeakLpm, supplyPressureBar, networkDistanceMeters, fittingStandard, fittingCount, filtration, usageProfile, selectedCompressor, custom }, new Set(compressors.map((item) => item.id)), new Set(tools.map((item) => item.id)));
+		return parsePassportConfiguration({ catalogVersion, calculationVersion: CALCULATION_VERSION, demands, mode, safetyMargin, sessionMinutes, hoseLengthMeters, hoseInnerDiameterMm, measuredPressureDropBar, measuredLeakLpm, supplyPressureBar, networkDistanceMeters, fittingStandard, fittingCount, filtration, usageProfile, selectedCompressor, custom }, new Set(compressors.map((item) => item.id)), new Set(tools.map((item) => item.id)));
 	}
 
 	function compressorInput(config: ReturnType<typeof configFromForm>, requiredPressureBar: number) {
@@ -552,7 +586,7 @@ const commercialOffers = activeOffers
 		const availableFadLpm = compressor.confidence === 'A' || compressor.confidence === 'B'
 			? resolveAvailableFad(compressor, requiredPressureBar)?.litersPerMinute
 			: undefined;
-		return { maxPressureBar: compressor.maxPressureBar, availableFadLpm, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle };
+		return { maxPressureBar: compressor.maxPressureBar, availableFadLpm, availableFadBasis: resolveAvailableFad(compressor, requiredPressureBar)?.basis, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle };
 	}
 
 	function counterfactualMachine(config: NonNullable<ReturnType<typeof configFromForm>>, requiredPressureBar: number): CounterfactualMachine | undefined {
@@ -598,15 +632,14 @@ const commercialOffers = activeOffers
 			: result.limitingFactor === 'pressure' ? 'La pression disponible ou maximale est insuffisante.'
 				: result.limitingFactor === 'flow' ? 'Le débit restitué disponible est insuffisant.'
 					: result.limitingFactor === 'duty_cycle' ? 'Le cycle de fonctionnement limite la durée possible.'
-						: result.limitingFactor === 'data' ? 'Le débit restitué n’est pas documenté à la pression demandée.'
+						: result.limitingFactor === 'data' ? (available === undefined ? 'Le débit restitué n’est pas documenté à la pression demandée.' : result.warnings.find(warning => warning.includes('cycle de service')) ?? result.warnings.at(-1) ?? 'Une donnée nécessaire à la conclusion manque.')
 							: result.verdict === 'intermittent' ? 'Usage couvert uniquement par intermittence.' : 'Aucune réserve bloquante dans les données déclarées.';
 		setText('[data-answer-model]', model);
 		setText('[data-answer-need]', `${base.recommendedFadLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min à ${base.requiredPressureBar.toLocaleString('fr-FR')} bar`);
 		setText('[data-answer-available]', available === undefined
 			? `Non vérifiable à ${base.requiredPressureBar.toLocaleString('fr-FR')} bar`
-			: availableResolution?.basis === 'higher-pressure-bound'
-				? `${available.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min, borne issue de la mesure à ${availableResolution.referencePressureBar?.toLocaleString('fr-FR')} bar pour le besoin à ${base.requiredPressureBar.toLocaleString('fr-FR')} bar`
-				: `${available.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min à ${base.requiredPressureBar.toLocaleString('fr-FR')} bar`);
+			: availableResolution ? compatibilityFadLabel({ availableFadLpm: available, availableFadBasis: availableResolution.basis, availableFadReferencePressureBar: availableResolution.referencePressureBar }, base.requiredPressureBar)
+				: `${available.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min saisis à ${base.requiredPressureBar.toLocaleString('fr-FR')} bar`);
 		setText('[data-answer-margin]', `${Math.round(config.safetyMargin * 100)} % demandée · ${available === undefined ? 'couverture indéterminée' : marginCovered ? 'couverte' : 'non couverte'}`);
 		setText('[data-answer-reserve]', reserve);
 	}
@@ -674,7 +707,7 @@ const commercialOffers = activeOffers
 		}
 		const labels: Record<string, string> = { pressure: 'réglage de pression', flexible: 'flexible/réseau', simultaneity: 'simultanéité', leak: 'fuites', cadence: 'cadence', machine: 'machine' };
 		const unavailable = report.untested.map((kind) => labels[kind]).join(', ');
-		boundary.textContent = `${report.definition}${unavailable ? ` Non testable faute de données explicites : ${unavailable}.` : ''}`;
+		boundary.textContent = `${report.definition} Le remplacement de machine est recherché dans les références présélectionnées pour vos filtres.${unavailable ? ` Non testable faute de données explicites : ${unavailable}.` : ''}`;
 	}
 
 	function renderWarnings(result: SizingResult) {
@@ -727,10 +760,8 @@ const commercialOffers = activeOffers
 		const title = document.createElement('h4'); const link = document.createElement('a'); link.href = `/compresseurs/${compressor.slug}/`; link.textContent = `${compressor.brand} ${compressor.model}`; title.append(link);
 		const badge = document.createElement('span'); badge.className = 'verdict-badge'; badge.textContent = simpleResultLabel(result); head.append(title, badge);
 		const detail = document.createElement('p'); detail.textContent = result.verdict === 'insufficient_data'
-			? `Débit réellement restitué non vérifiable à ${result.requiredPressureBar} bar · ${sourceQualityLabel(compressor.confidence)}.`
-			: fadResolution?.basis === 'higher-pressure-bound'
-				? `${fadResolution.litersPerMinute.toFixed(0)} L/min mesurés à ${fadResolution.referencePressureBar} bar, retenus comme borne conservatrice pour ${result.requiredPressureBar} bar · ${sourceQualityLabel(compressor.confidence)}.`
-				: `${fadResolution?.litersPerMinute.toFixed(0) ?? 'Débit inconnu'} L/min disponibles à ${result.requiredPressureBar} bar · ${sourceQualityLabel(compressor.confidence)}.`;
+			? `${result.warnings.find(warning => warning.includes('cycle de service')) ?? result.warnings.at(-1) ?? 'Une donnée nécessaire manque.'} · ${sourceQualityLabel(compressor.confidence)}.`
+			: `${compatibilityFadLabel({ availableFadLpm: candidate.availableFadLpm, availableFadBasis: fadResolution?.basis, availableFadReferencePressureBar: fadResolution?.referencePressureBar }, result.requiredPressureBar)} · ${sourceQualityLabel(compressor.confidence)}.`;
 		const quality = document.createElement('details'); quality.className = 'result-card-quality'; const qualitySummary = document.createElement('summary'); qualitySummary.textContent = sourceQualityLabel(compressor.confidence); const qualityDetail = document.createElement('span'); qualityDetail.textContent = sourceQualityDetail(compressor.confidence);
 		const installation = document.createElement('p'); installation.className = 'result-card-installation'; installation.textContent = `${compressor.phase === 'single-phase' ? 'Monophasé' : compressor.phase === 'three-phase' ? 'Triphasé' : 'Alimentation non documentée'}${compressor.voltage ? ` · ${compressor.voltage}` : ''} · ${compressor.mobility === 'portable' ? 'portable' : compressor.mobility === 'mobile' ? 'mobile' : compressor.mobility === 'fixed' ? 'fixe' : 'mobilité non documentée'}`;
 		quality.append(qualitySummary, qualityDetail); article.append(head, detail, installation, quality);
@@ -826,7 +857,7 @@ const commercialOffers = activeOffers
 		const coverage = root?.querySelector<HTMLElement>('[data-result-coverage]');
 		const contextualCandidates = filterDecisionCandidatesByContext(resolution.rankedCandidates, context) as Candidate[];
 		const priority = contextualCandidates.slice(0, 3);
-		if (coverage) coverage.textContent = priority.length ? `${priority.length} solution${priority.length > 1 ? 's' : ''} affichée${priority.length > 1 ? 's' : ''} pour ce contexte. L’inventaire complet reste disponible en mode expert.` : 'Aucune solution affichée avec ces filtres. Élargissez l’alimentation, la mobilité ou retirez le budget.';
+		if (coverage) coverage.textContent = priority.length ? `${priority.length} solution${priority.length > 1 ? 's' : ''} affichée${priority.length > 1 ? 's' : ''} pour ce contexte. ${candidateCoverage}` : 'Aucune solution affichée avec ces filtres. Élargissez l’alimentation, la mobilité ou retirez le budget.';
 		lastPriorityIds = priority.map(({ compressor }) => compressor.id);
 		if (priority.length) priorityList.replaceChildren(...priority.map((candidate) => renderResultCard(candidate, proofToolId)));
 		else { const message = document.createElement('p'); message.className = 'decision-empty'; message.textContent = 'Aucune recommandation documentée pour cette configuration et ces filtres. Une donnée manquante reste indéterminée.'; priorityList.replaceChildren(message); }
@@ -901,7 +932,7 @@ const commercialOffers = activeOffers
 	form?.addEventListener('change', () => recordFunnelStep('started'), { once: true });
 	form?.addEventListener('input', clearFormError);
 	form?.addEventListener('change', clearFormError);
-	form?.querySelector<HTMLInputElement>('[data-compressor-search]')?.addEventListener('input', syncCompressorSearch);
+	form?.querySelector<HTMLInputElement>('[data-compressor-search]')?.addEventListener('input', (event) => { syncCompressorSearch(); refreshSuggestions(event.currentTarget as HTMLInputElement, 'compressor', syncCompressorSearch); });
 	form?.querySelector<HTMLInputElement>('[data-compressor-search]')?.addEventListener('change', syncCompressorSearch);
 	form?.querySelector<HTMLInputElement>('[name="margin"]')?.addEventListener('input', (event: Event) => { root!.querySelector<HTMLOutputElement>('[data-margin-output]')!.value = `${(event.target as HTMLInputElement).value} %`; });
 
@@ -967,8 +998,8 @@ const commercialOffers = activeOffers
 	void initializeCalculator().then(() => {
 		const addButton = root?.querySelector<HTMLButtonElement>('[data-add-tool]'); if (addButton) addButton.disabled = false;
 		setCalculatorUiState('idle');
-	}).catch(() => {
-		setCalculatorUiState('error', 'Les références n’ont pas pu être chargées. Rechargez cette page pour réessayer.');
+	}).catch((error) => {
+		setCalculatorUiState('error', error instanceof Error ? error.message : 'Les références n’ont pas pu être chargées. Rechargez cette page pour réessayer.');
 		for (const button of calculatorSubmitButtons) button.disabled = true;
 	});
 
@@ -993,16 +1024,21 @@ const commercialOffers = activeOffers
 			renderAnswerFirst(config, base, result); renderConfiguration(config); renderMetrics(result); renderWarnings(result); renderAccessories(config);
 			evaluated.replaceChildren();
 
+			const decisionContext = decisionContextFromForm();
+			const matching = await loadCandidateCompressors(base, decisionContext, catalogVersion);
+			catalogVersion = matching.catalog.catalogVersion; CATALOG_VERIFIED_AT = matching.catalog.catalogVerifiedAt;
+			candidateCoverage = `${matching.selection.returned} références présentées parmi ${matching.selection.eligible} références couvrant le débit, le cycle documenté et les filtres d’installation.`;
+			const selectedCompressor = compressors.find(item => item.id === config.selectedCompressor);
+			compressors = [...new Map([...matching.catalog.compressors, ...(selectedCompressor ? [selectedCompressor] : [])].map(item => [item.id, item])).values()];
 			const candidates: Candidate[] = compressors.map((compressor) => {
 				const availableFadLpm = compressor.confidence === 'A' || compressor.confidence === 'B'
 					? resolveAvailableFad(compressor, base.requiredPressureBar)?.litersPerMinute
 					: undefined;
-				const candidateResult = sizeConfiguration({ ...config, compressor: { maxPressureBar: compressor.maxPressureBar, availableFadLpm, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle } } as any);
+				const candidateResult = sizeConfiguration({ ...config, compressor: { maxPressureBar: compressor.maxPressureBar, availableFadLpm, availableFadBasis: resolveAvailableFad(compressor, base.requiredPressureBar)?.basis, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle } } as any);
 				const commercialOffer = commercialOfferFor(compressor.id);
 				return { compressor, result: candidateResult, availableFadLpm, marginCovered: availableFadLpm !== undefined && availableFadLpm >= base.recommendedFadLpm, lowestVerifiedPriceEur: commercialOffer?.priceEur, commercialOffer };
 			});
 			const rankedCandidates = rankDecisionCandidates(candidates);
-			const decisionContext = decisionContextFromForm();
 			if (shouldEvaluateCounterfactual(config.selectedCompressor)) {
 				const counterfactual = createCounterfactualRecommendation({
 					configuration: config,

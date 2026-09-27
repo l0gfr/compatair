@@ -14,7 +14,7 @@ export function verdictCacheConfig(root) {
 		}
 	}
 	collect('src/domain');
-	files.push('pnpm-lock.yaml', 'scripts/lib/verdict-cache-config.mjs');
+	files.push('server/air-sizing.mjs', 'server/air-compatibility.mjs', 'pnpm-lock.yaml', 'scripts/lib/verdict-cache-config.mjs');
 	const digest = createHash('sha256').update(JSON.stringify({ format: 1, node: process.versions.node, v8: process.versions.v8, icu: process.versions.icu }));
 	for (const file of files.sort()) digest.update(file).update('\0').update(readFileSync(join(root, file))).update('\0');
 	return { directory: join(root, '.astro/compatibility-cache-v1'), fingerprint: digest.digest('hex') };

@@ -9,12 +9,12 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/prepare-indexation.mjs && astro build",
+    "build": "node scripts/prepare-indexation.mjs && astro build && node scripts/build-catalog-database.mjs",
     "check": "astro check",
     "test": "vitest run --maxWorkers=2",
     "test:watch": "vitest",
     "contracts:check": "node --test contracts/mcp/tests/verify-contracts.mjs contracts/ucp/tests/verify-contracts.mjs",
-    "validate": "pnpm catalog:check && pnpm audit:editorial && pnpm contracts:check && pnpm benchmark:mcp-manifest && pnpm check && pnpm test && pnpm build",
+    "validate": "pnpm catalog:check && pnpm audit:editorial && pnpm audit:page-value && pnpm contracts:check && pnpm benchmark:mcp-manifest && pnpm check && pnpm test && pnpm build",
     "security:audit": "node scripts/audit-supply-chain.mjs --advisories",
     "security:supply-chain": "node scripts/audit-supply-chain.mjs",
     "security:registry": "node scripts/audit-supply-chain.mjs --registry",
@@ -52,7 +52,9 @@
     "validate:main": "pnpm lint:source && pnpm validate:full && pnpm audit:dist && pnpm archive:verify && pnpm lighthouse",
     "preview": "astro preview",
     "mcp:start": "node server/mcp-server.mjs",
-    "astro": "astro"
+    "astro": "astro",
+    "audit:page-value": "node scripts/audit-page-value.mjs",
+    "benchmark:catalog-scale": "node scripts/benchmark-catalog-scale.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",

@@ -119,3 +119,14 @@ describe('MCP privacy-safe telemetry', () => {
 		expect(await store.snapshot()).toMatchObject({ totalEvents: 25, weeks: [{ calls: 25, outcomes: { success: 25 } }], actors: [{ id: actor, calls: 25 }] });
 	});
 });
+
+it('withholds rates when weekly recorded subtotals cannot be reconciled', () => {
+ const state: any = aggregateMcpTelemetry(empty, { type: 'tool_call', actorId: actor, toolName: 'check_compatibility', outcome: 'success', profile: 'legacy' }, new Date('2026-07-13T12:00:00Z'));
+ expect(buildPublicMcpUsageReport(state, catalog).reconciliation.status).toBe('consistent');
+ state.weeks[0].calls += 1;
+ const report = buildPublicMcpUsageReport(state, catalog);
+ expect(report.reconciliation.status).toBe('inconsistent');
+ expect(report.totals.success_rate).toBeNull();
+ expect(report.tools[0].success_rate).toBeNull();
+ expect(report.totals.tool_calls).toBe(2);
+});

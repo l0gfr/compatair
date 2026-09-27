@@ -99,7 +99,7 @@ function projectFieldSources(fieldSources: Record<string, string[]>, fields: str
 	return Object.fromEntries(fields.flatMap((field) => fieldSources[field]?.length ? [[field, fieldSources[field]]] : []));
 }
 
-const compressorRuntimeFields = ['fadCurve', 'maxPressureBar', 'voltage', 'phase', 'powerKw', 'noiseDb', 'mobility'];
+const compressorRuntimeFields = ['fadCurve', 'maxPressureBar', 'tankLiters', 'dutyCycle', 'voltage', 'phase', 'powerKw', 'noiseDb', 'mobility'];
 
 function compressorRuntimeEvidence(item: Compressor) {
 	const ids = new Set(Object.values(projectFieldSources(item.fieldSources, [...compressorRuntimeFields, 'tankLiters', 'dutyCycle'])).flat());
@@ -142,7 +142,7 @@ export function createRuntimeCatalog(compressors: Compressor[], tools: ToolProfi
 			recommendedHose: item.recommendedHose,
 			confidence: item.confidence,
 			evidence: item.evidence.map(projectEvidence),
-			fieldSources: projectFieldSources(item.fieldSources, ['connectorSize', 'filtrationRequirement', 'lubricationRequirement', 'recommendedHose']),
+			fieldSources: projectFieldSources(item.fieldSources, ['workingPressureBar', 'airflowLpm', 'airPerActionLiters', 'demandExplanation', 'connectorSize', 'filtrationRequirement', 'lubricationRequirement', 'recommendedHose']),
 			demandModel: item.demandModel,
 			workingPressureBar: item.workingPressureBar,
 			...(item.demandModel === 'fixed-flow' ? { airflowLpm: item.airflowLpm } : {}),

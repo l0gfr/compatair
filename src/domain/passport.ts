@@ -21,6 +21,8 @@ const customCompressorSchema = z.object({
 }).default({});
 
 export const passportConfigurationSchema = z.object({
+ catalogVersion: z.string().regex(/^[a-f0-9]{64}$/).optional(),
+ calculationVersion: z.string().regex(/^\d+\.\d+\.\d+$/).optional(),
 	demands: sizingInputSchema.shape.demands,
 	mode: z.enum(['simultaneous', 'successive']).default('successive'),
 	safetyMargin: z.number().min(0).max(0.5).default(0.25),
@@ -115,7 +117,7 @@ const passportUnsignedEnvelopeSchema = passportEnvelopeSchema.omit({ reportDiges
 export type PassportEnvelope = z.infer<typeof passportEnvelopeSchema>;
 
 type PassportCatalogEvidence = Pick<Compressor['evidence'][number], 'id' | 'sourceUrl' | 'sourceLabel' | 'retrievedAt' | 'confidence'>;
-type PassportCompressor = Pick<Compressor, 'id' | 'brand' | 'model' | 'maxPressureBar' | 'fadCurve' | 'tankLiters' | 'dutyCycle' | 'voltage' | 'phase' | 'powerKw' | 'noiseDb' | 'fieldSources'> & { evidence: PassportCatalogEvidence[] };
+type PassportCompressor = Pick<Compressor, 'id' | 'brand' | 'model' | 'confidence' | 'maxPressureBar' | 'fadCurve' | 'tankLiters' | 'dutyCycle' | 'voltage' | 'phase' | 'powerKw' | 'noiseDb' | 'fieldSources'> & { evidence: PassportCatalogEvidence[] };
 type PassportTool = Pick<ToolProfile, 'id' | 'brand' | 'model' | 'label' | 'connectorSize' | 'filtrationRequirement' | 'lubricationRequirement' | 'recommendedHose' | 'fieldSources'> & { evidence: PassportCatalogEvidence[] };
 
 function encodeUrlPayload(value: unknown) {
@@ -226,12 +228,13 @@ export async function createPassportReport(input: unknown, compressors: Passport
 	const configuration = parsePassportConfiguration(input, new Set(compressors.map((item) => item.id)), new Set(tools.map((item) => item.id)));
 	const base = sizeConfiguration(configuration);
 	const selected = compressors.find((item) => item.id === configuration.selectedCompressor);
-	const selectedFadResolution = selected ? resolveAvailableFad(selected, base.requiredPressureBar) : undefined;
+	const selectedFadResolution = selected && ['A', 'B'].includes(selected.confidence) ? resolveAvailableFad(selected, base.requiredPressureBar) : undefined;
 	const compressorInput = configuration.selectedCompressor === 'custom'
 		? configuration.custom.maxPressureBar !== undefined ? { ...configuration.custom, maxPressureBar: configuration.custom.maxPressureBar } : undefined
 		: selected ? {
 			maxPressureBar: selected.maxPressureBar,
 			availableFadLpm: selectedFadResolution?.litersPerMinute,
+			availableFadBasis: selectedFadResolution?.basis,
 			tankLiters: selected.tankLiters,
 			dutyCycle: selected.dutyCycle,
 		} : undefined;

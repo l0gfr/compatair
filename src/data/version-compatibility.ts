@@ -1,11 +1,11 @@
 export const versionCompatibility = {
 	schemaVersion: '1.0.0',
-	updatedAt: '2026-07-20',
+	updatedAt: '2026-09-27',
 	principle: 'Each version describes a distinct compatibility boundary; matching numbers are not implied.',
 	runtime: {
 		applicationPackage: { version: '0.1.0', scope: 'Private repository package lifecycle; not a public API promise.' },
 		node: { version: '>=24 <25', scope: 'Supported server and release runtime.' },
-		astro: { version: '7.0.7', scope: 'Static site build framework.' },
+		astro: { version: '7.2.8', scope: 'Static site build framework.' },
 		typescript: { version: '6.0.3', scope: 'Strict source validation toolchain.' },
 	},
 	interfaces: [
@@ -17,7 +17,7 @@ export const versionCompatibility = {
 		{ name: 'UCP capability', version: '2026-07-15', compatibility: 'fr.compatair.air.compatibility.' },
 	],
 	decisionContracts: [
-		{ name: 'Calculation engine', version: '1.3.0', compatibility: 'Deterministic pressure, FAD, cycle and explicit-demand calculations.' },
+		{ name: 'Calculation engine', version: '1.4.0', compatibility: 'Deterministic pressure, FAD, cycle and explicit-demand calculations.' },
 		{ name: 'Public method', version: '2026.07', compatibility: 'Interpretation and response-method contract carried by public results.' },
 		{ name: 'Verdict schema', version: '2.0.0', compatibility: 'Separates air_supply, complete_air_system, request and commercial scopes.' },
 		{ name: 'Compatibility receipt', version: '1.0.0', compatibility: 'Deterministic SHA-256 receipt contract.' },

@@ -266,6 +266,16 @@ export function assertDocumentQualityIntegrity(
 		if (record.decision.outcome !== 'retain_claim' && record.decision.selectedClaimId !== null) errors.push(`Valeur retenue indue pour ${record.id}`);
 		if (record.status === 'open' && record.decision.outcome !== 'open') errors.push(`Décision publiée sur contradiction ouverte : ${record.id}`);
 		if (record.status === 'answered' && record.decision.outcome === 'open') errors.push(`Réponse sans décision pour ${record.id}`);
+		// A registry decision must also be true in the fields consumed by the engine.
+		// Free-form specifications have a separate editorial representation.
+		if (product && !record.field.key.startsWith('specifications.')) {
+			const actual = record.field.key.split('.').reduce<unknown>((value, key) =>
+				value && typeof value === 'object' && Object.hasOwn(value, key) ? (value as Record<string, unknown>)[key] : undefined, product);
+			const present = actual !== undefined && !(Array.isArray(actual) && actual.length === 0);
+			if (record.decision.outcome !== 'retain_claim' && present) errors.push(`Champ contradictoire encore exploitable : ${record.id}`);
+			const retained = record.claims.find(claim => claim.id === record.decision.selectedClaimId);
+			if (retained && JSON.stringify(actual) !== JSON.stringify(retained.normalizedValue)) errors.push(`Champ différent de la valeur retenue : ${record.id}`);
+		}
 	}
 	const observationsByProduct = new Map<string, ReferenceRegistry['observations']>();
 	for (const observation of referenceRegistry.observations) {

@@ -130,7 +130,8 @@
 <script>
 	import { assessCommissioning, commissioningRecordSchema, commissioningVerdictLabel, configurationFromCommissioning, type CommissioningAssessment, type CommissioningRecord } from '../domain/commissioning';
 	import { createPassportEnvelope, createPassportReport, decodePassportConfiguration, decodePassportEnvelope, encodePassportEnvelope, reportFromPassportEnvelope, type PassportConfiguration, type PassportReport } from '../domain/passport';
-	import { loadRuntimeCatalog, type RuntimeCatalog } from '../domain/runtime-catalog';
+	import type { RuntimeCatalog } from '../domain/runtime-catalog';
+ import { loadConfigurationProducts } from '../domain/catalog-client';
 
 	const root = document.querySelector<HTMLElement>('[data-commissioning-root]');
 	const query = <T extends Element>(selector: string) => root?.querySelector<T>(selector);
@@ -292,8 +293,8 @@
 			return;
 		}
 		try {
-			catalog = await loadRuntimeCatalog();
 			baseConfiguration = envelope ? (await reportFromPassportEnvelope(envelope)).configuration : legacy!;
+			catalog = await loadConfigurationProducts(baseConfiguration);
 			const report = await createPassportReport(baseConfiguration, catalog.compressors, catalog.tools, catalog.catalogVerifiedAt);
 			setText('[data-context-compressor]', report.compressorLabel);
 			setText('[data-context-tools]', report.toolLabels.join(' · '));

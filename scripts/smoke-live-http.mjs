@@ -246,6 +246,22 @@ if (mcpEnabled) {
 		},
 	);
 
+	await check('recherche ciblée du catalogue', '/api/v1/search/catalog?q=einhell-tc-pe-150&type=tool&limit=5', ({ body, response }) => {
+		assert(response.status === 200, `HTTP catalogue attendu 200, reçu ${response.status}`);
+		const result = JSON.parse(body);
+		assert(result.items?.some(item => item.id === 'einhell-tc-pe-150'), 'référence exacte absente de l’index');
+		assert(result.calculationVersion === '1.4.0' && /^[a-f0-9]{64}$/.test(result.catalogVersion), 'version de recherche incohérente');
+	});
+	await check('lecture ciblée versionnée', '/api/v1/search/products?ids=einhell-tc-pe-150', ({ body, response }) => {
+		assert(response.status === 200, `HTTP références attendu 200, reçu ${response.status}`);
+		const result = JSON.parse(body);
+		assert(result.tools?.length === 1 && result.tools[0].id === 'einhell-tc-pe-150' && result.compressors?.length === 0, 'lecture non bornée ou identité incorrecte');
+		assert(result.tools[0].fieldSources?.airflowLpm?.length > 0, 'provenance du débit absente');
+	});
+	await check('index privé inaccessible', '/_server/catalog.sqlite', ({ response }) => {
+		assert([403, 404].includes(response.status), `Index privé exposé : HTTP ${response.status}`);
+	});
+
 	await check('recherche plein texte', '/api/v1/search?q=debit&locale=fr&limit=1', ({ body, response }) => {
 		assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
 		const result = JSON.parse(body);

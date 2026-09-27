@@ -45,6 +45,12 @@ export function productCandidate(product, kind) {
 	const technical = Object.fromEntries(keys.filter((key) => product[key] !== undefined).map((key) => [key, product[key]]));
 	if (Array.isArray(technical.fadCurve)) technical.fadCurve = [...technical.fadCurve].sort((a, b) => a.pressureBar - b.pressureBar);
 	if (product.variant?.distinguishingAttributes) technical.variantAttributes = product.variant.distinguishingAttributes;
+	// Numeric facts outside the normalized schema (torque, speed, dimensions)
+	// also distinguish references. Remove identities before comparing these facts.
+	let numericText = text;
+	for (const identity of [product.label, product.model, product.mpn, product.id].filter(Boolean).sort((a, b) => b.length - a.length)) numericText = numericText.split(identity).join(' ');
+	technical.editorialNumbers = numericText.match(/\d+(?:[.,]\d+)*/g) ?? [];
+	technical.specifications = (product.specifications ?? []).map(({ label, value }) => ({ label, value })).sort((a, b) => a.label.localeCompare(b.label, 'en') || a.value.localeCompare(b.value, 'en'));
 	const signature = JSON.stringify(stable(technical));
 	return {
 		path: `/${isTool ? 'outils-pneumatiques' : 'compresseurs'}/${product.slug}/`, family: 'catalog',
@@ -57,11 +63,11 @@ export function productCandidate(product, kind) {
 export function analyzeCandidates(candidates, admitted, policy) {
 	const inverted = new Map();
 	const analyzed = [];
-	const sorted = [...candidates].sort((a, b) => Number(admitted.has(b.path)) - Number(admitted.has(a.path)) || (a.firstSeen ?? '').localeCompare(b.firstSeen ?? '') || a.path.localeCompare(b.path, 'en'));
+	const sorted = [...candidates].sort((a, b) => Number(admitted.has(b.path)) - Number(admitted.has(a.path)) || (b.priority?.score ?? 0) - (a.priority?.score ?? 0) || (a.firstSeen ?? '').localeCompare(b.firstSeen ?? '') || a.path.localeCompare(b.path, 'en'));
 	for (const candidate of sorted) {
 		const grams = shingles(candidate.text, candidate.identities);
 		const overlaps = new Map();
-		const scope = candidate.family === 'catalog' ? `catalog:${candidate.signature}` : candidate.family;
+		const scope = ['catalog', 'usages'].includes(candidate.family) ? `${candidate.family}:${candidate.topic}:${candidate.signature}` : candidate.family;
 		for (const gram of grams) for (const index of inverted.get(`${scope}:${gram}`) ?? []) overlaps.set(index, (overlaps.get(index) ?? 0) + 1);
 		let similar;
 		for (const [index, intersection] of overlaps) {
@@ -123,19 +129,43 @@ export function planIndexation({ candidates, baseline, previous, policy, now = n
 		selected.push(...diverseSelection(analyzed.filter((entry) => entry.family === family && !admitted.has(entry.path) && !entry.reason), limits[family], policy.maximumTopicShare));
 	}
 	const newPaths = new Set(selected);
+	const consolidation = consolidateEquivalentAnswers(analyzed, new Set([...admitted, ...selected]));
+	const invalidPublished = analyzed.filter(entry => admitted.has(entry.path) && entry.reason && !consolidation.canonicalAliases[entry.path]);
+	if (invalidPublished.length) throw new Error(`Pages publiées sans valeur propre validée : ${invalidPublished.slice(0, 20).map(entry => `${entry.path} (${entry.reason})`).join(', ')}`);
 	const batches = [...previous.batches, ...(selected.length ? [{ openedAt: now.toISOString(), paths: selected.sort() }] : [])];
 	const pending = analyzed.filter((entry) => !admitted.has(entry.path) && !newPaths.has(entry.path)).map((entry) => ({ path: entry.path, firstSeen: entry.firstSeen }));
 	const checks = ['catalog', 'guides', 'usages'].flatMap((family) => [true, false].flatMap((indexable) => analyzed
-		.filter((entry) => entry.family === family && (admitted.has(entry.path) || newPaths.has(entry.path)) === indexable)
+		.filter((entry) => !consolidation.canonicalAliases[entry.path] && entry.family === family && (admitted.has(entry.path) || newPaths.has(entry.path)) === indexable)
 		.sort((a, b) => Number(newPaths.has(b.path)) - Number(newPaths.has(a.path)))
 		.slice(0, 3).map((entry) => ({ path: entry.path, indexable }))));
-	const manifest = { schemaVersion: 1, baselineSha: baseline.sourceSha, gitSha, builtAt: now.toISOString(), batches, pending, checks };
+	const manifest = { schemaVersion: 1, baselineSha: baseline.sourceSha, gitSha, builtAt: now.toISOString(), batches, pending, checks, canonicalAliases: consolidation.canonicalAliases };
 	validateManifest(manifest, baseline, now);
 	const report = analyzed.map((entry) => ({
 		path: entry.path, family: entry.family, topic: entry.topic, contentHash: entry.contentHash, firstSeen: entry.firstSeen,
+		value: entry.value, priority: entry.priority,
+		qualityStatus: consolidation.canonicalAliases[entry.path] ? 'consolidated' : entry.reason ? 'needs-review' : 'mechanical-checks-passed',
 		status: admitted.has(entry.path) ? 'existing' : newPaths.has(entry.path) ? 'released' : entry.reason ? 'held' : 'queued',
 		reason: entry.reason ?? (admitted.has(entry.path) ? 'preserved-existing' : newPaths.has(entry.path) ? 'batch-admission' : policy.paused ? 'paused' : !allowRelease ? 'offline' : !ready ? 'cooldown' : 'batch-limit'),
 		...(entry.similar ? { similar: entry.similar } : {}),
 	}));
-	return { manifest, report, limits, released: selected.length, previousSha: previous.gitSha, allowRelease };
+	return { manifest, report, consolidation, limits, released: selected.length, previousSha: previous.gitSha, allowRelease };
+}
+
+// Consolidation is limited to equal technical signatures within the same brand
+// and page intent. Identifiers remain separate: this never merges catalog records.
+export function consolidateEquivalentAnswers(analyzed, admitted) {
+ const byPath = new Map(analyzed.map(entry => [entry.path, entry]));
+ const groups = new Map();
+ const canonicalAliases = {};
+ for (const entry of analyzed) {
+  if (!['catalog', 'usages'].includes(entry.family) || entry.reason !== 'near-duplicate' || !entry.similar) continue;
+  let target = byPath.get(entry.similar.path);
+  const visited = new Set([entry.path]);
+  while (target?.reason === 'near-duplicate' && target.similar && !visited.has(target.path)) { visited.add(target.path); target = byPath.get(target.similar.path); }
+  if (!target || visited.has(target.path) || target.signature !== entry.signature || target.topic !== entry.topic || target.family !== entry.family) continue;
+  if (!groups.has(target.path)) groups.set(target.path, [target]);
+  groups.get(target.path).push(entry);
+  if (admitted.has(entry.path) && admitted.has(target.path)) canonicalAliases[entry.path] = target.path;
+ }
+ return { canonicalAliases, groups: [...groups].map(([primaryPath, entries]) => ({ primaryPath, members: entries.map(entry => ({ path: entry.path, label: entry.value?.label ?? entry.path, identity: entry.value?.identity, claims: entry.value?.claims, contentHash: entry.value?.contentHash })) })) };
 }

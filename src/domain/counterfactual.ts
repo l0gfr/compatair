@@ -53,7 +53,7 @@ function machineInput(machine: CounterfactualMachine, requiredPressureBar: numbe
 			: machine.documentedFadPressureBar !== undefined && samePressure(machine.documentedFadPressureBar, requiredPressureBar)
 				? machine.availableFadLpm
 				: undefined;
-	return { maxPressureBar: machine.maxPressureBar, availableFadLpm, tankLiters: machine.tankLiters, dutyCycle: machine.dutyCycle };
+	return { maxPressureBar: machine.maxPressureBar, availableFadLpm, availableFadBasis: machine.fadCurve ? resolveAvailableFad({ fadCurve: machine.fadCurve }, requiredPressureBar)?.basis : undefined, tankLiters: machine.tankLiters, dutyCycle: machine.dutyCycle };
 }
 
 function evaluate(configuration: SizingInput, machine?: CounterfactualMachine) {

@@ -11,7 +11,7 @@ const configuration: PassportConfiguration = {
 function compressor(overrides: Partial<ContextualComparisonCompressor> = {}): ContextualComparisonCompressor {
 	return {
 		id: 'compressor', brand: 'Marque', model: 'Modèle', maxPressureBar: 10,
-		fadCurve: [{ pressureBar: 6, litersPerMinute: 300 }], tankLiters: 50, confidence: 'A', ...overrides,
+		fadCurve: [{ pressureBar: 6, litersPerMinute: 300 }], tankLiters: 50, dutyCycle: 1, confidence: 'A', ...overrides,
 	};
 }
 
@@ -27,7 +27,7 @@ describe('contextual compressor comparison', () => {
 		expect(evaluation.reserveCovered).toBe(true);
 		expect(contextualVerdictLabel(evaluation.result)).toBe('Compatible en continu');
 		expect(contextualFadLabel(evaluation)).toBe('300 L/min documentés à 6 bar');
-		expect(evaluation.primaryReserve).toContain('cycle de service');
+		expect(evaluation.primaryReserve).toContain('mesure au poste');
 	});
 
 	it('keeps a covered nominal need distinct from an uncovered safety reserve', () => {
@@ -37,6 +37,13 @@ describe('contextual compressor comparison', () => {
 		expect(evaluation.reserveGapLpm).toBe(-30);
 		expect(evaluation.primaryReserve).toContain('réserve de débit');
 	});
+
+	it('preserves documented flow but cannot confirm endurance without a cycle', () => {
+ const evaluation = evaluateContextualCompressor(configuration, compressor({ dutyCycle: undefined }));
+ expect(evaluation.result.verdict).toBe('insufficient_data');
+ expect(evaluation.availableFad?.litersPerMinute).toBe(300);
+ expect(evaluation.effectiveAverageCapacityLpm).toBeUndefined();
+});
 
 	it('returns insufficient data instead of using intake flow when FAD is absent', () => {
 		const evaluation = evaluateContextualCompressor(configuration, compressor({ fadCurve: [] }));

@@ -63,7 +63,7 @@ export function validateDemandEvent(value, catalog, expectedCalculationVersion =
 	if (!isValidCalculationVersion(value.calculationVersion)) return undefined;
 	if (expectedCalculationVersion !== undefined && value.calculationVersion !== expectedCalculationVersion) return undefined;
 	if (!Array.isArray(value.toolIds) || value.toolIds.length < 1 || value.toolIds.length > 8 || new Set(value.toolIds).size !== value.toolIds.length) return undefined;
-	const catalogToolIds = new Set((catalog.tools ?? []).map((tool) => tool.id));
+	const catalogToolIds = catalog.repository?.lookup('tool') ?? new Set((catalog.tools ?? []).map((tool) => tool.id));
 	if (value.toolIds.some((id) => typeof id !== 'string' || !catalogToolIds.has(id))) return undefined;
 	if (!MODES.has(value.mode) || !FLOW_BUCKETS.has(value.flowBucket) || !PRESSURE_BUCKETS.has(value.pressureBucket) || !SESSION_BUCKETS.has(value.sessionBucket) || !COMPRESSOR_SELECTIONS.has(value.compressorSelection)) return undefined;
 	return {
@@ -79,7 +79,7 @@ export function validateDemandEvent(value, catalog, expectedCalculationVersion =
 
 export function aggregateDemand(state, event, catalog, now = new Date()) {
 	const next = structuredClone(state);
-	const toolById = new Map((catalog.tools ?? []).map((tool) => [tool.id, tool]));
+	const toolById = catalog.repository?.lookup('tool') ?? new Map((catalog.tools ?? []).map((tool) => [tool.id, tool]));
 	next.schemaVersion = DEMAND_EVENT_SCHEMA_VERSION;
 	next.updatedAt = now.toISOString();
 	next.totalContributions += 1;

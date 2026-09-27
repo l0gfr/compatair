@@ -10,7 +10,8 @@ it('fingerprints nested engine sources and dependencies without depending on gui
 	const root = await mkdtemp(join(tmpdir(), 'compatair-cache-key-')); roots.push(root);
 	await mkdir(join(root, 'src/domain/nested'), { recursive: true });
 	await mkdir(join(root, 'scripts/lib'), { recursive: true });
-	const files = ['src/domain/engine.ts', 'src/domain/nested/math.ts', 'pnpm-lock.yaml', 'scripts/lib/verdict-cache-config.mjs'];
+ await mkdir(join(root, 'server'), { recursive: true });
+	const files = ['server/air-sizing.mjs', 'server/air-compatibility.mjs', 'src/domain/engine.ts', 'src/domain/nested/math.ts', 'pnpm-lock.yaml', 'scripts/lib/verdict-cache-config.mjs'];
 	for (const file of files) await writeFile(join(root, file), 'initial');
 	let previous = verdictCacheConfig(root).fingerprint;
 	expect(previous).toMatch(/^[a-f0-9]{64}$/);

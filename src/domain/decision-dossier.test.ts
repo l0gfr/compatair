@@ -54,9 +54,9 @@ describe('pages de décision sourcées', () => {
 		const compressor = compressors.find((item) => item.id === 'einhell-tc-ac-420-50-10-v')!;
 		const tool = tools.find((item) => item.id === 'einhell-tc-pw-340')!;
 		const result = evaluateCompatibility(compressor, tool);
-		expect(result.verdict).toBe('continuous');
-		expect(explainCompatibility(compressor, tool, result)).toContain('mais pas le repère');
-		expect(explainCompatibility(compressor, tool, result)).toContain('cycle de service du compresseur n’est pas documenté');
+		expect(result.verdict).toBe('insufficient_data');
+		expect(explainCompatibility(compressor, tool, result)).toContain('marge');
+		expect(explainCompatibility(compressor, tool, result)).toContain('cycle de service du compresseur manque');
 	});
 	it('borne les comparatifs à des questions éditoriales avec des différences techniques', () => {
 		expect(new Set(decisionComparisons.map((page) => page.slug)).size).toBe(decisionComparisons.length);

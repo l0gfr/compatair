@@ -8,7 +8,7 @@ Les fiches, guides et données du calculateur restent utilisables. Les nouvelles
 
 Une page en attente porte `noindex,follow`, garde sa canonique propre et sort du sitemap. Google peut l’explorer et lire cette directive. `noindex` contrôle l’indexation, pas le nombre de requêtes de crawl. Bloquer ces pages dans robots.txt empêcherait la lecture de la directive. [Google : noindex](https://developers.google.com/search/docs/crawling-indexing/block-indexing)
 
-Les URL déjà indexables sont conservées : la base initiale contient les 4 373 URL du sitemap public de la révision `702747a9f6a143f37cbce7f24258f5535b19882b`. Une présence au sitemap ne prouve pas une indexation par Google. Les répétitions détectées dans ce corpus sont signalées dans le rapport local, sans désindexation collective.
+Les URL déjà indexables sont conservées : la base initiale contient les 4 373 URL du sitemap public de la révision `702747a9f6a143f37cbce7f24258f5535b19882b`. Une présence au sitemap ne prouve pas une indexation par Google. Les réponses techniques équivalentes du même groupe de marque et d’intention sont regroupées sous une canonique principale, sans fusionner les produits. Leurs identifiants et sources restent accessibles. Une page déjà admise devenue pauvre ou dupliquée sans regroupement résolu bloque désormais le build.
 
 La publication concurrente de 55 nouveaux guides en `4870e1e` est enregistrée séparément comme transition initiale. Elle ne contourne pas les quotas : ces 55 ajouts restent candidats, dont 5 admis au premier lot et 50 en attente. Ils ont été temporairement exposés comme indexables avant l’activation du contrôle ; le prochain déploiement demandera donc leur exclusion temporaire, sans garantie de prise en compte immédiate par Google. Les bibliothèques et leur pagination restent ouvertes.
 
@@ -23,7 +23,7 @@ Les plafonds sont communs à tous les imports d’une famille, pas renouvelés p
 | Troisième lot | 150 | 15 |
 | Lots suivants | 200 | 20 |
 
-Au moins sept jours séparent deux lots. Le planificateur ajoute une marge de 24 heures au délai entre builds, puisque l’activation peut intervenir jusqu’à 24 heures après la construction : le prochain lot devient donc éligible huit jours après la date du build précédent. Un même groupe ne peut occuper plus de 25 % du plafond, arrondi à l’entier supérieur : marque et catégorie pour les fiches, catégorie éditoriale et premier métier déclaré pour les guides. Une seule thématique peut donc produire un lot plus petit. L’ancienneté dans la file publiée donne la priorité entre candidats éligibles ; un ajout récent ne passe pas systématiquement devant les pages déjà en attente.
+Au moins sept jours séparent deux lots. Le planificateur ajoute une marge de 24 heures au délai entre builds, puisque l’activation peut intervenir jusqu’à 24 heures après la construction : le prochain lot devient donc éligible huit jours après la date du build précédent. Un même groupe ne peut occuper plus de 25 % du plafond, arrondi à l’entier supérieur : marque et catégorie pour les fiches, catégorie éditoriale et premier métier déclaré pour les guides. Une seule thématique peut donc produire un lot plus petit. Le rapprochement avec le panel éditorial figé de 100 requêtes donne une priorité explicite, puis l’ancienneté départage les candidats. Ce rapprochement est une hypothèse éditoriale ; aucune demande, position ni audience mesurée n’est inventée.
 
 Le build lit `/data/indexation.json` et `/data/release.json` sur le site public. Il part du dernier lot réellement déployé. Plusieurs builds locaux n’épuisent pas des quotas et ne débloquent pas plusieurs lots. Après plusieurs semaines d’arrêt, un seul lot peut s’ouvrir au build suivant : aucun rattrapage cumulatif.
 
@@ -90,3 +90,19 @@ Développer des réponses distinctes aux besoins réels : dimensionnement, diagn
 Des erreurs 5xx/429 persistantes, des canoniques inattendues ou des répétitions systématiques justifient la suspension des nouvelles admissions avec `paused`. Search Console n’est pas reliée automatiquement au planificateur : cette revue reste nécessaire, sans validation individuelle de milliers d’URL.
 
 Conserver les filtres du calculateur dans les fragments et les protections contre les espaces infinis de paramètres. Ne pas soumettre automatiquement chaque URL à l’inspection Google. Utiliser les sitemaps et réserver l’inspection aux diagnostics. L’Indexing API n’est pas un accélérateur pour les fiches et guides ordinaires. [Google : exploration](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl), [Indexing API](https://developers.google.com/search/apis/indexing-api/v3/using-api)
+
+## Valeur propre : règle bloquante du 27 septembre 2026
+
+`pnpm audit:page-value` inventorie les fiches, les usages et les guides, avec question traitée, faits critiques, sources, limites et empreinte de contenu. Le rapport local `.astro/seo/page-value-audit.json` nomme précisément les motifs. Le plan d’indexation expose aussi les correspondances avec `config/seo-query-panel.json`.
+
+Un nouveau titre, une nouvelle référence ou des chiffres différents ne suffisent pas à qualifier un nouveau guide. La comparaison textuelle exclut SVG, bibliographies, identités et variations numériques. Pour les fiches, un regroupement automatique exige en plus une signature technique identique, incluant les spécifications et les faits numériques hors schéma. Une différence de couple, de vitesse, de pression, de FAD ou de variante empêche cette consolidation automatique.
+
+Chaque groupe affiche les références et les documents associés. La canonique principale reste dans le sitemap ; les alias en sortent et conservent des liens vers le dossier principal. Cela n’affirme aucune interchangeabilité des pièces. Les sources critiques absentes, une réponse vide et les doublons éditoriaux non résolus restent bloquants. Cette vérification mécanique est un minimum contrôlable, pas une certification de qualité humaine ni une promesse de clics.
+
+Google vise la production à grande échelle sans apport utile ; aucun rythme numérique de publication ne garantit l’absence de sanction. [Règles officielles sur le contenu produit à grande échelle](https://developers.google.com/search/docs/essentials/spam-policies#scaled-content).
+
+### Contrôle de valeur propre du 27 septembre 2026
+
+L’audit mécanique porte sur 9 049 fiches, usages et guides : 8 607 passent les contrôles de structure et de provenance, 77 URL déjà admises sont regroupées derrière une réponse principale, et 365 réponses similaires restent en attente de relecture, hors nouvelle admission. Un regroupement garde les identités, MPN et sources de chaque référence visibles. Une caractéristique technique différente, notamment dans les spécifications hors schéma normalisé, empêche une fusion automatique.
+
+Ces contrôles ne certifient ni la qualité éditoriale humaine de chaque phrase, ni l’indexation ou le trafic futurs. Ils bloquent les défauts vérifiables et rendent les cas restants examinables. Les 100 requêtes du panel sont des hypothèses éditoriales ; aucune position ou aucun volume de recherche n’est présenté comme observé.

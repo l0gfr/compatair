@@ -1,5 +1,7 @@
 import { createServer } from 'node:http';
-import { realpathSync } from 'node:fs';
+import { realpathSync, existsSync } from 'node:fs';
+import { openCatalogRepository, repositoryCatalog, calculationSnapshotMetadata } from './catalog-repository.mjs';
+import { handleCatalogRequest } from './catalog-http.mjs';
 import { readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -187,10 +189,10 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 		legacy: createMcpCore(catalog, offerSnapshot, { ...coreOptions, profile: 'legacy' }),
 	};
 	const authoritativeCalculationVersion = isValidCalculationVersion(verdictSnapshot.calculationVersion) ? verdictSnapshot.calculationVersion : ENGINE_VERSION;
-	const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
-	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item]));
-	const compressorBySlug = new Map((catalog.compressors ?? []).map((item) => [item.slug, item]));
-	const toolBySlug = new Map((catalog.tools ?? []).map((item) => [item.slug, item]));
+	const compressorMap = catalog.repository?.lookup('compressor') ?? new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
+	const toolMap = catalog.repository?.lookup('tool') ?? new Map((catalog.tools ?? []).map((item) => [item.id, item]));
+	const compressorBySlug = catalog.repository?.slugLookup('compressor') ?? new Map((catalog.compressors ?? []).map((item) => [item.slug, item]));
+	const toolBySlug = catalog.repository?.slugLookup('tool') ?? new Map((catalog.tools ?? []).map((item) => [item.slug, item]));
 	const normalizedProductMap = new Map((catalog.normalized?.products ?? []).map((item) => [item.id, item]));
 	const verdictMap = verdictIndex(verdictSnapshot);
 	const allow = createRateLimiter();
@@ -294,9 +296,12 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			const compressor = compressorMap.get(compressorId);
 			const tool = toolMap.get(toolId);
 			if (!compressor || !tool) return apiJson(404, { error: 'product_not_found' }, corsHeaders);
-			const snapshotPair = verdictMap.get(compressorId, toolId);
+			const snapshotPair = catalog.repository?.evaluate(compressorId, toolId) ?? verdictMap.get(compressorId, toolId);
 			if (tool.demandModel === 'fixed-flow' && !snapshotPair) return apiJson(503, { error: 'verdict_snapshot_unavailable' }, { ...corsHeaders, 'Retry-After': '60' });
-			const evaluation = snapshotPair ?? { verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data' };
+			const evaluation = { ...(snapshotPair ?? { verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data' }) };
+			// Keep the existing REST EngineEvaluation contract; the shared core also
+			// exposes an average for browser scenarios and the MCP contract.
+			delete evaluation.averageDemandLpm;
 			const detailsUrl = `https://compatair.fr/calculateur/?outil=${encodeURIComponent(tool.id)}&compresseur=${encodeURIComponent(compressor.id)}`;
 			const proofUrl = `https://compatair.fr/graphe-preuve/?compresseur=${encodeURIComponent(compressor.id)}&outil=${encodeURIComponent(tool.id)}`;
 			const sources = [...(compressor.evidence ?? []), ...(tool.evidence ?? [])].map((source) => ({ id: source.id, label: source.sourceLabel, url: source.sourceUrl, sourceType: source.sourceType, sourceRole: sourceRole(source), retrievedAt: source.retrievedAt, confidence: source.confidence }));
@@ -337,6 +342,15 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 				const verification = verifyCompatibilityReceipt(await readJsonBody(request));
 				return json(response, verification.valid ? 200 : 422, verification, { ...corsHeaders, 'Cache-Control': 'no-store' });
 			} catch (error) { return json(response, error instanceof Error && error.message === 'BODY_TOO_LARGE' ? 413 : 400, { error: 'invalid_receipt' }, corsHeaders); }
+		}
+
+		if (url.pathname.startsWith('/api/v1/search/')) {
+			const headers = publicApiHeaders();
+			if (request.method === 'OPTIONS') { response.writeHead(204, headers); return response.end(); }
+			if (request.method !== 'GET') return json(response, 405, { error: 'method_not_allowed' }, { ...headers, Allow: 'GET, OPTIONS' });
+			if (!allow(`catalog:${clientAddress(request)}`)) return json(response, 429, { error: 'rate_limited' }, { ...headers, 'Retry-After': '60' });
+			const answer = handleCatalogRequest(catalog.repository, url, (offerSnapshot.offers ?? []).filter(coreOptions.isOfferActive));
+			return json(response, answer.status, answer.body, { ...headers, 'Cache-Control': answer.status === 200 ? 'public, max-age=60' : 'no-store' }, { omitContentTypeOptions: proxyManagesApiHeaders });
 		}
 
 		if (url.pathname === '/api/v1/search') {
@@ -548,8 +562,10 @@ async function start() {
 	const mcpTelemetryPath = resolveMcpTelemetryPath(demandAggregatePath, process.env.COMPAT_AIR_MCP_TELEMETRY || undefined);
 	const mcpTelemetrySecretPath = process.env.COMPAT_AIR_MCP_TELEMETRY_SECRET_FILE || (mcpTelemetryPath ? resolve(dirname(mcpTelemetryPath), '.mcp-telemetry-secret') : undefined);
 	const proxyManagesApiHeaders = process.env.COMPAT_AIR_PROXY_MANAGES_API_HEADERS === '1';
-	const catalog = JSON.parse(await readFile(catalogPath, 'utf8'));
-	const verdictSnapshot = await readVerdictSnapshot(verdictsPath, { compactIds: true });
+	const repositoryPath = resolve(dirname(catalogPath), '../_server/catalog.sqlite');
+	const repository = existsSync(repositoryPath) ? openCatalogRepository(repositoryPath) : undefined;
+	const catalog = repository ? repositoryCatalog(repository) : JSON.parse(await readFile(catalogPath, 'utf8'));
+	const verdictSnapshot = repository ? calculationSnapshotMetadata(repository) : await readVerdictSnapshot(verdictsPath, { compactIds: true });
 	if (verdictSnapshot.catalogVersion !== catalog.catalogVersion || !Array.isArray(verdictSnapshot.pairs) || !isValidCalculationVersion(verdictSnapshot.calculationVersion)) throw new Error('Le snapshot de verdicts ne correspond pas au catalogue.');
 	let offerSnapshot = { offers: [], snapshotVersion: 'empty' };
 	try { offerSnapshot = JSON.parse(await readFile(offersPath, 'utf8')); } catch {}
@@ -558,6 +574,7 @@ async function start() {
 	let changefeedEvents = [];
 	try { const value = JSON.parse(await readFile(changefeedPath, 'utf8')); if (Array.isArray(value?.events)) changefeedEvents = value.events.slice(0, 10_000); } catch {}
 	const server = createCompatAirServer({ catalog, verdictSnapshot, offerSnapshot, knowledgeItems, changefeedEvents, allowedOrigins, demandAggregatePath, productFunnelAggregatePath, acquisitionAggregatePath, mcpTelemetryPath, mcpTelemetrySecretPath, proxyManagesApiHeaders });
+	server.once('close', () => repository?.close());
 	server.on('error', (error) => { console.error(error); process.exitCode = 1; });
 	server.listen(port, host, () => console.error(`CompatAir MCP listening on http://${host}:${port}`));
 }

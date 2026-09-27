@@ -88,7 +88,8 @@ function primaryReserve(input: InstallationPlanInput) {
 	if (!configuration.selectedCompressor) return 'Aucun compresseur n’est encore retenu : le plan décrit le besoin, mais pas une machine à installer.';
 	if (result.verdict === 'incompatible' && result.limitingFactor === 'pressure') return `La pression disponible ne couvre pas les ${format(result.requiredPressureBar)} bar requis par la configuration.`;
 	if (result.verdict === 'incompatible') return `Le débit disponible ne couvre pas les ${format(result.recommendedFadLpm)} L/min recommandés avec marge.`;
-	if (result.verdict === 'insufficient_data' || availableFadLpm === undefined) return `Le débit restitué de la machine n’est pas documenté à ${format(result.requiredPressureBar)} bar : la compatibilité ne peut pas être confirmée.`;
+	if (result.verdict === 'insufficient_data' && availableFadLpm !== undefined) return result.warnings.find(warning => warning.includes('cycle de service')) ?? result.warnings.at(-1) ?? 'Les données disponibles ne permettent pas de conclure.';
+	if (availableFadLpm === undefined) return `Le débit restitué de la machine n’est pas documenté à ${format(result.requiredPressureBar)} bar : la compatibilité ne peut pas être confirmée.`;
 	if (compatAirMarginCovered === false) return `La machine couvre le besoin publié, mais pas la marge indicative de ${Math.round(configuration.safetyMargin * 100)} %.`;
 	if (configuration.measuredPressureDropBar === undefined) return 'La compatibilité est documentaire : la chute de pression réelle entre la machine et l’outil reste à mesurer en charge.';
 	if (configuration.measuredLeakLpm === undefined) return 'La chute de pression est renseignée, mais le débit de fuite du réseau reste à mesurer.';

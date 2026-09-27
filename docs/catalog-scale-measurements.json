@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "measuredAt": "2026-09-27T09:53:17.517Z",
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "node": "v24.19.0"
+  },
+  "fixture": "Synthetic variants of two public records. Measures indexed storage/search/decision service only; not editorial quality, a 100k-page HTML build or production traffic.",
+  "measurements": [
+    {
+      "databaseBuildMs": 631.63,
+      "databaseBytes": 53088256,
+      "references": 10000,
+      "startupMs": 6.48,
+      "searchP95Ms": 0.77,
+      "decisionP95Ms": 0.202,
+      "peakMiB": 92.75,
+      "cache": {
+        "entries": 100,
+        "bytes": 67300,
+        "maximumBytes": 2097152
+      },
+      "httpVerified": true
+    },
+    {
+      "databaseBuildMs": 1280.39,
+      "databaseBytes": 133165056,
+      "references": 25000,
+      "startupMs": 4.92,
+      "searchP95Ms": 0.672,
+      "decisionP95Ms": 0.098,
+      "peakMiB": 83.59,
+      "cache": {
+        "entries": 100,
+        "bytes": 67300,
+        "maximumBytes": 2097152
+      },
+      "httpVerified": true
+    },
+    {
+      "databaseBuildMs": 2370.77,
+      "databaseBytes": 265826304,
+      "references": 50000,
+      "startupMs": 4.23,
+      "searchP95Ms": 0.905,
+      "decisionP95Ms": 0.088,
+      "peakMiB": 83.81,
+      "cache": {
+        "entries": 100,
+        "bytes": 67300,
+        "maximumBytes": 2097152
+      },
+      "httpVerified": true
+    },
+    {
+      "databaseBuildMs": 4612.82,
+      "databaseBytes": 530661376,
+      "references": 100000,
+      "startupMs": 4.33,
+      "searchP95Ms": 1.611,
+      "decisionP95Ms": 0.084,
+      "peakMiB": 84.3,
+      "cache": {
+        "entries": 100,
+        "bytes": 67300,
+        "maximumBytes": 2097152
+      },
+      "httpVerified": true
+    }
+  ]
+}

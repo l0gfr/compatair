@@ -1,0 +1,818 @@
+{
+  "schemaVersion": 1,
+  "panelId": "compatair-metier-2026-09-27",
+  "frozenAt": "2026-09-27",
+  "origin": {
+    "document": "rapport_compatair_seo_metier_6_mois.html",
+    "sha256": "b1e135feed4925a1fc048cbf5cad232d3b0f44e721cc38e3d64dad63b0691d75"
+  },
+  "country": "FRA",
+  "devices": [
+    "desktop",
+    "mobile"
+  ],
+  "measurementStatus": "unavailable",
+  "measurementLimit": "No dated Search Console or SERP observations supplied. Candidate priorities are editorial hypotheses, not measured search volume or positions.",
+  "queries": [
+    {
+      "id": "q001",
+      "query": "Mecafer Fifty débit restitué",
+      "group": "Références compresseurs",
+      "editorialPriority": "P1",
+      "intent": "Fiche exacte enrichie",
+      "observations": []
+    },
+    {
+      "id": "q002",
+      "query": "Mecafer Fifty pression 7 bar",
+      "group": "Références compresseurs",
+      "editorialPriority": "P1",
+      "intent": "Fiche exacte enrichie",
+      "observations": []
+    },
+    {
+      "id": "q003",
+      "query": "Einhell TC-AC 240/50/10 OF débit",
+      "group": "Références compresseurs",
+      "editorialPriority": "P1",
+      "intent": "Fiche exacte enrichie",
+      "observations": []
+    },
+    {
+      "id": "q004",
+      "query": "Einhell TE-AC 430/90/10 débit restitué",
+      "group": "Références compresseurs",
+      "editorialPriority": "P1",
+      "intent": "Fiche exacte enrichie",
+      "observations": []
+    },
+    {
+      "id": "q005",
+      "query": "Metabo Basic 250-24 W débit effectif",
+      "group": "Références compresseurs",
+      "editorialPriority": "P1",
+      "intent": "Fiche exacte enrichie",
+      "observations": []
+    },
+    {
+      "id": "q006",
+      "query": "Parkside PSKO 248 B1 consommation outils",
+      "group": "Références compresseurs",
+      "editorialPriority": "P1",
+      "intent": "Fiche exacte enrichie",
+      "observations": []
+    },
+    {
+      "id": "q007",
+      "query": "Scheppach HC51V débit restitué",
+      "group": "Références compresseurs",
+      "editorialPriority": "P1",
+      "intent": "Fiche exacte enrichie",
+      "observations": []
+    },
+    {
+      "id": "q008",
+      "query": "Stanley DN200/10/5 débit",
+      "group": "Références compresseurs",
+      "editorialPriority": "P1",
+      "intent": "Fiche exacte enrichie",
+      "observations": []
+    },
+    {
+      "id": "q009",
+      "query": "Michelin MCX300-858 débit à 7 bar",
+      "group": "Références compresseurs",
+      "editorialPriority": "P1",
+      "intent": "Fiche exacte enrichie",
+      "observations": []
+    },
+    {
+      "id": "q010",
+      "query": "ABAC Pole Position OS20P caractéristiques",
+      "group": "Références compresseurs",
+      "editorialPriority": "P1",
+      "intent": "Fiche exacte enrichie",
+      "observations": []
+    },
+    {
+      "id": "q011",
+      "query": "Einhell TC-PE 150 consommation air",
+      "group": "Références outils",
+      "editorialPriority": "P1",
+      "intent": "Fiche outil et besoin calculé",
+      "observations": []
+    },
+    {
+      "id": "q012",
+      "query": "Metabo DSX 150 débit compresseur",
+      "group": "Références outils",
+      "editorialPriority": "P1",
+      "intent": "Fiche outil et besoin calculé",
+      "observations": []
+    },
+    {
+      "id": "q013",
+      "query": "Metabo FSP 600 HVLP consommation air",
+      "group": "Références outils",
+      "editorialPriority": "P1",
+      "intent": "Fiche outil et besoin calculé",
+      "observations": []
+    },
+    {
+      "id": "q014",
+      "query": "Metabo SSP 1000 compresseur",
+      "group": "Références outils",
+      "editorialPriority": "P1",
+      "intent": "Fiche outil et besoin calculé",
+      "observations": []
+    },
+    {
+      "id": "q015",
+      "query": "Einhell TC-PN 50 litres par tir",
+      "group": "Références outils",
+      "editorialPriority": "P1",
+      "intent": "Fiche outil et besoin calculé",
+      "observations": []
+    },
+    {
+      "id": "q016",
+      "query": "Metabo DKNG 40/50 consommation air",
+      "group": "Références outils",
+      "editorialPriority": "P1",
+      "intent": "Fiche outil et besoin calculé",
+      "observations": []
+    },
+    {
+      "id": "q017",
+      "query": "Chicago Pneumatic CP7748 débit air",
+      "group": "Références outils",
+      "editorialPriority": "P1",
+      "intent": "Fiche outil et besoin calculé",
+      "observations": []
+    },
+    {
+      "id": "q018",
+      "query": "SATA jet X HVLP consommation air",
+      "group": "Références outils",
+      "editorialPriority": "P1",
+      "intent": "Fiche outil et besoin calculé",
+      "observations": []
+    },
+    {
+      "id": "q019",
+      "query": "HAZET 9037SPC litres par rivet",
+      "group": "Références outils",
+      "editorialPriority": "P1",
+      "intent": "Fiche outil et besoin calculé",
+      "observations": []
+    },
+    {
+      "id": "q020",
+      "query": "Parkside PDSP 1000 E6 débit compresseur",
+      "group": "Références outils",
+      "editorialPriority": "P1",
+      "intent": "Fiche outil et besoin calculé",
+      "observations": []
+    },
+    {
+      "id": "q021",
+      "query": "quel compresseur pour Tornador",
+      "group": "Nettoyage et atelier automobile",
+      "editorialPriority": "P1",
+      "intent": "Dossier d’usage avec modèles distingués",
+      "observations": []
+    },
+    {
+      "id": "q022",
+      "query": "compresseur 50 litres pour Tornador",
+      "group": "Nettoyage et atelier automobile",
+      "editorialPriority": "P1",
+      "intent": "Dossier d’usage avec modèles distingués",
+      "observations": []
+    },
+    {
+      "id": "q023",
+      "query": "Tornador débit restitué nécessaire",
+      "group": "Nettoyage et atelier automobile",
+      "editorialPriority": "P1",
+      "intent": "Dossier d’usage avec modèles distingués",
+      "observations": []
+    },
+    {
+      "id": "q024",
+      "query": "compresseur pour pistolet de nettoyage pneumatique",
+      "group": "Nettoyage et atelier automobile",
+      "editorialPriority": "P1",
+      "intent": "Dossier d’usage avec modèles distingués",
+      "observations": []
+    },
+    {
+      "id": "q025",
+      "query": "compresseur pour clé à chocs 1/2",
+      "group": "Nettoyage et atelier automobile",
+      "editorialPriority": "P1",
+      "intent": "Dossier d’usage avec modèles distingués",
+      "observations": []
+    },
+    {
+      "id": "q026",
+      "query": "clé à chocs manque de puissance compresseur",
+      "group": "Nettoyage et atelier automobile",
+      "editorialPriority": "P1",
+      "intent": "Dossier d’usage avec modèles distingués",
+      "observations": []
+    },
+    {
+      "id": "q027",
+      "query": "compresseur pour clé à chocs 1 pouce",
+      "group": "Nettoyage et atelier automobile",
+      "editorialPriority": "P1",
+      "intent": "Dossier d’usage avec modèles distingués",
+      "observations": []
+    },
+    {
+      "id": "q028",
+      "query": "deux clés à chocs un compresseur",
+      "group": "Nettoyage et atelier automobile",
+      "editorialPriority": "P1",
+      "intent": "Dossier d’usage avec modèles distingués",
+      "observations": []
+    },
+    {
+      "id": "q029",
+      "query": "compresseur pour soufflette utilisation continue",
+      "group": "Nettoyage et atelier automobile",
+      "editorialPriority": "P1",
+      "intent": "Dossier d’usage avec modèles distingués",
+      "observations": []
+    },
+    {
+      "id": "q030",
+      "query": "compresseur pour atelier automobile 230 V",
+      "group": "Nettoyage et atelier automobile",
+      "editorialPriority": "P1",
+      "intent": "Dossier d’usage avec modèles distingués",
+      "observations": []
+    },
+    {
+      "id": "q031",
+      "query": "quel compresseur pour pistolet HVLP",
+      "group": "Peinture et préparation",
+      "editorialPriority": "P1",
+      "intent": "Guide de scénario et sélection technique",
+      "observations": []
+    },
+    {
+      "id": "q032",
+      "query": "HVLP ou LVLP besoin en air",
+      "group": "Peinture et préparation",
+      "editorialPriority": "P1",
+      "intent": "Guide de scénario et sélection technique",
+      "observations": []
+    },
+    {
+      "id": "q033",
+      "query": "compresseur 50 litres pour peinture",
+      "group": "Peinture et préparation",
+      "editorialPriority": "P1",
+      "intent": "Guide de scénario et sélection technique",
+      "observations": []
+    },
+    {
+      "id": "q034",
+      "query": "compresseur pour peindre une carrosserie",
+      "group": "Peinture et préparation",
+      "editorialPriority": "P1",
+      "intent": "Guide de scénario et sélection technique",
+      "observations": []
+    },
+    {
+      "id": "q035",
+      "query": "ponceuse pneumatique débit compresseur",
+      "group": "Peinture et préparation",
+      "editorialPriority": "P1",
+      "intent": "Guide de scénario et sélection technique",
+      "observations": []
+    },
+    {
+      "id": "q036",
+      "query": "ponceuse pneumatique fonctionne par à-coups",
+      "group": "Peinture et préparation",
+      "editorialPriority": "P1",
+      "intent": "Guide de scénario et sélection technique",
+      "observations": []
+    },
+    {
+      "id": "q037",
+      "query": "compresseur pour sableuse",
+      "group": "Peinture et préparation",
+      "editorialPriority": "P1",
+      "intent": "Guide de scénario et sélection technique",
+      "observations": []
+    },
+    {
+      "id": "q038",
+      "query": "compresseur pour cabine de sablage",
+      "group": "Peinture et préparation",
+      "editorialPriority": "P1",
+      "intent": "Guide de scénario et sélection technique",
+      "observations": []
+    },
+    {
+      "id": "q039",
+      "query": "sablage débit buse pression",
+      "group": "Peinture et préparation",
+      "editorialPriority": "P1",
+      "intent": "Guide de scénario et sélection technique",
+      "observations": []
+    },
+    {
+      "id": "q040",
+      "query": "eau dans air comprimé peinture",
+      "group": "Peinture et préparation",
+      "editorialPriority": "P1",
+      "intent": "Guide de scénario et sélection technique",
+      "observations": []
+    },
+    {
+      "id": "q041",
+      "query": "compresseur pour cloueur pneumatique",
+      "group": "Clouage et gonflage",
+      "editorialPriority": "P1",
+      "intent": "Calcul paramétrique et exemple borné",
+      "observations": []
+    },
+    {
+      "id": "q042",
+      "query": "cloueur litres par tir calcul débit",
+      "group": "Clouage et gonflage",
+      "editorialPriority": "P1",
+      "intent": "Calcul paramétrique et exemple borné",
+      "observations": []
+    },
+    {
+      "id": "q043",
+      "query": "cadence clouage compresseur",
+      "group": "Clouage et gonflage",
+      "editorialPriority": "P1",
+      "intent": "Calcul paramétrique et exemple borné",
+      "observations": []
+    },
+    {
+      "id": "q044",
+      "query": "cloueur pneumatique 24 litres suffisant",
+      "group": "Clouage et gonflage",
+      "editorialPriority": "P1",
+      "intent": "Calcul paramétrique et exemple borné",
+      "observations": []
+    },
+    {
+      "id": "q045",
+      "query": "agrafeuse pneumatique débit nécessaire",
+      "group": "Clouage et gonflage",
+      "editorialPriority": "P1",
+      "intent": "Calcul paramétrique et exemple borné",
+      "observations": []
+    },
+    {
+      "id": "q046",
+      "query": "riveteuse pneumatique consommation par rivet",
+      "group": "Clouage et gonflage",
+      "editorialPriority": "P1",
+      "intent": "Calcul paramétrique et exemple borné",
+      "observations": []
+    },
+    {
+      "id": "q047",
+      "query": "compresseur pour gonfler pneus utilitaire",
+      "group": "Clouage et gonflage",
+      "editorialPriority": "P1",
+      "intent": "Calcul paramétrique et exemple borné",
+      "observations": []
+    },
+    {
+      "id": "q048",
+      "query": "temps gonflage pneu compresseur",
+      "group": "Clouage et gonflage",
+      "editorialPriority": "P1",
+      "intent": "Calcul paramétrique et exemple borné",
+      "observations": []
+    },
+    {
+      "id": "q049",
+      "query": "gonflage volume air libre calcul",
+      "group": "Clouage et gonflage",
+      "editorialPriority": "P1",
+      "intent": "Calcul paramétrique et exemple borné",
+      "observations": []
+    },
+    {
+      "id": "q050",
+      "query": "compresseur sans cuve pour cloueur",
+      "group": "Clouage et gonflage",
+      "editorialPriority": "P1",
+      "intent": "Calcul paramétrique et exemple borné",
+      "observations": []
+    },
+    {
+      "id": "q051",
+      "query": "raccord compresseur euro 7,2 compatibilité",
+      "group": "Raccords et réseau",
+      "editorialPriority": "P1",
+      "intent": "Dossier technique et identité des composants",
+      "observations": []
+    },
+    {
+      "id": "q052",
+      "query": "raccord pneumatique 1/4 BSP NPT différence",
+      "group": "Raccords et réseau",
+      "editorialPriority": "P1",
+      "intent": "Dossier technique et identité des composants",
+      "observations": []
+    },
+    {
+      "id": "q053",
+      "query": "raccord ISO 6150 B compresseur",
+      "group": "Raccords et réseau",
+      "editorialPriority": "P1",
+      "intent": "Dossier technique et identité des composants",
+      "observations": []
+    },
+    {
+      "id": "q054",
+      "query": "diamètre intérieur tuyau compresseur",
+      "group": "Raccords et réseau",
+      "editorialPriority": "P1",
+      "intent": "Dossier technique et identité des composants",
+      "observations": []
+    },
+    {
+      "id": "q055",
+      "query": "tuyau 6 mm ou 10 mm outil pneumatique",
+      "group": "Raccords et réseau",
+      "editorialPriority": "P1",
+      "intent": "Dossier technique et identité des composants",
+      "observations": []
+    },
+    {
+      "id": "q056",
+      "query": "perte pression flexible air comprimé",
+      "group": "Raccords et réseau",
+      "editorialPriority": "P1",
+      "intent": "Dossier technique et identité des composants",
+      "observations": []
+    },
+    {
+      "id": "q057",
+      "query": "rallonge tuyau compresseur 25 mètres",
+      "group": "Raccords et réseau",
+      "editorialPriority": "P1",
+      "intent": "Dossier technique et identité des composants",
+      "observations": []
+    },
+    {
+      "id": "q058",
+      "query": "raccord rapide réduit débit air",
+      "group": "Raccords et réseau",
+      "editorialPriority": "P1",
+      "intent": "Dossier technique et identité des composants",
+      "observations": []
+    },
+    {
+      "id": "q059",
+      "query": "filtre régulateur lubrificateur fonctionnement",
+      "group": "Raccords et réseau",
+      "editorialPriority": "P1",
+      "intent": "Dossier technique et identité des composants",
+      "observations": []
+    },
+    {
+      "id": "q060",
+      "query": "outil pneumatique lubrification filtre peinture",
+      "group": "Raccords et réseau",
+      "editorialPriority": "P1",
+      "intent": "Dossier technique et identité des composants",
+      "observations": []
+    },
+    {
+      "id": "q061",
+      "query": "compresseur silencieux décibels comparables",
+      "group": "Bruit, endurance et énergie",
+      "editorialPriority": "P2",
+      "intent": "Hub de comparaison à conditions explicites",
+      "observations": []
+    },
+    {
+      "id": "q062",
+      "query": "LpA LwA compresseur différence",
+      "group": "Bruit, endurance et énergie",
+      "editorialPriority": "P2",
+      "intent": "Hub de comparaison à conditions explicites",
+      "observations": []
+    },
+    {
+      "id": "q063",
+      "query": "bruit compresseur distance mesure",
+      "group": "Bruit, endurance et énergie",
+      "editorialPriority": "P2",
+      "intent": "Hub de comparaison à conditions explicites",
+      "observations": []
+    },
+    {
+      "id": "q064",
+      "query": "compresseur cycle de service S3",
+      "group": "Bruit, endurance et énergie",
+      "editorialPriority": "P2",
+      "intent": "Hub de comparaison à conditions explicites",
+      "observations": []
+    },
+    {
+      "id": "q065",
+      "query": "compresseur S1 S3 utilisation continue",
+      "group": "Bruit, endurance et énergie",
+      "editorialPriority": "P2",
+      "intent": "Hub de comparaison à conditions explicites",
+      "observations": []
+    },
+    {
+      "id": "q066",
+      "query": "compresseur surchauffe cycle fonctionnement",
+      "group": "Bruit, endurance et énergie",
+      "editorialPriority": "P2",
+      "intent": "Hub de comparaison à conditions explicites",
+      "observations": []
+    },
+    {
+      "id": "q067",
+      "query": "compresseur sans huile usage continu",
+      "group": "Bruit, endurance et énergie",
+      "editorialPriority": "P2",
+      "intent": "Hub de comparaison à conditions explicites",
+      "observations": []
+    },
+    {
+      "id": "q068",
+      "query": "compresseur 230 V débit restitué",
+      "group": "Bruit, endurance et énergie",
+      "editorialPriority": "P2",
+      "intent": "Hub de comparaison à conditions explicites",
+      "observations": []
+    },
+    {
+      "id": "q069",
+      "query": "compresseur monophasé triphasé différence",
+      "group": "Bruit, endurance et énergie",
+      "editorialPriority": "P2",
+      "intent": "Hub de comparaison à conditions explicites",
+      "observations": []
+    },
+    {
+      "id": "q070",
+      "query": "consommation électrique compresseur calcul",
+      "group": "Bruit, endurance et énergie",
+      "editorialPriority": "P2",
+      "intent": "Hub de comparaison à conditions explicites",
+      "observations": []
+    },
+    {
+      "id": "q071",
+      "query": "compresseur ne monte plus en pression",
+      "group": "Diagnostic documentaire",
+      "editorialPriority": "P2",
+      "intent": "Arbre de diagnostic avec inconnues",
+      "observations": []
+    },
+    {
+      "id": "q072",
+      "query": "compresseur tourne sans arrêt",
+      "group": "Diagnostic documentaire",
+      "editorialPriority": "P2",
+      "intent": "Arbre de diagnostic avec inconnues",
+      "observations": []
+    },
+    {
+      "id": "q073",
+      "query": "compresseur perd pression à l’arrêt",
+      "group": "Diagnostic documentaire",
+      "editorialPriority": "P2",
+      "intent": "Arbre de diagnostic avec inconnues",
+      "observations": []
+    },
+    {
+      "id": "q074",
+      "query": "pression chute quand outil fonctionne",
+      "group": "Diagnostic documentaire",
+      "editorialPriority": "P2",
+      "intent": "Arbre de diagnostic avec inconnues",
+      "observations": []
+    },
+    {
+      "id": "q075",
+      "query": "compresseur remplit lentement",
+      "group": "Diagnostic documentaire",
+      "editorialPriority": "P2",
+      "intent": "Arbre de diagnostic avec inconnues",
+      "observations": []
+    },
+    {
+      "id": "q076",
+      "query": "compresseur redémarre trop souvent",
+      "group": "Diagnostic documentaire",
+      "editorialPriority": "P2",
+      "intent": "Arbre de diagnostic avec inconnues",
+      "observations": []
+    },
+    {
+      "id": "q077",
+      "query": "air comprimé humide outil pneumatique",
+      "group": "Diagnostic documentaire",
+      "editorialPriority": "P2",
+      "intent": "Arbre de diagnostic avec inconnues",
+      "observations": []
+    },
+    {
+      "id": "q078",
+      "query": "pistolet peinture crache eau compresseur",
+      "group": "Diagnostic documentaire",
+      "editorialPriority": "P2",
+      "intent": "Arbre de diagnostic avec inconnues",
+      "observations": []
+    },
+    {
+      "id": "q079",
+      "query": "compresseur chauffe débit insuffisant",
+      "group": "Diagnostic documentaire",
+      "editorialPriority": "P2",
+      "intent": "Arbre de diagnostic avec inconnues",
+      "observations": []
+    },
+    {
+      "id": "q080",
+      "query": "fuite réseau air comprimé débit calcul",
+      "group": "Diagnostic documentaire",
+      "editorialPriority": "P2",
+      "intent": "Arbre de diagnostic avec inconnues",
+      "observations": []
+    },
+    {
+      "id": "q081",
+      "query": "compresseur 24 litres outils compatibles",
+      "group": "Catégories structurantes",
+      "editorialPriority": "P2",
+      "intent": "Hub autonome et liens vers les fiches",
+      "observations": []
+    },
+    {
+      "id": "q082",
+      "query": "compresseur 50 litres outils pneumatiques",
+      "group": "Catégories structurantes",
+      "editorialPriority": "P2",
+      "intent": "Hub autonome et liens vers les fiches",
+      "observations": []
+    },
+    {
+      "id": "q083",
+      "query": "compresseur 100 litres débit restitué",
+      "group": "Catégories structurantes",
+      "editorialPriority": "P2",
+      "intent": "Hub autonome et liens vers les fiches",
+      "observations": []
+    },
+    {
+      "id": "q084",
+      "query": "compresseur 200 litres 230 V",
+      "group": "Catégories structurantes",
+      "editorialPriority": "P2",
+      "intent": "Hub autonome et liens vers les fiches",
+      "observations": []
+    },
+    {
+      "id": "q085",
+      "query": "compresseur mobile pour chantier",
+      "group": "Catégories structurantes",
+      "editorialPriority": "P2",
+      "intent": "Hub autonome et liens vers les fiches",
+      "observations": []
+    },
+    {
+      "id": "q086",
+      "query": "compresseur atelier fonctionnement continu",
+      "group": "Catégories structurantes",
+      "editorialPriority": "P2",
+      "intent": "Hub autonome et liens vers les fiches",
+      "observations": []
+    },
+    {
+      "id": "q087",
+      "query": "compresseur sans huile débit FAD",
+      "group": "Catégories structurantes",
+      "editorialPriority": "P2",
+      "intent": "Hub autonome et liens vers les fiches",
+      "observations": []
+    },
+    {
+      "id": "q088",
+      "query": "compresseur à courroie ou direct",
+      "group": "Catégories structurantes",
+      "editorialPriority": "P2",
+      "intent": "Hub autonome et liens vers les fiches",
+      "observations": []
+    },
+    {
+      "id": "q089",
+      "query": "compresseur bicylindre débit utile",
+      "group": "Catégories structurantes",
+      "editorialPriority": "P2",
+      "intent": "Hub autonome et liens vers les fiches",
+      "observations": []
+    },
+    {
+      "id": "q090",
+      "query": "comparatif compresseurs à débit documenté",
+      "group": "Catégories structurantes",
+      "editorialPriority": "P2",
+      "intent": "Hub autonome et liens vers les fiches",
+      "observations": []
+    },
+    {
+      "id": "q091",
+      "query": "débit aspiré et débit restitué différence",
+      "group": "Notions et calculs",
+      "editorialPriority": "P1",
+      "intent": "Page de méthode avec calculateur relié",
+      "observations": []
+    },
+    {
+      "id": "q092",
+      "query": "calcul FAD compresseur",
+      "group": "Notions et calculs",
+      "editorialPriority": "P1",
+      "intent": "Page de méthode avec calculateur relié",
+      "observations": []
+    },
+    {
+      "id": "q093",
+      "query": "convertir CFM en litres minute",
+      "group": "Notions et calculs",
+      "editorialPriority": "P1",
+      "intent": "Page de méthode avec calculateur relié",
+      "observations": []
+    },
+    {
+      "id": "q094",
+      "query": "débit air comprimé m3 h litres minute",
+      "group": "Notions et calculs",
+      "editorialPriority": "P1",
+      "intent": "Page de méthode avec calculateur relié",
+      "observations": []
+    },
+    {
+      "id": "q095",
+      "query": "calcul réserve air cuve compresseur",
+      "group": "Notions et calculs",
+      "editorialPriority": "P1",
+      "intent": "Page de méthode avec calculateur relié",
+      "observations": []
+    },
+    {
+      "id": "q096",
+      "query": "temps remplissage cuve débit compresseur",
+      "group": "Notions et calculs",
+      "editorialPriority": "P1",
+      "intent": "Page de méthode avec calculateur relié",
+      "observations": []
+    },
+    {
+      "id": "q097",
+      "query": "calculer besoin air plusieurs outils",
+      "group": "Notions et calculs",
+      "editorialPriority": "P1",
+      "intent": "Page de méthode avec calculateur relié",
+      "observations": []
+    },
+    {
+      "id": "q098",
+      "query": "pression absolue relative air comprimé",
+      "group": "Notions et calculs",
+      "editorialPriority": "P1",
+      "intent": "Page de méthode avec calculateur relié",
+      "observations": []
+    },
+    {
+      "id": "q099",
+      "query": "marge débit compresseur outil",
+      "group": "Notions et calculs",
+      "editorialPriority": "P1",
+      "intent": "Page de méthode avec calculateur relié",
+      "observations": []
+    },
+    {
+      "id": "q100",
+      "query": "compresseur pression maximale pression de travail",
+      "group": "Notions et calculs",
+      "editorialPriority": "P1",
+      "intent": "Page de méthode avec calculateur relié",
+      "observations": []
+    }
+  ]
+}

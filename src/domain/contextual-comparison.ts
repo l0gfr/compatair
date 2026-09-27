@@ -65,12 +65,13 @@ export function evaluateContextualCompressor(
 ): ContextualComparisonEvaluation {
 	const sizingInput = sizingInputFromConfiguration(configuration);
 	const base = sizeConfiguration(sizingInput);
-	const availableFad = resolveAvailableFad(compressor, base.requiredPressureBar);
+	const availableFad = ['A', 'B'].includes(compressor.confidence) ? resolveAvailableFad(compressor, base.requiredPressureBar) : undefined;
 	const result = sizeConfiguration({
 		...sizingInput,
 		compressor: {
 			maxPressureBar: compressor.maxPressureBar,
 			availableFadLpm: availableFad?.litersPerMinute,
+			availableFadBasis: availableFad?.basis,
 			tankLiters: compressor.tankLiters,
 			dutyCycle: compressor.dutyCycle,
 		},
@@ -86,7 +87,7 @@ export function evaluateContextualCompressor(
 		nominalMarginPercent,
 		reserveGapLpm,
 		reserveCovered: reserveGapLpm === undefined ? undefined : reserveGapLpm >= 0,
-		effectiveAverageCapacityLpm: availableFad ? availableFad.litersPerMinute * (compressor.dutyCycle ?? 1) : undefined,
+		effectiveAverageCapacityLpm: availableFad && compressor.dutyCycle !== undefined ? availableFad.litersPerMinute * compressor.dutyCycle : undefined,
 		primaryReserve: primaryReserve(compressor, result, availableFad, reserveGapLpm),
 	};
 }

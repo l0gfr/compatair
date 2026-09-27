@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ContextHelp from '../components/ContextHelp.astro';
 import DecisionHeroVisual from '../components/DecisionHeroVisual.astro';
 import { compressors } from '../data/catalog';
+import { acousticDisplay } from '../domain/acoustic-display';
 import { compressorDisplayName } from '../domain/product-display';
 ---
 
@@ -87,7 +88,7 @@ import { compressorDisplayName } from '../domain/product-display';
 		fadCurve: item.fadCurve,
 		dutyCycle: item.dutyCycle,
 		oilType: item.oilType,
-		noiseDb: item.noiseDb,
+		acousticLabel: acousticDisplay(item),
 		confidence: item.confidence,
 		status: item.status,
 		sourceVerifiedAt: item.evidence.map((evidence) => evidence.retrievedAt).sort().at(-1),
@@ -112,7 +113,7 @@ import { compressorDisplayName } from '../domain/product-display';
 			fadCurve: Array<{ litersPerMinute: number; pressureBar: number }>;
 			dutyCycle?: number;
 			oilType: 'oil-free' | 'lubricated';
-			noiseDb?: number;
+			acousticLabel: string;
 			confidence: 'A' | 'B' | 'C' | 'D';
 			status: string;
 			sourceVerifiedAt?: string;
@@ -201,7 +202,7 @@ import { compressorDisplayName } from '../domain/product-display';
 				['Débit aspiré', (item) => item.intakeFlowLpm ? `${item.intakeFlowLpm} L/min · non utilisé pour le verdict` : 'Non documenté', 'is-secondary'],
 				['Temps maximal de fonctionnement', (item) => item.dutyCycle ? `${Math.round(item.dutyCycle * 100)} %` : 'Non documenté'],
 				['Lubrification', (item) => item.oilType === 'oil-free' ? 'Sans huile' : 'Lubrifié'],
-				['Bruit publié', (item) => item.noiseDb ? `${item.noiseDb} dB` : 'Non documenté'],
+				['Bruit publié et conditions', (item) => item.acousticLabel],
 				['Qualité des données', (item) => sourceQualityDetail(item.confidence), 'is-quality'],
 			];
 			const table = document.createElement('table'); table.className = 'compare-table';
@@ -339,14 +340,15 @@ import { compressorDisplayName } from '../domain/product-display';
 			if (!encodedContext || !contextSection) return;
 			contextSection.hidden = false;
 			try {
-				const [catalog, comparison, passport, scenarios] = await Promise.all([
-					import('../domain/runtime-catalog').then(({ loadRuntimeCatalog }) => loadRuntimeCatalog()),
+				const [client, comparison, passport, scenarios] = await Promise.all([
+					import('../domain/catalog-client'),
 					import('../domain/contextual-comparison'),
 					import('../domain/passport'),
 					import('../domain/trade-scenario-prefill'),
 				]);
 				const decoded = passport.decodePassportConfiguration(encodedContext);
 				if (!decoded) throw new Error('Le besoin transmis est invalide ou incomplet.');
+				const catalog = await client.loadConfigurationProducts(decoded, selectedIds);
 				const configuration = passport.parsePassportConfiguration(decoded, new Set(catalog.compressors.map((item) => item.id)), new Set(catalog.tools.map((item) => item.id)));
 				const preset = scenarios.getTradeScenarioPreset(initialScenarioId);
 				contextState = { configuration, catalog, comparison, passport, scenarioId: preset?.id, scenarioTitle: preset?.title };
@@ -359,7 +361,7 @@ import { compressorDisplayName } from '../domain/product-display';
 			}
 		}
 
-		form?.addEventListener('submit', (event) => {
+		form?.addEventListener('submit', async (event) => {
 			event.preventDefault(); if (!search || !error) return;
 			const id = resolveExactCatalogSearch(search.value, data.map((item) => ({ id: item.id, value: item.searchValue, identifiers: item.identifiers })));
 			error.hidden = true; search.removeAttribute('aria-invalid'); search.removeAttribute('aria-errormessage');
@@ -367,6 +369,10 @@ import { compressorDisplayName } from '../domain/product-display';
 			if (!id) { reject('Aucun modèle ne correspond exactement à cette saisie. Choisissez une suggestion ou vérifiez la référence.'); return; }
 			if (selectedIds.includes(id)) { reject('Ce modèle est déjà dans la comparaison.'); return; }
 			if (selectedIds.length >= 3) { reject('Retirez un modèle avant d’en ajouter un autre.'); return; }
+			if (contextState) {
+				try { const { loadRuntimeProducts } = await import('../domain/catalog-client'); const current = await loadRuntimeProducts([id], contextState.catalog.catalogVersion); contextState.catalog.compressors = [...new Map([...contextState.catalog.compressors, ...current.compressors].map(item => [item.id, item])).values()]; }
+				catch (failure) { reject(failure instanceof Error ? failure.message : 'Référence indisponible.'); return; }
+			}
 			selectedIds.push(id); search.value = ''; refresh();
 		});
 

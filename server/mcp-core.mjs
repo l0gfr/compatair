@@ -4,13 +4,13 @@ import { UCP_CAPABILITY_NAME, UCP_CAPABILITY_VERSION, UCP_PROTOCOL_VERSION } fro
 import { DECISION_CORE_TOOL_NAMES, EXTENDED_TOOL_NAMES, LEGACY_SUCCESSORS, LEGACY_TOOL_NAMES, outputSchemas, receiptSchema, TOOL_PROFILE_NAMES } from './mcp-output-schemas.mjs';
 import { allToolDefinitions, mcpPrompts, mcpResources } from './mcp-tool-manifest.mjs';
 
-const ENGINE_VERSION = '1.3.0';
+import { calculateSizing, STANDARD_ATMOSPHERE_BAR, CALCULATION_VERSION as ENGINE_VERSION } from './air-sizing.mjs';
+import { evaluateCompatibility, interpolateFad, resolveAvailableFad } from './air-compatibility.mjs';
 const MCP_SERVER_VERSION = '3.0.0';
 const METHOD_VERSION = '2026.07';
 const VERDICT_SCHEMA_VERSION = '2.0.0';
 const PROTOCOL_VERSION = '2025-11-25';
 const SUPPORTED_PROTOCOL_VERSIONS = [PROTOCOL_VERSION, '2025-06-18', '2025-03-26'];
-const STANDARD_ATMOSPHERE_BAR = 1.01325;
 const MAX_SHORT_TEXT = 256;
 const MAX_URL_TEXT = 4_096;
 const PUBLIC_ORIGIN = 'https://compatair.fr';
@@ -81,15 +81,15 @@ function productSummary(type, item) {
 function validDemand(item) {
 	if (!isRecord(item)) return false;
 	if (item.model === 'per-action') return hasOnlyKeys(item, ['model', 'litersPerAction', 'actionsPerMinute', 'pressureBar', 'quantity'])
-		&& isFiniteNumber(item.litersPerAction, 0, undefined, true) && isFiniteNumber(item.actionsPerMinute, 0, undefined, true)
-		&& isFiniteNumber(item.pressureBar, 0, undefined, true) && isOptionalInteger(item.quantity, 1, 20);
+		&& isFiniteNumber(item.litersPerAction, 0, 1_000, true) && isFiniteNumber(item.actionsPerMinute, 0, 10_000, true)
+		&& isFiniteNumber(item.pressureBar, 0, 50, true) && isOptionalInteger(item.quantity, 1, 20);
 	if (item.model === 'inflation') return hasOnlyKeys(item, ['model', 'volumeLiters', 'initialPressureBar', 'targetPressureBar', 'targetMinutes', 'quantity'])
-		&& isFiniteNumber(item.volumeLiters, 0, undefined, true) && isFiniteNumber(item.initialPressureBar, 0)
-		&& isFiniteNumber(item.targetPressureBar, 0, undefined, true) && item.targetPressureBar > item.initialPressureBar
-		&& isFiniteNumber(item.targetMinutes, 0, undefined, true) && isOptionalInteger(item.quantity, 1, 20);
+		&& isFiniteNumber(item.volumeLiters, 0, 100_000, true) && isFiniteNumber(item.initialPressureBar, 0, 50)
+		&& isFiniteNumber(item.targetPressureBar, 0, 50, true) && item.targetPressureBar > item.initialPressureBar
+		&& isFiniteNumber(item.targetMinutes, 0, 1_440, true) && isOptionalInteger(item.quantity, 1, 20);
 	return (item.model === undefined || item.model === 'fixed-flow') && hasOnlyKeys(item, ['model', 'flowLpm', 'pressureBar', 'quantity', 'dutyFactor'])
-		&& isFiniteNumber(item.flowLpm, 0, undefined, true) && isFiniteNumber(item.pressureBar, 0, undefined, true)
-		&& isOptionalInteger(item.quantity, 1, 20) && (item.dutyFactor === undefined || isFiniteNumber(item.dutyFactor, 0, 1, true));
+		&& isFiniteNumber(item.flowLpm, 0, 10_000, true) && isFiniteNumber(item.pressureBar, 0, 50, true)
+		&& isOptionalInteger(item.quantity, 1, 20) && (item.dutyFactor === undefined || isFiniteNumber(item.dutyFactor, .01, 1));
 }
 
 function validToolArguments(name, args) {
@@ -178,52 +178,8 @@ function page(values, cursor, limit = 20) {
 	return { items, ...(next ? { nextCursor: next } : {}) };
 }
 
-function interpolateFad(compressor, pressureBar) {
-	const curve = [...(compressor.fadCurve ?? [])].sort((a, b) => a.pressureBar - b.pressureBar);
-	if (!curve.length) return undefined;
-	if (curve.length === 1) return pressureBar === curve[0].pressureBar ? curve[0].litersPerMinute : undefined;
-	if (pressureBar < curve[0].pressureBar || pressureBar > curve.at(-1).pressureBar) return undefined;
-	const exact = curve.find((point) => point.pressureBar === pressureBar); if (exact) return exact.litersPerMinute;
-	const upperIndex = curve.findIndex((point) => point.pressureBar > pressureBar); const lower = curve[upperIndex - 1], upper = curve[upperIndex];
-	return lower.litersPerMinute + ((pressureBar - lower.pressureBar) / (upper.pressureBar - lower.pressureBar)) * (upper.litersPerMinute - lower.litersPerMinute);
-}
-
-function resolveAvailableFad(compressor, pressureBar) {
-	const curve = [...(compressor.fadCurve ?? [])].sort((a, b) => a.pressureBar - b.pressureBar);
-	if (!curve.length) return undefined;
-	const exact = curve.find((point) => point.pressureBar === pressureBar);
-	if (exact) return { litersPerMinute: exact.litersPerMinute, basis: 'exact', referencePressureBar: exact.pressureBar };
-	const interpolated = interpolateFad(compressor, pressureBar);
-	if (interpolated !== undefined) return { litersPerMinute: interpolated, basis: 'interpolated' };
-	const lowestHigherPressurePoint = curve.find((point) => point.pressureBar > pressureBar);
-	if (!lowestHigherPressurePoint) return undefined;
-	return { litersPerMinute: lowestHigherPressurePoint.litersPerMinute, basis: 'higher-pressure-bound', referencePressureBar: lowestHigherPressurePoint.pressureBar };
-}
-
 function compatibility(compressor, tool, safetyMargin = .25) {
-	if (tool.demandModel !== 'fixed-flow') return {
-		verdict: 'insufficient_data',
-		limitingFactor: 'data',
-		warnings: [tool.demandModel === 'per-action' ? 'Un rythme d’actions par minute est requis pour convertir le volume par action en débit.' : tool.demandExplanation],
-		calculationVersion: ENGINE_VERSION,
-	};
-	const requiredFadLpm = tool.airflowLpm.typical * (1 + safetyMargin);
-	if (compressor.maxPressureBar < tool.workingPressureBar.typical) return { verdict: 'incompatible', limitingFactor: 'pressure', requiredFadLpm, calculationVersion: ENGINE_VERSION };
-	const fadResolution = resolveAvailableFad(compressor, tool.workingPressureBar.typical);
-	const availableFadLpm = fadResolution?.litersPerMinute;
-	if (availableFadLpm === undefined || ['C', 'D'].includes(compressor.confidence)) return { verdict: 'insufficient_data', limitingFactor: 'data', requiredFadLpm, calculationVersion: ENGINE_VERSION };
-	const effectiveAverageCapacityLpm = availableFadLpm * (compressor.dutyCycle ?? 1);
-	const continuous = availableFadLpm >= tool.airflowLpm.typical && effectiveAverageCapacityLpm >= tool.airflowLpm.typical;
-	return {
-		verdict: continuous ? 'continuous' : 'incompatible', limitingFactor: continuous ? undefined : compressor.dutyCycle && effectiveAverageCapacityLpm < tool.airflowLpm.typical ? 'duty_cycle' : 'flow',
-		requiredFadLpm, availableFadLpm, effectiveAverageCapacityLpm, marginPercent: ((availableFadLpm - tool.airflowLpm.typical) / tool.airflowLpm.typical) * 100,
-		availableFadBasis: fadResolution.basis, availableFadReferencePressureBar: fadResolution.referencePressureBar,
-		warnings: [
-			...(continuous && availableFadLpm < requiredFadLpm ? [`Le débit nominal est couvert, mais la marge recommandée de ${Math.round(safetyMargin * 100)} % n’est pas atteinte.`] : []),
-			...(fadResolution.basis === 'higher-pressure-bound' ? [`Borne conservatrice : ${availableFadLpm} L/min mesurés à ${fadResolution.referencePressureBar} bar sont retenus pour le besoin à ${tool.workingPressureBar.typical} bar ; aucun point de courbe n’est inventé.`] : []),
-		],
-		calculationVersion: ENGINE_VERSION,
-	};
+	return evaluateCompatibility(compressor, tool, { safetyMargin });
 }
 
 function evaluateSystem(compressor, selectedTools, mode = 'successive') {
@@ -244,16 +200,36 @@ function evaluateSystem(compressor, selectedTools, mode = 'successive') {
 		limitations.push('Le FAD du compresseur à la pression demandée est absent ou insuffisamment fiable.');
 		return { verdict: 'insufficient_data', limitingFactor: 'data', requiredPressureBar, demandFlowLpm, recommendedFadLpm, limitations, mode };
 	}
-	const effectiveAverageCapacityLpm = availableFadLpm * (compressor.dutyCycle ?? 1);
+	const sizing = calculateSizing({
+		demands: selectedTools.map((tool) => ({ id: tool.id, model: 'fixed-flow', flowLpm: tool.airflowLpm.typical, pressureBar: tool.workingPressureBar.typical, quantity: 1, dutyFactor: 1 })),
+		mode, safetyMargin: .25, sessionMinutes: 30,
+		compressor: { maxPressureBar: compressor.maxPressureBar, availableFadLpm, availableFadBasis: fadResolution.basis, dutyCycle: compressor.dutyCycle, tankLiters: compressor.tankLiters },
+	});
 	if (fadResolution.basis === 'higher-pressure-bound') limitations.push(`Borne conservatrice : ${availableFadLpm} L/min mesurés à ${fadResolution.referencePressureBar} bar sont retenus pour le besoin à ${requiredPressureBar} bar ; aucun point de courbe n’est inventé.`);
-	const verdict = availableFadLpm >= demandFlowLpm && effectiveAverageCapacityLpm >= demandFlowLpm ? 'continuous' : 'incompatible';
-	if (verdict === 'continuous' && availableFadLpm < recommendedFadLpm) limitations.push('Le débit demandé est couvert, mais la réserve recommandée de 25 % n’est pas atteinte.');
-	if (verdict === 'incompatible') limitations.push(effectiveAverageCapacityLpm < demandFlowLpm ? 'La capacité moyenne documentée ne couvre pas la demande.' : 'Le débit de pointe documenté ne couvre pas la demande.');
 	return {
-		verdict, limitingFactor: verdict === 'incompatible' ? compressor.dutyCycle && effectiveAverageCapacityLpm < demandFlowLpm ? 'duty_cycle' : 'flow' : undefined,
-		requiredPressureBar, demandFlowLpm, recommendedFadLpm, availableFadLpm, effectiveAverageCapacityLpm,
-		availableFadBasis: fadResolution.basis, availableFadReferencePressureBar: fadResolution.referencePressureBar, limitations, mode,
+		verdict: sizing.verdict, limitingFactor: sizing.limitingFactor,
+		requiredPressureBar, demandFlowLpm, recommendedFadLpm, availableFadLpm,
+		effectiveAverageCapacityLpm: compressor.dutyCycle === undefined ? undefined : availableFadLpm * compressor.dutyCycle,
+		availableFadBasis: fadResolution.basis, availableFadReferencePressureBar: fadResolution.referencePressureBar,
+		limitations: [...limitations, ...sizing.warnings], mode,
 	};
+}
+
+function systemCandidates(catalog, tools, mode, limit, excludedId) {
+	if (tools.some(tool => tool.demandModel !== 'fixed-flow')) return [];
+	const pressure = Math.max(...tools.map(tool => tool.workingPressureBar.typical));
+	const flow = mode === 'simultaneous' ? tools.reduce((sum, tool) => sum + tool.airflowLpm.typical, 0) : Math.max(...tools.map(tool => tool.airflowLpm.typical));
+	const products = catalog.repository ? catalog.repository.candidateCompressors(pressure, flow) : catalog.compressors ?? [];
+	const selected = [];
+	const compare = (a, b) => (a.evaluation.availableFadLpm - a.evaluation.demandFlowLpm) - (b.evaluation.availableFadLpm - b.evaluation.demandFlowLpm) || a.compressor.tankLiters - b.compressor.tankLiters || a.compressor.id.localeCompare(b.compressor.id, 'en');
+	for (const compressor of products) {
+		if (compressor.id === excludedId) continue;
+		const evaluation = evaluateSystem(compressor, tools, mode);
+		if (evaluation.verdict !== 'continuous') continue;
+		selected.push({ compressor, evaluation }); selected.sort(compare);
+		if (selected.length > limit) selected.pop();
+	}
+	return selected;
 }
 
 function airSupplyVerdict(evaluation, extraLimitations = []) {
@@ -385,10 +361,6 @@ function airGraph(compressor, selectedTools, evaluation, configurationId) {
 }
 
 function identifyCandidates(catalog, args) {
-	const products = [
-		...(catalog.compressors ?? []).map((item) => ({ type: 'compressor', item })),
-		...(catalog.tools ?? []).map((item) => ({ type: 'tool', item })),
-	];
 	const rawInputs = [args.ean, args.reference, args.query].filter((value) => typeof value === 'string' && value.trim()).flatMap((value) => {
 		const trimmed = value.trim();
 		const stableId = trimmed.match(/^ca:(?:compressor|tool):(.+)$/i);
@@ -400,6 +372,11 @@ function identifyCandidates(catalog, args) {
 			if (url.protocol === 'https:' || url.protocol === 'http:') rawInputs.push(...url.pathname.split('/').filter(Boolean).slice(-2), ...url.searchParams.values());
 		} catch {}
 	}
+	if (catalog.repository) return catalog.repository.identify(rawInputs);
+	const products = [
+		...(catalog.compressors ?? []).map((item) => ({ type: 'compressor', item })),
+		...(catalog.tools ?? []).map((item) => ({ type: 'tool', item })),
+	];
 	const inputs = unique(rawInputs.map(normalizedText).filter(Boolean));
 	return products.map(({ type, item }) => {
 		const identifiers = [item.id, item.slug, item.ean, item.gtin, item.mpn, ...(item.distributorSkus ?? []).map((identifier) => identifier.sku), ...(item.identifierAliases ?? []).map((alias) => alias.value)].filter(Boolean);
@@ -440,10 +417,10 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 	if (!Object.hasOwn(TOOL_PROFILE_NAMES, profile)) throw new Error('mcp_profile_invalid');
 	const exposedToolNames = new Set(TOOL_PROFILE_NAMES[profile]);
 	const toolDefinitions = allToolDefinitions.filter((tool) => exposedToolNames.has(tool.name));
-	const toolMap = new Map((catalog.tools ?? []).map((item) => [item.id, item]));
-	const compressorMap = new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
+	const toolMap = catalog.repository?.lookup('tool') ?? new Map((catalog.tools ?? []).map((item) => [item.id, item]));
+	const compressorMap = catalog.repository?.lookup('compressor') ?? new Map((catalog.compressors ?? []).map((item) => [item.id, item]));
 	const verdictMap = verdictIndex(verdictSnapshot);
-	function publishedCompatibility(compressor, tool) { return verdictMap.get(compressor.id, tool.id) ?? compatibility(compressor, tool); }
+	function publishedCompatibility(compressor, tool) { return catalog.repository?.evaluate(compressor.id, tool.id) ?? verdictMap.get(compressor.id, tool.id) ?? compatibility(compressor, tool); }
 	function selectedProducts(toolIds) { return toolIds.map((id) => toolMap.get(id)); }
 	function callTool(name, args = {}) {
 		if (!validToolArguments(name, args)) return failure('Arguments invalides.', catalog);
@@ -529,8 +506,9 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 			}
 			case 'search_tools': {
 				const q = String(args.query ?? '').toLowerCase();
-				const values = catalog.tools.filter((item) => (!q || `${item.label} ${item.category} ${item.brand} ${item.model}`.toLowerCase().includes(q)) && (!args.category || item.category === args.category));
-				const found = page(values, args.cursor, args.limit);
+				const indexed = catalog.repository?.search({ query: args.query ?? '', type: 'tool', category: args.category, cursor: args.cursor, limit: args.limit ?? 20 });
+				const values = indexed ? [] : catalog.tools.filter((item) => (!q || `${item.label} ${item.category} ${item.brand} ${item.model}`.toLowerCase().includes(q)) && (!args.category || item.category === args.category));
+				const found = indexed ? { items: indexed.items.map(row => row.item), nextCursor: indexed.nextCursor } : page(values, args.cursor, args.limit);
 				return result({ canonical_url: `${PUBLIC_ORIGIN}/outils-pneumatiques/`, product_urls: found.items.map((item) => productUrl('tool', item)), source_urls: sourceUrls(found.items), tools: found.items.map((item) => ({ ...publicProduct(item), compat_air_id: compatAirId('tool', item.id), canonical_url: productUrl('tool', item) })), ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog);
 			}
 			case 'get_tool_requirements': {
@@ -539,8 +517,9 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 			}
 			case 'search_compressors': {
 				const q = String(args.query ?? '').toLowerCase();
-				const values = catalog.compressors.filter((item) => (!q || `${item.brand} ${item.model} ${item.mpn ?? ''}`.toLowerCase().includes(q)) && (!args.minTankLiters || item.tankLiters >= args.minTankLiters) && (!args.minPressureBar || item.maxPressureBar >= args.minPressureBar) && (!args.oilType || item.oilType === args.oilType));
-				const found = page(values, args.cursor, args.limit);
+				const indexed = catalog.repository?.search({ query: args.query ?? '', type: 'compressor', minTankLiters: args.minTankLiters, minPressureBar: args.minPressureBar, oilType: args.oilType, cursor: args.cursor, limit: args.limit ?? 20 });
+				const values = indexed ? [] : catalog.compressors.filter((item) => (!q || `${item.brand} ${item.model} ${item.mpn ?? ''}`.toLowerCase().includes(q)) && (!args.minTankLiters || item.tankLiters >= args.minTankLiters) && (!args.minPressureBar || item.maxPressureBar >= args.minPressureBar) && (!args.oilType || item.oilType === args.oilType));
+				const found = indexed ? { items: indexed.items.map(row => row.item), nextCursor: indexed.nextCursor } : page(values, args.cursor, args.limit);
 				return result({ canonical_url: `${PUBLIC_ORIGIN}/compresseurs/`, product_urls: found.items.map((item) => productUrl('compressor', item)), source_urls: sourceUrls(found.items), compressors: found.items.map((item) => ({ ...publicProduct(item), compat_air_id: compatAirId('compressor', item.id), canonical_url: productUrl('compressor', item) })), ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog);
 			}
 			case 'get_compressor_specs': {
@@ -551,34 +530,15 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 				const mode = args.mode === 'simultaneous' ? 'simultaneous' : 'successive';
 				const safetyMargin = Number.isFinite(args.safetyMargin) ? args.safetyMargin : .25;
 				if (!Array.isArray(args.demands) || !args.demands.length) return failure('Au moins une demande est requise.', catalog);
-				const demands = args.demands.map((item) => {
-					const quantity = Number(item.quantity ?? 1);
-					if (!Number.isInteger(quantity) || quantity < 1 || quantity > 20) return undefined;
-					if (item.model === 'per-action') {
-						const average = Number(item.litersPerAction) * Number(item.actionsPerMinute) * quantity;
-						return { peak: average, average, pressure: Number(item.pressureBar), derived: true, hypothesis: `${item.litersPerAction} L/action × ${item.actionsPerMinute} action(s)/min × ${quantity}` };
-					}
-					if (item.model === 'inflation') {
-						const initial = Number(item.initialPressureBar), target = Number(item.targetPressureBar), minutes = Number(item.targetMinutes), volume = Number(item.volumeLiters);
-						if (target <= initial) return undefined;
-						const freeAirLiters = volume * quantity * (target - initial) / STANDARD_ATMOSPHERE_BAR;
-						const average = freeAirLiters / minutes;
-						return { peak: average, average, pressure: target, derived: true, hypothesis: `${freeAirLiters} L d’air libre idéal en ${minutes} min` };
-					}
-					const peak = Number(item.flowLpm) * quantity;
-					return { peak, average: peak * Number(item.dutyFactor ?? 1), pressure: Number(item.pressureBar), derived: false };
-				});
-				if (demands.some((item) => !item || !Number.isFinite(item.peak) || item.peak <= 0 || !Number.isFinite(item.pressure) || item.pressure <= 0)) return failure('Demande invalide.', catalog);
-				const measuredLeakLpm = Number(args.measuredLeakLpm ?? 0);
-				const measuredPressureDropBar = Number(args.measuredPressureDropBar ?? 0);
-				const demandPeakFlowLpm = mode === 'simultaneous' ? demands.reduce((sum, item) => sum + item.peak, 0) : Math.max(...demands.map((item) => item.peak));
-				const peakFlowLpm = demandPeakFlowLpm + measuredLeakLpm;
-				const averageFlowLpm = Math.min(peakFlowLpm, demands.reduce((sum, item) => sum + item.average, 0) + measuredLeakLpm);
-				const toolPressureBar = Math.max(...demands.map((item) => item.pressure));
-				const requiredPressureBar = toolPressureBar + measuredPressureDropBar;
-				if (requiredPressureBar > 50) return failure('La pression outil et la chute mesurée dépassent ensemble la limite de calcul de 50 bar.', catalog);
-				const flowBasis = demands.some((item) => item.derived) ? 'derived-average' : 'documented-continuous';
-				return result({ verdict: 'insufficient_data', canonical_url: `${PUBLIC_ORIGIN}/calculateur/`, limitations: ['Aucun compresseur n’a été fourni ; le résultat décrit uniquement le besoin en air.'], next_actions: ['Comparer le FAD d’un compresseur à la pression requise.'], sizing: { verdict: 'insufficient_data', peakFlowLpm, averageFlowLpm, toolPressureBar, requiredPressureBar, measuredLeakLpm, measuredPressureDropBar, recommendedFadLpm: peakFlowLpm * (1 + safetyMargin), flowBasis, limitingFactor: 'data', hypotheses: [`mode=${mode}`, `safetyMargin=${safetyMargin}`, `measuredLeakLpm=${measuredLeakLpm}`, `measuredPressureDropBar=${measuredPressureDropBar}`, ...demands.flatMap((item) => item.hypothesis ? [item.hypothesis] : [])], calculationVersion: ENGINE_VERSION } }, catalog);
+				try {
+					const sizing = calculateSizing({
+						demands: args.demands.map((item, index) => ({ ...item, id: `demand-${index}`, model: item.model ?? 'fixed-flow', quantity: item.quantity ?? 1, ...(item.model === undefined || item.model === 'fixed-flow' ? { dutyFactor: item.dutyFactor ?? 1 } : {}) })),
+						mode, safetyMargin, sessionMinutes: 30,
+						...(args.measuredLeakLpm !== undefined ? { measuredLeakLpm: args.measuredLeakLpm } : {}),
+						...(args.measuredPressureDropBar !== undefined ? { measuredPressureDropBar: args.measuredPressureDropBar } : {}),
+					});
+					return result({ verdict: 'insufficient_data', canonical_url: `${PUBLIC_ORIGIN}/calculateur/`, limitations: sizing.warnings, next_actions: ['Comparer le FAD et le cycle documentés d’un compresseur à la demande.'], sizing }, catalog);
+				} catch { return failure('Demande hors des limites de calcul.', catalog); }
 			}
 			case 'check_compatibility': {
 				const compressor = compressorMap.get(args.compressorId), tool = toolMap.get(args.toolId);
@@ -616,8 +576,9 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 				return result({ verdict: safeOffers.length ? 'information' : 'insufficient_data', canonical_url: `${PUBLIC_ORIGIN}/offres/`, product_urls: products.map((item) => productUrl(compressorMap.has(item.id) ? 'compressor' : 'tool', item)), source_urls: [], limitations: safeOffers.length ? ['Prix et disponibilité sont datés et séparés du verdict technique.'] : ['Aucune offre fraîche et autorisée n’est disponible pour les produits demandés.'], next_actions: safeOffers.length ? ['Revalider le verdict technique indépendamment du prix.'] : [], offerSnapshotVersion: offerSnapshot.snapshotVersion, offers: safeOffers, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog);
 			}
 			case 'identify_product': {
-				const found = identifyCandidates(catalog, args).slice(0, args.limit ?? 5);
-				const exact = found.filter((item) => item.confidence === 'exact');
+				const allMatches = identifyCandidates(catalog, args);
+				const found = allMatches.slice(0, args.limit ?? 5);
+				const exact = allMatches.filter((item) => item.confidence === 'exact');
 				const definitive = exact.length === 1;
 				const matches = found.map(({ type, item, confidence }) => ({ ...productSummary(type, item), match_confidence: confidence }));
 				return result({ verdict: found.length ? 'information' : 'insufficient_data', canonical_url: definitive ? productUrl(exact[0].type, exact[0].item) : `${PUBLIC_ORIGIN}/scanner/`, product_urls: found.map(({ type, item }) => productUrl(type, item)), source_urls: sourceUrls(found.map(({ item }) => item)), limitations: definitive ? [] : found.length ? ['Plusieurs candidats ou une correspondance textuelle non unique : aucune identité certaine n’est affirmée.'] : ['Aucun identifiant ou libellé du catalogue ne correspond. Aucune page distante n’a été téléchargée.'], next_actions: definitive ? [] : ['Fournir un EAN/GTIN, un MPN, un SKU distributeur sourcé ou une référence constructeur exacte.'], matches }, catalog);
@@ -626,10 +587,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 				const tools = selectedProducts(args.toolIds);
 				if (tools.some((item) => !item)) return failure('Un outil est inconnu.', catalog, { canonical_url: `${PUBLIC_ORIGIN}/scanner/` });
 				const mode = args.mode ?? 'successive';
-				const candidates = (catalog.compressors ?? []).map((compressor) => ({ compressor, evaluation: evaluateSystem(compressor, tools, mode) }))
-					.filter(({ evaluation }) => evaluation.verdict === 'continuous')
-					.sort((left, right) => (left.evaluation.availableFadLpm - left.evaluation.demandFlowLpm) - (right.evaluation.availableFadLpm - right.evaluation.demandFlowLpm) || left.compressor.tankLiters - right.compressor.tankLiters)
-					.slice(0, args.limit ?? 5);
+				const candidates = systemCandidates(catalog, tools, mode, args.limit ?? 5);
 				const requested = args.compressorId ? compressorMap.get(args.compressorId) : undefined;
 				if (args.compressorId && !requested) return failure('Compresseur inconnu.', catalog, { canonical_url: `${PUBLIC_ORIGIN}/scanner/` });
 				const selected = requested ?? candidates[0]?.compressor;
@@ -705,10 +663,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 						alternatives: [],
 					}, catalog);
 				}
-				const alternatives = (catalog.compressors ?? []).filter((item) => item.id !== current.id).map((compressor) => ({ compressor, evaluation: evaluateSystem(compressor, tools, mode) }))
-					.filter(({ evaluation }) => evaluation.verdict === 'continuous')
-					.sort((left, right) => (left.evaluation.availableFadLpm - left.evaluation.demandFlowLpm) - (right.evaluation.availableFadLpm - right.evaluation.demandFlowLpm) || left.compressor.tankLiters - right.compressor.tankLiters)
-					.slice(0, args.limit ?? 5);
+				const alternatives = systemCandidates(catalog, tools, mode, args.limit ?? 5, current.id);
 				const products = [current, ...tools, ...alternatives.map(({ compressor }) => compressor)];
 				const sources = sourceUrls(products);
 				return result({
@@ -796,7 +751,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 				case 'initialize': value = { protocolVersion: SUPPORTED_PROTOCOL_VERSIONS.includes(params.protocolVersion) ? params.protocolVersion : PROTOCOL_VERSION, capabilities: { tools: { listChanged: false }, resources: { subscribe: false, listChanged: false }, prompts: { listChanged: false } }, serverInfo: { name: `compatair-mcp-${profile}`, title: `CompatAir MCP ${profile}`, version: MCP_SERVER_VERSION, description: 'Read-only, deterministic pneumatic compatibility data with canonical CompatAir URLs and evidence.' }, instructions: `Profil ${profile}. Serveur en lecture seule. Conserver verdict_scope, overall_system_verdict, air_supply_verdict, canonical_url, limitations, source_urls, insufficient_data et toutes les versions. Le champ verdict historique est un alias dont la portée est toujours donnée par verdict_scope. Ne jamais laisser une offre commerciale modifier un verdict technique.` }; break;
 				case 'ping': value = {}; break;
 				case 'tools/list': { if (params.cursor !== undefined && !isShortString(params.cursor)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Curseur invalide.' } }; const found = page(toolDefinitions, params.cursor, 20); value = { tools: found.items, ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }; break; }
-				case 'tools/call': { if (!isShortString(params.name)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Nom d’outil invalide.' } }; if (!exposedToolNames.has(params.name)) return { jsonrpc: '2.0', id, error: { code: -32602, message: `Outil absent du profil ${profile}.` } }; const called = callTool(params.name, params.arguments ?? {}); if (called === undefined) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Outil inconnu.' } }; value = called; break; }
+				case 'tools/call': { if (!isShortString(params.name)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Nom d’outil invalide.' } }; if (!exposedToolNames.has(params.name)) return { jsonrpc: '2.0', id, error: { code: -32602, message: `Outil absent du profil ${profile}.` } }; let called; try { called = callTool(params.name, params.arguments ?? {}); } catch (error) { if (['invalid_cursor', 'stale_or_invalid_cursor', 'invalid_search_query'].includes(error?.message)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Curseur ou recherche invalide. Recommencer la recherche sans curseur avec le catalogue courant.' } }; throw error; } if (called === undefined) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Outil inconnu.' } }; value = called; break; }
 				case 'resources/list': value = { resources: mcpResources }; break;
 				case 'resources/read': { if (!isShortString(params.uri)) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'URI invalide.' } }; const content = readResource(params.uri); if (!content) return { jsonrpc: '2.0', id, error: { code: -32602, message: 'Ressource inconnue.' } }; value = { contents: [{ uri: params.uri, mimeType: 'application/json', text: JSON.stringify(content) }] }; break; }
 				case 'prompts/list': value = { prompts: mcpPrompts }; break;

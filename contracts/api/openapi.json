@@ -4,7 +4,7 @@
   "info": {
     "title": "CompatAir public decision API",
     "version": "2026-07-15",
-    "description": "Read-only compatibility, evidence, full-text knowledge and changefeed API. Technical verdicts are independent from offers. Dataset scope: 14,400 explorable combinations, including 13,080 audited fixed-flow verdicts and 1,320 parametric combinations that require action rate or volume and target time."
+    "description": "Read-only compatibility, evidence, full-text knowledge and changefeed API. Technical verdicts are independent from offers. Catalog scope and counts are provided by the current catalog snapshot; parametric tools require action rate or volume and target time."
   },
   "servers": [{ "url": "https://compatair.fr" }],
   "paths": {
@@ -17,7 +17,7 @@
           { "name": "toolId", "in": "query", "required": true, "schema": { "type": "string", "pattern": "^[a-z0-9-]{1,160}$" } },
           { "name": "channel", "in": "query", "required": false, "description": "Closed attribution hint used by the official embedded widget only.", "schema": { "const": "widget" } }
         ],
-        "responses": { "200": { "description": "Deterministic result. Fixed-flow pairs use the 13,080-verdict audited snapshot. For a parametric tool, this ID-only endpoint returns insufficient_data; the calculator, MCP or UCP interface must receive explicit action rate or volume and target time.", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CompatibilityResult" } } } }, "400": { "$ref": "#/components/responses/BadRequest" }, "404": { "$ref": "#/components/responses/NotFound" }, "429": { "$ref": "#/components/responses/RateLimited" }, "503": { "description": "Published verdict snapshot unavailable", "headers": { "Retry-After": { "schema": { "type": "integer", "const": 60 } } }, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } },
+        "responses": { "200": { "description": "Deterministic result. Fixed-flow pairs are calculated on demand by the versioned deterministic engine; an empty cache is not missing technical data. For a parametric tool, this ID-only endpoint returns insufficient_data; the calculator, MCP or UCP interface must receive explicit action rate or volume and target time.", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CompatibilityResult" } } } }, "400": { "$ref": "#/components/responses/BadRequest" }, "404": { "$ref": "#/components/responses/NotFound" }, "429": { "$ref": "#/components/responses/RateLimited" }, "503": { "description": "Active catalog or calculation service unavailable", "headers": { "Retry-After": { "schema": { "type": "integer", "const": 60 } } }, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } },
         "security": []
       }
     },
@@ -78,6 +78,169 @@
     },
     "/api/ucp/v1/compatibility/evaluate": {
       "$ref": "https://compatair.fr/openapi/ucp-2026-07-15.json#/paths/~1compatibility~1evaluate"
+    },
+    "/api/v1/search/catalog": {
+      "get": {
+        "operationId": "searchCatalogProducts",
+        "summary": "Search compact products or the site index",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "maxLength": 256
+            },
+            "required": false
+          },
+          {
+            "name": "kind",
+            "in": "query",
+            "schema": {
+              "enum": [
+                "product",
+                "site"
+              ],
+              "default": "product"
+            },
+            "required": false
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "schema": {
+              "enum": [
+                "compressor",
+                "tool",
+                "compresseur",
+                "outil",
+                "guide",
+                "glossaire"
+              ]
+            },
+            "required": false,
+            "description": "For kind=product: compressor or tool. For kind=site: compresseur, outil, guide or glossaire. Omit to search all types."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 50,
+              "default": 10
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "maxLength": 1024
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Compact matches with bounded pagination. Cursors bind the query and product catalog version, or the site index fingerprint for kind=site. Restart at the first page after either changes."
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "409": {
+            "description": "Requested catalogVersion differs from the active release. Reload rather than silently mixing source versions."
+          }
+        },
+        "security": []
+      }
+    },
+    "/api/v1/search/products": {
+      "get": {
+        "operationId": "readCatalogProducts",
+        "summary": "Read at most 50 exact original source records",
+        "parameters": [
+          {
+            "name": "ids",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-z0-9-]+(,[a-z0-9-]+){0,49}$"
+            },
+            "required": true
+          },
+          {
+            "name": "catalogVersion",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bounded original compressor/tool records with schemaVersion, catalogVersion, catalogVerifiedAt and calculationVersion. Unknown identities are never substituted."
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "409": {
+            "description": "Requested catalogVersion differs from the active release. Reload rather than silently mixing source versions."
+          }
+        },
+        "security": []
+      }
+    },
+    "/api/v1/search/identify": {
+      "get": {
+        "operationId": "identifyCatalogProduct",
+        "summary": "Identify exact references without resolving collisions silently",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Exact matches, version metadata and ambiguous boolean. A collision never becomes a unique identification; the user must select the reference."
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "409": {
+            "description": "Requested catalogVersion differs from the active release. Reload rather than silently mixing source versions."
+          }
+        },
+        "security": []
+      }
     }
   },
   "components": {

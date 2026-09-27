@@ -15,3 +15,7 @@ export function getIndexationPlan() {
 	if (Date.now() - Date.parse(plan.manifest.builtAt) > MAX_INDEXATION_ARTIFACT_AGE_MS) throw new Error('Plan SEO périmé : relancer pnpm build.');
 	return plan;
 }
+
+export function canonicalPathFor(path) { return manifest.canonicalAliases?.[path] ?? path; }
+/** @returns {{primaryPath: string, members: Array<{path: string, label: string, identity?: {mpn?: string}, claims?: Array<{sources: Array<{url: string}>}>}>} | undefined} */
+export function answerGroupFor(path) { return plan?.consolidation?.groups.find(group => group.members.some(member => member.path === path)); }

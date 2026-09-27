@@ -66,11 +66,9 @@ par groupe de fichiers. Aucun horodatage de build ne remplace une date éditoria
 
 ## Mémoire du serveur
 
-Le lecteur MCP reconnaît les deux ordres de matrice, vérifie chaque identité et
-utilise quatre octets par cellule pour l'indice du résultat partagé. Une matrice
-irrégulière conserve le stockage général et sa sémantique de recherche.
-`pnpm benchmark:mcp-startup` impose l'utilisation du mode compact pour l'export
-réel et vérifie intégralement les octets restitués par les recherches indexées.
+Le serveur actif utilise l’index SQLite décrit ci-dessous. Le lecteur compact de
+la matrice historique reste disponible pour les exports et la migration ; il ne
+fait plus partie du démarrage normal du service.
 
 ## Limites restantes
 
@@ -81,6 +79,22 @@ contrat vers des partitions versionnées et un accès ciblé avant de viser des
 dizaines de millions de couples. Augmenter simplement les limites mémoire ne
 résout pas ce problème.
 
-Le rendu HTML demeure complet. Le mode incrémental expérimental d'Astro 7.2
-requiert des clés couvrant aussi le maillage, les sélections, les métadonnées et
-les autres dépendances de chaque page. Il n'est pas activé sans cette couverture.
+Le mode incrémental expérimental d’Astro 7.2 est activé sur les fiches, usages et guides. Les clés couvrent les données, la navigation éditoriale, le groupe canonique, l’indexabilité et le jour UTC (offres datées). Astro ajoute l’empreinte des modules dépendants. Une modification du catalogue importé globalement peut encore invalider toute une famille : le rendu strictement limité à un produit n’est pas revendiqué. Le cache HTML est jetable, borné à 384 Mio, réservé aux builds main, et seule sa dernière copie est conservée dans Actions.
+
+## Service indexé, moteur 1.4.0
+
+Le serveur ouvre la base SQLite de la release et calcule les couples demandés avec le noyau commun. Ni les tableaux de produits ni la matrice publique ne sont chargés au démarrage. Le cache de résultats est borné à 2 Mio, le cache SQLite à 8 Mio, mmap désactivé. `pnpm benchmark:mcp-startup` contrôle l’API HTTP réelle sous un tas de 128 Mio et un RSS maximal de 256 Mio.
+
+`pnpm benchmark:catalog-scale` mesure 10 000, 25 000, 50 000 et 100 000 références **synthétiques** dans des processus isolés. Les résultats sont dans `docs/catalog-scale-measurements.json`. Ce test porte sur l’index et le service ; il ne valide ni 100 000 pages HTML, ni une charge concurrente de production, ni un retour arrière à cette échelle. L’export JSON historique demeure sur le chemin de build. Sa migration contractuelle reste nécessaire pour supprimer ce dernier coût quadratique.
+
+Documentation Astro utilisée : https://v7-2.previews.docs.astro.build/en/reference/experimental-flags/incremental-build/
+
+## Budgets du client mesurés le 27 septembre 2026
+
+Les contrôles de version du moteur et du catalogue, la provenance par champ et le calcul partagé portent le graphe JavaScript du calculateur à environ 60 Kio gzip, et ceux du Passeport, du diagnostic et du suivi à 58–59 Kio. Les plafonds de ces seuls parcours passent respectivement à 61 et 59 Kio ; la maintenance passe de 50 à 51 Kio au chargement initial. Le plafond de 57 Kio des autres parcours est conservé. Ces ajustements accompagnent le retrait du téléchargement obligatoire du catalogue complet et des suggestions globales, pas une hausse générale des budgets. Lighthouse reste bloquant.
+
+Le plafond de l’artefact reste à 2 700 Mio. La formulation répétée de la borne conservatrice est raccourcie en conservant le FAD et les deux pressions ; les valeurs, sources et verdicts sont inchangés. Le format historique demeure coûteux et ne valide pas une capacité de 100 000 pages.
+
+## Vérification locale du cache HTML
+
+Le 27 septembre 2026, sous Node 24.19.0 sur macOS arm64, le build après modification du moteur a pris 1 min 59 s. Le build suivant, sans changement de moteur ni de catalogue, a pris 51,21 s : 9 049 pages restaurées, 4 600 506 résultats fixes réutilisés et aucun résultat recalculé. Le SHA-256 de l’export intégral des verdicts, de la fiche Atlas Copco AB25E100 et du guide complet de dimensionnement est resté identique. Ce sont des mesures locales de deux exécutions, pas une garantie de durée en CI ou à une autre échelle.

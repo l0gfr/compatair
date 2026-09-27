@@ -18,6 +18,12 @@ describe('bounded Actions storage cleanup', () => {
 		input.caches.push({ ...input.caches.at(-1), id: 200, ref: 'refs/pull/42/merge' });
 		expect(planActionsStorage(input).deleteCaches.map(cache => cache.id)).toEqual([1, 2, 3, 101, 102]);
 	});
+	it('retains only the latest disposable main page cache', () => {
+		const input = fixture();
+		input.caches.push(...[0, 1].map(index => ({ id: 300 + index, key: `compatair-pages-v1-Linux-${'a'.repeat(64)}-${String(index).repeat(40)}`, ref: 'refs/heads/main', created_at: `2026-09-${26 - index}T01:00:00Z` })));
+		expect(planActionsStorage(input).deleteCaches.map(cache => cache.id)).toContain(301);
+		expect(planActionsStorage(input).deleteCaches.map(cache => cache.id)).not.toContain(300);
+	});
 	it('preserves production, rollback, signed invariants and source/security evidence', () => {
 		const input = fixture();
 		input.artifacts.push({ id: 99, name: 'sarif-artifact', workflow_run: input.runs[2] });

@@ -85,7 +85,7 @@ const receiptSchema = strict({
 }, ['schema_version', 'receipt_id', 'configuration_id', 'overall_system_verdict', 'air_supply_verdict', 'method_version', 'catalog_version', 'observed_at', 'canonical_url', 'source_urls', 'integrity', 'verification_url']);
 
 const evaluationSchema = strict({
-	verdict: { type: 'string', enum: ENGINE_VERDICTS }, limitingFactor: string, requiredFadLpm: number, availableFadLpm: number,
+	verdict: { type: 'string', enum: ENGINE_VERDICTS }, confidence: { type: 'string', enum: ['high', 'medium', 'low'] }, averageDemandLpm: number, limitingFactor: string, requiredFadLpm: number, availableFadLpm: number,
 	effectiveAverageCapacityLpm: number, requiredPressureBar: number, demandFlowLpm: number, recommendedFadLpm: number,
 	availableFadBasis: { type: 'string', enum: ['exact', 'interpolated', 'higher-pressure-bound'] }, availableFadReferencePressureBar: number,
 	marginPercent: number, calculationVersion: string, warnings: stringArray, limitations: stringArray, mode: { type: 'string', enum: ['simultaneous', 'successive'] },
@@ -170,7 +170,7 @@ const outputSchemas = {
 	get_tool_requirements: output({ tool: toolSchema }),
 	search_compressors: output({ compressors: { type: 'array', items: compressorSchema }, nextCursor: string }),
 	get_compressor_specs: output({ compressor: compressorSchema }),
-	size_compressor: output({ sizing: strict({ verdict: { const: 'insufficient_data' }, peakFlowLpm: number, averageFlowLpm: number, toolPressureBar: number, requiredPressureBar: number, measuredLeakLpm: number, measuredPressureDropBar: number, recommendedFadLpm: number, flowBasis: { type: 'string', enum: ['derived-average', 'documented-continuous'] }, limitingFactor: { const: 'data' }, hypotheses: stringArray, calculationVersion: string }, ['verdict', 'peakFlowLpm', 'averageFlowLpm', 'toolPressureBar', 'requiredPressureBar', 'recommendedFadLpm', 'flowBasis', 'limitingFactor', 'hypotheses', 'calculationVersion']) }),
+	size_compressor: output({ sizing: strict({ verdict: { const: 'insufficient_data' }, confidence: { type: 'string', enum: ['high', 'medium', 'low'] }, warnings: stringArray, peakFlowLpm: number, averageFlowLpm: number, toolPressureBar: number, requiredPressureBar: number, measuredLeakLpm: number, measuredPressureDropBar: number, recommendedFadLpm: number, flowBasis: { type: 'string', enum: ['derived-average', 'documented-continuous'] }, limitingFactor: { const: 'data' }, hypotheses: stringArray, calculationVersion: string }, ['verdict', 'peakFlowLpm', 'averageFlowLpm', 'toolPressureBar', 'requiredPressureBar', 'recommendedFadLpm', 'flowBasis', 'limitingFactor', 'hypotheses', 'calculationVersion']) }),
 	check_compatibility: output(decisionProperties),
 	compare_compressors: output({ compressors: { type: 'array', items: compressorSchema } }),
 	find_accessories: output({ status: { type: 'string', enum: ['documented', 'insufficient_data'] }, accessories: { type: 'array', items: strict({ type: { type: 'string', enum: ['connector', 'hose', 'filtration', 'lubrication'] }, requirement: { oneOf: [string, hoseSchema] } }, ['type', 'requirement']) } }),

@@ -22,7 +22,7 @@ describe('CompatAir passport', () => {
 		const report = await createPassportReport(configuration, compressors, tools, CATALOG_VERIFIED_AT, '2026-07-14T10:00:00.000Z');
 		expect(report.schemaVersion).toBe(PASSPORT_SCHEMA_VERSION);
 		expect(report.passportId).toMatch(/^[a-f0-9]{64}$/);
-		expect(report.result.calculationVersion).toBe('1.3.0');
+		expect(report.result.calculationVersion).toBe('1.4.0');
 		expect(report.sources.length).toBeGreaterThanOrEqual(2);
 		expect(report.warnings.join(' ')).toContain('ne sont pas soustraites');
 		expect(report.installationPlan.items.some((item) => item.id === 'capacity-at-working-pressure')).toBe(true);
@@ -47,7 +47,7 @@ describe('CompatAir passport', () => {
 		expect(capacity?.sourceRefs.length).toBeGreaterThan(0);
 		expect(pressureTest).toMatchObject({ status: 'site-measurement', completed: false });
 		expect(maintenance).toMatchObject({ status: 'undocumented', completed: false });
-		expect(report.installationPlan.primaryReserve).toContain('chute de pression');
+		expect(report.installationPlan.primaryReserve).toContain('cycle de service');
 	});
 
 	it('keeps the original report immutable when the current catalog changes', async () => {

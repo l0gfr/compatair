@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import { pageBuildKey, guideNavigationVersion } from '../../domain/page-build-key';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { compressors, tools } from '../../data/catalog';
 import { activeOffers } from '../../data/offers';
@@ -11,7 +12,8 @@ import { serializeJsonLd } from '../../domain/structured-data';
 
 export async function getStaticPaths() {
 	const guides = await getCollection('guides');
-	return guides.map((guide) => ({ params: { slug: guide.id }, props: { guide } }));
+ const navigationVersion = await guideNavigationVersion();
+	return guides.map((guide) => ({ params: { slug: guide.id }, props: { guide }, cacheKey: pageBuildKey(`/guides/${guide.id}/`, { data: guide.data, body: guide.body }, navigationVersion) }));
 }
 
 const { guide } = Astro.props;

@@ -181,7 +181,7 @@ export function createVerdictSnapshot(input: VerdictSnapshotInput, cacheOptions?
 		return row;
 	});
 	const pairs = matrixPairs(input.compressors.map(item => item.id), fixedTools.map(item => item.id), rows);
-	const data = {
+	const data: Omit<VerdictSnapshot, 'verdictVersion'> = {
 		schemaVersion: '1.1.0',
 		verifiedAt: input.verifiedAt,
 		catalogVersion: input.catalogVersion,

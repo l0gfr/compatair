@@ -16,7 +16,7 @@ import { compressors, tools } from '../data/catalog';
 import { resolveDocumentTitle } from '../domain/metadata';
 import { socialCardKey } from '../domain/social-card';
 import { serializeJsonLd } from '../domain/structured-data';
-import { isIndexablePath } from '../../scripts/lib/indexation-build.mjs';
+import { isIndexablePath, canonicalPathFor } from '../../scripts/lib/indexation-build.mjs';
 
 type Props = {
 	title: string;
@@ -53,7 +53,7 @@ const {
 } = Astro.props;
 const resolvedTitle = resolveDocumentTitle(title, editorialTitle);
 const documentTitle = resolvedTitle.title;
-const canonical = new URL(canonicalPath, Astro.site);
+const canonical = new URL(canonicalPathFor(canonicalPath), Astro.site);
 const alternateLinks = alternates.length
 	? alternates.map((item) => ({ hreflang: item.hreflang, href: new URL(item.path, Astro.site).toString() }))
 	: [

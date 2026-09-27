@@ -175,8 +175,8 @@
 		const legacy = envelope ? undefined : decodePassportConfiguration(encoded);
 		if (!envelope && !legacy) throw new Error('Le lien du Passeport est invalide, incomplet ou utilise un format non reconnu.');
 		if (envelope) return reportFromPassportEnvelope(envelope);
-		const { loadRuntimeCatalog } = await import('../domain/runtime-catalog');
-		const catalog = await loadRuntimeCatalog();
+		const { loadConfigurationProducts } = await import('../domain/catalog-client');
+		const catalog = await loadConfigurationProducts(legacy!);
 		return createPassportReport(legacy!, catalog.compressors, catalog.tools, catalog.catalogVerifiedAt);
 	}
 

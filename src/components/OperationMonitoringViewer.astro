@@ -311,8 +311,8 @@
 		try {
 			if (envelope) report = await reportFromPassportEnvelope(envelope);
 			else {
-				const { loadRuntimeCatalog } = await import('../domain/runtime-catalog');
-				const catalog = await loadRuntimeCatalog();
+				const { loadConfigurationProducts } = await import('../domain/catalog-client');
+				const catalog = await loadConfigurationProducts(legacy!);
 				report = await createPassportReport(legacy!, catalog.compressors, catalog.tools, catalog.catalogVerifiedAt);
 			}
 			passportUrl = `${location.origin}/passeport/#passport=${encoded}`;

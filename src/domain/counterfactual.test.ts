@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { createCounterfactualRecommendation, shouldEvaluateCounterfactual, type CounterfactualMachine } from './counterfactual';
 
 const machine = (id: string, points: Array<[number, number]>, maxPressureBar = 10): CounterfactualMachine => ({
-	id, label: id, maxPressureBar, fadCurve: points.map(([pressureBar, litersPerMinute]) => ({ pressureBar, litersPerMinute })),
+	id, label: id, maxPressureBar, dutyCycle: 1, fadCurve: points.map(([pressureBar, litersPerMinute]) => ({ pressureBar, litersPerMinute })),
 });
 
 describe('counterfactual recommendation', () => {

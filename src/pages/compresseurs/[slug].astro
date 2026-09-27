@@ -1,5 +1,6 @@
 ---
 import ProductGuideLinks from '../../components/ProductGuideLinks.astro';
+import { pageBuildKey, guideNavigationVersion } from '../../domain/page-build-key';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductDecisionHero from '../../components/ProductDecisionHero.astro';
 import ProductEvidenceDossier from '../../components/ProductEvidenceDossier.astro';
@@ -22,8 +23,9 @@ import { sourceQualityLabel } from '../../domain/source-quality';
 import { normalizeMpn, sourceRoleForEvidence } from '../../domain/catalog-normalization';
 import { sourceRoleLabel } from '../../data/source-directory';
 
-export function getStaticPaths() {
-	return compressors.map((compressor) => { assertDecisionPageValue(compressor); return { params: { slug: compressor.slug }, props: { compressor } }; });
+export async function getStaticPaths() {
+ const navigationVersion = await guideNavigationVersion();
+	return compressors.map((compressor) => { assertDecisionPageValue(compressor); return { params: { slug: compressor.slug }, props: { compressor }, cacheKey: pageBuildKey(`/compresseurs/${compressor.slug}/`, compressor, navigationVersion) }; });
 }
 
 const { compressor } = Astro.props;
@@ -98,7 +100,7 @@ const productJsonLd = productOffers.length ? {
 		<section class="product-decision-section" data-product-decision data-static-compatibility-results data-result-count={staticCompatibilityResultCount}>
 			<header class="product-section-head"><div><p class="product-decision-index">01 / Réponse utile</p><h2>Ce compresseur peut-il couvrir vos outils&nbsp;?</h2></div><p>Les résultats ci-dessous utilisent uniquement le débit restitué disponible à la pression demandée. Le débit aspiré n’entre jamais dans le verdict.</p></header>
 			<div class="product-verdict-counts" aria-label="Résumé des compatibilités"><div><strong>{compatibility.counts.compatible}</strong><span>outils compatibles</span></div><div><strong>{compatibility.counts.incompatible}</strong><span>outils incompatibles</span></div><div><strong>{compatibility.counts.insufficient}</strong><span>résultats à documenter</span></div></div>
-			{compatibility.counts.compatible === 0 && <div class="product-resolution-callout"><strong>{compatibility.counts.incompatible > 0 ? 'Aucun outil du catalogue n’est compatible dans les scénarios de référence.' : 'Les données disponibles ne permettent pas de conclure pour les outils du catalogue.'}</strong><p>{compatibility.counts.incompatible > 0 ? `Le moteur conclut à une incompatibilité pour ${compatibility.counts.incompatible} outils. Les ${compatibility.counts.insufficient} autres résultats demandent des données techniques ou des paramètres d’usage complémentaires. Un verdict défavorable ne signifie pas que le débit publié est absent.` : 'La pression documentée, la qualité de la source ou les paramètres d’usage ne permettent pas de rendre un verdict concluant. Le débit aspiré ne remplace pas ces informations.'} Pour un usage par impulsions, indiquez votre cadence réelle dans le calculateur.</p><a class="button primary" href={`/calculateur/#compresseur=${compressor.id}`}>Choisir mon outil et trouver des alternatives</a></div>}
+			{compatibility.counts.compatible === 0 && <div class="product-resolution-callout"><strong>{compatibility.counts.incompatible > 0 ? 'Aucun fonctionnement compatible n’est confirmé dans les scénarios de référence.' : 'Les données disponibles ne permettent pas de conclure pour les outils du catalogue.'}</strong><p>{compatibility.counts.incompatible > 0 ? `Le moteur conclut à une incompatibilité pour ${compatibility.counts.incompatible} outils. Les ${compatibility.counts.insufficient} autres résultats demandent des données techniques ou des paramètres d’usage complémentaires. Un verdict défavorable ne signifie pas que le débit publié est absent.` : 'La pression documentée, la qualité de la source ou les paramètres d’usage ne permettent pas de rendre un verdict concluant. Le débit aspiré ne remplace pas ces informations.'} Pour un usage par impulsions, indiquez votre cadence réelle dans le calculateur.</p><a class="button primary" href={`/calculateur/#compresseur=${compressor.id}`}>Choisir mon outil et trouver des alternatives</a></div>}
 			<h3>{compatibility.compatibleExamples.length ? 'Quelques usages représentatifs compatibles' : 'Préciser l’usage ou chercher un autre compresseur'}</h3>
 			<div class="product-decision-cards">{compatibility.compatibleExamples.slice(0, 3).map(({ tool, result }, index) => <article><span>0{index + 1}</span><div><strong>{tool.label}</strong><small>{toolDemandLabel(tool)} · {toolPressureLabel(tool)}</small><p>{compatibilityFadLabel(result, tool.workingPressureBar.typical!)}</p></div><a href={`/calculateur/#outil=${tool.id}&compresseur=${compressor.id}`}>Vérifier cette configuration</a></article>)}</div>
 			<div class="actions"><a class="button primary" href={`/calculateur/#compresseur=${compressor.id}`}>Trouver trois solutions pour mon contexte</a><a class="button" href="#donnees-techniques">Voir toutes les données techniques</a></div>

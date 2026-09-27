@@ -35,6 +35,13 @@ describe('document quality observatory', () => {
 		expect(measured.metrics.correctionLeadTime).toMatchObject({ status: 'measured', medianDays: 1, measuredCount: 2 });
 	});
 
+	it('blocks a withheld field reintroduced into the catalog and a wrong retained value', () => {
+		const withWeight = compressors.map(item => item.id === 'abac-atf-s-4-100' ? { ...item, weightKg: 76 } : item);
+		expect(() => assertDocumentQualityIntegrity(withWeight, tools, documentQualityLedger, referenceRegistry)).toThrow('Champ contradictoire encore exploitable');
+		const withTank = compressors.map(item => item.id === 'abac-atf-s-4-100' ? { ...item, tankLiters: 100 } : item);
+		expect(() => assertDocumentQualityIntegrity(withTank, tools, documentQualityLedger, referenceRegistry)).toThrow('Champ différent de la valeur retenue');
+	});
+
 	it('requires immutable monthly periods in chronological order', () => {
 		expect(() => documentQualityHistorySchema.parse({ ...documentQualityHistory, snapshots: [...documentQualityHistory.snapshots, { ...documentQualityHistory.snapshots[0], kind: 'monthly' }] })).toThrow();
 		expect(() => createDocumentQualityObservatory(compressors, tools, documentQualityLedger, referenceRegistry, '2026-10-01', documentQualityHistory)).toThrow('Snapshot mensuel documentaire manquant pour 2026-10');

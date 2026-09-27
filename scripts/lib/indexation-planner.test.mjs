@@ -82,18 +82,17 @@ describe('repetition detection includes guides', () => {
 		expect(result.report.find((entry) => entry.path === duplicate.path)?.reason).toBe('near-duplicate');
 		expect(result.released).toBe(0);
 	});
-	it('rechecks edited waiting content, while preserving previously published duplicates', () => {
+	it('rechecks waiting content and blocks published duplicates until they are resolved', () => {
 		const original = { ...candidate(0), text, path: '/guides/existant/' };
 		expect(plan({ candidates: [original, { ...candidate(1), text }] }).released).toBe(0);
 		expect(plan({ candidates: [original, candidate(1)] }).released).toBe(1);
 		const extended = { ...baseline, paths: [...baseline.paths, candidate(1).path] };
-		const result = plan({ baseline: extended, candidates: [original, { ...candidate(1), text }] });
-		expect(result.report.every((entry) => entry.status === 'existing')).toBe(true);
+		expect(() => plan({ baseline: extended, candidates: [original, { ...candidate(1), text }] })).toThrow('Pages publiées sans valeur propre validée');
 	});
 	it('holds repetitive product clones with the same technical signature, keeps substantive differences', () => {
 		const entries = [
-			{ ...candidate(0, 'catalog'), text, signature: 'same' },
-			{ ...candidate(1, 'catalog'), text, signature: 'same' },
+			{ ...candidate(0, 'catalog'), text, topic: 'same-brand', signature: 'same' },
+			{ ...candidate(1, 'catalog'), text, topic: 'same-brand', signature: 'same' },
 			{ ...candidate(2, 'catalog'), text, signature: 'different-fad' },
 		];
 		const result = analyzeCandidates(entries, new Set(), policy);

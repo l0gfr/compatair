@@ -43,7 +43,7 @@ describe('MCP core', () => {
 	});
 	it('sizes a per-action demand only from an explicit cadence', () => {
 		const response: any = core.handle({ jsonrpc: '2.0', id: 5, method: 'tools/call', params: { name: 'size_compressor', arguments: { demands: [{ model: 'per-action', litersPerAction: .66, actionsPerMinute: 30, pressureBar: 6.3 }] } } });
-		expect(response.result.structuredContent.engineVersion).toBe('1.3.0');
+		expect(response.result.structuredContent.engineVersion).toBe('1.4.0');
 		expect(response.result.structuredContent.sizing.peakFlowLpm).toBeCloseTo(19.8, 10);
 		expect(response.result.structuredContent.sizing.flowBasis).toBe('derived-average');
 	});
@@ -132,7 +132,7 @@ describe('MCP core', () => {
 		expect(response.result.structuredContent.limitations.every((item: unknown) => typeof item === 'string')).toBe(true);
 	});
 	it('does not propose a compressor substitution when the current air chain already covers the demand', () => {
-		const response: any = core.handle({ jsonrpc: '2.0', id: 18, method: 'tools/call', params: { name: 'find_compatible_alternatives', arguments: { compressorId: 'kaeser-eurocomp-epc-840-100', toolIds: ['einhell-tc-pe-150'], mode: 'successive' } } });
+		const response: any = core.handle({ jsonrpc: '2.0', id: 18, method: 'tools/call', params: { name: 'find_compatible_alternatives', arguments: { compressorId: 'abac-atf-s-3-24', toolIds: ['einhell-tc-pe-150'], mode: 'successive' } } });
 		expect(response.result.structuredContent.current.verdict).toBe('continuous');
 		expect(response.result.structuredContent.alternatives).toEqual([]);
 		expect(response.result.structuredContent.next_actions).toEqual([]);

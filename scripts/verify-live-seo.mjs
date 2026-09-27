@@ -82,6 +82,10 @@ for (const check of indexation.checks) {
 	if (!/^\/(?:[a-z0-9-]+\/)+$/.test(check.path) || typeof check.indexable !== 'boolean') throw new Error('Sonde d’indexation invalide.');
 	verifyIndexationPage(check.path, await fetchText(check.path), check.indexable, pageUrls, origin);
 }
+for (const [alias, target] of Object.entries(indexation.canonicalAliases ?? {}).slice(0, 5)) {
+ const html = await fetchText(alias);
+ if (!html.includes(`rel="canonical" href="${origin}${target}"`) || !html.includes('data-equivalent-answer') || pageUrls.has(`${origin}${alias}`) || !pageUrls.has(`${origin}${target}`)) throw new Error(`Regroupement canonique incomplet : ${alias}`);
+}
 const detailPaths = [...pageUrls]
 	.map((url) => new URL(url).pathname)
 	.filter((pathname) => detailPagePolicies.some((policy) => policy.pattern.test(pathname)));

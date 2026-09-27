@@ -7,7 +7,7 @@
 - `compressorId` obligatoire ;
 - `toolId` obligatoire.
 
-La marge de calcul de la version 1 est celle du moteur CompatAir publié. Elle ne peut pas être remplacée par le client : la réponse est lue dans le snapshot de verdicts généré par le moteur TypeScript, versionné avec le catalogue.
+La marge de calcul de la version 1 est celle du moteur CompatAir publié. Elle ne peut pas être remplacée par le client : la réponse est calculée par le même noyau que le navigateur, avec le catalogue et le moteur de la release active. Un cache vide déclenche ce calcul. Le cache inclut les empreintes complètes des deux références, la version du catalogue, le moteur et la marge.
 
 La réponse contient les versions du schéma, du catalogue et du moteur, les deux produits, le verdict déterministe, les sources, une URL vers le calculateur prérempli et une URL vers le graphe de preuve. La route est en lecture seule, autorise CORS, n’utilise aucun cookie et applique le quota du service.
 
@@ -46,3 +46,18 @@ Le client valide le schéma minimal, le verdict et l’URL de suite. La réponse
 ## Frontière commerciale
 
 La bêta publique ne promet ni SLA de disponibilité de l’API, ni quota réservé, ni support. Ces éléments, les exports, les historiques et les alertes relèvent d’une future offre professionnelle. Le SLA public de fraîcheur des données reste distinct et consultable dans `/data/freshness.json`. Une relation commerciale ne peut pas modifier le verdict.
+
+## Recherche ciblée (27 septembre 2026)
+
+Les interfaces utilisent les routes GET sous `/api/v1/search/`, déjà couvertes par le proxy de production. Aucun catalogue intégral n’est nécessaire pour identifier une référence, calculer un besoin ou ouvrir une configuration partagée.
+
+- `catalog?q=4010393&type=compressor&limit=20` : suggestions compactes ; maximum 50. Le curseur est lié à la requête et à la publication.
+- `identify?q=4010393` : correspondances exactes et ambiguïté explicite ; pas de substitution par un modèle proche.
+- `products?ids=einhell-tc-pe-150&catalogVersion=…` : 1 à 50 fiches exactes. La version SHA-256 est celle reçue lors de la recherche.
+- `alternatives?pressure=6.3&flow=100&average=30&recommended=125&phase=any&mobility=any&limit=20` : candidats couvrant les critères documentés, avec nombre total éligible et caractère exhaustif de l’aperçu. `budget` exige une offre active vérifiée. Le scénario utilisateur est encore évalué par le moteur commun.
+- `related?id=einhell-tc-ac-240-50-10-of` : compteurs calculés sur le corpus opposé entier et aperçu de huit références au maximum par verdict.
+- `metadata` : versions de publication pour une configuration sans référence du catalogue.
+
+Ces lectures refusent les paramètres inattendus ou dupliqués. HTTP 409 signifie que la version demandée n’est plus celle de la release active ; le client doit recharger. HTTP 404 signifie identité inconnue. `insufficient_data` est un résultat technique, jamais un synonyme d’échec réseau ou de cache absent. Les routes gardent CORS, le quota et les en-têtes de sécurité du service.
+
+La base SQLite de release se trouve sous `dist/_server/`, interdite au public par Apache. Son ouverture est en lecture seule, sans extension. Elle ne constitue pas une source technique supplémentaire : les documents fabricants restent attachés aux champs.

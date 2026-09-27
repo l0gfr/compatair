@@ -147,8 +147,8 @@
 	const filtrationLabels = { unknown: 'Non renseigné', none: 'Aucune déclarée', particle: 'Filtration particulaire', 'water-separator': 'Séparateur d’eau', coalescing: 'Filtration coalescente', dryer: 'Sécheur' } as const;
 	type RuntimeCatalog = import('../domain/runtime-catalog').RuntimeCatalog;
 	let currentCatalogPromise: Promise<RuntimeCatalog> | undefined;
-	function loadCurrentCatalog() {
-		currentCatalogPromise ??= import('../domain/runtime-catalog').then(({ loadRuntimeCatalog }) => loadRuntimeCatalog());
+	function loadCurrentCatalog(configuration: import('../domain/passport').PassportConfiguration) {
+		currentCatalogPromise ??= import('../domain/catalog-client').then(({ loadConfigurationProducts }) => loadConfigurationProducts(configuration));
 		return currentCatalogPromise;
 	}
 
@@ -348,7 +348,7 @@
 						currentButton.disabled = true;
 						setText('[data-version-note]', 'Chargement du catalogue actuel et recalcul local…');
 						try {
-							const { catalogVerifiedAt, compressors, tools } = await loadCurrentCatalog();
+							const { catalogVerifiedAt, compressors, tools } = await loadCurrentCatalog({ ...envelope.configuration, catalogVersion: undefined, calculationVersion: undefined });
 							const current = await createPassportReport(envelope.configuration, compressors, tools, catalogVerifiedAt);
 							renderPassport(current, currentUrl, scenarioId);
 							setText('[data-version-note]', `Simulation actuelle, catalogue ${current.catalogVerifiedAt}. L’URL originale n’est pas modifiée.`);
@@ -361,7 +361,7 @@
 					};
 				}
 			} else {
-				const { catalogVerifiedAt, compressors, tools } = await loadCurrentCatalog();
+				const { catalogVerifiedAt, compressors, tools } = await loadCurrentCatalog(legacyConfiguration!);
 				const current = await createPassportReport(legacyConfiguration, compressors, tools, catalogVerifiedAt);
 				renderPassport(current, currentUrl, scenarioId);
 				const choice = query<HTMLElement>('[data-version-choice]');

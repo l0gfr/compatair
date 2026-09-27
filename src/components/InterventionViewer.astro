@@ -319,7 +319,7 @@
 		if (!encodedPassport || (!envelope && !legacy)) { setEmpty(encodedPassport ? 'Le lien du Passeport est invalide ou incomplet.' : 'Ouvrez ce parcours depuis un contrôle dégradé du carnet.'); return; }
 		try {
 			if (envelope) report = await reportFromPassportEnvelope(envelope);
-			else { const { loadRuntimeCatalog } = await import('../domain/runtime-catalog'); const catalog = await loadRuntimeCatalog(); report = await createPassportReport(legacy!, catalog.compressors, catalog.tools, catalog.catalogVerifiedAt); }
+			else { const { loadConfigurationProducts } = await import('../domain/catalog-client'); const catalog = await loadConfigurationProducts(legacy!); report = await createPassportReport(legacy!, catalog.compressors, catalog.tools, catalog.catalogVerifiedAt); }
 			if (!report.configuration.commissioning) { setEmpty('Ce Passeport ne contient pas de recette terrain.', 'Réaliser la recette terrain', `${location.origin}/mise-en-service/#passport=${encodedPassport}`); return; }
 			const storedOperation = localStorage.getItem(operationStorageKey()); const parsedOperation = storedOperation ? parseOperationLogJson(storedOperation) : undefined;
 			if (!parsedOperation?.success || parsedOperation.data.passportId !== report.passportId) { setEmpty('Le carnet local de ce Passeport est absent sur cet appareil.', 'Ouvrir le suivi d’exploitation', monitoringUrl()); return; }

@@ -1,50 +1,36 @@
 import assert from 'node:assert/strict';
-import { createHash } from 'node:crypto';
-import { createReadStream } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { createCompatAirServer } from '../server/mcp-server.mjs';
-import { readVerdictSnapshot, verdictIndex, verdictStorageStats } from '../server/verdict-snapshot.mjs';
+import { openCatalogRepository, repositoryCatalog, calculationSnapshotMetadata } from '../server/catalog-repository.mjs';
 
 const startedAt = performance.now();
-const catalog = JSON.parse(await readFile('dist/data/catalog.json', 'utf8'));
-const snapshot = await readVerdictSnapshot('dist/data/verdicts.json', { compactIds: true });
-assert.equal(snapshot.catalogVersion, catalog.catalogVersion);
-assert.equal(snapshot.pairs.length, snapshot.scope.fixed_verdict_count);
-const storage = verdictStorageStats(snapshot);
-assert.equal(storage.layout, 'tool-major', 'Published verdicts must use the verified compact matrix');
-assert.ok(storage.cellBytes < snapshot.pairs.length * 4 + 65_536, 'Matrix cells must occupy four bytes each, with one partial block');
-const { pairs, ...metadata } = snapshot;
-const lookup = verdictIndex(snapshot);
+const repository = openCatalogRepository('dist/_server/catalog.sqlite');
+const catalog = repositoryCatalog(repository);
+const verdictSnapshot = calculationSnapshotMetadata(repository);
 const offerSnapshot = JSON.parse(await readFile('dist/data/offers.json', 'utf8'));
 const knowledgeItems = JSON.parse(await readFile('dist/data/agent-knowledge.json', 'utf8'));
 const changefeedEvents = JSON.parse(await readFile('dist/data/changefeed.json', 'utf8')).events;
-const server = createCompatAirServer({ catalog, verdictSnapshot: snapshot, offerSnapshot, knowledgeItems, changefeedEvents, allowedOrigins: new Set() });
+const server = createCompatAirServer({ catalog, verdictSnapshot, offerSnapshot, knowledgeItems, changefeedEvents, allowedOrigins: new Set() });
 try {
-	await new Promise((resolve, reject) => { server.once('error', reject); server.listen(0, '127.0.0.1', resolve); });
-	const origin = `http://127.0.0.1:${server.address().port}`;
-	const health = await (await fetch(`${origin}/health`)).json();
-	assert.equal(health.status, 'ok');
-	assert.equal(health.verdictVersion, snapshot.verdictVersion);
-	for (const pair of [pairs[0], pairs.at(-1)]) {
-		const response = await fetch(`${origin}/api/v1/compatibility?${new URLSearchParams({ compressorId: pair.compressorId, toolId: pair.toolId })}`);
-		assert.equal(response.status, 200);
-		assert.deepEqual((await response.json()).engine_evaluation, JSON.parse(JSON.stringify(pair)));
-	}
-} finally {
-	server.closeAllConnections();
-	await new Promise((resolve) => server.close(resolve));
-}
-const peakMiB = process.resourceUsage().maxRSS / 1024;
-const startupSeconds = (performance.now() - startedAt) / 1000;
-assert.ok(peakMiB < 256, `MCP startup exceeded the 256 MiB service budget: ${peakMiB.toFixed(1)} MiB`);
-// Measure real startup before the audit-only serialization of every pair.
-// The exhaustive byte-for-byte check still runs and must pass before success.
-const reconstructed = createHash('sha256').update(`${JSON.stringify(metadata).slice(0, -1)},"pairs":[`);
-for (let index = 0; index < pairs.length; index++) reconstructed.update(`${index ? ',' : ''}${JSON.stringify(lookup.get(pairs[index].compressorId, pairs[index].toolId))}`);
-reconstructed.update(']}');
-const original = createHash('sha256');
-for await (const chunk of createReadStream('dist/data/verdicts.json')) original.update(chunk);
-assert.equal(reconstructed.digest('hex'), original.digest('hex'), 'Streaming and indexed lookups must preserve the complete published snapshot byte for byte');
-
-console.log(`MCP startup verified: ${pairs.length} exact verdicts, three shared profiles, HTTP health and API in ${startupSeconds.toFixed(1)} s, peak ${peakMiB.toFixed(1)} MiB < 256 MiB.`);
-console.log(`Verdict storage: ${storage.layout}, ${(storage.cellBytes / 1024 / 1024).toFixed(1)} MiB of matrix cells.`);
+ await new Promise((resolve, reject) => { server.once('error', reject); server.listen(0, '127.0.0.1', resolve); });
+ const origin = `http://127.0.0.1:${server.address().port}`;
+ const health = await (await fetch(`${origin}/health`)).json();
+ assert.equal(health.status, 'ok'); assert.equal(health.verdictVersion, verdictSnapshot.verdictVersion);
+ const compressor = repository.iterate('compressor').next().value;
+ const tool = repository.iterate('tool').next().value;
+ const response = await fetch(`${origin}/api/v1/compatibility?${new URLSearchParams({ compressorId: compressor.id, toolId: tool.id })}`);
+ assert.equal(response.status, 200);
+ const evaluation = (await response.json()).engine_evaluation;
+ const expected = JSON.parse(JSON.stringify(repository.evaluate(compressor.id, tool.id)));
+ delete expected.averageDemandLpm;
+ assert.deepEqual(evaluation, expected);
+ const contract = JSON.parse(await readFile('contracts/api/openapi.json', 'utf8'));
+ assert.ok(Object.keys(evaluation).every(key => Object.hasOwn(contract.components.schemas.EngineEvaluation.properties, key)), 'The HTTP response must preserve the declared REST contract');
+ const search = await fetch(`${origin}/api/v1/search/catalog?q=${encodeURIComponent(compressor.id)}`);
+ assert.equal(search.status, 200); assert.ok((await search.json()).items.some(item => item.id === compressor.id));
+ const peakMiB = process.resourceUsage().maxRSS / 1024;
+ assert.ok(peakMiB < 256, `MCP startup exceeded the 256 MiB service budget: ${peakMiB.toFixed(1)} MiB`);
+ assert.equal(catalog.compressors.length + catalog.tools.length, 0, 'Startup must not preload the product corpus');
+ assert.equal(verdictSnapshot.pairs.length, 0, 'Startup must not preload the pair matrix');
+ console.log(`MCP indexed startup verified: ${repository.metadata.count} references, exact on-demand decisions and HTTP search in ${((performance.now() - startedAt) / 1000).toFixed(2)} s, peak ${peakMiB.toFixed(1)} MiB < 256 MiB.`);
+} finally { server.closeAllConnections(); await new Promise(resolve => server.close(resolve)); repository.close(); }

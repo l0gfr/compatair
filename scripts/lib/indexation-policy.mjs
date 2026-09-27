@@ -83,6 +83,11 @@ export function validateManifest(manifest, baseline, now = new Date()) {
 		if (paths.has(entry.path) || !candidateFamily(entry.path) || !Number.isFinite(Date.parse(entry.firstSeen)) || Date.parse(entry.firstSeen) > Date.parse(manifest.builtAt)) throw new Error('Entrée en attente invalide.');
 		paths.add(entry.path);
 	}
+	const admitted = new Set([...baseline.paths, ...manifest.batches.flatMap(batch => batch.paths)]);
+ for (const [alias, target] of Object.entries(manifest.canonicalAliases ?? {})) {
+  validatePath(alias); validatePath(target);
+  if (alias === target || !admitted.has(alias) || !admitted.has(target) || candidateFamily(alias) !== candidateFamily(target) || manifest.canonicalAliases[target]) throw new Error('Regroupement canonique invalide.');
+ }
 	return manifest;
 }
 

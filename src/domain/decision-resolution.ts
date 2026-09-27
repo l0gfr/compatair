@@ -31,7 +31,7 @@ export type DecisionResolutionStatus =
 	| 'no_verified_solution';
 
 export type DecisionDataGap = {
-	code: 'source_quality' | 'missing_fad' | 'pressure_outside_curve' | 'missing_receiver_cycle' | 'missing_custom_fad' | 'unknown';
+	code: 'source_quality' | 'missing_fad' | 'pressure_outside_curve' | 'missing_receiver_cycle' | 'missing_custom_fad' | 'missing_duty_cycle' | 'unknown';
 	title: string;
 	detail: string;
 };
@@ -90,6 +90,11 @@ export function explainDecisionDataGap(
 	result: Pick<SizingResult, 'verdict' | 'warnings'>,
 ): DecisionDataGap | undefined {
 	if (result.verdict !== 'insufficient_data') return undefined;
+	if (result.warnings.some((warning) => warning.includes('cycle de service du compresseur manque'))) return {
+		code: 'missing_duty_cycle',
+		title: 'Endurance non établie',
+		detail: 'Le débit documenté reste comparable, mais la durée de fonctionnement admissible manque. Le cycle constructeur est nécessaire avant de conclure à un fonctionnement continu.',
+	};
 	if (!compressor) return {
 		code: 'missing_custom_fad',
 		title: 'Débit restitué à renseigner',
