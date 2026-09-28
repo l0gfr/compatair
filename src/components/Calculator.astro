@@ -597,6 +597,7 @@ const commercialOffers = activeOffers
 	function counterfactualMachine(config: NonNullable<ReturnType<typeof configFromForm>>, requiredPressureBar: number): CounterfactualMachine | undefined {
 		if (!config.selectedCompressor) return undefined;
 		if (config.selectedCompressor === 'custom') return config.custom.maxPressureBar === undefined ? undefined : {
+			...config.custom,
 			id: 'custom', label: 'Compresseur personnalisé', maxPressureBar: config.custom.maxPressureBar,
 			availableFadLpm: config.custom.availableFadLpm, documentedFadPressureBar: requiredPressureBar,
 			tankLiters: config.custom.tankLiters, dutyCycle: config.custom.dutyCycle,
@@ -621,10 +622,14 @@ const commercialOffers = activeOffers
 			['Qualité de la réponse', responseQualityLabel(result.confidence)],
 			['Facteur limitant', result.limitingFactor === 'flow' ? 'Débit' : result.limitingFactor === 'pressure' ? 'Pression' : result.limitingFactor === 'duty_cycle' ? 'Cycle du compresseur' : result.limitingFactor === 'data' ? 'Données manquantes' : 'Aucun identifié'],
 			...(result.usableTankAirLiters !== undefined ? [['Réserve utile', `${Math.round(result.usableTankAirLiters)} L d’air libre`]] : []),
-			...(result.estimatedWorkMinutes !== undefined ? [['Travail estimé', `${result.estimatedWorkMinutes.toFixed(1)} min`]] : []),
-			...(result.estimatedRecoveryMinutes !== undefined ? [['Récupération estimée', `${result.estimatedRecoveryMinutes.toFixed(1)} min`]] : []),
+			...(result.estimatedWorkMinutes !== undefined ? [['Première rafale théorique', `${(result.estimatedWorkMinutes * 60).toLocaleString('fr-FR', { maximumFractionDigits: 1 })} s`]] : []),
 		];
 		metrics.replaceChildren(...values.map(([label, value]) => { const div = document.createElement('div'); const small = document.createElement('small'); const strong = document.createElement('strong'); small.textContent = label; strong.textContent = value; div.append(small, strong); return div; }));
+		if (result.burstScenario) {
+			const boundary = document.createElement('p');
+			boundary.textContent = 'Scénario à cuve pleine, compresseur arrêté au départ : délai de redémarrage nul et FAD constant supposés. Durée jusqu’au seuil utile, sans garantie sur la machine ni sur les rafales suivantes. Les pauses et la récupération ne sont pas calculées.';
+			metrics.append(boundary);
+		}
 	}
 	function renderAnswerFirst(config: NonNullable<ReturnType<typeof configFromForm>>, base: SizingResult, result: SizingResult) {
 		const compressor = config.selectedCompressor && config.selectedCompressor !== 'custom' ? compressors.find((item) => item.id === config.selectedCompressor) : undefined;
@@ -662,7 +667,8 @@ const commercialOffers = activeOffers
 		if (candidate.kind === 'simultaneity') return setField('mode', candidate.afterValue);
 		if (candidate.kind === 'leak') return setField('measuredLeak', candidate.afterValue);
 		if (candidate.kind === 'cadence') {
-			const row = [...(rows?.querySelectorAll<HTMLElement>('.demand-row') ?? [])].find((item) => item.querySelector<HTMLInputElement>('[data-tool]')?.value === candidate.demandId);
+			const row = candidate.demandIndex === undefined ? undefined : rows?.querySelectorAll<HTMLElement>('.demand-row')[candidate.demandIndex];
+			if (row?.querySelector<HTMLInputElement>('[data-tool]')?.value !== candidate.demandId) return false;
 			const cadence = row?.querySelector<HTMLInputElement>('[data-cadence]');
 			if (!cadence) return false;
 			cadence.value = String(candidate.afterValue);

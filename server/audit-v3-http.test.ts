@@ -10,7 +10,7 @@ const tool = { id: 'fixture-tool', slug: 'fixture-tool', label: 'Fixture', confi
 
 describe('V3 real loopback HTTP boundary', () => {
 	const pairs = compressors.map(compressor => ({ compressorId: compressor.id, toolId: tool.id, ...evaluateCompatibility(compressor as never, tool as never) }));
-	const server = createCompatAirServer({ catalog: { catalogVersion: 'synthetic-v3-fixture', verifiedAt: '2026-09-28', compressors, tools: [tool] }, verdictSnapshot: { verdictVersion: 'fixture', calculationVersion: '1.4.2', pairs }, allowedOrigins: new Set() });
+	const server = createCompatAirServer({ catalog: { catalogVersion: 'synthetic-v3-fixture', verifiedAt: '2026-09-28', compressors, tools: [tool] }, verdictSnapshot: { verdictVersion: 'fixture', calculationVersion: '1.4.3', pairs }, allowedOrigins: new Set() });
 	let url: string;
 	beforeAll(async () => {
 		await new Promise<void>((resolve, reject) => { server.once('error', reject); server.listen(0, '127.0.0.1', resolve); });
@@ -26,8 +26,8 @@ describe('V3 real loopback HTTP boundary', () => {
 		expect(body.limitations).toEqual(expected.warnings);
 		if (compressor.id === 'fixture-cycle') expect(explainDecisionDataGap(undefined, 6.3, { verdict: expected.verdict, warnings: expected.warnings })?.code).toBe('missing_duty_cycle');
 	});
-	it('rejects unsupported custom thresholds rather than silently ignoring them', async () => {
-		const response = await fetch(`${url}?compressorId=fixture-c&toolId=fixture-tool&cutInPressureBar=9&cutOutPressureBar=8`);
+	it.each(['cutInPressureBar=9&cutOutPressureBar=8', 'cutInPressureBar=4&cutOutPressureBar=8', 'cutInPressureBar=7', 'supplyPressureBar=5', 'burstSeconds=30'])('rejects unsupported custom inputs rather than silently ignoring them: %s', async extra => {
+		const response = await fetch(`${url}?compressorId=fixture-c&toolId=fixture-tool&${extra}`);
 		expect(response.status).toBe(400);
 		expect(await response.json()).toEqual({ error: 'invalid_query' });
 	});

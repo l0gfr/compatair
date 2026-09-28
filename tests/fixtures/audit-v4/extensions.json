@@ -1,0 +1,313 @@
+{
+  "sourceCommit": "896ce91f3bd7bd7873421d7f21e93652a42d7590",
+  "sourceReportSha256": "02d98fb592ec689e90e66c16e1e84ff113edcad952269e0c93ac42a81ff67f50",
+  "scope": "Synthetic V4 extensions; no product validation or application certification",
+  "projections": [
+    {
+      "id": "C01",
+      "label": "Sans seuils, témoin",
+      "input": {
+        "demands": [
+          {
+            "id": "custom-fixture",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1
+        }
+      },
+      "expectedVerdict": "continuous"
+    },
+    {
+      "id": "C02",
+      "label": "Seuils compatibles, témoin",
+      "input": {
+        "demands": [
+          {
+            "id": "custom-fixture",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 7,
+          "cutOutPressureBar": 8
+        }
+      },
+      "expectedVerdict": "continuous"
+    },
+    {
+      "id": "C03",
+      "label": "Redémarrage inférieur au besoin",
+      "input": {
+        "demands": [
+          {
+            "id": "custom-fixture",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 4,
+          "cutOutPressureBar": 8
+        }
+      },
+      "expectedVerdict": "insufficient_data"
+    },
+    {
+      "id": "C04",
+      "label": "Pression de coupure insuffisante",
+      "input": {
+        "demands": [
+          {
+            "id": "custom-fixture",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 4,
+          "cutOutPressureBar": 5
+        }
+      },
+      "expectedVerdict": "incompatible"
+    },
+    {
+      "id": "C05",
+      "label": "Un seul seuil déclaré",
+      "input": {
+        "demands": [
+          {
+            "id": "custom-fixture",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 7
+        }
+      },
+      "expectedVerdict": "insufficient_data"
+    }
+  ],
+  "timings": [
+    {
+      "cutIn": 6.3,
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic",
+            "model": "fixed-flow",
+            "flowLpm": 200,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 0.3
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 100,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 6.3,
+          "cutOutPressureBar": 8
+        }
+      },
+      "expectedSeconds": 25.5
+    },
+    {
+      "cutIn": 6.5,
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic",
+            "model": "fixed-flow",
+            "flowLpm": 200,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 0.3
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 100,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 6.5,
+          "cutOutPressureBar": 8
+        }
+      },
+      "expectedSeconds": 28.5
+    },
+    {
+      "cutIn": 7,
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic",
+            "model": "fixed-flow",
+            "flowLpm": 200,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 0.3
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 100,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 7,
+          "cutOutPressureBar": 8
+        }
+      },
+      "expectedSeconds": 36.0
+    },
+    {
+      "cutIn": 7.5,
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic",
+            "model": "fixed-flow",
+            "flowLpm": 200,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 0.3
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 100,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 7.5,
+          "cutOutPressureBar": 8
+        }
+      },
+      "expectedSeconds": 43.5
+    }
+  ],
+  "lexical": [
+    {
+      "id": "L01",
+      "query": "Einhell TE-AC 430/90/10 débit restitué",
+      "candidate": "Einhell TE-AC 430/90/10 débit restitué",
+      "expected": true
+    },
+    {
+      "id": "L02",
+      "query": "Einhell TE-AC 430/90/10 débit restitué",
+      "candidate": "Einhell TE-AC 430/10/90 débit restitué",
+      "expected": false
+    },
+    {
+      "id": "L03",
+      "query": "Metabo Basic 250-24 W débit effectif",
+      "candidate": "Metabo Basic 24-250 W débit effectif",
+      "expected": false
+    },
+    {
+      "id": "L04",
+      "query": "clé à chocs 1/2",
+      "candidate": "clé à chocs 2/1",
+      "expected": false
+    },
+    {
+      "id": "L05",
+      "query": "pression 8 bar",
+      "candidate": "pression 18 bar",
+      "expected": false
+    },
+    {
+      "id": "L06",
+      "query": "flexible 8 mm 20 m",
+      "candidate": "flexible 20 mm 8 m",
+      "expected": false
+    },
+    {
+      "id": "L07",
+      "query": "compresseur 230 V",
+      "candidate": "compresseur 400 V",
+      "expected": false
+    },
+    {
+      "id": "L08",
+      "query": "pression 6,3 bar",
+      "candidate": "pression 6.3 bar",
+      "expected": true
+    }
+  ]
+}

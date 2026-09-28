@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import v4 from '../../tests/fixtures/audit-v4/extensions.json';
 import { inflationFreeAirLiters, perActionAverageFlow, sizeAirDemand, sizeConfiguration, usableTankAir } from './sizing';
 import { barToPsi, cfmToLitersPerMinute, litersPerMinuteToCfm, litersPerSecondToLitersPerMinute, psiToBar } from './units';
 import { compressors, tools } from '../data/catalog';
@@ -179,7 +180,7 @@ describe('air demand sizing', () => {
 		expect(sizeAirDemand({ toolFlowLpm: 200, safetyMargin: 0.25 })).toEqual({
 			peakFlowLpm: 200,
 			recommendedFadLpm: 250,
-			calculationVersion: '1.4.2',
+			calculationVersion: '1.4.3',
 		});
 	});
 
@@ -223,7 +224,50 @@ describe('air demand sizing', () => {
 		});
 		expect(result.verdict).toBe('intermittent');
 		expect(result.usableTankAirLiters).toBe(100);
-		expect(result.estimatedWorkMinutes).toBe(2);
+		expect(result.estimatedWorkMinutes).toBe(.5);
+		expect(result.estimatedRecoveryMinutes).toBeUndefined();
+	});
+
+	it.each(v4.timings)('V4 first burst with cut-in $cutIn agrees with independent mass integration', fixture => {
+		const input = fixture.input;
+		const result = sizeConfiguration(input as Parameters<typeof sizeConfiguration>[0]);
+		expect(result.estimatedWorkMinutes! * 60).toBeCloseTo(fixture.expectedSeconds, 9);
+		expect(result.burstScenario).toMatchObject({ model: 'isothermal-first-burst', control: 'start-stop', initialState: 'stopped', initialPressureBar: 8, referencePressureBar: 1, startDelaySeconds: 0, constantFadLpm: 100, demandLpm: 200 });
+		// Independent method: step the free-air mass, switching production from
+		// zero to FAD at cut-in. No reuse of the two-phase duration formula.
+		const dtSeconds = .001;
+		let airLiters = 50 * (1 + 8);
+		let elapsedSeconds = 0;
+		let loaded = false;
+		while (airLiters > 50 * (1 + 6.3) && elapsedSeconds < 60) {
+			if (airLiters / 50 - 1 <= fixture.cutIn) loaded = true;
+			airLiters += ((loaded ? 100 : 0) - 200) * dtSeconds / 60;
+			elapsedSeconds += dtSeconds;
+		}
+		expect(Math.abs(elapsedSeconds - result.estimatedWorkMinutes! * 60)).toBeLessThan(.003);
+		expect(result.estimatedRecoveryMinutes).toBeUndefined();
+		if (fixture.cutIn === 6.5) {
+			expect(result.burstScenario!.stoppedMinutes * 60).toBe(22.5);
+			expect(result.burstScenario!.loadedMinutes * 60).toBeCloseTo(6, 9);
+		}
+	});
+	it('V4 does not substitute session length or average duty factor for a real burst', () => {
+		const input = v4.timings[1].input as Parameters<typeof sizeConfiguration>[0];
+		const original = sizeConfiguration(input);
+		const changed = sizeConfiguration({ ...input, sessionMinutes: 1, demands: [{ id: 'synthetic', flowLpm: 200, pressureBar: 6.3, dutyFactor: .1 }] });
+		expect(changed.estimatedWorkMinutes).toBe(original.estimatedWorkMinutes);
+		expect(changed.warnings.join(' ')).toContain('pas une autonomie garantie');
+		expect(changed.warnings.join(' ')).toContain('Récupération et répétition des cycles non calculées');
+	});
+	it.each([
+		{ tankLiters: undefined }, { cutInPressureBar: undefined }, { cutOutPressureBar: undefined },
+		{ availableFadLpm: undefined }, { dutyCycle: undefined }, { availableFadBasis: 'higher-pressure-bound' as const },
+	])('V4 suspends a duration without usable inputs %j', override => {
+		const input = v4.timings[1].input as Parameters<typeof sizeConfiguration>[0];
+		const result = sizeConfiguration({ ...input, compressor: { ...input.compressor!, ...override } });
+		expect(result.estimatedWorkMinutes).toBeUndefined();
+		expect(result.burstScenario).toBeUndefined();
+		expect(result.estimatedRecoveryMinutes).toBeUndefined();
 	});
 
 	it('uses only the pressure interval as free-air reserve', () => {

@@ -3,16 +3,12 @@ import { sizeConfiguration, sizingInputSchema, type SizingInput, type SizingResu
 
 export type CounterfactualKind = 'pressure' | 'flexible' | 'simultaneity' | 'leak' | 'cadence' | 'machine';
 
-export type CounterfactualMachine = {
+export type CounterfactualMachine = NonNullable<SizingInput['compressor']> & {
 	id: string;
 	label: string;
-	maxPressureBar: number;
 	confidence?: 'A' | 'B' | 'C' | 'D';
 	fadCurve?: Array<{ pressureBar: number; litersPerMinute: number }>;
-	availableFadLpm?: number;
 	documentedFadPressureBar?: number;
-	tankLiters?: number;
-	dutyCycle?: number;
 };
 
 export type CounterfactualCandidate = {
@@ -23,6 +19,7 @@ export type CounterfactualCandidate = {
 	unit?: string;
 	impactScore: number;
 	demandId?: string;
+	demandIndex?: number;
 	machineId?: string;
 	machineLabel?: string;
 	result: SizingResult;
@@ -53,7 +50,7 @@ function machineInput(machine: CounterfactualMachine, requiredPressureBar: numbe
 			: machine.documentedFadPressureBar !== undefined && samePressure(machine.documentedFadPressureBar, requiredPressureBar)
 				? machine.availableFadLpm
 				: undefined;
-	return { maxPressureBar: machine.maxPressureBar, availableFadLpm, availableFadBasis: machine.fadCurve ? resolveAvailableFad({ fadCurve: machine.fadCurve }, requiredPressureBar)?.basis : undefined, tankLiters: machine.tankLiters, dutyCycle: machine.dutyCycle };
+	return { maxPressureBar: machine.maxPressureBar, availableFadLpm, availableFadBasis: machine.fadCurve ? resolveAvailableFad({ fadCurve: machine.fadCurve }, requiredPressureBar)?.basis : machine.availableFadBasis, tankLiters: machine.tankLiters, dutyCycle: machine.dutyCycle, cutInPressureBar: machine.cutInPressureBar, cutOutPressureBar: machine.cutOutPressureBar };
 }
 
 function evaluate(configuration: SizingInput, machine?: CounterfactualMachine) {
@@ -124,7 +121,7 @@ export function createCounterfactualRecommendation(input: {
 			return evaluate({ ...configuration, demands }, input.selectedMachine);
 		};
 		const change = maximumPassing(demand.actionsPerMinute, 0.1, evaluateCadence, 0.1);
-		if (change && change.value < demand.actionsPerMinute) add({ kind: 'cadence', changedField: `demands.${index}.actionsPerMinute`, beforeValue: demand.actionsPerMinute, afterValue: change.value, unit: 'actions/min', impactScore: score(demand.actionsPerMinute, change.value), demandId: demand.id, result: change.result });
+		if (change && change.value < demand.actionsPerMinute) add({ kind: 'cadence', changedField: `demands.${index}.actionsPerMinute`, beforeValue: demand.actionsPerMinute, afterValue: change.value, unit: 'actions/min', impactScore: score(demand.actionsPerMinute, change.value), demandId: demand.id, demandIndex: index, result: change.result });
 	});
 	if (!configuration.demands.some((demand) => demand.model === 'per-action')) untested.add('cadence');
 

@@ -11,7 +11,7 @@ describe('document quality observatory', () => {
 	it('publishes the four metrics without fabricating a delay for legacy corrections', () => {
 		expect(observatory.schemaVersion).toBe('1.0.0');
 		expect(observatory.observatoryVersion).toMatch(/^[a-f0-9]{64}$/);
-		expect(observatory.metrics.correctionLeadTime).toMatchObject({ status: 'measured', medianDays: 0, measuredCount: 1, excludedLegacyCount: 5 });
+		expect(observatory.metrics.correctionLeadTime).toMatchObject({ status: 'measured', medianDays: 0, measuredCount: 3, excludedLegacyCount: 5 });
 		expect(observatory.metrics.multiPressureFad.eligibleCount).toBe(compressors.length);
 		expect(observatory.metrics.multiPressureFad.availableCount).toBe(compressors.filter((item) => item.fadCurve.length >= 2).length);
 		expect(observatory.metrics.referenceStability).toMatchObject({ status: 'measured', changeCount: 0, missingBaselineCount: 0 });
@@ -29,7 +29,7 @@ describe('document quality observatory', () => {
 	it('measures future corrections from their documented opening date', () => {
 		const ledger = {
 			...documentQualityLedger,
-			corrections: [...documentQualityLedger.corrections, { id: 'measured-example', title: 'Exemple mesuré', openedAt: '2026-07-15', resolvedAt: '2026-07-17', summary: 'Cycle daté.', impact: 'Mesure testée.' }],
+			corrections: [...documentQualityLedger.corrections.filter(item => item.openedAt === null || item.id === 'quadratic-page-migration-contract'), { id: 'measured-example', title: 'Exemple mesuré', openedAt: '2026-07-15', resolvedAt: '2026-07-17', summary: 'Cycle daté.', impact: 'Mesure testée.' }],
 		};
 		const measured = createDocumentQualityObservatory(compressors, tools, ledger, referenceRegistry, CATALOG_VERIFIED_AT, documentQualityHistory);
 		expect(measured.metrics.correctionLeadTime).toMatchObject({ status: 'measured', medianDays: 1, measuredCount: 2 });

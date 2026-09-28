@@ -1,6 +1,6 @@
 // Pure numerical core shared by the browser, static exports and the Node server.
 // Callers validate and normalize input at their boundary; no I/O or environment state here.
-export const CALCULATION_VERSION = '1.4.2';
+export const CALCULATION_VERSION = '1.4.3';
 export const STANDARD_ATMOSPHERE_BAR = 1.01325;
 /** Cross-field invariants shared with the browser and passport schemas. */
 export function compressorPressureIssues(compressor) {
@@ -196,18 +196,33 @@ export function calculateSizing(value) {
 		};
 	}
 
-	const deficitLpm = peakFlowLpm - compressor.availableFadLpm;
-	const recoverySurplusLpm = effectiveAverageCapacity - averageFlowLpm;
-	const estimatedWorkMinutes = deficitLpm > 0 ? usableTankAirLiters / deficitLpm : undefined;
-	if (estimatedWorkMinutes !== undefined && estimatedWorkMinutes < value.sessionMinutes) warnings.push('Réserve insuffisante pour soutenir la pointe durant la session. Le rythme des pauses reste à vérifier.');
+	// A bounded first-burst scenario, not a product autonomy prediction. Before
+	// cut-in there is no production. Neither duty factor nor session length tells
+	// us the real burst or pause duration, so recovery cannot be calculated.
+	let burstScenario;
+	let estimatedWorkMinutes;
+	if (flowBasis === 'documented-continuous' && compressor.availableFadBasis !== 'higher-pressure-bound') {
+		const stoppedMinutes = compressor.tankLiters * (compressor.cutOutPressureBar - compressor.cutInPressureBar) / peakFlowLpm;
+		const loadedMinutes = compressor.tankLiters * (compressor.cutInPressureBar - requiredPressureBar) / (peakFlowLpm - compressor.availableFadLpm);
+		estimatedWorkMinutes = stoppedMinutes + loadedMinutes;
+		burstScenario = {
+			model: 'isothermal-first-burst', control: 'start-stop', initialState: 'stopped',
+			referencePressureBar: 1, initialPressureBar: compressor.cutOutPressureBar,
+			cutInPressureBar: compressor.cutInPressureBar, usefulPressureBar: requiredPressureBar,
+			startDelaySeconds: 0, constantFadLpm: compressor.availableFadLpm, demandLpm: peakFlowLpm,
+			stoppedMinutes, loadedMinutes,
+		};
+		hypotheses.push(`Première rafale théorique à pleine pointe (${peakFlowLpm.toLocaleString('fr-FR')} L/min) jusqu’à ${requiredPressureBar.toLocaleString('fr-FR')} bar : départ cuve pleine à ${compressor.cutOutPressureBar.toLocaleString('fr-FR')} bar, compresseur arrêté, commande marche/arrêt à ${compressor.cutInPressureBar.toLocaleString('fr-FR')} bar, délai supposé nul. Référence 1 bar absolu, température constante et FAD supposé constant à ${compressor.availableFadLpm.toLocaleString('fr-FR')} L/min après mise en charge.`);
+		warnings.push('Cette durée est un scénario théorique, pas une autonomie garantie : débit réel sur la plage, délai de démarrage et limites thermiques non modélisés.');
+	} else warnings.push('Durée de rafale suspendue : la pointe ou le FAD sur la plage de pression ne sont pas établis.');
+	warnings.push('Durées réelles des rafales et pauses inconnues. Récupération et répétition des cycles non calculées ; la fréquence et la session ne les définissent pas.');
 	return {
 		...context,
 		verdict: 'intermittent',
 		availablePressureBar,
 		usefulPressureBar: requiredPressureBar,
 		usableTankAirLiters,
-		estimatedWorkMinutes,
-		estimatedRecoveryMinutes: recoverySurplusLpm > 0 ? usableTankAirLiters / recoverySurplusLpm : undefined,
+		...(burstScenario ? { estimatedWorkMinutes, burstScenario } : {}),
 		limitingFactor: 'flow', confidence: 'medium',
 		warnings: [...warnings, 'Fonctionnement intermittent selon les pressions de coupure et le profil d’usage saisis.'],
 	};

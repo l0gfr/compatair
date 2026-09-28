@@ -4,7 +4,7 @@ import type { Compressor, ToolProfile } from './catalog';
 import { commissioningRecordSchema } from './commissioning';
 import { resolveAvailableFad } from './compatibility';
 import { createInstallationPlan, installationPlanSchema, type InstallationPlan } from './installation-plan';
-import { CALCULATION_VERSION, sizeConfiguration, sizingInputSchema, type SizingResult } from './sizing';
+import { burstScenarioSchema, CALCULATION_VERSION, sizeConfiguration, sizingInputSchema, type SizingResult } from './sizing';
 
 function isHttpsUrl(value: string) { try { return new URL(value).protocol === 'https:'; } catch { return false; } }
 const httpsUrlSchema = z.url().max(4_096).refine(isHttpsUrl, 'URL HTTPS obligatoire');
@@ -94,6 +94,7 @@ const sizingResultSnapshotSchema = z.object({
 	availablePressureBar: z.number().nonnegative().max(50).optional(), usefulPressureBar: z.number().nonnegative().max(50).optional(),
 	usableTankAirLiters: z.number().nonnegative().max(2_000_000).optional(), estimatedWorkMinutes: z.number().nonnegative().max(1_000_000).optional(),
 	estimatedRecoveryMinutes: z.number().nonnegative().max(1_000_000).optional(), limitingFactor: z.enum(['flow', 'pressure', 'duty_cycle', 'data']).optional(),
+	burstScenario: burstScenarioSchema.optional(),
 	confidence: z.enum(['high', 'medium', 'low']), hypotheses: z.array(z.string().max(2_000)).max(100), warnings: z.array(z.string().max(2_000)).max(100),
 	flowBasis: z.enum(['documented-continuous', 'derived-average']), calculationVersion: z.string().regex(/^\d+\.\d+\.\d+$/),
 });

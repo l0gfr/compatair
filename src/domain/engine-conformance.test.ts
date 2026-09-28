@@ -9,6 +9,13 @@ const tool = tools.find(item => item.id === 'einhell-tc-pe-150')!;
 const reference = compressors.find(item => item.id === 'abac-atf-s-3-24')!;
 
 describe('one deterministic air calculation across surfaces', () => {
+ it('V4 MCP rejects unsupported custom compressor and burst controls explicitly', () => {
+  const core = createMcpCore({ compressors: [reference], tools: [tool], catalogVersion: 'a'.repeat(64) }, undefined, { profile: 'legacy' });
+  for (const extra of [{ cutInPressureBar: 4, cutOutPressureBar: 8 }, { cutInPressureBar: 9, cutOutPressureBar: 8 }, { supplyPressureBar: 5 }, { burstSeconds: 30 }]) {
+   const reply: any = core.handle({ jsonrpc: '2.0', id: 1, method: 'tools/call', params: { name: 'check_compatibility', arguments: { compressorId: reference.id, toolId: tool.id, ...extra } } });
+   expect(reply.result?.isError ?? Boolean(reply.error)).toBe(true);
+  }
+ });
  it('never invents endurance from sufficient FAD, tank size or a safety margin', () => {
   for (const availableFadLpm of [100, 125, 1000]) for (const tankLiters of [0, 500]) {
    const input = { demands: [{ id: 'fixture', flowLpm: 100, pressureBar: 6 }], compressor: { maxPressureBar: 8, availableFadLpm, tankLiters } };

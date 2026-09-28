@@ -11,6 +11,17 @@ const configuration = {
 };
 
 describe('CompatAir passport', () => {
+	it('V4 keeps the bounded burst assumptions with the duration through a signed envelope', async () => {
+		const config = { ...configuration, demands: [{ ...configuration.demands[0], quantity: 2, dutyFactor: .3 }], selectedCompressor: 'custom',
+			custom: { maxPressureBar: 10, availableFadLpm: 100, tankLiters: 50, dutyCycle: 1, cutInPressureBar: 6.5, cutOutPressureBar: 8 } };
+		const envelope = await createPassportEnvelope(config, compressors, tools, CATALOG_VERIFIED_AT, '2026-09-28T18:00:00.000Z');
+		const restored = await reportFromPassportEnvelope(decodePassportEnvelope(encodePassportEnvelope(envelope))!);
+		expect(restored.result).toEqual(envelope.resultSnapshot);
+		expect(restored.result.estimatedWorkMinutes! * 60).toBeCloseTo(28.5, 9);
+		expect(restored.result.burstScenario).toMatchObject({ initialState: 'stopped', control: 'start-stop', initialPressureBar: 8, startDelaySeconds: 0, referencePressureBar: 1 });
+		expect(restored.result.estimatedRecoveryMinutes).toBeUndefined();
+		expect(restored.result.warnings.join(' ')).toContain('pas une autonomie garantie');
+	});
 	it('round-trips a bounded URL payload', () => {
 		const encoded = encodePassportConfiguration(configuration);
 		expect(encoded).toMatch(/^[A-Za-z0-9_-]+$/);
@@ -22,7 +33,7 @@ describe('CompatAir passport', () => {
 		const report = await createPassportReport(configuration, compressors, tools, CATALOG_VERIFIED_AT, '2026-07-14T10:00:00.000Z');
 		expect(report.schemaVersion).toBe(PASSPORT_SCHEMA_VERSION);
 		expect(report.passportId).toMatch(/^[a-f0-9]{64}$/);
-		expect(report.result.calculationVersion).toBe('1.4.2');
+		expect(report.result.calculationVersion).toBe('1.4.3');
 		expect(report.sources.length).toBeGreaterThanOrEqual(2);
 		expect(report.warnings.join(' ')).toContain('ne sont pas soustraites');
 		expect(report.installationPlan.items.some((item) => item.id === 'capacity-at-working-pressure')).toBe(true);

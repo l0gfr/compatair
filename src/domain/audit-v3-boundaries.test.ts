@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import fixtures from '../../tests/fixtures/audit-v3/boundaries.json';
 import { calculateSizing } from '../../server/air-sizing.mjs';
-import { sizeConfiguration, sizingInputSchema } from './sizing';
+import { CALCULATION_VERSION, sizeConfiguration, sizingInputSchema } from './sizing';
 import { explainDecisionDataGap } from './decision-resolution';
 import { passportConfigurationSchema } from './passport';
 import { editorialPriority } from '../../scripts/lib/editorial-priority.mjs';
@@ -19,7 +19,20 @@ describe('V3 additional fixtures, not a certification', () => {
 		}
 		const result = sizeConfiguration(sizingInputSchema.parse(fixture.input));
 		expect(result).toEqual(calculateSizing(sizingInputSchema.parse(fixture.input)));
-		expect(result).toEqual(fixture.result);
+		// The original 1.4.2 fixture remains immutable. V4 corrects only E21's
+		// timing claim; the previous arithmetic is retained as historical evidence.
+		if (fixture.id === 'E21') {
+			const { estimatedWorkMinutes, estimatedRecoveryMinutes, warnings, hypotheses, ...historical } = fixture.result!;
+			const { estimatedWorkMinutes: duration, burstScenario, warnings: actualWarnings, hypotheses: actualHypotheses, ...unchanged } = result;
+			expect(unchanged).toEqual({ ...historical, calculationVersion: CALCULATION_VERSION });
+			expect(estimatedWorkMinutes).toBe(.75);
+			expect(estimatedRecoveryMinutes).toBe(1.5);
+			expect(duration).toBeCloseTo(.475, 12);
+			expect(burstScenario?.initialState).toBe('stopped');
+			expect(actualHypotheses.slice(0, hypotheses!.length)).toEqual(hypotheses);
+			expect(actualWarnings).toContain(warnings!.at(-1));
+			expect(actualWarnings.join(' ')).toContain('pas une autonomie garantie');
+		} else expect(result).toEqual({ ...fixture.result, calculationVersion: CALCULATION_VERSION });
 		const gap = explainDecisionDataGap(undefined, result.requiredPressureBar, result);
 		if (result.verdict !== 'insufficient_data') expect(gap).toBeUndefined();
 		if (result.verdict === 'insufficient_data' && result.limitingFactor === 'pressure') {
