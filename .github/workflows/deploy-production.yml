@@ -226,6 +226,7 @@ jobs:
           sha256sum "compatair-${GITHUB_SHA}.tar.xz" > "compatair-${GITHUB_SHA}.tar.xz.sha256"
           tar -czf "compatair-admin-${GITHUB_SHA}.tar.gz" \
             deploy \
+            server/air-sizing.mjs \
             scripts/smoke-live-http.mjs \
             scripts/verify-live-seo.mjs \
             scripts/lib/live-seo-verification.mjs \

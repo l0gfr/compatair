@@ -64,3 +64,7 @@ node scripts/audit-v3/compare-engines.mjs dist/data/catalog.json 896ce91f3bd7bd7
 ```
 
 Le dernier programme exécute seulement les deux modules fixes de l’historique Git local du projet. Aucun code provenant du rapport ou d’une source externe n’est exécuté. Aucune protection TLS ou réseau n’est abaissée, aucun HTML dynamique non échappé n’est injecté, aucune stack n’est changée et aucun test de charge ne cible la production.
+
+## Complément sur la chaîne de publication
+
+Le [correctif du contrôle de publication](publication-guard.md) documente la dépendance manquante de l’archive d’administration, l’échec masqué par une fonction shell et les tests ajoutés. L’activation de `02526df4` ne constitue pas une qualification du rollback.

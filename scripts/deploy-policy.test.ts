@@ -1,4 +1,8 @@
-import { readFileSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
 import { parseDocument } from 'yaml';
 
@@ -13,6 +17,57 @@ const releaseRoute = readFileSync(new URL('../src/pages/data/release.json.ts', i
 const liveSmoke = readFileSync(new URL('./smoke-live-http.mjs', import.meta.url), 'utf8');
 
 describe('release boundary policy', () => {
+	it.each([
+		{ smoke: 1, seo: 0, status: 42, calls: ['smoke-live-http.mjs'] },
+		{ smoke: 0, seo: 1, status: 42, calls: ['smoke-live-http.mjs', 'verify-live-seo.mjs'] },
+		{ smoke: 0, seo: 0, status: 0, calls: ['smoke-live-http.mjs', 'verify-live-seo.mjs'] },
+	])('propagates public smoke $smoke / SEO $seo inside the activation conditional', ({ smoke, seo, status, calls }) => {
+		const start = deploy.indexOf('run_public_smoke() {');
+		const fn = deploy.slice(start, deploy.indexOf('\n}\n', start) + 2)
+			.replace('local node_binary=/opt/compatair/node/bin/node', 'local node_binary="$TEST_NODE_BINARY"');
+		const root = mkdtempSync(join(tmpdir(), 'compatair-smoke-guard-'));
+		try {
+			mkdirSync(join(root, 'scripts/lib'), { recursive: true });
+			for (const path of ['smoke-live-http.mjs', 'verify-live-seo.mjs', 'lib/live-seo-verification.mjs', 'lib/markup-text.mjs']) writeFileSync(join(root, 'scripts', path), '');
+			const node = join(root, 'node');
+			writeFileSync(node, '#!/bin/sh\nname=${1##*/}\nprintf "%s\\n" "$name" >> "$TEST_CALLS"\ncase "$name" in smoke-live-http.mjs) exit "$TEST_SMOKE_STATUS";; *) exit "$TEST_SEO_STATUS";; esac\n', { mode: 0o755 });
+			const result = spawnSync('/bin/bash', ['-c', `set -Eeuo pipefail\n${fn}\nsystemctl() { return 1; }\nmcp_service=test\nscript_dir="$TEST_ROOT"\nif ! run_public_smoke test "$TEST_ROOT"; then exit 42; fi\n`], {
+				encoding: 'utf8', timeout: 10_000,
+				env: { TEST_ROOT: root, TEST_NODE_BINARY: node, TEST_CALLS: join(root, 'calls'), TEST_SMOKE_STATUS: String(smoke), TEST_SEO_STATUS: String(seo) },
+			});
+			expect(result.status, result.stderr).toBe(status);
+			expect(readFileSync(join(root, 'calls'), 'utf8').trim().split('\n')).toEqual(calls);
+		} finally { rmSync(root, { recursive: true, force: true }); }
+	});
+	it('loads the public smoke from the extracted admin archive without the source checkout', () => {
+		const packaging = parseDocument(workflow).toJS().jobs.validate.steps.find((step: { name: string }) => step.name === 'Package immutable release').run as string;
+		const command = packaging.slice(packaging.indexOf('tar -czf "compatair-admin-'));
+		const lines = command.split('\n');
+		expect(lines[0]).toBe('tar -czf "compatair-admin-${GITHUB_SHA}.tar.gz" \\');
+		const entries: string[] = [];
+		for (const line of lines.slice(1)) {
+			const entry = line.trim().replace(/\s*\\$/, '');
+			expect(entry).toMatch(/^[a-zA-Z0-9_./-]+$/);
+			expect(entry.split('/')).not.toContain('..');
+			entries.push(entry);
+			if (!line.trim().endsWith('\\')) break;
+		}
+		const root = mkdtempSync(join(tmpdir(), 'compatair-admin-archive-'));
+		try {
+			const archive = join(root, 'admin.tar.gz');
+			const extracted = join(root, 'extracted');
+			mkdirSync(extracted);
+			expect(spawnSync('tar', ['-czf', archive, ...entries], { cwd: fileURLToPath(new URL('../', import.meta.url)) }).status).toBe(0);
+			expect(spawnSync('tar', ['-xzf', archive, '-C', extracted]).status).toBe(0);
+			// Invalid release identity stops before any fetch, after module loading.
+			const result = spawnSync(process.execPath, [join(extracted, 'scripts/smoke-live-http.mjs')], {
+				cwd: extracted, env: { COMPATAIR_EXPECTED_RELEASE_SHA: 'invalid' }, encoding: 'utf8', timeout: 10_000,
+			});
+			expect(result.status).toBe(1);
+			expect(result.stderr).toContain('COMPATAIR_EXPECTED_RELEASE_SHA doit contenir un SHA Git complet');
+			expect(result.stderr).not.toContain('ERR_MODULE_NOT_FOUND');
+		} finally { rmSync(root, { recursive: true, force: true }); }
+	});
 	it('compresses the growing catalog within the bounded release storage ceiling', () => {
 		expect(workflow).toContain('tar -C dist -cf - . | xz -T2 -6 > "compatair-${GITHUB_SHA}.tar.xz"');
 		expect(workflow).toContain('release_bytes > 184549376');

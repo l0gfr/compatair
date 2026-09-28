@@ -126,8 +126,9 @@ run_public_smoke() {
 		return 1
 	fi
 	if systemctl is-enabled --quiet "$mcp_service" 2>/dev/null; then mcp_enabled=true; fi
-	COMPATAIR_EXPECTED_RELEASE_SHA="$expected_release" COMPATAIR_RELEASE_DIR="$release_directory" MCP_ENABLED="$mcp_enabled" "$node_binary" "$smoke_script"
-	COMPATAIR_EXPECTED_RELEASE_SHA="$expected_release" "$node_binary" "$seo_script"
+	# This function is called by `if ! ...`, where Bash suppresses errexit.
+	COMPATAIR_EXPECTED_RELEASE_SHA="$expected_release" COMPATAIR_RELEASE_DIR="$release_directory" MCP_ENABLED="$mcp_enabled" "$node_binary" "$smoke_script" || return 1
+	COMPATAIR_EXPECTED_RELEASE_SHA="$expected_release" "$node_binary" "$seo_script" || return 1
 }
 
 restore_previous_release() {
