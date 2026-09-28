@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import type { BurstScenario } from './burst-scenario';
 
 import { calculateSizing, compressorPressureIssues, CALCULATION_VERSION, STANDARD_ATMOSPHERE_BAR } from '../../server/air-sizing.mjs';
 export { CALCULATION_VERSION, STANDARD_ATMOSPHERE_BAR, compressorPressureIssues };
@@ -36,7 +37,7 @@ const inflationDemandSchema = z.object({
 
 const demandSchema = z.union([fixedFlowDemandSchema, perActionDemandSchema, inflationDemandSchema]);
 
-const compressorInputSchema = z.object({
+export const compressorInputSchema = z.object({
 	maxPressureBar: z.number().positive().max(50),
 	availableFadLpm: z.number().positive().max(20_000).optional(),
 	availableFadBasis: z.enum(['exact', 'interpolated', 'higher-pressure-bound']).optional(),
@@ -66,16 +67,6 @@ export type NormalizedSizingInput = z.output<typeof sizingInputSchema>;
 export type SizingVerdict = 'continuous' | 'intermittent' | 'incompatible' | 'insufficient_data';
 export type FlowBasis = 'documented-continuous' | 'derived-average';
 
-// Result metadata preserves the assumptions with the number, including in a
-// signed Passport. It does not turn them into documented machine properties.
-export const burstScenarioSchema = z.object({
-	model: z.literal('isothermal-first-burst'), control: z.literal('start-stop'), initialState: z.literal('stopped'),
-	referencePressureBar: z.literal(1), initialPressureBar: z.number().positive().max(50),
-	cutInPressureBar: z.number().nonnegative().max(50), usefulPressureBar: z.number().positive().max(50),
-	startDelaySeconds: z.literal(0), constantFadLpm: z.number().positive().max(20_000), demandLpm: z.number().positive().max(4_010_000),
-	stoppedMinutes: z.number().nonnegative(), loadedMinutes: z.number().nonnegative(),
-});
-
 export type SizingResult = {
 	verdict: SizingVerdict;
 	peakFlowLpm: number;
@@ -91,7 +82,7 @@ export type SizingResult = {
 	usableTankAirLiters?: number;
 	estimatedWorkMinutes?: number;
 	estimatedRecoveryMinutes?: number;
-	burstScenario?: z.infer<typeof burstScenarioSchema>;
+	burstScenario?: BurstScenario;
 	limitingFactor?: 'flow' | 'pressure' | 'duty_cycle' | 'data';
 	confidence: 'high' | 'medium' | 'low';
 	hypotheses: string[];

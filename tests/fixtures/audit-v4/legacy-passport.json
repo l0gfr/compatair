@@ -1,0 +1,67 @@
+{
+  "passportSchemaVersion": "2.0.0",
+  "createdAt": "2026-09-28T00:00:00.000Z",
+  "catalogVersion": "synthetic-legacy-fixture",
+  "calculationVersion": "1.4.2",
+  "configuration": {
+    "catalogVersion": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "calculationVersion": "1.4.2",
+    "demands": [
+      {
+        "model": "fixed-flow",
+        "id": "synthetic",
+        "flowLpm": 100,
+        "pressureBar": 6.3,
+        "quantity": 1,
+        "dutyFactor": 1
+      }
+    ],
+    "mode": "successive",
+    "safetyMargin": 0.25,
+    "sessionMinutes": 30,
+    "hoseLengthMeters": 10,
+    "hoseInnerDiameterMm": 9,
+    "measuredLeakLpm": 0,
+    "measuredPressureDropBar": 0,
+    "supplyPressureBar": 6.3,
+    "networkDistanceMeters": 14,
+    "fittingStandard": "euro-7.2",
+    "fittingCount": 4,
+    "filtration": "particle",
+    "usageProfile": "sustained",
+    "selectedCompressor": "custom",
+    "custom": {
+      "maxPressureBar": 10,
+      "availableFadLpm": 200,
+      "tankLiters": 50,
+      "dutyCycle": 1,
+      "cutInPressureBar": 7,
+      "cutOutPressureBar": 8
+    }
+  },
+  "inputSnapshot": {
+    "compressorLabel": "Synthetic legacy serialization fixture",
+    "toolLabels": [
+      "Synthetic demand"
+    ],
+    "availableFadLpm": 200,
+    "sources": [],
+    "warnings": [],
+    "missingData": [],
+    "possibleUpgrades": []
+  },
+  "resultSnapshot": {
+    "verdict": "continuous",
+    "peakFlowLpm": 100,
+    "averageFlowLpm": 100,
+    "recommendedFadLpm": 125,
+    "requiredPressureBar": 6.3,
+    "confidence": "medium",
+    "hypotheses": [],
+    "warnings": [],
+    "flowBasis": "documented-continuous",
+    "calculationVersion": "1.4.2"
+  },
+  "evidenceFingerprints": [],
+  "reportDigest": "f59da3b836c0ee841cce85b9b96926ffc78551bf0b54733fcde28bc63d09f276"
+}

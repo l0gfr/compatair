@@ -212,7 +212,7 @@ export function calculateSizing(value) {
 			startDelaySeconds: 0, constantFadLpm: compressor.availableFadLpm, demandLpm: peakFlowLpm,
 			stoppedMinutes, loadedMinutes,
 		};
-		hypotheses.push(`Première rafale théorique à pleine pointe (${peakFlowLpm.toLocaleString('fr-FR')} L/min) jusqu’à ${requiredPressureBar.toLocaleString('fr-FR')} bar : départ cuve pleine à ${compressor.cutOutPressureBar.toLocaleString('fr-FR')} bar, compresseur arrêté, commande marche/arrêt à ${compressor.cutInPressureBar.toLocaleString('fr-FR')} bar, délai supposé nul. Référence 1 bar absolu, température constante et FAD supposé constant à ${compressor.availableFadLpm.toLocaleString('fr-FR')} L/min après mise en charge.`);
+		hypotheses.push(`Rafale théorique jusqu’à ${requiredPressureBar} bar : cuve pleine à ${compressor.cutOutPressureBar} bar, compresseur arrêté. Marche/arrêt à ${compressor.cutInPressureBar} bar, délai nul ; FAD constant ${compressor.availableFadLpm} L/min en charge, pointe ${peakFlowLpm} L/min. Hypothèse isotherme, référence 1 bar absolu.`);
 		warnings.push('Cette durée est un scénario théorique, pas une autonomie garantie : débit réel sur la plage, délai de démarrage et limites thermiques non modélisés.');
 	} else warnings.push('Durée de rafale suspendue : la pointe ou le FAD sur la plage de pression ne sont pas établis.');
 	warnings.push('Durées réelles des rafales et pauses inconnues. Récupération et répétition des cycles non calculées ; la fréquence et la session ne les définissent pas.');

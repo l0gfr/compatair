@@ -37,6 +37,12 @@ export default defineConfig({
    },
   }],
 		build: {
+			// These schemas travel together in Passport journeys. One compressed
+			// chunk avoids repeating their field vocabulary across small modules.
+			rolldownOptions: { output: { codeSplitting: { groups: [{
+				name: 'passport-sizing',
+				test: /\/src\/domain\/(?:passport|sizing|burst-scenario)\.ts$/,
+			}] } } },
 			// Inline small stylesheets to avoid a blocking request; keep scripts and images external.
 			assetsInlineLimit: (filePath, content) => filePath.endsWith('.css') && content.length < 4096,
 		},

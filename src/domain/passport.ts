@@ -4,7 +4,8 @@ import type { Compressor, ToolProfile } from './catalog';
 import { commissioningRecordSchema } from './commissioning';
 import { resolveAvailableFad } from './compatibility';
 import { createInstallationPlan, installationPlanSchema, type InstallationPlan } from './installation-plan';
-import { burstScenarioSchema, CALCULATION_VERSION, sizeConfiguration, sizingInputSchema, type SizingResult } from './sizing';
+import { burstScenarioSchema } from './burst-scenario';
+import { CALCULATION_VERSION, compressorInputSchema, sizeConfiguration, sizingInputSchema, type SizingResult } from './sizing';
 
 function isHttpsUrl(value: string) { try { return new URL(value).protocol === 'https:'; } catch { return false; } }
 const httpsUrlSchema = z.url().max(4_096).refine(isHttpsUrl, 'URL HTTPS obligatoire');
@@ -13,26 +14,27 @@ export const PASSPORT_SCHEMA_VERSION = '1.0.0' as const;
 export const PASSPORT_ENVELOPE_SCHEMA_VERSION = '2.0.0' as const;
 
 const customCompressorSchema = z.object({
-	maxPressureBar: z.number().positive().max(50).optional(),
-	availableFadLpm: z.number().positive().max(20_000).optional(),
-	tankLiters: z.number().nonnegative().max(20_000).optional(),
-	dutyCycle: z.number().min(0.01).max(1).optional(),
-	cutInPressureBar: z.number().nonnegative().max(50).optional(),
-	cutOutPressureBar: z.number().positive().max(50).optional(),
+	maxPressureBar: compressorInputSchema.shape.maxPressureBar.optional(),
+	availableFadLpm: compressorInputSchema.shape.availableFadLpm,
+	tankLiters: compressorInputSchema.shape.tankLiters,
+	dutyCycle: compressorInputSchema.shape.dutyCycle,
+	cutInPressureBar: compressorInputSchema.shape.cutInPressureBar,
+	cutOutPressureBar: compressorInputSchema.shape.cutOutPressureBar,
 }).default({});
 
+// Keep the historical key order: envelope digests cover the serialized configuration.
 export const passportConfigurationSchema = z.object({
  catalogVersion: z.string().regex(/^[a-f0-9]{64}$/).optional(),
  calculationVersion: z.string().regex(/^\d+\.\d+\.\d+$/).optional(),
 	demands: sizingInputSchema.shape.demands,
-	mode: z.enum(['simultaneous', 'successive']).default('successive'),
+	mode: sizingInputSchema.shape.mode,
 	safetyMargin: z.number().min(0).max(0.5).default(0.25),
-	sessionMinutes: z.number().positive().max(1_440).default(30),
-	hoseLengthMeters: z.number().nonnegative().max(500).optional(),
-	hoseInnerDiameterMm: z.number().positive().max(100).optional(),
-	measuredLeakLpm: z.number().nonnegative().max(10_000).optional(),
-	measuredPressureDropBar: z.number().nonnegative().max(50).optional(),
-	supplyPressureBar: z.number().positive().max(50).optional(),
+	sessionMinutes: sizingInputSchema.shape.sessionMinutes,
+	hoseLengthMeters: sizingInputSchema.shape.hoseLengthMeters,
+	hoseInnerDiameterMm: sizingInputSchema.shape.hoseInnerDiameterMm,
+	measuredLeakLpm: sizingInputSchema.shape.measuredLeakLpm,
+	measuredPressureDropBar: sizingInputSchema.shape.measuredPressureDropBar,
+	supplyPressureBar: sizingInputSchema.shape.supplyPressureBar,
 	networkDistanceMeters: z.number().nonnegative().max(2_000).optional(),
 	fittingStandard: z.enum(['unknown', 'euro-7.2', 'iso-6150-b', 'other']).default('unknown'),
 	fittingCount: z.number().int().nonnegative().max(200).optional(),

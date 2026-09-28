@@ -1,4 +1,4 @@
-import { CALCULATION_VERSION } from './sizing';
+import { CALCULATION_VERSION } from '../../server/air-sizing.mjs';
 
 export type CompatibilityVerdict = 'continuous' | 'intermittent' | 'incompatible' | 'insufficient_data';
 export type FadResolutionBasis = 'exact' | 'interpolated' | 'higher-pressure-bound';
