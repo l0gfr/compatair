@@ -1,0 +1,804 @@
+{
+  "schemaVersion": 1,
+  "panelId": "compatair-metier-2026-09-27",
+  "associations": [
+    {
+      "queryId": "q001",
+      "routes": [
+        "/compresseurs/mecafer-fifty-50l-2hp/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q002",
+      "routes": [
+        "/compresseurs/mecafer-fifty-50l-2hp/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q003",
+      "routes": [
+        "/compresseurs/einhell-tc-ac-240-50-10-of/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q004",
+      "routes": [
+        "/compresseurs/einhell-te-ac-430-90-10/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q005",
+      "routes": [
+        "/compresseurs/metabo-basic-250-24-w/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q006",
+      "routes": [
+        "/compresseurs/parkside-psko-248-b1/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q007",
+      "routes": [
+        "/compresseurs/scheppach-hc51v/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q008",
+      "routes": [
+        "/compresseurs/stanley-dn200-10-5/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q009",
+      "routes": [],
+      "relation": "unmapped",
+      "limit": "La référence Michelin MCX300-858 ne figure pas dans le catalogue examiné. Ne pas lui substituer le MB50."
+    },
+    {
+      "queryId": "q010",
+      "routes": [
+        "/compresseurs/abac-pole-position-os20p/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q011",
+      "routes": [
+        "/outils-pneumatiques/ponceuse-excentrique-einhell-tc-pe-150/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q012",
+      "routes": [
+        "/outils-pneumatiques/ponceuse-orbitale-pneumatique-metabo-dsx-150/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q013",
+      "routes": [
+        "/outils-pneumatiques/pistolet-peinture-hvlp-metabo-fsp-600/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q014",
+      "routes": [
+        "/outils-pneumatiques/pistolet-sablage-metabo-ssp-1000/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q015",
+      "routes": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-einhell-tc-pn-50/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q016",
+      "routes": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-metabo-dkng-40-50/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q017",
+      "routes": [
+        "/outils-pneumatiques/cle-a-chocs-chicago-pneumatic-cp7748/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q018",
+      "routes": [
+        "/outils-pneumatiques/pistolet-peinture-hvlp-sata-jet-x-1200170/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q019",
+      "routes": [
+        "/outils-pneumatiques/riveteuse-hazet-9037spc/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q020",
+      "routes": [
+        "/outils-pneumatiques/pistolet-sablage-parkside-pdsp-1000-e6/"
+      ],
+      "relation": "exact-reference",
+      "limit": "Association à la référence exacte ; la présence de la fiche ne garantit pas que la donnée demandée soit documentée."
+    },
+    {
+      "queryId": "q021",
+      "routes": [
+        "/guides/compresseur-pour-tornador-black-classic/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q022",
+      "routes": [
+        "/guides/compresseur-pour-tornador-black-classic/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q023",
+      "routes": [
+        "/guides/compresseur-pour-tornador-black-classic/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q024",
+      "routes": [
+        "/guides/compresseur-pour-tornador-black-classic/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q025",
+      "routes": [
+        "/guides/compresseur-pour-cle-a-chocs-pneumatique/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q026",
+      "routes": [
+        "/guides/cle-a-chocs-manque-couple-diagnostic/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q027",
+      "routes": [
+        "/guides/cle-a-chocs-1-pouce-poids-lourds-debit-flexible/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q028",
+      "routes": [
+        "/guides/utiliser-plusieurs-outils-pneumatiques/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q029",
+      "routes": [
+        "/guides/soufflette-garage-securite-bruit-consommation/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q030",
+      "routes": [
+        "/guides/compresseur-triphase-ou-monophase-atelier/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q031",
+      "routes": [
+        "/guides/compresseur-pour-pistolet-peinture-hvlp/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q032",
+      "routes": [
+        "/guides/pistolet-lvlp-vs-hvlp-compresseur/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q033",
+      "routes": [
+        "/guides/compresseur-pour-pistolet-peinture-hvlp/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q034",
+      "routes": [
+        "/guides/filtration-air-cabine-peinture-etages/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q035",
+      "routes": [
+        "/guides/compresseur-pour-ponceuse-pneumatique/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q036",
+      "routes": [
+        "/guides/diagnostiquer-chute-pression-air-comprime/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q037",
+      "routes": [
+        "/guides/compresseur-pour-sablage-pneumatique/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q038",
+      "routes": [
+        "/guides/buse-sablage-diametre-pression-debit-compresseur/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q039",
+      "routes": [
+        "/guides/buse-sablage-diametre-pression-debit-compresseur/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q040",
+      "routes": [
+        "/guides/point-rosee-secheur-filtre-air-comprime/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q041",
+      "routes": [
+        "/guides/compresseur-pour-agrafeuse-cloueuse-pneumatique/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q042",
+      "routes": [
+        "/guides/cadence-clouage-pneumatique-chantier/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q043",
+      "routes": [
+        "/guides/cadence-clouage-pneumatique-chantier/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q044",
+      "routes": [
+        "/guides/compresseur-portatif-clouage-chantier/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q045",
+      "routes": [
+        "/guides/compresseur-pour-agrafeuse-cloueuse-pneumatique/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q046",
+      "routes": [
+        "/guides/compresseur-pour-riveteuse-pneumatique/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q047",
+      "routes": [
+        "/guides/compresseur-pour-gonfler-pneus/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q048",
+      "routes": [
+        "/guides/compresseur-pour-gonfler-pneus/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q049",
+      "routes": [
+        "/guides/gonflage-grand-volume-poids-lourds-temps-securite/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q050",
+      "routes": [
+        "/guides/compresseur-sur-chassis-sans-cuve/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q051",
+      "routes": [
+        "/guides/raccord-rapide-securite-decompression-air-comprime/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q052",
+      "routes": [
+        "/guides/raccord-air-comprime-bsp-npt-1-4/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q053",
+      "routes": [
+        "/guides/raccord-rapide-securite-decompression-air-comprime/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q054",
+      "routes": [
+        "/guides/diametre-longueur-flexible-air-comprime/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q055",
+      "routes": [
+        "/guides/diametre-longueur-flexible-air-comprime/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q056",
+      "routes": [
+        "/guides/diagnostiquer-chute-pression-air-comprime/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q057",
+      "routes": [
+        "/guides/flexible-air-comprime-chantier-25-50-metres/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q058",
+      "routes": [
+        "/guides/flexible-enrouleur-raccords-garage-debit/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q059",
+      "routes": [
+        "/guides/groupe-frl-filtre-regulateur-lubrificateur/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q060",
+      "routes": [
+        "/guides/groupe-frl-filtre-regulateur-lubrificateur/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q061",
+      "routes": [
+        "/guides/choisir-compresseur-silencieux-atelier/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q062",
+      "routes": [
+        "/guides/bruit-compresseur-lire-decibels/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q063",
+      "routes": [
+        "/guides/bruit-compresseur-lire-decibels/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q064",
+      "routes": [
+        "/guides/compresseur-piston-ou-vis-profil-charge/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q065",
+      "routes": [
+        "/guides/compresseur-piston-ou-vis-profil-charge/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q066",
+      "routes": [
+        "/guides/ventilation-local-compresseur-surchauffe/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q067",
+      "routes": [
+        "/guides/compresseur-sans-huile-ou-lubrifie/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q068",
+      "routes": [
+        "/guides/compresseur-triphase-ou-monophase-atelier/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q069",
+      "routes": [
+        "/guides/compresseur-triphase-ou-monophase-atelier/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q070",
+      "routes": [
+        "/guides/cout-metre-cube-air-comprime/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q071",
+      "routes": [
+        "/guides/compresseur-ne-monte-plus-en-pression/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q072",
+      "routes": [
+        "/guides/compresseur-ne-monte-plus-en-pression/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q073",
+      "routes": [
+        "/guides/compresseur-perd-pression-arret-fuite-refroidissement/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q074",
+      "routes": [
+        "/guides/diagnostiquer-chute-pression-air-comprime/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q075",
+      "routes": [
+        "/guides/temps-remplissage-cuve-compresseur-debit/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q076",
+      "routes": [
+        "/guides/pressostat-compresseur-pression-enclenchement-differentiel/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q077",
+      "routes": [
+        "/guides/point-rosee-secheur-filtre-air-comprime/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q078",
+      "routes": [
+        "/guides/pistolet-peinture-jet-deforme-crachote-diagnostic/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q079",
+      "routes": [
+        "/guides/ventilation-local-compresseur-surchauffe/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q080",
+      "routes": [
+        "/guides/detecter-mesurer-fuites-air-comprime/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q081",
+      "routes": [
+        "/guides/choisir-volume-cuve-24-50-90-litres/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q082",
+      "routes": [
+        "/guides/choisir-volume-cuve-24-50-90-litres/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q083",
+      "routes": [
+        "/guides/gentilin-c330-24-50-100-debit/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q084",
+      "routes": [
+        "/guides/compresseur-triphase-ou-monophase-atelier/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q085",
+      "routes": [
+        "/guides/choisir-compresseur-mobile-chantier-fad-autonomie/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q086",
+      "routes": [
+        "/guides/compresseur-piston-ou-vis-profil-charge/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q087",
+      "routes": [
+        "/guides/compresseur-sans-huile-ou-lubrifie/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q088",
+      "routes": [
+        "/guides/compresseur-piston-ou-vis-profil-charge/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q089",
+      "routes": [
+        "/guides/debit-restitue-fad-vs-debit-aspire/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q090",
+      "routes": [
+        "/guides/comparatif-compresseurs-debit-restitue/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q091",
+      "routes": [
+        "/guides/debit-restitue-fad-vs-debit-aspire/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q092",
+      "routes": [
+        "/guides/lire-fiche-cagi-compresseur-iso-1217/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q093",
+      "routes": [
+        "/guides/convertir-cfm-l-min-nl-min-air-comprime/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q094",
+      "routes": [
+        "/guides/convertir-cfm-l-min-nl-min-air-comprime/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q095",
+      "routes": [
+        "/guides/stockage-primaire-secondaire-air-comprime/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q096",
+      "routes": [
+        "/guides/temps-remplissage-cuve-compresseur-debit/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q097",
+      "routes": [
+        "/guides/utiliser-plusieurs-outils-pneumatiques/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q098",
+      "routes": [
+        "/guides/bar-psi-pression-absolue-relative/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q099",
+      "routes": [
+        "/guides/guide-complet-dimensionner-compresseur-air/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    },
+    {
+      "queryId": "q100",
+      "routes": [
+        "/guides/pression-travail-6-3-bar-outils-pneumatiques/"
+      ],
+      "relation": "related-guide",
+      "limit": "Guide connexe existant. Le registre ne prétend ni réponse exhaustive à cette requête ni classement Google ; consulter les passages sourcés et les limites."
+    }
+  ]
+}

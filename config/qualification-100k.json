@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "declaredAt": "2026-09-28",
+  "targetReferences": 100000,
+  "scope": "Synthetic local qualification; no production publication or traffic.",
+  "distribution": "Retain every current record, then cyclically replicate all profiles within each kind; compressor/tool quotas proportional to the source catalog.",
+  "budgets": {
+    "databaseBuildSeconds": 180,
+    "databaseBytes": 2147483648,
+    "serviceStartupMs": 5000,
+    "servicePeakMiB": 256,
+    "httpP95Ms": 150,
+    "httpP99Ms": 500,
+    "httpUnexpectedErrors": 0,
+    "publicationSeconds": 1500,
+    "publicationPeakMiB": 8192,
+    "archiveBytes": 184549376,
+    "restoreSeconds": 300,
+    "rollbackSeconds": 120
+  },
+  "budgetBasis": {
+    "servicePeakMiB": "Existing service scale guard: scripts/benchmark-catalog-scale.mjs",
+    "archiveBytes": "Existing production archive ceiling: .github/workflows/deploy-production.yml; not raised for this trial",
+    "publicationSeconds": "Existing CI job deadline: 25 minutes; proposed complete publication trial ceiling",
+    "other": "Engineering acceptance budgets declared before execution, not measured production SLAs"
+  },
+  "http": {
+    "concurrency": 4,
+    "uniquePairs": 50,
+    "passes": ["cold-process-cache", "warm-process-cache"],
+    "requestsPerEndpoint": 100,
+    "rateLimitProbeAdditionalRequests": 25,
+    "limit": "100 normal requests per endpoint remain below the unchanged 120/minute limiter. p99 with 50 observations per phase is a coarse laboratory statistic. OS disk-cache state is not controlled."
+  },
+  "publicationRequiredStages": [
+    "isolated-source-preparation",
+    "cold-build-and-snapshots",
+    "warm-build",
+    "archive-and-checksum",
+    "restore-to-empty-directory",
+    "file-hash-parity-and-restored-service",
+    "staging-apache-systemd-failure-drill",
+    "exact-release-sha-and-public-smokes"
+  ]
+}

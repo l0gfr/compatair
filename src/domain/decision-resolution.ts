@@ -100,6 +100,16 @@ export function explainDecisionDataGap(
 		title: 'Endurance non établie',
 		detail: 'Le débit documenté reste comparable, mais la durée de fonctionnement admissible manque. Le cycle constructeur est nécessaire avant de conclure à un fonctionnement continu.',
 	};
+	if (result.warnings.some((warning) => warning.includes('La borne de FAD ne suffit pas'))) return {
+		code: 'pressure_outside_curve',
+		title: 'FAD à la pression utile nécessaire',
+		detail: result.warnings.at(-1)!,
+	};
+	if (result.warnings.some((warning) => warning.includes('pressions de coupure') || warning.includes('fonctionnement intermittent'))) return {
+		code: 'missing_receiver_cycle',
+		title: 'Réserve intermittente non calculable',
+		detail: 'Le débit continu ne couvre pas la pointe. La cuve et les seuils de régulation sont nécessaires pour calculer la réserve.',
+	};
 	if (!compressor) return {
 		code: 'missing_custom_fad',
 		title: 'Débit restitué à renseigner',
@@ -120,11 +130,6 @@ export function explainDecisionDataGap(
 		code: 'pressure_outside_curve',
 		title: `Courbe FAD absente à ${requiredPressureBar.toLocaleString('fr-FR')} bar`,
 		detail: `Le dernier point documenté se situe à ${maximumDocumentedPressure.toLocaleString('fr-FR')} bar. CompatAir n’extrapole pas le débit au-delà de cette pression.`,
-	};
-	if (result.warnings.some((warning) => warning.includes('pressions de coupure') || warning.includes('fonctionnement intermittent'))) return {
-		code: 'missing_receiver_cycle',
-		title: 'Réserve intermittente non calculable',
-		detail: 'Le débit continu ne couvre pas la pointe. Les pressions de réenclenchement et d’arrêt sont nécessaires pour prouver ce que la cuve peut réellement soutenir.',
 	};
 	return {
 		code: 'unknown',

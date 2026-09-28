@@ -1010,6 +1010,9 @@ const commercialOffers = activeOffers
 
 	form?.addEventListener('submit', async (event) => {
 		event.preventDefault(); if (!output || !list || !evaluated) return;
+		output.hidden = true;
+		if (mobileResult) mobileResult.hidden = true;
+		if (mobileSubmit) mobileSubmit.hidden = false;
 		clearFormError();
 		setCalculatorUiState('loading', 'Calcul du besoin et vérification des compresseurs documentés…');
 		const appliedCounterfactualFamily = pendingCounterfactualFamily;

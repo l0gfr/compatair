@@ -1,0 +1,2038 @@
+{
+  "schemaVersion": 1,
+  "provenance": {
+    "document": "contre_audit_compatair_seo_metier_v3.html",
+    "sha256": "4eb9d4ad214fc9f8f4635a378966b9c76b00b8602a1c70c2d9e27e625a20c3b2",
+    "observedCommit": "896ce91f3bd7bd7873421d7f21e93652a42d7590",
+    "scope": "Additional synthetic fixtures only; no application certification. JSON extracted with HTMLParser; embedded JavaScript never executed."
+  },
+  "engine": [
+    {
+      "id": "E01",
+      "label": "Débit et endurance documentés, sans seuils de régulation",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1
+        }
+      },
+      "expected": "continuous",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Cycle maximal déclaré : 100 %."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "continuous",
+        "availablePressureBar": 10,
+        "usefulPressureBar": 6.3,
+        "confidence": "high",
+        "warnings": []
+      }
+    },
+    {
+      "id": "E02",
+      "label": "Réenclenchement à 4 bar pour besoin de 6,3 bar",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 4,
+          "cutOutPressureBar": 8
+        }
+      },
+      "expected": "insufficient_data",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Cycle maximal déclaré : 100 %.",
+          "Réserve utile = cuve × (arrêt − max(réenclenchement, pression utile)) / 1 bar. Approximation isotherme à 1 bar absolu ; le débit produit ne change pas."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "insufficient_data",
+        "availablePressureBar": 8,
+        "usefulPressureBar": 6.3,
+        "usableTankAirLiters": 85.00000000000001,
+        "limitingFactor": "pressure",
+        "confidence": "low",
+        "warnings": [
+          "La pression de réenclenchement est inférieure au besoin, pertes comprises. Vérifier la régulation et la pression en charge."
+        ]
+      }
+    },
+    {
+      "id": "E03",
+      "label": "Seuils inversés 9 / 8 bar",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 9,
+          "cutOutPressureBar": 8
+        }
+      },
+      "expected": "rejected",
+      "error": "La pression de réenclenchement doit être inférieure à la pression d’arrêt."
+    },
+    {
+      "id": "E04",
+      "label": "Seuils égaux 8 / 8 bar",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 8,
+          "cutOutPressureBar": 8
+        }
+      },
+      "expected": "rejected",
+      "error": "La pression de réenclenchement doit être inférieure à la pression d’arrêt."
+    },
+    {
+      "id": "E05",
+      "label": "Arrêt supérieur à la pression maximale",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 8,
+          "cutOutPressureBar": 11
+        }
+      },
+      "expected": "rejected",
+      "error": "La pression de régulation dépasse la pression maximale de la machine."
+    },
+    {
+      "id": "E06",
+      "label": "Réenclenchement seul supérieur à la pression maximale",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 11
+        }
+      },
+      "expected": "rejected",
+      "error": "La pression de régulation dépasse la pression maximale de la machine."
+    },
+    {
+      "id": "E07",
+      "label": "Réenclenchement seul, pourtant supérieur au besoin",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 7
+        }
+      },
+      "expected": "insufficient_data",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Cycle maximal déclaré : 100 %."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "insufficient_data",
+        "availablePressureBar": 10,
+        "usefulPressureBar": 6.3,
+        "limitingFactor": "pressure",
+        "confidence": "low",
+        "warnings": [
+          "Renseigner les deux seuils de régulation pour vérifier le maintien de pression."
+        ]
+      }
+    },
+    {
+      "id": "E08",
+      "label": "Arrêt seul à 8 bar",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutOutPressureBar": 8
+        }
+      },
+      "expected": "insufficient_data",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Cycle maximal déclaré : 100 %."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "insufficient_data",
+        "availablePressureBar": 8,
+        "usefulPressureBar": 6.3,
+        "limitingFactor": "pressure",
+        "confidence": "low",
+        "warnings": [
+          "Renseigner les deux seuils de régulation pour vérifier le maintien de pression."
+        ]
+      }
+    },
+    {
+      "id": "E09",
+      "label": "Réenclenchement égal au besoin nominal",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 6.3,
+          "cutOutPressureBar": 8
+        }
+      },
+      "expected": "continuous",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Cycle maximal déclaré : 100 %.",
+          "Réserve utile = cuve × (arrêt − max(réenclenchement, pression utile)) / 1 bar. Approximation isotherme à 1 bar absolu ; le débit produit ne change pas."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "continuous",
+        "availablePressureBar": 8,
+        "usefulPressureBar": 6.3,
+        "usableTankAirLiters": 85.00000000000001,
+        "confidence": "high",
+        "warnings": []
+      }
+    },
+    {
+      "id": "E10",
+      "label": "Pertes mesurées de 0,2 bar ajoutées au besoin",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 6.3,
+          "cutOutPressureBar": 8
+        },
+        "measuredPressureDropBar": 0.2
+      },
+      "expected": "insufficient_data",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.5,
+        "toolPressureBar": 6.3,
+        "measuredPressureDropBar": 0.2,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Chute mesurée en charge ajoutée au besoin : 0,2 bar.",
+          "Cycle maximal déclaré : 100 %.",
+          "Réserve utile = cuve × (arrêt − max(réenclenchement, pression utile)) / 1 bar. Approximation isotherme à 1 bar absolu ; le débit produit ne change pas."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "insufficient_data",
+        "availablePressureBar": 8,
+        "usefulPressureBar": 6.5,
+        "usableTankAirLiters": 75,
+        "limitingFactor": "pressure",
+        "confidence": "low",
+        "warnings": [
+          "La pression de réenclenchement est inférieure au besoin, pertes comprises. Vérifier la régulation et la pression en charge."
+        ]
+      }
+    },
+    {
+      "id": "E11",
+      "label": "Seuil couvre exactement besoin et pertes",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 6.5,
+          "cutOutPressureBar": 8
+        },
+        "measuredPressureDropBar": 0.2
+      },
+      "expected": "continuous",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.5,
+        "toolPressureBar": 6.3,
+        "measuredPressureDropBar": 0.2,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Chute mesurée en charge ajoutée au besoin : 0,2 bar.",
+          "Cycle maximal déclaré : 100 %.",
+          "Réserve utile = cuve × (arrêt − max(réenclenchement, pression utile)) / 1 bar. Approximation isotherme à 1 bar absolu ; le débit produit ne change pas."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "continuous",
+        "availablePressureBar": 8,
+        "usefulPressureBar": 6.5,
+        "usableTankAirLiters": 75,
+        "confidence": "high",
+        "warnings": []
+      }
+    },
+    {
+      "id": "E12",
+      "label": "Pression d’arrêt réellement insuffisante",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutOutPressureBar": 5
+        }
+      },
+      "expected": "incompatible",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "incompatible",
+        "availablePressureBar": 5,
+        "usefulPressureBar": 5,
+        "limitingFactor": "pressure",
+        "confidence": "high",
+        "warnings": [
+          "La pression réglée, mesurée ou de coupure est inférieure à la pression requise."
+        ]
+      }
+    },
+    {
+      "id": "E13",
+      "label": "Pression de sortie réglée trop basse",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1
+        },
+        "supplyPressureBar": 5
+      },
+      "expected": "incompatible",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Pression de sortie réglée ou mesurée : 5 bar, plafonnée au maximum de la machine."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "incompatible",
+        "availablePressureBar": 5,
+        "usefulPressureBar": 5,
+        "limitingFactor": "pressure",
+        "confidence": "high",
+        "warnings": [
+          "La pression réglée, mesurée ou de coupure est inférieure à la pression requise."
+        ]
+      }
+    },
+    {
+      "id": "E14",
+      "label": "FAD absent",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1
+        }
+      },
+      "expected": "insufficient_data",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "insufficient_data",
+        "availablePressureBar": 10,
+        "limitingFactor": "data",
+        "confidence": "low",
+        "warnings": [
+          "Le débit restitué à la pression demandée manque. Le débit aspiré ne peut pas le remplacer."
+        ]
+      }
+    },
+    {
+      "id": "E15",
+      "label": "Cycle de service absent avec FAD suffisant",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50
+        }
+      },
+      "expected": "insufficient_data",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "insufficient_data",
+        "availablePressureBar": 10,
+        "usefulPressureBar": 6.3,
+        "limitingFactor": "data",
+        "confidence": "low",
+        "warnings": [
+          "Le cycle de service du compresseur manque : endurance continue non établie malgré le FAD connu."
+        ]
+      }
+    },
+    {
+      "id": "E16",
+      "label": "Borne FAD à pression plus élevée, insuffisante",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 60,
+          "availableFadBasis": "higher-pressure-bound",
+          "tankLiters": 50,
+          "dutyCycle": 1
+        }
+      },
+      "expected": "insufficient_data",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "insufficient_data",
+        "availablePressureBar": 10,
+        "usefulPressureBar": 6.3,
+        "limitingFactor": "data",
+        "confidence": "low",
+        "warnings": [
+          "La borne de FAD ne suffit pas à conclure. Un débit documenté à la pression utile est requis."
+        ]
+      }
+    },
+    {
+      "id": "E17",
+      "label": "FAD exact insuffisant",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 60,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1
+        }
+      },
+      "expected": "incompatible",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Cycle maximal déclaré : 100 %."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "incompatible",
+        "availablePressureBar": 10,
+        "usefulPressureBar": 6.3,
+        "limitingFactor": "flow",
+        "confidence": "high",
+        "warnings": [
+          "La capacité moyenne documentée ne couvre pas la demande moyenne saisie."
+        ]
+      }
+    },
+    {
+      "id": "E18",
+      "label": "Déficit exact reste concluant malgré seuils partiels",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 60,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutOutPressureBar": 8
+        }
+      },
+      "expected": "incompatible",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Cycle maximal déclaré : 100 %."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "incompatible",
+        "availablePressureBar": 8,
+        "usefulPressureBar": 6.3,
+        "limitingFactor": "flow",
+        "confidence": "high",
+        "warnings": [
+          "La capacité moyenne documentée ne couvre pas la demande moyenne saisie."
+        ]
+      }
+    },
+    {
+      "id": "E19",
+      "label": "Déficit exact reste concluant malgré réenclenchement bas",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 60,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 4,
+          "cutOutPressureBar": 8
+        }
+      },
+      "expected": "incompatible",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Cycle maximal déclaré : 100 %.",
+          "Réserve utile = cuve × (arrêt − max(réenclenchement, pression utile)) / 1 bar. Approximation isotherme à 1 bar absolu ; le débit produit ne change pas."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "incompatible",
+        "availablePressureBar": 8,
+        "usefulPressureBar": 6.3,
+        "usableTankAirLiters": 85.00000000000001,
+        "limitingFactor": "flow",
+        "confidence": "high",
+        "warnings": [
+          "La capacité moyenne documentée ne couvre pas la demande moyenne saisie."
+        ]
+      }
+    },
+    {
+      "id": "E20",
+      "label": "Endurance documentée insuffisante",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 0.25
+        }
+      },
+      "expected": "incompatible",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Cycle maximal déclaré : 25 %."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "incompatible",
+        "availablePressureBar": 10,
+        "usefulPressureBar": 6.3,
+        "limitingFactor": "duty_cycle",
+        "confidence": "high",
+        "warnings": [
+          "La capacité moyenne documentée ne couvre pas la demande moyenne saisie."
+        ]
+      }
+    },
+    {
+      "id": "E21",
+      "label": "Pointe intermittente avec réserve et seuils suffisants",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 200,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 0.25
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 100,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 6.5,
+          "cutOutPressureBar": 8
+        }
+      },
+      "expected": "intermittent",
+      "result": {
+        "peakFlowLpm": 200,
+        "averageFlowLpm": 50,
+        "recommendedFadLpm": 250,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Cycle maximal déclaré : 100 %.",
+          "Réserve utile = cuve × (arrêt − max(réenclenchement, pression utile)) / 1 bar. Approximation isotherme à 1 bar absolu ; le débit produit ne change pas."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "intermittent",
+        "availablePressureBar": 8,
+        "usefulPressureBar": 6.3,
+        "usableTankAirLiters": 75,
+        "estimatedWorkMinutes": 0.75,
+        "estimatedRecoveryMinutes": 1.5,
+        "limitingFactor": "flow",
+        "confidence": "medium",
+        "warnings": [
+          "Réserve insuffisante pour soutenir la pointe durant la session. Le rythme des pauses reste à vérifier.",
+          "Fonctionnement intermittent selon les pressions de coupure et le profil d’usage saisis."
+        ]
+      }
+    },
+    {
+      "id": "E22",
+      "label": "Pointe intermittente sans réserve documentée",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 200,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 0.25
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 100,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1
+        }
+      },
+      "expected": "insufficient_data",
+      "result": {
+        "peakFlowLpm": 200,
+        "averageFlowLpm": 50,
+        "recommendedFadLpm": 250,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Cycle maximal déclaré : 100 %."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "insufficient_data",
+        "availablePressureBar": 10,
+        "usefulPressureBar": 6.3,
+        "limitingFactor": "data",
+        "confidence": "low",
+        "warnings": [
+          "Le débit de pointe dépasse le FAD. Les pressions de coupure et la cuve sont nécessaires pour estimer un fonctionnement intermittent."
+        ]
+      }
+    },
+    {
+      "id": "E23",
+      "label": "Pointe intermittente avec seuil inférieur au besoin",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 200,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 0.25
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 100,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1,
+          "cutInPressureBar": 4,
+          "cutOutPressureBar": 8
+        }
+      },
+      "expected": "insufficient_data",
+      "result": {
+        "peakFlowLpm": 200,
+        "averageFlowLpm": 50,
+        "recommendedFadLpm": 250,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Cycle maximal déclaré : 100 %.",
+          "Réserve utile = cuve × (arrêt − max(réenclenchement, pression utile)) / 1 bar. Approximation isotherme à 1 bar absolu ; le débit produit ne change pas."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "insufficient_data",
+        "availablePressureBar": 8,
+        "usefulPressureBar": 6.3,
+        "usableTankAirLiters": 85.00000000000001,
+        "limitingFactor": "pressure",
+        "confidence": "low",
+        "warnings": [
+          "La pression de réenclenchement est inférieure au besoin, pertes comprises. Vérifier la régulation et la pression en charge."
+        ]
+      }
+    },
+    {
+      "id": "E24",
+      "label": "Besoin par action : avertissement sur la pointe",
+      "input": {
+        "demands": [
+          {
+            "id": "action",
+            "model": "per-action",
+            "litersPerAction": 1,
+            "actionsPerMinute": 20,
+            "quantity": 2,
+            "pressureBar": 6.3
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1
+        }
+      },
+      "expected": "continuous",
+      "result": {
+        "peakFlowLpm": 40,
+        "averageFlowLpm": 40,
+        "recommendedFadLpm": 50,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "2 × 1 L/action × 20 actions/min = 40 L/min en moyenne.",
+          "Cycle maximal déclaré : 100 %."
+        ],
+        "flowBasis": "derived-average",
+        "calculationVersion": "1.4.2",
+        "verdict": "continuous",
+        "availablePressureBar": 10,
+        "usefulPressureBar": 6.3,
+        "confidence": "high",
+        "warnings": [
+          "Le débit moyen par action ne décrit pas la pointe. Vérifier flexible, raccords et réserve locale."
+        ]
+      }
+    },
+    {
+      "id": "E25",
+      "label": "Gonflage idéal, unités d’air libre explicites",
+      "input": {
+        "demands": [
+          {
+            "id": "inflation",
+            "model": "inflation",
+            "volumeLiters": 50,
+            "initialPressureBar": 0,
+            "targetPressureBar": 2,
+            "quantity": 1,
+            "targetMinutes": 5
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1
+        }
+      },
+      "expected": "continuous",
+      "result": {
+        "peakFlowLpm": 19.738465334320257,
+        "averageFlowLpm": 19.738465334320257,
+        "recommendedFadLpm": 24.67308166790032,
+        "requiredPressureBar": 2,
+        "toolPressureBar": 2,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Gonflage : 98,69 L d’air libre équivalent pour 1 × 50 L, de 0 à 2 bar relatifs.",
+          "Atmosphère standard : 1,013 bar. Gaz parfait à température et volume constants.",
+          "Cycle maximal déclaré : 100 %."
+        ],
+        "flowBasis": "derived-average",
+        "calculationVersion": "1.4.2",
+        "verdict": "continuous",
+        "availablePressureBar": 10,
+        "usefulPressureBar": 2,
+        "confidence": "high",
+        "warnings": [
+          "Gonflage idéal : échauffement, fuites et pertes de valve, flexible ou détendeur non modélisés."
+        ]
+      }
+    },
+    {
+      "id": "E26",
+      "label": "Sans compresseur : besoin calculé seulement",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30
+      },
+      "expected": "insufficient_data",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "insufficient_data",
+        "limitingFactor": "data",
+        "confidence": "medium",
+        "warnings": [
+          "Sans compresseur : seul le besoin en air est calculé."
+        ]
+      }
+    },
+    {
+      "id": "E27",
+      "label": "Fuite mesurée augmente la demande",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1
+        },
+        "measuredLeakLpm": 150
+      },
+      "expected": "incompatible",
+      "result": {
+        "peakFlowLpm": 250,
+        "averageFlowLpm": 250,
+        "recommendedFadLpm": 312.5,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "measuredLeakLpm": 150,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Fuite mesurée ajoutée au besoin : 150 L/min.",
+          "Cycle maximal déclaré : 100 %."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "incompatible",
+        "availablePressureBar": 10,
+        "usefulPressureBar": 6.3,
+        "limitingFactor": "flow",
+        "confidence": "high",
+        "warnings": [
+          "La capacité moyenne documentée ne couvre pas la demande moyenne saisie."
+        ]
+      }
+    },
+    {
+      "id": "E28",
+      "label": "Marge recommandée manquante, nominal suffisant",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 110,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1
+        }
+      },
+      "expected": "continuous",
+      "result": {
+        "peakFlowLpm": 100,
+        "averageFlowLpm": 100,
+        "recommendedFadLpm": 125,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés successivement.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Cycle maximal déclaré : 100 %."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "continuous",
+        "availablePressureBar": 10,
+        "usefulPressureBar": 6.3,
+        "confidence": "high",
+        "warnings": [
+          "Le débit nominal est couvert, mais la marge recommandée de 25 % n’est pas atteinte."
+        ]
+      }
+    },
+    {
+      "id": "E29",
+      "label": "Pression utile totale au-delà de 50 bar",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 100,
+            "pressureBar": 49,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "successive",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1
+        },
+        "measuredPressureDropBar": 2
+      },
+      "expected": "rejected",
+      "error": "La pression outil et la chute mesurée dépassent ensemble la limite de calcul de 50 bar."
+    },
+    {
+      "id": "E30",
+      "label": "Deux outils simultanés : somme des débits",
+      "input": {
+        "demands": [
+          {
+            "id": "synthetic-tool",
+            "model": "fixed-flow",
+            "flowLpm": 120,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          },
+          {
+            "id": "second",
+            "model": "fixed-flow",
+            "flowLpm": 120,
+            "pressureBar": 6.3,
+            "quantity": 1,
+            "dutyFactor": 1
+          }
+        ],
+        "mode": "simultaneous",
+        "safetyMargin": 0.25,
+        "sessionMinutes": 30,
+        "compressor": {
+          "maxPressureBar": 10,
+          "availableFadLpm": 200,
+          "availableFadBasis": "exact",
+          "tankLiters": 50,
+          "dutyCycle": 1
+        }
+      },
+      "expected": "incompatible",
+      "result": {
+        "peakFlowLpm": 240,
+        "averageFlowLpm": 240,
+        "recommendedFadLpm": 300,
+        "requiredPressureBar": 6.3,
+        "toolPressureBar": 6.3,
+        "hypotheses": [
+          "Outils utilisés simultanément.",
+          "Marge de dimensionnement CompatAir : 25 %.",
+          "Consommations et fréquences saisies : hypothèses utilisateur.",
+          "Session : 30 min. La fréquence ne précise pas la durée des rafales.",
+          "Cycle maximal déclaré : 100 %."
+        ],
+        "flowBasis": "documented-continuous",
+        "calculationVersion": "1.4.2",
+        "verdict": "incompatible",
+        "availablePressureBar": 10,
+        "usefulPressureBar": 6.3,
+        "limitingFactor": "flow",
+        "confidence": "high",
+        "warnings": [
+          "La capacité moyenne documentée ne couvre pas la demande moyenne saisie."
+        ]
+      }
+    }
+  ],
+  "lexicalSelf": [
+    {
+      "id": "q001",
+      "query": "Mecafer Fifty débit restitué",
+      "expected": true
+    },
+    {
+      "id": "q002",
+      "query": "Mecafer Fifty pression 7 bar",
+      "expected": true
+    },
+    {
+      "id": "q003",
+      "query": "Einhell TC-AC 240/50/10 OF débit",
+      "expected": true
+    },
+    {
+      "id": "q004",
+      "query": "Einhell TE-AC 430/90/10 débit restitué",
+      "expected": true
+    },
+    {
+      "id": "q005",
+      "query": "Metabo Basic 250-24 W débit effectif",
+      "expected": true
+    },
+    {
+      "id": "q006",
+      "query": "Parkside PSKO 248 B1 consommation outils",
+      "expected": true
+    },
+    {
+      "id": "q007",
+      "query": "Scheppach HC51V débit restitué",
+      "expected": true
+    },
+    {
+      "id": "q008",
+      "query": "Stanley DN200/10/5 débit",
+      "expected": true
+    },
+    {
+      "id": "q009",
+      "query": "Michelin MCX300-858 débit à 7 bar",
+      "expected": true
+    },
+    {
+      "id": "q010",
+      "query": "ABAC Pole Position OS20P caractéristiques",
+      "expected": true
+    },
+    {
+      "id": "q011",
+      "query": "Einhell TC-PE 150 consommation air",
+      "expected": true
+    },
+    {
+      "id": "q012",
+      "query": "Metabo DSX 150 débit compresseur",
+      "expected": true
+    },
+    {
+      "id": "q013",
+      "query": "Metabo FSP 600 HVLP consommation air",
+      "expected": true
+    },
+    {
+      "id": "q014",
+      "query": "Metabo SSP 1000 compresseur",
+      "expected": true
+    },
+    {
+      "id": "q015",
+      "query": "Einhell TC-PN 50 litres par tir",
+      "expected": true
+    },
+    {
+      "id": "q016",
+      "query": "Metabo DKNG 40/50 consommation air",
+      "expected": true
+    },
+    {
+      "id": "q017",
+      "query": "Chicago Pneumatic CP7748 débit air",
+      "expected": true
+    },
+    {
+      "id": "q018",
+      "query": "SATA jet X HVLP consommation air",
+      "expected": true
+    },
+    {
+      "id": "q019",
+      "query": "HAZET 9037SPC litres par rivet",
+      "expected": true
+    },
+    {
+      "id": "q020",
+      "query": "Parkside PDSP 1000 E6 débit compresseur",
+      "expected": true
+    },
+    {
+      "id": "q021",
+      "query": "quel compresseur pour Tornador",
+      "expected": true
+    },
+    {
+      "id": "q022",
+      "query": "compresseur 50 litres pour Tornador",
+      "expected": true
+    },
+    {
+      "id": "q023",
+      "query": "Tornador débit restitué nécessaire",
+      "expected": true
+    },
+    {
+      "id": "q024",
+      "query": "compresseur pour pistolet de nettoyage pneumatique",
+      "expected": true
+    },
+    {
+      "id": "q025",
+      "query": "compresseur pour clé à chocs 1/2",
+      "expected": true
+    },
+    {
+      "id": "q026",
+      "query": "clé à chocs manque de puissance compresseur",
+      "expected": true
+    },
+    {
+      "id": "q027",
+      "query": "compresseur pour clé à chocs 1 pouce",
+      "expected": true
+    },
+    {
+      "id": "q028",
+      "query": "deux clés à chocs un compresseur",
+      "expected": true
+    },
+    {
+      "id": "q029",
+      "query": "compresseur pour soufflette utilisation continue",
+      "expected": true
+    },
+    {
+      "id": "q030",
+      "query": "compresseur pour atelier automobile 230 V",
+      "expected": true
+    },
+    {
+      "id": "q031",
+      "query": "quel compresseur pour pistolet HVLP",
+      "expected": true
+    },
+    {
+      "id": "q032",
+      "query": "HVLP ou LVLP besoin en air",
+      "expected": true
+    },
+    {
+      "id": "q033",
+      "query": "compresseur 50 litres pour peinture",
+      "expected": true
+    },
+    {
+      "id": "q034",
+      "query": "compresseur pour peindre une carrosserie",
+      "expected": true
+    },
+    {
+      "id": "q035",
+      "query": "ponceuse pneumatique débit compresseur",
+      "expected": true
+    },
+    {
+      "id": "q036",
+      "query": "ponceuse pneumatique fonctionne par à-coups",
+      "expected": true
+    },
+    {
+      "id": "q037",
+      "query": "compresseur pour sableuse",
+      "expected": true
+    },
+    {
+      "id": "q038",
+      "query": "compresseur pour cabine de sablage",
+      "expected": true
+    },
+    {
+      "id": "q039",
+      "query": "sablage débit buse pression",
+      "expected": true
+    },
+    {
+      "id": "q040",
+      "query": "eau dans air comprimé peinture",
+      "expected": true
+    },
+    {
+      "id": "q041",
+      "query": "compresseur pour cloueur pneumatique",
+      "expected": true
+    },
+    {
+      "id": "q042",
+      "query": "cloueur litres par tir calcul débit",
+      "expected": true
+    },
+    {
+      "id": "q043",
+      "query": "cadence clouage compresseur",
+      "expected": true
+    },
+    {
+      "id": "q044",
+      "query": "cloueur pneumatique 24 litres suffisant",
+      "expected": true
+    },
+    {
+      "id": "q045",
+      "query": "agrafeuse pneumatique débit nécessaire",
+      "expected": true
+    },
+    {
+      "id": "q046",
+      "query": "riveteuse pneumatique consommation par rivet",
+      "expected": true
+    },
+    {
+      "id": "q047",
+      "query": "compresseur pour gonfler pneus utilitaire",
+      "expected": true
+    },
+    {
+      "id": "q048",
+      "query": "temps gonflage pneu compresseur",
+      "expected": true
+    },
+    {
+      "id": "q049",
+      "query": "gonflage volume air libre calcul",
+      "expected": true
+    },
+    {
+      "id": "q050",
+      "query": "compresseur sans cuve pour cloueur",
+      "expected": true
+    },
+    {
+      "id": "q051",
+      "query": "raccord compresseur euro 7,2 compatibilité",
+      "expected": true
+    },
+    {
+      "id": "q052",
+      "query": "raccord pneumatique 1/4 BSP NPT différence",
+      "expected": true
+    },
+    {
+      "id": "q053",
+      "query": "raccord ISO 6150 B compresseur",
+      "expected": true
+    },
+    {
+      "id": "q054",
+      "query": "diamètre intérieur tuyau compresseur",
+      "expected": true
+    },
+    {
+      "id": "q055",
+      "query": "tuyau 6 mm ou 10 mm outil pneumatique",
+      "expected": true
+    },
+    {
+      "id": "q056",
+      "query": "perte pression flexible air comprimé",
+      "expected": true
+    },
+    {
+      "id": "q057",
+      "query": "rallonge tuyau compresseur 25 mètres",
+      "expected": true
+    },
+    {
+      "id": "q058",
+      "query": "raccord rapide réduit débit air",
+      "expected": true
+    },
+    {
+      "id": "q059",
+      "query": "filtre régulateur lubrificateur fonctionnement",
+      "expected": true
+    },
+    {
+      "id": "q060",
+      "query": "outil pneumatique lubrification filtre peinture",
+      "expected": true
+    },
+    {
+      "id": "q061",
+      "query": "compresseur silencieux décibels comparables",
+      "expected": true
+    },
+    {
+      "id": "q062",
+      "query": "LpA LwA compresseur différence",
+      "expected": true
+    },
+    {
+      "id": "q063",
+      "query": "bruit compresseur distance mesure",
+      "expected": true
+    },
+    {
+      "id": "q064",
+      "query": "compresseur cycle de service S3",
+      "expected": true
+    },
+    {
+      "id": "q065",
+      "query": "compresseur S1 S3 utilisation continue",
+      "expected": true
+    },
+    {
+      "id": "q066",
+      "query": "compresseur surchauffe cycle fonctionnement",
+      "expected": true
+    },
+    {
+      "id": "q067",
+      "query": "compresseur sans huile usage continu",
+      "expected": true
+    },
+    {
+      "id": "q068",
+      "query": "compresseur 230 V débit restitué",
+      "expected": true
+    },
+    {
+      "id": "q069",
+      "query": "compresseur monophasé triphasé différence",
+      "expected": true
+    },
+    {
+      "id": "q070",
+      "query": "consommation électrique compresseur calcul",
+      "expected": true
+    },
+    {
+      "id": "q071",
+      "query": "compresseur ne monte plus en pression",
+      "expected": true
+    },
+    {
+      "id": "q072",
+      "query": "compresseur tourne sans arrêt",
+      "expected": true
+    },
+    {
+      "id": "q073",
+      "query": "compresseur perd pression à l’arrêt",
+      "expected": true
+    },
+    {
+      "id": "q074",
+      "query": "pression chute quand outil fonctionne",
+      "expected": true
+    },
+    {
+      "id": "q075",
+      "query": "compresseur remplit lentement",
+      "expected": true
+    },
+    {
+      "id": "q076",
+      "query": "compresseur redémarre trop souvent",
+      "expected": true
+    },
+    {
+      "id": "q077",
+      "query": "air comprimé humide outil pneumatique",
+      "expected": true
+    },
+    {
+      "id": "q078",
+      "query": "pistolet peinture crache eau compresseur",
+      "expected": true
+    },
+    {
+      "id": "q079",
+      "query": "compresseur chauffe débit insuffisant",
+      "expected": true
+    },
+    {
+      "id": "q080",
+      "query": "fuite réseau air comprimé débit calcul",
+      "expected": true
+    },
+    {
+      "id": "q081",
+      "query": "compresseur 24 litres outils compatibles",
+      "expected": true
+    },
+    {
+      "id": "q082",
+      "query": "compresseur 50 litres outils pneumatiques",
+      "expected": true
+    },
+    {
+      "id": "q083",
+      "query": "compresseur 100 litres débit restitué",
+      "expected": true
+    },
+    {
+      "id": "q084",
+      "query": "compresseur 200 litres 230 V",
+      "expected": true
+    },
+    {
+      "id": "q085",
+      "query": "compresseur mobile pour chantier",
+      "expected": true
+    },
+    {
+      "id": "q086",
+      "query": "compresseur atelier fonctionnement continu",
+      "expected": true
+    },
+    {
+      "id": "q087",
+      "query": "compresseur sans huile débit FAD",
+      "expected": true
+    },
+    {
+      "id": "q088",
+      "query": "compresseur à courroie ou direct",
+      "expected": true
+    },
+    {
+      "id": "q089",
+      "query": "compresseur bicylindre débit utile",
+      "expected": true
+    },
+    {
+      "id": "q090",
+      "query": "comparatif compresseurs à débit documenté",
+      "expected": true
+    },
+    {
+      "id": "q091",
+      "query": "débit aspiré et débit restitué différence",
+      "expected": true
+    },
+    {
+      "id": "q092",
+      "query": "calcul FAD compresseur",
+      "expected": true
+    },
+    {
+      "id": "q093",
+      "query": "convertir CFM en litres minute",
+      "expected": true
+    },
+    {
+      "id": "q094",
+      "query": "débit air comprimé m3 h litres minute",
+      "expected": true
+    },
+    {
+      "id": "q095",
+      "query": "calcul réserve air cuve compresseur",
+      "expected": true
+    },
+    {
+      "id": "q096",
+      "query": "temps remplissage cuve débit compresseur",
+      "expected": true
+    },
+    {
+      "id": "q097",
+      "query": "calculer besoin air plusieurs outils",
+      "expected": true
+    },
+    {
+      "id": "q098",
+      "query": "pression absolue relative air comprimé",
+      "expected": true
+    },
+    {
+      "id": "q099",
+      "query": "marge débit compresseur outil",
+      "expected": true
+    },
+    {
+      "id": "q100",
+      "query": "compresseur pression maximale pression de travail",
+      "expected": true
+    }
+  ],
+  "lexicalAdversarial": [
+    {
+      "id": "P01",
+      "query": "flexible 8 mm",
+      "candidate": "Quel flexible 18 mm",
+      "expected": false
+    },
+    {
+      "id": "P02",
+      "query": "pression 8 bar",
+      "candidate": "pression 18 bar",
+      "expected": false
+    },
+    {
+      "id": "P03",
+      "query": "compresseur 230 V",
+      "candidate": "compresseur 400 V",
+      "expected": false
+    },
+    {
+      "id": "P04",
+      "query": "flexible 8 mm 20 m",
+      "candidate": "flexible 20 mm 8 m",
+      "expected": false
+    },
+    {
+      "id": "P05",
+      "query": "pression 6,3 bar",
+      "candidate": "pression 6.3 bar",
+      "expected": true
+    },
+    {
+      "id": "P06",
+      "query": "compresseur CD25",
+      "candidate": "compresseur CD50",
+      "expected": false
+    },
+    {
+      "id": "P07",
+      "query": "compresseur CD25",
+      "candidate": "compresseur CD25",
+      "expected": true
+    },
+    {
+      "id": "P08",
+      "query": "flexible 8 mm",
+      "candidate": "comparatif flexible 8 mm et 18 mm",
+      "expected": true
+    },
+    {
+      "id": "P09",
+      "query": "clé à chocs",
+      "candidate": "cle a chocs",
+      "expected": true
+    },
+    {
+      "id": "P10",
+      "query": "pression 8 bar",
+      "candidate": "pression 8 bar",
+      "expected": true
+    },
+    {
+      "id": "P11",
+      "query": "flexible 8 mm",
+      "candidate": "flexible 8 cm",
+      "expected": false
+    },
+    {
+      "id": "P12",
+      "query": "compresseur 50 l",
+      "candidate": "compresseur 150 l",
+      "expected": false
+    }
+  ]
+}
