@@ -179,7 +179,6 @@ const commercialOffers = activeOffers
 </datalist>
 
 <script>
-	import { searchCatalogProducts, loadRuntimeProducts, loadCandidateCompressors } from '../domain/catalog-client';
 	import { catalogOptionIdentifiers, resolveExactCatalogSearch } from '../domain/catalog-search';
 	import { createDecisionResolution, explainDecisionDataGap, filterDecisionCandidatesByContext, rankDecisionCandidates } from '../domain/decision-resolution';
 	import { JOURNEY_CONTEXT_EVENT } from '../domain/journey-context';
@@ -197,6 +196,16 @@ const commercialOffers = activeOffers
 	type DecisionResolutionStatus = import('../domain/decision-resolution').DecisionResolutionStatus;
 	type DecisionContext = import('../domain/decision-resolution').DecisionContext;
 	type CommercialOffer = { id: string; productId: string; merchantName: string; priceEur: number; collectedAt: string };
+	// Keep catalog validation in the existing on-demand calculator path.
+	async function searchCatalogProducts(...args: Parameters<typeof import('../domain/catalog-client').searchCatalogProducts>) {
+		return (await import('../domain/catalog-client')).searchCatalogProducts(...args);
+	}
+	async function loadRuntimeProducts(...args: Parameters<typeof import('../domain/catalog-client').loadRuntimeProducts>) {
+		return (await import('../domain/catalog-client')).loadRuntimeProducts(...args);
+	}
+	async function loadCandidateCompressors(...args: Parameters<typeof import('../domain/catalog-client').loadCandidateCompressors>) {
+		return (await import('../domain/catalog-client')).loadCandidateCompressors(...args);
+	}
 	let CATALOG_VERIFIED_AT = '';
 	let catalogVersion: string | undefined;
 	let candidateCoverage = '';
