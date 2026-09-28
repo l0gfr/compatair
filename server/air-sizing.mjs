@@ -66,7 +66,7 @@ export function calculateSizing(value) {
 		if (demand.model === 'per-action') {
 			const average = perActionAverageFlow(demand.litersPerAction, demand.actionsPerMinute, demand.quantity);
 			hypotheses.push(`${demand.quantity} × ${demand.litersPerAction.toLocaleString('fr-FR')} L/action × ${demand.actionsPerMinute.toLocaleString('fr-FR')} actions/min = ${average.toLocaleString('fr-FR', { maximumFractionDigits: 2 })} L/min en moyenne.`);
-			warnings.push('Le débit moyen par action ne décrit pas le débit instantané. Vérifier séparément flexible, raccords et réserve locale.');
+			warnings.push('Le débit moyen par action ne décrit pas la pointe. Vérifier flexible, raccords et réserve locale.');
 		}
 		if (demand.model === 'inflation') {
 			const freeAirLiters = inflationFreeAirLiters(demand.volumeLiters, demand.initialPressureBar, demand.targetPressureBar, demand.quantity);
@@ -78,9 +78,9 @@ export function calculateSizing(value) {
 
 	if (value.hoseLengthMeters !== undefined || value.hoseInnerDiameterMm !== undefined) {
 		if (value.hoseLengthMeters === undefined || value.hoseInnerDiameterMm === undefined) {
-			warnings.push('Longueur et diamètre intérieur du flexible requis pour documenter le réseau.');
+			warnings.push('Renseigner longueur et diamètre intérieur du flexible.');
 		} else {
-			warnings.push(`Flexible déclaré : ${value.hoseLengthMeters} m, diamètre intérieur ${value.hoseInnerDiameterMm} mm. Perte de charge non chiffrée sans courbe fabricant ou mesure en charge.`);
+			warnings.push(`Flexible déclaré : ${value.hoseLengthMeters} m, diamètre intérieur ${value.hoseInnerDiameterMm} mm. Perte de charge à mesurer ou à documenter par le fabricant.`);
 		}
 	}
 
@@ -96,7 +96,7 @@ export function calculateSizing(value) {
 			...context,
 			verdict: 'insufficient_data',
 			limitingFactor: 'data', confidence: 'medium',
-			warnings: [...warnings, 'Aucun compresseur renseigné : seul le besoin en air est calculé.'],
+			warnings: [...warnings, 'Sans compresseur : seul le besoin en air est calculé.'],
 		};
 	}
 
