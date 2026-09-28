@@ -211,6 +211,7 @@ const commercialOffers = activeOffers
 	let encodePassportEnvelope: typeof import('../domain/passport').encodePassportEnvelope;
 	let parsePassportConfiguration: typeof import('../domain/passport').parsePassportConfiguration;
 	let sizeConfiguration: typeof import('../domain/sizing').sizeConfiguration;
+	let compressorPressureIssues: typeof import('../domain/sizing').compressorPressureIssues;
 	let createCounterfactualRecommendation: typeof import('../domain/counterfactual').createCounterfactualRecommendation;
 	let shouldEvaluateCounterfactual: typeof import('../domain/counterfactual').shouldEvaluateCounterfactual;
 	let runtimePromise: Promise<void> | undefined;
@@ -231,6 +232,7 @@ const commercialOffers = activeOffers
 			encodePassportEnvelope = passport.encodePassportEnvelope;
 			parsePassportConfiguration = passport.parsePassportConfiguration;
 			sizeConfiguration = sizing.sizeConfiguration;
+			compressorPressureIssues = sizing.compressorPressureIssues;
 			createCounterfactualRecommendation = counterfactual.createCounterfactualRecommendation;
 			shouldEvaluateCounterfactual = counterfactual.shouldEvaluateCounterfactual;
 		});
@@ -576,7 +578,8 @@ const commercialOffers = activeOffers
 		if (compressorSearch?.value.trim() && !selectedCompressor) throw new Error('Sélectionnez une référence de compresseur dans les suggestions.');
 		if (!['', 'custom', ...compressors.map((item) => item.id)].includes(selectedCompressor)) throw new Error('Le compresseur sélectionné est invalide.');
 		const custom = selectedCompressor === 'custom' ? { maxPressureBar: requireRange(readNumber(data, 'customPressure'), .1, 50, 'La pression maximale personnalisée'), availableFadLpm: requireRange(readNumber(data, 'customFad'), 1, 20_000, 'Le débit réellement restitué', true), tankLiters: requireRange(readNumber(data, 'customTank'), 0, 20_000, 'Le volume personnalisé', true), dutyCycle: readNumber(data, 'customDuty') === undefined ? undefined : requireRange(readNumber(data, 'customDuty')! / 100, .01, 1, 'Le temps maximal de fonctionnement'), cutInPressureBar: requireRange(readNumber(data, 'customCutIn'), 0, 50, 'La pression de réenclenchement', true), cutOutPressureBar: requireRange(readNumber(data, 'customCutOut'), .1, 50, 'La pression d’arrêt', true) } : {};
-		if (custom.cutInPressureBar !== undefined && custom.cutOutPressureBar !== undefined && custom.cutInPressureBar >= custom.cutOutPressureBar) throw new Error('La pression de réenclenchement doit être inférieure à la pression d’arrêt.');
+		const pressureIssue = compressorPressureIssues(custom)[0];
+		if (pressureIssue) throw new Error(pressureIssue.message);
 		return parsePassportConfiguration({ catalogVersion, calculationVersion: CALCULATION_VERSION, demands, mode, safetyMargin, sessionMinutes, hoseLengthMeters, hoseInnerDiameterMm, measuredPressureDropBar, measuredLeakLpm, supplyPressureBar, networkDistanceMeters, fittingStandard, fittingCount, filtration, usageProfile, selectedCompressor, custom }, new Set(compressors.map((item) => item.id)), new Set(tools.map((item) => item.id)));
 	}
 

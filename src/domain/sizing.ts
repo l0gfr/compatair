@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 import { calculateSizing, compressorPressureIssues, CALCULATION_VERSION, STANDARD_ATMOSPHERE_BAR } from '../../server/air-sizing.mjs';
-export { CALCULATION_VERSION, STANDARD_ATMOSPHERE_BAR };
+export { CALCULATION_VERSION, STANDARD_ATMOSPHERE_BAR, compressorPressureIssues };
 
 const fixedFlowDemandSchema = z.object({
 	model: z.literal('fixed-flow').default('fixed-flow'),
