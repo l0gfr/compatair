@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "measuredAt": "2026-09-28T18:25:26.153Z",
+  "measuredAt": "2026-09-28T19:00:35.348Z",
   "runtime": {
     "node": "v24.19.0",
     "platform": "darwin",
@@ -16,10 +16,10 @@
       }
     },
     {
-      "commit": "c38fba11fc7adc25eb9f6ea7e10b4cf1c70ad5cd",
+      "commit": "0fa056841503e94706b652fd093288cfb15789de",
       "calculationVersion": "1.4.3",
       "modules": {
-        "server/air-sizing.mjs": "b2c1dc3f5899bdadb03a9e4069618b46319c7a0dad1ff44d1d8f48f26361c3b6",
+        "server/air-sizing.mjs": "f2097d564cb7c4777e42a8c9acf68e7fc76cb0096d9847474544b6ff8ddb12f3",
         "server/air-compatibility.mjs": "7435707a8bdfbdfa66d43883ed9877ef96cd3d82d309dec7687c67191d3bdd15"
       }
     }
@@ -76,7 +76,7 @@
   ],
   "samples": [],
   "sampleLimit": 20,
-  "elapsedSeconds": 29.26265425,
+  "elapsedSeconds": 35.865644292,
   "limitations": [
     "Same fixed catalog for both engines; no claim about earlier catalog populations.",
     "Aggregate offline comparison; no Cartesian matrix is retained or served.",

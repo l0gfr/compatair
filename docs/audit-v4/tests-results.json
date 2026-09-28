@@ -1,853 +1,857 @@
 {
-  "executedAt": "2026-09-28T18:28:48.849000+00:00",
+  "executedAt": "2026-09-28T18:55:46.439796+00:00",
   "command": "pnpm test --reporter=default --reporter=json --outputFile.json=<local-results.json>",
   "node": "v24.19.0",
-  "implementationCommit": "c38fba11fc7adc25eb9f6ea7e10b4cf1c70ad5cd",
+  "implementationCommit": "0fa056841503e94706b652fd093288cfb15789de",
   "success": true,
-  "totalTests": 989,
-  "passedTests": 989,
+  "totalTests": 990,
+  "passedTests": 990,
   "failedTests": 0,
   "pendingTests": 0,
   "files": [
     {
-      "path": "scripts/assert-observatory-history-extension.test.ts",
-      "status": "passed",
-      "tests": 1,
-      "durationMs": 95.218505859375
-    },
-    {
-      "path": "scripts/deploy-policy.test.ts",
-      "status": "passed",
-      "tests": 13,
-      "durationMs": 12.146240234375
-    },
-    {
-      "path": "scripts/deploy-transport.test.ts",
-      "status": "passed",
-      "tests": 6,
-      "durationMs": 1391.93896484375
-    },
-    {
-      "path": "scripts/export-public-contract-repo.test.ts",
-      "status": "passed",
-      "tests": 1,
-      "durationMs": 127.55712890625
-    },
-    {
-      "path": "scripts/generate-private-weekly-report.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 984.39794921875
-    },
-    {
-      "path": "scripts/mcp-startup-wait.test.ts",
-      "status": "passed",
-      "tests": 6,
-      "durationMs": 38.1484375
-    },
-    {
-      "path": "scripts/node-runtime.test.ts",
-      "status": "passed",
-      "tests": 5,
-      "durationMs": 902.81103515625
-    },
-    {
-      "path": "scripts/public-scope-contract.test.ts",
-      "status": "passed",
-      "tests": 2,
-      "durationMs": 2.18359375
-    },
-    {
-      "path": "scripts/widget-migration.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 1.1728515625
-    },
-    {
-      "path": "server/acquisition-aggregates.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 8.673583984375
-    },
-    {
-      "path": "server/audit-v3-http.test.ts",
-      "status": "passed",
-      "tests": 8,
-      "durationMs": 36.8662109375
-    },
-    {
-      "path": "server/catalog-repository.test.ts",
-      "status": "passed",
-      "tests": 12,
-      "durationMs": 61.471435546875
-    },
-    {
-      "path": "server/demand-aggregates.test.ts",
-      "status": "passed",
-      "tests": 4,
-      "durationMs": 5.01123046875
-    },
-    {
-      "path": "server/mcp-contract.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 2.290283203125
-    },
-    {
-      "path": "server/mcp-core.test.ts",
-      "status": "passed",
-      "tests": 24,
-      "durationMs": 82.4755859375
-    },
-    {
-      "path": "server/mcp-output-schemas.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 69.563720703125
-    },
-    {
-      "path": "server/mcp-server.test.ts",
-      "status": "passed",
-      "tests": 33,
-      "durationMs": 112.567626953125
-    },
-    {
-      "path": "server/mcp-telemetry.test.ts",
-      "status": "passed",
-      "tests": 11,
-      "durationMs": 15.22265625
-    },
-    {
-      "path": "server/product-funnel-aggregates.test.ts",
-      "status": "passed",
-      "tests": 5,
-      "durationMs": 5.94384765625
-    },
-    {
-      "path": "server/ucp-core.test.ts",
-      "status": "passed",
-      "tests": 7,
-      "durationMs": 7.124755859375
-    },
-    {
-      "path": "server/verdict-publication.test.ts",
-      "status": "passed",
-      "tests": 10,
-      "durationMs": 9.284423828125
-    },
-    {
-      "path": "server/verdict-snapshot.test.ts",
-      "status": "passed",
-      "tests": 33,
-      "durationMs": 264.181640625
-    },
-    {
       "path": "deploy/apache/compatair-config.test.ts",
       "status": "passed",
       "tests": 16,
-      "durationMs": 3.1455078125
+      "durationMs": 5.152587890625
     },
     {
       "path": "deploy/server/install-apache-vhost.test.ts",
       "status": "passed",
       "tests": 5,
-      "durationMs": 10.33935546875
+      "durationMs": 6.24658203125
     },
     {
       "path": "deploy/server/install-mcp.test.ts",
       "status": "passed",
       "tests": 4,
-      "durationMs": 5.251708984375
+      "durationMs": 7.13525390625
     },
     {
       "path": "deploy/server/install-staging-drill.test.ts",
       "status": "passed",
       "tests": 5,
-      "durationMs": 1.16015625
+      "durationMs": 1.144775390625
     },
     {
       "path": "deploy/server/staging-failure-drill.test.ts",
       "status": "passed",
       "tests": 3,
-      "durationMs": 9.320068359375
+      "durationMs": 5.19970703125
     },
     {
       "path": "deploy/systemd/compatair-systemd.test.ts",
       "status": "passed",
       "tests": 5,
-      "durationMs": 1.134033203125
+      "durationMs": 1.13720703125
     },
     {
-      "path": "src/components/McpCanonicalTelemetry.test.ts",
+      "path": "scripts/assert-observatory-history-extension.test.ts",
       "status": "passed",
       "tests": 1,
-      "durationMs": 0.78369140625
-    },
-    {
-      "path": "src/data/catalog-structure.test.ts",
-      "status": "passed",
-      "tests": 2,
-      "durationMs": 1165.71484375
-    },
-    {
-      "path": "src/data/glossary.test.ts",
-      "status": "passed",
-      "tests": 2,
-      "durationMs": 1.24755859375
-    },
-    {
-      "path": "src/data/product-seo-titles.test.ts",
-      "status": "passed",
-      "tests": 14,
-      "durationMs": 2.0927734375
-    },
-    {
-      "path": "src/data/public-directories.test.ts",
-      "status": "passed",
-      "tests": 2,
-      "durationMs": 130.59912109375
-    },
-    {
-      "path": "src/data/source-url-repairs.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 85.4189453125
-    },
-    {
-      "path": "src/data/tool-guide-links.test.ts",
-      "status": "passed",
-      "tests": 2,
-      "durationMs": 1.115966796875
-    },
-    {
-      "path": "src/domain/acoustic-display.test.ts",
-      "status": "passed",
-      "tests": 2,
-      "durationMs": 1.156982421875
-    },
-    {
-      "path": "src/domain/agent-fidelity-benchmark.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 3.20068359375
-    },
-    {
-      "path": "src/domain/audit-v3-boundaries.test.ts",
-      "status": "passed",
-      "tests": 142,
-      "durationMs": 25.025146484375
-    },
-    {
-      "path": "src/domain/brand-insights.test.ts",
-      "status": "passed",
-      "tests": 1,
-      "durationMs": 1.7841796875
-    },
-    {
-      "path": "src/domain/brand.test.ts",
-      "status": "passed",
-      "tests": 1,
-      "durationMs": 2.36083984375
-    },
-    {
-      "path": "src/domain/calculator-options-loader.test.ts",
-      "status": "passed",
-      "tests": 4,
-      "durationMs": 14.277099609375
-    },
-    {
-      "path": "src/domain/catalog-client.test.ts",
-      "status": "passed",
-      "tests": 4,
-      "durationMs": 18.28564453125
-    },
-    {
-      "path": "src/domain/catalog-insights.test.ts",
-      "status": "passed",
-      "tests": 4,
-      "durationMs": 5.5947265625
-    },
-    {
-      "path": "src/domain/catalog-scale.test.ts",
-      "status": "passed",
-      "tests": 11,
-      "durationMs": 15.233154296875
-    },
-    {
-      "path": "src/domain/catalog-search.test.ts",
-      "status": "passed",
-      "tests": 5,
-      "durationMs": 49.0634765625
-    },
-    {
-      "path": "src/domain/catalog.test.ts",
-      "status": "passed",
-      "tests": 4,
-      "durationMs": 49.70703125
-    },
-    {
-      "path": "src/domain/commissioning.test.ts",
-      "status": "passed",
-      "tests": 7,
-      "durationMs": 23.818359375
-    },
-    {
-      "path": "src/domain/compatibility-impact.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 477.066162109375
-    },
-    {
-      "path": "src/domain/compatibility.test.ts",
-      "status": "passed",
-      "tests": 9,
-      "durationMs": 6.7158203125
-    },
-    {
-      "path": "src/domain/contextual-comparison.test.ts",
-      "status": "passed",
-      "tests": 6,
-      "durationMs": 14.13232421875
-    },
-    {
-      "path": "src/domain/contextual-help.test.ts",
-      "status": "passed",
-      "tests": 1,
-      "durationMs": 1.408447265625
-    },
-    {
-      "path": "src/domain/contradiction-radar.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 27.929443359375
-    },
-    {
-      "path": "src/domain/counterfactual.test.ts",
-      "status": "passed",
-      "tests": 22,
-      "durationMs": 44.3818359375
-    },
-    {
-      "path": "src/domain/csv.test.ts",
-      "status": "passed",
-      "tests": 1,
-      "durationMs": 0.65673828125
-    },
-    {
-      "path": "src/domain/data-governance.test.ts",
-      "status": "passed",
-      "tests": 5,
-      "durationMs": 28.15380859375
-    },
-    {
-      "path": "src/domain/decision-dossier.test.ts",
-      "status": "passed",
-      "tests": 15,
-      "durationMs": 59.571044921875
-    },
-    {
-      "path": "src/domain/decision-resolution.test.ts",
-      "status": "passed",
-      "tests": 9,
-      "durationMs": 12.17041015625
-    },
-    {
-      "path": "src/domain/document-quality-observatory.test.ts",
-      "status": "passed",
-      "tests": 5,
-      "durationMs": 28.261962890625
-    },
-    {
-      "path": "src/domain/editorial-taxonomy.test.ts",
-      "status": "passed",
-      "tests": 9,
-      "durationMs": 2.110595703125
-    },
-    {
-      "path": "src/domain/engine-conformance.test.ts",
-      "status": "passed",
-      "tests": 8,
-      "durationMs": 14.196533203125
-    },
-    {
-      "path": "src/domain/evidence-history.test.ts",
-      "status": "passed",
-      "tests": 4,
-      "durationMs": 1577.13818359375
-    },
-    {
-      "path": "src/domain/image-dimensions.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 1.149658203125
-    },
-    {
-      "path": "src/domain/intervention.test.ts",
-      "status": "passed",
-      "tests": 7,
-      "durationMs": 17.714111328125
-    },
-    {
-      "path": "src/domain/journey-context.test.ts",
-      "status": "passed",
-      "tests": 4,
-      "durationMs": 3.149169921875
-    },
-    {
-      "path": "src/domain/metadata.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 1.559326171875
-    },
-    {
-      "path": "src/domain/offers.test.ts",
-      "status": "passed",
-      "tests": 7,
-      "durationMs": 4.49267578125
-    },
-    {
-      "path": "src/domain/operation-monitoring.test.ts",
-      "status": "passed",
-      "tests": 6,
-      "durationMs": 18.522216796875
-    },
-    {
-      "path": "src/domain/page-calculation-cache.test.ts",
-      "status": "passed",
-      "tests": 12,
-      "durationMs": 55.803466796875
-    },
-    {
-      "path": "src/domain/pagination.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 2.4580078125
-    },
-    {
-      "path": "src/domain/passport-pdf.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 30.933349609375
-    },
-    {
-      "path": "src/domain/passport.test.ts",
-      "status": "passed",
-      "tests": 7,
-      "durationMs": 52.961181640625
-    },
-    {
-      "path": "src/domain/pressure-regulation.test.ts",
-      "status": "passed",
-      "tests": 13,
-      "durationMs": 14.238525390625
-    },
-    {
-      "path": "src/domain/preventive-maintenance.test.ts",
-      "status": "passed",
-      "tests": 7,
-      "durationMs": 22.399169921875
-    },
-    {
-      "path": "src/domain/product-display.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 4.18505859375
-    },
-    {
-      "path": "src/domain/product-identification.test.ts",
-      "status": "passed",
-      "tests": 5,
-      "durationMs": 138.290283203125
-    },
-    {
-      "path": "src/domain/product-image-dimensions.test.ts",
-      "status": "passed",
-      "tests": 2,
-      "durationMs": 1.39306640625
-    },
-    {
-      "path": "src/domain/product-structured-data.test.ts",
-      "status": "passed",
-      "tests": 2,
-      "durationMs": 1.28662109375
-    },
-    {
-      "path": "src/domain/proof-graph.test.ts",
-      "status": "passed",
-      "tests": 4,
-      "durationMs": 3.268310546875
-    },
-    {
-      "path": "src/domain/provenance.test.ts",
-      "status": "passed",
-      "tests": 2,
-      "durationMs": 3.7392578125
-    },
-    {
-      "path": "src/domain/release.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 1.37890625
-    },
-    {
-      "path": "src/domain/runtime-catalog.test.ts",
-      "status": "passed",
-      "tests": 6,
-      "durationMs": 357.755859375
-    },
-    {
-      "path": "src/domain/scanner-journey.test.ts",
-      "status": "passed",
-      "tests": 5,
-      "durationMs": 4.21142578125
-    },
-    {
-      "path": "src/domain/search-keywords.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 1.311279296875
-    },
-    {
-      "path": "src/domain/seo-selection.test.ts",
-      "status": "passed",
-      "tests": 4,
-      "durationMs": 70.437255859375
-    },
-    {
-      "path": "src/domain/sizing.test.ts",
-      "status": "passed",
-      "tests": 40,
-      "durationMs": 11.2177734375
-    },
-    {
-      "path": "src/domain/snapshot-stream.test.ts",
-      "status": "passed",
-      "tests": 2,
-      "durationMs": 6.2333984375
-    },
-    {
-      "path": "src/domain/snapshots.test.ts",
-      "status": "passed",
-      "tests": 5,
-      "durationMs": 40.400390625
-    },
-    {
-      "path": "src/domain/social-card.test.ts",
-      "status": "passed",
-      "tests": 2,
-      "durationMs": 0.748291015625
-    },
-    {
-      "path": "src/domain/source-quality.test.ts",
-      "status": "passed",
-      "tests": 4,
-      "durationMs": 0.671142578125
-    },
-    {
-      "path": "src/domain/structured-data.test.ts",
-      "status": "passed",
-      "tests": 2,
-      "durationMs": 1.324951171875
-    },
-    {
-      "path": "src/domain/trade-scenario-prefill.test.ts",
-      "status": "passed",
-      "tests": 3,
-      "durationMs": 7.18994140625
-    },
-    {
-      "path": "src/domain/transparency-barometer.test.ts",
-      "status": "passed",
-      "tests": 2,
-      "durationMs": 4.361572265625
-    },
-    {
-      "path": "src/domain/verdict-audit.test.ts",
-      "status": "passed",
-      "tests": 2,
-      "durationMs": 1.49951171875
-    },
-    {
-      "path": "src/domain/verdict-cache.test.ts",
-      "status": "passed",
-      "tests": 17,
-      "durationMs": 48.77294921875
+      "durationMs": 71.713134765625
     },
     {
       "path": "scripts/audit-v3/compare-engines.test.ts",
       "status": "passed",
       "tests": 2,
-      "durationMs": 2.22509765625
+      "durationMs": 2.24462890625
     },
     {
       "path": "scripts/audit-v3/documentary-coverage.test.ts",
       "status": "passed",
       "tests": 3,
-      "durationMs": 11.060302734375
+      "durationMs": 12.060546875
     },
     {
       "path": "scripts/audit-v3/intention-registry.test.ts",
       "status": "passed",
       "tests": 2,
-      "durationMs": 53.784423828125
+      "durationMs": 62.03662109375
     },
     {
       "path": "scripts/audit-v3/qualification-100k.test.ts",
       "status": "passed",
       "tests": 3,
-      "durationMs": 10.182861328125
+      "durationMs": 10.8916015625
+    },
+    {
+      "path": "scripts/deploy-policy.test.ts",
+      "status": "passed",
+      "tests": 13,
+      "durationMs": 16.154296875
+    },
+    {
+      "path": "scripts/deploy-transport.test.ts",
+      "status": "passed",
+      "tests": 6,
+      "durationMs": 2038.8095703125
+    },
+    {
+      "path": "scripts/export-public-contract-repo.test.ts",
+      "status": "passed",
+      "tests": 1,
+      "durationMs": 163.5380859375
+    },
+    {
+      "path": "scripts/generate-private-weekly-report.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 1695.46240234375
     },
     {
       "path": "scripts/lib/actions-storage.test.mjs",
       "status": "passed",
       "tests": 8,
-      "durationMs": 3.206787109375
+      "durationMs": 3.1923828125
     },
     {
       "path": "scripts/lib/advisory-policy.test.ts",
       "status": "passed",
       "tests": 4,
-      "durationMs": 1.5869140625
+      "durationMs": 1.659912109375
     },
     {
       "path": "scripts/lib/answer-group-view.test.mjs",
       "status": "passed",
       "tests": 1,
-      "durationMs": 1.717529296875
+      "durationMs": 1.718505859375
     },
     {
       "path": "scripts/lib/catalog-build-inputs.test.mjs",
       "status": "passed",
       "tests": 1,
-      "durationMs": 46.576416015625
+      "durationMs": 65.932861328125
     },
     {
       "path": "scripts/lib/catalog-expansion-2026-09-27.test.mjs",
       "status": "passed",
       "tests": 6,
-      "durationMs": 397.100341796875
+      "durationMs": 787.362060546875
     },
     {
       "path": "scripts/lib/catalog-import.test.mjs",
       "status": "passed",
       "tests": 9,
-      "durationMs": 421.6591796875
+      "durationMs": 735.2666015625
     },
     {
       "path": "scripts/lib/catalog-tooling.test.mjs",
       "status": "passed",
       "tests": 3,
-      "durationMs": 81.847412109375
+      "durationMs": 51.47998046875
     },
     {
       "path": "scripts/lib/cp-pdf-catalog-import.test.mjs",
       "status": "passed",
       "tests": 6,
-      "durationMs": 45.25634765625
+      "durationMs": 73.85400390625
     },
     {
       "path": "scripts/lib/crux-report.test.mjs",
       "status": "passed",
       "tests": 1,
-      "durationMs": 1.19775390625
+      "durationMs": 1.099853515625
     },
     {
       "path": "scripts/lib/dynabrade-catalog-import.test.mjs",
       "status": "passed",
       "tests": 6,
-      "durationMs": 284.739990234375
+      "durationMs": 486.594970703125
     },
     {
       "path": "scripts/lib/editorial-priority.test.mjs",
       "status": "passed",
       "tests": 30,
-      "durationMs": 20.147216796875
+      "durationMs": 8.082275390625
     },
     {
       "path": "scripts/lib/evaluate-mcp-agent-selection.test.ts",
       "status": "passed",
       "tests": 3,
-      "durationMs": 9.297119140625
+      "durationMs": 6.30078125
     },
     {
       "path": "scripts/lib/export-fixed-verdicts.test.ts",
       "status": "passed",
       "tests": 1,
-      "durationMs": 8.411376953125
+      "durationMs": 9.7021484375
     },
     {
       "path": "scripts/lib/fuji-catalog-import.test.mjs",
       "status": "passed",
       "tests": 8,
-      "durationMs": 95.3994140625
+      "durationMs": 150.52783203125
     },
     {
       "path": "scripts/lib/github-advisory-client.test.ts",
       "status": "passed",
       "tests": 3,
-      "durationMs": 15.228271484375
+      "durationMs": 14.2490234375
     },
     {
       "path": "scripts/lib/import-manomano.test.mjs",
       "status": "passed",
       "tests": 7,
-      "durationMs": 5.14404296875
+      "durationMs": 6.066650390625
     },
     {
       "path": "scripts/lib/indexation-planner.test.mjs",
       "status": "passed",
       "tests": 15,
-      "durationMs": 171.69482421875
+      "durationMs": 302.7998046875
     },
     {
       "path": "scripts/lib/industrial-catalog-import.test.mjs",
       "status": "passed",
       "tests": 6,
-      "durationMs": 283.9267578125
+      "durationMs": 547.02783203125
     },
     {
       "path": "scripts/lib/industrial-expansion-2026.test.mjs",
       "status": "passed",
       "tests": 6,
-      "durationMs": 281.58447265625
+      "durationMs": 412.965576171875
     },
     {
       "path": "scripts/lib/javascript-module-graph.test.mjs",
       "status": "passed",
       "tests": 2,
-      "durationMs": 4.456787109375
+      "durationMs": 4.471923828125
     },
     {
       "path": "scripts/lib/legacy-verdict-archive.test.mjs",
       "status": "passed",
       "tests": 7,
-      "durationMs": 121.469970703125
+      "durationMs": 154.67578125
     },
     {
       "path": "scripts/lib/lighthouse-summary.test.mjs",
       "status": "passed",
       "tests": 1,
-      "durationMs": 2.193359375
+      "durationMs": 2.323486328125
     },
     {
       "path": "scripts/lib/live-seo-verification.test.mjs",
       "status": "passed",
       "tests": 10,
-      "durationMs": 2.623291015625
+      "durationMs": 3.370849609375
     },
     {
       "path": "scripts/lib/multi-brand-catalog-import.test.mjs",
       "status": "passed",
       "tests": 6,
-      "durationMs": 65.206787109375
+      "durationMs": 88.365966796875
     },
     {
       "path": "scripts/lib/page-value.test.mjs",
       "status": "passed",
       "tests": 4,
-      "durationMs": 9.359619140625
+      "durationMs": 10.314697265625
     },
     {
       "path": "scripts/lib/publication-signatures.test.mjs",
       "status": "passed",
       "tests": 16,
-      "durationMs": 175.28857421875
+      "durationMs": 331.915283203125
     },
     {
       "path": "scripts/lib/qualified-tools-2026.test.mjs",
       "status": "passed",
       "tests": 9,
-      "durationMs": 526.751708984375
+      "durationMs": 622.43310546875
     },
     {
       "path": "scripts/lib/rank-demand.test.mjs",
       "status": "passed",
       "tests": 4,
-      "durationMs": 9.107666015625
+      "durationMs": 10.112060546875
     },
     {
       "path": "scripts/lib/report-affiliate-readiness.test.mjs",
       "status": "passed",
       "tests": 2,
-      "durationMs": 2.300537109375
+      "durationMs": 2.326904296875
     },
     {
       "path": "scripts/lib/report-product-funnel.test.mjs",
       "status": "passed",
       "tests": 4,
-      "durationMs": 2.41943359375
+      "durationMs": 2.446533203125
     },
     {
       "path": "scripts/lib/reviewed-compressor-duty.test.mjs",
       "status": "passed",
       "tests": 3,
-      "durationMs": 18.73291015625
+      "durationMs": 15.843994140625
     },
     {
       "path": "scripts/lib/sitemap-git-history.test.mjs",
       "status": "passed",
       "tests": 3,
-      "durationMs": 667.299560546875
+      "durationMs": 1439.20068359375
     },
     {
       "path": "scripts/lib/sitemap-lastmod.test.mjs",
       "status": "passed",
       "tests": 14,
-      "durationMs": 10.55712890625
+      "durationMs": 6.57568359375
     },
     {
       "path": "scripts/lib/source-link-health.test.mjs",
       "status": "passed",
       "tests": 18,
-      "durationMs": 15.12158203125
+      "durationMs": 14.08935546875
     },
     {
       "path": "scripts/lib/source-tree.test.mjs",
       "status": "passed",
       "tests": 2,
-      "durationMs": 9.2001953125
+      "durationMs": 16.959716796875
     },
     {
       "path": "scripts/lib/streamed-verdict-build.test.mjs",
       "status": "passed",
       "tests": 2,
-      "durationMs": 9.23974609375
+      "durationMs": 8.4990234375
     },
     {
       "path": "scripts/lib/technical-expansion-2026.test.mjs",
       "status": "passed",
       "tests": 5,
-      "durationMs": 607.750244140625
+      "durationMs": 674.079833984375
     },
     {
       "path": "scripts/lib/verdict-cache-budget.test.mjs",
       "status": "passed",
       "tests": 1,
-      "durationMs": 2.0048828125
+      "durationMs": 2.452392578125
     },
     {
       "path": "scripts/lib/verdict-cache-config.test.mjs",
       "status": "passed",
       "tests": 1,
-      "durationMs": 8.844970703125
+      "durationMs": 8.08642578125
+    },
+    {
+      "path": "scripts/mcp-startup-wait.test.ts",
+      "status": "passed",
+      "tests": 6,
+      "durationMs": 58.479248046875
+    },
+    {
+      "path": "scripts/node-runtime.test.ts",
+      "status": "passed",
+      "tests": 5,
+      "durationMs": 1137.423828125
+    },
+    {
+      "path": "scripts/public-scope-contract.test.ts",
+      "status": "passed",
+      "tests": 2,
+      "durationMs": 3.14404296875
+    },
+    {
+      "path": "scripts/widget-migration.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 1.17138671875
+    },
+    {
+      "path": "server/acquisition-aggregates.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 8.77978515625
+    },
+    {
+      "path": "server/audit-v3-http.test.ts",
+      "status": "passed",
+      "tests": 8,
+      "durationMs": 63.86962890625
+    },
+    {
+      "path": "server/catalog-repository.test.ts",
+      "status": "passed",
+      "tests": 12,
+      "durationMs": 145.478759765625
+    },
+    {
+      "path": "server/demand-aggregates.test.ts",
+      "status": "passed",
+      "tests": 4,
+      "durationMs": 6.10302734375
+    },
+    {
+      "path": "server/mcp-contract.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 2.364990234375
+    },
+    {
+      "path": "server/mcp-core.test.ts",
+      "status": "passed",
+      "tests": 24,
+      "durationMs": 146.766845703125
+    },
+    {
+      "path": "server/mcp-output-schemas.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 38.175537109375
+    },
+    {
+      "path": "server/mcp-server.test.ts",
+      "status": "passed",
+      "tests": 33,
+      "durationMs": 201.474609375
+    },
+    {
+      "path": "server/mcp-telemetry.test.ts",
+      "status": "passed",
+      "tests": 11,
+      "durationMs": 18.201904296875
+    },
+    {
+      "path": "server/product-funnel-aggregates.test.ts",
+      "status": "passed",
+      "tests": 5,
+      "durationMs": 12.172607421875
+    },
+    {
+      "path": "server/ucp-core.test.ts",
+      "status": "passed",
+      "tests": 7,
+      "durationMs": 8.133544921875
+    },
+    {
+      "path": "server/verdict-publication.test.ts",
+      "status": "passed",
+      "tests": 10,
+      "durationMs": 7.295166015625
+    },
+    {
+      "path": "server/verdict-snapshot.test.ts",
+      "status": "passed",
+      "tests": 33,
+      "durationMs": 392.45166015625
+    },
+    {
+      "path": "src/components/McpCanonicalTelemetry.test.ts",
+      "status": "passed",
+      "tests": 1,
+      "durationMs": 0.953857421875
+    },
+    {
+      "path": "src/data/catalog-structure.test.ts",
+      "status": "passed",
+      "tests": 2,
+      "durationMs": 1521.998779296875
+    },
+    {
+      "path": "src/data/glossary.test.ts",
+      "status": "passed",
+      "tests": 2,
+      "durationMs": 2.172119140625
+    },
+    {
+      "path": "src/data/product-seo-titles.test.ts",
+      "status": "passed",
+      "tests": 14,
+      "durationMs": 2.09326171875
+    },
+    {
+      "path": "src/data/public-directories.test.ts",
+      "status": "passed",
+      "tests": 2,
+      "durationMs": 177.136962890625
+    },
+    {
+      "path": "src/data/source-url-repairs.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 125.421142578125
+    },
+    {
+      "path": "src/data/tool-guide-links.test.ts",
+      "status": "passed",
+      "tests": 2,
+      "durationMs": 1.266845703125
+    },
+    {
+      "path": "src/domain/acoustic-display.test.ts",
+      "status": "passed",
+      "tests": 2,
+      "durationMs": 1.13134765625
+    },
+    {
+      "path": "src/domain/agent-fidelity-benchmark.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 4.16943359375
+    },
+    {
+      "path": "src/domain/audit-v3-boundaries.test.ts",
+      "status": "passed",
+      "tests": 142,
+      "durationMs": 26.51318359375
+    },
+    {
+      "path": "src/domain/brand-insights.test.ts",
+      "status": "passed",
+      "tests": 1,
+      "durationMs": 2.04833984375
+    },
+    {
+      "path": "src/domain/brand.test.ts",
+      "status": "passed",
+      "tests": 1,
+      "durationMs": 1.644287109375
+    },
+    {
+      "path": "src/domain/calculator-options-loader.test.ts",
+      "status": "passed",
+      "tests": 4,
+      "durationMs": 13.28173828125
+    },
+    {
+      "path": "src/domain/catalog-client.test.ts",
+      "status": "passed",
+      "tests": 4,
+      "durationMs": 15.250732421875
+    },
+    {
+      "path": "src/domain/catalog-insights.test.ts",
+      "status": "passed",
+      "tests": 4,
+      "durationMs": 17.815673828125
+    },
+    {
+      "path": "src/domain/catalog-scale.test.ts",
+      "status": "passed",
+      "tests": 11,
+      "durationMs": 18.199951171875
+    },
+    {
+      "path": "src/domain/catalog-search.test.ts",
+      "status": "passed",
+      "tests": 5,
+      "durationMs": 109.0712890625
+    },
+    {
+      "path": "src/domain/catalog.test.ts",
+      "status": "passed",
+      "tests": 4,
+      "durationMs": 45.4814453125
+    },
+    {
+      "path": "src/domain/commissioning.test.ts",
+      "status": "passed",
+      "tests": 7,
+      "durationMs": 17.714599609375
+    },
+    {
+      "path": "src/domain/compatibility-impact.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 581.00634765625
+    },
+    {
+      "path": "src/domain/compatibility.test.ts",
+      "status": "passed",
+      "tests": 9,
+      "durationMs": 6.749267578125
+    },
+    {
+      "path": "src/domain/contextual-comparison.test.ts",
+      "status": "passed",
+      "tests": 6,
+      "durationMs": 13.751953125
+    },
+    {
+      "path": "src/domain/contextual-help.test.ts",
+      "status": "passed",
+      "tests": 1,
+      "durationMs": 1.802734375
+    },
+    {
+      "path": "src/domain/contradiction-radar.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 15.318603515625
+    },
+    {
+      "path": "src/domain/counterfactual.test.ts",
+      "status": "passed",
+      "tests": 22,
+      "durationMs": 54.362060546875
+    },
+    {
+      "path": "src/domain/csv.test.ts",
+      "status": "passed",
+      "tests": 1,
+      "durationMs": 0.795654296875
+    },
+    {
+      "path": "src/domain/data-governance.test.ts",
+      "status": "passed",
+      "tests": 5,
+      "durationMs": 30.406005859375
+    },
+    {
+      "path": "src/domain/decision-dossier.test.ts",
+      "status": "passed",
+      "tests": 15,
+      "durationMs": 104.799072265625
+    },
+    {
+      "path": "src/domain/decision-resolution.test.ts",
+      "status": "passed",
+      "tests": 9,
+      "durationMs": 13.105224609375
+    },
+    {
+      "path": "src/domain/document-quality-observatory.test.ts",
+      "status": "passed",
+      "tests": 5,
+      "durationMs": 39.661865234375
+    },
+    {
+      "path": "src/domain/editorial-taxonomy.test.ts",
+      "status": "passed",
+      "tests": 9,
+      "durationMs": 2.10107421875
+    },
+    {
+      "path": "src/domain/engine-conformance.test.ts",
+      "status": "passed",
+      "tests": 8,
+      "durationMs": 19.617431640625
+    },
+    {
+      "path": "src/domain/evidence-history.test.ts",
+      "status": "passed",
+      "tests": 4,
+      "durationMs": 1597.230712890625
+    },
+    {
+      "path": "src/domain/image-dimensions.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 1.150146484375
+    },
+    {
+      "path": "src/domain/intervention.test.ts",
+      "status": "passed",
+      "tests": 7,
+      "durationMs": 17.6640625
+    },
+    {
+      "path": "src/domain/journey-context.test.ts",
+      "status": "passed",
+      "tests": 4,
+      "durationMs": 4.27978515625
+    },
+    {
+      "path": "src/domain/metadata.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 1.669921875
+    },
+    {
+      "path": "src/domain/offers.test.ts",
+      "status": "passed",
+      "tests": 7,
+      "durationMs": 4.49072265625
+    },
+    {
+      "path": "src/domain/operation-monitoring.test.ts",
+      "status": "passed",
+      "tests": 6,
+      "durationMs": 15.34814453125
+    },
+    {
+      "path": "src/domain/page-calculation-cache.test.ts",
+      "status": "passed",
+      "tests": 12,
+      "durationMs": 92.678955078125
+    },
+    {
+      "path": "src/domain/pagination.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 2.44677734375
+    },
+    {
+      "path": "src/domain/passport-pdf.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 43.764892578125
+    },
+    {
+      "path": "src/domain/passport.test.ts",
+      "status": "passed",
+      "tests": 8,
+      "durationMs": 64.693359375
+    },
+    {
+      "path": "src/domain/pressure-regulation.test.ts",
+      "status": "passed",
+      "tests": 13,
+      "durationMs": 14.159423828125
+    },
+    {
+      "path": "src/domain/preventive-maintenance.test.ts",
+      "status": "passed",
+      "tests": 7,
+      "durationMs": 24.451904296875
+    },
+    {
+      "path": "src/domain/product-display.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 5.274169921875
+    },
+    {
+      "path": "src/domain/product-identification.test.ts",
+      "status": "passed",
+      "tests": 5,
+      "durationMs": 265.17431640625
+    },
+    {
+      "path": "src/domain/product-image-dimensions.test.ts",
+      "status": "passed",
+      "tests": 2,
+      "durationMs": 2.385009765625
+    },
+    {
+      "path": "src/domain/product-structured-data.test.ts",
+      "status": "passed",
+      "tests": 2,
+      "durationMs": 1.269775390625
+    },
+    {
+      "path": "src/domain/proof-graph.test.ts",
+      "status": "passed",
+      "tests": 4,
+      "durationMs": 2.5791015625
+    },
+    {
+      "path": "src/domain/provenance.test.ts",
+      "status": "passed",
+      "tests": 2,
+      "durationMs": 1.58154296875
+    },
+    {
+      "path": "src/domain/release.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 2.1025390625
+    },
+    {
+      "path": "src/domain/runtime-catalog.test.ts",
+      "status": "passed",
+      "tests": 6,
+      "durationMs": 575.545166015625
+    },
+    {
+      "path": "src/domain/scanner-journey.test.ts",
+      "status": "passed",
+      "tests": 5,
+      "durationMs": 4.304443359375
+    },
+    {
+      "path": "src/domain/search-keywords.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 1.316162109375
+    },
+    {
+      "path": "src/domain/seo-selection.test.ts",
+      "status": "passed",
+      "tests": 4,
+      "durationMs": 33.504150390625
+    },
+    {
+      "path": "src/domain/sizing.test.ts",
+      "status": "passed",
+      "tests": 40,
+      "durationMs": 16.648193359375
+    },
+    {
+      "path": "src/domain/snapshot-stream.test.ts",
+      "status": "passed",
+      "tests": 2,
+      "durationMs": 11.823486328125
+    },
+    {
+      "path": "src/domain/snapshots.test.ts",
+      "status": "passed",
+      "tests": 5,
+      "durationMs": 33.52978515625
+    },
+    {
+      "path": "src/domain/social-card.test.ts",
+      "status": "passed",
+      "tests": 2,
+      "durationMs": 1.49072265625
+    },
+    {
+      "path": "src/domain/source-quality.test.ts",
+      "status": "passed",
+      "tests": 4,
+      "durationMs": 1.083740234375
+    },
+    {
+      "path": "src/domain/structured-data.test.ts",
+      "status": "passed",
+      "tests": 2,
+      "durationMs": 1.329345703125
+    },
+    {
+      "path": "src/domain/trade-scenario-prefill.test.ts",
+      "status": "passed",
+      "tests": 3,
+      "durationMs": 4.18017578125
+    },
+    {
+      "path": "src/domain/transparency-barometer.test.ts",
+      "status": "passed",
+      "tests": 2,
+      "durationMs": 4.454345703125
+    },
+    {
+      "path": "src/domain/verdict-audit.test.ts",
+      "status": "passed",
+      "tests": 2,
+      "durationMs": 1.47216796875
+    },
+    {
+      "path": "src/domain/verdict-cache.test.ts",
+      "status": "passed",
+      "tests": 17,
+      "durationMs": 78.34228515625
     }
   ],
-  "fullVitestJsonSha256": "ae389681fb9295b14f73496e8823c5c513cb4bf6c044e4b9e342c47f54b6647e",
+  "fullVitestJsonSha256": "6191b6030757b16131c14de156623369eba6faea74ccf7bd900ca3abc2ed3023",
   "check": {
     "command": "pnpm check",
     "errors": 0,
     "warnings": 0,
     "hints": 9,
-    "logSha256": "bc0a93afdef1e2a8559a8cdc1beeb204e4c17a41bba7ba50b7e4163bdcc38baf"
+    "logSha256": "05e6f7a4abb5d282dcbb5c76b37510ae48c0c731cc9d1b7a2aee8021d049d52e",
+    "files": 7034,
+    "implementationCommit": "5933b297"
   },
   "build": {
     "command": "pnpm build",
+    "implementationCommit": "5933b297e1cd7a319a3b309d06e055e4ec2a0a2a",
     "pages": 12980,
-    "astroSeconds": 262,
+    "astroSeconds": 104,
     "catalogReferences": 6506,
     "engineVersion": "1.4.3",
-    "logSha256": "1bf40910d9ae7535aa605d60717f77cf3948728575440707b10ae8da93500ed3",
-    "releaseMarker": "development"
+    "logSha256": "200ef32f7cf578866325b10c21dc160f9c9b555fc7b38fdf5abb2a8d6b5c8ccf",
+    "releaseMarker": "development",
+    "cacheNote": "Incremental static build; not a cold build timing."
   },
   "earlierRuns": [
     {
@@ -873,6 +877,22 @@
       "passed": 987,
       "failed": 2,
       "cause": "Ledger tests expected one dated correction before adding the two V4 entries; updated expected current count and isolated the future-correction fixture."
+    },
+    {
+      "scope": "First main pre-push",
+      "passed": 989,
+      "failed": 0,
+      "publicationBlocked": true,
+      "cause": "Three JavaScript budgets exceeded by 280, 495 and 524 gzip bytes. Existing limits preserved; module grouping profiled before retry."
     }
-  ]
+  ],
+  "artifactAudit": {
+    "command": "pnpm audit:dist",
+    "passed": true,
+    "logSha256": "6ca127fecb203500619e6e09a338d438f78833a93f7ae02d1c60e1b10f84a5e4",
+    "log": "\n> compatair@0.1.0 audit:dist /Users/bluetouff/Desktop/DEV/CompatAir\n> node scripts/audit-dist.mjs\n\nAlertes SEO non bloquantes :\nmarques/aircraft/index.html: 116 destinations internes uniques, seuil d’alerte 100 dépassé\nAudit réussi : 12980 pages, 4434 URL canoniques, 7218453 combinaisons explorables dont 7110609 couples fixes calculables à la demande et 107844 combinaisons paramétriques, sans page HTML quadratique ; distribution globale non matérialisée, 54 cartes sociales et titres ≤ 60 caractères. Artifact 676 Mo dont 351 Mo de HTML, sous les budgets de 975 et 393.75 Mo ; index de recherche 155 Ko gzip. JavaScript initial : plafond général 50 Ko, maintenance 51 Ko (maximum 50 Ko sur maintenance-preventive/index.html, Passeport 39 Ko sous son budget de 45 Ko) ; à la demande : plafond général 57 Ko, parcours versionnés 59 Ko (Calculateur 59 Ko sous son budget de 61 Ko, Passeport 57 Ko, maximum global 59 Ko sur calculateur/index.html) ; catalogue d’exécution 321 Ko sous son budget de 337.9072265625 Ko. Widget immuable et SRI vérifiés.\n",
+    "nonBlockingAlerts": [
+      "Existing aircraft brand page: 116 unique internal targets, alert threshold 100."
+    ]
+  }
 }

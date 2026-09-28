@@ -1,0 +1,494 @@
+{
+  "measuredAt": "2026-09-28T19:05:26.514040+00:00",
+  "runtime": "Node 24.19.0",
+  "kernelCommit": "0fa056841503e94706b652fd093288cfb15789de",
+  "browserCommit": "5933b297e1cd7a319a3b309d06e055e4ec2a0a2a",
+  "method": "Sum of gzipSync bytes over transitive JavaScript modules parsed with the same project module parser as audit:dist. Dynamic imports included for diagnostic-intervention and mise-en-service; initial static imports only for the three other routes.",
+  "budgetsUnchanged": true,
+  "limitsBytes": {
+    "diagnostic-intervention": 60416,
+    "maintenance-preventive": 52224,
+    "mise-en-service": 58368,
+    "calculateur": 51200,
+    "scanner": 51200
+  },
+  "before": [
+    {
+      "route": "diagnostic-intervention",
+      "total": 60696,
+      "modules": [
+        [
+          "/_assets/schemas.DXk0Xla8.js",
+          18661
+        ],
+        [
+          "/_assets/passport.DJpEzzYO.js",
+          9869
+        ],
+        [
+          "/_assets/passport-pdf.BU8aTMis.js",
+          6579
+        ],
+        [
+          "/_assets/InterventionViewer.astro_astro_type_script_index_0_lang.DKqHz1Dx.js",
+          4667
+        ],
+        [
+          "/_assets/preventive-maintenance.299XhFS3.js",
+          4439
+        ],
+        [
+          "/_assets/air-sizing.4lDaveRD.js",
+          3142
+        ],
+        [
+          "/_assets/intervention.ycXq7Tlv.js",
+          3133
+        ],
+        [
+          "/_assets/operation-monitoring.xf60W590.js",
+          2766
+        ],
+        [
+          "/_assets/catalog-client.C0peecIp.js",
+          1863
+        ],
+        [
+          "/_assets/compatibility.BS0vjZvk.js",
+          1272
+        ],
+        [
+          "/_assets/sizing.BnXaNo2z.js",
+          1101
+        ],
+        [
+          "/_assets/SiteSearch.astro_astro_type_script_index_0_lang.D0rhFlRf.js",
+          940
+        ],
+        [
+          "/_assets/preload-helper.CxFQXtKk.js",
+          729
+        ],
+        [
+          "/_assets/AcquisitionTelemetry.astro_astro_type_script_index_0_lang.D2M5dQwG.js",
+          728
+        ],
+        [
+          "/_assets/McpCanonicalTelemetry.astro_astro_type_script_index_0_lang.Cp26meVg.js",
+          402
+        ],
+        [
+          "/_assets/BaseLayout.astro_astro_type_script_index_0_lang.tZJDyEV_.js",
+          256
+        ],
+        [
+          "/_assets/catalog-client.DgnXf7_j.js",
+          149
+        ]
+      ]
+    },
+    {
+      "route": "maintenance-preventive",
+      "total": 52719,
+      "modules": [
+        [
+          "/_assets/schemas.DXk0Xla8.js",
+          18661
+        ],
+        [
+          "/_assets/passport.DJpEzzYO.js",
+          9869
+        ],
+        [
+          "/_assets/PreventiveMaintenanceViewer.astro_astro_type_script_index_0_lang.C3iyHVyv.js",
+          5281
+        ],
+        [
+          "/_assets/preventive-maintenance.299XhFS3.js",
+          4439
+        ],
+        [
+          "/_assets/air-sizing.4lDaveRD.js",
+          3142
+        ],
+        [
+          "/_assets/intervention.ycXq7Tlv.js",
+          3133
+        ],
+        [
+          "/_assets/operation-monitoring.xf60W590.js",
+          2766
+        ],
+        [
+          "/_assets/compatibility.BS0vjZvk.js",
+          1272
+        ],
+        [
+          "/_assets/sizing.BnXaNo2z.js",
+          1101
+        ],
+        [
+          "/_assets/SiteSearch.astro_astro_type_script_index_0_lang.D0rhFlRf.js",
+          940
+        ],
+        [
+          "/_assets/preload-helper.CxFQXtKk.js",
+          729
+        ],
+        [
+          "/_assets/AcquisitionTelemetry.astro_astro_type_script_index_0_lang.D2M5dQwG.js",
+          728
+        ],
+        [
+          "/_assets/McpCanonicalTelemetry.astro_astro_type_script_index_0_lang.Cp26meVg.js",
+          402
+        ],
+        [
+          "/_assets/BaseLayout.astro_astro_type_script_index_0_lang.tZJDyEV_.js",
+          256
+        ]
+      ]
+    },
+    {
+      "route": "mise-en-service",
+      "total": 58892,
+      "modules": [
+        [
+          "/_assets/schemas.DXk0Xla8.js",
+          18661
+        ],
+        [
+          "/_assets/passport.DJpEzzYO.js",
+          9869
+        ],
+        [
+          "/_assets/passport-pdf.BU8aTMis.js",
+          6579
+        ],
+        [
+          "/_assets/preventive-maintenance.299XhFS3.js",
+          4439
+        ],
+        [
+          "/_assets/air-sizing.4lDaveRD.js",
+          3142
+        ],
+        [
+          "/_assets/intervention.ycXq7Tlv.js",
+          3133
+        ],
+        [
+          "/_assets/CommissioningViewer.astro_astro_type_script_index_0_lang.D3G92Tg3.js",
+          3012
+        ],
+        [
+          "/_assets/operation-monitoring.xf60W590.js",
+          2766
+        ],
+        [
+          "/_assets/catalog-client.C0peecIp.js",
+          1863
+        ],
+        [
+          "/_assets/compatibility.BS0vjZvk.js",
+          1272
+        ],
+        [
+          "/_assets/sizing.BnXaNo2z.js",
+          1101
+        ],
+        [
+          "/_assets/SiteSearch.astro_astro_type_script_index_0_lang.D0rhFlRf.js",
+          940
+        ],
+        [
+          "/_assets/preload-helper.CxFQXtKk.js",
+          729
+        ],
+        [
+          "/_assets/AcquisitionTelemetry.astro_astro_type_script_index_0_lang.D2M5dQwG.js",
+          728
+        ],
+        [
+          "/_assets/McpCanonicalTelemetry.astro_astro_type_script_index_0_lang.Cp26meVg.js",
+          402
+        ],
+        [
+          "/_assets/BaseLayout.astro_astro_type_script_index_0_lang.tZJDyEV_.js",
+          256
+        ]
+      ]
+    }
+  ],
+  "after": [
+    {
+      "route": "diagnostic-intervention",
+      "total": 58774,
+      "modules": [
+        [
+          "/_assets/passport-sizing.BRsYxk0l.js",
+          32188
+        ],
+        [
+          "/_assets/passport-pdf.DVxZRL-j.js",
+          6582
+        ],
+        [
+          "/_assets/InterventionViewer.astro_astro_type_script_index_0_lang.C3BzvQ18.js",
+          4601
+        ],
+        [
+          "/_assets/preventive-maintenance.DUTQu4PQ.js",
+          4445
+        ],
+        [
+          "/_assets/intervention.JpnoW6kt.js",
+          3141
+        ],
+        [
+          "/_assets/operation-monitoring.CdkHdDhp.js",
+          2757
+        ],
+        [
+          "/_assets/catalog-client.DMwCwTLW.js",
+          1853
+        ],
+        [
+          "/_assets/SiteSearch.astro_astro_type_script_index_0_lang.D0rhFlRf.js",
+          940
+        ],
+        [
+          "/_assets/preload-helper.CxFQXtKk.js",
+          729
+        ],
+        [
+          "/_assets/AcquisitionTelemetry.astro_astro_type_script_index_0_lang.D2M5dQwG.js",
+          728
+        ],
+        [
+          "/_assets/McpCanonicalTelemetry.astro_astro_type_script_index_0_lang.Cp26meVg.js",
+          402
+        ],
+        [
+          "/_assets/BaseLayout.astro_astro_type_script_index_0_lang.tZJDyEV_.js",
+          256
+        ],
+        [
+          "/_assets/catalog-client.C4Y1R9Dl.js",
+          152
+        ]
+      ]
+    },
+    {
+      "route": "maintenance-preventive",
+      "total": 50840,
+      "modules": [
+        [
+          "/_assets/passport-sizing.BRsYxk0l.js",
+          32188
+        ],
+        [
+          "/_assets/PreventiveMaintenanceViewer.astro_astro_type_script_index_0_lang.hL2_Ipy9.js",
+          5254
+        ],
+        [
+          "/_assets/preventive-maintenance.DUTQu4PQ.js",
+          4445
+        ],
+        [
+          "/_assets/intervention.JpnoW6kt.js",
+          3141
+        ],
+        [
+          "/_assets/operation-monitoring.CdkHdDhp.js",
+          2757
+        ],
+        [
+          "/_assets/SiteSearch.astro_astro_type_script_index_0_lang.D0rhFlRf.js",
+          940
+        ],
+        [
+          "/_assets/preload-helper.CxFQXtKk.js",
+          729
+        ],
+        [
+          "/_assets/AcquisitionTelemetry.astro_astro_type_script_index_0_lang.D2M5dQwG.js",
+          728
+        ],
+        [
+          "/_assets/McpCanonicalTelemetry.astro_astro_type_script_index_0_lang.Cp26meVg.js",
+          402
+        ],
+        [
+          "/_assets/BaseLayout.astro_astro_type_script_index_0_lang.tZJDyEV_.js",
+          256
+        ]
+      ]
+    },
+    {
+      "route": "mise-en-service",
+      "total": 56973,
+      "modules": [
+        [
+          "/_assets/passport-sizing.BRsYxk0l.js",
+          32188
+        ],
+        [
+          "/_assets/passport-pdf.DVxZRL-j.js",
+          6582
+        ],
+        [
+          "/_assets/preventive-maintenance.DUTQu4PQ.js",
+          4445
+        ],
+        [
+          "/_assets/intervention.JpnoW6kt.js",
+          3141
+        ],
+        [
+          "/_assets/CommissioningViewer.astro_astro_type_script_index_0_lang.nhMXPYv1.js",
+          2952
+        ],
+        [
+          "/_assets/operation-monitoring.CdkHdDhp.js",
+          2757
+        ],
+        [
+          "/_assets/catalog-client.DMwCwTLW.js",
+          1853
+        ],
+        [
+          "/_assets/SiteSearch.astro_astro_type_script_index_0_lang.D0rhFlRf.js",
+          940
+        ],
+        [
+          "/_assets/preload-helper.CxFQXtKk.js",
+          729
+        ],
+        [
+          "/_assets/AcquisitionTelemetry.astro_astro_type_script_index_0_lang.D2M5dQwG.js",
+          728
+        ],
+        [
+          "/_assets/McpCanonicalTelemetry.astro_astro_type_script_index_0_lang.Cp26meVg.js",
+          402
+        ],
+        [
+          "/_assets/BaseLayout.astro_astro_type_script_index_0_lang.tZJDyEV_.js",
+          256
+        ]
+      ]
+    },
+    {
+      "route": "calculateur",
+      "total": 23471,
+      "modules": [
+        [
+          "/_assets/Calculator.astro_astro_type_script_index_0_lang.06sqoFUu.js",
+          15875
+        ],
+        [
+          "/_assets/trade-scenario-prefill.CmjbaDtR.js",
+          2292
+        ],
+        [
+          "/_assets/journey-context.CZkqwz8K.js",
+          1055
+        ],
+        [
+          "/_assets/JourneyContextBar.astro_astro_type_script_index_0_lang.C5WcxlcF.js",
+          1039
+        ],
+        [
+          "/_assets/SiteSearch.astro_astro_type_script_index_0_lang.D0rhFlRf.js",
+          940
+        ],
+        [
+          "/_assets/preload-helper.CxFQXtKk.js",
+          729
+        ],
+        [
+          "/_assets/CalculatorAcquisitionTelemetry.astro_astro_type_script_index_0_lang.WhGMZt-n.js",
+          464
+        ],
+        [
+          "/_assets/McpCanonicalTelemetry.astro_astro_type_script_index_0_lang.Cp26meVg.js",
+          402
+        ],
+        [
+          "/_assets/BaseLayout.astro_astro_type_script_index_0_lang.tZJDyEV_.js",
+          256
+        ],
+        [
+          "/_assets/catalog-search.CGV7r78Z.js",
+          251
+        ],
+        [
+          "/_assets/source-quality.CfBNOmOE.js",
+          168
+        ]
+      ]
+    },
+    {
+      "route": "scanner",
+      "total": 46477,
+      "modules": [
+        [
+          "/_assets/passport-sizing.BRsYxk0l.js",
+          32188
+        ],
+        [
+          "/_assets/ProductScanner.astro_astro_type_script_index_0_lang.Cz_xN1Fl.js",
+          8972
+        ],
+        [
+          "/_assets/journey-context.CZkqwz8K.js",
+          1055
+        ],
+        [
+          "/_assets/JourneyContextBar.astro_astro_type_script_index_0_lang.C5WcxlcF.js",
+          1039
+        ],
+        [
+          "/_assets/SiteSearch.astro_astro_type_script_index_0_lang.D0rhFlRf.js",
+          940
+        ],
+        [
+          "/_assets/preload-helper.CxFQXtKk.js",
+          729
+        ],
+        [
+          "/_assets/AcquisitionTelemetry.astro_astro_type_script_index_0_lang.D2M5dQwG.js",
+          728
+        ],
+        [
+          "/_assets/McpCanonicalTelemetry.astro_astro_type_script_index_0_lang.Cp26meVg.js",
+          402
+        ],
+        [
+          "/_assets/BaseLayout.astro_astro_type_script_index_0_lang.tZJDyEV_.js",
+          256
+        ],
+        [
+          "/_assets/source-quality.CfBNOmOE.js",
+          168
+        ]
+      ]
+    }
+  ],
+  "intermediateLimits": [
+    {
+      "stage": "Schema reuse alone",
+      "result": "Insufficient reduction; not published."
+    },
+    {
+      "stage": "Explicit dependency exclusion",
+      "result": "Build rejected by the Astro exports-only entry signature; option removed."
+    },
+    {
+      "stage": "Grouping without deferred catalog client",
+      "result": "Three original budgets passed, but initial calculator reached 56 KiB and exceeded its 50 KiB limit; not published."
+    }
+  ],
+  "scope": "Existing compiler and stack. Shared modules grouped; catalog client keeps asynchronous validation and version guards on use. No budget raised."
+}

@@ -1,6 +1,6 @@
 # CompatAir : suites V4 du 28 septembre 2026
 
-Les trois défauts V4 sont corrigés dans le moteur **1.4.3**, avec conservation des protections de 1.4.2. Avant édition, `main` était `bf27ebb4dbbb022966913c8fd96ecab70a97fab5`. La comparaison avec la base auditée `896ce91f3bd7bd7873421d7f21e93652a42d7590` a identifié les travaux V3 déjà présents. Les noyaux et le sélecteur concernés étaient encore identiques à la base. Le commit d’implémentation est `c38fba11fc7adc25eb9f6ea7e10b4cf1c70ad5cd`.
+Les trois défauts V4 sont corrigés dans le moteur **1.4.3**, avec conservation des protections de 1.4.2. Avant édition, `main` était `bf27ebb4dbbb022966913c8fd96ecab70a97fab5`. La comparaison avec la base auditée `896ce91f3bd7bd7873421d7f21e93652a42d7590` a identifié les travaux V3 déjà présents. Les noyaux et le sélecteur concernés étaient encore identiques à la base. Le commit du noyau final est `0fa056841503e94706b652fd093288cfb15789de`.
 
 Les [états V4](states.json) s’ajoutent aux historiques. Les 40 tickets du rapport, les 100 intentions originales, les fixtures V3 et les cohortes MCP ne sont pas réécrits. Le rapport fourni est identifié par SHA-256 ; aucun de ses scripts n’a été exécuté. Aucun croisement MCP absent n’est reconstruit. Les rapports locaux n’envoient aucune télémétrie.
 
@@ -35,14 +35,15 @@ Le sélecteur conserve les suites numériques ordonnées, en normalisant les sé
 
 ## Contrôles réellement exécutés
 
-- **Tests du projet** : Node 24.19.0, `pnpm test`, 989 tests réussis dans 137 fichiers. Les suites existantes sont étendues. [Résultats par fichier et itérations précédentes](tests-results.json).
+- **Tests du projet** : Node 24.19.0, `pnpm test`, 990 tests réussis dans 137 fichiers. Les suites existantes sont étendues. [Résultats par fichier et itérations précédentes](tests-results.json).
 - **Zod** : seuils invalides refusés, projections C01-C05 conservées, scénario de rafale conservé dans un Passeport signé puis relu.
 - **API/MCP** : requêtes HTTP réelles sur loopback, parité des limites documentaires et refus des paramètres personnalisés non pris en charge. MCP testé par son gestionnaire JSON-RPC. Ces interfaces publiques n’acceptent pas une machine personnalisée ; ces essais ne prétendent pas y tester une durée personnalisée.
 - **Typecheck** : `pnpm check`, zéro erreur, zéro avertissement, neuf suggestions préexistantes.
-- **Build local** : `pnpm build`, 12 980 pages en 262 s pour la phase Astro, puis base de 6 506 références. Marqueur local `development` ; ce résultat n’est pas une preuve de production.
+- **Build local** : `pnpm build`, 12 980 pages en 104 s pour la phase Astro incrémentale, puis base de 6 506 références. Marqueur local `development` ; ce résultat n’est pas une preuve de production.
+- **Audit de l’artefact** : `pnpm audit:dist` réussi, tous les plafonds HTML, données et JavaScript conservés. Alerte non bloquante préexistante : page Aircraft, 116 destinations internes pour un seuil d’alerte de 100.
 - **Navigateur** : [observations locales](browser-local.json), cas 4/8, clic sur une recommandation valable 7/8, rejet 9/8 et masquage du résultat périmé, seuil partiel, quatre durées, rendu mobile 390 × 844 sans débordement. Le navigateur a cliqué la famille pression ; les autres familles sont rejouées en tests unitaires.
 
-Les contrôles complets du hook `main`, les contrôles CI et la révision publique doivent encore être vérifiés au moment de la livraison. La note de scénario prend une ligne complète dans la grille des métriques après inspection visuelle.
+Les contrôles complets du hook `main`, les contrôles CI et la révision publique doivent encore être vérifiés au moment de la livraison. La note de scénario prend une ligne complète dans la grille des métriques après inspection visuelle. Le chargement du client catalogue reste à la demande (`5933b297e1cd7a319a3b309d06e055e4ec2a0a2a`). Le [profilage des scripts](browser-budgets.json) conserve les plafonds existants ; les tentatives rejetées par le build ou par les budgets sont identifiées. Une enveloppe synthétique au format 1.4.2, avec empreinte calculée indépendamment, vérifie aussi la conservation de l’ordre historique des champs signés.
 
 ## Suites indépendantes
 
@@ -59,7 +60,7 @@ pnpm check
 pnpm build
 node scripts/audit-v3/intention-registry.mjs dist /tmp/v4-intentions.json
 node scripts/audit-v3/documentary-coverage.mjs dist/data/catalog.json /tmp/v4-intentions.json /tmp/v4-coverage.json
-node scripts/audit-v3/compare-engines.mjs dist/data/catalog.json 896ce91f3bd7bd7873421d7f21e93652a42d7590 c38fba11fc7adc25eb9f6ea7e10b4cf1c70ad5cd /tmp/v4-engines.json
+node scripts/audit-v3/compare-engines.mjs dist/data/catalog.json 896ce91f3bd7bd7873421d7f21e93652a42d7590 0fa056841503e94706b652fd093288cfb15789de /tmp/v4-engines.json
 ```
 
 Le dernier programme exécute seulement les deux modules fixes de l’historique Git local du projet. Aucun code provenant du rapport ou d’une source externe n’est exécuté. Aucune protection TLS ou réseau n’est abaissée, aucun HTML dynamique non échappé n’est injecté, aucune stack n’est changée et aucun test de charge ne cible la production.

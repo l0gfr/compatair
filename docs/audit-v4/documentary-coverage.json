@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "measuredAt": "2026-09-28T18:25:29.679Z",
+  "measuredAt": "2026-09-28T19:01:32.407Z",
   "calculationVersion": "1.4.3",
   "catalog": {
     "catalogVersion": "02fe8d998994ae642273a70bd63f6f265b7658714bff08ccab127d1a798a2a6f",
     "fileSha256": "cc4532aa59f09d71b1d6d0674aa29d85d3d6ce8294c6f488e5cb1097a4be4f17"
   },
   "afterCatalog": null,
-  "intentionRegistrySha256": "98e13d8548ab81ddee047695c3146829fecea10be3be583a567a7ef27dc2c09d",
+  "intentionRegistrySha256": "23c17a1721246060e0dde6da7cff8b81c5b9360e16888cdc912997e505dbd7a7",
   "definitions": {
     "presenceCube": "FAD documented x duty cycle documented x maximum pressure documented; compressors, cells ordered F,C,P (1=yes,0=no).",
     "pressureUsablePairCube": "FAD documented x cycle documented x usable pressure; fixed pairs. Usable pressure requires sourced tool pressure, sourced compressor maximum covering it, grade A/B and exact/interpolated/conservative FAD resolution. It does not establish sufficient flow or endurance.",

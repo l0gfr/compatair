@@ -72,5 +72,17 @@
     "Only pressure recommendation clicked in browser; all six change families replayed in unit tests.",
     "No production load; no Google rank or traffic observation.",
     "Desktop scenario note moved to a full-width grid row after inspection; final production render still to verify."
-  ]
+  ],
+  "postBundleCheck": {
+    "checkedAt": "2026-09-28T19:05:26.514040+00:00",
+    "browserCommit": "5933b297e1cd7a319a3b309d06e055e4ec2a0a2a",
+    "origin": "http://127.0.0.1:4410",
+    "sharedConfigurationRestored": true,
+    "recalculatedFirstBurstSeconds": 28.5,
+    "errorsInBrowserConsole": 0,
+    "viewport": 1280,
+    "scrollWidth": 1280,
+    "scenarioNoteGridColumn": "1 / -1",
+    "durationAndNoteVisuallyInspected": true
+  }
 }

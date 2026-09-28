@@ -51,8 +51,8 @@
   ],
   "seoObservations": [],
   "validation": {
-    "unit": "passed; tests-results.json, full suite 989/989",
-    "zod": "passed; sizing/passport invalid thresholds and snapshot round-trip in existing tests",
+    "unit": "passed; tests-results.json, full suite 990/990",
+    "zod": "passed; sizing/passport invalid thresholds and snapshot round-trip in existing tests; independently hashed legacy 1.4.2 envelope retained",
     "apiMcp": "passed; real loopback HTTP, MCP handler, unsupported custom controls rejected; no custom-timing API contract claimed",
     "browser": "passed for documented local cases; browser-local.json; production pending"
   },
@@ -62,6 +62,7 @@
     "exhaustiveEngineComparison": "executed; engine-comparison.json, 7110609 pairs, no difference in the four compared fields",
     "publication100k": "historical failure retained separately; V4 full chain not rerun; qualification-100k-history.json"
   },
-  "implementationCommit": "c38fba11fc7adc25eb9f6ea7e10b4cf1c70ad5cd",
-  "validatedAt": "2026-09-28T18:32:21.677433+00:00"
+  "implementationCommit": "0fa056841503e94706b652fd093288cfb15789de",
+  "validatedAt": "2026-09-28T18:59:44.778471+00:00",
+  "browserImplementationCommit": "5933b297e1cd7a319a3b309d06e055e4ec2a0a2a"
 }

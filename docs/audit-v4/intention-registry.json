@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T18:24:59.915Z",
+  "generatedAt": "2026-09-28T19:01:32.069Z",
   "panelId": "compatair-metier-2026-09-27",
   "builtRelease": {
     "schemaVersion": "1.0.0",
@@ -13,7 +13,7 @@
       "document": "rapport_compatair_seo_metier_6_mois.html",
       "sha256": "b1e135feed4925a1fc048cbf5cad232d3b0f44e721cc38e3d64dad63b0691d75"
     },
-    "sourceCommit": "c38fba11fc7adc25eb9f6ea7e10b4cf1c70ad5cd"
+    "sourceCommit": "0fa056841503e94706b652fd093288cfb15789de"
   },
   "measurementStatus": "unavailable",
   "measurementLimit": "No dated Search Console or SERP observations supplied. Candidate priorities are editorial hypotheses, not measured search volume or positions.",
