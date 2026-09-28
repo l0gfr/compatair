@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "measuredAt": "2026-09-28T18:25:26.153Z",
+  "runtime": {
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "engines": [
+    {
+      "commit": "896ce91f3bd7bd7873421d7f21e93652a42d7590",
+      "calculationVersion": "1.4.2",
+      "modules": {
+        "server/air-sizing.mjs": "f9cb15be8369a7c124a627758c450b3fdb67aac4b5f5aff3d79deb97f01b962a",
+        "server/air-compatibility.mjs": "7435707a8bdfbdfa66d43883ed9877ef96cd3d82d309dec7687c67191d3bdd15"
+      }
+    },
+    {
+      "commit": "c38fba11fc7adc25eb9f6ea7e10b4cf1c70ad5cd",
+      "calculationVersion": "1.4.3",
+      "modules": {
+        "server/air-sizing.mjs": "b2c1dc3f5899bdadb03a9e4069618b46319c7a0dad1ff44d1d8f48f26361c3b6",
+        "server/air-compatibility.mjs": "7435707a8bdfbdfa66d43883ed9877ef96cd3d82d309dec7687c67191d3bdd15"
+      }
+    }
+  ],
+  "catalog": {
+    "catalogVersion": "02fe8d998994ae642273a70bd63f6f265b7658714bff08ccab127d1a798a2a6f",
+    "fileSha256": "cc4532aa59f09d71b1d6d0674aa29d85d3d6ce8294c6f488e5cb1097a4be4f17",
+    "bytes": 34908168,
+    "verifiedAt": "2026-09-27"
+  },
+  "scenario": {
+    "safetyMargin": 0.25,
+    "mode": "successive",
+    "quantity": 1,
+    "dutyFactor": 1,
+    "sessionMinutes": 30,
+    "warningComparison": "ordered exact strings",
+    "source": "server/air-compatibility.mjs at each pinned commit"
+  },
+  "denominator": {
+    "compressors": 1419,
+    "fixedFlowTools": 5011,
+    "excludedParametricTools": 76,
+    "pairs": 7110609,
+    "includesAverageOnlyFixedFlow": true
+  },
+  "counts": {
+    "before": {
+      "insufficient_data": 5228153,
+      "continuous": 1417292,
+      "incompatible": 465164
+    },
+    "after": {
+      "insufficient_data": 5228153,
+      "continuous": 1417292,
+      "incompatible": 465164
+    }
+  },
+  "differences": {
+    "verdict": 0,
+    "confidence": 0,
+    "limitingFactor": 0,
+    "warnings": 0
+  },
+  "changedPairs": 0,
+  "transitions": {
+    "insufficient_data->insufficient_data": 5228153,
+    "continuous->continuous": 1417292,
+    "incompatible->incompatible": 465164
+  },
+  "resultDigests": [
+    "478884e81ecdabc16398356f823e25d1c244c9bfe89c41d646c9efd716629337",
+    "478884e81ecdabc16398356f823e25d1c244c9bfe89c41d646c9efd716629337"
+  ],
+  "samples": [],
+  "sampleLimit": 20,
+  "elapsedSeconds": 29.26265425,
+  "limitations": [
+    "Same fixed catalog for both engines; no claim about earlier catalog populations.",
+    "Aggregate offline comparison; no Cartesian matrix is retained or served.",
+    "No certification of custom scenarios, HTTP, rendering or external source accuracy."
+  ]
+}

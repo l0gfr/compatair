@@ -1,0 +1,76 @@
+{
+  "executedAt": "2026-09-28T18:30:26.185025+00:00",
+  "scope": "Manual CUA browser checks against built static files and current Node API through loopback only",
+  "origin": "http://127.0.0.1:4410",
+  "engineVersion": "1.4.3",
+  "implementationCommit": "c38fba11fc7adc25eb9f6ea7e10b4cf1c70ad5cd",
+  "buildIdentity": "development; not a production SHA proof",
+  "tool": {
+    "id": "einhell-tc-pe-150",
+    "documentedFlowLpm": 100,
+    "documentedPressureBar": 6.3
+  },
+  "checks": [
+    {
+      "case": "C03 supply 5, thresholds 4/8",
+      "observedVerdictLabel": "Non compatible",
+      "recommendation": "Aucun changement unique n’est démontré suffisant",
+      "passed": true
+    },
+    {
+      "case": "C03 supply 6.3, thresholds unchanged 4/8",
+      "observedVerdictLabel": "À confirmer",
+      "limit": "Maintien de pression à vérifier",
+      "availableFadDisplayedLpm": 200,
+      "fadRequestedAgain": false,
+      "passed": true
+    },
+    {
+      "case": "Apply pressure 5 → 6.3 with thresholds 7/8",
+      "announced": "Compatible en continu",
+      "effectiveLabel": "Compatible",
+      "cutInAfter": 7,
+      "cutOutAfter": 8,
+      "passed": true
+    },
+    {
+      "case": "9/8 after valid result",
+      "alert": "La pression de réenclenchement doit être inférieure à la pression d’arrêt.",
+      "previousResultHidden": true,
+      "passed": true
+    },
+    {
+      "case": "First burst: quantity 2, tool duty .3, FAD 100, tank 50, compressor duty 1, cut-out 8",
+      "observedSecondsByCutIn": {
+        "6.3": 25.5,
+        "6.5": 28.5,
+        "7": 36,
+        "7.5": 43.5
+      },
+      "recoveryEstimateDisplayed": false,
+      "assumptionsVisible": true,
+      "passed": true
+    },
+    {
+      "case": "Partial regulation cut-in 7, cut-out empty",
+      "observedVerdictLabel": "À confirmer",
+      "availableFadDisplayedLpm": 200,
+      "limit": "Renseigner les deux seuils de régulation pour vérifier le maintien de pression.",
+      "durationDisplayed": false,
+      "passed": true
+    },
+    {
+      "case": "390 x 844 mobile",
+      "viewportWidth": 390,
+      "scrollWidth": 390,
+      "durationAndLimitsVisuallyInspected": true,
+      "passed": true
+    }
+  ],
+  "limits": [
+    "Synthetic custom machine, not a real product autonomy measurement.",
+    "Only pressure recommendation clicked in browser; all six change families replayed in unit tests.",
+    "No production load; no Google rank or traffic observation.",
+    "Desktop scenario note moved to a full-width grid row after inspection; final production render still to verify."
+  ]
+}

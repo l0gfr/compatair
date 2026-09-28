@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "auditBase": "896ce91f3bd7bd7873421d7f21e93652a42d7590",
+  "preEditHead": "bf27ebb4dbbb022966913c8fd96ecab70a97fab5",
+  "engineBefore": "1.4.2",
+  "engineAfter": "1.4.3",
+  "sourceReportSha256": "02d98fb592ec689e90e66c16e1e84ff113edcad952269e0c93ac42a81ff67f50",
+  "historicalRecords": {
+    "tickets": {
+      "count": 40,
+      "canonicalJsonSha256": "cdc5cda94d27b2f9faf1df64c5ada06d8509fb5229255efed735c8dfe26df453",
+      "modified": false
+    },
+    "originalIntentions": {
+      "count": 100,
+      "panelSha256": "b6a4de35c72469d7f2c1c1d2d840da3c7e9e2f26d72b7479780c7d24130b4684",
+      "modified": false
+    },
+    "v3FixturesSha256": "99d6e9f3145764219d03157977544d9054e945b92106cc6bf18c09636888e14a",
+    "mcpCohorts": "unchanged; no unknown joint distribution reconstructed",
+    "referenceRegistrySha256": "c19af960352e27ef7e4f0a0a7b3f488a8e3fbe8fd86d7485d00e8ce61cef1148"
+  },
+  "states": [
+    {
+      "id": "V4-01",
+      "status": "validated-locally",
+      "proofs": [
+        "../../src/domain/counterfactual.test.ts",
+        "../../tests/fixtures/audit-v4/extensions.json"
+      ],
+      "scope": "C01-C05 full result equality, all six single-change replays, partial/invalid regulation and duplicate cadence rows"
+    },
+    {
+      "id": "V4-02",
+      "status": "validated-locally",
+      "proofs": [
+        "../../src/domain/sizing.test.ts",
+        "../../src/domain/passport.test.ts"
+      ],
+      "scope": "Four synthetic first-burst timings, independent free-air mass integration, explicit assumptions persisted with signed result; no physical product guarantee"
+    },
+    {
+      "id": "V4-03",
+      "status": "validated-locally",
+      "proofs": [
+        "../../scripts/lib/editorial-priority.test.mjs",
+        "../../src/domain/audit-v3-boundaries.test.ts"
+      ],
+      "scope": "Ordered numeric identities, aliases already surfaced upstream, comparisons, previous 112 lexical witnesses"
+    }
+  ],
+  "seoObservations": [],
+  "validation": {
+    "unit": "passed; tests-results.json, full suite 989/989",
+    "zod": "passed; sizing/passport invalid thresholds and snapshot round-trip in existing tests",
+    "apiMcp": "passed; real loopback HTTP, MCP handler, unsupported custom controls rejected; no custom-timing API contract claimed",
+    "browser": "passed for documented local cases; browser-local.json; production pending"
+  },
+  "separateSuites": {
+    "documentaryCoverage": "executed; documentary-coverage.json",
+    "intentionRegistry": "executed; intention-registry.json, observations remain empty",
+    "exhaustiveEngineComparison": "executed; engine-comparison.json, 7110609 pairs, no difference in the four compared fields",
+    "publication100k": "historical failure retained separately; V4 full chain not rerun; qualification-100k-history.json"
+  },
+  "implementationCommit": "c38fba11fc7adc25eb9f6ea7e10b4cf1c70ad5cd",
+  "validatedAt": "2026-09-28T18:32:21.677433+00:00"
+}
