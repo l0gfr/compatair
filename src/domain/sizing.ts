@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { calculateSizing, CALCULATION_VERSION, STANDARD_ATMOSPHERE_BAR } from '../../server/air-sizing.mjs';
+import { calculateSizing, compressorPressureIssues, CALCULATION_VERSION, STANDARD_ATMOSPHERE_BAR } from '../../server/air-sizing.mjs';
 export { CALCULATION_VERSION, STANDARD_ATMOSPHERE_BAR };
 
 const fixedFlowDemandSchema = z.object({
@@ -44,6 +44,8 @@ const compressorInputSchema = z.object({
 	cutInPressureBar: z.number().nonnegative().max(50).optional(),
 	cutOutPressureBar: z.number().positive().max(50).optional(),
 	dutyCycle: z.number().min(0.01).max(1).optional(),
+}).superRefine((value, context) => {
+	for (const issue of compressorPressureIssues(value)) context.addIssue({ code: 'custom', message: issue.message, path: [issue.field] });
 });
 
 export const sizingInputSchema = z.object({

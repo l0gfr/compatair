@@ -47,6 +47,7 @@ const contracts = [
 			<article><span>Intégrations récurrentes</span><strong data-stat="recurrent_integrations">...</strong></article>
 		</div>
 		<p class="agent-stats-status" data-stats-status>Chargement du rapport agrégé...</p>
+		<p class="agent-stats-status" data-joint-status aria-live="polite">La couverture du croisement historique sera précisée avec le rapport.</p>
 		<div class="agent-tables">
 			<section><h3>Tools les plus appelés</h3><div class="agent-table-wrap"><table><thead><tr><th>Tool</th><th>Appels</th><th>Plausibles</th><th>Smoke</th><th>Probe</th></tr></thead><tbody data-tool-rows></tbody></table></div></section>
 			<section><h3>Clients déclarés via clientInfo</h3><div class="agent-table-wrap"><table><thead><tr><th>Famille</th><th>Initialisations</th></tr></thead><tbody data-client-rows></tbody></table></div></section>
@@ -86,6 +87,7 @@ const contracts = [
 <script>
 	const root = document.querySelector<HTMLElement>('[data-agent-stats]');
 	const status = document.querySelector<HTMLElement>('[data-stats-status]');
+	const jointStatus = document.querySelector<HTMLElement>('[data-joint-status]');
 	const toolRows = document.querySelector<HTMLTableSectionElement>('[data-tool-rows]');
 	const clientRows = document.querySelector<HTMLTableSectionElement>('[data-client-rows]');
 	const outcomeRows = document.querySelector<HTMLTableSectionElement>('[data-outcome-rows]');
@@ -99,6 +101,11 @@ const contracts = [
 		const response = await fetch('/data/mcp-usage.json', { headers: { Accept: 'application/json' } });
 		if (!response.ok) throw new Error('report_unavailable');
 		const report = await response.json();
+		const joint = report.reconciliation?.joint;
+		if (jointStatus) jointStatus.textContent = report.reconciliation?.status === 'inconsistent'
+			? 'Les compteurs présentent un écart : les taux dérivés sont indisponibles. Les nombres enregistrés restent visibles.'
+			: joint ? `Croisement documenté pour ${formatCount(joint.classified_calls)} appels sur ${formatCount(report.totals?.tool_calls)}. ${formatCount(joint.unclassified_calls)} appels historiques sans ventilation complète restent séparés ; leur répartition ne peut pas être reconstituée. Le tableau montre les 20 lignes les plus fréquentes.`
+			: 'La couverture historique du croisement est indisponible.';
 		for (const element of root?.querySelectorAll<HTMLElement>('[data-stat]') ?? []) {
 			const key = element.dataset.stat ?? '';
 			const value = key.includes('.') ? readPath(report, key) : report.totals?.[key];
@@ -129,6 +136,7 @@ const contracts = [
 		if (status) status.textContent = report.updated_at ? `Rapport mis à jour le ${new Intl.DateTimeFormat('fr-FR', { dateStyle: 'long', timeStyle: 'short' }).format(new Date(report.updated_at))}.` : 'Instrumentation active, aucun appel agrégé à ce stade.';
 	} catch {
 		if (status) status.textContent = 'Le rapport d’usage est momentanément indisponible. Aucun chiffre de remplacement n’est estimé.';
+		if (jointStatus) jointStatus.textContent = 'La couverture historique est indisponible.';
 	}
 </script>
 

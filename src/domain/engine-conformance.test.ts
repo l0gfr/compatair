@@ -54,7 +54,7 @@ describe('one deterministic air calculation across surfaces', () => {
  });
  it('uses only receiver air above the required pressure and honors the actual cutoff', () => {
   const input = { demands: [{ id: 'fixture', flowLpm: 200, pressureBar: 6, dutyFactor: .3 }], compressor: { maxPressureBar: 10, availableFadLpm: 150, dutyCycle: 1, tankLiters: 50, cutInPressureBar: 4, cutOutPressureBar: 8 } };
-  expect(sizeConfiguration(input)).toMatchObject({ verdict: 'intermittent', usableTankAirLiters: 100, estimatedWorkMinutes: 2 });
+  expect(sizeConfiguration(input)).toMatchObject({ verdict: 'insufficient_data', limitingFactor: 'pressure', usableTankAirLiters: 100 });
   expect(sizeConfiguration({ ...input, compressor: { ...input.compressor, cutOutPressureBar: 5 } })).toMatchObject({ verdict: 'incompatible', limitingFactor: 'pressure' });
  });
 

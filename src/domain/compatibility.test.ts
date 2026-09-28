@@ -58,7 +58,7 @@ describe('evaluateCompatibility avec plusieurs modèles de demande', () => {
 			availableFadLpm: 930,
 			availableFadBasis: 'higher-pressure-bound',
 			availableFadReferencePressureBar: 7,
-			calculationVersion: '1.4.1',
+			calculationVersion: '1.4.2',
 		});
 		expect(result.warnings).toContainEqual(expect.stringContaining('Borne conservatrice : 930 L/min à 7 bar pour un besoin à 6,3 bar'));
 	});

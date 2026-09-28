@@ -4,6 +4,16 @@ import { createCatalogQualityReport, createCatalogScope, evaluateFreshness, fres
 import { sourceRoleForEvidence } from './catalog-normalization';
 
 describe('public catalog data governance', () => {
+	it('counts distinct evidence entries even when they cite the same document', () => {
+		const evidence = { ...compressors[0].evidence[0], id: 'shared-proof', sourceUrl: 'https://example.com/catalog.pdf#page=2', sourceType: 'manufacturer' as const, sourceRole: 'primary' as const };
+		const report = createCatalogQualityReport([
+			{ ...compressors[0], evidence: [evidence, { ...evidence, id: 'other-field-proof', sourceUrl: 'https://example.com/catalog.pdf#page=3' }] },
+			{ ...compressors[1], evidence: [evidence] },
+		], [], CATALOG_VERIFIED_AT);
+		expect(report.source_roles.counting_unit).toBe('distinct_evidence_id');
+		expect(report.source_roles.evidence_entry_counts.primary).toBe(2);
+		expect(report.source_roles.document_counts_deprecated).toContain('Alias');
+	});
 	it('publishes the exact explored, fixed and parametric grains without conflating them', () => {
 		expect(createCatalogScope(compressors, tools)).toEqual({
 			compressor_count: 1419,

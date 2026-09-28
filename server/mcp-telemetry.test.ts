@@ -108,9 +108,14 @@ describe('MCP privacy-safe telemetry', () => {
 		};
 		const report = buildPublicMcpUsageReport(historical, catalog);
 		expect(report.schema_version).toBe('2.1.0');
+		expect(report.reconciliation).toMatchObject({ status: 'partial', ratesAvailable: true, totals: { status: 'consistent' }, joint: { status: 'partial', classified_calls: 0, unclassified_calls: 1, coverage_rate: 0 } });
+		expect(report.traffic_classes.unknown).toBe(1);
+		expect(report.totals.error_rate).toBe(1);
 		expect(report.tool_outcome_breakdown).toEqual([
 			{ traffic_class: 'historical_unclassified', tool: 'orient_decision', outcome: 'unclassified', error_code: 'not_recorded', calls: 1 },
 		]);
+		const mixed = aggregateMcpTelemetry(historical, { type: 'tool_call', actorId: actor, toolName: 'orient_decision', outcome: 'success', trafficHint: 'smoke_ci', products: [], compatibilities: [] }, new Date('2026-07-13T12:01:00Z'));
+		expect(buildPublicMcpUsageReport(mixed, catalog).reconciliation.joint).toMatchObject({ status: 'partial', classified_calls: 1, unclassified_calls: 1, coverage_rate: .5 });
 	});
 
 	it('preserves every tool call when concurrent writes are coalesced', async () => {
@@ -118,6 +123,18 @@ describe('MCP privacy-safe telemetry', () => {
 		await Promise.all(Array.from({ length: 25 }, () => store.record({ type: 'tool_call', actorId: actor, toolName: 'check_compatibility', outcome: 'success', canonicalIssued: true, products: [], compatibilities: [] })));
 		expect(await store.snapshot()).toMatchObject({ totalEvents: 25, weeks: [{ calls: 25, outcomes: { success: 25 } }], actors: [{ id: actor, calls: 25 }] });
 	});
+});
+
+it.each(['traffic', 'outcome'])('detects a contradictory joint %s distribution even when all totals match', (dimension) => {
+	const state: any = aggregateMcpTelemetry(empty, { type: 'tool_call', actorId: actor, toolName: 'check_compatibility', outcome: 'success', trafficHint: 'smoke_ci' }, new Date('2026-07-13T12:00:00Z'));
+	expect(buildPublicMcpUsageReport(state, catalog).reconciliation.joint).toMatchObject({ status: 'consistent', classified_calls: 1, unclassified_calls: 0, coverage_rate: 1 });
+	const row = state.weeks[0].tools[0].outcomeBreakdown[0];
+	if (dimension === 'traffic') row.trafficClass = 'probe';
+	else row.outcome = 'error';
+	const report = buildPublicMcpUsageReport(state, catalog);
+	expect(report.reconciliation).toMatchObject({ status: 'inconsistent', totals: { status: 'consistent' }, joint: { status: 'inconsistent' }, ratesAvailable: false });
+	expect(report.reconciliation.reasons).toContain(dimension === 'traffic' ? 'joint_traffic' : 'joint_outcomes');
+	expect(report.totals.success_rate).toBeNull();
 });
 
 it('withholds rates when weekly recorded subtotals cannot be reconciled', () => {

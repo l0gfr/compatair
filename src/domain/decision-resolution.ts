@@ -31,7 +31,7 @@ export type DecisionResolutionStatus =
 	| 'no_verified_solution';
 
 export type DecisionDataGap = {
-	code: 'source_quality' | 'missing_fad' | 'pressure_outside_curve' | 'missing_receiver_cycle' | 'missing_custom_fad' | 'missing_duty_cycle' | 'unknown';
+	code: 'source_quality' | 'missing_fad' | 'pressure_outside_curve' | 'missing_receiver_cycle' | 'missing_custom_fad' | 'missing_duty_cycle' | 'pressure_regulation' | 'unknown';
 	title: string;
 	detail: string;
 };
@@ -87,9 +87,14 @@ export function createDecisionResolution<T extends DecisionCompressor>(input: {
 export function explainDecisionDataGap(
 	compressor: DecisionCompressor | undefined,
 	requiredPressureBar: number,
-	result: Pick<SizingResult, 'verdict' | 'warnings'>,
+	result: Pick<SizingResult, 'verdict' | 'warnings' | 'limitingFactor'>,
 ): DecisionDataGap | undefined {
 	if (result.verdict !== 'insufficient_data') return undefined;
+	if (result.limitingFactor === 'pressure') return {
+		code: 'pressure_regulation',
+		title: 'Maintien de pression à vérifier',
+		detail: result.warnings.at(-1) ?? 'Vérifiez les seuils de régulation et la pression en charge.',
+	};
 	if (result.warnings.some((warning) => warning.includes('cycle de service du compresseur manque'))) return {
 		code: 'missing_duty_cycle',
 		title: 'Endurance non établie',

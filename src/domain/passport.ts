@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { compressorPressureIssues } from '../../server/air-sizing.mjs';
 import type { Compressor, ToolProfile } from './catalog';
 import { commissioningRecordSchema } from './commissioning';
 import { resolveAvailableFad } from './compatibility';
@@ -42,7 +43,7 @@ export const passportConfigurationSchema = z.object({
 	commissioning: commissioningRecordSchema.optional(),
 }).superRefine((value, context) => {
 	if (value.selectedCompressor === 'custom' && value.custom.maxPressureBar === undefined) context.addIssue({ code: 'custom', message: 'La pression maximale du compresseur personnalisé est obligatoire.', path: ['custom', 'maxPressureBar'] });
-	if (value.custom.cutInPressureBar !== undefined && value.custom.cutOutPressureBar !== undefined && value.custom.cutInPressureBar >= value.custom.cutOutPressureBar) context.addIssue({ code: 'custom', message: 'La pression de réenclenchement doit être inférieure à la pression d’arrêt.', path: ['custom', 'cutInPressureBar'] });
+	for (const issue of compressorPressureIssues(value.custom)) context.addIssue({ code: 'custom', message: issue.message, path: ['custom', issue.field] });
 	const toolPressureBar = Math.max(...value.demands.map((demand) => demand.model === 'inflation' ? demand.targetPressureBar : demand.pressureBar));
 	if (toolPressureBar + (value.measuredPressureDropBar ?? 0) > 50) context.addIssue({ code: 'custom', message: 'La pression outil et la chute mesurée dépassent ensemble la limite de calcul de 50 bar.', path: ['measuredPressureDropBar'] });
 });

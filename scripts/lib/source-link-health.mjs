@@ -94,3 +94,16 @@ export function healthSummary(results) {
 	for (const result of results) counts[result.state] += 1;
 	return { ...counts, checked: results.length, anomalies: counts.broken + counts.unavailable + counts.unsafe, auditUnavailable: results.length === 0 || counts.unverified === results.length };
 }
+
+export function sourceHealthSummaryMarkdown(report) {
+	const details = report.results.filter(result => result.state !== 'reachable');
+	const anomalies = details.filter(result => result.state !== 'unverified');
+	const selected = [...anomalies, ...details.filter(result => result.state === 'unverified')].slice(0, 30);
+	const rows = selected.map(({ url, state, status, reason, references }) => ({ url, state, status, reason, references: references.slice(0, 20), referenceCount: references.length }));
+	const safeJson = JSON.stringify(rows, null, 2).replaceAll('`', '\\u0060').replaceAll('<', '\\u003c');
+	return `## Contrôle des sources\n\nContrôle daté du ${report.checkedAt}.\n\n`
+		+ `${report.summary.checked} URL : ${report.summary.reachable} accessibles, ${report.summary.broken} cassées, ${report.summary.unavailable} indisponibles, ${report.summary.unsafe} refusées, ${report.summary.unverified} non vérifiées.\n\n`
+		+ `Une indisponibilité ou un contrôle non concluant ne réfute pas la preuve technique archivée. Aucun contrôle TLS ou réseau n’est contourné.\n\n`
+		+ `${selected.length} résultats affichés sur ${details.length} à examiner (20 références maximum par URL). Le rapport JSON complet figure dans l’artefact d’anomalies si le contrôle échoue.\n\n`
+		+ `\`\`\`json\n${safeJson}\n\`\`\`\n`;
+}

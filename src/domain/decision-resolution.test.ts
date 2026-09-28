@@ -12,7 +12,7 @@ const result = (verdict: SizingResult['verdict'], recommendedFadLpm = 125): Sizi
 	hypotheses: [],
 	warnings: [],
 	flowBasis: 'documented-continuous',
-	calculationVersion: '1.4.1',
+	calculationVersion: '1.4.2',
 });
 
 const candidate = (id: string, availableFadLpm: number | undefined, confidence: 'A' | 'B' | 'C' | 'D' = 'A', verdict: SizingResult['verdict'] = 'continuous'): DecisionCandidate => ({
@@ -85,5 +85,15 @@ describe('résolution décisionnelle sans donnée inventée', () => {
 		const gap = explainDecisionDataGap({ id: 'short-curve', confidence: 'A', fadCurve: [{ pressureBar: 5, litersPerMinute: 150 }] }, 7, result('insufficient_data'));
 		expect(gap).toMatchObject({ code: 'pressure_outside_curve' });
 		expect(gap?.detail).toContain('n’extrapole pas');
+	});
+
+	it('désigne la régulation du compresseur personnalisé sans redemander un FAD déjà renseigné', () => {
+		const warning = 'La pression de réenclenchement est inférieure au besoin, pertes comprises.';
+		const gap = explainDecisionDataGap(undefined, 6.3, {
+			...result('insufficient_data'),
+			limitingFactor: 'pressure',
+			warnings: [warning],
+		});
+		expect(gap).toEqual({ code: 'pressure_regulation', title: 'Maintien de pression à vérifier', detail: warning });
 	});
 });

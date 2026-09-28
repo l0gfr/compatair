@@ -1,8 +1,17 @@
 import { EventEmitter } from 'node:events';
 import { describe, expect, it } from 'vitest';
-import { sourceUrl, sourceInventory, requestSource, followSource, checkSource, healthSummary } from './source-link-health.mjs';
+import { sourceUrl, sourceInventory, requestSource, followSource, checkSource, healthSummary, sourceHealthSummaryMarkdown } from './source-link-health.mjs';
 
 describe('source link health', () => {
+	it('publishes bounded actionable evidence without allowing Markdown injection', () => {
+		const results = Array.from({ length: 40 }, (_, index) => ({ url: `https://example.com/${index}`, state: 'unavailable', status: 502, references: [{ productId: 'sample', evidenceId: '```<script>' }] }));
+		const summary = sourceHealthSummaryMarkdown({ checkedAt: '2026-09-28T00:00:00Z', summary: healthSummary(results), results });
+		expect(summary).toContain('30 résultats affichés sur 40');
+		expect(summary).toContain('"status": 502');
+		expect(summary).toContain('"productId": "sample"');
+		expect(summary).not.toContain('<script>');
+		expect(summary.match(/```/g)).toHaveLength(2);
+	});
 	it('versions a deduplicated inventory independently of ordering, including provenance changes', () => {
 		const a = { url: 'https://example.com/source#page=2', reference: { evidenceId: 'a', retrievedAt: '2026-09-25' } };
 		const b = { url: 'https://example.com/other', reference: { evidenceId: 'b' } };

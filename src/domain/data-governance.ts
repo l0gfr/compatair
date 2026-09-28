@@ -153,10 +153,15 @@ export function createCatalogQualityReport(compressors: Compressor[], tools: Too
 				independent_corroboration: 'Mesure documentée distincte du fabricant et du vendeur ; elle confirme ou contredit sans remplacer la source primaire.',
 				secondary: 'Source marchande ou autre reprise secondaire ; elle ne vaut pas corroboration indépendante.',
 			},
+			evidence_entry_counts: sourceRoleCounts,
+			counting_unit: 'distinct_evidence_id',
+			// Preserve the public field while making its historical misnomer explicit.
 			document_counts: sourceRoleCounts,
+			document_counts_deprecated: 'Alias de evidence_entry_counts : identifiants de preuve distincts, pas documents indépendants.',
 		},
 		field_coverage: definitions.map(coverageRow),
 		limitations: [
+			'Les compteurs de sources dédupliquent les identifiants de preuve. Un même document peut étayer plusieurs entrées, champs ou produits.',
 			'La couverture de population mesure la présence du champ dans le corpus CompatAir, pas sa disponibilité sur l’ensemble du marché.',
 			'La couverture de source explicite exige un lien fieldSources ou evidenceIds propre au champ ; la présence générale d’un document sur la fiche ne suffit pas.',
 			'La corroboration indépendante est comptée séparément et n’augmente jamais artificiellement la couverture de source primaire.',

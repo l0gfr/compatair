@@ -1,11 +1,22 @@
-const stop = new Set('a au aux de des du en et la le les l un une pour quel quelle quels quelles comment avec sans sur est air compresseur pneumatique'.split(' '));
-const tokens = value => [...new Set(String(value).normalize('NFKD').replace(/\p{M}/gu, '').toLowerCase().match(/[a-z0-9]+/g) ?? [])].filter(token => token.length > 1 && !stop.has(token));
+const stop = new Set('a au aux de des du en et la le les l un une pour quel quelle quels quelles comment sur est air compresseur pneumatique'.split(' '));
+const words = value => String(value).normalize('NFKD').replace(/\p{M}/gu, '').toLowerCase().replace(/(\d),(\d)/g, '$1.$2').match(/\d+(?:\.\d+)?|[a-z]+\d*[a-z]*/g) ?? [];
+const tokens = value => [...new Set(words(value))].filter(token => !stop.has(token));
+const units = new Map(Object.entries({ bar: 'bar', bars: 'bar', psi: 'psi', mm: 'mm', cm: 'cm', m: 'm', metre: 'm', metres: 'm', l: 'l', litre: 'l', litres: 'l', cfm: 'cfm', kw: 'kw', v: 'v' }));
+function quantities(value) {
+	const terms = words(value);
+	return terms.flatMap((term, index) => /^\d+(?:\.\d+)?$/.test(term) && units.has(terms[index + 1]) ? [`${Number(term)}:${units.get(terms[index + 1])}`] : []);
+}
 
 export function editorialPriority(candidate, panel) {
-	const text = new Set(tokens(`${candidate.value?.question ?? ''} ${candidate.value?.label ?? ''} ${candidate.path}`));
+	const surfaces = [candidate.value?.question ?? '', candidate.value?.label ?? '', candidate.path ?? ''];
+	const text = new Set(surfaces.flatMap(tokens));
+	const candidateQuantities = new Set(surfaces.flatMap(quantities));
 	const matches = panel.queries.filter(item => {
 		const terms = tokens(item.query);
-		return terms.length >= 2 && terms.filter(term => text.has(term)).length / terms.length >= .75;
+		// Conservative editorial admission: every meaningful term and quantity must
+		// occur. Comparative pages may contain additional brands or quantities.
+		return terms.length > 0 && terms.every(term => text.has(term))
+			&& quantities(item.query).every(quantity => candidateQuantities.has(quantity));
 	});
 	return {
 		score: Math.max(0, ...matches.map(item => ({ P1: 3, P2: 2, P3: 1 })[item.editorialPriority] ?? 0)),

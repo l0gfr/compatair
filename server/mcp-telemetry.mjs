@@ -397,18 +397,46 @@ export function buildPublicMcpUsageReport(state, catalog, minimumCohort = MCP_TE
 		|| left.outcome.localeCompare(right.outcome)
 		|| (left.error_code ?? '').localeCompare(right.error_code ?? ''));
 	const reconciliationErrors = [];
+ const jointErrors = [];
+ let unclassifiedCalls = 0;
+ let classifiedCalls = 0;
  for (const week of value.weeks) {
   const sum = values => values.reduce((total, count) => total + count, 0);
   if (sum(Object.values(week.outcomes)) !== week.calls) reconciliationErrors.push('weekly_outcomes');
   if (sum(Object.values(week.traffic)) !== week.calls) reconciliationErrors.push('weekly_traffic');
   if (sum(week.tools.map(tool => tool.calls)) !== week.calls) reconciliationErrors.push('weekly_tools');
   if (week.clientInfoDeclared > week.initializations) reconciliationErrors.push('client_declarations');
+  for (const name of MCP_TRAFFIC_CLASSES) if (sum(week.tools.map(tool => tool.traffic[name])) !== week.traffic[name]) reconciliationErrors.push('weekly_tool_traffic');
+  for (const outcome of ['success', 'insufficient_data', 'error']) if (sum(week.tools.map(tool => tool.outcomes[outcome])) !== week.outcomes[outcome]) reconciliationErrors.push('weekly_tool_outcomes');
   for (const tool of week.tools) {
    if (sum(Object.values(tool.outcomes)) !== tool.calls || sum(Object.values(tool.traffic)) !== tool.calls || sum(tool.outcomeBreakdown.map(row => row.calls)) !== tool.calls) reconciliationErrors.push('tool_subtotals');
    if (tool.canonicalIssued > tool.calls) reconciliationErrors.push('canonical_issued');
+   const knownTraffic = emptyTrafficCounters();
+   const knownOutcomes = { success: 0, insufficient_data: 0, error: 0 };
+   let historical = 0;
+   for (const row of tool.outcomeBreakdown) {
+    if (row.outcome === 'unclassified') {
+     historical += row.calls;
+     if (row.trafficClass !== 'historical_unclassified' || row.errorCode !== 'not_recorded') jointErrors.push('invalid_historical_bucket');
+    } else {
+     classifiedCalls += row.calls;
+     knownTraffic[row.trafficClass] += row.calls;
+     knownOutcomes[row.outcome] += row.calls;
+    }
+   }
+   unclassifiedCalls += historical;
+   // Historical marginals survive migration, but their joint distribution is
+   // unrecoverable. Known cells must fit each marginal; the residual must equal
+   // the explicitly unclassified cohort, without inventing its allocation.
+   for (const [actual, known, reason] of [[tool.traffic, knownTraffic, 'joint_traffic'], [tool.outcomes, knownOutcomes, 'joint_outcomes']]) {
+    const residuals = Object.keys(known).map(key => actual[key] - known[key]);
+    if (residuals.some(count => count < 0) || sum(residuals) !== historical) jointErrors.push(reason);
+   }
   }
  }
- const consistent = reconciliationErrors.length === 0;
+ const totalsConsistent = reconciliationErrors.length === 0;
+ const consistent = totalsConsistent && jointErrors.length === 0;
+ const jointStatus = !consistent ? 'inconsistent' : unclassifiedCalls > 0 ? 'partial' : 'consistent';
  const reconciledRatio = (numerator, denominator) => consistent ? ratio(numerator, denominator) : null;
 	const toolRows = toolValues.map(({ outcome_breakdown: _outcomeBreakdown, ...row }) => ({ ...row, success_rate: reconciledRatio(row.success, row.calls), insufficient_data_rate: reconciledRatio(row.insufficient_data, row.calls), error_rate: reconciledRatio(row.errors, row.calls), canonical_follow_rate: reconciledRatio(row.canonical_follows, row.canonical_issued) }));
 	const plausibleProducts = sumRows(value.weeks, ['type', 'id'], 'products', 'plausibleRequests').filter((row) => row.plausibleRequests >= minimumCohort).slice(0, 20).map((row) => ({ type: row.type, id: row.id, requests: row.plausibleRequests, label: row.type === 'compressor' ? compressorLabels.get(row.id) ?? row.id : toolLabels.get(row.id) ?? row.id }));
@@ -416,7 +444,11 @@ export function buildPublicMcpUsageReport(state, catalog, minimumCohort = MCP_TE
 	const decisionCalls = traffic.plausible_session;
 	return {
 		schema_version: MCP_TELEMETRY_SCHEMA_VERSION, updated_at: value.updatedAt, retention_days: MCP_TELEMETRY_RETENTION_DAYS, minimum_public_cohort: minimumCohort,
-		reconciliation: { status: consistent ? 'consistent' : 'inconsistent', reasons: [...new Set(reconciliationErrors)], ratesAvailable: consistent },
+		reconciliation: {
+			status: jointStatus, reasons: [...new Set([...reconciliationErrors, ...jointErrors])], ratesAvailable: consistent,
+			totals: { status: totalsConsistent ? 'consistent' : 'inconsistent', reasons: [...new Set(reconciliationErrors)] },
+			joint: { status: jointStatus, reasons: [...new Set(jointErrors)], classified_calls: classifiedCalls, unclassified_calls: unclassifiedCalls, coverage_rate: consistent ? ratio(classifiedCalls, totals.calls) : null },
+		},
 		measurement: { users: 'Estimated anonymous callers, not identified people.', recurrent: 'At least two calls or initializations on at least two distinct days.', decision_calls: 'Calls classified as plausible sessions; this is a count of calls, not sessions. CI smoke, repeated retries, probes, unknown and historical unclassified traffic are reported separately.', tool_outcome_breakdown: 'Exact traffic class × tool × outcome × normalized error code counts. Calls predating schema 2.1.0 remain explicitly unclassified.', canonical_follows: 'Attributed consultations through canonical_follow_url; URL emission alone is never counted as a follow.' },
 		totals: { initializations: totals.initializations, tool_calls: totals.calls, success: totals.success, insufficient_data: totals.insufficientData, errors: totals.errors, success_rate: reconciledRatio(totals.success, totals.calls), insufficient_data_rate: reconciledRatio(totals.insufficientData, totals.calls), error_rate: reconciledRatio(totals.errors, totals.calls), client_info_declared: totals.clientInfoDeclared, client_info_declaration_rate: reconciledRatio(totals.clientInfoDeclared, totals.initializations), canonical_follows: totals.canonicalFollows, estimated_callers: publishCount(actors.length), recurrent_callers: publishCount(recurrentActors.length), recurrent_integrations: publishCount(recurrentIntegrations.length) },
 		decision_usage: { tool_calls: decisionCalls, share_of_all_calls: reconciledRatio(decisionCalls, totals.calls) },

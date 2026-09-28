@@ -230,6 +230,9 @@ if (mcpEnabled) {
 		assert(typeof report.totals?.tool_calls === 'number', 'total d’appels MCP absent');
 		assert(Array.isArray(report.tool_outcome_breakdown), 'croisement trafic × outil × résultat × erreur absent');
 		assert(report.tool_outcome_breakdown.reduce((total, row) => total + row.calls, 0) === report.totals.tool_calls, 'croisement MCP non réconcilié avec le total des appels');
+		assert(report.reconciliation?.totals?.status === 'consistent', 'totaux MCP incohérents');
+		assert(['consistent', 'partial'].includes(report.reconciliation?.joint?.status), 'ventilation MCP incohérente');
+		assert(report.reconciliation.joint.classified_calls + report.reconciliation.joint.unclassified_calls === report.totals.tool_calls, 'couverture historique MCP incohérente');
 	});
 
 	for (const [label, pathname, expectedTools, maximumBytes] of [
@@ -273,7 +276,7 @@ if (mcpEnabled) {
 		assert(response.status === 200, `HTTP catalogue attendu 200, reçu ${response.status}`);
 		const result = JSON.parse(body);
 		assert(result.items?.some(item => item.id === 'einhell-tc-pe-150'), 'référence exacte absente de l’index');
-		assert(result.calculationVersion === '1.4.1' && /^[a-f0-9]{64}$/.test(result.catalogVersion), 'version de recherche incohérente');
+		assert(result.calculationVersion === '1.4.2' && /^[a-f0-9]{64}$/.test(result.catalogVersion), 'version de recherche incohérente');
 	});
 	await check('lecture ciblée versionnée', '/api/v1/search/products?ids=einhell-tc-pe-150', ({ body, response }) => {
 		assert(response.status === 200, `HTTP références attendu 200, reçu ${response.status}`);

@@ -1,6 +1,6 @@
-import { readFile, readdir, writeFile } from 'node:fs/promises';
+import { appendFile, readFile, readdir, writeFile } from 'node:fs/promises';
 import { parse } from 'yaml';
-import { sourceInventory, checkSource, healthSummary } from './lib/source-link-health.mjs';
+import { sourceInventory, checkSource, healthSummary, sourceHealthSummaryMarkdown } from './lib/source-link-health.mjs';
 
 const catalog = JSON.parse(await readFile('dist/data/catalog.json', 'utf8'));
 const entries = [...catalog.compressors, ...catalog.tools].flatMap((product) => product.evidence.map((evidence) => ({ url: evidence.sourceUrl, reference: { productId: product.id, evidenceId: evidence.id, retrievedAt: evidence.retrievedAt } })));
@@ -44,6 +44,7 @@ results.sort((a, b) => a.url.localeCompare(b.url));
 const summary = healthSummary(results);
 const report = { schemaVersion: '1.0.0', checkedAt: new Date().toISOString(), sourceVersion: inventory.version, catalogVersion: catalog.catalogVersion, summary, results };
 await writeFile('source-health-report.json', `${JSON.stringify(report, null, 2)}\n`);
+if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, sourceHealthSummaryMarkdown(report));
 console.log(JSON.stringify(summary));
 if (summary.anomalies || summary.auditUnavailable) {
 	console.error(`Anomalies de sources : ${summary.anomalies}. Audit indisponible : ${summary.auditUnavailable}. Voir source-health-report.json pour les URL et références concernées.`);

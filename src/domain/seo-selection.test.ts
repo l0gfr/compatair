@@ -5,7 +5,7 @@ import { createCompressorCompatibilitySummary, createToolCompatibilitySummary, r
 
 const continuousResult = (availableFadLpm: number): CompatibilityResult => ({
 	verdict: 'continuous', confidence: 'high', requiredFadLpm: 100, availableFadLpm,
-	warnings: [], calculationVersion: '1.4.1',
+	warnings: [], calculationVersion: '1.4.2',
 });
 
 describe('sélections SEO de compatibilité', () => {

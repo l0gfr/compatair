@@ -631,7 +631,7 @@ const commercialOffers = activeOffers
 		const marginCovered = available !== undefined && available >= base.recommendedFadLpm;
 		const reserve = !config.selectedCompressor ? 'Sélectionnez un compresseur pour obtenir un verdict sur une machine.'
 			: available !== undefined && !marginCovered && (result.verdict === 'continuous' || result.verdict === 'intermittent') ? `Le besoin nominal passe, mais la marge de ${Math.round(config.safetyMargin * 100)} % n’est pas entièrement couverte.`
-			: result.limitingFactor === 'pressure' ? 'La pression disponible ou maximale est insuffisante.'
+			: result.limitingFactor === 'pressure' ? (result.verdict === 'insufficient_data' ? result.warnings.at(-1) ?? 'Le maintien de pression reste à vérifier.' : 'La pression disponible ou maximale est insuffisante.')
 				: result.limitingFactor === 'flow' ? 'Le débit restitué disponible est insuffisant.'
 					: result.limitingFactor === 'duty_cycle' ? 'Le cycle de fonctionnement limite la durée possible.'
 						: result.limitingFactor === 'data' ? (available === undefined ? 'Le débit restitué n’est pas documenté à la pression demandée.' : result.warnings.find(warning => warning.includes('cycle de service')) ?? result.warnings.at(-1) ?? 'Une donnée nécessaire à la conclusion manque.')
