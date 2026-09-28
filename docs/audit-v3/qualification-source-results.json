@@ -1,0 +1,405 @@
+{
+  "schemaVersion": 1,
+  "synthetic": true,
+  "startedAt": "2026-09-28T16:16:50.009Z",
+  "sourceCommit": "a6416c4984333ae5eeec8f85a7b726e1b1a81d20",
+  "harnessSha256": "289e0dde80bb9f598f2fedd29fa1e4b0f27942f57ba92d3495e1dc97e60e1bc5",
+  "sourceCatalogVersion": "02fe8d998994ae642273a70bd63f6f265b7658714bff08ccab127d1a798a2a6f",
+  "sourceFileSha256": "cc4532aa59f09d71b1d6d0674aa29d85d3d6ce8294c6f488e5cb1097a4be4f17",
+  "configSha256": "5c36a5c2e5cc33c6c736b5b90e623348b1ec906786d437293dc1876914667d24",
+  "budgetsDeclaredBeforeRun": {
+    "databaseBuildSeconds": 180,
+    "databaseBytes": 2147483648,
+    "serviceStartupMs": 5000,
+    "servicePeakMiB": 256,
+    "httpP95Ms": 150,
+    "httpP99Ms": 500,
+    "httpUnexpectedErrors": 0,
+    "publicationSeconds": 1500,
+    "publicationPeakMiB": 8192,
+    "archiveBytes": 184549376,
+    "restoreSeconds": 300,
+    "rollbackSeconds": 120
+  },
+  "corpus": {
+    "original": 6506,
+    "target": 100000,
+    "compressors": 21811,
+    "tools": 78189
+  },
+  "distribution": {
+    "compressors|A|compressor|unspecified|single-fad|1|10": {
+      "source": 215,
+      "fixture": 3373
+    },
+    "compressors|B|compressor|unspecified|no-fad|missing-cycle|10": {
+      "source": 187,
+      "fixture": 2912
+    },
+    "compressors|A|compressor|unspecified|single-fad|1|13": {
+      "source": 50,
+      "fixture": 777
+    },
+    "compressors|A|compressor|unspecified|single-fad|1|8": {
+      "source": 144,
+      "fixture": 2266
+    },
+    "compressors|A|compressor|unspecified|single-fad|1|7.5": {
+      "source": 6,
+      "fixture": 96
+    },
+    "compressors|A|compressor|unspecified|single-fad|1|8.5": {
+      "source": 6,
+      "fixture": 96
+    },
+    "compressors|B|compressor|unspecified|no-fad|missing-cycle|13": {
+      "source": 7,
+      "fixture": 112
+    },
+    "compressors|C|compressor|unspecified|no-fad|missing-cycle|9": {
+      "source": 4,
+      "fixture": 61
+    },
+    "compressors|B|compressor|unspecified|no-fad|missing-cycle|8": {
+      "source": 66,
+      "fixture": 1012
+    },
+    "compressors|B|compressor|unspecified|no-fad|missing-cycle|14": {
+      "source": 2,
+      "fixture": 31
+    },
+    "compressors|B|compressor|unspecified|no-fad|missing-cycle|15": {
+      "source": 2,
+      "fixture": 32
+    },
+    "compressors|B|compressor|unspecified|no-fad|0.2|10": {
+      "source": 8,
+      "fixture": 121
+    },
+    "compressors|B|compressor|unspecified|no-fad|1|10": {
+      "source": 86,
+      "fixture": 1349
+    },
+    "compressors|B|compressor|unspecified|no-fad|1|13": {
+      "source": 31,
+      "fixture": 475
+    },
+    "compressors|B|compressor|unspecified|no-fad|1|8": {
+      "source": 12,
+      "fixture": 192
+    },
+    "compressors|B|compressor|unspecified|no-fad|0.5|10": {
+      "source": 33,
+      "fixture": 503
+    },
+    "compressors|B|compressor|unspecified|no-fad|0.5|11": {
+      "source": 19,
+      "fixture": 288
+    },
+    "compressors|B|compressor|unspecified|no-fad|0.2|8": {
+      "source": 12,
+      "fixture": 180
+    },
+    "compressors|B|compressor|unspecified|no-fad|0.3|10": {
+      "source": 2,
+      "fixture": 30
+    },
+    "compressors|B|compressor|unspecified|no-fad|0.5|14": {
+      "source": 1,
+      "fixture": 15
+    },
+    "compressors|B|compressor|unspecified|no-fad|0.3|8": {
+      "source": 9,
+      "fixture": 135
+    },
+    "compressors|B|compressor|unspecified|no-fad|0.6|14": {
+      "source": 10,
+      "fixture": 150
+    },
+    "compressors|B|compressor|unspecified|no-fad|0.6|11": {
+      "source": 4,
+      "fixture": 60
+    },
+    "compressors|B|compressor|unspecified|no-fad|0.6|10": {
+      "source": 10,
+      "fixture": 150
+    },
+    "compressors|B|compressor|unspecified|no-fad|0.4|10": {
+      "source": 3,
+      "fixture": 45
+    },
+    "compressors|B|compressor|unspecified|no-fad|0.2|7": {
+      "source": 1,
+      "fixture": 15
+    },
+    "compressors|B|compressor|unspecified|no-fad|0.5|8": {
+      "source": 3,
+      "fixture": 45
+    },
+    "compressors|B|compressor|unspecified|no-fad|0.5|8.9": {
+      "source": 1,
+      "fixture": 15
+    },
+    "compressors|A|compressor|unspecified|single-fad|missing-cycle|10": {
+      "source": 137,
+      "fixture": 2055
+    },
+    "compressors|A|compressor|unspecified|single-fad|missing-cycle|8": {
+      "source": 60,
+      "fixture": 900
+    },
+    "compressors|A|compressor|unspecified|multi-fad|missing-cycle|10.5": {
+      "source": 1,
+      "fixture": 15
+    },
+    "compressors|A|compressor|unspecified|multi-fad|missing-cycle|11": {
+      "source": 2,
+      "fixture": 30
+    },
+    "compressors|A|compressor|unspecified|multi-fad|missing-cycle|8": {
+      "source": 21,
+      "fixture": 315
+    },
+    "compressors|A|compressor|unspecified|multi-fad|0.5|8": {
+      "source": 1,
+      "fixture": 15
+    },
+    "compressors|A|compressor|unspecified|multi-fad|1|8": {
+      "source": 1,
+      "fixture": 15
+    },
+    "compressors|A|compressor|unspecified|multi-fad|0.25|10": {
+      "source": 1,
+      "fixture": 15
+    },
+    "compressors|A|compressor|unspecified|multi-fad|missing-cycle|10": {
+      "source": 29,
+      "fixture": 435
+    },
+    "compressors|B|compressor|unspecified|multi-fad|0.5|8": {
+      "source": 1,
+      "fixture": 15
+    },
+    "compressors|A|compressor|unspecified|multi-fad|0.5|10": {
+      "source": 1,
+      "fixture": 15
+    },
+    "compressors|B|compressor|unspecified|multi-fad|missing-cycle|8": {
+      "source": 1,
+      "fixture": 15
+    },
+    "compressors|A|compressor|unspecified|multi-fad|1|10": {
+      "source": 37,
+      "fixture": 555
+    },
+    "compressors|A|compressor|unspecified|single-fad|missing-cycle|13": {
+      "source": 37,
+      "fixture": 555
+    },
+    "compressors|A|compressor|unspecified|single-fad|missing-cycle|7.5": {
+      "source": 6,
+      "fixture": 90
+    },
+    "compressors|A|compressor|unspecified|single-fad|missing-cycle|8.5": {
+      "source": 6,
+      "fixture": 90
+    },
+    "compressors|A|compressor|unspecified|single-fad|1|15": {
+      "source": 11,
+      "fixture": 165
+    },
+    "compressors|A|compressor|unspecified|multi-fad|0.7|9": {
+      "source": 2,
+      "fixture": 30
+    },
+    "compressors|A|compressor|unspecified|multi-fad|0.7|10": {
+      "source": 4,
+      "fixture": 60
+    },
+    "compressors|A|compressor|unspecified|multi-fad|0.7|8": {
+      "source": 10,
+      "fixture": 150
+    },
+    "compressors|A|compressor|unspecified|multi-fad|missing-cycle|15": {
+      "source": 17,
+      "fixture": 255
+    },
+    "compressors|A|compressor|unspecified|single-fad|missing-cycle|12": {
+      "source": 11,
+      "fixture": 165
+    },
+    "compressors|A|compressor|unspecified|single-fad|missing-cycle|14": {
+      "source": 6,
+      "fixture": 90
+    },
+    "compressors|A|compressor|unspecified|single-fad|missing-cycle|10.5": {
+      "source": 1,
+      "fixture": 15
+    },
+    "compressors|A|compressor|unspecified|single-fad|missing-cycle|11": {
+      "source": 19,
+      "fixture": 285
+    },
+    "compressors|C|compressor|unspecified|no-fad|missing-cycle|8": {
+      "source": 1,
+      "fixture": 15
+    },
+    "compressors|B|compressor|unspecified|no-fad|missing-cycle|12": {
+      "source": 1,
+      "fixture": 15
+    },
+    "compressors|C|compressor|unspecified|no-fad|missing-cycle|10": {
+      "source": 1,
+      "fixture": 15
+    },
+    "compressors|A|compressor|unspecified|single-fad|0.8|8": {
+      "source": 10,
+      "fixture": 150
+    },
+    "compressors|A|compressor|unspecified|single-fad|missing-cycle|15": {
+      "source": 39,
+      "fixture": 585
+    },
+    "compressors|A|compressor|unspecified|single-fad|missing-cycle|9": {
+      "source": 6,
+      "fixture": 90
+    },
+    "compressors|B|compressor|unspecified|no-fad|missing-cycle|9": {
+      "source": 4,
+      "fixture": 60
+    },
+    "tools|A|per-action|unspecified|na|missing-cycle|6.3": {
+      "source": 3,
+      "fixture": 45
+    },
+    "tools|A|per-action|unspecified|na|missing-cycle|6": {
+      "source": 3,
+      "fixture": 45
+    },
+    "tools|B|fixed-flow|average|na|missing-cycle|6.2": {
+      "source": 18,
+      "fixture": 288
+    },
+    "tools|B|fixed-flow|average|na|missing-cycle|6": {
+      "source": 20,
+      "fixture": 320
+    },
+    "tools|B|fixed-flow|average|na|missing-cycle|6.3": {
+      "source": 379,
+      "fixture": 5708
+    },
+    "tools|B|fixed-flow|average|na|missing-cycle|8": {
+      "source": 2,
+      "fixture": 32
+    },
+    "tools|B|fixed-flow|unspecified|na|missing-cycle|6": {
+      "source": 187,
+      "fixture": 2933
+    },
+    "tools|A|per-action|unspecified|na|missing-cycle|5.6": {
+      "source": 65,
+      "fixture": 1040
+    },
+    "tools|A|fixed-flow|unspecified|na|missing-cycle|6.3": {
+      "source": 1232,
+      "fixture": 19452
+    },
+    "tools|A|fixed-flow|unspecified|na|missing-cycle|8": {
+      "source": 3,
+      "fixture": 45
+    },
+    "tools|A|fixed-flow|unspecified|na|missing-cycle|6": {
+      "source": 6,
+      "fixture": 91
+    },
+    "tools|A|fixed-flow|unspecified|na|missing-cycle|6.2": {
+      "source": 546,
+      "fixture": 8308
+    },
+    "tools|B|fixed-flow|unspecified|na|missing-cycle|6.2": {
+      "source": 1006,
+      "fixture": 15245
+    },
+    "tools|B|fixed-flow|unspecified|na|missing-cycle|6.3": {
+      "source": 1579,
+      "fixture": 24064
+    },
+    "tools|A|variable-volume|unspecified|na|missing-cycle|6": {
+      "source": 4,
+      "fixture": 60
+    },
+    "tools|B|fixed-flow|unspecified|na|missing-cycle|7": {
+      "source": 24,
+      "fixture": 360
+    },
+    "tools|B|fixed-flow|unspecified|na|missing-cycle|4": {
+      "source": 1,
+      "fixture": 15
+    },
+    "tools|A|fixed-flow|unspecified|na|missing-cycle|7": {
+      "source": 2,
+      "fixture": 31
+    },
+    "tools|A|fixed-flow|unspecified|na|missing-cycle|4.8": {
+      "source": 1,
+      "fixture": 16
+    },
+    "tools|A|variable-volume|unspecified|na|missing-cycle|": {
+      "source": 1,
+      "fixture": 15
+    },
+    "tools|A|fixed-flow|unspecified|na|missing-cycle|4": {
+      "source": 1,
+      "fixture": 16
+    },
+    "tools|A|fixed-flow|unspecified|na|missing-cycle|2": {
+      "source": 3,
+      "fixture": 45
+    },
+    "tools|A|fixed-flow|unspecified|na|missing-cycle|1.6": {
+      "source": 1,
+      "fixture": 15
+    }
+  },
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "cpus": 8,
+    "memoryBytes": 25769803776
+  },
+  "publication": {
+    "isolated-source-preparation": {
+      "status": "executed",
+      "root": "/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-Hjgqcv"
+    },
+    "cold-build-and-snapshots": {
+      "status": "not-executed"
+    },
+    "warm-build": {
+      "status": "not-executed"
+    },
+    "archive-and-checksum": {
+      "status": "not-executed"
+    },
+    "restore-to-empty-directory": {
+      "status": "not-executed"
+    },
+    "file-hash-parity-and-restored-service": {
+      "status": "not-executed"
+    },
+    "staging-apache-systemd-failure-drill": {
+      "status": "not-executed"
+    },
+    "exact-release-sha-and-public-smokes": {
+      "status": "not-executed"
+    }
+  },
+  "storage": {
+    "status": "not-executed"
+  },
+  "service": {
+    "status": "not-executed"
+  },
+  "qualification": "incomplete"
+}
