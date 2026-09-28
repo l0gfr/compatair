@@ -11,3 +11,5 @@ Les contrôles comparent le résultat complet du moteur et celui de l'entrée Zo
 L'API HTTP actuelle accepte des identifiants de catalogue. Elle ne propose pas de calcul personnalisé avec seuils de régulation. Le test HTTP réel sur loopback contrôle la parité des champs pour les profils admissibles et le rejet explicite des paramètres de seuils non supportés. Les 30 configurations personnalisées ne sont donc pas présentées comme 30 tests HTTP.
 
 Les résultats Vitest sont inspectables dans `boundaries-results.json`. La couverture des messages est fonctionnelle via le présentateur ; un test de navigateur complet n'est pas implicite dans ce résultat.
+
+Le contrôle complémentaire dans le navigateur couvre un Metabo DSX 150 à 6,2 bar avec compresseur personnalisé : réserve indéterminée avec FAD connu, seuils 4/8 bar sous le besoin, puis seuils invalides 9/8 bar. Une nouvelle soumission masque désormais la réponse précédente et son raccourci mobile avant toute validation. Un échec ne laisse donc plus un ancien résultat affiché comme réponse aux nouveaux paramètres.
