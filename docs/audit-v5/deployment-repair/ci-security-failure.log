@@ -1,0 +1,24 @@
+validate	Audit production dependencies	﻿2026-09-29T12:37:35.0159524Z ##[group]Run pnpm security:audit
+validate	Audit production dependencies	2026-09-29T12:37:35.0160203Z ^[[36;1mpnpm security:audit^[[0m
+validate	Audit production dependencies	2026-09-29T12:37:35.0202369Z shell: /usr/bin/bash -e {0}
+validate	Audit production dependencies	2026-09-29T12:37:35.0202743Z env:
+validate	Audit production dependencies	2026-09-29T12:37:35.0205507Z   GITHUB_TOKEN: ***
+validate	Audit production dependencies	2026-09-29T12:37:35.0205829Z ##[endgroup]
+validate	Audit production dependencies	2026-09-29T12:37:35.3337639Z 
+validate	Audit production dependencies	2026-09-29T12:37:35.3338549Z > compatair@0.1.0 security:audit /home/runner/work/compatair/compatair
+validate	Audit production dependencies	2026-09-29T12:37:35.3339665Z > node scripts/audit-supply-chain.mjs --advisories
+validate	Audit production dependencies	2026-09-29T12:37:35.3339948Z 
+validate	Audit production dependencies	2026-09-29T12:37:35.3752662Z Lockfile: 656 versions, intégrités SHA-512 présentes: 656/656.
+validate	Audit production dependencies	2026-09-29T12:37:35.3753913Z Scripts d'installation autorisés: esbuild.
+validate	Audit production dependencies	2026-09-29T12:37:35.3756308Z Overrides pnpm contrôlés depuis pnpm-workspace.yaml: @puppeteer/browsers@3.2.0, brace-expansion@5.0.9, devalue@5.9.2, fast-uri@3.1.6, ip-address@10.3.1, js-yaml@3@3.15.2, js-yaml@4@4.3.2, nanoid@3@3.3.18, postcss@8.5.23, qs@6.16.0, smol-toml@1.7.1, svgo@4.1.0, tmp@0.2.7, uuid@11.1.1.
+validate	Audit production dependencies	2026-09-29T12:37:35.3758240Z Exceptions de quarantaine pnpm contrôlées: aucune.
+validate	Audit production dependencies	2026-09-29T12:37:35.3759546Z Exceptions de confiance pnpm contrôlées: chokidar@4.0.3, semver@5.7.2||6.3.1.
+validate	Audit production dependencies	2026-09-29T12:37:37.6324085Z Avis GitHub Advisory Database: 4 signalé(s), dont 2 bloquant(s) selon la politique runtime.
+validate	Audit production dependencies	2026-09-29T12:37:37.7887748Z Paquets installés déclarant un script d'installation: 1.
+validate	Audit production dependencies	2026-09-29T12:37:37.7890151Z AVERTISSEMENT: vulnérabilité npm transitive sous le seuil high: ip-address: moderate ip-address: Address6.isLinkLocal() recognizes fe80::/64 rather than fe80::/10, allowing SSRF and trust-boundary bypass to on-link hosts (https://github.com/advisories/GHSA-rpw4-54j3-4h4q)
+validate	Audit production dependencies	2026-09-29T12:37:37.7892410Z AVERTISSEMENT: vulnérabilité npm transitive sous le seuil high: ip-address: moderate ip-address: no classifier recognizes the NAT64 local-use range 64:ff9b:1::/48, allowing SSRF and trust-boundary bypass (https://github.com/advisories/GHSA-2vr4-cq9g-pvrc)
+validate	Audit production dependencies	2026-09-29T12:37:37.7894707Z ERREUR: vulnérabilité npm: fast-uri: high fast-uri vulnerable to authority injection via an unvalidated port in serialize (https://github.com/advisories/GHSA-qw65-cvwx-89v3)
+validate	Audit production dependencies	2026-09-29T12:37:37.7896457Z ERREUR: vulnérabilité npm: fast-uri: high fast-uri vulnerable to host confusion via an unclosed bracket in the URI authority (https://github.com/advisories/GHSA-58mr-gqgx-xq4g)
+validate	Audit production dependencies	2026-09-29T12:37:37.7897560Z   - esbuild@0.28.1: postinstall (autorisé explicitement)
+validate	Audit production dependencies	2026-09-29T12:37:37.8139743Z  ELIFECYCLE  Command failed with exit code 1.
+validate	Audit production dependencies	2026-09-29T12:37:37.8320162Z ##[error]Process completed with exit code 1.

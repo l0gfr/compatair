@@ -1,0 +1,13 @@
+
+> compatair@0.1.0 security:audit /Users/bluetouff/Desktop/DEV/CompatAir
+> node scripts/audit-supply-chain.mjs --advisories
+
+Lockfile: 656 versions, intégrités SHA-512 présentes: 656/656.
+Scripts d'installation autorisés: esbuild.
+Overrides pnpm contrôlés depuis pnpm-workspace.yaml: @puppeteer/browsers@3.2.0, brace-expansion@5.0.9, devalue@5.9.2, fast-uri@3.1.7, ip-address@10.5.1, js-yaml@3@3.15.2, js-yaml@4@4.3.2, nanoid@3@3.3.18, postcss@8.5.23, qs@6.16.0, smol-toml@1.7.1, svgo@4.1.0, tmp@0.2.7, uuid@11.1.1.
+Exceptions de quarantaine pnpm contrôlées: aucune.
+Exceptions de confiance pnpm contrôlées: chokidar@4.0.3, semver@5.7.2||6.3.1.
+Avis GitHub Advisory Database: 0 signalé(s), dont 0 bloquant(s) selon la politique runtime.
+Paquets installés déclarant un script d'installation: 1.
+  - esbuild@0.28.1: postinstall (autorisé explicitement)
+Audit supply-chain réussi.
