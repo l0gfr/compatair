@@ -3,6 +3,7 @@ title: "Sableuse qui perd de la puissance : air, abrasif humide ou usure du pis
 seoTitle: "Sableuse moins efficace : air, humidité ou buse usée ?"
 description: "Pression qui chute, abrasif irrégulier, buse usée : préparez un diagnostic de cabine sans attribuer toute perte d’efficacité à un manque de compresseur."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Utiliser"
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "maintenance-industrielle"]
@@ -65,6 +66,8 @@ Consignez les conditions de l’atelier lorsque le défaut apparaît. Si aucun p
 Après intervention, refaites le contrôle prévu avec une pièce et une configuration comparables. Notez l’action réalisée, les réglages, les résultats et les écarts persistants. Changer simultanément compresseur, buse et abrasif rend plus difficile l’attribution de l’amélioration.
 
 Le critère utile est le résultat accepté dans les conditions de travail définies. La seule disparition momentanée d’un symptôme ne démontre ni l’état de tout le réseau ni la durabilité de la réparation.
+
+Le manque de puissance peut aussi s’accompagner d’une demande d’air qui a changé. Le dossier [usure de la buse de sablage](/guides/buse-sablage-usee-surconsommation-air/) explique pourquoi relever son diamètre actuel avant de comparer le compresseur au besoin initial.
 
 ## Sources et méthode
 

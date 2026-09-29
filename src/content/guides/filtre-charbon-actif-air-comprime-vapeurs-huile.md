@@ -3,6 +3,7 @@ title: "Filtre à charbon actif pour l’air comprimé : traiter les vapeurs d�
 seoTitle: "Charbon actif air comprimé : vapeurs d’huile et durée"
 description: "Coalescence et charbon actif ne traitent pas la même forme d’huile. Définissez l’exigence, la protection amont et les critères de remplacement du charbon."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture", "maintenance-industrielle"]
@@ -59,6 +60,8 @@ Nous proposons de garder la date des changements d’éléments et les événeme
 Demandez le débit utile à votre pression, la perte de pression documentée, la charge admissible à l’entrée, les prétraitements et la méthode de détermination de la durée de service. Précisez si l’offre comprend le boîtier, l’élément, les accessoires et le contrôle de qualité prévu.
 
 Une comparaison limitée au coût de la cartouche laisse de côté sa fréquence de remplacement et les conditions de performance. Notre proposition est d’établir un coût sur la même période d’exploitation, en déclarant les hypothèses au lieu d’inventer des heures de service garanties.
+
+La [mesure des vapeurs et celle de l’huile totale](/guides/mesure-vapeurs-huile-huile-totale-air-comprime/) demandent des périmètres explicites. Le dossier aide à lire un résultat d’instrument sans lui attribuer une phase de contamination que l’appareil ne mesure pas.
 
 ## Une limite essentielle pour l’air respirable
 

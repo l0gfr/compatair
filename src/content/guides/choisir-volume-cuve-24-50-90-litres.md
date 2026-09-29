@@ -12,7 +12,7 @@ sources:
   - https://www.atlascopco.com/fr-fr/compressors/wiki/compressed-air-articles/displacement-compressors-regulation
   - https://shop.abacaircompressors.com/en-INT/products/4116000880/atf-s-3-50-10-230150-ce
   - https://www.einhell.fr/p/4010800-te-ac-430-90-10/
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 ---
 
 La cuve est la caractéristique la plus visible d’un compresseur d’atelier. Elle est aussi l’une des plus mal interprétées. Un réservoir de 90 litres ne garantit pas un débit supérieur à celui d’un 50 litres. Il stocke davantage d’air comprimé et peut absorber une pointe plus longue, à condition que la pression reste suffisante pour l’outil.
@@ -31,7 +31,9 @@ Une étiquette « 24 L » ou « 50 L » ne permet pas, seule, de conclure qu’u
 
 ## Exemple : même FAD, deux volumes
 
-Le catalogue officiel [ABAC Tech ATF-S](https://shop.abacaircompressors.com/en-INT/products/4116000880/atf-s-3-50-10-230150-ce) liste des variantes de 24 et 50 litres annoncées toutes deux à 150 L/min de FAD à la pression maximale. Le volume change, le FAD publié ne change pas. Cet exemple suffit à invalider l’idée qu’une cuve plus grande implique automatiquement davantage de débit.
+La fiche officielle [ABAC Tech ATF-S](https://shop.abacaircompressors.com/en-INT/products/4116000880/atf-s-3-50-10-230150-ce) présente un FAD avec des conditions de référence générales, sans expliciter la pression du point de débit dans les informations consultées. La pression maximale ne doit donc pas lui être attribuée par déduction. Pour comparer deux volumes sans ambiguïté sur le point constructeur, utilisez le cas Metabo ci-dessous.
+
+Pour comparer deux machines identifiables, le dossier [Metabo Basic 250-24 W ou 250-50 W](/guides/metabo-basic-250-24-w-ou-250-50-w/) sépare capacité de production, réserve et contraintes de transport à partir du même catalogue. Il évite d’attribuer à la cuve un gain de débit de la pompe.
 
 ## 90 litres : tampon, pas permis de surconsommer
 
@@ -48,6 +50,8 @@ Choisissez d’abord le débit restitué nécessaire. Vérifiez ensuite la press
 Consultez les [compresseurs documentés](/compresseurs/) ou simulez votre outil dans le [calculateur](/calculateur/).
 
 Pour prolonger cette vérification, vous pouvez [interpréter un temps de remplissage de cuve sans le présenter comme du FAD](/guides/temps-remplissage-cuve-compresseur-debit/).
+
+Un autre arbitrage est illustré par les [Einhell TE-AC 270/24/10 et TC-AC 240/50/10 OF](/guides/einhell-te-ac-270-24-10-ou-tc-ac-240-50-of/). Le plus grand réservoir et le meilleur débit à la pression choisie peuvent appartenir à deux machines différentes.
 
 ## Sources
 

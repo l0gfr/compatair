@@ -3,7 +3,7 @@ title: "Maintenance préventive d’un réseau d’air comprimé : preuves, mesu
 seoTitle: "Maintenance réseau d’air comprimé | CompatAir"
 description: "Organiser une maintenance reproductible du compresseur au point d’usage, sans calendrier universel ni économie de fuite estimée sans mesure."
 pubDate: 2026-07-15
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Utiliser"
 audiences: [professionnel]
 metiers: [maintenance-industrielle]
@@ -79,6 +79,8 @@ Pour prolonger cette vérification, vous pouvez [examiner un silencieux colmaté
 Un souffle à la soupape relève du [guide de diagnostic de la soupape de sécurité](/guides/soupape-securite-compresseur-fuit-siffle/), avec les limites d’intervention de la notice.
 
 Le [guide du by-pass de sécheur](/guides/bypass-secheur-air-comprime-qualite-maintenance/) prépare la continuité des usages, les limites de qualité et le retour après maintenance.
+
+Après une longue immobilisation, utilisez le dossier [préparer la remise en service pneumatique](/guides/remise-service-machine-pneumatique-arret-prolonge/) pour organiser les contrôles et les essais avec les responsables de la machine.
 
 ## Sources
 

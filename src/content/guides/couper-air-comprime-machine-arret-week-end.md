@@ -3,6 +3,7 @@ title: "Faut-il couper l’air comprimé des machines la nuit et le week-end ?"
 seoTitle: "Couper l’air comprimé la nuit : méthode pour l’atelier"
 description: "Réduire la consommation hors production sans compromettre les fonctions machine : définir les zones, l’état de veille et les conditions de redémarrage."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Utiliser"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "menuiserie-agencement"]
@@ -59,6 +60,8 @@ Le [suivi des temps en charge et à vide](/guides/mesurer-temps-charge-vide-comp
 Demandez au concepteur de préciser les conditions de remise en pression, les contrôles préalables et les états des actionneurs. Le [guide du redémarrage des vérins](/guides/regler-vitesse-verin-pneumatique-echappement/) explique pourquoi ce premier mouvement doit être distingué du cycle établi.
 
 La réception proposée comporte un volet exploitation : disponibilité de la machine, alarmes, délai de reprise et qualité des premières pièces. Elle comporte aussi la validation technique et de sécurité de l’état de veille. Ne réduisez pas le succès à « le compresseur ne tourne plus la nuit » si un usage nécessaire a simplement été privé d’air.
+
+Un arrêt prolongé appelle un examen plus large que le retour du lundi. La [remise en service d’une machine pneumatique](/guides/remise-service-machine-pneumatique-arret-prolonge/) prépare les vérifications, les documents et les essais à organiser avant la reprise de production.
 
 ## Transformer l’essai en règle d’atelier
 

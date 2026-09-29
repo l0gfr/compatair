@@ -12,7 +12,7 @@ sources:
   - https://www.sata.com/en-int/products/spray-guns/gravity-flow-cup-guns/satajet-1000-b-lignum-3/technical-data
   - https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ngovue839t5o7dugodnovh8q57/4137790_11018_001_SPK2.pdf
   - https://www.iso.org/fr/standard/46418.html
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 ---
 
 Une centrale peut alimenter plusieurs branches, mais les exigences ne se fusionnent pas dans le collecteur. Le pistolet de finition demande un débit soutenu et une qualité d’air définie par le procédé ; la cloueuse consomme par action à une pression propre. L’architecture doit rendre ces différences visibles jusqu’au point d’utilisation.
@@ -67,6 +67,8 @@ La méthode d’addition d’usages simultanés est détaillée dans le dossier 
 Cette séparation rend le réseau évolutif : un changement de cloueuse ne réécrit pas l’exigence peinture, et un nouveau vernis ne modifie pas silencieusement la pression de clouage.
 
 Le [guide de compatibilité des agrafes](/guides/agrafes-pneumatiques-serie-couronne-longueur-compatibilite/) examine la série, la couronne et la longueur, avec des références documentées.
+
+La séparation doit se poursuivre jusqu’aux accessoires mobiles. Le [risque du flexible partagé entre outil lubrifié et peinture](/guides/flexible-outil-lubrifie-peinture-contamination/) explique comment documenter l’historique d’usage et identifier les ensembles réservés à la finition.
 
 ## Sources
 

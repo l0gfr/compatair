@@ -3,6 +3,7 @@ title: "Meuleuse pneumatique régulée : ce que fait le governor"
 seoTitle: "Meuleuse régulée : governor et sécurité de survitesse"
 description: "Régulation de vitesse, dispositif de survitesse et pression du réseau remplissent des fonctions différentes. Lire les équipements des CP3340."
 pubDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Comprendre"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -34,6 +35,8 @@ Sur cette même page, la CP3340-SALAVAD est donnée pour **8 500 tr/min** et une
 Le dossier utile comprend la référence complète, la notice correspondante, le régime inscrit sur la machine et la liste des montages autorisés. Demandez aussi les instructions de maintenance et de vérification des dispositifs de sécurité. Une phrase commerciale telle que « puissance constante » ne donne ni une tolérance de régime mesurée ni la périodicité de contrôle.
 
 Si le régime paraît anormal ou si la protection a déclenché, le catalogue commercial ne suffit pas pour décider d’une remise en service. Il faut appliquer la notice et faire intervenir la personne compétente ; modifier le governor ou neutraliser la coupure n’est pas une méthode d’adaptation d’un accessoire.
+
+Le contrôle de l’accessoire reste indispensable : le guide [vitesse maximale de la meuleuse et du disque abrasif](/guides/meuleuse-pneumatique-vitesse-max-disque-abrasif/) organise la comparaison des marquages. Un régulateur de vitesse ne rend pas acceptable un disque dont la limite est inférieure à celle de la machine.
 
 ## Prévoir l’air avant l’essai
 

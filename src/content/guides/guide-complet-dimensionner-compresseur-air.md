@@ -2,7 +2,7 @@
 title: "Choisir un compresseur d’air : la méthode complète, des outils au réseau"
 description: "Neuf étapes pour vérifier le débit, la pression, les usages simultanés, le réseau et les informations manquantes."
 pubDate: 2026-07-13
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: []
@@ -86,6 +86,8 @@ Avec un seul point à 8 ou 10 bar, CompatAir ne recopie plus cette valeur à 6,3
 Le premier résultat compare le débit restitué disponible à la consommation publiée. CompatAir affiche ensuite un seuil égal au besoin multiplié par 1,25. Cette réserve de 25 % est un repère proposé par CompatAir, pas une prescription universelle d’Atlas Copco ou du fabricant de l’outil.
 
 Dans une installation professionnelle, la réserve dépend notamment des fuites, de l’usure, des évolutions prévues et du coût d’une interruption. Le manuel Atlas Copco demande de traiter ces éléments dès l’étude. Une marge unique ne remplace donc pas un audit de réseau.
+
+Le temps de fonctionnement autorisé doit être conservé à côté du débit. Le guide [services S1 et S3 25 % d’un compresseur](/guides/compresseur-service-s1-s3-25-pour-cent/) explique le rapport marche/repos et pourquoi ce pourcentage ne constitue pas un nouveau FAD constructeur.
 
 ## Dimensionner le réseau et les raccords
 

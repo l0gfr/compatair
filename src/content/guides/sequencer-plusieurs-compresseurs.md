@@ -3,7 +3,7 @@ title: "Séquencer plusieurs compresseurs : base, appoint et pression réseau"
 seoTitle: "Séquencement de plusieurs compresseurs"
 description: "Méthode pour attribuer base et appoint, choisir les signaux et tester la séquence sans laisser plusieurs machines moduler en parallèle."
 pubDate: 2026-07-15
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Utiliser"
 audiences: [professionnel]
 metiers: [maintenance-industrielle]
@@ -62,6 +62,8 @@ La recette doit couvrir davantage que la pleine production : montée progressive
 Un séquencement réussi maintient le procédé tout en évitant les états inutiles. Si la pression est stable mais que deux machines restent longtemps à vide, la commande mérite encore une analyse.
 
 Les pointes courtes doivent aussi être confrontées au [stockage primaire et secondaire](/guides/stockage-primaire-secondaire-air-comprime/) avant de demander à une unité supplémentaire de démarrer.
+
+La régulation doit aussi être examinée lorsqu’une machine manque. Le [contrôle du débit restant dans une architecture N+1](/guides/compresseur-secours-n-plus-un-capacite-restante/) sépare capacité cumulée et capacité réellement disponible après une panne.
 
 ## Organiser la rotation sans perdre la performance
 

@@ -11,7 +11,7 @@ sources:
   - https://www.sata.com/en-int/products/additional-products/pressure-measuring-devices/sata-adam-2/downloads
   - https://www.sata.com/assets/cms/2022/10/21/EN-SATA-DanAm-Brochure-SATA-adam-2-Flexibility-Digitalised-K-131862-4020-06-3_uid_6352a33f75bfa.pdf
   - https://www.sata.com/en-eur/products/spray-guns/gravity-flow-cup-guns/satajet-5000-b/technical-data
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 ---
 
 Le manomètre du régulateur mural ne connaît pas la perte du flexible, des raccords et du dispositif de mesure monté au pistolet. Pour reproduire un réglage de peinture, la pression doit être relevée à l’entrée de la référence utilisée, dans la condition de débit décrite par son fabricant.
@@ -66,6 +66,8 @@ Une baisse déjà présente à la sortie du filtre appelle un contrôle de ce de
 La précision annoncée de ± 0,05 bar pour le SATA adam 2 décrit son affichage. Elle ne prouve pas que le pistolet est réglé sur la bonne valeur, que le réseau tient la charge, ou que l’air répond à une classe de pureté. Chacune de ces conclusions demande sa propre preuve.
 
 De même, le dispositif est présenté par SATA pour ses pistolets et ses docks compatibles. Sa brochure ne valide pas un montage improvisé sur une autre marque. Si l’atelier utilise un autre instrument, sa notice et son périmètre prennent la place de cette référence.
+
+Avant d’interpréter un écart entre deux cadrans, vérifiez la [précision du manomètre en pleine échelle](/guides/manometre-air-comprime-precision-pleine-echelle/). Le dossier distingue pourcentage d’étendue, pourcentage de lecture et état réel de l’instrument.
 
 ## Conserver un réglage de production
 

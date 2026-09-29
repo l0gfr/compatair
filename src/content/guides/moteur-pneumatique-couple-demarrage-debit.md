@@ -16,7 +16,7 @@ sources:
   - https://www.atlascopco.com/en-us/itba/industry-solutions/Airmotors/technicalguide/performance
   - https://www.atlascopco.com/en-uk/itba/industry-solutions/airmotors/technicalguide/choose-air-motor
   - https://www.atlascopco.com/content/dam/pim/itba/atlas-copco/leaflets/global-leaflets/Leaflet-AtlasCopco-Pocket-Guide-to-Air-motors.pdf
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 ---
 
 Un moteur pneumatique peut fournir la puissance voulue une fois lancé et **ne pas garantir le couple nécessaire au démarrage**. Pour un entraînement d’atelier, il faut donc vérifier au moins trois états : le départ sous charge, le point de travail et la vitesse libre éventuelle. Une seule valeur en kW ne suffit pas à choisir le moteur ni le compresseur.
@@ -74,6 +74,8 @@ Avant de valider un entraînement, faites confirmer les efforts admissibles, la 
 Pour prolonger cette vérification, vous pouvez [relier diamètre, pression et force d’un vérin](/guides/force-verin-pneumatique-diametre-pression/).
 
 Pour un mouvement angulaire limité, le [guide des vérins rotatifs](/guides/verin-rotatif-pneumatique-couple-angle-inertie/) relie le couple, l’angle et le dossier d’inertie de la charge.
+
+Pour une installation en atmosphère explosible, le bilan mécanique et pneumatique doit être complété par la [portée du certificat ATEX du moteur et de l’assemblage](/guides/moteur-pneumatique-atex-certificat-ensemble/). Le document d’un composant ne décrit pas automatiquement les conditions de l’ensemble installé.
 
 ## Sources et méthode
 

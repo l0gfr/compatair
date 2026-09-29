@@ -2,7 +2,7 @@
 title: "Qualité de l’air comprimé et ISO 8573-1 : particules, eau et huile sans raccourci"
 description: "Comprendre ce que classe réellement ISO 8573-1, où spécifier la qualité de l’air et pourquoi filtre, sécheur et compresseur sans huile ne sont pas interchangeables."
 pubDate: 2026-07-13
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Comprendre"
 audiences: [professionnel]
 metiers: [carrosserie-peinture, maintenance-industrielle]
@@ -91,6 +91,8 @@ CompatAir ne reproduit pas les tableaux normatifs payants et ne déduit pas une 
 Une mesure en sortie de traitement ne garantit pas automatiquement le point d’utilisation.
 
 Ces distinctions sont essentielles avant de comparer deux solutions de traitement ou de rédiger une exigence fournisseur.
+
+L’allégation « classe 0 » nécessite elle aussi une lecture du document : le guide [certificat d’huile d’un compresseur classe 0](/guides/classe-0-compresseur-certificat-huile-portee/) identifie gamme, contaminants, point d’essai et conditions. Cette portée est distincte d’une réception du réseau au poste.
 
 ## Construire une exigence vérifiable
 

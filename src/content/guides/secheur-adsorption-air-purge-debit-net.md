@@ -15,7 +15,7 @@ relatedGuides:
 sources:
   - https://us.kaeser.com/download.ashx?id=tcm%3A46-37748
   - https://us.kaeser.com/compressed-air-resources/compressed-air-tips/compressed-air-treatment-guide/dryer-selection-guide.aspx
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 ---
 
 Un sécheur par adsorption peut prélever une partie de l’air produit pour régénérer son dessiccant avec de l’[air de purge](/glossaire/#air-purge-regeneration). Si le débit annoncé décrit l’entrée, il n’est pas automatiquement égal au débit disponible pour l’atelier. Avant de sélectionner le compresseur, demandez si la capacité de séchage, la consommation de purge et le débit net de sortie sont exprimés sur la même base.
@@ -90,6 +90,8 @@ Une solution qui consomme moins d’air de purge peut utiliser du chauffage ou u
 Sans ces mesures et les conditions locales, nous ne donnons ni pourcentage d’économie ni délai de retour. La décision utile est d’abord de savoir quel débit net et quel point de rosée seront effectivement garantis pour votre atelier.
 
 Pour prolonger cette vérification, vous pouvez [intégrer l’air de balayage d’un sécheur à membrane](/guides/secheur-membrane-air-comprime-debit-balayage/).
+
+Pour la maintenance, distinguez l’indication du matériau et la qualité d’air obtenue. Le guide [dessiccant coloré et point de rosée](/guides/desiccant-change-couleur-point-rosee/) précise les informations à lire sur un voyant avant d’en déduire l’état du séchage.
 
 ## Sources et méthode
 

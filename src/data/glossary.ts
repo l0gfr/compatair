@@ -1,4 +1,20 @@
 export const glossarySources = {
+	abbDuty: {
+		label: 'ABB, services moteurs, guide technique 2018, section 4.7',
+		url: 'https://library.e.abb.com/public/891764f173c5494b82b7e66e0b2d6080/9AKK105285%20REV%20C%2010-2018.pdf',
+	},
+	tuvOilCertificate: {
+		label: 'TÜV Rheinland, certificat de type Atlas Copco ZR/ZT, 23 février 2021',
+		url: 'https://www.atlascopco.com/content/dam/atlas-copco/compressor-technique/oil-free-air/documents/ZR%20ZT_160-900_%28VSD%29_Certificate_Class%200_TUV_EN_Antwerp_Ed01.pdf',
+	},
+	cpAirFuse: {
+		label: 'Chicago Pneumatic, air fuses',
+		url: 'https://tools.cp.com/en-us/products/accessories/air-line-accessories/air-fuses',
+	},
+	atlasAftercooler: {
+		label: 'Atlas Copco, fonction du refroidisseur final',
+		url: 'https://www.atlascopco.com/en-us/compressors/wiki/compressed-air-articles/aftercooler',
+	},
 	vaisalaDewSampling: {
 		label: 'Vaisala, mesure et prélèvement du point de rosée',
 		url: 'https://www.vaisala.com/sites/default/files/documents/CompAir-Sampling-Cell-AppNote-B211229EN.pdf',
@@ -144,6 +160,10 @@ export type GlossaryTerm = {
 };
 
 export const glossaryTerms: GlossaryTerm[] = [
+	{ term: 'Service S1', slug: 'service-s1', definition: 'Service moteur à charge constante assez prolongé pour atteindre l’équilibre thermique. Cette désignation du moteur ne suffit pas à déterminer le débit ni les limites d’exploitation de la machine complète.', source: 'abbDuty', related: { label: 'Lire les services S1 et S3', href: '/guides/compresseur-service-s1-s3-25-pour-cent/' } },
+	{ term: 'Service S3', slug: 'service-s3', definition: 'Service moteur intermittent périodique associant fonctionnement à charge constante et repos hors tension, avec un effet thermique du démarrage non significatif. Son facteur de durée est le temps de fonctionnement divisé par la somme fonctionnement et repos.', source: 'abbDuty', related: { label: 'Interpréter S3 25 %', href: '/guides/compresseur-service-s1-s3-25-pour-cent/' } },
+	{ term: 'Huile totale', slug: 'huile-totale', definition: 'Huile considérée dans ses différentes phases : aérosols, liquide et vapeur. Une mesure limitée aux vapeurs ne renseigne pas, à elle seule, sur l’ensemble ; le rapport doit préciser les méthodes et le point de prélèvement.', source: 'tuvOilCertificate', related: { label: 'Distinguer huile totale et vapeurs', href: '/guides/mesure-vapeurs-huile-huile-totale-air-comprime/' } },
+	{ term: 'Air fuse', slug: 'air-fuse', definition: 'Dispositif qui réagit à un débit excessif, notamment lors de la rupture d’un flexible, pour réduire le passage d’air. Son choix dépend du circuit et de la consommation maximale ; il se distingue d’un raccord à décompression avant déconnexion.', source: 'cpAirFuse', related: { label: 'Comparer les protections du flexible', href: '/guides/air-fuse-raccord-decompression-flexible-rupture/' } },
 	{ term: 'Point de rosée atmosphérique', slug: 'point-rosee-atmospherique', definition: 'Température de rosée exprimée à la pression atmosphérique. Elle ne se compare pas directement à une mesure sous une autre pression sans connaître les conditions et la méthode de conversion.', source: 'vaisalaDewSampling', related: { label: 'Comparer deux points de rosée', href: '/guides/point-rosee-atmospherique-sous-pression-mesure/' } },
 	{ term: 'Coalescence', slug: 'coalescence', definition: 'Réunion de fines gouttelettes en gouttes plus grosses pour permettre leur séparation et leur évacuation. La filtration coalescente ne doit pas être assimilée à un traitement de la vapeur d’huile.', source: 'bekoCoalescence', related: { label: 'Distinguer séparation et filtration', href: '/guides/separateur-cyclonique-filtre-coalescent-differences/' } },
 	{ term: 'Vide relatif', slug: 'vide-relatif', definition: 'Pression inférieure à l’ambiance, exprimée par rapport à la pression atmosphérique locale prise comme zéro. Une valeur négative relative ne désigne pas une pression absolue négative.', source: 'schmalzVacuum', related: { label: 'Lire un affichage de vide', href: '/guides/vacuometre-vacuostat-bar-absolu-pourcentage-vide/' } },
@@ -160,7 +180,7 @@ export const glossaryTerms: GlossaryTerm[] = [
 	{ term: 'Amplificateur d’air', slug: 'amplificateur-air', definition: 'Dispositif dont un jet d’air comprimé entraîne de l’air ambiant pour accroître le volume total soufflé. Le débit du jet inclut cet air entraîné et ne correspond pas au débit d’air comprimé consommé.', source: 'exairAmplification', related: { label: 'Lire les débits EXAIR', href: '/guides/amplificateur-air-exair-consommation-debit/' } },
 	{ term: 'Facteur de correction d’un sécheur', slug: 'facteur-correction-secheur', definition: 'Coefficient constructeur reliant la capacité nominale d’un sécheur à ses conditions d’exploitation. Sa valeur et son sens d’application doivent être vérifiés dans la documentation de la gamme, sans transposition automatique entre marques.', source: 'kaeserDryerSizing', related: { label: 'Dimensionner le sécheur en été', href: '/guides/dimensionner-secheur-frigorifique-ete/' } },
 	{ term: 'Surpresseur pneumatique', slug: 'surpresseur-pneumatique', definition: 'Dispositif alimenté par de l’air comprimé qui fournit localement une pression supérieure. Le débit entrant, le débit sortant et le régime admissible sont des caractéristiques distinctes à vérifier pour la variante retenue.', source: 'festoDpa', related: { label: 'Pression et débit du Festo DPA', href: '/guides/surpresseur-pneumatique-festo-dpa-pression-debit/' } },
-	{ term: 'Aftercooler', slug: 'aftercooler', definition: 'Échangeur qui refroidit l’air à la sortie du compresseur. Le refroidissement peut faire condenser une partie de l’eau, ensuite séparée en aval.', source: 'cagi', related: { label: 'Condensats et entretien', href: '/guides/entretien-compresseur-purge-condensats/' } },
+	{ term: 'Aftercooler', slug: 'aftercooler', definition: 'Échangeur qui refroidit l’air à la sortie du compresseur. Le refroidissement peut faire condenser une partie de l’eau, ensuite séparée et évacuée. Il ne remplace pas un sécheur destiné à traiter la vapeur restante.', source: 'atlasAftercooler', related: { label: 'Refroidisseur et sécheur', href: '/guides/aftercooler-refroidisseur-secheur-air-comprime/' } },
 	{ term: 'Air libre', slug: 'air-libre', definition: 'Air considéré aux conditions atmosphériques d’un lieu déterminé, avant l’effet du compresseur. Les conditions de référence doivent être précisées pour comparer des débits.', source: 'cagi' },
 	{ term: 'Atmosphère standard', slug: 'atmosphere-standard', definition: 'Unité de pression définie exactement à 101 325 pascals, soit 1,01325 bar. CompatAir utilise cette valeur de référence pour exprimer le volume d’air libre équivalent du calcul de gonflage.', source: 'nist', related: { label: 'Calculer un gonflage', href: '/guides/compresseur-pour-gonfler-pneus/' } },
 	{ term: 'Bar', slug: 'bar', definition: 'Unité de pression non SI couramment utilisée pour l’air comprimé. Un bar vaut exactement 100 000 pascals, soit 100 kPa.', source: 'nist', related: { label: 'Comprendre bar, psi et pression', href: '/guides/bar-psi-pression-absolue-relative/' } },

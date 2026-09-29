@@ -3,7 +3,7 @@ title: "Air comprimé en carrosserie et peinture : débit, pression et qualité 
 seoTitle: "Air comprimé carrosserie et peinture | CompatAir"
 description: "Dimensionner l’air procédé d’un poste de peinture sans le confondre avec la ventilation de la cabine ni l’air respirable d’un appareil à adduction."
 pubDate: 2026-07-15
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Choisir"
 audiences: [professionnel]
 metiers: [carrosserie-peinture]
@@ -83,6 +83,8 @@ Une case vide laisse le verdict incomplet. Elle appelle la bonne fiche ou une me
 Pour prolonger cette vérification, vous pouvez [comprendre les limites d’un compresseur d’atelier pour l’air respirable](/guides/air-respirable-compresseur-atelier-limites/).
 
 Pour un jet irrégulier, le [diagnostic des déformations et crachotements du pistolet](/guides/pistolet-peinture-jet-deforme-crachote-diagnostic/) organise les observations avant intervention.
+
+Après la pulvérisation, le séchage peut ajouter son propre consommateur. Le dossier [SATA dry jet 2 et débit du compresseur](/guides/sata-dry-jet-2-compresseur-sechage-peinture/) distingue air comprimé consommé et air ambiant entraîné, puis examine la simultanéité avec les autres postes.
 
 ## Sources
 

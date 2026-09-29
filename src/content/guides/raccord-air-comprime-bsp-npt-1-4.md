@@ -3,7 +3,7 @@ title: "Raccord d’air comprimé 1/4 : BSP, NPT et profil rapide, que vérifier
 seoTitle: "Raccord air 1/4 : BSP ou NPT, comment choisir ?"
 description: "Un raccord 1/4 peut avoir le mauvais filetage ou le mauvais profil rapide. Identifiez G, R et NPT, l’étanchéité et le passage avant de raccorder votre outil."
 pubDate: 2026-09-25
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Installer"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, maintenance-industrielle, btp-chantier]
@@ -80,6 +80,8 @@ La [notice Fuji, page 3](https://www.photos-videos.fujitools.com/content/dam/pim
 À réception, comparez les références livrées à votre commande avant montage. Un embout qui ressemble à l’ancien, une couleur ou une désignation commerciale ne remplace pas cette vérification.
 
 Pour prolonger cette vérification, vous pouvez [lire le débit nominal d’un distributeur avec ses conditions de mesure](/guides/choisir-distributeur-pneumatique-debit-nominal/).
+
+Sur un outil vibrant, examinez aussi la position du raccord : le [flexible court entre outil et raccord rapide](/guides/flexible-court-outil-pneumatique-vibrations/) traite cette disposition, ses références et ses limites. Le raccordement mécanique reste à vérifier indépendamment du débit.
 
 ## Sources et limites
 

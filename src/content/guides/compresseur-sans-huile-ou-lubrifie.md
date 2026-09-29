@@ -12,7 +12,7 @@ sources:
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
   - https://www.einhell.fr/p/4010800-te-ac-430-90-10/
   - https://shop.abacaircompressors.com/en-INT/products/4116000868/atf-s-3-24-10-230150-ce
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 ---
 
 « Sans huile » et « lubrifié » décrivent la manière dont le groupe de compression est conçu. Ces mentions ne donnent directement ni le débit restitué, ni le niveau sonore, ni la durée d’utilisation possible avec un outil.
@@ -57,6 +57,8 @@ Pour prolonger cette vérification, vous pouvez [rédiger les exigences d’air 
 Le [guide de choix d’huile pour compresseur](/guides/huile-compresseur-viscosite-reference-constructeur/) distingue référence, viscosité et domaine d’emploi sans proposer d’équivalence universelle.
 
 Pour un cabinet, le [guide de consultation d’une centrale d’air dentaire](/guides/compresseur-dentaire-debit-qualite-cabinet/) précise le périmètre normatif et les exigences à faire documenter.
+
+Les suffixes commerciaux méritent une vérification par référence. La comparaison [Metabo Basic 250-50 W et W OF](/guides/metabo-basic-250-50-w-ou-w-of/) identifie les versions, leur lubrification et les conditions du débit annoncé. La seule ressemblance du nom ne rend pas les caractéristiques interchangeables.
 
 ## Sources
 

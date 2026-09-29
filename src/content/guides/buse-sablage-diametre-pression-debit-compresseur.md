@@ -16,7 +16,7 @@ sources:
   - https://www.clemcoindustries.com/s/NozzleWear.pdf
   - https://www.clemcoindustries.com/s/AirVolume_Est.pdf
   - https://www.clemcoindustries.com/charts
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 ---
 
 **Le diamètre de la buse et la pression à la buse changent fortement le besoin d’air d’une installation de sablage.** Dans le tableau Clemco, une buse n° 3 demande 30 cfm à 60 psi, contre 54 cfm pour une n° 4 à la même pression. Cela représente environ **850 et 1 529 L/min**, avant de dimensionner les autres besoins de l’installation. [Clemco, tableau de consommation d’air et d’abrasif](https://www.clemcoindustries.com/s/Compressed_Air-wxh8.pdf).
@@ -68,6 +68,8 @@ Le [guide des chutes de pression](/guides/diagnostiquer-chute-pression-air-compr
 Dans son [tableau sur l’usure des buses](https://www.clemcoindustries.com/s/NozzleWear.pdf), Clemco compare notamment 81 cfm pour l’orifice n° 4 et 137 cfm pour le n° 5, soit environ 69 % de plus. Le tableau de consommation permet de retrouver ces valeurs à 100 psi. Ce rapprochement décrit un changement d’orifice ; il ne prédit pas le temps nécessaire pour atteindre cette usure.
 
 Pour l’atelier, la conséquence pratique est de conserver le diamètre de référence dans le dossier de maintenance. Si un poste qui fonctionnait correctement réclame davantage d’air, contrôler la buse est une piste à examiner avant de remplacer le compresseur. Le critère de remplacement et la méthode de contrôle doivent venir du fabricant de la buse installée ; nous ne publions pas ici un intervalle universel en heures.
+
+Le dossier [buse usée et surconsommation d’air](/guides/buse-sablage-usee-surconsommation-air/) développe ce diagnostic : conserver la référence initiale ne suffit pas lorsque l’orifice a changé. Il distingue les repères du tableau constructeur d’une mesure de l’usure réalisée sur place.
 
 ## Débit de buse et débit total : deux lignes différentes
 

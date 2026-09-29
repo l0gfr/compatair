@@ -3,7 +3,7 @@ title: "Flexible d’air comprimé de 25 ou 50 mètres sur chantier : méthode d
 seoTitle: "Flexible air chantier 25 ou 50 m : méthode"
 description: "Méthode de chantier pour passer d’un flexible constructeur court à 25 ou 50 mètres sans inventer la perte de charge ni masquer les raccords."
 pubDate: 2026-07-19
-updatedDate: 2026-07-20
+updatedDate: 2026-09-30
 category: "Installer"
 audiences: [professionnel]
 metiers: [btp-chantier]
@@ -99,6 +99,8 @@ Répétez le même protocole avec la longueur complète. Si l’outil perd sa ca
 Le guide [INRS ED 6282](https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6282/ed6282.pdf) rappelle que les machines portatives doivent être intégrées à une démarche de prévention couvrant choix, utilisation, environnement et organisation. Un flexible qui fournit la bonne pression peut encore créer un risque de chute, d’endommagement ou d’exposition selon son cheminement.
 
 La réception doit donc produire deux validations distinctes : capacité pneumatique et implantation sûre. Aucun débit calculé ne remplace la notice, l’analyse de risque ou la vérification périodique du matériel.
+
+Les protections ne répondent pas toutes au même événement. La comparaison [air fuse ou raccord à décompression](/guides/air-fuse-raccord-decompression-flexible-rupture/) distingue rupture du flexible et déconnexion volontaire, avec les informations à demander pour choisir le dispositif.
 
 ## Fiche de recette réutilisable
 

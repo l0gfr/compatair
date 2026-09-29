@@ -3,6 +3,7 @@ title: "Raccord rapide de sécurité : décompression, profil et débit d’air 
 seoTitle: "Raccord d’air de sécurité : profil, débit et décompression"
 description: "Choisir un raccord à décompression : exemple CEJN eSafe 320, débit à perte de charge définie, filetage et différence entre service et éclatement."
 pubDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Installer"
 audiences: ["professionnel"]
 metiers: ["garage-automobile", "maintenance-industrielle", "btp-chantier"]
@@ -71,6 +72,8 @@ Pour comparer deux raccords, exigez des points de débit établis à des conditi
 Nous conseillons de renseigner la référence du coupleur et de l’embout, le filetage de chaque extrémité, la pression de service, la fonction de déconnexion et la courbe débit/perte de charge. Ajoutez le diamètre intérieur et la longueur du flexible. Ces informations rendent le devis contrôlable sans exiger que tous les postes reçoivent le même montage.
 
 Demandez au fournisseur de confirmer les associations et les conditions d’entretien. La vérification de réception peut ensuite reprendre ces références et le fonctionnement prévu, dans le cadre de sa procédure. Ce guide ne propose aucun essai de surpression ou d’éclatement en atelier.
+
+Un poste sensible peut aussi imposer un [flexible antistatique avec continuité documentée](/guides/flexible-air-antistatique-atex-continuite/). Les mentions antistatique, résistance aux étincelles et compatibilité avec une zone ATEX doivent être examinées séparément.
 
 ## Le bon critère d’achat
 

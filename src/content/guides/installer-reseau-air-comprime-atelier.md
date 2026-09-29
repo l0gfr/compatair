@@ -2,7 +2,7 @@
 title: "Installer un réseau d’air comprimé dans un atelier : pression, diamètre, condensats et raccords"
 description: "Concevoir le trajet entre compresseur et outils sans masquer les pertes : architecture, diamètre intérieur, boucle, filtration, purge et points de contrôle."
 pubDate: 2026-07-13
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Installer"
 audiences: [professionnel]
 metiers: [garage-automobile, atelier-poids-lourds, carrosserie-peinture, menuiserie-agencement, btp-chantier, maintenance-industrielle]
@@ -111,6 +111,8 @@ Pour prolonger cette vérification, vous pouvez [vérifier pourquoi un tube PVC 
 Le [cas d’alimentation d’une CNC Haas VF-4](/guides/compresseur-machine-cnc-haas-pression-debit/) distingue le débit publié, la pression minimale et le besoin des accessoires.
 
 Le [guide des vannes de démarrage progressif](/guides/vanne-demarrage-progressif-air-comprime-remise-pression/) prépare les vérifications de pression et de comportement lors de la remise en service.
+
+Pour un réseau modulaire, la [réception d’une installation d’air en aluminium](/guides/reseau-air-aluminium-pression-accessoires-reception/) examine aussi les raccords, flexibles et conditions de pression. La caractéristique générale d’une gamme ne valide pas chaque assemblage acheté.
 
 ## Sources
 

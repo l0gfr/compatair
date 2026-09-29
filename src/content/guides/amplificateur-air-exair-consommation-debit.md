@@ -13,7 +13,7 @@ relatedGuides: ["soufflette-garage-securite-bruit-consommation", "utiliser-plusi
 sources:
   - https://www.exair.com/media/productcms/pdf/AirAmplifiers2_1.pdf
   - https://blog.exair.com/2021/03/26/exairs-super-air-amplifier-amplification-ratios-explained/
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 ---
 
 **Les 4 132 SLPM annoncés en sortie d’un EXAIR 120021 ne sont pas 4 132 SLPM d’air comprimé produits pour le réseau.** Le tableau constructeur associe cette valeur à une consommation de 229 SLPM d’air comprimé, à 5,5 bar d’alimentation. Le jet entraîne de l’air ambiant ; les deux chiffres décrivent des flux différents. [EXAIR, tableau de performances, page PDF 8](https://www.exair.com/media/productcms/pdf/AirAmplifiers2_1.pdf).
@@ -84,6 +84,8 @@ Le bon choix est celui dont le service attendu et le besoin d’air sont démont
 Pour prolonger cette vérification, vous pouvez [comparer couteau d’air et soufflante sur une même tâche](/guides/couteau-air-comprime-ou-soufflante/).
 
 Lorsqu’une neutralisation électrostatique est recherchée, le [guide des ioniseurs à air comprimé](/guides/ioniseur-air-comprime-debit-neutralisation-electrostatique/) distingue la preuve de neutralisation de l’effet du souffle.
+
+Le [SATA dry jet 2 utilisé pour le séchage de peinture](/guides/sata-dry-jet-2-compresseur-sechage-peinture/) fournit un autre cas de consommateur qui entraîne de l’air ambiant. Le dossier conserve la consommation d’air comprimé comme donnée d’entrée du bilan du compresseur.
 
 ## Sources et périmètre
 

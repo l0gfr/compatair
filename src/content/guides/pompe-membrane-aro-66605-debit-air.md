@@ -15,7 +15,7 @@ relatedGuides:
 sources:
   - https://azure-na-assets.contentstack.com/v3/assets/blt7de7417393caec8b/blt4a7f56f74475fc47/67bdfdd19f36a11cbf1a81eb/15268519.pdf
   - https://azure-na-assets.contentstack.com/v3/assets/blt7de7417393caec8b/blt19a8e75e4a73440a/67bdfdcd018e20f8fa627222/99449712.pdf
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 ---
 
 Les **49,2 L/min** annoncés pour certaines pompes ARO 66605 représentent un **débit maximal de liquide**, pas leur consommation d’air comprimé. Acheter un compresseur en reprenant ce chiffre revient à confondre ce que la pompe transporte et ce qui la fait fonctionner.
@@ -89,6 +89,8 @@ Sans ces éléments, le bon résultat du dimensionnement est « données insuffi
 Pour prolonger cette vérification, vous pouvez [compter l’air de la pompe d’injection dans un projet d’hydrosablage](/guides/hydrosablage-compresseur-pompe-eau-debit/).
 
 Si l’échappement givre, le [diagnostic du givrage des pompes pneumatiques](/guides/pompe-pneumatique-echappement-givre-air-sec/) distingue humidité interne et observation extérieure.
+
+Si le problème est une pompe qui ne fonctionne plus correctement, commencez par le [diagnostic d’une pompe à membrane pneumatique calée](/guides/pompe-membrane-pneumatique-calee-diagnostic/). La courbe de sélection ne remplace pas la recherche d’une restriction d’air, d’aspiration, de refoulement ou d’échappement.
 
 ## Sources et méthode
 

@@ -3,6 +3,7 @@ title: "Meuleuse pneumatique : distinguer une broche M14 d’une 5/8-11"
 seoTitle: "Meuleuse pneumatique : broche M14 ou 5/8-11 ?"
 description: "La Dynabrade 52518 publie une broche M14×2. Vérifier la version, les flasques et l’accessoire sans confondre broche mécanique et arrivée d’air."
 pubDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -41,3 +42,5 @@ Si un vendeur indique seulement « meuleuse 115 mm », demandez la référence f
 La [fiche Dynabrade 52518](/outils-pneumatiques/ponceuse-rotative-dynabrade-52518/) rassemble les données de la référence. Associez-y la notice et les références de consommables retenues, afin qu’un remplacement ultérieur ne parte pas uniquement du diamètre extérieur.
 
 Le même raisonnement vaut pour les petits outils : le [guide des filetages de plateau M6, UNC et UNF](/guides/mini-ponceuse-filetage-m6-unf-plateau/) montre pourquoi le montage mécanique et la connexion d’air doivent rester deux recherches séparées. L’alimentation pneumatique se vérifie ensuite sur la consommation et la pression propres à l’outil choisi.
+
+Après l’interface mécanique, vérifiez la [vitesse maximale du disque et de la meuleuse](/guides/meuleuse-pneumatique-vitesse-max-disque-abrasif/). La concordance du filetage ne constitue pas la validation de l’accessoire complet.

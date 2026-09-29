@@ -2,7 +2,7 @@
 title: "Entretenir un compresseur d’air : purge, cuve, filtres et contrôles à documenter"
 description: "Construire un entretien traçable à partir de la notice du modèle : condensats, inspection de cuve, soupape, filtration et conditions d’installation."
 pubDate: 2026-07-13
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Utiliser"
 audiences: [particulier, professionnel]
 metiers: [maintenance-industrielle]
@@ -128,6 +128,8 @@ Après la purge, le liquide collecté nécessite sa propre filière. Le dossier 
 Le [guide de choix d’huile pour compresseur](/guides/huile-compresseur-viscosite-reference-constructeur/) distingue référence, viscosité et domaine d’emploi sans proposer d’équivalence universelle.
 
 Le [guide rouille, condensats et contrôle de cuve](/guides/cuve-compresseur-rouille-condensats-controle/) distingue l’observation d’un liquide de la preuve d’intégrité du réservoir.
+
+Le condensat peut être formé à plusieurs endroits. Le [rôle du refroidisseur final, ou aftercooler](/guides/aftercooler-refroidisseur-secheur-air-comprime/) explique le lien entre refroidissement, séparation et évacuation, avant le traitement de la vapeur restante.
 
 ## Sources
 

@@ -13,7 +13,7 @@ sources:
   - https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors
   - https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking_ppc/ideal_gases_under_constant.htm
   - https://www.michelin.fr/auto/conseils/pression-pneus/gonfler-pneus
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 ---
 
 La pression cible ne suffit pas pour calculer un temps de gonflage. Il faut aussi connaître le volume interne à pressuriser, la pression initiale et le débit réellement disponible.
@@ -46,6 +46,8 @@ Le volume de 40 L sert uniquement à montrer le calcul. CompatAir ne le présent
 Le modèle suppose une température constante, un volume fixe et un gaz parfait. Il ne modélise pas l’échauffement pendant le remplissage, la restriction de la valve, les pertes du flexible et du détendeur, les fuites ou les arrêts du compresseur.
 
 Le résultat est donc un besoin moyen idéalisé. Il permet de comparer des ordres de grandeur sur une base explicite, pas de garantir un chronométrage réel.
+
+Si le devis mentionne un Fifty, consultez la [lecture des débits du Mecafer Fifty 50 L](/guides/mecafer-fifty-50l-debit-reel-usages/). Elle distingue les points publiés par le fabricant et les usages à vérifier au poste, sans transformer un débit aspiré en temps de gonflage garanti.
 
 ## Pression cible et sécurité
 

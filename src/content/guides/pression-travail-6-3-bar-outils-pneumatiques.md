@@ -2,7 +2,7 @@
 title: "Pourquoi tant d’outils pneumatiques travaillent à 6,3 bar"
 description: "La pression maximale de la cuve ne dit pas ce qui arrive à l’outil. Comprenez la pression de service, le détendeur et la marge réseau autour de 6,3 bar."
 pubDate: 2026-07-13
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 category: Comprendre
 audiences: [particulier, professionnel]
 metiers: [btp-chantier]
@@ -49,6 +49,8 @@ L’exemple des [meuleuses Fuji à pince de 6 mm ou 1/4](/guides/meuleuse-pneuma
 Pour prolonger cette vérification, vous pouvez [relier diamètre, pression et force d’un vérin](/guides/force-verin-pneumatique-diametre-pression/).
 
 Le [guide simple effet, double effet et retour par ressort](/guides/verin-simple-double-effet-ressort-retour/) prépare la lecture du cycle avant d’établir le besoin pneumatique.
+
+La [courbe publiée du Scheppach HC51V](/guides/scheppach-hc51v-debit-pression-outils/) fournit un exemple concret de lecture pression par pression. Elle permet de comprendre pourquoi le débit à basse pression ne constitue pas la capacité disponible pour une clé à chocs.
 
 ## Sources
 

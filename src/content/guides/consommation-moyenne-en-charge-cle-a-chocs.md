@@ -3,6 +3,7 @@ title: "Clé à chocs : consommation moyenne ou en charge pour choisir le compre
 seoTitle: "Clé à chocs : débit moyen ou en charge ?"
 description: "156 ou 612 L/min pour une CP7732C ? Comprendre les libellés constructeur, les écarts entre documents et le débit à retenir avant d’acheter un compresseur."
 pubDate: 2026-09-25
+updatedDate: 2026-09-30
 category: "Comprendre"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, atelier-poids-lourds]
@@ -68,6 +69,8 @@ Une demande exploitable au fournisseur tient en un court dossier : référence d
 Si l’on vous répond uniquement « 150 L/min », demandez si cette valeur est une moyenne, un débit en charge ou une conversion. Le [guide des unités de débit](/guides/convertir-cfm-l-min-nl-min-air-comprime/) permet de vérifier l’unité sans perdre les conditions d’origine.
 
 Pour un matériel déjà installé, consignez le comportement pendant une tâche représentative : pression avant l’action, pression pendant l’effort, récupération et autres outils actifs. Une clé faible avec une cuve apparemment pleine peut relever du [diagnostic de manque de couple](/guides/cle-a-chocs-manque-couple-diagnostic/), pas seulement d’un achat de compresseur plus gros.
+
+Pour passer de la lecture d’une fiche au choix entre deux clés, comparez la [CP7732C et la CP7748](/guides/cp7732c-ou-cp7748-debit-encombrement/). Ce dossier examine le besoin en charge et les contradictions documentaires, sans déduire le travail réalisable du seul couple maximal.
 
 ## Peut-on dimensionner sur sa propre moyenne ?
 

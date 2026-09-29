@@ -3,6 +3,7 @@ title: "Pistolet peinture qui crache ou jet déformé : diagnostiquer avant de 
 seoTitle: "Pistolet qui crache ou jet déformé : le diagnostic"
 description: "Jet chargé d’un côté, pulvérisation saccadée ou débit irrégulier : séparez défaut de chapeau, alimentation en produit et chute de pression d’air."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Utiliser"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture", "menuiserie-agencement"]
@@ -65,6 +66,8 @@ Une comparaison utile modifie une seule variable à la fois, dans la plage autor
 Une fuite persistante, une pièce visiblement endommagée ou un défaut qui reste inexpliqué après les contrôles utilisateur justifient une intervention adaptée. Envoyez au réparateur la photo du motif, la référence des composants, la pression relevée et les changements déjà tentés. Évitez une commande de pièces fondée uniquement sur le mot « crachotement ».
 
 Enfin, un jet régulier ne prouve pas l’absence de contamination. Si le problème concerne des cratères ou des défauts de surface après application, poursuivez avec le [contrôle de contamination avant peinture](/guides/tester-contamination-air-avant-peinture/), qui répond à une autre question. Séparer ces deux diagnostics rend les essais plus rapides à interpréter et les dépenses plus faciles à justifier.
+
+Avant d’ajouter des démontages au diagnostic, vérifiez la [méthode de nettoyage des passages d’air du pistolet](/guides/nettoyage-pistolet-peinture-canaux-air/). Ce dossier relie les conseils SATA aux points à contrôler, tout en laissant à la notice du modèle le choix des produits et des opérations admises.
 
 ## Sources et méthode
 

@@ -12,7 +12,7 @@ reviewStatus: "internal"
 relatedGuides: ["point-rosee-secheur-filtre-air-comprime", "ventilation-local-compresseur-surchauffe", "secheur-air-comprime-atelier-non-chauffe"]
 sources:
   - https://fr.kaeser.com/entreprise/blog/comment-dimensionner-un-secheur-frigorifique.aspx
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 ---
 
 **Un sécheur annoncé pour 10 m³/min ne traite pas nécessairement 10 m³/min dans les conditions les plus chaudes de votre atelier.** KAESER publie un exemple où la pression d’entrée, la température ambiante et celle de l’air comprimé conduisent à trois corrections. Le constructeur précise que ses facteurs ne doivent pas être transposés aux autres marques. [KAESER, dimensionnement d’un sécheur frigorifique](https://fr.kaeser.com/entreprise/blog/comment-dimensionner-un-secheur-frigorifique.aspx).
@@ -73,6 +73,8 @@ Ne supposez pas que chaque maximum se produit simultanément, mais ne supposez p
 Une capacité nominale supérieure ne répond pas à toutes les causes d’eau en aval. Nous proposons de séparer le dimensionnement documentaire, l’état de fonctionnement et la configuration du traitement. Le relevé doit permettre de dire si l’installation travaille dans le domaine annoncé par le fournisseur.
 
 Parmi les points d’exploitation à examiner figurent la propreté des échangeurs, les purges et la recirculation d’air chaud, également évoqués dans la source KAESER. Le [guide de ventilation](/guides/ventilation-local-compresseur-surchauffe/) aide à préparer cette vérification. Une intervention sur le circuit frigorifique relève de la procédure et des intervenants adaptés ; ce guide n’en décrit pas la réparation.
+
+Il faut également identifier la fonction de chaque étage. Le dossier [aftercooler et sécheur d’air comprimé](/guides/aftercooler-refroidisseur-secheur-air-comprime/) distingue refroidissement, séparation du condensat et traitement de la vapeur restante.
 
 ## Quel point de rosée demander ?
 

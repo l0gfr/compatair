@@ -1,0 +1,1771 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-09-30",
+  "sourcesConsultedOn": "2026-09-29",
+  "reviewType": "internal_editorial",
+  "assistedByAI": true,
+  "externalProfessionalValidation": false,
+  "physicalTestsPerformed": false,
+  "hashScope": "Empreintes des réponses réellement téléchargées et des guides à la fin de la revue. Une lecture web ne reçoit pas une empreinte fictive. Originaux constructeurs non redistribués. Les modifications ultérieures sont hors de ce relevé.",
+  "publicationScope": {
+    "guidesBefore": 256,
+    "guidesAdded": 30,
+    "guidesAfter": 286,
+    "newProductPages": 0
+  },
+  "qualityPolicy": {
+    "purpose": "Intentions techniques distinctes, réponses documentaires et sources primaires ; aucun essai, classement, volume de recherche, taux de clic ou trafic futur inventé.",
+    "controls": [
+      "Comparaison des intentions avec les 256 guides existants",
+      "30 SVG accessibles avec descriptions, valeurs et limites",
+      "40 liens contextuels depuis 39 guides existants",
+      "4 nouvelles définitions sourcées, mise à jour Aftercooler et liens réciproques",
+      "Références exactes, pression et base de débit conservées",
+      "Calculs illustratifs séparés des mesures constructeur",
+      "Documents historiques datés et portée des certificats explicitée",
+      "Indexation progressive soumise à la politique existante, sans admission forcée du lot",
+      "Correction de la pression FAD attribuée sans preuve dans le guide du volume de cuve ; aucun changement des données catalogue dans ce lot"
+    ]
+  },
+  "sources": [
+    {
+      "id": "abb",
+      "url": "https://library.e.abb.com/public/891764f173c5494b82b7e66e0b2d6080/9AKK105285%20REV%20C%2010-2018.pdf",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "0fdd4e0a6f6ea539e9fd50c3e80bea011dde7e51487e912c26a70d33db25a76d",
+      "httpStatus": 200,
+      "resolvedUrl": "https://library.e.abb.com/public/891764f173c5494b82b7e66e0b2d6080/9AKK105285%20REV%20C%2010-2018.pdf",
+      "bytes": 3216246,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "compresseur-service-s1-s3-25-pour-cent"
+      ]
+    },
+    {
+      "id": "aftercooler",
+      "url": "https://www.atlascopco.com/en-us/compressors/wiki/compressed-air-articles/aftercooler",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "8c14fa4b8a8789e883c0faa2fe1da40d911c1e6b19a994cc8cabe70a0bac56ae",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.atlascopco.com/en-us/compressors/wiki/compressed-air-articles/aftercooler",
+      "bytes": 218369,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "aftercooler-refroidisseur-secheur-air-comprime"
+      ]
+    },
+    {
+      "id": "atexmotor",
+      "url": "https://www.atlascopco.com/en-uk/itba/industry-solutions/airmotors/specialfeatures/explosionproof",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "ce7a349eee1ab80e0fa30d9072e3db059f0baf6d0c0ee7014e64595cee51a565",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.atlascopco.com/en-uk/itba/industry-solutions/airmotors/specialfeatures/explosionproof",
+      "bytes": 139245,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "moteur-pneumatique-atex-certificat-ensemble"
+      ]
+    },
+    {
+      "id": "atlasali",
+      "url": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Air%20Line%20Infrastructure%20%28%20ALI%20%29%20Catalogue%202023.pdf",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "77990341f4316ff103b871f4a9fb8a49d111d4032f2ac8fca60b3ac35bbf4532",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Air%20Line%20Infrastructure%20%28%20ALI%20%29%20Catalogue%202023.pdf",
+      "bytes": 7392880,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "flexible-outil-lubrifie-peinture-contamination",
+        "flexible-court-outil-pneumatique-vibrations"
+      ]
+    },
+    {
+      "id": "beko",
+      "url": "https://www.beko-technologies.com/en-en/products/measurement-technology/measurement-technology-products/metpoint-ocv-compact/",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "79c14e9d05e2f8b0bbd316b878abffe35d488c3f588e3c1716fd85ff7c9decb1",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.beko-technologies.com/en-en/products/measurement-technology/measurement-technology-products/metpoint-ocv-compact/",
+      "bytes": 514498,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "mesure-vapeurs-huile-huile-totale-air-comprime"
+      ]
+    },
+    {
+      "id": "cejn",
+      "url": "https://www.cejn.com/en-us/products/pneumatics/compressed-air-hoses/",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "876e999a591ab815caa7c264087198b6771231373503240b94e62f710ee2f857",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.cejn.com/en-us/products/pneumatics/compressed-air-hoses/",
+      "bytes": 175967,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "flexible-air-antistatique-atex-continuite",
+        "reseau-air-aluminium-pression-accessoires-reception"
+      ]
+    },
+    {
+      "id": "cejnkits",
+      "url": "https://www.cejn.com/products/pneumatics/compressed-air-hose-kits/",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "5de6aa10bd0791a9c3435effc6f5bd51c1405696e77433b510cdcf361a5e04f4",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.cejn.com/products/pneumatics/compressed-air-hose-kits/",
+      "bytes": 177170,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "air-fuse-raccord-decompression-flexible-rupture",
+        "flexible-court-outil-pneumatique-vibrations"
+      ]
+    },
+    {
+      "id": "class0certificate",
+      "url": "https://www.atlascopco.com/content/dam/atlas-copco/compressor-technique/oil-free-air/documents/ZR%20ZT_160-900_%28VSD%29_Certificate_Class%200_TUV_EN_Antwerp_Ed01.pdf",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "HTTPSConnectionPool(host='www.atlascopco.com', port=443): Read timed out. (read timeout=40)",
+      "guides": [
+        "classe-0-compresseur-certificat-huile-portee",
+        "mesure-vapeurs-huile-huile-totale-air-comprime"
+      ]
+    },
+    {
+      "id": "clemcoair",
+      "url": "https://www.clemcoindustries.com/s/Compressed_Air-wxh8.pdf",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "794a12329885a9f659c533d215fab2bc5d3213d679b759a70bba91a2af1edf18",
+      "httpStatus": 200,
+      "resolvedUrl": "https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/68b0667721b59a4cdb3646d6/1756391031561/Compressed_Air.pdf",
+      "bytes": 90575,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "buse-sablage-usee-surconsommation-air"
+      ]
+    },
+    {
+      "id": "clemcowear",
+      "url": "https://www.clemcoindustries.com/s/NozzleWear.pdf",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "07cb4cde71b881e08a040e608e76f3efba2f27ab725f10aaa768fbce094b8084",
+      "httpStatus": 200,
+      "resolvedUrl": "https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/68af5eedfe5a1a7cc68ccd20/1756323565258/NozzleWear.pdf",
+      "bytes": 56411,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "buse-sablage-usee-surconsommation-air"
+      ]
+    },
+    {
+      "id": "cp7732pdf",
+      "url": "https://tools.cp.com/content/dam/brands/Chicago%20Pneumatic/cp-tools-literature/leaflets-and-brochures/cp7732c-impact-wrench/CP7732C_Leaflet_EN.pdf",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "fa8cb07f6a1d385d4e8094da06fc186cdaaf28c36cffc333dd30d6138eb53711",
+      "httpStatus": 200,
+      "resolvedUrl": "https://tools.cp.com/content/dam/brands/Chicago%20Pneumatic/cp-tools-literature/leaflets-and-brochures/cp7732c-impact-wrench/CP7732C_Leaflet_EN.pdf",
+      "bytes": 1173580,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "einhell-tc-ac-240-50-10-of-cp7732c-cle-chocs",
+        "cp7732c-ou-cp7748-debit-encombrement"
+      ]
+    },
+    {
+      "id": "cp7732web",
+      "url": "https://tools.cp.com/en/products/impactwrenches/cp7732c-sku8941077321",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "701ce13cdbd9d0b795e7aae2ee84904539a3fd8265760643bf4ceb139c13af1f",
+      "httpStatus": 200,
+      "resolvedUrl": "https://tools.cp.com/en/products/impactwrenches/cp7732c-sku8941077321",
+      "bytes": 336042,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "einhell-tc-ac-240-50-10-of-cp7732c-cle-chocs",
+        "cp7732c-ou-cp7748-debit-encombrement"
+      ]
+    },
+    {
+      "id": "cp7748web",
+      "url": "https://tools.cp.com/en/products/impactwrenches/cp7748-sku8941077481",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "8b0f6e3690bd4aa87e6a9a80806109ed280f7a01c4d99eafbd609924e82c2de3",
+      "httpStatus": 200,
+      "resolvedUrl": "https://tools.cp.com/en/products/impactwrenches/cp7748-sku8941077481",
+      "bytes": 340697,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "cp7732c-ou-cp7748-debit-encombrement"
+      ]
+    },
+    {
+      "id": "cpairfuse",
+      "url": "https://tools.cp.com/en-us/products/accessories/air-line-accessories/air-fuses",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "6c46ee8e839cc7ecb0d8435b099a33be9cb49596d345fec34f3aa8f8490bfd0f",
+      "httpStatus": 200,
+      "resolvedUrl": "https://tools.cp.com/en-us/products/accessories/air-line-accessories/air-fuses",
+      "bytes": 254183,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "air-fuse-raccord-decompression-flexible-rupture"
+      ]
+    },
+    {
+      "id": "cpairfusept",
+      "url": "https://tools.cp.com/pt_br/products/accessories/air-line-accessories/air-fuses",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "air-fuse-raccord-decompression-flexible-rupture"
+      ]
+    },
+    {
+      "id": "einhell240",
+      "url": "https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "7e2aff3eaf887412a1796d73e80c9f0dfe37358bef92e310c4a5e2db512fd24c",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of",
+      "bytes": 283579,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "einhell-tc-ac-240-50-10-of-cp7732c-cle-chocs",
+        "einhell-te-ac-270-24-10-ou-tc-ac-240-50-of",
+        "compresseur-service-s1-s3-25-pour-cent"
+      ]
+    },
+    {
+      "id": "einhell270",
+      "url": "https://www.einhell.de/p/4010450-te-ac-270-24-10/",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "e76388d9d8c84778339dff43d2a80cf6693107e6eafbc237390953aa0e68ce2d",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.einhell.de/p/4010450-te-ac-270-24-10/",
+      "bytes": 347451,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "einhell-te-ac-270-24-10-ou-tc-ac-240-50-of"
+      ]
+    },
+    {
+      "id": "gesipa",
+      "url": "https://www.gesipa.com/products/pneumatic-riveting-tools/1457878-taurus-3-with-ph-2000-spent-mandrel-container/",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "9023d95eeeef4aefb7611fdaf9b249c404752d14650aa74195924e3bc97fa597",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.gesipa.com/products/pneumatic-riveting-tools/1457878-taurus-3-with-ph-2000-spent-mandrel-container/",
+      "bytes": 77935,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "riveteuse-pneumatique-aspiration-mandrin-consommation"
+      ]
+    },
+    {
+      "id": "hunter",
+      "url": "https://www.hunterirrigation.com/winterizing-your-irrigation-system",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "403 Client Error: Forbidden for url: https://www.hunterirrigation.com/winterizing-your-irrigation-system",
+      "guides": [
+        "compresseur-hivernage-arrosage-debit-pression"
+      ]
+    },
+    {
+      "id": "inrsatex",
+      "url": "https://www.inrs.fr/risques/explosion/reglementation-textes-reference.html",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "f659a67a464b93b1bf54c5613c6f59c752759608528e3979ac334688c9c792a0",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.inrs.fr/risques/explosion/reglementation-textes-reference.html",
+      "bytes": 108245,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "flexible-air-antistatique-atex-continuite",
+        "moteur-pneumatique-atex-certificat-ensemble"
+      ]
+    },
+    {
+      "id": "inrsrestart",
+      "url": "https://www.inrs.fr/demarche/conception-utilisation-equipements-travail/machines-remise-service",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "461623716bcc457aa42246d7345055bc66182d48706670fa8c16b2871ee52b36",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.inrs.fr/demarche/conception-utilisation-equipements-travail/machines-remise-service",
+      "bytes": 136062,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "remise-service-machine-pneumatique-arret-prolonge"
+      ]
+    },
+    {
+      "id": "isoclass",
+      "url": "https://www.iso.org/fr/standard/46418.html",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "403 Client Error: Forbidden for url: https://www.iso.org/fr/standard/46418.html",
+      "guides": [
+        "classe-0-compresseur-certificat-huile-portee",
+        "mesure-vapeurs-huile-huile-totale-air-comprime"
+      ]
+    },
+    {
+      "id": "kaesercase",
+      "url": "https://pr.kaeser.com/en/compressed-air-resources/kaeser-talks-shop/improved-efficiency-aerospace.aspx",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "c5a683fca8c5edce96bd699a8818252aa052baee4d6fd5f53dd816267e50d615",
+      "httpStatus": 200,
+      "resolvedUrl": "https://pr.kaeser.com/en/compressed-air-resources/kaeser-talks-shop/improved-efficiency-aerospace.aspx",
+      "bytes": 57756,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "compresseur-secours-n-plus-un-capacite-restante"
+      ]
+    },
+    {
+      "id": "mecafer50",
+      "url": "https://www.mecafer.com/compresseurs/compresseur-fifty-50l-2hp",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "debd6e0a8b30033cc6bce3d9c1175eac1ce0a33abe2cb004df970b8455bac01f",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.mecafer.com/compresseurs/compresseur-fifty-50l-2hp",
+      "bytes": 237472,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "mecafer-fifty-50l-debit-reel-usages"
+      ]
+    },
+    {
+      "id": "metabo2016",
+      "url": "https://www.metabo.com/t3/fileadmin/metabo/com_en/070_news/03_catalogue_logos/201605_Druckluftkompetenz_en.pdf",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "f9a31dfb47267940984e824bc3d9c03e108ee83abe5aa82e3cde8bea6a135bf3",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.metabo.com/t3/fileadmin/metabo/com_en/070_news/03_catalogue_logos/201605_Druckluftkompetenz_en.pdf",
+      "bytes": 8053797,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "metabo-basic-250-50-w-ou-w-of"
+      ]
+    },
+    {
+      "id": "metabo2023",
+      "url": "https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/2023_Sortimentsuebersicht_AT-screen.pdf",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "b0b0c98899841132a34135e867ebc4a9426abe9f38b833e043611a3783983c24",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/2023_Sortimentsuebersicht_AT-screen.pdf",
+      "bytes": 49253245,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "metabo-basic-250-24-w-ou-250-50-w",
+        "metabo-basic-250-50-w-ou-w-of",
+        "metabo-dsx-150-compresseur-550-litres-minute",
+        "metabo-basic-280-50-w-of-ou-250-50-w-of"
+      ]
+    },
+    {
+      "id": "metabodsx",
+      "url": "https://www.metabo.com/de/de/maschinen/trennen-schleifen-fraesen/holzbearbeitung/exzenterschleifer/dsx-150-druckluft-exzenterschleifer/601558000",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "071437f42235b6307f3c8a74d6e9b42a25355fbf125c01caef1ab579f1cd3f98",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.metabo.com/de/de/maschinen/trennen-schleifen-fraesen/holzbearbeitung/exzenterschleifer/dsx-150-druckluft-exzenterschleifer/601558000",
+      "bytes": 197926,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "mecafer-fifty-50l-debit-reel-usages",
+        "metabo-dsx-150-compresseur-550-litres-minute"
+      ]
+    },
+    {
+      "id": "nortonmaintenance",
+      "url": "https://www.nortonabrasives.com/en-us/resources/expertise/grinding-machine-maintenance",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "403 Client Error: Forbidden for url: https://www.nortonabrasives.com/en-us/resources/expertise/grinding-machine-maintenance",
+      "guides": [
+        "meuleuse-pneumatique-vitesse-max-disque-abrasif"
+      ]
+    },
+    {
+      "id": "osha",
+      "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.302",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "403 Client Error: Forbidden for url: https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.302",
+      "guides": [
+        "air-fuse-raccord-decompression-flexible-rupture"
+      ]
+    },
+    {
+      "id": "parkerfddcurrent",
+      "url": "https://www.parker.com/content/dam/Parker-com/Literature/IGFG/PDF-Files/Finite_Compressed_Air_Gas_Desiccant_Dryers_1300_850_USA.pdf",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "desiccant-change-couleur-point-rosee",
+        "aftercooler-refroidisseur-secheur-air-comprime"
+      ]
+    },
+    {
+      "id": "parkerfdden",
+      "url": "https://ph.parker.com/us/en/compressed-air-gas-up-to-300-psig-fdd-desiccant-dryer-series",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "403 Client Error: Forbidden for url: https://ph.parker.com/us/en/compressed-air-gas-up-to-300-psig-fdd-desiccant-dryer-series",
+      "guides": [
+        "desiccant-change-couleur-point-rosee"
+      ]
+    },
+    {
+      "id": "parkertransairweb",
+      "url": "https://discover.parker.com/Transair_Compressed_air",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "reseau-air-aluminium-pression-accessoires-reception"
+      ]
+    },
+    {
+      "id": "psgpump",
+      "url": "https://store.psgdover.com/blog/tech-tips/aodd-pump-troubleshooting.html",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": null,
+      "resolvedUrl": null,
+      "bytes": null,
+      "directRetrievalLimitation": "403 Client Error: Forbidden for url: https://store.psgdover.com/blog/tech-tips/aodd-pump-troubleshooting.html",
+      "guides": [
+        "pompe-membrane-pneumatique-calee-diagnostic"
+      ]
+    },
+    {
+      "id": "satadryjetweb",
+      "url": "https://www.sata.com/de-de/sata-dry-jet-2-trockenblaspistole/217489",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "47500c2a038435bc7df2a96025e71ab6c3a90e9355e772a56b25131540157557",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sata.com/de-de/sata-dry-jet-2-trockenblaspistole/217489",
+      "bytes": 348391,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "sata-dry-jet-2-compresseur-sechage-peinture"
+      ]
+    },
+    {
+      "id": "satamanual",
+      "url": "https://www.sata.com/media/84/06/70/1790259017/BAL-SATA-DRY-JET-2.PDF.PDF?ts=1790259017",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "3fe6dc0021e44e6fcbbd0ae114c54ea78bb58dd02e2e72ddb3b59d8930b212d0",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sata.com/media/84/06/70/1790259017/BAL-SATA-DRY-JET-2.PDF.PDF?ts=1790259017",
+      "bytes": 1964165,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "sata-dry-jet-2-compresseur-sechage-peinture"
+      ]
+    },
+    {
+      "id": "satapracticalcurrent",
+      "url": "https://www.sata.com/en-gb/service/professional-knowledge/practical-advice/",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "27356a1932e8def27cda243a65859899a7f3cd23dc33ae8172ab7dd26009728c",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.sata.com/en-gb/service/professional-knowledge/practical-advice/",
+      "bytes": 267142,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "flexible-outil-lubrifie-peinture-contamination",
+        "nettoyage-pistolet-peinture-canaux-air"
+      ]
+    },
+    {
+      "id": "scheppach51",
+      "url": "https://shop.scheppach.com/Kompressor-stehend-HC51V-scheppach-10-bar-50L-Kessel-230V-1500W-oelfrei-wartungsarm/59061649969",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "aa37bf146cd186e0bf40bc005f8bf20dd3d74014c0de1450ff3f93919c5a54a4",
+      "httpStatus": 200,
+      "resolvedUrl": "https://shop.scheppach.com/Kompressor-stehend-HC51V-scheppach-10-bar-50L-Kessel-230V-1500W-oelfrei-wartungsarm/59061649969",
+      "bytes": 410257,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "scheppach-hc51v-debit-pression-outils"
+      ]
+    },
+    {
+      "id": "wikadata",
+      "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_21x.54_en_us.pdf",
+      "consultedOn": "2026-09-29",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "09aed1b6f606fb2859a934b421d138930cb335b1bc86071c34b892e89f26bf4b",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_21x.54_en_us.pdf",
+      "bytes": 315475,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "manometre-air-comprime-precision-pleine-echelle"
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "slug": "einhell-tc-ac-240-50-10-of-cp7732c-cle-chocs",
+      "title": "Einhell TC-AC 240/50/10 OF et CP7732C : une clé à chocs trop gourmande ?",
+      "sha256": "5c811610092855024d835082061b27ecd2b500a829e3d6db2d08de1d7af5998d",
+      "sourceIds": [
+        "einhell240",
+        "cp7732pdf",
+        "cp7732web"
+      ],
+      "criticalClaimsReviewed": [
+        "Einhell 76 L/min à 7 bar ; CP brochure 10,2 L/s en charge à 6,3 bar ; web 10 L/s.",
+        "Réserve idéale 50 × 3 = 150 L à référence 1 bar absolu, pas autonomie mesurée."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "compresseur-pour-cle-a-chocs-pneumatique",
+        "consommation-moyenne-en-charge-cle-a-chocs",
+        "choisir-volume-cuve-24-50-90-litres"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/compresseurs/einhell-tc-ac-240-50-10-of/",
+        "/guides/consommation-moyenne-en-charge-cle-a-chocs/",
+        "/outils-pneumatiques/cle-a-chocs-chicago-pneumatic-cp7732c/",
+        "/quel-compresseur-pour/cle-a-chocs-chicago-pneumatic-cp7732c/"
+      ]
+    },
+    {
+      "slug": "metabo-basic-250-24-w-ou-250-50-w",
+      "title": "Metabo Basic 250-24 W ou 250-50 W : que change vraiment la cuve ?",
+      "sha256": "3bc87e77533200b6a1d604797b476994044737efe97ce94467238986d9ccdcb0",
+      "sourceIds": [
+        "metabo2023"
+      ],
+      "criticalClaimsReviewed": [
+        "Catalogue 2023 PDF95 : MPN601533000/601534000,95L/min à80% de8bar,24/50L,27/32kg."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "choisir-volume-cuve-24-50-90-litres",
+        "compresseur-pour-agrafeuse-cloueuse-pneumatique",
+        "guide-complet-dimensionner-compresseur-air"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/compresseurs/metabo-basic-250-24-w/",
+        "/compresseurs/metabo-basic-250-50-w/",
+        "/guides/choisir-volume-cuve-24-50-90-litres/",
+        "/guides/compresseur-pour-agrafeuse-cloueuse-pneumatique/"
+      ]
+    },
+    {
+      "slug": "metabo-basic-250-50-w-ou-w-of",
+      "title": "Metabo Basic 250-50 W ou W OF : débit, huile et références à vérifier",
+      "sha256": "0d31cd6fa46c2d371a2378fba569943ec4ed353a35a28aca8ab1f11adf390ac4",
+      "sourceIds": [
+        "metabo2023",
+        "metabo2016"
+      ],
+      "criticalClaimsReviewed": [
+        "601534000 lubrifié ;601535000 sans huile, effectif95/100 à6,4bar,édition2023."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "compresseur-sans-huile-ou-lubrifie",
+        "metabo-basic-250-24-w-ou-250-50-w",
+        "qualite-air-comprime-iso-8573-1"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/compresseurs/metabo-basic-250-50-w-of/",
+        "/compresseurs/metabo-basic-250-50-w/",
+        "/guides/compresseur-sans-huile-ou-lubrifie/",
+        "/guides/metabo-basic-250-24-w-ou-250-50-w/"
+      ]
+    },
+    {
+      "slug": "mecafer-fifty-50l-debit-reel-usages",
+      "title": "Mecafer Fifty 50 L : débit restitué et usages réellement envisageables",
+      "sha256": "6244b9c36b2ae746bdb479f0e88e8426a6664a6d4a3af12dd53aad9e878c34fa",
+      "sourceIds": [
+        "mecafer50",
+        "metabodsx"
+      ],
+      "criticalClaimsReviewed": [
+        "MPN425090 ; aspiré230 ; restitué140à3bar,126à7bar ;50L10bar."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "debit-restitue-fad-vs-debit-aspire",
+        "compresseur-pour-gonfler-pneus",
+        "compresseur-pour-ponceuse-pneumatique"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/compresseurs/mecafer-fifty-50l-2hp/",
+        "/guides/compresseur-pour-gonfler-pneus/",
+        "/guides/compresseur-pour-ponceuse-pneumatique/"
+      ]
+    },
+    {
+      "slug": "scheppach-hc51v-debit-pression-outils",
+      "title": "Scheppach HC51V : quels outils peut-il alimenter selon la pression ?",
+      "sha256": "1480c157d1e326dfff50f70128a1a27a2d76df6f4d451cd07f510f3e70f44f2d",
+      "sourceIds": [
+        "scheppach51"
+      ],
+      "criticalClaimsReviewed": [
+        "MPN59061649969, sortie1bar130→10bar40 ;7bar65 ;6bar75 ; aspiré220."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "debit-restitue-fad-vs-debit-aspire",
+        "pression-travail-6-3-bar-outils-pneumatiques",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/compresseurs/scheppach-hc51v/",
+        "/guides/diagnostiquer-chute-pression-air-comprime/",
+        "/guides/pression-travail-6-3-bar-outils-pneumatiques/"
+      ]
+    },
+    {
+      "slug": "metabo-dsx-150-compresseur-550-litres-minute",
+      "title": "Quel compresseur pour la Metabo DSX 150 : vérifier 550 L/min à 6,2 bar",
+      "sha256": "492e5d4f04345bd1008c72a60c5972f9cde9441626c3c92986961ac46a4eca90",
+      "sourceIds": [
+        "metabodsx",
+        "metabo2023"
+      ],
+      "criticalClaimsReviewed": [
+        "MPN601558000 :550L/min,6,2bar,plateau150mm,course5mm,12000tr/min."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "compresseur-pour-ponceuse-pneumatique",
+        "ponceuse-pneumatique-bois-aspiration-poussieres",
+        "diametre-longueur-flexible-air-comprime"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/diametre-longueur-flexible-air-comprime/",
+        "/guides/ponceuse-pneumatique-bois-aspiration-poussieres/",
+        "/outils-pneumatiques/ponceuse-orbitale-pneumatique-metabo-dsx-150/",
+        "/quel-compresseur-pour/ponceuse-orbitale-pneumatique-metabo-dsx-150/"
+      ]
+    },
+    {
+      "slug": "cp7732c-ou-cp7748-debit-encombrement",
+      "title": "CP7732C ou CP7748 : comparer le débit en charge avant le couple maximal",
+      "sha256": "781fd07d9cf9c81a9eea1f2f16a51a73a6d652bb5d10ed3468e5ba6471887d44",
+      "sourceIds": [
+        "cp7732pdf",
+        "cp7732web",
+        "cp7748web"
+      ],
+      "criticalClaimsReviewed": [
+        "CP7748 exact8941077481 :12L/s,6,3bar,1300Nmmaxreverse.",
+        "CP7748 incohérence interne175mm/2kg tableau,225mm/2,11kg texte."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "consommation-moyenne-en-charge-cle-a-chocs",
+        "cle-a-chocs-couple-serrage-roues-dynamometrique",
+        "einhell-tc-ac-240-50-10-of-cp7732c-cle-chocs"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/cle-a-chocs-couple-serrage-roues-dynamometrique/",
+        "/guides/einhell-tc-ac-240-50-10-of-cp7732c-cle-chocs/",
+        "/outils-pneumatiques/cle-a-chocs-chicago-pneumatic-cp7732c/",
+        "/outils-pneumatiques/cle-a-chocs-chicago-pneumatic-cp7748/"
+      ]
+    },
+    {
+      "slug": "einhell-te-ac-270-24-10-ou-tc-ac-240-50-of",
+      "title": "Einhell TE-AC 270/24/10 ou TC-AC 240/50/10 OF : cuve, débit et entretien",
+      "sha256": "46e1d00fe6cbc44551f2728e8dc1d7233b692a63b67d4bd6c640a02f76d8e798",
+      "sourceIds": [
+        "einhell270",
+        "einhell240"
+      ],
+      "criticalClaimsReviewed": [
+        "4010450 sortie100à7bar127à4bar,24Llubrifié ;4010393 sortie76à7bar107à4bar50LOF."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "choisir-volume-cuve-24-50-90-litres",
+        "compresseur-sans-huile-ou-lubrifie",
+        "mecafer-fifty-50l-debit-reel-usages"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/compresseurs/einhell-tc-ac-240-50-10-of/",
+        "/compresseurs/einhell-te-ac-270-24-10/",
+        "/guides/choisir-volume-cuve-24-50-90-litres/",
+        "/guides/compresseur-sans-huile-ou-lubrifie/"
+      ]
+    },
+    {
+      "slug": "metabo-basic-280-50-w-of-ou-250-50-w-of",
+      "title": "Metabo Basic 280-50 W OF ou 250-50 W OF : 30 L/min changent-ils le choix ?",
+      "sha256": "9e3f0f1093919aaabcb9c584bb95a8fb7f87ce0c94ffa384e0bf5fa2517cee97",
+      "sourceIds": [
+        "metabo2023"
+      ],
+      "criticalClaimsReviewed": [
+        "Catalogue2023PDF95 MPN601529000 OF50L8bar130L/min6,4bar30kg vs60153500010029."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "metabo-basic-250-50-w-ou-w-of",
+        "compresseur-pour-ponceuse-pneumatique",
+        "debit-restitue-fad-vs-debit-aspire"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/compresseurs/metabo-basic-250-50-w-of/",
+        "/compresseurs/metabo-basic-280-50-w-of/",
+        "/guides/compresseur-pour-ponceuse-pneumatique/",
+        "/guides/debit-restitue-fad-vs-debit-aspire/"
+      ]
+    },
+    {
+      "slug": "sata-dry-jet-2-compresseur-sechage-peinture",
+      "title": "SATA dry jet 2 : quel débit de compresseur pour sécher une peinture à l’eau ?",
+      "sha256": "a60180d48408dae381245fbbcd5110d96ad689c26841613c2e065cff8fb1393a",
+      "sourceIds": [
+        "satamanual",
+        "satadryjetweb"
+      ],
+      "criticalClaimsReviewed": [
+        "NoticefrPDF94 :270Nl/minà2,5bar ;2appareils540 calculdéclaré."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "air-comprime-carrosserie-peinture",
+        "amplificateur-air-exair-consommation-debit",
+        "filtration-air-cabine-peinture-etages"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/amplificateur-air-exair-consommation-debit/",
+        "/guides/filtration-air-cabine-peinture-etages/"
+      ]
+    },
+    {
+      "slug": "compresseur-hivernage-arrosage-debit-pression",
+      "title": "Quel compresseur pour l’hivernage d’un arrosage automatique ?",
+      "sha256": "248a6fa05d2f10c09b984cdaee64bc458fbb3f8f355d671935d4078951a2496c",
+      "sourceIds": [
+        "hunter"
+      ],
+      "criticalClaimsReviewed": [
+        "Hunterplafonds50psiPE80psiPVCirrigation ; professionnelrecommandé ; pasdéversementcuve ; pasanti-retour/pompe ; limitescomposantplusfaible."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "debit-restitue-fad-vs-debit-aspire",
+        "choisir-volume-cuve-24-50-90-litres",
+        "tuyau-pvc-reseau-air-comprime-risques"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/choisir-volume-cuve-24-50-90-litres/",
+        "/guides/debit-restitue-fad-vs-debit-aspire/",
+        "/guides/tuyau-pvc-reseau-air-comprime-risques/"
+      ]
+    },
+    {
+      "slug": "buse-sablage-usee-surconsommation-air",
+      "title": "Buse de sablage usée : pourquoi la consommation d’air augmente",
+      "sha256": "e27eb0f8d6350bfc26799878be683e97a90a5c4577eb537d2e9026126c81b769",
+      "sourceIds": [
+        "clemcowear",
+        "clemcoair"
+      ],
+      "criticalClaimsReviewed": [
+        "ClemcoNo4 81cfm etNo5 137cfm colonne100psi ;écart69%calcul."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "buse-sablage-diametre-pression-debit-compresseur",
+        "sableuse-perd-puissance-abrasif-humide-diagnostic",
+        "compresseur-pour-sablage-pneumatique"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/buse-sablage-diametre-pression-debit-compresseur/",
+        "/guides/compresseur-pour-sablage-pneumatique/",
+        "/guides/sableuse-perd-puissance-abrasif-humide-diagnostic/"
+      ]
+    },
+    {
+      "slug": "flexible-outil-lubrifie-peinture-contamination",
+      "title": "Peindre avec le flexible d’une clé à chocs lubrifiée : quel risque ?",
+      "sha256": "1b76087baac449616b41f392f35e1c8a4b96650525b56cc767d26f2fe234c24b",
+      "sourceIds": [
+        "satapracticalcurrent",
+        "atlasali"
+      ],
+      "criticalClaimsReviewed": [
+        "SATAexigeflexibleantistatiqueexemptsubstancesperturbatrices ;catalogueAtlaslubrificationoutils ;recommandationorganisationétiquetage."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "separer-air-finition-et-clouage-atelier-bois",
+        "tester-contamination-air-avant-peinture",
+        "groupe-frl-filtre-regulateur-lubrificateur"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/groupe-frl-filtre-regulateur-lubrificateur/",
+        "/guides/separer-air-finition-et-clouage-atelier-bois/",
+        "/guides/tester-contamination-air-avant-peinture/"
+      ]
+    },
+    {
+      "slug": "riveteuse-pneumatique-aspiration-mandrin-consommation",
+      "title": "Riveteuse pneumatique : l’aspiration des mandrins est-elle incluse dans le débit ?",
+      "sha256": "f6c6d69b1200bc810a0b1618eeb9a0534a8b8b76144a1209fb796f275d4e44df",
+      "sourceIds": [
+        "gesipa"
+      ],
+      "criticalClaimsReviewed": [
+        "GESIPA1457878 air réutilisé pose/évacuation,aspirationcommutable ;4,80Lbase nonprécisée.",
+        "Exemple2L/cycle×12=24L/minstrictementhypothétique."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "compresseur-pour-riveteuse-pneumatique",
+        "cadence-clouage-pneumatique-chantier",
+        "utiliser-plusieurs-outils-pneumatiques"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/cadence-clouage-pneumatique-chantier/",
+        "/guides/compresseur-pour-riveteuse-pneumatique/"
+      ]
+    },
+    {
+      "slug": "nettoyage-pistolet-peinture-canaux-air",
+      "title": "Nettoyer un pistolet de peinture : éviter les dégâts dans les passages d’air",
+      "sha256": "6f65784548785e571fb264eb2094c16c0b3636ba567b780287121c99f26c8f6c",
+      "sourceIds": [
+        "satapracticalcurrent"
+      ],
+      "criticalClaimsReviewed": [
+        "ConseilsSATApH6–8aqueux,pasimmersion,pasacides/bases, séchage,aiguilleretiréeavantbuse."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "pistolet-peinture-jet-deforme-crachote-diagnostic",
+        "buse-pistolet-peinture-chapeau-air-consommation",
+        "mesurer-pression-dynamique-pistolet-peinture"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/buse-pistolet-peinture-chapeau-air-consommation/",
+        "/guides/mesurer-pression-dynamique-pistolet-peinture/",
+        "/guides/pistolet-peinture-jet-deforme-crachote-diagnostic/"
+      ]
+    },
+    {
+      "slug": "meuleuse-pneumatique-vitesse-max-disque-abrasif",
+      "title": "Meuleuse pneumatique et disque abrasif : vérifier les vitesses maximales",
+      "sha256": "e2fe290eff68ef38a1ca7937364512aeee84137e0e976322f9e178192f6ed42c",
+      "sourceIds": [
+        "nortonmaintenance"
+      ],
+      "criticalClaimsReviewed": [
+        "Nortonvitessemachine≤MAXRPMmeule ;contrôleparpersonnelcompétent ;scopeUSANSIpasloiFR."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "meuleuse-pneumatique-vitesse-regulee-governor",
+        "meuleuse-broche-m14-5-8-filetage",
+        "meuleuse-pneumatique-pince-6-mm-ou-1-4"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/meuleuse-broche-m14-5-8-filetage/",
+        "/guides/meuleuse-pneumatique-pince-6-mm-ou-1-4/",
+        "/guides/meuleuse-pneumatique-vitesse-regulee-governor/"
+      ]
+    },
+    {
+      "slug": "flexible-air-antistatique-atex-continuite",
+      "title": "Flexible d’air antistatique : que faut-il vérifier pour un poste sensible ?",
+      "sha256": "427cf404f81243d723847e0e1629b21f4a67d318a6bef631600835832610d322",
+      "sourceIds": [
+        "cejn",
+        "inrsatex"
+      ],
+      "criticalClaimsReviewed": [
+        "CEJN EPDMantistatique vsPURanti-sparkversions ;aucunseuilélectriqueinventé ;INRSATEXscope."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "raccord-rapide-securite-decompression-air-comprime",
+        "diametre-longueur-flexible-air-comprime",
+        "moteur-pneumatique-atex-certificat-ensemble"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/diametre-longueur-flexible-air-comprime/",
+        "/guides/moteur-pneumatique-atex-certificat-ensemble/",
+        "/guides/raccord-rapide-securite-decompression-air-comprime/"
+      ]
+    },
+    {
+      "slug": "air-fuse-raccord-decompression-flexible-rupture",
+      "title": "Air fuse ou raccord à décompression : quelle protection du flexible d’air ?",
+      "sha256": "0b06c7ac2801848e3810901db326c50a3467a363e34df20879506a188cb52abd",
+      "sourceIds": [
+        "cpairfuse",
+        "cpairfusept",
+        "cejnkits",
+        "osha"
+      ],
+      "criticalClaimsReviewed": [
+        "CPairfuseexcessflowbrokenhose ;CEJNeSafeventeddisconnect ;CPselectionmaxflowdiamlengththread ;OSHAUSconstructionscope."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "raccord-rapide-securite-decompression-air-comprime",
+        "flexible-air-comprime-chantier-25-50-metres",
+        "flexible-court-outil-pneumatique-vibrations"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/glossaire/#air-fuse",
+        "/guides/flexible-air-comprime-chantier-25-50-metres/",
+        "/guides/flexible-court-outil-pneumatique-vibrations/",
+        "/guides/raccord-rapide-securite-decompression-air-comprime/"
+      ]
+    },
+    {
+      "slug": "pompe-membrane-pneumatique-calee-diagnostic",
+      "title": "Pompe à membrane pneumatique calée : vérifier le circuit avant le compresseur",
+      "sha256": "0e57852e1ca5fd61d29623e8d294250a1eeca7190958805db56dfe1843bcb566",
+      "sourceIds": [
+        "psgpump"
+      ],
+      "criticalClaimsReviewed": [
+        "PSGavril2026 symptômesair/aspiration/refoulement ;fluidatéxhaustfailurestop ;pasconsommationconstante."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "pompe-membrane-aro-66605-debit-air",
+        "pompe-pneumatique-echappement-givre-air-sec",
+        "silencieux-pneumatique-colmate-contre-pression"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/pompe-membrane-aro-66605-debit-air/",
+        "/guides/pompe-pneumatique-echappement-givre-air-sec/",
+        "/guides/silencieux-pneumatique-colmate-contre-pression/"
+      ]
+    },
+    {
+      "slug": "moteur-pneumatique-atex-certificat-ensemble",
+      "title": "Moteur pneumatique ATEX : un certificat valide-t-il tout l’assemblage ?",
+      "sha256": "390f6eaafc0060f2d395cd3a432f2ed33608c97e1ba2a8ea73f13a49067e5ce5",
+      "sourceIds": [
+        "atexmotor",
+        "inrsatex"
+      ],
+      "criticalClaimsReviewed": [
+        "Atlasmarquagesvarientfamilles ;INRSdeuxcadrespréventionsite/appareils ;pasqualificationensembleautomatique."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "moteur-pneumatique-couple-demarrage-debit",
+        "flexible-air-antistatique-atex-continuite",
+        "air-comprime-contact-alimentaire-exigences"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/flexible-air-antistatique-atex-continuite/",
+        "/guides/moteur-pneumatique-couple-demarrage-debit/"
+      ]
+    },
+    {
+      "slug": "classe-0-compresseur-certificat-huile-portee",
+      "title": "Compresseur classe 0 : lire le certificat d’huile et ses limites",
+      "sha256": "30ef9dc380855393e9c7bb1965fa265b963f308f2fba93e70c4f76661cd0eb2b",
+      "sourceIds": [
+        "class0certificate",
+        "isoclass"
+      ],
+      "criticalClaimsReviewed": [
+        "TUV23-02-2021ZRZT55–900VSDhuiletotale sortie20/40/50C1/8barabsolus ;pasnetworkcert ;ISOtroiscontaminants."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "qualite-air-comprime-iso-8573-1",
+        "compresseur-sans-huile-ou-lubrifie",
+        "mesure-vapeurs-huile-huile-totale-air-comprime"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/compresseur-sans-huile-ou-lubrifie/",
+        "/guides/mesure-vapeurs-huile-huile-totale-air-comprime/",
+        "/guides/qualite-air-comprime-iso-8573-1/"
+      ]
+    },
+    {
+      "slug": "mesure-vapeurs-huile-huile-totale-air-comprime",
+      "title": "Mesurer les vapeurs d’huile suffit-il à contrôler l’huile totale de l’air ?",
+      "sha256": "ca80c597e5fe826c8e8a182b49ba1a7a87620c6eeacd89f5bce52b131f7526ba",
+      "sourceIds": [
+        "beko",
+        "class0certificate",
+        "isoclass"
+      ],
+      "criticalClaimsReviewed": [
+        "BEKOOCVcompactvapeursd’huile,référencepurifiée ;TUVméthodeshuilephasesdistinctes ;pasvaleurseuilinventée."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "filtre-charbon-actif-air-comprime-vapeurs-huile",
+        "classe-0-compresseur-certificat-huile-portee",
+        "tester-contamination-air-avant-peinture"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/glossaire/#huile-totale",
+        "/guides/classe-0-compresseur-certificat-huile-portee/",
+        "/guides/filtre-charbon-actif-air-comprime-vapeurs-huile/",
+        "/guides/tester-contamination-air-avant-peinture/"
+      ]
+    },
+    {
+      "slug": "compresseur-service-s1-s3-25-pour-cent",
+      "title": "Compresseur S1 ou S3 25 % : comprendre le service avant le travail continu",
+      "sha256": "8ebfbbd4be5aba959ec125e5c43688015f21f133da3f4798b248247f63329e29",
+      "sourceIds": [
+        "abb",
+        "einhell240"
+      ],
+      "criticalClaimsReviewed": [
+        "ABB2018section4.7S1S3N/(N+R)cycle10min ;EinhellS325% ;calcul2,5/7,5pasnoticeconsigne."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "guide-complet-dimensionner-compresseur-air",
+        "einhell-tc-ac-240-50-10-of-cp7732c-cle-chocs",
+        "compresseur-pour-ponceuse-pneumatique"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/glossaire/#service-s1",
+        "/glossaire/#service-s3",
+        "/guides/compresseur-pour-ponceuse-pneumatique/",
+        "/guides/einhell-tc-ac-240-50-10-of-cp7732c-cle-chocs/",
+        "/guides/guide-complet-dimensionner-compresseur-air/"
+      ]
+    },
+    {
+      "slug": "remise-service-machine-pneumatique-arret-prolonge",
+      "title": "Remettre une machine pneumatique en service après un arrêt prolongé",
+      "sha256": "dd5ef96a22406057896f8018f1d6ab153bb1470502d299054734ea1415f2e576",
+      "sourceIds": [
+        "inrsrestart"
+      ],
+      "criticalClaimsReviewed": [
+        "INRSremiseprogressiveessaisavantproductiondissipationfluidesetconsignation ;pasprocéduremachineinventée."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "couper-air-comprime-machine-arret-week-end",
+        "vanne-demarrage-progressif-air-comprime-remise-pression",
+        "maintenance-preventive-reseau-air-comprime"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/couper-air-comprime-machine-arret-week-end/",
+        "/guides/maintenance-preventive-reseau-air-comprime/",
+        "/guides/vanne-demarrage-progressif-air-comprime-remise-pression/"
+      ]
+    },
+    {
+      "slug": "manometre-air-comprime-precision-pleine-echelle",
+      "title": "Manomètre d’air comprimé : précision en pleine échelle et choix du cadran",
+      "sha256": "a504ed35616df0cd55c7ddc78043389cafc4fbb44be5f4d153f09cc7dab16650",
+      "sourceIds": [
+        "wikadata"
+      ],
+      "criticalClaimsReviewed": [
+        "WIKA21X.54juin2015 4pouces±1%span ;2.5poucesdistinct ;calculhypothétique0.10/0.16bar."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "mesurer-pression-dynamique-pistolet-peinture",
+        "bar-psi-pression-absolue-relative",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/bar-psi-pression-absolue-relative/",
+        "/guides/diagnostiquer-chute-pression-air-comprime/",
+        "/guides/mesurer-pression-dynamique-pistolet-peinture/"
+      ]
+    },
+    {
+      "slug": "desiccant-change-couleur-point-rosee",
+      "title": "Dessiccant qui change de couleur : ce que le voyant dit du point de rosée",
+      "sha256": "e9e3009badbca568b6e320d37a62977442c303fd04c73fc56fa5d484f8bf1c41",
+      "sourceIds": [
+        "parkerfddcurrent",
+        "parkerfdden"
+      ],
+      "criticalClaimsReviewed": [
+        "ParkerFDD2019gelindicateurbleu→rose ;tamisnonindicateur ;débit/humiditéinfluencentvie ;huilecomprometadsorption."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "point-rosee-atmospherique-sous-pression-mesure",
+        "secheur-adsorption-air-purge-debit-net",
+        "huile-sortie-compresseur-air-comprime-diagnostic"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/huile-sortie-compresseur-air-comprime-diagnostic/",
+        "/guides/point-rosee-atmospherique-sous-pression-mesure/",
+        "/guides/secheur-adsorption-air-purge-debit-net/"
+      ]
+    },
+    {
+      "slug": "reseau-air-aluminium-pression-accessoires-reception",
+      "title": "Réseau d’air en aluminium : vérifier pression et accessoires avant réception",
+      "sha256": "811b43b964880bd1f2ed1d29bd231e50dcafd8a1904414a79a6eb77bc50a869c",
+      "sourceIds": [
+        "parkertransairweb",
+        "cejn"
+      ],
+      "criticalClaimsReviewed": [
+        "Parkerprésentationgénérale13bar16jusqu’àD100conditionsàdemander ;scénario16réseau12flexiblefictif."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "installer-reseau-air-comprime-atelier",
+        "tuyau-pvc-reseau-air-comprime-risques",
+        "diametre-longueur-flexible-air-comprime"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/diametre-longueur-flexible-air-comprime/",
+        "/guides/installer-reseau-air-comprime-atelier/",
+        "/guides/tuyau-pvc-reseau-air-comprime-risques/"
+      ]
+    },
+    {
+      "slug": "compresseur-secours-n-plus-un-capacite-restante",
+      "title": "Compresseur de secours N+1 : vérifier le débit qui reste après une panne",
+      "sha256": "797a5c64fc795c1d741c347bda91fd1b723abd431b8d92bd29508b73085839d0",
+      "sourceIds": [
+        "kaesercase"
+      ],
+      "criticalClaimsReviewed": [
+        "Kaesercas3rôlesbaseappointsecours ;scénarios750−250500 et500−250250fictifsaucune disponibilitépromesse."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "sequencer-plusieurs-compresseurs",
+        "raccorder-deux-compresseurs-en-parallele",
+        "stockage-primaire-secondaire-air-comprime"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/raccorder-deux-compresseurs-en-parallele/",
+        "/guides/sequencer-plusieurs-compresseurs/",
+        "/guides/stockage-primaire-secondaire-air-comprime/"
+      ]
+    },
+    {
+      "slug": "flexible-court-outil-pneumatique-vibrations",
+      "title": "Pourquoi mettre un flexible court entre un outil vibrant et son raccord rapide ?",
+      "sha256": "7b87113d9ae824d4081803c0d8e8d48465404afdf82dbfdad8e2dc87029327a8",
+      "sourceIds": [
+        "atlasali",
+        "cejnkits"
+      ],
+      "criticalClaimsReviewed": [
+        "AtlasALI2023 recommandationcouplingseparatedvibratingtoolwhiphose ;tablesrefs ;pasduréedegainmesurée."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "air-fuse-raccord-decompression-flexible-rupture",
+        "raccord-air-comprime-bsp-npt-1-4",
+        "diametre-longueur-flexible-air-comprime"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/guides/air-fuse-raccord-decompression-flexible-rupture/",
+        "/guides/diametre-longueur-flexible-air-comprime/",
+        "/guides/raccord-air-comprime-bsp-npt-1-4/"
+      ]
+    },
+    {
+      "slug": "aftercooler-refroidisseur-secheur-air-comprime",
+      "title": "Aftercooler ou sécheur d’air : pourquoi le refroidisseur ne remplace pas le séchage",
+      "sha256": "360a3aee7b9e5cf9290585b5acd6cc256be34cc04170423898a1ab7d59ccee8f",
+      "sourceIds": [
+        "aftercooler",
+        "parkerfddcurrent"
+      ],
+      "criticalClaimsReviewed": [
+        "Atlasaftercoolerair/eaucooledséparateurdrain ;Parkerliquide vs vapeurtraitement ;aucunefficiencenumériqueuniverselle."
+      ],
+      "physicalTestPerformed": false,
+      "relatedGuides": [
+        "separateur-cyclonique-filtre-coalescent-differences",
+        "dimensionner-secheur-frigorifique-ete",
+        "point-rosee-secheur-filtre-air-comprime"
+      ],
+      "infographics": 1,
+      "contextualInternalLinks": [
+        "/glossaire/#aftercooler",
+        "/guides/dimensionner-secheur-frigorifique-ete/",
+        "/guides/point-rosee-secheur-filtre-air-comprime/",
+        "/guides/separateur-cyclonique-filtre-coalescent-differences/"
+      ]
+    }
+  ],
+  "incomingLinks": [
+    {
+      "from": "compresseur-pour-cle-a-chocs-pneumatique",
+      "targets": [
+        "einhell-tc-ac-240-50-10-of-cp7732c-cle-chocs"
+      ]
+    },
+    {
+      "from": "choisir-volume-cuve-24-50-90-litres",
+      "targets": [
+        "metabo-basic-250-24-w-ou-250-50-w"
+      ]
+    },
+    {
+      "from": "compresseur-sans-huile-ou-lubrifie",
+      "targets": [
+        "metabo-basic-250-50-w-ou-w-of"
+      ]
+    },
+    {
+      "from": "compresseur-pour-gonfler-pneus",
+      "targets": [
+        "mecafer-fifty-50l-debit-reel-usages"
+      ]
+    },
+    {
+      "from": "pression-travail-6-3-bar-outils-pneumatiques",
+      "targets": [
+        "scheppach-hc51v-debit-pression-outils"
+      ]
+    },
+    {
+      "from": "ponceuse-pneumatique-bois-aspiration-poussieres",
+      "targets": [
+        "metabo-dsx-150-compresseur-550-litres-minute"
+      ]
+    },
+    {
+      "from": "consommation-moyenne-en-charge-cle-a-chocs",
+      "targets": [
+        "cp7732c-ou-cp7748-debit-encombrement"
+      ]
+    },
+    {
+      "from": "choisir-volume-cuve-24-50-90-litres",
+      "targets": [
+        "einhell-te-ac-270-24-10-ou-tc-ac-240-50-of"
+      ]
+    },
+    {
+      "from": "compresseur-pour-ponceuse-pneumatique",
+      "targets": [
+        "metabo-basic-280-50-w-of-ou-250-50-w-of"
+      ]
+    },
+    {
+      "from": "air-comprime-carrosserie-peinture",
+      "targets": [
+        "sata-dry-jet-2-compresseur-sechage-peinture"
+      ]
+    },
+    {
+      "from": "debit-restitue-fad-vs-debit-aspire",
+      "targets": [
+        "compresseur-hivernage-arrosage-debit-pression"
+      ]
+    },
+    {
+      "from": "buse-sablage-diametre-pression-debit-compresseur",
+      "targets": [
+        "buse-sablage-usee-surconsommation-air"
+      ]
+    },
+    {
+      "from": "separer-air-finition-et-clouage-atelier-bois",
+      "targets": [
+        "flexible-outil-lubrifie-peinture-contamination"
+      ]
+    },
+    {
+      "from": "compresseur-pour-riveteuse-pneumatique",
+      "targets": [
+        "riveteuse-pneumatique-aspiration-mandrin-consommation"
+      ]
+    },
+    {
+      "from": "pistolet-peinture-jet-deforme-crachote-diagnostic",
+      "targets": [
+        "nettoyage-pistolet-peinture-canaux-air"
+      ]
+    },
+    {
+      "from": "meuleuse-pneumatique-vitesse-regulee-governor",
+      "targets": [
+        "meuleuse-pneumatique-vitesse-max-disque-abrasif"
+      ]
+    },
+    {
+      "from": "raccord-rapide-securite-decompression-air-comprime",
+      "targets": [
+        "flexible-air-antistatique-atex-continuite"
+      ]
+    },
+    {
+      "from": "flexible-air-comprime-chantier-25-50-metres",
+      "targets": [
+        "air-fuse-raccord-decompression-flexible-rupture"
+      ]
+    },
+    {
+      "from": "pompe-membrane-aro-66605-debit-air",
+      "targets": [
+        "pompe-membrane-pneumatique-calee-diagnostic"
+      ]
+    },
+    {
+      "from": "moteur-pneumatique-couple-demarrage-debit",
+      "targets": [
+        "moteur-pneumatique-atex-certificat-ensemble"
+      ]
+    },
+    {
+      "from": "qualite-air-comprime-iso-8573-1",
+      "targets": [
+        "classe-0-compresseur-certificat-huile-portee"
+      ]
+    },
+    {
+      "from": "filtre-charbon-actif-air-comprime-vapeurs-huile",
+      "targets": [
+        "mesure-vapeurs-huile-huile-totale-air-comprime"
+      ]
+    },
+    {
+      "from": "guide-complet-dimensionner-compresseur-air",
+      "targets": [
+        "compresseur-service-s1-s3-25-pour-cent"
+      ]
+    },
+    {
+      "from": "couper-air-comprime-machine-arret-week-end",
+      "targets": [
+        "remise-service-machine-pneumatique-arret-prolonge"
+      ]
+    },
+    {
+      "from": "mesurer-pression-dynamique-pistolet-peinture",
+      "targets": [
+        "manometre-air-comprime-precision-pleine-echelle"
+      ]
+    },
+    {
+      "from": "point-rosee-atmospherique-sous-pression-mesure",
+      "targets": [
+        "desiccant-change-couleur-point-rosee"
+      ]
+    },
+    {
+      "from": "installer-reseau-air-comprime-atelier",
+      "targets": [
+        "reseau-air-aluminium-pression-accessoires-reception"
+      ]
+    },
+    {
+      "from": "sequencer-plusieurs-compresseurs",
+      "targets": [
+        "compresseur-secours-n-plus-un-capacite-restante"
+      ]
+    },
+    {
+      "from": "raccord-air-comprime-bsp-npt-1-4",
+      "targets": [
+        "flexible-court-outil-pneumatique-vibrations"
+      ]
+    },
+    {
+      "from": "dimensionner-secheur-frigorifique-ete",
+      "targets": [
+        "aftercooler-refroidisseur-secheur-air-comprime"
+      ]
+    },
+    {
+      "from": "tester-contamination-air-avant-peinture",
+      "targets": [
+        "flexible-outil-lubrifie-peinture-contamination"
+      ]
+    },
+    {
+      "from": "huile-cle-a-chocs-pneumatique-lubrification",
+      "targets": [
+        "flexible-outil-lubrifie-peinture-contamination"
+      ]
+    },
+    {
+      "from": "sableuse-perd-puissance-abrasif-humide-diagnostic",
+      "targets": [
+        "buse-sablage-usee-surconsommation-air"
+      ]
+    },
+    {
+      "from": "secheur-adsorption-air-purge-debit-net",
+      "targets": [
+        "desiccant-change-couleur-point-rosee"
+      ]
+    },
+    {
+      "from": "maintenance-preventive-reseau-air-comprime",
+      "targets": [
+        "remise-service-machine-pneumatique-arret-prolonge"
+      ]
+    },
+    {
+      "from": "raccorder-deux-compresseurs-en-parallele",
+      "targets": [
+        "compresseur-secours-n-plus-un-capacite-restante"
+      ]
+    },
+    {
+      "from": "entretien-compresseur-purge-condensats",
+      "targets": [
+        "aftercooler-refroidisseur-secheur-air-comprime"
+      ]
+    },
+    {
+      "from": "meuleuse-broche-m14-5-8-filetage",
+      "targets": [
+        "meuleuse-pneumatique-vitesse-max-disque-abrasif"
+      ]
+    },
+    {
+      "from": "cadence-clouage-pneumatique-chantier",
+      "targets": [
+        "riveteuse-pneumatique-aspiration-mandrin-consommation"
+      ]
+    },
+    {
+      "from": "amplificateur-air-exair-consommation-debit",
+      "targets": [
+        "sata-dry-jet-2-compresseur-sechage-peinture"
+      ]
+    }
+  ],
+  "limits": [
+    "Analyses documentaires internes, sans essai physique ni validation professionnelle externe.",
+    "Certaines sources interdisent le téléchargement direct ; leur contenu a été consulté via le lecteur web, sans empreinte inventée.",
+    "Les éditions Metabo 2016 et 2023, ABB 2018, WIKA 2015, Parker 2019 et le certificat TÜV 2021 servent uniquement dans la portée datée expliquée dans les guides.",
+    "Les chiffres incohérents sur les fiches CP7732C et CP7748 sont signalés, sans cause ni mesure de remplacement inventée.",
+    "Les prix, stocks marchands, délais de séchage et temps de travail effectifs ne sont pas déduits de ces documents.",
+    "La fiche ABAC consultée sans pression de référence FAD explicite et les anciens liens redirigés ou indisponibles ont été exclus des nouvelles comparaisons."
+  ],
+  "reviewedExistingGuides": [
+    {
+      "slug": "air-comprime-carrosserie-peinture",
+      "sha256": "207773392106bb176637ed5c11ce5568c2146bbfc609a815559e753f10241084"
+    },
+    {
+      "slug": "amplificateur-air-exair-consommation-debit",
+      "sha256": "c50417001421ce9a792fecb30c9ccc0011f94daf91a4f2a1575d31849dced9f4"
+    },
+    {
+      "slug": "buse-sablage-diametre-pression-debit-compresseur",
+      "sha256": "c542bbca1cb83d1516b71ce0c547d95c108693ad68a653dd955e6b7eb52e43b8"
+    },
+    {
+      "slug": "cadence-clouage-pneumatique-chantier",
+      "sha256": "5dea824c851318d7ca2e259a009739fb8396fa8437a2d970b8211f111f1efad9"
+    },
+    {
+      "slug": "choisir-volume-cuve-24-50-90-litres",
+      "sha256": "aada61e5c2fef1f033e6eeaca911863b8af23807db1b3251ddb3434c0c5aa487"
+    },
+    {
+      "slug": "compresseur-pour-cle-a-chocs-pneumatique",
+      "sha256": "0099159f60caa690da29e7a1c09eebd32922b870c8897f39bd5bed668590b209"
+    },
+    {
+      "slug": "compresseur-pour-gonfler-pneus",
+      "sha256": "714e91ecb0dc83858e4f6b9525638cd6504af76848311494e852f226ab0529fa"
+    },
+    {
+      "slug": "compresseur-pour-ponceuse-pneumatique",
+      "sha256": "dc775b80447b5b7e70112c9ca8377e7b4b4b1b5ebff75288950dbc3b9b3be98c"
+    },
+    {
+      "slug": "compresseur-pour-riveteuse-pneumatique",
+      "sha256": "e52ca4ca27813dc6e44ff490b5816e5ae08b1e45208afddef53d3cc32b43e721"
+    },
+    {
+      "slug": "compresseur-sans-huile-ou-lubrifie",
+      "sha256": "9776a7e848bc2ba6657d493e890ff3c549756c03364160b7ef2aab399c96e79e"
+    },
+    {
+      "slug": "consommation-moyenne-en-charge-cle-a-chocs",
+      "sha256": "f49466c660e1d99a3201c815bd940a08165e8805b53933fc8fc2edfdfa01e4e2"
+    },
+    {
+      "slug": "couper-air-comprime-machine-arret-week-end",
+      "sha256": "f9e86e2ace80f00d8fb4228f483b7153ed6397db4a197ad281c19d021507e14f"
+    },
+    {
+      "slug": "debit-restitue-fad-vs-debit-aspire",
+      "sha256": "3bf92106959b9ef548219c54a0885fe605932efa0a837430fa44b36414cf5b20"
+    },
+    {
+      "slug": "dimensionner-secheur-frigorifique-ete",
+      "sha256": "61a8e54c66c5c1aa559eddf18d14469054fc719c10f060abbc4dfe553a2661df"
+    },
+    {
+      "slug": "entretien-compresseur-purge-condensats",
+      "sha256": "9d6526b182ebda680a6ab2508df3f43376066a39834c415660e92bfe87b11add"
+    },
+    {
+      "slug": "filtre-charbon-actif-air-comprime-vapeurs-huile",
+      "sha256": "02c8bc6f0a193b5c866c6086ae0cc539b29824bc73bc5defa9eda67e47b94d31"
+    },
+    {
+      "slug": "flexible-air-comprime-chantier-25-50-metres",
+      "sha256": "ea4a6eecd058c616238b762ba73d02d682710e8990b9b5a58ad79810c84b6d4d"
+    },
+    {
+      "slug": "guide-complet-dimensionner-compresseur-air",
+      "sha256": "3a9e9fbe9918b67aae29c9f097f0f61227ec96a2458870807b1d05961dcdb63c"
+    },
+    {
+      "slug": "huile-cle-a-chocs-pneumatique-lubrification",
+      "sha256": "b43401c863688124a8de6b192e9a6fe9a03b43224a7d94b04e90d33868a487d8"
+    },
+    {
+      "slug": "installer-reseau-air-comprime-atelier",
+      "sha256": "04911d2f9cd60432dd610fcbc9849a36da966c334839364ddbde80d6d27488eb"
+    },
+    {
+      "slug": "maintenance-preventive-reseau-air-comprime",
+      "sha256": "75b455eea3e4637eabd073e3faad3868ec4e1931e93248efb1cc054019eb2d4a"
+    },
+    {
+      "slug": "mesurer-pression-dynamique-pistolet-peinture",
+      "sha256": "f345de4562f8aaef5c21d449dcc27fe172685d7e43086505c09152d011295bbc"
+    },
+    {
+      "slug": "meuleuse-broche-m14-5-8-filetage",
+      "sha256": "31ec739f2e48f28f1d7b50c3fac10005d4c9d72fd0e9b853dfd90704f2c09eae"
+    },
+    {
+      "slug": "meuleuse-pneumatique-vitesse-regulee-governor",
+      "sha256": "a973dcdb057b1e5cc234a1f9b9e165282239c7cca87656094b0b1960c0f6adb6"
+    },
+    {
+      "slug": "moteur-pneumatique-couple-demarrage-debit",
+      "sha256": "738f3ce7d0bd8661557cd9c6ab7b818a7129b103cf51d32fa007e9b8c998225a"
+    },
+    {
+      "slug": "pistolet-peinture-jet-deforme-crachote-diagnostic",
+      "sha256": "3ec87650c0e5f86a10f5bd4c2b9618e6a0084f20fca45afb1f03de8ca60ff67e"
+    },
+    {
+      "slug": "point-rosee-atmospherique-sous-pression-mesure",
+      "sha256": "6178eaa7f9c94b1b0b5dfa8396b4053de3b19e0f2f9fb5f29953ff32e889e649"
+    },
+    {
+      "slug": "pompe-membrane-aro-66605-debit-air",
+      "sha256": "84ebb3b4f5392c9643b080a2fefc6b7eee08da0b04365cca54c8f41c30f21f33"
+    },
+    {
+      "slug": "ponceuse-pneumatique-bois-aspiration-poussieres",
+      "sha256": "bc16d18439b9e1dcb84079613d57f54200d0db298d82925d984677d10eb99845"
+    },
+    {
+      "slug": "pression-travail-6-3-bar-outils-pneumatiques",
+      "sha256": "c8c3aa1831388bb4dacbfd249ac9fc81bd31bb33e5756ea5233677ebdbbe19e7"
+    },
+    {
+      "slug": "qualite-air-comprime-iso-8573-1",
+      "sha256": "0fb0372ec69b031edb1e03ff1c56f4c3b6c653d41694404278be6a7dcf361252"
+    },
+    {
+      "slug": "raccord-air-comprime-bsp-npt-1-4",
+      "sha256": "4521d147fe1143e963166fc667ed7cbcfebb56b6736fb2b16fbd7b50ccebe097"
+    },
+    {
+      "slug": "raccord-rapide-securite-decompression-air-comprime",
+      "sha256": "70e9ca01ab91e9d55e9e17356c1ab802337a75aac178b096454045c5c418b3ec"
+    },
+    {
+      "slug": "raccorder-deux-compresseurs-en-parallele",
+      "sha256": "33c1dc41d83299d59cc2a3c98e7cec35aa236a045fb5f4c974a42f8c11bef7de"
+    },
+    {
+      "slug": "sableuse-perd-puissance-abrasif-humide-diagnostic",
+      "sha256": "cd995df095e2841d8f27e07375cbbbf03a56d61b25cead99681bcec43126dda8"
+    },
+    {
+      "slug": "secheur-adsorption-air-purge-debit-net",
+      "sha256": "51ba29376ee18c57a58baeb9067d76ed56e58ec809c3cde106a69504cd61bef2"
+    },
+    {
+      "slug": "separer-air-finition-et-clouage-atelier-bois",
+      "sha256": "85c348ba9bfa87d5ebc478ef862dc3426a072be9c304454934d5e61eefc55ee7"
+    },
+    {
+      "slug": "sequencer-plusieurs-compresseurs",
+      "sha256": "b87cea20b1052353145549b94fa35567ab4404d26ab4d0a86738fbe03778db02"
+    },
+    {
+      "slug": "tester-contamination-air-avant-peinture",
+      "sha256": "6112e7d21ef5ed452bf2aafda59272b9ad0366694bdf4e9d47a1793eea11fa02"
+    }
+  ],
+  "glossarySha256": "45caa6cd84fedf460f98a761918529f731edd5e7d938b7c25d2ccc4221820c9a",
+  "prePublicationChecks": {
+    "editorialSourceAudit": "passed: 286 guides, 658 sources déclarées, 1104 citations externes rattachées",
+    "pageValueAudit": "passed: zero structural failures; all 30 new guides passed mechanical content and similarity checks",
+    "astroCheck": "passed: 0 errors, 0 warnings, 9 existing hints",
+    "mobileDomInspection": {
+      "guides": 30,
+      "viewportWidth": 390,
+      "horizontalOverflows": 0,
+      "svgLabelsOutsideViewBox": 0
+    },
+    "visualInspection": [
+      "Scheppach HC51V : tableau et courbe mobile",
+      "Aftercooler : schéma mobile",
+      "Einhell CP7732C : mise en page ordinateur"
+    ]
+  }
+}

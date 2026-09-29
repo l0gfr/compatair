@@ -2,7 +2,7 @@
 title: "Quel compresseur pour une ponceuse pneumatique ?"
 description: "Une ponceuse exige un débit durable, pas seulement une grande cuve. Dimensionnez le FAD, le cycle de service et le flexible à partir d’un cas vérifié."
 pubDate: 2026-07-13
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 category: Choisir
 audiences: [particulier, professionnel]
 metiers: [carrosserie-peinture, menuiserie-agencement]
@@ -44,6 +44,8 @@ L’[Einhell TE-AC 430/90/10](https://www.einhell.fr/p/4010800-te-ac-430-90-10/)
 4. Traitement de l’air adapté à la finition et entretien régulier du condensat.
 
 Une autre ponceuse peut consommer beaucoup plus. Relevez toujours sa propre fiche technique. Le [profil complet de la TC-PE 150](/outils-pneumatiques/ponceuse-excentrique-einhell-tc-pe-150/) et le [calculateur CompatAir](/calculateur/#outil=einhell-tc-pe-150) permettent de reproduire ce raisonnement.
+
+La comparaison [Metabo Basic 280-50 W OF ou 250-50 W OF](/guides/metabo-basic-280-50-w-of-ou-250-50-w-of/) examine le gain de débit documenté entre deux modèles. Elle aide à déterminer si ce gain répond au besoin, sans recommander une ponceuse continue sur la seule taille de cuve.
 
 ## Choisir d’abord l’opération de ponçage
 

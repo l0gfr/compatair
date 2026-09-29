@@ -3,6 +3,7 @@ title: "Raccorder deux compresseurs en parallèle : peut-on réellement additio
 seoTitle: "Deux compresseurs en parallèle : débit et précautions"
 description: "Additionner deux débits exige des pressions et conditions comparables. Préparez le bilan, la commande et le scénario de secours avant tout raccordement."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Installer"
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "maintenance-industrielle"]
@@ -63,6 +64,8 @@ Incluez le bruit, la place, l’entretien, le traitement d’air et la possibili
 ## Réceptionner les états qui comptent
 
 La réception proposée comprend l’usage normal à deux, les passages de base à appoint, l’arrêt d’une machine et la reprise après interruption. Notez la pression au poste critique et les états des deux compresseurs. Si le besoin minimal n’est pas couvert par la machine restante, indiquez les usages à arrêter : c’est une limite d’exploitation à rendre visible, pas une redondance à annoncer sans réserve.
+
+Si le montage vise la continuité de production, calculez également le [débit disponible après la perte d’un compresseur](/guides/compresseur-secours-n-plus-un-capacite-restante/). La somme des capacités en fonctionnement normal ne démontre pas le secours.
 
 ## Sources et méthode
 
