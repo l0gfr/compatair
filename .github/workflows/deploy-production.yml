@@ -231,6 +231,8 @@ jobs:
             scripts/verify-live-seo.mjs \
             scripts/lib/live-seo-verification.mjs \
             scripts/lib/markup-text.mjs \
+            scripts/verify-indexation-activation.mjs \
+            scripts/lib/indexation-policy.mjs \
             scripts/preserve-verdict-archive.mjs \
             scripts/lib/legacy-verdict-archive.mjs \
             scripts/lib/publication-signatures.mjs \

@@ -1,7 +1,40 @@
 export const INDEXATION_ORIGIN = 'https://compatair.fr';
 export const INDEXATION_MANIFEST_PATH = '/data/indexation.json';
 export const MAX_INDEXATION_ARTIFACT_AGE_MS = 86_400_000;
+export const INDEXATION_TIME_ZONE = 'Europe/Paris';
+const dailyGroups = ['guides', 'compressors', 'tools'];
+const dayFormatter = new Intl.DateTimeFormat('en-CA', { timeZone: INDEXATION_TIME_ZONE, year: 'numeric', month: '2-digit', day: '2-digit' });
 const pathPattern = /^\/(?:[a-z0-9-]+\/)*$/;
+
+export function indexationDay(date = new Date()) {
+	if (!Number.isFinite(date.getTime())) throw new Error('Date de publication invalide.');
+	return dayFormatter.format(date);
+}
+
+export function candidateQuotaGroup(path) {
+	if (/^\/compresseurs\/[^/]+\/$/.test(path)) return 'compressors';
+	if (/^\/outils-pneumatiques\/[^/]+\/$/.test(path)) return 'tools';
+	if (candidateFamily(path) === 'guides') return 'guides';
+	return undefined;
+}
+
+function validateDailyLimits(limits) {
+	if (!limits || Object.keys(limits).length !== dailyGroups.length
+		|| dailyGroups.some(group => !Number.isInteger(limits[group]) || limits[group] < 1 || limits[group] > 500)) throw new Error('Plafonds quotidiens invalides.');
+}
+
+export function indexationBatchReady(previous, policy, now = new Date()) {
+	if (policy.schemaVersion === 2) return !previous.batches.some(batch => indexationDay(new Date(batch.openedAt)) === indexationDay(now));
+	const last = previous.batches.at(-1);
+	return !last || now.getTime() - Date.parse(last.openedAt) >= policy.minimumDaysBetweenBatches * 86_400_000 + MAX_INDEXATION_ARTIFACT_AGE_MS;
+}
+
+// A release that opens a daily batch expires at Paris midnight. Ordinary
+// rebuilds preserve old batches, whose openedAt differs from their builtAt.
+export function assertDailyIndexationDate(manifest, now = new Date()) {
+	const batch = manifest.batches.at(-1);
+	if (batch?.publicationDay && batch.openedAt === manifest.builtAt && batch.publicationDay !== indexationDay(now)) throw new Error('Le jour du lot a changé : reconstruire avant publication.');
+}
 
 export function validatePath(path) {
 	if (typeof path !== 'string' || !pathPattern.test(path)) throw new Error('Chemin d’indexation invalide.');
@@ -48,14 +81,18 @@ export function validateBaseline(baseline) {
 }
 
 export function validatePolicy(policy) {
-	if (policy?.schemaVersion !== 1 || typeof policy.paused !== 'boolean'
-		|| !Number.isInteger(policy.minimumDaysBetweenBatches) || policy.minimumDaysBetweenBatches < 7
-		|| !Array.isArray(policy.stages) || !policy.stages.length
+	if (![1, 2].includes(policy?.schemaVersion) || typeof policy.paused !== 'boolean'
 		|| !(policy.maximumTopicShare > 0 && policy.maximumTopicShare <= 1)
 		|| !(policy.similarityThreshold >= 0.5 && policy.similarityThreshold <= 1)
 		|| !(policy.containmentThreshold >= policy.similarityThreshold && policy.containmentThreshold <= 1)) throw new Error('Politique d’indexation invalide.');
-	for (const stage of policy.stages) for (const family of ['catalog', 'guides']) {
-		if (!Number.isInteger(stage[family]) || stage[family] < 1 || stage[family] > 500) throw new Error('Plafond de lot invalide.');
+	if (policy.schemaVersion === 2) {
+		if (policy.timeZone !== INDEXATION_TIME_ZONE || policy.stages !== undefined || policy.minimumDaysBetweenBatches !== undefined) throw new Error('Calendrier quotidien invalide.');
+		validateDailyLimits(policy.dailyLimits);
+	} else {
+		if (!Number.isInteger(policy.minimumDaysBetweenBatches) || policy.minimumDaysBetweenBatches < 7 || !Array.isArray(policy.stages) || !policy.stages.length) throw new Error('Politique d’indexation invalide.');
+		for (const stage of policy.stages) for (const family of ['catalog', 'guides']) {
+			if (!Number.isInteger(stage[family]) || stage[family] < 1 || stage[family] > 500) throw new Error('Plafond de lot invalide.');
+		}
 	}
 	return policy;
 }
@@ -66,10 +103,21 @@ export function validateManifest(manifest, baseline, now = new Date()) {
 	if (!Number.isFinite(Date.parse(manifest.builtAt)) || Date.parse(manifest.builtAt) > now.getTime() + 300_000) throw new Error('Date d’indexation invalide.');
 	const paths = new Set(baseline.paths);
 	let previous = 0;
+	let dailyStarted = false;
+	const publicationDays = new Set();
 	for (const batch of manifest.batches) {
 		const date = Date.parse(batch.openedAt);
 		if (!Number.isFinite(date) || date < previous || date > Date.parse(manifest.builtAt) || !Array.isArray(batch.paths) || !batch.paths.length) throw new Error('Lot d’indexation invalide.');
-		if (previous && date - previous < 7 * 86_400_000) throw new Error('Lots d’indexation trop rapprochés.');
+		const day = indexationDay(new Date(date));
+		if (batch.publicationDay !== undefined) {
+			validateDailyLimits(batch.dailyLimits);
+			if (batch.publicationDay !== day || publicationDays.has(day)) throw new Error('Jour de lot dupliqué ou invalide.');
+			for (const group of dailyGroups) {
+				if (batch.paths.filter(path => candidateQuotaGroup(path) === group).length > batch.dailyLimits[group]) throw new Error('Quota quotidien dépassé.');
+			}
+			dailyStarted = true;
+		} else if (dailyStarted || batch.dailyLimits !== undefined || (previous && date - previous < 7 * 86_400_000)) throw new Error('Lots d’indexation trop rapprochés ou retour au calendrier historique.');
+		publicationDays.add(day);
 		previous = date;
 		for (const path of batch.paths) {
 			validatePath(path);

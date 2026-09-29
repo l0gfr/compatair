@@ -14,20 +14,21 @@ La publication concurrente de 55 nouveaux guides en `4870e1e` est enregistrée s
 
 ## Rythme automatique
 
-Les plafonds sont communs à tous les imports d’une famille, pas renouvelés par fichier, marque ou commande de build. Chaque famille progresse selon ses propres lots : publier des guides ne fait pas sauter le premier palier des fiches.
+Depuis le 29 septembre 2026, les quotas quotidiens demandés sont séparés pour les guides, les compresseurs et les outils. Ils sont communs à tous les imports, pas renouvelés par fichier, marque ou commande de build.
 
-| Lot effectivement publié | Nouvelles fiches au maximum | Nouveaux guides au maximum |
-| --- | ---: | ---: |
-| Premier lot | 50 | 5 |
-| Deuxième lot | 100 | 10 |
-| Troisième lot | 150 | 15 |
-| Lots suivants | 200 | 20 |
+| Famille | Nouvelles pages par jour au maximum |
+| --- | ---: |
+| Guides | 2 |
+| Compresseurs | 2 |
+| Outils pneumatiques | 6 |
 
-Au moins sept jours séparent deux lots. Le planificateur ajoute une marge de 24 heures au délai entre builds, puisque l’activation peut intervenir jusqu’à 24 heures après la construction : le prochain lot devient donc éligible huit jours après la date du build précédent. Un même groupe ne peut occuper plus de 25 % du plafond, arrondi à l’entier supérieur : marque et catégorie pour les fiches, catégorie éditoriale et premier métier déclaré pour les guides. Une seule thématique peut donc produire un lot plus petit. Le rapprochement avec le panel éditorial figé de 100 requêtes donne une priorité explicite, puis l’ancienneté départage les candidats. Ce rapprochement est une hypothèse éditoriale ; aucune demande, position ni audience mesurée n’est inventée.
+Un seul lot peut s’ouvrir par jour civil dans le fuseau `Europe/Paris`, y compris aux changements d’heure. Le délai historique de huit jours est remplacé par ce calendrier quotidien. Les anciennes admissions restent conservées. Un quota inutilisé n’est transféré ni à une autre famille ni au lendemain. Si les contrôles ne laissent pas assez de candidats, le lot est plus petit.
+
+Un même groupe ne peut occuper plus de 25 % de son quota, arrondi à l’entier supérieur : marque et catégorie pour les fiches, catégorie éditoriale et premier métier déclaré pour les guides. Cela limite chaque groupe à un guide, un compresseur ou deux outils dans le lot quotidien. Le rapprochement avec le panel éditorial figé de 100 requêtes donne une priorité explicite, puis l’ancienneté départage les candidats. Ce rapprochement est une hypothèse éditoriale ; aucune demande, position ni audience mesurée n’est inventée.
 
 Le build lit `/data/indexation.json` et `/data/release.json` sur le site public. Il part du dernier lot réellement déployé. Plusieurs builds locaux n’épuisent pas des quotas et ne débloquent pas plusieurs lots. Après plusieurs semaines d’arrêt, un seul lot peut s’ouvrir au build suivant : aucun rattrapage cumulatif.
 
-Le site étant statique, l’ouverture suivante intervient au prochain build et déploiement après le délai, avec une nouvelle révision immuable. L’automatisation Codex « Publier les lots SEO CompatAir » contrôle chaque jour à 20 h 15 (heure locale) si un lot est éligible. Elle ne lance une publication que si le délai est écoulé, si des pages passent les contrôles et si aucune autre publication n’est en cours. Elle utilise un checkout isolé de la révision déjà publiée, conserve les validations de production et vérifie ensuite les directives réellement servies. Un commit vide donne une nouvelle identité à la release lorsque seul le lot d’indexation évolue. Aucun quota n’est cumulé après une interruption.
+Le site étant statique, l’ouverture suivante intervient au prochain build et déploiement d’un jour encore disponible, avec une nouvelle révision immuable. L’automatisation Codex « Publier les lots SEO CompatAir » contrôle chaque jour à 20 h 15 (heure locale) si un lot est éligible. Elle ne lance une publication que si aucun lot n’a déjà été ouvert ce jour, si des pages passent les contrôles et si aucune autre publication n’est en cours. Elle utilise un checkout isolé de la révision déjà publiée, conserve les validations de production et vérifie ensuite les directives réellement servies. Un commit vide donne une nouvelle identité à la release lorsque seul le lot d’indexation évolue. Aucun quota n’est cumulé après une interruption.
 
 Cette automatisation locale requiert le Mac allumé et l’application Codex ouverte ; ses passages utilisent le quota Codex. Elle ne génère aucun contenu et ne lance aucune recherche IA récurrente ni demande d’indexation Google. Les publications ordinaires continuent également de faire progresser la file, sans opération par page. En cas de pause, de file vide, de délai non écoulé ou de contrôle en échec, aucun lot supplémentaire n’est publié.
 
@@ -65,7 +66,7 @@ Le découpage à 5 000 est un choix d’exploitation. Le protocole autorise 50 0
 
 Le rapport `.astro/seo/indexation-plan.json`, exclu de Git et du site public, contient pour chaque candidat : état, motif, groupe, empreinte du texte, première observation et éventuel voisin proche. Le manifeste public conserve les lots, la file et quelques URL témoins, sans publier les diagnostics éditoriaux.
 
-Avant transfert, le workflow vérifie que la production correspond encore à la base du build et que l’artefact a moins de 24 heures. Après activation, le vérificateur HTTPS contrôle les directives, canoniques et sitemaps sur les témoins admis et en attente, dont les guides, ainsi que toutes les fiches du sitemap. La preuve reste le SHA servi, jamais le seul succès du code local.
+Avant transfert, le workflow vérifie que la production correspond encore à la base du build et que l’artefact a moins de 24 heures. Une release ouvrant un nouveau lot quotidien expire aussi à minuit, heure de Paris. Le serveur revérifie le jour et l’historique immédiatement avant l’activation : une archive retardée au lendemain doit être reconstruite. Après activation, le vérificateur HTTPS contrôle les directives, canoniques et sitemaps sur les témoins admis et en attente, dont les guides, ainsi que toutes les fiches du sitemap. La preuve reste le SHA servi, jamais le seul succès du code local.
 
 ## Commandes et comportement en cas d’échec
 

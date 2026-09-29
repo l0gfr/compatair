@@ -190,6 +190,7 @@ fi
 
 if [[ "$deployment_profile" == production ]]; then
  /opt/compatair/node/bin/node "$script_dir/scripts/preserve-verdict-archive.mjs" "$previous_target" "$release"
+ /opt/compatair/node/bin/node "$script_dir/scripts/verify-indexation-activation.mjs" "$previous_target" "$release"
 fi
 
 ln -sfn "$release" "$current.next"

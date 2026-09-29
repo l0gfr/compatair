@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { MAX_INDEXATION_ARTIFACT_AGE_MS, candidateFamily, validateBaseline, validateManifest, validatePolicy } from './indexation-policy.mjs';
+import { candidateFamily, candidateQuotaGroup, indexationBatchReady, indexationDay, validateBaseline, validateManifest, validatePolicy } from './indexation-policy.mjs';
 
 function words(text) {
 	return text.normalize('NFKD').replace(/\p{M}/gu, '').toLowerCase().replace(/\d+(?:[.,]\d+)*/g, ' nombre ').match(/[a-z]+/g) ?? [];
@@ -133,22 +133,21 @@ export function planIndexation({ candidates, baseline, previous, policy, now = n
 	const admitted = new Set([...baseline.paths, ...previous.batches.flatMap((batch) => batch.paths)]);
 	const firstSeen = new Map((previous.pending ?? []).map((entry) => [entry.path, entry.firstSeen]));
 	const analyzed = analyzeCandidates(candidates.map((entry) => ({ ...entry, firstSeen: firstSeen.get(entry.path) ?? now.toISOString() })), admitted, policy, { onProgress });
-	const last = previous.batches.at(-1);
-	// A deployed artifact may be up to 24 hours older than its activation.
-	const ready = !last || now.getTime() - Date.parse(last.openedAt) >= policy.minimumDaysBetweenBatches * 86_400_000 + MAX_INDEXATION_ARTIFACT_AGE_MS;
-	const limits = Object.fromEntries(['catalog', 'guides'].map((family) => {
+	const daily = policy.schemaVersion === 2;
+	const ready = indexationBatchReady(previous, policy, now);
+	const limits = daily ? { ...policy.dailyLimits } : Object.fromEntries(['catalog', 'guides'].map((family) => {
 		const publishedBatches = previous.batches.filter((batch) => batch.paths.some((path) => candidateFamily(path) === family)).length;
 		return [family, policy.stages[Math.min(publishedBatches, policy.stages.length - 1)][family]];
 	}));
 	const selected = [];
-	if (allowRelease && !policy.paused && ready) for (const family of ['catalog', 'guides']) {
-		selected.push(...diverseSelection(analyzed.filter((entry) => entry.family === family && !admitted.has(entry.path) && !entry.reason), limits[family], policy.maximumTopicShare));
+	if (allowRelease && !policy.paused && ready) for (const family of daily ? ['guides', 'compressors', 'tools'] : ['catalog', 'guides']) {
+		selected.push(...diverseSelection(analyzed.filter((entry) => (daily ? candidateQuotaGroup(entry.path) : entry.family) === family && !admitted.has(entry.path) && !entry.reason), limits[family], policy.maximumTopicShare));
 	}
 	const newPaths = new Set(selected);
 	const consolidation = consolidateEquivalentAnswers(analyzed, new Set([...admitted, ...selected]));
 	const invalidPublished = analyzed.filter(entry => admitted.has(entry.path) && entry.reason && !consolidation.canonicalAliases[entry.path]);
 	if (invalidPublished.length) throw new Error(`Pages publiées sans valeur propre validée : ${invalidPublished.slice(0, 20).map(entry => `${entry.path} (${entry.reason})`).join(', ')}`);
-	const batches = [...previous.batches, ...(selected.length ? [{ openedAt: now.toISOString(), paths: selected.sort() }] : [])];
+	const batches = [...previous.batches, ...(selected.length ? [{ openedAt: now.toISOString(), paths: selected.sort(), ...(daily ? { publicationDay: indexationDay(now), dailyLimits: limits } : {}) }] : [])];
 	const pending = analyzed.filter((entry) => !admitted.has(entry.path) && !newPaths.has(entry.path)).map((entry) => ({ path: entry.path, firstSeen: entry.firstSeen }));
 	const checks = ['catalog', 'guides', 'usages'].flatMap((family) => [true, false].flatMap((indexable) => analyzed
 		.filter((entry) => !consolidation.canonicalAliases[entry.path] && entry.family === family && (admitted.has(entry.path) || newPaths.has(entry.path)) === indexable)
