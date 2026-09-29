@@ -15,7 +15,7 @@ relatedGuides:
 sources:
   - https://azure-na-assets.contentstack.com/v3/assets/blt7de7417393caec8b/blt4a7f56f74475fc47/67bdfdd19f36a11cbf1a81eb/15268519.pdf
   - https://azure-na-assets.contentstack.com/v3/assets/blt7de7417393caec8b/blt19a8e75e4a73440a/67bdfdcd018e20f8fa627222/99449712.pdf
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 ---
 
 Les **49,2 L/min** annoncés pour certaines pompes ARO 66605 représentent un **débit maximal de liquide**, pas leur consommation d’air comprimé. Acheter un compresseur en reprenant ce chiffre revient à confondre ce que la pompe transporte et ce qui la fait fonctionner.

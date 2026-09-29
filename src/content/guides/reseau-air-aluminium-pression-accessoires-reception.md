@@ -1,7 +1,7 @@
 ---
 title: "Réseau d’air en aluminium : vérifier pression et accessoires avant réception"
 description: "Réseau aluminium d’atelier : faire préciser la pression, les conditions thermiques et les références des raccords et flexibles avant de valider l’installation."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Installer
 audiences: ["professionnel"]
 metiers: ["garage-automobile", "maintenance-industrielle", "menuiserie-agencement"]

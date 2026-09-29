@@ -12,7 +12,7 @@ reviewStatus: "internal"
 relatedGuides: ["point-rosee-secheur-filtre-air-comprime", "ventilation-local-compresseur-surchauffe", "secheur-air-comprime-atelier-non-chauffe"]
 sources:
   - https://fr.kaeser.com/entreprise/blog/comment-dimensionner-un-secheur-frigorifique.aspx
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 ---
 
 **Un sécheur annoncé pour 10 m³/min ne traite pas nécessairement 10 m³/min dans les conditions les plus chaudes de votre atelier.** KAESER publie un exemple où la pression d’entrée, la température ambiante et celle de l’air comprimé conduisent à trois corrections. Le constructeur précise que ses facteurs ne doivent pas être transposés aux autres marques. [KAESER, dimensionnement d’un sécheur frigorifique](https://fr.kaeser.com/entreprise/blog/comment-dimensionner-un-secheur-frigorifique.aspx).

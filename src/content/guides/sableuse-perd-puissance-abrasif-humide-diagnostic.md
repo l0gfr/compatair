@@ -3,7 +3,7 @@ title: "Sableuse qui perd de la puissance : air, abrasif humide ou usure du pis
 seoTitle: "Sableuse moins efficace : air, humidité ou buse usée ?"
 description: "Pression qui chute, abrasif irrégulier, buse usée : préparez un diagnostic de cabine sans attribuer toute perte d’efficacité à un manque de compresseur."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Utiliser"
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "maintenance-industrielle"]

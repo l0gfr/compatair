@@ -3,7 +3,7 @@ title: "Pistolet peinture qui crache ou jet déformé : diagnostiquer avant de 
 seoTitle: "Pistolet qui crache ou jet déformé : le diagnostic"
 description: "Jet chargé d’un côté, pulvérisation saccadée ou débit irrégulier : séparez défaut de chapeau, alimentation en produit et chute de pression d’air."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Utiliser"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture", "menuiserie-agencement"]

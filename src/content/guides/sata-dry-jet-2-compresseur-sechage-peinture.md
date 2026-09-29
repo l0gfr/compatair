@@ -1,7 +1,7 @@
 ---
 title: "SATA dry jet 2 : quel débit de compresseur pour sécher une peinture à l’eau ?"
 description: "Le SATA dry jet 2 consomme 270 Nl/min à 2,5 bar. Dimensionner un ou deux sécheurs, distinguer air injecté et air ambiant, vérifier le poste peinture."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Choisir
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture"]

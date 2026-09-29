@@ -16,7 +16,7 @@ sources:
   - https://www.clemcoindustries.com/s/NozzleWear.pdf
   - https://www.clemcoindustries.com/s/AirVolume_Est.pdf
   - https://www.clemcoindustries.com/charts
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 ---
 
 **Le diamètre de la buse et la pression à la buse changent fortement le besoin d’air d’une installation de sablage.** Dans le tableau Clemco, une buse n° 3 demande 30 cfm à 60 psi, contre 54 cfm pour une n° 4 à la même pression. Cela représente environ **850 et 1 529 L/min**, avant de dimensionner les autres besoins de l’installation. [Clemco, tableau de consommation d’air et d’abrasif](https://www.clemcoindustries.com/s/Compressed_Air-wxh8.pdf).

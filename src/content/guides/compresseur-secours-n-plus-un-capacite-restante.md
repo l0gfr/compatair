@@ -1,7 +1,7 @@
 ---
 title: "Compresseur de secours N+1 : vérifier le débit qui reste après une panne"
 description: "N+1 ne se valide pas en additionnant tous les débits. Calculer la capacité restante, vérifier pression, traitement, alimentation et reprise du secours."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Installer
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "atelier-poids-lourds"]

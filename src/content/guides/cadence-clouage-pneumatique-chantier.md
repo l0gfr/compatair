@@ -14,7 +14,7 @@ sources:
   - https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ngovue839t5o7dugodnovh8q57/4137790_11018_001_SPK2.pdf
   - https://shop.scheppach.com/Zubehoer-Set-Druckluftnagler-scheppach/7906100715
   - https://www.inrs.fr/publications/bdd/techniques-reduction-bruit/FicheBruitAG.html?refINRS=BRUIT_FicheBruit_61
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 ---
 
 Une cloueuse consomme de l’air à chaque tir. Pour transformer une valeur en litres par tir en besoin moyen, il faut donc déclarer une cadence. Ce calcul est exact sur le plan arithmétique, mais il ne décrit pas à lui seul la pointe instantanée, la récupération de la cuve ou la qualité d’enfoncement.

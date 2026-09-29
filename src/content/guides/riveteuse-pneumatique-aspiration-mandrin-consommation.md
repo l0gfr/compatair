@@ -1,7 +1,7 @@
 ---
 title: "Riveteuse pneumatique : l’aspiration des mandrins est-elle incluse dans le débit ?"
 description: "Consommation par rivet, aspiration et cadence : lire le cas GESIPA TAURUS sans additionner deux fois l’air ni inventer une consommation auxiliaire."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Comprendre
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "btp-chantier"]
@@ -23,11 +23,11 @@ La même page affiche une consommation de **4,80 litres**, sans expliciter dans 
 
 <figure class="article-infographic article-infographic--compact">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280" role="img" aria-labelledby="riveteuse-pneumatique-aspiration-mandrin-consommation-title riveteuse-pneumatique-aspiration-mandrin-consommation-desc" style="font-family:system-ui,sans-serif">
-<title id="riveteuse-pneumatique-aspiration-mandrin-consommation-title">Périmètre de la consommation d’une riveteuse</title><desc id="riveteuse-pneumatique-aspiration-mandrin-consommation-desc">GESIPA décrit une réutilisation de l’air pour l’évacuation des mandrins sur cette TAURUS. La timeline illustre des fonctions, sans quantifier leur durée ou leur débit.</desc>
+<title id="riveteuse-pneumatique-aspiration-mandrin-consommation-title">Périmètre de la consommation d’une riveteuse</title><desc id="riveteuse-pneumatique-aspiration-mandrin-consommation-desc">GESIPA décrit une réutilisation de l’air pour l’évacuation des mandrins sur cette TAURUS. La frise illustre des fonctions, sans quantifier leur durée ou leur débit.</desc>
 <rect width="440" height="280" rx="16" fill="#10281e"/>
 <text x="24" y="32" fill="#d3eb56" font-size="20" text-anchor="start" font-weight="700">Rivetage et évacuation</text><path d="M40 120L400 120" stroke="#9fb3a8" stroke-width="3" fill="none"/><rect x="48" y="80" width="100" height="45" rx="8" fill="#19704f"/><text x="98" y="108" fill="#eef2e9" font-size="19" text-anchor="middle" font-weight="400">Pose</text><rect x="168" y="80" width="190" height="45" rx="8" fill="#19704f"/><text x="263" y="108" fill="#eef2e9" font-size="16" text-anchor="middle" font-weight="400">Évacuation du mandrin</text><text x="24" y="178" fill="#eef2e9" font-size="17" text-anchor="start" font-weight="400">TAURUS : air réutilisé, selon GESIPA</text><text x="24" y="219" fill="#d3eb56" font-size="20" text-anchor="start" font-weight="400">Ne pas ajouter un débit inventé</text><text x="24" y="251" fill="#eef2e9" font-size="16" text-anchor="start" font-weight="400">Vérifier ce que couvre la valeur publiée</text>
 </svg>
-<figcaption>GESIPA décrit une réutilisation de l’air pour l’évacuation des mandrins sur cette TAURUS. La timeline illustre des fonctions, sans quantifier leur durée ou leur débit.</figcaption>
+<figcaption>GESIPA décrit une réutilisation de l’air pour l’évacuation des mandrins sur cette TAURUS. La frise illustre des fonctions, sans quantifier leur durée ou leur débit.</figcaption>
 </figure>
 
 Le [guide du compresseur pour riveteuse](/guides/compresseur-pour-riveteuse-pneumatique/) pose le bilan de cadence. Ce dossier ajoute une question préalable : quelle partie du cycle la valeur constructeur couvre-t-elle ?

@@ -1,7 +1,7 @@
 ---
 title: "Moteur pneumatique ATEX : un certificat valide-t-il tout l’assemblage ?"
 description: "ATEX et moteurs à air : contrôler référence, marquage et périmètre du certificat, puis faire évaluer l’assemblage dans son environnement réel."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Choisir
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]

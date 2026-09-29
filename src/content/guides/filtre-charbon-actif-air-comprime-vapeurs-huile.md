@@ -3,7 +3,7 @@ title: "Filtre à charbon actif pour l’air comprimé : traiter les vapeurs d�
 seoTitle: "Charbon actif air comprimé : vapeurs d’huile et durée"
 description: "Coalescence et charbon actif ne traitent pas la même forme d’huile. Définissez l’exigence, la protection amont et les critères de remplacement du charbon."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture", "maintenance-industrielle"]

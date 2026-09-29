@@ -1,7 +1,7 @@
 ---
 title: "Einhell TE-AC 270/24/10 ou TC-AC 240/50/10 OF : cuve, débit et entretien"
 description: "Comparer deux Einhell : 100 L/min à 7 bar pour le TE-AC 24 L, 76 pour le TC-AC 50 L OF. La grande cuve ne signifie pas une pompe plus productive."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Choisir
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "menuiserie-agencement"]

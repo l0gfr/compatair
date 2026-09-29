@@ -2,7 +2,7 @@
 title: "Entretenir un compresseur d’air : purge, cuve, filtres et contrôles à documenter"
 description: "Construire un entretien traçable à partir de la notice du modèle : condensats, inspection de cuve, soupape, filtration et conditions d’installation."
 pubDate: 2026-07-13
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Utiliser"
 audiences: [particulier, professionnel]
 metiers: [maintenance-industrielle]

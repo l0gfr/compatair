@@ -3,7 +3,7 @@ title: "Raccorder deux compresseurs en parallèle : peut-on réellement additio
 seoTitle: "Deux compresseurs en parallèle : débit et précautions"
 description: "Additionner deux débits exige des pressions et conditions comparables. Préparez le bilan, la commande et le scénario de secours avant tout raccordement."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Installer"
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "maintenance-industrielle"]

@@ -1,7 +1,7 @@
 ---
 title: "Pourquoi mettre un flexible court entre un outil vibrant et son raccord rapide ?"
 description: "Flexible court ou whip hose : éloigner le raccord d’un outil vibrant, vérifier section et montage, sans le confondre avec un dispositif anti-fouettement."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Installer
 audiences: ["professionnel"]
 metiers: ["garage-automobile", "maintenance-industrielle"]

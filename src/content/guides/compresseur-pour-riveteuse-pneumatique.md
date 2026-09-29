@@ -3,7 +3,7 @@ title: "Riveteuse pneumatique CP9882, CP9886 et CP9888 : quel compresseur ?"
 seoTitle: "Riveteuse pneumatique : quel compresseur et quel débit ?"
 description: "CP9882, CP9886 et CP9888 : débit en charge, rivets aveugles ou écrous à sertir, pression et méthode pour dimensionner un poste de rivetage."
 pubDate: 2026-09-26
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "carrosserie-peinture"]

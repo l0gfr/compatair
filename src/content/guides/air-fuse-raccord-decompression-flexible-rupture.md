@@ -1,7 +1,7 @@
 ---
 title: "Air fuse ou raccord à décompression : quelle protection du flexible d’air ?"
 description: "Rupture de flexible et déconnexion : comparer la fonction d’un air fuse et d’un raccord de sécurité, puis vérifier débit, longueur et diamètre."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Installer
 audiences: ["professionnel"]
 metiers: ["garage-automobile", "btp-chantier", "maintenance-industrielle"]

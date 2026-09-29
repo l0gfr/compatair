@@ -1,7 +1,7 @@
 ---
 title: "Dessiccant qui change de couleur : ce que le voyant dit du point de rosée"
 description: "Un voyant de dessiccant guide la maintenance mais ne donne pas un point de rosée mesuré. Cas Parker FDD, consommable exact et limites du contrôle visuel."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Utiliser
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "carrosserie-peinture"]

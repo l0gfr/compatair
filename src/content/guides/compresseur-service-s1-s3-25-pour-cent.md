@@ -1,7 +1,7 @@
 ---
 title: "Compresseur S1 ou S3 25 % : comprendre le service avant le travail continu"
 description: "S1 et S3 25 % décrivent le service moteur. Lire le rapport marche/repos, les conditions de notice et le débit restitué sans calcul de capacité trompeur."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Comprendre
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "menuiserie-agencement", "maintenance-industrielle"]

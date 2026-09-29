@@ -13,7 +13,7 @@ relatedGuides: ["soufflette-garage-securite-bruit-consommation", "utiliser-plusi
 sources:
   - https://www.exair.com/media/productcms/pdf/AirAmplifiers2_1.pdf
   - https://blog.exair.com/2021/03/26/exairs-super-air-amplifier-amplification-ratios-explained/
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 ---
 
 **Les 4 132 SLPM annoncés en sortie d’un EXAIR 120021 ne sont pas 4 132 SLPM d’air comprimé produits pour le réseau.** Le tableau constructeur associe cette valeur à une consommation de 229 SLPM d’air comprimé, à 5,5 bar d’alimentation. Le jet entraîne de l’air ambiant ; les deux chiffres décrivent des flux différents. [EXAIR, tableau de performances, page PDF 8](https://www.exair.com/media/productcms/pdf/AirAmplifiers2_1.pdf).

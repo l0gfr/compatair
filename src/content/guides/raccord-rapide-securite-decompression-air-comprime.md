@@ -3,7 +3,7 @@ title: "Raccord rapide de sécurité : décompression, profil et débit d’air 
 seoTitle: "Raccord d’air de sécurité : profil, débit et décompression"
 description: "Choisir un raccord à décompression : exemple CEJN eSafe 320, débit à perte de charge définie, filetage et différence entre service et éclatement."
 pubDate: 2026-09-26
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Installer"
 audiences: ["professionnel"]
 metiers: ["garage-automobile", "maintenance-industrielle", "btp-chantier"]

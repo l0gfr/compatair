@@ -3,7 +3,7 @@ title: "Point de rosée atmosphérique ou sous pression : comparer deux mesures
 seoTitle: "Point de rosée : atmosphérique ou sous pression ?"
 description: "Deux hygromètres donnent des points de rosée différents ? Vérifiez la pression de mesure, le prélèvement et la stabilisation avant de déclarer le sécheur défaillant."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Comprendre"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "carrosserie-peinture", "menuiserie-agencement"]

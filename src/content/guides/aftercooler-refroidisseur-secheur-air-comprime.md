@@ -1,7 +1,7 @@
 ---
 title: "Aftercooler ou sécheur d’air : pourquoi le refroidisseur ne remplace pas le séchage"
 description: "Un aftercooler refroidit l’air et facilite la séparation des condensats. Vérifier température d’entrée, purge et sécheur sans promettre un air sec universel."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Installer
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "carrosserie-peinture"]

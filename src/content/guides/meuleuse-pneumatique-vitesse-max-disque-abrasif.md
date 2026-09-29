@@ -1,7 +1,7 @@
 ---
 title: "Meuleuse pneumatique et disque abrasif : vérifier les vitesses maximales"
 description: "La vitesse admissible du disque doit couvrir celle de la machine. Lire les marquages, identifier l’accessoire et éviter une fausse correction par la pression."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Utiliser
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "btp-chantier"]

@@ -1,7 +1,7 @@
 ---
 title: "Peindre avec le flexible d’une clé à chocs lubrifiée : quel risque ?"
 description: "Un flexible déjà exposé à la lubrification d’outils peut compromettre la finition. Organiser deux trajets d’air et vérifier la propreté au poste peinture."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Installer
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture", "menuiserie-agencement"]

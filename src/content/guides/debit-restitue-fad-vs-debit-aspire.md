@@ -3,7 +3,7 @@ title: "Débit restitué FAD ou débit aspiré : le chiffre qui dimensionne vrai
 seoTitle: "Débit FAD ou débit aspiré : lequel comparer ? | CompatAir"
 description: "FAD, débit aspiré et débit de remplissage ne mesurent pas la même chose. Identifiez le chiffre à comparer au besoin de votre outil et à quelle pression."
 pubDate: 2026-07-13
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: Comprendre
 audiences: [particulier, professionnel]
 metiers: []

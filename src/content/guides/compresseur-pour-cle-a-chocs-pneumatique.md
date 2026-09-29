@@ -2,7 +2,7 @@
 title: "Quel compresseur pour une clé à chocs pneumatique ?"
 description: "Méthode factuelle pour comparer la consommation d’une clé à chocs au débit restitué d’un compresseur, avec l’exemple Einhell TC-PW 340."
 pubDate: 2026-07-13
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, atelier-poids-lourds]

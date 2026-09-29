@@ -3,7 +3,7 @@ title: "Meuleuse pneumatique régulée : ce que fait le governor"
 seoTitle: "Meuleuse régulée : governor et sécurité de survitesse"
 description: "Régulation de vitesse, dispositif de survitesse et pression du réseau remplissent des fonctions différentes. Lire les équipements des CP3340."
 pubDate: 2026-09-26
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Comprendre"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]

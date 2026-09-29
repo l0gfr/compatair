@@ -1,7 +1,7 @@
 ---
 title: "Buse de sablage usée : pourquoi la consommation d’air augmente"
 description: "Une buse de sablage qui s’agrandit change le besoin d’air. Repères Clemco à pression constante, mesure de l’orifice et diagnostic avant remplacement."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Utiliser
 audiences: ["professionnel"]
 metiers: ["btp-chantier", "maintenance-industrielle"]

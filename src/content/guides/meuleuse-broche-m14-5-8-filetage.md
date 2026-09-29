@@ -3,7 +3,7 @@ title: "Meuleuse pneumatique : distinguer une broche M14 d’une 5/8-11"
 seoTitle: "Meuleuse pneumatique : broche M14 ou 5/8-11 ?"
 description: "La Dynabrade 52518 publie une broche M14×2. Vérifier la version, les flasques et l’accessoire sans confondre broche mécanique et arrivée d’air."
 pubDate: 2026-09-26
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]

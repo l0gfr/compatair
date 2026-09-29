@@ -1,7 +1,7 @@
 ---
 title: "Metabo Basic 250-24 W ou 250-50 W : que change vraiment la cuve ?"
 description: "Deux Metabo Basic à 95 L/min effectifs : comparer 24 et 50 L, transport et réserve sans attribuer à la grande cuve une production d’air supérieure."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Choisir
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "menuiserie-agencement"]

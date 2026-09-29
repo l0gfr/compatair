@@ -3,7 +3,7 @@ title: "Maintenance préventive d’un réseau d’air comprimé : preuves, mesu
 seoTitle: "Maintenance réseau d’air comprimé | CompatAir"
 description: "Organiser une maintenance reproductible du compresseur au point d’usage, sans calendrier universel ni économie de fuite estimée sans mesure."
 pubDate: 2026-07-15
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Utiliser"
 audiences: [professionnel]
 metiers: [maintenance-industrielle]

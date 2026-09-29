@@ -1,7 +1,7 @@
 ---
 title: "Quel compresseur pour la Metabo DSX 150 : vérifier 550 L/min à 6,2 bar"
 description: "Metabo DSX 150 : lire les 550 L/min à 6,2 bar, contrôler l’alimentation et l’aspiration des poussières avant de choisir un compresseur d’atelier."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Choisir
 audiences: ["particulier", "professionnel"]
 metiers: ["carrosserie-peinture", "menuiserie-agencement"]

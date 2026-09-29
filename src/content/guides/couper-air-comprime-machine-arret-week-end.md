@@ -3,7 +3,7 @@ title: "Faut-il couper l’air comprimé des machines la nuit et le week-end ?"
 seoTitle: "Couper l’air comprimé la nuit : méthode pour l’atelier"
 description: "Réduire la consommation hors production sans compromettre les fonctions machine : définir les zones, l’état de veille et les conditions de redémarrage."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Utiliser"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "menuiserie-agencement"]

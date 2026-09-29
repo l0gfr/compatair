@@ -1,7 +1,7 @@
 ---
 title: "Mesurer les vapeurs d’huile suffit-il à contrôler l’huile totale de l’air ?"
 description: "Un capteur de vapeurs d’huile ne couvre pas automatiquement les aérosols et liquides. Définir les phases, le point de prélèvement et l’action sur alarme."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Comprendre
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "carrosserie-peinture"]

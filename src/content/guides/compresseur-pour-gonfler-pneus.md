@@ -13,7 +13,7 @@ sources:
   - https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors
   - https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking_ppc/ideal_gases_under_constant.htm
   - https://www.michelin.fr/auto/conseils/pression-pneus/gonfler-pneus
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 ---
 
 La pression cible ne suffit pas pour calculer un temps de gonflage. Il faut aussi connaître le volume interne à pressuriser, la pression initiale et le débit réellement disponible.

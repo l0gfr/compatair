@@ -1,7 +1,7 @@
 ---
 title: "Pompe à membrane pneumatique calée : vérifier le circuit avant le compresseur"
 description: "Pompe AODD qui s’arrête ou ne débite plus : distinguer air, aspiration, refoulement et usure, avec une méthode de relevé utile au service technique."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Utiliser
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]

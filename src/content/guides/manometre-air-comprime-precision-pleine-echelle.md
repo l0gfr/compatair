@@ -1,7 +1,7 @@
 ---
 title: "Manomètre d’air comprimé : précision en pleine échelle et choix du cadran"
 description: "Une précision exprimée sur l’étendue n’est pas un pourcentage de la pression lue. Calculer un exemple et choisir le cadran sans oublier température et usage."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Choisir
 audiences: ["professionnel"]
 metiers: ["garage-automobile", "carrosserie-peinture", "maintenance-industrielle"]

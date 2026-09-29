@@ -1,7 +1,7 @@
 ---
 title: "Metabo Basic 250-50 W ou W OF : débit, huile et références à vérifier"
 description: "Basic 250-50 W et W OF : comparer les références Metabo, le débit effectif à 6,4 bar et la lubrification, sans confondre sans huile et air pur."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Choisir
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "menuiserie-agencement"]

@@ -3,7 +3,7 @@ title: "Clé à chocs : consommation moyenne ou en charge pour choisir le compre
 seoTitle: "Clé à chocs : débit moyen ou en charge ?"
 description: "156 ou 612 L/min pour une CP7732C ? Comprendre les libellés constructeur, les écarts entre documents et le débit à retenir avant d’acheter un compresseur."
 pubDate: 2026-09-25
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Comprendre"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, atelier-poids-lourds]

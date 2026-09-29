@@ -3,7 +3,7 @@ title: "Raccord d’air comprimé 1/4 : BSP, NPT et profil rapide, que vérifier
 seoTitle: "Raccord air 1/4 : BSP ou NPT, comment choisir ?"
 description: "Un raccord 1/4 peut avoir le mauvais filetage ou le mauvais profil rapide. Identifiez G, R et NPT, l’étanchéité et le passage avant de raccorder votre outil."
 pubDate: 2026-09-25
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Installer"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, maintenance-industrielle, btp-chantier]

@@ -1,7 +1,7 @@
 ---
 title: "Einhell TC-AC 240/50/10 OF et CP7732C : une clé à chocs trop gourmande ?"
 description: "Débit restitué, consommation en charge et réserve de 50 L : comprendre les limites documentées du couple Einhell TC-AC 240/50/10 OF et CP7732C."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Choisir
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile"]

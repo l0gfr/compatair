@@ -1,7 +1,7 @@
 ---
 title: "Metabo Basic 280-50 W OF ou 250-50 W OF : 30 L/min changent-ils le choix ?"
 description: "Comparer les Basic 280-50 et 250-50 W OF sur une même base : débit effectif à 6,4 bar, références, masse et marge disponible pour l’outil."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Choisir
 audiences: ["particulier", "professionnel"]
 metiers: ["menuiserie-agencement", "garage-automobile"]

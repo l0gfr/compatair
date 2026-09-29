@@ -12,7 +12,7 @@ sources:
   - https://www.sata.com/en-int/products/spray-guns/gravity-flow-cup-guns/satajet-1000-b-lignum-3/technical-data
   - https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ngovue839t5o7dugodnovh8q57/4137790_11018_001_SPK2.pdf
   - https://www.iso.org/fr/standard/46418.html
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 ---
 
 Une centrale peut alimenter plusieurs branches, mais les exigences ne se fusionnent pas dans le collecteur. Le pistolet de finition demande un débit soutenu et une qualité d’air définie par le procédé ; la cloueuse consomme par action à une pression propre. L’architecture doit rendre ces différences visibles jusqu’au point d’utilisation.

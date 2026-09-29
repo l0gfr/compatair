@@ -1,7 +1,7 @@
 ---
 title: "Remettre une machine pneumatique en service après un arrêt prolongé"
 description: "Après un arrêt long : préparer la déconsignation, vérifier fluides et modifications, organiser une remise en service progressive selon la procédure du site."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Utiliser
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "menuiserie-agencement"]

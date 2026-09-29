@@ -2,7 +2,7 @@
 title: "Choisir un compresseur d’air : la méthode complète, des outils au réseau"
 description: "Neuf étapes pour vérifier le débit, la pression, les usages simultanés, le réseau et les informations manquantes."
 pubDate: 2026-07-13
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: []

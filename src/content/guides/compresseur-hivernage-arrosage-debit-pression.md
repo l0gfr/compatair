@@ -1,7 +1,7 @@
 ---
 title: "Quel compresseur pour l’hivernage d’un arrosage automatique ?"
 description: "Hivernage d’arrosage : choisir sur le débit de la zone et les limites des composants. Repères Hunter, pression et dossier à remettre au professionnel."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Choisir
 audiences: ["particulier", "professionnel"]
 metiers: ["btp-chantier"]

@@ -1,7 +1,7 @@
 ---
 title: "Scheppach HC51V : quels outils peut-il alimenter selon la pression ?"
 description: "La courbe officielle du HC51V va de 130 L/min à 1 bar à 40 à 10 bar. Utiliser ces points pour vérifier l’outil, sans se fier aux 220 L/min aspirés."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Choisir
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "menuiserie-agencement"]

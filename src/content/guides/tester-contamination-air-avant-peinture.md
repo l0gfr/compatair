@@ -10,7 +10,7 @@ readingTime: 8
 sources:
   - https://www.sata.com/en-us/service/professional-knowledge/little-helper/
   - https://www.iso.org/fr/standard/46418.html
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 ---
 
 Un défaut de peinture ne prouve pas, à lui seul, que l’air comprimé est contaminé. Un test ciblé peut rechercher une trace au point d’utilisation, à condition de suivre le protocole de son support et de limiter la conclusion à ce qu’il montre.

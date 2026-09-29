@@ -15,7 +15,7 @@ relatedGuides:
 sources:
   - https://us.kaeser.com/download.ashx?id=tcm%3A46-37748
   - https://us.kaeser.com/compressed-air-resources/compressed-air-tips/compressed-air-treatment-guide/dryer-selection-guide.aspx
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 ---
 
 Un sécheur par adsorption peut prélever une partie de l’air produit pour régénérer son dessiccant avec de l’[air de purge](/glossaire/#air-purge-regeneration). Si le débit annoncé décrit l’entrée, il n’est pas automatiquement égal au débit disponible pour l’atelier. Avant de sélectionner le compresseur, demandez si la capacité de séchage, la consommation de purge et le débit net de sortie sont exprimés sur la même base.

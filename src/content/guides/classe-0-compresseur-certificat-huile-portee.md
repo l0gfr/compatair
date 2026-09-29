@@ -1,7 +1,7 @@
 ---
 title: "Compresseur classe 0 : lire le certificat d’huile et ses limites"
 description: "Classe 0 et air sans huile : lire le polluant, la gamme testée, le point de prélèvement et les conditions, sans promettre zéro contamination au poste."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Comprendre
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "carrosserie-peinture"]

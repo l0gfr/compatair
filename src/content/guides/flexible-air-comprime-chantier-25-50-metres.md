@@ -3,7 +3,7 @@ title: "Flexible d’air comprimé de 25 ou 50 mètres sur chantier : méthode d
 seoTitle: "Flexible air chantier 25 ou 50 m : méthode"
 description: "Méthode de chantier pour passer d’un flexible constructeur court à 25 ou 50 mètres sans inventer la perte de charge ni masquer les raccords."
 pubDate: 2026-07-19
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Installer"
 audiences: [professionnel]
 metiers: [btp-chantier]

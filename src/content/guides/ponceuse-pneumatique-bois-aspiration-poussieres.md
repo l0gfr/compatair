@@ -3,7 +3,7 @@ title: "Ponceuse pneumatique en menuiserie : dimensionner l’air et l’aspirat
 seoTitle: "Ponceuse pneumatique bois : air et aspiration"
 description: "Dossier professionnel fondé sur la Festool LEX 3 150/5 et les recommandations INRS pour ne pas confondre alimentation pneumatique et captage des poussières."
 pubDate: 2026-07-15
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Installer"
 audiences: [professionnel]
 metiers: [menuiserie-agencement]

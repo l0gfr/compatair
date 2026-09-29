@@ -3,7 +3,7 @@ title: "Air comprimé en carrosserie et peinture : débit, pression et qualité 
 seoTitle: "Air comprimé carrosserie et peinture | CompatAir"
 description: "Dimensionner l’air procédé d’un poste de peinture sans le confondre avec la ventilation de la cabine ni l’air respirable d’un appareil à adduction."
 pubDate: 2026-07-15
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Choisir"
 audiences: [professionnel]
 metiers: [carrosserie-peinture]

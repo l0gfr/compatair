@@ -1,7 +1,7 @@
 ---
 title: "Flexible d’air antistatique : que faut-il vérifier pour un poste sensible ?"
 description: "Antistatique, anti-étincelles et ATEX désignent des questions différentes. Vérifier le tuyau exact, les embouts et l’usage prévu, sans certification supposée."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Choisir
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture", "maintenance-industrielle"]

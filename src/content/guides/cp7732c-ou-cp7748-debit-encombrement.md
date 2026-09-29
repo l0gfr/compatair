@@ -1,7 +1,7 @@
 ---
 title: "CP7732C ou CP7748 : comparer le débit en charge avant le couple maximal"
 description: "CP7732C et CP7748 : consommations en charge, usages et incohérences d’encombrement de la fiche CP7748, pour choisir sans faux classement."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Choisir
 audiences: ["professionnel"]
 metiers: ["garage-automobile", "maintenance-industrielle"]

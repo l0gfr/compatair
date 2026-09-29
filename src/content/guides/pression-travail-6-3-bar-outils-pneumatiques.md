@@ -2,7 +2,7 @@
 title: "Pourquoi tant d’outils pneumatiques travaillent à 6,3 bar"
 description: "La pression maximale de la cuve ne dit pas ce qui arrive à l’outil. Comprenez la pression de service, le détendeur et la marge réseau autour de 6,3 bar."
 pubDate: 2026-07-13
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: Comprendre
 audiences: [particulier, professionnel]
 metiers: [btp-chantier]

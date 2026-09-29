@@ -12,7 +12,7 @@ sources:
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
   - https://www.einhell.fr/p/4010800-te-ac-430-90-10/
   - https://shop.abacaircompressors.com/en-INT/products/4116000868/atf-s-3-24-10-230150-ce
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 ---
 
 « Sans huile » et « lubrifié » décrivent la manière dont le groupe de compression est conçu. Ces mentions ne donnent directement ni le débit restitué, ni le niveau sonore, ni la durée d’utilisation possible avec un outil.

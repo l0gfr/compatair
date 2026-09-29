@@ -3,7 +3,7 @@ title: "Séquencer plusieurs compresseurs : base, appoint et pression réseau"
 seoTitle: "Séquencement de plusieurs compresseurs"
 description: "Méthode pour attribuer base et appoint, choisir les signaux et tester la séquence sans laisser plusieurs machines moduler en parallèle."
 pubDate: 2026-07-15
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 category: "Utiliser"
 audiences: [professionnel]
 metiers: [maintenance-industrielle]

@@ -1,7 +1,7 @@
 ---
 title: "Mecafer Fifty 50 L : débit restitué et usages réellement envisageables"
 description: "Mecafer Fifty 425090 : 140 L/min à 3 bar et 126 à 7 bar. Lire ses limites pour gonflage, clouage, clé à chocs et ponçage sans faux test."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Choisir
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "menuiserie-agencement"]

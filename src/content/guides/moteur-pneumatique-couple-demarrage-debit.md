@@ -16,7 +16,7 @@ sources:
   - https://www.atlascopco.com/en-us/itba/industry-solutions/Airmotors/technicalguide/performance
   - https://www.atlascopco.com/en-uk/itba/industry-solutions/airmotors/technicalguide/choose-air-motor
   - https://www.atlascopco.com/content/dam/pim/itba/atlas-copco/leaflets/global-leaflets/Leaflet-AtlasCopco-Pocket-Guide-to-Air-motors.pdf
-updatedDate: 2026-09-30
+updatedDate: 2026-09-29
 ---
 
 Un moteur pneumatique peut fournir la puissance voulue une fois lancé et **ne pas garantir le couple nécessaire au démarrage**. Pour un entraînement d’atelier, il faut donc vérifier au moins trois états : le départ sous charge, le point de travail et la vitesse libre éventuelle. Une seule valeur en kW ne suffit pas à choisir le moteur ni le compresseur.

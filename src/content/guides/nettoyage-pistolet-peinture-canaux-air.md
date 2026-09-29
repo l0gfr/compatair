@@ -1,7 +1,7 @@
 ---
 title: "Nettoyer un pistolet de peinture : éviter les dégâts dans les passages d’air"
 description: "Produit compatible, buse et aiguille, séchage et contrôle du jet : organiser le nettoyage d’un pistolet SATA sans confondre panne et manque d’air."
-pubDate: 2026-09-30
+pubDate: 2026-09-29
 category: Utiliser
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture", "menuiserie-agencement"]
