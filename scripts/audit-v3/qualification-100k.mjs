@@ -46,10 +46,10 @@ export function distribution(catalog, plan) {
 	return strata;
 }
 
-async function measureService(database, config) {
-	const tick = performance.now(), repository = openCatalogRepository(database);
-	const catalog = repositoryCatalog(repository);
-	const server = createCompatAirServer({ catalog, verdictSnapshot: calculationSnapshotMetadata(repository), allowedOrigins: new Set() });
+async function measureService(database, config, implementation = { openCatalogRepository, repositoryCatalog, calculationSnapshotMetadata, createCompatAirServer }) {
+	const tick = performance.now(), repository = implementation.openCatalogRepository(database);
+	const catalog = implementation.repositoryCatalog(repository);
+	const server = implementation.createCompatAirServer({ catalog, verdictSnapshot: implementation.calculationSnapshotMetadata(repository), allowedOrigins: new Set() });
 	await new Promise((accept, reject) => { server.once('error', reject); server.listen(0, '127.0.0.1', accept); });
 	const startupMs = performance.now() - tick;
 	const base = `http://127.0.0.1:${server.address().port}`;
@@ -121,6 +121,13 @@ async function main() {
 	const [mode, input, output, targetText] = process.argv.slice(2);
 	const configBytes = await readFile(new URL('../../config/qualification-100k.json', import.meta.url)), config = JSON.parse(configBytes);
 	if (mode === '--service-child') { console.log(JSON.stringify(await measureService(input, config))); return; }
+	if (mode === '--restored-service-child') {
+		const root = resolve(input), serverPath = join(root, '_server');
+		const implementation = { ...await import(pathToFileURL(join(serverPath, 'catalog-repository.mjs'))), ...await import(pathToFileURL(join(serverPath, 'mcp-server.mjs'))) };
+		const result = await measureService(join(serverPath, 'catalog.sqlite'), config, implementation);
+		result.restoredImplementation = Object.fromEntries(await Promise.all(['catalog-repository.mjs', 'mcp-server.mjs', 'air-sizing.mjs'].map(async name => [name, hash(await readFile(join(serverPath, name)))])));
+		console.log(JSON.stringify(result)); return;
+	}
 	assert.ok(['--plan', '--storage-service', '--prepare-source'].includes(mode), 'Modes: --plan | --storage-service | --prepare-source catalog.json report.json [target]');
 	assert.ok(input && output, 'Catalog and report paths are required');
 	const bytes = await readFile(input), catalog = JSON.parse(bytes);

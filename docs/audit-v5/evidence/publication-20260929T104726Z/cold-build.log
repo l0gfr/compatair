@@ -1,0 +1,36 @@
+12:48:43 [content] Syncing content
+12:48:43 [content] Synced content
+12:48:43 [types] Generated 521ms
+12:48:43 [build] output: "static"
+12:48:43 [build] mode: "static"
+12:48:43 [build] directory: /private/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-FfV5wH/dist/
+12:48:43 [build] Collecting build info...
+12:48:43 [build] ✓ Completed in 540ms.
+12:48:43 [build] Building static entrypoints...
+(node:82971) ExperimentalWarning: stripTypeScriptTypes is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+12:49:58 [vite] ✓ built in 1m 15s
+12:50:00 [vite] ✓ built in 1.74s
+12:50:00 [build] Rearranging server assets...
+
+ generating static routes 
+time: command terminated abnormally
+      317.23 real       240.61 user        51.96 sys
+          4363681792  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             3446269  page reclaims
+                1580  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                  13  messages sent
+                  10  messages received
+                   1  signals received
+              119171  voluntary context switches
+             1031371  involuntary context switches
+       1506027219242  instructions retired
+       1045849389098  cycles elapsed
+          7401582800  peak memory footprint
+time: signal: Invalid argument

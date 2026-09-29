@@ -1,0 +1,2753 @@
+{
+  "sourceCommit": "aa2b856d4f341439c35353bdb228caf925e06aa1",
+  "now": "2026-09-29T00:00:00.000Z",
+  "baseline": {
+    "schemaVersion": 1,
+    "sourceSha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "paths": [
+      "/",
+      "/compresseurs/a/",
+      "/compresseurs/b/"
+    ]
+  },
+  "previous": {
+    "schemaVersion": 1,
+    "baselineSha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "gitSha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "builtAt": "2026-09-29T00:00:00.000Z",
+    "batches": []
+  },
+  "policy": {
+    "schemaVersion": 1,
+    "paused": false,
+    "minimumDaysBetweenBatches": 7,
+    "stages": [
+      {
+        "catalog": 50,
+        "guides": 5
+      }
+    ],
+    "maximumTopicShare": 0.25,
+    "similarityThreshold": 0.82,
+    "containmentThreshold": 0.92
+  },
+  "candidates": [
+    {
+      "path": "/compresseurs/a/",
+      "family": "catalog",
+      "topic": "brand",
+      "signature": "exact",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine."
+    },
+    {
+      "path": "/compresseurs/b/",
+      "family": "catalog",
+      "topic": "brand",
+      "signature": "exact",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine."
+    },
+    {
+      "path": "/compresseurs/ref-0/",
+      "family": "catalog",
+      "topic": "topic0",
+      "signature": "technical-0",
+      "text": "vide",
+      "identities": [],
+      "priority": {
+        "score": 0
+      },
+      "blockedReason": "missing-critical-source"
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-1/",
+      "family": "usages",
+      "topic": "topic1",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/guides/ref-2/",
+      "family": "guides",
+      "topic": "topic2",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/compresseurs/ref-3/",
+      "family": "catalog",
+      "topic": "topic3",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-4/",
+      "family": "usages",
+      "topic": "topic4",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/guides/ref-5/",
+      "family": "guides",
+      "topic": "topic5",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/compresseurs/ref-6/",
+      "family": "catalog",
+      "topic": "topic6",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-7/",
+      "family": "usages",
+      "topic": "topic7",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/guides/ref-8/",
+      "family": "guides",
+      "topic": "topic8",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/compresseurs/ref-9/",
+      "family": "catalog",
+      "topic": "topic9",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-10/",
+      "family": "usages",
+      "topic": "topic10",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/guides/ref-11/",
+      "family": "guides",
+      "topic": "topic0",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/compresseurs/ref-12/",
+      "family": "catalog",
+      "topic": "topic1",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-13/",
+      "family": "usages",
+      "topic": "topic2",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/guides/ref-14/",
+      "family": "guides",
+      "topic": "topic3",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/compresseurs/ref-15/",
+      "family": "catalog",
+      "topic": "topic4",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-16/",
+      "family": "usages",
+      "topic": "topic5",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/guides/ref-17/",
+      "family": "guides",
+      "topic": "topic6",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/compresseurs/ref-18/",
+      "family": "catalog",
+      "topic": "topic7",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-19/",
+      "family": "usages",
+      "topic": "topic8",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      },
+      "blockedReason": "missing-critical-source"
+    },
+    {
+      "path": "/guides/ref-20/",
+      "family": "guides",
+      "topic": "topic9",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/compresseurs/ref-21/",
+      "family": "catalog",
+      "topic": "topic10",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-22/",
+      "family": "usages",
+      "topic": "topic0",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/guides/ref-23/",
+      "family": "guides",
+      "topic": "topic1",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/compresseurs/ref-24/",
+      "family": "catalog",
+      "topic": "topic2",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-25/",
+      "family": "usages",
+      "topic": "topic3",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/guides/ref-26/",
+      "family": "guides",
+      "topic": "topic4",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/compresseurs/ref-27/",
+      "family": "catalog",
+      "topic": "topic5",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-28/",
+      "family": "usages",
+      "topic": "topic6",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/guides/ref-29/",
+      "family": "guides",
+      "topic": "topic7",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/compresseurs/ref-30/",
+      "family": "catalog",
+      "topic": "topic8",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-31/",
+      "family": "usages",
+      "topic": "topic9",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/guides/ref-32/",
+      "family": "guides",
+      "topic": "topic10",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/compresseurs/ref-33/",
+      "family": "catalog",
+      "topic": "topic0",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-34/",
+      "family": "usages",
+      "topic": "topic1",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/guides/ref-35/",
+      "family": "guides",
+      "topic": "topic2",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/compresseurs/ref-36/",
+      "family": "catalog",
+      "topic": "topic3",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-37/",
+      "family": "usages",
+      "topic": "topic4",
+      "signature": "technical-2",
+      "text": "vide",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/guides/ref-38/",
+      "family": "guides",
+      "topic": "topic5",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      },
+      "blockedReason": "missing-critical-source"
+    },
+    {
+      "path": "/compresseurs/ref-39/",
+      "family": "catalog",
+      "topic": "topic6",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-40/",
+      "family": "usages",
+      "topic": "topic7",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/guides/ref-41/",
+      "family": "guides",
+      "topic": "topic8",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/compresseurs/ref-42/",
+      "family": "catalog",
+      "topic": "topic9",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-43/",
+      "family": "usages",
+      "topic": "topic10",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/guides/ref-44/",
+      "family": "guides",
+      "topic": "topic0",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/compresseurs/ref-45/",
+      "family": "catalog",
+      "topic": "topic1",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-46/",
+      "family": "usages",
+      "topic": "topic2",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/guides/ref-47/",
+      "family": "guides",
+      "topic": "topic3",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/compresseurs/ref-48/",
+      "family": "catalog",
+      "topic": "topic4",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-49/",
+      "family": "usages",
+      "topic": "topic5",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/guides/ref-50/",
+      "family": "guides",
+      "topic": "topic6",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/compresseurs/ref-51/",
+      "family": "catalog",
+      "topic": "topic7",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-52/",
+      "family": "usages",
+      "topic": "topic8",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/guides/ref-53/",
+      "family": "guides",
+      "topic": "topic9",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/compresseurs/ref-54/",
+      "family": "catalog",
+      "topic": "topic10",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-55/",
+      "family": "usages",
+      "topic": "topic0",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/guides/ref-56/",
+      "family": "guides",
+      "topic": "topic1",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/compresseurs/ref-57/",
+      "family": "catalog",
+      "topic": "topic2",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      },
+      "blockedReason": "missing-critical-source"
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-58/",
+      "family": "usages",
+      "topic": "topic3",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/guides/ref-59/",
+      "family": "guides",
+      "topic": "topic4",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/compresseurs/ref-60/",
+      "family": "catalog",
+      "topic": "topic5",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-61/",
+      "family": "usages",
+      "topic": "topic6",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/guides/ref-62/",
+      "family": "guides",
+      "topic": "topic7",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/compresseurs/ref-63/",
+      "family": "catalog",
+      "topic": "topic8",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-64/",
+      "family": "usages",
+      "topic": "topic9",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/guides/ref-65/",
+      "family": "guides",
+      "topic": "topic10",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/compresseurs/ref-66/",
+      "family": "catalog",
+      "topic": "topic0",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-67/",
+      "family": "usages",
+      "topic": "topic1",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/guides/ref-68/",
+      "family": "guides",
+      "topic": "topic2",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/compresseurs/ref-69/",
+      "family": "catalog",
+      "topic": "topic3",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-70/",
+      "family": "usages",
+      "topic": "topic4",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/guides/ref-71/",
+      "family": "guides",
+      "topic": "topic5",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/compresseurs/ref-72/",
+      "family": "catalog",
+      "topic": "topic6",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-73/",
+      "family": "usages",
+      "topic": "topic7",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/guides/ref-74/",
+      "family": "guides",
+      "topic": "topic8",
+      "signature": "technical-4",
+      "text": "vide",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/compresseurs/ref-75/",
+      "family": "catalog",
+      "topic": "topic9",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-76/",
+      "family": "usages",
+      "topic": "topic10",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      },
+      "blockedReason": "missing-critical-source"
+    },
+    {
+      "path": "/guides/ref-77/",
+      "family": "guides",
+      "topic": "topic0",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/compresseurs/ref-78/",
+      "family": "catalog",
+      "topic": "topic1",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-79/",
+      "family": "usages",
+      "topic": "topic2",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/guides/ref-80/",
+      "family": "guides",
+      "topic": "topic3",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/compresseurs/ref-81/",
+      "family": "catalog",
+      "topic": "topic4",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-82/",
+      "family": "usages",
+      "topic": "topic5",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/guides/ref-83/",
+      "family": "guides",
+      "topic": "topic6",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/compresseurs/ref-84/",
+      "family": "catalog",
+      "topic": "topic7",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-85/",
+      "family": "usages",
+      "topic": "topic8",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/guides/ref-86/",
+      "family": "guides",
+      "topic": "topic9",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/compresseurs/ref-87/",
+      "family": "catalog",
+      "topic": "topic10",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-88/",
+      "family": "usages",
+      "topic": "topic0",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/guides/ref-89/",
+      "family": "guides",
+      "topic": "topic1",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/compresseurs/ref-90/",
+      "family": "catalog",
+      "topic": "topic2",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-91/",
+      "family": "usages",
+      "topic": "topic3",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/guides/ref-92/",
+      "family": "guides",
+      "topic": "topic4",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/compresseurs/ref-93/",
+      "family": "catalog",
+      "topic": "topic5",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-94/",
+      "family": "usages",
+      "topic": "topic6",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/guides/ref-95/",
+      "family": "guides",
+      "topic": "topic7",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      },
+      "blockedReason": "missing-critical-source"
+    },
+    {
+      "path": "/compresseurs/ref-96/",
+      "family": "catalog",
+      "topic": "topic8",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-97/",
+      "family": "usages",
+      "topic": "topic9",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/guides/ref-98/",
+      "family": "guides",
+      "topic": "topic10",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/compresseurs/ref-99/",
+      "family": "catalog",
+      "topic": "topic0",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-100/",
+      "family": "usages",
+      "topic": "topic1",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/guides/ref-101/",
+      "family": "guides",
+      "topic": "topic2",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/compresseurs/ref-102/",
+      "family": "catalog",
+      "topic": "topic3",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-103/",
+      "family": "usages",
+      "topic": "topic4",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/guides/ref-104/",
+      "family": "guides",
+      "topic": "topic5",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/compresseurs/ref-105/",
+      "family": "catalog",
+      "topic": "topic6",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-106/",
+      "family": "usages",
+      "topic": "topic7",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/guides/ref-107/",
+      "family": "guides",
+      "topic": "topic8",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/compresseurs/ref-108/",
+      "family": "catalog",
+      "topic": "topic9",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-109/",
+      "family": "usages",
+      "topic": "topic10",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/guides/ref-110/",
+      "family": "guides",
+      "topic": "topic0",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/compresseurs/ref-111/",
+      "family": "catalog",
+      "topic": "topic1",
+      "signature": "technical-1",
+      "text": "vide",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-112/",
+      "family": "usages",
+      "topic": "topic2",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/guides/ref-113/",
+      "family": "guides",
+      "topic": "topic3",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/compresseurs/ref-114/",
+      "family": "catalog",
+      "topic": "topic4",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      },
+      "blockedReason": "missing-critical-source"
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-115/",
+      "family": "usages",
+      "topic": "topic5",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/guides/ref-116/",
+      "family": "guides",
+      "topic": "topic6",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/compresseurs/ref-117/",
+      "family": "catalog",
+      "topic": "topic7",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-118/",
+      "family": "usages",
+      "topic": "topic8",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/guides/ref-119/",
+      "family": "guides",
+      "topic": "topic9",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/compresseurs/ref-120/",
+      "family": "catalog",
+      "topic": "topic10",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-121/",
+      "family": "usages",
+      "topic": "topic0",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/guides/ref-122/",
+      "family": "guides",
+      "topic": "topic1",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/compresseurs/ref-123/",
+      "family": "catalog",
+      "topic": "topic2",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-124/",
+      "family": "usages",
+      "topic": "topic3",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/guides/ref-125/",
+      "family": "guides",
+      "topic": "topic4",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/compresseurs/ref-126/",
+      "family": "catalog",
+      "topic": "topic5",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-127/",
+      "family": "usages",
+      "topic": "topic6",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/guides/ref-128/",
+      "family": "guides",
+      "topic": "topic7",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/compresseurs/ref-129/",
+      "family": "catalog",
+      "topic": "topic8",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-130/",
+      "family": "usages",
+      "topic": "topic9",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/guides/ref-131/",
+      "family": "guides",
+      "topic": "topic10",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/compresseurs/ref-132/",
+      "family": "catalog",
+      "topic": "topic0",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-133/",
+      "family": "usages",
+      "topic": "topic1",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      },
+      "blockedReason": "missing-critical-source"
+    },
+    {
+      "path": "/guides/ref-134/",
+      "family": "guides",
+      "topic": "topic2",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/compresseurs/ref-135/",
+      "family": "catalog",
+      "topic": "topic3",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-136/",
+      "family": "usages",
+      "topic": "topic4",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/guides/ref-137/",
+      "family": "guides",
+      "topic": "topic5",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/compresseurs/ref-138/",
+      "family": "catalog",
+      "topic": "topic6",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-139/",
+      "family": "usages",
+      "topic": "topic7",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/guides/ref-140/",
+      "family": "guides",
+      "topic": "topic8",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/compresseurs/ref-141/",
+      "family": "catalog",
+      "topic": "topic9",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-142/",
+      "family": "usages",
+      "topic": "topic10",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/guides/ref-143/",
+      "family": "guides",
+      "topic": "topic0",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/compresseurs/ref-144/",
+      "family": "catalog",
+      "topic": "topic1",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-145/",
+      "family": "usages",
+      "topic": "topic2",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/guides/ref-146/",
+      "family": "guides",
+      "topic": "topic3",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/compresseurs/ref-147/",
+      "family": "catalog",
+      "topic": "topic4",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-148/",
+      "family": "usages",
+      "topic": "topic5",
+      "signature": "technical-3",
+      "text": "vide",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/guides/ref-149/",
+      "family": "guides",
+      "topic": "topic6",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/compresseurs/ref-150/",
+      "family": "catalog",
+      "topic": "topic7",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-151/",
+      "family": "usages",
+      "topic": "topic8",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/guides/ref-152/",
+      "family": "guides",
+      "topic": "topic9",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      },
+      "blockedReason": "missing-critical-source"
+    },
+    {
+      "path": "/compresseurs/ref-153/",
+      "family": "catalog",
+      "topic": "topic10",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-154/",
+      "family": "usages",
+      "topic": "topic0",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/guides/ref-155/",
+      "family": "guides",
+      "topic": "topic1",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/compresseurs/ref-156/",
+      "family": "catalog",
+      "topic": "topic2",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-157/",
+      "family": "usages",
+      "topic": "topic3",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/guides/ref-158/",
+      "family": "guides",
+      "topic": "topic4",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/compresseurs/ref-159/",
+      "family": "catalog",
+      "topic": "topic5",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-160/",
+      "family": "usages",
+      "topic": "topic6",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/guides/ref-161/",
+      "family": "guides",
+      "topic": "topic7",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/compresseurs/ref-162/",
+      "family": "catalog",
+      "topic": "topic8",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-163/",
+      "family": "usages",
+      "topic": "topic9",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/guides/ref-164/",
+      "family": "guides",
+      "topic": "topic10",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/compresseurs/ref-165/",
+      "family": "catalog",
+      "topic": "topic0",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-166/",
+      "family": "usages",
+      "topic": "topic1",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/guides/ref-167/",
+      "family": "guides",
+      "topic": "topic2",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/compresseurs/ref-168/",
+      "family": "catalog",
+      "topic": "topic3",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-169/",
+      "family": "usages",
+      "topic": "topic4",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/guides/ref-170/",
+      "family": "guides",
+      "topic": "topic5",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/compresseurs/ref-171/",
+      "family": "catalog",
+      "topic": "topic6",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      },
+      "blockedReason": "missing-critical-source"
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-172/",
+      "family": "usages",
+      "topic": "topic7",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/guides/ref-173/",
+      "family": "guides",
+      "topic": "topic8",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/compresseurs/ref-174/",
+      "family": "catalog",
+      "topic": "topic9",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-175/",
+      "family": "usages",
+      "topic": "topic10",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/guides/ref-176/",
+      "family": "guides",
+      "topic": "topic0",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/compresseurs/ref-177/",
+      "family": "catalog",
+      "topic": "topic1",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-178/",
+      "family": "usages",
+      "topic": "topic2",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/guides/ref-179/",
+      "family": "guides",
+      "topic": "topic3",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/compresseurs/ref-180/",
+      "family": "catalog",
+      "topic": "topic4",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-181/",
+      "family": "usages",
+      "topic": "topic5",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/guides/ref-182/",
+      "family": "guides",
+      "topic": "topic6",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/compresseurs/ref-183/",
+      "family": "catalog",
+      "topic": "topic7",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-184/",
+      "family": "usages",
+      "topic": "topic8",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/guides/ref-185/",
+      "family": "guides",
+      "topic": "topic9",
+      "signature": "technical-0",
+      "text": "vide",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/compresseurs/ref-186/",
+      "family": "catalog",
+      "topic": "topic10",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-187/",
+      "family": "usages",
+      "topic": "topic0",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/guides/ref-188/",
+      "family": "guides",
+      "topic": "topic1",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/compresseurs/ref-189/",
+      "family": "catalog",
+      "topic": "topic2",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-190/",
+      "family": "usages",
+      "topic": "topic3",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      },
+      "blockedReason": "missing-critical-source"
+    },
+    {
+      "path": "/guides/ref-191/",
+      "family": "guides",
+      "topic": "topic4",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/compresseurs/ref-192/",
+      "family": "catalog",
+      "topic": "topic5",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-193/",
+      "family": "usages",
+      "topic": "topic6",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/guides/ref-194/",
+      "family": "guides",
+      "topic": "topic7",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/compresseurs/ref-195/",
+      "family": "catalog",
+      "topic": "topic8",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-196/",
+      "family": "usages",
+      "topic": "topic9",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/guides/ref-197/",
+      "family": "guides",
+      "topic": "topic10",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/compresseurs/ref-198/",
+      "family": "catalog",
+      "topic": "topic0",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-199/",
+      "family": "usages",
+      "topic": "topic1",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/guides/ref-200/",
+      "family": "guides",
+      "topic": "topic2",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/compresseurs/ref-201/",
+      "family": "catalog",
+      "topic": "topic3",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-202/",
+      "family": "usages",
+      "topic": "topic4",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/guides/ref-203/",
+      "family": "guides",
+      "topic": "topic5",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/compresseurs/ref-204/",
+      "family": "catalog",
+      "topic": "topic6",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-205/",
+      "family": "usages",
+      "topic": "topic7",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/guides/ref-206/",
+      "family": "guides",
+      "topic": "topic8",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/compresseurs/ref-207/",
+      "family": "catalog",
+      "topic": "topic9",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-208/",
+      "family": "usages",
+      "topic": "topic10",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/guides/ref-209/",
+      "family": "guides",
+      "topic": "topic0",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      },
+      "blockedReason": "missing-critical-source"
+    },
+    {
+      "path": "/compresseurs/ref-210/",
+      "family": "catalog",
+      "topic": "topic1",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-211/",
+      "family": "usages",
+      "topic": "topic2",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/guides/ref-212/",
+      "family": "guides",
+      "topic": "topic3",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/compresseurs/ref-213/",
+      "family": "catalog",
+      "topic": "topic4",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-214/",
+      "family": "usages",
+      "topic": "topic5",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/guides/ref-215/",
+      "family": "guides",
+      "topic": "topic6",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/compresseurs/ref-216/",
+      "family": "catalog",
+      "topic": "topic7",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-217/",
+      "family": "usages",
+      "topic": "topic8",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/guides/ref-218/",
+      "family": "guides",
+      "topic": "topic9",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/compresseurs/ref-219/",
+      "family": "catalog",
+      "topic": "topic10",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-220/",
+      "family": "usages",
+      "topic": "topic0",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/guides/ref-221/",
+      "family": "guides",
+      "topic": "topic1",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/compresseurs/ref-222/",
+      "family": "catalog",
+      "topic": "topic2",
+      "signature": "technical-2",
+      "text": "vide",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-223/",
+      "family": "usages",
+      "topic": "topic3",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/guides/ref-224/",
+      "family": "guides",
+      "topic": "topic4",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/compresseurs/ref-225/",
+      "family": "catalog",
+      "topic": "topic5",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-226/",
+      "family": "usages",
+      "topic": "topic6",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/guides/ref-227/",
+      "family": "guides",
+      "topic": "topic7",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/compresseurs/ref-228/",
+      "family": "catalog",
+      "topic": "topic8",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      },
+      "blockedReason": "missing-critical-source"
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-229/",
+      "family": "usages",
+      "topic": "topic9",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/guides/ref-230/",
+      "family": "guides",
+      "topic": "topic10",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/compresseurs/ref-231/",
+      "family": "catalog",
+      "topic": "topic0",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-232/",
+      "family": "usages",
+      "topic": "topic1",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    },
+    {
+      "path": "/guides/ref-233/",
+      "family": "guides",
+      "topic": "topic2",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 2
+      }
+    },
+    {
+      "path": "/compresseurs/ref-234/",
+      "family": "catalog",
+      "topic": "topic3",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 3
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-235/",
+      "family": "usages",
+      "topic": "topic4",
+      "signature": "technical-0",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 4
+      }
+    },
+    {
+      "path": "/guides/ref-236/",
+      "family": "guides",
+      "topic": "topic5",
+      "signature": "technical-1",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une réserve réduit les cycles de démarrage.",
+      "identities": [],
+      "priority": {
+        "score": 5
+      }
+    },
+    {
+      "path": "/compresseurs/ref-237/",
+      "family": "catalog",
+      "topic": "topic6",
+      "signature": "technical-2",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Une mesure du débit reste indispensable.",
+      "identities": [],
+      "priority": {
+        "score": 6
+      }
+    },
+    {
+      "path": "/quel-compresseur-pour/ref-238/",
+      "family": "usages",
+      "topic": "topic7",
+      "signature": "technical-3",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine.",
+      "identities": [],
+      "priority": {
+        "score": 0
+      }
+    },
+    {
+      "path": "/guides/ref-239/",
+      "family": "guides",
+      "topic": "topic8",
+      "signature": "technical-4",
+      "text": "Une fuite impose une mesure au point de raccordement avant de choisir le compresseur. La pression doit rester stable pendant toute la phase de fonctionnement. Vérifier le flexible puis le raccord évite une conclusion erronée sur la machine. Un diamètre insuffisant réduit la pression disponible.",
+      "identities": [],
+      "priority": {
+        "score": 1
+      }
+    }
+  ],
+  "cases": [
+    {
+      "name": "release",
+      "allowRelease": true,
+      "expectedPlanSha256": "71a878a046f06f094c07e1f32b45e91cc3bab56e64942be907fe0da7ec5c6a5f"
+    },
+    {
+      "name": "offline",
+      "allowRelease": false,
+      "expectedPlanSha256": "5f82bfc48e5bd00287024c15a43b4e1413f86d39e0e8d8be5af1f812933b724f"
+    },
+    {
+      "name": "paused",
+      "allowRelease": true,
+      "policy": {
+        "schemaVersion": 1,
+        "paused": true,
+        "minimumDaysBetweenBatches": 7,
+        "stages": [
+          {
+            "catalog": 50,
+            "guides": 5
+          }
+        ],
+        "maximumTopicShare": 0.25,
+        "similarityThreshold": 0.82,
+        "containmentThreshold": 0.92
+      },
+      "expectedPlanSha256": "5d7c78d7263f658bd2fbfa0f38cafff5ea5b2f0295dd4d15bdbc7525a87e357b"
+    },
+    {
+      "name": "threshold-boundary",
+      "allowRelease": true,
+      "policy": {
+        "schemaVersion": 1,
+        "paused": false,
+        "minimumDaysBetweenBatches": 7,
+        "stages": [
+          {
+            "catalog": 50,
+            "guides": 5
+          }
+        ],
+        "maximumTopicShare": 0.25,
+        "similarityThreshold": 1,
+        "containmentThreshold": 1
+      },
+      "expectedPlanSha256": "71a878a046f06f094c07e1f32b45e91cc3bab56e64942be907fe0da7ec5c6a5f"
+    }
+  ]
+}

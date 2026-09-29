@@ -1,0 +1,15 @@
+{
+  "synthetic": true,
+  "mode": "collect",
+  "releaseMode": "offline",
+  "now": "2026-09-29T00:00:00.000Z",
+  "moduleSha256": "c0e051ad06d968ff95e8a8e2f0b76709a4fc386f442f9405c46e9c626665215c",
+  "node": "v24.19.0",
+  "policySha256": "691c7f624f5a5f40d4bd3ab136f49cd0cdb6c3c8fddffde3dccd54d452df25ad",
+  "baselineSha256": "722058afd27d4495064d30f5d529f9f2c0b82cc6f31ed713f9bb8128e38faa9e",
+  "status": "passed",
+  "candidates": 178445,
+  "candidatesSha256": "a82a0de6d698a2f3b1f56fe1a04e6a88241a8665cab36c443fe32a89088cdb66",
+  "seconds": 93.199511292,
+  "peakRssMiB": 1501.234375
+}

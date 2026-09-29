@@ -1,0 +1,90 @@
+
+> compatair@0.1.0 check /Users/bluetouff/Desktop/DEV/CompatAir
+> astro check
+
+12:54:03 [content] Syncing content
+12:54:03 [content] Synced content
+12:54:03 [types] Generated 383ms
+12:54:03 [check] Getting diagnostics for Astro files in /Users/bluetouff/Desktop/DEV/CompatAir...
+[96mpublic/widget/v1/compatair-widget.js[0m:[93m74[0m:[93m12[0m - [93mwarning[0m[90m ts(80006): [0mThis may be converted to an async function.
+
+[7m74[0m   function update(options) {
+[7m  [0m [93m           ~~~~~~[0m
+
+[96mpublic/widget/v1.0.0/compatair-widget.js[0m:[93m64[0m:[93m12[0m - [93mwarning[0m[90m ts(80006): [0mThis may be converted to an async function.
+
+[7m64[0m   function update(options) {
+[7m  [0m [93m           ~~~~~~[0m
+
+[96mpublic/widget/v1.1.0/compatair-widget.js[0m:[93m74[0m:[93m12[0m - [93mwarning[0m[90m ts(80006): [0mThis may be converted to an async function.
+
+[7m74[0m   function update(options) {
+[7m  [0m [93m           ~~~~~~[0m
+
+[96mscripts/audit-v3/intention-registry.test.ts[0m:[93m63[0m:[93m10[0m - [91merror[0m[90m ts(7053): [0mElement implicitly has an 'any' type because expression of type '"/example/"' can't be used to index type '{}'.
+  Property '/example/' does not exist on type '{}'.
+
+[7m63[0m   expect(result.pages['/example/'].error).toContain('redirects are not followed');
+[7m  [0m [91m         ~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96mscripts/audit-v3/intention-registry.test.ts[0m:[93m62[0m:[93m10[0m - [91merror[0m[90m ts(7053): [0mElement implicitly has an 'any' type because expression of type '"/example/"' can't be used to index type '{}'.
+  Property '/example/' does not exist on type '{}'.
+
+[7m62[0m   expect(result.pages['/example/']).toMatchObject({ status: 'unavailable' });
+[7m  [0m [91m         ~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96mscripts/audit-v3/intention-registry.test.ts[0m:[93m61[0m:[93m58[0m - [91merror[0m[90m ts(2345): [0mArgument of type '(url: string) => Promise<Response>' is not assignable to parameter of type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Types of parameters 'url' and 'input' are incompatible.
+    Type 'URL | RequestInfo' is not assignable to type 'string'.
+      Type 'URL' is not assignable to type 'string'.
+
+[7m61[0m   const result = await capturePublicPages(['/example/'], async (url: string) => new URL(url).pathname.endsWith('.json') ? new Response(JSON.stringify({ gitSha: 'a'.repeat(40) }), { headers: { 'content-type': 'application/json' } }) : new Response('', { status: 302, headers: { location: 'http://127.0.0.1/private' } }));
+[7m  [0m [91m                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96mscripts/audit-v3/intention-registry.test.ts[0m:[93m55[0m:[93m10[0m - [91merror[0m[90m ts(7053): [0mElement implicitly has an 'any' type because expression of type '"/example/"' can't be used to index type '{}'.
+  Property '/example/' does not exist on type '{}'.
+
+[7m55[0m   expect(result.pages['/example/'].blocks).toHaveLength(2);
+[7m  [0m [91m         ~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96mscripts/audit-v3/intention-registry.test.ts[0m:[93m54[0m:[93m10[0m - [91merror[0m[90m ts(7053): [0mElement implicitly has an 'any' type because expression of type '"/example/"' can't be used to index type '{}'.
+  Property '/example/' does not exist on type '{}'.
+
+[7m54[0m   expect(result.pages['/example/'].http.xRobotsTag).toBe('noindex');
+[7m  [0m [91m         ~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96mscripts/audit-v3/intention-registry.test.ts[0m:[93m52[0m:[93m58[0m - [91merror[0m[90m ts(2345): [0mArgument of type '(url: string, options: RequestInit) => Promise<Response>' is not assignable to parameter of type '{ (input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>; (input: string | URL | Request, init?: RequestInit | undefined): Promise<...>; }'.
+  Types of parameters 'url' and 'input' are incompatible.
+    Type 'URL | RequestInfo' is not assignable to type 'string'.
+      Type 'URL' is not assignable to type 'string'.
+
+[7m52[0m   const result = await capturePublicPages(['/example/'], request);
+[7m  [0m [91m                                                         ~~~~~~~[0m
+
+[96mscripts/lib/multi-brand-catalog-import.mjs[0m:[93m17[0m:[93m25[0m - [93mwarning[0m[90m ts(6385): [0m'(params?: unknown): ZodNumber' is deprecated.
+
+[7m17[0m  tankLiters: z.number().finite().nonnegative(), maxPressureBar: positive,
+[7m  [0m [93m                        ~~~~~~[0m
+[96mscripts/lib/multi-brand-catalog-import.mjs[0m:[93m4[0m:[93m29[0m - [93mwarning[0m[90m ts(6385): [0m'(params?: unknown): ZodNumber' is deprecated.
+
+[7m4[0m const positive = z.number().finite().positive();
+[7m [0m [93m                            ~~~~~~[0m
+
+[96mscripts/lib/technical-expansion-2026.test.mjs[0m:[93m44[0m:[93m5[0m - [93mwarning[0m[90m ts(6133): [0m'a' is declared but its value is never read.
+
+[7m44[0m    (a, b) => { b.rows[1] = b.rows[0]; },
+[7m  [0m [93m    ~[0m
+[96mscripts/lib/technical-expansion-2026.test.mjs[0m:[93m42[0m:[93m5[0m - [93mwarning[0m[90m ts(6133): [0m'a' is declared but its value is never read.
+
+[7m42[0m    (a, b) => { b.rows[0].workingPressureBar.typical = 7; },
+[7m  [0m [93m    ~[0m
+[96mscripts/lib/technical-expansion-2026.test.mjs[0m:[93m41[0m:[93m5[0m - [93mwarning[0m[90m ts(6133): [0m'a' is declared but its value is never read.
+
+[7m41[0m    (a, b) => { b.rows[0].airflowLpm *= 60; },
+[7m  [0m [93m    ~[0m
+[96mscripts/lib/technical-expansion-2026.test.mjs[0m:[93m38[0m:[93m8[0m - [93mwarning[0m[90m ts(6133): [0m'b' is declared but its value is never read.
+
+[7m38[0m    (a, b) => { a.rows.find(x => x.brand === 'Airpress').fadCurve = [{ pressureBar: 8, litersPerMinute: 250 }]; },
+[7m  [0m [93m       ~[0m
+
+Result (7037 files): 
+- 6 errors
+- 0 warnings
+- 9 hints
+
+ ELIFECYCLE  Command failed with exit code 1.

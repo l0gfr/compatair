@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "scope": "evidence history directory construction and URL lookup only",
+  "sourceCommit": "aa2b856d4f341439c35353bdb228caf925e06aa1",
+  "baselineFile": "evidence-history-directory.before.ts.txt",
+  "baselineSha256": "794be648f60c9d0a652dcf3d07f561308059c0a89bfd701351e1084ed5b2010a",
+  "optimizedFile": "src/data/evidence-history-directory.ts",
+  "optimizedSha256": "748da05252212f3a06a6eeb480e74d41790ed375947f26e4a9a3b31ec98faeb2",
+  "profile": {
+    "path": "/tmp/compatair-v5-cold-build-native-sample.txt",
+    "sha256": "4a16f622eca0f1ba8f525e24379b027c236e78eb76d1ef73764b546c6a31cf28",
+    "observedStack": "module evaluation > ArrayMap > ArrayFilter",
+    "samples": 767,
+    "limit": "Native sampling does not identify the JavaScript callback with certainty. Source inspection independently identifies the eager product-by-event filter."
+  },
+  "tests": {
+    "node": "24.19.0",
+    "command": "pnpm exec vitest run src/data/public-directories.test.ts src/domain/evidence-history.test.ts --maxWorkers=2 --reporter=json --outputFile=.astro/audit-v5/evidence-directory-tests.json",
+    "passed": 7,
+    "failed": 0,
+    "success": true,
+    "rawResultsSha256": "2e2ecf4c8f2aaadef2021602a1f786d8a0f9ccc4a42401a0310ffd3d04885ada"
+  },
+  "preserved": [
+    "Every directory field and ordering matches the former filter/sort construction on the complete current catalog.",
+    "Every product URL and pagination boundary matches the former directory index.",
+    "Source event order and payloads are unchanged.",
+    "Unknown-product error remains an error."
+  ],
+  "notExecuted": [
+    "A new 100k publication replay by this subtask",
+    "Global typecheck after subsequent registry annotation repair"
+  ]
+}

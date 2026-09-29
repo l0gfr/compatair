@@ -1,0 +1,9 @@
+
+ RUN  v4.1.11 /Users/bluetouff/Desktop/DEV/CompatAir
+
+
+ Test Files  2 passed (2)
+      Tests  26 passed (26)
+   Start at  12:35:42
+   Duration  898ms (transform 54ms, setup 0ms, import 81ms, tests 782ms, environment 0ms)
+

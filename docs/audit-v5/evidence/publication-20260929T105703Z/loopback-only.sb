@@ -1,0 +1,8 @@
+(version 1)
+(allow default)
+(deny network*)
+(deny file-write*)
+(allow file-write* (subpath "/private/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-FfV5wH") (literal "/dev/null"))
+(allow network-bind (local ip "localhost:*"))
+(allow network-inbound (local ip "localhost:*"))
+(allow network-outbound (remote ip "localhost:*"))

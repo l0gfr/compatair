@@ -1,0 +1,17 @@
+12:58:36 [WARN] [content] data store cleared (force)
+12:58:37 [content] Syncing content
+12:58:37 [content] Synced content
+12:58:37 [types] Generated 515ms
+12:58:37 [build] output: "static"
+12:58:37 [build] mode: "static"
+12:58:37 [build] directory: /private/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-FfV5wH/dist/
+12:58:37 [build] Collecting build info...
+12:58:37 [build] ✓ Completed in 541ms.
+12:58:37 [build] Building static entrypoints...
+(node:85296) ExperimentalWarning: stripTypeScriptTypes is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+13:00:27 [vite] ✓ built in 1m 50s
+13:00:29 [vite] ✓ built in 2.06s
+13:00:29 [build] Rearranging server assets...
+
+ generating static routes 

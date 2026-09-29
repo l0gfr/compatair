@@ -1,0 +1,23 @@
+{
+  "sourceCommit": "aa2b856d4f341439c35353bdb228caf925e06aa1",
+  "now": "2026-09-29T00:00:00.000Z",
+  "synthetic": true,
+  "configSha256": "5c36a5c2e5cc33c6c736b5b90e623348b1ec906786d437293dc1876914667d24",
+  "budgets": {
+    "databaseBuildSeconds": 180,
+    "databaseBytes": 2147483648,
+    "serviceStartupMs": 5000,
+    "servicePeakMiB": 256,
+    "httpP95Ms": 150,
+    "httpP99Ms": 500,
+    "httpUnexpectedErrors": 0,
+    "publicationSeconds": 1500,
+    "publicationPeakMiB": 8192,
+    "archiveBytes": 184549376,
+    "restoreSeconds": 300,
+    "rollbackSeconds": 120
+  },
+  "root": "/private/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-FfV5wH",
+  "network": "denied",
+  "startedAt": "2026-09-29T10:20:03.660084+00:00"
+}

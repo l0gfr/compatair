@@ -1,0 +1,6 @@
+{
+  "status": "interrupted-diagnostic-run",
+  "reason": "Profiling found repeated ArrayFilter during module evaluation; replay harness also required server packaging and stricter checks. Stop this diagnostic attempt before applying repairs; no claim of timeout or OOM.",
+  "recordedAt": "2026-09-29T10:53:29.814076+00:00",
+  "pid": 82971
+}

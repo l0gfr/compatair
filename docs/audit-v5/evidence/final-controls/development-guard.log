@@ -1,0 +1,8 @@
+file:///Users/bluetouff/Desktop/DEV/CompatAir/scripts/verify-indexation-release.mjs:9
+if (!plan.allowRelease || artifact.gitSha === 'development' || !isDeepStrictEqual(artifact, plan.manifest)) throw new Error('Artefact SEO non déployable ou différent du plan vérifié.');
+                                                                                                                  ^
+
+Error: Artefact SEO non déployable ou différent du plan vérifié.
+    at file:///Users/bluetouff/Desktop/DEV/CompatAir/scripts/verify-indexation-release.mjs:9:115
+
+Node.js v24.19.0

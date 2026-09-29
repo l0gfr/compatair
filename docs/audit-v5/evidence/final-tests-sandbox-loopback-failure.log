@@ -1,0 +1,23 @@
+
+> compatair@0.1.0 test /Users/bluetouff/Desktop/DEV/CompatAir
+> vitest run --maxWorkers=2
+
+
+ RUN  v4.1.11 /Users/bluetouff/Desktop/DEV/CompatAir
+
+git: warning: confstr() failed with code 5: couldn't get path of DARWIN_USER_TEMP_DIR; using /tmp instead
+ ❯ server/audit-v3-http.test.ts (8 tests | 8 skipped) 4ms
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  server/audit-v3-http.test.ts > V3 real loopback HTTP boundary
+Error: listen EPERM: operation not permitted 127.0.0.1
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 136 passed (137)
+      Tests  998 passed | 9 skipped (1007)
+   Start at  13:22:45
+   Duration  103.90s (transform 31.61s, setup 0ms, import 177.58s, tests 18.12s, environment 7ms)
+
+ ELIFECYCLE  Test failed. See above for more details.

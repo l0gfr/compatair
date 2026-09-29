@@ -1,0 +1,66 @@
+{
+  "baselineCommit": "aa2b856d4f341439c35353bdb228caf925e06aa1",
+  "referenceMethod": "Unmodified aa2 comparison routine per independent scope; full-plan equivalence first verified against original on all 11849 real candidates. The unpartitioned 100k original failed at the unchanged heap limit.",
+  "reference": {
+    "synthetic": true,
+    "mode": "scoped-reference",
+    "releaseMode": "release",
+    "now": "2026-09-29T00:00:00.000Z",
+    "moduleSha256": "cd531e827d8afea43648167ccacef4315d8cb500f8e6cc9091e8e20cf09d0779",
+    "node": "v24.19.0",
+    "policySha256": "691c7f624f5a5f40d4bd3ab136f49cd0cdb6c3c8fddffde3dccd54d452df25ad",
+    "baselineSha256": "722058afd27d4495064d30f5d529f9f2c0b82cc6f31ed713f9bb8128e38faa9e",
+    "status": "passed",
+    "candidates": 178445,
+    "candidatesSha256": "a82a0de6d698a2f3b1f56fe1a04e6a88241a8665cab36c443fe32a89088cdb66",
+    "parts": {
+      "manifest": "ffd19eb080a1a5249045b04c058711db772d5ac6119f69959cbe75c39434d9eb",
+      "report": "e69251cfde38f04fd17116cc878f81536f84e704f815ee75a008278aa5f80bd8",
+      "consolidation": "18c06e751fccb61c69e1e5e95b63b0a5f9487b32a5dbc2a74f124ee1a8a2a4e3",
+      "limits": "19d3808ad94909a087ef346b1649a805b7f8f138e2fe6422fa1601598955ec6a",
+      "released": "02d20bbd7e394ad5999a4cebabac9619732c343a4cac99470c03e23ba2bdc2bc",
+      "previousSha": "c6bdfbc92fe55239b6afbe5a30feeacc6f522013af7ccb256a822ab05e3ba6e8",
+      "allowRelease": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+    },
+    "statusCounts": {
+      "existing": 4204,
+      "released": 55,
+      "queued": 18514,
+      "held": 155672
+    },
+    "seconds": 118.70573358300001,
+    "peakRssMiB": 2128.375
+  },
+  "optimized": {
+    "synthetic": true,
+    "mode": "plan",
+    "releaseMode": "release",
+    "now": "2026-09-29T00:00:00.000Z",
+    "moduleSha256": "6106cd2e6743b3e2f07ed0b31749de217a475269f179de2f8f41441ad2023985",
+    "node": "v24.19.0",
+    "policySha256": "691c7f624f5a5f40d4bd3ab136f49cd0cdb6c3c8fddffde3dccd54d452df25ad",
+    "baselineSha256": "722058afd27d4495064d30f5d529f9f2c0b82cc6f31ed713f9bb8128e38faa9e",
+    "status": "passed",
+    "candidates": 178445,
+    "candidatesSha256": "a82a0de6d698a2f3b1f56fe1a04e6a88241a8665cab36c443fe32a89088cdb66",
+    "parts": {
+      "manifest": "ffd19eb080a1a5249045b04c058711db772d5ac6119f69959cbe75c39434d9eb",
+      "report": "e69251cfde38f04fd17116cc878f81536f84e704f815ee75a008278aa5f80bd8",
+      "consolidation": "18c06e751fccb61c69e1e5e95b63b0a5f9487b32a5dbc2a74f124ee1a8a2a4e3",
+      "limits": "19d3808ad94909a087ef346b1649a805b7f8f138e2fe6422fa1601598955ec6a",
+      "released": "02d20bbd7e394ad5999a4cebabac9619732c343a4cac99470c03e23ba2bdc2bc",
+      "previousSha": "c6bdfbc92fe55239b6afbe5a30feeacc6f522013af7ccb256a822ab05e3ba6e8",
+      "allowRelease": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+    },
+    "statusCounts": {
+      "existing": 4204,
+      "released": 55,
+      "queued": 18514,
+      "held": 155672
+    },
+    "seconds": 29.984527917,
+    "peakRssMiB": 2365.140625
+  },
+  "allPlanPartsEqual": true,
+  "productionPublication": false
+}

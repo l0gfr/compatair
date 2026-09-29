@@ -1,0 +1,146 @@
+{"phase":"before-candidates","memory":{"rss":64045056,"heapTotal":12550144,"heapUsed":7261192,"external":2205946,"arrayBuffers":144613}}
+{"phase":"candidates","kind":"compressors","products":1024,"count":1024,"memory":{"rss":187645952,"heapTotal":31162368,"heapUsed":13061736,"external":2208497,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":2048,"count":2048,"memory":{"rss":213499904,"heapTotal":31604736,"heapUsed":19829760,"external":2208497,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":3072,"count":3072,"memory":{"rss":235864064,"heapTotal":58949632,"heapUsed":23683680,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":4096,"count":4096,"memory":{"rss":241205248,"heapTotal":59129856,"heapUsed":30285016,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":5120,"count":5120,"memory":{"rss":250740736,"heapTotal":59310080,"heapUsed":37450904,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":6144,"count":6144,"memory":{"rss":267042816,"heapTotal":92684288,"heapUsed":40914128,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":7168,"count":7168,"memory":{"rss":273170432,"heapTotal":109461504,"heapUsed":46505424,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":8192,"count":8192,"memory":{"rss":275202048,"heapTotal":109641728,"heapUsed":53150056,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":9216,"count":9216,"memory":{"rss":284491776,"heapTotal":109821952,"heapUsed":60055616,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":10240,"count":10240,"memory":{"rss":297861120,"heapTotal":110002176,"heapUsed":66522944,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":11264,"count":11264,"memory":{"rss":325926912,"heapTotal":176390144,"heapUsed":67351984,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":12288,"count":12288,"memory":{"rss":382500864,"heapTotal":203833344,"heapUsed":73818952,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":13312,"count":13312,"memory":{"rss":394756096,"heapTotal":204013568,"heapUsed":80576136,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":14336,"count":14336,"memory":{"rss":404176896,"heapTotal":204193792,"heapUsed":86995448,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":15360,"count":15360,"memory":{"rss":400506880,"heapTotal":204570624,"heapUsed":93692808,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":16384,"count":16384,"memory":{"rss":376668160,"heapTotal":204750848,"heapUsed":100610688,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":17408,"count":17408,"memory":{"rss":379027456,"heapTotal":204931072,"heapUsed":107073152,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":18432,"count":18432,"memory":{"rss":323944448,"heapTotal":205111296,"heapUsed":113610544,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":19456,"count":19456,"memory":{"rss":283869184,"heapTotal":205291520,"heapUsed":120357096,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":20480,"count":20480,"memory":{"rss":341622784,"heapTotal":203849728,"heapUsed":116451760,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":21504,"count":21504,"memory":{"rss":377634816,"heapTotal":251297792,"heapUsed":121022232,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"compressors","products":21811,"count":21811,"memory":{"rss":404602880,"heapTotal":256278528,"heapUsed":123191144,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":1024,"count":23859,"memory":{"rss":433127424,"heapTotal":260702208,"heapUsed":143443160,"external":2208669,"arrayBuffers":143823}}
+{"phase":"candidates","kind":"tools","products":2048,"count":25907,"memory":{"rss":437338112,"heapTotal":260882432,"heapUsed":156049192,"external":2208669,"arrayBuffers":143823}}
+{"phase":"candidates","kind":"tools","products":3072,"count":27955,"memory":{"rss":419315712,"heapTotal":261062656,"heapUsed":169511000,"external":2208669,"arrayBuffers":143823}}
+{"phase":"candidates","kind":"tools","products":4096,"count":30003,"memory":{"rss":417103872,"heapTotal":257736704,"heapUsed":171947760,"external":2208669,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":5120,"count":32051,"memory":{"rss":428654592,"heapTotal":257916928,"heapUsed":184455256,"external":2208669,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":6144,"count":34099,"memory":{"rss":497532928,"heapTotal":317177856,"heapUsed":193826200,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":7168,"count":36147,"memory":{"rss":514326528,"heapTotal":317358080,"heapUsed":206222304,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":8192,"count":38195,"memory":{"rss":536313856,"heapTotal":317538304,"heapUsed":219236496,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":9216,"count":40243,"memory":{"rss":546471936,"heapTotal":317718528,"heapUsed":231470384,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":10240,"count":42291,"memory":{"rss":534478848,"heapTotal":316997632,"heapUsed":236773424,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":11264,"count":44339,"memory":{"rss":564690944,"heapTotal":371965952,"heapUsed":249315152,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":12288,"count":46387,"memory":{"rss":580534272,"heapTotal":372146176,"heapUsed":261812576,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":13312,"count":48435,"memory":{"rss":601358336,"heapTotal":372326400,"heapUsed":274846408,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":14336,"count":50483,"memory":{"rss":526090240,"heapTotal":372506624,"heapUsed":287143632,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":15360,"count":52531,"memory":{"rss":537608192,"heapTotal":428507136,"heapUsed":291906808,"external":2208461,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":16384,"count":54579,"memory":{"rss":617988096,"heapTotal":427212800,"heapUsed":305798176,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":17408,"count":56627,"memory":{"rss":328351744,"heapTotal":427393024,"heapUsed":318269624,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":18432,"count":58675,"memory":{"rss":354484224,"heapTotal":427573248,"heapUsed":331199464,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":19456,"count":60723,"memory":{"rss":373309440,"heapTotal":427753472,"heapUsed":343428920,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":20480,"count":62771,"memory":{"rss":366657536,"heapTotal":427032576,"heapUsed":347877904,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":21504,"count":64819,"memory":{"rss":671744000,"heapTotal":483049472,"heapUsed":360338248,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":22528,"count":66867,"memory":{"rss":546291712,"heapTotal":483229696,"heapUsed":372888576,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":23552,"count":68915,"memory":{"rss":551305216,"heapTotal":483409920,"heapUsed":385911584,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":24576,"count":70963,"memory":{"rss":560824320,"heapTotal":483590144,"heapUsed":398054016,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":25600,"count":73011,"memory":{"rss":558366720,"heapTotal":483770368,"heapUsed":410895912,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":26624,"count":75059,"memory":{"rss":762527744,"heapTotal":538886144,"heapUsed":415988680,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":27648,"count":77107,"memory":{"rss":736772096,"heapTotal":539983872,"heapUsed":429379888,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":28672,"count":79155,"memory":{"rss":478887936,"heapTotal":540164096,"heapUsed":442489048,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":29696,"count":81203,"memory":{"rss":484130816,"heapTotal":540344320,"heapUsed":454603432,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":30720,"count":83251,"memory":{"rss":501219328,"heapTotal":540524544,"heapUsed":467696600,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":31744,"count":85299,"memory":{"rss":805191680,"heapTotal":594755584,"heapUsed":474075848,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":32768,"count":87347,"memory":{"rss":762134528,"heapTotal":594935808,"heapUsed":486652288,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":33792,"count":89395,"memory":{"rss":784580608,"heapTotal":595116032,"heapUsed":499823856,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":34816,"count":91443,"memory":{"rss":541212672,"heapTotal":595296256,"heapUsed":511741000,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":35840,"count":93491,"memory":{"rss":552681472,"heapTotal":595476480,"heapUsed":524797616,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":36864,"count":95539,"memory":{"rss":877527040,"heapTotal":650592256,"heapUsed":530294048,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":37888,"count":97587,"memory":{"rss":766771200,"heapTotal":650772480,"heapUsed":542972320,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":38912,"count":99635,"memory":{"rss":797655040,"heapTotal":650952704,"heapUsed":556121512,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":39936,"count":101683,"memory":{"rss":789544960,"heapTotal":651132928,"heapUsed":568069816,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":40960,"count":103731,"memory":{"rss":807895040,"heapTotal":650412032,"heapUsed":571347296,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":41984,"count":105779,"memory":{"rss":847036416,"heapTotal":706691072,"heapUsed":583428888,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":43008,"count":107827,"memory":{"rss":865763328,"heapTotal":706871296,"heapUsed":596111048,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":44032,"count":109875,"memory":{"rss":862748672,"heapTotal":707051520,"heapUsed":609291104,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":45056,"count":111923,"memory":{"rss":568524800,"heapTotal":707231744,"heapUsed":621105248,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":46080,"count":113971,"memory":{"rss":583630848,"heapTotal":707411968,"heapUsed":634345880,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":47104,"count":116019,"memory":{"rss":541851648,"heapTotal":764166144,"heapUsed":640288120,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":48128,"count":118067,"memory":{"rss":337559552,"heapTotal":764346368,"heapUsed":653015056,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":49152,"count":120115,"memory":{"rss":302186496,"heapTotal":764526592,"heapUsed":666217552,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":50176,"count":122163,"memory":{"rss":290897920,"heapTotal":764706816,"heapUsed":677997864,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":51200,"count":124211,"memory":{"rss":260571136,"heapTotal":764887040,"heapUsed":691371136,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":52224,"count":126259,"memory":{"rss":401047552,"heapTotal":819740672,"heapUsed":696034896,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":53248,"count":128307,"memory":{"rss":426360832,"heapTotal":819920896,"heapUsed":708837928,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":54272,"count":130355,"memory":{"rss":450887680,"heapTotal":820101120,"heapUsed":722115440,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":55296,"count":132403,"memory":{"rss":358219776,"heapTotal":820281344,"heapUsed":733874224,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":56320,"count":134451,"memory":{"rss":416874496,"heapTotal":819560448,"heapUsed":740015552,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":57344,"count":136499,"memory":{"rss":455344128,"heapTotal":875577344,"heapUsed":751617952,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":58368,"count":138547,"memory":{"rss":426082304,"heapTotal":875757568,"heapUsed":764431488,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":59392,"count":140595,"memory":{"rss":427786240,"heapTotal":875937792,"heapUsed":777729440,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":60416,"count":142643,"memory":{"rss":320700416,"heapTotal":876118016,"heapUsed":789503960,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":61440,"count":144691,"memory":{"rss":392167424,"heapTotal":875397120,"heapUsed":795870640,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":62464,"count":146739,"memory":{"rss":431947776,"heapTotal":931151872,"heapUsed":807251648,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":63488,"count":148787,"memory":{"rss":415563776,"heapTotal":931332096,"heapUsed":820173640,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":64512,"count":150835,"memory":{"rss":433192960,"heapTotal":931512320,"heapUsed":833596056,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":65536,"count":152883,"memory":{"rss":325926912,"heapTotal":931692544,"heapUsed":845309240,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":66560,"count":154931,"memory":{"rss":406388736,"heapTotal":987070464,"heapUsed":850913272,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":67584,"count":156979,"memory":{"rss":317505536,"heapTotal":987250688,"heapUsed":863000360,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":68608,"count":159027,"memory":{"rss":302940160,"heapTotal":987430912,"heapUsed":875952072,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":69632,"count":161075,"memory":{"rss":202964992,"heapTotal":987611136,"heapUsed":889469616,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":70656,"count":163123,"memory":{"rss":217448448,"heapTotal":987791360,"heapUsed":901166464,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":71680,"count":165171,"memory":{"rss":239501312,"heapTotal":987971584,"heapUsed":915125144,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":72704,"count":167219,"memory":{"rss":1216069632,"heapTotal":1042432000,"heapUsed":917683640,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":73728,"count":169267,"memory":{"rss":1207533568,"heapTotal":1042612224,"heapUsed":930712520,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":74752,"count":171315,"memory":{"rss":1230962688,"heapTotal":1042792448,"heapUsed":944178904,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":75776,"count":173363,"memory":{"rss":1242726400,"heapTotal":1045037056,"heapUsed":957830104,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":76800,"count":175411,"memory":{"rss":1278558208,"heapTotal":1044316160,"heapUsed":963888800,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":77824,"count":177459,"memory":{"rss":1315160064,"heapTotal":1100070912,"heapUsed":975074872,"external":2206068,"arrayBuffers":143615}}
+{"phase":"candidates","kind":"tools","products":78189,"count":178189,"memory":{"rss":1313619968,"heapTotal":1100070912,"heapUsed":979929544,"external":2206068,"arrayBuffers":143615}}
+{"phase":"after-candidates","count":178445,"memory":{"rss":322387968,"heapTotal":1136328704,"heapUsed":1024708440,"external":2206068,"arrayBuffers":143615}}
+{"phase":"analysis","count":10000,"scopes":1426,"indexedGrams":279455,"memory":{"rss":328171520,"heapTotal":1289814016,"heapUsed":1167781872,"external":2206068,"arrayBuffers":143615}}
+{"phase":"analysis","count":20000,"scopes":1426,"indexedGrams":279455,"memory":{"rss":353976320,"heapTotal":1293418496,"heapUsed":1163720632,"external":2206068,"arrayBuffers":143615}}
+{"phase":"analysis","count":30000,"scopes":189,"indexedGrams":31039,"memory":{"rss":382369792,"heapTotal":1324646400,"heapUsed":1222528344,"external":2206068,"arrayBuffers":143615}}
+{"phase":"analysis","count":40000,"scopes":4920,"indexedGrams":696816,"memory":{"rss":402014208,"heapTotal":1530298368,"heapUsed":1453625672,"external":2206068,"arrayBuffers":143615}}
+{"phase":"analysis","count":50000,"scopes":4920,"indexedGrams":696816,"memory":{"rss":325910528,"heapTotal":1533444096,"heapUsed":1462513432,"external":2206068,"arrayBuffers":143615}}
+{"phase":"analysis","count":60000,"scopes":4920,"indexedGrams":696816,"memory":{"rss":485785600,"heapTotal":1537736704,"heapUsed":1405263752,"external":2206068,"arrayBuffers":143615}}
+{"phase":"analysis","count":70000,"scopes":4920,"indexedGrams":696816,"memory":{"rss":380305408,"heapTotal":1540882432,"heapUsed":1412567784,"external":2206068,"arrayBuffers":143615}}
+{"phase":"analysis","count":80000,"scopes":4920,"indexedGrams":696816,"memory":{"rss":387448832,"heapTotal":1545469952,"heapUsed":1420415304,"external":2206068,"arrayBuffers":143615}}
+{"phase":"analysis","count":90000,"scopes":4920,"indexedGrams":696816,"memory":{"rss":433078272,"heapTotal":1548353536,"heapUsed":1427490408,"external":2206068,"arrayBuffers":143615}}
+{"phase":"analysis","count":100000,"scopes":2425,"indexedGrams":353435,"memory":{"rss":506691584,"heapTotal":1551761408,"heapUsed":1434803776,"external":2206068,"arrayBuffers":143615}}
+{"phase":"analysis","count":110000,"scopes":4149,"indexedGrams":594535,"memory":{"rss":307560448,"heapTotal":1706885120,"heapUsed":1627894744,"external":2206068,"arrayBuffers":143615}}
+{"phase":"analysis","count":120000,"scopes":4917,"indexedGrams":696538,"memory":{"rss":348192768,"heapTotal":1767768064,"heapUsed":1638257976,"external":2206068,"arrayBuffers":143615}}
+{"phase":"analysis","count":130000,"scopes":4917,"indexedGrams":696538,"memory":{"rss":366804992,"heapTotal":1770913792,"heapUsed":1646061416,"external":2206068,"arrayBuffers":143615}}
+{"phase":"analysis","count":140000,"scopes":4917,"indexedGrams":696538,"memory":{"rss":275922944,"heapTotal":1774059520,"heapUsed":1656210936,"external":2206068,"arrayBuffers":143615}}
+{"phase":"analysis","count":150000,"scopes":4917,"indexedGrams":696538,"memory":{"rss":353697792,"heapTotal":1777205248,"heapUsed":1666206952,"external":2271604,"arrayBuffers":209151}}
+{"phase":"analysis","count":160000,"scopes":4917,"indexedGrams":696538,"memory":{"rss":426082304,"heapTotal":1780613120,"heapUsed":1675368024,"external":2271604,"arrayBuffers":209151}}
+{"phase":"analysis","count":170000,"scopes":4917,"indexedGrams":696538,"memory":{"rss":309542912,"heapTotal":1783758848,"heapUsed":1683151840,"external":2271604,"arrayBuffers":209151}}
+{"phase":"analysis","count":178445,"scopes":0,"indexedGrams":0,"memory":{"rss":567902208,"heapTotal":1789214720,"heapUsed":1679443064,"external":2271604,"arrayBuffers":209151}}
+file:///private/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-FfV5wH/scripts/prepare-indexation.mjs:27
+await writeFile(resolve(directory, 'indexation-plan.tmp.json'), `${JSON.stringify(plan, null, 2)}\n`);
+                                                                        ^
+
+RangeError: Invalid string length
+    at JSON.stringify (<anonymous>)
+    at file:///private/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-FfV5wH/scripts/prepare-indexation.mjs:27:73
+
+Node.js v24.19.0
+      195.03 real        99.72 user        17.26 sys
+          1977417728  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             1638131  page reclaims
+                 194  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+              104563  voluntary context switches
+              613996  involuntary context switches
+        990241575584  instructions retired
+        376874429832  cycles elapsed
+          3745261016  peak memory footprint

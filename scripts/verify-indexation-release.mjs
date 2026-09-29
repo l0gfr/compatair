@@ -4,7 +4,7 @@ import { readLiveIndexation } from './lib/indexation-live.mjs';
 import { MAX_INDEXATION_ARTIFACT_AGE_MS, validateBaseline, validateManifest } from './lib/indexation-policy.mjs';
 
 const baseline = validateBaseline(JSON.parse(await readFile('config/indexation-baseline.json', 'utf8')));
-const plan = JSON.parse(await readFile('.astro/seo/indexation-plan.json', 'utf8'));
+const plan = JSON.parse(await readFile('.astro/seo/indexation-build.json', 'utf8'));
 const artifact = validateManifest(JSON.parse(await readFile('dist/data/indexation.json', 'utf8')), baseline);
 if (!plan.allowRelease || artifact.gitSha === 'development' || !isDeepStrictEqual(artifact, plan.manifest)) throw new Error('Artefact SEO non déployable ou différent du plan vérifié.');
 if (Date.now() - Date.parse(artifact.builtAt) > MAX_INDEXATION_ARTIFACT_AGE_MS) throw new Error('Artefact SEO trop ancien : reconstruire avant déploiement.');

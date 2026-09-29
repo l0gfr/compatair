@@ -1,0 +1,1 @@
+bounded-profile-1.log: setup used a relative path from isolated cwd, causing SameFileError. Run stopped with SIGTERM before comparison. No successful measurement claimed.

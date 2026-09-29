@@ -1,0 +1,9 @@
+{
+  "status": "failed-supervisor-cleanup",
+  "observedAt": "2026-09-29T11:23:52.938697+00:00",
+  "supervisorPid": 85294,
+  "orphanPid": 85296,
+  "observation": "After watchdog sent SIGTERM, BSD time exited but synchronous Astro remained at 92.8% CPU. Process group was then manually SIGKILLed. Trial remains not-qualified.",
+  "repairRequired": "Wait for and terminate the entire owned process group, independently of the time wrapper exit.",
+  "originalReport": "publication-results.json"
+}

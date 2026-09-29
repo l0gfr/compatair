@@ -1,0 +1,12 @@
+{
+  "sourceCommit": "aa2b856d4f341439c35353bdb228caf925e06aa1",
+  "scope": "isolated 100000 references",
+  "seconds": 96.02,
+  "exitCode": 134,
+  "peakRssBytes": 4178788352,
+  "heapLimitRaised": false,
+  "logSha256": "52d34ff1d466979b58b95f6a43ac0462269305ac628f70fcc27e932cca7997db",
+  "lastAnalysisCount": 30000,
+  "candidateCount": 178445,
+  "heapUsedAfterCandidates": 2501759112
+}

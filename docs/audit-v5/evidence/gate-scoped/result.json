@@ -1,0 +1,30 @@
+{
+  "synthetic": true,
+  "mode": "scoped-reference",
+  "releaseMode": "release",
+  "now": "2026-09-29T00:00:00.000Z",
+  "moduleSha256": "cd531e827d8afea43648167ccacef4315d8cb500f8e6cc9091e8e20cf09d0779",
+  "node": "v24.19.0",
+  "policySha256": "691c7f624f5a5f40d4bd3ab136f49cd0cdb6c3c8fddffde3dccd54d452df25ad",
+  "baselineSha256": "722058afd27d4495064d30f5d529f9f2c0b82cc6f31ed713f9bb8128e38faa9e",
+  "status": "passed",
+  "candidates": 11849,
+  "candidatesSha256": "6d8e8018f6200d9aa302243d9571c99a5fe5e5b2d7038df238c8463d86f56806",
+  "parts": {
+    "manifest": "2aa4ee72b7bf81b5b02fceff00ee0d9d247b7b3e2fd3efeb4407fe2b7314f994",
+    "report": "9f5e3188518f1cfd3b41873d76f19ec35ebcdc013db89d2016b533e9584e91fc",
+    "consolidation": "752dd08a68b09134351b88fda80eb8f7eb7fafb9399e9616a008d980e3c12903",
+    "limits": "19d3808ad94909a087ef346b1649a805b7f8f138e2fe6422fa1601598955ec6a",
+    "released": "02d20bbd7e394ad5999a4cebabac9619732c343a4cac99470c03e23ba2bdc2bc",
+    "previousSha": "c6bdfbc92fe55239b6afbe5a30feeacc6f522013af7ccb256a822ab05e3ba6e8",
+    "allowRelease": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+  },
+  "statusCounts": {
+    "existing": 4204,
+    "released": 55,
+    "queued": 7077,
+    "held": 513
+  },
+  "seconds": 6.180511084,
+  "peakRssMiB": 460.15625
+}

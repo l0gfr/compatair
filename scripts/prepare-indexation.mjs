@@ -1,9 +1,10 @@
-import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
+import { mkdir, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { collectIndexationCandidates } from './lib/indexation-candidates.mjs';
 import { readLiveIndexation } from './lib/indexation-live.mjs';
 import { planIndexation } from './lib/indexation-planner.mjs';
 import { validateBaseline, validatePolicy } from './lib/indexation-policy.mjs';
+import { indexationBuildProjection, writeIndexationArtifact } from './lib/indexation-artifact.mjs';
 
 const offline = process.argv.includes('--offline');
 if (process.argv.slice(2).some((arg) => arg !== '--offline')) throw new Error('Option de préparation SEO inconnue.');
@@ -22,8 +23,8 @@ const gitSha = process.env[releaseEnvironmentKey] ?? process.env[githubEnvironme
 const plan = planIndexation({ candidates, baseline, previous, policy, now, gitSha, allowRelease: !offline });
 const directory = resolve(root, '.astro/seo');
 await mkdir(directory, { recursive: true });
-await writeFile(resolve(directory, 'indexation-plan.tmp.json'), `${JSON.stringify(plan, null, 2)}\n`);
-await rename(resolve(directory, 'indexation-plan.tmp.json'), resolve(directory, 'indexation-plan.json'));
+const reportSha256 = await writeIndexationArtifact(resolve(directory, 'indexation-plan.json'), plan);
+await writeIndexationArtifact(resolve(directory, 'indexation-build.json'), indexationBuildProjection(plan, reportSha256));
 const counts = Object.fromEntries(['existing', 'released', 'queued', 'held'].map((status) => [status, plan.report.filter((entry) => entry.status === status).length]));
 console.log(`Indexation : ${JSON.stringify(counts)}. Base publique ${plan.previousSha}. Rapport : .astro/seo/indexation-plan.json`);
 if (offline) console.warn('Aperçu hors ligne : aucune nouvelle admission, cet artefact ne doit pas être déployé.');

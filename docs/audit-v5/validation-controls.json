@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-29T11:35:05.981716+00:00",
+  "baseCommit": "aa2b856d4f341439c35353bdb228caf925e06aa1",
+  "workingTree": "uncommitted changes; not a deployed release",
+  "node": "24.19.0",
+  "pnpm": "10.34.4",
+  "checks": [
+    {
+      "kind": "unit-regression-and-integration",
+      "command": "pnpm test",
+      "result": "passed",
+      "files": 137,
+      "tests": 1008,
+      "seconds": 147.65,
+      "scope": "Real project suite including V4 engine boundaries, counterfactuals, first burst, lexical ordering, Zod and local HTTP API/MCP tests; not a certification of all application behaviour.",
+      "log": "evidence/final-controls/tests.log"
+    },
+    {
+      "kind": "typecheck",
+      "command": "pnpm check",
+      "result": "passed",
+      "errors": 0,
+      "warnings": 0,
+      "hints": 9,
+      "log": "evidence/final-controls/typecheck.log"
+    },
+    {
+      "kind": "real-catalog-build",
+      "command": "node scripts/prepare-indexation.mjs --offline && pnpm exec astro build && node scripts/build-catalog-database.mjs",
+      "result": "passed",
+      "references": 6506,
+      "pages": 12980,
+      "engineVersion": "1.4.3",
+      "artifactMarker": "development",
+      "limit": "Executed alongside tests; not a standalone performance benchmark and not production evidence.",
+      "log": "evidence/final-controls/real-catalog-build.log.gz"
+    },
+    {
+      "kind": "zod-snapshot-validation",
+      "command": "pnpm data:validate",
+      "result": "passed",
+      "snapshots": 9,
+      "log": "evidence/final-controls/snapshots.log"
+    },
+    {
+      "kind": "built-artifact-audit",
+      "command": "pnpm audit:dist",
+      "result": "passed",
+      "nonBlockingWarnings": [
+        "marques/aircraft/index.html: 116 internal destinations exceed the advisory threshold of 100"
+      ],
+      "log": "evidence/final-controls/dist-audit.log"
+    },
+    {
+      "kind": "source-lint",
+      "command": "pnpm lint:source",
+      "result": "passed",
+      "log": "evidence/final-controls/lint.log"
+    },
+    {
+      "kind": "deployment-guard",
+      "command": "node scripts/verify-indexation-release.mjs",
+      "result": "expected rejection",
+      "exitCode": 1,
+      "scope": "The offline development artifact is rejected as non-deployable.",
+      "log": "evidence/final-controls/development-guard.log"
+    },
+    {
+      "kind": "browser",
+      "result": "passed-observed-navigation",
+      "origin": "http://127.0.0.1:64884",
+      "artifact": "real catalog local development build",
+      "observations": [
+        "/preuves/: dated evidence directory displayed, 6506 products, 10238 events, 326 pages",
+        "Followed PO 1 LR product link; product heading BOGE PO 1 LR displayed",
+        "Followed Historique des preuves de cette référence; returned to /preuves/#boge-po-1-lr-50 with five evidence entries and visible anchor below the header",
+        "Native screenshots visually inspected at the existing 1280 x 720 viewport; captured console error list empty"
+      ],
+      "limits": [
+        "No mobile viewport verification",
+        "No production browser or full public API test",
+        "This browser check does not corroborate external source documents"
+      ],
+      "cleanup": "Agent preview and temporary tab closed"
+    },
+    {
+      "kind": "diff-whitespace",
+      "command": "git diff --check",
+      "result": "passed"
+    }
+  ],
+  "qualification100k": {
+    "result": "not-qualified",
+    "report": "publication-results.json",
+    "blocker": "Cold build exhausts unchanged total publication budget of 1500 seconds before HTML generation completes.",
+    "notExecuted": [
+      "completed cold build",
+      "warm build",
+      "archive and checksum",
+      "clean extraction",
+      "file parity",
+      "restored service",
+      "staging Apache/systemd drill"
+    ],
+    "supervisorRepair": "Group termination regression passed in final suite; full 100k trial not rerun after this repair."
+  },
+  "notExecuted": [
+    "production publication",
+    "CI run for these uncommitted changes",
+    "Google Search Console or SERP measurement",
+    "Linux Apache/systemd rollback drill"
+  ],
+  "failuresPreserved": "See evidence/archived-files.json and README.md; initial sandbox loopback and ps permission failures were preserved before a successful run with local execution permissions."
+}

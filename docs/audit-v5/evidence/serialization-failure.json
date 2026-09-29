@@ -1,0 +1,10 @@
+{
+  "status": "failed",
+  "phase": "JSON.stringify(plan)",
+  "error": "RangeError: Invalid string length",
+  "seconds": 195.03,
+  "peakRssBytes": 1977417728,
+  "analysisCompleted": 178445,
+  "heapLimitRaised": false,
+  "logSha256": "fa87ecc84e085eed9adb73ed67b7042a3bdd12f90c1ffb441a223d983c0264a4"
+}

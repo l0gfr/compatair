@@ -1,0 +1,49 @@
+
+ RUN  v4.1.11 /Users/bluetouff/Desktop/DEV/CompatAir
+
+ ❯ scripts/lib/indexation-planner.test.mjs (22 tests | 1 failed) 956ms
+     × loads across bounded workers in exact order, supports eval entry points and rejects overridden heap limits 592ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  scripts/lib/indexation-planner.test.mjs > bounded planner preserves the pinned admission decisions > loads across bounded workers in exact order, supports eval entry points and rejects overridden heap limits
+AssertionError: expected [Function] to throw error including 'SEO worker heap exceeds' but got 'Command failed: /Users/bluetouff/.cac…'
+
+- Expected
++ Received
+
+- SEO worker heap exceeds
++ Command failed: /Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node --max-old-space-size=4096 --input-type=module -e import {collectIndexationCandidates} from "file:///Users/bluetouff/Desktop/DEV/CompatAir/scripts/lib/indexation-candidates.mjs"; const samples=[];const rows=await collectIndexationCandidates("/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/indexation-workers-OgcP0v",{onProgress:x=>samples.push(x.products)});console.log(JSON.stringify({paths:rows.map(x=>x.path),samples}));
++ node:internal/worker:288
++       throw new ERR_WORKER_INVALID_EXEC_ARGV(this[kHandle].invalidExecArgv);
++             ^
++
++ Error [ERR_WORKER_INVALID_EXEC_ARGV]: Initiated Worker with invalid execArgv flags: --max-old-space-size=4096
++     at new Worker (node:internal/worker:288:13)
++     at file:///Users/bluetouff/Desktop/DEV/CompatAir/scripts/lib/indexation-candidates.mjs:32:18
++     at new Promise (<anonymous>)
++     at candidateBatch (file:///Users/bluetouff/Desktop/DEV/CompatAir/scripts/lib/indexation-candidates.mjs:30:9)
++     at collectIndexationCandidates (file:///Users/bluetouff/Desktop/DEV/CompatAir/scripts/lib/indexation-candidates.mjs:60:24)
++     at async file:///Users/bluetouff/Desktop/DEV/CompatAir/[eval1]:1:158 {
++   code: 'ERR_WORKER_INVALID_EXEC_ARGV'
++ }
++
++ Node.js v24.19.0
++
+
+ ❯ scripts/lib/indexation-planner.test.mjs:65:141
+     63|    expect(result.paths).toEqual(Array.from({ length: 1025 }, (_, i) =>…
+     64|    expect(result.samples).toEqual([1024, 1025]);
+     65|    await expect(promisify(execFile)(process.execPath, ['--max-old-spac…
+       |                                                                                                                                             ^
+     66|   } finally { await rm(directory, { recursive: true, force: true }); }
+     67|  }, 40000);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 25 passed (26)
+   Start at  12:34:08
+   Duration  1.12s (transform 73ms, setup 0ms, import 112ms, tests 968ms, environment 0ms)
+

@@ -1,4 +1,11 @@
 import { describe, expect, it } from 'vitest';
+import { createHash } from 'node:crypto';
+import { mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
+import { indexationBuildProjection, writeIndexationArtifact } from './indexation-artifact.mjs';
 import { analyzeCandidates, editorialText, planIndexation, productCandidate } from './indexation-planner.mjs';
 import { createIndexationPolicy, validateManifest, validatePolicy } from './indexation-policy.mjs';
 import { readLiveIndexation } from './indexation-live.mjs';
@@ -14,6 +21,51 @@ function candidate(index, family = 'guides') {
 }
 const candidates = Array.from({ length: 200 }, (_, i) => candidate(i));
 const plan = (overrides = {}) => planIndexation({ candidates, baseline, previous, policy, now, ...overrides });
+const parity = JSON.parse(await readFile(new URL('../../tests/fixtures/audit-v5/indexation-parity.json', import.meta.url), 'utf8'));
+
+describe('bounded planner preserves the pinned admission decisions', () => {
+	it.each(parity.cases)('matches the complete aa2b856d plan: $name', ({ expectedPlanSha256, ...scenario }) => {
+		const result = planIndexation({ ...parity, ...scenario, now: new Date(parity.now) });
+		expect(createHash('sha256').update(JSON.stringify(result)).digest('hex')).toBe(expectedPlanSha256);
+	});
+	it('releases completed comparison scopes and retains cardinalities only', () => {
+		const samples = [];
+		const result = analyzeCandidates(parity.candidates, new Set(parity.baseline.paths), parity.policy, { onProgress: sample => samples.push(sample) });
+		expect(result.every(entry => Number.isInteger(entry.gramCount) && !Object.hasOwn(entry, 'grams'))).toBe(true);
+		expect(samples.at(-1)).toMatchObject({ count: parity.candidates.length, scopes: 0, indexedGrams: 0 });
+	});
+	it('streams the full plan unchanged and gives the build only its required projection', async () => {
+		const directory = await mkdtemp(join(tmpdir(), 'indexation-artifact-'));
+		try {
+			const result = planIndexation({ ...parity, now: new Date(parity.now) });
+			const path = join(directory, 'plan.json');
+			const digest = await writeIndexationArtifact(path, result);
+			const bytes = await readFile(path);
+			expect(JSON.parse(bytes)).toEqual(JSON.parse(JSON.stringify(result)));
+			expect(digest).toBe(createHash('sha256').update(bytes).digest('hex'));
+			const projection = indexationBuildProjection(result, digest);
+			expect(projection).not.toHaveProperty('report');
+			expect(projection).toMatchObject({ manifest: result.manifest, consolidation: result.consolidation, previousSha: result.previousSha, allowRelease: result.allowRelease, reportSha256: digest });
+			await expect(writeIndexationArtifact(path, { invalid: 1n })).rejects.toThrow();
+			expect(await readFile(path)).toEqual(bytes);
+		} finally { await rm(directory, { recursive: true, force: true }); }
+	});
+	it('loads across bounded workers in exact order, supports eval entry points and rejects overridden heap limits', async () => {
+		const directory = await mkdtemp(join(tmpdir(), 'indexation-workers-'));
+		try {
+			for (const path of ['src/data/products/compressors', 'src/data/products/tools', 'src/content/guides', 'config']) await mkdir(join(directory, path), { recursive: true });
+			await writeFile(join(directory, 'config/seo-query-panel.json'), JSON.stringify({ queries: [] }));
+			for (let i = 0; i < 1025; i++) await writeFile(join(directory, 'src/data/products/compressors', `${String(i).padStart(4, '0')}.ts`), `export default ${JSON.stringify({ id: String(i), slug: `ref-${i}`, brand: 'Fixture', model: String(i), evidence: [], fadCurve: [], cutInPressureBar: 4, cutOutPressureBar: 8 })};`);
+			const moduleUrl = new URL('./indexation-candidates.mjs', import.meta.url).href;
+			const code = `import {collectIndexationCandidates} from ${JSON.stringify(moduleUrl)}; const samples=[];const rows=await collectIndexationCandidates(${JSON.stringify(directory)},{onProgress:x=>samples.push(x.products)});console.log(JSON.stringify({paths:rows.map(x=>x.path),samples}));`;
+			const { stdout } = await promisify(execFile)(process.execPath, ['--input-type=module', '-e', code], { timeout: 30000 });
+			const result = JSON.parse(stdout);
+			expect(result.paths).toEqual(Array.from({ length: 1025 }, (_, i) => `/compresseurs/ref-${i}/`));
+			expect(result.samples).toEqual([1024, 1025]);
+			await expect(promisify(execFile)(process.execPath, ['--max-old-space-size=4096', '--input-type=module', '-e', code], { timeout: 30000 })).rejects.toThrow('SEO worker heap exceeds');
+		} finally { await rm(directory, { recursive: true, force: true }); }
+	}, 40000);
+});
 
 describe('automatic progressive indexation', () => {
 	it('caps guides and catalog separately and keeps thousands of new pages out', () => {

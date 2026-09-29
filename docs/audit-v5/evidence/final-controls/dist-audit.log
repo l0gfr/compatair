@@ -1,0 +1,7 @@
+
+> compatair@0.1.0 audit:dist /Users/bluetouff/Desktop/DEV/CompatAir
+> node scripts/audit-dist.mjs
+
+Alertes SEO non bloquantes :
+marques/aircraft/index.html: 116 destinations internes uniques, seuil d’alerte 100 dépassé
+Audit réussi : 12980 pages, 4429 URL canoniques, 7218453 combinaisons explorables dont 7110609 couples fixes calculables à la demande et 107844 combinaisons paramétriques, sans page HTML quadratique ; distribution globale non matérialisée, 54 cartes sociales et titres ≤ 60 caractères. Artifact 676 Mo dont 351 Mo de HTML, sous les budgets de 975 et 393.75 Mo ; index de recherche 155 Ko gzip. JavaScript initial : plafond général 50 Ko, maintenance 51 Ko (maximum 50 Ko sur maintenance-preventive/index.html, Passeport 39 Ko sous son budget de 45 Ko) ; à la demande : plafond général 57 Ko, parcours versionnés 59 Ko (Calculateur 59 Ko sous son budget de 61 Ko, Passeport 57 Ko, maximum global 59 Ko sur calculateur/index.html) ; catalogue d’exécution 321 Ko sous son budget de 337.9072265625 Ko. Widget immuable et SRI vérifiés.

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "failureArchivedBeforeRepair": "evidence/check-before-intention-types.log",
+  "failureSha256": "e86711044088d82c14df734ad56a40e72c8f94bf026eab224aeb693944782f91",
+  "observedFailure": "6 TypeScript errors: inferred empty page map and narrow fetch mocks",
+  "repair": "JSDoc discriminated union for captured/unavailable pages; mocks implement typeof fetch and narrow pages before access. No any casts.",
+  "node": "24.19.0",
+  "targetedTests": {
+    "passed": 5,
+    "failed": 0,
+    "success": true,
+    "rawResultSha256": "a746542664498ea713de639b31c6d97fbd883546026dec2b39ec26eba964be7c"
+  },
+  "globalTypecheckAfterRepair": "not-executed-by-this-subtask"
+}

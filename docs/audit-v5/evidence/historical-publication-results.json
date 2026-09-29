@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "synthetic": true,
+  "sourceCommit": "bf27ebb4dbbb022966913c8fd96ecab70a97fab5",
+  "sourceCatalogVersion": "02fe8d998994ae642273a70bd63f6f265b7658714bff08ccab127d1a798a2a6f",
+  "sourcePreparation": "/tmp/compatair-v3-100k-publication-source.json",
+  "root": "/private/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-FfV5wH",
+  "startedAt": "2026-09-28T17:39:21Z",
+  "budgetsDeclaredBeforeRun": {
+    "databaseBuildSeconds": 180,
+    "databaseBytes": 2147483648,
+    "serviceStartupMs": 5000,
+    "servicePeakMiB": 256,
+    "httpP95Ms": 150,
+    "httpP99Ms": 500,
+    "httpUnexpectedErrors": 0,
+    "publicationSeconds": 1500,
+    "publicationPeakMiB": 8192,
+    "archiveBytes": 184549376,
+    "restoreSeconds": 300,
+    "rollbackSeconds": 120
+  },
+  "harnessSha256": "987e3e1c8af3c92beb8c866e8e3451b26112ef2bf1f6e0883f7f63ceaa8f9dc2",
+  "scope": "macOS isolated full publication trial; network denied and writes restricted to synthetic copy; no production deployment",
+  "memoryMeasurement": "Peak child RSS from BSD time plus sampled aggregate process-tree RSS every 500 ms; sample-based hard stop at 8192 MiB",
+  "publicationBudgetScope": "1500 seconds total across offline preparation, cold build, database, warm build and archive; restoration separately limited to 300 seconds",
+  "steps": [
+    {
+      "name": "isolation-probe",
+      "argv": [
+        "/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--input-type=module",
+        "-e",
+        "import net from 'node:net'; const s=net.createServer(); s.once('error',e=>{console.log(e.code);process.exit(e.code==='EPERM'?0:2)});s.listen(0,'127.0.0.1',()=>{s.close();process.exit(3)});"
+      ],
+      "status": "passed",
+      "log": "/private/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-FfV5wH/qualification-results/isolation-probe.log",
+      "timeoutSeconds": 15,
+      "network": "denied",
+      "exitCode": 0,
+      "seconds": 0.5368302089627832,
+      "sampledTreePeakMiB": 3.71875,
+      "childPeakMiB": 45.515625,
+      "failureReason": null
+    },
+    {
+      "name": "offline-indexation",
+      "argv": [
+        "/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "scripts/prepare-indexation.mjs",
+        "--offline"
+      ],
+      "status": "failed",
+      "log": "/private/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-FfV5wH/qualification-results/offline-indexation.log",
+      "timeoutSeconds": 1499.999992792029,
+      "network": "denied",
+      "exitCode": -6,
+      "seconds": 103.98371425003279,
+      "sampledTreePeakMiB": 4246.921875,
+      "childPeakMiB": 4257.421875,
+      "failureReason": null
+    }
+  ],
+  "qualification": "not-qualified",
+  "notExecuted": [
+    "staging Apache/systemd failure drill",
+    "public publication of synthetic corpus"
+  ],
+  "publicationSeconds": 103.98431879200507
+}

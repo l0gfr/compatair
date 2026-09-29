@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "scope": "Synthetic 100000 references, SEO preparation only; not complete publication qualification",
+  "baselineCommit": "aa2b856d4f341439c35353bdb228caf925e06aa1",
+  "node": "v24.19.0",
+  "candidateCount": 178445,
+  "budgetsUnchanged": true,
+  "baselineFailure": {
+    "sourceCommit": "aa2b856d4f341439c35353bdb228caf925e06aa1",
+    "scope": "isolated 100000 references",
+    "seconds": 96.02,
+    "exitCode": 134,
+    "peakRssBytes": 4178788352,
+    "heapLimitRaised": false,
+    "logSha256": "52d34ff1d466979b58b95f6a43ac0462269305ac628f70fcc27e932cca7997db",
+    "lastAnalysisCount": 30000,
+    "candidateCount": 178445,
+    "heapUsedAfterCandidates": 2501759112
+  },
+  "baselineLastSample": {
+    "phase": "analysis",
+    "count": 30000,
+    "invertedKeys": 1429059,
+    "gramCount": 4134841,
+    "memory": {
+      "rss": 2837282816,
+      "heapTotal": 3590701056,
+      "heapUsed": 3470629408,
+      "external": 38579056,
+      "arrayBuffers": 143615
+    }
+  },
+  "optimizedPreparation": {
+    "name": "offline-indexation",
+    "argv": [
+      "/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "scripts/prepare-indexation.mjs",
+      "--offline"
+    ],
+    "status": "passed",
+    "log": "/private/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-FfV5wH/qualification-v5/publication-20260929T105703Z/offline-indexation.log",
+    "timeoutSeconds": 1499.9999211250106,
+    "network": "denied",
+    "exitCode": 0,
+    "seconds": 90.18516824999824,
+    "sampledTreePeakMiB": 1551.640625,
+    "childPeakMiB": 1571.796875,
+    "failureReason": null
+  },
+  "optimizedLastCollectionSample": {
+    "phase": "candidates",
+    "kind": "tools",
+    "products": 78189,
+    "count": 178189,
+    "memory": {
+      "rss": 376143872,
+      "heapTotal": 1099808768,
+      "heapUsed": 980103832,
+      "external": 2274051,
+      "arrayBuffers": 143791
+    }
+  },
+  "optimizedLastAnalysisSample": {
+    "phase": "analysis",
+    "count": 178445,
+    "scopes": 0,
+    "indexedGrams": 0,
+    "memory": {
+      "rss": 661504000,
+      "heapTotal": 1789739008,
+      "heapUsed": 1666610904,
+      "external": 2339587,
+      "arrayBuffers": 209327
+    }
+  },
+  "artifacts": {
+    "indexation-plan.json": {
+      "bytes": 453104904,
+      "scope": "local-development-synthetic-not-production"
+    },
+    "indexation-build.json": {
+      "bytes": 155527073,
+      "scope": "local-development-synthetic-not-production"
+    }
+  },
+  "limits": [
+    "RSS is distinct from V8 heap and macOS physical footprint; RSS is the original protocol metric.",
+    "Original process failed before completing the analysis; optimized process completed every candidate.",
+    "This profile does not qualify static rendering, archive, restoration or Apache/systemd."
+  ]
+}

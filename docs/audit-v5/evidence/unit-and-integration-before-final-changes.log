@@ -1,0 +1,13 @@
+
+> compatair@0.1.0 test /Users/bluetouff/Desktop/DEV/CompatAir
+> vitest run --maxWorkers=2
+
+
+ RUN  v4.1.11 /Users/bluetouff/Desktop/DEV/CompatAir
+
+
+ Test Files  137 passed (137)
+      Tests  1004 passed (1004)
+   Start at  12:36:52
+   Duration  123.57s (transform 26.88s, setup 0ms, import 213.43s, tests 16.47s, environment 8ms)
+

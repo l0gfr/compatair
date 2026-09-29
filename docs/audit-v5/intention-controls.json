@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "scope": "intention-evidence-only",
+  "node": "24.19.0",
+  "tests": {
+    "command": "pnpm exec vitest run scripts/audit-v3/intention-registry.test.ts --maxWorkers=2 --reporter=json --outputFile=.astro/audit-v5/intention-tests.json",
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "success": true,
+    "startedAtEpochMs": 1790677583858,
+    "rawResultSha256": "48fe604ce5527e571aeaf2e976bde92698ece2527b4ea27775b779287a3337fa"
+  },
+  "syntaxChecks": [
+    "node --check scripts/audit-v3/intention-registry.mjs",
+    "python3 -m py_compile scripts/audit-v3/read-html-metadata.py",
+    "git diff --check"
+  ],
+  "capture": {
+    "startedAt": "2026-09-29T10:26:52.429Z",
+    "finishedAt": "2026-09-29T10:26:59.868Z",
+    "origin": "https://compatair.fr",
+    "releaseBefore": {
+      "schemaVersion": "1.0.0",
+      "gitSha": "1184e66a17f078309b16f5db5b6dce2807f87062"
+    },
+    "releaseAfter": {
+      "schemaVersion": "1.0.0",
+      "gitSha": "1184e66a17f078309b16f5db5b6dce2807f87062"
+    },
+    "releaseStable": true,
+    "limit": "A release marker stable across this read-only capture is not a per-response cryptographic attestation or a Google observation.",
+    "pageCount": 69,
+    "unavailable": []
+  },
+  "summary": {
+    "intentions": 100,
+    "associated": 99,
+    "unmapped": [
+      "q009"
+    ],
+    "distinctRoutes": 69,
+    "observationCount": 0,
+    "missingBuilds": []
+  },
+  "fieldPresenceInPublicHtml": {
+    "declared-value-found-in-html": 29,
+    "absent-from-declared-facts": 2,
+    "declared-value-empty-or-unhandled": 1
+  },
+  "nonExecuted": [
+    "browser rendering for this registry-only change",
+    "Google Search Console or SERP measurements",
+    "external source document revalidation",
+    "production deployment"
+  ],
+  "limits": [
+    "Source declarations at local HEAD aa2b856d are compared with HTML from a public service whose release marker reports 1184e66a, not with an attested V4 public release.",
+    "Local build contains development marker and is not production evidence.",
+    "Repeated intentions targeting one reference are not distinct product counts."
+  ]
+}

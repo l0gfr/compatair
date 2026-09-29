@@ -1,0 +1,74 @@
+{"phase":"before-candidates","memory":{"rss":63406080,"heapTotal":11763712,"heapUsed":7169168,"external":2145691,"arrayBuffers":144609}}
+{"phase":"after-candidates","count":178445,"memory":{"rss":350748672,"heapTotal":2629124096,"heapUsed":2501759112,"external":40152128,"arrayBuffers":1716687}}
+{"phase":"analysis","count":0,"invertedKeys":0,"gramCount":0,"memory":{"rss":855670784,"heapTotal":2646769664,"heapUsed":2550638432,"external":40152128,"arrayBuffers":1716687}}
+{"phase":"analysis","count":10000,"invertedKeys":988506,"gramCount":1431949,"memory":{"rss":886636544,"heapTotal":3227762688,"heapUsed":3109531624,"external":38579056,"arrayBuffers":143615}}
+{"phase":"analysis","count":20000,"invertedKeys":988506,"gramCount":2788358,"memory":{"rss":881688576,"heapTotal":3347234816,"heapUsed":3245241360,"external":38579056,"arrayBuffers":143615}}
+{"phase":"analysis","count":30000,"invertedKeys":1429059,"gramCount":4134841,"memory":{"rss":2837282816,"heapTotal":3590701056,"heapUsed":3470629408,"external":38579056,"arrayBuffers":143615}}
+
+<--- Last few GCs --->
+
+[68911:0x794d40c000]    93428 ms: Mark-Compact 4081.7 (4097.7) -> 4080.7 (4097.5) MB, pooled: 1 MB, 1271.54 / 0.00 ms  (average mu = 0.242, current mu = 0.022) allocation failure; scavenge might not succeed
+[68911:0x794d40c000]    95566 ms: Mark-Compact 4082.5 (4098.2) -> 4081.5 (4098.5) MB, pooled: 0 MB, 2136.46 / 0.04 ms  (average mu = 0.113, current mu = 0.001) allocation failure; scavenge might not succeed
+
+FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 0x1041499f4 node::OOMErrorHandler(char const*, v8::OOMDetails const&) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 2: 0x1043c4000 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 3: 0x1046234b4 v8::internal::Heap::stack() [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 4: 0x104626888 v8::internal::Heap::HasLowYoungGenerationAllocationRate() [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 5: 0x104637a7c v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags)::$_1::operator()() const [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 6: 0x104637350 void heap::base::Stack::SetMarkerAndCallbackImpl<v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags)::$_1>(heap::base::Stack*, void*, void const*) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 7: 0x104febbe0 PushAllRegistersAndIterateStack [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 8: 0x1046211b8 v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+ 9: 0x104615ec4 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+10: 0x1045e5128 v8::internal::FactoryBase<v8::internal::Factory>::NewRawTwoByteString(int, v8::internal::AllocationType) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+11: 0x1043f66b8 v8::internal::DirectHandle<v8::internal::String> v8::internal::String::SlowFlatten<v8::internal::DirectHandle>(v8::internal::Isolate*, v8::internal::DirectHandle<v8::internal::ConsString>, v8::internal::AllocationType) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+12: 0x10498e510 v8::internal::String::SlowEquals(v8::internal::Isolate*, v8::internal::DirectHandle<v8::internal::String>, v8::internal::DirectHandle<v8::internal::String>) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+13: 0x104aa0ca0 v8::internal::Runtime_StringEqual(int, unsigned long*, v8::internal::Isolate*) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+14: 0x1050de234 Builtins_CEntry_Return1_ArgvOnStack_NoBuiltinExit [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+15: 0x1050a41b0 Builtins_FindOrderedHashMapEntry [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+16: 0x128ef4da4 
+17: 0x105040bec Builtins_InterpreterEntryTrampoline [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+18: 0x105040bec Builtins_InterpreterEntryTrampoline [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+19: 0x10507f7e8 Builtins_AsyncFunctionAwaitResolveClosure [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+20: 0x105154e58 Builtins_PromiseFulfillReactionJob [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+21: 0x10506ebd0 Builtins_RunMicrotasks [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+22: 0x10503e7b0 Builtins_JSRunMicrotasksEntry [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+23: 0x104567690 v8::internal::(anonymous namespace)::Invoke(v8::internal::Isolate*, v8::internal::(anonymous namespace)::InvokeParams const&) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+24: 0x104567f04 v8::internal::(anonymous namespace)::InvokeWithTryCatch(v8::internal::Isolate*, v8::internal::(anonymous namespace)::InvokeParams const&) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+25: 0x104568040 v8::internal::Execution::TryRunMicrotasks(v8::internal::Isolate*, v8::internal::MicrotaskQueue*) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+26: 0x104596de4 v8::internal::MicrotaskQueue::RunMicrotasks(v8::internal::Isolate*) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+27: 0x104597744 v8::internal::MicrotaskQueue::PerformCheckpoint(v8::Isolate*) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+28: 0x1040270b8 node::InternalCallbackScope::Close() [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+29: 0x104026a90 node::InternalCallbackScope::~InternalCallbackScope() [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+30: 0x10414f118 node::fs::FileHandle::CloseReq::Resolve() [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+31: 0x10416a8c4 node::fs::FileHandle::ClosePromise()::$_0::__invoke(uv_fs_s*) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+32: 0x10413f444 node::MakeLibuvRequestCallback<uv_fs_s, void (*)(uv_fs_s*)>::Wrapper(uv_fs_s*) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+33: 0x105017af8 uv__work_done [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+34: 0x10501b548 uv__async_io [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+35: 0x10502fe40 uv__io_poll [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+36: 0x10501be9c uv_run [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+37: 0x1040286a8 node::SpinEventLoopInternal(node::Environment*) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+38: 0x1041a47d8 node::NodeMainInstance::Run() [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+39: 0x1040f67e0 node::Start(int, char**) [/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node]
+40: 0x194e63e80 start [/usr/lib/dyld]
+time: command terminated abnormally
+       96.02 real        73.33 user        31.08 sys
+          4178788352  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             5456234  page reclaims
+                3027  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+              112248  voluntary context switches
+              586110  involuntary context switches
+        868705657041  instructions retired
+        362696075652  cycles elapsed
+          4802574016  peak memory footprint

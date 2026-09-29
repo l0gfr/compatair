@@ -1,0 +1,13 @@
+
+> compatair@0.1.0 data:validate /Users/bluetouff/Desktop/DEV/CompatAir
+> node scripts/validate-snapshot.mjs dist/data/catalog.json && node scripts/validate-snapshot.mjs dist/data/runtime-catalog.json && node scripts/validate-snapshot.mjs dist/data/offers.json && node scripts/validate-snapshot.mjs dist/data/verdicts.json && node scripts/validate-snapshot.mjs dist/data/evidence-history.json && node scripts/validate-snapshot.mjs dist/data/transparency-barometer.json && node scripts/validate-snapshot.mjs dist/data/document-quality-observatory.json && node scripts/validate-snapshot.mjs dist/data/contradiction-radar.json && node scripts/validate-snapshot.mjs dist/data/freshness.json
+
+Snapshot valide : dist/data/catalog.json
+Snapshot valide : dist/data/runtime-catalog.json
+Snapshot valide : dist/data/offers.json
+Snapshot valide : dist/data/verdicts.json
+Snapshot valide : dist/data/evidence-history.json
+Snapshot valide : dist/data/transparency-barometer.json
+Snapshot valide : dist/data/document-quality-observatory.json
+Snapshot valide : dist/data/contradiction-radar.json
+Snapshot valide : dist/data/freshness.json

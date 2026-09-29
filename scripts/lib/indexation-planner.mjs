@@ -60,34 +60,50 @@ export function productCandidate(product, kind) {
 	};
 }
 
-export function analyzeCandidates(candidates, admitted, policy) {
+function comparisonScope(candidate) {
+	return ['catalog', 'usages'].includes(candidate.family) ? `${candidate.family}:${candidate.topic}:${candidate.signature}` : candidate.family;
+}
+
+export function analyzeCandidates(candidates, admitted, policy, { onProgress } = {}) {
 	const inverted = new Map();
 	const analyzed = [];
 	const sorted = [...candidates].sort((a, b) => Number(admitted.has(b.path)) - Number(admitted.has(a.path)) || (b.priority?.score ?? 0) - (a.priority?.score ?? 0) || (a.firstSeen ?? '').localeCompare(b.firstSeen ?? '') || a.path.localeCompare(b.path, 'en'));
+	const remaining = new Map();
+	for (const candidate of sorted) {
+		const scope = comparisonScope(candidate);
+		remaining.set(scope, (remaining.get(scope) ?? 0) + 1);
+	}
+	let indexedGrams = 0;
 	for (const candidate of sorted) {
 		const grams = shingles(candidate.text, candidate.identities);
 		const overlaps = new Map();
-		const scope = ['catalog', 'usages'].includes(candidate.family) ? `${candidate.family}:${candidate.topic}:${candidate.signature}` : candidate.family;
-		for (const gram of grams) for (const index of inverted.get(`${scope}:${gram}`) ?? []) overlaps.set(index, (overlaps.get(index) ?? 0) + 1);
+		const scope = comparisonScope(candidate);
+		const scopeIndex = inverted.get(scope) ?? new Map();
+		for (const gram of grams) for (const index of scopeIndex.get(gram) ?? []) overlaps.set(index, (overlaps.get(index) ?? 0) + 1);
 		let similar;
 		for (const [index, intersection] of overlaps) {
 			const other = analyzed[index];
-			const similarity = intersection / (grams.size + other.grams.size - intersection);
-			const containment = intersection / Math.min(grams.size, other.grams.size);
-			const lengthRatio = Math.min(grams.size, other.grams.size) / Math.max(grams.size, other.grams.size);
+			const similarity = intersection / (grams.size + other.gramCount - intersection);
+			const containment = intersection / Math.min(grams.size, other.gramCount);
+			const lengthRatio = Math.min(grams.size, other.gramCount) / Math.max(grams.size, other.gramCount);
 			if (similarity >= policy.similarityThreshold || (containment >= policy.containmentThreshold && lengthRatio >= 0.5)) {
 				if (!similar || similarity > similar.similarity) similar = { path: other.path, similarity: Number(similarity.toFixed(3)), containment: Number(containment.toFixed(3)) };
 			}
 		}
 		const reason = candidate.blockedReason ?? (!grams.size ? 'empty-comparable-content' : similar ? 'near-duplicate' : undefined);
-		const entry = { ...candidate, grams, reason, similar, contentHash: createHash('sha256').update(candidate.text).digest('hex') };
+		// Later comparisons use only the cardinality. Retaining every page's Set
+		// keeps millions of duplicate strings alive, including rejected pages.
+		const entry = { ...candidate, gramCount: grams.size, reason, similar, contentHash: createHash('sha256').update(candidate.text).digest('hex') };
 		const index = analyzed.push(entry) - 1;
 		// Compare against established pages and the first eligible representative of new clusters.
 		if (admitted.has(candidate.path) || !reason) for (const gram of grams) {
-			const key = `${scope}:${gram}`;
-			if (!inverted.has(key)) inverted.set(key, []);
-			inverted.get(key).push(index);
+			if (!scopeIndex.has(gram)) { scopeIndex.set(gram, []); indexedGrams++; }
+			scopeIndex.get(gram).push(index);
 		}
+		const left = remaining.get(scope) - 1;
+		if (left) { remaining.set(scope, left); inverted.set(scope, scopeIndex); }
+		else { remaining.delete(scope); inverted.delete(scope); indexedGrams -= scopeIndex.size; }
+		if (onProgress && (analyzed.length % 10000 === 0 || analyzed.length === sorted.length)) onProgress({ phase: 'analysis', count: analyzed.length, scopes: inverted.size, indexedGrams, memory: process.memoryUsage() });
 	}
 	return analyzed;
 }
@@ -109,14 +125,14 @@ function diverseSelection(entries, limit, share) {
 	return selected;
 }
 
-export function planIndexation({ candidates, baseline, previous, policy, now = new Date(), gitSha = 'development', allowRelease = true }) {
+export function planIndexation({ candidates, baseline, previous, policy, now = new Date(), gitSha = 'development', allowRelease = true, onProgress }) {
 	validateBaseline(baseline);
 	validatePolicy(policy);
 	validateManifest(previous, baseline, now);
 	if (new Set(candidates.map((entry) => entry.path)).size !== candidates.length) throw new Error('URL candidate dupliquée.');
 	const admitted = new Set([...baseline.paths, ...previous.batches.flatMap((batch) => batch.paths)]);
 	const firstSeen = new Map((previous.pending ?? []).map((entry) => [entry.path, entry.firstSeen]));
-	const analyzed = analyzeCandidates(candidates.map((entry) => ({ ...entry, firstSeen: firstSeen.get(entry.path) ?? now.toISOString() })), admitted, policy);
+	const analyzed = analyzeCandidates(candidates.map((entry) => ({ ...entry, firstSeen: firstSeen.get(entry.path) ?? now.toISOString() })), admitted, policy, { onProgress });
 	const last = previous.batches.at(-1);
 	// A deployed artifact may be up to 24 hours older than its activation.
 	const ready = !last || now.getTime() - Date.parse(last.openedAt) >= policy.minimumDaysBetweenBatches * 86_400_000 + MAX_INDEXATION_ARTIFACT_AGE_MS;

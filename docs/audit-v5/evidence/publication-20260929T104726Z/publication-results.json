@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "synthetic": true,
+  "sourceCommit": "aa2b856d4f341439c35353bdb228caf925e06aa1",
+  "sourceCatalogVersion": "02fe8d998994ae642273a70bd63f6f265b7658714bff08ccab127d1a798a2a6f",
+  "sourcePreparation": "/private/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-FfV5wH/qualification-v5/run-inputs.json",
+  "artifactMarker": "development",
+  "productionPublication": "forbidden",
+  "root": "/private/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-FfV5wH",
+  "startedAt": "2026-09-29T10:47:26Z",
+  "budgetsDeclaredBeforeRun": {
+    "databaseBuildSeconds": 180,
+    "databaseBytes": 2147483648,
+    "serviceStartupMs": 5000,
+    "servicePeakMiB": 256,
+    "httpP95Ms": 150,
+    "httpP99Ms": 500,
+    "httpUnexpectedErrors": 0,
+    "publicationSeconds": 1500,
+    "publicationPeakMiB": 8192,
+    "archiveBytes": 184549376,
+    "restoreSeconds": 300,
+    "rollbackSeconds": 120
+  },
+  "harnessSha256": "039258b720e2e2dc31a6f2808e8b03523ad9f5051b532ca703d18aef984fbf77",
+  "scope": "macOS isolated full publication trial; network denied and writes restricted to synthetic copy; no production deployment",
+  "memoryMeasurement": "Peak child RSS from BSD time plus sampled aggregate process-tree RSS every 500 ms; sample-based hard stop at 8192 MiB",
+  "publicationBudgetScope": "1500 seconds total across offline preparation, cold build, database, warm build and archive; restoration separately limited to 300 seconds",
+  "steps": [
+    {
+      "name": "isolation-probe",
+      "argv": [
+        "/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--input-type=module",
+        "-e",
+        "import net from 'node:net'; const s=net.createServer(); s.once('error',e=>{console.log(e.code);process.exit(e.code==='EPERM'?0:2)});s.listen(0,'127.0.0.1',()=>{s.close();process.exit(3)});"
+      ],
+      "status": "passed",
+      "log": "/private/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-FfV5wH/qualification-v5/publication-20260929T104726Z/isolation-probe.log",
+      "timeoutSeconds": 15,
+      "network": "denied",
+      "exitCode": 0,
+      "seconds": 0.5281277920585126,
+      "sampledTreePeakMiB": 3.6875,
+      "childPeakMiB": 45.375,
+      "failureReason": null
+    },
+    {
+      "name": "loopback-isolation-probe",
+      "argv": [
+        "/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--input-type=module",
+        "-e",
+        "import net from 'node:net'; const server=net.createServer(s=>s.end('ok')); await new Promise(r=>server.listen(0,'127.0.0.1',r)); const local=net.connect(server.address().port,'127.0.0.1'); await new Promise((r,j)=>{local.once('data',r);local.once('error',j)});local.destroy();await new Promise(r=>server.close(r));const denied=net.connect(80,'198.51.100.1');denied.once('error',e=>{console.log(e.code);process.exit(e.code==='EPERM'?0:2)});denied.once('connect',()=>process.exit(3));setTimeout(()=>process.exit(4),3000).unref();"
+      ],
+      "status": "passed",
+      "log": "/private/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-FfV5wH/qualification-v5/publication-20260929T104726Z/loopback-isolation-probe.log",
+      "timeoutSeconds": 15,
+      "network": "sandbox allows localhost only",
+      "exitCode": 0,
+      "seconds": 0.5372837079921737,
+      "sampledTreePeakMiB": 3.703125,
+      "childPeakMiB": 46.0625,
+      "failureReason": null
+    },
+    {
+      "name": "offline-indexation",
+      "argv": [
+        "/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "scripts/prepare-indexation.mjs",
+        "--offline"
+      ],
+      "status": "passed",
+      "log": "/private/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-FfV5wH/qualification-v5/publication-20260929T104726Z/offline-indexation.log",
+      "timeoutSeconds": 1499.9999751250725,
+      "network": "denied",
+      "exitCode": 0,
+      "seconds": 73.85421675001271,
+      "sampledTreePeakMiB": 1510.5,
+      "childPeakMiB": 1580.09375,
+      "failureReason": null
+    },
+    {
+      "name": "cold-build",
+      "argv": [
+        "/Users/bluetouff/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "node_modules/astro/bin/astro.mjs",
+        "build",
+        "--force"
+      ],
+      "status": "failed",
+      "log": "/private/var/folders/6g/hrs2x8vx1k347889hcdmfclw0000gn/T/compatair-qualification-source-FfV5wH/qualification-v5/publication-20260929T104726Z/cold-build.log",
+      "timeoutSeconds": 1426.1439322500955,
+      "network": "denied",
+      "exitCode": 1,
+      "seconds": 317.7007629999425,
+      "sampledTreePeakMiB": 4170.390625,
+      "childPeakMiB": 4161.53125,
+      "failureReason": null
+    }
+  ],
+  "qualification": "not-qualified",
+  "notExecuted": [
+    "staging Apache/systemd failure drill",
+    "public publication of synthetic corpus",
+    "database-build",
+    "warm-build",
+    "warm-database-build",
+    "validate-catalog",
+    "validate-runtime-catalog",
+    "validate-offers",
+    "validate-verdicts",
+    "validate-evidence-history",
+    "validate-transparency-barometer",
+    "validate-document-quality-observatory",
+    "validate-contradiction-radar",
+    "validate-freshness",
+    "archive-tar",
+    "archive-xz",
+    "restore",
+    "restored-service"
+  ],
+  "publicationSeconds": 391.5612625419162
+}
