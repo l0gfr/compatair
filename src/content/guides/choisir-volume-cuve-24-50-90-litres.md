@@ -59,3 +59,5 @@ Un autre arbitrage est illustré par les [Einhell TE-AC 270/24/10 et TC-AC 240/5
 - [Atlas Copco, régulation des compresseurs volumétriques](https://www.atlascopco.com/fr-fr/compressors/wiki/compressed-air-articles/displacement-compressors-regulation)
 - [ABAC, variantes ATF-S 24 et 50 litres](https://shop.abacaircompressors.com/en-INT/products/4116000880/atf-s-3-50-10-230150-ce)
 - [Einhell, TE-AC 430/90/10](https://www.einhell.fr/p/4010800-te-ac-430-90-10/)
+
+Sur des stations industrielles, la décision comprend aussi l’implantation : [deux réservoirs de 90 L ou un réservoir de 250 L sur RSD-PRO 3.0](/guides/renner-rsd-pro-3-0-2x90-250-litres/), puis [250 ou 500 L sur RSDK-PRO 3.0](/guides/renner-rsdk-pro-3-0-250-500-litres-implantation/). Pour une demande sur mesure, le dossier [BOGE C 2 jusqu’à 750 L](/guides/boge-c2-reservoir-500-750-litres-devis/) distingue les configurations décrites dans le tableau et les caractéristiques à obtenir au devis.

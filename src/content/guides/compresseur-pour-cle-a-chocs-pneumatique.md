@@ -56,3 +56,5 @@ Le [cas du TC-AC 240/50/10 OF avec la CP7732C](/guides/einhell-tc-ac-240-50-10-o
 
 - [Einhell, fiche officielle TC-PW 340](https://www.einhell.fr/p/4138950-tc-pw-340/)
 - [Einhell, notice TC-PW 340](https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_c7bjdn248d2dret4jdk27m9377/4138950_21022_002_SPK2.pdf)
+
+La recommandation URYU de [limiter une séquence de serrage à cinq secondes](/guides/uryu-cle-chocs-temps-serrage-cinq-secondes/) concerne l’usure de la clé. Elle ne constitue ni une garantie de couple final ni une preuve que le compresseur dispose du débit en charge nécessaire.

@@ -4,7 +4,7 @@ import ContextHelp from '../components/ContextHelp.astro';
 import DecisionHeroVisual from '../components/DecisionHeroVisual.astro';
 import { compressors } from '../data/catalog';
 import { acousticDisplay } from '../domain/acoustic-display';
-import { compressorDisplayName } from '../domain/product-display';
+import { compressorDisplayName, compressorOilLabel } from '../domain/product-display';
 ---
 
 <BaseLayout title="Comparer des compresseurs | CompatAir" description="Comparez deux ou trois compresseurs sur leurs caractéristiques et leurs limites documentaires." noindex breadcrumbs={[{ name: 'Comparateur', path: '/comparateur/' }]}>
@@ -88,6 +88,7 @@ import { compressorDisplayName } from '../domain/product-display';
 		fadCurve: item.fadCurve,
 		dutyCycle: item.dutyCycle,
 		oilType: item.oilType,
+		oilLabel: compressorOilLabel(item.oilType),
 		acousticLabel: acousticDisplay(item),
 		confidence: item.confidence,
 		status: item.status,
@@ -112,7 +113,8 @@ import { compressorDisplayName } from '../domain/product-display';
 			intakeFlowLpm?: number;
 			fadCurve: Array<{ litersPerMinute: number; pressureBar: number }>;
 			dutyCycle?: number;
-			oilType: 'oil-free' | 'lubricated';
+			oilType: 'oil-free' | 'oil' | 'unknown';
+			oilLabel: string;
 			acousticLabel: string;
 			confidence: 'A' | 'B' | 'C' | 'D';
 			status: string;
@@ -201,7 +203,7 @@ import { compressorDisplayName } from '../domain/product-display';
 				['Débit réellement restitué', (item) => item.fadCurve.length ? item.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ') : 'Non documenté', 'is-primary'],
 				['Débit aspiré', (item) => item.intakeFlowLpm ? `${item.intakeFlowLpm} L/min · non utilisé pour le verdict` : 'Non documenté', 'is-secondary'],
 				['Temps maximal de fonctionnement', (item) => item.dutyCycle ? `${Math.round(item.dutyCycle * 100)} %` : 'Non documenté'],
-				['Lubrification', (item) => item.oilType === 'oil-free' ? 'Sans huile' : 'Lubrifié'],
+				['Lubrification', (item) => item.oilLabel],
 				['Bruit publié et conditions', (item) => item.acousticLabel],
 				['Qualité des données', (item) => sourceQualityDetail(item.confidence), 'is-quality'],
 			];

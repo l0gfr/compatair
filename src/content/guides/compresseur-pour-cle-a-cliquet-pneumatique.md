@@ -65,3 +65,5 @@ Ouvrez le [calculateur avec la DRS 68 préchargée](/calculateur/#outil=metabo-d
 
 - [Metabo, DRS 68 Set 1/2](https://www.metabo.com/no/no/maskiner/trykkluft/trykkluft-verktoy/trykkluft-skralletrekker/drs-68-set-1-2-trykkluft-skralletrekker/604119500)
 - [Einhell, TE-AC 430/90/10](https://www.einhell.fr/p/4010800-te-ac-430-90-10/)
+
+La [fiche URYU URW-6](/guides/uryu-urw6-pression-recommandee-couple-6-bar/) juxtapose une pression recommandée et une condition différente pour le couple indicatif. Avant de changer la pression du réseau, le guide explique quelles valeurs restent attachées à chacune de ces conditions.

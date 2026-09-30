@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import { compressors } from '../data/catalog';
-import { compressorDisplayName, compressorInstallationForm } from './product-display';
+import { compressorDisplayName, compressorInstallationForm, compressorOilLabel } from './product-display';
+
+it('keeps unknown lubrication distinct from oil and oil-free', () => {
+	expect(compressorOilLabel('oil')).toBe('Lubrifié');
+	expect(compressorOilLabel('oil-free')).toBe('Sans huile');
+	expect(compressorOilLabel('unknown')).toBe('Lubrification non documentée');
+});
 
 describe('compressorDisplayName', () => {
 	it('distingue les variantes KAESER horizontales et verticales dans le libellé public', () => {

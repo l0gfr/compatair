@@ -4,13 +4,16 @@ import sharp from 'sharp';
 import { buildTechnicalExpansion } from './lib/technical-expansion-2026.mjs';
 import { buildCatalogExpansion } from './lib/catalog-expansion-2026-09-27.mjs';
 import { buildQualifiedTools } from './lib/qualified-tools-2026.mjs';
+import { buildDocumentedExpansion } from './lib/documented-expansion-2026-09-30.mjs';
 import { loadCatalogProducts } from './lib/catalog-tooling.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const readSnapshot = async name => JSON.parse(await readFile(resolve(root, `src/data/imports/${name}-additional-2026-09-26.json`)));
 const args = process.argv.slice(2);
-if (args.length && (args.length !== 1 || !['--batch=2026-09-27', '--batch=qualified-tools-2026-09-27'].includes(args[0]))) throw new Error('Lot non reconnu');
-const expansion = args[0] === '--batch=qualified-tools-2026-09-27'
+if (args.length && (args.length !== 1 || !['--batch=2026-09-27', '--batch=qualified-tools-2026-09-27', '--batch=documented-2026-09-30'].includes(args[0]))) throw new Error('Lot non reconnu');
+const expansion = args[0] === '--batch=documented-2026-09-30'
+ ? buildDocumentedExpansion(JSON.parse(await readFile(resolve(root, 'src/data/imports/documented-expansion-2026-09-30.json'))))
+ : args[0] === '--batch=qualified-tools-2026-09-27'
  ? buildQualifiedTools(JSON.parse(await readFile(resolve(root, 'src/data/imports/qualified-tools-2026-09-27.json'))))
  : args.length
  ? buildCatalogExpansion(...await Promise.all(['compressors', 'tools'].map(async kind => JSON.parse(await readFile(resolve(root, `src/data/imports/catalog-${kind}-2026-09-27.json`))))))
@@ -19,7 +22,7 @@ const expansion = args[0] === '--batch=qualified-tools-2026-09-27'
 for (const kind of ['compressors', 'tools']) {
  const { products } = await loadCatalogProducts(root, kind);
  for (const product of expansion[kind]) {
-  const existing = products.find(x => x.product.id === product.id || (x.product.brand === product.brand && x.product.mpn === product.mpn));
+  const existing = products.find(x => x.product.id === product.id || (product.mpn && x.product.brand === product.brand && x.product.mpn === product.mpn));
   if (existing && JSON.stringify(existing.product) !== JSON.stringify(product)) throw new Error(`Référence existante différente : ${product.id}`);
  }
 }
@@ -40,6 +43,7 @@ for (const kind of ['compressors', 'tools']) {
 		if (kind === 'tools') {
 			let selection = `Quel compresseur pour ${name} ?`;
 			if (selection.length > 60) selection = `Quel compresseur pour ${p.brand} ${p.mpn} ?`;
+			if (selection.length > 60) selection = `Compresseur pour ${p.brand} ${p.mpn}`;
 			usage[p.id] = selection;
 		}
 		const compressor = kind === 'compressors';
@@ -53,7 +57,7 @@ for (const kind of ['compressors', 'tools']) {
 		];
 		const displayName = p.model.length > 68 ? `${p.model.slice(0,65).trim()}…` : p.model;
 		const nameLines = displayName.match(/.{1,35}(?:\s|$)|.{1,35}/g).map(s => s.trim());
-		const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="#f0f1e9"/><rect x="44" y="44" width="1112" height="712" rx="18" fill="#fffef9" stroke="#c7d0c6" stroke-width="2"/><g font-family="Arial,sans-serif" fill="#11251c"><text x="82" y="115" font-size="27" fill="#166b4b">${xml(p.brand.toUpperCase())}</text>${nameLines.map((line, i) => `<text x="82" y="${190 + i * 48}" font-size="42" font-weight="700">${xml(line)}</text>`).join('')}<text x="82" y="292" font-size="22" fill="#53665b">Référence ${xml(p.mpn)}</text><line x1="82" y1="320" x2="1118" y2="320" stroke="#c7d0c6"/>${columns.map((c, i) => `<text x="${82 + i * 350}" y="382" font-size="21" fill="#53665b">${xml(c[0])}</text><text x="${82 + i * 350}" y="475" font-size="${c[1].length > 7 ? 28 : 64}" font-weight="700">${xml(c[1])}</text><text x="${82 + i * 350}" y="528" font-size="25">${xml(c[2])}</text>`).join('')}<rect x="82" y="600" width="1036" height="62" rx="8" fill="#edf5bd"/><text x="108" y="640" font-size="25" fill="#073d2b">Valeurs déclarées par le fabricant</text><text x="82" y="715" font-size="21" fill="#53665b">REPÈRES TECHNIQUES</text><text x="1118" y="716" text-anchor="end" font-size="28" fill="#166b4b">CompatAir</text></g></svg>`;
+		const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="#f0f1e9"/><rect x="44" y="44" width="1112" height="712" rx="18" fill="#fffef9" stroke="#c7d0c6" stroke-width="2"/><g font-family="Arial,sans-serif" fill="#11251c"><text x="82" y="115" font-size="27" fill="#166b4b">${xml(p.brand.toUpperCase())}</text>${nameLines.map((line, i) => `<text x="82" y="${190 + i * 48}" font-size="42" font-weight="700">${xml(line)}</text>`).join('')}<text x="82" y="292" font-size="22" fill="#53665b">Référence ${xml(p.mpn ?? p.model)}</text><line x1="82" y1="320" x2="1118" y2="320" stroke="#c7d0c6"/>${columns.map((c, i) => `<text x="${82 + i * 350}" y="382" font-size="21" fill="#53665b">${xml(c[0])}</text><text x="${82 + i * 350}" y="475" font-size="${c[1].length > 7 ? 28 : 64}" font-weight="700">${xml(c[1])}</text><text x="${82 + i * 350}" y="528" font-size="25">${xml(c[2])}</text>`).join('')}<rect x="82" y="600" width="1036" height="62" rx="8" fill="#edf5bd"/><text x="108" y="640" font-size="25" fill="#073d2b">Valeurs déclarées par le fabricant</text><text x="82" y="715" font-size="21" fill="#53665b">REPÈRES TECHNIQUES</text><text x="1118" y="716" text-anchor="end" font-size="28" fill="#166b4b">CompatAir</text></g></svg>`;
 		const imagePath = resolve(root, 'public', p.image.src.slice(1));
 		try { await access(imagePath); } catch (error) {
 			if (error.code !== 'ENOENT') throw error;
@@ -74,9 +78,9 @@ const registryPath = resolve(root, 'src/data/reference-registry.ts');
 let registry = await readFile(registryPath, 'utf8');
 const registryMarker = "const laterObservations: Array<{ productId: string; mpn: string; observedAt: string; kind: 'added' | 'changed' }> = [";
 if (!registry.includes(registryMarker)) throw new Error('Registre des références absent');
-const newObservations = [...expansion.compressors, ...expansion.tools].filter(p => !registry.includes(`productId: ${JSON.stringify(p.id)},`));
+const newObservations = [...expansion.compressors, ...expansion.tools].filter(p => p.mpn && !registry.includes(`productId: ${JSON.stringify(p.id)},`));
 if (newObservations.length) {
-	const observedAt = args.length ? '2026-09-27' : '2026-09-26';
+	const observedAt = args[0] === '--batch=documented-2026-09-30' ? '2026-09-30' : args.length ? '2026-09-27' : '2026-09-26';
 	registry = registry.replace(registryMarker, `${registryMarker}\n${newObservations.map(p => `\t{ productId: ${JSON.stringify(p.id)}, mpn: ${JSON.stringify(p.mpn)}, observedAt: '${observedAt}', kind: 'added' },`).join('\n')}`);
 	await writeFile(registryPath, registry);
 }

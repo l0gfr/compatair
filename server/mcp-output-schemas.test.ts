@@ -46,6 +46,18 @@ function validate(schema: any, value: any, path = '$'): string[] {
 }
 
 describe('MCP tool-specific output schemas', () => {
+	it('preserves unknown lubrication in product outputs and excludes it from known-oil searches', () => {
+		const product = compressors.find(item => item.oilType === 'unknown')!;
+		expect(product).toBeDefined();
+		const core = createMcpCore({ catalogVersion: 'test', schemaVersion: '2.0.0', verifiedAt: '2026-09-30', compressors: [product], tools }, { snapshotVersion: 'test', offers: [] }, { profile: 'legacy' });
+		const call = (name: string, args: unknown) => core.handle({ jsonrpc: '2.0', id: name, method: 'tools/call', params: { name, arguments: args } })!;
+		const output = call('get_compressor_specs', { id: product.id });
+		expect(validate(outputSchemas.get_compressor_specs, output.result.structuredContent)).toEqual([]);
+		for (const oilType of ['oil', 'oil-free']) {
+			const result = call('search_compressors', { oilType });
+			expect(JSON.stringify(result.result.structuredContent)).not.toContain(product.id);
+		}
+	});
 	it('publishes one closed schema per tool without additionalProperties=true', () => {
 		expect(Object.keys(outputSchemas)).toHaveLength(20);
 		expect(new Set(Object.values(outputSchemas)).size).toBe(20);

@@ -67,3 +67,5 @@ Sur une machine pneumatique, la recherche de bruit peut aussi conduire à [exami
 - [EUR-Lex, directive 2000/14/CE](https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32000L0014)
 - [Metabo, Basic 220-24 OF Silent](https://fr.metabo.com/fr/machines/air-comprime/compresseurs/compresseurs-d-atelier-mobiles/basic-220-24-of-silent-601593000-compresseur.html)
 - [Einhell, TE-AC 430/90/10](https://www.einhell.fr/p/4010800-te-ac-430-90-10/)
+
+La colonne acoustique du [BOGE C 12-2 annoncé à 63 dB(A)](/guides/boge-c12-2-63-db-superschallgedammt/) porte une mention de configuration. Ce cas permet de repérer l’habillage concerné avant de comparer deux offres ou de prévoir l’implantation dans l’atelier.

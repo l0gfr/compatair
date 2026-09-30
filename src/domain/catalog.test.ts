@@ -4,6 +4,11 @@ import { toolTaxonomy } from '../data/taxonomy';
 import { compressorSchema, toolProfileSchema } from './catalog';
 
 describe('catalog schemas', () => {
+	it('accepts explicitly unknown lubrication without fabricating a source', () => {
+		const product = compressorSchema.parse({ ...compressors[0], oilType: 'unknown' });
+		expect(product.oilType).toBe('unknown');
+		expect(() => compressorSchema.parse({ ...product, oilType: 'maybe-oil' })).toThrow();
+	});
 	it('rejects a FAD point above the compressor maximum pressure', () => {
 		const compressor = compressors[0];
 		expect(() => compressorSchema.parse({

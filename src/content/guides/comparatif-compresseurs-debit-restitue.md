@@ -77,3 +77,5 @@ La [lecture détaillée d’une fiche CAGI](/guides/lire-fiche-cagi-compresseur-
 - [Einhell, fiche officielle TC-AC 270/50/10](https://www.einhell.de/p/4007361-tc-ac-270-50-10/)
 - [Atlas Copco, brochure officielle AB Series](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/australia/documents/AB-series-brochure.pdf)
 - [ABAC, tableau officiel de la gamme ATL](https://www.abacaircompressors.com/en-uk/products/abac-tech/industrial-user/low-pressure-atl)
+
+Pour appliquer cette lecture à un achat, comparez les [RS-PRO 4.0 et 5.5 face à un besoin de 600 L/min](/guides/renner-rs-pro-4-0-5-5-besoin-600-l-min/) ou les [COMBI XP 18 et 22 sur cuve de 500 L](/guides/almig-combi-xp-18-22-500-litres-debit/). Les variantes de refroidissement des [G-Drive T 48](/guides/almig-g-drive-t-48-refroidissement-air-eau-debit/) et [SIMPLEXX 132](/guides/almig-simplexx-132-air-eau-encombrement-debit/) montrent aussi pourquoi le nom du modèle ne suffit pas. La [fiche BOGE C 3 L](/guides/boge-c3-l-234-l-min-pression-mesure/) illustre enfin le cas où la pression de mesure doit être confirmée avant tout verdict.

@@ -1,0 +1,146 @@
+const product = {
+	"id": "meuleuse-uryu-ug-25na-50072",
+	"slug": "meuleuse-uryu-ug-25na-50072",
+	"categoryId": "meuleuse",
+	"category": "meuleuse",
+	"label": "URYU UG-25NA (réf. 50072)",
+	"brand": "URYU",
+	"model": "UG-25NA",
+	"mpn": "50072",
+	"demandModel": "fixed-flow",
+	"workingPressureBar": {
+		"min": 6,
+		"typical": 6,
+		"max": 6
+	},
+	"airflowLpm": {
+		"min": 300,
+		"typical": 300,
+		"max": 300
+	},
+	"airflowBasis": "average",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/meuleuse-uryu-ug-25na-50072.webp",
+		"alt": "Repères techniques : URYU UG-25NA (réf. 50072)",
+		"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P57_61.pdf",
+		"sourceLabel": "Carte technique CompatAir, établie à partir du document constructeur"
+	},
+	"variant": {
+		"familyId": "uryu-ug-25na",
+		"label": "Code constructeur 50072",
+		"distinguishingAttributes": {
+			"codeCatalogue": "50072",
+			"reference": "50072"
+		}
+	},
+	"editorial": {
+		"overview": "URYU UG-25NA, code 50072. Le tableau publie une consommation moyenne de 0,3 m³/min, soit 300 L/min. Pression de référence retenue : 6 bar.",
+		"verifiedFacts": [
+			"Référence complète imprimée : 50072, page PDF 1.",
+			"Consommation moyenne publiée : 300 L/min après conversion de l’unité originale.",
+			"SPECIFICATIONS                Recommended Air Pressure : 0.6MPa (85psi)\nSPECIFICATIONS                Recommended Air Pressure : 0.6MPa (85psi) Chuck 3mm 923-001-0\nSPECIFICATIONS                Recommended Air Pressure : 0.6MPa (85psi)\nSPECIFICATIONS                Recommended Air Pressure : 0.6MPa (85psi) avoid loosening"
+		],
+		"limitations": [
+			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
+			"La disponibilité actuelle, les accessoires inclus et les conditions de sécurité doivent être confirmés sur la notice de cette référence."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Localisation du tableau",
+			"value": "Page PDF 1",
+			"evidenceIds": [
+				"documented-20260930-uryu-p57-61"
+			]
+		},
+		{
+			"label": "Code URYU du tableau",
+			"value": "50072",
+			"evidenceIds": [
+				"documented-20260930-uryu-p57-61"
+			]
+		},
+		{
+			"label": "Consommation moyenne originale",
+			"value": "0.3 m³/min ; 10.7 ft³/min",
+			"evidenceIds": [
+				"documented-20260930-uryu-p57-61"
+			]
+		},
+		{
+			"label": "Pression recommandée dans le tableau",
+			"value": "0.6 MPa",
+			"evidenceIds": [
+				"documented-20260930-uryu-p57-61"
+			]
+		},
+		{
+			"label": "Pince publiée",
+			"value": "1/4 de pouce",
+			"evidenceIds": [
+				"documented-20260930-uryu-p57-61"
+			]
+		},
+		{
+			"label": "Vitesse à vide publiée",
+			"value": "23 500 min⁻¹",
+			"evidenceIds": [
+				"documented-20260930-uryu-p57-61"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "210 W",
+			"evidenceIds": [
+				"documented-20260930-uryu-p57-61"
+			]
+		},
+		{
+			"label": "Longueur publiée",
+			"value": "153 mm",
+			"evidenceIds": [
+				"documented-20260930-uryu-p57-61"
+			]
+		},
+		{
+			"label": "Masse publiée",
+			"value": "0,53 kg",
+			"evidenceIds": [
+				"documented-20260930-uryu-p57-61"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "documented-20260930-uryu-p57-61",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P57_61.pdf",
+			"sourceLabel": "URYU, catalogue 2020 : uryu-P57_61",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-09-30",
+			"confidence": "B",
+			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 f00ce52018de3cd2c8f093e9762bb4f6c63230f68c6a1b04217089408fe89245. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"documented-20260930-uryu-p57-61"
+		],
+		"airflowLpm": [
+			"documented-20260930-uryu-p57-61"
+		],
+		"workingPressureBar": [
+			"documented-20260930-uryu-p57-61"
+		],
+		"airflowBasis": [
+			"documented-20260930-uryu-p57-61"
+		]
+	},
+	"notes": [
+		"consommation moyenne ; aucune conversion en consommation en charge n’est effectuée.",
+		"Pression publiée en MPa : 0.6."
+	]
+};
+
+export default product;

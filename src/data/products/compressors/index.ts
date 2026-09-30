@@ -692,731 +692,931 @@ import product691 from './airpress-twinpower-120';
 import product692 from './airpress-ultra-silencieux-l-50-24';
 import product693 from './airpress-vertical-hl-360-50';
 import product694 from './airpress-vk-700-270-pro';
-import product695 from './atlas-copco-ab25e100';
-import product696 from './atlas-copco-ab30e100';
-import product697 from './atlas-copco-ab40e100t';
-import product698 from './atlas-copco-lz-10-10-bm';
-import product699 from './atlas-copco-lz-15-10-bm';
-import product700 from './atlas-copco-lz-20-10-bm';
-import product701 from './atlas-copco-lz-7-10-bm';
-import product702 from './black-decker-bd-195-12-nk';
-import product703 from './black-decker-bd-195-24v-nk';
-import product704 from './black-decker-bd-195-5-my';
-import product705 from './black-decker-bd-195-5-my-t';
-import product706 from './black-decker-bd-195-6-nk';
-import product707 from './black-decker-bd-195-cubo';
-import product708 from './black-decker-bd-227-50v-nk';
-import product709 from './black-decker-bd-55-6';
-import product710 from './black-decker-bxcmd156he';
-import product711 from './boge-po-1-l';
-import product712 from './boge-po-1-lr-50';
-import product713 from './boge-po-1-ltr-160';
-import product714 from './boge-po-2-l';
-import product715 from './boge-po-2-lr-50';
-import product716 from './boge-po-2-ltr-160';
-import product717 from './boge-po-3-l-10-bar';
-import product718 from './boge-po-3-lr-90';
-import product719 from './boge-po-3-ltr-270';
-import product720 from './boge-po-4-l-10-bar';
-import product721 from './boge-po-4-lr-90';
-import product722 from './boge-po-4-ltr-270';
-import product723 from './boge-po-6-l-10-bar';
-import product724 from './boge-po-6-lr-160';
-import product725 from './boge-po-6-ltr-270';
-import product726 from './boge-po-8-l-10-bar';
-import product727 from './boge-po-8-lr-160';
-import product728 from './boge-po-8-ltr-270';
-import product729 from './bostitch-c24-u';
-import product730 from './bostitch-c50-u';
-import product731 from './bostitch-mrc6-u';
-import product732 from './bostitch-ps20-u';
-import product733 from './bostitch-rc-10-u';
-import product734 from './einhell-pressito-18-21';
-import product735 from './einhell-pressito-18-25';
-import product736 from './einhell-pressito-18-25-hybrid';
-import product737 from './einhell-silenzzo-18-160';
-import product738 from './einhell-silenzzo-36-210';
-import product739 from './einhell-tc-ac-190-24-8';
-import product740 from './einhell-tc-ac-190-24-8-i-of';
-import product741 from './einhell-tc-ac-190-50-8';
-import product742 from './einhell-tc-ac-190-6-8-of';
-import product743 from './einhell-tc-ac-190-of-set';
-import product744 from './einhell-tc-ac-200-24-8-of';
-import product745 from './einhell-tc-ac-240-50-10-of';
-import product746 from './einhell-tc-ac-270-50-10';
-import product747 from './einhell-tc-ac-270-50-8';
-import product748 from './einhell-tc-ac-420-50-10-v';
-import product749 from './einhell-te-ac-110-6-silent-plus';
-import product750 from './einhell-te-ac-135-24-silent-plus';
-import product751 from './einhell-te-ac-18-75-li-of-solo';
-import product752 from './einhell-te-ac-240-24-silent';
-import product753 from './einhell-te-ac-270-24-10';
-import product754 from './einhell-te-ac-270-50-silent';
-import product755 from './einhell-te-ac-270-50-silent-plus';
-import product756 from './einhell-te-ac-36-150-li-of-solo';
-import product757 from './einhell-te-ac-36-8-li-of-set-solo';
-import product758 from './einhell-te-ac-400-50-10-v';
-import product759 from './einhell-te-ac-430-50-10';
-import product760 from './einhell-te-ac-430-90-10';
-import product761 from './fiac-ax-103bd-10-400-50-ce';
-import product762 from './fiac-ax-103bd-13-400-50-ce';
-import product763 from './fiac-ax-103bd-8-400-50-ce';
-import product764 from './fiac-ax-103bd-dry-10-400-50-ce';
-import product765 from './fiac-ax-103bd-dry-13-400-50-ce';
-import product766 from './fiac-ax-103bd-dry-8-400-50-ce';
-import product767 from './fiac-ax-153bd-10-400-50-ce';
-import product768 from './fiac-ax-153bd-13-400-50-ce';
-import product769 from './fiac-ax-153bd-8-400-50-ce';
-import product770 from './fiac-ax-153bd-dry-10-400-50-ce';
-import product771 from './fiac-ax-153bd-dry-13-400-50-ce';
-import product772 from './fiac-ax-153bd-dry-8-400-50-ce';
-import product773 from './fiac-ax-203bd-10-400-50-ce';
-import product774 from './fiac-ax-203bd-13-400-50-ce';
-import product775 from './fiac-ax-203bd-8-400-50-ce';
-import product776 from './fiac-ax-203bd-dry-10-400-50-ce';
-import product777 from './fiac-ax-203bd-dry-13-400-50-ce';
-import product778 from './fiac-ax-203bd-dry-8-400-50-ce';
-import product779 from './fiac-ax-253bd-10-400-50-ce';
-import product780 from './fiac-ax-253bd-13-400-50-ce';
-import product781 from './fiac-ax-253bd-8-400-50-ce';
-import product782 from './fiac-ax-253bd-dry-10-400-50-ce';
-import product783 from './fiac-ax-253bd-dry-13-400-50-ce';
-import product784 from './fiac-ax-253bd-dry-8-400-50-ce';
-import product785 from './fiac-ax-303bd-10-400-50-ce';
-import product786 from './fiac-ax-303bd-13-400-50-ce';
-import product787 from './fiac-ax-303bd-8-400-50-ce';
-import product788 from './fiac-ax-303bd-dry-10-400-50-ce';
-import product789 from './fiac-ax-303bd-dry-13-400-50-ce';
-import product790 from './fiac-ax-303bd-dry-8-400-50-ce';
-import product791 from './fiac-ax-403bd-10-400-50-ce';
-import product792 from './fiac-ax-403bd-13-400-50-ce';
-import product793 from './fiac-ax-403bd-8-400-50-ce';
-import product794 from './fiac-ax-403bd-dry-10-400-50-ce';
-import product795 from './fiac-ax-403bd-dry-13-400-50-ce';
-import product796 from './fiac-ax-403bd-dry-8-400-50-ce';
-import product797 from './fiac-ax-703bd-10-400-50-ce';
-import product798 from './fiac-ax-703bd-8-400-50-ce';
-import product799 from './fiac-ax-703bd-dry-10-400-50-ce';
-import product800 from './fiac-ax-703bd-dry-8-400-50-ce';
-import product801 from './fiac-ax403dr-10-400-50-meaa';
-import product802 from './fiac-ax403dr-13-400-50-meaa';
-import product803 from './fiac-ax403dr-7-5-400-50-meaa';
-import product804 from './fiac-ax403dr-8-5-400-50-meaa';
-import product805 from './fiac-ax403dr-dry-10-400-50-meaa';
-import product806 from './fiac-ax403dr-dry-13-400-50-meaa';
-import product807 from './fiac-ax403dr-dry-7-5-400-50-meaa';
-import product808 from './fiac-ax403dr-dry-8-5-400-50-meaa';
-import product809 from './fiac-ax503dr-10-400-50-meaa';
-import product810 from './fiac-ax503dr-13-400-50-meaa';
-import product811 from './fiac-ax503dr-7-5-400-50-meaa';
-import product812 from './fiac-ax503dr-8-5-400-50-meaa';
-import product813 from './fiac-ax503dr-dry-10-400-50-meaa';
-import product814 from './fiac-ax503dr-dry-13-400-50-meaa';
-import product815 from './fiac-ax503dr-dry-7-5-400-50-meaa';
-import product816 from './fiac-ax503dr-dry-8-5-400-50-meaa';
-import product817 from './fiac-ax603dr-10-400-50-meaa';
-import product818 from './fiac-ax603dr-13-400-50-meaa';
-import product819 from './fiac-ax603dr-7-5-400-50-meaa';
-import product820 from './fiac-ax603dr-8-5-400-50-meaa';
-import product821 from './fiac-ax603dr-dry-10-400-50-meaa';
-import product822 from './fiac-ax603dr-dry-13-400-50-meaa';
-import product823 from './fiac-ax603dr-dry-7-5-400-50-meaa';
-import product824 from './fiac-ax603dr-dry-8-5-400-50-meaa';
-import product825 from './fiac-ns-10-10-bar';
-import product826 from './fiac-ns-10-270-l-10-bar';
-import product827 from './fiac-ns-10-270-l-8-bar';
-import product828 from './fiac-ns-10-500-l-10-bar';
-import product829 from './fiac-ns-10-500-l-8-bar';
-import product830 from './fiac-ns-10-8-bar';
-import product831 from './fiac-ns-10-d-270-l-10-bar';
-import product832 from './fiac-ns-10-d-270-l-8-bar';
-import product833 from './fiac-ns-10-d-500-l-10-bar';
-import product834 from './fiac-ns-10-d-500-l-8-bar';
-import product835 from './fiac-ns-10s-10-bar';
-import product836 from './fiac-ns-10s-13-bar';
-import product837 from './fiac-ns-10s-270-l-10-bar';
-import product838 from './fiac-ns-10s-270-l-13-bar';
-import product839 from './fiac-ns-10s-270-l-8-bar';
-import product840 from './fiac-ns-10s-500-l-10-bar';
-import product841 from './fiac-ns-10s-500-l-13-bar';
-import product842 from './fiac-ns-10s-500-l-8-bar';
-import product843 from './fiac-ns-10s-8-bar';
-import product844 from './fiac-ns-10s-d-270-l-10-bar';
-import product845 from './fiac-ns-10s-d-270-l-13-bar';
-import product846 from './fiac-ns-10s-d-270-l-8-bar';
-import product847 from './fiac-ns-10s-d-500-l-10-bar';
-import product848 from './fiac-ns-10s-d-500-l-13-bar';
-import product849 from './fiac-ns-10s-d-500-l-8-bar';
-import product850 from './fiac-ns-15-10-bar';
-import product851 from './fiac-ns-15-13-bar';
-import product852 from './fiac-ns-15-270-l-10-bar';
-import product853 from './fiac-ns-15-270-l-13-bar';
-import product854 from './fiac-ns-15-270-l-8-bar';
-import product855 from './fiac-ns-15-500-l-10-bar';
-import product856 from './fiac-ns-15-500-l-13-bar';
-import product857 from './fiac-ns-15-500-l-8-bar';
-import product858 from './fiac-ns-15-8-bar';
-import product859 from './fiac-ns-15-d-270-l-10-bar';
-import product860 from './fiac-ns-15-d-270-l-13-bar';
-import product861 from './fiac-ns-15-d-270-l-8-bar';
-import product862 from './fiac-ns-15-d-500-l-10-bar';
-import product863 from './fiac-ns-15-d-500-l-13-bar';
-import product864 from './fiac-ns-15-d-500-l-8-bar';
-import product865 from './fiac-ns-20-10-bar';
-import product866 from './fiac-ns-20-13-bar';
-import product867 from './fiac-ns-20-270-l-10-bar';
-import product868 from './fiac-ns-20-270-l-13-bar';
-import product869 from './fiac-ns-20-270-l-8-bar';
-import product870 from './fiac-ns-20-500-l-10-bar';
-import product871 from './fiac-ns-20-500-l-13-bar';
-import product872 from './fiac-ns-20-500-l-8-bar';
-import product873 from './fiac-ns-20-8-bar';
-import product874 from './fiac-ns-20-d-270-l-10-bar';
-import product875 from './fiac-ns-20-d-270-l-13-bar';
-import product876 from './fiac-ns-20-d-270-l-8-bar';
-import product877 from './fiac-ns-20-d-500-l-10-bar';
-import product878 from './fiac-ns-20-d-500-l-13-bar';
-import product879 from './fiac-ns-20-d-500-l-8-bar';
-import product880 from './fiac-ns-4-10-bar';
-import product881 from './fiac-ns-4-270-l-10-bar';
-import product882 from './fiac-ns-4-270-l-8-bar';
-import product883 from './fiac-ns-4-8-bar';
-import product884 from './fiac-ns-4-d-270-l-10-bar';
-import product885 from './fiac-ns-4-d-270-l-8-bar';
-import product886 from './fiac-ns-5-5-10-bar';
-import product887 from './fiac-ns-5-5-270-l-10-bar';
-import product888 from './fiac-ns-5-5-270-l-8-bar';
-import product889 from './fiac-ns-5-5-8-bar';
-import product890 from './fiac-ns-5-5-d-270-l-10-bar';
-import product891 from './fiac-ns-5-5-d-270-l-8-bar';
-import product892 from './fiac-ns-7-5-10-bar';
-import product893 from './fiac-ns-7-5-270-l-10-bar';
-import product894 from './fiac-ns-7-5-270-l-8-bar';
-import product895 from './fiac-ns-7-5-500-l-10-bar';
-import product896 from './fiac-ns-7-5-500-l-8-bar';
-import product897 from './fiac-ns-7-5-8-bar';
-import product898 from './fiac-ns-7-5-d-270-l-10-bar';
-import product899 from './fiac-ns-7-5-d-270-l-8-bar';
-import product900 from './fiac-ns-7-5-d-500-l-10-bar';
-import product901 from './fiac-ns-7-5-d-500-l-8-bar';
-import product902 from './fini-micro-4-0-08';
-import product903 from './fini-micro-4-0-08-200';
-import product904 from './fini-micro-4-0-08-200-es';
-import product905 from './fini-micro-4-0-10';
-import product906 from './fini-micro-4-0-10-200';
-import product907 from './fini-micro-4-0-10-200-es';
-import product908 from './fini-micro-4-0-13';
-import product909 from './fini-micro-5-5-08';
-import product910 from './fini-micro-5-5-08-270';
-import product911 from './fini-micro-5-5-08-270-es';
-import product912 from './fini-micro-5-5-08-500';
-import product913 from './fini-micro-5-5-08-500-es';
-import product914 from './fini-micro-5-5-10';
-import product915 from './fini-micro-5-5-10-270';
-import product916 from './fini-micro-5-5-10-270-es';
-import product917 from './fini-micro-5-5-10-500';
-import product918 from './fini-micro-5-5-10-500-es';
-import product919 from './fini-micro-5-5-13';
-import product920 from './fini-micro-5-5-13-270-es';
-import product921 from './fini-micro-se-2-2-08';
-import product922 from './fini-micro-se-2-2-08-200';
-import product923 from './fini-micro-se-2-2-08-200-es';
-import product924 from './fini-micro-se-2-2-08-m';
-import product925 from './fini-micro-se-2-2-10';
-import product926 from './fini-micro-se-2-2-10-200';
-import product927 from './fini-micro-se-2-2-10-200-es';
-import product928 from './fini-micro-se-2-2-10-200-es-m';
-import product929 from './fini-micro-se-2-2-10-200-m';
-import product930 from './fini-micro-se-2-2-10-m';
-import product931 from './fini-micro-se-3-0-08';
-import product932 from './fini-micro-se-3-0-08-200';
-import product933 from './fini-micro-se-3-0-08-200-es';
-import product934 from './fini-micro-se-3-0-10';
-import product935 from './fini-micro-se-3-0-10-200';
-import product936 from './fini-micro-se-3-0-10-200-es';
-import product937 from './fini-micro-se-4-0-08';
-import product938 from './fini-micro-se-4-0-08-200';
-import product939 from './fini-micro-se-4-0-08-200-es';
-import product940 from './fini-micro-se-4-0-10';
-import product941 from './fini-micro-se-4-0-10-200';
-import product942 from './fini-micro-se-4-0-10-200-es';
-import product943 from './fini-plus-11-08';
-import product944 from './fini-plus-11-08-270';
-import product945 from './fini-plus-11-08-270-es';
-import product946 from './fini-plus-11-08-500';
-import product947 from './fini-plus-11-08-500-es';
-import product948 from './fini-plus-11-10';
-import product949 from './fini-plus-11-10-270';
-import product950 from './fini-plus-11-10-270-es';
-import product951 from './fini-plus-11-10-500';
-import product952 from './fini-plus-11-10-500-es';
-import product953 from './fini-plus-11-13';
-import product954 from './fini-plus-11-13-270';
-import product955 from './fini-plus-11-13-270-es';
-import product956 from './fini-plus-11-13-500';
-import product957 from './fini-plus-11-13-500-es';
-import product958 from './fini-plus-11-15';
-import product959 from './fini-plus-11-15-270';
-import product960 from './fini-plus-11-15-270-es';
-import product961 from './fini-plus-15-08';
-import product962 from './fini-plus-15-08-500';
-import product963 from './fini-plus-15-08-500-es';
-import product964 from './fini-plus-15-10';
-import product965 from './fini-plus-15-10-500';
-import product966 from './fini-plus-15-10-500-es';
-import product967 from './fini-plus-15-13';
-import product968 from './fini-plus-15-13-500';
-import product969 from './fini-plus-15-13-500-es';
-import product970 from './fini-plus-15-15';
-import product971 from './fini-plus-15-15-500';
-import product972 from './fini-plus-15-15-500-es';
-import product973 from './fini-plus-16-08';
-import product974 from './fini-plus-16-08-500';
-import product975 from './fini-plus-16-08-500-es';
-import product976 from './fini-plus-16-10';
-import product977 from './fini-plus-16-10-500';
-import product978 from './fini-plus-16-10-500-es';
-import product979 from './fini-plus-16-13';
-import product980 from './fini-plus-16-13-500';
-import product981 from './fini-plus-16-13-500-es';
-import product982 from './fini-plus-18-5-08';
-import product983 from './fini-plus-18-5-08-es';
-import product984 from './fini-plus-18-5-10';
-import product985 from './fini-plus-18-5-10-es';
-import product986 from './fini-plus-18-5-13';
-import product987 from './fini-plus-18-5-13-es';
-import product988 from './fini-plus-18-5-15';
-import product989 from './fini-plus-22-08';
-import product990 from './fini-plus-22-08-es';
-import product991 from './fini-plus-22-10';
-import product992 from './fini-plus-22-10-es';
-import product993 from './fini-plus-22-13';
-import product994 from './fini-plus-22-13-es';
-import product995 from './fini-plus-22-15';
-import product996 from './fini-plus-8-08';
-import product997 from './fini-plus-8-08-270';
-import product998 from './fini-plus-8-08-270-es';
-import product999 from './fini-plus-8-08-500';
-import product1000 from './fini-plus-8-08-500-es';
-import product1001 from './fini-plus-8-10';
-import product1002 from './fini-plus-8-10-270';
-import product1003 from './fini-plus-8-10-270-es';
-import product1004 from './fini-plus-8-10-500';
-import product1005 from './fini-plus-8-10-500-es';
-import product1006 from './fini-plus-8-13';
-import product1007 from './fini-plus-8-13-270';
-import product1008 from './fini-plus-8-13-270-es';
-import product1009 from './fini-plus-8-13-500';
-import product1010 from './fini-plus-8-13-500-es';
-import product1011 from './fini-plus-8-15';
-import product1012 from './fini-plus-8-15-270';
-import product1013 from './fini-plus-8-15-270-es';
-import product1014 from './gentilin-ac200-05';
-import product1015 from './gentilin-ac400-20';
-import product1016 from './gentilin-ac600-40';
-import product1017 from './gentilin-c330-03';
-import product1018 from './gentilin-c330-100';
-import product1019 from './gentilin-c330-24';
-import product1020 from './gentilin-c330-50';
-import product1021 from './gentilin-c660-100';
-import product1022 from './gentilin-clinic-3-40';
-import product1023 from './gentilin-clinic-4-40';
-import product1024 from './gentilin-clinic-6-90-812313012';
-import product1025 from './gentilin-clinic-6-90-812313013';
-import product1026 from './gentilin-clinic-8-90';
-import product1027 from './gentilin-clinic-dry-3-40-h';
-import product1028 from './gentilin-clinic-dry-3-40-hs';
-import product1029 from './gentilin-clinic-dry-4-40-h';
-import product1030 from './gentilin-clinic-dry-4-40-hs';
-import product1031 from './gentilin-clinic-dry-6-90-h-814513025';
-import product1032 from './gentilin-clinic-dry-6-90-h-814513027';
-import product1033 from './gentilin-clinic-dry-6-90-hs-814513026';
-import product1034 from './gentilin-clinic-dry-6-90-hs-814513028';
-import product1035 from './gentilin-clinic-dry-8-90-h';
-import product1036 from './gentilin-clinic-dry-8-90-hs';
-import product1037 from './gentilin-csk330-03';
-import product1038 from './gentilin-csk330-100';
-import product1039 from './gentilin-csk330-150ve-811017004';
-import product1040 from './gentilin-csk330-150ve-811017005';
-import product1041 from './gentilin-csk330-24';
-import product1042 from './gentilin-csk330-50';
-import product1043 from './gentilin-dc100-05';
-import product1044 from './gentilin-esk1320-500';
-import product1045 from './gentilin-esk480-10';
-import product1046 from './gentilin-esk480-100-811610006';
-import product1047 from './gentilin-esk480-100-811610007';
-import product1048 from './gentilin-esk480-270';
-import product1049 from './gentilin-esk660-10';
-import product1050 from './gentilin-esk660-100';
-import product1051 from './gentilin-esk660-200ve';
-import product1052 from './gentilin-esk660-270';
-import product1053 from './gentilin-esk960-500';
-import product1054 from './gentilin-sca1000-tp-270';
-import product1055 from './gentilin-sca300-sp-270';
-import product1056 from './gentilin-sca300-tp-270';
-import product1057 from './gentilin-sca550-tp-270';
-import product1058 from './gentilin-sca750-tp-270';
-import product1059 from './gentilin-smart-1-10';
-import product1060 from './gentilin-smart-1-10-f';
-import product1061 from './gentilin-smart-1-25';
-import product1062 from './gentilin-smart-2-25';
-import product1063 from './gentilin-smart-2-50';
-import product1064 from './gentilin-smart-3-25-s';
-import product1065 from './gentilin-smart-4-90';
-import product1066 from './gentilin-smart-dry-1-25';
-import product1067 from './gentilin-smart-dry-2-25';
-import product1068 from './gentilin-smart-dry-2-50';
-import product1069 from './gentilin-smart-dry-3-25-s';
-import product1070 from './gentilin-smart-dry-4-90';
-import product1071 from './kaeser-eurocomp-epc-1000-2-500';
-import product1072 from './kaeser-eurocomp-epc-1000-2-500-vertical';
-import product1073 from './kaeser-eurocomp-epc-1000-2-g';
-import product1074 from './kaeser-eurocomp-epc-1100-500';
-import product1075 from './kaeser-eurocomp-epc-1100-g';
-import product1076 from './kaeser-eurocomp-epc-150-2-g';
-import product1077 from './kaeser-eurocomp-epc-1500-500';
-import product1078 from './kaeser-eurocomp-epc-1500-g';
-import product1079 from './kaeser-eurocomp-epc-230-2-100';
-import product1080 from './kaeser-eurocomp-epc-230-2-250-vertical';
-import product1081 from './kaeser-eurocomp-epc-230-2-g';
-import product1082 from './kaeser-eurocomp-epc-340-100';
-import product1083 from './kaeser-eurocomp-epc-340-g';
-import product1084 from './kaeser-eurocomp-epc-420-2-250';
-import product1085 from './kaeser-eurocomp-epc-420-2-250-vertical';
-import product1086 from './kaeser-eurocomp-epc-420-2-g';
-import product1087 from './kaeser-eurocomp-epc-440-100';
-import product1088 from './kaeser-eurocomp-epc-440-250-vertical';
-import product1089 from './kaeser-eurocomp-epc-440-g';
-import product1090 from './kaeser-eurocomp-epc-550-2-250';
-import product1091 from './kaeser-eurocomp-epc-550-2-250-vertical';
-import product1092 from './kaeser-eurocomp-epc-550-2-350-vertical';
-import product1093 from './kaeser-eurocomp-epc-550-2-g';
-import product1094 from './kaeser-eurocomp-epc-630-100';
-import product1095 from './kaeser-eurocomp-epc-630-250';
-import product1096 from './kaeser-eurocomp-epc-630-250-vertical';
-import product1097 from './kaeser-eurocomp-epc-630-g';
-import product1098 from './kaeser-eurocomp-epc-750-2-500';
-import product1099 from './kaeser-eurocomp-epc-750-2-500-vertical';
-import product1100 from './kaeser-eurocomp-epc-750-2-g';
-import product1101 from './kaeser-eurocomp-epc-840-100';
-import product1102 from './kaeser-eurocomp-epc-840-250';
-import product1103 from './kaeser-eurocomp-epc-840-250-vertical';
-import product1104 from './kaeser-eurocomp-epc-840-g';
-import product1105 from './lacair-compact-18-3';
-import product1106 from './lacair-fixair-40';
-import product1107 from './lacair-fixair-40-300';
-import product1108 from './lacair-fixair-40-500';
-import product1109 from './lacair-fixair-40-500-hp';
-import product1110 from './lacair-fixair-40-500t-sc';
-import product1111 from './lacair-fixair-40-hp';
-import product1112 from './lacair-fixair-60';
-import product1113 from './lacair-fixair-60-500';
-import product1114 from './lacair-fixair-60-500-hp';
-import product1115 from './lacair-fixair-60-500t-sc';
-import product1116 from './lacair-fixair-60-hp';
-import product1117 from './lacair-fixair-80';
-import product1118 from './lacair-fixair-80-500';
-import product1119 from './lacair-fixair-80-500t-sc';
-import product1120 from './lacair-maxair-15-50';
-import product1121 from './lacair-maxair-20-20';
-import product1122 from './lacair-maxair-20-24';
-import product1123 from './lacair-maxair-20-50';
-import product1124 from './lacair-silent-12-40-v-sh';
-import product1125 from './lacair-silent-24-80-sh';
-import product1126 from './lacair-silent-6-6-sh';
-import product1127 from './lacair-silent-6c-sh';
-import product1128 from './lacair-silent-c28-270-sc-d';
-import product1129 from './lacair-silent-c28-d';
-import product1130 from './lacair-silent-c32-200-d';
-import product1131 from './lacair-silent-c32-270-d';
-import product1132 from './lacair-silent-c32-270-sc-d';
-import product1133 from './lacair-silent-c32-d';
-import product1134 from './lacair-silent-c33-270-sc-d';
-import product1135 from './lacair-silent-c33-d';
-import product1136 from './lacair-silent-c36-270-d';
-import product1137 from './lacair-silent-c36-270-sc-d';
-import product1138 from './lacair-silent-c36-d';
-import product1139 from './lacair-silent-c42-500-sc-et';
-import product1140 from './lacair-silent-c51-270-d';
-import product1141 from './lacair-silent-c51-270-et';
-import product1142 from './lacair-silent-c51-270-sc-d';
-import product1143 from './lacair-silent-c51-270-sc-et';
-import product1144 from './lacair-silent-c51-500-d';
-import product1145 from './lacair-silent-c51-500-et';
-import product1146 from './lacair-silent-c51-500-sc-d';
-import product1147 from './lacair-silent-c51-500-sc-et';
-import product1148 from './lacair-silent-c54-500-sc-et';
-import product1149 from './lacair-silent-c65-500-d';
-import product1150 from './lacair-silent-c65-500-et';
-import product1151 from './lacair-silent-c65-500-sc-d';
-import product1152 from './lacair-silent-c65-500-sc-et';
-import product1153 from './lacair-tandem-42-270-m';
-import product1154 from './lacair-twinair-17-100-m';
-import product1155 from './lacair-twinair-17-50-m';
-import product1156 from './lacair-twinair-20-100-m';
-import product1157 from './lacair-twinair-20-100-t';
-import product1158 from './lacair-twinair-20-50-m';
-import product1159 from './lacair-twinair-23-100-m';
-import product1160 from './lacair-twinair-23-150-m';
-import product1161 from './lacair-twinair-23-200-m';
-import product1162 from './lacair-twinair-28-100-t';
-import product1163 from './lacair-twinair-28-150-t';
-import product1164 from './lacair-twinair-28-200-t';
-import product1165 from './lacair-twinair-35-200-t';
-import product1166 from './lacair-twinair-36-150-t';
-import product1167 from './lacair-twinair-36-200-t';
-import product1168 from './lacair-twinair-40-270-t';
-import product1169 from './lacair-twinair-40-270-t-sc';
-import product1170 from './lacair-twinair-55-500-t';
-import product1171 from './lacair-twinair-55-500t-sc';
-import product1172 from './mecadeco-mecadeco-9l-0-5hp';
-import product1173 from './mecafer-blue-line-24l-2hp';
-import product1174 from './mecafer-box-air-sans-cuve-1-5hp';
-import product1175 from './mecafer-century-100l-2-5hp';
-import product1176 from './mecafer-fifty-50l-2hp';
-import product1177 from './mecafer-twenty-24l-1-5hp';
-import product1178 from './metabo-basic-160-6-w-of';
-import product1179 from './metabo-basic-220-24-of-silent';
-import product1180 from './metabo-basic-250-24-w';
-import product1181 from './metabo-basic-250-24-w-of';
-import product1182 from './metabo-basic-250-50-w';
-import product1183 from './metabo-basic-250-50-w-of';
-import product1184 from './metabo-basic-280-50-w-of';
-import product1185 from './metabo-mega-350-100-d';
-import product1186 from './metabo-mega-350-100-w';
-import product1187 from './metabo-mega-350-50-w';
-import product1188 from './metabo-mega-400-50-d';
-import product1189 from './metabo-mega-400-50-w';
-import product1190 from './metabo-mega-580-200-d';
-import product1191 from './metabo-mega-650-270-d';
-import product1192 from './metabo-mega-700-90-d';
-import product1193 from './metabo-power-160-5-18-ltx-bl-of';
-import product1194 from './metabo-power-180-5-w-of';
-import product1195 from './metabo-power-250-10-w-of';
-import product1196 from './metabo-power-280-20-w-of';
-import product1197 from './michelin-mb50';
-import product1198 from './nuair-b2800-100-cm2';
-import product1199 from './nuair-b2800-100-ct2';
-import product1200 from './nuair-b2800-150-cm2';
-import product1201 from './nuair-b2800-30-cm2';
-import product1202 from './nuair-b2800-30-ct2';
-import product1203 from './nuair-b2800-50-cm2';
-import product1204 from './nuair-b2800-50-ct2';
-import product1205 from './nuair-b2800b-100-cm3';
-import product1206 from './nuair-b2800b-100-ct3';
-import product1207 from './nuair-b2800b-150-cm3';
-import product1208 from './nuair-b2800b-200-cm3';
-import product1209 from './nuair-b2800b-200-ct3';
-import product1210 from './nuair-b2800b-50-cm3';
-import product1211 from './nuair-b3800b-100-cm3';
-import product1212 from './nuair-b3800b-100-ct3';
-import product1213 from './nuair-b3800b-100-ct4';
-import product1214 from './nuair-b3800b-150-cm3';
-import product1215 from './nuair-b3800b-150-ct3';
-import product1216 from './nuair-b3800b-200-cm3';
-import product1217 from './nuair-b3800b-200-ct4';
-import product1218 from './nuair-b3800b-270-cm3';
-import product1219 from './nuair-b3800b-270-ct4';
-import product1220 from './nuair-fc2-24';
-import product1221 from './nuair-fc2-24s';
-import product1222 from './nuair-fc2-50';
-import product1223 from './nuair-fc2-50s';
-import product1224 from './nuair-fc2-6';
-import product1225 from './nuair-fu-227-10-12';
-import product1226 from './nuair-fu-227-10-24v';
-import product1227 from './nuair-fu-227-10-30v';
-import product1228 from './nuair-fu-227-10-50v';
-import product1229 from './nuair-fu-227-8-6e';
-import product1230 from './nuair-gvm-24-pcm';
-import product1231 from './nuair-gvm-50';
-import product1232 from './nuair-new-vento';
-import product1233 from './nuair-om200-6-silent';
-import product1234 from './nuair-sil-air-244-10-pcm';
-import product1235 from './nuair-sil-air-244-24';
-import product1236 from './nuair-sil-air-244-6';
-import product1237 from './nuair-siltek';
-import product1238 from './nuair-siltek-20';
-import product1239 from './nuair-siltek-24-p';
-import product1240 from './nuair-siltek-pro-15-t';
-import product1241 from './nuair-siltek-pro-20-t';
-import product1242 from './nuair-siltek-tb-100-t';
-import product1243 from './nuair-siltek-tb-24';
-import product1244 from './nuair-siltek-tb-50';
-import product1245 from './nuair-siltek-tb-50-d';
-import product1246 from './nuair-siltek-tb-50-v';
-import product1247 from './nuair-siltek-tb-6';
-import product1248 from './nuair-vdc-100';
-import product1249 from './nuair-vdc-50';
-import product1250 from './parkside-psko-248-b1';
-import product1251 from './prebena-orkan-250';
-import product1252 from './prebena-orkan-420';
-import product1253 from './prebena-pioneer-210';
-import product1254 from './prebena-vitas-100-akku';
-import product1255 from './prebena-vitas-45';
-import product1256 from './prodif-sil750v';
-import product1257 from './revolution-air-superboxy-2l';
-import product1258 from './scheppach-hc08si';
-import product1259 from './scheppach-hc10-twin';
-import product1260 from './scheppach-hc105dc';
-import product1261 from './scheppach-hc24v';
-import product1262 from './scheppach-hc51v';
-import product1263 from './schneider-cpm-220-9-20-wsof';
-import product1264 from './schneider-sem-110-10-6-wof';
-import product1265 from './schneider-unm-220-9-25-wsof';
-import product1266 from './schneider-unm-220-9-50-wsof';
-import product1267 from './schneider-unm-240-8-40-w-clean';
-import product1268 from './schneider-unm-240-8-40-wxm-clean';
-import product1269 from './schneider-unm-240-8-40-wxs-clean';
-import product1270 from './schneider-unm-240-8-40-wxsm-clean';
-import product1271 from './schneider-unm-360-8-40-w-clean';
-import product1272 from './schneider-unm-360-8-40-wxm-clean';
-import product1273 from './schneider-unm-360-8-40-wxs-clean';
-import product1274 from './schneider-unm-360-8-40-wxsm-clean';
-import product1275 from './schneider-unm-720-8-90-d-clean';
-import product1276 from './schneider-unm-720-8-90-dxm-clean';
-import product1277 from './schneider-unm-stb-1000-10-10';
-import product1278 from './schneider-unm-stb-1000-10-10-c';
-import product1279 from './schneider-unm-stb-1000-15-10';
-import product1280 from './schneider-unm-stb-1000-15-10-c';
-import product1281 from './schneider-unm-stb-1250-10-10';
-import product1282 from './schneider-unm-stb-1250-10-10-c';
-import product1283 from './schneider-unm-stb-580-15-10';
-import product1284 from './schneider-unm-stb-580-15-10-xs';
-import product1285 from './schneider-unm-stb-660-10-10';
-import product1286 from './schneider-unm-stb-660-10-10-xs';
-import product1287 from './schneider-unm-stb-780-15-10';
-import product1288 from './schneider-unm-stb-780-15-10-c';
-import product1289 from './schneider-unm-sth-650-10-180';
-import product1290 from './schneider-unm-stl-1000-10-270';
-import product1291 from './schneider-unm-stl-1000-10-270-c';
-import product1292 from './schneider-unm-stl-1000-10-500';
-import product1293 from './schneider-unm-stl-1000-10-500-c';
-import product1294 from './schneider-unm-stl-1000-15-270';
-import product1295 from './schneider-unm-stl-1000-15-270-c';
-import product1296 from './schneider-unm-stl-1000-15-500';
-import product1297 from './schneider-unm-stl-1000-15-500-c';
-import product1298 from './schneider-unm-stl-1250-10-270';
-import product1299 from './schneider-unm-stl-1250-10-270-c';
-import product1300 from './schneider-unm-stl-1250-10-500-c';
-import product1301 from './schneider-unm-stl-580-15-270';
-import product1302 from './schneider-unm-stl-580-15-270-xs';
-import product1303 from './schneider-unm-stl-580-15-500';
-import product1304 from './schneider-unm-stl-660-10-270';
-import product1305 from './schneider-unm-stl-660-10-270-xs';
-import product1306 from './schneider-unm-stl-660-10-500';
-import product1307 from './schneider-unm-stl-660-10-500-xs';
-import product1308 from './schneider-unm-stl-780-15-270';
-import product1309 from './schneider-unm-stl-780-15-270-c';
-import product1310 from './schneider-unm-stl-780-15-500';
-import product1311 from './schneider-unm-stl-780-15-500-c';
-import product1312 from './schneider-unm-sts-1000-10-270';
-import product1313 from './schneider-unm-sts-1000-10-270-c';
-import product1314 from './schneider-unm-sts-1000-10-270-xdk';
-import product1315 from './schneider-unm-sts-1000-10-270-xdkc';
-import product1316 from './schneider-unm-sts-1000-10-500';
-import product1317 from './schneider-unm-sts-1000-10-500-c';
-import product1318 from './schneider-unm-sts-1000-10-500-xdk';
-import product1319 from './schneider-unm-sts-1000-10-500-xdkc';
-import product1320 from './schneider-unm-sts-1000-10-90-c';
-import product1321 from './schneider-unm-sts-1000-15-270';
-import product1322 from './schneider-unm-sts-1000-15-270-c';
-import product1323 from './schneider-unm-sts-1000-15-270-xdkc';
-import product1324 from './schneider-unm-sts-1000-15-500';
-import product1325 from './schneider-unm-sts-1000-15-500-c';
-import product1326 from './schneider-unm-sts-1000-15-500-xdk';
-import product1327 from './schneider-unm-sts-1000-15-500-xdkc';
-import product1328 from './schneider-unm-sts-1250-10-270';
-import product1329 from './schneider-unm-sts-1250-10-270-c';
-import product1330 from './schneider-unm-sts-1250-10-270-xdk';
-import product1331 from './schneider-unm-sts-1250-10-270-xdkc';
-import product1332 from './schneider-unm-sts-1250-10-500';
-import product1333 from './schneider-unm-sts-1250-10-500-c';
-import product1334 from './schneider-unm-sts-1250-10-500-xdkc';
-import product1335 from './schneider-unm-sts-1250-10-90-c';
-import product1336 from './schneider-unm-sts-580-15-270';
-import product1337 from './schneider-unm-sts-580-15-270-xdk';
-import product1338 from './schneider-unm-sts-580-15-270-xs';
-import product1339 from './schneider-unm-sts-580-15-270-xsdk';
-import product1340 from './schneider-unm-sts-580-15-500';
-import product1341 from './schneider-unm-sts-580-15-500-xdk';
-import product1342 from './schneider-unm-sts-580-15-500-xs';
-import product1343 from './schneider-unm-sts-580-15-500-xsdk';
-import product1344 from './schneider-unm-sts-630-10-270-base';
-import product1345 from './schneider-unm-sts-660-10-270';
-import product1346 from './schneider-unm-sts-660-10-270-xdk';
-import product1347 from './schneider-unm-sts-660-10-270-xs';
-import product1348 from './schneider-unm-sts-660-10-270-xsdk';
-import product1349 from './schneider-unm-sts-660-10-500';
-import product1350 from './schneider-unm-sts-660-10-500-xdk';
-import product1351 from './schneider-unm-sts-660-10-500-xs';
-import product1352 from './schneider-unm-sts-660-10-500-xsdk';
-import product1353 from './schneider-unm-sts-660-10-90';
-import product1354 from './schneider-unm-sts-660-10-90-xs';
-import product1355 from './schneider-unm-sts-780-15-270';
-import product1356 from './schneider-unm-sts-780-15-270-c';
-import product1357 from './schneider-unm-sts-780-15-270-xdkc';
-import product1358 from './schneider-unm-sts-780-15-500';
-import product1359 from './schneider-unm-sts-780-15-500-c';
-import product1360 from './schneider-unm-sts-780-15-500-xdk';
-import product1361 from './schneider-unm-sts-780-15-500-xdkc';
-import product1362 from './senco-ac12824';
-import product1363 from './senco-ac19306bl-eu';
-import product1364 from './senco-ac20216bl-eu';
-import product1365 from './senco-ac20224bl-eu';
-import product1366 from './senco-ac20250bl-eu';
-import product1367 from './senco-ac24016';
-import product1368 from './senco-pc1249';
-import product1369 from './senco-pc1250';
-import product1370 from './stanley-air-kit-sans-cuve-1-5hp';
-import product1371 from './stanley-b-251-10-50';
-import product1372 from './stanley-b-251e-9-100';
-import product1373 from './stanley-b-251e-9-50';
-import product1374 from './stanley-b-345e-9-100';
-import product1375 from './stanley-b-345e-9-50';
-import product1376 from './stanley-coaxial-sans-huile-6l-1-5hp';
-import product1377 from './stanley-d-200-10-24';
-import product1378 from './stanley-d-200-10-24v';
-import product1379 from './stanley-d-200-8-24';
-import product1380 from './stanley-d-211-8-24';
-import product1381 from './stanley-d-211-8-50';
-import product1382 from './stanley-d-230-10-50v';
-import product1383 from './stanley-d-270-10-100v';
-import product1384 from './stanley-dn-200-8-6';
-import product1385 from './stanley-dn200-10-5';
-import product1386 from './stanley-dst-100-8-6';
-import product1387 from './stanley-fatmax-b-255-10-100';
-import product1388 from './stanley-fatmax-b-255-10-100-t';
-import product1389 from './stanley-fatmax-b-255-10-50';
-import product1390 from './stanley-fatmax-b-350-10-50';
-import product1391 from './stanley-fatmax-d-211-8-24s';
-import product1392 from './stanley-fatmax-d-211-8-50s';
-import product1393 from './stanley-fatmax-d-251-10-24s';
-import product1394 from './stanley-fatmax-d-251-10-50s';
-import product1395 from './stanley-fatmax-dn-200-10-30v';
-import product1396 from './stanley-fatmax-dn-230-10-50v';
-import product1397 from './stanley-fatmax-dst-101-8-6';
-import product1398 from './stanley-fatmax-dv2-400-10-100';
-import product1399 from './stanley-fatmax-dv2-400-10-24p';
-import product1400 from './stanley-fatmax-dv2-400-10-50';
-import product1401 from './stanley-fatmax-dv4-400-10-24p';
-import product1402 from './stanley-fatmax-hy-227-10-12';
-import product1403 from './stanley-fatmax-hy-227-10-24v';
-import product1404 from './stanley-fatmax-hy-227-10-30v';
-import product1405 from './stanley-fatmax-hy-227-10-50v';
-import product1406 from './stanley-fatmax-hy-227-8-6e';
-import product1407 from './stanley-fatmax-s-244-8-10-pcm';
-import product1408 from './stanley-fatmax-s-244-8-24';
-import product1409 from './stanley-fatmax-s-244-8-6';
-import product1410 from './stanley-fatmax-tab-200-10-24v';
-import product1411 from './stanley-fatmax-tab-200-10-30v';
-import product1412 from './stanley-fatmax-tab-200-10-30vw';
-import product1413 from './stanley-fatmax-tab-230-10-50vw';
-import product1414 from './stanley-sxcms1324he';
-import product1415 from './stanley-sxcms1350he';
-import product1416 from './stanley-sxcms1350ve';
-import product1417 from './stanley-sxcms2050he';
-import product1418 from './stanley-sxcms2652he';
-import product1419 from './stanley-sxcms30103e';
+import product695 from './almig-combi-xp-11-270d';
+import product696 from './almig-combi-xp-15-270d';
+import product697 from './almig-combi-xp-18-500d';
+import product698 from './almig-combi-xp-22-500d';
+import product699 from './almig-combi-xp-4-270d';
+import product700 from './almig-combi-xp-6-270d';
+import product701 from './almig-combi-xp-8-270d';
+import product702 from './atlas-copco-ab25e100';
+import product703 from './atlas-copco-ab30e100';
+import product704 from './atlas-copco-ab40e100t';
+import product705 from './atlas-copco-lz-10-10-bm';
+import product706 from './atlas-copco-lz-15-10-bm';
+import product707 from './atlas-copco-lz-20-10-bm';
+import product708 from './atlas-copco-lz-7-10-bm';
+import product709 from './black-decker-bd-195-12-nk';
+import product710 from './black-decker-bd-195-24v-nk';
+import product711 from './black-decker-bd-195-5-my';
+import product712 from './black-decker-bd-195-5-my-t';
+import product713 from './black-decker-bd-195-6-nk';
+import product714 from './black-decker-bd-195-cubo';
+import product715 from './black-decker-bd-227-50v-nk';
+import product716 from './black-decker-bd-55-6';
+import product717 from './black-decker-bxcmd156he';
+import product718 from './boge-po-1-l';
+import product719 from './boge-po-1-lr-50';
+import product720 from './boge-po-1-ltr-160';
+import product721 from './boge-po-2-l';
+import product722 from './boge-po-2-lr-50';
+import product723 from './boge-po-2-ltr-160';
+import product724 from './boge-po-3-l-10-bar';
+import product725 from './boge-po-3-lr-90';
+import product726 from './boge-po-3-ltr-270';
+import product727 from './boge-po-4-l-10-bar';
+import product728 from './boge-po-4-lr-90';
+import product729 from './boge-po-4-ltr-270';
+import product730 from './boge-po-6-l-10-bar';
+import product731 from './boge-po-6-lr-160';
+import product732 from './boge-po-6-ltr-270';
+import product733 from './boge-po-8-l-10-bar';
+import product734 from './boge-po-8-lr-160';
+import product735 from './boge-po-8-ltr-270';
+import product736 from './bostitch-c24-u';
+import product737 from './bostitch-c50-u';
+import product738 from './bostitch-mrc6-u';
+import product739 from './bostitch-ps20-u';
+import product740 from './bostitch-rc-10-u';
+import product741 from './einhell-pressito-18-21';
+import product742 from './einhell-pressito-18-25';
+import product743 from './einhell-pressito-18-25-hybrid';
+import product744 from './einhell-silenzzo-18-160';
+import product745 from './einhell-silenzzo-36-210';
+import product746 from './einhell-tc-ac-190-24-8';
+import product747 from './einhell-tc-ac-190-24-8-i-of';
+import product748 from './einhell-tc-ac-190-50-8';
+import product749 from './einhell-tc-ac-190-6-8-of';
+import product750 from './einhell-tc-ac-190-of-set';
+import product751 from './einhell-tc-ac-200-24-8-of';
+import product752 from './einhell-tc-ac-240-50-10-of';
+import product753 from './einhell-tc-ac-270-50-10';
+import product754 from './einhell-tc-ac-270-50-8';
+import product755 from './einhell-tc-ac-420-50-10-v';
+import product756 from './einhell-te-ac-110-6-silent-plus';
+import product757 from './einhell-te-ac-135-24-silent-plus';
+import product758 from './einhell-te-ac-18-75-li-of-solo';
+import product759 from './einhell-te-ac-240-24-silent';
+import product760 from './einhell-te-ac-270-24-10';
+import product761 from './einhell-te-ac-270-50-silent';
+import product762 from './einhell-te-ac-270-50-silent-plus';
+import product763 from './einhell-te-ac-36-150-li-of-solo';
+import product764 from './einhell-te-ac-36-8-li-of-set-solo';
+import product765 from './einhell-te-ac-400-50-10-v';
+import product766 from './einhell-te-ac-430-50-10';
+import product767 from './einhell-te-ac-430-90-10';
+import product768 from './fiac-ax-103bd-10-400-50-ce';
+import product769 from './fiac-ax-103bd-13-400-50-ce';
+import product770 from './fiac-ax-103bd-8-400-50-ce';
+import product771 from './fiac-ax-103bd-dry-10-400-50-ce';
+import product772 from './fiac-ax-103bd-dry-13-400-50-ce';
+import product773 from './fiac-ax-103bd-dry-8-400-50-ce';
+import product774 from './fiac-ax-153bd-10-400-50-ce';
+import product775 from './fiac-ax-153bd-13-400-50-ce';
+import product776 from './fiac-ax-153bd-8-400-50-ce';
+import product777 from './fiac-ax-153bd-dry-10-400-50-ce';
+import product778 from './fiac-ax-153bd-dry-13-400-50-ce';
+import product779 from './fiac-ax-153bd-dry-8-400-50-ce';
+import product780 from './fiac-ax-203bd-10-400-50-ce';
+import product781 from './fiac-ax-203bd-13-400-50-ce';
+import product782 from './fiac-ax-203bd-8-400-50-ce';
+import product783 from './fiac-ax-203bd-dry-10-400-50-ce';
+import product784 from './fiac-ax-203bd-dry-13-400-50-ce';
+import product785 from './fiac-ax-203bd-dry-8-400-50-ce';
+import product786 from './fiac-ax-253bd-10-400-50-ce';
+import product787 from './fiac-ax-253bd-13-400-50-ce';
+import product788 from './fiac-ax-253bd-8-400-50-ce';
+import product789 from './fiac-ax-253bd-dry-10-400-50-ce';
+import product790 from './fiac-ax-253bd-dry-13-400-50-ce';
+import product791 from './fiac-ax-253bd-dry-8-400-50-ce';
+import product792 from './fiac-ax-303bd-10-400-50-ce';
+import product793 from './fiac-ax-303bd-13-400-50-ce';
+import product794 from './fiac-ax-303bd-8-400-50-ce';
+import product795 from './fiac-ax-303bd-dry-10-400-50-ce';
+import product796 from './fiac-ax-303bd-dry-13-400-50-ce';
+import product797 from './fiac-ax-303bd-dry-8-400-50-ce';
+import product798 from './fiac-ax-403bd-10-400-50-ce';
+import product799 from './fiac-ax-403bd-13-400-50-ce';
+import product800 from './fiac-ax-403bd-8-400-50-ce';
+import product801 from './fiac-ax-403bd-dry-10-400-50-ce';
+import product802 from './fiac-ax-403bd-dry-13-400-50-ce';
+import product803 from './fiac-ax-403bd-dry-8-400-50-ce';
+import product804 from './fiac-ax-703bd-10-400-50-ce';
+import product805 from './fiac-ax-703bd-8-400-50-ce';
+import product806 from './fiac-ax-703bd-dry-10-400-50-ce';
+import product807 from './fiac-ax-703bd-dry-8-400-50-ce';
+import product808 from './fiac-ax403dr-10-400-50-meaa';
+import product809 from './fiac-ax403dr-13-400-50-meaa';
+import product810 from './fiac-ax403dr-7-5-400-50-meaa';
+import product811 from './fiac-ax403dr-8-5-400-50-meaa';
+import product812 from './fiac-ax403dr-dry-10-400-50-meaa';
+import product813 from './fiac-ax403dr-dry-13-400-50-meaa';
+import product814 from './fiac-ax403dr-dry-7-5-400-50-meaa';
+import product815 from './fiac-ax403dr-dry-8-5-400-50-meaa';
+import product816 from './fiac-ax503dr-10-400-50-meaa';
+import product817 from './fiac-ax503dr-13-400-50-meaa';
+import product818 from './fiac-ax503dr-7-5-400-50-meaa';
+import product819 from './fiac-ax503dr-8-5-400-50-meaa';
+import product820 from './fiac-ax503dr-dry-10-400-50-meaa';
+import product821 from './fiac-ax503dr-dry-13-400-50-meaa';
+import product822 from './fiac-ax503dr-dry-7-5-400-50-meaa';
+import product823 from './fiac-ax503dr-dry-8-5-400-50-meaa';
+import product824 from './fiac-ax603dr-10-400-50-meaa';
+import product825 from './fiac-ax603dr-13-400-50-meaa';
+import product826 from './fiac-ax603dr-7-5-400-50-meaa';
+import product827 from './fiac-ax603dr-8-5-400-50-meaa';
+import product828 from './fiac-ax603dr-dry-10-400-50-meaa';
+import product829 from './fiac-ax603dr-dry-13-400-50-meaa';
+import product830 from './fiac-ax603dr-dry-7-5-400-50-meaa';
+import product831 from './fiac-ax603dr-dry-8-5-400-50-meaa';
+import product832 from './fiac-ns-10-10-bar';
+import product833 from './fiac-ns-10-270-l-10-bar';
+import product834 from './fiac-ns-10-270-l-8-bar';
+import product835 from './fiac-ns-10-500-l-10-bar';
+import product836 from './fiac-ns-10-500-l-8-bar';
+import product837 from './fiac-ns-10-8-bar';
+import product838 from './fiac-ns-10-d-270-l-10-bar';
+import product839 from './fiac-ns-10-d-270-l-8-bar';
+import product840 from './fiac-ns-10-d-500-l-10-bar';
+import product841 from './fiac-ns-10-d-500-l-8-bar';
+import product842 from './fiac-ns-10s-10-bar';
+import product843 from './fiac-ns-10s-13-bar';
+import product844 from './fiac-ns-10s-270-l-10-bar';
+import product845 from './fiac-ns-10s-270-l-13-bar';
+import product846 from './fiac-ns-10s-270-l-8-bar';
+import product847 from './fiac-ns-10s-500-l-10-bar';
+import product848 from './fiac-ns-10s-500-l-13-bar';
+import product849 from './fiac-ns-10s-500-l-8-bar';
+import product850 from './fiac-ns-10s-8-bar';
+import product851 from './fiac-ns-10s-d-270-l-10-bar';
+import product852 from './fiac-ns-10s-d-270-l-13-bar';
+import product853 from './fiac-ns-10s-d-270-l-8-bar';
+import product854 from './fiac-ns-10s-d-500-l-10-bar';
+import product855 from './fiac-ns-10s-d-500-l-13-bar';
+import product856 from './fiac-ns-10s-d-500-l-8-bar';
+import product857 from './fiac-ns-15-10-bar';
+import product858 from './fiac-ns-15-13-bar';
+import product859 from './fiac-ns-15-270-l-10-bar';
+import product860 from './fiac-ns-15-270-l-13-bar';
+import product861 from './fiac-ns-15-270-l-8-bar';
+import product862 from './fiac-ns-15-500-l-10-bar';
+import product863 from './fiac-ns-15-500-l-13-bar';
+import product864 from './fiac-ns-15-500-l-8-bar';
+import product865 from './fiac-ns-15-8-bar';
+import product866 from './fiac-ns-15-d-270-l-10-bar';
+import product867 from './fiac-ns-15-d-270-l-13-bar';
+import product868 from './fiac-ns-15-d-270-l-8-bar';
+import product869 from './fiac-ns-15-d-500-l-10-bar';
+import product870 from './fiac-ns-15-d-500-l-13-bar';
+import product871 from './fiac-ns-15-d-500-l-8-bar';
+import product872 from './fiac-ns-20-10-bar';
+import product873 from './fiac-ns-20-13-bar';
+import product874 from './fiac-ns-20-270-l-10-bar';
+import product875 from './fiac-ns-20-270-l-13-bar';
+import product876 from './fiac-ns-20-270-l-8-bar';
+import product877 from './fiac-ns-20-500-l-10-bar';
+import product878 from './fiac-ns-20-500-l-13-bar';
+import product879 from './fiac-ns-20-500-l-8-bar';
+import product880 from './fiac-ns-20-8-bar';
+import product881 from './fiac-ns-20-d-270-l-10-bar';
+import product882 from './fiac-ns-20-d-270-l-13-bar';
+import product883 from './fiac-ns-20-d-270-l-8-bar';
+import product884 from './fiac-ns-20-d-500-l-10-bar';
+import product885 from './fiac-ns-20-d-500-l-13-bar';
+import product886 from './fiac-ns-20-d-500-l-8-bar';
+import product887 from './fiac-ns-4-10-bar';
+import product888 from './fiac-ns-4-270-l-10-bar';
+import product889 from './fiac-ns-4-270-l-8-bar';
+import product890 from './fiac-ns-4-8-bar';
+import product891 from './fiac-ns-4-d-270-l-10-bar';
+import product892 from './fiac-ns-4-d-270-l-8-bar';
+import product893 from './fiac-ns-5-5-10-bar';
+import product894 from './fiac-ns-5-5-270-l-10-bar';
+import product895 from './fiac-ns-5-5-270-l-8-bar';
+import product896 from './fiac-ns-5-5-8-bar';
+import product897 from './fiac-ns-5-5-d-270-l-10-bar';
+import product898 from './fiac-ns-5-5-d-270-l-8-bar';
+import product899 from './fiac-ns-7-5-10-bar';
+import product900 from './fiac-ns-7-5-270-l-10-bar';
+import product901 from './fiac-ns-7-5-270-l-8-bar';
+import product902 from './fiac-ns-7-5-500-l-10-bar';
+import product903 from './fiac-ns-7-5-500-l-8-bar';
+import product904 from './fiac-ns-7-5-8-bar';
+import product905 from './fiac-ns-7-5-d-270-l-10-bar';
+import product906 from './fiac-ns-7-5-d-270-l-8-bar';
+import product907 from './fiac-ns-7-5-d-500-l-10-bar';
+import product908 from './fiac-ns-7-5-d-500-l-8-bar';
+import product909 from './fini-micro-4-0-08';
+import product910 from './fini-micro-4-0-08-200';
+import product911 from './fini-micro-4-0-08-200-es';
+import product912 from './fini-micro-4-0-10';
+import product913 from './fini-micro-4-0-10-200';
+import product914 from './fini-micro-4-0-10-200-es';
+import product915 from './fini-micro-4-0-13';
+import product916 from './fini-micro-5-5-08';
+import product917 from './fini-micro-5-5-08-270';
+import product918 from './fini-micro-5-5-08-270-es';
+import product919 from './fini-micro-5-5-08-500';
+import product920 from './fini-micro-5-5-08-500-es';
+import product921 from './fini-micro-5-5-10';
+import product922 from './fini-micro-5-5-10-270';
+import product923 from './fini-micro-5-5-10-270-es';
+import product924 from './fini-micro-5-5-10-500';
+import product925 from './fini-micro-5-5-10-500-es';
+import product926 from './fini-micro-5-5-13';
+import product927 from './fini-micro-5-5-13-270-es';
+import product928 from './fini-micro-se-2-2-08';
+import product929 from './fini-micro-se-2-2-08-200';
+import product930 from './fini-micro-se-2-2-08-200-es';
+import product931 from './fini-micro-se-2-2-08-m';
+import product932 from './fini-micro-se-2-2-10';
+import product933 from './fini-micro-se-2-2-10-200';
+import product934 from './fini-micro-se-2-2-10-200-es';
+import product935 from './fini-micro-se-2-2-10-200-es-m';
+import product936 from './fini-micro-se-2-2-10-200-m';
+import product937 from './fini-micro-se-2-2-10-m';
+import product938 from './fini-micro-se-3-0-08';
+import product939 from './fini-micro-se-3-0-08-200';
+import product940 from './fini-micro-se-3-0-08-200-es';
+import product941 from './fini-micro-se-3-0-10';
+import product942 from './fini-micro-se-3-0-10-200';
+import product943 from './fini-micro-se-3-0-10-200-es';
+import product944 from './fini-micro-se-4-0-08';
+import product945 from './fini-micro-se-4-0-08-200';
+import product946 from './fini-micro-se-4-0-08-200-es';
+import product947 from './fini-micro-se-4-0-10';
+import product948 from './fini-micro-se-4-0-10-200';
+import product949 from './fini-micro-se-4-0-10-200-es';
+import product950 from './fini-plus-11-08';
+import product951 from './fini-plus-11-08-270';
+import product952 from './fini-plus-11-08-270-es';
+import product953 from './fini-plus-11-08-500';
+import product954 from './fini-plus-11-08-500-es';
+import product955 from './fini-plus-11-10';
+import product956 from './fini-plus-11-10-270';
+import product957 from './fini-plus-11-10-270-es';
+import product958 from './fini-plus-11-10-500';
+import product959 from './fini-plus-11-10-500-es';
+import product960 from './fini-plus-11-13';
+import product961 from './fini-plus-11-13-270';
+import product962 from './fini-plus-11-13-270-es';
+import product963 from './fini-plus-11-13-500';
+import product964 from './fini-plus-11-13-500-es';
+import product965 from './fini-plus-11-15';
+import product966 from './fini-plus-11-15-270';
+import product967 from './fini-plus-11-15-270-es';
+import product968 from './fini-plus-15-08';
+import product969 from './fini-plus-15-08-500';
+import product970 from './fini-plus-15-08-500-es';
+import product971 from './fini-plus-15-10';
+import product972 from './fini-plus-15-10-500';
+import product973 from './fini-plus-15-10-500-es';
+import product974 from './fini-plus-15-13';
+import product975 from './fini-plus-15-13-500';
+import product976 from './fini-plus-15-13-500-es';
+import product977 from './fini-plus-15-15';
+import product978 from './fini-plus-15-15-500';
+import product979 from './fini-plus-15-15-500-es';
+import product980 from './fini-plus-16-08';
+import product981 from './fini-plus-16-08-500';
+import product982 from './fini-plus-16-08-500-es';
+import product983 from './fini-plus-16-10';
+import product984 from './fini-plus-16-10-500';
+import product985 from './fini-plus-16-10-500-es';
+import product986 from './fini-plus-16-13';
+import product987 from './fini-plus-16-13-500';
+import product988 from './fini-plus-16-13-500-es';
+import product989 from './fini-plus-18-5-08';
+import product990 from './fini-plus-18-5-08-es';
+import product991 from './fini-plus-18-5-10';
+import product992 from './fini-plus-18-5-10-es';
+import product993 from './fini-plus-18-5-13';
+import product994 from './fini-plus-18-5-13-es';
+import product995 from './fini-plus-18-5-15';
+import product996 from './fini-plus-22-08';
+import product997 from './fini-plus-22-08-es';
+import product998 from './fini-plus-22-10';
+import product999 from './fini-plus-22-10-es';
+import product1000 from './fini-plus-22-13';
+import product1001 from './fini-plus-22-13-es';
+import product1002 from './fini-plus-22-15';
+import product1003 from './fini-plus-8-08';
+import product1004 from './fini-plus-8-08-270';
+import product1005 from './fini-plus-8-08-270-es';
+import product1006 from './fini-plus-8-08-500';
+import product1007 from './fini-plus-8-08-500-es';
+import product1008 from './fini-plus-8-10';
+import product1009 from './fini-plus-8-10-270';
+import product1010 from './fini-plus-8-10-270-es';
+import product1011 from './fini-plus-8-10-500';
+import product1012 from './fini-plus-8-10-500-es';
+import product1013 from './fini-plus-8-13';
+import product1014 from './fini-plus-8-13-270';
+import product1015 from './fini-plus-8-13-270-es';
+import product1016 from './fini-plus-8-13-500';
+import product1017 from './fini-plus-8-13-500-es';
+import product1018 from './fini-plus-8-15';
+import product1019 from './fini-plus-8-15-270';
+import product1020 from './fini-plus-8-15-270-es';
+import product1021 from './gentilin-ac200-05';
+import product1022 from './gentilin-ac400-20';
+import product1023 from './gentilin-ac600-40';
+import product1024 from './gentilin-c330-03';
+import product1025 from './gentilin-c330-100';
+import product1026 from './gentilin-c330-24';
+import product1027 from './gentilin-c330-50';
+import product1028 from './gentilin-c660-100';
+import product1029 from './gentilin-clinic-3-40';
+import product1030 from './gentilin-clinic-4-40';
+import product1031 from './gentilin-clinic-6-90-812313012';
+import product1032 from './gentilin-clinic-6-90-812313013';
+import product1033 from './gentilin-clinic-8-90';
+import product1034 from './gentilin-clinic-dry-3-40-h';
+import product1035 from './gentilin-clinic-dry-3-40-hs';
+import product1036 from './gentilin-clinic-dry-4-40-h';
+import product1037 from './gentilin-clinic-dry-4-40-hs';
+import product1038 from './gentilin-clinic-dry-6-90-h-814513025';
+import product1039 from './gentilin-clinic-dry-6-90-h-814513027';
+import product1040 from './gentilin-clinic-dry-6-90-hs-814513026';
+import product1041 from './gentilin-clinic-dry-6-90-hs-814513028';
+import product1042 from './gentilin-clinic-dry-8-90-h';
+import product1043 from './gentilin-clinic-dry-8-90-hs';
+import product1044 from './gentilin-csk330-03';
+import product1045 from './gentilin-csk330-100';
+import product1046 from './gentilin-csk330-150ve-811017004';
+import product1047 from './gentilin-csk330-150ve-811017005';
+import product1048 from './gentilin-csk330-24';
+import product1049 from './gentilin-csk330-50';
+import product1050 from './gentilin-dc100-05';
+import product1051 from './gentilin-esk1320-500';
+import product1052 from './gentilin-esk480-10';
+import product1053 from './gentilin-esk480-100-811610006';
+import product1054 from './gentilin-esk480-100-811610007';
+import product1055 from './gentilin-esk480-270';
+import product1056 from './gentilin-esk660-10';
+import product1057 from './gentilin-esk660-100';
+import product1058 from './gentilin-esk660-200ve';
+import product1059 from './gentilin-esk660-270';
+import product1060 from './gentilin-esk960-500';
+import product1061 from './gentilin-sca1000-tp-270';
+import product1062 from './gentilin-sca300-sp-270';
+import product1063 from './gentilin-sca300-tp-270';
+import product1064 from './gentilin-sca550-tp-270';
+import product1065 from './gentilin-sca750-tp-270';
+import product1066 from './gentilin-smart-1-10';
+import product1067 from './gentilin-smart-1-10-f';
+import product1068 from './gentilin-smart-1-25';
+import product1069 from './gentilin-smart-2-25';
+import product1070 from './gentilin-smart-2-50';
+import product1071 from './gentilin-smart-3-25-s';
+import product1072 from './gentilin-smart-4-90';
+import product1073 from './gentilin-smart-dry-1-25';
+import product1074 from './gentilin-smart-dry-2-25';
+import product1075 from './gentilin-smart-dry-2-50';
+import product1076 from './gentilin-smart-dry-3-25-s';
+import product1077 from './gentilin-smart-dry-4-90';
+import product1078 from './kaeser-eurocomp-epc-1000-2-500';
+import product1079 from './kaeser-eurocomp-epc-1000-2-500-vertical';
+import product1080 from './kaeser-eurocomp-epc-1000-2-g';
+import product1081 from './kaeser-eurocomp-epc-1100-500';
+import product1082 from './kaeser-eurocomp-epc-1100-g';
+import product1083 from './kaeser-eurocomp-epc-150-2-g';
+import product1084 from './kaeser-eurocomp-epc-1500-500';
+import product1085 from './kaeser-eurocomp-epc-1500-g';
+import product1086 from './kaeser-eurocomp-epc-230-2-100';
+import product1087 from './kaeser-eurocomp-epc-230-2-250-vertical';
+import product1088 from './kaeser-eurocomp-epc-230-2-g';
+import product1089 from './kaeser-eurocomp-epc-340-100';
+import product1090 from './kaeser-eurocomp-epc-340-g';
+import product1091 from './kaeser-eurocomp-epc-420-2-250';
+import product1092 from './kaeser-eurocomp-epc-420-2-250-vertical';
+import product1093 from './kaeser-eurocomp-epc-420-2-g';
+import product1094 from './kaeser-eurocomp-epc-440-100';
+import product1095 from './kaeser-eurocomp-epc-440-250-vertical';
+import product1096 from './kaeser-eurocomp-epc-440-g';
+import product1097 from './kaeser-eurocomp-epc-550-2-250';
+import product1098 from './kaeser-eurocomp-epc-550-2-250-vertical';
+import product1099 from './kaeser-eurocomp-epc-550-2-350-vertical';
+import product1100 from './kaeser-eurocomp-epc-550-2-g';
+import product1101 from './kaeser-eurocomp-epc-630-100';
+import product1102 from './kaeser-eurocomp-epc-630-250';
+import product1103 from './kaeser-eurocomp-epc-630-250-vertical';
+import product1104 from './kaeser-eurocomp-epc-630-g';
+import product1105 from './kaeser-eurocomp-epc-750-2-500';
+import product1106 from './kaeser-eurocomp-epc-750-2-500-vertical';
+import product1107 from './kaeser-eurocomp-epc-750-2-g';
+import product1108 from './kaeser-eurocomp-epc-840-100';
+import product1109 from './kaeser-eurocomp-epc-840-250';
+import product1110 from './kaeser-eurocomp-epc-840-250-vertical';
+import product1111 from './kaeser-eurocomp-epc-840-g';
+import product1112 from './lacair-compact-18-3';
+import product1113 from './lacair-fixair-40';
+import product1114 from './lacair-fixair-40-300';
+import product1115 from './lacair-fixair-40-500';
+import product1116 from './lacair-fixair-40-500-hp';
+import product1117 from './lacair-fixair-40-500t-sc';
+import product1118 from './lacair-fixair-40-hp';
+import product1119 from './lacair-fixair-60';
+import product1120 from './lacair-fixair-60-500';
+import product1121 from './lacair-fixair-60-500-hp';
+import product1122 from './lacair-fixair-60-500t-sc';
+import product1123 from './lacair-fixair-60-hp';
+import product1124 from './lacair-fixair-80';
+import product1125 from './lacair-fixair-80-500';
+import product1126 from './lacair-fixair-80-500t-sc';
+import product1127 from './lacair-maxair-15-50';
+import product1128 from './lacair-maxair-20-20';
+import product1129 from './lacair-maxair-20-24';
+import product1130 from './lacair-maxair-20-50';
+import product1131 from './lacair-silent-12-40-v-sh';
+import product1132 from './lacair-silent-24-80-sh';
+import product1133 from './lacair-silent-6-6-sh';
+import product1134 from './lacair-silent-6c-sh';
+import product1135 from './lacair-silent-c28-270-sc-d';
+import product1136 from './lacair-silent-c28-d';
+import product1137 from './lacair-silent-c32-200-d';
+import product1138 from './lacair-silent-c32-270-d';
+import product1139 from './lacair-silent-c32-270-sc-d';
+import product1140 from './lacair-silent-c32-d';
+import product1141 from './lacair-silent-c33-270-sc-d';
+import product1142 from './lacair-silent-c33-d';
+import product1143 from './lacair-silent-c36-270-d';
+import product1144 from './lacair-silent-c36-270-sc-d';
+import product1145 from './lacair-silent-c36-d';
+import product1146 from './lacair-silent-c42-500-sc-et';
+import product1147 from './lacair-silent-c51-270-d';
+import product1148 from './lacair-silent-c51-270-et';
+import product1149 from './lacair-silent-c51-270-sc-d';
+import product1150 from './lacair-silent-c51-270-sc-et';
+import product1151 from './lacair-silent-c51-500-d';
+import product1152 from './lacair-silent-c51-500-et';
+import product1153 from './lacair-silent-c51-500-sc-d';
+import product1154 from './lacair-silent-c51-500-sc-et';
+import product1155 from './lacair-silent-c54-500-sc-et';
+import product1156 from './lacair-silent-c65-500-d';
+import product1157 from './lacair-silent-c65-500-et';
+import product1158 from './lacair-silent-c65-500-sc-d';
+import product1159 from './lacair-silent-c65-500-sc-et';
+import product1160 from './lacair-tandem-42-270-m';
+import product1161 from './lacair-twinair-17-100-m';
+import product1162 from './lacair-twinair-17-50-m';
+import product1163 from './lacair-twinair-20-100-m';
+import product1164 from './lacair-twinair-20-100-t';
+import product1165 from './lacair-twinair-20-50-m';
+import product1166 from './lacair-twinair-23-100-m';
+import product1167 from './lacair-twinair-23-150-m';
+import product1168 from './lacair-twinair-23-200-m';
+import product1169 from './lacair-twinair-28-100-t';
+import product1170 from './lacair-twinair-28-150-t';
+import product1171 from './lacair-twinair-28-200-t';
+import product1172 from './lacair-twinair-35-200-t';
+import product1173 from './lacair-twinair-36-150-t';
+import product1174 from './lacair-twinair-36-200-t';
+import product1175 from './lacair-twinair-40-270-t';
+import product1176 from './lacair-twinair-40-270-t-sc';
+import product1177 from './lacair-twinair-55-500-t';
+import product1178 from './lacair-twinair-55-500t-sc';
+import product1179 from './mecadeco-mecadeco-9l-0-5hp';
+import product1180 from './mecafer-blue-line-24l-2hp';
+import product1181 from './mecafer-box-air-sans-cuve-1-5hp';
+import product1182 from './mecafer-century-100l-2-5hp';
+import product1183 from './mecafer-fifty-50l-2hp';
+import product1184 from './mecafer-twenty-24l-1-5hp';
+import product1185 from './metabo-basic-160-6-w-of';
+import product1186 from './metabo-basic-220-24-of-silent';
+import product1187 from './metabo-basic-250-24-w';
+import product1188 from './metabo-basic-250-24-w-of';
+import product1189 from './metabo-basic-250-50-w';
+import product1190 from './metabo-basic-250-50-w-of';
+import product1191 from './metabo-basic-280-50-w-of';
+import product1192 from './metabo-mega-350-100-d';
+import product1193 from './metabo-mega-350-100-w';
+import product1194 from './metabo-mega-350-50-w';
+import product1195 from './metabo-mega-400-50-d';
+import product1196 from './metabo-mega-400-50-w';
+import product1197 from './metabo-mega-580-200-d';
+import product1198 from './metabo-mega-650-270-d';
+import product1199 from './metabo-mega-700-90-d';
+import product1200 from './metabo-power-160-5-18-ltx-bl-of';
+import product1201 from './metabo-power-180-5-w-of';
+import product1202 from './metabo-power-250-10-w-of';
+import product1203 from './metabo-power-280-20-w-of';
+import product1204 from './michelin-mb50';
+import product1205 from './nuair-b2800-100-cm2';
+import product1206 from './nuair-b2800-100-ct2';
+import product1207 from './nuair-b2800-150-cm2';
+import product1208 from './nuair-b2800-30-cm2';
+import product1209 from './nuair-b2800-30-ct2';
+import product1210 from './nuair-b2800-50-cm2';
+import product1211 from './nuair-b2800-50-ct2';
+import product1212 from './nuair-b2800b-100-cm3';
+import product1213 from './nuair-b2800b-100-ct3';
+import product1214 from './nuair-b2800b-150-cm3';
+import product1215 from './nuair-b2800b-200-cm3';
+import product1216 from './nuair-b2800b-200-ct3';
+import product1217 from './nuair-b2800b-50-cm3';
+import product1218 from './nuair-b3800b-100-cm3';
+import product1219 from './nuair-b3800b-100-ct3';
+import product1220 from './nuair-b3800b-100-ct4';
+import product1221 from './nuair-b3800b-150-cm3';
+import product1222 from './nuair-b3800b-150-ct3';
+import product1223 from './nuair-b3800b-200-cm3';
+import product1224 from './nuair-b3800b-200-ct4';
+import product1225 from './nuair-b3800b-270-cm3';
+import product1226 from './nuair-b3800b-270-ct4';
+import product1227 from './nuair-fc2-24';
+import product1228 from './nuair-fc2-24s';
+import product1229 from './nuair-fc2-50';
+import product1230 from './nuair-fc2-50s';
+import product1231 from './nuair-fc2-6';
+import product1232 from './nuair-fu-227-10-12';
+import product1233 from './nuair-fu-227-10-24v';
+import product1234 from './nuair-fu-227-10-30v';
+import product1235 from './nuair-fu-227-10-50v';
+import product1236 from './nuair-fu-227-8-6e';
+import product1237 from './nuair-gvm-24-pcm';
+import product1238 from './nuair-gvm-50';
+import product1239 from './nuair-new-vento';
+import product1240 from './nuair-om200-6-silent';
+import product1241 from './nuair-sil-air-244-10-pcm';
+import product1242 from './nuair-sil-air-244-24';
+import product1243 from './nuair-sil-air-244-6';
+import product1244 from './nuair-siltek';
+import product1245 from './nuair-siltek-20';
+import product1246 from './nuair-siltek-24-p';
+import product1247 from './nuair-siltek-pro-15-t';
+import product1248 from './nuair-siltek-pro-20-t';
+import product1249 from './nuair-siltek-tb-100-t';
+import product1250 from './nuair-siltek-tb-24';
+import product1251 from './nuair-siltek-tb-50';
+import product1252 from './nuair-siltek-tb-50-d';
+import product1253 from './nuair-siltek-tb-50-v';
+import product1254 from './nuair-siltek-tb-6';
+import product1255 from './nuair-vdc-100';
+import product1256 from './nuair-vdc-50';
+import product1257 from './parkside-psko-248-b1';
+import product1258 from './prebena-orkan-250';
+import product1259 from './prebena-orkan-420';
+import product1260 from './prebena-pioneer-210';
+import product1261 from './prebena-vitas-100-akku';
+import product1262 from './prebena-vitas-45';
+import product1263 from './prodif-sil750v';
+import product1264 from './renner-rs-pro-11-0-310016';
+import product1265 from './renner-rs-pro-11-0-310017';
+import product1266 from './renner-rs-pro-11-0-310018';
+import product1267 from './renner-rs-pro-11-0-310019';
+import product1268 from './renner-rs-pro-3-0-310000';
+import product1269 from './renner-rs-pro-3-0-310001';
+import product1270 from './renner-rs-pro-3-0-310002';
+import product1271 from './renner-rs-pro-3-0-310003';
+import product1272 from './renner-rs-pro-4-0-310004';
+import product1273 from './renner-rs-pro-4-0-310005';
+import product1274 from './renner-rs-pro-4-0-310006';
+import product1275 from './renner-rs-pro-4-0-310007';
+import product1276 from './renner-rs-pro-5-5-310008';
+import product1277 from './renner-rs-pro-5-5-310009';
+import product1278 from './renner-rs-pro-5-5-310010';
+import product1279 from './renner-rs-pro-5-5-310011';
+import product1280 from './renner-rs-pro-7-5-310012';
+import product1281 from './renner-rs-pro-7-5-310013';
+import product1282 from './renner-rs-pro-7-5-310014';
+import product1283 from './renner-rs-pro-7-5-310015';
+import product1284 from './renner-rsd-pro-11-0-310263';
+import product1285 from './renner-rsd-pro-11-0-310264';
+import product1286 from './renner-rsd-pro-11-0-310265';
+import product1287 from './renner-rsd-pro-11-0-310266';
+import product1288 from './renner-rsd-pro-11-0-310507';
+import product1289 from './renner-rsd-pro-11-0-310508';
+import product1290 from './renner-rsd-pro-11-0-310509';
+import product1291 from './renner-rsd-pro-11-0-310510';
+import product1292 from './renner-rsd-pro-3-0-310233';
+import product1293 from './renner-rsd-pro-3-0-310234';
+import product1294 from './renner-rsd-pro-3-0-310239';
+import product1295 from './renner-rsd-pro-3-0-310240';
+import product1296 from './renner-rsd-pro-3-0-310247';
+import product1297 from './renner-rsd-pro-3-0-310248';
+import product1298 from './renner-rsd-pro-3-0-310249';
+import product1299 from './renner-rsd-pro-3-0-310250';
+import product1300 from './renner-rsd-pro-3-0-310459';
+import product1301 from './renner-rsd-pro-3-0-310460';
+import product1302 from './renner-rsd-pro-3-0-310461';
+import product1303 from './renner-rsd-pro-3-0-310462';
+import product1304 from './renner-rsd-pro-4-0-310235';
+import product1305 from './renner-rsd-pro-4-0-310236';
+import product1306 from './renner-rsd-pro-4-0-310241';
+import product1307 from './renner-rsd-pro-4-0-310242';
+import product1308 from './renner-rsd-pro-4-0-310251';
+import product1309 from './renner-rsd-pro-4-0-310252';
+import product1310 from './renner-rsd-pro-4-0-310253';
+import product1311 from './renner-rsd-pro-4-0-310254';
+import product1312 from './renner-rsd-pro-4-0-310471';
+import product1313 from './renner-rsd-pro-4-0-310472';
+import product1314 from './renner-rsd-pro-4-0-310473';
+import product1315 from './renner-rsd-pro-4-0-310474';
+import product1316 from './renner-rsd-pro-5-5-310237';
+import product1317 from './renner-rsd-pro-5-5-310238';
+import product1318 from './renner-rsd-pro-5-5-310243';
+import product1319 from './renner-rsd-pro-5-5-310244';
+import product1320 from './renner-rsd-pro-5-5-310255';
+import product1321 from './renner-rsd-pro-5-5-310256';
+import product1322 from './renner-rsd-pro-5-5-310257';
+import product1323 from './renner-rsd-pro-5-5-310258';
+import product1324 from './renner-rsd-pro-5-5-310483';
+import product1325 from './renner-rsd-pro-5-5-310484';
+import product1326 from './renner-rsd-pro-5-5-310485';
+import product1327 from './renner-rsd-pro-5-5-310486';
+import product1328 from './renner-rsd-pro-7-5-310245';
+import product1329 from './renner-rsd-pro-7-5-310246';
+import product1330 from './renner-rsd-pro-7-5-310259';
+import product1331 from './renner-rsd-pro-7-5-310260';
+import product1332 from './renner-rsd-pro-7-5-310261';
+import product1333 from './renner-rsd-pro-7-5-310262';
+import product1334 from './renner-rsd-pro-7-5-310495';
+import product1335 from './renner-rsd-pro-7-5-310496';
+import product1336 from './renner-rsd-pro-7-5-310497';
+import product1337 from './renner-rsd-pro-7-5-310498';
+import product1338 from './renner-rsd-pro-ecn-11-0-310375';
+import product1339 from './renner-rsd-pro-ecn-11-0-310376';
+import product1340 from './renner-rsd-pro-ecn-11-0-310515';
+import product1341 from './renner-rsd-pro-ecn-11-0-310516';
+import product1342 from './renner-rsd-pro-ecn-3-0-310367';
+import product1343 from './renner-rsd-pro-ecn-3-0-310368';
+import product1344 from './renner-rsd-pro-ecn-3-0-310467';
+import product1345 from './renner-rsd-pro-ecn-3-0-310468';
+import product1346 from './renner-rsd-pro-ecn-4-0-310369';
+import product1347 from './renner-rsd-pro-ecn-4-0-310370';
+import product1348 from './renner-rsd-pro-ecn-4-0-310479';
+import product1349 from './renner-rsd-pro-ecn-4-0-310480';
+import product1350 from './renner-rsd-pro-ecn-5-5-310371';
+import product1351 from './renner-rsd-pro-ecn-5-5-310372';
+import product1352 from './renner-rsd-pro-ecn-5-5-310491';
+import product1353 from './renner-rsd-pro-ecn-5-5-310492';
+import product1354 from './renner-rsd-pro-ecn-7-5-310373';
+import product1355 from './renner-rsd-pro-ecn-7-5-310374';
+import product1356 from './renner-rsd-pro-ecn-7-5-310503';
+import product1357 from './renner-rsd-pro-ecn-7-5-310504';
+import product1358 from './renner-rsdk-pro-11-0-310330';
+import product1359 from './renner-rsdk-pro-11-0-310331';
+import product1360 from './renner-rsdk-pro-11-0-310332';
+import product1361 from './renner-rsdk-pro-11-0-310333';
+import product1362 from './renner-rsdk-pro-11-0-310511';
+import product1363 from './renner-rsdk-pro-11-0-310512';
+import product1364 from './renner-rsdk-pro-11-0-310513';
+import product1365 from './renner-rsdk-pro-11-0-310514';
+import product1366 from './renner-rsdk-pro-3-0-310300';
+import product1367 from './renner-rsdk-pro-3-0-310301';
+import product1368 from './renner-rsdk-pro-3-0-310306';
+import product1369 from './renner-rsdk-pro-3-0-310307';
+import product1370 from './renner-rsdk-pro-3-0-310314';
+import product1371 from './renner-rsdk-pro-3-0-310315';
+import product1372 from './renner-rsdk-pro-3-0-310316';
+import product1373 from './renner-rsdk-pro-3-0-310317';
+import product1374 from './renner-rsdk-pro-3-0-310463';
+import product1375 from './renner-rsdk-pro-3-0-310464';
+import product1376 from './renner-rsdk-pro-3-0-310465';
+import product1377 from './renner-rsdk-pro-3-0-310466';
+import product1378 from './renner-rsdk-pro-4-0-310302';
+import product1379 from './renner-rsdk-pro-4-0-310303';
+import product1380 from './renner-rsdk-pro-4-0-310308';
+import product1381 from './renner-rsdk-pro-4-0-310309';
+import product1382 from './renner-rsdk-pro-4-0-310318';
+import product1383 from './renner-rsdk-pro-4-0-310319';
+import product1384 from './renner-rsdk-pro-4-0-310320';
+import product1385 from './renner-rsdk-pro-4-0-310321';
+import product1386 from './renner-rsdk-pro-4-0-310475';
+import product1387 from './renner-rsdk-pro-4-0-310476';
+import product1388 from './renner-rsdk-pro-4-0-310477';
+import product1389 from './renner-rsdk-pro-4-0-310478';
+import product1390 from './renner-rsdk-pro-5-5-310304';
+import product1391 from './renner-rsdk-pro-5-5-310305';
+import product1392 from './renner-rsdk-pro-5-5-310310';
+import product1393 from './renner-rsdk-pro-5-5-310311';
+import product1394 from './renner-rsdk-pro-5-5-310322';
+import product1395 from './renner-rsdk-pro-5-5-310323';
+import product1396 from './renner-rsdk-pro-5-5-310324';
+import product1397 from './renner-rsdk-pro-5-5-310325';
+import product1398 from './renner-rsdk-pro-5-5-310487';
+import product1399 from './renner-rsdk-pro-5-5-310488';
+import product1400 from './renner-rsdk-pro-5-5-310489';
+import product1401 from './renner-rsdk-pro-5-5-310490';
+import product1402 from './renner-rsdk-pro-7-5-310312';
+import product1403 from './renner-rsdk-pro-7-5-310313';
+import product1404 from './renner-rsdk-pro-7-5-310326';
+import product1405 from './renner-rsdk-pro-7-5-310327';
+import product1406 from './renner-rsdk-pro-7-5-310328';
+import product1407 from './renner-rsdk-pro-7-5-310329';
+import product1408 from './renner-rsdk-pro-7-5-310499';
+import product1409 from './renner-rsdk-pro-7-5-310500';
+import product1410 from './renner-rsdk-pro-7-5-310501';
+import product1411 from './renner-rsdk-pro-7-5-310502';
+import product1412 from './renner-rsdk-pro-ecn-11-0-310391';
+import product1413 from './renner-rsdk-pro-ecn-11-0-310392';
+import product1414 from './renner-rsdk-pro-ecn-11-0-310517';
+import product1415 from './renner-rsdk-pro-ecn-11-0-310518';
+import product1416 from './renner-rsdk-pro-ecn-3-0-310383';
+import product1417 from './renner-rsdk-pro-ecn-3-0-310384';
+import product1418 from './renner-rsdk-pro-ecn-3-0-310469';
+import product1419 from './renner-rsdk-pro-ecn-3-0-310470';
+import product1420 from './renner-rsdk-pro-ecn-4-0-310385';
+import product1421 from './renner-rsdk-pro-ecn-4-0-310386';
+import product1422 from './renner-rsdk-pro-ecn-4-0-310481';
+import product1423 from './renner-rsdk-pro-ecn-4-0-310482';
+import product1424 from './renner-rsdk-pro-ecn-5-5-310387';
+import product1425 from './renner-rsdk-pro-ecn-5-5-310388';
+import product1426 from './renner-rsdk-pro-ecn-5-5-310493';
+import product1427 from './renner-rsdk-pro-ecn-5-5-310494';
+import product1428 from './renner-rsdk-pro-ecn-7-5-310389';
+import product1429 from './renner-rsdk-pro-ecn-7-5-310390';
+import product1430 from './renner-rsdk-pro-ecn-7-5-310505';
+import product1431 from './renner-rsdk-pro-ecn-7-5-310506';
+import product1432 from './renner-rsf-pro-11-0-310078';
+import product1433 from './renner-rsf-pro-5-5-310072';
+import product1434 from './renner-rsf-pro-7-5-310075';
+import product1435 from './renner-rsk-pro-11-0-310136';
+import product1436 from './renner-rsk-pro-11-0-310137';
+import product1437 from './renner-rsk-pro-11-0-310138';
+import product1438 from './renner-rsk-pro-11-0-310139';
+import product1439 from './renner-rsk-pro-3-0-310120';
+import product1440 from './renner-rsk-pro-3-0-310121';
+import product1441 from './renner-rsk-pro-3-0-310122';
+import product1442 from './renner-rsk-pro-3-0-310123';
+import product1443 from './renner-rsk-pro-4-0-310124';
+import product1444 from './renner-rsk-pro-4-0-310125';
+import product1445 from './renner-rsk-pro-4-0-310126';
+import product1446 from './renner-rsk-pro-4-0-310127';
+import product1447 from './renner-rsk-pro-5-5-310128';
+import product1448 from './renner-rsk-pro-5-5-310129';
+import product1449 from './renner-rsk-pro-5-5-310130';
+import product1450 from './renner-rsk-pro-5-5-310131';
+import product1451 from './renner-rsk-pro-7-5-310132';
+import product1452 from './renner-rsk-pro-7-5-310133';
+import product1453 from './renner-rsk-pro-7-5-310134';
+import product1454 from './renner-rsk-pro-7-5-310135';
+import product1455 from './renner-rskf-pro-5-5-310188';
+import product1456 from './renner-rskf-pro-7-5-310191';
+import product1457 from './revolution-air-superboxy-2l';
+import product1458 from './scheppach-hc08si';
+import product1459 from './scheppach-hc10-twin';
+import product1460 from './scheppach-hc105dc';
+import product1461 from './scheppach-hc24v';
+import product1462 from './scheppach-hc51v';
+import product1463 from './schneider-cpm-220-9-20-wsof';
+import product1464 from './schneider-sem-110-10-6-wof';
+import product1465 from './schneider-unm-220-9-25-wsof';
+import product1466 from './schneider-unm-220-9-50-wsof';
+import product1467 from './schneider-unm-240-8-40-w-clean';
+import product1468 from './schneider-unm-240-8-40-wxm-clean';
+import product1469 from './schneider-unm-240-8-40-wxs-clean';
+import product1470 from './schneider-unm-240-8-40-wxsm-clean';
+import product1471 from './schneider-unm-360-8-40-w-clean';
+import product1472 from './schneider-unm-360-8-40-wxm-clean';
+import product1473 from './schneider-unm-360-8-40-wxs-clean';
+import product1474 from './schneider-unm-360-8-40-wxsm-clean';
+import product1475 from './schneider-unm-720-8-90-d-clean';
+import product1476 from './schneider-unm-720-8-90-dxm-clean';
+import product1477 from './schneider-unm-stb-1000-10-10';
+import product1478 from './schneider-unm-stb-1000-10-10-c';
+import product1479 from './schneider-unm-stb-1000-15-10';
+import product1480 from './schneider-unm-stb-1000-15-10-c';
+import product1481 from './schneider-unm-stb-1250-10-10';
+import product1482 from './schneider-unm-stb-1250-10-10-c';
+import product1483 from './schneider-unm-stb-580-15-10';
+import product1484 from './schneider-unm-stb-580-15-10-xs';
+import product1485 from './schneider-unm-stb-660-10-10';
+import product1486 from './schneider-unm-stb-660-10-10-xs';
+import product1487 from './schneider-unm-stb-780-15-10';
+import product1488 from './schneider-unm-stb-780-15-10-c';
+import product1489 from './schneider-unm-sth-650-10-180';
+import product1490 from './schneider-unm-stl-1000-10-270';
+import product1491 from './schneider-unm-stl-1000-10-270-c';
+import product1492 from './schneider-unm-stl-1000-10-500';
+import product1493 from './schneider-unm-stl-1000-10-500-c';
+import product1494 from './schneider-unm-stl-1000-15-270';
+import product1495 from './schneider-unm-stl-1000-15-270-c';
+import product1496 from './schneider-unm-stl-1000-15-500';
+import product1497 from './schneider-unm-stl-1000-15-500-c';
+import product1498 from './schneider-unm-stl-1250-10-270';
+import product1499 from './schneider-unm-stl-1250-10-270-c';
+import product1500 from './schneider-unm-stl-1250-10-500-c';
+import product1501 from './schneider-unm-stl-580-15-270';
+import product1502 from './schneider-unm-stl-580-15-270-xs';
+import product1503 from './schneider-unm-stl-580-15-500';
+import product1504 from './schneider-unm-stl-660-10-270';
+import product1505 from './schneider-unm-stl-660-10-270-xs';
+import product1506 from './schneider-unm-stl-660-10-500';
+import product1507 from './schneider-unm-stl-660-10-500-xs';
+import product1508 from './schneider-unm-stl-780-15-270';
+import product1509 from './schneider-unm-stl-780-15-270-c';
+import product1510 from './schneider-unm-stl-780-15-500';
+import product1511 from './schneider-unm-stl-780-15-500-c';
+import product1512 from './schneider-unm-sts-1000-10-270';
+import product1513 from './schneider-unm-sts-1000-10-270-c';
+import product1514 from './schneider-unm-sts-1000-10-270-xdk';
+import product1515 from './schneider-unm-sts-1000-10-270-xdkc';
+import product1516 from './schneider-unm-sts-1000-10-500';
+import product1517 from './schneider-unm-sts-1000-10-500-c';
+import product1518 from './schneider-unm-sts-1000-10-500-xdk';
+import product1519 from './schneider-unm-sts-1000-10-500-xdkc';
+import product1520 from './schneider-unm-sts-1000-10-90-c';
+import product1521 from './schneider-unm-sts-1000-15-270';
+import product1522 from './schneider-unm-sts-1000-15-270-c';
+import product1523 from './schneider-unm-sts-1000-15-270-xdkc';
+import product1524 from './schneider-unm-sts-1000-15-500';
+import product1525 from './schneider-unm-sts-1000-15-500-c';
+import product1526 from './schneider-unm-sts-1000-15-500-xdk';
+import product1527 from './schneider-unm-sts-1000-15-500-xdkc';
+import product1528 from './schneider-unm-sts-1250-10-270';
+import product1529 from './schneider-unm-sts-1250-10-270-c';
+import product1530 from './schneider-unm-sts-1250-10-270-xdk';
+import product1531 from './schneider-unm-sts-1250-10-270-xdkc';
+import product1532 from './schneider-unm-sts-1250-10-500';
+import product1533 from './schneider-unm-sts-1250-10-500-c';
+import product1534 from './schneider-unm-sts-1250-10-500-xdkc';
+import product1535 from './schneider-unm-sts-1250-10-90-c';
+import product1536 from './schneider-unm-sts-580-15-270';
+import product1537 from './schneider-unm-sts-580-15-270-xdk';
+import product1538 from './schneider-unm-sts-580-15-270-xs';
+import product1539 from './schneider-unm-sts-580-15-270-xsdk';
+import product1540 from './schneider-unm-sts-580-15-500';
+import product1541 from './schneider-unm-sts-580-15-500-xdk';
+import product1542 from './schneider-unm-sts-580-15-500-xs';
+import product1543 from './schneider-unm-sts-580-15-500-xsdk';
+import product1544 from './schneider-unm-sts-630-10-270-base';
+import product1545 from './schneider-unm-sts-660-10-270';
+import product1546 from './schneider-unm-sts-660-10-270-xdk';
+import product1547 from './schneider-unm-sts-660-10-270-xs';
+import product1548 from './schneider-unm-sts-660-10-270-xsdk';
+import product1549 from './schneider-unm-sts-660-10-500';
+import product1550 from './schneider-unm-sts-660-10-500-xdk';
+import product1551 from './schneider-unm-sts-660-10-500-xs';
+import product1552 from './schneider-unm-sts-660-10-500-xsdk';
+import product1553 from './schneider-unm-sts-660-10-90';
+import product1554 from './schneider-unm-sts-660-10-90-xs';
+import product1555 from './schneider-unm-sts-780-15-270';
+import product1556 from './schneider-unm-sts-780-15-270-c';
+import product1557 from './schneider-unm-sts-780-15-270-xdkc';
+import product1558 from './schneider-unm-sts-780-15-500';
+import product1559 from './schneider-unm-sts-780-15-500-c';
+import product1560 from './schneider-unm-sts-780-15-500-xdk';
+import product1561 from './schneider-unm-sts-780-15-500-xdkc';
+import product1562 from './senco-ac12824';
+import product1563 from './senco-ac19306bl-eu';
+import product1564 from './senco-ac20216bl-eu';
+import product1565 from './senco-ac20224bl-eu';
+import product1566 from './senco-ac20250bl-eu';
+import product1567 from './senco-ac24016';
+import product1568 from './senco-pc1249';
+import product1569 from './senco-pc1250';
+import product1570 from './stanley-air-kit-sans-cuve-1-5hp';
+import product1571 from './stanley-b-251-10-50';
+import product1572 from './stanley-b-251e-9-100';
+import product1573 from './stanley-b-251e-9-50';
+import product1574 from './stanley-b-345e-9-100';
+import product1575 from './stanley-b-345e-9-50';
+import product1576 from './stanley-coaxial-sans-huile-6l-1-5hp';
+import product1577 from './stanley-d-200-10-24';
+import product1578 from './stanley-d-200-10-24v';
+import product1579 from './stanley-d-200-8-24';
+import product1580 from './stanley-d-211-8-24';
+import product1581 from './stanley-d-211-8-50';
+import product1582 from './stanley-d-230-10-50v';
+import product1583 from './stanley-d-270-10-100v';
+import product1584 from './stanley-dn-200-8-6';
+import product1585 from './stanley-dn200-10-5';
+import product1586 from './stanley-dst-100-8-6';
+import product1587 from './stanley-fatmax-b-255-10-100';
+import product1588 from './stanley-fatmax-b-255-10-100-t';
+import product1589 from './stanley-fatmax-b-255-10-50';
+import product1590 from './stanley-fatmax-b-350-10-50';
+import product1591 from './stanley-fatmax-d-211-8-24s';
+import product1592 from './stanley-fatmax-d-211-8-50s';
+import product1593 from './stanley-fatmax-d-251-10-24s';
+import product1594 from './stanley-fatmax-d-251-10-50s';
+import product1595 from './stanley-fatmax-dn-200-10-30v';
+import product1596 from './stanley-fatmax-dn-230-10-50v';
+import product1597 from './stanley-fatmax-dst-101-8-6';
+import product1598 from './stanley-fatmax-dv2-400-10-100';
+import product1599 from './stanley-fatmax-dv2-400-10-24p';
+import product1600 from './stanley-fatmax-dv2-400-10-50';
+import product1601 from './stanley-fatmax-dv4-400-10-24p';
+import product1602 from './stanley-fatmax-hy-227-10-12';
+import product1603 from './stanley-fatmax-hy-227-10-24v';
+import product1604 from './stanley-fatmax-hy-227-10-30v';
+import product1605 from './stanley-fatmax-hy-227-10-50v';
+import product1606 from './stanley-fatmax-hy-227-8-6e';
+import product1607 from './stanley-fatmax-s-244-8-10-pcm';
+import product1608 from './stanley-fatmax-s-244-8-24';
+import product1609 from './stanley-fatmax-s-244-8-6';
+import product1610 from './stanley-fatmax-tab-200-10-24v';
+import product1611 from './stanley-fatmax-tab-200-10-30v';
+import product1612 from './stanley-fatmax-tab-200-10-30vw';
+import product1613 from './stanley-fatmax-tab-230-10-50vw';
+import product1614 from './stanley-sxcms1324he';
+import product1615 from './stanley-sxcms1350he';
+import product1616 from './stanley-sxcms1350ve';
+import product1617 from './stanley-sxcms2050he';
+import product1618 from './stanley-sxcms2652he';
+import product1619 from './stanley-sxcms30103e';
 
 // Raw records are validated by the catalog schema before use.
 export const rawCompressors = Array.of<unknown>(
@@ -2839,4 +3039,204 @@ export const rawCompressors = Array.of<unknown>(
 	product1417,
 	product1418,
 	product1419,
+	product1420,
+	product1421,
+	product1422,
+	product1423,
+	product1424,
+	product1425,
+	product1426,
+	product1427,
+	product1428,
+	product1429,
+	product1430,
+	product1431,
+	product1432,
+	product1433,
+	product1434,
+	product1435,
+	product1436,
+	product1437,
+	product1438,
+	product1439,
+	product1440,
+	product1441,
+	product1442,
+	product1443,
+	product1444,
+	product1445,
+	product1446,
+	product1447,
+	product1448,
+	product1449,
+	product1450,
+	product1451,
+	product1452,
+	product1453,
+	product1454,
+	product1455,
+	product1456,
+	product1457,
+	product1458,
+	product1459,
+	product1460,
+	product1461,
+	product1462,
+	product1463,
+	product1464,
+	product1465,
+	product1466,
+	product1467,
+	product1468,
+	product1469,
+	product1470,
+	product1471,
+	product1472,
+	product1473,
+	product1474,
+	product1475,
+	product1476,
+	product1477,
+	product1478,
+	product1479,
+	product1480,
+	product1481,
+	product1482,
+	product1483,
+	product1484,
+	product1485,
+	product1486,
+	product1487,
+	product1488,
+	product1489,
+	product1490,
+	product1491,
+	product1492,
+	product1493,
+	product1494,
+	product1495,
+	product1496,
+	product1497,
+	product1498,
+	product1499,
+	product1500,
+	product1501,
+	product1502,
+	product1503,
+	product1504,
+	product1505,
+	product1506,
+	product1507,
+	product1508,
+	product1509,
+	product1510,
+	product1511,
+	product1512,
+	product1513,
+	product1514,
+	product1515,
+	product1516,
+	product1517,
+	product1518,
+	product1519,
+	product1520,
+	product1521,
+	product1522,
+	product1523,
+	product1524,
+	product1525,
+	product1526,
+	product1527,
+	product1528,
+	product1529,
+	product1530,
+	product1531,
+	product1532,
+	product1533,
+	product1534,
+	product1535,
+	product1536,
+	product1537,
+	product1538,
+	product1539,
+	product1540,
+	product1541,
+	product1542,
+	product1543,
+	product1544,
+	product1545,
+	product1546,
+	product1547,
+	product1548,
+	product1549,
+	product1550,
+	product1551,
+	product1552,
+	product1553,
+	product1554,
+	product1555,
+	product1556,
+	product1557,
+	product1558,
+	product1559,
+	product1560,
+	product1561,
+	product1562,
+	product1563,
+	product1564,
+	product1565,
+	product1566,
+	product1567,
+	product1568,
+	product1569,
+	product1570,
+	product1571,
+	product1572,
+	product1573,
+	product1574,
+	product1575,
+	product1576,
+	product1577,
+	product1578,
+	product1579,
+	product1580,
+	product1581,
+	product1582,
+	product1583,
+	product1584,
+	product1585,
+	product1586,
+	product1587,
+	product1588,
+	product1589,
+	product1590,
+	product1591,
+	product1592,
+	product1593,
+	product1594,
+	product1595,
+	product1596,
+	product1597,
+	product1598,
+	product1599,
+	product1600,
+	product1601,
+	product1602,
+	product1603,
+	product1604,
+	product1605,
+	product1606,
+	product1607,
+	product1608,
+	product1609,
+	product1610,
+	product1611,
+	product1612,
+	product1613,
+	product1614,
+	product1615,
+	product1616,
+	product1617,
+	product1618,
+	product1619,
 );

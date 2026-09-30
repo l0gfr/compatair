@@ -92,3 +92,5 @@ Si gonflage et clé fonctionnent simultanément, construisez une ligne de demand
 Une configuration est actionnable lorsque l’atelier peut la rejouer avec la même clé et le même chemin d’air. L’étiquette « 1 pouce » reste un identifiant mécanique, jamais une preuve de capacité pneumatique.
 
 La [lecture des douilles à chocs et adaptateurs](/guides/douilles-choc-adaptateurs-carre-compatibilite/) complète le choix de la clé en distinguant l’interface mécanique et les données de couple.
+
+Une enclume plus longue modifie l’accès et la masse de l’outil. Comparez les [NPK NW-2800P(R) et (4R)](/guides/npk-nw2800p-r-4r-enclume-longue/) puis les [NW-3500GB(P) et (6P)](/guides/npk-nw3500gb-6p-version-longue-debit/) à partir des codes complets. Leurs consommations moyennes restent identifiées comme telles dans l’examen du compresseur.

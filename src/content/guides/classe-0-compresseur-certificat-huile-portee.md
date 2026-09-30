@@ -57,3 +57,5 @@ Si le poste impose une exigence microbiologique ou une qualification pour un usa
 Le certificat emploie une conclusion sur l’absence de traces déterminées dans ses conditions d’essai. Nous ne la reformulons pas en « aucune molécule dans toute installation ». La méthode et ses limites font partie de l’interprétation.
 
 Le [guide de mesure des vapeurs et de l’huile totale](/guides/mesure-vapeurs-huile-huile-totale-air-comprime/) explique pourquoi un indicateur ne couvre pas automatiquement toutes les phases. Aucune valeur limite de classe n’est reconstituée ici à partir d’une publicité ou d’un tableau non consulté. Pour réceptionner un système, exigez un critère écrit et une mesure dans le périmètre attendu.
+
+Le [LENTO 31 refroidi par air ou par eau](/guides/almig-lento-31-air-eau-pression-10-12-bar/) fournit un exemple de comparaison au sein d’une famille présentée sans huile. Le guide porte sur les plages de pression et les conditions d’installation propres à chaque variante ; la désignation de famille ne remplace pas les documents demandés pour votre procédé.

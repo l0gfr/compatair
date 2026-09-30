@@ -1,0 +1,579 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-09-30",
+  "sourcesConsultedOn": "2026-09-30",
+  "reviewType": "internal_editorial",
+  "assistedByAI": true,
+  "externalProfessionalValidation": false,
+  "physicalTestsPerformed": false,
+  "publicationScope": {
+    "guidesBefore": 316,
+    "guidesAdded": 30,
+    "guidesAfter": 346,
+    "compressorsAdded": 200,
+    "toolsAdded": 1000
+  },
+  "hashScope": "Empreintes des PDF effectivement téléchargés en HTTPS et des 30 guides après maillage. Originaux constructeurs non redistribués.",
+  "sources": [
+    {
+      "id": "almig-2026",
+      "url": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf",
+      "resolvedUrl": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf",
+      "sha256": "f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e",
+      "bytes": 4383400,
+      "observedAt": "2026-09-30"
+    },
+    {
+      "id": "boge-c-current",
+      "url": "https://www.boge.com/f/287325279136465/x/5af6ceb71f/boge-c-series-datasheet.pdf",
+      "resolvedUrl": "https://www.boge.com/f/287325279136465/x/5af6ceb71f/boge-c-series-datasheet.pdf",
+      "sha256": "923f5b135b375ac2c7271a2279ad875136fbab986e866618079cc3cc3a3934f8",
+      "bytes": 7523828,
+      "observedAt": "2026-09-30"
+    },
+    {
+      "id": "boge-c2-brochure",
+      "url": "https://www.boge.com/f/287325279136465/x/258764bb57/boge-c-2-baureihe-broschure.pdf",
+      "resolvedUrl": "https://www.boge.com/f/287325279136465/x/258764bb57/boge-c-2-baureihe-broschure.pdf",
+      "sha256": "1e3b65adb554e5f8183f48a9726e897322b982acb2e138cfc4b73491d287ebec",
+      "bytes": 8321148,
+      "observedAt": "2026-09-30"
+    },
+    {
+      "id": "boge-c2-current",
+      "url": "https://www.boge.com/f/287325279136465/x/2c33dd8a04/boge-c-2-baureihe-datenblatt.pdf",
+      "resolvedUrl": "https://www.boge.com/f/287325279136465/x/2c33dd8a04/boge-c-2-baureihe-datenblatt.pdf",
+      "sha256": "768abbb606ff488a3e4dc030ef2842a95fe78cc3c26e8f4dfb50e2a0f6fe67b3",
+      "bytes": 7569577,
+      "observedAt": "2026-09-30"
+    },
+    {
+      "id": "npk-2026",
+      "url": "https://www.npk-en.com/app/download/10804376570/NPK_air_tool_catologue_apr2026.pdf?t=1777353985",
+      "resolvedUrl": "https://s27d91de5f9b104ce.jimcontent.com/download/version/1777353985/module/10804376570/name/NPK_air_tool_catologue_apr2026.pdf",
+      "sha256": "bd5e6718ea1d625e053449706fd6e72b801cd772ef6c74826614889dfb8ca90c",
+      "bytes": 5288964,
+      "observedAt": "2026-09-30"
+    },
+    {
+      "id": "renner-2026",
+      "url": "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf",
+      "resolvedUrl": "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf",
+      "sha256": "35bd2421c2cc333bc6a0d6cd20c09bbf6b3c2af621021cb6cd2a254d23e74f8a",
+      "bytes": 15460985,
+      "observedAt": "2026-09-30"
+    },
+    {
+      "id": "topcat-issued",
+      "url": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf",
+      "resolvedUrl": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf",
+      "sha256": "4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a",
+      "bytes": 46394590,
+      "observedAt": "2026-09-30"
+    },
+    {
+      "id": "uryu-P35",
+      "url": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P35.pdf",
+      "resolvedUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P35.pdf",
+      "sha256": "4ef07a7843585c8812e74e00d36b3d928ce3793e180ffa30a9ea530ffaa7ab17",
+      "bytes": 444686,
+      "observedAt": "2026-09-30"
+    },
+    {
+      "id": "uryu-P38_43",
+      "url": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P38_43.pdf",
+      "resolvedUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P38_43.pdf",
+      "sha256": "90b725f7cea6b3034cca423bf66e2277b337b80dc68d216aa85b8105caf2b941",
+      "bytes": 2597737,
+      "observedAt": "2026-09-30"
+    },
+    {
+      "id": "uryu-P50_51",
+      "url": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P50_51.pdf",
+      "resolvedUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P50_51.pdf",
+      "sha256": "6cd4a6cabf99f71e218a0882b40a4f02651ca2ed0bb8bdfc8fd22eb8314cc941",
+      "bytes": 821095,
+      "observedAt": "2026-09-30"
+    },
+    {
+      "id": "uryu-P57_61",
+      "url": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P57_61.pdf",
+      "resolvedUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P57_61.pdf",
+      "sha256": "f00ce52018de3cd2c8f093e9762bb4f6c63230f68c6a1b04217089408fe89245",
+      "bytes": 1437064,
+      "observedAt": "2026-09-30"
+    }
+  ],
+  "guides": [
+    {
+      "slug": "renner-rs-pro-3-0-310000-310001-310002-310003",
+      "sources": [
+        "renner-2026"
+      ],
+      "sha256": "cf638e9bb3ddc1f9a8d407f71592adf45a83a88a9511cd59ed62b297526bf8c0",
+      "wordCount": 512,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "renner-rsd-rsdk-pro-3-0-cuve-secheur",
+      "sources": [
+        "renner-2026"
+      ],
+      "sha256": "103593b2f7253d8757a2e8d0512e6a1dba5aa045e409de9e4893f5eee826c2c5",
+      "wordCount": 518,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "renner-rs-pro-4-0-5-5-besoin-600-l-min",
+      "sources": [
+        "renner-2026"
+      ],
+      "sha256": "a34d2e24bf1f9b457e34971a5ea6247fac2c7ee557ddebb779c47feb3aa5d7cc",
+      "wordCount": 557,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "renner-rs-pro-7-5-11-0-deux-perceuses-top-cat",
+      "sources": [
+        "renner-2026",
+        "topcat-issued"
+      ],
+      "sha256": "d7b2841031aaf0be989efb241608e7cb5e5f9ba2f241333d487c85f1d9d4c37e",
+      "wordCount": 568,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "renner-rsf-pro-5-5-debit-minimum-modulation",
+      "sources": [
+        "renner-2026"
+      ],
+      "sha256": "63f65f6054cb4b2f8ad11cdcaaebf46afb227c0329087550836d3570e430d3ad",
+      "wordCount": 506,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "renner-rs-pro-rsf-pro-7-5-meme-debit-10-bar",
+      "sources": [
+        "renner-2026"
+      ],
+      "sha256": "c961208a52ee81b1c08bc152648197930f1e327b783b939adc687e51c128dcb1",
+      "wordCount": 529,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "renner-rsd-pro-3-0-2x90-250-litres",
+      "sources": [
+        "renner-2026"
+      ],
+      "sha256": "07f522c05a503bf8a9e4a1678adfcfc7b77705b39e1242d97c43d77e82b96930",
+      "wordCount": 519,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "renner-rsdk-pro-3-0-250-500-litres-implantation",
+      "sources": [
+        "renner-2026"
+      ],
+      "sha256": "b6c5c9e6711e9a8634fde4723e951bb2faa3cc8e181755d4016afb3cf3dcdefd",
+      "wordCount": 532,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "almig-combi-xp-4-6-meme-cuve-debit",
+      "sources": [
+        "almig-2026"
+      ],
+      "sha256": "126ea90ca50fdab9cca05ce0401743dc4a5c9fc1a6c72b46b1273681cb93f27c",
+      "wordCount": 490,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "almig-combi-xp-18-22-500-litres-debit",
+      "sources": [
+        "almig-2026"
+      ],
+      "sha256": "ac0e6e2b067158a48f3c7d116ee456755a9481265019f6f504746004e8200ad1",
+      "wordCount": 534,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "almig-combi-xp-11-debit-minimum-atelier-intermittent",
+      "sources": [
+        "almig-2026"
+      ],
+      "sha256": "e08b8966f6b51b68532a927dd91a338652e5f8f085e282b0369e865db52b6dcd",
+      "wordCount": 470,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "almig-combi-xp-4-en-1-filtration-livraison-air",
+      "sources": [
+        "almig-2026"
+      ],
+      "sha256": "a9754025dbdbac2c1f0a953f9cd6cd136cb6a0f3d5e545260a9360a256abf497",
+      "wordCount": 501,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "almig-lento-31-air-eau-pression-10-12-bar",
+      "sources": [
+        "almig-2026"
+      ],
+      "sha256": "f475b574dd638c20000c0fa853e9b2ed202e44a174cabf969fbb05cd96545536",
+      "wordCount": 541,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "almig-g-drive-t-48-refroidissement-air-eau-debit",
+      "sources": [
+        "almig-2026"
+      ],
+      "sha256": "40204cab1bb8cf4be42f310275e794546bc1568672b8a5264a618f125b78c8cf",
+      "wordCount": 513,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "almig-simplexx-132-air-eau-encombrement-debit",
+      "sources": [
+        "almig-2026"
+      ],
+      "sha256": "4fa285bf4faa8b60c675779f1e7933af0aa135f419eddc99009ff9b797654cd7",
+      "wordCount": 517,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "boge-c3-l-234-l-min-pression-mesure",
+      "sources": [
+        "boge-c-current"
+      ],
+      "sha256": "15f12833890aa6893183967b6f635e26dece9713c111a507ebe4a5c7007d358e",
+      "wordCount": 481,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "boge-c12-2-63-db-superschallgedammt",
+      "sources": [
+        "boge-c2-current"
+      ],
+      "sha256": "04569640fbf2886d7f28ba602ebdf5419472da53816a07294de08ab45d9fa0e2",
+      "wordCount": 519,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "boge-c2-reservoir-500-750-litres-devis",
+      "sources": [
+        "boge-c2-current",
+        "boge-c2-brochure"
+      ],
+      "sha256": "9e7e4273688dbb112d5f6377da07e4bb42ac16d32635fa8812f1a16eb02c5146",
+      "wordCount": 521,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "uryu-ug25na-6mm-quart-pouce-collet-codes",
+      "sources": [
+        "uryu-P57_61"
+      ],
+      "sha256": "21c0a8ee15c066ea3099cbf1678cf3a2b4b167998c3c6821e07b363bf0a81fd7",
+      "wordCount": 518,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "uryu-ug38n-ug38nl-meuleuse-longue-debit",
+      "sources": [
+        "uryu-P57_61"
+      ],
+      "sha256": "821972d73db8fa94817444b48c271f2eb42e362b4c299dec345c642aa0d2c71c",
+      "wordCount": 490,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "uryu-us-lt10b-visseuse-faible-couple-air",
+      "sources": [
+        "uryu-P50_51"
+      ],
+      "sha256": "0584f0335b392f8c1c8853a7be4533eeb0e234831622cb10833fdfcb448ad12d",
+      "wordCount": 547,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "uryu-urw6-pression-recommandee-couple-6-bar",
+      "sources": [
+        "uryu-P35"
+      ],
+      "sha256": "ce20d13a4652c09133d1d572b029836476dc0038440666337b575dff5fda3445",
+      "wordCount": 542,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "uryu-cle-chocs-temps-serrage-cinq-secondes",
+      "sources": [
+        "uryu-P38_43"
+      ],
+      "sha256": "dab57ad6138fd505fc310bc0f79cc76b50fad4c82ebf8b3a813e761acdeb54a8",
+      "wordCount": 537,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "npk-nw2800p-r-4r-enclume-longue",
+      "sources": [
+        "npk-2026"
+      ],
+      "sha256": "5080d58eefc4f515f473e532e9fc7b640e03a6d30e96ec71e5d14675d496f41e",
+      "wordCount": 512,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "npk-nw3500gb-6p-version-longue-debit",
+      "sources": [
+        "npk-2026"
+      ],
+      "sha256": "39c88252abfc1338663abbd644719949cd64bc5ebd5feb1c14bc6bbf6e55a996",
+      "wordCount": 548,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "npk-nhr00-nhr00-02-aiguilles-2-3-mm",
+      "sources": [
+        "npk-2026"
+      ],
+      "sha256": "9531a6b47cc7fb1644d250a6767ca2d2eefa241ecc8c87b6bee515ab9d572a47",
+      "wordCount": 516,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "npk-ts05-lame-32-dents-brosses-accessoires",
+      "sources": [
+        "npk-2026"
+      ],
+      "sha256": "7fc47ca7f5fadffaeeaa22b09d91a83ab18dc2fc1e4e7b11121ef1cea108326a",
+      "wordCount": 526,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "top-cat-300d-400d-compresseur-combi-xp",
+      "sources": [
+        "topcat-issued",
+        "almig-2026"
+      ],
+      "sha256": "690f160b1a23a69d2d378dea426219ca0b043980c4d5eefebc09dfa747bb134d",
+      "wordCount": 538,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "top-cat-520v-54v-consommation-maximale",
+      "sources": [
+        "topcat-issued"
+      ],
+      "sha256": "9f38375f463f6e2e46d5a92e03659fc24a74037750c2265a19e7e8de3896eabe",
+      "wordCount": 502,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    },
+    {
+      "slug": "top-cat-400eh-meuleuse-extension-7-36-pouces",
+      "sources": [
+        "topcat-issued"
+      ],
+      "sha256": "f73e17395a6aaf2561cbece2bb94a0351feb70d241e5ba37891ca1f30aeec049",
+      "wordCount": 547,
+      "calculations": "Les conversions et les hypothèses de dimensionnement sont identifiées dans le corps ; aucun essai physique ni gain économique annoncé."
+    }
+  ],
+  "incomingLinks": [
+    {
+      "from": "compresseur-vis-8-10-13-bar-versions",
+      "to": [
+        "renner-rs-pro-3-0-310000-310001-310002-310003",
+        "renner-rsd-rsdk-pro-3-0-cuve-secheur"
+      ]
+    },
+    {
+      "from": "comparatif-compresseurs-debit-restitue",
+      "to": [
+        "renner-rs-pro-4-0-5-5-besoin-600-l-min",
+        "almig-combi-xp-18-22-500-litres-debit",
+        "almig-g-drive-t-48-refroidissement-air-eau-debit",
+        "almig-simplexx-132-air-eau-encombrement-debit",
+        "boge-c3-l-234-l-min-pression-mesure"
+      ]
+    },
+    {
+      "from": "choisir-volume-cuve-24-50-90-litres",
+      "to": [
+        "renner-rsd-pro-3-0-2x90-250-litres",
+        "renner-rsdk-pro-3-0-250-500-litres-implantation",
+        "boge-c2-reservoir-500-750-litres-devis"
+      ]
+    },
+    {
+      "from": "compresseur-vitesse-variable-vsd-rentabilite-atelier",
+      "to": [
+        "renner-rsf-pro-5-5-debit-minimum-modulation",
+        "renner-rs-pro-rsf-pro-7-5-meme-debit-10-bar",
+        "almig-combi-xp-4-6-meme-cuve-debit",
+        "almig-combi-xp-11-debit-minimum-atelier-intermittent"
+      ]
+    },
+    {
+      "from": "groupe-frl-filtre-regulateur-lubrificateur",
+      "to": [
+        "almig-combi-xp-4-en-1-filtration-livraison-air",
+        "uryu-us-lt10b-visseuse-faible-couple-air"
+      ]
+    },
+    {
+      "from": "classe-0-compresseur-certificat-huile-portee",
+      "to": [
+        "almig-lento-31-air-eau-pression-10-12-bar"
+      ]
+    },
+    {
+      "from": "bruit-compresseur-lire-decibels",
+      "to": [
+        "boge-c12-2-63-db-superschallgedammt"
+      ]
+    },
+    {
+      "from": "micro-meuleuse-50000-60000-tr-min",
+      "to": [
+        "uryu-ug25na-6mm-quart-pouce-collet-codes",
+        "uryu-ug38n-ug38nl-meuleuse-longue-debit",
+        "top-cat-400eh-meuleuse-extension-7-36-pouces"
+      ]
+    },
+    {
+      "from": "compresseur-pour-cle-a-cliquet-pneumatique",
+      "to": [
+        "uryu-urw6-pression-recommandee-couple-6-bar"
+      ]
+    },
+    {
+      "from": "compresseur-pour-cle-a-chocs-pneumatique",
+      "to": [
+        "uryu-cle-chocs-temps-serrage-cinq-secondes"
+      ]
+    },
+    {
+      "from": "cle-a-chocs-1-pouce-poids-lourds-debit-flexible",
+      "to": [
+        "npk-nw2800p-r-4r-enclume-longue",
+        "npk-nw3500gb-6p-version-longue-debit"
+      ]
+    },
+    {
+      "from": "compresseur-pour-derouilleur-a-aiguilles",
+      "to": [
+        "npk-nhr00-nhr00-02-aiguilles-2-3-mm"
+      ]
+    },
+    {
+      "from": "compresseur-pour-scie-sabre-pneumatique",
+      "to": [
+        "npk-ts05-lame-32-dents-brosses-accessoires"
+      ]
+    },
+    {
+      "from": "compresseur-pour-perceuse-pneumatique",
+      "to": [
+        "renner-rs-pro-7-5-11-0-deux-perceuses-top-cat",
+        "top-cat-300d-400d-compresseur-combi-xp"
+      ]
+    },
+    {
+      "from": "contradiction-debit-cfm-m3-min-catalogues",
+      "to": [
+        "top-cat-520v-54v-consommation-maximale"
+      ]
+    }
+  ],
+  "qualityPolicy": {
+    "scope": "Revue documentaire interne, sans essais ni validation professionnelle externe. Les contrôles mécaniques ne certifient pas les affirmations techniques.",
+    "specificChecks": [
+      "Codes et colonnes de pression RENNER vérifiés par positions dans le PDF",
+      "Comparaison des variantes de refroidissement ALMiG sans transfert de performances",
+      "Notes BOGE de configuration conservées",
+      "Consommations moyennes URYU et NPK non promues en consommations continues",
+      "Correction de lecture des références de brosse et de lame TS-05",
+      "Contradiction des unités à vitesse libre Top Cat signalée, sans rectification constructeur inventée"
+    ]
+  },
+  "incomingGuides": [
+    {
+      "slug": "compresseur-vis-8-10-13-bar-versions",
+      "sha256": "c03d050b1691c3ec6e7ab534a764613b7c4355458b1539ec73243f8427b6820e"
+    },
+    {
+      "slug": "comparatif-compresseurs-debit-restitue",
+      "sha256": "fcba8a52766584836a95928f5718ad85be7f865911e7941252c1f58e9edebde3"
+    },
+    {
+      "slug": "choisir-volume-cuve-24-50-90-litres",
+      "sha256": "d4051c8779443f7e2ae3e1afbe55b3ed32b649c293ca6276c02a09babfbcc4e9"
+    },
+    {
+      "slug": "compresseur-vitesse-variable-vsd-rentabilite-atelier",
+      "sha256": "d474a1f1e3f95a4226c451a694664c71330dd8cc7b26c0adf71e0d3a8d58cbca"
+    },
+    {
+      "slug": "groupe-frl-filtre-regulateur-lubrificateur",
+      "sha256": "6dc3f2b607c2fd436d733a90d65b82e371e79bd01250e18d59cc661e96da5c42"
+    },
+    {
+      "slug": "classe-0-compresseur-certificat-huile-portee",
+      "sha256": "2705821954c5a967dc110fafefa177f604dd037cfa115adbd6704c01c18a3ed7"
+    },
+    {
+      "slug": "bruit-compresseur-lire-decibels",
+      "sha256": "b560542b74e742bb1c5494d23ccae121f167fd5f93e0f2babca7643a928de5ee"
+    },
+    {
+      "slug": "micro-meuleuse-50000-60000-tr-min",
+      "sha256": "61922b4a8ea0fb6cd82b80a33ca5742316be51b4b83c20cf21a1564078c109ab"
+    },
+    {
+      "slug": "compresseur-pour-cle-a-cliquet-pneumatique",
+      "sha256": "702d81a0b0ef67c2b5d2e111e38495088d809baa9f969947fddd5c87a82876e3"
+    },
+    {
+      "slug": "compresseur-pour-cle-a-chocs-pneumatique",
+      "sha256": "20ec4a2439d1e9bb9fdd51f30f8a4d2b647148d6203b9d0ac1499f3c7addd5c3"
+    },
+    {
+      "slug": "cle-a-chocs-1-pouce-poids-lourds-debit-flexible",
+      "sha256": "788ae875ab8f024c098715df5ce114073aceff839686b0f9897684a7e2baafd7"
+    },
+    {
+      "slug": "compresseur-pour-derouilleur-a-aiguilles",
+      "sha256": "a570c95ffff2ab91d868bbc20ed3932ec39650f747aefa9f5eefee6ecf57311c"
+    },
+    {
+      "slug": "compresseur-pour-scie-sabre-pneumatique",
+      "sha256": "fa3f2a2dbc6b301579eda5e47551480883173306f792de50f41bbea0afb42aa7"
+    },
+    {
+      "slug": "compresseur-pour-perceuse-pneumatique",
+      "sha256": "3eb1709e1490a1b99088e680d48e604b50f7b0bc8356248e4bdbec2ccd98f36e"
+    },
+    {
+      "slug": "contradiction-debit-cfm-m3-min-catalogues",
+      "sha256": "5377984e35a3a6d1391f2f365b1bb3a3ac8558914ca4e0d375a909f5592ad3d1"
+    }
+  ],
+  "catalogLimitations": [
+    "296 nouvelles consommations moyennes restent airflowBasis=average, sans verdict conclusif de débit continu.",
+    "La lubrification des sept COMBI XP n’a pas été établie dans le périmètre documentaire retenu et reste unknown ; aucune source n’est attribuée artificiellement à ce champ."
+  ],
+  "newSourceHealth": {
+    "checkedAt": "2026-09-30T13:46:11.822Z",
+    "summary": {
+      "reachable": 20,
+      "broken": 0,
+      "unavailable": 0,
+      "unsafe": 0,
+      "unverified": 0,
+      "checked": 20,
+      "anomalies": 0,
+      "auditUnavailable": false
+    }
+  }
+}

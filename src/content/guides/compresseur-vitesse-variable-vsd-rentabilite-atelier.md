@@ -97,3 +97,5 @@ Données et documents consultés le **26 septembre 2026**. Ce guide repose sur u
 
 - [CAGI, FAQ sur les commandes de compresseurs](https://www.cagi.org/assets/documents/pdfs/SystemControlsFAQs.pdf?updated=1657712700)
 - [guide de sélection des compresseurs rotatifs du CAGI](https://www.cagi.org/assets/documents/pdfs/RotarySelectionGuideFinalJune2022.pdf?updated=1658932519)
+
+La comparaison du [RS-PRO et du RSF-PRO 7.5 à 10 bar](/guides/renner-rs-pro-rsf-pro-7-5-meme-debit-10-bar/) permet de séparer capacité maximale et mode de commande. Examinez ensuite le [minimum de modulation du RSF-PRO 5.5](/guides/renner-rsf-pro-5-5-debit-minimum-modulation/) : une demande faible pose une question différente du manque de débit. Cette lecture s’applique aux [COMBI XP 4 et 6](/guides/almig-combi-xp-4-6-meme-cuve-debit/) et au [COMBI XP 11 dans un atelier intermittent](/guides/almig-combi-xp-11-debit-minimum-atelier-intermittent/), sans transformer les seules plages de débit en économie d’énergie garantie.

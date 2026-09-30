@@ -99,3 +99,5 @@ Ouvrez le [calculateur avec la CP7900 préchargée](/calculateur/#outil=chicago-
 - [Chicago Pneumatic, catalogue General Industry](https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf)
 - [Chicago Pneumatic, manuel CP881](https://www.cp.com/content/dam/pim/itba/cp/technical-documents/CA145206.pdf)
 - [Chicago Pneumatic, consignes de sécurité des scies alternatives](https://www.cp.com/content/dam/pim/itba/cp/technical-documents/update2025/june-audit/safety/6159948790.pdf)
+
+Pour le [NPK TS-05](/guides/npk-ts05-lame-32-dents-brosses-accessoires/), la lecture de la grille d’accessoires évite de commander une lame prévue pour une autre scie ou de prendre une brosse pour une lame. Le guide conserve les codes et distingue les possibilités publiées des performances à vérifier sur votre pièce.

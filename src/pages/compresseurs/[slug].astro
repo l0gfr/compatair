@@ -16,7 +16,7 @@ import { activeOffers, merchants } from '../../data/offers';
 import { latestEvidenceDate } from '../../domain/provenance';
 import { offerJsonLd } from '../../domain/product-structured-data';
 import { brandSlug } from '../../domain/brand';
-import { compressorDisplayName } from '../../domain/product-display';
+import { compressorDisplayName, compressorOilLabel } from '../../domain/product-display';
 import { createCompressorCompatibilitySummary } from '../../domain/seo-selection';
 import { serializeJsonLd } from '../../domain/structured-data';
 import { compatibilityFadLabel } from '../../domain/compatibility';
@@ -82,7 +82,7 @@ const productJsonLd = productOffers.length ? {
 			eyebrow="Débit, pression et usages vérifiés"
 			title={displayName}
 			lead={compressor.editorial.overview}
-			reference={`Référence ${compressor.mpn ?? 'non renseignée'} · ${compressor.oilType === 'oil-free' ? 'sans huile' : 'lubrifié'}`}
+			reference={`Référence ${compressor.mpn ?? 'non renseignée'} · ${compressorOilLabel(compressor.oilType)}`}
 			image={compressor.image}
 			qualityLabel={sourceQualityLabel(compressor.confidence)}
 			verifiedDate={verifiedDateLabel}

@@ -43,3 +43,5 @@ Conservez la réponse datée dans le dossier. Si une correction est obtenue, ell
 Les références concernées par cette contradiction ont été écartées du présent lot d’import. Aucune conversion silencieuse n’a été utilisée pour leur attribuer un compresseur compatible. Cette absence est plus utile qu’un verdict construit sur une unité incertaine.
 
 Le [guide consommation à vide et en charge](/guides/cle-impulsions-consommation-vide-charge/) traite un autre cas : plusieurs débits peuvent être cohérents quand leurs régimes sont distincts. Il faut donc qualifier la différence avant de la présenter comme une erreur.
+
+Le tableau des [meuleuses Top Cat 520V et 54V](/guides/top-cat-520v-54v-consommation-maximale/) contient un désaccord entre unités à vitesse libre. L’article sépare cette ligne du maximum publié afin de conserver une comparaison exploitable sans corriger une donnée constructeur à sa place.

@@ -112,3 +112,5 @@ Un autre outil à percussion peut avoir un usage et une consommation très diff�
 - [Chicago Pneumatic, manuel CP7115](https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940169840.pdf)
 - [Chicago Pneumatic, manuel CP7120](https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940162094.pdf)
 - [INRS, ED 6342, Vibrations mains-bras](https://www.inrs.fr/media.html?refINRS=ED+6342)
+
+Le choix des aiguilles fait partie de la référence commandée : les [NPK NHR-00 et NHR-00-02](/guides/npk-nhr00-nhr00-02-aiguilles-2-3-mm/) utilisent des diamètres et des nombres d’aiguilles différents. Le guide compare les configurations sans attribuer à l’une un rendement de décapage que le catalogue ne mesure pas.

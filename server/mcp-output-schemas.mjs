@@ -39,7 +39,7 @@ const productBase = {
 };
 const compressorSchema = strict({
 	...productBase, tankLiters: number, maxPressureBar: number, fadCurve: { type: 'array', items: fadPointSchema }, intakeFlowLpm: number,
-	dutyCycle: number, oilType: { type: 'string', enum: ['oil', 'oil-free'] }, noiseDb: number, powerKw: number, weightKg: number,
+	dutyCycle: number, oilType: { type: 'string', enum: ['oil', 'oil-free', 'unknown'] }, noiseDb: number, powerKw: number, weightKg: number,
 	mobility: { type: 'string', enum: ['portable', 'mobile', 'fixed'] }, voltage: string, phase: { type: 'string', enum: ['single-phase', 'three-phase'] },
 }, ['id', 'slug', 'brand', 'model', 'tankLiters', 'maxPressureBar', 'fadCurve', 'oilType', 'confidence', 'image', 'editorial', 'specifications', 'evidence', 'fieldSources', 'notes']);
 const toolSchema = strict({

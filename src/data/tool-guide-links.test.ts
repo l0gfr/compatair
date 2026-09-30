@@ -1,7 +1,7 @@
 import { existsSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { tools } from './catalog';
-import { defaultToolGuidePath, toolGuideByCategoryId, toolGuidePath } from './tool-guide-links';
+import { defaultToolGuidePath, toolGuideByCategoryId, toolGuideById, toolGuidePath } from './tool-guide-links';
 
 function guideSource(path: string) {
 	return new URL(`../content${path.slice(0, -1)}.md`, import.meta.url);
@@ -18,5 +18,14 @@ describe('tool guide links', () => {
 		expect(tool).toBeDefined();
 		expect(toolGuidePath({ categoryId: tool!.categoryId })).toBe('/guides/compresseur-pour-cle-a-cliquet-pneumatique/');
 		expect(toolGuidePath({ categoryId: tool!.categoryId })).toBe(toolGuidePath({ categoryId: 'cle-a-cliquet' }));
+	});
+
+	it('links documented cases to existing tools and guides', () => {
+		for (const [id, path] of Object.entries(toolGuideById)) {
+			const tool = tools.find(item => item.id === id);
+			expect(tool).toBeDefined();
+			expect(existsSync(guideSource(path))).toBe(true);
+			expect(toolGuidePath(tool!)).toBe(path);
+		}
 	});
 });

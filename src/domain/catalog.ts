@@ -66,7 +66,7 @@ export const compressorSchema = z.object({
 	fadCurve: z.array(z.object({ pressureBar: z.number().nonnegative(), litersPerMinute: z.number().positive() })),
 	intakeFlowLpm: z.number().positive().optional(),
 	dutyCycle: z.number().positive().max(1).optional(),
-	oilType: z.enum(['oil', 'oil-free']),
+	oilType: z.enum(['oil', 'oil-free', 'unknown']),
 	noiseDb: z.number().positive().optional(),
 	powerKw: z.number().positive().optional(),
 	weightKg: z.number().positive().optional(),

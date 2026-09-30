@@ -140,3 +140,5 @@ Pour un souffle localisé sur un détendeur, le [guide du régulateur qui fuit p
 - [Parker, General Industrial Filter, Regulator, Lubricator Products](https://www.parker.com/content/dam/Parker-com/Literature/Literature-Files/pneumatic/Literature/FRL/0700P/0700P_General_Industrial.pdf)
 - [Chicago Pneumatic, gammes de ponceuses orbitales à moteur sans huile](https://tools.cp.com/en-us/products/sanders/pistol-sanders)
 - [Chicago Pneumatic, manuel CP9779](https://www.cp.com/content/dam/pim/itba/cp/technical-documents/2050499083.pdf)
+
+Pour une installation complète, le cas [COMBI XP 4-en-1](/guides/almig-combi-xp-4-en-1-filtration-livraison-air/) aide à fixer le point de livraison et les caractéristiques d’air attendues. Au poste, la [visseuse URYU US-LT10B](/guides/uryu-us-lt10b-visseuse-faible-couple-air/) rappelle qu’une faible plage de couple ne suffit pas à choisir l’alimentation : il faut conserver sa pression recommandée et la nature de sa consommation publiée.

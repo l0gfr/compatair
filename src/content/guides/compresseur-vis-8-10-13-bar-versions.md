@@ -44,3 +44,5 @@ Pour comparer les offres, demandez le code exact, le FAD à la pression retenue 
 Une différence de 410 L/min sépare les valeurs des versions 8 et 13 bar de cet exemple. C’est une soustraction de données de catalogue, pas la mesure d’un gain énergétique ni la garantie d’un réglage possible sur la machine déjà installée.
 
 Les [différences entre noms commerciaux et codes ERP](/guides/compresseur-reference-erp-nom-commercial/) expliquent pourquoi conserver l’identifiant complet dans le devis et dans le dossier de l’atelier. La pression et la puissance, prises seules, ne suffisent pas à identifier le produit.
+
+Chez RENNER, les quatre [articles RS-PRO 3.0 de 7,5 à 15 bar](/guides/renner-rs-pro-3-0-310000-310001-310002-310003/) rendent cette distinction vérifiable par code. La comparaison des [RSD et RSDK-PRO 3.0](/guides/renner-rsd-rsdk-pro-3-0-cuve-secheur/) ajoute un autre contrôle avant commande : identifier la cuve et le sécheur associés au même débit publié.

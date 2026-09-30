@@ -105,3 +105,5 @@ Pour un poste qui réalise ensuite les filetages, comparez séparément les [tar
 - [Chicago Pneumatic, fiche officielle CP785 T022698](https://tools.cp.com/en-au/products/drills/cp785-skuT022698)
 - [Chicago Pneumatic, manuel CP785 Series](https://www.cp.com/content/dam/pim/itba/cp/technical-documents/KF140145.pdf)
 - [Metabo, fiche officielle DB 10 604120000](https://www.metabo.com/de/de/maschinen/bohren-schrauben-meisseln-ruehren/bohrmaschinen/db-10-druckluft-bohrmaschine/604120000)
+
+Le dimensionnement peut se faire sur la consommation maximale publiée des [Top Cat 300D et 400D face aux stations COMBI XP](/guides/top-cat-300d-400d-compresseur-combi-xp/). Si deux postes travaillent ensemble, le cas [deux perceuses Top Cat sur RS-PRO 7.5 ou 11.0](/guides/renner-rs-pro-7-5-11-0-deux-perceuses-top-cat/) explicite le besoin cumulé et la marge retenue dans le calcul.

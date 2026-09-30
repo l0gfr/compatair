@@ -1,5 +1,9 @@
 import type { Compressor } from './catalog';
 
+export function compressorOilLabel(oilType: Compressor['oilType']) {
+	return oilType === 'oil-free' ? 'Sans huile' : oilType === 'oil' ? 'Lubrifié' : 'Lubrification non documentée';
+}
+
 export function compressorInstallationForm(compressor: Compressor): 'cuve horizontale' | 'cuve verticale' | undefined {
 	const familyId = compressor.variant?.familyId ?? '';
 	const tankAttribute = compressor.variant?.distinguishingAttributes.cuve?.toLocaleLowerCase('fr-FR') ?? '';
