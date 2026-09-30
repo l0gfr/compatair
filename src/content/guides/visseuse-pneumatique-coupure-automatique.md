@@ -97,3 +97,5 @@ Données et documents consultés le **26 septembre 2026**. Ce guide repose sur u
 - [catalogue Atlas Copco](https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf)
 - [fiche LTV009 R025-Q](https://www.atlascopco.com/en-ca/itba/products/assembly-solutions/pneumatic-assembly-tools/ltv009-r025-q-sku8431027800)
 - [fiche LTV009 R03-10](https://www.atlascopco.com/en-ca/itba/products/assembly-solutions/pneumatic-assembly-tools/ltv009-r03-10-sku8431027823)
+
+L’[Atlas LTV28 R07-6](/guides/atlas-ltv28-r07-6-couple-debit-compresseur/) sépare la vérification de l’air de celle du couple obtenu. Pour la [Sumake ST-SD110](/guides/sumake-st-sd110-400-l-min-regime/), le régime de consommation doit encore être confirmé avant un verdict d’alimentation.

@@ -1,0 +1,122 @@
+const product = {
+	"id": "agrafeuse-cloueuse-senco-roofpro455xp",
+	"slug": "agrafeuse-cloueuse-senco-roofpro455xp",
+	"categoryId": "agrafeuse-cloueuse",
+	"category": "agrafeuse-cloueuse",
+	"label": "Senco RoofPro455XP",
+	"brand": "Senco",
+	"model": "RoofPro455XP",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {
+		"min": 4.8,
+		"max": 8.3
+	},
+	"demandExplanation": "Consommation publiée sans cadence ni pression de mesure : demander ces deux conditions au fabricant avant de dimensionner.",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/agrafeuse-cloueuse-senco-roofpro455xp.webp",
+		"alt": "Repères techniques : Senco RoofPro455XP",
+		"sourceUrl": "https://www.kyocera-senco.eu/wp-content/uploads/2018/11/Senco_catalogue_EN.pdf",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+	},
+	"variant": {
+		"familyId": "senco-roofpro455xp",
+		"label": "RoofPro455XP",
+		"distinguishingAttributes": {
+			"Longueur": "260 mm",
+			"Largeur": "114 mm",
+			"Hauteur": "267 mm"
+		}
+	},
+	"editorial": {
+		"overview": "Senco RoofPro455XP. Consommation publiée sans cadence ni pression de mesure : demander ces deux conditions au fabricant avant de dimensionner. Longueur : 260 mm. Largeur : 114 mm.",
+		"verifiedFacts": [
+			"Désignation et configuration documentées à la page PDF 62.",
+			"Longueur : 260 mm.",
+			"Largeur : 114 mm.",
+			"Hauteur : 267 mm."
+		],
+		"limitations": [
+			"Consommation publiée sans cadence ni pression de mesure : demander ces deux conditions au fabricant avant de dimensionner.",
+			"La plage de pression utilisable reste distincte de la pression de mesure de la consommation.",
+			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
+			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Localisation du tableau",
+			"value": "Page PDF 62",
+			"evidenceIds": [
+				"documented-d-senco-eu-p62"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "260 mm",
+			"evidenceIds": [
+				"documented-d-senco-eu-p62"
+			]
+		},
+		{
+			"label": "Largeur",
+			"value": "114 mm",
+			"evidenceIds": [
+				"documented-d-senco-eu-p62"
+			]
+		},
+		{
+			"label": "Hauteur",
+			"value": "267 mm",
+			"evidenceIds": [
+				"documented-d-senco-eu-p62"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "2,5 kg",
+			"evidenceIds": [
+				"documented-d-senco-eu-p62"
+			]
+		},
+		{
+			"label": "Cadence et pression de mesure de la consommation",
+			"value": "Non précisées dans ce tableau de catalogue",
+			"evidenceIds": [
+				"documented-d-senco-eu-p62"
+			]
+		},
+		{
+			"label": "Consommation déclarée, exclue du calcul",
+			"value": "185 L/min",
+			"evidenceIds": [
+				"documented-d-senco-eu-p62"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "documented-d-senco-eu-p62",
+			"sourceUrl": "https://www.kyocera-senco.eu/wp-content/uploads/2018/11/Senco_catalogue_EN.pdf#page=62",
+			"sourceLabel": "senco-eu, page PDF 62",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-09-30",
+			"confidence": "B",
+			"notes": "SHA-256 486db6a8ac1ac3006777646b0c524feafaa214151ad503f0588120bef1780229. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		}
+	],
+	"fieldSources": {
+		"workingPressureBar": [
+			"documented-d-senco-eu-p62"
+		],
+		"demandExplanation": [
+			"documented-d-senco-eu-p62"
+		]
+	},
+	"notes": [
+		"Consommation publiée sans cadence ni pression de mesure : demander ces deux conditions au fabricant avant de dimensionner."
+	]
+};
+
+export default product;

@@ -34,6 +34,18 @@ export const toolGuideByCategoryId: Partial<Record<ToolProfile['categoryId'], `/
 };
 
 export const toolGuideById: Record<string, `/guides/${string}/`> = {
+	"agrafeuse-cloueuse-senco-sls18mg": "/guides/senco-sls18mg-68-l-min-cadence-manquante/",
+	"perceuse-atlas-copco-lbb16-ep-005-u-8421010807": "/guides/atlas-lbb16-ep005-sans-mandrin-reference-masse/",
+	"visseuse-atlas-copco-lum22-hr10-re-8431027866": "/guides/atlas-lum22-hr10-re-flexible-450-l-min/",
+	"meuleuse-atlas-copco-lsf19-s460e-1-r-8423122490": "/guides/atlas-lsf19-s460e-consommation-vide-charge/",
+	"boulonneuse-atlas-copco-ltv28-r07-6-8431060165": "/guides/atlas-ltv28-r07-6-couple-debit-compresseur/",
+	"visseuse-desoutter-sc2-065a500-s4q-2051472654": "/guides/desoutter-sc2-065a500-unites-debit-contradictoires/",
+	"visseuse-sumake-st-sd110": "/guides/sumake-st-sd110-400-l-min-regime/",
+	"perceuse-sumake-st-m5204r7": "/guides/sumake-st-m5204r7-r3-perceuse-700-350/",
+	"agrafeuse-cloueuse-prebena-5c-q75": "/guides/prebena-5c-q75-z75-air-par-fixation/",
+	"agrafeuse-cloueuse-prebena-modul-11-z40-h": "/guides/prebena-modul-11-z40-h-v-cadence-air/",
+	"fuji-fa-4c-3": "/guides/fuji-fa-4c-3-1260-l-min-raccord-pt/",
+	"fuji-fbs-1-4-e": "/guides/fuji-fbs-1-4-e-bande-20-460-compresseur/",
 	"perceuse-top-cat-300d3mk-8250-d3-8": "/guides/renner-rs-pro-7-5-11-0-deux-perceuses-top-cat/",
 	"meuleuse-uryu-ug-25na-50062": "/guides/uryu-ug25na-6mm-quart-pouce-collet-codes/",
 	"meuleuse-uryu-ug-25na-50072": "/guides/uryu-ug25na-6mm-quart-pouce-collet-codes/",

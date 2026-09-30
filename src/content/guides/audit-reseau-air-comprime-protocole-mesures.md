@@ -149,3 +149,5 @@ Pour prolonger cette vérification, vous pouvez [comprendre la demande artificie
 - [U.S. Department of Energy, Improving Compressed Air System Performance, version 3](https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf)
 - [ISO 11011:2013, Air comprimé, efficacité énergétique, évaluation](https://www.iso.org/fr/standard/46580.html)
 - [CAGI, Compressed Air System Design, chapitre 4 du Compressed Air and Gas Handbook](https://www.cagi.org/assets/documents/pdfs/handbook/Chapter_4_handbook_Final2021.pdf)
+
+Pour une station S-3, distinguez la [commande focus control jusqu’à quatre compresseurs](/guides/boge-s3-focus-control-quatre-compresseurs/) de la [plage de livraison SLF 40-3](/guides/boge-slf40-3-plage-debit-1300-4750/). La coordination de station ne remplace pas les conditions des performances.

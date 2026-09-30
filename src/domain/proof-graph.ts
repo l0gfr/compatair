@@ -111,7 +111,7 @@ export function createProofGraph(
 	addEdge('calculation:available-fad', 'verdict:published', 'est comparé au seuil');
 	addEdge('calculation:margin', 'verdict:published', 'explique la réserve');
 
-	const airflow = tool.demandModel === 'fixed-flow' ? `${tool.airflowLpm.typical.toLocaleString('fr-FR')} L/min${tool.airflowBasis === 'average' ? ' en moyenne, débit en charge non établi' : ''}` : 'Débit minute non documenté';
+	const airflow = tool.demandModel === 'fixed-flow' ? `${tool.airflowLpm.typical.toLocaleString('fr-FR')} L/min${tool.airflowBasis === 'average' ? ' en moyenne, débit en charge non établi' : tool.airflowBasis === 'unqualified' ? ', régime non documenté, débit en charge non établi' : tool.airflowBasis === 'free-speed' ? ' à vide, débit en charge non établi' : ''}` : 'Débit minute non documenté';
 	const airflowField = addField('tool', 'airflowLpm', 'Consommation de l’outil', airflow, `${tool.brand} ${tool.model} · modèle de demande ${tool.demandModel}.`);
 	const pressureField = addField('tool', 'workingPressureBar', 'Pression de travail', tool.workingPressureBar.typical === undefined ? 'Non documentée' : `${tool.workingPressureBar.typical.toLocaleString('fr-FR')} bar`, 'La pression sert à choisir le point FAD comparable sur le compresseur.');
 	const curveField = addField('compressor', 'fadCurve', 'Courbe FAD du compresseur', compressor.fadCurve.length ? compressor.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ') : 'Aucun point publié', 'Sont autorisés : valeur exacte, interpolation entre deux points et borne conservatrice issue d’un point mesuré à une pression supérieure au besoin.');
@@ -146,7 +146,7 @@ export function createProofGraph(
 		recalculatedMatchesSnapshot,
 		simulationDefaults: {
 			compressorFadLpm: fadResolution?.litersPerMinute,
-			toolAirflowLpm: tool.demandModel === 'fixed-flow' && tool.airflowBasis !== 'average' ? tool.airflowLpm.typical : undefined,
+			toolAirflowLpm: tool.demandModel === 'fixed-flow' && tool.airflowBasis === undefined ? tool.airflowLpm.typical : undefined,
 			toolPressureBar: tool.workingPressureBar.typical,
 			safetyMarginPercent: 25,
 		},

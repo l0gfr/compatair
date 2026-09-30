@@ -89,3 +89,5 @@ Le guide [buse de sablage : débit selon le diamètre et la pression](/guides/bu
 - [Atlas Copco, Understanding air compressor measurements](https://www.atlascopco.com/en-in/compressors/wiki/compressed-air-articles/physics-physicalunits2) : débits normaux et références de comparaison.
 
 Sources consultées le 25 septembre 2026. Les exemples numériques sont des conversions explicites, sans mesure de matériel.
+
+Les [44,1 m³/min du SIMPLEXX 275](/guides/almig-simplexx-275-m3-min-l-min/) illustrent le changement d’unité sans changement de pression. La [contradiction d’unités Desoutter SC2-065A500](/guides/desoutter-sc2-065a500-unites-debit-contradictoires/) montre pourquoi une conversion peut détecter une donnée à confirmer.

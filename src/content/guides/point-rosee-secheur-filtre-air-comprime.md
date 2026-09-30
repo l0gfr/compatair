@@ -112,3 +112,5 @@ Pour préciser le choix de la configuration, consultez [version Airblok DRY avec
 - [ISO, ISO 8573-1:2010](https://www.iso.org/fr/standard/46418.html)
 - [Atlas Copco, Selecting the best compressed air dryer for your needs](https://www.atlascopco.com/en-ca/compressors/wiki/compressed-air-articles/choosing-a-dryer)
 - [Atlas Copco, Compressed Air Manual, 9e édition](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf)
+
+Le [point de rosée de +3 °C annoncé pour les RSK-B](/guides/renner-rsk-b-point-rosee-3-degres-air/) illustre la portée limitée d’un repère d’humidité. L’implantation du traitement et du compresseur doit aussi tenir compte des [variantes de hauteur du LENTO 15](/guides/almig-lento-15-air-eau-hauteur-installation/).

@@ -45,3 +45,5 @@ Le [guide sur l’intérêt d’un compresseur à vitesse variable](/guides/comp
 Le [RENNER RSF-PRO 5.5](/compresseurs/renner-rsf-pro-5-5-310072/) est une unité sans réservoir intégré. Le [RENNER RSKF-PRO 5.5](/compresseurs/renner-rskf-pro-5-5-310188/) ajoute le sécheur frigorifique annoncé. La réserve et le réseau doivent donc être définis avec la machine commandée, plutôt que supposés à partir du sigle RSF.
 
 Demandez une proposition qui conserve le code, la plage de pression, les débits maximaux, les minima documentés et les paramètres de commande. Une fiche qui résume cette version par « 270 à 980 L/min » perd les pressions et le sens des bornes. Elle ne suffit pas pour vérifier un outil à une pression précise ni pour prévoir les arrêts d’un atelier peu chargé.
+
+Le [F-DRIVE 6 à 7 bar](/guides/almig-f-drive-6-940-l-min-7-bar-13-bar/) montre comment distinguer plage de pression et point de mesure. Le [minimum du F-DRIVE 75 face à une faible demande](/guides/almig-f-drive-75-minimum-modulation-petit-besoin/) ouvre une question d’exploitation différente du maximum de capacité.

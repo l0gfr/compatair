@@ -39,9 +39,9 @@ export function resolveAvailableFad(compressor, pressureBar) {
  * @returns {import("../src/domain/compatibility").CompatibilityResult} */
 export function evaluateCompatibility(compressor, tool, input = {}) {
 	const safetyMargin = input.safetyMargin ?? .25;
-	if (tool.demandModel !== 'fixed-flow' || tool.airflowBasis === 'average') {
+	if (tool.demandModel !== 'fixed-flow' || tool.airflowBasis !== undefined) {
 		const warning = tool.demandModel === 'fixed-flow'
-			? 'Débit moyen seul : cycle et débit en charge requis.'
+			? tool.airflowBasis === 'average' ? 'Débit moyen seul : cycle et débit en charge requis.' : tool.airflowBasis === 'free-speed' ? 'Débit à vide seul : consommation maximale ou en charge requise.' : 'Régime de consommation non documenté : débit maximal ou en charge requis.'
 			: tool.demandModel === 'per-action'
 			? `La source de l’outil ${tool.label} publie ${tool.airPerActionLiters.toLocaleString('fr-FR')} litre d’air par ${tool.actionLabel}. Indiquez votre cadence réelle pour calculer le débit par minute.`
 			: tool.demandExplanation;

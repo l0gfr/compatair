@@ -107,3 +107,5 @@ Pour un poste qui réalise ensuite les filetages, comparez séparément les [tar
 - [Metabo, fiche officielle DB 10 604120000](https://www.metabo.com/de/de/maschinen/bohren-schrauben-meisseln-ruehren/bohrmaschinen/db-10-druckluft-bohrmaschine/604120000)
 
 Le dimensionnement peut se faire sur la consommation maximale publiée des [Top Cat 300D et 400D face aux stations COMBI XP](/guides/top-cat-300d-400d-compresseur-combi-xp/). Si deux postes travaillent ensemble, le cas [deux perceuses Top Cat sur RS-PRO 7.5 ou 11.0](/guides/renner-rs-pro-7-5-11-0-deux-perceuses-top-cat/) explicite le besoin cumulé et la marge retenue dans le calcul.
+
+Pour commander la bonne configuration, consultez la [LBB16 EP-005-U sans mandrin](/guides/atlas-lbb16-ep005-sans-mandrin-reference-masse/) et les [Sumake ST-M5204R7/R3 à vitesses différentes](/guides/sumake-st-m5204r7-r3-perceuse-700-350/). La masse et le débit doivent garder le périmètre exact du tableau.

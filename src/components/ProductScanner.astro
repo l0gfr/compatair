@@ -234,7 +234,7 @@ import ContextHelp from './ContextHelp.astro';
 		const tool = product as ToolProfile;
 		let value: string;
 		setText('[data-published-label]', 'Besoin publié');
-		if (tool.demandModel === 'fixed-flow' && tool.airflowBasis === 'average') value = `${formatNumber(tool.airflowLpm.typical)} L/min en moyenne : débit en charge et cycle à documenter avant dimensionnement.`;
+		if (tool.demandModel === 'fixed-flow' && tool.airflowBasis !== undefined) value = `${formatNumber(tool.airflowLpm.typical)} L/min publiés : débit en charge et régime à documenter avant dimensionnement.`;
 		else if (tool.demandModel === 'fixed-flow') value = `${formatNumber(tool.airflowLpm.typical)} L/min à ${formatNumber(tool.workingPressureBar.typical)} bar · cible de classement ${formatNumber(tool.airflowLpm.typical * 1.25)} L/min avec 25 % de réserve.`;
 		else if (tool.demandModel === 'per-action') value = `${formatNumber(tool.airPerActionLiters)} L par ${tool.actionLabel} à ${formatNumber(tool.workingPressureBar.typical)} bar ; cadence à préciser.`;
 		else value = `${tool.demandExplanation} Pression maximale publiée : ${formatNumber(tool.workingPressureBar.max)} bar.`;
@@ -436,7 +436,7 @@ import ContextHelp from './ContextHelp.astro';
 			journeyContinueHref = compare && !compare.hidden ? compare.getAttribute('href') ?? calculatorHref : calculatorHref;
 			query<HTMLAnchorElement>('[data-refine]')?.setAttribute('href', calculatorHref);
 			const tool = product as ToolProfile;
-			if (rankingNote && tool.demandModel === 'fixed-flow' && tool.airflowBasis !== 'average') {
+			if (rankingNote && tool.demandModel === 'fixed-flow' && tool.airflowBasis === undefined) {
 				rankingNote.hidden = false;
 				rankingNote.textContent = `Ordre technique : compatibilité, qualité des données, couverture de la cible de ${formatNumber(tool.airflowLpm.typical * 1.25)} L/min avec 25 % de réserve, puis proximité du débit. Ce n’est pas un classement commercial.`;
 			}

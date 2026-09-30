@@ -1,0 +1,2044 @@
+{
+  "checkedAt": "2026-09-30T20:15:36.051Z",
+  "scope": "New batch D and its 30 guides only",
+  "summary": {
+    "reachable": 338,
+    "broken": 0,
+    "unavailable": 0,
+    "unsafe": 0,
+    "unverified": 0,
+    "checked": 338,
+    "anomalies": 0,
+    "auditUnavailable": false
+  },
+  "results": [
+    {
+      "url": "https://www.datocms-assets.com/104564/1784211285-desoutter_general_catalog_fr_2026-07.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.datocms-assets.com/104564/1784211285-desoutter_general_catalog_fr_2026-07.pdf"
+    },
+    {
+      "url": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf"
+    },
+    {
+      "url": "https://www.kyocera-senco.eu/wp-content/uploads/2018/11/Senco_catalogue_EN.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.kyocera-senco.eu/wp-content/uploads/2018/11/Senco_catalogue_EN.pdf"
+    },
+    {
+      "url": "https://prebena.de/fileadmin/user_upload/Downloads/Prospekte/PREBENA-Hauptkatalog_2024_Seitenverlinkung_DE.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://prebena.de/fileadmin/user_upload/Downloads/Prospekte/PREBENA-Hauptkatalog_2024_Seitenverlinkung_DE.pdf"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000609_05.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000609_05.pdf"
+    },
+    {
+      "url": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf"
+    },
+    {
+      "url": "https://www.boge.com/f/287325279136465/x/55679246a0/boge-datenblatt-schraubenkompressor-s-3.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.boge.com/f/287325279136465/x/55679246a0/boge-datenblatt-schraubenkompressor-s-3.pdf"
+    },
+    {
+      "url": "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf"
+    },
+    {
+      "url": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000382_EN_A.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000382_EN_A.pdf"
+    },
+    {
+      "url": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000382_02.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000382_02.pdf"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052307",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052307"
+    },
+    {
+      "url": "https://www.boge.com/en-us/products/compressors/screw-compressors/",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.boge.com/en-us/products/compressors/screw-compressors/"
+    },
+    {
+      "url": "https://www.almig.de/en/products/compressed-air-generation/screw-compressors",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.almig.de/en/products/compressed-air-generation/screw-compressors"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000404_02.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000404_02.pdf"
+    },
+    {
+      "url": "https://www.boge.com/f/287325279136465/x/aa773f16f3/boge-broschuere-oelgeschmierter-schraubenkompressor-s-3-baureihe.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.boge.com/f/287325279136465/x/aa773f16f3/boge-broschuere-oelgeschmierter-schraubenkompressor-s-3-baureihe.pdf"
+    },
+    {
+      "url": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/update2025/fa-20-4-423/9502000609_05.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/update2025/fa-20-4-423/9502000609_05.pdf"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000405_02.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000405_02.pdf"
+    },
+    {
+      "url": "https://www.renner-kompressoren.de/produkte/rs-b-22-110/",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.renner-kompressoren.de/produkte/rs-b-22-110/"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052470",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052470"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000410_05.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000410_05.pdf"
+    },
+    {
+      "url": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/update2025/june-audit/safety/9502000362.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/update2025/june-audit/safety/9502000362.pdf"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000436_02.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000436_02.pdf"
+    },
+    {
+      "url": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000442_EN_A.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000442_EN_A.pdf"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052721",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052721"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000439_04.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000439_04.pdf"
+    },
+    {
+      "url": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000262_JA_A.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000262_JA_A.pdf"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052724",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052724"
+    },
+    {
+      "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000449_02.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000449_02.pdf"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761150",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761150"
+    },
+    {
+      "url": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000448_EN_A.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000448_EN_A.pdf"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000452_04.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000452_04.pdf"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052726",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052726"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000453_03.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000453_03.pdf"
+    },
+    {
+      "url": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000272_JA_A.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000272_JA_A.pdf"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000455_01.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000455_01.pdf"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052730",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052730"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000465_04.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000465_04.pdf"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000362_09.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000362_09.pdf"
+    },
+    {
+      "url": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000456_EN_A.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000456_EN_A.pdf"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052732",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052732"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000978_01.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000978_01.pdf"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761260",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761260"
+    },
+    {
+      "url": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000462_EN_A.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000462_EN_A.pdf"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000979_01.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000979_01.pdf"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052748",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052748"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000557_02.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000557_02.pdf"
+    },
+    {
+      "url": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000463_EN_A.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000463_EN_A.pdf"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052756",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052756"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000621_04.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000621_04.pdf"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000580_03.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000580_03.pdf"
+    },
+    {
+      "url": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000361_JA_A.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000361_JA_A.pdf"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052758",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052758"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000552_03.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000552_03.pdf"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000551_03.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000551_03.pdf"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052762",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052762"
+    },
+    {
+      "url": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000443_EN_A.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000443_EN_A.pdf"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000613_04.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000613_04.pdf"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000440_02.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000440_02.pdf"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052764",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052764"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502000938_02.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502000938_02.pdf"
+    },
+    {
+      "url": "https://files.fujitools.com/documentation-files-mv/9502001164_04.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://files.fujitools.com/documentation-files-mv/9502001164_04.pdf"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052768",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052768"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052769",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052769"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052773",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052773"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052821",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052821"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761270",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761270"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052924",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052924"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412052937",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412052937"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412053255",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412053255"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412053261",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412053261"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412053306",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412053306"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412053340",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412053340"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412053343",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412053343"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412053344",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412053344"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412053348",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412053348"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412053352",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412053352"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412053363",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412053363"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761280",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761280"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412053366",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412053366"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412053368",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412053368"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412053539",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412053539"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412053542",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412053542"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071125",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071125"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761290",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761290"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071126",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071126"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071178",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071178"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151760970",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151760970"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071181",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071181"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151760980",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151760980"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071203",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071203"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071204",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071204"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151760990",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151760990"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071205",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071205"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761000",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761000"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071207",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071207"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071398",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071398"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071399",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071399"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071420",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071420"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071421",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071421"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761010",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761010"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071422",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071422"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071426",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071426"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071435",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071435"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761020",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761020"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071439",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071439"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761030",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761030"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071511",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071511"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071512",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071512"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071519",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071519"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071526",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071526"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761040",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761040"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071527",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071527"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071528",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071528"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071538",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071538"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071539",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071539"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761050",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761050"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071540",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071540"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071544",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071544"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071600",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071600"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761060",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761060"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071601",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071601"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071602",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071602"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761070",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761070"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071603",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071603"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071612",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071612"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761080",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761080"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071613",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071613"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071626",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071626"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761090",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761090"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412071627",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412071627"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072179",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072179"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761100",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761100"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072180",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072180"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072186",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072186"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761160",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761160"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072187",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072187"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072221",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072221"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072222",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072222"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072225",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072225"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761210",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761210"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072229",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072229"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072230",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072230"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072236",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072236"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072238",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072238"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761220",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761220"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072239",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072239"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072241",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072241"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072242",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072242"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072377",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072377"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072378",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072378"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072380",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072380"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761230",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761230"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072394",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072394"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072395",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072395"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412072396",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412072396"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412102830",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412102830"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412102831",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412102831"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761240",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761240"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412103147",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412103147"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412103164",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412103164"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412103166",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412103166"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412103168",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412103168"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412103170",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412103170"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412103622",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412103622"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412103833",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412103833"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412104339",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412104339"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412104342",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412104342"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412104345",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412104345"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412104351",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412104351"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761250",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761250"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412104363",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412104363"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412104397",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412104397"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412104404",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412104404"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412104839",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412104839"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761470",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761470"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412105871",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412105871"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412105873",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412105873"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412105952",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412105952"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761480",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761480"
+    },
+    {
+      "url": "https://www.fujitools.com/en/products/5412105958",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.fujitools.com/en/products/5412105958"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761490",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761490"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761500",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761500"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761510",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761510"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761520",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761520"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761530",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761530"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761540",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761540"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761550",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761550"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761560",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761560"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761630",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761630"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761640",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761640"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761650",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761650"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761660",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761660"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761670",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761670"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761680",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761680"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761690",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761690"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761700",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761700"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761710",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761710"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/6151761720",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/6151761720"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1465074",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1465074"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1465084",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1465084"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1465094",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1465094"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1465104",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1465104"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1465114",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1465114"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1465124",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1465124"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051466594",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051466594"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051466604",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051466604"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051466614",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051466614"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051466624",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051466624"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051466634",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051466634"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051466644",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051466644"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051466664",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051466664"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051466674",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051466674"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474154",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474154"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474164",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474164"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474174",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474174"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474514",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474514"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474524",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474524"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474554",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474554"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474564",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474564"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474584",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474584"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1302374",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1302374"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1302454",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1302454"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1302534",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1302534"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1302614",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1302614"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1302794",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1302794"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1460504",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1460504"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1460514",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1460514"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1460524",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1460524"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1460564",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1460564"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1460624",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1460624"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1460634",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1460634"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1460644",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1460644"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1460684",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1460684"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462144",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462144"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462154",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462154"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462164",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462164"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462174",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462174"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051475064",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051475064"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051475074",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051475074"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1459044",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1459044"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1459054",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1459054"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1459124",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1459124"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1459134",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1459134"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051472654",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051472654"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051472664",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051472664"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051472674",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051472674"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051472684",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051472684"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051472694",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051472694"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051472794",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051472794"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051472804",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051472804"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051472814",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051472814"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051472824",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051472824"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051472834",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051472834"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474224",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474224"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474234",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474234"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474244",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474244"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474254",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474254"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474264",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474264"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474364",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474364"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474374",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474374"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474384",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474384"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474394",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474394"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051474404",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051474404"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1456744",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1456744"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1456754",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1456754"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1456764",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1456764"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1456794",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1456794"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1456804",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1456804"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1458854",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1458854"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1458894",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1458894"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1466334",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1466334"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1466344",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1466344"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1466354",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1466354"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463464",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463464"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463474",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463474"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463484",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463484"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463494",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463494"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463504",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463504"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463514",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463514"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463524",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463524"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463534",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463534"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463544",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463544"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463554",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463554"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1465974",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1465974"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051467044",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051467044"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462704",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462704"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462714",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462714"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462724",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462724"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462734",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462734"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462744",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462744"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462774",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462774"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462784",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462784"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462794",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462794"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462804",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462804"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462814",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462814"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462824",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462824"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462924",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462924"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462934",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462934"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462944",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462944"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462964",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462964"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462974",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462974"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462984",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462984"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1462994",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1462994"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463004",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463004"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463034",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463034"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463044",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463044"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463054",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463054"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463064",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463064"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463074",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463074"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463164",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463164"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463174",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463174"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463184",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463184"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1463194",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1463194"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1464194",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1464194"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1464204",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1464204"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1464214",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1464214"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1464224",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1464224"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1464234",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1464234"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1464244",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1464244"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1464264",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1464264"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1464274",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1464274"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1464284",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1464284"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1464294",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1464294"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1464304",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1464304"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1464314",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1464314"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1464584",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1464584"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1464604",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1464604"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1465704",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1465704"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051479374",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051479374"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051479394",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051479394"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051479414",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051479414"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051479794",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051479794"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051481314",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/2051481314"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1465514",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1465514"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1465524",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1465524"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/1465534",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.desouttertools.com/en-us/products/1465534"
+    }
+  ]
+}

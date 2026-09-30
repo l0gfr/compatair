@@ -57,3 +57,5 @@ La [courbe publiée du Scheppach HC51V](/guides/scheppach-hc51v-debit-pression-o
 - [Einhell, ponceuse pneumatique TC-PE 150](https://www.einhell.fr/p/4133330-tc-pe-150/)
 - [Einhell, meuleuse droite TC-PP 220](https://www.einhell.fr/p/4138540-tc-pp-220/)
 - [Atlas Copco, détermination de la pression de travail](https://www.atlascopco.com/en-gr/compressors/wiki/compressed-air-articles/calculating-working-pressure)
+
+Les [MODUL 11-Z40 Prebena](/guides/prebena-modul-11-z40-h-v-cadence-air/) documentent leur quantité par fixation à 6 bar. La [Fuji FBS-1-4 E](/guides/fuji-fbs-1-4-e-bande-20-460-compresseur/) relie une consommation en charge à une notice à 6,3 bar. Chaque référence garde sa condition propre.

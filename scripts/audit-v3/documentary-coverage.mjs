@@ -76,6 +76,8 @@ export function auditCoverage(catalog, registry, afterCatalog) {
 				if (!facts.maxPressure || !documented(tool, 'workingPressureBar') || (facts.fad && !resolveAvailableFad(compressor, pressure)) || result.warnings.some(warning => warning.includes('La borne de FAD ne suffit pas'))) missing.push('pressure_coverage');
 				if (!['A', 'B'].includes(compressor.confidence)) missing.push('source_quality');
 				if (tool.airflowBasis === 'average') missing.push('average_only');
+				if (tool.airflowBasis === 'free-speed') missing.push('loaded_or_maximum_consumption_missing');
+				if (tool.airflowBasis === 'unqualified') missing.push('consumption_regime_missing');
 				const gapKey = missing.sort().join('+') || 'other_engine_limit';
 				gaps[gapKey] = (gaps[gapKey] ?? 0) + 1;
 				const linked = [...new Set([...(intentsByProduct.get(compressor.id) ?? []), ...(intentsByProduct.get(tool.id) ?? [])])].sort((a, b) => a.id.localeCompare(b.id));

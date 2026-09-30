@@ -1,0 +1,725 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-09-30",
+  "reviewType": "internal_editorial",
+  "assistedByAI": true,
+  "externalProfessionalValidation": false,
+  "physicalTestsPerformed": false,
+  "publicationScope": {
+    "guidesBefore": 346,
+    "guidesAdded": 30,
+    "guidesAfter": 376,
+    "compressorsAdded": 200,
+    "toolsAdded": 1000
+  },
+  "hashScope": "Empreintes des documents téléchargés et des guides après maillage ; originaux fabricants non redistribués. Les relevés Fuji conservent la date du 25 septembre.",
+  "sources": [
+    {
+      "id": "boge-s3-brochure",
+      "url": "https://www.boge.com/f/287325279136465/x/aa773f16f3/boge-broschuere-oelgeschmierter-schraubenkompressor-s-3-baureihe.pdf",
+      "sha256": "9022efe12ceb88d4fafe74a2d2291fa8032462fbed1c3cb99978d72843eccbf2",
+      "bytes": 5343122,
+      "observedAt": "2026-09-30",
+      "retrieval": "Downloaded earlier in this research run"
+    },
+    {
+      "id": "sumake-na-2024",
+      "url": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+      "sha256": "9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299",
+      "bytes": 11290546,
+      "observedAt": "2026-09-30",
+      "retrieval": "Downloaded earlier in this research run"
+    },
+    {
+      "id": "boge-s3-current",
+      "url": "https://www.boge.com/f/287325279136465/x/55679246a0/boge-datenblatt-schraubenkompressor-s-3.pdf",
+      "sha256": "516b7e8e9ad6af00cbdea1444d9394ba099b039f5d01c72db9c295211d69ef27",
+      "bytes": 2751863,
+      "observedAt": "2026-09-30",
+      "retrieval": "Downloaded earlier in this research run"
+    },
+    {
+      "id": "renner-2026",
+      "url": "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf",
+      "sha256": "35bd2421c2cc333bc6a0d6cd20c09bbf6b3c2af621021cb6cd2a254d23e74f8a",
+      "bytes": 15460985,
+      "observedAt": "2026-09-30",
+      "retrieval": "Downloaded earlier in this research run"
+    },
+    {
+      "id": "almig-2026",
+      "url": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf",
+      "sha256": "f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e",
+      "bytes": 4383400,
+      "observedAt": "2026-09-30",
+      "retrieval": "Downloaded earlier in this research run"
+    },
+    {
+      "id": "desoutter-2026",
+      "url": "https://www.datocms-assets.com/104564/1784211285-desoutter_general_catalog_fr_2026-07.pdf",
+      "resolvedUrl": "https://www.datocms-assets.com/104564/1784211285-desoutter_general_catalog_fr_2026-07.pdf",
+      "sha256": "69b46fe9fc41aa8c1b174a8e7e32686b6b20e2884c95db1c461caa6ddf33c9ad",
+      "bytes": 86835441,
+      "observedAt": "2026-09-30"
+    },
+    {
+      "url": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
+      "sha256": "1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21",
+      "bytes": 41078692,
+      "observedAt": "2026-09-30",
+      "id": "atlas-tools"
+    },
+    {
+      "url": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
+      "sha256": "1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21",
+      "bytes": 41078692,
+      "observedAt": "2026-09-30"
+    },
+    {
+      "id": "senco-eu",
+      "url": "https://www.kyocera-senco.eu/wp-content/uploads/2018/11/Senco_catalogue_EN.pdf",
+      "resolvedUrl": "https://www.kyocera-senco.eu/wp-content/uploads/2018/11/Senco_catalogue_EN.pdf",
+      "sha256": "486db6a8ac1ac3006777646b0c524feafaa214151ad503f0588120bef1780229",
+      "bytes": 14902380,
+      "observedAt": "2026-09-30"
+    },
+    {
+      "id": "prebena-2024",
+      "url": "https://prebena.de/fileadmin/user_upload/Downloads/Prospekte/PREBENA-Hauptkatalog_2024_Seitenverlinkung_DE.pdf",
+      "resolvedUrl": "https://prebena.de/fileadmin/user_upload/Downloads/Prospekte/PREBENA-Hauptkatalog_2024_Seitenverlinkung_DE.pdf",
+      "sha256": "80e839ee7c69b786c470baff4ff85214f2776c400ebd64dda03145a061a88028",
+      "bytes": 15696526,
+      "observedAt": "2026-09-30"
+    },
+    {
+      "id": "fuji-5412052307-official",
+      "url": "https://www.fujitools.com/en/products/5412052307",
+      "observedAt": "2026-09-25",
+      "retrieval": "Versioned manufacturer record and linked notice; source observation date retained",
+      "sha256": "9a14309cb9323b8bfdb516e57f03f46e684e1b87b46dd331b25b8ba25609dec9"
+    },
+    {
+      "id": "fuji-5412052307-pressure-notice",
+      "url": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000382_EN_A.pdf",
+      "observedAt": "2026-09-25",
+      "retrieval": "Versioned manufacturer record and linked notice; source observation date retained",
+      "sha256": "37cbe72f0820d2c91d9a9bfb86a8b813ec7149bc4d9d337d7c85b10ec3710acc"
+    },
+    {
+      "id": "fuji-5412052470-official",
+      "url": "https://www.fujitools.com/en/products/5412052470",
+      "observedAt": "2026-09-25",
+      "retrieval": "Versioned manufacturer record and linked notice; source observation date retained",
+      "sha256": "ffc1bc1c1d6483a18c6103e879c37437c7c8b7b9c5464ff828e8466104365da5"
+    },
+    {
+      "id": "fuji-5412052470-pressure-notice",
+      "url": "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/update2025/fa-20-4-423/9502000609_05.pdf",
+      "observedAt": "2026-09-25",
+      "retrieval": "Versioned manufacturer record and linked notice; source observation date retained",
+      "sha256": "67dab0073dd09577c528de27c6a1e5553b471cd451a99301b8962a23f17983a4"
+    },
+    {
+      "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "observedAt": "2026-09-30",
+      "retrieval": "Read from official page or versioned individual record; no new physical measurement"
+    },
+    {
+      "url": "https://www.desouttertools.com/en-us/products/2051472654",
+      "observedAt": "2026-09-30",
+      "retrieval": "Read from official page or versioned individual record; no new physical measurement",
+      "sha256": "98ae27e9f83888db37dc30491b8da2bdebec2999569d74f0222da6483e5c3cda"
+    }
+  ],
+  "guides": [
+    {
+      "slug": "renner-rs-b-2-2-300000-300001-debit-pression",
+      "sha256": "fce4f72b4e17429e3cc7c1ea5a699892a3cdea64f3953b69f285d32b8f9d86f4",
+      "sourceUrls": [
+        "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/renner-rs-b-2-2-300000/",
+        "/compresseurs/renner-rs-b-2-2-300001/"
+      ],
+      "incomingGuides": [
+        "renner-rs-pro-3-0-310000-310001-310002-310003"
+      ]
+    },
+    {
+      "slug": "renner-rs-b-rsk-b-3-0-secheur-dimensions",
+      "sha256": "3284f9dafb5ecd9f2b9a3de3293912fd7d62d579475db35423b0428b58cd22f8",
+      "sourceUrls": [
+        "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/renner-rs-b-3-0-300002/",
+        "/compresseurs/renner-rsk-b-3-0-300014/"
+      ],
+      "incomingGuides": [
+        "renner-rs-pro-3-0-310000-310001-310002-310003"
+      ]
+    },
+    {
+      "slug": "renner-rsd-b-2-2-deux-cuves-90-250-litres",
+      "sha256": "cd8aece57bd373879f47646edc425192f9a200eb0be9ec36e0d76a38e80bcbe8",
+      "sourceUrls": [
+        "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/renner-rsd-b-2-2-300032/",
+        "/compresseurs/renner-rsd-b-2-2-300042/"
+      ],
+      "incomingGuides": [
+        "renner-rsd-pro-3-0-2x90-250-litres"
+      ]
+    },
+    {
+      "slug": "renner-rsk-b-point-rosee-3-degres-air",
+      "sha256": "a7077ba7fc7405ce9a51b6077e23f172dd10b37e3378e63bc425c8770c5c8dfc",
+      "sourceUrls": [
+        "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/renner-rsk-b-3-0-300014/",
+        "/compresseurs/renner-rsdk-b-3-0-300056/"
+      ],
+      "incomingGuides": [
+        "point-rosee-secheur-filtre-air-comprime"
+      ]
+    },
+    {
+      "slug": "renner-rs-b-3-0-atlas-lum22-450-l-min",
+      "sha256": "2c2b021d9ef7ee681c2372222a7ee716595f679eeb614b677347037565731896",
+      "sourceUrls": [
+        "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
+        "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/renner-rs-b-3-0-300002/",
+        "/compresseurs/renner-rs-b-3-0-300003/",
+        "/outils-pneumatiques/visseuse-atlas-copco-lum22-hr10-re-8431027866/"
+      ],
+      "incomingGuides": [
+        "compresseur-pour-visseuse-pneumatique"
+      ]
+    },
+    {
+      "slug": "renner-rsd-b-3-0-st-270-500-implantation",
+      "sha256": "7687bd4f261e8c4adb7e2b90fc63393a788c047719e0a49f093d2ec5c48e451d",
+      "sourceUrls": [
+        "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/renner-rsd-b-3-0-st-300110/",
+        "/compresseurs/renner-rsd-b-3-0-300146/"
+      ],
+      "incomingGuides": [
+        "renner-rsd-pro-3-0-2x90-250-litres"
+      ]
+    },
+    {
+      "slug": "almig-g-drive-t-20-24-debit-8-10-13-bar",
+      "sha256": "3e9cf5c6561107f44ea53e4e413d8c41fa47e9cf8aefd7daf078de11b5de255e",
+      "sourceUrls": [
+        "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/almig-g-drive-t-20-air-cooled/",
+        "/compresseurs/almig-g-drive-t-24-air-cooled/"
+      ],
+      "incomingGuides": [
+        "almig-g-drive-t-48-refroidissement-air-eau-debit"
+      ]
+    },
+    {
+      "slug": "almig-g-drive-t-20-air-eau-choix",
+      "sha256": "a3446066cdd04b68dfb21dc1d1fa0e1bd02e0adf57282d01178c7d8d13c6d0fe",
+      "sourceUrls": [
+        "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/almig-g-drive-t-20-air-cooled/",
+        "/compresseurs/almig-g-drive-t-20-water-cooled/"
+      ],
+      "incomingGuides": [
+        "almig-g-drive-t-48-refroidissement-air-eau-debit"
+      ]
+    },
+    {
+      "slug": "almig-f-drive-6-940-l-min-7-bar-13-bar",
+      "sha256": "2fce9d25401bdd3188da28dc2305847b193361f49c5b2015302dbbf14ca307de",
+      "sourceUrls": [
+        "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/almig-f-drive-6/",
+        "/compresseurs/almig-f-drive-75/"
+      ],
+      "incomingGuides": [
+        "renner-rsf-pro-5-5-debit-minimum-modulation"
+      ]
+    },
+    {
+      "slug": "almig-f-drive-75-minimum-modulation-petit-besoin",
+      "sha256": "d7d888889d99870ae0f4f2df8955a80184303389b08f12949e2780514bf476e2",
+      "sourceUrls": [
+        "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/almig-f-drive-75/",
+        "/compresseurs/almig-f-drive-6/"
+      ],
+      "incomingGuides": [
+        "renner-rsf-pro-5-5-debit-minimum-modulation"
+      ]
+    },
+    {
+      "slug": "almig-v-drive-t-20-deux-moteurs-90-kw",
+      "sha256": "54da5cb752809b19217b9ab6ac1ae10218238fbdf86933a001c221b30aadc157",
+      "sourceUrls": [
+        "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/almig-v-drive-t-20-air-cooled/",
+        "/compresseurs/almig-v-drive-t-20-water-cooled/"
+      ],
+      "incomingGuides": [
+        "almig-combi-xp-11-debit-minimum-atelier-intermittent"
+      ]
+    },
+    {
+      "slug": "almig-v-drive-t-30-55-75-kw",
+      "sha256": "1759face9e014f1afca4f30810e7c5a7021c3808657183d6ac48d51b7ac14679",
+      "sourceUrls": [
+        "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/almig-v-drive-t-30-air-cooled/",
+        "/compresseurs/almig-v-drive-t-20-air-cooled/"
+      ],
+      "incomingGuides": [
+        "almig-combi-xp-11-debit-minimum-atelier-intermittent"
+      ]
+    },
+    {
+      "slug": "almig-lento-15-air-eau-hauteur-installation",
+      "sha256": "6a493eea1ec7e2ee2512eb21ba84fa7f84ad8824d259ee57707fc2215f853a3f",
+      "sourceUrls": [
+        "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/almig-lento-15-water-cooled/",
+        "/compresseurs/almig-lento-15-air-cooled/"
+      ],
+      "incomingGuides": [
+        "point-rosee-secheur-filtre-air-comprime"
+      ]
+    },
+    {
+      "slug": "senco-sls18mg-68-l-min-cadence-manquante",
+      "sha256": "8e1d27691a08dad6deba90a915b240ddacc20a602c6cd012b553f4201992cf01",
+      "sourceUrls": [
+        "https://www.kyocera-senco.eu/wp-content/uploads/2018/11/Senco_catalogue_EN.pdf"
+      ],
+      "internalProductPaths": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-senco-sls18mg/",
+        "/outils-pneumatiques/agrafeuse-cloueuse-senco-sls20xp/"
+      ],
+      "incomingGuides": [
+        "compresseur-pour-agrafeuse-cloueuse-pneumatique"
+      ]
+    },
+    {
+      "slug": "atlas-lbb16-ep005-sans-mandrin-reference-masse",
+      "sha256": "6f3d620bf5fc646dbc0d920918f8a26e409b76a1a6061998d7f8e392419668bb",
+      "sourceUrls": [
+        "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf"
+      ],
+      "internalProductPaths": [
+        "/outils-pneumatiques/perceuse-atlas-copco-lbb16-ep-005-u-8421010807/",
+        "/outils-pneumatiques/perceuse-atlas-copco-lbb16-ep-005/"
+      ],
+      "incomingGuides": [
+        "compresseur-pour-perceuse-pneumatique"
+      ]
+    },
+    {
+      "slug": "almig-simplexx-275-m3-min-l-min",
+      "sha256": "70f6088d34f8026b7e654f282f1dd8b3b325a5d809f0650877168f3d574fdaa1",
+      "sourceUrls": [
+        "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/almig-simplexx-275-air-cooled/",
+        "/compresseurs/almig-simplexx-275-water-cooled/"
+      ],
+      "incomingGuides": [
+        "convertir-cfm-l-min-nl-min-air-comprime"
+      ]
+    },
+    {
+      "slug": "almig-combi-xp-11-standalone-cuve-secheur",
+      "sha256": "14a0aba45efa755a83cb06de968d48b7e4695fd463cb132ab8b4180f681d3ade",
+      "sourceUrls": [
+        "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/almig-combi-xp-11-standalone/",
+        "/compresseurs/almig-combi-xp-8-standalone/"
+      ],
+      "incomingGuides": [
+        "almig-combi-xp-4-en-1-filtration-livraison-air"
+      ]
+    },
+    {
+      "slug": "boge-s31-3-3880-l-min-pression-mesure",
+      "sha256": "9d2ec8ccf921b83dc8b514dd715b161f05f4d904bf887ea064a1119599f8aaae",
+      "sourceUrls": [
+        "https://www.boge.com/f/287325279136465/x/55679246a0/boge-datenblatt-schraubenkompressor-s-3.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/boge-s-31-3-8-bar-insonorisation-standard/",
+        "/compresseurs/boge-s-31-3-10-bar-insonorisation-standard/"
+      ],
+      "incomingGuides": [
+        "almig-combi-xp-4-en-1-filtration-livraison-air"
+      ]
+    },
+    {
+      "slug": "boge-s3-focus-control-quatre-compresseurs",
+      "sha256": "d74a7a83986622fb72bb225bc3221bc781e34e26e582b8443b59e7297e81c9fe",
+      "sourceUrls": [
+        "https://www.boge.com/f/287325279136465/x/aa773f16f3/boge-broschuere-oelgeschmierter-schraubenkompressor-s-3-baureihe.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/boge-s-31-3-8-bar-insonorisation-standard/",
+        "/compresseurs/boge-slf-40-3-10-bar-insonorisation-standard/"
+      ],
+      "incomingGuides": [
+        "audit-reseau-air-comprime-protocole-mesures"
+      ]
+    },
+    {
+      "slug": "boge-slf40-3-plage-debit-1300-4750",
+      "sha256": "64dad20e0716683db4f6b8317bdfea86611fcaa4a38c860c26084182ad5fc861",
+      "sourceUrls": [
+        "https://www.boge.com/f/287325279136465/x/55679246a0/boge-datenblatt-schraubenkompressor-s-3.pdf"
+      ],
+      "internalProductPaths": [
+        "/compresseurs/boge-slf-40-3-10-bar-insonorisation-standard/",
+        "/compresseurs/boge-slf-40-3-8-bar-insonorisation-standard/"
+      ],
+      "incomingGuides": [
+        "audit-reseau-air-comprime-protocole-mesures"
+      ]
+    },
+    {
+      "slug": "atlas-lum22-hr10-re-flexible-450-l-min",
+      "sha256": "78156c54d8939e16191e3ea68fefc43b8f00d73fa5d712bb5626613f7402d73e",
+      "sourceUrls": [
+        "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf"
+      ],
+      "internalProductPaths": [
+        "/outils-pneumatiques/visseuse-atlas-copco-lum22-hr10-re-8431027866/",
+        "/outils-pneumatiques/visseuse-atlas-copco-lum22-hr4-re-8431027865/"
+      ],
+      "incomingGuides": [
+        "compresseur-pour-visseuse-pneumatique"
+      ]
+    },
+    {
+      "slug": "atlas-lsf19-s460e-consommation-vide-charge",
+      "sha256": "b1cc908c498659702b7c8fdc7c01ceba81fd4c1352beadf114c80c667bac665f",
+      "sourceUrls": [
+        "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
+        "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf"
+      ],
+      "internalProductPaths": [
+        "/outils-pneumatiques/meuleuse-atlas-copco-lsf19-s460e-1-r-8423122490/",
+        "/compresseurs/almig-f-drive-6/"
+      ],
+      "incomingGuides": [
+        "compresseur-pour-meuleuse-pneumatique"
+      ]
+    },
+    {
+      "slug": "atlas-ltv28-r07-6-couple-debit-compresseur",
+      "sha256": "2f15755e27b7088fcb788edebf36b4042fbe35437a8e5b6464ed3a57bcea0810",
+      "sourceUrls": [
+        "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
+        "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf"
+      ],
+      "internalProductPaths": [
+        "/outils-pneumatiques/boulonneuse-atlas-copco-ltv28-r07-6-8431060165/",
+        "/compresseurs/renner-rs-b-3-0-300002/"
+      ],
+      "incomingGuides": [
+        "visseuse-pneumatique-coupure-automatique"
+      ]
+    },
+    {
+      "slug": "desoutter-sc2-065a500-unites-debit-contradictoires",
+      "sha256": "8384317fea55fb3977cdfffdf76539ef76884de3f8ac48260ddaed7e8f8413d8",
+      "sourceUrls": [
+        "https://www.desouttertools.com/en-us/products/2051472654",
+        "https://www.datocms-assets.com/104564/1784211285-desoutter_general_catalog_fr_2026-07.pdf",
+        "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8"
+      ],
+      "internalProductPaths": [
+        "/outils-pneumatiques/visseuse-desoutter-sc2-065a500-s4q-2051472654/"
+      ],
+      "incomingGuides": [
+        "convertir-cfm-l-min-nl-min-air-comprime"
+      ]
+    },
+    {
+      "slug": "sumake-st-sd110-400-l-min-regime",
+      "sha256": "8f0c2b89b870db5df5d2d2eb35101f1eef52c8f860ca3e992a4890a990ed7d89",
+      "sourceUrls": [
+        "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf"
+      ],
+      "internalProductPaths": [
+        "/outils-pneumatiques/visseuse-sumake-st-sd110/",
+        "/outils-pneumatiques/visseuse-sumake-st-sd111/"
+      ],
+      "incomingGuides": [
+        "visseuse-pneumatique-coupure-automatique"
+      ]
+    },
+    {
+      "slug": "sumake-st-m5204r7-r3-perceuse-700-350",
+      "sha256": "d9d7e53b23b746160b6bb34332c4552081015a11b8aaac036a0b053fe3edef7c",
+      "sourceUrls": [
+        "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf"
+      ],
+      "internalProductPaths": [
+        "/outils-pneumatiques/perceuse-sumake-st-m5204r7/",
+        "/outils-pneumatiques/perceuse-sumake-st-m5204r3/"
+      ],
+      "incomingGuides": [
+        "compresseur-pour-perceuse-pneumatique"
+      ]
+    },
+    {
+      "slug": "prebena-5c-q75-z75-air-par-fixation",
+      "sha256": "2a46f4332dd0a2e9302a081d9e799f93973a7f922b6becf6ed35556d6939bd37",
+      "sourceUrls": [
+        "https://prebena.de/fileadmin/user_upload/Downloads/Prospekte/PREBENA-Hauptkatalog_2024_Seitenverlinkung_DE.pdf"
+      ],
+      "internalProductPaths": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-prebena-5c-q75/",
+        "/outils-pneumatiques/agrafeuse-cloueuse-prebena-5c-z75/"
+      ],
+      "incomingGuides": [
+        "compresseur-pour-agrafeuse-cloueuse-pneumatique"
+      ]
+    },
+    {
+      "slug": "prebena-modul-11-z40-h-v-cadence-air",
+      "sha256": "84dfc61ff42f6c9c6d98c117fa1b1e1a994d5ff861940a05d14d7cbef26b3372",
+      "sourceUrls": [
+        "https://prebena.de/fileadmin/user_upload/Downloads/Prospekte/PREBENA-Hauptkatalog_2024_Seitenverlinkung_DE.pdf"
+      ],
+      "internalProductPaths": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-prebena-modul-11-z40-h/",
+        "/outils-pneumatiques/agrafeuse-cloueuse-prebena-modul-11-z40-v/"
+      ],
+      "incomingGuides": [
+        "pression-travail-6-3-bar-outils-pneumatiques"
+      ]
+    },
+    {
+      "slug": "fuji-fa-4c-3-1260-l-min-raccord-pt",
+      "sha256": "e21f8957d3a2464fa86b1772e151c78a7ad2aa23200ea03685146bc752989359",
+      "sourceUrls": [
+        "https://www.fujitools.com/en/products/5412052307",
+        "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/9502000382_EN_A.pdf"
+      ],
+      "internalProductPaths": [
+        "/outils-pneumatiques/meuleuse-fuji-fa-4c-3/",
+        "/outils-pneumatiques/ponceuse-bande-fuji-fbs-1-4-e/"
+      ],
+      "incomingGuides": [
+        "compresseur-pour-meuleuse-pneumatique"
+      ]
+    },
+    {
+      "slug": "fuji-fbs-1-4-e-bande-20-460-compresseur",
+      "sha256": "5a9065095e5e01ff29bd9a50a02659c1200d1886a9857214b74cee0f3dcb73ee",
+      "sourceUrls": [
+        "https://www.fujitools.com/en/products/5412052470",
+        "https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/update2025/fa-20-4-423/9502000609_05.pdf"
+      ],
+      "internalProductPaths": [
+        "/outils-pneumatiques/ponceuse-bande-fuji-fbs-1-4-e/",
+        "/outils-pneumatiques/meuleuse-fuji-fa-4c-3/"
+      ],
+      "incomingGuides": [
+        "pression-travail-6-3-bar-outils-pneumatiques"
+      ]
+    }
+  ],
+  "incomingGuideLinks": [
+    {
+      "fromGuide": "renner-rs-pro-3-0-310000-310001-310002-310003",
+      "toGuide": "renner-rs-b-2-2-300000-300001-debit-pression"
+    },
+    {
+      "fromGuide": "renner-rs-pro-3-0-310000-310001-310002-310003",
+      "toGuide": "renner-rs-b-rsk-b-3-0-secheur-dimensions"
+    },
+    {
+      "fromGuide": "renner-rsd-pro-3-0-2x90-250-litres",
+      "toGuide": "renner-rsd-b-2-2-deux-cuves-90-250-litres"
+    },
+    {
+      "fromGuide": "renner-rsd-pro-3-0-2x90-250-litres",
+      "toGuide": "renner-rsd-b-3-0-st-270-500-implantation"
+    },
+    {
+      "fromGuide": "point-rosee-secheur-filtre-air-comprime",
+      "toGuide": "renner-rsk-b-point-rosee-3-degres-air"
+    },
+    {
+      "fromGuide": "point-rosee-secheur-filtre-air-comprime",
+      "toGuide": "almig-lento-15-air-eau-hauteur-installation"
+    },
+    {
+      "fromGuide": "compresseur-pour-visseuse-pneumatique",
+      "toGuide": "renner-rs-b-3-0-atlas-lum22-450-l-min"
+    },
+    {
+      "fromGuide": "compresseur-pour-visseuse-pneumatique",
+      "toGuide": "atlas-lum22-hr10-re-flexible-450-l-min"
+    },
+    {
+      "fromGuide": "almig-g-drive-t-48-refroidissement-air-eau-debit",
+      "toGuide": "almig-g-drive-t-20-24-debit-8-10-13-bar"
+    },
+    {
+      "fromGuide": "almig-g-drive-t-48-refroidissement-air-eau-debit",
+      "toGuide": "almig-g-drive-t-20-air-eau-choix"
+    },
+    {
+      "fromGuide": "renner-rsf-pro-5-5-debit-minimum-modulation",
+      "toGuide": "almig-f-drive-6-940-l-min-7-bar-13-bar"
+    },
+    {
+      "fromGuide": "renner-rsf-pro-5-5-debit-minimum-modulation",
+      "toGuide": "almig-f-drive-75-minimum-modulation-petit-besoin"
+    },
+    {
+      "fromGuide": "almig-combi-xp-11-debit-minimum-atelier-intermittent",
+      "toGuide": "almig-v-drive-t-20-deux-moteurs-90-kw"
+    },
+    {
+      "fromGuide": "almig-combi-xp-11-debit-minimum-atelier-intermittent",
+      "toGuide": "almig-v-drive-t-30-55-75-kw"
+    },
+    {
+      "fromGuide": "compresseur-pour-agrafeuse-cloueuse-pneumatique",
+      "toGuide": "senco-sls18mg-68-l-min-cadence-manquante"
+    },
+    {
+      "fromGuide": "compresseur-pour-agrafeuse-cloueuse-pneumatique",
+      "toGuide": "prebena-5c-q75-z75-air-par-fixation"
+    },
+    {
+      "fromGuide": "compresseur-pour-perceuse-pneumatique",
+      "toGuide": "atlas-lbb16-ep005-sans-mandrin-reference-masse"
+    },
+    {
+      "fromGuide": "compresseur-pour-perceuse-pneumatique",
+      "toGuide": "sumake-st-m5204r7-r3-perceuse-700-350"
+    },
+    {
+      "fromGuide": "convertir-cfm-l-min-nl-min-air-comprime",
+      "toGuide": "almig-simplexx-275-m3-min-l-min"
+    },
+    {
+      "fromGuide": "convertir-cfm-l-min-nl-min-air-comprime",
+      "toGuide": "desoutter-sc2-065a500-unites-debit-contradictoires"
+    },
+    {
+      "fromGuide": "almig-combi-xp-4-en-1-filtration-livraison-air",
+      "toGuide": "almig-combi-xp-11-standalone-cuve-secheur"
+    },
+    {
+      "fromGuide": "almig-combi-xp-4-en-1-filtration-livraison-air",
+      "toGuide": "boge-s31-3-3880-l-min-pression-mesure"
+    },
+    {
+      "fromGuide": "audit-reseau-air-comprime-protocole-mesures",
+      "toGuide": "boge-s3-focus-control-quatre-compresseurs"
+    },
+    {
+      "fromGuide": "audit-reseau-air-comprime-protocole-mesures",
+      "toGuide": "boge-slf40-3-plage-debit-1300-4750"
+    },
+    {
+      "fromGuide": "compresseur-pour-meuleuse-pneumatique",
+      "toGuide": "atlas-lsf19-s460e-consommation-vide-charge"
+    },
+    {
+      "fromGuide": "compresseur-pour-meuleuse-pneumatique",
+      "toGuide": "fuji-fa-4c-3-1260-l-min-raccord-pt"
+    },
+    {
+      "fromGuide": "visseuse-pneumatique-coupure-automatique",
+      "toGuide": "atlas-ltv28-r07-6-couple-debit-compresseur"
+    },
+    {
+      "fromGuide": "visseuse-pneumatique-coupure-automatique",
+      "toGuide": "sumake-st-sd110-400-l-min-regime"
+    },
+    {
+      "fromGuide": "pression-travail-6-3-bar-outils-pneumatiques",
+      "toGuide": "prebena-modul-11-z40-h-v-cadence-air"
+    },
+    {
+      "fromGuide": "pression-travail-6-3-bar-outils-pneumatiques",
+      "toGuide": "fuji-fbs-1-4-e-bande-20-460-compresseur"
+    }
+  ],
+  "editorialChecks": [
+    "Two overlapping planned topics were replaced by SENCO cadence and Atlas without-chuck configuration articles.",
+    "Measurement pressures, flow regimes, variant identities and historical table dates preserved.",
+    "Scenario calculations explicitly marked; 25 percent margin is a chosen scenario, not a manufacturer prescription.",
+    "SENCO and disputed Desoutter consumption cannot produce a definitive compatibility verdict.",
+    "No physical review, sales ranking, availability or market leadership claim."
+  ],
+  "calculations": [
+    {
+      "guide": "renner-rs-b-3-0-atlas-lum22-450-l-min",
+      "formula": "7.5 L/s × 60 = 450 L/min; 450 × 1.25 = 562.5 L/min",
+      "assumption": "One tool, maximum demand; chosen 25 percent margin; no extrapolation of RENNER pressure point"
+    },
+    {
+      "guide": "prebena-modul-11-z40-h-v-cadence-air",
+      "formula": "0.95 × 120 = 114; 0.95 × 480 = 456 L/min",
+      "assumption": "Average scenario at documented 6 bar, not instantaneous pulse flow"
+    },
+    {
+      "guide": "desoutter-sc2-065a500-unites-debit-contradictoires",
+      "formula": "7 × 60 = 420 L/min; 14 × 0.4719474 × 60 ≈ 396.4 L/min",
+      "assumption": "Conversion compares contradictory published units; neither chosen as a corrected demand"
+    }
+  ],
+  "sourceHealth": {
+    "scope": "New batch D and its 30 guides only",
+    "checkedAt": "2026-09-30T20:15:36.051Z",
+    "summary": {
+      "reachable": 338,
+      "broken": 0,
+      "unavailable": 0,
+      "unsafe": 0,
+      "unverified": 0,
+      "checked": 338,
+      "anomalies": 0,
+      "auditUnavailable": false
+    },
+    "report": "docs/editorial/guides-2026-09-30-d.source-health.json",
+    "sha256": "5a6bc77f6280ea82d923dd13dfdbda292948f4705b93fa519fc301e04cad7e73"
+  }
+}

@@ -472,17 +472,19 @@ const commercialOffers = activeOffers
 		const demandModel = selected.dataset.demandModel;
 		row.querySelector<HTMLElement>('[data-fixed-fields]')!.hidden = demandModel !== 'fixed-flow';
 		row.querySelector<HTMLElement>('[data-action-fields]')!.hidden = demandModel !== 'per-action';
-		row.querySelector<HTMLElement>('[data-inflation-fields]')!.hidden = demandModel !== 'variable-volume';
+		const selectedTool = tools.find(tool => tool.id === selected.value);
+		const inflation = demandModel === 'variable-volume' && selectedTool?.categoryId === 'gonflage';
+		row.querySelector<HTMLElement>('[data-inflation-fields]')!.hidden = !inflation;
 		const note = row.querySelector<HTMLElement>('[data-demand-note]')!;
 		note.textContent = !demandModel
 			? 'Commencez à saisir puis choisissez une référence exacte dans les suggestions.'
-			: selected.dataset.airflowBasis === 'average'
-			? 'Consommation moyenne : demandez le débit en charge et les conditions du cycle au fabricant. Le dimensionnement reste indéterminé.'
+			: ['average', 'unqualified', 'free-speed'].includes(selected.dataset.airflowBasis ?? '')
+			? 'Régime incomplet : demandez le débit en charge et ses conditions de mesure au fabricant. Le dimensionnement reste indéterminé.'
 			: demandModel === 'fixed-flow'
 			? `${selected.dataset.airflow} L/min documentés à ${selected.dataset.pressure} bar.`
 			: demandModel === 'per-action'
 				? `Besoin publié : ${Number(selected.dataset.airPerAction).toLocaleString('fr-FR')} L d’air par ${selected.dataset.actionLabel} à ${selected.dataset.pressure} bar. Saisissez votre cadence réelle.`
-				: `Aucun volume de pneumatique n’est déduit du modèle. Volume, pressions et temps doivent être saisis.`;
+				: inflation ? `Aucun volume de pneumatique n’est déduit du modèle. Volume, pressions et temps doivent être saisis.` : selectedTool?.demandModel === 'variable-volume' ? selectedTool.demandExplanation : 'Conditions de consommation à confirmer auprès du fabricant.';
 	}
 	function syncToolSearch(row: HTMLElement) {
 		const search = row.querySelector<HTMLInputElement>('[data-tool-search]')!; const hidden = row.querySelector<HTMLInputElement>('[data-tool]')!;
@@ -551,12 +553,13 @@ const commercialOffers = activeOffers
 			if (!tool) throw new Error('Sélectionnez une référence d’outil dans les suggestions.');
 			const quantity = Number(row.querySelector<HTMLInputElement>('[data-quantity]')!.value);
 			if (!Number.isInteger(quantity) || quantity < 1 || quantity > 20) throw new Error('Le nombre d’outils doit être compris entre 1 et 20.');
-			if (tool.demandModel === 'fixed-flow') { if (tool.airflowBasis === 'average') throw new Error('Cette fiche publie une consommation moyenne. Demandez le débit en charge et les conditions du cycle au fabricant avant de dimensionner le compresseur.'); const dutyFactor = Number(row.querySelector<HTMLSelectElement>('[data-duty]')!.value); if (![.1, .3, .6, 1].includes(dutyFactor)) throw new Error('La fréquence sélectionnée est invalide.'); return { model: 'fixed-flow' as const, id, flowLpm: tool.airflowLpm.typical, pressureBar: tool.workingPressureBar.typical, quantity, dutyFactor }; }
+			if (tool.demandModel === 'fixed-flow') { if (tool.airflowBasis !== undefined) throw new Error('Cette fiche ne documente pas une consommation maximale ou en charge. Demandez son régime de consommation au fabricant avant de dimensionner le compresseur.'); const dutyFactor = Number(row.querySelector<HTMLSelectElement>('[data-duty]')!.value); if (![.1, .3, .6, 1].includes(dutyFactor)) throw new Error('La fréquence sélectionnée est invalide.'); return { model: 'fixed-flow' as const, id, flowLpm: tool.airflowLpm.typical, pressureBar: tool.workingPressureBar.typical, quantity, dutyFactor }; }
 			if (tool.demandModel === 'per-action') {
 				const actionsPerMinute = Number(row.querySelector<HTMLInputElement>('[data-cadence]')!.value);
 				if (!Number.isFinite(actionsPerMinute) || actionsPerMinute <= 0 || actionsPerMinute > 10_000) throw new Error(`Saisissez une cadence valide pour ${tool.label}.`);
 				return { model: 'per-action' as const, id, litersPerAction: tool.airPerActionLiters, actionsPerMinute, pressureBar: tool.workingPressureBar.typical, quantity };
 			}
+			if (tool.categoryId !== 'gonflage') throw new Error(tool.demandExplanation);
 			const volumeLiters = Number(row.querySelector<HTMLInputElement>('[data-volume]')!.value);
 			const initialPressureBar = Number(row.querySelector<HTMLInputElement>('[data-initial-pressure]')!.value);
 			const targetPressureBar = Number(row.querySelector<HTMLInputElement>('[data-target-pressure]')!.value);

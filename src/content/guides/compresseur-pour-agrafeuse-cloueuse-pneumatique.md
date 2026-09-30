@@ -58,3 +58,5 @@ Le [guide de compatibilité des agrafes](/guides/agrafes-pneumatiques-serie-cour
 
 - [Einhell, fiche officielle TC-PN 50](https://www.einhell.fr/p/4137790-tc-pn-50/)
 - [Einhell, notice TC-PN 50](https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_ngovue839t5o7dugodnovh8q57/4137790_11018_001_SPK2.pdf)
+
+Deux limites documentaires sont détaillées dans la [SENCO SLS18MG sans cadence de référence](/guides/senco-sls18mg-68-l-min-cadence-manquante/) et les [Prebena 5C-Q75/Z75 sans pression de mesure de la quantité par fixation](/guides/prebena-5c-q75-z75-air-par-fixation/). Une plage de fonctionnement ne remplace pas ces conditions.

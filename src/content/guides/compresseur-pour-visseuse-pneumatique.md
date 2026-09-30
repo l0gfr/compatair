@@ -80,3 +80,5 @@ Pour préciser le choix de la configuration, consultez [démarrage par appui ou 
 - [Metabo, DS 14](https://www.metabo.com/za/en/tools/compressed-air/compressed-air-tools/air-screwdriver/ds-14-604117000-air-screwdriver.html)
 - [Einhell, TE-AC 430/90/10](https://www.einhell.fr/p/4010800-te-ac-430-90-10/)
 - [Metabo, Mega 580-200 D](https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html)
+
+Le [cas LUM22 et RS-B 3.0](/guides/renner-rs-b-3-0-atlas-lum22-450-l-min/) chiffre la différence entre besoin nominal et réserve choisie. Le [dossier LUM22 HR10-RE](/guides/atlas-lum22-hr10-re-flexible-450-l-min/) complète ce calcul par la référence et le flexible publiés.

@@ -129,6 +129,8 @@ Les URL `/go/<offer-id>` sont également réservées au service Node. Aucune pag
 
 ### Stockage GitHub Actions
 
+Le paquet utilise `xz -T2 -8` et reste limité à 176 Mio. Sur le lot documentaire du 30 septembre 2026, le paquet local complet mesure 181 558 528 octets à ce niveau, contre 186 617 328 au niveau 6. Le contrôle de taille CI reste obligatoire ; les deux threads de compression sont bornés et les originaux fabricants ne sont pas redistribués.
+
 Après une activation vérifiée, un job séparé nettoie uniquement les anciennes archives `compatair-production-*`, les rapports Lighthouse complets devenus inutiles et les caches CodeQL redondants. Il exige que le SHA public soit celui du workflow et protège la production ainsi que le dernier autre déploiement réussi. Les exécutions en cours, les artefacts inconnus, les preuves de sources, les résultats de sécurité et les invariants signés ne sont jamais ciblés. Seul ce job, exécuté depuis `main` après validation, reçoit `actions: write`; il ne reçoit aucun secret de déploiement. Il conserve les deux bases CodeQL les plus récentes par famille de cache sur `main`.
 
 Les archives de release expirent après 7 jours dans GitHub. Les releases installées sur le serveur et la procédure de rollback restent indépendantes de cette copie temporaire. Les invariants signés restent conservés 90 jours. Lighthouse produit un résumé compact conservé 7 jours; les rapports complets sont joints uniquement en cas d'échec et expirent après 3 jours. Une prévisualisation complète du site est facultative via `CI` / `workflow_dispatch` / `upload_preview` et expire après 2 jours. Les snapshots manuels expirent après 3 jours et les rapports de licences après 7 jours. Les archives gzip ne sont pas recompressées par Actions.

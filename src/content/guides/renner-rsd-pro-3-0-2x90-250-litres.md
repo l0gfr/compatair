@@ -48,3 +48,5 @@ Un devis qui promet « aucun contrôle obligatoire » en reprenant simplement un
 Comparez [RENNER RSD-PRO 3.0](/compresseurs/renner-rsd-pro-3-0-310240/) et [RENNER RSD-PRO 3.0](/compresseurs/renner-rsd-pro-3-0-310248/) à pression identique. Choisissez d’abord une production compatible avec la demande, puis examinez le volume utile pour les séquences de travail et la commande du compresseur.
 
 Le [guide du volume de cuve](/guides/choisir-volume-cuve-24-50-90-litres/) explique pourquoi un volume nominal plus grand ne garantit ni un nombre d’opérations ni une autonomie précise. Ici, les 70 L de volume nominal supplémentaires de la version 250 L sont un calcul de différence, pas un gain d’autonomie mesuré.
+
+Sur la famille RS-B, consultez les [deux cuves de 90 L et le réservoir de 250 L](/guides/renner-rsd-b-2-2-deux-cuves-90-250-litres/) ainsi que les [implantations ST 270 L et 500 L](/guides/renner-rsd-b-3-0-st-270-500-implantation/). Les débits restent rattachés à chaque gamme et pression.

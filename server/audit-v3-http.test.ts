@@ -6,7 +6,7 @@ import { explainDecisionDataGap } from '../src/domain/decision-resolution';
 // Catalog HTTP accepts exact IDs, not custom regulation configurations.
 const base = { id: 'fixture-c', slug: 'fixture-c', brand: 'Fixture', model: 'C', confidence: 'A', maxPressureBar: 10, tankLiters: 50, fadCurve: [{ pressureBar: 6.3, litersPerMinute: 200 }], evidence: [], dutyCycle: 1 };
 const compressors = [base, { ...base, id: 'fixture-cycle', dutyCycle: undefined }, { ...base, id: 'fixture-deficit', fadCurve: [{ pressureBar: 6.3, litersPerMinute: 60 }] }];
-const tool = { id: 'fixture-tool', slug: 'fixture-tool', label: 'Fixture', confidence: 'A', demandModel: 'fixed-flow', airflowBasis: 'continuous', airflowLpm: { typical: 100 }, workingPressureBar: { typical: 6.3 }, evidence: [] };
+const tool = { id: 'fixture-tool', slug: 'fixture-tool', label: 'Fixture', confidence: 'A', demandModel: 'fixed-flow', airflowLpm: { typical: 100 }, workingPressureBar: { typical: 6.3 }, evidence: [] };
 
 describe('V3 real loopback HTTP boundary', () => {
 	const pairs = compressors.map(compressor => ({ compressorId: compressor.id, toolId: tool.id, ...evaluateCompatibility(compressor as never, tool as never) }));

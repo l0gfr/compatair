@@ -26,6 +26,19 @@ describe('runtime catalog', () => {
 		expect(() => runtimeCatalogSchema.parse(invalid)).toThrow();
 	});
 
+	it('retains documented industrial FAD while enforcing a finite ceiling', () => {
+		const industrial = compressors.find((item) => item.id === 'almig-simplexx-275-water-cooled')!;
+		const runtime = createRuntimeCatalog([industrial], [], CATALOG_VERIFIED_AT, catalogVersion);
+		expect(runtime.compressors[0].fadCurve[0].litersPerMinute).toBe(45_000);
+		for (const invalid of [-1, Infinity, 100_001]) {
+			const copy = structuredClone(runtime);
+			copy.compressors[0].fadCurve[0].litersPerMinute = invalid;
+			expect(() => runtimeCatalogSchema.parse(copy)).toThrow();
+		}
+		const inflation = tools.find((item) => item.categoryId === 'gonflage')!;
+		expect(createRuntimeCatalog([], [inflation], CATALOG_VERIFIED_AT, catalogVersion).tools[0].categoryId).toBe('gonflage');
+	});
+
 	it('retains every runtime field citation while excluding unrelated compressor evidence', () => {
 		const runtime = createRuntimeCatalog(compressors, tools, CATALOG_VERIFIED_AT, catalogVersion);
 		for (const compressor of runtime.compressors) {

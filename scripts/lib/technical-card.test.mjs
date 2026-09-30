@@ -9,6 +9,13 @@ describe('generated technical cards', () => {
 		expect(svg).toContain('CONSOMMATION MOY.');
 		expect(svg).toContain('L/min publiés');
 	});
+	it('labels an unqualified flow and renders pressure-incomplete records without a fallback demand', () => {
+		expect(technicalCardSvg({ ...tool, airflowBasis: 'unqualified' }, 'tools')).toContain('RÉGIME NON PRÉCISÉ');
+		const svg = technicalCardSvg({ ...tool, demandModel: 'variable-volume', airflowLpm: undefined, workingPressureBar: { max: 8.3 } }, 'tools');
+		expect(svg).toContain('Non établi');
+		expect(svg).toContain('PRESSION MAX.');
+		expect(svg).not.toContain('undefined');
+	});
 	it('shows missing FAD without substituting intake flow', () => {
 		const svg = technicalCardSvg({ brand: 'Example', model: 'C1', tankLiters: 50, maxPressureBar: 10, fadCurve: [], intakeFlowLpm: 999 }, 'compressors');
 		expect(svg).toContain('Non établi');

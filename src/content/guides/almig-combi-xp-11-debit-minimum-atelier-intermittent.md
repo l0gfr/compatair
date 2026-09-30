@@ -45,3 +45,5 @@ Présentez le besoin maximal, les niveaux de demande observés et la durée des 
 Le [guide consacré aux compresseurs à vitesse variable](/guides/compresseur-vitesse-variable-vsd-rentabilite-atelier/) détaille les éléments nécessaires à une comparaison d’installation. Le catalogue COMBI XP consulté ne fournit pas une courbe de puissance absorbée permettant de chiffrer une économie pour votre activité.
 
 La fiche [ALMiG COMBI XP 11 270D](/compresseurs/almig-combi-xp-11-270d/) conserve les maxima dans la courbe de capacité et les minima dans les spécifications. Cette séparation rend le besoin de vérification visible. Un choix défendable relie la machine à un profil de demande, plutôt qu’à une moyenne calculée à partir de ses deux bornes.
+
+La lecture de puissance devient particulière pour les machines à deux moteurs : le [V-DRIVE T 20 cumule deux fois 45 kW](/guides/almig-v-drive-t-20-deux-moteurs-90-kw/), tandis que le [T 30 associe 55 et 75 kW](/guides/almig-v-drive-t-30-55-75-kw/). Ces sommes nominales ne décrivent pas une consommation mesurée.

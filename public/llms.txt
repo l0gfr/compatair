@@ -2,7 +2,7 @@
 
 > Source-backed, deterministic compatibility between air compressors, pneumatic tools and documented system components. Missing critical data always remains `insufficient_data`.
 
-Dataset scope: 1619 compressors × 6087 tools = 9,854,853 explorable combinations. The on-demand manifest describes 9,731,809 calculable pairs for 6011 fixed-flow tools. The remaining 123,044 combinations are parametric and require action rate or volume plus target time; never describe them as precomputed verdicts. The 715 average-consumption tools carry airflowBasis=average and always return insufficient_data until load consumption and cycle conditions are documented; their published mean must never be treated as continuous demand.
+Dataset scope: 1819 compressors × 7087 tools = 12,891,253 explorable combinations. The on-demand manifest describes 12,469,245 calculable pairs for 6855 fixed-flow tools. The remaining 422,008 combinations are parametric and require action rate or volume plus target time; never describe them as precomputed verdicts. The 715 average-consumption tools carry airflowBasis=average and always return insufficient_data until load consumption and cycle conditions are documented; their published mean must never be treated as continuous demand.
 
 ## Agent interfaces
 
@@ -55,3 +55,5 @@ Use the `canonical_url` returned by every MCP or UCP decision as the preferred C
 Catalog identity fields include normalized MPNs, EAN/GTIN and evidenced distributor SKUs. Coverage is measured field by field in `data/catalog.json`. Evidence distinguishes `primary`, `independent_corroboration` and `secondary`; a merchant source is not independent corroboration. `data/freshness.json` publishes the review-age SLA for each data type and is distinct from API availability.
 
 Verdict publication migration: /data/verdicts.json uses schema 2.0.0 (on-demand manifest, no pairs array). Use GET /api/v1/compatibility?compressorId=...&toolId=... for current decisions. The manifest links the immutable schema 1.1.0 archive, its matching catalog and original signatures. Archived distributions are historical, never current catalog coverage.
+
+Consumption limitations: 335 newly added Sumake tools have airflowBasis=unqualified; idle-only Desoutter records have airflowBasis=free-speed. Both require documented maximum or loaded demand before a conclusive verdict. Non-inflation variable-volume records need missing pressure, cadence or consistent source values; providing a volume does not resolve them.

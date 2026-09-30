@@ -26,7 +26,7 @@ Le site est généré statiquement dans `dist/`. La logique métier se trouve da
 L'import du flux produits ManoMano est décrit dans [docs/MANOMANO_IMPORT.md](docs/MANOMANO_IMPORT.md).
 La normalisation, les snapshots de verdicts et la demande agrégée sont décrits dans [docs/DATA_ASSET.md](docs/DATA_ASSET.md). La frontière d’indexation des pages générées est définie dans [docs/SEO_PROGRAMMATIQUE.md](docs/SEO_PROGRAMMATIQUE.md).
 
-Le périmètre public distingue explicitement 9 854 853 combinaisons explorables, 9 731 809 couples fixes calculables et 123 044 combinaisons paramétriques nécessitant une cadence ou un volume. Le snapshot catalogue publie aussi la couverture champ par champ des EAN/GTIN, MPN normalisés, SKU distributeur et données techniques, avec source primaire, corroboration indépendante et SLA de fraîcheur séparés.
+Le périmètre public distingue explicitement 12 891 253 combinaisons explorables, 12 469 245 couples fixes calculables et 422 008 combinaisons paramétriques nécessitant une cadence ou un volume. Le snapshot catalogue publie aussi la couverture champ par champ des EAN/GTIN, MPN normalisés, SKU distributeur et données techniques, avec source primaire, corroboration indépendante et SLA de fraîcheur séparés.
 L’API publique et les deux modes d’intégration du widget marchand sont décrits dans [docs/API_WIDGET.md](docs/API_WIDGET.md).
 
 ## Catalogue pilote
@@ -81,3 +81,5 @@ export COMPATAIR_NODE_BIN="$HOME/.nvm/versions/node/v24.14.0/bin/node"
 ```
 
 Publication des verdicts : `/data/verdicts.json` est désormais un manifeste de calcul à la demande (schéma 2.0.0), sans tableau `pairs`. La distribution exhaustive publiée le 27 septembre 2026 est historique. Le manifeste lie son archive immuable, son catalogue et ses signatures d’origine. Utiliser l’API pour les décisions courantes. Voir [performance du build](build-performance.md).
+
+Le lot documentaire D conserve les régimes `unqualified` (335 outils Sumake) et `free-speed` (consommation Desoutter à vide seule) comme données insuffisantes pour un verdict conclusif. Les profils non fixes peuvent aussi signaler une pression, une cadence ou des unités manquantes : une saisie de volume ne résout pas ces manques documentaires.

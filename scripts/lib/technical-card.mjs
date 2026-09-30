@@ -7,13 +7,14 @@ const format = (n) => n.toLocaleString('fr-FR', { maximumFractionDigits: 3 });
 export function technicalCardSvg(p, kind) {
 	if (!['compressors', 'tools'].includes(kind)) throw new Error('Unknown product kind');
 	const compressor = kind === 'compressors';
+	const incomplete = !compressor && p.demandModel === 'variable-volume';
 	const point = compressor ? p.fadCurve.at(-1) : null;
 	const columns = compressor ? [
 		point ? ['DÉBIT RESTITUÉ', format(point.litersPerMinute), `L/min à ${format(point.pressureBar)} bar`] : ['FAD À PRESSION CONNUE', 'Non établi', 'Compatibilité indéterminée'],
 		['CUVE', format(p.tankLiters), 'litres'], ['PRESSION MAX.', format(p.maxPressureBar), 'bar'],
 	] : [
-		[p.demandModel === 'per-action' ? 'AIR PAR COUP' : p.airflowBasis === 'average' ? 'CONSOMMATION MOY.' : 'CONSOMMATION', format(p.airPerActionLiters ?? p.airflowLpm.typical), p.demandModel === 'per-action' ? 'litres / coup' : 'L/min publiés'],
-		['PRESSION RETENUE', format(p.workingPressureBar.typical), 'bar'], ['RÉFÉRENCE', p.mpn ?? 'Non publié', 'fabricant'],
+		[p.demandModel === 'per-action' ? 'AIR PAR COUP' : incomplete ? 'DÉBIT MINUTE' : p.airflowBasis === 'average' ? 'CONSOMMATION MOY.' : p.airflowBasis === 'free-speed' ? 'CONSOMMATION À VIDE' : p.airflowBasis === 'unqualified' ? 'RÉGIME NON PRÉCISÉ' : 'CONSOMMATION', incomplete ? 'Non établi' : format(p.airPerActionLiters ?? p.airflowLpm.typical), incomplete ? 'Conditions à confirmer' : p.demandModel === 'per-action' ? 'litres / coup' : 'L/min publiés'],
+		[p.workingPressureBar.typical === undefined ? 'PRESSION MAX.' : 'PRESSION RETENUE', format(p.workingPressureBar.typical ?? p.workingPressureBar.max), 'bar'], ['RÉFÉRENCE', p.mpn ?? 'Non publié', 'fabricant'],
 	];
 	const displayName = p.model.length > 68 ? `${p.model.slice(0,65).trim()}…` : p.model;
 	const nameLines = displayName.match(/.{1,35}(?:\s|$)|.{1,35}/g).map(s => s.trim());

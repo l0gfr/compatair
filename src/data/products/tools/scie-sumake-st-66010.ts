@@ -1,0 +1,121 @@
+const product = {
+	"id": "scie-sumake-st-66010",
+	"slug": "scie-sumake-st-66010",
+	"categoryId": "scie",
+	"category": "scie",
+	"label": "Sumake ST-66010",
+	"brand": "Sumake",
+	"model": "ST-66010",
+	"mpn": "ST-66010",
+	"demandModel": "fixed-flow",
+	"workingPressureBar": {
+		"min": 6.2,
+		"typical": 6.2,
+		"max": 6.2
+	},
+	"airflowLpm": {
+		"min": 240,
+		"typical": 240,
+		"max": 240
+	},
+	"airflowBasis": "unqualified",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/scie-sumake-st-66010.webp",
+		"alt": "Repères techniques : Sumake ST-66010",
+		"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+	},
+	"variant": {
+		"familyId": "sumake-st-66010",
+		"label": "Référence ST-66010",
+		"distinguishingAttributes": {
+			"reference": "ST-66010",
+			"Consommation dans les unités du tableau": "240 L/min ; 8.5 cfm",
+			"Configuration complète publiée": "ST-66010",
+			"Régime de consommation": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé"
+		}
+	},
+	"editorial": {
+		"overview": "Sumake ST-66010. Consommation publiée, régime non précisé : 240 L/min à 6,2 bar. Consommation dans les unités du tableau : 240 L/min ; 8.5 cfm. Configuration complète publiée : ST-66010.",
+		"verifiedFacts": [
+			"Désignation et configuration documentées à la page PDF 21.",
+			"Consommation dans les unités du tableau : 240 L/min ; 8.5 cfm.",
+			"Configuration complète publiée : ST-66010.",
+			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+		],
+		"limitations": [
+			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
+			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
+			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Localisation du tableau",
+			"value": "Page PDF 21",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p21"
+			]
+		},
+		{
+			"label": "Consommation dans les unités du tableau",
+			"value": "240 L/min ; 8.5 cfm",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p21"
+			]
+		},
+		{
+			"label": "Configuration complète publiée",
+			"value": "ST-66010",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p21"
+			]
+		},
+		{
+			"label": "Régime de consommation",
+			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p21"
+			]
+		},
+		{
+			"label": "Ligne technique originale du modèle",
+			"value": "ST-66010 3-5 - 10,000 14 240 8.5 1/4\" 3/8\" 227 0.62 20Pcs/Ctn/14.6/0.97'",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p21"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "documented-d-sumake-na-2024-p21",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=21",
+			"sourceLabel": "sumake-na-2024, page PDF 21",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-09-30",
+			"confidence": "B",
+			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"documented-d-sumake-na-2024-p21"
+		],
+		"workingPressureBar": [
+			"documented-d-sumake-na-2024-p21"
+		],
+		"airflowLpm": [
+			"documented-d-sumake-na-2024-p21"
+		],
+		"airflowBasis": [
+			"documented-d-sumake-na-2024-p21"
+		]
+	},
+	"notes": [
+		"Consommation publiée, régime non précisé : 240 L/min à 6,2 bar."
+	]
+};
+
+export default product;

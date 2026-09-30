@@ -49,3 +49,5 @@ Ces repères ne dimensionnent ni un circuit d’eau ni une ventilation de local.
 Le [guide de comparaison des FAD](/guides/comparatif-compresseurs-debit-restitue/) permet de préparer une grille de conditions communes. Faites reprendre sur le devis puis sur le dossier de réception le modèle, le refroidissement, la fréquence et le point de pression garanti.
 
 La conclusion documentaire est précise : les deux variantes ne doivent pas partager une fiche de capacité unique. Pour choisir, partez du point requis par le procédé et des contraintes du site, puis examinez les autres performances sur une base commune.
+
+Pour une autre taille de la famille, les [points G-DRIVE T 20/T 24 à 8, 10 et 13 bar](/guides/almig-g-drive-t-20-24-debit-8-10-13-bar/) permettent une comparaison de pression cohérente. Le [T 20 air ou eau](/guides/almig-g-drive-t-20-air-eau-choix/) garde séparées les conditions de refroidissement.

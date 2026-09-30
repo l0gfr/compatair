@@ -17,5 +17,6 @@ export function compressorDisplayName(compressor: Compressor) {
 	const reference = compressor.variant?.distinguishingAttributes.reference;
 	if (reference) return `${base} (réf. ${reference})`;
 	const installationForm = compressorInstallationForm(compressor);
-	return installationForm ? `${base} à ${installationForm}` : base;
+	if (installationForm) return `${base} à ${installationForm}`;
+	return compressor.variant?.label ? `${base} (${compressor.variant.label})` : base;
 }

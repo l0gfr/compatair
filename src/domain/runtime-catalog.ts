@@ -21,7 +21,9 @@ const runtimeCompressorSchema = z.object({
 	brand: z.string().min(1).max(160),
 	model: z.string().min(1).max(240),
 	maxPressureBar: z.number().positive().max(50),
-	fadCurve: z.array(z.object({ pressureBar: z.number().nonnegative().max(50), litersPerMinute: z.number().positive().max(20_000) })),
+	// The documented industrial catalog includes deliveries above 20 m³/min.
+	// Keep a finite 100 m³/min ceiling; tool and browser batch limits stay separate.
+	fadCurve: z.array(z.object({ pressureBar: z.number().nonnegative().max(50), litersPerMinute: z.number().positive().max(100_000) })),
 	tankLiters: z.number().nonnegative().max(20_000),
 	dutyCycle: z.number().positive().max(1).optional(),
 	voltage: z.string().min(1).max(160).optional(),
@@ -39,6 +41,7 @@ const runtimeToolBaseSchema = z.object({
 	label: z.string().min(1).max(240),
 	brand: z.string().min(1).max(160),
 	model: z.string().min(1).max(240),
+	categoryId: z.string().regex(/^[a-z0-9-]{1,160}$/).optional(),
 	connectorSize: z.string().max(160).optional(),
 	filtrationRequirement: z.string().max(500).optional(),
 	lubricationRequirement: z.string().max(500).optional(),
@@ -59,7 +62,7 @@ const runtimeToolSchema = runtimeToolBaseSchema.and(z.discriminatedUnion('demand
 		demandModel: z.literal('fixed-flow'),
 		workingPressureBar: workingPressureSchema.required({ min: true, typical: true }),
 		airflowLpm: z.object({ min: z.number().positive().max(20_000), typical: z.number().positive().max(20_000), max: z.number().positive().max(20_000) }),
-		airflowBasis: z.literal('average').optional(),
+		airflowBasis: z.enum(['average', 'unqualified', 'free-speed']).optional(),
 	}),
 	z.object({
 		demandModel: z.literal('per-action'),
@@ -143,6 +146,7 @@ export function createRuntimeCatalog(compressors: Compressor[], tools: ToolProfi
 			brand: item.brand,
 			model: item.model,
 			connectorSize: item.connectorSize,
+			categoryId: item.categoryId,
 			filtrationRequirement: item.filtrationRequirement,
 			lubricationRequirement: item.lubricationRequirement,
 			recommendedHose: item.recommendedHose,

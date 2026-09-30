@@ -16,7 +16,7 @@ if (snapshot.compressors) {
 	for (const item of snapshot.compressors) {
 		if (ids.has(item.id)) errors.push(`compresseur dupliqué : ${item.id}`); ids.add(item.id);
 		if (item.tankLiters < 0 || item.maxPressureBar <= 0 || item.maxPressureBar > 50) errors.push(`caractéristique impossible : ${item.id}`);
-		for (const point of item.fadCurve ?? []) if (point.pressureBar < 0 || point.litersPerMinute <= 0 || point.litersPerMinute > 20_000) errors.push(`point FAD impossible : ${item.id}`);
+		for (const point of item.fadCurve ?? []) if (!Number.isFinite(point.pressureBar) || !Number.isFinite(point.litersPerMinute) || point.pressureBar < 0 || point.pressureBar > 50 || point.litersPerMinute <= 0 || point.litersPerMinute > 100_000) errors.push(`point FAD hors limites documentaires : ${item.id}`);
 	}
 }
 if (snapshot.tools) {

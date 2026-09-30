@@ -47,3 +47,5 @@ Le tableau de débit indique une capacité du constructeur. Il ne fournit pas la
 De même, la présence de filtres et d’un sécheur n’établit pas le résultat après une conduite existante ou un équipement ajouté en aval. Identifiez la limite de fourniture et le contrôle prévu au point utile.
 
 La fiche [ALMiG COMBI XP 8 270D](/compresseurs/almig-combi-xp-8-270d/) permet de vérifier la configuration reprise dans l’offre. Le [guide des fonctions filtre, régulateur et lubrificateur](/guides/groupe-frl-filtre-regulateur-lubrificateur/) aide à examiner l’équipement du poste. Avant la commande, faites formuler les caractéristiques garanties et les conditions qui les accompagnent, plutôt que de déduire une qualité d’air complète du seul nombre de composants.
+
+Le [COMBI XP 11 standalone](/guides/almig-combi-xp-11-standalone-cuve-secheur/) impose de préciser l’équipement effectivement fourni. La [livraison du BOGE S 31-3](/guides/boge-s31-3-3880-l-min-pression-mesure/) pose une autre question : obtenir la pression de mesure séparément de la pression maximale de version.

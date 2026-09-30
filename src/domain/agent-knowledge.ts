@@ -65,7 +65,7 @@ export function createAgentKnowledge(input: {
 		...input.tools.map((item): AgentKnowledgeItem => {
 			const pressure = item.workingPressureBar.typical ?? item.workingPressureBar.max;
 			const demand = item.demandModel === 'fixed-flow'
-				? `${item.airflowLpm.typical} L/min${item.airflowBasis === 'average' ? ' en moyenne, débit continu non établi' : ''}`
+				? `${item.airflowLpm.typical} L/min${item.airflowBasis === 'average' ? ' en moyenne, débit continu non établi' : item.airflowBasis === 'unqualified' ? ', régime non documenté, débit continu non établi' : item.airflowBasis === 'free-speed' ? ' à vide, débit en charge non établi' : ''}`
 				: item.demandModel === 'per-action'
 					? `${item.airPerActionLiters} L/${item.actionLabel}`
 					: item.demandExplanation;

@@ -34,7 +34,7 @@ describe('800 tools with usable, explicit air demand', () => {
 		expect(pferd.airflowLpm.typical).toBe(270);
 	});
 	it('uses the PO family continuous-duty evidence without extending it to unrelated pistons', () => {
-		const family = compressors.filter(compressor => compressor.brand === 'BOGE');
+		const family = compressors.filter(compressor => compressor.brand === 'BOGE' && compressor.model.startsWith('PO '));
 		expect(family).toHaveLength(18);
 		for (const compressor of family) {
 			expect(compressor.dutyCycle).toBe(1);

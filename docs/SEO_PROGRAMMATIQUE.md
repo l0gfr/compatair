@@ -2,7 +2,7 @@
 
 La [politique de montée progressive](SEO_CROISSANCE_ORGANIQUE.md) décrit le contrôle automatique ajouté au build : guides et fiches sont admis par lots, après analyse des sources et de la répétition. Son activation publique dépend du déploiement de cette version.
 
-Les verdicts compresseur-outil répondent à un besoin produit réel, mais leur nombre croît comme le produit du nombre de compresseurs par le nombre d’outils. CompatAir expose 9 854 853 combinaisons explorables : le manifeste décrit 9 731 809 couples fixes calculables, tandis que 123 044 combinaisons paramétriques exigent une cadence ou un volume et un temps cible. Le calculateur et les interfaces MCP/UCP traitent ces paramètres sans générer un fichier HTML par résultat ; l’endpoint API HTTP limité aux identifiants répond `insufficient_data` pour ces outils. Parmi les outils de cette famille de schéma, 715 ne documentent qu’une consommation moyenne : leur champ `airflowBasis: average` impose `insufficient_data` sans débit en charge et cycle documentés.
+Les verdicts compresseur-outil répondent à un besoin produit réel, mais leur nombre croît comme le produit du nombre de compresseurs par le nombre d’outils. CompatAir expose 12 891 253 combinaisons explorables : le manifeste décrit 12 469 245 couples fixes calculables, tandis que 422 008 combinaisons paramétriques exigent une cadence ou un volume et un temps cible. Le calculateur et les interfaces MCP/UCP traitent ces paramètres sans générer un fichier HTML par résultat ; l’endpoint API HTTP limité aux identifiants répond `insufficient_data` pour ces outils. Parmi les outils de cette famille de schéma, 715 ne documentent qu’une consommation moyenne : leur champ `airflowBasis: average` impose `insufficient_data` sans débit en charge et cycle documentés.
 
 ## Frontière d’indexation
 
@@ -12,14 +12,14 @@ Les verdicts compresseur-outil répondent à un besoin produit réel, mais leur 
 - Une ancienne URL exacte dont les deux slugs existent encore reçoit une redirection permanente vers le calculateur prérempli avec les identifiants canoniques dans le fragment d’URL.
 - Une URL ancienne inconnue, ambiguë ou mal formée reçoit une réponse `410 Gone` ciblée. Les paramètres de suivi d’une URL connue sont supprimés lors de la redirection canonique.
 - Les couples restent exclus du sitemap et ne publient pas de balisage `TechArticle` destiné à enrichir leur présence dans les résultats.
-- Le manifeste `/data/verdicts.json` décrit les 9 731 809 couples fixes calculables à la demande ; l’audit exhaustif antérieur est conservé dans une archive immuable. Les 123 044 combinaisons paramétriques sont calculées seulement après saisie de leurs paramètres.
+- Le manifeste `/data/verdicts.json` décrit les 12 469 245 couples fixes calculables à la demande ; l’audit exhaustif antérieur est conservé dans une archive immuable. Les 422 008 combinaisons paramétriques sont calculées seulement après saisie de leurs paramètres.
 - Les premières pages de `/preuves/` et `/sources-fiabilite/` restent indexables. Leurs pages 2 et suivantes conservent les liens de parcours, mais publient `noindex,follow` et restent hors sitemap afin de ne pas multiplier les entrées de répertoire sans intention de recherche propre.
 
 Cette séparation évite une croissance quadratique du HTML. Le corpus indexable reste centré sur les pages qui apportent une synthèse ou une information propre, tandis que le contrat machine décrit explicitement le grain fixe ou paramétrique de chaque décision.
 
 ## Dossiers et comparatifs documentés
 
-Les 1619 fiches compresseurs et les 6087 pages d’usage réutilisent les références existantes. Le build refuse une référence dépourvue de synthèse propre, de deux faits éditoriaux, de limites ou de sources rattachées à ses champs critiques. Le dossier relie les preuves datées, les contradictions arbitrées, l’historique et les besoins voisins. Les 76 outils paramétriques conservent leur demande de cadence ou de volume : aucun débit d’usage n’est inventé.
+Les 1819 fiches compresseurs et les 7087 pages d’usage réutilisent les références existantes. Le build refuse une référence dépourvue de synthèse propre, de deux faits éditoriaux, de limites ou de sources rattachées à ses champs critiques. Le dossier relie les preuves datées, les contradictions arbitrées, l’historique et les besoins voisins. Les 232 outils paramétriques conservent leur demande de cadence ou de volume : aucun débit d’usage n’est inventé.
 
 Les comparatifs supplémentaires proviennent exclusivement de la sélection explicite de `src/data/decision-comparisons.ts`. Chacun porte une question et une conclusion propres, au maximum quatre compresseurs et deux besoins documentés, sans note globale ni gagnant universel. Ils utilisent le moteur déterministe existant. Les mentions de FAD distinguent point publié, interpolation et borne conservatrice ; une réserve recommandée ne devient pas silencieusement le seuil nominal de compatibilité.
 
@@ -55,3 +55,5 @@ Les fiches outils et leurs pages d’usage ont des intentions distinctes : carac
 Cette règle doit être réexaminée avant de pré-générer une éventuelle sous-sélection de couples à forte demande. Une page ne pourra devenir indexable que si elle apporte une valeur éditoriale propre, vérifiable et non produite uniquement par substitution de noms ou de chiffres.
 
 Publication des verdicts : `/data/verdicts.json` est désormais un manifeste de calcul à la demande (schéma 2.0.0), sans tableau `pairs`. La distribution exhaustive publiée le 27 septembre 2026 est historique. Le manifeste lie son archive immuable, son catalogue et ses signatures d’origine. Utiliser l’API pour les décisions courantes. Voir [performance du build](build-performance.md).
+
+Le lot documentaire D conserve les régimes `unqualified` (335 outils Sumake) et `free-speed` (consommation Desoutter à vide seule) comme données insuffisantes pour un verdict conclusif. Les profils non fixes peuvent aussi signaler une pression, une cadence ou des unités manquantes : une saisie de volume ne résout pas ces manques documentaires.

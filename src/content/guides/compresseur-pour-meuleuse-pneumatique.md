@@ -68,3 +68,5 @@ Pour préciser le choix de la configuration, consultez [vitesse régulée et vit
 - [Einhell, TC-PP 220](https://www.einhell.fr/p/4138540-tc-pp-220/)
 - [Einhell, TE-AC 430/90/10](https://www.einhell.fr/p/4010800-te-ac-430-90-10/)
 - [Einhell, TC-AC 240/50/10 OF](https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of)
+
+La [LSF19 S460E-1/R consomme davantage à vide dans son tableau](/guides/atlas-lsf19-s460e-consommation-vide-charge/). La [Fuji FA-4C-3 documente 1 260 L/min en charge](/guides/fuji-fa-4c-3-1260-l-min-raccord-pt/) : ces deux régimes ne doivent pas être mélangés dans un calcul.

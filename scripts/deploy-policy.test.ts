@@ -69,7 +69,7 @@ describe('release boundary policy', () => {
 		} finally { rmSync(root, { recursive: true, force: true }); }
 	});
 	it('compresses the growing catalog within the bounded release storage ceiling', () => {
-		expect(workflow).toContain('tar -C dist -cf - . | xz -T2 -6 > "compatair-${GITHUB_SHA}.tar.xz"');
+		expect(workflow).toContain('tar -C dist -cf - . | xz -T2 -8 > "compatair-${GITHUB_SHA}.tar.xz"');
 		expect(workflow).toContain('release_bytes > 184549376');
 		expect(workflow).toContain('compression-level: 0');
 		expect(deploy).toContain('*.tar.xz) command -v xz');
