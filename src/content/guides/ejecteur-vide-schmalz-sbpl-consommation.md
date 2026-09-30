@@ -14,7 +14,7 @@ relatedGuides:
   - convertir-cfm-l-min-nl-min-air-comprime
 sources:
   - https://pimmedia.schmalz.com/MAM_Library/Dokumente/Datenblatt_Produktfamilie/0_/050/05050/ff4cfffb7ff4_Datasheet_Basic%20Ejectors%20SBPL_en-EN.pdf
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 ---
 
 Un éjecteur pneumatique produit du vide avec de l’air comprimé. Sur un **Schmalz SBPL 25 HV**, les **300 L/min de capacité d’aspiration** ne signifient pas que le compresseur doit fournir 300 L/min : la fiche indique séparément **105 L/min d’air consommé à la pression optimale**. Il faut conserver ces deux flux et leurs conditions.
@@ -64,6 +64,8 @@ Pour choisir, notre démarche consiste à partir du besoin au niveau des ventous
 Dans une hypothèse où les quatre HF prélèvent de l’air pendant 6 secondes sur un cycle de 20 secondes, avec prélèvement nul pendant le reste du cycle, la moyenne serait `320 × 6 / 20 = 96 L/min`. **La demande pendant l’activation resterait de 320 L/min.** L’arrêt du prélèvement est une hypothèse de commande à vérifier, pas une fonction présumée de tout montage SBPL.
 
 C’est la distinction utile pour un poste répétitif : compter les cycles aide à estimer le volume d’air ; observer les activations simultanées aide à dimensionner l’alimentation. La [méthode de simultanéité](/guides/utiliser-plusieurs-outils-pneumatiques/) complète ce calcul.
+
+Pour un éjecteur avec régulation du vide, documentez également les phases réellement actives. L’[économiseur du Schmalz SCPSi-UHV-HD](/guides/ejecteur-schmalz-scpsi-economiseur-air-cycles/) fournit un exemple de seuils et de reprises ; ses paramètres appartiennent à cette autre série.
 
 ## Un essai de pièce doit produire autre chose qu’un « ça tient »
 

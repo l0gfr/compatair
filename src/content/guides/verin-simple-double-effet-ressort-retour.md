@@ -3,6 +3,7 @@ title: "Vérin simple ou double effet : comprendre le retour par ressort et le 
 seoTitle: "Vérin simple ou double effet : quel retour prévoir ?"
 description: "Un vérin simple effet peut pousser ou tirer selon sa version. Comparez mouvement, ressort, circuit et consommation sans supposer une position de sécurité."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Comprendre"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -70,6 +71,8 @@ Ne remplacez pas un double effet par un simple effet sur la seule idée qu’il 
 La fiche de remplacement doit inclure les options de fonction, de course et de détection nécessaires. Après une intervention autorisée, vérifiez le cycle prévu dans les conditions convenues et archivez le résultat.
 
 Le [réglage de vitesse à l’échappement](/guides/regler-vitesse-verin-pneumatique-echappement/) traite un autre aspect du mouvement. La force, la vitesse et la logique de retour doivent rester des vérifications distinctes, même lorsqu’elles concernent le même vérin.
+
+Ajoutez les capteurs associés à cette référence. Le [guide Reed et électronique](/guides/capteur-verin-reed-electronique-signal-position/) propose de comparer la position mécanique, le voyant et l’entrée automate lorsqu’un cycle attend un retour de position.
 
 ## Sources et méthode
 

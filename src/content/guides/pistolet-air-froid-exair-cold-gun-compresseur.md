@@ -3,6 +3,7 @@ title: "EXAIR Cold Gun 5215 et 5230 : consommation d’air et choix du compresse
 seoTitle: "EXAIR Cold Gun : 425 ou 850 SLPM à alimenter"
 description: "Comparer les EXAIR Cold Gun standard et High Power : débit comprimé, fonctionnement intermittent et méthode pour mesurer le coût d’un refroidissement local."
 pubDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -63,6 +64,8 @@ Si le poste réalise, par hypothèse, dix opérations par heure sans consommatio
 
 
 Cette lecture évite deux erreurs opposées : dimensionner le réseau seulement sur la faible moyenne horaire, ou facturer une consommation continue de 60 minutes alors que la commande coupe effectivement l’air entre les opérations.
+
+Pour une armoire électrique, la [commande thermostatique d’un Cabinet Cooler](/guides/refroidisseur-armoire-vortex-exair-thermostat-air/) change les phases actives du bilan. La consommation en marche, leur durée et la charge thermique de l’armoire doivent rester séparées.
 
 ## Décider avec un essai de procédé mesurable
 

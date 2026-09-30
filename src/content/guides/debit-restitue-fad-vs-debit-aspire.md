@@ -3,7 +3,7 @@ title: "Débit restitué FAD ou débit aspiré : le chiffre qui dimensionne vrai
 seoTitle: "Débit FAD ou débit aspiré : lequel comparer ? | CompatAir"
 description: "FAD, débit aspiré et débit de remplissage ne mesurent pas la même chose. Identifiez le chiffre à comparer au besoin de votre outil et à quelle pression."
 pubDate: 2026-07-13
-updatedDate: 2026-09-29
+updatedDate: 2026-09-30
 category: Comprendre
 audiences: [particulier, professionnel]
 metiers: []
@@ -51,6 +51,8 @@ Si la fiche ne publie que le débit aspiré, le produit reste consultable, mais 
 La cuve intervient ensuite comme réserve temporaire. Elle ne corrige pas un débit durablement insuffisant. Pour tester une combinaison précise, utilisez le [calculateur CompatAir](/calculateur/).
 
 L’[hivernage d’un arrosage automatique](/guides/compresseur-hivernage-arrosage-debit-pression/) est un cas où les limites de pression des composants et la continuité du débit doivent être examinées ensemble. Le dossier précise aussi pourquoi une réserve de cuve ne remplace pas un besoin de production documenté.
+
+Le [Kärcher IB 10/8 L2P](/guides/compresseur-nettoyage-cryogenique-karcher-ib10-8-l2p/) illustre une difficulté supplémentaire : une plage de consommation ne donne pas les couples débit-pression de chaque réglage. Pour consulter un fournisseur, il faut décrire la tâche de nettoyage et demander le point correspondant.
 
 ## Comparer des fiches exprimées dans des unités différentes
 

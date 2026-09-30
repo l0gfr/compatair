@@ -2,6 +2,7 @@
 title: "Pompe à membrane pneumatique calée : vérifier le circuit avant le compresseur"
 description: "Pompe AODD qui s’arrête ou ne débite plus : distinguer air, aspiration, refoulement et usure, avec une méthode de relevé utile au service technique."
 pubDate: 2026-09-29
+updatedDate: 2026-09-30
 category: Utiliser
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -31,6 +32,8 @@ Il demande aussi d’isoler l’équipement, de dissiper les pressions et de ten
 </figure>
 
 Le schéma sert à orienter un relevé. Il ne constitue pas un arbre de dépannage complet : les causes peuvent se cumuler, et les vérifications internes nécessitent les compétences et la documentation de la pompe.
+
+Si le symptôme est une accélération irrégulière plutôt qu’un arrêt, utilisez un parcours adapté à la famille de pompe. Le [diagnostic documentaire Graco Xtreme](/guides/pompe-pneumatique-emballe-graco-xtreme/) examine l’approvisionnement produit et la protection anti-emballement.
 
 ## Relever les changements récents
 

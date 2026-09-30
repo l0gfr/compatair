@@ -3,6 +3,7 @@ title: "Choisir un distributeur pneumatique : lire le débit nominal avant de r
 seoTitle: "Distributeur pneumatique : quel débit nominal choisir ?"
 description: "Filetage identique, débit différent : lisez les conditions de pression, le sens de passage et le débit nominal avant de choisir un distributeur pneumatique."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -66,6 +67,8 @@ Faites ensuite vérifier les passages, le pilotage et l’échappement dans le c
 Demandez une référence complète, la fonction correspondante, la plage d’utilisation et les données de débit avec leurs conditions. Si le fournisseur utilise des coefficients de débit, exigez sa méthode de sélection pour le gaz et les pressions de votre application ; ne transformez pas un coefficient de liquide en L/min d’air par une règle improvisée.
 
 La réception proposée consiste à reproduire le cycle représentatif, puis la simultanéité prévue, en conservant la configuration définitive. Une pièce qui commute sur établi n’a pas encore démontré qu’elle maintient la cadence de votre machine. Toute modification d’une fonction liée à la sécurité doit être validée dans le dossier de conception approprié.
+
+Pour un 5/3, joignez le symbole des trois positions. Le [guide des centres fermé, sous pression et à l’échappement](/guides/distributeur-5-3-centre-ferme-verin-derive/) explique pourquoi la seule désignation 5/3 laisse le comportement au repos indéterminé.
 
 ## Sources et méthode
 

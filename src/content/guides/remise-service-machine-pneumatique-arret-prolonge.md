@@ -2,6 +2,7 @@
 title: "Remettre une machine pneumatique en service après un arrêt prolongé"
 description: "Après un arrêt long : préparer la déconsignation, vérifier fluides et modifications, organiser une remise en service progressive selon la procédure du site."
 pubDate: 2026-09-29
+updatedDate: 2026-09-30
 category: Utiliser
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "menuiserie-agencement"]
@@ -35,6 +36,8 @@ Cette préparation se distingue du [choix de couper l’air pendant un week-end]
 Rassemblez les consignes d’arrêt, la documentation de la machine, les interventions réalisées et les anomalies connues. Vérifiez que les responsables de la remise en service connaissent les modifications, y compris celles portant sur un flexible, une vanne, un capteur ou un automate.
 
 L’air comprimé peut agir sur des mouvements ou des fonctions de maintien. La lecture d’un manomètre nul à un point du réseau ne décrit pas toutes les énergies résiduelles de la machine. La procédure applicable doit préciser les moyens de vérifier les états attendus avant intervention et avant retour au service.
+
+Après remplacement d’un capteur, vérifiez [PNP/NPN, NO/NC et l’entrée automate](/guides/capteur-pnp-npn-entree-automate-verin/). Un signal de position peut manquer malgré un déplacement correct ; la référence électrique doit suivre le dossier de reprise.
 
 ## Préparer un essai plutôt qu’une reprise directe
 

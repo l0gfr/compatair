@@ -2,7 +2,7 @@
 title: "Flexible d’air comprimé : choisir le diamètre et la longueur sans perdre la pression"
 description: "Longueur, diamètre intérieur et raccords réduisent la pression disponible. Voici comment éviter qu’un bon compresseur devienne mauvais au bout du flexible."
 pubDate: 2026-07-13
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 category: Installer
 audiences: [particulier, professionnel]
 metiers: [btp-chantier]
@@ -51,6 +51,8 @@ Testez votre installation avec le [calculateur de flexible et de compresseur](/c
 Avant de choisir les extrémités du flexible, identifiez le [filetage BSP ou NPT et le profil de raccord rapide](/guides/raccord-air-comprime-bsp-npt-1-4/). La taille nominale 1/4 ne décrit pas à elle seule ces interfaces.
 
 Pour prolonger cette vérification, vous pouvez [vérifier pourquoi un tube PVC de plomberie ne valide pas un réseau d’air](/guides/tuyau-pvc-reseau-air-comprime-risques/).
+
+Les raccords instantanés ajoutent une dimension côté tube : [diamètre extérieur métrique ou impérial](/guides/tube-pneumatique-6mm-un-quart-diametre-exterieur/). Pour la tenue en service, examinez ensuite [matière PU/PA et température](/guides/tube-air-polyurethane-polyamide-temperature-pression/) avec la paire tube-raccord complète.
 
 ## Sources
 

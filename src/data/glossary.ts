@@ -1,4 +1,24 @@
 export const glossarySources = {
+	swagelokCreep: {
+		label: 'Swagelok, dépannage des régulateurs : creep, droop et SPE',
+		url: 'https://www.swagelok.com/en/blog/troubleshoot-common-regulator-problems',
+	},
+	swagelokSpe: {
+		label: 'Swagelok, Supply Pressure Effect des régulateurs',
+		url: 'https://www.swagelok.com/en/blog/managing-supply-pressure-effect-in-regulator',
+	},
+	burkertPilot: {
+		label: 'Bürkert, électrovannes directes et servo-assistées',
+		url: 'https://www.burkert-usa.com/en/company-career/what-s-new/press/media/technical-reports/direct-acting-vs-pilot-solenoid-valves',
+	},
+	festoCushioning: {
+		label: 'Festo, amortissements P, PPV et PPS',
+		url: 'https://www.festo.com/ie/en/e/blog/in-practice/cylinder-cushioning-the-three-most-common-methods-id_1518844',
+	},
+	schmalzEconomizer: {
+		label: 'Schmalz, SCPSi-UHV-HD, notice 30.30.01.01484, révision 02 de 04/24, section 7.5',
+		url: 'https://media.schmalz.com/MAM_Library/Dokumente/Bedienungsanleitung/30/3030/303001/30300101484/29f2b2b77a3c_BAL_30.30.01.01484_en-EN.pdf',
+	},
 	abbDuty: {
 		label: 'ABB, services moteurs, guide technique 2018, section 4.7',
 		url: 'https://library.e.abb.com/public/891764f173c5494b82b7e66e0b2d6080/9AKK105285%20REV%20C%2010-2018.pdf',
@@ -160,6 +180,11 @@ export type GlossaryTerm = {
 };
 
 export const glossaryTerms: GlossaryTerm[] = [
+	{ term: 'Creep d’un régulateur', slug: 'creep-regulateur', definition: 'Montée de pression aval liée à un passage indésirable au siège fermé du régulateur. Une contamination du siège est une cause possible documentée ; le diagnostic doit distinguer ce phénomène des variations de pression amont et de débit.', source: 'swagelokCreep', related: { label: 'Examiner une pression qui monte au repos', href: '/guides/regulateur-air-pression-monte-arret-creep/' } },
+	{ term: 'Supply Pressure Effect (SPE)', slug: 'supply-pressure-effect', definition: 'Dépendance de la pression de sortie d’un régulateur à sa pression d’alimentation, liée à sa conception. Sur les conceptions décrites par Swagelok, une baisse amont peut augmenter la sortie. La caractéristique et son domaine doivent être lus pour la référence exacte.', source: 'swagelokSpe', related: { label: 'Relier variation au poste et cycle de cuve', href: '/guides/pression-regulateur-varie-cuve-compresseur-spe/' } },
+	{ term: 'Différentiel de pression d’une électrovanne', slug: 'differentiel-pression-electrovanne', definition: 'Différence entre les pressions amont et aval de la vanne dans un état donné. Certaines électrovannes servo-assistées exigent un différentiel minimal pour commuter ; la pression amont seule ne confirme pas cette condition et le seuil appartient à la référence.', source: 'burkertPilot', related: { label: 'Comprendre une vanne qui ne s’ouvre pas', href: '/guides/electrovanne-air-ne-ouvre-pas-pression-differentielle/' } },
+	{ term: 'Amortissement PPV / PPS', slug: 'amortissement-ppv-pps', definition: 'Désignations Festo d’amortissements pneumatiques de fin de course : PPV réglable, PPS autoréglable. Ces fonctions limitent le choc aux extrémités dans un domaine documenté de charge et de vitesse ; elles ne remplacent pas le réglage de vitesse du mouvement.', source: 'festoCushioning', related: { label: 'Examiner un choc en fin de course', href: '/guides/verin-tape-fin-course-amortissement-ppv-pps/' } },
+	{ term: 'Hystérésis de régulation du vide', slug: 'hysteresis-regulation-vide', definition: 'Écart entre les seuils d’arrêt et de reprise de la génération du vide. Dans la notice Schmalz SCPSi-UHV-HD étudiée, la génération s’arrête à H1 et reprend sous H1 − h1. Le paramètre h1 définit cet écart dans la logique de ce modèle.', source: 'schmalzEconomizer', related: { label: 'Lire les cycles d’un économiseur d’air', href: '/guides/ejecteur-schmalz-scpsi-economiseur-air-cycles/' } },
 	{ term: 'Service S1', slug: 'service-s1', definition: 'Service moteur à charge constante assez prolongé pour atteindre l’équilibre thermique. Cette désignation du moteur ne suffit pas à déterminer le débit ni les limites d’exploitation de la machine complète.', source: 'abbDuty', related: { label: 'Lire les services S1 et S3', href: '/guides/compresseur-service-s1-s3-25-pour-cent/' } },
 	{ term: 'Service S3', slug: 'service-s3', definition: 'Service moteur intermittent périodique associant fonctionnement à charge constante et repos hors tension, avec un effet thermique du démarrage non significatif. Son facteur de durée est le temps de fonctionnement divisé par la somme fonctionnement et repos.', source: 'abbDuty', related: { label: 'Interpréter S3 25 %', href: '/guides/compresseur-service-s1-s3-25-pour-cent/' } },
 	{ term: 'Huile totale', slug: 'huile-totale', definition: 'Huile considérée dans ses différentes phases : aérosols, liquide et vapeur. Une mesure limitée aux vapeurs ne renseigne pas, à elle seule, sur l’ensemble ; le rapport doit préciser les méthodes et le point de prélèvement.', source: 'tuvOilCertificate', related: { label: 'Distinguer huile totale et vapeurs', href: '/guides/mesure-vapeurs-huile-huile-totale-air-comprime/' } },

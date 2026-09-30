@@ -3,6 +3,7 @@ title: "Échappement de pompe pneumatique qui givre : humidité, détente et di
 seoTitle: "Pompe pneumatique qui givre : diagnostic de l’échappement"
 description: "Le givre sur une pompe ne prouve pas toujours un défaut du sécheur. Distinguez humidité interne, condensation extérieure et obstruction avec les notices fabricants."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Utiliser"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "btp-chantier"]
@@ -74,6 +75,8 @@ Le [guide des silencieux et contre-pressions](/guides/silencieux-pneumatique-col
 Après remise en service autorisée, comparez les observations aux mêmes points et dans un scénario représentatif. Conservez la durée, le fonctionnement obtenu et les conditions ambiantes connues. Si elles diffèrent, indiquez cette limite dans le résultat.
 
 La conclusion doit rester proportionnée : défaut non reproduit dans les conditions testées, correction confirmée selon les critères retenus ou diagnostic encore incomplet. L’absence de givre pendant un court essai ne démontre pas tous les régimes futurs.
+
+Consignez séparément un éventuel changement de vitesse. Le [cas d’une Graco Xtreme qui s’emballe](/guides/pompe-pneumatique-emballe-graco-xtreme/) examine l’alimentation produit et les états de protection ; le givre ne doit pas absorber tous les symptômes dans une seule conclusion.
 
 ## Sources et méthode
 

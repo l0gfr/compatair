@@ -3,6 +3,7 @@ title: "Régler la vitesse d’un vérin pneumatique : admission, échappement 
 seoTitle: "Vitesse vérin pneumatique : admission ou échappement ?"
 description: "Vérin trop rapide, irrégulier ou brutal au redémarrage : distinguez réglage du débit, pression, échappement et état initial des chambres."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Utiliser"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -47,6 +48,8 @@ La question de réception devient donc précise : le réglage doit-il satisfaire
 La [force du vérin](/guides/force-verin-pneumatique-diametre-pression/) dépend des surfaces et des pressions. La vitesse demandée entraîne un besoin de débit pendant le mouvement. Une intervention sur la pression peut donc modifier l’effort disponible, au-delà de l’effet recherché sur la vitesse.
 
 Pour organiser le diagnostic, nous proposons de relever la durée de sortie et de rentrée, la charge, le réglage identifié et les autres consommateurs actifs. Conservez les conditions d’un cycle satisfaisant pour les comparer au cycle dégradé. Évitez les mentions « lent » ou « rapide » sans préciser le sens du mouvement.
+
+Un choc à l’extrémité impose également de lire [l’amortissement P, PPV ou PPS du vérin](/guides/verin-tape-fin-course-amortissement-ppv-pps/). La vitesse de déplacement et la capacité à arrêter la masse en fin de course sont deux critères de sélection.
 
 ## Quand le défaut vient du chemin de l’air
 

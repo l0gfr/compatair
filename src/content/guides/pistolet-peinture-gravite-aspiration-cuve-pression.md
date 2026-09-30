@@ -3,6 +3,7 @@ title: "Pistolet peinture à gravité, à aspiration ou à cuve sous pression :
 seoTitle: "Pistolet gravité, aspiration ou cuve sous pression ?"
 description: "Comparez l’alimentation en peinture et le besoin d’air sans confondre gravité, aspiration, cuve sous pression et technologie HVLP. Grille de choix atelier."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture", "menuiserie-agencement"]
@@ -59,6 +60,8 @@ Le dossier [HVLP et LVLP](/guides/pistolet-lvlp-vs-hvlp-compresseur/) aide à li
 Notre fiche de consultation demande les références du corps, du chapeau, de la buse, de l’aiguille et du système d’alimentation. Ajoutez les flexibles produit et air, les régulateurs, les raccords et les instructions de nettoyage. Conservez aussi la fiche technique et la fiche de données de sécurité du revêtement réellement appliqué.
 
 La réception peut alors comparer une configuration documentée à un résultat : aspect attendu, débit de produit, pression en fonctionnement et temps du lot. Si le fournisseur change le chapeau pour améliorer le résultat, le besoin d’air doit être relu pour cette nouvelle configuration.
+
+Pour une alimentation par réservoir, séparez aussi [pression produit, air d’atomisation et agitation](/guides/cuve-peinture-sous-pression-air-produit-agitation/). L’agitateur éventuel doit apparaître avec sa motorisation exacte dans le bilan de l’ensemble.
 
 ## Une cuve sous pression remplace-t-elle un gros compresseur ?
 

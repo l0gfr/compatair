@@ -3,6 +3,7 @@ title: "Régulateur d’air comprimé qui fuit par l’évent : décompression 
 seoTitle: "Régulateur qui fuit par l’évent : que vérifier ?"
 description: "Un régulateur peut évacuer de l’air selon sa conception, mais un souffle continu mérite un diagnostic. Identifiez version, moment et pression avant intervention."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Utiliser"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "garage-automobile", "menuiserie-agencement"]
@@ -58,6 +59,8 @@ Ce tableau ne classe pas automatiquement chaque cas comme normal ou défectueux.
 Le tableau SMC mentionne le cas d’une contre-pression supérieure au réglage. Notre conséquence pratique est de ne pas conclure immédiatement que remplacer le régulateur réglera tout le problème. Faites examiner la chronologie et l’origine des pressions avec le schéma de la machine.
 
 Si le phénomène est lié à une phase précise, conservez cette information avec les relevés autorisés. Une mesure prise seulement pendant l’arrêt peut manquer l’événement recherché. Aucun branchement d’essai improvisé ou modification de logique n’est proposé ici.
+
+Si la sortie monte après l’arrêt du consommateur, gardez aussi la pression amont dans le relevé. Le [diagnostic du creep](/guides/regulateur-air-pression-monte-arret-creep/) examine ce symptôme au siège et le distingue des variations liées au débit ou à l’alimentation.
 
 ## Préparer une intervention traçable
 

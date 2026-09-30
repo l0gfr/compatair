@@ -3,6 +3,7 @@ title: "Pince pneumatique : force par doigt, longueur des mors et maintien de l
 seoTitle: "Pince pneumatique : force par doigt et longueur des mors"
 description: "Force totale ou par doigt ? Lisez les courbes d’une pince pneumatique avec le bras de levier et le sens de préhension avant d’en déduire une capacité de maintien."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -74,6 +75,8 @@ Le protocole proposé conserve la référence des pièces, leurs états représe
 Une variante à ressort ne dispense pas de documenter le comportement attendu lors d’une perte d’air. Faites préciser ce que la référence garantit et ce que le circuit et la mécanique doivent encore assurer.
 
 Pour une alternative par le vide, le [guide des ventouses sur pièces poreuses](/guides/ventouse-piece-poreuse-debit-vide/) présente une autre logique de sélection. Dans les deux cas, la preuve utile porte sur une configuration et un cycle, pas sur un chiffre commercial isolé.
+
+Avec une ventouse, la libération peut dépendre d’un soufflage séparé. Le [guide de dépose par soufflage](/guides/ventouse-depose-piece-soufflage-duree-debit/) examine la chronologie, le mode de commande et le débit, au lieu de limiter le contrôle à la prise de pièce.
 
 ## Sources et méthode
 

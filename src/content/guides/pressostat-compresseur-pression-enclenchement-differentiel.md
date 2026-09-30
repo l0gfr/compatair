@@ -3,6 +3,7 @@ title: "Pressostat de compresseur : comprendre enclenchement, arrêt et différ
 seoTitle: "Pressostat compresseur : seuils et différentiel"
 description: "Un compresseur redémarre avant que la cuve soit vide : comprenez les deux seuils du pressostat, leur différentiel et les limites d’un diagnostic sans démontage."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Comprendre"
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "maintenance-industrielle", "menuiserie-agencement"]
@@ -53,6 +54,8 @@ La documentation consultée comporte des formulations divergentes sur l’effet 
 | Pression de sortie insuffisante | Un seuil de cuve nécessairement trop bas |
 
 Pour des cycles rapprochés, relevez d’abord le scénario d’usage et les consommateurs actifs. Un changement de cadence, une fuite ou une modification de réserve doit rester dans l’enquête. Le [suivi des temps de charge et de marche à vide](/guides/mesurer-temps-charge-vide-compresseur/) aide à distinguer les états réellement observés selon la technologie de la machine.
+
+Une variation au poste qui revient au rythme de ces cycles peut demander l’examen du [Supply Pressure Effect du régulateur](/guides/pression-regulateur-varie-cuve-compresseur-spe/). Les pressions autour du régulateur complètent alors celles de la cuve.
 
 ## Préparer un relevé utile au réparateur
 

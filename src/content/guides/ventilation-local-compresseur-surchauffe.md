@@ -3,7 +3,7 @@ title: "Ventilation du local compresseur : éviter la recirculation d’air chau
 seoTitle: "Ventilation du local compresseur : éviter la surchauffe"
 description: "Entrée d’air, extraction, gaines, sécheur et accès maintenance : préparez l’implantation d’un compresseur sans inventer un débit de ventilation universel."
 pubDate: 2026-09-26
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Installer"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "garage-automobile", "menuiserie-agencement"]
@@ -40,6 +40,8 @@ Notre fiche d’implantation sépare trois lignes : débit restitué au réseau,
 <text x="30" y="508" fill="white" font-size="20">Schéma de principe ; aucun débit de ventilation prescrit.</text>
 </svg>
 </div>
+
+Le choix d’emplacement doit également examiner [les rejets de procédé autour de la prise d’aspiration](/guides/prise-air-compresseur-fumees-solvants-emplacement/). Une entrée suffisante pour refroidir le local ne qualifie pas l’air qui sera comprimé.
 
 ## Où placer entrée et extraction ?
 

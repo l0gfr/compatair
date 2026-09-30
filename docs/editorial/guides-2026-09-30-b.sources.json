@@ -1,0 +1,1399 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-09-30",
+  "sourcesConsultedOn": "2026-09-30",
+  "reviewType": "internal_editorial",
+  "assistedByAI": true,
+  "externalProfessionalValidation": false,
+  "physicalTestsPerformed": false,
+  "hashScope": "Empreintes des corps réellement téléchargés et des contenus à la fin de la revue. Les réponses HTTP 403 ne sont pas des documents sources et ne reçoivent pas leur empreinte. Originaux constructeurs non redistribués. Les modifications ultérieures sont hors de ce relevé.",
+  "publicationScope": {
+    "guidesBefore": 286,
+    "guidesAdded": 30,
+    "guidesAfter": 316,
+    "newProductPages": 0
+  },
+  "qualityPolicy": {
+    "purpose": "Résoudre des questions techniques distinctes à partir de documents primaires et de propositions de relevés clairement identifiées. Aucun classement, essai réalisé, gain énergétique, volume de recherche ou trafic futur inventé.",
+    "controls": [
+      "Comparaison des intentions avec les 286 guides existants ; les 30 nouveaux guides passent les contrôles mécaniques sans similarité signalée",
+      "34 sources primaires consultées ; notices historiques datées ; portée des séries et références conservée",
+      "Calculs illustratifs identifiés, unités et bases de volume conservées, aucune interpolation de courbe ni estimation de FAD",
+      "Incohérence air/rapport/pression produit de la fiche Graco T3 explicitée, sans correction supposée",
+      "30 infographies SVG accessibles, descriptions et limites ; vérification du rendu à 390 px",
+      "40 liens contextuels ajoutés depuis 36 guides existants ; cinq définitions avec liens réciproques",
+      "Indexation progressive conservée : aucune modification des quotas ou admission forcée du lot"
+    ]
+  },
+  "sources": [
+    {
+      "id": "bekomat",
+      "url": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/bekomat_standard/bm16_ba_01-3582_en_00_00.pdf",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "c329be96c02a7d12e9587976ab7d056843345496a2afa884062bb9ec0ab350b9",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/bekomat_standard/bm16_ba_01-3582_en_00_00.pdf",
+      "bytes": 10472648,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "bekomat16-condensats-evacuation-remontee-pente"
+      ]
+    },
+    {
+      "id": "bowl",
+      "url": "https://www.smcworld.com/upfiles/pl/recycle_bin/m-03-3-seihin_en.pdf",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "aee6928735ea85d37355e964670c4c15999d43c343a34189805dbd3f3eee5fe2",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.smcworld.com/upfiles/pl/recycle_bin/m-03-3-seihin_en.pdf",
+      "bytes": 4594884,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "bol-filtre-air-polycarbonate-solvant-fissure"
+      ]
+    },
+    {
+      "id": "cabinet",
+      "url": "https://www.exair.com/knowledgebase/faq/index/?catid=412&p=4&pub=28.faq",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "ac6190a9ff7e4bad1642e697785adec9bfa0d4f6b4f842fdca8384e3460b7620",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.exair.com/knowledgebase/faq/index/?catid=412&p=4&pub=28.faq",
+      "bytes": 631816,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "refroidisseur-armoire-vortex-exair-thermostat-air"
+      ]
+    },
+    {
+      "id": "clamp",
+      "url": "https://www.festo.com/media/catalog/204326_documentation.pdf",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": 403,
+      "resolvedUrl": "https://www.festo.com/media/catalog/204326_documentation.pdf",
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP 403 sur la récupération directe ; contenu consulté avec le lecteur web. Aucune empreinte du document constructeur attribuée au corps de refus.",
+      "guides": [
+        "blocage-tige-verin-dsnu-kp-maintien-securite"
+      ]
+    },
+    {
+      "id": "coil",
+      "url": "https://www.burkert.co.uk/en/landingpage/10-Frequently-asked-questions-about-solenoid-valves",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "50e78857e901a37f402e948b9b631e7757bf2ebc73c9335e7a54e4a8dedd65c4",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burkert.co.uk/en/landingpage/10-Frequently-asked-questions-about-solenoid-valves",
+      "bytes": 150365,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "electrovanne-air-ne-ouvre-pas-pression-differentielle",
+        "bobine-electrovanne-24v-ac-dc-remplacement"
+      ]
+    },
+    {
+      "id": "conveyor",
+      "url": "https://www.exair.com/products/air-operated-conveyors.html",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "452689322c36d3973bffe7dd3b2ba7881e35ccf5ce879e5757e24989d52508bd",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.exair.com/products/air-operated-conveyors.html",
+      "bytes": 666644,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "transport-pneumatique-exair-line-vac-distance-matiere"
+      ]
+    },
+    {
+      "id": "creep",
+      "url": "https://www.swagelok.com/en/blog/troubleshoot-common-regulator-problems",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "5298abcabbabf9afa8779f29bf983c8385bb02902965f839042a6b51d9a6d049",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.swagelok.com/en/blog/troubleshoot-common-regulator-problems",
+      "bytes": 75467,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "regulateur-air-pression-monte-arret-creep"
+      ]
+    },
+    {
+      "id": "cushion",
+      "url": "https://www.festo.com/ie/en/e/blog/in-practice/cylinder-cushioning-the-three-most-common-methods-id_1518844",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": 403,
+      "resolvedUrl": "https://www.festo.com/ie/en/e/blog/in-practice/cylinder-cushioning-the-three-most-common-methods-id_1518844",
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP 403 sur la récupération directe ; contenu consulté avec le lecteur web. Aucune empreinte du document constructeur attribuée au corps de refus.",
+      "guides": [
+        "verin-tape-fin-course-amortissement-ppv-pps"
+      ]
+    },
+    {
+      "id": "drain",
+      "url": "https://www.smcworld.com/catalog/en/airpreparation/AD402-A-E/7-8-2-p0487-0495-AD402-A_en/data/7-8-2-p0487-0495-AD402-A_en.pdf",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "e4b041f502a95dd1fb557d06e72bfa9248bdc5d8dbd526d249c23c7a821d8ad9",
+      "httpStatus": 200,
+      "resolvedUrl": "https://ca01.smcworld.com/catalog/en/airpreparation/AD402-A-E/7-8-2-p0487-0495-AD402-A_en/data/7-8-2-p0487-0495-AD402-A_en.pdf",
+      "bytes": 3185785,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "purgeur-smc-ad402-normalement-ouvert-petit-compresseur"
+      ]
+    },
+    {
+      "id": "exhaust",
+      "url": "https://www.festo.com/media/catalog/205013_documentation.pdf",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": 403,
+      "resolvedUrl": "https://www.festo.com/media/catalog/205013_documentation.pdf",
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP 403 sur la récupération directe ; contenu consulté avec le lecteur web. Aucune empreinte du document constructeur attribuée au corps de refus.",
+      "guides": [
+        "echappement-rapide-verin-montage-pres-actionneur"
+      ]
+    },
+    {
+      "id": "guided",
+      "url": "https://www.festo.com/media/catalog/204171_documentation.pdf",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": 403,
+      "resolvedUrl": "https://www.festo.com/media/catalog/204171_documentation.pdf",
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP 403 sur la récupération directe ; contenu consulté avec le lecteur web. Aucune empreinte du document constructeur attribuée au corps de refus.",
+      "guides": [
+        "verin-guide-festo-dfm-charge-deportee-moment"
+      ]
+    },
+    {
+      "id": "ice",
+      "url": "https://www.kaercher.com/gb/en/professional/products/ib-10-8-l2p-p15742000",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "fa960e21119da0a97c7186e2366de4863040960c99f322ca069bc3242b09542b",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.kaercher.com/gb/en/professional/products/ib-10-8-l2p-p15742000",
+      "bytes": 529634,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "compresseur-nettoyage-cryogenique-karcher-ib10-8-l2p"
+      ]
+    },
+    {
+      "id": "icemanual",
+      "url": "https://s1.kaercher-media.com/documents/manuals/html/BTA-5778340-000-04/DE.html",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "dc3d1157104fa7945b84c66eb461776eb4af943ff2326866483ccd50c4655e40",
+      "httpStatus": 200,
+      "resolvedUrl": "https://s1.kaercher-media.com/documents/manuals/html/BTA-5778340-000-04/DE.html",
+      "bytes": 112325,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "compresseur-nettoyage-cryogenique-karcher-ib10-8-l2p"
+      ]
+    },
+    {
+      "id": "intake",
+      "url": "https://www.atlascopco.com/en-ie/compressors/compressed-air-tips/top-tip-room-layout-designing-your-compressor",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "28d0bdfb51f72e9d10adc03162997c2238b8fbeac3f82563975b403d5a5959c8",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.atlascopco.com/en-ie/compressors/compressed-air-tips/top-tip-room-layout-designing-your-compressor",
+      "bytes": 131778,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "prise-air-compresseur-fumees-solvants-emplacement"
+      ]
+    },
+    {
+      "id": "integrity",
+      "url": "https://discover.parker.com/integritytesting",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "bcb217859ef473fb75d3aad5561b2731c7e6d530d603162071dd4e24395e9215",
+      "httpStatus": 200,
+      "resolvedUrl": "https://discover.parker.com/integritytesting",
+      "bytes": 69798,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "filtre-air-sterile-perte-pression-contamination"
+      ]
+    },
+    {
+      "id": "linevac",
+      "url": "https://www.exair.com/knowledgebase/faq/index/?catid=463&p=1",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "eb6d430a3fa113e6b8b366271a04a143d016dac0b43bd6f8debc6f25661ec4cc",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.exair.com/knowledgebase/faq/index/?catid=463&p=1",
+      "bytes": 607165,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "transport-pneumatique-exair-line-vac-distance-matiere"
+      ]
+    },
+    {
+      "id": "muscle",
+      "url": "https://www.festo.com/media/catalog/202851_documentation.pdf",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": 403,
+      "resolvedUrl": "https://www.festo.com/media/catalog/202851_documentation.pdf",
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP 403 sur la récupération directe ; contenu consulté avec le lecteur web. Aucune empreinte du document constructeur attribuée au corps de refus.",
+      "guides": [
+        "muscle-pneumatique-dmsp-force-contraction"
+      ]
+    },
+    {
+      "id": "nist",
+      "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "af7d6a12ed98cd5e695803fba4a00dac39e74f69204277edd02eea6053be047e",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "bytes": 168968,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "tube-pneumatique-6mm-un-quart-diametre-exterieur"
+      ]
+    },
+    {
+      "id": "nitrogen",
+      "url": "https://www.parker.com/content/dam/Parker-com/Literature/IGFG/PDF-Files/IOM_PKR_DB1200_9000_062019.pdf",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": 403,
+      "resolvedUrl": "https://www.parker.com/content/dam/Parker-com/Literature/IGFG/PDF-Files/IOM_PKR_DB1200_9000_062019.pdf",
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP 403 sur la récupération directe ; contenu consulté avec le lecteur web. Aucune empreinte du document constructeur attribuée au corps de refus.",
+      "guides": [
+        "generateur-azote-purete-oxygene-argon-ppm"
+      ]
+    },
+    {
+      "id": "pilot",
+      "url": "https://www.burkert-usa.com/en/company-career/what-s-new/press/media/technical-reports/direct-acting-vs-pilot-solenoid-valves",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "7d360108bf639d1ef686d0a57a12460e6dc94ef18af073c8e2ff4776b4f4dc52",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.burkert-usa.com/en/company-career/what-s-new/press/media/technical-reports/direct-acting-vs-pilot-solenoid-valves",
+      "bytes": 154614,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "electrovanne-air-ne-ouvre-pas-pression-differentielle"
+      ]
+    },
+    {
+      "id": "plasma",
+      "url": "https://www.hypertherm.com/hypertherm/powermax/powermax65-sync/",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "6a373f25591bdc219852e663bd55f906d434cae3285e1da2b6374ddb42d60cf6",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.hypertherm.com/hypertherm/powermax/powermax65-sync/",
+      "bytes": 291081,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "powermax65-sync-decoupe-gougeage-debit-air"
+      ]
+    },
+    {
+      "id": "plasmamanual",
+      "url": "https://xnet.hypertherm.com/Xnet/library/library.jsp?file=HYP254734",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "925bedfa631c4dbaeb5805e36bd72e697c78541409fcc719734edad1f6a21f57",
+      "httpStatus": 200,
+      "resolvedUrl": "https://xnet.hypertherm.com/Xnet/library/download/?file=HYP254734",
+      "bytes": 15372788,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "powermax65-sync-decoupe-gougeage-debit-air"
+      ]
+    },
+    {
+      "id": "pnp",
+      "url": "https://www.ifm.com/gb/en/gb/landing-page-uk/proximity-sensors-explained-types-applications-and-benefits",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "daf7f1fbb14545efc2520496e326270f850910fde98ef9bef5aedd96e75cb5d6",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.ifm.com/gb/en/gb/landing-page-uk/proximity-sensors-explained-types-applications-and-benefits",
+      "bytes": 111294,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "capteur-pnp-npn-entree-automate-verin"
+      ]
+    },
+    {
+      "id": "pu",
+      "url": "https://www.parker.com/content/dam/Parker-com/Literature/LPCE/New-PDFs/CAT_0550_UK_BD.pdf",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": 403,
+      "resolvedUrl": "https://www.parker.com/content/dam/Parker-com/Literature/LPCE/New-PDFs/CAT_0550_UK_BD.pdf",
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP 403 sur la récupération directe ; contenu consulté avec le lecteur web. Aucune empreinte du document constructeur attribuée au corps de refus.",
+      "guides": [
+        "tube-air-polyurethane-polyamide-temperature-pression"
+      ]
+    },
+    {
+      "id": "pumpratio",
+      "url": "https://www.graco.com/us/en/in-plant-manufacturing/product/26a304-t3-stainless-steel.html",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "bba0483ee1f010b4d11dbaee14ee97ebd799270e1cf82c9060c58bacd4ea9c3b",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.graco.com/us/en/in-plant-manufacturing/product/26a304-t3-stainless-steel.html",
+      "bytes": 204582,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "pompe-graco-t3-rapport-3-1-pression-debit"
+      ]
+    },
+    {
+      "id": "reed",
+      "url": "https://www.festo.com/gb/en/e/blog/perspectives/cylinder-sensors-reed-or-solid-state-id_1402189",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": 403,
+      "resolvedUrl": "https://www.festo.com/gb/en/e/blog/perspectives/cylinder-sensors-reed-or-solid-state-id_1402189",
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP 403 sur la récupération directe ; contenu consulté avec le lecteur web. Aucune empreinte du document constructeur attribuée au corps de refus.",
+      "guides": [
+        "capteur-verin-reed-electronique-signal-position",
+        "capteur-pnp-npn-entree-automate-verin"
+      ]
+    },
+    {
+      "id": "rodless",
+      "url": "https://www.smcworld.com/support/faq/en/s.do?ca_id=701&id=1657&lang=en",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "083493a1dc7508630b0b68c1f3cfa0721343c7b544a1a580ddc6100d6b3b23b0",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.smcworld.com/support/faq/en/s.do?ca_id=701&id=1657&lang=en",
+      "bytes": 38077,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "verin-sans-tige-magnetique-mecanique-remplacement"
+      ]
+    },
+    {
+      "id": "runaway",
+      "url": "https://www.graco.com/us/en/contractor/support/education-center/xtreme-and-e-xtreme-support/xtreme-faq.html",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "1437794e9a315072c696fc1df6a6dca53c2fba07898cde0e74574bcf8816435c",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.graco.com/us/en/contractor/support/education-center/xtreme-and-e-xtreme-support/xtreme-faq.html",
+      "bytes": 226882,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "pompe-pneumatique-emballe-graco-xtreme"
+      ]
+    },
+    {
+      "id": "spe",
+      "url": "https://www.swagelok.com/en/blog/managing-supply-pressure-effect-in-regulator",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "82b32214b37a7036777a0abc5386641561c57313a3e2eb6d972830fe86b0880d",
+      "httpStatus": 200,
+      "resolvedUrl": "https://www.swagelok.com/en/blog/managing-supply-pressure-effect-in-regulator",
+      "bytes": 83049,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "pression-regulateur-varie-cuve-compresseur-spe"
+      ]
+    },
+    {
+      "id": "sterile",
+      "url": "https://www.parker.com/content/dam/Parker-com/Literature/IGFG/PDF-Files/Sterile-Air-for-Food.pdf",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": 403,
+      "resolvedUrl": "https://www.parker.com/content/dam/Parker-com/Literature/IGFG/PDF-Files/Sterile-Air-for-Food.pdf",
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP 403 sur la récupération directe ; contenu consulté avec le lecteur web. Aucune empreinte du document constructeur attribuée au corps de refus.",
+      "guides": [
+        "filtre-air-sterile-perte-pression-contamination"
+      ]
+    },
+    {
+      "id": "tank",
+      "url": "https://binks.com/product/binks-pressure-feed-tanks/",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": 403,
+      "resolvedUrl": "https://binks.com/product/binks-pressure-feed-tanks/",
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP 403 sur la récupération directe ; contenu consulté avec le lecteur web. Aucune empreinte du document constructeur attribuée au corps de refus.",
+      "guides": [
+        "cuve-peinture-sous-pression-air-produit-agitation"
+      ]
+    },
+    {
+      "id": "tube",
+      "url": "https://media.festo.com/media/3905_documentation.pdf",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": 403,
+      "resolvedUrl": "https://media.festo.com/media/3905_documentation.pdf",
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP 403 sur la récupération directe ; contenu consulté avec le lecteur web. Aucune empreinte du document constructeur attribuée au corps de refus.",
+      "guides": [
+        "tube-pneumatique-6mm-un-quart-diametre-exterieur"
+      ]
+    },
+    {
+      "id": "vacuum",
+      "url": "https://media.schmalz.com/MAM_Library/Dokumente/Bedienungsanleitung/30/3030/303001/30300101484/29f2b2b77a3c_BAL_30.30.01.01484_en-EN.pdf",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "direct_https",
+      "rawBodySha256Available": true,
+      "sha256": "7173a2a4da7241466f6943e26a8a6eb338e8b1187a99b0d8cf033d29ff0b6c84",
+      "httpStatus": 200,
+      "resolvedUrl": "https://media.schmalz.com/MAM_Library/Dokumente/Bedienungsanleitung/30/3030/303001/30300101484/29f2b2b77a3c_BAL_30.30.01.01484_en-EN.pdf",
+      "bytes": 2037940,
+      "directRetrievalLimitation": null,
+      "guides": [
+        "ejecteur-schmalz-scpsi-economiseur-air-cycles",
+        "ventouse-depose-piece-soufflage-duree-debit"
+      ]
+    },
+    {
+      "id": "valve53",
+      "url": "https://www.festo.com/gb/en/e/blog/in-practice/pneumatic-valves-id_1517691",
+      "consultedOn": "2026-09-30",
+      "retrievalMethod": "web_reader",
+      "rawBodySha256Available": false,
+      "sha256": null,
+      "httpStatus": 403,
+      "resolvedUrl": "https://www.festo.com/gb/en/e/blog/in-practice/pneumatic-valves-id_1517691",
+      "bytes": null,
+      "directRetrievalLimitation": "HTTP 403 sur la récupération directe ; contenu consulté avec le lecteur web. Aucune empreinte du document constructeur attribuée au corps de refus.",
+      "guides": [
+        "distributeur-5-3-centre-ferme-verin-derive"
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "slug": "compresseur-nettoyage-cryogenique-karcher-ib10-8-l2p",
+      "title": "Quel compresseur pour le Kärcher IB 10/8 L2P de nettoyage cryogénique ?",
+      "sources": [
+        "ice",
+        "icemanual"
+      ],
+      "relatedGuides": [
+        "debit-restitue-fad-vs-debit-aspire",
+        "dimensionner-compresseur-garage-automobile",
+        "point-rosee-secheur-filtre-air-comprime"
+      ],
+      "criticalClaims": [
+        "Kärcher 1.574-200.0 : 0.07–0.8 m³/min ; 0.7–10 bar ; dry & oil-free.",
+        "Notice 10/8 : max 0.8 m³/min ; flexible nominal minimum 0.5 inch."
+      ],
+      "wordCountExcludingFigures": 540,
+      "sha256": "40a2c5f27a10b3b92d8c332ca631903539ec7806231b05a4a5e06690343f6d7f"
+    },
+    {
+      "slug": "powermax65-sync-decoupe-gougeage-debit-air",
+      "title": "Powermax65 SYNC : faut-il plus d’air pour gouger que pour découper ?",
+      "sources": [
+        "plasma",
+        "plasmamanual"
+      ],
+      "relatedGuides": [
+        "compresseur-decoupeur-plasma-powermax45-sync",
+        "diagnostiquer-chute-pression-air-comprime",
+        "compresseur-triphase-ou-monophase-atelier"
+      ],
+      "criticalClaims": [
+        "Powermax65 SYNC : cutting 210 L/min @5.9 bar ; gouging 210 @4.8 bar.",
+        "Manuel 810470 : débits standard et pressions minimales d’entrée distinctes du procédé."
+      ],
+      "wordCountExcludingFigures": 498,
+      "sha256": "1ad03eec7107c1f5b7d843a1fcc97719870a0ad8b7d337227f327c1c23312069"
+    },
+    {
+      "slug": "pompe-graco-t3-rapport-3-1-pression-debit",
+      "title": "Pompe Graco T3 3:1 : pourquoi le rapport ne donne pas la consommation d’air",
+      "sources": [
+        "pumpratio"
+      ],
+      "relatedGuides": [
+        "pompe-membrane-aro-66605-debit-air",
+        "surpresseur-pneumatique-festo-dpa-pression-debit",
+        "raccord-air-comprime-bsp-npt-1-4"
+      ],
+      "criticalClaims": [
+        "Graco 26A304 : ratio3:1 ; maxair6.9bar ; maxworking21.7bar ; airinlet1/4NPTfemale.",
+        "Écart explicité : 6,9 × 3 = 20,7 bar, distinct des 21,7 bar affichés. Cause non déterminée ; confirmation fabricant demandée."
+      ],
+      "wordCountExcludingFigures": 565,
+      "sha256": "e4ab45e4703310b1e8e79dd577e9576873a67a0c866033bec465fce5af04340b"
+    },
+    {
+      "slug": "pompe-pneumatique-emballe-graco-xtreme",
+      "title": "Pompe pneumatique qui s’emballe : regarder l’aspiration avant d’augmenter l’air",
+      "sources": [
+        "runaway"
+      ],
+      "relatedGuides": [
+        "pompe-membrane-pneumatique-calee-diagnostic",
+        "pompe-pneumatique-echappement-givre-air-sec",
+        "fiche-intervention-air-comprime"
+      ],
+      "criticalClaims": [
+        "GracoXtreme : erraticacceleratedspeed causes fluidsupplyexhausted/cloggedsuction/highviscosity/wornvalvespackings ; DataTrakrunawaystop."
+      ],
+      "wordCountExcludingFigures": 479,
+      "sha256": "20417cfd5982d59c6e20ebd14ccb4ee76c8acf78cfee17ad374fff5a99cd1de2"
+    },
+    {
+      "slug": "cuve-peinture-sous-pression-air-produit-agitation",
+      "title": "Cuve de peinture sous pression : séparer alimentation produit, atomisation et agitation",
+      "sources": [
+        "tank"
+      ],
+      "relatedGuides": [
+        "pistolet-peinture-gravite-aspiration-cuve-pression",
+        "buse-pistolet-peinture-chapeau-air-consommation",
+        "deux-pistolets-peinture-simultanes"
+      ],
+      "criticalClaims": [
+        "Binks : pressurefeedtanks regulatefluidoutletpressure ; manual/rotary/oscillating agitation available ; exactconfignotassumed."
+      ],
+      "wordCountExcludingFigures": 475,
+      "sha256": "03d1862891274c17e5b72afa6a501f9ff886767b13881c8d9a6c2925b6a17a14"
+    },
+    {
+      "slug": "verin-tape-fin-course-amortissement-ppv-pps",
+      "title": "Vérin qui tape en fin de course : amortissement PPV, PPS ou problème de réglage ?",
+      "sources": [
+        "cushion"
+      ],
+      "relatedGuides": [
+        "regler-vitesse-verin-pneumatique-echappement",
+        "force-verin-pneumatique-diametre-pression",
+        "vibrations-outils-emission-exposition-a8"
+      ],
+      "criticalClaims": [
+        "Festo distinguishes P, PPV, PPS ; PPV manuallyadjustableair ; PPS selfadjustment notunlimitedloadspeed."
+      ],
+      "wordCountExcludingFigures": 498,
+      "sha256": "7850e55a20c06ded64225daf04f82d86c5d645e7715bd0e2d494cec123bd0046"
+    },
+    {
+      "slug": "verin-guide-festo-dfm-charge-deportee-moment",
+      "title": "Vérin guidé Festo DFM : une charge déportée se choisit aussi avec son moment",
+      "sources": [
+        "guided"
+      ],
+      "relatedGuides": [
+        "force-verin-pneumatique-diametre-pression",
+        "pince-pneumatique-force-doigt-longueur-prehension",
+        "verin-rotatif-pneumatique-couple-angle-inertie"
+      ],
+      "criticalClaims": [
+        "DFMcatalog2026/05GFplain KFball forcesmoments referencedguidecentre staticdynamic separate.",
+        "Illustration M=100N*0.20m=20Nm and0.05m=5Nm."
+      ],
+      "wordCountExcludingFigures": 486,
+      "sha256": "82668683ec7f3d7a3893fee21ba95fe5d105d139d0e7237ff8cfa5367d9f2b5b"
+    },
+    {
+      "slug": "blocage-tige-verin-dsnu-kp-maintien-securite",
+      "title": "Blocage de tige DSNU-KP : maintenir une position ne valide pas une fonction de sécurité",
+      "sources": [
+        "clamp"
+      ],
+      "relatedGuides": [
+        "remise-service-machine-pneumatique-arret-prolonge",
+        "couper-air-comprime-machine-arret-week-end",
+        "force-verin-pneumatique-diametre-pression"
+      ],
+      "criticalClaims": [
+        "FestoDSNUKP2026/08 p32 safetyadditionalmeasures required; holdingforceisnotautomaticmachinesafetycertification."
+      ],
+      "wordCountExcludingFigures": 449,
+      "sha256": "3203824f3a1feaeb40bc5f6e427e1ac4ef162d02ec78c63bc5f28662f3c772fd"
+    },
+    {
+      "slug": "capteur-verin-reed-electronique-signal-position",
+      "title": "Capteur de vérin Reed ou électronique : remplacer sans perdre le signal de position",
+      "sources": [
+        "reed"
+      ],
+      "relatedGuides": [
+        "remise-service-machine-pneumatique-arret-prolonge",
+        "verin-simple-double-effet-ressort-retour",
+        "fiche-intervention-air-comprime"
+      ],
+      "criticalClaims": [
+        "Festo : pistonmagnet detection, reedmechanicalcontacts vs solidstatesemiconductor ; potentialfreecontact reedusecase."
+      ],
+      "wordCountExcludingFigures": 467,
+      "sha256": "4c6837521aa824a5867b17f0a30aa8f68eb19322fb8e1aa4338e85cde2db520f"
+    },
+    {
+      "slug": "capteur-pnp-npn-entree-automate-verin",
+      "title": "PNP ou NPN : pourquoi le capteur de vérin s’allume sans être vu par l’automate",
+      "sources": [
+        "pnp",
+        "reed"
+      ],
+      "relatedGuides": [
+        "capteur-verin-reed-electronique-signal-position",
+        "remise-service-machine-pneumatique-arret-prolonge",
+        "fiche-intervention-air-comprime"
+      ],
+      "criticalClaims": [
+        "ifm : PNPsourcingpositive ; NPNsinkingground ; compatiblecontrollerinputrequired."
+      ],
+      "wordCountExcludingFigures": 477,
+      "sha256": "33f35d9994a158cc0176c1be26bbbb0fc08908dbf5c9783123cb1877c4697969"
+    },
+    {
+      "slug": "verin-sans-tige-magnetique-mecanique-remplacement",
+      "title": "Vérin sans tige magnétique ou mécanique : que vérifier avant un remplacement ?",
+      "sources": [
+        "rodless"
+      ],
+      "relatedGuides": [
+        "verin-guide-festo-dfm-charge-deportee-moment",
+        "force-verin-pneumatique-diametre-pression",
+        "capteur-verin-reed-electronique-signal-position"
+      ],
+      "criticalClaims": [
+        "SMCFAQ1657 : MYmechanicaljoint ; CYmagneticcoupling ; attentionoperatingpressureforcoupling."
+      ],
+      "wordCountExcludingFigures": 471,
+      "sha256": "e3bc9703f7f08d595b239599e802e34753467a3c9afb94e140389d4742694bee"
+    },
+    {
+      "slug": "muscle-pneumatique-dmsp-force-contraction",
+      "title": "Muscle pneumatique Festo DMSP : pourquoi la force diminue avec la contraction",
+      "sources": [
+        "muscle"
+      ],
+      "relatedGuides": [
+        "force-verin-pneumatique-diametre-pression",
+        "consommation-verin-pneumatique-double-effet",
+        "vibreur-pneumatique-tremie-debit-compresseur"
+      ],
+      "criticalClaims": [
+        "FestoDMSP2026/01 p2 membranetensileactuator expandsradiallycontracts ; usableforcegreateststartdeclineswithstroke."
+      ],
+      "wordCountExcludingFigures": 495,
+      "sha256": "4d7b2ca0b74591250bb626023fe173e4ca9a772ce371cab361e24c58ea4454a3"
+    },
+    {
+      "slug": "distributeur-5-3-centre-ferme-verin-derive",
+      "title": "Distributeur 5/3 à centre fermé : pourquoi le vérin peut dériver à l’arrêt",
+      "sources": [
+        "valve53"
+      ],
+      "relatedGuides": [
+        "blocage-tige-verin-dsnu-kp-maintien-securite",
+        "choisir-distributeur-pneumatique-debit-nominal",
+        "couper-air-comprime-machine-arret-week-end"
+      ],
+      "criticalClaims": [
+        "Festo5/3closedmidpossibleinternalleakdepressurization ; pressurizedunequalarea movement ; exhaustedexternalforcemovement."
+      ],
+      "wordCountExcludingFigures": 483,
+      "sha256": "063afc2fe646e9df066fd9601013607abbfcdde839ec32a19a67b1d0cabe216e"
+    },
+    {
+      "slug": "electrovanne-air-ne-ouvre-pas-pression-differentielle",
+      "title": "Électrovanne d’air qui ne s’ouvre pas : contrôler la pression différentielle",
+      "sources": [
+        "pilot",
+        "coil"
+      ],
+      "relatedGuides": [
+        "choisir-distributeur-pneumatique-debit-nominal",
+        "vanne-demarrage-progressif-air-comprime-remise-pression",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "criticalClaims": [
+        "Bürkert directvsservo minimumdifferential; exactthresholdnotuniversal.",
+        "Hypothetical6-5.8=0.2bar."
+      ],
+      "wordCountExcludingFigures": 465,
+      "sha256": "a72a369e122adb919d0aad84e62cb987a20f409bf3dddbe754d0786382794cf1"
+    },
+    {
+      "slug": "bobine-electrovanne-24v-ac-dc-remplacement",
+      "title": "Bobine d’électrovanne 24 V AC ou DC : commander le bon remplacement",
+      "sources": [
+        "coil"
+      ],
+      "relatedGuides": [
+        "electrovanne-air-ne-ouvre-pas-pression-differentielle",
+        "capteur-pnp-npn-entree-automate-verin",
+        "fiche-intervention-air-comprime"
+      ],
+      "criticalClaims": [
+        "Bürkert FAQ bobinesAC/DC, tensionpuissance selection and wrongvoltage failurepossible."
+      ],
+      "wordCountExcludingFigures": 503,
+      "sha256": "a63e2d20682c85cd027a0d88b561fac96e2a90961f329ea80c59fb565ebbd2d9"
+    },
+    {
+      "slug": "tube-pneumatique-6mm-un-quart-diametre-exterieur",
+      "title": "Tube pneumatique de 6 mm ou 1/4 pouce : mesurer le diamètre extérieur",
+      "sources": [
+        "tube",
+        "nist"
+      ],
+      "relatedGuides": [
+        "raccord-air-comprime-bsp-npt-1-4",
+        "diametre-longueur-flexible-air-comprime",
+        "reseau-air-aluminium-pression-accessoires-reception"
+      ],
+      "criticalClaims": [
+        "Festoquickreference tubeODmetricinch; QSLG1/8-6 has6mmOD.",
+        "Conversion inch25.4/4=6.35 difference0.35, notcompatibilitytolerance."
+      ],
+      "wordCountExcludingFigures": 462,
+      "sha256": "4d2010d15a3f67fb57e2ce25ad38a138df55f05a74ffff42817bcc55e87cdd0b"
+    },
+    {
+      "slug": "tube-air-polyurethane-polyamide-temperature-pression",
+      "title": "Tube d’air en PU ou polyamide : pourquoi la température change la pression admissible",
+      "sources": [
+        "pu"
+      ],
+      "relatedGuides": [
+        "tube-pneumatique-6mm-un-quart-diametre-exterieur",
+        "flexible-air-antistatique-atex-continuite",
+        "diametre-longueur-flexible-air-comprime"
+      ],
+      "criticalClaims": [
+        "ParkerCAT0550 hasreferenceanddiameterworkingpressure-temperaturecurves PUgrades andPA ; no numerics interpolated ; legacyregulationsnotcurrentcertification."
+      ],
+      "wordCountExcludingFigures": 492,
+      "sha256": "8e20cd5e9856e2edb5ba2153887966b9ca9bad10f58e73032cc7df336ca57276"
+    },
+    {
+      "slug": "bol-filtre-air-polycarbonate-solvant-fissure",
+      "title": "Bol de filtre d’air fissuré : vérifier le polycarbonate et les produits de nettoyage",
+      "sources": [
+        "bowl"
+      ],
+      "relatedGuides": [
+        "groupe-frl-filtre-regulateur-lubrificateur",
+        "filtre-air-comprime-perte-pression-remplacement",
+        "huile-compresseur-viscosite-reference-constructeur"
+      ],
+      "criticalClaims": [
+        "SMCstandardFRLbowlsPC organicsolvents chemicals cutting/synthetic oils alkali threadlock contraindications; metallicbowlrecommendationwhenriskdoubt."
+      ],
+      "wordCountExcludingFigures": 484,
+      "sha256": "9261c824038a719a1f50a119067b4370a3c6be80ab91230801bc9509f7372435"
+    },
+    {
+      "slug": "purgeur-smc-ad402-normalement-ouvert-petit-compresseur",
+      "title": "Purgeur SMC AD402-A : pourquoi le modèle normalement ouvert peut fuir au démarrage",
+      "sources": [
+        "drain"
+      ],
+      "relatedGuides": [
+        "purgeur-condensats-temporise-detection-niveau",
+        "compresseur-ne-monte-plus-en-pression",
+        "groupe-frl-filtre-regulateur-lubrificateur"
+      ],
+      "criticalClaims": [
+        "SMCAD402-A p490 NO0.1–1MPa NC0.15–1MPa; NOdischarge≥400L/minANR ; lower3.7kWor400mayleakstart NCrecommended."
+      ],
+      "wordCountExcludingFigures": 460,
+      "sha256": "c9dc13b44a2c64fc688cb0066e7834fbc2333b8cc74bfe707ede8cf113e4a8c3"
+    },
+    {
+      "slug": "regulateur-air-pression-monte-arret-creep",
+      "title": "Pression aval qui monte à l’arrêt : reconnaître le creep d’un régulateur",
+      "sources": [
+        "creep"
+      ],
+      "relatedGuides": [
+        "regulateur-air-comprime-fuit-event-decompression",
+        "diagnostiquer-chute-pression-air-comprime",
+        "detecter-mesurer-fuites-air-comprime"
+      ],
+      "criticalClaims": [
+        "Swagelokcreepseatcontamination leakage ; distinctfromSPE inletdependency anddroopflow."
+      ],
+      "wordCountExcludingFigures": 489,
+      "sha256": "bb198c3f70d14455e63289ba8f85c9b6852fcc9364deba7539eecb5041ccd8e1"
+    },
+    {
+      "slug": "pression-regulateur-varie-cuve-compresseur-spe",
+      "title": "Pression du régulateur qui varie avec la cuve : comprendre l’effet d’alimentation",
+      "sources": [
+        "spe"
+      ],
+      "relatedGuides": [
+        "regulateur-air-pression-monte-arret-creep",
+        "pressostat-compresseur-pression-enclenchement-differentiel",
+        "mesurer-pression-dynamique-pistolet-peinture"
+      ],
+      "criticalClaims": [
+        "SwagelokSPE inverseinletoutletdependency ; balancedpoppet/twostagemitigationnotuniversalcoefficient."
+      ],
+      "wordCountExcludingFigures": 485,
+      "sha256": "10be3db4bc932219841a88cbb8b6eee6b45423c91f023af0851d356bf0673ef9"
+    },
+    {
+      "slug": "echappement-rapide-verin-montage-pres-actionneur",
+      "title": "Échappement rapide de vérin : pourquoi le montage près de l’actionneur compte",
+      "sources": [
+        "exhaust"
+      ],
+      "relatedGuides": [
+        "regler-vitesse-verin-pneumatique-echappement",
+        "silencieux-pneumatique-colmate-contre-pression",
+        "verin-tape-fin-course-amortissement-ppv-pps"
+      ],
+      "criticalClaims": [
+        "FestoSEUlegacy1998 1to2supply then2to3exhaustwhen1drops; directcylinderportrecommendation."
+      ],
+      "wordCountExcludingFigures": 456,
+      "sha256": "372f6ac1950fb8a13cfdb87b1aaa359d2060aaccb099c2dbaa6322803345bcb9"
+    },
+    {
+      "slug": "prise-air-compresseur-fumees-solvants-emplacement",
+      "title": "Prise d’air du compresseur près de fumées ou de solvants : revoir l’emplacement",
+      "sources": [
+        "intake"
+      ],
+      "relatedGuides": [
+        "ventilation-local-compresseur-surchauffe",
+        "classe-0-compresseur-certificat-huile-portee",
+        "air-respirable-compresseur-atelier-limites"
+      ],
+      "criticalClaims": [
+        "Atlascleanintake remotepossible dustcorrosivegasesexhaust risks prefilterpressuredrop design."
+      ],
+      "wordCountExcludingFigures": 464,
+      "sha256": "c836a86c755d7bfa3ce7a23da357c4c02fc90f3175afc2f097ae8294c1495744"
+    },
+    {
+      "slug": "transport-pneumatique-exair-line-vac-distance-matiere",
+      "title": "EXAIR Line Vac : pourquoi le débit transporté dépend de la matière et du trajet",
+      "sources": [
+        "linevac",
+        "conveyor"
+      ],
+      "relatedGuides": [
+        "amplificateur-air-exair-consommation-debit",
+        "couteau-air-comprime-ou-soufflante",
+        "utiliser-plusieurs-outils-pneumatiques"
+      ],
+      "criticalClaims": [
+        "EXAIRFAQlinevac sizepressure distanceverticalbendsmaterial affectsconveyance; applicationtestingrecommended."
+      ],
+      "wordCountExcludingFigures": 479,
+      "sha256": "909b7587c9a18228e7c18838dcacab7dc412d7918a423e12a5ca3349a7d662f4"
+    },
+    {
+      "slug": "refroidisseur-armoire-vortex-exair-thermostat-air",
+      "title": "Refroidisseur d’armoire à vortex : compter l’air pendant les phases de thermostat",
+      "sources": [
+        "cabinet"
+      ],
+      "relatedGuides": [
+        "pistolet-air-froid-exair-cold-gun-compresseur",
+        "cout-metre-cube-air-comprime",
+        "qualite-air-comprime-iso-8573-1"
+      ],
+      "criticalClaims": [
+        "EXAIRCabinetFAQ heatloadinternalexternal; bodySCFM100psig onconcernedmodels; ambienthumidityrisk.",
+        "Hypothetical300L/min*10min=3000Lsamevolumebase."
+      ],
+      "wordCountExcludingFigures": 475,
+      "sha256": "84f9ae104f68c4a5bc4d255235f6a1772ae082776d0716f8d2533baf4e076c62"
+    },
+    {
+      "slug": "filtre-air-sterile-perte-pression-contamination",
+      "title": "Filtre d’air stérile : une faible perte de pression ne prouve pas l’absence de contamination",
+      "sources": [
+        "sterile",
+        "integrity"
+      ],
+      "relatedGuides": [
+        "air-comprime-contact-alimentaire-exigences",
+        "filtre-air-comprime-perte-pression-remplacement",
+        "qualite-air-comprime-iso-8573-1"
+      ],
+      "criticalClaims": [
+        "ParkerSterileAir2013/2015 microbialcontaminationnotaccuratelymeasuredbydifferentialpressure; pointofuse testing.",
+        "Integritylandingpage describesaerosolchallenge topic notreportaccessednorplantproof."
+      ],
+      "wordCountExcludingFigures": 483,
+      "sha256": "0c8de65a97d4f5443fb7d6bf80d5e74b7b75ff585fb24097f98fc14ce13ec674"
+    },
+    {
+      "slug": "ejecteur-schmalz-scpsi-economiseur-air-cycles",
+      "title": "Éjecteur Schmalz SCPSi-UHV-HD : pourquoi l’économiseur d’air commute sans arrêt",
+      "sources": [
+        "vacuum"
+      ],
+      "relatedGuides": [
+        "ventouse-piece-poreuse-debit-vide",
+        "ejecteur-vide-schmalz-sbpl-consommation",
+        "vacuometre-vacuostat-bar-absolu-pourcentage-vide"
+      ],
+      "criticalClaims": [
+        "SCPSiUHVHD manual02 04/24section7.5 H1 cutoff H1-h1restart frequencyprotectioncontinuoussuction dependingconfig."
+      ],
+      "wordCountExcludingFigures": 476,
+      "sha256": "eaf3b5820189931d668f9295839712fd2e0f148308f8a0fb27a05ef361e04dc7"
+    },
+    {
+      "slug": "ventouse-depose-piece-soufflage-duree-debit",
+      "title": "Ventouse qui dépose mal la pièce : durée et débit du soufflage de séparation",
+      "sources": [
+        "vacuum"
+      ],
+      "relatedGuides": [
+        "ejecteur-schmalz-scpsi-economiseur-air-cycles",
+        "ventouse-piece-poreuse-debit-vide",
+        "pince-pneumatique-force-doigt-longueur-prehension"
+      ],
+      "criticalClaims": [
+        "SCPSiUHVHD section7.6 threeblowofffunctions external/internal-timed/external-timed; section7.7separateflowadjustment."
+      ],
+      "wordCountExcludingFigures": 466,
+      "sha256": "b220a081286542214369e013c694ea405bcf34ed5112e0810b60e40d2ed72d55"
+    },
+    {
+      "slug": "generateur-azote-purete-oxygene-argon-ppm",
+      "title": "Azote à 99 % : lire l’oxygène résiduel et la part d’argon d’un générateur PSA",
+      "sources": [
+        "nitrogen"
+      ],
+      "relatedGuides": [
+        "generateur-azote-compresseur-debit-purete",
+        "qualite-air-comprime-iso-8573-1",
+        "filtre-air-sterile-perte-pression-contamination"
+      ],
+      "criticalClaims": [
+        "ParkerIOM062019page7 PSAincludesargon ; 1%O2->99%(N2+Ar); puritydecreaseswithincreasedflow.",
+        "Fractionconversion1%=10000ppm0.1%=1000ppm, samereferencebaseonly."
+      ],
+      "wordCountExcludingFigures": 488,
+      "sha256": "407ccc6881aa162c046fc79a5c400e4f19ab7eea6e922167400e2b665ed6495b"
+    },
+    {
+      "slug": "bekomat16-condensats-evacuation-remontee-pente",
+      "title": "BEKOMAT 16 CO : contrôler pente d’arrivée et remontée d’évacuation des condensats",
+      "sources": [
+        "bekomat"
+      ],
+      "relatedGuides": [
+        "purgeur-condensats-temporise-detection-niveau",
+        "separateur-huile-eau-condensats-compresseur",
+        "entretien-compresseur-purge-condensats"
+      ],
+      "criticalClaims": [
+        "BEKOMAT16COp23 inflow≥3%slope nofilter; outflowrisingmax5m minimumpressureincreases0.1bar/m nooutletshutoff kinksavoid.",
+        "Illustrative3m*0.1=0.3baradditionalnot total."
+      ],
+      "wordCountExcludingFigures": 477,
+      "sha256": "9dbaa4d84e0170e1a8a29f3c172a4e987b549d471e63eb03c8aa496d2b65ce18"
+    }
+  ],
+  "contextualIncomingLinks": [
+    {
+      "slug": "debit-restitue-fad-vs-debit-aspire",
+      "sha256Before": "1872c67a794db28f71baeefbd96f343002a29a34e8ca98107d729b2f8afa6564",
+      "links": [
+        "/guides/compresseur-nettoyage-cryogenique-karcher-ib10-8-l2p/"
+      ],
+      "sha256After": "8718934eebf961130be8221ba3573f05e560d64346cd01c6775455b863ee1393"
+    },
+    {
+      "slug": "compresseur-decoupeur-plasma-powermax45-sync",
+      "sha256Before": "810c8899edb8002f15fd63dcf92a6d9682b688886f64b4fa601f89b41af1a3a1",
+      "links": [
+        "/guides/powermax65-sync-decoupe-gougeage-debit-air/"
+      ],
+      "sha256After": "2ae65fa40b4044f251aaaf9da29974c20287a05392abaf68ee1e331e026c61cc"
+    },
+    {
+      "slug": "pompe-membrane-aro-66605-debit-air",
+      "sha256Before": "1e605969fe827a163b6222c31d4adc5be9cda404e79ef14d1688fa8b84b4a2e8",
+      "links": [
+        "/guides/pompe-graco-t3-rapport-3-1-pression-debit/"
+      ],
+      "sha256After": "abc53b967a88351f41dc9fca1076fdebfdcb203b4497eb9a39e77ce61ceb3ba7"
+    },
+    {
+      "slug": "pompe-membrane-pneumatique-calee-diagnostic",
+      "sha256Before": "7fc6a97d01d4652bbb8d854c5d0dbf7256247215df3332f1cac870f32f7ef0ac",
+      "links": [
+        "/guides/pompe-pneumatique-emballe-graco-xtreme/"
+      ],
+      "sha256After": "a4728654e2344d3d8b80ad27f5573571189fba32bae5010b12cbed6a03fcaff2"
+    },
+    {
+      "slug": "pistolet-peinture-gravite-aspiration-cuve-pression",
+      "sha256Before": "6422d8c0935e5a946e7cc0ac585e8d19a950d2581bc1e97b1a02a4ae5b54015e",
+      "links": [
+        "/guides/cuve-peinture-sous-pression-air-produit-agitation/"
+      ],
+      "sha256After": "b4e3ce2aaaea5d132b54e68942b83a80491e2b32c809a2d4a22464fb2e147e02"
+    },
+    {
+      "slug": "regler-vitesse-verin-pneumatique-echappement",
+      "sha256Before": "104b02268edfba4c81351ae151a44fa209615ada9d78f81a3e0a145fbf84f763",
+      "links": [
+        "/guides/verin-tape-fin-course-amortissement-ppv-pps/"
+      ],
+      "sha256After": "99c39da74b451f5ba8028c2366a53f0401c8ab38d480d64b6bc7abaa5fcda6ef"
+    },
+    {
+      "slug": "force-verin-pneumatique-diametre-pression",
+      "sha256Before": "811d5cc789319f0bed532e014f2cd1d980aea2a49e3a1cdfe41b48148cb9825d",
+      "links": [
+        "/guides/verin-guide-festo-dfm-charge-deportee-moment/",
+        "/guides/verin-sans-tige-magnetique-mecanique-remplacement/"
+      ],
+      "sha256After": "7fe0d4f0f3242e8c0785fbc83629238d2a7464ac3ae8e1772fd1d387e8fea43f"
+    },
+    {
+      "slug": "couper-air-comprime-machine-arret-week-end",
+      "sha256Before": "377be499ba552f19b3b785057a3666494dda2652742fa35dce1fc42cc7792c8f",
+      "links": [
+        "/guides/blocage-tige-verin-dsnu-kp-maintien-securite/"
+      ],
+      "sha256After": "3001acf2c0c8e6cfb85e7be6227a711b42820de8f6f42378d648f4418864a4af"
+    },
+    {
+      "slug": "verin-simple-double-effet-ressort-retour",
+      "sha256Before": "008af5adcd3b3eb9830ad94e9700cc567a84d50501d9cfcf4bf53bc62cdb7600",
+      "links": [
+        "/guides/capteur-verin-reed-electronique-signal-position/"
+      ],
+      "sha256After": "62b5498fc259a529194bc644eb881b550ad1d9511853b8dc3ef455b1fac2cbd1"
+    },
+    {
+      "slug": "remise-service-machine-pneumatique-arret-prolonge",
+      "sha256Before": "fc2f06847a692dcbee57214e1a32db4a6887f77398acff06e388b893bfcdeaac",
+      "links": [
+        "/guides/capteur-pnp-npn-entree-automate-verin/"
+      ],
+      "sha256After": "a6d4aa5a548588d456bf2da9edb6d47b618805ef8233df8db9f9390b8a3c3219"
+    },
+    {
+      "slug": "consommation-verin-pneumatique-double-effet",
+      "sha256Before": "89aedc298c0b0cd8c05403904f0fc1a6760f2acad05bbaa2cfec3130407cb2f0",
+      "links": [
+        "/guides/muscle-pneumatique-dmsp-force-contraction/",
+        "/guides/electrovanne-air-ne-ouvre-pas-pression-differentielle/"
+      ],
+      "sha256After": "96a467b34ccd83cdcaf6ad8e3c61efe535ed279e0c23ba728c237fab44a49ac4"
+    },
+    {
+      "slug": "choisir-distributeur-pneumatique-debit-nominal",
+      "sha256Before": "6d7aed2bb3b1265e4cbd8b46cea991095c3e2859ba2f45e46912bb660f0eccc2",
+      "links": [
+        "/guides/distributeur-5-3-centre-ferme-verin-derive/"
+      ],
+      "sha256After": "adcacfd8611c481c5b7352cdc5eacdd4c99089361b3e5b4726e15823b44359e2"
+    },
+    {
+      "slug": "vanne-demarrage-progressif-air-comprime-remise-pression",
+      "sha256Before": "0fca8005f0be82436e8c869ef1258454065bfdc4960f2ec0db8c4178e0771259",
+      "links": [
+        "/guides/electrovanne-air-ne-ouvre-pas-pression-differentielle/"
+      ],
+      "sha256After": "32f8e8b873b3ff2d8907f4e08c3452e704b91b861947929f7d9956b7c65e91b0"
+    },
+    {
+      "slug": "fiche-intervention-air-comprime",
+      "sha256Before": "5024532679f9d39bb7c29a9501ebe2b58e868f43f98ad62382177d6769ad62b0",
+      "links": [
+        "/guides/bobine-electrovanne-24v-ac-dc-remplacement/"
+      ],
+      "sha256After": "ac989f3c566c28a2406dd334f4ab412974bbc92b5d5c45d5207446d44f0475e9"
+    },
+    {
+      "slug": "raccord-air-comprime-bsp-npt-1-4",
+      "sha256Before": "22df188af2580cefe9b7be7589b2ccef0fdf06d16a46dea31e46520f48f51e0a",
+      "links": [
+        "/guides/tube-pneumatique-6mm-un-quart-diametre-exterieur/"
+      ],
+      "sha256After": "d821907c40d26f28720884451557e26fc6878317f62ff0df62f5a87727fd2696"
+    },
+    {
+      "slug": "flexible-air-antistatique-atex-continuite",
+      "sha256Before": "bab6f7a2d20b28e543b283cefe8a0d8a75c1fcde198af7c5a1837dec9f7094d9",
+      "links": [
+        "/guides/tube-air-polyurethane-polyamide-temperature-pression/"
+      ],
+      "sha256After": "7b03a9460f117eda1052113b50d75bf9438fec50372954cb8b7bb3c7b3c621ba"
+    },
+    {
+      "slug": "groupe-frl-filtre-regulateur-lubrificateur",
+      "sha256Before": "bf0c7cc196a8480871e78bdc61101ed2d18027187960d0593e84e979605a45e6",
+      "links": [
+        "/guides/bol-filtre-air-polycarbonate-solvant-fissure/"
+      ],
+      "sha256After": "73bebae4759ed8cc7189f75ab3c75dcdb5a5119982028a8c011fc2ea015e1faf"
+    },
+    {
+      "slug": "compresseur-ne-monte-plus-en-pression",
+      "sha256Before": "858b2ecb5877092479bec324900e8f0d8156493fe1e229cc99a6be40af4689ab",
+      "links": [
+        "/guides/purgeur-smc-ad402-normalement-ouvert-petit-compresseur/"
+      ],
+      "sha256After": "7b9c6b48d8d2eee56671fcaaf7f498868c4b64e2fabf1577d3b14d287fa6122f"
+    },
+    {
+      "slug": "regulateur-air-comprime-fuit-event-decompression",
+      "sha256Before": "8d494211eb8c5ae44049ef6b399a74b32cda8e26d20ff0018f1f4d92073dc26a",
+      "links": [
+        "/guides/regulateur-air-pression-monte-arret-creep/"
+      ],
+      "sha256After": "8f0928a00a6559ccfff8769d98cd1ade9a0b3ef092ce1aee1d0c065cbfdef05f"
+    },
+    {
+      "slug": "pressostat-compresseur-pression-enclenchement-differentiel",
+      "sha256Before": "85763ad3d5fe440bf7fbed7464b4cd5e1e5acb7483145239a49153fe370faed9",
+      "links": [
+        "/guides/pression-regulateur-varie-cuve-compresseur-spe/"
+      ],
+      "sha256After": "9e08b799641dfb23b2796f4081b8416fc998a6d5e5cc96d9b3358cbc8801a7cd"
+    },
+    {
+      "slug": "silencieux-pneumatique-colmate-contre-pression",
+      "sha256Before": "ce7617ed471fb446f68f2d2f0c4c1d30970768d9038f1b4dd8bdbcd885921bb0",
+      "links": [
+        "/guides/echappement-rapide-verin-montage-pres-actionneur/"
+      ],
+      "sha256After": "b2ef7e1d0346fe33fb467cd9393e41c876ccd45237b1803ed8c8345ab89b895b"
+    },
+    {
+      "slug": "ventilation-local-compresseur-surchauffe",
+      "sha256Before": "191aaeac95f72dea843e0db917509baca7f55f474d591edf6bce0056a21acb3f",
+      "links": [
+        "/guides/prise-air-compresseur-fumees-solvants-emplacement/"
+      ],
+      "sha256After": "a9b58859658e0faaa0252d54a52fb683437981a5de79e5bc683529b21232f37d"
+    },
+    {
+      "slug": "amplificateur-air-exair-consommation-debit",
+      "sha256Before": "9588b595bbc3e8d33e94e8948861875aa64060a849fdcbd97f185b5b904523ce",
+      "links": [
+        "/guides/transport-pneumatique-exair-line-vac-distance-matiere/"
+      ],
+      "sha256After": "5f0aca79654f191a1ef232d679b10804c6e77e369b8c601fbe785b18162b58db"
+    },
+    {
+      "slug": "pistolet-air-froid-exair-cold-gun-compresseur",
+      "sha256Before": "93f699bf4747b4d2a8261371419995153c6c5195bd3932f39c9418dc9d6b2097",
+      "links": [
+        "/guides/refroidisseur-armoire-vortex-exair-thermostat-air/"
+      ],
+      "sha256After": "0baa99dd847533df7d9b607103db9e811d07124366e87465dd69e573d504e80e"
+    },
+    {
+      "slug": "air-comprime-contact-alimentaire-exigences",
+      "sha256Before": "e815180909621a91900efb8433eb5663de2281d1a9200f7ef7bb90f7d3167db4",
+      "links": [
+        "/guides/filtre-air-sterile-perte-pression-contamination/"
+      ],
+      "sha256After": "f3f9c4caf0ca78514f974a9220a4f683d6e4d9ca04a2d655a7ffdded9171b2d8"
+    },
+    {
+      "slug": "ejecteur-vide-schmalz-sbpl-consommation",
+      "sha256Before": "f9e31fc394bdac53970cbc74156854eb0cf2a311f9a119e238559d103a1cef69",
+      "links": [
+        "/guides/ejecteur-schmalz-scpsi-economiseur-air-cycles/"
+      ],
+      "sha256After": "cf329e983fb3e47d1a2a2125db1fd9ea570524007cd3727d3e2d6409346bc65e"
+    },
+    {
+      "slug": "pince-pneumatique-force-doigt-longueur-prehension",
+      "sha256Before": "26ffa032e26b5ee63b17f47021beab9e7a2ed2e9560c35d9a81b002dee52815f",
+      "links": [
+        "/guides/ventouse-depose-piece-soufflage-duree-debit/"
+      ],
+      "sha256After": "e621082bdec5c60dc493dd08db2d843e49292b65276bef7ff630928e0ccfdd0a"
+    },
+    {
+      "slug": "generateur-azote-compresseur-debit-purete",
+      "sha256Before": "75cda3aee52339d6a9ed01f4660528a896c754ce4da454e93d7efbbd88823da4",
+      "links": [
+        "/guides/generateur-azote-purete-oxygene-argon-ppm/"
+      ],
+      "sha256After": "502f437eefa03163466106602e511c8f7e0966cc035624a7781f44bb8b186d61"
+    },
+    {
+      "slug": "separateur-huile-eau-condensats-compresseur",
+      "sha256Before": "cbfea9754d4ee63e8a8c2af9d55e77b360dd5246c5b28b1ad5a1374c28ccdf6a",
+      "links": [
+        "/guides/bekomat16-condensats-evacuation-remontee-pente/"
+      ],
+      "sha256After": "8e527d4ea238044e08d12b5653b634c08865b2d32dc5a41d71dcd2497d51fb1b"
+    },
+    {
+      "slug": "dimensionner-compresseur-garage-automobile",
+      "sha256Before": "c04f0b151879b7b129bf2f0ccc1ef538f40d32ec9b9169d3168f1755fa79af79",
+      "links": [
+        "/guides/compresseur-nettoyage-cryogenique-karcher-ib10-8-l2p/"
+      ],
+      "sha256After": "f027d5f40d8d07c1036c16926d2ad84dc643c641a14934eb548da7c13049e763"
+    },
+    {
+      "slug": "pompe-pneumatique-echappement-givre-air-sec",
+      "sha256Before": "c6eac9988dcd3185cbe661321a4680c75455c48bdc52793cd536481a357ec2a1",
+      "links": [
+        "/guides/pompe-pneumatique-emballe-graco-xtreme/"
+      ],
+      "sha256After": "df5f38ee84c14f8f04970b3882e1cac3dbfa88b01abbd41e2909cc91c8db462a"
+    },
+    {
+      "slug": "buse-pistolet-peinture-chapeau-air-consommation",
+      "sha256Before": "262398c30e7619dd45e7207fc7bf57da4ba34900c25379496672f58f90da7a68",
+      "links": [
+        "/guides/cuve-peinture-sous-pression-air-produit-agitation/"
+      ],
+      "sha256After": "7be5ba6acfc3d7ed389da6722cc683b5a872d36e51274e583ea449c1084312e6"
+    },
+    {
+      "slug": "diametre-longueur-flexible-air-comprime",
+      "sha256Before": "4483abb90d12a43f3403f4f185835c184e5734d0d95ceb40067a09504305bb52",
+      "links": [
+        "/guides/tube-pneumatique-6mm-un-quart-diametre-exterieur/",
+        "/guides/tube-air-polyurethane-polyamide-temperature-pression/"
+      ],
+      "sha256After": "8866cf15bfae464951d10f85b52dad507fa1433c8645e02aaf9cdabb5a30db4e"
+    },
+    {
+      "slug": "purgeur-condensats-temporise-detection-niveau",
+      "sha256Before": "aad80f7ec80949799e4a51175f1355c1b54c3a9c0a7266bc76e9b3da8c924023",
+      "links": [
+        "/guides/purgeur-smc-ad402-normalement-ouvert-petit-compresseur/",
+        "/guides/bekomat16-condensats-evacuation-remontee-pente/"
+      ],
+      "sha256After": "574b686db439159d6369e266a8669b63c46ef9ecc7f7b74c761915efa8e12e1f"
+    },
+    {
+      "slug": "mesurer-pression-dynamique-pistolet-peinture",
+      "sha256Before": "5b5374a6036e913a98c5470642af5b8611d8ae63dc4cf4023e73c5aa30c6ad6f",
+      "links": [
+        "/guides/pression-regulateur-varie-cuve-compresseur-spe/"
+      ],
+      "sha256After": "c6a401f4f0e895dc20853f67826eb2b8fe6bdae222145fb2105993504e8f1466"
+    },
+    {
+      "slug": "filtre-air-comprime-perte-pression-remplacement",
+      "sha256Before": "c59311260d5e40411c085a7ab84168ca5fd88872b1da2b7f1f1d210a91fe7207",
+      "links": [
+        "/guides/filtre-air-sterile-perte-pression-contamination/"
+      ],
+      "sha256After": "92b51edc3f3f1a1b99b48877a8db9c6563b5cca30775da947e473d12b58b66a1"
+    }
+  ],
+  "glossary": {
+    "path": "src/data/glossary.ts",
+    "sha256": "00d30f2110c8c19da529d0c2c8def591708e72a7a1521885766040184ef8e770",
+    "addedTerms": [
+      "creep-regulateur",
+      "supply-pressure-effect",
+      "differentiel-pression-electrovanne",
+      "amortissement-ppv-pps",
+      "hysteresis-regulation-vide"
+    ]
+  },
+  "prePublicationChecks": {
+    "editorialSourceAudit": "passed: 316 guides, 695 sources déclarées, 1140 citations externes rattachées",
+    "pageValueAudit": "passed: zero structural failures; all 30 new guides passed mechanical and similarity checks",
+    "sourceLint": "passed",
+    "mobileDomInspection": {
+      "guides": 30,
+      "viewportWidth": 390,
+      "horizontalOverflows": 0,
+      "svgLabelsOutsideViewBox": 0
+    },
+    "visualInspection": [
+      "BEKOMAT 16 CO : schéma et corps sur mobile",
+      "SMC AD402-A : chiffres et schéma sur mobile",
+      "Kärcher IB 10/8 L2P : mise en page ordinateur"
+    ]
+  },
+  "knownCatalogAnomalies": {
+    "previousRun": 36640434531,
+    "brokenSourceUrls": 66,
+    "newBatchSourcesAffected": 0,
+    "scope": "65 URL Stürmer et une URL Metabo dans le catalogue préexistant ; signalées par le contrôle distant antérieur, sans modification du contrôle ou des données catalogue dans ce lot."
+  }
+}

@@ -15,7 +15,7 @@ sources:
   - https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/jut1722548630709.html
   - https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/eel1722548629387.html
   - https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/ojy1722548627966.html
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 ---
 
 **Pour alimenter un Powermax45 SYNC, ne retenez pas un débit trouvé isolément sur une fiche commerciale.** Hypertherm affiche 188 L/min à 5,9 bar sur sa page produit, tandis que la notice en ligne indique 212,4 litres standard par minute à 5,9 bar pour la coupe. Cet écart doit être clarifié pour la référence et la révision concernées ; nous ne calculons pas une moyenne entre les deux. [Page produit](https://www.hypertherm.com/hypertherm/powermax/powermax45-sync/) ; [notice, pressions et débits d’entrée](https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/jut1722548630709.html).
@@ -37,6 +37,8 @@ updatedDate: 2026-09-26
 La notice Hypertherm emploie l’unité **slpm**, soit des litres par minute ramenés à des conditions standard. Elle doit rester distincte d’un volume d’air mesuré dans une conduite sous pression. La [conversion des débits](/guides/convertir-cfm-l-min-nl-min-air-comprime/) demande de conserver ces conditions avant de comparer avec le FAD d’un compresseur.
 
 L’écart arithmétique entre les deux valeurs publiées pour la coupe est de `212,4 − 188 = 24,4 L/min`. Ce calcul met en évidence la différence documentaire ; il ne prouve pas son origine. Aucun essai CompatAir ne permet ici de départager une révision technique, des conditions de mesure ou une erreur de présentation.
+
+Pour une autre puissance, le [Powermax65 SYNC distingue découpe et gougeage](/guides/powermax65-sync-decoupe-gougeage-debit-air/) dans ses spécifications. Gardez la référence entière : les chiffres du 45 SYNC ne deviennent pas ceux du 65 SYNC.
 
 ## Que demander au fournisseur du compresseur ?
 

@@ -15,7 +15,7 @@ relatedGuides:
 sources:
   - https://azure-na-assets.contentstack.com/v3/assets/blt7de7417393caec8b/blt4a7f56f74475fc47/67bdfdd19f36a11cbf1a81eb/15268519.pdf
   - https://azure-na-assets.contentstack.com/v3/assets/blt7de7417393caec8b/blt19a8e75e4a73440a/67bdfdcd018e20f8fa627222/99449712.pdf
-updatedDate: 2026-09-29
+updatedDate: 2026-09-30
 ---
 
 Les **49,2 L/min** annoncés pour certaines pompes ARO 66605 représentent un **débit maximal de liquide**, pas leur consommation d’air comprimé. Acheter un compresseur en reprenant ce chiffre revient à confondre ce que la pompe transporte et ce qui la fait fonctionner.
@@ -27,6 +27,8 @@ La série 66605X-XXX offre un cas concret pour apprendre à lire une courbe à p
 Une demande exploitable précise le liquide, sa température, le débit souhaité, les conditions d’aspiration et la contre-pression à vaincre. Le suffixe de la référence identifie les matériaux ; il ne faut pas considérer toutes les 66605 comme interchangeables.
 
 Dans la [notice ARO](https://azure-na-assets.contentstack.com/v3/assets/blt7de7417393caec8b/blt19a8e75e4a73440a/67bdfdcd018e20f8fa627222/99449712.pdf), les avertissements imposent notamment de vérifier la compatibilité des matériaux et du fluide. Cette vérification est séparée du dimensionnement pneumatique. Un bilan d’air correct n’établit pas qu’une membrane, un joint ou un corps conviennent au liquide transféré.
+
+Le [rapport 3:1 d’une Graco T3](/guides/pompe-graco-t3-rapport-3-1-pression-debit/) répond à une question de pression. Il ne remplace pas cette courbe de consommation : l’exemple T3 aide à repérer les informations encore manquantes dans une offre de pompe.
 
 ## Quatre informations sur un seul graphique
 

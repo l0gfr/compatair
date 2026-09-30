@@ -3,6 +3,7 @@ title: "Air comprimé au contact des aliments : rédiger une exigence vérifiab
 seoTitle: "Air comprimé alimentaire : qualité, contact et contrôle"
 description: "Contact avec aliments ou emballages : définissez les contaminants, le point de contrôle et les preuves attendues, sans classe universelle ni label improvisé."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -41,6 +42,8 @@ Dans votre consultation, demandez une réponse par contaminant retenu dans l’a
 </div>
 
 *Partir du contact réel avec le produit : schéma de lecture CompatAir, expliqué dans le texte.*
+
+La surveillance du filtre ne clôt pas le volet microbiologique. Le [guide des limites d’une faible perte de pression sur un filtre stérile](/guides/filtre-air-sterile-perte-pression-contamination/) distingue l’élément installé, sa validation documentaire et le contrôle au point d’usage.
 
 ## Pourquoi « sans huile » ne ferme pas le dossier
 

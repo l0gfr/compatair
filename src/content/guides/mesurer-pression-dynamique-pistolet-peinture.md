@@ -11,7 +11,7 @@ sources:
   - https://www.sata.com/en-int/products/additional-products/pressure-measuring-devices/sata-adam-2/downloads
   - https://www.sata.com/assets/cms/2022/10/21/EN-SATA-DanAm-Brochure-SATA-adam-2-Flexibility-Digitalised-K-131862-4020-06-3_uid_6352a33f75bfa.pdf
   - https://www.sata.com/en-eur/products/spray-guns/gravity-flow-cup-guns/satajet-5000-b/technical-data
-updatedDate: 2026-09-29
+updatedDate: 2026-09-30
 ---
 
 Le manomètre du régulateur mural ne connaît pas la perte du flexible, des raccords et du dispositif de mesure monté au pistolet. Pour reproduire un réglage de peinture, la pression doit être relevée à l’entrée de la référence utilisée, dans la condition de débit décrite par son fabricant.
@@ -54,6 +54,8 @@ Avant la mesure, identifiez le pistolet, la buse, le flexible, le raccord, le fi
 - référence du dispositif de mesure.
 
 Si deux peintres comparent des résultats obtenus avec des flexibles ou des raccords différents, l’écart ne peut pas être attribué au pistolet seul.
+
+Si le défaut suit le cycle du compresseur, conservez les mesures de part et d’autre du régulateur. Le [dossier SPE](/guides/pression-regulateur-varie-cuve-compresseur-spe/) prépare cette recherche sans attribuer automatiquement le défaut de finition à la régulation.
 
 ## Utiliser le profil pour trouver la restriction
 

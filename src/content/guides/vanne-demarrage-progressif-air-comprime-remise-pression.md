@@ -3,6 +3,7 @@ title: "Vanne de démarrage progressif : ce qu’elle change à la remise en pr
 seoTitle: "Démarrage progressif pneumatique : rôle et limites"
 description: "Une vanne de démarrage progressif contrôle la montée en pression. Comprenez le basculement, le volume aval et les vérifications à prévoir lors du redémarrage."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Installer"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -40,6 +41,8 @@ La [documentation Festo MS4/MS6-DL](https://www.festo.com/media/pim/789/D1500010
 Un enregistrement de pression décrit la pression au point du capteur. Il ne donne pas, à lui seul, la position de tous les organes de la machine. Notre protocole proposé conserve donc séparément la courbe de pression et les états ou mouvements que le projet prévoit de vérifier.
 
 Cette distinction évite une conclusion trop large : obtenir une montée lente au manomètre ne démontre pas que chaque mouvement attendu s’est déroulé correctement. La réception doit suivre les critères établis par le concepteur de l’installation.
+
+Certaines vannes aval ont également une condition de pilotage. Le [différentiel minimal d’une électrovanne servo-assistée](/guides/electrovanne-air-ne-ouvre-pas-pression-differentielle/) doit être vérifié sur sa référence, avec les pressions amont et aval du scénario de reprise.
 
 ## Ce qu’il faut transmettre pour sélectionner la vanne
 

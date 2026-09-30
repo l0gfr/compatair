@@ -13,7 +13,7 @@ relatedGuides: ["soufflette-garage-securite-bruit-consommation", "utiliser-plusi
 sources:
   - https://www.exair.com/media/productcms/pdf/AirAmplifiers2_1.pdf
   - https://blog.exair.com/2021/03/26/exairs-super-air-amplifier-amplification-ratios-explained/
-updatedDate: 2026-09-29
+updatedDate: 2026-09-30
 ---
 
 **Les 4 132 SLPM annoncés en sortie d’un EXAIR 120021 ne sont pas 4 132 SLPM d’air comprimé produits pour le réseau.** Le tableau constructeur associe cette valeur à une consommation de 229 SLPM d’air comprimé, à 5,5 bar d’alimentation. Le jet entraîne de l’air ambiant ; les deux chiffres décrivent des flux différents. [EXAIR, tableau de performances, page PDF 8](https://www.exair.com/media/productcms/pdf/AirAmplifiers2_1.pdf).
@@ -66,6 +66,8 @@ Pour un poste à ventouses, le [guide des éjecteurs Schmalz SBPL](/guides/eject
 Un rapport d’amplification ne démontre pas qu’un dispositif convient à toute pièce ou qu’il est le plus économique. Nous proposons de comparer les solutions sur le même résultat attendu : zone à traiter, distance, durée du soufflage et critère d’acceptation de la pièce. Sans cela, deux jets de volume différent ne répondent pas nécessairement à la même tâche.
 
 Pour un essai de sélection, conservez la référence, la configuration, la pression à l’entrée et le cycle. Faites constater le résultat par le responsable du procédé avant de comparer les consommations. Ce protocole est une proposition CompatAir ; aucune économie chiffrée n’a été mesurée ici.
+
+Si la fonction est le transport de matière, passez à une comparaison dédiée au [convoyage EXAIR Line Vac](/guides/transport-pneumatique-exair-line-vac-distance-matiere/). Le produit, les coudes et les dénivelés doivent suivre le débit de matière demandé.
 
 ## Attention à l’air ambiant entraîné
 

@@ -3,7 +3,7 @@ title: "Faut-il couper l’air comprimé des machines la nuit et le week-end ?"
 seoTitle: "Couper l’air comprimé la nuit : méthode pour l’atelier"
 description: "Réduire la consommation hors production sans compromettre les fonctions machine : définir les zones, l’état de veille et les conditions de redémarrage."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-29
+updatedDate: 2026-09-30
 category: "Utiliser"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "menuiserie-agencement"]
@@ -42,6 +42,8 @@ Il faut donc documenter le rôle du dispositif installé. Demandez au constructe
 </div>
 
 *Trois états à ne pas confondre : schéma de lecture CompatAir, expliqué dans le texte.*
+
+Une unité de serrage sur la tige mérite sa propre analyse. Le [cas Festo DSNU-KP](/guides/blocage-tige-verin-dsnu-kp-maintien-securite/) distingue force de maintien et fonction de sécurité dans le circuit complet.
 
 ## Préparer une matrice des zones
 

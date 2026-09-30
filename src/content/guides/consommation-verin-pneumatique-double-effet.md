@@ -3,6 +3,7 @@ title: "Consommation d’un vérin pneumatique double effet : calculer les litr
 seoTitle: "Consommation vérin double effet : calcul par cycle"
 description: "Calculez le besoin d’air d’un vérin avec sa course, sa tige et sa cadence. Distinguez litres par cycle, débit moyen et débit de pointe du distributeur."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Comprendre"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "menuiserie-agencement"]
@@ -21,6 +22,8 @@ Le résultat recherché dépend aussi de la décision : un bilan par minute sert
 Le [calculateur Festo](https://www.festo.com/ee/en/s/air-consumption) distingue les modes simple effet, double effet et d’autres géométries. Sélectionnez donc le montage réel. Une tige traversante ou un vérin sans tige ne se traite pas comme un double effet à tige unique.
 
 Sur la fiche machine, relevez la course réellement utilisée et précisez ce que le compteur appelle un « cycle ». Compter séparément sortie et retour, puis utiliser une consommation déjà donnée par aller-retour, double artificiellement le résultat. Conservez aussi la pression d’utilisation, avec sa référence relative ou absolue.
+
+Cette géométrie de chambres ne s’applique pas par substitution à un [muscle pneumatique Festo DMSP](/guides/muscle-pneumatique-dmsp-force-contraction/). Pour cette architecture, demandez le point de contraction, la force disponible et la consommation correspondant au cycle.
 
 ## Un exemple fabricant que l’on peut refaire
 
@@ -62,6 +65,8 @@ La consommation géométrique n’est pas le bilan complet de la machine. Demand
 Répartir le volume sur toute la minute efface la durée du mouvement. À quantité identique par cycle, une course demandée en une fraction de seconde sollicite l’alimentation autrement qu’un déplacement lent suivi d’une longue attente. C’est une conséquence du calcul volume/temps, pas un débit maximal garanti.
 
 Le dossier de sélection doit donc indiquer le temps de sortie et de retour souhaité, les liaisons et la charge. L’intégrateur peut alors vérifier le [distributeur et ses conditions de débit nominal](/guides/choisir-distributeur-pneumatique-debit-nominal/). Écrire « consommation moyenne inférieure au débit de la vanne » ne suffit pas à valider la cadence.
+
+La capacité de passage ne dit pas non plus si une vanne commute au départ. Vérifiez [la condition de pression différentielle d’une servo-assistance](/guides/electrovanne-air-ne-ouvre-pas-pression-differentielle/) avec les deux pressions et la référence installée.
 
 ## Le livrable utile pour un atelier
 

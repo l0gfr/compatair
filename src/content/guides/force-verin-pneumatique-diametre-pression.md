@@ -3,6 +3,7 @@ title: "Force d’un vérin pneumatique : pression, diamètre et effort réelle
 seoTitle: "Force d’un vérin pneumatique : calcul et limites"
 description: "Comprenez la force en poussée et en traction, l’effet de la tige et les limites du calcul théorique avant de choisir le diamètre d’un vérin."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "menuiserie-agencement"]
@@ -65,11 +66,15 @@ Décrivez la masse, l’orientation du mouvement, l’accélération attendue, l
 
 Le [support Festo sur le flambage](https://www.festo.com/net/supportportal/files/10203/actuators) rappelle également que la charge admissible d’une tige longue dépend notamment de sa longueur et de son diamètre. Une force pneumatique suffisante ne prouve donc pas que la tige, ses fixations ou son guidage conviennent. Faites vérifier ces points dans le dossier mécanique, sans déduire une charge admissible d’un seul tableau de pression.
 
+Avec un outillage déporté, complétez la poussée par [les moments et charges du guidage, exemple Festo DFM](/guides/verin-guide-festo-dfm-charge-deportee-moment/). Le plan coté doit situer la force par rapport au centre de référence du guide.
+
 ## Que faire quand le vérin manque de force ?
 
 Avant de demander une pression supérieure, notez si le défaut apparaît toujours au même endroit, uniquement sous charge ou pendant les mouvements simultanés. Ce relevé proposé sert à préparer le diagnostic ; il ne désigne pas une pièce défectueuse.
 
 Faites rapprocher les pressions au vérin, la charge et les caractéristiques de la machine. Si le diamètre doit changer, recalculer la [consommation par cycle](/guides/consommation-verin-pneumatique-double-effet/) évite d’améliorer l’effort tout en rendant l’alimentation insuffisante. Toute intervention ou mesure ajoutée au circuit doit suivre la procédure de mise en sécurité de la machine.
+
+Pour un actionneur sans tige, l’équivalence comprend aussi [le couplage magnétique ou mécanique](/guides/verin-sans-tige-magnetique-mecanique-remplacement/). La même course et une poussée comparable ne suffisent pas à confirmer le remplacement du chariot entraîné.
 
 ## Sources et méthode
 

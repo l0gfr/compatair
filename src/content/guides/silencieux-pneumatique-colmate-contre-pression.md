@@ -3,6 +3,7 @@ title: "Silencieux pneumatique colmaté : diagnostiquer une contre-pression à 
 seoTitle: "Silencieux pneumatique colmaté : symptômes et contrôle"
 description: "Un vérin ralentit malgré une pression correcte ? Examinez l’échappement, la contre-pression et le silencieux sans supprimer durablement la réduction du bruit."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Utiliser"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -65,6 +66,8 @@ Nous proposons de consigner le symptôme initial, la référence déposée, l’
 Si la même dérive revient rapidement, demandez une recherche de la cause amont au lieu de considérer le remplacement répétitif comme une solution suffisante. La [fiche d’intervention](/guides/fiche-intervention-air-comprime/) aide à conserver cette chronologie et à distinguer une amélioration observée d’une cause effectivement démontrée.
 
 Le glossaire précise la définition de [contre-pression d’échappement](/glossaire/#contre-pression-echappement).
+
+Sur une [vanne d’échappement rapide montée au vérin](/guides/echappement-rapide-verin-montage-pres-actionneur/), le silencieux reste dans le trajet de sortie. Le dossier doit conserver son emplacement avec la vanne, la commande de vitesse et l’amortissement du mouvement.
 
 ## Sources et méthode
 

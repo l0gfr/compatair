@@ -3,6 +3,7 @@ title: "Purgeur de condensats temporisé ou à détection de niveau : comment ch
 seoTitle: "Purgeur temporisé ou à niveau : choisir sans gaspiller"
 description: "Comparer une purge temporisée et une évacuation pilotée par niveau : fonctionnement, pertes d’air, contrôles et critères de sélection pour le réseau d’atelier."
 pubDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "garage-automobile"]
@@ -55,6 +56,8 @@ La notice BEKOMAT 32U exige notamment une pression de service et une alimentatio
 Notre grille de consultation demande : pression minimale et maximale au point de purge, température et risque de gel, quantité et nature des condensats, alimentation disponible, conditions d’évacuation, accès de maintenance et retour d’alarme éventuel. Indiquez aussi si l’installation reste pressurisée à l’arrêt.
 
 Pour un atelier non chauffé, consultez le [guide de séchage en ambiance froide](/guides/secheur-air-comprime-atelier-non-chauffe/). Pour les condensats huileux, l’évacuation est à relier à une filière adaptée : le [séparateur huile-eau](/guides/separateur-huile-eau-condensats-compresseur/) traite une autre fonction que le déclenchement de la purge.
+
+Le principe de commande n’est qu’une partie du choix. Comparez aussi [NO et NC sur le purgeur à flotteur SMC AD402-A](/guides/purgeur-smc-ad402-normalement-ouvert-petit-compresseur/) et, sur un autre appareil, [les trajets prescrits pour le BEKOMAT 16 CO](/guides/bekomat16-condensats-evacuation-remontee-pente/).
 
 ## Réceptionner avec des observations utiles
 

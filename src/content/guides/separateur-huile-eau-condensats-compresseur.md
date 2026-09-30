@@ -3,6 +3,7 @@ title: "Séparateur huile/eau : comment traiter les condensats d’un compresseu
 seoTitle: "Condensats : choisir un séparateur huile/eau"
 description: "Purge, séparation huile/eau, émulsion stable et rejet : identifiez le traitement adapté aux condensats avec BEKO, ses notices et les règles françaises."
 pubDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Installer"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "garage-automobile", "carrosserie-peinture"]
@@ -87,6 +88,8 @@ Voici notre proposition de dossier, à adapter au site :
 6. Organisation de collecte des huiles, cartouches et autres résidus.
 
 Conservez les changements de lubrifiant et les ajouts de compresseurs dans ce dossier : ils permettent de demander au fournisseur si le choix initial reste adapté. Le [guide de purge](/guides/entretien-compresseur-purge-condensats/) et la [maintenance préventive](/guides/maintenance-preventive-reseau-air-comprime/) complètent ce suivi. Pour un nouveau local, réservez aussi l’accès aux équipements de traitement dans le [plan d’implantation](/guides/ventilation-local-compresseur-surchauffe/).
+
+Joignez le trajet entre purge et récepteur. Le [montage du BEKOMAT 16 CO](/guides/bekomat16-condensats-evacuation-remontee-pente/) distingue pente d’arrivée et remontée de sortie, avec les conditions de pression propres à sa notice.
 
 ## Sources et périmètre
 

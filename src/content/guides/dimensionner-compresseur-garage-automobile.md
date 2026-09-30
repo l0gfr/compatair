@@ -3,7 +3,7 @@ title: "Dimensionner un compresseur pour un garage automobile, poste par poste"
 seoTitle: "Compresseur pour garage automobile | CompatAir"
 description: "Méthode sourcée pour relever les besoins des outils d’un garage, traiter leur simultanéité et contrôler le réseau sans consommation métier inventée."
 pubDate: 2026-07-15
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Choisir"
 audiences: [professionnel]
 metiers: [garage-automobile]
@@ -76,6 +76,8 @@ Ainsi, une nouvelle cadence ou un poste supplémentaire produit un nouveau calcu
 Le cas de la CP7732C permet de [distinguer moyenne, charge et marche à vide](/guides/consommation-moyenne-en-charge-cle-a-chocs/) avant de calculer le besoin d’air. La [lecture des couples de clé à chocs](/guides/cle-a-chocs-couple-serrage-roues-dynamometrique/) complète le dossier de poste pour séparer alimentation pneumatique et serrage final.
 
 Pour préparer l’alimentation de la machine de roues, consultez le [guide du démonte-pneu : pression publiée et consommation à documenter](/guides/compresseur-demonte-pneu-pression-consommation/).
+
+Si le garage prévoit un nettoyage cryogénique, ajoutez un poste identifié au planning. Le [dossier Kärcher IB 10/8 L2P](/guides/compresseur-nettoyage-cryogenique-karcher-ib10-8-l2p/) précise les données à obtenir selon le réglage et la durée de projection.
 
 ## Sources
 

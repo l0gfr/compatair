@@ -17,7 +17,7 @@ sources:
   - https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf
   - https://www.iso.org/fr/standard/46580.html
   - https://www.inrs.fr/media.html?refINRS=ED+6109
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 ---
 
 Une fiche d’intervention ne sert pas seulement à prouver qu’un technicien est passé. Elle doit montrer ce qui a déclenché l’action, ce qui a été observé avant, ce qui a réellement été fait, puis ce que la même mesure indique après l’intervention.
@@ -54,6 +54,8 @@ Un nom comme « compresseur atelier » devient ambigu dès qu’une machine est 
 Ajoutez les composants qui définissent le scénario : sécheur, filtre, cuve, vanne, branche, régulateur, raccord, flexible et outil. Une modification de l’un d’eux entre l’avant et l’après peut rendre la comparaison invalide.
 
 Pour une configuration préparée dans CompatAir, le [Passeport](/passeport/) conserve la chaîne d’air et le verdict documentaire. Il reste local au navigateur. Le dossier d’intervention doit encore enregistrer les observations de terrain.
+
+Lorsqu’une bobine est remplacée, photographiez aussi le corps de vanne et son code. La [grille de commande d’une bobine 24 V AC ou DC](/guides/bobine-electrovanne-24v-ac-dc-remplacement/) aide à conserver tension, type d’alimentation, puissance et correspondance de l’ensemble.
 
 ## Décrire le signal sans conclure trop tôt
 

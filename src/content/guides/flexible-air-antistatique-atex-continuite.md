@@ -2,6 +2,7 @@
 title: "Flexible d’air antistatique : que faut-il vérifier pour un poste sensible ?"
 description: "Antistatique, anti-étincelles et ATEX désignent des questions différentes. Vérifier le tuyau exact, les embouts et l’usage prévu, sans certification supposée."
 pubDate: 2026-09-29
+updatedDate: 2026-09-30
 category: Choisir
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture", "maintenance-industrielle"]
@@ -59,3 +60,5 @@ Une réparation, un remplacement d’embout ou un changement de référence just
 Le [guide de déconnexion sécurisée](/guides/raccord-rapide-securite-decompression-air-comprime/) traite un autre risque, lié à la pression. Cette fonction ne confirme ni la continuité électrique ni la compatibilité ATEX.
 
 Ce guide ne certifie aucun flexible et ne propose pas de méthode improvisée de mesure. Sans documentation de la référence et du montage, la propriété électrique de l’ensemble reste à établir. Aucun seuil de résistance, durée de vie ou équivalence de matière n’est inventé pour compléter une fiche incomplète.
+
+Une substitution de matière exige aussi de lire [le domaine pression-température des tubes PU et PA](/guides/tube-air-polyurethane-polyamide-temperature-pression/). L’aptitude antistatique ne remplace pas la vérification de la température, des courbures et de la paire tube-raccord.

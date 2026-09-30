@@ -3,6 +3,7 @@ title: "Filtre d’air comprimé : faut-il attendre une forte perte de pression
 seoTitle: "Filtre air comprimé : perte de pression et remplacement"
 description: "Une faible pression différentielle ne certifie pas la qualité de l’air. Croisez mesures sous débit, entretien fabricant et contrôles de contamination."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Utiliser"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "carrosserie-peinture"]
@@ -47,6 +48,8 @@ Si deux manomètres séparés sont utilisés, leur précision et leur emplacemen
 Un dossier de maintenance doit garder la référence de l’élément, sa fonction, sa date de pose et les prescriptions de remplacement. Pour la qualité, indiquez séparément le contaminant surveillé, le point d’échantillonnage et le critère d’acceptation.
 
 Cette séparation est particulièrement utile pour le [charbon actif](/guides/filtre-charbon-actif-air-comprime-vapeurs-huile/). L’objectif de réduction des vapeurs d’huile ne se démontre pas par la seule absence de chute de pression. Ne transformez pas un signal mécanique en analyse chimique.
+
+Pour un procédé sensible aux micro-organismes, le [contrôle d’un filtre stérile](/guides/filtre-air-sterile-perte-pression-contamination/) doit inclure les méthodes et points de prélèvement du plan qualité. Le différentiel seul ne répond pas à cette exigence.
 
 ## Que vérifier lorsqu’une perte augmente ?
 

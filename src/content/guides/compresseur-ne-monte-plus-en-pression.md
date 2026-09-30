@@ -13,7 +13,7 @@ sources:
   - https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nupse59f8t4htfeoh3u5gifg65/4010393_11027_001_SPK2.pdf
   - https://www.einhell.fr/p/4010393/
   - https://tools.cp.com/en/products/impactwrenches/cp7732c-sku8941077321
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 ---
 
 **Avant de conclure que la pompe est usée, identifiez où la pression manque et dans quelle situation.** Une cuve qui ne charge pas, une sortie régulée trop basse et une pression qui s’effondre uniquement lorsque l’outil travaille n’orientent pas le diagnostic de la même façon.
@@ -62,6 +62,8 @@ Relevez d’abord les changements réversibles et visibles : robinet de purge ut
 Un sifflement aide à décrire une zone ; il ne justifie pas un desserrage sous pression. Si une réparation interne, un démontage de clapet ou un contrôle de soupape devient nécessaire, transmettez le dossier à l’atelier. Ne modifiez pas le seuil d’arrêt pour tenter de compenser le symptôme.
 
 La recherche de petites fuites se traite ensuite avec un protocole dédié : [détecter et mesurer les fuites](/guides/detecter-mesurer-fuites-air-comprime/). Évitez d’annoncer un débit de fuite calculé à partir d’une simple écoute.
+
+Lorsque l’air sort par une purge pendant le départ, identifiez sa variante. Le [SMC AD402-A normalement ouvert](/guides/purgeur-smc-ad402-normalement-ouvert-petit-compresseur/) comporte une condition d’alimentation propre à cette série ; il faut la comparer au compresseur avant d’attribuer la fuite à une panne.
 
 ## Le relevé qui départage les hypothèses
 

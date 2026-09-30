@@ -3,6 +3,7 @@ title: "Générateur d’azote : quel débit de compresseur selon la pureté de
 seoTitle: "Générateur d’azote : débit d’air et pureté à distinguer"
 description: "Le débit d’azote produit ne dimensionne pas le compresseur. Exemple NGP 8+, conditions de référence et données à demander pour une alimentation vérifiable."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -48,6 +49,8 @@ Les conditions annoncées sont une admission à **7 bar(g)**, une température a
 </div>
 
 *Capacité d’azote du NGP 8+ selon la pureté. Valeurs de la brochure, conditions détaillées ci-dessus ; il ne s’agit pas de l’air consommé.*
+
+Clarifiez aussi la définition de cette pureté. La [notice Parker DB1200–DB9000 relie oxygène résiduel et N₂ + argon](/guides/generateur-azote-purete-oxygene-argon-ppm/) ; un résultat d’analyse d’oxygène ne mesure pas tous les constituants du gaz.
 
 ## Attention à la définition du mètre cube dans la fiche
 

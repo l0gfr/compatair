@@ -3,7 +3,7 @@ title: "Groupe FRL : filtre, régulateur, lubrificateur, ordre, réglage et entr
 seoTitle: "Groupe FRL : ordre, réglage et entretien"
 description: "Installer et entretenir un groupe FRL sans lubrifier tous les usages : ordre des modules, sens du débit, pression, condensats et contrôle des pertes."
 pubDate: 2026-08-28
-updatedDate: 2026-09-26
+updatedDate: 2026-09-30
 category: "Installer"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, carrosserie-peinture, maintenance-industrielle]
@@ -105,6 +105,8 @@ Le dossier de maintenance doit au minimum enregistrer :
 - fuites, dommages du bol, date et motif de l’intervention.
 
 Avant ouverture, les notices CP et Parker demandent de couper l’alimentation et de dépressuriser les lignes concernées. Chicago Pneumatic avertit aussi que les solvants et nettoyants agressifs endommagent les bols en polycarbonate et limite le nettoyage de ses composants concernés à un chiffon légèrement humide, avec eau et nettoyant doux si nécessaire. Appliquez toujours la procédure du modèle installé.
+
+Un bol fissuré demande un autre examen que le colmatage de l’élément. Les [précautions SMC sur le polycarbonate et les solvants](/guides/bol-filtre-air-polycarbonate-solvant-fissure/) aident à préparer l’historique des produits auxquels la préparation d’air a été exposée.
 
 ## Contrôle de remise en service
 

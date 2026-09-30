@@ -3,7 +3,7 @@ title: "Raccord d’air comprimé 1/4 : BSP, NPT et profil rapide, que vérifier
 seoTitle: "Raccord air 1/4 : BSP ou NPT, comment choisir ?"
 description: "Un raccord 1/4 peut avoir le mauvais filetage ou le mauvais profil rapide. Identifiez G, R et NPT, l’étanchéité et le passage avant de raccorder votre outil."
 pubDate: 2026-09-25
-updatedDate: 2026-09-29
+updatedDate: 2026-09-30
 category: "Installer"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, maintenance-industrielle, btp-chantier]
@@ -33,6 +33,8 @@ Après le filetage, vérifiez le profil d’accouplement et la fonction de déco
 | Liaison au flexible | Dimension de tuyau et raccord prévu | Confondre diamètre intérieur et diamètre extérieur |
 
 Le [guide de profils CEJN](https://www.cejn.com/guides-support/toolbox/compressed-air-nipple-guide/) montre plusieurs standards d’embouts rapides. Cette interface est distincte du filetage. La description d’un ensemble peut donc associer une série de coupleur à un filetage G ou NPT, sans contradiction.
+
+Côté tube, [6 mm et 1/4 pouce désignent des diamètres extérieurs différents](/guides/tube-pneumatique-6mm-un-quart-diametre-exterieur/). Cette conversion n’est pas celle du filetage nominal ; identifiez les deux côtés du raccord dans la commande.
 
 ## G, R et NPT : lire la désignation complète
 

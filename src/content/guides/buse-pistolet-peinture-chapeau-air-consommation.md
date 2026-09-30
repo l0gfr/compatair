@@ -3,6 +3,7 @@ title: "Buse de pistolet peinture : pourquoi son diamètre ne donne pas la cons
 seoTitle: "Buse peinture et chapeau d’air : quel débit prévoir ?"
 description: "Le diamètre de buse décrit le circuit produit. Comparez les chapeaux DV1-S, leur pression et leur consommation pour préparer une configuration vérifiable."
 pubDate: "2026-09-26"
+updatedDate: 2026-09-30
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture", "menuiserie-agencement"]
@@ -62,6 +63,8 @@ La durée de pulvérisation ajoute ensuite une question de régime. Un essai bre
 ## Que demander au vendeur ?
 
 Demandez une réponse écrite sous cette forme : corps, chapeau, ensemble buse-aiguille, produit prévu, pression d’entrée en fonctionnement et consommation d’air associée. Si le vendeur fournit seulement « buse 1,3 mm, compatible petit compresseur », la réponse reste trop vague pour décider. La précision utile porte sur la configuration complète, pas sur une promesse de résultat sans conditions.
+
+Pour un pistolet alimenté par réservoir, le [bilan d’une cuve sous pression](/guides/cuve-peinture-sous-pression-air-produit-agitation/) ajoute les fonctions produit et agitation à celle du chapeau. Relevez les références de l’ensemble vendu.
 
 ## Sources et méthode
 
