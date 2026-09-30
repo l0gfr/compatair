@@ -6,6 +6,7 @@ import { buildCatalogExpansion } from './lib/catalog-expansion-2026-09-27.mjs';
 import { buildQualifiedTools } from './lib/qualified-tools-2026.mjs';
 import { buildDocumentedExpansion } from './lib/documented-expansion-2026-09-30.mjs';
 import { loadCatalogProducts } from './lib/catalog-tooling.mjs';
+import { TECHNICAL_CARD_WIDTH, technicalCardSvg } from './lib/technical-card.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const readSnapshot = async name => JSON.parse(await readFile(resolve(root, `src/data/imports/${name}-additional-2026-09-26.json`)));
@@ -26,8 +27,6 @@ for (const kind of ['compressors', 'tools']) {
   if (existing && JSON.stringify(existing.product) !== JSON.stringify(product)) throw new Error(`Référence existante différente : ${product.id}`);
  }
 }
-const xml = (s) => String(s).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&apos;');
-const format = (n) => n.toLocaleString('fr-FR', { maximumFractionDigits: 3 });
 const titles = {}, usage = {};
 for (const kind of ['compressors', 'tools']) {
 	for (const p of expansion[kind]) {
@@ -46,22 +45,11 @@ for (const kind of ['compressors', 'tools']) {
 			if (selection.length > 60) selection = `Compresseur pour ${p.brand} ${p.mpn}`;
 			usage[p.id] = selection;
 		}
-		const compressor = kind === 'compressors';
-		const point = compressor ? p.fadCurve.at(-1) : null;
-		const columns = compressor ? [
-			point ? ['DÉBIT RESTITUÉ', format(point.litersPerMinute), `L/min à ${format(point.pressureBar)} bar`] : ['FAD À PRESSION CONNUE', 'Non établi', 'Compatibilité indéterminée'],
-			['CUVE', format(p.tankLiters), 'litres'], ['PRESSION MAX.', format(p.maxPressureBar), 'bar'],
-		] : [
-			[p.demandModel === 'per-action' ? 'AIR PAR COUP' : p.airflowBasis === 'average' ? 'CONSOMMATION MOY.' : 'CONSOMMATION', format(p.airPerActionLiters ?? p.airflowLpm.typical), p.demandModel === 'per-action' ? 'litres / coup' : 'L/min publiés'],
-			['PRESSION RETENUE', format(p.workingPressureBar.typical), 'bar'], ['RÉFÉRENCE', p.mpn, 'fabricant'],
-		];
-		const displayName = p.model.length > 68 ? `${p.model.slice(0,65).trim()}…` : p.model;
-		const nameLines = displayName.match(/.{1,35}(?:\s|$)|.{1,35}/g).map(s => s.trim());
-		const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="#f0f1e9"/><rect x="44" y="44" width="1112" height="712" rx="18" fill="#fffef9" stroke="#c7d0c6" stroke-width="2"/><g font-family="Arial,sans-serif" fill="#11251c"><text x="82" y="115" font-size="27" fill="#166b4b">${xml(p.brand.toUpperCase())}</text>${nameLines.map((line, i) => `<text x="82" y="${190 + i * 48}" font-size="42" font-weight="700">${xml(line)}</text>`).join('')}<text x="82" y="292" font-size="22" fill="#53665b">Référence ${xml(p.mpn ?? p.model)}</text><line x1="82" y1="320" x2="1118" y2="320" stroke="#c7d0c6"/>${columns.map((c, i) => `<text x="${82 + i * 350}" y="382" font-size="21" fill="#53665b">${xml(c[0])}</text><text x="${82 + i * 350}" y="475" font-size="${c[1].length > 7 ? 28 : 64}" font-weight="700">${xml(c[1])}</text><text x="${82 + i * 350}" y="528" font-size="25">${xml(c[2])}</text>`).join('')}<rect x="82" y="600" width="1036" height="62" rx="8" fill="#edf5bd"/><text x="108" y="640" font-size="25" fill="#073d2b">Valeurs déclarées par le fabricant</text><text x="82" y="715" font-size="21" fill="#53665b">REPÈRES TECHNIQUES</text><text x="1118" y="716" text-anchor="end" font-size="28" fill="#166b4b">CompatAir</text></g></svg>`;
+		const svg = technicalCardSvg(p, kind);
 		const imagePath = resolve(root, 'public', p.image.src.slice(1));
 		try { await access(imagePath); } catch (error) {
 			if (error.code !== 'ENOENT') throw error;
-			await sharp(Buffer.from(svg)).webp({ quality: 85 }).toFile(imagePath);
+			await sharp(Buffer.from(svg)).resize({ width: TECHNICAL_CARD_WIDTH }).webp({ quality: 85, effort: 6 }).toFile(imagePath);
 		}
 	}
 }
