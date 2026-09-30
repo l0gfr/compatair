@@ -125,14 +125,13 @@ export function createSitemapLastmodResolver({ root = process.cwd(), gitDate } =
 			sources.add('src/domain/preventive-maintenance.ts');
 			sources.add('src/domain/passport-pdf.ts');
 		}
-		if (['/guides/', '/guides/particuliers/', '/guides/professionnels/'].includes(pathname) || /^\/guides\/(professionnels\/)?page\/\d+\/$/.test(pathname)) {
+		if (['/guides/', '/guides/particuliers/', '/guides/professionnels/'].includes(pathname) || /^\/guides\/((professionnels|particuliers)\/)?page\/\d+\/$/.test(pathname)) {
 			const professional = pathname.startsWith('/guides/professionnels/');
-			if (pathname !== '/guides/particuliers/') {
-				sources.add(`src/components/${professional ? 'GuideProfessionalLibraryPage' : 'GuideLibraryPage'}.astro`);
-				sources.add(`src/pages/guides/${professional ? 'professionnels/' : ''}page/[page].astro`);
-				sources.add('src/components/DirectoryPagination.astro');
-				sources.add('src/domain/pagination.ts');
-			}
+			const personal = pathname.startsWith('/guides/particuliers/');
+			sources.add(`src/components/${professional ? 'GuideProfessionalLibraryPage' : personal ? 'GuidePersonalLibraryPage' : 'GuideLibraryPage'}.astro`);
+			sources.add(`src/pages/guides/${professional ? 'professionnels/' : personal ? 'particuliers/' : ''}page/[page].astro`);
+			sources.add('src/components/DirectoryPagination.astro');
+			sources.add('src/domain/pagination.ts');
 			sources.add('src/components/HubSignalVisual.astro');
 			sources.add('src/components/GuideDirectory.astro');
 			sources.add('src/components/DirectoryBrowser.astro');

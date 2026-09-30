@@ -48,7 +48,7 @@ export function excludedFromIndexation(path) {
 
 // These routes only paginate existing libraries. Content detail routes never match.
 export function isNavigationPath(path) {
-	return /^\/guides\/(?:professionnels\/|metiers\/[a-z0-9-]+\/)?page\/(?:[2-9]|[1-9][0-9]+)\/$/.test(path)
+	return /^\/guides\/(?:(?:professionnels|particuliers)\/|metiers\/[a-z0-9-]+\/)?page\/(?:[2-9]|[1-9][0-9]+)\/$/.test(path)
 		|| /^\/outils-pneumatiques\/usages\/[a-z0-9-]+\/(?:page\/[1-9][0-9]*\/)?$/.test(path)
 		|| /^\/comparatifs\/compresseurs-debit-restitue\/marque\/[a-z0-9-]+\/(?:page\/[1-9][0-9]*\/)?$/.test(path)
 		|| /^\/marques\/[a-z0-9-]+\/$/.test(path);

@@ -771,6 +771,7 @@ for (const path of sitePaths) {
 const guideLibraries = [
 	{ basePath: '/guides/', accepts: () => true },
 	{ basePath: '/guides/professionnels/', accepts: (guide) => guide.audiences.includes('professionnel') },
+	{ basePath: '/guides/particuliers/', accepts: (guide) => guide.audiences.includes('particulier') },
 	...tradeGuidePaths.map((metier) => ({ basePath: `/guides/metiers/${metier}/`, accepts: (guide) => guide.metiers.includes(metier) })),
 ];
 for (const { basePath, accepts } of guideLibraries) {

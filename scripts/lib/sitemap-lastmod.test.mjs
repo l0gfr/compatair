@@ -96,6 +96,7 @@ describe('sitemap lastmod', () => {
 	it.each([
 		['/guides/page/2/', 'GuideLibraryPage', ''],
 		['/guides/professionnels/page/4/', 'GuideProfessionalLibraryPage', 'professionnels/'],
+		['/guides/particuliers/page/2/', 'GuidePersonalLibraryPage', 'particuliers/'],
 	])('date la bibliothèque paginée %s avec ses guides et sa navigation', (path, component, directory) => {
 		const resolver = createSitemapLastmodResolver({ gitDate: (files) => {
 			expect(files).toContain(`src/components/${component}.astro`);

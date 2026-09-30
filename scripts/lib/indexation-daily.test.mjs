@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { planIndexation } from './indexation-planner.mjs';
-import { assertDailyIndexationDate, candidateQuotaGroup, indexationBatchReady, indexationDay, validateManifest, validatePolicy } from './indexation-policy.mjs';
+import { assertDailyIndexationDate, candidateQuotaGroup, indexationBatchReady, indexationDay, isNavigationPath, validateManifest, validatePolicy } from './indexation-policy.mjs';
 
 const baseline = { schemaVersion: 1, sourceSha: 'a'.repeat(40), paths: ['/'] };
 const now = new Date('2026-09-29T18:15:00Z');
@@ -19,6 +19,13 @@ const plan = (overrides = {}) => planIndexation({ candidates, baseline, previous
 const counts = paths => Object.fromEntries(['guides', 'compressors', 'tools'].map(group => [group, paths.filter(path => candidateQuotaGroup(path) === group).length]));
 
 describe('daily SEO admissions in Paris', () => {
+	it('recognizes personal-library pagination without exempting article routes', () => {
+		expect(isNavigationPath('/guides/particuliers/page/2/')).toBe(true);
+		expect(isNavigationPath('/guides/particuliers/page/12/')).toBe(true);
+		expect(isNavigationPath('/guides/particuliers/page/1/')).toBe(false);
+		expect(isNavigationPath('/guides/particuliers/page/02/')).toBe(false);
+		expect(isNavigationPath('/guides/renner-rs-pro-3-0/')).toBe(false);
+	});
 	it('opens exactly 2 guides, 2 compressors and 6 tools, with no transfer between quotas', () => {
 		const result = plan();
 		expect(counts(result.manifest.batches.at(-1).paths)).toEqual(policy.dailyLimits);

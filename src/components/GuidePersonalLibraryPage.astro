@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import { GUIDE_DIRECTORY_PAGE_SIZE, paginate } from '../domain/pagination';
+
+interface Props { page?: number; }
+const { page = 1 } = Astro.props;
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GuideDirectory from './GuideDirectory.astro';
+import HubSignalVisual from './HubSignalVisual.astro';
+import UiIcon from './UiIcon.astro';
+import { guideAudiences } from '../domain/editorial-taxonomy';
+import { serializeJsonLd } from '../domain/structured-data';
+
+const audience = 'particulier' as const;
+const definition = guideAudiences[audience];
+const guides = (await getCollection('guides', ({ data }) => data.audiences.includes(audience)))
+	.sort((a, b) => Number(b.data.featured) - Number(a.data.featured) || b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const pagination = paginate(guides, page, GUIDE_DIRECTORY_PAGE_SIZE);
+const startingPoints = [
+	{ icon: 'tools', label: 'Référence connue', title: 'Identifier le produit exact', description: 'Le numéro de l’étiquette évite de partir d’un nom commercial ambigu.', href: '/scanner/' },
+	{ icon: 'gauge', label: 'Outil connu', title: 'Vérifier le débit nécessaire', description: 'Le besoin publié de l’outil devient le point de départ du calcul.', href: '/calculateur/' },
+	{ icon: 'book', label: 'Choix à comprendre', title: 'Lire la méthode complète', description: 'Pression, débit restitué, cuve et marge sont traités dans le bon ordre.', href: '/guides/guide-complet-dimensionner-compresseur-air/' },
+] as const;
+const itemListJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'ItemList',
+	name: definition.title,
+	itemListElement: pagination.items.map((guide, index) => ({ '@type': 'ListItem', position: pagination.firstItem + index, name: guide.data.title, url: `https://compatair.fr/guides/${guide.id}/` })),
+};
+---
+
+<BaseLayout title={page === 1 ? definition.title : `${definition.title} : page ${page}`} editorialTitle={page === 1 ? definition.seoTitle : `Guides air comprimé particuliers : page ${page}`} description={`${definition.description}${page > 1 ? ` Page ${page} sur ${pagination.totalPages}.` : ''}`} imagePath="/social/guides.png" breadcrumbs={[{ name: 'Guides', path: '/guides/' }, { name: definition.label, path: '/guides/particuliers/' }]}>
+	<script is:inline type="application/ld+json" set:html={serializeJsonLd(itemListJsonLd)} />
+	<section class="page-hero compact audience-hero hub-hero" data-editorial-hub="particulier"><div class="container hub-hero-grid"><div><p class="eyebrow">Parcours par besoin</p><h1>{definition.title}{page > 1 ? ` : page ${page}` : ''}</h1><p class="lead">{definition.description}</p><div class="actions"><a class="button primary" href={page === 1 ? "#parcours-particulier" : "#bibliotheque"}>{page === 1 ? "Choisir mon point de départ" : "Parcourir cette page"}</a><a class="button" href="/guides/professionnels/">Voir le parcours professionnel</a></div></div><HubSignalVisual mode="guides" count={guides.length} title="guides pour particuliers" secondary="sans profil d’usage supposé" /></div></section>
+	{page === 1 && <section class="section hub-intent-section" id="parcours-particulier"><div class="container"><div class="section-head split-head"><div><p class="eyebrow">Trois situations fréquentes</p><h2>Aller d’abord vers la réponse la plus courte</h2></div><p>Les paramètres avancés et les longs dossiers restent disponibles, mais ils ne précèdent pas l’identification ou le verdict utile.</p></div><div class="hub-intent-grid is-three">{startingPoints.map((path, index) => <a href={path.href}><span class="hub-intent-index">0{index + 1}</span><UiIcon name={path.icon} size={28} /><p>{path.label}</p><h3>{path.title}</h3><small>{path.description}</small><strong>Continuer →</strong></a>)}</div></div></section>}
+	<GuideDirectory guides={pagination.items} pagination={pagination} basePath="/guides/particuliers/" pageSize={GUIDE_DIRECTORY_PAGE_SIZE} context="particulier" title={`${guides.length} guides pour aller plus loin`} description="Filtrez par étape ou contexte, puis consultez une sélection paginée. Le même guide conserve sa source, sa date et son URL quel que soit le parcours." />
+</BaseLayout>
