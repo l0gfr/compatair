@@ -71,3 +71,5 @@ Pour préciser le choix de la configuration, consultez [contradiction entre CFM 
 - [Metabo, Mega 350-100 W](https://fr.metabo.com/fr/machines/air-comprime/compresseurs/compresseurs-d-atelier-mobiles/mega-350-100-w-601538000-compresseur.html)
 
 Les tableaux récents apportent deux cas concrets : le [DRB 20 distingue 7,5 bar maximum et 7 bar de mesure](/guides/ceccato-drb-20-7-bar-pression-reference/), tandis que le [DRC 40 sépare air de refroidissement et FAD](/guides/ceccato-drc-40-air-refroidissement-fad/). Le [CSA 20 conserve trois configurations de pression distinctes](/guides/ceccato-csa-20-8-10-13-bar-debit/).
+
+Le [DRM 60](/guides/ceccato-drm60-air-refroidissement-fad/) fournit un exemple de mauvaise colonne : son débit de refroidissement et son FAD décrivent deux circuits différents.

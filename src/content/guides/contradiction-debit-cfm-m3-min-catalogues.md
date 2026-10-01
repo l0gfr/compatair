@@ -45,3 +45,5 @@ Les références concernées par cette contradiction ont été écartées du pr�
 Le [guide consommation à vide et en charge](/guides/cle-impulsions-consommation-vide-charge/) traite un autre cas : plusieurs débits peuvent être cohérents quand leurs régimes sont distincts. Il faut donc qualifier la différence avant de la présenter comme une erreur.
 
 Le tableau des [meuleuses Top Cat 520V et 54V](/guides/top-cat-520v-54v-consommation-maximale/) contient un désaccord entre unités à vitesse libre. L’article sépare cette ligne du maximum publié afin de conserver une comparaison exploitable sans corriger une donnée constructeur à sa place.
+
+Deux contrôles chiffrés permettent de séparer un arrondi d’une unité ambiguë : les [colonnes du DRM 50](/guides/ceccato-drm50-365-m3-h-102-l-s/) se recoupent à leur précision publiée, tandis que l’[OBER AMI22AT](/guides/ober-ami22at-300-nl-ciclo-unite/) demande une clarification de « Nl/ciclo ».

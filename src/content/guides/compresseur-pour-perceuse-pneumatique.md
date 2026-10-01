@@ -111,3 +111,5 @@ Le dimensionnement peut se faire sur la consommation maximale publiée des [Top 
 Pour commander la bonne configuration, consultez la [LBB16 EP-005-U sans mandrin](/guides/atlas-lbb16-ep005-sans-mandrin-reference-masse/) et les [Sumake ST-M5204R7/R3 à vitesses différentes](/guides/sumake-st-m5204r7-r3-perceuse-700-350/). La masse et le débit doivent garder le périmètre exact du tableau.
 
 Trois dossiers permettent de comparer des demandes identifiées : la [Bosch 0 607 154 101 à 270 L/min en charge](/guides/bosch-0607154101-compresseur-270-litres-minute/), [deux Bosch de 660 L/min sur un CSA 15](/guides/ceccato-csa-15-deux-perceuses-bosch/) et [une Bosch de 660 L/min face au RSDK-B 5.5](/guides/renner-rsdk-b-5-5-bosch-660-marge/). Les scénarios exposent leur marge sans l’attribuer au fabricant.
+
+Pour une référence exacte, comparez le [KAESER SX 3 avec la perceuse Bosch de 270 L/min](/guides/kaeser-sx3-perceuse-bosch-marge-debit/). Le [cas GISON GP-330 et GP-330A](/guides/gison-gp330-gp330a-perceuse-mandrin/) montre les limites d’une consommation dont le régime reste inconnu.

@@ -34,6 +34,25 @@ export const toolGuideByCategoryId: Partial<Record<ToolProfile['categoryId'], `/
 };
 
 export const toolGuideById: Record<string, `/guides/${string}/`> = {
+	"riveteuse-gison-gp-101rn": "/guides/gison-gp101rn-litres-cycle-cadence/",
+	"riveteuse-gison-gp-250rm": "/guides/gison-gp250rm-gp250ri-ecrous-cadence/",
+	"riveteuse-gison-gp-250ri": "/guides/gison-gp250rm-gp250ri-ecrous-cadence/",
+	"meuleuse-gison-gp-824st2": "/guides/gison-gp824st2-gp824st3-vitesse-air/",
+	"meuleuse-gison-gp-824st3": "/guides/gison-gp824st2-gp824st3-vitesse-air/",
+	"derouilleur-a-aiguilles-gison-gp-851a": "/guides/gison-gp851a-gp851b-derouilleur-acces/",
+	"derouilleur-a-aiguilles-gison-gp-851b": "/guides/gison-gp851a-gp851b-derouilleur-acces/",
+	"perceuse-gison-gp-330": "/guides/gison-gp330-gp330a-perceuse-mandrin/",
+	"perceuse-gison-gp-330a": "/guides/gison-gp330-gp330a-perceuse-mandrin/",
+	"lime-alternative-gison-gp-948a": "/guides/gison-gp948a-gp948b-lime-course/",
+	"lime-alternative-gison-gp-948b": "/guides/gison-gp948a-gp948b-lime-course/",
+	"cle-a-chocs-zipp-ziw6511": "/guides/zipp-ziw6511-ziw611-consommation-moyenne/",
+	"cle-a-chocs-zipp-ziw611": "/guides/zipp-ziw6511-ziw611-consommation-moyenne/",
+	"cle-a-chocs-zipp-ziw4206t": "/guides/zipp-ziw4206t-ziw4207j-mini-cle/",
+	"cle-a-chocs-zipp-ziw4207j": "/guides/zipp-ziw4206t-ziw4207j-mini-cle/",
+	"riveteuse-zipp-zar0921": "/guides/zipp-zar0921-zar0921v-volume-par-coup/",
+	"riveteuse-zipp-zar0921v": "/guides/zipp-zar0921-zar0921v-volume-par-coup/",
+	"visseuse-ober-ami22at-8301052": "/guides/ober-ami22at-300-nl-ciclo-unite/",
+
 	"perceuse-bosch-0-607-161-100-0607161100": "/guides/ceccato-csa-15-deux-perceuses-bosch/",
 	"perceuse-bosch-0-607-154-101-0607154101": "/guides/bosch-0607154101-compresseur-270-litres-minute/",
 	"meuleuse-bosch-0-607-253-101-0607253101": "/guides/bosch-0607253101-0607253100-vitesse-air/",

@@ -46,3 +46,5 @@ Une différence de 410 L/min sépare les valeurs des versions 8 et 13 bar de cet
 Les [différences entre noms commerciaux et codes ERP](/guides/compresseur-reference-erp-nom-commercial/) expliquent pourquoi conserver l’identifiant complet dans le devis et dans le dossier de l’atelier. La pression et la puissance, prises seules, ne suffisent pas à identifier le produit.
 
 Chez RENNER, les quatre [articles RS-PRO 3.0 de 7,5 à 15 bar](/guides/renner-rs-pro-3-0-310000-310001-310002-310003/) rendent cette distinction vérifiable par code. La comparaison des [RSD et RSDK-PRO 3.0](/guides/renner-rsd-rsdk-pro-3-0-cuve-secheur/) ajoute un autre contrôle avant commande : identifier la cuve et le sécheur associés au même débit publié.
+
+Sur le [Ceccato CSM 25](/guides/ceccato-csm25-10-13-bar-debit-perdu/), choisir la version 13 bar au lieu de 10 bar fait passer le FAD publié de 2 700 à 2 310 L/min, aux pressions de référence correspondantes.

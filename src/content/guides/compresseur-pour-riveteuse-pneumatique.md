@@ -88,3 +88,5 @@ Sources consultées le **26 septembre 2026**. Analyse documentaire interne : Com
 - [Chicago Pneumatic, CP9886, référence 8941098860](https://tools.cp.com/en/products/compression-tools/cp9886-sku8941098860)
 - [Chicago Pneumatic, CP9888, référence 8941098880](https://tools.cp.com/en/products/compression-tools/cp9888-sku8941098880)
 - [Chicago Pneumatic, notice CP9882/CP9883, 8940169829](https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940169829.pdf)
+
+Le [GISON GP-101RN](/guides/gison-gp101rn-litres-cycle-cadence/) documente 1,5 L par cycle ; les [GP-250RM et GP-250RI](/guides/gison-gp250rm-gp250ri-ecrous-cadence/) annoncent 2 L par cycle et distinguent filetages métriques et impériaux.

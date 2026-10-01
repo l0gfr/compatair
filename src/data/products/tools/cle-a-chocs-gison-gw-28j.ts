@@ -1,0 +1,126 @@
+const product = {
+	"id": "cle-a-chocs-gison-gw-28j",
+	"slug": "cle-a-chocs-gison-gw-28j",
+	"categoryId": "cle-a-chocs",
+	"category": "cle-a-chocs",
+	"label": "GISON GW-28J",
+	"brand": "GISON",
+	"model": "GW-28J",
+	"mpn": "GW-28J",
+	"demandModel": "fixed-flow",
+	"workingPressureBar": {
+		"min": 6.205,
+		"typical": 6.205,
+		"max": 6.205
+	},
+	"airflowLpm": {
+		"min": 1410,
+		"typical": 1410,
+		"max": 1410
+	},
+	"airflowBasis": "unqualified",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/cle-a-chocs-gison-gw-28j.webp",
+		"alt": "Repères techniques : GISON GW-28J",
+		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+	},
+	"variant": {
+		"familyId": "gison-gw-28j",
+		"label": "Référence GW-28J",
+		"distinguishingAttributes": {
+			"reference": "GW-28J",
+			"Masse": "3.70 kg",
+			"Longueur": "220 mm"
+		}
+	},
+	"editorial": {
+		"overview": "GISON GW-28J. Consommation de régime non précisé : 1 410 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 3.70 kg. Longueur : 220 mm.",
+		"verifiedFacts": [
+			"Masse : 3.70 kg.",
+			"Longueur : 220 mm.",
+			"Diamètre de flexible publié : 13 mm.",
+			"Référence constructeur : GW-28J."
+		],
+		"limitations": [
+			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
+			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Masse",
+			"value": "3.70 kg",
+			"evidenceIds": [
+				"october-b-gison-tools-p20"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "220 mm",
+			"evidenceIds": [
+				"october-b-gison-tools-p20"
+			]
+		},
+		{
+			"label": "Diamètre de flexible publié",
+			"value": "13 mm",
+			"evidenceIds": [
+				"october-b-gison-tools-p20"
+			]
+		},
+		{
+			"label": "Référence constructeur",
+			"value": "GW-28J",
+			"evidenceIds": [
+				"october-b-gison-tools-p20"
+			]
+		},
+		{
+			"label": "Condition de pression originale",
+			"value": "Recommended Air Pressure 90 psi (6.3 kg/cm2)",
+			"evidenceIds": [
+				"october-b-gison-tools-p20"
+			]
+		},
+		{
+			"label": "Localisation documentaire",
+			"value": "GISON, catalogue pneumatique 2018–2019, page PDF 20",
+			"evidenceIds": [
+				"october-b-gison-tools-p20"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "october-b-gison-tools-p20",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=20",
+			"sourceLabel": "GISON, catalogue pneumatique 2018–2019, page PDF 20",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-01",
+			"confidence": "B",
+			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"october-b-gison-tools-p20"
+		],
+		"workingPressureBar": [
+			"october-b-gison-tools-p20"
+		],
+		"airflowLpm": [
+			"october-b-gison-tools-p20"
+		],
+		"airflowBasis": [
+			"october-b-gison-tools-p20"
+		]
+	},
+	"notes": [
+		"Consommation de régime non précisé : 1 410 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge."
+	]
+};
+
+export default product;

@@ -72,3 +72,5 @@ Pour préciser le choix de la configuration, consultez [vitesse régulée et vit
 La [LSF19 S460E-1/R consomme davantage à vide dans son tableau](/guides/atlas-lsf19-s460e-consommation-vide-charge/). La [Fuji FA-4C-3 documente 1 260 L/min en charge](/guides/fuji-fa-4c-3-1260-l-min-raccord-pt/) : ces deux régimes ne doivent pas être mélangés dans un calcul.
 
 Les fiches détaillées distinguent [deux Bosch de 360 L/min à vitesses différentes](/guides/bosch-0607253101-0607253100-vitesse-air/), [deux Bosch de 660 L/min et leurs accessoires](/guides/bosch-0607261101-0607261102-meuleuses-air/) et la [GTG25 avec 1 920 L/min à puissance maximale](/guides/atlas-gtg25-f120-13-debit-charge-vide/). La [turbine Dotco 12R0380-13](/guides/dotco-12r0380-13-turbine-air-sec/) impose une consigne distincte d’air sec sans lubrification.
+
+Le [poste associant une GTG25 et une perceuse](/guides/kaeser-sk25-meuleuse-gtg25-perceuse-simultanees/) chiffre une demande simultanée. Pour des outils plus petits, le [comparatif GISON GP-824ST2 et ST3](/guides/gison-gp824st2-gp824st3-vitesse-air/) sépare vitesse publiée et consommation en charge manquante.

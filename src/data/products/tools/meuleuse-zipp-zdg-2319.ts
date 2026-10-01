@@ -1,0 +1,113 @@
+const product = {
+	"id": "meuleuse-zipp-zdg-2319",
+	"slug": "meuleuse-zipp-zdg-2319",
+	"categoryId": "meuleuse",
+	"category": "meuleuse",
+	"label": "ZIPP ZDG-2319",
+	"brand": "ZIPP",
+	"model": "ZDG-2319",
+	"mpn": "ZDG-2319",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
+	"demandExplanation": "La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/meuleuse-zipp-zdg-2319.webp",
+		"alt": "Repères techniques : ZIPP ZDG-2319",
+		"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+	},
+	"variant": {
+		"familyId": "zipp-zdg-2319",
+		"label": "Référence ZDG-2319",
+		"distinguishingAttributes": {
+			"reference": "ZDG-2319",
+			"Vitesse à vide": "7600 tr/min",
+			"Masse": "0.6 kg"
+		}
+	},
+	"editorial": {
+		"overview": "ZIPP ZDG-2319. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Vitesse à vide : 7600 tr/min. Masse : 0.6 kg.",
+		"verifiedFacts": [
+			"Vitesse à vide : 7600 tr/min.",
+			"Masse : 0.6 kg.",
+			"Référence constructeur : ZDG-2319."
+		],
+		"limitations": [
+			"La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
+			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Vitesse à vide",
+			"value": "7600 tr/min",
+			"evidenceIds": [
+				"october-b-zipp-tools-p113"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "0.6 kg",
+			"evidenceIds": [
+				"october-b-zipp-tools-p113"
+			]
+		},
+		{
+			"label": "Référence constructeur",
+			"value": "ZDG-2319",
+			"evidenceIds": [
+				"october-b-zipp-tools-p113"
+			]
+		},
+		{
+			"label": "Condition de pression originale",
+			"value": "Pression de consommation non établie sur cette page.",
+			"evidenceIds": [
+				"october-b-zipp-tools-p113"
+			]
+		},
+		{
+			"label": "Consommation hors calcul, pression non établie",
+			"value": "84,951 L/min",
+			"evidenceIds": [
+				"october-b-zipp-tools-p113"
+			]
+		},
+		{
+			"label": "Localisation documentaire",
+			"value": "ZIPP, catalogue général pneumatique, page PDF 113",
+			"evidenceIds": [
+				"october-b-zipp-tools-p113"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "october-b-zipp-tools-p113",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=113",
+			"sourceLabel": "ZIPP, catalogue général pneumatique, page PDF 113",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-01",
+			"confidence": "B",
+			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"october-b-zipp-tools-p113"
+		],
+		"workingPressureBar": [
+			"october-b-zipp-tools-p113"
+		],
+		"demandExplanation": [
+			"october-b-zipp-tools-p113"
+		]
+	},
+	"notes": [
+		"La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé."
+	]
+};
+
+export default product;

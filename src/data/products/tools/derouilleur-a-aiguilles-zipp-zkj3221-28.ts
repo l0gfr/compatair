@@ -1,0 +1,113 @@
+const product = {
+	"id": "derouilleur-a-aiguilles-zipp-zkj3221-28",
+	"slug": "derouilleur-a-aiguilles-zipp-zkj3221-28",
+	"categoryId": "derouilleur-a-aiguilles",
+	"category": "derouilleur-a-aiguilles",
+	"label": "ZIPP ZKJ3221-28",
+	"brand": "ZIPP",
+	"model": "ZKJ3221-28",
+	"mpn": "ZKJ3221-28",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
+	"demandExplanation": "La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/derouilleur-a-aiguilles-zipp-zkj3221-28.webp",
+		"alt": "Repères techniques : ZIPP ZKJ3221-28",
+		"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+	},
+	"variant": {
+		"familyId": "zipp-zkj3221-28",
+		"label": "Référence ZKJ3221-28",
+		"distinguishingAttributes": {
+			"reference": "ZKJ3221-28",
+			"Cadence": "2700 coups/min",
+			"Masse": "3.9 kg"
+		}
+	},
+	"editorial": {
+		"overview": "ZIPP ZKJ3221-28. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Cadence : 2700 coups/min. Masse : 3.9 kg.",
+		"verifiedFacts": [
+			"Cadence : 2700 coups/min.",
+			"Masse : 3.9 kg.",
+			"Référence constructeur : ZKJ3221-28."
+		],
+		"limitations": [
+			"La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
+			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Cadence",
+			"value": "2700 coups/min",
+			"evidenceIds": [
+				"october-b-zipp-tools-p166"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "3.9 kg",
+			"evidenceIds": [
+				"october-b-zipp-tools-p166"
+			]
+		},
+		{
+			"label": "Référence constructeur",
+			"value": "ZKJ3221-28",
+			"evidenceIds": [
+				"october-b-zipp-tools-p166"
+			]
+		},
+		{
+			"label": "Condition de pression originale",
+			"value": "Recommended air pressure must equal or below @90psi (6.2 bar). lAir Inlet Size: 1/4 inch-NPT/PT",
+			"evidenceIds": [
+				"october-b-zipp-tools-p166"
+			]
+		},
+		{
+			"label": "Consommation hors calcul, pression non établie",
+			"value": "85 L/min",
+			"evidenceIds": [
+				"october-b-zipp-tools-p166"
+			]
+		},
+		{
+			"label": "Localisation documentaire",
+			"value": "ZIPP, catalogue général pneumatique, page PDF 166",
+			"evidenceIds": [
+				"october-b-zipp-tools-p166"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "october-b-zipp-tools-p166",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=166",
+			"sourceLabel": "ZIPP, catalogue général pneumatique, page PDF 166",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-01",
+			"confidence": "B",
+			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"october-b-zipp-tools-p166"
+		],
+		"workingPressureBar": [
+			"october-b-zipp-tools-p166"
+		],
+		"demandExplanation": [
+			"october-b-zipp-tools-p166"
+		]
+	},
+	"notes": [
+		"La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé."
+	]
+};
+
+export default product;

@@ -1,0 +1,132 @@
+{
+  "checkedAt": "2026-10-01T16:15:53.662Z",
+  "scope": "New October 1 additional batch B and its 30 guides only; positive document hashes are separate from this link check.",
+  "summary": {
+    "reachable": 12,
+    "broken": 0,
+    "unavailable": 0,
+    "unsafe": 0,
+    "unverified": 1,
+    "checked": 13,
+    "anomalies": 0,
+    "auditUnavailable": false
+  },
+  "results": [
+    {
+      "id": "atlas-us",
+      "url": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/Atlas%20Copco%20-%20Industrial%20tools%20and%20solutions.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/Atlas%20Copco%20-%20Industrial%20tools%20and%20solutions.pdf",
+      "lastPositiveObservation": "2026-09-30",
+      "sourceSha256": "4fab5d622435c614e9ed24db292c697a8e4ca13f0f5f8edb8d2092ee01348d74"
+    },
+    {
+      "id": "bosch-industry",
+      "url": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf",
+      "lastPositiveObservation": "2026-09-30",
+      "sourceSha256": "54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab"
+    },
+    {
+      "id": "ceccato-csm-21-40-hp-pdf",
+      "url": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-21---40-hp/CSM_21-40_FR.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-21---40-hp/CSM_21-40_FR.pdf",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "56ffd1e042b2fcb974d3e2e825a074c7965f4d2671f3f7806176f2334e3f9321"
+    },
+    {
+      "id": "ceccato-csm-7-5-20-hp-pdf",
+      "url": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-7-5-20-hp-leaflet/Ceccato-CSM-7-5-20-HP-FR.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-7-5-20-hp-leaflet/Ceccato-CSM-7-5-20-HP-FR.pdf",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "7e44a0043bb978c2dc52381d49f60918e6638a6ba495056e2ffe45de90f21df7"
+    },
+    {
+      "id": "ceccato-drm-40-60-hp",
+      "url": "https://www.ceccato.com/fr-international/air-compressor-products/rotary-screw-compressor/fixed-speed/drm-40-60-hp",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.ceccato.com/fr-international/air-compressor-products/rotary-screw-compressor/fixed-speed/drm-40-60-hp",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "090162764f48e41b23a714d8eb46c914e2ab605b831acb4c6fb6adddf0bc8cd2"
+    },
+    {
+      "id": "ceccato-drm-40-60-hp-pdf",
+      "url": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/drm/drm-40-60-hp/CECCATO-DRM-40-60-FR.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/drm/drm-40-60-hp/CECCATO-DRM-40-60-FR.pdf",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "9ac976e1f70ee343231aa9eed25f692cbe3b1ae6e1626189c5384432a97f0ec0"
+    },
+    {
+      "id": "gison-tools",
+      "url": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+      "state": "unverified",
+      "reason": "ECONNRESET",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077"
+    },
+    {
+      "id": "kaeser-duty",
+      "url": "https://us.kaeser.com/compressed-air-resources/applications/automotive-services/",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://us.kaeser.com/compressed-air-resources/applications/automotive-services/",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "3f5687777a06c60ed4f3918036cfb4edab945e750016d89b42305f3a2bc6b9fe"
+    },
+    {
+      "id": "kaeser-sk",
+      "url": "https://nl.kaeser.com/download.ashx?id=tcm:32-5921",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://nl.kaeser.com/download.ashx?id=tcm:32-5921",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "e7f1e0bfdf990a0abe341a0750f48a851c4245bca66e72802e90d35c3fe4b75e"
+    },
+    {
+      "id": "kaeser-sm",
+      "url": "https://nl.kaeser.com/download.ashx?id=tcm:32-5920",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://nl.kaeser.com/download.ashx?id=tcm:32-5920",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "7c4b96a5fb4ea4fb206655af4138d8a90096a61661823528c5f6bf282d66a6d5"
+    },
+    {
+      "id": "kaeser-sx",
+      "url": "https://nl.kaeser.com/download.ashx?id=tcm:32-5919",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://nl.kaeser.com/download.ashx?id=tcm:32-5919",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "1c595545d11b0d2780a857ed63958320bf5e1bccb5e8e1852b6816dca5c9f0f3"
+    },
+    {
+      "id": "ober-tools",
+      "url": "https://www.ober.it/download/13ALd55cbw",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.big-box.net/data/OB6er6Up/catalogo-utensili-industriali-2020-rev-2-lr.pdf",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "b33909f1fd8dabd20bb04efacb1bff64894a3989ef835b32c0aa8ba2e02b1beb"
+    },
+    {
+      "id": "zipp-tools",
+      "url": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6"
+    }
+  ]
+}

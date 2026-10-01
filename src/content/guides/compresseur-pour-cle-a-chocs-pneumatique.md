@@ -60,3 +60,5 @@ Le [cas du TC-AC 240/50/10 OF avec la CP7732C](/guides/einhell-tc-ac-240-50-10-o
 La recommandation URYU de [limiter une séquence de serrage à cinq secondes](/guides/uryu-cle-chocs-temps-serrage-cinq-secondes/) concerne l’usure de la clé. Elle ne constitue ni une garantie de couple final ni une preuve que le compresseur dispose du débit en charge nécessaire.
 
 Pour des références précises, consultez le [comparatif documentaire SP-1145A et SP-1148TR-X](/guides/sp-air-sp-1145a-sp-1148tr-x-atelier/), le [besoin publié de la SP-1158A](/guides/sp-air-sp-1158a-1110-litres-minute/) et la [LMS08 HR10, avec son temps de serrage conseillé](/guides/atlas-lms08-hr10-air-temps-serrage/). Les régimes manquants ne sont pas remplacés par une moyenne inventée.
+
+Les [ZIPP ZIW6511 et ZIW611](/guides/zipp-ziw6511-ziw611-consommation-moyenne/) illustrent un même couple maximal accompagné de consommations moyennes très différentes. Leur colonne moyenne ne suffit pas à garantir le débit pendant les impacts.

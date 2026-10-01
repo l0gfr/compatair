@@ -1,0 +1,113 @@
+const product = {
+	"id": "ponceuse-bande-zipp-zbs-382n7",
+	"slug": "ponceuse-bande-zipp-zbs-382n7",
+	"categoryId": "ponceuse-bande",
+	"category": "ponceuse-bande",
+	"label": "ZIPP ZBS-382N7",
+	"brand": "ZIPP",
+	"model": "ZBS-382N7",
+	"mpn": "ZBS-382N7",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
+	"demandExplanation": "La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/ponceuse-bande-zipp-zbs-382n7.webp",
+		"alt": "Repères techniques : ZIPP ZBS-382N7",
+		"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+	},
+	"variant": {
+		"familyId": "zipp-zbs-382n7",
+		"label": "Référence ZBS-382N7",
+		"distinguishingAttributes": {
+			"reference": "ZBS-382N7",
+			"Vitesse à vide": "17000 tr/min",
+			"Masse": "1.3 kg"
+		}
+	},
+	"editorial": {
+		"overview": "ZIPP ZBS-382N7. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Vitesse à vide : 17000 tr/min. Masse : 1.3 kg.",
+		"verifiedFacts": [
+			"Vitesse à vide : 17000 tr/min.",
+			"Masse : 1.3 kg.",
+			"Référence constructeur : ZBS-382N7."
+		],
+		"limitations": [
+			"La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
+			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Vitesse à vide",
+			"value": "17000 tr/min",
+			"evidenceIds": [
+				"october-b-zipp-tools-p133"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "1.3 kg",
+			"evidenceIds": [
+				"october-b-zipp-tools-p133"
+			]
+		},
+		{
+			"label": "Référence constructeur",
+			"value": "ZBS-382N7",
+			"evidenceIds": [
+				"october-b-zipp-tools-p133"
+			]
+		},
+		{
+			"label": "Condition de pression originale",
+			"value": "Pression de consommation non établie sur cette page.",
+			"evidenceIds": [
+				"october-b-zipp-tools-p133"
+			]
+		},
+		{
+			"label": "Consommation hors calcul, pression non établie",
+			"value": "113,267 L/min",
+			"evidenceIds": [
+				"october-b-zipp-tools-p133"
+			]
+		},
+		{
+			"label": "Localisation documentaire",
+			"value": "ZIPP, catalogue général pneumatique, page PDF 133",
+			"evidenceIds": [
+				"october-b-zipp-tools-p133"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "october-b-zipp-tools-p133",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=133",
+			"sourceLabel": "ZIPP, catalogue général pneumatique, page PDF 133",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-01",
+			"confidence": "B",
+			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"october-b-zipp-tools-p133"
+		],
+		"workingPressureBar": [
+			"october-b-zipp-tools-p133"
+		],
+		"demandExplanation": [
+			"october-b-zipp-tools-p133"
+		]
+	},
+	"notes": [
+		"La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé."
+	]
+};
+
+export default product;

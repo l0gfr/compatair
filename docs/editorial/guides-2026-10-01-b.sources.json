@@ -1,0 +1,934 @@
+{
+  "schemaVersion": 1,
+  "batchId": "documented-expansion-2026-10-01-b",
+  "reviewDate": "2026-10-01",
+  "reviewType": "internal_editorial",
+  "assistedByAI": true,
+  "externalProfessionalValidation": false,
+  "physicalTestsPerformed": false,
+  "publicationScope": {
+    "guidesBefore": 406,
+    "guidesAdded": 30,
+    "guidesAfter": 436,
+    "compressorsBefore": 2019,
+    "compressorsAdded": 200,
+    "compressorsAfter": 2219,
+    "toolsBefore": 8087,
+    "toolsAdded": 1000,
+    "toolsAfter": 9087
+  },
+  "sources": [
+    {
+      "id": "kaeser-sx",
+      "url": "https://nl.kaeser.com/download.ashx?id=tcm:32-5919",
+      "resolvedUrl": "https://nl.kaeser.com/download.ashx?id=tcm:32-5919",
+      "sha256": "1c595545d11b0d2780a857ed63958320bf5e1bccb5e8e1852b6816dca5c9f0f3",
+      "bytes": 2509496,
+      "observedAt": "2026-10-01",
+      "contentType": "application/pdf",
+      "sourceRole": "primary",
+      "sourceLabel": "KAESER, brochure SX",
+      "dutyQuote": "Dual-, Quadro-, Vario- en continusturing"
+    },
+    {
+      "id": "kaeser-sm",
+      "url": "https://nl.kaeser.com/download.ashx?id=tcm:32-5920",
+      "resolvedUrl": "https://nl.kaeser.com/download.ashx?id=tcm:32-5920",
+      "sha256": "7c4b96a5fb4ea4fb206655af4138d8a90096a61661823528c5f6bf282d66a6d5",
+      "bytes": 4402722,
+      "observedAt": "2026-10-01",
+      "contentType": "application/pdf",
+      "sourceRole": "primary",
+      "sourceLabel": "KAESER, brochure SM",
+      "dutyQuote": "Selection of Dual, Quadro, Vario and Continuous control modes as standard."
+    },
+    {
+      "id": "kaeser-sk",
+      "url": "https://nl.kaeser.com/download.ashx?id=tcm:32-5921",
+      "resolvedUrl": "https://nl.kaeser.com/download.ashx?id=tcm:32-5921",
+      "sha256": "e7f1e0bfdf990a0abe341a0750f48a851c4245bca66e72802e90d35c3fe4b75e",
+      "bytes": 4190300,
+      "observedAt": "2026-10-01",
+      "contentType": "application/pdf",
+      "sourceRole": "primary",
+      "sourceLabel": "KAESER, brochure SK",
+      "dutyQuote": "Dual-, Quadro-, Vario- en continusturing"
+    },
+    {
+      "id": "ceccato-csm-21-40-hp-pdf",
+      "url": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-21---40-hp/CSM_21-40_FR.pdf",
+      "resolvedUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-21---40-hp/CSM_21-40_FR.pdf",
+      "sha256": "56ffd1e042b2fcb974d3e2e825a074c7965f4d2671f3f7806176f2334e3f9321",
+      "bytes": 4528946,
+      "observedAt": "2026-10-01",
+      "contentType": "application/pdf",
+      "sourceRole": "primary",
+      "sourceLabel": "Ceccato, CSM 21–40, brochure française",
+      "dutyQuote": "continu à 100 %."
+    },
+    {
+      "id": "ceccato-drm-40-60-hp-pdf",
+      "url": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/drm/drm-40-60-hp/CECCATO-DRM-40-60-FR.pdf",
+      "resolvedUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/drm/drm-40-60-hp/CECCATO-DRM-40-60-FR.pdf",
+      "sha256": "9ac976e1f70ee343231aa9eed25f692cbe3b1ae6e1626189c5384432a97f0ec0",
+      "bytes": 1079267,
+      "observedAt": "2026-10-01",
+      "contentType": "application/pdf",
+      "sourceRole": "primary",
+      "sourceLabel": "Ceccato, DRM 40–60 / IVR, brochure française",
+      "dutyQuote": null
+    },
+    {
+      "id": "ceccato-drm-40-60-hp",
+      "url": "https://www.ceccato.com/fr-international/air-compressor-products/rotary-screw-compressor/fixed-speed/drm-40-60-hp",
+      "resolvedUrl": "https://www.ceccato.com/fr-international/air-compressor-products/rotary-screw-compressor/fixed-speed/drm-40-60-hp",
+      "sha256": "090162764f48e41b23a714d8eb46c914e2ab605b831acb4c6fb6adddf0bc8cd2",
+      "bytes": 160507,
+      "observedAt": "2026-10-01",
+      "contentType": "text/html; charset=UTF-8",
+      "sourceRole": "primary",
+      "sourceLabel": "Ceccato, présentation DRM 40–60",
+      "dutyQuote": "le DRM 40 – 60 CH fournit un air comprimé fiable en continu"
+    },
+    {
+      "id": "ceccato-csm-7-5-20-hp-pdf",
+      "url": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-7-5-20-hp-leaflet/Ceccato-CSM-7-5-20-HP-FR.pdf",
+      "resolvedUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-7-5-20-hp-leaflet/Ceccato-CSM-7-5-20-HP-FR.pdf",
+      "sha256": "7e44a0043bb978c2dc52381d49f60918e6638a6ba495056e2ffe45de90f21df7",
+      "bytes": 1856350,
+      "observedAt": "2026-10-01",
+      "contentType": "application/pdf",
+      "sourceRole": "primary",
+      "sourceLabel": "Ceccato, CSM 7,5–20, brochure française",
+      "dutyQuote": "Construit pour un cycle de service continu à 100%."
+    },
+    {
+      "id": "zipp-tools",
+      "url": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+      "sourceLabel": "ZIPP, catalogue général pneumatique",
+      "contentType": "application/pdf",
+      "observedAt": "2026-10-01",
+      "bytes": 16082842,
+      "sha256": "5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6"
+    },
+    {
+      "id": "gison-tools",
+      "url": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+      "sourceLabel": "GISON, catalogue pneumatique 2018–2019",
+      "contentType": "application/pdf",
+      "observedAt": "2026-10-01",
+      "bytes": 67246871,
+      "sha256": "a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077"
+    },
+    {
+      "id": "ober-tools",
+      "url": "https://www.ober.it/download/13ALd55cbw",
+      "sourceLabel": "OBER, catalogue industriel 2020 révision 2",
+      "contentType": "application/pdf",
+      "observedAt": "2026-10-01",
+      "bytes": 4672824,
+      "sha256": "b33909f1fd8dabd20bb04efacb1bff64894a3989ef835b32c0aa8ba2e02b1beb"
+    },
+    {
+      "id": "kaeser-duty",
+      "url": "https://us.kaeser.com/compressed-air-resources/applications/automotive-services/",
+      "resolvedUrl": "https://us.kaeser.com/compressed-air-resources/applications/automotive-services/",
+      "sha256": "3f5687777a06c60ed4f3918036cfb4edab945e750016d89b42305f3a2bc6b9fe",
+      "bytes": 74224,
+      "observedAt": "2026-10-01",
+      "contentType": "text/html; charset=utf-8",
+      "sourceRole": "primary",
+      "sourceLabel": "KAESER, applications atelier automobile, séries SX SM SK",
+      "dutyQuote": "SX, SM, SK Rotary Screws | 100% duty cycle"
+    },
+    {
+      "id": "atlas-us",
+      "url": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/Atlas%20Copco%20-%20Industrial%20tools%20and%20solutions.pdf",
+      "resolvedUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/Atlas%20Copco%20-%20Industrial%20tools%20and%20solutions.pdf",
+      "sha256": "4fab5d622435c614e9ed24db292c697a8e4ca13f0f5f8edb8d2092ee01348d74",
+      "bytes": 35613115,
+      "observedAt": "2026-09-30",
+      "contentType": "application/pdf",
+      "sourceRole": "primary",
+      "sourceLabel": "Atlas Copco, Industrial tools and solutions, édition US"
+    },
+    {
+      "id": "bosch-industry",
+      "url": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf",
+      "resolvedUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf",
+      "sha256": "54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab",
+      "bytes": 5955001,
+      "observedAt": "2026-09-30",
+      "contentType": "application/pdf",
+      "sourceRole": "primary",
+      "sourceLabel": "Bosch, Industrial air tools catalogue"
+    }
+  ],
+  "guides": [
+    {
+      "slug": "kaeser-sx3-perceuse-bosch-marge-debit",
+      "title": "KAESER SX 3 : une perceuse de 270 L/min suffit-elle ?",
+      "sha256": "5b42971eaf724b97cadf59e6c77b36430aa91fa1c948999b7fe919abb0052efa",
+      "sourceIds": [
+        "kaeser-sx",
+        "bosch-industry",
+        "kaeser-duty"
+      ],
+      "visibleWordCount": 526,
+      "internalLinks": [
+        "/outils-pneumatiques/perceuse-bosch-0-607-154-101-0607154101/",
+        "/guides/bosch-0607154101-compresseur-270-litres-minute/",
+        "/compresseurs/kaeser-sx-3-base-sans-cuve-8-bar/",
+        "/guides/comparatif-compresseurs-debit-restitue/"
+      ],
+      "externalCitations": [
+        "https://nl.kaeser.com/download.ashx?id=tcm:32-5919#page=8",
+        "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=12",
+        "https://us.kaeser.com/compressed-air-resources/applications/automotive-services/"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "kaeser-sx6-version-13-bar-debit",
+      "title": "KAESER SX 6 : 13 bar coûte combien de débit ?",
+      "sha256": "380b8934c034c8094e9dba2609ad1d5ec6345407572405a238e572c47f52696f",
+      "sourceIds": [
+        "kaeser-sx"
+      ],
+      "visibleWordCount": 487,
+      "internalLinks": [
+        "/compresseurs/kaeser-sx-6-base-sans-cuve-8-bar/",
+        "/compresseurs/kaeser-sx-6-base-sans-cuve-15-bar/",
+        "/guides/pression-travail-6-3-bar-outils-pneumatiques/"
+      ],
+      "externalCitations": [
+        "https://nl.kaeser.com/download.ashx?id=tcm:32-5919#page=8"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "kaeser-sx8-t-secheur-debit-encombrement",
+      "title": "KAESER SX 8 ou SX 8 T : choisir le sécheur intégré",
+      "sha256": "6ddf8acdfa12d4ae7f05f0958485ab347bc7b31b3888a75f7067437cee046ad9",
+      "sourceIds": [
+        "kaeser-sx"
+      ],
+      "visibleWordCount": 496,
+      "internalLinks": [
+        "/compresseurs/kaeser-sx-8-base-sans-cuve-8-bar/",
+        "/compresseurs/kaeser-sx-8-t-secheur-integre-sans-cuve-8-bar/",
+        "/guides/groupe-frl-filtre-regulateur-lubrificateur/"
+      ],
+      "externalCitations": [
+        "https://nl.kaeser.com/download.ashx?id=tcm:32-5919#page=8"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "kaeser-aircenter8-cuve-200-litres-reserve",
+      "title": "KAESER AIRCENTER 8 : les 200 L changent quoi ?",
+      "sha256": "f28104c1868eeafc172127d70ed791ca99f09789d6ded02a8bf3e1eeb1983616",
+      "sourceIds": [
+        "kaeser-sx"
+      ],
+      "visibleWordCount": 468,
+      "internalLinks": [
+        "/compresseurs/kaeser-aircenter-8-secheur-et-cuve-integres-8-bar/",
+        "/guides/gentilin-smart-225-250-reserve/"
+      ],
+      "externalCitations": [
+        "https://nl.kaeser.com/download.ashx?id=tcm:32-5919#page=5",
+        "https://nl.kaeser.com/download.ashx?id=tcm:32-5919#page=8"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "kaeser-sm10-sm13-deux-perceuses-atelier",
+      "title": "KAESER SM 10 ou SM 13 pour deux postes de perçage ?",
+      "sha256": "820401defdce41e3d8350a992dba9bd923e06cdf2a40b65ad00582a99b6ceb3f",
+      "sourceIds": [
+        "kaeser-sm",
+        "bosch-industry",
+        "kaeser-duty"
+      ],
+      "visibleWordCount": 485,
+      "internalLinks": [
+        "/outils-pneumatiques/perceuse-bosch-0-607-154-101-0607154101/",
+        "/outils-pneumatiques/perceuse-bosch-0-607-161-100-0607161100/",
+        "/compresseurs/kaeser-sm-10-base-sans-cuve-8-bar/",
+        "/compresseurs/kaeser-sm-13-base-sans-cuve-8-bar/"
+      ],
+      "externalCitations": [
+        "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=12",
+        "https://nl.kaeser.com/download.ashx?id=tcm:32-5920#page=8",
+        "https://us.kaeser.com/compressed-air-resources/applications/automotive-services/"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "kaeser-sm16-moteur-9kw-production-air",
+      "title": "KAESER SM 16 : dimensionner avec 9 kW ou avec le FAD ?",
+      "sha256": "3591d047da2b2098e76fc198c2d899c80b20a1b709473cb65bb13912f2f38e02",
+      "sourceIds": [
+        "kaeser-sm"
+      ],
+      "visibleWordCount": 521,
+      "internalLinks": [
+        "/compresseurs/kaeser-sm-16-base-sans-cuve-8-bar/",
+        "/guides/kaeser-sm10-sm13-deux-perceuses-atelier/"
+      ],
+      "externalCitations": [
+        "https://nl.kaeser.com/download.ashx?id=tcm:32-5920#page=8"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "kaeser-sk22-six-bar-outil-6-3-bar",
+      "title": "KAESER SK 22 à 6 bar pour un outil à 6,3 bar ?",
+      "sha256": "8cfa9f1975291da8af65f40b33cf660fd9b912d349b1b6b79c9c9d91c388a12d",
+      "sourceIds": [
+        "kaeser-sk",
+        "bosch-industry"
+      ],
+      "visibleWordCount": 490,
+      "internalLinks": [
+        "/outils-pneumatiques/perceuse-bosch-0-607-154-101-0607154101/",
+        "/guides/bosch-0607154101-compresseur-270-litres-minute/",
+        "/compresseurs/kaeser-sk-22-base-sans-cuve-6-bar/",
+        "/compresseurs/kaeser-sk-22-base-sans-cuve-8-bar/",
+        "/guides/pression-travail-6-3-bar-outils-pneumatiques/"
+      ],
+      "externalCitations": [
+        "https://nl.kaeser.com/download.ashx?id=tcm:32-5921#page=8",
+        "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=4"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "kaeser-sk25-meuleuse-gtg25-perceuse-simultanees",
+      "title": "KAESER SK 25 : meuleuse et perceuse simultanées ?",
+      "sha256": "8659ac96c3dd0e9a4e0f40e85bc0c96efed868cf55e8be0626eb4591efa0c211",
+      "sourceIds": [
+        "kaeser-sk",
+        "atlas-us",
+        "bosch-industry"
+      ],
+      "visibleWordCount": 497,
+      "internalLinks": [
+        "/compresseurs/kaeser-sk-25-base-sans-cuve-8-bar/",
+        "/outils-pneumatiques/meuleuse-atlas-copco-gtg25-f120-13-8423252501/",
+        "/guides/compresseur-pour-meuleuse-pneumatique/"
+      ],
+      "externalCitations": [
+        "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/Atlas%20Copco%20-%20Industrial%20tools%20and%20solutions.pdf#page=219",
+        "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=12",
+        "https://nl.kaeser.com/download.ashx?id=tcm:32-5921#page=8"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "kaeser-aircenter22-aircenter13-cuves-fad",
+      "title": "KAESER AIRCENTER 13 ou 22 : comparer les ensembles",
+      "sha256": "d84880bb8340d644b21344bcab530a0c5fff8c1d327eaf539dcce4b83cd8083a",
+      "sourceIds": [
+        "kaeser-sm",
+        "kaeser-sk"
+      ],
+      "visibleWordCount": 556,
+      "internalLinks": [
+        "/compresseurs/kaeser-aircenter-13-secheur-et-cuve-integres-8-bar/",
+        "/compresseurs/kaeser-aircenter-22-secheur-et-cuve-integres-8-bar/",
+        "/guides/kaeser-aircenter8-cuve-200-litres-reserve/"
+      ],
+      "externalCitations": [
+        "https://nl.kaeser.com/download.ashx?id=tcm:32-5920#page=8",
+        "https://nl.kaeser.com/download.ashx?id=tcm:32-5921#page=8"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "ceccato-csm21-kaeser-sk25-fad-comparaison",
+      "title": "Ceccato CSM 21 ou KAESER SK 25 : 30 L/min d’écart",
+      "sha256": "f999f9d8e05b6ca71354169d7422d442d88e55684da165d57205de6eac1aba46",
+      "sourceIds": [
+        "ceccato-csm-21-40-hp-pdf",
+        "kaeser-sk"
+      ],
+      "visibleWordCount": 515,
+      "internalLinks": [
+        "/compresseurs/ceccato-csm-21-fm-au-sol-8-bar/",
+        "/compresseurs/kaeser-sk-25-base-sans-cuve-8-bar/",
+        "/guides/kaeser-sk25-meuleuse-gtg25-perceuse-simultanees/"
+      ],
+      "externalCitations": [
+        "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-21---40-hp/CSM_21-40_FR.pdf#page=5",
+        "https://nl.kaeser.com/download.ashx?id=tcm:32-5921#page=8"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "ceccato-csm25-10-13-bar-debit-perdu",
+      "title": "Ceccato CSM 25 : choisir 10 ou 13 bar",
+      "sha256": "a399b4d2afd7f40163a0ec339b49ab2454d06471120ad96bbf0b977cad32118d",
+      "sourceIds": [
+        "ceccato-csm-21-40-hp-pdf"
+      ],
+      "visibleWordCount": 585,
+      "internalLinks": [
+        "/compresseurs/ceccato-csm-25-fm-au-sol-10-bar/",
+        "/compresseurs/ceccato-csm-25-fm-au-sol-13-bar/",
+        "/guides/compresseur-vis-8-10-13-bar-versions/",
+        "/guides/diagnostiquer-chute-pression-air-comprime/"
+      ],
+      "externalCitations": [
+        "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-21---40-hp/CSM_21-40_FR.pdf#page=5"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "ceccato-csm30-arrondi-l-s-m3-h",
+      "title": "CSM 30 : pourquoi 53,6 L/s et 193 m³/h diffèrent",
+      "sha256": "61b6652f44d5e06b06d7a1fe527e8e86c4c8c1c18e2f8e0a3a3e53117dac5496",
+      "sourceIds": [
+        "ceccato-csm-21-40-hp-pdf"
+      ],
+      "visibleWordCount": 548,
+      "internalLinks": [
+        "/compresseurs/ceccato-csm-30-fm-au-sol-10-bar/",
+        "/guides/contradiction-debit-cfm-m3-min-catalogues/"
+      ],
+      "externalCitations": [
+        "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-21---40-hp/CSM_21-40_FR.pdf#page=5"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "ceccato-csm40-cuve-500-litres-configuration",
+      "title": "Ceccato CSM 40 : la cuve 500 L est-elle documentée ?",
+      "sha256": "914c3ac02dd726d97b8ea889925699acd8d62dd861a657a7ff3a7d797a117fa1",
+      "sourceIds": [
+        "ceccato-csm-21-40-hp-pdf"
+      ],
+      "visibleWordCount": 571,
+      "internalLinks": [
+        "/compresseurs/ceccato-csm-40-fm-au-sol-8-bar/",
+        "/guides/compresseur-sur-chassis-sans-cuve/"
+      ],
+      "externalCitations": [
+        "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-21---40-hp/CSM_21-40_FR.pdf#page=5"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "ceccato-csm10-cuve-270-500-reserve",
+      "title": "Ceccato CSM 10 : cuve 270 ou 500 L ?",
+      "sha256": "bae26675975b02e14ff5ca38379d3da3fbb99e7229cd6ebaf6daf70321133d41",
+      "sourceIds": [
+        "ceccato-csm-7-5-20-hp-pdf"
+      ],
+      "visibleWordCount": 529,
+      "internalLinks": [
+        "/compresseurs/ceccato-csm-10-cuve-270-l-8-bar/",
+        "/compresseurs/ceccato-csm-10-cuve-500-l-8-bar/",
+        "/guides/choisir-volume-cuve-24-50-90-litres/"
+      ],
+      "externalCitations": [
+        "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-7-5-20-hp-leaflet/Ceccato-CSM-7-5-20-HP-FR.pdf#page=5"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "ceccato-csm7-5-secheur-air-huile",
+      "title": "CSM 7,5 avec sécheur : quel air pour le poste ?",
+      "sha256": "d7795d4aaa411b22bcea5ce4c1406e02d0fc5a2920519e86b7b7e5f34053be2f",
+      "sourceIds": [
+        "ceccato-csm-7-5-20-hp-pdf"
+      ],
+      "visibleWordCount": 561,
+      "internalLinks": [
+        "/compresseurs/ceccato-csm-7-5-fm-sur-chassis-8-bar/",
+        "/compresseurs/ceccato-csm-7-5-cuve-270-l-et-secheur-8-bar/",
+        "/guides/point-rosee-secheur-filtre-air-comprime/"
+      ],
+      "externalCitations": [
+        "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-7-5-20-hp-leaflet/Ceccato-CSM-7-5-20-HP-FR.pdf#page=5"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "ceccato-csm15-cycle-continu-100-pourcent",
+      "title": "Ceccato CSM 15 : que signifie le service continu ?",
+      "sha256": "558bfe1721133e0faf9b8254bbe8f7e732534cddd12018456beed47492906d13",
+      "sourceIds": [
+        "ceccato-csm-7-5-20-hp-pdf"
+      ],
+      "visibleWordCount": 575,
+      "internalLinks": [
+        "/compresseurs/ceccato-csm-15-fm-sur-chassis-8-bar/",
+        "/guides/compresseur-piston-ou-vis-profil-charge/"
+      ],
+      "externalCitations": [
+        "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-7-5-20-hp-leaflet/Ceccato-CSM-7-5-20-HP-FR.pdf#page=3",
+        "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-7-5-20-hp-leaflet/Ceccato-CSM-7-5-20-HP-FR.pdf#page=5"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "ceccato-csm20-500-secheur-filtres-devis",
+      "title": "CSM 20 500 L : sécheur et filtres sur le devis",
+      "sha256": "17a9f341ed1f3d7a2d3a897c92ed4a9eb5c31b058933f61bed7ff6c793e304a3",
+      "sourceIds": [
+        "ceccato-csm-7-5-20-hp-pdf"
+      ],
+      "visibleWordCount": 561,
+      "internalLinks": [
+        "/compresseurs/ceccato-csm-20-cuve-500-l-secheur-et-filtres-8-bar/",
+        "/guides/filtre-air-comprime-perte-pression-remplacement/"
+      ],
+      "externalCitations": [
+        "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-7-5-20-hp-leaflet/Ceccato-CSM-7-5-20-HP-FR.pdf#page=5"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "ceccato-drm40-csm40-comparer-pressions",
+      "title": "DRM 40 ou CSM 40 : comparer les bonnes pressions",
+      "sha256": "83a804272f58ed62eb5834df2bb93de6fd45c131f6509cec56a10714969352c1",
+      "sourceIds": [
+        "ceccato-csm-21-40-hp-pdf",
+        "ceccato-drm-40-60-hp-pdf"
+      ],
+      "visibleWordCount": 564,
+      "internalLinks": [
+        "/compresseurs/ceccato-drm-40-fm-sans-secheur-7-5-bar/",
+        "/compresseurs/ceccato-csm-40-fm-au-sol-8-bar/",
+        "/guides/comparatif-compresseurs-debit-restitue/"
+      ],
+      "externalCitations": [
+        "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/drm/drm-40-60-hp/CECCATO-DRM-40-60-FR.pdf#page=5",
+        "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csm-from-5-hp-on/csm-21---40-hp/CSM_21-40_FR.pdf#page=5"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "ceccato-drm50-365-m3-h-102-l-s",
+      "title": "DRM 50 : 365 m³/h et 102 L/s sont-ils cohérents ?",
+      "sha256": "d70b5c6e5951264212ff069f0f684cb7ef9beb5de0fb2386030dd53b7b30eb97",
+      "sourceIds": [
+        "ceccato-drm-40-60-hp-pdf"
+      ],
+      "visibleWordCount": 501,
+      "internalLinks": [
+        "/compresseurs/ceccato-drm-50-fm-sans-secheur-8-5-bar/",
+        "/guides/ceccato-csm30-arrondi-l-s-m3-h/",
+        "/guides/contradiction-debit-cfm-m3-min-catalogues/"
+      ],
+      "externalCitations": [
+        "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/drm/drm-40-60-hp/CECCATO-DRM-40-60-FR.pdf#page=5"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "ceccato-drm60-air-refroidissement-fad",
+      "title": "DRM 60 : 6 700 m³/h ne sont pas le débit du réseau",
+      "sha256": "e73ef3af04734d4b786dbb5db904ff11753086749dd9361b49a2ca0796ded46c",
+      "sourceIds": [
+        "ceccato-drm-40-60-hp-pdf"
+      ],
+      "visibleWordCount": 548,
+      "internalLinks": [
+        "/compresseurs/ceccato-drm-60-fm-sans-secheur-10-bar/",
+        "/guides/debit-restitue-fad-vs-debit-aspire/"
+      ],
+      "externalCitations": [
+        "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/drm/drm-40-60-hp/CECCATO-DRM-40-60-FR.pdf#page=5"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "gison-gp101rn-litres-cycle-cadence",
+      "title": "GISON GP-101RN : quel débit pour votre cadence ?",
+      "sha256": "e0f46c72db5c2a3a6c899add5ee413d6c281b0a89698eed2ce8f1612cf0ae855",
+      "sourceIds": [
+        "gison-tools"
+      ],
+      "visibleWordCount": 531,
+      "internalLinks": [
+        "/outils-pneumatiques/riveteuse-gison-gp-101rn/",
+        "/guides/atelier-visseuse-ponceuse-demande-moyenne/",
+        "/guides/diagnostiquer-chute-pression-air-comprime/"
+      ],
+      "externalCitations": [
+        "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=70"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "gison-gp250rm-gp250ri-ecrous-cadence",
+      "title": "GP-250RM ou GP-250RI : métrique ou impérial ?",
+      "sha256": "10db03561153cdf76bbb395440de554f75c6999dd1e8d1293534665dded40fa8",
+      "sourceIds": [
+        "gison-tools"
+      ],
+      "visibleWordCount": 553,
+      "internalLinks": [
+        "/outils-pneumatiques/riveteuse-gison-gp-250rm/",
+        "/outils-pneumatiques/riveteuse-gison-gp-250ri/",
+        "/guides/gison-gp101rn-litres-cycle-cadence/"
+      ],
+      "externalCitations": [
+        "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=70"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "gison-gp824st2-gp824st3-vitesse-air",
+      "title": "GISON GP-824ST2 ou ST3 : vitesse et besoin en air",
+      "sha256": "aab1baf0d947e964fb0283e6b3607f929e0b1fc35f57bbec7942cf02d06ca366",
+      "sourceIds": [
+        "gison-tools"
+      ],
+      "visibleWordCount": 539,
+      "internalLinks": [
+        "/outils-pneumatiques/meuleuse-gison-gp-824st2/",
+        "/outils-pneumatiques/meuleuse-gison-gp-824st3/",
+        "/guides/atlas-gtg25-f120-13-debit-charge-vide/",
+        "/guides/flexible-enrouleur-raccords-garage-debit/"
+      ],
+      "externalCitations": [
+        "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=30"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "gison-gp851a-gp851b-derouilleur-acces",
+      "title": "GP-851A ou GP-851B : choisir le dérouilleur",
+      "sha256": "7feb269e32e908d2d3053022a59513671af105eaecfc027ce19c7a19b86e0e1d",
+      "sourceIds": [
+        "gison-tools"
+      ],
+      "visibleWordCount": 537,
+      "internalLinks": [
+        "/outils-pneumatiques/derouilleur-a-aiguilles-gison-gp-851a/",
+        "/outils-pneumatiques/derouilleur-a-aiguilles-gison-gp-851b/",
+        "/guides/burineur-pneumatique-chantier-debit-vibrations/",
+        "/guides/diagnostiquer-chute-pression-air-comprime/"
+      ],
+      "externalCitations": [
+        "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=53"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "gison-gp330-gp330a-perceuse-mandrin",
+      "title": "GISON GP-330 ou GP-330A : quelle perceuse choisir ?",
+      "sha256": "1137819767d4170735319bf7b0896cbe76f4b293ded099b37b7224695274a016",
+      "sourceIds": [
+        "gison-tools"
+      ],
+      "visibleWordCount": 551,
+      "internalLinks": [
+        "/outils-pneumatiques/perceuse-gison-gp-330/",
+        "/outils-pneumatiques/perceuse-gison-gp-330a/",
+        "/guides/nitto-adr65-adr100-perceuse-debit/",
+        "/guides/kaeser-sx3-perceuse-bosch-marge-debit/"
+      ],
+      "externalCitations": [
+        "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=59"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "gison-gp948a-gp948b-lime-course",
+      "title": "GP-948A ou GP-948B : quelle course pour limer ?",
+      "sha256": "ee83941f75ed55dfa6c94bcad5c7dc11f5d4cd26def462f4dd249bd76fe62f93",
+      "sourceIds": [
+        "gison-tools"
+      ],
+      "visibleWordCount": 541,
+      "internalLinks": [
+        "/outils-pneumatiques/lime-alternative-gison-gp-948a/",
+        "/outils-pneumatiques/lime-alternative-gison-gp-948b/",
+        "/guides/gison-gp824st2-gp824st3-vitesse-air/",
+        "/guides/diagnostiquer-chute-pression-air-comprime/"
+      ],
+      "externalCitations": [
+        "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=76"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "zipp-ziw6511-ziw611-consommation-moyenne",
+      "title": "ZIW6511 ou ZIW611 : pourquoi 230 et 700 L/min ?",
+      "sha256": "973a1c9f582bba7992446320ce0997c71d59edfe923d87650e6d5078b8fd52a9",
+      "sourceIds": [
+        "zipp-tools"
+      ],
+      "visibleWordCount": 581,
+      "internalLinks": [
+        "/outils-pneumatiques/cle-a-chocs-zipp-ziw6511/",
+        "/outils-pneumatiques/cle-a-chocs-zipp-ziw611/",
+        "/guides/cp7732c-ou-cp7748-debit-encombrement/",
+        "/guides/flexible-enrouleur-raccords-garage-debit/"
+      ],
+      "externalCitations": [
+        "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=6"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "zipp-ziw4206t-ziw4207j-mini-cle",
+      "title": "ZIW4206T ou ZIW4207J : choisir une mini clé ZIPP",
+      "sha256": "b1d9ad2229a48ca3819bf44defc22a5422adb86338fb7e943c30b2fe3dd66d7b",
+      "sourceIds": [
+        "zipp-tools"
+      ],
+      "visibleWordCount": 556,
+      "internalLinks": [
+        "/outils-pneumatiques/cle-a-chocs-zipp-ziw4206t/",
+        "/outils-pneumatiques/cle-a-chocs-zipp-ziw4207j/",
+        "/guides/zipp-ziw6511-ziw611-consommation-moyenne/",
+        "/guides/flexible-enrouleur-raccords-garage-debit/"
+      ],
+      "externalCitations": [
+        "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=12"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "zipp-zar0921-zar0921v-volume-par-coup",
+      "title": "ZAR0921 et ZAR0921V : lire 0,03 ft³ par coup",
+      "sha256": "4256c502a39f89e1dc7603a79b01a7a2b1a75844b4d67ed9daa98244c50d55a5",
+      "sourceIds": [
+        "zipp-tools"
+      ],
+      "visibleWordCount": 551,
+      "internalLinks": [
+        "/outils-pneumatiques/riveteuse-zipp-zar0921/",
+        "/outils-pneumatiques/riveteuse-zipp-zar0921v/",
+        "/guides/gison-gp101rn-litres-cycle-cadence/",
+        "/guides/gison-gp250rm-gp250ri-ecrous-cadence/"
+      ],
+      "externalCitations": [
+        "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=49"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    },
+    {
+      "slug": "ober-ami22at-300-nl-ciclo-unite",
+      "title": "OBER AMI22AT : pourquoi 300 Nl/ciclo pose problème",
+      "sha256": "81444c09d0c7192d175fd0f5393cadc8a8c499d8653a044627611fe0b43aa8bc",
+      "sourceIds": [
+        "ober-tools"
+      ],
+      "visibleWordCount": 577,
+      "internalLinks": [
+        "/outils-pneumatiques/visseuse-ober-ami22at-8301052/",
+        "/guides/contradiction-debit-cfm-m3-min-catalogues/",
+        "/guides/visseuse-pneumatique-demarrage-appui-gachette/"
+      ],
+      "externalCitations": [
+        "https://www.ober.it/download/13ALd55cbw#page=16"
+      ],
+      "infographics": 1,
+      "review": {
+        "status": "internal",
+        "physicalTestsPerformed": false,
+        "limits": "Données déclarées, conditions conservées, calculs et scénarios identifiés. Aucun avis d’essai ou classement commercial inventé."
+      }
+    }
+  ],
+  "brands": {
+    "compressors": {
+      "KAESER": 84,
+      "Ceccato": 116
+    },
+    "tools": {
+      "ZIPP": 715,
+      "GISON": 261,
+      "OBER": 24
+    }
+  },
+  "toolDemandCoverage": [
+    {
+      "demandModel": "variable-volume",
+      "airflowBasis": "",
+      "count": 623
+    },
+    {
+      "demandModel": "fixed-flow",
+      "airflowBasis": "average",
+      "count": 137
+    },
+    {
+      "demandModel": "fixed-flow",
+      "airflowBasis": "unqualified",
+      "count": 237
+    },
+    {
+      "demandModel": "per-action",
+      "airflowBasis": "",
+      "count": 3
+    }
+  ],
+  "indexation": {
+    "admission": "pending",
+    "policyChanged": false,
+    "reason": "Quota du 1 octobre déjà utilisé : aucune nouvelle admission à indexation. Pages accessibles en noindex,follow, hors sitemap."
+  },
+  "hashScope": "Documents effectivement collectés et guides après relecture et maillage ; fichiers originaux des fabricants non redistribués.",
+  "reviewFindings": [
+    "KAESER : cycle 100 % sourcé séparément du mode de commande, pression de FAD distincte du maximum, ordre largeur/profondeur/hauteur conservé.",
+    "Ceccato : service 100 % pages PDF 3 des brochures CSM, 50 kg additionnels pour les cuves 500 L de CSM 7,5–20 selon note fabricant, pas de variante CSM 40 500 L inventée.",
+    "GISON : OCR local de brochure scannée, cellules de tableaux comparées visuellement pour les guides ; 90 psi convertis en bar, 3 consommations par cycle, vitesse maximale distincte de vitesse à vide.",
+    "ZIPP : consommation moyenne conservée, trois adaptateurs exclus et remplacés par riveteuses, catégories corrigées ; aucune assimilation de moyenne en maximum.",
+    "OBER : unité Nl/ciclo et pression non définies, valeurs exclues du moteur ; visseuses d’angle classées en visseuses.",
+    "Guides : erreur Bosch 660 L/min corrigée avant publication ; 30 problèmes distincts, calculs relus, 12 guides parents enrichis et 18 mappings outil-guide exacts.",
+    "Identités ZIPP : 44 libellés regroupés remplacés par des références exactes imprimées ; 14 lignes de familles/accessoires exclues et remplacées par 14 références exactes. Fraction ZRR21-5/16 conservée comme référence réelle, sans expansion de suffixe inventée."
+  ]
+}

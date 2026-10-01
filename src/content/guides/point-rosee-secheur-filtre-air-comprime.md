@@ -114,3 +114,5 @@ Pour préciser le choix de la configuration, consultez [version Airblok DRY avec
 - [Atlas Copco, Compressed Air Manual, 9e édition](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf)
 
 Le [point de rosée de +3 °C annoncé pour les RSK-B](/guides/renner-rsk-b-point-rosee-3-degres-air/) illustre la portée limitée d’un repère d’humidité. L’implantation du traitement et du compresseur doit aussi tenir compte des [variantes de hauteur du LENTO 15](/guides/almig-lento-15-air-eau-hauteur-installation/).
+
+Le [CSM 7,5 avec sécheur](/guides/ceccato-csm7-5-secheur-air-huile/) montre pourquoi il faut demander la chaîne de traitement et sa qualité garantie. Le tableau d’équipements ne transforme pas un compresseur lubrifié en machine sans huile.

@@ -141,3 +141,5 @@ Si l’offre comprend un variateur, poursuivez avec [quand choisir un compresseu
 - [CAGI, Performance Verification Program](https://www.cagi.org/performance-verification)
 - [CAGI, formulaire de données pour compresseur rotatif à vitesse fixe](https://www.cagi.org/assets/documents/pdfs/RotaryCompressorUniformTestMethodNotApplicable.pdf?updated=1731084220)
 - [Atlas Copco, LZ premium oil-free piston compressor](https://www.atlascopco.com/en-us/compressors/products/air-compressor/oil-free-air-compressors/lz-premium)
+
+Le [cycle continu du Ceccato CSM 15](/guides/ceccato-csm15-cycle-continu-100-pourcent/) est explicitement documenté. Son exemple distingue la capacité à fonctionner en continu, le FAD de chaque version et la demande du poste.
