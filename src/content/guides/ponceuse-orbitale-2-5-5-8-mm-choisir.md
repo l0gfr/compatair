@@ -3,6 +3,7 @@ title: "Ponceuse pneumatique : orbite de 2,5, 5 ou 8 mm pour quel travail ?"
 seoTitle: "Ponceuse : orbite 2,5, 5 ou 8 mm, que choisir ?"
 description: "Finition, ponçage général ou décapage : distinguez orbite, diamètre de plateau et besoin d’air. Cas Metabo DSX 150 et repères constructeur Mirka."
 pubDate: 2026-09-25
+updatedDate: 2026-10-01
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [carrosserie-peinture, menuiserie-agencement]
@@ -11,7 +12,7 @@ relatedCalculatorTool: metabo-dsx-150
 relatedGuides: [compresseur-pour-ponceuse-pneumatique, ponceuse-pneumatique-bois-aspiration-poussieres, ponceuse-delta-carrosserie-debit-continu]
 sources:
   - https://www.mirka.com/en-gb/products/power-tools/pneumatic-sanders/
-  - https://de.metabo.com/de/maschinen/trennen-schleifen-fraesen/holzbearbeitung/exzenterschleifer/dsx-150-601558000-druckluft-exzenterschleifer.html
+  - https://www.metabo.com/com/en/tools/compressed-air/compressed-air-tools/air-disc-sander/dsx-150-air-disc-sander/601558000
 ---
 
 **L’orbite se choisit à partir de l’opération de ponçage, puis le compresseur à partir de la référence exacte de la machine.** Une petite orbite ne prouve pas une faible consommation d’air. Un plateau de 150 mm ne renseigne ni l’orbite ni le débit requis.
@@ -42,7 +43,7 @@ Ces repères ne fixent pas le grain abrasif, la pression d’appui ni le nombre 
 
 ## Plateau de 150 mm et orbite de 5 mm : deux dimensions
 
-La [Metabo DSX 150, référence 601558000](https://de.metabo.com/de/maschinen/trennen-schleifen-fraesen/holzbearbeitung/exzenterschleifer/dsx-150-601558000-druckluft-exzenterschleifer.html), fournit un exemple concret : **plateau de 150 mm**, **course de 5 mm**, **12 000 tr/min**, **550 L/min** et **6,2 bar** de pression de service sont publiés séparément.
+La [Metabo DSX 150, référence 601558000](https://www.metabo.com/com/en/tools/compressed-air/compressed-air-tools/air-disc-sander/dsx-150-air-disc-sander/601558000), fournit un exemple concret : **plateau de 150 mm**, **course de 5 mm**, **12 000 tr/min**, **550 L/min** et **6,2 bar** de pression de service sont publiés séparément.
 
 La page indique également un raccordement à une aspiration externe de **25 mm** et un plateau à **six trous**. Ces informations décrivent la configuration annoncée ; elles ne prouvent pas qu’un plateau de remplacement ou un abrasif choisi au hasard préserve l’extraction.
 
@@ -76,4 +77,4 @@ Décrivez d’abord l’opération : support, revêtement, étape de finition et
 
 Vous pourrez alors arbitrer entre deux configurations concrètes. « Une 150 mm professionnelle » reste trop vague pour garantir le résultat de surface ou l’alimentation en air.
 
-Sources primaires consultées le 25 septembre 2026 : [repères d’orbite Mirka](https://www.mirka.com/en-gb/products/power-tools/pneumatic-sanders/) et [caractéristiques Metabo DSX 150](https://de.metabo.com/de/maschinen/trennen-schleifen-fraesen/holzbearbeitung/exzenterschleifer/dsx-150-601558000-druckluft-exzenterschleifer.html). Les propositions d’essai sont une méthode éditoriale ; aucun comparatif terrain n’est revendiqué.
+Les [repères d’orbite Mirka](https://www.mirka.com/en-gb/products/power-tools/pneumatic-sanders/) ont été consultés le 25 septembre 2026 ; les [caractéristiques Metabo DSX 150](https://www.metabo.com/com/en/tools/compressed-air/compressed-air-tools/air-disc-sander/dsx-150-air-disc-sander/601558000) ont été revérifiées le 1 octobre 2026 après déplacement de leur source. Les propositions d’essai sont une méthode éditoriale ; aucun comparatif terrain n’est revendiqué.

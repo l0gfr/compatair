@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-01T18:28:10.758Z",
+  "summary": {
+    "reachable": 4,
+    "broken": 0,
+    "unavailable": 0,
+    "unsafe": 0,
+    "unverified": 0,
+    "checked": 4,
+    "anomalies": 0,
+    "auditUnavailable": false
+  },
+  "results": [
+    {
+      "url": "https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/Sortimentsuebersicht_Metabo_AT_2025_doppelseiten_compressed.pdf#page=97",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/Sortimentsuebersicht_Metabo_AT_2025_doppelseiten_compressed.pdf"
+    },
+    {
+      "url": "https://www.metabo.com/com/en/tools/compressed-air/compressors/mobile-workshop-compressors/mega-400-50-w-compressor/601536000",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.metabo.com/com/en/tools/compressed-air/compressors/mobile-workshop-compressors/mega-400-50-w-compressor/601536000"
+    },
+    {
+      "url": "https://www.metabo.com/com/en/tools/compressed-air/compressed-air-tools/air-disc-sander/dsx-150-air-disc-sander/601558000",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.metabo.com/com/en/tools/compressed-air/compressed-air-tools/air-disc-sander/dsx-150-air-disc-sander/601558000"
+    },
+    {
+      "url": "https://com-typo3.staging.metabo.com/fileadmin/metabo/com_en/070_news/03_catalogue_logos/2018_19_Metabo_Katalog_2018_GB.pdf#page=247",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://com-typo3.staging.metabo.com/fileadmin/metabo/com_en/070_news/03_catalogue_logos/2018_19_Metabo_Katalog_2018_GB.pdf"
+    }
+  ]
+}

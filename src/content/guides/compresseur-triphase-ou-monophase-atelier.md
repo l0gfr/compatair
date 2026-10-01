@@ -2,7 +2,7 @@
 title: "Compresseur triphasé ou monophasé : comment choisir pour un atelier ?"
 description: "Alimentation, débit restitué, puissance et installation : les critères vérifiables pour choisir un compresseur triphasé ou monophasé en atelier."
 pubDate: 2026-07-14
-updatedDate: 2026-09-25
+updatedDate: 2026-10-01
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [maintenance-industrielle]
@@ -10,7 +10,7 @@ readingTime: 10
 featured: false
 sources:
   - https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html
-  - https://at.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/mega-400-50-w-601536000-kompressor.html
+  - https://www.metabo.com/com/en/tools/compressed-air/compressors/mobile-workshop-compressors/mega-400-50-w-compressor/601536000
   - https://shop.abacaircompressors.com/en-INT/products/4116000871/atf-s-4-100-10-400350-ce
   - https://shop.abacaircompressors.com/en-GB/products/4116001436/atl-55-270-10-400350-ce
   - https://shop.abacaircompressors.com/en-FR/products/4116001463/atf-55-270d-10-400350yd-ce
@@ -21,7 +21,7 @@ relatedGuides: ["compresseur-ne-demarre-plus-froid-rallonge", "compresseur-vis-2
 
 Un compresseur triphasé n’est pas automatiquement meilleur qu’un compresseur monophasé. Le choix dépend d’abord de l’alimentation disponible dans l’atelier et de la plaque du moteur. La performance pneumatique doit ensuite être comparée séparément, avec le débit restitué à la pression utile.
 
-Deux modèles Metabo illustrent cette séparation. Le [Mega 400-50 W](https://at.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/mega-400-50-w-601536000-kompressor.html) est alimenté en 220 à 240 V monophasé et publie 260 L/min effectifs à 8 bar. Le [Mega 580-200 D](https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html) demande 380 à 415 V triphasé et publie 360 L/min effectifs à 8,8 bar.
+Deux modèles Metabo illustrent cette séparation. Le [Mega 400-50 W](https://www.metabo.com/com/en/tools/compressed-air/compressors/mobile-workshop-compressors/mega-400-50-w-compressor/601536000) est alimenté en 220 à 240 V monophasé et publie 260 L/min effectifs à 8 bar. Le [Mega 580-200 D](https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html) demande 380 à 415 V triphasé et publie 360 L/min effectifs à 8,8 bar.
 
 <svg viewBox="0 0 760 330" role="img" aria-labelledby="phase-title phase-desc" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:1.5rem">
   <title id="phase-title">Comparaison documentée de deux compresseurs monophasé et triphasé</title><desc id="phase-desc">Le Mega 400-50 W monophasé utilise 220 à 240 volts et fournit 260 litres par minute à 8 bar. Le Mega 580-200 D triphasé utilise 380 à 415 volts et fournit 360 litres par minute à 8,8 bar. Les pressions différentes interdisent une comparaison directe du seul débit.</desc>
@@ -99,7 +99,7 @@ Pour préciser le choix de la configuration, consultez [compresseur 230 V tripha
 ## Sources
 
 - [Metabo, Mega 580-200 D triphasé](https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html)
-- [Metabo, Mega 400-50 W monophasé](https://at.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/mega-400-50-w-601536000-kompressor.html)
+- [Metabo, Mega 400-50 W monophasé](https://www.metabo.com/com/en/tools/compressed-air/compressors/mobile-workshop-compressors/mega-400-50-w-compressor/601536000)
 - [ABAC, ATF-S 4 100 triphasé](https://shop.abacaircompressors.com/en-INT/products/4116000871/atf-s-4-100-10-400350-ce)
 - [ABAC, ATL 5.5 270 triphasé](https://shop.abacaircompressors.com/en-GB/products/4116001436/atl-55-270-10-400350-ce)
 - [ABAC, ATF 5.5 270D triphasé](https://shop.abacaircompressors.com/en-FR/products/4116001463/atf-55-270d-10-400350yd-ce)

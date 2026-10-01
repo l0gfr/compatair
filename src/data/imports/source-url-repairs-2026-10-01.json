@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "1.0.0",
+  "repairs": [
+    {
+      "oldUrl": "https://www.metabo.com/nl/nl/machines/perslucht/compressoren/mobiele-compressoren-voor-de-bouw/basic-250-50-w-of-compressor/601535000",
+      "newUrl": "https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/Sortimentsuebersicht_Metabo_AT_2025_doppelseiten_compressed.pdf#page=97",
+      "verifiedAt": "2026-10-01",
+      "httpStatus": 200,
+      "sourceSha256": "17ef0f3c1228fd4e8c51bb60381828dbbb5f42adc049bbf2e2d92cf2306c9235",
+      "references": [
+        {
+          "productId": "metabo-basic-250-50-w-of",
+          "evidenceId": "metabo-601535000-official"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://at.metabo.com/de/maschinen/druckluft/kompressoren/mobile-werkstatt-kompressoren/mega-400-50-w-601536000-kompressor.html",
+      "newUrl": "https://www.metabo.com/com/en/tools/compressed-air/compressors/mobile-workshop-compressors/mega-400-50-w-compressor/601536000",
+      "verifiedAt": "2026-10-01",
+      "httpStatus": 200,
+      "sourceSha256": "3761f4d7130cf11e536becf5f6de81ab6f407d03cbc12d1424afe378698ebbc0",
+      "references": [
+        {
+          "productId": "metabo-mega-400-50-w",
+          "evidenceId": "metabo-601536000-official"
+        },
+        {
+          "guide": "compresseur-triphase-ou-monophase-atelier.md"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://de.metabo.com/de/maschinen/trennen-schleifen-fraesen/holzbearbeitung/exzenterschleifer/dsx-150-601558000-druckluft-exzenterschleifer.html",
+      "newUrl": "https://www.metabo.com/com/en/tools/compressed-air/compressed-air-tools/air-disc-sander/dsx-150-air-disc-sander/601558000",
+      "verifiedAt": "2026-10-01",
+      "httpStatus": 200,
+      "sourceSha256": "47f94f36b1e2fdf099a501642afa94614fcc0df5bfcf62a174bfa8069d7d14c0",
+      "references": [
+        {
+          "productId": "metabo-dsx-150",
+          "evidenceId": "metabo-601558000-official"
+        },
+        {
+          "guide": "ponceuse-orbitale-2-5-5-8-mm-choisir.md"
+        }
+      ]
+    }
+  ],
+  "preservedTechnicalValues": [
+    {
+      "id": "metabo-basic-250-50-w-of",
+      "mpn": "601535000",
+      "fadCurve": [
+        {
+          "pressureBar": 6.4,
+          "litersPerMinute": 100
+        }
+      ],
+      "maxPressureBar": 8,
+      "tankLiters": 50,
+      "intakeFlowLpm": 220,
+      "oilType": "oil-free",
+      "powerKw": 1.5,
+      "weightKg": 29,
+      "noiseDb": 82
+    },
+    {
+      "id": "metabo-mega-400-50-w",
+      "mpn": "601536000",
+      "fadCurve": [
+        {
+          "pressureBar": 8,
+          "litersPerMinute": 260
+        }
+      ],
+      "maxPressureBar": 10,
+      "tankLiters": 50,
+      "intakeFlowLpm": 400,
+      "oilType": "oil",
+      "powerKw": 2.2,
+      "weightKg": 73,
+      "noiseDb": 86
+    },
+    {
+      "id": "metabo-dsx-150",
+      "mpn": "601558000",
+      "workingPressureBar": {
+        "min": 6.2,
+        "typical": 6.2,
+        "max": 6.2
+      },
+      "airflowLpm": {
+        "min": 550,
+        "typical": 550,
+        "max": 550
+      },
+      "demandModel": "fixed-flow",
+      "connectorSize": "Raccord 1/4 pouce"
+    }
+  ],
+  "supplementalSources": [
+    {
+      "productId": "metabo-basic-250-50-w-of",
+      "evidenceId": "metabo-601535000-catalog-2018-19",
+      "url": "https://com-typo3.staging.metabo.com/fileadmin/metabo/com_en/070_news/03_catalogue_logos/2018_19_Metabo_Katalog_2018_GB.pdf#page=247",
+      "sha256": "bf9ac08a243025f1a04a242c922eb9ed133c41873fec5e2c2be5811e4ff71803",
+      "edition": "2018–2019",
+      "pdfPage": 247,
+      "printedPage": 492
+    }
+  ],
+  "withheldFields": [
+    {
+      "productId": "metabo-mega-400-50-w",
+      "field": "ean"
+    },
+    {
+      "productId": "metabo-dsx-150",
+      "field": "ean"
+    }
+  ]
+}
