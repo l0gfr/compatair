@@ -1,4 +1,54 @@
 import { decodeXmlEntities, extractH1Text } from './markup-text.mjs';
+import { createHash } from 'node:crypto';
+import { createReadStream } from 'node:fs';
+
+export async function readSnapshotProbe(location) {
+	const hash = createHash('sha256');
+	const prefix = Buffer.alloc(65_536);
+	let prefixBytes = 0, sizeBytes = 0;
+	for await (const chunk of createReadStream(location, { highWaterMark: 65_536 })) {
+		hash.update(chunk);
+		sizeBytes += chunk.length;
+		if (!Number.isSafeInteger(sizeBytes)) throw new Error('snapshot: taille locale non représentable');
+		const count = Math.min(chunk.length, prefix.length - prefixBytes);
+		if (count) { chunk.copy(prefix, prefixBytes, 0, count); prefixBytes += count; }
+	}
+	if (!sizeBytes) throw new Error('snapshot: fichier local vide');
+	return { prefix: prefix.subarray(0, prefixBytes), sizeBytes, sha256: hash.digest('hex') };
+}
+
+export function verifySnapshotManifest(manifest, probes) {
+	for (const probe of probes) {
+		const entries = manifest.files?.filter(entry => entry.path === probe.pathname);
+		if (entries?.length !== 1 || entries[0].sizeBytes !== probe.sizeBytes || entries[0].sha256 !== probe.sha256 || Buffer.from(entries[0].signature ?? '', 'base64').length !== 64) throw new Error(`${probe.pathname}: signature différente de l’artefact local`);
+	}
+}
+
+export async function readBoundedResponse(response, maximumBytes) {
+	if (!Number.isSafeInteger(maximumBytes) || maximumBytes < 1) throw new Error('snapshot: plafond de lecture invalide');
+	const declared = response.headers.get('content-length');
+	if (declared !== null && (!/^\d+$/.test(declared) || Number(declared) > maximumBytes)) {
+		await response.body?.cancel();
+		throw new Error('snapshot: réponse dépasse la plage demandée');
+	}
+	if (!response.body) throw new Error('snapshot: réponse sans corps');
+	const reader = response.body.getReader();
+	const chunks = [];
+	let length = 0;
+	try {
+		while (true) {
+			const { value, done } = await reader.read();
+			if (done) break;
+			length += value.length;
+			if (length > maximumBytes) {
+				await reader.cancel();
+				throw new Error('snapshot: réponse dépasse la plage demandée');
+			}
+			chunks.push(Buffer.from(value));
+		}
+	} finally { reader.releaseLock(); }
+	return Buffer.concat(chunks, length);
+}
 
 export const detailPagePolicies = [
 	{ pattern: /^\/compresseurs\/[^/]+\/$/, maximumStaticResults: 8, requireStaticResults: true },

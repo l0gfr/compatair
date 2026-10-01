@@ -1,5 +1,12 @@
 import { describe, expect, it } from 'vitest';
+import { mkdtemp, rm, writeFile } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { createHash } from 'node:crypto';
 import {
+	readBoundedResponse,
+	readSnapshotProbe,
+	verifySnapshotManifest,
 	countInternalLinks,
 	datasetDistributionPaths,
 	extractH1,
@@ -11,6 +18,44 @@ import {
 } from './live-seo-verification.mjs';
 
 describe('vérification SEO de la surface live', () => {
+	it('lit un préfixe borné tout en vérifiant le SHA-256 du fichier local complet', async () => {
+		const root = await mkdtemp(join(tmpdir(), 'compatair-snapshot-probe-'));
+		try {
+			const path = join(root, 'catalog.json');
+			const body = Buffer.from('é'.repeat(80_000));
+			await writeFile(path, body);
+			const probe = await readSnapshotProbe(path);
+			expect(probe.prefix).toEqual(body.subarray(0, 65_536));
+			expect(probe.sizeBytes).toBe(body.length);
+			expect(probe.sha256).toBe(createHash('sha256').update(body).digest('hex'));
+			await writeFile(path, '');
+			await expect(readSnapshotProbe(path)).rejects.toThrow('vide');
+			await expect(readSnapshotProbe(join(root, 'missing'))).rejects.toThrow();
+		} finally { await rm(root, { recursive: true, force: true }); }
+	});
+	it('refuse un manifeste absent, dupliqué ou différent des octets locaux', () => {
+		const probe = { pathname: '/data/catalog.json', sizeBytes: 160_000, sha256: 'a'.repeat(64) };
+		const entry = { path: probe.pathname, sizeBytes: probe.sizeBytes, sha256: probe.sha256, signature: Buffer.alloc(64).toString('base64') };
+		expect(() => verifySnapshotManifest({ files: [entry] }, [probe])).not.toThrow();
+		for (const files of [[], [entry, entry], [{ ...entry, sizeBytes: 160_001 }], [{ ...entry, sha256: 'b'.repeat(64) }], [{ ...entry, signature: '' }]]) expect(() => verifySnapshotManifest({ files }, [probe])).toThrow('signature différente');
+		expect(() => verifySnapshotManifest({}, [probe])).toThrow();
+	});
+	it('annule immédiatement une réponse qui ignore la plage et déclare le catalogue entier', async () => {
+		let cancelled = false;
+		const stream = new ReadableStream({ cancel() { cancelled = true; } });
+		await expect(readBoundedResponse(new Response(stream, { headers: { 'Content-Length': '50000000' } }), 65_536)).rejects.toThrow('dépasse');
+		expect(cancelled).toBe(true);
+	});
+	it('borne aussi une réponse sans Content-Length et conserve les octets exacts', async () => {
+		const bytes = Buffer.from('débit');
+		expect(await readBoundedResponse(new Response(bytes), bytes.length)).toEqual(bytes);
+		let cancelled = false;
+		const stream = new ReadableStream({ pull(controller) { controller.enqueue(new Uint8Array(40_000)); }, cancel() { cancelled = true; } });
+		await expect(readBoundedResponse(new Response(stream), 65_536)).rejects.toThrow('dépasse');
+		expect(cancelled).toBe(true);
+		await expect(readBoundedResponse(new Response(bytes), 0)).rejects.toThrow('plafond');
+		await expect(readBoundedResponse(new Response(null), 10)).rejects.toThrow('sans corps');
+	});
 	it('vérifie les admissions et attentes dans les robots, canoniques et sitemaps', () => {
 		const origin = 'https://compatair.fr';
 		const path = '/guides/exemple/';

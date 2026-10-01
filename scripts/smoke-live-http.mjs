@@ -1,7 +1,7 @@
 import { CALCULATION_VERSION } from '../server/air-sizing.mjs';
-import { open, readFile } from 'node:fs/promises';
+import { readFile } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
-import { verifySnapshotRange } from './lib/live-seo-verification.mjs';
+import { readBoundedResponse, readSnapshotProbe, verifySnapshotManifest, verifySnapshotRange } from './lib/live-seo-verification.mjs';
 
 const origin = new URL(process.env.COMPATAIR_SITE_ORIGIN ?? 'https://compatair.fr').origin;
 const expectedSha = process.env.COMPATAIR_EXPECTED_RELEASE_SHA;
@@ -23,7 +23,7 @@ function assertHeader(response, name, expected) {
 	assert(actual === expected, `${name}: attendu ${JSON.stringify(expected)}, reçu ${JSON.stringify(actual)}`);
 }
 
-async function check(label, pathname, inspect, { attempts = 3, method = 'GET', headers = {}, requestBody } = {}) {
+async function check(label, pathname, inspect, { attempts = 3, method = 'GET', headers = {}, requestBody, maximumBytes } = {}) {
 	let lastError;
 	for (let attempt = 1; attempt <= attempts; attempt += 1) {
 		try {
@@ -39,7 +39,7 @@ async function check(label, pathname, inspect, { attempts = 3, method = 'GET', h
 				redirect: 'manual',
 				signal: AbortSignal.timeout(20_000),
 			});
-			const bytes = Buffer.from(await response.arrayBuffer());
+			const bytes = maximumBytes === undefined ? Buffer.from(await response.arrayBuffer()) : await readBoundedResponse(response, maximumBytes);
 			const body = new TextDecoder().decode(bytes);
 			await inspect({ body, bytes, response, url });
 			console.log(`OK ${label}`);
@@ -109,8 +109,6 @@ for (const [label, pathname, marker] of [
 	['scanner', '/scanner/', 'data-compatair-surface="scanner"'],
 	['professionnels', '/professionnels/', 'id="merchant-widget-demo"'],
 	['widget immuable', '/widget/v1.0.0/compatair-widget.js', 'CompatAir widget API v1'],
-	['catalogue', '/data/catalog.json', 'catalogVersion'],
-	['catalogue runtime', '/data/runtime-catalog.json', 'catalogVersion'],
 	['observatoire', '/data/document-quality-observatory.json', 'observatoryVersion'],
 	['radar JSON', '/data/contradiction-radar.json', 'radarVersion'],
 	['radar public', '/radar-contradictions/', 'Radar des contradictions'],
@@ -128,11 +126,9 @@ for (const [label, pathname, marker] of [
 	['matrice des versions', '/compatibilite-versions/', 'Une version, une frontière précise'],
 	['matrice des versions JSON', '/data/version-compatibility.json', '"MCP server"'],
 	['leaderboard agents', '/data/agent-fidelity-leaderboard.json', 'awaiting_reproducible_submissions'],
-	['Compatibility Impact Feed', '/data/compatibility-impact-feed.json', 'requires_recalculation'],
 	['Compatibility Impact Feed EN', '/en/compatibility-impact-feed/', 'Know which decisions require recalculation'],
 	['découverte UCP', '/.well-known/ucp', 'fr.compatair.air.compatibility'],
 	['OpenAPI UCP', '/openapi/ucp-2026-07-15.json', 'evaluateAirCompatibility'],
-	['connaissances agents', '/data/agent-knowledge.json', 'content_sha256'],
 	['fraîcheur machine', '/data/freshness.json', 'maximum_age_days'],
 	['intégrité machine', '/data/integrity.json', 'sha-256'],
 	['changefeed machine', '/data/changefeed.json', 'protocol:ucp:2026-07-15'],
@@ -140,28 +136,32 @@ for (const [label, pathname, marker] of [
 	await check(label, pathname, bodyContains(marker));
 }
 
-// The full signed snapshot is validated before activation. Probe the exact release
-// prefix and total size over HTTP without downloading hundreds of megabytes again.
-const verdictLocation = releaseDirectory ? new URL('data/verdicts.json', pathToFileURL(`${releaseDirectory}/`)) : new URL('../dist/data/verdicts.json', import.meta.url);
-const verdictFile = await open(verdictLocation, 'r');
-let verdictPrefix, verdictBytes;
-try {
-	verdictBytes = (await verdictFile.stat()).size;
-	verdictPrefix = Buffer.alloc(Math.min(65_536, verdictBytes));
-	const { bytesRead } = await verdictFile.read(verdictPrefix, 0, verdictPrefix.length, 0);
-	assert(bytesRead === verdictPrefix.length && bytesRead > 0, 'préfixe de verdicts local incomplet');
-} finally { await verdictFile.close(); }
+// Full files are validated before activation. Compare a bounded HTTP prefix and
+// total size to those files; signed probes also retain the complete local SHA-256.
+const snapshotProbes = [];
+for (const [label, filename, signed] of [
+	['catalogue', 'catalog.json', true],
+	['catalogue runtime', 'runtime-catalog.json', true],
+	['connaissances agents', 'agent-knowledge.json', true],
+	['Compatibility Impact Feed', 'compatibility-impact-feed.json', false],
+	['verdicts', 'verdicts.json', true],
+]) {
+	const location = releaseDirectory ? new URL(`data/${filename}`, pathToFileURL(`${releaseDirectory}/`)) : new URL(`../dist/data/${filename}`, import.meta.url);
+	snapshotProbes.push({ label, pathname: `/data/${filename}`, signed, ...await readSnapshotProbe(location) });
+}
+const { prefix: verdictPrefix, sizeBytes: verdictBytes } = snapshotProbes.find(probe => probe.pathname === '/data/verdicts.json');
 await check('signatures versionnées de la release', '/data/signatures.json', ({ body, response }) => {
 	assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
 	const manifest = JSON.parse(body);
 	assert(manifest.schemaVersion === '2.0.0' && manifest.algorithm === 'Ed25519' && manifest.signaturePayload === 'compatair-file-sha256-v2', 'format de signature v2 absent');
 	assert(manifest.keyId === 'compatair-2026-01', 'clé de publication inattendue');
-	const entries = manifest.files?.filter(entry => entry.path === '/data/verdicts.json');
-	assert(entries?.length === 1 && entries[0].sizeBytes === verdictBytes && /^[a-f0-9]{64}$/.test(entries[0].sha256) && Buffer.from(entries[0].signature, 'base64').length === 64, 'signature de la publication des verdicts absente ou incohérente');
+	verifySnapshotManifest(manifest, snapshotProbes.filter(probe => probe.signed));
 });
-await check('verdicts, plage exacte de la release', '/data/verdicts.json', ({ bytes, response }) => {
-	verifySnapshotRange({ status: response.status, contentRange: response.headers.get('content-range'), contentType: response.headers.get('content-type'), bytes }, verdictPrefix, verdictBytes);
-}, { headers: { Range: `bytes=0-${verdictPrefix.length - 1}` } });
+for (const probe of snapshotProbes) {
+	await check(`${probe.label}, plage exacte de la release`, probe.pathname, ({ bytes, response }) => {
+		verifySnapshotRange({ status: response.status, contentRange: response.headers.get('content-range'), contentType: response.headers.get('content-type'), bytes }, probe.prefix, probe.sizeBytes);
+	}, { headers: { Range: `bytes=0-${probe.prefix.length - 1}` }, maximumBytes: probe.prefix.length });
+}
 
 // v2 is a compact contract; rollback to the frozen v1 release remains supported.
 if (verdictBytes < 65_536 && JSON.parse(verdictPrefix.toString('utf8')).mode === 'on-demand') {
