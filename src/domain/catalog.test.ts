@@ -4,6 +4,15 @@ import { toolTaxonomy } from '../data/taxonomy';
 import { compressorSchema, toolProfileSchema } from './catalog';
 
 describe('catalog schemas', () => {
+	it('allows unknown pressure only for an explicitly incomplete demand and rejects invalid documented bounds', () => {
+		const base = tools.find(item => item.demandModel === 'variable-volume')!;
+		expect(toolProfileSchema.parse({ ...base, workingPressureBar: {} }).workingPressureBar).toEqual({});
+		for (const workingPressureBar of [{ max: -1 }, { typical: Infinity }, { min: 7, typical: 6 }, { typical: 6, max: 5 }]) {
+			expect(() => toolProfileSchema.parse({ ...base, workingPressureBar })).toThrow();
+		}
+		const fixed = tools.find(item => item.demandModel === 'fixed-flow')!;
+		expect(() => toolProfileSchema.parse({ ...fixed, workingPressureBar: {} })).toThrow();
+	});
 	it('accepts explicitly unknown lubrication without fabricating a source', () => {
 		const product = compressorSchema.parse({ ...compressors[0], oilType: 'unknown' });
 		expect(product.oilType).toBe('unknown');

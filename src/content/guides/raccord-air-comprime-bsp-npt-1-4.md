@@ -3,7 +3,6 @@ title: "Raccord d’air comprimé 1/4 : BSP, NPT et profil rapide, que vérifier
 seoTitle: "Raccord air 1/4 : BSP ou NPT, comment choisir ?"
 description: "Un raccord 1/4 peut avoir le mauvais filetage ou le mauvais profil rapide. Identifiez G, R et NPT, l’étanchéité et le passage avant de raccorder votre outil."
 pubDate: 2026-09-25
-updatedDate: 2026-09-30
 category: "Installer"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, maintenance-industrielle, btp-chantier]
@@ -16,6 +15,7 @@ sources:
   - https://www.fujitools.com/en/products/5412105865
   - https://www.fujitools.com/en/products/5412105867
   - https://www.photos-videos.fujitools.com/content/dam/pim/itba/fuji/technical-documents/update2025/fa-20-4-423/9502000609_05.pdf
+updatedDate: "2026-10-01"
 ---
 
 **La mention « 1/4 pouce » ne suffit pas à commander un raccord d’air.** Il faut identifier le filetage côté outil, le profil d’emboîtement côté coupleur et la capacité de passage du montage. Un embout peut entrer dans le coupleur et porter pourtant le mauvais filetage pour l’outil.
@@ -88,3 +88,5 @@ Sur un outil vibrant, examinez aussi la position du raccord : le [flexible court
 ## Sources et limites
 
 Les sources CEJN servent à identifier les familles et les profils ; Ralston explique les principes d’étanchéité. Les fiches et la notice Fuji concernent leurs références propres. Elles ne constituent pas une homologation de tous les adaptateurs disponibles. Documentation consultée le 25 septembre 2026.
+
+Deux exemples documentaires précisent le contrôle : les [VESSEL GT-S4.5XD et GT-P4.5XD publient G et Rc 1/4](/guides/vessel-gt-s4-5xd-gt-p4-5xd-raccords/), tandis que le [MP5187 associe deux diamètres intérieurs non équivalents](/guides/cleco-mp5187-diametre-flexible-unites/). Une consommation plausible ne résout pas une liaison mal identifiée.

@@ -69,7 +69,7 @@ export function createAgentKnowledge(input: {
 				: item.demandModel === 'per-action'
 					? `${item.airPerActionLiters} L/${item.actionLabel}`
 					: item.demandExplanation;
-			const description = `${item.label}; ${pressure} bar; ${demand}.`;
+			const description = `${item.label}; ${pressure === undefined ? 'pression de travail non établie' : `${pressure} bar`}; ${demand}.`;
 			return { id: `tool:${item.id}:fr`, type: 'Outil', locale: 'fr', title: item.label, description, url: `https://compatair.fr/outils-pneumatiques/${item.slug}/`, keywords: `${item.brand} ${item.model} ${item.mpn ?? ''} ${item.ean ?? ''} ${item.gtin ?? ''} ${item.distributorSkus.map((identifier) => identifier.sku).join(' ')} ${item.category}`, observed_at: input.observedAt, source_urls: unique(item.evidence.map((evidence) => evidence.sourceUrl)), content_sha256: hash(description), translation: { status: 'source' } };
 		}),
 	];

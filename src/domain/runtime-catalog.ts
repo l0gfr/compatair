@@ -72,7 +72,7 @@ const runtimeToolSchema = runtimeToolBaseSchema.and(z.discriminatedUnion('demand
 	}),
 	z.object({
 		demandModel: z.literal('variable-volume'),
-		workingPressureBar: workingPressureSchema,
+		workingPressureBar: workingPressureSchema.partial(),
 		demandExplanation: z.string().min(1).max(2_000),
 	}),
 ]));

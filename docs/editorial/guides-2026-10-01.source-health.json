@@ -1,0 +1,475 @@
+{
+  "checkedAt": "2026-10-01T00:43:17.715Z",
+  "scope": "New October 1 batch and its 30 guides only; positive document hashes are separate from this link check.",
+  "summary": {
+    "reachable": 51,
+    "broken": 0,
+    "unavailable": 0,
+    "unsafe": 0,
+    "unverified": 0,
+    "checked": 51,
+    "anomalies": 0,
+    "auditUnavailable": false
+  },
+  "results": [
+    {
+      "id": "atlas-us",
+      "url": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/Atlas%20Copco%20-%20Industrial%20tools%20and%20solutions.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/Atlas%20Copco%20-%20Industrial%20tools%20and%20solutions.pdf",
+      "lastPositiveObservation": "2026-09-30",
+      "sourceSha256": "4fab5d622435c614e9ed24db292c697a8e4ca13f0f5f8edb8d2092ee01348d74"
+    },
+    {
+      "id": "bosch-industry",
+      "url": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf",
+      "lastPositiveObservation": "2026-09-30",
+      "sourceSha256": "54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab"
+    },
+    {
+      "id": "ceccato-csa-7-5-20-hp",
+      "url": "https://www.ceccato.com/fr-international/air-compressor-products/rotary-screw-compressor/fixed-speed/csa-7-5-20-hp",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.ceccato.com/fr-international/air-compressor-products/rotary-screw-compressor/fixed-speed/csa-7-5-20-hp",
+      "lastPositiveObservation": "2026-09-30",
+      "sourceSha256": "a396f7642312e7bc1e0f7624ec55b4836b176f0deb7ba6e0ae70e4ce9cbe4df6"
+    },
+    {
+      "id": "ceccato-csa-7-5-20-hp-pdf",
+      "url": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csa-7-5-20-hp/leaflets/Ceccato_CSA_7.5-20_Leaflet_EN.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csa-7-5-20-hp/leaflets/Ceccato_CSA_7.5-20_Leaflet_EN.pdf",
+      "lastPositiveObservation": "2026-09-30",
+      "sourceSha256": "b36c0fbb8a63a69867b66a6e663923588ccfd8e2def16303b3be948aa706c23c"
+    },
+    {
+      "id": "ceccato-drb",
+      "url": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/drb/drb-20-35-hp/Ceccato_DRB20-34_EN_LR.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/drb/drb-20-35-hp/Ceccato_DRB20-34_EN_LR.pdf",
+      "lastPositiveObservation": "2026-09-30",
+      "sourceSha256": "36de017fd6f8e157e7827b0032fd27f34e40c340a8421cb4b889853235022c40"
+    },
+    {
+      "id": "ceccato-drb-page",
+      "url": "https://www.ceccato.com/fr-international/air-compressor-products/rotary-screw-compressor/fixed-speed/drb-20-35-hp",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.ceccato.com/fr-international/air-compressor-products/rotary-screw-compressor/fixed-speed/drb-20-35-hp",
+      "lastPositiveObservation": "2026-09-30",
+      "sourceSha256": "c8ff08a10788f55386eecb322217c51c8752900109487c3b4cb592ec5201df20"
+    },
+    {
+      "id": "ceccato-drc",
+      "url": "https://www.ceccato.com/content/dam/brands/Ceccato/brochures/air-compressors/screw-compressors/drc-40-45-ivr-pm/Ceccato_DRC_40-60_IVR_PM_ENG_6999110610_LR.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/brochures/air-compressors/screw-compressors/drc-40-45-ivr-pm/Ceccato_DRC_40-60_IVR_PM_ENG_6999110610_LR.pdf",
+      "lastPositiveObservation": "2026-09-30",
+      "sourceSha256": "bafa72aaf1c11e4a047747e5ba926ac16afa4fd611e5af37837d92258acdc259"
+    },
+    {
+      "id": "ceccato-drc-40-60-hp",
+      "url": "https://www.ceccato.com/fr-international/air-compressor-products/rotary-screw-compressor/fixed-speed/drc-40-60-hp",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.ceccato.com/fr-international/air-compressor-products/rotary-screw-compressor/fixed-speed/drc-40-60-hp",
+      "lastPositiveObservation": "2026-09-30",
+      "sourceSha256": "966a7cf39d84e7db67c23d9e472c7d7aa4fcf31990d595b9ff50180106673417"
+    },
+    {
+      "id": "ceccato-drc-40-60-hp-pdf",
+      "url": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/drc/drc-40-60-hp-leaflet/Ceccato-DRC-40-60-FR.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/drc/drc-40-60-hp-leaflet/Ceccato-DRC-40-60-FR.pdf",
+      "lastPositiveObservation": "2026-09-30",
+      "sourceSha256": "ae29fea152312268c9ead095b85747ff7cac22ef540dd47d57329efe0416aab0"
+    },
+    {
+      "id": "cleco-p159",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=159",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=159",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "b0c626fd4713b8ce4dafb757bd1f6a730394815aa4c84e4f8d8fa6679eb53966"
+    },
+    {
+      "id": "cleco-p160",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=160",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=160",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "8babcef6b598698566da72a9c1ee171c81e765543c285115c9302c33fc9235fd"
+    },
+    {
+      "id": "cleco-p161",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=161",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=161",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "86e865c3e2e8f8448cc5591afa088cc6e1c00740358188518b1da04429c2b8da"
+    },
+    {
+      "id": "cleco-p162",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=162",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=162",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "e7f260ddade396b785d9fb152ca280c3ece3c3fd619d5258a63e427d130adca6"
+    },
+    {
+      "id": "cleco-p163",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=163",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=163",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "b0afdf42251b4669c636e88f84c7aed5717d67357312c04b25aceb29cda82aa0"
+    },
+    {
+      "id": "cleco-p169",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=169",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=169",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "5281993ca1adf3d60c09fe32cee3d785207adacb5495369aa2771058c4919cb5"
+    },
+    {
+      "id": "cleco-p170",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=170",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=170",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "195f5017c72ee020fa24614fb98585ee4b4c379d3529ecd8a6a61b84d53c89de"
+    },
+    {
+      "id": "cleco-p171",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=171",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=171",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "3260b05336034684c5712764511077dd4ac29c43c99ffc6c9fd1d97819257c2f"
+    },
+    {
+      "id": "cleco-p172",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=172",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=172",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "29d6b7b8974bc62e74f2e3b179a1dde2e295a51c6061913035bd55a05e608a4e"
+    },
+    {
+      "id": "cleco-p173",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=173",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=173",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "637689270e93e7c583f7f86ec69a86c9990a3b00b0d2c25cad3bad4c3e8503b6"
+    },
+    {
+      "id": "cleco-p174",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=174",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=174",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "9fff8c095da28a8f25588a5b1089224782720a5523742d434fc99e4b523b37c3"
+    },
+    {
+      "id": "cleco-p175",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=175",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=175",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "d47c38ab719c1b61d4bc86caf49a69d48b68ff5b59c81857953d593df61a46c1"
+    },
+    {
+      "id": "cleco-p176",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=176",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=176",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "fbb461b26f5fb74c6a3b1266ea4c9e57d6f1966d1458afe7f4e683c4efdd37dd"
+    },
+    {
+      "id": "cleco-p212",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=212",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=212",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "78a8b1852941f8c75f8b615f61e812515ec793d3427ac1f6c94c4c19afd18e31"
+    },
+    {
+      "id": "cleco-p215",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=215",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=215",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "ba6c4912815c11e7602fa8e16d3402fc727541294c433772160b5829a7e4b367"
+    },
+    {
+      "id": "cleco-p216",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=216",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=216",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "dd695b3d5449614c24c96b193e71d25636915f9979aee32ab89dfb843f20f5d6"
+    },
+    {
+      "id": "cleco-p217",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=217",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=217",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "0479793f43faa065b75a9bcee4167f32af17ec4df02d121398ccca73b1ce5c94"
+    },
+    {
+      "id": "cleco-p218",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=218",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=218",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "0ad5465e3e575c9c57f799ca889a379a45af868f515a28c56769fe07245143a9"
+    },
+    {
+      "id": "cleco-p219",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=219",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=219",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "0b617594c9ca4981f72939bef3c48206557188626c0d066bd4f202d6bdd1c176"
+    },
+    {
+      "id": "cleco-p220",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=220",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=220",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "f00012be3b39931a8c66c5d0b2fc9f4d9f48ccb67b9116904f2e90832c4f59bb"
+    },
+    {
+      "id": "cleco-p221",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=221",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=221",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "5013b61977661cae9c52b685641b7d4052f51196b53a6fac2e7f40dc6e44f47c"
+    },
+    {
+      "id": "cleco-p222",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=222",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=222",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "b0d0d73a443d6371eb13d107068489c887033c59380596bb0cd591d929b96576"
+    },
+    {
+      "id": "cleco-p223",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=223",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=223",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "66f35748369ab7ff2fa2c2843cd333c4cc9afbda9a4ba69efe03c9bb27081ace"
+    },
+    {
+      "id": "cleco-p224",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=224",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=224",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "32bbab896bcb740895745447a8959c9b556e5c205ef89d2381a0f1c4ce0bf7e8"
+    },
+    {
+      "id": "cleco-p225",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=225",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=225",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "544dc64066b2575defa23825b29909776695b70b0bcb1086505e4b131abbbacd"
+    },
+    {
+      "id": "cleco-p227",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=227",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=227",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "c89a3f01f7c0a3ea163b35ae85d9a6a9de9f77deb5cf7133be83c55e06caa213"
+    },
+    {
+      "id": "cleco-p229",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=229",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=229",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "905674c94c58afcc4dda822368e885bae158d441125ef2df340b27b0cb8b4204"
+    },
+    {
+      "id": "cleco-p248",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=248",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=248",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "6077162469e3816748bd1ac5ba5dc4000c635f91fc0773fe2f846824a8e68a62"
+    },
+    {
+      "id": "cleco-p249",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=249",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=249",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "f9f602aaa3c1ab1d7c7d294ee425e025a9be04d3d33cacc7bd53b55db761d9a9"
+    },
+    {
+      "id": "cleco-p256",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=256",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=256",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "202180f0eff8d96becccb66c7ad0f9e21c2a545ed2fa94a2e2b94cc8e738cfd1"
+    },
+    {
+      "id": "cleco-p257",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=257",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=257",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "fe19128e7a4edbacb8d24258968ba7079b7cb647bc8ecb8599982e11e2e43746"
+    },
+    {
+      "id": "cleco-p41",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=41",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=41",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "175d2bccec85bf0eb8285b185cd777fd5bae898b9ebcfd2a3b35d1ccbd83873b"
+    },
+    {
+      "id": "cleco-p43",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=43",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=43",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "bef49fffdd0e679f4e0e6a290b1fe947da10e6771444c98eca530bebe14b44ec"
+    },
+    {
+      "id": "cleco-p48",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=48",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=48",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "b57737f47dc07fe300fb43792945544855195522cffe9b99be5cbe281bd32d9c"
+    },
+    {
+      "id": "cleco-p53",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=53",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=53",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "b56d586490dc1712cffd2cb2082461f091fa129a6841755b9c42f5471b42e7d8"
+    },
+    {
+      "id": "cleco-p55",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=55",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=55",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "d8af5fe0385a6fc4ede665a188cf3763307f642389b6cdc1529f9b5e3d81b07c"
+    },
+    {
+      "id": "cleco-p56",
+      "url": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=56",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=56",
+      "lastPositiveObservation": "2026-10-01",
+      "sourceSha256": "5680a40a4132a4701fe2fc02b5d2d1f96339f5bbbe238a87eb283c4b5ad418af"
+    },
+    {
+      "id": "dotco",
+      "url": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/DOTCO%20Material%20Removal_SP-102EN_en.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/DOTCO%20Material%20Removal_SP-102EN_en.pdf",
+      "lastPositiveObservation": "2026-09-30",
+      "sourceSha256": "93b7d3cdb96a91eecf95baaf172ed0953f2021cb336460e5f9a202ce7e687c10"
+    },
+    {
+      "id": "renner-2026",
+      "url": "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf",
+      "lastPositiveObservation": "2026-09-30",
+      "sourceSha256": "35bd2421c2cc333bc6a0d6cd20c09bbf6b3c2af621021cb6cd2a254d23e74f8a"
+    },
+    {
+      "id": "renner-rsb-duty",
+      "url": "https://www.renner-kompressoren.de/produkte/rs-b-22-110/",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.renner-kompressoren.de/produkte/rs-b-22-110/",
+      "lastPositiveObservation": "2026-09-30",
+      "sourceSha256": "42a3e0bfbef304e907bc06c88a31e536d442932c74e9841135bb656d03f9b234"
+    },
+    {
+      "id": "sp-air",
+      "url": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf",
+      "lastPositiveObservation": "2026-09-30",
+      "sourceSha256": "85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5"
+    },
+    {
+      "id": "vessel-air",
+      "url": "https://www.vessel.co.jp/userfiles/airtools/air-tools_E.pdf",
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.vessel.co.jp/userfiles/airtools/air-tools_E.pdf",
+      "lastPositiveObservation": "2026-09-30",
+      "sourceSha256": "16761fb825c735f6ebff0614f708d44f28eb21392b11568d7224019e2dc296d0"
+    }
+  ]
+}

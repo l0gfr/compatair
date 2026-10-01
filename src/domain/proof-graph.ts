@@ -172,7 +172,7 @@ export function simulateProofCorrection(compressor: Compressor, tool: ToolProfil
 		change = `Consommation simulée : ${rawValue} L/min.`;
 	} else if (target === 'tool-pressure') {
 		if (tool.workingPressureBar.typical === undefined) throw new Error('Cet outil ne possède pas de pression nominale corrigeable.');
-		simulatedTool = { ...tool, workingPressureBar: { ...tool.workingPressureBar, min: Math.min(tool.workingPressureBar.min ?? rawValue, rawValue), typical: rawValue, max: Math.max(tool.workingPressureBar.max, rawValue) } } as ToolProfile;
+		simulatedTool = { ...tool, workingPressureBar: { ...tool.workingPressureBar, min: Math.min(tool.workingPressureBar.min ?? rawValue, rawValue), typical: rawValue, ...(tool.workingPressureBar.max === undefined ? {} : { max: Math.max(tool.workingPressureBar.max, rawValue) }) } } as ToolProfile;
 		change = `Pression de travail simulée : ${rawValue} bar.`;
 	} else {
 		if (rawValue > 100) throw new Error('La réserve simulée ne peut pas dépasser 100 %.');

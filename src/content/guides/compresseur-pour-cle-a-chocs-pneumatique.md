@@ -2,7 +2,6 @@
 title: "Quel compresseur pour une clé à chocs pneumatique ?"
 description: "Méthode factuelle pour comparer la consommation d’une clé à chocs au débit restitué d’un compresseur, avec l’exemple Einhell TC-PW 340."
 pubDate: 2026-07-13
-updatedDate: 2026-09-29
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, atelier-poids-lourds]
@@ -13,6 +12,7 @@ sources:
   - https://www.einhell.fr/p/4138950-tc-pw-340/
   - https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_c7bjdn248d2dret4jdk27m9377/4138950_21022_002_SPK2.pdf
 relatedGuides: [consommation-moyenne-en-charge-cle-a-chocs]
+updatedDate: "2026-10-01"
 ---
 
 Le bon critère n’est pas le volume de la cuve pris isolément. Il faut comparer la consommation publiée de la clé au [débit restitué du compresseur](/guides/debit-restitue-fad-vs-debit-aspire/), à une pression comparable.
@@ -58,3 +58,5 @@ Le [cas du TC-AC 240/50/10 OF avec la CP7732C](/guides/einhell-tc-ac-240-50-10-o
 - [Einhell, notice TC-PW 340](https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_c7bjdn248d2dret4jdk27m9377/4138950_21022_002_SPK2.pdf)
 
 La recommandation URYU de [limiter une séquence de serrage à cinq secondes](/guides/uryu-cle-chocs-temps-serrage-cinq-secondes/) concerne l’usure de la clé. Elle ne constitue ni une garantie de couple final ni une preuve que le compresseur dispose du débit en charge nécessaire.
+
+Pour des références précises, consultez le [comparatif documentaire SP-1145A et SP-1148TR-X](/guides/sp-air-sp-1145a-sp-1148tr-x-atelier/), le [besoin publié de la SP-1158A](/guides/sp-air-sp-1158a-1110-litres-minute/) et la [LMS08 HR10, avec son temps de serrage conseillé](/guides/atlas-lms08-hr10-air-temps-serrage/). Les régimes manquants ne sont pas remplacés par une moyenne inventée.

@@ -12,7 +12,7 @@ sources:
   - https://www.atlascopco.com/fr-fr/compressors/wiki/compressed-air-articles/displacement-compressors-regulation
   - https://shop.abacaircompressors.com/en-INT/products/4116000880/atf-s-3-50-10-230150-ce
   - https://www.einhell.fr/p/4010800-te-ac-430-90-10/
-updatedDate: 2026-09-29
+updatedDate: "2026-10-01"
 ---
 
 La cuve est la caractéristique la plus visible d’un compresseur d’atelier. Elle est aussi l’une des plus mal interprétées. Un réservoir de 90 litres ne garantit pas un débit supérieur à celui d’un 50 litres. Il stocke davantage d’air comprimé et peut absorber une pointe plus longue, à condition que la pression reste suffisante pour l’outil.
@@ -61,3 +61,5 @@ Un autre arbitrage est illustré par les [Einhell TE-AC 270/24/10 et TC-AC 240/5
 - [Einhell, TE-AC 430/90/10](https://www.einhell.fr/p/4010800-te-ac-430-90-10/)
 
 Sur des stations industrielles, la décision comprend aussi l’implantation : [deux réservoirs de 90 L ou un réservoir de 250 L sur RSD-PRO 3.0](/guides/renner-rsd-pro-3-0-2x90-250-litres/), puis [250 ou 500 L sur RSDK-PRO 3.0](/guides/renner-rsdk-pro-3-0-250-500-litres-implantation/). Pour une demande sur mesure, le dossier [BOGE C 2 jusqu’à 750 L](/guides/boge-c2-reservoir-500-750-litres-devis/) distingue les configurations décrites dans le tableau et les caractéristiques à obtenir au devis.
+
+Sur une station industrielle, le [CSA 15 FF sur 270 ou 500 L](/guides/ceccato-csa-15-270-500-litres-manutention/) montre l’effet du réservoir sur l’enveloppe et la masse. Le [DRC 40 PACK ou FF](/guides/ceccato-drc-40-pack-ff-encombrement/) demande un autre plan ; ses [deux brochures présentent un écart de masses et de dimensions](/guides/ceccato-drc-40-deux-brochures-masses/) à clarifier sur le devis.

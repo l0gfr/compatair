@@ -2,7 +2,6 @@
 title: "Quel compresseur pour une meuleuse pneumatique ?"
 description: "Comparaison à pression égale des besoins des Einhell TC-PA 50 et TC-PP 220, avec calculs reproductibles à partir des courbes constructeur."
 pubDate: 2026-07-13
-updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [maintenance-industrielle]
@@ -15,6 +14,7 @@ sources:
   - https://www.einhell.fr/p/4010800-te-ac-430-90-10/
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
 relatedGuides: ["meuleuse-pneumatique-pince-6-mm-ou-1-4", "meuleuse-pneumatique-vitesse-regulee-governor", "meuleuse-broche-m14-5-8-filetage", "ingersoll-rand-m2-consommation-charge-vide", "nitto-myg40l-540-690-litres-minute"]
+updatedDate: "2026-10-01"
 ---
 
 Une meuleuse pneumatique impose de comparer deux valeurs à la même pression. L’[Einhell TC-PA 50](https://www.einhell.fr/p/4138550-tc-pa-50/) consomme 113 L/min à 6,3 bar. La [TC-PP 220](https://www.einhell.fr/p/4138540-tc-pp-220/) demande 128 L/min à 6,3 bar.
@@ -70,3 +70,5 @@ Pour préciser le choix de la configuration, consultez [vitesse régulée et vit
 - [Einhell, TC-AC 240/50/10 OF](https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of)
 
 La [LSF19 S460E-1/R consomme davantage à vide dans son tableau](/guides/atlas-lsf19-s460e-consommation-vide-charge/). La [Fuji FA-4C-3 documente 1 260 L/min en charge](/guides/fuji-fa-4c-3-1260-l-min-raccord-pt/) : ces deux régimes ne doivent pas être mélangés dans un calcul.
+
+Les fiches détaillées distinguent [deux Bosch de 360 L/min à vitesses différentes](/guides/bosch-0607253101-0607253100-vitesse-air/), [deux Bosch de 660 L/min et leurs accessoires](/guides/bosch-0607261101-0607261102-meuleuses-air/) et la [GTG25 avec 1 920 L/min à puissance maximale](/guides/atlas-gtg25-f120-13-debit-charge-vide/). La [turbine Dotco 12R0380-13](/guides/dotco-12r0380-13-turbine-air-sec/) impose une consigne distincte d’air sec sans lubrification.

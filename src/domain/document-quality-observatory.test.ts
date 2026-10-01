@@ -15,8 +15,8 @@ describe('document quality observatory', () => {
 		expect(observatory.metrics.multiPressureFad.eligibleCount).toBe(compressors.length);
 		expect(observatory.metrics.multiPressureFad.availableCount).toBe(compressors.filter((item) => item.fadCurve.length >= 2).length);
 		expect(observatory.metrics.referenceStability).toMatchObject({ status: 'measured', changeCount: 0, missingBaselineCount: 0 });
-		expect(observatory.metrics.contradictionResponses).toMatchObject({ answeredCount: 6, totalCount: 6, responseRate: 100 });
-		expect(observatory.measurementProgram).toMatchObject({ baseline: { period: '2026-07', kind: 'baseline' }, trend: { status: 'measured', periodCount: 3, fromPeriod: '2026-08', toPeriod: '2026-09' }, targets: { multiPressureFad: { status: 'pending_trend', targetPercent: null }, referenceBaselineCoverage: { targetPercent: 100 }, contradictionResponses: { targetPercent: 100 } } });
+		expect(observatory.metrics.contradictionResponses).toMatchObject({ answeredCount: 9, totalCount: 9, responseRate: 100 });
+		expect(observatory.measurementProgram).toMatchObject({ baseline: { period: '2026-07', kind: 'baseline' }, trend: { status: 'measured', periodCount: 4, fromPeriod: '2026-09', toPeriod: '2026-10' }, targets: { multiPressureFad: { status: 'pending_trend', targetPercent: null }, referenceBaselineCoverage: { targetPercent: 100 }, contradictionResponses: { targetPercent: 100 } } });
 	});
 
 	it('requires a current MPN observation and valid contradiction sources', () => {
@@ -44,6 +44,6 @@ describe('document quality observatory', () => {
 
 	it('requires immutable monthly periods in chronological order', () => {
 		expect(() => documentQualityHistorySchema.parse({ ...documentQualityHistory, snapshots: [...documentQualityHistory.snapshots, { ...documentQualityHistory.snapshots[0], kind: 'monthly' }] })).toThrow();
-		expect(() => createDocumentQualityObservatory(compressors, tools, documentQualityLedger, referenceRegistry, '2026-10-01', documentQualityHistory)).toThrow('Snapshot mensuel documentaire manquant pour 2026-10');
+		expect(() => createDocumentQualityObservatory(compressors, tools, documentQualityLedger, referenceRegistry, '2026-11-01', documentQualityHistory)).toThrow('Snapshot mensuel documentaire manquant pour 2026-11');
 	});
 });

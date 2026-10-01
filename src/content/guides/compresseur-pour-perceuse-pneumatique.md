@@ -3,7 +3,6 @@ title: "Quel compresseur pour une perceuse pneumatique ?"
 seoTitle: "Compresseur pour perceuse pneumatique | CompatAir"
 description: "Choisir le compresseur d’une perceuse pneumatique à partir du débit en charge, de la pression dynamique, du flexible et de la notice du modèle exact."
 pubDate: 2026-08-28
-updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, carrosserie-peinture, maintenance-industrielle]
@@ -15,6 +14,7 @@ sources:
   - https://tools.cp.com/en-au/products/drills/cp785-skuT022698
   - https://www.cp.com/content/dam/pim/itba/cp/technical-documents/KF140145.pdf
   - https://www.metabo.com/de/de/maschinen/bohren-schrauben-meisseln-ruehren/bohrmaschinen/db-10-druckluft-bohrmaschine/604120000
+updatedDate: "2026-10-01"
 ---
 
 Une perceuse pneumatique ne se dimensionne ni avec la taille du mandrin, ni avec les litres de cuve, ni avec le seul débit aspiré du compresseur. Il faut la référence exacte, sa consommation d’air, sa pression de travail et les conditions de raccordement publiées. Deux perceuses de 10 mm présentes dans le catalogue CompatAir illustrent déjà un écart de 120 L/min.
@@ -109,3 +109,5 @@ Pour un poste qui réalise ensuite les filetages, comparez séparément les [tar
 Le dimensionnement peut se faire sur la consommation maximale publiée des [Top Cat 300D et 400D face aux stations COMBI XP](/guides/top-cat-300d-400d-compresseur-combi-xp/). Si deux postes travaillent ensemble, le cas [deux perceuses Top Cat sur RS-PRO 7.5 ou 11.0](/guides/renner-rs-pro-7-5-11-0-deux-perceuses-top-cat/) explicite le besoin cumulé et la marge retenue dans le calcul.
 
 Pour commander la bonne configuration, consultez la [LBB16 EP-005-U sans mandrin](/guides/atlas-lbb16-ep005-sans-mandrin-reference-masse/) et les [Sumake ST-M5204R7/R3 à vitesses différentes](/guides/sumake-st-m5204r7-r3-perceuse-700-350/). La masse et le débit doivent garder le périmètre exact du tableau.
+
+Trois dossiers permettent de comparer des demandes identifiées : la [Bosch 0 607 154 101 à 270 L/min en charge](/guides/bosch-0607154101-compresseur-270-litres-minute/), [deux Bosch de 660 L/min sur un CSA 15](/guides/ceccato-csa-15-deux-perceuses-bosch/) et [une Bosch de 660 L/min face au RSDK-B 5.5](/guides/renner-rsdk-b-5-5-bosch-660-marge/). Les scénarios exposent leur marge sans l’attribuer au fabricant.

@@ -63,6 +63,19 @@
         "referenceChangeCount": 0,
         "contradictionResponseRate": 100
       }
+    },
+    {
+      "period": "2026-10",
+      "kind": "monthly",
+      "capturedAt": "2026-10-01",
+      "metrics": {
+        "correctionMedianDays": 0,
+        "measurableCorrectionCount": 3,
+        "multiPressureFadPercentage": 8,
+        "referenceBaselineCoveragePercent": 100,
+        "referenceChangeCount": 0,
+        "contradictionResponseRate": 100
+      }
     }
   ]
 }

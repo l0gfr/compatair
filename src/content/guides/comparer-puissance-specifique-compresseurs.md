@@ -12,7 +12,7 @@ sources:
   - https://www.cagi.org/performance-verification
   - https://www.cagi.org/assets/documents/pdfs/RotaryCompressorUniformTestMethodNotApplicable.pdf?updated=1731084220
   - https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf
-updatedDate: 2026-09-26
+updatedDate: "2026-10-01"
 ---
 
 Deux compresseurs de même puissance moteur peuvent livrer des débits différents, à des pressions différentes et avec des auxiliaires différents. La puissance spécifique rapproche la puissance totale du package et sa capacité au même point de fonctionnement. Elle ne dispense pas d’étudier le comportement à charge partielle.
@@ -78,3 +78,5 @@ La [lecture détaillée d’une fiche CAGI](/guides/lire-fiche-cagi-compresseur-
 - [CAGI, Performance Verification Program](https://www.cagi.org/performance-verification)
 - [CAGI, formulaire de données pour compresseur rotatif à vitesse fixe](https://www.cagi.org/assets/documents/pdfs/RotaryCompressorUniformTestMethodNotApplicable.pdf?updated=1731084220)
 - [U.S. Department of Energy, Improving Compressed Air System Performance](https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf)
+
+Les noms de gamme demandent aussi une vérification : le [CSA 7.5 indique 7,5 ch et 5,5 kW](/guides/ceccato-csa-7-5-hp-5-5-kw/). Pour une demande élevée, le [scénario DRB 29 ou 34 à 3 000 L/min](/guides/ceccato-drb-29-34-3000-l-min-atelier/) conserve la pression et la réserve choisie. Le [cas du DRB 25 pour un poste à 10 bar](/guides/ceccato-drb-25-poste-10-bar-debit/) montre pourquoi la pression maximale ne suffit pas.

@@ -60,7 +60,7 @@ const formatNumber = (value: number) => value.toLocaleString('fr-FR');
 						<footer class="home-command-status">
 							<div><small>Espace</small><strong>{formatNumber(scope.explorable_combination_count)}</strong><span>combinaisons explorables</span></div>
 							<div><small>Périmètre calculable</small><strong>{formatNumber(scope.fixed_verdict_count)}</strong><span>couples calculables</span></div>
-							<div><small>Paramétrique</small><strong>{formatNumber(scope.parametric_combination_count)}</strong><span>cadence ou volume requis</span></div>
+							<div><small>Profils non fixes</small><strong>{formatNumber(scope.parametric_combination_count)}</strong><span>paramètres ou données à compléter</span></div>
 						</footer>
 					</aside>
 				</div>
@@ -81,8 +81,8 @@ const formatNumber = (value: number) => value.toLocaleString('fr-FR');
 					<div><dt>{allGuides.length}</dt><dd>guides<br />techniques</dd></div>
 				</dl>
 				<section class="home-snapshot-scope" aria-labelledby="home-snapshot-title">
-					<header><div><p>Catalogue actuel et décisions documentées</p><h2 id="home-snapshot-title">{formatNumber(scope.explorable_combination_count)} combinaisons explorables</h2></div><p>Chaque couple est évalué à partir du débit restitué, de la pression et du taux de marche documentés. Les {scope.parametric_tool_count} outils paramétriques exigent une cadence ou un volume et un temps cible avant calcul.</p></header>
-					<p>Audit du catalogue vérifié le {CATALOG_VERIFIED_AT}, sur {formatNumber(verdictSnapshot.pairCount)} couples à débit fixe. Les {formatNumber(scope.parametric_combination_count)} combinaisons paramétriques sont exclues de ce comptage.</p>
+					<header><div><p>Catalogue actuel et décisions documentées</p><h2 id="home-snapshot-title">{formatNumber(scope.explorable_combination_count)} combinaisons explorables</h2></div><p>Chaque couple est évalué à partir du débit restitué, de la pression et du taux de marche documentés. Les {scope.parametric_tool_count} profils non fixes comprennent des besoins par action, du gonflage et des fiches incomplètes. Une saisie de volume ne remplace pas un débit constructeur absent.</p></header>
+					<p>Calcul du catalogue vérifié le {CATALOG_VERIFIED_AT}, sur {formatNumber(verdictSnapshot.pairCount)} couples à débit fixe. Les {formatNumber(scope.parametric_combination_count)} combinaisons de profils non fixes sont exclues de cette distribution.</p>
 					<div class="home-verdict-mix">
 						<div><small>Compatible en continu</small><strong>{formatNumber(verdictSnapshot.summary.continuous)}</strong></div>
 						<div><small>Incompatible</small><strong>{formatNumber(verdictSnapshot.summary.incompatible)}</strong></div>

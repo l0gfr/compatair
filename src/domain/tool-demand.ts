@@ -27,7 +27,9 @@ export function toolPressureLabel(tool: ToolProfile): string {
 			? `${pressure.min} à ${pressure.max} bar, point de référence ${pressure.typical} bar`
 			: `${pressure.min} à ${pressure.max} bar`;
 	}
-	return `${pressure.max} bar maximum`;
+	if (pressure.max !== undefined) return `${pressure.max} bar maximum`;
+	if (pressure.min !== undefined) return `${pressure.min} bar minimum, maximum non établi`;
+	return 'Pression de travail non établie';
 }
 
 export function toolSearchText(tool: ToolProfile): string {

@@ -11,7 +11,7 @@ describe('pages de décision sourcées', () => {
 		const metrics = documentQualityObservatory.metrics;
 		// Cette photographie a été publiée avant l'ajout des 200 références du soir.
 		// Son dénominateur historique ne doit pas être remplacé par le catalogue courant.
-		expect(documentQualityHistory.snapshots.at(-1)).toMatchObject({
+		expect(documentQualityHistory.snapshots.find(snapshot => snapshot.period === '2026-09')).toMatchObject({
 			capturedAt: '2026-09-25',
 			metrics: { multiPressureFadPercentage: 47, referenceBaselineCoveragePercent: 100 },
 		});

@@ -1,0 +1,118 @@
+const product = {
+	"id": "meuleuse-dotco-10n1080-0124",
+	"slug": "meuleuse-dotco-10n1080-0124",
+	"categoryId": "meuleuse",
+	"category": "meuleuse",
+	"label": "Dotco 10N1080-0124",
+	"brand": "Dotco",
+	"model": "10N1080-0124",
+	"mpn": "10N1080-0124",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {
+		"min": 6.2,
+		"typical": 6.2,
+		"max": 6.2
+	},
+	"demandExplanation": "La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner.",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/meuleuse-dotco-10n1080-0124.webp",
+		"alt": "Repères techniques : Dotco 10N1080-0124",
+		"sourceUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=216",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+	},
+	"variant": {
+		"familyId": "dotco-10n1080-0124",
+		"label": "Référence 10N1080-0124",
+		"distinguishingAttributes": {
+			"reference": "10N1080-0124",
+			"Terminaison publiée": "1/8 in",
+			"Échappement": "Arrière"
+		}
+	},
+	"editorial": {
+		"overview": "Dotco 10N1080-0124. La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner. Terminaison publiée : 3/8 in. Échappement : Arrière.",
+		"verifiedFacts": [
+			"Terminaison publiée : 3/8 in.",
+			"Échappement : Arrière.",
+			"Terminaison publiée : 1/8 in.",
+			"Vitesse à vide : 30000 tr/min."
+		],
+		"limitations": [
+			"La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner.",
+			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Terminaison publiée",
+			"value": "3/8 in",
+			"evidenceIds": [
+				"october-cleco-p216-p216"
+			]
+		},
+		{
+			"label": "Échappement",
+			"value": "Arrière",
+			"evidenceIds": [
+				"october-cleco-p216-p216"
+			]
+		},
+		{
+			"label": "Terminaison publiée",
+			"value": "1/8 in",
+			"evidenceIds": [
+				"october-cleco-p216-p216"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "30000 tr/min",
+			"evidenceIds": [
+				"october-cleco-p216-p216"
+			]
+		},
+		{
+			"label": "Localisation documentaire",
+			"value": "Cleco, catalogue SP-1081, page 216",
+			"evidenceIds": [
+				"october-cleco-p216-p216"
+			]
+		},
+		{
+			"label": "Condition de pression originale",
+			"value": "All tools performance rated @ 90 psi / 620 kPa air pressure.",
+			"evidenceIds": [
+				"october-cleco-p216-p216"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "october-cleco-p216-p216",
+			"sourceUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=216#page=216",
+			"sourceLabel": "Cleco, catalogue SP-1081, page 216",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-01",
+			"confidence": "B",
+			"notes": "SHA-256 dd695b3d5449614c24c96b193e71d25636915f9979aee32ab89dfb843f20f5d6. Caractéristiques déclarées, sans essai physique CompatAir."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"october-cleco-p216-p216"
+		],
+		"workingPressureBar": [
+			"october-cleco-p216-p216"
+		],
+		"demandExplanation": [
+			"october-cleco-p216-p216"
+		]
+	},
+	"notes": [
+		"La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner."
+	]
+};
+
+export default product;

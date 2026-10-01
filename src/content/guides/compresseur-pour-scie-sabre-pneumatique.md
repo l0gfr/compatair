@@ -16,6 +16,7 @@ sources:
   - https://tools.cp.com/content/dam/brands/cp/tools/web/shared/literature/catalogs/cp_general-industry/cp-general-industry-ENG.pdf
   - https://www.cp.com/content/dam/pim/itba/cp/technical-documents/CA145206.pdf
   - https://www.cp.com/content/dam/pim/itba/cp/technical-documents/update2025/june-audit/safety/6159948790.pdf
+updatedDate: "2026-10-01"
 ---
 
 Une scie sabre pneumatique ne permet pas de déduire une taille de compresseur à partir de sa seule catégorie. Il faut conserver ensemble la référence exacte, sa consommation en charge, la pression associée, le flexible documenté et la durée réelle de coupe. La puissance moteur et la taille de cuve du compresseur ne remplacent pas son débit restitué à la pression demandée.
@@ -101,3 +102,5 @@ Ouvrez le [calculateur avec la CP7900 préchargée](/calculateur/#outil=chicago-
 - [Chicago Pneumatic, consignes de sécurité des scies alternatives](https://www.cp.com/content/dam/pim/itba/cp/technical-documents/update2025/june-audit/safety/6159948790.pdf)
 
 Pour le [NPK TS-05](/guides/npk-ts05-lame-32-dents-brosses-accessoires/), la lecture de la grille d’accessoires évite de commander une lame prévue pour une autre scie ou de prendre une brosse pour une lame. Le guide conserve les codes et distingue les possibilités publiées des performances à vérifier sur votre pièce.
+
+La [Dotco 12S4225-03 Vacuum Ready](/guides/dotco-12s4225-03-vacuum-ready-air/) illustre le contrôle du suffixe et de l’équipement livré. Les [SP-7231 et SP-7231AWC](/guides/sp-air-sp-7231-awc-capot-air/) sont des outils de tronçonnage avec une différence de capot documentée ; ce suffixe ne décrit pas une aspiration.

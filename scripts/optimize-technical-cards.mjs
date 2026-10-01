@@ -23,8 +23,10 @@ for (const kind of ['compressors', 'tools']) {
 			const metadata = await sharp(original).metadata();
 			totals.eligible++;
 			totals.beforeBytes += original.length;
-			// Only re-render our own 1200 x 800 cards; keep photos and other layouts intact.
-			if (metadata.width !== 1200 || metadata.height !== 800) { totals.afterBytes += original.length; continue; }
+			// Re-render only our own known layouts, directly from their source SVG.
+			const knownLayout = (metadata.width === 1200 && metadata.height === 800)
+				|| (metadata.width === 900 && metadata.height === 600);
+			if (!knownLayout) { totals.afterBytes += original.length; continue; }
 			const optimized = await sharp(Buffer.from(technicalCardSvg(p, kind)))
 				.resize({ width: TECHNICAL_CARD_WIDTH }).webp({ quality: 85, effort: 6 }).toBuffer();
 			if (optimized.length >= original.length) { totals.afterBytes += original.length; continue; }

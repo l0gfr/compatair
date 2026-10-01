@@ -2,7 +2,7 @@
 
 > Source-backed, deterministic compatibility between air compressors, pneumatic tools and documented system components. Missing critical data always remains `insufficient_data`.
 
-Dataset scope: 1819 compressors × 7087 tools = 12,891,253 explorable combinations. The on-demand manifest describes 12,469,245 calculable pairs for 6855 fixed-flow tools. The remaining 422,008 combinations are parametric and require action rate or volume plus target time; never describe them as precomputed verdicts. The 715 average-consumption tools carry airflowBasis=average and always return insufficient_data until load consumption and cycle conditions are documented; their published mean must never be treated as continuous demand.
+Dataset scope: 2019 compressors × 8087 tools = 16,327,653 explorable combinations. The on-demand manifest describes 14,740,719 calculable pairs for 7301 fixed-flow tools. The remaining 1,586,934 combinations belong to the non-fixed contract bucket: 81 per-action tools, 5 inflation tools and 700 incomplete records that need manufacturer data; never describe them as precomputed verdicts. The 715 average-consumption tools carry airflowBasis=average and always return insufficient_data until load consumption and cycle conditions are documented; their published mean must never be treated as continuous demand.
 
 ## Agent interfaces
 

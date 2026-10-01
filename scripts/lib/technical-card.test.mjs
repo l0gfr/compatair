@@ -15,6 +15,10 @@ describe('generated technical cards', () => {
 		expect(svg).toContain('Non établi');
 		expect(svg).toContain('PRESSION MAX.');
 		expect(svg).not.toContain('undefined');
+		const unknownPressure = technicalCardSvg({ ...tool, demandModel: 'variable-volume', airflowLpm: undefined, workingPressureBar: {} }, 'tools');
+		expect(unknownPressure).toContain('Non établie');
+		expect(unknownPressure).not.toContain('PRESSION MAX.');
+		expect(unknownPressure).not.toContain('undefined');
 	});
 	it('shows missing FAD without substituting intake flow', () => {
 		const svg = technicalCardSvg({ brand: 'Example', model: 'C1', tankLiters: 50, maxPressureBar: 10, fadCurve: [], intakeFlowLpm: 999 }, 'compressors');

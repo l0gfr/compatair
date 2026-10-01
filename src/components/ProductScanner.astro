@@ -237,7 +237,7 @@ import ContextHelp from './ContextHelp.astro';
 		if (tool.demandModel === 'fixed-flow' && tool.airflowBasis !== undefined) value = `${formatNumber(tool.airflowLpm.typical)} L/min publiés : débit en charge et régime à documenter avant dimensionnement.`;
 		else if (tool.demandModel === 'fixed-flow') value = `${formatNumber(tool.airflowLpm.typical)} L/min à ${formatNumber(tool.workingPressureBar.typical)} bar · cible de classement ${formatNumber(tool.airflowLpm.typical * 1.25)} L/min avec 25 % de réserve.`;
 		else if (tool.demandModel === 'per-action') value = `${formatNumber(tool.airPerActionLiters)} L par ${tool.actionLabel} à ${formatNumber(tool.workingPressureBar.typical)} bar ; cadence à préciser.`;
-		else value = `${tool.demandExplanation} Pression maximale publiée : ${formatNumber(tool.workingPressureBar.max)} bar.`;
+		else value = `${tool.demandExplanation} ${tool.workingPressureBar.max === undefined ? 'Pression maximale non établie.' : `Pression maximale publiée : ${formatNumber(tool.workingPressureBar.max)} bar.`}`;
 		setText('[data-published-value]', value);
 		return value;
 	}

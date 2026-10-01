@@ -3,7 +3,6 @@ title: "Débit restitué FAD ou débit aspiré : le chiffre qui dimensionne vrai
 seoTitle: "Débit FAD ou débit aspiré : lequel comparer ? | CompatAir"
 description: "FAD, débit aspiré et débit de remplissage ne mesurent pas la même chose. Identifiez le chiffre à comparer au besoin de votre outil et à quelle pression."
 pubDate: 2026-07-13
-updatedDate: 2026-09-30
 category: Comprendre
 audiences: [particulier, professionnel]
 metiers: []
@@ -15,6 +14,7 @@ sources:
   - https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of
   - https://fr.metabo.com/fr/machines/air-comprime/compresseurs/compresseurs-d-atelier-mobiles/mega-350-100-w-601538000-compresseur.html
 relatedGuides: ["convertir-cfm-l-min-nl-min-air-comprime", "contradiction-debit-cfm-m3-min-catalogues", "abac-cross-500-900-fad-maximal", "gentilin-ac200-debit-5-8-bar"]
+updatedDate: "2026-10-01"
 ---
 
 Deux compresseurs peuvent afficher 240 ou 320 litres par minute en gros caractères et livrer des performances très différentes à l’outil. La raison tient au point de mesure. Le débit aspiré est mesuré à l’entrée du groupe de compression. Le débit restitué, désigné **FAD** pour *Free Air Delivery* dans le manuel Atlas Copco cité en source, représente l’air effectivement fourni après les pertes propres à la compression.
@@ -69,3 +69,5 @@ Pour préciser le choix de la configuration, consultez [contradiction entre CFM 
 - [Atlas Copco, Compressed Air Manual, 9e édition](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf)
 - [Einhell, TC-AC 240/50/10 OF](https://www.einhell.fr/p/4010393-tc-ac-240-50-10-of)
 - [Metabo, Mega 350-100 W](https://fr.metabo.com/fr/machines/air-comprime/compresseurs/compresseurs-d-atelier-mobiles/mega-350-100-w-601538000-compresseur.html)
+
+Les tableaux récents apportent deux cas concrets : le [DRB 20 distingue 7,5 bar maximum et 7 bar de mesure](/guides/ceccato-drb-20-7-bar-pression-reference/), tandis que le [DRC 40 sépare air de refroidissement et FAD](/guides/ceccato-drc-40-air-refroidissement-fad/). Le [CSA 20 conserve trois configurations de pression distinctes](/guides/ceccato-csa-20-8-10-13-bar-debit/).

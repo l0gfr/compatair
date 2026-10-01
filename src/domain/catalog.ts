@@ -159,11 +159,11 @@ const perActionDemandSchema = z.object({
 
 const variableVolumeDemandSchema = z.object({
 	demandModel: z.literal('variable-volume'),
-	workingPressureBar: z.object({ min: z.number().positive().optional(), typical: z.number().positive().optional(), max: z.number().positive() }),
+	workingPressureBar: z.object({ min: z.number().positive().optional(), typical: z.number().positive().optional(), max: z.number().positive().optional() }),
 	demandExplanation: z.string().min(1),
 }).superRefine((demand, context) => {
 	const { min, typical, max } = demand.workingPressureBar;
-	if ((min !== undefined && min > max) || (typical !== undefined && typical > max) || (min !== undefined && typical !== undefined && min > typical)) context.addIssue({ code: 'custom', path: ['workingPressureBar'], message: 'La pression doit respecter min ≤ nominale ≤ max.' });
+	if ((min !== undefined && max !== undefined && min > max) || (typical !== undefined && max !== undefined && typical > max) || (min !== undefined && typical !== undefined && min > typical)) context.addIssue({ code: 'custom', path: ['workingPressureBar'], message: 'La pression doit respecter min ≤ nominale ≤ max.' });
 });
 
 export const toolProfileSchema = toolBaseSchema.and(z.discriminatedUnion('demandModel', [

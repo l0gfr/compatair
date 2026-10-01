@@ -3,7 +3,6 @@ title: "Ponceuse à bande, lime et polisseuse pneumatique : attention au débit 
 seoTitle: "Compresseur pour ponceuse à bande et polisseuse"
 description: "Comparer le débit en charge d’une lime, d’une ponceuse à bande ou d’une polisseuse pneumatique, sans confondre consommation à vide et besoin durable."
 pubDate: 2026-08-28
-updatedDate: 2026-09-26
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, carrosserie-peinture, maintenance-industrielle]
@@ -18,6 +17,7 @@ sources:
   - https://tools.cp.com/en/products/sanders/cp9779-sku6151939779
   - https://tools.cp.com/de-de/products/sanders/cp9780-sku6151939780
   - https://www.cp.com/content/dam/pim/itba/cp/technical-documents/2050499083.pdf
+updatedDate: "2026-10-01"
 ---
 
 « Ponceuse pneumatique » ne désigne pas un besoin d’air unique. Une lime à bande étroite, une polisseuse de 205 mm et deux ponceuses à bande Chicago Pneumatic présentes dans CompatAir couvrent ici une plage de **400 à 1 800 L/min**. La cuve ne peut pas effacer un tel écart et la petite valeur « à vitesse libre » ne doit pas remplacer la consommation en charge.
@@ -118,3 +118,5 @@ Les retouches de petite surface font l’objet d’un dossier dédié : [mini-po
 - [Chicago Pneumatic, fiche officielle CP9779](https://tools.cp.com/en/products/sanders/cp9779-sku6151939779)
 - [Chicago Pneumatic, fiche officielle CP9780](https://tools.cp.com/de-de/products/sanders/cp9780-sku6151939780)
 - [Chicago Pneumatic, manuel CP9779](https://www.cp.com/content/dam/pim/itba/cp/technical-documents/2050499083.pdf)
+
+Les [VESSEL GT-BS12 et GT-BS20](/guides/vessel-gt-bs12-bs20-bande-vitesse-air/) séparent vitesse de bande et consommation. Le [GT-PLHⅡ](/guides/vessel-gt-plh-ii-reference-consommation/) fournit un autre cas d’identification exacte du modèle, avec un régime de débit restant à confirmer.

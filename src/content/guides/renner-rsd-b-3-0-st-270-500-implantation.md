@@ -11,6 +11,7 @@ reviewStatus: internal
 relatedGuides: ["comparatif-compresseurs-debit-restitue"]
 sources:
   - https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf
+updatedDate: "2026-10-01"
 ---
 
 Un compresseur peut entrer sur le plan de l’atelier et rester impossible à acheminer ou à entretenir. Les configurations RSD-B 3.0 ST sur 270 litres et RSD-B sur 500 litres illustrent ce problème : elles partagent un débit de gamme à la même pression, avec des enveloppes très différentes.
@@ -42,3 +43,5 @@ Dans le local, demandez les dégagements autour des panneaux, des purges et des 
 À 7,5 bar, la ligne de gamme annonce 460 L/min pour les deux configurations. Passer de 270 à 500 litres change le stockage. Cela ne produit pas un supplément de débit continu. Le choix du volume doit s’appuyer sur le scénario de soutirage et de recharge retenu, sans transformer la capacité du réservoir en performance du bloc.
 
 Les fiches [ST 300110](/compresseurs/renner-rsd-b-3-0-st-300110/) et [500 L 300146](/compresseurs/renner-rsd-b-3-0-300146/) conservent les identités exactes. Le [dossier sur les configurations de cuve RENNER](/guides/renner-rsd-b-2-2-deux-cuves-90-250-litres/) aide à séparer stockage et production lorsque vous préparez le devis.
+
+Pour préparer un autre local, consultez les dimensions du [RSDK-B 4.0 ST](/guides/renner-rsdk-b-4-0-st-plafond-local/), les documents de cuve du [RSDK-B-ECN 5.5](/guides/renner-rsdk-b-ecn-5-5-cuve-reference/) et les contraintes du [DRB 20 sur 500 L avec sécheur](/guides/ceccato-drb-20-cuve-500-secheur-local/). Chaque ensemble conserve sa propre référence de livraison.

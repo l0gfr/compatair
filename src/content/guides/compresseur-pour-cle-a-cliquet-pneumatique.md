@@ -11,6 +11,7 @@ relatedCalculatorTool: metabo-drs-68-set
 sources:
   - https://www.metabo.com/no/no/maskiner/trykkluft/trykkluft-verktoy/trykkluft-skralletrekker/drs-68-set-1-2-trykkluft-skralletrekker/604119500
   - https://www.einhell.fr/p/4010800-te-ac-430-90-10/
+updatedDate: "2026-10-01"
 ---
 
 Pour choisir un compresseur pour une clé à cliquet pneumatique, il faut comparer deux valeurs à la même pression : le besoin en air de l’outil et le débit restitué du compresseur. Le volume de cuve, la pression maximale et le débit aspiré ne remplacent pas cette comparaison.
@@ -67,3 +68,5 @@ Ouvrez le [calculateur avec la DRS 68 préchargée](/calculateur/#outil=metabo-d
 - [Einhell, TE-AC 430/90/10](https://www.einhell.fr/p/4010800-te-ac-430-90-10/)
 
 La [fiche URYU URW-6](/guides/uryu-urw6-pression-recommandee-couple-6-bar/) juxtapose une pression recommandée et une condition différente pour le couple indicatif. Avant de changer la pression du réseau, le guide explique quelles valeurs restent attachées à chacune de ces conditions.
+
+Le [cliquet Bosch 0 607 450 794](/guides/bosch-0607450794-cliquet-debit-a-vide/) publie seulement sa consommation à vide. Un autre contrôle est nécessaire sur la [Bosch 0 607 450 593, dont les unités de débit divergent](/guides/bosch-0607450593-consommation-unites/). Les valeurs non exploitables restent visibles avec leur réserve.
