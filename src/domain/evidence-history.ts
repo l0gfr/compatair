@@ -82,21 +82,28 @@ export function assertEvidenceHistoryIntegrity(history: EvidenceHistory, compres
 	];
 	const errors: string[] = [];
 	const eventIds = new Set<string>();
+	const latestByProduct = new Map<string, Map<string, EvidenceHistoryEvent>>();
 	for (const event of history.events) {
 		if (eventIds.has(event.id)) errors.push(`Événement historique dupliqué : ${event.id}`);
 		eventIds.add(event.id);
 		if (event.fingerprint !== evidenceFingerprint(event.productId, event.snapshot)) errors.push(`Empreinte invalide : ${event.id}`);
+		let latestByEvidence = latestByProduct.get(event.productId);
+		if (!latestByEvidence) {
+			latestByEvidence = new Map();
+			latestByProduct.set(event.productId, latestByEvidence);
+		}
+		const previous = latestByEvidence.get(event.evidenceId);
+		if (!previous || (event.occurredAt.localeCompare(previous.occurredAt) || event.id.localeCompare(previous.id)) >= 0) {
+			latestByEvidence.set(event.evidenceId, event);
+		}
 	}
 	for (const { product, type } of products) {
 		for (const evidence of product.evidence) {
-			const events = history.events
-				.filter((event) => event.productId === product.id && event.evidenceId === evidence.id)
-				.sort((a, b) => a.occurredAt.localeCompare(b.occurredAt) || a.id.localeCompare(b.id));
-			if (!events.length) {
+			const latest = latestByProduct.get(product.id)?.get(evidence.id);
+			if (!latest) {
 				errors.push(`Preuve absente de l’historique : ${product.id}/${evidence.id}`);
 				continue;
 			}
-			const latest = events.at(-1)!;
 			if (latest.productType !== type) errors.push(`Type produit incohérent : ${latest.id}`);
 			if (JSON.stringify(latest.snapshot) !== JSON.stringify(evidence)) errors.push(`La dernière version ne correspond pas au catalogue : ${latest.id}`);
 		}
