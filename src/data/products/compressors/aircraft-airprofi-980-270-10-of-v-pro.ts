@@ -13,7 +13,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-airprofi-980-270-10-of-v-pro.webp",
 		"alt": "Repères techniques Aircraft AIRPROFI 980/270/10 OF V PRO, référence 2025428",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/airprofi-98027010-of-v-pro-2025428/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-98027010-of-v-pro-2025428/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -87,10 +87,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2025428-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/airprofi-98027010-of-v-pro-2025428/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-98027010-of-v-pro-2025428/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2025428, réf. 2025428",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Débit aspiré déclaré : 980 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
 		}

@@ -17,7 +17,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-bpk.webp",
 		"alt": "Repères techniques Aircraft BPK, référence 2112100",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/bpk-2112100/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bpk-2112100/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -75,10 +75,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2112100-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/bpk-2112100/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bpk-2112100/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2112100, réf. 2112100",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
 		}

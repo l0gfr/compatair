@@ -13,7 +13,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-airprofi-440-90-v-of-pro.webp",
 		"alt": "Repères techniques Aircraft AIRPROFI 440/90 V OF PRO, référence 2015448",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/airprofi-44090-v-of-pro-2015448/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-44090-v-of-pro-2015448/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -87,10 +87,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2015448-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/airprofi-44090-v-of-pro-2015448/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-44090-v-of-pro-2015448/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2015448, réf. 2015448",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Débit aspiré déclaré : 440 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
 		}

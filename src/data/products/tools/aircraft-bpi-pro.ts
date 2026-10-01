@@ -17,7 +17,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-bpi-pro.webp",
 		"alt": "Repères techniques Aircraft BPI PRO, référence 2102170",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/bpi-pro-2102170/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bpi-pro-2102170/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -75,10 +75,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2102170-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/bpi-pro-2102170/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bpi-pro-2102170/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2102170, réf. 2102170",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
 		}

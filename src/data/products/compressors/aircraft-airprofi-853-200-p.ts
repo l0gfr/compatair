@@ -13,7 +13,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-airprofi-853-200-p.webp",
 		"alt": "Repères techniques Aircraft AIRPROFI 853/200 P, référence 2018832.2",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/airprofi-853200-p-20188322/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-853200-p-20188322/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -94,10 +94,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2018832-2-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/airprofi-853200-p-20188322/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-853200-p-20188322/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018832.2, réf. 2018832.2",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Débit aspiré déclaré : 850 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
 		}

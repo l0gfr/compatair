@@ -17,7 +17,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-bm-c-13-pro.webp",
 		"alt": "Repères techniques Aircraft BM-C 13 PRO, référence 2404115",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/bm-c-13-pro-2404115/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bm-c-13-pro-2404115/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -117,10 +117,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2404115-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/bm-c-13-pro-2404115/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bm-c-13-pro-2404115/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2404115, réf. 2404115",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 238 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
 		}

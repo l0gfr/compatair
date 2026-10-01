@@ -17,7 +17,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-bp-pro-r.webp",
 		"alt": "Repères techniques Aircraft BP PRO R, référence 2112130",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/bp-pro-r-2112130/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-r-2112130/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -89,10 +89,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2112130-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/bp-pro-r-2112130/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-r-2112130/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2112130, réf. 2112130",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
 		}

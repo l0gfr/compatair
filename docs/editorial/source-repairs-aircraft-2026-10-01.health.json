@@ -1,0 +1,1601 @@
+{
+  "checkedAt": "2026-10-01T20:48:03.104Z",
+  "repairedSources": 148,
+  "comparedFields": 3686,
+  "repairs": [
+    {
+      "productId": "aircraft-airbau-652-100-b-pro",
+      "mpn": "2006530",
+      "model": "AIRBAU 652/100 B PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airbau-652100-b-pro-2006530/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airbau-652100-b-pro-2006530/",
+      "sourceSha256": "98939fc08e0c85ac3b755d6335eca87e0cdeb0e6106df64468e26dc957e30702",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airboy-131-of-e",
+      "mpn": "2001225",
+      "model": "AIRBOY 131 OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-131-of-e-2001225/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-131-of-e-2001225/",
+      "sourceSha256": "9f93b7de748cb17879bb154b8aa2406c97c3b9a7f7c90da71d6317238de58a87",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airboy-186-of-e",
+      "mpn": "2001230",
+      "model": "AIRBOY 186 OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-186-of-e-2001230/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-186-of-e-2001230/",
+      "sourceSha256": "eda30951e40da8c1659a2c9e67e62a59a4b3856809e87d2928547a0d154aa122",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airboy-262-e",
+      "mpn": "2001247",
+      "model": "AIRBOY 262 E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-262-e-2001247/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-262-e-2001247/",
+      "sourceSha256": "72fc510be14aef5ebb10ebbfe21dad7e543ac3d0f2c1d4505818b9b545dfaa1e",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airboy-kitt-90",
+      "mpn": "2001237",
+      "model": "AIRBOY KITT 90",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-kitt-90-2001237/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-kitt-90-2001237/",
+      "sourceSha256": "cbb7c654d8cf0194000574b532e47f0ecb0431685951eefa8ba8acc8297eb6b4",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airboy-silence-111-as-of-e",
+      "mpn": "2000108",
+      "model": "AIRBOY SILENCE 111 AS OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-silence-111-as-of-e-2000108/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-silence-111-as-of-e-2000108/",
+      "sourceSha256": "9835dee0cbc06a33112238aa05a37840ddb2be471ba3bc3ab3a82ab1bf3938d0",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airboy-silence-171-of-e",
+      "mpn": "2001265",
+      "model": "AIRBOY SILENCE 171 OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-silence-171-of-e-2001265/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-silence-171-of-e-2001265/",
+      "sourceSha256": "3c5185069b5374c5660b993ab08d2057d7c8a98ef35e09d4fafee40568f6f0b9",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airboy-silence-50-pro",
+      "mpn": "2000100",
+      "model": "AIRBOY SILENCE 50 PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-silence-50-pro-2000100/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-silence-50-pro-2000100/",
+      "sourceSha256": "47b92bf2c2dfbd875fed366d7540af9292907434c2f72f45c7230558e7372e7c",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-aircar-220-of-pro",
+      "mpn": "2015520",
+      "model": "Aircar 220 OF PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/aircar-220-of-pro-2015520/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/aircar-220-of-pro-2015520/",
+      "sourceSha256": "77be84e820ff553bc630d64baa1d5589ea824b75cf684e672d79e44805e1827e",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-aircar-440-of-pro",
+      "mpn": "2015530",
+      "model": "Aircar 440 OF PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/aircar-440-of-pro-2015530/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/aircar-440-of-pro-2015530/",
+      "sourceSha256": "41fc5a442e3290b05c3c7cc2e59d3d1cf1179a5bbb9791650a9dfd6224d5998a",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-aircar-553-22-pro",
+      "mpn": "2005553",
+      "model": "Aircar 553/22 PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/aircar-55322-pro-2005553/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/aircar-55322-pro-2005553/",
+      "sourceSha256": "fa125e7f803ea2f0725bb0f6b4463caf3470e96639932a8de8b5363d6e6a28c0",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-aircar-bau-500-20-b-pro",
+      "mpn": "2005500",
+      "model": "AIRCAR-BAU 500/20 B PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/aircar-bau-50020-b-pro-2005500/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/aircar-bau-50020-b-pro-2005500/",
+      "sourceSha256": "238100e1e3ab2b9c4785fbb619c777460ca0091c7e350f872098e662aa2512b4",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-220-50-of-pro",
+      "mpn": "2015225",
+      "model": "AIRPROFI 220/50 OF PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-22050-of-pro-2015225/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-22050-of-pro-2015225/",
+      "sourceSha256": "79fb82a3ed2809c4f1a6db2cb8ccf1ec16f0630bf5e480348e245859bf70304e",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-401-50-p",
+      "mpn": "2018410.2",
+      "model": "AIRPROFI 401/50 P",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40150-p-20184102-1/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40150-p-20184102-1/",
+      "sourceSha256": "8365eab3e602b6adef300038a4f40c0dc83c4b6125bf264d6a8fe36ae331f5fc",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-403-50-p",
+      "mpn": "2018430.2",
+      "model": "AIRPROFI 403/50 P",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40350-p-20184302-1/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40350-p-20184302-1/",
+      "sourceSha256": "ebb6b940fb8c195c3c58a94f2c8cd9b5c36e650ebbcbc471edfc9f232f07cb80",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-403-50-p-incl-sar-10-15",
+      "mpn": "2018430.2SAR",
+      "model": "AIRPROFI 403/50 P incl. SAR 10/15",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40350-p-incl-hose-reel-sar-1015-20184302sar/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40350-p-incl-hose-reel-sar-1015-20184302sar/",
+      "sourceSha256": "12c7c5c7add9f61df5f589e18c86a8f9fa87394f64457a425a5e6cb706691a04",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-403-90-v",
+      "mpn": "2018434",
+      "model": "AIRPROFI 403/90 V",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40390-v-2018434/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40390-v-2018434/",
+      "sourceSha256": "a7f3ee460bf506887497f570bb61d9fa28b6786f581d4a021b736f2b693dd881",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-440-100-of-pro",
+      "mpn": "2015446",
+      "model": "AIRPROFI 440/100 OF PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-440100-of-pro-2015446/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-440100-of-pro-2015446/",
+      "sourceSha256": "a79982f18d1e27fb2fb1bee854b7f82c7f57944fd13a11c14359dd549167afea",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-440-90-v-of-pro",
+      "mpn": "2015448",
+      "model": "AIRPROFI 440/90 V OF PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-44090-v-of-pro-2015448/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-44090-v-of-pro-2015448/",
+      "sourceSha256": "c65add40fabaf3d292ddfb18c808fca90544f8b4090531c32c848221d1c7308e",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-503-100-p",
+      "mpn": "2018531.2",
+      "model": "AIRPROFI 503/100 P",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-503100-p-20185312-1/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-503100-p-20185312-1/",
+      "sourceSha256": "bb24833ccb1c71b04679ae8b96c946368fd34779c0407b7b31adbb5f633c072d",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-503-100-p-incl-sar-10-15",
+      "mpn": "2018531.2SAR",
+      "model": "AIRPROFI 503/100 P incl. SAR 10/15",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-503100-p-incl-sar-1015-20185312sar/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-503100-p-incl-sar-1015-20185312sar/",
+      "sourceSha256": "8f64234dd931fbdf9e69d212bcdaa26034c195cf2e254a285cac097f9fdff3b3",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-503-50-p",
+      "mpn": "2018530.2",
+      "model": "AIRPROFI 503/50 P",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-50350-p-20185302-1/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-50350-p-20185302-1/",
+      "sourceSha256": "a0199db92f6eb56408742e35f6e61782707536b7896bcb4d389dc45642dea712",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-503-50-p-incl-sar-10-15",
+      "mpn": "2018530.2SAR",
+      "model": "AIRPROFI 503/50 P incl. SAR 10/15",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-50350-p-incl-hose-reel-sar-1015-20185302sar/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-50350-p-incl-hose-reel-sar-1015-20185302sar/",
+      "sourceSha256": "b8370bf2bc4e4a6ec94a816b96910c7538fa570ae1fc6e1b6eca4d17a41b7422",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-503-90-v",
+      "mpn": "2018533",
+      "model": "AIRPROFI 503/90 V",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-50390-v-2018533/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-50390-v-2018533/",
+      "sourceSha256": "891e061994bc35d756a447505ea7aef17f6c452ed3eff66742ed1e6ebaa575a2",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-600-100-of-pro",
+      "mpn": "2015606",
+      "model": "AIRPROFI 600/100 OF PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-600100-of-pro-2015606/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-600100-of-pro-2015606/",
+      "sourceSha256": "c62365d98e5e61bed0e08adab1ea0101539d875837fab744b1b695e39a5455c7",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-600-200-of-pro",
+      "mpn": "2015607",
+      "model": "AIRPROFI 600/200 OF PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-600200-of-pro-2015607/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-600200-of-pro-2015607/",
+      "sourceSha256": "30fb77b8bacfaa78b5be829c9066152dfda1a6b1d0cd6e7f79725e6be3cec574",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-703-100-p",
+      "mpn": "2018731.2",
+      "model": "AIRPROFI 703/100 P",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-703100-p-20187312/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-703100-p-20187312/",
+      "sourceSha256": "a0d141d47b696566b8534f237ec6d61c07f94998f908c1fc5c726c78508676f3",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-703-100-p-incl-sar-10-15",
+      "mpn": "2018731.2SAR",
+      "model": "AIRPROFI 703/100 P incl. SAR 10/15",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-703100-p-incl-hose-reel-sar-1015-20187312sar/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-703100-p-incl-hose-reel-sar-1015-20187312sar/",
+      "sourceSha256": "8b1b179bb16be9c63af63984739c331eaaaa6bb69d55d23e606ed2f9ce05d112",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-703-75-13-p",
+      "mpn": "2018734.2",
+      "model": "AIRPROFI 703/75/13 P",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-7037513-p-20187342-1/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-7037513-p-20187342-1/",
+      "sourceSha256": "5e4fcb0910283c68b63e70f7d10baa21dff711bbaaa3a2d64555b7450d7e3f06",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-853-100-p",
+      "mpn": "2018831.2",
+      "model": "AIRPROFI 853/100 P",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-853100-p-20188312-1/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-853100-p-20188312-1/",
+      "sourceSha256": "e23b70ad10252e94d4414eaace0957197fd62e70fe11df3b1c665897d804ac33",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-980-270-10-of-h-pro",
+      "mpn": "2025430",
+      "model": "AIRPROFI 980/270/10 OF H PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-98027010-of-h-pro-2025430/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-98027010-of-h-pro-2025430/",
+      "sourceSha256": "901b317e80439bf17fa0c63d8cc889b004fe6c913715f0c5dd433a4d9c2f9883",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-980-270-10-of-v-pro",
+      "mpn": "2025428",
+      "model": "AIRPROFI 980/270/10 OF V PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-98027010-of-v-pro-2025428/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-98027010-of-v-pro-2025428/",
+      "sourceSha256": "7cfbb842d4f11e8687ff923840af984d24054f040f1de4a1c96130cca3ad8087",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-980-500-10-of-h-pro",
+      "mpn": "2025450",
+      "model": "AIRPROFI 980/500/10 OF H PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-98050010-of-h-pro-2025450/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-98050010-of-h-pro-2025450/",
+      "sourceSha256": "c4e487e76767bb4581c1ee4551da0d26bf292b6100f5276e76c3d3dcf3eb5867",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-321-50-e",
+      "mpn": "2008312",
+      "model": "AIRSTAR 321/50 E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-32150-e-2008312/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-32150-e-2008312/",
+      "sourceSha256": "f2d28641915a48ba6cd63809c3bfc636fdedcb73cc934f732b01b71cca4980d2",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-401-50",
+      "mpn": "2009410",
+      "model": "AIRSTAR 401/50",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40150-2009410/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40150-2009410/",
+      "sourceSha256": "fd6a000ecd56b5f057f6a9185f7403e3c8d898e287d98b51d2ed1099d569d47d",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-401-50-e-230v",
+      "mpn": "2009413",
+      "model": "AIRSTAR 401/50 E 230V",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40150-e-230v-2009413/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40150-e-230v-2009413/",
+      "sourceSha256": "bda3cd2a8b6eb08071450d7037aed5c76acaf985994f5ee53117dcdc56a14bf0",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-403-50",
+      "mpn": "2009430",
+      "model": "AIRSTAR 403/50",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40350-2009430/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40350-2009430/",
+      "sourceSha256": "c43040a89ed2e6ffdb47528c2c8a4ccc2d70e21d5ff44a83f17129c0c1577002",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-403-50-e-400v",
+      "mpn": "2009433",
+      "model": "AIRSTAR 403/50 E 400V",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40350-e-400v-2009433/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40350-e-400v-2009433/",
+      "sourceSha256": "6b2bedc79515ceda17721d75fd211e2cc123db128be68c945d48e59f3dfabb8c",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-403-50-sar",
+      "mpn": "2009430SAR",
+      "model": "AIRSTAR 403/50 SAR",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40350-sar-2009430sar/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40350-sar-2009430sar/",
+      "sourceSha256": "95f579a5b70f6ec7d252f1074abcb349c4fd64ec55491e91ff07044fe4e41efe",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-421-50",
+      "mpn": "2007410",
+      "model": "AIRSTAR 421/50",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-42150-2007410/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-42150-2007410/",
+      "sourceSha256": "68d5a7578ea31b8ff52fefe9e4793b3e8118882d627b1040d977ad402f910469",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-423-50",
+      "mpn": "2007430",
+      "model": "AIRSTAR 423/50",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-42350-2007430/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-42350-2007430/",
+      "sourceSha256": "b099162c88a08dfc6b6a1424f0f793e54beeb101ce3b2201484067527b23f18b",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-423-50-vz",
+      "mpn": "2007943",
+      "model": "AIRSTAR 423/50 VZ",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-42350-vz-2007943/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-42350-vz-2007943/",
+      "sourceSha256": "cbda74e993c1dd3ab887a7d7dc8a0f2760c63fdd98ff2daaa93f98229bcfdd63",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-compact-air-311-24-e",
+      "mpn": "2005291",
+      "model": "COMPACT-AIR 311/24 E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-31124-e-2005291/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-31124-e-2005291/",
+      "sourceSha256": "f8aa978127a6e355e91c984abf980bc11946601c6a411d29aa9b8061ff33a8c1",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-mobilboy-401-50-e",
+      "mpn": "2003741",
+      "model": "MOBILBOY 401/50 E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-40150-e-2003741/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-40150-e-2003741/",
+      "sourceSha256": "ab85d4ac7a9b62818fef8189d8c312d70a6312c854bc34e6484bc3acfd4f2233",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-mobilboy-silence-401-50-of-e",
+      "mpn": "2002401",
+      "model": "MOBILBOY SILENCE 401/50 OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-silence-40150-of-e-2002401/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-silence-40150-of-e-2002401/",
+      "sourceSha256": "f837e3d6dc0c5a7f3d5fcdd37b5f1b28993aaeaa00d1a4e17c8b920b7562b33d",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bm-c-10-pro",
+      "mpn": "2404110",
+      "model": "BM-C 10 PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bm-c-10-pro-2404110/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bm-c-10-pro-2404110/",
+      "sourceSha256": "77d1d651b1c1891566023f00972e87a2f36533e4fd374540f3c732f295c71cef",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bm-c-13-pro",
+      "mpn": "2404115",
+      "model": "BM-C 13 PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bm-c-13-pro-2404115/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bm-c-13-pro-2404115/",
+      "sourceSha256": "c4e9294617dde0c4031d231f1a03ad3aefa04615fdb1d2328aac5d47aa4f7b5e",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bm-r-l-pro",
+      "mpn": "2404100",
+      "model": "BM R + L PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bm-r-l-pro-2404100/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bm-r-l-pro-2404100/",
+      "sourceSha256": "719b1b020165720e4b9c5764cd5580752fda478e2d4f5bea7ca4392dec2d4da9",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bp-pro",
+      "mpn": "2112120",
+      "model": "BP PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-2112120/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-2112120/",
+      "sourceSha256": "0d5f807e7c38e232e55d58f2c8f2eaf7ef369eced7c0bb2215db808654c09eb3",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bp-pro-duo",
+      "mpn": "2102190",
+      "model": "BP PRO Duo",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-duo-2102190/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-duo-2102190/",
+      "sourceSha256": "5b102eef06133d1e8f1c6454b95081b3b5dde489ae67905220b419488d4c4591",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bp-pro-exl",
+      "mpn": "2102185",
+      "model": "BP PRO EXL",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-exl-2102185/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-exl-2102185/",
+      "sourceSha256": "8dbbd26881f6ce01c8f42b6270d226dcd05584605799c48488469942deb5e39e",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bp-pro-g",
+      "mpn": "2112121",
+      "model": "BP PRO G",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-g-2112121/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-g-2112121/",
+      "sourceSha256": "7d684ad8ebbf57152e594471a732ead271f7a43e517233083d29045a2c956991",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bp-pro-l",
+      "mpn": "2112123",
+      "model": "BP PRO L",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-l-2112123/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-l-2112123/",
+      "sourceSha256": "650d4c708f8ac0d4b15ac9c4ff8c1d25f96949b2aa29cc76ae2a7db6ccbd45f5",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bp-pro-r",
+      "mpn": "2112130",
+      "model": "BP PRO R",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-r-2112130/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-r-2112130/",
+      "sourceSha256": "e04501d04791eb011fba629d2aabe75d191aebc27c37cc8691dcf9debd76d6ac",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bp-pro-safe",
+      "mpn": "2112128",
+      "model": "BP PRO SAFE",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-safe-2112128/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-safe-2112128/",
+      "sourceSha256": "cf529f17ee775a33dd5b54696b0b7931e5ebca0aad1d4ffff81f623388099953",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bp-pro-sil",
+      "mpn": "2112127",
+      "model": "BP PRO SIL",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-sil-2112127/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-sil-2112127/",
+      "sourceSha256": "157edac3e20665cdf14ddeae9aeb7234a6afd03536581e93e6b422ecc0713ef7",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bp-pro-v",
+      "mpn": "2112122",
+      "model": "BP PRO V",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-v-2112122/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-v-2112122/",
+      "sourceSha256": "dc2d234bb654c3f105b25de93bd28e59a15e4c6ffae1f707d778f13b63b555a7",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bp-pro-xl",
+      "mpn": "2112124",
+      "model": "BP PRO XL",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-xl-2112124/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-xl-2112124/",
+      "sourceSha256": "35d399f63fe42f273b1e2fe501510f39320a3451e7966250ef7eb98e315e06fc",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bp-pro-xxl",
+      "mpn": "2112125",
+      "model": "BP PRO XXL",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-xxl-2112125/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-xxl-2112125/",
+      "sourceSha256": "010571d706c9ddcec8a8782d11a43a2942dd771d9d0ac55c98e9e88adbf52f13",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bpi-pro",
+      "mpn": "2102170",
+      "model": "BPI PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bpi-pro-2102170/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bpi-pro-2102170/",
+      "sourceSha256": "e6828be36487e834b701570f151acb513292797262936616c5e31ae18d6edd23",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bpk",
+      "mpn": "2112100",
+      "model": "BPK",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bpk-2112100/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bpk-2112100/",
+      "sourceSha256": "ed18672db23dd61b0076d10ce0d5c364ae4160495c0d7e0b4bb78afe76dee523",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bpl",
+      "mpn": "2112110",
+      "model": "BPL",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bpl-2112110/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bpl-2112110/",
+      "sourceSha256": "c50cecefd5e92122ed6d8ade8dea5d282ecfbea29357e1f76dcf53c6bdae554b",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bs-c-10-pro-15-vs",
+      "mpn": "2403730",
+      "model": "BS-C 10 PRO 15 VS",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-10-pro-15-vs-2403730/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-10-pro-15-vs-2403730/",
+      "sourceSha256": "a3fcdc92046323c527e00f39ebecc85769d57ae342fbaf8090602f77815f51ba",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bs-c-20-2-pro-vs",
+      "mpn": "2403772",
+      "model": "BS-C 20-2 PRO VS",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-20-2-pro-vs-2403772/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-20-2-pro-vs-2403772/",
+      "sourceSha256": "3ff0669cf73650867d6bee39b1eab1252b8aa3566b8de031aabeb09300421e06",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bs-c-20-pro-15-vs",
+      "mpn": "2403740",
+      "model": "BS-C 20 PRO 15 VS",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-20-pro-15-vs-2403740/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-20-pro-15-vs-2403740/",
+      "sourceSha256": "7500ac5361a5598c0d05992ad5e3d901e33de31a7c53c7c37a499f76dae4992a",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bs-c-20-pro-vs",
+      "mpn": "2403780",
+      "model": "BS-C 20 PRO VS",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-20-pro-vs-2403780/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-20-pro-vs-2403780/",
+      "sourceSha256": "69ff88fcc3c2a1867817c73634128353ced7cf1185015e4224f2b00c7c625ce3",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bst",
+      "mpn": "2112115",
+      "model": "BST",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bst-2112115/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bst-2112115/",
+      "sourceSha256": "6d9d842b029b9bcfc3fa1c9f89f9d41541fa944dab509e21fe21b81ad8c8ebf6",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-ds",
+      "mpn": "2403500",
+      "model": "DS",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ds-2403500/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ds-2403500/",
+      "sourceSha256": "a40461e7f31f9c7c231272bc084c0a4f7d85cccbc8d3756af3067254757acde5",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-ess-150-composite-pro",
+      "mpn": "2403450",
+      "model": "ESS 150 Composite PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ess-150-composite-pro-2403450/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ess-150-composite-pro-2403450/",
+      "sourceSha256": "9333c5be39dbcc6242e3b21802019c9912efa248f02f8478139762b815f3a855",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-gs-pro",
+      "mpn": "2403110",
+      "model": "GS PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/gs-pro-2403110/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/gs-pro-2403110/",
+      "sourceSha256": "5e164c2dba96511668ae06d1e19bff8272fd55364c992ad0947676856e4d0798",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-is-3-4-composite",
+      "mpn": "2401260",
+      "model": "IS 3/4\" Composite",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/is-34-composite-2401260/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/is-34-composite-2401260/",
+      "sourceSha256": "eedf87bdb1f1e5ed78466b46452b560a638b46ec1fd4164ce711ae67525ce9ff",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-iss-1-pro",
+      "mpn": "2401490",
+      "model": "ISS 1\" PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-1-pro-2401490/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-1-pro-2401490/",
+      "sourceSha256": "12e80c974274b40197feaa760b3317ca69d78a8f769338b4f2ca943d517c83bb",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-iss-1-pro-l",
+      "mpn": "2401495",
+      "model": "ISS 1\" PRO L",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-1-pro-l-2401495/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-1-pro-l-2401495/",
+      "sourceSha256": "49b288447af20dbffe683f80aefbf684abe9ea7fb23bb45728c870cf4d4c5355",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-iss-compact-pro",
+      "mpn": "2401400",
+      "model": "ISS ½\" Compact PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-12-compact-pro-2401400/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-12-compact-pro-2401400/",
+      "sourceSha256": "df4c5674eb14b20a5f5bffacac16d7efde7f516488c6daa85175da9d193fffd1",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-iss-mini",
+      "mpn": "2401371",
+      "model": "ISS ½\" Mini",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-12-mini-2401371/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-12-mini-2401371/",
+      "sourceSha256": "d69cc5cbd4a09064188bb02b1ecb616cad05c53d46b1ce03395f14b1a8a672ee",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-iss-3-4-pro",
+      "mpn": "2401440",
+      "model": "ISS 3/4\" PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-34-pro-2401440/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-34-pro-2401440/",
+      "sourceSha256": "780f411e6c00c50a739b3113b55254d21ee2730321f723b74619b75d45f4406e",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-iss-c-1-2-pro",
+      "mpn": "2401475",
+      "model": "ISS-C 1/2\" PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-c-12-pro-2401475/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-c-12-pro-2401475/",
+      "sourceSha256": "56f391e0340bfa7446fd2a0ae7ca6d1c307013adc855cd22147765c57024428e",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-iss-c-3-4-pro",
+      "mpn": "2401485",
+      "model": "ISS-C 3/4\" PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-c-34-pro-2401485/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-c-34-pro-2401485/",
+      "sourceSha256": "f838564e4090b866ad2e784c0dce8618e91a021594807380fc2cfa39b5ed874b",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-iss-tt-mini-composite",
+      "mpn": "2401372",
+      "model": "ISS-TT ½\" Mini Composite",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-tt-12-mini-composite-2401372/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-tt-12-mini-composite-2401372/",
+      "sourceSha256": "7ef4e13a4a291dc80b10589c873481e98462f6aecdea4727b025e5a0e63d78df",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-iss-tt-composite",
+      "mpn": "2401376",
+      "model": "ISS-TT ¾\" Composite",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-tt-34-composite-2401376/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-tt-34-composite-2401376/",
+      "sourceSha256": "ca35784fc0269d68763390cc8c989bd34e4e2869f063af3d81ec92588983d446",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-iss-ttm",
+      "mpn": "2401370",
+      "model": "ISS-TTM ½\"",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-ttm-12-2401370/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-ttm-12-2401370/",
+      "sourceSha256": "af7b59d0c342c705300557cb4b58003cabfd97e1eedad1d468ee0b2015d5f05a",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-iws-125-2-pro",
+      "mpn": "2403483",
+      "model": "IWS 125-2 PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iws-125-2-pro-2403483/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iws-125-2-pro-2403483/",
+      "sourceSha256": "16411688f1953898f9060b9bcba2daedb6ba6a3526e8cd1b4e51a82980a96423",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-kp-pro",
+      "mpn": "2102270",
+      "model": "KP PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/kp-pro-2102270/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/kp-pro-2102270/",
+      "sourceSha256": "c2dad5ac79dedb020d2355971f9daa5cdbdbe25ba5ded13c22ff5e06f1ad113b",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-mhp-pro",
+      "mpn": "2402550",
+      "model": "MHP PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/mhp-pro-2402550/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/mhp-pro-2402550/",
+      "sourceSha256": "c4ecfb694cb14519046d704c2c0fea5a4c1c1d1b81d76dfcad43e80b3b022e65",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-mrs-mini-pro",
+      "mpn": "2406100",
+      "model": "MRS Mini PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/mrs-mini-pro-2406100/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/mrs-mini-pro-2406100/",
+      "sourceSha256": "5eec268b8cfea8c1e4e5f77ae2409415662a71a885385774930dc1906bd9285c",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-ne-mini-pro",
+      "mpn": "2402650",
+      "model": "NE Mini PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ne-mini-pro-2402650/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ne-mini-pro-2402650/",
+      "sourceSha256": "a069f5f6140172bc6c494e5a44a383f050cf1e6c8fc088e11b6f8bfc05ef8a18",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-ne-pro",
+      "mpn": "2402620",
+      "model": "NE PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ne-pro-2402620/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ne-pro-2402620/",
+      "sourceSha256": "e8ce8b0f55208f4a1aa35b0795e6af5bccf775cee572e04ad767eda2c952eed3",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-np-2-pro",
+      "mpn": "2402655",
+      "model": "NP-2 PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/np-2-pro-2402655/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/np-2-pro-2402655/",
+      "sourceSha256": "b4a36f5e46d39a5b776759f439586db586689767431544ade2f79d7cf3db8c11",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-np-pro",
+      "mpn": "2402640",
+      "model": "NP PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/np-pro-2402640/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/np-pro-2402640/",
+      "sourceSha256": "0e45819b8b67de23b13dcd85827c94d051c88a3f8c0102335759de94d17d17bd",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-ps-7",
+      "mpn": "2403290",
+      "model": "PS 7",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ps-7-2403290/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ps-7-2403290/",
+      "sourceSha256": "2ba87d944ebe7e28ee984e4a78eb0a1ee59520cd6a1661b690b2c251d988f4c5",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-ps-c-pro",
+      "mpn": "2404125",
+      "model": "PS-C PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ps-c-pro-2404125/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ps-c-pro-2404125/",
+      "sourceSha256": "3afd55d95b4ba4536604c2aabd8794306d1d805494b3b548311fd807968e1cda",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-rs-1-2-vt-pro",
+      "mpn": "2401565",
+      "model": "RS 1/2\" VT PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/rs-12-vt-pro-2401565/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/rs-12-vt-pro-2401565/",
+      "sourceSha256": "a7be7fc822ceac71fe85513a43032d2ade02a3451bf8825efc9b931597163bb3",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-rs-1-4-vt-pro",
+      "mpn": "2401560",
+      "model": "RS 1/4\" VT PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/rs-14-vt-pro-2401560/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/rs-14-vt-pro-2401560/",
+      "sourceSha256": "ac5aad82fd3e85fa6e40b45073a3027ea79275402a11d563fd7f5428a21a3145",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-sbp",
+      "mpn": "2102100",
+      "model": "SBP",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/sbp-2102100/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/sbp-2102100/",
+      "sourceSha256": "d52d4b99d0f3949961d32f80e040f9d413f1cf3d08d1a4a9d8e81da673e47933",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-sp-pro",
+      "mpn": "2102290",
+      "model": "SP PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/sp-pro-2102290/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/sp-pro-2102290/",
+      "sourceSha256": "0a614053c0a940ee47100717a6c383932c36d4cb1015283e9fbb32ad34ff3d83",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-srs-1-2-ht-pro",
+      "mpn": "2401570",
+      "model": "SRS 1/2\" HT PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/srs-12-ht-pro-2401570/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/srs-12-ht-pro-2401570/",
+      "sourceSha256": "ff86726f875475dc6bdfaea33f585ef4479a995bb1d381c84337dd12c9f6f517",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-sws-180-pro",
+      "mpn": "2403520",
+      "model": "SWS 180 PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/sws-180-pro-2403520/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/sws-180-pro-2403520/",
+      "sourceSha256": "6394e1e72a331bd390ed4cbf9e0c5f287dc83a2615737bd1ff0485d077e3533d",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-tts-pro",
+      "mpn": "2403485",
+      "model": "TTS PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/tts-pro-2403485/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/tts-pro-2403485/",
+      "sourceSha256": "42015dc71756c3e18cfc85bfbf409670a22e2e38ab9695dd76c44ea80e038e74",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-tws-super",
+      "mpn": "2403491",
+      "model": "TWS Super",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/tws-super-2403491/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/tws-super-2403491/",
+      "sourceSha256": "3916b6cc73d07fac512b5ae2740f4d81516f4d8027924d65e17009860cb24a3a",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-us-c-pro",
+      "mpn": "2404670",
+      "model": "US-C PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/us-c-pro-2404670/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/us-c-pro-2404670/",
+      "sourceSha256": "6919447e77f95dbd04f7bc7b5c584193736316f5057d76caee40196593913848",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-wb-10-1-pro",
+      "mpn": "2404120",
+      "model": "WB 10-1 PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wb-10-1-pro-2404120/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wb-10-1-pro-2404120/",
+      "sourceSha256": "cc51c9c6d283a1ba3cdd4ed293ec8094eb79a0db9d5a56391c997899bafc76fe",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-wb-mini-pro",
+      "mpn": "2406405",
+      "model": "WB Mini PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wb-mini-pro-2406405/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wb-mini-pro-2406405/",
+      "sourceSha256": "c9e97f1608b8ea71912e6011effd9d7b3376d5db31267c6ad3e94203716f3405",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-ws-125-pro",
+      "mpn": "2403470",
+      "model": "WS 125 PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ws-125-pro-2403470/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ws-125-pro-2403470/",
+      "sourceSha256": "01f4d5b735d0cc78bfed864f57ddd29cdb4e39f849a78abe3b5532808e8d7e5d",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-wss-ht-pro",
+      "mpn": "2401575",
+      "model": "WSS ½\" HT PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wss-12-ht-pro-2401575/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wss-12-ht-pro-2401575/",
+      "sourceSha256": "31afde13a2a93b5ee4fb56253f9397d5569ba42c50155f54085949491a3ec4d9",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-wst-mini-pro",
+      "mpn": "2406305",
+      "model": "WST Mini PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wst-mini-pro-2406305/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wst-mini-pro-2406305/",
+      "sourceSha256": "6f888b10472e0d423b0971173b5c99e41909e10c8f0fc88f883b0639dbdf4c9e",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airbau-480-90-b",
+      "mpn": "2004450",
+      "model": "AIRBAU 480/90 B",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airbau-480100-b-2004450/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airbau-480100-b-2004450/",
+      "sourceSha256": "32a51e28381d79e57881adc5e642ddb32cbca82ca9fd01626ad3ea041bd3a4f0",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airboy-silence-241-of-e",
+      "mpn": "2000245",
+      "model": "AIRBOY SILENCE 241 OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-silence-241-of-e-2000245/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-silence-241-of-e-2000245/",
+      "sourceSha256": "225a6ddea16238e5c0d1444e8ea2bf82d210f01067bdcc3926384008a3739000",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-aircar-321-22-pro",
+      "mpn": "2005531",
+      "model": "Aircar 321/22 PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/aircar-32122-pro-2005531/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/aircar-32122-pro-2005531/",
+      "sourceSha256": "836bf86293de185d84b9459130db51de497f39ec00eebb92fefd83baf67b3341",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-401-50-p-incl-hose-reel-sar-10-15",
+      "mpn": "2018410.2SAR",
+      "model": "AIRPROFI 401/50 P incl. hose reel SAR 10/15",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40150-p-incl-hose-reel-sar-1015-20184102sar/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40150-p-incl-hose-reel-sar-1015-20184102sar/",
+      "sourceSha256": "f1fb731f671a1a39022d20695b1a6a15bea129a36dfb371b1f390b53389a435d",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-401-90-v",
+      "mpn": "2018414",
+      "model": "AIRPROFI 401/90 V",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40190-v-2018414/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40190-v-2018414/",
+      "sourceSha256": "0a298f4c48bee4ab7899594daff234ac224e76bd47eb0484692757cbfb5a1f20",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-440-50-of-pro",
+      "mpn": "2015445",
+      "model": "AIRPROFI 440/50 OF PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-44050-of-pro-2015445/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-44050-of-pro-2015445/",
+      "sourceSha256": "5770500e971feed00ed79410ea2f1dd28085b492afd6c02a06990d3c4538c5f6",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-853-100-p-incl-sar-10-15",
+      "mpn": "2018831.2SAR",
+      "model": "AIRPROFI 853/100 P incl. SAR 10/15",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-853100-p-incl-hose-reel-sar-1015-20188312sar/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-853100-p-incl-hose-reel-sar-1015-20188312sar/",
+      "sourceSha256": "8021453b1438c482cd5826aa4da11dfa3294f90bd499f78caf6574c4b227e5c4",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airprofi-853-200-p",
+      "mpn": "2018832.2",
+      "model": "AIRPROFI 853/200 P",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-853200-p-20188322/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-853200-p-20188322/",
+      "sourceSha256": "32e5d86645b89a440a6e424d6d395aa8ea4c486d40a1e1daedd1cd22d3b8a480",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-421-50-vz",
+      "mpn": "2007941",
+      "model": "AIRSTAR 421/50 VZ",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-42150-vz-2007941/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-42150-vz-2007941/",
+      "sourceSha256": "61892685eb3eb829ccc68cc22512ac0d6fb3c58fdea079422760e06755b99c22",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-503-100-sar",
+      "mpn": "2009531SAR",
+      "model": "AIRSTAR 503/100 SAR",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-503100-sar-2009531sar/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-503100-sar-2009531sar/",
+      "sourceSha256": "e8238e696b38d93fe0bb844df7caf050acb37f7cdec7b81017abfb2e4539fc45",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-503-50",
+      "mpn": "2009530",
+      "model": "AIRSTAR 503/50",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-50350-2009530/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-50350-2009530/",
+      "sourceSha256": "f0b806f5127954fb3848441cbec5740187f10989178c9115b12504bb8234630e",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-503-50-sar",
+      "mpn": "2009530SAR",
+      "model": "AIRSTAR 503/50 SAR",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-50350-sar-2009530sar/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-50350-sar-2009530sar/",
+      "sourceSha256": "e3698f7470133d27f17c718ea781f5d97ebb10c2225756b47779b51a95fc5b84",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-603-50",
+      "mpn": "2007630",
+      "model": "AIRSTAR 603/50",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-60350-2007630/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-60350-2007630/",
+      "sourceSha256": "ea7fb72dc31d1ea922bd9195e4b7dc974be55ff935353b1ca349c69a7ad225ee",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-603-50-vz",
+      "mpn": "2007963",
+      "model": "AIRSTAR 603/50 VZ",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-60350-vz-2007963/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-60350-vz-2007963/",
+      "sourceSha256": "2ab9b580db8acec4265ca74ba09acb3176794b5b83b939162e270fb42c05074a",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-603-90",
+      "mpn": "2007631",
+      "model": "AIRSTAR 603/90",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-60390-2007631/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-60390-2007631/",
+      "sourceSha256": "1372240cf343379bd0ecb978658e02e542a5f879fefc4d3a8ee73417358c4990",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-603-90-vz",
+      "mpn": "2007964",
+      "model": "AIRSTAR 603/90 VZ",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-60390-vz-2007964/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-60390-vz-2007964/",
+      "sourceSha256": "2c9c6c6fedf4710cc8b2702e2aecad749feaeee59f7b08b631c2024b5e6686ba",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-703-100",
+      "mpn": "2009731",
+      "model": "AIRSTAR 703/100",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-703100-2009731/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-703100-2009731/",
+      "sourceSha256": "b449e0425a124b08e66eb3b9445397061d0bb65a0b7bbd613d3308e0c71d97c5",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-703-90",
+      "mpn": "2007731",
+      "model": "AIRSTAR 703/90",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-70390-2007731/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-70390-2007731/",
+      "sourceSha256": "7fa5f785923d0ae62317ae10bee52b463ba8ee9331e55a65c395c1df28d2d286",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-853-100",
+      "mpn": "2009831",
+      "model": "AIRSTAR 853/100",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-853100-2009831/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-853100-2009831/",
+      "sourceSha256": "8b7c1ba4cde9184c9ac842704b81bee20a0ebcc8efb7ecd6007ba3ee70e7b125",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-853-200",
+      "mpn": "2009832",
+      "model": "AIRSTAR 853/200",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-853200-2009832/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-853200-2009832/",
+      "sourceSha256": "b9c74a6ef4b539ff5b9192e5768ebe075422797b7575589311e9d69243b820ba",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-863-200",
+      "mpn": "2007832",
+      "model": "AIRSTAR 863/200",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-863200-2007832/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-863200-2007832/",
+      "sourceSha256": "157d0907238f12765edd165febb34156153f252e0714f2f9917dd2035e0bfd54",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-863-90",
+      "mpn": "2007831",
+      "model": "AIRSTAR 863/90",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-86390-2007831/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-86390-2007831/",
+      "sourceSha256": "bf62747427d5e3c08135c294ca9453952a8bf16150f57db067218d73b96fe295",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-airstar-903-50-15-hg",
+      "mpn": "2028725",
+      "model": "AIRSTAR 903/50/15 HG",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-9035015-hg-2028725/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-9035015-hg-2028725/",
+      "sourceSha256": "5d42bc974d515203adbe9a1442719ba84431631a84b6151c41865d2ed9f213ac",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-compact-air-240-20-of-e",
+      "mpn": "2005490",
+      "model": "COMPACT-AIR 240/20 OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-24020-of-e-2005490/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-24020-of-e-2005490/",
+      "sourceSha256": "7cbe9334fb86d550b46c0a8247394ad0e96367a8026fda3c43a283fb7b81bba9",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-compact-air-241-16-of-e",
+      "mpn": "2005450",
+      "model": "COMPACT-AIR 241/16 OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-24116-of-e-2005450/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-24116-of-e-2005450/",
+      "sourceSha256": "9ade18ddff852e8d92e43a03feccbfadebc3cd4f4414c85e4ae53011438b2246",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-compact-air-265-10-e",
+      "mpn": "2005261",
+      "model": "COMPACT-AIR 265/10 E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-26510-e-2005261/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-26510-e-2005261/",
+      "sourceSha256": "ccb0cba1c004f1c024d2ea87cf23f8982a0518dff6bd5a3509df2966b08e0525",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-compact-air-320-24-of-e",
+      "mpn": "2005495",
+      "model": "COMPACT-AIR 320/24 OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-32024-of-e-2005495/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-32024-of-e-2005495/",
+      "sourceSha256": "87dc0a6732595bf16612b391e7ae89edafbad341e5b3da02a44114f437cb890d",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-compact-air-320-90-v-of-e",
+      "mpn": "2005499",
+      "model": "COMPACT-AIR 320/90 V OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-32090-v-of-e-2005499/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-32090-v-of-e-2005499/",
+      "sourceSha256": "6d9afdb508d3111c22a0535a5aabf1a96fc1156b82bcf251cd598c82975e5a67",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-compact-air-321-24",
+      "mpn": "2005305",
+      "model": "COMPACT-AIR 321/24",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-32124-2005305/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-32124-2005305/",
+      "sourceSha256": "5455ca13cd4471307e942c7409a5a0d141a6594eaf237a46d192d7a01631ef2c",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-compact-air-321-24-pro",
+      "mpn": "2005352",
+      "model": "COMPACT-AIR 321/24 PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-32124-pro-2005352/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-32124-pro-2005352/",
+      "sourceSha256": "9f8d20ba9de538c62eda3ec4d793bae9a6e21d5286abee1c0c74f99cae3a9ba8",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-compact-air-361-24-e",
+      "mpn": "2005361",
+      "model": "COMPACT-AIR 361/24 E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-36124-e-2005361/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-36124-e-2005361/",
+      "sourceSha256": "de365de40e6f4c4850bd84dfd8410a3f8574e2c5f4ce0d221ed61ca3f8e01dca",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-compact-air-401-50-of-e",
+      "mpn": "2005452",
+      "model": "COMPACT-AIR 401/50 OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-40150-of-e-2005452/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-40150-of-e-2005452/",
+      "sourceSha256": "d2b0f92086a4d2b8039ae3cbd29129ac3cb5cd387f3e902b507ab9fb99f6f39d",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-compact-air-440-of-pro",
+      "mpn": "2015550",
+      "model": "COMPACT-AIR 440 OF PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-440-of-pro-2015550/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-440-of-pro-2015550/",
+      "sourceSha256": "aaf415379d0728aa0af78b7046d12225f661e6a6af1fbed2dca9f8671a23c1bf",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-compact-air-silence-231-20-of-e",
+      "mpn": "2005498",
+      "model": "COMPACT-AIR SILENCE 231/20 OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-silence-23120-of-e-2005498/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-silence-23120-of-e-2005498/",
+      "sourceSha256": "674ee37e438ac62e591ab4a2239b0c3c627036414d26cb49d779ed70ddf4ea56",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-handy-silence-221-of-e",
+      "mpn": "2001221",
+      "model": "HANDY SILENCE 221 OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/handy-silence-221-of-e-2001221/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/handy-silence-221-of-e-2001221/",
+      "sourceSha256": "2baf62b37aa7e62a3611834931e9de88af82bc8661723f2d5b17631b342af557",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-mobilboy-185-of-e",
+      "mpn": "2001240",
+      "model": "MOBILBOY 185 OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-185-of-e-2001240/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-185-of-e-2001240/",
+      "sourceSha256": "db3f13e86277f9195b8a39314a714ac40f7f07aa421524169f766242f617d837",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-mobilboy-261-24t-e",
+      "mpn": "2003728",
+      "model": "MOBILBOY 261/24T E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-26124t-e-2003728/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-26124t-e-2003728/",
+      "sourceSha256": "e451dff2e74b1e3ce1a3544473ecc8e1d2815caf1cf999f66037993e0526c8e9",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-mobilboy-301-50-e",
+      "mpn": "2003731",
+      "model": "MOBILBOY 301/50 E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-30150-e-2003731/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-30150-e-2003731/",
+      "sourceSha256": "d0cbd2be5bff5ca67e03cfeb319d48518c7f937012bd2eb4aa19631e9438ba0a",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-mobilboy-silence-231-50-of-e",
+      "mpn": "2002326",
+      "model": "MOBILBOY SILENCE 231/50 OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-silence-23150-of-e-2002326/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-silence-23150-of-e-2002326/",
+      "sourceSha256": "d71cdbf417b73c117330d5ccf29abaa8ac3aba32633ff164ba51e12c748e6e8c",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-mobilboy-silence-241-24-of-e",
+      "mpn": "2002245",
+      "model": "MOBILBOY SILENCE 241/24 OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-silence-24124-of-e-2002245/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-silence-24124-of-e-2002245/",
+      "sourceSha256": "4092881cd6141ee522335bb9e7c481a69ffd852b1ff37ac3e2733e2ce0b25459",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-mobilboy-silence-320-90-of-e",
+      "mpn": "2002340",
+      "model": "MOBILBOY SILENCE 320/90 OF E",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-silence-32090-of-e-2002340/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-silence-32090-of-e-2002340/",
+      "sourceSha256": "96dc517268aca04696fcc72e0c742592794d32df5a68225692aa95c433145e9d",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bps-soft-pro",
+      "mpn": "2102130",
+      "model": "BPS Soft PRO",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bps-soft-pro-2102130/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bps-soft-pro-2102130/",
+      "sourceSha256": "ad08687e9665436102111c5984a5886657bcab9fe797e600f29ad80a9b352531",
+      "fieldDifferences": []
+    },
+    {
+      "productId": "aircraft-bs-c-10-2-pro-vs",
+      "mpn": "2403771",
+      "model": "BS-C 10-2 PRO VS",
+      "url": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-10-2-pro-vs-2403771/",
+      "httpStatus": 200,
+      "canonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-10-2-pro-vs-2403771/",
+      "sourceSha256": "77ed84e4c5d36a59cee8d2cf8736da00e6a0744d893f9461044c889e5ba6a162",
+      "fieldDifferences": []
+    }
+  ],
+  "remaining": [
+    {
+      "url": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/airboy-silence-221-of-e-2000206/",
+      "testedCanonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-silence-221-of-e-2000206/",
+      "references": [
+        {
+          "productId": "aircraft-airboy-silence-221-of-e",
+          "evidenceId": "aircraft-2000206-20260927",
+          "retrievedAt": "2026-09-27"
+        }
+      ],
+      "state": "broken",
+      "httpStatus": 404,
+      "observations": "Ancienne adresse et adresse canonique testée : HTTP 404 ; aucune source de remplacement publiée."
+    },
+    {
+      "url": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/airstar-503100-2009531/",
+      "testedCanonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-503100-2009531/",
+      "references": [
+        {
+          "productId": "aircraft-airstar-503-100",
+          "evidenceId": "aircraft-2009531-20260927",
+          "retrievedAt": "2026-09-27"
+        }
+      ],
+      "state": "broken",
+      "httpStatus": 404,
+      "observations": "Ancienne adresse et adresse canonique testée : HTTP 404 ; aucune source de remplacement publiée."
+    },
+    {
+      "url": "https://www.metabo.com/sk/sk/stroje/stlaceny-vzduch/kompresory/mobilne-kompresory/basic-280-50-w-of-601529000-kompresor.html",
+      "references": [
+        {
+          "productId": "metabo-basic-280-50-w-of",
+          "evidenceId": "metabo-601529000-official",
+          "retrievedAt": "2026-09-25"
+        }
+      ],
+      "state": "unavailable",
+      "status": 502,
+      "finalUrl": "https://www.metabo.com/sk/sk/stroje/stlaceny-vzduch/kompresory/mobilne-kompresory/basic-280-50-w-of-601529000-kompresor.html"
+    },
+    {
+      "url": "https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/2023_Sortimentsuebersicht_AT-screen.pdf",
+      "references": [
+        {
+          "guide": "metabo-basic-250-24-w-ou-250-50-w.md"
+        },
+        {
+          "guide": "metabo-basic-250-50-w-ou-w-of.md"
+        },
+        {
+          "guide": "metabo-basic-280-50-w-of-ou-250-50-w-of.md"
+        },
+        {
+          "guide": "metabo-dsx-150-compresseur-550-litres-minute.md"
+        },
+        {
+          "productId": "metabo-basic-250-24-w-of",
+          "evidenceId": "metabo-601532000-official",
+          "retrievedAt": "2026-09-25"
+        },
+        {
+          "productId": "metabo-basic-250-24-w",
+          "evidenceId": "metabo-601533000-official",
+          "retrievedAt": "2026-09-25"
+        },
+        {
+          "productId": "metabo-basic-250-50-w",
+          "evidenceId": "metabo-601534000-official",
+          "retrievedAt": "2026-09-25"
+        },
+        {
+          "productId": "metabo-mega-400-50-d",
+          "evidenceId": "metabo-601537000-official",
+          "retrievedAt": "2026-09-25"
+        }
+      ],
+      "state": "unavailable",
+      "status": 502,
+      "finalUrl": "https://www.metabo.com/t3/fileadmin/metabo/at/070_aktuell/02_kataloge_logos/2023_Sortimentsuebersicht_AT-screen.pdf"
+    },
+    {
+      "url": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/iss-c-12-compact-pro-2401470/",
+      "testedCanonical": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-c-12-compact-pro-2401470/",
+      "references": [
+        {
+          "productId": "aircraft-iss-c-1-2-compact-pro",
+          "evidenceId": "aircraft-2401470-20260927",
+          "retrievedAt": "2026-09-27"
+        }
+      ],
+      "checkedAt": "2026-10-01T20:46:59.314Z",
+      "state": "unverified",
+      "reason": "request_timeout",
+      "observations": "Ancienne citation conservée ; adresse canonique alternative testée : HTTP 404 ; aucune source de remplacement publiée."
+    }
+  ],
+  "recovered": [
+    {
+      "url": "https://www.atlascopco.com/en-ca/itba/products/drilling-solutions/lgb34-s007-sku8421031172",
+      "references": [
+        {
+          "productId": "atlas-copco-8421031172",
+          "evidenceId": "atlas-copco-8421031172-fiche-fabricant",
+          "retrievedAt": "2026-09-26"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.atlascopco.com/en-ca/itba/products/drilling-solutions/lgb34-s007-sku8421031172"
+    }
+  ],
+  "historicalPrefixPreserved": true
+}

@@ -13,7 +13,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-airprofi-403-50-p-incl-sar-10-15.webp",
 		"alt": "Repères techniques Aircraft AIRPROFI 403/50 P incl. SAR 10/15, référence 2018430.2SAR",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/airprofi-40350-p-incl-hose-reel-sar-1015-20184302sar/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40350-p-incl-hose-reel-sar-1015-20184302sar/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -94,10 +94,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2018430-2sar-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/airprofi-40350-p-incl-hose-reel-sar-1015-20184302sar/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40350-p-incl-hose-reel-sar-1015-20184302sar/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018430.2SAR, réf. 2018430.2SAR",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Débit aspiré déclaré : 390 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
 		}

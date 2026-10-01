@@ -13,7 +13,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-airboy-262-e.webp",
 		"alt": "Repères techniques Aircraft AIRBOY 262 E, référence 2001247",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/airboy-262-e-2001247/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-262-e-2001247/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -94,10 +94,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2001247-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/airboy-262-e-2001247/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-262-e-2001247/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2001247, réf. 2001247",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Débit aspiré déclaré : 250 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
 		}

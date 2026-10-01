@@ -17,7 +17,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-iss-tt-mini-composite.webp",
 		"alt": "Repères techniques Aircraft ISS-TT ½\" Mini Composite, référence 2401372",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/iss-tt-12-mini-composite-2401372/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-tt-12-mini-composite-2401372/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -117,10 +117,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2401372-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/iss-tt-12-mini-composite-2401372/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-tt-12-mini-composite-2401372/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401372, réf. 2401372",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 132 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
 		}

@@ -13,7 +13,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-mobilboy-185-of-e.webp",
 		"alt": "Repères techniques Aircraft MOBILBOY 185 OF E, référence 2001240",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/mobilboy-185-of-e-2001240/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-185-of-e-2001240/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -94,10 +94,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2001240-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/mobilboy-185-of-e-2001240/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-185-of-e-2001240/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2001240, réf. 2001240",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Débit aspiré déclaré : 180 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
 		}

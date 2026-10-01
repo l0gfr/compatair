@@ -17,7 +17,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-iss-ttm.webp",
 		"alt": "Repères techniques Aircraft ISS-TTM ½\", référence 2401370",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/iss-ttm-12-2401370/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-ttm-12-2401370/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -117,10 +117,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2401370-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/iss-ttm-12-2401370/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-ttm-12-2401370/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401370, réf. 2401370",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 115 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
 		}

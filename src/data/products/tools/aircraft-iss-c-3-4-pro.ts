@@ -17,7 +17,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-iss-c-3-4-pro.webp",
 		"alt": "Repères techniques Aircraft ISS-C 3/4\" PRO, référence 2401485",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/iss-c-34-pro-2401485/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-c-34-pro-2401485/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -117,10 +117,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2401485-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/iss-c-34-pro-2401485/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-c-34-pro-2401485/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401485, réf. 2401485",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 393 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
 		}

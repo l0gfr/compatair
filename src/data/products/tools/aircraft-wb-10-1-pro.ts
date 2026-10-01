@@ -17,7 +17,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-wb-10-1-pro.webp",
 		"alt": "Repères techniques Aircraft WB 10-1 PRO, référence 2404120",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/wb-10-1-pro-2404120/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wb-10-1-pro-2404120/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -117,10 +117,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2404120-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/wb-10-1-pro-2404120/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wb-10-1-pro-2404120/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2404120, réf. 2404120",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 175 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
 		}

@@ -17,7 +17,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-sws-180-pro.webp",
 		"alt": "Repères techniques Aircraft SWS 180 PRO, référence 2403520",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/sws-180-pro-2403520/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/sws-180-pro-2403520/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -82,10 +82,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2403520-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/sws-180-pro-2403520/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/sws-180-pro-2403520/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403520, réf. 2403520",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 360 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
 		}

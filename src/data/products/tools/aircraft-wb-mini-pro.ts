@@ -17,7 +17,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-wb-mini-pro.webp",
 		"alt": "Repères techniques Aircraft WB Mini PRO, référence 2406405",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/wb-mini-pro-2406405/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wb-mini-pro-2406405/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -103,10 +103,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2406405-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/wb-mini-pro-2406405/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wb-mini-pro-2406405/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2406405, réf. 2406405",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 84 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
 		}

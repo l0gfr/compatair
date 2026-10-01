@@ -17,7 +17,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-is-3-4-composite.webp",
 		"alt": "Repères techniques Aircraft IS 3/4\" Composite, référence 2401260",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/is-34-composite-2401260/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/is-34-composite-2401260/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -103,10 +103,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2401260-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/is-34-composite-2401260/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/is-34-composite-2401260/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401260, réf. 2401260",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 269 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
 		}

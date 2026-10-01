@@ -13,7 +13,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-compact-air-320-24-of-e.webp",
 		"alt": "Repères techniques Aircraft COMPACT-AIR 320/24 OF E, référence 2005495",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/compact-air-32024-of-e-2005495/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-32024-of-e-2005495/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -87,10 +87,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2005495-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/compact-air-32024-of-e-2005495/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-32024-of-e-2005495/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2005495, réf. 2005495",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Débit aspiré déclaré : 320 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
 		}

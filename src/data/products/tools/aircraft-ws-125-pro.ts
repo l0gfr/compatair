@@ -17,7 +17,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-ws-125-pro.webp",
 		"alt": "Repères techniques Aircraft WS 125 PRO, référence 2403470",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/ws-125-pro-2403470/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ws-125-pro-2403470/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -75,10 +75,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2403470-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/ws-125-pro-2403470/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ws-125-pro-2403470/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403470, réf. 2403470",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 490 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
 		}

@@ -326045,7 +326045,2819 @@
         "retrievedAt": "2026-10-01",
         "confidence": "A"
       }
+    },
+    {
+      "id": "corrected:aircraft-airbau-652-100-b-pro:aircraft-2006530-20260927:2026-10-01",
+      "evidenceId": "aircraft-2006530-20260927",
+      "productId": "aircraft-airbau-652-100-b-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "0473fe6a35739559cb874501d2322eb5feca626a6b66560bc209c97f343732f9",
+      "snapshot": {
+        "id": "aircraft-2006530-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airbau-652100-b-pro-2006530/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2006530, réf. 2006530",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 642 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airboy-131-of-e:aircraft-2001225-20260927:2026-10-01",
+      "evidenceId": "aircraft-2001225-20260927",
+      "productId": "aircraft-airboy-131-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "c49ca54a3e82d63565bb4177193c15f4e500877716c7516e39353f6d65a45998",
+      "snapshot": {
+        "id": "aircraft-2001225-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-131-of-e-2001225/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2001225, réf. 2001225",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 107 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airboy-186-of-e:aircraft-2001230-20260927:2026-10-01",
+      "evidenceId": "aircraft-2001230-20260927",
+      "productId": "aircraft-airboy-186-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "236c18567e629d8ee0ebd4bea466577b3c55823e62b0032336c0b75b0f19c966",
+      "snapshot": {
+        "id": "aircraft-2001230-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-186-of-e-2001230/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2001230, réf. 2001230",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 180 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airboy-262-e:aircraft-2001247-20260927:2026-10-01",
+      "evidenceId": "aircraft-2001247-20260927",
+      "productId": "aircraft-airboy-262-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "0e9359d413ba00398052c9c1aee25cdc2d22fe1f5227d3288f691b6d4b495829",
+      "snapshot": {
+        "id": "aircraft-2001247-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-262-e-2001247/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2001247, réf. 2001247",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 250 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airboy-kitt-90:aircraft-2001237-20260927:2026-10-01",
+      "evidenceId": "aircraft-2001237-20260927",
+      "productId": "aircraft-airboy-kitt-90",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "f9a36a1e1936ab1cabbb10dbb27f06b985062d70948e1ca4026227f87204b1c9",
+      "snapshot": {
+        "id": "aircraft-2001237-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-kitt-90-2001237/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2001237, réf. 2001237",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 85 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airboy-silence-111-as-of-e:aircraft-2000108-20260927:2026-10-01",
+      "evidenceId": "aircraft-2000108-20260927",
+      "productId": "aircraft-airboy-silence-111-as-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "00f0af52b2f03dab10df5539457b96edf21530b2c8e473b08fe6f57b3f3c7a14",
+      "snapshot": {
+        "id": "aircraft-2000108-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-silence-111-as-of-e-2000108/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2000108, réf. 2000108",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 120 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airboy-silence-171-of-e:aircraft-2001265-20260927:2026-10-01",
+      "evidenceId": "aircraft-2001265-20260927",
+      "productId": "aircraft-airboy-silence-171-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "940298b3a8452cff568759fb48d2294924620d0f85429f624600599e50bcd361",
+      "snapshot": {
+        "id": "aircraft-2001265-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-silence-171-of-e-2001265/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2001265, réf. 2001265",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 160 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airboy-silence-50-pro:aircraft-2000100-20260927:2026-10-01",
+      "evidenceId": "aircraft-2000100-20260927",
+      "productId": "aircraft-airboy-silence-50-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "3b3906468741edb68d38ae850d53335b078afbbef2c690f2275221369184f2df",
+      "snapshot": {
+        "id": "aircraft-2000100-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-silence-50-pro-2000100/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2000100, réf. 2000100",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 50 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-aircar-220-of-pro:aircraft-2015520-20260927:2026-10-01",
+      "evidenceId": "aircraft-2015520-20260927",
+      "productId": "aircraft-aircar-220-of-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "915977e55b38945fe181bfc5f1e18a1b4e1742ba578bf13a99069584c024e283",
+      "snapshot": {
+        "id": "aircraft-2015520-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/aircar-220-of-pro-2015520/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2015520, réf. 2015520",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 220 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-aircar-440-of-pro:aircraft-2015530-20260927:2026-10-01",
+      "evidenceId": "aircraft-2015530-20260927",
+      "productId": "aircraft-aircar-440-of-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "1b2555f586124f616793a3f0dff6f59bd7421a64e2322e71c16322e9556bf350",
+      "snapshot": {
+        "id": "aircraft-2015530-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/aircar-440-of-pro-2015530/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2015530, réf. 2015530",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 440 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-aircar-553-22-pro:aircraft-2005553-20260927:2026-10-01",
+      "evidenceId": "aircraft-2005553-20260927",
+      "productId": "aircraft-aircar-553-22-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "bc4301c8c95d6f66659ebd95b23180d3dc77f1c10258f7a6fc1e1863403712f0",
+      "snapshot": {
+        "id": "aircraft-2005553-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/aircar-55322-pro-2005553/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2005553, réf. 2005553",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 550 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-aircar-bau-500-20-b-pro:aircraft-2005500-20260927:2026-10-01",
+      "evidenceId": "aircraft-2005500-20260927",
+      "productId": "aircraft-aircar-bau-500-20-b-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "36cf4fc78ef92181c42dec16014b94177dd987800d50cbf06d52da935f8b342c",
+      "snapshot": {
+        "id": "aircraft-2005500-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/aircar-bau-50020-b-pro-2005500/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2005500, réf. 2005500",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 380 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-220-50-of-pro:aircraft-2015225-20260927:2026-10-01",
+      "evidenceId": "aircraft-2015225-20260927",
+      "productId": "aircraft-airprofi-220-50-of-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "e4160dd7926df4aabf68e5d26f0a40433e361cc5b7d2fcb7f183efc1a62f0f63",
+      "snapshot": {
+        "id": "aircraft-2015225-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-22050-of-pro-2015225/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2015225, réf. 2015225",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 220 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-401-50-p:aircraft-2018410-2-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018410-2-20260927",
+      "productId": "aircraft-airprofi-401-50-p",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "55c258f744998ffd05a5356e21d3d19b2cf4d3a5e5d31e401308d14f987b694d",
+      "snapshot": {
+        "id": "aircraft-2018410-2-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40150-p-20184102-1/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018410.2, réf. 2018410.2",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 365 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-403-50-p:aircraft-2018430-2-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018430-2-20260927",
+      "productId": "aircraft-airprofi-403-50-p",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "c723cc5e56965e7a0def66f2cc00c92d744e6814e2ec253ea2b86671ab7780d2",
+      "snapshot": {
+        "id": "aircraft-2018430-2-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40350-p-20184302-1/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018430.2, réf. 2018430.2",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 390 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-403-50-p-incl-sar-10-15:aircraft-2018430-2sar-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018430-2sar-20260927",
+      "productId": "aircraft-airprofi-403-50-p-incl-sar-10-15",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "84fbf32af91a6753e7dc53e8d33f51ceed81049b0f3c14ad79dcd8789cd410a3",
+      "snapshot": {
+        "id": "aircraft-2018430-2sar-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40350-p-incl-hose-reel-sar-1015-20184302sar/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018430.2SAR, réf. 2018430.2SAR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 390 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-403-90-v:aircraft-2018434-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018434-20260927",
+      "productId": "aircraft-airprofi-403-90-v",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "28c3a689c73fd93140bb878f024a5bf9a38e7628c5ded00fbd55f4c4eb155ef5",
+      "snapshot": {
+        "id": "aircraft-2018434-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40390-v-2018434/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018434, réf. 2018434",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 390 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-440-100-of-pro:aircraft-2015446-20260927:2026-10-01",
+      "evidenceId": "aircraft-2015446-20260927",
+      "productId": "aircraft-airprofi-440-100-of-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "3b94163898c14a3bf36e75678beaa0def5712ec40ee6340d7cc89a619b9a41cb",
+      "snapshot": {
+        "id": "aircraft-2015446-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-440100-of-pro-2015446/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2015446, réf. 2015446",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 440 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-440-90-v-of-pro:aircraft-2015448-20260927:2026-10-01",
+      "evidenceId": "aircraft-2015448-20260927",
+      "productId": "aircraft-airprofi-440-90-v-of-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "de2a484b8fe0fe818d0b9180198f4ba1b909391f3415d220114f8a16b4d35818",
+      "snapshot": {
+        "id": "aircraft-2015448-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-44090-v-of-pro-2015448/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2015448, réf. 2015448",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 440 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-503-100-p:aircraft-2018531-2-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018531-2-20260927",
+      "productId": "aircraft-airprofi-503-100-p",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "97dd595cd16f533ad6585d52e6ff0337e38d3765bf7e5be825d9a69347f56c04",
+      "snapshot": {
+        "id": "aircraft-2018531-2-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-503100-p-20185312-1/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018531.2, réf. 2018531.2",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 510 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-503-100-p-incl-sar-10-15:aircraft-2018531-2sar-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018531-2sar-20260927",
+      "productId": "aircraft-airprofi-503-100-p-incl-sar-10-15",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "4739c7d56d46d15cc7701044ff9873cfbb0cecd2dc384aee49dbd4f3869078cd",
+      "snapshot": {
+        "id": "aircraft-2018531-2sar-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-503100-p-incl-sar-1015-20185312sar/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018531.2SAR, réf. 2018531.2SAR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 510 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-503-50-p:aircraft-2018530-2-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018530-2-20260927",
+      "productId": "aircraft-airprofi-503-50-p",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "f9c7829828a857ca16d64573f63e89eaf4506d891d3cdaad80528429db239cc6",
+      "snapshot": {
+        "id": "aircraft-2018530-2-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-50350-p-20185302-1/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018530.2, réf. 2018530.2",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 510 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-503-50-p-incl-sar-10-15:aircraft-2018530-2sar-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018530-2sar-20260927",
+      "productId": "aircraft-airprofi-503-50-p-incl-sar-10-15",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "0dcb993662cf2b61fd7092d29c50b2360ceefc9cee00c298190c04318119376e",
+      "snapshot": {
+        "id": "aircraft-2018530-2sar-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-50350-p-incl-hose-reel-sar-1015-20185302sar/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018530.2SAR, réf. 2018530.2SAR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 510 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-503-90-v:aircraft-2018533-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018533-20260927",
+      "productId": "aircraft-airprofi-503-90-v",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "a49e8ac098d4a87505821bc0d42f3ecba56a25abdb6f2d740b1170f0e4dd4551",
+      "snapshot": {
+        "id": "aircraft-2018533-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-50390-v-2018533/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018533, réf. 2018533",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 510 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-600-100-of-pro:aircraft-2015606-20260927:2026-10-01",
+      "evidenceId": "aircraft-2015606-20260927",
+      "productId": "aircraft-airprofi-600-100-of-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "7c8ff90cd010bbc5d785b363713b57554be97900604de7bbbf7d2cbc38addbb5",
+      "snapshot": {
+        "id": "aircraft-2015606-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-600100-of-pro-2015606/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2015606, réf. 2015606",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 510 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-600-200-of-pro:aircraft-2015607-20260927:2026-10-01",
+      "evidenceId": "aircraft-2015607-20260927",
+      "productId": "aircraft-airprofi-600-200-of-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "b1b57967f32f29c6e54615e2c73d37f61dce5979d22f8ac5e6a68a1d4bf51dae",
+      "snapshot": {
+        "id": "aircraft-2015607-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-600200-of-pro-2015607/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2015607, réf. 2015607",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 510 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-703-100-p:aircraft-2018731-2-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018731-2-20260927",
+      "productId": "aircraft-airprofi-703-100-p",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "19a9fe0e03ae400e9345068e933db46bbeeea053d8c8009893117641eeaa681f",
+      "snapshot": {
+        "id": "aircraft-2018731-2-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-703100-p-20187312/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018731.2, réf. 2018731.2",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 650 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-703-100-p-incl-sar-10-15:aircraft-2018731-2sar-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018731-2sar-20260927",
+      "productId": "aircraft-airprofi-703-100-p-incl-sar-10-15",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "ba56f06c9f59c005c3b8685b329a7f7fc6dc580fb6a0833a016d32976ad8e79a",
+      "snapshot": {
+        "id": "aircraft-2018731-2sar-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-703100-p-incl-hose-reel-sar-1015-20187312sar/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018731.2SAR, réf. 2018731.2SAR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 650 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-703-75-13-p:aircraft-2018734-2-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018734-2-20260927",
+      "productId": "aircraft-airprofi-703-75-13-p",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "1678d45da575d68f1298403ccad07bab8a4b9cc5fc488fc1a255d79f560c27fc",
+      "snapshot": {
+        "id": "aircraft-2018734-2-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-7037513-p-20187342-1/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018734.2, réf. 2018734.2",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 575 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-853-100-p:aircraft-2018831-2-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018831-2-20260927",
+      "productId": "aircraft-airprofi-853-100-p",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "34e03ac4dc572a45535e90b88d5981090176f304c84e4f990648112c0d0e7f7e",
+      "snapshot": {
+        "id": "aircraft-2018831-2-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-853100-p-20188312-1/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018831.2, réf. 2018831.2",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 850 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-980-270-10-of-h-pro:aircraft-2025430-20260927:2026-10-01",
+      "evidenceId": "aircraft-2025430-20260927",
+      "productId": "aircraft-airprofi-980-270-10-of-h-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "4296f94100c71a7b22708bf82d4948f5a75a9c04d04ccb65730ba8e8e36a81d7",
+      "snapshot": {
+        "id": "aircraft-2025430-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-98027010-of-h-pro-2025430/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2025430, réf. 2025430",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 980 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-980-270-10-of-v-pro:aircraft-2025428-20260927:2026-10-01",
+      "evidenceId": "aircraft-2025428-20260927",
+      "productId": "aircraft-airprofi-980-270-10-of-v-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "a6d788264d705d001ef531b4ca1987efc77aceccbe897cd2eb94571b486e9ea9",
+      "snapshot": {
+        "id": "aircraft-2025428-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-98027010-of-v-pro-2025428/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2025428, réf. 2025428",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 980 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-980-500-10-of-h-pro:aircraft-2025450-20260927:2026-10-01",
+      "evidenceId": "aircraft-2025450-20260927",
+      "productId": "aircraft-airprofi-980-500-10-of-h-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "7cfb3330e6a82c7bc657f63354720f3000a575bfec4979acc7e41f0126044317",
+      "snapshot": {
+        "id": "aircraft-2025450-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-98050010-of-h-pro-2025450/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2025450, réf. 2025450",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 980 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-321-50-e:aircraft-2008312-20260927:2026-10-01",
+      "evidenceId": "aircraft-2008312-20260927",
+      "productId": "aircraft-airstar-321-50-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "c2b4c2122f5e3085e77a1835539f08a490eac86164dee6f9c2c27c0695d146b2",
+      "snapshot": {
+        "id": "aircraft-2008312-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-32150-e-2008312/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2008312, réf. 2008312",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 235 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-401-50:aircraft-2009410-20260927:2026-10-01",
+      "evidenceId": "aircraft-2009410-20260927",
+      "productId": "aircraft-airstar-401-50",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "ebc613aad8bbb1dbca735fdb9b3b5c7c793f3f16dd105278a1a8c9659b69081e",
+      "snapshot": {
+        "id": "aircraft-2009410-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40150-2009410/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009410, réf. 2009410",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 365 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-401-50-e-230v:aircraft-2009413-20260927:2026-10-01",
+      "evidenceId": "aircraft-2009413-20260927",
+      "productId": "aircraft-airstar-401-50-e-230v",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "5694c783c69d65168cdd461c3e60907f6e42b5905a37377a1495740542574821",
+      "snapshot": {
+        "id": "aircraft-2009413-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40150-e-230v-2009413/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009413, réf. 2009413",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 365 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-403-50:aircraft-2009430-20260927:2026-10-01",
+      "evidenceId": "aircraft-2009430-20260927",
+      "productId": "aircraft-airstar-403-50",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "411dd98ff1ef167a818bee5ac9fd93ce5e305f125e03acea2f7e80ed09ea77ea",
+      "snapshot": {
+        "id": "aircraft-2009430-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40350-2009430/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009430, réf. 2009430",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 390 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-403-50-e-400v:aircraft-2009433-20260927:2026-10-01",
+      "evidenceId": "aircraft-2009433-20260927",
+      "productId": "aircraft-airstar-403-50-e-400v",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "ea36399a34cf123f4d7d04a2ffc5d3fd3b8519c1ad97834c6be4d505ee88b4c3",
+      "snapshot": {
+        "id": "aircraft-2009433-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40350-e-400v-2009433/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009433, réf. 2009433",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 365 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-403-50-sar:aircraft-2009430sar-20260927:2026-10-01",
+      "evidenceId": "aircraft-2009430sar-20260927",
+      "productId": "aircraft-airstar-403-50-sar",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "8e8c1fa1fd75980c86f806080293890bc2c8b4db9ca630019ea28098477cc3ab",
+      "snapshot": {
+        "id": "aircraft-2009430sar-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40350-sar-2009430sar/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009430SAR, réf. 2009430SAR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 390 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-421-50:aircraft-2007410-20260927:2026-10-01",
+      "evidenceId": "aircraft-2007410-20260927",
+      "productId": "aircraft-airstar-421-50",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "bc1e2464cc37bdfa451eee741a34454d83afba1d3b2aa79cf45b792824bb5127",
+      "snapshot": {
+        "id": "aircraft-2007410-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-42150-2007410/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2007410, réf. 2007410",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 365 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-423-50:aircraft-2007430-20260927:2026-10-01",
+      "evidenceId": "aircraft-2007430-20260927",
+      "productId": "aircraft-airstar-423-50",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "ed928d9b153f2524b3e2005c183c76094edf028a293f1e1e43cf7698e6290ef5",
+      "snapshot": {
+        "id": "aircraft-2007430-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-42350-2007430/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2007430, réf. 2007430",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 390 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-423-50-vz:aircraft-2007943-20260927:2026-10-01",
+      "evidenceId": "aircraft-2007943-20260927",
+      "productId": "aircraft-airstar-423-50-vz",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "1f93faf071d0a05bcd19daca291b4a5d50fda12a42e3d3d277b6a75094635be1",
+      "snapshot": {
+        "id": "aircraft-2007943-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-42350-vz-2007943/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2007943, réf. 2007943",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 390 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-compact-air-311-24-e:aircraft-2005291-20260927:2026-10-01",
+      "evidenceId": "aircraft-2005291-20260927",
+      "productId": "aircraft-compact-air-311-24-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "b342ed9bc641a20cbdae16d297a9f0c7f8378d32ed94a347c2044daada4efda2",
+      "snapshot": {
+        "id": "aircraft-2005291-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-31124-e-2005291/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2005291, réf. 2005291",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 284 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-mobilboy-401-50-e:aircraft-2003741-20260927:2026-10-01",
+      "evidenceId": "aircraft-2003741-20260927",
+      "productId": "aircraft-mobilboy-401-50-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "e76d6e89a8fadbf3e5a5554abcca1121c352013e1969827695d7683b50e810e5",
+      "snapshot": {
+        "id": "aircraft-2003741-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-40150-e-2003741/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2003741, réf. 2003741",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 400 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-mobilboy-silence-401-50-of-e:aircraft-2002401-20260927:2026-10-01",
+      "evidenceId": "aircraft-2002401-20260927",
+      "productId": "aircraft-mobilboy-silence-401-50-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "8df544b06b9aa1d724ff3eb058c9967392222627007021ce6f0f716152b0e6c2",
+      "snapshot": {
+        "id": "aircraft-2002401-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-silence-40150-of-e-2002401/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2002401, réf. 2002401",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 400 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bm-c-10-pro:aircraft-2404110-20260927:2026-10-01",
+      "evidenceId": "aircraft-2404110-20260927",
+      "productId": "aircraft-bm-c-10-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "1209b515b9811799f4c5d74e0263c07c7419205dae948bdbe5041b4da9e4b788",
+      "snapshot": {
+        "id": "aircraft-2404110-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bm-c-10-pro-2404110/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2404110, réf. 2404110",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 238 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bm-c-13-pro:aircraft-2404115-20260927:2026-10-01",
+      "evidenceId": "aircraft-2404115-20260927",
+      "productId": "aircraft-bm-c-13-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "4ce982d1e9df2f898a67ef2004e0cc4cfdbcbe0dfdbc72b2e85bbe764c4507d8",
+      "snapshot": {
+        "id": "aircraft-2404115-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bm-c-13-pro-2404115/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2404115, réf. 2404115",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 238 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bm-r-l-pro:aircraft-2404100-20260927:2026-10-01",
+      "evidenceId": "aircraft-2404100-20260927",
+      "productId": "aircraft-bm-r-l-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "c8d3ecee1dd6d41100509377c963b574d835823e12a0cbdcd1f4ac8d6fe15b06",
+      "snapshot": {
+        "id": "aircraft-2404100-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bm-r-l-pro-2404100/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2404100, réf. 2404100",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 360 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bp-pro:aircraft-2112120-20260927:2026-10-01",
+      "evidenceId": "aircraft-2112120-20260927",
+      "productId": "aircraft-bp-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "2243b7df232467c7ea0cd8892ac5655efa651d4658d8b46338beeca2ad60eba8",
+      "snapshot": {
+        "id": "aircraft-2112120-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-2112120/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2112120, réf. 2112120",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bp-pro-duo:aircraft-2102190-20260927:2026-10-01",
+      "evidenceId": "aircraft-2102190-20260927",
+      "productId": "aircraft-bp-pro-duo",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "d2a55631a2a78dcbcbf4394bde570ea76e453d5970a43acdd89f8d086f0fa0f0",
+      "snapshot": {
+        "id": "aircraft-2102190-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-duo-2102190/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2102190, réf. 2102190",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bp-pro-exl:aircraft-2102185-20260927:2026-10-01",
+      "evidenceId": "aircraft-2102185-20260927",
+      "productId": "aircraft-bp-pro-exl",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "955cfadfef41a173202715148c6c2bbb03f11660f724caa86d2c49525db02817",
+      "snapshot": {
+        "id": "aircraft-2102185-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-exl-2102185/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2102185, réf. 2102185",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bp-pro-g:aircraft-2112121-20260927:2026-10-01",
+      "evidenceId": "aircraft-2112121-20260927",
+      "productId": "aircraft-bp-pro-g",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "289955abea1304d72bff7bf179e1caa8864c6f57b2bcb1178d51b8ad85c51be9",
+      "snapshot": {
+        "id": "aircraft-2112121-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-g-2112121/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2112121, réf. 2112121",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bp-pro-l:aircraft-2112123-20260927:2026-10-01",
+      "evidenceId": "aircraft-2112123-20260927",
+      "productId": "aircraft-bp-pro-l",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "2778d5d8dce8cbf96dd8a2a77887fe166fcedb7089e6496e2991854fc5551264",
+      "snapshot": {
+        "id": "aircraft-2112123-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-l-2112123/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2112123, réf. 2112123",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bp-pro-r:aircraft-2112130-20260927:2026-10-01",
+      "evidenceId": "aircraft-2112130-20260927",
+      "productId": "aircraft-bp-pro-r",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "f8f35af4dbbaae784cf27fef2766c20500a350404b3cbde93b6139705c33d7c3",
+      "snapshot": {
+        "id": "aircraft-2112130-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-r-2112130/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2112130, réf. 2112130",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bp-pro-safe:aircraft-2112128-20260927:2026-10-01",
+      "evidenceId": "aircraft-2112128-20260927",
+      "productId": "aircraft-bp-pro-safe",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "f4af7ba0a91e4db91ae17275ce23e617af0622cb6360c59c90686faf9a37b592",
+      "snapshot": {
+        "id": "aircraft-2112128-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-safe-2112128/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2112128, réf. 2112128",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bp-pro-sil:aircraft-2112127-20260927:2026-10-01",
+      "evidenceId": "aircraft-2112127-20260927",
+      "productId": "aircraft-bp-pro-sil",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "3493b670723f95e297b4ace2551aa9643f5e48a5fc83ef6357246c9ae8abd7a0",
+      "snapshot": {
+        "id": "aircraft-2112127-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-sil-2112127/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2112127, réf. 2112127",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bp-pro-v:aircraft-2112122-20260927:2026-10-01",
+      "evidenceId": "aircraft-2112122-20260927",
+      "productId": "aircraft-bp-pro-v",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "150c1d8dcbc01f4ca78f81f5a11d89e68d23863c6fa2ae7f7bc92bcf517f5480",
+      "snapshot": {
+        "id": "aircraft-2112122-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-v-2112122/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2112122, réf. 2112122",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bp-pro-xl:aircraft-2112124-20260927:2026-10-01",
+      "evidenceId": "aircraft-2112124-20260927",
+      "productId": "aircraft-bp-pro-xl",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "636e6f469ddae6321a12a853fcf67bd6928cf0ad7863c28c494c1421693308cb",
+      "snapshot": {
+        "id": "aircraft-2112124-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-xl-2112124/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2112124, réf. 2112124",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bp-pro-xxl:aircraft-2112125-20260927:2026-10-01",
+      "evidenceId": "aircraft-2112125-20260927",
+      "productId": "aircraft-bp-pro-xxl",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "f845f5d461a91a043151dac6d52b6cf69b62b29939c9c1ba4d8822d914bbd339",
+      "snapshot": {
+        "id": "aircraft-2112125-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bp-pro-xxl-2112125/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2112125, réf. 2112125",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bpi-pro:aircraft-2102170-20260927:2026-10-01",
+      "evidenceId": "aircraft-2102170-20260927",
+      "productId": "aircraft-bpi-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "0923875a722a50e6212bad9877911b804c0b1091d18fc18a8029099d4d88d484",
+      "snapshot": {
+        "id": "aircraft-2102170-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bpi-pro-2102170/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2102170, réf. 2102170",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bpk:aircraft-2112100-20260927:2026-10-01",
+      "evidenceId": "aircraft-2112100-20260927",
+      "productId": "aircraft-bpk",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "caf4b954bdc63c27c8cfd02cab3b2810fc35d78d987b86dc9c4ec2071abeac4f",
+      "snapshot": {
+        "id": "aircraft-2112100-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bpk-2112100/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2112100, réf. 2112100",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bpl:aircraft-2112110-20260927:2026-10-01",
+      "evidenceId": "aircraft-2112110-20260927",
+      "productId": "aircraft-bpl",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "320e87531e248c765533ecb3e610216288a974f767421d1ebc94f265374422fa",
+      "snapshot": {
+        "id": "aircraft-2112110-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bpl-2112110/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2112110, réf. 2112110",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bs-c-10-pro-15-vs:aircraft-2403730-20260927:2026-10-01",
+      "evidenceId": "aircraft-2403730-20260927",
+      "productId": "aircraft-bs-c-10-pro-15-vs",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "47adcac0d9847da3e90de8e8f0d61af50e61acb3c9c3c8072b92aef38fef17d8",
+      "snapshot": {
+        "id": "aircraft-2403730-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-10-pro-15-vs-2403730/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403730, réf. 2403730",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 400 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bs-c-20-2-pro-vs:aircraft-2403772-20260927:2026-10-01",
+      "evidenceId": "aircraft-2403772-20260927",
+      "productId": "aircraft-bs-c-20-2-pro-vs",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "862f57f3912a4a4194274955b186c2367a73c26700aa1c18b7171953b4327021",
+      "snapshot": {
+        "id": "aircraft-2403772-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-20-2-pro-vs-2403772/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403772, réf. 2403772",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 270 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bs-c-20-pro-15-vs:aircraft-2403740-20260927:2026-10-01",
+      "evidenceId": "aircraft-2403740-20260927",
+      "productId": "aircraft-bs-c-20-pro-15-vs",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "a889baba67f3da495f3b738bb1acbb7ab19ebd0cf9073f79227cf3348ea695b4",
+      "snapshot": {
+        "id": "aircraft-2403740-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-20-pro-15-vs-2403740/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403740, réf. 2403740",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 400 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bs-c-20-pro-vs:aircraft-2403780-20260927:2026-10-01",
+      "evidenceId": "aircraft-2403780-20260927",
+      "productId": "aircraft-bs-c-20-pro-vs",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "c17f964451aadda8d36848f325f556d3e5e71e0fecf636c59c87c7c38b3471b3",
+      "snapshot": {
+        "id": "aircraft-2403780-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-20-pro-vs-2403780/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403780, réf. 2403780",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 400 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bst:aircraft-2112115-20260927:2026-10-01",
+      "evidenceId": "aircraft-2112115-20260927",
+      "productId": "aircraft-bst",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "f36885d8f8703746d0bf0e5c8b800fac10c76c43a1633981f9904fbfe85dd71f",
+      "snapshot": {
+        "id": "aircraft-2112115-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bst-2112115/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2112115, réf. 2112115",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-ds:aircraft-2403500-20260927:2026-10-01",
+      "evidenceId": "aircraft-2403500-20260927",
+      "productId": "aircraft-ds",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "52b9b974900de95994063b1aaddad5f63862ff8056c2da84d85428053c9dcd7b",
+      "snapshot": {
+        "id": "aircraft-2403500-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ds-2403500/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403500, réf. 2403500",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 480 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-ess-150-composite-pro:aircraft-2403450-20260927:2026-10-01",
+      "evidenceId": "aircraft-2403450-20260927",
+      "productId": "aircraft-ess-150-composite-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "6f18580c1f33354991f26e591e9451f61b0715d4f4b1cf33fd90a062a517c96f",
+      "snapshot": {
+        "id": "aircraft-2403450-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ess-150-composite-pro-2403450/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403450, réf. 2403450",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 350 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-gs-pro:aircraft-2403110-20260927:2026-10-01",
+      "evidenceId": "aircraft-2403110-20260927",
+      "productId": "aircraft-gs-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "f0d6c60c387556261c49b4240182d6e963ba434a373868b65e60670e531cb780",
+      "snapshot": {
+        "id": "aircraft-2403110-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/gs-pro-2403110/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403110, réf. 2403110",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 60 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-is-3-4-composite:aircraft-2401260-20260927:2026-10-01",
+      "evidenceId": "aircraft-2401260-20260927",
+      "productId": "aircraft-is-3-4-composite",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "b1581457b1bed79c0351d83c1c93a23c0054f9570699420d9432809061aca96d",
+      "snapshot": {
+        "id": "aircraft-2401260-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/is-34-composite-2401260/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401260, réf. 2401260",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 269 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-iss-1-pro:aircraft-2401490-20260927:2026-10-01",
+      "evidenceId": "aircraft-2401490-20260927",
+      "productId": "aircraft-iss-1-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "c361b4d07a02948176446a0eb9a9fc6888fb2a1c55afe109b98434d47ef039c5",
+      "snapshot": {
+        "id": "aircraft-2401490-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-1-pro-2401490/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401490, réf. 2401490",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 411 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-iss-1-pro-l:aircraft-2401495-20260927:2026-10-01",
+      "evidenceId": "aircraft-2401495-20260927",
+      "productId": "aircraft-iss-1-pro-l",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "3b2ab49eb0e542c44657d737581e9074f46598c44467c5377d6069fe5c664e39",
+      "snapshot": {
+        "id": "aircraft-2401495-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-1-pro-l-2401495/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401495, réf. 2401495",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 405 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-iss-compact-pro:aircraft-2401400-20260927:2026-10-01",
+      "evidenceId": "aircraft-2401400-20260927",
+      "productId": "aircraft-iss-compact-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "26010c135daac2654c9703a88b7cae580a727381c6639ef9be4f1ee7892a0ca0",
+      "snapshot": {
+        "id": "aircraft-2401400-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-12-compact-pro-2401400/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401400, réf. 2401400",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 130 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-iss-mini:aircraft-2401371-20260927:2026-10-01",
+      "evidenceId": "aircraft-2401371-20260927",
+      "productId": "aircraft-iss-mini",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "63d9ac38fd5a399ced5ab7c518df44e73efd50a13d80b9b9b224018ae7b51c1d",
+      "snapshot": {
+        "id": "aircraft-2401371-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-12-mini-2401371/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401371, réf. 2401371",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 120 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-iss-3-4-pro:aircraft-2401440-20260927:2026-10-01",
+      "evidenceId": "aircraft-2401440-20260927",
+      "productId": "aircraft-iss-3-4-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "7cae0d136f182ab23ff0c1ece01d1d9c3f2bcf2291864bfc61bb7e24c0bcdbb0",
+      "snapshot": {
+        "id": "aircraft-2401440-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-34-pro-2401440/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401440, réf. 2401440",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 230 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-iss-c-1-2-pro:aircraft-2401475-20260927:2026-10-01",
+      "evidenceId": "aircraft-2401475-20260927",
+      "productId": "aircraft-iss-c-1-2-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "b429c7b9d1e663178ed9e462a9a2ac4f06b41084ae298e769a9730f3a29b8db7",
+      "snapshot": {
+        "id": "aircraft-2401475-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-c-12-pro-2401475/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401475, réf. 2401475",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 188 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-iss-c-3-4-pro:aircraft-2401485-20260927:2026-10-01",
+      "evidenceId": "aircraft-2401485-20260927",
+      "productId": "aircraft-iss-c-3-4-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "1b39e91a0e968f9ee773a09bc6d75ea7d53106de399c3705581923aaf7ff1af2",
+      "snapshot": {
+        "id": "aircraft-2401485-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-c-34-pro-2401485/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401485, réf. 2401485",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 393 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-iss-tt-mini-composite:aircraft-2401372-20260927:2026-10-01",
+      "evidenceId": "aircraft-2401372-20260927",
+      "productId": "aircraft-iss-tt-mini-composite",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "8d043102a01289d07efc99d8070718832e8a1e61743fbc9cf08f255aa1d2accb",
+      "snapshot": {
+        "id": "aircraft-2401372-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-tt-12-mini-composite-2401372/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401372, réf. 2401372",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 132 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-iss-tt-composite:aircraft-2401376-20260927:2026-10-01",
+      "evidenceId": "aircraft-2401376-20260927",
+      "productId": "aircraft-iss-tt-composite",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "dd88419e159a05e9d9158055409075c50ad61ab299af311924fed79e08efa6ca",
+      "snapshot": {
+        "id": "aircraft-2401376-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-tt-34-composite-2401376/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401376, réf. 2401376",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 235 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-iss-ttm:aircraft-2401370-20260927:2026-10-01",
+      "evidenceId": "aircraft-2401370-20260927",
+      "productId": "aircraft-iss-ttm",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "20c5cb4714344172a4916e72a34f726b9ee90d90d3b5d9f40ee4b8d89636ccf5",
+      "snapshot": {
+        "id": "aircraft-2401370-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-ttm-12-2401370/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401370, réf. 2401370",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 115 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-iws-125-2-pro:aircraft-2403483-20260927:2026-10-01",
+      "evidenceId": "aircraft-2403483-20260927",
+      "productId": "aircraft-iws-125-2-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "bfbace00438a28ab6b42320ab78703dbb28f192f3f3a7295a01dce8976fa2bfa",
+      "snapshot": {
+        "id": "aircraft-2403483-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iws-125-2-pro-2403483/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403483, réf. 2403483",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 326 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-kp-pro:aircraft-2102270-20260927:2026-10-01",
+      "evidenceId": "aircraft-2102270-20260927",
+      "productId": "aircraft-kp-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "6306adc640e1780fe876a94e7965955b121ed758a19629cd66e87d150e4f21b3",
+      "snapshot": {
+        "id": "aircraft-2102270-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/kp-pro-2102270/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2102270, réf. 2102270",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 100 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-mhp-pro:aircraft-2402550-20260927:2026-10-01",
+      "evidenceId": "aircraft-2402550-20260927",
+      "productId": "aircraft-mhp-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "e681d8755702d51b194f81c13ff4d26b55923276405a39e0da3087750e384358",
+      "snapshot": {
+        "id": "aircraft-2402550-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/mhp-pro-2402550/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2402550, réf. 2402550",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 600 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-mrs-mini-pro:aircraft-2406100-20260927:2026-10-01",
+      "evidenceId": "aircraft-2406100-20260927",
+      "productId": "aircraft-mrs-mini-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "6558eb3b17fb0df84f12f2495a50e06798634502119474e31e418cf75cc54613",
+      "snapshot": {
+        "id": "aircraft-2406100-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/mrs-mini-pro-2406100/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2406100, réf. 2406100",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 84 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-ne-mini-pro:aircraft-2402650-20260927:2026-10-01",
+      "evidenceId": "aircraft-2402650-20260927",
+      "productId": "aircraft-ne-mini-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "24c5c9bf96dec3a1438b0a70bd726dcf76e8e09a2afb6b8f4c30bda77c99e126",
+      "snapshot": {
+        "id": "aircraft-2402650-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ne-mini-pro-2402650/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2402650, réf. 2402650",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 48 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-ne-pro:aircraft-2402620-20260927:2026-10-01",
+      "evidenceId": "aircraft-2402620-20260927",
+      "productId": "aircraft-ne-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "b778e6537e9040c5e08c476fce7be287729b2ed5e2e23824194b9d000db29559",
+      "snapshot": {
+        "id": "aircraft-2402620-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ne-pro-2402620/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2402620, réf. 2402620",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 170 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-np-2-pro:aircraft-2402655-20260927:2026-10-01",
+      "evidenceId": "aircraft-2402655-20260927",
+      "productId": "aircraft-np-2-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "11c11adba5f11316fcbbec719ca4f85900c00209ed3eb32f6c3d522e9875f7e2",
+      "snapshot": {
+        "id": "aircraft-2402655-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/np-2-pro-2402655/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2402655, réf. 2402655",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 28,3 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-np-pro:aircraft-2402640-20260927:2026-10-01",
+      "evidenceId": "aircraft-2402640-20260927",
+      "productId": "aircraft-np-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "52365ce103d1bda2bd3b1cfa8741790ebc07bc2ca334b33e4b93c637806014a0",
+      "snapshot": {
+        "id": "aircraft-2402640-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/np-pro-2402640/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2402640, réf. 2402640",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 170 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-ps-7:aircraft-2403290-20260927:2026-10-01",
+      "evidenceId": "aircraft-2403290-20260927",
+      "productId": "aircraft-ps-7",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "49af28d898c84120f8c4af897e258000426bca5da1370eaa8063e10b2ff56c0a",
+      "snapshot": {
+        "id": "aircraft-2403290-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ps-7-2403290/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403290, réf. 2403290",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 400 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-ps-c-pro:aircraft-2404125-20260927:2026-10-01",
+      "evidenceId": "aircraft-2404125-20260927",
+      "productId": "aircraft-ps-c-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "3b376ed45dc6589baaa32cbaaf38c80deb925fa025796b3fbfea216d6bdddc80",
+      "snapshot": {
+        "id": "aircraft-2404125-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ps-c-pro-2404125/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2404125, réf. 2404125",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 238 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-rs-1-2-vt-pro:aircraft-2401565-20260927:2026-10-01",
+      "evidenceId": "aircraft-2401565-20260927",
+      "productId": "aircraft-rs-1-2-vt-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "07d2af5b3a2c05a4c581e211cc5f86f4a8a3a50966b48485504f64acfd6418fd",
+      "snapshot": {
+        "id": "aircraft-2401565-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/rs-12-vt-pro-2401565/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401565, réf. 2401565",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 124 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-rs-1-4-vt-pro:aircraft-2401560-20260927:2026-10-01",
+      "evidenceId": "aircraft-2401560-20260927",
+      "productId": "aircraft-rs-1-4-vt-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "af329163e003499405c3062acf9ef0b24d45a8420647e8657c4febb4649e0c02",
+      "snapshot": {
+        "id": "aircraft-2401560-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/rs-14-vt-pro-2401560/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401560, réf. 2401560",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 122 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-sbp:aircraft-2102100-20260927:2026-10-01",
+      "evidenceId": "aircraft-2102100-20260927",
+      "productId": "aircraft-sbp",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "3a4817842485175374837f29b63b70defe50bcce9b9122c1c058aca668244dae",
+      "snapshot": {
+        "id": "aircraft-2102100-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/sbp-2102100/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2102100, réf. 2102100",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-sp-pro:aircraft-2102290-20260927:2026-10-01",
+      "evidenceId": "aircraft-2102290-20260927",
+      "productId": "aircraft-sp-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "880997c42ff48204eeb7cc00b34d0eda10c99fbec6856cf0aa13760ccf6272c3",
+      "snapshot": {
+        "id": "aircraft-2102290-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/sp-pro-2102290/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2102290, réf. 2102290",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 100 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-srs-1-2-ht-pro:aircraft-2401570-20260927:2026-10-01",
+      "evidenceId": "aircraft-2401570-20260927",
+      "productId": "aircraft-srs-1-2-ht-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "c9f8de61ec078318d3db04b752ad8539e44fd64cebff0d0f27953751e5afeb45",
+      "snapshot": {
+        "id": "aircraft-2401570-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/srs-12-ht-pro-2401570/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401570, réf. 2401570",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 90 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-sws-180-pro:aircraft-2403520-20260927:2026-10-01",
+      "evidenceId": "aircraft-2403520-20260927",
+      "productId": "aircraft-sws-180-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "60571aa4d279900518eef0b8bb6f7543dcb791bd53f068aafbb4777ecdcdcc35",
+      "snapshot": {
+        "id": "aircraft-2403520-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/sws-180-pro-2403520/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403520, réf. 2403520",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 360 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-tts-pro:aircraft-2403485-20260927:2026-10-01",
+      "evidenceId": "aircraft-2403485-20260927",
+      "productId": "aircraft-tts-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "234793bf2760e41ad396abf7dd3c4371cd8de5f24554608fb34c604da9c18204",
+      "snapshot": {
+        "id": "aircraft-2403485-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/tts-pro-2403485/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403485, réf. 2403485",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 252 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-tws-super:aircraft-2403491-20260927:2026-10-01",
+      "evidenceId": "aircraft-2403491-20260927",
+      "productId": "aircraft-tws-super",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "f6a620b579f8bfc73522fb77008d36c3b637297aceeb1cde25b038117396b33e",
+      "snapshot": {
+        "id": "aircraft-2403491-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/tws-super-2403491/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403491, réf. 2403491",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 480 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-us-c-pro:aircraft-2404670-20260927:2026-10-01",
+      "evidenceId": "aircraft-2404670-20260927",
+      "productId": "aircraft-us-c-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "837013bd0ca43da1bd0719a9794df22ae4ec51be2373606fd746e7a38334ff59",
+      "snapshot": {
+        "id": "aircraft-2404670-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/us-c-pro-2404670/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2404670, réf. 2404670",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 133 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-wb-10-1-pro:aircraft-2404120-20260927:2026-10-01",
+      "evidenceId": "aircraft-2404120-20260927",
+      "productId": "aircraft-wb-10-1-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "702aaf6e6ffdff5eaff50c1fed171c813adc4b3ada5134136faefa9420136dbb",
+      "snapshot": {
+        "id": "aircraft-2404120-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wb-10-1-pro-2404120/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2404120, réf. 2404120",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 175 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-wb-mini-pro:aircraft-2406405-20260927:2026-10-01",
+      "evidenceId": "aircraft-2406405-20260927",
+      "productId": "aircraft-wb-mini-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "5180f516b90d6f18efbea2e968199dbb2b47032065120be00ad43e53f51a5dac",
+      "snapshot": {
+        "id": "aircraft-2406405-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wb-mini-pro-2406405/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2406405, réf. 2406405",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 84 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-ws-125-pro:aircraft-2403470-20260927:2026-10-01",
+      "evidenceId": "aircraft-2403470-20260927",
+      "productId": "aircraft-ws-125-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "7402eee289c838f102ca32cf528eeaaec065c81b1167b6f0a468d892f3b400fb",
+      "snapshot": {
+        "id": "aircraft-2403470-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ws-125-pro-2403470/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403470, réf. 2403470",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 490 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-wss-ht-pro:aircraft-2401575-20260927:2026-10-01",
+      "evidenceId": "aircraft-2401575-20260927",
+      "productId": "aircraft-wss-ht-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "7e7560e49ffc95bb1f7c09fbb49c6a4843bbcfcf8efffe00ade55ee383f9254a",
+      "snapshot": {
+        "id": "aircraft-2401575-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wss-12-ht-pro-2401575/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401575, réf. 2401575",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 91 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-wst-mini-pro:aircraft-2406305-20260927:2026-10-01",
+      "evidenceId": "aircraft-2406305-20260927",
+      "productId": "aircraft-wst-mini-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retrouvée après 404 ; modèle, référence et tous les champs du tableau technique recontrôlés à l’identique.",
+      "fingerprint": "d1015c09da6c435295c8ff9860d58d5fa488250d852d7620798c36d55b31f6b4",
+      "snapshot": {
+        "id": "aircraft-2406305-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wst-mini-pro-2406305/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2406305, réf. 2406305",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 84 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airbau-480-90-b:aircraft-2004450-20260927:2026-10-01",
+      "evidenceId": "aircraft-2004450-20260927",
+      "productId": "aircraft-airbau-480-90-b",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "43d73d93f9d54f71d7451a2d968129a861209086020d86cb7058312398c5473a",
+      "snapshot": {
+        "id": "aircraft-2004450-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airbau-480100-b-2004450/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2004450, réf. 2004450",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 480 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airboy-silence-241-of-e:aircraft-2000245-20260927:2026-10-01",
+      "evidenceId": "aircraft-2000245-20260927",
+      "productId": "aircraft-airboy-silence-241-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "9f00a67e149aff802d1ed4a4288f545889cf1ce8bee21e7b1b6751eeca31c351",
+      "snapshot": {
+        "id": "aircraft-2000245-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-silence-241-of-e-2000245/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2000245, réf. 2000245",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 240 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-aircar-321-22-pro:aircraft-2005531-20260927:2026-10-01",
+      "evidenceId": "aircraft-2005531-20260927",
+      "productId": "aircraft-aircar-321-22-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "b8685ae4d887441fbd548a5f769760579803b6a0cf43f15fd26617eab5f8b0a2",
+      "snapshot": {
+        "id": "aircraft-2005531-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/aircar-32122-pro-2005531/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2005531, réf. 2005531",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 310 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-401-50-p-incl-hose-reel-sar-10-15:aircraft-2018410-2sar-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018410-2sar-20260927",
+      "productId": "aircraft-airprofi-401-50-p-incl-hose-reel-sar-10-15",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "c3455bc4a01e66ce40b2fd9dc9caccb1bb71214f62a44b8b02d2bd507db08e2a",
+      "snapshot": {
+        "id": "aircraft-2018410-2sar-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40150-p-incl-hose-reel-sar-1015-20184102sar/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018410.2SAR, réf. 2018410.2SAR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 365 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-401-90-v:aircraft-2018414-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018414-20260927",
+      "productId": "aircraft-airprofi-401-90-v",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "fc784c617eb4fc3da04be1837d5aaa7999c776f57b664455ef19ff38639ba250",
+      "snapshot": {
+        "id": "aircraft-2018414-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-40190-v-2018414/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018414, réf. 2018414",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 365 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-440-50-of-pro:aircraft-2015445-20260927:2026-10-01",
+      "evidenceId": "aircraft-2015445-20260927",
+      "productId": "aircraft-airprofi-440-50-of-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "24d7b472fc03f43b53acb880fa8cbe2d098576eee875122c8014f617a180d0d7",
+      "snapshot": {
+        "id": "aircraft-2015445-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-44050-of-pro-2015445/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2015445, réf. 2015445",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 440 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-853-100-p-incl-sar-10-15:aircraft-2018831-2sar-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018831-2sar-20260927",
+      "productId": "aircraft-airprofi-853-100-p-incl-sar-10-15",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "046e9730ba04ee7c095f003ab1f74ce97b2c06534bd238e83043b6acf528b5f1",
+      "snapshot": {
+        "id": "aircraft-2018831-2sar-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-853100-p-incl-hose-reel-sar-1015-20188312sar/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018831.2SAR, réf. 2018831.2SAR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 850 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airprofi-853-200-p:aircraft-2018832-2-20260927:2026-10-01",
+      "evidenceId": "aircraft-2018832-2-20260927",
+      "productId": "aircraft-airprofi-853-200-p",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "840397aff67432a015a59e1ff0c8762a7758613480632dcc0d8d22cdcb895db2",
+      "snapshot": {
+        "id": "aircraft-2018832-2-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airprofi-853200-p-20188322/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2018832.2, réf. 2018832.2",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 850 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-421-50-vz:aircraft-2007941-20260927:2026-10-01",
+      "evidenceId": "aircraft-2007941-20260927",
+      "productId": "aircraft-airstar-421-50-vz",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "4794486db2dee321b4ca165bc4c0da883211426449c346ffcafef2936b27df38",
+      "snapshot": {
+        "id": "aircraft-2007941-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-42150-vz-2007941/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2007941, réf. 2007941",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 365 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-503-100-sar:aircraft-2009531sar-20260927:2026-10-01",
+      "evidenceId": "aircraft-2009531sar-20260927",
+      "productId": "aircraft-airstar-503-100-sar",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "2b7eb5b2edd097510dd143f78c88a4c6bf4d453337b4af118cf6e0e768a18b42",
+      "snapshot": {
+        "id": "aircraft-2009531sar-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-503100-sar-2009531sar/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009531SAR, réf. 2009531SAR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 510 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-503-50:aircraft-2009530-20260927:2026-10-01",
+      "evidenceId": "aircraft-2009530-20260927",
+      "productId": "aircraft-airstar-503-50",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "07bca2d5dea466f6afbabae1e946c76df061444978f973ac358c6c4349a4fccf",
+      "snapshot": {
+        "id": "aircraft-2009530-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-50350-2009530/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009530, réf. 2009530",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 510 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-503-50-sar:aircraft-2009530sar-20260927:2026-10-01",
+      "evidenceId": "aircraft-2009530sar-20260927",
+      "productId": "aircraft-airstar-503-50-sar",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "68956d439b712a7a2b440ca096fe53f66f6b5a17e7ec6333a06eb22fff4fcf96",
+      "snapshot": {
+        "id": "aircraft-2009530sar-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-50350-sar-2009530sar/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009530SAR, réf. 2009530SAR",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 510 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-603-50:aircraft-2007630-20260927:2026-10-01",
+      "evidenceId": "aircraft-2007630-20260927",
+      "productId": "aircraft-airstar-603-50",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "cbae070b6e22639aeb5931773b393422a75102e8676b645617a88f362ab81881",
+      "snapshot": {
+        "id": "aircraft-2007630-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-60350-2007630/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2007630, réf. 2007630",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 510 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-603-50-vz:aircraft-2007963-20260927:2026-10-01",
+      "evidenceId": "aircraft-2007963-20260927",
+      "productId": "aircraft-airstar-603-50-vz",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "906795a6fdf7dadd62323d0c2d1fba3d74fa160c839f73305ee69f4e1a54972f",
+      "snapshot": {
+        "id": "aircraft-2007963-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-60350-vz-2007963/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2007963, réf. 2007963",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 510 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-603-90:aircraft-2007631-20260927:2026-10-01",
+      "evidenceId": "aircraft-2007631-20260927",
+      "productId": "aircraft-airstar-603-90",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "3c01d101660f9e68a36a8640c6a8d5f6d1aaa543f90251bc97f2b6e1b89717cb",
+      "snapshot": {
+        "id": "aircraft-2007631-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-60390-2007631/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2007631, réf. 2007631",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 510 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-603-90-vz:aircraft-2007964-20260927:2026-10-01",
+      "evidenceId": "aircraft-2007964-20260927",
+      "productId": "aircraft-airstar-603-90-vz",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "1ecac8e7202b788cd3a3f91c45d7a2d7675158ceaf4bdfee80191c50c83ee7c8",
+      "snapshot": {
+        "id": "aircraft-2007964-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-60390-vz-2007964/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2007964, réf. 2007964",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 510 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-703-100:aircraft-2009731-20260927:2026-10-01",
+      "evidenceId": "aircraft-2009731-20260927",
+      "productId": "aircraft-airstar-703-100",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "bd45a142e352827082e7d8c4669d645ebac3ef2e45fe4d93e714802bce486914",
+      "snapshot": {
+        "id": "aircraft-2009731-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-703100-2009731/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009731, réf. 2009731",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 650 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-703-90:aircraft-2007731-20260927:2026-10-01",
+      "evidenceId": "aircraft-2007731-20260927",
+      "productId": "aircraft-airstar-703-90",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "023490bb4029691f7bba5b42690838f1a0a687c6efd41fe2b8384184755d1ab2",
+      "snapshot": {
+        "id": "aircraft-2007731-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-70390-2007731/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2007731, réf. 2007731",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 650 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-853-100:aircraft-2009831-20260927:2026-10-01",
+      "evidenceId": "aircraft-2009831-20260927",
+      "productId": "aircraft-airstar-853-100",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "ee4ae0ca9477b47d387495e055d8f91962784116c698eb51deae1cc93b4a3332",
+      "snapshot": {
+        "id": "aircraft-2009831-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-853100-2009831/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009831, réf. 2009831",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 850 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-853-200:aircraft-2009832-20260927:2026-10-01",
+      "evidenceId": "aircraft-2009832-20260927",
+      "productId": "aircraft-airstar-853-200",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "d8ab1b65c306062c8d29ec8f37046df1f008661ad2d07067f3a599a75f04cf90",
+      "snapshot": {
+        "id": "aircraft-2009832-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-853200-2009832/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009832, réf. 2009832",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 850 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-863-200:aircraft-2007832-20260927:2026-10-01",
+      "evidenceId": "aircraft-2007832-20260927",
+      "productId": "aircraft-airstar-863-200",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "94dce010c81a3e5084a3e056d9aadc3d735b5adee61a248c249d39d00770b5ce",
+      "snapshot": {
+        "id": "aircraft-2007832-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-863200-2007832/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2007832, réf. 2007832",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 850 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-863-90:aircraft-2007831-20260927:2026-10-01",
+      "evidenceId": "aircraft-2007831-20260927",
+      "productId": "aircraft-airstar-863-90",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "9ebae52f1450b3d263749f75321f12879cb48ceae48869c9c07f0fb867325fbd",
+      "snapshot": {
+        "id": "aircraft-2007831-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-86390-2007831/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2007831, réf. 2007831",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 850 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-airstar-903-50-15-hg:aircraft-2028725-20260927:2026-10-01",
+      "evidenceId": "aircraft-2028725-20260927",
+      "productId": "aircraft-airstar-903-50-15-hg",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "ae44ec81b28852aeca7f0e9558d1432914d179f9bf999807fe774ba7d085ee43",
+      "snapshot": {
+        "id": "aircraft-2028725-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-9035015-hg-2028725/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2028725, réf. 2028725",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 900 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-compact-air-240-20-of-e:aircraft-2005490-20260927:2026-10-01",
+      "evidenceId": "aircraft-2005490-20260927",
+      "productId": "aircraft-compact-air-240-20-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "86a4f3f2dd77d4737fd9c3d7faca76a6ccd8f8a15c807e709fe71918d1f39df1",
+      "snapshot": {
+        "id": "aircraft-2005490-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-24020-of-e-2005490/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2005490, réf. 2005490",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 240 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-compact-air-241-16-of-e:aircraft-2005450-20260927:2026-10-01",
+      "evidenceId": "aircraft-2005450-20260927",
+      "productId": "aircraft-compact-air-241-16-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "27b4a68856036dfc3d5dd823f003ed1dec5bbdc7ff0d183f709af6c1939cee0f",
+      "snapshot": {
+        "id": "aircraft-2005450-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-24116-of-e-2005450/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2005450, réf. 2005450",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 242 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-compact-air-265-10-e:aircraft-2005261-20260927:2026-10-01",
+      "evidenceId": "aircraft-2005261-20260927",
+      "productId": "aircraft-compact-air-265-10-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "b411e19b7ef9c04f51ce9f8cc6b44372d57b536b7199680211b29ef495ce9c6e",
+      "snapshot": {
+        "id": "aircraft-2005261-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-26510-e-2005261/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2005261, réf. 2005261",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 250 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-compact-air-320-24-of-e:aircraft-2005495-20260927:2026-10-01",
+      "evidenceId": "aircraft-2005495-20260927",
+      "productId": "aircraft-compact-air-320-24-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "16278f782ddd6cf9bc5b24d0102279cf0a64d6137d561cfc9f936212993a8eee",
+      "snapshot": {
+        "id": "aircraft-2005495-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-32024-of-e-2005495/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2005495, réf. 2005495",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 320 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-compact-air-320-90-v-of-e:aircraft-2005499-20260927:2026-10-01",
+      "evidenceId": "aircraft-2005499-20260927",
+      "productId": "aircraft-compact-air-320-90-v-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "ad77a79d46d8b1a23332b1fd2a252fc6cbf55d1c9543a6b886ca3709e0fcf0aa",
+      "snapshot": {
+        "id": "aircraft-2005499-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-32090-v-of-e-2005499/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2005499, réf. 2005499",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 320 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-compact-air-321-24:aircraft-2005305-20260927:2026-10-01",
+      "evidenceId": "aircraft-2005305-20260927",
+      "productId": "aircraft-compact-air-321-24",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "6d9cfec6b7e8cf1650966358cc8a2d5599652762845e41b1bfd26111c00b8206",
+      "snapshot": {
+        "id": "aircraft-2005305-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-32124-2005305/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2005305, réf. 2005305",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 310 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-compact-air-321-24-pro:aircraft-2005352-20260927:2026-10-01",
+      "evidenceId": "aircraft-2005352-20260927",
+      "productId": "aircraft-compact-air-321-24-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "4fd290faf6bb735e383fadd157c90a7e6fec9d75682aa0cfd4e8294e2f1fccac",
+      "snapshot": {
+        "id": "aircraft-2005352-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-32124-pro-2005352/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2005352, réf. 2005352",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 310 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-compact-air-361-24-e:aircraft-2005361-20260927:2026-10-01",
+      "evidenceId": "aircraft-2005361-20260927",
+      "productId": "aircraft-compact-air-361-24-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "9177e1476d72a631f7941e9a4a11fa2f4ca9c3e9fc99286cf1aa0453b3d586e3",
+      "snapshot": {
+        "id": "aircraft-2005361-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-36124-e-2005361/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2005361, réf. 2005361",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 356 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-compact-air-401-50-of-e:aircraft-2005452-20260927:2026-10-01",
+      "evidenceId": "aircraft-2005452-20260927",
+      "productId": "aircraft-compact-air-401-50-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "c20cbcf59dca33934ad4fa54fc555ccb31954b344bc1be012569f39b71cf23cf",
+      "snapshot": {
+        "id": "aircraft-2005452-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-40150-of-e-2005452/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2005452, réf. 2005452",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 400 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-compact-air-440-of-pro:aircraft-2015550-20260927:2026-10-01",
+      "evidenceId": "aircraft-2015550-20260927",
+      "productId": "aircraft-compact-air-440-of-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "74b2db7f6277e5158acaddbf112829d180800b332dd9789733beb68a42df4342",
+      "snapshot": {
+        "id": "aircraft-2015550-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-440-of-pro-2015550/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2015550, réf. 2015550",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 440 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-compact-air-silence-231-20-of-e:aircraft-2005498-20260927:2026-10-01",
+      "evidenceId": "aircraft-2005498-20260927",
+      "productId": "aircraft-compact-air-silence-231-20-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "ed1aac51b74c0c9c09727a9434afed7c8477b0873da6eadf4b3d21daeafa1e24",
+      "snapshot": {
+        "id": "aircraft-2005498-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/compact-air-silence-23120-of-e-2005498/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2005498, réf. 2005498",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 230 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-handy-silence-221-of-e:aircraft-2001221-20260927:2026-10-01",
+      "evidenceId": "aircraft-2001221-20260927",
+      "productId": "aircraft-handy-silence-221-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "5ca6cafab3ee3e5317b5871747238715b59e9f25e31d713fc0a24b041cbcd89b",
+      "snapshot": {
+        "id": "aircraft-2001221-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/handy-silence-221-of-e-2001221/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2001221, réf. 2001221",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 200 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-mobilboy-185-of-e:aircraft-2001240-20260927:2026-10-01",
+      "evidenceId": "aircraft-2001240-20260927",
+      "productId": "aircraft-mobilboy-185-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "862de291044850860d6cc60e8b1dab9f3671a18b97ea317592749706e0c71052",
+      "snapshot": {
+        "id": "aircraft-2001240-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-185-of-e-2001240/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2001240, réf. 2001240",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 180 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-mobilboy-261-24t-e:aircraft-2003728-20260927:2026-10-01",
+      "evidenceId": "aircraft-2003728-20260927",
+      "productId": "aircraft-mobilboy-261-24t-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "b588e36c541ba06923d6f7b253a4b58131f35e9fd7e444ba1012f0cc40b58b02",
+      "snapshot": {
+        "id": "aircraft-2003728-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-26124t-e-2003728/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2003728, réf. 2003728",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 266 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-mobilboy-301-50-e:aircraft-2003731-20260927:2026-10-01",
+      "evidenceId": "aircraft-2003731-20260927",
+      "productId": "aircraft-mobilboy-301-50-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "706f517b74115ab6af380335319bd3c473484110a2a754f515f9d0c4ba0a8613",
+      "snapshot": {
+        "id": "aircraft-2003731-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-30150-e-2003731/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2003731, réf. 2003731",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 300 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-mobilboy-silence-231-50-of-e:aircraft-2002326-20260927:2026-10-01",
+      "evidenceId": "aircraft-2002326-20260927",
+      "productId": "aircraft-mobilboy-silence-231-50-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "8d050768aeb9fd13eaa74cf2c4ae6fea74d78f516b78c4cfbad8e60d1fbba2d8",
+      "snapshot": {
+        "id": "aircraft-2002326-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-silence-23150-of-e-2002326/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2002326, réf. 2002326",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 230 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-mobilboy-silence-241-24-of-e:aircraft-2002245-20260927:2026-10-01",
+      "evidenceId": "aircraft-2002245-20260927",
+      "productId": "aircraft-mobilboy-silence-241-24-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "0bedf635b0d249e9919b2cd20ca92f05671430a0855cfe2c73d627238c9e6641",
+      "snapshot": {
+        "id": "aircraft-2002245-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-silence-24124-of-e-2002245/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2002245, réf. 2002245",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 240 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-mobilboy-silence-320-90-of-e:aircraft-2002340-20260927:2026-10-01",
+      "evidenceId": "aircraft-2002340-20260927",
+      "productId": "aircraft-mobilboy-silence-320-90-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "ff399aba30621cf9edf7849ced8b133ecbf8be4e5bd7de976fdbf0fce7ddd93e",
+      "snapshot": {
+        "id": "aircraft-2002340-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/mobilboy-silence-32090-of-e-2002340/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2002340, réf. 2002340",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Débit aspiré déclaré : 320 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bps-soft-pro:aircraft-2102130-20260927:2026-10-01",
+      "evidenceId": "aircraft-2102130-20260927",
+      "productId": "aircraft-bps-soft-pro",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "6f93826240c045f36a772afec3ea3c460091d99e39a2eba68d51f32073985fe2",
+      "snapshot": {
+        "id": "aircraft-2102130-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bps-soft-pro-2102130/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2102130, réf. 2102130",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
+    },
+    {
+      "id": "corrected:aircraft-bs-c-10-2-pro-vs:aircraft-2403771-20260927:2026-10-01",
+      "evidenceId": "aircraft-2403771-20260927",
+      "productId": "aircraft-bs-c-10-2-pro-vs",
+      "productType": "tool",
+      "occurredAt": "2026-10-01",
+      "kind": "corrected",
+      "summary": "Adresse canonique Stürmer retenue après revue du changement de rubrique ; modèle, référence et champs techniques du relevé recontrôlés à l’identique.",
+      "fingerprint": "ff4f47d9255dfdf0bcbe7379ddae3de1ddf08f729a587d9eb7d0ea20b7cbdc2d",
+      "snapshot": {
+        "id": "aircraft-2403771-20260927",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-10-2-pro-vs-2403771/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403771, réf. 2403771",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-01",
+        "confidence": "A",
+        "notes": "Consommation moyenne publiée : 260 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+      }
     }
   ],
-  "historyVersion": "16c0e15f149944a29cf1cd2103ed8fac5b4a01801cfc2ae9e6eb45541dad9ccc"
+  "historyVersion": "2189270d5f2375dbf95627f0035c5cd97c597080ca124d076b70f3f3364a2d47"
 }

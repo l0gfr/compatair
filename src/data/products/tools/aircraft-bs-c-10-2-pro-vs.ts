@@ -17,7 +17,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-bs-c-10-2-pro-vs.webp",
 		"alt": "Repères techniques Aircraft BS-C 10-2 PRO VS, référence 2403771",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/bs-c-10-2-pro-vs-2403771/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-10-2-pro-vs-2403771/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -103,10 +103,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2403771-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/bs-c-10-2-pro-vs-2403771/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/bs-c-10-2-pro-vs-2403771/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403771, réf. 2403771",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 260 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
 		}

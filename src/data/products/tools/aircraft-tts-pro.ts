@@ -17,7 +17,7 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-tts-pro.webp",
 		"alt": "Repères techniques Aircraft TTS PRO, référence 2403485",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/tts-pro-2403485/",
+		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/tts-pro-2403485/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
@@ -103,10 +103,10 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2403485-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/tts-pro-2403485/",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/tts-pro-2403485/",
 			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403485, réf. 2403485",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 252 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
 		}
