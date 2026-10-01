@@ -10,8 +10,9 @@ const EXPECTED_BUILD_ALLOWLIST = new Set(['esbuild']);
 const DISALLOWED_LOCKED_PACKAGES = new Set(['extract-zip']);
 const EXPECTED_OVERRIDES = new Map([
   ['@puppeteer/browsers', '3.2.0'],
+  ['basic-ftp', '6.2.1'],
   ['brace-expansion', '5.0.12'],
-  ['devalue', '5.9.2'],
+  ['devalue', '5.9.3'],
   ['fast-uri', '3.1.8'],
   ['ip-address', '10.7.1'],
   ['js-yaml@3', '3.15.2'],
