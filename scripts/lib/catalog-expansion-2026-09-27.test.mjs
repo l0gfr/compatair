@@ -12,6 +12,20 @@ import { getToolVerdictSummaries } from '../../src/domain/catalog-insights';
 const read = kind => JSON.parse(readFileSync(new URL(`../../src/data/imports/catalog-${kind}-2026-09-27.json`, import.meta.url)));
 const snapshots = [read('compressors'), read('tools')];
 const expansion = buildCatalogExpansion(...snapshots);
+const relocationLedger = JSON.parse(readFileSync(new URL('../../src/data/imports/source-url-repairs-aircraft-2026-10-01.json', import.meta.url)));
+const relocations = new Map(relocationLedger.repairs.flatMap(repair => repair.references.map(reference => [reference.productId, { repair, reference }])));
+const withReviewedSources = product => {
+ const relocation = relocations.get(product.id);
+ if (!relocation) return product;
+ const updated = structuredClone(product);
+ const { repair, reference } = relocation;
+ const evidence = updated.evidence.find(item => item.id === reference.evidenceId);
+ if (!evidence || evidence.sourceUrl !== repair.oldUrl || evidence.retrievedAt !== snapshots[0].observedAt || updated.image?.sourceUrl !== repair.oldUrl) throw new Error('Relocation does not match the original source observation');
+ evidence.sourceUrl = repair.newUrl;
+ evidence.retrievedAt = repair.verifiedAt;
+ updated.image.sourceUrl = repair.newUrl;
+ return updated;
+};
 const mutate = (kind, brand, patch) => {
  const data = structuredClone(snapshots);
  const row = data[kind].rows.find(r => r.brand === brand);
@@ -27,8 +41,17 @@ describe('700 additional documented manufacturer references', () => {
   expect(expansion.tools.filter(p => p.demandModel === 'per-action')).toHaveLength(63);
  });
  it('reproduces the published products and every critical field from source transcriptions', () => {
-  for (const p of expansion.compressors) expect(compressors.find(x => x.id === p.id)).toEqual(compressorSchema.parse(p));
-  for (const p of expansion.tools) expect(tools.find(x => x.id === p.id)).toEqual({ ...toolProfileSchema.parse(p), category: toolCategoryLabel(p.categoryId) });
+  for (const p of expansion.compressors) expect(compressors.find(x => x.id === p.id)).toEqual(compressorSchema.parse(withReviewedSources(p)));
+  for (const p of expansion.tools) expect(tools.find(x => x.id === p.id)).toEqual({ ...toolProfileSchema.parse(withReviewedSources(p)), category: toolCategoryLabel(p.categoryId) });
+ });
+ it('rejects a relocation that would overwrite an unreviewed source observation', () => {
+  const original = expansion.compressors.find(product => relocations.has(product.id));
+  expect(original).toBeDefined();
+  for (const change of [product => { product.evidence[0].sourceUrl = 'https://example.com/unreviewed'; }, product => { product.evidence[0].retrievedAt = '2026-09-28'; }, product => { product.image.sourceUrl = 'https://example.com/unreviewed'; }]) {
+   const changed = structuredClone(original);
+   change(changed);
+   expect(() => withReviewedSources(changed)).toThrow('Relocation does not match');
+  }
  });
  it('rejects intake promoted to FAD, inferred duty cycle and packaging weight promoted to net mass', () => {
   expect(mutate(0, 'Aircraft', r => { r.fadCurve = [{ pressureBar: 6, litersPerMinute: r.intakeFlowLpm }]; })).toThrow();
