@@ -70,6 +70,11 @@ actualisé depuis le petit manifeste, pour ne pas imposer une modification de
 chaque HTML au seul changement du nombre de références.
 
 Le cache HTML est jetable, borné à 384 Mio et sauvegardé uniquement par `main`.
+La CI des PR restaure ces caches en lecture seule. Ses tests et son build
+s’exécutent dans deux jobs indépendants, limités à 15 et 25 minutes. Le contrôle
+`validate` dépend de leur réussite à tous deux. Les snapshots, l’historique,
+les liens et Lighthouse restent vérifiés après le build, y compris à froid.
+Cette séparation ne produit aucune archive intermédiaire du site.
 Un cache absent ou trop grand produit un build complet. Les budgets de données suivent le nombre de références : les seuils de 260 Kio (export d’exécution gzip) et 140 Kio (recherche gzip) sont les bases à 5 006 références. Le plafond HTML est de 300 Mio plus 64 Kio par référence supplémentaire ; l’artefact courant est ramené de 2 700 à 600 Mio, plus 256 Kio par référence supplémentaire. Les plafonds JavaScript restent fixes. Les contrôles de données,
 de valeur propre, de sources, de sécurité, de liens et Lighthouse restent actifs.
 

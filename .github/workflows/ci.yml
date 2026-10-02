@@ -19,11 +19,37 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  validate:
+  source-tests:
     runs-on: ubuntu-24.04
-    # The complete catalog validation already exceeds 15 minutes on hosted
-    # runners. Keep all gates within a bounded deadline; deployment has its
-    # separate 35-minute allowance for packaging, transfer and live checks.
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          check-latest: false
+
+      - name: Install pnpm
+        run: npm install --global --ignore-scripts pnpm@10.34.4
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify lockfile integrity and install-script policy
+        run: pnpm security:supply-chain
+
+      - name: Check catalog, editorial evidence, contracts, types and tests
+        run: pnpm catalog:check && pnpm audit:editorial && pnpm audit:page-value && pnpm contracts:check && pnpm benchmark:mcp-manifest && pnpm check && pnpm test
+
+  build:
+    runs-on: ubuntu-24.04
+    # Source checks run independently. A cold build must still complete every
+    # snapshot, link and Lighthouse gate without relying on a cache hit.
     timeout-minutes: 25
     steps:
       - name: Checkout
@@ -53,16 +79,24 @@ jobs:
 
       # Read-only reuse of a trusted default-branch cache. This workflow never
       # saves calculation caches, including for fork pull requests.
-      - name: Restore bounded verdict calculations
+      - name: Restore bounded page calculations
         uses: actions/cache/restore@caa296126883cff596d87d8935842f9db880ef25 # v5
         with:
-          path: .astro/compatibility-cache-v1
-          key: compatair-verdict-v1-${{ runner.os }}-${{ steps.node.outputs.node-version }}-${{ hashFiles('src/domain/**', 'src/data/**', 'pnpm-lock.yaml', 'scripts/lib/verdict-cache-config.mjs') }}
+          path: .astro/page-calculations-v1
+          key: compatair-page-calculations-v1-${{ runner.os }}-${{ steps.node.outputs.node-version }}-${{ github.sha }}
           restore-keys: |
-            compatair-verdict-v1-${{ runner.os }}-${{ steps.node.outputs.node-version }}-
+            compatair-page-calculations-v1-${{ runner.os }}-${{ steps.node.outputs.node-version }}-
 
-      - name: Validate source, tests, build and snapshots
-        run: pnpm validate:full
+      - name: Restore incremental static pages
+        uses: actions/cache/restore@caa296126883cff596d87d8935842f9db880ef25 # v5
+        with:
+          path: node_modules/.astro
+          key: compatair-pages-v2-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}
+          restore-keys: |
+            compatair-pages-v2-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
+
+      - name: Build and validate snapshots and runtime budgets
+        run: pnpm build && pnpm data:validate && pnpm benchmark:mcp-startup && pnpm benchmark:publication-signatures
 
       - name: Preserve source versions already published on the PR base
         if: github.event_name == 'pull_request'
@@ -127,3 +161,11 @@ jobs:
           if-no-files-found: error
           retention-days: 2
           compression-level: 9
+
+  validate:
+    needs: [source-tests, build]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 1
+    steps:
+      - name: Confirm all validation gates passed
+        run: echo "Source tests and complete build checks passed."

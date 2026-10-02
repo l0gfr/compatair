@@ -17,6 +17,29 @@ const releaseRoute = readFileSync(new URL('../src/pages/data/release.json.ts', i
 const liveSmoke = readFileSync(new URL('./smoke-live-http.mjs', import.meta.url), 'utf8');
 
 describe('release boundary policy', () => {
+	it('requires both independent CI jobs and preserves every validation gate without PR cache writes', () => {
+		const ci = parseDocument(readFileSync(new URL('../.github/workflows/ci.yml', import.meta.url), 'utf8')).toJS();
+		expect(ci.permissions).toEqual({ contents: 'read' });
+		expect(ci.jobs.validate.needs).toEqual(['source-tests', 'build']);
+		expect(ci.jobs.validate.if).toBeUndefined();
+		for (const [name, job] of Object.entries(ci.jobs) as [string, { 'timeout-minutes': number; 'continue-on-error'?: boolean; steps: Record<string, unknown>[] }][]) {
+			expect(job['timeout-minutes'], name).toBeGreaterThan(0);
+			expect(job['timeout-minutes'], name).toBeLessThanOrEqual(25);
+			expect(job['continue-on-error'], name).toBeUndefined();
+			for (const step of job.steps) {
+				expect(step['continue-on-error']).toBeUndefined();
+				expect(String(step.uses ?? '')).not.toMatch(/^actions\/cache(?:\/save)?@/);
+			}
+		}
+		const commands = (job: { steps: { run?: string }[] }) => job.steps.map((step) => step.run ?? '').join('\n');
+		for (const gate of ['catalog:check', 'audit:editorial', 'audit:page-value', 'contracts:check', 'benchmark:mcp-manifest', 'check', 'test']) expect(commands(ci.jobs['source-tests'])).toContain(`pnpm ${gate}`);
+		for (const gate of ['build', 'data:validate', 'benchmark:mcp-startup', 'benchmark:publication-signatures', 'security:audit', 'lighthouse', 'lighthouse:summary']) expect(commands(ci.jobs.build)).toContain(`pnpm ${gate}`);
+		expect(commands(ci.jobs.build)).toContain('node scripts/audit-dist.mjs');
+		expect(commands(ci.jobs.build)).toContain('node scripts/assert-evidence-history-extension.mjs');
+		expect(commands(ci.jobs.build)).toContain('node scripts/assert-observatory-history-extension.mjs');
+		const preview = ci.jobs.build.steps.find((step: { name: string }) => step.name === 'Upload requested site preview');
+		expect(preview.if).toBe("github.event_name == 'workflow_dispatch' && inputs.upload_preview");
+	});
 	it.each([
 		{ smoke: 1, seo: 0, status: 42, calls: ['smoke-live-http.mjs'] },
 		{ smoke: 0, seo: 1, status: 42, calls: ['smoke-live-http.mjs', 'verify-live-seo.mjs'] },
