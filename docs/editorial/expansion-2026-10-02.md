@@ -22,7 +22,7 @@ Les 50 guides traitent de problèmes distincts : accès à une cavité, fixation
 
 76 références d’outils reçoivent un guide spécifique dans les pages d’usage. Dix guides existants ajoutent un lien contextuel vers un article du lot. Les fiches produit retrouvent automatiquement les articles qui citent leur URL exacte. Le registre `guides-2026-10-02.sources.json` conserve la relecture et le maillage de chaque guide.
 
-Après ajout : 2 619 configurations de compresseurs, 11 087 outils et 486 guides. Les nouvelles pages restent en `noindex,follow`, hors sitemap, dans l’attente d’une admission éditoriale. Les plafonds quotidiens Europe/Paris de 2 guides, 2 compresseurs et 6 outils ne changent pas. Aucun résultat d’indexation Google ni rang de marché n’est revendiqué.
+Après ajout : 2 619 configurations de compresseurs, 11 087 outils et 486 guides. Chaque nouvelle page est soumise à une admission éditoriale. Les pages sans admission restent en `noindex,follow`, hors sitemap ; un lot technique ajouté au catalogue ne devient pas un lot d’indexation en masse. Les plafonds quotidiens Europe/Paris de 2 guides, 2 compresseurs et 6 outils ne changent pas. Aucun résultat d’indexation Google ni rang de marché n’est revendiqué.
 
 ## Poids et livraison
 
