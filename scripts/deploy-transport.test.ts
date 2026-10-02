@@ -50,6 +50,7 @@ process.exit(createHash('sha256').update(fs.readFileSync(file)).digest('hex') ==
 		cwd: root, encoding: 'utf8', timeout: 10_000,
 		env: { ...process.env, PATH: `${join(root, 'bin')}:${process.env.PATH}`, TEST_ROOT: root,
 			DEPLOY_HOST: 'deploy.invalid', DEPLOY_PORT: '2222', DEPLOY_USER: 'deploy-test',
+			COMPATAIR_VALIDATION_STARTED_AT: String(Math.floor(Date.now() / 1000)),
 			DEPLOY_KNOCK_PORTS: '10001 10002 10003', DEPLOY_PATH: '/var/www/html/compatair', GITHUB_SHA: sha, ...extra },
 	});
 	const attempts = () => existsSync(join(root, 'attempts')) ? readFileSync(join(root, 'attempts'), 'utf8').trim().split('\n') : [];
@@ -97,6 +98,24 @@ describe('single-session production transfer', () => {
 		rmSync(join(root, `compatair-${sha}.tar.xz`));
 		expect(run().status).not.toBe(0);
 		expect(attempts()).toEqual([]);
+	});
+
+	it('refuses an absent validation timestamp before knocking or connecting', () => {
+		const { root, run, attempts } = fixture();
+		const result = run({ COMPATAIR_VALIDATION_STARTED_AT: '' });
+		expect(result.status).toBe(2);
+		expect(result.stderr).toContain('transport refused');
+		expect(attempts()).toEqual([]);
+		expect(existsSync(join(root, 'activated'))).toBe(false);
+	});
+
+	it('refuses transport when validation consumed its activation reserve', () => {
+		const { root, run, attempts } = fixture();
+		const result = run({ COMPATAIR_VALIDATION_STARTED_AT: String(Math.floor(Date.now() / 1000) - 2100) });
+		expect(result.status).toBe(1);
+		expect(result.stderr).toContain('transport requires 600 seconds');
+		expect(attempts()).toEqual([]);
+		expect(existsSync(join(root, 'activated'))).toBe(false);
 	});
 
 	it('refuses command injection in the deploy identity before any network access', () => {
