@@ -5,6 +5,41 @@ const factors = { 'L/min': 1, 'L/s': 60, 'm3/min': 1000, cfm: 28.316846592, 'L/c
 const positive = value => { if (!Number.isFinite(value) || value <= 0) throw new Error('Valeur technique positive requise'); return value; };
 const pressureInBar = (value, unit) => unit === 'psi' ? rounded(value * .0689475729) : unit === 'MPa' ? rounded(value * 10) : unit === 'bar' ? value : NaN;
 
+export function documentedConnectionFacts(row, source) {
+ const facts = { specifications: [], limitations: [] };
+ if (!source.contentType?.startsWith('text/html')) return facts;
+ const cells = row.sourceTechnicalCells ?? [];
+ const inlet = cells.filter(([label]) => /^airinlet(?:nptbsp|nptin|in)?$/.test(label.toLowerCase().replace(/[^a-z]/g, '')));
+ const hoses = cells.filter(([label]) => /hose/i.test(label));
+ const nominal = /^(?:\d+(?:\/\d+)?|[¼½¾])(?:\s*NPT|\s*BSP|[- ]?in[.]?|["”˝])?$/i;
+ for (const [label, value] of [...inlet, ...hoses]) {
+  if (!row.rawLine.includes(`${label}: ${value}`)) throw new Error('Cellule de raccordement absente de la ligne source');
+  facts.specifications.push({ label: `Champ fabricant : ${label}`, value });
+ }
+ const inletValue = inlet[0]?.[1].trim();
+ const inletFraction = inletValue?.match(/^(\d+)\/(\d+)/);
+ const validInlet = nominal.test(inletValue ?? '') && (inletFraction ? Number(inletFraction[1]) > 0 && Number(inletFraction[2]) > 0 : !/^0(?:\D|$)/.test(inletValue));
+ if (inlet.length === 1 && validInlet) facts.connectorSize = `${inlet[0][1]} (${inlet[0][0]})`;
+ else if (inlet.length) facts.limitations.push('L’entrée d’air publiée ne fournit pas une dimension de raccordement interprétable sans clarification fabricant. Le libellé original reste visible.');
+ const diameters = [];
+ for (const [label, value] of hoses) {
+  const normalized = label.toLowerCase().replace(/[^a-z]/g, '');
+  // "Hose size" alone does not establish an inner diameter.
+  if (!/hose.*(?:id|innerdiameter)/.test(normalized)) continue;
+  let diameter;
+  if (/mm$/.test(normalized) && /^\d+(?:\.\d+)?$/.test(value.trim())) diameter = Number(value);
+  else if (/in$/.test(normalized)) {
+   const match = value.trim().match(/^(\d+(?:\.\d+)?)(?:\/(\d+))?(?:[- ]?in[.]?|["”˝])?$/i);
+   if (match && (match[2] === undefined || Number(match[2]) > 0)) diameter = rounded(Number(match[1]) / (match[2] === undefined ? 1 : Number(match[2])) * 25.4);
+  }
+  if (Number.isFinite(diameter) && diameter > 0 && diameter <= 100) diameters.push(diameter);
+  else facts.limitations.push(`Le diamètre intérieur publié « ${value} » (${label}) n’est pas converti en une valeur de calcul.`);
+ }
+ if (diameters.length && diameters.every(value => value === diameters[0])) facts.recommendedHose = { innerDiameterMm: diameters[0] };
+ else if (diameters.length) facts.limitations.push('Les diamètres intérieurs publiés diffèrent après conversion ; aucune valeur unique n’est retenue sans clarification.');
+ return facts;
+}
+
 export function buildDocumentedToolsOctober2(snapshot) {
  if (snapshot.schemaVersion !== 1 || snapshot.batchId !== 'documented-tools-2026-10-02' || snapshot.reviewedAt !== '2026-10-02' || snapshot.tools.length !== snapshot.toolCount || snapshot.toolCount < 1 || snapshot.toolCount > 2000) throw new Error('Lot documentaire non reconnu');
  const sources = new Map(snapshot.sources.map(source => [source.id, source]));
@@ -71,6 +106,7 @@ export function buildDocumentedToolsOctober2(snapshot) {
    return { ...primary, id: `october2-tools-${slug(secondary.id)}-p${ref.page}`, sourceUrl: secondary.url + (secondary.contentType?.includes('pdf') ? `#page=${ref.page}` : ''), sourceLabel: secondary.sourceLabel + (secondary.contentType?.includes('pdf') ? `, page PDF ${ref.page}` : ''), sourceType: secondary.contentType?.includes('pdf') ? 'manual' : 'manufacturer', retrievedAt: secondary.observedAt.slice(0, 10), notes: `SHA-256 de la réponse source : ${secondary.sha256}. Document complémentaire de la référence exacte, sans essai CompatAir.` };
   });
   const demandEvidenceIds = [primary.id, ...supplementary.map(evidence => evidence.id)];
+  const connection = documentedConnectionFacts(row, source);
   const id = slug(`${row.categoryId}-${row.brand}-${row.model}${row.mpn !== row.model ? `-${row.mpn}` : ''}`), label = `${row.brand} ${row.model}${row.mpn !== row.model ? ` (réf. ${row.mpn})` : ''}`;
   const knownPressure = measured ? row.pressureBar : row.knownOperatingPressureBar;
   const range = operatingRange ?? (knownPressure ? { min: positive(knownPressure), typical: knownPressure, max: knownPressure } : {});
@@ -79,7 +115,7 @@ export function buildDocumentedToolsOctober2(snapshot) {
   const demand = missing ? { demandModel: 'variable-volume', workingPressureBar: range, demandExplanation: explanation } : row.flowBasis === 'per-action' ? { demandModel: 'per-action', workingPressureBar: range, airPerActionLiters: flow, actionLabel: 'cycle de pose' } : { demandModel: 'fixed-flow', workingPressureBar: range, airflowLpm: { min: flow, typical: flow, max: flow }, ...(!['load', 'maximum'].includes(row.flowBasis) ? { airflowBasis: row.flowBasis } : {}) };
   const regime = { load: 'en charge', maximum: 'maximale', average: 'moyenne', unqualified: 'de régime non précisé', 'free-speed': 'à vide', 'per-action': 'par cycle' }[row.flowBasis];
   const summary = missing ? explanation : row.flowBasis === 'per-action' ? `Volume déclaré : ${format(flow)} L par cycle à ${format(row.pressureBar)} bar ; la cadence doit être renseignée.` : `Consommation ${regime} : ${format(flow)} L/min à ${format(row.pressureBar)} bar.`;
-  const specifications = [...row.details.map(field => ({ ...field, evidenceIds: [primary.id] })), { label: 'Portée de la pression dans la source', value: row.pressureQuote, evidenceIds: demandEvidenceIds }, ...(flow !== null ? [{ label: missing ? `Consommation ${regime}, hors calcul` : 'Consommation dans son unité originale', value: `${row.flowOriginal} ${row.flowUnit}`, evidenceIds: demandEvidenceIds }] : [])];
-  return { id, slug: id, categoryId: row.categoryId, category: row.categoryId, label, brand: row.brand, model: row.model, mpn: row.mpn, ...demand, confidence: 'B', image: { src: `/images/products/${id}.webp`, alt: `Repères techniques : ${label}`, sourceUrl: source.url, sourceLabel: 'Carte technique CompatAir, données déclarées par le fabricant' }, variant: { familyId: slug(`${row.brand}-${row.model}`), label: `Référence ${row.mpn}`, distinguishingAttributes: { reference: row.mpn, ...Object.fromEntries(row.details.slice(0, 2).map(field => [field.label, field.value])) } }, editorial: { overview: `${label}. ${summary} ${row.details.slice(0, 2).map(field => `${field.label} : ${field.value}.`).join(' ')}`, verifiedFacts: row.details.map(field => `${field.label} : ${field.value}.`), limitations: [missing ? explanation : row.flowBasis === 'maximum' ? 'La consommation maximale est déclarée dans les conventions du fabricant ; les exceptions explicites du modèle restent prioritaires.' : row.flowBasis === 'load' ? 'Le débit en charge est associé au point de pression documenté ; aucun facteur de marche supposé ne le réduit.' : row.flowBasis === 'per-action' ? 'Une cadence déclarée permet le calcul moyen ; la pointe instantanée de déclenchement reste distincte.' : 'Une consommation moyenne, à vide ou de régime non précisé ne confirme pas le débit maximal en charge ; le verdict reste insufficient_data.', ...(row.pressureScope === 'power-and-speed' ? ['La pression de 6 bar est donnée pour la puissance et la vitesse ; son application à la consommation n’est pas supposée.'] : []), ...(row.sourceLimitations ?? []), 'Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée.'] }, specifications, evidence: [primary, ...supplementary], fieldSources: { mpn: [primary.id], workingPressureBar: demandEvidenceIds, ...(missing ? { demandExplanation: [primary.id] } : row.flowBasis === 'per-action' ? { airPerActionLiters: demandEvidenceIds, actionLabel: demandEvidenceIds } : { airflowLpm: demandEvidenceIds, ...(demand.airflowBasis ? { airflowBasis: [primary.id] } : {}) }) }, notes: [summary] };
+  const specifications = [...row.details.map(field => ({ ...field, evidenceIds: [primary.id] })), ...connection.specifications.map(field => ({ ...field, evidenceIds: [primary.id] })), { label: 'Portée de la pression dans la source', value: row.pressureQuote, evidenceIds: demandEvidenceIds }, ...(flow !== null ? [{ label: missing ? `Consommation ${regime}, hors calcul` : 'Consommation dans son unité originale', value: `${row.flowOriginal} ${row.flowUnit}`, evidenceIds: demandEvidenceIds }] : [])];
+  return { id, slug: id, categoryId: row.categoryId, category: row.categoryId, label, brand: row.brand, model: row.model, mpn: row.mpn, ...demand, ...(connection.connectorSize ? { connectorSize: connection.connectorSize } : {}), ...(connection.recommendedHose ? { recommendedHose: connection.recommendedHose } : {}), confidence: 'B', image: { src: `/images/products/${id}.webp`, alt: `Repères techniques : ${label}`, sourceUrl: source.url, sourceLabel: 'Carte technique CompatAir, données déclarées par le fabricant' }, variant: { familyId: slug(`${row.brand}-${row.model}`), label: `Référence ${row.mpn}`, distinguishingAttributes: { reference: row.mpn, ...Object.fromEntries(row.details.slice(0, 2).map(field => [field.label, field.value])) } }, editorial: { overview: `${label}. ${summary} ${row.details.slice(0, 2).map(field => `${field.label} : ${field.value}.`).join(' ')}`, verifiedFacts: row.details.map(field => `${field.label} : ${field.value}.`), limitations: [missing ? explanation : row.flowBasis === 'maximum' ? 'La consommation maximale est déclarée dans les conventions du fabricant ; les exceptions explicites du modèle restent prioritaires.' : row.flowBasis === 'load' ? 'Le débit en charge est associé au point de pression documenté ; aucun facteur de marche supposé ne le réduit.' : row.flowBasis === 'per-action' ? 'Une cadence déclarée permet le calcul moyen ; la pointe instantanée de déclenchement reste distincte.' : 'Une consommation moyenne, à vide ou de régime non précisé ne confirme pas le débit maximal en charge ; le verdict reste insufficient_data.', ...(row.pressureScope === 'power-and-speed' ? ['La pression de 6 bar est donnée pour la puissance et la vitesse ; son application à la consommation n’est pas supposée.'] : []), ...(row.sourceLimitations ?? []), ...connection.limitations, 'Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée.'] }, specifications, evidence: [primary, ...supplementary], fieldSources: { ...(connection.connectorSize ? { connectorSize: [primary.id] } : {}), ...(connection.recommendedHose ? { recommendedHose: [primary.id] } : {}), mpn: [primary.id], workingPressureBar: demandEvidenceIds, ...(missing ? { demandExplanation: [primary.id] } : row.flowBasis === 'per-action' ? { airPerActionLiters: demandEvidenceIds, actionLabel: demandEvidenceIds } : { airflowLpm: demandEvidenceIds, ...(demand.airflowBasis ? { airflowBasis: [primary.id] } : {}) }) }, notes: [summary] };
  });
 }

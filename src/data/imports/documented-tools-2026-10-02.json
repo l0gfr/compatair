@@ -69603,7 +69603,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -69629,9 +69629,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431027877",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -69646,7 +69646,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -69672,9 +69672,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431027878",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -69689,7 +69689,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -69715,9 +69715,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431027879",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -69732,7 +69732,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -69758,9 +69758,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431026917",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -69775,7 +69775,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -69801,9 +69801,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431026918",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -69818,7 +69818,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -69844,9 +69844,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431026919",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -69861,7 +69861,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -69887,9 +69887,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431031122",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -69904,7 +69904,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -69930,9 +69930,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431031124",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -69947,7 +69947,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -69973,9 +69973,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431031126",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -69990,7 +69990,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -70016,9 +70016,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431025589",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -70033,7 +70033,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -70059,9 +70059,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431025580",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -70076,7 +70076,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -70102,9 +70102,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431025562",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -70119,7 +70119,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -70145,9 +70145,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431031132",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -70162,7 +70162,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -70188,9 +70188,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431031134",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -70205,7 +70205,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -70231,9 +70231,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431031136",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -158133,7 +158133,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -158159,9 +158159,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431027877",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -158176,7 +158176,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -158202,9 +158202,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431027878",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -158219,7 +158219,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -158245,9 +158245,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431027879",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -158262,7 +158262,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -158288,9 +158288,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431026917",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -158305,7 +158305,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -158331,9 +158331,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431026918",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -158348,7 +158348,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -158374,9 +158374,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431026919",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -158391,7 +158391,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -158417,9 +158417,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431031122",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -158434,7 +158434,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -158460,9 +158460,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431031124",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -158477,7 +158477,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -158503,9 +158503,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431031126",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -158520,7 +158520,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -158546,9 +158546,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431025589",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -158563,7 +158563,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -158589,9 +158589,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431025580",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -158606,7 +158606,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -158632,9 +158632,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431025562",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -158649,7 +158649,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -158675,9 +158675,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431031132",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -158692,7 +158692,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -158718,9 +158718,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431031134",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",
@@ -158735,7 +158735,7 @@
       "flowUnit": "L/s",
       "flowBasis": "maximum",
       "flowQuote": "Air consumption, maximum declared by the catalog introductory note, page PDF 4.",
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureBar": null,
       "pressureQuote": "La plage de couple est obtenue entre 3 bar et 6 bar ; aucune pression du point de consommation n’est indiquée.",
       "details": [
@@ -158761,9 +158761,9 @@
         }
       ],
       "pdfRowId": "atlas-industrial-p12-8431031136",
-      "pressureOriginal": 6,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 6
+      "sourceLimitations": [
+        "Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche."
+      ]
     },
     {
       "brand": "Atlas Copco",

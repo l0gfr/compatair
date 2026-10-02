@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { buildDocumentedToolsOctober2 } from './documented-tools-2026-10-02.mjs';
+import { buildDocumentedToolsOctober2, documentedConnectionFacts } from './documented-tools-2026-10-02.mjs';
 import { toolProfileSchema } from '../../src/domain/catalog';
 import { evaluateCompatibility } from '../../server/air-compatibility.mjs';
 
@@ -10,6 +10,21 @@ const byMpn = (brand, mpn) => batch.find(product => product.brand === brand && p
 const ample = { id: 'fixture-compressor', tankLiters: 500, maxPressureBar: 20, fadCurve: [{ pressureBar: 6, litersPerMinute: 50000 }, { pressureBar: 20, litersPerMinute: 40000 }], dutyCycle: 1, oilType: 'oil', confidence: 'B' };
 
 describe('documented tool references, October 2', () => {
+	it('retains source connection cells without treating an unspecified hose size as its bore', () => {
+		const product = byMpn('Universal Tool', 'UT8960-1');
+		expect(product.connectorSize).toBe('1/4-in. (Air Inlet (NPT/BSP))');
+		expect(product.recommendedHose).toEqual({ innerDiameterMm: 9.525 });
+		expect(product.fieldSources.recommendedHose).toEqual(product.fieldSources.mpn);
+		const source = { contentType: 'text/html' };
+		const row = cells => ({ sourceTechnicalCells: cells, rawLine: cells.map(([k,v]) => `${k}: ${v}`).join(' ; ') });
+		expect(documentedConnectionFacts(row([['Rec. Hose Size (in)', '3/8-in.']]), source).recommendedHose).toBeUndefined();
+		for (const value of ['3/4?', '8-Mar', '1/0', '999/1']) expect(documentedConnectionFacts(row([['Hose ID (in.)', value]]), source).recommendedHose).toBeUndefined();
+		expect(documentedConnectionFacts(row([['Air Inlet (NPT/BSP)', '4-Jan']]), source).connectorSize).toBeUndefined();
+		expect(documentedConnectionFacts(row([['Air Inlet (NPT/BSP)', '1/0-in.']]), source).connectorSize).toBeUndefined();
+		expect(documentedConnectionFacts(row([['Hose ID (in.)', '1-in.']]), source).recommendedHose).toEqual({ innerDiameterMm: 25.4 });
+		expect(documentedConnectionFacts(row([['Hose ID (in.)','3/4-in.'],['Hose ID (mm)','19']]), source).recommendedHose).toBeUndefined();
+		expect(() => documentedConnectionFacts({ sourceTechnicalCells: [['Hose ID (in.)','3/8-in.']], rawLine: '' }, source)).toThrow('Cellule de raccordement absente');
+	});
 	it('withholds the contradictory 90 psi and 60 bar pressure instead of correcting the source', () => {
 		const product = byMpn('Universal Tool', 'UT8960-1');
 		expect(product).toMatchObject({ demandModel: 'variable-volume', workingPressureBar: {} });
@@ -72,6 +87,9 @@ describe('documented tool references, October 2', () => {
   }
  });
  it('does not attach a power/speed pressure note to a loaded-consumption measurement', () => {
+  const torqueRange = byMpn('Atlas Copco', '8431026918');
+  expect(torqueRange).toMatchObject({ demandModel: 'variable-volume', workingPressureBar: {} });
+  expect(torqueRange.editorial.limitations.join(' ')).toContain('plage de couple');
   const long = byMpn('Mannesmann DEMAG', '60018-44-5');
   expect(long).toMatchObject({ model: 'GL 16000 H', demandModel: 'variable-volume', workingPressureBar: { typical: 6 } });
   expect(long.specifications.find(field => field.label === 'Consommation en charge, hors calcul').value).toBe('20 L/s');
@@ -124,7 +142,7 @@ describe('documented tool references, October 2', () => {
   expect(turbine).toMatchObject({ demandModel: 'fixed-flow', airflowLpm: { typical: 1919.882 }, workingPressureBar: { typical: 6.3 } });
   expect(turbine.fieldSources.airflowLpm).toHaveLength(2);
   expect(turbine.evidence[1].sourceUrl).toContain('#page=4');
-  expect(byMpn('Atlas Copco', '8431027877')).toMatchObject({ demandModel: 'variable-volume', workingPressureBar: { typical: 6 } });
+  expect(byMpn('Atlas Copco', '8431027877')).toMatchObject({ demandModel: 'variable-volume', workingPressureBar: {} });
   expect(evaluateCompatibility(ample, byMpn('Atlas Copco', '8431027877')).verdict).toBe('insufficient_data');
   expect(byMpn('Atlas Copco', '8423070106')).toBeUndefined();
   const copy = structuredClone(snapshot);

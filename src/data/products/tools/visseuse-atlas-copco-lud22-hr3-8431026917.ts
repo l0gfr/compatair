@@ -8,11 +8,7 @@ const product = {
 	"model": "LUD22 HR3",
 	"mpn": "8431026917",
 	"demandModel": "variable-volume",
-	"workingPressureBar": {
-		"min": 6,
-		"typical": 6,
-		"max": 6
-	},
+	"workingPressureBar": {},
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
@@ -41,6 +37,7 @@ const product = {
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+			"Les 3 à 6 bar du tableau définissent l’obtention de la plage de couple. Cette note ne devient pas une pression nominale ni une borne d’alimentation de la fiche.",
 			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
 		]
 	},

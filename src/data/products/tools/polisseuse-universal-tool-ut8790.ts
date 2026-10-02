@@ -14,6 +14,7 @@ const product = {
 		"max": 6.2
 	},
 	"demandExplanation": "Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
+	"connectorSize": "1/4\" (Air Inlet (NPT/BSP))",
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/polisseuse-universal-tool-ut8790.webp",
@@ -81,6 +82,20 @@ const product = {
 			]
 		},
 		{
+			"label": "Champ fabricant : Air Inlet (NPT/BSP)",
+			"value": "1/4\"",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-363-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Rec Hose (in.)",
+			"value": "3/8-in.",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-363-p1"
+			]
+		},
+		{
 			"label": "Portée de la pression dans la source",
 			"value": "Rec. Pressure: 90 psi - 6.2 bar",
 			"evidenceIds": [
@@ -101,6 +116,9 @@ const product = {
 		}
 	],
 	"fieldSources": {
+		"connectorSize": [
+			"october2-tools-ctg-pdp-363-p1"
+		],
 		"mpn": [
 			"october2-tools-ctg-pdp-363-p1"
 		],

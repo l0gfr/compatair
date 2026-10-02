@@ -10,6 +10,7 @@ const product = {
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"connectorSize": "1/4-in. (Air Inlet (NPT/BSP))",
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/tronconneuse-aircat-6520.webp",
@@ -69,6 +70,20 @@ const product = {
 			]
 		},
 		{
+			"label": "Champ fabricant : Air Inlet (NPT/BSP)",
+			"value": "1/4-in.",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-32-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Rec. Hose Size (in.)",
+			"value": "3/8-in.",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-32-p1"
+			]
+		},
+		{
 			"label": "Portée de la pression dans la source",
 			"value": "Pression de mesure de la consommation non établie dans la fiche.",
 			"evidenceIds": [
@@ -96,6 +111,9 @@ const product = {
 		}
 	],
 	"fieldSources": {
+		"connectorSize": [
+			"october2-tools-ctg-pdp-32-p1"
+		],
 		"mpn": [
 			"october2-tools-ctg-pdp-32-p1"
 		],

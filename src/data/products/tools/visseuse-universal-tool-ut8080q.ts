@@ -81,6 +81,13 @@ const product = {
 			]
 		},
 		{
+			"label": "Champ fabricant : Rec. Hose Size (in)",
+			"value": "3/8-in.",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-270-p1"
+			]
+		},
+		{
 			"label": "Portée de la pression dans la source",
 			"value": "Rec. Air Pressure: 90 psi-6.2 bar",
 			"evidenceIds": [

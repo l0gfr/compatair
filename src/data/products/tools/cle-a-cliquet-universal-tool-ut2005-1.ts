@@ -10,6 +10,7 @@ const product = {
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
 	"demandExplanation": "Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
+	"connectorSize": "1/4-in. (Air Inlet  (NPT / BSP))",
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/cle-a-cliquet-universal-tool-ut2005-1.webp",
@@ -69,6 +70,13 @@ const product = {
 			]
 		},
 		{
+			"label": "Champ fabricant : Air Inlet  (NPT / BSP)",
+			"value": "1/4-in.",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-208-p1"
+			]
+		},
+		{
 			"label": "Portée de la pression dans la source",
 			"value": "Pression de mesure de la consommation non établie dans la fiche.",
 			"evidenceIds": [
@@ -89,6 +97,9 @@ const product = {
 		}
 	],
 	"fieldSources": {
+		"connectorSize": [
+			"october2-tools-ctg-pdp-208-p1"
+		],
 		"mpn": [
 			"october2-tools-ctg-pdp-208-p1"
 		],

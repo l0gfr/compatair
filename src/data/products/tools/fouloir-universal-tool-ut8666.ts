@@ -10,6 +10,10 @@ const product = {
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"connectorSize": "3/8\" (Air Inlet (NPT/BSP))",
+	"recommendedHose": {
+		"innerDiameterMm": 12.7
+	},
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/fouloir-universal-tool-ut8666.webp",
@@ -77,6 +81,20 @@ const product = {
 			]
 		},
 		{
+			"label": "Champ fabricant : Air Inlet (NPT/BSP)",
+			"value": "3/8\"",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-278-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Hose ID (in.)",
+			"value": "1/2-in.",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-278-p1"
+			]
+		},
+		{
 			"label": "Portée de la pression dans la source",
 			"value": "Pression de mesure de la consommation non établie dans la fiche.",
 			"evidenceIds": [
@@ -104,6 +122,12 @@ const product = {
 		}
 	],
 	"fieldSources": {
+		"connectorSize": [
+			"october2-tools-ctg-pdp-278-p1"
+		],
+		"recommendedHose": [
+			"october2-tools-ctg-pdp-278-p1"
+		],
 		"mpn": [
 			"october2-tools-ctg-pdp-278-p1"
 		],

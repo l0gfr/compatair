@@ -69,6 +69,13 @@ const product = {
 			]
 		},
 		{
+			"label": "Champ fabricant : Hose Size",
+			"value": "1/2-in.",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-78-p1"
+			]
+		},
+		{
 			"label": "Portée de la pression dans la source",
 			"value": "Pression de mesure de la consommation non établie dans la fiche.",
 			"evidenceIds": [

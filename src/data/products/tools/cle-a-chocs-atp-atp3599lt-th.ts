@@ -37,6 +37,7 @@ const product = {
 		],
 		"limitations": [
 			"Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
+			"L’entrée d’air publiée ne fournit pas une dimension de raccordement interprétable sans clarification fabricant. Le libellé original reste visible.",
 			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
 		]
 	},
@@ -72,6 +73,13 @@ const product = {
 		{
 			"label": "Type de retenue",
 			"value": "Through Hole",
+			"evidenceIds": [
+				"october2-tools-ctg-extra-pdp-134-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Air Inlet NPT (in)",
+			"value": "1-1/4 NPT 1-1/2 (38)",
 			"evidenceIds": [
 				"october2-tools-ctg-extra-pdp-134-p1"
 			]

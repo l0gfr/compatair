@@ -34,6 +34,7 @@ const product = {
 		],
 		"limitations": [
 			"Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
+			"Le diamètre intérieur publié « 3/4˝ (19.05) » (Hose ID in (mm)) n’est pas converti en une valeur de calcul.",
 			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
 		]
 	},
@@ -48,6 +49,13 @@ const product = {
 		{
 			"label": "Retenue de douille",
 			"value": "Through Hole Ret Ring",
+			"evidenceIds": [
+				"october2-tools-ctg-extra-pdp-116-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Hose ID in (mm)",
+			"value": "3/4˝ (19.05)",
 			"evidenceIds": [
 				"october2-tools-ctg-extra-pdp-116-p1"
 			]

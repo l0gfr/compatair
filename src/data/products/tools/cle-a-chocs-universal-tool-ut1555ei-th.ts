@@ -10,6 +10,7 @@ const product = {
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
 	"demandExplanation": "Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
+	"connectorSize": "1/2-in. (Air Inlet NPT/BSP)",
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/cle-a-chocs-universal-tool-ut1555ei-th.webp",
@@ -36,6 +37,7 @@ const product = {
 		],
 		"limitations": [
 			"Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
+			"Les diamètres intérieurs publiés diffèrent après conversion ; aucune valeur unique n’est retenue sans clarification.",
 			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
 		]
 	},
@@ -69,6 +71,27 @@ const product = {
 			]
 		},
 		{
+			"label": "Champ fabricant : Air Inlet NPT/BSP",
+			"value": "1/2-in.",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-3-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Hose ID (in.)",
+			"value": "3/4-in.",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-3-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Hose ID (mm)",
+			"value": "19",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-3-p1"
+			]
+		},
+		{
 			"label": "Portée de la pression dans la source",
 			"value": "Pression de mesure de la consommation non établie dans la fiche.",
 			"evidenceIds": [
@@ -89,6 +112,9 @@ const product = {
 		}
 	],
 	"fieldSources": {
+		"connectorSize": [
+			"october2-tools-ctg-pdp-3-p1"
+		],
 		"mpn": [
 			"october2-tools-ctg-pdp-3-p1"
 		],

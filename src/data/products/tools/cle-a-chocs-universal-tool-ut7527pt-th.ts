@@ -10,6 +10,10 @@ const product = {
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
 	"demandExplanation": "Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
+	"connectorSize": "3/8-in. (Air Inlet NPT/BSP)",
+	"recommendedHose": {
+		"innerDiameterMm": 19
+	},
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/cle-a-chocs-universal-tool-ut7527pt-th.webp",
@@ -35,6 +39,7 @@ const product = {
 		],
 		"limitations": [
 			"Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
+			"Le diamètre intérieur publié « 3/4? » (Hose ID (in.)) n’est pas converti en une valeur de calcul.",
 			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
 		]
 	},
@@ -61,6 +66,27 @@ const product = {
 			]
 		},
 		{
+			"label": "Champ fabricant : Air Inlet NPT/BSP",
+			"value": "3/8-in.",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-79-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Hose ID (in.)",
+			"value": "3/4?",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-79-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Hose ID (mm)",
+			"value": "19",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-79-p1"
+			]
+		},
+		{
 			"label": "Portée de la pression dans la source",
 			"value": "Pression de mesure de la consommation non établie dans la fiche.",
 			"evidenceIds": [
@@ -81,6 +107,12 @@ const product = {
 		}
 	],
 	"fieldSources": {
+		"connectorSize": [
+			"october2-tools-ctg-pdp-79-p1"
+		],
+		"recommendedHose": [
+			"october2-tools-ctg-pdp-79-p1"
+		],
 		"mpn": [
 			"october2-tools-ctg-pdp-79-p1"
 		],

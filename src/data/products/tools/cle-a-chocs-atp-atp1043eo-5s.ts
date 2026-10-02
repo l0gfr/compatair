@@ -10,6 +10,7 @@ const product = {
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
 	"demandExplanation": "Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
+	"connectorSize": "1/2 NPT (Air Inlet NPT (in))",
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/cle-a-chocs-atp-atp1043eo-5s.webp",
@@ -38,6 +39,7 @@ const product = {
 		"limitations": [
 			"Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
 			"Le titre et le tableau fabricant divergent sur la commande intérieure/extérieure de la poignée. Faire confirmer la configuration exacte avant commande ; aucune correction supposée.",
+			"Le diamètre intérieur publié « 3/4 (19) » (Hose ID in (mm)) n’est pas converti en une valeur de calcul.",
 			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
 		]
 	},
@@ -78,6 +80,20 @@ const product = {
 			]
 		},
 		{
+			"label": "Champ fabricant : Air Inlet NPT (in)",
+			"value": "1/2 NPT",
+			"evidenceIds": [
+				"october2-tools-ctg-extra-pdp-22-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Hose ID in (mm)",
+			"value": "3/4 (19)",
+			"evidenceIds": [
+				"october2-tools-ctg-extra-pdp-22-p1"
+			]
+		},
+		{
 			"label": "Portée de la pression dans la source",
 			"value": "Pression de mesure de la consommation non établie dans la fiche.",
 			"evidenceIds": [
@@ -98,6 +114,9 @@ const product = {
 		}
 	],
 	"fieldSources": {
+		"connectorSize": [
+			"october2-tools-ctg-extra-pdp-22-p1"
+		],
 		"mpn": [
 			"october2-tools-ctg-extra-pdp-22-p1"
 		],

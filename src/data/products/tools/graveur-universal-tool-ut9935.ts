@@ -14,6 +14,7 @@ const product = {
 		"max": 6.2
 	},
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"connectorSize": "1/4-in. (Air Inlet  (NPT / BSP))",
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/graveur-universal-tool-ut9935.webp",
@@ -74,6 +75,20 @@ const product = {
 			]
 		},
 		{
+			"label": "Champ fabricant : Air Inlet  (NPT / BSP)",
+			"value": "1/4-in.",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-98-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Rec. Hose Size (in)",
+			"value": "3/8-in.",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-98-p1"
+			]
+		},
+		{
 			"label": "Portée de la pression dans la source",
 			"value": "Recommended air pressure: 90 psi -6.2 bar",
 			"evidenceIds": [
@@ -101,6 +116,9 @@ const product = {
 		}
 	],
 	"fieldSources": {
+		"connectorSize": [
+			"october2-tools-ctg-pdp-98-p1"
+		],
 		"mpn": [
 			"october2-tools-ctg-pdp-98-p1"
 		],
