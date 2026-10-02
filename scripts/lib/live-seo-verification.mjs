@@ -1,6 +1,59 @@
 import { decodeXmlEntities, extractH1Text } from './markup-text.mjs';
 import { createHash } from 'node:crypto';
 import { createReadStream } from 'node:fs';
+import { setTimeout as wait } from 'node:timers/promises';
+
+export const liveSeoDeadlineMs = 180_000;
+
+export function createVerificationBudget(timeoutMs = liveSeoDeadlineMs) {
+	if (!Number.isSafeInteger(timeoutMs) || timeoutMs < 1) throw new Error('Délai global SEO invalide');
+	const controller = new AbortController();
+	const timer = setTimeout(() => controller.abort(new Error(`Surface SEO live : délai global de ${timeoutMs} ms dépassé`)), timeoutMs);
+	return { signal: controller.signal, abort: reason => controller.abort(reason), dispose: () => clearTimeout(timer) };
+}
+
+export async function fetchVerificationText(pathname, origin, budget, { attempts = 3, fetchImpl = fetch, requestTimeoutMs = 20_000, retryDelayMs = 1_000 } = {}) {
+	let lastError;
+	for (let attempt = 1; attempt <= attempts; attempt += 1) {
+		budget.signal.throwIfAborted();
+		const request = new AbortController();
+		const timer = setTimeout(() => request.abort(new Error('Délai de requête SEO dépassé')), requestTimeoutMs);
+		try {
+			const response = await fetchImpl(new URL(pathname, origin), {
+				headers: { 'Cache-Control': 'no-cache' },
+				signal: AbortSignal.any([budget.signal, request.signal]),
+			});
+			if (!response.ok) throw new Error(`HTTP ${response.status}`);
+			// The fetch signal remains active while response.text() consumes its body.
+			const text = await response.text();
+			budget.signal.throwIfAborted();
+			return text;
+		} catch (error) {
+			budget.signal.throwIfAborted();
+			lastError = error;
+		} finally { clearTimeout(timer); }
+		if (attempt < attempts) {
+			try { await wait(attempt * retryDelayMs, undefined, { signal: budget.signal }); }
+			catch (error) { budget.signal.throwIfAborted(); throw error; }
+		}
+	}
+	throw new Error(`${pathname}: ${lastError instanceof Error ? lastError.message : 'requête impossible'}`);
+}
+
+export async function mapVerificationConcurrent(values, concurrency, run, budget) {
+	const results = new Array(values.length);
+	let cursor = 0;
+	async function worker() {
+		while (cursor < values.length) {
+			budget.signal.throwIfAborted();
+			const index = cursor++;
+			try { results[index] = await run(values[index], index); }
+			catch (error) { budget.abort(error); throw error; }
+		}
+	}
+	await Promise.all(Array.from({ length: Math.min(concurrency, values.length) }, worker));
+	return results;
+}
 
 export async function readSnapshotProbe(location) {
 	const hash = createHash('sha256');

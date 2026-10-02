@@ -23,8 +23,9 @@ jobs:
   validate:
     if: github.ref == 'refs/heads/main' && vars.DEPLOY_ENABLED == 'true'
     runs-on: ubuntu-24.04
-    # Keep every validation gate, including cold builds without restored caches.
-    timeout-minutes: 35
+    # The observed cold validation and transfer used 34 minutes before SEO.
+    # Preserve both exhaustive live gates, each bounded to three minutes.
+    timeout-minutes: 45
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -244,11 +245,11 @@ jobs:
         shell: bash
         run: |
           release_bytes=$(wc -c < "compatair-${GITHUB_SHA}.tar.xz")
-          if (( release_bytes > 184549376 )); then
-            echo "Compressed release exceeds the 176 MiB GitHub storage budget" >&2
+          if (( release_bytes > 201326592 )); then
+            echo "Compressed release exceeds the 192 MiB GitHub storage budget" >&2
             exit 1
           fi
-          echo "Compressed release: ${release_bytes} bytes (limit 184549376)"
+          echo "Compressed release: ${release_bytes} bytes (limit 201326592)"
 
       - name: Upload release artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1

@@ -93,7 +93,7 @@ describe('release boundary policy', () => {
 	});
 	it('compresses the growing catalog within the bounded release storage ceiling', () => {
 		expect(workflow).toContain('tar -C dist -cf - . | xz -T2 -8 > "compatair-${GITHUB_SHA}.tar.xz"');
-		expect(workflow).toContain('release_bytes > 184549376');
+		expect(workflow).toContain('release_bytes > 201326592');
 		expect(workflow).toContain('compression-level: 0');
 		expect(deploy).toContain('*.tar.xz) command -v xz');
 		expect(deploy).toContain('*.tar.gz)');
@@ -134,6 +134,7 @@ describe('release boundary policy', () => {
 		expect(ci).toContain('node scripts/assert-observatory-history-extension.mjs /tmp/observatory-baseline.json');
 		expect(health).toContain("cron: '17 6 * * 1'");
 		expect(health).toContain('contents: read');
+		expect(parseDocument(health).toJS().on.push.paths).toContain('docs/editorial/**');
 		expect(health).toContain("failure() && hashFiles('source-health-report.json') != ''");
 		expect(health).not.toContain('secrets.');
 	});

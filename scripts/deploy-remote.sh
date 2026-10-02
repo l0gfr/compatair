@@ -145,7 +145,7 @@ restore_previous_release() {
 activation_pending=false
 rollback_after_failed_activation() {
 	status=$?
-	trap - EXIT INT TERM
+	trap - EXIT INT TERM HUP
 	if [[ "$activation_pending" == true ]]; then
 		echo "Activation interrupted or unhealthy; restoring the previous verified release" >&2
 		if ! restore_previous_release; then
@@ -157,6 +157,7 @@ rollback_after_failed_activation() {
 trap rollback_after_failed_activation EXIT
 trap 'exit 130' INT
 trap 'exit 143' TERM
+trap 'exit 129' HUP
 
 install -d -m 755 "$releases"
 if [[ -e "$release" ]]; then
