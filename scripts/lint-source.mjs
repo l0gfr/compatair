@@ -131,9 +131,12 @@ if (countPolicy(dependabotConfig, /^\s*applies-to:\s*security-updates\s*$/gm) !=
 if (countPolicy(dependabotConfig, /^\s*-\s*'\*'\s*$/gm) !== 2) errors.push('.github/dependabot.yml: chaque groupe de sécurité doit couvrir toutes les dépendances de son écosystème');
 for (const [file, workflow] of [['.github/workflows/ci.yml', ciWorkflow], ['.github/workflows/security.yml', securityWorkflow]]) {
 	if (!workflow.includes('cancel-in-progress: true')) errors.push(`${file}: les exécutions de PR obsolètes doivent être annulées`);
-	const timeout = Number(workflow.match(/timeout-minutes:\s*(\d+)/)?.[1]);
 	const maximum = file === '.github/workflows/ci.yml' ? 25 : 15;
-	if (!Number.isInteger(timeout) || timeout <= 0 || timeout > maximum) errors.push(`${file}: durée maximale absente ou supérieure à ${maximum} minutes`);
+	const jobs = parseDocument(workflow).toJS()?.jobs ?? {};
+	for (const [name, job] of Object.entries(jobs)) {
+		const timeout = job?.['timeout-minutes'];
+		if (!Number.isInteger(timeout) || timeout <= 0 || timeout > maximum) errors.push(`${file}: durée maximale absente ou supérieure à ${maximum} minutes (${name})`);
+	}
 }
 if (/(?:^|\n)\s*pull_request(?:_target)?:/m.test(deployWorkflow)) errors.push('.github/workflows/deploy-production.yml: un événement de PR ne doit jamais déclencher un déploiement');
 if (workflowSources.some((workflow) => /(?:^|\n)\s*workflow_run:/m.test(workflow))) errors.push('.github/workflows: aucun rerun automatique après échec ou fin de workflow n’est autorisé');
