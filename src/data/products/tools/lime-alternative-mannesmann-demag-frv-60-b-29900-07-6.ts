@@ -1,0 +1,111 @@
+const product = {
+	"id": "lime-alternative-mannesmann-demag-frv-60-b-29900-07-6",
+	"slug": "lime-alternative-mannesmann-demag-frv-60-b-29900-07-6",
+	"categoryId": "lime-alternative",
+	"category": "lime-alternative",
+	"label": "Mannesmann DEMAG FRV 60 B (réf. 29900-07-6)",
+	"brand": "Mannesmann DEMAG",
+	"model": "FRV 60 B",
+	"mpn": "29900-07-6",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {
+		"min": 6,
+		"typical": 6,
+		"max": 6
+	},
+	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/lime-alternative-mannesmann-demag-frv-60-b-29900-07-6.webp",
+		"alt": "Repères techniques : Mannesmann DEMAG FRV 60 B (réf. 29900-07-6)",
+		"sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+	},
+	"variant": {
+		"familyId": "mannesmann-demag-frv-60-b",
+		"label": "Référence 29900-07-6",
+		"distinguishingAttributes": {
+			"reference": "29900-07-6",
+			"Masse sans tuyau": "0.3 kg",
+			"Référence fabricant": "29900-07-6"
+		}
+	},
+	"editorial": {
+		"overview": "Mannesmann DEMAG FRV 60 B (réf. 29900-07-6). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse sans tuyau : 0.3 kg. Référence fabricant : 29900-07-6.",
+		"verifiedFacts": [
+			"Masse sans tuyau : 0.3 kg.",
+			"Référence fabricant : 29900-07-6.",
+			"Longueur publiée : 200 mm."
+		],
+		"limitations": [
+			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+			"La pression de 6 bar est donnée pour la puissance et la vitesse ; son application à la consommation n’est pas supposée.",
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Masse sans tuyau",
+			"value": "0.3 kg",
+			"evidenceIds": [
+				"october2-tools-mannesmann-0-p33"
+			]
+		},
+		{
+			"label": "Référence fabricant",
+			"value": "29900-07-6",
+			"evidenceIds": [
+				"october2-tools-mannesmann-0-p33"
+			]
+		},
+		{
+			"label": "Longueur publiée",
+			"value": "200 mm",
+			"evidenceIds": [
+				"october2-tools-mannesmann-0-p33"
+			]
+		},
+		{
+			"label": "Portée de la pression dans la source",
+			"value": "Power and free speed at 6 bar operating pressure. Compressed air quality: lubricated.",
+			"evidenceIds": [
+				"october2-tools-mannesmann-0-p33"
+			]
+		},
+		{
+			"label": "Consommation de régime non précisé, hors calcul",
+			"value": "0.5 L/s",
+			"evidenceIds": [
+				"october2-tools-mannesmann-0-p33"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "october2-tools-mannesmann-0-p33",
+			"sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download#page=33",
+			"sourceLabel": "ProfiToolsNext, catalogue fabricant anglais 05/2017, page PDF 33",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-01",
+			"confidence": "B",
+			"notes": "SHA-256 de la réponse source : 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"october2-tools-mannesmann-0-p33"
+		],
+		"workingPressureBar": [
+			"october2-tools-mannesmann-0-p33"
+		],
+		"demandExplanation": [
+			"october2-tools-mannesmann-0-p33"
+		]
+	},
+	"notes": [
+		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+	]
+};
+
+export default product;

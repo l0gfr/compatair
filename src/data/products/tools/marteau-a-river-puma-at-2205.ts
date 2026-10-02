@@ -1,0 +1,210 @@
+const product = {
+	"id": "marteau-a-river-puma-at-2205",
+	"slug": "marteau-a-river-puma-at-2205",
+	"categoryId": "marteau-a-river",
+	"category": "marteau-a-river",
+	"label": "PUMA AT-2205",
+	"brand": "PUMA",
+	"model": "AT-2205",
+	"mpn": "AT-2205",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
+	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/marteau-a-river-puma-at-2205.webp",
+		"alt": "Repères techniques : PUMA AT-2205",
+		"sourceUrl": "https://www.pumaair.com/product-Riveting-Hammer-RivetingHammer.html",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+	},
+	"variant": {
+		"familyId": "puma-at-2205",
+		"label": "Référence AT-2205",
+		"distinguishingAttributes": {
+			"reference": "AT-2205",
+			"Chisel shank / inch": "0.498",
+			"Chisel shank / mm": "12.6"
+		}
+	},
+	"editorial": {
+		"overview": "PUMA AT-2205. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Chisel shank / inch : 0.498. Chisel shank / mm : 12.6.",
+		"verifiedFacts": [
+			"Chisel shank / inch : 0.498.",
+			"Chisel shank / mm : 12.6.",
+			"Piston Diameter / inch : 0.75.",
+			"Piston Diameter / mm : 19.1.",
+			"Piston Stroke / inch : 2.69.",
+			"Piston Stroke / mm : 68.3.",
+			"Blow per min. (B.P.M.) : 1600.",
+			"Riveting capacity : 4.8.",
+			"Overall Length / inch : 9.1.",
+			"Overall Length / mm : 230.",
+			"Air Inlet (PT) : 1/4”.",
+			"Air Hose (ID) : 3/8”.",
+			"Net Weight / lb : 4.74.",
+			"Net Weight / kg : 2.15.",
+			"Work Air Pressure / psi : 90.",
+			"Work Air Pressure / kg/cm² : 6.3."
+		],
+		"limitations": [
+			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Chisel shank / inch",
+			"value": "0.498",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Chisel shank / mm",
+			"value": "12.6",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Piston Diameter / inch",
+			"value": "0.75",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Piston Diameter / mm",
+			"value": "19.1",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Piston Stroke / inch",
+			"value": "2.69",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Piston Stroke / mm",
+			"value": "68.3",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Blow per min. (B.P.M.)",
+			"value": "1600",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Riveting capacity",
+			"value": "4.8",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Overall Length / inch",
+			"value": "9.1",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Overall Length / mm",
+			"value": "230",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Air Inlet (PT)",
+			"value": "1/4”",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Air Hose (ID)",
+			"value": "3/8”",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Net Weight / lb",
+			"value": "4.74",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Net Weight / kg",
+			"value": "2.15",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Work Air Pressure / psi",
+			"value": "90",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Work Air Pressure / kg/cm²",
+			"value": "6.3",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Portée de la pression dans la source",
+			"value": "La pression de mesure du débit n’est pas explicitée dans cette fiche.",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		},
+		{
+			"label": "Consommation moyenne, hors calcul",
+			"value": "283 L/min",
+			"evidenceIds": [
+				"october2-tools-puma-cat-42-pdp-267-p1"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "october2-tools-puma-cat-42-pdp-267-p1",
+			"sourceUrl": "https://www.pumaair.com/product-Riveting-Hammer-RivetingHammer.html",
+			"sourceLabel": "PUMA Industrial, tableau fabricant de la famille product-Riveting-Hammer-RivetingHammer.html",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-01",
+			"confidence": "B",
+			"notes": "SHA-256 de la réponse source : da0f9ca24a748d714565484a1bcf0afb5f1634e4efbae54c3e62b59a157ed1f4. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"october2-tools-puma-cat-42-pdp-267-p1"
+		],
+		"workingPressureBar": [
+			"october2-tools-puma-cat-42-pdp-267-p1"
+		],
+		"demandExplanation": [
+			"october2-tools-puma-cat-42-pdp-267-p1"
+		]
+	},
+	"notes": [
+		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+	]
+};
+
+export default product;

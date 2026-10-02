@@ -1,0 +1,2577 @@
+{
+  "schemaVersion": 1,
+  "batchId": "documented-expansion-2026-10-02",
+  "reviewDate": "2026-10-02",
+  "reviewType": "internal_editorial",
+  "assistedByAI": true,
+  "externalProfessionalValidation": false,
+  "physicalTestsPerformed": false,
+  "publicationScope": {
+    "guidesBefore": 436,
+    "guidesAdded": 50,
+    "guidesAfter": 486,
+    "compressorsBefore": 2219,
+    "compressorsAdded": 400,
+    "compressorsAfter": 2619,
+    "toolsBefore": 9087,
+    "toolsAdded": 2000,
+    "toolsAfter": 11087
+  },
+  "guides": [
+    {
+      "slug": "aircat-6355a-scie-tube-trois-pouces",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "ctg-pdp-176",
+          "url": "https://continentaltoolgroup.com/product/aircat-reciprocating-air-saw-2/",
+          "resolvedUrl": "https://continentaltoolgroup.com/product/aircat-reciprocating-air-saw-2/",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "8d6ce6825bc84c1ba222233a576aeb6c0d6937e5bd53265e10df2b7573b2c767",
+          "bytes": 179469,
+          "observedAt": "2026-10-02T01:36:35.014541+00:00",
+          "brands": [
+            "Aircat"
+          ],
+          "sourceLabel": "Aircat, fiche fabricant de la référence 6355-A",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://continentaltoolgroup.com/product/aircat-reciprocating-air-saw-2/"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/scie-aircat-6355-a/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/debit-restitue-fad-vs-debit-aspire/",
+        "/guides/diagnostiquer-chute-pression-air-comprime/",
+        "/guides/scie-lime-pneumatique-kit-embouts/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "aircat-6370-6320-polissage-grande-petite-surface",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "ctg-pdp-126",
+          "url": "https://continentaltoolgroup.com/product/6-hp-composite-low-weight-vertical-polisher/",
+          "resolvedUrl": "https://continentaltoolgroup.com/product/6-hp-composite-low-weight-vertical-polisher/",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "3aef5359640e325963eabd639feee85efe9a44e43dcc6b2c5de4d2c1ab1da671",
+          "bytes": 189090,
+          "observedAt": "2026-10-02T01:35:57.980710+00:00",
+          "brands": [
+            "Aircat"
+          ],
+          "sourceLabel": "Aircat, fiche fabricant de la référence 6370",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm"
+          ]
+        },
+        {
+          "id": "ctg-pdp-180",
+          "url": "https://continentaltoolgroup.com/product/spot-sander-polisher/",
+          "resolvedUrl": "https://continentaltoolgroup.com/product/spot-sander-polisher/",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "202abf91d3a1e0ca7af92e35b96bcb24de7f423a1878d3a165aca4c91c4194d8",
+          "bytes": 188363,
+          "observedAt": "2026-10-02T01:36:39.112316+00:00",
+          "brands": [
+            "Aircat"
+          ],
+          "sourceLabel": "Aircat, fiche fabricant de la référence 6320",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://continentaltoolgroup.com/product/6-hp-composite-low-weight-vertical-polisher/",
+        "https://continentaltoolgroup.com/product/spot-sander-polisher/"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/polisseuse-aircat-6320/",
+        "/outils-pneumatiques/polisseuse-aircat-6370/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/debit-restitue-fad-vs-debit-aspire/",
+        "/guides/diagnostiquer-chute-pression-air-comprime/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "atlas-lsk37-detourage-composite-air-aspiration",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "atlas-industrial",
+          "url": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf",
+          "resolvedUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf",
+          "bytes": 35396389,
+          "sha256": "03eb69cef54f9a52be2a2bd73342620448907b5706ed365db2b3c8a4ca9d3617",
+          "contentType": "application/pdf",
+          "observedAt": "2026-10-01T21:36:15.527154+00:00",
+          "brands": [
+            "Atlas Copco"
+          ],
+          "sourceLabel": "Industrial Tools and Solutions, catalogue fabricant Atlas Copco, édition identifiée par empreinte",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "maximum",
+            "load",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "L/s",
+            "cfm"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf#page=225",
+        "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf#page=4"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/detoureuse-atlas-copco-lsk37-s250-ds1-8423123441/",
+        "/outils-pneumatiques/detoureuse-atlas-copco-lsk37-s250-ds2-8423123442/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/meuleuse-pneumatique-pince-6-mm-ou-1-4/",
+        "/guides/ponceuse-pneumatique-bois-aspiration-poussieres/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "atlas-lud22-hr5-couple-reglage-pression",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "atlas-industrial",
+          "url": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf",
+          "resolvedUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf",
+          "bytes": 35396389,
+          "sha256": "03eb69cef54f9a52be2a2bd73342620448907b5706ed365db2b3c8a4ca9d3617",
+          "contentType": "application/pdf",
+          "observedAt": "2026-10-01T21:36:15.527154+00:00",
+          "brands": [
+            "Atlas Copco"
+          ],
+          "sourceLabel": "Industrial Tools and Solutions, catalogue fabricant Atlas Copco, édition identifiée par empreinte",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "maximum",
+            "load",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "L/s",
+            "cfm"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf#page=12",
+        "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf#page=13",
+        "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf#page=4"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/visseuse-atlas-copco-lud22-hr5-8431026918/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/jonnesway-jab2011-jab2022-assemblage-deux-nm/",
+        "/guides/utiliser-plusieurs-outils-pneumatiques/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "atlas-rvm07b-burineur-debit-litres-seconde",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "atlas-industrial",
+          "url": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf",
+          "resolvedUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf",
+          "bytes": 35396389,
+          "sha256": "03eb69cef54f9a52be2a2bd73342620448907b5706ed365db2b3c8a4ca9d3617",
+          "contentType": "application/pdf",
+          "observedAt": "2026-10-01T21:36:15.527154+00:00",
+          "brands": [
+            "Atlas Copco"
+          ],
+          "sourceLabel": "Industrial Tools and Solutions, catalogue fabricant Atlas Copco, édition identifiée par empreinte",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "maximum",
+            "load",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "L/s",
+            "cfm"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf#page=232",
+        "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf#page=4"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/burineur-atlas-copco-rvm07b-8425010525/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/debit-restitue-fad-vs-debit-aspire/",
+        "/guides/raccord-air-comprime-bsp-npt-1-4/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "atp1043eo-sortie-spline-carre-retenue",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "ctg-extra-pdp-22",
+          "url": "https://continentaltoolgroup.com/product/5-spline-drive-grip-handle-inside-trigger-impact-wrench/",
+          "resolvedUrl": "https://continentaltoolgroup.com/product/5-spline-drive-grip-handle-inside-trigger-impact-wrench/",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "827abff4558eca51bb9fc4879a699adfada58974c39d97c5b0d83b3c01886ddd",
+          "bytes": 169764,
+          "observedAt": "2026-10-02T01:44:24.797599+00:00",
+          "brands": [
+            "ATP"
+          ],
+          "sourceLabel": "ATP, fiche fabricant de la référence ATP1043EO-5S",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm"
+          ]
+        },
+        {
+          "id": "ctg-extra-pdp-61",
+          "url": "https://continentaltoolgroup.com/product/1-square-drive-grip-handle-inside-trigger-impact-wrench/",
+          "resolvedUrl": "https://continentaltoolgroup.com/product/1-square-drive-grip-handle-inside-trigger-impact-wrench/",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "f03af73f33496808ae5f98c23cf63dd8567ca4a81d3ee6042a0bcc7af78ef5cb",
+          "bytes": 169570,
+          "observedAt": "2026-10-02T01:44:52.787673+00:00",
+          "brands": [
+            "ATP"
+          ],
+          "sourceLabel": "ATP, fiche fabricant de la référence ATP1043EO-TH",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://continentaltoolgroup.com/product/1-square-drive-grip-handle-inside-trigger-impact-wrench/",
+        "https://continentaltoolgroup.com/product/5-spline-drive-grip-handle-inside-trigger-impact-wrench/"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/cle-a-chocs-atp-atp1043eo-5s/",
+        "/outils-pneumatiques/cle-a-chocs-atp-atp1043eo-th/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/acheter-outil-industriel-reference-documentation/",
+        "/guides/raccord-air-comprime-bsp-npt-1-4/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "atp1550eo-atp1043eo-spline-encombrement-poste",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "ctg-extra-pdp-17",
+          "url": "https://continentaltoolgroup.com/product/5-spline-1-5-class-outside-trigger-impact-wrench-heavy-duty/",
+          "resolvedUrl": "https://continentaltoolgroup.com/product/5-spline-1-5-class-outside-trigger-impact-wrench-heavy-duty/",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "8ab360e2c4133ad0aca24c0ba5743e9accf5dc41d4325859ccee8cf49e952960",
+          "bytes": 166158,
+          "observedAt": "2026-10-02T01:44:20.313758+00:00",
+          "brands": [
+            "ATP"
+          ],
+          "sourceLabel": "ATP, fiche fabricant de la référence ATP1550EO-5S",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm"
+          ]
+        },
+        {
+          "id": "ctg-extra-pdp-22",
+          "url": "https://continentaltoolgroup.com/product/5-spline-drive-grip-handle-inside-trigger-impact-wrench/",
+          "resolvedUrl": "https://continentaltoolgroup.com/product/5-spline-drive-grip-handle-inside-trigger-impact-wrench/",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "827abff4558eca51bb9fc4879a699adfada58974c39d97c5b0d83b3c01886ddd",
+          "bytes": 169764,
+          "observedAt": "2026-10-02T01:44:24.797599+00:00",
+          "brands": [
+            "ATP"
+          ],
+          "sourceLabel": "ATP, fiche fabricant de la référence ATP1043EO-5S",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://continentaltoolgroup.com/product/5-spline-1-5-class-outside-trigger-impact-wrench-heavy-duty/",
+        "https://continentaltoolgroup.com/product/5-spline-drive-grip-handle-inside-trigger-impact-wrench/"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/cle-a-chocs-atp-atp1043eo-5s/",
+        "/outils-pneumatiques/cle-a-chocs-atp-atp1550eo-5s/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/acheter-outil-industriel-reference-documentation/",
+        "/guides/debit-restitue-fad-vs-debit-aspire/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "broomwade-fm02-fm03-dpp-debit-net-adsorption",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "broomwade-full",
+          "url": "https://azure-na-assets.contentstack.com/v3/assets/blt167c47dc7f7db219/blte4df36746553755b/6a82b94b0c5540172c281ba0/25317_BroomWade_No_Price_Book_EURO_EN_Work.pdf",
+          "resolvedUrl": "https://azure-na-assets.contentstack.com/v3/assets/blt167c47dc7f7db219/blte4df36746553755b/6a82b94b0c5540172c281ba0/25317_BroomWade_No_Price_Book_EURO_EN_Work.pdf",
+          "sha256": "11f1e7d5dfb0667503a81873214705d3b732290f6c8d46b7e300dd92b7badb3b",
+          "bytes": 16452214,
+          "observedAt": "2026-10-01T22:00:38.104149+00:00",
+          "contentType": "application/pdf",
+          "captureMethod": "original-response",
+          "sourceLabel": "BroomWade, catalogue avril 2026",
+          "dutyQuote": "the compressors are very reliable, robust and capable to run continuously"
+        }
+      ],
+      "citedSourceLocations": [
+        "https://azure-na-assets.contentstack.com/v3/assets/blt167c47dc7f7db219/blte4df36746553755b/6a82b94b0c5540172c281ba0/25317_BroomWade_No_Price_Book_EURO_EN_Work.pdf#page=11",
+        "https://azure-na-assets.contentstack.com/v3/assets/blt167c47dc7f7db219/blte4df36746553755b/6a82b94b0c5540172c281ba0/25317_BroomWade_No_Price_Book_EURO_EN_Work.pdf#page=8"
+      ],
+      "internalProductLinks": [
+        "/compresseurs/broomwade-fm02-dpp-rsccp020650-10-bar/",
+        "/compresseurs/broomwade-fm03-dpp-rsccp020651-10-bar/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/qualite-air-comprime-iso-8573-1/",
+        "/guides/secheur-adsorption-air-purge-debit-net/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "broomwade-fm22-base-rs-ct500-configuration-devis",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "broomwade-full",
+          "url": "https://azure-na-assets.contentstack.com/v3/assets/blt167c47dc7f7db219/blte4df36746553755b/6a82b94b0c5540172c281ba0/25317_BroomWade_No_Price_Book_EURO_EN_Work.pdf",
+          "resolvedUrl": "https://azure-na-assets.contentstack.com/v3/assets/blt167c47dc7f7db219/blte4df36746553755b/6a82b94b0c5540172c281ba0/25317_BroomWade_No_Price_Book_EURO_EN_Work.pdf",
+          "sha256": "11f1e7d5dfb0667503a81873214705d3b732290f6c8d46b7e300dd92b7badb3b",
+          "bytes": 16452214,
+          "observedAt": "2026-10-01T22:00:38.104149+00:00",
+          "contentType": "application/pdf",
+          "captureMethod": "original-response",
+          "sourceLabel": "BroomWade, catalogue avril 2026",
+          "dutyQuote": "the compressors are very reliable, robust and capable to run continuously"
+        }
+      ],
+      "citedSourceLocations": [
+        "https://azure-na-assets.contentstack.com/v3/assets/blt167c47dc7f7db219/blte4df36746553755b/6a82b94b0c5540172c281ba0/25317_BroomWade_No_Price_Book_EURO_EN_Work.pdf#page=26"
+      ],
+      "internalProductLinks": [
+        "/compresseurs/broomwade-fm22-cc1249507-10-bar/",
+        "/compresseurs/broomwade-fm22-rs-cc1249510-10-bar/",
+        "/compresseurs/broomwade-fm22-rs-rsccp2236v4-10-bar/",
+        "/compresseurs/broomwade-fm22-rsccp2233v4-10-bar/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/ceccato-csm20-500-secheur-filtres-devis/",
+        "/guides/choisir-volume-cuve-24-50-90-litres/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "hymair-ash03-ash01-retouche-godet",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "steed-7",
+          "url": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU",
+          "resolvedUrl": "https://iprnrwxhlkmi5q.ldycdn.com/Air+Spary+Guns+%26+Brushes%EF%BC%88Ningbo+Steed+Tools%EF%BC%89-aidpiBqkKiiSRmlririqoio.pdf?dp=GvUApKfKKUAU",
+          "sha256": "971e9f3f662af10d3c638d5e9c29c8847ee04672c40e29957ad4ca4eb13d61c1",
+          "bytes": 73317529,
+          "observedAt": "2026-10-01T21:19:06.170569+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Hymair"
+          ],
+          "sourceLabel": "Hymair, documentation technique fabricant",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm",
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU#page=2"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/pistolet-peinture-hvlp-hymair-ash-01/",
+        "/outils-pneumatiques/pistolet-peinture-hvlp-hymair-ash-03/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/mesurer-pression-dynamique-pistolet-peinture/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "hymair-ash300-10-6-cfm-400-litres-minute",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "steed-7",
+          "url": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU",
+          "resolvedUrl": "https://iprnrwxhlkmi5q.ldycdn.com/Air+Spary+Guns+%26+Brushes%EF%BC%88Ningbo+Steed+Tools%EF%BC%89-aidpiBqkKiiSRmlririqoio.pdf?dp=GvUApKfKKUAU",
+          "sha256": "971e9f3f662af10d3c638d5e9c29c8847ee04672c40e29957ad4ca4eb13d61c1",
+          "bytes": 73317529,
+          "observedAt": "2026-10-01T21:19:06.170569+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Hymair"
+          ],
+          "sourceLabel": "Hymair, documentation technique fabricant",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm",
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU#page=2"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/pistolet-peinture-hymair-ash-300/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/debit-restitue-fad-vs-debit-aspire/",
+        "/guides/mesurer-pression-dynamique-pistolet-peinture/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "hymair-n851-j1022-agrafes-couronne",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "steed-6",
+          "url": "https://www.steedtools.com/phoenix/admin/download?fileId=PWKUAfLuMrCV&dp=GvUApKfKKUAU",
+          "resolvedUrl": "https://rqrnrwxhlkmi5q.ldycdn.com/Air+Nailers+%26+Staplers%EF%BC%88Ningbo+Steed+Tools%EF%BC%89-aidpkBqkKiiSRmlririilin.pdf?dp=GvUApKfKKUAU",
+          "sha256": "2ba54ea32cf0ef4aa86123d86f6ea822cce25a4e72cea15b8bda4c0c6cccb524",
+          "bytes": 22930584,
+          "observedAt": "2026-10-01T21:19:00.920858+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Hymair"
+          ],
+          "sourceLabel": "Hymair, documentation technique fabricant",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm",
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.steedtools.com/phoenix/admin/download?fileId=PWKUAfLuMrCV&dp=GvUApKfKKUAU#page=3",
+        "https://www.steedtools.com/phoenix/admin/download?fileId=PWKUAfLuMrCV&dp=GvUApKfKKUAU#page=4"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-hymair-j1022/",
+        "/outils-pneumatiques/agrafeuse-cloueuse-hymair-n851/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/debit-restitue-fad-vs-debit-aspire/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "iwata-lw1-rallonge-angle-cavite",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "iwata-industry-2023",
+          "url": "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf",
+          "resolvedUrl": "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf",
+          "sha256": "302977aaa53c6499ba928666a051209796dd51917555d3072a140af327ff01f1",
+          "bytes": 27146912,
+          "observedAt": "2026-10-02T01:18:46.333047+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Anest Iwata"
+          ],
+          "sourceLabel": "Anest Iwata, catalogue industriel anglais 2023",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only"
+          ],
+          "allowedFlowBases": [
+            "load",
+            "unqualified",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf#page=20"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/pistolet-peinture-anest-iwata-lw1-10e1-4515/",
+        "/outils-pneumatiques/pistolet-peinture-anest-iwata-lw1-10e1-4550/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/mesurer-pression-dynamique-pistolet-peinture/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "iwata-tof50-tof50r-jet-plat-rond",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "iwata-industry-2023",
+          "url": "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf",
+          "resolvedUrl": "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf",
+          "sha256": "302977aaa53c6499ba928666a051209796dd51917555d3072a140af327ff01f1",
+          "bytes": 27146912,
+          "observedAt": "2026-10-02T01:18:46.333047+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Anest Iwata"
+          ],
+          "sourceLabel": "Anest Iwata, catalogue industriel anglais 2023",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only"
+          ],
+          "allowedFlowBases": [
+            "load",
+            "unqualified",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf#page=35"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/pistolet-peinture-anest-iwata-tof-50-102p-13608980/",
+        "/outils-pneumatiques/pistolet-peinture-anest-iwata-tof-50r-102p-13609090/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/mesurer-pression-dynamique-pistolet-peinture/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "iwata-w200-wb1-wbs-plages-consommation",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "iwata-industry-2023",
+          "url": "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf",
+          "resolvedUrl": "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf",
+          "sha256": "302977aaa53c6499ba928666a051209796dd51917555d3072a140af327ff01f1",
+          "bytes": 27146912,
+          "observedAt": "2026-10-02T01:18:46.333047+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Anest Iwata"
+          ],
+          "sourceLabel": "Anest Iwata, catalogue industriel anglais 2023",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only"
+          ],
+          "allowedFlowBases": [
+            "load",
+            "unqualified",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf#page=12"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/pistolet-peinture-anest-iwata-w-200sp-10wb1p-130452a0/",
+        "/outils-pneumatiques/pistolet-peinture-anest-iwata-w-200sp-10wbsp-130456a0/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/debit-restitue-fad-vs-debit-aspire/",
+        "/guides/mesurer-pression-dynamique-pistolet-peinture/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "iwata-w200-zp2-glacure-ceramique-air",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "iwata-industry-2023",
+          "url": "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf",
+          "resolvedUrl": "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf",
+          "sha256": "302977aaa53c6499ba928666a051209796dd51917555d3072a140af327ff01f1",
+          "bytes": 27146912,
+          "observedAt": "2026-10-02T01:18:46.333047+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Anest Iwata"
+          ],
+          "sourceLabel": "Anest Iwata, catalogue industriel anglais 2023",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only"
+          ],
+          "allowedFlowBases": [
+            "load",
+            "unqualified",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf#page=16"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/pistolet-peinture-anest-iwata-w-200-zp2-h-20-zp2-h20/",
+        "/outils-pneumatiques/pistolet-peinture-anest-iwata-w-200-zp2-h-25-zp2-h25/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/debit-restitue-fad-vs-debit-aspire/",
+        "/guides/mesurer-pression-dynamique-pistolet-peinture/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "iwata-wa1218-wa0915-wa0609-passage-rallonge",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "iwata-industry-2023",
+          "url": "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf",
+          "resolvedUrl": "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf",
+          "sha256": "302977aaa53c6499ba928666a051209796dd51917555d3072a140af327ff01f1",
+          "bytes": 27146912,
+          "observedAt": "2026-10-02T01:18:46.333047+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Anest Iwata"
+          ],
+          "sourceLabel": "Anest Iwata, catalogue industriel anglais 2023",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only"
+          ],
+          "allowedFlowBases": [
+            "load",
+            "unqualified",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf#page=34"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/pistolet-peinture-anest-iwata-wa-0609-13611020/",
+        "/outils-pneumatiques/pistolet-peinture-anest-iwata-wa-1218-13611000/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/mesurer-pression-dynamique-pistolet-peinture/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "iwata-ws200sp-ft01-chapeau-besoin-air",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "iwata-industry-2023",
+          "url": "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf",
+          "resolvedUrl": "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf",
+          "sha256": "302977aaa53c6499ba928666a051209796dd51917555d3072a140af327ff01f1",
+          "bytes": 27146912,
+          "observedAt": "2026-10-02T01:18:46.333047+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Anest Iwata"
+          ],
+          "sourceLabel": "Anest Iwata, catalogue industriel anglais 2023",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only"
+          ],
+          "allowedFlowBases": [
+            "load",
+            "unqualified",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf#page=10"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/pistolet-peinture-anest-iwata-ws-200ft-1201-13000170/",
+        "/outils-pneumatiques/pistolet-peinture-anest-iwata-ws-200sp-1201-13000140/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/diagnostiquer-chute-pression-air-comprime/",
+        "/guides/mesurer-pression-dynamique-pistolet-peinture/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "jonnesway-jab2011-jab2022-assemblage-deux-nm",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "jonnes-cat-25-pdp-50-spec3",
+          "url": "https://www.jonnesway.com/pImages/JAB-2011_12_21_22_666.jpg",
+          "resolvedUrl": "https://www.jonnesway.com/pImages/JAB-2011_12_21_22_666.jpg",
+          "contentType": "image/jpeg",
+          "sha256": "28545cac6bf73adf1cc13e665df6610ed7c64504316d5731231f3c79c092ce89",
+          "bytes": 367655,
+          "observedAt": "2026-10-02T00:06:27.959252+00:00",
+          "brands": [
+            "Jonnesway"
+          ],
+          "sourceLabel": "Jonnesway, tableau technique fabricant JAB-2011_12_21_22_666.jpg",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "average",
+            "unqualified"
+          ],
+          "allowedFlowUnits": [
+            "L/min",
+            "cfm"
+          ],
+          "linkingPage": "https://www.jonnesway.com/en_US/product/show_products.asp?catalog=2&subtree=12&p=054132155055126037215223051208103241022075130157245224211042079140190074066077014056240212",
+          "linkingPageSha256": "697131224ad1a48d02c68d252346269fb27b8521434ac9533fd1c91b1b1e2a95",
+          "captureMethod": "manufacturer-linked-technical-image-local-ocr",
+          "technicalRowsReviewedAt": "2026-10-02"
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.jonnesway.com/pImages/JAB-2011_12_21_22_666.jpg"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/visseuse-jonnesway-jab-2011/",
+        "/outils-pneumatiques/visseuse-jonnesway-jab-2022/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/groupe-frl-filtre-regulateur-lubrificateur/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "kaeser-asd35-asd40-besoin-3160-litres-minute",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "kaeser-asd",
+          "url": "https://id.kaeser.com/download.ashx?id=tcm:148-5923",
+          "resolvedUrl": "https://id.kaeser.com/download.ashx?id=tcm:148-5923",
+          "sha256": "1f5a59f2a1e2284962f6300178d8e3998ae3d4abe155c61157be6faf3f9e6882",
+          "bytes": 7829590,
+          "observedAt": "2026-10-01T21:12:51.463170+00:00",
+          "contentType": "application/pdf",
+          "captureMethod": "original-response",
+          "sourceLabel": "KAESER, brochure ASD"
+        },
+        {
+          "id": "kaeser-duty-asd",
+          "url": "https://us.kaeser.com/products-and-solutions/rotary-screw-compressors/screw-compressors-to-150-hp/",
+          "resolvedUrl": "https://us.kaeser.com/products-and-solutions/rotary-screw-compressors/screw-compressors-to-150-hp/",
+          "sha256": "37e3a5562c303c12267c910b66715b8744eedaa524b54e9eb705e188bca32049",
+          "bytes": 63957,
+          "observedAt": "2026-10-01T21:39:50.151019+00:00",
+          "contentType": "text/html; charset=utf-8",
+          "captureMethod": "original-response",
+          "sourceLabel": "KAESER, séries ASD BSD CSD et service continu",
+          "dutyQuote": "Kaeser built the ASD, BSD, and CSD series for continuous-duty industrial environments"
+        }
+      ],
+      "citedSourceLocations": [
+        "https://id.kaeser.com/download.ashx?id=tcm:148-5923#page=10",
+        "https://us.kaeser.com/products-and-solutions/rotary-screw-compressors/screw-compressors-to-150-hp/"
+      ],
+      "internalProductLinks": [
+        "/compresseurs/kaeser-asd-35-8-5-bar/",
+        "/compresseurs/kaeser-asd-40-8-5-bar/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/compresseur-piston-ou-vis-profil-charge/",
+        "/guides/consommation-moyenne-en-charge-cle-a-chocs/",
+        "/guides/utiliser-plusieurs-outils-pneumatiques/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "kaeser-bsd75-sfc-demande-inferieure-debit-minimum",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "kaeser-bsd",
+          "url": "https://id.kaeser.com/download.ashx?id=tcm:148-5924",
+          "resolvedUrl": "https://id.kaeser.com/download.ashx?id=tcm:148-5924",
+          "sha256": "b01fc99a411af06802498950fb97b278855ce4c05bfcb5ad4a3993cdd65d68b7",
+          "bytes": 8335337,
+          "observedAt": "2026-10-01T21:12:51.518821+00:00",
+          "contentType": "application/pdf",
+          "captureMethod": "original-response",
+          "sourceLabel": "KAESER, brochure BSD"
+        },
+        {
+          "id": "kaeser-sfc-duty-id",
+          "url": "https://id.kaeser.com/download.ashx?id=tcm%3A148-5945",
+          "resolvedUrl": "https://id.kaeser.com/download.ashx?id=tcm%3A148-5945",
+          "sha256": "25bd99979d120d6f67d3938e84e4fb8125a9029e35972e170aa543df09a68322",
+          "bytes": 13327576,
+          "observedAt": "2026-10-01T22:07:20.138719+00:00",
+          "contentType": "application/pdf",
+          "captureMethod": "original-response",
+          "sourceLabel": "KAESER, catalogue SFC, série SM à HSD",
+          "dutyQuote": "Variable-speed rotary screw compressors from the SM SFC to the HSD SFC series are all capable of 100% duty cycles",
+          "dutyPage": 8
+        }
+      ],
+      "citedSourceLocations": [
+        "https://id.kaeser.com/download.ashx?id=tcm%3A148-5945#page=8",
+        "https://id.kaeser.com/download.ashx?id=tcm:148-5924#page=10"
+      ],
+      "internalProductLinks": [
+        "/compresseurs/kaeser-bsd-75-sfc-10-bar/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/compresseur-vitesse-variable-vsd-rentabilite-atelier/",
+        "/guides/utiliser-plusieurs-outils-pneumatiques/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "kaeser-csd90-occasion-identifier-version-pression",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "kaeser-csd",
+          "url": "https://id.kaeser.com/download.ashx?id=tcm:148-5928",
+          "resolvedUrl": "https://id.kaeser.com/download.ashx?id=tcm:148-5928",
+          "sha256": "a55d83ecf6eacb4c806cefd8fe9c136365ab1e08b28f0cad54c108e752e0d7fa",
+          "bytes": 6312059,
+          "observedAt": "2026-10-01T21:12:51.256156+00:00",
+          "contentType": "application/pdf",
+          "captureMethod": "original-response",
+          "sourceLabel": "KAESER, brochure CSD"
+        },
+        {
+          "id": "kaeser-duty-asd",
+          "url": "https://us.kaeser.com/products-and-solutions/rotary-screw-compressors/screw-compressors-to-150-hp/",
+          "resolvedUrl": "https://us.kaeser.com/products-and-solutions/rotary-screw-compressors/screw-compressors-to-150-hp/",
+          "sha256": "37e3a5562c303c12267c910b66715b8744eedaa524b54e9eb705e188bca32049",
+          "bytes": 63957,
+          "observedAt": "2026-10-01T21:39:50.151019+00:00",
+          "contentType": "text/html; charset=utf-8",
+          "captureMethod": "original-response",
+          "sourceLabel": "KAESER, séries ASD BSD CSD et service continu",
+          "dutyQuote": "Kaeser built the ASD, BSD, and CSD series for continuous-duty industrial environments"
+        }
+      ],
+      "citedSourceLocations": [
+        "https://id.kaeser.com/download.ashx?id=tcm:148-5928#page=11",
+        "https://us.kaeser.com/products-and-solutions/rotary-screw-compressors/screw-compressors-to-150-hp/"
+      ],
+      "internalProductLinks": [
+        "/compresseurs/kaeser-csd-90-12-bar/",
+        "/compresseurs/kaeser-csd-90-7-5-bar/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/acheter-compresseur-occasion-controles-documents/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "kaeser-esd375-besoin-30-metres-cubes-13-bar",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "kaeser-esd",
+          "url": "https://id.kaeser.com/download.ashx?id=tcm:148-5935",
+          "resolvedUrl": "https://id.kaeser.com/download.ashx?id=tcm:148-5935",
+          "sha256": "2f1ea4aa62243b026ea26b4c5c9fb1cae6d6f34bf77348bc4ae1f81c4bcf4f63",
+          "bytes": 6372459,
+          "observedAt": "2026-10-01T21:12:52.517035+00:00",
+          "contentType": "application/pdf",
+          "captureMethod": "original-response",
+          "sourceLabel": "KAESER, brochure ESD"
+        }
+      ],
+      "citedSourceLocations": [
+        "https://id.kaeser.com/download.ashx?id=tcm:148-5935#page=12"
+      ],
+      "internalProductLinks": [
+        "/compresseurs/kaeser-esd-375-15-bar/",
+        "/compresseurs/kaeser-esd-375-8-5-bar/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/compresseur-piston-ou-vis-profil-charge/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "kaeser-fsd475-installation-dimensions-refroidissement",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "kaeser-fsd",
+          "url": "https://id.kaeser.com/download.ashx?id=tcm:148-5936",
+          "resolvedUrl": "https://id.kaeser.com/download.ashx?id=tcm:148-5936",
+          "sha256": "11616e1e91969f11b193e63a11f3b5a24c3c4fd06bf0f69a05bd61ff8de2e1ad",
+          "bytes": 6360408,
+          "observedAt": "2026-10-01T21:12:52.686545+00:00",
+          "contentType": "application/pdf",
+          "captureMethod": "original-response",
+          "sourceLabel": "KAESER, brochure FSD"
+        }
+      ],
+      "citedSourceLocations": [
+        "https://id.kaeser.com/download.ashx?id=tcm:148-5936#page=12"
+      ],
+      "internalProductLinks": [
+        "/compresseurs/kaeser-fsd-475-8-5-bar/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/debit-restitue-fad-vs-debit-aspire/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "kinshun-ag70-ag120-ag205-longueur-reelle",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "shenghui-catalog",
+          "url": "https://shenghuiairtools.com/cdn/shop/files/Product_Catalog.pdf",
+          "resolvedUrl": "https://shenghuiairtools.com/cdn/shop/files/Product_Catalog.pdf",
+          "sha256": "a5e9965c317f752d6cfc55359849a9129715ca0da347b990149ccaee82467510",
+          "bytes": 2338579,
+          "observedAt": "2026-10-01T23:16:30.164019+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Kinshun"
+          ],
+          "sourceLabel": "Kinshun, documentation technique fabricant",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm",
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://shenghuiairtools.com/cdn/shop/files/Product_Catalog.pdf#page=8"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/meuleuse-kinshun-kin-ag120/",
+        "/outils-pneumatiques/meuleuse-kinshun-kin-ag205/",
+        "/outils-pneumatiques/meuleuse-kinshun-kin-ag70/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/acheter-outil-industriel-reference-documentation/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "kinshun-mag095a-mag095d-meuleuse-cavite",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "shenghui-catalog",
+          "url": "https://shenghuiairtools.com/cdn/shop/files/Product_Catalog.pdf",
+          "resolvedUrl": "https://shenghuiairtools.com/cdn/shop/files/Product_Catalog.pdf",
+          "sha256": "a5e9965c317f752d6cfc55359849a9129715ca0da347b990149ccaee82467510",
+          "bytes": 2338579,
+          "observedAt": "2026-10-01T23:16:30.164019+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Kinshun"
+          ],
+          "sourceLabel": "Kinshun, documentation technique fabricant",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm",
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://shenghuiairtools.com/cdn/shop/files/Product_Catalog.pdf#page=6"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/meuleuse-kinshun-mag-095a/",
+        "/outils-pneumatiques/meuleuse-kinshun-mag-095d/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/acheter-outil-industriel-reference-documentation/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "mannesmann-g16000-gl16000-meuleuse-cavite-profonde",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "mannesmann-0",
+          "url": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download",
+          "resolvedUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download",
+          "sha256": "9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b",
+          "bytes": 3125904,
+          "observedAt": "2026-10-01T22:29:15.211945+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Mannesmann DEMAG"
+          ],
+          "sourceLabel": "ProfiToolsNext, catalogue fabricant anglais 05/2017",
+          "allowedPressureScopes": [
+            "power-and-speed"
+          ],
+          "allowedFlowBases": [
+            "load",
+            "unqualified"
+          ],
+          "allowedFlowUnits": [
+            "L/s",
+            "m3/min"
+          ],
+          "knownOperatingPressureBar": 6
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download#page=13"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/meuleuse-mannesmann-demag-g-16-000-h-60018-43-5/",
+        "/outils-pneumatiques/meuleuse-mannesmann-demag-gl-16000-h-60018-44-5/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/meuleuse-pneumatique-vitesse-max-disque-abrasif/",
+        "/guides/pression-travail-6-3-bar-outils-pneumatiques/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "max-cn445r3-cn890f3-clous-quinze-degres",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "max-pdp-20",
+          "url": "https://www.maxusacorp.com/nailers_compressors/products/roofing-coil-nailer-cn445r3-superroofer/",
+          "resolvedUrl": "https://www.maxusacorp.com/nailers_compressors/products/roofing-coil-nailer-cn445r3-superroofer/",
+          "sha256": "e74a5865b26d137bab76351cb4eccc7c32f5c9e293e5e66f52de3f4a51e916f6",
+          "bytes": 75964,
+          "observedAt": "2026-10-01T23:23:21.655984+00:00",
+          "contentType": "text/html; charset=UTF-8",
+          "brands": [
+            "MAX"
+          ],
+          "sourceLabel": "MAX USA, fiche produit fabricant max-pdp-20",
+          "allowedPressureScopes": [
+            "measurement",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "per-action"
+          ],
+          "allowedFlowUnits": [
+            "ft3/cycle"
+          ]
+        },
+        {
+          "id": "max-cn890f3-manual",
+          "url": "https://www.maxusacorp.com/wp-content/uploads/%E3%80%90%E5%AE%8C%E6%88%90%E7%89%88%E3%80%91_CN890F_5L_c6_250822_MAX.pdf",
+          "resolvedUrl": "https://www.maxusacorp.com/wp-content/uploads/%E3%80%90%E5%AE%8C%E6%88%90%E7%89%88%E3%80%91_CN890F_5L_c6_250822_MAX.pdf",
+          "sha256": "158f081891729d5e86313ad16b99ed0ab724afec6c05fc26ffa7c9dd84ad0fd8",
+          "bytes": 6951616,
+          "observedAt": "2026-10-01T22:54:18.516903+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "MAX"
+          ],
+          "sourceLabel": "MAX USA, manuel commun des cloueurs CN, anglais",
+          "allowedPressureScopes": [
+            "measurement",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "per-action"
+          ],
+          "allowedFlowUnits": [
+            "ft3/cycle"
+          ]
+        },
+        {
+          "id": "max-cn890-sell",
+          "url": "https://www.maxusacorp.com/wp-content/uploads/CN890F3_SellSheet.pdf",
+          "resolvedUrl": "https://www.maxusacorp.com/wp-content/uploads/CN890F3_SellSheet.pdf",
+          "sha256": "e231c0a03bcbec9b1af0b02176884069dca895e7103efd256b13a5d9acf0d190",
+          "bytes": 4287237,
+          "observedAt": "2026-10-01T23:16:31.992406+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "MAX"
+          ],
+          "sourceLabel": "MAX USA, brochure du modèle max-cn890-sell",
+          "allowedPressureScopes": [
+            "measurement",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "per-action"
+          ],
+          "allowedFlowUnits": [
+            "ft3/cycle"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.maxusacorp.com/wp-content/uploads/%E3%80%90%E5%AE%8C%E6%88%90%E7%89%88%E3%80%91_CN890F_5L_c6_250822_MAX.pdf#page=5"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-max-cn445r3/",
+        "/outils-pneumatiques/agrafeuse-cloueuse-max-cn890f3/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/cadence-clouage-pneumatique-chantier/",
+        "/guides/max-cn890f3-volume-cycle-cadence-clouage/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "max-cn890f3-volume-cycle-cadence-clouage",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "max-cn890-sell",
+          "url": "https://www.maxusacorp.com/wp-content/uploads/CN890F3_SellSheet.pdf",
+          "resolvedUrl": "https://www.maxusacorp.com/wp-content/uploads/CN890F3_SellSheet.pdf",
+          "sha256": "e231c0a03bcbec9b1af0b02176884069dca895e7103efd256b13a5d9acf0d190",
+          "bytes": 4287237,
+          "observedAt": "2026-10-01T23:16:31.992406+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "MAX"
+          ],
+          "sourceLabel": "MAX USA, brochure du modèle max-cn890-sell",
+          "allowedPressureScopes": [
+            "measurement",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "per-action"
+          ],
+          "allowedFlowUnits": [
+            "ft3/cycle"
+          ]
+        },
+        {
+          "id": "max-cn890f3-manual",
+          "url": "https://www.maxusacorp.com/wp-content/uploads/%E3%80%90%E5%AE%8C%E6%88%90%E7%89%88%E3%80%91_CN890F_5L_c6_250822_MAX.pdf",
+          "resolvedUrl": "https://www.maxusacorp.com/wp-content/uploads/%E3%80%90%E5%AE%8C%E6%88%90%E7%89%88%E3%80%91_CN890F_5L_c6_250822_MAX.pdf",
+          "sha256": "158f081891729d5e86313ad16b99ed0ab724afec6c05fc26ffa7c9dd84ad0fd8",
+          "bytes": 6951616,
+          "observedAt": "2026-10-01T22:54:18.516903+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "MAX"
+          ],
+          "sourceLabel": "MAX USA, manuel commun des cloueurs CN, anglais",
+          "allowedPressureScopes": [
+            "measurement",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "per-action"
+          ],
+          "allowedFlowUnits": [
+            "ft3/cycle"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.maxusacorp.com/wp-content/uploads/%E3%80%90%E5%AE%8C%E6%88%90%E7%89%88%E3%80%91_CN890F_5L_c6_250822_MAX.pdf#page=5",
+        "https://www.maxusacorp.com/wp-content/uploads/CN890F3_SellSheet.pdf#page=2"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-max-cn890f3/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/cadence-clouage-pneumatique-chantier/",
+        "/guides/compresseur-portatif-clouage-chantier/",
+        "/guides/debit-restitue-fad-vs-debit-aspire/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "max-nf255sf2-arret-sept-clous-magasin",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "max-pdp-26-brochure",
+          "url": "https://www.maxusacorp.com/wp-content/uploads/NF255SF2-18_SellSheet-1.pdf",
+          "resolvedUrl": "https://www.maxusacorp.com/wp-content/uploads/NF255SF2-18_SellSheet-1.pdf",
+          "sha256": "aeaf0be67c0a001944e79589d50c547a21aea733993ddb21b5c7fef23e902365",
+          "bytes": 732917,
+          "observedAt": "2026-10-02T00:07:34.915653+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "MAX"
+          ],
+          "sourceLabel": "MAX USA, brochure du modèle max-pdp-26-brochure",
+          "allowedPressureScopes": [
+            "measurement",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "per-action"
+          ],
+          "allowedFlowUnits": [
+            "ft3/cycle"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.maxusacorp.com/wp-content/uploads/NF255SF2-18_SellSheet-1.pdf#page=2"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-max-nf255sf2-18/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/debit-restitue-fad-vs-debit-aspire/",
+        "/guides/groupe-frl-filtre-regulateur-lubrificateur/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "meite-cn70e-cn70b-machine-palettes",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "meite",
+          "url": "https://www.meitetools.com/_files/ugd/db8665_9c0a9d5b848f4c52b660bc3ad7fddada.pdf?index=true",
+          "resolvedUrl": "https://www.meitetools.com/_files/ugd/db8665_9c0a9d5b848f4c52b660bc3ad7fddada.pdf?index=true",
+          "sha256": "f7f01ffd0c2ff84645d694199df4ac6740b32aa8e1abe7483e9b9c73dbda76a7",
+          "bytes": 25718672,
+          "observedAt": "2026-10-01T21:36:20.712996+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Meite"
+          ],
+          "sourceLabel": "Meite, catalogue industriel de cloueurs et agrafeuses, édition du document conservée",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.meitetools.com/_files/ugd/db8665_9c0a9d5b848f4c52b660bc3ad7fddada.pdf?index=true#page=7"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-meite-cn70b/",
+        "/outils-pneumatiques/agrafeuse-cloueuse-meite-cn70e/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/acheter-outil-industriel-reference-documentation/",
+        "/guides/debit-restitue-fad-vs-debit-aspire/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "meite-mt7116-mt8016-mt5016-couronne-agrafes",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "meite",
+          "url": "https://www.meitetools.com/_files/ugd/db8665_9c0a9d5b848f4c52b660bc3ad7fddada.pdf?index=true",
+          "resolvedUrl": "https://www.meitetools.com/_files/ugd/db8665_9c0a9d5b848f4c52b660bc3ad7fddada.pdf?index=true",
+          "sha256": "f7f01ffd0c2ff84645d694199df4ac6740b32aa8e1abe7483e9b9c73dbda76a7",
+          "bytes": 25718672,
+          "observedAt": "2026-10-01T21:36:20.712996+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Meite"
+          ],
+          "sourceLabel": "Meite, catalogue industriel de cloueurs et agrafeuses, édition du document conservée",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.meitetools.com/_files/ugd/db8665_9c0a9d5b848f4c52b660bc3ad7fddada.pdf?index=true#page=21"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-meite-mt5016/",
+        "/outils-pneumatiques/agrafeuse-cloueuse-meite-mt7116/",
+        "/outils-pneumatiques/agrafeuse-cloueuse-meite-mt8016/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/acheter-outil-industriel-reference-documentation/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "meite-mtcs3040-mtg38-gaz-pneumatique",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "meite",
+          "url": "https://www.meitetools.com/_files/ugd/db8665_9c0a9d5b848f4c52b660bc3ad7fddada.pdf?index=true",
+          "resolvedUrl": "https://www.meitetools.com/_files/ugd/db8665_9c0a9d5b848f4c52b660bc3ad7fddada.pdf?index=true",
+          "sha256": "f7f01ffd0c2ff84645d694199df4ac6740b32aa8e1abe7483e9b9c73dbda76a7",
+          "bytes": 25718672,
+          "observedAt": "2026-10-01T21:36:20.712996+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Meite"
+          ],
+          "sourceLabel": "Meite, catalogue industriel de cloueurs et agrafeuses, édition du document conservée",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.meitetools.com/_files/ugd/db8665_9c0a9d5b848f4c52b660bc3ad7fddada.pdf?index=true#page=34"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-meite-mtcs3040/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/acheter-outil-industriel-reference-documentation/",
+        "/guides/debit-restitue-fad-vs-debit-aspire/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "paoli-dp1800-demi-trois-quarts-reference",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "paoli-general",
+          "url": "https://www.dinopaoli.com/wp-content/uploads/PAOLI_GENERAL-CATALOGUE_2024.pdf",
+          "resolvedUrl": "https://www.dinopaoli.com/wp-content/uploads/PAOLI_GENERAL-CATALOGUE_2024.pdf",
+          "sha256": "4a60f1e1ab29d27422ad6cd8605948f5e32d197f27b3c300700631554a6d1352",
+          "bytes": 48233573,
+          "observedAt": "2026-10-01T21:36:22.551190+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Paoli"
+          ],
+          "sourceLabel": "Paoli, documentation technique fabricant",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm",
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.dinopaoli.com/wp-content/uploads/PAOLI_GENERAL-CATALOGUE_2024.pdf#page=34"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/cle-a-chocs-paoli-dp-1800-001800-00001/",
+        "/outils-pneumatiques/cle-a-chocs-paoli-dp-1800-001800-00019/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/acheter-outil-industriel-reference-documentation/",
+        "/guides/diagnostiquer-chute-pression-air-comprime/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "paoli-dp2250-dp2400-pinces-six-mm-quart",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "paoli-general",
+          "url": "https://www.dinopaoli.com/wp-content/uploads/PAOLI_GENERAL-CATALOGUE_2024.pdf",
+          "resolvedUrl": "https://www.dinopaoli.com/wp-content/uploads/PAOLI_GENERAL-CATALOGUE_2024.pdf",
+          "sha256": "4a60f1e1ab29d27422ad6cd8605948f5e32d197f27b3c300700631554a6d1352",
+          "bytes": 48233573,
+          "observedAt": "2026-10-01T21:36:22.551190+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Paoli"
+          ],
+          "sourceLabel": "Paoli, documentation technique fabricant",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm",
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.dinopaoli.com/wp-content/uploads/PAOLI_GENERAL-CATALOGUE_2024.pdf#page=95"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/meuleuse-paoli-dp-2250-002250-00001/",
+        "/outils-pneumatiques/meuleuse-paoli-dp-2250-002250-00002/",
+        "/outils-pneumatiques/meuleuse-paoli-dp-2400-002400-00001/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/acheter-outil-industriel-reference-documentation/",
+        "/guides/diagnostiquer-chute-pression-air-comprime/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "paoli-red-devil-street-legal-atex-pressions",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "paoli-general",
+          "url": "https://www.dinopaoli.com/wp-content/uploads/PAOLI_GENERAL-CATALOGUE_2024.pdf",
+          "resolvedUrl": "https://www.dinopaoli.com/wp-content/uploads/PAOLI_GENERAL-CATALOGUE_2024.pdf",
+          "sha256": "4a60f1e1ab29d27422ad6cd8605948f5e32d197f27b3c300700631554a6d1352",
+          "bytes": 48233573,
+          "observedAt": "2026-10-01T21:36:22.551190+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Paoli"
+          ],
+          "sourceLabel": "Paoli, documentation technique fabricant",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm",
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.dinopaoli.com/wp-content/uploads/PAOLI_GENERAL-CATALOGUE_2024.pdf#page=116",
+        "https://www.dinopaoli.com/wp-content/uploads/PAOLI_GENERAL-CATALOGUE_2024.pdf#page=38"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/cle-a-chocs-paoli-red-devil-2-0-street-legal-rdevsl-00003/",
+        "/outils-pneumatiques/cle-a-chocs-paoli-red-devil-sl-atex-a-07-01-0001/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/acheter-outil-industriel-reference-documentation/",
+        "/guides/debit-restitue-fad-vs-debit-aspire/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "puma-at5348-deux-consommations-documentation",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "puma-pnc1902",
+          "url": "https://www.pumaair.com/views/proimages/pd-en/PDF/PNC-1902.pdf",
+          "resolvedUrl": "https://www.pumaair.com/views/proimages/pd-en/PDF/PNC-1902.pdf",
+          "sha256": "9bca89e14768b2eaeb79a8471c25b637b21c954540f74f46039dfa04b7b6395d",
+          "bytes": 17313238,
+          "observedAt": "2026-10-01T22:48:08.015653+00:00",
+          "contentType": "application/pdf"
+        },
+        {
+          "id": "puma-cat-32-pdp-275",
+          "url": "https://www.pumaair.com/product-1-2--Impact-Wrench---Kit-1-2ImpactWrenchKit.html",
+          "resolvedUrl": "https://www.pumaair.com/product-1-2--Impact-Wrench---Kit-1-2ImpactWrenchKit.html",
+          "sha256": "f212e19e031f3492d429bc8797e2e179ca7ffab0d76b7bfdd419800f59a3f751",
+          "bytes": 97948,
+          "observedAt": "2026-10-01T23:21:12.168927+00:00",
+          "contentType": "text/html;charset=UTF-8",
+          "brands": [
+            "PUMA"
+          ],
+          "sourceLabel": "PUMA Industrial, tableau fabricant de la famille product-1-2--Impact-Wrench---Kit-1-2ImpactWrenchKit.html",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "average",
+            "unqualified"
+          ],
+          "allowedFlowUnits": [
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.pumaair.com/product-1-2--Impact-Wrench---Kit-1-2ImpactWrenchKit.html",
+        "https://www.pumaair.com/views/proimages/pd-en/PDF/PNC-1902.pdf#page=19"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/cle-a-chocs-puma-at-5348/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/debit-restitue-fad-vs-debit-aspire/",
+        "/guides/groupe-frl-filtre-regulateur-lubrificateur/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "rodcraft-rc3100-cliquet-40-60-nm",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "rodcraft-catalog",
+          "url": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf",
+          "resolvedUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf",
+          "bytes": 10294570,
+          "sha256": "c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3",
+          "contentType": "application/pdf",
+          "observedAt": "2026-10-01T21:36:13.287968+00:00",
+          "brands": [
+            "Rodcraft"
+          ],
+          "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant",
+          "allowedPressureScopes": [
+            "measurement"
+          ],
+          "allowedFlowBases": [
+            "average",
+            "free-speed",
+            "unqualified"
+          ],
+          "allowedFlowUnits": [
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=20",
+        "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=4"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/cle-a-cliquet-rodcraft-rc3100-8951078004/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/diagnostiquer-chute-pression-air-comprime/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "rodcraft-rc7038-enlever-adhesif-peinture",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "rodcraft-catalog",
+          "url": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf",
+          "resolvedUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf",
+          "bytes": 10294570,
+          "sha256": "c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3",
+          "contentType": "application/pdf",
+          "observedAt": "2026-10-01T21:36:13.287968+00:00",
+          "brands": [
+            "Rodcraft"
+          ],
+          "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant",
+          "allowedPressureScopes": [
+            "measurement"
+          ],
+          "allowedFlowBases": [
+            "average",
+            "free-speed",
+            "unqualified"
+          ],
+          "allowedFlowUnits": [
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=4",
+        "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=62"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/meuleuse-rodcraft-rc7038-8951000328/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/acheter-outil-industriel-reference-documentation/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "rongpeng-rp7107-rp7102-perceuse-vitesse-mandrin",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "rongpeng-pdp-159",
+          "url": "https://www.rongpeng.com/Reversible-Air-Drill-RP7107",
+          "resolvedUrl": "https://www.rongpeng.com/Reversible-Air-Drill-RP7107",
+          "sha256": "d5c4fd4c816dad844059a6f10c9512ccd98eab706b4d719366ffb53eb1f44234",
+          "bytes": 35750,
+          "observedAt": "2026-10-01T23:19:00.005323+00:00",
+          "contentType": "text/html; charset=utf-8",
+          "brands": [
+            "Rongpeng"
+          ],
+          "sourceLabel": "Rongpeng, documentation technique fabricant",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm",
+            "L/min"
+          ]
+        },
+        {
+          "id": "rongpeng-pdp-168",
+          "url": "https://www.rongpeng.com/Pneumatic-Air-Drill",
+          "resolvedUrl": "https://www.rongpeng.com/Pneumatic-Air-Drill",
+          "sha256": "e7aaa936fb2a682497e61a412d6406fd92767e8fb375eefd8b2da6174e9e6c4b",
+          "bytes": 32273,
+          "observedAt": "2026-10-01T23:19:00.434554+00:00",
+          "contentType": "text/html; charset=utf-8",
+          "brands": [
+            "Rongpeng"
+          ],
+          "sourceLabel": "Rongpeng, documentation technique fabricant",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm",
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.rongpeng.com/Pneumatic-Air-Drill",
+        "https://www.rongpeng.com/Reversible-Air-Drill-RP7107"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/perceuse-rongpeng-rp7102/",
+        "/outils-pneumatiques/perceuse-rongpeng-rp7107/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/debit-restitue-fad-vs-debit-aspire/",
+        "/guides/diagnostiquer-chute-pression-air-comprime/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "rongpeng-rp7432-rp7432l-encombrement-roue",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "rongpeng-pdp-62",
+          "url": "https://www.rongpeng.com/Extended-Anvil-Air-Impact-Wrench",
+          "resolvedUrl": "https://www.rongpeng.com/Extended-Anvil-Air-Impact-Wrench",
+          "sha256": "869f36217a256eb60688007349463949295433102c6a4178ab0d71857765a2de",
+          "bytes": 35000,
+          "observedAt": "2026-10-01T23:18:51.016528+00:00",
+          "contentType": "text/html; charset=utf-8",
+          "brands": [
+            "Rongpeng"
+          ],
+          "sourceLabel": "Rongpeng, documentation technique fabricant",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm",
+            "L/min"
+          ]
+        },
+        {
+          "id": "rongpeng-pdp-63",
+          "url": "https://www.rongpeng.com/Impact-Wrench-pneumatic-tightening-tools",
+          "resolvedUrl": "https://www.rongpeng.com/Impact-Wrench-pneumatic-tightening-tools",
+          "sha256": "306d454821c5ed5b71f02eff7482bb9233150b50312d9fe2cacd3b01fcfb7c4b",
+          "bytes": 35816,
+          "observedAt": "2026-10-01T23:18:51.016723+00:00",
+          "contentType": "text/html; charset=utf-8",
+          "brands": [
+            "Rongpeng"
+          ],
+          "sourceLabel": "Rongpeng, documentation technique fabricant",
+          "allowedPressureScopes": [
+            "measurement",
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm",
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.rongpeng.com/Extended-Anvil-Air-Impact-Wrench",
+        "https://www.rongpeng.com/Impact-Wrench-pneumatic-tightening-tools"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/cle-a-chocs-rongpeng-rp7432/",
+        "/outils-pneumatiques/cle-a-chocs-rongpeng-rp7432l/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/cle-a-chocs-couple-serrage-roues-dynamometrique/",
+        "/guides/consommation-moyenne-en-charge-cle-a-chocs/",
+        "/guides/diagnostiquer-chute-pression-air-comprime/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "suhner-lsb90-top-lubrificateur-air-huile",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "suhner-pneumatic",
+          "url": "https://www.suhner-abrasive.com/fileadmin/user_upload/Abrasive/04_Einzelkatalog_Druckluftwerkzeuge_EN.pdf",
+          "resolvedUrl": "https://www.suhner-abrasive.com/fileadmin/user_upload/Abrasive/04_Einzelkatalog_Druckluftwerkzeuge_EN.pdf",
+          "sha256": "355401bdbabe6cb5a7bfa85064961b89eabb84f7ebad27a03b193f57bc12f7dd",
+          "bytes": 33942612,
+          "observedAt": "2026-10-01T21:58:27.314241+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Suhner"
+          ],
+          "sourceLabel": "Pneumatic power tools, catalogue fabricant EN 10/2024",
+          "allowedPressureScopes": [
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "free-speed"
+          ],
+          "allowedFlowUnits": [
+            "m3/min"
+          ]
+        },
+        {
+          "id": "suhner-lsb90",
+          "url": "https://www.suhner-abrasive.com/fileadmin/user_upload/Abrasive/broschuere_abrasive/2019-03-20-Suhner-Neuheitenflyer-LSB90-EN-SAE.pdf",
+          "resolvedUrl": "https://www.suhner-abrasive.com/fileadmin/user_upload/Abrasive/broschuere_abrasive/2019-03-20-Suhner-Neuheitenflyer-LSB90-EN-SAE.pdf",
+          "sha256": "5d4d50793ae137ad48c1b35c1a3196608fac5c16fd826b04543120e25746b703",
+          "bytes": 1488165,
+          "observedAt": "2026-10-01T21:58:26.073595+00:00",
+          "contentType": "application/pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.suhner-abrasive.com/fileadmin/user_upload/Abrasive/04_Einzelkatalog_Druckluftwerkzeuge_EN.pdf#page=2",
+        "https://www.suhner-abrasive.com/fileadmin/user_upload/Abrasive/broschuere_abrasive/2019-03-20-Suhner-Neuheitenflyer-LSB90-EN-SAE.pdf#page=2"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/meuleuse-suhner-lsb-90-top-100035613/",
+        "/outils-pneumatiques/meuleuse-suhner-lsb-90-top-usa-100035614/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/groupe-frl-filtre-regulateur-lubrificateur/",
+        "/guides/qualite-air-comprime-iso-8573-1/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "sumake-bw710-bw711-scie-metal-bois",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "sumake-stg23",
+          "url": "https://s3.hicloud.net.tw/cata/air%20tool/CATA-STG23.pdf",
+          "resolvedUrl": "https://s3.hicloud.net.tw/cata/air%20tool/CATA-STG23.pdf",
+          "sha256": "ff0083d1dd4d181861f42aec1de4be29edfd61d09bbf71196f6386a205b677aa",
+          "bytes": 16511292,
+          "observedAt": "2026-10-02T00:49:24.586188+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Sumake"
+          ],
+          "sourceLabel": "Sumake, catalogue STG23",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "L/min",
+            "cfm"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://s3.hicloud.net.tw/cata/air%20tool/CATA-STG23.pdf#page=28"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/scie-sumake-st-bw710/",
+        "/outils-pneumatiques/scie-sumake-st-bw711/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/acheter-outil-industriel-reference-documentation/",
+        "/guides/diagnostiquer-chute-pression-air-comprime/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "sumake-cg25-meuleuse-pince-sens-rotation",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "sumake-stsc22",
+          "url": "https://s3.hicloud.net.tw/cata/air%20tool/CATA-STSC22-All.pdf",
+          "resolvedUrl": "https://s3.hicloud.net.tw/cata/air%20tool/CATA-STSC22-All.pdf",
+          "sha256": "3990da2e2da3b47636c11cbf6860d37cba62d302c1931caa98017f0c8cd3684a",
+          "bytes": 20466968,
+          "observedAt": "2026-10-02T00:46:37.317782+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Sumake"
+          ],
+          "sourceLabel": "Sumake, catalogue assemblage STSC22",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "L/min",
+            "cfm"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://s3.hicloud.net.tw/cata/air%20tool/CATA-STSC22-All.pdf#page=17"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/meuleuse-sumake-cg25m-3/",
+        "/outils-pneumatiques/meuleuse-sumake-cg25m/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/atlas-gtg25-f120-13-debit-charge-vide/",
+        "/guides/meuleuse-pneumatique-pince-6-mm-ou-1-4/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "sumake-fpb030-flb030-demarrage-assemblage",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "sumake-stsc22",
+          "url": "https://s3.hicloud.net.tw/cata/air%20tool/CATA-STSC22-All.pdf",
+          "resolvedUrl": "https://s3.hicloud.net.tw/cata/air%20tool/CATA-STSC22-All.pdf",
+          "sha256": "3990da2e2da3b47636c11cbf6860d37cba62d302c1931caa98017f0c8cd3684a",
+          "bytes": 20466968,
+          "observedAt": "2026-10-02T00:46:37.317782+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Sumake"
+          ],
+          "sourceLabel": "Sumake, catalogue assemblage STSC22",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "L/min",
+            "cfm"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://s3.hicloud.net.tw/cata/air%20tool/CATA-STSC22-All.pdf#page=4"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/visseuse-sumake-flb030/",
+        "/outils-pneumatiques/visseuse-sumake-fpb030/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/jonnesway-jab2011-jab2022-assemblage-deux-nm/",
+        "/guides/sumake-st-sd110-400-l-min-regime/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "sumake-hawf5400-hawfe5400-acces-40-nm",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "sumake-stsc22",
+          "url": "https://s3.hicloud.net.tw/cata/air%20tool/CATA-STSC22-All.pdf",
+          "resolvedUrl": "https://s3.hicloud.net.tw/cata/air%20tool/CATA-STSC22-All.pdf",
+          "sha256": "3990da2e2da3b47636c11cbf6860d37cba62d302c1931caa98017f0c8cd3684a",
+          "bytes": 20466968,
+          "observedAt": "2026-10-02T00:46:37.317782+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Sumake"
+          ],
+          "sourceLabel": "Sumake, catalogue assemblage STSC22",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "L/min",
+            "cfm"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://s3.hicloud.net.tw/cata/air%20tool/CATA-STSC22-All.pdf#page=16"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/boulonneuse-sumake-hawf5400/",
+        "/outils-pneumatiques/boulonneuse-sumake-hawfe5400/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/boulonneuse-plage-couple-ressort-standard/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "universal-ut8728rt-ut8728rt2-detourage-gabarit",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "ctg-pdp-105",
+          "url": "https://continentaltoolgroup.com/product/router-2/",
+          "resolvedUrl": "https://continentaltoolgroup.com/product/router-2/",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "30abf5124e0e6547a6bfaac2cb50ca220fcbf1e2f6f319d1a7e24200edb88c5f",
+          "bytes": 158096,
+          "observedAt": "2026-10-02T01:35:42.473708+00:00",
+          "brands": [
+            "Universal Tool"
+          ],
+          "sourceLabel": "Universal Tool, fiche fabricant de la référence UT8728RT",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm"
+          ]
+        },
+        {
+          "id": "ctg-pdp-115",
+          "url": "https://continentaltoolgroup.com/product/template-nose-router-2/",
+          "resolvedUrl": "https://continentaltoolgroup.com/product/template-nose-router-2/",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "748d06e55e345f47479f43caa368a09666305f3d43016e0da1bdcf15c4fd3853",
+          "bytes": 159751,
+          "observedAt": "2026-10-02T01:35:49.378180+00:00",
+          "brands": [
+            "Universal Tool"
+          ],
+          "sourceLabel": "Universal Tool, fiche fabricant de la référence UT8728RT2",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://continentaltoolgroup.com/product/router-2/",
+        "https://continentaltoolgroup.com/product/template-nose-router-2/"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/detoureuse-universal-tool-ut8728rt/",
+        "/outils-pneumatiques/detoureuse-universal-tool-ut8728rt2/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/acheter-outil-industriel-reference-documentation/",
+        "/guides/debit-restitue-fad-vs-debit-aspire/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "universal-ut9935-ut8617-graveur-masse-contradictoire",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "ctg-pdp-98",
+          "url": "https://continentaltoolgroup.com/product/recoilless-air-scribe-2/",
+          "resolvedUrl": "https://continentaltoolgroup.com/product/recoilless-air-scribe-2/",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "171d5b3e924b23cf68aada041f980e76aba78095d38ac389e29c160bbce588da",
+          "bytes": 176520,
+          "observedAt": "2026-10-02T01:35:36.511317+00:00",
+          "brands": [
+            "Universal Tool"
+          ],
+          "sourceLabel": "Universal Tool, fiche fabricant de la référence UT9935",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm"
+          ]
+        },
+        {
+          "id": "ctg-pdp-106",
+          "url": "https://continentaltoolgroup.com/product/scribe-engraving-chisel/",
+          "resolvedUrl": "https://continentaltoolgroup.com/product/scribe-engraving-chisel/",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "4af66212dae68ae50eb1c75ebedf8a89d781480238b64127cf068345e03dcdce",
+          "bytes": 165252,
+          "observedAt": "2026-10-02T01:35:42.999599+00:00",
+          "brands": [
+            "Universal Tool"
+          ],
+          "sourceLabel": "Universal Tool, fiche fabricant de la référence UT8617",
+          "allowedPressureScopes": [
+            "operating-only",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "unqualified",
+            "average",
+            "missing"
+          ],
+          "allowedFlowUnits": [
+            "cfm"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://continentaltoolgroup.com/product/recoilless-air-scribe-2/",
+        "https://continentaltoolgroup.com/product/scribe-engraving-chisel/"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/graveur-universal-tool-ut8617/",
+        "/outils-pneumatiques/graveur-universal-tool-ut9935/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/acheter-outil-industriel-reference-documentation/",
+        "/guides/debit-restitue-fad-vs-debit-aspire/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "yokota-ylt140-deux-postes-fm11rs-fm15rs",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "yokota-jp",
+          "url": "https://www.yokota-kogyo.co.jp/link/generalcatalog-j.pdf",
+          "resolvedUrl": "https://www.yokota-kogyo.co.jp/link/generalcatalog-j.pdf",
+          "sha256": "b60e8188ea17df768d52a2b1381382bc9b0e158a03fcd4416d4c4e3ebd0a866c",
+          "bytes": 34357333,
+          "observedAt": "2026-10-01T21:38:27.946553+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Yokota"
+          ],
+          "sourceLabel": "Yokota Kogyo, catalogue général japonais du fabricant",
+          "allowedPressureScopes": [
+            "measurement",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "load"
+          ],
+          "allowedFlowUnits": [
+            "L/min"
+          ]
+        },
+        {
+          "id": "broomwade-full",
+          "url": "https://azure-na-assets.contentstack.com/v3/assets/blt167c47dc7f7db219/blte4df36746553755b/6a82b94b0c5540172c281ba0/25317_BroomWade_No_Price_Book_EURO_EN_Work.pdf",
+          "resolvedUrl": "https://azure-na-assets.contentstack.com/v3/assets/blt167c47dc7f7db219/blte4df36746553755b/6a82b94b0c5540172c281ba0/25317_BroomWade_No_Price_Book_EURO_EN_Work.pdf",
+          "sha256": "11f1e7d5dfb0667503a81873214705d3b732290f6c8d46b7e300dd92b7badb3b",
+          "bytes": 16452214,
+          "observedAt": "2026-10-01T22:00:38.104149+00:00",
+          "contentType": "application/pdf",
+          "captureMethod": "original-response",
+          "sourceLabel": "BroomWade, catalogue avril 2026",
+          "dutyQuote": "the compressors are very reliable, robust and capable to run continuously"
+        }
+      ],
+      "citedSourceLocations": [
+        "https://azure-na-assets.contentstack.com/v3/assets/blt167c47dc7f7db219/blte4df36746553755b/6a82b94b0c5540172c281ba0/25317_BroomWade_No_Price_Book_EURO_EN_Work.pdf#page=19",
+        "https://azure-na-assets.contentstack.com/v3/assets/blt167c47dc7f7db219/blte4df36746553755b/6a82b94b0c5540172c281ba0/25317_BroomWade_No_Price_Book_EURO_EN_Work.pdf#page=23",
+        "https://www.yokota-kogyo.co.jp/link/generalcatalog-j.pdf#page=29"
+      ],
+      "internalProductLinks": [
+        "/compresseurs/broomwade-fm11rs-cc1184162-10-bar/",
+        "/compresseurs/broomwade-fm15rs-cc1184274-10-bar/",
+        "/outils-pneumatiques/cle-a-impulsions-yokota-ylt140/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/diagnostiquer-chute-pression-air-comprime/",
+        "/guides/utiliser-plusieurs-outils-pneumatiques/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    },
+    {
+      "slug": "yokota-ylt60-ylt60l-couple-pression-atelier",
+      "reviewType": "internal_editorial",
+      "assistedByAI": true,
+      "externalProfessionalValidation": false,
+      "physicalTestsPerformed": false,
+      "sources": [
+        {
+          "id": "yokota-jp",
+          "url": "https://www.yokota-kogyo.co.jp/link/generalcatalog-j.pdf",
+          "resolvedUrl": "https://www.yokota-kogyo.co.jp/link/generalcatalog-j.pdf",
+          "sha256": "b60e8188ea17df768d52a2b1381382bc9b0e158a03fcd4416d4c4e3ebd0a866c",
+          "bytes": 34357333,
+          "observedAt": "2026-10-01T21:38:27.946553+00:00",
+          "contentType": "application/pdf",
+          "brands": [
+            "Yokota"
+          ],
+          "sourceLabel": "Yokota Kogyo, catalogue général japonais du fabricant",
+          "allowedPressureScopes": [
+            "measurement",
+            "not-established"
+          ],
+          "allowedFlowBases": [
+            "load"
+          ],
+          "allowedFlowUnits": [
+            "L/min"
+          ]
+        }
+      ],
+      "citedSourceLocations": [
+        "https://www.yokota-kogyo.co.jp/link/generalcatalog-j.pdf#page=29"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/cle-a-impulsions-yokota-ylt60/",
+        "/outils-pneumatiques/cle-a-impulsions-yokota-ylt60l/"
+      ],
+      "relatedGuideLinks": [
+        "/guides/cle-a-impulsions-ou-cle-a-chocs-air-comprime/",
+        "/guides/debit-restitue-fad-vs-debit-aspire/",
+        "/guides/diagnostiquer-chute-pression-air-comprime/"
+      ],
+      "value": "Problème de poste ou de commande précis, caractéristiques reliées aux documents, calculs conditionnels identifiés et limites explicites."
+    }
+  ],
+  "linking": {
+    "preferredToolLinksAdded": 76,
+    "existingGuidesLinked": [
+      "consommation-moyenne-en-charge-cle-a-chocs",
+      "cadence-clouage-pneumatique-chantier",
+      "acheter-outil-industriel-reference-documentation",
+      "cle-a-impulsions-ou-cle-a-chocs-air-comprime",
+      "compresseur-piston-ou-vis-profil-charge",
+      "pistolet-peinture-gravite-aspiration-cuve-pression",
+      "acheter-compresseur-occasion-controles-documents",
+      "scie-lime-pneumatique-kit-embouts",
+      "mesurer-pression-dynamique-pistolet-peinture",
+      "raccord-air-comprime-bsp-npt-1-4"
+    ]
+  },
+  "indexation": "noindex,follow pending explicit editorial admission; Paris daily ceilings unchanged"
+}

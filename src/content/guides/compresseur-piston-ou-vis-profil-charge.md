@@ -3,7 +3,7 @@ title: "Compresseur à piston ou à vis : décider selon le profil de charge"
 seoTitle: "Compresseur à piston ou à vis : comment choisir"
 description: "Comparer piston et vis sans règle simpliste, à partir du profil de demande, du cycle publié, des commandes, de la charge partielle et des coûts du site."
 pubDate: 2026-08-28
-updatedDate: 2026-09-26
+updatedDate: 2026-10-02
 category: "Choisir"
 audiences: [professionnel]
 metiers: [garage-automobile, atelier-poids-lourds, maintenance-industrielle]
@@ -143,3 +143,5 @@ Si l’offre comprend un variateur, poursuivez avec [quand choisir un compresseu
 - [Atlas Copco, LZ premium oil-free piston compressor](https://www.atlascopco.com/en-us/compressors/products/air-compressor/oil-free-air-compressors/lz-premium)
 
 Le [cycle continu du Ceccato CSM 15](/guides/ceccato-csm15-cycle-continu-100-pourcent/) est explicitement documenté. Son exemple distingue la capacité à fonctionner en continu, le FAD de chaque version et la demande du poste.
+
+Le [cas ESD 375 à 13 bar](/guides/kaeser-esd375-besoin-30-metres-cubes-13-bar/) montre comment un besoin peut dépasser le débit publié au bon point de pression malgré une valeur plus élevée sur une autre ligne.

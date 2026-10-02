@@ -1,0 +1,119 @@
+const product = {
+	"id": "perceuse-mannesmann-demag-d-8-2800-p-46910-46-5",
+	"slug": "perceuse-mannesmann-demag-d-8-2800-p-46910-46-5",
+	"categoryId": "perceuse",
+	"category": "perceuse",
+	"label": "Mannesmann DEMAG D 8-2800 P (réf. 46910-46-5)",
+	"brand": "Mannesmann DEMAG",
+	"model": "D 8-2800 P",
+	"mpn": "46910-46-5",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {
+		"min": 6,
+		"typical": 6,
+		"max": 6
+	},
+	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/perceuse-mannesmann-demag-d-8-2800-p-46910-46-5.webp",
+		"alt": "Repères techniques : Mannesmann DEMAG D 8-2800 P (réf. 46910-46-5)",
+		"sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+	},
+	"variant": {
+		"familyId": "mannesmann-demag-d-8-2800-p",
+		"label": "Référence 46910-46-5",
+		"distinguishingAttributes": {
+			"reference": "46910-46-5",
+			"Masse sans tuyau": "1 kg",
+			"Référence fabricant": "46910-46-5"
+		}
+	},
+	"editorial": {
+		"overview": "Mannesmann DEMAG D 8-2800 P (réf. 46910-46-5). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse sans tuyau : 1 kg. Référence fabricant : 46910-46-5.",
+		"verifiedFacts": [
+			"Masse sans tuyau : 1 kg.",
+			"Référence fabricant : 46910-46-5.",
+			"Vitesse à vide : 2 800 tr/min.",
+			"Longueur publiée : 198 mm."
+		],
+		"limitations": [
+			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+			"La pression de 6 bar est donnée pour la puissance et la vitesse ; son application à la consommation n’est pas supposée.",
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Masse sans tuyau",
+			"value": "1 kg",
+			"evidenceIds": [
+				"october2-tools-mannesmann-0-p55"
+			]
+		},
+		{
+			"label": "Référence fabricant",
+			"value": "46910-46-5",
+			"evidenceIds": [
+				"october2-tools-mannesmann-0-p55"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "2 800 tr/min",
+			"evidenceIds": [
+				"october2-tools-mannesmann-0-p55"
+			]
+		},
+		{
+			"label": "Longueur publiée",
+			"value": "198 mm",
+			"evidenceIds": [
+				"october2-tools-mannesmann-0-p55"
+			]
+		},
+		{
+			"label": "Portée de la pression dans la source",
+			"value": "Power and free speed at 6 bar operating pressure. Compressed air quality: lubricated.",
+			"evidenceIds": [
+				"october2-tools-mannesmann-0-p55"
+			]
+		},
+		{
+			"label": "Consommation de régime non précisé, hors calcul",
+			"value": "7.0 L/s",
+			"evidenceIds": [
+				"october2-tools-mannesmann-0-p55"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "october2-tools-mannesmann-0-p55",
+			"sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download#page=55",
+			"sourceLabel": "ProfiToolsNext, catalogue fabricant anglais 05/2017, page PDF 55",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-01",
+			"confidence": "B",
+			"notes": "SHA-256 de la réponse source : 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"october2-tools-mannesmann-0-p55"
+		],
+		"workingPressureBar": [
+			"october2-tools-mannesmann-0-p55"
+		],
+		"demandExplanation": [
+			"october2-tools-mannesmann-0-p55"
+		]
+	},
+	"notes": [
+		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+	]
+};
+
+export default product;

@@ -1,0 +1,106 @@
+const product = {
+	"id": "ponceuse-orbitale-aircat-6700-6-336",
+	"slug": "ponceuse-orbitale-aircat-6700-6-336",
+	"categoryId": "ponceuse-orbitale",
+	"category": "ponceuse-orbitale",
+	"label": "Aircat 6700-6-336",
+	"brand": "Aircat",
+	"model": "6700-6-336",
+	"mpn": "6700-6-336",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
+	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/ponceuse-orbitale-aircat-6700-6-336.webp",
+		"alt": "Repères techniques : Aircat 6700-6-336",
+		"sourceUrl": "https://continentaltoolgroup.com/product/non-vac-orbital-palm-sander-3/",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+	},
+	"variant": {
+		"familyId": "aircat-6700-6-336",
+		"label": "Référence 6700-6-336",
+		"distinguishingAttributes": {
+			"reference": "6700-6-336",
+			"Masse publiée": "2 lb",
+			"Vitesse à vide": "11000 tr/min"
+		}
+	},
+	"editorial": {
+		"overview": "Aircat 6700-6-336. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 2 lb. Vitesse à vide : 11000 tr/min.",
+		"verifiedFacts": [
+			"Masse publiée : 2 lb.",
+			"Vitesse à vide : 11000 tr/min.",
+			"Échappement : Rear."
+		],
+		"limitations": [
+			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Masse publiée",
+			"value": "2 lb",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-349-p1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "11000 tr/min",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-349-p1"
+			]
+		},
+		{
+			"label": "Échappement",
+			"value": "Rear",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-349-p1"
+			]
+		},
+		{
+			"label": "Portée de la pression dans la source",
+			"value": "Pression de mesure de la consommation non établie dans la fiche.",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-349-p1"
+			]
+		},
+		{
+			"label": "Consommation de régime non précisé, hors calcul",
+			"value": "1.6 cfm",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-349-p1"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "october2-tools-ctg-pdp-349-p1",
+			"sourceUrl": "https://continentaltoolgroup.com/product/non-vac-orbital-palm-sander-3/",
+			"sourceLabel": "Aircat, fiche fabricant de la référence 6700-6-336",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-02",
+			"confidence": "B",
+			"notes": "SHA-256 de la réponse source : d8b880d7b81e1d5dd49604679ca3a619001e6847b9a4e31190efc19e61fad912. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"october2-tools-ctg-pdp-349-p1"
+		],
+		"workingPressureBar": [
+			"october2-tools-ctg-pdp-349-p1"
+		],
+		"demandExplanation": [
+			"october2-tools-ctg-pdp-349-p1"
+		]
+	},
+	"notes": [
+		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+	]
+};
+
+export default product;

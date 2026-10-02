@@ -3,6 +3,7 @@ title: "Clé à impulsions ou clé à chocs : couple, coupure et débit d’air"
 seoTitle: "Clé à impulsions ou à chocs : couple et débit"
 description: "EP10XS et EP11PTI100 : comparez coupure automatique, couple publié et débit en charge pour choisir une alimentation d’assemblage documentée."
 pubDate: 2026-09-26
+updatedDate: 2026-10-02
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "garage-automobile"]
@@ -97,3 +98,5 @@ Données et documents consultés le **26 septembre 2026**. Ce guide repose sur u
 - [Fiche EP10XS HR13](https://www.atlascopco.com/en-ca/itba/products/assembly-solutions/pneumatic-assembly-tools/ep10xs-hr13-sku8431036940)
 - [fiche EP11PTI100 HR13-MT](https://www.atlascopco.com/en-ca/itba/products/assembly-solutions/pneumatic-assembly-tools/ep11pti100-hr13-mt-sku8431038165)
 - [notice de l’EP5PTI19 HR10-MT](https://picontent.atlascopco.com/cont/external/dir/c1/2683698827_c0580001_html5_external/en-us/print-section.html?section=all)
+
+La comparaison des [Yokota YLT60 et YLT60L](/guides/yokota-ylt60-ylt60l-couple-pression-atelier/) relie chaque référence à son point de consommation en charge, avec des pressions de 6 et 5 bar distinctes.

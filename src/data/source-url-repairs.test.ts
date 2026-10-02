@@ -4,10 +4,11 @@ import { compressors, tools } from './catalog';
 import repairs from './imports/source-url-repairs-2026-09-25.json';
 import octoberRepairs from './imports/source-url-repairs-2026-10-01.json';
 import aircraftRepairs from './imports/source-url-repairs-aircraft-2026-10-01.json';
+import october2Repairs from './imports/source-url-repairs-2026-10-02.json';
 import aircraftReview from '../../docs/editorial/source-repairs-aircraft-2026-10-01.health.json';
 
 const products = new Map([...compressors, ...tools].map((product) => [product.id, product]));
-const reviewedRepairs = [...repairs.repairs, ...octoberRepairs.repairs, ...aircraftRepairs.repairs];
+const reviewedRepairs = [...repairs.repairs, ...octoberRepairs.repairs, ...aircraftRepairs.repairs, ...october2Repairs.repairs];
 const nextUrl = new Map(reviewedRepairs.map(repair => [repair.oldUrl, repair.newUrl]));
 function currentSourceUrl(url: string) {
 	const seen = new Set<string>();
@@ -43,8 +44,16 @@ describe('reviewed source URL repairs', () => {
 	});
 
 	it('preserves model identity, flow pressure pairs and compatibility inputs through source relocation', () => {
-		for (const expected of [...repairs.preservedTechnicalValues, ...octoberRepairs.preservedTechnicalValues, ...aircraftRepairs.preservedTechnicalValues]) expect(products.get(expected.id)).toMatchObject(expected);
-	});
+  for (const expected of [...repairs.preservedTechnicalValues, ...octoberRepairs.preservedTechnicalValues, ...aircraftRepairs.preservedTechnicalValues, ...october2Repairs.preservedTechnicalValues]) expect(products.get(expected.id)).toMatchObject(expected);
+ });
+
+ it('removes an unsupported specification while retaining the Aircraft manual average-flow boundary', () => {
+  const tool = products.get('aircraft-iss-c-1-2-compact-pro');
+  expect(tool).toMatchObject({ mpn: '2401470', airflowBasis: 'average', airflowLpm: { typical: 128 }, workingPressureBar: { typical: 6.2 } });
+  expect(tool?.specifications?.some(field => field.label === 'Diamètre intérieur du flexible')).toBe(false);
+  expect(tool?.evidence[0]).toMatchObject({ sourceType: 'manual', retrievedAt: '2026-10-02' });
+  expect(tool?.evidence[0].sourceUrl).toContain('AC_2401470_BA_ISS-C_1_2_Compact_PRO_DE.pdf#page=4');
+ });
 
 	it('links each Aircraft relocation to its exact reviewed model and unchanged manufacturer table', () => {
 		expect(aircraftRepairs.repairs).toHaveLength(148);

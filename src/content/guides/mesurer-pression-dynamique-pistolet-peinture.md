@@ -11,7 +11,7 @@ sources:
   - https://www.sata.com/en-int/products/additional-products/pressure-measuring-devices/sata-adam-2/downloads
   - https://www.sata.com/assets/cms/2022/10/21/EN-SATA-DanAm-Brochure-SATA-adam-2-Flexibility-Digitalised-K-131862-4020-06-3_uid_6352a33f75bfa.pdf
   - https://www.sata.com/en-eur/products/spray-guns/gravity-flow-cup-guns/satajet-5000-b/technical-data
-updatedDate: 2026-09-30
+updatedDate: 2026-10-02
 ---
 
 Le manomètre du régulateur mural ne connaît pas la perte du flexible, des raccords et du dispositif de mesure monté au pistolet. Pour reproduire un réglage de peinture, la pression doit être relevée à l’entrée de la référence utilisée, dans la condition de débit décrite par son fabricant.
@@ -84,3 +84,5 @@ Pour un jet irrégulier, le [diagnostic des déformations et crachotements du pi
 - [SATA, page de téléchargement du SATA adam 2](https://www.sata.com/en-int/products/additional-products/pressure-measuring-devices/sata-adam-2/downloads)
 - [SATA, brochure officielle SATA adam 2](https://www.sata.com/assets/cms/2022/10/21/EN-SATA-DanAm-Brochure-SATA-adam-2-Flexibility-Digitalised-K-131862-4020-06-3_uid_6352a33f75bfa.pdf)
 - [SATA, données techniques du SATAjet 5000 B](https://www.sata.com/en-eur/products/spray-guns/gravity-flow-cup-guns/satajet-5000-b/technical-data)
+
+Les [plages W200 WB1 et WBS](/guides/iwata-w200-wb1-wbs-plages-consommation/) exigent de conserver le domaine de pression et la plage de débit ; les extrémités ne permettent pas d’inventer une courbe.

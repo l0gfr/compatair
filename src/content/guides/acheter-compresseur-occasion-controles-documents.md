@@ -14,7 +14,7 @@ sources:
   - https://www.inrs.fr/risques/utilisation-machines/acquisition-revente-location
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
   - https://www.inrs.fr/risques/utilisation-machines/verifications-initiales-periodiques
-updatedDate: 2026-09-26
+updatedDate: 2026-10-02
 ---
 
 **Un compresseur d’occasion qui monte en pression n’est pas encore un achat validé.** Il faut établir son identité, examiner les documents et l’état de l’ensemble, puis vérifier qu’il peut alimenter votre usage dans des conditions acceptables. Le prix affiché n’est comparable qu’après avoir identifié les travaux et équipements restant à prévoir.
@@ -92,3 +92,5 @@ Données et documents consultés le **26 septembre 2026**. Ce guide repose sur u
 - [INRS, acquisition et revente de machines](https://www.inrs.fr/risques/utilisation-machines/acquisition-revente-location)
 - [manuel Atlas Copco](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf)
 - [INRS, vérifications initiales et périodiques](https://www.inrs.fr/risques/utilisation-machines/verifications-initiales-periodiques)
+
+Les [versions de pression de la KAESER CSD 90](/guides/kaeser-csd90-occasion-identifier-version-pression/) donnent un exemple de comparaison où la désignation de série seule ne suffit pas.

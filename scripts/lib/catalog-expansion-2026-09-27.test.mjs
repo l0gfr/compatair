@@ -13,7 +13,8 @@ const read = kind => JSON.parse(readFileSync(new URL(`../../src/data/imports/cat
 const snapshots = [read('compressors'), read('tools')];
 const expansion = buildCatalogExpansion(...snapshots);
 const relocationLedger = JSON.parse(readFileSync(new URL('../../src/data/imports/source-url-repairs-aircraft-2026-10-01.json', import.meta.url)));
-const relocations = new Map(relocationLedger.repairs.flatMap(repair => repair.references.map(reference => [reference.productId, { repair, reference }])));
+const october2Ledger = JSON.parse(readFileSync(new URL('../../src/data/imports/source-url-repairs-2026-10-02.json', import.meta.url)));
+const relocations = new Map([...relocationLedger.repairs, ...october2Ledger.repairs].flatMap(repair => repair.references.map(reference => [reference.productId, { repair, reference }])));
 const withReviewedSources = product => {
  const relocation = relocations.get(product.id);
  if (!relocation) return product;
@@ -24,6 +25,10 @@ const withReviewedSources = product => {
  evidence.sourceUrl = repair.newUrl;
  evidence.retrievedAt = repair.verifiedAt;
  updated.image.sourceUrl = repair.newUrl;
+ if (repair.evidencePatch) Object.assign(evidence, repair.evidencePatch);
+ if (repair.withheldSpecificationLabels) updated.specifications = updated.specifications.filter(field => !repair.withheldSpecificationLabels.includes(field.label));
+ if (repair.withheldVerifiedFacts) updated.editorial.verifiedFacts = updated.editorial.verifiedFacts.filter(fact => !repair.withheldVerifiedFacts.includes(fact));
+ for (const fragment of repair.overviewRemovals ?? []) updated.editorial.overview = updated.editorial.overview.replace(fragment, '');
  return updated;
 };
 const mutate = (kind, brand, patch) => {
@@ -35,7 +40,7 @@ const mutate = (kind, brand, patch) => {
 describe('700 additional documented manufacturer references', () => {
  it('adds exactly 200 compressors and 500 tools with multiple brands and distinct references', () => {
   expect(expansion.compressors).toHaveLength(200); expect(expansion.tools).toHaveLength(500);
-  expect(compressors).toHaveLength(2219); expect(tools).toHaveLength(9087);
+  expect(compressors).toHaveLength(2619); expect(tools).toHaveLength(11087);
   expect(new Set(expansion.compressors.map(p => p.brand)).size).toBe(5);
   expect(new Set(expansion.tools.map(p => p.brand)).size).toBe(4);
   expect(expansion.tools.filter(p => p.demandModel === 'per-action')).toHaveLength(63);

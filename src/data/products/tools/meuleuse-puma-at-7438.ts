@@ -1,0 +1,154 @@
+const product = {
+	"id": "meuleuse-puma-at-7438",
+	"slug": "meuleuse-puma-at-7438",
+	"categoryId": "meuleuse",
+	"category": "meuleuse",
+	"label": "PUMA AT-7438",
+	"brand": "PUMA",
+	"model": "AT-7438",
+	"mpn": "AT-7438",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
+	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/meuleuse-puma-at-7438.webp",
+		"alt": "Repères techniques : PUMA AT-7438",
+		"sourceUrl": "https://www.pumaair.com/product-Air-Die-Grinder-AirDieGrinder-.html",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+	},
+	"variant": {
+		"familyId": "puma-at-7438",
+		"label": "Référence AT-7438",
+		"distinguishingAttributes": {
+			"reference": "AT-7438",
+			"Free SpeedRPM": "1/4”",
+			"Collet Size / inch": "24000"
+		}
+	},
+	"editorial": {
+		"overview": "PUMA AT-7438. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Free SpeedRPM : 1/4”. Collet Size / inch : 24000.",
+		"verifiedFacts": [
+			"Free SpeedRPM : 1/4”.",
+			"Collet Size / inch : 24000.",
+			"Collet Size / mm : 0.54.",
+			"Overall Length / inch : 400.",
+			"Overall Length / mm : 8.1.",
+			"AirInlet (PT) : 205.",
+			"Air Hose (ID) : 1/4”.",
+			"Net Weight / lb : 340.",
+			"Net Weight / kg : 1.7."
+		],
+		"limitations": [
+			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Free SpeedRPM",
+			"value": "1/4”",
+			"evidenceIds": [
+				"october2-tools-puma-cat-41-pdp-263-p1"
+			]
+		},
+		{
+			"label": "Collet Size / inch",
+			"value": "24000",
+			"evidenceIds": [
+				"october2-tools-puma-cat-41-pdp-263-p1"
+			]
+		},
+		{
+			"label": "Collet Size / mm",
+			"value": "0.54",
+			"evidenceIds": [
+				"october2-tools-puma-cat-41-pdp-263-p1"
+			]
+		},
+		{
+			"label": "Overall Length / inch",
+			"value": "400",
+			"evidenceIds": [
+				"october2-tools-puma-cat-41-pdp-263-p1"
+			]
+		},
+		{
+			"label": "Overall Length / mm",
+			"value": "8.1",
+			"evidenceIds": [
+				"october2-tools-puma-cat-41-pdp-263-p1"
+			]
+		},
+		{
+			"label": "AirInlet (PT)",
+			"value": "205",
+			"evidenceIds": [
+				"october2-tools-puma-cat-41-pdp-263-p1"
+			]
+		},
+		{
+			"label": "Air Hose (ID)",
+			"value": "1/4”",
+			"evidenceIds": [
+				"october2-tools-puma-cat-41-pdp-263-p1"
+			]
+		},
+		{
+			"label": "Net Weight / lb",
+			"value": "340",
+			"evidenceIds": [
+				"october2-tools-puma-cat-41-pdp-263-p1"
+			]
+		},
+		{
+			"label": "Net Weight / kg",
+			"value": "1.7",
+			"evidenceIds": [
+				"october2-tools-puma-cat-41-pdp-263-p1"
+			]
+		},
+		{
+			"label": "Portée de la pression dans la source",
+			"value": "La pression de mesure du débit n’est pas explicitée dans cette fiche.",
+			"evidenceIds": [
+				"october2-tools-puma-cat-41-pdp-263-p1"
+			]
+		},
+		{
+			"label": "Consommation moyenne, hors calcul",
+			"value": "12 L/min",
+			"evidenceIds": [
+				"october2-tools-puma-cat-41-pdp-263-p1"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "october2-tools-puma-cat-41-pdp-263-p1",
+			"sourceUrl": "https://www.pumaair.com/product-Air-Die-Grinder-AirDieGrinder-.html",
+			"sourceLabel": "PUMA Industrial, tableau fabricant de la famille product-Air-Die-Grinder-AirDieGrinder-.html",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-01",
+			"confidence": "B",
+			"notes": "SHA-256 de la réponse source : 08b9f9c7d1898261da064b9521bc097278817d20a1ebb50c4f75c23188e0a7c7. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"october2-tools-puma-cat-41-pdp-263-p1"
+		],
+		"workingPressureBar": [
+			"october2-tools-puma-cat-41-pdp-263-p1"
+		],
+		"demandExplanation": [
+			"october2-tools-puma-cat-41-pdp-263-p1"
+		]
+	},
+	"notes": [
+		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+	]
+};
+
+export default product;
