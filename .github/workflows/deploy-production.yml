@@ -27,6 +27,10 @@ jobs:
     # Preserve both exhaustive live gates, each bounded to three minutes.
     timeout-minutes: 45
     steps:
+      - name: Record validation clock
+        id: validation_clock
+        run: printf 'started_at=%s\n' "$(date +%s)" >> "$GITHUB_OUTPUT"
+
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -291,6 +295,7 @@ jobs:
 
       - name: Transfer and activate release
         env:
+          COMPATAIR_VALIDATION_STARTED_AT: ${{ steps.validation_clock.outputs.started_at }}
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
           DEPLOY_KNOCK_PORTS: ${{ secrets.DEPLOY_KNOCK_PORTS }}
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
@@ -310,6 +315,23 @@ jobs:
           for file in "compatair-${GITHUB_SHA}.tar.xz" "compatair-${GITHUB_SHA}.tar.xz.sha256" "compatair-admin-${GITHUB_SHA}.tar.gz" "compatair-admin-${GITHUB_SHA}.tar.gz.sha256" scripts/deploy-remote.sh; do
             [[ -f "$file" && ! -L "$file" ]] || exit 2
           done
+
+          # Refuse transport if the remaining job window cannot reserve ten minutes.
+          # One extra minute accounts for setup before the first executable step.
+          assert_transfer_time_remaining() {
+            local validation_started=$1 now=$2
+            if [[ ! "$validation_started" =~ ^[0-9]{10}$ || ! "$now" =~ ^[0-9]{10}$ ]] || (( 10#$now < 10#$validation_started )); then
+              echo "Cannot verify the remaining production time window; transport refused" >&2
+              return 2
+            fi
+            local remaining=$((45 * 60 - (10#$now - 10#$validation_started) - 60))
+            if (( remaining < 600 )); then
+              echo "Only ${remaining} seconds remain after setup reserve; transport requires 600 seconds" >&2
+              return 1
+            fi
+            echo "Production time window: ${remaining} seconds after setup reserve"
+          }
+          assert_transfer_time_remaining "$COMPATAIR_VALIDATION_STARTED_AT" "$(date +%s)"
 
           # One knock sequence and one SSH connection for transfer and activation.
           # A transport failure requires an explicit operator-authorized rerun.

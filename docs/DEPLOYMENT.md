@@ -6,6 +6,8 @@ Le transfert et l’activation utilisent une seule connexion SSH après une seul
 
 Le job de production est borné à 45 minutes. Chacun des deux contrôles SEO live possède un délai global de 180 secondes, y compris la lecture des réponses et les attentes entre essais HTTP. Toutes les pages détail présentes dans le sitemap restent vérifiées, avec dix requêtes simultanées au maximum. Un dépassement échoue et arrête les nouvelles requêtes ; il ne valide pas un échantillon incomplet. Les signaux `HUP`, `INT` et `TERM` reçus pendant une activation non finalisée déclenchent le retour arrière. Une interruption sans résultat final exige toujours de vérifier le SHA réellement servi avant de déclarer la production active.
 
+Avant toute séquence de connexion, le workflow refuse un transfert lorsqu’il reste moins de dix minutes dans la fenêtre calculée depuis la première étape, avec une minute supplémentaire réservée au démarrage du job. Une date absente, invalide ou future est également refusée. Ce contrôle évite de commencer une activation trop tard ; il ne garantit pas la durée d’un démarrage GitHub exceptionnellement long.
+
 ## Topologie retenue
 
 - racine Apache générale : `/var/www/html` ;
