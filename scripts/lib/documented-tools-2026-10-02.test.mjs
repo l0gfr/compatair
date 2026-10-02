@@ -160,10 +160,37 @@ describe('documented tool references, October 2', () => {
  it('does not certify Rodcraft average consumption or infer a nailer cycle from suspicious L/min units', () => {
   const ratchet = byMpn('Rodcraft', '8951078004');
   expect(ratchet).toBeDefined();
-  expect(ratchet.airflowBasis).toBe('average');
+  expect(ratchet).toMatchObject({ demandModel: 'variable-volume', workingPressureBar: { max: 6.3 } });
+  expect(ratchet.airflowLpm).toBeUndefined();
+  expect(ratchet.workingPressureBar.min).toBeUndefined();
+  expect(ratchet.workingPressureBar.typical).toBeUndefined();
+  expect(ratchet.specifications.find(field => field.label === 'Consommation moyenne, hors calcul').value).toBe('170 L/min');
+  expect(ratchet.fieldSources.workingPressureBar).toContain('october2-tools-rodcraft-catalog-p4');
   expect(evaluateCompatibility(ample, ratchet).verdict).toBe('insufficient_data');
   expect(byMpn('Rodcraft', '8951000165').categoryId).toBe('meuleuse');
   expect(snapshot.exclusions.some(row => row.model === 'RC6710' && row.reason.includes('cycle'))).toBe(true);
+ });
+ it('rejects turning the Rodcraft inlet ceiling into a measured or nominal pressure', () => {
+  expect(batch.filter(product => product.brand === 'Rodcraft')).toHaveLength(57);
+  for (const product of batch.filter(product => product.brand === 'Rodcraft')) {
+   expect(product.workingPressureBar).toEqual({ max: 6.3 });
+   expect(product.demandModel).toBe('variable-volume');
+   expect(evaluateCompatibility(ample, product).verdict).toBe('insufficient_data');
+  }
+  for (const mutate of [
+   row => { row.pressureScope = 'measurement'; row.pressureBar = 6.3; },
+   row => { delete row.operatingPressureBasis; },
+   row => { row.operatingPressureBasis = 'nominal'; },
+   row => { row.pressureQuote = 'Tool tested at 6.3 bar'; },
+   row => { row.knownOperatingPressureBar = 7; },
+   row => { row.secondarySources = []; },
+  ]) {
+   const copy = structuredClone(snapshot);
+   // Mutate both records: reproducing a row is insufficient to qualify its scope.
+   mutate(copy.tools.find(row => row.mpn === '8951078004'));
+   mutate(copy.pdfRows.find(row => row.mpn === '8951078004'));
+   expect(() => buildDocumentedToolsOctober2(copy)).toThrow();
+  }
  });
  it('preserves Sumake table functions and recommended pressure without inventing a measured flow point', () => {
   expect(byMpn('Sumake', 'ST-IW0980-6')).toMatchObject({ demandModel: 'variable-volume', workingPressureBar: { typical: 6.2 } });

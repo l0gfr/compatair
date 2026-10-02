@@ -37,7 +37,7 @@ Cette distinction est aussi utile à l’achat d’occasion. Une photo du corps 
 
 ## Pourquoi les 170 L/min ne closent pas le dimensionnement
 
-La même page affiche **170 L/min en moyenne** et **465 L/min sous le libellé « cont. »**. Le glossaire, [page PDF 4](https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=4), distingue la moyenne de la consommation continue à vide. Il place les données techniques à une pression d’entrée maximale de **6,3 bar**.
+La même page affiche **170 L/min en moyenne** et **465 L/min sous le libellé « cont. »**. Le glossaire, [page PDF 4](https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=4), distingue la moyenne de la consommation continue à vide et indique une pression d’entrée **maximale de 6,3 bar**. La [page PDF 5](https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=5) recommande séparément une alimentation à **6,3 bar à l’entrée de l’outil, y compris lorsque l’air circule**. Ce plafond et cette recommandation ne précisent pas la pression exacte à laquelle les deux consommations ont été mesurées.
 
 Prendre le plus grand des deux nombres ne transforme pas automatiquement la fiche en mesure maximale sous charge. Le régime publié doit rester associé à sa définition. Notre calcul conserve donc la moyenne comme moyenne et laisse le verdict **insufficient_data** lorsque le besoin maximal en charge n’est pas établi, même face à un compresseur très puissant.
 

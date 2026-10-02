@@ -3344,7 +3344,7 @@
       ],
       "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant",
       "allowedPressureScopes": [
-        "measurement"
+        "operating-only"
       ],
       "allowedFlowBases": [
         "average",
@@ -73865,8 +73865,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -73902,7 +73902,9 @@
         389.664,
         558.682
       ],
-      "pdfRowId": "rodcraft-catalog-p11-8951000085"
+      "pdfRowId": "rodcraft-catalog-p11-8951000085",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -73918,8 +73920,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -73955,7 +73957,9 @@
         569.588,
         559.374
       ],
-      "pdfRowId": "rodcraft-catalog-p11-8951000123"
+      "pdfRowId": "rodcraft-catalog-p11-8951000123",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -73971,8 +73975,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74008,7 +74012,9 @@
         208.992,
         558.665
       ],
-      "pdfRowId": "rodcraft-catalog-p12-8951000286"
+      "pdfRowId": "rodcraft-catalog-p12-8951000286",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74024,8 +74030,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74061,7 +74067,9 @@
         389.949,
         559.374
       ],
-      "pdfRowId": "rodcraft-catalog-p12-8951000037"
+      "pdfRowId": "rodcraft-catalog-p12-8951000037",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74077,8 +74085,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74114,7 +74122,9 @@
         569.588,
         559.374
       ],
-      "pdfRowId": "rodcraft-catalog-p12-8951000025"
+      "pdfRowId": "rodcraft-catalog-p12-8951000025",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74130,8 +74140,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74167,7 +74177,9 @@
         569.588,
         559.374
       ],
-      "pdfRowId": "rodcraft-catalog-p16-8951077210"
+      "pdfRowId": "rodcraft-catalog-p16-8951077210",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74183,8 +74195,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74216,7 +74228,9 @@
         569.588,
         559.374
       ],
-      "pdfRowId": "rodcraft-catalog-p17-8951077260"
+      "pdfRowId": "rodcraft-catalog-p17-8951077260",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74232,8 +74246,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74269,7 +74283,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p18-8951078012"
+      "pdfRowId": "rodcraft-catalog-p18-8951078012",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74285,8 +74301,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74322,7 +74338,9 @@
         389.664,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p18-8951078022"
+      "pdfRowId": "rodcraft-catalog-p18-8951078022",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74338,8 +74356,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74375,7 +74393,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p18-8951078062"
+      "pdfRowId": "rodcraft-catalog-p18-8951078062",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74391,8 +74411,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74428,7 +74448,9 @@
         207.538,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p19-8951078042"
+      "pdfRowId": "rodcraft-catalog-p19-8951078042",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74444,8 +74466,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74481,7 +74503,9 @@
         389.003,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p19-8951078013"
+      "pdfRowId": "rodcraft-catalog-p19-8951078013",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74497,8 +74521,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74534,7 +74558,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p19-8951078033"
+      "pdfRowId": "rodcraft-catalog-p19-8951078033",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74550,8 +74576,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74587,7 +74613,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p20-8951078023"
+      "pdfRowId": "rodcraft-catalog-p20-8951078023",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74603,8 +74631,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74640,7 +74668,9 @@
         389.664,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p20-8951078004"
+      "pdfRowId": "rodcraft-catalog-p20-8951078004",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74656,8 +74686,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74693,7 +74723,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p20-8951078034"
+      "pdfRowId": "rodcraft-catalog-p20-8951078034",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74709,8 +74741,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74746,7 +74778,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p21-8951078114"
+      "pdfRowId": "rodcraft-catalog-p21-8951078114",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74762,8 +74796,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74799,7 +74833,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p21-8951078074"
+      "pdfRowId": "rodcraft-catalog-p21-8951078074",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74815,8 +74851,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74844,7 +74880,9 @@
         208.295,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p26-8951073023"
+      "pdfRowId": "rodcraft-catalog-p26-8951073023",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74860,8 +74898,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74889,7 +74927,9 @@
         389.761,
         559.265
       ],
-      "pdfRowId": "rodcraft-catalog-p26-8951073012"
+      "pdfRowId": "rodcraft-catalog-p26-8951073012",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74905,8 +74945,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74934,7 +74974,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p26-8951073002"
+      "pdfRowId": "rodcraft-catalog-p26-8951073002",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74950,8 +74992,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -74979,7 +75021,9 @@
         207.775,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p30-8951073001"
+      "pdfRowId": "rodcraft-catalog-p30-8951073001",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -74995,8 +75039,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75024,7 +75068,9 @@
         389.664,
         558.91
       ],
-      "pdfRowId": "rodcraft-catalog-p30-8951073000"
+      "pdfRowId": "rodcraft-catalog-p30-8951073000",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75040,8 +75086,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75069,7 +75115,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p30-8951073011"
+      "pdfRowId": "rodcraft-catalog-p30-8951073011",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75085,8 +75133,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75114,7 +75162,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p31-8951073021"
+      "pdfRowId": "rodcraft-catalog-p31-8951073021",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75130,8 +75180,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75159,7 +75209,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p31-8951073090"
+      "pdfRowId": "rodcraft-catalog-p31-8951073090",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75175,8 +75227,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75204,7 +75256,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p32-8951073050"
+      "pdfRowId": "rodcraft-catalog-p32-8951073050",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75220,8 +75274,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75249,7 +75303,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p32-8951073031"
+      "pdfRowId": "rodcraft-catalog-p32-8951073031",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75265,8 +75321,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75294,7 +75350,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p38-8951171043"
+      "pdfRowId": "rodcraft-catalog-p38-8951171043",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75310,8 +75368,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75339,7 +75397,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p39-8951071076"
+      "pdfRowId": "rodcraft-catalog-p39-8951071076",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75355,8 +75415,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75384,7 +75444,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p44-8951076001"
+      "pdfRowId": "rodcraft-catalog-p44-8951076001",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75400,8 +75462,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75429,7 +75491,9 @@
         389.664,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p44-8951076002"
+      "pdfRowId": "rodcraft-catalog-p44-8951076002",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75445,8 +75509,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75474,7 +75538,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p44-8951076003"
+      "pdfRowId": "rodcraft-catalog-p44-8951076003",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75490,8 +75556,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75519,7 +75585,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p45-8951076004"
+      "pdfRowId": "rodcraft-catalog-p45-8951076004",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75535,8 +75603,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75564,7 +75632,9 @@
         389.664,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p48-8951076009"
+      "pdfRowId": "rodcraft-catalog-p48-8951076009",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75580,8 +75650,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75609,7 +75679,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p48-8951076020"
+      "pdfRowId": "rodcraft-catalog-p48-8951076020",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75625,8 +75697,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75654,7 +75726,9 @@
         208.483,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p50-8951075000"
+      "pdfRowId": "rodcraft-catalog-p50-8951075000",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75670,8 +75744,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75703,7 +75777,9 @@
         389.901,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p50-8951079001"
+      "pdfRowId": "rodcraft-catalog-p50-8951079001",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75719,8 +75795,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75752,7 +75828,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p50-8951079011"
+      "pdfRowId": "rodcraft-catalog-p50-8951079011",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75768,8 +75846,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75797,7 +75875,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p58-8951000165"
+      "pdfRowId": "rodcraft-catalog-p58-8951000165",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75813,8 +75893,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75842,7 +75922,9 @@
         389.806,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p58-8951000274"
+      "pdfRowId": "rodcraft-catalog-p58-8951000274",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75858,8 +75940,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75887,7 +75969,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p58-8951000278"
+      "pdfRowId": "rodcraft-catalog-p58-8951000278",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75903,8 +75987,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75932,7 +76016,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p60-8951000277"
+      "pdfRowId": "rodcraft-catalog-p60-8951000277",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75948,8 +76034,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -75977,7 +76063,9 @@
         208.436,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p62-8951000329"
+      "pdfRowId": "rodcraft-catalog-p62-8951000329",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -75993,8 +76081,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -76022,7 +76110,9 @@
         389.664,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p62-8951000115"
+      "pdfRowId": "rodcraft-catalog-p62-8951000115",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -76038,8 +76128,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -76067,7 +76157,9 @@
         569.588,
         558.888
       ],
-      "pdfRowId": "rodcraft-catalog-p62-8951000328"
+      "pdfRowId": "rodcraft-catalog-p62-8951000328",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -76083,8 +76175,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -76112,7 +76204,9 @@
         389.841,
         558.734
       ],
-      "pdfRowId": "rodcraft-catalog-p67-8951072021"
+      "pdfRowId": "rodcraft-catalog-p67-8951072021",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -76128,8 +76222,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -76157,7 +76251,9 @@
         569.588,
         558.734
       ],
-      "pdfRowId": "rodcraft-catalog-p67-8951072001"
+      "pdfRowId": "rodcraft-catalog-p67-8951072001",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -76173,8 +76269,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -76198,7 +76294,9 @@
         569.588,
         558.492
       ],
-      "pdfRowId": "rodcraft-catalog-p68-8951075101"
+      "pdfRowId": "rodcraft-catalog-p68-8951075101",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -76214,8 +76312,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -76239,7 +76337,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p69-8951000144"
+      "pdfRowId": "rodcraft-catalog-p69-8951000144",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -76255,8 +76355,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -76280,7 +76380,9 @@
         389.664,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p69-8951072041"
+      "pdfRowId": "rodcraft-catalog-p69-8951072041",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -76296,8 +76398,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -76325,7 +76427,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p70-8951000005"
+      "pdfRowId": "rodcraft-catalog-p70-8951000005",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -76341,8 +76445,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -76374,7 +76478,9 @@
         389.664,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p70-8951072231"
+      "pdfRowId": "rodcraft-catalog-p70-8951072231",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -76390,8 +76496,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -76419,7 +76525,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p70-8951072111"
+      "pdfRowId": "rodcraft-catalog-p70-8951072111",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -76435,8 +76543,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -76464,7 +76572,9 @@
         569.588,
         558.541
       ],
-      "pdfRowId": "rodcraft-catalog-p72-8951072212"
+      "pdfRowId": "rodcraft-catalog-p72-8951072212",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -76480,8 +76590,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -76509,7 +76619,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p73-8951072101"
+      "pdfRowId": "rodcraft-catalog-p73-8951072101",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -76525,8 +76637,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -76554,7 +76666,9 @@
         569.588,
         558.702
       ],
-      "pdfRowId": "rodcraft-catalog-p78-8951072004"
+      "pdfRowId": "rodcraft-catalog-p78-8951072004",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Sumake",
@@ -162395,8 +162509,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -162432,7 +162546,9 @@
         389.664,
         558.682
       ],
-      "pdfRowId": "rodcraft-catalog-p11-8951000085"
+      "pdfRowId": "rodcraft-catalog-p11-8951000085",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -162448,8 +162564,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -162485,7 +162601,9 @@
         569.588,
         559.374
       ],
-      "pdfRowId": "rodcraft-catalog-p11-8951000123"
+      "pdfRowId": "rodcraft-catalog-p11-8951000123",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -162501,8 +162619,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -162538,7 +162656,9 @@
         208.992,
         558.665
       ],
-      "pdfRowId": "rodcraft-catalog-p12-8951000286"
+      "pdfRowId": "rodcraft-catalog-p12-8951000286",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -162554,8 +162674,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -162591,7 +162711,9 @@
         389.949,
         559.374
       ],
-      "pdfRowId": "rodcraft-catalog-p12-8951000037"
+      "pdfRowId": "rodcraft-catalog-p12-8951000037",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -162607,8 +162729,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -162644,7 +162766,9 @@
         569.588,
         559.374
       ],
-      "pdfRowId": "rodcraft-catalog-p12-8951000025"
+      "pdfRowId": "rodcraft-catalog-p12-8951000025",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -162660,8 +162784,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -162697,7 +162821,9 @@
         569.588,
         559.374
       ],
-      "pdfRowId": "rodcraft-catalog-p16-8951077210"
+      "pdfRowId": "rodcraft-catalog-p16-8951077210",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -162713,8 +162839,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -162746,7 +162872,9 @@
         569.588,
         559.374
       ],
-      "pdfRowId": "rodcraft-catalog-p17-8951077260"
+      "pdfRowId": "rodcraft-catalog-p17-8951077260",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -162762,8 +162890,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -162799,7 +162927,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p18-8951078012"
+      "pdfRowId": "rodcraft-catalog-p18-8951078012",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -162815,8 +162945,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -162852,7 +162982,9 @@
         389.664,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p18-8951078022"
+      "pdfRowId": "rodcraft-catalog-p18-8951078022",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -162868,8 +163000,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -162905,7 +163037,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p18-8951078062"
+      "pdfRowId": "rodcraft-catalog-p18-8951078062",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -162921,8 +163055,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -162958,7 +163092,9 @@
         207.538,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p19-8951078042"
+      "pdfRowId": "rodcraft-catalog-p19-8951078042",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -162974,8 +163110,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163011,7 +163147,9 @@
         389.003,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p19-8951078013"
+      "pdfRowId": "rodcraft-catalog-p19-8951078013",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163027,8 +163165,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163064,7 +163202,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p19-8951078033"
+      "pdfRowId": "rodcraft-catalog-p19-8951078033",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163080,8 +163220,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163117,7 +163257,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p20-8951078023"
+      "pdfRowId": "rodcraft-catalog-p20-8951078023",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163133,8 +163275,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163170,7 +163312,9 @@
         389.664,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p20-8951078004"
+      "pdfRowId": "rodcraft-catalog-p20-8951078004",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163186,8 +163330,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163223,7 +163367,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p20-8951078034"
+      "pdfRowId": "rodcraft-catalog-p20-8951078034",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163239,8 +163385,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163276,7 +163422,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p21-8951078114"
+      "pdfRowId": "rodcraft-catalog-p21-8951078114",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163292,8 +163440,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163329,7 +163477,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p21-8951078074"
+      "pdfRowId": "rodcraft-catalog-p21-8951078074",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163345,8 +163495,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163374,7 +163524,9 @@
         208.295,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p26-8951073023"
+      "pdfRowId": "rodcraft-catalog-p26-8951073023",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163390,8 +163542,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163419,7 +163571,9 @@
         389.761,
         559.265
       ],
-      "pdfRowId": "rodcraft-catalog-p26-8951073012"
+      "pdfRowId": "rodcraft-catalog-p26-8951073012",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163435,8 +163589,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163464,7 +163618,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p26-8951073002"
+      "pdfRowId": "rodcraft-catalog-p26-8951073002",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163480,8 +163636,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163509,7 +163665,9 @@
         207.775,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p30-8951073001"
+      "pdfRowId": "rodcraft-catalog-p30-8951073001",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163525,8 +163683,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163554,7 +163712,9 @@
         389.664,
         558.91
       ],
-      "pdfRowId": "rodcraft-catalog-p30-8951073000"
+      "pdfRowId": "rodcraft-catalog-p30-8951073000",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163570,8 +163730,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163599,7 +163759,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p30-8951073011"
+      "pdfRowId": "rodcraft-catalog-p30-8951073011",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163615,8 +163777,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163644,7 +163806,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p31-8951073021"
+      "pdfRowId": "rodcraft-catalog-p31-8951073021",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163660,8 +163824,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163689,7 +163853,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p31-8951073090"
+      "pdfRowId": "rodcraft-catalog-p31-8951073090",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163705,8 +163871,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163734,7 +163900,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p32-8951073050"
+      "pdfRowId": "rodcraft-catalog-p32-8951073050",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163750,8 +163918,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163779,7 +163947,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p32-8951073031"
+      "pdfRowId": "rodcraft-catalog-p32-8951073031",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163795,8 +163965,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163824,7 +163994,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p38-8951171043"
+      "pdfRowId": "rodcraft-catalog-p38-8951171043",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163840,8 +164012,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163869,7 +164041,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p39-8951071076"
+      "pdfRowId": "rodcraft-catalog-p39-8951071076",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163885,8 +164059,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163914,7 +164088,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p44-8951076001"
+      "pdfRowId": "rodcraft-catalog-p44-8951076001",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163930,8 +164106,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -163959,7 +164135,9 @@
         389.664,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p44-8951076002"
+      "pdfRowId": "rodcraft-catalog-p44-8951076002",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -163975,8 +164153,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164004,7 +164182,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p44-8951076003"
+      "pdfRowId": "rodcraft-catalog-p44-8951076003",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164020,8 +164200,8 @@
       "flowQuote": "Air cons., cont., free speed according to manufacturer glossary, PDF 4",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164049,7 +164229,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p45-8951076004"
+      "pdfRowId": "rodcraft-catalog-p45-8951076004",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164065,8 +164247,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164094,7 +164276,9 @@
         389.664,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p48-8951076009"
+      "pdfRowId": "rodcraft-catalog-p48-8951076009",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164110,8 +164294,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164139,7 +164323,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p48-8951076020"
+      "pdfRowId": "rodcraft-catalog-p48-8951076020",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164155,8 +164341,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164184,7 +164370,9 @@
         208.483,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p50-8951075000"
+      "pdfRowId": "rodcraft-catalog-p50-8951075000",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164200,8 +164388,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164233,7 +164421,9 @@
         389.901,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p50-8951079001"
+      "pdfRowId": "rodcraft-catalog-p50-8951079001",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164249,8 +164439,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164282,7 +164472,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p50-8951079011"
+      "pdfRowId": "rodcraft-catalog-p50-8951079011",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164298,8 +164490,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164327,7 +164519,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p58-8951000165"
+      "pdfRowId": "rodcraft-catalog-p58-8951000165",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164343,8 +164537,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164372,7 +164566,9 @@
         389.806,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p58-8951000274"
+      "pdfRowId": "rodcraft-catalog-p58-8951000274",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164388,8 +164584,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164417,7 +164613,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p58-8951000278"
+      "pdfRowId": "rodcraft-catalog-p58-8951000278",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164433,8 +164631,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164462,7 +164660,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p60-8951000277"
+      "pdfRowId": "rodcraft-catalog-p60-8951000277",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164478,8 +164678,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164507,7 +164707,9 @@
         208.436,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p62-8951000329"
+      "pdfRowId": "rodcraft-catalog-p62-8951000329",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164523,8 +164725,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164552,7 +164754,9 @@
         389.664,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p62-8951000115"
+      "pdfRowId": "rodcraft-catalog-p62-8951000115",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164568,8 +164772,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164597,7 +164801,9 @@
         569.588,
         558.888
       ],
-      "pdfRowId": "rodcraft-catalog-p62-8951000328"
+      "pdfRowId": "rodcraft-catalog-p62-8951000328",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164613,8 +164819,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164642,7 +164848,9 @@
         389.841,
         558.734
       ],
-      "pdfRowId": "rodcraft-catalog-p67-8951072021"
+      "pdfRowId": "rodcraft-catalog-p67-8951072021",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164658,8 +164866,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164687,7 +164895,9 @@
         569.588,
         558.734
       ],
-      "pdfRowId": "rodcraft-catalog-p67-8951072001"
+      "pdfRowId": "rodcraft-catalog-p67-8951072001",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164703,8 +164913,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164728,7 +164938,9 @@
         569.588,
         558.492
       ],
-      "pdfRowId": "rodcraft-catalog-p68-8951075101"
+      "pdfRowId": "rodcraft-catalog-p68-8951075101",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164744,8 +164956,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164769,7 +164981,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p69-8951000144"
+      "pdfRowId": "rodcraft-catalog-p69-8951000144",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164785,8 +164999,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164810,7 +165024,9 @@
         389.664,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p69-8951072041"
+      "pdfRowId": "rodcraft-catalog-p69-8951072041",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164826,8 +165042,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164855,7 +165071,9 @@
         208.247,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p70-8951000005"
+      "pdfRowId": "rodcraft-catalog-p70-8951000005",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164871,8 +165089,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164904,7 +165122,9 @@
         389.664,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p70-8951072231"
+      "pdfRowId": "rodcraft-catalog-p70-8951072231",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164920,8 +165140,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164949,7 +165169,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p70-8951072111"
+      "pdfRowId": "rodcraft-catalog-p70-8951072111",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -164965,8 +165187,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -164994,7 +165216,9 @@
         569.588,
         558.541
       ],
-      "pdfRowId": "rodcraft-catalog-p72-8951072212"
+      "pdfRowId": "rodcraft-catalog-p72-8951072212",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -165010,8 +165234,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -165039,7 +165263,9 @@
         569.588,
         558.674
       ],
-      "pdfRowId": "rodcraft-catalog-p73-8951072101"
+      "pdfRowId": "rodcraft-catalog-p73-8951072101",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Rodcraft",
@@ -165055,8 +165281,8 @@
       "flowQuote": "Air cons., average (pictogramme du fabricant)",
       "pressureOriginal": 6.3,
       "pressureUnit": "bar",
-      "pressureBar": 6.3,
-      "pressureScope": "measurement",
+      "pressureBar": null,
+      "pressureScope": "operating-only",
       "pressureQuote": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
       "secondarySources": [
         {
@@ -165084,7 +165310,9 @@
         569.588,
         558.702
       ],
-      "pdfRowId": "rodcraft-catalog-p78-8951072004"
+      "pdfRowId": "rodcraft-catalog-p78-8951072004",
+      "knownOperatingPressureBar": 6.3,
+      "operatingPressureBasis": "maximum"
     },
     {
       "brand": "Sumake",

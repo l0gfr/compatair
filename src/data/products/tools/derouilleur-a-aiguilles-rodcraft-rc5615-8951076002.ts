@@ -7,18 +7,11 @@ const product = {
 	"brand": "Rodcraft",
 	"model": "RC5615",
 	"mpn": "8951076002",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
 		"max": 6.3
 	},
-	"airflowLpm": {
-		"min": 180,
-		"typical": 180,
-		"max": 180
-	},
-	"airflowBasis": "free-speed",
+	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/derouilleur-a-aiguilles-rodcraft-rc5615-8951076002.webp",
@@ -36,14 +29,14 @@ const product = {
 		}
 	},
 	"editorial": {
-		"overview": "Rodcraft RC5615 (réf. 8951076002). Consommation à vide : 180 L/min à 6,3 bar. Masse publiée : 1.3 kg. Dimensions publiées : 290x35 mm.",
+		"overview": "Rodcraft RC5615 (réf. 8951076002). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 1.3 kg. Dimensions publiées : 290x35 mm.",
 		"verifiedFacts": [
 			"Masse publiée : 1.3 kg.",
 			"Dimensions publiées : 290x35 mm.",
 			"Diamètre de tuyau : 8 mm."
 		],
 		"limitations": [
-			"Une consommation moyenne, à vide ou de régime non précisé ne confirme pas le débit maximal en charge ; le verdict reste insufficient_data.",
+			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
 		]
 	},
@@ -78,7 +71,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Consommation dans son unité originale",
+			"label": "Consommation à vide, hors calcul",
 			"value": "180 L/min",
 			"evidenceIds": [
 				"october2-tools-rodcraft-catalog-p44",
@@ -95,7 +88,7 @@ const product = {
 			"sourceRole": "primary",
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
-			"notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+			"notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
 		},
 		{
 			"id": "october2-tools-rodcraft-catalog-p4",
@@ -116,16 +109,12 @@ const product = {
 			"october2-tools-rodcraft-catalog-p44",
 			"october2-tools-rodcraft-catalog-p4"
 		],
-		"airflowLpm": [
-			"october2-tools-rodcraft-catalog-p44",
-			"october2-tools-rodcraft-catalog-p4"
-		],
-		"airflowBasis": [
+		"demandExplanation": [
 			"october2-tools-rodcraft-catalog-p44"
 		]
 	},
 	"notes": [
-		"Consommation à vide : 180 L/min à 6,3 bar."
+		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
 	]
 };
 

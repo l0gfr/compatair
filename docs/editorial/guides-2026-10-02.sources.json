@@ -1848,7 +1848,7 @@
           ],
           "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant",
           "allowedPressureScopes": [
-            "measurement"
+            "operating-only"
           ],
           "allowedFlowBases": [
             "average",
@@ -1862,7 +1862,8 @@
       ],
       "citedSourceLocations": [
         "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=20",
-        "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=4"
+        "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=4",
+        "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=5"
       ],
       "internalProductLinks": [
         "/outils-pneumatiques/cle-a-cliquet-rodcraft-rc3100-8951078004/"
@@ -1892,7 +1893,7 @@
           ],
           "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant",
           "allowedPressureScopes": [
-            "measurement"
+            "operating-only"
           ],
           "allowedFlowBases": [
             "average",
@@ -1906,7 +1907,8 @@
       ],
       "citedSourceLocations": [
         "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=4",
-        "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=62"
+        "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=62",
+        "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=5"
       ],
       "internalProductLinks": [
         "/outils-pneumatiques/meuleuse-rodcraft-rc7038-8951000328/"

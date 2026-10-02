@@ -7,18 +7,11 @@ const product = {
 	"brand": "Rodcraft",
 	"model": "RC7691V",
 	"mpn": "8951072212",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
 		"max": 6.3
 	},
-	"airflowLpm": {
-		"min": 340,
-		"typical": 340,
-		"max": 340
-	},
-	"airflowBasis": "average",
+	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/ponceuse-orbitale-rodcraft-rc7691v-8951072212.webp",
@@ -36,14 +29,14 @@ const product = {
 		}
 	},
 	"editorial": {
-		"overview": "Rodcraft RC7691V (réf. 8951072212). Consommation moyenne : 340 L/min à 6,3 bar. Masse publiée : 2.1 kg. Dimensions publiées : 300x120 mm.",
+		"overview": "Rodcraft RC7691V (réf. 8951072212). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 2.1 kg. Dimensions publiées : 300x120 mm.",
 		"verifiedFacts": [
 			"Masse publiée : 2.1 kg.",
 			"Dimensions publiées : 300x120 mm.",
 			"Diamètre de tuyau : 8 mm."
 		],
 		"limitations": [
-			"Une consommation moyenne, à vide ou de régime non précisé ne confirme pas le débit maximal en charge ; le verdict reste insufficient_data.",
+			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
 		]
 	},
@@ -78,7 +71,7 @@ const product = {
 			]
 		},
 		{
-			"label": "Consommation dans son unité originale",
+			"label": "Consommation moyenne, hors calcul",
 			"value": "340 L/min",
 			"evidenceIds": [
 				"october2-tools-rodcraft-catalog-p72",
@@ -95,7 +88,7 @@ const product = {
 			"sourceRole": "primary",
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
-			"notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+			"notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
 		},
 		{
 			"id": "october2-tools-rodcraft-catalog-p4",
@@ -116,16 +109,12 @@ const product = {
 			"october2-tools-rodcraft-catalog-p72",
 			"october2-tools-rodcraft-catalog-p4"
 		],
-		"airflowLpm": [
-			"october2-tools-rodcraft-catalog-p72",
-			"october2-tools-rodcraft-catalog-p4"
-		],
-		"airflowBasis": [
+		"demandExplanation": [
 			"october2-tools-rodcraft-catalog-p72"
 		]
 	},
 	"notes": [
-		"Consommation moyenne : 340 L/min à 6,3 bar."
+		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
 	]
 };
 
