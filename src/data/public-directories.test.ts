@@ -19,6 +19,8 @@ describe('public evidence directories', () => {
 		expect(evidenceHistoryProductHref(evidenceHistoryDirectory.at(-1)!.product.id)).toMatch(/^\/preuves\/page\/\d+\/#/);
 	});
 
+	// This independent legacy oracle scans the complete history for every product.
+	// Its deadline is separate from production performance budgets as the catalog grows.
 	it('preserves every directory value and URL of the former filter/sort construction', () => {
 		const products = [
 			...compressors.map(product => ({ product, type: 'compressor' as const, href: `/compresseurs/${product.slug}/` })),
@@ -42,7 +44,7 @@ describe('public evidence directories', () => {
 		}
 		expect(JSON.stringify(evidenceHistory.events)).toBe(before);
 		expect(() => evidenceHistoryProductHref('missing-history-product')).toThrow('Produit absent du répertoire des preuves : missing-history-product.');
-	});
+	}, 15_000);
 
 	it('deduplicates sources and ranks confidence before source type', () => {
 		expect(new Set(sourceDirectory.map((source) => source.id)).size).toBe(sourceDirectory.length);
