@@ -18,6 +18,8 @@ La relecture a notamment séparé le débit d’air et le débit de produit des 
 
 Les documents anciens, étrangers ou spécifiques à une fréquence d’alimentation restent identifiés. Ils ne prouvent ni disponibilité actuelle en France, ni meilleures ventes, ni certification actuelle d’un procédé ou d’un produit. La relecture interne assistée par IA ne constitue pas une validation professionnelle externe ou un essai physique.
 
+La revue croisée du 2 octobre a corrigé la portée de la pression des 57 références Rodcraft. Le [glossaire du catalogue, page PDF 4](https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=4), donne une pression d’entrée maximale de 6,3 bar ; il n’établit pas un point exact de mesure de consommation. Les fiches conservent ce plafond sans minimum ni valeur typique supposés. Les 41 consommations moyennes et 16 consommations à vide restent visibles dans leur unité originale, hors du calcul. Le verdict reste `insufficient_data`. La page du glossaire reste citée parmi les preuves du champ de pression et la correction est ajoutée à l’historique sans effacer la version précédente.
+
 ## Contenus et liens
 
 Les 50 guides traitent de problèmes distincts : accès à une cavité, fixation d’un abrasif, interface de douille, longueur réelle d’outil, lecture de colonnes, cadence de clouage, pression d’une version, configuration d’une station, qualité d’air et préparation du local. Ils possèdent des sources localisées, une infographie responsive, des liens vers les références exactes et des conclusions limitées aux documents. Les scénarios et conversions sont identifiés comme calculs CompatAir.

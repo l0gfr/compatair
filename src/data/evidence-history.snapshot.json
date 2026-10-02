@@ -386215,7 +386215,1147 @@
         "confidence": "B",
         "notes": "SHA-256 de la réponse source : cbe0b724e412ab906db95169e6a364171a55dc1a2e4c08da3711628080e0b115. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
       }
+    },
+    {
+      "id": "corrected:burineur-rodcraft-rc5176-8951171043:october2-tools-rodcraft-catalog-p38:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p38",
+      "productId": "burineur-rodcraft-rc5176-8951171043",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "1d2548e8abc3656b36cf8817e188222d6df41aa0b26b0640ba7816f0cfa5161d",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p38",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=38",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 38",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:burineur-rodcraft-rc5400-8951071076:october2-tools-rodcraft-catalog-p39:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p39",
+      "productId": "burineur-rodcraft-rc5400-8951071076",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "0a2fbdf078f861cce3d1368da3eca0f10a71b547e52847781712786a901a1cb7",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p39",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=39",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 39",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cisaille-rodcraft-rc6210-8951076009:october2-tools-rodcraft-catalog-p48:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p48",
+      "productId": "cisaille-rodcraft-rc6210-8951076009",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "41557753f150a67007e19455326764e48084368d89fab97eee8f10bd2f15a42c",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p48",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=48",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 48",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cisaille-rodcraft-rc6212-8951076020:october2-tools-rodcraft-catalog-p48:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p48",
+      "productId": "cisaille-rodcraft-rc6212-8951076020",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "6c3aa2996526ae2e159b8a0445f12453a13199339ce0da85aeda854101467cde",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p48",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=48",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 48",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-chocs-rodcraft-rc2202-8951000123:october2-tools-rodcraft-catalog-p11:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p11",
+      "productId": "cle-a-chocs-rodcraft-rc2202-8951000123",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "202f15fce580a2ffe2c83ef70330bc4f4879db5a5e356b3f9b1055dfe920f6c9",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p11",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=11",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 11",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-chocs-rodcraft-rc2205-8951000085:october2-tools-rodcraft-catalog-p11:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p11",
+      "productId": "cle-a-chocs-rodcraft-rc2205-8951000085",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "285df0ef1add196c74772db174404b9d3da0a082902683371514893b9d81c36c",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p11",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=11",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 11",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-chocs-rodcraft-rc2235-8951000286:october2-tools-rodcraft-catalog-p12:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p12",
+      "productId": "cle-a-chocs-rodcraft-rc2235-8951000286",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "7e67cc1f6f515491f0154677e59584a925e6b722a1badeb29dcd41daffa1a3dc",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p12",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=12",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 12",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-chocs-rodcraft-rc2257-8951000037:october2-tools-rodcraft-catalog-p12:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p12",
+      "productId": "cle-a-chocs-rodcraft-rc2257-8951000037",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "3a72ed25d9ff0ce301da04d8375ade0daf248ae9907169f038029f31838322ba",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p12",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=12",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 12",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-chocs-rodcraft-rc2277-8951000025:october2-tools-rodcraft-catalog-p12:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p12",
+      "productId": "cle-a-chocs-rodcraft-rc2277-8951000025",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "adc78c0b23d4700a97a09f27eda99340a5a28d69b4357e583f19595aaa078f00",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p12",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=12",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 12",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-chocs-rodcraft-rc2444-8951077210:october2-tools-rodcraft-catalog-p16:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p16",
+      "productId": "cle-a-chocs-rodcraft-rc2444-8951077210",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "055c4e68536a331d44d24798dfdea47ae6e9d0a91a41f79d6f9fa6b7591e94e8",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p16",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=16",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 16",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-chocs-rodcraft-rc2530-8951077260:october2-tools-rodcraft-catalog-p17:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p17",
+      "productId": "cle-a-chocs-rodcraft-rc2530-8951077260",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "3883a4df0cfa661dd659a05fb956ea1ab2ab2608fe8d11b8a648beea2c5cbd49",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p17",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=17",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 17",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-cliquet-rodcraft-rc3000-8951078012:october2-tools-rodcraft-catalog-p18:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p18",
+      "productId": "cle-a-cliquet-rodcraft-rc3000-8951078012",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "7f92796d8dc28f34be6664285a8989897ae165cc691bb054f03a13a7bbd2e586",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p18",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=18",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 18",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-cliquet-rodcraft-rc3001-8951078022:october2-tools-rodcraft-catalog-p18:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p18",
+      "productId": "cle-a-cliquet-rodcraft-rc3001-8951078022",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "8bf41f2bfbea467e74486c12c0c4a3e6fe054cfcc1dff4cea784d861300c6873",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p18",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=18",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 18",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-cliquet-rodcraft-rc3005-8951078042:october2-tools-rodcraft-catalog-p19:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p19",
+      "productId": "cle-a-cliquet-rodcraft-rc3005-8951078042",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "114703dd23a74cc13a876509f44087340c1f371f6c30088dd1f6bb74824103ae",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p19",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=19",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 19",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-cliquet-rodcraft-rc3010-8951078013:october2-tools-rodcraft-catalog-p19:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p19",
+      "productId": "cle-a-cliquet-rodcraft-rc3010-8951078013",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "890977a1e4c17d5b8d103a5c3287b5b3472d98ab0c6bb2f94560b5478a7776b1",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p19",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=19",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 19",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-cliquet-rodcraft-rc3060-8951078062:october2-tools-rodcraft-catalog-p18:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p18",
+      "productId": "cle-a-cliquet-rodcraft-rc3060-8951078062",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "8aa926d25249ebd5b5456c7ceb9c78f1ed907009127a027bb05852dc24567de5",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p18",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=18",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 18",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-cliquet-rodcraft-rc3100-8951078004:october2-tools-rodcraft-catalog-p20:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p20",
+      "productId": "cle-a-cliquet-rodcraft-rc3100-8951078004",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "cba4b6b25a0d4b269ac88f9d8b5b153a74e4d2d87bd995d1460b58bdae211df7",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p20",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=20",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 20",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-cliquet-rodcraft-rc3200-8951078023:october2-tools-rodcraft-catalog-p20:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p20",
+      "productId": "cle-a-cliquet-rodcraft-rc3200-8951078023",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "bba3032ded28ff332963a172b35fed4617fe2718afe79df7fe8b6ef2ce32e640",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p20",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=20",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 20",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-cliquet-rodcraft-rc3260-8951078033:october2-tools-rodcraft-catalog-p19:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p19",
+      "productId": "cle-a-cliquet-rodcraft-rc3260-8951078033",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "ec023b186b6e92a7e435a356d67c51a4fd84f04f5ca11ac711b90c656b62c8dc",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p19",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=19",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 19",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-cliquet-rodcraft-rc3600-8951078034:october2-tools-rodcraft-catalog-p20:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p20",
+      "productId": "cle-a-cliquet-rodcraft-rc3600-8951078034",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "86eaa3ac0d57eb51515aa1c8db3eb492bd256a16bfa8778a4cbfaecfdb77dfe9",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p20",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=20",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 20",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-cliquet-rodcraft-rc3607-8951078114:october2-tools-rodcraft-catalog-p21:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p21",
+      "productId": "cle-a-cliquet-rodcraft-rc3607-8951078114",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "9408abb11799248812fce306486fae7b6384099ceddadb524701277dd8aeee80",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p21",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=21",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 21",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:cle-a-cliquet-rodcraft-rc3700-8951078074:october2-tools-rodcraft-catalog-p21:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p21",
+      "productId": "cle-a-cliquet-rodcraft-rc3700-8951078074",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "1512f7ffba6ce350466558226aaef3c67f2a05bfe41883d0747e01a448b5c116",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p21",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=21",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 21",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:derouilleur-a-aiguilles-rodcraft-rc5610-8951076001:october2-tools-rodcraft-catalog-p44:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p44",
+      "productId": "derouilleur-a-aiguilles-rodcraft-rc5610-8951076001",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "768c952042f784be95740162f9f474230f73de1a25f0f4585ad89d03c10d6f8e",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p44",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=44",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 44",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:derouilleur-a-aiguilles-rodcraft-rc5615-8951076002:october2-tools-rodcraft-catalog-p44:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p44",
+      "productId": "derouilleur-a-aiguilles-rodcraft-rc5615-8951076002",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "6db229ac634a10f40b69f4d6d6d5a73ff59e10a5654f57a5c6929ab51805f714",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p44",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=44",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 44",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:derouilleur-a-aiguilles-rodcraft-rc5620-8951076003:october2-tools-rodcraft-catalog-p44:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p44",
+      "productId": "derouilleur-a-aiguilles-rodcraft-rc5620-8951076003",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "1e090c6a3621a2c5b51a77c096b6be5e34dc8e6b226825e8e48daca440b0698a",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p44",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=44",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 44",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:derouilleur-a-aiguilles-rodcraft-rc5625-8951076004:october2-tools-rodcraft-catalog-p45:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p45",
+      "productId": "derouilleur-a-aiguilles-rodcraft-rc5625-8951076004",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "f7303ef1f3a97289b02d6158de3be9253f977e697ae0163af1015ac158b15575",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p45",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=45",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 45",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:lime-alternative-rodcraft-rc6900-8951075000:october2-tools-rodcraft-catalog-p50:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p50",
+      "productId": "lime-alternative-rodcraft-rc6900-8951075000",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "fbf99e24efa36b4246865f681831de716a24f097cf66904b2ca420efc3889bbe",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p50",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=50",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 50",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:meuleuse-rodcraft-rc7009-8951000274:october2-tools-rodcraft-catalog-p58:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p58",
+      "productId": "meuleuse-rodcraft-rc7009-8951000274",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "ceabf205a5b7e588908c11a880e023af412124881fbcce2df9a6014a7bf9f8f9",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p58",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=58",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 58",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:meuleuse-rodcraft-rc7038-8951000328:october2-tools-rodcraft-catalog-p62:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p62",
+      "productId": "meuleuse-rodcraft-rc7038-8951000328",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "253b40bef82af6a2e503b7a01bf2b772d31fb39857cf24b03806d6732f125070",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p62",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=62",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 62",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:meuleuse-rodcraft-rc7051-8951000165:october2-tools-rodcraft-catalog-p58:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p58",
+      "productId": "meuleuse-rodcraft-rc7051-8951000165",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "882de11aea2d9cbf9569406352fc0349de90b54e4bca4bae82071475462d0ed3",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p58",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=58",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 58",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:meuleuse-rodcraft-rc7058-8951000278:october2-tools-rodcraft-catalog-p58:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p58",
+      "productId": "meuleuse-rodcraft-rc7058-8951000278",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "6d4937593abdb842a19066a73af33fccbfd54a11051dfc77227a197662754f91",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p58",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=58",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 58",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:meuleuse-rodcraft-rc7068-8951000329:october2-tools-rodcraft-catalog-p62:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p62",
+      "productId": "meuleuse-rodcraft-rc7068-8951000329",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "f68436a57a9d7243c08062055ef182840fbbaa359325ffb3bd8d30f4ff70ef59",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p62",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=62",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 62",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:meuleuse-rodcraft-rc7120-8951072001:october2-tools-rodcraft-catalog-p67:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p67",
+      "productId": "meuleuse-rodcraft-rc7120-8951072001",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "07ef0c4652394c5ae9aa09726a5bd7f2662a453155e77de59f274b8761acd858",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p67",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=67",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 67",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:meuleuse-rodcraft-rc7128-8951000277:october2-tools-rodcraft-catalog-p60:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p60",
+      "productId": "meuleuse-rodcraft-rc7128-8951000277",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "dd1a9a915c01489fbcba1f6d52031cf1911b81add8bff84177667e3070031d92",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p60",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=60",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 60",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:meuleuse-rodcraft-rc7150-8951072021:october2-tools-rodcraft-catalog-p67:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p67",
+      "productId": "meuleuse-rodcraft-rc7150-8951072021",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "39b7968bb3b9b9d8b4303aeba4b8b9b337948bfcbd7b284fbf347fed47fc1712",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p67",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=67",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 67",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:meuleuse-rodcraft-rc7155-8951072041:october2-tools-rodcraft-catalog-p69:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p69",
+      "productId": "meuleuse-rodcraft-rc7155-8951072041",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "710c61a237a8e0c6eaa5e97431bc1035f44a1550cc10a99d3e823f70a7a099df",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p69",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=69",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 69",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:meuleuse-rodcraft-rc7170-8951000144:october2-tools-rodcraft-catalog-p69:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p69",
+      "productId": "meuleuse-rodcraft-rc7170-8951000144",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "0222efc83b9d0cbeeedac93974ccbc414b18e0d040451cdb84af2f9500e35cee",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p69",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=69",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 69",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:meuleuse-rodcraft-rc7190-8951075101:october2-tools-rodcraft-catalog-p68:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p68",
+      "productId": "meuleuse-rodcraft-rc7190-8951075101",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "b1ce23aa39df87ce0d46f5dcd751eeaaf73296e99cb2466f9ab3a25b61df57e5",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p68",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=68",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 68",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:meuleuse-rodcraft-rc7684-8951000115:october2-tools-rodcraft-catalog-p62:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p62",
+      "productId": "meuleuse-rodcraft-rc7684-8951000115",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "a8cb66b8357cca70b71626cc9e4d27d110150df7cdee602144843506feb99052",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p62",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=62",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 62",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:perceuse-rodcraft-rc4100-8951073000:october2-tools-rodcraft-catalog-p30:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p30",
+      "productId": "perceuse-rodcraft-rc4100-8951073000",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "7f119f9f300078a101482ea6ca36e83fd9223dd6f5908b8d013f22acb65012d6",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p30",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=30",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 30",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:perceuse-rodcraft-rc4105-8951073001:october2-tools-rodcraft-catalog-p30:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p30",
+      "productId": "perceuse-rodcraft-rc4105-8951073001",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "b881e29446da9502fb500db720ff1fe2794b0556c5690ac87db6571bd0a79c6a",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p30",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=30",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 30",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:perceuse-rodcraft-rc4107-8951073011:october2-tools-rodcraft-catalog-p30:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p30",
+      "productId": "perceuse-rodcraft-rc4107-8951073011",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "44a22b7ce0e91903fcc9503e2af22ac2823b73bd81f6b0a35be392adb7017690",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p30",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=30",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 30",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:perceuse-rodcraft-rc4500-8951073021:october2-tools-rodcraft-catalog-p31:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p31",
+      "productId": "perceuse-rodcraft-rc4500-8951073021",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "0332a1de2df4cf76d84c0595951bdf11e7e49c63ba1fa7c7e19deebf73116641",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p31",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=31",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 31",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:perceuse-rodcraft-rc4550-8951073031:october2-tools-rodcraft-catalog-p32:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p32",
+      "productId": "perceuse-rodcraft-rc4550-8951073031",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "bb1965becdf027a9f6e13de3ce79283376ef185af0196adeb0d66d8350e1fd53",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p32",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=32",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 32",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:perceuse-rodcraft-rc4607-8951073090:october2-tools-rodcraft-catalog-p31:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p31",
+      "productId": "perceuse-rodcraft-rc4607-8951073090",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "c2c1941932680b370b25f4dbe5c2175e8f8d44009b31e7b8b8b81d16fe2b87f8",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p31",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=31",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 31",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:perceuse-rodcraft-rc4650-8951073050:october2-tools-rodcraft-catalog-p32:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p32",
+      "productId": "perceuse-rodcraft-rc4650-8951073050",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "237c8213e854b68115cc45a564ebe1efc636d432cd5a4bf2967d1d1dbd7e7b7a",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p32",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=32",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 32",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:polisseuse-rodcraft-rc7130-8951072004:october2-tools-rodcraft-catalog-p78:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p78",
+      "productId": "polisseuse-rodcraft-rc7130-8951072004",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "16760daae46c013bcbb1648b3cee1f08447f3a39e9149ad149c415bad651dd3d",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p78",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=78",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 78",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:ponceuse-orbitale-rodcraft-rc7200v-8951072111:october2-tools-rodcraft-catalog-p70:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p70",
+      "productId": "ponceuse-orbitale-rodcraft-rc7200v-8951072111",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "f9254a007c2cc9861928e31afe70ff4a5e1776c43e04fe65b05c59f5f38cba94",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p70",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=70",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 70",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:ponceuse-orbitale-rodcraft-rc7661v-8951072231:october2-tools-rodcraft-catalog-p70:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p70",
+      "productId": "ponceuse-orbitale-rodcraft-rc7661v-8951072231",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "f61e2b2d6a27fdd38f2646f6bff5a60f78b0158f99a3c3277c9ce5f6b764d350",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p70",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=70",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 70",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:ponceuse-orbitale-rodcraft-rc7682-8951000005:october2-tools-rodcraft-catalog-p70:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p70",
+      "productId": "ponceuse-orbitale-rodcraft-rc7682-8951000005",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "7666450254eefdea78f02b751583c89770d58c305fdfc531c499aa4bc5de79c8",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p70",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=70",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 70",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:ponceuse-orbitale-rodcraft-rc7691v-8951072212:october2-tools-rodcraft-catalog-p72:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p72",
+      "productId": "ponceuse-orbitale-rodcraft-rc7691v-8951072212",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "8ec8f460279253d71e0b0ccffd00ab96301fb47d2a706a853153a137746bc909",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p72",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=72",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 72",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:ponceuse-vibrante-rodcraft-rc7500-8951072101:october2-tools-rodcraft-catalog-p73:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p73",
+      "productId": "ponceuse-vibrante-rodcraft-rc7500-8951072101",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "d1c4f9a13f4c8e1ed2390f904c01b1cd2b92c52823c07a0996c985905b5b710c",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p73",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=73",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 73",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:scie-rodcraft-rc6050-8951079001:october2-tools-rodcraft-catalog-p50:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p50",
+      "productId": "scie-rodcraft-rc6050-8951079001",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "0d26713c3aad5b686b3c1bcdef8a1b89ef390a181931c51cea630d62c8a4c88d",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p50",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=50",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 50",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:scie-rodcraft-rc6067-8951079011:october2-tools-rodcraft-catalog-p50:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p50",
+      "productId": "scie-rodcraft-rc6067-8951079011",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "7a650071404bf08bcf18b8f8e20b69fd54610583c521fbcea0e8490be5169604",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p50",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=50",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 50",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:visseuse-rodcraft-rc4700-8951073002:october2-tools-rodcraft-catalog-p26:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p26",
+      "productId": "visseuse-rodcraft-rc4700-8951073002",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "49c3f2b167f886c818231cd883b86faaef71fa40c627fbff43824176422cb6b2",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p26",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=26",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 26",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:visseuse-rodcraft-rc4760-8951073012:october2-tools-rodcraft-catalog-p26:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p26",
+      "productId": "visseuse-rodcraft-rc4760-8951073012",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "eabc60e1b0093be0c0bae58f1343b46d03a896190c325a965523b0519a14d86c",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p26",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=26",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 26",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
+    },
+    {
+      "id": "corrected:visseuse-rodcraft-rc4784-8951073023:october2-tools-rodcraft-catalog-p26:2026-10-02",
+      "evidenceId": "october2-tools-rodcraft-catalog-p26",
+      "productId": "visseuse-rodcraft-rc4784-8951073023",
+      "productType": "tool",
+      "occurredAt": "2026-10-02",
+      "kind": "corrected",
+      "summary": "Rodcraft : le glossaire établit un plafond d’entrée de 6,3 bar, sans point exact de mesure de consommation ; pression minimale et typique retirées, interprétation du glossaire page PDF 4 corrigée.",
+      "fingerprint": "3b293ad1a0de9da7f5a48fab9fba6a941d3985d93a630cdd06ec16d36c6ce607",
+      "snapshot": {
+        "id": "october2-tools-rodcraft-catalog-p26",
+        "sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=26",
+        "sourceLabel": "Rodcraft Tools and Workshop Equipment 2017-2018, catalogue fabricant, page PDF 26",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir. Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie."
+      }
     }
   ],
-  "historyVersion": "ef489d63f6ed1d52e499479a5d484d4e82769f19de4deee02740fbbb20d87b7b"
+  "historyVersion": "520ac08aa84cec31fb80661514c82e391158a6985db860a28bcb74109a4cc109"
 }

@@ -60,7 +60,7 @@ export function buildDocumentedToolsOctober2(snapshot) {
   identities.add(identity);
   if (row.pdfRowId || row.imageRowId || row.documentRowId) {
    const original = documentRows.get(row.pdfRowId ?? row.imageRowId ?? row.documentRowId);
-   if (!original || ['sourceId', 'page', 'model', 'mpn', 'categoryId', 'pressureBar', 'pressureOriginal', 'pressureUnit', 'knownOperatingPressureBar', 'operatingPressureRange', 'flowOriginal', 'flowUnit', 'flowBasis', 'flowQuote', 'pressureScope', 'pressureQuote', 'rawLine', 'details', 'tableRowBox', 'secondarySources', 'sourceTechnicalCells', 'sourceTitle', 'sourceLimitations', 'withheldFlowReason'].some(key => JSON.stringify(original[key]) !== JSON.stringify(row[key]))) throw new Error('Ligne documentaire altérée');
+   if (!original || ['sourceId', 'page', 'model', 'mpn', 'categoryId', 'pressureBar', 'pressureOriginal', 'pressureUnit', 'knownOperatingPressureBar', 'operatingPressureBasis', 'operatingPressureRange', 'flowOriginal', 'flowUnit', 'flowBasis', 'flowQuote', 'pressureScope', 'pressureQuote', 'rawLine', 'details', 'tableRowBox', 'secondarySources', 'sourceTechnicalCells', 'sourceTitle', 'sourceLimitations', 'withheldFlowReason'].some(key => JSON.stringify(original[key]) !== JSON.stringify(row[key]))) throw new Error('Ligne documentaire altérée');
   }
   if (row.tableId) {
    const table = tables.get(row.tableId), cell = table?.consumptionCells[row.column], identity = table?.identities[row.tableIdentityIndex];
@@ -76,6 +76,9 @@ export function buildDocumentedToolsOctober2(snapshot) {
   if (row.flowBasis === 'free-speed' && !/idling|free speed|no[ -]load|à vide/i.test(row.flowQuote)) throw new Error('Débit à vide non documenté');
   if (row.flowBasis === 'per-action' && (!['L/cycle', 'ft3/cycle'].includes(row.flowUnit) || !/cycle|shot|coup/i.test(row.flowQuote))) throw new Error('Volume par action non documenté');
   const measured = row.pressureScope === 'measurement' && row.pressureBar !== null;
+  // The Rodcraft glossary establishes an inlet ceiling, not a consumption test point.
+  if (source.id === 'rodcraft-catalog' && (row.pressureScope !== 'operating-only' || row.operatingPressureBasis !== 'maximum' || row.knownOperatingPressureBar !== 6.3 || !row.secondarySources?.some(ref => ref.sourceId === source.id && ref.page === 4))) throw new Error('Plafond Rodcraft non documenté');
+  if (row.operatingPressureBasis !== undefined && (source.id !== 'rodcraft-catalog' || row.operatingPressureBasis !== 'maximum' || row.pressureScope !== 'operating-only' || row.pressureOriginal !== 6.3 || row.pressureUnit !== 'bar' || !/max[.]\s*6[.]3\s*bar/i.test(row.pressureQuote))) throw new Error('Portée du plafond de pression altérée');
   if (measured) {
    positive(row.pressureBar);
    if (!/\d[\d.,]*\s*(?:bar|psi|MPa)/i.test(row.pressureQuote)) throw new Error('Pression numérique non documentée');
@@ -99,7 +102,7 @@ export function buildDocumentedToolsOctober2(snapshot) {
    if (!source.allowedFlowUnits?.includes(row.flowUnit) || !Object.hasOwn(factors, row.flowUnit) || !row.rawLine.includes(String(row.flowOriginal))) throw new Error('Consommation ou unité absente');
    flow = rounded(positive(Number(row.flowOriginal)) * factors[row.flowUnit]);
   } else if (row.flowBasis !== 'missing') throw new Error('Consommation absente');
-  const primary = { id: `october2-tools-${slug(source.id)}-p${row.page}`, sourceUrl: source.url + (source.contentType?.includes('pdf') ? `#page=${row.page}` : ''), sourceLabel: source.sourceLabel + (source.contentType?.includes('pdf') ? `, page PDF ${row.page}` : ''), sourceType: source.contentType?.includes('pdf') ? 'manual' : 'manufacturer', sourceRole: 'primary', retrievedAt: source.observedAt.slice(0, 10), confidence: 'B', notes: `SHA-256 de la réponse source : ${source.sha256}. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir.` };
+  const primary = { id: `october2-tools-${slug(source.id)}-p${row.page}`, sourceUrl: source.url + (source.contentType?.includes('pdf') ? `#page=${row.page}` : ''), sourceLabel: source.sourceLabel + (source.contentType?.includes('pdf') ? `, page PDF ${row.page}` : ''), sourceType: source.contentType?.includes('pdf') ? 'manual' : 'manufacturer', sourceRole: 'primary', retrievedAt: source.observedAt.slice(0, 10), confidence: 'B', notes: `SHA-256 de la réponse source : ${source.sha256}. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir.${source.id === 'rodcraft-catalog' ? ' Portée revue le 2026-10-02 : plafond d’entrée du glossaire page PDF 4, pression de mesure de la consommation non établie.' : ''}` };
   const supplementary = (row.secondarySources ?? []).map(ref => {
    const secondary = sources.get(ref.sourceId);
    if (!secondary?.brands.includes(row.brand) || !Number.isInteger(ref.page) || ref.page < 1) throw new Error('Document complémentaire non identifié');
@@ -109,7 +112,7 @@ export function buildDocumentedToolsOctober2(snapshot) {
   const connection = documentedConnectionFacts(row, source);
   const id = slug(`${row.categoryId}-${row.brand}-${row.model}${row.mpn !== row.model ? `-${row.mpn}` : ''}`), label = `${row.brand} ${row.model}${row.mpn !== row.model ? ` (réf. ${row.mpn})` : ''}`;
   const knownPressure = measured ? row.pressureBar : row.knownOperatingPressureBar;
-  const range = operatingRange ?? (knownPressure ? { min: positive(knownPressure), typical: knownPressure, max: knownPressure } : {});
+  const range = operatingRange ?? (knownPressure ? row.operatingPressureBasis === 'maximum' ? { max: positive(knownPressure) } : { min: positive(knownPressure), typical: knownPressure, max: knownPressure } : {});
   const missing = flow === null || !measured;
   const explanation = flow === null ? row.withheldFlowReason ?? 'Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.' : !measured ? 'La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.' : '';
   const demand = missing ? { demandModel: 'variable-volume', workingPressureBar: range, demandExplanation: explanation } : row.flowBasis === 'per-action' ? { demandModel: 'per-action', workingPressureBar: range, airPerActionLiters: flow, actionLabel: 'cycle de pose' } : { demandModel: 'fixed-flow', workingPressureBar: range, airflowLpm: { min: flow, typical: flow, max: flow }, ...(!['load', 'maximum'].includes(row.flowBasis) ? { airflowBasis: row.flowBasis } : {}) };
