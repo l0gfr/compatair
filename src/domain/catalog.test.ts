@@ -1,9 +1,16 @@
 import { describe, expect, it } from 'vitest';
 import { compressors, tools } from '../data/catalog';
-import { toolTaxonomy } from '../data/taxonomy';
+import { toolTaxonomy, toolUsageForCategory } from '../data/taxonomy';
 import { compressorSchema, toolProfileSchema } from './catalog';
 
 describe('catalog schemas', () => {
+	it('accepts a paint gun without assigning an undocumented HVLP or LVLP technology', () => {
+		const base = tools.find(item => item.demandModel === 'variable-volume')!;
+		const gun = toolProfileSchema.parse({ ...base, categoryId: 'pistolet-peinture', workingPressureBar: { min: 1.5, max: 2.5 } });
+		expect(gun.categoryId).toBe('pistolet-peinture');
+		expect(gun.workingPressureBar).toEqual({ min: 1.5, max: 2.5 });
+		expect(toolUsageForCategory(gun.categoryId).id).toBe('peinture');
+	});
 	it('allows unknown pressure only for an explicitly incomplete demand and rejects invalid documented bounds', () => {
 		const base = tools.find(item => item.demandModel === 'variable-volume')!;
 		expect(toolProfileSchema.parse({ ...base, workingPressureBar: {} }).workingPressureBar).toEqual({});

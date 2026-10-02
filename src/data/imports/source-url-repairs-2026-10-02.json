@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0.0",
+  "repairs": [
+    {
+      "oldUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-piston-compressors/airstar-503100-2009531/",
+      "newUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-503100-2009531/",
+      "verifiedAt": "2026-10-02",
+      "httpStatus": 200,
+      "sourceSha256": "d24b028a45cdedf080f82804c5d3920f9608975273ec40f89598890ed3aa7b34",
+      "references": [
+        {
+          "productId": "aircraft-airstar-503-100",
+          "evidenceId": "aircraft-2009531-20260927"
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/iss-c-12-compact-pro-2401470/",
+      "newUrl": "https://www.mystuermer.com/MeDaPro/Rohdaten/Dokumente/Betriebsanleitung_de/AC_2401470_BA_ISS-C_1_2_Compact_PRO_DE.pdf#page=4",
+      "verifiedAt": "2026-10-02",
+      "httpStatus": 200,
+      "sourceSha256": "7714b203bb4ca100caa62840245b02ebd9667fd6f31326b459901d8beaa90d7c",
+      "references": [
+        {
+          "productId": "aircraft-iss-c-1-2-compact-pro",
+          "evidenceId": "aircraft-2401470-20260927"
+        }
+      ],
+      "evidencePatch": {
+        "sourceLabel": "Aircraft, notice ISS-C 1/2\" Compact PRO, référence 2401470, édition du 11 juillet 2019, page PDF 4",
+        "sourceType": "manual",
+        "notes": "La notice confirme 128 L/min de consommation moyenne et 6,2 bar à l’entrée de l’outil. Le diamètre de flexible de l’ancienne fiche n’est pas repris dans ce document et est retiré. SHA-256 de la réponse : 7714b203bb4ca100caa62840245b02ebd9667fd6f31326b459901d8beaa90d7c"
+      },
+      "withheldSpecificationLabels": [
+        "Diamètre intérieur du flexible"
+      ],
+      "withheldVerifiedFacts": [
+        "Diamètre intérieur du flexible : 13 mm."
+      ],
+      "overviewRemovals": [
+        "Diamètre intérieur du flexible : 13 mm. "
+      ]
+    }
+  ],
+  "preservedTechnicalValues": [
+    {
+      "id": "aircraft-airstar-503-100",
+      "mpn": "2009531",
+      "intakeFlowLpm": 510,
+      "fadCurve": [],
+      "tankLiters": 100,
+      "maxPressureBar": 10
+    },
+    {
+      "id": "aircraft-iss-c-1-2-compact-pro",
+      "mpn": "2401470",
+      "airflowLpm": {
+        "min": 128,
+        "typical": 128,
+        "max": 128
+      },
+      "airflowBasis": "average",
+      "workingPressureBar": {
+        "min": 6.2,
+        "typical": 6.2,
+        "max": 6.2
+      }
+    }
+  ],
+  "withheldSpecifications": [
+    {
+      "productId": "aircraft-iss-c-1-2-compact-pro",
+      "label": "Diamètre intérieur du flexible",
+      "reason": "Absent de la notice officielle de remplacement, section 3 page PDF 4."
+    }
+  ]
+}

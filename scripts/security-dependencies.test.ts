@@ -101,10 +101,15 @@ describe('installed dependency security boundaries', () => {
 			const { once } = await import('node:events');
 			const content = 'synthetic-pac';
 			for (const mode of ['mdtm', 'mlsd', 'foreign-pasv']) {
-				const sockets = new Set(), servers = [], commands = [];
+				const sockets = new Set(), servers = [], commands = [], controlErrors = [];
 				let controlClosed;
 				const control = createServer(socket => {
-					controlClosed = once(socket, 'close');
+					// basic-ftp closes its control socket after the verified download.
+					// macOS may reset this fixture socket while its final reply is unread.
+					// Keep client transfer/host assertions strict; inspect server errors only
+					// after those assertions succeed, rather than rejecting an unawaited promise.
+					controlClosed = new Promise(resolve => socket.once('close', resolve));
+					socket.on('error', error => controlErrors.push(error));
 					sockets.add(socket);
 					socket.on('close', () => sockets.delete(socket));
 					socket.setEncoding('utf8');
@@ -143,7 +148,10 @@ describe('installed dependency security boundaries', () => {
 				try {
 					control.listen(0, '127.0.0.1'); await once(control, 'listening');
 					const url = new URL('ftp://127.0.0.1:' + control.address().port + '/example.pac');
-					if (mode === 'foreign-pasv') await assert.rejects(library.getUri(url), /PASV returned another host/);
+					if (mode === 'foreign-pasv') {
+						await assert.rejects(library.getUri(url), /PASV returned another host/);
+						assert.equal(commands.some(command => command.startsWith('RETR')), false);
+					}
 					else {
 						const stream = await library.getUri(url), chunks = [];
 						for await (const chunk of stream) chunks.push(chunk);
@@ -152,6 +160,7 @@ describe('installed dependency security boundaries', () => {
 						assert.equal(commands.some(command => command.startsWith('MLSD')), mode === 'mlsd');
 					}
 					await controlClosed;
+					for (const error of controlErrors) assert.equal(error.code, 'ECONNRESET');
 				} finally {
 					for (const socket of sockets) socket.destroy();
 					for (const server of servers) server.close();

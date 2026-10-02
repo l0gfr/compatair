@@ -3,7 +3,7 @@ title: "Clé à chocs : consommation moyenne ou en charge pour choisir le compre
 seoTitle: "Clé à chocs : débit moyen ou en charge ?"
 description: "156 ou 612 L/min pour une CP7732C ? Comprendre les libellés constructeur, les écarts entre documents et le débit à retenir avant d’acheter un compresseur."
 pubDate: 2026-09-25
-updatedDate: 2026-09-29
+updatedDate: 2026-10-02
 category: "Comprendre"
 audiences: [particulier, professionnel]
 metiers: [garage-automobile, atelier-poids-lourds]
@@ -84,3 +84,5 @@ La question d’achat devient précise : « Cette production, ce stockage et ce 
 - [Chicago Pneumatic, fiche 8941077321](https://tools.cp.com/en/products/impactwrenches/cp7732c-sku8941077321) : valeurs web en charge et à vide.
 - [Einhell, référence 4010393](https://www.einhell.fr/p/4010393/) : points de débit du compresseur.
 - [CAGI, Resource Library](https://www.cagi.org/resource-library) : vocabulaire de capacité et de stockage.
+
+Les [Rongpeng RP7432 et RP7432L](/guides/rongpeng-rp7432-rp7432l-encombrement-roue/) illustrent aussi la séparation entre consommation moyenne publiée et contrôle de l’accès avec une douille montée.

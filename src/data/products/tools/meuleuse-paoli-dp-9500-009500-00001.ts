@@ -1,0 +1,119 @@
+const product = {
+	"id": "meuleuse-paoli-dp-9500-009500-00001",
+	"slug": "meuleuse-paoli-dp-9500-009500-00001",
+	"categoryId": "meuleuse",
+	"category": "meuleuse",
+	"label": "Paoli DP 9500 (réf. 009500.00001)",
+	"brand": "Paoli",
+	"model": "DP 9500",
+	"mpn": "009500.00001",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {
+		"min": 6.3,
+		"typical": 6.3,
+		"max": 6.3
+	},
+	"demandExplanation": "Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/meuleuse-paoli-dp-9500-009500-00001.webp",
+		"alt": "Repères techniques : Paoli DP 9500 (réf. 009500.00001)",
+		"sourceUrl": "https://www.dinopaoli.com/wp-content/uploads/PAOLI_GENERAL-CATALOGUE_2024.pdf",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+	},
+	"variant": {
+		"familyId": "paoli-dp-9500",
+		"label": "Référence 009500.00001",
+		"distinguishingAttributes": {
+			"reference": "009500.00001",
+			"Vitesse à vide": "7 600 tr/min",
+			"Masse publiée": "2,0 kg"
+		}
+	},
+	"editorial": {
+		"overview": "Paoli DP 9500 (réf. 009500.00001). Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse. Vitesse à vide : 7 600 tr/min. Masse publiée : 2,0 kg.",
+		"verifiedFacts": [
+			"Vitesse à vide : 7 600 tr/min.",
+			"Masse publiée : 2,0 kg.",
+			"Longueur publiée : 231 mm.",
+			"Puissance publiée : 1715 W.",
+			"Diamètre du disque : 180 mm."
+		],
+		"limitations": [
+			"Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Vitesse à vide",
+			"value": "7 600 tr/min",
+			"evidenceIds": [
+				"october2-tools-paoli-general-p96"
+			]
+		},
+		{
+			"label": "Masse publiée",
+			"value": "2,0 kg",
+			"evidenceIds": [
+				"october2-tools-paoli-general-p96"
+			]
+		},
+		{
+			"label": "Longueur publiée",
+			"value": "231 mm",
+			"evidenceIds": [
+				"october2-tools-paoli-general-p96"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "1715 W",
+			"evidenceIds": [
+				"october2-tools-paoli-general-p96"
+			]
+		},
+		{
+			"label": "Diamètre du disque",
+			"value": "180 mm",
+			"evidenceIds": [
+				"october2-tools-paoli-general-p96"
+			]
+		},
+		{
+			"label": "Portée de la pression dans la source",
+			"value": "Working pressure Pressione di utilizzo   90 psi - 6,3 bar 90 psi - 6,3 bar",
+			"evidenceIds": [
+				"october2-tools-paoli-general-p96"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "october2-tools-paoli-general-p96",
+			"sourceUrl": "https://www.dinopaoli.com/wp-content/uploads/PAOLI_GENERAL-CATALOGUE_2024.pdf#page=96",
+			"sourceLabel": "Paoli, documentation technique fabricant, page PDF 96",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-01",
+			"confidence": "B",
+			"notes": "SHA-256 de la réponse source : 4a60f1e1ab29d27422ad6cd8605948f5e32d197f27b3c300700631554a6d1352. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"october2-tools-paoli-general-p96"
+		],
+		"workingPressureBar": [
+			"october2-tools-paoli-general-p96"
+		],
+		"demandExplanation": [
+			"october2-tools-paoli-general-p96"
+		]
+	},
+	"notes": [
+		"Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse."
+	]
+};
+
+export default product;

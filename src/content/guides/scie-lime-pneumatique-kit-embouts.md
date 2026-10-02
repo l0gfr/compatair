@@ -3,6 +3,7 @@ title: "Scie-lime pneumatique : machine, kit et références d’embouts"
 seoTitle: "Scie-lime pneumatique : que contient le kit ?"
 description: "SI-4710F et SI-4740F ajoutent des limes à deux machines différentes. Vérifier le contenu de livraison, la fixation et la course avant achat."
 pubDate: 2026-09-26
+updatedDate: 2026-10-02
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture", "maintenance-industrielle"]
@@ -44,3 +45,5 @@ Le remplacement d’une lame par une lime s’effectue selon la notice, avec les
 Les consommations maximales converties valent **168 L/min** pour la famille SI-4710 et **288 L/min** pour la famille SI-4740. Le [catalogue fixe la pression de référence](https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43) à 6,3 bar en fonctionnement. La différence de débit relève ici de la machine, pas du simple nombre d’embouts livrés.
 
 Les fiches [SI-4710](/outils-pneumatiques/shinano-si-4710/) et [SI-4740](/outils-pneumatiques/shinano-si-4740/) permettent de revenir à la base technique. Le [guide piston contre moteur rotatif](/guides/scie-pneumatique-moteur-rotatif-piston/) complète le choix lorsque le mécanisme compte autant que le contenu du coffret.
+
+La [Aircat 6355-A](/guides/aircat-6355a-scie-tube-trois-pouces/) distingue deux capacités annoncées, acier doux et tube, sans en déduire une matrice universelle de matière et d’épaisseur.

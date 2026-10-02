@@ -3,7 +3,7 @@ title: "Pistolet peinture à gravité, à aspiration ou à cuve sous pression :
 seoTitle: "Pistolet gravité, aspiration ou cuve sous pression ?"
 description: "Comparez l’alimentation en peinture et le besoin d’air sans confondre gravité, aspiration, cuve sous pression et technologie HVLP. Grille de choix atelier."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-30
+updatedDate: 2026-10-02
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture", "menuiserie-agencement"]
@@ -73,3 +73,5 @@ Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA 
 
 - [DeVilbiss/Binks, SB-2-001, principes et circuits](https://binks.com/support/resource-library/spray-gun-troubleshooting-preventative-maintenance-guide-sb-2-001/)
 - [Binks, ABC’s of Spray Finishing, 1-239](https://binks.com/support/resource-library/abcs-of-spray-finishing-1-239/)
+
+Pour un produit chargé destiné à la céramique, le [W200 ZP2](/guides/iwata-w200-zp2-glacure-ceramique-air/) possède un point de consommation explicitement associé à la pulvérisation ; cette donnée ne se transfère pas aux autres pistolets.

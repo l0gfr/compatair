@@ -3,6 +3,7 @@ title: "Acheter un outil industriel : source, version et stock"
 seoTitle: "Acheter un outil industriel : source, version et stock"
 description: "Une fiche officielle prouve des caractéristiques documentées, pas un stock actuel. Préparer un achat industriel avec référence, notice et offre datée."
 pubDate: 2026-09-26
+updatedDate: 2026-10-02
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -43,3 +44,5 @@ Une offre « équivalente » peut être pertinente, mais l’équivalence reste 
 CompatAir peut donc publier une fiche technique tout en indiquant qu’aucun vendeur n’est vérifié. Cette absence de lien marchand est préférable à une disponibilité inventée. Pour acheter, partez des caractéristiques traçables puis obtenez une offre actuelle correspondant à la bonne référence.
 
 La pression de référence est documentée dans [Fiam, brochure technique en-24, page PDF 4](https://www.fiamgroup.com/wp-content/uploads/2019/11/en-24.pdf#page=4).
+
+Les [ATP1043EO-5S et TH](/guides/atp1043eo-sortie-spline-carre-retenue/) montrent pourquoi la sortie, la retenue et une contradiction de gâchette doivent être résolues dans le dossier de commande.

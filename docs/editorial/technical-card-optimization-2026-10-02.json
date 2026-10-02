@@ -1,0 +1,14 @@
+{
+  "recipe": {
+    "webpQuality": 70,
+    "alphaQuality": 100,
+    "smartSubsample": true,
+    "effort": 6,
+    "resize": false
+  },
+  "count": 10907,
+  "beforeBytes": 132811544,
+  "afterBytes": 101445676,
+  "savedBytes": 31365868,
+  "scope": "Only existing CompatAir generated technical cards; width and height preserved; only smaller outputs retained."
+}

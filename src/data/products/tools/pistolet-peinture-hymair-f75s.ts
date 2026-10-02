@@ -1,0 +1,109 @@
+const product = {
+	"id": "pistolet-peinture-hymair-f75s",
+	"slug": "pistolet-peinture-hymair-f75s",
+	"categoryId": "pistolet-peinture",
+	"category": "pistolet-peinture",
+	"label": "Hymair F75S",
+	"brand": "Hymair",
+	"model": "F75S",
+	"mpn": "F75S",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {
+		"min": 4.5,
+		"max": 6
+	},
+	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/pistolet-peinture-hymair-f75s.webp",
+		"alt": "Repères techniques : Hymair F75S",
+		"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+	},
+	"variant": {
+		"familyId": "hymair-f75s",
+		"label": "Référence F75S",
+		"distinguishingAttributes": {
+			"reference": "F75S",
+			"Capacité du godet": "750 ml",
+			"Buse standard déclarée": "1.5 mm"
+		}
+	},
+	"editorial": {
+		"overview": "Hymair F75S. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Capacité du godet : 750 ml. Buse standard déclarée : 1.5 mm.",
+		"verifiedFacts": [
+			"Capacité du godet : 750 ml.",
+			"Buse standard déclarée : 1.5 mm.",
+			"Largeur de jet publiée : 180~230 mm."
+		],
+		"limitations": [
+			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Capacité du godet",
+			"value": "750 ml",
+			"evidenceIds": [
+				"october2-tools-steed-7-p7"
+			]
+		},
+		{
+			"label": "Buse standard déclarée",
+			"value": "1.5 mm",
+			"evidenceIds": [
+				"october2-tools-steed-7-p7"
+			]
+		},
+		{
+			"label": "Largeur de jet publiée",
+			"value": "180~230 mm",
+			"evidenceIds": [
+				"october2-tools-steed-7-p7"
+			]
+		},
+		{
+			"label": "Portée de la pression dans la source",
+			"value": "Operating Pressure: 4.5~6 bar",
+			"evidenceIds": [
+				"october2-tools-steed-7-p7"
+			]
+		},
+		{
+			"label": "Consommation de régime non précisé, hors calcul",
+			"value": "7.2 cfm",
+			"evidenceIds": [
+				"october2-tools-steed-7-p7"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "october2-tools-steed-7-p7",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU#page=7",
+			"sourceLabel": "Hymair, documentation technique fabricant, page PDF 7",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-01",
+			"confidence": "B",
+			"notes": "SHA-256 de la réponse source : 971e9f3f662af10d3c638d5e9c29c8847ee04672c40e29957ad4ca4eb13d61c1. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"october2-tools-steed-7-p7"
+		],
+		"workingPressureBar": [
+			"october2-tools-steed-7-p7"
+		],
+		"demandExplanation": [
+			"october2-tools-steed-7-p7"
+		]
+	},
+	"notes": [
+		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+	]
+};
+
+export default product;

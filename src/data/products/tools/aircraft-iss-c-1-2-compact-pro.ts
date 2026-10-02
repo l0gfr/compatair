@@ -17,16 +17,15 @@ const product = {
 	"image": {
 		"src": "/images/products/aircraft-iss-c-1-2-compact-pro.webp",
 		"alt": "Repères techniques Aircraft ISS-C 1/2\" Compact PRO, référence 2401470",
-		"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/iss-c-12-compact-pro-2401470/",
+		"sourceUrl": "https://www.mystuermer.com/MeDaPro/Rohdaten/Dokumente/Betriebsanleitung_de/AC_2401470_BA_ISS-C_1_2_Compact_PRO_DE.pdf#page=4",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Aircraft ISS-C 1/2\" Compact PRO, référence 2401470. Consommation moyenne publiée : 128 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Diamètre intérieur du flexible : 13 mm. Vitesse de rotation : 11000 min¯¹.",
+		"overview": "Aircraft ISS-C 1/2\" Compact PRO, référence 2401470. Consommation moyenne publiée : 128 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Vitesse de rotation : 11000 min¯¹.",
 		"verifiedFacts": [
 			"Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
 			"Consommation moyenne publiée : 128 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
 			"Référence fabricant : 2401470.",
-			"Diamètre intérieur du flexible : 13 mm.",
 			"Vitesse de rotation : 11000 min¯¹.",
 			"Mandrin ou entraînement publié : ½ \"."
 		],
@@ -46,13 +45,6 @@ const product = {
 		{
 			"label": "Condition de consommation",
 			"value": "Consommation moyenne publiée : 128 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"evidenceIds": [
-				"aircraft-2401470-20260927"
-			]
-		},
-		{
-			"label": "Diamètre intérieur du flexible",
-			"value": "13 mm",
 			"evidenceIds": [
 				"aircraft-2401470-20260927"
 			]
@@ -117,12 +109,12 @@ const product = {
 	"evidence": [
 		{
 			"id": "aircraft-2401470-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/brands/aircraft/category/product/aircraft-pneumatic-tools/iss-c-12-compact-pro-2401470/",
-			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401470, réf. 2401470",
-			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-27",
+			"sourceUrl": "https://www.mystuermer.com/MeDaPro/Rohdaten/Dokumente/Betriebsanleitung_de/AC_2401470_BA_ISS-C_1_2_Compact_PRO_DE.pdf#page=4",
+			"sourceLabel": "Aircraft, notice ISS-C 1/2\" Compact PRO, référence 2401470, édition du 11 juillet 2019, page PDF 4",
+			"sourceType": "manual",
+			"retrievedAt": "2026-10-02",
 			"confidence": "A",
-			"notes": "Consommation moyenne publiée : 128 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+			"notes": "La notice confirme 128 L/min de consommation moyenne et 6,2 bar à l’entrée de l’outil. Le diamètre de flexible de l’ancienne fiche n’est pas repris dans ce document et est retiré. SHA-256 de la réponse : 7714b203bb4ca100caa62840245b02ebd9667fd6f31326b459901d8beaa90d7c"
 		}
 	],
 	"fieldSources": {

@@ -46,6 +46,21 @@ function validate(schema: any, value: any, path = '$'): string[] {
 }
 
 describe('MCP tool-specific output schemas', () => {
+	it('preserves unknown pressure only for incomplete tool profiles', () => {
+		const schema = outputSchemas.get_tool_requirements.properties.tool;
+		const incomplete = tools.find(item => item.demandModel === 'variable-volume' && item.workingPressureBar.max === undefined)!;
+		expect(incomplete).toBeDefined();
+		expect(validate(schema, JSON.parse(JSON.stringify(incomplete)))).toEqual([]);
+		for (const demandModel of ['fixed-flow', 'per-action']) {
+			const complete = tools.find(item => item.demandModel === demandModel)!;
+			const copy = JSON.parse(JSON.stringify(complete));
+			delete copy.workingPressureBar.max;
+			expect(validate(schema, copy).length).toBeGreaterThan(0);
+		}
+		const copy = JSON.parse(JSON.stringify(incomplete));
+		copy.workingPressureBar.unverified = 6;
+		expect(validate(schema, copy).length).toBeGreaterThan(0);
+	});
 	it('preserves unknown lubrication in product outputs and excludes it from known-oil searches', () => {
 		const product = compressors.find(item => item.oilType === 'unknown')!;
 		expect(product).toBeDefined();
