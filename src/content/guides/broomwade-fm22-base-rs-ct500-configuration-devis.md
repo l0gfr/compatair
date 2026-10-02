@@ -27,6 +27,7 @@ La version [FM22+ RSCCP2233V4](/compresseurs/broomwade-fm22-rsccp2233v4-10-bar/)
 <g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">Bases CC1249507 / CC1249510</text><text x="24" y="56" fill="#eef2e9">367 / 395 kg ; sans cuve intégrée</text><text x="24" y="89" fill="#d3eb56">CT 500 RSCCP2233V4 / RSCCP2236V4</text><text x="24" y="113" fill="#eef2e9">577 / 605 kg ; cuve de 500 litres</text><text x="24" y="146" fill="#d3eb56">Dimensions CT 500, L × l × h</text><text x="24" y="170" fill="#eef2e9">2 000 × 800 × 1 850 mm</text></g></svg>
 <figcaption>Les références et masses proviennent des colonnes du catalogue, sans création de combinaisons d’options.</figcaption>
 </figure>
+
 ## Le volume de cuve ne relève pas le débit publié
 
 La différence de débit entre les colonnes standard et RS vaut **40 L/min**, calcul à partir des valeurs déclarées à 10 bar. L’ajout d’une cuve de 500 litres n’est pas présenté dans ces colonnes comme une augmentation du débit de production. Le [guide du volume de cuve](/guides/choisir-volume-cuve-24-50-90-litres/) distingue réserve et débit restitué.

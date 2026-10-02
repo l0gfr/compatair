@@ -32,6 +32,7 @@ Avec 1 ft³ = 28,316846592 litres, le volume converti vaut **3,114853 litres par
 <g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">Point de la CN890F3</text><text x="24" y="56" fill="#eef2e9">0,11 ft³/cycle à 100 psi</text><text x="24" y="89" fill="#d3eb56">Scénario : 20 cycles/min</text><text x="24" y="113" fill="#eef2e9">Environ 62,3 L/min</text><text x="24" y="146" fill="#d3eb56">Scénario : 40 cycles/min</text><text x="24" y="170" fill="#eef2e9">Environ 124,6 L/min</text></g></svg>
 <figcaption>Calculs CompatAir à partir du volume déclaré. La demande pendant la frappe n’est pas un débit constant de ce niveau.</figcaption>
 </figure>
+
 ## Relever le rythme sur une période définie
 
 Compter les cycles et leur durée sur une séquence représentative, en distinguant les pauses et les phases de travail. Un nombre de clous sur une journée ne décrit pas la demande d’une rafale locale. Le [guide de cadence de clouage](/guides/cadence-clouage-pneumatique-chantier/) aide à organiser ce relevé.

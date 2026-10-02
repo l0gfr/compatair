@@ -28,6 +28,7 @@ Une livre vaut exactement 0,45359237 kg. **0,3 lb correspond donc à environ 0,1
 <g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">UT9935, valeurs publiées</text><text x="24" y="56" fill="#eef2e9">0,3 lb / 1,2 kg</text><text x="24" y="89" fill="#d3eb56">UT8617, valeurs publiées</text><text x="24" y="113" fill="#eef2e9">0,3 lb / 1,6 kg</text><text x="24" y="146" fill="#d3eb56">Conversion de 0,3 lb</text><text x="24" y="170" fill="#eef2e9">Environ 0,136 kg, calcul CompatAir</text></g></svg>
 <figcaption>Aucune masse corrigée n’est attribuée aux deux graveurs. La conversion sert à constater l’écart.</figcaption>
 </figure>
+
 ## Préparer une réception qui résout la question
 
 Demander au fournisseur une masse de l’outil complet, avec le périmètre de pesée précisé : pointe montée, accessoire éventuel et absence ou présence du raccord. Associer cette réponse à la référence exacte et à la révision de la documentation. Une photo d’une balance sans identification de l’outil ne suffit pas à corriger un catalogue.

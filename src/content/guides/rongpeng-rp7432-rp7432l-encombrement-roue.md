@@ -28,6 +28,7 @@ L’écart de longueur hors tout vaut **52 mm**, par soustraction des valeurs pu
 <g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">RP7432</text><text x="24" y="56" fill="#eef2e9">185 mm ; 2,6 kg</text><text x="24" y="89" fill="#d3eb56">RP7432L</text><text x="24" y="113" fill="#eef2e9">237 mm ; 2,7 kg</text><text x="24" y="146" fill="#d3eb56">Différence de longueur hors tout</text><text x="24" y="170" fill="#eef2e9">52 mm, calcul CompatAir</text></g></svg>
 <figcaption>Dimensions du fabricant. La différence entre les corps ne mesure pas une rallonge d’enclume.</figcaption>
 </figure>
+
 ## Préparer un contrôle d’accès utile
 
 Relever la profondeur du logement à atteindre et l’espace disponible derrière la douille. Faire ce relevé sur le montage qui pose problème, sans généraliser d’une roue à toutes les roues de l’atelier. Une douille plus longue change l’encombrement de l’ensemble ; un essai réalisé avec un autre accessoire répond à une autre question.

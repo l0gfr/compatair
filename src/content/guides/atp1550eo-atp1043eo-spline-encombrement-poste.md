@@ -28,6 +28,7 @@ En utilisant les valeurs métriques arrondies du fabricant, l’écart est de **
 <g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">ATP1043EO-5S</text><text x="24" y="56" fill="#eef2e9">9,9 kg ; 332,7 mm</text><text x="24" y="89" fill="#d3eb56">ATP1550EO-5S</text><text x="24" y="113" fill="#eef2e9">14,9 kg ; 368,3 mm</text><text x="24" y="146" fill="#d3eb56">Écarts, calcul sur valeurs métriques</text><text x="24" y="170" fill="#eef2e9">+5,0 kg ; +35,6 mm</text></g></svg>
 <figcaption>Les masses et longueurs proviennent des fiches ATP. Les accessoires du poste ne sont pas inclus dans ce calcul.</figcaption>
 </figure>
+
 ## Examiner le poste complet
 
 Relever l’espace disponible avec l’accessoire de serrage monté, la trajectoire de présentation à l’assemblage et l’emplacement du raccord d’air. La même interface nominale ne suffit pas à démontrer que l’ensemble conservera le passage disponible. Vérifier les accessoires avec leurs références et leurs prescriptions propres.

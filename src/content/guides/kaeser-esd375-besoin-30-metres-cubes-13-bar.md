@@ -27,6 +27,7 @@ Les fiches des [ESD 375 à pression maximale 8,5 bar](/compresseurs/kaeser-esd-3
 <g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">Configuration maximale 8,5 bar</text><text x="24" y="56" fill="#eef2e9">37,85 m³/min mesurés à 7,5 bar</text><text x="24" y="89" fill="#d3eb56">Configuration maximale 15 bar</text><text x="24" y="113" fill="#eef2e9">24,34 m³/min mesurés à 13 bar</text><text x="24" y="146" fill="#d3eb56">Scénario : 30 m³/min à 13 bar</text><text x="24" y="170" fill="#eef2e9">Déficit arithmétique : 5,66 m³/min</text></g></svg>
 <figcaption>Points déclarés du système complet. Le scénario à 13 bar ne peut pas utiliser le débit publié à 7,5 bar.</figcaption>
 </figure>
+
 ## Le scénario de 30 m³/min est insuffisant au bon point
 
 Retenons une demande de **30 m³/min à 13 bar**. Il s’agit d’un scénario CompatAir de dimensionnement, à remplacer par le relevé du projet. Au point publié de 13 bar, la version standard ESD 375 fournit 24,34 m³/min : l’écart vaut **5,66 m³/min**, soit **5 660 L/min**, avant toute réserve supplémentaire.

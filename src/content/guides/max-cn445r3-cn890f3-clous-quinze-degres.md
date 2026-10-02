@@ -29,6 +29,7 @@ Ces plages et cotes appartiennent à deux colonnes distinctes. Aucun consommable
 <g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">CN445R3</text><text x="24" y="56" fill="#eef2e9">19–45 mm ; tête de 10,5 mm</text><text x="24" y="89" fill="#d3eb56">CN890F3</text><text x="24" y="113" fill="#eef2e9">50–90 mm ; têtes de 6,5–7,1 mm</text><text x="24" y="146" fill="#d3eb56">Caractéristique commune</text><text x="24" y="170" fill="#eef2e9">Rouleau à 15°, assemblage par fil</text></g></svg>
 <figcaption>Cotes métriques imprimées dans le manuel. Elles ne constituent pas une liste de références commerciales de clous.</figcaption>
 </figure>
+
 ## Construire la commande de consommables
 
 Reporter la référence complète du cloueur, puis la référence des clous proposés et toutes leurs dimensions. Inclure le mode d’assemblage du rouleau. Faire confirmer la compatibilité par le fournisseur avec la notice de l’outil livré, au lieu de ne donner que l’angle et la longueur.

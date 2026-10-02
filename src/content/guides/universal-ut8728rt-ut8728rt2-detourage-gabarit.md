@@ -28,6 +28,7 @@ Le titre RT2 établit la destination du nez pour un gabarit. Il ne donne pas ici
 <g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">UT8728RT</text><text x="24" y="56" fill="#eef2e9">155 mm ; titre Router</text><text x="24" y="89" fill="#d3eb56">UT8728RT2</text><text x="24" y="113" fill="#eef2e9">188 mm ; titre Template Nose Router</text><text x="24" y="146" fill="#d3eb56">Pince renseignée sur la RT2</text><text x="24" y="170" fill="#eef2e9">1/4 pouce, soit 6,35 mm</text></g></svg>
 <figcaption>La conversion de 1/4 pouce vaut 6,35 mm. Elle ne rend pas cette pince interchangeable avec une pince de 6 mm.</figcaption>
 </figure>
+
 ## Définir le contour et l’interface de guidage
 
 Préparer le plan du contour, le matériau, l’épaisseur de la pièce et la fraise prévue. Ajouter les cotes du gabarit qui conditionnent le passage du nez. Demander au fournisseur le plan correspondant à la RT2 réellement livrée. L’objectif est de vérifier la relation fraise, nez et contour avant de produire une pièce.

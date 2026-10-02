@@ -27,6 +27,7 @@ Le débit retenu de 3,8 L/s correspond exactement à **228 L/min**, calcul 3,8 �
 <g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">Masse avec burin standard</text><text x="24" y="56" fill="#eef2e9">1,7 kg / 3,8 lb</text><text x="24" y="89" fill="#d3eb56">Consommation publiée</text><text x="24" y="113" fill="#eef2e9">3,8 L/s / 8,1 cfm</text><text x="24" y="146" fill="#d3eb56">Conversion retenue</text><text x="24" y="170" fill="#eef2e9">3,8 × 60 = 228 L/min</text></g></svg>
 <figcaption>La répétition de 3,8 dans deux colonnes ne rend pas les unités interchangeables.</figcaption>
 </figure>
+
 ## Associer le débit aux conventions du catalogue
 
 La note introductive du catalogue définit les consommations déclarées comme maximales, avec un point de pression de **6,3 bar**, sauf indication particulière. La fiche conserve cette convention et la ligne du modèle comme deux éléments de provenance. [Conventions, page PDF 4](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf#page=4), [RVM07B](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf#page=232).

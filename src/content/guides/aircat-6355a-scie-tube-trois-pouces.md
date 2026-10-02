@@ -27,6 +27,7 @@ Ces deux limites ne définissent pas ensemble un tube de 3 pouces avec une paroi
 <g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">Acier doux</text><text x="24" y="56" fill="#eef2e9">Épaisseur annoncée : 1/4 pouce</text><text x="24" y="89" fill="#d3eb56">Tube d’acier</text><text x="24" y="113" fill="#eef2e9">Dimension annoncée : jusqu’à 3 pouces</text><text x="24" y="146" fill="#d3eb56">Cinématique à vide</text><text x="24" y="170" fill="#eef2e9">5 000 courses/coups par minute</text></g></svg>
 <figcaption>La page fabricant ne relie pas ces deux limites dans une matrice de coupe.</figcaption>
 </figure>
+
 ## Établir la fiche de coupe avant l’achat
 
 Noter la nuance du tube, son diamètre réel, son épaisseur de paroi et l’accès autour de la pièce. La dimension commerciale d’un tube peut ne pas être sa dimension mesurée ; transmettre la désignation complète et les cotes au fournisseur de l’outil et de la lame.

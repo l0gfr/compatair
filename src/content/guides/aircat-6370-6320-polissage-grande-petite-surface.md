@@ -28,6 +28,7 @@ La 6370 et la 6320 ne constituent donc pas deux tailles interchangeables d’un 
 <g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">6370 : polisseuse verticale</text><text x="24" y="56" fill="#eef2e9">7 pouces ; 3 500 tr/min à vide</text><text x="24" y="89" fill="#d3eb56">6320 : travail localisé</text><text x="24" y="113" fill="#eef2e9">Petits supports ; 13 000 tr/min</text><text x="24" y="146" fill="#d3eb56">Échappement</text><text x="24" y="170" fill="#eef2e9">Poignée latérale / arrière</text></g></svg>
 <figcaption>Données des fiches Aircat. Aucun résultat de finition comparatif n’est publié dans cette analyse.</figcaption>
 </figure>
+
 ## Construire l’essai autour du défaut à traiter
 
 Définir une zone représentative : sa géométrie, son revêtement et l’opération attendue. Choisir l’accessoire et le produit selon leurs propres instructions, puis vérifier la compatibilité du montage avec l’outil. Le diamètre indiqué ne donne ni une recette de polissage ni une profondeur de correction.

@@ -28,6 +28,7 @@ Les fractions désignent ici les capacités nominales de mandrin publiées. Elle
 <g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">RP7107</text><text x="24" y="56" fill="#eef2e9">1/2 pouce ; 700 tr/min à vide</text><text x="24" y="89" fill="#d3eb56">RP7102</text><text x="24" y="113" fill="#eef2e9">3/8 pouce ; 1 800 tr/min à vide</text><text x="24" y="146" fill="#d3eb56">Encombrement publié</text><text x="24" y="170" fill="#eef2e9">210 mm contre 180 mm</text></g></svg>
 <figcaption>Capacités et vitesses publiées par Rongpeng. Aucune vitesse de coupe sous charge n’est déduite.</figcaption>
 </figure>
+
 ## Partir de l’opération de perçage
 
 Préparer une fiche avec le matériau, l’outil de coupe exact, le diamètre de sa queue, la profondeur et l’accès. Reporter la plage de vitesse prescrite par le fabricant de cet outil de coupe. La vitesse à vide de la perceuse permet un premier tri ; elle ne garantit pas que cette vitesse sera maintenue en perçage.

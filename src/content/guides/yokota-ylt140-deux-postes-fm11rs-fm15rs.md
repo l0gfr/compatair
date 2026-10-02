@@ -34,6 +34,7 @@ En conservant ces débits publiés à 10 bar comme bornes documentées de produc
 <g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">Deux YLT140 à 6 bar</text><text x="24" y="56" fill="#eef2e9">1 420 L/min en charge</text><text x="24" y="89" fill="#d3eb56">FM11RS : débit publié à 10 bar</text><text x="24" y="113" fill="#eef2e9">1 390 L/min ; écart −30 L/min</text><text x="24" y="146" fill="#d3eb56">FM15RS : débit publié à 10 bar</text><text x="24" y="170" fill="#eef2e9">2 200 L/min ; écart +780 L/min</text></g></svg>
 <figcaption>Les pressions de mesure restent distinctes. Aucun débit à 6 bar n’est déduit de ceux à 10 bar.</figcaption>
 </figure>
+
 ## Traiter correctement la réserve de dimensionnement
 
 Si le cahier des charges choisit une réserve de **20 %**, la cible du scénario devient **1 704 L/min**, calcul 1 420 × 1,20. Cette réserve est une hypothèse de projet, sans valeur universelle attribuée au fabricant. Le FM15RS laisse alors 496 L/min au-delà de la cible, au point de débit publié. Le FM11RS n’atteint pas cette cible documentaire.

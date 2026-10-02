@@ -28,6 +28,7 @@ Ces deux interfaces ne doivent pas être assimilées parce que le début de réf
 <g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">ATP1043EO-5S</text><text x="24" y="56" fill="#eef2e9">#5 Spline ; Button &amp; Ball</text><text x="24" y="89" fill="#d3eb56">ATP1043EO-TH</text><text x="24" y="113" fill="#eef2e9">Carré 1 pouce ; Through Hole</text><text x="24" y="146" fill="#d3eb56">Point supplémentaire à confirmer</text><text x="24" y="170" fill="#eef2e9">Gâchette : titre et tableau divergent</text></g></svg>
 <figcaption>Les deux fiches donnent des sorties différentes et des informations de commande contradictoires.</figcaption>
 </figure>
+
 ## Une contradiction sur la commande subsiste
 
 Les titres des deux pages mentionnent une gâchette intérieure, tandis que le champ « Handle Type » indique **End Grip O-T**. Cette divergence est conservée dans les limitations des fiches CompatAir. Aucune interprétation du code EO ne permet de remplacer une confirmation de configuration. [Titre et tableau 5S](https://continentaltoolgroup.com/product/5-spline-drive-grip-handle-inside-trigger-impact-wrench/), [TH](https://continentaltoolgroup.com/product/1-square-drive-grip-handle-inside-trigger-impact-wrench/).

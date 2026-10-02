@@ -27,6 +27,7 @@ L’écart de débit vaut **50 L/min**, par soustraction. Il concerne deux réf�
 <g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">YLT60, série standard</text><text x="24" y="56" fill="#eef2e9">330 L/min en charge à 6 bar</text><text x="24" y="89" fill="#d3eb56">YLT60L, série basse pression</text><text x="24" y="113" fill="#eef2e9">280 L/min en charge à 5 bar</text><text x="24" y="146" fill="#d3eb56">Différence de débit publiée</text><text x="24" y="170" fill="#eef2e9">50 L/min, comparaison de références</text></g></svg>
 <figcaption>Les pressions proviennent des en-têtes de consommation. Aucun débit intermédiaire n’est interpolé.</figcaption>
 </figure>
+
 ## Vérifier la plage de couple pour l’assemblage
 
 La ligne YLT60 indique une plage de couple de référence de **7 à 15,5 Nm**, sous l’en-tête associé à **0,5 à 0,6 MPa**. La YLT60L indique **6 à 13,5 Nm**, sous un en-tête associé à **0,4 à 0,5 MPa**. La note du tableau précise que ces couples sont des valeurs de référence obtenues sur un assemblage rigide ; le choix dépend de la condition de travail. [Tableaux et note Yokota](https://www.yokota-kogyo.co.jp/link/generalcatalog-j.pdf#page=29).

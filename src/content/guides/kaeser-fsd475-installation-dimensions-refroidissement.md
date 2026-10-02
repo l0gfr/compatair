@@ -27,6 +27,7 @@ Ces valeurs ne doivent donc pas être appliquées indistinctement à une machine
 <g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">Largeur × profondeur × hauteur</text><text x="24" y="56" fill="#eef2e9">3 495 × 2 145 × 2 360 mm</text><text x="24" y="89" fill="#d3eb56">Masse publiée ; raccord d’air</text><text x="24" y="113" fill="#eef2e9">6 580 kg ; DN 150</text><text x="24" y="146" fill="#d3eb56">Version refroidie par eau</text><text x="24" y="170" fill="#eef2e9">Dimensions et masse à confirmer</text></g></svg>
 <figcaption>Valeurs du tableau KAESER. Les cotes de maintenance et la capacité du sol ne sont pas déduites de ces dimensions.</figcaption>
 </figure>
+
 ## Distinguer encombrement et espace d’installation
 
 Reporter les trois cotes dans le bon ordre. Une permutation de largeur et de profondeur peut modifier un contrôle de passage ou un plan de raccordement. Ces dimensions hors tout ne donnent pas les dégagements d’entretien, l’ouverture des panneaux ou les prescriptions de ventilation.
