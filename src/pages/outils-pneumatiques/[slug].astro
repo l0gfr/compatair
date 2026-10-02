@@ -55,7 +55,7 @@ const verifiedDateLabel = verifiedAt.split('-').reverse().join('/');
 		<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/outils-pneumatiques/">Outils pneumatiques</a><span>/</span><a data-product-brand-link href={`/marques/${brandSlug(tool.brand)}/`}>{tool.brand}</a><span>/</span><span>{tool.label}</span></nav>
 		<ProductDecisionHero
 			kind="Outil pneumatique"
-			eyebrow="Besoin en air et pression vérifiés"
+			eyebrow={tool.demandModel === 'variable-volume' ? 'Besoin en air à compléter' : 'Consommation et pression publiées'}
 			title={tool.label}
 			lead={tool.editorial.overview}
 			reference={`Référence ${tool.mpn ?? 'non renseignée'} · ${tool.category}`}
