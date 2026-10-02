@@ -116046,7 +116046,7 @@
       "flowBasis": "unqualified",
       "flowQuote": "Air Cons (CFM)",
       "pressureBar": null,
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureQuote": "Rec. Air Pressure: 90 psi-60 bar",
       "details": [
         {
@@ -116054,8 +116054,8 @@
           "value": "0.7 kg"
         },
         {
-          "label": "Longueur publiée",
-          "value": "255 mm"
+          "label": "Longueur contradictoire publiée",
+          "value": "10.6 in / 255 mm"
         },
         {
           "label": "Vitesse publiée",
@@ -116130,9 +116130,10 @@
         ]
       ],
       "sourceTitle": "Angle Auto Shut-off Screwdriver",
-      "pressureOriginal": 60.0,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 60.0
+      "sourceLimitations": [
+        "La pression recommandée est publiée sous la forme « 90 psi-60 bar », valeurs incompatibles. Aucune correction supposée ni pression de calcul n’est retenue.",
+        "La longueur publiée de 10.6 in ne correspond pas aux 255 mm de la même fiche ; la valeur métrique reste une déclaration contradictoire à vérifier."
+      ]
     },
     {
       "brand": "Universal Tool",
@@ -220320,7 +220321,7 @@
       "flowBasis": "unqualified",
       "flowQuote": "Air Cons (CFM)",
       "pressureBar": null,
-      "pressureScope": "operating-only",
+      "pressureScope": "not-established",
       "pressureQuote": "Rec. Air Pressure: 90 psi-60 bar",
       "details": [
         {
@@ -220328,8 +220329,8 @@
           "value": "0.7 kg"
         },
         {
-          "label": "Longueur publiée",
-          "value": "255 mm"
+          "label": "Longueur contradictoire publiée",
+          "value": "10.6 in / 255 mm"
         },
         {
           "label": "Vitesse publiée",
@@ -220404,9 +220405,10 @@
         ]
       ],
       "sourceTitle": "Angle Auto Shut-off Screwdriver",
-      "pressureOriginal": 60.0,
-      "pressureUnit": "bar",
-      "knownOperatingPressureBar": 60.0
+      "sourceLimitations": [
+        "La pression recommandée est publiée sous la forme « 90 psi-60 bar », valeurs incompatibles. Aucune correction supposée ni pression de calcul n’est retenue.",
+        "La longueur publiée de 10.6 in ne correspond pas aux 255 mm de la même fiche ; la valeur métrique reste une déclaration contradictoire à vérifier."
+      ]
     },
     {
       "brand": "Universal Tool",

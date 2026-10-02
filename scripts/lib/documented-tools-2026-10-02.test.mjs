@@ -10,6 +10,13 @@ const byMpn = (brand, mpn) => batch.find(product => product.brand === brand && p
 const ample = { id: 'fixture-compressor', tankLiters: 500, maxPressureBar: 20, fadCurve: [{ pressureBar: 6, litersPerMinute: 50000 }, { pressureBar: 20, litersPerMinute: 40000 }], dutyCycle: 1, oilType: 'oil', confidence: 'B' };
 
 describe('documented tool references, October 2', () => {
+	it('withholds the contradictory 90 psi and 60 bar pressure instead of correcting the source', () => {
+		const product = byMpn('Universal Tool', 'UT8960-1');
+		expect(product).toMatchObject({ demandModel: 'variable-volume', workingPressureBar: {} });
+		expect(product.specifications.find(field => field.label === 'Portée de la pression dans la source').value).toBe('Rec. Air Pressure: 90 psi-60 bar');
+		expect(product.editorial.limitations.join(' ')).toContain('incompatibles');
+		expect(evaluateCompatibility(ample, product).verdict).toBe('insufficient_data');
+	});
  it('retains contradictory manufacturer mass pairs without choosing an unsupported value', () => {
   for (const mpn of ['UT8630LI', 'UT9935', 'UT8617', 'UT8893-26', 'UT8893-5', 'UT8893-60']) {
    const product = byMpn('Universal Tool', mpn);

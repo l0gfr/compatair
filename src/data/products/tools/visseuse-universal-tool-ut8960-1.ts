@@ -8,11 +8,7 @@ const product = {
 	"model": "UT8960-1",
 	"mpn": "UT8960-1",
 	"demandModel": "variable-volume",
-	"workingPressureBar": {
-		"min": 60,
-		"typical": 60,
-		"max": 60
-	},
+	"workingPressureBar": {},
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
@@ -27,20 +23,22 @@ const product = {
 		"distinguishingAttributes": {
 			"reference": "UT8960-1",
 			"Masse publiée": "0.7 kg",
-			"Longueur publiée": "255 mm"
+			"Longueur contradictoire publiée": "10.6 in / 255 mm"
 		}
 	},
 	"editorial": {
-		"overview": "Universal Tool UT8960-1. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 0.7 kg. Longueur publiée : 255 mm.",
+		"overview": "Universal Tool UT8960-1. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 0.7 kg. Longueur contradictoire publiée : 10.6 in / 255 mm.",
 		"verifiedFacts": [
 			"Masse publiée : 0.7 kg.",
-			"Longueur publiée : 255 mm.",
+			"Longueur contradictoire publiée : 10.6 in / 255 mm.",
 			"Vitesse publiée : 1000 tr/min.",
 			"Puissance publiée : 0.4 HP.",
 			"Échappement : Rear."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+			"La pression recommandée est publiée sous la forme « 90 psi-60 bar », valeurs incompatibles. Aucune correction supposée ni pression de calcul n’est retenue.",
+			"La longueur publiée de 10.6 in ne correspond pas aux 255 mm de la même fiche ; la valeur métrique reste une déclaration contradictoire à vérifier.",
 			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
 		]
 	},
@@ -53,8 +51,8 @@ const product = {
 			]
 		},
 		{
-			"label": "Longueur publiée",
-			"value": "255 mm",
+			"label": "Longueur contradictoire publiée",
+			"value": "10.6 in / 255 mm",
 			"evidenceIds": [
 				"october2-tools-ctg-pdp-406-p1"
 			]

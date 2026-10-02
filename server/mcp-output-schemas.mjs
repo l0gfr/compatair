@@ -42,12 +42,19 @@ const compressorSchema = strict({
 	dutyCycle: number, oilType: { type: 'string', enum: ['oil', 'oil-free', 'unknown'] }, noiseDb: number, powerKw: number, weightKg: number,
 	mobility: { type: 'string', enum: ['portable', 'mobile', 'fixed'] }, voltage: string, phase: { type: 'string', enum: ['single-phase', 'three-phase'] },
 }, ['id', 'slug', 'brand', 'model', 'tankLiters', 'maxPressureBar', 'fadCurve', 'oilType', 'confidence', 'image', 'editorial', 'specifications', 'evidence', 'fieldSources', 'notes']);
-const toolSchema = strict({
+const toolProperties = {
 	...productBase, demandModel: { type: 'string', enum: ['fixed-flow', 'per-action', 'variable-volume'] }, workingPressureBar: rangeSchema,
 	airflowLpm: rangeSchema, airflowBasis: { type: 'string', enum: ['average', 'unqualified', 'free-speed'] }, airPerActionLiters: number, actionLabel: string, demandExplanation: string, connectorSize: string,
 	usagePattern: { type: 'string', enum: ['burst', 'intermittent', 'continuous'] }, dutyFactor: number,
 	filtrationRequirement: string, lubricationRequirement: string, recommendedHose: hoseSchema, minimumCompressorPowerKw: number,
-}, ['id', 'slug', 'categoryId', 'category', 'label', 'brand', 'model', 'demandModel', 'workingPressureBar', 'confidence', 'image', 'editorial', 'specifications', 'evidence', 'fieldSources', 'notes']);
+};
+const toolRequired = ['id', 'slug', 'categoryId', 'category', 'label', 'brand', 'model', 'demandModel', 'workingPressureBar', 'confidence', 'image', 'editorial', 'specifications', 'evidence', 'fieldSources', 'notes'];
+const completeRangeSchema = strict({ min: number, typical: number, max: number }, ['min', 'typical', 'max']);
+const toolSchema = { oneOf: [
+	strict({ ...toolProperties, demandModel: { const: 'fixed-flow' }, workingPressureBar: completeRangeSchema, airflowLpm: completeRangeSchema }, [...toolRequired, 'airflowLpm']),
+	strict({ ...toolProperties, demandModel: { const: 'per-action' }, workingPressureBar: completeRangeSchema }, [...toolRequired, 'airPerActionLiters', 'actionLabel']),
+	strict({ ...toolProperties, demandModel: { const: 'variable-volume' }, workingPressureBar: strict({ min: number, typical: number, max: number }) }, [...toolRequired, 'demandExplanation']),
+] };
 
 const productSummarySchema = strict({
 	compat_air_id: string, type: { type: 'string', enum: ['compressor', 'tool'] }, id: string, slug: string, brand: string, model: string,

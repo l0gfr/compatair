@@ -11,7 +11,7 @@ describe('catalog insights', () => {
 	it('derives catalog volumes instead of duplicating constants', () => {
 		expect(metrics.compressorCount).toBe(compressors.length);
 		expect(metrics.toolCount).toBe(tools.length);
-		expect(metrics.toolCount).toBe(9087);
+		expect(metrics.toolCount).toBe(11087);
 		expect(metrics.compatibilityPageCount).toBeGreaterThan(0);
 	});
 
