@@ -111,7 +111,7 @@ describe('single-session production transfer', () => {
 
 	it('refuses transport when validation consumed its activation reserve', () => {
 		const { root, run, attempts } = fixture();
-		const result = run({ COMPATAIR_VALIDATION_STARTED_AT: String(Math.floor(Date.now() / 1000) - 2100) });
+		const result = run({ COMPATAIR_VALIDATION_STARTED_AT: String(Math.floor(Date.now() / 1000) - 3000) });
 		expect(result.status).toBe(1);
 		expect(result.stderr).toContain('transport requires 600 seconds');
 		expect(attempts()).toEqual([]);

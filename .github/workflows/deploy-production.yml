@@ -23,9 +23,9 @@ jobs:
   validate:
     if: github.ref == 'refs/heads/main' && vars.DEPLOY_ENABLED == 'true'
     runs-on: ubuntu-24.04
-    # The observed cold validation and transfer used 34 minutes before SEO.
-    # Preserve both exhaustive live gates, each bounded to three minutes.
-    timeout-minutes: 45
+    # The previous transfer started only 58 seconds before the 45-minute guard.
+    # Reserve cold validation time and both exhaustive three-minute live gates.
+    timeout-minutes: 60
     outputs:
       previous_release_sha: ${{ steps.seo_checkpoint.outputs.previous_release_sha }}
     steps:
@@ -328,7 +328,7 @@ jobs:
               echo "Cannot verify the remaining production time window; transport refused" >&2
               return 2
             fi
-            local remaining=$((45 * 60 - (10#$now - 10#$validation_started) - 60))
+            local remaining=$((60 * 60 - (10#$now - 10#$validation_started) - 60))
             if (( remaining < 600 )); then
               echo "Only ${remaining} seconds remain after setup reserve; transport requires 600 seconds" >&2
               return 1

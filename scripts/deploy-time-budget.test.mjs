@@ -13,7 +13,7 @@ const check = (started, now) => spawnSync('/bin/bash', ['-c', `${guard}\nassert_
 
 describe('pre-transport production time reserve', () => {
 	it('records an explicit first-step timestamp and checks it before every knock and SSH', () => {
-		expect(validate['timeout-minutes']).toBe(45);
+		expect(validate['timeout-minutes']).toBe(60);
 		expect(validate.steps[0].id).toBe('validation_clock');
 		expect(validate.steps[0].run).toContain('started_at=%s');
 		expect(transfer.env.COMPATAIR_VALIDATION_STARTED_AT).toBe('${{ steps.validation_clock.outputs.started_at }}');
@@ -21,11 +21,11 @@ describe('pre-transport production time reserve', () => {
 		expect(transfer.run.indexOf('assert_transfer_time_remaining "$COMPATAIR_VALIDATION_STARTED_AT"')).toBeLessThan(transfer.run.indexOf('ssh_options=('));
 	});
 	it('permits exactly ten minutes after the explicit one-minute setup reserve', () => {
-		const result = check('1700000000', '1700002040');
+		const result = check('1700000000', '1700002940');
 		expect(result.status).toBe(0); expect(result.stdout).toContain('600 seconds');
 	});
 	it('refuses transport one second below the reserve', () => {
-		const result = check('1700000000', '1700002041');
+		const result = check('1700000000', '1700002941');
 		expect(result.status).toBe(1); expect(result.stderr).toContain('599 seconds');
 	});
 	it('refuses missing, malformed or future timestamps before arithmetic', () => {
