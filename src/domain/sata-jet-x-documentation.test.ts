@@ -27,7 +27,7 @@ describe('SATA jet X manufacturer document discrepancies', () => {
 		expect(tool).not.toHaveProperty('airflowLpm');
 		expect(tool.workingPressureBar.typical).toBeUndefined();
 		expect(compatibilityWithoutCompressor(tool)?.verdict).toBe('insufficient_data');
-		for (const compressor of compressors) for (const margin of [0, 0.25, 1]) expect(evaluateCompatibility(compressor, tool, { margin }).verdict).toBe('insufficient_data');
+		for (const compressor of compressors) for (const safetyMargin of [0, 0.25, 1]) expect(evaluateCompatibility(compressor, tool, { safetyMargin }).verdict).toBe('insufficient_data');
 		const evidence = new Map(tool.evidence.map(item => [item.id, item]));
 		const consumption = tool.specifications.filter(item => item.label.startsWith('Consommation'));
 		expect(consumption.map(item => item.value)).toEqual([
