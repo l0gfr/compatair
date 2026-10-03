@@ -20,6 +20,103 @@ function checkInstalledDependency(consumerEntry: string, chain: string[], depend
 }
 
 describe('installed dependency security boundaries', () => {
+	it('requires validation for protected cache entries across stale directives and serialized state', () => {
+		checkInstalledDependency('astro', [], 'http-cache-semantics', `
+			const request = { url: 'https://example.test/image', method: 'GET', headers: { host: 'example.test' } };
+			const restrictions = [
+				{ 'set-cookie': 'fixture-session=synthetic' },
+				{ 'cache-control': 'max-age=0, proxy-revalidate' },
+				{ 'cache-control': 'max-age=0, no-cache' },
+				{ 'cache-control': 'max-age=0, private' },
+				{ 'cache-control': 'max-age=0, no-store' },
+			];
+			for (const restriction of restrictions) {
+				const headers = { 'cache-control': 'max-age=0', ...restriction };
+				headers['cache-control'] += ', stale-while-revalidate=600, stale-if-error=600';
+				const original = new library(request, { status: 200, headers });
+				const restored = library.fromObject(JSON.parse(JSON.stringify(original.toObject())));
+				for (const policy of [original, restored]) {
+					policy.now = () => policy._responseTime + 1000;
+					for (const directive of ['max-stale', 'max-stale=999999', 'max-stale="999999"']) {
+						const incoming = { ...request, headers: { ...request.headers, 'cache-control': directive } };
+						assert.equal(policy.satisfiesWithoutRevalidation(incoming), false);
+						const result = policy.evaluateRequest(incoming);
+						assert.equal(result.response, undefined);
+						assert.equal(result.revalidation.synchronous, true);
+					}
+					assert.equal(policy.evaluateRequest(request).response, undefined);
+					assert.equal(policy.timeToLive(), 0);
+					assert.equal(policy.useStaleWhileRevalidate(), false);
+					assert.equal(policy.revalidatedPolicy(request, { status: 503, headers: {} }).modified, true);
+					assert.throws(() => policy.revalidatedPolicy(request), /Response headers missing/);
+				}
+			}
+		`);
+	});
+
+	it('preserves ordinary stale caches, explicit cookie sharing, private caches and 304 revalidation', () => {
+		checkInstalledDependency('astro', [], 'http-cache-semantics', `
+			const request = { url: 'https://example.test/image', method: 'GET', headers: { host: 'example.test' } };
+			const incoming = { ...request, headers: { ...request.headers, 'cache-control': 'max-stale=30' } };
+			for (const [headers, options] of [
+				[{ 'cache-control': 'public, max-age=0' }, {}],
+				[{ 'cache-control': 'public, max-age=0', 'set-cookie': 'fixture=synthetic' }, {}],
+				[{ 'cache-control': 'immutable, max-age=1', 'set-cookie': 'fixture=synthetic' }, {}],
+				[{ 'cache-control': 'private, max-age=0', 'set-cookie': 'fixture=synthetic' }, { shared: false }],
+			]) {
+				const policy = new library(request, { status: 200, headers }, options);
+				policy.now = () => policy._responseTime + 2000;
+				assert.equal(policy.satisfiesWithoutRevalidation(incoming), true);
+			}
+			const policy = new library(request, { status: 200, headers: { 'cache-control': 'public, max-age=0, stale-while-revalidate=600, stale-if-error=600', etag: '"fixture-v1"' } });
+			policy.now = () => policy._responseTime + 1000;
+			assert.equal(policy.evaluateRequest(request).revalidation.synchronous, false);
+			assert.ok(policy.timeToLive() > 0);
+			assert.equal(policy.revalidatedPolicy(request, { status: 503, headers: {} }).modified, false);
+			const validated = policy.revalidatedPolicy(request, { status: 304, headers: { etag: '"fixture-v1"', 'cache-control': 'public, max-age=60' } });
+			assert.equal(validated.modified, false);
+			assert.equal(validated.matches, true);
+			assert.equal(validated.policy.satisfiesWithoutRevalidation(request), true);
+			const mandatory = new library(request, { status: 200, headers: { 'cache-control': 'max-age=60, must-revalidate, stale-while-revalidate=600, stale-if-error=600' } });
+			assert.ok(mandatory.timeToLive() > 0);
+			mandatory.now = () => mandatory._responseTime + 61000;
+			assert.equal(mandatory.evaluateRequest(incoming).response, undefined);
+			assert.equal(mandatory.useStaleWhileRevalidate(), false);
+			assert.equal(mandatory.revalidatedPolicy(request, { status: 503, headers: {} }).modified, true);
+			assert.equal(mandatory.timeToLive(), 0);
+			assert.throws(() => policy.evaluateRequest({}), /Request headers missing/);
+		`);
+	});
+
+	it('limits shared s-maxage and must-revalidate entries to their fresh lifetime', () => {
+		checkInstalledDependency('astro', [], 'http-cache-semantics', `
+			const request = { url: 'https://example.test/image', method: 'GET', headers: { host: 'example.test', authorization: 'Bearer synthetic-A' } };
+			const incoming = { ...request, headers: { ...request.headers, authorization: 'Bearer synthetic-B', 'cache-control': 'max-stale=999999' } };
+			for (const lifetime of [0, 60]) {
+				const original = new library(request, { status: 200, headers: { 'cache-control': 's-maxage=' + lifetime + ', stale-while-revalidate=600, stale-if-error=600' } });
+				for (const policy of [original, library.fromObject(original.toObject())]) {
+					policy.now = () => policy._responseTime + 1000;
+					assert.equal(policy.storable(), true);
+					assert.equal(policy.maxAge(), lifetime);
+					if (lifetime > 0) {
+						assert.equal(policy.satisfiesWithoutRevalidation(incoming), true);
+						assert.equal(policy.timeToLive(), (lifetime - 1) * 1000);
+					}
+					policy.now = () => policy._responseTime + (lifetime + 1) * 1000;
+					assert.equal(policy.satisfiesWithoutRevalidation(incoming), false);
+					assert.equal(policy.evaluateRequest(incoming).response, undefined);
+					assert.equal(policy.useStaleWhileRevalidate(), false);
+					assert.equal(policy.revalidatedPolicy(incoming, { status: 503, headers: {} }).modified, true);
+					assert.equal(policy.timeToLive(), 0);
+				}
+			}
+			const privateCache = new library(request, { status: 200, headers: { 'cache-control': 'max-age=0, s-maxage=60, stale-if-error=600' } }, { shared: false });
+			privateCache.now = () => privateCache._responseTime + 1000;
+			assert.equal(privateCache.satisfiesWithoutRevalidation(incoming), true);
+			assert.equal(privateCache.revalidatedPolicy(incoming, { status: 503, headers: {} }).modified, false);
+		`);
+	});
+
 	it('serializes only visible Node Buffer bytes while preserving deliberate typed-array sharing', () => {
 		checkInstalledDependency('astro', [], 'devalue', `
 			const { runInNewContext } = await import('node:vm');

@@ -2,6 +2,7 @@ import { lstat, readFile, readdir } from 'node:fs/promises';
 import { basename, extname, relative, resolve } from 'node:path';
 import { parseDocument } from 'yaml';
 import { walkRegularSourceFiles } from './lib/source-tree.mjs';
+import { workflowTimeoutErrors } from './lib/workflow-timeouts.mjs';
 const roots = ['src', 'server', 'scripts', 'deploy', '.github', '.githooks', 'docs', 'public', 'config']; const extensions = new Set(['.ts', '.astro', '.mjs', '.js', '.md', '.json', '.yml', '.yaml', '.sh']); const errors = [];
 async function lintFile(file) {
 	const name = basename(file);
@@ -131,12 +132,8 @@ if (countPolicy(dependabotConfig, /^\s*applies-to:\s*security-updates\s*$/gm) !=
 if (countPolicy(dependabotConfig, /^\s*-\s*'\*'\s*$/gm) !== 2) errors.push('.github/dependabot.yml: chaque groupe de sécurité doit couvrir toutes les dépendances de son écosystème');
 for (const [file, workflow] of [['.github/workflows/ci.yml', ciWorkflow], ['.github/workflows/security.yml', securityWorkflow]]) {
 	if (!workflow.includes('cancel-in-progress: true')) errors.push(`${file}: les exécutions de PR obsolètes doivent être annulées`);
-	const maximum = file === '.github/workflows/ci.yml' ? 25 : 15;
 	const jobs = parseDocument(workflow).toJS()?.jobs ?? {};
-	for (const [name, job] of Object.entries(jobs)) {
-		const timeout = job?.['timeout-minutes'];
-		if (!Number.isInteger(timeout) || timeout <= 0 || timeout > maximum) errors.push(`${file}: durée maximale absente ou supérieure à ${maximum} minutes (${name})`);
-	}
+	errors.push(...workflowTimeoutErrors(file, jobs));
 }
 if (/(?:^|\n)\s*pull_request(?:_target)?:/m.test(deployWorkflow)) errors.push('.github/workflows/deploy-production.yml: un événement de PR ne doit jamais déclencher un déploiement');
 if (workflowSources.some((workflow) => /(?:^|\n)\s*workflow_run:/m.test(workflow))) errors.push('.github/workflows: aucun rerun automatique après échec ou fin de workflow n’est autorisé');
