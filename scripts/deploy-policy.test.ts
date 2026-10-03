@@ -22,9 +22,12 @@ describe('release boundary policy', () => {
 		expect(ci.permissions).toEqual({ contents: 'read' });
 		expect(ci.jobs.validate.needs).toEqual(['source-tests', 'build']);
 		expect(ci.jobs.validate.if).toBeUndefined();
+		expect(ci.jobs['source-tests']['timeout-minutes']).toBe(15);
+		expect(ci.jobs.build['timeout-minutes']).toBe(35);
+		expect(ci.jobs.validate['timeout-minutes']).toBe(1);
 		for (const [name, job] of Object.entries(ci.jobs) as [string, { 'timeout-minutes': number; 'continue-on-error'?: boolean; steps: Record<string, unknown>[] }][]) {
 			expect(job['timeout-minutes'], name).toBeGreaterThan(0);
-			expect(job['timeout-minutes'], name).toBeLessThanOrEqual(25);
+			expect(job['timeout-minutes'], name).toBeLessThanOrEqual(name === 'build' ? 35 : 25);
 			expect(job['continue-on-error'], name).toBeUndefined();
 			for (const step of job.steps) {
 				expect(step['continue-on-error']).toBeUndefined();

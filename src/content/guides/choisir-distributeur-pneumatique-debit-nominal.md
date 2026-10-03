@@ -9,8 +9,8 @@ audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 4
 reviewStatus: "internal"
-relatedGuides: ["consommation-verin-pneumatique-double-effet", "regler-vitesse-verin-pneumatique-echappement", "raccord-air-comprime-bsp-npt-1-4"]
-sources: ["https://www.festo.com/media/catalog/236149_documentation.pdf", "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air10.pdf"]
+relatedGuides: [ "consommation-verin-pneumatique-double-effet", "regler-vitesse-verin-pneumatique-echappement", "raccord-air-comprime-bsp-npt-1-4", festo-vuvg-zones-pression-pilotage-12-14 ]
+sources: [ "https://www.festo.com/media/catalog/236149_documentation.pdf", "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air10.pdf", https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2019/EN/VTUG-G_EN.PDF ]
 ---
 
 **Deux distributeurs qui se vissent au même endroit ne sont pas nécessairement équivalents.** Il faut rapprocher leur fonction, leur commande, leur débit dans des conditions comparables et l’ensemble du montage. Un chiffre en L/min isolé de sa pression aval peut donner une impression trompeuse de capacité.
@@ -49,6 +49,8 @@ Nous proposons cette grille pour un remplacement :
 | Commande et environnement | Tension, pilotage, fluide et température conviennent-ils ? |
 
 Les filetages demandent leur propre vérification. Le [guide BSP et NPT](/guides/raccord-air-comprime-bsp-npt-1-4/) explique pourquoi une désignation en pouces ne suffit pas. Même une compatibilité mécanique confirmée ne répond pas aux trois autres lignes de la grille.
+
+Le découpage en zones exige de lire les canaux du bloc. Le [schéma Festo de zones de pression](https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2019/EN/VTUG-G_EN.PDF#page=8) permet de séparer 1, 3 et 5, mais conserve 12/14 commun dans l’architecture présentée. Le [cas des zones VUVG et du canal 12/14](/guides/festo-vuvg-zones-pression-pilotage-12-14/#le-pilotage-conserve-sa-propre-exigence) ajoute le pilotage et l’alimentation de chaque zone au dossier de remplacement ; un débit nominal compatible ne démontre pas leur indépendance.
 
 ## La consommation moyenne du vérin ne donne pas le débit de pointe
 

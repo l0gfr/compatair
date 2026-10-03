@@ -121,6 +121,7 @@ import ContextHelp from './ContextHelp.astro';
 	import { CALCULATION_VERSION } from '../../server/air-sizing.mjs';
 	import { scannerComparisonHref, scannerCompressorDataGap, scannerConfigurationForTool, scannerReferenceFromHash, scannerReferenceUrl } from '../domain/scanner-journey';
 	import { sourceQualityDetail, sourceQualityLabel } from '../domain/source-quality';
+	import { sourceAvailabilityMessage } from '../data/source-availability';
 
 	type DetectorResult = { rawValue?: string };
 	type Detector = { detect(source: ImageBitmap): Promise<DetectorResult[]> };
@@ -474,7 +475,10 @@ import ContextHelp from './ContextHelp.astro';
 
 		const evidence = query<HTMLElement>('[data-evidence]');
 		if (evidence) evidence.replaceChildren(...product.evidence.map((source) => {
-			const link = document.createElement('a'); link.href = source.sourceUrl; link.rel = 'noreferrer'; link.textContent = `${source.sourceLabel} · vérifiée le ${source.retrievedAt} · ${sourceQualityDetail(source.confidence)}`; return link;
+			const link = document.createElement('a'); link.href = source.sourceUrl; link.rel = 'noreferrer'; link.textContent = `${source.sourceLabel} · vérifiée le ${source.retrievedAt} · ${sourceQualityDetail(source.confidence)}`;
+			const availability = sourceAvailabilityMessage(source.sourceUrl);
+			if (availability) link.textContent += ` · ${availability}`;
+			return link;
 		}));
 		const allResults = query<HTMLElement>('[data-all-results]'); if (allResults) allResults.hidden = true;
 		const toggle = query<HTMLButtonElement>('[data-toggle-all]'); if (toggle) { toggle.setAttribute('aria-expanded', 'false'); toggle.textContent = 'Voir l’aperçu des résultats'; }

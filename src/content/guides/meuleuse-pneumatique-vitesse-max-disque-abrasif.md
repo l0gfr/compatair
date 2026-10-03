@@ -8,9 +8,10 @@ metiers: ["maintenance-industrielle", "btp-chantier"]
 readingTime: 4
 featured: false
 reviewStatus: internal
-relatedGuides: ["meuleuse-pneumatique-vitesse-regulee-governor", "meuleuse-broche-m14-5-8-filetage", "meuleuse-pneumatique-pince-6-mm-ou-1-4"]
+relatedGuides: [ "meuleuse-pneumatique-vitesse-regulee-governor", "meuleuse-broche-m14-5-8-filetage", "meuleuse-pneumatique-pince-6-mm-ou-1-4", aircat-6402-6403-tire-buffer-accessoire-vitesse ]
 sources:
   - https://www.nortonabrasives.com/en-us/resources/expertise/grinding-machine-maintenance
+  - https://continentaltoolgroup.com/wp-content/uploads/2026/02/Aircat-Catalog-2024_2025-Final6-1.pdf
 ---
 
 **Un accessoire dont la vitesse maximale est inférieure à celle de la meuleuse ne convient pas à cette association.** La puissance du compresseur ou la sensation de vitesse en charge ne corrigent pas ce défaut. Il faut comparer les marquages de la machine et de l’abrasif, puis vérifier les autres conditions d’emploi.
@@ -31,6 +32,8 @@ Les exigences ANSI et OSHA mentionnées dans ce document américain ne sont pas 
 </figure>
 
 Dans l’exemple fictif illustré, une machine à 12 000 tr/min et un accessoire limité à 10 000 tr/min ne forment pas un ensemble acceptable. Ces nombres ne correspondent à aucune référence recommandée. Un réglage de détendeur choisi au hasard ne transforme pas la machine en modèle homologué pour une autre vitesse.
+
+Le [catalogue Aircat](https://continentaltoolgroup.com/wp-content/uploads/2026/02/Aircat-Catalog-2024_2025-Final6-1.pdf#page=47) sépare aussi les tire buffers 6402 à 2 600 tr/min et 6403 à 3 600 tr/min de la 6400 à 22 000 tr/min. Le [contrôle d’accessoire des 6402/6403](/guides/aircat-6402-6403-tire-buffer-accessoire-vitesse/#commander-laccessoire-avec-sa-limite-de-vitesse) rattache la vitesse à la référence, à la fixation et à la limite de l’accessoire : un nom de famille proche ne suffit pas pour commander le même consommable.
 
 ## La vitesse ne suffit pas à confirmer le montage
 

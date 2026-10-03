@@ -13,9 +13,11 @@ relatedGuides:
   - audit-reseau-air-comprime-protocole-mesures
   - indicateurs-maintenance-air-comprime
   - fiche-intervention-air-comprime
+  - smc-ams-zero-debit-petites-fuites-f14
 sources:
   - https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
+  - https://www.smcworld.com/assets/manual/en-jp/files/PFxx-OMA1007.pdf
 ---
 
 Une fuite ne se résume pas à un sifflement. Elle augmente la quantité d’air que le compresseur doit produire, peut accélérer ses cycles et contribue à une baisse de pression au point d’utilisation. Avant d’acheter une machine plus puissante, il faut donc séparer trois opérations : estimer la fuite globale, localiser les défauts, puis vérifier l’effet des réparations.
@@ -52,6 +54,8 @@ On peut aussi observer la décroissance de pression d’un volume isolé. Mais p
 Le guide du Department of Energy fournit une formule en unités impériales et introduit un facteur lié à la réduction du débit de fuite lorsque la pression baisse. La recopier avec des litres, des bar relatifs et des minutes sans conversion rigoureuse donnerait un résultat faux. CompatAir ne propose donc pas de calcul automatique tant que toutes ces entrées ne sont pas définies.
 
 Le [glossaire CompatAir](/glossaire/#pression-absolue) distingue pression absolue et pression relative. Cette distinction devient indispensable dès qu’une relation fait intervenir des volumes de gaz compressible.
+
+Un zéro affiché peut également venir d’un seuil de mesure. Dans le [tableau SMC F14](https://www.smcworld.com/assets/manual/en-jp/files/PFxx-OMA1007.pdf#page=96), un réglage F14 à 1 % masque les valeurs sous 5 L/min pour AMS20 et sous 10 L/min pour AMS30. Le [cas AMS20/AMS30 et petites fuites](/guides/smc-ams-zero-debit-petites-fuites-f14/#un-exemple-tir%C3%A9-du-tableau-constructeur) permet d’indiquer modèle et réglage dans le relevé, avant d’interpréter zéro comme absence de fuite.
 
 ## Localiser avec la méthode adaptée
 

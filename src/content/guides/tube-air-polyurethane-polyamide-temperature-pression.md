@@ -8,9 +8,10 @@ audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "garage-automobile"]
 readingTime: 4
 reviewStatus: internal
-relatedGuides: ["tube-pneumatique-6mm-un-quart-diametre-exterieur", "flexible-air-antistatique-atex-continuite", "diametre-longueur-flexible-air-comprime"]
+relatedGuides: [ "tube-pneumatique-6mm-un-quart-diametre-exterieur", "flexible-air-antistatique-atex-continuite", "diametre-longueur-flexible-air-comprime", smc-trb-tube-air-projections-soudage ]
 sources:
   - https://www.parker.com/content/dam/Parker-com/Literature/LPCE/New-PDFs/CAT_0550_UK_BD.pdf
+  - https://www.smcworld.com/webcatalog/en-ae/fittings-and-tubing/tubing-for-special-environments/TRB-E
 ---
 
 **Le tube souple qui passe bien dans la machine n’est pas nécessairement admissible à sa température de travail.** Pour choisir entre polyuréthane, PU, et polyamide, PA, la souplesse n’est qu’un critère. La référence et son domaine pression-température doivent suivre la sélection.
@@ -25,6 +26,8 @@ Ce catalogue comporte des références réglementaires anciennes : il sert ici �
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 290" role="img" aria-labelledby="tube-air-polyurethane-polyamide-temperature-pression-title tube-air-polyurethane-polyamide-temperature-pression-desc" style="font-family:system-ui,sans-serif"><title id="tube-air-polyurethane-polyamide-temperature-pression-title">Un domaine, pas deux maxima</title><desc id="tube-air-polyurethane-polyamide-temperature-pression-desc">Aide de lecture du catalogue Parker. La courbe de la référence et de la dimension détermine le point admissible.</desc><rect width="440" height="290" rx="16" fill="#10281e"/><text x="24" y="33" font-size="18" fill="#d3eb56" font-weight="700">Un domaine, pas deux maxima</text><circle cx="40" cy="76" r="15" fill="#d3eb56"/><text x="35" y="82" font-size="17" fill="#10281e" font-weight="700">1</text><text x="68" y="72" font-size="18" fill="#d3eb56" font-weight="700">Température locale</text><text x="68" y="98" font-size="16" fill="#eef2e9">Décrire l’exposition réelle du tube</text><circle cx="40" cy="146" r="15" fill="#d3eb56"/><text x="35" y="152" font-size="17" fill="#10281e" font-weight="700">2</text><text x="68" y="142" font-size="18" fill="#d3eb56" font-weight="700">Pression de service</text><text x="68" y="168" font-size="16" fill="#eef2e9">Lire au point de température choisi</text><circle cx="40" cy="216" r="15" fill="#d3eb56"/><text x="35" y="222" font-size="17" fill="#10281e" font-weight="700">3</text><text x="68" y="212" font-size="18" fill="#d3eb56" font-weight="700">Montage complet</text><text x="68" y="238" font-size="16" fill="#eef2e9">Matière, dimension et raccords associés</text></svg>
 <figcaption>Aide de lecture du catalogue Parker. La courbe de la référence et de la dimension détermine le point admissible.</figcaption>
 </figure>
+
+Pour une zone exposée aux projections de soudage, [SMC TRB](https://www.smcworld.com/webcatalog/en-ae/fittings-and-tubing/tubing-for-special-environments/TRB-E) publie un tube à deux couches et une pression maximale de 1 MPa à 20 °C. Le [cas du tube TRB au poste de soudage](/guides/smc-trb-tube-air-projections-soudage/#conserver-la-temp%C3%A9rature-avec-la-pression) conserve cette température et examine l’enveloppe avec le raccordement. La résistance au feu annoncée équivalente à UL 94 V-0 ne constitue pas une conformité ATEX de l’assemblage.
 
 ## Prendre la température au bon endroit
 

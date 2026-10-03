@@ -26,6 +26,8 @@ jobs:
     # The observed cold validation and transfer used 34 minutes before SEO.
     # Preserve both exhaustive live gates, each bounded to three minutes.
     timeout-minutes: 45
+    outputs:
+      previous_release_sha: ${{ steps.seo_checkpoint.outputs.previous_release_sha }}
     steps:
       - name: Record validation clock
         id: validation_clock
@@ -221,6 +223,7 @@ jobs:
 
       - name: Package immutable release
         run: |
+          set -Eeuo pipefail
           install -d -m 755 dist/_server
           install -m 644 server/*.mjs dist/_server/
           install -D -m 644 scripts/generate-private-weekly-report.mjs dist/_ops/generate-private-weekly-report.mjs
@@ -269,6 +272,7 @@ jobs:
           compression-level: 0
 
       - name: Verify SEO publication checkpoint before deployment
+        id: seo_checkpoint
         run: node scripts/verify-indexation-release.mjs
 
       - name: Configure SSH
@@ -403,4 +407,5 @@ jobs:
       - name: Keep production, rollback and compact evidence
         env:
           GH_TOKEN: ${{ github.token }}
+          COMPATAIR_PREVIOUS_RELEASE_SHA: ${{ needs.validate.outputs.previous_release_sha }}
         run: node scripts/prune-actions-storage.mjs --apply

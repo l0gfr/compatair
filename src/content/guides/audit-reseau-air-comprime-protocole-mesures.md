@@ -15,10 +15,12 @@ relatedGuides:
   - diagnostiquer-chute-pression-air-comprime
   - detecter-mesurer-fuites-air-comprime
   - mesurer-temps-charge-vide-compresseur
+  - smc-ams-cumul-perdu-coupure-f30
 sources:
   - https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf
   - https://www.iso.org/fr/standard/46580.html
   - https://www.cagi.org/assets/documents/pdfs/handbook/Chapter_4_handbook_Final2021.pdf
+  - https://www.smcworld.com/assets/manual/en-jp/files/PFxx-OMA1007.pdf
 updatedDate: 2026-09-26
 ---
 
@@ -110,6 +112,8 @@ Une ligne de base minimale peut réunir :
 - volume ou cadence produit pendant la fenêtre, si cette donnée est fiable.
 
 Le [parcours de mise en service](/mise-en-service/) permet de créer un point zéro local à partir d’une configuration CompatAir. Le [suivi d’exploitation](/suivi-exploitation/) rejoue ensuite les contrôles avec le même Passeport. Ces outils organisent les relevés ; ils ne remplacent ni les instruments ni les procédures du site.
+
+Pour un cumul SMC AMS, la [notice, fonction F30](https://www.smcworld.com/assets/manual/en-jp/files/PFxx-OMA1007.pdf#page=99) donne une conservation désactivée par défaut et, lorsqu’elle est activée, une sauvegarde toutes les 2 ou 5 minutes. Le [journal de coupure et de sauvegarde](/guides/smc-ams-cumul-perdu-coupure-f30/#reconstituer-la-chronologie-avant-daccuser-le-capteur) relie l’heure de coupure à l’intervalle non sauvegardé. Une période manquante dans la mémoire doit être identifiée avant de comparer deux bilans d’atelier.
 
 ## Séparer mesure, calcul, hypothèse et décision
 

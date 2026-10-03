@@ -8,9 +8,10 @@ audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 3
 reviewStatus: internal
-relatedGuides: ["blocage-tige-verin-dsnu-kp-maintien-securite", "choisir-distributeur-pneumatique-debit-nominal", "couper-air-comprime-machine-arret-week-end"]
+relatedGuides: [ "blocage-tige-verin-dsnu-kp-maintien-securite", "choisir-distributeur-pneumatique-debit-nominal", "couper-air-comprime-machine-arret-week-end", festo-vfof-ba-verin-air-emprisonne ]
 sources:
   - https://www.festo.com/gb/en/e/blog/in-practice/pneumatic-valves-id_1517691
+  - https://ftp.festo.com/public/pneumatic/SOFTWARE_SERVICE/Documentation/2021/EN/VFOF-VFFF_EN.PDF
 ---
 
 **« 5/3 » donne cinq orifices et trois positions ; la désignation ne décrit pas encore l’état du vérin au repos.** Il faut lire le symbole de la position médiane. C’est souvent là que se trouve l’explication d’un remplacement qui change le comportement de la machine.
@@ -45,6 +46,8 @@ Si le projet nécessite une immobilisation, faites définir ses critères par le
 | Référence de la note de sélection | Perdre le comportement validé |
 
 Le [débit nominal d’un distributeur](/guides/choisir-distributeur-pneumatique-debit-nominal/) doit également être comparé avec ses conditions. Une fonction identique n’assure pas une capacité de passage identique.
+
+La [combinaison Festo VFOF BA](https://ftp.festo.com/public/pneumatic/SOFTWARE_SERVICE/Documentation/2021/EN/VFOF-VFFF_EN.PDF#page=8) décrit également un positionnement de courte durée par air emprisonné, avec une décharge manuelle. Le [cas BA et maintien intermédiaire](/guides/festo-vfof-ba-verin-air-emprisonne/#une-fonction-de-maintien-interm%C3%A9diaire-de-courte-dur%C3%A9e) aide à retrouver les chemins des chambres et la fonction exacte lors d’un remplacement. Cette description ne fournit ni un maintien mécanique de charge ni une validation de sécurité de la machine.
 
 ## Préparer l’arrêt et la reprise ensemble
 

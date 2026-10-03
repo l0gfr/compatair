@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-03T05:49:54.003901+00:00",
+  "baselinePublicSha": "2057292e3aa6c4ec551e6f61ad1c09b742ddc8c5",
+  "status": "planned_publication_after_canonical_qualification",
+  "plannedPublicationDate": "2026-10-03",
+  "documentaryReviewDateUnchanged": "2026-10-02",
+  "newDocumentaryReviewPerformed": false,
+  "claimsUnchanged": 93,
+  "sourceCapturesUnchanged": true,
+  "svgUnchanged": true,
+  "historicalLedgersUnchanged": true,
+  "ledger": {
+    "path": "docs/editorial/guides-2026-10-02-b.sources.json",
+    "draftSha256": "c4ae1124d4d09486fcf2c2bd3fcee41c23e2834aa745545c5953cd4b09d512ec",
+    "publicationSha256": "0b8d3e15a757ecfae64285759c7950fdf763db093161a0d2b11d03b30770b188",
+    "onlyChangedFields": "50 guides[].sha256 and 5 toolGuideMappings[].guideSha256"
+  },
+  "guides": [
+    {
+      "path": "src/content/guides/ut8897rs-profondeur-arasage-increment-precision.md",
+      "draftSha256": "a36f6a54c67f2e3205bdd312318c0e1c2667106b1287e41ba50967197c3530cf",
+      "publicationSha256": "4bc8fb2d3f2e94bec75bea311df117ae2a098fd70fd7657f68ba8eea21a354af",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/deprag-345z-visseuse-bol-alimentation-assorti.md",
+      "draftSha256": "3e40a3465dd6a7af8eed72dd633fce1555cd2b65179449075a630b22834f2b62",
+      "publicationSha256": "2f435388688d01056ba84fc751df6bfe7c3678aa3e356ce945211a63d6ec9a2d",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/suhner-umc6rl-lime-course-rainure.md",
+      "draftSha256": "2812eb572191694002ef7ee0be1c1a4d850eea03cb99239fea63957868ab2289",
+      "publicationSha256": "2577cc7af3a13a3f34b3a144a6843e64dde7afd2d157b2665db2f7301e6d56e1",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/smc-ams-veille-pression-ne-descend-pas.md",
+      "draftSha256": "9b60f10b92668f404a10c4cd26c2698500708a877a13dd6b670b63fa767cf4d8",
+      "publicationSha256": "50b75e33d6a0e3bb2477bc6ece4f18e4a3b5e50bbf6d52ced2f72e93a5df3a47",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/smc-ams-zero-debit-petites-fuites-f14.md",
+      "draftSha256": "619832ce3931f6ebf3c78bd35480170ab706805195f43b13eaa8834ba1031b89",
+      "publicationSha256": "1ba0046679ca55474178aab44a9ed7e25bc57e7b16f8c744fd25830db08fcaa3",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/smc-ams-cumul-perdu-coupure-f30.md",
+      "draftSha256": "a80bb7c0a91c5460d08f89c58e0fb6d275236b3b874ab8e95a3c9f01039394e2",
+      "publicationSha256": "8556dfa66e08d3fc5b5867b9613ef36df2a79cca39b084b94bccd18c3f6dc1bf",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/festo-vfof-ba-verin-air-emprisonne.md",
+      "draftSha256": "40120dec2ab81e4f9d7cad5d5a7def204ec7830bd31525be07d8c6bd67e03dd8",
+      "publicationSha256": "51faee6430648be30fe8aac524d0f8b8f55ae9d417e4354b4a6afda69850bc81",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/festo-vuvg-5-2-monostable-bistable-coupure.md",
+      "draftSha256": "d3315a76a83ba7a3800d0f0d090f732d81ad830df5201bed7e3d8e3c8e762a25",
+      "publicationSha256": "045fcf761b85cdfceed295927c43ac8f3c3f38ab26c4a50c0e868a3fae63ad05",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/festo-vuvg-commande-manuelle-verrouillee.md",
+      "draftSha256": "0aa70c97f82c14ee661669848762d0099159110ddbe6af5b2205de2352863e9a",
+      "publicationSha256": "096b32f2a31ccce832c7e9057412c44252b5faffb8d56ff290e794d11962cb71",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/festo-vuvg-zones-pression-pilotage-12-14.md",
+      "draftSha256": "ad21328e5edc943fcbaae38a2078a216d73a6616154b983d2a5275c357d08970",
+      "publicationSha256": "60de8f6bcc7e7090401913d4090de437c13cf7b13384c1e5ef3a2be614f0afd5",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/smc-ark-regulateur-retour-pression-aval.md",
+      "draftSha256": "7bf3484d70f4fc623eab2850c330ab2a5d745fbd54276ba35173d0e7176e9f80",
+      "publicationSha256": "0657ad51c56e0f311a9af93c9da82a1ba12cef678557b779d211f31620d6081c",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/smc-trb-tube-air-projections-soudage.md",
+      "draftSha256": "d1bf972b47ecfeea7cfeb92c67d992c439d89aede89ffb2517ffe941e6f2b2d1",
+      "publicationSha256": "64bf19e3879e1e7e0da7234aa3086db4828bd2635ce0d28bf96f1cda9b5557c6",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/clemco-rph-decolmatage-impulsion-on-off.md",
+      "draftSha256": "6def530c5585bf3b82b6713d1fe9aa38bfff79c92fd2024734efcb9b10f76d2a",
+      "publicationSha256": "d7b0aad3caa27af21480ec4a0f29ab0277f7f76f3c9dc58ba18f2674fea0cd97",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/clemco-bnp-visibilite-ventilation-media.md",
+      "draftSha256": "3a6ecab0ca264f4a267331c5011d633f0a541a52a74915bd7583c7958481a654",
+      "publicationSha256": "a2dfa8470a805fe2437507d2d597d2232dddfbd852bae7ec6cd76e66bb81af07",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/clemco-spin-blast-hd-moteur-echappement.md",
+      "draftSha256": "fda8adbe8609ec2fc591b8907838f9782bb11e286c5c895b4f4994d8c34f3ce2",
+      "publicationSha256": "d2f5b5b7d5fe61c0b7a32d4b4394d9124a6486e1952f44033cfc951b5035378d",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/flexible-sablage-verrouillage-joint-retenue.md",
+      "draftSha256": "f664c30cbd039a381a0caa170ff1347f4f017fbfe86baf325333ba6ff2b393b3",
+      "publicationSha256": "0ad84219918b7b796ef1e8fe7d40e5f67c36ec6541df598ae07f3ee8f560a27f",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/sableuse-pression-maintien-depressurisation-arrets.md",
+      "draftSha256": "ece501558a6757e9be225eae8a02fc128441c8985ee4f01741038bf8092d1476",
+      "publicationSha256": "3f7bf595e96d6d125eb3d81fabf6fbcd8b1a0b52e5a93246150003a5bd306ef7",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/clemco-rlx-poignee-pneumatique-electrique-identification.md",
+      "draftSha256": "bd4cc1103bb237f3050ec93174b3fd5b212a49f9005e552469c322448d27b352",
+      "publicationSha256": "e129430905e2b8506ffde4863ed4f1e4904cffbc65d90095ec9ce425be2e9cb6",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/clemco-acs-air-sans-abrasif-commande.md",
+      "draftSha256": "4676f346d96ddebe6bab9d75faa219a8110dbb8c615e261065be05757561fb33",
+      "publicationSha256": "a466b751c5a2c3da32492de0e0b62cade7a3efa25371716166212a27e02870b6",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/clemco-cartouche-neuve-seasoning-depoussiereur.md",
+      "draftSha256": "be8759b6e76893371eeae3372e0a5fec10255b81dc6fe1d7aad78c7a120bc65f",
+      "publicationSha256": "3a9aec9abaabdb71ccaefb49426fe9329e1d217c6eeb2fa43eb34a1886454d44",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/schmalz-svk-ventouses-non-occupees-vide.md",
+      "draftSha256": "4c08428b2b230c9228ab4aa861b7dfa82b46716ff23140f0069f65cf064587f8",
+      "publicationSha256": "5a1130e9c33c5fe583bf3cd06d56e33df57352758cd6183d5c6c7deed7eb01b3",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/schmalz-fa-xi-svk-inclinaison-soixante-degres.md",
+      "draftSha256": "bf2310508599d1a00945babcbeac2edc5420edbd1200d1b29fc2ef52d02bbd01",
+      "publicationSha256": "bdb6e614130ffdedc0882aa9868afa35d1cdef880fb835a8cca23b79cac62d8a",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/ventouse-charge-verticale-force-cisaillement.md",
+      "draftSha256": "f07ff935baeee0b3d7a60b3dc6d7c632fb0f20eea09db6ff3111c062f1821294",
+      "publicationSha256": "1c9cc7b0198526b3902abba21c6d86d115bd1017bacfcdfd29b7776d50eefc00",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/schmalz-fmp-soufflante-ventilation-vide-ferme.md",
+      "draftSha256": "2e1acf731493ba3a0e7719bb883af2d280ebe96ee3ac4847b718d37700fc3bab",
+      "publicationSha256": "9576ad1a9cfe0b5432ac352c44729ac80f944cef72ab21f02c4ea2c6807a7f75",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/schmalz-fqe-ventouse-depose-remplacement.md",
+      "draftSha256": "5af50e1a2e30c532349f3839345a8621caeefdd063af7a9523248825c1057845",
+      "publicationSha256": "f8510f1b83e52d17f34e95bd8c5dcd883e694d70aba12634014464c1dfbeb373",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/graco-pro-xp-auto-turbine-ta-electrostatique.md",
+      "draftSha256": "0d3106a7244c9eb7fa8f59c9634e10c47d04bbf3023b407456d68acaad946df1",
+      "publicationSha256": "fd2eaf02a6a45679ce125f482e2c5e7df210431759df09ab9a097ec1bec03667",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/graco-ha1m10-peinture-eau-variante.md",
+      "draftSha256": "c59d16afed5b9aa9b51adbea1380f2314a4cabde270fa33433b506f05e209250",
+      "publicationSha256": "3cce7b7c89f123ca21c01c09b273c5256b60eb6f69fabda80dbd054e9c0f799c",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/graco-pro-xp-aa-queues-jet-air-fluide.md",
+      "draftSha256": "462d32ae3da037fd83040a4ee610105ccae595ea99823aa8069e17c57f19cfc9",
+      "publicationSha256": "4438572eea4318b781ec6abdc18727e69e76f157c3fe5eb1ab54c973e7ad06dc",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/graco-pro-xp-auto-cyl-sequence-air-fluide.md",
+      "draftSha256": "9693e3f3773fbeccc59e52f5e88081e462c436062001943ed31555653373cef1",
+      "publicationSha256": "17b70e670b6a7a98939f8288757bbe6b48c8e089856ec96e592cfb0fe5fb3cbf",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/graco-pro-xp-fuite-fluide-sous-capot.md",
+      "draftSha256": "7d6697fafe3b522049d5efd31afa34fa6e5117c6422b954965e53844c2f31156",
+      "publicationSha256": "23b6f91323437cfe0ec00852ccffded04814882384b6cb33b727f655578a937d",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/kaeser-secotec-faible-charge-point-rosee.md",
+      "draftSha256": "abd64ebec78b5d3a98b06b21ee28fd0c10fa169e9c65d4793fe85e7ea69d4860",
+      "publicationSha256": "d334b5dbe083fbc9a32aafcb29aea3a78424b6fa1a43430c1e8edd2c5aa36d31",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/kaeser-ihoc-sechage-charge-partielle.md",
+      "draftSha256": "f608534fd1a8495bf8a408364c6c44c6ed2799c456c59bd08dab6eee40fbabb7",
+      "publicationSha256": "71b2a6bec65f06a2ce81732f41311e69ecaf6335b15d832118eb1f9e2677ef7b",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/compresseur-kva-kw-kwh-devis-electrique.md",
+      "draftSha256": "7b3662048a6a1c37caf63d7f102e94f1f3e42ad34c9a024ed3fac262742de4a3",
+      "publicationSha256": "2445d1f7aba9b480d595163b64fbcede42b491f3128ad8cf2d5346470730534d",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/compresseur-refroidissement-eau-circuit-ouvert-ferme.md",
+      "draftSha256": "0b38134f844f174eb99098078234c1de2a845539f120521ec8bd344db30d2361",
+      "publicationSha256": "f8f6dd26edaa29eba875403926b20e94c436a88e8ab3db8b61f7815c4d5ad6a6",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/ut8666-fouloir-fonderie-cadence-fiches-contradictoires.md",
+      "draftSha256": "732d8e09e2c66ecf85bcd322e86f2fb7e693e983035b8b914777369e408b71fc",
+      "publicationSha256": "2071ff40fbfb5e4a44965ea361099980252a9370bb47f42dd8ffa3f62cd78a5f",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/aircat-6402-6403-tire-buffer-accessoire-vitesse.md",
+      "draftSha256": "b151e4993ba4a11c23f40b41e7ff2b3a757402c297b8a19e9e8d0c07ad3411c3",
+      "publicationSha256": "c29ddc2817b7c6987f130928d5c138c5bb89e68404c0cf809f81be00a3b18144",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/paslode-219090-huile-antigel-outil-pneumatique-froid.md",
+      "draftSha256": "dbdb06c0e5315964cae21ca8471d0e37a66e560c93d9e74b7fc475ce5957ad34",
+      "publicationSha256": "bb44f7586d11eeb3e9800690c9957c1005fa372542dcabc1522400b438c4aa08",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/max-akhl1260e-haute-pression-sorties-regular-high.md",
+      "draftSha256": "a301d9719b49fed3297b432c9403c4b00e20343759f703f338655ee9dbb31fd4",
+      "publicationSha256": "f9cc5ed967b8170bf87da0379dfe5c700d192fdc5dc76a6605e37e4a2b38aabe",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/powermax45-sync-code-0-12-pression-sortie-cnc.md",
+      "draftSha256": "95e8c302ba2bab5873e5b99ea2e7100869b809b09141721d15ecdf7e5cebd378",
+      "publicationSha256": "ec760170f7091e2a2d6454b7c2a4084223ad1abfe284432f40e312e237533bd5",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/powermax30-air-compresseur-integre-version-ce.md",
+      "draftSha256": "9363af2adca50b44c0550f0970f5ee1caf4ffc18af9562d0d88a5aa4aec52b32",
+      "publicationSha256": "978ef7f71e728b8bb9a210751313d5673e62733074e2b7e3fe0b69c297aea23a",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/exair-hazloc-refroidisseur-armoire-purge-classification.md",
+      "draftSha256": "0d7db164ea3b655d1ec8d39a8ddfc08974e923d209d2ae9c3f67aa6c9408c3d8",
+      "publicationSha256": "79c06bcb221402261393d3afd535cb880464b2b942bb7936a44480aaae16c5a8",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/graco-17w739-amortisseur-pression-air-fluide.md",
+      "draftSha256": "34255622b44e2db8940bb679177ef63f6a0a6ed68f86d4ccd34dd214d5713a9f",
+      "publicationSha256": "6cdf463fcbd297c0c3fac1660285ebe0446bfd197a80d26624116cf1baf19320",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/graco-amortisseur-pulsation-decompression-air-apres-fluide.md",
+      "draftSha256": "59ca4f78717e28ff47e89b28aef826a7dc001c47b039aea444d4bb3a74e9bca8",
+      "publicationSha256": "6d3effbd228d4c674e7a431d1b359d951d9a7343792c6cd57e152213ef1d9469",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/jdn-profi-quatre-six-bar-version-vitesse-levage.md",
+      "draftSha256": "bfb12e57f0da13c5ff2dac24be924032ada6220339d8b25a91ab922e0db4b43f",
+      "publicationSha256": "b688ef2baefd9199af2cdbf22ff78a8a7f7c712575d803aaf4933166a83f5132",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/jdn-chariot-ln-lh-lm-moteur-air-deplacement.md",
+      "draftSha256": "a3547a0f09137622ae33e7c2fd0fef12117ba111164f0e9c41dca5e0323b5432",
+      "publicationSha256": "2dfac7da72f0309d746080c18774ad09dd258949e01f6e4d83d7f603b0ad619d",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/smc-petite-buse-vide-detection-presence-debit-pression.md",
+      "draftSha256": "9cc10d38cd727b95a7e0a124b136323ee435477656940f5d522f6c0a3edb080a",
+      "publicationSha256": "671a1ba9420a945f6b88e6541c88581de23e60f9461646b3e59b9c4ea735a045",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/smc-ejecteur-vide-pression-trop-haute-performance.md",
+      "draftSha256": "ddd572e10fca9f388e4c4d7f50c8e00712b15a494139e58239fb117f0ce8026f",
+      "publicationSha256": "1eccddb8abb569f692ddaece551e0a95483e88cd843a68c55b028fffba687cbb",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/schmalz-fa-xi-svk-prise-successive-produits.md",
+      "draftSha256": "21e292356e58d919e22654431f5c53956d40397aff7c2b954deb64bf744edf5f",
+      "publicationSha256": "a2abb276849dc8d8bb2ea68a95d9ad424f93a65602a466b1d04c9fd9b3e1c2ef",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/schmalz-fqe-xc-led-aspiration-allumee-arret.md",
+      "draftSha256": "11ea6666615bf461d8546e344f9814ec7fbc8e3a8f03a995f1bda8253a10d692",
+      "publicationSha256": "117ad066ee230572930fb23ba976ba3ee842ea86e5feab9ac49f2420c0b2bb86",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    },
+    {
+      "path": "src/content/guides/ventouse-mark-free-traces-deformation-transfert-contamination.md",
+      "draftSha256": "11ed46b76e37df74d94113833f23b5da7bf201deecdad164a65281e27bfc555e",
+      "publicationSha256": "28ad74fe3445410b36a75739a6dae7f535da844c1c4ab4b4d1cff4a81ec9fae0",
+      "onlyChange": "pubDate: 2026-10-02 -> 2026-10-03"
+    }
+  ]
+}

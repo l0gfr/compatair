@@ -8,8 +8,8 @@ audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 4
 reviewStatus: "internal"
-relatedGuides: ["bar-psi-pression-absolue-relative", "ejecteur-vide-schmalz-sbpl-consommation", "ventouse-piece-poreuse-debit-vide"]
-sources: ["https://www.schmalz.com/en-gb/support/know-how/glossary/vacuum", "https://www.schmalz.com/en-tr/support/know-how/vacuum-knowledge/basic-knowledge/"]
+relatedGuides: [ "bar-psi-pression-absolue-relative", "ejecteur-vide-schmalz-sbpl-consommation", "ventouse-piece-poreuse-debit-vide", smc-petite-buse-vide-detection-presence-debit-pression ]
+sources: [ "https://www.schmalz.com/en-gb/support/know-how/glossary/vacuum", "https://www.schmalz.com/en-tr/support/know-how/vacuum-knowledge/basic-knowledge/", https://www.smcworld.com/catalog/BEST-Guide-en/pdf/4-p0858-0898-sinku_en.pdf ]
 ---
 
 **Un affichage à −0,6 bar correspond à une pression relative si le zéro de l’instrument est l’atmosphère.** Il ne représente pas une pression absolue négative. Pour comparer cet affichage à une fiche technique ou à un seuil de commande, il faut connaître l’unité et la référence utilisées.
@@ -67,6 +67,8 @@ Le [guide des éjecteurs de vide](/guides/ejecteur-vide-schmalz-sbpl-consommatio
 | Critère machine | Quelle décision cet état commande-t-il ? |
 
 Cette grille prépare une lecture avec les personnes responsables de la machine. Elle ne constitue pas une procédure de réglage. Un seuil déjà programmé ne prouve pas son adéquation à une nouvelle pièce ou à un nouveau cycle.
+
+Avec une buse d’environ 1 mm, [SMC, page imprimée 889](https://www.smcworld.com/catalog/BEST-Guide-en/pdf/4-p0858-0898-sinku_en.pdf#page=34) indique qu’un générateur surdimensionné peut réduire la différence de pression entre buse libre et pièce prise. Le [choix du capteur pour petite buse](/guides/smc-petite-buse-vide-detection-presence-debit-pression/#le-choix-du-capteur-suit-la-s%C3%A9paration-des-%C3%A9tats) compare ces deux états et les options de faible hystérésis ou de mesure de débit. Une conversion correcte en bar absolu ne suffit donc pas à rendre le signal de présence discriminant.
 
 ## Ce que doit conserver le rapport de contrôle
 

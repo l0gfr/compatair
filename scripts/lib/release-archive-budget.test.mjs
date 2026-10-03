@@ -49,4 +49,34 @@ describe('bounded compressed production archive', () => {
 		expect(packaging.run).toContain('xz -T2 -8');
 		expect(upload.with['if-no-files-found']).toBe('error');
 	});
+	it('refuses packaging when tar fails even if xz succeeds, before checksums or release upload', () => {
+		const root = mkdtempSync(join(tmpdir(), 'compatair-package-pipefail-'));
+		const packaging = workflow.jobs.validate.steps.find(step => step.name === 'Package immutable release');
+		expect(packaging.run.split('\n')[0]).toBe('set -Eeuo pipefail');
+		expect(packaging['continue-on-error']).toBeUndefined();
+		expect(upload.if).toBeUndefined();
+		expect(upload['continue-on-error']).toBeUndefined();
+		const checksumMarker = join(root, 'checksum-reached');
+		const xzMarker = join(root, 'xz-succeeded');
+		const functions = `install() { :; }
+ tar() { if [[ "$1" == "-C" ]]; then return 9; fi; return 0; }
+ xz() { cat; printf success > "$TEST_XZ_MARKER"; }
+ sha256sum() { printf checksum >> "$TEST_CHECKSUM_MARKER"; }
+ `;
+		const execute = body => execFileSync('bash', ['-e', '-c', functions + body], {
+			cwd: root, env: { ...process.env, GITHUB_SHA: 'a'.repeat(40), TEST_XZ_MARKER: xzMarker, TEST_CHECKSUM_MARKER: checksumMarker }, encoding: 'utf8',
+		});
+		try {
+			let rejected;
+			try { execute(packaging.run); } catch (error) { rejected = error; }
+			expect(rejected?.status).toBe(9);
+			expect(readFileSync(xzMarker, 'utf8')).toBe('success');
+			expect(() => readFileSync(checksumMarker, 'utf8')).toThrow();
+			// Replay the exact same step without the guard, matching the observed
+			// runner shell bash -e: xz masks tar and reaches both checksums.
+			execute(packaging.run.replace(/^set -Eeuo pipefail\n/, ''));
+			expect(readFileSync(checksumMarker, 'utf8')).toBe('checksumchecksum');
+		} finally { rmSync(root, { recursive: true, force: true }); }
+	});
+
 });

@@ -34,3 +34,39 @@ describe('generated technical cards', () => {
 		expect(bytes.length).toBeLessThan(30 * 1024);
 	});
 });
+
+// Long reference layout boundaries use the same rasterizer as catalog imports.
+describe('long tool references', () => {
+	it.each([16, 17, 32, 33, 48])('keeps all %i reference characters before the unit label', (length) => {
+		const mpn = '1234567890'.repeat(5).slice(0, length);
+		const svg = technicalCardSvg({ ...tool, mpn }, 'tools');
+		expect(svg).toContain(`Référence ${mpn}</text>`);
+		if (length === 16) {
+			expect(svg).toContain(`<text x="782" y="475" font-size="28" font-weight="700">${mpn}</text>`);
+		} else {
+			const firstY = length <= 32 ? 458 : 426;
+			for (let offset = 0; offset < length; offset += 16) {
+				expect(svg).toContain(`<text x="782" y="${firstY + offset / 16 * 32}" font-size="20" font-weight="700">${mpn.slice(offset, offset + 16)}</text>`);
+			}
+		}
+		expect(svg).toContain('<text x="782" y="528" font-size="25">fabricant</text>');
+	});
+	it('rejects a reference beyond the supported three lines instead of clipping it', () => {
+		expect(() => technicalCardSvg({ ...tool, mpn: 'W'.repeat(49) }, 'tools')).toThrow(/three-line/);
+	});
+	it('escapes every wrapped reference line', () => {
+		const svg = technicalCardSvg({ ...tool, mpn: '<script>&"'.repeat(3) }, 'tools');
+		expect(svg).not.toContain('<script>');
+		expect(svg).toContain('&lt;script&gt;&amp;&quot;');
+	});
+	it.each(['MP-633-ORANGE-NEP-1851', 'MP-9518EXT12HGR-383CW', 'W'.repeat(48)])('keeps the rasterized reference %s inside the content edge', async (mpn) => {
+		const svg = technicalCardSvg({ ...tool, mpn }, 'tools');
+		const { data, info } = await sharp(Buffer.from(svg)).resize({ width: 600, height: 400 }).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+		let overflow = 0;
+		for (let y = 202; y < 250; y++) for (let x = 559; x < info.width; x++) {
+			const offset = (y * info.width + x) * info.channels;
+			if (data[offset] < 100 && data[offset + 1] < 100 && data[offset + 2] < 100) overflow++;
+		}
+		expect(overflow).toBe(0);
+	});
+});

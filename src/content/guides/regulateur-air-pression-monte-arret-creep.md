@@ -8,9 +8,10 @@ audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "garage-automobile"]
 readingTime: 4
 reviewStatus: internal
-relatedGuides: ["regulateur-air-comprime-fuit-event-decompression", "diagnostiquer-chute-pression-air-comprime", "detecter-mesurer-fuites-air-comprime"]
+relatedGuides: [ "regulateur-air-comprime-fuit-event-decompression", "diagnostiquer-chute-pression-air-comprime", "detecter-mesurer-fuites-air-comprime", smc-ams-veille-pression-ne-descend-pas ]
 sources:
   - https://www.swagelok.com/en/blog/troubleshoot-common-regulator-problems
+  - https://www.smcworld.com/assets/manual/en-jp/files/PFxx-OMA1007.pdf
 ---
 
 Le régulateur est réglé, le consommateur s’arrête, puis la pression aval augmente. **Cette montée doit être caractérisée avant de retoucher la consigne.** Le [creep](/glossaire/#creep-regulateur) désigne un passage indésirable à travers le siège fermé ; une variation de pression amont peut provoquer un autre phénomène.
@@ -31,6 +32,8 @@ Le document concerne les régulateurs de systèmes fluides. Pour appliquer le di
 Demandez au mainteneur un relevé simultané en amont et en aval, dans un scénario autorisé : état du débit, position des commandes et moment de la montée. Gardez les unités, les points physiques et l’heure. Sans ces éléments, deux photographies de cadrans peuvent décrire deux instants différents.
 
 Une hausse aval avec une alimentation stable mérite un examen du siège et des autres origines de pression. Une hausse corrélée à une baisse amont oriente une autre question. Ces observations sont des indices ; elles ne démontrent pas à elles seules la cause interne.
+
+La pression aval peut aussi rester haute au passage en veille sans être en train de monter par creep. Le [principe AMS de SMC](https://www.smcworld.com/assets/manual/en-jp/files/PFxx-OMA1007.pdf#page=41) décrit une régulation sans décharge, dont la baisse dépend de la consommation aval. Le [cas AMS en veille sans baisse immédiate](/guides/smc-ams-veille-pression-ne-descend-pas/#deux-chronologies-qui-orientent-la-recherche) distingue ordre de veille, débit et pression : ces trois traces expliquent ce scénario avant une recherche de passage au siège.
 
 ## Le souffle par l’évent est un autre symptôme
 

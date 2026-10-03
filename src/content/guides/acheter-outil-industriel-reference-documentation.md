@@ -8,8 +8,8 @@ category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 3
-relatedGuides: ["compresseur-reference-erp-nom-commercial", "deprag-microvisseuse-ncm-nm-conversion", "fiam-cy9ram-wp-brochure-reference"]
-sources: ["https://www.fiamgroup.com/wp-content/uploads/2019/11/en-24.pdf", "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3125/D3125en.pdf"]
+relatedGuides: [ "compresseur-reference-erp-nom-commercial", "deprag-microvisseuse-ncm-nm-conversion", "fiam-cy9ram-wp-brochure-reference", ut8666-fouloir-fonderie-cadence-fiches-contradictoires ]
+sources: [ "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-24.pdf", "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3125/D3125en.pdf", https://continentaltoolgroup.com/wp-content/uploads/2026/07/UT8666-Factsheet-PERCUSSION-TOOLS.pdf, https://continentaltoolgroup.com/product/bench-rammer/ ]
 ---
 
 Trouver une référence dans un catalogue fabricant permet de documenter ses caractéristiques. Cela ne démontre pas qu’elle est disponible aujourd’hui chez un vendeur, ni que toutes les versions évoquées dans une ancienne brochure sont encore proposées. Cette distinction évite de transformer une bonne source technique en promesse commerciale.
@@ -46,3 +46,5 @@ CompatAir peut donc publier une fiche technique tout en indiquant qu’aucun ven
 La pression de référence est documentée dans [Fiam, brochure technique en-24, page PDF 4](https://www.fiamgroup.com/wp-content/uploads/2019/11/en-24.pdf#page=4).
 
 Les [ATP1043EO-5S et TH](/guides/atp1043eo-sortie-spline-carre-retenue/) montrent pourquoi la sortie, la retenue et une contradiction de gâchette doivent être résolues dans le dossier de commande.
+
+Pour le fouloir UT8666, la [fiche PDF fabricant](https://continentaltoolgroup.com/wp-content/uploads/2026/07/UT8666-Factsheet-PERCUSSION-TOOLS.pdf#page=1) annonce 1 750 coups/min alors que la [page produit consultée](https://continentaltoolgroup.com/product/bench-rammer/) donne 1 725. Le [dossier des cadences contradictoires UT8666](/guides/ut8666-fouloir-fonderie-cadence-fiches-contradictoires/#deux-documents-une-divergence-%C3%A0-enregistrer) conserve les deux valeurs et prépare la demande de confirmation de révision. Il évite de choisir silencieusement le chiffre le plus favorable lorsqu’un devis reprend une fiche sans l’identifier.

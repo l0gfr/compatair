@@ -7,8 +7,8 @@ category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 3
-relatedGuides: ["moteur-pneumatique-couple-demarrage-debit", "visseuse-pneumatique-coupure-automatique"]
-sources: ["https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3125/D3125en.pdf"]
+relatedGuides: [ "moteur-pneumatique-couple-demarrage-debit", "visseuse-pneumatique-coupure-automatique", deprag-345z-visseuse-bol-alimentation-assorti ]
+sources: [ "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3125/D3125en.pdf", https://www.deprag.com/en/screwdriving-technology/handheld-screwdrivers/pneumatic-handheld-screwdrivers/screwfeeder-systems.html, https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3420/D3420en.pdf ]
 ---
 
 La DEPRAG 345-3008-31-HM, référence 500100A, publie une plage de couple de 1 à 15 **Ncm**, et non de 1 à 15 Nm. Cette unité est décisive pour un poste de micro-assemblage. La perdre pendant une transcription multiplie le couple affiché par cent.
@@ -36,3 +36,5 @@ Demandez que la référence 500100A et l’unité de couple restent écrites sur
 La plage de l’outil ne prouve pas la qualité de serrage d’un assemblage particulier. La qualification du procédé, la mesure du couple et les limites des composants se traitent avec les prescriptions adaptées. Le [guide du moteur pneumatique et du couple](/guides/moteur-pneumatique-couple-demarrage-debit/) aide à séparer ces notions.
 
 Pour une comparaison dans un tableur, prévoyez une colonne d’unité et une valeur convertie identifiée comme telle. Conserver la valeur d’origine permet de retrouver immédiatement une erreur de facteur cent avant qu’elle ne devienne un mauvais achat.
+
+Un autre cas DEPRAG montre pourquoi un suffixe doit rester sur le devis. Le fabricant décrit son [ensemble d’alimentation](https://www.deprag.com/en/screwdriving-technology/handheld-screwdrivers/pneumatic-handheld-screwdrivers/screwfeeder-systems.html) avec visseuse, alimentation, unité de maintenance, commande et accessoires adaptés. Le [cas 345Z avec bol d’alimentation](/guides/deprag-345z-visseuse-bol-alimentation-assorti/#la-lettre-z-identifie-une-configuration-%C3%A0-v%C3%A9rifier) précise la livraison et distingue les [345Z-308-HM et 345-308-HM](https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3420/D3420en.pdf#page=2).

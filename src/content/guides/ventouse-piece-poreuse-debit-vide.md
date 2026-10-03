@@ -8,8 +8,8 @@ audiences: ["professionnel"]
 metiers: ["menuiserie-agencement", "maintenance-industrielle"]
 readingTime: 4
 reviewStatus: "internal"
-relatedGuides: ["ejecteur-vide-schmalz-sbpl-consommation", "cout-metre-cube-air-comprime", "dimensionner-compresseur-menuiserie-agencement"]
-sources: ["https://www.schmalz.com/site/binaries/content/assets/media/05_services/catalog/vg/area-layer-gripping-systems.pdf", "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air2.pdf"]
+relatedGuides: [ "ejecteur-vide-schmalz-sbpl-consommation", "cout-metre-cube-air-comprime", "dimensionner-compresseur-menuiserie-agencement", schmalz-svk-ventouses-non-occupees-vide ]
+sources: [ "https://www.schmalz.com/site/binaries/content/assets/media/05_services/catalog/vg/area-layer-gripping-systems.pdf", "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air2.pdf", https://www.schmalz.com/en-nl/products/automation-743270/valves-308656/check-valves-and-flow-restrictors-308720/check-valves-svk-svkg-svv-308721 ]
 ---
 
 **Pour saisir une pièce poreuse, il ne suffit pas de choisir un générateur d’après son niveau de vide maximal.** Il faut vérifier son comportement avec la pièce réelle et distinguer le débit aspiré de l’air consommé pour produire le vide. Un chiffre en L/min peut décrire l’un ou l’autre.
@@ -47,6 +47,8 @@ Pour dimensionner l’air de l’atelier, demandez la consommation d’alimentat
 Nous proposons d’exiger un essai sur les matières réellement prévues et leurs variantes admissibles. Le protocole doit être défini par le concepteur du préhenseur, avec les moyens de sécurité appropriés. Un simple essai manuel de traction ne certifie pas la tenue en mouvement.
 
 Faites préciser les mesures retenues, les limites et les conditions d’échec : pièce mal présentée, surface différente ou perte d’alimentation selon l’analyse du système. Si ces points ne sont pas validés, n’utilisez pas le résultat comme autorisation de levage ou de fonctionnement automatique.
+
+Une ventouse laissée hors de la pièce crée un autre chemin de fuite que la porosité du matériau. [Schmalz SVK](https://www.schmalz.com/en-nl/products/automation-743270/valves-308656/check-valves-and-flow-restrictors-308720/check-valves-svk-svkg-svv-308721) décrit une bille fermant la ligne non occupée et un bypass conservant une petite fuite fonctionnelle. Le [cas des ventouses non occupées](/guides/schmalz-svk-ventouses-non-occupees-vide/#dessiner-la-surface-couverte-sur-le-pr%C3%A9henseur) prépare l’essai avec la plus petite pièce prévue et les ports couverts, sans traiter le clapet comme une fermeture parfaitement étanche.
 
 ## Éjecteur, pompe ou soufflante : comparer la même tâche
 
