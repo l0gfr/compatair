@@ -684,7 +684,7 @@ const discoveryHubs = new Map([
 	['/guides/particuliers/index.html', ['data-hub-signal="guides"', 'data-guide-directory', 'data-directory-pagination']],
 	['/guides/professionnels/index.html', ['data-hub-signal="guides"', 'data-guide-directory', 'data-directory-pagination']],
 	['/comparatifs/index.html', ['data-discovery-hub="comparatifs"', 'comparison-summary']],
-	['/marques/index.html', ['data-discovery-hub="marques"', 'data-directory-pagination']],
+	['/marques/index.html', ['data-discovery-hub="marques"', 'class="directory-pagination"']],
 	['/glossaire/index.html', ['data-discovery-hub="glossaire"', 'data-glossary-hub', 'data-glossary-search']],
 	['/recherche/index.html', ['data-discovery-hub="recherche"', 'data-search-hub', 'data-search-more']],
 ]);
@@ -699,7 +699,7 @@ for (const [path, markers] of discoveryHubs) {
 const decisionDirectoryPages = new Map([
 	['/compresseurs/index.html', ['data-directory-hub="compressors-by-brand"']],
 	['/outils-pneumatiques/index.html', ['data-directory-hub="tools-by-usage"']],
-	['/marques/index.html', ['data-directory-browser', 'data-directory-pagination']],
+	['/marques/index.html', ['data-directory-browser', 'class="directory-pagination"']],
 	['/comparatifs/compresseurs-debit-restitue/index.html', ['data-comparison-directory', 'data-directory-hub="fad-by-brand"']],
 ]);
 for (const [path, markers] of decisionDirectoryPages) {
