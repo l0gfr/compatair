@@ -10,6 +10,8 @@ Les références, dates de consultation, relations entre champs et preuves, arbi
 
 Le workflow `Source link health` se déclenche sur les modifications concernées de `main`, chaque lundi à 06:17 UTC et à la demande. Quatre hôtes au maximum sont interrogés simultanément ; les requêtes d’un même hôte restent séquentielles. Les liens internes sont contrôlés hors réseau par `audit:dist` à chaque validation.
 
+Le budget du job est de 75 minutes. Au catalogue de 4 730 URL, le précédent plafond de 55 minutes a interrompu l’audit après au moins 4 650 contrôles : la validation et le build froid avaient déjà consommé 24 minutes. Le workflow restaure seulement le cache borné de calculs déjà utilisé par la CI et la production ; chaque ligne réutilisée reste soumise à l’empreinte du moteur et des produits. Il n’enregistre aucun nouveau cache ni artefact de succès. Le build et la validation des sources restent obligatoires même lorsqu’un cache est disponible.
+
 - Un `HEAD` en erreur 404, 410, 405 ou 501 est vérifié par `GET`.
 - Un lien déclaré mort doit encore répondre 404 ou 410 à une seconde vérification `GET`.
 - Un service répondant toujours en erreur après une seconde tentative est signalé comme indisponible, séparément des liens morts.
