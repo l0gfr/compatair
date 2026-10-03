@@ -1,16 +1,27 @@
 ---
-title: "Force d’un vérin pneumatique : pression, diamètre et effort réellement disponible"
+title: "Force d’un vérin pneumatique : pression, diamètre et effort réellement
+  disponible"
 seoTitle: "Force d’un vérin pneumatique : calcul et limites"
-description: "Comprenez la force en poussée et en traction, l’effet de la tige et les limites du calcul théorique avant de choisir le diamètre d’un vérin."
+description: "Comprenez la force en poussée et en traction, l’effet de la tige
+  et les limites du calcul théorique avant de choisir le diamètre d’un vérin."
 pubDate: "2026-09-26"
 updatedDate: 2026-10-03
 category: "Choisir"
-audiences: ["professionnel"]
-metiers: ["maintenance-industrielle", "menuiserie-agencement"]
+audiences: [ "professionnel" ]
+metiers: [ "maintenance-industrielle", "menuiserie-agencement" ]
 readingTime: 4
 reviewStatus: "internal"
-relatedGuides: ["consommation-verin-pneumatique-double-effet", "regler-vitesse-verin-pneumatique-echappement", "pression-travail-6-3-bar-outils-pneumatiques"]
-sources: ["https://www.festo.com/net/supportportal/files/10203/actuators", "https://www.festo.com/media/cms/media/mam_upload/market/Festo_General_operating_conditions_en.pdf"]
+relatedGuides:
+  [
+    "consommation-verin-pneumatique-double-effet",
+    "regler-vitesse-verin-pneumatique-echappement",
+    "pression-travail-6-3-bar-outils-pneumatiques"
+  ]
+sources:
+  - https://www.festo.com/net/supportportal/files/10203/actuators
+  - https://www.festo.com/media/cms/media/mam_upload/market/Festo_General_operating_conditions_en.pdf
+  - https://www.pinch-valve.com/fileadmin/user_upload/Downloads/PDF/Technische_Infobl%C3%A4tter/TI_pV_OS_DE-EN.pdf
+  - https://www.pinch-valve.com/fileadmin/user_upload/Downloads/PDF/BA_pV_DIV_EN.pdf
 ---
 
 **La force calculée par pression × surface est un point de départ.** Elle ne garantit pas qu’un vérin déplacera une charge à la vitesse souhaitée, dans les deux sens et pendant toute sa course. La tige, les frottements, les pressions des chambres et la mécanique de l’installation doivent rester visibles dans le raisonnement.
@@ -77,6 +88,8 @@ Faites rapprocher les pressions au vérin, la charge et les caractéristiques de
 Pour un actionneur sans tige, l’équivalence comprend aussi [le couplage magnétique ou mécanique](/guides/verin-sans-tige-magnetique-mecanique-remplacement/). La même course et une poussée comparable ne suffisent pas à confirmer le remplacement du chariot entraîné.
 
 Une économie d’air sur le retour demande aussi un bilan d’effort sur cette course. Le [cas SMC ASR/ASQ](/guides/smc-asr-asq-retour-pression-effort-verin/) examine la disposition des valves, les variations de charge et la pression retenue, pour préparer la sélection avec le cycle réel.
+
+Une vanne à pincement demande un calcul différent de celui d’un piston. AKO définit sa pression de fermeture comme la pression de conduite plus le différentiel de plaque. Le [cas AKO : pression optimale de commande](/guides/ako-vanne-pincement-pression-differentielle/) conserve cet apport de la pression produit et les maxima de la référence, au lieu de retenir une consigne d’air universelle. [AKO, pression de commande optimale TI_pV_OS, 15 janvier 2024](https://www.pinch-valve.com/fileadmin/user_upload/Downloads/PDF/Technische_Infobl%C3%A4tter/TI_pV_OS_DE-EN.pdf#page=1).
 
 ## Sources et méthode
 

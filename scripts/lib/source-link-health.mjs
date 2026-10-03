@@ -18,11 +18,12 @@ export function sourceInventory(entries) {
 	const inventory = new Map();
 	for (const entry of entries) {
 		const url = sourceUrl(entry.url).href;
-		const references = inventory.get(url) ?? [];
-		if (!references.some((reference) => JSON.stringify(reference) === JSON.stringify(entry.reference))) references.push(entry.reference);
+		const references = inventory.get(url) ?? new Map();
+		const key = JSON.stringify(entry.reference);
+		if (!references.has(key)) references.set(key, entry.reference);
 		inventory.set(url, references);
 	}
-	const sources = [...inventory].sort(([a], [b]) => a.localeCompare(b)).map(([url, references]) => ({ url, references: references.sort((a, b) => JSON.stringify(a).localeCompare(JSON.stringify(b))) }));
+	const sources = [...inventory].sort(([a], [b]) => a.localeCompare(b)).map(([url, references]) => ({ url, references: [...references].sort(([a], [b]) => a.localeCompare(b)).map(([, reference]) => reference) }));
 	return { version: createHash('sha256').update(JSON.stringify(sources)).digest('hex'), sources };
 }
 
@@ -89,20 +90,47 @@ export async function checkSource(value, { probe = requestSource, wait = pause }
 	}
 }
 
+// A reviewed historical 404 remains visible, and is probed on every run.
+// Only the exact same error on the exact document is acknowledged, for 30 days.
+// New statuses, redirected documents and unsafe results still raise anomalies.
+function calendarDate(value) {
+ if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return NaN;
+ const time = Date.parse(`${value}T00:00:00Z`);
+ return Number.isFinite(time) && new Date(time).toISOString().slice(0, 10) === value ? time : NaN;
+}
+export function annotateKnownSourceFailure(result, observations, now = new Date()) {
+ const observation = observations.find(item => item.sourceUrl === result.url);
+ if (!observation) return result;
+ const archived = observation.archive;
+ const observed = calendarDate(observation.observedAt), retrieved = calendarDate(archived?.retrievedAt);
+ const age = now.getTime() - observed;
+ const reviewed = observation.method === 'GET' && observation.httpStatus === 404 && Number.isFinite(observed) && Number.isFinite(retrieved)
+  && retrieved <= observed && age >= 0
+  && archived?.retainedForTraceability === true && archived.publicDownload === false && /^[a-f0-9]{64}$/.test(archived.sha256)
+  && Number.isSafeInteger(archived.bytes) && archived.bytes > 0;
+ if (!reviewed) return result;
+ if (result.state === 'broken' && result.status === observation.httpStatus && result.finalUrl === observation.sourceUrl && age <= 30 * 86_400_000) return { ...result, acknowledged: true, observedAt: observation.observedAt, archiveSha256: archived.sha256 };
+ if (result.state === 'reachable') return { ...result, recovered: true, observedAt: observation.observedAt };
+ return result;
+}
+
 export function healthSummary(results) {
 	const counts = { reachable: 0, broken: 0, unavailable: 0, unsafe: 0, unverified: 0 };
 	for (const result of results) counts[result.state] += 1;
-	return { ...counts, checked: results.length, anomalies: counts.broken + counts.unavailable + counts.unsafe, auditUnavailable: results.length === 0 || counts.unverified === results.length };
+	const acknowledged = results.filter(result => result.state === 'broken' && result.acknowledged === true).length;
+	const recovered = results.filter(result => result.state === 'reachable' && result.recovered === true).length;
+	return { ...counts, acknowledged, recovered, checked: results.length, anomalies: counts.broken - acknowledged + counts.unavailable + counts.unsafe + recovered, auditUnavailable: results.length === 0 || counts.unverified === results.length };
 }
 
 export function sourceHealthSummaryMarkdown(report) {
-	const details = report.results.filter(result => result.state !== 'reachable');
-	const anomalies = details.filter(result => result.state !== 'unverified');
+	const details = report.results.filter(result => result.state !== 'reachable' || result.recovered);
+	const anomalies = details.filter(result => result.state !== 'unverified' && !result.acknowledged);
 	const selected = [...anomalies, ...details.filter(result => result.state === 'unverified')].slice(0, 30);
-	const rows = selected.map(({ url, state, status, reason, references }) => ({ url, state, status, reason, references: references.slice(0, 20), referenceCount: references.length }));
+	const rows = selected.map(({ url, state, status, reason, acknowledged, recovered, observedAt, references }) => ({ url, state, status, reason, acknowledged, recovered, observedAt, references: references.slice(0, 20), referenceCount: references.length }));
 	const safeJson = JSON.stringify(rows, null, 2).replaceAll('`', '\\u0060').replaceAll('<', '\\u003c');
 	return `## Contrôle des sources\n\nContrôle daté du ${report.checkedAt}.\n\n`
 		+ `${report.summary.checked} URL : ${report.summary.reachable} accessibles, ${report.summary.broken} cassées, ${report.summary.unavailable} indisponibles, ${report.summary.unsafe} refusées, ${report.summary.unverified} non vérifiées.\n\n`
+		+ `${report.summary.acknowledged ?? 0} erreurs historiques déjà documentées, toujours contrôlées ; ${report.summary.recovered ?? 0} rétablissements à examiner. Une observation historique expire après 30 jours.\n\n`
 		+ `Une indisponibilité ou un contrôle non concluant ne réfute pas la preuve technique archivée. Aucun contrôle TLS ou réseau n’est contourné.\n\n`
 		+ `${selected.length} résultats affichés sur ${details.length} à examiner (20 références maximum par URL). Le rapport JSON complet figure dans l’artefact d’anomalies si le contrôle échoue.\n\n`
 		+ `\`\`\`json\n${safeJson}\n\`\`\`\n`;

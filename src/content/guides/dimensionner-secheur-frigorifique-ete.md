@@ -1,19 +1,28 @@
 ---
 title: "Dimensionner un sécheur frigorifique en été : débit et facteurs de correction"
 seoTitle: "Sécheur frigorifique en été : calculer le bon débit"
-description: "Pourquoi un sécheur de 10 m³/min peut devenir insuffisant : exemple KAESER vérifié, facteurs de correction et relevés utiles en période chaude."
+description: "Pourquoi un sécheur de 10 m³/min peut devenir insuffisant :
+  exemple KAESER vérifié, facteurs de correction et relevés utiles en période
+  chaude."
 pubDate: 2026-09-26
 category: "Choisir"
-audiences: ["professionnel"]
-metiers: ["maintenance-industrielle", "carrosserie-peinture"]
+audiences: [ "professionnel" ]
+metiers: [ "maintenance-industrielle", "carrosserie-peinture" ]
 readingTime: 5
 featured: false
 reviewStatus: "internal"
-relatedGuides: [ "point-rosee-secheur-filtre-air-comprime", "ventilation-local-compresseur-surchauffe", "secheur-air-comprime-atelier-non-chauffe", kaeser-secotec-faible-charge-point-rosee ]
+relatedGuides:
+  [
+    "point-rosee-secheur-filtre-air-comprime",
+    "ventilation-local-compresseur-surchauffe",
+    "secheur-air-comprime-atelier-non-chauffe",
+    kaeser-secotec-faible-charge-point-rosee
+  ]
 sources:
   - https://fr.kaeser.com/entreprise/blog/comment-dimensionner-un-secheur-frigorifique.aspx
   - https://id.kaeser.com/download.ashx?id=tcm%3A148-5993
-updatedDate: 2026-09-29
+  - https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/DRYPOINT_RA_20-960_manual_en_2019_10_00_01.pdf
+updatedDate: 2026-10-03
 ---
 
 **Un sécheur annoncé pour 10 m³/min ne traite pas nécessairement 10 m³/min dans les conditions les plus chaudes de votre atelier.** KAESER publie un exemple où la pression d’entrée, la température ambiante et celle de l’air comprimé conduisent à trois corrections. Le constructeur précise que ses facteurs ne doivent pas être transposés aux autres marques. [KAESER, dimensionnement d’un sécheur frigorifique](https://fr.kaeser.com/entreprise/blog/comment-dimensionner-un-secheur-frigorifique.aspx).
@@ -78,6 +87,8 @@ Parmi les points d’exploitation à examiner figurent la propreté des échange
 Il faut également identifier la fonction de chaque étage. Le dossier [aftercooler et sécheur d’air comprimé](/guides/aftercooler-refroidisseur-secheur-air-comprime/) distingue refroidissement, séparation du condensat et traitement de la vapeur restante.
 
 Un compresseur frigorifique arrêté n’indique pas nécessairement un séchage interrompu. Le [cycle thermique SECOTEC décrit par KAESER](https://id.kaeser.com/download.ashx?id=tcm%3A148-5993#page=6) restitue du froid stocké pendant certaines phases à faible charge. Le [cycle SECOTEC en cinq phases](/guides/kaeser-secotec-faible-charge-point-rosee/#les-cinq-phases-expliquent-larr%C3%AAt) rapproche état du compresseur frigorifique, niveau de stockage et tendance du point de rosée ; il aide à décrire le symptôme avant de conclure à une capacité insuffisante.
+
+Une forte perte de pression peut aussi venir d’un sécheur trop froid. BEKO cite les condensats gelés dans le dépannage du DRYPOINT RA. Le [diagnostic RA : restriction et glace](/guides/beko-drypoint-ra-perte-pression-condensat-gele/) sépare cette cause d’un défaut de purge ou d’un flexible obstrué, avant d’attribuer le manque d’air à la capacité frigorifique. [BEKO DRYPOINT RA 20-960, notice octobre 2019](https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/DRYPOINT_RA_20-960_manual_en_2019_10_00_01.pdf#page=45).
 
 ## Quel point de rosée demander ?
 

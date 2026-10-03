@@ -95,7 +95,7 @@ describe('release boundary policy', () => {
 		} finally { rmSync(root, { recursive: true, force: true }); }
 	});
 	it('compresses the growing catalog within the bounded release storage ceiling', () => {
-		expect(workflow).toContain('tar -C dist -cf - . | xz -T2 -8 > "compatair-${GITHUB_SHA}.tar.xz"');
+		expect(workflow).toContain('tar -C dist -cf - . | xz -T2 -9 > "compatair-${GITHUB_SHA}.tar.xz"');
 		expect(workflow).toContain('release_bytes > 201326592');
 		expect(workflow).toContain('compression-level: 0');
 		expect(deploy).toContain('*.tar.xz) command -v xz');
@@ -142,7 +142,7 @@ describe('release boundary policy', () => {
 		expect(health).not.toContain('secrets.');
 	});
 
-	it('keeps the full source audit after bounded calculation-cache restoration', () => {
+	it('audits exact versioned sources without calculating or rendering all product pages', () => {
 		const health = parseDocument(readFileSync(new URL('../.github/workflows/source-health.yml', import.meta.url), 'utf8')).toJS();
 		const job = health.jobs.sources;
 		expect(job.if).toBe("github.ref == 'refs/heads/main'");
@@ -151,17 +151,17 @@ describe('release boundary policy', () => {
 		expect(health.permissions).toEqual({ contents: 'read' });
 		const setup = job.steps.find((step: { name: string }) => step.name === 'Set up Node.js');
 		expect(setup.id).toBe('node');
-		const restore = job.steps.find((step: { uses?: string }) => step.uses?.startsWith('actions/cache/restore@'));
-		expect(restore.uses).toBe('actions/cache/restore@caa296126883cff596d87d8935842f9db880ef25');
-		expect(restore.with.path).toBe('.astro/page-calculations-v1');
-		expect(restore.with.key).toBe('compatair-page-calculations-v1-${{ runner.os }}-${{ steps.node.outputs.node-version }}-${{ github.sha }}');
-		expect(restore.with['restore-keys'].trim()).toBe('compatair-page-calculations-v1-${{ runner.os }}-${{ steps.node.outputs.node-version }}-');
+		expect(job.steps.some((step: { uses?: string }) => step.uses?.startsWith('actions/cache/restore@'))).toBe(false);
 		expect(job.steps.some((step: { uses?: string }) => step.uses?.startsWith('actions/cache/save@'))).toBe(false);
-		for (const command of ['pnpm catalog:check', 'pnpm audit:editorial', 'pnpm test', 'pnpm build', 'pnpm sources:check']) {
+		for (const command of ['pnpm catalog:check', 'pnpm audit:editorial', 'pnpm test', 'pnpm sources:check']) {
 			const step = job.steps.find((candidate: { run?: string }) => candidate.run?.split('\n').includes(command));
 			expect(step).toBeDefined();
 			expect(step.if).toBeUndefined();
 		}
+		expect(job.steps.some((step: { run?: string }) => step.run?.includes('pnpm build'))).toBe(false);
+		const checker = readFileSync(new URL('./check-source-links.mjs', import.meta.url), 'utf8');
+		expect(checker).toContain('collectVersionedSourceInventory');
+		expect(checker).not.toContain('dist/');
 	});
 
 	it('pins deployment and rollback to the dedicated CompatAir root', () => {

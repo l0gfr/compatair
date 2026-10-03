@@ -1,6 +1,13 @@
 const xml = (s) => String(s).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&apos;');
 export const TECHNICAL_CARD_WIDTH = 600;
 export const TECHNICAL_CARD_HEIGHT = 400;
+const vectorHeader = '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">';
+
+// Recognize only our fixed generated layout, not arbitrary SVG metadata.
+// Publication separately requires byte-for-byte regeneration from the product.
+export function generatedTechnicalCardDimensions(svg) {
+	return svg.startsWith(vectorHeader) && svg.endsWith('</svg>') ? { width: 1200, height: 800 } : undefined;
+}
 
 const format = (n) => n.toLocaleString('fr-FR', { maximumFractionDigits: 3 });
 

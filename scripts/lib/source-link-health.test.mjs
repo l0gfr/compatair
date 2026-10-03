@@ -1,6 +1,6 @@
 import { EventEmitter } from 'node:events';
 import { describe, expect, it } from 'vitest';
-import { sourceUrl, sourceInventory, requestSource, followSource, checkSource, healthSummary, sourceHealthSummaryMarkdown } from './source-link-health.mjs';
+import { sourceUrl, sourceInventory, requestSource, followSource, checkSource, annotateKnownSourceFailure, healthSummary, sourceHealthSummaryMarkdown } from './source-link-health.mjs';
 
 describe('source link health', () => {
 	it('publishes bounded actionable evidence without allowing Markdown injection', () => {
@@ -81,5 +81,28 @@ describe('source link health', () => {
 		expect(healthSummary([{ state: 'unverified' }])).toMatchObject({ anomalies: 0, auditUnavailable: true });
 		expect(healthSummary([{ state: 'broken' }, { state: 'unsafe' }]).anomalies).toBe(2);
 		expect(healthSummary([]).auditUnavailable).toBe(true);
+	});
+	it('keeps a recently reviewed historical 404 visible while alerting only on a change', () => {
+		const url = 'https://example.com/archived.pdf';
+		const observation = { sourceUrl: url, observedAt: '2026-10-02', httpStatus: 404, method: 'GET', archive: { retrievedAt: '2026-09-30', sha256: 'a'.repeat(64), bytes: 4383400, retainedForTraceability: true, publicDownload: false } };
+		const result = { url, finalUrl: url, state: 'broken', status: 404, references: [] };
+		const now = new Date('2026-10-03T00:00:00Z');
+		const acknowledged = annotateKnownSourceFailure(result, [observation], now);
+		expect(acknowledged).toMatchObject({ state: 'broken', status: 404, acknowledged: true, archiveSha256: observation.archive.sha256 });
+		expect(healthSummary([acknowledged])).toMatchObject({ broken: 1, acknowledged: 1, anomalies: 0 });
+		for (const changed of [{ state: 'broken', status: 410 }, { state: 'unavailable', status: 503 }, { state: 'unsafe', reason: 'unsafe_address' }, { finalUrl: `${url}?new`, state: 'broken', status: 404 }]) {
+			const checked = annotateKnownSourceFailure({ ...result, ...changed }, [observation], now);
+			expect(checked.acknowledged).toBeUndefined();
+			expect(healthSummary([checked]).anomalies).toBe(1);
+		}
+		const restored = annotateKnownSourceFailure({ ...result, state: 'reachable', status: 200 }, [observation], now);
+		expect(healthSummary([restored])).toMatchObject({ reachable: 1, recovered: 1, anomalies: 1 });
+		expect(healthSummary([annotateKnownSourceFailure({ ...result, finalUrl: 'https://example.com/moved.pdf', state: 'reachable', status: 200 }, [observation], new Date('2026-11-02'))])).toMatchObject({ recovered: 1, anomalies: 1 });
+		for (const time of ['2026-10-01', '2026-11-02']) expect(annotateKnownSourceFailure(result, [observation], new Date(time)).acknowledged).toBeUndefined();
+		for (const archive of [{ sha256: 'wrong' }, { bytes: 0 }, { retainedForTraceability: false }, { publicDownload: true }, { retrievedAt: '2026-10-04' }]) expect(annotateKnownSourceFailure(result, [{ ...observation, archive: { ...observation.archive, ...archive } }], now).acknowledged).toBeUndefined();
+		for (const invalidDate of ['2026-02-30', '2026-9-30', '2026-09-30T00:00:00Z', 'invalid']) {
+			expect(annotateKnownSourceFailure(result, [{ ...observation, observedAt: invalidDate }], now).acknowledged).toBeUndefined();
+			expect(annotateKnownSourceFailure(result, [{ ...observation, archive: { ...observation.archive, retrievedAt: invalidDate } }], now).acknowledged).toBeUndefined();
+		}
 	});
 });

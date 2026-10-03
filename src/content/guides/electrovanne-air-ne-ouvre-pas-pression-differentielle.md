@@ -1,17 +1,25 @@
 ---
 title: "Électrovanne d’air qui ne s’ouvre pas : contrôler la pression différentielle"
 seoTitle: "Électrovanne bloquée : pression différentielle"
-description: "La bobine reçoit sa commande mais l’air ne passe pas : distinguer commande directe et servo-assistance, pression amont et différentiel minimal."
+description: "La bobine reçoit sa commande mais l’air ne passe pas : distinguer
+  commande directe et servo-assistance, pression amont et différentiel minimal."
 pubDate: 2026-09-30
 category: Utiliser
-audiences: ["professionnel"]
-metiers: ["maintenance-industrielle"]
+audiences: [ "professionnel" ]
+metiers: [ "maintenance-industrielle" ]
 readingTime: 3
 reviewStatus: internal
-relatedGuides: ["choisir-distributeur-pneumatique-debit-nominal", "vanne-demarrage-progressif-air-comprime-remise-pression", "diagnostiquer-chute-pression-air-comprime"]
+relatedGuides:
+  [
+    "choisir-distributeur-pneumatique-debit-nominal",
+    "vanne-demarrage-progressif-air-comprime-remise-pression",
+    "diagnostiquer-chute-pression-air-comprime"
+  ]
 sources:
   - https://www.burkert-usa.com/en/company-career/what-s-new/press/media/technical-reports/direct-acting-vs-pilot-solenoid-valves
   - https://www.burkert.co.uk/en/landingpage/10-Frequently-asked-questions-about-solenoid-valves
+  - https://www.pinch-valve.com/fileadmin/user_upload/Downloads/PDF/BA_pV_DIV_EN.pdf
+updatedDate: 2026-10-03
 ---
 
 La bobine reçoit sa commande et l’arrivée d’air est sous pression. **Une électrovanne servo-assistée peut néanmoins manquer de différence de pression pour fonctionner comme prévu.** Le manomètre amont seul ne répond pas à cette question.
@@ -32,6 +40,8 @@ La [FAQ de sélection Bürkert](https://www.burkert.co.uk/en/landingpage/10-Freq
 Un exemple hypothétique montre la confusion : **6 bar en amont et 5,8 bar en aval donnent 0,2 bar de [différentiel](/glossaire/#differentiel-pression-electrovanne)**. La pression d’arrivée paraît élevée, mais la différence est petite. Cet exemple ne valide ni n’invalide une électrovanne particulière ; il montre les deux mesures à rechercher.
 
 Faites noter les pressions et l’état de la commande au même instant du scénario autorisé. Demandez si le modèle utilise un pilotage interne ou une alimentation externe, puis retrouvez le schéma prévu. Une modification de l’alimentation de pilotage appartient au concepteur de la machine.
+
+La vanne pilotée peut aussi subir le vide du procédé. AKO prévoit une compensation au corps de la vanne à pincement au-delà de 100 mbar de dépression. Le [cas AKO : manchette qui ne se rouvre pas](/guides/ako-vanne-pincement-vide-manchette-ouverte/) distingue cette situation d’une purge de commande bouchée ou d’une électrovanne défaillante. [AKO, notice des vannes à manchon pneumatiques BA_pV_DIV](https://www.pinch-valve.com/fileadmin/user_upload/Downloads/PDF/BA_pV_DIV_EN.pdf#page=11).
 
 ## Construire la comparaison documentaire
 

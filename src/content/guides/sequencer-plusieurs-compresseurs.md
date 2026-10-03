@@ -1,17 +1,19 @@
 ---
 title: "Séquencer plusieurs compresseurs : base, appoint et pression réseau"
 seoTitle: "Séquencement de plusieurs compresseurs"
-description: "Méthode pour attribuer base et appoint, choisir les signaux et tester la séquence sans laisser plusieurs machines moduler en parallèle."
+description: "Méthode pour attribuer base et appoint, choisir les signaux et
+  tester la séquence sans laisser plusieurs machines moduler en parallèle."
 pubDate: 2026-07-15
-updatedDate: 2026-09-29
+updatedDate: 2026-10-03
 category: "Utiliser"
-audiences: [professionnel]
-metiers: [maintenance-industrielle]
+audiences: [ professionnel ]
+metiers: [ maintenance-industrielle ]
 readingTime: 16
 featured: true
 sources:
   - https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf
   - https://www.atlascopco.com/en-nz/compressors/greenproduction/compressed-air-reliability
+  - https://airpol.com.pl/wp-content/uploads/2026/08/EN-Katalog-Airpol-mEnergy-18-55kW.pdf
 ---
 
 Une salle de plusieurs compresseurs ne devient pas une centrale coordonnée parce que les pressostats sont étagés. La stratégie doit décider quelles machines portent la base, laquelle suit la variation, où la pression est lue et comment le système réagit à une pointe, une panne ou une maintenance.
@@ -35,6 +37,8 @@ La matrice doit permettre de choisir :
 - réserve disponible si une unité est indisponible ;
 - ordre de rotation pour la maintenance ou l’équilibrage des heures ;
 - contraintes de qualité d’air et de pression.
+
+Une ligne de capacité doit conserver sa pression. Airpol publie pour mEnergy 18 un maximum de 240 m³/h à 6,5 bar et de 180 m³/h à 10 bar. Le [cas Ultra Speed et plage de consigne](/guides/airpol-menergy-ultra-speed-consigne-debit/) lit ces colonnes sans transformer le libellé Capacity, non défini comme FAD sur les pages examinées, en verdict outil. [Airpol mEnergy, brochure constructeur août 2026](https://airpol.com.pl/wp-content/uploads/2026/08/EN-Katalog-Airpol-mEnergy-18-55kW.pdf#page=15).
 
 ## Placer le signal au bon endroit
 

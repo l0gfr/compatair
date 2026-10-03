@@ -1,9 +1,16 @@
 import { describe, expect, it } from 'vitest';
 import sharp from 'sharp';
-import { TECHNICAL_CARD_WIDTH, TECHNICAL_CARD_HEIGHT, technicalCardSvg } from './technical-card.mjs';
+import { TECHNICAL_CARD_WIDTH, TECHNICAL_CARD_HEIGHT, technicalCardSvg, generatedTechnicalCardDimensions } from './technical-card.mjs';
 
 const tool = { brand: 'Example', model: 'M1', mpn: '1234', demandModel: 'fixed-flow', airflowBasis: 'average', airflowLpm: { typical: 300 }, workingPressureBar: { typical: 6 } };
 describe('generated technical cards', () => {
+	it('retains the generated vector layout dimensions without accepting arbitrary SVG layouts', () => {
+		const svg = technicalCardSvg(tool, 'tools');
+		expect(generatedTechnicalCardDimensions(svg)).toEqual({ width: 1200, height: 800 });
+		expect(generatedTechnicalCardDimensions('<svg width="1" height="1"></svg>')).toBeUndefined();
+		expect(generatedTechnicalCardDimensions(svg.replace('width="1200"', 'width="9999"'))).toBeUndefined();
+		expect(generatedTechnicalCardDimensions(svg.slice(0, -6))).toBeUndefined();
+	});
 	it('keeps a published average labelled as an average', () => {
 		const svg = technicalCardSvg(tool, 'tools');
 		expect(svg).toContain('CONSOMMATION MOY.');

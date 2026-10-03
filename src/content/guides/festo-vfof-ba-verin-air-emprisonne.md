@@ -1,15 +1,25 @@
 ---
 title: "Festo VFOF-BA : un vérin arrêté peut encore contenir de l’air sous pression"
 seoTitle: "VFOF-BA : vérin arrêté et air emprisonné"
-description: "Le clapet piloté VFOF-BA peut retenir l’air du vérin. Identifiez fonction BA, pilotage et purge prévue avant d’interpréter un arrêt intermédiaire."
+description: "Le clapet piloté VFOF-BA peut retenir l’air du vérin. Identifiez
+  fonction BA, pilotage et purge prévue avant d’interpréter un arrêt
+  intermédiaire."
 pubDate: "2026-10-03"
 category: "Utiliser"
-audiences: ["professionnel"]
-metiers: ["maintenance-industrielle"]
+audiences: [ "professionnel" ]
+metiers: [ "maintenance-industrielle" ]
 readingTime: 4
 reviewStatus: "internal"
-relatedGuides: ["distributeur-5-3-centre-ferme-verin-derive", "regler-vitesse-verin-pneumatique-echappement", "blocage-tige-verin-dsnu-kp-maintien-securite"]
-sources: ["https://ftp.festo.com/public/pneumatic/SOFTWARE_SERVICE/Documentation/2021/EN/VFOF-VFFF_EN.PDF"]
+relatedGuides:
+  [
+    "distributeur-5-3-centre-ferme-verin-derive",
+    "regler-vitesse-verin-pneumatique-echappement",
+    "blocage-tige-verin-dsnu-kp-maintien-securite"
+  ]
+sources:
+  - https://ftp.festo.com/public/pneumatic/SOFTWARE_SERVICE/Documentation/2021/EN/VFOF-VFFF_EN.PDF
+  - https://doc.coval.com/g/LEMAX%2B/not/lemax%2B_notice_coval_2023_v05.pdf
+updatedDate: 2026-10-03
 ---
 
 **L’arrêt du mouvement ne démontre pas que les chambres du vérin sont dépressurisées.** Sur la combinaison VFOF-BA décrite par Festo, l’absence de signal pilote ferme l’échappement du vérin. L’air retenu appartient donc au fonctionnement prévu de cet organe. [Principe BA, page PDF8](https://ftp.festo.com/public/pneumatic/SOFTWARE_SERVICE/Documentation/2021/EN/VFOF-VFFF_EN.PDF#page=8).
@@ -49,6 +59,8 @@ Un vérin immobilisé peut aussi subir d’autres contraintes mécaniques. Il fa
 Pour remplacer la pièce, comparez fonction de contrôle de débit, fonction de clapet, pilotage et moyen de relâchement. Un raccord qui se visse au même endroit peut porter un symbole différent. Faites valider cette différence dans le schéma au lieu de conclure sur la seule taille du filetage.
 
 Le [réglage de vitesse à l’échappement](/guides/regler-vitesse-verin-pneumatique-echappement/) restera ensuite une vérification de mouvement. Ici, le résultat attendu du dossier est l’identification des volumes potentiellement retenus et de la procédure de la machine. Aucune pression résiduelle fictive ni durée de maintien mesurée n’est publiée.
+
+La perte d’électricité et la perte d’air doivent également être distinguées sur les préhenseurs. Les modules LEMAX+ NF et NO réagissent différemment à la première ; l’option PG1S relâche la pièce à la coupure pneumatique. Le [guide des variantes LEMAX+](/guides/coval-lemax-no-nf-coupure-air-electrique/) précise ces références sans étendre leur comportement à tous les modules de vide. [COVAL LEMAX+, notice 2023 V05](https://doc.coval.com/g/LEMAX%2B/not/lemax%2B_notice_coval_2023_v05.pdf#page=1).
 
 ## Sources et méthode
 

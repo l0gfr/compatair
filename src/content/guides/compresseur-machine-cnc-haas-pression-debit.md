@@ -1,15 +1,24 @@
 ---
 title: "Quel compresseur pour une machine CNC Haas : pression, débit et accessoires"
 seoTitle: "Compresseur CNC Haas : débit, pression et installation"
-description: "Lisez les besoins d’air d’une Haas VF-4 sans confondre pression minimale, débit publié et auxiliaires. Préparez le relevé et le scénario de réception."
+description: "Lisez les besoins d’air d’une Haas VF-4 sans confondre pression
+  minimale, débit publié et auxiliaires. Préparez le relevé et le scénario de
+  réception."
 pubDate: "2026-09-26"
 category: "Installer"
-audiences: ["professionnel"]
-metiers: ["maintenance-industrielle"]
+audiences: [ "professionnel" ]
+metiers: [ "maintenance-industrielle" ]
 readingTime: 5
 reviewStatus: "internal"
-relatedGuides: ["guide-complet-dimensionner-compresseur-air", "diagnostiquer-chute-pression-air-comprime", "installer-reseau-air-comprime-atelier"]
-sources: ["https://www.haascnc.com/owners/pre-install-guide/mills-pre-install/VF-4.html"]
+relatedGuides:
+  [
+    "guide-complet-dimensionner-compresseur-air",
+    "diagnostiquer-chute-pression-air-comprime",
+    "installer-reseau-air-comprime-atelier"
+  ]
+sources:
+  - https://www.haascnc.com/owners/pre-install-guide/mills-pre-install/VF-4.html
+  - https://www.heidenhain.com/fileadmin/pdf/en/01_Products/Produktinformationen/PI_DA400_ID894509_en.pdf
 updatedDate: 2026-10-03
 ---
 
@@ -54,6 +63,8 @@ Nous proposons de tenir un inventaire séparé des fonctions machine, des access
 | Liaison au poste | Quelles dimensions et quels raccords prescrits ? |
 
 Si aucune consommation n’est disponible pour une option, marquez-la comme inconnue. Ne remplacez pas cette absence par un forfait ajouté arbitrairement à la VF-4.
+
+L’air de barrage des codeurs peut avoir sa propre condition de traitement. HEIDENHAIN demande un sécheur supplémentaire avant le DA400 si la pression est inférieure à 6 bar et que l’air est saturé en vapeur d’eau. Le [cas DA400 : humidité en entrée](/guides/heidenhain-da400-air-entree-humide-six-bar/) distingue cette condition des classes d’air prévues pour les codeurs. [HEIDENHAIN DA400, information produit, février 2025](https://www.heidenhain.com/fileadmin/pdf/en/01_Products/Produktinformationen/PI_DA400_ID894509_en.pdf#page=2).
 
 ## Organiser une réception représentative
 

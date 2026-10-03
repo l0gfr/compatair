@@ -1,15 +1,23 @@
 ---
 title: "Jet air-assisted airless : séparer pression du fluide et air d’atomisation"
 seoTitle: "Pro Xp AA : queues de jet, fluide et air d’atomisation"
-description: "La notice Pro Xp Auto AA explique le rôle de la buse et de l’air cap. Relevez chaque réglage séparément pour discuter des queues de jet."
+description: "La notice Pro Xp Auto AA explique le rôle de la buse et de l’air
+  cap. Relevez chaque réglage séparément pour discuter des queues de jet."
 pubDate: "2026-10-03"
 category: "Utiliser"
-audiences: ["professionnel"]
-metiers: ["carrosserie-peinture"]
+audiences: [ "professionnel" ]
+metiers: [ "carrosserie-peinture" ]
 readingTime: 4
 reviewStatus: "internal"
-relatedGuides: ["mesurer-pression-dynamique-pistolet-peinture", "pistolet-lvlp-vs-hvlp-compresseur"]
-sources: ["https://www.graco.com/content/dam/graco/tech_documents/manuals/333/333011/333011EN-L.pdf"]
+relatedGuides:
+  [
+    "mesurer-pression-dynamique-pistolet-peinture",
+    "pistolet-lvlp-vs-hvlp-compresseur"
+  ]
+sources:
+  - https://www.graco.com/content/dam/graco/tech_documents/manuals/333/333011/333011EN-L.pdf
+  - https://cdn.quable.com/sames/f7323419/original/xcite%2520-xcite%2520light-sames-airmix-DRT582221110-US-G.pdf
+updatedDate: 2026-10-03
 ---
 
 **Sur un pistolet AA, la pression du fluide et l’air d’atomisation n’alimentent pas le même mécanisme.** La buse forme un éventail de produit sous pression ; l’air du chapeau complète l’atomisation. Augmenter un unique réglage « pression pistolet » masque cette architecture.
@@ -43,6 +51,8 @@ Si le produit ou la buse change, préparez un nouveau relevé au lieu de reprend
 | Circuits d’air | Réglages séparés et conditions pendant action |
 
 Le [guide de pression dynamique](/guides/mesurer-pression-dynamique-pistolet-peinture/) aide à relever une alimentation pendant le travail. Pour AA, précisez la ligne : une mesure d’air ne décrit pas la pression du fluide au même instant.
+
+La pression du fluide doit respecter les accessoires. Les filtres SAMES 155010000 et 155010100 plafonnent à 200 bar, même lorsqu’un Xcite+ 400 bar est utilisé. Le [cas Xcite+ : filtre de la chaîne fluide](/guides/sames-xcite-400-filtre-200-bar-accessoire/) vérifie chaque limite et la sépare de l’alimentation d’air d’atomisation. [SAMES Xcite+ et Xcite+ Light, notice DRT582221110-US-G](https://cdn.quable.com/sames/f7323419/original/xcite%2520-xcite%2520light-sames-airmix-DRT582221110-US-G.pdf#page=58).
 
 ## La comparaison avec HVLP a une frontière
 

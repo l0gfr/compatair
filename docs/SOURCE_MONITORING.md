@@ -6,11 +6,11 @@ Les références, dates de consultation, relations entre champs et preuves, arbi
 
 ## Liens externes
 
-`pnpm sources:check`, après `pnpm build`, contrôle les sources du catalogue, les sources déclarées des guides et les liens d’achat directs effectivement rendus. Les URL communes sont dédupliquées en conservant les références impactées. Une empreinte de l’inventaire permet de rattacher le rapport au corpus exact, en plus du SHA Git porté par l’exécution CI.
+`pnpm sources:check` contrôle les preuves des produits validés par leur schéma, les sources déclarées des guides et les liens d’achat directs retenus par le même contrôle d’EAN et de fraîcheur que les pages. L’inventaire vient des fichiers versionnés ; il ne nécessite ni matrice de compatibilité ni rendu Astro. Les URL communes sont dédupliquées en conservant les références impactées. `sourceVersion` identifie cet inventaire exact et `sourceRevision` son commit Git ; `sourceWorkingTreeDirty` signale une exécution locale avec des changements non commités. Le rapport ne prétend pas décrire un catalogue généré par un build.
 
 Le workflow `Source link health` se déclenche sur les modifications concernées de `main`, chaque lundi à 06:17 UTC et à la demande. Quatre hôtes au maximum sont interrogés simultanément ; les requêtes d’un même hôte restent séquentielles. Les liens internes sont contrôlés hors réseau par `audit:dist` à chaque validation.
 
-Le budget du job est de 75 minutes. Au catalogue de 4 730 URL, le précédent plafond de 55 minutes a interrompu l’audit après au moins 4 650 contrôles : la validation et le build froid avaient déjà consommé 24 minutes. Le workflow restaure seulement le cache borné de calculs déjà utilisé par la CI et la production ; chaque ligne réutilisée reste soumise à l’empreinte du moteur et des produits. Il n’enregistre aucun nouveau cache ni artefact de succès. Le build et la validation des sources restent obligatoires même lorsqu’un cache est disponible.
+Le budget du job reste de 75 minutes. La validation du catalogue, l’audit éditorial et les tests restent obligatoires. Les imports sont traités dans des workers bornés, libérés après 1 024 produits. Aucun cache de calcul ou de HTML n’est restauré ou enregistré par ce workflow. Sur les 5 297 URL du lot C, l’inventaire issu des sources a reproduit exactement l’empreinte du contrôle utilisant le build, en 62 secondes sur le poste de développement ; le build du précédent audit GitHub avait pris 18 minutes 31 secondes. Ces mesures portent sur des environnements différents, pas sur une accélération garantie de chaque run.
 
 - Un `HEAD` en erreur 404, 410, 405 ou 501 est vérifié par `GET`.
 - Un lien déclaré mort doit encore répondre 404 ou 410 à une seconde vérification `GET`.
@@ -23,6 +23,8 @@ Le contrôle vérifie l’accessibilité HTTP, pas la permanence du contenu : un
 ## Signalement des anomalies
 
 Une anomalie confirmée provoque l’échec du contrôle GitHub et conserve `source-health-report.json` comme artefact pendant 30 jours, avec URL, statut, version de l’inventaire et références concernées. Aucun message de succès, courriel, commentaire ou issue n’est créé par ces workflows. Les préférences personnelles de notification GitHub restent distinctes des contrôles du dépôt.
+
+Une erreur historique explicitement documentée dans `source-availability.ts`, avec date, statut GET 404 et empreinte d’une copie conservée, reste visible dans le compteur des liens cassés. La même URL répondant encore exactement 404 peut être reconnue pendant 30 jours sans répéter l’alerte. Elle est toujours interrogée. Un autre statut, une autre URL finale, un problème de sécurité ou l’expiration de cette période produit une nouvelle anomalie ; un rétablissement HTTP est aussi signalé pour faire réexaminer l’avertissement public. Aucune valeur technique ni preuve historique n’est réécrite par ce mécanisme.
 
 La disponibilité du site, des snapshots et du MCP est vérifiée chaque jour à 05:23 UTC par le workflow existant `Production availability`, avec trois nouvelles tentatives en cas d’erreur. Ces contrôles n’utilisent aucun modèle IA et ne consomment aucun jeton d’inférence.
 

@@ -1,16 +1,25 @@
 ---
 title: "Vanne de démarrage progressif : ce qu’elle change à la remise en pression"
 seoTitle: "Démarrage progressif pneumatique : rôle et limites"
-description: "Une vanne de démarrage progressif contrôle la montée en pression. Comprenez le basculement, le volume aval et les vérifications à prévoir lors du redémarrage."
+description: "Une vanne de démarrage progressif contrôle la montée en pression.
+  Comprenez le basculement, le volume aval et les vérifications à prévoir lors
+  du redémarrage."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-30
+updatedDate: 2026-10-03
 category: "Installer"
-audiences: ["professionnel"]
-metiers: ["maintenance-industrielle"]
+audiences: [ "professionnel" ]
+metiers: [ "maintenance-industrielle" ]
 readingTime: 5
 reviewStatus: "internal"
-relatedGuides: ["couper-air-comprime-machine-arret-week-end", "choisir-distributeur-pneumatique-debit-nominal", "regler-vitesse-verin-pneumatique-echappement"]
-sources: ["https://www.festo.com/media/pim/789/D15000100122789.pdf"]
+relatedGuides:
+  [
+    "couper-air-comprime-machine-arret-week-end",
+    "choisir-distributeur-pneumatique-debit-nominal",
+    "regler-vitesse-verin-pneumatique-echappement"
+  ]
+sources:
+  - https://www.festo.com/media/pim/789/D15000100122789.pdf
+  - https://ross-admin-global-us-east.s3.amazonaws.com/production/uploads/document_language_file/file/49/ROSS_DM2_Series_C_Double_Valves_Installation_Instructions_SS301.pdf.pdf
 ---
 
 **Une vanne de démarrage progressif organise la mise en pression d’un circuit pneumatique.** Elle ne suffit pas à valider la position de tous les actionneurs ou la sécurité d’un redémarrage. Pour la choisir, il faut décrire le circuit aval et le scénario de remise en service.
@@ -74,6 +83,8 @@ Le compte rendu peut conserver les pressions amont et aval, les temps observés,
 Le terme « démarrage progressif » ne constitue pas, à lui seul, une déclaration de niveau de performance de sécurité. Demandez les documents correspondant à la fonction effectivement requise et à l’architecture retenue. Un composant de gamme voisine ne transmet pas automatiquement ses propriétés à la référence achetée.
 
 Le [guide de coupure d’air en arrêt de production](/guides/couper-air-comprime-machine-arret-week-end/) aide à préparer le scénario d’arrêt et de reprise. La vanne, le circuit de commande et la procédure de redémarrage doivent être examinés ensemble, puis la configuration validée doit rester identifiable dans le dossier de maintenance.
+
+Le réarmement d’une double valve constitue une fonction différente du remplissage progressif. La DM2 série C de ROSS exige les solénoïdes principaux hors tension pendant le reset et un délai avant leur reprise. Le [cas DM2 C et les deux intervalles de 200 ms](/guides/ross-dm2-c-reset-200ms-alimentation/) conserve ces conditions, sans proposer de contournement ni valider la sécurité d’une machine. [ROSS DM2 série C, instructions SS301](https://ross-admin-global-us-east.s3.amazonaws.com/production/uploads/document_language_file/file/49/ROSS_DM2_Series_C_Double_Valves_Installation_Instructions_SS301.pdf.pdf#page=2).
 
 ## Sources et méthode
 

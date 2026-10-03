@@ -18,7 +18,7 @@ export const evidenceSchema = z.object({
 });
 
 const productImageSchema = z.object({
-	src: z.string().regex(/^\/images\/products\/[a-z0-9][a-z0-9._-]*\.(?:avif|gif|jpe?g|png|webp)$/),
+	src: z.string().regex(/^\/images\/products\/[a-z0-9][a-z0-9._-]*\.(?:avif|gif|jpe?g|png|svg|webp)$/),
 	alt: z.string().min(1),
 	sourceUrl: httpsUrlSchema,
 	sourceLabel: z.string().min(1),

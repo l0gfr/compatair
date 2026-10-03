@@ -9,8 +9,8 @@ import { assertDocumentQualityIntegrity } from './document-quality-observatory';
 describe('contradiction radar', () => {
 	it('keeps claims separated by source channel and publishes explicit empty coverage', () => {
 		expect(contradictionRadar.radarVersion).toMatch(/^[a-f0-9]{64}$/);
-		expect(contradictionRadar.summary).toMatchObject({ totalCount: 9, answeredCount: 9, openCount: 0, withheldCount: 3 });
-		expect(contradictionRadar.summary.coverageByChannel).toMatchObject({ manual: 6, manufacturer: 6, merchant: 1, measured: 0 });
+		expect(contradictionRadar.summary).toMatchObject({ totalCount: 10, answeredCount: 10, openCount: 0, withheldCount: 4 });
+		expect(contradictionRadar.summary.coverageByChannel).toMatchObject({ manual: 7, manufacturer: 7, merchant: 1, measured: 0 });
 		for (const record of contradictionRadar.records) expect(new Set(record.claims.map((claim) => claim.normalizedValue)).size).toBeGreaterThan(1);
 	});
 

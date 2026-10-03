@@ -230,7 +230,7 @@ jobs:
           install -D -m 644 scripts/lib/rank-demand.mjs dist/_ops/lib/rank-demand.mjs
           install -D -m 644 scripts/lib/report-product-funnel.mjs dist/_ops/lib/report-product-funnel.mjs
           install -D -m 644 scripts/lib/report-acquisition.mjs dist/_ops/lib/report-acquisition.mjs
-          tar -C dist -cf - . | xz -T2 -8 > "compatair-${GITHUB_SHA}.tar.xz"
+          tar -C dist -cf - . | xz -T2 -9 > "compatair-${GITHUB_SHA}.tar.xz"
           sha256sum "compatair-${GITHUB_SHA}.tar.xz" > "compatair-${GITHUB_SHA}.tar.xz.sha256"
           tar -czf "compatair-admin-${GITHUB_SHA}.tar.gz" \
             deploy \

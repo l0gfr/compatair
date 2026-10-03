@@ -1,15 +1,25 @@
 ---
 title: "Scie-lime pneumatique : machine, kit et références d’embouts"
 seoTitle: "Scie-lime pneumatique : que contient le kit ?"
-description: "SI-4710F et SI-4740F ajoutent des limes à deux machines différentes. Vérifier le contenu de livraison, la fixation et la course avant achat."
+description: "SI-4710F et SI-4740F ajoutent des limes à deux machines
+  différentes. Vérifier le contenu de livraison, la fixation et la course avant
+  achat."
 pubDate: 2026-09-26
-updatedDate: 2026-10-02
+updatedDate: 2026-10-03
 category: "Choisir"
-audiences: ["professionnel"]
-metiers: ["carrosserie-peinture", "maintenance-industrielle"]
+audiences: [ "professionnel" ]
+metiers: [ "carrosserie-peinture", "maintenance-industrielle" ]
 readingTime: 3
-relatedGuides: [ "scie-pneumatique-moteur-rotatif-piston", "lime-bande-pneumatique-largeur-longueur-abrasif", suhner-umc6rl-lime-course-rainure ]
-sources: [ "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf", https://www.suhner-abrasive.com/en/services/download-center?cHash=e31546df478867207107d44af53da6c5&tx_suhnerext_suhnerext%5Baction%5D=getDownload&tx_suhnerext_suhnerext%5Bcontroller%5D=Download&tx_suhnerext_suhnerext%5Buid%5D=2145&type=871 ]
+relatedGuides:
+  [
+    "scie-pneumatique-moteur-rotatif-piston",
+    "lime-bande-pneumatique-largeur-longueur-abrasif",
+    suhner-umc6rl-lime-course-rainure
+  ]
+sources:
+  - https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf
+  - https://www.suhner-abrasive.com/en/services/download-center?cHash=e31546df478867207107d44af53da6c5&tx_suhnerext_suhnerext%5Baction%5D=getDownload&tx_suhnerext_suhnerext%5Bcontroller%5D=Download&tx_suhnerext_suhnerext%5Buid%5D=2145&type=871
+  - https://www.rems.de/dlbatv2/566008RX
 ---
 
 Un suffixe de référence peut désigner un kit, sans changer le mécanisme de base de la machine. Dans le cas d’une scie-lime pneumatique, cette distinction évite de comparer une machine nue à un ensemble d’accessoires en leur attribuant des performances différentes.
@@ -41,6 +51,8 @@ Demandez au vendeur d’indiquer chaque élément inclus, et pas seulement « co
 Séparez ensuite le besoin d’usage du nombre de pièces du coffret. Une lime plate, ronde ou triangulaire répond à une géométrie d’accès, mais le catalogue ne donne pas un résultat d’usinage sur votre matériau. L’essai fournisseur doit porter sur la forme de pièce, le consommable et la finition attendue, avec le montage autorisé.
 
 Le remplacement d’une lame par une lime s’effectue selon la notice, avec les mesures de mise en sécurité prescrites. Le tableau de comparaison ne constitue pas une instruction de changement d’accessoire.
+
+L’interface de lame peut également limiter un ensemble guidé. La notice REMS distingue les lames à double talon prévues pour le guide Tiger des lames ordinaires à talon simple. Le [cas Tiger pneumatic : lame et guide](/guides/rems-tiger-pneumatic-lame-guide-tube/) conserve le domaine de la version et le rôle distinct de la vis de maintien et de la goupille de centrage. [REMS Tiger/Cat/Puma, notice multilingue 566008RX](https://www.rems.de/dlbatv2/566008RX).
 
 ## Même kit d’accessoires ne signifie pas même débit
 

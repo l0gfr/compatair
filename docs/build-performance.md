@@ -58,8 +58,42 @@ aux compteurs des fiches ; les suivants réutilisent les cellules inchangées.
 La ligne `[page-calculations]` et le benchmark rapportent ces calculs séparément
 des 100 cas du panel agent. Ce cache n’est pas publié.
 
-Les nouvelles lignes utilisent gzip niveau 6, avec le même format vérifié et le
-même plafond de 64 Mio. Les lignes historiques au niveau 1 restent lisibles.
+Les nouvelles lignes utilisent un format compact réversible et gzip niveau 9,
+avec le même plafond de 64 Mio. Les nombres ne sont pas arrondis. Les champs
+et les tableaux d’avertissements partagent une représentation commune ; les
+anciennes lignes d’objets restent lisibles si leur empreinte moteur est valide.
+Une ligne migrée ne conserve plus les valeurs des colonnes supprimées. Les
+fichiers de colonnes obsolètes ne sont supprimés qu’après validation de toutes
+les lignes présentes, afin de préserver les builds partiels. Atteindre le budget
+d’écriture n’empêche pas la lecture des lignes déjà validées.
+
+Les demandes par action, à volume variable ou dont seul un débit moyen, à vide
+ou de régime inconnu est publié produisent déjà un résultat indépendant du
+compresseur. Ce résultat est partagé une fois par fiche d’outil complète ; il
+reste `insufficient_data`, avec son avertissement précis. Les autres outils
+occupent la matrice disque. `independentCalculated` et `independentHits`
+comptent séparément cette réutilisation ; `calculated`, `reused` et `memoryHits`
+concernent les cellules qui dépendent du compresseur.
+
+Les compteurs globaux appliquent la même branche aux outils fixes de régime
+insuffisamment documenté : leur total de données insuffisantes est le nombre
+de compresseurs, sans relancer ce verdict invariant pour chaque machine.
+
+Sur le catalogue publié à `c008091895455e69a7db070fca1773210be48cc7`,
+3 219 compresseurs et 14 087 outils, 8 201 outils relèvent de ces branches.
+La matrice passe de 45 346 053 à 18 947 034 cellules. Une recompression hors
+cache des lignes existantes, avec élimination de ces colonnes, mesure
+65 965 770 octets avant et 29 740 422 après, plus 394 363 octets pour les
+colonnes. Les 45 346 053 objets hérités conservés ou résultats indépendants
+comparés restent identiques en JSON. Ce contrôle ne constitue pas un décodage
+de toute la matrice par la nouvelle classe de cache. Le moteur précédent
+et le moteur extrait ont également produit 126 783 résultats identiques sur
+tous les outils, trois compresseurs et trois marges. Ces contrôles ne mesurent
+pas le temps du futur build ni la taille d’un catalogue plus grand.
+[Mesures du 3 octobre](build-reuse-measurements-2026-10-03.json).
+
+La compression gzip niveau 6 précédait ce format. Les lignes historiques au
+niveau 1 étaient aussi lisibles.
 Le 3 octobre 2026, un échantillon de 80 lignes du catalogue de 3 019 compresseurs
 mesurait 1 612 552 octets au niveau 1 contre 1 323 342 au niveau 6. La compression
 et la vérification des octets décompressés prenaient respectivement 54 et 109 ms
@@ -73,6 +107,19 @@ cette mesure ; la taille du prochain catalogue doit être contrôlée séparéme
 Les tableaux des groupes de variantes montrent au maximum douze références,
 dont la principale et celle consultée, avec le total du groupe et un accès au
 scanner. Leur rendu et leur clé ne recopient plus toute la liste sur chaque page.
+
+Les nouvelles cartes techniques peuvent conserver leur SVG généré, avec le
+même dessin et des dimensions intrinsèques de 1 200 × 800. Le catalogue et
+l’audit de l’artefact exigent une égalité exacte avec le générateur à partir de
+la fiche validée. Aucun SVG arbitraire, script, lien externe ou valeur périmée
+n’est admis par cette voie. Les photos restent des images distinctes. Cette
+représentation évite de rasteriser du texte et réduit le volume des futurs lots.
+
+L’archive de production utilise xz niveau 9, avec deux threads et le même
+plafond de 192 Mio. Le flux TAR du lot C, recompressé hors production, reste
+identique à l’octet près : 200 118 788 octets au niveau 8, 196 062 248 au
+niveau 9. Le gain de 4 056 540 octets ne qualifie pas le poids des ajouts
+suivants ; le contrôle d’archive reste bloquant avant tout accès serveur.
 
 Ajouter un outil peut modifier les compteurs de toutes les fiches compresseurs.
 Ajouter un compresseur peut modifier les sélections de tous les outils. Ces pages

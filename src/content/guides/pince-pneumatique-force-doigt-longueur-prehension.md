@@ -1,16 +1,26 @@
 ---
-title: "Pince pneumatique : force par doigt, longueur des mors et maintien de la pièce"
+title: "Pince pneumatique : force par doigt, longueur des mors et maintien de la
+  pièce"
 seoTitle: "Pince pneumatique : force par doigt et longueur des mors"
-description: "Force totale ou par doigt ? Lisez les courbes d’une pince pneumatique avec le bras de levier et le sens de préhension avant d’en déduire une capacité de maintien."
+description: "Force totale ou par doigt ? Lisez les courbes d’une pince
+  pneumatique avec le bras de levier et le sens de préhension avant d’en déduire
+  une capacité de maintien."
 pubDate: "2026-09-26"
 updatedDate: 2026-10-03
 category: "Choisir"
-audiences: ["professionnel"]
-metiers: ["maintenance-industrielle"]
+audiences: [ "professionnel" ]
+metiers: [ "maintenance-industrielle" ]
 readingTime: 5
 reviewStatus: "internal"
-relatedGuides: ["force-verin-pneumatique-diametre-pression", "ventouse-piece-poreuse-debit-vide", "choisir-distributeur-pneumatique-debit-nominal"]
-sources: ["https://www.festo.com/media/catalog/203154_documentation.pdf"]
+relatedGuides:
+  [
+    "force-verin-pneumatique-diametre-pression",
+    "ventouse-piece-poreuse-debit-vide",
+    "choisir-distributeur-pneumatique-debit-nominal"
+  ]
+sources:
+  - https://www.festo.com/media/catalog/203154_documentation.pdf
+  - https://assets.fipa.com/assets/06_PDF-Datenblaetter/FIPA-GR04.710-Nadelgreifer_en_Master.pdf
 ---
 
 **Une force annoncée pour une pince pneumatique n’est pas directement une masse de pièce admissible.** Il faut d’abord savoir si elle représente un mors ou l’ensemble, où elle est mesurée et dans quel sens la pince travaille. La géométrie des doigts montés doit ensuite faire partie du dossier de sélection.
@@ -79,6 +89,8 @@ Pour une alternative par le vide, le [guide des ventouses sur pièces poreuses](
 Avec une ventouse, la libération peut dépendre d’un soufflage séparé. Le [guide de dépose par soufflage](/guides/ventouse-depose-piece-soufflage-duree-debit/) examine la chronologie, le mode de commande et le débit, au lieu de limiter le contrôle à la prise de pièce.
 
 Pour une pince munie d’un ressort, complétez le bilan avec le [cas Festo DHPS NO ou NC](/guides/festo-dhps-no-nc-ressort-force-disponible/). Il organise la lecture des courbes et la combinaison des forces selon le sens de préhension, puis distingue ce calcul de la qualification du maintien de la pièce.
+
+Pour une matière difficile à saisir par le vide, les aiguilles croisées FIPA GR04 utilisent un principe de pénétration. Le [guide GR04 : course et épaisseur](/guides/fipa-gr04-aiguilles-course-epaisseur-matiere/) distingue la course réglable des aiguilles de la suspension de 35 mm des GR04.720. Leur plage de course ne donne pas à elle seule une épaisseur saisissable ou une charge garantie. [FIPA GR04.710 et GR04.720, fiche des préhenseurs à aiguilles](https://assets.fipa.com/assets/06_PDF-Datenblaetter/FIPA-GR04.710-Nadelgreifer_en_Master.pdf#page=1).
 
 ## Sources et méthode
 

@@ -1,17 +1,25 @@
 ---
 title: "Pompe à membrane pneumatique calée : vérifier le circuit avant le compresseur"
-description: "Pompe AODD qui s’arrête ou ne débite plus : distinguer air, aspiration, refoulement et usure, avec une méthode de relevé utile au service technique."
+description: "Pompe AODD qui s’arrête ou ne débite plus : distinguer air,
+  aspiration, refoulement et usure, avec une méthode de relevé utile au service
+  technique."
 pubDate: 2026-09-29
-updatedDate: 2026-09-30
+updatedDate: 2026-10-03
 category: Utiliser
-audiences: ["professionnel"]
-metiers: ["maintenance-industrielle"]
+audiences: [ "professionnel" ]
+metiers: [ "maintenance-industrielle" ]
 readingTime: 4
 featured: false
 reviewStatus: internal
-relatedGuides: ["pompe-membrane-aro-66605-debit-air", "pompe-pneumatique-echappement-givre-air-sec", "silencieux-pneumatique-colmate-contre-pression"]
+relatedGuides:
+  [
+    "pompe-membrane-aro-66605-debit-air",
+    "pompe-pneumatique-echappement-givre-air-sec",
+    "silencieux-pneumatique-colmate-contre-pression"
+  ]
 sources:
   - https://store.psgdover.com/blog/tech-tips/aodd-pump-troubleshooting.html
+  - https://literature.enerpac.com/pdf/L2080_e.pdf
 ---
 
 Une pompe à membrane pneumatique qui ne fournit plus de liquide n’a pas nécessairement besoin d’un compresseur plus gros. **Commencez par distinguer une absence de cycles, des cycles sans débit et un arrêt sous charge.** L’air d’alimentation, l’échappement et le circuit de fluide peuvent chacun expliquer une partie du problème.
@@ -61,3 +69,5 @@ Si l’échappement est restreint ou givré, augmenter l’arrivée d’air peut
 PSG considère la présence de liquide à l’échappement comme un indicateur fort de défaillance côté membranes ou étanchéité. Cette situation exige l’arrêt et la procédure adaptée ; elle ne relève pas d’un simple réglage de détendeur.
 
 N’attribuez pas un fonctionnement normal sur refoulement fermé à toute pompe sans sa notice. Le dossier ne fournit aucun seuil de contre-pression universel, ni procédure de démontage interne. Une décision de remplacement du compresseur doit attendre que le besoin d’air et l’état des circuits soient établis.
+
+Une pompe air-hydraulique présente encore une autre branche de diagnostic. Sur la PA133, Enerpac distingue niveau d’huile, manque d’air et perte d’amorçage. Le [cas PA133 : absence de débit d’huile](/guides/enerpac-pa133-pompe-desamorcee-air-hydraulique/) explique la procédure d’amorçage dédiée et sa plage de 2,1–2,7 bar, sans l’attribuer au fonctionnement d’une pompe à membrane. [Enerpac PA133/PA700/PA133U, notice L2080 RevE, juin 2025](https://literature.enerpac.com/pdf/L2080_e.pdf#page=4).

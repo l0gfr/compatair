@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0.0",
+  "observedAt": "2026-10-03",
+  "kind": "contextual-internal-link-after-product-admission",
+  "guidePath": "src/content/guides/fasco-f44ac-cn15w-ps65-clous-bobine-fil-plastique.md",
+  "beforeSha256": "317e1b42aaa0931fa69c385be82487a4ec660882d220548ccd4cc55534fa7268",
+  "afterSha256": "af3f7638c2d9f7f87aedb75f0cdc646c63140b8b83e12fd97d5dfd748f5eaf14",
+  "productId": "agrafeuse-cloueuse-fasco-f44ac-cn15w-ps65-11553-01",
+  "productMpn": "11553.01",
+  "productSha256": "d9ca9b86313d1ddba9fd3754848f8ba6f62d2d88d829d770baceaa8f8a7e4d46",
+  "internalPath": "/outils-pneumatiques/agrafeuse-cloueuse-fasco-f44ac-cn15w-ps65-11553-01/",
+  "paragraphMarkdown": "La [fiche FASCO F44AC CN15W-PS65, référence 11553.01](/outils-pneumatiques/agrafeuse-cloueuse-fasco-f44ac-cn15w-ps65-11553-01/) conserve ce volume par action. La cadence de pose reste nécessaire pour calculer la demande moyenne ; cette fiche ne remplace pas le tableau de compatibilité des fixations.",
+  "technicalValuesChanged": false,
+  "sourcesChanged": false
+}

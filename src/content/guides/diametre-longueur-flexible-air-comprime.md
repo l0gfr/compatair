@@ -1,11 +1,14 @@
 ---
-title: "Flexible d’air comprimé : choisir le diamètre et la longueur sans perdre la pression"
-description: "Longueur, diamètre intérieur et raccords réduisent la pression disponible. Voici comment éviter qu’un bon compresseur devienne mauvais au bout du flexible."
+title: "Flexible d’air comprimé : choisir le diamètre et la longueur sans perdre
+  la pression"
+description: "Longueur, diamètre intérieur et raccords réduisent la pression
+  disponible. Voici comment éviter qu’un bon compresseur devienne mauvais au
+  bout du flexible."
 pubDate: 2026-07-13
-updatedDate: 2026-09-30
+updatedDate: 2026-10-03
 category: Installer
-audiences: [particulier, professionnel]
-metiers: [btp-chantier]
+audiences: [ particulier, professionnel ]
+metiers: [ btp-chantier ]
 readingTime: 6
 featured: true
 relatedCalculatorTool: einhell-tc-pe-150
@@ -13,7 +16,8 @@ sources:
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
   - https://www.einhell.fr/p/4133330-tc-pe-150/
   - https://www.atlascopco.com/en-us/compressors/general/100-psi-air-compressor
-relatedGuides: [raccord-air-comprime-bsp-npt-1-4]
+  - https://www.piab.com/globalassets/productimages/0255863_rev00_esl_standalone-en.pdf
+relatedGuides: [ raccord-air-comprime-bsp-npt-1-4 ]
 ---
 
 Un outil peut manquer de force alors que le manomètre du compresseur affiche la bonne pression. Le problème se situe souvent entre les deux : flexible trop long, diamètre intérieur trop faible, raccord rapide restrictif ou filtre sous-dimensionné.
@@ -35,6 +39,8 @@ On ne peut pas déduire un diamètre acceptable à partir de la seule catégorie
 ## Longueur utile, pas longueur maximale
 
 Prenez la longueur nécessaire pour travailler sans traction, puis évitez les mètres inutiles. Doubler la longueur ajoute de la résistance. En atelier fixe, une conduite principale correctement dimensionnée avec une courte descente souple est préférable à un très long petit flexible enroulé.
+
+Sur le piSAVE ESL, Piab limite séparément le tuyau d’alimentation de la pompe et le tube de mesure du vide. Le [cas des longueurs ESL](/guides/piab-pisave-esl-tubes-signal-retard-regulation/) montre les lignes à 6 bar : pour 300–600 Nl/min, le trajet ESL–pompe de 3 m est non recommandé. La longueur du signal influe aussi sur le temps de réponse. [Piab piSAVE ESL Standalone, notice 0255863 Rev00, décembre 2025](https://www.piab.com/globalassets/productimages/0255863_rev00_esl_standalone-en.pdf#page=4).
 
 ## Les raccords peuvent devenir le goulot
 
