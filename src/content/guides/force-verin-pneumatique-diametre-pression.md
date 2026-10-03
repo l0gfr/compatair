@@ -3,7 +3,7 @@ title: "Force d’un vérin pneumatique : pression, diamètre et effort réelle
 seoTitle: "Force d’un vérin pneumatique : calcul et limites"
 description: "Comprenez la force en poussée et en traction, l’effet de la tige et les limites du calcul théorique avant de choisir le diamètre d’un vérin."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-30
+updatedDate: 2026-10-03
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "menuiserie-agencement"]
@@ -75,6 +75,8 @@ Avant de demander une pression supérieure, notez si le défaut apparaît toujou
 Faites rapprocher les pressions au vérin, la charge et les caractéristiques de la machine. Si le diamètre doit changer, recalculer la [consommation par cycle](/guides/consommation-verin-pneumatique-double-effet/) évite d’améliorer l’effort tout en rendant l’alimentation insuffisante. Toute intervention ou mesure ajoutée au circuit doit suivre la procédure de mise en sécurité de la machine.
 
 Pour un actionneur sans tige, l’équivalence comprend aussi [le couplage magnétique ou mécanique](/guides/verin-sans-tige-magnetique-mecanique-remplacement/). La même course et une poussée comparable ne suffisent pas à confirmer le remplacement du chariot entraîné.
+
+Une économie d’air sur le retour demande aussi un bilan d’effort sur cette course. Le [cas SMC ASR/ASQ](/guides/smc-asr-asq-retour-pression-effort-verin/) examine la disposition des valves, les variations de charge et la pression retenue, pour préparer la sélection avec le cycle réel.
 
 ## Sources et méthode
 

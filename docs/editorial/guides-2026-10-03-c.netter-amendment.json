@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-03",
+  "guide": "netter-nts-frequence-amplitude-etranglement",
+  "reason": "Préciser que la force diminue dans les deux réglages, comme dans la notice §7 et le corps du guide. Éviter une généralisation de presque constant à tous les effets.",
+  "sourceId": "primary-014",
+  "physicalPage": 17,
+  "printedEnglishPage": 8,
+  "sourceSha256": "09b86e66d08c71366cbdd174b38f5e97f985b4327dd9f07edf9cdc42558f0566",
+  "beforeSha256": "ef8c4f01ea8d2623b7693395ffda2b616aaa60661d4c057d3cb661eb13f71ef0",
+  "afterSha256": "ec46bf16078d1d2a4ae00eba868cc16555f6774356b9b7b3d3786c21c7d3e97f",
+  "beforeSvgSha256": [
+    "5c1ade50eb4e397c9272bc5376c78396fe5c265edfdb48b74406634da14097b5"
+  ],
+  "afterSvgSha256": [
+    "221362d365204bb4aae8ba824a6335567d1cf4844f816c075f1ab0b988c77f9e"
+  ],
+  "beforeLedgerSha256": "f56700fff02ac54df0f5efa1966aca89b98b2713979207d59342748ec5cfd3f0",
+  "afterLedgerSha256": "67a9a8becfa39da3a60d58ec97c45e04933df68b940cd7e509134e705594a876",
+  "newSourceOrNumericalClaim": false,
+  "review": "Independent agent and root primary-page review"
+}

@@ -1,0 +1,164 @@
+{
+	"schemaVersion": 1,
+	"reviewedAt": "2026-10-03",
+	"reviewType": "internal_documentary",
+	"physicalTestsPerformed": false,
+	"sources": [
+		{
+			"productId": "ks-tools-515-1909",
+			"mpn": "515.1909",
+			"sourceId": "october3c-ks-tools-515-1909-manufacturer",
+			"id": "ks-product-515-1909",
+			"url": "https://www.kstools.com/en/products/special-tools-for-passenger-cars-and-light-commercial-vans/bodywork-and-interior/surface-treatment/5967/pneumatic-sand-blaster-260-mm?c=1011737469",
+			"finalUrl": "https://www.kstools.com/en/products/special-tools-for-passenger-cars-and-light-commercial-vans/bodywork-and-interior/surface-treatment/5967/pneumatic-sand-blaster-260-mm?c=1011737469",
+			"status": 200,
+			"contentType": "text/html; charset=UTF-8",
+			"observedAt": "2026-10-03T11:35:14.258637+00:00",
+			"bytes": 182033,
+			"sha256": "e9b640866bda94cce6a643300a62b13fcfdea58e95cb0cc1e3ef2a30f143c6f0",
+			"originalTechnicalCells": [
+				[
+					"Air consumption in l/min:",
+					"200"
+				],
+				[
+					"Capacity:",
+					"600"
+				],
+				[
+					"Connection thread:",
+					"1/4\"NPT"
+				],
+				[
+					"Diameter in mm:",
+					"5,0"
+				],
+				[
+					"Handle:",
+					"robust steel grip"
+				],
+				[
+					"Height in mm:",
+					"280"
+				],
+				[
+					"Measuring uncertainty vibration acceleration:",
+					"0.5"
+				],
+				[
+					"Norm:",
+					"DIN EN ISO 20643"
+				],
+				[
+					"Operating pressure in bar:",
+					"max. 6,3 bar (90 psi)"
+				],
+				[
+					"Packaging contents:",
+					"1"
+				],
+				[
+					"Packaging height, mm:",
+					"96"
+				],
+				[
+					"Packaging length, mm:",
+					"363"
+				],
+				[
+					"Packaging width, mm:",
+					"308"
+				],
+				[
+					"Total length mm:",
+					"260"
+				],
+				[
+					"Vibration acceleration:",
+					"< 0,05"
+				],
+				[
+					"Weight [g]:",
+					"1300"
+				],
+				[
+					"min. Tube diameter:",
+					"3/8\" - 10 mm"
+				]
+			],
+			"decision": "withdraw_unsupported_continuous_demand",
+			"limitations": [
+				"La fiche publie une consommation sans régime de charge ni pression de mesure explicite. La pression de service ne documente pas le point de consommation ; aucun débit de calcul n’est retenu.",
+				"Le champ « min. Tube diameter » ne précise pas littéralement un diamètre intérieur. Sa valeur reste documentaire, hors du calcul des pertes de charge.",
+				"Le champ « Capacity: 600 » de cette fiche ne donne pas d’unité. Aucun volume de récipient n’en est déduit.",
+				"Revue documentaire interne du 3 octobre 2026 ; aucun essai physique CompatAir."
+			]
+		},
+		{
+			"productId": "ks-tools-515-1919",
+			"mpn": "515.1919",
+			"sourceId": "october3c-ks-tools-515-1919-manufacturer",
+			"id": "ks-product-515-1919",
+			"url": "https://www.kstools.com/en/products/special-tools-for-commercial-vehicle/general-workshop-requirements/workshop-equipment/12672/soda-pneumatic-cleaning-gun-1000-ml?c=1011740893",
+			"finalUrl": "https://www.kstools.com/en/products/special-tools-for-commercial-vehicle/general-workshop-requirements/workshop-equipment/12672/soda-pneumatic-cleaning-gun-1000-ml?c=1011740893",
+			"status": 200,
+			"contentType": "text/html; charset=UTF-8",
+			"observedAt": "2026-10-03T11:35:16.956304+00:00",
+			"bytes": 196235,
+			"sha256": "e2b91a52b9ea4921a65c2a86d91b65a1ebed9756c4a30d327a35b466d6fc7549",
+			"originalTechnicalCells": [
+				[
+					"Air consumption in l/min:",
+					"57"
+				],
+				[
+					"Capacity of the unit:",
+					"1.000 ml"
+				],
+				[
+					"Connection thread:",
+					"1/4\""
+				],
+				[
+					"Handle:",
+					"cold isolated handle"
+				],
+				[
+					"Operating pressure in bar:",
+					"max. 6,3 - 8,2 bar (90 - 120 psi)"
+				],
+				[
+					"Packaging contents:",
+					"1"
+				],
+				[
+					"Packaging height, mm:",
+					"135"
+				],
+				[
+					"Packaging length, mm:",
+					"288"
+				],
+				[
+					"Packaging width, mm:",
+					"213"
+				],
+				[
+					"Weight [g]:",
+					"1470"
+				],
+				[
+					"min. Tube diameter:",
+					"3/8\" - 10 mm"
+				]
+			],
+			"decision": "withdraw_unsupported_continuous_demand",
+			"limitations": [
+				"La fiche publie une consommation sans régime de charge ni pression de mesure explicite. La pression de service ne documente pas le point de consommation ; aucun débit de calcul n’est retenu.",
+				"La notation « max. 6,3 - 8,2 bar » reste visible sans être convertie en une plage nominale de fonctionnement.",
+				"Le champ « min. Tube diameter » ne précise pas littéralement un diamètre intérieur. Sa valeur reste documentaire, hors du calcul des pertes de charge.",
+				"Revue documentaire interne du 3 octobre 2026 ; aucun essai physique CompatAir."
+			]
+		}
+	]
+}

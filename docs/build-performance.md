@@ -58,6 +58,18 @@ aux compteurs des fiches ; les suivants réutilisent les cellules inchangées.
 La ligne `[page-calculations]` et le benchmark rapportent ces calculs séparément
 des 100 cas du panel agent. Ce cache n’est pas publié.
 
+Les nouvelles lignes utilisent gzip niveau 6, avec le même format vérifié et le
+même plafond de 64 Mio. Les lignes historiques au niveau 1 restent lisibles.
+Le 3 octobre 2026, un échantillon de 80 lignes du catalogue de 3 019 compresseurs
+mesurait 1 612 552 octets au niveau 1 contre 1 323 342 au niveau 6. La compression
+et la vérification des octets décompressés prenaient respectivement 54 et 109 ms
+sur le poste local. Cette mesure de stockage ne démontre pas une réduction du
+temps total de build. Le changement de code invalide une fois le cache du moteur.
+La recompression hors cache des 3 019 lignes conservait aussi les octets
+décompressés : 63 832 871 octets au total avant, 52 375 253 après, pour 4,77 s
+de compression et de vérification. Aucun fichier de cache n'a été remplacé par
+cette mesure ; la taille du prochain catalogue doit être contrôlée séparément.
+
 Les tableaux des groupes de variantes montrent au maximum douze références,
 dont la principale et celle consultée, avec le total du groupe et un accès au
 scanner. Leur rendu et leur clé ne recopient plus toute la liste sur chaque page.
@@ -71,7 +83,7 @@ chaque HTML au seul changement du nombre de références.
 
 Le cache HTML est jetable, borné à 384 Mio et sauvegardé uniquement par `main`.
 La CI des PR restaure ces caches en lecture seule. Ses tests et son build
-s’exécutent dans deux jobs indépendants, limités à 15 et 25 minutes. Le contrôle
+s’exécutent dans deux jobs indépendants, limités à 15 et 35 minutes. Le contrôle
 `validate` dépend de leur réussite à tous deux. Les snapshots, l’historique,
 les liens et Lighthouse restent vérifiés après le build, y compris à froid.
 Cette séparation ne produit aucune archive intermédiaire du site.

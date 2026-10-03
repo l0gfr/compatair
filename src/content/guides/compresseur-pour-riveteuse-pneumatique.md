@@ -3,7 +3,7 @@ title: "Riveteuse pneumatique CP9882, CP9886 et CP9888 : quel compresseur ?"
 seoTitle: "Riveteuse pneumatique : quel compresseur et quel débit ?"
 description: "CP9882, CP9886 et CP9888 : débit en charge, rivets aveugles ou écrous à sertir, pression et méthode pour dimensionner un poste de rivetage."
 pubDate: 2026-09-26
-updatedDate: 2026-09-29
+updatedDate: 2026-10-03
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "carrosserie-peinture"]
@@ -79,6 +79,8 @@ Un essai de réception doit porter sur les pièces et fixations prévues, avec d
 Pour commencer la comparaison d’air, consultez la [fiche CP9882](/outils-pneumatiques/riveteuse-chicago-pneumatic-cp9882/) et les [compresseurs confrontés à la CP9882](/quel-compresseur-pour/riveteuse-chicago-pneumatic-cp9882/). Pour les écrous à sertir, partez de la [CP9888](/outils-pneumatiques/riveteuse-chicago-pneumatic-cp9888/) plutôt que de transposer le verdict d’un modèle pour rivets aveugles.
 
 Demandez également si l’[aspiration des mandrins entre dans la consommation de la riveteuse](/guides/riveteuse-pneumatique-aspiration-mandrin-consommation/). La réponse dépend de l’architecture du modèle et de la base annoncée ; une quantité en litres sans durée ni opération définie ne suffit pas au dimensionnement.
+
+Le choix de la fixation mérite un contrôle séparé. Le cas [FAR KJ60 et écrou M8 inox](/guides/far-kj60-m8-inox-capacite-matiere/) examine la matière et la capacité annoncée ; le cas [GESIPA TAURUS 2](/guides/gesipa-taurus2-diametre-mandrin-rivet/) précise les questions de diamètre et de mandrin à résoudre avant une substitution.
 
 ## Sources et périmètre
 

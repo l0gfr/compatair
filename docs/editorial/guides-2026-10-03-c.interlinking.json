@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "batchId": "documented-expansion-2026-10-03-c",
+  "observedAt": "2026-10-03T12:17:15.649Z",
+  "scope": "Contextual return links and truthful edit date; manufacturer evidence, authorship and historical guide ledgers preserved.",
+  "files": [
+    {
+      "path": "src/content/guides/compresseur-pour-riveteuse-pneumatique.md",
+      "paragraph": "Le choix de la fixation mérite un contrôle séparé. Le cas [FAR KJ60 et écrou M8 inox](/guides/far-kj60-m8-inox-capacite-matiere/) examine la matière et la capacité annoncée ; le cas [GESIPA TAURUS 2](/guides/gesipa-taurus2-diametre-mandrin-rivet/) précise les questions de diamètre et de mandrin à résoudre avant une substitution.",
+      "targets": [
+        "far-kj60-m8-inox-capacite-matiere",
+        "gesipa-taurus2-diametre-mandrin-rivet"
+      ],
+      "beforeSha256": "da23bd401ad024f77bef06e6970a3f145470e8d55234823ce1938a15520fc0ff",
+      "afterSha256": "d43b4d1d293edba2523fa88579f32ae88c091366550cf61bfc103c7060495282"
+    },
+    {
+      "path": "src/content/guides/pince-pneumatique-force-doigt-longueur-prehension.md",
+      "paragraph": "Pour une pince munie d’un ressort, complétez le bilan avec le [cas Festo DHPS NO ou NC](/guides/festo-dhps-no-nc-ressort-force-disponible/). Il organise la lecture des courbes et la combinaison des forces selon le sens de préhension, puis distingue ce calcul de la qualification du maintien de la pièce.",
+      "targets": [
+        "festo-dhps-no-nc-ressort-force-disponible"
+      ],
+      "beforeSha256": "e621082bdec5c60dc493dd08db2d843e49292b65276bef7ff630928e0ccfdd0a",
+      "afterSha256": "98f65baccd1067855b925fc10009dfe9d11317d4e0dfb0f35fafc767b4568b8f"
+    },
+    {
+      "path": "src/content/guides/force-verin-pneumatique-diametre-pression.md",
+      "paragraph": "Une économie d’air sur le retour demande aussi un bilan d’effort sur cette course. Le [cas SMC ASR/ASQ](/guides/smc-asr-asq-retour-pression-effort-verin/) examine la disposition des valves, les variations de charge et la pression retenue, pour préparer la sélection avec le cycle réel.",
+      "targets": [
+        "smc-asr-asq-retour-pression-effort-verin"
+      ],
+      "beforeSha256": "7fe0d4f0f3242e8c0785fbc83629238d2a7464ac3ae8e1772fd1d387e8fea43f",
+      "afterSha256": "6b6a26ba82b8f31de51e70d0920bc8ec0a5c4ca27fb2eb08505d7d959b87c89b"
+    },
+    {
+      "path": "src/content/guides/silencieux-pneumatique-colmate-contre-pression.md",
+      "paragraph": "L’échappement peut intervenir dans des mécanismes très différents. Le [réglage d’amplitude des Netter NTS](/guides/netter-nts-frequence-amplitude-etranglement/) traite un étranglement prévu par la notice ; le [cas Husky 1050, fluide à l’échappement](/guides/graco-husky1050-fluide-echappement-diaphragme/) aide à examiner la nature du liquide et son trajet avant de choisir une cause.",
+      "targets": [
+        "netter-nts-frequence-amplitude-etranglement",
+        "graco-husky1050-fluide-echappement-diaphragme"
+      ],
+      "beforeSha256": "b2ef7e1d0346fe33fb467cd9393e41c876ccd45237b1803ed8c8345ab89b895b",
+      "afterSha256": "66c668762da9de1951a8ac30c59dc9f0f253069d4b599664b6283a84bb47fd26"
+    },
+    {
+      "path": "src/content/guides/compresseur-pour-ponceuse-pneumatique.md",
+      "paragraph": "Lorsque le défaut apparaît après ajout d’une interface ou modification de l’aspiration, poursuivez avec le [diagnostic des vibrations Mirka PROS](/guides/mirka-pros-vibrations-interface-aspiration/). Ce cas conserve la configuration de ponçage et les observations à comparer avant de modifier l’alimentation.",
+      "targets": [
+        "mirka-pros-vibrations-interface-aspiration"
+      ],
+      "beforeSha256": "ff1bd50e4ab5507b86878fc8f2e83af374e0dba86f4debd9012aa3fd6e6bbb58",
+      "afterSha256": "198ce8234d6d88ccb230097f03c03e857816f604a3d0ad8f8bf3bc5ef761870b"
+    },
+    {
+      "path": "src/content/guides/compresseur-machine-cnc-haas-pression-debit.md",
+      "paragraph": "Pour un incident de changement d’outil, le [cas Haas TRP et alarmes 130 ou 131](/guides/haas-trp-retour-lent-precharge-alarme-130-131/) organise les symptômes et la configuration à transmettre au service compétent. Il complète la réception du réseau avec un examen propre au mécanisme de libération.",
+      "targets": [
+        "haas-trp-retour-lent-precharge-alarme-130-131"
+      ],
+      "beforeSha256": "db189a369f3639f8a623db06e9d5a813c59a9017369b80d057acb8a535741d7c",
+      "afterSha256": "5f4b4e5b40a9fa2b14e159549924850e66b031e57dcc8df2eabafb6238ca54b4"
+    },
+    {
+      "path": "src/content/guides/point-rosee-atmospherique-sous-pression-mesure.md",
+      "paragraph": "Deux cas Vaisala prolongent cet examen du prélèvement : [la vis de fuite DSC74](/guides/vaisala-dsc74-vis-fuite-pression-cellule/) et [les valeurs figées du DMT143 pendant purge ou autocalibration](/guides/vaisala-dmt143-point-rosee-fige-purge-autocalibration/). Ils aident à consigner la cellule et l’état du capteur avec le résultat observé.",
+      "targets": [
+        "vaisala-dsc74-vis-fuite-pression-cellule",
+        "vaisala-dmt143-point-rosee-fige-purge-autocalibration"
+      ],
+      "beforeSha256": "7b6c86d20678085f9af9179a903587ec68292429ab5aacd04a3486801ce2aa66",
+      "afterSha256": "935e7100bf65c5775cd4d6f9fc11c24e538dcb488a1a3325fee7b7a95f1ac88a"
+    },
+    {
+      "path": "src/content/guides/surpresseur-pneumatique-festo-dpa-pression-debit.md",
+      "paragraph": "Pour comparer avec une architecture SMC, consultez le [budget d’air amont du VBA](/guides/smc-vba-budget-air-moteur-volume-sortie/) et le [cas de redémarrage à faible écart de pression](/guides/smc-vba-redemarrage-ecart-pression/). Leurs coefficients et frontières sont rattachés à ce constructeur ; aucune transposition au DPA n’est proposée.",
+      "targets": [
+        "smc-vba-budget-air-moteur-volume-sortie",
+        "smc-vba-redemarrage-ecart-pression"
+      ],
+      "beforeSha256": "f4d2739ec8d4949488f434bd5d50922339a6574e15d7a899989d2e2b4136abb7",
+      "afterSha256": "dce4bcfa181f0097ec575ffedb78d25d1c969e08e9e26ae5b4f872cf16df039e"
+    },
+    {
+      "path": "src/content/guides/couteau-air-comprime-ou-soufflante.md",
+      "paragraph": "Une fois la technologie choisie, le montage de la référence exacte reste à examiner. Les cas [zones faibles d’une Super Air Knife](/guides/exair-super-air-knife-deux-entrees-zones-faibles/) et [jeu autour d’un tube dans une Super Air Wipe](/guides/exair-super-air-wipe-tube-diametre-bague/) apportent des contrôles ciblés pour le raccordement et la géométrie du poste.",
+      "targets": [
+        "exair-super-air-knife-deux-entrees-zones-faibles",
+        "exair-super-air-wipe-tube-diametre-bague"
+      ],
+      "beforeSha256": "f69f43d45e6555aa9df8c7b04ec76438d81c2101287d7b669f083b51ec2749c1",
+      "afterSha256": "948d42a29253b682a90b9aeb1f33e785e1ab88fbd44780b05e85dc82a47e5c74"
+    },
+    {
+      "path": "src/content/guides/convertir-cfm-l-min-nl-min-air-comprime.md",
+      "paragraph": "La fiche d’une machine peut réunir plusieurs besoins sans fournir leur courbe commune. Le [cas Kärcher IB 15/120](/guides/karcher-ib15-120-air-glace-puissance-electrique/) sépare air comprimé, glace carbonique et alimentation électrique, puis décrit les informations à demander pour le point de fonctionnement voulu.",
+      "targets": [
+        "karcher-ib15-120-air-glace-puissance-electrique"
+      ],
+      "beforeSha256": "32ee3e8d6aa4c813c72c30d59b1da3c280bc62748aa746b6e5b5139acacc540f",
+      "afterSha256": "5b3717d325d753e098cebc2ec1ba14e249bd7e0f2d730329ad9f01f21c442d40"
+    },
+    {
+      "path": "src/content/guides/pressostat-compresseur-pression-enclenchement-differentiel.md",
+      "paragraph": "Pour une sortie de capteur électronique utilisée dans la commande, les cas [SMC ISE20, fenêtre normale ou inversée](/guides/smc-ise20-sortie-fenetre-inversee/) et [filtre numérique ou délai de sortie](/guides/smc-ise20-filtre-numerique-delai-sortie/) permettent de préparer la lecture des paramètres de signal. Ils ne modifient pas les seuils mécaniques de régulation du compresseur.",
+      "targets": [
+        "smc-ise20-sortie-fenetre-inversee",
+        "smc-ise20-filtre-numerique-delai-sortie"
+      ],
+      "beforeSha256": "9e08b799641dfb23b2796f4081b8416fc998a6d5e5cc96d9b3358cbc8801a7cd",
+      "afterSha256": "a22f32e046c43d10e28eb57ade1765172f13ba8dc25ab87266509b0370f866c5"
+    }
+  ],
+  "modifiedExistingGuides": 11,
+  "newGuides": 0
+}

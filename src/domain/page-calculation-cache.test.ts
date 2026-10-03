@@ -1,6 +1,7 @@
 import { mkdtempSync, readFileSync, readdirSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import { gzipSync, gunzipSync } from 'node:zlib';
 import { afterEach, describe, expect, it } from 'vitest';
 import { compressors, tools } from '../data/catalog';
 import { PageCalculationCache } from './page-calculation-cache';
@@ -24,6 +25,14 @@ function evaluate(input: ReturnType<typeof fixture>) {
  return cache;
 }
 describe('page calculation reuse across catalog revisions', () => {
+ it('reads legacy fast-compressed rows alongside new rows without recalculating', () => {
+  const input = fixture(); evaluate(input);
+  const rows = readdirSync(input.options.directory).filter(file => file.startsWith('row-'));
+  expect(rows).toHaveLength(input.compressors.length);
+  const path = join(input.options.directory, rows[0]);
+  writeFileSync(path, gzipSync(gunzipSync(readFileSync(path)), { level: 1 }));
+  expect(evaluate(input).stats).toMatchObject({ calculated: 0, reused: 12, invalidRows: 0 });
+ });
  it('reuses complete rows and recalculates only a new tool, including after an intervening partial build', () => {
   const input = fixture();
   expect(evaluate(input).stats.calculated).toBe(12);

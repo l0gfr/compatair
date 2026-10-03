@@ -1,112 +1,133 @@
 const product = {
-  "id": "ks-tools-515-1919",
-  "slug": "pistolet-sablage-soda-ks-tools-515-1919",
-  "categoryId": "sableuse",
-  "category": "Sableuse",
-  "label": "Pistolet de nettoyage à la soude KS Tools 515.1919",
-  "brand": "KS Tools",
-  "model": "515.1919",
-  "mpn": "515.1919",
-  "ean": "4042146756591",
-  "demandModel": "fixed-flow",
-  "workingPressureBar": {
-    "min": 6.3,
-    "typical": 6.3,
-    "max": 8.2
-  },
-  "airflowLpm": {
-    "min": 57,
-    "typical": 57,
-    "max": 57
-  },
-  "connectorSize": "Raccord 1/4 pouce",
-  "usagePattern": "continuous",
-  "recommendedHose": {
-    "innerDiameterMm": 10
-  },
-  "filtrationRequirement": "Air propre et sec pour préserver la fluidité du média",
-  "confidence": "A",
-  "image": {
-    "src": "/images/products/ks-tools-515-1919.webp",
-    "alt": "Pistolet de nettoyage à la soude KS Tools 515.1919",
-    "sourceUrl": "https://www.kstools.com/en/products/special-tools-for-commercial-vehicle/general-workshop-requirements/workshop-equipment/12672/soda-pneumatic-cleaning-gun-1000-ml",
-    "sourceLabel": "Visuel officiel KS Tools 515.1919"
-  },
-  "editorial": {
-    "overview": "Le 515.1919 projette un média de nettoyage à la soude. KS Tools publie 57 L/min et une plage de pression allant de 6,3 à 8,2 bar.",
-    "verifiedFacts": [
-      "Le réservoir publié contient 1 000 ml.",
-      "Le flexible intérieur recommandé mesure 10 mm et le poids publié est de 1,47 kg."
-    ],
-    "limitations": [
-      "La valeur de débit correspond à la condition « consommation publiée » publiée par le fabricant ; elle n’est pas remplacée par une moyenne d’usage.",
-      "La fiche constructeur présente la pression sous la forme « max. 6,3 à 8,2 bar ». CompatAir conserve cette plage telle qu’elle est publiée."
-    ]
-  },
-  "specifications": [
-    {
-      "label": "Pression publiée",
-      "value": "6,3 à 8,2 bar",
-      "evidenceIds": [
-        "ks-tools-515-1919-manufacturer-2026"
-      ]
-    },
-    {
-      "label": "Consommation publiée",
-      "value": "57 L/min",
-      "evidenceIds": [
-        "ks-tools-515-1919-manufacturer-2026"
-      ]
-    },
-    {
-      "label": "Réservoir",
-      "value": "1 000 ml",
-      "evidenceIds": [
-        "ks-tools-515-1919-manufacturer-2026"
-      ]
-    },
-    {
-      "label": "Poids",
-      "value": "1,47 kg",
-      "evidenceIds": [
-        "ks-tools-515-1919-manufacturer-2026"
-      ]
-    }
-  ],
-  "evidence": [
-    {
-      "id": "ks-tools-515-1919-manufacturer-2026",
-      "sourceUrl": "https://www.kstools.com/en/products/special-tools-for-commercial-vehicle/general-workshop-requirements/workshop-equipment/12672/soda-pneumatic-cleaning-gun-1000-ml",
-      "sourceLabel": "KS Tools, fiche officielle 515.1919",
-      "sourceType": "manufacturer",
-      "retrievedAt": "2026-07-20",
-      "confidence": "A"
-    }
-  ],
-  "fieldSources": {
-    "model": [
-      "ks-tools-515-1919-manufacturer-2026"
-    ],
-    "mpn": [
-      "ks-tools-515-1919-manufacturer-2026"
-    ],
-    "workingPressureBar": [
-      "ks-tools-515-1919-manufacturer-2026"
-    ],
-    "airflowLpm": [
-      "ks-tools-515-1919-manufacturer-2026"
-    ],
-    "connectorSize": [
-      "ks-tools-515-1919-manufacturer-2026"
-    ],
-    "recommendedHose": [
-      "ks-tools-515-1919-manufacturer-2026"
-    ],
-    "specifications": [
-      "ks-tools-515-1919-manufacturer-2026"
-    ]
-  },
-  "notes": []
+	"id": "ks-tools-515-1919",
+	"slug": "pistolet-sablage-soda-ks-tools-515-1919",
+	"categoryId": "sableuse",
+	"category": "Sableuse",
+	"label": "Pistolet de nettoyage soda KS Tools 515.1919",
+	"brand": "KS Tools",
+	"model": "515.1919",
+	"mpn": "515.1919",
+	"ean": "4042146756591",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
+	"connectorSize": "1/4\" (filetage publié)",
+	"filtrationRequirement": "Air propre et sec pour préserver la fluidité du média",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/ks-tools-515-1919.webp",
+		"alt": "Pistolet de nettoyage soda KS Tools 515.1919",
+		"sourceUrl": "https://www.kstools.com/en/products/special-tools-for-commercial-vehicle/general-workshop-requirements/workshop-equipment/12672/soda-pneumatic-cleaning-gun-1000-ml",
+		"sourceLabel": "Visuel officiel KS Tools 515.1919"
+	},
+	"editorial": {
+		"overview": "Le KS Tools 515.1919 est présenté comme un pistolet de nettoyage soda. La fiche publie 57 L/min et « max. 6,3 - 8,2 bar (90 - 120 psi) ». Cette notation ne fournit pas un point de pression associé à la consommation.",
+		"verifiedFacts": [
+			"Masse publiée : 1470 g.",
+			"Filetage publié : 1/4\".",
+			"Capacité du récipient publiée : 1 000 ml."
+		],
+		"limitations": [
+			"La fiche publie une consommation sans régime de charge ni pression de mesure explicite. La pression de service ne documente pas le point de consommation ; aucun débit de calcul n’est retenu.",
+			"La notation « max. 6,3 - 8,2 bar » reste visible sans être convertie en une plage nominale de fonctionnement.",
+			"Le champ « min. Tube diameter » ne précise pas littéralement un diamètre intérieur. Sa valeur reste documentaire, hors du calcul des pertes de charge.",
+			"Revue documentaire interne du 3 octobre 2026 ; aucun essai physique CompatAir."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Champ fabricant : Air consumption in l/min",
+			"value": "57",
+			"evidenceIds": [
+				"october3c-ks-tools-515-1919-manufacturer"
+			]
+		},
+		{
+			"label": "Champ fabricant : Capacity of the unit",
+			"value": "1.000 ml",
+			"evidenceIds": [
+				"october3c-ks-tools-515-1919-manufacturer"
+			]
+		},
+		{
+			"label": "Champ fabricant : Connection thread",
+			"value": "1/4\"",
+			"evidenceIds": [
+				"october3c-ks-tools-515-1919-manufacturer"
+			]
+		},
+		{
+			"label": "Champ fabricant : Handle",
+			"value": "cold isolated handle",
+			"evidenceIds": [
+				"october3c-ks-tools-515-1919-manufacturer"
+			]
+		},
+		{
+			"label": "Champ fabricant : Operating pressure in bar",
+			"value": "max. 6,3 - 8,2 bar (90 - 120 psi)",
+			"evidenceIds": [
+				"october3c-ks-tools-515-1919-manufacturer"
+			]
+		},
+		{
+			"label": "Champ fabricant : Weight [g]",
+			"value": "1470",
+			"evidenceIds": [
+				"october3c-ks-tools-515-1919-manufacturer"
+			]
+		},
+		{
+			"label": "Champ fabricant : min. Tube diameter",
+			"value": "3/8\" - 10 mm",
+			"evidenceIds": [
+				"october3c-ks-tools-515-1919-manufacturer"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "ks-tools-515-1919-manufacturer-2026",
+			"sourceUrl": "https://www.kstools.com/en/products/special-tools-for-commercial-vehicle/general-workshop-requirements/workshop-equipment/12672/soda-pneumatic-cleaning-gun-1000-ml",
+			"sourceLabel": "KS Tools, fiche officielle 515.1919",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-07-20",
+			"confidence": "A"
+		},
+		{
+			"id": "october3c-ks-tools-515-1919-manufacturer",
+			"sourceUrl": "https://www.kstools.com/en/products/special-tools-for-commercial-vehicle/general-workshop-requirements/workshop-equipment/12672/soda-pneumatic-cleaning-gun-1000-ml?c=1011740893",
+			"sourceLabel": "KS Tools, fiche officielle 515.1919, revue du 3 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-03",
+			"confidence": "B",
+			"notes": "SHA-256 de la réponse source : e2b91a52b9ea4921a65c2a86d91b65a1ebed9756c4a30d327a35b466d6fc7549. Le plafond de service et la consommation non qualifiée restent distincts."
+		}
+	],
+	"fieldSources": {
+		"model": [
+			"october3c-ks-tools-515-1919-manufacturer"
+		],
+		"mpn": [
+			"october3c-ks-tools-515-1919-manufacturer"
+		],
+		"workingPressureBar": [
+			"october3c-ks-tools-515-1919-manufacturer"
+		],
+		"demandExplanation": [
+			"october3c-ks-tools-515-1919-manufacturer"
+		],
+		"connectorSize": [
+			"october3c-ks-tools-515-1919-manufacturer"
+		],
+		"specifications": [
+			"october3c-ks-tools-515-1919-manufacturer"
+		]
+	},
+	"notes": [
+		"Les éléments de preuve antérieurs restent conservés. Le besoin continu précédemment attribué à cette consommation est retiré faute de point de mesure et de régime documentés."
+	],
+	"demandExplanation": "La fiche publie une consommation sans régime de charge ni pression de mesure explicite. La pression de service ne documente pas le point de consommation ; aucun débit de calcul n’est retenu."
 };
 
 export default product;

@@ -36,6 +36,9 @@ export const toolGuideByCategoryId: Partial<Record<ToolProfile['categoryId'], `/
 };
 
 export const toolGuideById: Record<string, `/guides/${string}/`> = {
+	"riveteuse-far-kj60": "/guides/far-kj60-m8-inox-capacite-matiere/",
+	"riveteuse-gesipa-taurus-2-1457771": "/guides/gesipa-taurus2-diametre-mandrin-rivet/",
+	"ponceuse-orbitale-mirka-pros-680cv-mrp-680cv": "/guides/mirka-pros-vibrations-interface-aspiration/",
 	"araseuse-de-rivets-universal-tool-ut8897rs-9-16": "/guides/ut8897rs-profondeur-arasage-increment-precision/",
 	"deprag-345z-308-hm": "/guides/deprag-345z-visseuse-bol-alimentation-assorti/",
 	"fouloir-universal-tool-ut8666": "/guides/ut8666-fouloir-fonderie-cadence-fiches-contradictoires/",

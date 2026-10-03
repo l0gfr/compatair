@@ -10,6 +10,7 @@ readingTime: 5
 reviewStatus: "internal"
 relatedGuides: ["guide-complet-dimensionner-compresseur-air", "diagnostiquer-chute-pression-air-comprime", "installer-reseau-air-comprime-atelier"]
 sources: ["https://www.haascnc.com/owners/pre-install-guide/mills-pre-install/VF-4.html"]
+updatedDate: 2026-10-03
 ---
 
 **Le compresseur d’une machine CNC se dimensionne à partir du guide de préinstallation du modèle exact, puis du scénario réel de l’atelier.** Une pression minimale ne donne pas, à elle seule, le débit nécessaire. Les accessoires et les autres consommateurs doivent apparaître dans le bilan.
@@ -65,6 +66,8 @@ Le compte rendu conserve la pression pendant la séquence, les événements mach
 Une seconde CNC ou un nouveau soufflage doit déclencher la mise à jour du bilan. La capacité libre ne se déduit pas du seul fait que la première machine fonctionne. Conservez la version des guides fabricants avec les hypothèses de simultanéité retenues.
 
 Le résultat attendu du projet est une alimentation validée pour une configuration précise, avec ses limites et son programme d’entretien. Un nombre de litres de cuve ou de chevaux moteur isolé ne remplace pas cette preuve. Le [guide du réseau d’atelier](/guides/installer-reseau-air-comprime-atelier/) complète la préparation de la distribution.
+
+Pour un incident de changement d’outil, le [cas Haas TRP et alarmes 130 ou 131](/guides/haas-trp-retour-lent-precharge-alarme-130-131/) organise les symptômes et la configuration à transmettre au service compétent. Il complète la réception du réseau avec un examen propre au mécanisme de libération.
 
 ## Sources et méthode
 

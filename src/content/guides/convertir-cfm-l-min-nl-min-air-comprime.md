@@ -3,7 +3,7 @@ title: "CFM, L/min, Nl/min : convertir un débit d’air sans fausser la compara
 seoTitle: "CFM en L/min : conversion, Nl/min et pièges"
 description: "Tableau CFM, L/s et m³/h, exemples de conversion et distinction entre air libre, débit normalisé et FAD. Comparez les fiches sans mélanger les conditions."
 pubDate: 2026-09-25
-updatedDate: 2026-09-26
+updatedDate: 2026-10-03
 category: "Comprendre"
 audiences: [particulier, professionnel]
 metiers: [maintenance-industrielle, garage-automobile]
@@ -81,6 +81,8 @@ Exemple de saisie proposé par CompatAir : « Outil A, 8 L/s en charge, pression
 Le [calculateur](/calculateur/) permet de poursuivre avec les références de la base et leurs limites documentaires. Il ne faut pas y remplacer un débit absent par le résultat d’une conversion appliquée à une donnée d’une autre nature.
 
 Le guide [buse de sablage : débit selon le diamètre et la pression](/guides/buse-sablage-diametre-pression-debit-compresseur/) applique ces conversions à un tableau Clemco tout en conservant les unités et conditions publiées.
+
+La fiche d’une machine peut réunir plusieurs besoins sans fournir leur courbe commune. Le [cas Kärcher IB 15/120](/guides/karcher-ib15-120-air-glace-puissance-electrique/) sépare air comprimé, glace carbonique et alimentation électrique, puis décrit les informations à demander pour le point de fonctionnement voulu.
 
 ## Sources
 

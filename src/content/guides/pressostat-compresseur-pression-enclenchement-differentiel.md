@@ -3,7 +3,7 @@ title: "Pressostat de compresseur : comprendre enclenchement, arrêt et différ
 seoTitle: "Pressostat compresseur : seuils et différentiel"
 description: "Un compresseur redémarre avant que la cuve soit vide : comprenez les deux seuils du pressostat, leur différentiel et les limites d’un diagnostic sans démontage."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-30
+updatedDate: 2026-10-03
 category: "Comprendre"
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "maintenance-industrielle", "menuiserie-agencement"]
@@ -68,6 +68,8 @@ Si la machine ne s’arrête plus normalement, ne cherchez pas son nouveau maxim
 Il faut vérifier le poste critique et le fonctionnement complet de l’installation. Un réglage peut modifier le service disponible ; un gain ne se déduit pas du seul écart entre deux nombres. Le dossier sur la [réduction de pression et la demande artificielle](/guides/baisser-pression-reseau-demande-artificielle/) décrit les mesures nécessaires avant de conclure.
 
 La décision pertinente est de comparer les seuils prescrits, les seuils observés et les besoins du poste. Une différence documentée permet une demande d’intervention précise. Une valeur copiée sur un autre compresseur ne remplace aucune de ces trois informations.
+
+Pour une sortie de capteur électronique utilisée dans la commande, les cas [SMC ISE20, fenêtre normale ou inversée](/guides/smc-ise20-sortie-fenetre-inversee/) et [filtre numérique ou délai de sortie](/guides/smc-ise20-filtre-numerique-delai-sortie/) permettent de préparer la lecture des paramètres de signal. Ils ne modifient pas les seuils mécaniques de régulation du compresseur.
 
 ## Sources et méthode
 
