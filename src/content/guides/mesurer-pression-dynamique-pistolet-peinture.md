@@ -11,7 +11,10 @@ sources:
   - https://www.sata.com/en-int/products/additional-products/pressure-measuring-devices/sata-adam-2/downloads
   - https://www.sata.com/assets/cms/2022/10/21/EN-SATA-DanAm-Brochure-SATA-adam-2-Flexibility-Digitalised-K-131862-4020-06-3_uid_6352a33f75bfa.pdf
   - https://www.sata.com/en-eur/products/spray-guns/gravity-flow-cup-guns/satajet-5000-b/technical-data
+  - https://www.graco.com/content/dam/graco/tech_documents/manuals/333/333011/333011EN-L.pdf
 updatedDate: 2026-10-02
+relatedGuides:
+  - graco-pro-xp-auto-turbine-ta-electrostatique
 ---
 
 Le manomètre du régulateur mural ne connaît pas la perte du flexible, des raccords et du dispositif de mesure monté au pistolet. Pour reproduire un réglage de peinture, la pression doit être relevée à l’entrée de la référence utilisée, dans la condition de débit décrite par son fabricant.
@@ -21,6 +24,8 @@ Le manomètre du régulateur mural ne connaît pas la perte du flexible, des rac
 La page technique du [SATAjet 5000 B](https://www.sata.com/en-eur/products/spray-guns/gravity-flow-cup-guns/satajet-5000-b/technical-data) publie, pour la version HVLP, une consommation de 430 Nl/min et une pression d’entrée recommandée de 2 bar. La même page distingue les données de la version RP, donnée à 290 Nl/min et 2 bar.
 
 Une inscription « 2 bar » sur la fiche de poste ne suffit donc pas : il faut conserver le modèle, la technologie de buse et la source. La pression n’efface pas l’écart de débit entre les deux configurations.
+
+Le [Pro Xp Auto AA de Graco, notice 333011L](https://www.graco.com/content/dam/graco/tech_documents/manuals/333/333011/333011EN-L.pdf#page=9) sépare TA pour la turbine, CYL pour l’ouverture, A1/A2 pour le jet et P pour le fluide. Le [repérage des raccords TA, CYL, A1/A2 et P](/guides/graco-pro-xp-auto-turbine-ta-electrostatique/#relever-le-circuit-qui-correspond-au-sympt%C3%B4me) permet de nommer le circuit lié au symptôme avant de poser un manomètre. Une pression disponible sur le collecteur général ne démontre pas l’alimentation de chaque raccord du pistolet.
 
 ## Mesurer à l’entrée, pendant le passage d’air
 

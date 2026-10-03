@@ -11,6 +11,10 @@ readingTime: 15
 sources:
   - https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf
   - https://www.atlascopco.com/en-us/compressors/waste-heat-recovery/energy-recovery-air-compressors
+  - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/belgium/documents/Compressed-Air-Manual-Edition-81.pdf
+
+relatedGuides:
+  - compresseur-refroidissement-eau-circuit-ouvert-ferme
 ---
 
 Le compresseur transforme une grande partie de l’électricité en chaleur, mais une chaleur disponible n’est pas encore une chaleur utile. Le projet doit faire coïncider la machine en charge, le niveau de température, le besoin du site, les horaires et la solution d’échange.
@@ -53,6 +57,8 @@ Conservez séparément : électricité absorbée, chaleur théorique, chaleur me
 Le DOE avertit que le réseau de gaines et les ventilateurs doivent éviter une contre-pression sur le refroidissement du compresseur. Atlas Copco indique que la conception et l’installation de l’intégration relèvent généralement du client ou d’un tiers spécialisé.
 
 La réception doit donc contrôler à la fois la chaleur livrée et les conditions de fonctionnement de la machine : températures, alarmes, pression dans les gaines, bascule été/hiver et comportement en panne.
+
+Le [manuel Atlas Copco, édition 2015](https://www.atlascopco.com/content/dam/atlas-copco/local-countries/belgium/documents/Compressed-Air-Manual-Edition-81.pdf#page=40) distingue eau ouverte sans circulation, tour ouverte avec circulation et boucle fermée avec échangeur externe. Le [dossier du circuit de refroidissement à eau](/guides/compresseur-refroidissement-eau-circuit-ouvert-ferme/#faire-pr%C3%A9ciser-le-trajet-de-leau-dans-loffre) permet d’obtenir le schéma primaire et l’interface de récupération dans l’offre. L’appellation water-cooled seule ne décrit ni le trajet de l’eau ni les équipements externes qui doivent évacuer la chaleur.
 
 ## Vérifier la performance dans le temps
 

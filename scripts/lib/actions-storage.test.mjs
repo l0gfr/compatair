@@ -8,7 +8,7 @@ function fixture() {
 		id: `${prefix}${run.id}`, name: `${prefix}${run.head_sha}`, expired: false, created_at: run.created_at, workflow_run: { id: run.id, head_sha: run.head_sha },
 	})));
 	const caches = runs.map((run) => ({ id: run.id, key: `codeql-overlay-base-database-1-test-javascript-2.27.1-${run.head_sha}-${run.id}-1`, ref: 'refs/heads/main', created_at: run.created_at }));
-	return { artifacts, runs, caches, liveSha: shas[0], expectedSha: shas[0], now: Date.parse('2026-09-26T12:00:00Z') };
+	return { artifacts, runs, caches, liveSha: shas[0], expectedSha: shas[0], previousLiveSha: shas[1], now: Date.parse('2026-09-26T12:00:00Z') };
 }
 
 describe('bounded Actions storage cleanup', () => {
@@ -70,4 +70,24 @@ describe('bounded Actions storage cleanup', () => {
 		expect(plan.deleteArtifacts.some((artifact) => artifact.name === `compatair-production-${shas[2]}`)).toBe(true);
 		expect(plan.deleteCaches.map((cache) => cache.id)).toEqual([1, 2, 3]);
 	});
+	it('protects the observed previous release even when its workflow was cancelled', () => {
+		const input = fixture();
+		input.runs[1].conclusion = 'cancelled';
+		const plan = planActionsStorage(input);
+		expect(plan.protectedShas).toEqual([shas[0], shas[1], shas[2]]);
+		expect(plan.deleteArtifacts.map(artifact => artifact.name)).toEqual([`compatair-production-${shas[3]}`, `lighthouse-production-${shas[3]}`]);
+	});
+	it('refuses cleanup without a valid distinct observed previous release', () => {
+		for (const previousLiveSha of [undefined, '', 'invalid', shas[0]]) {
+			expect(() => planActionsStorage({ ...fixture(), previousLiveSha })).toThrow(/Previous observed release/);
+		}
+	});
+	it('protects an observed previous release independent of run inventory or artifact expiry', () => {
+		const input = fixture();
+		input.runs = input.runs.filter(run => run.head_sha !== shas[1]);
+		const plan = planActionsStorage(input);
+		expect(plan.protectedShas).toEqual([shas[0], shas[1], shas[2]]);
+		expect(plan.deleteArtifacts.some(artifact => artifact.name.endsWith(shas[1]))).toBe(false);
+	});
+
 });

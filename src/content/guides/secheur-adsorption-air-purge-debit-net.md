@@ -12,9 +12,11 @@ relatedGuides:
   - point-rosee-secheur-filtre-air-comprime
   - dimensionner-secheur-frigorifique-ete
   - secheur-air-comprime-atelier-non-chauffe
+  - kaeser-ihoc-sechage-charge-partielle
 sources:
   - https://us.kaeser.com/download.ashx?id=tcm%3A46-37748
   - https://us.kaeser.com/compressed-air-resources/compressed-air-tips/compressed-air-treatment-guide/dryer-selection-guide.aspx
+  - https://id.kaeser.com/products/rotary-screw-compressors/oil-free-compression-rotary-screw-compressors/integrated-compressed-air-dryer-options/
 updatedDate: 2026-09-29
 ---
 
@@ -92,6 +94,8 @@ Sans ces mesures et les conditions locales, nous ne donnons ni pourcentage d’�
 Pour prolonger cette vérification, vous pouvez [intégrer l’air de balayage d’un sécheur à membrane](/guides/secheur-membrane-air-comprime-debit-balayage/).
 
 Pour la maintenance, distinguez l’indication du matériau et la qualité d’air obtenue. Le guide [dessiccant coloré et point de rosée](/guides/desiccant-change-couleur-point-rosee/) précise les informations à lire sur un voyant avant d’en déduire l’état du séchage.
+
+La récupération de chaleur peut aussi appartenir directement au procédé de régénération. [KAESER](https://id.kaeser.com/products/rotary-screw-compressors/oil-free-compression-rotary-screw-compressors/integrated-compressed-air-dryer-options/) décrit i.HOC avec chaleur du deuxième étage et régénération à plein débit. Le [dossier i.HOC et charge partielle](/guides/kaeser-ihoc-sechage-charge-partielle/#la-comparaison-avec-ladsorption-autonome-a-ses-limites) demande les conditions du système intégré et des phases à faible charge ; cette présentation ne permet pas de lui appliquer automatiquement le pourcentage de purge d’un sécheur autonome.
 
 ## Sources et méthode
 

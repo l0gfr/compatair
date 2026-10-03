@@ -9,13 +9,14 @@ metiers: ["btp-chantier", "maintenance-industrielle", "carrosserie-peinture"]
 readingTime: 7
 featured: false
 reviewStatus: "internal"
-relatedGuides: ["compresseur-pour-sablage-pneumatique", "convertir-cfm-l-min-nl-min-air-comprime", "diametre-longueur-flexible-air-comprime"]
+relatedGuides: [ "compresseur-pour-sablage-pneumatique", "convertir-cfm-l-min-nl-min-air-comprime", "diametre-longueur-flexible-air-comprime", clemco-spin-blast-hd-moteur-echappement ]
 sources:
   - https://www.clemcoindustries.com/s/Compressed_Air-wxh8.pdf
   - https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8
   - https://www.clemcoindustries.com/s/NozzleWear.pdf
   - https://www.clemcoindustries.com/s/AirVolume_Est.pdf
   - https://www.clemcoindustries.com/charts
+  - https://www.clemcoindustries.com/s/25119m.pdf
 updatedDate: 2026-09-29
 ---
 
@@ -76,6 +77,8 @@ Le dossier [buse usée et surconsommation d’air](/guides/buse-sablage-usee-sur
 Le [tableau Clemco d’estimation d’une installation](https://www.clemcoindustries.com/s/AirVolume_Est.pdf) sépare l’air de la buse, un besoin auxiliaire pour le casque et une réserve. Cela montre pourquoi la consommation de la seule buse ne constitue pas le dimensionnement complet. Les valeurs de ce tableau ne sont pas reprises comme une prescription universelle : il faut identifier les équipements et leurs besoins réels.
 
 Un casque à adduction d’air nécessite une alimentation répondant à ses exigences propres de qualité et de sécurité. Ajouter quelques L/min au devis ne démontre pas que l’air est respirable. La [page de ressources Clemco](https://www.clemcoindustries.com/charts) rappelle également le danger des abrasifs contenant de la silice cristalline. Ce guide ne valide ni le choix de l’abrasif ni l’organisation de la protection du chantier.
+
+Sur le Spin-Blast HD, la [notice Clemco, § 3.1](https://www.clemcoindustries.com/s/25119m.pdf#page=3) indique un minimum de 50 scfm pour le moteur pneumatique ; la buse de sablage reste une demande distincte. Le [bilan moteur et buse du Spin-Blast HD](/guides/clemco-spin-blast-hd-moteur-echappement/#pr%C3%A9parer-le-bilan-sans-double-comptage) dessine arrivée moteur, arrivée de projection et échappement huilé. Ce relevé évite d’utiliser la seule ligne de buse comme consommation totale de l’outil de conduite.
 
 ## Comment rédiger une demande de devis exploitable
 

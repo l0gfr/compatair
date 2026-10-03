@@ -4,15 +4,18 @@ const threeDays = 3 * 24 * 60 * 60 * 1000;
 
 // Only generated release archives, full Lighthouse reports and redundant CodeQL
 // caches are eligible. Signed invariants and source/security evidence are excluded.
-export function planActionsStorage({ artifacts, runs, caches, liveSha, expectedSha, now = Date.now() }) {
+export function planActionsStorage({ artifacts, runs, caches, liveSha, expectedSha, previousLiveSha, now = Date.now() }) {
 	if (!shaPattern.test(expectedSha) || liveSha !== expectedSha) throw new Error('Live release does not match the expected commit; no cleanup permitted');
+	if (!shaPattern.test(previousLiveSha) || previousLiveSha === liveSha) throw new Error('Previous observed release is missing or invalid; no cleanup permitted');
 	const mainRuns = runs.filter((run) => run.head_branch === 'main' && shaPattern.test(run.head_sha));
 	const byRunId = new Map(mainRuns.map((run) => [run.id, run]));
 	const previous = mainRuns
 		.filter((run) => run.status === 'completed' && run.conclusion === 'success' && run.head_sha !== liveSha)
 		.sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))[0];
 	if (!previous) throw new Error('No verified rollback identified; no cleanup permitted');
-	const protectedShas = [liveSha, previous.head_sha];
+	// A cancelled workflow can still be the independently verified release served
+	// immediately before activation. Protect its exact checkpoint SHA as well.
+	const protectedShas = [...new Set([liveSha, previousLiveSha, previous.head_sha])];
 	if (!artifacts.some((artifact) => !artifact.expired && artifact.name === `compatair-production-${liveSha}` && artifact.workflow_run?.head_sha === liveSha)) {
 		throw new Error('Production archive missing; no cleanup permitted');
 	}

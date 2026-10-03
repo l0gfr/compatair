@@ -2,6 +2,8 @@ import { createPublicKey, verify as verifySignature } from 'node:crypto';
 import { readdir, readFile } from 'node:fs/promises';
 import { classifyNpmAdvisories } from './lib/advisory-policy.mjs';
 import { fetchGitHubAdvisories } from './lib/github-advisory-client.mjs';
+import { fileURLToPath } from 'node:url';
+import { attestInstalledDependencyPatch, isVerifiedCacheAdvisory } from './lib/verified-dependency-patches.mjs';
 
 const REGISTRY = 'https://registry.npmjs.org';
 const QUARANTINE_MS = 24 * 60 * 60 * 1000;
@@ -232,6 +234,13 @@ async function readInstalledManifests() {
 
 const failures = [];
 const warnings = [];
+let patchAttestation;
+try {
+  patchAttestation = await attestInstalledDependencyPatch({ root: fileURLToPath(new URL('../', import.meta.url)), workspace, lockfile });
+  console.log('Correctif local GHSA-ch52-4w7c-c8xp: patch, verrou et toutes les copies installées attestés.');
+} catch (error) {
+  failures.push(error.message);
+}
 const requiredWorkspacePolicies = [
   ['minimumReleaseAge: 1440', /^minimumReleaseAge:\s*1440\s*$/m],
   ['trustPolicy: no-downgrade', /^trustPolicy:\s*no-downgrade\s*$/m],
@@ -310,11 +319,13 @@ if (advisoryMode) {
   try {
     const response = await fetchGitHubAdvisories(lockedPackages);
     const directRuntimeDependencies = new Set(Object.keys(packageJson.dependencies ?? {}));
-    const { advisories, blocking } = classifyNpmAdvisories(response, directRuntimeDependencies);
+    const { advisories, blocking: policyBlocking } = classifyNpmAdvisories(response, directRuntimeDependencies);
+    const blocking = policyBlocking.filter((advisory) => !isVerifiedCacheAdvisory(advisory, patchAttestation));
     console.log(`Avis GitHub Advisory Database: ${advisories.length} signalé(s), dont ${blocking.length} bloquant(s) selon la politique runtime.`);
     for (const advisory of advisories) {
       const message = `${advisory.packageName}: ${advisory.severity} ${advisory.title} (${advisory.url})`;
-      if (blocking.includes(advisory)) failures.push(`vulnérabilité npm: ${message}`);
+      if (isVerifiedCacheAdvisory(advisory, patchAttestation)) warnings.push(`avis connu corrigé localement, toujours signalé par GitHub: ${message}`);
+      else if (blocking.includes(advisory)) failures.push(`vulnérabilité npm: ${message}`);
       else warnings.push(`vulnérabilité npm transitive sous le seuil high: ${message}`);
     }
   } catch (error) {

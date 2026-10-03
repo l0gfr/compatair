@@ -9,12 +9,13 @@ metiers: ["maintenance-industrielle", "carrosserie-peinture"]
 readingTime: 5
 featured: false
 reviewStatus: "internal"
-relatedGuides: ["qualite-air-comprime-iso-8573-1", "point-rosee-secheur-filtre-air-comprime", "compresseur-pour-cisaille-grignoteuse-pneumatique"]
+relatedGuides: [ "qualite-air-comprime-iso-8573-1", "point-rosee-secheur-filtre-air-comprime", "compresseur-pour-cisaille-grignoteuse-pneumatique", powermax45-sync-code-0-12-pression-sortie-cnc ]
 sources:
   - https://www.hypertherm.com/hypertherm/powermax/powermax45-sync/
   - https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/jut1722548630709.html
   - https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/eel1722548629387.html
   - https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/ojy1722548627966.html
+  - https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/fgq1748989058887.html
 updatedDate: 2026-09-30
 ---
 
@@ -80,6 +81,8 @@ Pour préparer un achat, transmettez les deux valeurs contradictoires au fournis
 Pour un atelier équipé de plusieurs procédés, il faut aussi [identifier les circuits d’air et d’azote d’une découpe laser](/guides/compresseur-decoupe-laser-air-azote/) : les exigences du plasma ne se transposent pas à cette machine.
 
 Pour un autre procédé, le [guide de l’air assist d’un laser de gravure](/guides/air-assist-laser-gravure-compresseur-pression/) examine les limites propres au kit et la préparation de l’essai matière.
+
+Sur Powermax45 SYNC, [Hypertherm](https://xnet.hypertherm.com/docs/en/Powermax45_SYNC_OM/fgq1748989058887.html) distingue les défauts 0-12-1 bas, 0-12-2 haut et 0-12-3 instable, transmis par CNC/RS-485 plutôt que par l’afficheur à deux chiffres. La [lecture des codes de pression de sortie 0-12-n](/guides/powermax45-sync-code-0-12-pression-sortie-cnc/#lire-le-dernier-chiffre-avant-de-r%C3%A9gler) aide à conserver le code complet avec l’opération et les contrôles d’entrée ; réduire tous ces retours à « manque d’air » ferait perdre une partie du diagnostic.
 
 ## Sources et périmètre
 

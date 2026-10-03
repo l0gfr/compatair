@@ -6,6 +6,8 @@ const repository = process.env.GITHUB_REPOSITORY;
 if (repository !== 'l0gfr/compatair') throw new Error('Storage policy is restricted to l0gfr/compatair');
 if (process.argv.slice(2).some((argument) => argument !== '--apply')) throw new Error('Only --apply is supported; default is read-only');
 const apply = process.argv.includes('--apply');
+const previousObservedSha = process.env.COMPATAIR_PREVIOUS_RELEASE_SHA;
+if (!/^[a-f0-9]{40}$/.test(previousObservedSha ?? '')) throw new Error('Previous observed release is missing or invalid; no cleanup permitted');
 const apiRoot = `repos/${repository}/actions`;
 function api(path, method = 'GET') {
 	return execFileSync('gh', ['api', '--hostname', 'github.com', '--method', method, path], { encoding: 'utf8', timeout: 30_000, maxBuffer: 16 * 1024 * 1024 });
@@ -26,10 +28,10 @@ const liveSha = (await response.json()).gitSha;
 const artifacts = inventory('artifacts', 'artifacts');
 const runs = inventory('workflows/deploy-production.yml/runs', 'workflow_runs');
 const caches = inventory('caches', 'actions_caches');
-const plan = planActionsStorage({ artifacts, runs, caches, liveSha, expectedSha: process.env.GITHUB_SHA });
+const plan = planActionsStorage({ artifacts, runs, caches, liveSha, expectedSha: process.env.GITHUB_SHA, previousLiveSha: previousObservedSha });
 function bytes(rows) { return rows.reduce((sum, row) => sum + row.size_in_bytes, 0); }
 console.log(JSON.stringify({
-	mode: apply ? 'apply' : 'dry-run', protectedShas: plan.protectedShas,
+	mode: apply ? 'apply' : 'dry-run', previousObservedSha, protectedShas: plan.protectedShas,
 	artifactsBeforeBytes: bytes(artifacts), cachesBeforeBytes: bytes(caches),
 	deleteArtifacts: plan.deleteArtifacts.map(({ id, name, size_in_bytes }) => ({ id, name, size_in_bytes })),
 	deleteCaches: plan.deleteCaches.map(({ id, key, size_in_bytes }) => ({ id, key, size_in_bytes })),

@@ -1,4 +1,5 @@
 ---
+import SourceAvailabilityNotice from '../../components/SourceAvailabilityNotice.astro';
 import { getCollection, render } from 'astro:content';
 import { pageBuildKey, guideNavigationVersion } from '../../domain/page-build-key';
 import { compressorBuildVersion } from '../../data/product-build-key';
@@ -100,7 +101,7 @@ const articleJsonLd = {
 		<div class="editorial-main">
 			<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/guides/">Guides</a><span>/</span><span>{guide.data.category}</span></nav>
 			<header class="article-head"><p class="eyebrow">{guide.data.category}</p><div class="article-taxonomy" aria-label="Publics, métiers et dossier">{series && <a href={series.path} data-guide-series={guide.data.series}>{series.label}</a>}{guide.data.audiences.map((audience) => <a href={`/guides/${guideAudiences[audience].label.toLocaleLowerCase('fr-FR')}/`}>{guideAudiences[audience].label}</a>)}{guide.data.metiers.map((metier) => <a href={`/guides/metiers/${metier}/`}>{guideMetiers[metier].label}</a>)}</div><h1>{guide.data.title}</h1><p class="lead">{guide.data.description}</p><p class="article-byline" data-review-status={guide.data.reviewStatus}>Publié le {published} · Lecture {guide.data.readingTime} minutes · Rédaction <a href="/gouvernance-editoriale/">{guide.data.author}</a> · {externallyReviewed ? <>Revue technique par {guide.data.reviewer}, {guide.data.reviewerRole}</> : <>Relecture éditoriale interne, sans validation professionnelle externe</>}</p></header>
-			<div class="article-body"><Content /></div>
+			<div class="article-body">{guide.data.sources.map((sourceUrl: string) => <SourceAvailabilityNotice sourceUrl={sourceUrl} />)}<Content /></div>
 			<section class="guide-next-step" aria-labelledby="guide-next-step-title">
 				<p class="eyebrow">Vérifier sur des données réelles</p>
 				<h2 id="guide-next-step-title">Vérifier ce guide avec un outil réel</h2>

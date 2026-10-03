@@ -8,9 +8,10 @@ audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 4
 reviewStatus: internal
-relatedGuides: ["electrovanne-air-ne-ouvre-pas-pression-differentielle", "capteur-pnp-npn-entree-automate-verin", "fiche-intervention-air-comprime"]
+relatedGuides: [ "electrovanne-air-ne-ouvre-pas-pression-differentielle", "capteur-pnp-npn-entree-automate-verin", "fiche-intervention-air-comprime", festo-vuvg-commande-manuelle-verrouillee ]
 sources:
   - https://www.burkert.co.uk/en/landingpage/10-Frequently-asked-questions-about-solenoid-valves
+  - https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2021/US/VUVG-G_ENUS.PDF
 ---
 
 **La mention « 24 V » ne termine pas l’identification d’une bobine d’électrovanne.** Le courant alternatif AC et le courant continu DC sont deux alimentations à distinguer. Commander à partir de la forme du connecteur et de cette seule tension expose à recevoir une variante qui ne correspond pas à la machine.
@@ -44,6 +45,8 @@ Cette liste est un contrôle de commande proposé par CompatAir. Elle ne suppose
 Faites préciser si la commande est présente, si le défaut est permanent ou apparaît à chaud et si la vanne commute dans le scénario prévu. Les mesures électriques relèvent du personnel compétent, dans les conditions d’intervention de la machine ; ce guide ne propose pas d’alimentation d’essai improvisée.
 
 Si la commande est conforme, le [dossier de pression différentielle](/guides/electrovanne-air-ne-ouvre-pas-pression-differentielle/) examine une autre condition possible de fonctionnement. Remplacer la bobine sans ce contrôle documentaire peut laisser la cause initiale intacte.
+
+La [documentation Festo VUVG](https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2021/US/VUVG-G_ENUS.PDF#page=4) distingue commande manuelle non maintenue, protégée ou maintenue et plusieurs capots. Le [contrôle de commande manuelle VUVG](/guides/festo-vuvg-commande-manuelle-verrouillee/#une-v%C3%A9rification-de-configuration-avant-un-diagnostic-de-bobine) introduit ce contrôle dans la fiche de retour : l’état de la commande manuelle doit être documenté avec l’ordre électrique, avant d’attribuer un distributeur resté actionné à la seule bobine.
 
 ## Le connecteur ne définit pas la logique de commande
 

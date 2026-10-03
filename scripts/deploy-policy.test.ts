@@ -22,9 +22,12 @@ describe('release boundary policy', () => {
 		expect(ci.permissions).toEqual({ contents: 'read' });
 		expect(ci.jobs.validate.needs).toEqual(['source-tests', 'build']);
 		expect(ci.jobs.validate.if).toBeUndefined();
+		expect(ci.jobs['source-tests']['timeout-minutes']).toBe(15);
+		expect(ci.jobs.build['timeout-minutes']).toBe(35);
+		expect(ci.jobs.validate['timeout-minutes']).toBe(1);
 		for (const [name, job] of Object.entries(ci.jobs) as [string, { 'timeout-minutes': number; 'continue-on-error'?: boolean; steps: Record<string, unknown>[] }][]) {
 			expect(job['timeout-minutes'], name).toBeGreaterThan(0);
-			expect(job['timeout-minutes'], name).toBeLessThanOrEqual(25);
+			expect(job['timeout-minutes'], name).toBeLessThanOrEqual(name === 'build' ? 35 : 25);
 			expect(job['continue-on-error'], name).toBeUndefined();
 			for (const step of job.steps) {
 				expect(step['continue-on-error']).toBeUndefined();
@@ -93,7 +96,7 @@ describe('release boundary policy', () => {
 	});
 	it('compresses the growing catalog within the bounded release storage ceiling', () => {
 		expect(workflow).toContain('tar -C dist -cf - . | xz -T2 -8 > "compatair-${GITHUB_SHA}.tar.xz"');
-		expect(workflow).toContain('release_bytes > 184549376');
+		expect(workflow).toContain('release_bytes > 201326592');
 		expect(workflow).toContain('compression-level: 0');
 		expect(deploy).toContain('*.tar.xz) command -v xz');
 		expect(deploy).toContain('*.tar.gz)');
@@ -134,6 +137,7 @@ describe('release boundary policy', () => {
 		expect(ci).toContain('node scripts/assert-observatory-history-extension.mjs /tmp/observatory-baseline.json');
 		expect(health).toContain("cron: '17 6 * * 1'");
 		expect(health).toContain('contents: read');
+		expect(parseDocument(health).toJS().on.push.paths).toContain('docs/editorial/**');
 		expect(health).toContain("failure() && hashFiles('source-health-report.json') != ''");
 		expect(health).not.toContain('secrets.');
 	});

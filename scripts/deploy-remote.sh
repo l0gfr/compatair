@@ -133,30 +133,34 @@ run_public_smoke() {
 
 restore_previous_release() {
 	if [[ -z "$previous_target" || -z "$previous_release_id" ]]; then
-		echo "No previous verified release is available for automatic rollback" >&2
+		(echo "No previous verified release is available for automatic rollback" >&2) || true
 		return 1
 	fi
-	ln -sfn "$previous_target" "$current.rollback"
-	mv -Tf "$current.rollback" "$current"
-	printf '%s\n' "$previous_release_id" > "$deployed_sha"
+	ln -sfn "$previous_target" "$current.rollback" || return 1
+	mv -Tf "$current.rollback" "$current" || return 1
+	printf '%s\n' "$previous_release_id" > "$deployed_sha" || return 1
 	restart_mcp_and_wait
 }
 
 activation_pending=false
 rollback_after_failed_activation() {
 	status=$?
-	trap - EXIT INT TERM
+	# A disconnected SSH channel must not terminate rollback diagnostics.
+	trap '' PIPE
+	trap - EXIT INT TERM HUP
 	if [[ "$activation_pending" == true ]]; then
-		echo "Activation interrupted or unhealthy; restoring the previous verified release" >&2
+		(echo "Activation interrupted or unhealthy; restoring the previous verified release" >&2) || true
 		if ! restore_previous_release; then
-			echo "Automatic rollback failed and requires immediate operator intervention" >&2
+			(echo "Automatic rollback failed and requires immediate operator intervention" >&2) || true
 		fi
 	fi
+	trap - PIPE
 	exit "$status"
 }
 trap rollback_after_failed_activation EXIT
 trap 'exit 130' INT
 trap 'exit 143' TERM
+trap 'exit 129' HUP
 
 install -d -m 755 "$releases"
 if [[ -e "$release" ]]; then

@@ -1,0 +1,20 @@
+---
+import { sourceAvailabilityForUrl, sourceAvailabilityMessage } from '../data/source-availability';
+interface Props { sourceUrl: string }
+const { sourceUrl } = Astro.props;
+const observation = sourceAvailabilityForUrl(sourceUrl);
+const message = sourceAvailabilityMessage(sourceUrl);
+---
+{observation && <span class="source-availability-note" role="note" data-source-availability="historical-404" data-source-availability-observed-at={observation.observedAt}>{message}</span>}
+
+<style>
+	.source-availability-note {
+		display: block;
+		margin-block: .5rem;
+		padding-inline-start: .75rem;
+		border-inline-start: 3px solid var(--line);
+		color: inherit;
+		font-size: .9rem;
+		overflow-wrap: anywhere;
+	}
+</style>

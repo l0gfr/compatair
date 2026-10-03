@@ -1,10 +1,16 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { mkdtemp, rm, writeFile } from 'node:fs/promises';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import {
 	readBoundedResponse,
+	createVerificationBudget,
+	fetchVerificationText,
+	mapVerificationConcurrent,
+	liveSeoDeadlineMs,
 	readSnapshotProbe,
 	verifySnapshotManifest,
 	countInternalLinks,
@@ -16,6 +22,101 @@ import {
 	verifySnapshotRange,
 	verifyIndexationPage,
 } from './live-seo-verification.mjs';
+
+describe('bounded exhaustive SEO verification', () => {
+	it('aborts at the declared180 s deadline and clears its timer', () => {
+		vi.useFakeTimers();
+		const budget = createVerificationBudget();
+		try {
+			expect(liveSeoDeadlineMs).toBe(180_000);
+			expect(vi.getTimerCount()).toBe(1);
+			vi.advanceTimersByTime(179_999); expect(budget.signal.aborted).toBe(false);
+			vi.advanceTimersByTime(1); expect(budget.signal.aborted).toBe(true);
+			expect(budget.signal.reason.message).toContain('délai global');
+		} finally { budget.dispose(); expect(vi.getTimerCount()).toBe(0); vi.useRealTimers(); }
+	});
+	it('keeps the signal active through a stalled Response.text body and makes no further attempt after global abort', async () => {
+		const budget = createVerificationBudget(25);
+		let calls = 0, bodyAborted = false;
+		const fetchImpl = async (_url, { signal }) => {
+			calls += 1;
+			return new Response(new ReadableStream({ start(controller) {
+				signal.addEventListener('abort', () => { bodyAborted = true; controller.error(signal.reason); }, { once: true });
+			} }));
+		};
+		try {
+			await expect(fetchVerificationText('/stall/', 'https://compatair.fr', budget, { fetchImpl })).rejects.toThrow('délai global');
+			expect(calls).toBe(1); expect(bodyAborted).toBe(true);
+		} finally { budget.dispose(); }
+	});
+	it('also cancels a retry wait when the global deadline expires', async () => {
+		const budget = createVerificationBudget(25); let calls = 0;
+		try {
+			await expect(fetchVerificationText('/error/', 'https://compatair.fr', budget, { fetchImpl: async () => { calls += 1; throw new Error('fixture'); } })).rejects.toThrow('délai global');
+			expect(calls).toBe(1);
+		} finally { budget.dispose(); }
+	});
+	it('preserves bounded per-request retries without extending or aborting the total budget', async () => {
+		const budget = createVerificationBudget(500); let calls = 0;
+		const fetchImpl = async (_url, { signal }) => {
+			calls += 1;
+			return new Response(new ReadableStream({ start(controller) { signal.addEventListener('abort', () => controller.error(signal.reason), { once: true }); } }));
+		};
+		try {
+			await expect(fetchVerificationText('/request-stall/', 'https://compatair.fr', budget, { fetchImpl, attempts: 2, requestTimeoutMs: 5, retryDelayMs: 1 })).rejects.toThrow('/request-stall/');
+			expect(calls).toBe(2); expect(budget.signal.aborted).toBe(false);
+		} finally { budget.dispose(); }
+	});
+	it('clears request and global timers after success', async () => {
+		vi.useFakeTimers(); const budget = createVerificationBudget();
+		try {
+			expect(await fetchVerificationText('/ok/', 'https://compatair.fr', budget, { fetchImpl: async () => new Response('exact') })).toBe('exact');
+			expect(vi.getTimerCount()).toBe(1);
+		} finally { budget.dispose(); expect(vi.getTimerCount()).toBe(0); vi.useRealTimers(); }
+	});
+	it('checks every path while preserving concurrency10 and result ordering', async () => {
+		const budget = createVerificationBudget(500), values = Array.from({ length: 100 }, (_, i) => i);
+		let active = 0, maximum = 0, completed = 0;
+		try {
+			const result = await mapVerificationConcurrent(values, 10, async value => {
+				active += 1; maximum = Math.max(maximum, active); await Promise.resolve(); active -= 1; completed += 1; return value * 2;
+			}, budget);
+			expect(result).toEqual(values.map(value => value * 2)); expect(completed).toBe(100); expect(maximum).toBe(10);
+		} finally { budget.dispose(); }
+	});
+	it('starts no new worker path after a terminal assertion aborts the shared budget', async () => {
+		const budget = createVerificationBudget(500), started = [];
+		try {
+			await expect(mapVerificationConcurrent(Array.from({ length: 100 }, (_, i) => i), 10, async value => {
+				started.push(value); if (value === 0) throw new Error('invalid canonical fixture'); return value;
+			}, budget)).rejects.toThrow('invalid canonical fixture');
+			await Promise.resolve(); expect(started).toEqual(Array.from({ length: 10 }, (_, i) => i)); expect(budget.signal.aborted).toBe(true);
+		} finally { budget.dispose(); }
+	});
+	it('starts no further paths after the global deadline aborts ten active body reads', async () => {
+		const budget = createVerificationBudget(25), started = [];
+		const fetchImpl = async (_url, { signal }) => new Response(new ReadableStream({ start(controller) {
+			signal.addEventListener('abort', () => controller.error(signal.reason), { once: true });
+		} }));
+		try {
+			await expect(mapVerificationConcurrent(Array.from({ length: 100 }, (_, i) => i), 10, async value => {
+				started.push(value); return fetchVerificationText(`/stall/${value}/`, 'https://compatair.fr', budget, { fetchImpl });
+			}, budget)).rejects.toThrow('délai global');
+			await Promise.resolve(); expect(started).toEqual(Array.from({ length: 10 }, (_, i) => i));
+		} finally { budget.dispose(); }
+	});
+	it('a real CLI assertion failure exits nonzero and disposes the180 s timer without network', async () => {
+		const root = await mkdtemp(join(tmpdir(), 'compatair-seo-cli-failure-'));
+		try {
+			const preload = join(root, 'fixture.mjs');
+			await writeFile(preload, `globalThis.fetch = async () => new Response(JSON.stringify({schemaVersion:'1.0.0',gitSha:'${'b'.repeat(40)}'}));\n`);
+			const result = spawnSync(process.execPath, ['--import', preload, fileURLToPath(new URL('../verify-live-seo.mjs', import.meta.url))], {
+				env: { ...process.env, COMPATAIR_EXPECTED_RELEASE_SHA: 'a'.repeat(40) }, encoding: 'utf8', timeout: 3_000,
+			});
+			expect(result.error).toBeUndefined(); expect(result.status).toBe(1); expect(result.stderr).toContain('différent');
+		} finally { await rm(root, { recursive: true, force: true }); }
+	});
+});
 
 describe('vérification SEO de la surface live', () => {
 	it('lit un préfixe borné tout en vérifiant le SHA-256 du fichier local complet', async () => {

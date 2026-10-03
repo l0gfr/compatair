@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-03T05:53:42.045255+00:00",
+  "reason": "git diff --check found two extra blank lines at EOF",
+  "sourceCapturesClaimsSvgAndHistoricalLedgersUnchanged": true,
+  "ledger": {
+    "beforeSha256": "0b8d3e15a757ecfae64285759c7950fdf763db093161a0d2b11d03b30770b188",
+    "afterSha256": "3f4f84d6ccc5baaff04a47fbea87202e7abeaf3d906e63e8aa95778d8e26a695",
+    "onlyChangedFields": "two existingGuideRevisions[].afterSha256"
+  },
+  "changes": [
+    {
+      "path": "src/content/guides/acheter-outil-industriel-reference-documentation.md",
+      "preparedSha256": "73e333754b4eb160e68413cb7c849c6bfe5509639a603a319eafc4d5dd3a1d75",
+      "canonicalSha256": "6a96625ef6acd83639610a5968f0c7bd4853ab852d4a8e90caa2dca0f6548a4c",
+      "onlyChange": "remove one blank line at EOF"
+    },
+    {
+      "path": "src/content/guides/deprag-microvisseuse-ncm-nm-conversion.md",
+      "preparedSha256": "24656a6074a7ca760f90e08eb857a7eab922823cd1898e61a98b546c07a30566",
+      "canonicalSha256": "684383de7e4378d43f0c68b0b573817221c77c9f714a9c8afee08ef6c846b935",
+      "onlyChange": "remove one blank line at EOF"
+    }
+  ]
+}

@@ -50,7 +50,8 @@ jobs:
     runs-on: ubuntu-24.04
     # Source checks run independently. A cold build must still complete every
     # snapshot, link and Lighthouse gate without relying on a cache hit.
-    timeout-minutes: 25
+    # A cold CI build took 23m05; the larger offline Astro stage added 2m43.
+    timeout-minutes: 35
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1

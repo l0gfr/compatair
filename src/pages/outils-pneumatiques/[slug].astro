@@ -1,4 +1,5 @@
 ---
+import SourceAvailabilityNotice from '../../components/SourceAvailabilityNotice.astro';
 import EquivalentAnswerGroup from '../../components/EquivalentAnswerGroup.astro';
 import ProductGuideLinks from '../../components/ProductGuideLinks.astro';
 import { pageBuildKey, guideNavigationVersion } from '../../domain/page-build-key';
@@ -96,7 +97,7 @@ const verifiedDateLabel = verifiedAt.split('-').reverse().join('/');
 		<ProductGuideLinks path={`/outils-pneumatiques/${tool.slug}/`} />
 		<section class="related-reading"><h2>Guides liés à cet outil</h2><div class="link-cards"><a href={`/quel-compresseur-pour/${tool.slug}/`}><strong>Quel compresseur pour {tool.model}&nbsp;?</strong><span>Consulter la page d’usage calculée pour cette référence.</span></a><a href={relatedGuide}><strong>Guide d’usage associé</strong><span>Approfondir le besoin en air de cette catégorie d’outil.</span></a><a href="/guides/diametre-longueur-flexible-air-comprime/"><strong>Flexible et raccords</strong><span>Comprendre pourquoi le réseau peut réduire la pression disponible.</span></a><a href="/guides/debit-restitue-fad-vs-debit-aspire/"><strong>Débit restitué ou aspiré</strong><span>Comparer le bon chiffre à la consommation publiée.</span></a></div></section>
 
-		<section class="sources-panel"><h2>Source et réserves</h2>{tool.evidence.map((evidence) => <p><a href={evidence.sourceUrl} rel="nofollow noopener" target="_blank">{evidence.sourceLabel}</a> · {sourceRoleLabel[sourceRoleForEvidence(evidence)]} · consultée le {evidence.retrievedAt.split('-').reverse().join('/')} · {sourceQualityLabel(evidence.confidence)} <small>(grade technique {evidence.confidence})</small></p>)}{tool.notes.map((note) => <p>{note}</p>)}<p><a href={historyHref}>Voir les documents et dates vérifiés pour cette référence</a></p></section>
+		<section class="sources-panel"><h2>Source et réserves</h2>{tool.evidence.map((evidence) => <p><a href={evidence.sourceUrl} rel="nofollow noopener" target="_blank">{evidence.sourceLabel}</a> · {sourceRoleLabel[sourceRoleForEvidence(evidence)]} · consultée le {evidence.retrievedAt.split('-').reverse().join('/')} · {sourceQualityLabel(evidence.confidence)} <small>(grade technique {evidence.confidence})</small><SourceAvailabilityNotice sourceUrl={evidence.sourceUrl} /></p>)}{tool.notes.map((note) => <p>{note}</p>)}<p><a href={historyHref}>Voir les documents et dates vérifiés pour cette référence</a></p></section>
 		<EquivalentAnswerGroup />
 	</article>
 </BaseLayout>

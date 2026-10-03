@@ -36,6 +36,11 @@ export const toolGuideByCategoryId: Partial<Record<ToolProfile['categoryId'], `/
 };
 
 export const toolGuideById: Record<string, `/guides/${string}/`> = {
+	"araseuse-de-rivets-universal-tool-ut8897rs-9-16": "/guides/ut8897rs-profondeur-arasage-increment-precision/",
+	"deprag-345z-308-hm": "/guides/deprag-345z-visseuse-bol-alimentation-assorti/",
+	"fouloir-universal-tool-ut8666": "/guides/ut8666-fouloir-fonderie-cadence-fiches-contradictoires/",
+	"polisseuse-aircat-6402": "/guides/aircat-6402-6403-tire-buffer-accessoire-vitesse/",
+	"polisseuse-aircat-6403": "/guides/aircat-6402-6403-tire-buffer-accessoire-vitesse/",
 	"agrafeuse-cloueuse-hymair-j1022": "/guides/hymair-n851-j1022-agrafes-couronne/",
 	"agrafeuse-cloueuse-hymair-n851": "/guides/hymair-n851-j1022-agrafes-couronne/",
 	"agrafeuse-cloueuse-max-cn445r3": "/guides/max-cn445r3-cn890f3-clous-quinze-degres/",

@@ -9,9 +9,10 @@ metiers: ["maintenance-industrielle", "carrosserie-peinture"]
 readingTime: 5
 featured: false
 reviewStatus: "internal"
-relatedGuides: ["point-rosee-secheur-filtre-air-comprime", "ventilation-local-compresseur-surchauffe", "secheur-air-comprime-atelier-non-chauffe"]
+relatedGuides: [ "point-rosee-secheur-filtre-air-comprime", "ventilation-local-compresseur-surchauffe", "secheur-air-comprime-atelier-non-chauffe", kaeser-secotec-faible-charge-point-rosee ]
 sources:
   - https://fr.kaeser.com/entreprise/blog/comment-dimensionner-un-secheur-frigorifique.aspx
+  - https://id.kaeser.com/download.ashx?id=tcm%3A148-5993
 updatedDate: 2026-09-29
 ---
 
@@ -75,6 +76,8 @@ Une capacité nominale supérieure ne répond pas à toutes les causes d’eau e
 Parmi les points d’exploitation à examiner figurent la propreté des échangeurs, les purges et la recirculation d’air chaud, également évoqués dans la source KAESER. Le [guide de ventilation](/guides/ventilation-local-compresseur-surchauffe/) aide à préparer cette vérification. Une intervention sur le circuit frigorifique relève de la procédure et des intervenants adaptés ; ce guide n’en décrit pas la réparation.
 
 Il faut également identifier la fonction de chaque étage. Le dossier [aftercooler et sécheur d’air comprimé](/guides/aftercooler-refroidisseur-secheur-air-comprime/) distingue refroidissement, séparation du condensat et traitement de la vapeur restante.
+
+Un compresseur frigorifique arrêté n’indique pas nécessairement un séchage interrompu. Le [cycle thermique SECOTEC décrit par KAESER](https://id.kaeser.com/download.ashx?id=tcm%3A148-5993#page=6) restitue du froid stocké pendant certaines phases à faible charge. Le [cycle SECOTEC en cinq phases](/guides/kaeser-secotec-faible-charge-point-rosee/#les-cinq-phases-expliquent-larr%C3%AAt) rapproche état du compresseur frigorifique, niveau de stockage et tendance du point de rosée ; il aide à décrire le symptôme avant de conclure à une capacité insuffisante.
 
 ## Quel point de rosée demander ?
 

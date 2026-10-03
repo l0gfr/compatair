@@ -1,4 +1,5 @@
 ---
+import SourceAvailabilityNotice from './SourceAvailabilityNotice.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import DirectoryPagination from './DirectoryPagination.astro';
 import { evidenceHistory } from '../data/evidence-history';
@@ -27,7 +28,7 @@ const eventCounts = Object.fromEntries(['withdrawn', 'corrected', 'added', 'veri
 		<DirectoryPagination basePath="/preuves/" currentPage={currentPage} totalPages={directory.totalPages} firstItem={directory.firstItem} lastItem={directory.lastItem} totalItems={directory.totalItems} itemLabel="produits" />
 		<div class="history-list" id="historique" data-evidence-register>{directory.items.map(({ product, type, href, events, significantEvent }) => <article id={product.id} class="history-product">
 			<header><div><p class="guide-meta">{type === 'compressor' ? 'Compresseur' : 'Outil'} · {product.brand}</p><h3><a href={href}>{product.model}</a></h3></div><div class="history-product-summary"><span class:list={['history-kind', `kind-${significantEvent.kind}`]}>{evidenceHistoryKindLabel[significantEvent.kind]}</span><strong>{events.length} vérification{events.length > 1 ? 's' : ''}</strong></div></header>
-			<ol>{events.map((event) => <li class={`kind-${event.kind}`}><div><span class:list={['history-kind', `kind-${event.kind}`]}>{evidenceHistoryKindLabel[event.kind]}</span><time datetime={event.occurredAt}>{formatDate(event.occurredAt)}</time></div><h4>{event.snapshot.sourceLabel}</h4><p>{event.summary}</p><p class="history-meta">Consultée le {formatDate(event.snapshot.retrievedAt)} · fiabilité {event.snapshot.confidence}</p><a href={event.snapshot.sourceUrl} rel="nofollow noopener" target="_blank">Consulter la source</a></li>)}</ol>
+			<ol>{events.map((event) => <li class={`kind-${event.kind}`}><div><span class:list={['history-kind', `kind-${event.kind}`]}>{evidenceHistoryKindLabel[event.kind]}</span><time datetime={event.occurredAt}>{formatDate(event.occurredAt)}</time></div><h4>{event.snapshot.sourceLabel}</h4><p>{event.summary}</p><p class="history-meta">Consultée le {formatDate(event.snapshot.retrievedAt)} · fiabilité {event.snapshot.confidence}</p><a href={event.snapshot.sourceUrl} rel="nofollow noopener" target="_blank">Consulter la source</a><SourceAvailabilityNotice sourceUrl={event.snapshot.sourceUrl} /></li>)}</ol>
 		</article>)}</div>
 		<DirectoryPagination basePath="/preuves/" currentPage={currentPage} totalPages={directory.totalPages} firstItem={directory.firstItem} lastItem={directory.lastItem} totalItems={directory.totalItems} itemLabel="produits" />
 	</div></section>

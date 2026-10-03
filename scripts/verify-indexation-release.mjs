@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises';
+import { appendFile, readFile } from 'node:fs/promises';
 import { isDeepStrictEqual } from 'node:util';
 import { readLiveIndexation } from './lib/indexation-live.mjs';
 import { MAX_INDEXATION_ARTIFACT_AGE_MS, assertDailyIndexationDate, validateBaseline, validateManifest } from './lib/indexation-policy.mjs';
@@ -12,4 +12,7 @@ assertDailyIndexationDate(artifact);
 const live = await readLiveIndexation(baseline);
 if (artifact.gitSha === live.gitSha) throw new Error('Cette révision est déjà publiée : un nouveau lot exige une nouvelle révision immuable.');
 if (live.gitSha !== plan.previousSha || !isDeepStrictEqual(live.batches, artifact.batches.slice(0, live.batches.length))) throw new Error('La production a changé depuis le build : reconstruire pour préserver son historique SEO.');
+// Export only after every checkpoint passes; the storage job must preserve
+// this observed release even if its earlier workflow was cancelled.
+if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `previous_release_sha=${live.gitSha}\n`);
 console.log(`Base SEO de production vérifiée avant déploiement : ${live.gitSha}.`);

@@ -8,8 +8,8 @@ audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "maintenance-industrielle"]
 readingTime: 4
 reviewStatus: "internal"
-relatedGuides: ["buse-sablage-diametre-pression-debit-compresseur", "sableuse-perd-puissance-abrasif-humide-diagnostic", "compresseur-pour-sablage-pneumatique"]
-sources: ["https://www.clemcoindustries.com/s/30421m.pdf", "https://www.clemcoindustries.com/s/30422BM-PULSAR-PLUS-III-P-VI-P-Rev-C.pdf"]
+relatedGuides: [ "buse-sablage-diametre-pression-debit-compresseur", "sableuse-perd-puissance-abrasif-humide-diagnostic", "compresseur-pour-sablage-pneumatique", clemco-rph-decolmatage-impulsion-on-off ]
+sources: [ "https://www.clemcoindustries.com/s/30421m.pdf", "https://www.clemcoindustries.com/s/30422BM-PULSAR-PLUS-III-P-VI-P-Rev-C.pdf", https://www.clemcoindustries.com/s/21449m.pdf ]
 ---
 
 **Une cabine de sablage ne se dimensionne pas à partir de son volume intérieur.** Le besoin en air dépend du système de projection, de sa configuration et de la pression de fonctionnement. Sur une cabine à succion, il faut notamment identifier le jet d’air situé dans le pistolet, pas seulement sa buse de sortie.
@@ -63,6 +63,8 @@ Le [guide CFM, L/min et NL/min](/guides/convertir-cfm-l-min-nl-min-air-comprime/
 La notice de la variante à pression décrit aussi le décolmatage du dépoussiéreur par impulsions d’air. Cela justifie une question précise au fournisseur : le besoin annoncé inclut-il ces fonctions, et dans quelles conditions ? Il ne faut pas ajouter leur consommation arbitrairement si elle est déjà comprise.
 
 Préparez un bilan indiquant projection, décolmatage et autres postes simultanés réellement présents. Le [guide des usages simultanés](/guides/utiliser-plusieurs-outils-pneumatiques/) aide à organiser ce relevé. Pour une cabine utilisée durablement, faites aussi vérifier le régime admissible du compresseur choisi.
+
+Le dépoussiéreur peut ajouter une demande d’air pulsée au poste. La [notice Clemco RPH, §§ 4.2.2–4.2.3](https://www.clemcoindustries.com/s/21449m.pdf) distingue intervalle OFF de 40 s et durée ON de 0,15 s, puis précise qu’allonger ON consomme davantage sans mieux nettoyer. Le [cas du décolmatage RPH](/guides/clemco-rph-decolmatage-impulsion-on-off/#lintervalle-et-la-dur%C3%A9e-nagissent-pas-sur-la-m%C3%AAme-chose) sépare cadence d’impulsion, différentiel du collecteur et bilan d’air, sans déduire un débit continu de ces seuls temps.
 
 ## Ne pas confondre problème d’air et problème d’abrasif
 

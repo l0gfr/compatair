@@ -9,7 +9,13 @@ const roots: string[] = [];
 afterEach(() => { for (const root of roots.splice(0)) rmSync(root, { recursive: true, force: true }); });
 function fixture() {
  const directory = mkdtempSync(join(tmpdir(), 'compatair-page-results-')); roots.push(directory);
- return { compressors: structuredClone(compressors.slice(0, 3)), tools: structuredClone(tools.slice(0, 4)), options: { directory, fingerprint: 'a'.repeat(64) } };
+ const toolIds = ['einhell-tc-pn-50', 'agrafeuse-cloueuse-hymair-9021a', 'agrafeuse-cloueuse-hymair-cn45a', 'agrafeuse-cloueuse-hymair-cn90'];
+ const fixtureTools = toolIds.map(id => {
+  const tool = tools.find(product => product.id === id);
+  if (!tool) throw new Error(`Missing cache fixture ${id}`);
+  return tool;
+ });
+ return { compressors: structuredClone(compressors.slice(0, 3)), tools: structuredClone(fixtureTools), options: { directory, fingerprint: 'a'.repeat(64) } };
 }
 function evaluate(input: ReturnType<typeof fixture>) {
  const cache = new PageCalculationCache(input.compressors, input.tools, input.options);
@@ -32,7 +38,11 @@ describe('page calculation reuse across catalog revisions', () => {
  it.each(['compressor', 'tool', 'source', 'engine', 'new-compressor', 'reorder', 'remove'])('handles %s changes without altering results', kind => {
   const input = fixture(); evaluate(input);
   if (kind === 'compressor') input.compressors[0].maxPressureBar++;
-  if (kind === 'tool' && input.tools[0].demandModel === 'per-action') input.tools[0].airPerActionLiters++;
+  if (kind === 'tool') {
+   expect(input.tools[0].demandModel).toBe('per-action');
+   if (input.tools[0].demandModel !== 'per-action') throw new Error('Per-action cache fixture required');
+   input.tools[0].airPerActionLiters++;
+  }
   if (kind === 'source') input.tools[0].evidence[0].notes = 'Changed source context';
   if (kind === 'engine') input.options.fingerprint = 'b'.repeat(64);
   if (kind === 'new-compressor') input.compressors.push({ ...input.compressors[0], id: 'new-compressor' });
