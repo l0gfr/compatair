@@ -46,7 +46,7 @@ describe('bounded compressed production archive', () => {
 		expect(upload.with['retention-days']).toBe(7);
 		expect(upload.with['compression-level']).toBe(0);
 		const packaging = workflow.jobs.validate.steps.find(step => step.name === 'Package immutable release');
-		expect(packaging.run).toContain('xz -T2 -8');
+		expect(packaging.run).toContain('xz -T2 -9');
 		expect(upload.with['if-no-files-found']).toBe('error');
 	});
 	it('refuses packaging when tar fails even if xz succeeds, before checksums or release upload', () => {

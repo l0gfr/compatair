@@ -1,3 +1,4 @@
+import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { buildDocumentedExpansionOctober } from './documented-expansion-2026-10-01.mjs';
@@ -29,8 +30,8 @@ describe('documented expansion, October 1', () => {
  });
  it('keeps the published catalog identical to the reviewed import, including missing fields', () => {
   const actual = new Map([...publishedCompressors, ...publishedTools].map(p => [p.id, p]));
-  for (const p of batch.compressors) expect(actual.get(p.id)).toEqual(compressorSchema.parse(p));
-  for (const p of batch.tools) expect(actual.get(p.id)).toEqual({ ...toolProfileSchema.parse(p), category: toolCategoryLabel(p.categoryId) });
+  for (const p of batch.compressors) assert.deepStrictEqual(actual.get(p.id), compressorSchema.parse(p), p.id);
+  for (const p of batch.tools) assert.deepStrictEqual(actual.get(p.id), { ...toolProfileSchema.parse(p), category: toolCategoryLabel(p.categoryId) }, p.id);
  });
  it('keeps Ceccato FAD measurement pressure below the maximum and converts only published units', () => {
   const drb = batch.compressors.find(p => p.brand === 'Ceccato' && p.model === 'DRB 25' && p.maxPressureBar === 10 && p.tankLiters === 0);
