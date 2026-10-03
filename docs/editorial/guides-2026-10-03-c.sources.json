@@ -1,0 +1,2959 @@
+{
+  "schemaVersion": 1,
+  "batchId": "documented-expansion-2026-10-03-c",
+  "reviewDate": "2026-10-03",
+  "reviewType": "internal_editorial",
+  "assistedByAI": true,
+  "externalProfessionalValidation": false,
+  "physicalTestsPerformed": false,
+  "publicationScope": {
+    "baselineGuides": 536,
+    "newGuidesPrepared": 30,
+    "plannedNewGuides": 30,
+    "importedCanonical": true,
+    "productionState": "not_published"
+  },
+  "preparationState": "integrated_awaiting_full_validation",
+  "assertionPolicy": "Manufacturer facts, explicit hypothetical calculations, and editorial inferences separated. No physical measurements invented. Direct JavaScript shells excluded as evidence.",
+  "sourcePolicy": "Private primary bytes or clearly labelled primary manufacturer web extraction; no full originals proposed for Git. Restricted-shell DNS failures are environmental and do not establish manufacturer outage. Subsequent bounded TLS-verified GETs succeeded for primary-033 and primary-034; primary-035 returned HTTP 403 and remains proved by manufacturer web extraction.",
+  "sourceReview": {
+    "checkedAt": "2026-10-03T12:11:25.254272+00:00",
+    "usedSources": 30,
+    "claims": 104,
+    "errors": [],
+    "independentDocumentaryReview": {
+      "reviewer": "root coordinating agent",
+      "scope": "Initial 103 assertions reviewed; additional EXAIR internal comparison requested from root primary-page review and transcribed with explicit source location.",
+      "assertionsBeforeEXAIRAmendment": 103,
+      "assertionsAfterEXAIRAmendment": 104,
+      "externalProfessionalValidation": false,
+      "physicalTests": false,
+      "confirmedAt": "2026-10-03T12:12:13.341738+00:00",
+      "correctionsCompleted": [
+        "Claim kind/status conventions",
+        "Beckhoff X5/X15 discordance",
+        "VBA physical 12 printed 1016",
+        "VBA diagram contrast",
+        "Haas French terminology",
+        "EXAIR internal 42/48-inch contradiction and progressive bottom inlets"
+      ]
+    }
+  },
+  "guides": [
+    {
+      "slug": "far-kj60-m8-inox-capacite-matiere",
+      "title": "FAR KJ60 : pourquoi M8 ne couvre pas les écrous en inox",
+      "seoTitle": "FAR KJ60 : M8 inox, tête, mandrin et course",
+      "sha256": "4493ee9858e099403dd8b239f62e0886201fbde0dfaae60a1090ff99299364eb",
+      "wordCount": 715,
+      "claims": [
+        {
+          "sourceId": "primary-008",
+          "assertion": "Plage M3 à M8, avec exclusion explicite de l’inox M8.",
+          "location": "Description KJ60 et EXTRA KJ60",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-007",
+          "assertion": "Pression de travail 6 bar ; diamètre intérieur minimal 8 mm ; consommation publiée 9 Nl/cycle, sans pression de mesure explicitée.",
+          "location": "PDF physique 12, Technical Data",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-007",
+          "assertion": "Tête et mandrin adaptés à l’insert ; course réglée selon taille et épaisseur ; une mauvaise course peut produire un mauvais serrage ou casser le mandrin.",
+          "location": "PDF physique 13, Placing of the insert",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        }
+      ],
+      "sourceIds": [
+        "primary-007",
+        "primary-008"
+      ],
+      "relatedGuideLinks": [
+        "compresseur-pour-riveteuse-pneumatique",
+        "diagnostiquer-chute-pression-air-comprime",
+        "fiche-intervention-air-comprime"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/riveteuse-far-kj60/"
+      ],
+      "svgSha256": [
+        "dd3f66eb16705a3722d437bbc29de3aae81365a087e5090808b26d21e04dbec8"
+      ],
+      "value": "Décision négative concluante sur M8 inox et séparation des contrôles fixation/course/air.",
+      "limitations": [
+        "Aucune qualification de fixation ou de résistance mécanique de l’assemblage."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-007",
+          "url": "https://www.far.bo.it/en/download/use-and-maintenance-manual/category/3-riveting-tools-for-blind-rivet-nuts.html?download=35%3Akj60",
+          "resolvedUrl": "https://www.far.bo.it/en/download/use-and-maintenance-manual/category/3-riveting-tools-for-blind-rivet-nuts.html?download=35%3Akj60",
+          "contentType": "application/pdf",
+          "sha256": "27472efae97e555344f5f025c6dfe2364b82074dd983b89296c2f49ea9d01ea5",
+          "bytes": 3373533,
+          "observedAt": "2026-10-03T11:01:53.826366+00:00",
+          "sourceLabel": "FAR KJ60, notice 750313 révision 24 (09-2022)",
+          "location": "PDF physique 12, Technical Data ; PDF physique 13, Placing of the insert",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-007.pdf"
+        },
+        {
+          "id": "primary-008",
+          "url": "https://www.far.bo.it/en/products/riveting-tools-for-blind-rivet-nuts/hydropneumatic-tools/kj60.html",
+          "resolvedUrl": "https://www.far.bo.it/en/products/riveting-tools-for-blind-rivet-nuts/hydropneumatic-tools/kj60.html",
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "4f24e03931848e105a82d020f315a1cccbb55e8e3bca586255b579cda3ce9fe2",
+          "bytes": 91705,
+          "observedAt": "2026-10-03T11:01:54.656638+00:00",
+          "sourceLabel": "FAR KJ60, page produit fabricant",
+          "location": "Description KJ60 et EXTRA KJ60",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-008.html"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-008",
+          "location": "Description KJ60 et EXTRA KJ60",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-007",
+          "location": "PDF physique 12, Technical Data",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-007",
+          "location": "PDF physique 13, Placing of the insert",
+          "kind": "documentary_fact"
+        }
+      ],
+      "reviewedDraftSha256": "9e449aaa1e7c14977e8b5552ac35ca945eb4e83a454bd5c5cfd1d7d796bed016"
+    },
+    {
+      "slug": "gesipa-taurus2-diametre-mandrin-rivet",
+      "title": "TAURUS 2 : vérifier le diamètre du mandrin avant le rivet",
+      "seoTitle": "TAURUS 2 : diamètre de rivet, matière et mandrin",
+      "sha256": "0e4dd49d3fb11b3af7a143a6e06cc2d6056694ba51c4fb7d4fe8183730ddcabe",
+      "wordCount": 676,
+      "claims": [
+        {
+          "sourceId": "primary-009",
+          "assertion": "Rivets jusqu’à 5 mm dans toutes les matières, jusqu’à 6 mm en aluminium ou acier ; mandrin jusqu’à 3,2 mm.",
+          "location": "Description of working range / Technical specifications",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-009",
+          "assertion": "Nez 17/24, 17/27, 17/29 et 17/32 livrés.",
+          "location": "Scope of delivery",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-009",
+          "assertion": "Alimentation de 5 à 7 bar ; consommation publiée « 2,30 liter » sans dénominateur.",
+          "location": "Technical specifications",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-009",
+          "assertion": "Dans les scénarios fictifs, l’inox 6 mm et le mandrin 3,4 mm dépassent le domaine ; un diamètre de mandrin absent empêche la conclusion.",
+          "location": "Déduction des plafonds de working range",
+          "status": "reviewed_internal_inference",
+          "kind": "inference"
+        }
+      ],
+      "sourceIds": [
+        "primary-009"
+      ],
+      "relatedGuideLinks": [
+        "compresseur-pour-riveteuse-pneumatique",
+        "riveteuse-pneumatique-aspiration-mandrin-consommation",
+        "gison-gp250rm-gp250ri-ecrous-cadence"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/riveteuse-gesipa-taurus-2-1457771/"
+      ],
+      "svgSha256": [
+        "3a4aacc42b413842feac87f2833e7dae3ac7613709f6b545015fde412872e873"
+      ],
+      "value": "Deux conditions de capacité indépendantes et décision négative sur deux demandes types.",
+      "limitations": [
+        "Pas de validation de rivet exact, de résistance d’assemblage ou de consommation par cycle."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-009",
+          "url": "https://www.gesipa.com/products/pneumatic-riveting-tools/1457771-taurus-2/",
+          "resolvedUrl": "https://www.gesipa.com/products/pneumatic-riveting-tools/1457771-taurus-2/",
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "36edb468a2f925a8c4411f602ede7417d3da49c2dc0b593e40a886d586220a97",
+          "bytes": 222187,
+          "observedAt": "2026-10-03T11:01:52.711184+00:00",
+          "sourceLabel": "GESIPA TAURUS 2 article 1457771, page fabricant",
+          "location": "Description of working range / Technical specifications ; Scope of delivery ; Technical specifications ; Déduction des plafonds de working range",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-009.html"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-009",
+          "location": "Description of working range / Technical specifications",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-009",
+          "location": "Scope of delivery",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-009",
+          "location": "Technical specifications",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-009",
+          "location": "Déduction des plafonds de working range",
+          "kind": "inference"
+        }
+      ],
+      "reviewedDraftSha256": "26d1ca96991d7dbf6598159f77806f744878306f53b04c4446a34ef0ab4eeddf"
+    },
+    {
+      "slug": "festo-ysr8-8-c-energie-cadence-temperature",
+      "title": "Festo YSR-8-8-C : vérifier l’énergie par choc et par heure",
+      "seoTitle": "Festo YSR-8-8-C : énergie, cadence et retour au froid",
+      "sha256": "966ce85a2d1081bc4dbda836ca8f73f10d877673041436a68e16a61604c74450",
+      "wordCount": 668,
+      "claims": [
+        {
+          "sourceId": "primary-011",
+          "assertion": "Course 8 mm ; vitesse d’impact maximale 3 m/s ; énergie maximale 3 J/choc et 18 000 J/h.",
+          "location": "PDF physique 1, data sheet 34571",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-011",
+          "assertion": "Retour 0,2 s à température ambiante et 1 s à la température minimale ; ambiance de −10 à 80 °C.",
+          "location": "PDF physique 1, data sheet 34571",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-011",
+          "assertion": "Charge publiée (« Load range ») 15 kg et force d’arrêt maximale 500 N.",
+          "location": "PDF physique 1, data sheet 34571",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-011",
+          "assertion": "Calculs fictifs : 3 × 120 × 60 = 21 600 J/h ; 3 × 100 × 60 = 18 000 J/h ; 60/120 = 0,5 s.",
+          "location": "Arithmétique explicite du scénario, valeurscataloguephysique 1",
+          "status": "reviewed_internal_calculation",
+          "kind": "calculation"
+        }
+      ],
+      "sourceIds": [
+        "primary-011"
+      ],
+      "relatedGuideLinks": [
+        "force-verin-pneumatique-diametre-pression",
+        "verin-tape-fin-course-amortissement-ppv-pps",
+        "verin-rotatif-pneumatique-couple-angle-inertie"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "3d14f3e00aabbbfed98613ae3c1e841f207f6c10ede41a535fbd253e29d457d9"
+      ],
+      "value": "Double plafond vérifié et exemple éliminatoire, avec contrainte de retour au froid.",
+      "limitations": [
+        "Scénario fictif, aucune sélection d’application certifiée ; derating thermique non déduit de cette fiche."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-011",
+          "url": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Datasheet/EN_US/34571.pdf",
+          "resolvedUrl": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Datasheet/EN_US/34571.pdf",
+          "contentType": "application/pdf",
+          "sha256": "207777e788c69808723c0f60650d895f34009dc992f7cb6adf63d2b3815cda7d",
+          "bytes": 58148,
+          "observedAt": "2026-10-03T11:01:53.284486+00:00",
+          "sourceLabel": "Festo YSR-8-8-C 34571, fiche fabricant",
+          "location": "PDF physique 1, data sheet 34571 ; Arithmétique explicite du scénario, valeurscataloguephysique 1",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-011.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-011",
+          "location": "PDF physique 1, data sheet 34571",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-011",
+          "location": "PDF physique 1, data sheet 34571",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-011",
+          "location": "PDF physique 1, data sheet 34571",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-011",
+          "location": "Arithmétique explicite du scénario, valeurscataloguephysique 1",
+          "kind": "calculation"
+        }
+      ]
+    },
+    {
+      "slug": "wika-manometre-glycerine-zero-pression-boitier",
+      "title": "Manomètre rempli WIKA : un boîtier sous pression peut décaler le zéro",
+      "seoTitle": "Manomètre WIKA rempli : zéro décalé et mise à l’air",
+      "sha256": "fa3d400551067cf128512f1a6d2785cbb25ab6c82599b17e65c0aedc9aeecb3f",
+      "wordCount": 652,
+      "claims": [
+        {
+          "sourceId": "primary-019",
+          "assertion": "La variation thermique du liquide peut modifier la pression du boîtier et décaler le zéro.",
+          "location": "Case Venting of Liquid-filled Gauges, paragraphe WIKA engineers",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-019",
+          "assertion": "Attention spécifique aux pleines échelles de 300 psi ou moins ; WIKA distingue position verticale et non verticale.",
+          "location": "Case Venting of Liquid-filled Gauges",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        }
+      ],
+      "sourceIds": [
+        "primary-019"
+      ],
+      "relatedGuideLinks": [
+        "manometre-air-comprime-precision-pleine-echelle",
+        "bar-psi-pression-absolue-relative",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "661e949c7b7f2651eb6a7feca5db74f66e3f45bfd80b184cf1115aad9bbf13d3"
+      ],
+      "value": "Sépare la mise à l’air du boîtier de la purge du circuit et donne un relevé avant/après exploitable.",
+      "limitations": [
+        "La procédure doit être celle du modèle équipé ; aucun certificat de calibration ni procédure de purge du réseau."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-019",
+          "url": "https://blog.wika.com/us/products/pressure-products/vent-liquid-filled-gauge/",
+          "resolvedUrl": "https://blog.wika.com/us/products/pressure-products/vent-liquid-filled-gauge/",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "42c5da04e57050649928ed3e01a222c78335c10184e086211b13d2460c8c7f6f",
+          "bytes": 61747,
+          "observedAt": "2026-10-03T11:01:56.616462+00:00",
+          "sourceLabel": "WIKA, How to Vent a Liquid-filled Pressure Gauge",
+          "location": "Case Venting of Liquid-filled Gauges, paragraphe WIKA engineers ; Case Venting of Liquid-filled Gauges",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-019.html"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-019",
+          "location": "Case Venting of Liquid-filled Gauges, paragraphe WIKA engineers",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-019",
+          "location": "Case Venting of Liquid-filled Gauges",
+          "kind": "documentary_fact"
+        }
+      ]
+    },
+    {
+      "slug": "vessel-gt-n20-capacite-coupe-matiere-lame",
+      "title": "VESSEL GT-N20 : vérifier matière, diamètre et lame de coupe",
+      "seoTitle": "VESSEL GT-N20 : capacité cuivre, acier et lame N20AS",
+      "sha256": "f32c678f3de46e888554a96da51e8debd3cd3f30efa44ad4053b645271e60e14",
+      "wordCount": 690,
+      "claims": [
+        {
+          "sourceId": "primary-023",
+          "assertion": "GT-N20 : plastique tendre 7 mm, plastique dur 5 mm, cuivre 2,6 mm, acier 2 mm ; lames optionnelles.",
+          "location": "Product Spec / Blades are OPTION",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-030",
+          "assertion": "Lame N20AS, code 360151 : cuivre 2,6 mm, acier 2 mm ; compatible GT-NS20, N20, NR20 et NB20.",
+          "location": "Product Spec / Applicable",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-023",
+          "assertion": "GT-N20 : 0,5 à 0,6 MPa ; liaison de diamètre intérieur 5 mm ; consommation 230 cm³/course, conditions de référence absentes.",
+          "location": "Product Spec",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-030",
+          "assertion": "Dans les scénarios fictifs, le cuivre 2,5 mm est sous le plafond 2,6 mm ; l’acier 2,5 mm dépasse le plafond 2 mm.",
+          "location": "Exemple fictif comparé au tableau Product Spec",
+          "status": "reviewed_internal_inference",
+          "kind": "inference"
+        }
+      ],
+      "sourceIds": [
+        "primary-023",
+        "primary-030"
+      ],
+      "relatedGuideLinks": [
+        "convertir-cfm-l-min-nl-min-air-comprime",
+        "utiliser-plusieurs-outils-pneumatiques",
+        "compresseur-pour-cisaille-grignoteuse-pneumatique"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "eae0235335c7d0796ac15bdc64393218651f563cdbe2bf8183239f3ab6811d5d"
+      ],
+      "value": "Double sélection corps/lame avec une comparaison éliminatoire de matières à diamètre identique.",
+      "limitations": [
+        "Conditions de référence de 230 cm³/course absentes ; aucun FAD minimal ni qualité de coupe certifiés."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-023",
+          "url": "https://www.vessel.co.jp/english/product/airnippers/360007",
+          "resolvedUrl": "https://www.vessel.co.jp/english/product/airnippers/360007",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "1b6004afaa77a53f8b31af1b2dde01e56c052736a96b4eec1710c877e47dd8cd",
+          "bytes": 30448,
+          "observedAt": "2026-10-03T11:02:02.932169+00:00",
+          "sourceLabel": "VESSEL GT-N20 code 360007",
+          "location": "Product Spec / Blades are OPTION ; Product Spec",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-023.html"
+        },
+        {
+          "id": "primary-030",
+          "url": "https://www.vessel.co.jp/english/product/airnippers/360151",
+          "resolvedUrl": "https://www.vessel.co.jp/english/product/airnippers/360151",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "506126b239ac97bad7d18f33c9e9b27f7c9b39da5c3cfe8903797fa6ec2d33a8",
+          "bytes": 30296,
+          "observedAt": "2026-10-03T11:12:41.460964+00:00",
+          "sourceLabel": "VESSEL N20AS code 360151",
+          "location": "Product Spec / Applicable ; Exemple fictif comparé au tableau Product Spec",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-030.html"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-023",
+          "location": "Product Spec / Blades are OPTION",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-030",
+          "location": "Product Spec / Applicable",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-023",
+          "location": "Product Spec",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-030",
+          "location": "Exemple fictif comparé au tableau Product Spec",
+          "kind": "inference"
+        }
+      ]
+    },
+    {
+      "slug": "vaisala-dmt143-point-rosee-fige-purge-autocalibration",
+      "title": "DMT143 : pourquoi le point de rosée reste figé pendant une purge",
+      "seoTitle": "Vaisala DMT143 : point de rosée figé pendant la purge",
+      "sha256": "c043821897360f8dd4eee6f7ae2342a51232570d03713de798f9150fe71b9f59",
+      "wordCount": 662,
+      "claims": [
+        {
+          "sourceId": "primary-001",
+          "assertion": "Purge quotidienne ou à la mise sous tension ; chauffage de plusieurs minutes ; point de rosée précédent conservé.",
+          "location": "M211435EN-L Sensor purge, lignes 149–150 de l’extraction web",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-002",
+          "assertion": "Autocalibration horaire ou au démarrage, chauffage inférieur à une minute ; sorties retenues à leur dernière valeur valide ; conditions pouvant différer l’opération.",
+          "location": "M211435EN-L Autocalibration, lignes 149–151 de l’extraction web",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-001",
+          "assertion": "Une valeur retenue n’est pas une nouvelle observation de la période ; un plateau peut masquer ou prolonger visuellement un incident.",
+          "location": "Conséquence logique de la conservation Td, sans essai",
+          "status": "reviewed_internal_inference",
+          "kind": "inference"
+        }
+      ],
+      "sourceIds": [
+        "primary-001",
+        "primary-002"
+      ],
+      "relatedGuideLinks": [
+        "point-rosee-atmospherique-sous-pression-mesure",
+        "point-rosee-secheur-filtre-air-comprime",
+        "fiche-intervention-air-comprime"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "bdde9f583974be909019958f4e9a91d67de50cd1799a63294f80af5415bdad39"
+      ],
+      "value": "Règle d’interprétation des tendances et dossier avant/pendant/après pour distinguer appareil et réseau.",
+      "limitations": [
+        "Extractions fabricant de l’outil web ; HTML direct est une coquille JS, exclu des preuves. Aucun registre ou protocole d’état non vérifié n’est prescrit."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-001",
+          "url": "https://docs.vaisala.com/r/M211435EN-L/en-US/GUID-361C9BF8-FA5D-4A54-BA92-A9E5E7322A80/GUID-55D856C2-FAC1-4327-858F-A8730610A61D?contentId=~coodB6jf3~xtp9MTh9eIQ",
+          "resolvedUrl": "https://docs.vaisala.com/r/M211435EN-L/en-US/GUID-361C9BF8-FA5D-4A54-BA92-A9E5E7322A80/GUID-55D856C2-FAC1-4327-858F-A8730610A61D?contentId=~coodB6jf3~xtp9MTh9eIQ",
+          "contentType": "application/json",
+          "sha256": "0ae270264537ea2eee445c0939801b98ae15392e2484376963bd336d4411a685",
+          "bytes": 8715,
+          "observedAt": "2026-10-03T11:06:14.357Z",
+          "sourceLabel": "Vaisala DMT143 M211435EN-L, Sensor purge",
+          "location": "M211435EN-L Sensor purge, lignes 149–150 de l’extraction web ; Conséquence logique de la conservation Td, sans essai",
+          "captureKind": "manufacturer_content_via_web_tool_extraction",
+          "privateCaptureFile": "sources/primary-001-web.json",
+          "transportCapture": {
+            "sha256": "be69462176e3b7ae3348ed15562621ff6bd9de28ed42bdc36e4421647427c964",
+            "bytes": 2763,
+            "file": "sources/primary-001.html",
+            "substantiveContent": false,
+            "reason": "Direct transport is unavailable or a JavaScript loading shell; excluded from assertion proof.",
+            "error": null
+          }
+        },
+        {
+          "id": "primary-002",
+          "url": "https://docs.vaisala.com/r/M211435EN-L/en-US/GUID-361C9BF8-FA5D-4A54-BA92-A9E5E7322A80/GUID-487220D2-77D1-4DFB-B776-D7451274BDEA?contentId=gbWBhr7HG_IgHBbI9aw0~A",
+          "resolvedUrl": "https://docs.vaisala.com/r/M211435EN-L/en-US/GUID-361C9BF8-FA5D-4A54-BA92-A9E5E7322A80/GUID-487220D2-77D1-4DFB-B776-D7451274BDEA?contentId=gbWBhr7HG_IgHBbI9aw0~A",
+          "contentType": "application/json",
+          "sha256": "f9cad43aa88bff893db2406569cb81fdbc94e31727adfc7a2c429b74dde31d29",
+          "bytes": 9433,
+          "observedAt": "2026-10-03T11:06:15.909Z",
+          "sourceLabel": "Vaisala DMT143 M211435EN-L, Autocalibration",
+          "location": "M211435EN-L Autocalibration, lignes 149–151 de l’extraction web",
+          "captureKind": "manufacturer_content_via_web_tool_extraction",
+          "privateCaptureFile": "sources/primary-002-web.json",
+          "transportCapture": {
+            "sha256": "43fa5ef9c4623b2a9c070c7d8a241c36dcecef44b7bb063b0d527ea122049e11",
+            "bytes": 2763,
+            "file": "sources/primary-002.html",
+            "substantiveContent": false,
+            "reason": "Direct transport is unavailable or a JavaScript loading shell; excluded from assertion proof.",
+            "error": null
+          }
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-001",
+          "location": "M211435EN-L Sensor purge, lignes 149–150 de l’extraction web",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-002",
+          "location": "M211435EN-L Autocalibration, lignes 149–151 de l’extraction web",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-001",
+          "location": "Conséquence logique de la conservation Td, sans essai",
+          "kind": "inference"
+        }
+      ]
+    },
+    {
+      "slug": "vaisala-dsc74-vis-fuite-pression-cellule",
+      "title": "DSC74 : une vis de fuite trop ouverte fausse la pression de mesure",
+      "seoTitle": "Vaisala DSC74 : régler la vis de fuite à un demi-tour",
+      "sha256": "b8e3aa216e3a2c4b2cf9eef0ce557c419d8ced74732f8cb1b1937aceb5fde211",
+      "wordCount": 636,
+      "claims": [
+        {
+          "sourceId": "primary-003",
+          "assertion": "La vis de fuite DSC74 permet le passage devant le capteur en conservant la pression de procédé ; ouverture prescrite de ½ tour, à ne pas dépasser.",
+          "location": "M211435EN-L DSC74 chapter lignes 164–167 de l’extraction web",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-003",
+          "assertion": "Le chapitre liste le corps DMT242SC, le raccord rapide, la vis de fuite et les adaptateurs.",
+          "location": "M211435EN-L DSC74 chapter lignes 149–162 de l’extraction web",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        }
+      ],
+      "sourceIds": [
+        "primary-003"
+      ],
+      "relatedGuideLinks": [
+        "point-rosee-atmospherique-sous-pression-mesure",
+        "vaisala-dmt143-point-rosee-fige-purge-autocalibration",
+        "fiche-intervention-air-comprime"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "53e51ebadfd72376028e2afd3497ac815c65a9615487e76e561bd113890fe7ef"
+      ],
+      "value": "Contrôle mécanique propre à DSC74 qui empêche d’attribuer une variation de prélèvement au sécheur.",
+      "limitations": [
+        "Pas de débit garanti à ½ tour ni calcul de PDP ; distinction de montage DSC74 spécifique."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-003",
+          "url": "https://docs.vaisala.com/r/M211435EN-L/en-US/GUID-1F8C125B-3DA2-4829-8AEF-CCC0C57CAFCA/GUID-60605156-E294-44DF-98EE-DBAB3441173E?contentId=qEuLfA2ITLkKAIbIcCMqhQ",
+          "resolvedUrl": "https://docs.vaisala.com/r/M211435EN-L/en-US/GUID-1F8C125B-3DA2-4829-8AEF-CCC0C57CAFCA/GUID-60605156-E294-44DF-98EE-DBAB3441173E?contentId=qEuLfA2ITLkKAIbIcCMqhQ",
+          "contentType": "application/json",
+          "sha256": "af494f85ebe29e8c7f39da41119527dd35b8a779d5f4c36b804d58363dd6d6d4",
+          "bytes": 9888,
+          "observedAt": "2026-10-03T11:06:17.550Z",
+          "sourceLabel": "Vaisala DMT143 M211435EN-L, DSC74 sampling cell",
+          "location": "M211435EN-L DSC74 chapter lignes 164–167 de l’extraction web ; M211435EN-L DSC74 chapter lignes 149–162 de l’extraction web",
+          "captureKind": "manufacturer_content_via_web_tool_extraction",
+          "privateCaptureFile": "sources/primary-003-web.json",
+          "transportCapture": {
+            "sha256": "e84b1560c7ecc27588bb1e629512bdb75bdc5eb1add4478de11a38663ed82ad3",
+            "bytes": 2763,
+            "file": "sources/primary-003.html",
+            "substantiveContent": false,
+            "reason": "Direct transport is unavailable or a JavaScript loading shell; excluded from assertion proof.",
+            "error": null
+          }
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-003",
+          "location": "M211435EN-L DSC74 chapter lignes 164–167 de l’extraction web",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-003",
+          "location": "M211435EN-L DSC74 chapter lignes 149–162 de l’extraction web",
+          "kind": "documentary_fact"
+        }
+      ]
+    },
+    {
+      "slug": "beckhoff-epp3744-reference-pression-coe",
+      "title": "Beckhoff EPP3744 : retrouver la pression de référence hors données cycliques",
+      "seoTitle": "Beckhoff EPP3744 : référence X15 et objets CoE",
+      "sha256": "2e99de94b1ca13b185af15e33ad793604521e53efcf047000a1851c93d6353b8",
+      "wordCount": 794,
+      "claims": [
+        {
+          "sourceId": "primary-018",
+          "assertion": "La référence est hors données cycliques ; elle est disponible dans les objets CoE.",
+          "location": "Page fabricant Pressure inputs, paragraphe après Pressure measuring inputs",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-031",
+          "assertion": "Quatre voies X11 à X14 et référence X15 sur le schéma ; référence hors image de procédé et disponible CoE.",
+          "location": "PDF physique 22, §4.2.2",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-031",
+          "assertion": "Mode 7 absolu, mode 8 différentiel par rapport à la référence ; mode 8 annoncé comme réglage d’usine.",
+          "location": "PDF physique 27, §5.1",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-031",
+          "assertion": "F80E:01 et F80E:02 : valeurs ADC brutes, INT32, en lecture seule.",
+          "location": "PDF physique 53, Index F80E AI Internal data Reference",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-031",
+          "assertion": "Discordance de repérage : X15 sur le schéma page 22 et X5 dans le texte page 27.",
+          "location": "PDF physique 22, §4.2.2 ; physique 27, §5.1",
+          "status": "reviewed_documentary",
+          "kind": "document_comparison"
+        },
+        {
+          "sourceId": "primary-031",
+          "assertion": "Calculs fictifs : 6 − 1 = 5 bar et 6 − 1,2 = 4,8 bar ; la variation de référence déplace l’écart.",
+          "location": "Arithmétique de différence, scénario hypothétique",
+          "status": "reviewed_internal_calculation",
+          "kind": "calculation"
+        }
+      ],
+      "sourceIds": [
+        "primary-018",
+        "primary-031"
+      ],
+      "relatedGuideLinks": [
+        "bar-psi-pression-absolue-relative",
+        "audit-reseau-air-comprime-protocole-mesures",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "22543adaad0ebed9e5d6729d73989d6665f1dfa6aa7a17e4f1111ecc662c10bf"
+      ],
+      "value": "Résout la référence invisible du diagnostic de quatre voies et évite une fausse correction de zéro.",
+      "limitations": [
+        "Aucune conversion ADC/bar ni cadence CoE n’est déduite ; aucune qualification de supervision."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-018",
+          "url": "https://infosys.beckhoff.com/content/1033/epp3744/3618558731.html",
+          "resolvedUrl": "https://infosys.beckhoff.com/content/1033/epp3744/3618558731.html",
+          "contentType": "text/html",
+          "sha256": "510b796b8858a8876d6cd1f47e49d812a4fc07bf50b32ff7b62459139ff9d35f",
+          "bytes": 4069,
+          "observedAt": "2026-10-03T11:01:55.751447+00:00",
+          "sourceLabel": "Beckhoff EPP3744-x041, Pressure inputs",
+          "location": "Page fabricant Pressure inputs, paragraphe après Pressure measuring inputs",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-018.html"
+        },
+        {
+          "id": "primary-031",
+          "url": "https://download.beckhoff.com/download/Document/io/ethercat-box/epp3744en.pdf",
+          "resolvedUrl": "https://download.beckhoff.com/download/Document/io/ethercat-box/epp3744en.pdf",
+          "contentType": "application/pdf",
+          "sha256": "4d0487a4567ccc90e872e2ded9622aaf250f0f0dce6e2de8e16b2ee42b3fc11c",
+          "bytes": 3313594,
+          "observedAt": "2026-10-03T11:12:40.194162+00:00",
+          "sourceLabel": "Beckhoff EPP3744-x041, manuel 1.3",
+          "location": "PDF physique 22, §4.2.2 ; PDF physique 27, §5.1 ; PDF physique 53, Index F80E AI Internal data Reference ; PDF physique 22, §4.2.2 ; physique 27, §5.1 ; Arithmétique de différence, scénario hypothétique",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-031.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-018",
+          "location": "Page fabricant Pressure inputs, paragraphe après Pressure measuring inputs",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-031",
+          "location": "PDF physique 22, §4.2.2",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-031",
+          "location": "PDF physique 27, §5.1",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-031",
+          "location": "PDF physique 53, Index F80E AI Internal data Reference",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-031",
+          "location": "PDF physique 22, §4.2.2 ; physique 27, §5.1",
+          "kind": "document_comparison"
+        },
+        {
+          "sourceId": "primary-031",
+          "location": "Arithmétique de différence, scénario hypothétique",
+          "kind": "calculation"
+        }
+      ]
+    },
+    {
+      "slug": "smc-ise20-filtre-numerique-delai-sortie",
+      "title": "SMC ISE20 : filtre numérique ou délai pour une sortie qui commute",
+      "seoTitle": "SMC ISE20 : filtre numérique ou délai de sortie",
+      "sha256": "e2b57f03a3a579ebb6d9ea0c79623ef263d1b50498b4753a3a29debf21e18779",
+      "wordCount": 563,
+      "claims": [
+        {
+          "sourceId": "primary-004",
+          "assertion": "Le filtre numérique F3 affecte affichage et sortie ; les valeurs sont des indications de réponse à 90 % ; pour la sortie seule, la notice renvoie au délai.",
+          "location": "PDF physique 33 / imprimée 32, F3",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-004",
+          "assertion": "Le filtre lisse les fluctuations à montée ou chute brusque ; le chattering désigne les commutations répétées près du seuil.",
+          "location": "PDF physique 12 / imprimée 11, glossary",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-004",
+          "assertion": "Comparer une trace traitée à une autre mesure exige d’identifier le filtre ; un écran stable ne démontre pas la disparition d’une variation brute.",
+          "location": "Conséquence du traitement décrit dans F3 et glossary",
+          "status": "reviewed_internal_inference",
+          "kind": "inference"
+        }
+      ],
+      "sourceIds": [
+        "primary-004"
+      ],
+      "relatedGuideLinks": [
+        "diagnostiquer-chute-pression-air-comprime",
+        "smc-ise20-sortie-fenetre-inversee",
+        "audit-reseau-air-comprime-protocole-mesures"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "51b10cc0763ae0d82a835f940a47404cdce3bda390c580391ff452bb2d830cfd"
+      ],
+      "value": "Choix entre deux paramètres aux effets différents, avec un critère de réception temporel.",
+      "limitations": [
+        "Aucun temps de réaction machine certifié ; aucune reconstruction de pression brute ou valeur de filtre inventée."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-004",
+          "url": "https://static.smc.eu/binaries/content/assets/smc_global/product-documentation/operation-manuals/en/om_ise-zse20_oms0007en-f.pdf",
+          "resolvedUrl": "https://static.smc.eu/binaries/content/assets/smc_global/product-documentation/operation-manuals/en/om_ise-zse20_oms0007en-f.pdf",
+          "contentType": "application/pdf;charset=UTF-8",
+          "sha256": "243e962ea84cabea7699914c33378bfb8d4da2d0a653151f807857372103f0a3",
+          "bytes": 1680919,
+          "observedAt": "2026-10-03T11:01:51.836079+00:00",
+          "sourceLabel": "https://static.smc.eu/binaries/content/assets/smc_global/product-documentation/operation-manuals/en/om_ise-zse20_oms0007en-f.pdf",
+          "location": "PDF physique 33 / imprimée 32, F3 ; PDF physique 12 / imprimée 11, glossary ; Conséquence du traitement décrit dans F3 et glossary",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-004.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-004",
+          "location": "PDF physique 33 / imprimée 32, F3",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-004",
+          "location": "PDF physique 12 / imprimée 11, glossary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-004",
+          "location": "Conséquence du traitement décrit dans F3 et glossary",
+          "kind": "inference"
+        }
+      ]
+    },
+    {
+      "slug": "smc-ise20-sortie-fenetre-inversee",
+      "title": "SMC ISE20 : pourquoi la sortie fenêtre est ON hors de la plage",
+      "seoTitle": "SMC ISE20 : fenêtre normale ou sortie inversée",
+      "sha256": "c3771d805b42f69f71a7d286b922a6d91a3a53311e8ba065a1a5a35f1613e444",
+      "wordCount": 593,
+      "claims": [
+        {
+          "sourceId": "primary-004",
+          "assertion": "En fenêtre normale, ON entre P1L et P1H ; en fenêtre inversée, ON à l’extérieur de n1L à n1H.",
+          "location": "PDF physique 13–14 / imprimées 12–13, glossary",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-004",
+          "assertion": "F1 sépare mode et style de sortie ; hystérésis et fenêtre ont des réglages et diagrammes propres.",
+          "location": "PDF physique 30–32 / imprimées 29–31, F1 and List of output modes",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-004",
+          "assertion": "Un délai ou un déplacement des seuils ne remplace pas la vérification du style normal ou inversé.",
+          "location": "Déduction logique de deux styles de sortie",
+          "status": "reviewed_internal_inference",
+          "kind": "inference"
+        }
+      ],
+      "sourceIds": [
+        "primary-004"
+      ],
+      "relatedGuideLinks": [
+        "smc-ise20-filtre-numerique-delai-sortie",
+        "bar-psi-pression-absolue-relative",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "9928167db9e798b6d062e16ab0aae20465cec486edff981c6017ffd579bd1acc"
+      ],
+      "value": "Diagnostic d’une inversion de sens, distinct du bruit ou du retard de mesure.",
+      "limitations": [
+        "Diagramme qualitatif hors transitions et hystérésis ; aucune vérification de câblage ou fonction de sécurité effectuée."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-004",
+          "url": "https://static.smc.eu/binaries/content/assets/smc_global/product-documentation/operation-manuals/en/om_ise-zse20_oms0007en-f.pdf",
+          "resolvedUrl": "https://static.smc.eu/binaries/content/assets/smc_global/product-documentation/operation-manuals/en/om_ise-zse20_oms0007en-f.pdf",
+          "contentType": "application/pdf;charset=UTF-8",
+          "sha256": "243e962ea84cabea7699914c33378bfb8d4da2d0a653151f807857372103f0a3",
+          "bytes": 1680919,
+          "observedAt": "2026-10-03T11:01:51.836079+00:00",
+          "sourceLabel": "https://static.smc.eu/binaries/content/assets/smc_global/product-documentation/operation-manuals/en/om_ise-zse20_oms0007en-f.pdf",
+          "location": "PDF physique 13–14 / imprimées 12–13, glossary ; PDF physique 30–32 / imprimées 29–31, F1 and List of output modes ; Déduction logique de deux styles de sortie",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-004.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-004",
+          "location": "PDF physique 13–14 / imprimées 12–13, glossary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-004",
+          "location": "PDF physique 30–32 / imprimées 29–31, F1 and List of output modes",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-004",
+          "location": "Déduction logique de deux styles de sortie",
+          "kind": "inference"
+        }
+      ]
+    },
+    {
+      "slug": "graco-husky1050-fluide-echappement-diaphragme",
+      "title": "Husky 1050 : du fluide à l’échappement peut venir d’une membrane rompue",
+      "seoTitle": "Husky 1050 : fluide à l’échappement et membrane",
+      "sha256": "443ebf376f63dd914d21c1808dc0acef13b8bee86320cd614c0b748c06ef122f",
+      "wordCount": 539,
+      "claims": [
+        {
+          "sourceId": "primary-027",
+          "assertion": "En cas de rupture de membrane, le fluide pompé sort avec l’air ; un récipient est prévu au bout de l’échappement distant.",
+          "location": "PDF physique et imprimée 12, Air Exhaust Ventilation",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-027",
+          "assertion": "Échappement 3/4 npt(f) non restreint ; flexible ID minimal 19 mm, diamètre supérieur si longueur supérieure à 4,57 m ; restrictions excessives pouvant perturber le fonctionnement.",
+          "location": "PDF physique et imprimée 12, Air Exhaust Ventilation",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-027",
+          "assertion": "Décharge de pression documentée avant intervention.",
+          "location": "PDF physique et imprimée 17, Pressure Relief Procedure",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        }
+      ],
+      "sourceIds": [
+        "primary-027"
+      ],
+      "relatedGuideLinks": [
+        "pompe-pneumatique-echappement-givre-air-sec",
+        "pompe-membrane-pneumatique-calee-diagnostic",
+        "silencieux-pneumatique-colmate-contre-pression"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "df908a60c3756b97b47af4e8cc8153652a04f6744bee75d77acbb32bd9d76690"
+      ],
+      "value": "Sépare deux origines de liquide et vérifie un montage d’échappement distant précis.",
+      "limitations": [
+        "Le liquide n’a pas été analysé ; aucune panne de membrane diagnostiquée sur site ni conception de confinement certifiée."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-027",
+          "url": "https://www.graco.com/content/dam/graco/tech_documents/manuals/312/312877/312877EN-ZAG.pdf",
+          "resolvedUrl": "https://www.graco.com/content/dam/graco/tech_documents/manuals/312/312877/312877EN-ZAG.pdf",
+          "contentType": "application/pdf",
+          "sha256": "1d26578fe9992e35549c178a790d3bb7692435e223ee06273983e54e1b710816",
+          "bytes": 1698417,
+          "observedAt": "2026-10-03T11:05:35.507133+00:00",
+          "sourceLabel": "https://www.graco.com/content/dam/graco/tech_documents/manuals/312/312877/312877EN-ZAG.pdf",
+          "location": "PDF physique et imprimée 12, Air Exhaust Ventilation ; PDF physique et imprimée 17, Pressure Relief Procedure",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-027.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-027",
+          "location": "PDF physique et imprimée 12, Air Exhaust Ventilation",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-027",
+          "location": "PDF physique et imprimée 12, Air Exhaust Ventilation",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-027",
+          "location": "PDF physique et imprimée 17, Pressure Relief Procedure",
+          "kind": "documentary_fact"
+        }
+      ]
+    },
+    {
+      "slug": "graco-husky1050-couples-serrage-organe-centre",
+      "title": "Husky 1050 : choisir le couple de serrage selon l’organe et le centre",
+      "seoTitle": "Husky 1050 : couples des vis et ordre de serrage",
+      "sha256": "57de79c87e831729ce42f76518d3be9a3d8e34bfb7b473b3b887e466332dfae1",
+      "wordCount": 601,
+      "claims": [
+        {
+          "sourceId": "primary-027",
+          "assertion": "Couvercles fluide et collecteurs : 10,2 N·m ; distributeur d’air : 6,2 N·m centre plastique ou 9,0 N·m centre métal ; couvercles avant collecteurs.",
+          "location": "PDF physique et imprimée 19, Torque Instructions",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-027",
+          "assertion": "Contrôle et reprise avant première utilisation et après premier jour ; suivi général tous les deux mois à adapter à l’usage et historique.",
+          "location": "PDF physique et imprimées 17–18, Tighten Fasteners / Maintenance",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-027",
+          "assertion": "Pastilles de freinage usées pouvant laisser les fixations se desserrer ; remplacement ou freinage moyen selon notice.",
+          "location": "PDF physique et imprimée 19, Torque Instructions",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        }
+      ],
+      "sourceIds": [
+        "primary-027"
+      ],
+      "relatedGuideLinks": [
+        "fiche-intervention-air-comprime",
+        "graco-husky1050-fluide-echappement-diaphragme",
+        "pompe-membrane-pneumatique-calee-diagnostic"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "837396fdd6d2d387a24739ef3f8b45962b1bfc12697a854bc050d61223061b2c"
+      ],
+      "value": "Empêche d’appliquer un couple unique et préserve ordre, matériau du centre et contrôles de début de service.",
+      "limitations": [
+        "Aucune intervention réelle ni intervalle certifié pour une application donnée."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-027",
+          "url": "https://www.graco.com/content/dam/graco/tech_documents/manuals/312/312877/312877EN-ZAG.pdf",
+          "resolvedUrl": "https://www.graco.com/content/dam/graco/tech_documents/manuals/312/312877/312877EN-ZAG.pdf",
+          "contentType": "application/pdf",
+          "sha256": "1d26578fe9992e35549c178a790d3bb7692435e223ee06273983e54e1b710816",
+          "bytes": 1698417,
+          "observedAt": "2026-10-03T11:05:35.507133+00:00",
+          "sourceLabel": "https://www.graco.com/content/dam/graco/tech_documents/manuals/312/312877/312877EN-ZAG.pdf",
+          "location": "PDF physique et imprimée 19, Torque Instructions ; PDF physique et imprimées 17–18, Tighten Fasteners / Maintenance",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-027.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-027",
+          "location": "PDF physique et imprimée 19, Torque Instructions",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-027",
+          "location": "PDF physique et imprimées 17–18, Tighten Fasteners / Maintenance",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-027",
+          "location": "PDF physique et imprimée 19, Torque Instructions",
+          "kind": "documentary_fact"
+        }
+      ]
+    },
+    {
+      "slug": "smc-asr-asq-retour-pression-effort-verin",
+      "title": "SMC ASR/ASQ : quand réduire la pression de retour du vérin convient",
+      "seoTitle": "SMC ASR/ASQ : effort de retour et pression réduite",
+      "sha256": "9ac6c34597c540661eb8f9f8c9563b7fd9a22adbcfd34813074634ddb4c2c807",
+      "wordCount": 542,
+      "claims": [
+        {
+          "sourceId": "primary-020",
+          "assertion": "Même pression nécessaire sur les deux courses : utilisation exclue ; ASQ côté travail et ASR côté retour ; mauvaise disposition pouvant empêcher le mouvement.",
+          "location": "PDF physique 14 / imprimée 1158, Selection",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-020",
+          "assertion": "Pression ASR de sortie dans 85 % de l’entrée ; au-delà, instabilité possible ; fluctuations de charge exclues et précautions pour charges verticales.",
+          "location": "PDF physique 14 / imprimée 1158, Selection and Operating",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-020",
+          "assertion": "Position centrale pouvant permettre un mouvement jusqu’à équilibre ; centre fermé après établissement de pression en fin de course.",
+          "location": "PDF physique 14 / imprimée 1158, Selection §3 and Operating §3",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-020",
+          "assertion": "Scénario fictif : 0,60 × 0,85 = 0,51 MPa, sans preuve d’effort ni de stabilité amont.",
+          "location": "Calcul propre de la limite publiée",
+          "status": "reviewed_internal_calculation",
+          "kind": "calculation"
+        }
+      ],
+      "sourceIds": [
+        "primary-020"
+      ],
+      "relatedGuideLinks": [
+        "force-verin-pneumatique-diametre-pression",
+        "diagnostiquer-chute-pression-air-comprime",
+        "distributeur-5-3-centre-ferme-verin-derive"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "dc953a56fb8a7bf56e274e1edec86ab1819a1c4326eaf565b85bc5a2418ca3ca"
+      ],
+      "value": "Critères qui éliminent une réduction de retour inadaptée, sans pourcentage d’économie fabriqué.",
+      "limitations": [
+        "Aucun réglage de vérin vertical ou fonction de maintien validé ; aucune économie mesurée."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-020",
+          "url": "https://www.smcworld.com/catalog/en/flowcontrol/ASR-ASQ-E/7-9-3-p1145-1158-ASR-ASQ_en/data/7-9-3-p1145-1158-ASR-ASQ_en.pdf",
+          "resolvedUrl": "https://ca01.smcworld.com/catalog/en/flowcontrol/ASR-ASQ-E/7-9-3-p1145-1158-ASR-ASQ_en/data/7-9-3-p1145-1158-ASR-ASQ_en.pdf",
+          "contentType": "application/pdf",
+          "sha256": "4876859c4ba5ffcb7e22015c757c29e164c488765f97756086bedbaece8f0b1a",
+          "bytes": 5399544,
+          "observedAt": "2026-10-03T11:02:01.648158+00:00",
+          "sourceLabel": "https://www.smcworld.com/catalog/en/flowcontrol/ASR-ASQ-E/7-9-3-p1145-1158-ASR-ASQ_en/data/7-9-3-p1145-1158-ASR-ASQ_en.pdf",
+          "location": "PDF physique 14 / imprimée 1158, Selection ; PDF physique 14 / imprimée 1158, Selection and Operating ; PDF physique 14 / imprimée 1158, Selection §3 and Operating §3 ; Calcul propre de la limite publiée",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-020.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-020",
+          "location": "PDF physique 14 / imprimée 1158, Selection",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-020",
+          "location": "PDF physique 14 / imprimée 1158, Selection and Operating",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-020",
+          "location": "PDF physique 14 / imprimée 1158, Selection §3 and Operating §3",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-020",
+          "location": "Calcul propre de la limite publiée",
+          "kind": "calculation"
+        }
+      ]
+    },
+    {
+      "slug": "smc-itv-coupure-air-alimentation-electrique",
+      "title": "SMC ITV : distinguer coupure d’air et perte d’alimentation électrique",
+      "seoTitle": "SMC ITV : coupure d’air sous tension et arrêt",
+      "sha256": "d89be39824aa52467aa7e3e6dfc4d16164d25fb659523b3716e0546a319d0288",
+      "wordCount": 535,
+      "claims": [
+        {
+          "sourceId": "primary-021",
+          "assertion": "À perte électrique, réglages retenus brièvement ; à perte d’air sous tension, flutter du solénoïde annoncé et coupure électrique prescrite.",
+          "location": "PDF physique 1, §4.1",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-021",
+          "assertion": "Sortie libre pouvant entraîner un écoulement continu ; produit préréglé et démontage utilisateur interdit.",
+          "location": "PDF physique 1, §4.1",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-021",
+          "assertion": "Portée ITV10**, ITV20**, ITV30** ; variantes -X pouvant présenter des caractéristiques différentes.",
+          "location": "PDF physique 1, §2.1 and Warning",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-021",
+          "assertion": "Une conservation de réglages ne prouve ni maintien de pression ni délai de décharge.",
+          "location": "Limite de portée du terme settings au §4.1",
+          "status": "reviewed_internal_inference",
+          "kind": "inference"
+        }
+      ],
+      "sourceIds": [
+        "primary-021"
+      ],
+      "relatedGuideLinks": [
+        "distributeur-5-3-centre-ferme-verin-derive",
+        "utiliser-plusieurs-outils-pneumatiques",
+        "audit-reseau-air-comprime-protocole-mesures"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "fafccfdca32d05a044b73436695b76a4dea084157b9d0d357f9cb9536e1da0f6"
+      ],
+      "value": "Sépare deux événements d’arrêt et empêche une garantie de pression inventée à partir de mémoire de réglage.",
+      "limitations": [
+        "Aucune purge automatique, durée de maintien ou fonction de sécurité qualifiée."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-021",
+          "url": "https://www.smcworld.com/upfiles/etc/international/imm/ITV2-TF2Z205EN.pdf",
+          "resolvedUrl": "https://www.smcworld.com/upfiles/etc/international/imm/ITV2-TF2Z205EN.pdf",
+          "contentType": "application/pdf",
+          "sha256": "ce2b24e0c3f1e77bdb72c4ff727797dc27bd76f06280cc1dd29ee38af88a15d0",
+          "bytes": 645650,
+          "observedAt": "2026-10-03T11:01:59.524467+00:00",
+          "sourceLabel": "https://www.smcworld.com/upfiles/etc/international/imm/ITV2-TF2Z205EN.pdf",
+          "location": "PDF physique 1, §4.1 ; PDF physique 1, §2.1 and Warning ; Limite de portée du terme settings au §4.1",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-021.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-021",
+          "location": "PDF physique 1, §4.1",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-021",
+          "location": "PDF physique 1, §4.1",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-021",
+          "location": "PDF physique 1, §2.1 and Warning",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-021",
+          "location": "Limite de portée du terme settings au §4.1",
+          "kind": "inference"
+        }
+      ]
+    },
+    {
+      "slug": "smc-izn10e-alarme-maintenance-buse-etroite",
+      "title": "SMC IZN10E : une buse restrictive peut déclencher l’alarme de maintenance",
+      "seoTitle": "SMC IZN10E : alarme NDL après changement de buse",
+      "sha256": "22f3f06b0a1f673b1c2a80882aeab04693cddce4b0f74333e1b50af34fcf9852",
+      "wordCount": 539,
+      "claims": [
+        {
+          "sourceId": "primary-022",
+          "assertion": "Version IZN10E-11□□□-□ Rc1/8 : sortie ou ID inférieur à 4 mm pouvant augmenter pression autour de l’émetteur selon configuration, réduire génération et provoquer maintenance.",
+          "location": "PDF physique 3, Cautions for female threads for piping",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-022",
+          "assertion": "Maintenance warning : contamination, usure ou dommage ; fonctionnement continue mais neutralisation basse lors de l’alarme.",
+          "location": "PDF physique 3, §3.5.2 item 5 and nozzle caution",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-022",
+          "assertion": "Nettoyage ou remplacement sans alimentation électrique ni air ; maintenance par opérateur compétent.",
+          "location": "PDF physique 3, §6.1–6.2",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        }
+      ],
+      "sourceIds": [
+        "primary-022"
+      ],
+      "relatedGuideLinks": [
+        "ioniseur-air-comprime-debit-neutralisation-electrostatique",
+        "audit-reseau-air-comprime-protocole-mesures",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "7f64c7b5a2084170f5ebe197e715dcefbb1dbec4e2a2790f73aae75fe3c174fd"
+      ],
+      "value": "Diagnostic propre à une buse ajoutée, avec portée de variante et contrôle électrostatique distinct du souffle.",
+      "limitations": [
+        "Aucune performance de neutralisation mesurée ; aucun montage de buse validé."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-022",
+          "url": "https://www.smcworld.com/upfiles/etc/international/imm/IZN10E-TF2Z269EN.pdf",
+          "resolvedUrl": "https://www.smcworld.com/upfiles/etc/international/imm/IZN10E-TF2Z269EN.pdf",
+          "contentType": "application/pdf",
+          "sha256": "f0b5b99e5160a60f9bb6e85c1c0a6809dc5db68df803467f546132853334e742",
+          "bytes": 1248174,
+          "observedAt": "2026-10-03T11:02:00.077973+00:00",
+          "sourceLabel": "https://www.smcworld.com/upfiles/etc/international/imm/IZN10E-TF2Z269EN.pdf",
+          "location": "PDF physique 3, Cautions for female threads for piping ; PDF physique 3, §3.5.2 item 5 and nozzle caution ; PDF physique 3, §6.1–6.2",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-022.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-022",
+          "location": "PDF physique 3, Cautions for female threads for piping",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-022",
+          "location": "PDF physique 3, §3.5.2 item 5 and nozzle caution",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-022",
+          "location": "PDF physique 3, §6.1–6.2",
+          "kind": "documentary_fact"
+        }
+      ]
+    },
+    {
+      "slug": "karcher-ib15-120-air-glace-puissance-electrique",
+      "title": "Kärcher IB 15/120 : séparer besoin d’air, glace et puissance électrique",
+      "seoTitle": "Kärcher IB 15/120 : air, glace et puissance raccordée",
+      "sha256": "a27f1ce8a7ca97898f65b93a60ba7d83b7497ddcb553690a6c630d9d5a3e7eda",
+      "wordCount": 562,
+      "claims": [
+        {
+          "sourceId": "primary-016",
+          "assertion": "IB 15/120 1.574-104.0 : puissance raccordée 0,6 kW ; air 2–16 bar et 2–12 m³/min, sec sans huile ; glace 30–120 kg/h.",
+          "location": "Page fabricant Technical data",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-016",
+          "assertion": "Capacité de glace 40 kg et pellets de diamètre 3 mm.",
+          "location": "Page fabricant Technical data",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-016",
+          "assertion": "Scénarios théoriques : 40/30 ≈ 1,33 h et 40/120 ≈ 0,33 h, sans perte, tout stock utilisable et consommation constante.",
+          "location": "Division explicite sous hypothèses propres",
+          "status": "reviewed_internal_calculation",
+          "kind": "calculation"
+        },
+        {
+          "sourceId": "primary-016",
+          "assertion": "La table de plages ne prouve pas une association arbitraire du débit minimal et de la pression maximale ; les 0,6 kW ne qualifient pas la production d’air externe.",
+          "location": "Limite de portée des lignes séparées Technical data",
+          "status": "reviewed_internal_inference",
+          "kind": "inference"
+        }
+      ],
+      "sourceIds": [
+        "primary-016"
+      ],
+      "relatedGuideLinks": [
+        "debit-restitue-fad-vs-debit-aspire",
+        "diagnostiquer-chute-pression-air-comprime",
+        "compresseur-nettoyage-cryogenique-karcher-ib10-8-l2p"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "583662b94556d84e71c6bc0a1bb8633f61ff6aaede36ecbc718f11053c574f5c"
+      ],
+      "value": "Préparation de chantier séparant les trois besoins et empêchant un point pression/débit fabriqué.",
+      "limitations": [
+        "Plages fabricant sans courbe associée ; aucune autonomie, qualité d’air ou compatibilité compresseur réelle certifiée."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-016",
+          "url": "https://www.kaercher.com/nz/professional/dry-ice-cleaning/ib-15-120-15741040.html",
+          "resolvedUrl": "https://www.kaercher.com/nz/professional/dry-ice-cleaning/ib-15-120-15741040.html",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "79a3d7327727c425331473e639636fff0150d68dfb11809141d3fc2eb122003c",
+          "bytes": 130970,
+          "observedAt": "2026-10-03T11:01:55.150615+00:00",
+          "sourceLabel": "https://www.kaercher.com/nz/professional/dry-ice-cleaning/ib-15-120-15741040.html",
+          "location": "Page fabricant Technical data ; Division explicite sous hypothèses propres ; Limite de portée des lignes séparées Technical data",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-016.html"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-016",
+          "location": "Page fabricant Technical data",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-016",
+          "location": "Page fabricant Technical data",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-016",
+          "location": "Division explicite sous hypothèses propres",
+          "kind": "calculation"
+        },
+        {
+          "sourceId": "primary-016",
+          "location": "Limite de portée des lignes séparées Technical data",
+          "kind": "inference"
+        }
+      ]
+    },
+    {
+      "slug": "nordson-ultimus-v-vide-antigoutte-bulles-depot",
+      "title": "Ultimus V : un vide antigoutte excessif peut reprendre le dépôt et créer des bulles",
+      "seoTitle": "Ultimus V : vide excessif, dépôt repris et bulles",
+      "sha256": "b60cc475a1071b1a6ac34d98a806289a8f93148a7f92d3f8627045981dfb5bae",
+      "wordCount": 574,
+      "claims": [
+        {
+          "sourceId": "primary-010",
+          "assertion": "Le vide s’oppose à la pression de hauteur du fluide ; réglage vers dépôt stable ; vide excessif pouvant reprendre le dépôt dans la pointe ou créer des bulles et dosage irrégulier.",
+          "location": "PDF physique et imprimée 18, Using the Vacuum Control Feature",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-010",
+          "assertion": "Réglage documenté sur une surface d’essai ; pression de production rétablie après établissement du vide.",
+          "location": "PDF physique et imprimée 18, steps 4–10",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-010",
+          "assertion": "Compenser par une durée accrue pourrait masquer une reprise du dépôt ; comparer aux mêmes instants et conditions.",
+          "location": "Proposition de diagnostic déduite du mécanisme décrit, sans essai",
+          "status": "reviewed_internal_inference",
+          "kind": "inference"
+        }
+      ],
+      "sourceIds": [
+        "primary-010"
+      ],
+      "relatedGuideLinks": [
+        "nordson-ultimus-v-auto-increment-count-time-sequence",
+        "nordson-ultimus-v-optimeter-vidage-seringue",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "7b61d0d4bcf7e3a4daf263e009a2eb0147be79ee45ca218f349e180a03396123"
+      ],
+      "value": "Diagnostic fondé sur l’évolution du dépôt entre tirs, distinct du volume d’air ou de la recette.",
+      "limitations": [
+        "Aucun vide universel, quantité ou répétabilité mesurés ; aucune remontée à l’adaptateur attribuée sans source."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-010",
+          "url": "https://nc-p-001.sitecorecontenthub.cloud/api/public/content/ad6ce7f8a8c34b72bd5295efa895fc74",
+          "resolvedUrl": "https://nc-p-001.sitecorecontenthub.cloud/api/public/content/ad6ce7f8a8c34b72bd5295efa895fc74",
+          "contentType": "application/pdf",
+          "sha256": "411a78d0413dfcdc281b8dee148318f103941acd1ae108a4ca3f57315836db38",
+          "bytes": 5757076,
+          "observedAt": "2026-10-03T11:01:54.123529+00:00",
+          "sourceLabel": "https://nc-p-001.sitecorecontenthub.cloud/api/public/content/ad6ce7f8a8c34b72bd5295efa895fc74",
+          "location": "PDF physique et imprimée 18, Using the Vacuum Control Feature ; PDF physique et imprimée 18, steps 4–10 ; Proposition de diagnostic déduite du mécanisme décrit, sans essai",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-010.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-010",
+          "location": "PDF physique et imprimée 18, Using the Vacuum Control Feature",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-010",
+          "location": "PDF physique et imprimée 18, steps 4–10",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-010",
+          "location": "Proposition de diagnostic déduite du mécanisme décrit, sans essai",
+          "kind": "inference"
+        }
+      ]
+    },
+    {
+      "slug": "nordson-ultimus-v-auto-increment-count-time-sequence",
+      "title": "Ultimus V : distinguer Count, Time et la boucle Auto Sequence",
+      "seoTitle": "Ultimus V : Count, Time et retour Auto Sequence",
+      "sha256": "6326dd4dd48318a5d1c324e84dc649f4ae772e7164c70cddd7b821f3682c7b19",
+      "wordCount": 558,
+      "claims": [
+        {
+          "sourceId": "primary-010",
+          "assertion": "400 cellules ; modes Off, Count, Time, Sequence ; Trigger propre à chaque cellule.",
+          "location": "PDF physique et imprimée 29, Using Auto Increment Mode",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-010",
+          "assertion": "Count : Trigger 1 à 99 999 cycles ; Time : 1 à 99 999 secondes ; compteurs de cellule remis à zéro au changement.",
+          "location": "PDF physique et imprimée 30, Count / Time",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-010",
+          "assertion": "Sequence revient au Start après le Trigger du End et continue ; alarme Auto Increment non déclenchée dans ce mode.",
+          "location": "PDF physique et imprimée 30, Auto Sequence",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-010",
+          "assertion": "Le critère de passage décrit est temps ou nombre, pas une mesure de dose ; la compensation programmée demande vérification de procédé.",
+          "location": "Limite de portée des modes décrits pages 29–30",
+          "status": "reviewed_internal_inference",
+          "kind": "inference"
+        }
+      ],
+      "sourceIds": [
+        "primary-010"
+      ],
+      "relatedGuideLinks": [
+        "diagnostiquer-chute-pression-air-comprime",
+        "nordson-ultimus-v-vide-antigoutte-bulles-depot",
+        "nordson-ultimus-v-optimeter-vidage-seringue"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "7ff8e46bd0afc249cffe8130c19330d993601c68b43c6e76f95f52c6bceaed8c"
+      ],
+      "value": "Lecture des unités et du comportement de fin de recette, sans assimiler programmation à mesure de dose.",
+      "limitations": [
+        "Aucune dose, viscosité ou progression réelle qualifiée ; aucun comportement de pause extrapolé."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-010",
+          "url": "https://nc-p-001.sitecorecontenthub.cloud/api/public/content/ad6ce7f8a8c34b72bd5295efa895fc74",
+          "resolvedUrl": "https://nc-p-001.sitecorecontenthub.cloud/api/public/content/ad6ce7f8a8c34b72bd5295efa895fc74",
+          "contentType": "application/pdf",
+          "sha256": "411a78d0413dfcdc281b8dee148318f103941acd1ae108a4ca3f57315836db38",
+          "bytes": 5757076,
+          "observedAt": "2026-10-03T11:01:54.123529+00:00",
+          "sourceLabel": "https://nc-p-001.sitecorecontenthub.cloud/api/public/content/ad6ce7f8a8c34b72bd5295efa895fc74",
+          "location": "PDF physique et imprimée 29, Using Auto Increment Mode ; PDF physique et imprimée 30, Count / Time ; PDF physique et imprimée 30, Auto Sequence ; Limite de portée des modes décrits pages 29–30",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-010.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-010",
+          "location": "PDF physique et imprimée 29, Using Auto Increment Mode",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-010",
+          "location": "PDF physique et imprimée 30, Count / Time",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-010",
+          "location": "PDF physique et imprimée 30, Auto Sequence",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-010",
+          "location": "Limite de portée des modes décrits pages 29–30",
+          "kind": "inference"
+        }
+      ]
+    },
+    {
+      "slug": "nordson-ultimus-v-optimeter-vidage-seringue",
+      "title": "Ultimus V Optimeter : vérifier le dosage du début à la fin de seringue",
+      "seoTitle": "Ultimus V Optimeter : compensation du vidage de seringue",
+      "sha256": "6ca70e20f4bad8a8a4d195d156a6971f2846f1be85e56a60b39eaf5d2abc2e7b",
+      "wordCount": 548,
+      "claims": [
+        {
+          "sourceId": "primary-035",
+          "assertion": "Optimeter décrit comme régulation mécanique de pression et volume d’air pendant le mouvement du piston ; débit augmenté au vidage pour compensation début à fin, selon fabricant.",
+          "location": "Page produit The Optimeter Advantage ; extraction web ligne 419",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-010",
+          "assertion": "Le manuel liste les références d’Optimeter et accessoires.",
+          "location": "PDF physique et imprimée 34, Replacement Parts / Accessories",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-035",
+          "assertion": "Comparaison proposée début, milieu et fin avec paramètres, conditions du fluide et mesure identiques ; distinguer niveau et temps avant attribution d’une dérive.",
+          "location": "Protocole propre fondé sur le périmètre de compensation, sans essai",
+          "status": "reviewed_internal_inference",
+          "kind": "inference"
+        }
+      ],
+      "sourceIds": [
+        "primary-035",
+        "primary-010"
+      ],
+      "relatedGuideLinks": [
+        "nordson-ultimus-v-auto-increment-count-time-sequence",
+        "nordson-ultimus-v-vide-antigoutte-bulles-depot",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "73367a1bf4a222a1bf349af2b3bb563948eee6811e49ff7973ddf1ced4965e71"
+      ],
+      "value": "Réception sur le vidage et distinction mécanique/recette/antigoutte, avec annonce fabricant calibrée.",
+      "limitations": [
+        "Aucun résultat de précision ou économie mesuré ; compatibilité d’accessoire à confirmer sur références exactes."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-035",
+          "url": "https://www.nordson.com/en/products/efd-products/ultimus-v-dispensers",
+          "resolvedUrl": "https://www.nordson.com/en/products/efd-products/ultimus-v-dispensers",
+          "contentType": "application/json",
+          "sha256": "0f04385953a8de8a18a18fc61aa71dc5e798d2732a22bf77e09c6aa1f3e529fc",
+          "bytes": 27222,
+          "observedAt": "2026-10-03T11:46:38.930Z",
+          "sourceLabel": "https://www.nordson.com/en/products/efd-products/ultimus-v-dispensers",
+          "location": "Page produit The Optimeter Advantage ; extraction web ligne 419 ; Protocole propre fondé sur le périmètre de compensation, sans essai",
+          "captureKind": "manufacturer_content_via_web_tool_extraction",
+          "privateCaptureFile": "sources/primary-035-web.json",
+          "transportCapture": {
+            "sha256": null,
+            "bytes": null,
+            "file": null,
+            "substantiveContent": false,
+            "reason": "Direct transport is unavailable or a JavaScript loading shell; excluded from assertion proof.",
+            "error": "HTTPError: HTTP Error 403: Forbidden"
+          }
+        },
+        {
+          "id": "primary-010",
+          "url": "https://nc-p-001.sitecorecontenthub.cloud/api/public/content/ad6ce7f8a8c34b72bd5295efa895fc74",
+          "resolvedUrl": "https://nc-p-001.sitecorecontenthub.cloud/api/public/content/ad6ce7f8a8c34b72bd5295efa895fc74",
+          "contentType": "application/pdf",
+          "sha256": "411a78d0413dfcdc281b8dee148318f103941acd1ae108a4ca3f57315836db38",
+          "bytes": 5757076,
+          "observedAt": "2026-10-03T11:01:54.123529+00:00",
+          "sourceLabel": "https://nc-p-001.sitecorecontenthub.cloud/api/public/content/ad6ce7f8a8c34b72bd5295efa895fc74",
+          "location": "PDF physique et imprimée 34, Replacement Parts / Accessories",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-010.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-035",
+          "location": "Page produit The Optimeter Advantage ; extraction web ligne 419",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-010",
+          "location": "PDF physique et imprimée 34, Replacement Parts / Accessories",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-035",
+          "location": "Protocole propre fondé sur le périmètre de compensation, sans essai",
+          "kind": "inference"
+        }
+      ]
+    },
+    {
+      "slug": "mirka-pros-vibrations-interface-aspiration",
+      "title": "Mirka PROS : vibrations après ajout d’une interface ou changement d’aspiration",
+      "seoTitle": "Mirka PROS : vibration, interface et aspiration",
+      "sha256": "7b287baccea3dc4f1a588a754f06bc444e356f5660c5f3ad6f82802590ca8c96",
+      "wordCount": 649,
+      "claims": [
+        {
+          "sourceId": "primary-032",
+          "assertion": "L’interface ou le protecteur peut accroître les vibrations ; le manuel prévoit un équilibrage propre à la configuration.",
+          "location": "PDF physique 60–61, Reducing vibration when sanding",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-032",
+          "assertion": "Un vide excessif sur une surface plane peut accroître les vibrations ; le dépannage demande de réduire le vide de l’aspiration.",
+          "location": "PDF physique 62, Troubleshooting guide",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-032",
+          "assertion": "6,2 bar mesurés à l’outil pendant le fonctionnement, levier entièrement actionné ; ne pas dépasser 6,2 bar.",
+          "location": "PDF physique 59, Operating instructions",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-032",
+          "assertion": "Plateaux ou interfaces inadéquats, plateaux endommagés et roulements usés sont des causes possibles ; entretien réservé au personnel formé et service agréé.",
+          "location": "PDF physique 62, Troubleshooting / Further service",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        }
+      ],
+      "sourceIds": [
+        "primary-032"
+      ],
+      "relatedGuideLinks": [
+        "ponceuse-orbitale-2-5-5-8-mm-choisir",
+        "ponceuse-aspiration-autonome-centralisee",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/ponceuse-orbitale-mirka-pros-680cv-mrp-680cv/"
+      ],
+      "svgSha256": [
+        "5792c4ce1f52c2101a62c850220946fc4ef2e05ff0392e0f3650a3eba345d32f"
+      ],
+      "value": "Procédure propre au changement plateau/interface avec effet du vide et limite de pression réellement mesurée.",
+      "limitations": [
+        "Aucune masse ou configuration d’équilibrage déduite du texte ; aucune vibration mesurée sur site."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-032",
+          "url": "https://cdn.brandfolder.io/FSMPOV8D/at/kjgv7qphx8k7nvmp65vn6mf4/Mirka_PROS_150_125mm.pdf",
+          "resolvedUrl": "https://cdn.brandfolder.io/FSMPOV8D/at/kjgv7qphx8k7nvmp65vn6mf4/Mirka_PROS_150_125mm.pdf",
+          "contentType": "application/pdf",
+          "sha256": "88dbef4424cb78d50287f55502eecb98488b64627683c1ac824dff7bbd2875bd",
+          "bytes": 5299272,
+          "observedAt": "2026-10-03T11:12:40.766636+00:00",
+          "sourceLabel": "https://cdn.brandfolder.io/FSMPOV8D/at/kjgv7qphx8k7nvmp65vn6mf4/Mirka_PROS_150_125mm.pdf",
+          "location": "PDF physique 60–61, Reducing vibration when sanding ; PDF physique 62, Troubleshooting guide ; PDF physique 59, Operating instructions ; PDF physique 62, Troubleshooting / Further service",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-032.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-032",
+          "location": "PDF physique 60–61, Reducing vibration when sanding",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-032",
+          "location": "PDF physique 62, Troubleshooting guide",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-032",
+          "location": "PDF physique 59, Operating instructions",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-032",
+          "location": "PDF physique 62, Troubleshooting / Further service",
+          "kind": "documentary_fact"
+        }
+      ],
+      "reviewedDraftSha256": "7086acd56360c9632d8a432b8f73cdad08daa0939019ab16f84e91d406aa4422"
+    },
+    {
+      "slug": "netter-nts-frequence-amplitude-etranglement",
+      "title": "Netter NTS : régler fréquence et amplitude avec deux commandes",
+      "seoTitle": "Netter NTS : fréquence, amplitude et échappement",
+      "sha256": "ec46bf16078d1d2a4ae00eba868cc16555f6774356b9b7b3d3786c21c7d3e97f",
+      "wordCount": 587,
+      "claims": [
+        {
+          "sourceId": "primary-014",
+          "assertion": "Une baisse de pression réduit fréquence et force avec amplitude presque constante ; l’étranglement d’échappement réduit amplitude et force avec fréquence presque constante.",
+          "location": "PDF physique 17 / imprimée anglaise 8, §7",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-014",
+          "assertion": "Réduction d’amplitude jusqu’à environ 50 % ; une réduction supérieure peut provoquer des défauts de démarrage.",
+          "location": "PDF physique 17 / imprimée anglaise 8, §7",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-014",
+          "assertion": "Diamètres nominaux publiés pour des flexibles jusqu’à 3 m ; alimentation plus longue nécessitant des sections supérieures ; diamètre d’échappement supérieur à l’alimentation pour la pleine performance.",
+          "location": "PDF physique 16 / imprimée anglaise 7, §6",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        }
+      ],
+      "sourceIds": [
+        "primary-014"
+      ],
+      "relatedGuideLinks": [
+        "vibreur-pneumatique-tremie-debit-compresseur",
+        "silencieux-pneumatique-colmate-contre-pression",
+        "netter-nts-redemarrage-arret-court"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "221362d365204bb4aae8ba824a6335567d1cf4844f816c075f1ab0b988c77f9e"
+      ],
+      "value": "Sépare deux réglages et détecte un étranglement involontaire lors d’une modification de flexible.",
+      "limitations": [
+        "Description qualitative ; aucune fréquence, amplitude ou économie mesurées."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-014",
+          "url": "https://www.nettervibration.com/files/NetterVibration/Products/NTS/Documents/KBA-NTS-1895DE_EN.pdf",
+          "resolvedUrl": "https://www.nettervibration.com/files/NetterVibration/Products/NTS/Documents/KBA-NTS-1895DE_EN.pdf",
+          "contentType": "application/pdf",
+          "sha256": "09b86e66d08c71366cbdd174b38f5e97f985b4327dd9f07edf9cdc42558f0566",
+          "bytes": 617655,
+          "observedAt": "2026-10-03T11:01:54.407327+00:00",
+          "sourceLabel": "https://www.nettervibration.com/files/NetterVibration/Products/NTS/Documents/KBA-NTS-1895DE_EN.pdf",
+          "location": "PDF physique 17 / imprimée anglaise 8, §7 ; PDF physique 16 / imprimée anglaise 7, §6",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-014.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-014",
+          "location": "PDF physique 17 / imprimée anglaise 8, §7",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-014",
+          "location": "PDF physique 17 / imprimée anglaise 8, §7",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-014",
+          "location": "PDF physique 16 / imprimée anglaise 7, §6",
+          "kind": "documentary_fact"
+        }
+      ],
+      "reviewedDraftSha256": "ef8c4f01ea8d2623b7693395ffda2b616aaa60661d4c057d3cb661eb13f71ef0"
+    },
+    {
+      "slug": "netter-nts-redemarrage-arret-court",
+      "title": "Netter NTS : redémarrage manqué après un arrêt très court",
+      "seoTitle": "Netter NTS : pourquoi un arrêt bref bloque le départ",
+      "sha256": "c8080bec9e5cb336de3ce508b94e2fe055f289a65bef951285ee4e76ae0f3b17",
+      "wordCount": 647,
+      "claims": [
+        {
+          "sourceId": "primary-014",
+          "assertion": "Un arrêt inférieur à une seconde peut empêcher le redémarrage immédiat ; retour du piston par ressort en version 1 et gravité en version 2.",
+          "location": "PDF physique 17 / imprimée anglaise 8, Stop-intervals",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-014",
+          "assertion": "À une ambiance inférieure ou égale à 10 °C, une pression de démarrage supérieure peut être nécessaire.",
+          "location": "PDF physique 16 / imprimée anglaise 7, Starting pressure at low temperatures",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-014",
+          "assertion": "Montage, maintenance et dépannage réservés au personnel qualifié et autorisé.",
+          "location": "PDF physique 12 / imprimée anglaise 3, Safety",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        }
+      ],
+      "sourceIds": [
+        "primary-014"
+      ],
+      "relatedGuideLinks": [
+        "netter-nts-frequence-amplitude-etranglement",
+        "silencieux-pneumatique-colmate-contre-pression",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "0afea40a887477ca4ea97700f0302cfb4215dbb55f593cb4e64f6d6791019fff"
+      ],
+      "value": "Diagnostic conditionnel sur la chronologie de retour, distinct du réglage de fréquence.",
+      "limitations": [
+        "Le manuel ne certifie pas un délai minimum universel ; aucune séquence de commande mise en service."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-014",
+          "url": "https://www.nettervibration.com/files/NetterVibration/Products/NTS/Documents/KBA-NTS-1895DE_EN.pdf",
+          "resolvedUrl": "https://www.nettervibration.com/files/NetterVibration/Products/NTS/Documents/KBA-NTS-1895DE_EN.pdf",
+          "contentType": "application/pdf",
+          "sha256": "09b86e66d08c71366cbdd174b38f5e97f985b4327dd9f07edf9cdc42558f0566",
+          "bytes": 617655,
+          "observedAt": "2026-10-03T11:01:54.407327+00:00",
+          "sourceLabel": "https://www.nettervibration.com/files/NetterVibration/Products/NTS/Documents/KBA-NTS-1895DE_EN.pdf",
+          "location": "PDF physique 17 / imprimée anglaise 8, Stop-intervals ; PDF physique 16 / imprimée anglaise 7, Starting pressure at low temperatures ; PDF physique 12 / imprimée anglaise 3, Safety",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-014.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-014",
+          "location": "PDF physique 17 / imprimée anglaise 8, Stop-intervals",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-014",
+          "location": "PDF physique 16 / imprimée anglaise 7, Starting pressure at low temperatures",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-014",
+          "location": "PDF physique 12 / imprimée anglaise 3, Safety",
+          "kind": "documentary_fact"
+        }
+      ]
+    },
+    {
+      "slug": "far-kj60-course-courte-circuit-hydraulique",
+      "title": "FAR KJ60 : distinguer course réglée, alimentation et entretien hydraulique",
+      "seoTitle": "FAR KJ60 : perte de sertissage, course et huile",
+      "sha256": "3c15106ddf4931d3d7b1d115fd03c522237834bebf511f5c2b31450f4e6a308f",
+      "wordCount": 704,
+      "claims": [
+        {
+          "sourceId": "primary-007",
+          "assertion": "Pression de travail 6 bar ; course selon taille et épaisseur ; mauvais réglage pouvant produire mauvais serrage ou rupture du mandrin.",
+          "location": "PDF physique 12–13",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-007",
+          "assertion": "Complément hydraulique après usage prolongé, annoncé à 15 000 cycles, lorsqu’une perte de puissance est constatée ; huile HLP32 cSt ou équivalent.",
+          "location": "PDF physique 15, Topping up the oil-dynamic circuit",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-007",
+          "assertion": "Maintenance et réparation par centres FAR agréés ; traitement d’air page 12 distinct du circuit hydraulique page 15.",
+          "location": "PDF physique 11, Safety requirements ;12Air feed ;15hydraulic procedure",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        }
+      ],
+      "sourceIds": [
+        "primary-007"
+      ],
+      "relatedGuideLinks": [
+        "far-kj60-m8-inox-capacite-matiere",
+        "groupe-frl-filtre-regulateur-lubrificateur",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/riveteuse-far-kj60/"
+      ],
+      "svgSha256": [
+        "e4ec2856aa5bd09cdbf575869b9d948c6420e2ddab864ab94274aa84b81243e4"
+      ],
+      "value": "Arbre de diagnostic spécifique séparant fixation/course, pression et circuit hydraulique.",
+      "limitations": [
+        "15 000 cycles n’est pas un diagnostic automatique ; aucune procédure de remplissage remplaçant la notice."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-007",
+          "url": "https://www.far.bo.it/en/download/use-and-maintenance-manual/category/3-riveting-tools-for-blind-rivet-nuts.html?download=35%3Akj60",
+          "resolvedUrl": "https://www.far.bo.it/en/download/use-and-maintenance-manual/category/3-riveting-tools-for-blind-rivet-nuts.html?download=35%3Akj60",
+          "contentType": "application/pdf",
+          "sha256": "27472efae97e555344f5f025c6dfe2364b82074dd983b89296c2f49ea9d01ea5",
+          "bytes": 3373533,
+          "observedAt": "2026-10-03T11:01:53.826366+00:00",
+          "sourceLabel": "FAR KJ60, notice 750313 révision 24 (09-2022)",
+          "location": "PDF physique 12–13 ; PDF physique 15, Topping up the oil-dynamic circuit ; PDF physique 11, Safety requirements ;12Air feed ;15hydraulic procedure",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-007.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-007",
+          "location": "PDF physique 12–13",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-007",
+          "location": "PDF physique 15, Topping up the oil-dynamic circuit",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-007",
+          "location": "PDF physique 11, Safety requirements ;12Air feed ;15hydraulic procedure",
+          "kind": "documentary_fact"
+        }
+      ],
+      "reviewedDraftSha256": "66fa7e982cf8f0cfddcdf66b44591f30617370b4452e1b2f85721a4634288194"
+    },
+    {
+      "slug": "smc-vba-budget-air-moteur-volume-sortie",
+      "title": "SMC VBA : compter l’air d’entraînement en plus du volume utile",
+      "seoTitle": "SMC VBA : consommation moteur et besoin d’air amont",
+      "sha256": "2ffdc609e2195d234eca45882eaf7720ba04ab69f124b348b617f191eb828878",
+      "wordCount": 567,
+      "claims": [
+        {
+          "sourceId": "primary-013",
+          "assertion": "Au rapport 2, consommation propre environ 1,2 fois le volume aval et besoin amont environ 2,2 fois ; au rapport 4, environ 3,7 et 4,7 fois.",
+          "location": "PDF physique 8 / imprimée 1014, Sizing and Caution",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-013",
+          "assertion": "Sélection sur débit moyen et examen du stockage sur débit instantané ; exemple fabricant 146 et 877 L/min (ANR).",
+          "location": "PDF physique 8 / imprimée 1014, Selection example",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-013",
+          "assertion": "Exemple fictif à 100 unités aval : moteur 120, total 220 au rapport 2 ; moteur 370, total 470 au rapport 4, approximativement.",
+          "location": "Application arithmétique des coefficients publiés",
+          "status": "reviewed_internal_calculation",
+          "kind": "calculation"
+        }
+      ],
+      "sourceIds": [
+        "primary-013"
+      ],
+      "relatedGuideLinks": [
+        "utiliser-plusieurs-outils-pneumatiques",
+        "convertir-cfm-l-min-nl-min-air-comprime",
+        "smc-vba-redemarrage-ecart-pression"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "2cf005fdbd5b158e3a7051582596a91d427a398c24f22a4c071ffeb5e43eff03"
+      ],
+      "value": "Sépare deux coefficients souvent confondus et vérifie la pointe indépendamment de la moyenne.",
+      "limitations": [
+        "Aucune assimilation de volumes sous pression à de l’air libre ; aucun VBA ni réservoir dimensionné pour une application réelle."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-013",
+          "url": "https://www.smcworld.com/catalog/en/frl/VBA-E/6-6-p1007-1038-vba_en/data/6-6-p1007-1038-vba_en.pdf",
+          "resolvedUrl": "https://ca01.smcworld.com/catalog/en/frl/VBA-E/6-6-p1007-1038-vba_en/data/6-6-p1007-1038-vba_en.pdf",
+          "contentType": "application/pdf",
+          "sha256": "53885fc45d06bece3c303cef7c0996950357433c015020208259c6b2c88a0dfe",
+          "bytes": 7449058,
+          "observedAt": "2026-10-03T11:01:58.667689+00:00",
+          "sourceLabel": "https://www.smcworld.com/catalog/en/frl/VBA-E/6-6-p1007-1038-vba_en/data/6-6-p1007-1038-vba_en.pdf",
+          "location": "PDF physique 8 / imprimée 1014, Sizing and Caution ; PDF physique 8 / imprimée 1014, Selection example ; Application arithmétique des coefficients publiés",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-013.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-013",
+          "location": "PDF physique 8 / imprimée 1014, Sizing and Caution",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-013",
+          "location": "PDF physique 8 / imprimée 1014, Selection example",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-013",
+          "location": "Application arithmétique des coefficients publiés",
+          "kind": "calculation"
+        }
+      ]
+    },
+    {
+      "slug": "smc-vba-redemarrage-ecart-pression",
+      "title": "SMC VBA : un faible écart de pression peut empêcher le redémarrage",
+      "seoTitle": "SMC VBA : redémarrage et faible écart de pression",
+      "sha256": "e16c7a9b4200a3db847cadc0f4df7263cc3ab09dac1f51eba2a4f9d5c0bd840f",
+      "wordCount": 581,
+      "claims": [
+        {
+          "sourceId": "primary-013",
+          "assertion": "Pour les modèles au rapport 2 nommés, sortie au moins 0,1 MPa au-dessus de l’entrée mais risque annoncé si écart 0,1 MPa ou moins ; pour VBA11A, rapport 2 ou plus demandé mais risque à 2 ou moins.",
+          "location": "PDF physique 12 / imprimée 1016, Selection §2",
+          "status": "reviewed_documentary",
+          "kind": "document_comparison"
+        },
+        {
+          "sourceId": "primary-013",
+          "assertion": "Une pression interne insuffisante peut laisser la valve intermédiaire et provoquer le défaut de redémarrage ; évacuation cyclique et pression aval résiduelle sont traitées séparément.",
+          "location": "PDF physique 12 / imprimée 1016, Selection §2 and Design §2",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-013",
+          "assertion": "Scénario fictif : 0,65 − 0,60 = 0,05 MPa, inférieur à la frontière documentaire.",
+          "location": "Calcul propre hors égalité ambiguë",
+          "status": "reviewed_internal_calculation",
+          "kind": "calculation"
+        }
+      ],
+      "sourceIds": [
+        "primary-013"
+      ],
+      "relatedGuideLinks": [
+        "smc-vba-budget-air-moteur-volume-sortie",
+        "diagnostiquer-chute-pression-air-comprime",
+        "distributeur-5-3-centre-ferme-verin-derive"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "313ec4e594cbeb2529d34cc52d8363c9ea49fbf6ab18f64fbd4c7a7483e2c6f0"
+      ],
+      "value": "Mécanisme de commutation et contradiction de frontière explicites, distincts du dimensionnement en air.",
+      "limitations": [
+        "Aucune correction automatique de la frontière ; aucune séquence de remise en marche qualifiée."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-013",
+          "url": "https://www.smcworld.com/catalog/en/frl/VBA-E/6-6-p1007-1038-vba_en/data/6-6-p1007-1038-vba_en.pdf",
+          "resolvedUrl": "https://ca01.smcworld.com/catalog/en/frl/VBA-E/6-6-p1007-1038-vba_en/data/6-6-p1007-1038-vba_en.pdf",
+          "contentType": "application/pdf",
+          "sha256": "53885fc45d06bece3c303cef7c0996950357433c015020208259c6b2c88a0dfe",
+          "bytes": 7449058,
+          "observedAt": "2026-10-03T11:01:58.667689+00:00",
+          "sourceLabel": "https://www.smcworld.com/catalog/en/frl/VBA-E/6-6-p1007-1038-vba_en/data/6-6-p1007-1038-vba_en.pdf",
+          "location": "PDF physique 12 / imprimée 1016, Selection §2 ; PDF physique 12 / imprimée 1016, Selection §2 and Design §2 ; Calcul propre hors égalité ambiguë",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-013.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-013",
+          "location": "PDF physique 12 / imprimée 1016, Selection §2",
+          "kind": "document_comparison"
+        },
+        {
+          "sourceId": "primary-013",
+          "location": "PDF physique 12 / imprimée 1016, Selection §2 and Design §2",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-013",
+          "location": "Calcul propre hors égalité ambiguë",
+          "kind": "calculation"
+        }
+      ]
+    },
+    {
+      "slug": "smc-rb-amortisseurs-paralleles-repartition-energie",
+      "title": "SMC RB en parallèle : pourquoi l’énergie ne se divise pas simplement par deux",
+      "seoTitle": "SMC RB parallèles : répartition et énergie par appareil",
+      "sha256": "8bc4c469c93d2d241f8b3a26d9ed5bc360638b044acc451db90efd78d892fa7e",
+      "wordCount": 554,
+      "claims": [
+        {
+          "sourceId": "primary-028",
+          "assertion": "En parallèle, l’énergie n’est pas divisée également ; formule E = Ea / N / 0,6.",
+          "location": "PDF physique 9 / imprimée 1303, Selection §7",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-028",
+          "assertion": "Énergie maximale exige la course complète pour RB et RBL ; masse, collision et fréquence sont des critères propres.",
+          "location": "PDF physique 9 / imprimée 1303, Selection",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-028",
+          "assertion": "Impact perpendiculaire à l’axe et conditions de montage à vérifier.",
+          "location": "PDF physique 10 / imprimée 1304, Mounting",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-028",
+          "assertion": "Scénario fictif de 12 J avec deux amortisseurs : division simple 6 J, formule publiée 10 J par appareil.",
+          "location": "12 / 2 / 0,6, calcul propre",
+          "status": "reviewed_internal_calculation",
+          "kind": "calculation"
+        }
+      ],
+      "sourceIds": [
+        "primary-028"
+      ],
+      "relatedGuideLinks": [
+        "verin-tape-fin-course-amortissement-ppv-pps",
+        "festo-ysr8-8-c-energie-cadence-temperature",
+        "force-verin-pneumatique-diametre-pression"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "1d583aaaec903543f3efa355485cbf2d1f3e4e39bf3a9da21ef79f0513d69f5a"
+      ],
+      "value": "Écarte l’addition naïve de capacités et documente les conditions du montage parallèle.",
+      "limitations": [
+        "Aucune réception mécanique, choix de référence ou coefficient de sécurité propre ajouté."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-028",
+          "url": "https://ca01.smcworld.com/catalog/en/actuator/RB-E/7-5-3-p1295-1317-RB_en/data/7-5-3-p1295-1317-RB_en.pdf",
+          "resolvedUrl": "https://ca01.smcworld.com/catalog/en/actuator/RB-E/7-5-3-p1295-1317-RB_en/data/7-5-3-p1295-1317-RB_en.pdf",
+          "contentType": "application/pdf",
+          "sha256": "6166dd6ca9b0653c4b30668820db8ac3d2f71a0765464be37a29c7a508077642",
+          "bytes": 1590470,
+          "observedAt": "2026-10-03T11:05:34.989787+00:00",
+          "sourceLabel": "https://ca01.smcworld.com/catalog/en/actuator/RB-E/7-5-3-p1295-1317-RB_en/data/7-5-3-p1295-1317-RB_en.pdf",
+          "location": "PDF physique 9 / imprimée 1303, Selection §7 ; PDF physique 9 / imprimée 1303, Selection ; PDF physique 10 / imprimée 1304, Mounting ; 12 / 2 / 0,6, calcul propre",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-028.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-028",
+          "location": "PDF physique 9 / imprimée 1303, Selection §7",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-028",
+          "location": "PDF physique 9 / imprimée 1303, Selection",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-028",
+          "location": "PDF physique 10 / imprimée 1304, Mounting",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-028",
+          "location": "12 / 2 / 0,6, calcul propre",
+          "kind": "calculation"
+        }
+      ]
+    },
+    {
+      "slug": "festo-dhps-no-nc-ressort-force-disponible",
+      "title": "Festo DHPS NO ou NC : calculer la force disponible avec le ressort",
+      "seoTitle": "Festo DHPS NO/NC : ressort et force de préhension",
+      "sha256": "8fb9b28420e33e589437cff8fa1d5b17ae31798ddfe41318354e939c7e2afc62",
+      "wordCount": 562,
+      "claims": [
+        {
+          "sourceId": "primary-012",
+          "assertion": "DHPS NC fermé par ressort sans pression ; NO ouvert par ressort sans pression.",
+          "location": "PDF physique et imprimée 2, Gripping force backup ; extraction web lignes 37–39",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-012",
+          "assertion": "Par doigt : ressort seul Ftot ; pression contre ressort FH − Ftot ; pression aidée par ressort FH + Ftot.",
+          "location": "PDF physique et imprimée 14 ; extraction web lignes 428–450",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-012",
+          "assertion": "Force Ftot dépend du bras x ; DHPS-16 : −0,08 × x + 0,5 × F, F lu selon course du mors dans la courbe.",
+          "location": "PDF physique et imprimées 13–14 ; extraction web lignes 403–435",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        }
+      ],
+      "sourceIds": [
+        "primary-012"
+      ],
+      "relatedGuideLinks": [
+        "pince-pneumatique-force-doigt-longueur-prehension",
+        "force-verin-pneumatique-diametre-pression",
+        "distributeur-5-3-centre-ferme-verin-derive"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "17d6237a97fdc8241b2299f60e86a3a85de3c03c796634468c810bd36a8d11a6"
+      ],
+      "value": "Décision de variante et bilan ressort/pression, distinct du seul dimensionnement de doigt.",
+      "limitations": [
+        "Preuve via extraction fabricant, transport direct PDF refusé ; aucune fonction de maintien de charge ou sécurité certifiée."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-012",
+          "url": "https://www.festo.com/media/catalog/204231_documentation.pdf",
+          "resolvedUrl": "https://www.festo.com/media/catalog/204231_documentation.pdf",
+          "contentType": "application/json",
+          "sha256": "09c9a52d2953085dd5deea10216d8e5a2dd47d02837986bf92dedfa5fcb173b5",
+          "bytes": 21167,
+          "observedAt": "2026-10-03T11:42:13.440Z",
+          "sourceLabel": "https://www.festo.com/media/catalog/204231_documentation.pdf",
+          "location": "PDF physique et imprimée 2, Gripping force backup ; extraction web lignes 37–39 ; PDF physique et imprimée 14 ; extraction web lignes 428–450 ; PDF physique et imprimées 13–14 ; extraction web lignes 403–435",
+          "captureKind": "manufacturer_content_via_web_tool_extraction",
+          "privateCaptureFile": "sources/primary-012-web.json",
+          "transportCapture": {
+            "sha256": null,
+            "bytes": null,
+            "file": null,
+            "substantiveContent": false,
+            "reason": "Direct transport is unavailable or a JavaScript loading shell; excluded from assertion proof.",
+            "error": "HTTPError: HTTP Error 403: Forbidden"
+          }
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-012",
+          "location": "PDF physique et imprimée 2, Gripping force backup ; extraction web lignes 37–39",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-012",
+          "location": "PDF physique et imprimée 14 ; extraction web lignes 428–450",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-012",
+          "location": "PDF physique et imprimées 13–14 ; extraction web lignes 403–435",
+          "kind": "documentary_fact"
+        }
+      ]
+    },
+    {
+      "slug": "exair-super-air-knife-deux-entrees-zones-faibles",
+      "title": "Super Air Knife : diagnostiquer les zones faibles sur une lame longue",
+      "seoTitle": "Super Air Knife : entrées d’air et zones faibles",
+      "sha256": "b70e0be6ed1cc7d77a5d048b0d06578070d3eba61fca14d1411625a2c2d2fe87",
+      "wordCount": 644,
+      "claims": [
+        {
+          "sourceId": "primary-005",
+          "assertion": "La section Compressed Air Line Sizes préconise deux bouts pour 24–42 pouces puis un centre au-delà ; jeu standard 0,05 mm. Cette formulation n’est pas une consigne universelle à isoler de la section suivante.",
+          "location": "PDF physique 1, Compressed Air Line Sizes and Shim Set",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-005",
+          "assertion": "Discordance interne 43–47 pouces : Air Line Sizes demande déjà le centre ; Air Supply donne deux extrémités pour 24–47, puis +1 dessous pour 48–59, +2 dessous pour 60–83, +3 dessous pour 84 et plus.",
+          "location": "PDF physique 1, comparison of Compressed Air Line Sizes and Compressed Air Supply",
+          "status": "reviewed_documentary",
+          "kind": "document_comparison"
+        },
+        {
+          "sourceId": "primary-006",
+          "assertion": "FAQ débit inégal : deux entrées opposées dès 18 pouces ; FAQ montage : deux bouts dès 24 pouces ; différence avec notice à conserver.",
+          "location": "FAQ What can cause uneven airflow / How do I mount an Air Knife",
+          "status": "reviewed_documentary",
+          "kind": "document_comparison"
+        },
+        {
+          "sourceId": "primary-005",
+          "assertion": "Perte de force ou débit : pression à contrôler dans une entrée ; liaisons trop petites, raccords restrictifs et filtres colmatés possibles.",
+          "location": "PDF physique 2, Troubleshooting",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-006",
+          "assertion": "Contamination, sous-alimentation et serrage excessif cités pour débit inégal ; cale plus épaisse change la demande d’air.",
+          "location": "FAQ uneven airflow and adding shims",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        }
+      ],
+      "sourceIds": [
+        "primary-005",
+        "primary-006"
+      ],
+      "relatedGuideLinks": [
+        "diagnostiquer-chute-pression-air-comprime",
+        "couteau-air-comprime-ou-soufflante",
+        "amplificateur-air-exair-consommation-debit"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "6849c07b4653052fb069d72565dd77369d2767fed2210cc86d8e488cfdead9ec"
+      ],
+      "value": "Diagnostic de répartition avec seuils documentaires divergents explicités, sans mesure d’uniformité inventée.",
+      "limitations": [
+        "Plages divergentes 18–24 et 43–47 pouces à clarifier pour le montage exact ; aucune qualité de soufflage ou section de réseau qualifiée."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-005",
+          "url": "https://www.exair.com/media/productcms/pdf/Super_Air_Knife.pdf",
+          "resolvedUrl": "https://www.exair.com/media/productcms/pdf/Super_Air_Knife.pdf",
+          "contentType": "application/pdf",
+          "sha256": "8815d873ea80e97b54b20c21b840cbc0b1fd7ade19c7d562a5db20b1978c5b2d",
+          "bytes": 417939,
+          "observedAt": "2026-10-03T11:01:51.889988+00:00",
+          "sourceLabel": "https://www.exair.com/media/productcms/pdf/Super_Air_Knife.pdf",
+          "location": "PDF physique 1, Compressed Air Line Sizes and Shim Set ; PDF physique 1, comparison of Compressed Air Line Sizes and Compressed Air Supply ; PDF physique 2, Troubleshooting",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-005.pdf"
+        },
+        {
+          "id": "primary-006",
+          "url": "https://www.exair.com/knowledgebase/faq/index/?catid=438",
+          "resolvedUrl": "https://www.exair.com/knowledgebase/faq/index/?catid=438",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "2cf865f8d4a2bf9be42e09ebc4eabd8eb5eb854969ef149227fa0b2c9150025c",
+          "bytes": 632411,
+          "observedAt": "2026-10-03T11:01:55.999620+00:00",
+          "sourceLabel": "https://www.exair.com/knowledgebase/faq/index/?catid=438",
+          "location": "FAQ What can cause uneven airflow / How do I mount an Air Knife ; FAQ uneven airflow and adding shims",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-006.html"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-005",
+          "location": "PDF physique 1, Compressed Air Line Sizes and Shim Set",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-005",
+          "location": "PDF physique 1, comparison of Compressed Air Line Sizes and Compressed Air Supply",
+          "kind": "document_comparison"
+        },
+        {
+          "sourceId": "primary-006",
+          "location": "FAQ What can cause uneven airflow / How do I mount an Air Knife",
+          "kind": "document_comparison"
+        },
+        {
+          "sourceId": "primary-005",
+          "location": "PDF physique 2, Troubleshooting",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-006",
+          "location": "FAQ uneven airflow and adding shims",
+          "kind": "documentary_fact"
+        }
+      ]
+    },
+    {
+      "slug": "exair-super-air-wipe-tube-diametre-bague",
+      "title": "Super Air Wipe : choisir le passage et alimenter les deux moitiés",
+      "seoTitle": "Super Air Wipe : diamètre, jeu et entrées des moitiés",
+      "sha256": "05717837a71c9146545bc45dc801a788b769031a3d7c8d2af16e6dab48b74558",
+      "wordCount": 574,
+      "claims": [
+        {
+          "sourceId": "primary-033",
+          "assertion": "Modèles de 2 pouces et plus : jeu recommandé d’environ 13 mm ; petits modèles pouvant avoir un jeu moindre.",
+          "location": "FAQ Recommended gap, extraction web lignes 661–663",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-034",
+          "assertion": "Entrées sur chaque moitié ; couplage fourni jusqu’à 102 mm ; modèles 229 mm et plus : deux entrées par moitié à alimenter.",
+          "location": "PDF physique 8 / imprimée 40, Compressed Air Inlets ; extraction web lignes 806–811",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-034",
+          "assertion": "Jeu de fente standard 0,05 mm ; agrandissement augmentant débit, force, consommation et bruit.",
+          "location": "PDF physiques 8–9 / imprimées 40–41, Shim Sets",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-034",
+          "assertion": "Scénario géométrique fictif : tube centré 50 mm dans passage 76 mm, jeu radial (76 − 50)/2 = 13 mm.",
+          "location": "Géométrie propre sans qualification de séchage",
+          "status": "reviewed_internal_calculation",
+          "kind": "calculation"
+        }
+      ],
+      "sourceIds": [
+        "primary-033",
+        "primary-034"
+      ],
+      "relatedGuideLinks": [
+        "amplificateur-air-exair-consommation-debit",
+        "couteau-air-comprime-ou-soufflante",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "1d492f103a7ccd08950bd9e210dd9d03274a60f15c4d6057f5e17f91c2cb8e02"
+      ],
+      "value": "Deux jeux distincts et distribution annulaire, sans variante du couteau linéaire.",
+      "limitations": [
+        "FAQ et PDF fabricant capturés en HTTPS avec TLS vérifié ; aucune uniformité ou performance de séchage mesurée."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-033",
+          "url": "https://www.exair.com/knowledgebase/faq/index/?catid=456&p=3",
+          "resolvedUrl": "https://www.exair.com/knowledgebase/faq/index/?catid=456&p=3",
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "deeb9b771a276157221b799a2862d28f237bc6ad4446b9a6fae73d1c6822788d",
+          "bytes": 608773,
+          "observedAt": "2026-10-03T11:57:01.452460+00:00",
+          "sourceLabel": "https://www.exair.com/knowledgebase/faq/index/?catid=456&p=3",
+          "location": "FAQ Recommended gap, extraction web lignes 661–663",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-033.html"
+        },
+        {
+          "id": "primary-034",
+          "url": "https://www.exair.com/media/productcms/pdf/AirWipes4_1.pdf",
+          "resolvedUrl": "https://www.exair.com/media/productcms/pdf/AirWipes4_1.pdf",
+          "contentType": "application/pdf",
+          "sha256": "09f4776571afdc0b446e61245cc58031e877a8b5b43607db3ae89c3b09492540",
+          "bytes": 5381704,
+          "observedAt": "2026-10-03T11:56:58.084013+00:00",
+          "sourceLabel": "https://www.exair.com/media/productcms/pdf/AirWipes4_1.pdf",
+          "location": "PDF physique 8 / imprimée 40, Compressed Air Inlets ; extraction web lignes 806–811 ; PDF physiques 8–9 / imprimées 40–41, Shim Sets ; Géométrie propre sans qualification de séchage",
+          "captureKind": "primary_source_bytes",
+          "privateCaptureFile": "sources/primary-034.pdf"
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-033",
+          "location": "FAQ Recommended gap, extraction web lignes 661–663",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-034",
+          "location": "PDF physique 8 / imprimée 40, Compressed Air Inlets ; extraction web lignes 806–811",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-034",
+          "location": "PDF physiques 8–9 / imprimées 40–41, Shim Sets",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-034",
+          "location": "Géométrie propre sans qualification de séchage",
+          "kind": "calculation"
+        }
+      ]
+    },
+    {
+      "slug": "haas-trp-retour-lent-precharge-alarme-130-131",
+      "title": "Haas TRP : distinguer retour lent, précharge et alarmes 130 ou 131",
+      "seoTitle": "Haas TRP : retour lent et alarmes 130 ou 131",
+      "sha256": "842a7dd1bbddb623687c6b9a3e85fcd926a17c7beb8fb46426a768d618c8efb7",
+      "wordCount": 559,
+      "claims": [
+        {
+          "sourceId": "primary-017",
+          "assertion": "Choc bruyant : précharge mal réglée ; retour lent avec alarmes 130/131 : ressort cassé, Humphrey usée, silencieux colmaté et défaut de piston/joint cités.",
+          "location": "TG0146 Symptom Table, extraction web lignes 376–386",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-017",
+          "assertion": "Humphrey usée pouvant faire fuir l’air dans le piston et ralentir le retour.",
+          "location": "TG0146 Symptom Table, lignes 383–384",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-017",
+          "assertion": "Régulateur fixe à remplacer si pression incorrecte ; 40T inline VF/VM/UMC après février 2017 sans régulateur de précharge.",
+          "location": "TG0146 Precharge Regulator, lignes 451–455",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-017",
+          "assertion": "Ressort de retour cassé : remplacement de base ; base non réparable à cause de forte pression de ressort.",
+          "location": "TG0146 Return Spring and O-ring, lignes 472 et 500",
+          "status": "reviewed_documentary",
+          "kind": "documentary_fact"
+        }
+      ],
+      "sourceIds": [
+        "primary-017"
+      ],
+      "relatedGuideLinks": [
+        "compresseur-machine-cnc-haas-pression-debit",
+        "silencieux-pneumatique-colmate-contre-pression",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "8598e248fb683ce72e808cc9c72a8ad1b127e1d44bc10c9550983b79d453c2e4"
+      ],
+      "value": "Triage de symptômes mécaniques et variantes de construction, distinct du besoin général d’une CNC.",
+      "limitations": [
+        "Preuve par extraction fabricant après refus direct 403 ; aucune intervention machine, paramètre ou pression de précharge prescrit."
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksPendingRuntimeCheck": false,
+        "originalityPendingCrossCorpusCheck": true,
+        "externalProfessionalValidation": false,
+        "physicalTest": false
+      },
+      "sources": [
+        {
+          "id": "primary-017",
+          "url": "https://www.haascnc.com/service/troubleshooting-and-how-to/troubleshooting/tool-release-piston--trp----troubleshooting-guide.alarm%3Dngc_9959-0000.html",
+          "resolvedUrl": "https://www.haascnc.com/service/troubleshooting-and-how-to/troubleshooting/tool-release-piston--trp----troubleshooting-guide.alarm%3Dngc_9959-0000.html",
+          "contentType": "application/json",
+          "sha256": "fe3562e9732c9f268a4e44eef2919c3fa4ed98c3d9a3a35b3500b68f26fb7512",
+          "bytes": 27306,
+          "observedAt": "2026-10-03T11:21:27.858Z",
+          "sourceLabel": "https://www.haascnc.com/service/troubleshooting-and-how-to/troubleshooting/tool-release-piston--trp----troubleshooting-guide.alarm%3Dngc_9959-0000.html",
+          "location": "TG0146 Symptom Table, extraction web lignes 376–386 ; TG0146 Symptom Table, lignes 383–384 ; TG0146 Precharge Regulator, lignes 451–455 ; TG0146 Return Spring and O-ring, lignes 472 et 500",
+          "captureKind": "manufacturer_content_via_web_tool_extraction",
+          "privateCaptureFile": "sources/primary-017-web.json",
+          "transportCapture": {
+            "sha256": null,
+            "bytes": null,
+            "file": null,
+            "substantiveContent": false,
+            "reason": "Direct transport is unavailable or a JavaScript loading shell; excluded from assertion proof.",
+            "error": "HTTPError: HTTP Error 403: Forbidden"
+          }
+        }
+      ],
+      "citedSourceLocations": [
+        {
+          "sourceId": "primary-017",
+          "location": "TG0146 Symptom Table, extraction web lignes 376–386",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-017",
+          "location": "TG0146 Symptom Table, lignes 383–384",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-017",
+          "location": "TG0146 Precharge Regulator, lignes 451–455",
+          "kind": "documentary_fact"
+        },
+        {
+          "sourceId": "primary-017",
+          "location": "TG0146 Return Spring and O-ring, lignes 472 et 500",
+          "kind": "documentary_fact"
+        }
+      ]
+    }
+  ],
+  "canonicalIntegration": {
+    "frozenManifestSha256": "5bf2d4868fa84a2c1c7ee46a2ec641f7b60f9dc1d4d827400d954345c81306c2",
+    "frozenLedgerSha256": "f56700fff02ac54df0f5efa1966aca89b98b2713979207d59342748ec5cfd3f0",
+    "integrationPreimageLedgerSha256": "50e4c6ebbac645b232f09058d71c7dff0d3b25cef31ca737f77f8eec4d3d87f1",
+    "productLinkAmendment": "guides-2026-10-03-c.product-links-amendment.json",
+    "technicalAssertionsUnchangedByProductLinks": true,
+    "routeCorrectionAmendment": "guides-2026-10-03-c.product-route-amendment.json"
+  }
+}

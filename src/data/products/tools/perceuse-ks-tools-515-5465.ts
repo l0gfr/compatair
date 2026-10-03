@@ -1,0 +1,246 @@
+const product = {
+	"id": "perceuse-ks-tools-515-5465",
+	"slug": "perceuse-ks-tools-515-5465",
+	"categoryId": "perceuse",
+	"category": "perceuse",
+	"label": "KS Tools 515.5465",
+	"brand": "KS Tools",
+	"model": "515.5465",
+	"mpn": "515.5465",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {
+		"max": 6.3
+	},
+	"demandExplanation": "La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé.",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/perceuse-ks-tools-515-5465.webp",
+		"alt": "Repères techniques : KS Tools 515.5465",
+		"sourceUrl": "https://www.kstools.com/en/products/special-tools-for-passenger-cars-and-light-commercial-vans/bodywork-and-interior/body-boring-tools/14701/pneumatic-angle-drill-10-mm?c=1011737470",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+	},
+	"variant": {
+		"familyId": "ks-tools-515-5465",
+		"label": "Référence 515.5465",
+		"distinguishingAttributes": {
+			"reference": "515.5465",
+			"Intitulé fabricant": "Pneumatic angle drill 10 mm",
+			"Consommation publiée (L/min)": "350"
+		}
+	},
+	"editorial": {
+		"overview": "KS Tools 515.5465. La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé. Intitulé fabricant : Pneumatic angle drill 10 mm. Consommation publiée (L/min) : 350.",
+		"verifiedFacts": [
+			"Intitulé fabricant : Pneumatic angle drill 10 mm.",
+			"Consommation publiée (L/min) : 350.",
+			"Puissance publiée : 370 Watt.",
+			"Filetage de raccordement publié : 1/4\"NPT.",
+			"Champ fabricant : Form : angled.",
+			"Champ fabricant : Handle : cold isolated handle.",
+			"Champ fabricant : Material1 : special plastic.",
+			"Vitesse à vide publiée (tr/min) : 1900.",
+			"Champ fabricant : Noise performance level (dbA) : 101.9.",
+			"Champ fabricant : Noise pressure level (dbA) : 90.9.",
+			"Champ fabricant : Norm : DIN EN ISO 28927-5.",
+			"Pression de service, libellé original : max. 6,3 bar (90 psi).",
+			"Champ fabricant : Speed : 1300 - 1900.",
+			"Longueur totale publiée (mm) : 205.0.",
+			"Champ fabricant : Vibration acceleration : < 3,5.",
+			"Masse publiée (g) : 1070.",
+			"Largeur B publiée : 115.0.",
+			"Champ fabricant : chuck capacity mm : 1 - 10.",
+			"Champ fabricant : chuck thread reception : 3/8\" x 24 UNF.",
+			"Dimension minimale de tuyau, libellé original : 3/8\" - 10 mm."
+		],
+		"limitations": [
+			"La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé.",
+			"La fiche ne relie pas explicitement la consommation à un point de pression mesuré ni à un régime en charge. La pression de service et le débit publié restent deux informations distinctes.",
+			"Le champ « min. Tube diameter » ne précise pas littéralement un diamètre intérieur ; aucune section hydraulique n’est déduite de ce libellé.",
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Intitulé fabricant",
+			"value": "Pneumatic angle drill 10 mm",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Consommation publiée (L/min)",
+			"value": "350",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "370 Watt",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Filetage de raccordement publié",
+			"value": "1/4\"NPT",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Form",
+			"value": "angled",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Handle",
+			"value": "cold isolated handle",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Material1",
+			"value": "special plastic",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Vitesse à vide publiée (tr/min)",
+			"value": "1900",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Noise performance level (dbA)",
+			"value": "101.9",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Noise pressure level (dbA)",
+			"value": "90.9",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Norm",
+			"value": "DIN EN ISO 28927-5",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Pression de service, libellé original",
+			"value": "max. 6,3 bar (90 psi)",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Speed",
+			"value": "1300 - 1900",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Longueur totale publiée (mm)",
+			"value": "205.0",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : Vibration acceleration",
+			"value": "< 3,5",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Masse publiée (g)",
+			"value": "1070",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Largeur B publiée",
+			"value": "115.0",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : chuck capacity mm",
+			"value": "1 - 10",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Champ fabricant : chuck thread reception",
+			"value": "3/8\" x 24 UNF",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Dimension minimale de tuyau, libellé original",
+			"value": "3/8\" - 10 mm",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Portée de la pression dans la source",
+			"value": "Operating pressure in bar: max. 6,3 bar (90 psi)",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		},
+		{
+			"label": "Consommation de régime non précisé, hors calcul",
+			"value": "350 L/min",
+			"evidenceIds": [
+				"october3c-tools-ks-product-515-5465-p1"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "october3c-tools-ks-product-515-5465-p1",
+			"sourceUrl": "https://www.kstools.com/en/products/special-tools-for-passenger-cars-and-light-commercial-vans/bodywork-and-interior/body-boring-tools/14701/pneumatic-angle-drill-10-mm?c=1011737470",
+			"sourceLabel": "KS Tools, fiche fabricant 515.5465",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-03",
+			"confidence": "B",
+			"notes": "SHA-256 de la réponse source : 0474fe0541e2c6d3a204bd1f282e8badee0c1e18f815b6f39683134ace2ddd24. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"october3c-tools-ks-product-515-5465-p1"
+		],
+		"workingPressureBar": [
+			"october3c-tools-ks-product-515-5465-p1"
+		],
+		"demandExplanation": [
+			"october3c-tools-ks-product-515-5465-p1"
+		]
+	},
+	"notes": [
+		"La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé."
+	]
+};
+
+export default product;

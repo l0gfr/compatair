@@ -180,7 +180,7 @@ export function createDocumentQualityObservatory(
 				medianDays: median(correctionDurations),
 				measuredCount: measurableCorrections.length,
 				excludedLegacyCount: ledger.corrections.length - measurableCorrections.length,
-				definition: 'Nombre de jours calendaires entre l’ouverture documentée d’un signalement et la publication de sa correction.',
+				definition: 'Nombre de jours calendaires entre l’ouverture documentée d’un signalement et sa résolution documentaire.',
 			},
 			multiPressureFad: {
 				status: 'measured' as const,

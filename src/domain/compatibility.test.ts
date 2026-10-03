@@ -4,6 +4,25 @@ import { evaluateCompatibility, interpolateFad } from './compatibility';
 import { sizeConfiguration } from './sizing';
 
 describe('evaluateCompatibility avec plusieurs modèles de demande', () => {
+	it('ne produit aucun verdict conclusif depuis les consommations KS Tools sans point de mesure', () => {
+		for (const id of ['ks-tools-515-1909', 'ks-tools-515-1919']) {
+			const tool = tools.find(item => item.id === id)!;
+			expect(tool.demandModel).toBe('variable-volume');
+			expect(tool).not.toHaveProperty('airflowLpm');
+			expect(tool).not.toHaveProperty('recommendedHose');
+			expect(tool.fieldSources).not.toHaveProperty('airflowLpm');
+			expect(tool.evidence).toContainEqual(expect.objectContaining({ retrievedAt: '2026-07-20' }));
+			expect(tool.evidence).toContainEqual(expect.objectContaining({ retrievedAt: '2026-10-03', sourceRole: 'primary' }));
+			for (const compressor of compressors) {
+				const result = evaluateCompatibility(compressor, tool);
+				expect(result.verdict).toBe('insufficient_data');
+				expect(result.requiredFadLpm).toBeUndefined();
+			}
+		}
+		expect(tools.find(item => item.id === 'ks-tools-515-1909')!.workingPressureBar).toEqual({ max: 6.3 });
+		expect(tools.find(item => item.id === 'ks-tools-515-1919')!.workingPressureBar).toEqual({});
+	});
+
 	it('conserve le calcul de débit fixe', () => {
 		const compressor = compressors.find((item) => item.id === 'einhell-te-ac-430-90-10')!;
 		const tool = tools.find((item) => item.id === 'einhell-tc-pw-340')!;

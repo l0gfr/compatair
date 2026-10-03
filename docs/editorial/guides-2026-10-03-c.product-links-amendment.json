@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "batchId": "documented-expansion-2026-10-03-c",
+  "date": "2026-10-03",
+  "purpose": "Link existing sourced guide content to exact new product records after canonical import.",
+  "frozenManifestSha256": "5bf2d4868fa84a2c1c7ee46a2ec641f7b60f9dc1d4d827400d954345c81306c2",
+  "revisions": [
+    {
+      "guide": "far-kj60-m8-inox-capacite-matiere",
+      "beforeSha256": "9e449aaa1e7c14977e8b5552ac35ca945eb4e83a454bd5c5cfd1d7d796bed016",
+      "afterSha256": "fd54dcef1ec11c080f19c07600d6aab9932741e44b1a4721b969e935b5236737",
+      "addedParagraph": "La [fiche du FAR KJ60](/outils/riveteuse-far-kj60/) conserve les caractéristiques documentées et les limites du calcul de consommation. Utilisez la référence exacte pour préparer la demande au fournisseur.",
+      "newTechnicalClaims": false
+    },
+    {
+      "guide": "far-kj60-course-courte-circuit-hydraulique",
+      "beforeSha256": "66fa7e982cf8f0cfddcdf66b44591f30617370b4452e1b2f85721a4634288194",
+      "afterSha256": "a75eb068eb21f34eda3815b7e45cbd088ef0a39c6d5ae96448dcd6be14f3b1c8",
+      "addedParagraph": "Retrouvez les sources de la machine dans la [fiche du FAR KJ60](/outils/riveteuse-far-kj60/). Elles permettent de transmettre la même référence au service technique, sans assimiler une course insuffisante à un manque de débit.",
+      "newTechnicalClaims": false
+    },
+    {
+      "guide": "gesipa-taurus2-diametre-mandrin-rivet",
+      "beforeSha256": "26d1ca96991d7dbf6598159f77806f744878306f53b04c4446a34ef0ab4eeddf",
+      "afterSha256": "d405326844d79a761cfbf7b455c7fe073ce5655b42c5f68094f7d3165bf331e6",
+      "addedParagraph": "La [fiche GESIPA TAURUS 2, référence 1457771](/outils/riveteuse-gesipa-taurus-2-1457771/) rassemble les caractéristiques et leurs sources. Comparez cette identité avec l’outil présent au poste avant de rechercher un mandrin de remplacement.",
+      "newTechnicalClaims": false
+    },
+    {
+      "guide": "mirka-pros-vibrations-interface-aspiration",
+      "beforeSha256": "7086acd56360c9632d8a432b8f73cdad08daa0939019ab16f84e91d406aa4422",
+      "afterSha256": "872d8ac1d8024fb82f4f69e90819df2f002726dd7d41d8941d342ede7df2c128",
+      "addedParagraph": "Pour la version PROS 680CV, la [fiche MRP-680CV](/outils/ponceuse-orbitale-mirka-pros-680cv-mrp-680cv/) conserve les caractéristiques propres à cette référence. Les autres versions PROS exigent leur propre ligne dans le tableau d’équilibrage du manuel.",
+      "newTechnicalClaims": false
+    }
+  ],
+  "toolGuideMap": {
+    "beforeSha256": "29a9648d5a5f52814a26cc74b35b6212497fd80072be491f4ab069d74176b3b7",
+    "afterSha256": "4ae42eadce9e317fbe02f62824a961f38a7861e6a6024a3b901734810b2ba47d",
+    "addedMappings": {
+      "riveteuse-far-kj60": "far-kj60-m8-inox-capacite-matiere",
+      "riveteuse-gesipa-taurus-2-1457771": "gesipa-taurus2-diametre-mandrin-rivet",
+      "ponceuse-orbitale-mirka-pros-680cv-mrp-680cv": "mirka-pros-vibrations-interface-aspiration"
+    }
+  },
+  "ledger": {
+    "beforeSha256": "50e4c6ebbac645b232f09058d71c7dff0d3b25cef31ca737f77f8eec4d3d87f1",
+    "afterSha256": "9d2cea2ea93da2d2f8699f2758fec825e71ba83692cf14c33d9c41cf5920008a"
+  },
+  "historicalLedgersUnchanged": true
+}

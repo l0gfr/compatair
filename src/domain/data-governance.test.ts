@@ -16,13 +16,13 @@ describe('public catalog data governance', () => {
 	});
 	it('publishes the exact explored, fixed and parametric grains without conflating them', () => {
 		expect(createCatalogScope(compressors, tools)).toEqual({
-			compressor_count: 3019,
-			tool_count: 13087,
-			explorable_combination_count: 39_509_653,
-			fixed_flow_tool_count: 7881,
-			fixed_verdict_count: 23_792_739,
-			parametric_tool_count: 5206,
-			parametric_combination_count: 15_716_914,
+			compressor_count: 3219,
+			tool_count: 14087,
+			explorable_combination_count: 45_346_053,
+			fixed_flow_tool_count: 7887,
+			fixed_verdict_count: 25_388_253,
+			parametric_tool_count: 6200,
+			parametric_combination_count: 19_957_800,
 			parametric_inputs: ['action_rate', 'volume_and_target_time'],
 		});
 	});
@@ -37,7 +37,7 @@ describe('public catalog data governance', () => {
 			expect(row.independently_corroborated_count).toBeLessThanOrEqual(row.populated_count);
 		}
 		const distributorSku = report.field_coverage.find((row) => row.field === 'distributorSku')!;
-		expect(distributorSku).toMatchObject({ eligible_count: 16106, populated_count: 2, explicitly_sourced_count: 2, primary_source_count: 0, independently_corroborated_count: 0 });
+		expect(distributorSku).toMatchObject({ eligible_count: 17306, populated_count: 2, explicitly_sourced_count: 2, primary_source_count: 0, independently_corroborated_count: 0 });
 	});
 
 	it('does not confuse primary, independent and secondary evidence', () => {

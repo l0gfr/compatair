@@ -10,6 +10,7 @@ import { brandSlug } from '../src/domain/brand.ts';
 import { FAD_COMPARISON_PAGE_SIZE, GUIDE_DIRECTORY_PAGE_SIZE, TOOL_USAGE_PAGE_SIZE } from '../src/domain/pagination.ts';
 import { parseJavaScriptModuleSpecifiers } from './lib/javascript-module-graph.mjs';
 import { decodeXmlEntities as decodeXml, extractH1Text } from './lib/markup-text.mjs';
+import { extractHtmlImages } from './lib/html-images.mjs';
 import { createIndexationPolicy, validateBaseline, validateManifest } from './lib/indexation-policy.mjs';
 import { validateVerdictPublication } from '../server/verdict-publication.mjs';
 import legacyArchive from '../config/legacy-verdict-archive.json' with { type: 'json' };
@@ -683,7 +684,7 @@ const discoveryHubs = new Map([
 	['/guides/particuliers/index.html', ['data-hub-signal="guides"', 'data-guide-directory', 'data-directory-pagination']],
 	['/guides/professionnels/index.html', ['data-hub-signal="guides"', 'data-guide-directory', 'data-directory-pagination']],
 	['/comparatifs/index.html', ['data-discovery-hub="comparatifs"', 'comparison-summary']],
-	['/marques/index.html', ['data-discovery-hub="marques"', 'data-directory-pagination']],
+	['/marques/index.html', ['data-discovery-hub="marques"', 'class="directory-pagination"']],
 	['/glossaire/index.html', ['data-discovery-hub="glossaire"', 'data-glossary-hub', 'data-glossary-search']],
 	['/recherche/index.html', ['data-discovery-hub="recherche"', 'data-search-hub', 'data-search-more']],
 ]);
@@ -698,7 +699,7 @@ for (const [path, markers] of discoveryHubs) {
 const decisionDirectoryPages = new Map([
 	['/compresseurs/index.html', ['data-directory-hub="compressors-by-brand"']],
 	['/outils-pneumatiques/index.html', ['data-directory-hub="tools-by-usage"']],
-	['/marques/index.html', ['data-directory-browser', 'data-directory-pagination']],
+	['/marques/index.html', ['data-directory-browser', 'class="directory-pagination"']],
 	['/comparatifs/compresseurs-debit-restitue/index.html', ['data-comparison-directory', 'data-directory-hub="fad-by-brand"']],
 ]);
 for (const [path, markers] of decisionDirectoryPages) {
@@ -985,11 +986,10 @@ for (const file of htmlFiles) {
 		const local = value.endsWith('/') ? value : value.match(/\.[a-z0-9]+$/i) ? value : `${value}/`;
 		if (!sitePaths.has(local) && !artifactPaths.has(value) && !archivePaths.has(value) && !['/robots.txt', '/sitemap-index.xml', '/.well-known/security.txt'].includes(value)) errors.push(`${label}: lien interne introuvable ${value}`);
 	}
-	for (const match of html.matchAll(/<img\s+([^>]+)>/g)) {
-		const attributes = ` ${match[1]}`;
-		if (!/\salt="[^"]*"/.test(attributes)) errors.push(`${label}: image sans alt`);
-		if (!/\swidth="\d+"/.test(attributes) || !/\sheight="\d+"/.test(attributes)) errors.push(`${label}: dimensions image absentes`);
-		const source = attributes.match(/\ssrc="([^"]+)"/)?.[1];
+	for (const image of extractHtmlImages(html)) {
+		if (image.alt === undefined) errors.push(`${label}: image sans alt`);
+		if (image.width === undefined || image.height === undefined) errors.push(`${label}: dimensions image absentes`);
+		const source = image.source;
 		if (source?.startsWith('/images/products/')) {
 			if (!artifactPaths.has(source)) errors.push(`${label}: image produit absente de l’artifact ${source}`);
 			else {
@@ -1000,8 +1000,8 @@ for (const file of htmlFiles) {
 				}
 				if (!dimensions) errors.push(`${label}: dimensions du fichier produit illisibles ${source}`);
 				else {
-					const renderedWidth = Number(attributes.match(/\swidth="(\d+)"/)?.[1]);
-					const renderedHeight = Number(attributes.match(/\sheight="(\d+)"/)?.[1]);
+					const renderedWidth = Number(image.width);
+					const renderedHeight = Number(image.height);
 					if (renderedWidth !== dimensions.width || renderedHeight !== dimensions.height) errors.push(`${label}: dimensions HTML ${renderedWidth}x${renderedHeight} différentes du fichier ${source} (${dimensions.width}x${dimensions.height})`);
 				}
 			}

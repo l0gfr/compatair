@@ -10,6 +10,7 @@ readingTime: 4
 reviewStatus: "internal"
 relatedGuides: ["amplificateur-air-exair-consommation-debit", "cout-metre-cube-air-comprime", "baisser-pression-reseau-demande-artificielle"]
 sources: ["https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air11.pdf", "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air2.pdf"]
+updatedDate: 2026-10-03
 ---
 
 **Un couteau d’air comprimé et une soufflante doivent se comparer sur le travail accompli, pas sur deux débits commerciaux isolés.** Pour sécher une pièce, déplacer un résidu ou refroidir un élément, commencez par définir le résultat attendu et la cadence. Le besoin réel peut justifier une étude de soufflage à plus basse pression.
@@ -72,6 +73,8 @@ Le [guide de réduction de pression](/guides/baisser-pression-reseau-demande-art
 Le choix final doit associer résultat utile, coût sur le périmètre retenu, installation et entretien. Une brochure peut justifier de tester une alternative ; elle ne remplace pas la réception sur votre application.
 
 Si le débit d’air actuel, sa durée d’utilisation ou la performance de l’alternative manque, présentez l’offre comme un projet à confirmer. C’est plus utile pour décider qu’une économie affichée au pourcent près sur des valeurs supposées.
+
+Une fois la technologie choisie, le montage de la référence exacte reste à examiner. Les cas [zones faibles d’une Super Air Knife](/guides/exair-super-air-knife-deux-entrees-zones-faibles/) et [jeu autour d’un tube dans une Super Air Wipe](/guides/exair-super-air-wipe-tube-diametre-bague/) apportent des contrôles ciblés pour le raccordement et la géométrie du poste.
 
 ## Sources et méthode
 

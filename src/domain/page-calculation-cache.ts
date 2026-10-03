@@ -125,7 +125,7 @@ export class PageCalculationCache {
   if (row.remaining === 0 && row.dirty) {
    const data = { columns: this.columnsVersion, values: row.values, indexes: Array.from(row.indexes) };
    if (!this.sizes.has(`columns-${this.columnsVersion}.json`)) this.write(`columns-${this.columnsVersion}.json`, this.columnsJson);
-   if (this.stats.writable && this.write(`row-${key}.json.gz`, gzipSync(JSON.stringify({ digest: fingerprint(data), data }), { level: 1 }))) this.stats.storedRows++;
+   if (this.stats.writable && this.write(`row-${key}.json.gz`, gzipSync(JSON.stringify({ digest: fingerprint(data), data }), { level: 6 }))) this.stats.storedRows++;
    row.dirty = false;
   }
   return row.values[row.indexes[column]];

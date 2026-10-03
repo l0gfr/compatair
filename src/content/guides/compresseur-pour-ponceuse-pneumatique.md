@@ -2,7 +2,7 @@
 title: "Quel compresseur pour une ponceuse pneumatique ?"
 description: "Une ponceuse exige un débit durable, pas seulement une grande cuve. Dimensionnez le FAD, le cycle de service et le flexible à partir d’un cas vérifié."
 pubDate: 2026-07-13
-updatedDate: 2026-09-29
+updatedDate: 2026-10-03
 category: Choisir
 audiences: [particulier, professionnel]
 metiers: [carrosserie-peinture, menuiserie-agencement]
@@ -56,6 +56,8 @@ Pour les petites zones de carrosserie, consultez le dossier [mini-ponceuse 50/75
 Le [comparatif ponceuse pneumatique ou électrique](/guides/ponceuse-pneumatique-ou-electrique-atelier/) propose un essai de travail commun et un bilan énergétique dont le périmètre reste explicite.
 
 Pour préciser le choix de la configuration, consultez [aspiration autonome ou centralisée](/guides/ponceuse-aspiration-autonome-centralisee/) et [rotation forcée et double action](/guides/ponceuse-rotation-forcee-double-action/).
+
+Lorsque le défaut apparaît après ajout d’une interface ou modification de l’aspiration, poursuivez avec le [diagnostic des vibrations Mirka PROS](/guides/mirka-pros-vibrations-interface-aspiration/). Ce cas conserve la configuration de ponçage et les observations à comparer avant de modifier l’alimentation.
 
 ## Sources
 

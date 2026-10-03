@@ -27,9 +27,11 @@ jobs:
   sources:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
-    # 2444 sources plus the complete build: keep one probe per host at a time.
-    # The larger catalog must not time out before reporting genuine anomalies.
-    timeout-minutes: 55
+    # At 4730 sources, preparation, validation and the cold build used 24 minutes.
+    # The job hit its 55-minute limit after at least 4650 probes. Leave time
+    # for the complete audit and its report.
+    # Keep one probe per host at a time; cache restore never replaces validation.
+    timeout-minutes: 75
     steps:
       - name: Checkout versioned sources
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -37,6 +39,7 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
       - name: Set up Node.js
+        id: node
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: .nvmrc
@@ -46,6 +49,13 @@ jobs:
           npm install --global --ignore-scripts pnpm@10.34.4
           pnpm install --frozen-lockfile
           pnpm security:supply-chain
+      - name: Restore bounded page calculations
+        uses: actions/cache/restore@caa296126883cff596d87d8935842f9db880ef25 # v5
+        with:
+          path: .astro/page-calculations-v1
+          key: compatair-page-calculations-v1-${{ runner.os }}-${{ steps.node.outputs.node-version }}-${{ github.sha }}
+          restore-keys: |
+            compatair-page-calculations-v1-${{ runner.os }}-${{ steps.node.outputs.node-version }}-
       - name: Validate source consistency
         run: |
           pnpm catalog:check

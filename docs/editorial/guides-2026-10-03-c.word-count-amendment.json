@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-03",
+  "metric": "Words in manuscript body before common Sources et méthode section, excluding inline SVG with original authoring regex.",
+  "reason": "Keep the same word-count scope as the frozen ledger for the amended guide.",
+  "beforeLedgerSha256": "67a9a8becfa39da3a60d58ec97c45e04933df68b940cd7e509134e705594a876",
+  "afterLedgerSha256": "50e4c6ebbac645b232f09058d71c7dff0d3b25cef31ca737f77f8eec4d3d87f1",
+  "changes": [
+    {
+      "guide": "netter-nts-frequence-amplitude-etranglement",
+      "beforeWordCount": 629,
+      "afterWordCount": 587
+    }
+  ],
+  "guideBytesUnchanged": true,
+  "otherGuidesMetricVerified": 29
+}

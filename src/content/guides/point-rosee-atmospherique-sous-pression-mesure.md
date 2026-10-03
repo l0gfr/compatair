@@ -3,7 +3,7 @@ title: "Point de rosée atmosphérique ou sous pression : comparer deux mesures
 seoTitle: "Point de rosée : atmosphérique ou sous pression ?"
 description: "Deux hygromètres donnent des points de rosée différents ? Vérifiez la pression de mesure, le prélèvement et la stabilisation avant de déclarer le sécheur défaillant."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-29
+updatedDate: 2026-10-03
 category: "Comprendre"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "carrosserie-peinture", "menuiserie-agencement"]
@@ -68,6 +68,8 @@ Enfin, le point de rosée concerne l’eau. Il ne certifie pas à lui seul les p
 Le glossaire précise le terme [point de rosée atmosphérique](/glossaire/#point-rosee-atmospherique).
 
 Un voyant coloré ne fournit pas la même information qu’une mesure de rosée. Le [changement de couleur du dessiccant](/guides/desiccant-change-couleur-point-rosee/) doit être interprété selon le matériau, le modèle et son historique, sans lui attribuer une température non publiée.
+
+Deux cas Vaisala prolongent cet examen du prélèvement : [la vis de fuite DSC74](/guides/vaisala-dsc74-vis-fuite-pression-cellule/) et [les valeurs figées du DMT143 pendant purge ou autocalibration](/guides/vaisala-dmt143-point-rosee-fige-purge-autocalibration/). Ils aident à consigner la cellule et l’état du capteur avec le résultat observé.
 
 ## Sources et méthode
 
