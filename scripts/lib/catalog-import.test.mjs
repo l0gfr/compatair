@@ -48,7 +48,8 @@ describe('reviewed manufacturer imports', () => {
 		expect(compressors.find(c=>c.mpn==='DGKH362000')).toMatchObject({powerKw:4.4,fadCurve:[{pressureBar:5,litersPerMinute:500}]});
 	});
 	it('fails closed for missing pressure and for a tool above the documented FAD pressure', () => {
-		const tool = tools.find(t=>t.id===createCpToolDraft(cp[0]).id);
+		const toolId = createCpToolDraft(cp[0]).id;
+		const tool = tools.find(t=>t.id===toolId);
 		for (const mpn of ['1129741354','DGKH362000']) expect(evaluateCompatibility(compressors.find(c=>c.mpn===mpn),tool).verdict).toBe('insufficient_data');
 	});
 	it('rejects a shifted column, unreviewed page, or pressure basis', () => {

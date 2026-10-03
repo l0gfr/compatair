@@ -23,10 +23,12 @@ describe('Compatibility Impact Feed', () => {
 	});
 	it('reports potential fixed-flow pairs without publishing an invented distribution', () => {
 		expect(compatibilityImpactFeed.schemaVersion).toBe('2.0.0');
-		const fixedCount = tools.filter(tool => tool.demandModel === 'fixed-flow').length;
+		const fixedTools = tools.filter(tool => tool.demandModel === 'fixed-flow');
+		const fixedCount = fixedTools.length;
+		const fixedToolIds = new Set(fixedTools.map(tool => tool.id));
 		for (const event of compatibilityImpactFeed.events) {
 			const expected = event.product_type === 'compressor' ? fixedCount
-				: tools.find(tool => tool.id === event.product_id)?.demandModel === 'fixed-flow' ? compressors.length : 0;
+				: fixedToolIds.has(event.product_id) ? compressors.length : 0;
 			expect(event.impact_assessment).toMatchObject({ affected_pair_count: expected, current_verdict_distribution: null, distribution_status: 'not_materialized' });
 		}
 	});
