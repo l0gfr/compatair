@@ -1,15 +1,28 @@
 ---
-title: "Cloueur : pourquoi les clous restent-ils mal enfoncés ? Pression, profondeur et fixations"
+title: "Cloueur : pourquoi les clous restent-ils mal enfoncés ? Pression,
+  profondeur et fixations"
 seoTitle: "Clous mal enfoncés : pression ou réglage du cloueur ?"
-description: "Un cloueur laisse les têtes dépasser ? Vérifiez la fixation, la profondeur et l’alimentation en air pendant la séquence avant d’augmenter la pression."
+description: "Un cloueur laisse les têtes dépasser ? Vérifiez la fixation, la
+  profondeur et l’alimentation en air pendant la séquence avant d’augmenter la
+  pression."
 pubDate: "2026-09-26"
 category: "Utiliser"
-audiences: ["particulier", "professionnel"]
-metiers: ["menuiserie-agencement", "btp-chantier"]
+audiences: [ "particulier", "professionnel" ]
+metiers: [ "menuiserie-agencement", "btp-chantier" ]
 readingTime: 4
 reviewStatus: "internal"
-relatedGuides: ["compresseur-pour-agrafeuse-cloueuse-pneumatique", "cadence-clouage-pneumatique-chantier", "flexible-air-comprime-chantier-25-50-metres"]
-sources: ["https://s3-eu-west-1.amazonaws.com/media.bostitch.joltrouter.net/media/pdf/products/manuals/FT71444-c-1111_SBT_Manual_Manual_WMK.pdf", "https://bostitch.fr/produits/details-de-l-outil/bt1855-e/", "https://www.senco.com/senco-blogs/my-nailer-wont-fire-troubleshooting-common-causes-of-jams-and-misfires/"]
+relatedGuides:
+  [
+    "compresseur-pour-agrafeuse-cloueuse-pneumatique",
+    "cadence-clouage-pneumatique-chantier",
+    "flexible-air-comprime-chantier-25-50-metres"
+  ]
+sources:
+  - https://s3-eu-west-1.amazonaws.com/media.bostitch.joltrouter.net/media/pdf/products/manuals/FT71444-c-1111_SBT_Manual_Manual_WMK.pdf
+  - https://bostitch.fr/produits/details-de-l-outil/bt1855-e/
+  - https://www.senco.com/senco-blogs/my-nailer-wont-fire-troubleshooting-common-causes-of-jams-and-misfires/
+  - https://www.beck-fastening.com/Corporate/00_No%20Index/Handouts%20-%20No%20Index/Handout_F44AC%20CN15W-PS65_EN_2304_screen.pdf
+updatedDate: 2026-10-03
 ---
 
 **Une tête qui dépasse peut conduire à examiner l’alimentation d’air, mais aussi la fixation utilisée et le réglage de profondeur.** Augmenter immédiatement la pression peut masquer la cause sans établir que le poste est correctement équipé. Commencez par relever le comportement : défaut permanent ou apparition après plusieurs tirs rapprochés.
@@ -34,6 +47,8 @@ La [fiche BT1855-E de Bostitch](https://bostitch.fr/produits/details-de-l-outil/
 </svg>
 <figcaption>Trois contrôles avant une modification de pression. Une fixation mal enfoncée n’identifie pas à elle seule la pièce en cause.</figcaption>
 </figure>
+
+Sur le F44AC CN15W-PS65, l’angle de 15° ne suffit pas : la fiche distingue 25–65 mm pour les bobines liées par fil et 32–65 mm pour les bandes plastiques CN-AG. Le [guide des bobines F44AC](/guides/fasco-f44ac-cn15w-ps65-clous-bobine-fil-plastique/) vérifie aussi pas, diamètre et platine de magasin avant de chercher une correction de pression. [BECK/FASCO F44AC CN15W-PS65, fiche avril 2023](https://www.beck-fastening.com/Corporate/00_No%20Index/Handouts%20-%20No%20Index/Handout_F44AC%20CN15W-PS65_EN_2304_screen.pdf#page=2).
 
 ## Profondeur et pression ne sont pas le même réglage
 

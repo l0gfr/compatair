@@ -1,15 +1,30 @@
 ---
-title: "Ventouse sur bois, carton ou pièce poreuse : quel débit de vide faut-il demander ?"
+title: "Ventouse sur bois, carton ou pièce poreuse : quel débit de vide faut-il
+  demander ?"
 seoTitle: "Ventouse et pièce poreuse : débit de vide et air moteur"
-description: "Une pièce poreuse change le dossier de préhension. Distinguez débit aspiré, air moteur et tenue réelle avant de choisir un éjecteur ou une pompe à vide."
+description: "Une pièce poreuse change le dossier de préhension. Distinguez
+  débit aspiré, air moteur et tenue réelle avant de choisir un éjecteur ou une
+  pompe à vide."
 pubDate: "2026-09-26"
 category: "Choisir"
-audiences: ["professionnel"]
-metiers: ["menuiserie-agencement", "maintenance-industrielle"]
+audiences: [ "professionnel" ]
+metiers: [ "menuiserie-agencement", "maintenance-industrielle" ]
 readingTime: 4
 reviewStatus: "internal"
-relatedGuides: [ "ejecteur-vide-schmalz-sbpl-consommation", "cout-metre-cube-air-comprime", "dimensionner-compresseur-menuiserie-agencement", schmalz-svk-ventouses-non-occupees-vide ]
-sources: [ "https://www.schmalz.com/site/binaries/content/assets/media/05_services/catalog/vg/area-layer-gripping-systems.pdf", "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air2.pdf", https://www.schmalz.com/en-nl/products/automation-743270/valves-308656/check-valves-and-flow-restrictors-308720/check-valves-svk-svkg-svv-308721 ]
+relatedGuides:
+  [
+    "ejecteur-vide-schmalz-sbpl-consommation",
+    "cout-metre-cube-air-comprime",
+    "dimensionner-compresseur-menuiserie-agencement",
+    schmalz-svk-ventouses-non-occupees-vide
+  ]
+sources:
+  - https://www.schmalz.com/site/binaries/content/assets/media/05_services/catalog/vg/area-layer-gripping-systems.pdf
+  - https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air2.pdf
+  - https://www.schmalz.com/en-nl/products/automation-743270/valves-308656/check-valves-and-flow-restrictors-308720/check-valves-svk-svkg-svv-308721
+  - https://www.piab.com/globalassets/productimages/0255863_rev00_esl_standalone-en.pdf
+  - https://doc.coval.com/g/LEMAX%2B/not/lemax%2B_notice_coval_2023_v05.pdf
+updatedDate: 2026-10-03
 ---
 
 **Pour saisir une pièce poreuse, il ne suffit pas de choisir un générateur d’après son niveau de vide maximal.** Il faut vérifier son comportement avec la pièce réelle et distinguer le débit aspiré de l’air consommé pour produire le vide. Un chiffre en L/min peut décrire l’un ou l’autre.
@@ -50,11 +65,15 @@ Faites préciser les mesures retenues, les limites et les conditions d’échec 
 
 Une ventouse laissée hors de la pièce crée un autre chemin de fuite que la porosité du matériau. [Schmalz SVK](https://www.schmalz.com/en-nl/products/automation-743270/valves-308656/check-valves-and-flow-restrictors-308720/check-valves-svk-svkg-svv-308721) décrit une bille fermant la ligne non occupée et un bypass conservant une petite fuite fonctionnelle. Le [cas des ventouses non occupées](/guides/schmalz-svk-ventouses-non-occupees-vide/#dessiner-la-surface-couverte-sur-le-pr%C3%A9henseur) prépare l’essai avec la plus petite pièce prévue et les ports couverts, sans traiter le clapet comme une fermeture parfaitement étanche.
 
+COVAL décrit le passage du LEMAX+ en fonctionnement sans ASC lorsque la porosité provoque des reprises de vide en battement. Le [cas LEMAX+ : ASC missing](/guides/coval-lemax-asc-missing-piece-poreuse/) montre ce changement de cycle entre les seuils publiés de 65 et 75 %. La poursuite de génération ne constitue pas une garantie de charge admissible. [COVAL LEMAX+, notice 2023 V05](https://doc.coval.com/g/LEMAX%2B/not/lemax%2B_notice_coval_2023_v05.pdf#page=1).
+
 ## Éjecteur, pompe ou soufflante : comparer la même tâche
 
 La brochure Schmalz montre qu’une génération externe peut être pertinente dans certaines applications. Le [DOE, dans sa fiche sur les usages de l’air comprimé](https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air2.pdf), invite plus généralement à examiner les alternatives, dont les dispositifs électriques adaptés, et à intégrer leur propre consommation dans le bilan.
 
 Demandez donc une comparaison sur le même cycle et le même taux de pièces acceptées. Une alternative n’est pas « gratuite en énergie » parce qu’elle réduit l’air comprimé. L’encombrement, l’entretien et le comportement du système doivent aussi figurer dans la proposition technique.
+
+La régulation pneumatique piSAVE ESL ajoute une condition de montage précise : Piab la réserve aux pompes dépourvues de clapet anti-retour. Le [cas ESL : pompe et mesure du vide](/guides/piab-pisave-esl-pompe-clapet-non-retour/) explique pourquoi le régulateur, le chemin de mesure et l’architecture de la pompe doivent être examinés ensemble avant de rechercher une baisse de consommation. [Piab piSAVE ESL Standalone, notice 0255863 Rev00, décembre 2025](https://www.piab.com/globalassets/productimages/0255863_rev00_esl_standalone-en.pdf#page=4).
 
 ## Les données nécessaires au bilan de l’atelier
 

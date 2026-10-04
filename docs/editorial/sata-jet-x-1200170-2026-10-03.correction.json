@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-03",
+  "productId": "sata-jet-x-hvlp-1200170",
+  "path": "src/data/products/tools/pistolet-peinture-hvlp-sata-jet-x-1200170.ts",
+  "beforeSha256": "26439c9400c38cb62961e8701aed9b9b4c7e23b973a892d4384fb266ec67dae7",
+  "afterSha256": "1a63ecbeae67a581deb7e94af29df4e07d903a0d5d403cd5d40e399876733d81",
+  "state": "corrected-source-discrepancy-insufficient-data",
+  "reason": "La fiche de la référence 1200170 affiche 420 L/min, le catalogue 2025 annonce 445 Nl/min pour jet X HVLP et la notice liée à la fiche indique 430 Nl/min à 2 bar. Ces documents ne permettent pas de choisir une consommation unique applicable à cette référence ; aucune conversion de L/min en Nl/min ni correction silencieuse n’est faite.",
+  "originalEvidenceRetained": true,
+  "sourceObservations": [
+    {
+      "id": "sata-baseline-1200170-recheck",
+      "url": "https://www.sata.com/en/premium-spray-gun-for-automotive-refinish-jet-x-hvlp-1.3-i-control-nozzle-basic-suitable-for-water-and-solvent-based-basecoats-as-well-as-1k-2k-topcoat-systems/1200170",
+      "finalUrl": "https://www.sata.com/en/premium-spray-gun-for-automotive-refinish-jet-x-hvlp-1.3-i-control-nozzle-basic-suitable-for-water-and-solvent-based-basecoats-as-well-as-1k-2k-topcoat-systems/1200170",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "observedAt": "2026-10-03T20:37:13.993718+00:00",
+      "bytes": 1225893,
+      "sha256": "3fc1a486bdd5ee9f5b609cc09300c8f7a2dc94e8a1393d752726496ee84366b2",
+      "edition": null,
+      "location": {
+        "page": 1,
+        "type": "html-technical-data-properties-row"
+      },
+      "technicalCells": [
+        {
+          "label": "Air consumption",
+          "value": "420 l/min",
+          "pressureConnection": "Recommended dynamic pressure 2bar is a separate cell, not an explicit measured consumption point"
+        },
+        {
+          "label": "Air consumption",
+          "value": "420 l/min"
+        },
+        {
+          "label": "Recommended dynamic inlet air pressure (compliant / HVLP)",
+          "value": "2 bar"
+        }
+      ]
+    },
+    {
+      "id": "sata-current-catalog-2025",
+      "url": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806",
+      "finalUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806",
+      "status": 200,
+      "contentType": "application/pdf",
+      "observedAt": "2026-10-03T18:53:11.706866+00:00",
+      "bytes": 13298603,
+      "sha256": "36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3",
+      "edition": "2025 title, current official downloads URL verified",
+      "location": {
+        "page": 14,
+        "type": "pdf-physical-page"
+      },
+      "technicalCells": [
+        {
+          "label": "Air consumption HVLP",
+          "value": "445 Nl/min"
+        },
+        {
+          "label": "Air consumption RP",
+          "value": "335 Nl/min"
+        },
+        {
+          "label": "Recommended air inlet pressure",
+          "value": "2,0 bar"
+        }
+      ]
+    },
+    {
+      "id": "sata-more-jet-x-manual-85",
+      "url": "https://www.sata.com/media/d2/3c/04/1790259009/MULTILINGUAL-SATA-OPERATING-MANUAL-JET-X-3266-240619-2.PDF.PDF?ts=1790259009",
+      "finalUrl": "https://www.sata.com/media/d2/3c/04/1790259009/MULTILINGUAL-SATA-OPERATING-MANUAL-JET-X-3266-240619-2.PDF.PDF?ts=1790259009",
+      "status": 200,
+      "contentType": "application/pdf",
+      "observedAt": "2026-10-03T20:30:52.856786+00:00",
+      "bytes": 43507933,
+      "sha256": "8b7cd0371d23eaae39f0098290ae5941ed87764dc320ec71180c99f860efcb0e",
+      "edition": null,
+      "location": {
+        "page": 102,
+        "type": "pdf-physical-page"
+      },
+      "technicalCells": [
+        {
+          "label": "Air consumption at 2,0 bar / 29 psi spray gun inlet pressure",
+          "value": "HVLP 430 Nl/min / 15,19 cfm; RP 325 Nl/min / 11,48 cfm"
+        }
+      ]
+    }
+  ],
+  "rootVisualReviewPages": [
+    14,
+    102
+  ]
+}

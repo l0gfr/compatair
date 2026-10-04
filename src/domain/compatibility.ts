@@ -23,7 +23,7 @@ export type CompatibilityResult = {
 	calculationVersion: typeof CALCULATION_VERSION;
 };
 
-export { interpolateFad, resolveAvailableFad, evaluateCompatibility } from '../../server/air-compatibility.mjs';
+export { interpolateFad, resolveAvailableFad, compatibilityWithoutCompressor, evaluateCompatibility } from '../../server/air-compatibility.mjs';
 
 export function compatibilityFadLabel(result: Pick<CompatibilityResult, 'availableFadLpm' | 'availableFadBasis' | 'availableFadReferencePressureBar'>, requestedPressureBar: number): string {
 	if (result.availableFadLpm === undefined) return `Débit non vérifiable à ${requestedPressureBar.toLocaleString('fr-FR')} bar`;

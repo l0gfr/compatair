@@ -1,5 +1,5 @@
 import type { Compressor, ToolProfile } from './catalog';
-import { evaluateCompatibility, type CompatibilityVerdict } from './compatibility';
+import { compatibilityWithoutCompressor, evaluateCompatibility, type CompatibilityVerdict } from './compatibility';
 
 export type ToolVerdictSummary = {
 	tool: ToolProfile;
@@ -23,6 +23,7 @@ export function getToolVerdictSummaries(compressors: Compressor[], tools: ToolPr
 	// identifiers and documents remain attached to their own summary.
 	const countsByDemand = new Map<string, Omit<ToolVerdictSummary, 'tool'>>();
 	return tools.filter((tool) => tool.demandModel === 'fixed-flow').map((tool) => {
+		if (compatibilityWithoutCompressor(tool)) return { tool, continuous: 0, incompatible: 0, insufficientData: compressors.length, verdictable: 0 };
 		const key = JSON.stringify([tool.airflowLpm.typical, tool.workingPressureBar.typical, tool.confidence, tool.airflowBasis]);
 		const cached = countsByDemand.get(key);
 		if (cached) return { tool, ...cached };

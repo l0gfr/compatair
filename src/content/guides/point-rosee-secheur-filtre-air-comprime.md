@@ -1,11 +1,13 @@
 ---
 title: "Point de rosée, sécheur et filtre : traiter l’humidité de l’air comprimé"
-description: "Distinguer eau liquide, vapeur, point de rosée sous pression, séparation, filtration et séchage pour choisir un traitement adapté à l’usage réel."
+description: "Distinguer eau liquide, vapeur, point de rosée sous pression,
+  séparation, filtration et séchage pour choisir un traitement adapté à l’usage
+  réel."
 pubDate: 2026-07-13
-updatedDate: 2026-09-26
+updatedDate: 2026-10-03
 category: "Installer"
-audiences: [professionnel]
-metiers: [carrosserie-peinture, maintenance-industrielle]
+audiences: [ professionnel ]
+metiers: [ carrosserie-peinture, maintenance-industrielle ]
 readingTime: 11
 featured: false
 sources:
@@ -13,7 +15,12 @@ sources:
   - https://www.iso.org/fr/standard/46418.html
   - https://www.atlascopco.com/en-ca/compressors/wiki/compressed-air-articles/choosing-a-dryer
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
-relatedGuides: ["secheur-air-comprime-atelier-non-chauffe", "airblok-dry-version-secheur-integre"]
+  - https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/DRYPOINT_RA_20-960_manual_en_2019_10_00_01.pdf
+relatedGuides:
+  [
+    "secheur-air-comprime-atelier-non-chauffe",
+    "airblok-dry-version-secheur-integre"
+  ]
 ---
 
 Une cuve purgée peut contenir de l’air encore chargé en vapeur d’eau. À l’inverse, un sécheur ne remplace pas les dispositifs destinés à évacuer l’eau déjà condensée. Pour choisir un traitement cohérent, il faut suivre l’eau depuis l’air ambiant jusqu’au point d’utilisation.
@@ -93,6 +100,8 @@ Le dossier [qualité de l’air comprimé](/guides/qualite-air-comprime-iso-8573
 Après installation, les paramètres à documenter peuvent inclure le point de rosée, les pressions amont et aval, la température d’entrée, le fonctionnement des purges et l’état des filtres.
 
 Une dérive peut provenir d’un débit supérieur à la capacité du sécheur, d’une température différente des conditions nominales, d’un filtre chargé, d’une purge défaillante ou d’un dessiccant à entretenir. Le diagnostic doit suivre la notice du modèle et les mesures du réseau.
+
+Le contrôleur DMC18 distingue le défaut de sonde PF du seuil haut HdP et du défaut de purge drA. Le [guide des codes DMC18](/guides/beko-dmc18-pf-hdp-dra-alarme-signification/) explique ces indications et leurs temporisations. Un avertissement ne stoppe pas le sécheur dans la notice RA considérée ; son fonctionnement apparent ne suffit donc pas à valider la température mesurée. [BEKO DRYPOINT RA 20-960, notice octobre 2019](https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/DRYPOINT_RA_20-960_manual_en_2019_10_00_01.pdf#page=36).
 
 ## Lorsque le réseau traverse une zone froide
 

@@ -1,16 +1,26 @@
 ---
-title: "Capteur de vérin Reed ou électronique : remplacer sans perdre le signal de position"
+title: "Capteur de vérin Reed ou électronique : remplacer sans perdre le signal
+  de position"
 seoTitle: "Capteur vérin Reed ou électronique : remplacer"
-description: "Le vérin bouge mais le cycle attend sa position : vérifier le capteur magnétique, la rainure, le type de sortie et le signal reçu par l’automate."
+description: "Le vérin bouge mais le cycle attend sa position : vérifier le
+  capteur magnétique, la rainure, le type de sortie et le signal reçu par
+  l’automate."
 pubDate: 2026-09-30
 category: Utiliser
-audiences: ["professionnel"]
-metiers: ["maintenance-industrielle"]
+audiences: [ "professionnel" ]
+metiers: [ "maintenance-industrielle" ]
 readingTime: 3
 reviewStatus: internal
-relatedGuides: ["remise-service-machine-pneumatique-arret-prolonge", "verin-simple-double-effet-ressort-retour", "fiche-intervention-air-comprime"]
+relatedGuides:
+  [
+    "remise-service-machine-pneumatique-arret-prolonge",
+    "verin-simple-double-effet-ressort-retour",
+    "fiche-intervention-air-comprime"
+  ]
 sources:
   - https://www.festo.com/gb/en/e/blog/perspectives/cylinder-sensors-reed-or-solid-state-id_1402189
+  - https://www.zimmer-group.com/fileadmin/pim/SOM/DOK/MON/SOM_DOK_MON_DDOC00232-GP200__SALL__APD__V8.pdf
+updatedDate: 2026-10-03
 ---
 
 Le vérin arrive à sa position, mais la machine attend encore. **Avant d’augmenter la pression ou de remplacer le vérin, séparez le mouvement observé et le signal de position reçu.** Un capteur, sa fixation et son interface peuvent être en cause dans cette deuxième chaîne.
@@ -44,6 +54,8 @@ Le [guide simple ou double effet](/guides/verin-simple-double-effet-ressort-reto
 Préparez le code complet du capteur et du vérin, le type de rainure, la fixation, la tension, la fonction de contact ou de sortie et le connecteur. Faites confirmer la correspondance électrique avec l’entrée de commande. Un même connecteur extérieur ne garantit pas les mêmes broches ou la même sortie.
 
 Festo décrit des cas où le contact Reed garde un intérêt, notamment un contact libre de potentiel. Il ne faut donc pas remplacer systématiquement tout Reed par une électronique sans vérifier la fonction requise. Les valeurs de courant et de température de chaque référence restent à lire dans sa fiche, sans généraliser les valeurs d’une famille.
+
+Le support mécanique peut limiter le choix du capteur. Sur GP200, Zimmer réserve l’inductif aux variantes équipées de blocs de serrage et avertit qu’un champ externe peut déplacer le seuil magnétique. Le [guide de détection GP200](/guides/zimmer-gp200-capteur-magnetique-inductif/) distingue ces deux mécanismes et ne transpose aucun entrefer d’un capteur à l’autre. [Zimmer GP200, notice d’installation et d’utilisation DDOC00232 V8](https://www.zimmer-group.com/fileadmin/pim/SOM/DOK/MON/SOM_DOK_MON_DDOC00232-GP200__SALL__APD__V8.pdf#page=9).
 
 ## Conserver le réglage de position validé
 

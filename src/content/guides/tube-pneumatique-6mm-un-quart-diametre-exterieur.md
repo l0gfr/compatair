@@ -1,17 +1,25 @@
 ---
 title: "Tube pneumatique de 6 mm ou 1/4 pouce : mesurer le diamètre extérieur"
 seoTitle: "Tube pneumatique : 6 mm ou 1/4 pouce ?"
-description: "Un tube de 6 mm et un tube de 1/4 pouce n’ont pas le même diamètre extérieur. Vérifiez raccord, dimensions et tolérances avant le montage."
+description: "Un tube de 6 mm et un tube de 1/4 pouce n’ont pas le même diamètre
+  extérieur. Vérifiez raccord, dimensions et tolérances avant le montage."
 pubDate: 2026-09-30
 category: Installer
-audiences: ["particulier", "professionnel"]
-metiers: ["maintenance-industrielle", "garage-automobile"]
+audiences: [ "particulier", "professionnel" ]
+metiers: [ "maintenance-industrielle", "garage-automobile" ]
 readingTime: 3
 reviewStatus: internal
-relatedGuides: ["raccord-air-comprime-bsp-npt-1-4", "diametre-longueur-flexible-air-comprime", "reseau-air-aluminium-pression-accessoires-reception"]
+relatedGuides:
+  [
+    "raccord-air-comprime-bsp-npt-1-4",
+    "diametre-longueur-flexible-air-comprime",
+    "reseau-air-aluminium-pression-accessoires-reception"
+  ]
 sources:
   - https://media.festo.com/media/3905_documentation.pdf
   - https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8
+  - https://www.heidenhain.com/fileadmin/pdf/en/01_Products/Produktinformationen/PI_DA400_ID894509_en.pdf
+updatedDate: 2026-10-03
 ---
 
 Le tube entre dans le raccord, mais une fuite apparaît après remontage. **La première question est la dimension prévue par le raccord, en diamètre extérieur.** Un tube de 6 mm et un tube de 1/4 pouce portent des désignations proches dans un panier d’achat ; leurs dimensions nominales restent différentes.
@@ -46,3 +54,5 @@ Le démontage et le montage suivent la notice, sur un circuit mis dans son état
 La ligne de commande doit associer la référence du tube, ses diamètres, sa matière et le raccord prévu. Faites préciser l’usage autorisé, le domaine de température et de pression, ainsi que les instructions de coupe et d’insertion.
 
 À réception, comparez les codes et dimensions livrés aux fiches avant le montage. Pour une installation plus vaste, le [guide de réception du réseau](/guides/reseau-air-aluminium-pression-accessoires-reception/) montre l’intérêt de conserver cette correspondance sur toute la chaîne. L’objectif est d’avoir un montage identifiable et contrôlable, plutôt qu’un raccord qui semble retenir le tube au premier essai.
+
+Deux raccords pour tube 6 × 1 mm peuvent doser des débits différents. HEIDENHAIN publie des étranglements pour 7 L/min sur codeur linéaire et 2 L/min sur angulaire, avec leurs références propres. Le [bilan d’air et raccords DA400](/guides/heidenhain-da400-codeurs-debit-raccords/) relie le type de codeur au raccord et à son point de pression, au-delà du diamètre du tube. [HEIDENHAIN DA400, information produit, février 2025](https://www.heidenhain.com/fileadmin/pdf/en/01_Products/Produktinformationen/PI_DA400_ID894509_en.pdf#page=3).

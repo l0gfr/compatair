@@ -1,16 +1,27 @@
 ---
-title: "Buse de pistolet peinture : pourquoi son diamètre ne donne pas la consommation d’air"
+title: "Buse de pistolet peinture : pourquoi son diamètre ne donne pas la
+  consommation d’air"
 seoTitle: "Buse peinture et chapeau d’air : quel débit prévoir ?"
-description: "Le diamètre de buse décrit le circuit produit. Comparez les chapeaux DV1-S, leur pression et leur consommation pour préparer une configuration vérifiable."
+description: "Le diamètre de buse décrit le circuit produit. Comparez les
+  chapeaux DV1-S, leur pression et leur consommation pour préparer une
+  configuration vérifiable."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-30
+updatedDate: 2026-10-03
 category: "Choisir"
-audiences: ["professionnel"]
-metiers: ["carrosserie-peinture", "menuiserie-agencement"]
+audiences: [ "professionnel" ]
+metiers: [ "carrosserie-peinture", "menuiserie-agencement" ]
 readingTime: 4
 reviewStatus: "internal"
-relatedGuides: ["pistolet-lvlp-vs-hvlp-compresseur", "sata-minijet-4400-b-hvlp-rp-compresseur", "mesurer-pression-dynamique-pistolet-peinture"]
-sources: ["https://binks.com/support/resource-library/dv1-s-gravity-spray-gun-operation-manual/", "https://binks.com/support/resource-library/abcs-of-spray-finishing-1-239/"]
+relatedGuides:
+  [
+    "pistolet-lvlp-vs-hvlp-compresseur",
+    "sata-minijet-4400-b-hvlp-rp-compresseur",
+    "mesurer-pression-dynamique-pistolet-peinture"
+  ]
+sources:
+  - https://binks.com/support/resource-library/dv1-s-gravity-spray-gun-operation-manual/
+  - https://binks.com/support/resource-library/abcs-of-spray-finishing-1-239/
+  - https://cdn.quable.com/sames/f7323419/original/xcite%2520-xcite%2520light-sames-airmix-DRT582221110-US-G.pdf
 ---
 
 **Une buse de 1,0 ou 1,3 mm ne permet pas de déduire le débit d’air du pistolet.** Son diamètre concerne le passage de produit. Le besoin d’air se lit pour l’ensemble de pulvérisation, notamment le chapeau et la pression prescrite. Une sélection sur le seul diamètre laisse donc une information essentielle hors du devis.
@@ -47,6 +58,8 @@ L’[ABC de Binks](https://binks.com/support/resource-library/abcs-of-spray-fini
 | Débit d’air | Valeur et configuration auxquelles elle appartient |
 
 Une photo des marquages est utile pour rapprocher l’outil réel du bon tableau. Si le kit reçu diffère de la commande, faites corriger le dossier avant de réutiliser l’ancien calcul de compatibilité.
+
+Le montage derrière la buse change aussi selon sa taille. SAMES indique le microfiltre 129609901 pour 03, 04 et 06, et le joint 129529903 pour 09 et au-delà. Le [guide de montage Xcite+](/guides/sames-xcite-buse-microfiltre-joint/) relie la pièce au marquage complet, avant toute tentative de correction du jet par la pression. [SAMES Xcite+ et Xcite+ Light, notice DRT582221110-US-G](https://cdn.quable.com/sames/f7323419/original/xcite%2520-xcite%2520light-sames-airmix-DRT582221110-US-G.pdf#page=57).
 
 ## Pourquoi ne pas agrandir la buse pour résoudre un manque d’air ?
 

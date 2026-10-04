@@ -1,15 +1,20 @@
 ---
 title: "Schmalz FQE : une ventouse enfichée retirée doit être remplacée"
 seoTitle: "Schmalz FQE : ventouse retirée et remplacement"
-description: "La notice FQE annonce une extraction destructive des ventouses enfichées. Préparez les pièces de remplacement et le suivi des restrictors avant maintenance."
+description: "La notice FQE annonce une extraction destructive des ventouses
+  enfichées. Préparez les pièces de remplacement et le suivi des restrictors
+  avant maintenance."
 pubDate: "2026-10-03"
 category: "Utiliser"
-audiences: ["professionnel"]
-metiers: ["maintenance-industrielle"]
+audiences: [ "professionnel" ]
+metiers: [ "maintenance-industrielle" ]
 readingTime: 4
 reviewStatus: "internal"
-relatedGuides: ["ventouse-piece-poreuse-debit-vide", "fiche-intervention-air-comprime"]
-sources: ["https://www.schmalz.com/site/binaries/content/assets/media/05_services/operating-manual/vt/fqe-manual-en-new.pdf"]
+relatedGuides: [ "ventouse-piece-poreuse-debit-vide", "fiche-intervention-air-comprime" ]
+sources:
+  - https://www.schmalz.com/site/binaries/content/assets/media/05_services/operating-manual/vt/fqe-manual-en-new.pdf
+  - https://assets.robotiq.com/website-assets/support_documents/document/AirPick_Instruction_Manual_e-Series_PDF_20190912.pdf
+updatedDate: 2026-10-03
 ---
 
 **Sur le FQE décrit par cette notice, retirer une ventouse enfichée détruit la pièce.** Une dépose pour inspection ne doit donc pas être préparée comme un démontage avec réemploi automatique. Le consommable de remplacement fait partie du dossier de maintenance.
@@ -51,6 +56,8 @@ Le [guide des surfaces poreuses](/guides/ventouse-piece-poreuse-debit-vide/) exp
 La maintenance relève du personnel qualifié. La section 10.1 exige la déconnexion des alimentations, la décompression à l’atmosphère et la prévention d’un redémarrage non autorisé avant l’entretien. Elle demande aussi de vérifier le fonctionnement, notamment les fonctions de sécurité, après maintenance ou dépannage. [Notice FQE,§ 10.1](https://www.schmalz.com/site/binaries/content/assets/media/05_services/operating-manual/vt/fqe-manual-en-new.pdf#page=34).
 
 La [fiche d’intervention](/guides/fiche-intervention-air-comprime/) peut conserver l’identité des pièces et les contrôles effectués. Le résultat documentaire est précis : prévoir une ventouse neuve pour la dépose enfichée, conserver sa restriction et appliquer la procédure de la configuration réelle. Le remplacement ne détermine pas, à lui seul, une nouvelle charge admissible.
+
+Une difficulté de dépose n’implique pas toujours le démontage de la ventouse. Pour AirPick, Robotiq décrit un vide recréé pendant le retrait et une fermeture de valve après une distance configurée. Le [cas AirPick : Shutoff distance](/guides/robotiq-airpick-release-distance-valve/) traite cette chronologie de mouvement ; il ne transpose aucune dépose destructive du montage FQE. [Robotiq AirPick e-Series, notice du 12 septembre 2019](https://assets.robotiq.com/website-assets/support_documents/document/AirPick_Instruction_Manual_e-Series_PDF_20190912.pdf#page=51).
 
 ## Sources et méthode
 

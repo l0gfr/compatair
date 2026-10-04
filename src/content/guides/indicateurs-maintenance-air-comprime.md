@@ -1,11 +1,13 @@
 ---
 title: "Indicateurs de maintenance d’un réseau d’air comprimé : lire la dérive"
 seoTitle: "Indicateurs maintenance air comprimé | CompatAir"
-description: "Suivre pression, débit, fuites, états machine et qualité d’air sans score opaque, seuil universel ni confusion entre mesure, calcul et hypothèse."
+description: "Suivre pression, débit, fuites, états machine et qualité d’air
+  sans score opaque, seuil universel ni confusion entre mesure, calcul et
+  hypothèse."
 pubDate: 2026-07-20
 category: "Utiliser"
-audiences: [professionnel]
-metiers: [maintenance-industrielle]
+audiences: [ professionnel ]
+metiers: [ maintenance-industrielle ]
 readingTime: 15
 series: audit-suivi-maintenance-air-comprime
 relatedGuides:
@@ -18,7 +20,8 @@ sources:
   - https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf
   - https://www.iso.org/fr/standard/46580.html
   - https://www.cagi.org/performance-verification
-updatedDate: 2026-09-26
+  - https://airpol.com.pl/wp-content/uploads/2026/08/EN-Katalog-Airpol-mEnergy-18-55kW.pdf
+updatedDate: 2026-10-03
 ---
 
 Un bon tableau de bord d’air comprimé ne réduit pas le réseau à une note. Il montre quelques grandeurs comparables dans le temps, leurs conditions de mesure, leur limite et l’action déclenchée lorsqu’une dérive est confirmée.
@@ -123,6 +126,8 @@ Une courbe ne devient décisionnelle que si son origine est exploitable. Ajoutez
 - **à confirmer** : la valeur est une hypothèse ou une saisie non vérifiée.
 
 Ce vocabulaire qualifie la donnée, pas le réseau. Une installation peut être en dérive avec une excellente qualité de preuve, ou sembler stable avec des données insuffisantes.
+
+Une interface locale doit aussi être documentée avant exploitation des tendances. Airpol annonce sur le serveur OPTI des valeurs de capteurs, historiques et compteurs de service, sans préciser ici cadence ni API. Le [guide de supervision OPTI/NAVI](/guides/airpol-opti-navi-supervision-locale-compresseur/) sépare les données annoncées des propriétés d’intégration encore à obtenir pour le contrôleur exact. [Airpol mEnergy, brochure constructeur août 2026](https://airpol.com.pl/wp-content/uploads/2026/08/EN-Katalog-Airpol-mEnergy-18-55kW.pdf#page=14).
 
 ## Lire une tendance sans inventer une alarme
 

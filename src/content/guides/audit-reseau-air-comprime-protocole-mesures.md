@@ -1,11 +1,13 @@
 ---
 title: "Audit d’un réseau d’air comprimé : protocole de mesure et plan d’action"
 seoTitle: "Audit réseau d’air comprimé : méthode et mesures"
-description: "Préparer un audit d’air comprimé de l’alimentation aux usages, établir une ligne de base mesurable et transformer les écarts en actions vérifiables."
+description: "Préparer un audit d’air comprimé de l’alimentation aux usages,
+  établir une ligne de base mesurable et transformer les écarts en actions
+  vérifiables."
 pubDate: 2026-07-20
 category: "Utiliser"
-audiences: [professionnel]
-metiers: [maintenance-industrielle]
+audiences: [ professionnel ]
+metiers: [ maintenance-industrielle ]
 readingTime: 16
 featured: true
 series: audit-suivi-maintenance-air-comprime
@@ -21,7 +23,8 @@ sources:
   - https://www.iso.org/fr/standard/46580.html
   - https://www.cagi.org/assets/documents/pdfs/handbook/Chapter_4_handbook_Final2021.pdf
   - https://www.smcworld.com/assets/manual/en-jp/files/PFxx-OMA1007.pdf
-updatedDate: 2026-09-26
+  - https://www.cs-instruments.com/fileadmin/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA500_EN.pdf
+updatedDate: 2026-10-03
 ---
 
 Un audit utile ne commence pas par une liste de compresseurs à remplacer. Il définit le périmètre du système, enregistre les conditions de production, mesure simultanément l’offre et la demande, puis établit une ligne de base contre laquelle chaque modification pourra être vérifiée.
@@ -96,6 +99,8 @@ Le Sourcebook relie la ligne de base à la puissance, à la pression et au débi
 | Qualité d’air | La qualité requise est-elle tenue au point utile ? | Paramètre, point de prélèvement, méthode et exigence du procédé |
 
 Un débit normalisé n’est interprétable que si les conditions de référence de l’instrument sont connues. Une pression relevée au repos ne localise pas une restriction dynamique. Une part de temps à vide n’est pas une part d’énergie. Ces distinctions doivent apparaître dans le rapport, pas rester dans les notes du technicien.
+
+Avec un VA500, l’échelle analogique automatique dépend du diamètre, de la plage valide et des conditions de référence. Le [diagnostic VA500 et conversion 4–20 mA](/guides/cs-va500-analogique-auto-scaling-automate/) explique comment l’automate peut conserver une ancienne échelle après reconfiguration. Les courants de défaut doivent aussi rester distincts d’un débit réellement nul. [CS Instruments VA500, notice V2.02, avril 2026](https://www.cs-instruments.com/fileadmin/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA500_EN.pdf#page=28).
 
 ## Établir la ligne de base
 

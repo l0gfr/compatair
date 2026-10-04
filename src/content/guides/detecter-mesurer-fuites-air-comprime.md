@@ -1,11 +1,19 @@
 ---
 title: "Fuites d’air comprimé : les détecter, les mesurer et suivre les réparations"
-description: "Une méthode sourcée pour distinguer une suspicion de fuite d’une mesure exploitable, localiser les défauts et vérifier les réparations du réseau."
+description: "Une méthode sourcée pour distinguer une suspicion de fuite d’une
+  mesure exploitable, localiser les défauts et vérifier les réparations du
+  réseau."
 pubDate: 2026-07-13
-updatedDate: 2026-09-26
+updatedDate: 2026-10-03
 category: "Utiliser"
-audiences: [professionnel]
-metiers: [garage-automobile, carrosserie-peinture, menuiserie-agencement, maintenance-industrielle]
+audiences: [ professionnel ]
+metiers:
+  [
+    garage-automobile,
+    carrosserie-peinture,
+    menuiserie-agencement,
+    maintenance-industrielle
+  ]
 readingTime: 12
 featured: false
 series: audit-suivi-maintenance-air-comprime
@@ -18,6 +26,7 @@ sources:
   - https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf
   - https://www.atlascopco.com/content/dam/atlas-copco/local-countries/france/documents/compressor-technique/Compressed-Air-Manual-9th-edition_compressed.pdf
   - https://www.smcworld.com/assets/manual/en-jp/files/PFxx-OMA1007.pdf
+  - https://media.fluke.com/59e78ae0-6829-465d-b818-b10800d591da_original%20file.pdf
 ---
 
 Une fuite ne se résume pas à un sifflement. Elle augmente la quantité d’air que le compresseur doit produire, peut accélérer ses cycles et contribue à une baisse de pression au point d’utilisation. Avant d’acheter une machine plus puissante, il faut donc séparer trois opérations : estimer la fuite globale, localiser les défauts, puis vérifier l’effet des réparations.
@@ -89,6 +98,8 @@ Une réparation n’est pas validée par la seule disparition d’un bruit. Il f
 Les indicateurs utiles peuvent être le temps hors charge, la fréquence des redémarrages, la décroissance de pression du volume isolé et le débit total mesuré. Un changement de température ou de configuration doit être noté.
 
 Après une campagne importante, les réglages de commande peuvent nécessiter une nouvelle vérification. Le guide du Department of Energy recommande d’ajuster les contrôles lorsque la demande a réellement diminué. Cette opération relève de personnes compétentes et de la documentation de l’installation.
+
+Une comparaison acoustique peut varier avec la géométrie. Fluke indique que LeakQ utilise niveau acoustique et distance, tandis qu’obstacles et bruit de fond affectent le résultat. Le [cas LeakQ : distance et obstacles](/guides/fluke-ii900-leakq-distance-obstacles/) distingue cible non détectée et distance non estimable, et précise les informations à garder avant une comparaison de réparation. [Fluke ii900/ii910, manuel d’utilisation](https://media.fluke.com/59e78ae0-6829-465d-b818-b10800d591da_original%20file.pdf#page=13).
 
 ## Relier fuites et chute de pression
 

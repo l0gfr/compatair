@@ -1,0 +1,1562 @@
+{
+  "schemaVersion": 1,
+  "batchId": "documented-expansion-2026-10-03-d",
+  "observedAt": "2026-10-03T19:56:06.929Z",
+  "baselineMain": "c008091895455e69a7db070fca1773210be48cc7",
+  "newGuides": 30,
+  "modifiedExistingGuides": 28,
+  "backlinkParagraphs": 30,
+  "sourcePolicy": "Original captures remain private; only provenance and reviewed claims are versioned.",
+  "files": [
+    {
+      "path": "src/content/guides/groupe-frl-filtre-regulateur-lubrificateur.md",
+      "beforeSha256": "6dc3f2b607c2fd436d733a90d65b82e371e79bd01250e18d59cc661e96da5c42",
+      "afterSha256": "c4a3d1c8e8112d22d0fe144c6b790145edb5c63011013d99067a7358a2a1ea98",
+      "entries": [
+        {
+          "newGuide": "norgren-l17-faible-debit-lubrification-demarrage",
+          "paragraphMarkdown": "Sur le Norgren L17, le seuil de mise en action est publié à 3,8 dm³/s sous 6,3 bar. Le [cas L17 : démarrage de la lubrification](/guides/norgren-l17-faible-debit-lubrification-demarrage/) distingue ce seuil du dosage Oil-Fog ou Micro-Fog : une cuve remplie et un réglage de gouttes ne démontrent pas que le débit local active le lubrificateur. [Norgren L17, installation et entretien IM-341.400](https://cdn.norgren.com/pdf/L17IM.pdf#page=1).",
+          "sourceUrlsToAppend": [
+            "https://cdn.norgren.com/pdf/L17IM.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-001",
+              "location": "PDF 1, Technical Data",
+              "assertion": "Seuil minimal de mise en action : 3,8 dm³/s à 6,3 bar.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-001",
+              "location": "PDF 1, Adjustment §2–4",
+              "assertion": "Réglage sous flux constant ; Oil-Fog : une goutte par minute par 5 dm³/s ; exemple 19 dm³/s donnant quatre gouttes par minute ; tableau Micro-Fog distinct.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-001",
+              "sourceLabel": "Norgren L17, installation et entretien IM-341.400",
+              "url": "https://cdn.norgren.com/pdf/L17IM.pdf",
+              "resolvedUrl": "https://cdn.norgren.com/pdf/L17IM.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "6eb07f440e8f242f52c8d024883e7e90cb39e511baf301db5dbe7f498a334ca8",
+              "bytes": 380889,
+              "observedAt": "2026-10-03T18:24:41.442757+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 1, Technical Data ; PDF 1, Adjustment §2–4 ; PDF 1, Adjustment §5 ; Calcul explicite dérivé de Technical Data"
+            }
+          ]
+        },
+        {
+          "newGuide": "zimmer-gp200-ventilation-air-barrage-guide",
+          "paragraphMarkdown": "L’alimentation filtrée ne traite pas toutes les entrées de poussière d’un préhenseur. Zimmer demande de laisser ouverte la ventilation des mors GP200 et, en ambiance sale, de conduire son tuyau vers une zone propre. Le [cas GP200 : ventilation et barrage](/guides/zimmer-gp200-ventilation-air-barrage-guide/) sépare cette voie de l’air de barrage limité à 0,5 bar. [Zimmer GP200, notice d’installation et d’utilisation DDOC00232 V8](https://www.zimmer-group.com/fileadmin/pim/SOM/DOK/MON/SOM_DOK_MON_DDOC00232-GP200__SALL__APD__V8.pdf#page=8).",
+          "sourceUrlsToAppend": [
+            "https://www.zimmer-group.com/fileadmin/pim/SOM/DOK/MON/SOM_DOK_MON_DDOC00232-GP200__SALL__APD__V8.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-025",
+              "location": "PDF 8, §10.2",
+              "assertion": "Ventilation des mors aspire l’ambiance ; ne pas l’obturer ; tuyau vers zone propre en milieu sale ; air de barrage maximum 0,5 bar pour préserver lubrification.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-025",
+              "sourceLabel": "Zimmer GP200, notice d’installation et d’utilisation DDOC00232 V8",
+              "url": "https://www.zimmer-group.com/fileadmin/pim/SOM/DOK/MON/SOM_DOK_MON_DDOC00232-GP200__SALL__APD__V8.pdf",
+              "resolvedUrl": "https://www.zimmer-group.com/fileadmin/pim/SOM/DOK/MON/SOM_DOK_MON_DDOC00232-GP200__SALL__APD__V8.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "57eb7858ef8129075491ad505be2e1729e66ab92954e14ae7b2e10b4320fd87e",
+              "bytes": 2435799,
+              "observedAt": "2026-10-03T18:38:41.856427+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 8, §10.2 ; PDF 10, §11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/dimensionner-secheur-frigorifique-ete.md",
+      "beforeSha256": "e3a1be58dde4e0515d6ecc5d80bbe1c42502b3ca530172beeb202f95283f8deb",
+      "afterSha256": "67c5e1146ddcb095a03e4cabf23ba424f4691fd70cf0ca14270e667e50dc9cf5",
+      "entries": [
+        {
+          "newGuide": "beko-drypoint-ra-perte-pression-condensat-gele",
+          "paragraphMarkdown": "Une forte perte de pression peut aussi venir d’un sécheur trop froid. BEKO cite les condensats gelés dans le dépannage du DRYPOINT RA. Le [diagnostic RA : restriction et glace](/guides/beko-drypoint-ra-perte-pression-condensat-gele/) sépare cette cause d’un défaut de purge ou d’un flexible obstrué, avant d’attribuer le manque d’air à la capacité frigorifique. [BEKO DRYPOINT RA 20-960, notice octobre 2019](https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/DRYPOINT_RA_20-960_manual_en_2019_10_00_01.pdf#page=45).",
+          "sourceUrlsToAppend": [
+            "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/DRYPOINT_RA_20-960_manual_en_2019_10_00_01.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-002",
+              "location": "PDF 45, Extreme pressure drop in dryer",
+              "assertion": "Perte extrême de pression : purge défaillante, condensat gelé à point de rosée bas ou obstruction des flexibles.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-002",
+              "sourceLabel": "BEKO DRYPOINT RA 20-960, notice octobre 2019",
+              "url": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/DRYPOINT_RA_20-960_manual_en_2019_10_00_01.pdf",
+              "resolvedUrl": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/DRYPOINT_RA_20-960_manual_en_2019_10_00_01.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "bf9701aabfaa8469c270f990cb44f84a2292c6a4420dcc70341155de439f6720",
+              "bytes": 11253292,
+              "observedAt": "2026-10-03T18:24:41.961564+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 45, Extreme pressure drop in dryer ; PDF 34, §11.12 ; PDF 44, Dew point too low"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/point-rosee-secheur-filtre-air-comprime.md",
+      "beforeSha256": "22e4ac2b63f8b5ae93c3e34af27e26d3d3ceb47cdb281385d51568c80f503427",
+      "afterSha256": "b9210331fda407d9ed1099bdf9808f3e5c8a5c9ea0c9bfcd839bbd0c4c388f16",
+      "entries": [
+        {
+          "newGuide": "beko-dmc18-pf-hdp-dra-alarme-signification",
+          "paragraphMarkdown": "Le contrôleur DMC18 distingue le défaut de sonde PF du seuil haut HdP et du défaut de purge drA. Le [guide des codes DMC18](/guides/beko-dmc18-pf-hdp-dra-alarme-signification/) explique ces indications et leurs temporisations. Un avertissement ne stoppe pas le sécheur dans la notice RA considérée ; son fonctionnement apparent ne suffit donc pas à valider la température mesurée. [BEKO DRYPOINT RA 20-960, notice octobre 2019](https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/DRYPOINT_RA_20-960_manual_en_2019_10_00_01.pdf#page=36).",
+          "sourceUrlsToAppend": [
+            "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/DRYPOINT_RA_20-960_manual_en_2019_10_00_01.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-002",
+              "location": "PDF 36–37, §11.16.4 et tableau",
+              "assertion": "Les avertissements n’arrêtent pas le sécheur ; affichage alterné codes et température ; PF, HdP, LdP, drA et SrV ont des significations distinctes.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-002",
+              "location": "PDF 37, note et tableau",
+              "assertion": "drA : délai de 20 minutes et indication possible sans pression appliquée au système.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-002",
+              "sourceLabel": "BEKO DRYPOINT RA 20-960, notice octobre 2019",
+              "url": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/DRYPOINT_RA_20-960_manual_en_2019_10_00_01.pdf",
+              "resolvedUrl": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/DRYPOINT_RA_20-960_manual_en_2019_10_00_01.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "bf9701aabfaa8469c270f990cb44f84a2292c6a4420dcc70341155de439f6720",
+              "bytes": 11253292,
+              "observedAt": "2026-10-03T18:24:41.961564+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 36–37, §11.16.4 et tableau ; PDF 37, note et tableau ; PDF 38, tableau Setup ; PDF 36, §11.16.4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/ventouse-piece-poreuse-debit-vide.md",
+      "beforeSha256": "2b5743bdd482825420681a4d63143f77f31615594bc57a64f10aff444efc767c",
+      "afterSha256": "1b7a33d93a808498daa5c6830c132f32ee7f632626460aa8c48d1a9194603f2c",
+      "entries": [
+        {
+          "newGuide": "piab-pisave-esl-pompe-clapet-non-retour",
+          "paragraphMarkdown": "La régulation pneumatique piSAVE ESL ajoute une condition de montage précise : Piab la réserve aux pompes dépourvues de clapet anti-retour. Le [cas ESL : pompe et mesure du vide](/guides/piab-pisave-esl-pompe-clapet-non-retour/) explique pourquoi le régulateur, le chemin de mesure et l’architecture de la pompe doivent être examinés ensemble avant de rechercher une baisse de consommation. [Piab piSAVE ESL Standalone, notice 0255863 Rev00, décembre 2025](https://www.piab.com/globalassets/productimages/0255863_rev00_esl_standalone-en.pdf#page=4).",
+          "sourceUrlsToAppend": [
+            "https://www.piab.com/globalassets/productimages/0255863_rev00_esl_standalone-en.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-003",
+              "location": "PDF 4, imprimée 13",
+              "assertion": "ESL uniquement avec pompes sans clapet anti-retour.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-003",
+              "location": "PDF 5, imprimée 18–19",
+              "assertion": "Le bouton définit le niveau de vide souhaité ; ESL adapte la pression d’alimentation aux caractéristiques du matériau.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-003",
+              "sourceLabel": "Piab piSAVE ESL Standalone, notice 0255863 Rev00, décembre 2025",
+              "url": "https://www.piab.com/globalassets/productimages/0255863_rev00_esl_standalone-en.pdf",
+              "resolvedUrl": "https://www.piab.com/globalassets/productimages/0255863_rev00_esl_standalone-en.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "149314654c2605ac75d0ed89fa29e97653be4956345bafa56f89f9b0feb2cbe3",
+              "bytes": 3306528,
+              "observedAt": "2026-10-03T18:24:42.368504+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 4, imprimée 13 ; PDF 5, imprimée 18–19 ; PDF 4, imprimée 14"
+            }
+          ]
+        },
+        {
+          "newGuide": "coval-lemax-asc-missing-piece-poreuse",
+          "paragraphMarkdown": "COVAL décrit le passage du LEMAX+ en fonctionnement sans ASC lorsque la porosité provoque des reprises de vide en battement. Le [cas LEMAX+ : ASC missing](/guides/coval-lemax-asc-missing-piece-poreuse/) montre ce changement de cycle entre les seuils publiés de 65 et 75 %. La poursuite de génération ne constitue pas une garantie de charge admissible. [COVAL LEMAX+, notice 2023 V05](https://doc.coval.com/g/LEMAX%2B/not/lemax%2B_notice_coval_2023_v05.pdf#page=1).",
+          "sourceUrlsToAppend": [
+            "https://doc.coval.com/g/LEMAX%2B/not/lemax%2B_notice_coval_2023_v05.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-011",
+              "location": "PDF 1, français §I-A, logiciel 1.6, extraction fabricant",
+              "assertion": "Prise à 65 %, coupure venturi à 75 %, reprise de 65 à 75 % sous microfuites.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-011",
+              "location": "PDF 1, §I-B",
+              "assertion": "Pièce poreuse et battements : fonctionnement sans ASC et signal, puis retour automatique quand les fuites sont éliminées.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-011",
+              "sourceLabel": "COVAL LEMAX+, notice 2023 V05",
+              "url": "https://doc.coval.com/g/LEMAX%2B/not/lemax%2B_notice_coval_2023_v05.pdf",
+              "resolvedUrl": null,
+              "status": null,
+              "contentType": "application/json",
+              "sha256": "b9b96f884af151a35242dc3b64ddb6bd5421af31eac9343700364197c8af1b4d",
+              "bytes": 23656,
+              "observedAt": "2026-10-03T18:47:53.155Z",
+              "captureKind": "manufacturer_content_via_web_tool_extraction",
+              "location": "PDF 1, français §I-A, logiciel 1.6, extraction fabricant ; PDF 1, §I-B ; PDF 1, §IV-B",
+              "transportCapture": {
+                "status": null,
+                "sha256": null,
+                "bytes": null,
+                "file": null,
+                "error": "ValueError: Out-of-scope source URL",
+                "substantiveContent": false
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/diametre-longueur-flexible-air-comprime.md",
+      "beforeSha256": "8866cf15bfae464951d10f85b52dad507fa1433c8645e02aaf9cdabb5a30db4e",
+      "afterSha256": "12db61cab8cc52b3e149d62cc38387b7dd3d21648d0454096b983c8120a92f86",
+      "entries": [
+        {
+          "newGuide": "piab-pisave-esl-tubes-signal-retard-regulation",
+          "paragraphMarkdown": "Sur le piSAVE ESL, Piab limite séparément le tuyau d’alimentation de la pompe et le tube de mesure du vide. Le [cas des longueurs ESL](/guides/piab-pisave-esl-tubes-signal-retard-regulation/) montre les lignes à 6 bar : pour 300–600 Nl/min, le trajet ESL–pompe de 3 m est non recommandé. La longueur du signal influe aussi sur le temps de réponse. [Piab piSAVE ESL Standalone, notice 0255863 Rev00, décembre 2025](https://www.piab.com/globalassets/productimages/0255863_rev00_esl_standalone-en.pdf#page=4).",
+          "sourceUrlsToAppend": [
+            "https://www.piab.com/globalassets/productimages/0255863_rev00_esl_standalone-en.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-003",
+              "location": "PDF 4, imprimée 14, Vacuum system",
+              "assertion": "C1 est limité à B et C2 à B + D ; des trajets plus longs augmentent le temps de réponse.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-003",
+              "location": "PDF 4, imprimée 16, tableau COMPRESSED AIR",
+              "assertion": "À 6 bar, ligne 300–600 Nl/min : A 12/9 mm, B 10/7 mm à 1 m et 12/9 mm à 2 m ; 3 m non recommandé. Ligne 600–720 : B 12/9 mm à 1 m, 2 et 3 m non recommandés.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-003",
+              "sourceLabel": "Piab piSAVE ESL Standalone, notice 0255863 Rev00, décembre 2025",
+              "url": "https://www.piab.com/globalassets/productimages/0255863_rev00_esl_standalone-en.pdf",
+              "resolvedUrl": "https://www.piab.com/globalassets/productimages/0255863_rev00_esl_standalone-en.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "149314654c2605ac75d0ed89fa29e97653be4956345bafa56f89f9b0feb2cbe3",
+              "bytes": 3306528,
+              "observedAt": "2026-10-03T18:24:42.368504+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 4, imprimée 14, Vacuum system ; PDF 4, imprimée 16, tableau COMPRESSED AIR ; PDF 4, imprimée 14, Free vacuum level"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/mesurer-pression-dynamique-pistolet-peinture.md",
+      "beforeSha256": "a267e2eaa545177930d7d12c0dff4beee2fa037ef792b2b421821e72aaba027a",
+      "afterSha256": "02208710fe374104ade0092160bb727b91fb2b8b31b1c1b7edbffa39752330ba",
+      "entries": [
+        {
+          "newGuide": "gema-ig02-faible-poudre-pompage-air-total",
+          "paragraphMarkdown": "La poudre impose de lire un autre mécanisme que l’atomisation liquide. Sur l’IG02, réduire l’air de convoyage réduit aussi l’air total dans le tuyau et peut rendre le transport irrégulier. Le [cas Gema IG02 à faible poudre](/guides/gema-ig02-faible-poudre-pompage-air-total/) sépare convoyage et air supplémentaire, avec les valeurs guides et les conditions du tableau fabricant. [Gema OptiFlow IG02, mode d’emploi](https://www.gemapowdercoating.com/fileadmin/documents/User_Manuals/English/Injectors_and_Pumps/Venturi_Injectors/OptiFlow-IG02-en.pdf#page=6).",
+          "sourceUrlsToAppend": [
+            "https://www.gemapowdercoating.com/fileadmin/documents/User_Manuals/English/Injectors_and_Pumps/Venturi_Injectors/OptiFlow-IG02-en.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-008",
+              "location": "PDF 6, imprimée 4, Principle",
+              "assertion": "Réduire l’air de convoyage réduit aspiration et air total ; l’air supplémentaire restaure le volume de transport. Usure de la douille et géométrie influencent la sortie.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-008",
+              "sourceLabel": "Gema OptiFlow IG02, mode d’emploi",
+              "url": "https://www.gemapowdercoating.com/fileadmin/documents/User_Manuals/English/Injectors_and_Pumps/Venturi_Injectors/OptiFlow-IG02-en.pdf",
+              "resolvedUrl": "https://www.gemapowdercoating.com/fileadmin/documents/User_Manuals/English/Injectors_and_Pumps/Venturi_Injectors/OptiFlow-IG02-en.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "dac584ed98e05f573160d977c52620858d6aee9ec6675080be7651741109dc4b",
+              "bytes": 194651,
+              "observedAt": "2026-10-03T18:24:58.433071+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 6, imprimée 4, Principle ; PDF 7, imprimée 5, guide values ; PDF 7, imprimée 5, tableau et conditions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/filtration-air-cabine-peinture-etages.md",
+      "beforeSha256": "b896d423692c19a128906c2d2c60be82648c050ccb93e8759a214de93bbabeb2",
+      "afterSha256": "195848a973b5970f873894ffb5844b418c184cd78609fd1307e49a3551f0c4a5",
+      "entries": [
+        {
+          "newGuide": "gema-ig06-bn-filtre-clapet-nettoyage-solvant",
+          "paragraphMarkdown": "Un filtre local de clapet ne se nettoie pas forcément comme le corps de l’injecteur. Pour l’IG06-BN, Gema demande de souffler l’élément de l’intérieur vers l’extérieur et interdit son immersion dans un liquide ou un solvant. Le [guide de maintenance IG06-BN](/guides/gema-ig06-bn-filtre-clapet-nettoyage-solvant/) identifie les deux clapets et les consignes propres à chaque composant. [Gema OptiFlow IG06-BN, notice 1017573 Rev00](https://www.gemapowdercoating.com/fileadmin/documents/User_Manuals/English/Injectors_and_Pumps/Venturi_Injectors/OptiFlow-IG06-BN-en.pdf?hash=1597389581#page=14).",
+          "sourceUrlsToAppend": [
+            "https://www.gemapowdercoating.com/fileadmin/documents/User_Manuals/English/Injectors_and_Pumps/Venturi_Injectors/OptiFlow-IG06-BN-en.pdf?hash=1597389581"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-009",
+              "location": "PDF 14, figures 4–5 et Cleaning the check valve units",
+              "assertion": "Clapets repérés 1 supplémentaire et 6 convoyage ; filtre soufflé intérieur vers extérieur, sans immersion dans liquide ou solvant ; risque au démontage.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-009",
+              "location": "PDF 13, Cleaning the injector",
+              "assertion": "Corps et raccord nettoyés avec air sans huile et eau ; acétone et grattage interdits ; consigne de dissolvant nitro sur dépôts ne remplace pas les limites propres aux filtres.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-009",
+              "sourceLabel": "Gema OptiFlow IG06-BN, notice 1017573 Rev00",
+              "url": "https://www.gemapowdercoating.com/fileadmin/documents/User_Manuals/English/Injectors_and_Pumps/Venturi_Injectors/OptiFlow-IG06-BN-en.pdf?hash=1597389581",
+              "resolvedUrl": "https://www.gemapowdercoating.com/fileadmin/documents/User_Manuals/English/Injectors_and_Pumps/Venturi_Injectors/OptiFlow-IG06-BN-en.pdf?hash=1597389581",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "1b6cce8e7728231439c323b56b55c6a864dd026732f521611a18170e1a40e5c9",
+              "bytes": 873980,
+              "observedAt": "2026-10-03T18:25:03.287534+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 14, figures 4–5 et Cleaning the check valve units ; PDF 13, Cleaning the injector"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/debitmetre-air-comprime-diametre-conditions-reference.md",
+      "beforeSha256": "0f4afffc7390cf57361cbb81970aec81edcd7d6bb532722ad207eea34ce54fd2",
+      "afterSha256": "91448fd5d481b5be57836057747e7c09653a281f9acc652d29b2c6aec26f8d0c",
+      "entries": [
+        {
+          "newGuide": "cs-va520-impulsions-50hz-compteur-debit",
+          "paragraphMarkdown": "La sortie électrique peut devenir une autre limite du relevé. Le VA520 publie un maximum de 50 impulsions par seconde, avec un retard d’une seconde. Le [choix du volume par impulsion VA520](/guides/cs-va520-impulsions-50hz-compteur-debit/) confronte fréquence et débit maximal : la résolution du compteur doit être compatible avec le volume attribué à chaque impulsion. [CS Instruments VA520, notice V2.02, avril 2026](https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA520_EN.pdf#page=26).",
+          "sourceUrlsToAppend": [
+            "https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA520_EN.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-006",
+              "location": "PDF 26–27, Pulse output et tableau 12",
+              "assertion": "Maximum 50 impulsions/s, retard 1 s ; 0,1 L donne 300 L/min, 1 L donne 3 000 L/min ; valeurs insuffisantes pour la borne supérieure refusées.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-006",
+              "sourceLabel": "CS Instruments VA520, notice V2.02, avril 2026",
+              "url": "https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA520_EN.pdf",
+              "resolvedUrl": "https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA520_EN.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "8f52f1131385b687a2c7c378fb516db1504cd3fb5b499cb620b3e9c3f1ae6a93",
+              "bytes": 1371901,
+              "observedAt": "2026-10-03T18:24:56.283146+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 26–27, Pulse output et tableau 12 ; PDF 27, tableau 12 ; Calcul propre Q/(60V), dérivé du volume par impulsion"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/audit-reseau-air-comprime-protocole-mesures.md",
+      "beforeSha256": "6a41189c1365cb4814ecc666359f7f0370fe5dc655b85fbe26947de44077ded5",
+      "afterSha256": "6c9f9faa145c9d7d90a8f3800de03474ae6fcebb7796c1bc8bf17e2da9ac370e",
+      "entries": [
+        {
+          "newGuide": "cs-va500-analogique-auto-scaling-automate",
+          "paragraphMarkdown": "Avec un VA500, l’échelle analogique automatique dépend du diamètre, de la plage valide et des conditions de référence. Le [diagnostic VA500 et conversion 4–20 mA](/guides/cs-va500-analogique-auto-scaling-automate/) explique comment l’automate peut conserver une ancienne échelle après reconfiguration. Les courants de défaut doivent aussi rester distincts d’un débit réellement nul. [CS Instruments VA500, notice V2.02, avril 2026](https://www.cs-instruments.com/fileadmin/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA500_EN.pdf#page=28).",
+          "sourceUrlsToAppend": [
+            "https://www.cs-instruments.com/fileadmin/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA500_EN.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-005",
+              "location": "PDF 28, Configuring the analog output",
+              "assertion": "Grandeur température/vitesse/débit ; Auto Scaling selon diamètre, plage valide et référence ; modes manuel et automatique.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-005",
+              "location": "PDF 28, tableau 14",
+              "assertion": "Erreur 2 ou 22 mA ; None NAMUR 3,8–20,5 mA avec sous-plage et dépassement distingués.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-005",
+              "sourceLabel": "CS Instruments VA500, notice V2.02, avril 2026",
+              "url": "https://www.cs-instruments.com/fileadmin/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA500_EN.pdf",
+              "resolvedUrl": "https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA500_EN.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "12193ae99b764d63c9b10a12e3cd948aeb4e2962bf36d4c6a03d3151811a8884",
+              "bytes": 1307199,
+              "observedAt": "2026-10-03T18:24:42.849397+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 28, Configuring the analog output ; PDF 28, tableau 14 ; Calcul linéaire propre sur plages hypothétiques"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/vanne-demarrage-progressif-air-comprime-remise-pression.md",
+      "beforeSha256": "32f8e8b873b3ff2d8907f4e08c3452e704b91b861947929f7d9956b7c65e91b0",
+      "afterSha256": "13e30baf98de32245079231469e02513d53fa580169fbc6c20689bf46d28c604",
+      "entries": [
+        {
+          "newGuide": "ross-dm2-c-reset-200ms-alimentation",
+          "paragraphMarkdown": "Le réarmement d’une double valve constitue une fonction différente du remplissage progressif. La DM2 série C de ROSS exige les solénoïdes principaux hors tension pendant le reset et un délai avant leur reprise. Le [cas DM2 C et les deux intervalles de 200 ms](/guides/ross-dm2-c-reset-200ms-alimentation/) conserve ces conditions, sans proposer de contournement ni valider la sécurité d’une machine. [ROSS DM2 série C, instructions SS301](https://ross-admin-global-us-east.s3.amazonaws.com/production/uploads/document_language_file/file/49/ROSS_DM2_Series_C_Double_Valves_Installation_Instructions_SS301.pdf.pdf#page=2).",
+          "sourceUrlsToAppend": [
+            "https://ross-admin-global-us-east.s3.amazonaws.com/production/uploads/document_language_file/file/49/ROSS_DM2_Series_C_Double_Valves_Installation_Instructions_SS301.pdf.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-007",
+              "location": "PDF 2, Reset information et timing chart",
+              "assertion": "Solénoïdes principaux hors tension au reset ; durée de reset recommandée 200 ms minimum, puis délai de 200 ms au moins avant reprise selon FAQ.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-007",
+              "sourceLabel": "ROSS DM2 série C, instructions SS301",
+              "url": "https://ross-admin-global-us-east.s3.amazonaws.com/production/uploads/document_language_file/file/49/ROSS_DM2_Series_C_Double_Valves_Installation_Instructions_SS301.pdf.pdf",
+              "resolvedUrl": "https://ross-admin-global-us-east.s3.amazonaws.com/production/uploads/document_language_file/file/49/ROSS_DM2_Series_C_Double_Valves_Installation_Instructions_SS301.pdf.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "46f74bd2e04299456d403f4bc374d88659ec93b7582e6e843750fc7fa55c0d58",
+              "bytes": 677910,
+              "observedAt": "2026-10-03T18:24:57.764743+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 2, Reset information et timing chart ; PDF 2, FAQ points 3–5 ; PDF 2, maintenance et Reset information"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/detecter-mesurer-fuites-air-comprime.md",
+      "beforeSha256": "eac533c03bed0d17d0cd88af9edb695d47ab1b559b75db01d36f435cfe0b3f10",
+      "afterSha256": "7bd697e1286facf2659de40b72424cdf97e6f30706b079e27212e756da216234",
+      "entries": [
+        {
+          "newGuide": "fluke-ii900-leakq-distance-obstacles",
+          "paragraphMarkdown": "Une comparaison acoustique peut varier avec la géométrie. Fluke indique que LeakQ utilise niveau acoustique et distance, tandis qu’obstacles et bruit de fond affectent le résultat. Le [cas LeakQ : distance et obstacles](/guides/fluke-ii900-leakq-distance-obstacles/) distingue cible non détectée et distance non estimable, et précise les informations à garder avant une comparaison de réparation. [Fluke ii900/ii910, manuel d’utilisation](https://media.fluke.com/59e78ae0-6829-465d-b818-b10800d591da_original%20file.pdf#page=13).",
+          "sourceUrlsToAppend": [
+            "https://media.fluke.com/59e78ae0-6829-465d-b818-b10800d591da_original%20file.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-012",
+              "location": "PDF 13, imprimée 9, LeakQ",
+              "assertion": "Valeur LeakQ dépend du niveau acoustique et de la distance ; messages absence de cible et distance non estimable distincts ; distance manuelle utilisée au calcul.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-012",
+              "location": "PDF 14, imprimée 10, notes",
+              "assertion": "Obstacles et bruit affectent distance et LeakQ ; déplacer autour de la fuite pour chercher la valeur la plus élevée ; export PNG/JPG avec annotations.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-012",
+              "location": "Organisation de comparaison dérivée des facteurs documentés",
+              "assertion": "Conserver angle, distance et conditions de réseau pour une comparaison avant/après ; proposition interne sans essai de précision.",
+              "kind": "inference",
+              "status": "reviewed_internal_inference"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-012",
+              "sourceLabel": "Fluke ii900/ii910, manuel d’utilisation",
+              "url": "https://media.fluke.com/59e78ae0-6829-465d-b818-b10800d591da_original%20file.pdf",
+              "resolvedUrl": "https://media.fluke.com/59e78ae0-6829-465d-b818-b10800d591da_original%20file.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "780db98392e387d6d1da6b3f05904fa6f4c5a6837cf6c9f7c04e24e8f5c8311c",
+              "bytes": 2884512,
+              "observedAt": "2026-10-03T18:25:10.385511+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 13, imprimée 9, LeakQ ; PDF 14, imprimée 10, notes ; Organisation de comparaison dérivée des facteurs documentés"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/compresseur-machine-cnc-haas-pression-debit.md",
+      "beforeSha256": "5f4b4e5b40a9fa2b14e159549924850e66b031e57dcc8df2eabafb6238ca54b4",
+      "afterSha256": "af72965280bb977a6b1b0fb98593928187439a7146d04d0c8cfe9d4efb989009",
+      "entries": [
+        {
+          "newGuide": "heidenhain-da400-air-entree-humide-six-bar",
+          "paragraphMarkdown": "L’air de barrage des codeurs peut avoir sa propre condition de traitement. HEIDENHAIN demande un sécheur supplémentaire avant le DA400 si la pression est inférieure à 6 bar et que l’air est saturé en vapeur d’eau. Le [cas DA400 : humidité en entrée](/guides/heidenhain-da400-air-entree-humide-six-bar/) distingue cette condition des classes d’air prévues pour les codeurs. [HEIDENHAIN DA400, information produit, février 2025](https://www.heidenhain.com/fileadmin/pdf/en/01_Products/Produktinformationen/PI_DA400_ID894509_en.pdf#page=2).",
+          "sourceUrlsToAppend": [
+            "https://www.heidenhain.com/fileadmin/pdf/en/01_Products/Produktinformationen/PI_DA400_ID894509_en.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-010",
+              "location": "PDF 2, Specifications et sealing air, extraction fabricant",
+              "assertion": "Entrée 5/6/4, sortie 1/4/1 ISO 8573-1:2010 ; eau 10 et 3 °C, huile totale 5 et 0,01 mg/m³.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-010",
+              "location": "PDF 2, Specifications, Overpressure",
+              "assertion": "Pression d’entrée typique 7 bar, minimale 4 bar, maximale 12 bar ; sous 6 bar ET air saturé en vapeur d’eau : sécheur supplémentaire avant DA400.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-010",
+              "sourceLabel": "HEIDENHAIN DA400, information produit, février 2025",
+              "url": "https://www.heidenhain.com/fileadmin/pdf/en/01_Products/Produktinformationen/PI_DA400_ID894509_en.pdf",
+              "resolvedUrl": null,
+              "status": null,
+              "contentType": "application/json",
+              "sha256": "0bdc8a6af3c26bf58a07c289232119b1f806481f86f5280f85fb79ad98d941f4",
+              "bytes": 8759,
+              "observedAt": "2026-10-03T18:47:50.856Z",
+              "captureKind": "manufacturer_content_via_web_tool_extraction",
+              "location": "PDF 2, Specifications et sealing air, extraction fabricant ; PDF 2, Specifications, Overpressure ; PDF 2, description DA400 et PDF 3 renvoi",
+              "transportCapture": {
+                "status": null,
+                "sha256": null,
+                "bytes": null,
+                "file": null,
+                "error": "HTTPError: HTTP Error 403: Forbidden",
+                "substantiveContent": false
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/tube-pneumatique-6mm-un-quart-diametre-exterieur.md",
+      "beforeSha256": "4d2010d15a3f67fb57e2ce25ad38a138df55f05a74ffff42817bcc55e87cdd0b",
+      "afterSha256": "46c857001315e3a225e02a461bf06c12ae2afd14ea3af5921c087ce8f3a0c953",
+      "entries": [
+        {
+          "newGuide": "heidenhain-da400-codeurs-debit-raccords",
+          "paragraphMarkdown": "Deux raccords pour tube 6 × 1 mm peuvent doser des débits différents. HEIDENHAIN publie des étranglements pour 7 L/min sur codeur linéaire et 2 L/min sur angulaire, avec leurs références propres. Le [bilan d’air et raccords DA400](/guides/heidenhain-da400-codeurs-debit-raccords/) relie le type de codeur au raccord et à son point de pression, au-delà du diamètre du tube. [HEIDENHAIN DA400, information produit, février 2025](https://www.heidenhain.com/fileadmin/pdf/en/01_Products/Produktinformationen/PI_DA400_ID894509_en.pdf#page=3).",
+          "sourceUrlsToAppend": [
+            "https://www.heidenhain.com/fileadmin/pdf/en/01_Products/Produktinformationen/PI_DA400_ID894509_en.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-010",
+              "location": "PDF 2, sealing air et Specifications",
+              "assertion": "7 L/min par linéaire, 2 par angulaire, jusqu’à dix codeurs ; étranglements à environ 1 bar ; sortie DA400 0,5–3 bar selon nombre et distribution.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-010",
+              "location": "PDF 3, Accessories, extraction primaire",
+              "assertion": "Raccords 226270-02 et 275239-01 linéaires ; 207835-04 angulaire ; tube 6 × 1 mm ; 7 ± 0,5 et 2 ± 0,2 L/min sous 1 ± 0,2 bar.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-010",
+              "sourceLabel": "HEIDENHAIN DA400, information produit, février 2025",
+              "url": "https://www.heidenhain.com/fileadmin/pdf/en/01_Products/Produktinformationen/PI_DA400_ID894509_en.pdf",
+              "resolvedUrl": null,
+              "status": null,
+              "contentType": "application/json",
+              "sha256": "0bdc8a6af3c26bf58a07c289232119b1f806481f86f5280f85fb79ad98d941f4",
+              "bytes": 8759,
+              "observedAt": "2026-10-03T18:47:50.856Z",
+              "captureKind": "manufacturer_content_via_web_tool_extraction",
+              "location": "PDF 2, sealing air et Specifications ; PDF 3, Accessories, extraction primaire ; Calcul propre sur besoins documentés",
+              "transportCapture": {
+                "status": null,
+                "sha256": null,
+                "bytes": null,
+                "file": null,
+                "error": "HTTPError: HTTP Error 403: Forbidden",
+                "substantiveContent": false
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/festo-vfof-ba-verin-air-emprisonne.md",
+      "beforeSha256": "62d182197459e088bb275439a3a492845ba4547f806621f757628164ad2cfe75",
+      "afterSha256": "a83d297edf2ee42dabe8b1a5abbb91db3be3c06b2442c1aaf29c7f14de91d3b5",
+      "entries": [
+        {
+          "newGuide": "coval-lemax-no-nf-coupure-air-electrique",
+          "paragraphMarkdown": "La perte d’électricité et la perte d’air doivent également être distinguées sur les préhenseurs. Les modules LEMAX+ NF et NO réagissent différemment à la première ; l’option PG1S relâche la pièce à la coupure pneumatique. Le [guide des variantes LEMAX+](/guides/coval-lemax-no-nf-coupure-air-electrique/) précise ces références sans étendre leur comportement à tous les modules de vide. [COVAL LEMAX+, notice 2023 V05](https://doc.coval.com/g/LEMAX%2B/not/lemax%2B_notice_coval_2023_v05.pdf#page=1).",
+          "sourceUrlsToAppend": [
+            "https://doc.coval.com/g/LEMAX%2B/not/lemax%2B_notice_coval_2023_v05.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-011",
+              "location": "PDF 1, §II-A, extraction fabricant",
+              "assertion": "LEMAX90X--S NF : génération arrêtée à coupure électrique ; --V NO : génération poursuivie pour maintien.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-011",
+              "location": "PDF 1, §II-B",
+              "assertion": "PG1F dirige le soufflage vers ventouse ; PG1S met ventouse à atmosphère et relâche pièce lorsque l’air est coupé.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-011",
+              "sourceLabel": "COVAL LEMAX+, notice 2023 V05",
+              "url": "https://doc.coval.com/g/LEMAX%2B/not/lemax%2B_notice_coval_2023_v05.pdf",
+              "resolvedUrl": null,
+              "status": null,
+              "contentType": "application/json",
+              "sha256": "b9b96f884af151a35242dc3b64ddb6bd5421af31eac9343700364197c8af1b4d",
+              "bytes": 23656,
+              "observedAt": "2026-10-03T18:47:53.155Z",
+              "captureKind": "manufacturer_content_via_web_tool_extraction",
+              "location": "PDF 1, §II-A, extraction fabricant ; PDF 1, §II-B ; PDF 1, §V",
+              "transportCapture": {
+                "status": null,
+                "sha256": null,
+                "bytes": null,
+                "file": null,
+                "error": "ValueError: Out-of-scope source URL",
+                "substantiveContent": false
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/force-verin-pneumatique-diametre-pression.md",
+      "beforeSha256": "6b6a26ba82b8f31de51e70d0920bc8ec0a5c4ca27fb2eb08505d7d959b87c89b",
+      "afterSha256": "f3b78da9d50dd212ac290be393e5491bc9d9ebbcabc0bcb3a57f1fd8d357479f",
+      "entries": [
+        {
+          "newGuide": "ako-vanne-pincement-pression-differentielle",
+          "paragraphMarkdown": "Une vanne à pincement demande un calcul différent de celui d’un piston. AKO définit sa pression de fermeture comme la pression de conduite plus le différentiel de plaque. Le [cas AKO : pression optimale de commande](/guides/ako-vanne-pincement-pression-differentielle/) conserve cet apport de la pression produit et les maxima de la référence, au lieu de retenir une consigne d’air universelle. [AKO, pression de commande optimale TI_pV_OS, 15 janvier 2024](https://www.pinch-valve.com/fileadmin/user_upload/Downloads/PDF/Technische_Infobl%C3%A4tter/TI_pV_OS_DE-EN.pdf#page=1).",
+          "sourceUrlsToAppend": [
+            "https://www.pinch-valve.com/fileadmin/user_upload/Downloads/PDF/Technische_Infobl%C3%A4tter/TI_pV_OS_DE-EN.pdf",
+            "https://www.pinch-valve.com/fileadmin/user_upload/Downloads/PDF/BA_pV_DIV_EN.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-015",
+              "location": "PDF 1, Optimum control pressure",
+              "assertion": "C = A + B, pression de conduite plus différentiel de plaque ; maxima à respecter selon plaque ou article.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-015",
+              "sourceLabel": "AKO, pression de commande optimale TI_pV_OS, 15 janvier 2024",
+              "url": "https://www.pinch-valve.com/fileadmin/user_upload/Downloads/PDF/Technische_Infobl%C3%A4tter/TI_pV_OS_DE-EN.pdf",
+              "resolvedUrl": "https://www.pinch-valve.com/fileadmin/user_upload/Downloads/PDF/Technische_Infobl%C3%A4tter/TI_pV_OS_DE-EN.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "fac9ad7197939e43d40c03a37ffac90e824332c5b4fd23f3e03db11d2bb8fefd",
+              "bytes": 434562,
+              "observedAt": "2026-10-03T18:36:21.176826+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 1, Optimum control pressure"
+            },
+            {
+              "id": "primary-016",
+              "sourceLabel": "AKO, notice des vannes à manchon pneumatiques BA_pV_DIV",
+              "url": "https://www.pinch-valve.com/fileadmin/user_upload/Downloads/PDF/BA_pV_DIV_EN.pdf",
+              "resolvedUrl": "https://www.pinch-valve.com/fileadmin/user_upload/Downloads/PDF/BA_pV_DIV_EN.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "5571ebdd649a94b068997366b05aaf8ce2535f8ea3984e6c90b780e31de15549",
+              "bytes": 2640384,
+              "observedAt": "2026-10-03T18:36:21.337678+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 5, exemple de fermeture ; PDF 11, §3.2 et PDF 23 §15.1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/electrovanne-air-ne-ouvre-pas-pression-differentielle.md",
+      "beforeSha256": "a72a369e122adb919d0aad84e62cb987a20f409bf3dddbe754d0786382794cf1",
+      "afterSha256": "ce71ba497ecae9643e0d3be53b980699985f2f82e81fa35ade925258c2e6b2c8",
+      "entries": [
+        {
+          "newGuide": "ako-vanne-pincement-vide-manchette-ouverte",
+          "paragraphMarkdown": "La vanne pilotée peut aussi subir le vide du procédé. AKO prévoit une compensation au corps de la vanne à pincement au-delà de 100 mbar de dépression. Le [cas AKO : manchette qui ne se rouvre pas](/guides/ako-vanne-pincement-vide-manchette-ouverte/) distingue cette situation d’une purge de commande bouchée ou d’une électrovanne défaillante. [AKO, notice des vannes à manchon pneumatiques BA_pV_DIV](https://www.pinch-valve.com/fileadmin/user_upload/Downloads/PDF/BA_pV_DIV_EN.pdf#page=11).",
+          "sourceUrlsToAppend": [
+            "https://www.pinch-valve.com/fileadmin/user_upload/Downloads/PDF/BA_pV_DIV_EN.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-016",
+              "location": "PDF 11, §3.4",
+              "assertion": "Au-delà de 100 mbar de dépression, compensation au corps ; au moins égale au vide procédé, idéalement supérieure d’au moins 100 mbar ; exemple −200/−300 mbar, 0,8/0,7 bar absolu.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-016",
+              "location": "PDF 23, §15.1",
+              "assertion": "Absence d’ouverture : purge bouchée, vide procédé, longue fermeture ou valve défaillante ; déformation élastomère et contribution de la pression produit à réouverture.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-016",
+              "sourceLabel": "AKO, notice des vannes à manchon pneumatiques BA_pV_DIV",
+              "url": "https://www.pinch-valve.com/fileadmin/user_upload/Downloads/PDF/BA_pV_DIV_EN.pdf",
+              "resolvedUrl": "https://www.pinch-valve.com/fileadmin/user_upload/Downloads/PDF/BA_pV_DIV_EN.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "5571ebdd649a94b068997366b05aaf8ce2535f8ea3984e6c90b780e31de15549",
+              "bytes": 2640384,
+              "observedAt": "2026-10-03T18:36:21.337678+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 11, §3.4 ; PDF 23, §15.1 ; PDF 11, §3.2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/pince-pneumatique-force-doigt-longueur-prehension.md",
+      "beforeSha256": "98f65baccd1067855b925fc10009dfe9d11317d4e0dfb0f35fafc767b4568b8f",
+      "afterSha256": "7f997fc04b440fc8823e5140c1d3e7fb3228eea811833a6fcd640646934be7fd",
+      "entries": [
+        {
+          "newGuide": "fipa-gr04-aiguilles-course-epaisseur-matiere",
+          "paragraphMarkdown": "Pour une matière difficile à saisir par le vide, les aiguilles croisées FIPA GR04 utilisent un principe de pénétration. Le [guide GR04 : course et épaisseur](/guides/fipa-gr04-aiguilles-course-epaisseur-matiere/) distingue la course réglable des aiguilles de la suspension de 35 mm des GR04.720. Leur plage de course ne donne pas à elle seule une épaisseur saisissable ou une charge garantie. [FIPA GR04.710 et GR04.720, fiche des préhenseurs à aiguilles](https://assets.fipa.com/assets/06_PDF-Datenblaetter/FIPA-GR04.710-Nadelgreifer_en_Master.pdf#page=1).",
+          "sourceUrlsToAppend": [
+            "https://assets.fipa.com/assets/06_PDF-Datenblaetter/FIPA-GR04.710-Nadelgreifer_en_Master.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-017",
+              "location": "PDF 1, Product notes",
+              "assertion": "Matières instables ou difficiles au vide ; aiguilles croisées, course réglable selon épaisseur et connexions séparées de double effet.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-017",
+              "location": "PDF 1, Technical data, colonnes -25 et -50",
+              "assertion": "Courses 0–2,5 et 0–5 mm ; GR04.720 suspension 35 mm ; dix aiguilles de 2 mm, angle 30°, service 2–8 bar.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-017",
+              "sourceLabel": "FIPA GR04.710 et GR04.720, fiche des préhenseurs à aiguilles",
+              "url": "https://assets.fipa.com/assets/06_PDF-Datenblaetter/FIPA-GR04.710-Nadelgreifer_en_Master.pdf",
+              "resolvedUrl": "https://assets.fipa.com/assets/06_PDF-Datenblaetter/FIPA-GR04.710-Nadelgreifer_en_Master.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "b962b5c378ad3be78ca1f6ecd1c3aec93508598d42b86a2b7fb8fbefbe8330f6",
+              "bytes": 785632,
+              "observedAt": "2026-10-03T18:36:21.592397+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 1, Product notes ; PDF 1, Technical data, colonnes -25 et -50 ; PDF 1, Technical data, colonne GR04.710-100"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/capteur-verin-reed-electronique-signal-position.md",
+      "beforeSha256": "4c6837521aa824a5867b17f0a30aa8f68eb19322fb8e1aa4338e85cde2db520f",
+      "afterSha256": "4708be5fbb146056c942a80c0a1a4354056b33cda6245b0228255394258d36bc",
+      "entries": [
+        {
+          "newGuide": "zimmer-gp200-capteur-magnetique-inductif",
+          "paragraphMarkdown": "Le support mécanique peut limiter le choix du capteur. Sur GP200, Zimmer réserve l’inductif aux variantes équipées de blocs de serrage et avertit qu’un champ externe peut déplacer le seuil magnétique. Le [guide de détection GP200](/guides/zimmer-gp200-capteur-magnetique-inductif/) distingue ces deux mécanismes et ne transpose aucun entrefer d’un capteur à l’autre. [Zimmer GP200, notice d’installation et d’utilisation DDOC00232 V8](https://www.zimmer-group.com/fileadmin/pim/SOM/DOK/MON/SOM_DOK_MON_DDOC00232-GP200__SALL__APD__V8.pdf#page=9).",
+          "sourceUrlsToAppend": [
+            "https://www.zimmer-group.com/fileadmin/pim/SOM/DOK/MON/SOM_DOK_MON_DDOC00232-GP200__SALL__APD__V8.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-025",
+              "location": "PDF 9, §10.4.2",
+              "assertion": "Inductif : blocs requis sur variantes spécifiques ; came, bloc et capteur ; distance appropriée sans valeur universelle publiée.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-025",
+              "location": "PDF 9, §10.4.1 et §10.3",
+              "assertion": "Champ externe peut déplacer point magnétique ; sens horaire réduit course, antihoraire augmente.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-025",
+              "sourceLabel": "Zimmer GP200, notice d’installation et d’utilisation DDOC00232 V8",
+              "url": "https://www.zimmer-group.com/fileadmin/pim/SOM/DOK/MON/SOM_DOK_MON_DDOC00232-GP200__SALL__APD__V8.pdf",
+              "resolvedUrl": "https://www.zimmer-group.com/fileadmin/pim/SOM/DOK/MON/SOM_DOK_MON_DDOC00232-GP200__SALL__APD__V8.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "57eb7858ef8129075491ad505be2e1729e66ab92954e14ae7b2e10b4320fd87e",
+              "bytes": 2435799,
+              "observedAt": "2026-10-03T18:38:41.856427+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 9, §10.4.2 ; PDF 9, §10.4.1 et §10.3 ; PDF 10, §10.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/vacuometre-vacuostat-bar-absolu-pourcentage-vide.md",
+      "beforeSha256": "ee491483560dea2fc7dff2a62b44b4bb92bab2a6304a8ff54af879f7f43391de",
+      "afterSha256": "01451e6e4bfb6b8d909542a59589ba995c9080973ae860b8e2d621515a82f4fd",
+      "entries": [
+        {
+          "newGuide": "robotiq-airpick-mode-auto-piece-poreuse",
+          "paragraphMarkdown": "Le même état de vide peut être traité différemment selon le mode du préhenseur. AirPick poursuit la génération sans défaut en automatique lorsqu’il détecte le très poreux, alors qu’en avancé il pose gFLT 0x3. Le [cas AirPick : matière poreuse et états](/guides/robotiq-airpick-mode-auto-piece-poreuse/) distingue cette logique d’une charge de maintien et d’un maximum demandé à 100 %. [Robotiq AirPick e-Series, notice du 12 septembre 2019](https://assets.robotiq.com/website-assets/support_documents/document/AirPick_Instruction_Manual_e-Series_PDF_20190912.pdf#page=50).",
+          "sourceUrlsToAppend": [
+            "https://assets.robotiq.com/website-assets/support_documents/document/AirPick_Instruction_Manual_e-Series_PDF_20190912.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-019",
+              "location": "PDF 50, Very porous material detection",
+              "assertion": "Très poreux ou ventouse usée : cycles rapides et risque usure ; automatique continu sans défaut, avancé gFLT 0x3 et réglages conservés.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-019",
+              "location": "PDF 48, Advanced mode",
+              "assertion": "gOBJ 01/10 selon seuils ; maximum 100 % implique génération continue et drapeau maximal jamais atteint.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-019",
+              "sourceLabel": "Robotiq AirPick e-Series, notice du 12 septembre 2019",
+              "url": "https://assets.robotiq.com/website-assets/support_documents/document/AirPick_Instruction_Manual_e-Series_PDF_20190912.pdf",
+              "resolvedUrl": "https://assets.robotiq.com/website-assets/support_documents/document/AirPick_Instruction_Manual_e-Series_PDF_20190912.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "6dfcb04a48a912d418980513b91b0ea051f4cef5fcb220299d99d0c7c1c3efa2",
+              "bytes": 9100100,
+              "observedAt": "2026-10-03T18:36:24.201769+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 47, §4.5.1 ; PDF 50, Very porous material detection ; PDF 48, Advanced mode ; Proposition de diagnostic dérivée des deux causes page 50"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/schmalz-fqe-ventouse-depose-remplacement.md",
+      "beforeSha256": "a6b28efdd7465e8176c570cb54f2da420148ae45d814018ffe9e1cebd9119e80",
+      "afterSha256": "d985889ce75adca3f59b814fc4bb02c16fccf0002c2777094c6fbcf0d3eec62d",
+      "entries": [
+        {
+          "newGuide": "robotiq-airpick-release-distance-valve",
+          "paragraphMarkdown": "Une difficulté de dépose n’implique pas toujours le démontage de la ventouse. Pour AirPick, Robotiq décrit un vide recréé pendant le retrait et une fermeture de valve après une distance configurée. Le [cas AirPick : Shutoff distance](/guides/robotiq-airpick-release-distance-valve/) traite cette chronologie de mouvement ; il ne transpose aucune dépose destructive du montage FQE. [Robotiq AirPick e-Series, notice du 12 septembre 2019](https://assets.robotiq.com/website-assets/support_documents/document/AirPick_Instruction_Manual_e-Series_PDF_20190912.pdf#page=51).",
+          "sourceUrlsToAppend": [
+            "https://assets.robotiq.com/website-assets/support_documents/document/AirPick_Instruction_Manual_e-Series_PDF_20190912.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-019",
+              "location": "PDF 51, Object release delay",
+              "assertion": "Release ouvre valve ; état sans objet à pression ambiante ou supérieure ; retrait peut recréer vide ; valve fermée après distance définie.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-019",
+              "location": "PDF 58, Release Command et Features",
+              "assertion": "Shutoff distance est un trajet après Release ; option Wait until object is released avant prochaine commande.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-019",
+              "sourceLabel": "Robotiq AirPick e-Series, notice du 12 septembre 2019",
+              "url": "https://assets.robotiq.com/website-assets/support_documents/document/AirPick_Instruction_Manual_e-Series_PDF_20190912.pdf",
+              "resolvedUrl": "https://assets.robotiq.com/website-assets/support_documents/document/AirPick_Instruction_Manual_e-Series_PDF_20190912.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "6dfcb04a48a912d418980513b91b0ea051f4cef5fcb220299d99d0c7c1c3efa2",
+              "bytes": 9100100,
+              "observedAt": "2026-10-03T18:36:24.201769+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 51, Object release delay ; PDF 58, Release Command et Features ; Interprétation du paramètre de distance"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/pompe-membrane-pneumatique-calee-diagnostic.md",
+      "beforeSha256": "a4728654e2344d3d8b80ad27f5573571189fba32bae5010b12cbed6a03fcaff2",
+      "afterSha256": "a2f32bc97f5c87c94c586038f4b358146f82a3af718b31a344512cd0612f9f81",
+      "entries": [
+        {
+          "newGuide": "enerpac-pa133-pompe-desamorcee-air-hydraulique",
+          "paragraphMarkdown": "Une pompe air-hydraulique présente encore une autre branche de diagnostic. Sur la PA133, Enerpac distingue niveau d’huile, manque d’air et perte d’amorçage. Le [cas PA133 : absence de débit d’huile](/guides/enerpac-pa133-pompe-desamorcee-air-hydraulique/) explique la procédure d’amorçage dédiée et sa plage de 2,1–2,7 bar, sans l’attribuer au fonctionnement d’une pompe à membrane. [Enerpac PA133/PA700/PA133U, notice L2080 RevE, juin 2025](https://literature.enerpac.com/pdf/L2080_e.pdf#page=4).",
+          "sourceUrlsToAppend": [
+            "https://literature.enerpac.com/pdf/L2080_e.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-020",
+              "location": "PDF 6, Troubleshooting",
+              "assertion": "Absence d’huile : niveau bas, manque d’air ou amorçage perdu ; filtre/ligne à contrôler ; pas de démontage utilisateur, service agréé.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-020",
+              "location": "PDF 4, Priming the pump",
+              "assertion": "Amorçage : huile selon remplissage, horizontal, 30–40 psi/2,1–2,7 bar, RELEASE et activations momentanées ; essai normal avec vérin puis service si échec.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-020",
+              "sourceLabel": "Enerpac PA133/PA700/PA133U, notice L2080 RevE, juin 2025",
+              "url": "https://literature.enerpac.com/pdf/L2080_e.pdf",
+              "resolvedUrl": "https://literature.enerpac.com/pdf/L2080_e.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "195e4246a251fa0c3c3392dac8fcdcb75fd962e794c64aedf759462035b3b378",
+              "bytes": 3263128,
+              "observedAt": "2026-10-03T18:36:24.559379+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 6, Troubleshooting ; PDF 4, Priming the pump ; PDF 4, Operation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/scie-lime-pneumatique-kit-embouts.md",
+      "beforeSha256": "d7fac7c8c6f262b0e3fc30b98353031a57cad99d82f6ae99dbbd67a07d8d2dff",
+      "afterSha256": "3582ff68d8f0dee099c533f163099672553ccfe65b83feb837c7a218444d6a80",
+      "entries": [
+        {
+          "newGuide": "rems-tiger-pneumatic-lame-guide-tube",
+          "paragraphMarkdown": "L’interface de lame peut également limiter un ensemble guidé. La notice REMS distingue les lames à double talon prévues pour le guide Tiger des lames ordinaires à talon simple. Le [cas Tiger pneumatic : lame et guide](/guides/rems-tiger-pneumatic-lame-guide-tube/) conserve le domaine de la version et le rôle distinct de la vis de maintien et de la goupille de centrage. [REMS Tiger/Cat/Puma, notice multilingue 566008RX](https://www.rems.de/dlbatv2/566008RX).",
+          "sourceUrlsToAppend": [
+            "https://www.rems.de/dlbatv2/566008RX"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-021",
+              "location": "PDF 20, français §2.4",
+              "assertion": "Lames spéciales et universelles à talon double décrites ; talon simple ordinaire inadapté à forte avance guidée et risque de rupture.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-021",
+              "location": "PDF 20, français §2.5",
+              "assertion": "Goupille de centrage non destinée au maintien ; serrage par vis, état vis/clé à vérifier ; logements distincts double/simple talon.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-021",
+              "sourceLabel": "REMS Tiger/Cat/Puma, notice multilingue 566008RX",
+              "url": "https://www.rems.de/dlbatv2/566008RX",
+              "resolvedUrl": "https://www.rems.de/batv2/BA/566008_RX_BA001_V002.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "a99b48220b800bbcd26431f8ae001b1552172e1359f3b48e7f6e3da243574e0c",
+              "bytes": 6274522,
+              "observedAt": "2026-10-03T18:36:38.227241+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 19, français §1.3 ; PDF 20, français §2.4 ; PDF 20, français §2.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/sequencer-plusieurs-compresseurs.md",
+      "beforeSha256": "d4471c13d5ee6b8f6e3248ee060d9c67918d59f6aa56d5b81febd07d5cbebba9",
+      "afterSha256": "1a476706519a00094761e7e73ebf03fd78c64a0dd405ddf1d3dde9a62c462c9c",
+      "entries": [
+        {
+          "newGuide": "airpol-menergy-ultra-speed-consigne-debit",
+          "paragraphMarkdown": "Une ligne de capacité doit conserver sa pression. Airpol publie pour mEnergy 18 un maximum de 240 m³/h à 6,5 bar et de 180 m³/h à 10 bar. Le [cas Ultra Speed et plage de consigne](/guides/airpol-menergy-ultra-speed-consigne-debit/) lit ces colonnes sans transformer le libellé Capacity, non défini comme FAD sur les pages examinées, en verdict outil. [Airpol mEnergy, brochure constructeur août 2026](https://airpol.com.pl/wp-content/uploads/2026/08/EN-Katalog-Airpol-mEnergy-18-55kW.pdf#page=15).",
+          "sourceUrlsToAppend": [
+            "https://airpol.com.pl/wp-content/uploads/2026/08/EN-Katalog-Airpol-mEnergy-18-55kW.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-031",
+              "location": "PDF 15, lignes mEnergy 18 et 18 DRY",
+              "assertion": "Plages Capacity m³/h : 55–240, 55–220, 55–215, 55–200, 55–180 respectivement à 6,5/7,5/8/9/10 bar.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-031",
+              "location": "PDF 8 et 15, qualification du libellé",
+              "assertion": "Les pages examinées portent Capacity sans définition FAD/ISO 1217 ; aucune assimilation au débit compatible opérée.",
+              "kind": "document_comparison",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-031",
+              "sourceLabel": "Airpol mEnergy, brochure constructeur août 2026",
+              "url": "https://airpol.com.pl/wp-content/uploads/2026/08/EN-Katalog-Airpol-mEnergy-18-55kW.pdf",
+              "resolvedUrl": "https://airpol.com.pl/wp-content/uploads/2026/08/EN-Katalog-Airpol-mEnergy-18-55kW.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "b1d8b378e00c95a22c35e86765d7205881abe88e3a3d0fb389b648e84d50626e",
+              "bytes": 6630663,
+              "observedAt": "2026-10-03T18:28:45.209758+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 8, Flexible Ultra Speed ; PDF 15, lignes mEnergy 18 et 18 DRY ; PDF 8 et 15, qualification du libellé"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/indicateurs-maintenance-air-comprime.md",
+      "beforeSha256": "1ecf780f731e7763a2259e5a9ad5f994192c5a42dae9c341c226aa349a3ba601",
+      "afterSha256": "70d265f8bf09bc75898fba11801dbc320515205e13d6cf8e7f672312afbae152",
+      "entries": [
+        {
+          "newGuide": "airpol-opti-navi-supervision-locale-compresseur",
+          "paragraphMarkdown": "Une interface locale doit aussi être documentée avant exploitation des tendances. Airpol annonce sur le serveur OPTI des valeurs de capteurs, historiques et compteurs de service, sans préciser ici cadence ni API. Le [guide de supervision OPTI/NAVI](/guides/airpol-opti-navi-supervision-locale-compresseur/) sépare les données annoncées des propriétés d’intégration encore à obtenir pour le contrôleur exact. [Airpol mEnergy, brochure constructeur août 2026](https://airpol.com.pl/wp-content/uploads/2026/08/EN-Katalog-Airpol-mEnergy-18-55kW.pdf#page=14).",
+          "sourceUrlsToAppend": [
+            "https://airpol.com.pl/wp-content/uploads/2026/08/EN-Katalog-Airpol-mEnergy-18-55kW.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-031",
+              "location": "PDF 14, Web Server",
+              "assertion": "Application explicitement sur OPTI, accès local et multi-utilisateur ; valeurs de capteurs, graphiques, historique, compteurs et événements.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-031",
+              "location": "Comparaison PDF 11 et 14",
+              "assertion": "Portée générale OPTI/NAVI page 11 et précision OPTI page 14 conservées ; API, cadence, conservation, export et modes exacts de protection non documentés sur ces pages.",
+              "kind": "document_comparison",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-031",
+              "sourceLabel": "Airpol mEnergy, brochure constructeur août 2026",
+              "url": "https://airpol.com.pl/wp-content/uploads/2026/08/EN-Katalog-Airpol-mEnergy-18-55kW.pdf",
+              "resolvedUrl": "https://airpol.com.pl/wp-content/uploads/2026/08/EN-Katalog-Airpol-mEnergy-18-55kW.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "b1d8b378e00c95a22c35e86765d7205881abe88e3a3d0fb389b648e84d50626e",
+              "bytes": 6630663,
+              "observedAt": "2026-10-03T18:28:45.209758+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 11, OPTI & NAVI ; PDF 14, Web Server ; Comparaison PDF 11 et 14 ; Classement éditorial des fonctions page 14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/cloueur-clous-mal-enfonces-pression-profondeur.md",
+      "beforeSha256": "cf54ac18ad579afda8283a0aca717e47f6839f141a893f25117b69b7b609ebbf",
+      "afterSha256": "85057f1f3d8a8e4c71c579f5c66656be4cb6e03c97fcd43a83293aadea1a30cf",
+      "entries": [
+        {
+          "newGuide": "fasco-f44ac-cn15w-ps65-clous-bobine-fil-plastique",
+          "paragraphMarkdown": "Sur le F44AC CN15W-PS65, l’angle de 15° ne suffit pas : la fiche distingue 25–65 mm pour les bobines liées par fil et 32–65 mm pour les bandes plastiques CN-AG. Le [guide des bobines F44AC](/guides/fasco-f44ac-cn15w-ps65-clous-bobine-fil-plastique/) vérifie aussi pas, diamètre et platine de magasin avant de chercher une correction de pression. [BECK/FASCO F44AC CN15W-PS65, fiche avril 2023](https://www.beck-fastening.com/Corporate/00_No%20Index/Handouts%20-%20No%20Index/Handout_F44AC%20CN15W-PS65_EN_2304_screen.pdf#page=2).",
+          "sourceUrlsToAppend": [
+            "https://www.beck-fastening.com/Corporate/00_No%20Index/Handouts%20-%20No%20Index/Handout_F44AC%20CN15W-PS65_EN_2304_screen.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-032",
+              "location": "PDF 2, Fastener Data, Wire/Plastic",
+              "assertion": "Longueurs 25–65 mm fil, 32–65 plastique ; diamètre 2,10–2,50 mm ; tête 5–6 mm ; pas 7–8 et 7,50 ; CN-AG plastique ; capacité 250–400 et 200.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-032",
+              "location": "PDF 2, Handling et Actuation",
+              "assertion": "Platine réglée à longueur, premier clou et alignement au canal avant air ; tir simple/contact.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-032",
+              "sourceLabel": "BECK/FASCO F44AC CN15W-PS65, fiche avril 2023",
+              "url": "https://www.beck-fastening.com/Corporate/00_No%20Index/Handouts%20-%20No%20Index/Handout_F44AC%20CN15W-PS65_EN_2304_screen.pdf",
+              "resolvedUrl": "https://www.beck-fastening.com/Corporate/00_No%20Index/Handouts%20-%20No%20Index/Handout_F44AC%20CN15W-PS65_EN_2304_screen.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "825d10f80896f1cdb83bc9ca1bf5df0739eb510035d3cc3c6006d68b6134e92c",
+              "bytes": 736192,
+              "observedAt": "2026-10-03T18:22:18.649258+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 2, Fastener Data, Wire/Plastic ; PDF 2, Handling et Actuation ; PDF 2, Tool characteristics"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/pistolet-peinture-gravite-aspiration-cuve-pression.md",
+      "beforeSha256": "c583e65d974408bf26cb4e8e5ad537c731f716b4b5375cee1d2aec33775642db",
+      "afterSha256": "7cd2142aa9f6d65eb539a5ef493c42443046dc32bba5b7f97423f6a5f50cd2d0",
+      "entries": [
+        {
+          "newGuide": "sata-rps-uv-godet-qcc-peinture",
+          "paragraphMarkdown": "Le raccord du godet ne résume pas son aptitude au produit. SATA indique QCC pour les RPS 1202150 et 1202043, avec une aptitude UV positive pour le premier et négative pour le second. Le [choix d’un RPS UV](/guides/sata-rps-uv-godet-qcc-peinture/) distingue protection lumineuse, tamis et connexion, sans garantir toute compatibilité chimique. [SATA RPS UV 1202150, fiche fabricant](https://www.sata.com/en-us/multi-purpose-cup-system-rps-uv-0.6-l-200-m-plug-in-sieve-qcc-uv-cup-black-vpe-50-for-mixing-spraying-reusing-and-storing-uv-based-coating-systems/1202150). [SATA RPS 1202043](https://www.sata.com/es-us/sistema-de-vasos-multiuso-rps-0-3-l-125-m-tamiz-plano-qcc-embalaje-de-50-unidades-para-mezclar-pintar-reutilizar-y-almacenar-sistemas-de-pintura-con-disolventes-y-base-agua/1202043).",
+          "sourceUrlsToAppend": [
+            "https://www.sata.com/en-us/multi-purpose-cup-system-rps-uv-0.6-l-200-m-plug-in-sieve-qcc-uv-cup-black-vpe-50-for-mixing-spraying-reusing-and-storing-uv-based-coating-systems/1202150",
+            "https://www.sata.com/es-us/sistema-de-vasos-multiuso-rps-0-3-l-125-m-tamiz-plano-qcc-embalaje-de-50-unidades-para-mezclar-pintar-reutilizar-y-almacenar-sistemas-de-pintura-con-disolventes-y-base-agua/1202043"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-027",
+              "location": "Page produit 1202150, description et Technical data",
+              "assertion": "RPS UV noir : 0,6 L, filtre enfichable 200 µm, QCC ; godet/couvercle opaques, adaptés aux matériaux UV, champ UV Yes.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-030",
+              "location": "Page produit 1202043, Datos técnicos et description",
+              "assertion": "RPS 0,3 L, tamis plat 125 µm, QCC ; aptitude UV No.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-027",
+              "location": "Comparaison avec page 1202043",
+              "assertion": "Même raccord et aptitudes UV distinctes ; capacité/tamis diffèrent aussi, sans relation causale UV déduite.",
+              "kind": "document_comparison",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-027",
+              "sourceLabel": "SATA RPS UV 1202150, fiche fabricant",
+              "url": "https://www.sata.com/en-us/multi-purpose-cup-system-rps-uv-0.6-l-200-m-plug-in-sieve-qcc-uv-cup-black-vpe-50-for-mixing-spraying-reusing-and-storing-uv-based-coating-systems/1202150",
+              "resolvedUrl": "https://www.sata.com/en-us/multi-purpose-cup-system-rps-uv-0.6-l-200-m-plug-in-sieve-qcc-uv-cup-black-vpe-50-for-mixing-spraying-reusing-and-storing-uv-based-coating-systems/1202150",
+              "status": 200,
+              "contentType": "text/html; charset=UTF-8",
+              "sha256": "d18e2a0ae632709c22a021890b163a8386dc34c22c02677ce1868e993975a06e",
+              "bytes": 460552,
+              "observedAt": "2026-10-03T18:38:41.926511+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "Page produit 1202150, description et Technical data ; Comparaison avec page 1202043"
+            },
+            {
+              "id": "primary-030",
+              "sourceLabel": "SATA RPS 1202043, fiche fabricant",
+              "url": "https://www.sata.com/es-us/sistema-de-vasos-multiuso-rps-0-3-l-125-m-tamiz-plano-qcc-embalaje-de-50-unidades-para-mezclar-pintar-reutilizar-y-almacenar-sistemas-de-pintura-con-disolventes-y-base-agua/1202043",
+              "resolvedUrl": "https://www.sata.com/es-us/sistema-de-vasos-multiuso-rps-0-3-l-125-m-tamiz-plano-qcc-embalaje-de-50-unidades-para-mezclar-pintar-reutilizar-y-almacenar-sistemas-de-pintura-con-disolventes-y-base-agua/1202043",
+              "status": 200,
+              "contentType": "text/html; charset=UTF-8",
+              "sha256": "7388da1150bfccfbd0d6368cf224da389aef481d79b6b9738eb205c7ab878f15",
+              "bytes": 464889,
+              "observedAt": "2026-10-03T18:49:14.024383+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "Page produit 1202043, Datos técnicos et description"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/graco-pro-xp-aa-queues-jet-air-fluide.md",
+      "beforeSha256": "d7af00c2b74163c7fc79edfab33c27be43749aa9550535a7116beb8da7ec63b3",
+      "afterSha256": "d56e41df2b98f01e4710709eb5a314ccb1074a6584aa9e1a305b45047139b67b",
+      "entries": [
+        {
+          "newGuide": "sames-xcite-400-filtre-200-bar-accessoire",
+          "paragraphMarkdown": "La pression du fluide doit respecter les accessoires. Les filtres SAMES 155010000 et 155010100 plafonnent à 200 bar, même lorsqu’un Xcite+ 400 bar est utilisé. Le [cas Xcite+ : filtre de la chaîne fluide](/guides/sames-xcite-400-filtre-200-bar-accessoire/) vérifie chaque limite et la sépare de l’alimentation d’air d’atomisation. [SAMES Xcite+ et Xcite+ Light, notice DRT582221110-US-G](https://cdn.quable.com/sames/f7323419/original/xcite%2520-xcite%2520light-sames-airmix-DRT582221110-US-G.pdf#page=58).",
+          "sourceUrlsToAppend": [
+            "https://cdn.quable.com/sames/f7323419/original/xcite%2520-xcite%2520light-sames-airmix-DRT582221110-US-G.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-028",
+              "location": "PDF 58, §8.1.2.4",
+              "assertion": "Filtres 155010000 MM et 155010100 MF 1/2 JIC : maximum 200 bar ; flexible 050450853 listé 120 bar.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-028",
+              "location": "PDF 21, §3.2",
+              "assertion": "Versions 120/240/400 ; Light 120/240 et Xcite+ 400 ; maximum air 6 bar séparé du fluide.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-028",
+              "sourceLabel": "SAMES Xcite+ et Xcite+ Light, notice DRT582221110-US-G",
+              "url": "https://cdn.quable.com/sames/f7323419/original/xcite%2520-xcite%2520light-sames-airmix-DRT582221110-US-G.pdf",
+              "resolvedUrl": "https://cdn.quable.com/sames/f7323419/original/xcite%2520-xcite%2520light-sames-airmix-DRT582221110-US-G.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "d803c1750f437e2b453a82d38a56616485a98039d59ee8e3e0ee6d15fd03e968",
+              "bytes": 2483629,
+              "observedAt": "2026-10-03T18:38:42.157356+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 58, §8.1.2.4 ; PDF 21, §3.2 ; PDF 10, §1.4.1 ; Comparaison propre du scénario 250 bar"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/content/guides/buse-pistolet-peinture-chapeau-air-consommation.md",
+      "beforeSha256": "7be5ba6acfc3d7ed389da6722cc683b5a872d36e51274e583ea449c1084312e6",
+      "afterSha256": "a59ef53b4d5e4176d1f96a22f752fdf7cc530bd220f5dade508db8fdb3a9af8f",
+      "entries": [
+        {
+          "newGuide": "sames-xcite-buse-microfiltre-joint",
+          "paragraphMarkdown": "Le montage derrière la buse change aussi selon sa taille. SAMES indique le microfiltre 129609901 pour 03, 04 et 06, et le joint 129529903 pour 09 et au-delà. Le [guide de montage Xcite+](/guides/sames-xcite-buse-microfiltre-joint/) relie la pièce au marquage complet, avant toute tentative de correction du jet par la pression. [SAMES Xcite+ et Xcite+ Light, notice DRT582221110-US-G](https://cdn.quable.com/sames/f7323419/original/xcite%2520-xcite%2520light-sames-airmix-DRT582221110-US-G.pdf#page=57).",
+          "sourceUrlsToAppend": [
+            "https://cdn.quable.com/sames/f7323419/original/xcite%2520-xcite%2520light-sames-airmix-DRT582221110-US-G.pdf"
+          ],
+          "assertions": [
+            {
+              "sourceId": "primary-028",
+              "location": "PDF 57, §8.1.2.3, pièces 3.1/3.2",
+              "assertion": "129609901 microfiltre n°4/100 µm seulement 03,04,06 ; 129529903 joint seulement 09 et au-delà.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            },
+            {
+              "sourceId": "primary-028",
+              "location": "PDF 57, Tip chart",
+              "assertion": "Référence à partir du marquage ; exemple 09.094 vers 134509094 ; familles standard et peintures à l’eau distinctes.",
+              "kind": "documentary_fact",
+              "status": "reviewed_documentary"
+            }
+          ],
+          "sourceProofs": [
+            {
+              "id": "primary-028",
+              "sourceLabel": "SAMES Xcite+ et Xcite+ Light, notice DRT582221110-US-G",
+              "url": "https://cdn.quable.com/sames/f7323419/original/xcite%2520-xcite%2520light-sames-airmix-DRT582221110-US-G.pdf",
+              "resolvedUrl": "https://cdn.quable.com/sames/f7323419/original/xcite%2520-xcite%2520light-sames-airmix-DRT582221110-US-G.pdf",
+              "status": 200,
+              "contentType": "application/pdf",
+              "sha256": "d803c1750f437e2b453a82d38a56616485a98039d59ee8e3e0ee6d15fd03e968",
+              "bytes": 2483629,
+              "observedAt": "2026-10-03T18:38:42.157356+00:00",
+              "captureKind": "primary_source_bytes",
+              "location": "PDF 57, §8.1.2.3, pièces 3.1/3.2 ; PDF 57, Tip chart ; PDF 10, §1.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "newFiles": [
+    {
+      "slug": "norgren-l17-faible-debit-lubrification-demarrage",
+      "path": "src/content/guides/norgren-l17-faible-debit-lubrification-demarrage.md",
+      "frozenSha256": "9de26bc592d4619c4aa5b3bac226509157ebb5f198a2c57a8c7c530a65f6de42",
+      "sha256": "9de26bc592d4619c4aa5b3bac226509157ebb5f198a2c57a8c7c530a65f6de42"
+    },
+    {
+      "slug": "beko-drypoint-ra-perte-pression-condensat-gele",
+      "path": "src/content/guides/beko-drypoint-ra-perte-pression-condensat-gele.md",
+      "frozenSha256": "6de8211b04ef9ffa92761ee4496387d4b65dbdfebfe8faf657fcd644c7197671",
+      "sha256": "6de8211b04ef9ffa92761ee4496387d4b65dbdfebfe8faf657fcd644c7197671"
+    },
+    {
+      "slug": "beko-dmc18-pf-hdp-dra-alarme-signification",
+      "path": "src/content/guides/beko-dmc18-pf-hdp-dra-alarme-signification.md",
+      "frozenSha256": "b9214a61cc36e99fe8f956e394ed3551f9547d9d49b6e4b08dddcd54a3b51e3a",
+      "sha256": "b9214a61cc36e99fe8f956e394ed3551f9547d9d49b6e4b08dddcd54a3b51e3a"
+    },
+    {
+      "slug": "piab-pisave-esl-pompe-clapet-non-retour",
+      "path": "src/content/guides/piab-pisave-esl-pompe-clapet-non-retour.md",
+      "frozenSha256": "ebfcc744dd61085a7645e290f2500ac2dcbf4e0e1a97e142470630f98534535e",
+      "sha256": "ebfcc744dd61085a7645e290f2500ac2dcbf4e0e1a97e142470630f98534535e"
+    },
+    {
+      "slug": "piab-pisave-esl-tubes-signal-retard-regulation",
+      "path": "src/content/guides/piab-pisave-esl-tubes-signal-retard-regulation.md",
+      "frozenSha256": "1518683c3017af4e654f34fe36d6d8454d78441a19f6d25a220132e4af215a03",
+      "sha256": "1518683c3017af4e654f34fe36d6d8454d78441a19f6d25a220132e4af215a03"
+    },
+    {
+      "slug": "gema-ig02-faible-poudre-pompage-air-total",
+      "path": "src/content/guides/gema-ig02-faible-poudre-pompage-air-total.md",
+      "frozenSha256": "b2204c864f58a1a8403a3582d72e0123e22f778daa7a02895de85d812bdafd31",
+      "sha256": "b2204c864f58a1a8403a3582d72e0123e22f778daa7a02895de85d812bdafd31"
+    },
+    {
+      "slug": "gema-ig06-bn-filtre-clapet-nettoyage-solvant",
+      "path": "src/content/guides/gema-ig06-bn-filtre-clapet-nettoyage-solvant.md",
+      "frozenSha256": "ebf4d5f5c3f8bd0641d57074c71fdabfbe133e5fbf68388a4b9718a3c03663f6",
+      "sha256": "ebf4d5f5c3f8bd0641d57074c71fdabfbe133e5fbf68388a4b9718a3c03663f6"
+    },
+    {
+      "slug": "cs-va520-impulsions-50hz-compteur-debit",
+      "path": "src/content/guides/cs-va520-impulsions-50hz-compteur-debit.md",
+      "frozenSha256": "fe444c989e83f504db12183dc837a9fcbcaba0509f01eda54a81e53fd6359762",
+      "sha256": "fe444c989e83f504db12183dc837a9fcbcaba0509f01eda54a81e53fd6359762"
+    },
+    {
+      "slug": "cs-va500-analogique-auto-scaling-automate",
+      "path": "src/content/guides/cs-va500-analogique-auto-scaling-automate.md",
+      "frozenSha256": "503e41c60af2494197dfd79674c3edc439b92ba3ba016deb13369e66c46f0138",
+      "sha256": "503e41c60af2494197dfd79674c3edc439b92ba3ba016deb13369e66c46f0138"
+    },
+    {
+      "slug": "ross-dm2-c-reset-200ms-alimentation",
+      "path": "src/content/guides/ross-dm2-c-reset-200ms-alimentation.md",
+      "frozenSha256": "9e528ed73470ba72ae5a4d7bbf41c0428f2373ecaf15873257211a703063dc81",
+      "sha256": "9e528ed73470ba72ae5a4d7bbf41c0428f2373ecaf15873257211a703063dc81"
+    },
+    {
+      "slug": "fluke-ii900-leakq-distance-obstacles",
+      "path": "src/content/guides/fluke-ii900-leakq-distance-obstacles.md",
+      "frozenSha256": "27d06b57a3dba3cdee311e38c51300c4cfa56a1037f2e263a62c766de24a8b6f",
+      "sha256": "27d06b57a3dba3cdee311e38c51300c4cfa56a1037f2e263a62c766de24a8b6f"
+    },
+    {
+      "slug": "heidenhain-da400-air-entree-humide-six-bar",
+      "path": "src/content/guides/heidenhain-da400-air-entree-humide-six-bar.md",
+      "frozenSha256": "13d61ec232e565cead6fa00747c0ca0a9f63f8589388c8ee0337114f8ec52bc5",
+      "sha256": "13d61ec232e565cead6fa00747c0ca0a9f63f8589388c8ee0337114f8ec52bc5"
+    },
+    {
+      "slug": "heidenhain-da400-codeurs-debit-raccords",
+      "path": "src/content/guides/heidenhain-da400-codeurs-debit-raccords.md",
+      "frozenSha256": "4b6ec82382bb0c747e2289d3e5ee06ce34c1b2285fa97a67606ba5ded0fd7914",
+      "sha256": "4b6ec82382bb0c747e2289d3e5ee06ce34c1b2285fa97a67606ba5ded0fd7914"
+    },
+    {
+      "slug": "coval-lemax-asc-missing-piece-poreuse",
+      "path": "src/content/guides/coval-lemax-asc-missing-piece-poreuse.md",
+      "frozenSha256": "51ea4fad70fe97d1377ed96a5013eda6e0ccb46f7a6cb3b39cf7c7fa15f30d82",
+      "sha256": "51ea4fad70fe97d1377ed96a5013eda6e0ccb46f7a6cb3b39cf7c7fa15f30d82"
+    },
+    {
+      "slug": "coval-lemax-no-nf-coupure-air-electrique",
+      "path": "src/content/guides/coval-lemax-no-nf-coupure-air-electrique.md",
+      "frozenSha256": "e313881f85f4ca4034794ccf05782a32c7ee6c58d5da61f5e8647045fd65e7ff",
+      "sha256": "e313881f85f4ca4034794ccf05782a32c7ee6c58d5da61f5e8647045fd65e7ff"
+    },
+    {
+      "slug": "ako-vanne-pincement-pression-differentielle",
+      "path": "src/content/guides/ako-vanne-pincement-pression-differentielle.md",
+      "frozenSha256": "aee6fbab8de836dde72478450b10ce86092f736afc6202263d60fb8e9b19818c",
+      "sha256": "aee6fbab8de836dde72478450b10ce86092f736afc6202263d60fb8e9b19818c"
+    },
+    {
+      "slug": "ako-vanne-pincement-vide-manchette-ouverte",
+      "path": "src/content/guides/ako-vanne-pincement-vide-manchette-ouverte.md",
+      "frozenSha256": "9d09957a570a0a1544c1c4448dcc882c08b63a49bcb6d3b33aa3caaab6913842",
+      "sha256": "9d09957a570a0a1544c1c4448dcc882c08b63a49bcb6d3b33aa3caaab6913842"
+    },
+    {
+      "slug": "fipa-gr04-aiguilles-course-epaisseur-matiere",
+      "path": "src/content/guides/fipa-gr04-aiguilles-course-epaisseur-matiere.md",
+      "frozenSha256": "3cca792aefdfc6c90bfd890990cee7c435fe53655e0eb221f2600ab4ef45f04f",
+      "sha256": "3cca792aefdfc6c90bfd890990cee7c435fe53655e0eb221f2600ab4ef45f04f"
+    },
+    {
+      "slug": "zimmer-gp200-ventilation-air-barrage-guide",
+      "path": "src/content/guides/zimmer-gp200-ventilation-air-barrage-guide.md",
+      "frozenSha256": "bfb59e3497abb1179647c92a7b6b404ab7ffbf48d2c31dac7eb4959b1fc996a4",
+      "sha256": "bfb59e3497abb1179647c92a7b6b404ab7ffbf48d2c31dac7eb4959b1fc996a4"
+    },
+    {
+      "slug": "zimmer-gp200-capteur-magnetique-inductif",
+      "path": "src/content/guides/zimmer-gp200-capteur-magnetique-inductif.md",
+      "frozenSha256": "45bfb04fa7a8a75406af4f346a57d3b0ab4b96baa5b8261b7312b1aee456006d",
+      "sha256": "45bfb04fa7a8a75406af4f346a57d3b0ab4b96baa5b8261b7312b1aee456006d"
+    },
+    {
+      "slug": "robotiq-airpick-mode-auto-piece-poreuse",
+      "path": "src/content/guides/robotiq-airpick-mode-auto-piece-poreuse.md",
+      "frozenSha256": "08c6264465c78f3530640bb6f56f439f3c669231aab52b0f9d203a8f4bbaf4fe",
+      "sha256": "08c6264465c78f3530640bb6f56f439f3c669231aab52b0f9d203a8f4bbaf4fe"
+    },
+    {
+      "slug": "robotiq-airpick-release-distance-valve",
+      "path": "src/content/guides/robotiq-airpick-release-distance-valve.md",
+      "frozenSha256": "18e094c286f393d456f0bcd1ae2050f713e5649e24394036944509046b22daad",
+      "sha256": "18e094c286f393d456f0bcd1ae2050f713e5649e24394036944509046b22daad"
+    },
+    {
+      "slug": "enerpac-pa133-pompe-desamorcee-air-hydraulique",
+      "path": "src/content/guides/enerpac-pa133-pompe-desamorcee-air-hydraulique.md",
+      "frozenSha256": "b5bf370519ed769f8e7ed7d08d67c83b390a30dec71161d65d5c72f4314a6548",
+      "sha256": "b5bf370519ed769f8e7ed7d08d67c83b390a30dec71161d65d5c72f4314a6548"
+    },
+    {
+      "slug": "rems-tiger-pneumatic-lame-guide-tube",
+      "path": "src/content/guides/rems-tiger-pneumatic-lame-guide-tube.md",
+      "frozenSha256": "5420ac237c3e0a58e68199d545717dbc9bf6bb647c475058a5c11fb75690e6bb",
+      "sha256": "5420ac237c3e0a58e68199d545717dbc9bf6bb647c475058a5c11fb75690e6bb"
+    },
+    {
+      "slug": "airpol-menergy-ultra-speed-consigne-debit",
+      "path": "src/content/guides/airpol-menergy-ultra-speed-consigne-debit.md",
+      "frozenSha256": "60ecb5dde9c84607f06620729afe142fb34c07aa06de5a1b58bd4b5743b618af",
+      "sha256": "60ecb5dde9c84607f06620729afe142fb34c07aa06de5a1b58bd4b5743b618af"
+    },
+    {
+      "slug": "airpol-opti-navi-supervision-locale-compresseur",
+      "path": "src/content/guides/airpol-opti-navi-supervision-locale-compresseur.md",
+      "frozenSha256": "a9b320464797eb9ec0ce07f742e7f379ebcd5e8003400c56aa52c0695751479a",
+      "sha256": "a9b320464797eb9ec0ce07f742e7f379ebcd5e8003400c56aa52c0695751479a"
+    },
+    {
+      "slug": "fasco-f44ac-cn15w-ps65-clous-bobine-fil-plastique",
+      "path": "src/content/guides/fasco-f44ac-cn15w-ps65-clous-bobine-fil-plastique.md",
+      "frozenSha256": "317e1b42aaa0931fa69c385be82487a4ec660882d220548ccd4cc55534fa7268",
+      "sha256": "317e1b42aaa0931fa69c385be82487a4ec660882d220548ccd4cc55534fa7268"
+    },
+    {
+      "slug": "sata-rps-uv-godet-qcc-peinture",
+      "path": "src/content/guides/sata-rps-uv-godet-qcc-peinture.md",
+      "frozenSha256": "40696b22a638ff411e605370c6e0f122b406d9f336ff4103528f089c83756d7d",
+      "sha256": "40696b22a638ff411e605370c6e0f122b406d9f336ff4103528f089c83756d7d"
+    },
+    {
+      "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+      "path": "src/content/guides/sames-xcite-400-filtre-200-bar-accessoire.md",
+      "frozenSha256": "cd3ed356f7838978551feff7e266464cca76e9916503f4fbf4caee779538a7bc",
+      "sha256": "cd3ed356f7838978551feff7e266464cca76e9916503f4fbf4caee779538a7bc"
+    },
+    {
+      "slug": "sames-xcite-buse-microfiltre-joint",
+      "path": "src/content/guides/sames-xcite-buse-microfiltre-joint.md",
+      "frozenSha256": "b026b092b6327241ef0e504354d39765d42ac48e85e46bfe23bc7b9c1f88c9cf",
+      "sha256": "b026b092b6327241ef0e504354d39765d42ac48e85e46bfe23bc7b9c1f88c9cf"
+    }
+  ]
+}

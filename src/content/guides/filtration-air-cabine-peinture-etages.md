@@ -1,17 +1,20 @@
 ---
-title: "Filtration d’air en cabine de peinture : attribuer une fonction à chaque étage"
+title: "Filtration d’air en cabine de peinture : attribuer une fonction à chaque
+  étage"
 seoTitle: "Filtration cabine peinture : étages et débit"
-description: "Dossier pour distinguer séparateur, filtre fin et charbon actif, puis vérifier débit, pression et usage à partir de la gamme SATA filter 400."
+description: "Dossier pour distinguer séparateur, filtre fin et charbon actif,
+  puis vérifier débit, pression et usage à partir de la gamme SATA filter 400."
 pubDate: 2026-07-15
 category: "Installer"
-audiences: [professionnel]
-metiers: [carrosserie-peinture]
+audiences: [ professionnel ]
+metiers: [ carrosserie-peinture ]
 readingTime: 15
 featured: true
 sources:
   - https://www.sata.com/fr-int/produits/filtration/serie-sata-filter-400/serie-sata-filter-400
   - https://www.iso.org/fr/standard/46418.html
-updatedDate: 2026-09-26
+  - https://www.gemapowdercoating.com/fileadmin/documents/User_Manuals/English/Injectors_and_Pumps/Venturi_Injectors/OptiFlow-IG06-BN-en.pdf?hash=1597389581
+updatedDate: 2026-10-03
 ---
 
 Ajouter des bols en série ne documente pas la qualité de l’air. Chaque étage doit avoir une fonction, une référence, une capacité et un entretien définis. La comparaison avec le besoin du procédé s’effectue au point d’utilisation, sans transformer la composition d’un filtre en classe de pureté mesurée.
@@ -76,6 +79,8 @@ Il faut éviter deux raccourcis : déduire la respirabilité de la seule présen
 La réception initiale ne couvre pas le vieillissement. Un observatoire utile conserve les différentiels de pression sous un débit comparable, les dates de remplacement, les purges, les incidents de contamination et les résultats de contrôle au point d’utilisation.
 
 Lorsque la pression au pistolet baisse, comparez l’amont et l’aval de chaque ensemble avant de relever la consigne générale. Le guide [mesurer la pression dynamique](/guides/mesurer-pression-dynamique-pistolet-peinture/) fournit ce profil. En cas de défaut de surface, le [test de contamination](/guides/tester-contamination-air-avant-peinture/) complète le diagnostic sans fusionner débit et pureté.
+
+Un filtre local de clapet ne se nettoie pas forcément comme le corps de l’injecteur. Pour l’IG06-BN, Gema demande de souffler l’élément de l’intérieur vers l’extérieur et interdit son immersion dans un liquide ou un solvant. Le [guide de maintenance IG06-BN](/guides/gema-ig06-bn-filtre-clapet-nettoyage-solvant/) identifie les deux clapets et les consignes propres à chaque composant. [Gema OptiFlow IG06-BN, notice 1017573 Rev00](https://www.gemapowdercoating.com/fileadmin/documents/User_Manuals/English/Injectors_and_Pumps/Venturi_Injectors/OptiFlow-IG06-BN-en.pdf?hash=1597389581#page=14).
 
 ## Cahier de réception
 

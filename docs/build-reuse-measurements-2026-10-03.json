@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0.0",
+  "observedAt": "2026-10-03",
+  "node": "24.19.0",
+  "environment": "macOS arm64, mesure locale hors build de production",
+  "engineEquivalence": {
+    "baselineSha": "c008091895455e69a7db070fca1773210be48cc7",
+    "tools": 14087,
+    "compressors": [
+      "einhell-tc-ac-190-of-set",
+      "atlas-copco-lz-10-10-bm",
+      "abac-atf-10-10-bm"
+    ],
+    "margins": [
+      0,
+      0.25,
+      1
+    ],
+    "independent": 8201,
+    "qualified": 5886,
+    "comparisons": 126783,
+    "exactJsonUnchanged": true,
+    "resultDigest": "22663664e5bebf064678ae2dd1d2f8d94223c0bff6a9464ad47e88f27fa0e0ee"
+  },
+  "cachePacking": {
+    "baselineSha": "c008091895455e69a7db070fca1773210be48cc7",
+    "rows": 3219,
+    "totalTools": 14087,
+    "qualifiedColumns": 5886,
+    "independentTools": 8201,
+    "beforeRowsBytes": 65965770,
+    "afterRowsBytes": 29740422,
+    "newColumnsBytes": 394363,
+    "savedRowsBytes": 36225348,
+    "savedRowsPercent": 54.91537201794203,
+    "retainedComparisons": 18947034,
+    "independentComparisons": 26399019,
+    "uniqueQualifiedValues": 1410426,
+    "durationMs": 73505.015833,
+    "allResultsIdentical": true
+  },
+  "limits": [
+    "Résultats comparés après sérialisation JSON, sans arrondi des nombres.",
+    "Le benchmark du cache compare les objets hérités conservés et les résultats indépendants ; il ne décode pas toute la matrice dans la nouvelle classe.",
+    "Le cache de production a été lu, sans remplacement de ses fichiers.",
+    "Les temps ne décrivent pas les performances d’un runner CI.",
+    "Le prochain catalogue exige ses propres contrôles de budget."
+  ],
+  "archivePacking": {
+    "original": {
+      "compressedBytes": 200118788,
+      "tarBytes": 1579683840,
+      "tarSha256": "8c26b93709a28a414baf2a84a373fc9209b9a85f24ba79ad4ecdbac28b927ce0",
+      "verificationSeconds": 52.32999070803635
+    },
+    "level9": {
+      "compressedBytes": 196062248,
+      "tarBytes": 1579683840,
+      "tarSha256": "8c26b93709a28a414baf2a84a373fc9209b9a85f24ba79ad4ecdbac28b927ce0",
+      "verificationSeconds": 30.341321582905948
+    },
+    "savedBytes": 4056540,
+    "limitBytes": 201326592,
+    "marginBytes": 5264344,
+    "identicalTar": true
+  }
+}

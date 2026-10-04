@@ -1,0 +1,153 @@
+const product = {
+	"id": "airpol-sr-2",
+	"slug": "airpol-sr-2",
+	"brand": "Airpol",
+	"model": "SR 2",
+	"variant": {
+		"familyId": "airpol-sr-2",
+		"label": "Groupe scroll Airpol SR sans réservoir de stockage intégré",
+		"distinguishingAttributes": {
+			"équipement": "Groupe scroll Airpol SR sans réservoir de stockage intégré",
+			"pressionMaximale": "10 bar",
+			"cuve": "0 L",
+			"fréquence": "50 Hz"
+		}
+	},
+	"tankLiters": 0,
+	"maxPressureBar": 10,
+	"fadCurve": [
+		{
+			"pressureBar": 10,
+			"litersPerMinute": 213.333
+		}
+	],
+	"dutyCycle": 1,
+	"oilType": "oil-free",
+	"powerKw": 2.2,
+	"confidence": "B",
+	"status": "unknown",
+	"image": {
+		"src": "/images/products/airpol-sr-2.svg",
+		"alt": "Repères techniques : Airpol SR 2",
+		"sourceUrl": "https://airpol.com.pl/en/products/basic-design-scroll-compressors/",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+	},
+	"specifications": [
+		{
+			"label": "Configuration constructeur",
+			"value": "Groupe scroll Airpol SR sans réservoir de stockage intégré",
+			"evidenceIds": [
+				"october3d-airpol-page-04"
+			]
+		},
+		{
+			"label": "Pression maximale de fonctionnement",
+			"value": "10 bar relatifs",
+			"evidenceIds": [
+				"october3d-airpol-scroll-max"
+			]
+		},
+		{
+			"label": "Air livré à 10 bar",
+			"value": "213,333 L/min",
+			"evidenceIds": [
+				"october3d-airpol-page-04",
+				"october3d-airpol-scroll-max"
+			]
+		},
+		{
+			"label": "Cuve de stockage",
+			"value": "0 L",
+			"evidenceIds": [
+				"october3d-airpol-page-04"
+			]
+		},
+		{
+			"label": "Cycle de service déclaré",
+			"value": "Service continu déclaré sous les conditions constructeur",
+			"evidenceIds": [
+				"october3d-airpol-scroll-max"
+			]
+		},
+		{
+			"label": "Alimentation publiée",
+			"value": "400 V/3 ph/50 Hz",
+			"evidenceIds": [
+				"october3d-airpol-scroll-max"
+			]
+		},
+		{
+			"label": "Fréquence retenue",
+			"value": "50 Hz",
+			"evidenceIds": [
+				"october3d-airpol-scroll-max"
+			]
+		}
+	],
+	"editorial": {
+		"overview": "Airpol SR 2. 213,333 L/min à 10 bar. Groupe scroll Airpol SR sans réservoir de stockage intégré.",
+		"verifiedFacts": [
+			"Air livré rattaché à une pression et aux unités originales du constructeur.",
+			"Cuve de stockage documentée : 0 L.",
+			"Pression maximale de fonctionnement publiée : 10 bar."
+		],
+		"limitations": [
+			"Conditions de référence FAD non précisées dans la fiche ; aucun AnnexC ni température/humidité ajouté.",
+			"Une seule configuration par modèle est retenue ; aucune fusion de pressions de fabrication différentes.",
+			"Tiret dans colonne Air receiver volume, nomenclature SR distincte des SRK 240/500 L.",
+			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
+			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+		]
+	},
+	"evidence": [
+		{
+			"id": "october3d-airpol-page-04",
+			"sourceUrl": "https://airpol.com.pl/en/products/basic-design-scroll-compressors/",
+			"sourceLabel": "Airpol, manufacturer technical documentation",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-03",
+			"confidence": "B",
+			"notes": "SHA-256 c056c9e948a2f1379fd4e8106c35bc3c6df2eb1b85dfe480505c4f4e30098028 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "october3d-airpol-scroll-max",
+			"sourceUrl": "https://airpol.com.pl/en/knowledge-base/qa-frequently-asked-questions-about-airpol-sr-scroll-compressors/",
+			"sourceLabel": "ALUP, documentation constructeur",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-03",
+			"confidence": "B",
+			"notes": "SHA-256 db991b62ee843bc1768841fca82b9e332cf5cf7dbfa247a6aaa0541216b79195 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		}
+	],
+	"fieldSources": {
+		"tankLiters": [
+			"october3d-airpol-page-04"
+		],
+		"maxPressureBar": [
+			"october3d-airpol-scroll-max"
+		],
+		"fadCurve": [
+			"october3d-airpol-page-04",
+			"october3d-airpol-scroll-max"
+		],
+		"oilType": [
+			"october3d-airpol-scroll-max"
+		],
+		"dutyCycle": [
+			"october3d-airpol-scroll-max"
+		],
+		"electrical": [
+			"october3d-airpol-scroll-max"
+		],
+		"powerKw": [
+			"october3d-airpol-page-04"
+		]
+	},
+	"notes": [
+		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
+	]
+};
+
+export default product;

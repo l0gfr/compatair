@@ -7,7 +7,9 @@ import {
 	MAX_PRODUCT_IMAGE_BYTES,
 	optimizeImportedProductImage,
 	productImageSizeError,
+	productTechnicalSvgError,
 } from './catalog-tooling.mjs';
+import { technicalCardSvg } from './technical-card.mjs';
 
 const temporaryDirectories = [];
 
@@ -16,6 +18,16 @@ afterEach(async () => {
 });
 
 describe('catalog tooling', () => {
+	it('accepts only an exact generated vector card and rejects active markup or stale data', () => {
+		const product = { id: 'fixture', brand: 'Example', model: 'M1', mpn: '<script>&"', demandModel: 'fixed-flow', airflowLpm: { typical: 300 }, workingPressureBar: { typical: 6 }, image: { sourceLabel: 'Carte technique CompatAir, données fabricant' } };
+		const svg = technicalCardSvg(product, 'tools');
+		expect(productTechnicalSvgError(product, 'tools', svg)).toBeNull();
+		expect(productTechnicalSvgError(product, 'tools', svg.replace('</svg>', '<script>alert(1)</script></svg>'))).toContain('différente');
+		expect(productTechnicalSvgError(product, 'tools', svg.replace('<svg ', '<svg onload="alert(1)" '))).toContain('différente');
+		expect(productTechnicalSvgError(product, 'tools', svg.replace('</svg>', '<image href="https://example.test/track"/></svg>'))).toContain('différente');
+		expect(productTechnicalSvgError({ ...product, airflowLpm: { typical: 400 } }, 'tools', svg)).toContain('différente');
+		expect(productTechnicalSvgError({ ...product, image: { sourceLabel: 'Fiche externe' } }, 'tools', svg)).toContain('non généré');
+	});
 	it('generates deterministic indexes independent of filesystem order', () => {
 		const source = buildCatalogIndexSource('tools', ['zeta.ts', 'alpha.ts']);
 		expect(source).toContain("import product1 from './alpha';");

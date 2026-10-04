@@ -33,12 +33,10 @@ export function resolveAvailableFad(compressor, pressureBar) {
 	};
 }
 
-/** @param {import("../src/domain/catalog").Compressor} compressor
+/** A missing qualified demand is independent of every compressor in the catalog.
  * @param {import("../src/domain/catalog").ToolProfile} tool
- * @param {{safetyMargin?: number}} input
- * @returns {import("../src/domain/compatibility").CompatibilityResult} */
-export function evaluateCompatibility(compressor, tool, input = {}) {
-	const safetyMargin = input.safetyMargin ?? .25;
+ * @returns {import("../src/domain/compatibility").CompatibilityResult | undefined} */
+export function compatibilityWithoutCompressor(tool) {
 	if (tool.demandModel !== 'fixed-flow' || tool.airflowBasis !== undefined) {
 		const warning = tool.demandModel === 'fixed-flow'
 			? tool.airflowBasis === 'average' ? 'Débit moyen seul : cycle et débit en charge requis.' : tool.airflowBasis === 'free-speed' ? 'Débit à vide seul : consommation maximale ou en charge requise.' : 'Régime de consommation non documenté : débit maximal ou en charge requis.'
@@ -47,6 +45,17 @@ export function evaluateCompatibility(compressor, tool, input = {}) {
 			: tool.demandExplanation;
 		return { verdict: 'insufficient_data', confidence: 'high', limitingFactor: 'data', warnings: [warning], calculationVersion: CALCULATION_VERSION };
 	}
+}
+
+/** @param {import("../src/domain/catalog").Compressor} compressor
+ * @param {import("../src/domain/catalog").ToolProfile} tool
+ * @param {{safetyMargin?: number}} input
+ * @returns {import("../src/domain/compatibility").CompatibilityResult} */
+export function evaluateCompatibility(compressor, tool, input = {}) {
+	const independent = compatibilityWithoutCompressor(tool);
+	if (independent) return independent;
+	if (tool.demandModel !== 'fixed-flow') throw new Error('Unsupported qualified demand model');
+	const safetyMargin = input.safetyMargin ?? .25;
 	const fadResolution = resolveAvailableFad(compressor, tool.workingPressureBar.typical);
 	const usableResolution = ['C', 'D'].includes(compressor.confidence) ? undefined : fadResolution;
 	const usableFad = usableResolution?.litersPerMinute;

@@ -1,18 +1,21 @@
 ---
 title: "Mesurer la pression dynamique d’un pistolet de peinture au bon endroit"
 seoTitle: "Pression dynamique d’un pistolet : méthode"
-description: "Protocole de carrosserie pour régler et consigner la pression à l’entrée du pistolet pendant la pulvérisation, sans la confondre avec la pression cabine."
+description: "Protocole de carrosserie pour régler et consigner la pression à
+  l’entrée du pistolet pendant la pulvérisation, sans la confondre avec la
+  pression cabine."
 pubDate: 2026-07-15
 category: "Utiliser"
-audiences: [professionnel]
-metiers: [carrosserie-peinture]
+audiences: [ professionnel ]
+metiers: [ carrosserie-peinture ]
 readingTime: 12
 sources:
   - https://www.sata.com/en-int/products/additional-products/pressure-measuring-devices/sata-adam-2/downloads
   - https://www.sata.com/assets/cms/2022/10/21/EN-SATA-DanAm-Brochure-SATA-adam-2-Flexibility-Digitalised-K-131862-4020-06-3_uid_6352a33f75bfa.pdf
   - https://www.sata.com/en-eur/products/spray-guns/gravity-flow-cup-guns/satajet-5000-b/technical-data
   - https://www.graco.com/content/dam/graco/tech_documents/manuals/333/333011/333011EN-L.pdf
-updatedDate: 2026-10-02
+  - https://www.gemapowdercoating.com/fileadmin/documents/User_Manuals/English/Injectors_and_Pumps/Venturi_Injectors/OptiFlow-IG02-en.pdf
+updatedDate: 2026-10-03
 relatedGuides:
   - graco-pro-xp-auto-turbine-ta-electrostatique
 ---
@@ -83,6 +86,8 @@ La fiche de teinte ou de procédé peut enregistrer le pistolet, la buse, le pro
 Lorsqu’un flexible, un filtre ou un raccord change, reprenez le profil. Cette nouvelle mesure devient une version du poste, sans remplacer silencieusement les valeurs antérieures.
 
 Pour un jet irrégulier, le [diagnostic des déformations et crachotements du pistolet](/guides/pistolet-peinture-jet-deforme-crachote-diagnostic/) organise les observations avant intervention.
+
+La poudre impose de lire un autre mécanisme que l’atomisation liquide. Sur l’IG02, réduire l’air de convoyage réduit aussi l’air total dans le tuyau et peut rendre le transport irrégulier. Le [cas Gema IG02 à faible poudre](/guides/gema-ig02-faible-poudre-pompage-air-total/) sépare convoyage et air supplémentaire, avec les valeurs guides et les conditions du tableau fabricant. [Gema OptiFlow IG02, mode d’emploi](https://www.gemapowdercoating.com/fileadmin/documents/User_Manuals/English/Injectors_and_Pumps/Venturi_Injectors/OptiFlow-IG02-en.pdf#page=6).
 
 ## Sources
 

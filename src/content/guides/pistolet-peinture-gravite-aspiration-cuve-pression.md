@@ -1,16 +1,28 @@
 ---
-title: "Pistolet peinture à gravité, à aspiration ou à cuve sous pression : que choisir ?"
+title: "Pistolet peinture à gravité, à aspiration ou à cuve sous pression : que
+  choisir ?"
 seoTitle: "Pistolet gravité, aspiration ou cuve sous pression ?"
-description: "Comparez l’alimentation en peinture et le besoin d’air sans confondre gravité, aspiration, cuve sous pression et technologie HVLP. Grille de choix atelier."
+description: "Comparez l’alimentation en peinture et le besoin d’air sans
+  confondre gravité, aspiration, cuve sous pression et technologie HVLP. Grille
+  de choix atelier."
 pubDate: "2026-09-26"
-updatedDate: 2026-10-02
+updatedDate: 2026-10-03
 category: "Choisir"
-audiences: ["professionnel"]
-metiers: ["carrosserie-peinture", "menuiserie-agencement"]
+audiences: [ "professionnel" ]
+metiers: [ "carrosserie-peinture", "menuiserie-agencement" ]
 readingTime: 5
 reviewStatus: "internal"
-relatedGuides: ["compresseur-pour-pistolet-peinture-hvlp", "pistolet-lvlp-vs-hvlp-compresseur", "peindre-meuble-compresseur-pistolet"]
-sources: ["https://binks.com/support/resource-library/spray-gun-troubleshooting-preventative-maintenance-guide-sb-2-001/", "https://binks.com/support/resource-library/abcs-of-spray-finishing-1-239/"]
+relatedGuides:
+  [
+    "compresseur-pour-pistolet-peinture-hvlp",
+    "pistolet-lvlp-vs-hvlp-compresseur",
+    "peindre-meuble-compresseur-pistolet"
+  ]
+sources:
+  - https://binks.com/support/resource-library/spray-gun-troubleshooting-preventative-maintenance-guide-sb-2-001/
+  - https://binks.com/support/resource-library/abcs-of-spray-finishing-1-239/
+  - https://www.sata.com/en-us/multi-purpose-cup-system-rps-uv-0.6-l-200-m-plug-in-sieve-qcc-uv-cup-black-vpe-50-for-mixing-spraying-reusing-and-storing-uv-based-coating-systems/1202150
+  - https://www.sata.com/es-us/sistema-de-vasos-multiuso-rps-0-3-l-125-m-tamiz-plano-qcc-embalaje-de-50-unidades-para-mezclar-pintar-reutilizar-y-almacenar-sistemas-de-pintura-con-disolventes-y-base-agua/1202043
 ---
 
 **Gravité, aspiration et cuve sous pression décrivent la façon d’amener la peinture au pistolet. HVLP décrit une technologie d’atomisation.** Ces deux classifications ne s’excluent pas. Pour choisir un ensemble, il faut examiner le circuit de produit et le circuit d’air, puis vérifier leurs réglages et leur compatibilité.
@@ -62,6 +74,8 @@ Notre fiche de consultation demande les références du corps, du chapeau, de la
 La réception peut alors comparer une configuration documentée à un résultat : aspect attendu, débit de produit, pression en fonctionnement et temps du lot. Si le fournisseur change le chapeau pour améliorer le résultat, le besoin d’air doit être relu pour cette nouvelle configuration.
 
 Pour une alimentation par réservoir, séparez aussi [pression produit, air d’atomisation et agitation](/guides/cuve-peinture-sous-pression-air-produit-agitation/). L’agitateur éventuel doit apparaître avec sa motorisation exacte dans le bilan de l’ensemble.
+
+Le raccord du godet ne résume pas son aptitude au produit. SATA indique QCC pour les RPS 1202150 et 1202043, avec une aptitude UV positive pour le premier et négative pour le second. Le [choix d’un RPS UV](/guides/sata-rps-uv-godet-qcc-peinture/) distingue protection lumineuse, tamis et connexion, sans garantir toute compatibilité chimique. [SATA RPS UV 1202150, fiche fabricant](https://www.sata.com/en-us/multi-purpose-cup-system-rps-uv-0.6-l-200-m-plug-in-sieve-qcc-uv-cup-black-vpe-50-for-mixing-spraying-reusing-and-storing-uv-based-coating-systems/1202150). [SATA RPS 1202043](https://www.sata.com/es-us/sistema-de-vasos-multiuso-rps-0-3-l-125-m-tamiz-plano-qcc-embalaje-de-50-unidades-para-mezclar-pintar-reutilizar-y-almacenar-sistemas-de-pintura-con-disolventes-y-base-agua/1202043).
 
 ## Une cuve sous pression remplace-t-elle un gros compresseur ?
 

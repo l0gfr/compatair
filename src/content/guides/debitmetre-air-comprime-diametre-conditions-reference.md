@@ -1,11 +1,14 @@
 ---
-title: "Débitmètre d’air comprimé : diamètre intérieur, implantation et volume de référence"
+title: "Débitmètre d’air comprimé : diamètre intérieur, implantation et volume
+  de référence"
 seoTitle: "Débitmètre air comprimé : éviter les erreurs de mesure"
-description: "VPFlowScope M Thermal In-line : vérifier diamètre, longueurs droites et référence du volume, avec deux calculs qui expliquent des écarts de débit trompeurs."
+description: "VPFlowScope M Thermal In-line : vérifier diamètre, longueurs
+  droites et référence du volume, avec deux calculs qui expliquent des écarts de
+  débit trompeurs."
 pubDate: 2026-09-26
 category: "Installer"
-audiences: ["professionnel"]
-metiers: ["maintenance-industrielle"]
+audiences: [ "professionnel" ]
+metiers: [ "maintenance-industrielle" ]
 readingTime: 5
 reviewStatus: internal
 relatedGuides:
@@ -15,7 +18,8 @@ relatedGuides:
 sources:
   - https://shop.vpinstruments.com/download/162/manual/15114/manual-vpflowscope-m-thermal-in-line.pdf
   - https://shop.vpinstruments.com/wpfd_file/manual-vpflowscope-m-thermal-in-line/
-updatedDate: 2026-09-26
+  - https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA520_EN.pdf
+updatedDate: 2026-10-03
 ---
 
 Un débitmètre peut afficher une valeur stable et produire un résultat faux pour votre comparaison. Trois contrôles viennent avant l’interprétation : **le diamètre intérieur programmé, la qualité de l’implantation et les conditions de référence du volume**. Nous les illustrons avec le VPFlowScope M **Thermal In-line**, sans transposer ses prescriptions aux autres modèles VPFlowScope.
@@ -75,6 +79,8 @@ Nous proposons de conserver avec chaque export : modèle et référence de notic
 Cette fiche permet de distinguer une évolution du procédé d’une modification du paramétrage. Pour une comparaison avant/après, réutilisez la même frontière et les mêmes conventions ou explicitez la conversion. Sans cela, un tableau de bord très précis visuellement peut raconter une évolution qui n’a pas eu lieu.
 
 Pour prolonger cette vérification, vous pouvez [lire le débit nominal d’un distributeur avec ses conditions de mesure](/guides/choisir-distributeur-pneumatique-debit-nominal/).
+
+La sortie électrique peut devenir une autre limite du relevé. Le VA520 publie un maximum de 50 impulsions par seconde, avec un retard d’une seconde. Le [choix du volume par impulsion VA520](/guides/cs-va520-impulsions-50hz-compteur-debit/) confronte fréquence et débit maximal : la résolution du compteur doit être compatible avec le volume attribué à chaque impulsion. [CS Instruments VA520, notice V2.02, avril 2026](https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA520_EN.pdf#page=26).
 
 ## Sources et méthode
 

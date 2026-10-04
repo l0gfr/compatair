@@ -1,26 +1,14 @@
-import { appendFile, readFile, readdir, writeFile } from 'node:fs/promises';
-import { parse } from 'yaml';
-import { sourceInventory, checkSource, healthSummary, sourceHealthSummaryMarkdown } from './lib/source-link-health.mjs';
+import { appendFile, writeFile } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
+import { sourceAvailabilityObservations } from '../src/data/source-availability.ts';
+import { checkSource, annotateKnownSourceFailure, healthSummary, sourceHealthSummaryMarkdown } from './lib/source-link-health.mjs';
+import { collectVersionedSourceInventory } from './lib/source-inventory.mjs';
 
-const catalog = JSON.parse(await readFile('dist/data/catalog.json', 'utf8'));
-const entries = [...catalog.compressors, ...catalog.tools].flatMap((product) => product.evidence.map((evidence) => ({ url: evidence.sourceUrl, reference: { productId: product.id, evidenceId: evidence.id, retrievedAt: evidence.retrievedAt } })));
-for (const filename of (await readdir('src/content/guides')).filter((name) => name.endsWith('.md')).sort()) {
-	const text = await readFile(`src/content/guides/${filename}`, 'utf8');
-	const frontmatter = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-	if (!frontmatter) throw new Error(`Frontmatter manquant : ${filename}`);
-	const guide = parse(frontmatter[1]);
-	for (const url of guide.sources ?? []) entries.push({ url, reference: { guide: filename } });
-}
-// These are controlled Astro output attributes, not arbitrary HTML supplied by a visitor.
-for (const product of catalog.compressors) {
-	const html = await readFile(`dist/compresseurs/${product.slug}/index.html`, 'utf8');
-	for (const match of html.matchAll(/<a\b[^>]*data-direct-purchase-link[^>]*>/g)) {
-		const url = match[0].match(/\bhref="([^"]+)"/)?.[1]?.replaceAll('&amp;', '&');
-		if (!url) throw new Error(`Lien marchand sans URL : ${product.id}`);
-		entries.push({ url, reference: { productId: product.id, role: 'direct-purchase' } });
-	}
-}
-const inventory = sourceInventory(entries);
+const startedAt = new Date();
+const inventory = await collectVersionedSourceInventory(process.cwd(), { now: startedAt });
+const sourceRevision = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
+if (!/^[a-f0-9]{40}$/.test(sourceRevision)) throw new Error('Invalid source revision');
+const sourceWorkingTreeDirty = execFileSync('git', ['status', '--porcelain', '--untracked-files=all'], { encoding: 'utf8', maxBuffer: 8 * 1024 * 1024 }).trim().length > 0;
 // One worker per hostname prevents concurrent probes hammering one manufacturer's site.
 const groups = new Map();
 for (const source of inventory.sources) {
@@ -34,7 +22,7 @@ await Promise.all(Array.from({ length: Math.min(4, queue.length) }, async () => 
 	while (cursor < queue.length) {
 		const group = queue[cursor++];
 		for (const source of group) {
-			results.push({ ...source, ...await checkSource(source.url) });
+			results.push(annotateKnownSourceFailure({ ...source, ...await checkSource(source.url) }, sourceAvailabilityObservations, startedAt));
 			if (results.length % 50 === 0) console.log(`Sources contrôlées : ${results.length}/${inventory.sources.length}`);
 			await new Promise((resolve) => setTimeout(resolve, 150));
 		}
@@ -42,7 +30,7 @@ await Promise.all(Array.from({ length: Math.min(4, queue.length) }, async () => 
 }));
 results.sort((a, b) => a.url.localeCompare(b.url));
 const summary = healthSummary(results);
-const report = { schemaVersion: '1.0.0', checkedAt: new Date().toISOString(), sourceVersion: inventory.version, catalogVersion: catalog.catalogVersion, summary, results };
+const report = { schemaVersion: '1.1.0', checkedAt: new Date().toISOString(), sourceVersion: inventory.version, inventoryBasis: 'validated-versioned-sources', sourceRevision, sourceWorkingTreeDirty, summary, results };
 await writeFile('source-health-report.json', `${JSON.stringify(report, null, 2)}\n`);
 if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, sourceHealthSummaryMarkdown(report));
 console.log(JSON.stringify(summary));

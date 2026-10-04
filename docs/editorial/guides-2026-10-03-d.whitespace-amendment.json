@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "batchId": "documented-expansion-2026-10-03-d",
+  "observedAt": "2026-10-03T19:57:08.252420+00:00",
+  "purpose": "Single terminal newline; technical assertions, SVG, dates and metadata unchanged.",
+  "files": [
+    {
+      "path": "src/content/guides/tube-pneumatique-6mm-un-quart-diametre-exterieur.md",
+      "beforeSha256": "c15ae5833aa81471025e81f9153ce38fee4977e38b5702afb66e35abde014c66",
+      "afterSha256": "46c857001315e3a225e02a461bf06c12ae2afd14ea3af5921c087ce8f3a0c953"
+    },
+    {
+      "path": "src/content/guides/pompe-membrane-pneumatique-calee-diagnostic.md",
+      "beforeSha256": "82019e6a4cf3dff919e00ebcf73aa6afc7a6db06ef04212365feab6ac7ab38a0",
+      "afterSha256": "a2f32bc97f5c87c94c586038f4b358146f82a3af718b31a344512cd0612f9f81"
+    }
+  ]
+}

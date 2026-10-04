@@ -1,11 +1,18 @@
 import { access, readdir, readFile, rename, stat, unlink, writeFile } from 'node:fs/promises';
 import { basename, extname, join, resolve, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { technicalCardSvg } from './technical-card.mjs';
 
 const KINDS = { compressors: { exportName: 'rawCompressors' }, tools: { exportName: 'rawTools' } };
 export const MAX_PRODUCT_IMAGE_BYTES = 250 * 1024;
 export const MAX_PRODUCT_IMAGE_DIMENSION = 1600;
 export const PRODUCT_IMAGE_WEBP_QUALITY = 82;
+
+export function productTechnicalSvgError(product, kind, svg) {
+	if (!product.image.sourceLabel.startsWith('Carte technique CompatAir')) return `SVG produit non généré par CompatAir : ${product.id}`;
+	if (svg !== technicalCardSvg(product, kind)) return `Carte SVG différente des valeurs produit ou du générateur : ${product.id}`;
+	return null;
+}
 
 export function productImageSizeError(productId, imageSrc, bytes) {
 	if (bytes <= MAX_PRODUCT_IMAGE_BYTES) return null;
@@ -104,6 +111,11 @@ export async function validateCatalog(root, schemas, seoTitles, toolUseSeoTitles
 				const imageInfo = await stat(resolve(root, 'public', product.image.src.replace(/^\//, '')));
 				const sizeError = productImageSizeError(product.id, product.image.src, imageInfo.size);
 				if (sizeError) errors.push(sizeError);
+				if (product.image.src.endsWith('.svg')) {
+					const svg = await readFile(resolve(root, 'public', product.image.src.slice(1)), 'utf8');
+					const svgError = productTechnicalSvgError(product, kind, svg);
+					if (svgError) errors.push(svgError);
+				}
 			} catch { errors.push(`Image locale absente : ${product.id} ${product.image.src}`); }
 			const evidenceIds = new Set(product.evidence.map((item) => item.id));
 			for (const [field, ids] of Object.entries(product.fieldSources)) for (const id of ids) if (!evidenceIds.has(id)) errors.push(`Source de champ inconnue : ${product.id}.${field} -> ${id}`);

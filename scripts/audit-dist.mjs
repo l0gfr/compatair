@@ -4,6 +4,8 @@ import { basename, join, relative, resolve } from 'node:path';
 import { gzipSync } from 'node:zlib';
 import { isDeepStrictEqual } from 'node:util';
 import { readImageDimensions } from '../src/domain/image-dimensions.ts';
+import { generatedTechnicalCardDimensions } from './lib/technical-card.mjs';
+import { productTechnicalSvgError } from './lib/catalog-tooling.mjs';
 import { catalogOptionIdentifiers, catalogSearchIdentifiers } from '../src/domain/catalog-search.ts';
 import { toolUsageTaxonomy } from '../src/data/taxonomy.ts';
 import { brandSlug } from '../src/domain/brand.ts';
@@ -32,6 +34,11 @@ if (indexationManifest.gitSha !== indexationRelease.gitSha) throw new Error('His
 const indexationAllows = createIndexationPolicy(indexationBaseline, indexationManifest);
 const artifactPaths = new Set();
 const productImageDimensionsBySource = new Map();
+for (const kind of ['compressors', 'tools']) for (const product of auditedCatalog[kind]) if (product.image.src.endsWith('.svg')) {
+	const svg = await readFile(join(root, product.image.src), 'utf8');
+	const error = productTechnicalSvgError(product, kind, svg);
+	if (error) errors.push(error);
+}
 const maximumDocumentTitleLength = 60;
 const maximumInitialPageScriptBytesGzip = 50 * 1024;
 const maximumPassportInitialScriptBytesGzip = 45 * 1024;
@@ -995,7 +1002,8 @@ for (const file of htmlFiles) {
 			else {
 				let dimensions = productImageDimensionsBySource.get(source);
 				if (!dimensions) {
-					dimensions = readImageDimensions(await readFile(join(root, source)));
+					const bytes = await readFile(join(root, source));
+					dimensions = source.endsWith('.svg') ? generatedTechnicalCardDimensions(bytes.toString('utf8')) : readImageDimensions(bytes);
 					if (dimensions) productImageDimensionsBySource.set(source, dimensions);
 				}
 				if (!dimensions) errors.push(`${label}: dimensions du fichier produit illisibles ${source}`);

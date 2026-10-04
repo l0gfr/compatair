@@ -1,12 +1,14 @@
 ---
 title: "Groupe FRL : filtre, régulateur, lubrificateur, ordre, réglage et entretien"
 seoTitle: "Groupe FRL : ordre, réglage et entretien"
-description: "Installer et entretenir un groupe FRL sans lubrifier tous les usages : ordre des modules, sens du débit, pression, condensats et contrôle des pertes."
+description: "Installer et entretenir un groupe FRL sans lubrifier tous les
+  usages : ordre des modules, sens du débit, pression, condensats et contrôle
+  des pertes."
 pubDate: 2026-08-28
-updatedDate: 2026-09-30
+updatedDate: 2026-10-03
 category: "Installer"
-audiences: [particulier, professionnel]
-metiers: [garage-automobile, carrosserie-peinture, maintenance-industrielle]
+audiences: [ particulier, professionnel ]
+metiers: [ garage-automobile, carrosserie-peinture, maintenance-industrielle ]
 readingTime: 14
 featured: false
 sources:
@@ -15,7 +17,15 @@ sources:
   - https://www.parker.com/content/dam/Parker-com/Literature/Literature-Files/pneumatic/Literature/FRL/0700P/0700P_General_Industrial.pdf
   - https://tools.cp.com/en-us/products/sanders/pistol-sanders
   - https://www.cp.com/content/dam/pim/itba/cp/technical-documents/2050499083.pdf
-relatedGuides: [huile-cle-a-chocs-pneumatique-lubrification, qualite-air-comprime-iso-8573-1, diagnostiquer-chute-pression-air-comprime, point-rosee-secheur-filtre-air-comprime]
+  - https://cdn.norgren.com/pdf/L17IM.pdf
+  - https://www.zimmer-group.com/fileadmin/pim/SOM/DOK/MON/SOM_DOK_MON_DDOC00232-GP200__SALL__APD__V8.pdf
+relatedGuides:
+  [
+    huile-cle-a-chocs-pneumatique-lubrification,
+    qualite-air-comprime-iso-8573-1,
+    diagnostiquer-chute-pression-air-comprime,
+    point-rosee-secheur-filtre-air-comprime
+  ]
 ---
 
 Un groupe FRL associe un **filtre**, un **régulateur** et un **lubrificateur**. Ces trois fonctions ne sont pas automatiquement requises sur chaque branche. Le filtre ne remplace pas un sécheur, le régulateur ne crée pas de débit et le lubrificateur ne doit être installé que si l’équipement aval et le procédé acceptent l’huile.
@@ -55,6 +65,8 @@ La notice Parker décrit pour ses filtres un déflecteur centrifuge, un élémen
 
 La finesse de filtration, le débit nominal et le critère de remplacement appartiennent au modèle exact. Ne transformez pas la consigne de remplacement d’un filtre Parker particulier en règle pour tous les bols du marché.
 
+L’alimentation filtrée ne traite pas toutes les entrées de poussière d’un préhenseur. Zimmer demande de laisser ouverte la ventilation des mors GP200 et, en ambiance sale, de conduire son tuyau vers une zone propre. Le [cas GP200 : ventilation et barrage](/guides/zimmer-gp200-ventilation-air-barrage-guide/) sépare cette voie de l’air de barrage limité à 0,5 bar. [Zimmer GP200, notice d’installation et d’utilisation DDOC00232 V8](https://www.zimmer-group.com/fileadmin/pim/SOM/DOK/MON/SOM_DOK_MON_DDOC00232-GP200__SALL__APD__V8.pdf#page=8).
+
 ## Régulateur : abaisser et stabiliser, pas compenser un manque de débit
 
 Le régulateur règle la pression aval dans sa plage de fonctionnement. Le tourner vers une consigne plus élevée ne restaure pas un débit que le compresseur, le filtre, le raccord ou le flexible ne peuvent pas fournir.
@@ -84,6 +96,8 @@ Ces prescriptions ont des périmètres différents. La formule d’un groupe FRL
 5. la méthode de contrôle du brouillard ou du niveau.
 
 Si ces données manquent, n’inventez pas un nombre de gouttes.
+
+Sur le Norgren L17, le seuil de mise en action est publié à 3,8 dm³/s sous 6,3 bar. Le [cas L17 : démarrage de la lubrification](/guides/norgren-l17-faible-debit-lubrification-demarrage/) distingue ce seuil du dosage Oil-Fog ou Micro-Fog : une cuve remplie et un réglage de gouttes ne démontrent pas que le débit local active le lubrificateur. [Norgren L17, installation et entretien IM-341.400](https://cdn.norgren.com/pdf/L17IM.pdf#page=1).
 
 ## Dimensionner le passage, pas seulement le filetage
 
