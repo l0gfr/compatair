@@ -70,6 +70,8 @@ Le [guide de compatibilité des agrafes](/guides/agrafes-pneumatiques-serie-cour
 
 La séparation doit se poursuivre jusqu’aux accessoires mobiles. Le [risque du flexible partagé entre outil lubrifié et peinture](/guides/flexible-outil-lubrifie-peinture-contamination/) explique comment documenter l’historique d’usage et identifier les ensembles réservés à la finition.
 
+L’air du clouage n’a pas une consigne de lubrification unique. La note [SENCO NeverLube et branche sans lubrificateur](/guides/senco-neverlube-lubrificateur-air/) précise le contrôle à prévoir quand plusieurs technologies partagent l’atelier.
+
 ## Sources
 
 - [SATA, données techniques du SATAjet 1000 B Lignum 3](https://www.sata.com/en-int/products/spray-guns/gravity-flow-cup-guns/satajet-1000-b-lignum-3/technical-data)

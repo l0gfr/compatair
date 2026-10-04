@@ -59,3 +59,5 @@ Le [guide du governor](/guides/meuleuse-pneumatique-vitesse-regulee-governor/) e
 Si un marquage est illisible ou si l’accessoire ne peut pas être identifié, il manque une donnée essentielle. Ne déduisez pas sa vitesse admissible de son diamètre ou de sa ressemblance avec un autre produit.
 
 Ce dossier n’établit aucune compatibilité à partir du seul carré, filetage ou diamètre. Il ne rapporte aucun essai de rupture ni mesure de vitesse d’une machine réelle. La décision vise à identifier une association documentée et conforme aux limites des deux fabricants, avant de l’utiliser au poste.
+
+Le [cas Nitto MLG-25](/guides/nitto-mlg25-meule-58mm-19000-tours/) rapproche type de meule, alésage, épaisseur et vitesse nominale. Il complète la lecture du marquage pour une petite meuleuse pneumatique.

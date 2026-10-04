@@ -1,0 +1,131 @@
+const product: unknown = {
+  "id": "ponceuse-orbitale-prowin-as-602d",
+  "slug": "ponceuse-orbitale-prowin-as-602d",
+  "categoryId": "ponceuse-orbitale",
+  "category": "ponceuse-orbitale",
+  "label": "ProWin AS-602D",
+  "brand": "ProWin",
+  "model": "AS-602D",
+  "mpn": "AS-602D",
+  "demandModel": "variable-volume",
+  "workingPressureBar": {},
+  "demandExplanation": "Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
+  "confidence": "B",
+  "image": {
+    "src": "/images/products/ponceuse-orbitale-prowin-as-602d.svg",
+    "alt": "Repères techniques : ProWin AS-602D",
+    "sourceUrl": "https://www.prowin-tools.com/wp-content/uploads/2023/05/Air-Painting-ToolsNew.pdf",
+    "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+  },
+  "variant": {
+    "familyId": "prowin-as-602d",
+    "label": "Référence AS-602D",
+    "distinguishingAttributes": {
+      "reference": "AS-602D",
+      "Pad Size": "73 x 98mm (AS-602D)",
+      "Free Speed": "9,000 RPM"
+    }
+  },
+  "editorial": {
+    "overview": "ProWin AS-602D. Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
+    "verifiedFacts": [
+      "Pad Size : 73 x 98mm (AS-602D).",
+      "Free Speed : 9,000 RPM.",
+      "Orbital Diameter : 3 mm.",
+      "Air Consumption : 425 L/min (15.3CFM).",
+      "Net Weight : 0.85 kgs.",
+      "Air Inlet : 1/4\"."
+    ],
+    "limitations": [
+      "Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
+      "La consommation publiée ne précise pas le régime (charge, maximum ou moyenne) et la pression exacte de mesure.",
+      "Aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+    ]
+  },
+  "specifications": [
+    {
+      "label": "Pad Size",
+      "value": "73 x 98mm (AS-602D)",
+      "evidenceIds": [
+        "october4-tools-prowin-painting-p75"
+      ]
+    },
+    {
+      "label": "Free Speed",
+      "value": "9,000 RPM",
+      "evidenceIds": [
+        "october4-tools-prowin-painting-p75"
+      ]
+    },
+    {
+      "label": "Orbital Diameter",
+      "value": "3 mm",
+      "evidenceIds": [
+        "october4-tools-prowin-painting-p75"
+      ]
+    },
+    {
+      "label": "Air Consumption",
+      "value": "425 L/min (15.3CFM)",
+      "evidenceIds": [
+        "october4-tools-prowin-painting-p75"
+      ]
+    },
+    {
+      "label": "Net Weight",
+      "value": "0.85 kgs",
+      "evidenceIds": [
+        "october4-tools-prowin-painting-p75"
+      ]
+    },
+    {
+      "label": "Air Inlet",
+      "value": "1/4\"",
+      "evidenceIds": [
+        "october4-tools-prowin-painting-p75"
+      ]
+    },
+    {
+      "label": "Consommation publiée, hors calcul",
+      "value": "425 L/min",
+      "evidenceIds": [
+        "october4-tools-prowin-painting-p75"
+      ]
+    },
+    {
+      "label": "Pression dans la source",
+      "value": "Pression associée à la consommation non indiquée.",
+      "evidenceIds": [
+        "october4-tools-prowin-painting-p75"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "october4-tools-prowin-painting-p75",
+      "sourceUrl": "https://www.prowin-tools.com/wp-content/uploads/2023/05/Air-Painting-ToolsNew.pdf#page=75",
+      "sourceLabel": "ProWin : Air Painting Tools, catalogue lié par le fabricant, page PDF 75",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-04",
+      "confidence": "B",
+      "notes": "Déclaration fabricant, réponse primaire SHA-256 2cd45573cff8decba50b2fbbfe2127d8e4bc1c3f1fdb6550e2f2467703941213. Aucun essai physique CompatAir."
+    }
+  ],
+  "fieldSources": {
+    "mpn": [
+      "october4-tools-prowin-painting-p75"
+    ],
+    "workingPressureBar": [
+      "october4-tools-prowin-painting-p75"
+    ],
+    "demandExplanation": [
+      "october4-tools-prowin-painting-p75"
+    ]
+  },
+  "notes": [
+    "Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure."
+  ]
+};
+
+export default product;

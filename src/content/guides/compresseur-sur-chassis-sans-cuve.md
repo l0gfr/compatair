@@ -46,3 +46,5 @@ Il faut connaître les besoins du réseau, la régulation prévue et les conditi
 Pour une version équipée, le [guide Airblok DRY](/guides/airblok-dry-version-secheur-integre/) distingue le sécheur de la cuve. Le [cas des compresseurs 230 V triphasés](/guides/compresseur-vis-230v-triphase/) rappelle une autre ligne à vérifier séparément avant de comparer deux devis : l’alimentation électrique exacte.
 
 Pour vérifier le périmètre d’une annonce, le [CSM 40 et sa cuve 500 L](/guides/ceccato-csm40-cuve-500-litres-configuration/) fournit un cas précis : la brochure ne documente pas cette version intégrée, ce qui impose de détailler un éventuel assemblage externe.
+
+La table [Hertz HGS 7,5 sur socle ou sur cuve avec sécheur](/guides/hertz-hgs75-socle-cuve-secheur-dimensions/) illustre la lecture des dimensions et masses par montage. Le volume de réservoir ne doit pas être rattaché à une autre configuration.

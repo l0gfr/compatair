@@ -69,6 +69,8 @@ Enfin, un jet régulier ne prouve pas l’absence de contamination. Si le probl�
 
 Avant d’ajouter des démontages au diagnostic, vérifiez la [méthode de nettoyage des passages d’air du pistolet](/guides/nettoyage-pistolet-peinture-canaux-air/). Ce dossier relie les conseils SATA aux points à contrôler, tout en laissant à la notice du modèle le choix des produits et des opérations admises.
 
+Après entretien du godet, relevez aussi les éléments remontés sur le chemin du produit. Le [cas du filtre Sagola 4600](/guides/sagola-4600-filtre-produit-apres-nettoyage/) organise ce contrôle séparément de l’alimentation d’air.
+
 ## Sources et méthode
 
 Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.

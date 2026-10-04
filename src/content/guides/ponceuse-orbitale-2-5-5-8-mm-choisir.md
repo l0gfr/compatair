@@ -78,3 +78,5 @@ Décrivez d’abord l’opération : support, revêtement, étape de finition et
 Vous pourrez alors arbitrer entre deux configurations concrètes. « Une 150 mm professionnelle » reste trop vague pour garantir le résultat de surface ou l’alimentation en air.
 
 Les [repères d’orbite Mirka](https://www.mirka.com/en-gb/products/power-tools/pneumatic-sanders/) ont été consultés le 25 septembre 2026 ; les [caractéristiques Metabo DSX 150](https://www.metabo.com/com/en/tools/compressed-air/compressed-air-tools/air-disc-sander/dsx-150-air-disc-sander/601558000) ont été revérifiées le 1 octobre 2026 après déplacement de leur source. Les propositions d’essai sont une méthode éditoriale ; aucun comparatif terrain n’est revendiqué.
+
+La dureté du plateau constitue un choix supplémentaire. Le [cas Festool LEX 3, plateau supersouple et arêtes](/guides/festool-lex3-plateau-supersouple-aretes/) montre comment conserver la destination du plateau avec le réglage d’orbite.

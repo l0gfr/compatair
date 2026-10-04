@@ -76,6 +76,8 @@ Le [comparatif ponceuse pneumatique ou électrique](/guides/ponceuse-pneumatique
 
 La [Metabo DSX 150 et son alimentation en air](/guides/metabo-dsx-150-compresseur-550-litres-minute/) font l’objet d’un dossier séparé. La référence exacte du plateau, la pression et la consommation y sont conservées ensemble ; le captage des poussières reste une autre exigence à documenter.
 
+Le cas [Festool LEX 3 150/5](/guides/festool-lex3-1505-290-350-litres-minute/) distingue consommation mesurée et minimum d’alimentation demandé par la notice. Cette lecture complète le besoin d’extraction avant la sélection du poste.
+
 ## Sources
 
 - [Festool, LEX 3 150/5, référence 575081](https://www.festool.fr/produits/ponceuses-%C3%A9lectriques/ponceuses-pneumatiques/575081---lex-3-1505)

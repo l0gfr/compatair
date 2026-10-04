@@ -1,0 +1,104 @@
+const product: unknown = {
+  "id": "pistolet-peinture-prowin-k-800m-15",
+  "slug": "pistolet-peinture-prowin-k-800m-15",
+  "categoryId": "pistolet-peinture",
+  "category": "pistolet-peinture",
+  "label": "ProWin K-800M-15",
+  "brand": "ProWin",
+  "model": "K-800M-15",
+  "mpn": "K-800M-15",
+  "demandModel": "variable-volume",
+  "workingPressureBar": {
+    "min": 2.068427,
+    "max": 3.102641
+  },
+  "demandExplanation": "Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
+  "confidence": "B",
+  "image": {
+    "src": "/images/products/pistolet-peinture-prowin-k-800m-15.svg",
+    "alt": "Repères techniques : ProWin K-800M-15",
+    "sourceUrl": "https://www.prowin-tools.com/wp-content/uploads/2023/05/Air-Painting-ToolsNew.pdf",
+    "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+  },
+  "variant": {
+    "familyId": "prowin-k-800m-15",
+    "label": "Référence K-800M-15",
+    "distinguishingAttributes": {
+      "reference": "K-800M-15",
+      "Buse": "1.5 mm",
+      "Largeur de jet": "270 mm"
+    }
+  },
+  "editorial": {
+    "overview": "ProWin K-800M-15. Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
+    "verifiedFacts": [
+      "Buse : 1.5 mm.",
+      "Largeur de jet : 270 mm."
+    ],
+    "limitations": [
+      "Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
+      "La table publie une consommation, sans pression de mesure précise ni protocole de pulvérisation lié à cette valeur.",
+      "Les codes SG de la colonne Turn-up Kit sont des kits de réparation et ne constituent pas des références de pistolets.",
+      "Fluid Output est libellé « ml » ; aucune durée ne permet de le publier comme un débit.",
+      "Aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+    ]
+  },
+  "specifications": [
+    {
+      "label": "Buse",
+      "value": "1.5 mm",
+      "evidenceIds": [
+        "october4-tools-prowin-painting-p5"
+      ]
+    },
+    {
+      "label": "Largeur de jet",
+      "value": "270 mm",
+      "evidenceIds": [
+        "october4-tools-prowin-painting-p5"
+      ]
+    },
+    {
+      "label": "Consommation publiée, hors calcul",
+      "value": "200 L/min",
+      "evidenceIds": [
+        "october4-tools-prowin-painting-p5"
+      ]
+    },
+    {
+      "label": "Pression dans la source",
+      "value": "Working Pressure : 30~45 psi",
+      "evidenceIds": [
+        "october4-tools-prowin-painting-p5"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "october4-tools-prowin-painting-p5",
+      "sourceUrl": "https://www.prowin-tools.com/wp-content/uploads/2023/05/Air-Painting-ToolsNew.pdf#page=5",
+      "sourceLabel": "ProWin : Air Painting Tools, catalogue lié par le fabricant, page PDF 5",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-04",
+      "confidence": "B",
+      "notes": "Déclaration fabricant, réponse primaire SHA-256 2cd45573cff8decba50b2fbbfe2127d8e4bc1c3f1fdb6550e2f2467703941213. Aucun essai physique CompatAir."
+    }
+  ],
+  "fieldSources": {
+    "mpn": [
+      "october4-tools-prowin-painting-p5"
+    ],
+    "workingPressureBar": [
+      "october4-tools-prowin-painting-p5"
+    ],
+    "demandExplanation": [
+      "october4-tools-prowin-painting-p5"
+    ]
+  },
+  "notes": [
+    "Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure."
+  ]
+};
+
+export default product;

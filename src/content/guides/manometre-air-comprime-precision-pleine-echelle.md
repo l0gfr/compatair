@@ -56,3 +56,5 @@ Le [contrôle de pression dynamique du pistolet](/guides/mesurer-pression-dynami
 Pour examiner une faible chute de pression, utilisez des instruments et une méthode adaptés à l’écart recherché. Le [diagnostic des pertes](/guides/diagnostiquer-chute-pression-air-comprime/) permet d’organiser ce relevé. Une différence proche des limites de la méthode ne doit pas être publiée comme une perte exactement mesurée.
 
 Conservez la référence, l’échelle, la spécification, la date des contrôles et les conditions du relevé. Aucun étalonnage d’instrument réel n’a été effectué pour ce guide ; aucun écart admissible universel n’est proposé pour tous les procédés.
+
+Une aiguille agitée appelle un autre examen que la classe de précision. La [lecture WIKA des pulsations et vibrations](/guides/wika-manometre-aiguille-pulsation-amortisseur/) distingue l’action sur le fluide, le montage mécanique et le besoin de mesure dynamique.

@@ -64,6 +64,8 @@ Une fois l’outil et les fixations établis, le [dimensionnement pour agrafeuse
 
 Conservez une fiche de poste avec photo de la boîte, modèle d’agrafeuse, réglage retenu et usage prévu. En cas de changement de fournisseur, cette fiche donne une base de comparaison concrète. La bonne décision ne se résume donc pas à « même longueur » : elle relie un consommable identifiable à un outil et à un travail documentés.
 
+Un outil combiné demande de séparer les lignes de clous et d’agrafes. Le [tableau Metabo DKNG 40/50](/guides/metabo-dkng4050-clous-agrafes-chargeur/) donne un exemple de lecture par type de fixation avant la commande.
+
 ## Sources et méthode
 
 Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.

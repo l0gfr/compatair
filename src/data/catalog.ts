@@ -3,7 +3,7 @@ import { rawCompressors } from './products/compressors';
 import { rawTools } from './products/tools';
 import { toolCategoryLabel } from './taxonomy';
 
-export const CATALOG_VERIFIED_AT = '2026-10-03';
+export const CATALOG_VERIFIED_AT = '2026-10-04';
 
 export const compressors = rawCompressors.map((item) => compressorSchema.parse(item));
 export const tools = rawTools.map((item) => {

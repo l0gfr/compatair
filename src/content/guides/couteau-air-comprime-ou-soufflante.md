@@ -76,6 +76,8 @@ Si le débit d’air actuel, sa durée d’utilisation ou la performance de l’
 
 Une fois la technologie choisie, le montage de la référence exacte reste à examiner. Les cas [zones faibles d’une Super Air Knife](/guides/exair-super-air-knife-deux-entrees-zones-faibles/) et [jeu autour d’un tube dans une Super Air Wipe](/guides/exair-super-air-wipe-tube-diametre-bague/) apportent des contrôles ciblés pour le raccordement et la géométrie du poste.
 
+Le [jet Whisperblast Lechler](/guides/lechler-whisperblast-largeur-jet-sechage/) illustre la différence entre enveloppe mesurée et résultat sur une pièce. Pour le bilan du compresseur, conservez aussi les [conditions de volume normal et de FAD](/guides/lechler-debit-normal-zero-degres-fad/) avant de comparer les nombres.
+
 ## Sources et méthode
 
 Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.

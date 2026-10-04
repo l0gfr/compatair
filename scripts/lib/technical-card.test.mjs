@@ -32,6 +32,17 @@ describe('generated technical cards', () => {
 		expect(svg).toContain('Non établi');
 		expect(svg).not.toContain('999');
 	});
+	it('distinguishes a selected configuration pressure from the physical maximum', () => {
+		const compressor = { brand: 'Example', model: 'C1', tankLiters: 0, maxPressureBar: 10, fadCurve: [] };
+		const maximum = technicalCardSvg(compressor, 'compressors');
+		expect(maximum).toContain('PRESSION MAX.');
+		expect(maximum).not.toContain('PRESSION RETENUE');
+		const selected = technicalCardSvg({ ...compressor, specifications: [{ label: 'Pression de la configuration retenue', value: '10 bar' }] }, 'compressors');
+		expect(selected).toContain('PRESSION RETENUE');
+		expect(selected).not.toContain('PRESSION MAX.');
+		expect(selected.replace('PRESSION RETENUE', 'PRESSION MAX.')).toBe(maximum);
+		expect(technicalCardSvg({ ...compressor, specifications: [{ label: 'Pression maximale', value: '10 bar' }] }, 'compressors')).toBe(maximum);
+	});
 	it('escapes identifiers before rendering SVG and stays within the raster budget', async () => {
 		const svg = technicalCardSvg({ ...tool, mpn: '<script>&"\'' }, 'tools');
 		expect(svg).not.toContain('<script>');

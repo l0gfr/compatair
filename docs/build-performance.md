@@ -32,6 +32,15 @@ sans comparaison exacte avant/après.
 
 ## Cache des pages
 
+L’historique versionné entre dans TypeScript comme `unknown`, grâce à une
+déclaration exacte `evidence-history.snapshot.d.json.ts`. L’option
+`allowArbitraryExtensions` permet cette déclaration ; la configuration stricte
+et le périmètre de contrôle restent inchangés. `evidenceHistorySchema.parse`
+valide toujours le JSON réel avant tout usage. Cette frontière évite de
+construire un type implicite pour chaque valeur de l’historique. Elle ne
+modifie ni son chargement, ni les données publiées. Les tests vérifient le refus
+d’un accès au contenu brut et des fichiers absents ou malformés.
+
 Le mode incrémental d’Astro 7.2 vérifie le code des gabarits et les clés des routes.
 Les produits bruts, titres et historiques sont lus comme des entrées de données
 lors du build, hors du graphe global des modules. Les schémas de validation restent

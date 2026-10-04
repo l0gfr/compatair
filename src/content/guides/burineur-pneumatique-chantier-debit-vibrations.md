@@ -94,3 +94,5 @@ Une valeur vibratoire issue d’une fiche constructeur n’est donc pas une expo
 6. **Séparer les verdicts** : capacité pneumatique, adéquation de service, tenue de la séquence et prévention.
 
 Un dossier professionnel est recevable lorsque chacune de ces conclusions possède sa propre preuve. Un résultat positif sur le débit ne masque jamais une restriction de notice ou un contrôle terrain encore absent.
+
+L’arrêt hors appui peut aussi appartenir au fonctionnement prévu : le [cas Nitto ACH-16](/guides/nitto-ach16-arret-contact-piece/) reprend cette particularité. Le [choix de burins ACH-16 et CH-24](/guides/nitto-ach16-ch24-emmanchement-burin/) traite séparément les emmanchements et la retenue.

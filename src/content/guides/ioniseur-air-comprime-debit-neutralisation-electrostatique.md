@@ -66,6 +66,8 @@ Demandez les contrôles et opérations prévus dans la notice, leur traçabilit�
 
 La [qualité d’air comprimé](/guides/qualite-air-comprime-iso-8573-1/) concerne plusieurs paramètres distincts. Traduisez donc « propre et sec » avec le fournisseur en exigences applicables à la référence achetée, puis en moyens de traitement et de vérification. Un bon devis décrit à la fois l’ioniseur, son alimentation et la méthode qui permettra de confirmer le résultat au poste.
 
+Le suivi du poste peut ensuite examiner la [charge qui revient après traitement](/guides/exair-static-retour-convoyeur-ioniseur/), l’[entretien des émetteurs EXAIR](/guides/exair-ioniseur-emetteur-nettoyage/) et le [régime d’air d’un Intellistat à gâchette ou fixe](/guides/exair-intellistat-8500-8505-air-continu/). Ces trois questions portent sur des étapes différentes du procédé.
+
 ## Sources et méthode
 
 Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
