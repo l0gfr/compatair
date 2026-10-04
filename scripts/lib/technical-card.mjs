@@ -20,7 +20,7 @@ export function technicalCardSvg(p, kind) {
 	const compressorPressureLabel = p.specifications?.some(spec => spec.label === 'Pression de la configuration retenue') ? 'PRESSION RETENUE' : 'PRESSION MAX.';
 	const columns = compressor ? [
 		point ? ['DÉBIT RESTITUÉ', format(point.litersPerMinute), `L/min à ${format(point.pressureBar)} bar`] : ['FAD À PRESSION CONNUE', 'Non établi', 'Compatibilité indéterminée'],
-		['CUVE', format(p.tankLiters), 'litres'], [compressorPressureLabel, format(p.maxPressureBar), 'bar'],
+		['CUVE', p.tankLiters === undefined ? 'Non documentée' : format(p.tankLiters), p.tankLiters === undefined ? '' : 'litres'], [compressorPressureLabel, format(p.maxPressureBar), 'bar'],
 	] : [
 		[p.demandModel === 'per-action' ? 'AIR PAR COUP' : incomplete ? 'DÉBIT MINUTE' : p.airflowBasis === 'average' ? 'CONSOMMATION MOY.' : p.airflowBasis === 'free-speed' ? 'CONSOMMATION À VIDE' : p.airflowBasis === 'unqualified' ? 'RÉGIME NON PRÉCISÉ' : 'CONSOMMATION', incomplete ? 'Non établi' : format(p.airPerActionLiters ?? p.airflowLpm.typical), incomplete ? 'Conditions à confirmer' : p.demandModel === 'per-action' ? 'litres / coup' : 'L/min publiés'],
 		[toolPressure === undefined ? 'PRESSION DE TRAVAIL' : p.workingPressureBar.typical === undefined ? 'PRESSION MAX.' : 'PRESSION RETENUE', toolPressure === undefined ? 'Non établie' : format(toolPressure), toolPressure === undefined ? 'Conditions à confirmer' : 'bar'], ['RÉFÉRENCE', p.mpn ?? 'Non publié', 'fabricant'],

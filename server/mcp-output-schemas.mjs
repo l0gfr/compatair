@@ -41,7 +41,7 @@ const compressorSchema = strict({
 	...productBase, tankLiters: number, maxPressureBar: number, fadCurve: { type: 'array', items: fadPointSchema }, intakeFlowLpm: number,
 	dutyCycle: number, oilType: { type: 'string', enum: ['oil', 'oil-free', 'unknown'] }, noiseDb: number, powerKw: number, weightKg: number,
 	mobility: { type: 'string', enum: ['portable', 'mobile', 'fixed'] }, voltage: string, phase: { type: 'string', enum: ['single-phase', 'three-phase'] },
-}, ['id', 'slug', 'brand', 'model', 'tankLiters', 'maxPressureBar', 'fadCurve', 'oilType', 'confidence', 'image', 'editorial', 'specifications', 'evidence', 'fieldSources', 'notes']);
+}, ['id', 'slug', 'brand', 'model', 'maxPressureBar', 'fadCurve', 'oilType', 'confidence', 'image', 'editorial', 'specifications', 'evidence', 'fieldSources', 'notes']);
 const toolProperties = {
 	...productBase, demandModel: { type: 'string', enum: ['fixed-flow', 'per-action', 'variable-volume'] }, workingPressureBar: rangeSchema,
 	airflowLpm: rangeSchema, airflowBasis: { type: 'string', enum: ['average', 'unqualified', 'free-speed'] }, airPerActionLiters: number, actionLabel: string, demandExplanation: string, connectorSize: string,

@@ -9,6 +9,11 @@ const continuousResult = (availableFadLpm: number): CompatibilityResult => ({
 });
 
 describe('sélections SEO de compatibilité', () => {
+	it('ranks undocumented tanks after documented ones when the technical criteria are tied', () => {
+		const base = compressors[0];
+		const matches = [undefined, 50, 0].map((tankLiters, index) => ({ compressor: { ...base, id: `fixture-${index}`, tankLiters }, result: continuousResult(120) }));
+		expect(rankCompatibleCompressors(matches).map(item => item.compressor.tankLiters)).toEqual([0, 50, undefined]);
+	});
 	it('privilégie un débit suffisant proche du besoin et une alimentation adaptée à un particulier', () => {
 		const base = compressors[0];
 		const accessible = { ...base, id: 'accessible', model: 'Accessible', phase: 'single-phase' as const, mobility: 'mobile' as const, tankLiters: 24 };

@@ -5,6 +5,11 @@ import { createTransparencyBarometer, transparencyCriteria } from './transparenc
 describe('manufacturer documentation transparency barometer', () => {
 	const barometer = createTransparencyBarometer(compressors, CATALOG_VERIFIED_AT);
 
+	it('does not assign an undocumented tank to a documented capacity segment', () => {
+		const report = createTransparencyBarometer([{ ...compressors[0], tankLiters: undefined }, { ...compressors[0], id: 'no-receiver', tankLiters: 0 }], CATALOG_VERIFIED_AT);
+		expect(report.brands[0].references.map(item => item.segment)).toEqual(['tank-undocumented', 'portable-0-24l']);
+	});
+
 	it('separates manufacturer transparency from CompatAir coverage', () => {
 		expect(barometer.criteria).toHaveLength(6);
 		expect(barometer.brands).toHaveLength(new Set(compressors.map((item) => item.brand)).size);

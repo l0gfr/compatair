@@ -8,7 +8,7 @@ export type ContextualComparisonCompressor = {
 	model: string;
 	maxPressureBar: number;
 	fadCurve: Array<{ pressureBar: number; litersPerMinute: number }>;
-	tankLiters: number;
+	tankLiters?: number;
 	dutyCycle?: number;
 	confidence: 'A' | 'B' | 'C' | 'D';
 };

@@ -14,6 +14,21 @@ function createTestCore(catalogValue: any, offers?: any, options: any = {}) {
 }
 const core = createTestCore(catalog);
 describe('MCP core', () => {
+	it('omits undocumented tank nodes and edges while retaining an explicit zero volume', () => {
+		const tool = tools.find((item) => item.demandModel === 'fixed-flow')!;
+		const base = compressors[0];
+		for (const tankLiters of [undefined, 0]) {
+			const compressor = JSON.parse(JSON.stringify({ ...base, tankLiters }));
+			const fixtureCore = createTestCore({ ...catalog, compressors: [compressor], tools: [tool] });
+			const response = fixtureCore.handle({ jsonrpc: '2.0', id: 'tank-graph', method: 'tools/call', params: { name: 'build_complete_air_system', arguments: { compressorId: compressor.id, toolIds: [tool.id] } } });
+			if (!response) throw new Error('Expected an MCP response for the tank graph fixture.');
+			const graph = response.result.structuredContent.airgraph;
+			expect(graph.nodes.filter((node: any) => node.type === 'tank_volume')).toEqual(tankLiters === undefined ? [] : [expect.objectContaining({ value: 0, unit: 'L' })]);
+			expect(graph.edges.filter((edge: any) => edge.relation === 'has_tank')).toHaveLength(tankLiters === undefined ? 0 : 1);
+			const nodeIds = new Set(graph.nodes.map((node: any) => node.id));
+			for (const edge of graph.edges) { expect(nodeIds.has(edge.from)).toBe(true); expect(nodeIds.has(edge.to)).toBe(true); }
+		}
+	});
 	it('keeps both a single average-consumption tool and a complete system indeterminate', () => {
 		const compressorId = 'atlas-copco-lz-10-10-bm';
 		const toolId = 'm7-nc-4255q';

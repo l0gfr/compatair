@@ -27,7 +27,7 @@ export const GET: APIRoute = async () => {
 			{ title: `Quel compresseur pour ${item.brand} ${item.model} ?`, type: 'Sélection technique', url: `/quel-compresseur-pour/${item.slug}/`, keywords: toolSearchText(item) },
 			{ title: item.label, type: 'Outil', url: `/outils-pneumatiques/${item.slug}/`, keywords: toolSearchText(item) },
 		]),
-		...compressors.map((item) => ({ title: compressorDisplayName(item), type: 'Compresseur', url: `/compresseurs/${item.slug}/`, keywords: `${item.tankLiters} litres ${item.maxPressureBar} bar ${item.mpn ?? ''}` })),
+		...compressors.map((item) => ({ title: compressorDisplayName(item), type: 'Compresseur', url: `/compresseurs/${item.slug}/`, keywords: `${item.tankLiters === undefined ? '' : `${item.tankLiters} litres`} ${item.maxPressureBar} bar ${item.mpn ?? ''}` })),
 		...guides.map((item) => ({ title: item.data.title, type: 'Guide', url: `/guides/${item.id}/`, keywords: guideKeywords(item) })),
 		...glossaryTerms.map((item) => ({ title: item.term, type: 'Glossaire', url: `/glossaire/#${item.slug}`, keywords: item.definition })),
 	];

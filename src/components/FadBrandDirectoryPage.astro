@@ -4,7 +4,7 @@ import CatalogSignalVisual from '../components/CatalogSignalVisual.astro';
 import DirectoryBrowser from '../components/DirectoryBrowser.astro';
 import { compressors } from '../data/catalog';
 import { brandSlug } from '../domain/brand';
-import { compressorDisplayName } from '../domain/product-display';
+import { compressorDisplayName, compressorTankLabel } from '../domain/product-display';
 import { serializeJsonLd } from '../domain/structured-data';
 import { sourceQualityLabel } from '../domain/source-quality';
 
@@ -93,7 +93,7 @@ const itemListJsonLd = {
 									data-sort-primary={Math.max(...item.fadCurve.map((point) => point.litersPerMinute))}
 								>
 									<th><a href={`/compresseurs/${item.slug}/`}>{compressorDisplayName(item)}</a></th>
-									<td>{item.tankLiters} L</td>
+									<td>{compressorTankLabel(item)}</td>
 									<td>{item.maxPressureBar} bar</td>
 									<td>{item.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ')}</td>
 									<td>{sourceQualityLabel(item.confidence)}<small>Grade {item.confidence}</small></td>

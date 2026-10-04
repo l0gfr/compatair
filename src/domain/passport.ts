@@ -103,7 +103,7 @@ const sizingResultSnapshotSchema = z.object({
 
 const passportInputSnapshotSchema = z.object({
 	compressorLabel: z.string().min(1).max(240), toolLabels: z.array(z.string().min(1).max(240)).max(20),
-	availableFadLpm: z.number().positive().max(20_000).optional(), nominalMarginPercent: z.number().optional(), compatAirMarginCovered: z.boolean().optional(),
+	availableFadLpm: compressorInputSchema.shape.availableFadLpm, nominalMarginPercent: z.number().optional(), compatAirMarginCovered: z.boolean().optional(),
 	sources: z.array(passportSourceSchema).max(100), warnings: z.array(z.string().max(2_000)).max(100), missingData: z.array(z.string().max(2_000)).max(100), possibleUpgrades: z.array(z.string().max(2_000)).max(100),
 	installationPlan: installationPlanSchema.optional(),
 });

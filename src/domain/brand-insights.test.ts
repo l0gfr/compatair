@@ -3,6 +3,12 @@ import { compressors, tools } from '../data/catalog';
 import { createBrandInsights } from './brand-insights';
 
 describe('createBrandInsights', () => {
+	it('counts unknown tanks separately from machines explicitly without a receiver', () => {
+		const base = compressors[0];
+		const insights = createBrandInsights([{ ...base, tankLiters: undefined }, { ...base, tankLiters: 0 }, { ...base, tankLiters: 50 }], []);
+		expect(insights.tankDistribution).toEqual([{ label: 'Sans cuve', count: 1 }, { label: '50 à 99 L', count: 1 }, { label: 'Non documentée', count: 1 }]);
+		expect(insights.gaps.join(' ')).toContain('1 compresseur(s) sans volume de cuve documenté');
+	});
 	it('calcule des métriques factuelles sans juger la qualité des machines', () => {
 		const brand = 'KAESER';
 		const brandCompressors = compressors.filter((item) => item.brand === brand);

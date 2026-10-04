@@ -46,6 +46,19 @@ function validate(schema: any, value: any, path = '$'): string[] {
 }
 
 describe('MCP tool-specific output schemas', () => {
+	it('publishes a compressor with an unknown tank and applies volume filters only to documented values', () => {
+		const unknown = JSON.parse(JSON.stringify({ ...compressors[0], id: 'tank-unknown', tankLiters: undefined }));
+		const noReceiver = { ...compressors[0], id: 'no-receiver', tankLiters: 0 };
+		const core = createMcpCore({ catalogVersion: 'test', schemaVersion: '2.0.0', verifiedAt: '2026-10-04', compressors: [unknown, noReceiver], tools }, undefined, { profile: 'legacy' });
+		const call = (name: string, args: unknown) => core.handle({ jsonrpc: '2.0', id: name, method: 'tools/call', params: { name, arguments: args } })!.result.structuredContent;
+		const output = call('get_compressor_specs', { id: unknown.id });
+		expect(output.compressor).not.toHaveProperty('tankLiters');
+		expect(validate(outputSchemas.get_compressor_specs, output)).toEqual([]);
+		expect(call('search_compressors', {}).compressors).toHaveLength(2);
+		expect(call('search_compressors', { minTankLiters: 0 }).compressors.map((item: any) => item.id)).toEqual([noReceiver.id]);
+		expect(call('search_compressors', { minTankLiters: 1 }).compressors).toEqual([]);
+		expect(validate(outputSchemas.get_compressor_specs, { ...output, compressor: { ...output.compressor, tankLiters: null } }).length).toBeGreaterThan(0);
+	});
 	it('preserves unknown pressure only for incomplete tool profiles', () => {
 		const schema = outputSchemas.get_tool_requirements.properties.tool;
 		const incomplete = tools.find(item => item.demandModel === 'variable-volume' && item.workingPressureBar.max === undefined)!;

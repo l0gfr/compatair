@@ -6,6 +6,11 @@ import { productImageDimensions } from './product-image-dimensions';
 import { technicalCardSvg } from '../../scripts/lib/technical-card.mjs';
 
 describe('productImageDimensions', () => {
+	it('prints an undocumented tank without a fabricated volume or a unit', () => {
+		const svg = technicalCardSvg({ brand: 'Example', model: 'M1', maxPressureBar: 8, fadCurve: [] }, 'compressors');
+		expect(svg).toContain('Non documentée');
+		expect(svg).not.toMatch(/undefined|NaN|>litres<|>0</);
+	});
 	it('retains intrinsic vector card dimensions and refuses an unrelated SVG layout', () => {
 		const source = `/images/products/fixture-generated-card-${randomUUID()}.svg`;
 		const path = resolve('public', source.slice(1));
