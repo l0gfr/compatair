@@ -55,6 +55,7 @@ describe('bounded planner preserves the pinned admission decisions', () => {
 		try {
 			for (const path of ['src/data/products/compressors', 'src/data/products/tools', 'src/content/guides', 'config']) await mkdir(join(directory, path), { recursive: true });
 			await writeFile(join(directory, 'config/seo-query-panel.json'), JSON.stringify({ queries: [] }));
+			await writeFile(join(directory, 'config/indexation-editorial-holds.json'), JSON.stringify({ schemaVersion: 1, holds: [] }));
 			for (let i = 0; i < 1025; i++) await writeFile(join(directory, 'src/data/products/compressors', `${String(i).padStart(4, '0')}.ts`), `export default ${JSON.stringify({ id: String(i), slug: `ref-${i}`, brand: 'Fixture', model: String(i), evidence: [], fadCurve: [], cutInPressureBar: 4, cutOutPressureBar: 8 })};`);
 			const moduleUrl = new URL('./indexation-candidates.mjs', import.meta.url).href;
 			const code = `import {collectIndexationCandidates} from ${JSON.stringify(moduleUrl)}; const samples=[];const rows=await collectIndexationCandidates(${JSON.stringify(directory)},{onProgress:x=>samples.push(x.products)});console.log(JSON.stringify({paths:rows.map(x=>x.path),samples}));`;
