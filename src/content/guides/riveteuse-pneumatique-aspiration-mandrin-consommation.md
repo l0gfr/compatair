@@ -56,3 +56,5 @@ La possibilité de commuter une aspiration ne signifie pas que l’opérateur do
 Lors de la réception, notez le nombre d’opérations dans une séquence représentative, les pauses, les autres consommateurs et la pression en fonctionnement. Vérifiez aussi que l’évacuation se déroule correctement. Un rivet posé isolément ne décrit pas la tenue de l’alimentation sur une série.
 
 Si les données ne précisent pas le périmètre de consommation, la décision reste limitée. CompatAir ne comble pas cette lacune par une aspiration standard estimée. Aucune consommation auxiliaire, cadence maximale ou autonomie de cuve n’est attribuée à la TAURUS 3 dans ce guide.
+
+Si le rivet reste mal tiré, distinguez aussi les points d’entretien. La [notice CP9883/CP9884](/guides/cp9883-rivet-mal-tire-mors-hydraulique/) sépare les mors, la lubrification d’air et le circuit hydraulique, sans convertir cette distinction en diagnostic à distance.

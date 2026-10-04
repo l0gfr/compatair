@@ -1,0 +1,125 @@
+const product: unknown = {
+  "id": "perceuse-taylor-pneumatic-t-9952-industrial-90-drill-1-4-28-t-9952",
+  "slug": "perceuse-taylor-pneumatic-t-9952-industrial-90-drill-1-4-28-t-9952",
+  "categoryId": "perceuse",
+  "category": "perceuse",
+  "label": "Taylor Pneumatic T-9952 Industrial 90° Drill 1/4-28 (réf. T-9952)",
+  "brand": "Taylor Pneumatic",
+  "model": "T-9952 Industrial 90° Drill 1/4-28",
+  "mpn": "T-9952",
+  "demandModel": "variable-volume",
+  "workingPressureBar": {},
+  "demandExplanation": "La fiche distingue Average Air Cons. et Air Cons. @ Load, mais l’unité et la pression de mesure ne sont pas explicites. Le plafond 90 PSI ne devient pas un point de mesure.",
+  "confidence": "B",
+  "image": {
+    "src": "/images/products/perceuse-taylor-pneumatic-t-9952-industrial-90-drill-1-4-28-t-9952.svg",
+    "alt": "Repères techniques : Taylor Pneumatic T-9952 Industrial 90° Drill 1/4-28 (réf. T-9952)",
+    "sourceUrl": "https://taylorpneumatic.com/products/t-9952-6-hp-90-aircraft-drill",
+    "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+  },
+  "variant": {
+    "familyId": "taylor-pneumatic-t-9952-industrial-90-drill-1-4-28",
+    "label": "Référence T-9952",
+    "distinguishingAttributes": {
+      "reference": "T-9952",
+      "RPM": "3,200",
+      "Thread Size in.": "1/4-28"
+    }
+  },
+  "editorial": {
+    "overview": "Taylor Pneumatic T-9952 Industrial 90° Drill 1/4-28 (réf. T-9952). La fiche distingue Average Air Cons. et Air Cons. @ Load, mais l’unité et la pression de mesure ne sont pas explicites. Le plafond 90 PSI ne devient pas un point de mesure.",
+    "verifiedFacts": [
+      "RPM : 3,200.",
+      "Thread Size in. : 1/4-28.",
+      "Weight lbs. : 2.1.",
+      "Length in. : 10.5\".",
+      "Horsepower : .6.",
+      "Air Pressure : 90 PSI Max."
+    ],
+    "limitations": [
+      "La fiche distingue Average Air Cons. et Air Cons. @ Load, mais l’unité et la pression de mesure ne sont pas explicites. Le plafond 90 PSI ne devient pas un point de mesure.",
+      "Les colonnes Average Air Cons. et Air Cons. @ Load sont distinguées dans la fiche, mais l’unité et le point de pression de mesure ne sont pas explicités.",
+      "Air Pressure 90 PSI Max est un plafond de service ; il ne devient pas une pression de mesure par déduction.",
+      "Aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+    ]
+  },
+  "specifications": [
+    {
+      "label": "RPM",
+      "value": "3,200",
+      "evidenceIds": [
+        "october4-tools-taylor-product-231-p1"
+      ]
+    },
+    {
+      "label": "Thread Size in.",
+      "value": "1/4-28",
+      "evidenceIds": [
+        "october4-tools-taylor-product-231-p1"
+      ]
+    },
+    {
+      "label": "Weight lbs.",
+      "value": "2.1",
+      "evidenceIds": [
+        "october4-tools-taylor-product-231-p1"
+      ]
+    },
+    {
+      "label": "Length in.",
+      "value": "10.5\"",
+      "evidenceIds": [
+        "october4-tools-taylor-product-231-p1"
+      ]
+    },
+    {
+      "label": "Horsepower",
+      "value": ".6",
+      "evidenceIds": [
+        "october4-tools-taylor-product-231-p1"
+      ]
+    },
+    {
+      "label": "Air Pressure",
+      "value": "90 PSI Max",
+      "evidenceIds": [
+        "october4-tools-taylor-product-231-p1"
+      ]
+    },
+    {
+      "label": "Pression dans la source",
+      "value": "Pression associée à la consommation non indiquée.",
+      "evidenceIds": [
+        "october4-tools-taylor-product-231-p1"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "october4-tools-taylor-product-231-p1",
+      "sourceUrl": "https://taylorpneumatic.com/products/t-9952-6-hp-90-aircraft-drill",
+      "sourceLabel": "Taylor Pneumatic : T-9952 Industrial 90° Drill 1/4-28",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-04",
+      "confidence": "B",
+      "notes": "Déclaration fabricant, réponse primaire SHA-256 297034982263f89201e8b88f49ec562ffa313a19cc9d86bbd83da5df9bd56004. Aucun essai physique CompatAir."
+    }
+  ],
+  "fieldSources": {
+    "mpn": [
+      "october4-tools-taylor-product-231-p1"
+    ],
+    "workingPressureBar": [
+      "october4-tools-taylor-product-231-p1"
+    ],
+    "demandExplanation": [
+      "october4-tools-taylor-product-231-p1"
+    ]
+  },
+  "notes": [
+    "La fiche distingue Average Air Cons. et Air Cons. @ Load, mais l’unité et la pression de mesure ne sont pas explicites. Le plafond 90 PSI ne devient pas un point de mesure."
+  ]
+};
+
+export default product;

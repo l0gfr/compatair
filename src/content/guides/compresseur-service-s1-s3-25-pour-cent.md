@@ -59,3 +59,5 @@ Décrivez la durée pendant laquelle l’outil consomme réellement et les pause
 Si le service autorisé manque dans la documentation disponible, demandez-le au fabricant. Il ne devient pas 100 % par défaut. Aucun essai d’endurance ou température de protection n’est inventé ici pour compléter une fiche commerciale.
 
 Les définitions du [service S1](/glossaire/#service-s1) et du [service S3](/glossaire/#service-s3) restent accessibles dans le glossaire pour relire une désignation moteur.
+
+Le [cas Bambi BB24](/guides/bambi-bb24-50-pourcent-debit-continu/) associe le FAD publié au facteur de marche. La [notice FINI SuperSilent](/guides/fini-supersilent-redemarrage-thermique/) traite un autre point pratique : l’arrêt thermique et le retour automatique décrits pour son périmètre.

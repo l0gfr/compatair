@@ -45,3 +45,5 @@ Le devis doit préciser le code, la pression, la tension, la fréquence et les p
 Pour une machine d’occasion, ces vérifications doivent partir de son identification propre. Une documentation téléchargée pour une version actuelle ne prouve pas les caractéristiques de l’exemplaire proposé.
 
 Le [cas du 230 V triphasé](/guides/compresseur-vis-230v-triphase/) montre pourquoi la tension seule est insuffisante. Le [rapprochement entre code ERP et nom commercial](/guides/compresseur-reference-erp-nom-commercial/) complète la méthode lorsque les documents n’emploient pas le même intitulé.
+
+La [fiche JUN-AIR 6-25](/guides/junair-625-50-60-hz-debit/) fournit un exemple où les colonnes d’une même tension séparent encore la fréquence, le déplacement d’air et le FAD.

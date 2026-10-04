@@ -50,3 +50,5 @@ La viscosité de travail ne se devine pas d’après la marque de peinture. Fait
 Faites documenter le fonctionnement lors d’une séquence représentative, avec l’agitation prévue et les autres postes en service. Pour deux pistolets, utilisez le [bilan de simultanéité](/guides/deux-pistolets-peinture-simultanes/) en y ajoutant seulement les auxiliaires dont la consommation est confirmée.
 
 L’ouverture, la dépressurisation et l’entretien d’une cuve suivent sa notice, par un opérateur compétent. Ce guide ne donne ni une pression de recette universelle ni une procédure d’ouverture improvisée. Le résultat attendu du dossier est une correspondance claire entre chaque fonction, son réglage et sa source documentaire.
+
+Avec une buse pneumatique industrielle, identifiez également le [mélange interne ou externe Lechler](/guides/lechler-buse-pneumatique-melange-viscosite/) et l’éventuel [circuit de commande de série 136](/guides/lechler-serie136-air-commande-atomisation/). La commande d’une vanne et l’atomisation ne décrivent pas la même arrivée d’air.

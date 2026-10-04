@@ -61,6 +61,8 @@ Pour passer de la lecture acoustique au choix d’un modèle, consultez le dossi
 
 Sur une machine pneumatique, la recherche de bruit peut aussi conduire à [examiner un silencieux colmaté et la contre-pression d’échappement](/guides/silencieux-pneumatique-colmate-contre-pression/), avec les contrôles prévus par la notice.
 
+La [fiche FINI SILTEK TS/OL130S](/guides/fini-siltek-ts240-debit-64dba/) permet d’examiner ensemble la distance du bruit annoncé et la nature du débit, sans établir un classement acoustique entre mesures prises à des distances différentes.
+
 ## Sources
 
 - [INRS, risque bruit](https://www.inrs.fr/risques/bruit/ce-qu-il-faut-retenir.html)

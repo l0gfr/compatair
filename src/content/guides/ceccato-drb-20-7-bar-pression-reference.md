@@ -34,3 +34,5 @@ Pour la version 7,5 bar, le calcul est 162 × 1 000 ÷ 60 = **2 700 L/min à 7 b
 Demandez le débit garanti à la pression du poste, l’emplacement où cette pression est exigée et la configuration de compression retenue. Le fournisseur doit également traiter les pertes du réseau et du traitement d’air. Il est préférable d’obtenir ces conditions par écrit avant de réserver le local ou de choisir la cuve.
 
 La [fiche DRB 20 au sol, version 7,5 bar](/compresseurs/ceccato-drb-20-au-sol-7-5-bar/) conserve le point à 7 bar. Pour comparer les bases de débit, consultez le [guide du débit restitué](/guides/comparatif-compresseurs-debit-restitue/). La pression maximale reste une caractéristique de la machine ; la pression de référence décrit la mesure que l’on peut utiliser.
+
+Le [tableau Hertz HGS 7,5 et HGS 11](/guides/hertz-hgs75-11-debit-13bar/) complète cette lecture avec plusieurs points de pression. Le scénario de besoin montre pourquoi la ligne pertinente doit précéder la comparaison des puissances.

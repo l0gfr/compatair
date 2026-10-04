@@ -1,0 +1,2543 @@
+{
+  "schemaVersion": 1,
+  "batchId": "documented-expansion-2026-10-04",
+  "reviewDate": "2026-10-04",
+  "reviewType": "internal_editorial",
+  "assistedByAI": true,
+  "externalProfessionalValidation": false,
+  "physicalTestsPerformed": false,
+  "publicationScope": {
+    "baselineGuides": 596,
+    "newGuidesPrepared": 30,
+    "plannedNewGuides": 30,
+    "importedCanonical": true,
+    "productionState": "not_published",
+    "indexationScope": "New guides remain in controlled queue; no indexation policy or daily quota changed."
+  },
+  "preparationState": "integrated_pending_full_validation",
+  "assertionPolicy": "Manufacturer facts, explicit hypothetical calculations and editorial inferences separated. Missing data preserved, no physical measurements or certification invented.",
+  "sourcePolicy": "Selected sources have current original HTTPS responses with status200; SHA256 and size verified against private bytes. Raw originals stay private. Soft redirects,404/403/429 and unused documents are excluded from claims. Retrieval date is not a claim of recent manufacturer publication.",
+  "sourceReview": {
+    "checkedAt": "2026-10-04T10:13:37.642417+00:00",
+    "usedSources": 26,
+    "claims": 69,
+    "originalHTTPResponses": 26,
+    "errors": []
+  },
+  "guides": [
+    {
+      "slug": "festool-lex3-1505-290-350-litres-minute",
+      "title": "Festool LEX 3 150/5 : pourquoi 290 et 350 L/min ne désignent pas le même besoin",
+      "seoTitle": "Festool LEX 3 150/5 : 290 ou 350 L/min ?",
+      "sha256": "f63d6e9d424eb790818bcdebde7aa218e08e3630c237bd81ee3adc7175e7b50a",
+      "wordCount": 579,
+      "sourceIds": [
+        "guides-oct4-festool-lex3-manual",
+        "guides-oct4-festool-lex3"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-festool-lex3-manual",
+          "location": "PDF25 tableau et alimentation",
+          "assertion": "LEX 3 150/5 : consommation 290 L/min à 6 bar, n0 et charge 30 N ; alimentation demandée au moins 350 L/min à 6 bar ; conduite intérieure au moins 9 mm.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Deux postes simultanés, exemple",
+          "assertion": "Deux consommations de 290 L/min totalisent 580 L/min dans le scénario, sans qualification de l’alimentation globale.",
+          "kind": "calculation",
+          "status": "reviewed_internal_calculation"
+        }
+      ],
+      "relatedGuideLinks": [
+        "debit-restitue-fad-vs-debit-aspire",
+        "diametre-longueur-flexible-air-comprime",
+        "utiliser-plusieurs-outils-pneumatiques"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/ponceuse-orbitale-festool-lex-3-150-5-575081/"
+      ],
+      "svgSha256": [
+        "7ca93218a1d349a912c30329841c35767b241a31458073bf9fe98b2c7544b668"
+      ],
+      "value": "Consommation sous charge30N vs minimum d’alimentation; 9mm intérieur, seuil6bar. Aucun guide Festool existant.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF25 + fiche575081"
+      ],
+      "sources": [
+        {
+          "url": "https://media.cdn.festool.io/productmedia/Images/attachment/e6f839db-86e0-11ef-8a56-005056b3ad01.pdf",
+          "resolvedUrl": "https://media.cdn.festool.io/productmedia/Images/attachment/e6f839db-86e0-11ef-8a56-005056b3ad01.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "01e9c1cbad9cf7673982e9583c5e836934e37630313c996337e230ab9c4062b6",
+          "bytes": 9401503,
+          "observedAt": "2026-10-04T09:08:57.672906+00:00",
+          "id": "guides-oct4-festool-lex3-manual",
+          "sourceLabel": "Festool, notice LEX 3 actuelle liée à la fiche 575081",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF25 tableau et alimentation"
+        },
+        {
+          "url": "https://www.festool.fr/produits/ponceuses-%C3%A9lectriques/ponceuses-pneumatiques/575081---lex-3-1505",
+          "resolvedUrl": "https://www.festool.fr/produits/ponceuses-%C3%A9lectriques/ponceuses-pneumatiques/575081---lex-3-1505",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "644776d3f578e5477fcba6ad39054f4315d991df041a835cb82bc1c5b5a848ca",
+          "bytes": 712013,
+          "observedAt": "2026-10-04T09:07:36.804461+00:00",
+          "id": "guides-oct4-festool-lex3",
+          "sourceLabel": "Festool, fiche française LEX 3 150/5, référence 575081",
+          "captureKind": "primary_source_bytes",
+          "location": ""
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "festool-ias3-aspiration-ponceuse-arretee",
+      "title": "Festool IAS 3 : couper l’aspiration quand la ponceuse pneumatique s’arrête",
+      "seoTitle": "Festool IAS 3 : aspiration quand la ponceuse s’arrête",
+      "sha256": "af54f5ecb429e344bc6faedf75d2fe8794035edfd97e695107631595aa408e8a",
+      "wordCount": 555,
+      "sourceIds": [
+        "guides-oct4-festool-lex3-manual",
+        "guides-oct4-festool-ias3light"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-festool-lex3-manual",
+          "location": "PDF26 aspiration",
+          "assertion": "La notice demande de ne pas aspirer l’outil pneumatique hors marche ; elle décrit un risque de dommage moteur et recommande un démarrage automatique pneumatique de l’aspiration.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "guides-oct4-festool-lex3-manual",
+          "location": "PDF25–26",
+          "assertion": "Les 9 mm intérieurs concernent la conduite d’air comprimé, distincte du réglage du diamètre d’aspiration.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "La réception proposée couvre les pauses avec une commande admise par l’intégrateur.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "ponceuse-aspiration-autonome-centralisee",
+        "ponceuse-pneumatique-bois-aspiration-poussieres",
+        "festool-lex3-1505-290-350-litres-minute"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/ponceuse-orbitale-festool-lex-3-150-5-575081/"
+      ],
+      "svgSha256": [
+        "c664c1a78b55cc28392f96d505219727c620dcadcc93fdce05d352efabf8fe7e"
+      ],
+      "value": "Aspiration arrêt outil dommage moteur; séparer raccord3fonctions et diamètre pneumatique du diamètre aspiration; distinct dimensionnement.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF26 + IAS3light497479"
+      ],
+      "sources": [
+        {
+          "url": "https://media.cdn.festool.io/productmedia/Images/attachment/e6f839db-86e0-11ef-8a56-005056b3ad01.pdf",
+          "resolvedUrl": "https://media.cdn.festool.io/productmedia/Images/attachment/e6f839db-86e0-11ef-8a56-005056b3ad01.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "01e9c1cbad9cf7673982e9583c5e836934e37630313c996337e230ab9c4062b6",
+          "bytes": 9401503,
+          "observedAt": "2026-10-04T09:08:57.672906+00:00",
+          "id": "guides-oct4-festool-lex3-manual",
+          "sourceLabel": "Festool, notice LEX 3 actuelle liée à la fiche 575081",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF26 aspiration; PDF25–26"
+        },
+        {
+          "url": "https://www.festool.fr/accessoires/ponceuses-%C3%A9lectriques/accessoires-des-outils/accessoires-divers/497479---ias-3-light-7000-as",
+          "resolvedUrl": "https://www.festool.fr/accessoires/ponceuses-%C3%A9lectriques/accessoires-des-outils/accessoires-divers/497479---ias-3-light-7000-as",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "9f4574deba5c62a9864ef3506c30603c9499de3fd76adeed562ddd551ead2e3b",
+          "bytes": 591423,
+          "observedAt": "2026-10-04T09:07:35.907697+00:00",
+          "id": "guides-oct4-festool-ias3light",
+          "sourceLabel": "Festool, IAS 3 light 7000 AS, référence 497479",
+          "captureKind": "primary_source_bytes",
+          "location": ""
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "festool-lex3-plateau-supersouple-aretes",
+      "title": "Festool LEX 3 : quel plateau pour poncer une arête sans employer le supersouple",
+      "seoTitle": "Festool LEX 3 : plateau supersouple et arêtes",
+      "sha256": "932957ea09ca618357b9781093cfc957dd3f10015b45ed89214c9630cea015a0",
+      "wordCount": 542,
+      "sourceIds": [
+        "guides-oct4-festool-lex3-manual"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-festool-lex3-manual",
+          "location": "PDF26 plateaux",
+          "assertion": "Plateau dur pour plans/arêtes, souple universel, supersouple pour contours avec exclusion des arêtes ; un diamètre inadapté peut produire des vibrations excessives.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "guides-oct4-festool-lex3-manual",
+          "location": "PDF27 frein",
+          "assertion": "Le frein en caoutchouc limite une accélération incontrôlée ; son remplacement est prévu lorsque son effet diminue.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "festool-lex3-1505-290-350-litres-minute",
+        "ponceuse-orbitale-2-5-5-8-mm-choisir",
+        "ponceuse-pneumatique-bois-aspiration-poussieres"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/ponceuse-orbitale-festool-lex-3-150-5-575081/"
+      ],
+      "svgSha256": [
+        "e53d1b778d0a7f0ff917e832f4c74c06fb7978c3ce076efddd153ec5fc17e4d7"
+      ],
+      "value": "Dureté plateau, diamètre correct, frein plateau; voisin orbite traite autre mécanisme.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF26–27"
+      ],
+      "sources": [
+        {
+          "url": "https://media.cdn.festool.io/productmedia/Images/attachment/e6f839db-86e0-11ef-8a56-005056b3ad01.pdf",
+          "resolvedUrl": "https://media.cdn.festool.io/productmedia/Images/attachment/e6f839db-86e0-11ef-8a56-005056b3ad01.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "01e9c1cbad9cf7673982e9583c5e836934e37630313c996337e230ab9c4062b6",
+          "bytes": 9401503,
+          "observedAt": "2026-10-04T09:08:57.672906+00:00",
+          "id": "guides-oct4-festool-lex3-manual",
+          "sourceLabel": "Festool, notice LEX 3 actuelle liée à la fiche 575081",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF26 plateaux; PDF27 frein"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "sata-jetx-hvlp-420-430-445-debit",
+      "title": "SATA jet X HVLP : quel débit retenir entre 420, 430 et 445 ?",
+      "seoTitle": "SATA jet X HVLP : 420, 430 ou 445 ?",
+      "sha256": "41a86cb15a20b6349d722c1b848cd09361e7e146039f8202f5c8ef59cbb977b4",
+      "wordCount": 542,
+      "sourceIds": [
+        "guides-oct4-sata-jetx-sku",
+        "guides-oct4-sata-jetx-catalog",
+        "guides-oct4-sata-jetx-manual"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-sata-jetx-sku",
+          "location": "Caractéristiques SKU1200170",
+          "assertion": "La fiche 1200170 affiche 420 L/min pour le jet X HVLP 1.3 I-control Basic.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "guides-oct4-sata-jetx-catalog",
+          "location": "PDF14 tableau",
+          "assertion": "Le catalogue affiche 445 Nl/min dans la colonne jet X HVLP.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "guides-oct4-sata-jetx-manual",
+          "location": "PDF102 tableau HVLP",
+          "assertion": "La notice affiche 430 Nl/min à 2 bar pour HVLP.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "Les unités et périmètres non réconciliés empêchent un choix silencieux. Le scénario 440 L/min ne constitue pas un verdict réel.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "debit-restitue-fad-vs-debit-aspire",
+        "buse-pistolet-peinture-chapeau-air-consommation",
+        "mesurer-pression-dynamique-pistolet-peinture"
+      ],
+      "internalProductLinks": [
+        "/outils-pneumatiques/pistolet-peinture-hvlp-sata-jet-x-1200170/"
+      ],
+      "svgSha256": [
+        "14ecb6c4f0a7d7bad7fbb90e4112d5fc8c7320194dbd3bae70c6c6e01dcefcd8"
+      ],
+      "value": "Contradiction primaire précise sur même famille, unités et régime; base conserve insufficient_data au lieu choisir meilleur chiffre.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "SKU1200170; cataloguePDF14; noticePDF102"
+      ],
+      "sources": [
+        {
+          "url": "https://www.sata.com/en/premium-spray-gun-for-automotive-refinish-jet-x-hvlp-1.3-i-control-nozzle-basic-suitable-for-water-and-solvent-based-basecoats-as-well-as-1k-2k-topcoat-systems/1200170",
+          "resolvedUrl": "https://www.sata.com/en/premium-spray-gun-for-automotive-refinish-jet-x-hvlp-1.3-i-control-nozzle-basic-suitable-for-water-and-solvent-based-basecoats-as-well-as-1k-2k-topcoat-systems/1200170",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "8450523bb36fcf851791995ef3bb80b52517eea941da85ef03f471dfe07dd6d7",
+          "bytes": 1225805,
+          "observedAt": "2026-10-04T09:19:49.069296+00:00",
+          "id": "guides-oct4-sata-jetx-sku",
+          "sourceLabel": "SATA, fiche jet X HVLP 1.3 I-control Basic, référence 1200170",
+          "captureKind": "primary_source_bytes",
+          "location": "Caractéristiques SKU1200170"
+        },
+        {
+          "url": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806",
+          "resolvedUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3",
+          "bytes": 13298603,
+          "observedAt": "2026-10-04T09:19:48.941724+00:00",
+          "id": "guides-oct4-sata-jetx-catalog",
+          "sourceLabel": "SATA, catalogue produit 2025 actuellement exposé",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF14 tableau"
+        },
+        {
+          "url": "https://www.sata.com/media/d2/3c/04/1790259009/MULTILINGUAL-SATA-OPERATING-MANUAL-JET-X-3266-240619-2.PDF.PDF?ts=1790259009",
+          "resolvedUrl": "https://www.sata.com/media/d2/3c/04/1790259009/MULTILINGUAL-SATA-OPERATING-MANUAL-JET-X-3266-240619-2.PDF.PDF?ts=1790259009",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "8b7cd0371d23eaae39f0098290ae5941ed87764dc320ec71180c99f860efcb0e",
+          "bytes": 43507933,
+          "observedAt": "2026-10-04T09:19:50.391800+00:00",
+          "id": "guides-oct4-sata-jetx-manual",
+          "sourceLabel": "SATA, notice jet X multilingue actuelle",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF102 tableau HVLP"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "sagola-4600-aqua-clear-consommation",
+      "title": "Sagola 4600 Scrambler : réserver 280 ou 295 L/min selon le chapeau d’air",
+      "seoTitle": "Sagola 4600 : AQUA 280 ou CLEAR 295 L/min",
+      "sha256": "4f3a4a2d96cc0d3a89079cc893dd01252fc17b8eb2ac0c3bf2ac371405ae97f8",
+      "wordCount": 528,
+      "sourceIds": [
+        "guides-oct4-sagola4600"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-sagola4600",
+          "location": "PDF21 tableau",
+          "assertion": "AQUA : 280 L/min ; CLEAR : 295 L/min, chacun à 2 bar. Jeux buse/aiguille 1.20, 1.20XL, 1.30, 1.30XL et 1.40.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "guides-oct4-sagola4600",
+          "location": "PDF22 alimentation",
+          "assertion": "La notice demande au moins 8 mm intérieurs et présente des approximations puissance/débit et perte de pression, sans FAD mesuré d’un compresseur exact.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Deux pistolets exemple",
+          "assertion": "Addition du scénario : 280 + 295 = 575 L/min, sans marge ni autre consommateur.",
+          "kind": "calculation",
+          "status": "reviewed_internal_calculation"
+        }
+      ],
+      "relatedGuideLinks": [
+        "buse-pistolet-peinture-chapeau-air-consommation",
+        "deux-pistolets-peinture-simultanes",
+        "mesurer-pression-dynamique-pistolet-peinture"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "0ebfec738346a699ae5febfa823693e8499b3d6cbcd77123b7462e5e5485a193"
+      ],
+      "value": "DVR AQUA vsCLEAR à2bar; ne pas extrapoler l’approximationHP=110L/min versFAD.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF21–22"
+      ],
+      "sources": [
+        {
+          "url": "https://sagola.com/uploads/manuales/pistola-4600-xtreme-scrambler-manual-00.pdf",
+          "resolvedUrl": "https://sagola.com/uploads/manuales/pistola-4600-xtreme-scrambler-manual-00.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "c91312fb00efb69761b99608e9367f342c7444e2d6a60f4fb999fcb5bb08bf4c",
+          "bytes": 3546285,
+          "observedAt": "2026-10-04T09:07:36.517805+00:00",
+          "id": "guides-oct4-sagola4600",
+          "sourceLabel": "Sagola, notice 4600 Xtreme Scrambler actuellement exposée",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF21 tableau; PDF22 alimentation"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "sagola-4600-filtre-produit-apres-nettoyage",
+      "title": "Sagola 4600 : retrouver un débit de peinture irrégulier après nettoyage du godet",
+      "seoTitle": "Sagola 4600 : filtre produit après nettoyage",
+      "sha256": "89282e4ad16f89fe8fecee14817cb3f5e7e2f4ac8232a9515a5a608c7991ab8c",
+      "wordCount": 571,
+      "sourceIds": [
+        "guides-oct4-sagola4600"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-sagola4600",
+          "location": "PDF24 filtre",
+          "assertion": "Le filtre de produit doit être nettoyé ou remplacé selon son état, puis réinséré à fond ; les impuretés peuvent provoquer des obstructions/défauts ; vérifier les fuites après remontage.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "guides-oct4-sagola4600",
+          "location": "PDF20,22,26",
+          "assertion": "Le produit est alimenté par gravité ; la gâchette ouvre l’air puis le produit. La notice sépare lubrification locale, élimination du nettoyant et air sans huile/silicone.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "nettoyage-pistolet-peinture-canaux-air",
+        "pistolet-peinture-jet-deforme-crachote-diagnostic",
+        "sagola-4600-aqua-clear-consommation"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "8162a49eeed3d131377278cd702fba592a9ee403975144912db7f7bd1cdb7eee"
+      ],
+      "value": "Filtre produit remonté et passage gravitaire; différence avec pression air, remise en service; nettoyage SATA général ne traitepas filtreSagola.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF24,26,29"
+      ],
+      "sources": [
+        {
+          "url": "https://sagola.com/uploads/manuales/pistola-4600-xtreme-scrambler-manual-00.pdf",
+          "resolvedUrl": "https://sagola.com/uploads/manuales/pistola-4600-xtreme-scrambler-manual-00.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "c91312fb00efb69761b99608e9367f342c7444e2d6a60f4fb999fcb5bb08bf4c",
+          "bytes": 3546285,
+          "observedAt": "2026-10-04T09:07:36.517805+00:00",
+          "id": "guides-oct4-sagola4600",
+          "sourceLabel": "Sagola, notice 4600 Xtreme Scrambler actuellement exposée",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF24 filtre; PDF20,22,26"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "senco-neverlube-lubrificateur-air",
+      "title": "SENCO NeverLube : prévoir une branche sans lubrificateur pour le cloueur",
+      "seoTitle": "SENCO NeverLube : une branche d’air sans huile",
+      "sha256": "03b8e498d62a3578e88f4727cd8b64ebb687954f50508c1dab3fb0e0b7d00196",
+      "wordCount": 547,
+      "sourceIds": [
+        "guides-oct4-senco-neverlube"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-senco-neverlube",
+          "location": "Paragraphes NeverLube etcons",
+          "assertion": "NeverLube utilise un composite graphite sans huile ou graisse ajoutée ; ni huilage quotidien ni regraissage périodique ; l’huile cause des problèmes ; lubrificateur en ligne exclu.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "Organisation proposée par branches identifiées ; aucune procédure de rinçage après exposition à l’huile inventée.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "installer-reseau-air-comprime-atelier",
+        "norgren-l17-faible-debit-lubrification-demarrage",
+        "cloueur-clous-mal-enfonces-pression-profondeur"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "f6c2e581f762a513ef8dc837e48a89a032e054b796c0db308a28e0182fc64263"
+      ],
+      "value": "Composite graphite différent oillessgraissé; erreur parc mixte et lubrificateur enligne; aucunguideNeverLube.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "Paragraphes NeverLube"
+      ],
+      "sources": [
+        {
+          "url": "https://www.senco.com/senco-blogs/oiled-vs-oilless-nailers/",
+          "resolvedUrl": "https://www.senco.com/senco-blogs/oiled-vs-oilless-nailers/",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "e8fb4a916292cc48ce17af0c86e6d77d7e36ad2a0da95b179804f6e606ed49f7",
+          "bytes": 110849,
+          "observedAt": "2026-10-04T09:19:48.648298+00:00",
+          "id": "guides-oct4-senco-neverlube",
+          "sourceLabel": "SENCO, note fabricant Oiled vs Oilless Nailers",
+          "captureKind": "primary_source_bytes",
+          "location": "Paragraphes NeverLube etcons"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "bostitch-smartpoint-palpeur-rentre",
+      "title": "Bostitch SmartPoint : le palpeur rentré au repos n’est pas une pièce manquante",
+      "seoTitle": "Bostitch SmartPoint : palpeur rentré au repos",
+      "sha256": "3da3e2d03108011d1d90f6d4c0d404516f32e07ec47077e49cf1e221ba1e6ae8",
+      "wordCount": 535,
+      "sourceIds": [
+        "guides-oct4-bostitch-smartpoint"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-bostitch-smartpoint",
+          "location": "PDF12FR fonctionnement",
+          "assertion": "Les BT1855SP-E, FN1650SP-M et FN1664SP-E ont un mécanisme normalement rétracté. Les références sans ce suffixe doivent être distinguées ; fonctions et commandes varient selon les modèles.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "La position de repos seule ne démontre ni une pièce manquante ni la conformité d’un outil.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "cloueur-pneumatique-declenchement-sequentiel-contact",
+        "cloueur-clous-mal-enfonces-pression-profondeur",
+        "diametre-longueur-flexible-air-comprime"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "e4b339faffeadacb3599e23838780b5efc36206abbee1edbdb5cb8200fd86a48"
+      ],
+      "value": "BT1855SP-E/FN1650SP-M/FN1664SP-E palpeur normalement rétracté vs modèles sansSP; distinct DIAL-A-DEPTH déjàcouvert.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF11–13"
+      ],
+      "sources": [
+        {
+          "url": "https://v3.pdf.bostitch.eu/products/manuals/FT74360-k-0419%20186020%20Rev%202%20SmartPoint%20Manual%20Update%20WMK.pdf",
+          "resolvedUrl": "https://v3.pdf.bostitch.eu/products/manuals/FT74360-k-0419%20186020%20Rev%202%20SmartPoint%20Manual%20Update%20WMK.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "16275e2eb6a0ea9a21780f66a9bf5d7d17bd9453f2b5bd4d64bfe5e9b372a69f",
+          "bytes": 3225674,
+          "observedAt": "2026-10-04T09:07:36.473087+00:00",
+          "id": "guides-oct4-bostitch-smartpoint",
+          "sourceLabel": "Bostitch, notice SmartPoint Rev 2, 0419",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF12FR fonctionnement"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "metabo-dkng4050-clous-agrafes-chargeur",
+      "title": "Metabo DKNG 40/50 : vérifier clous et agrafes avant d’accuser le compresseur",
+      "seoTitle": "Metabo DKNG 40/50 : clous et agrafes compatibles",
+      "sha256": "17cbb460c6eabb8e05970b78f43f120aab0dd2a77cf91778bb372582471c3b47",
+      "wordCount": 572,
+      "sourceIds": [
+        "guides-oct4-metabo-dkg-manual"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-metabo-dkg-manual",
+          "location": "PDF3tableaucolonneDKNG40/50",
+          "assertion": "DKNG 40/50 : clous SKN 15–50 mm, agrafes 90/ES 15–40 mm de largeur 5,8 mm, section 1,25 × 1,00 mm ; 0,66 L/coup, 5–7 bar et compresseur au moins 50 L/min.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Exemple60coups/min",
+          "assertion": "Scénario : 0,66 × 60 = 39,6 L/min moyens, sans débit instantané ni cadence qualifiée.",
+          "kind": "calculation",
+          "status": "reviewed_internal_calculation"
+        }
+      ],
+      "relatedGuideLinks": [
+        "agrafes-pneumatiques-serie-couronne-longueur-compatibilite",
+        "cloueur-clous-mal-enfonces-pression-profondeur",
+        "cadence-clouage-pneumatique-chantier"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "925346d72b40b824ba2b964d2e86dad63f223acb15caf52a83199698cea3f5ce"
+      ],
+      "value": "Outil combiné et deuxfixations admises, approvisionnement exact; guideagrafes général sansmodèle.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF3 etFR18–24"
+      ],
+      "sources": [
+        {
+          "url": "https://portal.metabo-service.com/fileadmin/metabo_material/BA/17027246_00_1024_84_A5_de_en_fr_nl_es_fi_no_pl_hu_cs_uk_%20DL-Tacker%20NLO%2062841%20UKCA.pdf",
+          "resolvedUrl": "https://portal.metabo-service.com/fileadmin/metabo_material/BA/17027246_00_1024_84_A5_de_en_fr_nl_es_fi_no_pl_hu_cs_uk_%20DL-Tacker%20NLO%2062841%20UKCA.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "452fa51899e0b4361d92fdc247728e6934e9b311974f132d705b073bb0b8c7df",
+          "bytes": 2970279,
+          "observedAt": "2026-10-04T09:08:57.557848+00:00",
+          "id": "guides-oct4-metabo-dkg-manual",
+          "sourceLabel": "Metabo, notice DKG 80/16, DKNG 40/50 et DSN 50, version 10/2024",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF3tableaucolonneDKNG40/50"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "metabo-dkg8016-deux-doigts-declenchement",
+      "title": "Metabo DKG 80/16 : comprendre le déverrouillage à deux doigts",
+      "seoTitle": "Metabo DKG 80/16 : commande à deux doigts",
+      "sha256": "23c40a3b1a691aff0113d5f329c6c301b53bd43faaa6dfb5faf9c367dfaaaf14",
+      "wordCount": 530,
+      "sourceIds": [
+        "guides-oct4-metabo-dkg-manual"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-metabo-dkg-manual",
+          "location": "PDF23FR5.3",
+          "assertion": "DKG 80/16 : absence de sécurité de contact ; majeur sur levier 16 et index sur gâchette 9. Les autres modèles couverts ont une procédure de contact distincte.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "Identifier le modèle, la notice et la commande avant d’interpréter air ou consommables.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "cloueur-pneumatique-declenchement-sequentiel-contact",
+        "metabo-dkng4050-clous-agrafes-chargeur",
+        "cloueur-clous-mal-enfonces-pression-profondeur"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "b5dba1a334667cbad3226dd40a11d9914df0e7d6a234a3ca67cc3fd9ad1f1f5a"
+      ],
+      "value": "DKG80sanssécuritécontact, lever16+trigger9; différence DKNG/DSN; ne pas diagnosticairautomatic.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF23"
+      ],
+      "sources": [
+        {
+          "url": "https://portal.metabo-service.com/fileadmin/metabo_material/BA/17027246_00_1024_84_A5_de_en_fr_nl_es_fi_no_pl_hu_cs_uk_%20DL-Tacker%20NLO%2062841%20UKCA.pdf",
+          "resolvedUrl": "https://portal.metabo-service.com/fileadmin/metabo_material/BA/17027246_00_1024_84_A5_de_en_fr_nl_es_fi_no_pl_hu_cs_uk_%20DL-Tacker%20NLO%2062841%20UKCA.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "452fa51899e0b4361d92fdc247728e6934e9b311974f132d705b073bb0b8c7df",
+          "bytes": 2970279,
+          "observedAt": "2026-10-04T09:08:57.557848+00:00",
+          "id": "guides-oct4-metabo-dkg-manual",
+          "sourceLabel": "Metabo, notice DKG 80/16, DKNG 40/50 et DSN 50, version 10/2024",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF23FR5.3"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "nitto-ach16-arret-contact-piece",
+      "title": "Nitto ACH-16 : pourquoi le burineur s’arrête hors de la pièce",
+      "seoTitle": "Nitto ACH-16 : arrêt lorsque le burin quitte la pièce",
+      "sha256": "796eeae5ef2b0cfb1ac1dcb82a3e131a267f9ff81e51c9e490fc1fa376a32566",
+      "wordCount": 543,
+      "sourceIds": [
+        "guides-oct4-nitto-ach16",
+        "guides-oct4-nitto-ach16-manual"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-nitto-ach16",
+          "location": "FicheGermanAbschaltenimLeerlauf",
+          "assertion": "La fiche ACH-16 décrit l’arrêt lorsque le burin ne touche pas la pièce.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "guides-oct4-nitto-ach16-manual",
+          "location": "PDF1,5",
+          "assertion": "Maximum 0,6 MPa ; débit 0,15 m³/min à vide ; liaison intérieure 9,5 mm ; huile ISO VG 10.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Conversionsunités",
+          "assertion": "Conversions exactes : 0,6 MPa = 6 bar et 0,15 m³/min = 150 L/min ; régime à vide conservé.",
+          "kind": "calculation",
+          "status": "reviewed_internal_calculation"
+        }
+      ],
+      "relatedGuideLinks": [
+        "burineur-pneumatique-chantier-debit-vibrations",
+        "diagnostiquer-chute-pression-air-comprime",
+        "nitto-ach16-ch24-emmanchement-burin"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "1aa74c5b015306532d74462791089bb2f6a87dbc379f2daa672a1ba59d093836"
+      ],
+      "value": "Dispositif marcheàvide fabricant, contrôlesair9.5mm etpressionmax.6MPa séparés; aucunguideACH16.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "FicheACH16 + noticePDF5–6"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nitto-kohki.eu/de/produkte-de/werkzeuge/druckluftwerkzeuge/item/ach-16.html?category_id=161",
+          "resolvedUrl": "https://www.nitto-kohki.eu/de/produkte-de/werkzeuge/druckluftwerkzeuge/item/ach-16.html?category_id=161",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "sha256": "fd2b3d565dc435b32e9c8caaed4b35a233440b416e6c505ea56b48d0dccf9b25",
+          "bytes": 52733,
+          "observedAt": "2026-10-04T09:11:10.322718+00:00",
+          "id": "guides-oct4-nitto-ach16",
+          "sourceLabel": "Nitto Kohki Europe, fiche ACH-16",
+          "captureKind": "primary_source_bytes",
+          "location": "FicheGermanAbschaltenimLeerlauf"
+        },
+        {
+          "url": "https://www.nitto-kohki.eu/images/stories/products/tools/manuals/manual_ach_16_ch_24.pdf",
+          "resolvedUrl": "https://www.nitto-kohki.eu/images/stories/products/tools/manuals/manual_ach_16_ch_24.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "dea30102afc86ead66ccf4cdb72c2c698cd8da89914872dabcb4f74b81e8a062",
+          "bytes": 430649,
+          "observedAt": "2026-10-04T09:13:21.888968+00:00",
+          "id": "guides-oct4-nitto-ach16-manual",
+          "sourceLabel": "Nitto Kohki, notice ACH-16 et CH-24",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF1,5"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "nitto-ach16-ch24-emmanchement-burin",
+      "title": "Nitto ACH-16 ou CH-24 : deux emmanchements de burin à identifier",
+      "seoTitle": "Nitto ACH-16 / CH-24 : quel emmanchement de burin ?",
+      "sha256": "75cd2382d75bffa59e235fbdc36de3f9556be2e7f8baff0379a6f4c850738a6e",
+      "wordCount": 565,
+      "sourceIds": [
+        "guides-oct4-nitto-ach16-manual"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-nitto-ach16-manual",
+          "location": "PDF1,6",
+          "assertion": "ACH-16 : diamètre extérieur de queue ronde 10,5 mm ; CH-24 : queue carrée 12,7 mm. Montage distinct avec manchon ou bague d’arrêt selon le modèle.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "La cote seule ne confirme pas l’association ; géométries du SVG symboliques, sans dessin de montage coté.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "burineur-pneumatique-chantier-debit-vibrations",
+        "fiche-intervention-air-comprime",
+        "nitto-ach16-arret-contact-piece"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "8153a78e569b9c3192a18ab2654007ed02fb03057f03d50cd5abd085fc15c2b3"
+      ],
+      "value": "Rond10.5mm vs carré12.7mm et montage distinct; article choixaccessoire,nondébit.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF1,5–6"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nitto-kohki.eu/images/stories/products/tools/manuals/manual_ach_16_ch_24.pdf",
+          "resolvedUrl": "https://www.nitto-kohki.eu/images/stories/products/tools/manuals/manual_ach_16_ch_24.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "dea30102afc86ead66ccf4cdb72c2c698cd8da89914872dabcb4f74b81e8a062",
+          "bytes": 430649,
+          "observedAt": "2026-10-04T09:13:21.888968+00:00",
+          "id": "guides-oct4-nitto-ach16-manual",
+          "sourceLabel": "Nitto Kohki, notice ACH-16 et CH-24",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF1,6"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "nitto-mlg25-meule-58mm-19000-tours",
+      "title": "Nitto MLG-25 : acheter une meule compatible avec les 19 000 tr/min",
+      "seoTitle": "Nitto MLG-25 : meule 58 mm pour 19 000 tr/min",
+      "sha256": "6486f9f5267766e759fabd762d99767870c9d9d9b563eb46df9a67cd7104a545",
+      "wordCount": 526,
+      "sourceIds": [
+        "guides-oct4-nitto-mlg25"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-nitto-mlg25",
+          "location": "PDF1,6",
+          "assertion": "MLG-25 : type 27, diamètre 58 mm, alésage 9,6 mm, épaisseur 3 mm ; 19 000 tr/min à vide ; vitesse admissible de la meule au moins celle de l’outil ; 0,42 m³/min à vide et 0,6 MPa.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Conversiondébit etpression",
+          "assertion": "Conversions exactes : 420 L/min et 6 bar, régime à vide conservé.",
+          "kind": "calculation",
+          "status": "reviewed_internal_calculation"
+        }
+      ],
+      "relatedGuideLinks": [
+        "meuleuse-pneumatique-vitesse-max-disque-abrasif",
+        "debit-restitue-fad-vs-debit-aspire",
+        "nitto-myg50-myg70-debit-meuleuse"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "0b0542cb409256dec9e7f2cff5c34422aa7f4f85601c1d24407b8f1dc27ea8df"
+      ],
+      "value": "Type27 diamètre58alésage9.6épaisseur3 +speedrated; ne pas confondre petite meuleuse etdisque125.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF1,5–7"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nitto-kohki.eu/images/stories/products/tools/manuals/manual_mlg_25.pdf",
+          "resolvedUrl": "https://www.nitto-kohki.eu/images/stories/products/tools/manuals/manual_mlg_25.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "6e10a708383a8879173ad9898b3e47fbcb61aa7ac0ad067f88df0a95e4a4b078",
+          "bytes": 324327,
+          "observedAt": "2026-10-04T09:13:21.863325+00:00",
+          "id": "guides-oct4-nitto-mlg25",
+          "sourceLabel": "Nitto Kohki, notice MLG-25",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF1,6"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "cp9883-rivet-mal-tire-mors-hydraulique",
+      "title": "CP9883 : rivet mal tiré, distinguer mors, air moteur et circuit hydraulique",
+      "seoTitle": "CP9883 : mors, air et huile hydraulique",
+      "sha256": "ed47e2abb9e9fa264332e7ac391f476db95eda895a16dcc699c25ba4188f2fcf",
+      "wordCount": 569,
+      "sourceIds": [
+        "guides-oct4-cp9883"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-cp9883",
+          "location": "PDF10FR",
+          "assertion": "Air : SAE 10, deux gouttes/minute ou huile à l’entrée chaque jour selon la notice. Mors : huile mécanique tous les 5 000 cycles. Hydraulique : ISO VG 22 approuvé, aucun liquide de frein. Examen d’appoint vers 100 000 cycles si course réduite ; réglage 75 mm et contre-écrou à préserver ; purge par technicien si intrusion d’air.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "riveteuse-pneumatique-aspiration-mandrin-consommation",
+        "compresseur-pour-riveteuse-pneumatique",
+        "fiche-intervention-air-comprime"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "85ff10cb6c4af7bf47fbbd4dfc62552672ee1253d2f3d06297c03903c31eb8a7"
+      ],
+      "value": "Lubrifiants troispoints différents,coursehydrauliqueVG22pasliquidefrein,75mmcontreécrou réservémaintenance; voisin consommationaspirationdifférent.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot.",
+        "Notice copyright2009 actuellement accessible ; version à rapprocher du numéro de série. Aucune conformité normative actuelle déduite."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF10"
+      ],
+      "sources": [
+        {
+          "url": "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940167759.pdf",
+          "resolvedUrl": "https://www.cp.com/content/dam/pim/itba/cp/technical-documents/8940167759.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "635047d0a1a197971260755b4d040dc32fc49ecf8a91d5684fc6e2f5255cfcf0",
+          "bytes": 4352931,
+          "observedAt": "2026-10-04T09:13:22.108704+00:00",
+          "id": "guides-oct4-cp9883",
+          "sourceLabel": "Chicago Pneumatic, notice CP9883/CP9884, copyright 2009, actuellement accessible",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF10FR"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "cejn-esafe-430-550-profils-embouts",
+      "title": "CEJN eSafe 430 et 550 : choisir le bon embout au-delà du filetage",
+      "seoTitle": "CEJN eSafe 430 / 550 : embout, profil et filetage",
+      "sha256": "dd9f7abeb756e73b336dfd416cc3451010d20620dc2511a1211020102d9af13f",
+      "wordCount": 509,
+      "sourceIds": [
+        "guides-oct4-cejn-430"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-cejn-430",
+          "location": "PDF17–18",
+          "assertion": "430 : ISO 6150 B de 8,2 mm et capacité 2 500 L/min ; 550 : 11 mm et 4 050 L/min, chacun à 6 bar et perte 0,5 bar. Coupleurs R1/2 : 104302155 et105502155 ; embouts :104305155 et105505155.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "Aucune association croisée déduite du filetage ou de la mention ISO ; révision actuelle à confirmer sur cette brochure ancienne.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "raccord-air-comprime-bsp-npt-1-4",
+        "raccord-rapide-securite-decompression-air-comprime",
+        "flexible-enrouleur-raccords-garage-debit"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "fa0f0b5cb21c24c849ff28114d951871af41d799c0df596a3acb6ced86b47870"
+      ],
+      "value": "ISO6150B8.2 et11mm + codesassemblages; guideeSafe320 général ne traitepas migration430/550.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot.",
+        "Brochure eSafe ancienne toujours accessible ; référence/revision et disponibilité actuelle à confirmer avant achat."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "Pages séries430/550"
+      ],
+      "sources": [
+        {
+          "url": "https://www.cejn.com/globalassets/documents/brochures/esafe-with-series-430-and-550/esafe-en.pdf",
+          "resolvedUrl": "https://www.cejn.com/globalassets/documents/brochures/esafe-with-series-430-and-550/esafe-en.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "a2900bbd417a46c9f2a55362cfc0f3ae06f93711ed5a018b3a062dd0babeb9b1",
+          "bytes": 4299231,
+          "observedAt": "2026-10-04T09:08:58.071809+00:00",
+          "id": "guides-oct4-cejn-430",
+          "sourceLabel": "CEJN, brochure eSafe incluant séries 430 et 550, révision ancienne actuellement accessible",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF17–18"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "wika-manometre-aiguille-pulsation-amortisseur",
+      "title": "Manomètre WIKA : une aiguille agitée demande-t-elle un amortisseur ?",
+      "seoTitle": "WIKA : aiguille agitée et amortisseur de pression",
+      "sha256": "f1356b11383af63429466b2ea1eb58029f8fe26efc2341959e9c15f364367ab1",
+      "wordCount": 513,
+      "sourceIds": [
+        "guides-oct4-wika-snubber",
+        "guides-oct4-wika-general"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-wika-general",
+          "location": "PDF1–2XSEL",
+          "assertion": "Notice XSEL : orifice de restriction pour pulsations ; implantation, remplissage ou liaison flexible à examiner pour vibrations mécaniques.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "guides-oct4-wika-snubber",
+          "location": "Description910.12",
+          "assertion": "910.12 : section réglable pour amortir pulsations et pointes de pression.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "Aucune réponse temporelle universelle connue ; stabilité du cadran ne confirme pas une alimentation suffisante.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "manometre-air-comprime-precision-pleine-echelle",
+        "wika-manometre-glycerine-zero-pression-boitier",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "5f29ebc11957df8aa22c6b4026b58ca6e49e368dece7cc05a186ca3f8ea4b442"
+      ],
+      "value": "Pulsationsfluide vs vibrationsmécaniques, mesuresdynamiques amorties; différent zéroboîtierglycerine.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "Fiche910.12 + noticeXSEL PDF1–2"
+      ],
+      "sources": [
+        {
+          "url": "https://www.wika.com/en-us/910_12.WIKA",
+          "resolvedUrl": "https://www.wika.com/en-us/910_12.WIKA",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "4128b8d60bab380de47816216a8a728e293452585a5cdee0fbfce9d17ec2e62e",
+          "bytes": 19155,
+          "observedAt": "2026-10-04T09:11:09.135880+00:00",
+          "id": "guides-oct4-wika-snubber",
+          "sourceLabel": "WIKA, fiche amortisseur 910.12",
+          "captureKind": "primary_source_bytes",
+          "location": "Description910.12"
+        },
+        {
+          "url": "https://www.wika.com/media/Operating-instructions/Operating-instructions/Pressure/Pressure-gauges/oi_pressuregauges_en_us.pdf",
+          "resolvedUrl": "https://www.wika.com/media/Operating-instructions/Operating-instructions/Pressure/Pressure-gauges/oi_pressuregauges_en_us.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "f2e80d780ab81ac9b31728db8cdb2e2c46b4242c5ce587f563fba61fb02f7bc8",
+          "bytes": 774013,
+          "observedAt": "2026-10-04T09:11:09.433524+00:00",
+          "id": "guides-oct4-wika-general",
+          "sourceLabel": "WIKA, notice XSEL type 2XX.34, révision février 2021",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF1–2XSEL"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "exair-static-retour-convoyeur-ioniseur",
+      "title": "La charge statique revient après l’ioniseur : examiner le convoyeur en aval",
+      "seoTitle": "Charge statique après ioniseur : examiner le convoyeur",
+      "sha256": "a9f3b2c1653f3bbefc49f1acba84f639462c4f9e5279a848640de15063acb85a",
+      "wordCount": 529,
+      "sourceIds": [
+        "guides-oct4-exair-ion"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-exair-ion",
+          "location": "FAQ We removedstatic etWhereposition",
+          "assertion": "Un frottement après traitement peut créer une nouvelle charge ; implantation peu avant le problème ; plusieurs ioniseurs possibles en cas de régénération.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "guides-oct4-exair-ion",
+          "location": "FAQCanIduct",
+          "assertion": "Conduit déconseillé par EXAIR en raison de turbulence et recombinaison des ions.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "Cartographie et relevés proposés ; aucun convoyeur effectivement testé.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "ioniseur-air-comprime-debit-neutralisation-electrostatique",
+        "exair-ioniseur-emetteur-nettoyage",
+        "exair-intellistat-8500-8505-air-continu"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "025598fe46a859af1e8f7d250f378ea27e5e1d16d7005656a0a1c20ac9c5439b"
+      ],
+      "value": "Regénérationfrottement et position avantzoneproblème; déplacement charge électrique distinct dimensionnementIZN10E.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "FAQ regeneration/position"
+      ],
+      "sources": [
+        {
+          "url": "https://www.exair.com/knowledgebase/faq/index/?catid=390",
+          "resolvedUrl": "https://www.exair.com/knowledgebase/faq/index/?catid=390",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "980823023eed39af6270b1a4b2e95648f7994c6f714b4b05b8e843df54184e44",
+          "bytes": 616125,
+          "observedAt": "2026-10-04T09:11:09.448158+00:00",
+          "id": "guides-oct4-exair-ion",
+          "sourceLabel": "EXAIR, FAQ des éliminateurs statiques",
+          "captureKind": "primary_source_bytes",
+          "location": "FAQ We removedstatic etWhereposition; FAQCanIduct"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "exair-ioniseur-emetteur-nettoyage",
+      "title": "Ioniseur EXAIR : nettoyer les émetteurs sans laisser de résidu conducteur",
+      "seoTitle": "Ioniseur EXAIR : entretien des pointes émettrices",
+      "sha256": "bee912c5b816e352ac8bd9cf208e70f2740e0bf2a1dc5fbe4fecf2cd117f665c",
+      "wordCount": 536,
+      "sourceIds": [
+        "guides-oct4-exair-ion"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-exair-ion",
+          "location": "FAQmaintenanceIonizingBar",
+          "assertion": "Brosse souple, pointes ni pliées ni émoussées, aucun résidu conducteur et intervention hors tension ; fréquence propre à l’environnement.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "Aucun intervalle universel déduit des exemples quotidiens/mensuels ; inspection distincte de calibration.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "ioniseur-air-comprime-debit-neutralisation-electrostatique",
+        "exair-static-retour-convoyeur-ioniseur",
+        "fiche-intervention-air-comprime"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "66b7d151cfa9700fd488cf964c6ef06891668430fb85d58ee9ce3804c44c0735"
+      ],
+      "value": "Brosse souplehors tension, pointespréservées, fréquenceenvironnement aucunejournéeuniverselle; maintenancedistincteimplantation.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "FAQ How do I maintain"
+      ],
+      "sources": [
+        {
+          "url": "https://www.exair.com/knowledgebase/faq/index/?catid=390",
+          "resolvedUrl": "https://www.exair.com/knowledgebase/faq/index/?catid=390",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "980823023eed39af6270b1a4b2e95648f7994c6f714b4b05b8e843df54184e44",
+          "bytes": 616125,
+          "observedAt": "2026-10-04T09:11:09.448158+00:00",
+          "id": "guides-oct4-exair-ion",
+          "sourceLabel": "EXAIR, FAQ des éliminateurs statiques",
+          "captureKind": "primary_source_bytes",
+          "location": "FAQmaintenanceIonizingBar"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "exair-intellistat-8500-8505-air-continu",
+      "title": "EXAIR Intellistat 8500 ou 8505 : le passage à une buse fixe change le bilan d’air",
+      "seoTitle": "Intellistat 8500 / 8505 : débit et régime d’air",
+      "sha256": "42773d4405de9b7c5fe31897338b97dba31dbe7b18b05ebebc8af8b7c09d25a5",
+      "wordCount": 523,
+      "sourceIds": [
+        "guides-oct4-exair-intellistat"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-exair-intellistat",
+          "location": "PDF29,31 tableaux etfunction",
+          "assertion": "8500/8505 : 76,46 SLPM à2,1 bar et164,21 à5,5 ; gâchette8500 vs commande8505 fixe ; force à305 mm et décharge à1 pouce ; alimentation902067 24VDC et tube6 mm.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Exemple5min@2.1bar",
+          "assertion": "Scénario hypothétique :76,46×1=76,46 litres standard et×5=382,30 ; aucune durée validée ni réception de neutralisation.",
+          "kind": "calculation",
+          "status": "reviewed_internal_calculation"
+        }
+      ],
+      "relatedGuideLinks": [
+        "utiliser-plusieurs-outils-pneumatiques",
+        "ioniseur-air-comprime-debit-neutralisation-electrostatique",
+        "exair-static-retour-convoyeur-ioniseur"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "59521e499c953c5f70d321a7c110188c2906e10efeefb41bc58a9f32595313e9"
+      ],
+      "value": "Mêmes76.46SLPM@2.1bar maisgâchettevsfixe, budgetcyclehypothétique explicite; mesuresforce305mm vscharge25.4mm.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF29–31, imprimées153–155"
+      ],
+      "sources": [
+        {
+          "url": "https://www.exair.com/media/productcms/pdf/StaticEliminators1_1_1.pdf",
+          "resolvedUrl": "https://www.exair.com/media/productcms/pdf/StaticEliminators1_1_1.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "01a7606cfd83774b25ae973ed5b2bc7d161675a6e6476733f2153a4959dab202",
+          "bytes": 13667437,
+          "observedAt": "2026-10-04T09:11:10.008790+00:00",
+          "id": "guides-oct4-exair-intellistat",
+          "sourceLabel": "EXAIR, catalogue statique Cat36 2025, Intellistat 8500 et 8505",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF29,31 tableaux etfunction"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "lechler-buse-pneumatique-melange-viscosite",
+      "title": "Buse pneumatique Lechler : mélange interne ou externe pour un produit visqueux",
+      "seoTitle": "Buse Lechler : mélange interne ou externe et viscosité",
+      "sha256": "5d947060b2337d9c04863bc80ca6c7950ef0b979910460fb90b22cd591a10e38",
+      "wordCount": 550,
+      "sourceIds": [
+        "guides-oct4-lechler-catalog"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-lechler-catalog",
+          "location": "PDF26,28,298",
+          "assertion": "Mélange interne pour fluides peu visqueux et externe pour fluides visqueux ; aspiration ou pression du liquide constitue un choix distinct ; viscosité influe sur le jet.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "Aucune qualification universelle de produit depuis une plage de famille ; air, liquide et commande gardent leurs conditions propres.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "cuve-peinture-sous-pression-air-produit-agitation",
+        "lechler-serie136-air-commande-atomisation",
+        "buse-pistolet-peinture-chapeau-air-consommation"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "d84d3a4ceaba24fc8f7b14e542d3f681ea394f855d0fc1b2c89e400668929eb0"
+      ],
+      "value": "Mélangepneumatique/localisationmatière, viscosité pascompresseur automatique; aucuneguideLechler.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF26,28,298"
+      ],
+      "sources": [
+        {
+          "url": "https://www.lechler.com/fileadmin/media/pdf_flip_software/EN/catalogue_industry/lechler_catalogue_industry_221.pdf",
+          "resolvedUrl": "https://www.lechler.com/fileadmin/media/pdf_flip_software/EN/catalogue_industry/lechler_catalogue_industry_221.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "49896f47b80ad9747d9d8e2f47dbbb566f9e14961345c40c5e7f11247d20a751",
+          "bytes": 17496673,
+          "observedAt": "2026-10-04T09:11:11.011451+00:00",
+          "id": "guides-oct4-lechler-catalog",
+          "sourceLabel": "Lechler, catalogue Industrie 221 actuellement exposé",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF26,28,298"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "lechler-serie136-air-commande-atomisation",
+      "title": "Lechler série 136 : séparer air de commande et air d’atomisation",
+      "seoTitle": "Lechler série 136 : air de commande et atomisation",
+      "sha256": "217eac5ada635a2eb5c946335bf20e45aba41cc7353e9367e90f138b1776ff27",
+      "wordCount": 547,
+      "sourceIds": [
+        "guides-oct4-lechler-catalog"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-lechler-catalog",
+          "location": "PDF51–52accessoires136",
+          "assertion": "Commande d’air séparée ; pression d’ouverture de vanne2,1 bar et maximum180 cycles/min ; variantes d’aiguille136.xx1 àxx6.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "Volume de commande par cycle non fourni dans ce passage ; il n’est ni zéro ni calculable à partir de pression/cadence seules.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "lechler-buse-pneumatique-melange-viscosite",
+        "choisir-distributeur-pneumatique-debit-nominal",
+        "utiliser-plusieurs-outils-pneumatiques"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "de9ec41515d84bd4add8104d60438da056518aa49c86aec5bb0c7ea52338f0c2"
+      ],
+      "value": "Valve pneumatiquecircuitdistinct ouverture2.1bar max180cycles/min; débitcommande manquant paszéro.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF51–52"
+      ],
+      "sources": [
+        {
+          "url": "https://www.lechler.com/fileadmin/media/pdf_flip_software/EN/catalogue_industry/lechler_catalogue_industry_221.pdf",
+          "resolvedUrl": "https://www.lechler.com/fileadmin/media/pdf_flip_software/EN/catalogue_industry/lechler_catalogue_industry_221.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "49896f47b80ad9747d9d8e2f47dbbb566f9e14961345c40c5e7f11247d20a751",
+          "bytes": 17496673,
+          "observedAt": "2026-10-04T09:11:11.011451+00:00",
+          "id": "guides-oct4-lechler-catalog",
+          "sourceLabel": "Lechler, catalogue Industrie 221 actuellement exposé",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF51–52accessoires136"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "lechler-debit-normal-zero-degres-fad",
+      "title": "Lechler : comparer un débit normal à 0 °C avec un FAD à 20 °C",
+      "seoTitle": "Lechler 0 °C et FAD 20 °C : comparer les débits",
+      "sha256": "4cc6939a5d378682fe96fab5bd2bce9c2122288c05d2d73b67676f400c9e9d0c",
+      "wordCount": 534,
+      "sourceIds": [
+        "guides-oct4-lechler-catalog",
+        "guides-oct4-hertz"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-lechler-catalog",
+          "location": "PDF164",
+          "assertion": "Lechler déclare101325 Pa et273,15 K ; humidité non précisée dans le passage.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "guides-oct4-hertz",
+          "location": "PDF26footnote",
+          "assertion": "Hertz précise1 bar absolu,0%HR,20°C entrée,71°C vanne etSmartoil ; FAD annoncéISO1217 annexeC.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Scénariogazidéal sec",
+          "assertion": "Scénario de gaz idéal sec :1000×100000/101325×273,15/293,15=919,5909612944871, arrondi919,59L/min ; aucune certification d’équivalence des méthodes.",
+          "kind": "calculation",
+          "status": "reviewed_internal_calculation"
+        }
+      ],
+      "relatedGuideLinks": [
+        "bar-psi-pression-absolue-relative",
+        "debit-restitue-fad-vs-debit-aspire",
+        "hertz-hgs75-11-debit-13bar"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "95f528b8950d38f47817d33c82c517fe4b6b98e705ffb7702802b9673b446a66"
+      ],
+      "value": "0C101325Pa vs20C1barHertz; conservationmassique conversionexplicite tablecalculée, pas comparerNl/min avecaircomprimévolumique.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF164 + HertzPDF26"
+      ],
+      "sources": [
+        {
+          "url": "https://www.lechler.com/fileadmin/media/pdf_flip_software/EN/catalogue_industry/lechler_catalogue_industry_221.pdf",
+          "resolvedUrl": "https://www.lechler.com/fileadmin/media/pdf_flip_software/EN/catalogue_industry/lechler_catalogue_industry_221.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "49896f47b80ad9747d9d8e2f47dbbb566f9e14961345c40c5e7f11247d20a751",
+          "bytes": 17496673,
+          "observedAt": "2026-10-04T09:11:11.011451+00:00",
+          "id": "guides-oct4-lechler-catalog",
+          "sourceLabel": "Lechler, catalogue Industrie 221 actuellement exposé",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF164"
+        },
+        {
+          "url": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf",
+          "resolvedUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339",
+          "bytes": 6798749,
+          "observedAt": "2026-10-04T09:05:33.280050+00:00",
+          "id": "guides-oct4-hertz",
+          "sourceLabel": "Hertz Kompressoren, catalogue actuel, modifié le 8 juin 2026 selon HTTP",
+          "captureKind": "primary_source_bytes",
+          "lastModified": "Mon, 08 Jun 2026 08:09:33 GMT",
+          "location": "PDF26footnote"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "lechler-whisperblast-largeur-jet-sechage",
+      "title": "Whisperblast Lechler : la largeur du jet n’est pas une largeur de séchage garantie",
+      "seoTitle": "Whisperblast : largeur de jet et résultat de séchage",
+      "sha256": "ede6efdf94e2e460f8c92a63dc5575e3822ed123232fdad79e17eef5cb1e5076",
+      "wordCount": 585,
+      "sourceIds": [
+        "guides-oct4-lechler-catalog"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-lechler-catalog",
+          "location": "PDF163,173",
+          "assertion": "Mesure du jet au seuil2,5m/s ; 6WB.800 :Z600/900/900,X140/240/260,Y130/185/220mm à1/3/5bar.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "L’enveloppe ne garantit pas un séchage et n’autorise pas une extrapolation linéaire de pression.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "couteau-air-comprime-ou-soufflante",
+        "lechler-debit-normal-zero-degres-fad",
+        "soufflette-garage-securite-bruit-consommation"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "baf0ffcd167e6c72c94e84bcb177dbece49634739d7c52822d19c0be1bf20bd6"
+      ],
+      "value": "6WB.800 dimensionsX/Y/Z et seuilmesure2.5m/s; jetcoverage≠qualitydrying.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF163,172–173"
+      ],
+      "sources": [
+        {
+          "url": "https://www.lechler.com/fileadmin/media/pdf_flip_software/EN/catalogue_industry/lechler_catalogue_industry_221.pdf",
+          "resolvedUrl": "https://www.lechler.com/fileadmin/media/pdf_flip_software/EN/catalogue_industry/lechler_catalogue_industry_221.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "49896f47b80ad9747d9d8e2f47dbbb566f9e14961345c40c5e7f11247d20a751",
+          "bytes": 17496673,
+          "observedAt": "2026-10-04T09:11:11.011451+00:00",
+          "id": "guides-oct4-lechler-catalog",
+          "sourceLabel": "Lechler, catalogue Industrie 221 actuellement exposé",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF163,173"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "bambi-bb24-50-pourcent-debit-continu",
+      "title": "Bambi BB24 : 27 L/min à 5 bar et 50 % de service, que peut-on conclure ?",
+      "seoTitle": "Bambi BB24 : FAD 27 L/min et service 50 %",
+      "sha256": "02b1ad0885840806d5a5e78dd0ece3a2fd4655a928614758e5cc4d7ae424f232",
+      "wordCount": 553,
+      "sourceIds": [
+        "guides-oct4-bambi-bb24"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-bambi-bb24",
+          "location": "Currentpage specs etFADtable",
+          "assertion": "FAD35L/min à1bar,27 à5bar,25 à8bar ; cuve24L,max8bar,facteur maximal50% ; bruit actuel54dB(A).",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Scénariomoyen simplifié",
+          "assertion": "Scénario simplifié :27×0,5=13,5L/min sous FAD constant et moitié du temps ; fenêtre de service non précisée et pressions variables, aucune garantie continue.",
+          "kind": "calculation",
+          "status": "reviewed_internal_calculation"
+        }
+      ],
+      "relatedGuideLinks": [
+        "compresseur-service-s1-s3-25-pour-cent",
+        "compresseur-perd-pression-arret-fuite-refroidissement",
+        "debit-restitue-fad-vs-debit-aspire"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "c8c28a62835f7e12a1a55bd58a8544f238146b85ac92c8ad5d708fbf3a01224d"
+      ],
+      "value": "FAD27@5bar et50% cycle, test nécessaire20Lmin continu, seuil13.5simplebornefictivenongarantie; marqueabsenteguide.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "CourbeFAD / MaxDuty"
+      ],
+      "sources": [
+        {
+          "url": "https://bambi-air.co.uk/product/bb24/",
+          "resolvedUrl": "https://bambi-air.co.uk/product/bb24/",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "sha256": "c2de703c4a7ad34dd5f25a80de1f9e9d793628372d04e6ce2169c65f84be1052",
+          "bytes": 110280,
+          "observedAt": "2026-10-04T09:07:36.711558+00:00",
+          "id": "guides-oct4-bambi-bb24",
+          "sourceLabel": "Bambi Air, fiche BB24 actuelle",
+          "captureKind": "primary_source_bytes",
+          "location": "Currentpage specs etFADtable"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "junair-625-50-60-hz-debit",
+      "title": "JUN-AIR 6-25 : 32 ou 37 L/min selon la fréquence de la version",
+      "seoTitle": "JUN-AIR 6-25 : 32 ou 37 L/min, 50 ou 60 Hz",
+      "sha256": "c1f58cd37bae8bab00fe7b9391cf009ce51a47ba563b4370e26e643b04884545",
+      "wordCount": 579,
+      "sourceIds": [
+        "guides-oct4-junair-current"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-junair-current",
+          "location": "PDF1 colonnes230V50/60Hz",
+          "assertion": "Colonnes230V50/60Hz : déplacement50/60L/min etFAD32/37 à8bar ; cuve25L,service50%,6-25 lubrifié.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "Plaque de version nécessaire ; aucun gain obtenu en branchant une machine sur une autre fréquence ni débit continu confirmé.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "debit-restitue-fad-vs-debit-aspire",
+        "compresseur-50hz-60hz-versions",
+        "compresseur-service-s1-s3-25-pour-cent"
+      ],
+      "internalProductLinks": [
+        "/compresseurs/jun-air-6-25/"
+      ],
+      "svgSha256": [
+        "b5f26f5853c7e980f4f15316aa0acd326dd5d019fecc6b9687727eeb05d79c6c"
+      ],
+      "value": "Mêmevoltage230 colonnes50/60Hz, FAD8bar32/37 vsaspiré50/60, courantpasconversionmoteur.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF1"
+      ],
+      "sources": [
+        {
+          "url": "https://gastmfg.com/wp-content/uploads/2025/07/6-25_1413010_TDS.pdf",
+          "resolvedUrl": "https://gastmfg.com/wp-content/uploads/2025/07/6-25_1413010_TDS.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "bf181f216ef2ae982f14f8c9e9d979e76c97b1fdefedd4a0b691b06556d406f9",
+          "bytes": 55317,
+          "observedAt": "2026-10-04T09:11:08.989604+00:00",
+          "id": "guides-oct4-junair-current",
+          "sourceLabel": "Gast/JUN-AIR, fiche 6-25 actuellement exposée",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF1 colonnes230V50/60Hz"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "fini-supersilent-redemarrage-thermique",
+      "title": "FINI SuperSilent : un arrêt thermique peut être suivi d’un redémarrage automatique",
+      "seoTitle": "FINI SuperSilent : arrêt et retour automatique",
+      "sha256": "8b714cf416438becd3c3f457ad302d6854fee3ee0a253c1192e9ffa5626b7bb4",
+      "wordCount": 561,
+      "sourceIds": [
+        "guides-oct4-fini-supersilent"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-fini-supersilent",
+          "location": "PDF19–20FR",
+          "assertion": "Retour automatique après arrêt thermique ; service50% sur une heure ; électrovanne de décharge de tête ; page19 attente au moins3s et page20 au moins10s. Divergence exposée, aucune durée de refroidissement déduite.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "Notice de famille à rapprocher de la plaque ; silence distinct d’isolement ; aucun diagnostic électrique.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "compresseur-service-s1-s3-25-pour-cent",
+        "ventilation-local-compresseur-surchauffe",
+        "fiche-intervention-air-comprime"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "3fa7c717baa34c64f868aef327824436a75b51825a625f2cf2a179f3be692a0c"
+      ],
+      "value": "Protectionthermiqueautorestart et≥10s attente switch; pasconsignethermiquenombreminutesinventé; conservernoticeversion.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "ChapitreFR refroidissement et interrupteur"
+      ],
+      "sources": [
+        {
+          "url": "https://finicompressors.com/wp-content/uploads/9070434_-.pdf",
+          "resolvedUrl": "https://finicompressors.com/wp-content/uploads/9070434_-.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "ac8544d3655950fab689eff3fa452763cd4dff0dfed8596a89f4980b0b6579d6",
+          "bytes": 3105006,
+          "observedAt": "2026-10-04T09:08:57.877102+00:00",
+          "id": "guides-oct4-fini-supersilent",
+          "sourceLabel": "FINI, notice SuperSilent 9070434 actuellement exposée",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF19–20FR"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "fini-siltek-ts240-debit-64dba",
+      "title": "FINI SILTEK TS : 240 L/min aspirés et 64 dB(A) à 7 m, lire la fiche complète",
+      "seoTitle": "FINI SILTEK TS : 240 L/min aspirés, bruit à 7 m",
+      "sha256": "8420b642a204b6288e7ebb6c202567be88eb58f078a5afc76fc340a58489c7dd",
+      "wordCount": 536,
+      "sourceIds": [
+        "guides-oct4-fini-siltek",
+        "guides-oct4-junair-current"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-fini-siltek",
+          "location": "PDF1",
+          "assertion": "TS/OL130S code8216060FNN561_ :air displacement240L/min,64dB(A) à7m,20L,1,5kW,8bar,230V50Hz ; aucune ligne FAD.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "guides-oct4-junair-current",
+          "location": "PDF1",
+          "assertion": "JUN-AIR6-25 :bruit45dB(A) à1m.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "Aucun classement acoustique à distances différentes ni FAD estimé depuis l’aspiration.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "debit-restitue-fad-vs-debit-aspire",
+        "bruit-compresseur-lire-decibels",
+        "junair-625-50-60-hz-debit"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "d09305178b6e4764428acf19f2271c16695505b39b471d9f302c1103f83da9b0"
+      ],
+      "value": "Produitprécis240airdisplacementnonFAD etbruitdistance7m; comparaisonJUN45@1mnonclasssementdB.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF1"
+      ],
+      "sources": [
+        {
+          "url": "https://finicompressors.com/en/pdf-dati-tecnici/?product_id=1024",
+          "resolvedUrl": "https://finicompressors.com/en/pdf-dati-tecnici/?product_id=1024",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "fed461a59e09a01a65a8bbfda47d622791bb5d5eaa69e7baee5f8a03deeedaa5",
+          "bytes": 911627,
+          "observedAt": "2026-10-04T09:08:58.749641+00:00",
+          "id": "guides-oct4-fini-siltek",
+          "sourceLabel": "FINI, fiche technique SILTEK TS/OL130S, product_id 1024",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF1"
+        },
+        {
+          "url": "https://gastmfg.com/wp-content/uploads/2025/07/6-25_1413010_TDS.pdf",
+          "resolvedUrl": "https://gastmfg.com/wp-content/uploads/2025/07/6-25_1413010_TDS.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "bf181f216ef2ae982f14f8c9e9d979e76c97b1fdefedd4a0b691b06556d406f9",
+          "bytes": 55317,
+          "observedAt": "2026-10-04T09:11:08.989604+00:00",
+          "id": "guides-oct4-junair-current",
+          "sourceLabel": "Gast/JUN-AIR, fiche 6-25 actuellement exposée",
+          "captureKind": "primary_source_bytes",
+          "location": "PDF1"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "hertz-hgs75-11-debit-13bar",
+      "title": "Hertz HGS 7,5 ou HGS 11 : combien de débit reste à 13 bar ?",
+      "seoTitle": "Hertz HGS 7,5 / HGS 11 : débit à 13 bar",
+      "sha256": "9babe546ebeab37afae3b34fa5a637d6598d2c069995d5e8fe2d61bcb3e12836",
+      "wordCount": 549,
+      "sourceIds": [
+        "guides-oct4-hertz"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-hertz",
+          "location": "PDF26tableHGS7.5et11",
+          "assertion": "HGS7,5 :FAD1,07/1/0,87/0,64m³/min ; HGS11 :1,65/1,51/1,35/1,11 aux pressions7,5/8,5/10/13bar ; référenceISO1217C,1bar absolu,20°C,0%HR,71°C vanne,Smartoil.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "guides-oct4-hertz",
+          "location": "PDF23famille",
+          "assertion": "La famille HGS/HSC est décrite pour fonctionnement continu dans son périmètre.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Conversionsetbesoinscénario",
+          "assertion": "Conversions m³/min×1000 ; scénario :1110−950=160L/min,sans marge de réseau validée.",
+          "kind": "calculation",
+          "status": "reviewed_internal_calculation"
+        }
+      ],
+      "relatedGuideLinks": [
+        "utiliser-plusieurs-outils-pneumatiques",
+        "ceccato-drb-20-7-bar-pression-reference",
+        "hertz-hgs75-socle-cuve-secheur-dimensions"
+      ],
+      "internalProductLinks": [
+        "/compresseurs/hertz-hgs-7-5/",
+        "/compresseurs/hertz-hgs-11/"
+      ],
+      "svgSha256": [
+        "9a1b646a58a79ca27572399b88f4490300aaf8f8548df1cea2e54eff85576379"
+      ],
+      "value": "1070->640Lmin HGS7.5 et1650->1110HGS11; scénario950@13bar+referenceconditions distinct pression max.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF26"
+      ],
+      "sources": [
+        {
+          "url": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf",
+          "resolvedUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339",
+          "bytes": 6798749,
+          "observedAt": "2026-10-04T09:05:33.280050+00:00",
+          "id": "guides-oct4-hertz",
+          "sourceLabel": "Hertz Kompressoren, catalogue actuel, modifié le 8 juin 2026 selon HTTP",
+          "captureKind": "primary_source_bytes",
+          "lastModified": "Mon, 08 Jun 2026 08:09:33 GMT",
+          "location": "PDF26tableHGS7.5et11; PDF23famille"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "hertz-hgs75-socle-cuve-secheur-dimensions",
+      "title": "Hertz HGS 7,5 : le socle et l’ensemble sur cuve n’occupent pas la même place",
+      "seoTitle": "Hertz HGS 7,5 : socle ou ensemble sur cuve",
+      "sha256": "8419d185670851297e6fb3291a8dc26c7729a39f6bdc2e95de46f31a346cd7ae",
+      "wordCount": 532,
+      "sourceIds": [
+        "guides-oct4-hertz"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-hertz",
+          "location": "PDF26dimensionsetmasse",
+          "assertion": "HGS7,5 largeur×longueur×hauteur :785×715×1106mm sur socle et1880×715×1606 sur cuve/sécheur ;230kg sur socle,405kg à7,5/8,5/10bar ou420kg à13bar en ensemble ; réservoir250L de cette configuration.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Rectanglesenveloppe",
+          "assertion": "Rectangles :0,785×0,715=0,561275m² et1,880×0,715=1,3442m² ; aucun dégagement, accès ou ventilation inclus.",
+          "kind": "calculation",
+          "status": "reviewed_internal_calculation"
+        }
+      ],
+      "relatedGuideLinks": [
+        "ventilation-local-compresseur-surchauffe",
+        "choisir-volume-cuve-24-50-90-litres",
+        "hertz-hgs75-11-debit-13bar"
+      ],
+      "internalProductLinks": [
+        "/compresseurs/hertz-hgs-7-5/"
+      ],
+      "svgSha256": [
+        "49a37fffa1075b69146555ddf69970a06bd1871592d71a2e86ac50dca94ae3df"
+      ],
+      "value": "785×715×1106 vs1880×715×1606,230vs405/420kgselonpression et250Lconfig; besoinimplantation distinct FAD.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF26"
+      ],
+      "sources": [
+        {
+          "url": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf",
+          "resolvedUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339",
+          "bytes": 6798749,
+          "observedAt": "2026-10-04T09:05:33.280050+00:00",
+          "id": "guides-oct4-hertz",
+          "sourceLabel": "Hertz Kompressoren, catalogue actuel, modifié le 8 juin 2026 selon HTTP",
+          "captureKind": "primary_source_bytes",
+          "lastModified": "Mon, 08 Jun 2026 08:09:33 GMT",
+          "location": "PDF26dimensionsetmasse"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    },
+    {
+      "slug": "lupamat-dhk22-debit-minimum-variateur",
+      "title": "Lupamat LKV 22 DHK : le débit publié ne donne pas le minimum de régulation",
+      "seoTitle": "Lupamat LKV 22 DHK : minimum de débit non publié",
+      "sha256": "d53d8266390dad6cef4e8d3ebe777ea2bfd5dd2ca3346d8c5317a63c27ba2c26",
+      "wordCount": 598,
+      "sourceIds": [
+        "guides-oct4-lupamat"
+      ],
+      "claims": [
+        {
+          "sourceId": "guides-oct4-lupamat",
+          "location": "PDF11tableDHKPLUS",
+          "assertion": "LKV22DHKPLUS :3710/3100/2600L/min à7/10/13bar ; variateur etFAD annexeE ; aucune borne explicite de débit minimal de régulation dans la table.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Analyse CompatAir explicitement délimitée",
+          "assertion": "Les points à pressions différentes ne sont pas une plage à pression constante ; aucune économie universelle déduite du catalogue.",
+          "kind": "inference",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "relatedGuideLinks": [
+        "compresseur-vitesse-variable-vsd-rentabilite-atelier",
+        "utiliser-plusieurs-outils-pneumatiques",
+        "compresseur-piston-ou-vis-profil-charge"
+      ],
+      "internalProductLinks": [],
+      "svgSha256": [
+        "184d00cebb5c174dbe7a51eb64228ac8df7790d829ac077a84c91e74e665d531"
+      ],
+      "value": "DHKPLUS3710/3100/2600@7/10/13 etannexE, minimumVSDnonfourni demanderplage etpower àcharge réelleen comparantdéjàDfixed; paspromesséconomiesuniverselle.",
+      "limitations": [
+        "Analyse documentaire interne ; aucun essai physique ni validation professionnelle externe.",
+        "Références, versions et conditions publiées conservées ; aucune donnée manquante remplacée par une estimation silencieuse.",
+        "Le statut d’indexation et le rendu Astro doivent encore être vérifiés par les contrôles d’intégration du lot."
+      ],
+      "reviewScope": {
+        "sourceKind": "manufacturer_primary_documentation",
+        "physicalTest": false,
+        "externalValidation": false
+      },
+      "citedSourceLocations": [
+        "PDF11 + fonctionnementvariateur"
+      ],
+      "sources": [
+        {
+          "url": "https://lupamat.com/pdf/Lupamat-EN.pdf",
+          "resolvedUrl": "https://lupamat.com/pdf/Lupamat-EN.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "sha256": "5a992870f1fd4e23b694fb8d39fab5f6d3cbf00e0abf0a6fb4f8ecc048d7872e",
+          "bytes": 15949588,
+          "observedAt": "2026-10-04T09:05:33.280495+00:00",
+          "id": "guides-oct4-lupamat",
+          "sourceLabel": "Lupamat, catalogue anglais actuellement exposé",
+          "captureKind": "primary_source_bytes",
+          "lastModified": "Mon, 10 Feb 2025 07:53:16 GMT",
+          "location": "PDF11tableDHKPLUS"
+        }
+      ],
+      "review": {
+        "numericValuesChecked": true,
+        "sourceScopeChecked": true,
+        "internalLinksCheckedAgainstBaselineFiles": true,
+        "svgXMLChecked": true,
+        "svgRenderedWidthPx": 340,
+        "svgVisuallyReviewed": true,
+        "svgRenderScope": "30 inline SVG rendered locally with sharp at340px and visually inspected; not an Astro page/browser rendering.",
+        "fullAstroBuildPerformed": false,
+        "externalProfessionalValidation": false,
+        "physicalTest": false,
+        "originalityReviewScope": "All596 baseline filenames/titles searched, exact brands/models searched, and relevant neighboring guides/sections read. No exhaustive semantic review of all596 complete bodies claimed."
+      }
+    }
+  ],
+  "canonicalIntegration": {
+    "localHeadAtReview": "4982bf0c95fcec9c553093af93ca305ce856a595",
+    "files": "src/content/guides/{slug}.md",
+    "sourceLedger": "docs/editorial/guides-2026-10-04.sources.json",
+    "returnLinksAmendment": "docs/editorial/guides-2026-10-04.interlinking.json",
+    "noFullAstroBuildClaimed": true,
+    "noCommitOrPushPerformedByGuideAgent": true
+  }
+}

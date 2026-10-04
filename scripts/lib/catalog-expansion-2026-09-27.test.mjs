@@ -40,7 +40,7 @@ const mutate = (kind, brand, patch) => {
 describe('700 additional documented manufacturer references', () => {
  it('adds exactly 200 compressors and 500 tools with multiple brands and distinct references', () => {
   expect(expansion.compressors).toHaveLength(200); expect(expansion.tools).toHaveLength(500);
-  expect(compressors).toHaveLength(3419); expect(tools).toHaveLength(15087);
+  expect(compressors).toHaveLength(3619); expect(tools).toHaveLength(16087);
   expect(new Set(expansion.compressors.map(p => p.brand)).size).toBe(5);
   expect(new Set(expansion.tools.map(p => p.brand)).size).toBe(4);
   expect(expansion.tools.filter(p => p.demandModel === 'per-action')).toHaveLength(63);

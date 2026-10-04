@@ -81,6 +81,8 @@ Le raccord retenu doit répondre au profil mécanique du poste, à son besoin de
 
 Pour poursuivre le dimensionnement, consultez le [guide diamètre et longueur des flexibles](/guides/diametre-longueur-flexible-air-comprime/) et le [diagnostic des chutes de pression](/guides/diagnostiquer-chute-pression-air-comprime/).
 
+Pour une migration entre tailles de profils, comparez la paire complète. Le [cas CEJN eSafe 430 et 550](/guides/cejn-esafe-430-550-profils-embouts/) précise les champs de référence à conserver au-delà du filetage.
+
 ## Sources et périmètre
 
 Sources consultées le **26 septembre 2026**. Analyse documentaire interne : CompatAir n’a pas réalisé d’essai physique de ces équipements. Les scénarios et calculs pédagogiques sont distingués des caractéristiques publiées.

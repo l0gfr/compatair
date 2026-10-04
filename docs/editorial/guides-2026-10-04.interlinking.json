@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "batchId": "documented-expansion-2026-10-04",
+  "observedAt": "2026-10-04T10:13:36.223097+00:00",
+  "scope": "Contextual return links only. Complete historical frontmatter, publication dates, update dates, authorship and prior source claims preserved. No indexation policy changed.",
+  "files": [
+    {
+      "path": "src/content/guides/ponceuse-pneumatique-bois-aspiration-poussieres.md",
+      "paragraph": "Le cas [Festool LEX 3 150/5](/guides/festool-lex3-1505-290-350-litres-minute/) distingue consommation mesurée et minimum d’alimentation demandé par la notice. Cette lecture complète le besoin d’extraction avant la sélection du poste.",
+      "targets": [
+        "festool-lex3-1505-290-350-litres-minute"
+      ],
+      "beforeSha256": "95a466163ab30c6fcb03b0374645823876428b8c7342a6495482235c3f867949",
+      "afterSha256": "d49d10a074d09294b20b931d0fe04fcb14857c2a9ede2ea219ca4ee2bea4925a",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/ponceuse-aspiration-autonome-centralisee.md",
+      "paragraph": "Sur un système IAS, vérifiez aussi le comportement de l’aspiration pendant les pauses. La notice [Festool LEX 3 et IAS 3](/guides/festool-ias3-aspiration-ponceuse-arretee/) décrit une consigne particulière quand le moteur pneumatique s’arrête.",
+      "targets": [
+        "festool-ias3-aspiration-ponceuse-arretee"
+      ],
+      "beforeSha256": "ad13d7d5f5dfc1849bc384801c01320cdc002ecb692bd3a9b8a9b80dfe397771",
+      "afterSha256": "a93f66a9be881ed4ad891950c34a88849af4b48d05fdf3f85a21992827050896",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/ponceuse-orbitale-2-5-5-8-mm-choisir.md",
+      "paragraph": "La dureté du plateau constitue un choix supplémentaire. Le [cas Festool LEX 3, plateau supersouple et arêtes](/guides/festool-lex3-plateau-supersouple-aretes/) montre comment conserver la destination du plateau avec le réglage d’orbite.",
+      "targets": [
+        "festool-lex3-plateau-supersouple-aretes"
+      ],
+      "beforeSha256": "28d527bc9df58bccf2147eb7b18ec15a5a79c1dddcf7de8bc6e19795d1444c32",
+      "afterSha256": "cc6bf2646045fa991c9b6be402ee238351ddf13e2f2276c5c8fe67257a79dd42",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/buse-pistolet-peinture-chapeau-air-consommation.md",
+      "paragraph": "Deux lectures de notices complètent ce choix : [Sagola 4600 AQUA ou CLEAR](/guides/sagola-4600-aqua-clear-consommation/) pour identifier le chapeau, et [SATA jet X HVLP](/guides/sata-jetx-hvlp-420-430-445-debit/) lorsque les documents primaires donnent des débits à rapprocher.",
+      "targets": [
+        "sagola-4600-aqua-clear-consommation",
+        "sata-jetx-hvlp-420-430-445-debit"
+      ],
+      "beforeSha256": "a59ef53b4d5e4176d1f96a22f752fdf7cc530bd220f5dade508db8fdb3a9af8f",
+      "afterSha256": "c669956ed71872e441108f778080c2bdd51016f2de9b628050d0b4187fc3ec5d",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/pistolet-peinture-jet-deforme-crachote-diagnostic.md",
+      "paragraph": "Après entretien du godet, relevez aussi les éléments remontés sur le chemin du produit. Le [cas du filtre Sagola 4600](/guides/sagola-4600-filtre-produit-apres-nettoyage/) organise ce contrôle séparément de l’alimentation d’air.",
+      "targets": [
+        "sagola-4600-filtre-produit-apres-nettoyage"
+      ],
+      "beforeSha256": "bc25a04d851387881ff553a756f023b52ba29ded0d81c88577021c15b6162d8a",
+      "afterSha256": "4a98b54945b601c706c04a36cf132a40587bfc73915b6e711e67b7a7e173b5d4",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/separer-air-finition-et-clouage-atelier-bois.md",
+      "paragraph": "L’air du clouage n’a pas une consigne de lubrification unique. La note [SENCO NeverLube et branche sans lubrificateur](/guides/senco-neverlube-lubrificateur-air/) précise le contrôle à prévoir quand plusieurs technologies partagent l’atelier.",
+      "targets": [
+        "senco-neverlube-lubrificateur-air"
+      ],
+      "beforeSha256": "004a59e4f96d8d42a5f41a340b7395d02a74b5bb98d7e22e83ebea0781eb5a68",
+      "afterSha256": "18c7ecb0520faaaf1645ae00ede1b4eb544fef3eb4793b1b7e63e85769126f68",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/cloueur-pneumatique-declenchement-sequentiel-contact.md",
+      "paragraph": "Les commandes doivent être identifiées sur le modèle exact : le [palpeur rétracté Bostitch SmartPoint](/guides/bostitch-smartpoint-palpeur-rentre/) et le [déverrouillage à deux doigts Metabo DKG 80/16](/guides/metabo-dkg8016-deux-doigts-declenchement/) illustrent deux conceptions à distinguer avant le contrôle.",
+      "targets": [
+        "bostitch-smartpoint-palpeur-rentre",
+        "metabo-dkg8016-deux-doigts-declenchement"
+      ],
+      "beforeSha256": "d3e2c9ab74b94007ce7fb6d9fc7f1d97e3048900c0c96f1c533fdc14ec377a04",
+      "afterSha256": "aec26a3b0c41482ed8cdcec31b732625f754ade18e1fa992f1f772350ed152c6",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/agrafes-pneumatiques-serie-couronne-longueur-compatibilite.md",
+      "paragraph": "Un outil combiné demande de séparer les lignes de clous et d’agrafes. Le [tableau Metabo DKNG 40/50](/guides/metabo-dkng4050-clous-agrafes-chargeur/) donne un exemple de lecture par type de fixation avant la commande.",
+      "targets": [
+        "metabo-dkng4050-clous-agrafes-chargeur"
+      ],
+      "beforeSha256": "8a2ba2112839f14faf7aa435a5339507ecb40a8ff29bce6c3ab7cbc58e465e51",
+      "afterSha256": "a21e2aef52d049612901c6f25bdd76291b2e84b3e74bf2e25b5d6eedd6df0cff",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/burineur-pneumatique-chantier-debit-vibrations.md",
+      "paragraph": "L’arrêt hors appui peut aussi appartenir au fonctionnement prévu : le [cas Nitto ACH-16](/guides/nitto-ach16-arret-contact-piece/) reprend cette particularité. Le [choix de burins ACH-16 et CH-24](/guides/nitto-ach16-ch24-emmanchement-burin/) traite séparément les emmanchements et la retenue.",
+      "targets": [
+        "nitto-ach16-arret-contact-piece",
+        "nitto-ach16-ch24-emmanchement-burin"
+      ],
+      "beforeSha256": "48056b4c9c547aa259339b5f085d42abe1eaea7c67f112eacc4185dcce4ebb99",
+      "afterSha256": "d131ed45e8ce4b74c3a03f110620e1fa5ebe43a3a0a8d76ca4220cda42b3e923",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/meuleuse-pneumatique-vitesse-max-disque-abrasif.md",
+      "paragraph": "Le [cas Nitto MLG-25](/guides/nitto-mlg25-meule-58mm-19000-tours/) rapproche type de meule, alésage, épaisseur et vitesse nominale. Il complète la lecture du marquage pour une petite meuleuse pneumatique.",
+      "targets": [
+        "nitto-mlg25-meule-58mm-19000-tours"
+      ],
+      "beforeSha256": "43b3fb9da76cc19628435270ef05341406cd719e1f3a313720bac925817b41fa",
+      "afterSha256": "7cd174cab1df6daf0b4fb8732bebb94397d26d2a7d4d9a14167153d06d49382a",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/riveteuse-pneumatique-aspiration-mandrin-consommation.md",
+      "paragraph": "Si le rivet reste mal tiré, distinguez aussi les points d’entretien. La [notice CP9883/CP9884](/guides/cp9883-rivet-mal-tire-mors-hydraulique/) sépare les mors, la lubrification d’air et le circuit hydraulique, sans convertir cette distinction en diagnostic à distance.",
+      "targets": [
+        "cp9883-rivet-mal-tire-mors-hydraulique"
+      ],
+      "beforeSha256": "39df6c72f5b1961f6048d0b2ebbfc0dfa60597ea1ea56f2762dfa2e0ddf1f889",
+      "afterSha256": "cfb1c4c51506752db21927c8117f7fb4b61e0f18edd83553dec705ac368f198d",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/raccord-rapide-securite-decompression-air-comprime.md",
+      "paragraph": "Pour une migration entre tailles de profils, comparez la paire complète. Le [cas CEJN eSafe 430 et 550](/guides/cejn-esafe-430-550-profils-embouts/) précise les champs de référence à conserver au-delà du filetage.",
+      "targets": [
+        "cejn-esafe-430-550-profils-embouts"
+      ],
+      "beforeSha256": "fe548139d83f1330c40945a74fc6b81d10f916f7633ac2609ccfcd8884252f31",
+      "afterSha256": "fc5683641484cfc8b89954032c2d1d7f814e576b95e4e9b2327809bbb185d4e8",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/manometre-air-comprime-precision-pleine-echelle.md",
+      "paragraph": "Une aiguille agitée appelle un autre examen que la classe de précision. La [lecture WIKA des pulsations et vibrations](/guides/wika-manometre-aiguille-pulsation-amortisseur/) distingue l’action sur le fluide, le montage mécanique et le besoin de mesure dynamique.",
+      "targets": [
+        "wika-manometre-aiguille-pulsation-amortisseur"
+      ],
+      "beforeSha256": "ecf1b554a3d58aaee89e49c84ee40ae9defbad95b04c1d010ca216d931f0bbe4",
+      "afterSha256": "a714bdad54d90232490f98f8312befc35e9c5b51454f7d0a5179ab941232d1bf",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/ioniseur-air-comprime-debit-neutralisation-electrostatique.md",
+      "paragraph": "Le suivi du poste peut ensuite examiner la [charge qui revient après traitement](/guides/exair-static-retour-convoyeur-ioniseur/), l’[entretien des émetteurs EXAIR](/guides/exair-ioniseur-emetteur-nettoyage/) et le [régime d’air d’un Intellistat à gâchette ou fixe](/guides/exair-intellistat-8500-8505-air-continu/). Ces trois questions portent sur des étapes différentes du procédé.",
+      "targets": [
+        "exair-static-retour-convoyeur-ioniseur",
+        "exair-ioniseur-emetteur-nettoyage",
+        "exair-intellistat-8500-8505-air-continu"
+      ],
+      "beforeSha256": "bcf2d5cd524649fa12a75c30032f6e9b14252e5df1f4570b784b981d842dadc8",
+      "afterSha256": "15f01fdbeb18f7d6ae5d2d28d98b1be893573f48f1d14819d591052d888e3fd6",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/cuve-peinture-sous-pression-air-produit-agitation.md",
+      "paragraph": "Avec une buse pneumatique industrielle, identifiez également le [mélange interne ou externe Lechler](/guides/lechler-buse-pneumatique-melange-viscosite/) et l’éventuel [circuit de commande de série 136](/guides/lechler-serie136-air-commande-atomisation/). La commande d’une vanne et l’atomisation ne décrivent pas la même arrivée d’air.",
+      "targets": [
+        "lechler-buse-pneumatique-melange-viscosite",
+        "lechler-serie136-air-commande-atomisation"
+      ],
+      "beforeSha256": "03d1862891274c17e5b72afa6a501f9ff886767b13881c8d9a6c2925b6a17a14",
+      "afterSha256": "f7d6ee5db29b18531bd1cc9d0a7b2c05ca609f57a403c669041a5574891eed58",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/couteau-air-comprime-ou-soufflante.md",
+      "paragraph": "Le [jet Whisperblast Lechler](/guides/lechler-whisperblast-largeur-jet-sechage/) illustre la différence entre enveloppe mesurée et résultat sur une pièce. Pour le bilan du compresseur, conservez aussi les [conditions de volume normal et de FAD](/guides/lechler-debit-normal-zero-degres-fad/) avant de comparer les nombres.",
+      "targets": [
+        "lechler-whisperblast-largeur-jet-sechage",
+        "lechler-debit-normal-zero-degres-fad"
+      ],
+      "beforeSha256": "948d42a29253b682a90b9aeb1f33e785e1ab88fbd44780b05e85dc82a47e5c74",
+      "afterSha256": "f3d989c02bdc55c948278df6e4003089172ac80350e722658251e517dedebc6e",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/compresseur-service-s1-s3-25-pour-cent.md",
+      "paragraph": "Le [cas Bambi BB24](/guides/bambi-bb24-50-pourcent-debit-continu/) associe le FAD publié au facteur de marche. La [notice FINI SuperSilent](/guides/fini-supersilent-redemarrage-thermique/) traite un autre point pratique : l’arrêt thermique et le retour automatique décrits pour son périmètre.",
+      "targets": [
+        "bambi-bb24-50-pourcent-debit-continu",
+        "fini-supersilent-redemarrage-thermique"
+      ],
+      "beforeSha256": "d74b35099e8db462f19e42b1cc6a0faa2fc6f118315a2242c2a648d63b6a9e5d",
+      "afterSha256": "9f00ea4373f82d8f015237acb9c85d3275ca41e1f76d565201f9f94014e5e2a2",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/compresseur-50hz-60hz-versions.md",
+      "paragraph": "La [fiche JUN-AIR 6-25](/guides/junair-625-50-60-hz-debit/) fournit un exemple où les colonnes d’une même tension séparent encore la fréquence, le déplacement d’air et le FAD.",
+      "targets": [
+        "junair-625-50-60-hz-debit"
+      ],
+      "beforeSha256": "7e11cf8751b5f349cbb22cb58cc3c153c47deb86cb64a4671e089cf68961d411",
+      "afterSha256": "430c7d97f142eee4bda0f009e5633b4437d6c8bb5c51c494d2f92957c351f5ea",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/bruit-compresseur-lire-decibels.md",
+      "paragraph": "La [fiche FINI SILTEK TS/OL130S](/guides/fini-siltek-ts240-debit-64dba/) permet d’examiner ensemble la distance du bruit annoncé et la nature du débit, sans établir un classement acoustique entre mesures prises à des distances différentes.",
+      "targets": [
+        "fini-siltek-ts240-debit-64dba"
+      ],
+      "beforeSha256": "b560542b74e742bb1c5494d23ccae121f167fd5f93e0f2babca7643a928de5ee",
+      "afterSha256": "9ec391a0b0f2ac6797f8e0d92afa0057b7afbf3d6aeb35a8f06045247bfdc69c",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/ceccato-drb-20-7-bar-pression-reference.md",
+      "paragraph": "Le [tableau Hertz HGS 7,5 et HGS 11](/guides/hertz-hgs75-11-debit-13bar/) complète cette lecture avec plusieurs points de pression. Le scénario de besoin montre pourquoi la ligne pertinente doit précéder la comparaison des puissances.",
+      "targets": [
+        "hertz-hgs75-11-debit-13bar"
+      ],
+      "beforeSha256": "1f484e2ae413dc8eb66c984609898419b7801275a482f0e52dae9c18690316db",
+      "afterSha256": "63c16c08b93ae95b5364a0e0aad71c73dce94d50704510197884c092d0c365e0",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/compresseur-sur-chassis-sans-cuve.md",
+      "paragraph": "La table [Hertz HGS 7,5 sur socle ou sur cuve avec sécheur](/guides/hertz-hgs75-socle-cuve-secheur-dimensions/) illustre la lecture des dimensions et masses par montage. Le volume de réservoir ne doit pas être rattaché à une autre configuration.",
+      "targets": [
+        "hertz-hgs75-socle-cuve-secheur-dimensions"
+      ],
+      "beforeSha256": "1dfca9fabe1e1b0c55a2056848676c72300e0995a7ad457ef38c88828a318342",
+      "afterSha256": "6a53706c25702fc42b057d56d3c76e0ffb659e2dcc147d73acd1b1c6f8f26a1e",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    },
+    {
+      "path": "src/content/guides/compresseur-vitesse-variable-vsd-rentabilite-atelier.md",
+      "paragraph": "Le [cas Lupamat LKV 22 DHK PLUS](/guides/lupamat-dhk22-debit-minimum-variateur/) montre une limite documentaire précise : les FAD à plusieurs pressions ne donnent pas le minimum de régulation à pression constante. Ce champ doit être obtenu avant d’interpréter les heures de faible demande.",
+      "targets": [
+        "lupamat-dhk22-debit-minimum-variateur"
+      ],
+      "beforeSha256": "d474a1f1e3f95a4226c451a694664c71330dd8cc7b26c0adf71e0d3a8d58cbca",
+      "afterSha256": "535f65c7256107af912574aa276fd75b9b5b995a8fe7e6070a2edf79bc5fcfb5",
+      "frontmatterPreserved": true,
+      "publicationAndUpdatedDatesPreserved": true
+    }
+  ]
+}

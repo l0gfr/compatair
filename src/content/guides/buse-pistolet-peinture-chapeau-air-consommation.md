@@ -79,6 +79,8 @@ Demandez une réponse écrite sous cette forme : corps, chapeau, ensemble buse-a
 
 Pour un pistolet alimenté par réservoir, le [bilan d’une cuve sous pression](/guides/cuve-peinture-sous-pression-air-produit-agitation/) ajoute les fonctions produit et agitation à celle du chapeau. Relevez les références de l’ensemble vendu.
 
+Deux lectures de notices complètent ce choix : [Sagola 4600 AQUA ou CLEAR](/guides/sagola-4600-aqua-clear-consommation/) pour identifier le chapeau, et [SATA jet X HVLP](/guides/sata-jetx-hvlp-420-430-445-debit/) lorsque les documents primaires donnent des débits à rapprocher.
+
 ## Sources et méthode
 
 Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.

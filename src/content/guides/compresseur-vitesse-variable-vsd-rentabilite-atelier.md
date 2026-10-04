@@ -91,6 +91,8 @@ Si l’offre ne donne qu’un pourcentage d’économie, demandez par rapport à
 
 Pour prolonger cette vérification, vous pouvez [calculer le coût du mètre cube d’air sur un périmètre mesuré](/guides/cout-metre-cube-air-comprime/).
 
+Le [cas Lupamat LKV 22 DHK PLUS](/guides/lupamat-dhk22-debit-minimum-variateur/) montre une limite documentaire précise : les FAD à plusieurs pressions ne donnent pas le minimum de régulation à pression constante. Ce champ doit être obtenu avant d’interpréter les heures de faible demande.
+
 ## Sources et périmètre
 
 Données et documents consultés le **26 septembre 2026**. Ce guide repose sur une analyse documentaire ; CompatAir n’a pas réalisé d’essai physique de ces équipements. Les exemples de calcul sont identifiés comme tels.

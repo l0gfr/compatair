@@ -65,6 +65,8 @@ Le dossier final doit permettre de répondre sans ambiguïté à deux questions 
 
 Le glossaire précise le terme [déclenchement séquentiel complet](/glossaire/#declenchement-sequentiel-complet).
 
+Les commandes doivent être identifiées sur le modèle exact : le [palpeur rétracté Bostitch SmartPoint](/guides/bostitch-smartpoint-palpeur-rentre/) et le [déverrouillage à deux doigts Metabo DKG 80/16](/guides/metabo-dkg8016-deux-doigts-declenchement/) illustrent deux conceptions à distinguer avant le contrôle.
+
 ## Sources et méthode
 
 Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.

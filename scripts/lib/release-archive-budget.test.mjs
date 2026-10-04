@@ -47,7 +47,28 @@ describe('bounded compressed production archive', () => {
 		expect(upload.with['compression-level']).toBe(0);
 		const packaging = workflow.jobs.validate.steps.find(step => step.name === 'Package immutable release');
 		expect(packaging.run).toContain('xz -T2 -9');
+		expect(packaging.run).toContain('--lzma2=preset=9,dict=128MiB --memlimit-compress=5GiB --no-adjust');
 		expect(upload.with['if-no-files-found']).toBe('error');
+	});
+	it('refuses an xz failure before checksums or release upload', () => {
+		const root = mkdtempSync(join(tmpdir(), 'compatair-package-xz-failure-'));
+		const packaging = workflow.jobs.validate.steps.find(step => step.name === 'Package immutable release');
+		const checksumMarker = join(root, 'checksum-reached');
+		const functions = `install() { :; }
+ tar() { printf controlled-fixture; }
+ xz() { cat > /dev/null; return 12; }
+ sha256sum() { printf checksum >> "$TEST_CHECKSUM_MARKER"; }
+ `;
+		try {
+			let rejected;
+			try {
+				execFileSync('bash', ['-e', '-c', functions + packaging.run], {
+					cwd: root, env: { ...process.env, GITHUB_SHA: 'a'.repeat(40), TEST_CHECKSUM_MARKER: checksumMarker }, encoding: 'utf8',
+				});
+			} catch (error) { rejected = error; }
+			expect(rejected?.status).toBe(12);
+			expect(() => readFileSync(checksumMarker, 'utf8')).toThrow();
+		} finally { rmSync(root, { recursive: true, force: true }); }
 	});
 	it('refuses packaging when tar fails even if xz succeeds, before checksums or release upload', () => {
 		const root = mkdtempSync(join(tmpdir(), 'compatair-package-pipefail-'));
