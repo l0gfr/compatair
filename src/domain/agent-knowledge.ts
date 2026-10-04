@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
 import type { CollectionEntry } from 'astro:content';
 import type { Compressor, ToolProfile } from './catalog';
+import { compressorTankLabel } from './product-display';
 import { guideAudiences, guideMetiers, guideSeries } from './editorial-taxonomy';
 
 type GlossaryEntry = { term: string; slug: string; definition: string };
@@ -59,8 +60,8 @@ export function createAgentKnowledge(input: {
 	}));
 	const products: AgentKnowledgeItem[] = [
 		...input.compressors.map((item): AgentKnowledgeItem => {
-			const description = `${item.brand} ${item.model}; ${item.tankLiters} L; ${item.maxPressureBar} bar; FAD curve source-linked.`;
-			return { id: `compressor:${item.id}:fr`, type: 'Compresseur', locale: 'fr', title: `${item.brand} ${item.model}`, description, url: `https://compatair.fr/compresseurs/${item.slug}/`, keywords: `${item.mpn ?? ''} ${item.ean ?? ''} ${item.gtin ?? ''} ${item.distributorSkus.map((identifier) => identifier.sku).join(' ')} ${item.tankLiters} litres ${item.maxPressureBar} bar`, observed_at: input.observedAt, source_urls: unique(item.evidence.map((evidence) => evidence.sourceUrl)), content_sha256: hash(description), translation: { status: 'source' } };
+			const description = `${item.brand} ${item.model}; ${item.tankLiters === undefined ? 'cuve non documentée' : compressorTankLabel(item)}; ${item.maxPressureBar} bar; FAD curve source-linked.`;
+			return { id: `compressor:${item.id}:fr`, type: 'Compresseur', locale: 'fr', title: `${item.brand} ${item.model}`, description, url: `https://compatair.fr/compresseurs/${item.slug}/`, keywords: `${item.mpn ?? ''} ${item.ean ?? ''} ${item.gtin ?? ''} ${item.distributorSkus.map((identifier) => identifier.sku).join(' ')} ${item.tankLiters === undefined ? '' : `${item.tankLiters} litres`} ${item.maxPressureBar} bar`, observed_at: input.observedAt, source_urls: unique(item.evidence.map((evidence) => evidence.sourceUrl)), content_sha256: hash(description), translation: { status: 'source' } };
 		}),
 		...input.tools.map((item): AgentKnowledgeItem => {
 			const pressure = item.workingPressureBar.typical ?? item.workingPressureBar.max;

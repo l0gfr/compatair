@@ -7,6 +7,18 @@ const catalogVersion = 'a'.repeat(64);
 describe('runtime catalog', () => {
 	afterEach(() => vi.unstubAllGlobals());
 
+	it('omits unknown tank volumes from JSON without replacing an explicit zero', () => {
+		const base = compressors[0];
+		const runtime = createRuntimeCatalog([{ ...base, tankLiters: undefined }, { ...base, id: 'without-receiver', tankLiters: 0 }], [], CATALOG_VERIFIED_AT, catalogVersion);
+		const serialized = JSON.parse(JSON.stringify(runtime));
+		expect(serialized.compressors[0]).not.toHaveProperty('tankLiters');
+		expect(serialized.compressors[1].tankLiters).toBe(0);
+		expect(runtimeCatalogSchema.parse(serialized).compressors[0].tankLiters).toBeUndefined();
+		for (const tankLiters of [null, -1, NaN, Infinity, 20_001, '50']) {
+			expect(() => runtimeCatalogSchema.parse({ ...runtime, compressors: [{ ...runtime.compressors[0], tankLiters }] })).toThrow();
+		}
+	});
+
 	it('projects the validated source catalog without editorial payloads', () => {
 		const runtime = createRuntimeCatalog(compressors, tools, CATALOG_VERIFIED_AT, catalogVersion);
 		expect(runtime.compressors).toHaveLength(compressors.length);

@@ -11,7 +11,7 @@ describe('reviewed multi-brand expansion', () => {
 	it('reconstructs every new product from the versioned manufacturer facts', () => {
 		expect(snapshot.rows).toHaveLength(280);
 		expect(snapshot.toolRows).toHaveLength(26);
-		expect(compressors).toHaveLength(3619);
+		expect(compressors).toHaveLength(4039);
 		expect(tools).toHaveLength(16087);
 		for (const row of snapshot.rows) {
 			const p = compressorSchema.parse(createMultiBrandCompressor(snapshot, row));

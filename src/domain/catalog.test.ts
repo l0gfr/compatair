@@ -4,6 +4,15 @@ import { toolTaxonomy, toolUsageForCategory } from '../data/taxonomy';
 import { compressorSchema, toolProfileSchema } from './catalog';
 
 describe('catalog schemas', () => {
+	it('keeps an unknown tank distinct from an explicit zero and rejects invalid volumes', () => {
+		const base = compressors[0];
+		const { tankLiters: _tank, ...withoutTank } = base;
+		expect(compressorSchema.parse(withoutTank).tankLiters).toBeUndefined();
+		expect(compressorSchema.parse({ ...base, tankLiters: 0 }).tankLiters).toBe(0);
+		for (const tankLiters of [null, -1, NaN, Infinity, '50']) {
+			expect(() => compressorSchema.parse({ ...base, tankLiters })).toThrow();
+		}
+	});
 	it('accepts a paint gun without assigning an undocumented HVLP or LVLP technology', () => {
 		const base = tools.find(item => item.demandModel === 'variable-volume')!;
 		const gun = toolProfileSchema.parse({ ...base, categoryId: 'pistolet-peinture', workingPressureBar: { min: 1.5, max: 2.5 } });

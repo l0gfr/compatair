@@ -1,5 +1,15 @@
 import type { Compressor } from './catalog';
 
+export function compressorTankLabel(compressor: Pick<Compressor, 'tankLiters'>) {
+	return compressor.tankLiters === undefined ? 'Non documentée' : `${compressor.tankLiters} L`;
+}
+
+export function compareDocumentedTankVolumes(a: number | undefined, b: number | undefined) {
+	if (a === undefined) return b === undefined ? 0 : 1;
+	if (b === undefined) return -1;
+	return a - b;
+}
+
 export function compressorOilLabel(oilType: Compressor['oilType']) {
 	return oilType === 'oil-free' ? 'Sans huile' : oilType === 'oil' ? 'Lubrifié' : 'Lubrification non documentée';
 }

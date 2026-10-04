@@ -3,6 +3,7 @@ import type { CompatibilityResult } from './compatibility';
 import { evaluatePageCompatibility as evaluateCompatibility, flushPageCalculations } from '../data/page-compatibility';
 import type { GuideAudienceId } from './editorial-taxonomy';
 import { latestEvidenceDate } from './provenance';
+import { compareDocumentedTankVolumes } from './product-display';
 
 export const TOOL_DETAIL_EXAMPLE_LIMIT = 5;
 export const USE_PAGE_COMPATIBLE_LIMIT = 3;
@@ -43,7 +44,7 @@ export function rankCompatibleCompressors(matches: ToolCompatibilityMatch[], opt
 		if (audienceDifference) return audienceDifference;
 		const flowDifference = (a.result.availableFadLpm ?? Number.POSITIVE_INFINITY) - (b.result.availableFadLpm ?? Number.POSITIVE_INFINITY);
 		if (flowDifference) return flowDifference;
-		const tankDifference = a.compressor.tankLiters - b.compressor.tankLiters;
+		const tankDifference = compareDocumentedTankVolumes(a.compressor.tankLiters, b.compressor.tankLiters);
 		if (tankDifference) return tankDifference;
 		const freshnessDifference = latestEvidenceDate(b.compressor).localeCompare(latestEvidenceDate(a.compressor));
 		return freshnessDifference || compressorLabel(a.compressor).localeCompare(compressorLabel(b.compressor), 'fr');

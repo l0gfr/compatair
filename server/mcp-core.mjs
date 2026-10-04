@@ -221,7 +221,8 @@ function systemCandidates(catalog, tools, mode, limit, excludedId) {
 	const flow = mode === 'simultaneous' ? tools.reduce((sum, tool) => sum + tool.airflowLpm.typical, 0) : Math.max(...tools.map(tool => tool.airflowLpm.typical));
 	const products = catalog.repository ? catalog.repository.candidateCompressors(pressure, flow) : catalog.compressors ?? [];
 	const selected = [];
-	const compare = (a, b) => (a.evaluation.availableFadLpm - a.evaluation.demandFlowLpm) - (b.evaluation.availableFadLpm - b.evaluation.demandFlowLpm) || a.compressor.tankLiters - b.compressor.tankLiters || a.compressor.id.localeCompare(b.compressor.id, 'en');
+	const tankDifference = (a, b) => a === undefined ? b === undefined ? 0 : 1 : b === undefined ? -1 : a - b;
+	const compare = (a, b) => (a.evaluation.availableFadLpm - a.evaluation.demandFlowLpm) - (b.evaluation.availableFadLpm - b.evaluation.demandFlowLpm) || tankDifference(a.compressor.tankLiters, b.compressor.tankLiters) || a.compressor.id.localeCompare(b.compressor.id, 'en');
 	for (const compressor of products) {
 		if (compressor.id === excludedId) continue;
 		const evaluation = evaluateSystem(compressor, tools, mode);
@@ -325,7 +326,7 @@ function airGraph(compressor, selectedTools, evaluation, configurationId) {
 		...selectedTools.map((tool) => ({ id: compatAirId('tool', tool.id), type: 'tool', label: tool.label, canonical_url: productUrl('tool', tool) })),
 	];
 	const compressorNodes = [
-		{ id: compatAirId('requirement', `${compressor.id}:tank`), type: 'tank_volume', value: compressor.tankLiters, unit: 'L' },
+		...(compressor.tankLiters !== undefined ? [{ id: compatAirId('requirement', `${compressor.id}:tank`), type: 'tank_volume', value: compressor.tankLiters, unit: 'L' }] : []),
 		...(compressor.dutyCycle !== undefined ? [{ id: compatAirId('requirement', `${compressor.id}:duty-cycle`), type: 'compressor_duty_cycle', value: compressor.dutyCycle, unit: 'ratio' }] : []),
 	];
 	const requirementNodes = selectedTools.flatMap((tool) => {
@@ -341,7 +342,7 @@ function airGraph(compressor, selectedTools, evaluation, configurationId) {
 	const configurationEdges = [
 		{ from: configurationId, to: compatAirId('compressor', compressor.id), relation: 'uses_compressor' },
 		...selectedTools.map((tool) => ({ from: configurationId, to: compatAirId('tool', tool.id), relation: 'uses_tool' })),
-		{ from: compatAirId('compressor', compressor.id), to: compatAirId('requirement', `${compressor.id}:tank`), relation: 'has_tank' },
+		...(compressor.tankLiters !== undefined ? [{ from: compatAirId('compressor', compressor.id), to: compatAirId('requirement', `${compressor.id}:tank`), relation: 'has_tank' }] : []),
 		...(compressor.dutyCycle !== undefined ? [{ from: compatAirId('compressor', compressor.id), to: compatAirId('requirement', `${compressor.id}:duty-cycle`), relation: 'has_duty_cycle' }] : []),
 	];
 	const requirementEdges = selectedTools.flatMap((tool) => [
@@ -518,7 +519,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 			case 'search_compressors': {
 				const q = String(args.query ?? '').toLowerCase();
 				const indexed = catalog.repository?.search({ query: args.query ?? '', type: 'compressor', minTankLiters: args.minTankLiters, minPressureBar: args.minPressureBar, oilType: args.oilType, cursor: args.cursor, limit: args.limit ?? 20 });
-				const values = indexed ? [] : catalog.compressors.filter((item) => (!q || `${item.brand} ${item.model} ${item.mpn ?? ''}`.toLowerCase().includes(q)) && (!args.minTankLiters || item.tankLiters >= args.minTankLiters) && (!args.minPressureBar || item.maxPressureBar >= args.minPressureBar) && (!args.oilType || item.oilType === args.oilType));
+				const values = indexed ? [] : catalog.compressors.filter((item) => (!q || `${item.brand} ${item.model} ${item.mpn ?? ''}`.toLowerCase().includes(q)) && (args.minTankLiters === undefined || item.tankLiters !== undefined && item.tankLiters >= args.minTankLiters) && (!args.minPressureBar || item.maxPressureBar >= args.minPressureBar) && (!args.oilType || item.oilType === args.oilType));
 				const found = indexed ? { items: indexed.items.map(row => row.item), nextCursor: indexed.nextCursor } : page(values, args.cursor, args.limit);
 				return result({ canonical_url: `${PUBLIC_ORIGIN}/compresseurs/`, product_urls: found.items.map((item) => productUrl('compressor', item)), source_urls: sourceUrls(found.items), compressors: found.items.map((item) => ({ ...publicProduct(item), compat_air_id: compatAirId('compressor', item.id), canonical_url: productUrl('compressor', item) })), ...(found.nextCursor ? { nextCursor: found.nextCursor } : {}) }, catalog);
 			}

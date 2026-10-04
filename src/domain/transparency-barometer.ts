@@ -20,7 +20,7 @@ function percentage(values: boolean[]) {
 	return values.length ? Math.round(values.filter(Boolean).length / values.length * 100) : 0;
 }
 
-function segment(tankLiters: number) { return tankLiters <= 24 ? 'portable-0-24l' : tankLiters < 100 ? 'atelier-25-99l' : 'production-100l-plus'; }
+function segment(tankLiters: number | undefined) { return tankLiters === undefined ? 'tank-undocumented' : tankLiters <= 24 ? 'portable-0-24l' : tankLiters < 100 ? 'atelier-25-99l' : 'production-100l-plus'; }
 
 export function createTransparencyBarometer(compressors: Compressor[], publishedAt: string) {
 	const brands = [...new Set(compressors.map((item) => item.brand))];

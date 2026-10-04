@@ -114,7 +114,7 @@ describe('compatibility engine', () => {
 	});
 
 	it('exposes the expanded sourced catalog', () => {
-		expect(compressors).toHaveLength(3619);
+		expect(compressors).toHaveLength(4039);
 		expect(tools).toHaveLength(16087);
 	});
 
@@ -272,6 +272,23 @@ describe('air demand sizing', () => {
 
 	it('uses only the pressure interval as free-air reserve', () => {
 		expect(usableTankAir(50, 6, 8)).toBe(100);
+	});
+	it('keeps pressure, flow and duty conclusions while withholding unknown tank reserves and durations', () => {
+		const compressor = { maxPressureBar: 8, availableFadLpm: 300, dutyCycle: 1, cutInPressureBar: 6, cutOutPressureBar: 8 };
+		const demands = [{ id: 'fixture', flowLpm: 200, pressureBar: 6 }];
+		const supplied = sizeConfiguration({ demands, compressor });
+		expect(supplied.verdict).toBe('continuous');
+		for (const result of [supplied, sizeConfiguration({ demands, compressor: { ...compressor, availableFadLpm: 150 } }), sizeConfiguration({ demands, compressor: { ...compressor, dutyCycle: .5 } })]) {
+			expect(result.usableTankAirLiters).toBeUndefined();
+			expect(result.estimatedWorkMinutes).toBeUndefined();
+			expect(result.estimatedRecoveryMinutes).toBeUndefined();
+			expect(result.burstScenario).toBeUndefined();
+		}
+		expect(sizeConfiguration({ demands, compressor: { ...compressor, availableFadLpm: 150 } }).verdict).toBe('incompatible');
+		expect(sizeConfiguration({ demands, compressor: { ...compressor, dutyCycle: .5 } }).verdict).toBe('incompatible');
+		const burst = sizeConfiguration({ demands: [{ ...demands[0], dutyFactor: .5 }], compressor: { ...compressor, availableFadLpm: 150 } });
+		expect(burst.verdict).toBe('insufficient_data');
+		expect(burst.estimatedWorkMinutes).toBeUndefined();
 	});
 
 	it('converts documented air per action and explicit cadence to an average flow', () => {

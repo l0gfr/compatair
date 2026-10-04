@@ -27,7 +27,7 @@ const number = (value: number) => value.toLocaleString('fr-FR', { maximumFractio
 export function explainCompatibility(compressor: Compressor, tool: ToolProfile, result: CompatibilityResult) {
 	if (tool.demandModel !== 'fixed-flow') return result.warnings.join(' ');
 	const available = compatibilityFadLabel(result, tool.workingPressureBar.typical);
-	if (result.verdict === 'insufficient_data') return `${available}. ${result.warnings.join(' ')} Aucun verdict favorable ne peut être déduit du débit aspiré ou des ${compressor.tankLiters} litres de cuve.`;
+	if (result.verdict === 'insufficient_data') return `${available}. ${result.warnings.join(' ')} Aucun verdict favorable ne peut être déduit du débit aspiré ou ${compressor.tankLiters === undefined ? 'd’un volume de cuve non documenté' : `des ${compressor.tankLiters} litres de cuve`}.`;
 	if (result.limitingFactor === 'pressure') return `La pression maximale de ${number(compressor.maxPressureBar)} bar est inférieure aux ${number(tool.workingPressureBar.typical)} bar demandés par cet outil.`;
 	const need = `L’outil demande ${number(tool.airflowLpm.typical)} L/min à ${number(tool.workingPressureBar.typical)} bar.`;
 	const cycle = compressor.dutyCycle !== undefined ? ` Le cycle de service publié de ${number(compressor.dutyCycle * 100)} % limite aussi la capacité moyenne.` : ' Le cycle de service du compresseur n’est pas documenté : le résultat de débit ne garantit pas son fonctionnement permanent.';

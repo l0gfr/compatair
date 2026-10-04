@@ -11,6 +11,18 @@ describe('immutable catalog and verdict snapshots', () => {
 	const selectedTools = tools.filter(item => ['einhell-tc-pw-340', 'metabo-dsx-150', 'metabo-fsp-600-lvlp', 'metabo-dkng-40-50'].includes(item.id));
 	const verdicts = createVerdictSnapshot({ compressors: selectedCompressors, tools: selectedTools, catalogVersion: catalog.catalogVersion, verifiedAt: CATALOG_VERIFIED_AT });
 
+	it('publishes unknown tank volumes as absent values and reports their coverage gap', () => {
+		const unknown = { ...compressors[0], id: 'tank-unknown', tankLiters: undefined, fieldSources: { ...compressors[0].fieldSources, tankLiters: [] } };
+		const withoutReceiver = { ...compressors[0], id: 'no-receiver', tankLiters: 0 };
+		const snapshot = createCatalogSnapshot({ compressors: [unknown, withoutReceiver], tools: [], toolTaxonomy: [], verifiedAt: CATALOG_VERIFIED_AT });
+		const serialized = JSON.parse(JSON.stringify(snapshot));
+		expect(serialized.compressors[0]).not.toHaveProperty('tankLiters');
+		expect(serialized.compressors[1].tankLiters).toBe(0);
+		const tankCoverage = snapshot.quality.field_coverage.find(field => field.field === 'tankLiters');
+		expect(tankCoverage).toBeDefined();
+		expect(tankCoverage!.populated_count).toBe(1);
+	});
+
 	it('normalizes identifiers and critical provenance without duplicates', () => {
 		expect(assertNormalizedCatalogIntegrity(compressors, tools)).toBe(true);
 		expect(catalog.normalized.products).toHaveLength(compressors.length + tools.length);

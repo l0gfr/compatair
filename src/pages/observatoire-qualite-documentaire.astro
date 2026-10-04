@@ -67,8 +67,8 @@ const datasetJsonLd = {
 	<section class="section contradiction-section"><div class="container"><div class="split-head"><div><p class="eyebrow">Registre des arbitrages</p><h2>Contradictions documentaires recensées</h2></div><p>La contradiction reste visible même lorsqu’une valeur a été retenue. <a href="/radar-contradictions/">Comparer les valeurs source par source</a>.</p></div>
 		<div class="contradiction-list">{observatory.contradictions.map((record) => {
 			const product = productsById.get(record.productId);
-			const href = product && 'tankLiters' in product ? `/compresseurs/${product.slug}/` : product ? `/outils-pneumatiques/${product.slug}/` : undefined;
-			const productLabel = product && 'tankLiters' in product ? compressorDisplayName(product) : product?.label;
+			const href = product && 'maxPressureBar' in product ? `/compresseurs/${product.slug}/` : product ? `/outils-pneumatiques/${product.slug}/` : undefined;
+			const productLabel = product && 'maxPressureBar' in product ? compressorDisplayName(product) : product?.label;
 			return <article><header><span>{record.status === 'answered' ? 'Réponse publiée' : 'Ouverte'}</span><time datetime={record.observedAt}>Constatée le {formatDate(record.observedAt)}</time></header><h3>{record.subject}</h3><p><strong>Contradiction.</strong> {record.contradiction}</p><p><strong>Réponse CompatAir.</strong> {record.response ?? 'Aucun arbitrage publié à ce stade.'}</p>{productLabel && href && <a href={href}>{productLabel}</a>}</article>;
 		})}</div>
 	</div></section>

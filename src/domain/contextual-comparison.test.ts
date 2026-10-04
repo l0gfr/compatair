@@ -16,6 +16,13 @@ function compressor(overrides: Partial<ContextualComparisonCompressor> = {}): Co
 }
 
 describe('contextual compressor comparison', () => {
+	it('can establish documented air supply without predicting autonomy from an unknown tank', () => {
+		const evaluation = evaluateContextualCompressor(configuration, compressor({ tankLiters: undefined }));
+		expect(evaluation.result.verdict).toBe('continuous');
+		expect(evaluation.result.usableTankAirLiters).toBeUndefined();
+		expect(evaluation.result.estimatedWorkMinutes).toBeUndefined();
+		expect(evaluation.result.estimatedRecoveryMinutes).toBeUndefined();
+	});
 	it('compares every machine against the same need and requested reserve', () => {
 		const evaluation = evaluateContextualCompressor(configuration, compressor());
 		expect(evaluation.base.peakFlowLpm).toBe(200);

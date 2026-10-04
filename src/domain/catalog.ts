@@ -61,7 +61,7 @@ export const compressorSchema = z.object({
 		label: z.string().min(1),
 		distinguishingAttributes: z.record(z.string(), z.string()).default({}),
 	}).optional(),
-	tankLiters: z.number().nonnegative(),
+	tankLiters: z.number().nonnegative().optional(),
 	maxPressureBar: z.number().positive(),
 	fadCurve: z.array(z.object({ pressureBar: z.number().nonnegative(), litersPerMinute: z.number().positive() })),
 	intakeFlowLpm: z.number().positive().optional(),

@@ -1,6 +1,16 @@
 import { describe, expect, it } from 'vitest';
 import { compressors } from '../data/catalog';
-import { compressorDisplayName, compressorInstallationForm, compressorOilLabel } from './product-display';
+import { compareDocumentedTankVolumes, compressorDisplayName, compressorInstallationForm, compressorOilLabel, compressorTankLabel } from './product-display';
+
+it('labels missing tanks and sorts them after documented volumes, including zero', () => {
+	expect(compressorTankLabel({})).toBe('Non documentée');
+	expect(compressorTankLabel({ tankLiters: 0 })).toBe('0 L');
+	expect(compressorTankLabel({ tankLiters: 50 })).toBe('50 L');
+	expect([undefined, 50, undefined, 0, 24].sort(compareDocumentedTankVolumes)).toEqual([0, 24, 50, undefined, undefined]);
+	expect(compareDocumentedTankVolumes(undefined, undefined)).toBe(0);
+	expect(compareDocumentedTankVolumes(undefined, 0)).toBe(1);
+	expect(compareDocumentedTankVolumes(0, undefined)).toBe(-1);
+});
 
 it('keeps unknown lubrication distinct from oil and oil-free', () => {
 	expect(compressorOilLabel('oil')).toBe('Lubrifié');

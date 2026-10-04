@@ -8,8 +8,10 @@ const digest = (value: unknown) => createHash('sha256').update(JSON.stringify(va
 export const compressorBuildVersion = digest(compressors);
 const toolBuildVersion = digest(tools);
 export function compressorAlternatives(compressor: Compressor) {
+ const distance = (item: Compressor) => Math.abs(item.maxPressureBar - compressor.maxPressureBar) * 10
+  + (compressor.tankLiters === undefined ? 0 : item.tankLiters === undefined ? Number.POSITIVE_INFINITY : Math.abs(item.tankLiters - compressor.tankLiters));
  return compressors.filter(item => item.id !== compressor.id && (item.confidence === 'A' || item.confidence === 'B') && item.fadCurve.length > 0)
-  .sort((a, b) => (Math.abs(a.tankLiters - compressor.tankLiters) + Math.abs(a.maxPressureBar - compressor.maxPressureBar) * 10) - (Math.abs(b.tankLiters - compressor.tankLiters) + Math.abs(b.maxPressureBar - compressor.maxPressureBar) * 10)).slice(0, 3);
+  .sort((a, b) => distance(a) === distance(b) ? 0 : distance(a) < distance(b) ? -1 : 1).slice(0, 3);
 }
 export function relatedToolsFor(tool: ToolProfile) {
  return tools.filter(item => item.id !== tool.id && item.categoryId === tool.categoryId)
