@@ -20,6 +20,94 @@ function checkInstalledDependency(consumerEntry: string, chain: string[], depend
 }
 
 describe('installed dependency security boundaries', () => {
+	it('preserves restrictions and quoted extensions through cargo serialization and 304 updates', () => {
+		checkInstalledDependency('astro', [], 'http-cache-semantics', `
+			const request = { url: 'https://example.test/image', method: 'GET', headers: { host: 'example.test' } };
+			const incoming = { ...request, headers: { ...request.headers, 'cache-control': 'max-stale=999999' } };
+			const results = [];
+			const protectedCache = policy => {
+				policy.now = () => policy._responseTime + 1000;
+				return [policy.evaluateRequest(incoming).response === undefined, policy.timeToLive(), policy.revalidatedPolicy(request, { status: 503, headers: {} }).modified];
+			};
+			const cargo = new library(request, { status: 200, headers: { 'cache-control': 'max-age=600, extension="literal, public", pre-check=0, post-check=0', 'set-cookie': 'fixture=synthetic' } }, { ignoreCargoCult: true });
+			results.push(protectedCache(cargo), protectedCache(library.fromObject(JSON.parse(JSON.stringify(cargo.toObject())))));
+			const pragma = new library(request, { status: 200, headers: { 'cache-control': null, pragma: 'no-cache' } });
+			results.push(protectedCache(pragma), protectedCache(library.fromObject(JSON.parse(JSON.stringify(pragma.toObject())))));
+			for (const headers of [{ 'cache-control': 'private, max-age=600, stale-if-error=600' }, { 'cache-control': 'No-Cache, max-age=600, stale-if-error=600' }, { 'set-cookie': 'fixture=synthetic' }, { 'cache-control': 's-maxage=0, stale-if-error=600' }]) {
+				const original = new library(request, { status: 200, headers: { etag: '"fixture-v1"' } });
+				const updated = original.revalidatedPolicy(request, { status: 304, headers: { etag: '"fixture-v1"', ...headers } });
+				assert.equal(updated.matches, true);
+				assert.equal(updated.modified, false);
+				results.push(protectedCache(updated.policy));
+			}
+			assert.deepEqual(results, Array(8).fill([true, 0, true]));
+			const ordinary = new library(request, { status: 200, headers: { 'cache-control': 'public, extension="literal, private", max-age=600, pre-check=0, post-check=0' } }, { ignoreCargoCult: true });
+			for (const policy of [ordinary, library.fromObject(JSON.parse(JSON.stringify(ordinary.toObject())))]) {
+				policy.now = () => policy._responseTime + 1000;
+				assert.notEqual(policy.evaluateRequest(request).response, undefined);
+				assert.equal(policy.timeToLive(), 599000);
+			}
+			const original = new library(request, { status: 200, headers: { etag: '"fixture-v1"', 'content-length': '70' } });
+			const refreshed = original.revalidatedPolicy(request, { status: 304, headers: { etag: '"fixture-v1"', 'cache-control': 'public, max-age=600', 'content-length': '0', 'x-fixture': 'synthetic' } }).policy;
+			assert.notEqual(refreshed.evaluateRequest(request).response, undefined);
+			assert.equal(refreshed.responseHeaders()['content-length'], '70');
+			assert.equal(refreshed.responseHeaders()['x-fixture'], 'synthetic');
+			const userA = { ...request, headers: { ...request.headers, cookie: 'fixture=A' } };
+			const userB = { ...incoming, headers: { ...incoming.headers, cookie: 'fixture=B' } };
+			const varied = original.revalidatedPolicy(userA, { status: 304, headers: { etag: '"fixture-v1"', vary: 'cookie' } }).policy;
+			assert.equal(varied.evaluateRequest(userB).response, undefined);
+		`);
+	});
+
+	it('enforces cache restrictions across directive case, empty values and legacy serialized maps', () => {
+		checkInstalledDependency('astro', [], 'http-cache-semantics', `
+			const request = { url: 'https://example.test/image', method: 'GET', headers: { host: 'example.test' } };
+			for (const directive of ['No-Cache', 'Private', 'No-Store', 'Proxy-Revalidate', 'Must-Revalidate', 'S-Maxage=0', 'no-cache=""', 'private=""', 'no-store=""', 'proxy-revalidate=""', 'must-revalidate=""', 's-maxage=""']) {
+				const original = new library(request, { status: 200, headers: { 'cache-control': 'max-age=0, ' + directive + ', stale-while-revalidate=600, stale-if-error=600' } });
+				const legacy = JSON.parse(JSON.stringify(original.toObject()));
+				delete legacy.resh['cache-control'];
+				const [name, rawValue] = directive.split('=', 2);
+				legacy.rescc = { 'max-age': '0', 'stale-while-revalidate': '600', 'stale-if-error': '600', [name]: rawValue === undefined ? true : rawValue.replaceAll('"', '') };
+				for (const policy of [original, library.fromObject(JSON.parse(JSON.stringify(original.toObject()))), library.fromObject(legacy)]) {
+					policy.now = () => policy._responseTime + 1000;
+					const incoming = { ...request, headers: { ...request.headers, 'cache-control': 'MAX-STALE=999999' } };
+					assert.equal(policy.satisfiesWithoutRevalidation(incoming), false, directive);
+					assert.equal(policy.evaluateRequest(incoming).response, undefined, directive);
+					assert.equal(policy.timeToLive(), 0, directive);
+					assert.equal(policy.useStaleWhileRevalidate(), false, directive);
+					assert.equal(policy.revalidatedPolicy(incoming, { status: 503, headers: {} }).modified, true, directive);
+				}
+			}
+			for (const directive of ['public=""', 'immutable=""', 'public=synthetic', 'immutable=synthetic', 'public="", public', 'public, public=""', 'IMMUTABLE=synthetic, immutable', 'extension="synthetic, public, synthetic"', 'extension="synthetic, immutable, synthetic"', 'public, extension="unterminated']) {
+				const policy = new library(request, { status: 200, headers: { 'cache-control': directive + ', max-age=600, stale-if-error=600', 'set-cookie': 'fixture=synthetic' } });
+				assert.equal(policy.evaluateRequest(request).response, undefined, directive);
+				assert.equal(policy.timeToLive(), 0, directive);
+				const legacy = JSON.parse(JSON.stringify(policy.toObject()));
+				legacy.rescc.public = true;
+				const restored = library.fromObject(legacy);
+				assert.equal(restored.evaluateRequest(request).response, undefined, directive);
+				assert.equal(restored.timeToLive(), 0, directive);
+			}
+			const cookie = new library(request, { status: 200, headers: { 'cache-control': 'max-age=600', 'set-cookie': 'fixture=synthetic' } });
+			for (const shared of [undefined, null, 0, 'false', true]) {
+				const legacy = JSON.parse(JSON.stringify(cookie.toObject()));
+				legacy.sh = shared;
+				const restored = library.fromObject(legacy);
+				assert.equal(restored.evaluateRequest(request).response, undefined);
+				assert.equal(restored.timeToLive(), 0);
+			}
+			const duplicateRestriction = new library(request, { status: 200, headers: { 'cache-control': 'max-age=600, no-cache, No-Cache="", stale-if-error=600' } });
+			assert.equal(duplicateRestriction.evaluateRequest(request).response, undefined);
+			const ordinary = new library(request, { status: 200, headers: { 'cache-control': 'PUBLIC, MAX-AGE=60' } });
+			ordinary.now = () => ordinary._responseTime + 1000;
+			for (const directive of ['No-Cache', 'no-cache=""']) {
+				assert.equal(ordinary.evaluateRequest({ ...request, headers: { ...request.headers, 'cache-control': directive } }).response, undefined);
+			}
+			assert.notEqual(ordinary.evaluateRequest(request).response, undefined);
+			assert.equal(ordinary.timeToLive(), 59000);
+		`);
+	});
+
 	it('requires validation for protected cache entries across stale directives and serialized state', () => {
 		checkInstalledDependency('astro', [], 'http-cache-semantics', `
 			const request = { url: 'https://example.test/image', method: 'GET', headers: { host: 'example.test' } };
@@ -61,6 +149,8 @@ describe('installed dependency security boundaries', () => {
 			for (const [headers, options] of [
 				[{ 'cache-control': 'public, max-age=0' }, {}],
 				[{ 'cache-control': 'public, max-age=0', 'set-cookie': 'fixture=synthetic' }, {}],
+				[{ 'cache-control': 'PUBLIC, MAX-AGE=0', 'set-cookie': 'fixture=synthetic' }, {}],
+				[{ 'cache-control': 'public, extension="literal, private", max-age=0', 'set-cookie': 'fixture=synthetic' }, {}],
 				[{ 'cache-control': 'immutable, max-age=1', 'set-cookie': 'fixture=synthetic' }, {}],
 				[{ 'cache-control': 'private, max-age=0', 'set-cookie': 'fixture=synthetic' }, { shared: false }],
 			]) {

@@ -23,7 +23,7 @@ overrides:
 
 patchedDependencies:
   http-cache-semantics@4.2.0:
-    hash: 7e48a72649d4fb8762784e87e9b617dbe1d41ff011ce0e0d98897e9a98e51339
+    hash: 3005e1adc2084c8600aa0d9040ba6c01552f549e96946f7bc10fe47bf86c1b46
     path: patches/http-cache-semantics@4.2.0.patch
 
 importers:
@@ -3802,7 +3802,7 @@ snapshots:
       get-tsconfig: 5.0.0-beta.4
       github-slugger: 2.0.0
       html-escaper: 3.0.3
-      http-cache-semantics: 4.2.0(patch_hash=7e48a72649d4fb8762784e87e9b617dbe1d41ff011ce0e0d98897e9a98e51339)
+      http-cache-semantics: 4.2.0(patch_hash=3005e1adc2084c8600aa0d9040ba6c01552f549e96946f7bc10fe47bf86c1b46)
       js-yaml: 4.3.2
       jsonc-parser: 3.3.1
       magic-string: 1.1.0
@@ -4454,7 +4454,7 @@ snapshots:
 
   html-void-elements@3.0.0: {}
 
-  http-cache-semantics@4.2.0(patch_hash=7e48a72649d4fb8762784e87e9b617dbe1d41ff011ce0e0d98897e9a98e51339): {}
+  http-cache-semantics@4.2.0(patch_hash=3005e1adc2084c8600aa0d9040ba6c01552f549e96946f7bc10fe47bf86c1b46): {}
 
   http-errors@2.0.1:
     dependencies:
