@@ -37,6 +37,14 @@ Neuf candidats présentent une divergence entre leurs colonnes cfm et m³/min qu
 
 Cinq autres candidats sont exclus : ALUP Allegro 31, 37 et 45 ; Evoluto 30 et 37. Le maximum de référence est donné à 7 bar alors que la plage retenue est associée à 12,5 bar ; il ne peut pas servir de borne haute à cette autre pression. Les 32 autres candidats admissibles non retenus avaient une documentation moins complète que la sélection selon les critères annoncés.
 
+## Correction de capacité de 15 profils Puska déjà publiés
+
+La même revue porte sur les 15 PKE VF du complément B. Le [catalogue Puska 2025](https://www.puska.com/content/dam/brands/Puska/catalogos/Cat%C3%A1logo%20Puska%202025.pdf#page=31), pages 31 et 32, donne les bornes minimale et maximale dans la même cellule L/min de chaque ligne 10 bar. Les configurations 8 bar occupent d'autres lignes. Les cinq tailles retenues ont les plages 132–294, 138–360, 270–504, 336–756 et 420–966 L/min ; chacune comporte trois configurations d'équipement.
+
+Le FAD utilisé comme capacité prend désormais la borne maximale de cette cellule, avec contrôle de l'association modèle/ligne/pression. Le minimum reste affiché séparément. Aucun régime ni cycle ne sont déduits. Un besoin témoin 200 L/min à 10 bar, avec la marge du moteur, ne doit plus produire un faux refus sur PKE 3 VF : il reste `insufficient_data` faute de cycle documenté. Le manque de capacité au-delà du maximum et l'incompatibilité au-dessus du plafond de pression restent conclusifs.
+
+Cette correction ne crée aucune nouvelle identité ni source. Le snapshot documentaire B et ses empreintes restent inchangés : seule la sélection de la borne utilisée dans le produit dérivé est corrigée. Les preuves publiées, leurs dates et l'historique antérieur sont conservés. Le PDF original a été revérifié en HTTP 200 le 4 octobre : ses 7 784 396 octets et son SHA-256 `62ce74f8e02f84d3c021f7162c9e8fd8cd9fc17fa41131797a1d7b3465e92454` correspondent au snapshot B. Les pages 31 et 32 ont également été rendues et revues visuellement. Les 45 tests de la factory B passent, dont les bornes sur chacune des 15 configurations. Les 405 autres profils B et tous les objets de preuve restent inchangés.
+
 ## Sources primaires versionnées
 
 Les 59 réponses originales utilisées ont été reçues le 4 octobre 2026 avec un statut HTTP 200. La longueur et le SHA-256 du fichier original sont vérifiés avant import. Les PDF et HTML complets restent dans l'archive privée de travail. Le snapshot versionné conserve seulement les pages nécessaires, les lignes et colonnes, les citations de qualification et les métadonnées de capture. Les transcriptions visuelles portent aussi l'empreinte du rendu revu lorsqu'elle est nécessaire.

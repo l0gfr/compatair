@@ -1,4 +1,4 @@
-const product: unknown = {
+const product = {
   "id": "puska-pke-7-5-vf-10",
   "slug": "puska-pke-7-5-vf-10",
   "brand": "Puska",
@@ -18,7 +18,7 @@ const product: unknown = {
   "fadCurve": [
     {
       "pressureBar": 10,
-      "litersPerMinute": 336
+      "litersPerMinute": 756
     }
   ],
   "powerKw": 5.5,
@@ -54,8 +54,15 @@ const product: unknown = {
       ]
     },
     {
-      "label": "Air livré à 10 bar",
-      "value": "336 L/min",
+      "label": "FAD maximal déclaré à 10 bar",
+      "value": "756 L/min",
+      "evidenceIds": [
+        "october4b-puska-catalog-2025-p31"
+      ]
+    },
+    {
+      "label": "FAD minimal déclaré à 10 bar",
+      "value": "336 L/min ; minimum de la plage publiée, distinct de la capacité maximale",
       "evidenceIds": [
         "october4b-puska-catalog-2025-p31"
       ]
@@ -76,15 +83,15 @@ const product: unknown = {
     }
   ],
   "editorial": {
-    "overview": "Puska PKE 7,5 VF 10. 336 L/min déclarés à 10 bar. Configuration constructeur : PKE 7,5 VF 10.",
+    "overview": "Puska PKE 7,5 VF 10. 756 L/min déclarés à 10 bar, maximum de la plage FAD publiée, sans qualification du régime moteur. Configuration constructeur : PKE 7,5 VF 10.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 336 L/min déclarés à 10 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 756 L/min déclarés à 10 bar, maximum de la plage FAD publiée, sans qualification du régime moteur."
     ],
     "limitations": [
-      "La plage de débit publiée est conservée en source ; seul son minimum est utilisé pour cette configuration. Le régime de vitesse associé n’est pas spécifié.",
       "La cuve n’est pas qualifiée : le tiret dans la colonne L ne démontre pas à lui seul un stockage nul.",
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
+      "Le FAD retenu est le maximum de la plage constructeur à cette pression. Le minimum est publié séparément ; aucun régime de vitesse ni cycle de service n’est déduit.",
       "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
       "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil.",
       "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."

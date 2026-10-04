@@ -92,6 +92,14 @@ const reviewedManifest = {
   }
 };
 const allowedHosts = new Set(['www.hertz-kompressoren.com', 'www.dalgakiran.com', 'lupamat.com', 'www.puska.com', 'www.quincycompressor.com', 'finicompressors.com', 'www.nuair.it', 'www.shamalcompressors.com', 'www.nist.gov']);
+// These sealed Puska rows publish both FAD endpoints at 10 bar. The lower
+// endpoint is retained separately and must not become the nominal capacity ceiling.
+const puskaVariableRangeIds = new Set([
+ 'puska-pke-3-vf-10', 'puska-pke-4-vf-10', 'puska-pke-5-5-vf-10', 'puska-pke-7-5-vf-10', 'puska-pke-9-vf-10',
+ 'puska-pke-3-vf-10-200', 'puska-pke-4-vf-10-200', 'puska-pke-5-5-vf-10-200', 'puska-pke-7-5-vf-10-200', 'puska-pke-9-vf-10-200',
+ 'puska-pke-3-vf-dry-10-200', 'puska-pke-4-vf-dry-10-200', 'puska-pke-5-5-vf-dry-10-200', 'puska-pke-7-5-vf-dry-10-200', 'puska-pke-9-vf-dry-10-200',
+]);
+const previousPuskaMinimumLimitation = 'La plage de débit publiée est conservée en source ; seul son minimum est utilisé pour cette configuration. Le régime de vitesse associé n’est pas spécifié.';
 export function buildDocumentedCompressorsOctober4B(snapshot) {
  if (snapshot.schemaVersion !== 1 || snapshot.batchId !== 'documented-compressors-2026-10-04-b' || snapshot.observedDate !== '2026-10-04' || snapshot.baseline?.sha !== 'dbfbe1fb72d5f9abb04bc9c7cb5ea48a33122f20' || !Array.isArray(snapshot.compressors) || snapshot.compressors.length !== 420 || sha(snapshot.compressors) !== reviewedManifest.recordsSha256) throw new Error('Lot ou transcriptions documentaires non reconnus');
  const sources = new Map(snapshot.sources.map(s => [s.id, s]));
@@ -136,8 +144,23 @@ export function buildDocumentedCompressorsOctober4B(snapshot) {
    tank = 0; link('tankLiters', [row.tank.ref, row.tank.mountProof]);
   } else { tank = numeric(row.tank, ['L']); if (tank <= 0) throw new Error('Cuve inconnue convertie en zéro'); link('tankLiters', [row.tank.ref]); }
   const conditions = row.conditionProofs.map(ref => { add(ref); return original(ref); });
-  const measurementPressure = pressure(row.flow?.pressure), delivered = flow(row.flow);
+  const measurementPressure = pressure(row.flow?.pressure);
+  let delivered = flow(row.flow), rangeMinimum;
   if (measurementPressure < 0 || measurementPressure > maximum || delivered <= 0 || row.sourceClaimScope !== 'FAD-pressure-qualified' || !conditions.some(text => /FAD|free air delivery|ISO 1217/i.test(text))) throw new Error('FAD ou pression de mesure non qualifiés');
+  if (puskaVariableRangeIds.has(id)) {
+   const ref = row.flow.ref, table = page(ref).tables[ref.tableIndex];
+   const sameRow = candidate => candidate.sourceId === ref.sourceId && candidate.page === ref.page && candidate.tableIndex === ref.tableIndex && candidate.rowIndex === ref.rowIndex;
+   const endpoints = parseSourceNumbers(original(ref), ref.numberFormat);
+   if (row.brand !== 'Puska' || row.sourceId !== 'puska-catalog-2025' || ref.sourceId !== row.sourceId || row.flow.unit !== 'L/min' || ref.numberIndex !== 0 || ref.numberFormat !== 'spanish-thousands'
+    || !(ref.page === 31 && [2, 3].includes(ref.tableIndex) || ref.page === 32 && ref.tableIndex === 2)
+    || !sameRow(row.modelProof) || !sameRow(row.flow.pressure.ref) || !sameRow(row.maximum.ref)
+    || row.modelProof.columnIndex !== 1 || row.flow.pressure.ref.columnIndex !== 4 || row.maximum.ref.columnIndex !== 4 || ref.columnIndex !== 7
+    || original(row.modelProof) !== row.model || table[0][1] !== 'Modelo' || table[0][4] !== 'bar' || table[0][7] !== 'l/min'
+    || measurementPressure !== 10 || maximum !== 10 || endpoints.length !== 2 || endpoints[0] !== delivered || endpoints[1] <= endpoints[0]
+    || !/^\d+(?:\.\d{3})*(?:,\d+)?\s*-\s*\d+(?:\.\d{3})*(?:,\d+)?$/.test(original(ref))) throw new Error('Plage Puska hors ligne modèle-pression qualifiée');
+   rangeMinimum = delivered;
+   delivered = flow({ ...row.flow, value: endpoints[1], ref: { ...ref, numberIndex: 1 } });
+  }
   const points = [{ pressureBar: measurementPressure, litersPerMinute: delivered }];
   link('fadCurve', [row.flow.ref, row.flow.pressure.ref, ...row.conditionProofs, row.flow.unit === 'cfm' ? conversionFlow : null, row.flow.pressure.unit === 'psig' ? conversion : null]);
   let power;
@@ -148,12 +171,14 @@ export function buildDocumentedCompressorsOctober4B(snapshot) {
   if (row.dutyCycle !== null) { const q = original(row.dutyProof); duty = row.dutyCycle; if (duty !== 1 || !/designed for continuous (?:operation|use)|designed to run continuously|non-stop operation 24\/7/i.test(q)) throw new Error('Cycle non documenté'); link('dutyCycle', [row.dutyProof]); } else if (row.dutyProof) throw new Error('Cycle inconnu requalifié');
   if (row.electrical) { const q = original(row.electrical); if (row.electrical.frequencyHz !== 50 || !/(?:\/|\s)50(?:\s|$)/.test(q)) throw new Error('Fréquence de configuration altérée'); add(row.electrical); }
   if (row.mpn) { if (!norm(sources.get(row.sourceId).extractedPages.map(p => p.text).join(' ')).includes(row.mpn)) throw new Error('Code constructeur non documenté'); link('mpn', [row.modelProof]); }
-  const limits = [...row.limitations, 'Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.'];
+  const limits = [...row.limitations.filter(text => rangeMinimum === undefined || text !== previousPuskaMinimumLimitation), 'Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.'];
+  if (rangeMinimum !== undefined) limits.push('Le FAD retenu est le maximum de la plage constructeur à cette pression. Le minimum est publié séparément ; aucun régime de vitesse ni cycle de service n’est déduit.');
   if (!duty) limits.push('Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.');
   if (!row.electrical && !limits.some(text => /fréquence/.test(text))) limits.push('La fréquence électrique de cette configuration n’est pas documentée.');
   if (tank === undefined) limits.push('Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil.');
   if (row.maxPressureBasis === 'selected-working-pressure-ceiling') limits.push('Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions.');
-  const specs = [{ label: 'Configuration constructeur', value: row.equipment, evidenceIds: fieldSources.model }, { label: row.maxPressureBasis === 'selected-working-pressure-ceiling' ? 'Pression de la configuration retenue' : 'Pression maximale publiée', value: `${fmt(maximum)} bar${row.maximum.unit === 'psig' ? ` (${fmt(row.maximum.value)} psig publiés)` : ''}`, evidenceIds: fieldSources.maxPressureBar }, { label: 'Cuve de stockage', value: tank === undefined ? 'Non documentée en litres' : tank === 0 ? 'Montage au sol sans stockage intégré documenté' : `${fmt(tank)} L`, evidenceIds: fieldSources.tankLiters ?? fieldSources.model }, { label: `Air livré à ${fmt(measurementPressure)} bar`, value: `${fmt(delivered)} L/min${row.flow.unit === 'cfm' ? ` (${fmt(row.flow.value)} cfm publiés)` : ''}`, evidenceIds: fieldSources.fadCurve }];
+  const specs = [{ label: 'Configuration constructeur', value: row.equipment, evidenceIds: fieldSources.model }, { label: row.maxPressureBasis === 'selected-working-pressure-ceiling' ? 'Pression de la configuration retenue' : 'Pression maximale publiée', value: `${fmt(maximum)} bar${row.maximum.unit === 'psig' ? ` (${fmt(row.maximum.value)} psig publiés)` : ''}`, evidenceIds: fieldSources.maxPressureBar }, { label: 'Cuve de stockage', value: tank === undefined ? 'Non documentée en litres' : tank === 0 ? 'Montage au sol sans stockage intégré documenté' : `${fmt(tank)} L`, evidenceIds: fieldSources.tankLiters ?? fieldSources.model }, { label: `${rangeMinimum === undefined ? 'Air livré' : 'FAD maximal déclaré'} à ${fmt(measurementPressure)} bar`, value: `${fmt(delivered)} L/min${row.flow.unit === 'cfm' ? ` (${fmt(row.flow.value)} cfm publiés)` : ''}`, evidenceIds: fieldSources.fadCurve }];
+  if (rangeMinimum !== undefined) specs.push({ label: `FAD minimal déclaré à ${fmt(measurementPressure)} bar`, value: `${fmt(rangeMinimum)} L/min ; minimum de la plage publiée, distinct de la capacité maximale`, evidenceIds: fieldSources.fadCurve });
   if (row.originalReceiver) specs.push({ label: 'Colonne réservoir du document original', value: row.originalReceiver, evidenceIds: [add(row.tankUnqualifiedRaw)] });
   if (power) specs.push({ label: 'Puissance publiée', value: `${fmt(power)} kW`, evidenceIds: fieldSources.powerKw });
   if (row.unqualifiedPower) {
@@ -162,7 +187,7 @@ export function buildDocumentedCompressorsOctober4B(snapshot) {
   }
   if (duty) specs.push({ label: 'Cycle de service déclaré', value: '100 %', evidenceIds: fieldSources.dutyCycle });
   specs.push({ label: 'Fréquence de la configuration retenue', value: row.electrical ? '50 Hz' : 'Non documentée', evidenceIds: row.electrical ? [add(row.electrical)] : fieldSources.model });
-  const deliveredText = `${fmt(delivered)} L/min déclarés à ${fmt(measurementPressure)} bar.`;
+  const deliveredText = `${fmt(delivered)} L/min déclarés à ${fmt(measurementPressure)} bar${rangeMinimum === undefined ? '' : ', maximum de la plage FAD publiée, sans qualification du régime moteur'}.`;
   return { id, slug: id, brand: row.brand, model: row.model, ...(row.mpn ? { mpn: row.mpn } : {}), variant: { familyId: slug(`${row.brand} ${row.normalizedModel ?? row.model}`), label: row.equipment, distinguishingAttributes: { équipement: row.equipment, pressionDeConfiguration: `${fmt(maximum)} bar`, cuve: tank === undefined ? 'Non documentée' : `${fmt(tank)} L`, ...(row.electrical ? { fréquence: '50 Hz' } : {}) } }, ...(tank === undefined ? {} : { tankLiters: tank }), maxPressureBar: maximum, fadCurve: points, ...(duty ? { dutyCycle: duty } : {}), ...(power ? { powerKw: power } : {}), oilType: row.oilType, confidence: 'B', status: 'unknown', image: { src: `/images/products/${id}.svg`, alt: `Repères techniques : ${row.brand} ${row.model}`, sourceUrl: sources.get(row.sourceId).url, sourceLabel: 'Carte technique CompatAir, données déclarées par le constructeur' }, specifications: specs, editorial: { overview: `${row.brand} ${row.model}. ${deliveredText} Configuration constructeur : ${row.equipment}.`, verifiedFacts: [`Pression de la configuration documentée : ${fmt(maximum)} bar.`, ...(tank === undefined ? [] : [tank === 0 ? 'Montage sans réservoir intégré explicitement documenté.' : `Cuve de stockage documentée : ${fmt(tank)} L.`]), `FAD sous pression identifié séparément des valeurs d’aspiration : ${deliveredText}`], limitations: limits }, evidence, fieldSources, notes: ['Portée de la source : FAD-pressure-qualified.', 'Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.', 'Identités de pression, tension, contrôleur et démarreur consolidées avant le décompte du lot.'] };
  });
 }
