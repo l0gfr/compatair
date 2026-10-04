@@ -23,7 +23,8 @@ describe('opaque evidence history input', () => {
 		const declaration = resolve(root, 'src/data/evidence-history.snapshot.d.json.ts');
 		const resolved = ts.resolveModuleName('./evidence-history.snapshot.json', entry, options, ts.sys).resolvedModule;
 		expect(resolved?.resolvedFileName).toBe(declaration);
-		const source = `import snapshot from './evidence-history.snapshot.json';
+		const source = `/// <reference types="astro/client" />
+import snapshot from './evidence-history.snapshot.json';
 import { evidenceHistorySchema } from '../domain/evidence-history';
 const validated = evidenceHistorySchema.parse(snapshot);
 const validatedSourceUrl: string = validated.events[0]!.snapshot.sourceUrl;
@@ -42,8 +43,7 @@ snapshot.events;
 			}
 			return readFile(path);
 		};
-		const ambientFiles = parsedConfig.fileNames.filter(path => path === resolve(root, '.astro/types.d.ts'));
-		const program = ts.createProgram([...ambientFiles, entry], options, host);
+		const program = ts.createProgram([entry], options, host);
 		const entrySource = program.getSourceFile(entry);
 		expect(entrySource).toBeDefined();
 		const checker = program.getTypeChecker();
@@ -54,6 +54,7 @@ snapshot.events;
 		expect(ts.flattenDiagnosticMessageText(errors[0].messageText, '\n')).toContain("'snapshot' is of type 'unknown'");
 		expect(attemptedJsonRead).toBe(false);
 		expect(program.getSourceFiles().some(file => file.fileName === jsonPath)).toBe(false);
+		expect(program.getSourceFiles().some(file => file.fileName === resolve(root, '.astro/types.d.ts'))).toBe(false);
 	}, 30_000);
 
 	it('keeps native JSON loading exact and rejects absent or malformed runtime input', () => {
