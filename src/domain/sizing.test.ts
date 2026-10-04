@@ -114,7 +114,7 @@ describe('compatibility engine', () => {
 	});
 
 	it('exposes the expanded sourced catalog', () => {
-		expect(compressors).toHaveLength(4039);
+		expect(compressors).toHaveLength(4459);
 		expect(tools).toHaveLength(16087);
 	});
 

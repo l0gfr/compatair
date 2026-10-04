@@ -56,9 +56,9 @@ describe('reviewed manufacturer imports', () => {
 		const r = schneider.rows[0];
 		for (const patch of [{rawColumns:r.rawColumns.slice(1)}, {flowBasis:'max-pressure'}, {page:1}, {oilEvidence:undefined}]) expect(()=>createSchneiderDraft(schneider,{...r,...patch})).toThrow();
 	});
-	it('has no duplicate brand and manufacturer reference in the 20126 products', () => {
+	it('has no duplicate brand and manufacturer reference in the 20546 products', () => {
 		const products=[...compressors,...tools];
-		expect(products).toHaveLength(20126);
+		expect(products).toHaveLength(20546);
 		const keys=products.filter(p=>p.mpn).map(p=>`${p.brand.toLowerCase()}|${p.mpn.toLowerCase()}`);
 		expect(new Set(keys).size).toBe(keys.length);
 	});
