@@ -7,6 +7,7 @@ import { parse } from 'yaml';
 import { editorialText, productCandidate } from './indexation-planner.mjs';
 import { editorialPriority } from './editorial-priority.mjs';
 import { assessGuideValue, assessProductValue } from './page-value.mjs';
+import { applyEditorialHolds } from './indexation-editorial-holds.mjs';
 
 // A worker exits after each batch, releasing Node's non-evictable module cache.
 // The source order and all candidate fields remain identical to the direct loader.
@@ -55,7 +56,8 @@ if (!isMainThread && workerData?.task === 'indexation-product-batch') {
  parentPort.postMessage(candidates);
 }
 
-export async function collectIndexationCandidates(root, { onProgress } = {}) {
+export async function collectIndexationCandidates(root, { onProgress, now = new Date() } = {}) {
+ const editorialHolds = JSON.parse(await readFile(join(root, 'config/indexation-editorial-holds.json'), 'utf8'));
  const candidates = [];
  for (const kind of ['compressors', 'tools']) {
   const files = (await readdir(join(root, 'src/data/products', kind))).filter(file => file.endsWith('.ts') && file !== 'index.ts').sort();
@@ -90,5 +92,5 @@ export async function collectIndexationCandidates(root, { onProgress } = {}) {
 	await readGuides(join(root, 'src/content/guides'));
 	const panel = JSON.parse(await readFile(join(root, 'config/seo-query-panel.json'), 'utf8'));
 	for (const candidate of candidates) candidate.priority = editorialPriority(candidate, panel);
-	return candidates;
+	return applyEditorialHolds(candidates, editorialHolds, { now });
 }

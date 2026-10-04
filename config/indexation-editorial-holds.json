@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "holds": [
+    {
+      "path": "/outils-pneumatiques/pistolet-nettoyage-zipp-ztg1211s/",
+      "reviewedAt": "2026-10-05",
+      "reason": "Fiche trop mince : besoin d’air et caractéristiques d’usage doivent être revus dans le catalogue ZIPP avant indexation ; source disponible mais champs non qualifiés dans cette version."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-nettoyage-zipp-ztg1211sn/",
+      "reviewedAt": "2026-10-05",
+      "reason": "Fiche trop mince : besoin d’air et caractéristiques d’usage doivent être revus dans le catalogue ZIPP avant indexation ; source disponible mais champs non qualifiés dans cette version."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-nettoyage-zipp-ztg1311a/",
+      "reviewedAt": "2026-10-05",
+      "reason": "Fiche trop mince : besoin d’air et caractéristiques d’usage doivent être revus dans le catalogue ZIPP avant indexation ; source disponible mais champs non qualifiés dans cette version."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-nettoyage-zipp-ztg1311bs/",
+      "reviewedAt": "2026-10-05",
+      "reason": "Fiche trop mince : besoin d’air et caractéristiques d’usage doivent être revus dans le catalogue ZIPP avant indexation ; source disponible mais champs non qualifiés dans cette version."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-nettoyage-zipp-ztg1311bss/",
+      "reviewedAt": "2026-10-05",
+      "reason": "Fiche trop mince : besoin d’air et caractéristiques d’usage doivent être revus dans le catalogue ZIPP avant indexation ; source disponible mais champs non qualifiés dans cette version."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-nettoyage-zipp-ztg3125/",
+      "reviewedAt": "2026-10-05",
+      "reason": "Fiche trop mince : besoin d’air et caractéristiques d’usage doivent être revus dans le catalogue ZIPP avant indexation ; source disponible mais champs non qualifiés dans cette version."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-nettoyage-zipp-ztg3125bs/",
+      "reviewedAt": "2026-10-05",
+      "reason": "Fiche trop mince : besoin d’air et caractéristiques d’usage doivent être revus dans le catalogue ZIPP avant indexation ; source disponible mais champs non qualifiés dans cette version."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-nettoyage-zipp-ztg3125bss/",
+      "reviewedAt": "2026-10-05",
+      "reason": "Fiche trop mince : besoin d’air et caractéristiques d’usage doivent être revus dans le catalogue ZIPP avant indexation ; source disponible mais champs non qualifiés dans cette version."
+    }
+  ]
+}

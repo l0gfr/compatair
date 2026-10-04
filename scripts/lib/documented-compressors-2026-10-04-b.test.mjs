@@ -9,6 +9,14 @@ const snapshot = JSON.parse(readFileSync(new URL('../../src/data/imports/documen
 const batch = build(snapshot);
 const product = (brand, model) => batch.find(p => p.brand === brand && p.model === model);
 const tool = { id:'fixture', demandModel:'fixed-flow', workingPressureBar:{min:6.3,typical:6.3,max:6.3}, airflowLpm:{min:100,typical:100,max:100}, confidence:'B' };
+const puskaRangeCases = [
+ ['3', 132, 294], ['4', 138, 360], ['5-5', 270, 504], ['7-5', 336, 756], ['9', 420, 966],
+].flatMap(([model, minimum, maximum], index) => [
+ { id: `puska-pke-${model}-vf-10`, minimum, maximum, page: 31, tableIndex: 2, rowIndex: (index + 1) * 2 },
+ { id: `puska-pke-${model}-vf-10-200`, minimum, maximum, page: 31, tableIndex: 3, rowIndex: (index + 1) * 2 },
+ { id: `puska-pke-${model}-vf-dry-10-200`, minimum, maximum, page: 32, tableIndex: 2, rowIndex: (index + 1) * 2 },
+]);
+const fixedDemand = (pressure, flow) => ({ ...tool, workingPressureBar: { min: pressure, typical: pressure, max: pressure }, airflowLpm: { min: flow, typical: flow, max: flow } });
 describe('documented compressors October4 lot B', () => {
  it('adds 420 separate manufacturer identities across eight brands with pressure-qualified FAD', () => {
   expect(batch).toHaveLength(420);
@@ -33,6 +41,40 @@ describe('documented compressors October4 lot B', () => {
   const conflictingPower = product('Puska','CNR 100/270 S YD');
   expect(conflictingPower.powerKw).toBeUndefined();
   expect(conflictingPower.specifications).toContainEqual(expect.objectContaining({label:'Puissance publiée à confirmer',value:'5,5 kW dans cette ligne, 7,5 kW pour la version de base du même CNR 100'}));
+ });
+ it.each(puskaRangeCases)('uses the sourced capacity maximum and retains the minimum for $id', ({ id, minimum, maximum, page, tableIndex, rowIndex }) => {
+  const row = snapshot.compressors.find(p => p.id === id), p = batch.find(p => p.id === id);
+  const coordinate = { sourceId: 'puska-catalog-2025', page, tableIndex, rowIndex };
+  expect(row.flow.value).toBe(minimum);
+  expect(row.flow.ref).toMatchObject({ ...coordinate, columnIndex: 7, raw: `${minimum}-${maximum}`, numberIndex: 0 });
+  expect(row.modelProof).toMatchObject({ ...coordinate, columnIndex: 1, raw: row.model });
+  expect(row.flow.pressure.ref).toMatchObject({ ...coordinate, columnIndex: 4, raw: '10' });
+  expect(row.maximum.ref).toMatchObject({ ...coordinate, columnIndex: 4, raw: '10' });
+  expect(p.fadCurve).toEqual([{ pressureBar: 10, litersPerMinute: maximum }]);
+  expect(p.maxPressureBar).toBe(10);
+  const evidenceIds = [`october4b-puska-catalog-2025-p${page}`];
+  expect(p.fieldSources.fadCurve).toEqual(evidenceIds);
+  expect(p.evidence).toContainEqual(expect.objectContaining({ id: evidenceIds[0], sourceUrl: expect.stringContaining(`#page=${page}`), sourceRole: 'primary' }));
+  expect(p.specifications).toContainEqual({ label: 'FAD maximal déclaré à 10 bar', value: `${maximum} L/min`, evidenceIds });
+  expect(p.specifications).toContainEqual({ label: 'FAD minimal déclaré à 10 bar', value: `${minimum} L/min ; minimum de la plage publiée, distinct de la capacité maximale`, evidenceIds });
+  expect(p.editorial.overview).toContain('maximum de la plage FAD publiée');
+  expect(p.editorial.limitations.join(' ')).not.toContain('seul son minimum est utilisé');
+  expect(p).not.toHaveProperty('dutyCycle');
+  expect(p.fieldSources).not.toHaveProperty('dutyCycle');
+  expect(evaluateCompatibility(p, fixedDemand(10, (minimum + maximum) / 2)).verdict).toBe('insufficient_data');
+  expect(evaluateCompatibility(p, fixedDemand(10, maximum + 1)).verdict).toBe('incompatible');
+ });
+ it('keeps the Puska capacity and pressure boundaries conclusive without inferring endurance', () => {
+  expect(batch.filter(p => p.specifications.some(s => s.label === 'FAD maximal déclaré à 10 bar'))).toHaveLength(15);
+  const p = product('Puska', 'PKE 3 VF 10');
+  expect(evaluateCompatibility(p, fixedDemand(10, 200))).toMatchObject({ verdict: 'insufficient_data', limitingFactor: 'data', availableFadLpm: 294, availableFadBasis: 'exact' });
+  expect(evaluateCompatibility(p, fixedDemand(10, 294)).verdict).toBe('insufficient_data');
+  expect(evaluateCompatibility(p, fixedDemand(10, 295))).toMatchObject({ verdict: 'incompatible', limitingFactor: 'flow' });
+  expect(evaluateCompatibility(p, fixedDemand(11, 200))).toMatchObject({ verdict: 'incompatible', limitingFactor: 'pressure' });
+  expect(evaluateCompatibility(p, fixedDemand(6.3, 200))).toMatchObject({ verdict: 'insufficient_data', limitingFactor: 'data', availableFadBasis: 'higher-pressure-bound' });
+  const before = JSON.stringify(snapshot);
+  build(snapshot);
+  expect(JSON.stringify(snapshot)).toBe(before);
  });
  it('keeps the Quincy original units and sourced SI conversions without guessing gallon volume', () => {
   const p = product('Quincy','QGS-5');
@@ -85,6 +127,10 @@ describe('documented compressors October4 lot B', () => {
   ['count truncation',s=>s.compressors.pop()],
   ['locale erased',s=>delete s.compressors.find(x=>x.model==='CNR 155/BM S YD').flow.ref.numberFormat],
   ['raw thousands misread as decimal',s=>s.compressors.find(x=>x.model==='CNR 155/BM S YD').flow.value=1.332],
+  ['Puska historical lower endpoint replaced',s=>s.compressors.find(x=>x.id==='puska-pke-3-vf-10').flow.value=294],
+  ['Puska upper endpoint selected in sealed transcription',s=>s.compressors.find(x=>x.id==='puska-pke-3-vf-10').flow.ref.numberIndex=1],
+  ['Puska range from the 8-bar configuration',s=>{const r=s.compressors.find(x=>x.id==='puska-pke-3-vf-10');r.flow.ref={...r.flow.ref,rowIndex:1,raw:'138-360'};}],
+  ['Puska wrong model-row association',s=>s.compressors.find(x=>x.id==='puska-pke-3-vf-10').modelProof.rowIndex=4],
   ['gallon converted without qualification',s=>s.compressors.find(x=>x.model==='QGS-5').tank={value:227.125,unit:'L',ref:s.compressors[0].maximum.ref}],
   ['intake relabelled as FAD',s=>s.compressors[0].sourceClaimScope='piston-displacement-only'],
   ['HTTP 404',s=>s.sources[0].status=404],
