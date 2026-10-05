@@ -1,12 +1,10 @@
 import { createCompatibilityImpactFeed } from '../domain/compatibility-impact';
-import { createCatalogSnapshot } from '../domain/snapshots';
 import { decisionVersion } from '../../server/verdict-publication.mjs';
 import { CATALOG_VERIFIED_AT, compressors, tools } from './catalog';
 import { evidenceHistory } from './evidence-history';
 import { activeOffers } from './offers';
-import { toolTaxonomy } from './taxonomy';
+import { publicationCatalog as catalog } from './verdict-publication';
 
-const catalog = createCatalogSnapshot({ compressors, tools, toolTaxonomy, verifiedAt: CATALOG_VERIFIED_AT });
 const merchantByProduct = new Map<string, string[]>();
 for (const offer of activeOffers) merchantByProduct.set(offer.productId, [...new Set([...(merchantByProduct.get(offer.productId) ?? []), offer.merchantId])]);
 

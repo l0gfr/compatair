@@ -34,7 +34,24 @@ function evaluate(input: ReturnType<typeof fixture>) {
  cache.flush();
  return cache;
 }
+function retainedInternKeys(cache: PageCalculationCache) {
+ const rows = (cache as unknown as { rows: Map<string, { intern: Map<string, number> }> }).rows;
+ return [...rows.values()].reduce((count, row) => count + row.intern.size, 0);
+}
 describe('page calculation reuse across catalog revisions', () => {
+ it('releases completed cold and warm dedup keys while retaining exact in-memory hits', () => {
+  const input = fixture();
+  for (const phase of ['cold', 'warm']) {
+   const cache = evaluate(input);
+   expect(retainedInternKeys(cache), phase).toBe(0);
+   const before = { ...cache.stats };
+   for (const compressor of input.compressors) for (const tool of input.tools) {
+    expect(JSON.stringify(cache.evaluate(compressor, tool))).toBe(JSON.stringify(evaluateCompatibility(compressor, tool)));
+   }
+   expect(cache.stats).toMatchObject({ calculated: before.calculated, reused: before.reused, memoryHits: before.memoryHits + 12 });
+   expect(retainedInternKeys(cache), phase).toBe(0);
+  }
+ });
  it('keeps average, idle, unqualified and variable demand outside the matrix, including changed cloned evidence', () => {
   const input = fixture();
   const independent = [
@@ -127,15 +144,31 @@ describe('page calculation reuse across catalog revisions', () => {
   expect(partial.stats).toMatchObject({ calculated: 0, reused: 1 });
   const added = { ...input.tools[0], id: 'fixture-new-tool' };
   input.tools.push(added);
-  expect(evaluate(input).stats).toMatchObject({ calculated: 3, reused: 12, invalidRows: 0 });
-  expect(evaluate(input).stats).toMatchObject({ calculated: 0, reused: 15 });
+  const expanded = new PageCalculationCache(input.compressors, input.tools, input.options);
+  expanded.evaluate(input.compressors[0], input.tools[0]);
+  expect(retainedInternKeys(expanded)).toBeGreaterThan(0);
+  for (const compressor of input.compressors) for (const tool of input.tools) {
+   expect(JSON.stringify(expanded.evaluate(compressor, tool))).toBe(JSON.stringify(evaluateCompatibility(compressor, tool)));
+  }
+  expanded.flush();
+  expect(expanded.stats).toMatchObject({ calculated: 3, reused: 12, memoryHits: 1, invalidRows: 0 });
+  expect(retainedInternKeys(expanded)).toBe(0);
+  const complete = evaluate(input);
+  expect(complete.stats).toMatchObject({ calculated: 0, reused: 15 });
+  expect(retainedInternKeys(complete)).toBe(0);
  });
  it('still reuses validated old rows after new writes reach the disk budget', () => {
   const input = fixture(); evaluate(input);
   const bytes = readdirSync(input.options.directory).reduce((total, file) => total + statSync(join(input.options.directory, file)).size, 0);
   input.tools.push({ ...input.tools[0], id: 'new-tool-over-budget' });
   Object.assign(input.options, { maxBytes: bytes + 1 });
-  expect(evaluate(input).stats).toMatchObject({ calculated: 3, reused: 12, invalidRows: 0, writable: false });
+  const bounded = evaluate(input);
+  expect(bounded.stats).toMatchObject({ calculated: 3, reused: 12, invalidRows: 0, writable: false });
+  expect(retainedInternKeys(bounded)).toBe(0);
+  for (const compressor of input.compressors) for (const tool of input.tools) {
+   expect(JSON.stringify(bounded.evaluate(compressor, tool))).toBe(JSON.stringify(evaluateCompatibility(compressor, tool)));
+  }
+  expect(bounded.stats).toMatchObject({ calculated: 3, reused: 12, memoryHits: 15, writable: false });
   const after = readdirSync(input.options.directory).reduce((total, file) => total + statSync(join(input.options.directory, file)).size, 0);
   expect(after).toBeLessThanOrEqual(bytes + 1);
  });

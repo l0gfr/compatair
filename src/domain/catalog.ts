@@ -97,7 +97,7 @@ const toolBaseSchema = z.object({
 		'detoureuse', 'araseuse-de-rivets', 'lime-alternative', 'pistolet-nettoyage',
 		'agrafeuse-cloueuse', 'burineur', 'cisaille', 'cle-a-chocs', 'cle-a-cliquet', 'derouilleur-a-aiguilles',
 		'gonflage', 'lime-bande', 'meuleuse', 'perceuse', 'pistolet-cartouche',
-		'pistolet-peinture-hvlp', 'pistolet-peinture-lvlp', 'pistolet-peinture', 'polisseuse', 'ponceuse-bande',
+		'pistolet-peinture-hvlp', 'pistolet-peinture-lvlp', 'pistolet-peinture', 'pistolet-peinture-automatique', 'pince-coupante-pneumatique', 'polisseuse', 'ponceuse-bande',
 		'ponceuse-orbitale', 'ponceuse-pneumatique', 'riveteuse', 'sableuse', 'scie', 'soufflette', 'tronconneuse',
 		'boulonneuse', 'cle-a-impulsions', 'taraudeuse', 'marteau-a-river', 'grignoteuse', 'visseuse', 'ponceuse-vibrante', 'ponceuse-rotative', 'fouloir', 'graveur',
 	]),
