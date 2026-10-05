@@ -47,6 +47,7 @@ describe('bounded compressed production archive', () => {
 		expect(upload.with['compression-level']).toBe(0);
 		const packaging = workflow.jobs.validate.steps.find(step => step.name === 'Package immutable release');
 		expect(packaging.run).toContain('xz -T2 -9');
+		expect(packaging.run).toContain('tar -C dist --sort=name -cf - .');
 		expect(packaging.run).toContain('--lzma2=preset=9,dict=128MiB --memlimit-compress=5GiB --no-adjust');
 		expect(upload.with['if-no-files-found']).toBe('error');
 	});

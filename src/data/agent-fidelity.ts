@@ -1,11 +1,9 @@
 import { createAgentFidelityBenchmark } from '../domain/agent-fidelity-benchmark';
-import { createCatalogSnapshot } from '../domain/snapshots';
 import { decisionVersion, evaluatePair } from '../../server/verdict-publication.mjs';
 import panel from '../../config/agent-benchmark-panel.json';
 import { CATALOG_VERIFIED_AT, compressors, tools } from './catalog';
-import { toolTaxonomy } from './taxonomy';
+import { publicationCatalog as catalog } from './verdict-publication';
 
-const catalog = createCatalogSnapshot({ compressors, tools, toolTaxonomy, verifiedAt: CATALOG_VERIFIED_AT });
 const pairs = panel.pairs.map(({ compressor_id, tool_id }) => {
 	const compressor = compressors.find(item => item.id === compressor_id), tool = tools.find(item => item.id === tool_id);
 	if (!compressor || !tool || tool.demandModel !== 'fixed-flow') throw new Error('Le panel agent doit être révisé explicitement après un retrait de produit.');

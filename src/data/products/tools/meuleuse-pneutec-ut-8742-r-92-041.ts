@@ -1,0 +1,118 @@
+const product: unknown = {
+	"id": "meuleuse-pneutec-ut-8742-r-92-041",
+	"slug": "meuleuse-pneutec-ut-8742-r-92-041",
+	"categoryId": "meuleuse",
+	"category": "meuleuse",
+	"label": "Pneutec UT 8742 R (réf. 92 041)",
+	"brand": "Pneutec",
+	"model": "UT 8742 R",
+	"mpn": "92 041",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
+	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+	"confidence": "B",
+	"image": {
+		"src": "/images/products/meuleuse-pneutec-ut-8742-r-92-041.svg",
+		"alt": "Repères techniques : Pneutec UT 8742 R (réf. 92 041)",
+		"sourceUrl": "https://blaetterkatalog.rapid-group.de/pneutec/epaper/PneutecKatalog75.pdf",
+		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+	},
+	"variant": {
+		"familyId": "pneutec-ut-8742-r",
+		"label": "Référence 92 041",
+		"distinguishingAttributes": {
+			"reference": "92 041",
+			"Speed / frequency (min-1)": "4.000",
+			"Power (kW)": "0,4"
+		}
+	},
+	"editorial": {
+		"overview": "Pneutec UT 8742 R (réf. 92 041). Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"verifiedFacts": [
+			"Speed / frequency (min-1) : 4.000.",
+			"Power (kW) : 0,4.",
+			"Weight (kg) : 1,0.",
+			"Air Consumption (l/s) : 1,9.",
+			"Vibration (m/s²) : < 2,5.",
+			"Sound Pressure (dB(A)) : 89,0."
+		],
+		"limitations": [
+			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+			"Le catalogue indique un débit en L/s, sans lier sa valeur à une pression de mesure ni préciser charge, moyenne ou marche à vide. Ce débit reste hors verdict conclusif.",
+			"Les coffrets et déclinaisons de kits sont exclus. La date de capture ne prouve pas la disponibilité actuelle.",
+			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+		]
+	},
+	"specifications": [
+		{
+			"label": "Speed / frequency (min-1)",
+			"value": "4.000",
+			"evidenceIds": [
+				"october5-tools-pneutec-75-p48"
+			]
+		},
+		{
+			"label": "Power (kW)",
+			"value": "0,4",
+			"evidenceIds": [
+				"october5-tools-pneutec-75-p48"
+			]
+		},
+		{
+			"label": "Weight (kg)",
+			"value": "1,0",
+			"evidenceIds": [
+				"october5-tools-pneutec-75-p48"
+			]
+		},
+		{
+			"label": "Air Consumption (l/s)",
+			"value": "1,9",
+			"evidenceIds": [
+				"october5-tools-pneutec-75-p48"
+			]
+		},
+		{
+			"label": "Vibration (m/s²)",
+			"value": "< 2,5",
+			"evidenceIds": [
+				"october5-tools-pneutec-75-p48"
+			]
+		},
+		{
+			"label": "Sound Pressure (dB(A))",
+			"value": "89,0",
+			"evidenceIds": [
+				"october5-tools-pneutec-75-p48"
+			]
+		}
+	],
+	"evidence": [
+		{
+			"id": "october5-tools-pneutec-75-p48",
+			"sourceUrl": "https://blaetterkatalog.rapid-group.de/pneutec/epaper/PneutecKatalog75.pdf#page=48",
+			"sourceLabel": "Pneutec : pneutec-75, page PDF 48",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-05",
+			"confidence": "B",
+			"notes": "Déclaration fabricant, capture SHA-256 15627d141058302f218ce59ed34c5b6810663ff92445fe182bf5d24096e91f50. Aucun essai physique CompatAir."
+		}
+	],
+	"fieldSources": {
+		"mpn": [
+			"october5-tools-pneutec-75-p48"
+		],
+		"workingPressureBar": [
+			"october5-tools-pneutec-75-p48"
+		],
+		"demandExplanation": [
+			"october5-tools-pneutec-75-p48"
+		]
+	},
+	"notes": [
+		"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur."
+	]
+};
+
+export default product;

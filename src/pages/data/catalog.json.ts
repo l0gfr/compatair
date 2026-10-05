@@ -1,10 +1,7 @@
 import type { APIRoute } from 'astro';
-import { CATALOG_VERIFIED_AT, compressors, tools } from '../../data/catalog';
-import { toolTaxonomy } from '../../data/taxonomy';
-import { createCatalogSnapshot } from '../../domain/snapshots';
+import { publicationCatalog } from '../../data/verdict-publication';
 
 export const prerender = true;
 export const GET: APIRoute = () => {
-	const snapshot = createCatalogSnapshot({ compressors, tools, toolTaxonomy, verifiedAt: CATALOG_VERIFIED_AT });
-	return new Response(JSON.stringify(snapshot), { headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=300' } });
+	return new Response(JSON.stringify(publicationCatalog), { headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=300' } });
 };

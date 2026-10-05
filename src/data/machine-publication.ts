@@ -1,14 +1,14 @@
 import { createHash } from 'node:crypto';
 import { getCollection } from 'astro:content';
 import { createAgentKnowledge, agentKnowledgeVersion, toNdjson } from '../domain/agent-knowledge';
-import { createCatalogSnapshot } from '../domain/snapshots';
+import { createStaticPublicationCache } from '../domain/static-publication-cache';
 import { englishAgentGuides } from './agent-guides.en';
 import { CATALOG_VERIFIED_AT, compressors, tools } from './catalog';
 import { createPublicChangefeed } from './changefeed';
 import { evidenceHistory } from './evidence-history';
 import { glossaryTerms } from './glossary';
 import { activeOffers, merchants } from './offers';
-import { toolTaxonomy } from './taxonomy';
+import { publicationCatalog } from './verdict-publication';
 import { agentFidelityBenchmark, agentFidelityLeaderboard } from './agent-fidelity';
 import { compatibilityImpactFeed } from './compatibility-impact';
 import { evaluateFreshness, freshnessPolicy } from '../domain/data-governance';
@@ -70,13 +70,19 @@ function createDcatCatalog(input: { integrity: Array<{ path: string; sha256: str
 	};
 }
 
+const staticPublication = createStaticPublicationCache<Awaited<ReturnType<typeof createMachinePublication>>>();
+
 export async function buildMachinePublication() {
 	const evaluatedAt = process.env.COMPAT_AIR_PUBLICATION_DATE ?? new Date().toISOString().slice(0, 10);
 	if (!/^\d{4}-\d{2}-\d{2}$/.test(evaluatedAt)) throw new Error('COMPAT_AIR_PUBLICATION_DATE doit respecter YYYY-MM-DD.');
+	return staticPublication(evaluatedAt, import.meta.env.PROD, () => createMachinePublication(evaluatedAt));
+}
+
+async function createMachinePublication(evaluatedAt: string) {
 	const guides = await getCollection('guides');
 	const knowledge = createAgentKnowledge({ guides, compressors, tools, glossary: glossaryTerms, observedAt: CATALOG_VERIFIED_AT, englishGuides: englishAgentGuides });
 	const knowledgeVersion = agentKnowledgeVersion(knowledge);
-	const catalog = createCatalogSnapshot({ compressors, tools, toolTaxonomy, verifiedAt: CATALOG_VERIFIED_AT });
+	const catalog = publicationCatalog;
 	const offerData = { schemaVersion: '1.1.0', offers: activeOffers, merchants: merchants.map(({ id, name }) => ({ id, name })) };
 	const offerVersion = sha256(json(offerData));
 	const offerObservedAt = latest(activeOffers.map((offer) => offer.collectedAt.slice(0, 10)), CATALOG_VERIFIED_AT);

@@ -161,8 +161,9 @@ export class PageCalculationCache {
    if (previous.indexes.length !== columns.size || previous.indexes.some(index => index >= previous.values.length)) throw new Error('invalid_row_index');
    this.rowColumnVersions.set(`row-${key}.json.gz`, previous.columns);
    row.values = previous.values.map(freeze);
-   row.intern = new Map(row.values.map((value, index) => [JSON.stringify(value), index]));
    this.columns.forEach((value, index) => { const position = columns.get(value); if (position !== undefined) { row!.indexes[index] = previous.indexes[position]; row!.remaining--; } });
+   // Fully covered rows resolve hits through indexes; no new values need interning.
+   row.intern = row.remaining === 0 ? new Map() : new Map(row.values.map((value, index) => [JSON.stringify(value), index]));
    row.dirty = previous.columns !== this.columnsVersion;
   } catch { this.stats.invalidRows++; }
   this.rows.set(key, row);
@@ -199,6 +200,7 @@ export class PageCalculationCache {
     this.stats.storedRows++; this.rowColumnVersions.set(`row-${key}.json.gz`, this.columnsVersion);
    }
    row.dirty = false;
+   row.intern.clear();
   }
   return row.values[row.indexes[column]];
  }
