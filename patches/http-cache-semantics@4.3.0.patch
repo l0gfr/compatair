@@ -1,5 +1,5 @@
 diff --git a/index.js b/index.js
-index f01e9a16b4781dc24c8f43dc7a4c8e6d1e4ae5eb..ed1153a8c6296eed040d09d721373fa91e36e9a0 100644
+index 56c260250..e0553f61c 100644
 --- a/index.js
 +++ b/index.js
 @@ -124,17 +124,59 @@ function isErrorResponse(response) {
@@ -88,7 +88,7 @@ index f01e9a16b4781dc24c8f43dc7a4c8e6d1e4ae5eb..ed1153a8c6296eed040d09d721373fa9
          ) {
              this._rescc['no-cache'] = true;
          }
-@@ -394,8 +439,9 @@ module.exports = class CachePolicy {
+@@ -395,8 +440,9 @@ module.exports = class CachePolicy {
      evaluateRequest(req) {
          this._assertRequestHasHeaders(req);
  
@@ -100,7 +100,7 @@ index f01e9a16b4781dc24c8f43dc7a4c8e6d1e4ae5eb..ed1153a8c6296eed040d09d721373fa9
              return this._evaluateRequestMissResult(req);
          }
  
-@@ -408,7 +454,7 @@ module.exports = class CachePolicy {
+@@ -409,7 +455,7 @@ module.exports = class CachePolicy {
          // unless the stored response is successfully validated (Section 4.3), and
          const requestCC = parseCacheControl(req.headers['cache-control']);
  
@@ -109,7 +109,7 @@ index f01e9a16b4781dc24c8f43dc7a4c8e6d1e4ae5eb..ed1153a8c6296eed040d09d721373fa9
              return this._evaluateRequestMissResult(req);
          }
  
-@@ -587,6 +633,27 @@ module.exports = class CachePolicy {
+@@ -610,6 +656,27 @@ module.exports = class CachePolicy {
          return toNumberOrZero(this._resHeaders.age);
      }
  
@@ -137,7 +137,7 @@ index f01e9a16b4781dc24c8f43dc7a4c8e6d1e4ae5eb..ed1153a8c6296eed040d09d721373fa9
      /**
       * Possibly outdated value of applicable max-age (or heuristic equivalent) in seconds.
       * This counts since response's `Date`.
-@@ -597,18 +664,7 @@ module.exports = class CachePolicy {
+@@ -620,18 +687,7 @@ module.exports = class CachePolicy {
       * @returns {number} The max-age value in seconds.
       */
      maxAge() {
@@ -157,7 +157,7 @@ index f01e9a16b4781dc24c8f43dc7a4c8e6d1e4ae5eb..ed1153a8c6296eed040d09d721373fa9
              return 0;
          }
  
-@@ -617,17 +673,14 @@ module.exports = class CachePolicy {
+@@ -640,17 +696,14 @@ module.exports = class CachePolicy {
          }
  
          if (this._isShared) {
@@ -177,7 +177,7 @@ index f01e9a16b4781dc24c8f43dc7a4c8e6d1e4ae5eb..ed1153a8c6296eed040d09d721373fa9
              return toNumberOrZero(this._rescc['max-age']);
          }
  
-@@ -664,7 +717,9 @@ module.exports = class CachePolicy {
+@@ -687,7 +740,9 @@ module.exports = class CachePolicy {
       * @returns {number} Time-to-live in milliseconds.
       */
      timeToLive() {
@@ -187,7 +187,7 @@ index f01e9a16b4781dc24c8f43dc7a4c8e6d1e4ae5eb..ed1153a8c6296eed040d09d721373fa9
          const staleIfErrorAge = age + toNumberOrZero(this._rescc['stale-if-error']);
          const staleWhileRevalidateAge = age + toNumberOrZero(this._rescc['stale-while-revalidate']);
          return Math.round(Math.max(0, age, staleIfErrorAge, staleWhileRevalidateAge) * 1000);
-@@ -683,6 +738,7 @@ module.exports = class CachePolicy {
+@@ -706,6 +761,7 @@ module.exports = class CachePolicy {
       * @returns {boolean} `true` if `stale-if-error` condition allows use of a stale response.
       */
      _useStaleIfError() {
@@ -195,7 +195,7 @@ index f01e9a16b4781dc24c8f43dc7a4c8e6d1e4ae5eb..ed1153a8c6296eed040d09d721373fa9
          return this.maxAge() + toNumberOrZero(this._rescc['stale-if-error']) > this.age();
      }
  
-@@ -690,6 +746,7 @@ module.exports = class CachePolicy {
+@@ -713,6 +769,7 @@ module.exports = class CachePolicy {
       * @returns {boolean} `true` if `stale-while-revalidate` is currently allowed.
       */
      useStaleWhileRevalidate() {
@@ -203,7 +203,7 @@ index f01e9a16b4781dc24c8f43dc7a4c8e6d1e4ae5eb..ed1153a8c6296eed040d09d721373fa9
          const swr = toNumberOrZero(this._rescc['stale-while-revalidate']);
          return swr > 0 && this.maxAge() + swr > this.age();
      }
-@@ -712,20 +769,29 @@ module.exports = class CachePolicy {
+@@ -735,20 +792,29 @@ module.exports = class CachePolicy {
          if (!obj || obj.v !== 1) throw Error('Invalid serialization');
  
          this._responseTime = obj.t;
@@ -236,7 +236,7 @@ index f01e9a16b4781dc24c8f43dc7a4c8e6d1e4ae5eb..ed1153a8c6296eed040d09d721373fa9
      }
  
      /**
-@@ -906,12 +972,10 @@ module.exports = class CachePolicy {
+@@ -929,12 +995,10 @@ module.exports = class CachePolicy {
  
          // use other header fields provided in the 304 (Not Modified) response to replace all instances
          // of the corresponding header fields in the stored response.

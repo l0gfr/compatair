@@ -5,12 +5,27 @@ import { describe, it } from 'vitest';
 function checkInstalledDependency(consumerEntry: string, chain: string[], dependency: string, assertions: string) {
 	const source = `
 		import assert from 'node:assert/strict';
+		import { readFileSync } from 'node:fs';
 		import { createRequire } from 'node:module';
+		import { dirname, join } from 'node:path';
 		import { pathToFileURL } from 'node:url';
 		const root = createRequire(pathToFileURL(process.cwd() + '/package.json'));
 		let requester = createRequire(root.resolve(${JSON.stringify(consumerEntry)}));
 		for (const name of ${JSON.stringify(chain)}) requester = createRequire(requester.resolve(name));
 		const library = requester(${JSON.stringify(dependency)});
+		const installedVersion = name => {
+			let directory = dirname(requester.resolve(name));
+			while (directory !== dirname(directory)) {
+				try {
+					const manifest = JSON.parse(readFileSync(join(directory, 'package.json'), 'utf8'));
+					if (manifest.name === name) return manifest.version;
+				} catch (error) {
+					if (error?.code !== 'ENOENT') throw error;
+				}
+				directory = dirname(directory);
+			}
+			throw new Error('Unable to locate installed package manifest: ' + name);
+		};
 		${assertions}
 	`;
 	execFileSync(process.execPath, ['--max-old-space-size=128', '--input-type=module', '--eval', source], {
@@ -204,6 +219,51 @@ describe('installed dependency security boundaries', () => {
 			privateCache.now = () => privateCache._responseTime + 1000;
 			assert.equal(privateCache.satisfiesWithoutRevalidation(incoming), true);
 			assert.equal(privateCache.revalidatedPolicy(incoming, { status: 503, headers: {} }).modified, false);
+		`);
+	});
+
+	it('loads equivalent Lighthouse JSON and YAML configs without the vulnerable sprintf-js chain', () => {
+		checkInstalledDependency('@lhci/cli/package.json', [], '@lhci/utils/src/lighthouserc.js', `
+			const { mkdtempSync, rmSync, writeFileSync } = await import('node:fs');
+			const { tmpdir } = await import('node:os');
+			const directory = mkdtempSync(join(tmpdir(), 'compatair-lhci-config-'));
+			try {
+				const jsonPath = join(directory, 'lighthouserc.json');
+				const yamlPath = join(directory, 'lighthouserc.yaml');
+				writeFileSync(jsonPath, JSON.stringify({ ci: { collect: { numberOfRuns: 3 } } }));
+				writeFileSync(yamlPath, 'ci:\\n  collect:\\n    numberOfRuns: 3\\n');
+				assert.equal(library.loadRcFile(jsonPath).ci.collect.numberOfRuns, 3);
+				assert.equal(library.loadRcFile(yamlPath).ci.collect.numberOfRuns, 3);
+				assert.equal(installedVersion('js-yaml'), '4.3.2');
+				assert.throws(() => requester.resolve('sprintf-js'), /Cannot find module/);
+			} finally {
+				rmSync(directory, { recursive: true, force: true });
+			}
+		`);
+	});
+
+	it('uses fixed dependency versions and rejects spoofed proxy ranges and oversized source-map offsets', () => {
+		checkInstalledDependency('@lhci/cli/package.json', ['express'], 'proxy-addr', `
+			assert.equal(installedVersion('proxy-addr'), '2.0.8');
+			assert.equal(library.compile(['::ffff:10.0.0.0/8'])('203.0.113.1'), false);
+			assert.equal(library.compile(['::ffff:10.0.0.0/104'])('10.1.2.3'), true);
+		`);
+		checkInstalledDependency('astro', ['magicast'], 'source-map-js', `
+			assert.equal(installedVersion('source-map-js'), '1.2.2');
+			const indexed = { version: 3, sections: [{ offset: { line: 10000001, column: 0 }, map: { version: 3, sources: [], names: [], mappings: '' } }] };
+			assert.throws(() => new library.SourceMapConsumer(indexed), /must not exceed 10000000/);
+		`);
+		checkInstalledDependency('@lhci/cli/package.json', [], 'compression', `
+			assert.equal(installedVersion('compression'), '1.8.2');
+			assert.equal(typeof library, 'function');
+		`);
+		checkInstalledDependency('astro', [], 'smol-toml', `
+			assert.equal(installedVersion('smol-toml'), '1.9.0');
+			assert.equal(library.parse('fixture = 1').fixture, 1);
+		`);
+		checkInstalledDependency('astro', [], 'sharp', `
+			assert.equal(installedVersion('sharp'), '0.35.5');
+			assert.equal(library.versions.rsvg, '2.63.2');
 		`);
 	});
 

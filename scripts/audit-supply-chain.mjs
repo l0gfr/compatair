@@ -3,7 +3,7 @@ import { readdir, readFile } from 'node:fs/promises';
 import { classifyNpmAdvisories } from './lib/advisory-policy.mjs';
 import { fetchGitHubAdvisories } from './lib/github-advisory-client.mjs';
 import { fileURLToPath } from 'node:url';
-import { attestInstalledDependencyPatch, isVerifiedCacheAdvisory } from './lib/verified-dependency-patches.mjs';
+import { attestInstalledDependencyPatches, isVerifiedCacheAdvisory } from './lib/verified-dependency-patches.mjs';
 
 const REGISTRY = 'https://registry.npmjs.org';
 const QUARANTINE_MS = 24 * 60 * 60 * 1000;
@@ -11,18 +11,23 @@ const RECENT_WINDOW_MS = 72 * 60 * 60 * 1000;
 const EXPECTED_BUILD_ALLOWLIST = new Set(['esbuild']);
 const DISALLOWED_LOCKED_PACKAGES = new Set(['extract-zip']);
 const EXPECTED_OVERRIDES = new Map([
+  ['@lhci/utils@0.15.1>js-yaml', '4.3.2'],
   ['@puppeteer/browsers', '3.2.0'],
   ['basic-ftp', '6.2.1'],
   ['brace-expansion', '5.0.12'],
+  ['compression', '1.8.2'],
   ['devalue', '5.9.3'],
   ['fast-uri', '3.1.8'],
+  ['http-cache-semantics', '4.3.0'],
   ['ip-address', '10.7.1'],
   ['js-yaml@3', '3.15.2'],
   ['js-yaml@4', '4.3.2'],
   ['nanoid@3', '3.3.18'],
   ['postcss', '8.5.23'],
   ['qs', '6.16.0'],
-  ['smol-toml', '1.7.1'],
+  ['proxy-addr', '2.0.8'],
+  ['smol-toml', '1.9.0'],
+  ['source-map-js', '1.2.2'],
   ['svgo', '4.1.0'],
   ['tmp', '0.2.7'],
   ['uuid', '11.1.1'],
@@ -236,8 +241,8 @@ const failures = [];
 const warnings = [];
 let patchAttestation;
 try {
-  patchAttestation = await attestInstalledDependencyPatch({ root: fileURLToPath(new URL('../', import.meta.url)), workspace, lockfile });
-  console.log('Correctif local GHSA-ch52-4w7c-c8xp: patch, verrou et toutes les copies installées attestés.');
+  patchAttestation = await attestInstalledDependencyPatches({ root: fileURLToPath(new URL('../', import.meta.url)), workspace, lockfile });
+  console.log('Correctifs locaux de dépendances: patchs, verrou et toutes les copies installées attestés.');
 } catch (error) {
   failures.push(error.message);
 }
