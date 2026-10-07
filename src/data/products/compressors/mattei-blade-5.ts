@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "mattei-blade-5",
   "slug": "mattei-blade-5",
   "brand": "Mattei",
@@ -14,6 +16,7 @@ const product = {
     }
   },
   "maxPressureBar": 8,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 8,
@@ -103,6 +106,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4c-mattei-page-blade-series-4-5-7-11-p1"
+    ],
     "model": [
       "october4c-mattei-page-blade-series-4-5-7-11-p1"
     ],

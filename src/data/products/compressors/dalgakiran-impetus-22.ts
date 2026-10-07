@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "dalgakiran-impetus-22",
   "slug": "dalgakiran-impetus-22",
   "brand": "Dalgakiran",
@@ -13,6 +15,7 @@ const product: unknown = {
     }
   },
   "maxPressureBar": 13,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 13,
@@ -110,6 +113,9 @@ const product: unknown = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4b-dalgakiran-catalog-p12"
+    ],
     "model": [
       "october4b-dalgakiran-catalog-p12"
     ],

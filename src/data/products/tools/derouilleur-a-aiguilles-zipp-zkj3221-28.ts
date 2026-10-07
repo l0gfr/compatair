@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "derouilleur-a-aiguilles-zipp-zkj3221-28",
 	"slug": "derouilleur-a-aiguilles-zipp-zkj3221-28",
 	"categoryId": "derouilleur-a-aiguilles",

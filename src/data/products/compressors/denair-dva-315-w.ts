@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "denair-dva-315-w",
   "slug": "denair-dva-315-w",
   "brand": "DENAIR",
@@ -16,6 +18,7 @@ const product = {
     }
   },
   "maxPressureBar": 7,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 7,
@@ -120,6 +123,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october5-denair-screw-p9"
+    ],
     "model": [
       "october5-denair-screw-p9"
     ],

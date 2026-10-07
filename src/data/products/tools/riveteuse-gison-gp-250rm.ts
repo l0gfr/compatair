@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "riveteuse-gison-gp-250rm",
 	"slug": "riveteuse-gison-gp-250rm",
 	"categoryId": "riveteuse",

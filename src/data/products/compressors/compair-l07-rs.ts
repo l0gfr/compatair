@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "compair-l07-rs",
   "slug": "compair-l07-rs",
   "brand": "CompAir",
@@ -15,6 +17,7 @@ const product = {
     }
   },
   "maxPressureBar": 13,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 13,
@@ -122,6 +125,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october5-compair-frame1-p10"
+    ],
     "model": [
       "october5-compair-frame1-p10"
     ],

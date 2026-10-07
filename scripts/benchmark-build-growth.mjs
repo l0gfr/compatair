@@ -3,7 +3,7 @@ import { cp, mkdir, mkdtemp, open, readFile, readdir, rm, symlink, writeFile } f
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawn } from 'node:child_process';
-import { loadCatalogProducts, generateCatalogIndexes } from './lib/catalog-tooling.mjs';
+import { buildCatalogProductSource, loadCatalogProducts, generateCatalogIndexes } from './lib/catalog-tooling.mjs';
 
 // Synthetic references exist only in a disposable, non-deployable source copy.
 // No product fixture is added to the real catalog or to Git.
@@ -66,7 +66,7 @@ for (let index = 1; index <= report.addedTools; index++) {
  product.brand = 'ZZ Benchmark'; product.model = `Fixture ${suffix}`; product.label = `ZZ Benchmark Fixture ${suffix}`;
  product.mpn = `BENCHMARK-${suffix}`; delete product.ean; delete product.gtin; product.distributorSkus = [];
  for (const evidence of product.evidence) history.events.push({ id: `baseline:${product.id}:${evidence.id}`, evidenceId: evidence.id, productId: product.id, productType: 'tool', occurredAt: history.startedAt, kind: 'baseline', summary: 'Synthetic benchmark fixture. Never publish.', fingerprint: hash(JSON.stringify({ productId: product.id, evidence })), snapshot: evidence });
- await writeFile(join(root, 'src/data/products/tools', `${product.slug}.ts`), `const product = ${JSON.stringify(product)};\nexport default product;\n`);
+ await writeFile(join(root, 'src/data/products/tools', `${product.slug}.ts`), buildCatalogProductSource('tools', product, 0));
  productTitles += `\n ${JSON.stringify(product.id)}: ${JSON.stringify(`${product.label} : fiche de test`)},`;
  useTitles += `\n ${JSON.stringify(product.id)}: ${JSON.stringify(`${product.label} : besoin de test`)},`;
 }

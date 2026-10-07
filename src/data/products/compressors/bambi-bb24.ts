@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "bambi-bb24",
 	"slug": "bambi-bb24",
 	"brand": "Bambi",

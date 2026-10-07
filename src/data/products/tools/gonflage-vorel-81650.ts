@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "gonflage-vorel-81650",
 	"slug": "gonflage-vorel-81650",
 	"categoryId": "gonflage",

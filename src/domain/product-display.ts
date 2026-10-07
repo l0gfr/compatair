@@ -4,6 +4,10 @@ export function compressorTankLabel(compressor: Pick<Compressor, 'tankLiters'>) 
 	return compressor.tankLiters === undefined ? 'Non documentée' : `${compressor.tankLiters} L`;
 }
 
+export function compressorPressureLabel(compressor: Pick<Compressor, 'maxPressureBar' | 'maxPressureBasis'>) {
+	return `${compressor.maxPressureBar} bar ${compressor.maxPressureBasis === 'selected-working-pressure-ceiling' ? 'au point documenté' : 'maximum'}`;
+}
+
 export function compareDocumentedTankVolumes(a: number | undefined, b: number | undefined) {
 	if (a === undefined) return b === undefined ? 0 : 1;
 	if (b === undefined) return -1;

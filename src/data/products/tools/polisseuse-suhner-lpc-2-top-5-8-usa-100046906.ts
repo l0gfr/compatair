@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "polisseuse-suhner-lpc-2-top-5-8-usa-100046906",
 	"slug": "polisseuse-suhner-lpc-2-top-5-8-usa-100046906",
 	"categoryId": "polisseuse",

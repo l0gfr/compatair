@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "derouilleur-a-aiguilles-rodcraft-rc5620-8951076003",
 	"slug": "derouilleur-a-aiguilles-rodcraft-rc5620-8951076003",
 	"categoryId": "derouilleur-a-aiguilles",

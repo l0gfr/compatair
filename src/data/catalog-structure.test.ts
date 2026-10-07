@@ -9,16 +9,16 @@ function productFiles(kind: 'compressors' | 'tools') {
 }
 
 function expectSingleProductDeclaration(source: string, file: string) {
-	assert.equal(source.match(/^const product(?:: unknown)? = /gm)?.length ?? 0, 1, `${file}: product declaration`);
+	assert.equal(source.match(/^const product(?:: (?:unknown|CompressorInput|ToolProfileInput))? = /gm)?.length ?? 0, 1, `${file}: product declaration`);
 	const evidenceStart = source.search(/^\s*["']?evidence["']?\s*:/m);
 	assert.ok(evidenceStart > 0, `${file}: evidence declaration`);
 	assert.equal(source.slice(0, evidenceStart).match(/(?:["']id["']|\bid)\s*:/g)?.length ?? 0, 1, `${file}: product identity`);
 }
 
 describe('catalog file layout', () => {
-	it('accepts only the two supported product declaration prefixes', () => {
+	it('accepts only the supported product declaration prefixes', () => {
 		const body = '{\n"id": "fixture",\n"evidence": []\n};\n\nexport default product;\n';
-		for (const prefix of ['const product = ', 'const product: unknown = ']) {
+		for (const prefix of ['const product = ', 'const product: unknown = ', 'const product: CompressorInput = ', 'const product: ToolProfileInput = ']) {
 			expectSingleProductDeclaration(prefix + body, 'fixture.ts');
 		}
 		for (const prefix of ['const product: any = ', 'const product: object = ', 'const product:unknown = ', 'const product =']) {

@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "sullair-1800",
   "slug": "sullair-1800",
   "brand": "Sullair",
@@ -14,6 +16,7 @@ const product = {
     }
   },
   "maxPressureBar": 12.066,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 12.066,
@@ -112,6 +115,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4c-sullair-senergy-p8"
+    ],
     "model": [
       "october4c-sullair-senergy-p8"
     ],

@@ -23,6 +23,31 @@ const candidates = Array.from({ length: 200 }, (_, i) => candidate(i));
 const plan = (overrides = {}) => planIndexation({ candidates, baseline, previous, policy, now, ...overrides });
 const parity = JSON.parse(await readFile(new URL('../../tests/fixtures/audit-v5/indexation-parity.json', import.meta.url), 'utf8'));
 
+describe('physical differences before programmatic indexation', () => {
+	it('consolidates the published Hymair AS881 references with the same documented answer', async () => {
+		const { parseCatalogProductSource } = await import('./catalog-tooling.mjs');
+		const references = ['pistolet-peinture-hvlp-hymair-as881', 'pistolet-peinture-hvlp-hymair-as881-r'];
+		const products = await Promise.all(references.map(async reference => parseCatalogProductSource('tools', await readFile(new URL(`../../src/data/products/tools/${reference}.ts`, import.meta.url), 'utf8'))));
+		const candidates = products.map(product => productCandidate(product, 'tools'));
+		expect(candidates[0].signature).toBe(candidates[1].signature);
+		expect(analyzeCandidates(candidates, new Set(), policy)[1]).toMatchObject({ reason: 'near-duplicate' });
+	});
+	it('does not treat a repeated model reference as a distinct technical answer', () => {
+		const base = { slug: 'gun-a', brand: 'Fixture', model: 'A', variant: { distinguishingAttributes: { reference: 'A', nozzle: '1.4 mm' } }, demandModel: 'variable-volume', workingPressureBar: { min: 2, max: 3.5 }, editorial: { overview: 'The manufacturer publishes the same nozzle cup pressure fan and unknown consumption regime for this model.', verifiedFacts: ['The cup holds 600 ml.', 'The nozzle is 1.4 mm.'], limitations: ['The measured pressure and operating regime of the airflow remain unknown.'] }, evidence: [{ id: 'e', sourceUrl: 'https://example.com/manual' }], fieldSources: { workingPressureBar: ['e'] } };
+		const other = { ...base, slug: 'gun-b', model: 'B', variant: { distinguishingAttributes: { reference: 'B', nozzle: '1.4 mm' } } };
+		const first = productCandidate(base, 'tools');
+		const second = productCandidate(other, 'tools');
+		expect(second.signature).toBe(first.signature);
+		expect(analyzeCandidates([first, second], new Set(), policy)[1]).toMatchObject({ reason: 'near-duplicate' });
+		const differentNozzle = productCandidate({ ...other, variant: { distinguishingAttributes: { reference: 'B', nozzle: '1.7 mm' } } }, 'tools');
+		expect(differentNozzle.signature).not.toBe(first.signature);
+	});
+	it('retains the sourced scope of a pressure value in the technical signature', () => {
+		const base = { slug: 'compressor', brand: 'Fixture', maxPressureBar: 7, fadCurve: [{ pressureBar: 7, litersPerMinute: 200 }] };
+		expect(productCandidate({ ...base, maxPressureBasis: 'selected-working-pressure-ceiling' }, 'compressors').signature).not.toBe(productCandidate({ ...base, maxPressureBasis: 'explicit-maximum-working-pressure' }, 'compressors').signature);
+	});
+});
+
 describe('bounded planner preserves the pinned admission decisions', () => {
 	it.each(parity.cases)('matches the complete aa2b856d plan: $name', ({ expectedPlanSha256, ...scenario }) => {
 		const result = planIndexation({ ...parity, ...scenario, now: new Date(parity.now) });

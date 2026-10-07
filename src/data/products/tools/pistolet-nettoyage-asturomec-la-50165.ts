@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "pistolet-nettoyage-asturomec-la-50165",
 	"slug": "pistolet-nettoyage-asturomec-la-50165",
 	"categoryId": "pistolet-nettoyage",

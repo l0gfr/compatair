@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "kaeser-sm-10-t-secheur-integre-sans-cuve-15-bar",
 	"slug": "kaeser-sm-10-t-secheur-integre-sans-cuve-15-bar",
 	"brand": "KAESER",

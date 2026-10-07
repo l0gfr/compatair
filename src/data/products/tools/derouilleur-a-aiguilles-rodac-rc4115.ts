@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "derouilleur-a-aiguilles-rodac-rc4115",
 	"slug": "derouilleur-a-aiguilles-rodac-rc4115",
 	"categoryId": "derouilleur-a-aiguilles",

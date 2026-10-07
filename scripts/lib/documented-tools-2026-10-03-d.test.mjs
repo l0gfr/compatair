@@ -1,3 +1,4 @@
+import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { describe, it, expect } from 'vitest';
@@ -43,9 +44,7 @@ describe('documented tools, October 3, fourth batch', () => {
   for (const product of batch) {
    expect(toolProfileSchema.safeParse(product).success, product.id).toBe(true);
    const module = readFileSync(new URL(`../../src/data/products/tools/${product.slug}.ts`, import.meta.url), 'utf8');
-   const prefix = 'const product = ', suffix = ';\n\nexport default product;\n';
-   expect(module.startsWith(prefix) && module.endsWith(suffix), product.id).toBe(true);
-   expect(toolProfileSchema.parse(JSON.parse(module.slice(prefix.length, -suffix.length)))).toEqual(toolProfileSchema.parse(product));
+   expect(toolProfileSchema.parse(parseCatalogProductSource('tools', module))).toEqual(toolProfileSchema.parse(product));
   }
  });
  it('preserves HTTPS source originals through SHA, size, edition, dates and localizations without private paths', () => {

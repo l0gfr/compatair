@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "visseuse-du-pas-tdcs-d20rx-2200-c",
 	"slug": "visseuse-du-pas-tdcs-d20rx-2200-c",
 	"categoryId": "visseuse",

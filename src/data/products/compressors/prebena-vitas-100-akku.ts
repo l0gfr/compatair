@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "prebena-vitas-100-akku",
 	"slug": "prebena-vitas-100-akku",
 	"brand": "PREBENA",

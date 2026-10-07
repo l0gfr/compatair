@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
   "id": "scie-taylor-pneumatic-t-9702-hd-reciprocating-saw-t-9702",
   "slug": "scie-taylor-pneumatic-t-9702-hd-reciprocating-saw-t-9702",
   "categoryId": "scie",

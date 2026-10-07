@@ -51,7 +51,7 @@ const commercialOffers = activeOffers
 			<div class="margin-control details-body"><div class="field-label-help"><label for="margin">Réserve de débit souhaitée</label><ContextHelp topic="margin" compact /></div><output data-margin-output>25 %</output><input id="margin" name="margin" type="range" min="0" max="50" step="5" value="25" /></div>
 			<div class="field-row details-body"><div class="field"><div class="field-label-help"><label for="hose-length">Longueur du flexible</label><ContextHelp topic="hose" compact /></div><div class="input-unit"><input id="hose-length" name="hoseLength" type="number" min="0" max="500" step="0.5" value="10" /><span>m</span></div></div><div class="field"><label for="hose-diameter">Diamètre intérieur</label><div class="input-unit"><input id="hose-diameter" name="hoseDiameter" type="number" min="1" max="100" step="0.5" value="9" /><span>mm</span></div></div></div>
 			<div class="field-row details-body"><div class="field"><div class="field-label-help"><label for="measured-pressure-drop">Chute de pression mesurée en charge</label><ContextHelp topic="loadedPressure" compact /></div><div class="input-unit"><input id="measured-pressure-drop" name="measuredPressureDrop" type="number" min="0" max="50" step="0.01" inputmode="decimal" /><span>bar</span></div></div><div class="field"><label for="measured-leak">Débit de fuite mesuré</label><div class="input-unit"><input id="measured-leak" name="measuredLeak" type="number" min="0" max="10000" step="0.1" inputmode="decimal" /><span>L/min</span></div><small>À renseigner uniquement depuis une mesure du réseau.</small></div></div>
-			<div class="field details-body"><div class="field-label-help"><label for="supply-pressure">Pression réglée ou mesurée disponible</label><ContextHelp topic="loadedPressure" compact /></div><div class="input-unit"><input id="supply-pressure" name="supplyPressure" type="number" min="0.1" max="50" step="0.01" inputmode="decimal" /><span>bar</span></div><small>Mesurez en charge. La recommandation ne dépassera jamais la pression maximale publiée de la machine.</small></div>
+			<div class="field details-body"><div class="field-label-help"><label for="supply-pressure">Pression réglée ou mesurée disponible</label><ContextHelp topic="loadedPressure" compact /></div><div class="input-unit"><input id="supply-pressure" name="supplyPressure" type="number" min="0.1" max="50" step="0.01" inputmode="decimal" /><span>bar</span></div><small>Mesurez en charge. La recommandation reste dans les limites de pression documentées pour la machine.</small></div>
 			<div class="field-row details-body"><div class="field"><label for="network-distance">Distance totale jusqu’au point d’usage</label><div class="input-unit"><input id="network-distance" name="networkDistance" type="number" min="0" max="2000" step="0.5" /><span>m</span></div></div><div class="field"><label for="usage-profile">Profil global d’utilisation</label><select id="usage-profile" name="usageProfile"><option value="occasional">Occasionnel</option><option value="intermittent">Intermittent</option><option value="sustained">Soutenu</option><option value="mixed" selected>Mixte</option></select></div></div>
 			<div class="field-row details-body"><div class="field"><label for="fitting-standard">Standard des raccords</label><select id="fitting-standard" name="fittingStandard"><option value="unknown">Non renseigné</option><option value="euro-7.2">Euro 7,2 mm</option><option value="iso-6150-b">ISO 6150-B</option><option value="other">Autre</option></select></div><div class="field"><label for="fitting-count">Nombre de raccords et restrictions</label><input id="fitting-count" name="fittingCount" type="number" min="0" max="200" step="1" /></div></div>
 			<div class="field details-body"><label for="filtration">Filtration ou séchage déclaré</label><select id="filtration" name="filtration"><option value="unknown">Non renseigné</option><option value="none">Aucun traitement déclaré</option><option value="particle">Filtration particulaire</option><option value="water-separator">Séparateur d’eau</option><option value="coalescing">Filtration coalescente</option><option value="dryer">Sécheur</option></select></div>
@@ -603,7 +603,7 @@ const commercialOffers = activeOffers
 		const availableFadLpm = compressor.confidence === 'A' || compressor.confidence === 'B'
 			? resolveAvailableFad(compressor, requiredPressureBar)?.litersPerMinute
 			: undefined;
-		return { maxPressureBar: compressor.maxPressureBar, availableFadLpm, availableFadBasis: resolveAvailableFad(compressor, requiredPressureBar)?.basis, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle };
+		return { maxPressureBar: compressor.maxPressureBar, maxPressureBasis: compressor.maxPressureBasis, availableFadLpm, availableFadBasis: resolveAvailableFad(compressor, requiredPressureBar)?.basis, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle };
 	}
 
 	function counterfactualMachine(config: NonNullable<ReturnType<typeof configFromForm>>, requiredPressureBar: number): CounterfactualMachine | undefined {
@@ -615,7 +615,7 @@ const commercialOffers = activeOffers
 			tankLiters: config.custom.tankLiters, dutyCycle: config.custom.dutyCycle,
 		};
 		const compressor = compressors.find((item) => item.id === config.selectedCompressor);
-		return compressor ? { id: compressor.id, label: `${compressor.brand} ${compressor.model}`, maxPressureBar: compressor.maxPressureBar, confidence: compressor.confidence, fadCurve: compressor.fadCurve, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle } : undefined;
+		return compressor ? { id: compressor.id, label: `${compressor.brand} ${compressor.model}`, maxPressureBar: compressor.maxPressureBar, maxPressureBasis: compressor.maxPressureBasis, confidence: compressor.confidence, fadCurve: compressor.fadCurve, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle } : undefined;
 	}
 
 	function renderMetrics(result: SizingResult) {
@@ -1060,7 +1060,7 @@ const commercialOffers = activeOffers
 				const availableFadLpm = compressor.confidence === 'A' || compressor.confidence === 'B'
 					? resolveAvailableFad(compressor, base.requiredPressureBar)?.litersPerMinute
 					: undefined;
-				const candidateResult = sizeConfiguration({ ...config, compressor: { maxPressureBar: compressor.maxPressureBar, availableFadLpm, availableFadBasis: resolveAvailableFad(compressor, base.requiredPressureBar)?.basis, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle } } as any);
+				const candidateResult = sizeConfiguration({ ...config, compressor: { maxPressureBar: compressor.maxPressureBar, maxPressureBasis: compressor.maxPressureBasis, availableFadLpm, availableFadBasis: resolveAvailableFad(compressor, base.requiredPressureBar)?.basis, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle } } as any);
 				const commercialOffer = commercialOfferFor(compressor.id);
 				return { compressor, result: candidateResult, availableFadLpm, marginCovered: availableFadLpm !== undefined && availableFadLpm >= base.recommendedFadLpm, lowestVerifiedPriceEur: commercialOffer?.priceEur, commercialOffer };
 			});
@@ -1069,7 +1069,7 @@ const commercialOffers = activeOffers
 				const counterfactual = createCounterfactualRecommendation({
 					configuration: config,
 					selectedMachine: counterfactualMachine(config, base.requiredPressureBar),
-					machines: compressors.map((compressor) => ({ id: compressor.id, label: `${compressor.brand} ${compressor.model}`, maxPressureBar: compressor.maxPressureBar, confidence: compressor.confidence, fadCurve: compressor.fadCurve, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle })),
+					machines: compressors.map((compressor) => ({ id: compressor.id, label: `${compressor.brand} ${compressor.model}`, maxPressureBar: compressor.maxPressureBar, maxPressureBasis: compressor.maxPressureBasis, confidence: compressor.confidence, fadCurve: compressor.fadCurve, tankLiters: compressor.tankLiters, dutyCycle: compressor.dutyCycle })),
 				});
 				renderCounterfactual(counterfactual);
 			} else renderCounterfactual();

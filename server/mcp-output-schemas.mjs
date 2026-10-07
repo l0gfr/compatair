@@ -38,7 +38,7 @@ const productBase = {
 	compat_air_id: string, canonical_url: uri,
 };
 const compressorSchema = strict({
-	...productBase, tankLiters: number, maxPressureBar: number, fadCurve: { type: 'array', items: fadPointSchema }, intakeFlowLpm: number,
+	...productBase, tankLiters: number, maxPressureBar: number, maxPressureBasis: { type: 'string', enum: ['explicit-maximum-working-pressure', 'selected-working-pressure-ceiling'] }, fadCurve: { type: 'array', items: fadPointSchema }, intakeFlowLpm: number,
 	dutyCycle: number, oilType: { type: 'string', enum: ['oil', 'oil-free', 'unknown'] }, noiseDb: number, powerKw: number, weightKg: number,
 	mobility: { type: 'string', enum: ['portable', 'mobile', 'fixed'] }, voltage: string, phase: { type: 'string', enum: ['single-phase', 'three-phase'] },
 }, ['id', 'slug', 'brand', 'model', 'maxPressureBar', 'fadCurve', 'oilType', 'confidence', 'image', 'editorial', 'specifications', 'evidence', 'fieldSources', 'notes']);

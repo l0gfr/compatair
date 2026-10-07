@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "polisseuse-deprag-plp180b-40x-826716a",
 	"slug": "polisseuse-deprag-plp180b-40x-826716a",
 	"categoryId": "polisseuse",

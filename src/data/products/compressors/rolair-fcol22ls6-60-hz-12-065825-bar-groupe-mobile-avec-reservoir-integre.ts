@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "rolair-fcol22ls6-60-hz-12-065825-bar-groupe-mobile-avec-reservoir-integre",
 	"slug": "rolair-fcol22ls6-60-hz-12-065825-bar-groupe-mobile-avec-reservoir-integre",
 	"brand": "Rolair",

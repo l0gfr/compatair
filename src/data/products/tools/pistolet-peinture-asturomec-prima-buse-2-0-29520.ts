@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "pistolet-peinture-asturomec-prima-buse-2-0-29520",
 	"slug": "pistolet-peinture-asturomec-prima-buse-2-0-29520",
 	"categoryId": "pistolet-peinture",

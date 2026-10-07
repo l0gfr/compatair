@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "cle-a-impulsions-atlas-copco-ep6ptx-sr42-at-l-8431036815",
 	"slug": "cle-a-impulsions-atlas-copco-ep6ptx-sr42-at-l-8431036815",
 	"categoryId": "cle-a-impulsions",

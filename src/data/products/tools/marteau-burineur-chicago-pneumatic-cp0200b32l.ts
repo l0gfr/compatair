@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "chicago-pneumatic-cp0200b32l",
 	"slug": "marteau-burineur-chicago-pneumatic-cp0200b32l",
 	"categoryId": "burineur",

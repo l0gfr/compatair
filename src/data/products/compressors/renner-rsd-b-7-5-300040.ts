@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "renner-rsd-b-7-5-300040",
 	"slug": "renner-rsd-b-7-5-300040",
 	"brand": "RENNER",

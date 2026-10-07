@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "nuair-star-7-5-08-270",
   "slug": "nuair-star-7-5-08-270",
   "brand": "Nuair",
@@ -15,6 +17,7 @@ const product: unknown = {
   },
   "tankLiters": 270,
   "maxPressureBar": 8,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 7.5,
@@ -119,6 +122,9 @@ const product: unknown = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4b-nuair-star-vega-p5"
+    ],
     "model": [
       "october4b-nuair-star-vega-p5"
     ],

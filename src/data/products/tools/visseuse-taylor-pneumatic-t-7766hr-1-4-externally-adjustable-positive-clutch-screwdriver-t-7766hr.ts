@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
   "id": "visseuse-taylor-pneumatic-t-7766hr-1-4-externally-adjustable-positive-clutch-screwdriver-t-7766hr",
   "slug": "visseuse-taylor-pneumatic-t-7766hr-1-4-externally-adjustable-positive-clutch-screwdriver-t-7766hr",
   "categoryId": "visseuse",

@@ -1,0 +1,119 @@
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
+  "id": "soufflette-prevost-27102-os6b",
+  "slug": "soufflette-prevost-27102-os6b",
+  "categoryId": "soufflette",
+  "category": "soufflette",
+  "label": "Prevost 27102 OS6B",
+  "brand": "Prevost",
+  "model": "27102 OS6B",
+  "mpn": "27102 OS6B",
+  "demandModel": "fixed-flow",
+  "workingPressureBar": {
+    "min": 6,
+    "typical": 6,
+    "max": 6
+  },
+  "airflowLpm": {
+    "min": 220,
+    "typical": 220,
+    "max": 220
+  },
+  "confidence": "B",
+  "variant": {
+    "familyId": "prevost-27102-os",
+    "label": "27102 OS6B",
+    "distinguishingAttributes": {
+      "Fonction de la fiche fabricant": "Blow gun (OSHA & Venturi effect)",
+      "Net weight (kg)": "0.150 Kg",
+      "Profile": "BRITISH"
+    }
+  },
+  "image": {
+    "src": "/images/products/soufflette-prevost-27102-os6b.svg",
+    "alt": "Repères techniques : Prevost 27102 OS6B",
+    "sourceUrl": "https://www.prevost.eu/blow-gun-osha-venturi-effect-49564",
+    "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+  },
+  "editorial": {
+    "overview": "Prevost 27102 OS6B. Consommation constructeur au point documenté : 220 L/min à 6 bar. 27102 OS6B : Blow gun (OSHA & Venturi effect). Profile: BRITISH.",
+    "verifiedFacts": [
+      "Fonction de la fiche fabricant : Blow gun (OSHA & Venturi effect).",
+      "Net weight (kg) : 0.150 Kg.",
+      "Profile : BRITISH.",
+      "Consommation publiée dans son unité originale : 220 l/min (P = 6 bar).",
+      "Pression dans la source : 6 bar, point du débit."
+    ],
+    "limitations": [
+      "Le débit concerne cette référence de soufflette et son raccordement. Les autres buses ou profils sont des références séparées lorsqu’ils sont explicitement publiés par le fabricant.",
+      "Valeur au seul point de pression documenté ; le profil ne déduit aucune moyenne de gâchette ni débit à une autre pression.",
+      "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."
+    ]
+  },
+  "specifications": [
+    {
+      "label": "Fonction de la fiche fabricant",
+      "value": "Blow gun (OSHA & Venturi effect)",
+      "evidenceIds": [
+        "october7-tools-prevost-gun-49564-tableau-reference-27102-os6b"
+      ]
+    },
+    {
+      "label": "Net weight (kg)",
+      "value": "0.150 Kg",
+      "evidenceIds": [
+        "october7-tools-prevost-gun-49564-tableau-reference-27102-os6b"
+      ]
+    },
+    {
+      "label": "Profile",
+      "value": "BRITISH",
+      "evidenceIds": [
+        "october7-tools-prevost-gun-49564-tableau-reference-27102-os6b"
+      ]
+    },
+    {
+      "label": "Consommation publiée dans son unité originale",
+      "value": "220 l/min (P = 6 bar)",
+      "evidenceIds": [
+        "october7-tools-prevost-gun-49564-tableau-reference-27102-os6b"
+      ]
+    },
+    {
+      "label": "Pression dans la source",
+      "value": "6 bar, point du débit",
+      "evidenceIds": [
+        "october7-tools-prevost-gun-49564-tableau-reference-27102-os6b"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "october7-tools-prevost-gun-49564-tableau-reference-27102-os6b",
+      "sourceUrl": "https://www.prevost.eu/blow-gun-osha-venturi-effect-49564",
+      "sourceLabel": "Prevost, fiche fabricant Blow gun (OSHA & Venturi effect), Tableau, référence 27102 OS6B",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-07",
+      "confidence": "B",
+      "notes": "Réponse primaire SHA-256 1c82a9c375b7546683818fb42a6d3f36ddd67fe46a703d636de50ad79d92ebf2. Déclaration fabricant, sans essai physique CompatAir."
+    }
+  ],
+  "fieldSources": {
+    "workingPressureBar": [
+      "october7-tools-prevost-gun-49564-tableau-reference-27102-os6b"
+    ],
+    "airflowLpm": [
+      "october7-tools-prevost-gun-49564-tableau-reference-27102-os6b"
+    ]
+  },
+  "notes": [
+    "27102 OS6B : Blow gun (OSHA & Venturi effect). Profile: BRITISH.",
+    "Le débit concerne cette référence de soufflette et son raccordement. Les autres buses ou profils sont des références séparées lorsqu’ils sont explicitement publiés par le fabricant.",
+    "Valeur au seul point de pression documenté ; le profil ne déduit aucune moyenne de gâchette ni débit à une autre pression.",
+    "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."
+  ]
+};
+
+export default product;

@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
   "id": "derouilleur-a-aiguilles-taylor-pneumatic-t-7602-extra-heavy-duty-needle-scaler-t-7602",
   "slug": "derouilleur-a-aiguilles-taylor-pneumatic-t-7602-extra-heavy-duty-needle-scaler-t-7602",
   "categoryId": "derouilleur-a-aiguilles",

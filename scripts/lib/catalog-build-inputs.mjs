@@ -30,11 +30,9 @@ export function catalogBuildInputs(root) {
   const source = await readFile(titlesPath, 'utf8');
   code.set(titlesPath, `${loader(path)}export const { ${names.join(', ')} } = input;\n${stripTypeScriptTypes(source.slice(source.indexOf('export function productSeoTitle')))}`);
   const historyPath = join(root, 'src/data/evidence-history.snapshot.json');
-  // JSON plugin would parse a JS replacement. Use transform after its parsing,
-  // replacing the generated object with a build-time file read.
   const historyInput = join(generated, 'history.json');
   await writeFile(historyInput, await readFile(historyPath));
-  code.set(historyPath, `${loader(historyInput)}export default input;`);
+  code.set(join(root, 'src/data/evidence-history.ts'), `${loader(historyInput)}import { evidenceHistorySchema } from '../domain/evidence-history';\nexport const evidenceHistory = evidenceHistorySchema.parse(input);`);
  }
  return {
   name: 'compatair-catalog-build-inputs', apply: 'build', enforce: 'post',

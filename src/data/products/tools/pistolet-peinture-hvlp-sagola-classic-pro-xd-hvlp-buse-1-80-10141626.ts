@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
   "id": "pistolet-peinture-hvlp-sagola-classic-pro-xd-hvlp-buse-1-80-10141626",
   "slug": "pistolet-peinture-hvlp-sagola-classic-pro-xd-hvlp-buse-1-80-10141626",
   "categoryId": "pistolet-peinture-hvlp",

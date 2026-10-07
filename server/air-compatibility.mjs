@@ -69,7 +69,7 @@ export function evaluateCompatibility(compressor, tool, input = {}) {
 		}],
 		safetyMargin,
 		compressor: {
-			maxPressureBar: compressor.maxPressureBar,
+			maxPressureBar: compressor.maxPressureBar, maxPressureBasis: compressor.maxPressureBasis,
 			availableFadLpm: usableFad,
 			availableFadBasis: usableResolution?.basis,
 			tankLiters: compressor.tankLiters,

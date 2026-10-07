@@ -16,7 +16,9 @@ describe('October 5 original compressor documents', () => {
   expect(batch).toHaveLength(300);
   expect(new Set(batch.map(p => p.brand)).size).toBe(11);
   const ids = new Set(batch.map(p => p.id));
-  const old = rawCompressors.filter(p => !ids.has(p.id));
+  const followingBatch = JSON.parse(readFileSync(new URL('../../src/data/imports/documented-compressors-2026-10-07.json', import.meta.url)));
+  const followingIds = new Set(followingBatch.compressors.map(p => p.id));
+  const old = rawCompressors.filter(p => !ids.has(p.id) && !followingIds.has(p.id));
   expect(old).toHaveLength(4459);
   const priorIdentities = new Set(old.map(semanticIdentity));
   expect(new Set(snapshot.compressors.map(p => p.normalizedIdentity)).size).toBe(300);
@@ -51,7 +53,8 @@ describe('October 5 original compressor documents', () => {
   expect(ox.variant.distinguishingAttributes.fréquence).toBe('50 Hz');
   expect(ox).not.toHaveProperty('powerKw');
   expect(evaluateCompatibility(ox, demand).verdict).toBe('continuous');
-  expect(evaluateCompatibility(ox, { ...demand, workingPressureBar: { min: 9, typical: 9, max: 9 } }).verdict).toBe('incompatible');
+  expect(ox.maxPressureBasis).toBe('selected-working-pressure-ceiling');
+  expect(evaluateCompatibility(ox, { ...demand, workingPressureBar: { min: 9, typical: 9, max: 9 } }).verdict).toBe('insufficient_data');
   expect(evaluateCompatibility(product('agre-boss-6000'), demand).verdict).toBe('insufficient_data');
   for (const p of batch) {
    expect(p).not.toHaveProperty('intakeFlowLpm');

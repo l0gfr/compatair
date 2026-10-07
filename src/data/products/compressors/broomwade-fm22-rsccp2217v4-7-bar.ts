@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "broomwade-fm22-rsccp2217v4-7-bar",
 	"slug": "broomwade-fm22-rsccp2217v4-7-bar",
 	"brand": "BroomWade",

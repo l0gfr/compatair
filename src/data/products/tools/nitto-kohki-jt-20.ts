@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "nitto-kohki-jt-20",
 	"slug": "nitto-kohki-jt-20",
 	"brand": "Nitto Kohki",

@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "pistolet-peinture-sata-satajet-100-b-f-rp-1-1-uv-182592",
 	"slug": "pistolet-peinture-sata-satajet-100-b-f-rp-1-1-uv-182592",
 	"categoryId": "pistolet-peinture",

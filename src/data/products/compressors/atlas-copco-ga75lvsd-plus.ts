@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "atlas-copco-ga75lvsd-plus",
   "slug": "atlas-copco-ga75lvsd-plus",
   "brand": "Atlas Copco",
@@ -15,6 +17,7 @@ const product = {
     }
   },
   "maxPressureBar": 7.033,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 7.033,
@@ -122,6 +125,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october5-atlas-cagi-78-p1"
+    ],
     "model": [
       "october5-atlas-cagi-78-p1"
     ],

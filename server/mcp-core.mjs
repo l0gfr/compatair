@@ -4,7 +4,7 @@ import { UCP_CAPABILITY_NAME, UCP_CAPABILITY_VERSION, UCP_PROTOCOL_VERSION } fro
 import { DECISION_CORE_TOOL_NAMES, EXTENDED_TOOL_NAMES, LEGACY_SUCCESSORS, LEGACY_TOOL_NAMES, outputSchemas, receiptSchema, TOOL_PROFILE_NAMES } from './mcp-output-schemas.mjs';
 import { allToolDefinitions, mcpPrompts, mcpResources } from './mcp-tool-manifest.mjs';
 
-import { calculateSizing, STANDARD_ATMOSPHERE_BAR, CALCULATION_VERSION as ENGINE_VERSION } from './air-sizing.mjs';
+import { calculateSizing, evaluatePressureCapacity, STANDARD_ATMOSPHERE_BAR, CALCULATION_VERSION as ENGINE_VERSION } from './air-sizing.mjs';
 import { evaluateCompatibility, interpolateFad, resolveAvailableFad } from './air-compatibility.mjs';
 const MCP_SERVER_VERSION = '3.0.0';
 const METHOD_VERSION = '2026.07';
@@ -193,7 +193,8 @@ function evaluateSystem(compressor, selectedTools, mode = 'successive') {
 		? selectedTools.reduce((sum, tool) => sum + tool.airflowLpm.typical, 0)
 		: Math.max(...selectedTools.map((tool) => tool.airflowLpm.typical));
 	const recommendedFadLpm = demandFlowLpm * 1.25;
-	if (compressor.maxPressureBar < requiredPressureBar) return { verdict: 'incompatible', limitingFactor: 'pressure', requiredPressureBar, demandFlowLpm, recommendedFadLpm, limitations, mode };
+	const pressure = evaluatePressureCapacity(compressor, requiredPressureBar);
+	if (pressure.status !== 'sufficient') return { verdict: pressure.status, limitingFactor: pressure.status === 'incompatible' ? 'pressure' : 'data', requiredPressureBar, demandFlowLpm, recommendedFadLpm, limitations: [pressure.warning], mode };
 	const fadResolution = ['C', 'D'].includes(compressor.confidence) ? undefined : resolveAvailableFad(compressor, requiredPressureBar);
 	const availableFadLpm = fadResolution?.litersPerMinute;
 	if (availableFadLpm === undefined) {
@@ -203,7 +204,7 @@ function evaluateSystem(compressor, selectedTools, mode = 'successive') {
 	const sizing = calculateSizing({
 		demands: selectedTools.map((tool) => ({ id: tool.id, model: 'fixed-flow', flowLpm: tool.airflowLpm.typical, pressureBar: tool.workingPressureBar.typical, quantity: 1, dutyFactor: 1 })),
 		mode, safetyMargin: .25, sessionMinutes: 30,
-		compressor: { maxPressureBar: compressor.maxPressureBar, availableFadLpm, availableFadBasis: fadResolution.basis, dutyCycle: compressor.dutyCycle, tankLiters: compressor.tankLiters },
+		compressor: { maxPressureBar: compressor.maxPressureBar, maxPressureBasis: compressor.maxPressureBasis, availableFadLpm, availableFadBasis: fadResolution.basis, dutyCycle: compressor.dutyCycle, tankLiters: compressor.tankLiters },
 	});
 	if (fadResolution.basis === 'higher-pressure-bound') limitations.push(`Borne conservatrice : ${availableFadLpm} L/min mesurés à ${fadResolution.referencePressureBar} bar sont retenus pour le besoin à ${requiredPressureBar} bar ; aucun point de courbe n’est inventé.`);
 	return {
@@ -624,7 +625,7 @@ export function createMcpCore(catalog, offerSnapshot = { offers: [], snapshotVer
 				const evaluation = publishedCompatibility(compressor, tool);
 				const configurationId = stableConfigurationId({ compressorId: compressor.id, toolIds: [tool.id], mode: 'successive' });
 				const factors = [
-					{ factor: 'pressure', required_bar: tool.workingPressureBar.typical, available_bar: compressor.maxPressureBar, status: compressor.maxPressureBar >= tool.workingPressureBar.typical ? 'pass' : 'block' },
+					{ factor: 'pressure', required_bar: tool.workingPressureBar.typical, available_bar: compressor.maxPressureBar, status: tool.workingPressureBar.typical === undefined ? 'insufficient_data' : ({ sufficient: 'pass', incompatible: 'block', insufficient_data: 'insufficient_data' })[evaluatePressureCapacity(compressor, tool.workingPressureBar.typical).status] },
 					{ factor: 'flow', required_fad_lpm: evaluation.requiredFadLpm, available_fad_lpm: evaluation.availableFadLpm, status: evaluation.availableFadLpm === undefined ? 'insufficient_data' : evaluation.limitingFactor === 'flow' ? 'block' : 'pass' },
 					{ factor: 'duty_cycle', documented: compressor.dutyCycle ?? null, status: evaluation.limitingFactor === 'duty_cycle' ? 'block' : compressor.dutyCycle === undefined ? 'not_applicable_to_published_pair' : 'pass' },
 				];

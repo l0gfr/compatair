@@ -9,7 +9,7 @@ const entries = new Set([
   join(root, 'src/data/products/compressors/index.ts'),
   join(root, 'src/data/products/tools/index.ts'),
   join(root, 'src/data/product-seo-titles.ts'),
-  join(root, 'src/data/evidence-history.snapshot.json'),
+  join(root, 'src/data/evidence-history.ts'),
 ]);
 
 // Run-mode inputs are immutable during the suite. Watch mode keeps live modules.

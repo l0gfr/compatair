@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "mauguiere-mavd-502",
   "slug": "mauguiere-mavd-502",
   "brand": "Mauguière",
@@ -15,6 +17,7 @@ const product = {
     }
   },
   "maxPressureBar": 7.5,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 7,
@@ -103,6 +106,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october5-mauguiere-pdf-2-p7"
+    ],
     "model": [
       "october5-mauguiere-pdf-2-p7"
     ],

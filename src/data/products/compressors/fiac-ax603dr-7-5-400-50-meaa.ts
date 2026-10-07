@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "fiac-ax603dr-7-5-400-50-meaa",
 	"slug": "fiac-ax603dr-7-5-400-50-meaa",
 	"brand": "FIAC",

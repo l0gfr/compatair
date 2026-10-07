@@ -1,3 +1,4 @@
+import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import {readFileSync} from 'node:fs';
 import {describe,it,expect} from 'vitest';
 import {buildDocumentedToolsOctober3C,documentedConnectionFacts} from './documented-tools-2026-10-03-c.mjs';
@@ -16,7 +17,11 @@ const tamper=(find,change)=>{const copy=structuredClone(snapshot);changeBoth(cop
 describe('documented tools, October 3, third batch',()=>{
  it('contains exactly 1000 unique valid profiles and matches every canonical module',()=>{
   expect(snapshot.toolCount).toBe(1000);expect(batch).toHaveLength(1000);expect(new Set(batch.map(x=>x.id)).size).toBe(1000);expect(new Set(batch.map(x=>identity(x.brand,x.mpn))).size).toBe(1000);
-  for(const x of batch){expect(toolProfileSchema.safeParse(x).success,x.id).toBe(true);const text=readFileSync(new URL(`../../src/data/products/tools/${x.slug}.ts`,import.meta.url),'utf8'),prefix='const product = ',suffix=';\n\nexport default product;\n';expect(text.startsWith(prefix)&&text.endsWith(suffix),x.id).toBe(true);expect(toolProfileSchema.parse(JSON.parse(text.slice(prefix.length,-suffix.length)))).toEqual(toolProfileSchema.parse(x));}
+  for (const x of batch) {
+   expect(toolProfileSchema.safeParse(x).success, x.id).toBe(true);
+   const text = readFileSync(new URL(`../../src/data/products/tools/${x.slug}.ts`, import.meta.url), 'utf8');
+   expect(toolProfileSchema.parse(parseCatalogProductSource('tools', text))).toEqual(toolProfileSchema.parse(x));
+  }
  });
  it('preserves dated hashed primary source records',()=>{for(const source of snapshot.sources){expect(new URL(source.url).protocol).toBe('https:');expect(source.sha256).toMatch(/^[a-f0-9]{64}$/);expect(source.bytes).toBeGreaterThan(0);expect(Number.isFinite(Date.parse(source.observedAt))).toBe(true);}});
  it('has referenced primary evidence for every published specification',()=>{for(const p of batch){const ids=new Set(p.evidence.map(x=>x.id));expect(p.evidence.every(x=>x.sourceRole==='primary')).toBe(true);for(const f of p.specifications)expect(f.evidenceIds.every(x=>ids.has(x)),p.id+':'+f.label).toBe(true);expect(p.fieldSources.mpn.length).toBeGreaterThan(0);}});

@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "chicago-pneumatic-cp0456-lasan",
 	"slug": "derouilleur-a-aiguilles-chicago-pneumatic-cp0456-lasan",
 	"categoryId": "derouilleur-a-aiguilles",

@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "stanley-fatmax-dn-230-10-50v",
 	"slug": "stanley-fatmax-dn-230-10-50v",
 	"brand": "Stanley",

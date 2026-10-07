@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "detoureuse-atlas-copco-lsk38-s180-8423070001",
 	"slug": "detoureuse-atlas-copco-lsk38-s180-8423070001",
 	"categoryId": "detoureuse",

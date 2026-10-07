@@ -1,0 +1,3107 @@
+{
+  "schemaVersion": 1,
+  "batchId": "documented-guides-2026-10-07",
+  "reviewDate": "2026-10-07",
+  "reviewType": "internal_editorial",
+  "assistedByAI": true,
+  "externalProfessionalValidation": false,
+  "physicalTestsPerformed": false,
+  "publicationScope": {
+    "baselineGuides": 656,
+    "newGuidesPrepared": 30,
+    "importedCanonical": true,
+    "productionState": "not_published",
+    "indexationScope": "No admission, daily quota and policy unchanged; queue admission remains root responsibility."
+  },
+  "sourcePolicy": "Original manufacturer bytes retained privately where obtainable. Four used manufacturer URLs deny direct capture with HTTP403; claims rely on actual primary web-reader passages, separately hashed and scoped. No original HTTP200 or full PDF is claimed for those four sources. Retrieval date is distinct from manufacturer publication.",
+  "sourceReview": {
+    "usedSources": 21,
+    "original200Responses": 17,
+    "readerOnly403Sources": 4,
+    "captureHashErrors": []
+  },
+  "sources": [
+    {
+      "id": "beko-bm20",
+      "url": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/bekomat_standard/bm20_fm_ba_01-4318_en_01_00.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/bekomat_standard/bm20_fm_ba_01-4318_en_01_00.pdf",
+      "sha256": "592fafebd22865a665edfda53607f3696c1c0c58e35d49ec87338089fb095582",
+      "bytes": 6876273,
+      "observedAt": "2026-10-07T12:20:47.127846+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "comprag-f-catalog",
+      "url": "https://www.comprag.com/en/comprag/docs/pdf_manual/Catalog_Stationary_Screw_Compressors_F_EN_v_2_5.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.comprag.com/en/comprag/docs/pdf_manual/Catalog_Stationary_Screw_Compressors_F_EN_v_2_5.pdf",
+      "sha256": "7ed689acf92797cbee40e2606f96acbd93a3b38e760c2ae5bb795cf153044c3c",
+      "bytes": 12335183,
+      "observedAt": "2026-10-07T12:25:45.478141+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "comprag-fv-manual",
+      "url": "https://www.comprag.com/en/comprag/docs/pdf_manual/Manual_FV30-55_EN_DE_RU_v1_5_0.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.comprag.com/en/comprag/docs/pdf_manual/Manual_FV30-55_EN_DE_RU_v1_5_0.pdf",
+      "sha256": "493681b68c2cb15c0440e9472d897cf96b5391fca58a900905c3751ad0f8344e",
+      "bytes": 8592179,
+      "observedAt": "2026-10-07T12:25:43.025412+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "cs-va500",
+      "url": "https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA500_EN.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA500_EN.pdf",
+      "sha256": "12193ae99b764d63c9b10a12e3cd948aeb4e2962bf36d4c6a03d3151811a8884",
+      "bytes": 1307199,
+      "observedAt": "2026-10-07T12:20:33.278829+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "festo-daps-catalog",
+      "url": "https://www.festo.com/media/catalog/202737_documentation.pdf",
+      "status": 403,
+      "observedAt": "2026-10-07T12:27:43.765Z",
+      "captureKind": "primary_web_reader_passages",
+      "originalResponseSha256": null,
+      "originalResponseBytes": null,
+      "readerArchiveSha256": "0838a1591802d53f2967ae4c87a28daef114d63e6c9c7fe69eac6108fb000ca1",
+      "readerArchiveBytes": 23724,
+      "directSourceAvailability": "HTTP403",
+      "scope": "Passages primaires effectivement lus et archivés ; aucune réponse originale HTTP200 ou PDF intégral prétendu."
+    },
+    {
+      "id": "fsc-nx-page",
+      "url": "https://us.fscurtis.com/product/nx-series-4-15kw-5-20hp/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://us.fscurtis.com/product/nx-series-4-15kw-5-20hp/",
+      "sha256": "b0be43311c4d86d4c354f3f1f204f91213651508c911cb7051b7e2b9b9b2ddb8",
+      "bytes": 158784,
+      "observedAt": "2026-10-07T12:25:43.798043+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "html",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "fsc-nxd15-100",
+      "url": "https://us.fscurtis.com/wp-content/uploads/2026/01/nxd15kw-100psi.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://us.fscurtis.com/wp-content/uploads/2026/01/nxd15kw-100psi.pdf",
+      "sha256": "749e8695851fcb174c59e460576dba2d080f3e90c96a0a719690ae5d616f55c4",
+      "bytes": 1710548,
+      "observedAt": "2026-10-07T12:20:40.085308+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "fsc-nxd15-125",
+      "url": "https://us.fscurtis.com/wp-content/uploads/2026/01/nxd15kw-125psi.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://us.fscurtis.com/wp-content/uploads/2026/01/nxd15kw-125psi.pdf",
+      "sha256": "1fac5b6e9d25bb7ca72fea175f2560ffbe11208676b535e6beff0410e87de39c",
+      "bytes": 1711922,
+      "observedAt": "2026-10-07T12:20:41.711208+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "fsc-nxv08-125",
+      "url": "https://us.fscurtis.com/wp-content/uploads/page/65/nxv08-125_072021.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://us.fscurtis.com/wp-content/uploads/page/65/nxv08-125_072021.pdf",
+      "sha256": "b8370ec66d22924b0f1c5df69a335da6a2a6a98a394dc1e3968ef10577974776",
+      "bytes": 95675,
+      "observedAt": "2026-10-07T12:20:42.416148+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "haas-comp-troubleshooting",
+      "url": "https://www.haascnc.com/service/online-manuals/haas-air-compressor---operators-service-manual/haas-air-compressor---troubleshooting.html",
+      "status": 403,
+      "observedAt": "2026-10-07T12:28:02.953Z",
+      "captureKind": "primary_web_reader_passages",
+      "originalResponseSha256": null,
+      "originalResponseBytes": null,
+      "readerArchiveSha256": "725a1ca56618153af709ff4f88c6a994d482da7c2273bfa6554759f140d54f68",
+      "readerArchiveBytes": 32865,
+      "directSourceAvailability": "HTTP403",
+      "scope": "Passages primaires effectivement lus et archivés ; aucune réponse originale HTTP200 ou PDF intégral prétendu."
+    },
+    {
+      "id": "haas-vise",
+      "url": "https://haascnc.com/service/troubleshooting-and-how-to/how-to/programmable-air-option-install-instructions.alarm%3Dgeneral_966-0000",
+      "status": 403,
+      "observedAt": "2026-10-07T12:28:13.945Z",
+      "captureKind": "primary_web_reader_passages",
+      "originalResponseSha256": null,
+      "originalResponseBytes": null,
+      "readerArchiveSha256": "d8074058189293d3277e56f1ce6e83ca89793f8c6b315112be1358ac5cdced90",
+      "readerArchiveBytes": 31620,
+      "directSourceAvailability": "HTTP403",
+      "scope": "Passages primaires effectivement lus et archivés ; aucune réponse originale HTTP200 ou PDF intégral prétendu."
+    },
+    {
+      "id": "haas-tab",
+      "url": "https://www.haascnc.com/service/troubleshooting-and-how-to/troubleshooting/through-tool-air-blast--tab----troubleshooting-guide.alarm%3Dngc_4-103.html",
+      "status": 403,
+      "observedAt": "2026-10-07T12:28:13.945Z",
+      "captureKind": "primary_web_reader_passages",
+      "originalResponseSha256": null,
+      "originalResponseBytes": null,
+      "readerArchiveSha256": "d8074058189293d3277e56f1ce6e83ca89793f8c6b315112be1358ac5cdced90",
+      "readerArchiveBytes": 31620,
+      "directSourceAvailability": "HTTP403",
+      "scope": "Passages primaires effectivement lus et archivés ; aucune réponse originale HTTP200 ou PDF intégral prétendu."
+    },
+    {
+      "id": "beko-ocv",
+      "url": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/metpoint_ocv/mp_OCV_c_BA_10-249_en_00_01.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/metpoint_ocv/mp_OCV_c_BA_10-249_en_00_01.pdf",
+      "sha256": "94c295f248d2ba5d2f53be85febb36ca6ee5bd2c4e73a16dd981213275bd88c9",
+      "bytes": 8152457,
+      "observedAt": "2026-10-07T12:20:38.536061+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "vaisala-sampling",
+      "url": "https://www.vaisala.com/sites/default/files/documents/CompAir-Sampling-Cell-AppNote-B211229EN.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.vaisala.com/sites/default/files/documents/CompAir-Sampling-Cell-AppNote-B211229EN.pdf",
+      "sha256": "060785919fcfb76c2d6129424dbfc8dd558e282f3b8d76981ed1bfc1baac92ab",
+      "bytes": 107283,
+      "observedAt": "2026-10-07T12:20:33.310498+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "html",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true,
+      "formatObservation": "Content-Type annonce PDF mais les octets reçus sont HTML ; citations par sections, sans numéro de page."
+    },
+    {
+      "id": "prevost-bg",
+      "url": "https://www.prevost.fr/sites/default/files/2021-12/BG%20DOC21FR%20web_0.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.prevost.fr/sites/default/files/2021-12/BG%20DOC21FR%20web_0.pdf",
+      "sha256": "a17c86c546fe5f83ee561def5b5cb0a45546824fdeed42f621383226430fabdc",
+      "bytes": 5837366,
+      "observedAt": "2026-10-07T12:39:29.779006+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "prevost-silent",
+      "url": "https://www.prevost.eu/prevos1-blow-gun-silent-nozzle-49626",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://www.prevost.eu/prevos1-blow-gun-silent-nozzle-49626",
+      "sha256": "bcf62219260dcfd08634bc621d03c72ef852e12dd7de8535ffa8805afc643293",
+      "bytes": 91815,
+      "observedAt": "2026-10-07T12:20:38.708674+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "html",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "prevost-tools",
+      "url": "https://www.prevost.fr/sites/default/files/2021-11/AT_DOC_14F.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.prevost.fr/sites/default/files/2021-11/AT_DOC_14F.pdf",
+      "sha256": "177a4b559e35e27a55491dbf526da3ad34e064ea076d184d939016367995c618",
+      "bytes": 6247819,
+      "observedAt": "2026-10-07T12:19:02.502376+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "rotair-mdvn",
+      "url": "https://www.rotairspa.com/portable-compressors-diesel/mdvn-range/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://www.rotairspa.com/portable-compressors-diesel/mdvn-range/",
+      "sha256": "1f803e584dd10411bc08a757e4db734b76b2861ba50da990711afcd4e7649a88",
+      "bytes": 192651,
+      "observedAt": "2026-10-07T12:20:42.701474+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "html",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "uht-faq",
+      "url": "https://www.uht.co.jp/en/support/faq/airtool/",
+      "status": 200,
+      "contentType": "text/html",
+      "finalUrl": "https://www.uht.co.jp/en/support/faq/airtool/",
+      "sha256": "73815a0090606997a22943d27fe3702fdce45888a9217ebcffe4d19af6e1763e",
+      "bytes": 43962,
+      "observedAt": "2026-10-07T12:25:43.797922+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "html",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "uht-tl-manual",
+      "url": "https://www.uht.co.jp/ja/support/pdf/tl_manu.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.uht.co.jp/ja/support/pdf/tl_manu.pdf",
+      "sha256": "96e23c574855cba13f83f638201327ad50adf6826a180b5fd7867f61ffd437d9",
+      "bytes": 1370566,
+      "observedAt": "2026-10-07T12:26:15.948459+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true,
+      "pdfCreationDateMetadata": "D:20150605104245+09'00'",
+      "pdfCreationDateScope": "Métadonnée brute du PDF reçu, distincte d’une date de publication ou de révision constructeur."
+    },
+    {
+      "id": "uht-tl-catalog",
+      "url": "https://www.uht.co.jp/pdf/turbolap.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.uht.co.jp/pdf/turbolap.pdf",
+      "sha256": "cd6ae8176d436cf82813807a7362efdb7e07c3867369c468486be5b49cc224da",
+      "bytes": 1791040,
+      "observedAt": "2026-10-07T12:26:26.327996+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "freshRetrievalIsNotFreshPublication": true,
+      "pdfCreationDateMetadata": "D:20040723144912+09'00'",
+      "pdfCreationDateScope": "Métadonnée brute du PDF reçu, distincte d’une date de publication ou de révision constructeur."
+    }
+  ],
+  "guides": [
+    {
+      "slug": "bekomat20-condensats-seulement-bouton-test",
+      "title": "BEKOMAT 20 purge uniquement quand on appuie sur TEST : où chercher ?",
+      "seoTitle": "BEKOMAT 20 : vidange seulement avec TEST",
+      "sha256": "cf25e97706d4b17da54b80d7d7cf8866aa3aa4e11755168f0aaccbe01c7db0d2",
+      "wordCount": 685,
+      "sources": [
+        "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/bekomat_standard/bm20_fm_ba_01-4318_en_01_00.pdf"
+      ],
+      "relatedGuideLinks": [
+        "purgeur-condensats-temporise-detection-niveau",
+        "purgeur-smc-ad402-normalement-ouvert-petit-compresseur",
+        "entretien-compresseur-purge-condensats"
+      ],
+      "internalLinks": [
+        "/guides/purgeur-smc-ad402-normalement-ouvert-petit-compresseur/",
+        "/guides/entretien-compresseur-purge-condensats/",
+        "/guides/purgeur-condensats-temporise-detection-niveau/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "3d7bd019151610285aebb584e7ead21043f4434b25483f5f6e85abc7b85ca495"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "bekomat16-condensats-evacuation-remontee-pente",
+          "cosine": 0.422
+        },
+        {
+          "slug": "powermax45-sync-code-0-12-pression-sortie-cnc",
+          "cosine": 0.404
+        },
+        {
+          "slug": "regulateur-air-comprime-fuit-event-decompression",
+          "cosine": 0.387
+        },
+        {
+          "slug": "compresseur-ne-monte-plus-en-pression",
+          "cosine": 0.383
+        }
+      ],
+      "uniqueDecision": "La notice distingue vidange manuelle et automatique. Quand TEST fonctionne seul, faites vérifier pente d’arrivée, capteur et pression minimale du modèle.",
+      "claims": [
+        {
+          "sourceId": "beko-bm20",
+          "location": "Page PDF 57, évacuation seulement avec TEST",
+          "assertion": "Arrivée avec pente > 3 %, tube capteur à examiner et pression minimale applicable. Un TEST manuel fonctionnel ne valide pas la commande automatique.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Exemple de pente",
+          "assertion": "3 % représente 30 mm sur 1 m ; la prescription est strictement supérieure à 3 %, donc cette frontière n’est pas déclarée conforme.",
+          "kind": "calculation",
+          "status": "reviewed_internal_calculation"
+        }
+      ],
+      "sourceIds": [
+        "beko-bm20"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "bekomat16-condensats-evacuation-remontee-pente",
+            "cosine": 0.422
+          },
+          {
+            "slug": "powermax45-sync-code-0-12-pression-sortie-cnc",
+            "cosine": 0.404
+          },
+          {
+            "slug": "regulateur-air-comprime-fuit-event-decompression",
+            "cosine": 0.387
+          },
+          {
+            "slug": "compresseur-ne-monte-plus-en-pression",
+            "cosine": 0.383
+          }
+        ],
+        "editorialDifference": "Le voisin BEKOMAT 16 décrit arrivée et remontée de sortie. Ce guide traite le symptôme particulier automatique absent / TEST fonctionnel, avec les trois pistes BM20 de la page 57.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "bekomat20-fm-voyant-filter-lifetime-remplacement",
+      "title": "BEKOMAT 20 FM : le voyant de filtre reste allumé après remplacement",
+      "seoTitle": "BEKOMAT 20 FM : voyant filtre après remplacement",
+      "sha256": "b5eba10dbb7d986bce49a544ff30b2b8788423169e4ab0fc31a33132cfd11b18",
+      "wordCount": 817,
+      "sources": [
+        "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/bekomat_standard/bm20_fm_ba_01-4318_en_01_00.pdf"
+      ],
+      "relatedGuideLinks": [
+        "filtre-air-comprime-perte-pression-remplacement",
+        "purgeur-condensats-temporise-detection-niveau",
+        "maintenance-preventive-reseau-air-comprime"
+      ],
+      "internalLinks": [
+        "/guides/filtre-air-comprime-perte-pression-remplacement/",
+        "/guides/purgeur-condensats-temporise-detection-niveau/",
+        "/guides/maintenance-preventive-reseau-air-comprime/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "3f86f24d436015ed07a8655ec5d662a8d0f4fa514f2b358d69429f45761f2f0c"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "filtre-air-comprime-perte-pression-remplacement",
+          "cosine": 0.362
+        },
+        {
+          "slug": "filtration-air-cabine-peinture-etages",
+          "cosine": 0.311
+        },
+        {
+          "slug": "purgeur-condensats-temporise-detection-niveau",
+          "cosine": 0.308
+        },
+        {
+          "slug": "filtre-charbon-actif-air-comprime-vapeurs-huile",
+          "cosine": 0.303
+        }
+      ],
+      "uniqueDecision": "Le 20 FM possède un compteur Lifetime à réinitialiser après remplacement. Identifiez le bon champ de voyants et conservez l’opération avant le reset.",
+      "claims": [
+        {
+          "sourceId": "beko-bm20",
+          "location": "Notice 01_00, pages PDF 43 et 44",
+          "assertion": "DRAIN distinct de FILTER Lifetime / Change Element. Quatre voyants : 100 à 76 % ; trois : 75 à 51 % ; deux : 50 à 26 % ; un : 25 à 1 %. Réinitialisation après remplacement, aucune perte de charge physique mesurée par ce compteur.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "beko-bm20"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "filtre-air-comprime-perte-pression-remplacement",
+            "cosine": 0.367
+          },
+          {
+            "slug": "purgeur-condensats-temporise-detection-niveau",
+            "cosine": 0.31
+          },
+          {
+            "slug": "filtration-air-cabine-peinture-etages",
+            "cosine": 0.306
+          },
+          {
+            "slug": "fiche-intervention-air-comprime",
+            "cosine": 0.304
+          }
+        ],
+        "editorialDifference": "Le guide filtre traite la perte de charge. Ce guide lit les plages Lifetime du BEKOMAT 20 FM, distingue DRAIN et FILTER et relie la réinitialisation au remplacement réel.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "comprag-f0308-fr0308-frd0308-configuration",
+      "title": "Comprag F0308, FR0308 et FRD0308 : même débit, trois installations différentes",
+      "seoTitle": "Comprag F0308, FR et FRD : cuve et sécheur",
+      "sha256": "7112ac0cf5f8e2712583a18a95dd4447ffaea15053382c0777b87dc9231b3004",
+      "wordCount": 695,
+      "sources": [
+        "https://www.comprag.com/en/comprag/docs/pdf_manual/Catalog_Stationary_Screw_Compressors_F_EN_v_2_5.pdf"
+      ],
+      "relatedGuideLinks": [
+        "compresseur-sur-chassis-sans-cuve",
+        "bypass-secheur-air-comprime-qualite-maintenance",
+        "choisir-volume-cuve-24-50-90-litres"
+      ],
+      "internalLinks": [
+        "/guides/compresseur-sur-chassis-sans-cuve/",
+        "/guides/choisir-volume-cuve-24-50-90-litres/",
+        "/guides/bypass-secheur-air-comprime-qualite-maintenance/",
+        "/compresseurs/comprag-f0308/",
+        "/compresseurs/comprag-fr0308-270/",
+        "/compresseurs/comprag-frd0308-270/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "0838c278076abe3b1b0580b708ab3b8129302889f756e85c4e900bfedf575eba"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "ceccato-csm7-5-secheur-air-huile",
+          "cosine": 0.483
+        },
+        {
+          "slug": "ceccato-csm20-500-secheur-filtres-devis",
+          "cosine": 0.454
+        },
+        {
+          "slug": "broomwade-fm22-base-rs-ct500-configuration-devis",
+          "cosine": 0.449
+        },
+        {
+          "slug": "gentilin-c330-24-50-100-debit",
+          "cosine": 0.43
+        }
+      ],
+      "uniqueDecision": "Les trois lignes publient 0,46 m³/min à 8 bar. Le montage sur cuve et le sécheur changent le contenu de l’offre, pas le débit à inventer.",
+      "claims": [
+        {
+          "sourceId": "comprag-f-catalog",
+          "location": "Catalogue F v2.5, pages PDF 2 et 5",
+          "assertion": "F0308, FR0308-270 et FRD0308-270 : 0,46 m³/min, 3 kW, maximum 8 bar. FR et FRD : 270 L. FRD : sécheur intégré. Aucun débit supplémentaire attribué à la cuve.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "comprag-f-catalog"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "ceccato-csm7-5-secheur-air-huile",
+            "cosine": 0.494
+          },
+          {
+            "slug": "ceccato-csm20-500-secheur-filtres-devis",
+            "cosine": 0.469
+          },
+          {
+            "slug": "broomwade-fm22-base-rs-ct500-configuration-devis",
+            "cosine": 0.436
+          },
+          {
+            "slug": "gentilin-c330-24-50-100-debit",
+            "cosine": 0.435
+          }
+        ],
+        "editorialDifference": "Les guides Ceccato traitent leurs packages. Ce guide compare trois codes Comprag dont le même débit s’accompagne de contenus distincts : groupe, réserve, puis sécheur.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "comprag-fv-vsd-fault-arret-urgence-redemarrage",
+      "title": "Comprag FV : que faire devant VSD FAULT après un arrêt du compresseur ?",
+      "seoTitle": "Comprag FV : VSD FAULT et remise en marche",
+      "sha256": "a152fff437c4740441d82880a641eede276113f9f19406df29359ebd7fc13c66",
+      "wordCount": 659,
+      "sources": [
+        "https://www.comprag.com/en/comprag/docs/pdf_manual/Manual_FV30-55_EN_DE_RU_v1_5_0.pdf"
+      ],
+      "relatedGuideLinks": [
+        "remise-service-machine-pneumatique-arret-prolonge",
+        "compresseur-ne-demarre-plus-froid-rallonge",
+        "maintenance-preventive-reseau-air-comprime"
+      ],
+      "internalLinks": [
+        "/guides/maintenance-preventive-reseau-air-comprime/",
+        "/guides/remise-service-machine-pneumatique-arret-prolonge/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "ad4d53cd5750f75f648cb5d98fd47b2f8eea94788785b56824cdaf11ce018eb7"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "fini-supersilent-redemarrage-thermique",
+          "cosine": 0.406
+        },
+        {
+          "slug": "graco-pro-xp-fuite-fluide-sous-capot",
+          "cosine": 0.365
+        },
+        {
+          "slug": "netter-nts-redemarrage-arret-court",
+          "cosine": 0.364
+        },
+        {
+          "slug": "graco-amortisseur-pulsation-decompression-air-apres-fluide",
+          "cosine": 0.34
+        }
+      ],
+      "uniqueDecision": "VSD FAULT est un message global. Relevez le code du variateur et la cause avant de suivre la remise en marche ; l’arrêt d’urgence impose sa propre attente.",
+      "claims": [
+        {
+          "sourceId": "comprag-fv-manual",
+          "location": "Notice v1.5, pages PDF 23 et 24, §4.3",
+          "assertion": "VSD FAULT général et code du variateur distincts ; historique de cinq messages ; cause à éliminer. Après arrêt d’urgence, au moins dix minutes avant remise en marche, sans en déduire une consignation.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "comprag-fv-manual"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "fini-supersilent-redemarrage-thermique",
+            "cosine": 0.415
+          },
+          {
+            "slug": "graco-pro-xp-fuite-fluide-sous-capot",
+            "cosine": 0.377
+          },
+          {
+            "slug": "netter-nts-redemarrage-arret-court",
+            "cosine": 0.376
+          },
+          {
+            "slug": "compresseur-ne-demarre-plus-froid-rallonge",
+            "cosine": 0.355
+          }
+        ],
+        "editorialDifference": "Le voisin Fini traite le thermique. Ce guide sépare message VSD global, code du variateur, historique et délai propre à l’arrêt d’urgence de la notice FV.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "comprag-fv30-55-local-distance-ventilation",
+      "title": "Comprag FV30–55 : le compresseur rentre, mais le local est-il assez grand ?",
+      "seoTitle": "Comprag FV30–55 : espace et ventilation du local",
+      "sha256": "cf64c34b7ee613cbcb23ead4de4ff0fab69516f4663696efca1db7687c717585",
+      "wordCount": 696,
+      "sources": [
+        "https://www.comprag.com/en/comprag/docs/pdf_manual/Manual_FV30-55_EN_DE_RU_v1_5_0.pdf"
+      ],
+      "relatedGuideLinks": [
+        "ventilation-local-compresseur-surchauffe",
+        "compresseur-sur-chassis-sans-cuve",
+        "recuperation-chaleur-compresseur"
+      ],
+      "internalLinks": [
+        "/guides/ventilation-local-compresseur-surchauffe/",
+        "/guides/recuperation-chaleur-compresseur/",
+        "/guides/compresseur-sur-chassis-sans-cuve/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "b7c91ee904fd48c64dde7863eab4befe30e6acf7942084d57812337bb8f12e01"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "ventilation-local-compresseur-surchauffe",
+          "cosine": 0.457
+        },
+        {
+          "slug": "kaeser-fsd475-installation-dimensions-refroidissement",
+          "cosine": 0.36
+        },
+        {
+          "slug": "hertz-hgs75-socle-cuve-secheur-dimensions",
+          "cosine": 0.324
+        },
+        {
+          "slug": "ceccato-drm60-air-refroidissement-fad",
+          "cosine": 0.323
+        }
+      ],
+      "uniqueDecision": "La notice FV30–55 demande 1,5 m de dégagement et une ventilation dédiée. Vérifiez l’emprise utile du local avant de valider le plan d’installation.",
+      "claims": [
+        {
+          "sourceId": "comprag-fv-manual",
+          "location": "Notice v1.5, §3.3, page PDF 15",
+          "assertion": "Au moins 1,5 m des murs et entre compresseurs ; admission et extraction ; apport d’air équivalent à deux fois la capacité selon la formulation constructeur. Définition à qualifier pour le plan de ventilation, distincte du FAD produit.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "comprag-fv-manual"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "ventilation-local-compresseur-surchauffe",
+            "cosine": 0.442
+          },
+          {
+            "slug": "kaeser-fsd475-installation-dimensions-refroidissement",
+            "cosine": 0.34
+          },
+          {
+            "slug": "hertz-hgs75-socle-cuve-secheur-dimensions",
+            "cosine": 0.322
+          },
+          {
+            "slug": "fini-supersilent-redemarrage-thermique",
+            "cosine": 0.314
+          }
+        ],
+        "editorialDifference": "Le guide ventilation décrit le circuit d’air chaud. Ce guide applique les dégagements FV30–55, dessine l’emprise utile et traite la formulation de capacité de ventilation sans la convertir en FAD produit.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "cs-va500-longueurs-droites-coude-vanne",
+      "title": "CS Instruments VA 500 : où poser la sonde après un coude ou une vanne ?",
+      "seoTitle": "VA 500 : longueurs droites après coude et vanne",
+      "sha256": "a2704289743264b02807d6d040277d68f21529812330020e94e8751d43de2883",
+      "wordCount": 708,
+      "sources": [
+        "https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA500_EN.pdf"
+      ],
+      "relatedGuideLinks": [
+        "debitmetre-air-comprime-diametre-conditions-reference",
+        "audit-reseau-air-comprime-protocole-mesures",
+        "diagnostiquer-chute-pression-air-comprime"
+      ],
+      "internalLinks": [
+        "/guides/debitmetre-air-comprime-diametre-conditions-reference/",
+        "/guides/audit-reseau-air-comprime-protocole-mesures/",
+        "/guides/diagnostiquer-chute-pression-air-comprime/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "70611921b8c232b68e1a49cb60c0f616b6ed92b6da735088c5cf24cf83cfbac7"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "debitmetre-air-comprime-diametre-conditions-reference",
+          "cosine": 0.385
+        },
+        {
+          "slug": "wika-manometre-glycerine-zero-pression-boitier",
+          "cosine": 0.351
+        },
+        {
+          "slug": "piab-pisave-esl-tubes-signal-retard-regulation",
+          "cosine": 0.344
+        },
+        {
+          "slug": "sagola-4600-aqua-clear-consommation",
+          "cosine": 0.34
+        }
+      ],
+      "uniqueDecision": "La notice VA 500 V2.02 demande 12 à 45 DN en amont selon l’obstacle. Choisissez le point de mesure à partir du trajet réel, puis vérifiez l’aval.",
+      "claims": [
+        {
+          "sourceId": "cs-va500",
+          "location": "Notice capturée V2.02, page PDF 12, tableau 2",
+          "assertion": "Amont 12, 15, 20, 35 ou 45 DN selon l’obstacle ; aval 5 DN. Version du PDF reçu distincte de certains anciens index web.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Exemple et graphique",
+          "assertion": "45 × 50 mm = 2 250 mm = 2,25 m, exemple sans diamètre intérieur déduit. Barres : largeur N / 45 × 260, graduations 0, 15, 30 et 45 DN.",
+          "kind": "calculation",
+          "status": "reviewed_internal_calculation"
+        }
+      ],
+      "sourceIds": [
+        "cs-va500"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "debitmetre-air-comprime-diametre-conditions-reference",
+            "cosine": 0.392
+          },
+          {
+            "slug": "wika-manometre-glycerine-zero-pression-boitier",
+            "cosine": 0.352
+          },
+          {
+            "slug": "piab-pisave-esl-tubes-signal-retard-regulation",
+            "cosine": 0.344
+          },
+          {
+            "slug": "sableuse-perd-puissance-abrasif-humide-diagnostic",
+            "cosine": 0.343
+          }
+        ],
+        "editorialDifference": "Le guide débitmètre traite diamètre et référence. Ce guide utilise les obstacles et longueurs droites VA500 V2.02 pour choisir un emplacement avant la pose.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "cs-va500-zero-debit-pression-calibrage",
+      "title": "VA 500 affiche un petit débit à l’arrêt : peut-on simplement refaire le zéro ?",
+      "seoTitle": "VA 500 : réglage du zéro sous pression sans débit",
+      "sha256": "a08ac0a6669c78e357a569437224b062170b79db4932a08f6cdf8a4a4cb5acb2",
+      "wordCount": 713,
+      "sources": [
+        "https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA500_EN.pdf"
+      ],
+      "relatedGuideLinks": [
+        "detecter-mesurer-fuites-air-comprime",
+        "debitmetre-air-comprime-diametre-conditions-reference",
+        "smc-ams-zero-debit-petites-fuites-f14"
+      ],
+      "internalLinks": [
+        "/guides/detecter-mesurer-fuites-air-comprime/",
+        "/guides/smc-ams-zero-debit-petites-fuites-f14/",
+        "/guides/debitmetre-air-comprime-diametre-conditions-reference/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "80f563139ac70a8f3c309b05ac28331252223c61946c92d73add62fd6b366ae0"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "vaisala-dsc74-vis-fuite-pression-cellule",
+          "cosine": 0.464
+        },
+        {
+          "slug": "wika-manometre-glycerine-zero-pression-boitier",
+          "cosine": 0.439
+        },
+        {
+          "slug": "compresseur-ne-monte-plus-en-pression",
+          "cosine": 0.439
+        },
+        {
+          "slug": "audit-reseau-air-comprime-protocole-mesures",
+          "cosine": 0.428
+        }
+      ],
+      "uniqueDecision": "La notice exige une pression appliquée et une absence de débit. Établissez ces conditions avant de corriger le zéro ; une fuite réelle ne doit pas disparaître.",
+      "claims": [
+        {
+          "sourceId": "cs-va500",
+          "location": "V2.02, §8.1.1, page PDF 29",
+          "assertion": "Zéro dans des conditions stables, à pression système appliquée et sans débit, par personnel qualifié. Commande Zero point > Zero point ; après réussite, DeltaPressure affiché à 0,00 hPa. Ce repère ne démontre pas l’absence de fuite du réseau.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "cs-va500"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "vaisala-dsc74-vis-fuite-pression-cellule",
+            "cosine": 0.447
+          },
+          {
+            "slug": "wika-manometre-glycerine-zero-pression-boitier",
+            "cosine": 0.432
+          },
+          {
+            "slug": "compresseur-ne-monte-plus-en-pression",
+            "cosine": 0.425
+          },
+          {
+            "slug": "audit-reseau-air-comprime-protocole-mesures",
+            "cosine": 0.416
+          }
+        ],
+        "editorialDifference": "Le voisin SMC AMS traite le seuil d’affichage. Ce guide traite le zéro de caractéristique VA500, avec pression appliquée, circulation absente et repère de menu, sans effacer une fuite supposée.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "festo-daps-mw-volant-position-perte-air",
+      "title": "Festo DAPS MW : le volant permet une manœuvre, mais comment confirmer la position de vanne ?",
+      "seoTitle": "Festo DAPS MW : volant et confirmation de position",
+      "sha256": "9a3cceb800a5f14fa4e50a9da0507ed90d956537cf307e2b54681a706ed4ccd4",
+      "wordCount": 615,
+      "sources": [
+        "https://www.festo.com/media/catalog/202737_documentation.pdf"
+      ],
+      "relatedGuideLinks": [
+        "festo-daps-simple-double-effet-couple-decollage",
+        "festo-vuvg-commande-manuelle-verrouillee",
+        "verin-simple-double-effet-ressort-retour"
+      ],
+      "internalLinks": [
+        "/guides/festo-vuvg-commande-manuelle-verrouillee/",
+        "/guides/festo-daps-simple-double-effet-couple-decollage/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "30998d87229071888d2602b5830880f084e8b0cb51c5d88f369d43478a0c1357"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "festo-vuvg-commande-manuelle-verrouillee",
+          "cosine": 0.473
+        },
+        {
+          "slug": "clemco-acs-air-sans-abrasif-commande",
+          "cosine": 0.373
+        },
+        {
+          "slug": "verin-simple-double-effet-ressort-retour",
+          "cosine": 0.371
+        },
+        {
+          "slug": "graco-pro-xp-auto-cyl-sequence-air-fluide",
+          "cosine": 0.361
+        }
+      ],
+      "uniqueDecision": "La commande manuelle et la détection de position sont deux fonctions. Définir ce qui sera observé après une manœuvre sans pression d’alimentation.",
+      "claims": [
+        {
+          "sourceId": "festo-daps-catalog",
+          "location": "Catalogue 2026/07, pages PDF 2 et 9, webreader primaire",
+          "assertion": "Volant MW : manœuvre manuelle sans pression. Table double effet MW : Position detection None. Ne qualifie pas un retour d’état ajouté dans une installation particulière.",
+          "kind": "documentary_fact",
+          "status": "reviewed_primary_passage"
+        }
+      ],
+      "sourceIds": [
+        "festo-daps-catalog"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "festo-vuvg-commande-manuelle-verrouillee",
+            "cosine": 0.461
+          },
+          {
+            "slug": "verin-simple-double-effet-ressort-retour",
+            "cosine": 0.375
+          },
+          {
+            "slug": "clemco-acs-air-sans-abrasif-commande",
+            "cosine": 0.362
+          },
+          {
+            "slug": "graco-pro-xp-auto-cyl-sequence-air-fluide",
+            "cosine": 0.36
+          }
+        ],
+        "editorialDifference": "Le voisin VUVG agit sur un distributeur. Ce guide distingue la manœuvre par volant DAPS et la confirmation de position, absente de la table MW de base.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "festo-daps-simple-double-effet-couple-decollage",
+      "title": "Festo DAPS : choisir simple ou double effet avec le couple réel de la vanne",
+      "seoTitle": "Festo DAPS : simple effet, couple et vanne",
+      "sha256": "01821b42c4141f0edf81bd4fae22f5767de7e193debf0e14d76819f481ed4817",
+      "wordCount": 721,
+      "sources": [
+        "https://www.festo.com/media/catalog/202737_documentation.pdf"
+      ],
+      "relatedGuideLinks": [
+        "verin-rotatif-pneumatique-couple-angle-inertie",
+        "verin-simple-double-effet-ressort-retour",
+        "festo-daps-mw-volant-position-perte-air"
+      ],
+      "internalLinks": [
+        "/guides/verin-rotatif-pneumatique-couple-angle-inertie/",
+        "/guides/verin-simple-double-effet-ressort-retour/",
+        "/guides/festo-daps-mw-volant-position-perte-air/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "7bb12289f2a8a243aaa1761cbb799be2166b5ffbccc4a2e92e538f14675cda1a"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "verin-simple-double-effet-ressort-retour",
+          "cosine": 0.418
+        },
+        {
+          "slug": "makita-an930h-compresseur-10-bar-haute-pression",
+          "cosine": 0.401
+        },
+        {
+          "slug": "uryu-urw6-pression-recommandee-couple-6-bar",
+          "cosine": 0.397
+        },
+        {
+          "slug": "visseuse-pneumatique-coupure-automatique",
+          "cosine": 0.397
+        }
+      ],
+      "uniqueDecision": "Le couple nominal ne suffit pas pour automatiser une vanne. Rassembler le besoin de décollage, la pression au poste et la configuration de ressort.",
+      "claims": [
+        {
+          "sourceId": "festo-daps-catalog",
+          "location": "Catalogue 2026/07, pages PDF 2, 4 et 6, webreader primaire",
+          "assertion": "Scotch yoke ; simple effet à moitié du couple double effet pour le même boîtier. Ressorts 1, 2, 3, 4 : pression de connexion 2,8 / 3,5 / 4,2 / 5,6 bar. Pression nominale simple effet 5,6 bar ; minimum variant selon les ressorts. Aucune courbe de couple inventée.",
+          "kind": "documentary_fact",
+          "status": "reviewed_primary_passage"
+        }
+      ],
+      "sourceIds": [
+        "festo-daps-catalog"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "verin-simple-double-effet-ressort-retour",
+            "cosine": 0.418
+          },
+          {
+            "slug": "visseuse-pneumatique-coupure-automatique",
+            "cosine": 0.382
+          },
+          {
+            "slug": "hertz-hgs75-11-debit-13bar",
+            "cosine": 0.366
+          },
+          {
+            "slug": "lechler-serie136-air-commande-atomisation",
+            "cosine": 0.36
+          }
+        ],
+        "editorialDifference": "Le guide simple effet donne le principe. Ce guide sélectionne un actionneur de vanne DAPS à partir du décollage, du mécanisme Scotch yoke, des ressorts codés et de la pression au poste.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "fs-curtis-nxb04-ultrapack-base-mount-cuve-secheur",
+      "title": "FS-Curtis NXB04 : Tank Mount, UltraPack ou Base Mount, que contient l’offre ?",
+      "seoTitle": "NXB04 : cuve, sécheur et configuration UltraPack",
+      "sha256": "245a4197cf78fee428ef00f5290f073e2d1235fe1da00cdc7d42e9d549d3d906",
+      "wordCount": 692,
+      "sources": [
+        "https://us.fscurtis.com/product/nx-series-4-15kw-5-20hp/"
+      ],
+      "relatedGuideLinks": [
+        "compresseur-sur-chassis-sans-cuve",
+        "choisir-volume-cuve-24-50-90-litres",
+        "point-rosee-secheur-filtre-air-comprime"
+      ],
+      "internalLinks": [
+        "/guides/compresseur-sur-chassis-sans-cuve/",
+        "/guides/choisir-volume-cuve-24-50-90-litres/",
+        "/guides/point-rosee-secheur-filtre-air-comprime/",
+        "/compresseurs/fs-curtis-nxb04/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "13e667e74585f0e58ee859a704ce708f3f7cb76001eeea447065490fd15962c3"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "compresseur-sur-chassis-sans-cuve",
+          "cosine": 0.422
+        },
+        {
+          "slug": "ceccato-csm7-5-secheur-air-huile",
+          "cosine": 0.42
+        },
+        {
+          "slug": "ceccato-csm20-500-secheur-filtres-devis",
+          "cosine": 0.397
+        },
+        {
+          "slug": "hertz-hgs75-socle-cuve-secheur-dimensions",
+          "cosine": 0.391
+        }
+      ],
+      "uniqueDecision": "Le même NXB04 existe en plusieurs montages. Vérifiez séparément cuve, sécheur et préfiltre ; le débit du modèle ne décrit pas le contenu du package.",
+      "claims": [
+        {
+          "sourceId": "fsc-nx-page",
+          "location": "Table NXB04 et description UltraPack",
+          "assertion": "Tank Mount et UltraPack : 60 gal ; Base Mount et Base Mount with Dryer : N/A. UltraPack comprend un sécheur frigorifique et un préfiltre. Unité gal conservée sans conversion non qualifiée.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "fsc-nx-page"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "compresseur-sur-chassis-sans-cuve",
+            "cosine": 0.418
+          },
+          {
+            "slug": "ceccato-csm7-5-secheur-air-huile",
+            "cosine": 0.412
+          },
+          {
+            "slug": "hertz-hgs75-socle-cuve-secheur-dimensions",
+            "cosine": 0.404
+          },
+          {
+            "slug": "ceccato-csm20-500-secheur-filtres-devis",
+            "cosine": 0.397
+          }
+        ],
+        "editorialDifference": "Le guide châssis explique un principe. Ce guide différencie quatre configurations commerciales NXB04 et le contenu exact d’UltraPack.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "fs-curtis-nxd15-puissance-moteur-ensemble-cagi",
+      "title": "FS-Curtis NXD15 : pourquoi « 15 kW » ne décrit pas la consommation du compresseur",
+      "seoTitle": "FS-Curtis NXD15 : puissance moteur et puissance totale",
+      "sha256": "6afbd35a92dc324928fa92efa2a7700b45abef5f2c27b6517d483a8aa05e8f40",
+      "wordCount": 720,
+      "sources": [
+        "https://us.fscurtis.com/wp-content/uploads/2026/01/nxd15kw-100psi.pdf",
+        "https://us.fscurtis.com/wp-content/uploads/2026/01/nxd15kw-125psi.pdf"
+      ],
+      "relatedGuideLinks": [
+        "compresseur-kva-kw-kwh-devis-electrique",
+        "lire-fiche-cagi-compresseur-iso-1217",
+        "mesurer-temps-charge-vide-compresseur"
+      ],
+      "internalLinks": [
+        "/guides/compresseur-kva-kw-kwh-devis-electrique/",
+        "/guides/mesurer-temps-charge-vide-compresseur/",
+        "/guides/lire-fiche-cagi-compresseur-iso-1217/",
+        "/compresseurs/fs-curtis-nxd15/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "51ff15b6abc90a5b6b896ac2f063d45f2e28c43e7f32daa723bb266862d4df4b"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "lire-fiche-cagi-compresseur-iso-1217",
+          "cosine": 0.571
+        },
+        {
+          "slug": "comparer-puissance-specifique-compresseurs",
+          "cosine": 0.536
+        },
+        {
+          "slug": "compresseur-kva-kw-kwh-devis-electrique",
+          "cosine": 0.459
+        },
+        {
+          "slug": "denair-dav30-dav30-plus-deux-etages-debit",
+          "cosine": 0.455
+        }
+      ],
+      "uniqueDecision": "La fiche NXD15-100 publie 18,40 kW pour l’ensemble. Comparez les points CAGI et le temps à vide avant de calculer la consommation électrique.",
+      "claims": [
+        {
+          "sourceId": "fsc-nxd15-100",
+          "location": "PDF 1, puissance moteur, puissance totale, capacité et pied de page",
+          "assertion": "20 hp nominal ; 18,40 kW et 95,9 ACFM à 100 psig ; 8 kW à débit nul. La feuille ne revendique pas une vérification indépendante CAGI.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "fsc-nxd15-125",
+          "location": "PDF 1, référence et pression de la feuille",
+          "assertion": "Le point à 125 psig possède une feuille distincte.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Scénario fictif",
+          "assertion": "4 × 18,40 + 2 × 8 = 89,6 kWh ; durées fictives, aucune consommation annuelle mesurée.",
+          "kind": "calculation",
+          "status": "reviewed_internal_calculation"
+        }
+      ],
+      "sourceIds": [
+        "fsc-nxd15-100",
+        "fsc-nxd15-125"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "lire-fiche-cagi-compresseur-iso-1217",
+            "cosine": 0.592
+          },
+          {
+            "slug": "comparer-puissance-specifique-compresseurs",
+            "cosine": 0.551
+          },
+          {
+            "slug": "compresseur-kva-kw-kwh-devis-electrique",
+            "cosine": 0.481
+          },
+          {
+            "slug": "denair-dav30-dav30-plus-deux-etages-debit",
+            "cosine": 0.473
+          }
+        ],
+        "editorialDifference": "Le guide CAGI général utilise un formulaire pédagogique. Ce guide calcule un scénario de consommation du NXD15 réel avec deux états, en conservant la configuration du devis.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "fs-curtis-nxv08-courbe-charge-partielle-125-psi",
+      "title": "FS-Curtis NXV08 : le variateur est-il efficace quand l’atelier consomme peu ?",
+      "seoTitle": "FS-Curtis NXV08 : lire la courbe à charge partielle",
+      "sha256": "9072a8028b1e45dd0e24903d82558a0ed256fa61fb48edcc52507ddfa2334de4",
+      "wordCount": 715,
+      "sources": [
+        "https://us.fscurtis.com/wp-content/uploads/page/65/nxv08-125_072021.pdf"
+      ],
+      "relatedGuideLinks": [
+        "compresseur-vitesse-variable-vsd-rentabilite-atelier",
+        "comparer-puissance-specifique-compresseurs",
+        "audit-reseau-air-comprime-protocole-mesures"
+      ],
+      "internalLinks": [
+        "/guides/comparer-puissance-specifique-compresseurs/",
+        "/guides/compresseur-vitesse-variable-vsd-rentabilite-atelier/",
+        "/compresseurs/fs-curtis-nxv08/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "7f511a7e7fd285396e22e5aca686a0a987ddc677dab07703df9c5373f33a233b"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "atlas-copco-ga110vsds-fiche-cagi-capacite-puissance",
+          "cosine": 0.587
+        },
+        {
+          "slug": "lire-fiche-cagi-compresseur-iso-1217",
+          "cosine": 0.496
+        },
+        {
+          "slug": "comparer-puissance-specifique-compresseurs",
+          "cosine": 0.427
+        },
+        {
+          "slug": "karcher-ib15-120-air-glace-puissance-electrique",
+          "cosine": 0.401
+        }
+      ],
+      "uniqueDecision": "À 125 psig, la fiche NXV08 publie cinq points de puissance et débit. Utilisez leur courbe pour examiner un petit besoin, sans extrapoler sous 15,09 ACFM.",
+      "claims": [
+        {
+          "sourceId": "fsc-nxv08-125",
+          "location": "PDF 1, tableau 8 et notes de méthode",
+          "assertion": "Triplets ACFM / kW / kW pour 100 ACFM à 125 psig : 40,48 / 9,5 / 23,47 ; 35,43 / 8,3 / 23,43 ; 30,38 / 6,7 / 22,05 ; 25,16 / 5,7 / 22,66 ; 15,09 / 4,5 / 29,82. Le plus faible point publié ne devient pas une limite mécanique universelle.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Scénario et graphique calculés",
+          "assertion": "3 × 6,7 + 3 × 4,5 = 33,6 kWh avec des durées fictives. x = 70 + (Q - 10) / 35 × 400 ; y = 430 - (Psp - 20) / 15 × 320. Axes linéaires gradués.",
+          "kind": "calculation",
+          "status": "reviewed_internal_calculation"
+        }
+      ],
+      "sourceIds": [
+        "fsc-nxv08-125"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "atlas-copco-ga110vsds-fiche-cagi-capacite-puissance",
+            "cosine": 0.571
+          },
+          {
+            "slug": "lire-fiche-cagi-compresseur-iso-1217",
+            "cosine": 0.497
+          },
+          {
+            "slug": "comparer-puissance-specifique-compresseurs",
+            "cosine": 0.434
+          },
+          {
+            "slug": "karcher-ib15-120-air-glace-puissance-electrique",
+            "cosine": 0.396
+          }
+        ],
+        "editorialDifference": "Le voisin GA110VSDs lit les bornes d’une autre machine. Ce guide trace la puissance spécifique non monotone du NXV08, calcule un scénario de charge et sépare 125 psig du point produit à 100 psig.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "haas-compresseur-huile-trouble-eau-demarrage",
+      "title": "Compresseur Haas : huile trouble au démarrage, quelles observations transmettre au service ?",
+      "seoTitle": "Compresseur Haas : huile trouble et état thermique",
+      "sha256": "4e73a37f268af4dff5a9809b9cec14b778b6643ce0f23442ac10aa7ad867ce7d",
+      "wordCount": 614,
+      "sources": [
+        "https://www.haascnc.com/service/online-manuals/haas-air-compressor---operators-service-manual/haas-air-compressor---troubleshooting.html"
+      ],
+      "relatedGuideLinks": [
+        "haas-compresseur-pression-minimale-circulation-huile",
+        "compresseur-piston-ou-vis-profil-charge",
+        "separateur-huile-eau-condensats-compresseur"
+      ],
+      "internalLinks": [
+        "/guides/haas-compresseur-pression-minimale-circulation-huile/",
+        "/guides/compresseur-piston-ou-vis-profil-charge/",
+        "/guides/separateur-huile-eau-condensats-compresseur/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "c62d898bfbcba9bc12a89c1f53ef66eccdc41d7083e63447fb0f107dc81e2857"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "huile-compresseur-viscosite-reference-constructeur",
+          "cosine": 0.447
+        },
+        {
+          "slug": "paslode-219090-huile-antigel-outil-pneumatique-froid",
+          "cosine": 0.427
+        },
+        {
+          "slug": "compresseur-sans-huile-ou-lubrifie",
+          "cosine": 0.387
+        },
+        {
+          "slug": "enerpac-pa133-pompe-desamorcee-air-hydraulique",
+          "cosine": 0.385
+        }
+      ],
+      "uniqueDecision": "L’aspect de l’huile seul ne donne pas la cause. Relier l’observation à l’état thermique et au cycle pour préparer un diagnostic constructeur.",
+      "claims": [
+        {
+          "sourceId": "haas-comp-troubleshooting",
+          "location": "§5.1, Rev F 08/2026, Oil related problems, webreader primaire",
+          "assertion": "Huile trouble et eau : plusieurs causes possibles dont phase froide, température insuffisante, retour d’huile et pression du séparateur. Aucune valeur de commande du ventilateur prescrite universellement.",
+          "kind": "documentary_fact",
+          "status": "reviewed_primary_passage"
+        }
+      ],
+      "sourceIds": [
+        "haas-comp-troubleshooting"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "huile-compresseur-viscosite-reference-constructeur",
+            "cosine": 0.451
+          },
+          {
+            "slug": "paslode-219090-huile-antigel-outil-pneumatique-froid",
+            "cosine": 0.43
+          },
+          {
+            "slug": "compresseur-sans-huile-ou-lubrifie",
+            "cosine": 0.397
+          },
+          {
+            "slug": "enerpac-pa133-pompe-desamorcee-air-hydraulique",
+            "cosine": 0.394
+          }
+        ],
+        "editorialDifference": "Le guide viscosité traite le choix d’huile. Ce guide relie un aspect trouble au cycle et à l’état thermique, sans remplacement d’huile ou réglage de ventilateur arbitraire.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "haas-compresseur-pression-minimale-circulation-huile",
+      "title": "Compresseur Haas : pourquoi la pression de cuve ne décrit pas toute la circulation d’huile",
+      "seoTitle": "Haas : pression minimale et circulation d’huile",
+      "sha256": "6d0cfb1e544f4fcf3eb6a92ed9e6f2678a9c91de5fb93d1f9bb8cebb4e95c1df",
+      "wordCount": 586,
+      "sources": [
+        "https://www.haascnc.com/service/online-manuals/haas-air-compressor---operators-service-manual/haas-air-compressor---troubleshooting.html"
+      ],
+      "relatedGuideLinks": [
+        "haas-compresseur-huile-trouble-eau-demarrage",
+        "mesurer-temps-charge-vide-compresseur",
+        "raccorder-deux-compresseurs-en-parallele"
+      ],
+      "internalLinks": [
+        "/guides/mesurer-temps-charge-vide-compresseur/",
+        "/guides/raccorder-deux-compresseurs-en-parallele/",
+        "/guides/haas-compresseur-huile-trouble-eau-demarrage/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "8e89517c7ab813503cc44080fc3e048afc9b876aa57fde5cd35a6c323c305854"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "vanne-demarrage-progressif-air-comprime-remise-pression",
+          "cosine": 0.483
+        },
+        {
+          "slug": "regulateur-air-pression-monte-arret-creep",
+          "cosine": 0.431
+        },
+        {
+          "slug": "regulateur-air-comprime-fuit-event-decompression",
+          "cosine": 0.422
+        },
+        {
+          "slug": "compresseur-ne-monte-plus-en-pression",
+          "cosine": 0.422
+        }
+      ],
+      "uniqueDecision": "Le circuit interne et la réserve aval ont des rôles distincts. Identifier les points de mesure avant d’attribuer une panne à la pression de cuve.",
+      "claims": [
+        {
+          "sourceId": "haas-comp-troubleshooting",
+          "location": "§5.3, Rev A 05/2026, Pressure Systems Breakdown, webreader primaire",
+          "assertion": "Circuit interne et aval distincts ; huile circulant par pression d’air sans pompe électrique dédiée ; vanne de pression minimale. Aucun seuil non publié attribué au modèle.",
+          "kind": "documentary_fact",
+          "status": "reviewed_primary_passage"
+        }
+      ],
+      "sourceIds": [
+        "haas-comp-troubleshooting"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "vanne-demarrage-progressif-air-comprime-remise-pression",
+            "cosine": 0.474
+          },
+          {
+            "slug": "regulateur-air-pression-monte-arret-creep",
+            "cosine": 0.431
+          },
+          {
+            "slug": "compresseur-ne-monte-plus-en-pression",
+            "cosine": 0.424
+          },
+          {
+            "slug": "powermax45-sync-code-0-12-pression-sortie-cnc",
+            "cosine": 0.423
+          }
+        ],
+        "editorialDifference": "Les guides réseau traitent l’aval. Ce guide distingue les zones de pression Haas et la circulation d’huile interne pour expliquer pourquoi une cuve pleine ne suffit pas à diagnostiquer le groupe.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "haas-etau-programmable-coupure-courant-serrage",
+      "title": "Étau pneumatique Haas : vérifier ce qu’il fait à la coupure de courant",
+      "seoTitle": "Étau Haas : serrage à la coupure de courant",
+      "sha256": "247d6388449c70523f6abedebb97ff07bc5ec961d565ece00c515d8d30e8287e",
+      "wordCount": 619,
+      "sources": [
+        "https://haascnc.com/service/troubleshooting-and-how-to/how-to/programmable-air-option-install-instructions.alarm%3Dgeneral_966-0000"
+      ],
+      "relatedGuideLinks": [
+        "haas-tab-alarme2081-seuil-logiciel-orifice",
+        "compresseur-machine-cnc-haas-pression-debit",
+        "bobine-electrovanne-24v-ac-dc-remplacement"
+      ],
+      "internalLinks": [
+        "/guides/bobine-electrovanne-24v-ac-dc-remplacement/",
+        "/guides/compresseur-machine-cnc-haas-pression-debit/",
+        "/guides/haas-tab-alarme2081-seuil-logiciel-orifice/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "4e718dc61f0195828c51c7be6c2a49dca1b943a38e9efca35870d1b8c5e9554c"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "coval-lemax-no-nf-coupure-air-electrique",
+          "cosine": 0.398
+        },
+        {
+          "slug": "festo-vuvg-5-2-monostable-bistable-coupure",
+          "cosine": 0.378
+        },
+        {
+          "slug": "compresseur-machine-cnc-haas-pression-debit",
+          "cosine": 0.369
+        },
+        {
+          "slug": "blocage-tige-verin-dsnu-kp-maintien-securite",
+          "cosine": 0.364
+        }
+      ],
+      "uniqueDecision": "L’état de l’étau dépend du raccordement de l’option Programmable Air. Définir une réception documentée avant de supposer que la pièce reste serrée.",
+      "claims": [
+        {
+          "sourceId": "haas-vise",
+          "location": "AD0473, Rev B 11/2025, installation de l’électrovanne et Setup, webreader primaire",
+          "assertion": "Le raccordement des ports détermine le serrage à la coupure électrique ; test en fin d’installation demandé. Surveillance du pressostat distincte ; comportement à la perte d’air non déduit de celui à la coupure électrique.",
+          "kind": "documentary_fact",
+          "status": "reviewed_primary_passage"
+        }
+      ],
+      "sourceIds": [
+        "haas-vise"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "coval-lemax-no-nf-coupure-air-electrique",
+            "cosine": 0.395
+          },
+          {
+            "slug": "festo-vuvg-5-2-monostable-bistable-coupure",
+            "cosine": 0.38
+          },
+          {
+            "slug": "compresseur-machine-cnc-haas-pression-debit",
+            "cosine": 0.361
+          },
+          {
+            "slug": "vanne-demarrage-progressif-air-comprime-remise-pression",
+            "cosine": 0.356
+          }
+        ],
+        "editorialDifference": "Les voisins Coval/Festo décrivent leur architecture. Ce guide applique la remarque AD0473 sur les ports à une réception du serrage lors d’une coupure électrique, distincte d’une perte d’air.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "haas-secheur-a11-a21-a22-alarme-diagnostic",
+      "title": "Sécheur Haas : A11, A21 ou A22, préparer une intervention adaptée à l’alarme",
+      "seoTitle": "Sécheur Haas : diagnostiquer A11, A21 et A22",
+      "sha256": "dc181a9908ef742dcc88715f927abbd56289980a30cb0013d067aeb73f41291e",
+      "wordCount": 570,
+      "sources": [
+        "https://www.haascnc.com/service/online-manuals/haas-air-compressor---operators-service-manual/haas-air-compressor---troubleshooting.html"
+      ],
+      "relatedGuideLinks": [
+        "bypass-secheur-air-comprime-qualite-maintenance",
+        "point-rosee-ligne-prelevement-condensation-refroidissement",
+        "haas-compresseur-huile-trouble-eau-demarrage"
+      ],
+      "internalLinks": [
+        "/guides/bypass-secheur-air-comprime-qualite-maintenance/",
+        "/guides/point-rosee-ligne-prelevement-condensation-refroidissement/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "659cde0a62d98983f5bb3e00dc2e37664c0182ae242554ef93cac1cfb10ce763"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "point-rosee-atmospherique-sous-pression-mesure",
+          "cosine": 0.444
+        },
+        {
+          "slug": "pompe-pneumatique-echappement-givre-air-sec",
+          "cosine": 0.394
+        },
+        {
+          "slug": "vaisala-dsc74-vis-fuite-pression-cellule",
+          "cosine": 0.392
+        },
+        {
+          "slug": "secheur-air-comprime-atelier-non-chauffe",
+          "cosine": 0.386
+        }
+      ],
+      "uniqueDecision": "Un code de sécheur ne désigne pas toujours un manque de fluide. Distinguer les alarmes documentées par Haas et transmettre un dossier exploitable.",
+      "claims": [
+        {
+          "sourceId": "haas-comp-troubleshooting",
+          "location": "§5.2, Rev D 09/2026, tableau et Ice Formation, webreader primaire",
+          "assertion": "A11 : niveau de fluide frigorigène ; A21 : capteur de rosée ; A22 : capteur de condensation. Sous 0 °C, glace et restriction possibles. Correspondances limitées au sécheur couvert ; aucune recharge prescrite sans examen.",
+          "kind": "documentary_fact",
+          "status": "reviewed_primary_passage"
+        }
+      ],
+      "sourceIds": [
+        "haas-comp-troubleshooting"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "point-rosee-atmospherique-sous-pression-mesure",
+            "cosine": 0.448
+          },
+          {
+            "slug": "vaisala-dsc74-vis-fuite-pression-cellule",
+            "cosine": 0.393
+          },
+          {
+            "slug": "pompe-pneumatique-echappement-givre-air-sec",
+            "cosine": 0.393
+          },
+          {
+            "slug": "compresseur-vis-8-10-13-bar-versions",
+            "cosine": 0.389
+          }
+        ],
+        "editorialDifference": "Le guide sécheur/bypass compare des trajets. Ce guide sépare trois codes Haas et les services de diagnostic concernés, avec la fiabilité de la mesure à rétablir.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "haas-tab-alarme2081-seuil-logiciel-orifice",
+      "title": "Haas TAB, alarme 2081 : vérifier le logiciel et l’orifice avant de changer de compresseur",
+      "seoTitle": "Haas TAB 2081 : seuil logiciel et orifice de l’outil",
+      "sha256": "73117e2cad47a24ab88d4628bfd9496654d21f7741c6ca66e26c0a6fa588df76",
+      "wordCount": 748,
+      "sources": [
+        "https://www.haascnc.com/service/troubleshooting-and-how-to/troubleshooting/through-tool-air-blast--tab----troubleshooting-guide.alarm%3Dngc_4-103.html"
+      ],
+      "relatedGuideLinks": [
+        "compresseur-machine-cnc-haas-pression-debit",
+        "haas-trp-retour-lent-precharge-alarme-130-131",
+        "flexible-enrouleur-raccords-garage-debit"
+      ],
+      "internalLinks": [
+        "/guides/compresseur-machine-cnc-haas-pression-debit/",
+        "/guides/haas-trp-retour-lent-precharge-alarme-130-131/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "a9ec8508db2752681bacaab62dd6207669ee7a7704a1f5adb72c77700fb6a8d3"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "compresseur-machine-cnc-haas-pression-debit",
+          "cosine": 0.443
+        },
+        {
+          "slug": "cloueur-clous-mal-enfonces-pression-profondeur",
+          "cosine": 0.421
+        },
+        {
+          "slug": "compresseur-ne-monte-plus-en-pression",
+          "cosine": 0.392
+        },
+        {
+          "slug": "scheppach-hc51v-debit-pression-outils",
+          "cosine": 0.379
+        }
+      ],
+      "uniqueDecision": "Le soufflage dans l’outil dépend de sa configuration et du seuil logiciel. Préparer un diagnostic de l’alarme 2081 sans réduire une protection.",
+      "claims": [
+        {
+          "sourceId": "haas-tab",
+          "location": "TG0145, tableau des symptômes, passages primaires lus par webreader",
+          "assertion": "2081 : seuil 30 psi, puis 15 psi à partir du logiciel 100.22.000.1000 ; consommation 8 à 15 cfm selon l’application. Orifice, raccord compensateur, pressostat partagé avec TSC et clapet : pistes selon la version. LOW TSC est le repère nommé pour le pressostat ; aucune protection modifiée.",
+          "kind": "documentary_fact",
+          "status": "reviewed_primary_passage"
+        }
+      ],
+      "sourceIds": [
+        "haas-tab"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "compresseur-machine-cnc-haas-pression-debit",
+            "cosine": 0.461
+          },
+          {
+            "slug": "cloueur-clous-mal-enfonces-pression-profondeur",
+            "cosine": 0.421
+          },
+          {
+            "slug": "compresseur-ne-monte-plus-en-pression",
+            "cosine": 0.382
+          },
+          {
+            "slug": "haas-trp-retour-lent-precharge-alarme-130-131",
+            "cosine": 0.376
+          }
+        ],
+        "editorialDifference": "Le guide CNC traite l’alimentation globale. Ce guide lit l’alarme 2081 avec la version logicielle, l’orifice et les composants TAB, dont LOW TSC, sans modifier une protection.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "metpoint-ocv-zero-demarrage-air-non-mesure",
+      "title": "METPOINT OCV compact affiche zéro au démarrage : l’air est-il déjà contrôlé ?",
+      "seoTitle": "METPOINT OCV : zéro au démarrage et mesure valide",
+      "sha256": "c6798dd66f12ef8dc3ad2504970eb1e4804c1ee17d542ae5e00fde9c37ea91f6",
+      "wordCount": 762,
+      "sources": [
+        "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/metpoint_ocv/mp_OCV_c_BA_10-249_en_00_01.pdf"
+      ],
+      "relatedGuideLinks": [
+        "mesure-vapeurs-huile-huile-totale-air-comprime",
+        "tester-contamination-air-avant-peinture",
+        "qualite-air-comprime-iso-8573-1"
+      ],
+      "internalLinks": [
+        "/guides/mesure-vapeurs-huile-huile-totale-air-comprime/",
+        "/guides/qualite-air-comprime-iso-8573-1/",
+        "/guides/tester-contamination-air-avant-peinture/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "1b8c2d1ca741170a526d2c8d12836449960ca6e22f7ad038f381c72f2639eb61"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "mesure-vapeurs-huile-huile-totale-air-comprime",
+          "cosine": 0.351
+        },
+        {
+          "slug": "vaisala-dmt143-point-rosee-fige-purge-autocalibration",
+          "cosine": 0.349
+        },
+        {
+          "slug": "smc-ams-zero-debit-petites-fuites-f14",
+          "cosine": 0.301
+        },
+        {
+          "slug": "wika-manometre-glycerine-zero-pression-boitier",
+          "cosine": 0.29
+        }
+      ],
+      "uniqueDecision": "Le zéro de démarrage ne décrit pas nécessairement l’air du réseau. Lisez échauffement, arrivée d’échantillon et stabilité avant de conclure sur les vapeurs d’huile.",
+      "claims": [
+        {
+          "sourceId": "beko-ocv",
+          "location": "Notice 00_01, pages PDF 22 et 60 à 62",
+          "assertion": "Préchauffage PURIFICATOR au moins 30 minutes, deux voyants orange, sans air comprimé au PID dans cet état ; huit premières minutes à 0.0000 mg/m³ puis 22 minutes décrivant l’air ambiant ; stabilité initiale après environ 90 minutes. Mesure de vapeurs d’huile, pas de toute l’huile totale.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "beko-ocv"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "mesure-vapeurs-huile-huile-totale-air-comprime",
+            "cosine": 0.351
+          },
+          {
+            "slug": "vaisala-dmt143-point-rosee-fige-purge-autocalibration",
+            "cosine": 0.349
+          },
+          {
+            "slug": "smc-ams-zero-debit-petites-fuites-f14",
+            "cosine": 0.301
+          },
+          {
+            "slug": "wika-manometre-glycerine-zero-pression-boitier",
+            "cosine": 0.29
+          }
+        ],
+        "editorialDifference": "Le guide huile totale distingue les fractions. Ce guide identifie les valeurs de démarrage OCV qui décrivent zéro ou ambiance avant l’échantillon comprimé, avec états des voyants et stabilisation initiale.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "point-rosee-ligne-prelevement-condensation-refroidissement",
+      "title": "Mesurer le point de rosée d’un air chaud : attention à la condensation dans le prélèvement",
+      "seoTitle": "Point de rosée : condensation dans le prélèvement",
+      "sha256": "2cf2e79eae93c0b35f398b2c468749052231dd4b3acca0623b0d095870a69f95",
+      "wordCount": 689,
+      "sources": [
+        "https://www.vaisala.com/sites/default/files/documents/CompAir-Sampling-Cell-AppNote-B211229EN.pdf"
+      ],
+      "relatedGuideLinks": [
+        "aftercooler-refroidisseur-secheur-air-comprime",
+        "point-rosee-atmospherique-sous-pression-mesure",
+        "tester-contamination-air-avant-peinture"
+      ],
+      "internalLinks": [
+        "/guides/aftercooler-refroidisseur-secheur-air-comprime/",
+        "/guides/point-rosee-atmospherique-sous-pression-mesure/",
+        "/guides/tester-contamination-air-avant-peinture/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "09522030909e65b5a89cc6ec0a5e6f6dd5fff39ec6c2899e1a27b5d4a75cb07f"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "point-rosee-atmospherique-sous-pression-mesure",
+          "cosine": 0.565
+        },
+        {
+          "slug": "vaisala-dsc74-vis-fuite-pression-cellule",
+          "cosine": 0.499
+        },
+        {
+          "slug": "secheur-air-comprime-atelier-non-chauffe",
+          "cosine": 0.459
+        },
+        {
+          "slug": "point-rosee-secheur-filtre-air-comprime",
+          "cosine": 0.408
+        }
+      ],
+      "uniqueDecision": "Si l’échantillon refroidit sous son point de rosée, la ligne peut condenser l’eau avant la sonde. Vérifiez le trajet thermique avant de juger la qualité d’air.",
+      "claims": [
+        {
+          "sourceId": "vaisala-sampling",
+          "location": "Section 02 Condensing water du HTML reçu",
+          "assertion": "Refroidir le prélèvement sous sa rosée peut provoquer une condensation. Mesure directe ou ligne chauffée adaptée selon le domaine ; aucune correction numérique inventée après condensation.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "vaisala-sampling"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "point-rosee-atmospherique-sous-pression-mesure",
+            "cosine": 0.59
+          },
+          {
+            "slug": "vaisala-dsc74-vis-fuite-pression-cellule",
+            "cosine": 0.503
+          },
+          {
+            "slug": "secheur-air-comprime-atelier-non-chauffe",
+            "cosine": 0.469
+          },
+          {
+            "slug": "point-rosee-secheur-filtre-air-comprime",
+            "cosine": 0.411
+          }
+        ],
+        "editorialDifference": "Le guide rosée/pression traite surtout la détente. Ce guide suit le refroidissement d’un prélèvement chaud et indique quand une valeur en sortie ne représente plus le gaz d’origine.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "point-rosee-mesure-lente-flexible-nylon",
+      "title": "Le point de rosée descend très lentement : vérifier la ligne de prélèvement",
+      "seoTitle": "Point de rosée lent : flexible et volumes stagnants",
+      "sha256": "e1d390f4bacb8e39e3c37bb9771847c7f6fe96d17a2fb9163684e39c2a0ba248",
+      "wordCount": 704,
+      "sources": [
+        "https://www.vaisala.com/sites/default/files/documents/CompAir-Sampling-Cell-AppNote-B211229EN.pdf"
+      ],
+      "relatedGuideLinks": [
+        "point-rosee-atmospherique-sous-pression-mesure",
+        "vaisala-dsc74-vis-fuite-pression-cellule",
+        "desiccant-change-couleur-point-rosee"
+      ],
+      "internalLinks": [
+        "/guides/point-rosee-atmospherique-sous-pression-mesure/",
+        "/guides/vaisala-dsc74-vis-fuite-pression-cellule/",
+        "/guides/desiccant-change-couleur-point-rosee/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "c1373469e35b00882233a7a1ca346950ba56d73e1dcb7a0bbd851be158c0428a"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "point-rosee-atmospherique-sous-pression-mesure",
+          "cosine": 0.574
+        },
+        {
+          "slug": "vaisala-dsc74-vis-fuite-pression-cellule",
+          "cosine": 0.448
+        },
+        {
+          "slug": "audit-reseau-air-comprime-protocole-mesures",
+          "cosine": 0.427
+        },
+        {
+          "slug": "wika-manometre-aiguille-pulsation-amortisseur",
+          "cosine": 0.398
+        }
+      ],
+      "uniqueDecision": "Une ligne hygroscopique ou un volume stagnant peut ralentir la mesure. Vérifiez matériaux, trajet et stabilisation avant de comparer le sécheur au seuil.",
+      "claims": [
+        {
+          "sourceId": "vaisala-sampling",
+          "location": "Sections 03 et 04 du HTML effectivement reçu",
+          "assertion": "Matériaux, ligne courte, volumes morts et circulation conditionnent le prélèvement. Aucune durée universelle de stabilisation déduite ; URL nommée PDF mais réponse HTML.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "vaisala-sampling"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "point-rosee-atmospherique-sous-pression-mesure",
+            "cosine": 0.594
+          },
+          {
+            "slug": "vaisala-dsc74-vis-fuite-pression-cellule",
+            "cosine": 0.485
+          },
+          {
+            "slug": "audit-reseau-air-comprime-protocole-mesures",
+            "cosine": 0.448
+          },
+          {
+            "slug": "wika-manometre-aiguille-pulsation-amortisseur",
+            "cosine": 0.42
+          }
+        ],
+        "editorialDifference": "Le guide rosée/pression signale des causes de prélèvement. Ce guide résout le cas d’une réponse lente par l’examen du trajet et la comparaison de deux montages conservés, sans faux étalonnage.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "prevost-ibg06sil-consommation-sequences-soufflage",
+      "title": "Prevost IBG 06SIL : compter les séquences de soufflage sans masquer le débit instantané",
+      "seoTitle": "Prevost IBG 06SIL : débit et séquences de soufflage",
+      "sha256": "f585fd22d3c98eede1ff8d567c93d0e24a6193934940417a0156fb41ce4a2930",
+      "wordCount": 629,
+      "sources": [
+        "https://www.prevost.fr/sites/default/files/2021-12/BG%20DOC21FR%20web_0.pdf",
+        "https://www.prevost.eu/prevos1-blow-gun-silent-nozzle-49626"
+      ],
+      "relatedGuideLinks": [
+        "soufflette-garage-securite-bruit-consommation",
+        "mesurer-temps-charge-vide-compresseur",
+        "convertir-cfm-l-min-nl-min-air-comprime"
+      ],
+      "internalLinks": [
+        "/outils-pneumatiques/soufflette-prevost-ibg06sil/",
+        "/guides/convertir-cfm-l-min-nl-min-air-comprime/",
+        "/guides/soufflette-garage-securite-bruit-consommation/",
+        "/guides/mesurer-temps-charge-vide-compresseur/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "099da98f39b1539d4cbdf5b87f0b0a028fca7658bfb1380781a3c730a2218d3d"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "consommation-moyenne-en-charge-cle-a-chocs",
+          "cosine": 0.45
+        },
+        {
+          "slug": "mauguiere-mav30-366-294-litres-pression",
+          "cosine": 0.448
+        },
+        {
+          "slug": "vibreur-pneumatique-tremie-debit-compresseur",
+          "cosine": 0.443
+        },
+        {
+          "slug": "convertir-cfm-l-min-nl-min-air-comprime",
+          "cosine": 0.438
+        }
+      ],
+      "uniqueDecision": "Une soufflette peut avoir un faible usage moyen et une demande instantanée importante. Construire un budget explicite en conservant les unités sources.",
+      "claims": [
+        {
+          "sourceId": "prevost-bg",
+          "location": "BG DOC21FR, page PDF 4",
+          "assertion": "IBG 06SIL : 9 Nm³/h à 6 bar.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "prevost-silent",
+          "location": "Table HTML IBG 06SIL",
+          "assertion": "160 l/min à 6 bar. Conditions de référence et version non arbitrées par rapport à la brochure.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Scénario fictif",
+          "assertion": "30 × 10 secondes = 300 secondes = 5 minutes ; 9 × 5 / 60 = 0,75 Nm³. Sur une heure, moyenne 0,75 Nm³/h, demande instantanée supposée 9 Nm³/h. Aucun volume de cuve converti ni profil observé inventé.",
+          "kind": "calculation",
+          "status": "reviewed_internal_calculation"
+        }
+      ],
+      "sourceIds": [
+        "prevost-bg",
+        "prevost-silent"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "consommation-moyenne-en-charge-cle-a-chocs",
+            "cosine": 0.454
+          },
+          {
+            "slug": "convertir-cfm-l-min-nl-min-air-comprime",
+            "cosine": 0.448
+          },
+          {
+            "slug": "vibreur-pneumatique-tremie-debit-compresseur",
+            "cosine": 0.447
+          },
+          {
+            "slug": "temps-remplissage-cuve-compresseur-debit",
+            "cosine": 0.445
+          }
+        ],
+        "editorialDifference": "Le guide soufflette traite buse et bruit. Ce guide calcule un profil fictif en une seule référence d’unité, sépare moyenne et demande instantanée et conserve la différence avec la fiche actuelle.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "prevost-twk20000-debit-vide-couteau-parebrise",
+      "title": "Prevost TWK 20000 : 113 l/min à vide suffisent-ils pour choisir un compresseur de dépose pare-brise ?",
+      "seoTitle": "Prevost TWK 20000 : débit à vide et pare-brise",
+      "sha256": "9eaa9a479978ae25a469f2477fb46f9cdc8cb6112ca46ce1368a9e6306768540",
+      "wordCount": 691,
+      "sources": [
+        "https://www.prevost.fr/sites/default/files/2021-11/AT_DOC_14F.pdf"
+      ],
+      "relatedGuideLinks": [
+        "rupes-nitto-ponceuse-debit-max-vide",
+        "cle-a-chocs-manque-couple-diagnostic",
+        "flexible-enrouleur-raccords-garage-debit"
+      ],
+      "internalLinks": [
+        "/outils-pneumatiques/cisaille-prevost-twk20000/",
+        "/guides/flexible-enrouleur-raccords-garage-debit/",
+        "/guides/cle-a-chocs-manque-couple-diagnostic/",
+        "/guides/rupes-nitto-ponceuse-debit-max-vide/",
+        "/outils-pneumatiques/graveur-prevost-tes34000/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "5a6867607611e1c8341146bb890887590aeb8fbf216bb80329d669b8f6cbd8fa"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "compresseur-pour-taraudeuse-pneumatique",
+          "cosine": 0.453
+        },
+        {
+          "slug": "sumake-st-m5204r7-r3-perceuse-700-350",
+          "cosine": 0.44
+        },
+        {
+          "slug": "guide-complet-dimensionner-compresseur-air",
+          "cosine": 0.437
+        },
+        {
+          "slug": "gison-gp824st2-gp824st3-vitesse-air",
+          "cosine": 0.437
+        }
+      ],
+      "uniqueDecision": "Le catalogue qualifie les 113 l/min à vide. Préparer le besoin d’air du couteau pare-brise sans inventer une consommation pendant la coupe.",
+      "claims": [
+        {
+          "sourceId": "prevost-tools",
+          "location": "AT DOC14F, page PDF 42, table TWK 20000",
+          "assertion": "113 l/min de consommation à vide ; maximum 6,2 bar ; cadence 20 000 bpm, pas vitesse de broche. Débit chargé absent ; aucun verdict garanti de coupe continue inventé.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "prevost-tools",
+          "location": "AT DOC14F, page PDF42, libellé Crayon graveur TES34000 et colonne consommation à vide",
+          "assertion": "TES34000 est le crayon graveur du même tableau ; il reste distinct du couteau pare-brise TWK20000 et aucune équivalence de tâche ou consommation en charge n’est inférée.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "prevost-tools"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "compresseur-pour-taraudeuse-pneumatique",
+            "cosine": 0.454
+          },
+          {
+            "slug": "agre-worker-240-tw-debit-144-litres-6-bar",
+            "cosine": 0.445
+          },
+          {
+            "slug": "puma-at5348-deux-consommations-documentation",
+            "cosine": 0.443
+          },
+          {
+            "slug": "gison-gp824st2-gp824st3-vitesse-air",
+            "cosine": 0.441
+          }
+        ],
+        "editorialDifference": "Le voisin Rupes/Nitto expose les régimes. Ce guide prépare une découpe de joint de pare-brise TWK20000 avec les 113 l/min à vide et la cadence bpm correctement qualifiés, sans débit chargé fabriqué.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "rotair-26y-litres-minute-cfm-contradictions",
+      "title": "Rotair 26 Y : pourquoi la paire L/min et CFM doit être confirmée avant dimensionnement",
+      "seoTitle": "Rotair 26 Y : contradiction entre L/min et CFM",
+      "sha256": "05f56d22bc327473282ff7251e213ec94654da8ab712b3f9bd3b9a9d61c3bb2c",
+      "wordCount": 660,
+      "sources": [
+        "https://www.rotairspa.com/portable-compressors-diesel/mdvn-range/"
+      ],
+      "relatedGuideLinks": [
+        "contradiction-debit-cfm-m3-min-catalogues",
+        "convertir-cfm-l-min-nl-min-air-comprime",
+        "compresseur-reference-erp-nom-commercial"
+      ],
+      "internalLinks": [
+        "/guides/contradiction-debit-cfm-m3-min-catalogues/",
+        "/guides/convertir-cfm-l-min-nl-min-air-comprime/",
+        "/guides/compresseur-reference-erp-nom-commercial/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "ce4ec038cc35fde9709b13046a07e7589908350a7081d7b06307ff1c67d431e9"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "contradiction-debit-cfm-m3-min-catalogues",
+          "cosine": 0.453
+        },
+        {
+          "slug": "ceccato-drb-25-poste-10-bar-debit",
+          "cosine": 0.415
+        },
+        {
+          "slug": "hymair-ash300-10-6-cfm-400-litres-minute",
+          "cosine": 0.406
+        },
+        {
+          "slug": "sata-jetx-hvlp-420-430-445-debit",
+          "cosine": 0.396
+        }
+      ],
+      "uniqueDecision": "La page Rotair 26 Y présente des valeurs en L/min et CFM qui ne concordent pas. Conservez les cellules et faites confirmer le point de la version proposée.",
+      "claims": [
+        {
+          "sourceId": "rotair-mdvn",
+          "location": "Table 26 Y, première colonne à 6,5 bar",
+          "assertion": "2 650 L/min et 88 CFM publiés conjointement. Contradiction conservée sans arbitrage ; modèle exclu du lot de produits.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "rotair-mdvn"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "contradiction-debit-cfm-m3-min-catalogues",
+            "cosine": 0.457
+          },
+          {
+            "slug": "hymair-ash300-10-6-cfm-400-litres-minute",
+            "cosine": 0.412
+          },
+          {
+            "slug": "ceccato-drb-25-poste-10-bar-debit",
+            "cosine": 0.409
+          },
+          {
+            "slug": "convertir-cfm-l-min-nl-min-air-comprime",
+            "cosine": 0.402
+          }
+        ],
+        "editorialDifference": "Le guide des conversions donne une méthode. Ce guide conserve la ligne Rotair 26 Y précisément contradictoire, avec une demande de correction attribuable et un modèle exclu de l’import.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "rotair-mdvn34e-mdvn32b-alimentation-chantier",
+      "title": "Rotair MDVN 34 E ou 32 B : quel compresseur pour un chantier sans diesel ?",
+      "seoTitle": "Rotair MDVN 34 E ou 32 B : énergie et débit",
+      "sha256": "58e594c42c4daf82e5eb8186b9e888604024ddfabc39db494b731cbdc7688ac0",
+      "wordCount": 695,
+      "sources": [
+        "https://www.rotairspa.com/portable-compressors-diesel/mdvn-range/"
+      ],
+      "relatedGuideLinks": [
+        "choisir-compresseur-mobile-chantier-fad-autonomie",
+        "compresseur-kva-kw-kwh-devis-electrique",
+        "buse-sablage-diametre-pression-debit-compresseur"
+      ],
+      "internalLinks": [
+        "/guides/compresseur-kva-kw-kwh-devis-electrique/",
+        "/guides/choisir-compresseur-mobile-chantier-fad-autonomie/",
+        "/guides/buse-sablage-diametre-pression-debit-compresseur/",
+        "/compresseurs/rotair-mdvn-34-e/",
+        "/compresseurs/rotair-mdvn-32-b/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "029279a863ba45afd00a67ab3ec82c8c69d1622029b961c2a0ebee037a63dfb3"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "guide-complet-dimensionner-compresseur-air",
+          "cosine": 0.41
+        },
+        {
+          "slug": "festool-lex3-1505-290-350-litres-minute",
+          "cosine": 0.41
+        },
+        {
+          "slug": "choisir-compresseur-mobile-chantier-fad-autonomie",
+          "cosine": 0.405
+        },
+        {
+          "slug": "cle-a-chocs-manque-couple-diagnostic",
+          "cosine": 0.398
+        }
+      ],
+      "uniqueDecision": "MDVN 34 E électrique et MDVN 32 B essence publient des débits à 7 bar. Examinez l’énergie disponible et le poste avant de les substituer.",
+      "claims": [
+        {
+          "sourceId": "rotair-mdvn",
+          "location": "Tables MDVN 34 E et MDVN 32 B",
+          "assertion": "34 E électrique : 3 400 L/min à 7 bar ; 32 B essence : 3 200 L/min à 7 bar.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": null,
+          "location": "Différence arithmétique",
+          "assertion": "3 400 - 3 200 = 200 L/min ; 200 / 3 200 × 100 = 6,25 %. Aucune autonomie ou autorisation d’emploi locale déduite.",
+          "kind": "calculation",
+          "status": "reviewed_internal_calculation"
+        }
+      ],
+      "sourceIds": [
+        "rotair-mdvn"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "cle-a-chocs-manque-couple-diagnostic",
+            "cosine": 0.416
+          },
+          {
+            "slug": "choisir-compresseur-mobile-chantier-fad-autonomie",
+            "cosine": 0.413
+          },
+          {
+            "slug": "guide-complet-dimensionner-compresseur-air",
+            "cosine": 0.41
+          },
+          {
+            "slug": "festool-lex3-1505-290-350-litres-minute",
+            "cosine": 0.408
+          }
+        ],
+        "editorialDifference": "Le guide mobile est général. Ce guide relie deux références à leur énergie et à leur point de débit, puis distingue interdiction diesel, faisabilité électrique et autorisation d’un moteur essence.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "uht-hicupla-full-blow-raccord-incompatible",
+      "title": "Raccord UHT : pourquoi un coupleur FULL BLOW ne remplace pas le HI CUPLA annoncé",
+      "seoTitle": "UHT : HI CUPLA et FULL BLOW, raccords incompatibles",
+      "sha256": "0743062fb7762b2850b20ff8c723d7f0336f6b1f69f7ae199a66d0f6680c0666",
+      "wordCount": 628,
+      "sources": [
+        "https://www.uht.co.jp/en/support/faq/airtool/",
+        "https://www.uht.co.jp/ja/support/pdf/tl_manu.pdf"
+      ],
+      "relatedGuideLinks": [
+        "raccord-air-comprime-bsp-npt-1-4",
+        "raccord-rapide-securite-decompression-air-comprime",
+        "flexible-enrouleur-raccords-garage-debit"
+      ],
+      "internalLinks": [
+        "/guides/raccord-air-comprime-bsp-npt-1-4/",
+        "/guides/flexible-enrouleur-raccords-garage-debit/",
+        "/guides/raccord-rapide-securite-decompression-air-comprime/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "5a40d5754b45264e1cb8b03bf8979c31a633d27bae10bbb900143041018be212"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "flexible-sablage-verrouillage-joint-retenue",
+          "cosine": 0.46
+        },
+        {
+          "slug": "raccord-rapide-securite-decompression-air-comprime",
+          "cosine": 0.444
+        },
+        {
+          "slug": "raccord-air-comprime-bsp-npt-1-4",
+          "cosine": 0.436
+        },
+        {
+          "slug": "nitto-lock-cupla-200-verrouillage-decompression",
+          "cosine": 0.39
+        }
+      ],
+      "uniqueDecision": "Un profil de raccord proche ne suffit pas. Vérifier l’accouplement annoncé par UHT avant d’accuser la pression ou de modifier le flexible d’un outil.",
+      "claims": [
+        {
+          "sourceId": "uht-faq",
+          "location": "FAQ, raccord rapide",
+          "assertion": "Compatibilité HI CUPLA annoncée ; FULL BLOW CUPLA exclu pour l’ensemble concerné.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "uht-tl-manual",
+          "location": "Notice, pages PDF 1 et 2",
+          "assertion": "Montage livré et Metal Hose Joint 1937 identifiés ; alimentation coupée et air résiduel retiré avant déconnexion côté source, selon la notice.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "uht-faq",
+        "uht-tl-manual"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "raccord-rapide-securite-decompression-air-comprime",
+            "cosine": 0.445
+          },
+          {
+            "slug": "flexible-sablage-verrouillage-joint-retenue",
+            "cosine": 0.434
+          },
+          {
+            "slug": "raccord-air-comprime-bsp-npt-1-4",
+            "cosine": 0.428
+          },
+          {
+            "slug": "nitto-lock-cupla-200-verrouillage-decompression",
+            "cosine": 0.399
+          }
+        ],
+        "editorialDifference": "Le guide BSP/NPT traite le filetage. Ce guide traite l’exclusion FULL BLOW explicite d’UHT et l’identification des profils qui s’accouplent, avec la référence de pièce 1937.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "uht-microspindle-demarrage-intermittent-machine",
+      "title": "UHT MicroSpindle ne repart pas à chaque cycle : documenter une limite de démarrage",
+      "seoTitle": "UHT MicroSpindle : démarrage intermittent en machine",
+      "sha256": "a050945b6dadabea18e278910b17a59de6be3c1089f89f9a8fd3d481b3f1b9b0",
+      "wordCount": 619,
+      "sources": [
+        "https://www.uht.co.jp/en/support/faq/airtool/"
+      ],
+      "relatedGuideLinks": [
+        "biax-srd355-t365-micro-meuleuse",
+        "micro-meuleuse-50000-60000-tr-min",
+        "compresseur-machine-cnc-haas-pression-debit"
+      ],
+      "internalLinks": [
+        "/guides/compresseur-machine-cnc-haas-pression-debit/",
+        "/guides/micro-meuleuse-50000-60000-tr-min/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "53264525ab53534e9a12db02019f0a5e7543f6b31efdea826886006a994935bc"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "couper-air-comprime-machine-arret-week-end",
+          "cosine": 0.373
+        },
+        {
+          "slug": "graco-pro-xp-auto-cyl-sequence-air-fluide",
+          "cosine": 0.353
+        },
+        {
+          "slug": "festo-vuvg-commande-manuelle-verrouillee",
+          "cosine": 0.349
+        },
+        {
+          "slug": "sableuse-pression-maintien-depressurisation-arrets",
+          "cosine": 0.347
+        }
+      ],
+      "uniqueDecision": "Une broche arrêtée entre chaque cycle peut poser un problème de reprise. Lire la limite publiée par UHT avant de déclarer le réseau insuffisant.",
+      "claims": [
+        {
+          "sourceId": "uht-faq",
+          "location": "FAQ, MicroSpindle et fonctionnement intermittent",
+          "assertion": "Reprise du moteur à palettes non garantie à chaque marche-arrêt ; proposition de rotation au repos et surveillance à qualifier par l’intégrateur. Aucune fonction de sécurité certifiée inventée.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "uht-faq"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "couper-air-comprime-machine-arret-week-end",
+            "cosine": 0.375
+          },
+          {
+            "slug": "graco-pro-xp-auto-cyl-sequence-air-fluide",
+            "cosine": 0.348
+          },
+          {
+            "slug": "festo-vuvg-commande-manuelle-verrouillee",
+            "cosine": 0.339
+          },
+          {
+            "slug": "compresseur-ne-demarre-plus-froid-rallonge",
+            "cosine": 0.339
+          }
+        ],
+        "editorialDifference": "Le voisin arrêt de week-end traite la remise en service. Ce guide traite la limite de reprise du moteur à palettes UHT et distingue ordre, alimentation et rotation dans un cycle machine.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "uht-turbolap-casse-ebavurage-appui-excessif",
+      "title": "TurboLap casse après ébavurage : vérifier l’usage avant d’augmenter la pression",
+      "seoTitle": "TurboLap cassé : ébavurage et appui excessif",
+      "sha256": "3e3d39f78c3149d61721c51c823d7fd398b77763810e71a05727f01b3cb6886f",
+      "wordCount": 629,
+      "sources": [
+        "https://www.uht.co.jp/ja/support/pdf/tl_manu.pdf"
+      ],
+      "relatedGuideLinks": [
+        "uht-turbolap-vanne-debit-regulateur-pression",
+        "uht-turbolap-tll-tls-trajectoire-angle-moule",
+        "compresseur-pour-meuleuse-pneumatique"
+      ],
+      "internalLinks": [
+        "/guides/compresseur-pour-meuleuse-pneumatique/",
+        "/guides/uht-turbolap-vanne-debit-regulateur-pression/",
+        "/guides/uht-turbolap-tll-tls-trajectoire-angle-moule/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "3008e16ea39005a9efbbc6d81aa9b3ad5797a262238c65ada1029370b4db7f42"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "cloueur-clous-mal-enfonces-pression-profondeur",
+          "cosine": 0.408
+        },
+        {
+          "slug": "compresseur-ne-monte-plus-en-pression",
+          "cosine": 0.358
+        },
+        {
+          "slug": "graco-pro-xp-fuite-fluide-sous-capot",
+          "cosine": 0.338
+        },
+        {
+          "slug": "suhner-umc6rl-lime-course-rainure",
+          "cosine": 0.335
+        }
+      ],
+      "uniqueDecision": "Des réparations répétées ne prouvent pas un manque d’air. La notice UHT aide à séparer l’usage de finition, la surcharge et le diagnostic atelier.",
+      "claims": [
+        {
+          "sourceId": "uht-tl-manual",
+          "location": "Notice, page PDF 2, Troubleshooting et Precautions",
+          "assertion": "Polissage et finition de moules ; ébavurage exclu ; appui excessif comme cause possible ; révision selon le défaut. Aucun diagnostic interne à distance.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "uht-tl-manual"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "cloueur-clous-mal-enfonces-pression-profondeur",
+            "cosine": 0.401
+          },
+          {
+            "slug": "compresseur-ne-monte-plus-en-pression",
+            "cosine": 0.349
+          },
+          {
+            "slug": "graco-pro-xp-fuite-fluide-sous-capot",
+            "cosine": 0.338
+          },
+          {
+            "slug": "compresseur-portatif-clouage-chantier",
+            "cosine": 0.333
+          }
+        ],
+        "editorialDifference": "Le guide vitesse d’abrasif traite une autre limite. Ce guide explique une répétition de casse en ébavurage, usage exclu par la notice TurboLap, et distingue réparation et correction du procédé.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "uht-turbolap-course-pointe-longueur-masse",
+      "title": "TurboLap : pourquoi une autre pierre peut changer l’amplitude ressentie à la pointe",
+      "seoTitle": "TurboLap : course, longueur et masse de la pointe",
+      "sha256": "2b2a9f6534a83c1e2fb9be7a5876b8dffb519376571c90163eaef68321f1d4df",
+      "wordCount": 706,
+      "sources": [
+        "https://www.uht.co.jp/pdf/turbolap.pdf",
+        "https://www.uht.co.jp/ja/support/pdf/tl_manu.pdf"
+      ],
+      "relatedGuideLinks": [
+        "uht-turbolap-tll-tls-trajectoire-angle-moule",
+        "flexible-court-outil-pneumatique-vibrations",
+        "vibrations-outils-emission-exposition-a8"
+      ],
+      "internalLinks": [
+        "/guides/uht-turbolap-tll-tls-trajectoire-angle-moule/",
+        "/guides/vibrations-outils-emission-exposition-a8/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "94974f55fcf24045b10b2910d99a5145c5287abbf55e4d20da2c3d59d3a3218d"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "mannesmann-g16000-gl16000-meuleuse-cavite-profonde",
+          "cosine": 0.377
+        },
+        {
+          "slug": "mauguiere-mav30-366-294-litres-pression",
+          "cosine": 0.373
+        },
+        {
+          "slug": "gentilin-ac200-debit-5-8-bar",
+          "cosine": 0.372
+        },
+        {
+          "slug": "sumake-cg25-meuleuse-pince-sens-rotation",
+          "cosine": 0.365
+        }
+      ],
+      "uniqueDecision": "Une course nominale ne décrit pas toute pointe montée. Identifier la configuration de référence et les changements d’accessoire avant de diagnostiquer.",
+      "claims": [
+        {
+          "sourceId": "uht-tl-catalog",
+          "location": "Catalogue, page PDF 2, note de pointe",
+          "assertion": "Amplitude liée à la longueur et à la masse de la pointe, sans formule universelle. TLS-03 cité pour une amplitude importante à faible régime ; aucune validation d’un accessoire différent ou exposition opérateur déduite.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "uht-tl-manual",
+          "location": "Notice, page PDF 2, précautions",
+          "assertion": "Accessoires de dimensions appropriées, pas de modification ; arrêt lors de bruit, chaleur ou vibration anormale.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "uht-tl-catalog",
+        "uht-tl-manual"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "mannesmann-g16000-gl16000-meuleuse-cavite-profonde",
+            "cosine": 0.376
+          },
+          {
+            "slug": "gentilin-ac200-debit-5-8-bar",
+            "cosine": 0.372
+          },
+          {
+            "slug": "mauguiere-mav30-366-294-litres-pression",
+            "cosine": 0.371
+          },
+          {
+            "slug": "makita-an930h-compresseur-10-bar-haute-pression",
+            "cosine": 0.359
+          }
+        ],
+        "editorialDifference": "Le guide meuleuse en cavité traite corps et rallonge. Ce guide explique pourquoi changer masse et longueur de pointe TurboLap interdit de déduire une amplitude exacte depuis le seul modèle.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "uht-turbolap-tll-tls-trajectoire-angle-moule",
+      "title": "UHT TurboLap TLL ou TLS : choisir le mouvement qui atteint réellement le fond du moule",
+      "seoTitle": "TurboLap TLL ou TLS : atteindre un angle de moule",
+      "sha256": "dd66cf43c23202673ef5aa9061c98a5ec2de80a7cfa4951b1873d71938d2d513",
+      "wordCount": 655,
+      "sources": [
+        "https://www.uht.co.jp/pdf/turbolap.pdf",
+        "https://www.uht.co.jp/ja/support/pdf/tl_manu.pdf"
+      ],
+      "relatedGuideLinks": [
+        "kinshun-mag095a-mag095d-meuleuse-cavite",
+        "biax-srd355-t365-micro-meuleuse",
+        "groupe-frl-filtre-regulateur-lubrificateur"
+      ],
+      "internalLinks": [
+        "/guides/kinshun-mag095a-mag095d-meuleuse-cavite/",
+        "/guides/groupe-frl-filtre-regulateur-lubrificateur/",
+        "/outils-pneumatiques/lime-alternative-uht-tll-07/",
+        "/outils-pneumatiques/lime-alternative-uht-tls-07/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "335d20500f875aebb889d2fd215afbd7b994d20a2abcdecc0b85e142cc379f26"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "suhner-umc6rl-lime-course-rainure",
+          "cosine": 0.364
+        },
+        {
+          "slug": "iwata-lw1-rallonge-angle-cavite",
+          "cosine": 0.35
+        },
+        {
+          "slug": "uryu-ug38n-ug38nl-meuleuse-longue-debit",
+          "cosine": 0.325
+        },
+        {
+          "slug": "kinshun-mag095a-mag095d-meuleuse-cavite",
+          "cosine": 0.315
+        }
+      ],
+      "uniqueDecision": "Une empreinte étroite ne se polit pas comme une face ouverte. Comparer les trajectoires TLL et TLS avant de choisir la course ou le compresseur.",
+      "claims": [
+        {
+          "sourceId": "uht-tl-catalog",
+          "location": "Catalogue, page PDF 2, trajectoires",
+          "assertion": "TLL : va-et-vient linéaire ; TLS : trajectoire elliptique. Géométrie illustrée sans échelle ni amplitude calculée.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        },
+        {
+          "sourceId": "uht-tl-manual",
+          "location": "Notice, pages PDF 1 et 2, montage et précautions",
+          "assertion": "Super Collet requis ; montage complet et accessoire admissible. Les anciens débits du catalogue ne sont pas attribués aux modèles actuels.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "uht-tl-catalog",
+        "uht-tl-manual"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "suhner-umc6rl-lime-course-rainure",
+            "cosine": 0.371
+          },
+          {
+            "slug": "iwata-lw1-rallonge-angle-cavite",
+            "cosine": 0.36
+          },
+          {
+            "slug": "uryu-ug38n-ug38nl-meuleuse-longue-debit",
+            "cosine": 0.339
+          },
+          {
+            "slug": "kinshun-mag095a-mag095d-meuleuse-cavite",
+            "cosine": 0.322
+          }
+        ],
+        "editorialDifference": "Le voisin Suhner traite une autre lime. Ce guide compare TLL linéaire et TLS elliptique pour le dégagement dans un angle, avec l’enveloppe du montage complet.",
+        "substitutionOfModelOnly": false
+      }
+    },
+    {
+      "slug": "uht-turbolap-vanne-debit-regulateur-pression",
+      "title": "TurboLap ralentit : distinguer la vanne de débit du réglage de pression",
+      "seoTitle": "TurboLap : vanne de débit ou régulateur de pression ?",
+      "sha256": "7f650c516356e0d899678733be781a93b209524ca1b66f21a6b7bdd1e14e7251",
+      "wordCount": 579,
+      "sources": [
+        "https://www.uht.co.jp/ja/support/pdf/tl_manu.pdf"
+      ],
+      "relatedGuideLinks": [
+        "uht-turbolap-course-pointe-longueur-masse",
+        "pression-regulateur-varie-cuve-compresseur-spe",
+        "groupe-frl-filtre-regulateur-lubrificateur"
+      ],
+      "internalLinks": [
+        "/guides/pression-regulateur-varie-cuve-compresseur-spe/",
+        "/guides/groupe-frl-filtre-regulateur-lubrificateur/",
+        "/guides/uht-turbolap-course-pointe-longueur-masse/"
+      ],
+      "svgCount": 1,
+      "svgSha256": [
+        "66274ceb53b0160682af3e8da06499a32b45662f408d46528ce26587f34bec7c"
+      ],
+      "lexicalNearestExistingGuides": [
+        {
+          "slug": "makita-an930h-compresseur-10-bar-haute-pression",
+          "cosine": 0.475
+        },
+        {
+          "slug": "compresseur-aerographe-iwata-eclipse-hp-cs",
+          "cosine": 0.47
+        },
+        {
+          "slug": "cloueur-clous-mal-enfonces-pression-profondeur",
+          "cosine": 0.46
+        },
+        {
+          "slug": "air-assist-laser-gravure-compresseur-pression",
+          "cosine": 0.458
+        }
+      ],
+      "uniqueDecision": "La poignée et le régulateur n’effectuent pas le même réglage. Organiser les relevés avant de compenser un ralentissement par une hausse de pression.",
+      "claims": [
+        {
+          "sourceId": "uht-tl-manual",
+          "location": "Notice, page PDF 2, Operation Procedure et Troubleshooting",
+          "assertion": "Vanne de passage pour le fonctionnement, régulateur pour la pression ; appui excessif comme cause possible. Aucune hausse au-delà de la plage prescrite utilisée comme réparation.",
+          "kind": "documentary_fact",
+          "status": "reviewed_documentary"
+        }
+      ],
+      "sourceIds": [
+        "uht-tl-manual"
+      ],
+      "review": {
+        "internal": true,
+        "physicalTests": false,
+        "externalProfessionalValidation": false,
+        "sourceScopeChecked": true,
+        "missingConditionsPreserved": true,
+        "numericClaimsReviewed": true,
+        "svgPointsCalculatedForQuantitativeCharts": true
+      },
+      "nearNeighborReview": {
+        "existingCompared": 656,
+        "closestLexicalGuides": [
+          {
+            "slug": "makita-an930h-compresseur-10-bar-haute-pression",
+            "cosine": 0.504
+          },
+          {
+            "slug": "compresseur-aerographe-iwata-eclipse-hp-cs",
+            "cosine": 0.482
+          },
+          {
+            "slug": "max-akhl1260e-haute-pression-sorties-regular-high",
+            "cosine": 0.474
+          },
+          {
+            "slug": "air-assist-laser-gravure-compresseur-pression",
+            "cosine": 0.471
+          }
+        ],
+        "editorialDifference": "Les voisins traitent la pression générale. Ce guide sépare les deux organes de réglage TurboLap et le ralentissement lié à l’alimentation de celui lié à la configuration de travail.",
+        "substitutionOfModelOnly": false
+      }
+    }
+  ],
+  "validation": {
+    "guides": 30,
+    "words": 20219,
+    "svgCount": 30,
+    "errors": [],
+    "productionBuildRun": false,
+    "frontmatterBasicValidation": true,
+    "linkValidationAgainstSourceFiles": true,
+    "actualAstroContentSchemaValidation": {
+      "guides": 30,
+      "failures": 0,
+      "source": "src/content.config.ts and project taxonomy, executed with astro/zod"
+    },
+    "captionMarkdownSeparatorCorrection": {
+      "observedAt": "2026-10-07T15:54:23.736975+00:00",
+      "affectedGuides": 30,
+      "insertedBytesPerGuide": 1,
+      "allOtherGuideBytesIdentical": true,
+      "allSvgBytesIdentical": true,
+      "factsAndSourcesUnchanged": true,
+      "generatedHtmlAfterRootRebuild": "pass",
+      "reason": "A missing blank line after the controlled HTML container left the following Markdown emphasis literal in generated HTML.",
+      "generatedHtmlObservedAt": "2026-10-07T16:08:09.421341+00:00"
+    },
+    "localStaticBuild": {
+      "status": "pass",
+      "executor": "root",
+      "astroPages": 46705,
+      "warmRebuildDurationSeconds": 294,
+      "warmRebuildDurationDisplay": "4m54",
+      "buildCompletionObservedAt": "2026-10-07T16:10:45.047258+00:00",
+      "evidence": "Private build-warm-caption.log: 46705 page(s) built in 4m 54s; build Complete. Root reported exit0.",
+      "productionCiBuildConfirmed": false
+    },
+    "localGeneratedHtmlValidation": {
+      "status": "pass",
+      "observedAt": "2026-10-07T16:08:09.421341+00:00",
+      "guides": 30,
+      "emphasizedCaptions": 30,
+      "literalMarkdownCaptions": 0,
+      "internalLinks": 95,
+      "declaredSourceLinks": 35,
+      "svgCount": 30,
+      "metadataAndCanonicalMatches": true,
+      "robots": "noindex,follow",
+      "noNewIndexationAdmissionOrAlias": true,
+      "sourceAndDossierSha256Matches": true,
+      "accessibleSvgAndCoherentViewBox": true,
+      "responsiveCompactSvgCssDeclarationConfirmed": true,
+      "computedBrowserLayoutCheckedByThisAudit": false,
+      "privateEvidence": "final-guide-build-verification.json; generated-html-160703.json; verify-30-guides-local-files-2026-10-07T16-07-03.509Z.json",
+      "publicHttpsProductionParityConfirmed": false
+    }
+  },
+  "visualValidation": {
+    "standaloneSvgRendering": true,
+    "guides": 30,
+    "font": "Manrope Variable bundled actual font",
+    "viewportWidths": [
+      360,
+      1280
+    ],
+    "textOverflows": 0,
+    "publicAstroPageRendering": false,
+    "evidencePrivate": "visual-qa.json + screenshots",
+    "networkDisabledInRendering": true
+  },
+  "reviewRequiredByRoot": [
+    "Haas (trois URL) et Festo : refus HTTP403 en capture directe, mais passages primaires archivés. Relire ces passages et conserver la disponibilité externe distincte de la preuve documentaire.",
+    "Vaisala : URL nommée PDF servant une réponse HTML ; citations par sections, aucun PDF original revendiqué.",
+    "UHT : ancien catalogue utilisé pour trajectoire et amplitude seulement ; aucun ancien débit transféré aux fiches actuelles.",
+    "Prevost IBG 06SIL : 9 Nm³/h dans la brochure et 160 l/min sur la fiche ; conditions de référence et version non arbitrées.",
+    "NXV08 : guide à 125 psig distinct du point produit à 100 psig ; les points de courbe ne sont pas une certification de limite mécanique.",
+    "Rotair 26 Y : 2 650 L/min et 88 CFM conservés comme contradiction ; aucun produit 26 Y ajouté."
+  ],
+  "preparationState": "local_html_validated_pending_main_validation_ci_and_production"
+}

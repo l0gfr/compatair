@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "sioux-scn20r",
 	"slug": "sioux-scn20r",
 	"brand": "Sioux",

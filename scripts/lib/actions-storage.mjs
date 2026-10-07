@@ -1,6 +1,11 @@
 const shaPattern = /^[a-f0-9]{40}$/;
 const fullArtifactPattern = /^(?:compatair-production-|lighthouse-(?:production-)?)([a-f0-9]{40})$/;
 const threeDays = 3 * 24 * 60 * 60 * 1000;
+function timestamp(value) {
+	if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z$/.test(value)) return NaN;
+	const parsed = Date.parse(value);
+	return Number.isFinite(parsed) && new Date(parsed).toISOString().slice(0, 19) === value.slice(0, 19) ? parsed : NaN;
+}
 
 // Only generated release archives, full Lighthouse reports and redundant CodeQL
 // caches are eligible. Signed invariants and source/security evidence are excluded.
@@ -28,6 +33,26 @@ export function planActionsStorage({ artifacts, runs, caches, liveSha, expectedS
 		return artifact.name.startsWith('compatair-production-') || run.conclusion === 'success'
 			|| now - Date.parse(artifact.created_at) > threeDays;
 	});
+	// Reruns can upload several copies of a protected SHA. Only a wholly known,
+	// successful group permits deduplication; an uncertain observed rollback stays.
+	for (const sha of protectedShas) {
+		const group = artifacts.filter(artifact => artifact.name === `compatair-production-${sha}`);
+		if (group.length < 2 || !group.every(artifact => {
+			const run = byRunId.get(artifact.workflow_run?.id);
+			const createdAt = timestamp(artifact.created_at), startedAt = timestamp(run?.created_at);
+			return artifact.expired === false && Number.isSafeInteger(artifact.id) && artifact.id > 0
+				&& artifacts.filter(candidate => candidate.id === artifact.id).length === 1
+				&& run && Number.isSafeInteger(run.id) && run.id > 0
+				&& runs.filter(candidate => candidate.id === run.id).length === 1
+				&& run.status === 'completed' && run.conclusion === 'success' && run.head_sha === sha
+				&& artifact.workflow_run.head_sha === sha
+				&& (artifact.workflow_run.head_branch === undefined || artifact.workflow_run.head_branch === 'main')
+				&& Number.isFinite(createdAt) && Number.isFinite(startedAt) && createdAt >= startedAt && createdAt <= now;
+		})) continue;
+		group.sort((a, b) => timestamp(b.created_at) - timestamp(a.created_at));
+		if (timestamp(group[0].created_at) === timestamp(group[1].created_at)) continue;
+		deleteArtifacts.push(...group.slice(1));
+	}
 	const cacheGroups = new Map();
 	for (const cache of caches) {
 		const match = /^(codeql-overlay-base-database-.+)-[a-f0-9]{40}-\d+-\d+$/.exec(cache.key);

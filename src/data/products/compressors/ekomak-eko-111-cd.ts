@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "ekomak-eko-111-cd",
   "slug": "ekomak-eko-111-cd",
   "brand": "Ekomak",
@@ -13,6 +15,7 @@ const product = {
     }
   },
   "maxPressureBar": 13,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 13,
@@ -100,6 +103,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4c-ekomak-page-gear-drive-eko-111-160-cd-p1"
+    ],
     "model": [
       "october4c-ekomak-page-gear-drive-eko-111-160-cd-p1"
     ],

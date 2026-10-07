@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "firstair-fas22",
   "slug": "firstair-fas22",
   "brand": "firstAir",
@@ -16,6 +18,7 @@ const product = {
     }
   },
   "maxPressureBar": 10.342,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 8.618,
@@ -139,6 +142,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october5-firstair-fas-p3"
+    ],
     "model": [
       "october5-firstair-fas-p3"
     ],

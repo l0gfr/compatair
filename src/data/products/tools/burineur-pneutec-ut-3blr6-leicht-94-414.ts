@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "burineur-pneutec-ut-3blr6-leicht-94-414",
 	"slug": "burineur-pneutec-ut-3blr6-leicht-94-414",
 	"categoryId": "burineur",

@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "lime-alternative-mannesmann-demag-frv-60-b-29900-07-6",
 	"slug": "lime-alternative-mannesmann-demag-frv-60-b-29900-07-6",
 	"categoryId": "lime-alternative",

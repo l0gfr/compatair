@@ -115,7 +115,12 @@ export function createProofGraph(
 	const airflowField = addField('tool', 'airflowLpm', 'Consommation de l’outil', airflow, `${tool.brand} ${tool.model} · modèle de demande ${tool.demandModel}.`);
 	const pressureField = addField('tool', 'workingPressureBar', 'Pression de travail', tool.workingPressureBar.typical === undefined ? 'Non documentée' : `${tool.workingPressureBar.typical.toLocaleString('fr-FR')} bar`, 'La pression sert à choisir le point FAD comparable sur le compresseur.');
 	const curveField = addField('compressor', 'fadCurve', 'Courbe FAD du compresseur', compressor.fadCurve.length ? compressor.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ') : 'Aucun point publié', 'Sont autorisés : valeur exacte, interpolation entre deux points et borne conservatrice issue d’un point mesuré à une pression supérieure au besoin.');
-	const maxPressureField = addField('compressor', 'maxPressureBar', 'Pression maximale', `${compressor.maxPressureBar.toLocaleString('fr-FR')} bar`, 'Une pression maximale inférieure au besoin rend la configuration incompatible.');
+	const documentedPointOnly = compressor.maxPressureBasis === 'selected-working-pressure-ceiling';
+	const maxPressureField = addField('compressor', 'maxPressureBar', documentedPointOnly ? 'Pression du point documenté' : 'Pression maximale', `${compressor.maxPressureBar.toLocaleString('fr-FR')} bar`, documentedPointOnly ? 'Cette pression qualifie le point publié. Un besoin supérieur reste indéterminé : la pression maximale de la machine et son débit au-delà ne sont pas établis.' : 'Une pression maximale inférieure au besoin rend la configuration incompatible.');
+	if (compressor.maxPressureBasis) {
+		const basisField = addField('compressor', 'maxPressureBasis', 'Nature de la pression publiée', documentedPointOnly ? 'Point de fonctionnement documenté' : 'Maximum de travail explicite', 'La qualification provient de la source fabricant attribuée à ce champ.');
+		addEdge(basisField, maxPressureField, 'qualifie la portée de la pression');
+	}
 	addEdge(airflowField, 'calculation:required-fad', 'alimente');
 	addEdge(pressureField, 'calculation:available-fad', 'sélectionne la pression');
 	addEdge(curveField, 'calculation:available-fad', 'permet valeur exacte, interpolation ou borne conservatrice');

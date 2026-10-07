@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "taraudeuse-mannesmann-demag-may-12-136-309-016",
 	"slug": "taraudeuse-mannesmann-demag-may-12-136-309-016",
 	"categoryId": "taraudeuse",

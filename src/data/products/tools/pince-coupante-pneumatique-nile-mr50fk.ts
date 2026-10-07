@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "pince-coupante-pneumatique-nile-mr50fk",
 	"slug": "pince-coupante-pneumatique-nile-mr50fk",
 	"categoryId": "pince-coupante-pneumatique",

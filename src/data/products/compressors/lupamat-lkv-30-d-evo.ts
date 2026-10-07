@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "lupamat-lkv-30-d-evo",
   "slug": "lupamat-lkv-30-d-evo",
   "brand": "Lupamat",
@@ -13,6 +15,7 @@ const product: unknown = {
     }
   },
   "maxPressureBar": 13,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 13,
@@ -100,6 +103,9 @@ const product: unknown = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4b-lupamat-current-catalog-p12"
+    ],
     "model": [
       "october4b-lupamat-current-catalog-p12"
     ],

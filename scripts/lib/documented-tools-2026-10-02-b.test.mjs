@@ -1,3 +1,4 @@
+import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { buildDocumentedToolsOctober2B } from './documented-tools-2026-10-02-b.mjs';
@@ -24,9 +25,7 @@ describe('documented tools, October 2, second batch', () => {
   expect(new Set(batch.map(product => `${normalize(product.brand)}:${normalize(product.mpn)}`)).size).toBe(2000);
   for (const product of batch) {
    const text = readFileSync(new URL(`../../src/data/products/tools/${product.slug}.ts`, import.meta.url), 'utf8');
-   const prefix = 'const product = ', suffix = ';\n\nexport default product;\n';
-   expect(text.startsWith(prefix) && text.endsWith(suffix)).toBe(true);
-   expect(toolProfileSchema.parse(JSON.parse(text.slice(prefix.length, -suffix.length)))).toEqual(toolProfileSchema.parse(product));
+   expect(toolProfileSchema.parse(parseCatalogProductSource('tools', text))).toEqual(toolProfileSchema.parse(product));
   }
  });
  it('attaches a dated, hashed primary source to every technical field', () => {

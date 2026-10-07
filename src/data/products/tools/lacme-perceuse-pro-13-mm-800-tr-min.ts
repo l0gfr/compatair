@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "lacme-perceuse-pro-13-mm-800-tr-min",
 	"slug": "lacme-perceuse-pro-13-mm-800-tr-min",
 	"brand": "Lacmé",

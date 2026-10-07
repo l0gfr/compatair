@@ -7,6 +7,7 @@ export type ContextualComparisonCompressor = {
 	brand: string;
 	model: string;
 	maxPressureBar: number;
+	maxPressureBasis?: 'explicit-maximum-working-pressure' | 'selected-working-pressure-ceiling';
 	fadCurve: Array<{ pressureBar: number; litersPerMinute: number }>;
 	tankLiters?: number;
 	dutyCycle?: number;
@@ -69,7 +70,7 @@ export function evaluateContextualCompressor(
 	const result = sizeConfiguration({
 		...sizingInput,
 		compressor: {
-			maxPressureBar: compressor.maxPressureBar,
+			maxPressureBar: compressor.maxPressureBar, maxPressureBasis: compressor.maxPressureBasis,
 			availableFadLpm: availableFad?.litersPerMinute,
 			availableFadBasis: availableFad?.basis,
 			tankLiters: compressor.tankLiters,

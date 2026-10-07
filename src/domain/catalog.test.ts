@@ -34,12 +34,12 @@ describe('catalog schemas', () => {
 		expect(product.oilType).toBe('unknown');
 		expect(() => compressorSchema.parse({ ...product, oilType: 'maybe-oil' })).toThrow();
 	});
-	it('rejects a FAD point above the compressor maximum pressure', () => {
+	it('rejects a FAD point above the documented pressure ceiling', () => {
 		const compressor = compressors[0];
 		expect(() => compressorSchema.parse({
 			...compressor,
 			fadCurve: [{ pressureBar: compressor.maxPressureBar + 1, litersPerMinute: 1 }],
-		})).toThrow('La pression FAD ne peut pas dépasser la pression maximale.');
+		})).toThrow('La pression FAD ne peut pas dépasser le plafond de pression documenté.');
 	});
 
 	it('rejects inverted nominal pressure and airflow ranges', () => {

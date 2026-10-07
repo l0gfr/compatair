@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "gentilin-smart-dry-3-25-s",
 	"slug": "gentilin-smart-dry-3-25-s",
 	"brand": "Gentilin",

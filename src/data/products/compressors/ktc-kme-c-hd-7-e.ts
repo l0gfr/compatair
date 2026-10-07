@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "ktc-kme-c-hd-7-e",
 	"slug": "ktc-kme-c-hd-7-e",
 	"brand": "KTC",
@@ -16,6 +18,7 @@ const product: unknown = {
 	},
 	"tankLiters": 0,
 	"maxPressureBar": 10,
+	"maxPressureBasis": "selected-working-pressure-ceiling",
 	"fadCurve": [
 		{
 			"pressureBar": 10,
@@ -113,6 +116,9 @@ const product: unknown = {
 		}
 	],
 	"fieldSources": {
+		"maxPressureBasis": [
+			"october4-ktc-download-4-p4"
+		],
 		"model": [
 			"october4-ktc-download-4-p4"
 		],

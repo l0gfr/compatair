@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "ozen-osc-250-sd",
   "slug": "ozen-osc-250-sd",
   "brand": "Ozen",
@@ -15,6 +17,7 @@ const product = {
     }
   },
   "maxPressureBar": 13,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 12.5,
@@ -110,6 +113,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october5-ozen-catalog-2025-p38"
+    ],
     "model": [
       "october5-ozen-catalog-2025-p38"
     ],

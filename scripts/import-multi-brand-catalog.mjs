@@ -1,3 +1,4 @@
+import { buildCatalogProductSource } from './lib/catalog-tooling.mjs';
 import { readFile, writeFile, access } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import sharp from 'sharp';
@@ -11,7 +12,7 @@ for (const [kind, rows, factory] of [['compressors', snapshot.rows, createMultiB
 	for (const row of rows) {
 		const p = factory(snapshot, row);
 		const file = resolve(root, `src/data/products/${kind}/${p.id}.ts`);
-		const content = `const product = ${JSON.stringify(p, null, '\t')};\n\nexport default product;\n`;
+		const content = buildCatalogProductSource(kind, p, '\t');
 		try { await access(file); if (await readFile(file, 'utf8') !== content) throw new Error(`Référence existante différente : ${p.id}`); }
 		catch (error) { if (error.code !== 'ENOENT') throw error; await writeFile(file, content); }
 		const name = `${p.brand} ${p.model}`;

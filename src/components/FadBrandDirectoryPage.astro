@@ -4,7 +4,7 @@ import CatalogSignalVisual from '../components/CatalogSignalVisual.astro';
 import DirectoryBrowser from '../components/DirectoryBrowser.astro';
 import { compressors } from '../data/catalog';
 import { brandSlug } from '../domain/brand';
-import { compressorDisplayName, compressorTankLabel } from '../domain/product-display';
+import { compressorDisplayName, compressorPressureLabel, compressorTankLabel } from '../domain/product-display';
 import { serializeJsonLd } from '../domain/structured-data';
 import { sourceQualityLabel } from '../domain/source-quality';
 
@@ -82,7 +82,7 @@ const itemListJsonLd = {
 				<p class="directory-count" data-directory-count>{pageDocumented.length} résultats avec FAD sur cette page</p>
 				<div class="compare-table-wrap">
 					<table class="compare-table">
-						<thead><tr><th>Modèle</th><th>Cuve</th><th>Pression maximale</th><th>Débit réellement restitué</th><th>Qualité des données</th></tr></thead>
+						<thead><tr><th>Modèle</th><th>Cuve</th><th>Pression publiée</th><th>Débit réellement restitué</th><th>Qualité des données</th></tr></thead>
 						<tbody data-directory-grid>
 							{pageDocumented.map((item) => (
 								<tr
@@ -94,7 +94,7 @@ const itemListJsonLd = {
 								>
 									<th><a href={`/compresseurs/${item.slug}/`}>{compressorDisplayName(item)}</a></th>
 									<td>{compressorTankLabel(item)}</td>
-									<td>{item.maxPressureBar} bar</td>
+									<td>{compressorPressureLabel(item)}</td>
 									<td>{item.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ')}</td>
 									<td>{sourceQualityLabel(item.confidence)}<small>Grade {item.confidence}</small></td>
 								</tr>

@@ -21,6 +21,7 @@ const runtimeCompressorSchema = z.object({
 	brand: z.string().min(1).max(160),
 	model: z.string().min(1).max(240),
 	maxPressureBar: z.number().positive().max(50),
+	maxPressureBasis: z.enum(['explicit-maximum-working-pressure', 'selected-working-pressure-ceiling']).optional(),
 	// The documented industrial catalog includes deliveries above 20 m³/min.
 	// Keep a finite 100 m³/min ceiling; tool and browser batch limits stay separate.
 	fadCurve: z.array(z.object({ pressureBar: z.number().nonnegative().max(50), litersPerMinute: z.number().positive().max(100_000) })),
@@ -103,7 +104,7 @@ function projectFieldSources(fieldSources: Record<string, string[]>, fields: str
 	return Object.fromEntries(fields.flatMap((field) => fieldSources[field]?.length ? [[field, fieldSources[field]]] : []));
 }
 
-const compressorRuntimeFields = ['fadCurve', 'maxPressureBar', 'tankLiters', 'dutyCycle', 'voltage', 'phase', 'powerKw', 'noiseDb', 'mobility'];
+const compressorRuntimeFields = ['fadCurve', 'maxPressureBar', 'maxPressureBasis', 'tankLiters', 'dutyCycle', 'voltage', 'phase', 'powerKw', 'noiseDb', 'mobility'];
 
 function compressorRuntimeEvidence(item: Compressor) {
 	const ids = new Set(Object.values(projectFieldSources(item.fieldSources, [...compressorRuntimeFields, 'tankLiters', 'dutyCycle'])).flat());
@@ -127,7 +128,7 @@ export function createRuntimeCatalog(compressors: Compressor[], tools: ToolProfi
 			slug: item.slug,
 			brand: item.brand,
 			model: item.model,
-			maxPressureBar: item.maxPressureBar,
+			maxPressureBar: item.maxPressureBar, maxPressureBasis: item.maxPressureBasis,
 			fadCurve: item.fadCurve,
 			tankLiters: item.tankLiters,
 			dutyCycle: item.dutyCycle,

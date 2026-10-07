@@ -1,0 +1,122 @@
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
+  "id": "soufflette-prevost-bgm-106",
+  "slug": "soufflette-prevost-bgm-106",
+  "categoryId": "soufflette",
+  "category": "soufflette",
+  "label": "Prevost BGM 106",
+  "brand": "Prevost",
+  "model": "BGM 106",
+  "mpn": "BGM 106",
+  "demandModel": "variable-volume",
+  "workingPressureBar": {},
+  "demandExplanation": "Le régime de consommation et/ou la pression de travail appariée ne sont pas définis. Le débit publié reste hors du calcul FAD.",
+  "confidence": "B",
+  "variant": {
+    "familyId": "prevost-bgm-106",
+    "label": "BGM 106",
+    "distinguishingAttributes": {
+      "Fonction de la fiche fabricant": "Blow gun with extra long nozzle (300 mm)",
+      "Net weight (kg)": "0.144 Kg",
+      "Length": "0.3 m",
+      "Female thread": "G1/4"
+    }
+  },
+  "image": {
+    "src": "/images/products/soufflette-prevost-bgm-106.svg",
+    "alt": "Repères techniques : Prevost BGM 106",
+    "sourceUrl": "https://www.prevost.eu/blow-gun-extra-long-nozzle-300-mm-49592",
+    "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+  },
+  "editorial": {
+    "overview": "Prevost BGM 106. Le régime de consommation et/ou la pression de travail appariée ne sont pas définis. Le débit publié reste hors du calcul FAD. BGM 106 : Blow gun with extra long nozzle (300 mm). Length: 0.3 m; Female thread: G1/4.",
+    "verifiedFacts": [
+      "Fonction de la fiche fabricant : Blow gun with extra long nozzle (300 mm).",
+      "Net weight (kg) : 0.144 Kg.",
+      "Length : 0.3 m.",
+      "Female thread : G1/4.",
+      "Consommation publiée dans son unité originale : 340 l/min.",
+      "Pression dans la source : Aucune pression appariée au débit dans le tableau.."
+    ],
+    "limitations": [
+      "Le débit concerne cette référence de soufflette et son raccordement. Les autres buses ou profils sont des références séparées lorsqu’ils sont explicitement publiés par le fabricant.",
+      "Valeur au seul point de pression documenté ; le profil ne déduit aucune moyenne de gâchette ni débit à une autre pression.",
+      "Consommation et/ou pression de mesure manquante ; aucune capacité de compresseur concluante n’est calculée.",
+      "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."
+    ]
+  },
+  "specifications": [
+    {
+      "label": "Fonction de la fiche fabricant",
+      "value": "Blow gun with extra long nozzle (300 mm)",
+      "evidenceIds": [
+        "october7-tools-prevost-gun-49592-tableau-reference-bgm-106"
+      ]
+    },
+    {
+      "label": "Net weight (kg)",
+      "value": "0.144 Kg",
+      "evidenceIds": [
+        "october7-tools-prevost-gun-49592-tableau-reference-bgm-106"
+      ]
+    },
+    {
+      "label": "Length",
+      "value": "0.3 m",
+      "evidenceIds": [
+        "october7-tools-prevost-gun-49592-tableau-reference-bgm-106"
+      ]
+    },
+    {
+      "label": "Female thread",
+      "value": "G1/4",
+      "evidenceIds": [
+        "october7-tools-prevost-gun-49592-tableau-reference-bgm-106"
+      ]
+    },
+    {
+      "label": "Consommation publiée dans son unité originale",
+      "value": "340 l/min",
+      "evidenceIds": [
+        "october7-tools-prevost-gun-49592-tableau-reference-bgm-106"
+      ]
+    },
+    {
+      "label": "Pression dans la source",
+      "value": "Aucune pression appariée au débit dans le tableau.",
+      "evidenceIds": [
+        "october7-tools-prevost-gun-49592-tableau-reference-bgm-106"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "october7-tools-prevost-gun-49592-tableau-reference-bgm-106",
+      "sourceUrl": "https://www.prevost.eu/blow-gun-extra-long-nozzle-300-mm-49592",
+      "sourceLabel": "Prevost, fiche fabricant Blow gun with extra long nozzle (300 mm), Tableau, référence BGM 106",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-07",
+      "confidence": "B",
+      "notes": "Réponse primaire SHA-256 10f530477c4797bcd211e2634718462d0171469e0dcbd1a91cd81c2065b85f35. Déclaration fabricant, sans essai physique CompatAir."
+    }
+  ],
+  "fieldSources": {
+    "workingPressureBar": [
+      "october7-tools-prevost-gun-49592-tableau-reference-bgm-106"
+    ],
+    "demandExplanation": [
+      "october7-tools-prevost-gun-49592-tableau-reference-bgm-106"
+    ]
+  },
+  "notes": [
+    "BGM 106 : Blow gun with extra long nozzle (300 mm). Length: 0.3 m; Female thread: G1/4.",
+    "Le débit concerne cette référence de soufflette et son raccordement. Les autres buses ou profils sont des références séparées lorsqu’ils sont explicitement publiés par le fabricant.",
+    "Valeur au seul point de pression documenté ; le profil ne déduit aucune moyenne de gâchette ni débit à une autre pression.",
+    "Consommation et/ou pression de mesure manquante ; aucune capacité de compresseur concluante n’est calculée.",
+    "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."
+  ]
+};
+
+export default product;

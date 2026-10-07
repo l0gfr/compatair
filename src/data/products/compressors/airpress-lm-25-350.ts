@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "airpress-lm-25-350",
 	"slug": "airpress-lm-25-350",
 	"brand": "Airpress",

@@ -121,7 +121,7 @@ const passportUnsignedEnvelopeSchema = passportEnvelopeSchema.omit({ reportDiges
 export type PassportEnvelope = z.infer<typeof passportEnvelopeSchema>;
 
 type PassportCatalogEvidence = Pick<Compressor['evidence'][number], 'id' | 'sourceUrl' | 'sourceLabel' | 'retrievedAt' | 'confidence'>;
-type PassportCompressor = Pick<Compressor, 'id' | 'brand' | 'model' | 'confidence' | 'maxPressureBar' | 'fadCurve' | 'tankLiters' | 'dutyCycle' | 'voltage' | 'phase' | 'powerKw' | 'noiseDb' | 'fieldSources'> & { evidence: PassportCatalogEvidence[] };
+type PassportCompressor = Pick<Compressor, 'id' | 'brand' | 'model' | 'confidence' | 'maxPressureBar' | 'maxPressureBasis' | 'fadCurve' | 'tankLiters' | 'dutyCycle' | 'voltage' | 'phase' | 'powerKw' | 'noiseDb' | 'fieldSources'> & { evidence: PassportCatalogEvidence[] };
 type PassportTool = Pick<ToolProfile, 'id' | 'brand' | 'model' | 'label' | 'connectorSize' | 'filtrationRequirement' | 'lubricationRequirement' | 'recommendedHose' | 'fieldSources'> & { evidence: PassportCatalogEvidence[] };
 
 function encodeUrlPayload(value: unknown) {
@@ -236,7 +236,7 @@ export async function createPassportReport(input: unknown, compressors: Passport
 	const compressorInput = configuration.selectedCompressor === 'custom'
 		? configuration.custom.maxPressureBar !== undefined ? { ...configuration.custom, maxPressureBar: configuration.custom.maxPressureBar } : undefined
 		: selected ? {
-			maxPressureBar: selected.maxPressureBar,
+			maxPressureBar: selected.maxPressureBar, maxPressureBasis: selected.maxPressureBasis,
 			availableFadLpm: selectedFadResolution?.litersPerMinute,
 			availableFadBasis: selectedFadResolution?.basis,
 			tankLiters: selected.tankLiters,

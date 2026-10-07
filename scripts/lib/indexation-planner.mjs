@@ -41,10 +41,14 @@ export function productCandidate(product, kind) {
 	const editorial = product.editorial;
 	const text = [editorial?.overview, ...(editorial?.verifiedFacts ?? []), ...(editorial?.limitations ?? [])].filter(Boolean).join('\n');
 	const hasEditorial = editorial?.overview && editorial?.verifiedFacts?.length >= 2 && editorial?.limitations?.length >= 1;
-	const keys = ['category', 'categoryId', 'demandModel', 'workingPressureBar', 'airflowLpm', 'airflowBasis', 'airPerActionLiters', 'actionLabel', 'demandExplanation', 'recommendedHose', 'connectorSize', 'usagePattern', 'dutyFactor', 'filtrationRequirement', 'lubricationRequirement', 'minimumCompressorPowerKw', 'tankLiters', 'maxPressureBar', 'fadCurve', 'oilType', 'intakeFlowLpm', 'dutyCycle', 'noiseDb', 'weightKg', 'powerKw', 'mobility', 'voltage', 'phase'];
+	const keys = ['category', 'categoryId', 'demandModel', 'workingPressureBar', 'airflowLpm', 'airflowBasis', 'airPerActionLiters', 'actionLabel', 'demandExplanation', 'recommendedHose', 'connectorSize', 'usagePattern', 'dutyFactor', 'filtrationRequirement', 'lubricationRequirement', 'minimumCompressorPowerKw', 'tankLiters', 'maxPressureBar', 'maxPressureBasis', 'fadCurve', 'oilType', 'intakeFlowLpm', 'dutyCycle', 'noiseDb', 'weightKg', 'powerKw', 'mobility', 'voltage', 'phase'];
 	const technical = Object.fromEntries(keys.filter((key) => product[key] !== undefined).map((key) => [key, product[key]]));
 	if (Array.isArray(technical.fadCurve)) technical.fadCurve = [...technical.fadCurve].sort((a, b) => a.pressureBar - b.pressureBar);
-	if (product.variant?.distinguishingAttributes) technical.variantAttributes = product.variant.distinguishingAttributes;
+	if (product.variant?.distinguishingAttributes) {
+		// Repeating a model reference does not establish a physical difference.
+		const attributes = Object.entries(product.variant.distinguishingAttributes).filter(([key, value]) => key !== 'reference' || ![product.id, product.model, product.mpn, product.label].includes(value));
+		if (attributes.length) technical.variantAttributes = Object.fromEntries(attributes);
+	}
 	// Numeric facts outside the normalized schema (torque, speed, dimensions)
 	// also distinguish references. Remove identities before comparing these facts.
 	let numericText = text;

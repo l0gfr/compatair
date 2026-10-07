@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "puska-cnr-100-270-s-yd",
   "slug": "puska-cnr-100-270-s-yd",
   "brand": "Puska",
@@ -16,6 +18,7 @@ const product: unknown = {
   },
   "tankLiters": 270,
   "maxPressureBar": 10,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 10,
@@ -103,6 +106,9 @@ const product: unknown = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4b-puska-catalog-2025-p18"
+    ],
     "model": [
       "october4b-puska-catalog-2025-p18"
     ],

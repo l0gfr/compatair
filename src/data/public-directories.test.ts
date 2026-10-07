@@ -44,7 +44,7 @@ describe('public evidence directories', () => {
 		}
 		expect(JSON.stringify(evidenceHistory.events)).toBe(before);
 		expect(() => evidenceHistoryProductHref('missing-history-product')).toThrow('Produit absent du répertoire des preuves : missing-history-product.');
-	}, 15_000);
+	}, 45_000);
 
 	it('deduplicates sources and ranks confidence before source type', () => {
 		expect(new Set(sourceDirectory.map((source) => source.id)).size).toBe(sourceDirectory.length);

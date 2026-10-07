@@ -63,6 +63,7 @@ export const compressorSchema = z.object({
 	}).optional(),
 	tankLiters: z.number().nonnegative().optional(),
 	maxPressureBar: z.number().positive(),
+	maxPressureBasis: z.enum(['explicit-maximum-working-pressure', 'selected-working-pressure-ceiling']).optional(),
 	fadCurve: z.array(z.object({ pressureBar: z.number().nonnegative(), litersPerMinute: z.number().positive() })),
 	intakeFlowLpm: z.number().positive().optional(),
 	dutyCycle: z.number().positive().max(1).optional(),
@@ -84,7 +85,7 @@ export const compressorSchema = z.object({
 }).superRefine((compressor, context) => {
 	const pressures = new Set<number>();
 	for (const [index, point] of compressor.fadCurve.entries()) {
-		if (point.pressureBar > compressor.maxPressureBar) context.addIssue({ code: 'custom', path: ['fadCurve', index, 'pressureBar'], message: 'La pression FAD ne peut pas dépasser la pression maximale.' });
+		if (point.pressureBar > compressor.maxPressureBar) context.addIssue({ code: 'custom', path: ['fadCurve', index, 'pressureBar'], message: 'La pression FAD ne peut pas dépasser le plafond de pression documenté.' });
 		if (pressures.has(point.pressureBar)) context.addIssue({ code: 'custom', path: ['fadCurve', index, 'pressureBar'], message: 'Chaque pression FAD doit être unique.' });
 		pressures.add(point.pressureBar);
 	}
@@ -174,3 +175,5 @@ export const toolProfileSchema = toolBaseSchema.and(z.discriminatedUnion('demand
 
 export type Compressor = z.infer<typeof compressorSchema>;
 export type ToolProfile = z.infer<typeof toolProfileSchema>;
+export type CompressorInput = z.input<typeof compressorSchema>;
+export type ToolProfileInput = z.input<typeof toolProfileSchema>;

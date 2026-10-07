@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "ekomak-cnr-200",
   "slug": "ekomak-cnr-200",
   "brand": "Ekomak",
@@ -14,6 +16,7 @@ const product = {
     }
   },
   "maxPressureBar": 10,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 7,
@@ -118,6 +121,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4c-ekomak-extra-1-p7"
+    ],
     "model": [
       "october4c-ekomak-extra-1-p7"
     ],

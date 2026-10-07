@@ -114,8 +114,8 @@ describe('compatibility engine', () => {
 	});
 
 	it('exposes the expanded sourced catalog', () => {
-		expect(compressors).toHaveLength(4759);
-		expect(tools).toHaveLength(18087);
+		expect(compressors).toHaveLength(4959);
+		expect(tools).toHaveLength(19087);
 	});
 
 	it('keeps the new ABAC Tech flows bound to the documented 7 bar point', () => {
@@ -180,7 +180,7 @@ describe('air demand sizing', () => {
 		expect(sizeAirDemand({ toolFlowLpm: 200, safetyMargin: 0.25 })).toEqual({
 			peakFlowLpm: 200,
 			recommendedFadLpm: 250,
-			calculationVersion: '1.4.3',
+			calculationVersion: '1.4.4',
 		});
 	});
 

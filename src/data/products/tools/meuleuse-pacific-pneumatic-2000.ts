@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "meuleuse-pacific-pneumatic-2000",
 	"slug": "meuleuse-pacific-pneumatic-2000",
 	"categoryId": "meuleuse",

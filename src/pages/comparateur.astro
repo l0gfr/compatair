@@ -83,7 +83,7 @@ import { compressorDisplayName, compressorOilLabel } from '../domain/product-dis
 		brand: item.brand,
 		model: item.model,
 		tankLiters: item.tankLiters,
-		maxPressureBar: item.maxPressureBar,
+		maxPressureBar: item.maxPressureBar, maxPressureBasis: item.maxPressureBasis,
 		intakeFlowLpm: item.intakeFlowLpm,
 		fadCurve: item.fadCurve,
 		dutyCycle: item.dutyCycle,
@@ -111,6 +111,7 @@ import { compressorDisplayName, compressorOilLabel } from '../domain/product-dis
 			model: string;
 			tankLiters?: number;
 			maxPressureBar: number;
+			maxPressureBasis?: 'explicit-maximum-working-pressure' | 'selected-working-pressure-ceiling';
 			intakeFlowLpm?: number;
 			fadCurve: Array<{ litersPerMinute: number; pressureBar: number }>;
 			dutyCycle?: number;
@@ -200,7 +201,7 @@ import { compressorDisplayName, compressorOilLabel } from '../domain/product-dis
 			if (selected.length < 2) { output.replaceChildren(); outputSection.hidden = true; return; }
 			const rows: Array<[string, (item: CompressorSummary) => string, string?]> = [
 				['Volume de cuve', compressorTankLabel],
-				['Pression maximale', (item) => `${item.maxPressureBar} bar`],
+				['Pression', (item) => `${item.maxPressureBar} bar${item.maxPressureBasis === 'selected-working-pressure-ceiling' ? ' au point documenté ; maximum non établi' : ' maximum'}`],
 				['Débit réellement restitué', (item) => item.fadCurve.length ? item.fadCurve.map((point) => `${point.litersPerMinute} L/min à ${point.pressureBar} bar`).join(' · ') : 'Non documenté', 'is-primary'],
 				['Débit aspiré', (item) => item.intakeFlowLpm ? `${item.intakeFlowLpm} L/min · non utilisé pour le verdict` : 'Non documenté', 'is-secondary'],
 				['Temps maximal de fonctionnement', (item) => item.dutyCycle ? `${Math.round(item.dutyCycle * 100)} %` : 'Non documenté'],

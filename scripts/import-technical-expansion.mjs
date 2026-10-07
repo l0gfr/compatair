@@ -5,7 +5,7 @@ import { buildTechnicalExpansion } from './lib/technical-expansion-2026.mjs';
 import { buildCatalogExpansion } from './lib/catalog-expansion-2026-09-27.mjs';
 import { buildQualifiedTools } from './lib/qualified-tools-2026.mjs';
 import { buildDocumentedExpansion } from './lib/documented-expansion-2026-09-30.mjs';
-import { loadCatalogProducts } from './lib/catalog-tooling.mjs';
+import { buildCatalogProductSource, loadCatalogProducts } from './lib/catalog-tooling.mjs';
 import { TECHNICAL_CARD_WIDTH, technicalCardSvg } from './lib/technical-card.mjs';
 
 const root = resolve(import.meta.dirname, '..');
@@ -31,7 +31,7 @@ const titles = {}, usage = {};
 for (const kind of ['compressors', 'tools']) {
 	for (const p of expansion[kind]) {
 		const file = resolve(root, `src/data/products/${kind}/${p.slug}.ts`);
-		const content = `const product = ${JSON.stringify(p, null, '\t')};\n\nexport default product;\n`;
+		const content = buildCatalogProductSource(kind, p, '\t');
 		try { await access(file); if (await readFile(file, 'utf8') !== content) throw new Error(`Référence existante différente : ${p.id}`); }
 		catch (error) { if (error.code !== 'ENOENT') throw error; await writeFile(file, content); }
 		const name = `${p.brand} ${p.model}${p.variant?.distinguishingAttributes.reference ? ` ${p.mpn}` : ''}`;

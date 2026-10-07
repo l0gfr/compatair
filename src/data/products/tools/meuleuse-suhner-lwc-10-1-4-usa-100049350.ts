@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "meuleuse-suhner-lwc-10-1-4-usa-100049350",
 	"slug": "meuleuse-suhner-lwc-10-1-4-usa-100049350",
 	"categoryId": "meuleuse",

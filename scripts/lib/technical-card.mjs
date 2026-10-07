@@ -17,7 +17,7 @@ export function technicalCardSvg(p, kind) {
 	const incomplete = !compressor && p.demandModel === 'variable-volume';
 	const point = compressor ? p.fadCurve.at(-1) : null;
 	const toolPressure = compressor ? undefined : p.workingPressureBar.typical ?? p.workingPressureBar.max;
-	const compressorPressureLabel = p.specifications?.some(spec => spec.label === 'Pression de la configuration retenue') ? 'PRESSION RETENUE' : 'PRESSION MAX.';
+	const compressorPressureLabel = (p.maxPressureBasis === 'selected-working-pressure-ceiling' || p.specifications?.some(spec => spec.label === 'Pression de la configuration retenue')) ? 'PRESSION RETENUE' : 'PRESSION MAX.';
 	const columns = compressor ? [
 		point ? ['DÉBIT RESTITUÉ', format(point.litersPerMinute), `L/min à ${format(point.pressureBar)} bar`] : ['FAD À PRESSION CONNUE', 'Non établi', 'Compatibilité indéterminée'],
 		['CUVE', p.tankLiters === undefined ? 'Non documentée' : format(p.tankLiters), p.tankLiters === undefined ? '' : 'litres'], [compressorPressureLabel, format(p.maxPressureBar), 'bar'],

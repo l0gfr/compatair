@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "dalgakiran-inversys-plus-pm-45",
 	"slug": "dalgakiran-inversys-plus-pm-45",
 	"brand": "Dalgakiran",
@@ -14,6 +16,7 @@ const product: unknown = {
 	},
 	"tankLiters": 0,
 	"maxPressureBar": 10,
+	"maxPressureBasis": "selected-working-pressure-ceiling",
 	"fadCurve": [
 		{
 			"pressureBar": 10,
@@ -106,6 +109,9 @@ const product: unknown = {
 		}
 	],
 	"fieldSources": {
+		"maxPressureBasis": [
+			"october4-dalgakiran-catalog-p20"
+		],
 		"model": [
 			"october4-dalgakiran-catalog-p20"
 		],

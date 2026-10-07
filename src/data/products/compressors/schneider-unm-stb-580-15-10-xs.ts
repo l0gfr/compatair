@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "schneider-unm-stb-580-15-10-xs",
 	"slug": "schneider-unm-stb-580-15-10-xs",
 	"brand": "Schneider",

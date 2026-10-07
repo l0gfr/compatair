@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "boge-e-11-dr-frequence-non-precisee-13-bar-station-sur-cuve-400-l-avec-secheur-insonorisation-standard",
 	"slug": "boge-e-11-dr-frequence-non-precisee-13-bar-station-sur-cuve-400-l-avec-secheur-insonorisation-standard",
 	"brand": "BOGE",

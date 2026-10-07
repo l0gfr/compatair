@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "meuleuse-atlas-copco-lsf28-s250e-r-8423123549",
 	"slug": "meuleuse-atlas-copco-lsf28-s250e-r-8423123549",
 	"categoryId": "meuleuse",

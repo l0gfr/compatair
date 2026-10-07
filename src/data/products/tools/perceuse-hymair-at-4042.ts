@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "perceuse-hymair-at-4042",
 	"slug": "perceuse-hymair-at-4042",
 	"categoryId": "perceuse",

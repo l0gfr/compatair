@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "gardner-denver-esm75e",
   "slug": "gardner-denver-esm75e",
   "brand": "Gardner Denver",
@@ -13,6 +15,7 @@ const product = {
     }
   },
   "maxPressureBar": 10,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 10,
@@ -100,6 +103,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4c-gd-esm55-75-p11"
+    ],
     "model": [
       "october4c-gd-esm55-75-p11"
     ],

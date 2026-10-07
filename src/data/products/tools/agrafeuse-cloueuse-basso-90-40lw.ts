@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "agrafeuse-cloueuse-basso-90-40lw",
 	"slug": "agrafeuse-cloueuse-basso-90-40lw",
 	"categoryId": "agrafeuse-cloueuse",

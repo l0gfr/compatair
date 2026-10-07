@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "dalgakiran-dvk-30-d",
   "slug": "dalgakiran-dvk-30-d",
   "brand": "Dalgakiran",
@@ -13,6 +15,7 @@ const product: unknown = {
     }
   },
   "maxPressureBar": 10,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 10,
@@ -110,6 +113,9 @@ const product: unknown = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4b-dalgakiran-catalog-p30"
+    ],
     "model": [
       "october4b-dalgakiran-catalog-p30"
     ],

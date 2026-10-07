@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "kaishan-ox4-5",
   "slug": "kaishan-ox4-5",
   "brand": "Kaishan",
@@ -17,6 +19,7 @@ const product = {
   },
   "tankLiters": 500,
   "maxPressureBar": 8,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 8,
@@ -111,6 +114,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october5-kaishan-ox-page-pdf-9-p2"
+    ],
     "model": [
       "october5-kaishan-ox-page-pdf-9-p2"
     ],

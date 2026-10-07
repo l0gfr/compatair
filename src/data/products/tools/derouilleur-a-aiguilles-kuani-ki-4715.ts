@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "derouilleur-a-aiguilles-kuani-ki-4715",
 	"slug": "derouilleur-a-aiguilles-kuani-ki-4715",
 	"categoryId": "derouilleur-a-aiguilles",

@@ -1,3 +1,4 @@
+import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { buildDocumentedCompressorsOctober2 } from './documented-compressors-2026-10-02.mjs';
@@ -9,9 +10,7 @@ const batch = buildDocumentedCompressorsOctober2(snapshot);
 const model = (name, pressure) => batch.find(product => product.model === name && product.maxPressureBar === pressure);
 const record = slug => {
  const source = readFileSync(new URL(`../../src/data/products/compressors/${slug}.ts`, import.meta.url), 'utf8');
- const prefix = 'const product = ', suffix = ';\n\nexport default product;\n';
- if (!source.startsWith(prefix) || !source.endsWith(suffix)) throw new Error('Format du produit altéré');
- return JSON.parse(source.slice(prefix.length, -suffix.length));
+ return parseCatalogProductSource('compressors', source);
 };
 
 describe('reviewed compressor configurations, October 2', () => {

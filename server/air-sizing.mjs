@@ -1,14 +1,38 @@
 // Pure numerical core shared by the browser, static exports and the Node server.
 // Callers validate and normalize input at their boundary; no I/O or environment state here.
-export const CALCULATION_VERSION = '1.4.3';
+export const CALCULATION_VERSION = '1.4.4';
 export const STANDARD_ATMOSPHERE_BAR = 1.01325;
 /** Cross-field invariants shared with the browser and passport schemas. */
 export function compressorPressureIssues(compressor) {
-	const { maxPressureBar, cutInPressureBar, cutOutPressureBar } = compressor;
+	const { maxPressureBar, maxPressureBasis, cutInPressureBar, cutOutPressureBar } = compressor;
 	if (cutInPressureBar >= cutOutPressureBar) return [{ field: 'cutInPressureBar', message: 'La pression de réenclenchement doit être inférieure à la pression d’arrêt.' }];
+	if (maxPressureBasis === 'selected-working-pressure-ceiling') return [];
 	const field = cutOutPressureBar > maxPressureBar ? 'cutOutPressureBar' : cutInPressureBar > maxPressureBar ? 'cutInPressureBar' : undefined;
 	return field ? [{ field, message: 'La pression de régulation dépasse la pression maximale de la machine.' }] : [];
 }
+/** A documented FAD operating point is not a proven maximum machine pressure.
+ * @param {import("../src/domain/sizing").NormalizedSizingInput['compressor']} compressor
+ * @param {number} requiredPressureBar
+ * @param {number | undefined} [supplyPressureBar]
+ * @returns {{status: 'sufficient', availablePressureBar: number} | {status: 'incompatible' | 'insufficient_data', availablePressureBar: number, warning: string}}
+ */
+export function evaluatePressureCapacity(compressor, requiredPressureBar, supplyPressureBar) {
+	const documentedPointOnly = compressor.maxPressureBasis === 'selected-working-pressure-ceiling';
+	const knownLimit = Math.min(supplyPressureBar ?? Infinity, compressor.cutOutPressureBar ?? Infinity, documentedPointOnly ? Infinity : compressor.maxPressureBar);
+	const availablePressureBar = Math.min(compressor.maxPressureBar, knownLimit);
+	if (knownLimit < requiredPressureBar) return {
+		status: 'incompatible', availablePressureBar,
+		warning: knownLimit < compressor.maxPressureBar || documentedPointOnly
+			? 'La pression réglée, mesurée ou de coupure est inférieure à la pression requise.'
+			: 'La pression maximale du compresseur est inférieure à la pression requise.',
+	};
+	if (documentedPointOnly && compressor.maxPressureBar < requiredPressureBar) return {
+		status: 'insufficient_data', availablePressureBar,
+		warning: 'Le besoin dépasse le point de pression documenté. Ce point ne prouve pas la pression maximale de la machine ni son débit au-delà.',
+	};
+	return { status: 'sufficient', availablePressureBar };
+}
+
 function perActionAverageFlow(litersPerAction, actionsPerMinute, quantity) { return litersPerAction * actionsPerMinute * quantity; }
 function inflationFreeAirLiters(volumeLiters, initialGaugeBar, targetGaugeBar, quantity) { return volumeLiters * quantity * (targetGaugeBar - initialGaugeBar) / STANDARD_ATMOSPHERE_BAR; }
 function usableTankAir(tankLiters, cutInBar, cutOutBar) { return tankLiters < 0 || cutInBar < 0 || cutOutBar <= cutInBar ? 0 : tankLiters * (cutOutBar - cutInBar); }
@@ -61,7 +85,7 @@ export function calculateSizing(value) {
 	const warnings = [];
 	if (value.measuredLeakLpm !== undefined) hypotheses.push(`Fuite mesurée ajoutée au besoin : ${value.measuredLeakLpm.toLocaleString('fr-FR', { maximumFractionDigits: 1 })} L/min.`);
 	if (value.measuredPressureDropBar !== undefined) hypotheses.push(`Chute mesurée en charge ajoutée au besoin : ${value.measuredPressureDropBar.toLocaleString('fr-FR', { maximumFractionDigits: 2 })} bar.`);
-	if (value.supplyPressureBar !== undefined) hypotheses.push(`Pression de sortie réglée ou mesurée : ${value.supplyPressureBar.toLocaleString('fr-FR', { maximumFractionDigits: 2 })} bar, plafonnée au maximum de la machine.`);
+	if (value.supplyPressureBar !== undefined) hypotheses.push(`Pression de sortie réglée ou mesurée : ${value.supplyPressureBar.toLocaleString('fr-FR', { maximumFractionDigits: 2 })} bar.`);
 	for (const demand of value.demands) {
 		if (demand.model === 'per-action') {
 			const average = perActionAverageFlow(demand.litersPerAction, demand.actionsPerMinute, demand.quantity);
@@ -101,14 +125,25 @@ export function calculateSizing(value) {
 	}
 
 	const compressor = value.compressor;
-	const availablePressureBar = Math.min(compressor.maxPressureBar, value.supplyPressureBar ?? compressor.maxPressureBar, compressor.cutOutPressureBar ?? compressor.maxPressureBar);
-	if (availablePressureBar < requiredPressureBar) {
+	const pressure = evaluatePressureCapacity(compressor, requiredPressureBar, value.supplyPressureBar);
+	const { availablePressureBar } = pressure;
+	if (pressure.status !== 'sufficient') {
 		return {
-			...context,
-			verdict: 'incompatible',
-			availablePressureBar,
-			usefulPressureBar: availablePressureBar, limitingFactor: 'pressure', confidence: 'high',
-			warnings: [...warnings, availablePressureBar < compressor.maxPressureBar ? 'La pression réglée, mesurée ou de coupure est inférieure à la pression requise.' : 'La pression maximale du compresseur est inférieure à la pression requise.'],
+			...context, verdict: pressure.status, availablePressureBar,
+			...(pressure.status === 'incompatible' ? { usefulPressureBar: availablePressureBar } : {}),
+			limitingFactor: pressure.status === 'incompatible' ? 'pressure' : 'data',
+			confidence: pressure.status === 'incompatible' ? 'high' : 'low',
+			warnings: [...warnings, pressure.warning],
+		};
+	}
+	// The tool pressure alone cannot qualify delivery when the declared control
+	// range or outlet pressure runs above the highest documented operating point.
+	if (compressor.maxPressureBasis === 'selected-working-pressure-ceiling'
+		&& Math.max(compressor.cutInPressureBar ?? 0, compressor.cutOutPressureBar ?? 0, value.supplyPressureBar ?? 0) > compressor.maxPressureBar) {
+		return {
+			...context, verdict: 'insufficient_data', availablePressureBar,
+			limitingFactor: 'data', confidence: 'low',
+			warnings: [...warnings, 'La régulation ou la pression de sortie déclarée dépasse le point de pression documenté. Le débit restitué sur cette plage manque.'],
 		};
 	}
 	if (compressor.availableFadLpm === undefined) {

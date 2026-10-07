@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "quincy-qgsv-10",
   "slug": "quincy-qgsv-10",
   "brand": "Quincy",
@@ -13,6 +15,7 @@ const product: unknown = {
     }
   },
   "maxPressureBar": 6.895,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 6.895,
@@ -113,6 +116,9 @@ const product: unknown = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4b-quincy-qgs-qgsv-p2"
+    ],
     "model": [
       "october4b-quincy-qgs-qgsv-p2"
     ],

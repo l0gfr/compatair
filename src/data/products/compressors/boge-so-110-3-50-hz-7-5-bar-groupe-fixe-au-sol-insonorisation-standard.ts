@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "boge-so-110-3-50-hz-7-5-bar-groupe-fixe-au-sol-insonorisation-standard",
 	"slug": "boge-so-110-3-50-hz-7-5-bar-groupe-fixe-au-sol-insonorisation-standard",
 	"brand": "BOGE",

@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "chicago-pneumatic-cp0200b18l-2f",
 	"slug": "fouloir-chicago-pneumatic-cp0200b18l-2f",
 	"categoryId": "fouloir",

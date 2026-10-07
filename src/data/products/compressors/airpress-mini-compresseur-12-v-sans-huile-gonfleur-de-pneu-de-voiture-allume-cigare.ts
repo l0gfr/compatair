@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "airpress-mini-compresseur-12-v-sans-huile-gonfleur-de-pneu-de-voiture-allume-cigare",
 	"slug": "airpress-mini-compresseur-12-v-sans-huile-gonfleur-de-pneu-de-voiture-allume-cigare",
 	"brand": "Airpress",

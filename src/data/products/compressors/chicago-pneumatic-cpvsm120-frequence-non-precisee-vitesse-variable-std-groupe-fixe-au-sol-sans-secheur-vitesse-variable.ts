@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "chicago-pneumatic-cpvsm120-frequence-non-precisee-vitesse-variable-std-groupe-fixe-au-sol-sans-secheur-vitesse-variable",
 	"slug": "chicago-pneumatic-cpvsm120-frequence-non-precisee-vitesse-variable-std-groupe-fixe-au-sol-sans-secheur-vitesse-variable",
 	"brand": "Chicago Pneumatic",

@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "riveteuse-rodcraft-rc6718xi-8951074008",
 	"slug": "riveteuse-rodcraft-rc6718xi-8951074008",
 	"categoryId": "riveteuse",

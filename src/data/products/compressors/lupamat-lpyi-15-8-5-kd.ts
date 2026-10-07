@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "lupamat-lpyi-15-8-5-kd",
 	"slug": "lupamat-lpyi-15-8-5-kd",
 	"brand": "Lupamat",

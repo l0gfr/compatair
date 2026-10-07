@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "hertz-impetus-30",
   "slug": "hertz-impetus-30",
   "brand": "Hertz",
@@ -13,6 +15,7 @@ const product: unknown = {
     }
   },
   "maxPressureBar": 13,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 13,
@@ -110,6 +113,9 @@ const product: unknown = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4b-hertz-catalog-p12"
+    ],
     "model": [
       "october4b-hertz-catalog-p12"
     ],

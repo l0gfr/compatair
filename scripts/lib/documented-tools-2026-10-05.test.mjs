@@ -1,3 +1,4 @@
+import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import { readFileSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { describe, it, expect } from 'vitest';
@@ -48,17 +49,15 @@ describe('documented tools October 5', () => {
   expect(ids.size).toBe(2000);
   expect(new Set(batch.map(product => product.brand)).size).toBe(19);
   const baseline = tools.filter(product => !ids.has(product.id));
-  expect(baseline).toHaveLength(16087);
+  expect(baseline).toHaveLength(17087);
   expect(() => assertDocumentedToolsOctober5NewIdentities(snapshot.tools, baseline)).not.toThrow();
   expect(tools.filter(product => ids.has(product.id))).toHaveLength(2000);
  });
  it('writes schema-valid canonical products and exact technical-card assets', () => {
-  const prefix = 'const product: unknown = ', suffix = ';\n\nexport default product;\n';
   for (const product of batch) {
    expect(toolProfileSchema.safeParse(product).success, product.id).toBe(true);
    const content = readFileSync(new URL(`../../src/data/products/tools/${product.id}.ts`, import.meta.url), 'utf8');
-   expect(content.startsWith(prefix) && content.endsWith(suffix), product.id).toBe(true);
-   expect(JSON.parse(content.slice(prefix.length, -suffix.length))).toEqual(product);
+   expect(parseCatalogProductSource('tools', content)).toEqual(product);
    expect(readFileSync(new URL(`../../public${product.image.src}`, import.meta.url), 'utf8')).toBe(technicalCardSvg(product, 'tools'));
   }
  }, 30000);

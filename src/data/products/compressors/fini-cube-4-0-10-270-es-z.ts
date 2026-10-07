@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "fini-cube-4-0-10-270-es-z",
   "slug": "fini-cube-4-0-10-270-es-z",
   "brand": "Fini",
@@ -16,6 +18,7 @@ const product: unknown = {
   },
   "tankLiters": 270,
   "maxPressureBar": 10,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 9.5,
@@ -121,6 +124,9 @@ const product: unknown = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4b-fini-cube-p3"
+    ],
     "model": [
       "october4b-fini-cube-p3"
     ],

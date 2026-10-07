@@ -10,8 +10,72 @@ function fixture() {
 	const caches = runs.map((run) => ({ id: run.id, key: `codeql-overlay-base-database-1-test-javascript-2.27.1-${run.head_sha}-${run.id}-1`, ref: 'refs/heads/main', created_at: run.created_at }));
 	return { artifacts, runs, caches, liveSha: shas[0], expectedSha: shas[0], previousLiveSha: shas[1], now: Date.parse('2026-09-26T12:00:00Z') };
 }
+function duplicateArchiveFixture() {
+	const input = fixture();
+	input.runs[0].id = 100;
+	for (const artifact of input.artifacts) if (artifact.workflow_run.id === 0) artifact.workflow_run.id = 100;
+	const older = input.artifacts.find(artifact => artifact.name === `compatair-production-${shas[0]}`);
+	older.id = 1000;
+	input.artifacts.push({ ...older, id: 1001, created_at: '2026-09-26T01:00:00Z', workflow_run: { ...older.workflow_run } });
+	return input;
+}
 
 describe('bounded Actions storage cleanup', () => {
+	it('retains the most recent protected production copy from a known successful rerun', () => {
+		const input = duplicateArchiveFixture(), plan = planActionsStorage(input);
+		expect(plan.deleteArtifacts.map(artifact => artifact.id)).toContain(1000);
+		expect(plan.deleteArtifacts.map(artifact => artifact.id)).not.toContain(1001);
+		expect(plan.deleteArtifacts.some(artifact => artifact.name.startsWith('compatair-invariants-'))).toBe(false);
+	});
+	it.each([{ status: 'in_progress' }, { conclusion: 'cancelled' }, { conclusion: 'failure' }, { head_branch: 'other' }])('preserves every protected copy when the run is uncertain (%s)', change => {
+		const input = duplicateArchiveFixture();
+		Object.assign(input.runs[0], change);
+		expect(planActionsStorage(input).deleteArtifacts.some(artifact => artifact.name === `compatair-production-${shas[0]}`)).toBe(false);
+	});
+	it.each([
+		artifact => { artifact.workflow_run.id = 999; },
+		artifact => { artifact.workflow_run.head_sha = shas[1]; },
+		artifact => { artifact.workflow_run.head_branch = 'other'; },
+		artifact => { artifact.created_at = 'invalid'; },
+		artifact => { artifact.created_at = '2026-02-30T00:00:00Z'; },
+		artifact => { artifact.created_at = '2026-09-25T23:59:59Z'; },
+		artifact => { artifact.created_at = '2026-09-27T00:00:00Z'; },
+		artifact => { artifact.id = 0; },
+		artifact => { artifact.id = 1000; },
+		artifact => { artifact.id = '1001'; },
+		artifact => { artifact.expired = true; },
+	])('preserves the whole protected group when any archive metadata is doubtful (%#)', change => {
+		const input = duplicateArchiveFixture();
+		change(input.artifacts.at(-1));
+		expect(planActionsStorage(input).deleteArtifacts.some(artifact => artifact.name === `compatair-production-${shas[0]}`)).toBe(false);
+	});
+	it('refuses an ambiguous newest timestamp or duplicated run identity', () => {
+		for (const mutate of [
+			input => { input.artifacts.at(-1).created_at = input.artifacts.find(artifact => artifact.id === 1000).created_at; },
+			input => { input.runs[0].created_at = 'invalid'; },
+			input => { input.runs.push({ ...input.runs[0] }); },
+		]) {
+			const input = duplicateArchiveFixture(); mutate(input);
+			expect(planActionsStorage(input).deleteArtifacts.some(artifact => artifact.name === `compatair-production-${shas[0]}`)).toBe(false);
+		}
+	});
+	it('preserves the cancelled observed rollback while deduplicating the other two protected SHAs', () => {
+		const input = duplicateArchiveFixture();
+		input.runs[1].conclusion = 'cancelled';
+		for (const index of [1, 2]) {
+			input.runs[index].id = 100 + index;
+			for (const artifact of input.artifacts) if (artifact.workflow_run.id === index) artifact.workflow_run.id = 100 + index;
+			const older = input.artifacts.find(artifact => artifact.name === `compatair-production-${shas[index]}`);
+			older.id = 2000 + index;
+			input.artifacts.push({ ...older, id: 3000 + index, created_at: `2026-09-${26 - index}T01:00:00Z`, workflow_run: { ...older.workflow_run } });
+		}
+		const plan = planActionsStorage(input);
+		expect(plan.protectedShas).toEqual(shas.slice(0, 3));
+		expect(plan.deleteArtifacts.map(artifact => artifact.id)).toEqual(expect.arrayContaining([1000, 2002]));
+		expect(plan.deleteArtifacts.some(artifact => artifact.name === `compatair-production-${shas[1]}`)).toBe(false);
+		expect(plan.deleteArtifacts.map(artifact => artifact.id)).not.toContain(1001);
+		expect(plan.deleteArtifacts.map(artifact => artifact.id)).not.toContain(3002);
+	});
 	it('retains only the latest main calculation cache and leaves PR caches alone', () => {
 		const input = fixture();
 		input.caches.push(...[0, 1, 2].map(index => ({ id: 100 + index, key: `compatair-verdict-v1-Linux-24.19.0-${String(index).repeat(64)}`, ref: 'refs/heads/main', created_at: `2026-09-${26 - index}T01:00:00Z` })));

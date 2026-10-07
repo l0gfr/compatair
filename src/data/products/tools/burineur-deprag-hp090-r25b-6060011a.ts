@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "burineur-deprag-hp090-r25b-6060011a",
 	"slug": "burineur-deprag-hp090-r25b-6060011a",
 	"categoryId": "burineur",

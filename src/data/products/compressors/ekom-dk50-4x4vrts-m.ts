@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "ekom-dk50-4x4vrts-m",
 	"slug": "ekom-dk50-4x4vrts-m",
 	"brand": "EKOM",

@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "compair-dx200",
   "slug": "compair-dx200",
   "brand": "CompAir",
@@ -13,6 +15,7 @@ const product = {
     }
   },
   "maxPressureBar": 10,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 10,
@@ -111,6 +114,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4c-compair-dx200-355-p11"
+    ],
     "model": [
       "october4c-compair-dx200-355-p11"
     ],

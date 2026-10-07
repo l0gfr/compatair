@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "boge-s-40-3-bluekat-frequence-non-precisee-8-bar-groupe-fixe-au-sol-insonorisation-renforcee-convertisseur-catalytique-bluekat",
 	"slug": "boge-s-40-3-bluekat-frequence-non-precisee-8-bar-groupe-fixe-au-sol-insonorisation-renforcee-convertisseur-catalytique-bluekat",
 	"brand": "BOGE",

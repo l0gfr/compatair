@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "airpress-mini-compresseur-a-essence-bm-2-5-275-honda-gp160",
 	"slug": "airpress-mini-compresseur-a-essence-bm-2-5-275-honda-gp160",
 	"brand": "Airpress",

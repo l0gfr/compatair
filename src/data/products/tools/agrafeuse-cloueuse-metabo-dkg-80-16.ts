@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
   "id": "metabo-dkg-80-16",
   "slug": "agrafeuse-cloueuse-metabo-dkg-80-16",
   "categoryId": "agrafeuse-cloueuse",

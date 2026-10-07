@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "ponceuse-orbitale-mannesmann-demag-mdexz-125-5-0-8280-0303",
 	"slug": "ponceuse-orbitale-mannesmann-demag-mdexz-125-5-0-8280-0303",
 	"categoryId": "ponceuse-orbitale",

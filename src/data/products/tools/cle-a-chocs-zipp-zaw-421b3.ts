@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "cle-a-chocs-zipp-zaw-421b3",
 	"slug": "cle-a-chocs-zipp-zaw-421b3",
 	"categoryId": "cle-a-chocs",

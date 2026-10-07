@@ -64,13 +64,14 @@ describe('documented compressors October4 lot B', () => {
   expect(evaluateCompatibility(p, fixedDemand(10, (minimum + maximum) / 2)).verdict).toBe('insufficient_data');
   expect(evaluateCompatibility(p, fixedDemand(10, maximum + 1)).verdict).toBe('incompatible');
  });
- it('keeps the Puska capacity and pressure boundaries conclusive without inferring endurance', () => {
+ it('keeps the Puska capacity boundary conclusive without inventing maximum pressure or endurance', () => {
   expect(batch.filter(p => p.specifications.some(s => s.label === 'FAD maximal déclaré à 10 bar'))).toHaveLength(15);
   const p = product('Puska', 'PKE 3 VF 10');
   expect(evaluateCompatibility(p, fixedDemand(10, 200))).toMatchObject({ verdict: 'insufficient_data', limitingFactor: 'data', availableFadLpm: 294, availableFadBasis: 'exact' });
   expect(evaluateCompatibility(p, fixedDemand(10, 294)).verdict).toBe('insufficient_data');
   expect(evaluateCompatibility(p, fixedDemand(10, 295))).toMatchObject({ verdict: 'incompatible', limitingFactor: 'flow' });
-  expect(evaluateCompatibility(p, fixedDemand(11, 200))).toMatchObject({ verdict: 'incompatible', limitingFactor: 'pressure' });
+  expect(p.maxPressureBasis).toBe('selected-working-pressure-ceiling');
+  expect(evaluateCompatibility(p, fixedDemand(11, 200))).toMatchObject({ verdict: 'insufficient_data', limitingFactor: 'data' });
   expect(evaluateCompatibility(p, fixedDemand(6.3, 200))).toMatchObject({ verdict: 'insufficient_data', limitingFactor: 'data', availableFadBasis: 'higher-pressure-bound' });
   const before = JSON.stringify(snapshot);
   build(snapshot);
@@ -103,7 +104,8 @@ describe('documented compressors October4 lot B', () => {
   expect(nuair.tankLiters).toBeUndefined();
   expect(evaluateCompatibility(nuair,tool).verdict).toBe('continuous');
   expect(evaluateCompatibility(product('Hertz','IMPETUS 22'),tool).verdict).toBe('insufficient_data');
-  expect(evaluateCompatibility(product('Puska','CNR 155/BM S YD'),{...tool,workingPressureBar:{min:11,typical:11,max:11}}).verdict).toBe('incompatible');
+  expect(product('Puska','CNR 155/BM S YD').maxPressureBasis).toBe('selected-working-pressure-ceiling');
+  expect(evaluateCompatibility(product('Puska','CNR 155/BM S YD'),{...tool,workingPressureBar:{min:11,typical:11,max:11}}).verdict).toBe('insufficient_data');
   const compressor={maxPressureBar:8,availableFadLpm:325,dutyCycle:1,cutInPressureBar:7,cutOutPressureBar:8};
   const result=calculateSizing({mode:'successive',sessionMinutes:30,safetyMargin:.25,demands:[{id:'burst',model:'fixed-flow',quantity:1,flowLpm:600,pressureBar:6.3,dutyFactor:.2}],compressor});
   expect(result.verdict).toBe('insufficient_data');

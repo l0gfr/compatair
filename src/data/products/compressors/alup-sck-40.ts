@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "alup-sck-40",
   "slug": "alup-sck-40",
   "brand": "ALUP",
@@ -13,6 +15,7 @@ const product = {
     }
   },
   "maxPressureBar": 13,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 13,
@@ -118,6 +121,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4c-alup-alup-sck25-40-allegretto15-22-leaflet-6999640680-en-p4"
+    ],
     "model": [
       "october4c-alup-alup-sck25-40-allegretto15-22-leaflet-6999640680-en-p4"
     ],

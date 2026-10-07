@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "boulonneuse-atlas-copco-ltc38-r40-17-a-o-3-8431061108",
 	"slug": "boulonneuse-atlas-copco-ltc38-r40-17-a-o-3-8431061108",
 	"categoryId": "boulonneuse",

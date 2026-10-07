@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "chicago-pneumatic-cp7266cve",
 	"slug": "ponceuse-vibrante-chicago-pneumatic-cp7266cve",
 	"categoryId": "ponceuse-vibrante",

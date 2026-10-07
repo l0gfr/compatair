@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "kaeser-sm-13-base-sans-cuve-8-bar",
 	"slug": "kaeser-sm-13-base-sans-cuve-8-bar",
 	"brand": "KAESER",

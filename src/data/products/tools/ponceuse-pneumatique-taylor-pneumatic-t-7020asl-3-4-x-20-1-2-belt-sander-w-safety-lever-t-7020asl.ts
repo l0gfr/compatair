@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
   "id": "ponceuse-pneumatique-taylor-pneumatic-t-7020asl-3-4-x-20-1-2-belt-sander-w-safety-lever-t-7020asl",
   "slug": "ponceuse-pneumatique-taylor-pneumatic-t-7020asl-3-4-x-20-1-2-belt-sander-w-safety-lever-t-7020asl",
   "categoryId": "ponceuse-pneumatique",

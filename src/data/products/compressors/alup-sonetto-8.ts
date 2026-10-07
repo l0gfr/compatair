@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "alup-sonetto-8",
   "slug": "alup-sonetto-8",
   "brand": "ALUP",
@@ -13,6 +15,7 @@ const product = {
     }
   },
   "maxPressureBar": 10,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 10,
@@ -118,6 +121,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4c-alup-alup-sonetto8-20-allegretto8-14-leaflet-6999640670-en-p4"
+    ],
     "model": [
       "october4c-alup-alup-sonetto8-20-allegretto8-14-leaflet-6999640670-en-p4"
     ],

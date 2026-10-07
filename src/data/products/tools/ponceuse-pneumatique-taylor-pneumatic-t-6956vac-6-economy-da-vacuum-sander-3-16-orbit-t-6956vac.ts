@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
   "id": "ponceuse-pneumatique-taylor-pneumatic-t-6956vac-6-economy-da-vacuum-sander-3-16-orbit-t-6956vac",
   "slug": "ponceuse-pneumatique-taylor-pneumatic-t-6956vac-6-economy-da-vacuum-sander-3-16-orbit-t-6956vac",
   "categoryId": "ponceuse-pneumatique",

@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "taraudeuse-ober-mp100ca-con-mandrino-8305537-1",
 	"slug": "taraudeuse-ober-mp100ca-con-mandrino-8305537-1",
 	"categoryId": "taraudeuse",

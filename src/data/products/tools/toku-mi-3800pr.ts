@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "toku-mi-3800pr",
 	"slug": "toku-mi-3800pr",
 	"brand": "Toku",

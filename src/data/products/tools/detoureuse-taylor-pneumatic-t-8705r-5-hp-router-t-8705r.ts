@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
   "id": "detoureuse-taylor-pneumatic-t-8705r-5-hp-router-t-8705r",
   "slug": "detoureuse-taylor-pneumatic-t-8705r-5-hp-router-t-8705r",
   "categoryId": "detoureuse",

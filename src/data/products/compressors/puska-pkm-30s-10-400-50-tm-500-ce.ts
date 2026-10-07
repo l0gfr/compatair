@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "puska-pkm-30s-10-400-50-tm-500-ce",
   "slug": "puska-pkm-30s-10-400-50-tm-500-ce",
   "brand": "Puska",
@@ -16,6 +18,7 @@ const product: unknown = {
   },
   "tankLiters": 500,
   "maxPressureBar": 10,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 10,
@@ -102,6 +105,9 @@ const product: unknown = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4b-puska-catalog-2025-p35"
+    ],
     "model": [
       "october4b-puska-catalog-2025-p35"
     ],

@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "perceuse-gatx-gp-3714acn",
 	"slug": "perceuse-gatx-gp-3714acn",
 	"categoryId": "perceuse",

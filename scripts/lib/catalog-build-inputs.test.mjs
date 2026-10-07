@@ -23,6 +23,11 @@ it('preserves index order for a model and its prefixed variants, independent of 
   expect(JSON.parse(await readFile(join(root, '.astro/build-inputs/tools.json'), 'utf8')).map(item => item.id)).toEqual(['model', 'model-variant']);
   expect(transformed.code).not.toContain('model-variant');
   expect(transformed.code).toContain('readFileSync');
+  const historyModule = join(root, 'src/data/evidence-history.ts');
+  const historyTransformed = await plugin.transform.call({ environment: { name: 'prerender' } }, '', historyModule);
+  expect(historyTransformed.code).toContain('evidenceHistorySchema.parse(input)');
+  expect(JSON.parse(await readFile(join(root, '.astro/build-inputs/history.json'), 'utf8'))).toEqual({ events: [] });
+  await expect(plugin.transform.call({ environment: { name: 'client' } }, '', historyModule)).rejects.toThrow('client bundle');
   await expect(plugin.transform.call({ environment: { name: 'client' } }, '', module)).rejects.toThrow('client bundle');
   await writeFile(module, 'broken index');
   await expect(catalogBuildInputs(root).transform.call({}, '', module)).rejects.toThrow('out of sync');

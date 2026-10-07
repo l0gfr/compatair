@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "ekomak-eko-16-vst",
   "slug": "ekomak-eko-16-vst",
   "brand": "Ekomak",
@@ -13,6 +15,7 @@ const product = {
     }
   },
   "maxPressureBar": 10,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 7,
@@ -115,6 +118,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4c-ekomak-page-direct-drive-eko-8-22-vst-p1"
+    ],
     "model": [
       "october4c-ekomak-page-direct-drive-eko-8-22-vst-p1"
     ],

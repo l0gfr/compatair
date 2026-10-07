@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
   "id": "ponceuse-orbitale-festool-lex-3-150-7",
   "slug": "ponceuse-orbitale-festool-lex-3-150-7",
   "categoryId": "ponceuse-orbitale",

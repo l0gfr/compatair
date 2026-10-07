@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "pistolet-peinture-anest-iwata-tof-50-022p-13608920",
 	"slug": "pistolet-peinture-anest-iwata-tof-50-022p-13608920",
 	"categoryId": "pistolet-peinture",

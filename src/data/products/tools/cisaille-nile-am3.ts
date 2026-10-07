@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "cisaille-nile-am3",
 	"slug": "cisaille-nile-am3",
 	"categoryId": "cisaille",

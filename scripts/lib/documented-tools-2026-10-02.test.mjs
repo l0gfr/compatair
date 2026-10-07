@@ -1,3 +1,4 @@
+import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { buildDocumentedToolsOctober2, documentedConnectionFacts } from './documented-tools-2026-10-02.mjs';
@@ -81,9 +82,7 @@ describe('documented tool references, October 2', () => {
   expect(new Set(batch.map(product => product.id)).size).toBe(batch.length);
   for (const product of batch) {
    const text = readFileSync(new URL(`../../src/data/products/tools/${product.slug}.ts`, import.meta.url), 'utf8');
-   const prefix = 'const product = ', suffix = ';\n\nexport default product;\n';
-   expect(text.startsWith(prefix) && text.endsWith(suffix)).toBe(true);
-   expect(toolProfileSchema.parse(JSON.parse(text.slice(prefix.length, -suffix.length)))).toEqual(toolProfileSchema.parse(product));
+   expect(toolProfileSchema.parse(parseCatalogProductSource('tools', text))).toEqual(toolProfileSchema.parse(product));
   }
  });
  it('does not attach a power/speed pressure note to a loaded-consumption measurement', () => {

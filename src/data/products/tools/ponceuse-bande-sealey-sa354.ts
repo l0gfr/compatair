@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "ponceuse-bande-sealey-sa354",
 	"slug": "ponceuse-bande-sealey-sa354",
 	"categoryId": "ponceuse-bande",

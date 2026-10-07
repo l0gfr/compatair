@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "visseuse-ober-ergovit50dat-8301175",
 	"slug": "visseuse-ober-ergovit50dat-8301175",
 	"categoryId": "visseuse",

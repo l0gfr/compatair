@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 import { selectBenchmarkPairs } from './agent-fidelity-benchmark';
 import type { VerdictSnapshotPair } from './snapshots';
 import { validatePublishedDecision } from './proof-graph';
+import { CALCULATION_VERSION } from './sizing';
 
 describe('bounded catalog operations', () => {
 	it.each([[131, 7, 200, 0], [130, 0, 0, 0], [1, 1, 1, 1]])('keeps the exact stable benchmark selection for class sizes %s', (...sizes) => {
@@ -16,7 +17,7 @@ describe('bounded catalog operations', () => {
 	});
 
 	const expected = { catalogVersion: 'a'.repeat(64), compressorId: 'c', toolId: 't' };
-	const decision = { catalogVersion: expected.catalogVersion, verdictVersion: 'b'.repeat(64), calculationVersion: '1.4.3', input: { compressorId: 'c', toolId: 't' }, engine_evaluation: { compressorId: 'c', toolId: 't', verdict: 'insufficient_data', confidence: 'low', limitingFactor: 'data' } };
+	const decision = { catalogVersion: expected.catalogVersion, verdictVersion: 'b'.repeat(64), calculationVersion: CALCULATION_VERSION, input: { compressorId: 'c', toolId: 't' }, engine_evaluation: { compressorId: 'c', toolId: 't', verdict: 'insufficient_data', confidence: 'low', limitingFactor: 'data' } };
 	it('accepts an explicitly unavailable flow without inventing a value', () => {
 		expect(validatePublishedDecision(decision, expected).engine_evaluation).not.toHaveProperty('availableFadLpm');
 	});

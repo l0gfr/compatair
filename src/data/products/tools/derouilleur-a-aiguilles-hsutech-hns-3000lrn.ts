@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "derouilleur-a-aiguilles-hsutech-hns-3000lrn",
 	"slug": "derouilleur-a-aiguilles-hsutech-hns-3000lrn",
 	"categoryId": "derouilleur-a-aiguilles",

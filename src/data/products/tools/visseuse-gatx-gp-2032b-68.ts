@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "visseuse-gatx-gp-2032b-68",
 	"slug": "visseuse-gatx-gp-2032b-68",
 	"categoryId": "visseuse",

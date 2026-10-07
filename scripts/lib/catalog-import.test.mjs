@@ -58,7 +58,7 @@ describe('reviewed manufacturer imports', () => {
 	});
 	it('has no duplicate brand and manufacturer reference in the current catalog', () => {
 		const products=[...compressors,...tools];
-		expect(products).toHaveLength(22846);
+		expect(products).toHaveLength(24046);
 		const keys=products.filter(p=>p.mpn).map(p=>`${p.brand.toLowerCase()}|${p.mpn.toLowerCase()}`);
 		expect(new Set(keys).size).toBe(keys.length);
 	});

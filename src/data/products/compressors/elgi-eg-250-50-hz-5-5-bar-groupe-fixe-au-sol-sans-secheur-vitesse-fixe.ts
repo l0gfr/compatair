@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "elgi-eg-250-50-hz-5-5-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe",
 	"slug": "elgi-eg-250-50-hz-5-5-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe",
 	"brand": "ELGi",

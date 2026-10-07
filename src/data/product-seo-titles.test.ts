@@ -1,10 +1,16 @@
 import { describe, expect, it } from 'vitest';
 import { MAX_DOCUMENT_TITLE_LENGTH, resolveDocumentTitle } from '../domain/metadata';
 import { productSeoDescriptions, toolUseSeoTitles } from './product-seo-titles';
-import fascoBullseye from './products/tools/agrafeuse-cloueuse-fasco-f44ac-cn15w-ps65-bull-s-eye-11843';
-import primaNylon from './products/tools/pistolet-peinture-asturomec-prima-buse-1-2-29612';
-import profi from './products/tools/soufflette-asturomec-profi-50000';
-import softWithHose from './products/tools/soufflette-asturomec-soft-50026';
+import { toolProfileSchema } from '../domain/catalog';
+import rawFascoBullseye from './products/tools/agrafeuse-cloueuse-fasco-f44ac-cn15w-ps65-bull-s-eye-11843';
+import rawPrimaNylon from './products/tools/pistolet-peinture-asturomec-prima-buse-1-2-29612';
+import rawProfi from './products/tools/soufflette-asturomec-profi-50000';
+import rawSoftWithHose from './products/tools/soufflette-asturomec-soft-50026';
+
+const fascoBullseye = toolProfileSchema.parse(rawFascoBullseye);
+const primaNylon = toolProfileSchema.parse(rawPrimaNylon);
+const profi = toolProfileSchema.parse(rawProfi);
+const softWithHose = toolProfileSchema.parse(rawSoftWithHose);
 
 const reportedShortDescriptionProductIds = [
 	'revolution-air-superboxy-2l',
@@ -64,7 +70,9 @@ describe('tool use SEO titles', () => {
 		expect(primaNylon).not.toHaveProperty('mpn');
 		expect(primaNylon.specifications.find(item => item.label === 'Godet publié')?.value).toBe('nylon 680 cc');
 		expect(toolUseSeoTitles[primaNylon.id]).toContain('godet 680 cc');
-		expect(toolUseSeoTitles[primaNylon.id]).not.toContain(primaNylon.variant.distinguishingAttributes.sourceDefinedReference);
+		const sourceDefinedReference = primaNylon.variant?.distinguishingAttributes.sourceDefinedReference;
+		expect(sourceDefinedReference).toBeDefined();
+		expect(toolUseSeoTitles[primaNylon.id]).not.toContain(sourceDefinedReference!);
 	});
 
 	it('distinguishes PROFI tools through their observed reference', () => {

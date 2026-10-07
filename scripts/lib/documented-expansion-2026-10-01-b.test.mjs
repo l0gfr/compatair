@@ -1,3 +1,4 @@
+import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { buildDocumentedExpansionOctoberB } from './documented-expansion-2026-10-01-b.mjs';
@@ -11,9 +12,7 @@ const byMpn = mpn => batch.tools.find(p => p.mpn === mpn);
 // catalog modules again into an isolated Vitest worker.
 const committedRecord = (kind, slug) => {
  const source = readFileSync(new URL(`../../src/data/products/${kind}/${slug}.ts`, import.meta.url), 'utf8');
- const prefix = 'const product = ', suffix = ';\n\nexport default product;\n';
- if (!source.startsWith(prefix) || !source.endsWith(suffix)) throw new Error('Generated record format changed');
- return JSON.parse(source.slice(prefix.length, -suffix.length));
+ return parseCatalogProductSource(kind, source);
 };
 describe('reviewed manufacturer tables, October 1 batch B', () => {
  it('validates distinct pressure/equipment configurations and exact tool references', () => {

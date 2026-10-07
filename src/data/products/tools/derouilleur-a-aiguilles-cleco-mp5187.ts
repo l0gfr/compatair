@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "derouilleur-a-aiguilles-cleco-mp5187",
 	"slug": "derouilleur-a-aiguilles-cleco-mp5187",
 	"categoryId": "derouilleur-a-aiguilles",

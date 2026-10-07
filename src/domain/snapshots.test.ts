@@ -29,6 +29,19 @@ describe('immutable catalog and verdict snapshots', () => {
 		expect(catalog.normalized.products.find((item) => item.id === 'metabo-fsp-600-lvlp')?.identity.normalizedMpn).toBe('601578000');
 	});
 
+	it('rejects a per-action volume without its own documentary evidence', () => {
+		const tool = tools.find(item => item.id === 'agrafeuse-cloueuse-paslode-f325r-513000')!;
+		expect(tool.demandModel).toBe('per-action');
+		expect(assertNormalizedCatalogIntegrity([], [tool])).toBe(true);
+		for (const missingSource of [undefined, []]) {
+			const fieldSources = { ...tool.fieldSources };
+			if (missingSource === undefined) delete fieldSources.airPerActionLiters;
+			else fieldSources.airPerActionLiters = missingSource;
+			expect(() => assertNormalizedCatalogIntegrity([], [{ ...tool, fieldSources }])).toThrow('airPerActionLiters');
+		}
+		expect(() => assertNormalizedCatalogIntegrity([], [{ ...tool, fieldSources: { ...tool.fieldSources, airPerActionLiters: ['unobserved-volume-source'] } }])).toThrow('preuve inconnue');
+	});
+
 	it('validates GTIN check digits instead of accepting numeric-looking identifiers', () => {
 		expect(isValidTradeItem('4007430246202')).toBe(true);
 		expect(isValidTradeItem('4007430246203')).toBe(false);

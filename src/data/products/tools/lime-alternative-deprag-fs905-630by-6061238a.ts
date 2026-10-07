@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "lime-alternative-deprag-fs905-630by-6061238a",
 	"slug": "lime-alternative-deprag-fs905-630by-6061238a",
 	"categoryId": "lime-alternative",

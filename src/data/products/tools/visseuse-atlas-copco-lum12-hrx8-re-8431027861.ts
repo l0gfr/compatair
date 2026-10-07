@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "visseuse-atlas-copco-lum12-hrx8-re-8431027861",
 	"slug": "visseuse-atlas-copco-lum12-hrx8-re-8431027861",
 	"categoryId": "visseuse",

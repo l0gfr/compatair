@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "boge-slf-40-3-bluekat-frequence-non-precisee-vitesse-variable-groupe-fixe-au-sol-insonorisation-standard-convertisseur-catalytique-bluekat-vitesse-variable",
 	"slug": "boge-slf-40-3-bluekat-frequence-non-precisee-vitesse-variable-groupe-fixe-au-sol-insonorisation-standard-convertisseur-catalytique-bluekat-vitesse-variable",
 	"brand": "BOGE",

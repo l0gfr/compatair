@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "cle-a-cliquet-pneutec-ut-8001-a-91-000",
 	"slug": "cle-a-cliquet-pneutec-ut-8001-a-91-000",
 	"categoryId": "cle-a-cliquet",

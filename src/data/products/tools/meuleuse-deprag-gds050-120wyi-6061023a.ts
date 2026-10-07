@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "meuleuse-deprag-gds050-120wyi-6061023a",
 	"slug": "meuleuse-deprag-gds050-120wyi-6061023a",
 	"categoryId": "meuleuse",

@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "visseuse-pacific-pneumatic-sd-7-8",
 	"slug": "visseuse-pacific-pneumatic-sd-7-8",
 	"categoryId": "visseuse",

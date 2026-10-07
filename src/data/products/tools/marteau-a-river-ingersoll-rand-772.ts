@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "marteau-a-river-ingersoll-rand-772",
 	"slug": "marteau-a-river-ingersoll-rand-772",
 	"categoryId": "marteau-a-river",

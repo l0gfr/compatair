@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "airpress-mobile-a-essence-bm-17-17-550-honda-gx270-10-bar-8-4-ch-6-3-kw-403-l-min-2-x-17-l",
 	"slug": "airpress-mobile-a-essence-bm-17-17-550-honda-gx270-10-bar-8-4-ch-6-3-kw-403-l-min-2-x-17-l",
 	"brand": "Airpress",

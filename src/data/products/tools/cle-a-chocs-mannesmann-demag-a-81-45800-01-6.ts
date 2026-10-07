@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "cle-a-chocs-mannesmann-demag-a-81-45800-01-6",
 	"slug": "cle-a-chocs-mannesmann-demag-a-81-45800-01-6",
 	"categoryId": "cle-a-chocs",

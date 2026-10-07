@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "cisaille-vessel-gt-ny10r-4-360664",
 	"slug": "cisaille-vessel-gt-ny10r-4-360664",
 	"categoryId": "cisaille",

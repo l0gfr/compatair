@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "visseuse-desoutter-sdp140-t490-s4q-1465524",
 	"slug": "visseuse-desoutter-sdp140-t490-s4q-1465524",
 	"categoryId": "visseuse",

@@ -32,6 +32,12 @@ describe('V3 additional fixtures, not a certification', () => {
 			expect(actualHypotheses.slice(0, hypotheses!.length)).toEqual(hypotheses);
 			expect(actualWarnings).toContain(warnings!.at(-1));
 			expect(actualWarnings.join(' ')).toContain('pas une autonomie garantie');
+		} else if (fixture.id === 'E13') {
+			// Keep the archived arithmetic and fixture text. Version 1.4.4 avoids
+			// calling a documentary operating point a proven machine maximum.
+			expect(result).toEqual({ ...fixture.result, calculationVersion: CALCULATION_VERSION,
+				hypotheses: fixture.result!.hypotheses!.map(value => value === 'Pression de sortie réglée ou mesurée : 5 bar, plafonnée au maximum de la machine.' ? 'Pression de sortie réglée ou mesurée : 5 bar.' : value),
+			});
 		} else expect(result).toEqual({ ...fixture.result, calculationVersion: CALCULATION_VERSION });
 		const gap = explainDecisionDataGap(undefined, result.requiredPressureBar, result);
 		if (result.verdict !== 'insufficient_data') expect(gap).toBeUndefined();

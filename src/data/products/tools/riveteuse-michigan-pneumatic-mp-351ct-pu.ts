@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "riveteuse-michigan-pneumatic-mp-351ct-pu",
 	"slug": "riveteuse-michigan-pneumatic-mp-351ct-pu",
 	"categoryId": "riveteuse",

@@ -1,3 +1,4 @@
+import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { buildDocumentedCompressorsOctober2B } from './documented-compressors-2026-10-02-b.mjs';
@@ -8,9 +9,7 @@ const batch = buildDocumentedCompressorsOctober2B(snapshot);
 const product = (model, dataset, maximum, variable) => batch[snapshot.compressors.findIndex(row => row.model === model && row.dataset === dataset && (maximum === undefined || row.maxPressureBar === maximum) && (variable === undefined || row.variableSpeed === variable))];
 const record = slug => {
  const source = readFileSync(new URL(`../../src/data/products/compressors/${slug}.ts`, import.meta.url), 'utf8');
- const prefix = 'const product = ', suffix = ';\n\nexport default product;\n';
- if (!source.startsWith(prefix) || !source.endsWith(suffix)) throw new Error('Format du produit altéré');
- return JSON.parse(source.slice(prefix.length, -suffix.length));
+ return parseCatalogProductSource('compressors', source);
 };
 describe('documented compressor configurations, October 2 B', () => {
  it('keeps 400 genuine configurations and canonical records reproducible', () => {

@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "lacme-ponceuse-orbitale-ind-centrale-aspirante",
 	"slug": "lacme-ponceuse-orbitale-ind-centrale-aspirante",
 	"brand": "Lacmé",

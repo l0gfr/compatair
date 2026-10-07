@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "araseuse-de-rivets-universal-tool-ut8897rs-5-8",
 	"slug": "araseuse-de-rivets-universal-tool-ut8897rs-5-8",
 	"categoryId": "araseuse-de-rivets",

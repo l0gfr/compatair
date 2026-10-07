@@ -4,6 +4,27 @@ import { pathToFileURL } from 'node:url';
 import { technicalCardSvg } from './technical-card.mjs';
 
 const KINDS = { compressors: { exportName: 'rawCompressors' }, tools: { exportName: 'rawTools' } };
+const PRODUCT_INPUT_TYPES = { compressors: 'CompressorInput', tools: 'ToolProfileInput' };
+
+function productInputType(kind) {
+	if (!Object.hasOwn(PRODUCT_INPUT_TYPES, kind)) throw new Error(`Type de catalogue inconnu : ${kind}`);
+	return PRODUCT_INPUT_TYPES[kind];
+}
+
+export function buildCatalogProductSource(kind, product, indentation = 2) {
+	const type = productInputType(kind);
+	return `import type { ${type} } from '../../../domain/catalog';\n\nconst product: ${type} = ${JSON.stringify(product, null, indentation)};\n\nexport default product;\n`;
+}
+
+// Decode the versioned JSON envelope without evaluating source code. Schema
+// validation remains the responsibility of each caller's catalog boundary.
+export function parseCatalogProductSource(kind, source) {
+	const type = productInputType(kind);
+	const prefix = `import type { ${type} } from '../../../domain/catalog';\n\nconst product: ${type} = `;
+	const suffix = [';\n\nexport default product;\n', ';\nexport default product;\n'].find(value => source.endsWith(value));
+	if (!source.startsWith(prefix + '{') || !suffix) throw new Error('Format du produit typé altéré');
+	return JSON.parse(source.slice(prefix.length, -suffix.length));
+}
 export const MAX_PRODUCT_IMAGE_BYTES = 250 * 1024;
 export const MAX_PRODUCT_IMAGE_DIMENSION = 1600;
 export const PRODUCT_IMAGE_WEBP_QUALITY = 82;
@@ -119,7 +140,7 @@ export async function validateCatalog(root, schemas, seoTitles, toolUseSeoTitles
 			} catch { errors.push(`Image locale absente : ${product.id} ${product.image.src}`); }
 			const evidenceIds = new Set(product.evidence.map((item) => item.id));
 			for (const [field, ids] of Object.entries(product.fieldSources)) for (const id of ids) if (!evidenceIds.has(id)) errors.push(`Source de champ inconnue : ${product.id}.${field} -> ${id}`);
-			const criticalFields = kind === 'compressors' ? ['fadCurve', 'maxPressureBar'] : ['workingPressureBar', ...(product.demandModel === 'fixed-flow' ? ['airflowLpm'] : [])];
+			const criticalFields = kind === 'compressors' ? ['fadCurve', 'maxPressureBar', ...(product.maxPressureBasis ? ['maxPressureBasis'] : [])] : ['workingPressureBar', ...(product.demandModel === 'fixed-flow' ? ['airflowLpm'] : product.demandModel === 'per-action' ? ['airPerActionLiters'] : [])];
 			for (const field of criticalFields) if (!(product.fieldSources[field]?.length)) errors.push(`Source explicite absente pour le champ critique : ${product.id}.${field}`);
 			for (const specification of product.specifications) {
 				for (const id of specification.evidenceIds) if (!evidenceIds.has(id)) errors.push(`Source de spécification inconnue : ${product.id}.${specification.label} -> ${id}`);
@@ -152,7 +173,7 @@ export async function addCatalogProduct(root, kind, draftPath, schema) {
 	const target = resolve(root, 'src/data/products', kind, `${product.slug}.ts`);
 	try { await access(target); throw new Error(`Le produit existe déjà : ${target}`); } catch (error) { if (error.code !== 'ENOENT') throw error; }
 	await optimizeImportedProductImage(root, product);
-	await writeFile(target, `const product = ${JSON.stringify(product, null, 2)};\n\nexport default product;\n`, { flag: 'wx' });
+	await writeFile(target, buildCatalogProductSource(kind, product), { flag: 'wx' });
 	await generateCatalogIndexes(root);
 	return target;
 }

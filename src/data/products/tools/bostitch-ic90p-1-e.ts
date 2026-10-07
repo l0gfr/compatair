@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "bostitch-ic90p-1-e",
 	"slug": "bostitch-ic90p-1-e",
 	"brand": "Bostitch",

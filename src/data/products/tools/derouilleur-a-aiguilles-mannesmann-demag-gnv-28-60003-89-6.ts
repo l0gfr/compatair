@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "derouilleur-a-aiguilles-mannesmann-demag-gnv-28-60003-89-6",
 	"slug": "derouilleur-a-aiguilles-mannesmann-demag-gnv-28-60003-89-6",
 	"categoryId": "derouilleur-a-aiguilles",

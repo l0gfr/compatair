@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "alup-allegro-315",
   "slug": "alup-allegro-315",
   "brand": "ALUP",
@@ -14,6 +16,7 @@ const product = {
     }
   },
   "maxPressureBar": 10,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 10,
@@ -108,6 +111,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4c-alup-alup-largo-allegro-200-315-leaflet-en-2025-p7"
+    ],
     "model": [
       "october4c-alup-alup-largo-allegro-200-315-leaflet-en-2025-p7"
     ],

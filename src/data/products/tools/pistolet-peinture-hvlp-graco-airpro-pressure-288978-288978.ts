@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "pistolet-peinture-hvlp-graco-airpro-pressure-288978-288978",
 	"slug": "pistolet-peinture-hvlp-graco-airpro-pressure-288978-288978",
 	"categoryId": "pistolet-peinture-hvlp",

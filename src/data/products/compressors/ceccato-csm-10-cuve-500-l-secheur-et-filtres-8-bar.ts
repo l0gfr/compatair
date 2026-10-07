@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "ceccato-csm-10-cuve-500-l-secheur-et-filtres-8-bar",
 	"slug": "ceccato-csm-10-cuve-500-l-secheur-et-filtres-8-bar",
 	"brand": "Ceccato",

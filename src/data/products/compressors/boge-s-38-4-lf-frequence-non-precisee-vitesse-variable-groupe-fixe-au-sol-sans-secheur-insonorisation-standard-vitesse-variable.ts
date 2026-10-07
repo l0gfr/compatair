@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "boge-s-38-4-lf-frequence-non-precisee-vitesse-variable-groupe-fixe-au-sol-sans-secheur-insonorisation-standard-vitesse-variable",
 	"slug": "boge-s-38-4-lf-frequence-non-precisee-vitesse-variable-groupe-fixe-au-sol-sans-secheur-insonorisation-standard-vitesse-variable",
 	"brand": "BOGE",

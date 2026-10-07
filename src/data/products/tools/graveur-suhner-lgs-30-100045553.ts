@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "graveur-suhner-lgs-30-100045553",
 	"slug": "graveur-suhner-lgs-30-100045553",
 	"categoryId": "graveur",

@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "dalgakiran-tidy-50",
 	"slug": "dalgakiran-tidy-50",
 	"brand": "Dalgakiran",
@@ -14,6 +16,7 @@ const product: unknown = {
 	},
 	"tankLiters": 0,
 	"maxPressureBar": 13,
+	"maxPressureBasis": "selected-working-pressure-ceiling",
 	"fadCurve": [
 		{
 			"pressureBar": 13,
@@ -112,6 +115,9 @@ const product: unknown = {
 		}
 	],
 	"fieldSources": {
+		"maxPressureBasis": [
+			"october4-dalgakiran-catalog-p26"
+		],
 		"model": [
 			"october4-dalgakiran-catalog-p26"
 		],

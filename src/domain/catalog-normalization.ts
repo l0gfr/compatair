@@ -80,7 +80,7 @@ export function normalizeProduct(product: CatalogProduct, type: 'compressor' | '
 				gtin: evidenceIdsForField(product, 'gtin'),
 				distributorSkus: product.distributorSkus.flatMap((identifier) => identifier.evidenceIds),
 				...(type === 'compressor'
-					? { fadCurve: evidenceIdsForField(product, 'fadCurve'), maxPressureBar: evidenceIdsForField(product, 'maxPressureBar') }
+					? { fadCurve: evidenceIdsForField(product, 'fadCurve'), maxPressureBar: evidenceIdsForField(product, 'maxPressureBar'), ...('maxPressureBasis' in product ? { maxPressureBasis: evidenceIdsForField(product, 'maxPressureBasis') } : {}) }
 					: { workingPressureBar: evidenceIdsForField(product, 'workingPressureBar'), airflowLpm: evidenceIdsForField(product, 'airflowLpm') }),
 			},
 		},
@@ -141,7 +141,7 @@ export function assertNormalizedCatalogIntegrity(compressors: Compressor[], tool
 			if (previous && previous !== product.id) errors.push(`MPN dupliqué pour ${product.brand} : ${product.mpn}`);
 			brandMpns.set(key, product.id);
 		}
-		const criticalFields = 'fadCurve' in product ? ['fadCurve', 'maxPressureBar'] : ['workingPressureBar', ...(product.demandModel === 'fixed-flow' ? ['airflowLpm'] : [])];
+		const criticalFields = 'fadCurve' in product ? ['fadCurve', 'maxPressureBar', ...(product.maxPressureBasis ? ['maxPressureBasis'] : [])] : ['workingPressureBar', ...(product.demandModel === 'fixed-flow' ? ['airflowLpm'] : product.demandModel === 'per-action' ? ['airPerActionLiters'] : [])];
 		for (const field of criticalFields) if (!(product.fieldSources[field]?.length)) errors.push(`${product.id} ne source pas explicitement le champ critique ${field}`);
 	}
 	if (errors.length) throw new Error(errors.join('\n'));

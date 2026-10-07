@@ -39,6 +39,7 @@ const demandSchema = z.union([fixedFlowDemandSchema, perActionDemandSchema, infl
 
 export const compressorInputSchema = z.object({
 	maxPressureBar: z.number().positive().max(50),
+	maxPressureBasis: z.enum(['explicit-maximum-working-pressure', 'selected-working-pressure-ceiling']).optional(),
 	// Match the documented industrial FAD range already accepted by the catalogue.
 	availableFadLpm: z.number().positive().max(100_000).optional(),
 	availableFadBasis: z.enum(['exact', 'interpolated', 'higher-pressure-bound']).optional(),

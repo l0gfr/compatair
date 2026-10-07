@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
   "id": "marteau-a-river-taylor-pneumatic-t-7x-498-sd-rivet-hammer-900-bpm-t-7x",
   "slug": "marteau-a-river-taylor-pneumatic-t-7x-498-sd-rivet-hammer-900-bpm-t-7x",
   "categoryId": "marteau-a-river",

@@ -4,8 +4,10 @@ import { join } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
 import {
 	buildCatalogIndexSource,
+	buildCatalogProductSource,
 	MAX_PRODUCT_IMAGE_BYTES,
 	optimizeImportedProductImage,
+	parseCatalogProductSource,
 	productImageSizeError,
 	productTechnicalSvgError,
 } from './catalog-tooling.mjs';
@@ -18,6 +20,28 @@ afterEach(async () => {
 });
 
 describe('catalog tooling', () => {
+	it('round-trips typed JSON product envelopes without evaluating source code', () => {
+		const product = { id: 'fixture', evidence: [], label: "quoted ';\nexport default product;" };
+		for (const kind of ['compressors', 'tools']) {
+			const source = buildCatalogProductSource(kind, product);
+			expect(parseCatalogProductSource(kind, source)).toEqual(product);
+			expect(parseCatalogProductSource(kind, source.replace(';\n\nexport default product;\n', ';\nexport default product;\n'))).toEqual(product);
+			expect(source).toContain(kind === 'compressors' ? 'const product: CompressorInput = ' : 'const product: ToolProfileInput = ');
+		}
+	});
+
+	it('rejects wrong product contracts, executable payloads and unsupported kinds', () => {
+		const source = buildCatalogProductSource('tools', { id: 'fixture' });
+		for (const invalid of [source.replace('ToolProfileInput = ', 'any = '), source + 'console.log(1);', source.replace('{\n', '(() => ({\n')]) {
+			expect(() => parseCatalogProductSource('tools', invalid)).toThrow();
+		}
+		expect(() => parseCatalogProductSource('compressors', source)).toThrow();
+		for (const kind of ['invented', '__proto__', 'constructor']) {
+			expect(() => buildCatalogProductSource(kind, {})).toThrow('Type de catalogue inconnu');
+			expect(() => parseCatalogProductSource(kind, source)).toThrow('Type de catalogue inconnu');
+		}
+	});
+
 	it('accepts only an exact generated vector card and rejects active markup or stale data', () => {
 		const product = { id: 'fixture', brand: 'Example', model: 'M1', mpn: '<script>&"', demandModel: 'fixed-flow', airflowLpm: { typical: 300 }, workingPressureBar: { typical: 6 }, image: { sourceLabel: 'Carte technique CompatAir, données fabricant' } };
 		const svg = technicalCardSvg(product, 'tools');

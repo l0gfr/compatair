@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "pistolet-peinture-hvlp-sames-kremlin-fpro-g-hvlp-14-lvb-135-797-414",
 	"slug": "pistolet-peinture-hvlp-sames-kremlin-fpro-g-hvlp-14-lvb-135-797-414",
 	"categoryId": "pistolet-peinture-hvlp",

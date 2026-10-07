@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "hertz-hs7-5-d",
 	"slug": "hertz-hs7-5-d",
 	"brand": "Hertz",
@@ -14,6 +16,7 @@ const product: unknown = {
 	},
 	"tankLiters": 0,
 	"maxPressureBar": 10,
+	"maxPressureBasis": "selected-working-pressure-ceiling",
 	"fadCurve": [],
 	"oilType": "oil-free",
 	"confidence": "B",
@@ -98,6 +101,9 @@ const product: unknown = {
 		}
 	],
 	"fieldSources": {
+		"maxPressureBasis": [
+			"october4-hertz-catalog-p36"
+		],
 		"model": [
 			"october4-hertz-catalog-p36"
 		],

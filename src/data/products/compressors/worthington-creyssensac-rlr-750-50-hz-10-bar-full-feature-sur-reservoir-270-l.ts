@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "worthington-creyssensac-rlr-750-50-hz-10-bar-full-feature-sur-reservoir-270-l",
 	"slug": "worthington-creyssensac-rlr-750-50-hz-10-bar-full-feature-sur-reservoir-270-l",
 	"brand": "Worthington Creyssensac",

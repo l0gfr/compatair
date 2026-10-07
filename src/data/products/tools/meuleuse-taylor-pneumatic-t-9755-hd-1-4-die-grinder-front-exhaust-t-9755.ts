@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
   "id": "meuleuse-taylor-pneumatic-t-9755-hd-1-4-die-grinder-front-exhaust-t-9755",
   "slug": "meuleuse-taylor-pneumatic-t-9755-hd-1-4-die-grinder-front-exhaust-t-9755",
   "categoryId": "meuleuse",

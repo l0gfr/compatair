@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "dynabrade-13516",
 	"slug": "ponceuse-rotative-dynabrade-13516",
 	"categoryId": "ponceuse-rotative",

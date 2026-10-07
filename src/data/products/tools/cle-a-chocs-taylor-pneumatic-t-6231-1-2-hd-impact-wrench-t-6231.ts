@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
   "id": "cle-a-chocs-taylor-pneumatic-t-6231-1-2-hd-impact-wrench-t-6231",
   "slug": "cle-a-chocs-taylor-pneumatic-t-6231-1-2-hd-impact-wrench-t-6231",
   "categoryId": "cle-a-chocs",

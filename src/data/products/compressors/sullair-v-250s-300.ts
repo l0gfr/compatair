@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "sullair-v-250s-300",
   "slug": "sullair-v-250s-300",
   "brand": "Sullair",
@@ -14,6 +16,7 @@ const product = {
     }
   },
   "maxPressureBar": 8.618,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 8.618,
@@ -130,6 +133,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4c-sullair-single-stage-p8"
+    ],
     "model": [
       "october4c-sullair-single-stage-p8"
     ],

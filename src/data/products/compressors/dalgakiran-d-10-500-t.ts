@@ -1,4 +1,6 @@
-const product: unknown = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
 	"id": "dalgakiran-d-10-500-t",
 	"slug": "dalgakiran-d-10-500-t",
 	"brand": "Dalgakiran",
@@ -14,6 +16,7 @@ const product: unknown = {
 	},
 	"tankLiters": 500,
 	"maxPressureBar": 12.5,
+	"maxPressureBasis": "selected-working-pressure-ceiling",
 	"fadCurve": [],
 	"intakeFlowLpm": 726,
 	"powerKw": 7.5,
@@ -97,6 +100,9 @@ const product: unknown = {
 		}
 	],
 	"fieldSources": {
+		"maxPressureBasis": [
+			"october4-dalgakiran-catalog-p50"
+		],
 		"model": [
 			"october4-dalgakiran-catalog-p50"
 		],

@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "perceuse-mannesmann-demag-d-8-2800-p-46910-46-5",
 	"slug": "perceuse-mannesmann-demag-d-8-2800-p-46910-46-5",
 	"categoryId": "perceuse",

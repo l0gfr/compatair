@@ -1,4 +1,6 @@
-const product = {
+import type { ToolProfileInput } from '../../../domain/catalog';
+
+const product: ToolProfileInput = {
 	"id": "yokota-yltx140e",
 	"slug": "yokota-yltx140e",
 	"brand": "Yokota",

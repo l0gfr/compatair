@@ -1,4 +1,6 @@
-const product = {
+import type { CompressorInput } from '../../../domain/catalog';
+
+const product: CompressorInput = {
   "id": "scr-scr100gpm2-8",
   "slug": "scr-scr100gpm2-8",
   "brand": "SCR",
@@ -13,6 +15,7 @@ const product = {
     }
   },
   "maxPressureBar": 8,
+  "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
       "pressureBar": 8,
@@ -102,6 +105,9 @@ const product = {
     }
   ],
   "fieldSources": {
+    "maxPressureBasis": [
+      "october4c-scr-173-p1"
+    ],
     "model": [
       "october4c-scr-173-p1"
     ],
