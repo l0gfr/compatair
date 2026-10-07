@@ -40,6 +40,61 @@
       "path": "/outils-pneumatiques/pistolet-nettoyage-zipp-ztg3125bss/",
       "reviewedAt": "2026-10-05",
       "reason": "Fiche trop mince : besoin d’air et caractéristiques d’usage doivent être revus dans le catalogue ZIPP avant indexation ; source disponible mais champs non qualifiés dans cette version."
+    },
+    {
+      "path": "/compresseurs/abac-formula-7-5-8-400-50/",
+      "reviewedAt": "2026-10-07",
+      "reason": "Revue primaire incomplète dans le rapport du 7 octobre matin : la variante et son point FAD sont identifiés, mais masse, alimentation et portée du fonctionnement continu n’ont pas reçu de validation finale. La différence avec FORMULA 7,5 10 est conservée ; indexabilité suspendue jusqu’à revue documentée."
+    },
+    {
+      "path": "/compresseurs/fiac-ax-153bd-13-400-50-ce/",
+      "reviewedAt": "2026-10-07",
+      "reason": "Revue primaire incomplète dans le rapport du 7 octobre matin : fiche exacte et catalogue de la version 13 bar non revalidés ce jour-là. La comparaison avec AX 153BD 10 montre une variante distincte ; données, conditions et utilité finale doivent être validées avant indexation."
+    },
+    {
+      "path": "/guides/buse-pistolet-peinture-chapeau-air-consommation/",
+      "reviewedAt": "2026-10-07",
+      "reason": "Revue primaire incomplète dans le rapport du 7 octobre matin : apport plausible et intention distincte du protocole de pression dynamique, mais valeurs décisives des notices DV1-S, Binks et SAMES et comparaison des guides de configuration restent à valider. Aucun refus de duplication n’est attribué à ce guide."
+    },
+    {
+      "path": "/guides/paslode-f150s-pp-cloueur-connecteurs-air-fixations/",
+      "reviewedAt": "2026-10-07",
+      "reason": "Revue primaire incomplète dans le rapport du 7 octobre matin : progression distincte du diagnostic de clous mal enfoncés, mais notice F150S-PP, pression, raccord et prescriptions de fixation n’ont pas reçu de validation finale. Maintien en attente jusqu’à revue sourcée de ces conditions."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-nettoyage-asturomec-la-50165/",
+      "reviewedAt": "2026-10-07",
+      "reason": "Apport éditorial insuffisant constaté le 7 octobre matin : inventaire du LA 50165 sans procédure propre de dimensionnement ou réception face au HYDROJET 50160/B. La lecture actuelle conserve une demande d’air insuffisamment qualifiée ; ne pas inventer de débit pour lever le blocage."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-astro-pneumatic-eurohv109/",
+      "reviewedAt": "2026-10-07",
+      "reason": "Apport éditorial insuffisant constaté le 7 octobre matin : comparaison avec EUROHV107 sans critère sourcé expliquant la portée de la différence de buse. La lecture actuelle retrouve la même introduction générique et les mêmes limites ; la demande d’air reste insuffisamment qualifiée pour un verdict."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-draper-09709/",
+      "reviewedAt": "2026-10-07",
+      "reason": "Revue primaire et utilité finale incomplètes dans le rapport du 7 octobre matin : contradiction de pression déclarée à vérifier sur la fiche 09709 et à expliquer face à 09708. Une consommation moyenne ne doit pas devenir silencieusement une demande maximale ; aucune admission finale documentée."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-hymair-as881/",
+      "reviewedAt": "2026-10-07",
+      "reason": "Refus éditorial explicite dans le rapport du 7 octobre matin : aucune distinction utile documentée face à AS881-R. La comparaison actuelle confirme des faits vérifiés, limites et spécifications identiques, avec une introduction ne changeant que le modèle ; cela ne démontre pas une identité physique des produits."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sata-jet-x-hvlp-1-1-o-basic-1200055/",
+      "reviewedAt": "2026-10-07",
+      "reason": "Revue primaire et distinction de référence incomplètes dans le rapport du 7 octobre matin : portée du profil O à établir face au profil I 1200013 et au guide de famille. Les valeurs constructeur divergentes restent non arbitrées ; aucune validation finale propre à cette variante n’est documentée."
+    },
+    {
+      "path": "/outils-pneumatiques/sableuse-asturomec-mistral-50301/",
+      "reviewedAt": "2026-10-07",
+      "reason": "Apport éditorial insuffisant constaté le 7 octobre matin : portée du MISTRAL 50301 face au kit SUPERMISTRAL 50300 non expliquée. La lecture actuelle conserve la même analyse générique et des limites communes ; besoin d’air absent ou non qualifié, sans débit reconstitué."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-hymair-as881-r/",
+      "reviewedAt": "2026-10-07",
+      "reason": "Protection de la référence voisine liée au refus AS881 : comparaison actuelle AS881/AS881-R, faits vérifiés, limites et spécifications identiques, seule l’identité textuelle change. AS881-R admis le 5 octobre reste indexable malgré son alias vers AS1007 ; consolidation seule insuffisante pour lever la revue éditoriale manquante."
     }
   ]
 }

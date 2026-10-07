@@ -35,6 +35,6 @@ export function applyEditorialHolds(candidates, registry, { now = new Date() } =
 		// The exact tool and its compressor-selection route share one product.
 		if (entry.path.startsWith('/outils-pneumatiques/')) held.add(entry.path.replace('/outils-pneumatiques/', '/quel-compresseur-pour/'));
 	}
-	return candidates.map(candidate => held.has(candidate.path) && candidate.blockedReason == null
-		? { ...candidate, blockedReason: EDITORIAL_HOLD_REASON } : candidate);
+	return candidates.map(candidate => held.has(candidate.path)
+		? { ...candidate, editorialHold: true, blockedReason: candidate.blockedReason ?? EDITORIAL_HOLD_REASON } : candidate);
 }

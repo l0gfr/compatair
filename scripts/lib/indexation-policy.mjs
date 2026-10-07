@@ -97,6 +97,24 @@ export function validatePolicy(policy) {
 	return policy;
 }
 
+export function validateHeldPaths(paths, knownPaths) {
+	if (paths === undefined) return new Set();
+	if (!Array.isArray(paths)) throw new Error('Réserves éditoriales du manifeste invalides.');
+	const held = new Set();
+	for (const path of paths) {
+		validatePath(path);
+		if (!candidateFamily(path) || isNavigationPath(path) || excludedFromIndexation(path) || (knownPaths && !knownPaths.has(path)) || held.has(path)) throw new Error('URL de réserve éditoriale invalide, inconnue ou dupliquée.');
+		held.add(path);
+	}
+	return held;
+}
+
+function validatedHeldPaths(manifest, baseline) {
+	if (manifest.heldPaths === undefined) return validateHeldPaths(undefined);
+	const known = new Set([...baseline.paths, ...manifest.batches.flatMap(batch => batch.paths), ...(manifest.pending ?? []).map(entry => entry.path)]);
+	return validateHeldPaths(manifest.heldPaths, known);
+}
+
 export function validateManifest(manifest, baseline, now = new Date()) {
 	if (manifest?.schemaVersion !== 1 || manifest.baselineSha !== baseline.sourceSha || !Array.isArray(manifest.batches)) throw new Error('Historique d’indexation incompatible.');
 	if (!/^[a-f0-9]{40}$/.test(manifest.gitSha) && manifest.gitSha !== 'development') throw new Error('SHA d’indexation invalide.');
@@ -132,14 +150,16 @@ export function validateManifest(manifest, baseline, now = new Date()) {
 		paths.add(entry.path);
 	}
 	const admitted = new Set([...baseline.paths, ...manifest.batches.flatMap(batch => batch.paths)]);
+	const held = validatedHeldPaths(manifest, baseline);
  for (const [alias, target] of Object.entries(manifest.canonicalAliases ?? {})) {
   validatePath(alias); validatePath(target);
-  if (alias === target || !admitted.has(alias) || !admitted.has(target) || candidateFamily(alias) !== candidateFamily(target) || manifest.canonicalAliases[target]) throw new Error('Regroupement canonique invalide.');
+  if (alias === target || !admitted.has(alias) || !admitted.has(target) || held.has(target) || candidateFamily(alias) !== candidateFamily(target) || manifest.canonicalAliases[target]) throw new Error('Regroupement canonique invalide.');
  }
 	return manifest;
 }
 
 export function createIndexationPolicy(baseline, manifest) {
 	const admitted = new Set([...baseline.paths, ...manifest.batches.flatMap((batch) => batch.paths)]);
-	return (path) => !excludedFromIndexation(path) && (admitted.has(path) || isNavigationPath(path));
+	const held = validatedHeldPaths(manifest, baseline);
+	return (path) => !held.has(path) && !excludedFromIndexation(path) && (admitted.has(path) || isNavigationPath(path));
 }

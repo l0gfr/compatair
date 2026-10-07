@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
-import { candidateFamily, candidateQuotaGroup, indexationBatchReady, indexationDay, validateBaseline, validateManifest, validatePolicy } from './indexation-policy.mjs';
+import { candidateFamily, candidateQuotaGroup, createIndexationPolicy, indexationBatchReady, indexationDay, validateBaseline, validateManifest, validatePolicy } from './indexation-policy.mjs';
+import { EDITORIAL_HOLD_REASON } from './indexation-editorial-holds.mjs';
 
 function words(text) {
 	return text.normalize('NFKD').replace(/\p{M}/gu, '').toLowerCase().replace(/\d+(?:[.,]\d+)*/g, ' nombre ').match(/[a-z]+/g) ?? [];
@@ -94,7 +95,7 @@ export function analyzeCandidates(candidates, admitted, policy, { onProgress } =
 				if (!similar || similarity > similar.similarity) similar = { path: other.path, similarity: Number(similarity.toFixed(3)), containment: Number(containment.toFixed(3)) };
 			}
 		}
-		const reason = candidate.blockedReason ?? (!grams.size ? 'empty-comparable-content' : similar ? 'near-duplicate' : undefined);
+		const reason = candidate.blockedReason ?? (candidate.editorialHold ? EDITORIAL_HOLD_REASON : !grams.size ? 'empty-comparable-content' : similar ? 'near-duplicate' : undefined);
 		// Later comparisons use only the cardinality. Retaining every page's Set
 		// keeps millions of duplicate strings alive, including rejected pages.
 		const entry = { ...candidate, gramCount: grams.size, reason, similar, contentHash: createHash('sha256').update(candidate.text).digest('hex') };
@@ -134,6 +135,9 @@ export function planIndexation({ candidates, baseline, previous, policy, now = n
 	validatePolicy(policy);
 	validateManifest(previous, baseline, now);
 	if (new Set(candidates.map((entry) => entry.path)).size !== candidates.length) throw new Error('URL candidate dupliquée.');
+	if (candidates.some(entry => entry.editorialHold !== undefined && entry.editorialHold !== true)) throw new Error('Marqueur de réserve éditoriale invalide.');
+	const heldPaths = candidates.filter(entry => entry.editorialHold === true).map(entry => entry.path).sort();
+	const held = new Set(heldPaths);
 	const admitted = new Set([...baseline.paths, ...previous.batches.flatMap((batch) => batch.paths)]);
 	const firstSeen = new Map((previous.pending ?? []).map((entry) => [entry.path, entry.firstSeen]));
 	const analyzed = analyzeCandidates(candidates.map((entry) => ({ ...entry, firstSeen: firstSeen.get(entry.path) ?? now.toISOString() })), admitted, policy, { onProgress });
@@ -145,25 +149,27 @@ export function planIndexation({ candidates, baseline, previous, policy, now = n
 	}));
 	const selected = [];
 	if (allowRelease && !policy.paused && ready) for (const family of daily ? ['guides', 'compressors', 'tools'] : ['catalog', 'guides']) {
-		selected.push(...diverseSelection(analyzed.filter((entry) => (daily ? candidateQuotaGroup(entry.path) : entry.family) === family && !admitted.has(entry.path) && !entry.reason), limits[family], policy.maximumTopicShare));
+		selected.push(...diverseSelection(analyzed.filter((entry) => (daily ? candidateQuotaGroup(entry.path) : entry.family) === family && !admitted.has(entry.path) && !held.has(entry.path) && !entry.reason), limits[family], policy.maximumTopicShare));
 	}
 	const newPaths = new Set(selected);
-	const consolidation = consolidateEquivalentAnswers(analyzed, new Set([...admitted, ...selected]));
-	const invalidPublished = analyzed.filter(entry => admitted.has(entry.path) && entry.reason && !consolidation.canonicalAliases[entry.path]);
+	const consolidation = consolidateEquivalentAnswers(analyzed.filter(entry => !held.has(entry.path)), new Set([...admitted, ...selected]));
+	const invalidPublished = analyzed.filter(entry => admitted.has(entry.path) && !held.has(entry.path) && entry.reason && !consolidation.canonicalAliases[entry.path]);
 	if (invalidPublished.length) throw new Error(`Pages publiées sans valeur propre validée : ${invalidPublished.slice(0, 20).map(entry => `${entry.path} (${entry.reason})`).join(', ')}`);
 	const batches = [...previous.batches, ...(selected.length ? [{ openedAt: now.toISOString(), paths: selected.sort(), ...(daily ? { publicationDay: indexationDay(now), dailyLimits: limits } : {}) }] : [])];
 	const pending = analyzed.filter((entry) => !admitted.has(entry.path) && !newPaths.has(entry.path)).map((entry) => ({ path: entry.path, firstSeen: entry.firstSeen }));
+	const manifestBase = { schemaVersion: 1, baselineSha: baseline.sourceSha, gitSha, builtAt: now.toISOString(), batches, pending };
+	const isIndexable = createIndexationPolicy(baseline, { ...manifestBase, ...(heldPaths.length ? { heldPaths } : {}) });
 	const checks = ['catalog', 'guides', 'usages'].flatMap((family) => [true, false].flatMap((indexable) => analyzed
-		.filter((entry) => !consolidation.canonicalAliases[entry.path] && entry.family === family && (admitted.has(entry.path) || newPaths.has(entry.path)) === indexable)
+		.filter((entry) => !consolidation.canonicalAliases[entry.path] && entry.family === family && isIndexable(entry.path) === indexable)
 		.sort((a, b) => Number(newPaths.has(b.path)) - Number(newPaths.has(a.path)))
 		.slice(0, 3).map((entry) => ({ path: entry.path, indexable }))));
-	const manifest = { schemaVersion: 1, baselineSha: baseline.sourceSha, gitSha, builtAt: now.toISOString(), batches, pending, checks, canonicalAliases: consolidation.canonicalAliases };
+	const manifest = { ...manifestBase, checks, canonicalAliases: consolidation.canonicalAliases, ...(heldPaths.length ? { heldPaths } : {}) };
 	validateManifest(manifest, baseline, now);
 	const report = analyzed.map((entry) => ({
 		path: entry.path, family: entry.family, topic: entry.topic, contentHash: entry.contentHash, firstSeen: entry.firstSeen,
 		value: entry.value, priority: entry.priority,
 		qualityStatus: consolidation.canonicalAliases[entry.path] ? 'consolidated' : entry.reason ? 'needs-review' : 'mechanical-checks-passed',
-		status: admitted.has(entry.path) ? 'existing' : newPaths.has(entry.path) ? 'released' : entry.reason ? 'held' : 'queued',
+		status: held.has(entry.path) ? 'held' : admitted.has(entry.path) ? 'existing' : newPaths.has(entry.path) ? 'released' : entry.reason ? 'held' : 'queued',
 		reason: entry.reason ?? (admitted.has(entry.path) ? 'preserved-existing' : newPaths.has(entry.path) ? 'batch-admission' : policy.paused ? 'paused' : !allowRelease ? 'offline' : !ready ? 'cooldown' : 'batch-limit'),
 		...(entry.similar ? { similar: entry.similar } : {}),
 	}));

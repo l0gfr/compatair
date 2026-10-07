@@ -10,7 +10,9 @@ import {
 	verifyDetailPage,
 	verifyReleasePayload,
 	verifyIndexationPage,
+	verifyEditorialHoldPage,
 } from './lib/live-seo-verification.mjs';
+import { candidateFamily, validateHeldPaths, validatePath } from './lib/indexation-policy.mjs';
 
 const origin = new URL(process.env.COMPATAIR_SITE_ORIGIN ?? 'https://compatair.fr').origin;
 const expectedSha = process.env.COMPATAIR_EXPECTED_RELEASE_SHA;
@@ -54,6 +56,14 @@ async function verifyLiveSeo() {
 	for (const sitemapUrl of sitemapUrls) for (const pageUrl of extractSitemapLocations(await fetchText(new URL(sitemapUrl).pathname))) pageUrls.add(pageUrl);
 	const indexation = JSON.parse(await fetchText('/data/indexation.json'));
 	if (indexation.schemaVersion !== 1 || indexation.gitSha !== expectedSha || !Array.isArray(indexation.checks) || !indexation.checks.length || indexation.checks.length > 18) throw new Error('Historique SEO public absent ou incohérent.');
+	const heldPaths = validateHeldPaths(indexation.heldPaths);
+	await mapVerificationConcurrent([...heldPaths], 10, async (pathname) => {
+		const canonical = indexation.canonicalAliases?.[pathname] ?? pathname;
+		validatePath(canonical);
+		if (candidateFamily(canonical) !== candidateFamily(pathname) || canonical !== pathname && heldPaths.has(canonical)) throw new Error(`Canonique de réserve éditoriale invalide : ${pathname}`);
+		verifyEditorialHoldPage(pathname, await fetchText(pathname), pageUrls, origin, canonical);
+	}, budget);
+	console.log(`Réserves éditoriales live : ${heldPaths.size} pages vérifiées en noindex,follow et hors sitemap.`);
 	for (const check of indexation.checks) {
 		if (!/^\/(?:[a-z0-9-]+\/)+$/.test(check.path) || typeof check.indexable !== 'boolean') throw new Error('Sonde d’indexation invalide.');
 		verifyIndexationPage(check.path, await fetchText(check.path), check.indexable, pageUrls, origin);

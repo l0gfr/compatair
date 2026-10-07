@@ -163,13 +163,21 @@ export function verifyReleasePayload(payload, expectedSha) {
 	if (payload?.gitSha !== expectedSha) throw new Error(`release.json: SHA ${payload?.gitSha ?? 'absent'} différent de ${expectedSha}`);
 }
 
-export function verifyIndexationPage(pathname, html, indexable, sitemapUrls, origin) {
+export function verifyIndexationPage(pathname, html, indexable, sitemapUrls, origin, canonicalPath = pathname) {
 	const robots = html.match(/<meta name="robots" content="([^"]+)"/)?.[1]?.split(',').map((rule) => rule.trim());
-	const expectedCanonical = new URL(pathname, origin).href;
+	const pageUrl = new URL(pathname, origin).href;
+	const expectedCanonical = new URL(canonicalPath, origin).href;
 	const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
+	if (indexable && canonicalPath !== pathname) throw new Error(`${pathname}: une admission exige sa canonique propre`);
 	if (!robots || (indexable ? !robots.includes('index') || robots.includes('noindex') : !robots.includes('noindex'))) throw new Error(`${pathname}: directive robots inattendue`);
 	if (canonical !== expectedCanonical) throw new Error(`${pathname}: canonique différente de l’URL attendue`);
-	if (sitemapUrls.has(expectedCanonical) !== indexable) throw new Error(`${pathname}: présence dans le sitemap contraire à la politique`);
+	if (sitemapUrls.has(pageUrl) !== indexable) throw new Error(`${pathname}: présence dans le sitemap contraire à la politique`);
+}
+
+export function verifyEditorialHoldPage(pathname, html, sitemapUrls, origin, canonicalPath = pathname) {
+	verifyIndexationPage(pathname, html, false, sitemapUrls, origin, canonicalPath);
+	const robots = html.match(/<meta name="robots" content="([^"]+)"/)?.[1]?.split(',').map((rule) => rule.trim()) ?? [];
+	if (!robots.includes('follow') || robots.includes('index') || robots.includes('nofollow')) throw new Error(`${pathname}: protection éditoriale noindex,follow requise`);
 }
 
 export function verifySnapshotRange({ status, contentRange, contentType, bytes }, expectedPrefix, totalBytes) {

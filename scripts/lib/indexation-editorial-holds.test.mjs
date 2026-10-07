@@ -5,11 +5,13 @@ import { join } from 'node:path';
 import { applyEditorialHolds, EDITORIAL_HOLD_REASON, validateEditorialHolds } from './indexation-editorial-holds.mjs';
 import { collectIndexationCandidates, productCandidates } from './indexation-candidates.mjs';
 import { planIndexation } from './indexation-planner.mjs';
-import { candidateQuotaGroup } from './indexation-policy.mjs';
+import { candidateQuotaGroup, createIndexationPolicy } from './indexation-policy.mjs';
 
 const now = new Date('2026-10-05T12:00:00.000Z');
-const registry = JSON.parse(await readFile(new URL('../../config/indexation-editorial-holds.json', import.meta.url), 'utf8'));
 const models = ['ztg1211s', 'ztg1211sn', 'ztg1311a', 'ztg1311bs', 'ztg1311bss', 'ztg3125', 'ztg3125bs', 'ztg3125bss'];
+// Keep this October 5 fixture independent of subsequent dated reviews.
+const currentRegistry = JSON.parse(await readFile(new URL('../../config/indexation-editorial-holds.json', import.meta.url), 'utf8'));
+const registry = { schemaVersion: currentRegistry.schemaVersion, holds: currentRegistry.holds.filter(hold => models.some(model => hold.path === `/outils-pneumatiques/pistolet-nettoyage-zipp-${model}/`)) };
 const products = await Promise.all(models.map(async model => (await import(`../../src/data/products/tools/pistolet-nettoyage-zipp-${model}.ts`)).default));
 const actualCandidates = products.flatMap(product => productCandidates(product, 'tools'));
 const target = actualCandidates[0];
@@ -38,8 +40,10 @@ describe('explicit editorial holds preserve the product and daily quotas', () =>
 		const held = applyEditorialHolds(candidates, registry, { now });
 		expect(candidates).toEqual(originals);
 		for (const [index, original] of actualCandidates.entries()) {
+			expect(held[index].editorialHold).toBe(true);
 			expect(held[index].blockedReason).toBe(original.blockedReason ?? EDITORIAL_HOLD_REASON);
-			expect({ ...held[index], blockedReason: original.blockedReason }).toEqual(original);
+			const { editorialHold: _hold, ...candidate } = held[index];
+			expect({ ...candidate, blockedReason: original.blockedReason }).toEqual(original);
 		}
 		for (const [index, original] of otherCandidates.entries()) expect(held[index + actualCandidates.length]).toBe(original);
 	});
@@ -60,22 +64,57 @@ describe('explicit editorial holds preserve the product and daily quotas', () =>
 		expect(after.manifest.batches[0].paths.filter(path => candidateQuotaGroup(path) !== 'tools')).toEqual(before.manifest.batches[0].paths.filter(path => candidateQuotaGroup(path) !== 'tools'));
 		for (const candidate of [target, usage]) expect(after.report.find(entry => entry.path === candidate.path)).toMatchObject({ status: 'held', reason: EDITORIAL_HOLD_REASON });
 	});
-	it.each([target.path, usage.path])('fails through the existing published-page guard for %s', path => {
+	it.each([target.path, usage.path])('withdraws baseline indexability without deleting the admission for %s', path => {
 		const candidates = applyEditorialHolds([target, usage], oneHold, { now });
-		expect(() => planIndexation({ candidates, baseline: { ...baseline, paths: ['/', path] }, previous, policy, now }))
-			.toThrow(`Pages publiées sans valeur propre validée : ${path} (${EDITORIAL_HOLD_REASON})`);
+		const originalBaseline = { ...baseline, paths: ['/', path] };
+		const before = structuredClone(originalBaseline);
+		const result = planIndexation({ candidates, baseline: originalBaseline, previous, policy, now });
+		expect(originalBaseline).toEqual(before);
+		expect(result.manifest.batches).toEqual(previous.batches);
+		expect(result.manifest.heldPaths).toEqual([target.path, usage.path].sort());
+		expect(createIndexationPolicy(originalBaseline, result.manifest)(path)).toBe(false);
+		expect(result.manifest.checks.find(check => check.path === path)?.indexable).toBe(false);
+		expect(result.report.find(entry => entry.path === path)).toMatchObject({ status: 'held', reason: EDITORIAL_HOLD_REASON });
 	});
-	it('fails closed for a historical batch admission and cannot consolidate away the hold', () => {
+	it('preserves historical batches and cannot consolidate one held admission into another', () => {
 		const duplicate = { ...target, path: '/outils-pneumatiques/earlier-equivalent/' };
-		const candidates = applyEditorialHolds([target, duplicate], oneHold, { now });
+		const candidates = applyEditorialHolds([target, duplicate], { schemaVersion: 1, holds: [...oneHold.holds, { ...oneHold.holds[0], path: duplicate.path }] }, { now });
 		const published = { ...previous, batches: [{ openedAt: previous.builtAt, publicationDay: '2026-10-04', dailyLimits: policy.dailyLimits, paths: [target.path, duplicate.path] }] };
-		expect(() => planIndexation({ candidates, baseline, previous: published, policy, now })).toThrow(`${target.path} (${EDITORIAL_HOLD_REASON})`);
+		const before = structuredClone(published);
+		const result = planIndexation({ candidates, baseline, previous: published, policy, now });
+		expect(published).toEqual(before);
+		expect(result.manifest.batches).toEqual(published.batches);
+		expect(result.manifest.canonicalAliases).toEqual({});
+		expect(result.consolidation.groups).toEqual([]);
+		for (const candidate of candidates) expect(createIndexationPolicy(baseline, result.manifest)(candidate.path)).toBe(false);
+	});
+	it('still rejects an invalid published page that has no explicit editorial hold', () => {
+		const invalid = { ...target, path: '/outils-pneumatiques/invalid-existing/', blockedReason: 'missing-critical-source' };
+		const candidates = applyEditorialHolds([target, usage, invalid], oneHold, { now });
+		const originalBaseline = { ...baseline, paths: ['/', target.path, invalid.path] };
+		expect(() => planIndexation({ candidates, baseline: originalBaseline, previous, policy, now })).toThrow(`${invalid.path} (missing-critical-source)`);
+	});
+	it('does not refill a consumed daily quota after withdrawing historical indexability', () => {
+		const waitingTools = Array.from({ length: 7 }, (_, i) => eligible(`/outils-pneumatiques/eligible-${i}/`, i));
+		const guides = Array.from({ length: 3 }, (_, i) => eligible(`/guides/eligible-${i}/`, 10 + i));
+		const compressors = Array.from({ length: 3 }, (_, i) => eligible(`/compresseurs/eligible-${i}/`, 15 + i));
+		const candidates = [{ ...target, priority: { score: 100 } }, usage, ...waitingTools, ...guides, ...compressors];
+		const published = plan(candidates).manifest;
+		const result = planIndexation({ candidates: applyEditorialHolds(candidates, oneHold, { now }), baseline, previous: published, policy, now: new Date(now.getTime() + 60_000) });
+		expect(result.released).toBe(0);
+		expect(result.manifest.batches).toEqual(published.batches);
+		expect(counts(result.manifest.batches[0].paths)).toEqual(policy.dailyLimits);
+		expect(result.manifest.pending.find(entry => entry.path === target.path)).toBeUndefined();
+		expect(result.manifest.checks.every(check => createIndexationPolicy(baseline, result.manifest)(check.path) === check.indexable)).toBe(true);
 	});
 	it('keeps preexisting blockers and leaves an empty registry unchanged', () => {
 		const blocked = [{ ...target, blockedReason: 'missing-critical-source' }, { ...usage, blockedReason: 'answer-too-thin' }];
 		const result = applyEditorialHolds(blocked, oneHold, { now });
-		expect(result[0]).toBe(blocked[0]);
-		expect(result[1]).toBe(blocked[1]);
+		expect(result[0]).toEqual({ ...blocked[0], editorialHold: true });
+		expect(result[1]).toEqual({ ...blocked[1], editorialHold: true });
+		const resultPlan = planIndexation({ candidates: result, baseline: { ...baseline, paths: ['/', target.path, usage.path] }, previous, policy, now });
+		expect(resultPlan.manifest.heldPaths).toEqual([target.path, usage.path].sort());
+		expect(resultPlan.report.map(entry => entry.reason)).toEqual(['missing-critical-source', 'answer-too-thin']);
 		expect(applyEditorialHolds(actualCandidates, { schemaVersion: 1, holds: [] }, { now })).toEqual(actualCandidates);
 	});
 });
@@ -122,6 +161,7 @@ describe('candidate collection applies the mandatory registry', () => {
 			const candidates = await collectIndexationCandidates(root, { now });
 			expect(candidates.map(candidate => candidate.path)).toEqual([target.path, usage.path]);
 			expect(candidates.every(candidate => candidate.blockedReason === EDITORIAL_HOLD_REASON)).toBe(true);
+			expect(candidates.every(candidate => candidate.editorialHold === true)).toBe(true);
 		} finally { await rm(root, { recursive: true, force: true }); }
 	});
 	it('rejects a missing or malformed registry instead of readmitting held pages', async () => {

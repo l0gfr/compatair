@@ -21,6 +21,7 @@ import {
 	verifyReleasePayload,
 	verifySnapshotRange,
 	verifyIndexationPage,
+	verifyEditorialHoldPage,
 } from './live-seo-verification.mjs';
 
 describe('bounded exhaustive SEO verification', () => {
@@ -167,6 +168,20 @@ describe('vérification SEO de la surface live', () => {
 		expect(() => verifyIndexationPage(path, html('index,follow'), false, new Set(), origin)).toThrow('robots');
 		expect(() => verifyIndexationPage(path, html('noindex,follow'), false, new Set([url]), origin)).toThrow('sitemap');
 		expect(() => verifyIndexationPage(path, html('index,follow').replace(url, `${origin}/`), true, new Set([url]), origin)).toThrow('canonique');
+	});
+	it('vérifie chaque réserve éditoriale et sa canonique sans confondre les URL de sitemap', () => {
+		const origin = 'https://compatair.fr';
+		const path = '/outils-pneumatiques/outil-tenu/';
+		const target = '/outils-pneumatiques/reponse-consolidee/';
+		const html = (robots, canonical = path) => `<meta name="robots" content="${robots}"><link rel="canonical" href="${origin}${canonical}">`;
+		expect(() => verifyEditorialHoldPage(path, html('noindex,follow'), new Set(), origin)).not.toThrow();
+		expect(() => verifyEditorialHoldPage(path, html('noindex,follow', target), new Set([`${origin}${target}`]), origin, target)).not.toThrow();
+		expect(() => verifyEditorialHoldPage(path, html('noindex,follow', target), new Set([`${origin}${path}`, `${origin}${target}`]), origin, target)).toThrow('sitemap');
+		for (const robots of ['index,follow', 'noindex,index,follow', 'noindex,nofollow', 'noindex']) {
+			expect(() => verifyEditorialHoldPage(path, html(robots), new Set(), origin)).toThrow();
+		}
+		expect(() => verifyEditorialHoldPage(path, html('noindex,follow', target), new Set(), origin)).toThrow('canonique');
+		expect(() => verifyIndexationPage(path, html('index,follow', target), true, new Set([`${origin}${path}`]), origin, target)).toThrow('canonique propre');
 	});
 	it('vérifie les octets et la taille du snapshot sans décoder une séquence UTF-8 coupée', () => {
 		const prefix = Buffer.from('débit').subarray(0, 2);
