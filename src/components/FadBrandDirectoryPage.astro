@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import CatalogSignalVisual from '../components/CatalogSignalVisual.astro';
 import DirectoryBrowser from '../components/DirectoryBrowser.astro';
 import { compressors } from '../data/catalog';
 import { brandSlug } from '../domain/brand';
@@ -50,12 +49,10 @@ const itemListJsonLd = {
 			<div class="container catalog-hero-grid">
 				<div>
 					<p class="product-decision-index">Comparatif FAD / {brand}</p>
-					<p class="eyebrow">Pressions d’origine conservées</p>
 					<h1>Débit restitué des compresseurs {brand}{page > 1 ? `, page ${page}` : ''}</h1>
-					<p class="lead">{documented.length} référence{documented.length > 1 ? 's' : ''} sur {brandCompressors.length} dispose{documented.length > 1 ? 'nt' : ''} d’au moins un point FAD exploitable. Le tableau affiche chaque pression publiée sans conversion silencieuse.</p>
+					<p class="lead">{documented.length} référence{documented.length > 1 ? 's' : ''} sur {brandCompressors.length} dispose{documented.length > 1 ? 'nt' : ''} d’un débit restitué documenté, avec sa pression de mesure.</p>
 					<div class="hero-actions"><a class="button primary" href={`/marques/${brandSlug(brand)}/`}>Voir toute la page marque</a><a class="button" href="/comparatifs/compresseurs-debit-restitue/">Changer de marque</a></div>
 				</div>
-				<CatalogSignalVisual mode="comparison" count={documented.length} secondaryCount={incomplete.length} title={`compresseurs ${brand} avec FAD`} />
 			</div>
 		</section>
 
@@ -112,7 +109,7 @@ const itemListJsonLd = {
 				<div class="container">
 					<header class="product-section-head">
 						<div><p class="product-decision-index">Non classables</p><h2>Références sans FAD exploitable</h2></div>
-						<p>Le débit aspiré ne remplace pas le débit restitué manquant.</p>
+						<p>Une source de débit restitué est nécessaire pour comparer ces modèles.</p>
 					</header>
 					<div class="incomplete-reference-grid">{pageIncomplete.map((item) => <a href={`/compresseurs/${item.slug}/`}><span>{item.brand}</span><strong>{compressorDisplayName(item)}</strong><small>{sourceQualityLabel(item.confidence)} · donnée FAD manquante</small></a>)}</div>
 				</div>

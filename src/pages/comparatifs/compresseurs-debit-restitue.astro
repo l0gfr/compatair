@@ -1,12 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import CatalogSignalVisual from '../../components/CatalogSignalVisual.astro';
 import { compressors, tools } from '../../data/catalog';
 import { brandSlug } from '../../domain/brand';
 import { getCatalogMetrics } from '../../domain/catalog-insights';
 import { serializeJsonLd } from '../../domain/structured-data';
 
-const documented = compressors.filter((item) => item.fadCurve.length > 0);
 const incomplete = compressors.filter((item) => item.fadCurve.length === 0);
 const metrics = getCatalogMetrics(compressors, tools);
 const brandGroups = [...new Set(compressors.map((item) => item.brand))]
@@ -49,7 +47,6 @@ const brandListJsonLd = {
 					<p class="lead">Deux débits ne sont comparables que si leur pression est indiquée. Choisissez une marque pour ouvrir son tableau de points publiés et remonter à chaque fiche source.</p>
 					<div class="hero-actions"><a class="button primary" href="/comparateur/">Comparer deux ou trois modèles</a><a class="button" href="/guides/debit-restitue-fad-vs-debit-aspire/">Comprendre le FAD</a></div>
 				</div>
-				<CatalogSignalVisual mode="comparison" count={documented.length} secondaryCount={incomplete.length} title="compresseurs avec FAD" />
 			</div>
 		</section>
 

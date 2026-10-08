@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import CatalogSignalVisual from '../../components/CatalogSignalVisual.astro';
 import { compressors } from '../../data/catalog';
 import { brandSlug } from '../../domain/brand';
 import { serializeJsonLd } from '../../domain/structured-data';
@@ -18,6 +17,7 @@ const brandGroups = [...new Set(compressors.map((item) => item.brand))]
 		};
 	});
 const documentedFadCount = compressors.filter((item) => item.fadCurve.length > 0).length;
+const multipleFadCount = compressors.filter((item) => item.fadCurve.length > 1).length;
 const brandListJsonLd = {
 	'@context': 'https://schema.org',
 	'@type': 'ItemList',
@@ -40,13 +40,15 @@ const brandListJsonLd = {
 	<section class="page-hero compact catalog-hero">
 		<div class="container catalog-hero-grid">
 			<div>
-				<p class="product-decision-index">Catalogue technique / Compresseurs</p>
-				<p class="eyebrow">Un répertoire par fabricant</p>
-				<h1>{compressors.length} compresseurs, organisés en {brandGroups.length} marques</h1>
-				<p class="lead">Ouvrez la page d’un fabricant pour rechercher une référence exacte et contrôler ses données publiées. Le comparatif FAD reste séparé afin de ne jamais confondre classement documentaire et catalogue de marque.</p>
-				<div class="hero-actions"><a class="button primary" href="/calculateur/">Vérifier avec mes outils</a><a class="button" href="/comparatifs/compresseurs-debit-restitue/">Comparer les débits FAD</a></div>
+				<p class="product-decision-index">Catalogue</p>
+				<h1>Compresseurs par marque</h1>
+				<p class="lead">Retrouvez un modèle, son débit restitué, sa pression et les documents du fabricant.</p>
+				<form class="directory-controls brand-controls" action="/recherche/" method="get">
+					<div class="field directory-search"><label for="compressor-directory-search">Marque, modèle, MPN, EAN/GTIN ou SKU</label><input id="compressor-directory-search" name="q" type="search" placeholder="Ex. 601532000 ou EPC 840" required minlength="2" /></div>
+					<button class="button primary" type="submit">Rechercher la référence</button>
+				</form>
+				<div class="hero-actions"><a class="button" href="/calculateur/">Vérifier avec mes outils</a><a class="button" href="/comparatifs/compresseurs-debit-restitue/">Comparer les débits FAD</a></div>
 			</div>
-			<CatalogSignalVisual mode="compressors" count={compressors.length} secondaryCount={brandGroups.length} title="compresseurs documentés" />
 		</div>
 	</section>
 
@@ -55,20 +57,16 @@ const brandListJsonLd = {
 			<div><strong>{documentedFadCount}</strong><span>débits FAD documentés</span></div>
 			<div><strong>{compressors.length - documentedFadCount}</strong><span>références à compléter</span></div>
 			<div><strong>{brandGroups.length}</strong><span>fabricants suivis</span></div>
-			<div><strong>0</strong><span>débit aspiré utilisé comme verdict</span></div>
+			<div><strong>{multipleFadCount}</strong><span>FAD à plusieurs pressions</span></div>
 		</div>
 	</section>
 
 	<section class="section catalog-directory" data-directory-hub="compressors-by-brand">
 		<div class="container">
 			<header class="product-section-head">
-				<div><p class="product-decision-index">Explorer le corpus</p><h2>Choisir une marque ou rechercher une référence</h2></div>
-				<p>Chaque page marque réunit les modèles sourcés et leurs lacunes. La recherche globale retrouve aussi les MPN, EAN/GTIN et SKU documentés.</p>
+				<div><h2>Marques de compresseurs</h2></div>
 			</header>
-			<form class="directory-controls brand-controls" action="/recherche/" method="get">
-				<div class="field directory-search"><label for="compressor-directory-search">Marque, modèle, MPN, EAN/GTIN ou SKU</label><input id="compressor-directory-search" name="q" type="search" placeholder="Ex. 601532000 ou EPC 840" required minlength="2" /></div>
-				<button class="button primary" type="submit">Rechercher la référence</button>
-			</form>
+
 			<div class="hub-intent-grid">
 				{brandGroups.map((group, index) => (
 					<a href={`/marques/${brandSlug(group.brand)}/`}>
@@ -76,7 +74,7 @@ const brandListJsonLd = {
 						<p>{group.count} modèle{group.count > 1 ? 's' : ''} documenté{group.count > 1 ? 's' : ''}</p>
 						<h3>{group.brand}</h3>
 						<small>{group.documentedFad}/{group.count} avec FAD · {group.multipleFad} avec plusieurs pressions · {group.highConfidence} source{group.highConfidence > 1 ? 's' : ''} de grade A ou B.</small>
-						<strong>Ouvrir la page marque →</strong>
+						<strong>Voir les modèles →</strong>
 					</a>
 				))}
 			</div>

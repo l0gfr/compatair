@@ -526,7 +526,7 @@ else {
 if (!artifactPaths.has('/index.html')) errors.push('poste de contrôle: accueil rendu absent');
 else {
 	const homeHtml = await readFile(join(root, '/index.html'), 'utf8');
-	for (const marker of ['data-home-command-center', 'data-home-video-stage', 'data-home-video', '/media/compatair-parcours-utilisateur-complet.mp4', 'controls', 'playsinline', 'Lancez-la directement dans la page', '/calculateur/', '/radar-contradictions/', '/graphe-preuve/', '/scanner/', '/observatoire-qualite-documentaire/', 'Ce que CompatAir vérifie']) {
+	for (const marker of ['home-catalog-counts', 'home-snapshot-scope', 'data-home-video-stage', 'data-home-video', '/media/compatair-parcours-utilisateur-complet.mp4', 'controls', 'playsinline', 'Chiffres et limites du catalogue', '/calculateur/', '/radar-contradictions/', '/graphe-preuve/', '/scanner/', '/observatoire-qualite-documentaire/']) {
 		if (!homeHtml.includes(marker)) errors.push(`poste de contrôle: accès ou marqueur absent ${marker}`);
 	}
 	for (const forbiddenMarker of ['data-home-video-launch', 'requestFullscreen', 'webkitEnterFullscreen', 'is-fallback-fullscreen']) {
@@ -546,7 +546,7 @@ else {
 	const snapshot = JSON.parse(await readFile(join(root, '/data/transparency-barometer.json'), 'utf8'));
 	const html = await readFile(join(root, '/barometre-transparence/index.html'), 'utf8');
 	const unpublishedMessage = 'Classement non publié à ce stade';
-	for (const marker of ['barometer-score-model', 'barometer-summary', 'DEUX MESURES SÉPARÉES', 'Une note de documentation, pas un palmarès de machines']) {
+	for (const marker of ['barometer-score-model', 'barometer-summary', 'DEUX MESURES SÉPARÉES', 'Couverture des données constructeur']) {
 		if (!html.includes(marker)) errors.push(`baromètre: explication visuelle absente ${marker}`);
 	}
 	if (snapshot.rankingPublished && html.includes(unpublishedMessage)) errors.push('baromètre: le rendu affirme que le classement n’est pas publié alors que le snapshot publie des rangs officiels');
@@ -621,7 +621,7 @@ else {
 		if (program.history.length < 2 && program.trend.status !== 'insufficient_data') errors.push('observatoire documentaire: tendance revendiquée avec moins de deux périodes');
 		if (!html.includes('data-observatory-program') || !html.includes('Ligne de base') || !html.includes('Objectifs internes')) errors.push('observatoire documentaire: programme de mesure absent du rendu');
 	}
-	for (const marker of ['data-observatory-visual', 'data-observatory-answer', 'Quatre mesures, sans note globale artificielle']) if (!html.includes(marker)) errors.push(`observatoire documentaire: hiérarchie visuelle absente ${marker}`);
+	for (const marker of ['data-observatory-visual', 'data-observatory-answer', 'Les quatre indicateurs']) if (!html.includes(marker)) errors.push(`observatoire documentaire: hiérarchie visuelle absente ${marker}`);
 }
 
 if (!artifactPaths.has('/data/contradiction-radar.json') || !artifactPaths.has('/radar-contradictions/index.html')) errors.push('radar des contradictions: snapshot ou page rendue absent');
@@ -872,9 +872,8 @@ for (const file of htmlFiles) {
 		if (!html.includes('href="/gouvernance-editoriale/"')) errors.push(`${label}: lien vers le protocole de gouvernance éditoriale absent`);
 	}
 	if (label === 'professionnels/index.html') {
-		if (!html.includes('data-pro-value-network')) errors.push(`${label}: schéma de valeur fabricants-distributeurs absent`);
 		if (!html.includes('data-pro-collaboration')) errors.push(`${label}: parcours de collaboration professionnelle absent`);
-		if (!html.includes('Il ne choisit pas le verdict')) errors.push(`${label}: frontière d’indépendance professionnelle absente`);
+		if (!html.includes('data-pro-independence') || !html.includes('Les verdicts techniques restent indépendants de toute rémunération')) errors.push(`${label}: frontière d’indépendance professionnelle absente`);
 		const widgetTag = html.match(/<script[^>]+src="\/widget\/v1\.1\.0\/compatair-widget\.js"[^>]*>/)?.[0];
 		if (!widgetTag) errors.push(`${label}: widget immuable absent`);
 		else {

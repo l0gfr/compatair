@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import CatalogSignalVisual from '../../components/CatalogSignalVisual.astro';
 import { tools } from '../../data/catalog';
 import { toolUsageTaxonomy } from '../../data/taxonomy';
 import { serializeJsonLd } from '../../domain/structured-data';
@@ -37,20 +36,22 @@ const usageListJsonLd = {
 	<section class="page-hero compact catalog-hero">
 		<div class="container catalog-hero-grid">
 			<div>
-				<p class="product-decision-index">Catalogue technique / Outils</p>
-				<p class="eyebrow">Un répertoire par geste métier</p>
-				<h1>{tools.length} outils pneumatiques, organisés en {usages.length} usages</h1>
-				<p class="lead">Choisissez d’abord le geste à réaliser, puis ouvrez la fiche exacte. Chaque répertoire conserve la pression, le besoin en air et la source fabricant sans répéter toute la matrice de compatibilité.</p>
-				<div class="hero-actions"><a class="button primary" href="/scanner/">Identifier une référence</a><a class="button" href="/calculateur/">Calculer plusieurs outils</a></div>
+				<p class="product-decision-index">Catalogue</p>
+				<h1>Outils pneumatiques par usage</h1>
+				<p class="lead">Retrouvez la consommation d’air, la pression et les documents de votre outil.</p>
+				<form class="directory-controls brand-controls" action="/recherche/" method="get">
+					<div class="field directory-search"><label for="tool-directory-search">Marque, modèle, MPN, EAN/GTIN ou SKU</label><input id="tool-directory-search" name="q" type="search" placeholder="Ex. 4138540 ou TC-PP 220" required minlength="2" /></div>
+					<button class="button primary" type="submit">Rechercher la référence</button>
+				</form>
+				<div class="hero-actions"><a class="button" href="/scanner/">Identifier une référence</a><a class="button" href="/calculateur/">Calculer plusieurs outils</a></div>
 			</div>
-			<CatalogSignalVisual mode="tools" count={tools.length} secondaryCount={usages.length} title="outils documentés" />
 		</div>
 	</section>
 
 	<section class="catalog-summary-band">
 		<div class="container">
-			<div><strong>{fixedFlowCount}</strong><span>besoins calculables directement</span></div>
-			<div><strong>{tools.length - fixedFlowCount}</strong><span>usages à préciser</span></div>
+			<div><strong>{fixedFlowCount}</strong><span>débits par minute documentés</span></div>
+			<div><strong>{tools.length - fixedFlowCount}</strong><span>paramètres ou données à compléter</span></div>
 			<div><strong>{usages.length}</strong><span>répertoires d’usage</span></div>
 			<div><strong>{brands.length}</strong><span>fabricants suivis</span></div>
 		</div>
@@ -59,21 +60,17 @@ const usageListJsonLd = {
 	<section class="section catalog-directory" data-directory-hub="tools-by-usage">
 		<div class="container">
 			<header class="product-section-head">
-				<div><p class="product-decision-index">Explorer le corpus</p><h2>Choisir un usage avant la référence</h2></div>
-				<p>Les familles techniques restent distinctes dans chaque répertoire. Pour une référence exacte, la recherche globale couvre aussi les MPN, EAN/GTIN et SKU documentés.</p>
+				<div><h2>Usages des outils</h2></div>
 			</header>
-			<form class="directory-controls brand-controls" action="/recherche/" method="get">
-				<div class="field directory-search"><label for="tool-directory-search">Marque, modèle, MPN, EAN/GTIN ou SKU</label><input id="tool-directory-search" name="q" type="search" placeholder="Ex. 4138540 ou TC-PP 220" required minlength="2" /></div>
-				<button class="button primary" type="submit">Rechercher la référence</button>
-			</form>
+
 			<div class="hub-intent-grid">
 				{usages.map((usage, index) => (
 					<a href={`/outils-pneumatiques/usages/${usage.id}/`}>
 						<span class="hub-intent-index">{String(index + 1).padStart(2, '0')}</span>
-						<p>{usage.count} référence{usage.count > 1 ? 's' : ''} · {usage.fixedFlowCount} besoin{usage.fixedFlowCount > 1 ? 's' : ''} minute</p>
+						<p>{usage.count} référence{usage.count > 1 ? 's' : ''}</p>
 						<h3>{usage.label}</h3>
 						<small>{usage.description}</small>
-						<strong>Ouvrir le répertoire →</strong>
+						<strong>Voir les outils →</strong>
 					</a>
 				))}
 			</div>

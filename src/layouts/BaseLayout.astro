@@ -5,7 +5,6 @@ import manropeLatinWghtUrl from '@fontsource-variable/manrope/files/manrope-lati
 import newsreaderLatinWghtUrl from '@fontsource-variable/newsreader/files/newsreader-latin-wght-normal.woff2?url';
 import '../styles/global.css';
 import SiteSearch from '../components/SiteSearch.astro';
-import UiIcon from '../components/UiIcon.astro';
 import BrandMark from '../components/BrandMark.astro';
 import JourneyContextBar from '../components/JourneyContextBar.astro';
 import AcquisitionTelemetry from '../components/AcquisitionTelemetry.astro';
@@ -65,49 +64,6 @@ const excludeFromIndex = noindex || !isIndexablePath(currentPath);
 const commercialIntentTelemetryEnabled = currentPath === '/' || ['/compresseurs/', '/outils-pneumatiques/', '/guides/', '/offres/', '/comparatifs/'].some((path) => currentPath.startsWith(path));
 const currentYear = new Date().getFullYear();
 const isCurrent = (href: string) => currentPath.startsWith(href);
-type DecisionStep = { id: string; label: string; short: string; href: string; state: 'completed' | 'current' | 'available' };
-const journeySteps = [
-	{ id: 'identify', label: 'Identifier', short: 'Identifier', href: '/scanner/' },
-	{ id: 'size', label: 'Dimensionner', short: 'Besoin', href: '/calculateur/' },
-	{ id: 'compare', label: 'Comparer', short: 'Comparer', href: '/comparateur/' },
-	{ id: 'prepare', label: 'Préparer', short: 'Préparer', href: '/passeport/' },
-	{ id: 'verify', label: 'Vérifier sur le terrain', short: 'Terrain', href: '/mise-en-service/' },
-] as const;
-const actionIndex = currentPath.startsWith('/scanner/') ? 0
-	: currentPath.startsWith('/calculateur/') ? 1
-		: currentPath.startsWith('/comparateur/') ? 2
-			: currentPath.startsWith('/passeport/') ? 3
-				: ['/mise-en-service/', '/suivi-exploitation/', '/diagnostic-intervention/', '/maintenance-preventive/'].some((path) => currentPath.startsWith(path)) ? 4
-					: -1;
-const completeJourneyIsRelevant = actionIndex >= 0 || ['/professionnels/', '/guides/professionnels/', '/guides/metiers/'].some((path) => currentPath.startsWith(path));
-const frenchSteps = (completeJourneyIsRelevant ? journeySteps : journeySteps.slice(0, 3)).map((step, index): DecisionStep => ({
-	...step,
-	state: actionIndex < 0 ? 'available' : index < actionIndex ? 'completed' : index === actionIndex ? 'current' : 'available',
-}));
-const decisionRail = lang === 'en'
-	? {
-		label: 'CompatAir decision line',
-		name: 'CA / PNEUMATIC DECISION',
-		hint: 'Choose a step',
-		steps: [
-			{ id: 'identify', label: 'Identify', short: 'Identify', href: '/scanner/', state: 'available' },
-			{ id: 'size', label: 'Size', short: 'Need', href: '/calculateur/', state: 'available' },
-			{ id: 'compare', label: 'Compare', short: 'Compare', href: '/comparateur/', state: 'available' },
-		] satisfies DecisionStep[],
-		next: { label: 'Start with a reference', href: '/scanner/' },
-	}
-	: {
-		label: 'Ligne de décision CompatAir',
-		name: completeJourneyIsRelevant ? 'CA / PARCOURS DE DÉCISION' : 'CA / DÉCISION PNEUMATIQUE',
-		hint: 'Choisir une étape',
-		steps: frenchSteps,
-		next: actionIndex === 0 ? { label: 'Étape actuelle · identifier', href: '#contenu' }
-			: actionIndex === 1 ? { label: 'Étape actuelle · dimensionner', href: '#contenu' }
-				: actionIndex === 2 ? { label: 'Étape actuelle · comparer', href: '#contenu' }
-					: actionIndex === 3 ? { label: 'Étape actuelle · préparer', href: '#contenu' }
-						: actionIndex === 4 ? { label: 'Étape actuelle · terrain', href: '#contenu' }
-							: { label: 'Commencer · identifier', href: '/scanner/' },
-	};
 const exploreItems = [
 	{ href: '/compresseurs/', label: 'Compresseurs', detail: 'Débits et sources documentés' },
 	{ href: '/outils-pneumatiques/', label: 'Outils pneumatiques', detail: 'Besoins publiés par usage' },
@@ -205,7 +161,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 			<nav class="container nav" aria-label="Navigation principale">
 				<div class="brand-cluster">
 					<a class="brand" href="/" aria-label="CompatAir, accueil"><BrandMark /><span class="brand-name"><span class="brand-wordmark"><span>Compat</span><strong>Air</strong></span><small>Quel compresseur pour vos outils&nbsp;?</small></span></a>
-					<span class="brand-corpus" data-catalog-corpus aria-label="Corpus documenté"><small>Corpus</small><strong data-catalog-count>…</strong><i>réf.</i></span>
+					<span class="brand-corpus" data-catalog-corpus aria-label="Références du catalogue"><small>Catalogue</small><strong data-catalog-count>…</strong><i>réf.</i></span>
 				</div>
 				<div class="desktop-nav">
 					<div class="nav-links nav-task-links">
@@ -229,19 +185,12 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 						</div>
 						<a href="/guides/" aria-current={isCurrent('/guides/') ? 'page' : undefined}>Guides</a>
 						<a class="mobile-pro-link" href="/professionnels/" aria-current={isCurrent('/professionnels/') ? 'page' : undefined}><strong>Professionnels</strong><small>Catalogues, distribution et ateliers</small></a>
-						<details class="mobile-explore"><summary>Explorer le corpus</summary><div>{exploreItems.map((item) => <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>)}</div></details>
+						<details class="mobile-explore"><summary>Explorer le catalogue</summary><div>{exploreItems.map((item) => <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>)}</div></details>
 						<a href="/recherche/">Rechercher sur le site</a>
 						<a href="/methodologie/">Méthode et fiabilité</a>
 						<a href="/passeport/" aria-current={isCurrent('/passeport/') ? 'page' : undefined}>Conserver une configuration</a>
 					</div>
 				</details>
-			</nav>
-			<nav class:list={['decision-rail', completeJourneyIsRelevant && 'is-complete-journey']} aria-label={decisionRail.label} data-decision-rail>
-				<div class="container decision-rail-inner">
-					<div class="decision-rail-heading"><strong class="decision-rail-name">{decisionRail.name}</strong><span>{decisionRail.hint}</span></div>
-					<ol>{decisionRail.steps.map((step, index) => <li data-decision-step={step.id} data-state={step.state}><a href={step.href} aria-label={step.label === step.short ? step.label : `${step.label} · ${step.short}`} aria-current={step.state === 'current' ? 'step' : undefined}><span class="decision-step-number" aria-hidden="true">0{index + 1}</span><i class="decision-step-node" aria-hidden="true"></i><b class="decision-rail-full">{step.label}</b><b class="decision-rail-short">{step.short}</b></a></li>)}</ol>
-					<a class="decision-rail-status" data-decision-next href={decisionRail.next.href}><i aria-hidden="true"></i><span>{decisionRail.next.label}</span></a>
-				</div>
 			</nav>
 		</header>
 		{journeyContextIsRelevant && <JourneyContextBar />}
@@ -253,13 +202,6 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 						<BrandMark class="footer-mark" />
 						<span><strong><span>Compat</span><b>Air</b></strong><small>Quel compresseur pour vos outils&nbsp;?</small></span>
 					</a>
-					<div class="footer-statement"><span>Décision technique / source vérifiable</span><p>Une référence exacte, un besoin publié, une réponse traçable.</p></div>
-					<nav class="footer-quick-routes" aria-label="Accès rapides"><a href="/scanner/"><small>01</small><span>Identifier</span></a><a href="/calculateur/"><small>02</small><span>Dimensionner</span></a><a href="/comparateur/"><small>03</small><span>Comparer</span></a></nav>
-					<div class="footer-assurances" aria-label="Principes CompatAir">
-						<span><UiIcon name="check" size={16} /> Données sourcées</span>
-						<span><UiIcon name="shield" size={16} /> Aucune donnée inventée</span>
-						<span><UiIcon name="scale" size={16} /> Résultat indépendant</span>
-					</div>
 				</div>
 
 				<nav class="footer-directory footer-directory-primary" aria-label="Navigation principale du pied de page">

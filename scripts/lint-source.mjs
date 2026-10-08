@@ -108,7 +108,7 @@ for (const match of instrumentHeaderRule.matchAll(/inset\s+([0-9]*\.?[0-9]+)rem\
 }
 const scannerPage = await readFile('src/pages/scanner.astro', 'utf8');
 if (!scannerPage.includes('data-compatair-surface="scanner"')) errors.push('src/pages/scanner.astro: marqueur de vérification stable manquant');
-if (!baseLayout.includes('<nav class:list={[\'decision-rail\'')) errors.push('src/layouts/BaseLayout.astro: la progression doit rester une région de navigation');
+if (baseLayout.includes('data-decision-rail')) errors.push('src/layouts/BaseLayout.astro: la frise de décision supprimée ne doit pas revenir dans l’en-tête');
 if (!baseLayout.includes('<main id="contenu" tabindex="-1">')) errors.push('src/layouts/BaseLayout.astro: la cible du lien d’évitement doit rester focalisable');
 for (const [file, markers] of Object.entries({
 	'src/components/ProductScanner.astro': ['aria-busy', 'aria-errormessage', 'data-ui-state'],

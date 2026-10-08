@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import CatalogSignalVisual from './CatalogSignalVisual.astro';
 import DirectoryBrowser from './DirectoryBrowser.astro';
 import DirectoryPagination from './DirectoryPagination.astro';
 import { paginate, TOOL_USAGE_PAGE_SIZE } from '../domain/pagination';
@@ -56,18 +55,17 @@ const toolListJsonLd = {
 					<p class="product-decision-index">Outils pneumatiques / Usage</p>
 					<p class="eyebrow">{categories.map((category) => category.label).join(' · ')}</p>
 					<h1>{usage.label} avec {usageTools.length} outils documentés{page > 1 ? ` : page ${page}` : ''}</h1>
-					<p class="lead">{usage.description} Ouvrez une fiche pour accéder ensuite à la sélection de compresseurs calculée pour cette référence.</p>
+					<p class="lead">{usage.description}</p>
 					<div class="hero-actions"><a class="button primary" href="/calculateur/">Calculer ma configuration</a><a class="button" href="/outils-pneumatiques/">Voir tous les usages</a></div>
 				</div>
-				<CatalogSignalVisual mode="tools" count={usageTools.length} secondaryCount={brands.length} title="références dans cet usage" />
 			</div>
 		</section>
 
 		<section class="catalog-summary-band">
 			<div class="container">
 				<div><strong>{usageTools.length}</strong><span>références sourcées</span></div>
-				<div><strong>{fixedFlowCount}</strong><span>besoins minute publiés</span></div>
-				<div><strong>{usageTools.length - fixedFlowCount}</strong><span>rythmes à préciser</span></div>
+				<div><strong>{fixedFlowCount}</strong><span>débits par minute documentés</span></div>
+				<div><strong>{usageTools.length - fixedFlowCount}</strong><span>paramètres ou données à compléter</span></div>
 				<div><strong>{brands.length}</strong><span>fabricants suivis</span></div>
 			</div>
 		</section>
@@ -75,8 +73,8 @@ const toolListJsonLd = {
 		<section class="section catalog-directory" data-directory-browser data-page-size={TOOL_USAGE_PAGE_SIZE}>
 			<div class="container">
 				<header class="product-section-head">
-					<div><p class="product-decision-index">Répertoire documenté</p><h2>Comparer les références de cet usage</h2></div>
-					<p>Le tri porte sur les données publiées. Une consommation par action ou une valeur absente reste à compléter dans le calculateur.</p>
+					<div><h2>Les outils</h2></div>
+					<p>Le tri porte sur les données publiées. Les paramètres d’usage et les données manquantes sont indiqués dans chaque fiche.</p>
 				</header>
 				<div class="directory-controls">
 					<div class="field directory-search"><label for={`usage-search-${usage.id}`}>Rechercher dans cette page</label><input id={`usage-search-${usage.id}`} type="search" data-directory-search /></div>
@@ -105,7 +103,7 @@ const toolListJsonLd = {
 								<div><dt>Pression</dt><dd>{toolPressureLabel(tool)}</dd></div>
 								<div><dt>Source</dt><dd>{sourceQualityLabel(tool.confidence)}</dd></div>
 							</dl>
-							<p class:list={['data-status', tool.demandModel === 'fixed-flow' ? 'verified' : 'missing']}>{tool.demandModel === 'fixed-flow' ? 'Besoin par minute directement calculable' : 'Fréquence d’usage nécessaire au calcul'}</p>
+							<p class:list={['data-status', tool.demandModel === 'fixed-flow' ? 'verified' : 'missing']}>{tool.demandModel === 'fixed-flow' ? 'Débit par minute documenté' : 'Paramètres ou données à compléter'}</p>
 							<div class="catalog-card-actions"><a href={`/calculateur/#outil=${tool.id}`}>Calculer cette configuration</a></div>
 						</article>
 					))}
