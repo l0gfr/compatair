@@ -25,7 +25,7 @@ describe('October 7 primary tool documents', () => {
   const prior = rawTools.filter(p => !ids.has(p.id));
   const productsById = new Map(rawTools.map(p => [p.id, p]));
   expect(productsById.size).toBe(rawTools.length);
-  expect(prior).toHaveLength(18087);
+  expect(prior).toHaveLength(19087);
   expect(() => assertNew(snapshot.tools, prior)).not.toThrow();
   for (const p of batch) {
    const parsed = toolProfileSchema.parse(p);

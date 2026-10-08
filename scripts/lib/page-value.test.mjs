@@ -27,6 +27,19 @@ describe('page-specific evidence and equivalent-answer consolidation', () => {
   expect(assessProductValue({ ...product, fieldSources: { workingPressureBar: ['manual'] } }, 'tool').reasons).toContain('missing-critical-source:airflowLpm');
   expect(assessProductValue({ ...product, editorial: { ...product.editorial, limitations: [] } }, 'tool').reasons).toContain('missing-facts-or-limits');
  });
+ it('invalidates admission fingerprints when facts or provenance change with the same prose', () => {
+  const original = assessProductValue(product, 'tool').contentHash;
+  for (const changed of [
+   { ...product, airflowLpm: { typical: 110 } },
+   { ...product, workingPressureBar: { typical: 7 } },
+   { ...product, evidence: [{ ...product.evidence[0], sourceUrl: 'https://manufacturer.test/new-manual.pdf' }] },
+   { ...product, evidence: [{ ...product.evidence[0], retrievedAt: '2026-10-08' }] },
+  ]) expect(assessProductValue(changed, 'tool').contentHash).not.toBe(original);
+  const data = { title: 'Fixture', sources: [source] };
+  const guide = assessGuideValue(data, article).contentHash;
+  expect(assessGuideValue({ ...data, sources: ['https://manufacturer.test/new-manual.pdf'] }, article).contentHash).not.toBe(guide);
+  expect(assessGuideValue(data, `${article}\n<svg viewBox="0 0 10 10"><rect width="5" height="5" /></svg>`).contentHash).not.toBe(guide);
+ });
  it('consolidates only admitted equivalent answers while retaining distinct identities', () => {
   const clone = { ...product, id: 'fixture-b', slug: 'fixture-b', model: 'Fixture B', mpn: 'TEST-B' };
   const candidates = [product, clone].map(item => ({ ...productCandidate(item, 'tools'), value: assessProductValue(item, 'tool') }));

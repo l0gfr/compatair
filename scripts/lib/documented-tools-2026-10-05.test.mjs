@@ -49,7 +49,7 @@ describe('documented tools October 5', () => {
   expect(ids.size).toBe(2000);
   expect(new Set(batch.map(product => product.brand)).size).toBe(19);
   const baseline = tools.filter(product => !ids.has(product.id));
-  expect(baseline).toHaveLength(17087);
+  expect(baseline).toHaveLength(18087);
   expect(() => assertDocumentedToolsOctober5NewIdentities(snapshot.tools, baseline)).not.toThrow();
   expect(tools.filter(product => ids.has(product.id))).toHaveLength(2000);
  });

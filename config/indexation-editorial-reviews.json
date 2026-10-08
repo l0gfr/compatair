@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "timeZone": "Europe/Paris",
+  "reviews": [
+    {
+      "publicationDay": "2026-10-08",
+      "sourceReleaseSha": "cf46ffaac88d9a4c05c4cda47573175bfbe7cdf3",
+      "policyHash": "c0ce36642641ea2978db764e41e7c897740ec8d8513facbe4eb1323dd7ff301c",
+      "corpusHash": "4ff192db399e17b01730fe17562d30deeb2fc71c6b8ba540b0eec147d794a9e6",
+      "reviewedAt": "2026-10-08T18:26:57.100Z",
+      "status": "blocked",
+      "note": "Proposition mécanique du 8 octobre revue contre les sources et les voisins. Deux compresseurs et six outils refusés ; deux guides utiles dont un locator corrigé. Aucun remplacement, aucune admission du lot. Dossier : docs/INDEXATION_EDITORIAL_REVIEW_2026_10_08.md.",
+      "pages": [
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-hymair-ash-01/",
+          "contentHash": "4b1338da9359d28dbfd1b2303d155533f11a9502bc3c49361a08654be7f4c4ab",
+          "decision": "rejected",
+          "note": "ASH-01 confirmé : gravité, buse 1,4 mm, godet 600 ml, jet 170–230 mm, plage de fonctionnement 2–3 bar. Le chiffre 6,5 cfm est explicitement une moyenne ; aucune pression de mesure et aucune consommation gâchette ouverte qualifiée. ASH-02 conserve buse/jet avec alimentation par aspiration et godet 1000 ml ; ASH-03 vise les retouches, buse 0,8 mm et godet 100 ml. Ces différences sont réelles, mais la page ASH-01 actuelle les transforme seulement en inventaire documentaire sans décision originale ni dimensionnement vérifiable. La page actuelle ne démontre pas une valeur décisionnelle autonome suffisante pour une admission éditoriale. Les limites sont explicites et doivent rester hors calcul ; elles ne remplacent pas le contenu manquant."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-draper-28366/",
+          "contentHash": "60b7432cc285c6caade786b8f3237c95789e1688ae0f4e133368099228d0b439",
+          "decision": "rejected",
+          "note": "28366 confirmé : godet 100 ml, buses 0,8 et 1 mm, pression de fonctionnement 50 psi, raccord 1/4 BSP, masse 0,33 kg. Aucun débit publié dans les caractéristiques actuelles. Le voisin 28367 est le modèle 600 ml avec buses 1,3/1,4/2 mm et pression 43 psi. La différence retouche/grande capacité est documentaire ; la page 28366 reste une recopie de cellules suivie d’un état inconnu et ne résout pas le choix du compresseur. La page actuelle ne démontre pas une valeur décisionnelle autonome suffisante pour une admission éditoriale. Les limites sont explicites et doivent rester hors calcul ; elles ne remplacent pas le contenu manquant."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-nettoyage-asturomec-n4-50173/",
+          "contentHash": "bf7fa0e50e2d7d8bea4a555e9fd278f781423e502945a28c2fa0992f48fe5c0b",
+          "decision": "rejected",
+          "note": "N4 réf.50173 confirmé : réservoir 1000 cc avec fermeture à vis et baïonnette, canon 200 mm, nébuliseur réglable, ouverture 8,5 cm et plage 2–8 bar. Aucun débit d’air ou volume par action. N4/S réf.50172 partage canon 200 mm et ouverture ; N4/S SUPER réf.50171 possède canon 300 mm et maintien du flux réglé. Les différences d’accès et de commande existent, mais la page N4 ne développe pas une procédure ou comparaison autonome qui résoudrait un besoin réel. La page actuelle ne démontre pas une valeur décisionnelle autonome suffisante pour une admission éditoriale. Les limites sont explicites et doivent rester hors calcul ; elles ne remplacent pas le contenu manquant."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-astro-pneumatic-hvlp503/",
+          "contentHash": "4f400a7bd10f7fe9130edb3e21277ab33e9182c7e2972d85946bb1632e30e267",
+          "decision": "rejected",
+          "note": "HVLP503 confirmé : buse 1,3 mm, pression de fonctionnement 41–44 psi, consommation moyenne 10 cfm et recommandation 3 hp. La page primaire indique NO LONGER AVAILABLE. Ni la moyenne ni la puissance recommandée ne sont un besoin FAD en pulvérisation. HVLP505 change la buse à 1,5 mm, en conservant les données moyennes et plage ; HVLP507 est un autre diamètre. La fiche actuelle n’explique ni la disponibilité obsolète ni un arbitrage documenté entre usages. Le texte est surtout l’inventaire technique du même ensemble. La page actuelle ne démontre pas une valeur décisionnelle autonome suffisante pour une admission éditoriale. Les limites sont explicites et doivent rester hors calcul ; elles ne remplacent pas le contenu manquant."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sata-jet-x-hvlp-1-2-i-basic-1200097/",
+          "contentHash": "eb74e131eff3aa82f3724d48907257261d6d268a651aba4b06c95558700770bd",
+          "decision": "rejected",
+          "note": "Référence 1200097 confirmée dans la matrice : jet X HVLP 1,2 I BASIC. Catalogue 445 Nl/min ; notice 430 Nl/min à 2 bar ; fiche voisine 1200170 affiche 420 l/min avec avertissement que les données concernent toute la gamme. Les conditions de référence normalisées et l’arbitrage de ces valeurs restent absents. 1200138 correspond au même diamètre 1,2 en jet O ; 1200170 est le diamètre 1,3 en jet I. Les fiches voisines relaient la même contradiction de famille. La page 1200097 expose l’incohérence, mais ne fournit pas encore une résolution ou décision distincte propre au profil I 1,2 ; aucune mesure voisine transférée. La page actuelle ne démontre pas une valeur décisionnelle autonome suffisante pour une admission éditoriale. Les limites sont explicites et doivent rester hors calcul ; elles ne remplacent pas le contenu manquant."
+        },
+        {
+          "path": "/outils-pneumatiques/sableuse-asturomec-ps-50210/",
+          "contentHash": "0ab7bad5807f60ec6b0cfd9b1e9430932e17ec3bef265cd954434ed2d4b39408",
+          "decision": "rejected",
+          "note": "PS réf.50210 confirmé : buse acier cémenté trempé Ø6 mm, tuyau aspirant 2 m Ø16×22 mm, corps laiton et plage 5–8 bar. Aucun débit d’air publié. Le diamètre de buse ne permet pas d’inventer un besoin L/min. PS/S réf.50212 conserve la buse Ø6 mm avec godet 1000 cc ; PS/I réf.50314 ajoute réglage de sable et tuyau 3 m Ø8×13 mm. La page PS actuelle n’explique pas ces compromis de travail et ne dimensionne pas l’air. Un nouvel URL indexable ne résoudrait pas le besoin de sablage continu. La page actuelle ne démontre pas une valeur décisionnelle autonome suffisante pour une admission éditoriale. Les limites sont explicites et doivent rester hors calcul ; elles ne remplacent pas le contenu manquant."
+        },
+        {
+          "path": "/guides/bypass-secheur-air-comprime-qualite-maintenance/",
+          "contentHash": "93bc39b40889ac86d6ad2d7dd80968170772af1e97aa00fd2e78116bef3d3112",
+          "decision": "approved",
+          "note": "Distinction documentée entre circulation et séchage durant maintenance, puis réception par poste. BEKO RA III pages 13, 31 et 92 et option à trois vannes relues ; limites du site explicites, voisins lus. Revue interne, sans admission individuelle hors du lot refusé."
+        },
+        {
+          "path": "/guides/choisir-distributeur-pneumatique-debit-nominal/",
+          "contentHash": "3992bfd6706eedabb6357f91a73a62f5b4cb3f47cc920876d5c0594c8f37cccd",
+          "decision": "approved",
+          "note": "Conditions documentées de substitution de vanne distinctes des guides de pilotage et de vérin. Festo HE, DOE Tip Sheet 10 et VTUG relus. Locator VTUG corrigé vers la page 126 du PDF actuel, canaux 1, 3 et 5 séparables et 12/14 communs. Revue interne, sans admission individuelle hors du lot refusé."
+        },
+        {
+          "path": "/compresseurs/abac-formula-e-11-10-400-50/",
+          "contentHash": "76f486d6670db90109ed605200a76365aaf35627da0f83471aef496d0671f115",
+          "decision": "rejected",
+          "note": "La référence 4152025398 est présente dans le JSON applicatif public capturé et décodé sans exécution. 400 V, 50 Hz, 3 phases, 10 bar maximum explicite, cuve 0 L, configuration Full Feature et puissance 11.2 kW existent encore. Le JSON exact 4152025398 ne publie plus de capacité/FAD, contrairement à la page principale 4152025384. Masse actuelle 250 kg contre 296 kg dans le profil : divergence non arbitrée. Nom français FORMULA E 15 10 et anglais FORMULA E 11 10 400/50 CE : désignation divergente. Le FAD de 1510 L/min à 10 bar du profil historique ne peut pas être revalidé à partir de cette capture actuelle. Les voisins 8 et 13 bar ont le même équipement Full Feature et cuve absente ; la différence principale reste un point de pression/débit. La déclaration de cycle continu est de gamme, pas une nouvelle preuve propre au modèle."
+        },
+        {
+          "path": "/compresseurs/fiac-ax-153bd-8-400-50-ce/",
+          "contentHash": "61cd21f988642239a81bbe64c944921e9645ef5260f226ada050c943a92ec790",
+          "decision": "rejected",
+          "note": "FAD capacity (l/min) 1075 ; Max Working Pressure (bar) 8 ; Vessel size (lt) 0 ; Base Mounted ; Motor (kw) 11.2. La pression est nommée maximum constructeur, indépendante du point FAD. L’écart avec la version DRY 8 bar (1675 L/min dans la base historique) n’a aucune explication primaire actuelle. La page propre présente les mêmes paragraphes de gamme que les proches variantes. Le taux de marche demeure inconnu. Pas d’apport éditorial autonome supplémentaire par rapport aux variantes 10/13 bar et DRY ; aucune admission recommandée sans enquête technique supplémentaire."
+        }
+      ]
+    }
+  ]
+}

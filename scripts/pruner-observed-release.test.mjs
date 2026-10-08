@@ -5,19 +5,24 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
+import { indexationDay } from './lib/indexation-policy.mjs';
 const actualPrevious='2057292e3aa6c4ec551e6f61ad1c09b742ddc8c5';
 const candidateSha='b'.repeat(40);
 const root=fileURLToPath(new URL('../',import.meta.url));
 const workflow=parse(readFileSync(new URL('../.github/workflows/deploy-production.yml',import.meta.url),'utf8'));
-function checkpoint({changedLive=false,alreadyPublished=false}={}) {
+const policy=JSON.parse(readFileSync(new URL('../config/indexation-policy.json',import.meta.url),'utf8'));
+function checkpoint({changedLive=false,alreadyPublished=false,unreviewedAdmission=false}={}) {
  const fixture=mkdtempSync(join(tmpdir(),'compatair-observed-checkpoint-'));
  const now=new Date().toISOString();
  const baseline={schemaVersion:1,sourceSha:'a'.repeat(40),paths:['/']};
  const previous={schemaVersion:1,baselineSha:baseline.sourceSha,gitSha:changedLive?'c'.repeat(40):actualPrevious,builtAt:now,batches:[]};
  const manifest={...previous,gitSha:alreadyPublished?actualPrevious:candidateSha};
+ if(unreviewedAdmission)manifest.batches=[{openedAt:now,publicationDay:indexationDay(new Date(now)),dailyLimits:policy.dailyLimits,paths:['/guides/unreviewed/']}];
  try {
   for(const rel of ['config','.astro/seo','dist/data'])mkdirSync(join(fixture,rel),{recursive:true});
   writeFileSync(join(fixture,'config/indexation-baseline.json'),JSON.stringify(baseline));
+  writeFileSync(join(fixture,'config/indexation-policy.json'),JSON.stringify(policy));
+  writeFileSync(join(fixture,'config/indexation-editorial-reviews.json'),JSON.stringify({schemaVersion:1,timeZone:'Europe/Paris',reviews:[]}));
   writeFileSync(join(fixture,'.astro/seo/indexation-build.json'),JSON.stringify({allowRelease:true,previousSha:actualPrevious,manifest}));
   writeFileSync(join(fixture,'dist/data/indexation.json'),JSON.stringify(manifest));
   writeFileSync(join(fixture,'previous.json'),JSON.stringify(previous));
@@ -47,5 +52,11 @@ describe('observed previous release flows to storage only after verification',()
  });
  it.each([{changedLive:true},{alreadyPublished:true}])('does not export an unverified or already published base %s',options=>{
   const result=checkpoint(options);expect(result.status).not.toBe(0);expect(result.output).toBe('');
+ });
+ it('blocks an otherwise valid new admission without editorial approval before exporting storage protection',()=>{
+  const result=checkpoint({unreviewedAdmission:true});
+  expect(result.status).not.toBe(0);
+  expect(result.stderr).toContain('Nouvelles admissions sans revue éditoriale exacte et actuelle');
+  expect(result.output).toBe('');
  });
 });

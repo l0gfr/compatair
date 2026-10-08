@@ -1,0 +1,3031 @@
+{
+  "schemaVersion": 1,
+  "batchId": "documented-guides-2026-10-08",
+  "reviewDate": "2026-10-08",
+  "reviewType": "internal_editorial",
+  "assistedByAI": true,
+  "externalProfessionalValidation": false,
+  "physicalTestsPerformed": false,
+  "publicationScope": {
+    "baselineGuides": 686,
+    "baselineReleaseSha": "cf46ffaac88d9a4c05c4cda47573175bfbe7cdf3",
+    "newGuidesPrepared": 30,
+    "importedCanonical": true,
+    "productionState": "prepared_pending_main_validation_ci_and_production",
+    "indexationScope": "No admission by this agent. All new guides remain queued until versioned editorial review and root daily policy. Mechanical checks do not constitute admission."
+  },
+  "sourcePolicy": "All used sources have complete original HTTP 200 response bytes and privately retained originals. Fresh retrieval does not imply fresh publication. Failed or redirected candidate sources are excluded. Public source metadata and limited claim excerpts are versioned; no complete manufacturer document is added to Git.",
+  "sourceReview": {
+    "usedSources": 26,
+    "original200Responses": 26,
+    "readerOnly403Sources": 0,
+    "captureHashErrors": []
+  },
+  "sources": [
+    {
+      "id": "beko-qwikpure",
+      "url": "https://www.beko-technologies.com/fileadmin/user_upload/qp15-90_ba_02-530_en_04_01.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.beko-technologies.com/fileadmin/user_upload/qp15-90_ba_02-530_en_04_01.pdf",
+      "sha256": "d30679a15e4f1a82d6f127844546ed4cfe8e1acca934a888fdef34be943e9e78",
+      "bytes": 29924184,
+      "observedAt": "2026-10-08T17:56:23.811204+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "beko-qwikpure.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "bimba-current",
+      "url": "https://djqq0xq3q4j4b.cloudfront.net/pdf/Ultran%20IMI%202025%20Ultran%20Slide%20Cylinders%20IMI%202025.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://djqq0xq3q4j4b.cloudfront.net/pdf/Ultran%20IMI%202025%20Ultran%20Slide%20Cylinders%20IMI%202025.pdf",
+      "sha256": "739a50072053a834edf743ebd6eceb9a4e78b0f059c94c400da1231179e693ea",
+      "bytes": 2869138,
+      "observedAt": "2026-10-08T18:04:22.805380+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "bimba-current.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "bimba-ultran",
+      "url": "https://www.bimba.com/en/detail/ug_us",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://www.bimba.com/en/detail/ug_us",
+      "sha256": "7177436fce5e706844c0e12ead893ab77d44314eaa6502e88dd6e52afd939116",
+      "bytes": 185579,
+      "observedAt": "2026-10-08T17:53:17.670762+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "html",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "bimba-ultran.html",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "cox-af2",
+      "url": "https://cdn.coxdispensers.com/public/2026-04/189566_01---Combined-AF2-Single_quart---combi.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://cdn.coxdispensers.com/public/2026-04/189566_01---Combined-AF2-Single_quart---combi.pdf",
+      "sha256": "f11cce4b90d28e864c56215829326c2c6ca8ceed855d39105fc6772109ddcda6",
+      "bytes": 3902381,
+      "observedAt": "2026-10-08T17:56:23.433272+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "cox-af2.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "cox-safety",
+      "url": "https://cdn.coxdispensers.com/public/product_brochure/Pneumatic%20manual.pdf?new",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://cdn.coxdispensers.com/public/product_brochure/Pneumatic%20manual.pdf?new",
+      "sha256": "7903dfd4cd8381d0d111cbfd4acb485dcdf97bef47022f4d5a4619e95c8710f8",
+      "bytes": 12708319,
+      "observedAt": "2026-10-08T17:58:37.029804+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "cox-safety.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "cs-ds500",
+      "url": "https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_DS500_V2_EN.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_DS500_V2_EN.pdf",
+      "sha256": "a9dfadf3df45e770d6c7edfd22d8b87369f149d99e87cbcd80883c366cd141d0",
+      "bytes": 8324812,
+      "observedAt": "2026-10-08T17:56:56.308872+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "cs-ds500.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "cs-pc400",
+      "url": "https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_PC400_EN.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_PC400_EN.pdf",
+      "sha256": "dcff8fe144ab7e466b84e4f97c742631d3c1c7242ad7a177c00a784c5baadef9",
+      "bytes": 969049,
+      "observedAt": "2026-10-08T17:56:56.308954+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "cs-pc400.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "destaco-swing",
+      "url": "https://www.destaco.com/clamping/pneumatic-clamping/pneumatic-swing-clamps/pneumatic-swing-clamps-8100-8300",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://www.destaco.com/clamping/pneumatic-clamping/pneumatic-swing-clamps/pneumatic-swing-clamps-8100-8300",
+      "sha256": "6e146006fd7cccbb105345260ddf654004d17adc29a5c23480a86bc1bebf444e",
+      "bytes": 696305,
+      "observedAt": "2026-10-08T17:50:16.165049+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "html",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "destaco-swing.html",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "hutchins-810",
+      "url": "https://hutchinsmfg.com/wp-content/uploads/2021/11/Hutchins-810-Kit-Instructions-TC031.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://hutchinsmfg.com/wp-content/uploads/2021/11/Hutchins-810-Kit-Instructions-TC031.pdf",
+      "sha256": "a9b67edd4ed7f409c1c8621961b85ee51db0d7906ee9f9bcc68fe8f60596eddc",
+      "bytes": 70817,
+      "observedAt": "2026-10-08T17:50:13.728083+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "hutchins-810.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "hutchins-pad504",
+      "url": "https://hutchinsmfg.com/wp-content/uploads/2021/11/Hutchins-Pad-Removal-Instructions-Models-504-505-TC033.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://hutchinsmfg.com/wp-content/uploads/2021/11/Hutchins-Pad-Removal-Instructions-Models-504-505-TC033.pdf",
+      "sha256": "4b0fef62a753a94f6009dd7dacbbbe2772de060aba92a78e0a5269f753e7c2ac",
+      "bytes": 623896,
+      "observedAt": "2026-10-08T17:50:13.728204+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "hutchins-pad504.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "nordson-performus",
+      "url": "https://nc-p-001.sitecorecontenthub.cloud/api/public/content/aa66fd045fb040fb9039102bb48e61ae?v=28c1e155",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://nc-p-001.sitecorecontenthub.cloud/api/public/content/aa66fd045fb040fb9039102bb48e61ae?v=28c1e155",
+      "sha256": "8b5e5b2722b5e0c5d3e0ada658ed26c2cfc47419ba6b073b955f929c056ca3d6",
+      "bytes": 1843839,
+      "observedAt": "2026-10-08T17:56:23.433615+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "nordson-performus.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "nordson-validation",
+      "url": "https://nc-p-001.sitecorecontenthub.cloud/api/public/content/60f492a504774d7fa5ed6a3719e54ffa?v=2a4c4ac7",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://nc-p-001.sitecorecontenthub.cloud/api/public/content/60f492a504774d7fa5ed6a3719e54ffa?v=2a4c4ac7",
+      "sha256": "bd8f5342949ad0f3026893c6d2f3c3821b7aeade4eb10c414f28515de01aa14f",
+      "bytes": 400449,
+      "observedAt": "2026-10-08T17:56:23.433705+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "nordson-validation.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "panduit-pat",
+      "url": "https://www.panduit.com/content/dam/panduit/en/website/support/download-center/documents/pat-4-0-system-manual.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.panduit.com/content/dam/panduit/en/website/support/download-center/documents/pat-4-0-system-manual.pdf",
+      "sha256": "68865939c49b83591467d470266e366a08f03157225f9bb793a610a962a8c77e",
+      "bytes": 2935549,
+      "observedAt": "2026-10-08T17:50:15.292831+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "panduit-pat.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "panduit-ppteh",
+      "url": "https://www.panduit.com/content/dam/panduit/en/products/media/8/88/988/4988/101114988.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.panduit.com/content/dam/panduit/en/products/media/8/88/988/4988/101114988.pdf",
+      "sha256": "0bfd8e4dbab7ece0f1762dc594aed9256cecb7425911b319f4222fb23f30c0a2",
+      "bytes": 300835,
+      "observedAt": "2026-10-08T17:50:15.225769+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "panduit-ppteh.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "piab-picobot-l",
+      "url": "https://www.piab.com/globalassets/productimages/0247816_rev03_picobot_l_general-en.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.piab.com/globalassets/productimages/0247816_rev04_picobot_l_general_en-gb.pdf?ref=DD36FD281F",
+      "sha256": "b07aea144f9b6672f79d3c723fd82f0620545099bac4c9f42ac5677a8ec6f61b",
+      "bytes": 6865935,
+      "observedAt": "2026-10-08T17:50:13.969399+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "piab-picobot-l.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "pneumatech-adsorption",
+      "url": "https://www.pneumatech.com/content/dam/brands/Pneumatech/Corporate/products/dryers/desiccant-dryers/2446_Pnematech%20Adsorption%20Dryers%20Catalouge_LR.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.pneumatech.com/content/dam/brands/Pneumatech/Corporate/products/dryers/desiccant-dryers/2446_Pnematech%20Adsorption%20Dryers%20Catalouge_LR.pdf",
+      "sha256": "3727f613483424ce223ddb95730eff723a0ad5c462f9e7ac6eb721a7e5b083ac",
+      "bytes": 723970,
+      "observedAt": "2026-10-08T17:53:17.495005+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "pneumatech-adsorption.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "powerex-scroll-manual",
+      "url": "https://powerexinc.com/docs/manuals/258911_0916.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://powerexinc.com/docs/manuals/258911_0916.pdf",
+      "sha256": "b686026f5dfdcb67a84e242d828e52d42a1945e40d368ee9582987ae9105860b",
+      "bytes": 1485159,
+      "observedAt": "2026-10-08T17:55:02.551792+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "powerex-scroll-manual.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "rodcraft-atj",
+      "url": "https://www.photos.rodcraft.com/content/dam/pim/itba/rodcraft/technical-documents/8956001226.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.photos.rodcraft.com/content/dam/pim/itba/rodcraft/technical-documents/8956001226.pdf",
+      "sha256": "26aca449e53484747ab070742afa81b297cd80341f92866b3c828d7fe4f61f10",
+      "bytes": 8989541,
+      "observedAt": "2026-10-08T17:50:16.191103+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "rodcraft-atj.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "rolair-faq",
+      "url": "https://www.rolair.com/service-support/frequently-asked-questions",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://www.rolair.com/service-support/frequently-asked-questions",
+      "sha256": "f2cb4431f363496e4a5961d2bdecbc4b6a859fa6c2f310c07c37ea0a6970259b",
+      "bytes": 31617,
+      "observedAt": "2026-10-08T17:50:13.727514+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "html",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "rolair-faq.html",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "rolair-fcol22ls6",
+      "url": "https://www.rolair.com/sites/default/files/2025-01/9070723_-%20FCOL22LS6%20-%205%2C5%20Gals%202-Stage%20Quiet%20Wheeled%20compressor%20-%20EN-FR-ES.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.rolair.com/sites/default/files/2025-01/9070723_-%20FCOL22LS6%20-%205%2C5%20Gals%202-Stage%20Quiet%20Wheeled%20compressor%20-%20EN-FR-ES.pdf",
+      "sha256": "3e375742319322563371c8c0f0ebabfeda41a6800f04a44241a1d8fa8169a492",
+      "bytes": 12732787,
+      "observedAt": "2026-10-08T17:50:13.727987+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "rolair-fcol22ls6.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "rolair-full",
+      "url": "https://www.rolair.com/sites/default/files/2025-01/No%20Pump%20Schematic%20-%20Full-Size.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.rolair.com/sites/default/files/2025-01/No%20Pump%20Schematic%20-%20Full-Size.pdf",
+      "sha256": "6ef23bffe9b8544d5e6a71f34458e95569bfc1acdcf1b7a568b5331191bd9953",
+      "bytes": 1541623,
+      "observedAt": "2026-10-08T17:56:56.309008+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "rolair-full.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "schmalz-02084",
+      "url": "https://pimmedia.schmalz.com/MAM_Library/Dokumente/Bedienungsanleitung/30/3030/303001/30300102084/e148279dd29c_BAL_30.30.01.02084_en-EN.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://pimmedia.schmalz.com/MAM_Library/Dokumente/Bedienungsanleitung/30/3030/303001/30300102084/e148279dd29c_BAL_30.30.01.02084_en-EN.pdf",
+      "sha256": "9f46654fdf9e98f8b3915f635e073d03783dd64ef71af95588d322a8fcfe3215",
+      "bytes": 1669610,
+      "observedAt": "2026-10-08T17:50:14.513273+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "schmalz-02084.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "smc-itv",
+      "url": "https://www.smcworld.com/assets/manual/en-jp/files/ITV-E.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.smcworld.com/assets/manual/en-jp/files/ITV-E.pdf",
+      "sha256": "713e95d6faa79c0bf5920eea89c8cba2e14ab2e0da4bf76b0cb1cffe090d6881",
+      "bytes": 308871,
+      "observedAt": "2026-10-08T17:50:15.052490+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "smc-itv.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "smc-itv-buzz",
+      "url": "https://www.smcworld.com/support/faq/en/s.do?ca_id=699&id=883&lang=en",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://www.smcworld.com/support/faq/en/s.do?ca_id=699&id=883&lang=en",
+      "sha256": "50bc97161324cc2cba00a42e73b1c954bca32feb85cc23435de77c6bac36f793",
+      "bytes": 37732,
+      "observedAt": "2026-10-08T17:50:15.067585+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "html",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "smc-itv-buzz.html",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "sullivan-service",
+      "url": "https://www.sullivan-palatek.com/wp-content/uploads/2023/11/05018730-0282_R01.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.sullivan-palatek.com/wp-content/uploads/2023/11/05018730-0282_R01.pdf",
+      "sha256": "630cd89181480b2fb64386a25748b91e5230a23d5e8c1e6ab2cbe9d0072f7058",
+      "bytes": 2337123,
+      "observedAt": "2026-10-08T17:50:16.514087+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "pdf",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "sullivan-service.pdf",
+      "freshRetrievalIsNotFreshPublication": true
+    },
+    {
+      "id": "walther-uf",
+      "url": "https://www.walther-praezision.de/en/products/series-uf/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://www.walther-praezision.de/en/products/series-uf/",
+      "sha256": "04d39c5016a6c9a8be4b0f60a9a0ce55468e6147e7c76e80c9c81bffeebc6db7",
+      "bytes": 73540,
+      "observedAt": "2026-10-08T17:50:16.265361+00:00",
+      "captureKind": "original_https_response",
+      "documentFormat": "html",
+      "privateOriginalRetained": true,
+      "privateCaptureFilename": "walther-uf.html",
+      "freshRetrievalIsNotFreshPublication": true
+    }
+  ],
+  "documentaryConflicts": [
+    {
+      "sourceId": "piab-picobot-l",
+      "pages": [
+        22,
+        27
+      ],
+      "conflict": "ACM preset timeout and recovery counts differ. No default selected silently; guide refers to actual device settings. Pin 8 passage conflicts with pin map, not reused."
+    },
+    {
+      "sourceId": "sullivan-service",
+      "pages": [
+        1,
+        43
+      ],
+      "conflict": "Cover names D750/D900; spare-part heading names D1600. Scope restricted to cover models."
+    },
+    {
+      "sourceId": "cs-ds500",
+      "pages": [
+        1,
+        41,
+        64,
+        65
+      ],
+      "conflict": "Cover V2.02, inside pages V2.01. Version correspondence required, no firmware version prescribed."
+    },
+    {
+      "sourceId": "bimba-current",
+      "pages": [
+        3,
+        19
+      ],
+      "conflict": "Current linked filename 2025 preserves copyright 2020/02-21 page markings. Retrieval not represented as technical revision."
+    }
+  ],
+  "excludedTopics": [
+    {
+      "topic": "Schmalz soufflage externe/temporisé",
+      "reason": "Mechanism already covered in ventouse-depose-piece-soufflage-duree-debit; replaced by 2C parameter restore."
+    },
+    {
+      "topic": "DS500 analogue 4–20 mA scaling",
+      "reason": "Mechanism already covered in cs-va500-analogique-auto-scaling-automate; draft excluded, replaced by firmware configuration backup."
+    },
+    {
+      "topic": "Festo MS-SV matrix",
+      "reason": "Direct original 403; retained stronger wholly captured originals for this lot."
+    }
+  ],
+  "guides": [
+    {
+      "slug": "rolair-demarrage-froid-decharge-huile",
+      "title": "Rolair démarre mal à froid : quand décharger la pompe et vérifier l’huile",
+      "sha256": "c3ece9a29d4667576a72438b9b176f1c7d3a249a556caeaf43c075708360083f",
+      "svgSha256": [
+        "e5f37cda6ae9d53124694719d4aafb7ed71f43964fb60b512f754469af473868"
+      ],
+      "wordCount": 617,
+      "sourceIds": [
+        "rolair-faq",
+        "rolair-full"
+      ],
+      "sourceLocators": {
+        "rolair-faq": "Cold Weather Starting",
+        "rolair-full": [
+          1,
+          2
+        ]
+      },
+      "internalLinks": [
+        "/guides/compresseur-ne-demarre-plus-froid-rallonge/",
+        "/guides/rolair-fcol22ls6-moteur-bourdonne-rallonge/",
+        "/guides/entretien-compresseur-purge-condensats/",
+        "/guides/huile-compresseur-viscosite-reference-constructeur/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.rolair.com/service-support/frequently-asked-questions",
+        "https://www.rolair.com/sites/default/files/2025-01/No%20Pump%20Schematic%20-%20Full-Size.pdf"
+      ],
+      "uniqueDecision": "Le guide générique traite les causes du non-démarrage ; celui-ci traite une séquence Rolair précise et la décision de lubrifiant.",
+      "limitations": "Procédure non transposable à un appareil sans huile ; pas de mesure électrique ni de FAD.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nUn départ difficile après une nuit froide ne justifie pas une huile choisie au hasard. Rolair publie une procédure de **démarrage déchargé** pour ses compresseurs concernés : laisser tourner **30 à 40 secondes** avec la vanne de refroidisseur ou la vidange de cuve ouverte, puis refermer. Si le démarrage échoue encore, le fabricant renvoie au choix d’une huile plus légère ou synthétique conforme à son tableau et au service technique. [FAQ Rolair, rubrique démarrage par temps froid](https://www.rolair.com/service-support/frequently-asked-questions)",
+          "sourceId": "rolair-faq",
+          "locator": "Cold Weather Starting",
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "Relevez la référence et le type de pompe avant de chercher une viscosité. La [notice Rolair de la famille de compresseurs à pistons](https://www.rolair.com/sites/default/files/2025-01/No%20Pump%20Schematic%20-%20Full-Size.pdf) reste à confronter à la plaque, au moteur et à la version livrée. Une notice d’un appareil différent, même de la marque, ne valide pas son huile.",
+          "sourceId": "rolair-full",
+          "locator": [
+            1,
+            2
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "compresseur-ne-demarre-plus-froid-rallonge",
+          "huile-compresseur-viscosite-reference-constructeur",
+          "entretien-compresseur-purge-condensats"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.008227
+          },
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.008145
+          },
+          {
+            "slug": "ako-vanne-pincement-vide-manchette-ouverte",
+            "jaccard": 0.008137
+          },
+          {
+            "slug": "airpol-menergy-ultra-speed-consigne-debit",
+            "jaccard": 0.008072
+          },
+          {
+            "slug": "zimmer-gp200-capteur-magnetique-inductif",
+            "jaccard": 0.008021
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Le guide générique traite les causes du non-démarrage ; celui-ci traite une séquence Rolair précise et la décision de lubrifiant."
+      }
+    },
+    {
+      "slug": "rolair-fcol22ls6-moteur-bourdonne-rallonge",
+      "title": "Rolair FCOL22LS6 : le moteur bourdonne, quelle vérification avant le SAV ?",
+      "sha256": "71434419c816c680daa5098b8888398f0b6065bb23ff8783f77350f78d24c1df",
+      "svgSha256": [
+        "8f508087126444a7ce26dbbd16a6ad2779b228972fb86c92f73f5bcebbe2af2f"
+      ],
+      "wordCount": 558,
+      "sourceIds": [
+        "rolair-fcol22ls6"
+      ],
+      "sourceLocators": {
+        "rolair-fcol22ls6": [
+          8,
+          17
+        ]
+      },
+      "internalLinks": [
+        "/guides/compresseur-ne-demarre-plus-froid-rallonge/",
+        "/guides/rolair-demarrage-froid-decharge-huile/",
+        "/guides/compresseur-perd-pression-arret-fuite-refroidissement/",
+        "/compresseurs/rolair-fcol22ls6-60-hz-12-065825-bar-groupe-mobile-avec-reservoir-integre/",
+        "/guides/maintenance-preventive-reseau-air-comprime/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.rolair.com/sites/default/files/2025-01/9070723_-%20FCOL22LS6%20-%205%2C5%20Gals%202-Stage%20Quiet%20Wheeled%20compressor%20-%20EN-FR-ES.pdf#page=17",
+        "https://www.rolair.com/sites/default/files/2025-01/9070723_-%20FCOL22LS6%20-%205%2C5%20Gals%202-Stage%20Quiet%20Wheeled%20compressor%20-%20EN-FR-ES.pdf#page=8"
+      ],
+      "uniqueDecision": "Étude du bourdonnement sur une référence précise, avec séparation de la version électrique et des organes de décharge.",
+      "limitations": "Version nord-américaine ; aucune transposition à 230 V, 50 Hz et aucune intervention électrique proposée.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nSur le **FCOL22LS6**, un moteur qui bourdonne ou tourne lentement figure comme un symptôme distinct de l’absence totale de fonctionnement. La [notice Rolair, page 17](https://www.rolair.com/sites/default/files/2025-01/9070723_-%20FCOL22LS6%20-%205%2C5%20Gals%202-Stage%20Quiet%20Wheeled%20compressor%20-%20EN-FR-ES.pdf#page=17) cite quatre pistes : tension trop basse, rallonge inadaptée, défaut de bobinage et défaut de déchargeur ou de clapet. Les deux dernières conduisent au service client.",
+          "sourceId": "rolair-fcol22ls6",
+          "locator": [
+            8,
+            17
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "Machine arrêtée et débranchée, recopiez les marquages du câble, sa longueur et les accessoires intermédiaires. La [section électrique de la notice](https://www.rolair.com/sites/default/files/2025-01/9070723_-%20FCOL22LS6%20-%205%2C5%20Gals%202-Stage%20Quiet%20Wheeled%20compressor%20-%20EN-FR-ES.pdf#page=8) définit les exigences de cette version. Faites vérifier leur conformité avec l’alimentation disponible par une personne compétente ; une adaptation de prise ne démontre pas la conformité de la tension et de la fréquence.",
+          "sourceId": "rolair-fcol22ls6",
+          "locator": [
+            8,
+            17
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "compresseur-ne-demarre-plus-froid-rallonge",
+          "compresseur-perd-pression-arret-fuite-refroidissement",
+          "maintenance-preventive-reseau-air-comprime"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "bambi-bb24-50-pourcent-debit-continu",
+            "jaccard": 0.015233
+          },
+          {
+            "slug": "temps-remplissage-cuve-compresseur-debit",
+            "jaccard": 0.010459
+          },
+          {
+            "slug": "heidenhain-da400-air-entree-humide-six-bar",
+            "jaccard": 0.010027
+          },
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.008704
+          },
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.008612
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Étude du bourdonnement sur une référence précise, avec séparation de la version électrique et des organes de décharge."
+      }
+    },
+    {
+      "slug": "hutchins-kit810-aspiration-extracteur-externe",
+      "title": "Hutchins kit 810 : pourquoi le raccord d’aspiration ne remplace pas un extracteur",
+      "sha256": "4c9eca14f53b5dd97f792e23413e8f6d1e4ea58d08d343a5db7a51eb92d1afaa",
+      "svgSha256": [
+        "8fac860f03859632d50c7668f5a9b7da25786b873c911bd85b5211caa6103e7e"
+      ],
+      "wordCount": 542,
+      "sourceIds": [
+        "hutchins-810"
+      ],
+      "sourceLocators": {
+        "hutchins-810": [
+          1
+        ]
+      },
+      "internalLinks": [
+        "/guides/hutchins-7044-papier-rectangulaire-sans-trous/",
+        "/guides/hutchins-3501-retouche-vernis-poncage-polissage/",
+        "/guides/hutchins-7544-poncage-eau-glisse-accroche/"
+      ],
+      "inlineSourceLinks": [
+        "https://hutchinsmfg.com/wp-content/uploads/2021/11/Hutchins-810-Kit-Instructions-TC031.pdf"
+      ],
+      "uniqueDecision": "Résout une conversion VA et son circuit externe, sans répéter le choix d’abrasif des guides Hutchins existants.",
+      "limitations": "Aucune efficacité de collecte ou consommation chargée publiée dans TC031.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLe **kit 810** ajoute une liaison d’aspiration aux Hutchins ProFinisher **500, 600 et 700** ; il ne fournit pas sa propre source de vide. La [fiche d’installation TC031](https://hutchinsmfg.com/wp-content/uploads/2021/11/Hutchins-810-Kit-Instructions-TC031.pdf) demande de raccorder le flexible d’un extracteur, d’allumer cet extracteur, puis de reconnecter l’air pour contrôler l’aspiration.",
+          "sourceId": "hutchins-810",
+          "locator": [
+            1
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "La fiche nomme le plateau aspirant **762**, la jupe **1546** et le tube pivotant **1352-PVN**. Ce jeu de pièces est utile à vérifier ensemble lors de la réception d’un kit. Un raccord ajouté à un plateau resté incompatible ne démontre pas un trajet de collecte complet.",
+          "sourceId": "hutchins-810",
+          "locator": [
+            1
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "Hutchins propose le raccord **5301-2** pour un flexible d’aspiration de **1½pouce de diamètre extérieur**, et le **5301-5** pour **1 pouce de diamètre extérieur**. Ces valeurs décrivent les raccords d’aspiration de la fiche, pas un diamètre intérieur de tuyau pneumatique.",
+          "sourceId": "hutchins-810",
+          "locator": [
+            1
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "hutchins-7044-papier-rectangulaire-sans-trous",
+          "hutchins-3501-retouche-vernis-poncage-polissage",
+          "hutchins-7544-poncage-eau-glisse-accroche"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "bostitch-smartpoint-palpeur-rentre",
+            "jaccard": 0.009099
+          },
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.008841
+          },
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.008746
+          },
+          {
+            "slug": "ako-vanne-pincement-vide-manchette-ouverte",
+            "jaccard": 0.008738
+          },
+          {
+            "slug": "airpol-menergy-ultra-speed-consigne-debit",
+            "jaccard": 0.008662
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Résout une conversion VA et son circuit externe, sans répéter le choix d’abrasif des guides Hutchins existants."
+      }
+    },
+    {
+      "slug": "hutchins-504-505-plateau-trois-plots",
+      "title": "Hutchins 504/505 : aligner les trois plots avant de remonter le plateau",
+      "sha256": "4c966e0d71ffd4068cfc0f00661584fb9a641218e3c1008aa47482b2837bf969",
+      "svgSha256": [
+        "efd421ffcd2ab07fbef849a5c0987160d6446832f64e242a4b9bcec36e978156"
+      ],
+      "wordCount": 548,
+      "sourceIds": [
+        "hutchins-pad504"
+      ],
+      "sourceLocators": {
+        "hutchins-pad504": [
+          1
+        ]
+      },
+      "internalLinks": [
+        "/guides/hutchins-7044-papier-rectangulaire-sans-trous/",
+        "/guides/hutchins-3501-retouche-vernis-poncage-polissage/",
+        "/guides/hutchins-7544-poncage-eau-glisse-accroche/"
+      ],
+      "inlineSourceLinks": [
+        "https://hutchinsmfg.com/wp-content/uploads/2021/11/Hutchins-Pad-Removal-Instructions-Models-504-505-TC033.pdf"
+      ],
+      "uniqueDecision": "Un repère mécanique 504/505 autonome, différent des guides existants portant sur les abrasifs et la matière.",
+      "limitations": "TC033 ne donne ni couple de serrage ni performance après remplacement.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nAprès un remplacement de plateau sur une **ProFinisher 504 ou 505**, le contrôle important ne porte pas uniquement sur la vis centrale. Hutchins demande d’aligner les **trois plots noirs sous le soufflet avec les trois trous extérieurs du plateau**. Ce repère figure dans la [fiche TC033 dédiée aux 504/505](https://hutchinsmfg.com/wp-content/uploads/2021/11/Hutchins-Pad-Removal-Instructions-Models-504-505-TC033.pdf).",
+          "sourceId": "hutchins-pad504",
+          "locator": [
+            1
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "TC033 commence par la déconnexion du flexible d’air. La fiche utilise la clé Allen de **5/32 pouce** fournie avec la ponceuse, avec le plateau tourné vers le haut. Elle distingue l’extrémité courte de la clé pour libérer l’assemblage, puis l’extrémité longue pour dévisser, en maintenant le plateau selon ses instructions.",
+          "sourceId": "hutchins-pad504",
+          "locator": [
+            1
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "hutchins-3501-retouche-vernis-poncage-polissage",
+          "hutchins-7044-papier-rectangulaire-sans-trous",
+          "hutchins-7544-poncage-eau-glisse-accroche"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.008789
+          },
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.008696
+          },
+          {
+            "slug": "ako-vanne-pincement-vide-manchette-ouverte",
+            "jaccard": 0.008687
+          },
+          {
+            "slug": "airpol-menergy-ultra-speed-consigne-debit",
+            "jaccard": 0.008612
+          },
+          {
+            "slug": "zimmer-gp200-capteur-magnetique-inductif",
+            "jaccard": 0.008555
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Un repère mécanique 504/505 autonome, différent des guides existants portant sur les abrasifs et la matière."
+      }
+    },
+    {
+      "slug": "piab-picobot-l-acm-aspiration-continue-cycle",
+      "title": "Piab piCOBOT L : pourquoi l’économiseur reste coupé jusqu’à la fin du cycle",
+      "sha256": "8ed3ba7285aae062bf1a32cfdd622f30df27ad557027f1761bcb25a685101635",
+      "svgSha256": [
+        "918b1491270b79818a9190af9a00cbb921db91f0fe84ef0fab3ebcc552123e2a"
+      ],
+      "wordCount": 596,
+      "sourceIds": [
+        "piab-picobot-l"
+      ],
+      "sourceLocators": {
+        "piab-picobot-l": [
+          22,
+          26,
+          27
+        ]
+      },
+      "internalLinks": [
+        "/guides/piab-picobot-l-ibo-boc-liberation-piece/",
+        "/guides/ventouse-piece-poreuse-debit-vide/",
+        "/guides/ejecteur-schmalz-scpsi-economiseur-air-cycles/",
+        "/guides/piab-pisave-esl-pompe-clapet-non-retour/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.piab.com/globalassets/productimages/0247816_rev03_picobot_l_general-en.pdf#page=27"
+      ],
+      "uniqueDecision": "Traite le déclenchement ACM et sa durée jusqu’à la fin du cycle, avec un conflit documenté des préréglages, distinct de la boucle Schmalz générique.",
+      "limitations": "Valeurs par défaut et broches contradictoires non arbitrées ; aucun contournement ACM ni qualification de maintien.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLe piCOBOT L atteint le vide puis recommence à consommer en continu sur une pièce difficile. Ce comportement peut relever de sa surveillance **ACM** : la [notice piCOBOT L, page 27](https://www.piab.com/globalassets/productimages/0247816_rev03_picobot_l_general-en.pdf#page=27) décrit la suspension de l’économie d’air pour le reste du cycle lorsque les reprises de la vanne sont trop rapprochées.",
+          "sourceId": "piab-picobot-l",
+          "locator": [
+            22,
+            26,
+            27
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "Le document présente des valeurs différentes entre le tableau des préréglages, page 22, et la description ACM, page 27. Pour le délai, il affiche **5 secondes** dans le premier et **3 secondes** dans la seconde ; les nombres de reprises par défaut divergent également. Relevez les valeurs actives sur votre appareil pour interpréter son cycle.",
+          "sourceId": "piab-picobot-l",
+          "locator": [
+            22,
+            26,
+            27
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "Pour l’économie manuelle, la notice impose **S2>S1** et **S2−hystérésis>S1**. Ces relations servent à lire l’ordre des seuils ; elles ne donnent pas la valeur de vide nécessaire à votre pièce. Le mode ALD, page 26, détermine son niveau à partir du vide atteignable à chaque cycle.",
+          "sourceId": "piab-picobot-l",
+          "locator": [
+            22,
+            26,
+            27
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "ejecteur-schmalz-scpsi-economiseur-air-cycles",
+          "piab-pisave-esl-pompe-clapet-non-retour",
+          "ventouse-piece-poreuse-debit-vide"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "coval-lemax-asc-missing-piece-poreuse",
+            "jaccard": 0.013453
+          },
+          {
+            "slug": "robotiq-airpick-mode-auto-piece-poreuse",
+            "jaccard": 0.012635
+          },
+          {
+            "slug": "coval-lemax-no-nf-coupure-air-electrique",
+            "jaccard": 0.010899
+          },
+          {
+            "slug": "fipa-gr04-aiguilles-course-epaisseur-matiere",
+            "jaccard": 0.010695
+          },
+          {
+            "slug": "robotiq-airpick-release-distance-valve",
+            "jaccard": 0.00991
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Traite le déclenchement ACM et sa durée jusqu’à la fin du cycle, avec un conflit documenté des préréglages, distinct de la boucle Schmalz générique."
+      }
+    },
+    {
+      "slug": "piab-picobot-l-ibo-boc-liberation-piece",
+      "title": "Piab piCOBOT L : attendre le bon retour après un soufflage IBO",
+      "sha256": "b41ba725dfdb29c888a86fa3230c684732b77b88fde2d0def4539675e8bf5df6",
+      "svgSha256": [
+        "46cd5ff035b209f350b54cb27a5ec4a7eca4b72e401de217d722b16d9657a8b1"
+      ],
+      "wordCount": 576,
+      "sourceIds": [
+        "piab-picobot-l"
+      ],
+      "sourceLocators": {
+        "piab-picobot-l": [
+          28,
+          29
+        ]
+      },
+      "internalLinks": [
+        "/guides/piab-picobot-l-acm-aspiration-continue-cycle/",
+        "/guides/ventouse-depose-piece-soufflage-duree-debit/",
+        "/guides/piab-pisave-esl-tubes-signal-retard-regulation/",
+        "/guides/ventouse-mark-free-traces-deformation-transfert-contamination/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.piab.com/globalassets/productimages/0247816_rev03_picobot_l_general-en.pdf#page=28",
+        "https://www.piab.com/globalassets/productimages/0247816_rev03_picobot_l_general-en.pdf#page=29"
+      ],
+      "uniqueDecision": "L’apprentissage IBO et le retour BOC apportent une décision de programme absente du guide de dépose Schmalz.",
+      "limitations": "BOC ne vaut pas homologation de sécurité ni garantie mécanique ; aucune durée optimale inventée.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLa dépose varie après un changement de ventouse ou de trajet de vide. Sur un piCOBOT L équipé de **IBO**, la durée du soufflage est adaptative : elle n’est pas forcément égale à la temporisation de l’automate. La [notice Piab, page 28](https://www.piab.com/globalassets/productimages/0247816_rev03_picobot_l_general-en.pdf#page=28) précise que les premiers cycles d’apprentissage peuvent contenir une bouffée supplémentaire.",
+          "sourceId": "piab-picobot-l",
+          "locator": [
+            28,
+            29
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "La [page 29 de la notice](https://www.piab.com/globalassets/productimages/0247816_rev03_picobot_l_general-en.pdf#page=29) associe **BOC, Blow-Off Complete**, à la fin du soufflage automatique ATBO ou IBO. Ce signal permet au programme de suivre la fin de cette fonction au lieu de supposer une durée fixe.",
+          "sourceId": "piab-picobot-l",
+          "locator": [
+            28,
+            29
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "ventouse-depose-piece-soufflage-duree-debit",
+          "piab-pisave-esl-tubes-signal-retard-regulation",
+          "ventouse-mark-free-traces-deformation-transfert-contamination"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "coval-lemax-no-nf-coupure-air-electrique",
+            "jaccard": 0.011101
+          },
+          {
+            "slug": "piab-pisave-esl-pompe-clapet-non-retour",
+            "jaccard": 0.00976
+          },
+          {
+            "slug": "airpol-menergy-ultra-speed-consigne-debit",
+            "jaccard": 0.009328
+          },
+          {
+            "slug": "junair-625-50-60-hz-debit",
+            "jaccard": 0.008795
+          },
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.008555
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "L’apprentissage IBO et le retour BOC apportent une décision de programme absente du guide de dépose Schmalz."
+      }
+    },
+    {
+      "slug": "schmalz-scpsi-l-2c-remplacement-parametres-io-link",
+      "title": "Schmalz SCPSi-L 2C : sauvegarder les paramètres avant de remplacer l’éjecteur",
+      "sha256": "796b568f0379fe977079a1b12ec4c72903531311b18fe39dcce932b2e9fc87c0",
+      "svgSha256": [
+        "f977c572d85f0866680fc0371f228bb362384df6a7c02765346ba3a3f9a13038"
+      ],
+      "wordCount": 500,
+      "sourceIds": [
+        "schmalz-02084"
+      ],
+      "sourceLocators": {
+        "schmalz-02084": [
+          21,
+          22
+        ]
+      },
+      "internalLinks": [
+        "/guides/ejecteur-schmalz-scpsi-economiseur-air-cycles/",
+        "/guides/ventouse-depose-piece-soufflage-duree-debit/",
+        "/guides/maintenance-preventive-reseau-air-comprime/"
+      ],
+      "inlineSourceLinks": [
+        "https://pimmedia.schmalz.com/MAM_Library/Dokumente/Bedienungsanleitung/30/3030/303001/30300102084/e148279dd29c_BAL_30.30.01.02084_en-EN.pdf#page=22"
+      ],
+      "uniqueDecision": "Problème nouveau de maintenance et de sauvegarde IO-Link, absent des guides sur l’économie ou le soufflage.",
+      "limitations": "Aucun format de fichier ni commande de maître inventés ; réception machine à réaliser.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nRemplacer l’éjecteur par la même référence ne garantit pas que le maître IO-Link lui restituera automatiquement ses paramètres. La [notice SCPSi-L, page 22](https://pimmedia.schmalz.com/MAM_Library/Dokumente/Bedienungsanleitung/30/3030/303001/30300102084/e148279dd29c_BAL_30.30.01.02084_en-EN.pdf#page=22) exclut la fonction **data storage** pour les produits à deux modules, marqués **2C**. Elle prévoit un transfert manuel par la fonction **block parameter**.",
+          "sourceId": "schmalz-02084",
+          "locator": [
+            21,
+            22
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "ejecteur-schmalz-scpsi-economiseur-air-cycles",
+          "ventouse-depose-piece-soufflage-duree-debit",
+          "maintenance-preventive-reseau-air-comprime"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "schmalz-fa-xi-svk-inclinaison-soixante-degres",
+            "jaccard": 0.00956
+          },
+          {
+            "slug": "norgren-l17-faible-debit-lubrification-demarrage",
+            "jaccard": 0.009225
+          },
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.009221
+          },
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.009119
+          },
+          {
+            "slug": "ako-vanne-pincement-vide-manchette-ouverte",
+            "jaccard": 0.009109
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Problème nouveau de maintenance et de sauvegarde IO-Link, absent des guides sur l’économie ou le soufflage."
+      }
+    },
+    {
+      "slug": "smc-itv-er1-er5-entree-sortie-electrique",
+      "title": "SMC ITV : distinguer Er.1 et Er.5 avant de chercher un manque d’air",
+      "sha256": "c25436340dac96c0c746a3ff0c06879e58c6a146492c7598f591b0088de63eab",
+      "svgSha256": [
+        "59d6a9582adb18ddb3ecb5ffd18d85ab050a1c1d01437b80d4555b850debf730"
+      ],
+      "wordCount": 534,
+      "sourceIds": [
+        "smc-itv"
+      ],
+      "sourceLocators": {
+        "smc-itv": [
+          5,
+          6,
+          12
+        ]
+      },
+      "internalLinks": [
+        "/guides/smc-itv-pression-minimale-sans-consigne-f1/",
+        "/guides/smc-itv-coupure-air-alimentation-electrique/",
+        "/guides/groupe-frl-filtre-regulateur-lubrificateur/",
+        "/guides/distributeur-5-3-centre-ferme-verin-derive/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.smcworld.com/assets/manual/en-jp/files/ITV-E.pdf#page=12"
+      ],
+      "uniqueDecision": "Décision de diagnostic par code et côté électrique, distincte de la séquence de coupure déjà traitée.",
+      "limitations": "Notice standard seulement ; pas de manipulation sous tension ni transposition aux variantes spéciales.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nUne alarme sur un régulateur ITV ne désigne pas forcément une pression d’alimentation trop faible. La [notice des ITV1000/2000/3000, page 12](https://www.smcworld.com/assets/manual/en-jp/files/ITV-E.pdf#page=12) distingue **Er.1**, signal d’entrée hors plage, et **Er.5**, surintensité sur la sortie. Ces deux codes orientent vers des côtés différents du circuit électrique.",
+          "sourceId": "smc-itv",
+          "locator": [
+            5,
+            6,
+            12
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "Pour les sorties de commutation décrites page 6, SMC indique le déclenchement de la protection à **30 mA DC ou davantage**. Cette donnée ne constitue pas une capacité à utiliser en permanence à la limite ; le type de sortie et sa charge doivent correspondre aux spécifications de la variante.",
+          "sourceId": "smc-itv",
+          "locator": [
+            5,
+            6,
+            12
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "smc-itv-coupure-air-alimentation-electrique",
+          "groupe-frl-filtre-regulateur-lubrificateur",
+          "distributeur-5-3-centre-ferme-verin-derive"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "smc-itv-coupure-air-alimentation-electrique",
+            "jaccard": 0.014493
+          },
+          {
+            "slug": "smc-vba-redemarrage-ecart-pression",
+            "jaccard": 0.012248
+          },
+          {
+            "slug": "enerpac-pa133-pompe-desamorcee-air-hydraulique",
+            "jaccard": 0.011342
+          },
+          {
+            "slug": "festo-dhps-no-nc-ressort-force-disponible",
+            "jaccard": 0.01083
+          },
+          {
+            "slug": "smc-asr-asq-retour-pression-effort-verin",
+            "jaccard": 0.010811
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Décision de diagnostic par code et côté électrique, distincte de la séquence de coupure déjà traitée."
+      }
+    },
+    {
+      "slug": "smc-itv-pression-minimale-sans-consigne-f1",
+      "title": "SMC ITV : une commande absente peut-elle laisser une pression de sortie ?",
+      "sha256": "125ab8d33b590acb09ece62836beff23790184f17f59cd835ff24dac0b827d36",
+      "svgSha256": [
+        "eb1f0b37aacf7ff61a9f6fc5d05df8efcb2b738c2e3cf1b3301f413e8e21f70a"
+      ],
+      "wordCount": 557,
+      "sourceIds": [
+        "smc-itv",
+        "smc-itv-buzz"
+      ],
+      "sourceLocators": {
+        "smc-itv": [
+          7,
+          8
+        ],
+        "smc-itv-buzz": "FAQ699/883"
+      },
+      "internalLinks": [
+        "/guides/smc-itv-coupure-air-alimentation-electrique/",
+        "/guides/smc-itv-er1-er5-entree-sortie-electrique/",
+        "/guides/groupe-frl-filtre-regulateur-lubrificateur/",
+        "/guides/vanne-demarrage-progressif-air-comprime-remise-pression/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.smcworld.com/assets/manual/en-jp/files/ITV-E.pdf#page=7",
+        "https://www.smcworld.com/support/faq/en/s.do?ca_id=699&id=883&lang=en"
+      ],
+      "uniqueDecision": "Borne minimale F_1 et comportement sans signal, absents du guide de coupure ; exemple de FAQ explicitement non prescriptif.",
+      "limitations": "Ni consigne absente ni réglage à zéro ne prouvent la consignation ; variante spéciale à vérifier.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nL’automate n’envoie pas de consigne, pourtant l’ITV peut produire une pression lorsque l’air est fourni. La [notice ITV, pages 7–8](https://www.smcworld.com/assets/manual/en-jp/files/ITV-E.pdf#page=7) précise que la pression minimale est délivrée même sans signal d’entrée. Il faut donc regarder le **minimum F_1**, et pas seulement la valeur demandée par l’automate.",
+          "sourceId": "smc-itv",
+          "locator": [
+            7,
+            8
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLa [FAQ SMC sur le bourdonnement](https://www.smcworld.com/support/faq/en/s.do?ca_id=699&id=883&lang=en) donne un exemple avec **F_1 à 0,1 MPa** et aucune arrivée d’air : les électrovannes cherchent cette pression sans pouvoir l’atteindre. Ce nombre est l’exemple SMC, pas un réglage conseillé. Avec l’air interrompu et la tension maintenue, la notice avertit aussi d’un fonctionnement interne pouvant raccourcir la durée de vie.",
+          "sourceId": "smc-itv-buzz",
+          "locator": "FAQ699/883",
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "smc-itv-coupure-air-alimentation-electrique",
+          "groupe-frl-filtre-regulateur-lubrificateur",
+          "vanne-demarrage-progressif-air-comprime-remise-pression"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "ross-dm2-c-reset-200ms-alimentation",
+            "jaccard": 0.015888
+          },
+          {
+            "slug": "zimmer-gp200-ventilation-air-barrage-guide",
+            "jaccard": 0.010157
+          },
+          {
+            "slug": "enerpac-pa133-pompe-desamorcee-air-hydraulique",
+            "jaccard": 0.01011
+          },
+          {
+            "slug": "norgren-l17-faible-debit-lubrification-demarrage",
+            "jaccard": 0.009615
+          },
+          {
+            "slug": "bostitch-smartpoint-palpeur-rentre",
+            "jaccard": 0.008945
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Borne minimale F_1 et comportement sans signal, absents du guide de coupure ; exemple de FAQ explicitement non prescriptif."
+      }
+    },
+    {
+      "slug": "walther-uf-raccord-code-forme-erreur-fluide",
+      "title": "Walther UF : empêcher le branchement d’un flexible sur le mauvais fluide",
+      "sha256": "27ea25a34d856df9f284b55857b62c766b636b85330327b3dae728c251424228",
+      "svgSha256": [
+        "9ddb430bcf47dce748480f693d4f5e2dd15bc5b46078bf78a25fb90c3b075f5b"
+      ],
+      "wordCount": 483,
+      "sourceIds": [
+        "walther-uf"
+      ],
+      "sourceLocators": {
+        "walther-uf": "SeriesUF, description du guidage"
+      },
+      "internalLinks": [
+        "/guides/nitto-40pm-400pm-meme-filetage-profils-differents/",
+        "/guides/maintenance-preventive-reseau-air-comprime/",
+        "/guides/air-comprime-carrosserie-peinture/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.walther-praezision.de/en/products/series-uf/"
+      ],
+      "uniqueDecision": "Détrompage pour empêcher une inversion de fluides ; distinct de la compatibilité dimensionnelle des profils.",
+      "limitations": "Aucune forme affectée arbitrairement à un fluide ; limite de pression liée à la référence.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nDeux flexibles se ressemblent, mais ne doivent pas rejoindre le même circuit. La [page fabricant de la série UF](https://www.walther-praezision.de/en/products/series-uf/) décrit un guidage **triangulaire, carré ou rond** destiné à distinguer les associations de raccords. Le principe utile est mécanique : la moitié opposée doit correspondre au guidage prévu.",
+          "sourceId": "walther-uf",
+          "locator": "SeriesUF, description du guidage",
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "nitto-40pm-400pm-meme-filetage-profils-differents",
+          "air-comprime-carrosserie-peinture",
+          "maintenance-preventive-reseau-air-comprime"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.009385
+          },
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.009278
+          },
+          {
+            "slug": "ako-vanne-pincement-vide-manchette-ouverte",
+            "jaccard": 0.009269
+          },
+          {
+            "slug": "airpol-menergy-ultra-speed-consigne-debit",
+            "jaccard": 0.009184
+          },
+          {
+            "slug": "zimmer-gp200-capteur-magnetique-inductif",
+            "jaccard": 0.009119
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Détrompage pour empêcher une inversion de fluides ; distinct de la compatibilité dimensionnelle des profils."
+      }
+    },
+    {
+      "slug": "panduit-ppteh-collier-lache-angle-tension",
+      "title": "Panduit PPTEH : un collier lâche ne demande pas toujours plus de tension",
+      "sha256": "6471ec8980b3cbcd8830e6bfecdba321f6c6408df1d3663fa83692b3daa204b6",
+      "svgSha256": [
+        "d501a4b7254b4c523fa8755fc33d37c4cfde00f183e226105f064d4655571a08"
+      ],
+      "wordCount": 552,
+      "sourceIds": [
+        "panduit-ppteh"
+      ],
+      "sourceLocators": {
+        "panduit-ppteh": [
+          2,
+          4
+        ]
+      },
+      "internalLinks": [
+        "/guides/panduit-pat4-erreur3-pression-pendant-cycle/",
+        "/guides/panduit-pat4-erreur7-collier-flexible-transfert/",
+        "/guides/atlas-lms08-hr10-air-temps-serrage/",
+        "/guides/cle-a-chocs-couple-serrage-roues-dynamometrique/",
+        "/guides/maintenance-preventive-reseau-air-comprime/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.panduit.com/content/dam/panduit/en/products/media/8/88/988/4988/101114988.pdf#page=4"
+      ],
+      "uniqueDecision": "Diagnostic du geste et des obstacles sur un outil de pose de colliers, absent du corpus.",
+      "limitations": "Aucun réglage universel ni force réelle déduite du sélecteur.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLe PPTEH coupe le collier, mais celui-ci reste trop lâche. La [fiche Panduit, tableau de dépannage page 4](https://www.panduit.com/content/dam/panduit/en/products/media/8/88/988/4988/101114988.pdf#page=4) ne cite pas uniquement un sélecteur trop bas : l’angle de l’outil, un obstacle contre le faisceau et une traction de l’opérateur pendant la tension figurent aussi parmi les causes.",
+          "sourceId": "panduit-ppteh",
+          "locator": [
+            2,
+            4
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "atlas-lms08-hr10-air-temps-serrage",
+          "cle-a-chocs-couple-serrage-roues-dynamometrique",
+          "maintenance-preventive-reseau-air-comprime"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "heidenhain-da400-codeurs-debit-raccords",
+            "jaccard": 0.010223
+          },
+          {
+            "slug": "exair-static-retour-convoyeur-ioniseur",
+            "jaccard": 0.009116
+          },
+          {
+            "slug": "norgren-l17-faible-debit-lubrification-demarrage",
+            "jaccard": 0.008803
+          },
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.008755
+          },
+          {
+            "slug": "nordson-ultimus-v-auto-increment-count-time-sequence",
+            "jaccard": 0.008681
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Diagnostic du geste et des obstacles sur un outil de pose de colliers, absent du corpus."
+      }
+    },
+    {
+      "slug": "panduit-pat4-erreur3-pression-pendant-cycle",
+      "title": "Panduit PAT 4.0 erreur 3 : lire la pression pendant le cycle de pose",
+      "sha256": "cbf7e74df3130dea5c291b90f158e50b3d8e86afbe4a69f4c8ebd605ca05b936",
+      "svgSha256": [
+        "86dec5c8c34e7f96dd913d41455e408092d63223e6833d503e6ab3966cf59d90"
+      ],
+      "wordCount": 543,
+      "sourceIds": [
+        "panduit-pat"
+      ],
+      "sourceLocators": {
+        "panduit-pat": [
+          33,
+          34
+        ]
+      },
+      "internalLinks": [
+        "/guides/mesurer-pression-dynamique-pistolet-peinture/",
+        "/guides/flexible-enrouleur-raccords-garage-debit/",
+        "/guides/panduit-pat4-erreur7-collier-flexible-transfert/",
+        "/guides/audit-reseau-air-comprime-protocole-mesures/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.panduit.com/content/dam/panduit/en/website/support/download-center/documents/pat-4-0-system-manual.pdf#page=33"
+      ],
+      "uniqueDecision": "Lectures Before/During et limite de chute propres au PAT, distinctes du manomètre de pistolet générique.",
+      "limitations": "Capture ponctuelle, sans courbe ; valeurs illustratives explicitement hypothétiques.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLe PAT 4.0 signale **ERROR 3** alors que le manomètre du réseau paraît correct. Le manuel Panduit fournit un contrôle plus précis : l’écran **Line Pressure** distingue la pression avant cycle et une capture pendant l’impulsion d’air secondaire lors de la pose. [Manuel PA27647A01_05, page PDF 33, page imprimée 31](https://www.panduit.com/content/dam/panduit/en/website/support/download-center/documents/pat-4-0-system-manual.pdf#page=33)",
+          "sourceId": "panduit-pat",
+          "locator": [
+            33,
+            34
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "Pour les PAT1M4.0/PAT1.5M4.0 et leurs variantes décrites, Panduit demande **4,5 à 5,8 bar**, avec une chute maximale de **0,7 bar**. Le manuel cite 65–85 PSIG et 10 PSI en parallèle. Ces valeurs sont celles de cette notice 12/2018 actuellement accessible ; elles ne sont pas les besoins de tous les outils de colliers.",
+          "sourceId": "panduit-pat",
+          "locator": [
+            33,
+            34
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "mesurer-pression-dynamique-pistolet-peinture",
+          "flexible-enrouleur-raccords-garage-debit",
+          "audit-reseau-air-comprime-protocole-mesures"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "ross-dm2-c-reset-200ms-alimentation",
+            "jaccard": 0.015195
+          },
+          {
+            "slug": "cs-va500-analogique-auto-scaling-automate",
+            "jaccard": 0.014058
+          },
+          {
+            "slug": "sagola-4600-aqua-clear-consommation",
+            "jaccard": 0.013889
+          },
+          {
+            "slug": "airpol-menergy-ultra-speed-consigne-debit",
+            "jaccard": 0.013527
+          },
+          {
+            "slug": "fluke-ii900-leakq-distance-obstacles",
+            "jaccard": 0.013208
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Lectures Before/During et limite de chute propres au PAT, distinctes du manomètre de pistolet générique."
+      }
+    },
+    {
+      "slug": "panduit-pat4-erreur7-collier-flexible-transfert",
+      "title": "Panduit PAT 4.0 erreur 7 : retrouver le collier avant de relancer la pose",
+      "sha256": "d9a1615b65a09431d0512ab659f5ff0584c6d5aeaee82b7fb5ca3ab03023a787",
+      "svgSha256": [
+        "cb32bc6edee31d3e83be4707d6d5b3f06689abf481a368d7540dc6ad4263951b"
+      ],
+      "wordCount": 538,
+      "sourceIds": [
+        "panduit-pat"
+      ],
+      "sourceLocators": {
+        "panduit-pat": [
+          36,
+          37,
+          38,
+          39
+        ]
+      },
+      "internalLinks": [
+        "/guides/panduit-pat4-erreur3-pression-pendant-cycle/",
+        "/guides/flexible-enrouleur-raccords-garage-debit/",
+        "/guides/audit-reseau-air-comprime-protocole-mesures/",
+        "/guides/maintenance-preventive-reseau-air-comprime/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.panduit.com/content/dam/panduit/en/website/support/download-center/documents/pat-4-0-system-manual.pdf#page=37"
+      ],
+      "uniqueDecision": "Transport physique du collier et distinction ERROR 6/7/8, inédits ; ne répète pas le seul dimensionnement du flexible.",
+      "limitations": "Intervention réservée à l’opérateur formé selon le manuel ; aucune pression de débourrage ajoutée.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nUn flexible de transfert PHM transporte le collier jusqu’à l’outil ; ce n’est pas seulement un tuyau d’air. Avec **ERROR 7, Tie in hose**, Panduit indique qu’un collier reste dans ce trajet. Le manuel précise que l’outil ne peut reprendre son cycle tant que le collier n’a pas été dégagé. [Manuel PAT 4.0, page PDF 37](https://www.panduit.com/content/dam/panduit/en/website/support/download-center/documents/pat-4-0-system-manual.pdf#page=37)",
+          "sourceId": "panduit-pat",
+          "locator": [
+            36,
+            37,
+            38,
+            39
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "flexible-enrouleur-raccords-garage-debit",
+          "audit-reseau-air-comprime-protocole-mesures",
+          "maintenance-preventive-reseau-air-comprime"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "ross-dm2-c-reset-200ms-alimentation",
+            "jaccard": 0.015267
+          },
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.011742
+          },
+          {
+            "slug": "airpol-menergy-ultra-speed-consigne-debit",
+            "jaccard": 0.011628
+          },
+          {
+            "slug": "fluke-ii900-leakq-distance-obstacles",
+            "jaccard": 0.011353
+          },
+          {
+            "slug": "cs-va500-analogique-auto-scaling-automate",
+            "jaccard": 0.011268
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Transport physique du collier et distinction ERROR 6/7/8, inédits ; ne répète pas le seul dimensionnement du flexible."
+      }
+    },
+    {
+      "slug": "destaco-8100-8300-serrage-perte-air-non-verrouille",
+      "title": "DESTACO 8100/8300 : le serrage peut-il rester assuré sans air ?",
+      "sha256": "59e0598786aebff0363a8e79087746343a1c28a6dc413ffa9b0d5c5741b1dd3b",
+      "svgSha256": [
+        "26682326b9988e5330118ed8ef87924f3124c3be48c0d8441c7ca77a2db209e0"
+      ],
+      "wordCount": 493,
+      "sourceIds": [
+        "destaco-swing"
+      ],
+      "sourceLocators": {
+        "destaco-swing": "Pneumatic Swing Clamps8100–8300"
+      },
+      "internalLinks": [
+        "/guides/haas-etau-programmable-coupure-courant-serrage/",
+        "/guides/distributeur-5-3-centre-ferme-verin-derive/",
+        "/guides/pince-pneumatique-force-doigt-longueur-prehension/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.destaco.com/clamping/pneumatic-clamping/pneumatic-swing-clamps/pneumatic-swing-clamps-8100-8300"
+      ],
+      "uniqueDecision": "Répond au maintien sans énergie sur une famille explicitement non verrouillable, différent de l’étau Haas et des forces de doigts.",
+      "limitations": "Aucune fonction de sécurité ou comportement universel de chute déclaré.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nUne bride pivotante n’est pas nécessairement un maintien mécanique verrouillé. Sur sa page des **8100/8300**, DESTACO décrit ces modèles comme **non-locking** et relie la force de serrage à l’alésage et à la pression d’entrée. [Description fabricant 8100/8300](https://www.destaco.com/clamping/pneumatic-clamping/pneumatic-swing-clamps/pneumatic-swing-clamps-8100-8300)",
+          "sourceId": "destaco-swing",
+          "locator": "Pneumatic Swing Clamps8100–8300",
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "haas-etau-programmable-coupure-courant-serrage",
+          "pince-pneumatique-force-doigt-longueur-prehension",
+          "distributeur-5-3-centre-ferme-verin-derive"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "festo-dhps-no-nc-ressort-force-disponible",
+            "jaccard": 0.014098
+          },
+          {
+            "slug": "zimmer-gp200-capteur-magnetique-inductif",
+            "jaccard": 0.012097
+          },
+          {
+            "slug": "fipa-gr04-aiguilles-course-epaisseur-matiere",
+            "jaccard": 0.011799
+          },
+          {
+            "slug": "smc-itv-coupure-air-alimentation-electrique",
+            "jaccard": 0.011246
+          },
+          {
+            "slug": "smc-asr-asq-retour-pression-effort-verin",
+            "jaccard": 0.011225
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Répond au maintien sans énergie sur une famille explicitement non verrouillable, différent de l’étau Haas et des forces de doigts."
+      }
+    },
+    {
+      "slug": "rodcraft-atj-cric-ne-descend-plus-air",
+      "title": "Rodcraft ATJ : pourquoi un cric peut avoir besoin d’air pour redescendre",
+      "sha256": "e24a41b18144959e2aae6f352ff776f818d57aa6699d523dd372b4f3bd9bda66",
+      "svgSha256": [
+        "58db8db95566fbec5b07b7792663a59e9ce74fb70d45a08cfd8fda460ec7dd7a"
+      ],
+      "wordCount": 526,
+      "sourceIds": [
+        "rodcraft-atj"
+      ],
+      "sourceLocators": {
+        "rodcraft-atj": [
+          7,
+          8,
+          9
+        ]
+      },
+      "internalLinks": [
+        "/guides/enerpac-pa133-pompe-desamorcee-air-hydraulique/",
+        "/guides/poste-gonflage-pneus-atelier-mesure-securite/",
+        "/guides/maintenance-preventive-reseau-air-comprime/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.photos.rodcraft.com/content/dam/pim/itba/rodcraft/technical-documents/8956001226.pdf#page=9",
+        "https://www.photos.rodcraft.com/content/dam/pim/itba/rodcraft/technical-documents/8956001226.pdf#page=8"
+      ],
+      "uniqueDecision": "Problème de descente sur un cric air-hydraulique, différent de la pompe Enerpac désamorcée.",
+      "limitations": "Aucun travail sous charge ; notice historique de 2012 actuellement servie à confronter à la plaque.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLe cric a levé, puis ne redescend plus. Pour les **ATJ30-2, ATJ50-3 et ATJ80-2**, le tableau Rodcraft cite une alimentation d’air insuffisante parmi les causes possibles d’absence de descente, avec un défaut de pompe pneumatique ou une fuite du joint de protection. [Notice ATJ, page 9](https://www.photos.rodcraft.com/content/dam/pim/itba/rodcraft/technical-documents/8956001226.pdf#page=9)",
+          "sourceId": "rodcraft-atj",
+          "locator": [
+            7,
+            8,
+            9
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "La [section d’utilisation, page 8](https://www.photos.rodcraft.com/content/dam/pim/itba/rodcraft/technical-documents/8956001226.pdf#page=8) donne des minimums différents : **8 bar** pour le 30 t, **8,5 bar** pour le 50 t et **9 bar** pour le 80 t. Confirmez ces prescriptions avec la plaque de votre appareil. Respectez les limites de la notice pendant la recherche de la cause de descente impossible.",
+          "sourceId": "rodcraft-atj",
+          "locator": [
+            7,
+            8,
+            9
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "enerpac-pa133-pompe-desamorcee-air-hydraulique",
+          "poste-gonflage-pneus-atelier-mesure-securite",
+          "maintenance-preventive-reseau-air-comprime"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "bostitch-smartpoint-palpeur-rentre",
+            "jaccard": 0.009242
+          },
+          {
+            "slug": "norgren-l17-faible-debit-lubrification-demarrage",
+            "jaccard": 0.009017
+          },
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.008991
+          },
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.008893
+          },
+          {
+            "slug": "ako-vanne-pincement-vide-manchette-ouverte",
+            "jaccard": 0.008885
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Problème de descente sur un cric air-hydraulique, différent de la pompe Enerpac désamorcée."
+      }
+    },
+    {
+      "slug": "cox-pistolet-mastic-extrusion-lente-froid-buse",
+      "title": "Pistolet COX lent : vérifier le mastic et la buse avant la pression",
+      "sha256": "a625fdc343c102ab36c71872a3b0f25bbeb7de3b0553b75cc59384fd6b325b5f",
+      "svgSha256": [
+        "71427ec87d700a5b1768148b987a4fdeceaeb9eea846495745877b0b99d9f83b"
+      ],
+      "wordCount": 550,
+      "sourceIds": [
+        "cox-safety",
+        "cox-af2"
+      ],
+      "sourceLocators": {
+        "cox-safety": [
+          8
+        ],
+        "cox-af2": [
+          8,
+          13
+        ]
+      },
+      "internalLinks": [
+        "/guides/cox-cartouche-ne-rentre-pas-piston-plateau/",
+        "/guides/pistolet-cartouche-pneumatique-colle-mastic/",
+        "/guides/uht-turbolap-vanne-debit-regulateur-pression/",
+        "/guides/groupe-frl-filtre-regulateur-lubrificateur/"
+      ],
+      "inlineSourceLinks": [
+        "https://cdn.coxdispensers.com/public/product_brochure/Pneumatic%20manual.pdf?new#page=8",
+        "https://cdn.coxdispensers.com/public/2026-04/189566_01---Combined-AF2-Single_quart---combi.pdf#page=8"
+      ],
+      "uniqueDecision": "Résolution d’une extrusion lente liée au froid ou à la buse et double limite AF2, distincte du seul budget ABAC.",
+      "limitations": "Température liée au matériau ; débit maximal publié non transformé en FAD ou consommation chargée.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLe cordon sort lentement et la gâchette reste longtemps appuyée. COX distingue trois causes possibles : pression insuffisante pour l’application, sortie de buse ou de mélangeur trop étroite, et matériau trop froid. Le fabricant renvoie à la fiche du matériau pour sa température d’application. [Manuel de sécurité pneumatique, page PDF 8](https://cdn.coxdispensers.com/public/product_brochure/Pneumatic%20manual.pdf?new#page=8)",
+          "sourceId": "cox-safety",
+          "locator": [
+            8
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "Le manuel AF2 de **mars 2026** sépare une pression de fonctionnement de **6,8 bar** et une pression maximale d’alimentation de **10 bar** sur les configurations présentées. [AF2, données techniques page 8](https://cdn.coxdispensers.com/public/2026-04/189566_01---Combined-AF2-Single_quart---combi.pdf#page=8) Le second nombre ne constitue pas un réglage d’extrusion autorisé à 10 bar.",
+          "sourceId": "cox-af2",
+          "locator": [
+            8,
+            13
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "pistolet-cartouche-pneumatique-colle-mastic",
+          "uht-turbolap-vanne-debit-regulateur-pression",
+          "groupe-frl-filtre-regulateur-lubrificateur"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "zimmer-gp200-ventilation-air-barrage-guide",
+            "jaccard": 0.011215
+          },
+          {
+            "slug": "enerpac-pa133-pompe-desamorcee-air-hydraulique",
+            "jaccard": 0.011163
+          },
+          {
+            "slug": "norgren-l17-faible-debit-lubrification-demarrage",
+            "jaccard": 0.01061
+          },
+          {
+            "slug": "far-kj60-course-courte-circuit-hydraulique",
+            "jaccard": 0.010459
+          },
+          {
+            "slug": "ako-vanne-pincement-pression-differentielle",
+            "jaccard": 0.010261
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Résolution d’une extrusion lente liée au froid ou à la buse et double limite AF2, distincte du seul budget ABAC."
+      }
+    },
+    {
+      "slug": "cox-cartouche-ne-rentre-pas-piston-plateau",
+      "title": "Pistolet COX : une cartouche qui ne rentre pas révèle parfois le mauvais montage",
+      "sha256": "914dd091049690138b68bf35ec3d36099cfac0d14506341b7e34dcddd4b99864",
+      "svgSha256": [
+        "761245433876ea1fefd37ac9fc0c5fc5133d7676feb7c9f0dcbe5cadffecab99"
+      ],
+      "wordCount": 518,
+      "sourceIds": [
+        "cox-safety"
+      ],
+      "sourceLocators": {
+        "cox-safety": [
+          6,
+          8
+        ]
+      },
+      "internalLinks": [
+        "/guides/cox-pistolet-mastic-extrusion-lente-froid-buse/",
+        "/guides/pistolet-cartouche-pneumatique-colle-mastic/",
+        "/guides/cuve-peinture-sous-pression-air-produit-agitation/",
+        "/guides/maintenance-preventive-reseau-air-comprime/"
+      ],
+      "inlineSourceLinks": [
+        "https://cdn.coxdispensers.com/public/product_brochure/Pneumatic%20manual.pdf?new#page=8",
+        "https://cdn.coxdispensers.com/public/product_brochure/Pneumatic%20manual.pdf?new#page=6"
+      ],
+      "uniqueDecision": "Résout l’interface cartouche/disque/plateau, différente du débit de produit ou du budget d’air.",
+      "limitations": "Aucune capacité en mL donnée comme garantie dimensionnelle ; pas de forçage ni modification.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLe contenant porte la bonne capacité, mais il ne peut être installé dans le pistolet. Le manuel COX distingue ce problème d’un disque de piston qui ne peut entrer dans une cartouche déjà en place. Les vérifications ne commencent donc pas par la pression d’air. [Tableau de dépannage, page PDF 8](https://cdn.coxdispensers.com/public/product_brochure/Pneumatic%20manual.pdf?new#page=8)",
+          "sourceId": "cox-safety",
+          "locator": [
+            6,
+            8
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "COX demande de couper l’air et de déconnecter le flexible pour ajouter ou retirer une cartouche et pour nettoyer. [Précautions page PDF 6](https://cdn.coxdispensers.com/public/product_brochure/Pneumatic%20manual.pdf?new#page=6) Gardez l’outil déconnecté pendant l’insertion et retirez tout effort de forçage.",
+          "sourceId": "cox-safety",
+          "locator": [
+            6,
+            8
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "pistolet-cartouche-pneumatique-colle-mastic",
+          "cuve-peinture-sous-pression-air-produit-agitation",
+          "maintenance-preventive-reseau-air-comprime"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "lechler-buse-pneumatique-melange-viscosite",
+            "jaccard": 0.013035
+          },
+          {
+            "slug": "graco-pro-xp-fuite-fluide-sous-capot",
+            "jaccard": 0.012658
+          },
+          {
+            "slug": "ako-vanne-pincement-vide-manchette-ouverte",
+            "jaccard": 0.00995
+          },
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.009054
+          },
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.008955
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Résout l’interface cartouche/disque/plateau, différente du débit de produit ou du budget d’air."
+      }
+    },
+    {
+      "slug": "nordson-performus-vide-goutte-retour-produit",
+      "title": "Nordson Performus X : arrêter la goutte sans aspirer le produit vers l’appareil",
+      "sha256": "f24a77374252de2a8287e72f7e68488d6ec5d60bd4db1ffc3d0921027c1460a0",
+      "svgSha256": [
+        "a9d90ef6b19662f2eab494d5bba97d4079d4dea91821cb5ab8782a0599f964ee"
+      ],
+      "wordCount": 537,
+      "sourceIds": [
+        "nordson-performus"
+      ],
+      "sourceLocators": {
+        "nordson-performus": [
+          20,
+          21,
+          24
+        ]
+      },
+      "internalLinks": [
+        "/guides/nordson-performus-cycle-interrompu-second-trigger/",
+        "/guides/nordson-performus-validation-pression-temps-dose/",
+        "/guides/pistolet-cartouche-pneumatique-colle-mastic/",
+        "/guides/cuve-peinture-sous-pression-air-produit-agitation/",
+        "/guides/maintenance-preventive-reseau-air-comprime/"
+      ],
+      "inlineSourceLinks": [
+        "https://nc-p-001.sitecorecontenthub.cloud/api/public/content/aa66fd045fb040fb9039102bb48e61ae?v=28c1e155#page=20"
+      ],
+      "uniqueDecision": "Résout le réglage du vide anti-goutte en microdosage et le retour de produit, absents du corpus.",
+      "limitations": "Valeur de 0,1 bar : point de procédure ; aucune dose certifiée ou volume déduit du temps.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLe liquide ne goutte plus entre deux dépôts, mais la dose devient irrégulière. Sur le Performus X, **trop de vide peut réaspirer le dépôt dans l’embout ou faire apparaître des bulles**. Nordson associe cet excès à un dosage irrégulier. [Notice Performus X, page 20](https://nc-p-001.sitecorecontenthub.cloud/api/public/content/aa66fd045fb040fb9039102bb48e61ae?v=28c1e155#page=20)",
+          "sourceId": "nordson-performus",
+          "locator": [
+            20,
+            21,
+            24
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "La procédure pour un fluide peu visqueux utilise une seringue EFD, un embout approprié et un premier réglage d’air de **0,1 bar**, donné en parallèle comme 2 psi dans la notice. Le fabricant fait former la goutte, relâcher la commande et augmenter progressivement le vide jusqu’à stabilisation.",
+          "sourceId": "nordson-performus",
+          "locator": [
+            20,
+            21,
+            24
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "pistolet-cartouche-pneumatique-colle-mastic",
+          "cuve-peinture-sous-pression-air-produit-agitation",
+          "maintenance-preventive-reseau-air-comprime"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "lechler-buse-pneumatique-melange-viscosite",
+            "jaccard": 0.010959
+          },
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.008885
+          },
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.008789
+          },
+          {
+            "slug": "ako-vanne-pincement-vide-manchette-ouverte",
+            "jaccard": 0.00878
+          },
+          {
+            "slug": "airpol-menergy-ultra-speed-consigne-debit",
+            "jaccard": 0.008704
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Résout le réglage du vide anti-goutte en microdosage et le retour de produit, absents du corpus."
+      }
+    },
+    {
+      "slug": "nordson-performus-cycle-interrompu-second-trigger",
+      "title": "Nordson Performus X : pourquoi une seconde commande interrompt le dosage",
+      "sha256": "560cd9bbfdbe0f6fe99b1e360d844ba984c85e8c0cf2104399eb12d9c08b3a96",
+      "svgSha256": [
+        "e70ee79e55efd8326f733f46bfb7f6f7d85b3145c7d3c6dfd659cbd17d41ca9c"
+      ],
+      "wordCount": 561,
+      "sourceIds": [
+        "nordson-performus"
+      ],
+      "sourceLocators": {
+        "nordson-performus": [
+          9,
+          19
+        ]
+      },
+      "internalLinks": [
+        "/guides/nordson-performus-vide-goutte-retour-produit/",
+        "/guides/nordson-performus-validation-pression-temps-dose/",
+        "/guides/atlas-lms08-hr10-air-temps-serrage/",
+        "/guides/audit-reseau-air-comprime-protocole-mesures/",
+        "/guides/maintenance-preventive-reseau-air-comprime/"
+      ],
+      "inlineSourceLinks": [
+        "https://nc-p-001.sitecorecontenthub.cloud/api/public/content/aa66fd045fb040fb9039102bb48e61ae?v=28c1e155#page=19"
+      ],
+      "uniqueDecision": "Mécanisme d’interruption par une seconde commande, propre au mode et aux signaux décrits, sans panne de réseau supposée.",
+      "limitations": "Aucun filtrage, broche ou contournement inventé ; chronologie SVG explicitement qualitative.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLa durée est programmée, pourtant certains dépôts s’arrêtent trop tôt. Sur Performus X, une nouvelle activation de la pédale, du contact manuel ou de la commande par contact pendant le cycle **interrompt immédiatement le dosage**. Nordson décrit ce comportement comme une fonction prévue du dispositif. [Mode temporisé, page 19](https://nc-p-001.sitecorecontenthub.cloud/api/public/content/aa66fd045fb040fb9039102bb48e61ae?v=28c1e155#page=19)",
+          "sourceId": "nordson-performus",
+          "locator": [
+            9,
+            19
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "atlas-lms08-hr10-air-temps-serrage",
+          "audit-reseau-air-comprime-protocole-mesures",
+          "maintenance-preventive-reseau-air-comprime"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "ross-dm2-c-reset-200ms-alimentation",
+            "jaccard": 0.014953
+          },
+          {
+            "slug": "airpol-menergy-ultra-speed-consigne-debit",
+            "jaccard": 0.013308
+          },
+          {
+            "slug": "fluke-ii900-leakq-distance-obstacles",
+            "jaccard": 0.012999
+          },
+          {
+            "slug": "cs-va500-analogique-auto-scaling-automate",
+            "jaccard": 0.012903
+          },
+          {
+            "slug": "cs-va520-impulsions-50hz-compteur-debit",
+            "jaccard": 0.012762
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Mécanisme d’interruption par une seconde commande, propre au mode et aux signaux décrits, sans panne de réseau supposée."
+      }
+    },
+    {
+      "slug": "nordson-performus-validation-pression-temps-dose",
+      "title": "Nordson Performus X : valider pression et temporisation sans certifier la dose",
+      "sha256": "0673e1b4829dc99ea390576318a0103ee95ff58f8527145871710df8e156d771",
+      "svgSha256": [
+        "32ba9ae33ee7ea9bf91b57882c10a3a531ae12860e82ca12d194b9ea10d5c8b1"
+      ],
+      "wordCount": 548,
+      "sourceIds": [
+        "nordson-validation"
+      ],
+      "sourceLocators": {
+        "nordson-validation": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "internalLinks": [
+        "/guides/nordson-performus-cycle-interrompu-second-trigger/",
+        "/guides/nordson-performus-vide-goutte-retour-produit/",
+        "/guides/audit-reseau-air-comprime-protocole-mesures/",
+        "/guides/mesurer-pression-dynamique-pistolet-peinture/",
+        "/guides/indicateurs-maintenance-air-comprime/"
+      ],
+      "inlineSourceLinks": [
+        "https://nc-p-001.sitecorecontenthub.cloud/api/public/content/60f492a504774d7fa5ed6a3719e54ffa?v=2a4c4ac7#page=1"
+      ],
+      "uniqueDecision": "Protocole de métrologie primaire de 2025 et tolérances propres aux modèles, sans assimiler temporisation et volume ; problème inédit.",
+      "limitations": "Aucun calibrage sur le terrain, aucun résultat de test ou dose prétendus.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nUne pression et une durée conformes ne suffisent pas à certifier la quantité de colle déposée. Le protocole Nordson de validation Performus X porte sur **deux sorties du doseur : pression et temporisation**. Pour le temps, il mesure la largeur du signal End-of-Cycle Feedback. [Instructions de validation, page 1](https://nc-p-001.sitecorecontenthub.cloud/api/public/content/60f492a504774d7fa5ed6a3719e54ffa?v=2a4c4ac7#page=1)",
+          "sourceId": "nordson-validation",
+          "locator": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "Nordson spécifie **±0,00005 seconde pour un réglage de 10 secondes**. La grandeur testée est le signal de retour défini dans le protocole, pas le délai jusqu’à la dernière goutte observée. Le branchement d’essai et l’oscilloscope relèvent d’une personne qualifiée suivant les instructions complètes ; ce guide ne fournit pas de câblage alternatif.",
+          "sourceId": "nordson-validation",
+          "locator": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "audit-reseau-air-comprime-protocole-mesures",
+          "mesurer-pression-dynamique-pistolet-peinture",
+          "indicateurs-maintenance-air-comprime"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.015564
+          },
+          {
+            "slug": "ross-dm2-c-reset-200ms-alimentation",
+            "jaccard": 0.015123
+          },
+          {
+            "slug": "airpol-menergy-ultra-speed-consigne-debit",
+            "jaccard": 0.013462
+          },
+          {
+            "slug": "fluke-ii900-leakq-distance-obstacles",
+            "jaccard": 0.013146
+          },
+          {
+            "slug": "cs-va500-analogique-auto-scaling-automate",
+            "jaccard": 0.013048
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Protocole de métrologie primaire de 2025 et tolérances propres aux modèles, sans assimiler temporisation et volume ; problème inédit."
+      }
+    },
+    {
+      "slug": "cs-ds500-mise-a-jour-sauvegarde-canaux",
+      "title": "CS DS500 : sauvegarder les voies avant de mettre à jour le logiciel",
+      "sha256": "779fd8fded3387c2c001dee9a2a8be0b153fc98a0f9f9f7dc1813eb45050e6f0",
+      "svgSha256": [
+        "161b2ca6f53dc2e9e596083bb112ddb79d898a7b93d555a36b2fcf0e42c9c3c0"
+      ],
+      "wordCount": 590,
+      "sourceIds": [
+        "cs-ds500"
+      ],
+      "sourceLocators": {
+        "cs-ds500": [
+          64,
+          65
+        ]
+      },
+      "internalLinks": [
+        "/guides/cs-ds500-compteur-impulsion-unite-total-initial/",
+        "/guides/cs-va500-analogique-auto-scaling-automate/",
+        "/guides/cs-va520-impulsions-50hz-compteur-debit/",
+        "/guides/maintenance-preventive-reseau-air-comprime/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_DS500_V2_EN.pdf#page=64"
+      ],
+      "uniqueDecision": "Sauvegarde étendue et composants principal/canaux ; remplace un brouillon analogique dupliquant le guide VA500.",
+      "limitations": "Aucune version proposée ni firmware installé ; édition mixte et matériel à confirmer.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nUne mise à jour du DS500 ne se résume pas au numéro de version visible à l’accueil. La [notice DS500, pages 64–65](https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_DS500_V2_EN.pdf#page=64) distingue le logiciel principal et les composants des canaux. Elle demande de sauvegarder les réglages système avant l’opération.",
+          "sourceId": "cs-ds500",
+          "locator": [
+            64,
+            65
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "cs-va500-analogique-auto-scaling-automate",
+          "cs-va520-impulsions-50hz-compteur-debit",
+          "maintenance-preventive-reseau-air-comprime"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "lechler-whisperblast-largeur-jet-sechage",
+            "jaccard": 0.009516
+          },
+          {
+            "slug": "sata-jetx-hvlp-420-430-445-debit",
+            "jaccard": 0.008787
+          },
+          {
+            "slug": "nordson-ultimus-v-optimeter-vidage-seringue",
+            "jaccard": 0.008525
+          },
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.008443
+          },
+          {
+            "slug": "lupamat-dhk22-debit-minimum-variateur",
+            "jaccard": 0.008368
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Sauvegarde étendue et composants principal/canaux ; remplace un brouillon analogique dupliquant le guide VA500."
+      }
+    },
+    {
+      "slug": "cs-ds500-compteur-impulsion-unite-total-initial",
+      "title": "CS DS500 : un total d’air erroné après changement de compteur",
+      "sha256": "e9369e92d88fa5355a7f19c0562ac6649971d8a06fd7e11d8d8e6e84a84b9dcf",
+      "svgSha256": [
+        "1b575d4bb9ce7d88d6b485deaf99e306089acbce69f8e695b966ac5e30b9bb7e"
+      ],
+      "wordCount": 517,
+      "sourceIds": [
+        "cs-ds500"
+      ],
+      "sourceLocators": {
+        "cs-ds500": [
+          46
+        ]
+      },
+      "internalLinks": [
+        "/guides/cs-ds500-mise-a-jour-sauvegarde-canaux/",
+        "/guides/cs-va520-impulsions-50hz-compteur-debit/",
+        "/guides/convertir-cfm-l-min-nl-min-air-comprime/",
+        "/guides/debitmetre-air-comprime-diametre-conditions-reference/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_DS500_V2_EN.pdf#page=46"
+      ],
+      "uniqueDecision": "Unité et origine du compteur DS500, distinctes du plafond de 50 Hz déjà traité.",
+      "limitations": "Scénario calculé, sans installation mesurée ; remise à zéro non recommandée sans conservation de l’historique.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLes impulsions arrivent, mais le total ne correspond pas au relevé attendu. Dans le menu Pulse Counter du DS500, **valeur d’une impulsion, unité et valeur du compteur** sont des informations distinctes. La [notice DS500, section 13.3.7.1, page 46](https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_DS500_V2_EN.pdf#page=46) précise que le compteur peut être réglé à une valeur choisie.",
+          "sourceId": "cs-ds500",
+          "locator": [
+            46
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "La notice renvoie à la valeur marquée sur le capteur pour le champ **1Pulse=** et distingue **Unit Pulse** de l’unité du compteur. Gardez une photographie du marquage et un export ou relevé des paramètres. Un nombre seul, sans unité, ne permet pas de vérifier l’association.",
+          "sourceId": "cs-ds500",
+          "locator": [
+            46
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "cs-va520-impulsions-50hz-compteur-debit",
+          "convertir-cfm-l-min-nl-min-air-comprime",
+          "debitmetre-air-comprime-diametre-conditions-reference"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "cs-va520-impulsions-50hz-compteur-debit",
+            "jaccard": 0.020076
+          },
+          {
+            "slug": "cs-va500-analogique-auto-scaling-automate",
+            "jaccard": 0.016378
+          },
+          {
+            "slug": "gema-ig02-faible-poudre-pompage-air-total",
+            "jaccard": 0.012545
+          },
+          {
+            "slug": "piab-pisave-esl-tubes-signal-retard-regulation",
+            "jaccard": 0.012456
+          },
+          {
+            "slug": "airpol-menergy-ultra-speed-consigne-debit",
+            "jaccard": 0.011881
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Unité et origine du compteur DS500, distinctes du plafond de 50 Hz déjà traité."
+      }
+    },
+    {
+      "slug": "cs-pc400-filtre-zero-retirer-mesure-particules",
+      "title": "CS PC400 : le filtre de zéro peut rendre une mesure de particules trompeuse",
+      "sha256": "a946217b99ba39b6ca0781704a09ce405d94805de311961247dd0d36d3ee8296",
+      "svgSha256": [
+        "40e287f9b06d8104895d49abf027073def3ca840663a5a331d191a3e536e072b"
+      ],
+      "wordCount": 529,
+      "sourceIds": [
+        "cs-pc400"
+      ],
+      "sourceLocators": {
+        "cs-pc400": [
+          8,
+          9,
+          10
+        ]
+      },
+      "internalLinks": [
+        "/guides/qualite-air-comprime-iso-8573-1/",
+        "/guides/audit-reseau-air-comprime-protocole-mesures/",
+        "/guides/point-rosee-ligne-prelevement-condensation-refroidissement/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_PC400_EN.pdf#page=8"
+      ],
+      "uniqueDecision": "Erreur opérationnelle d’un filtre de test de zéro resté connecté, originale ; distincte des classes ISO génériques.",
+      "limitations": "Ne classifie ni eau ni huile ; aucune mesure de réseau prétendue.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLe PC400 indique très peu de particules, alors que le prélèvement n’a pas été préparé comme d’habitude. Vérifiez si le **filtre de zéro** est encore installé. La [notice PC400V1.6, pages 8–9](https://www.cs-instruments.com/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_PC400_EN.pdf#page=8) le place après le régulateur pour le test de zéro, puis demande de le retirer avant la mesure.",
+          "sourceId": "cs-pc400",
+          "locator": [
+            8,
+            9,
+            10
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "La notice limite le PC400 à **1,6 bar de surpression**, obtenue avec le régulateur fourni. Cette valeur n’est ni une pression absolue ni la pression de fonctionnement souhaitée du réseau. Le régulateur doit rester dans le trajet prévu pendant la mesure.",
+          "sourceId": "cs-pc400",
+          "locator": [
+            8,
+            9,
+            10
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "qualite-air-comprime-iso-8573-1",
+          "audit-reseau-air-comprime-protocole-mesures",
+          "point-rosee-ligne-prelevement-condensation-refroidissement"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "ross-dm2-c-reset-200ms-alimentation",
+            "jaccard": 0.015414
+          },
+          {
+            "slug": "beko-dmc18-pf-hdp-dra-alarme-signification",
+            "jaccard": 0.014205
+          },
+          {
+            "slug": "heidenhain-da400-air-entree-humide-six-bar",
+            "jaccard": 0.013158
+          },
+          {
+            "slug": "gema-ig06-bn-filtre-clapet-nettoyage-solvant",
+            "jaccard": 0.011872
+          },
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.011858
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Erreur opérationnelle d’un filtre de test de zéro resté connecté, originale ; distincte des classes ISO génériques."
+      }
+    },
+    {
+      "slug": "beko-qwik-pure-fault9-air-auxiliaire-cartouches",
+      "title": "BEKO QWIK-PURE FAULT 9 : vérifier l’air auxiliaire avant les cartouches",
+      "sha256": "dd8a3a6c116f86b32807a3ad36acbfcca5c04219b9954981c9402855eecac14a",
+      "svgSha256": [
+        "1af3f6192742baff7594267eb0a8c5092a3d825f4b5a50396d0d0d320c91c8f6"
+      ],
+      "wordCount": 489,
+      "sourceIds": [
+        "beko-qwikpure"
+      ],
+      "sourceLocators": {
+        "beko-qwikpure": [
+          136,
+          137
+        ]
+      },
+      "internalLinks": [
+        "/guides/separateur-huile-eau-condensats-compresseur/",
+        "/guides/bekomat20-condensats-seulement-bouton-test/",
+        "/guides/entretien-compresseur-purge-condensats/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.beko-technologies.com/fileadmin/user_upload/qp15-90_ba_02-530_en_04_01.pdf#page=137"
+      ],
+      "uniqueDecision": "FAULT 9 : double observation et circuit auxiliaire, inédits par rapport aux séparateurs génériques et aux purgeurs.",
+      "limitations": "Aucun seuil de rejet ajouté ; aucun démontage pressurisé.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLe QWIK-PURE affiche **FAULT 9** et les cartouches semblent être la cause évidente. Pourtant, la [notice QWIK-PURE, page 137](https://www.beko-technologies.com/fileadmin/user_upload/qp15-90_ba_02-530_en_04_01.pdf#page=137) cite aussi l’absence d’air comprimé auxiliaire ou une pression trop basse. Remplacer les cartouches sans vérifier cette alimentation peut laisser le défaut entier.",
+          "sourceId": "beko-qwikpure",
+          "locator": [
+            136,
+            137
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "separateur-huile-eau-condensats-compresseur",
+          "bekomat20-condensats-seulement-bouton-test",
+          "entretien-compresseur-purge-condensats"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.009326
+          },
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.009221
+          },
+          {
+            "slug": "ako-vanne-pincement-vide-manchette-ouverte",
+            "jaccard": 0.009212
+          },
+          {
+            "slug": "airpol-menergy-ultra-speed-consigne-debit",
+            "jaccard": 0.009128
+          },
+          {
+            "slug": "zimmer-gp200-capteur-magnetique-inductif",
+            "jaccard": 0.009063
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "FAULT 9 : double observation et circuit auxiliaire, inédits par rapport aux séparateurs génériques et aux purgeurs."
+      }
+    },
+    {
+      "slug": "pneumatech-secheur-adsorption-silencieux-perte-purge",
+      "title": "Sécheur Pneumatech : un échappement moins bruyant peut rester trop restrictif",
+      "sha256": "73c1584307036dbd7f0caa91e55e668b1fd580e10676620832f0981c839897b4",
+      "svgSha256": [
+        "707682b530f49122b54915b710b5160412e23fd246b407b4cd460604d8183b95"
+      ],
+      "wordCount": 493,
+      "sourceIds": [
+        "pneumatech-adsorption"
+      ],
+      "sourceLocators": {
+        "pneumatech-adsorption": [
+          19
+        ]
+      },
+      "internalLinks": [
+        "/guides/secheur-adsorption-air-purge-debit-net/",
+        "/guides/silencieux-pneumatique-colmate-contre-pression/",
+        "/guides/indicateurs-maintenance-air-comprime/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.pneumatech.com/content/dam/brands/Pneumatech/Corporate/products/dryers/desiccant-dryers/2446_Pnematech%20Adsorption%20Dryers%20Catalouge_LR.pdf#page=19"
+      ],
+      "uniqueDecision": "Budget de purge/régénération et signal Purelogic propres aux sécheurs, au-delà du silencieux générique.",
+      "limitations": "Exemple de 8 % annoncé par le fabricant, sans valeur universelle ; aucun réglage déduit.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLe sécheur paraît plus silencieux après intervention sur l’échappement. Cela ne démontre pas que sa régénération fonctionne mieux. La [brochure Pneumatech, page 19](https://www.pneumatech.com/content/dam/brands/Pneumatech/Corporate/products/dryers/desiccant-dryers/2446_Pnematech%20Adsorption%20Dryers%20Catalouge_LR.pdf#page=19) relie la perte de charge du silencieux et de l’échappement au débit de purge et à l’efficacité énergétique des familles PH, PE et PB.",
+          "sourceId": "pneumatech-adsorption",
+          "locator": [
+            19
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "Pneumatech annonce, dans ce contexte, **8% d’augmentation de perte de purge pour 100 mbar supplémentaires** au silencieux. Ce chiffre est une affirmation de sa brochure, sans protocole détaillé permettant de l’appliquer à tous les sécheurs. Aucun gain financier ou volume d’air de votre installation n’en est déduit.",
+          "sourceId": "pneumatech-adsorption",
+          "locator": [
+            19
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "La même page indique un avertissement de service Purelogic lorsque la perte de charge de régénération dépasse **250 mbar**. Vérifiez la famille, le contrôleur et la documentation de votre machine avant d’utiliser ce repère.",
+          "sourceId": "pneumatech-adsorption",
+          "locator": [
+            19
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "silencieux-pneumatique-colmate-contre-pression",
+          "secheur-adsorption-air-purge-debit-net",
+          "indicateurs-maintenance-air-comprime"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.01332
+          },
+          {
+            "slug": "haas-trp-retour-lent-precharge-alarme-130-131",
+            "jaccard": 0.010979
+          },
+          {
+            "slug": "graco-husky1050-fluide-echappement-diaphragme",
+            "jaccard": 0.009355
+          },
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.009288
+          },
+          {
+            "slug": "ako-vanne-pincement-vide-manchette-ouverte",
+            "jaccard": 0.009174
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Budget de purge/régénération et signal Purelogic propres aux sécheurs, au-delà du silencieux générique."
+      }
+    },
+    {
+      "slug": "sullivan-d750-d900-alarme-separateur-differentiel",
+      "title": "Sullivan D750/D900 : lire l’alarme de séparateur avec ses deux pressions",
+      "sha256": "e427da9d29083d73066031ab3f4107fb5550e1f1852679a7b51d722a4a4452c5",
+      "svgSha256": [
+        "0326e177b04f038a9ad0c86b7bd644c9746cca8f37f0b0e4fe3aa9ef76cb2990"
+      ],
+      "wordCount": 477,
+      "sourceIds": [
+        "sullivan-service"
+      ],
+      "sourceLocators": {
+        "sullivan-service": [
+          1,
+          41,
+          50
+        ]
+      },
+      "internalLinks": [
+        "/guides/huile-sortie-compresseur-air-comprime-diagnostic/",
+        "/guides/audit-reseau-air-comprime-protocole-mesures/",
+        "/guides/maintenance-preventive-reseau-air-comprime/"
+      ],
+      "inlineSourceLinks": [
+        "https://www.sullivan-palatek.com/wp-content/uploads/2023/11/05018730-0282_R01.pdf#page=50",
+        "https://www.sullivan-palatek.com/wp-content/uploads/2023/11/05018730-0282_R01.pdf#page=41"
+      ],
+      "uniqueDecision": "Temporalité et transducteurs Sullivan exacts, différents du guide générique sur l’huile en sortie.",
+      "limitations": "Intitulé contradictoire D1600 des pièces de rechange exclu ; aucun démontage ou concentration d’huile déduits.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nUne alarme **Service Air/Oil Separator** ne désigne pas uniquement une pièce colmatée. La [notice Sullivan 05018730-0282R01, page PDF 50](https://www.sullivan-palatek.com/wp-content/uploads/2023/11/05018730-0282_R01.pdf#page=50) demande de vérifier les pressions des côtés humide et sec et cite aussi de faux avertissements dus aux transducteurs.",
+          "sourceId": "sullivan-service",
+          "locator": [
+            1,
+            41,
+            50
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "Le périmètre retenu est celui de la couverture : **D750PH5CU5(AF) et D900PH5CU5(AF)**, noticejuillet 2023. Un intitulé D1600 apparaît dans la liste de pièces, en contradiction avec cette couverture ; il n’est pas utilisé pour étendre les prescriptions à ce modèle.",
+          "sourceId": "sullivan-service",
+          "locator": [
+            1,
+            41,
+            50
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "Le tableau donne un déclenchement lorsque le différentiel humide/sec dépasse **10 psi pendant 600 secondes**, soit 10 minutes. Une pointe isolée ne constitue donc pas l’événement décrit. Gardez les deux lectures et leur chronologie, plutôt qu’une seule pression de refoulement.",
+          "sourceId": "sullivan-service",
+          "locator": [
+            1,
+            41,
+            50
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "La [section 5.11, page PDF 41](https://www.sullivan-palatek.com/wp-content/uploads/2023/11/05018730-0282_R01.pdf#page=41) indique séparément le remplacement selon heures, année ou différentiel. Ces critères d’entretien ne doivent pas être confondus avec la temporisation de l’alarme. L’absence d’avertissement ne supprime pas une échéance de maintenance applicable.",
+          "sourceId": "sullivan-service",
+          "locator": [
+            1,
+            41,
+            50
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "huile-sortie-compresseur-air-comprime-diagnostic",
+          "maintenance-preventive-reseau-air-comprime",
+          "audit-reseau-air-comprime-protocole-mesures"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "ross-dm2-c-reset-200ms-alimentation",
+            "jaccard": 0.016211
+          },
+          {
+            "slug": "cs-va500-analogique-auto-scaling-automate",
+            "jaccard": 0.014985
+          },
+          {
+            "slug": "airpol-menergy-ultra-speed-consigne-debit",
+            "jaccard": 0.014448
+          },
+          {
+            "slug": "fluke-ii900-leakq-distance-obstacles",
+            "jaccard": 0.014085
+          },
+          {
+            "slug": "cs-va520-impulsions-50hz-compteur-debit",
+            "jaccard": 0.013807
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Temporalité et transducteurs Sullivan exacts, différents du guide générique sur l’huile en sortie."
+      }
+    },
+    {
+      "slug": "powerex-scroll-air-chaud-recirculation-local",
+      "title": "Powerex scroll : un régime continu exige encore un trajet de refroidissement",
+      "sha256": "f3bc74290caa9fee63144a66d959cc42ca2c984662905b45e7e10132132c1f60",
+      "svgSha256": [
+        "1fc8ceb7a58187e4ef8b178ce6a342662e4ffee7f879210a7d19358c0886d0b8"
+      ],
+      "wordCount": 544,
+      "sourceIds": [
+        "powerex-scroll-manual"
+      ],
+      "sourceLocators": {
+        "powerex-scroll-manual": [
+          1,
+          3,
+          16
+        ]
+      },
+      "internalLinks": [
+        "/guides/powerex-scroll-tipseals-entretien-version-hp/",
+        "/guides/powerex-scroll-tourne-sans-pression-rotation/",
+        "/guides/ventilation-local-compresseur-surchauffe/",
+        "/guides/aftercooler-refroidisseur-secheur-air-comprime/",
+        "/guides/prise-air-compresseur-fumees-solvants-emplacement/"
+      ],
+      "inlineSourceLinks": [
+        "https://powerexinc.com/docs/manuals/258911_0916.pdf#page=3"
+      ],
+      "uniqueDecision": "Exigence de fonctionnement continu Powerex confrontée aux conditions documentées, plus précise que le guide générique du local.",
+      "limitations": "Pas de débit de ventilation dérivé du SCFM ; notice de 2016 actuellement servie, périmètre à confronter à la plaque.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLa famille scroll Powerex est annoncée pour un régime de travail continu dans sa notice. Cela ne signifie pas qu’elle peut fonctionner dans un local dont l’air chaud revient à l’admission. Le manuel impose un emplacement ventilé et exclut une ambiance supérieure à **104 °F, soit 40 °C**. [Notice IN258911AV 09/2016, pages 1 et 3](https://powerexinc.com/docs/manuals/258911_0916.pdf#page=3)",
+          "sourceId": "powerex-scroll-manual",
+          "locator": [
+            1,
+            3,
+            16
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "ventilation-local-compresseur-surchauffe",
+          "aftercooler-refroidisseur-secheur-air-comprime",
+          "prise-air-compresseur-fumees-solvants-emplacement"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "ako-vanne-pincement-pression-differentielle",
+            "jaccard": 0.009363
+          },
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.008824
+          },
+          {
+            "slug": "festool-lex3-1505-290-350-litres-minute",
+            "jaccard": 0.008741
+          },
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.008729
+          },
+          {
+            "slug": "ako-vanne-pincement-vide-manchette-ouverte",
+            "jaccard": 0.008721
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Exigence de fonctionnement continu Powerex confrontée aux conditions documentées, plus précise que le guide générique du local."
+      }
+    },
+    {
+      "slug": "powerex-scroll-tourne-sans-pression-rotation",
+      "title": "Powerex scroll tourne sans monter en pression : vérifier la rotation après câblage",
+      "sha256": "7e912801cf8f30ee22cf1fb0fd97820b420c3ef734fc11b1f7a9f7aa4d41361d",
+      "svgSha256": [
+        "8904331e0ca38188a6bdd0d1562f1a2b12c8735734217142b0a4bcb4cc606954"
+      ],
+      "wordCount": 531,
+      "sourceIds": [
+        "powerex-scroll-manual"
+      ],
+      "sourceLocators": {
+        "powerex-scroll-manual": [
+          4,
+          16
+        ]
+      },
+      "internalLinks": [
+        "/guides/powerex-scroll-tipseals-entretien-version-hp/",
+        "/guides/powerex-scroll-air-chaud-recirculation-local/",
+        "/guides/compresseur-ne-demarre-plus-froid-rallonge/",
+        "/guides/compresseur-perd-pression-arret-fuite-refroidissement/",
+        "/guides/maintenance-preventive-reseau-air-comprime/"
+      ],
+      "inlineSourceLinks": [
+        "https://powerexinc.com/docs/manuals/258911_0916.pdf#page=4"
+      ],
+      "uniqueDecision": "Rotation après câblage propre au scroll triphasé, distincte du non-démarrage et de la perte de pression.",
+      "limitations": "Aucune intervention électrique par l’utilisateur ni FAD mesuré.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLe moteur tourne après une intervention électrique, mais la cuve ne monte pas en pression. La [notice Powerex scroll, démarrage page 4](https://powerexinc.com/docs/manuals/258911_0916.pdf#page=4) prévoit une vérification particulière sur un groupe triphasé : si la pression ne monte pas, arrêter et faire corriger le raccordement par un électricien qualifié selon la procédure constructeur.",
+          "sourceId": "powerex-scroll-manual",
+          "locator": [
+            4,
+            16
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "compresseur-ne-demarre-plus-froid-rallonge",
+          "compresseur-perd-pression-arret-fuite-refroidissement",
+          "maintenance-preventive-reseau-air-comprime"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "bambi-bb24-50-pourcent-debit-continu",
+            "jaccard": 0.012821
+          },
+          {
+            "slug": "temps-remplissage-cuve-compresseur-debit",
+            "jaccard": 0.009031
+          },
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.008937
+          },
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.008841
+          },
+          {
+            "slug": "ako-vanne-pincement-vide-manchette-ouverte",
+            "jaccard": 0.008832
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Rotation après câblage propre au scroll triphasé, distincte du non-démarrage et de la perte de pression."
+      }
+    },
+    {
+      "slug": "powerex-scroll-tipseals-entretien-version-hp",
+      "title": "Powerex scroll sans huile : distinguer les intervalles des versions haute pression",
+      "sha256": "4f43cb7528095f7d51e96250c658857e510baee184a78f9383d077a2da223a29",
+      "svgSha256": [
+        "efe6dd020e6983173101849d7f832fda2edafac04be4a8bafe32eb1e64bbae8a"
+      ],
+      "wordCount": 532,
+      "sourceIds": [
+        "powerex-scroll-manual"
+      ],
+      "sourceLocators": {
+        "powerex-scroll-manual": [
+          1,
+          3,
+          6
+        ]
+      },
+      "internalLinks": [
+        "/guides/powerex-scroll-air-chaud-recirculation-local/",
+        "/guides/powerex-scroll-tourne-sans-pression-rotation/",
+        "/guides/compresseur-sans-huile-ou-lubrifie/",
+        "/guides/huile-compresseur-viscosite-reference-constructeur/",
+        "/guides/indicateurs-maintenance-air-comprime/"
+      ],
+      "inlineSourceLinks": [
+        "https://powerexinc.com/docs/manuals/258911_0916.pdf#page=6"
+      ],
+      "uniqueDecision": "Intervalles standard/HP et distinction entre air sans huile et graissage, documentés ; calendrier d’entretien original.",
+      "limitations": "Périmètre exact de la notice de 2016 ; intervalles non transposés aux autres marques ; aucune maintenance démontrée.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nUn scroll sans huile n’est pas un compresseur sans consommables. La [notice Powerex, tableau d’entretien page 6](https://powerexinc.com/docs/manuals/258911_0916.pdf#page=6) prévoit le remplacement des **tip seals** et distingue les intervalles des unités normales et haute pression.",
+          "sourceId": "powerex-scroll-manual",
+          "locator": [
+            1,
+            3,
+            6
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "Pour la famille de cette notice, le tableau donne **10 000 heures** pour les joints des unités normales et **5 000 heures** pour les unités haute pression, repérées par l’astérisque. Identifier la version précède donc le calendrier : recopier l’intervalle le plus long d’une machine voisine peut doubler l’échéance retenue.",
+          "sourceId": "powerex-scroll-manual",
+          "locator": [
+            1,
+            3,
+            6
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "compresseur-sans-huile-ou-lubrifie",
+          "huile-compresseur-viscosite-reference-constructeur",
+          "indicateurs-maintenance-air-comprime"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "airpol-opti-navi-supervision-locale-compresseur",
+            "jaccard": 0.012821
+          },
+          {
+            "slug": "air-comprime-contact-alimentaire-exigences",
+            "jaccard": 0.010062
+          },
+          {
+            "slug": "sames-xcite-buse-microfiltre-joint",
+            "jaccard": 0.009606
+          },
+          {
+            "slug": "sames-xcite-400-filtre-200-bar-accessoire",
+            "jaccard": 0.008937
+          },
+          {
+            "slug": "ako-vanne-pincement-vide-manchette-ouverte",
+            "jaccard": 0.008832
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Intervalles standard/HP et distinction entre air sans huile et graissage, documentés ; calendrier d’entretien original."
+      }
+    },
+    {
+      "slug": "bimba-ultran-gold-silver-decouplage-magnetique",
+      "title": "Bimba Ultran : la pression admissible ne garantit pas le couplage magnétique",
+      "sha256": "a2bcdc78f6d49242a767e637da0008762bd0867a88716ee2212945dddc72aed6",
+      "svgSha256": [
+        "c98c8f7ce93077ade9224241c284adf8c187fc62de6dc70fc98f7100886a7937"
+      ],
+      "wordCount": 528,
+      "sourceIds": [
+        "bimba-current",
+        "bimba-ultran"
+      ],
+      "sourceLocators": {
+        "bimba-current": [
+          3,
+          19
+        ],
+        "bimba-ultran": "UG/US productdetail"
+      },
+      "internalLinks": [
+        "/guides/regler-vitesse-verin-pneumatique-echappement/",
+        "/guides/pince-pneumatique-force-doigt-longueur-prehension/",
+        "/guides/distributeur-5-3-centre-ferme-verin-derive/"
+      ],
+      "inlineSourceLinks": [
+        "https://djqq0xq3q4j4b.cloudfront.net/pdf/Ultran%20IMI%202025%20Ultran%20Slide%20Cylinders%20IMI%202025.pdf#page=3",
+        "https://www.bimba.com/en/detail/ug_us",
+        "https://djqq0xq3q4j4b.cloudfront.net/pdf/Ultran%20IMI%202025%20Ultran%20Slide%20Cylinders%20IMI%202025.pdf#page=19"
+      ],
+      "uniqueDecision": "Couplage magnétique Gold/Silver et découplage avant la pression nominale, inédits face aux vérins génériques.",
+      "limitations": "Dates internes de 2020/2021 préservées ; force distincte d’une masse ; aucun recouplage sous charge prescrit.",
+      "claims": [
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLe piston se déplace, mais le chariot Ultran se désolidarise. Ce vérin sans tige transmet le mouvement par un **couplage magnétique**. Le catalogue Bimba distingue les forces Gold et Silver ; sa pression admissible ne constitue pas une garantie que le couplage restera engagé sous toute charge. [Catalogue actuellement lié par Bimba, page 3](https://djqq0xq3q4j4b.cloudfront.net/pdf/Ultran%20IMI%202025%20Ultran%20Slide%20Cylinders%20IMI%202025.pdf#page=3)",
+          "sourceId": "bimba-current",
+          "locator": [
+            3,
+            19
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "La décision de choix doit donc traiter le couplage, la charge et le guidage, au-delà de la seule pression du réseau. La [page Bimba UG/US](https://www.bimba.com/en/detail/ug_us) identifie cette famille. Ce guide concerne Ultran UG/US et les variantes de la table, pas tous les vérins sans tige.",
+          "sourceId": "bimba-ultran",
+          "locator": "UG/US productdetail",
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "Pour l’alésage **5/16 pouce, code 007**, le tableau publie **13 lbs** de force de couplage Gold et **8 lbs** pour Silver. Ces valeurs restent dans l’unité du catalogue et ne sont pas présentées comme des masses soulevables. Le tableau donne d’autres valeurs pour les autres alésages.",
+          "sourceId": "bimba-current",
+          "locator": [
+            3,
+            19
+          ],
+          "verbatimQuote": false
+        },
+        {
+          "kind": "manufacturer_fact_or_documented_limit",
+          "statement": "\nLa [rubrique de commande, page 19](https://djqq0xq3q4j4b.cloudfront.net/pdf/Ultran%20IMI%202025%20Ultran%20Slide%20Cylinders%20IMI%202025.pdf#page=19) recommande Silver lorsque l’application exige un effort de départ plus faible et avertit d’un découplage possible à des pressions inférieures à 100 PSI. Choisir Silver uniquement parce que le diamètre est identique laisse de côté cette différence fonctionnelle.",
+          "sourceId": "bimba-current",
+          "locator": [
+            3,
+            19
+          ],
+          "verbatimQuote": false
+        }
+      ],
+      "review": {
+        "editorialReview": "internal_documentary",
+        "physicalTestsPerformed": false,
+        "externalProfessionalValidation": false,
+        "nearestExisting": [
+          "regler-vitesse-verin-pneumatique-echappement",
+          "pince-pneumatique-force-doigt-longueur-prehension",
+          "distributeur-5-3-centre-ferme-verin-derive"
+        ],
+        "nearestByFiveWordShingles": [
+          {
+            "slug": "festo-dhps-no-nc-ressort-force-disponible",
+            "jaccard": 0.013649
+          },
+          {
+            "slug": "zimmer-gp200-capteur-magnetique-inductif",
+            "jaccard": 0.011685
+          },
+          {
+            "slug": "fipa-gr04-aiguilles-course-epaisseur-matiere",
+            "jaccard": 0.011407
+          },
+          {
+            "slug": "smc-itv-coupure-air-alimentation-electrique",
+            "jaccard": 0.010889
+          },
+          {
+            "slug": "smc-asr-asq-retour-pression-effort-verin",
+            "jaccard": 0.01087
+          }
+        ],
+        "comparisonScope": "Inventory and headings of all 686 baseline guides, full-body five-word overlap check, targeted reading of existing mechanisms and direct source comparison. Shingle score is an aid, not proof of editorial originality.",
+        "difference": "Couplage magnétique Gold/Silver et découplage avant la pression nominale, inédits face aux vérins génériques."
+      }
+    }
+  ],
+  "validation": {
+    "observedAt": "2026-10-08T19:02:00.546239+00:00",
+    "frontmatterActualRepositorySchema": "pass",
+    "localInternalLinkTargets": "pass",
+    "sourceOriginalHashAndBytes": "pass",
+    "controlledSvgXmlAndAccessibility": "pass",
+    "svgVisualDesktopAndMobile": "pass",
+    "generatedHtml": "not_run_by_agent",
+    "mainValidation": "not_run_by_agent",
+    "productionBuildRun": false,
+    "productionChecksRun": false,
+    "scriptPathsPrivate": [
+      "check-drafts.mjs",
+      "visual-qa.mjs",
+      "finalize.py"
+    ],
+    "validationScope": "Source-only checks under Node 24.19.0, actual current schema extracted without modifications. No Astro build/cache, Git, CI, SSH or production mutations by this agent.",
+    "svgVisualWidths": [
+      360,
+      1280
+    ],
+    "svgFont": "Manrope Variable actual bundled font",
+    "svgTextOverflows": 0,
+    "typographyFinalPass": "Spaces restored in prose, units and dossier descriptions; SVG, codes, URLs and literal manufacturer quotes preserved.",
+    "readerFinalPass": "Editorial meta-phrases replaced with practical instructions; one SMC SVG spelling correction. Numbers, URLs, literal quotes and transparency footer unchanged."
+  }
+}

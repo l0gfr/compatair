@@ -19,7 +19,7 @@ describe('October 5 original compressor documents', () => {
   const followingBatch = JSON.parse(readFileSync(new URL('../../src/data/imports/documented-compressors-2026-10-07.json', import.meta.url)));
   const followingIds = new Set(followingBatch.compressors.map(p => p.id));
   const old = rawCompressors.filter(p => !ids.has(p.id) && !followingIds.has(p.id));
-  expect(old).toHaveLength(4459);
+  expect(old).toHaveLength(4659);
   const priorIdentities = new Set(old.map(semanticIdentity));
   expect(new Set(snapshot.compressors.map(p => p.normalizedIdentity)).size).toBe(300);
   for (const row of snapshot.compressors) expect(priorIdentities.has(row.normalizedIdentity), row.id).toBe(false);

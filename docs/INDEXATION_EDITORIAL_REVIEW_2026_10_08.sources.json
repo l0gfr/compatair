@@ -1,0 +1,359 @@
+{
+  "reviewedAt": "2026-10-08T18:26:57.100Z",
+  "baselineGitSha": "cf46ffaac88d9a4c05c4cda47573175bfbe7cdf3",
+  "scope": "Revue documentaire interne du lot mécanique quotidien, séparée de la publication du nouveau catalogue.",
+  "tools": {
+    "date": "2026-10-08",
+    "baselineGitSha": "cf46ffaac88d9a4c05c4cda47573175bfbe7cdf3",
+    "scope": "Six candidats historiques proposés par le plan ; aucun remplacement, aucune modification produit et aucune admission appliquée.",
+    "decision": "refuse-all-six-as-currently-written",
+    "sources": [
+      {
+        "id": "editorial-1",
+        "url": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU",
+        "observedAt": "2026-10-08T17:53:25.881141+00:00",
+        "httpStatus": 200,
+        "contentType": "application/pdf",
+        "bytes": 73317529,
+        "sha256": "971e9f3f662af10d3c638d5e9c29c8847ee04672c40e29957ad4ca4eb13d61c1",
+        "documentFormat": "pdf"
+      },
+      {
+        "id": "editorial-2",
+        "url": "https://www.drapertools.com/product/28366/hvlp-air-paint-spray-gun-100ml/",
+        "observedAt": "2026-10-08T17:53:13.467481+00:00",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "bytes": 356342,
+        "sha256": "cc49dbac371efa554d72d840369a910324e5e6d0e81f53fd1397334b0cc9084d",
+        "documentFormat": "html"
+      },
+      {
+        "id": "editorial-3",
+        "url": "https://walmec.com/it/cataloghi/catalogo-asturomec/AD_13_24_IT.pdf",
+        "observedAt": "2026-10-08T17:53:13.908311+00:00",
+        "httpStatus": 200,
+        "contentType": "application/pdf",
+        "bytes": 19637325,
+        "sha256": "28bc606b4d5bdb9fb84c9288e42573241454b8347b9623c38854744b09fab5e3",
+        "documentFormat": "pdf"
+      },
+      {
+        "id": "editorial-4",
+        "url": "https://www.astrotools.com/product/hvlp-gravity-feed-spray-gun-1-3mm-nozzle-with-aluminum-cup/",
+        "observedAt": "2026-10-08T17:53:14.794802+00:00",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "bytes": 307987,
+        "sha256": "03d238b614b6d4bbed8210f190743866e0e269e807e827dc1e01334a970bab1f",
+        "documentFormat": "html"
+      },
+      {
+        "id": "editorial-5",
+        "url": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806",
+        "observedAt": "2026-10-08T17:53:15.441495+00:00",
+        "httpStatus": 200,
+        "contentType": "application/pdf",
+        "bytes": 13298603,
+        "sha256": "36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3",
+        "documentFormat": "pdf"
+      },
+      {
+        "id": "editorial-6",
+        "url": "https://www.sata.com/media/d2/3c/04/1790259009/MULTILINGUAL-SATA-OPERATING-MANUAL-JET-X-3266-240619-2.PDF.PDF?ts=1790259009",
+        "observedAt": "2026-10-08T17:53:21.399480+00:00",
+        "httpStatus": 200,
+        "contentType": "application/pdf",
+        "bytes": 43507933,
+        "sha256": "8b7cd0371d23eaae39f0098290ae5941ed87764dc320ec71180c99f860efcb0e",
+        "documentFormat": "pdf"
+      },
+      {
+        "id": "editorial-7",
+        "url": "https://www.sata.com/en/premium-spray-gun-for-automotive-refinish-jet-x-hvlp-1.3-i-control-nozzle-basic-suitable-for-water-and-solvent-based-basecoats-as-well-as-1k-2k-topcoat-systems/1200170",
+        "observedAt": "2026-10-08T17:53:17.278175+00:00",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "bytes": 1225805,
+        "sha256": "25ef56962a502ffbc35f5d8bb2f257a3d7d82fbed2d160358d737feee40f85d6",
+        "documentFormat": "html"
+      }
+    ],
+    "reviews": [
+      {
+        "path": "/outils-pneumatiques/pistolet-peinture-hvlp-hymair-ash-01/",
+        "approved": false,
+        "identityVerified": true,
+        "primarySourceCurrentlyAccessible": true,
+        "sources": [
+          "editorial-1"
+        ],
+        "sourcePages": {
+          "editorial-1": [
+            2
+          ]
+        },
+        "qualifiedDemand": false,
+        "currentDemandModel": "variable-volume",
+        "sourceQualification": "ASH-01 confirmé : gravité, buse 1,4 mm, godet 600 ml, jet 170–230 mm, plage de fonctionnement 2–3 bar. Le chiffre 6,5 cfm est explicitement une moyenne ; aucune pression de mesure et aucune consommation gâchette ouverte qualifiée.",
+        "nearestRelatedPaths": [
+          "/outils-pneumatiques/pistolet-peinture-hvlp-hymair-ash-02/",
+          "/outils-pneumatiques/pistolet-peinture-hvlp-hymair-ash-03/"
+        ],
+        "editorialComparison": "ASH-02 conserve buse/jet avec alimentation par aspiration et godet 1000 ml ; ASH-03 vise les retouches, buse 0,8 mm et godet 100 ml. Ces différences sont réelles, mais la page ASH-01 actuelle les transforme seulement en inventaire documentaire sans décision originale ni dimensionnement vérifiable.",
+        "reason": "La page actuelle ne démontre pas une valeur décisionnelle autonome suffisante pour une admission éditoriale. Les limites sont explicites et doivent rester hors calcul ; elles ne remplacent pas le contenu manquant.",
+        "neededBeforeApproval": "Ajouter une décision ou procédure propre à ce modèle, étayée par une source primaire et réellement distincte des voisins ; qualifier le débit si le dimensionnement est la question principale."
+      },
+      {
+        "path": "/outils-pneumatiques/pistolet-peinture-hvlp-draper-28366/",
+        "approved": false,
+        "identityVerified": true,
+        "primarySourceCurrentlyAccessible": true,
+        "sources": [
+          "editorial-2"
+        ],
+        "sourcePages": {},
+        "qualifiedDemand": false,
+        "currentDemandModel": "variable-volume",
+        "sourceQualification": "28366 confirmé : godet 100 ml, buses 0,8 et 1 mm, pression de fonctionnement 50 psi, raccord 1/4 BSP, masse 0,33 kg. Aucun débit publié dans les caractéristiques actuelles.",
+        "nearestRelatedPaths": [
+          "/outils-pneumatiques/pistolet-peinture-hvlp-draper-28367/"
+        ],
+        "editorialComparison": "Le voisin 28367 est le modèle 600 ml avec buses 1,3/1,4/2 mm et pression 43 psi. La différence retouche/grande capacité est documentaire ; la page 28366 reste une recopie de cellules suivie d’un état inconnu et ne résout pas le choix du compresseur.",
+        "reason": "La page actuelle ne démontre pas une valeur décisionnelle autonome suffisante pour une admission éditoriale. Les limites sont explicites et doivent rester hors calcul ; elles ne remplacent pas le contenu manquant.",
+        "neededBeforeApproval": "Ajouter une décision ou procédure propre à ce modèle, étayée par une source primaire et réellement distincte des voisins ; qualifier le débit si le dimensionnement est la question principale."
+      },
+      {
+        "path": "/outils-pneumatiques/pistolet-nettoyage-asturomec-n4-50173/",
+        "approved": false,
+        "identityVerified": true,
+        "primarySourceCurrentlyAccessible": true,
+        "sources": [
+          "editorial-3"
+        ],
+        "sourcePages": {
+          "editorial-3": [
+            54
+          ]
+        },
+        "qualifiedDemand": false,
+        "currentDemandModel": "variable-volume",
+        "sourceQualification": "N4 réf.50173 confirmé : réservoir 1000 cc avec fermeture à vis et baïonnette, canon 200 mm, nébuliseur réglable, ouverture 8,5 cm et plage 2–8 bar. Aucun débit d’air ou volume par action.",
+        "nearestRelatedPaths": [
+          "/outils-pneumatiques/pistolet-nettoyage-asturomec-n4-s-50172/",
+          "/outils-pneumatiques/pistolet-nettoyage-asturomec-n4-s-super-50171/"
+        ],
+        "editorialComparison": "N4/S réf.50172 partage canon 200 mm et ouverture ; N4/S SUPER réf.50171 possède canon 300 mm et maintien du flux réglé. Les différences d’accès et de commande existent, mais la page N4 ne développe pas une procédure ou comparaison autonome qui résoudrait un besoin réel.",
+        "reason": "La page actuelle ne démontre pas une valeur décisionnelle autonome suffisante pour une admission éditoriale. Les limites sont explicites et doivent rester hors calcul ; elles ne remplacent pas le contenu manquant.",
+        "neededBeforeApproval": "Ajouter une décision ou procédure propre à ce modèle, étayée par une source primaire et réellement distincte des voisins ; qualifier le débit si le dimensionnement est la question principale."
+      },
+      {
+        "path": "/outils-pneumatiques/pistolet-peinture-hvlp-astro-pneumatic-hvlp503/",
+        "approved": false,
+        "identityVerified": true,
+        "primarySourceCurrentlyAccessible": true,
+        "sources": [
+          "editorial-4"
+        ],
+        "sourcePages": {},
+        "qualifiedDemand": false,
+        "currentDemandModel": "variable-volume",
+        "sourceQualification": "HVLP503 confirmé : buse 1,3 mm, pression de fonctionnement 41–44 psi, consommation moyenne 10 cfm et recommandation 3 hp. La page primaire indique NO LONGER AVAILABLE. Ni la moyenne ni la puissance recommandée ne sont un besoin FAD en pulvérisation.",
+        "nearestRelatedPaths": [
+          "/outils-pneumatiques/pistolet-peinture-hvlp-astro-pneumatic-hvlp505/",
+          "/outils-pneumatiques/pistolet-peinture-hvlp-astro-pneumatic-hvlp507/"
+        ],
+        "editorialComparison": "HVLP505 change la buse à 1,5 mm, en conservant les données moyennes et plage ; HVLP507 est un autre diamètre. La fiche actuelle n’explique ni la disponibilité obsolète ni un arbitrage documenté entre usages. Le texte est surtout l’inventaire technique du même ensemble.",
+        "reason": "La page actuelle ne démontre pas une valeur décisionnelle autonome suffisante pour une admission éditoriale. Les limites sont explicites et doivent rester hors calcul ; elles ne remplacent pas le contenu manquant.",
+        "neededBeforeApproval": "Ajouter une décision ou procédure propre à ce modèle, étayée par une source primaire et réellement distincte des voisins ; qualifier le débit si le dimensionnement est la question principale."
+      },
+      {
+        "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sata-jet-x-hvlp-1-2-i-basic-1200097/",
+        "approved": false,
+        "identityVerified": true,
+        "primarySourceCurrentlyAccessible": true,
+        "sources": [
+          "editorial-5",
+          "editorial-6",
+          "editorial-7"
+        ],
+        "sourcePages": {
+          "editorial-5": [
+            14
+          ],
+          "editorial-6": [
+            102
+          ]
+        },
+        "qualifiedDemand": false,
+        "currentDemandModel": "variable-volume",
+        "sourceQualification": "Référence 1200097 confirmée dans la matrice : jet X HVLP 1,2 I BASIC. Catalogue 445 Nl/min ; notice 430 Nl/min à 2 bar ; fiche voisine 1200170 affiche 420 l/min avec avertissement que les données concernent toute la gamme. Les conditions de référence normalisées et l’arbitrage de ces valeurs restent absents.",
+        "nearestRelatedPaths": [
+          "/outils-pneumatiques/pistolet-peinture-hvlp-sata-jet-x-hvlp-1-2-o-basic-1200138/",
+          "/outils-pneumatiques/pistolet-peinture-hvlp-sata-jet-x-1200170/"
+        ],
+        "editorialComparison": "1200138 correspond au même diamètre 1,2 en jet O ; 1200170 est le diamètre 1,3 en jet I. Les fiches voisines relaient la même contradiction de famille. La page 1200097 expose l’incohérence, mais ne fournit pas encore une résolution ou décision distincte propre au profil I 1,2 ; aucune mesure voisine transférée.",
+        "reason": "La page actuelle ne démontre pas une valeur décisionnelle autonome suffisante pour une admission éditoriale. Les limites sont explicites et doivent rester hors calcul ; elles ne remplacent pas le contenu manquant.",
+        "neededBeforeApproval": "Ajouter une décision ou procédure propre à ce modèle, étayée par une source primaire et réellement distincte des voisins ; qualifier le débit si le dimensionnement est la question principale."
+      },
+      {
+        "path": "/outils-pneumatiques/sableuse-asturomec-ps-50210/",
+        "approved": false,
+        "identityVerified": true,
+        "primarySourceCurrentlyAccessible": true,
+        "sources": [
+          "editorial-3"
+        ],
+        "sourcePages": {
+          "editorial-3": [
+            56
+          ]
+        },
+        "qualifiedDemand": false,
+        "currentDemandModel": "variable-volume",
+        "sourceQualification": "PS réf.50210 confirmé : buse acier cémenté trempé Ø6 mm, tuyau aspirant 2 m Ø16×22 mm, corps laiton et plage 5–8 bar. Aucun débit d’air publié. Le diamètre de buse ne permet pas d’inventer un besoin L/min.",
+        "nearestRelatedPaths": [
+          "/outils-pneumatiques/sableuse-asturomec-ps-s-50212/",
+          "/outils-pneumatiques/sableuse-asturomec-ps-i-50314/"
+        ],
+        "editorialComparison": "PS/S réf.50212 conserve la buse Ø6 mm avec godet 1000 cc ; PS/I réf.50314 ajoute réglage de sable et tuyau 3 m Ø8×13 mm. La page PS actuelle n’explique pas ces compromis de travail et ne dimensionne pas l’air. Un nouvel URL indexable ne résoudrait pas le besoin de sablage continu.",
+        "reason": "La page actuelle ne démontre pas une valeur décisionnelle autonome suffisante pour une admission éditoriale. Les limites sont explicites et doivent rester hors calcul ; elles ne remplacent pas le contenu manquant.",
+        "neededBeforeApproval": "Ajouter une décision ou procédure propre à ce modèle, étayée par une source primaire et réellement distincte des voisins ; qualifier le débit si le dimensionnement est la question principale."
+      }
+    ]
+  },
+  "compressors": {
+    "observedAt": "2026-10-08T17:53:27.331286+00:00",
+    "baselineSha": "cf46ffaac88d9a4c05c4cda47573175bfbe7cdf3",
+    "scope": "Deux anciens candidats, audit éditorial séparé du nouveau lot",
+    "decisions": [
+      {
+        "id": "abac-formula-e-11-10-400-50",
+        "decision": "refuse-admission",
+        "source": {
+          "id": "admission-abac",
+          "url": "https://shop.abacaircompressors.com/en-FR/products/4152025384/formula-55-8-40050-ce",
+          "resolvedUrl": "https://shop.abacaircompressors.com/en-FR/products/4152025384/formula-55-8-40050-ce",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 6870907,
+          "sha256": "ba6b888feb0d56b80f87d84368aac6d9365567f545b6138f40913825cb7d393c",
+          "observedAt": "2026-10-08T17:52:06.888103+00:00",
+          "captureMethod": "original-response"
+        },
+        "facts": [
+          "La référence 4152025398 est présente dans le JSON applicatif public capturé et décodé sans exécution.",
+          "400 V, 50 Hz, 3 phases, 10 bar maximum explicite, cuve 0 L, configuration Full Feature et puissance 11.2 kW existent encore.",
+          "Le JSON exact 4152025398 ne publie plus de capacité/FAD, contrairement à la page principale 4152025384.",
+          "Masse actuelle 250 kg contre 296 kg dans le profil : divergence non arbitrée.",
+          "Nom français FORMULA E 15 10 et anglais FORMULA E 11 10 400/50 CE : désignation divergente."
+        ],
+        "limitations": [
+          "Le FAD de 1510 L/min à 10 bar du profil historique ne peut pas être revalidé à partir de cette capture actuelle.",
+          "Les voisins 8 et 13 bar ont le même équipement Full Feature et cuve absente ; la différence principale reste un point de pression/débit.",
+          "La déclaration de cycle continu est de gamme, pas une nouvelle preuve propre au modèle."
+        ]
+      },
+      {
+        "id": "fiac-ax-153bd-8-400-50-ce",
+        "decision": "refuse-admission",
+        "source": {
+          "id": "admission-fiac",
+          "url": "https://shop.fiac.it/en-IT/products/4152026075/ax-153bd-8-40050-ce",
+          "resolvedUrl": "https://shop.fiac.it/en-IT/products/4152026075/ax-153bd-8-40050-ce",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 583478,
+          "sha256": "2e84751406bf1cec26b239f0953355d32eeb39f1453660ffdc478f038d57fc08",
+          "observedAt": "2026-10-08T17:52:05.102913+00:00",
+          "captureMethod": "original-response"
+        },
+        "facts": [
+          "FAD capacity (l/min) 1075 ; Max Working Pressure (bar) 8 ; Vessel size (lt) 0 ; Base Mounted ; Motor (kw) 11.2.",
+          "La pression est nommée maximum constructeur, indépendante du point FAD.",
+          "L’écart avec la version DRY 8 bar (1675 L/min dans la base historique) n’a aucune explication primaire actuelle."
+        ],
+        "limitations": [
+          "La page propre présente les mêmes paragraphes de gamme que les proches variantes.",
+          "Le taux de marche demeure inconnu.",
+          "Pas d’apport éditorial autonome supplémentaire par rapport aux variantes 10/13 bar et DRY ; aucune admission recommandée sans enquête technique supplémentaire."
+        ]
+      }
+    ],
+    "sourcesDuty": {
+      "id": "admission-abac-duty",
+      "url": "https://www.abacaircompressors.com/en-international/products/screw-compressors",
+      "resolvedUrl": "https://www.abacaircompressors.com/en-international/products/screw-compressors",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 132132,
+      "sha256": "3434be7b3593ebf77575a31b1e3d5b587c7cd370a061bfd91817cba069265fa6",
+      "observedAt": "2026-10-08T17:52:03.939932+00:00",
+      "captureMethod": "original-response"
+    }
+  },
+  "guides": [
+    {
+      "id": "beko-bypass",
+      "url": "https://www.beko-technologies.us/en-us/products/compressed-air-dryers/energy-saving-refrigerant-dryers/",
+      "retrievedAt": "2026-10-08T17:53:17.833966+00:00",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://www.beko-technologies.us/en-us/products/compressed-air-dryers/energy-saving-refrigerant-dryers/",
+      "bytes": 301058,
+      "sha256": "88f27baea3e31d24f3b07dc36ab1dca69ae41cdfa5de7fe23a8a030283c23b85",
+      "originalCaptured": true
+    },
+    {
+      "id": "beko-raiii",
+      "url": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/dp-ra-20-960-r513a_iii_ba_05-317_en_00_00.pdf",
+      "retrievedAt": "2026-10-08T17:53:17.953129+00:00",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/dp-ra-20-960-r513a_iii_ba_05-317_en_00_00.pdf",
+      "bytes": 5666529,
+      "sha256": "046389bf2151c0ddace12f4f7c1473a860a7adf1f5220b6f535a2d2c5678c6f0",
+      "originalCaptured": true
+    },
+    {
+      "id": "doe-end-use",
+      "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air10.pdf",
+      "retrievedAt": "2026-10-08T17:53:18.428467+00:00",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air10.pdf",
+      "bytes": 252155,
+      "sha256": "11d565d0f94073b32a6e8c7c0ae4d6474124275d1973e274670b482306d463cb",
+      "originalCaptured": true
+    },
+    {
+      "id": "festo-vtug",
+      "url": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2019/EN/VTUG-G_EN.PDF",
+      "retrievedAt": "2026-10-08T17:53:18.658530+00:00",
+      "status": 200,
+      "contentType": "application/pdf",
+      "finalUrl": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2019/EN/VTUG-G_EN.PDF",
+      "bytes": 7211744,
+      "sha256": "dfa766d31dcee82df0f4045cb12d659420d4520591b578a5b91140fb13363665",
+      "originalCaptured": true
+    },
+    {
+      "id": "festo-he",
+      "url": "https://www.festo.com/media/catalog/236149_documentation.pdf",
+      "retrievedAt": "2026-10-08T17:53:18.376076+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "originalCaptured": false,
+      "status": 403,
+      "primaryReader": {
+        "url": "https://www.festo.com/media/catalog/236149_documentation.pdf",
+        "directHttpStatus": 403,
+        "originalCaptured": false,
+        "evidenceKind": "primary_web_reader_scoped_text",
+        "observedAt": "2026-10-08T17:55:20.335851+00:00",
+        "receivedTextSha256": "25243ac92e78e3d4d43b168458c4bcd87909f4b51d3fda64c1f674d395be73e8",
+        "pdfPages": 9,
+        "locator": "PDF page4"
+      }
+    }
+  ]
+}

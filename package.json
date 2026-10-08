@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "node scripts/prepare-indexation.mjs && astro build && node scripts/build-catalog-database.mjs",
-    "check": "astro check",
+    "check": "node --max-old-space-size=6144 node_modules/astro/bin/astro.mjs check",
     "test": "vitest run --maxWorkers=2",
     "test:watch": "vitest",
     "contracts:check": "node --test contracts/mcp/tests/verify-contracts.mjs contracts/ucp/tests/verify-contracts.mjs",

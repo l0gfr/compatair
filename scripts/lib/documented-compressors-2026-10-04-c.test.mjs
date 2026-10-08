@@ -17,7 +17,7 @@ describe('documented compressor lot C, original manufacturer data', () => {
   const october7Batch = JSON.parse(readFileSync(new URL('../../src/data/imports/documented-compressors-2026-10-07.json', import.meta.url)));
   const followingIds = new Set([...followingBatch.compressors, ...october7Batch.compressors].map(p => p.id));
   const old = rawCompressors.filter(p => !newIds.has(p.id) && !followingIds.has(p.id));
-  expect(old).toHaveLength(4039);
+  expect(old).toHaveLength(4239);
   const identities = new Set(old.map(p => identity(`${p.brand} ${p.model}`)));
   expect(new Set(snapshot.compressors.map(p => p.normalizedIdentity)).size).toBe(420);
   for (const row of snapshot.compressors) expect(identities.has(row.normalizedIdentity), row.id).toBe(false);

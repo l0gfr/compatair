@@ -17,7 +17,7 @@ describe('October 7 original compressor documents', () => {
   expect(Object.fromEntries(Object.entries(Object.groupBy(batch, p => p.brand)).map(([k, v]) => [k, v.length]))).toEqual({ 'FS-Curtis': 87, Comprag: 61, Rotair: 24, SWAN: 28 });
   const ids = new Set(batch.map(p => p.id));
   const old = rawCompressors.filter(p => !ids.has(p.id));
-  expect(old).toHaveLength(4759);
+  expect(old).toHaveLength(4959);
   const priorIdentities = new Set(old.map(semanticIdentity));
   expect(new Set(snapshot.compressors.map(p => p.normalizedIdentity)).size).toBe(200);
   const priorCodes = new Set(old.filter(p => p.mpn).map(p => `${identity(p.brand)}:${identity(p.mpn)}`));
