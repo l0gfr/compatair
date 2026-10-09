@@ -132,7 +132,7 @@ export function createSitemapLastmodResolver({ root = process.cwd(), gitDate } =
 			sources.add(`src/pages/guides/${professional ? 'professionnels/' : personal ? 'particuliers/' : ''}page/[page].astro`);
 			sources.add('src/components/DirectoryPagination.astro');
 			sources.add('src/domain/pagination.ts');
-			sources.add('src/components/HubSignalVisual.astro');
+			if (professional || personal) sources.add('src/components/HubSignalVisual.astro');
 			sources.add('src/components/GuideDirectory.astro');
 			sources.add('src/components/DirectoryBrowser.astro');
 			for (const source of guideContentSources) sources.add(source);
@@ -141,7 +141,7 @@ export function createSitemapLastmodResolver({ root = process.cwd(), gitDate } =
 			sources.add('src/components/GuideSeriesCallout.astro');
 			for (const source of guideContentSources) sources.add(source);
 		}
-		if (['/glossaire/', '/recherche/'].includes(pathname)) sources.add('src/components/HubSignalVisual.astro');
+		if (pathname === '/recherche/') sources.add('src/components/HubSignalVisual.astro');
 
 		let match = pathname.match(/^\/guides\/([^/]+)\/$/);
 		if (match && !['metiers', 'particuliers', 'professionnels'].includes(match[1])) {

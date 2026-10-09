@@ -156,7 +156,7 @@ const commercialOffers = activeOffers
 
 	<template data-demand-template>
 		<div class="demand-row demand-card">
-		<div class="field demand-tool autocomplete-field"><label data-label="outil">Rechercher l’outil par marque, modèle, MPN, EAN/GTIN ou SKU</label><input data-tool-search type="search" list="calculator-tools" autocomplete="off" placeholder="Ex. Einhell TC-PW 340…" /><input data-tool type="hidden" /></div>
+		<div class="field demand-tool autocomplete-field"><label data-label="outil">Outil ou référence fabricant</label><input data-tool-search type="search" list="calculator-tools" autocomplete="off" placeholder="Ex. Einhell TC-PW 340…" /><input data-tool type="hidden" /></div>
 		<div class="field"><label data-label="nombre">Nombre</label><input data-quantity type="number" min="1" max="20" value="1" /></div>
 		<button type="button" class="remove-demand" data-remove-tool aria-label="Supprimer cet outil">×</button>
 		<div class="demand-parameters" data-demand-parameters>
@@ -477,7 +477,7 @@ const commercialOffers = activeOffers
 		row.querySelector<HTMLElement>('[data-inflation-fields]')!.hidden = !inflation;
 		const note = row.querySelector<HTMLElement>('[data-demand-note]')!;
 		note.textContent = !demandModel
-			? 'Commencez à saisir puis choisissez une référence exacte dans les suggestions.'
+			? 'Sélectionnez une référence exacte.'
 			: ['average', 'unqualified', 'free-speed'].includes(selected.dataset.airflowBasis ?? '')
 			? 'Régime incomplet : demandez le débit en charge et ses conditions de mesure au fabricant. Le dimensionnement reste indéterminé.'
 			: demandModel === 'fixed-flow'
@@ -968,6 +968,8 @@ const commercialOffers = activeOffers
 	const requestedTool = scenarioPreset?.toolId ?? initialParameters.get('outil') ?? undefined;
 	const requestedCompressor = initialParameters.get('compresseur') ?? undefined;
 	async function initializeCalculator() {
+		const hasImmediateEmptyDemand = !requestedTool && !sharedConfiguration;
+		if (hasImmediateEmptyDemand) addDemand();
 		if (!requestedTool && !requestedCompressor && !sharedConfiguration && form && 'IntersectionObserver' in window) {
 			await new Promise<void>((resolve) => {
 				const ready = () => { observer.disconnect(); form.removeEventListener('focusin', ready); form.removeEventListener('pointerdown', ready); resolve(); };
@@ -988,7 +990,7 @@ const commercialOffers = activeOffers
 				return;
 			}
 		}
-		addDemand(initialTool, 1, scenarioPreset ? {
+		if (!hasImmediateEmptyDemand) addDemand(initialTool, 1, scenarioPreset ? {
 			dutyFactor: scenarioPreset.dutyFactor,
 			actionsPerMinute: scenarioPreset.actionsPerMinute,
 			volumeLiters: scenarioPreset.inflation?.volumeLiters,

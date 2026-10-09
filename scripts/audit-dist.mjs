@@ -462,7 +462,7 @@ else {
 			if (!isDeepStrictEqual(actualDemand, expectedDemand)) throw new Error(`besoin altéré pour ${tool.id}`);
 		}
 	} catch (error) { errors.push(`calculateur: catalogue compact incohérent (${error.message})`); }
-	for (const marker of ['data-counterfactual', 'data-counterfactual-result', 'data-counterfactual-boundary', 'data-decision-answer-first', 'data-scenario-context', 'data-scenario-result-links', 'data-contextual-compare', 'data-result-mode="essential"', 'name="buyerProfile"', 'name="powerSupply"', 'name="mobilityFilter"', 'name="maximumBudget"', 'Une référence brute est acceptée', 'Trois solutions adaptées à votre contexte', 'Comparer ces trois compresseurs pour ce besoin', 'Préparer mon installation', 'manomètre et un essai avec l’outil en charge', 'name="measuredPressureDrop"', 'name="measuredLeak"', 'name="supplyPressure"']) {
+	for (const marker of ['data-primary-surface="calculator"', 'data-counterfactual', 'data-counterfactual-result', 'data-counterfactual-boundary', 'data-decision-answer-first', 'data-scenario-context', 'data-scenario-result-links', 'data-contextual-compare', 'data-result-mode="essential"', 'name="buyerProfile"', 'name="powerSupply"', 'name="mobilityFilter"', 'name="maximumBudget"', 'Une référence brute est acceptée', 'Trois solutions adaptées à votre contexte', 'Comparer ces trois compresseurs pour ce besoin', 'Préparer mon installation', 'manomètre et un essai avec l’outil en charge', 'name="measuredPressureDrop"', 'name="measuredLeak"', 'name="supplyPressure"']) {
 		if (!calculatorHtml.includes(marker)) errors.push(`recommandation contrefactuelle: marqueur absent ${marker}`);
 	}
 }
@@ -687,12 +687,12 @@ for (const [path, marker] of editorialHubs) {
 }
 
 const discoveryHubs = new Map([
-	['/guides/index.html', ['data-discovery-hub="guides"', 'data-hub-signal="guides"', 'data-guide-directory', 'data-directory-pagination']],
+	['/guides/index.html', ['data-discovery-hub="guides"', 'data-guide-shortcuts', 'data-guide-directory', 'data-directory-pagination']],
 	['/guides/particuliers/index.html', ['data-hub-signal="guides"', 'data-guide-directory', 'data-directory-pagination']],
 	['/guides/professionnels/index.html', ['data-hub-signal="guides"', 'data-guide-directory', 'data-directory-pagination']],
 	['/comparatifs/index.html', ['data-discovery-hub="comparatifs"', 'comparison-summary']],
-	['/marques/index.html', ['data-discovery-hub="marques"', 'class="directory-pagination"']],
-	['/glossaire/index.html', ['data-discovery-hub="glossaire"', 'data-glossary-hub', 'data-glossary-search']],
+	['/marques/index.html', ['data-discovery-hub="marques"', 'data-primary-surface="brands"', 'class="directory-pagination"']],
+	['/glossaire/index.html', ['data-discovery-hub="glossaire"', 'data-primary-surface="glossary"', 'data-glossary-hub', 'data-glossary-search']],
 	['/recherche/index.html', ['data-discovery-hub="recherche"', 'data-search-hub', 'data-search-more']],
 ]);
 for (const [path, markers] of discoveryHubs) {

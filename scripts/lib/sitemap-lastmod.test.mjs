@@ -84,13 +84,23 @@ describe('sitemap lastmod', () => {
 	it('relie les hubs de guides à leur navigation et au corpus éditorial', () => {
 		const resolver = createSitemapLastmodResolver({ gitDate: (files) => {
 			expect(files).toContain('src/pages/guides/index.astro');
-			expect(files).toContain('src/components/HubSignalVisual.astro');
+			expect(files).toContain('src/components/GuideLibraryPage.astro');
+			expect(files).not.toContain('src/components/HubSignalVisual.astro');
 			expect(files).toContain('src/components/GuideDirectory.astro');
 			expect(files).toContain('src/components/DirectoryBrowser.astro');
 			expect(files.some((file) => file.startsWith('src/content/guides/'))).toBe(true);
 			return '2026-07-19T17:00:00+00:00';
 		} });
 		expect(resolver('https://compatair.fr/guides/')).toBe('2026-07-19T17:00:00+00:00');
+	});
+
+	it('date le glossaire sans l’ancien visuel de signal', () => {
+		const resolver = createSitemapLastmodResolver({ gitDate: (files) => {
+			expect(files).toContain('src/pages/glossaire.astro');
+			expect(files).not.toContain('src/components/HubSignalVisual.astro');
+			return '2026-10-09T10:30:00+00:00';
+		} });
+		expect(resolver('https://compatair.fr/glossaire/')).toBe('2026-10-09T10:30:00+00:00');
 	});
 
 	it.each([

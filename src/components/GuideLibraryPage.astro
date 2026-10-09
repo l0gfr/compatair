@@ -7,7 +7,6 @@ const { page = 1 } = Astro.props;
 import BaseLayout from '../layouts/BaseLayout.astro';
 import GuideDirectory from './GuideDirectory.astro';
 import GuideSeriesCallout from './GuideSeriesCallout.astro';
-import HubSignalVisual from './HubSignalVisual.astro';
 import MetierIcon from './MetierIcon.astro';
 import UiIcon from './UiIcon.astro';
 import { guideAudienceIds, guideAudiences, guideMetierIds, guideMetiers } from '../domain/editorial-taxonomy';
@@ -38,7 +37,28 @@ const guideListJsonLd = {
 
 <BaseLayout imagePath="/social/guides.png" title={page === 1 ? "Guides compresseur et outils pneumatiques | CompatAir" : `Guides compresseur et outils : page ${page} | CompatAir`} description={`Choisissez et utilisez un compresseur avec des guides sourcés sur le débit FAD, la cuve, le flexible, le bruit et les besoins des outils pneumatiques.${page > 1 ? ` Page ${page} sur ${pagination.totalPages}.` : ''}`} breadcrumbs={[{ name: 'Guides', path: '/guides/' }]}>
 	<script is:inline type="application/ld+json" set:html={serializeJsonLd(guideListJsonLd)} />
-	<section class="page-hero compact hub-hero" data-discovery-hub="guides"><div class="container hub-hero-grid"><div><p class="eyebrow">Conseils pour choisir et utiliser</p><h1>Comprendre avant d’acheter{page > 1 ? ` : page ${page}` : ''}</h1><p class="lead">Des guides sourcés pour choisir un compresseur, alimenter vos outils et repérer les chiffres commerciaux qui ne répondent pas à votre besoin.</p><div class="actions"><a class="button primary" href={page === 1 ? "#parcours" : "#bibliotheque"}>{page === 1 ? "Choisir mon point de départ" : "Parcourir cette page"}</a><a class="button" href="/guides/professionnels/">Parcours professionnels</a><a class="button subtle" href="#bibliotheque">Parcourir les {guides.length} guides</a></div></div><HubSignalVisual mode="guides" count={guides.length} title="guides canoniques" secondary={`${guideMetierIds.length} parcours métiers`} /></div></section>
+	<section class="guide-shortcuts-section" data-discovery-hub="guides">
+		<div class="container">
+			<h1 class="sr-only">Guides compresseur et outils pneumatiques{page > 1 ? ` : page ${page}` : ''}</h1>
+			<nav class="guide-shortcuts" aria-label="Accès aux guides" data-guide-shortcuts>
+				<a class="guide-shortcut is-start" href={page === 1 ? "#parcours" : "/guides/#parcours"}>
+					<span class="guide-shortcut-index" aria-hidden="true">01</span>
+					<strong>Choisir mon point de départ</strong>
+					<UiIcon name="arrow" size={28} />
+				</a>
+				<a class="guide-shortcut is-professional" href="/guides/professionnels/">
+					<span class="guide-shortcut-index" aria-hidden="true">02</span>
+					<strong>Parcours professionnels</strong>
+					<UiIcon name="arrow" size={28} />
+				</a>
+				<a class="guide-shortcut is-library" href="#bibliotheque">
+					<span class="guide-shortcut-index" aria-hidden="true">03</span>
+					<strong>Parcourir les {guides.length} guides</strong>
+					<UiIcon name="arrow" size={28} />
+				</a>
+			</nav>
+		</div>
+	</section>
 	{page === 1 && <>
 	<section class="section hub-intent-section" id="parcours"><div class="container"><div class="section-head split-head"><div><p class="eyebrow">Une question, une porte d’entrée</p><h2>Commencer par la décision à prendre</h2></div><p>Chaque parcours rejoint ensuite les mêmes fiches, sources et calculs. Le point de départ change, pas les exigences de preuve.</p></div><div class="hub-intent-grid">{decisionPaths.map((path, index) => <a href={path.href}><span class="hub-intent-index">0{index + 1}</span><UiIcon name={path.icon} size={28} /><p>{path.eyebrow}</p><h3>{path.title}</h3><small>{path.detail}</small><strong>{path.action} →</strong></a>)}</div></div></section>
 	<section class="section editorial-gateway">
