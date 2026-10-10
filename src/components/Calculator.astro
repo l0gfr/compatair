@@ -312,6 +312,8 @@ const commercialOffers = activeOffers
 		for (const option of [...(list?.options ?? [])]) if (list!.options.length > 70 && !selected.has(option.dataset.id ?? '') && option.dataset.id !== 'custom') option.remove();
 	}
 	async function loadToolOptions() {
+		// Empty forms need the runtime only when a calculation or share is requested.
+		if (!requestedTool && !requestedCompressor && !sharedConfiguration) return;
 		await loadCalculatorRuntime();
 		const shared = sharedConfiguration ? decodePassportConfiguration(sharedConfiguration) : undefined;
 		if (sharedConfiguration && !shared) throw new Error('Le lien de configuration est invalide.');

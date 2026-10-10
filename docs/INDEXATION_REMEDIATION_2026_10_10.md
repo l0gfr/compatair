@@ -32,3 +32,9 @@ Le contrôle ajoute un mode de diagnostic limité à une URL exacte de l’inven
 Le [catalogue ALMiG](https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf) a été téléchargé le 10 octobre en HTTPS avec réponse 200 : 4 383 400 octets, SHA-256 `f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e`, identiques à la capture du 30 septembre. Le rétablissement est enregistré avec son incident historique. Toute nouvelle erreur ou tout changement d’URL continue de lever une anomalie ; aucune nouvelle 404 ne réutilise l’acquittement de l’ancien incident.
 
 Les rapports locaux et tests constituent une validation des modifications ; l’activation doit être prouvée séparément par le workflow et le SHA public. Aucun résultat d’indexation effective dans Google n’est revendiqué.
+
+## Contrôle de performance local
+
+Le premier passage de `validate:main` a réussi les 1 896 tests, le build de 49 043 pages, les validations de snapshots, l’audit HTML et le contrôle du ZIP source. Lighthouse a ensuite bloqué le push : le calculateur affichait une médiane LCP de 2 569,69 ms pour une limite de 2 500 ms. Son HTML était identique octet pour octet à la production précédente, dont le contrôle GitHub mesurait 2 412,092 ms.
+
+Le formulaire vide évite désormais de charger le moteur avant un calcul ou un partage. Les liens préremplis conservent leur chargement immédiat et leurs validations de version et de catalogue. Le seuil Lighthouse reste inchangé ; la nouvelle révision doit repasser le contrôle complet avant publication.
