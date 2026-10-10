@@ -16,12 +16,12 @@ relatedGuides:
   - "distributeur-5-3-centre-ferme-verin-derive"
 sources:
   - "https://djqq0xq3q4j4b.cloudfront.net/pdf/Ultran%20IMI%202025%20Ultran%20Slide%20Cylinders%20IMI%202025.pdf"
-  - "https://www.bimba.com/en/detail/ug_us"
+updatedDate: "2026-10-10"
 ---
 
-Le piston se déplace, mais le chariot Ultran se désolidarise. Ce vérin sans tige transmet le mouvement par un **couplage magnétique**. Le catalogue Bimba distingue les forces Gold et Silver ; sa pression admissible ne constitue pas une garantie que le couplage restera engagé sous toute charge. [Catalogue actuellement lié par Bimba, page 3](https://djqq0xq3q4j4b.cloudfront.net/pdf/Ultran%20IMI%202025%20Ultran%20Slide%20Cylinders%20IMI%202025.pdf#page=3)
+Le piston se déplace, mais le chariot Ultran se désolidarise. Ce vérin sans tige transmet le mouvement par un **couplage magnétique**. Le catalogue Bimba distingue les forces Gold et Silver ; sa pression admissible ne constitue pas une garantie que le couplage restera engagé sous toute charge. [Catalogue Bimba, page 3](https://djqq0xq3q4j4b.cloudfront.net/pdf/Ultran%20IMI%202025%20Ultran%20Slide%20Cylinders%20IMI%202025.pdf#page=3)
 
-La décision de choix doit donc traiter le couplage, la charge et le guidage, au-delà de la seule pression du réseau. La [page Bimba UG/US](https://www.bimba.com/en/detail/ug_us) identifie cette famille. Ce guide concerne Ultran UG/US et les variantes de la table, pas tous les vérins sans tige.
+La décision de choix doit donc traiter le couplage, la charge et le guidage, au-delà de la seule pression du réseau. Le [catalogue Bimba, rubrique Ultran](https://djqq0xq3q4j4b.cloudfront.net/pdf/Ultran%20IMI%202025%20Ultran%20Slide%20Cylinders%20IMI%202025.pdf#page=3) distingue les codes UG/UGS et US/USS. Ce guide concerne ces variantes et la table publiée, pas tous les vérins sans tige.
 
 ## Comparer deux versions du même alésage
 
@@ -57,3 +57,5 @@ Le [réglage de vitesse du vérin](/guides/regler-vitesse-verin-pneumatique-echa
 ## Sources et méthode
 
 Sources fabricant consultées le **8 octobre 2026**. Rédaction assistée par IA, revue documentaire interne, sans essai physique ni validation professionnelle externe. Les démarches de diagnostic proposées par CompatAir sont séparées des caractéristiques et instructions citées.
+
+Le catalogue a été revérifié le **10 octobre 2026**. La page produit UG/US était alors en erreur HTTP 500 ; elle ne sert plus de preuve dans ce guide. Les dates techniques du catalogue restent celles indiquées ci-dessus.

@@ -9,7 +9,8 @@ metiers: ["garage-automobile", "maintenance-industrielle"]
 readingTime: 4
 reviewStatus: "internal"
 relatedGuides: [ "buse-sablage-diametre-pression-debit-compresseur", "sableuse-perd-puissance-abrasif-humide-diagnostic", "compresseur-pour-sablage-pneumatique", clemco-rph-decolmatage-impulsion-on-off ]
-sources: [ "https://www.clemcoindustries.com/s/30421m.pdf", "https://www.clemcoindustries.com/s/30422BM-PULSAR-PLUS-III-P-VI-P-Rev-C.pdf", https://www.clemcoindustries.com/s/21449m.pdf ]
+sources: [ "https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/6854538f0e62326ad7b00c36/1750356885904/30421m.pdf", "https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/69b47af1fc2488789f5b36e4/1773435639066/30422BM+-+PULSAR+PLUS+III-P++VI-P+-+Rev+C.pdf", https://www.clemcoindustries.com/s/21449m.pdf ]
+updatedDate: "2026-10-10"
 ---
 
 **Une cabine de sablage ne se dimensionne pas à partir de son volume intérieur.** Le besoin en air dépend du système de projection, de sa configuration et de la pression de fonctionnement. Sur une cabine à succion, il faut notamment identifier le jet d’air situé dans le pistolet, pas seulement sa buse de sortie.
@@ -18,7 +19,7 @@ Avant d’acheter un compresseur, relevez la référence complète de la cabine,
 
 ## Deux architectures à identifier sur la notice
 
-La [notice Clemco Pulsar Plus III-S/VI-S](https://www.clemcoindustries.com/s/30421m.pdf) décrit une projection à succion avec pistolet et jet d’air. La [notice III-P/VI-P](https://www.clemcoindustries.com/s/30422BM-PULSAR-PLUS-III-P-VI-P-Rev-C.pdf) décrit une machine qui met sous pression son réservoir d’abrasif. Le circuit à lire et les données de consommation à demander diffèrent donc.
+La [notice Clemco Pulsar Plus III-S/VI-S](https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/6854538f0e62326ad7b00c36/1750356885904/30421m.pdf) décrit une projection à succion avec pistolet et jet d’air. La [notice III-P/VI-P](https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/69b47af1fc2488789f5b36e4/1773435639066/30422BM+-+PULSAR+PLUS+III-P++VI-P+-+Rev+C.pdf) décrit une machine qui met sous pression son réservoir d’abrasif. Le circuit à lire et les données de consommation à demander diffèrent donc.
 
 N’appliquez pas un tableau de buse de sableuse sous pression au seul diamètre de sortie d’un pistolet à succion. Demandez le tableau de la variante réelle, puis vérifiez que les pièces installées correspondent à cette variante.
 
@@ -31,7 +32,7 @@ Dans le tableau de consommation du pistolet BNP de la notice à succion, deux co
 | 1/8 pouce | 5/16 pouce | 21 cfm |
 | 5/32 pouce | 5/16 pouce | 32 cfm |
 
-Ces chiffres appartiennent à la [section 1.12 de la notice 30421](https://www.clemcoindustries.com/s/30421m.pdf). Ils ne définissent pas toutes les cabines à succion. Nous conservons les unités de la source ; aucune assimilation automatique à un débit FAD certifié de compresseur n’est faite.
+Ces chiffres appartiennent à la [section 1.12 de la notice 30421](https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/6854538f0e62326ad7b00c36/1750356885904/30421m.pdf). Ils ne définissent pas toutes les cabines à succion. Nous conservons les unités de la source ; aucune assimilation automatique à un débit FAD certifié de compresseur n’est faite.
 
 <div class="article-infographic article-infographic--compact" role="group" aria-label="Deux jets, une même buse de sortie">
 <svg viewBox="0 0 520 390" role="img" aria-labelledby="compresseur-cabine-sablage-succion-pression-title compresseur-cabine-sablage-succion-pression-desc" xmlns="http://www.w3.org/2000/svg">
@@ -82,5 +83,7 @@ Le [guide général du sablage](/guides/compresseur-pour-sablage-pneumatique/) s
 
 Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
 
-- [Clemco, Pulsar Plus III-S/VI-S, notice 30421, tableau section 1.12](https://www.clemcoindustries.com/s/30421m.pdf)
-- [Clemco, Pulsar Plus III-P/VI-P, notice 30422, fonctionnement et alimentation](https://www.clemcoindustries.com/s/30422BM-PULSAR-PLUS-III-P-VI-P-Rev-C.pdf)
+- [Clemco, Pulsar Plus III-S/VI-S, notice 30421, tableau section 1.12](https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/6854538f0e62326ad7b00c36/1750356885904/30421m.pdf)
+- [Clemco, Pulsar Plus III-P/VI-P, notice 30422, fonctionnement et alimentation](https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/69b47af1fc2488789f5b36e4/1773435639066/30422BM+-+PULSAR+PLUS+III-P++VI-P+-+Rev+C.pdf)
+
+Les liens des documents Clemco ont été revérifiés le **10 octobre 2026** sur le CDN du constructeur. Les PDF sont identiques à ceux consultés le 26 septembre. L’analyse de la variante à pression porte sur la notice 30422 **Rev. C, 01/26** ; elle ne vaut pas validation des révisions ultérieures.

@@ -13,8 +13,8 @@ sources:
   - https://www.inrs.fr/media.html?refINRS=ED+961
   - https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-961/ed961.pdf
   - https://www.einhell.fr/p/4137000-tire-pressure-gauge/
-  - https://www.energy.gov/cmei/ito/compressed-air-systems
-updatedDate: 2026-09-26
+  - https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf
+updatedDate: "2026-10-10"
 ---
 
 Un temps de gonflage exige quatre entrées : volume interne, pression initiale, pression cible et durée. La prévention exige en parallèle une procédure, une distance et des équipements adaptés à la catégorie de pneumatique. Un bon résultat de débit ne valide jamais la sécurité du poste.
@@ -68,7 +68,7 @@ Sur un poste qualifié, consignez pression initiale, pression finale, durée, te
 
 Comparez le temps réel au modèle. L’écart n’est pas automatiquement une panne : il peut refléter la variation de débit avec la pression, les pertes, l’instrument ou l’hypothèse de volume. Il fournit une piste d’investigation.
 
-Le programme du département américain de l’Énergie consacré aux [systèmes d’air comprimé](https://www.energy.gov/cmei/ito/compressed-air-systems) rappelle l’intérêt d’une approche système incluant distribution, fuites, stockage, commande et maintenance.
+Le [Sourcebook du département américain de l’Énergie, 3e édition (2016)](https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf) rappelle l’intérêt d’une approche système incluant distribution, fuites, stockage, commande et maintenance.
 
 ## Appliquer les distances de l’INRS
 
@@ -111,3 +111,5 @@ Pour le matériel retenu, documentez plage, précision, commande à distance, ra
 Un poste n’est accepté que lorsque les deux tableaux sont traités. Cette séparation empêche qu’un calcul rapide masque une réserve de sécurité, ou qu’un aménagement correct soit confondu avec une capacité de production démontrée.
 
 Le [guide des boosters de talonnage tubeless](/guides/booster-talonnage-tubeless-reserve-air-compresseur/) distingue la réserve du dispositif, sa recharge et le gonflage final.
+
+Le lien du Sourcebook DOE a été revérifié le **10 octobre 2026**. Cette consultation ne change pas sa date d’édition, 2016, ni les prescriptions des fabricants et de prévention propres au poste.

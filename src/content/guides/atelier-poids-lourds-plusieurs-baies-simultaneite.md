@@ -12,9 +12,10 @@ relatedCalculatorTool: chicago-pneumatic-cp5000
 sources:
   - https://tools.cp.com/tr-tr/products/impactwrenches/cp5000-skuT024585
   - https://tools.cp.com/en-us/products/impactwrenches/cp7776-sku8941077760
-  - https://www.energy.gov/cmei/ito/compressed-air-systems
+  - https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf
   - https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf
   - https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-6282/ed6282.pdf
+updatedDate: "2026-10-10"
 ---
 
 Dimensionner un atelier multi-baies en additionnant tous les outils donne souvent un projet surdimensionné. Appliquer un coefficient de simultanéité générique peut produire l’erreur inverse. La méthode défendable consiste à relever les usages, conserver les pointes plausibles et tester les états qui engagent réellement la production.
@@ -87,7 +88,7 @@ La production doit couvrir le débit durable attendu. Le stockage amortit certai
 
 Une grande cuve ne compense pas durablement un manque de FAD. Un compresseur suffisamment dimensionné ne corrige pas un coupleur restrictif. Un réseau généreux ne résout pas une stratégie de commande incohérente entre plusieurs machines.
 
-Le programme du département américain de l’Énergie sur les [systèmes d’air comprimé](https://www.energy.gov/cmei/ito/compressed-air-systems) encourage une lecture système intégrant demande, fuites, stockage, commande et maintenance. Son [sourcebook](https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf) fournit une méthode générale. Utilisez ces documents pour structurer l’audit, puis revenez aux données des équipements exacts.
+Le [Sourcebook du département américain de l’Énergie, 3e édition (2016)](https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf) présente une lecture système intégrant demande, fuites, stockage, commande et maintenance. Utilisez ce document pour structurer l’audit, puis revenez aux données des équipements exacts. Le [Sourcebook DOE déjà cité dans le dossier](https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf) complète ces références générales.
 
 ## Ajouter les fuites mesurées
 
@@ -117,3 +118,5 @@ La feuille finale doit distinguer capacité pneumatique, organisation du travail
 | Dégradé | à calculer | liste explicite | production réduite | services maintenus |
 
 Cette matrice reste valable lorsque l’atelier ajoute une baie : il suffit de modifier les références, les états actifs et les mesures, sans réinventer une règle de simultanéité.
+
+Le lien du Sourcebook DOE a été revérifié le **10 octobre 2026**. Cette consultation ne change pas sa date d’édition, 2016, ni les prescriptions des fabricants et de prévention propres au poste.

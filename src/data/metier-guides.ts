@@ -166,7 +166,7 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 			sources: [
 				{ label: 'INRS, fiches de poste garages automobiles et poids lourds', url: 'https://www.inrs.fr/metiers/commerce-service/garage/garage-fiches-de-poste.html', scope: 'Repérage des opérations et risques propres aux postes de mécanique, pneumatiques, tôlerie-peinture et soufflage.', verifiedAt: '2026-07-20' },
 				{ label: 'INRS, Opérations d’entretien et de remplacement des pneumatiques, ED 961', url: 'https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-961/ed961.pdf', scope: 'Séparation entre dépose ou approche à la clé à chocs, serrage final au couple et organisation sûre du gonflage.', verifiedAt: '2026-07-20' },
-				{ label: 'U.S. Department of Energy, Compressed Air Systems', url: 'https://www.energy.gov/cmei/ito/compressed-air-systems', scope: 'Approche système, profils de pression, qualité d’air, stockage, fuites et maintenance.', verifiedAt: '2026-07-20' },
+				{ label: 'U.S. Department of Energy, Sourcebook, 3e édition (2016)', url: 'https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf', scope: 'Approche système, profils de pression, qualité d’air, stockage, fuites et maintenance.', verifiedAt: '2026-10-10' },
 				{ label: 'Chicago Pneumatic, CP7748', url: 'https://tools.cp.com/en/products/impactwrenches/cp7748-sku8941077481', scope: 'Caractéristiques attribuées à la référence utilisée dans le scénario de clé à chocs.', verifiedAt: '2026-07-20' },
 				{ label: 'Einhell France, manomètre 4137000', url: 'https://www.einhell.fr/p/4137000-manometre/', scope: 'Référence de gonflage dont la fiche ne fournit pas un débit fixe exploitable.', verifiedAt: '2026-07-20' },
 			],
@@ -532,7 +532,7 @@ export const metierGuideProfiles: Record<GuideMetierId, MetierGuideProfile> = {
 				{ label: 'Metabo, DW 125 601556000', url: 'https://www.metabo.com/com/es/maquinas/cortar-rectificar-fresar/amoladoras-angulares/amoladoras-angulares-de-o100-150-mm/dw-125-amoladora-angular-neumatica/601556000', scope: 'Débit et pression de la meuleuse du scénario continu.', verifiedAt: '2026-07-20' },
 				{ label: 'Chicago Pneumatic, CP7120 8941071200', url: 'https://tools.cp.com/en-uk/products/compression-tools/cp7120-needle-scaler-sku8941071200', scope: 'Consommation en charge, pression dynamique et passage minimal du dérouilleur à aiguilles.', verifiedAt: '2026-07-20' },
 				{ label: 'Metabo, DS 14 604117000', url: 'https://www.metabo.com/za/en/tools/compressed-air/compressed-air-tools/air-screwdriver/ds-14-604117000-air-screwdriver.html', scope: 'Débit et pression de la visseuse du troisième scénario.', verifiedAt: '2026-07-20' },
-				{ label: 'U.S. Department of Energy, Compressed Air Systems', url: 'https://www.energy.gov/cmei/ito/compressed-air-systems', scope: 'Approche système, fuites, maintenance préventive, qualité d’air, stockage et commandes.', verifiedAt: '2026-07-20' },
+				{ label: 'U.S. Department of Energy, Sourcebook, 3e édition (2016)', url: 'https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf', scope: 'Approche système, fuites, maintenance préventive, qualité d’air, stockage et commandes.', verifiedAt: '2026-10-10' },
 				{ label: 'INRS, Consignations et déconsignations, ED 6109', url: 'https://www.inrs.fr/media.html?refINRS=ED+6109', scope: 'Principes de maîtrise des énergies avant intervention et vérification de l’état sûr.', verifiedAt: '2026-07-20' },
 			],
 		},

@@ -3,7 +3,7 @@ title: "Maintenance préventive d’un réseau d’air comprimé : preuves, mesu
 seoTitle: "Maintenance réseau d’air comprimé | CompatAir"
 description: "Organiser une maintenance reproductible du compresseur au point d’usage, sans calendrier universel ni économie de fuite estimée sans mesure."
 pubDate: 2026-07-15
-updatedDate: 2026-09-29
+updatedDate: "2026-10-10"
 category: "Utiliser"
 audiences: [professionnel]
 metiers: [maintenance-industrielle]
@@ -17,7 +17,7 @@ relatedGuides:
   - detecter-mesurer-fuites-air-comprime
 sources:
   - https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf
-  - https://www.energy.gov/cmei/ito/compressed-air-systems
+  - https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf
   - https://www.cagi.org/working-with-compressed-air
 ---
 
@@ -85,5 +85,7 @@ Après une longue immobilisation, utilisez le dossier [préparer la remise en se
 ## Sources
 
 - [US Department of Energy, Compressed Air System Sourcebook](https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air_sourcebook.pdf)
-- [US Department of Energy, Compressed Air Systems](https://www.energy.gov/cmei/ito/compressed-air-systems)
+- [US Department of Energy, Compressed Air Sourcebook, 3e édition (2016)](https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf)
 - [Compressed Air and Gas Institute, Working with Compressed Air](https://www.cagi.org/working-with-compressed-air)
+
+Le lien du Sourcebook DOE a été revérifié le **10 octobre 2026**. Cette consultation ne change pas sa date d’édition, 2016, ni les prescriptions des fabricants et de prévention propres au poste.

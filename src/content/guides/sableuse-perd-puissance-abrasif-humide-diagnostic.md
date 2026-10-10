@@ -3,14 +3,14 @@ title: "Sableuse qui perd de la puissance : air, abrasif humide ou usure du pis
 seoTitle: "Sableuse moins efficace : air, humidité ou buse usée ?"
 description: "Pression qui chute, abrasif irrégulier, buse usée : préparez un diagnostic de cabine sans attribuer toute perte d’efficacité à un manque de compresseur."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-29
+updatedDate: "2026-10-10"
 category: "Utiliser"
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "maintenance-industrielle"]
 readingTime: 4
 reviewStatus: "internal"
 relatedGuides: ["compresseur-cabine-sablage-succion-pression", "buse-sablage-diametre-pression-debit-compresseur", "point-rosee-secheur-filtre-air-comprime"]
-sources: ["https://www.clemcoindustries.com/s/30421m.pdf", "https://www.clemcoindustries.com/s/28452m.pdf"]
+sources: ["https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/6854538f0e62326ad7b00c36/1750356885904/30421m.pdf", "https://www.clemcoindustries.com/s/28452m.pdf"]
 ---
 
 **Une sableuse moins efficace peut manquer d’air, mais le symptôme seul ne le prouve pas.** Pour une cabine à succion, un abrasif qui circule mal ou un élément de pistolet usé fait partie des pistes à examiner. L’objectif est d’orienter le dépannage avec des observations, sans augmenter les réglages à l’aveugle.
@@ -45,7 +45,7 @@ Reprenez ensuite la demande de la configuration réelle. Pour une [cabine à suc
 
 ## Si l’abrasif arrive de manière irrégulière
 
-La [notice Clemco Pulsar Plus à succion, sections 1.12 et 8](https://www.clemcoindustries.com/s/30421m.pdf), indique que l’humidité peut agglomérer le média et gêner son écoulement. Son dépannage examine également le circuit et le réglage du mélange. Cette observation concerne ce type de cabine ; elle ne donne pas un diagnostic universel de toutes les sableuses.
+La [notice Clemco Pulsar Plus à succion, sections 1.12 et 8](https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/6854538f0e62326ad7b00c36/1750356885904/30421m.pdf), indique que l’humidité peut agglomérer le média et gêner son écoulement. Son dépannage examine également le circuit et le réglage du mélange. Cette observation concerne ce type de cabine ; elle ne donne pas un diagnostic universel de toutes les sableuses.
 
 Faites relever l’état du média et l’historique de stockage ou de changement. Un ajout d’abrasif frais peut modifier temporairement le comportement sans expliquer pourquoi le précédent s’est dégradé. Demandez au mainteneur de vérifier séparément la qualité d’air et le chemin du média.
 
@@ -73,5 +73,7 @@ Le manque de puissance peut aussi s’accompagner d’une demande d’air qui a 
 
 Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
 
-- [Clemco, Pulsar Plus III-S/VI-S, notice 30421, sections 1.12 et 8](https://www.clemcoindustries.com/s/30421m.pdf)
+- [Clemco, Pulsar Plus III-S/VI-S, notice 30421, sections 1.12 et 8](https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/6854538f0e62326ad7b00c36/1750356885904/30421m.pdf)
 - [Clemco, Wetblast FLEX, notice 28452, tableau et remarque sur l’usure des buses](https://www.clemcoindustries.com/s/28452m.pdf)
+
+Le lien de la notice Clemco 30421 a été revérifié le **10 octobre 2026** sur le CDN du constructeur : le PDF est identique au document consulté le 26 septembre.
