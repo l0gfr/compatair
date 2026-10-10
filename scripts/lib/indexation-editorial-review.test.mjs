@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { assertReviewedAdmissions, indexationCorpusHash, indexationPolicyHash, planReviewedIndexation, validateEditorialReviews } from './indexation-editorial-review.mjs';
+import { assertReviewedAdmissions, createIndexationReviewProposal, indexationCorpusHash, indexationPolicyHash, planReviewedIndexation, validateEditorialReviews } from './indexation-editorial-review.mjs';
 import { planIndexation } from './indexation-planner.mjs';
 
 const now = new Date('2026-10-08T18:00:00Z');
@@ -19,6 +19,27 @@ const review = { publicationDay: '2026-10-08', sourceReleaseSha: previous.gitSha
 const registry = (changes = {}) => ({ ...empty, reviews: [{ ...structuredClone(review), ...changes }] });
 
 describe('positive editorial admission at build and deployment', () => {
+	it('provides the exact reading list without admitting pages or producing a release manifest', () => {
+		const proposal = createIndexationReviewProposal(options);
+		expect(proposal.proposalOnly).toBe(true);
+		expect(proposal.pages.map(page => page.path).sort()).toEqual(proposed);
+		expect(proposal.pages.every(page => page.status === 'proposed' && page.value.contentHash)).toBe(true);
+		expect(proposal).not.toHaveProperty('manifest');
+		expect(proposal).not.toHaveProperty('allowRelease');
+		expect(proposal.corpusHash).toBe(indexationCorpusHash(candidates));
+		expect(planReviewedIndexation(options, empty).released).toBe(0);
+	});
+	it('keeps proposed lists empty while paused or after the Paris day was consumed', () => {
+		expect(createIndexationReviewProposal({ ...options, policy: { ...policy, paused: true } }).proposed).toBe(0);
+		expect(createIndexationReviewProposal({ ...options, previous: planIndexation(options).manifest }).pages).toEqual([]);
+	});
+	it('requires a new editorial approval when the ceilings rise to 10/30/60', () => {
+		const increased = { ...policy, dailyLimits: { guides: 10, compressors: 30, tools: 60 } };
+		const result = planReviewedIndexation({ ...options, policy: increased }, registry());
+		expect(result.released).toBe(0);
+		expect(result.editorialReview.reason).toBe('stale-editorial-review');
+		expect(planReviewedIndexation({ ...options, policy: increased }, empty).released).toBe(0);
+	});
 	it('keeps a deployable catalog release without opening admissions when no review exists', () => {
 		const plan = planReviewedIndexation(options, empty);
 		expect(plan.released).toBe(0);

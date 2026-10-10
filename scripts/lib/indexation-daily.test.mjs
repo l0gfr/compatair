@@ -11,14 +11,32 @@ const baseline = { schemaVersion: 1, sourceSha: 'a'.repeat(40), paths: ['/'] };
 const now = new Date('2026-09-29T18:15:00Z');
 const previous = { schemaVersion: 1, baselineSha: baseline.sourceSha, gitSha: baseline.sourceSha, builtAt: now.toISOString(), batches: [] };
 const policy = { schemaVersion: 2, paused: false, timeZone: 'Europe/Paris', dailyLimits: { guides: 2, compressors: 2, tools: 6 }, maximumTopicShare: 0.25, similarityThreshold: 0.82, containmentThreshold: 0.92 };
-const candidates = ['guides', 'compressors', 'tools'].flatMap((group, groupIndex) => Array.from({ length: 30 }, (_, i) => {
-	const token = `mot${String.fromCharCode(97 + groupIndex)}${String.fromCharCode(97 + i)}`;
+const quotaCandidates = (length) => ['guides', 'compressors', 'tools'].flatMap((group, groupIndex) => Array.from({ length }, (_, i) => {
+	const token = `mot${String.fromCharCode(97 + groupIndex, 97 + Math.floor(i / 26), 97 + i % 26)}`;
 	return { path: `/${{ guides: 'guides', compressors: 'compresseurs', tools: 'outils-pneumatiques' }[group]}/ref-${i}/`, family: group === 'guides' ? 'guides' : 'catalog', topic: `${group}:${i}`, signature: token, text: Array.from({ length: 35 }, (_, k) => `${token}${String.fromCharCode(97 + k % 26)}`).join(' ') };
 }));
+const candidates = quotaCandidates(30);
 const plan = (overrides = {}) => planIndexation({ candidates, baseline, previous, policy, now, ...overrides });
 const counts = paths => Object.fromEntries(['guides', 'compressors', 'tools'].map(group => [group, paths.filter(path => candidateQuotaGroup(path) === group).length]));
 
 describe('daily SEO admissions in Paris', () => {
+	it('enforces 10/30/60, preserves historical quotas, and never catches up or transfers slots', () => {
+		const increased = { ...policy, dailyLimits: { guides: 10, compressors: 30, tools: 60 } };
+		const large = quotaCandidates(200);
+		const yesterday = new Date('2026-09-28T18:15:00Z');
+		const historical = plan({ candidates: large, now: yesterday, previous: { ...previous, builtAt: yesterday.toISOString() } }).manifest;
+		const current = plan({ candidates: large, policy: increased, previous: historical });
+		expect(current.released).toBe(100);
+		expect(counts(current.manifest.batches.at(-1).paths)).toEqual(increased.dailyLimits);
+		expect(current.manifest.batches[0]).toEqual(historical.batches[0]);
+		expect(validateManifest(current.manifest, baseline, now)).toBe(current.manifest);
+		expect(plan({ candidates: large, policy: increased, previous: current.manifest }).released).toBe(0);
+		expect(plan({ candidates: large, policy: increased, previous: current.manifest, now: new Date('2026-12-29T19:15:00Z') }).released).toBe(100);
+		const fewer = plan({ candidates: large.filter(entry => candidateQuotaGroup(entry.path) !== 'compressors'), policy: increased });
+		expect(counts(fewer.manifest.batches.at(-1).paths)).toEqual({ guides: 10, compressors: 0, tools: 60 });
+		const batch = current.manifest.batches.at(-1);
+		for (const prefix of ['guides', 'compresseurs', 'outils-pneumatiques']) expect(() => validateManifest({ ...current.manifest, batches: [...historical.batches, { ...batch, paths: [...batch.paths, `/${prefix}/extra/`] }] }, baseline, now)).toThrow('Quota quotidien dépassé');
+	});
 	it('recognizes personal-library pagination without exempting article routes', () => {
 		expect(isNavigationPath('/guides/particuliers/page/2/')).toBe(true);
 		expect(isNavigationPath('/guides/particuliers/page/12/')).toBe(true);

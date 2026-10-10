@@ -14,29 +14,35 @@ La publication concurrente de 55 nouveaux guides en `4870e1e` est enregistrée s
 
 ## Rythme automatique
 
-Depuis le 29 septembre 2026, les quotas quotidiens demandés sont séparés pour les guides, les compresseurs et les outils. Ils sont communs à tous les imports, pas renouvelés par fichier, marque ou commande de build.
+Depuis le 10 octobre 2026, les plafonds demandés sont de 10 guides, 30 compresseurs et 60 outils par jour, en remplacement des quotas 2/2/6 du 29 septembre. Ils sont communs à tous les imports, pas renouvelés par fichier, marque ou commande de build.
 
 | Famille | Nouvelles pages par jour au maximum |
 | --- | ---: |
-| Guides | 2 |
-| Compresseurs | 2 |
-| Outils pneumatiques | 6 |
+| Guides | 10 |
+| Compresseurs | 30 |
+| Outils pneumatiques | 60 |
 
 Un seul lot peut s’ouvrir par jour civil dans le fuseau `Europe/Paris`, y compris aux changements d’heure. Le délai historique de huit jours est remplacé par ce calendrier quotidien. Les anciennes admissions restent conservées. Un quota inutilisé n’est transféré ni à une autre famille ni au lendemain. Si les contrôles ne laissent pas assez de candidats, le lot est plus petit.
 
-Un même groupe ne peut occuper plus de 25 % de son quota, arrondi à l’entier supérieur : marque et catégorie pour les fiches, catégorie éditoriale et premier métier déclaré pour les guides. Cela limite chaque groupe à un guide, un compresseur ou deux outils dans le lot quotidien. Le rapprochement avec le panel éditorial figé de 100 requêtes donne une priorité explicite, puis l’ancienneté départage les candidats. Ce rapprochement est une hypothèse éditoriale ; aucune demande, position ni audience mesurée n’est inventée.
+Un même groupe ne peut occuper plus de 25 % de son quota, arrondi à l’entier supérieur : marque et catégorie pour les fiches, catégorie éditoriale et premier métier déclaré pour les guides. Cela limite chaque groupe à trois guides, huit compresseurs ou quinze outils dans le lot quotidien. Le rapprochement avec le panel éditorial figé de 100 requêtes donne une priorité explicite, puis l’ancienneté départage les candidats. Ce rapprochement est une hypothèse éditoriale ; aucune demande, position ni audience mesurée n’est inventée.
 
 Le build lit `/data/indexation.json` et `/data/release.json` sur le site public. Il part du dernier lot réellement déployé. Plusieurs builds locaux n’épuisent pas des quotas et ne débloquent pas plusieurs lots. Après plusieurs semaines d’arrêt, un seul lot peut s’ouvrir au build suivant : aucun rattrapage cumulatif.
 
 Le site étant statique, l’ouverture suivante intervient au prochain build et déploiement d’un jour encore disponible, avec une nouvelle révision immuable. L’automatisation Codex « Publier les lots SEO CompatAir » contrôle chaque jour à 20 h 15 (heure locale) si un lot est éligible. Elle ne lance une publication que si aucun lot n’a déjà été ouvert ce jour, si des pages passent les contrôles et si aucune autre publication n’est en cours. Elle utilise un checkout isolé de la révision déjà publiée, conserve les validations de production et vérifie ensuite les directives réellement servies. Un commit vide donne une nouvelle identité à la release lorsque seul le lot d’indexation évolue. Aucun quota n’est cumulé après une interruption.
 
-Cette automatisation locale requiert le Mac allumé et l’application Codex ouverte ; ses passages utilisent le quota Codex. Elle ne génère aucun contenu et ne lance aucune recherche IA récurrente ni demande d’indexation Google. Une publication ordinaire peut faire progresser la file uniquement avec une revue éditoriale versionnée du lot exact. En cas de pause, de file vide, de délai non écoulé ou de contrôle en échec, aucun lot supplémentaire n’est publié.
+Cette automatisation locale requiert le Mac allumé et l’application Codex ouverte ; ses passages utilisent le quota Codex. Elle ne génère aucun contenu et ne lance aucune recherche IA récurrente ni demande d’indexation Google. Une publication ordinaire peut faire progresser la file uniquement avec une revue éditoriale versionnée du lot exact. En cas de pause, de file vide, de journée déjà consommée ou de contrôle en échec, aucun lot supplémentaire n’est publié.
 
 Ces plafonds sont des réglages internes modifiables dans `config/indexation-policy.json`, pas des seuils de sécurité Google. La montée suit les lots publiés et les contrôles techniques ; elle ne prétend pas lire automatiquement les signaux Search Console. `paused: true` suspend les nouvelles admissions à partir du prochain déploiement tout en conservant les URL déjà admises.
+
+## Diagnostic des sources
+
+Le contrôle complet reste `pnpm sources:check`. Pour enquêter sur une anomalie sans relancer tout le catalogue, `pnpm sources:check --url "URL exacte"` ne contrôle qu’une source déjà présente dans l’inventaire versionné. Le workflow « Source link health » accepte la même URL dans son entrée facultative `source_url`. Les URL extérieures à l’inventaire sont refusées ; les protections DNS, TLS et redirections restent identiques. Un rapport `scope.kind: single-url` est partiel et son succès ne valide jamais le contrôle complet. Une erreur d’accès reste non concluante ; elle n’est ni une preuve de disparition du document ni une permission d’admission.
 
 ## Détection de répétition et critères d’admission
 
 Depuis le 8 octobre 2026, `prepare-indexation.mjs` exige une approbation positive dans `config/indexation-editorial-reviews.json`. La revue porte sur le jour civil parisien, le SHA actuellement servi, l’empreinte de la politique, le corpus comparé et les URL exactes sélectionnées. L’empreinte de chaque page couvre l’objet produit complet ou les métadonnées et le Markdown complet du guide : changer une valeur, une source, une limite, une illustration inline ou sa déclaration invalide l’approbation. Modifier un voisin ou ajouter une référence invalide aussi l’empreinte du corpus et exige une nouvelle comparaison. Les fichiers d’images restent contrôlés séparément par la validation du catalogue. Le score lexical seul ne peut plus ouvrir un lot.
+
+La commande `pnpm seo:review-plan` prépare `.astro/seo/indexation-review-proposal.json` avant cette approbation : elle donne la liste mécanique exacte, les empreintes de politique et de corpus et les éléments à relire, sans créer de manifeste déployable ni ouvrir une admission. Après la revue réelle, versionner les décisions du jour dans le registre puis exécuter `pnpm seo:prepare`. Une sélection rejetée ne produit aucun remplacement automatique.
 
 Le dossier de revue doit expliquer le problème traité, les sources relues et la différence avec les voisins. Le registre conserve les décisions et leur motif, sans attribuer une revue interne à un expert externe. Un lot refusé, absent, périmé ou différent de la proposition n’admet aucune URL de remplacement. La publication du catalogue reste possible : les nouvelles pages attendent en `noindex,follow`, hors sitemap. Les admissions historiques et leurs réserves restent conservées. `verify-indexation-release.mjs` vérifie à nouveau l’approbation avant tout déploiement comportant de nouvelles admissions.
 

@@ -27,6 +27,17 @@ export function sourceInventory(entries) {
 	return { version: createHash('sha256').update(JSON.stringify(sources)).digest('hex'), sources };
 }
 
+// A diagnostic can probe one exact versioned source, never an arbitrary URL.
+// Its successful report is explicitly partial and cannot clear a full audit.
+export function sourceCheckSelection(inventory, args = []) {
+	if (!args.length) return { sources: inventory.sources, scope: { kind: 'inventory' } };
+	if (args.length !== 2 || args[0] !== '--url' || typeof args[1] !== 'string' || args[1].length > 2048) throw new Error('Option de contrôle des sources invalide.');
+	const url = sourceUrl(args[1]).href;
+	const source = inventory.sources.find(entry => entry.url === url);
+	if (!source) throw new Error('Source absente de l’inventaire versionné.');
+	return { sources: [source], scope: { kind: 'single-url', url } };
+}
+
 export async function requestSource(url, method, { resolveHost = lookup, send = request, timeoutMs = 8_000 } = {}) {
 	const validated = sourceUrl(url);
 	let dnsTimer;
@@ -109,6 +120,16 @@ export function annotateKnownSourceFailure(result, observations, now = new Date(
   && archived?.retainedForTraceability === true && archived.publicDownload === false && /^[a-f0-9]{64}$/.test(archived.sha256)
   && Number.isSafeInteger(archived.bytes) && archived.bytes > 0;
  if (!reviewed) return result;
+ const recovery = observation.recovery;
+ if (recovery) {
+  const recoveredAt = calendarDate(recovery.observedAt);
+  const verified = recovery.method === 'GET' && recovery.httpStatus === 200 && recoveredAt > observed && recoveredAt <= now.getTime()
+   && recovery.sha256 === archived.sha256 && recovery.bytes === archived.bytes;
+  // A new failure after recovery is a new incident, never the old acknowledged 404.
+  if (verified && result.state === 'reachable' && result.status === 200 && result.finalUrl === observation.sourceUrl) return { ...result, reviewedRecovery: true, recoveredAt: recovery.observedAt, archiveSha256: archived.sha256 };
+  if (result.state === 'reachable') return { ...result, recovered: true, observedAt: observation.observedAt };
+  return result;
+ }
  if (result.state === 'broken' && result.status === observation.httpStatus && result.finalUrl === observation.sourceUrl && age <= 30 * 86_400_000) return { ...result, acknowledged: true, observedAt: observation.observedAt, archiveSha256: archived.sha256 };
  if (result.state === 'reachable') return { ...result, recovered: true, observedAt: observation.observedAt };
  return result;
@@ -119,7 +140,8 @@ export function healthSummary(results) {
 	for (const result of results) counts[result.state] += 1;
 	const acknowledged = results.filter(result => result.state === 'broken' && result.acknowledged === true).length;
 	const recovered = results.filter(result => result.state === 'reachable' && result.recovered === true).length;
-	return { ...counts, acknowledged, recovered, checked: results.length, anomalies: counts.broken - acknowledged + counts.unavailable + counts.unsafe + recovered, auditUnavailable: results.length === 0 || counts.unverified === results.length };
+	const reviewedRecoveries = results.filter(result => result.state === 'reachable' && result.reviewedRecovery === true).length;
+	return { ...counts, acknowledged, recovered, reviewedRecoveries, checked: results.length, anomalies: counts.broken - acknowledged + counts.unavailable + counts.unsafe + recovered, auditUnavailable: results.length === 0 || counts.unverified === results.length };
 }
 
 export function sourceHealthSummaryMarkdown(report) {
@@ -129,8 +151,10 @@ export function sourceHealthSummaryMarkdown(report) {
 	const rows = selected.map(({ url, state, status, reason, acknowledged, recovered, observedAt, references }) => ({ url, state, status, reason, acknowledged, recovered, observedAt, references: references.slice(0, 20), referenceCount: references.length }));
 	const safeJson = JSON.stringify(rows, null, 2).replaceAll('`', '\\u0060').replaceAll('<', '\\u003c');
 	return `## Contrôle des sources\n\nContrôle daté du ${report.checkedAt}.\n\n`
+		+ (report.scope?.kind === 'single-url' ? 'Diagnostic partiel d’une seule URL versionnée. Un succès ne valide pas l’inventaire complet.\n\n' : '')
 		+ `${report.summary.checked} URL : ${report.summary.reachable} accessibles, ${report.summary.broken} cassées, ${report.summary.unavailable} indisponibles, ${report.summary.unsafe} refusées, ${report.summary.unverified} non vérifiées.\n\n`
 		+ `${report.summary.acknowledged ?? 0} erreurs historiques déjà documentées, toujours contrôlées ; ${report.summary.recovered ?? 0} rétablissements à examiner. Une observation historique expire après 30 jours.\n\n`
+		+ `${report.summary.reviewedRecoveries ?? 0} rétablissements relus sur le document exact, avec empreinte et taille identiques à l’archive ; toute nouvelle erreur reste une anomalie.\n\n`
 		+ `Une indisponibilité ou un contrôle non concluant ne réfute pas la preuve technique archivée. Aucun contrôle TLS ou réseau n’est contourné.\n\n`
 		+ `${selected.length} résultats affichés sur ${details.length} à examiner (20 références maximum par URL). Le rapport JSON complet figure dans l’artefact d’anomalies si le contrôle échoue.\n\n`
 		+ `\`\`\`json\n${safeJson}\n\`\`\`\n`;

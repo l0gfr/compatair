@@ -57,6 +57,19 @@ function matches(review, paths, pages) {
 		&& review.pages.every(page => pages.get(page.path)?.contentHash === page.contentHash);
 }
 
+// A proposal is only a reading list. It cannot replace the reviewed build
+// artifact: no manifest, release permission or approved decisions are exported.
+export function createIndexationReviewProposal(options) {
+	const now = options.now ?? new Date();
+	const plan = planIndexation({ ...options, now, gitSha: 'development', allowRelease: true });
+	return {
+		schemaVersion: 1, proposalOnly: true, createdAt: now.toISOString(), publicationDay: indexationDay(now),
+		sourceReleaseSha: options.previous.gitSha, policyHash: indexationPolicyHash(options.policy),
+		corpusHash: indexationCorpusHash(options.candidates), limits: plan.limits,
+		proposed: plan.released, pages: plan.report.filter(page => page.status === 'released').map(page => ({ ...page, status: 'proposed' })),
+	};
+}
+
 // Mechanical scoring proposes a batch. Only a versioned review of the exact
 // pages and complete input hashes can admit it. Failure never selects substitutes.
 export function planReviewedIndexation(options, registry) {

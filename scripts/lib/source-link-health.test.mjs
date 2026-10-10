@@ -1,8 +1,18 @@
 import { EventEmitter } from 'node:events';
 import { describe, expect, it } from 'vitest';
-import { sourceUrl, sourceInventory, requestSource, followSource, checkSource, annotateKnownSourceFailure, healthSummary, sourceHealthSummaryMarkdown } from './source-link-health.mjs';
+import { sourceUrl, sourceInventory, sourceCheckSelection, requestSource, followSource, checkSource, annotateKnownSourceFailure, healthSummary, sourceHealthSummaryMarkdown } from './source-link-health.mjs';
 
 describe('source link health', () => {
+	it('limits diagnostics to one exact inventory URL and labels partial success', () => {
+		const inventory = sourceInventory([{ url: 'https://example.com/source', reference: { evidenceId: 'a' } }]);
+		expect(sourceCheckSelection(inventory).scope).toEqual({ kind: 'inventory' });
+		const selected = sourceCheckSelection(inventory, ['--url', 'https://example.com/source#page=2']);
+		expect(selected.sources).toHaveLength(1);
+		expect(selected.scope).toEqual({ kind: 'single-url', url: 'https://example.com/source' });
+		for (const args of [['--host', 'example.com'], ['--url'], ['--url', 'https://example.com/other'], ['--url', 'https://example.com/source?different=1'], ['--url', 'http://localhost/'], ['--url', 'https://example.com/source', '--url', 'https://example.com/source']]) expect(() => sourceCheckSelection(inventory, args)).toThrow();
+		const results = [{ url: selected.scope.url, state: 'reachable', status: 200, references: [] }];
+		expect(sourceHealthSummaryMarkdown({ checkedAt: new Date().toISOString(), scope: selected.scope, summary: healthSummary(results), results })).toContain('Un succès ne valide pas l’inventaire complet');
+	});
 	it('publishes bounded actionable evidence without allowing Markdown injection', () => {
 		const results = Array.from({ length: 40 }, (_, index) => ({ url: `https://example.com/${index}`, state: 'unavailable', status: 502, references: [{ productId: 'sample', evidenceId: '```<script>' }] }));
 		const summary = sourceHealthSummaryMarkdown({ checkedAt: '2026-09-28T00:00:00Z', summary: healthSummary(results), results });
@@ -103,6 +113,25 @@ describe('source link health', () => {
 		for (const invalidDate of ['2026-02-30', '2026-9-30', '2026-09-30T00:00:00Z', 'invalid']) {
 			expect(annotateKnownSourceFailure(result, [{ ...observation, observedAt: invalidDate }], now).acknowledged).toBeUndefined();
 			expect(annotateKnownSourceFailure(result, [{ ...observation, archive: { ...observation.archive, retrievedAt: invalidDate } }], now).acknowledged).toBeUndefined();
+		}
+	});
+	it('accepts a documented exact recovery and raises every new failure or changed document', () => {
+		const url = 'https://example.com/archived.pdf';
+		const observation = { sourceUrl: url, observedAt: '2026-10-02', httpStatus: 404, method: 'GET', archive: { retrievedAt: '2026-09-30', sha256: 'a'.repeat(64), bytes: 100, retainedForTraceability: true, publicDownload: false }, recovery: { observedAt: '2026-10-10', httpStatus: 200, method: 'GET', sha256: 'a'.repeat(64), bytes: 100 } };
+		const reachable = { url, finalUrl: url, state: 'reachable', status: 200 };
+		const now = new Date('2026-10-10T08:00:00Z');
+		const checked = annotateKnownSourceFailure(reachable, [observation], now);
+		expect(checked.reviewedRecovery).toBe(true);
+		expect(healthSummary([checked])).toMatchObject({ reviewedRecoveries: 1, recovered: 0, anomalies: 0 });
+		for (const change of [{ state: 'broken', status: 404 }, { state: 'broken', status: 410 }, { state: 'unsafe', reason: 'unsafe_address' }, { state: 'unavailable', status: 503 }, { finalUrl: `${url}?changed=1` }, { status: 204 }]) {
+			const result = annotateKnownSourceFailure({ ...reachable, ...change }, [observation], now);
+			expect(result.acknowledged).toBeUndefined();
+			expect(result.reviewedRecovery).toBeUndefined();
+			expect(healthSummary([result]).anomalies).toBe(1);
+		}
+		for (const invalid of [{ observedAt: '2026-10-11' }, { observedAt: '2026-02-30' }, { observedAt: '2026-10-01' }, { sha256: 'b'.repeat(64) }, { bytes: 101 }, { method: 'HEAD' }, { httpStatus: 201 }]) {
+			const result = annotateKnownSourceFailure(reachable, [{ ...observation, recovery: { ...observation.recovery, ...invalid } }], now);
+			expect(healthSummary([result]).anomalies).toBe(1);
 		}
 	});
 });

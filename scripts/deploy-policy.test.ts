@@ -154,7 +154,7 @@ describe('release boundary policy', () => {
 		expect(job.steps.some((step: { uses?: string }) => step.uses?.startsWith('actions/cache/restore@'))).toBe(false);
 		expect(job.steps.some((step: { uses?: string }) => step.uses?.startsWith('actions/cache/save@'))).toBe(false);
 		for (const command of ['pnpm catalog:check', 'pnpm audit:editorial', 'pnpm test', 'pnpm sources:check']) {
-			const step = job.steps.find((candidate: { run?: string }) => candidate.run?.split('\n').includes(command));
+			const step = job.steps.find((candidate: { run?: string }) => candidate.run?.split('\n').map(line => line.trim()).includes(command));
 			expect(step).toBeDefined();
 			expect(step.if).toBeUndefined();
 		}
@@ -162,6 +162,11 @@ describe('release boundary policy', () => {
 		const checker = readFileSync(new URL('./check-source-links.mjs', import.meta.url), 'utf8');
 		expect(checker).toContain('collectVersionedSourceInventory');
 		expect(checker).not.toContain('dist/');
+		const diagnostic = job.steps.find((step: { name: string }) => step.name === 'Check external sources and purchase links');
+		expect(diagnostic.env.SOURCE_CHECK_URL).toBe('${{ inputs.source_url }}');
+		expect(diagnostic.run).toContain('pnpm sources:check --url "$SOURCE_CHECK_URL"');
+		expect(diagnostic.run).not.toContain('${{');
+		expect(health.on.workflow_dispatch.inputs.source_url).toMatchObject({ type: 'string', required: false, default: '' });
 	});
 
 	it('pins deployment and rollback to the dedicated CompatAir root', () => {

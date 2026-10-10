@@ -43,6 +43,7 @@
     "archive:verify": "bash scripts/verify-source-archive.sh",
     "seo:verify-live": "node scripts/verify-live-seo.mjs",
     "seo:prepare": "node scripts/prepare-indexation.mjs",
+    "seo:review-plan": "node scripts/prepare-indexation-review.mjs",
     "lint:source": "node scripts/lint-source.mjs",
     "lighthouse": "lhci autorun",
     "lighthouse:production": "lhci autorun",

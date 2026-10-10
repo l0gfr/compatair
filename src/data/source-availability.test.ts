@@ -43,12 +43,20 @@ describe('confirmed source availability observations', () => {
 
 	it('labels a dated observation and a private traceability copy without publishing a replacement link', () => {
 		const message = sourceAvailabilityMessage(documentUrl)!;
-		expect(message).toContain('Source historique');
+		expect(message).toContain('source historique');
+		expect(message).toContain('Document constructeur rétabli');
+		expect(message).toContain('10/10/2026');
+		expect(message).toContain('HTTP 200');
 		expect(message).toContain('HTTP 404');
 		expect(message).toContain('02/10/2026');
 		expect(message).toContain('30/09/2026');
 		expect(message).toContain(sourceAvailabilityForUrl(documentUrl)!.archive.sha256);
 		expect(message).toContain('Aucun téléchargement public');
 		expect(message).not.toMatch(/https?:\/\/|\/tmp\/|file:/);
+	});
+	it('preserves the incident and records the verified recovery of the exact archived bytes', () => {
+		const observation = sourceAvailabilityForUrl(documentUrl)!;
+		expect(observation.httpStatus).toBe(404);
+		expect(observation.recovery).toEqual({ observedAt: '2026-10-10', httpStatus: 200, method: 'GET', sha256: observation.archive.sha256, bytes: observation.archive.bytes });
 	});
 });

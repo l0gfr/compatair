@@ -1,0 +1,20 @@
+import { mkdir, readFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { collectIndexationCandidates } from './lib/indexation-candidates.mjs';
+import { readLiveIndexation } from './lib/indexation-live.mjs';
+import { createIndexationReviewProposal } from './lib/indexation-editorial-review.mjs';
+import { validateBaseline, validatePolicy } from './lib/indexation-policy.mjs';
+import { writeIndexationArtifact } from './lib/indexation-artifact.mjs';
+
+if (process.argv.length !== 2) throw new Error('La proposition éditoriale ne prend aucune option de date ou de quota.');
+const root = process.cwd(), now = new Date();
+const baseline = validateBaseline(JSON.parse(await readFile(resolve(root, 'config/indexation-baseline.json'), 'utf8')));
+const policy = validatePolicy(JSON.parse(await readFile(resolve(root, 'config/indexation-policy.json'), 'utf8')));
+const previous = await readLiveIndexation(baseline, { now });
+const candidates = await collectIndexationCandidates(root, { now });
+const proposal = createIndexationReviewProposal({ candidates, baseline, previous, policy, now });
+const directory = resolve(root, '.astro/seo');
+await mkdir(directory, { recursive: true });
+await writeIndexationArtifact(resolve(directory, 'indexation-review-proposal.json'), proposal);
+console.log(`Proposition éditoriale : ${proposal.proposed} pages pour le ${proposal.publicationDay}. Base publique ${proposal.sourceReleaseSha}. Rapport : .astro/seo/indexation-review-proposal.json`);
+console.log('Aucune admission ni artefact de publication créé. Relire le lot exact et versionner ses décisions avant seo:prepare.');

@@ -16,6 +16,12 @@ on:
   schedule:
     - cron: '17 6 * * 1'
   workflow_dispatch:
+    inputs:
+      source_url:
+        description: 'Diagnostic partiel : une URL exacte de l’inventaire versionné (vide pour le contrôle complet)'
+        type: string
+        required: false
+        default: ''
 
 permissions:
   contents: read
@@ -54,9 +60,16 @@ jobs:
           pnpm audit:editorial
           pnpm test
       - name: Check external sources and purchase links
-        run: pnpm sources:check
+        env:
+          SOURCE_CHECK_URL: ${{ inputs.source_url }}
+        run: |
+          if [ -n "$SOURCE_CHECK_URL" ]; then
+            pnpm sources:check --url "$SOURCE_CHECK_URL"
+          else
+            pnpm sources:check
+          fi
       - name: Save anomaly evidence only on failure
-        if: ${{ failure() && hashFiles('source-health-report.json') != '' }}
+        if: ${{ (failure() && hashFiles('source-health-report.json') != '') || (github.event_name == 'workflow_dispatch' && inputs.source_url != '' && hashFiles('source-health-report.json') != '') }}
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: source-anomalies-${{ github.sha }}-${{ github.run_id }}
