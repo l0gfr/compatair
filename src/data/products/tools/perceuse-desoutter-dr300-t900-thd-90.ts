@@ -49,7 +49,7 @@ const product = {
     "sourceLabel": "Repères techniques CompatAir d’après Desoutter"
   },
   "editorial": {
-    "overview": "La perceuse Desoutter DR300-T900-THD-90, référence 6151761120, affiche une consommation à vide de 570 L/min (9,5 L/s). Le catalogue général de juillet 2026 donne une pression de référence de 6,3 bar. Vitesse à vide : 900 tr/min. Masse : 0,83 kg.",
+    "overview": "La perceuse Desoutter DR300-T900-THD-90, référence 6151761120, affiche une consommation à vide de 570 L/min (9,5 L/s). Le catalogue général de septembre 2026 donne une pression de référence de 6,3 bar. Vitesse à vide : 900 tr/min. Masse : 0,83 kg.",
     "verifiedFacts": [
       "Vitesse à vide : 900 tr/min.",
       "Masse : 0,83 kg.",
@@ -150,12 +150,12 @@ const product = {
     },
     {
       "id": "desoutter-6151761120-catalogue-2026-07",
-      "sourceUrl": "https://www.datocms-assets.com/104564/1784211285-desoutter_general_catalog_fr_2026-07.pdf#page=298",
-      "sourceLabel": "Desoutter, catalogue général juillet 2026, page 298 ; pression page 345",
+      "sourceUrl": "https://www.datocms-assets.com/104564/1789974097-desoutter_general_catalog_fr_2026-09.pdf#page=298",
+      "sourceLabel": "Desoutter, catalogue général septembre 2026, page 298 ; pression page 345",
       "sourceType": "manufacturer",
-      "retrievedAt": "2026-09-26",
+      "retrievedAt": "2026-10-13",
       "confidence": "A",
-      "notes": "Référence 6151761120 et consommation recoupées avec le tableau. Les consignes générales de la page 345 indiquent 6,3 bar ±0,15 bar."
+      "notes": "Référence 6151761120 et consommation recoupées avec le tableau. Les consignes générales de la page 345 indiquent 6,3 bar ±0,15 bar. SHA-256 7d2121c4aeb36c31bde784ba6ddcebee83686fb4883c6b63005d0e569613304c. Édition 09.2026 : ligne de référence, consommation publiée et pression page 345 recoupées le 13 octobre ; caractéristiques et incertitudes conservées."
     }
   ],
   "fieldSources": {

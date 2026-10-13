@@ -1,3 +1,4 @@
+import { reviewedDesoutterSource } from './desoutter-source-repair-fixture.mjs';
 import { readFile } from 'node:fs/promises';
 import { describe, expect, it } from 'vitest';
 import { tools, compressors } from '../../src/data/catalog';
@@ -24,7 +25,7 @@ describe('500 individually sourced industrial tools', () => {
 	});
 	it('reproduces every published value from versioned manufacturer facts', () => {
 		for (const [snapshot, factory] of [[atlas, createAtlasCopcoToolDraft], [desoutter, createDesoutterToolDraft]]) for (const row of snapshot.rows) {
-			const expected = toolProfileSchema.parse(factory(snapshot, row));
+			const expected = toolProfileSchema.parse(reviewedDesoutterSource(factory(snapshot, row)));
 			expect(tools.find(t => t.id === expected.id), row.mpn).toEqual({ ...expected, category: toolCategoryLabel(expected.categoryId) });
 			expect(expected.workingPressureBar.typical).toBe(6.3);
 			expect(expected.evidence).toHaveLength(2);

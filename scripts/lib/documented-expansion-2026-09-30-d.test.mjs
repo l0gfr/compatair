@@ -1,3 +1,4 @@
+import { reviewedDesoutterSource } from './desoutter-source-repair-fixture.mjs';
 import {readFileSync} from 'node:fs';
 import {describe,it,expect} from 'vitest';
 import {buildDocumentedExpansionD} from './documented-expansion-2026-09-30-d.mjs';
@@ -17,7 +18,7 @@ describe('reviewed documentary expansion D',()=>{
  });
  it('reconstructs the exact imported records from the versioned source transcriptions',()=>{
   for(const p of batch.compressors)expect(compressors.find(x=>x.id===p.id),p.id).toEqual(compressorSchema.parse(p));
-  for(const p of batch.tools)expect(tools.find(x=>x.id===p.id),p.id).toEqual(toolProfileSchema.parse({...p,category:toolCategoryLabel(p.categoryId)}));
+  for(const p of batch.tools)expect(tools.find(x=>x.id===p.id),p.id).toEqual(toolProfileSchema.parse({...reviewedDesoutterSource(p),category:toolCategoryLabel(p.categoryId)}));
  });
  it('keeps measurement pressure apart from operating range, cooling variants and VSD minima',()=>{
   expect(batch.compressors.find(x=>x.mpn==='300001').fadCurve).toEqual([{pressureBar:10,litersPerMinute:270}]);

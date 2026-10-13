@@ -20,7 +20,7 @@ const product: ToolProfileInput = {
 	"image": {
 		"src": "/images/products/visseuse-desoutter-sc2-035-2rm1500-s4q-2051474394.webp",
 		"alt": "Repères techniques : Desoutter SC2-035-2RM1500-S4Q (réf. 2051474394)",
-		"sourceUrl": "https://www.datocms-assets.com/104564/1784211285-desoutter_general_catalog_fr_2026-07.pdf",
+		"sourceUrl": "https://www.datocms-assets.com/104564/1789974097-desoutter_general_catalog_fr_2026-09.pdf",
 		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
 	},
 	"variant": {
@@ -140,13 +140,13 @@ const product: ToolProfileInput = {
 	"evidence": [
 		{
 			"id": "documented-d-desoutter-2026-p159",
-			"sourceUrl": "https://www.datocms-assets.com/104564/1784211285-desoutter_general_catalog_fr_2026-07.pdf#page=159",
+			"sourceUrl": "https://www.datocms-assets.com/104564/1789974097-desoutter_general_catalog_fr_2026-09.pdf#page=159",
 			"sourceLabel": "desoutter-2026, page PDF 159",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-09-30",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
-			"notes": "SHA-256 69b46fe9fc41aa8c1b174a8e7e32686b6b20e2884c95db1c461caa6ddf33c9ad. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+			"notes": "SHA-256 7d2121c4aeb36c31bde784ba6ddcebee83686fb4883c6b63005d0e569613304c. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé. Édition 09.2026 : ligne de référence, consommation publiée et pression page 345 recoupées le 13 octobre ; caractéristiques et incertitudes conservées."
 		},
 		{
 			"id": "documented-d-desoutter-2051474394",
@@ -160,13 +160,13 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "documented-d-desoutter-2026-p345",
-			"sourceUrl": "https://www.datocms-assets.com/104564/1784211285-desoutter_general_catalog_fr_2026-07.pdf#page=345",
+			"sourceUrl": "https://www.datocms-assets.com/104564/1789974097-desoutter_general_catalog_fr_2026-09.pdf#page=345",
 			"sourceLabel": "desoutter-2026, page PDF 345",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-09-30",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
-			"notes": "SHA-256 69b46fe9fc41aa8c1b174a8e7e32686b6b20e2884c95db1c461caa6ddf33c9ad. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+			"notes": "SHA-256 7d2121c4aeb36c31bde784ba6ddcebee83686fb4883c6b63005d0e569613304c. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé. Édition 09.2026 : ligne de référence, consommation publiée et pression page 345 recoupées le 13 octobre ; caractéristiques et incertitudes conservées."
 		}
 	],
 	"fieldSources": {
