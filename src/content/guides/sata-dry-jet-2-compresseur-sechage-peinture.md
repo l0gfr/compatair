@@ -1,6 +1,7 @@
 ---
 title: "SATA dry jet 2 : quel débit de compresseur pour sécher une peinture à l’eau ?"
 description: "Le SATA dry jet 2 consomme 270 Nl/min à 2,5 bar. Dimensionner un ou deux sécheurs, distinguer air injecté et air ambiant, vérifier le poste peinture."
+updatedDate: "2026-10-13"
 pubDate: 2026-09-29
 category: Choisir
 audiences: ["professionnel"]
@@ -10,7 +11,7 @@ featured: false
 reviewStatus: internal
 relatedGuides: ["air-comprime-carrosserie-peinture", "amplificateur-air-exair-consommation-debit", "filtration-air-cabine-peinture-etages"]
 sources:
-  - https://www.sata.com/media/84/06/70/1790259017/BAL-SATA-DRY-JET-2.PDF.PDF?ts=1790259017
+  - https://www.sata.com/media/98/a9/fe/1791809361/BAL-SATA-DRY-JET-2.PDF.PDF?ts=1791809361
   - https://www.sata.com/de-de/sata-dry-jet-2-trockenblaspistole/217489
 ---
 
@@ -18,7 +19,7 @@ Le SATA dry jet 2 demande **270 Nl/min à 2,5 bar**, d’après sa notice. Son f
 
 ## Distinguer le jet de sortie et le besoin du réseau
 
-Le [mode d’emploi officiel, tableau français page 94](https://www.sata.com/media/84/06/70/1790259017/BAL-SATA-DRY-JET-2.PDF.PDF?ts=1790259017), donne 270 Nl/min à 2,5 bar. La [fiche produit SATA 217489](https://www.sata.com/de-de/sata-dry-jet-2-trockenblaspistole/217489) décrit le principe Venturi : l’air comprimé injecté entraîne de l’air environnant. Le débit d’air mobilisé pour le séchage ne doit pas être confondu avec la quantité demandée au compresseur.
+Le [mode d’emploi officiel, tableau français page 94](https://www.sata.com/media/98/a9/fe/1791809361/BAL-SATA-DRY-JET-2.PDF.PDF?ts=1791809361), donne 270 Nl/min à 2,5 bar. La [fiche produit SATA 217489](https://www.sata.com/de-de/sata-dry-jet-2-trockenblaspistole/217489) décrit le principe Venturi : l’air comprimé injecté entraîne de l’air environnant. Le débit d’air mobilisé pour le séchage ne doit pas être confondu avec la quantité demandée au compresseur.
 
 <figure class="article-infographic article-infographic--compact">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 286" role="img" aria-labelledby="sata-dry-jet-2-compresseur-sechage-peinture-title sata-dry-jet-2-compresseur-sechage-peinture-desc" style="font-family:system-ui,sans-serif">
@@ -56,3 +57,5 @@ L’aspiration d’air ambiant concerne aussi les conditions de la cabine. Les r
 À la réception, vérifiez la référence, les accessoires, la pression en fonctionnement et la tenue du réseau avec la configuration prévue. Consignez séparément le produit appliqué, les conditions de cabine et le résultat observé. Une modification de l’un de ces paramètres limite la comparaison avec une autre opération.
 
 La notice contient aussi un filtre propre à l’appareil, indiqué comme remplaçable en cas d’encrassement. Son entretien suit cette notice. Aucun temps de séchage, gain de rendement ou essai sur peinture n’a été mesuré par CompatAir pour ce dossier.
+
+L’adresse de la notice SATA a été mise à jour le **13 octobre 2026** depuis la fiche officielle du fabricant. Le PDF téléchargé conserve exactement la même empreinte SHA-256 que le document déjà consulté ; les valeurs et limites citées restent inchangées.

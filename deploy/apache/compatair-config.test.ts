@@ -12,6 +12,19 @@ const astroConfig = readFileSync(
 const assetsDirectory = astroConfig.match(/assets:\s*['"]([^'"]+)['"]/)?.[1];
 
 describe('CompatAir Apache CSP', () => {
+	it('keeps the Certbot webroot mapping in HTTP after TLS activation', () => {
+		const http = config.match(/<VirtualHost \*:80>([\s\S]*?)<\/VirtualHost>/)?.[1] ?? '';
+		const https = config.match(/<VirtualHost \*:443>([\s\S]*?)<\/VirtualHost>/)?.[1] ?? '';
+		const mapping = /Alias \/\.well-known\/acme-challenge\/ \/var\/lib\/compatair-acme\/\.well-known\/acme-challenge\/[\s\S]*?<\/Directory>/;
+		expect(http.match(mapping)?.[0]).toContain('<Directory /var/lib/compatair-acme/.well-known/acme-challenge>');
+		expect(http).not.toContain('Alias /.well-known/acme-challenge/ /var/www/html/');
+		const bootstrap = readFileSync(new URL('./compatair.fr-http.conf', import.meta.url), 'utf8');
+		expect(bootstrap).toContain('Alias /.well-known/acme-challenge/ /var/www/html/.well-known/acme-challenge/');
+		expect(http.match(mapping)?.[0]).toContain('Require all granted');
+		expect(http).toContain('RewriteCond %{REQUEST_URI} !^/.well-known/acme-challenge/');
+		expect(https).not.toContain('Alias /.well-known/acme-challenge/');
+	});
+
 	it('isolates the private statistics policy from the public site policy', () => {
 		expect(config).toContain('Header onsuccess unset Content-Security-Policy');
 		expect(config).toContain('Header always unset Content-Security-Policy');

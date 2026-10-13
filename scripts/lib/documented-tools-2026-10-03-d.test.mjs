@@ -8,6 +8,23 @@ import { evaluateCompatibility } from '../../server/air-compatibility.mjs';
 import { calculateSizing } from '../../server/air-sizing.mjs';
 const snapshot = JSON.parse(readFileSync(new URL('../../src/data/imports/documented-tools-2026-10-03-d.json', import.meta.url)));
 const batch = buildDocumentedToolsOctober3D(snapshot);
+const relocations = JSON.parse(readFileSync(new URL('../../docs/editorial/source-repairs-2026-10-13.json', import.meta.url))).repairs.filter(repair => repair.name.startsWith('sata'));
+// The dated source snapshot remains immutable. Only reviewed URL/date changes
+// are projected into the expected active module; every technical field is compared.
+function relocatedProduct(product) {
+ const expected = structuredClone(product);
+ for (const evidence of expected.evidence) {
+  const [url, fragment] = evidence.sourceUrl.split('#');
+  const repair = relocations.find(item => item.previousUrl === url);
+  if (!repair) continue;
+  expect(repair.affectedProducts).toContain(product.id);
+  expect(evidence.notes).toContain(repair.sha256);
+  expect(repair.httpStatus).toBe(200);
+  evidence.sourceUrl = repair.url + (fragment ? `#${fragment}` : '');
+  evidence.retrievedAt = '2026-10-13';
+ }
+ return expected;
+}
 const ample = { id: 'fixture-compressor', tankLiters: 500, maxPressureBar: 20, fadCurve: [{ pressureBar: 2, litersPerMinute: 50000 }, { pressureBar: 20, litersPerMinute: 40000 }], dutyCycle: 1, oilType: 'oil', confidence: 'B' };
 const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const changeBoth = (copy, find, change) => {
@@ -44,7 +61,7 @@ describe('documented tools, October 3, fourth batch', () => {
   for (const product of batch) {
    expect(toolProfileSchema.safeParse(product).success, product.id).toBe(true);
    const module = readFileSync(new URL(`../../src/data/products/tools/${product.slug}.ts`, import.meta.url), 'utf8');
-   expect(toolProfileSchema.parse(parseCatalogProductSource('tools', module))).toEqual(toolProfileSchema.parse(product));
+   expect(toolProfileSchema.parse(parseCatalogProductSource('tools', module))).toEqual(toolProfileSchema.parse(relocatedProduct(product)));
   }
  });
  it('preserves HTTPS source originals through SHA, size, edition, dates and localizations without private paths', () => {

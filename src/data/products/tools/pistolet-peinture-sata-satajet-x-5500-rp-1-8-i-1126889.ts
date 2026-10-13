@@ -153,31 +153,31 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "october3d-tools-sata-family-5500-manual-0-p110",
-			"sourceUrl": "https://www.sata.com/media/e1/ba/aa/1790259010/BETRIEBSANLEITUNG-SATAJET-X-5500.PDF.PDF?ts=1790259010#page=110",
+			"sourceUrl": "https://www.sata.com/media/82/13/ea/1791809354/BETRIEBSANLEITUNG-SATAJET-X-5500.PDF.PDF?ts=1791809354#page=110",
 			"sourceLabel": "SATA, document technique officiel, page PDF 110",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-10-03",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 8aa3c905c3c5140342568764cd6657f419daad70814c3e89babc5e39a0be06ed. Déclaration constructeur, sans essai physique CompatAir."
 		},
 		{
 			"id": "october3d-tools-sata-family-5500-manual-0-p115",
-			"sourceUrl": "https://www.sata.com/media/e1/ba/aa/1790259010/BETRIEBSANLEITUNG-SATAJET-X-5500.PDF.PDF?ts=1790259010#page=115",
+			"sourceUrl": "https://www.sata.com/media/82/13/ea/1791809354/BETRIEBSANLEITUNG-SATAJET-X-5500.PDF.PDF?ts=1791809354#page=115",
 			"sourceLabel": "SATA, document technique officiel, page PDF 115",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-10-03",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 8aa3c905c3c5140342568764cd6657f419daad70814c3e89babc5e39a0be06ed. Déclaration constructeur, sans essai physique CompatAir."
 		},
 		{
 			"id": "october3d-tools-sata-family-5500-manual-0-p116",
-			"sourceUrl": "https://www.sata.com/media/e1/ba/aa/1790259010/BETRIEBSANLEITUNG-SATAJET-X-5500.PDF.PDF?ts=1790259010#page=116",
+			"sourceUrl": "https://www.sata.com/media/82/13/ea/1791809354/BETRIEBSANLEITUNG-SATAJET-X-5500.PDF.PDF?ts=1791809354#page=116",
 			"sourceLabel": "SATA, document technique officiel, page PDF 116",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-10-03",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 8aa3c905c3c5140342568764cd6657f419daad70814c3e89babc5e39a0be06ed. Déclaration constructeur, sans essai physique CompatAir."
 		}

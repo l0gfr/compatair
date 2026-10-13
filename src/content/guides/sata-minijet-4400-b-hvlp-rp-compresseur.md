@@ -13,10 +13,10 @@ relatedGuides:
   - mesurer-pression-dynamique-pistolet-peinture
   - deux-pistolets-peinture-simultanes
 sources:
-  - https://www.sata.com/media/75/3e/88/1790259012/BETRIEBSANLEITUNG-SATAMINIJET-4400-B.PDF.PDF?ts=1790259012
+  - https://www.sata.com/media/1e/d0/fa/1791809356/BETRIEBSANLEITUNG-SATAMINIJET-4400-B.PDF.PDF?ts=1791809356
   - https://www.sata.com/en-ca/premium-spray-gun-for-small-area-applications-in-automotive-finishes-sataminijet-4400-b-hvlp-0.8-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/204180
   - https://www.sata.com/en-us/premium-spray-gun-for-spot-repairs-in-automotive-finishes-sataminijet-4400-b-rp-0.3-sr-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/1114149
-updatedDate: 2026-09-26
+updatedDate: "2026-10-13"
 ---
 
 Le **SATAminijet 4400 B HVLP demande 120 Nl/min à 2 bar**, contre **200 Nl/min à 2,5 bar pour la version RP**, aux points documentés dans la notice. Pour préparer un poste de retouche, commencez par identifier la version du pistolet : le nom « minijet » et la taille du godet ne suffisent pas à déterminer son besoin d’air.
@@ -37,7 +37,7 @@ Cette comparaison concerne l’alimentation. Elle ne classe pas la qualité de f
 </div>
 
 
-Ces valeurs viennent de la [notice SATA, page 146](https://www.sata.com/media/75/3e/88/1790259012/BETRIEBSANLEITUNG-SATAMINIJET-4400-B.PDF.PDF?ts=1790259012). Elles ne décrivent pas une même pression d’essai. L’écart de 80 Nl/min est donc une comparaison des points publiés, pas une mesure de rendement à conditions identiques.
+Ces valeurs viennent de la [notice SATA, page 146](https://www.sata.com/media/1e/d0/fa/1791809356/BETRIEBSANLEITUNG-SATAMINIJET-4400-B.PDF.PDF?ts=1791809356). Elles ne décrivent pas une même pression d’essai. L’écart de 80 Nl/min est donc une comparaison des points publiés, pas une mesure de rendement à conditions identiques.
 
 **Calcul CompatAir :** `200 / 120 = 1,67`. Le besoin publié de la version RP est environ 67 % plus élevé que celui de la HVLP à ces points respectifs. Sur une séquence hypothétique de deux minutes gâchette ouverte, cela représente 400 contre 240 litres normalisés, soit 160 litres d’écart. Le temps de deux minutes est une hypothèse pédagogique, pas une cadence prescrite.
 
@@ -85,6 +85,8 @@ Le [guide buse, chapeau et consommation d’air](/guides/buse-pistolet-peinture-
 
 Sources consultées le **26 septembre 2026**. Analyse documentaire préparée avec assistance d’IA ; aucun essai physique ni validation professionnelle externe. Les calculs CompatAir et les hypothèses sont identifiés dans le texte.
 
-- [SATA, notice multilingue du minijet 4400 B, pages 145 à 150](https://www.sata.com/media/75/3e/88/1790259012/BETRIEBSANLEITUNG-SATAMINIJET-4400-B.PDF.PDF?ts=1790259012)
+- [SATA, notice multilingue du minijet 4400 B, pages 145 à 150](https://www.sata.com/media/1e/d0/fa/1791809356/BETRIEBSANLEITUNG-SATAMINIJET-4400-B.PDF.PDF?ts=1791809356)
 - [SATA, fiche HVLP 0.8, référence 204180](https://www.sata.com/en-ca/premium-spray-gun-for-small-area-applications-in-automotive-finishes-sataminijet-4400-b-hvlp-0.8-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/204180)
 - [SATA, fiche RP 0.3 SR, référence 1114149](https://www.sata.com/en-us/premium-spray-gun-for-spot-repairs-in-automotive-finishes-sataminijet-4400-b-rp-0.3-sr-0.3-l-rps-suitable-for-water-and-solvent-based-paint-systems/1114149)
+
+L’adresse de la notice SATA a été mise à jour le **13 octobre 2026** depuis la fiche officielle du fabricant. Le PDF téléchargé conserve exactement la même empreinte SHA-256 que le document déjà consulté ; les valeurs et limites citées restent inchangées.

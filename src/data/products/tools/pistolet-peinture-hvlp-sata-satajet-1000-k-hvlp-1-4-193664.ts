@@ -153,31 +153,31 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "october3d-tools-sata-family-1000kh-manual-0-p128",
-			"sourceUrl": "https://www.sata.com/media/bd/b5/b6/1790259013/BAL-SATAJET-1000-K-H.PDF.PDF?ts=1790259013#page=128",
+			"sourceUrl": "https://www.sata.com/media/82/5a/80/1791809357/BAL-SATAJET-1000-K-H.PDF.PDF?ts=1791809357#page=128",
 			"sourceLabel": "SATA, document technique officiel, page PDF 128",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-10-03",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 54e3d62ff5e087bb24908e5ece4b7661f668d360dc198a160065906244caec18. Déclaration constructeur, sans essai physique CompatAir."
 		},
 		{
 			"id": "october3d-tools-sata-family-1000kh-manual-0-p132",
-			"sourceUrl": "https://www.sata.com/media/bd/b5/b6/1790259013/BAL-SATAJET-1000-K-H.PDF.PDF?ts=1790259013#page=132",
+			"sourceUrl": "https://www.sata.com/media/82/5a/80/1791809357/BAL-SATAJET-1000-K-H.PDF.PDF?ts=1791809357#page=132",
 			"sourceLabel": "SATA, document technique officiel, page PDF 132",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-10-03",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 54e3d62ff5e087bb24908e5ece4b7661f668d360dc198a160065906244caec18. Déclaration constructeur, sans essai physique CompatAir."
 		},
 		{
 			"id": "october3d-tools-sata-family-1000kh-manual-0-p134",
-			"sourceUrl": "https://www.sata.com/media/bd/b5/b6/1790259013/BAL-SATAJET-1000-K-H.PDF.PDF?ts=1790259013#page=134",
+			"sourceUrl": "https://www.sata.com/media/82/5a/80/1791809357/BAL-SATAJET-1000-K-H.PDF.PDF?ts=1791809357#page=134",
 			"sourceLabel": "SATA, document technique officiel, page PDF 134",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-10-03",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 54e3d62ff5e087bb24908e5ece4b7661f668d360dc198a160065906244caec18. Déclaration constructeur, sans essai physique CompatAir."
 		}

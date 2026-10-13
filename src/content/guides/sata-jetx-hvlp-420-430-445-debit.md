@@ -2,6 +2,7 @@
 title: "SATA jet X HVLP : quel débit retenir entre 420, 430 et 445 ?"
 seoTitle: "SATA jet X HVLP : 420, 430 ou 445 ?"
 description: "La fiche jet X HVLP 1200170, le catalogue et la notice donnent des débits différents. Conservez leurs unités et demandez une clarification avant le verdict."
+updatedDate: "2026-10-13"
 pubDate: "2026-10-04"
 category: "Choisir"
 audiences: ["professionnel"]
@@ -9,7 +10,7 @@ metiers: ["carrosserie-peinture"]
 readingTime: 4
 reviewStatus: "internal"
 relatedGuides: ["buse-pistolet-peinture-chapeau-air-consommation", "mesurer-pression-dynamique-pistolet-peinture", "debit-restitue-fad-vs-debit-aspire"]
-sources: ["https://www.sata.com/en/premium-spray-gun-for-automotive-refinish-jet-x-hvlp-1.3-i-control-nozzle-basic-suitable-for-water-and-solvent-based-basecoats-as-well-as-1k-2k-topcoat-systems/1200170", "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806", "https://www.sata.com/media/d2/3c/04/1790259009/MULTILINGUAL-SATA-OPERATING-MANUAL-JET-X-3266-240619-2.PDF.PDF?ts=1790259009"]
+sources: ["https://www.sata.com/en/premium-spray-gun-for-automotive-refinish-jet-x-hvlp-1.3-i-control-nozzle-basic-suitable-for-water-and-solvent-based-basecoats-as-well-as-1k-2k-topcoat-systems/1200170", "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806", "https://www.sata.com/media/60/1f/f5/1791809353/MULTILINGUAL-SATA-OPERATING-MANUAL-JET-X-3266-240619-2.PDF.PDF?ts=1791809353"]
 ---
 
 **CompatAir ne peut pas retenir un débit unique pour le SATA jet X HVLP à partir des trois documents examinés.** La fiche de la référence 1200170 annonce 420 L/min, le catalogue donne 445 Nl/min pour le jet X HVLP et la notice indique 430 Nl/min à 2 bar. Choisir silencieusement le plus petit nombre produirait un verdict artificiellement favorable.
@@ -22,7 +23,7 @@ Cette différence ne démontre pas, à elle seule, une erreur de fabrication. El
 | --- | --- | --- |
 | [Fiche SKU 1200170](https://www.sata.com/en/premium-spray-gun-for-automotive-refinish-jet-x-hvlp-1.3-i-control-nozzle-basic-suitable-for-water-and-solvent-based-basecoats-as-well-as-1k-2k-topcoat-systems/1200170) | 420 L/min | jet X HVLP 1.3 I-control, nozzle Basic |
 | [Catalogue 2025, PDF page 14](https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=14) | 445 Nl/min | Colonne jet X HVLP |
-| [Notice jet X, PDF page 102](https://www.sata.com/media/d2/3c/04/1790259009/MULTILINGUAL-SATA-OPERATING-MANUAL-JET-X-3266-240619-2.PDF.PDF?ts=1790259009#page=102) | 430 Nl/min | Tableau HVLP, à 2 bar |
+| [Notice jet X, PDF page 102](https://www.sata.com/media/60/1f/f5/1791809353/MULTILINGUAL-SATA-OPERATING-MANUAL-JET-X-3266-240619-2.PDF.PDF?ts=1791809353#page=102) | 430 Nl/min | Tableau HVLP, à 2 bar |
 
 L/min et Nl/min ne doivent pas être effacés pour rendre les trois lignes identiques. Une référence normalisée demande ses conditions de température et de pression. Le diamètre de buse, la technologie HVLP et le réglage doivent également accompagner la demande au fabricant.
 
@@ -52,3 +53,5 @@ La [fiche CompatAir de la référence 1200170](/outils-pneumatiques/pistolet-pei
 ## Sources et méthode
 
 Sources fabricant consultées le **4 octobre 2026**. Rédaction assistée par IA et revue documentaire interne. Aucun essai physique ni validation professionnelle externe. Les scénarios et calculs CompatAir sont signalés dans le texte.
+
+L’adresse de la notice SATA a été mise à jour le **13 octobre 2026** depuis la fiche officielle du fabricant. Le PDF téléchargé conserve exactement la même empreinte SHA-256 que le document déjà consulté ; les valeurs et limites citées restent inchangées.

@@ -35,7 +35,7 @@ describe('SATA jet X manufacturer document discrepancies', () => {
 			'445 Nl/min ; recommandation d’entrée 2 bar dans une ligne distincte',
 			'430 Nl/min / 15,19 cfm à 2 bar à l’entrée du pistolet',
 		]);
-		for (const spec of consumption) for (const id of spec.evidenceIds) expect(evidence.get(id)?.retrievedAt).toBe('2026-10-03');
+		for (const spec of consumption) for (const id of spec.evidenceIds) expect(evidence.get(id)?.retrievedAt).toBe(id === 'sata-jet-x-1200170-october3-sata-more-jet-x-manual-85' ? '2026-10-13' : '2026-10-03');
 		expect(evidence.has('sata-jet-x-hvlp-1200170-manufacturer-2026')).toBe(true);
 	});
 });

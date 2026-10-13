@@ -110,11 +110,11 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "sata-jet-x-1200170-october3-sata-more-jet-x-manual-85",
-			"sourceUrl": "https://www.sata.com/media/d2/3c/04/1790259009/MULTILINGUAL-SATA-OPERATING-MANUAL-JET-X-3266-240619-2.PDF.PDF?ts=1790259009#page=102",
+			"sourceUrl": "https://www.sata.com/media/60/1f/f5/1791809353/MULTILINGUAL-SATA-OPERATING-MANUAL-JET-X-3266-240619-2.PDF.PDF?ts=1791809353#page=102",
 			"sourceLabel": "SATA, notice jet X liée à la fiche exacte, page PDF 102",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-10-03",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse originale HTTP 200, 43507933 octets, SHA-256 8b7cd0371d23eaae39f0098290ae5941ed87764dc320ec71180c99f860efcb0e. Valeur conservée sans arbitrage ni essai physique."
 		}

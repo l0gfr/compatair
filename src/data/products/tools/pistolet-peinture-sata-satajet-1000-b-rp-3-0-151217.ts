@@ -161,41 +161,41 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "october3d-tools-sata-1000b-actual-manual-p114",
-			"sourceUrl": "https://www.sata.com/media/c4/00/16/1790259011/BAL-SATAJET-1000-B.PDF.PDF?ts=1790259011#page=114",
+			"sourceUrl": "https://www.sata.com/media/07/ff/ff/1791809355/BAL-SATAJET-1000-B.PDF.PDF?ts=1791809355#page=114",
 			"sourceLabel": "SATA, document technique officiel, page PDF 114",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-10-03",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 fcb179890de6fb84bab9465d6c4a3dd5f60da7f75fdd591b1ac219a02e558f45. Déclaration constructeur, sans essai physique CompatAir."
 		},
 		{
 			"id": "october3d-tools-sata-1000b-actual-manual-p115",
-			"sourceUrl": "https://www.sata.com/media/c4/00/16/1790259011/BAL-SATAJET-1000-B.PDF.PDF?ts=1790259011#page=115",
+			"sourceUrl": "https://www.sata.com/media/07/ff/ff/1791809355/BAL-SATAJET-1000-B.PDF.PDF?ts=1791809355#page=115",
 			"sourceLabel": "SATA, document technique officiel, page PDF 115",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-10-03",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 fcb179890de6fb84bab9465d6c4a3dd5f60da7f75fdd591b1ac219a02e558f45. Déclaration constructeur, sans essai physique CompatAir."
 		},
 		{
 			"id": "october3d-tools-sata-1000b-actual-manual-p118",
-			"sourceUrl": "https://www.sata.com/media/c4/00/16/1790259011/BAL-SATAJET-1000-B.PDF.PDF?ts=1790259011#page=118",
+			"sourceUrl": "https://www.sata.com/media/07/ff/ff/1791809355/BAL-SATAJET-1000-B.PDF.PDF?ts=1791809355#page=118",
 			"sourceLabel": "SATA, document technique officiel, page PDF 118",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-10-03",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 fcb179890de6fb84bab9465d6c4a3dd5f60da7f75fdd591b1ac219a02e558f45. Déclaration constructeur, sans essai physique CompatAir."
 		},
 		{
 			"id": "october3d-tools-sata-1000b-actual-manual-p119",
-			"sourceUrl": "https://www.sata.com/media/c4/00/16/1790259011/BAL-SATAJET-1000-B.PDF.PDF?ts=1790259011#page=119",
+			"sourceUrl": "https://www.sata.com/media/07/ff/ff/1791809355/BAL-SATAJET-1000-B.PDF.PDF?ts=1791809355#page=119",
 			"sourceLabel": "SATA, document technique officiel, page PDF 119",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-10-03",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 fcb179890de6fb84bab9465d6c4a3dd5f60da7f75fdd591b1ac219a02e558f45. Déclaration constructeur, sans essai physique CompatAir."
 		}

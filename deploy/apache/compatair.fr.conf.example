@@ -3,6 +3,13 @@
     ServerAlias www.compatair.fr
     DocumentRoot /var/www/html/compatair/current
 
+    Alias /.well-known/acme-challenge/ /var/lib/compatair-acme/.well-known/acme-challenge/
+    <Directory /var/lib/compatair-acme/.well-known/acme-challenge>
+        Options None
+        AllowOverride None
+        Require all granted
+    </Directory>
+
     <Directory /var/www/html/compatair/current>
         Options -Indexes -ExecCGI
         AllowOverride None

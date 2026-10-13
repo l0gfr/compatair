@@ -154,11 +154,11 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "october3d-tools-sata-more-jet-x-manual-85-p102",
-			"sourceUrl": "https://www.sata.com/media/d2/3c/04/1790259009/MULTILINGUAL-SATA-OPERATING-MANUAL-JET-X-3266-240619-2.PDF.PDF?ts=1790259009#page=102",
+			"sourceUrl": "https://www.sata.com/media/60/1f/f5/1791809353/MULTILINGUAL-SATA-OPERATING-MANUAL-JET-X-3266-240619-2.PDF.PDF?ts=1791809353#page=102",
 			"sourceLabel": "SATA, document technique officiel, page PDF 102",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-10-03",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 8b7cd0371d23eaae39f0098290ae5941ed87764dc320ec71180c99f860efcb0e. Déclaration constructeur, sans essai physique CompatAir."
 		},

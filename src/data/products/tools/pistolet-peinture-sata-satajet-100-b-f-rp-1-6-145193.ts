@@ -134,31 +134,31 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "october3d-tools-sata-family-100b-manual-0-p132",
-			"sourceUrl": "https://www.sata.com/media/07/ca/cf/1790259012/BETRIEBSANLEITUNG-SATAJET-100-B.PDF.PDF?ts=1790259012#page=132",
+			"sourceUrl": "https://www.sata.com/media/91/a2/99/1791809356/BETRIEBSANLEITUNG-SATAJET-100-B.PDF.PDF?ts=1791809356#page=132",
 			"sourceLabel": "SATA, document technique officiel, page PDF 132",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-10-03",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 120fd4b58cf8df73fb5f9e531c66be0167896f63bb7505c55207adb9de4d9f99. Déclaration constructeur, sans essai physique CompatAir."
 		},
 		{
 			"id": "october3d-tools-sata-family-100b-manual-0-p134",
-			"sourceUrl": "https://www.sata.com/media/07/ca/cf/1790259012/BETRIEBSANLEITUNG-SATAJET-100-B.PDF.PDF?ts=1790259012#page=134",
+			"sourceUrl": "https://www.sata.com/media/91/a2/99/1791809356/BETRIEBSANLEITUNG-SATAJET-100-B.PDF.PDF?ts=1791809356#page=134",
 			"sourceLabel": "SATA, document technique officiel, page PDF 134",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-10-03",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 120fd4b58cf8df73fb5f9e531c66be0167896f63bb7505c55207adb9de4d9f99. Déclaration constructeur, sans essai physique CompatAir."
 		},
 		{
 			"id": "october3d-tools-sata-family-100b-manual-0-p135",
-			"sourceUrl": "https://www.sata.com/media/07/ca/cf/1790259012/BETRIEBSANLEITUNG-SATAJET-100-B.PDF.PDF?ts=1790259012#page=135",
+			"sourceUrl": "https://www.sata.com/media/91/a2/99/1791809356/BETRIEBSANLEITUNG-SATAJET-100-B.PDF.PDF?ts=1791809356#page=135",
 			"sourceLabel": "SATA, document technique officiel, page PDF 135",
 			"sourceType": "manual",
 			"sourceRole": "primary",
-			"retrievedAt": "2026-10-03",
+			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 120fd4b58cf8df73fb5f9e531c66be0167896f63bb7505c55207adb9de4d9f99. Déclaration constructeur, sans essai physique CompatAir."
 		}
