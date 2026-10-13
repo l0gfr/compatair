@@ -3,14 +3,14 @@ title: "Air comprimé au contact des aliments : rédiger une exigence vérifiab
 seoTitle: "Air comprimé alimentaire : qualité, contact et contrôle"
 description: "Contact avec aliments ou emballages : définissez les contaminants, le point de contrôle et les preuves attendues, sans classe universelle ni label improvisé."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-30
+updatedDate: 2026-10-13
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 4
 reviewStatus: "internal"
 relatedGuides: ["qualite-air-comprime-iso-8573-1", "compresseur-sans-huile-ou-lubrifie", "filtre-charbon-actif-air-comprime-vapeurs-huile"]
-sources: ["https://www.bcas.org.uk/media/Download.aspx?MediaId=80", "https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/174004425_EN.PDF"]
+sources: ["https://bcas.org.uk/wp-content/uploads/2026/07/6.1-Fact-Sheet-701-4-Food-Grade-Compressed-Air.pdf", "https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/174004425_EN.PDF"]
 ---
 
 **L’expression « air alimentaire » ne constitue pas un cahier des charges.** Il faut définir où l’air peut entrer en contact avec le produit ou son emballage, quels dangers sont retenus et comment la qualité sera vérifiée. Le choix d’un compresseur vient ensuite dans cette démarche.
@@ -21,7 +21,7 @@ Ce guide aide la maintenance à préparer le dossier avec le responsable qualit�
 
 Nous proposons un inventaire par point : soufflage sur produit, manipulation d’emballage, actionneur, nettoyage ou autre utilisation réellement présente. Pour chacun, décrivez le trajet possible de l’air et le contact envisagé. Une même centrale peut desservir des usages dont les conséquences d’une contamination diffèrent.
 
-La [fiche BCAS sur l’HACCP](https://www.bcas.org.uk/media/Download.aspx?MediaId=80) met l’air comprimé en relation avec l’analyse des dangers, les mesures de maîtrise, leur surveillance et les enregistrements. Elle qualifie son guide alimentaire de bonne pratique volontaire. Elle ne doit pas être présentée comme une réglementation française imposant une classe unique à toute installation.
+La [fiche BCAS sur l’HACCP](https://bcas.org.uk/wp-content/uploads/2026/07/6.1-Fact-Sheet-701-4-Food-Grade-Compressed-Air.pdf) met l’air comprimé en relation avec l’analyse des dangers, les mesures de maîtrise, leur surveillance et les enregistrements. Elle qualifie son guide alimentaire de bonne pratique volontaire. Elle ne doit pas être présentée comme une réglementation française imposant une classe unique à toute installation.
 
 ## Séparer huile, eau, particules et risque microbiologique
 
@@ -59,7 +59,7 @@ Nous ne proposons pas de fréquence universelle. Le calendrier doit être relié
 
 ## Prévoir l’écart avant qu’il ne survienne
 
-Le [cadre décrit par BCAS](https://www.bcas.org.uk/media/Download.aspx?MediaId=80) inclut les actions correctives et la vérification de leur efficacité. Pour rendre cette exigence opérationnelle, nous proposons de nommer le responsable de décision, les usages à suspendre et les éléments de traçabilité à conserver lorsqu’un contrôle est non conforme.
+Le [cadre décrit par BCAS](https://bcas.org.uk/wp-content/uploads/2026/07/6.1-Fact-Sheet-701-4-Food-Grade-Compressed-Air.pdf) inclut les actions correctives et la vérification de leur efficacité. Pour rendre cette exigence opérationnelle, nous proposons de nommer le responsable de décision, les usages à suspendre et les éléments de traçabilité à conserver lorsqu’un contrôle est non conforme.
 
 Le fournisseur d’air traite la cause technique ; le responsable qualité statue sur le produit et le procédé selon les règles de l’entreprise. Une remise en pression ne doit pas être utilisée comme preuve de remise en conformité sanitaire.
 
@@ -71,7 +71,9 @@ Pour prolonger la préparation technique, le [guide de maintenance du réseau](/
 
 ## Sources et méthode
 
+Adresse et contenu de la fiche BCAS revérifiés le **13 octobre 2026**. Le document porte toujours la mention « POST 1st January 2021 GB » ; son déplacement sur le site ne constitue pas une nouvelle édition ni une mise à jour réglementaire française.
+
 Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
 
-- [BCAS, fiche 701-4GB, HACCP et guide de bonnes pratiques alimentaire](https://www.bcas.org.uk/media/Download.aspx?MediaId=80)
+- [BCAS, fiche 701-4GB, HACCP et guide de bonnes pratiques alimentaire](https://bcas.org.uk/wp-content/uploads/2026/07/6.1-Fact-Sheet-701-4-Food-Grade-Compressed-Air.pdf)
 - [Parker, High quality compressed air, contaminants et traitements](https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/174004425_EN.PDF)

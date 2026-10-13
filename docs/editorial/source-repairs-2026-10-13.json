@@ -2350,6 +2350,25 @@
           "comparison": "identical-whitespace-normalized"
         }
       ]
+    },
+    {
+      "name": "bcas-haccp-701-4gb",
+      "reviewedAt": "2026-10-13T15:00:59.452238+00:00",
+      "incidentRun": "https://github.com/l0gfr/compatair/actions/runs/38410305985",
+      "discoveredAt": "https://bcas.org.uk/knowledge/factsheets/",
+      "discoveryMethod": "Recherche publique Food dans la rubrique Factsheets, via le navigateur interne.",
+      "url": "https://bcas.org.uk/wp-content/uploads/2026/07/6.1-Fact-Sheet-701-4-Food-Grade-Compressed-Air.pdf",
+      "sha256": "a406fe1cf38e59536aec42a2a9332e382dcc9f129d9256c7cc7e09edb1f4486e",
+      "bytes": 235122,
+      "previousUrl": "https://www.bcas.org.uk/media/Download.aspx?MediaId=80",
+      "previousStatus": 404,
+      "httpStatus": 200,
+      "affectedProducts": [],
+      "affectedGuides": [
+        "air-comprime-contact-alimentaire-exigences.md"
+      ],
+      "verification": "Fiche officielle 701-4GB, une page, mention POST 1st January 2021 GB. Texte intégral extrait et page rendue relue : analyse des dangers, surveillance, actions correctives, vérification et enregistrements conservés ; guide de bonnes pratiques volontaire. Le texte correspond à la fiche précédemment citée et encore lisible dans le lecteur web. Aucun SHA binaire antérieur disponible : aucune identité binaire revendiquée. Le déplacement ne vaut ni nouvelle édition ni actualisation du droit français.",
+      "scope": "Correction de quatre liens et de la date de revue du guide ; aucune modification de ses recommandations, aucune admission SEO. L’import documentaire daté du 26 septembre reste inchangé."
     }
   ]
 }
