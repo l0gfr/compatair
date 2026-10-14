@@ -3,14 +3,14 @@ title: "Pistolet peinture qui crache ou jet déformé : diagnostiquer avant de 
 seoTitle: "Pistolet qui crache ou jet déformé : le diagnostic"
 description: "Jet chargé d’un côté, pulvérisation saccadée ou débit irrégulier : séparez défaut de chapeau, alimentation en produit et chute de pression d’air."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-29
+updatedDate: 2026-10-14
 category: "Utiliser"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture", "menuiserie-agencement"]
 readingTime: 5
 reviewStatus: "internal"
 relatedGuides: ["mesurer-pression-dynamique-pistolet-peinture", "tester-contamination-air-avant-peinture", "filtration-air-cabine-peinture-etages"]
-sources: ["https://binks.com/support/resource-library/spray-gun-troubleshooting-preventative-maintenance-guide-sb-2-001/", "https://binks.com/automotive-refinishing-equipment/"]
+sources: ["https://binks.canto.com/direct/document/i8u5a49c7567pdmngte67mhu2d/eK8HUxnEg9Y24l10t6BX4-L9L7Y/original?content-type=application%2Fpdf&name=SB-2-001-English.pdf", "https://binks.com/automotive-refinishing-equipment/"]
 ---
 
 **Un pistolet qui crache ne prouve pas que le compresseur manque de débit.** Un défaut du circuit de produit, du chapeau ou de l’alimentation d’air peut produire un résultat irrégulier. Le diagnostic commence par une description précise du défaut et par des observations reproductibles.
@@ -21,7 +21,7 @@ Travaillez uniquement dans les conditions prévues pour le produit pulvérisé, 
 
 Un jet toujours chargé du même côté est un défaut spatial. Un jet qui alterne phases pleines et interruptions est un défaut temporel. Nous proposons de conserver une photo du motif d’essai et de noter si le défaut apparaît immédiatement, après une durée de travail ou lorsque le godet se vide. Cette distinction évite de modifier simultanément tous les réglages.
 
-Le [tableau DeVilbiss SB-2-001](https://binks.com/support/resource-library/spray-gun-troubleshooting-preventative-maintenance-guide-sb-2-001/) cite notamment, pour une pulvérisation saccadée, une buse mal fixée ou endommagée, un niveau de produit insuffisant, un passage obstrué et des défauts de liaison ou de garniture du circuit de produit. Ces causes possibles ne constituent pas un diagnostic à distance.
+Le [tableau DeVilbiss SB-2-001](https://binks.canto.com/direct/document/i8u5a49c7567pdmngte67mhu2d/eK8HUxnEg9Y24l10t6BX4-L9L7Y/original?content-type=application%2Fpdf&name=SB-2-001-English.pdf) cite notamment, pour une pulvérisation saccadée, une buse mal fixée ou endommagée, un niveau de produit insuffisant, un passage obstrué et des défauts de liaison ou de garniture du circuit de produit. Ces causes possibles ne constituent pas un diagnostic à distance.
 
 <figure class="article-infographic article-infographic--compact">
 <svg viewBox="0 0 520 390" role="img" aria-labelledby="pistolet-peinture-jet-deforme-crachote-diagnostic-title pistolet-peinture-jet-deforme-crachote-diagnostic-desc" xmlns="http://www.w3.org/2000/svg">
@@ -75,5 +75,5 @@ Après entretien du godet, relevez aussi les éléments remontés sur le chemin 
 
 Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
 
-- [DeVilbiss/Binks, SB-2-001, tableaux de dépannage](https://binks.com/support/resource-library/spray-gun-troubleshooting-preventative-maintenance-guide-sb-2-001/)
+- [DeVilbiss/Binks, SB-2-001, tableaux de dépannage](https://binks.canto.com/direct/document/i8u5a49c7567pdmngte67mhu2d/eK8HUxnEg9Y24l10t6BX4-L9L7Y/original?content-type=application%2Fpdf&name=SB-2-001-English.pdf)
 - [Binks, FAQ DeVilbiss Automotive Refinishing](https://binks.com/automotive-refinishing-equipment/)

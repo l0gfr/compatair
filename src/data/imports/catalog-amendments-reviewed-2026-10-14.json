@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-14",
+  "report": "docs/INDEXATION_EDITORIAL_REVIEW_2026_10_14.md",
+  "rows": [
+    {
+      "id": "shinano-si-1052",
+      "brand": "Shinano",
+      "model": "SI-1052",
+      "mpn": "SI-1052",
+      "before": {
+        "editorial": {
+          "overview": "Shinano SI-1052, référence SI-1052. Le tableau fabricant publie 390 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 70 Nm. Vitesse à vide publiée : 13 000 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 13.8 CFM / 6.5 L/s. Conversion du maximum publié : 6.5 × 60 = 390 L/min.",
+            "Référence fabricant : SI-1052.",
+            "Couple maximal publié : 70 Nm.",
+            "Vitesse à vide publiée : 13 000 tr/min.",
+            "Masse publiée : 0,56 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "La Shinano SI-1052 est une visseuse à chocs droite compacte : 0,56 kg, régulateur intégré et 390 L/min de consommation maximale publiée. Son choix doit associer le besoin de serrage au débit disponible à 6,3 bar pendant l’action, sans confondre sa moyenne de catalogue avec le besoin instantané.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 13.8 CFM / 6.5 L/s. Conversion du maximum publié : 6.5 × 60 = 390 L/min.",
+            "Référence fabricant : SI-1052.",
+            "Couple maximal publié : 70 Nm.",
+            "Vitesse à vide publiée : 13 000 tr/min.",
+            "Masse publiée : 0,56 kg.",
+            "Comparaison du même tableau constructeur : la SI-1062 demande au maximum 7,9 L/s, soit 474 L/min, contre 6,5 L/s, soit 390 L/min pour la SI-1052. L’écart calculé est de 84 L/min ; il ne mesure pas une économie par assemblage.",
+            "La SI-1052 pèse 0,56 kg et tourne à vide à 13 000 tr/min ; la SI-1062 pèse 0,79 kg et tourne à 10 000 tr/min. Le couple de travail publié est respectivement 0–60 et 0–70 Nm. Ces repères permettent de demander un essai de serrage adapté, sans substituer le couple maximal à un couple garanti sur l’assemblage."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "La moyenne publiée de 1,1 L/s vaut 66 L/min par conversion, mais le catalogue ne définit pas ici le cycle auquel l’appliquer. Le dimensionnement conserve donc le maximum de 390 L/min ; la durée réelle de vissage et les autres outils simultanés restent à renseigner.",
+            "Avant remplacement d’une SI-1062, vérifier le couple requis et le contrôle final de l’assemblage : le débit moindre de la SI-1052 ne démontre pas une équivalence mécanique."
+          ]
+        }
+      }
+    },
+    {
+      "id": "gentilin-ac200-05",
+      "brand": "Gentilin",
+      "model": "AC200/05",
+      "mpn": "814003001",
+      "before": {
+        "editorial": {
+          "overview": "Gentilin AC200/05, référence 814003001 : cuve de 5 L, pression maximale publiée de 9 bar. Le point documenté le plus élevé en pression fournit 60 L/min à 8 bar.",
+          "verifiedFacts": [
+            "Débit restitué publié : 115 L/min à 5 bar ; 60 L/min à 8 bar.",
+            "Compresseur à pistons sans huile. Puissance moteur publiée : 0,9 kW.",
+            "Débit aspiré : 185 L/min, distinct du débit restitué.",
+            "Masse publiée : 9 kg.",
+            "Alimentation publiée : 230 V, 50 Hz."
+          ],
+          "limitations": [
+            "Les points proviennent de la fiche fabricant, pas d’un essai physique réalisé par CompatAir.",
+            "Le taux de marche est celui déclaré par le fabricant ; les conditions de cycle et de température restent à respecter. La disponibilité commerciale reste à confirmer.",
+            "La disponibilité commerciale et les exigences électriques de l’installation sont à confirmer avant achat."
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Conditions du débit",
+            "value": "Débits restitués publiés séparément à 5.0 bar, 8.0 bar. Le débit aspiré est conservé dans un champ distinct.",
+            "evidenceIds": [
+              "gentilin-814003001-20260926"
+            ]
+          },
+          {
+            "label": "Dimensions publiées",
+            "value": "33x26x41 cm",
+            "evidenceIds": [
+              "gentilin-814003001-20260926"
+            ]
+          },
+          {
+            "label": "Régime de service déclaré",
+            "value": "S3 70%",
+            "evidenceIds": [
+              "gentilin-814003001-20260926"
+            ]
+          },
+          {
+            "label": "Cylindres",
+            "value": "2",
+            "evidenceIds": [
+              "gentilin-814003001-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse de rotation",
+            "value": "1.705,00 tr/min",
+            "evidenceIds": [
+              "gentilin-814003001-20260926"
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "id": "gentilin-814003001-20260926",
+            "sourceUrl": "https://www.gentilinair.com/en/products/ac200-05",
+            "sourceLabel": "Gentilin, fiche technique AC200/05, réf. 814003001",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Débits restitués publiés séparément à 5.0 bar, 8.0 bar. Le débit aspiré est conservé dans un champ distinct."
+          },
+          {
+            "id": "gentilin-814003001-20260926-oiltype-1",
+            "sourceUrl": "https://www.gentilinair.com/docs/41024001-compressed_1775720906.pdf#page=6",
+            "sourceLabel": "Gentilin, notice de la famille DC100/05, p. 6",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La notice liée à cette fiche déclare la compression sans huile : Tipologia Oil-free (utilizzo intensivo)"
+          }
+        ],
+        "fieldSources": {
+          "mpn": [
+            "gentilin-814003001-20260926"
+          ],
+          "tankLiters": [
+            "gentilin-814003001-20260926"
+          ],
+          "maxPressureBar": [
+            "gentilin-814003001-20260926"
+          ],
+          "fadCurve": [
+            "gentilin-814003001-20260926"
+          ],
+          "oilType": [
+            "gentilin-814003001-20260926-oiltype-1"
+          ],
+          "intakeFlowLpm": [
+            "gentilin-814003001-20260926"
+          ],
+          "powerKw": [
+            "gentilin-814003001-20260926"
+          ],
+          "weightKg": [
+            "gentilin-814003001-20260926"
+          ],
+          "voltage": [
+            "gentilin-814003001-20260926"
+          ],
+          "dutyCycle": [
+            "gentilin-814003001-20260926"
+          ]
+        },
+        "dutyCycle": 0.7,
+        "weightKg": 9
+      },
+      "after": {
+        "editorial": {
+          "overview": "Le Gentilin AC200/05 privilégie un petit ensemble de 5 L sous 230 V. Pour choisir son usage, conserver les deux productions documentées : 115 L/min à 5 bar et 60 L/min à 8 bar. La cuve plus grande que celle du C330/03 ne lui donne pas davantage de débit. La fiche et la notice divergent sur le régime de service et la masse ; aucune valeur unique n’est retenue pour ces deux champs.",
+          "verifiedFacts": [
+            "Débit restitué publié : 115 L/min à 5 bar ; 60 L/min à 8 bar.",
+            "Compresseur à pistons sans huile. Puissance moteur publiée : 0,9 kW.",
+            "Débit aspiré : 185 L/min, distinct du débit restitué.",
+            "Alimentation publiée : 230 V, 50 Hz.",
+            "À pression égale de 8 bar, la fiche C330/03 (réf. 810201001) publie 165 L/min avec une cuve de 3 L et 2,2 kW, contre 60 L/min, 5 L et 0,9 kW pour l’AC200/05. La comparaison porte sur la production et les contraintes électriques, pas sur une autonomie déduite du seul volume de cuve.",
+            "La fiche AC200/05 annonce S3 70 % et 9 kg ; la notice EVO 41024001, édition 04/2026, page 6, annonce un cycle de travail de 100 % et 10,5 kg pour AC 200/05. La référence et la révision de la machine livrée doivent être confirmées par Gentilin avant de retenir un taux de marche ou une masse."
+          ],
+          "limitations": [
+            "Débits déclarés par Gentilin, sans essai physique CompatAir. Les 185 L/min de la fiche sont un débit aspiré. La notice emploie aussi le libellé FAD pour 185 L/min, sans pression associée, tout en indiquant séparément 115 L/min d’air rendu à 5 bar : cette valeur de 185 n’est donc pas ajoutée à la courbe de débit restitué.",
+            "Le régime de service est indéterminé tant que la divergence S3 70 % / 100 % n’est pas arbitrée pour la révision livrée. Aucun débit continu soutenable n’est calculé à partir d’un taux choisi entre les deux sources.",
+            "La masse reste indéterminée entre 9 et 10,5 kg. Vérifier la masse et la configuration livrées avant de dimensionner un support ou un transport.",
+            "Pour un besoin supérieur à 60 L/min à 8 bar, ce point constructeur ne suffit pas à une alimentation permanente. Le réservoir peut modifier la durée d’une séquence, mais cette autonomie demande la consommation et la plage de pression utilisable. Disponibilité et installation électrique à confirmer."
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Conditions du débit",
+            "value": "Débits restitués publiés séparément à 5.0 bar, 8.0 bar. Le débit aspiré est conservé dans un champ distinct.",
+            "evidenceIds": [
+              "gentilin-814003001-20260926"
+            ]
+          },
+          {
+            "label": "Dimensions publiées",
+            "value": "33x26x41 cm",
+            "evidenceIds": [
+              "gentilin-814003001-20260926"
+            ]
+          },
+          {
+            "label": "Régime de service : divergence documentaire",
+            "value": "Fiche : S3 70 % ; notice EVO 41024001 (04/2026), p. 6 : 100 %. Aucun taux unique retenu.",
+            "evidenceIds": [
+              "gentilin-814003001-20260926",
+              "gentilin-814003001-notice-20261014"
+            ]
+          },
+          {
+            "label": "Cylindres",
+            "value": "2",
+            "evidenceIds": [
+              "gentilin-814003001-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse de rotation",
+            "value": "1.705,00 tr/min",
+            "evidenceIds": [
+              "gentilin-814003001-20260926"
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "id": "gentilin-814003001-20260926",
+            "sourceUrl": "https://www.gentilinair.com/en/products/ac200-05",
+            "sourceLabel": "Gentilin, fiche technique AC200/05, réf. 814003001",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Débits restitués publiés séparément à 5.0 bar, 8.0 bar. Le débit aspiré est conservé dans un champ distinct."
+          },
+          {
+            "id": "gentilin-814003001-20260926-oiltype-1",
+            "sourceUrl": "https://www.gentilinair.com/docs/41024001-compressed_1775720906.pdf#page=6",
+            "sourceLabel": "Gentilin, notice de la famille DC100/05, p. 6",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La notice liée à cette fiche déclare la compression sans huile : Tipologia Oil-free (utilizzo intensivo)"
+          },
+          {
+            "id": "gentilin-814003001-notice-20261014",
+            "sourceUrl": "https://www.gentilinair.com/docs/41024001-compressed_1775720906.pdf#page=6",
+            "sourceLabel": "Gentilin, notice EVO 41024001, édition 04/2026, tableau AC 200/05, p. 6",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-10-14",
+            "confidence": "A",
+            "notes": "Notice relue : 115 L/min à 5 bar et sans huile confirmés ; cycle 100 % et masse 10,5 kg en désaccord avec la fiche S3 70 % et 9 kg. Ligne FAD 185 sans pression exclue de la courbe."
+          },
+          {
+            "id": "gentilin-c330-comparison-20261014",
+            "sourceUrl": "https://www.gentilinair.com/en/products/c330-03",
+            "sourceLabel": "Gentilin, C330/03 réf. 810201001, comparaison de sélection",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-10-14",
+            "confidence": "A",
+            "notes": "Voisin comparé uniquement : 3 L, 2,2 kW et 165 L/min à 8 bar. Aucune valeur du C330/03 transférée aux caractéristiques AC200/05."
+          }
+        ],
+        "fieldSources": {
+          "mpn": [
+            "gentilin-814003001-20260926"
+          ],
+          "tankLiters": [
+            "gentilin-814003001-20260926"
+          ],
+          "maxPressureBar": [
+            "gentilin-814003001-20260926"
+          ],
+          "fadCurve": [
+            "gentilin-814003001-20260926"
+          ],
+          "oilType": [
+            "gentilin-814003001-20260926-oiltype-1"
+          ],
+          "intakeFlowLpm": [
+            "gentilin-814003001-20260926"
+          ],
+          "powerKw": [
+            "gentilin-814003001-20260926"
+          ],
+          "voltage": [
+            "gentilin-814003001-20260926"
+          ]
+        }
+      }
+    }
+  ]
+}

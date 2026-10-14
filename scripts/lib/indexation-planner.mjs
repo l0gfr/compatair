@@ -130,7 +130,7 @@ function diverseSelection(entries, limit, share) {
 	return selected;
 }
 
-export function planIndexation({ candidates, baseline, previous, policy, now = new Date(), gitSha = 'development', allowRelease = true, onProgress }) {
+export function planIndexation({ candidates, baseline, previous, policy, now = new Date(), gitSha = 'development', allowRelease = true, approvedPaths, onProgress }) {
 	validateBaseline(baseline);
 	validatePolicy(policy);
 	validateManifest(previous, baseline, now);
@@ -150,6 +150,14 @@ export function planIndexation({ candidates, baseline, previous, policy, now = n
 	const selected = [];
 	if (allowRelease && !policy.paused && ready) for (const family of daily ? ['guides', 'compressors', 'tools'] : ['catalog', 'guides']) {
 		selected.push(...diverseSelection(analyzed.filter((entry) => (daily ? candidateQuotaGroup(entry.path) : entry.family) === family && !admitted.has(entry.path) && !held.has(entry.path) && !entry.reason), limits[family], policy.maximumTopicShare));
+	}
+	// Apply explicit editorial approval only after the ordinary quota/diversity
+	// selection. Rejected or deferred pages never select replacement candidates.
+	if (approvedPaths !== undefined) {
+		if (!Array.isArray(approvedPaths) || !approvedPaths.length || new Set(approvedPaths).size !== approvedPaths.length
+			|| approvedPaths.some(path => typeof path !== 'string' || !selected.includes(path))) throw new Error('Approbation hors de la proposition mécanique.');
+		const allowed = new Set(approvedPaths);
+		selected.splice(0, selected.length, ...selected.filter(path => allowed.has(path)));
 	}
 	const newPaths = new Set(selected);
 	const consolidation = consolidateEquivalentAnswers(analyzed.filter(entry => !held.has(entry.path)), new Set([...admitted, ...selected]));

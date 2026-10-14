@@ -23,19 +23,23 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-1052, référence SI-1052. Le tableau fabricant publie 390 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 70 Nm. Vitesse à vide publiée : 13 000 tr/min.",
+		"overview": "La Shinano SI-1052 est une visseuse à chocs droite compacte : 0,56 kg, régulateur intégré et 390 L/min de consommation maximale publiée. Son choix doit associer le besoin de serrage au débit disponible à 6,3 bar pendant l’action, sans confondre sa moyenne de catalogue avec le besoin instantané.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 13.8 CFM / 6.5 L/s. Conversion du maximum publié : 6.5 × 60 = 390 L/min.",
 			"Référence fabricant : SI-1052.",
 			"Couple maximal publié : 70 Nm.",
 			"Vitesse à vide publiée : 13 000 tr/min.",
-			"Masse publiée : 0,56 kg."
+			"Masse publiée : 0,56 kg.",
+			"Comparaison du même tableau constructeur : la SI-1062 demande au maximum 7,9 L/s, soit 474 L/min, contre 6,5 L/s, soit 390 L/min pour la SI-1052. L’écart calculé est de 84 L/min ; il ne mesure pas une économie par assemblage.",
+			"La SI-1052 pèse 0,56 kg et tourne à vide à 13 000 tr/min ; la SI-1062 pèse 0,79 kg et tourne à 10 000 tr/min. Le couple de travail publié est respectivement 0–60 et 0–70 Nm. Ces repères permettent de demander un essai de serrage adapté, sans substituer le couple maximal à un couple garanti sur l’assemblage."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"La moyenne publiée de 1,1 L/s vaut 66 L/min par conversion, mais le catalogue ne définit pas ici le cycle auquel l’appliquer. Le dimensionnement conserve donc le maximum de 390 L/min ; la durée réelle de vissage et les autres outils simultanés restent à renseigner.",
+			"Avant remplacement d’une SI-1062, vérifier le couple requis et le contrôle final de l’assemblage : le débit moindre de la SI-1052 ne démontre pas une équivalence mécanique."
 		]
 	},
 	"specifications": [

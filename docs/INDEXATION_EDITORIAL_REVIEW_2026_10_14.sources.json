@@ -1,0 +1,1365 @@
+{
+  "publicationDay": "2026-10-14",
+  "sourceReleaseSha": "d6cb1ffd8554fcbea37d8b925a14afbbbb65f540",
+  "policyHash": "7d2ab5b10bed659bbbb3af6aaab75ef27b7e3527cc3d686072426907bb748645",
+  "corpusHash": "6b8609322894f23ddc4bc101f5e2e00719465b35dc801faac294afb1a647d9ed",
+  "recordedAt": "2026-10-14T18:48:07.592Z",
+  "pages": [
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-hymair-ash-02/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "13e34bce961a3ad9c98cefc953a8cbc1e8ab2207eecd7ee42718b7f098ce54f2"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-draper-28367/",
+      "decision": "needs-correction",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [
+        "/outils-pneumatiques/pistolet-peinture-hvlp-draper-28366/"
+      ],
+      "sources": [],
+      "finding": "Fiches primaires 28367 et 28366 lues : 28367 = 600 ml, buses 1,3/1,4/2 mm, 43 psi, 1/4 BSP, 579 g. Le besoin d’air reste absent. La page actuelle reste répétitive et mentionne un raccord inconnu alors que 1/4 BSP est publié ; correction distincte nécessaire.",
+      "contentHash": "ff67217e3cb337f6365080c5f77cc4975bbe7add5bc6c0aea4130c92372ab006"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-nettoyage-asturomec-n4-s-50172/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "39a89e117511b01ec9617a4e80f652bb790a1a6a087a86f59d96b51c6feaeb7d"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-astro-pneumatic-hvlp505/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "d400ee46adf62a00b710e510aa12fb4d14601caf734f157cbf3e38b93d2ac0c9"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sata-jet-x-hvlp-1-2-o-basic-1200138/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "526fc959dd7014e8457a18144a130b37ff76ed8967ce16b4ea0e4591831aeea2"
+    },
+    {
+      "path": "/outils-pneumatiques/sableuse-asturomec-ps-e-50090/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "41867ae512bf6cc96de2b6629c1794c4a44be08dd7c6f76648965e0d89c54ae5"
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-taylor-pneumatic-t-6231-1-2-hd-impact-wrench-t-6231/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "a6c78ba8d8992484a8e86ac1a07de77c20f9c2451529bbce552d90cc914b2cd8"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-gav-record-2200-1-hvlp/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "480c65acb7fc7f4a3301b26e20be7d8598d053dfb1fbdc16a3ee8d7a43a016eb"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-prowin-k-528g-10/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "e2ec3b1c3257ac781db75e5bbfda79a2cac3dbc79b102e0a15ac9b5303a582f7"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sagola-3300-gto-hvlp-buse-1-30-10141570/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "7a772875a4d1fec571b81943462eabfc68e11e9ed70d6ca42cc1a210a4869986"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-nettoyage-sip-02143/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "2aea2b806c9e826d45df6abb86110cd1fba22b82e386405f08cfba9f5cf71ff4"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-nettoyage-vorel-81647/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "ea85afb5512d241f1a7adedca261721f50d0814bef3a93316375ee1492e31635"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-nettoyage-yato-yt-23640/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "a3332117d3d41952e79bf8805edd0c1a7175a177b9f02e86e42ce8ae01e9940f"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-graco-airpro-gravity-289005-289005/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "189bbae3f24eb47230d596ccad5ee84c48ce5c740efd5c4531b6cfc35d5b6a59"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sames-kremlin-fpro-g-hvlp-12-lvb-135-797-412/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "667d93e4fd32d027b5ecb1c27834ac5362a3c14af8f59300caa5fb3df5bdb4d6"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sip-02136/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "94921fd3e9f092b0f749b8bf08ab5983c23a15d9c2bf0a75aa890c708a3a3ec3"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-vorel-80902/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "5dbf885d5726df1863a94acaad5f10ee63405a0e6c63c1e6b2c3dd3fc0b25ff4"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-yato-yt-2340/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "2ff53814f36f4acf914e8bc4f78da0aa83ca5395ee25287a296b2452ee049880"
+    },
+    {
+      "path": "/outils-pneumatiques/sableuse-sip-03868/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "d10f0aeaee2746ec59e07b561bec04879a9aaadc44b9fd6e0b4581ce2ed6adfd"
+    },
+    {
+      "path": "/outils-pneumatiques/sableuse-yato-yt-2375/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "af4e2d2845bacaea093715cb13f5bda6fc328db5d1658cb3562f0acb9009f3b8"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-binks-trophy-1465-08hv-c1s/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "deab6c8f77d80877022570ee154175c5fa142beb0c46911105e223f7d1183bae"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-meiji-f410-g13hvlp/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "703a09937ca96f577ec6789bebf70d9af9477a5b86385ad58169a8dd11c68fd3"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-0-5-mm/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "9f9cab70b156b9f05d4cc393f5a13e852c2b24c84b61cd9fa0a7cab46844217e"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-nettoyage-anest-iwata-airgunsa-ae7/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "73f2612350fd4dbd83b19e9bc0baef61793464d01e7545eb7d7934d469f22b88"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-nettoyage-schneider-airsystems-spp-sm/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "9bc792fe8f23274fbbb02c0ef96347c9ac5024cc69ee13322ded8a3c607044ed"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-3-hvlp/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "1eb56c22359d7ac34eb72206652b21978a9797c0b56f1c9cd7ba2a2816ceddd2"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-2-mm/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "587cc54001eb6eb98757e0ca916cad997352719d35cb35973b20892b4bfd7359"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-ani-black-s-hvlp-buse-1-3/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "3d40d3a85f325f4cb3b95c34f505c81b0e4e7193919633dcde38d9eb1cf2f51b"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-prona-r-430-hvlp-11-buse-1-1-hvlp-gravity/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "2bc0716d5d5484847d5a465552e9dbdbeb388e1423f55f721f08ee1ebe8240ca"
+    },
+    {
+      "path": "/outils-pneumatiques/sableuse-anest-iwata-airgunsa-st-buse-5-mm/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "3191a70a797d9a8acfec2f224ae25d1a9d0005f47e312274e10f8770b375930a"
+    },
+    {
+      "path": "/outils-pneumatiques/sableuse-schneider-airsystems-ssp-sav/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "b1c1de7155dcf3d356b3f63aa13d38245018385d3fb787c7fbd029b4713c110a"
+    },
+    {
+      "path": "/guides/bypass-secheur-air-comprime-qualite-maintenance/",
+      "decision": "approved",
+      "contribution": "Décider quels postes peuvent continuer pendant le contournement d’un sécheur et réceptionner la qualité après maintenance.",
+      "neighbors": [
+        "/guides/dimensionner-secheur-frigorifique-ete/",
+        "/guides/maintenance-preventive-reseau-air-comprime/"
+      ],
+      "sources": [
+        "https://www.beko-technologies.us/en-us/products/compressed-air-dryers/energy-saving-refrigerant-dryers/",
+        "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/dp-ra-20-960-r513a_iii_ba_05-317_en_00_00.pdf"
+      ],
+      "finding": "BEKO : option à trois vannes confirmée ; notice RA III relue p. 13, 31, 92. Distingue dérivation du réseau et vanne de gaz chaud scellée du circuit frigorifique. Aucune garantie de point de rosée pendant le bypass. Les voisins portent sur dimensionnement estival et maintenance périodique, pas sur la décision pendant cette interruption.",
+      "contentHash": "93bc39b40889ac86d6ad2d7dd80968170772af1e97aa00fd2e78116bef3d3112"
+    },
+    {
+      "path": "/guides/choisir-distributeur-pneumatique-debit-nominal/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [
+        "/guides/force-verin-pneumatique-diametre-pression/",
+        "/guides/consommation-verin-pneumatique-double-effet/"
+      ],
+      "sources": [
+        "https://www.festo.com/media/catalog/236149_documentation.pdf",
+        "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air10.pdf",
+        "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2019/EN/VTUG-G_EN.PDF"
+      ],
+      "finding": "Contenu et voisins relus ; DOE et VTUG accessibles, conditions HE DIN 1343 / 6→5 bar relues via moteur web. Le PDF HE renvoie 403 lors du contrôle direct. Accès primaire actuel non confirmé, aucune approbation donnée sur le seul cache.",
+      "contentHash": "3992bfd6706eedabb6357f91a73a62f5b4cb3f47cc920876d5c0594c8f37cccd"
+    },
+    {
+      "path": "/guides/compresseur-demonte-pneu-pression-consommation/",
+      "decision": "approved",
+      "contribution": "Distinguer pression requise, consommation par cycle et accessoires simultanés pour choisir le compresseur d’un démonte-pneu.",
+      "neighbors": [
+        "/guides/dimensionner-compresseur-garage-automobile/"
+      ],
+      "sources": [
+        "https://www.corghi.com/en/product/a2025/",
+        "https://www.corghi.com/wp-content/uploads/2026/07/A2025_it_en.pdf"
+      ],
+      "finding": "Corghi A2025 : page et brochure lues, tableau p. 4 contrôlé visuellement. Les 10 bar sont documentés ; aucun volume d’air par cycle n’est inventé. L’inventaire des accessoires et séquences rend la page distincte du bilan global d’un garage. Aucune conversion de pression en débit.",
+      "contentHash": "9a9a3f63294324e31c09463ee4acae018d848765da1070a007cf305618030cea"
+    },
+    {
+      "path": "/guides/compresseur-dentaire-debit-qualite-cabinet/",
+      "decision": "approved",
+      "contribution": "Construire le bilan des équipements d’un cabinet en séparant simultanéité, air du fauteuil et autres consommateurs.",
+      "neighbors": [
+        "/guides/qualite-air-comprime-iso-8573-1/"
+      ],
+      "sources": [
+        "https://www.iso.org/fr/standard/72421.html",
+        "https://www.duerrdental.com/en/products/compressed-air/devices/tornado-compressors/"
+      ],
+      "finding": "Page ISO 22052 ouverte dans le navigateur interne : portée du système hors salle de soins et exclusions réseau/CAD-CAM confirmées ; texte normatif payant non consulté. DÜRR Tornado/FAQ relus : nombre de postes, consommateurs supplémentaires, débit à 5 bar et conditions du site. Le guide ne déduit ni conformité clinique ni classe ISO d’un débit seul ; il complète le guide général sur la qualité.",
+      "contentHash": "ad102da1329d97a86a22e7223699a136a3ebb0c169c6e69962972a74260d8541"
+    },
+    {
+      "path": "/guides/consommation-verin-pneumatique-double-effet/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [
+        "/guides/force-verin-pneumatique-diametre-pression/"
+      ],
+      "sources": [
+        "https://www.festo.com/media/cms/media/mam_upload/market/Festo_General_operating_conditions_en.pdf",
+        "https://www.festo.com/ee/en/s/air-consumption"
+      ],
+      "finding": "Contenu et voisin relus. Calcul DNC 32-500 : 2,815 + 2,419 = 5,234 L/cycle ; 52,34 L/min à 10 cycles et 104,68 à 20, cohérent avec la documentation Festo relue via moteur web. PDF direct et calculateur renvoient 403 : accès primaire actuel non confirmé.",
+      "contentHash": "aebe755ee60fc3f2bba2406fe8ff887c5a56d367fa79a8a54c9ef469eb87e33c"
+    },
+    {
+      "path": "/guides/couper-air-comprime-machine-arret-week-end/",
+      "decision": "approved",
+      "contribution": "Organiser une coupure par zone avec exceptions, état de sécurité et contrôle de remise en route.",
+      "neighbors": [
+        "/guides/detecter-mesurer-fuites-air-comprime/"
+      ],
+      "sources": [
+        "https://press.festo.com/en/technologies-and-products-1/festo-adds-two-new-solutions-to-its-compressed-air-energy-saving-platform?country_code=hk",
+        "https://natural-resources.canada.ca/energy-efficiency/energy-star/energy-efficiency-reference-guide-compressed-air"
+      ],
+      "finding": "Festo C2M/D2M et guide RNCan relus. Maintien de pression de veille, isolation et dépressurisation sont séparés ; une fonction économique ne remplace pas une consignation. Pas de pourcentage d’économie inventé. Le voisin mesure les fuites ; cette page décide quand couper et comment redémarrer.",
+      "contentHash": "730830aedfc1ca432d83eda2c5825bb650c89cf3db3c9704500db6b4efdf8f90"
+    },
+    {
+      "path": "/guides/cuve-compresseur-rouille-condensats-controle/",
+      "decision": "approved",
+      "contribution": "Séparer un condensat coloré d’un diagnostic de paroi et décider de l’arrêt, du dossier documentaire et du contrôle compétent.",
+      "neighbors": [
+        "/guides/entretien-compresseur-purge-condensats/"
+      ],
+      "sources": [
+        "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nupse59f8t4htfeoh3u5gifg65/4010393_11027_001_SPK2.pdf",
+        "https://www.inrs.fr/risques/utilisation-machines/verifications-initiales-periodiques"
+      ],
+      "finding": "Notice Einhell TC-AC 240/50 p. 18 française relue : contrôle corrosion/dommages et interdiction d’utilisation si endommagé. INRS distingue vérifications initiales, périodiques et remise en service, sans fournir un intervalle légal universel des cuves. La purge n’est pas une mesure d’épaisseur ; aucune réparation structurelle artisanale proposée.",
+      "contentHash": "52e3a61537cfbf0b3059edfee4630f8225c600bb978b1d2b8aa9e98002b437be"
+    },
+    {
+      "path": "/guides/filtre-charbon-actif-air-comprime-vapeurs-huile/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [
+        "/guides/filtration-air-cabine-peinture-etages/"
+      ],
+      "sources": [
+        "https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf",
+        "https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/174004425_EN.PDF"
+      ],
+      "finding": "Contenu et voisin relus, distinction aérosols/vapeurs et durée d’adsorption pertinente. Documentation Parker partiellement lisible via moteur web ; deux accès directs refusés, seconde notice non vérifiée intégralement. L’accès n’est pas réputé réparé.",
+      "contentHash": "daa3128e56158a2d8d98480356e60c7d6b0d40265605e6eed869714cea44efaa"
+    },
+    {
+      "path": "/guides/hydrosablage-compresseur-pompe-eau-debit/",
+      "decision": "approved",
+      "contribution": "Additionner séparément les besoins pneumatiques de buse et de pompe, sans compter deux fois la même alimentation.",
+      "neighbors": [
+        "/guides/pompe-membrane-aro-66605-debit-air/"
+      ],
+      "sources": [
+        "https://www.clemcoindustries.com/s/05539m.pdf",
+        "https://www.clemcoindustries.com/s/28452m.pdf"
+      ],
+      "finding": "Clemco 05539 sections 1.7, 2.2 et 2.3.1.2 relues : pompe jusqu’à 30 cfm à 100 psi ; distinguer pression d’alimentation et conditions habituelles. Notice FLEX 28452 relue pour un montage différent, sans transfert de ses valeurs. L’injection directe ne permet pas de supprimer arbitrairement la pompe et ses protections. Le voisin ARO traite la lecture d’une courbe de pompe, pas le bilan complet d’hydrosablage.",
+      "contentHash": "4b60921923769976ebc66fea479830e73fcbb9870dc92d4277e45a262f7da4db"
+    },
+    {
+      "path": "/guides/pistolet-peinture-jet-deforme-crachote-diagnostic/",
+      "decision": "approved",
+      "contribution": "Orienter le diagnostic par forme du jet et intermittence, avant de modifier la pression du compresseur.",
+      "neighbors": [
+        "/guides/mesurer-pression-dynamique-pistolet-peinture/"
+      ],
+      "sources": [
+        "https://binks.canto.com/direct/document/i8u5a49c7567pdmngte67mhu2d/eK8HUxnEg9Y24l10t6BX4-L9L7Y/original?content-type=application%2Fpdf&name=SB-2-001-English.pdf",
+        "https://binks.com/automotive-refinishing-equipment/"
+      ],
+      "finding": "Ancienne entrée Binks 404 remplacée par le PDF officiel SB-2-001 accessible (12 pages). Tableau p. 8 relu : rotation du chapeau, buse, niveau, passage produit et garniture. Les limites de nettoyage/consignation sont explicites. Le voisin traite la mesure dynamique ; cette page relie les symptômes au circuit à examiner.",
+      "contentHash": "d74156bcfc2df326612e1f1442c0e1a924efd9ed496f83da5ff122a3e41c5c2a"
+    },
+    {
+      "path": "/compresseurs/abac-formula-e-11-13-400-50/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "4d22912927be1c44f66416453a6c4dc439099c5c4963985e3ea62fac7f8c8f6a"
+    },
+    {
+      "path": "/compresseurs/fiac-ax-153bd-dry-10-400-50-ce/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "1d9757aab65ce794c7a8ec162a31ffe92f7a8e959cf7d4456f03f0456d8ee416"
+    },
+    {
+      "path": "/outils-pneumatiques/cleco-11pthh352/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "187c03544b706af4476d83e81c77c916592fe52c7bf35651374ca7ce1e042fe7"
+    },
+    {
+      "path": "/outils-pneumatiques/cleco-19pca02q/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "5b5bf6031c70e6eadc2c66ba56b05a8537fae340a1c47dcda7bb2f994615c605"
+    },
+    {
+      "path": "/outils-pneumatiques/cleco-19raa03am2/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "4d944eebf90e1f52b1abfa325f32833cad9fbdc4cb6ce57e1c1ebc2835f2598d"
+    },
+    {
+      "path": "/outils-pneumatiques/cleco-wt-2110-8/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "48cb1d924fe6ae3d30345704771fe6bde9a41a0810fac6a4080c17108f8e43c5"
+    },
+    {
+      "path": "/outils-pneumatiques/master-power-mp4400-15/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "0a7e86b957856cbabc62152b103002b43453bf04f98668bb52eeea31f3c11056"
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-chicago-pneumatic-cp3340-salavel/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "8f6ea4339a14755ff7b918f97b2d344000d5108f2dba2a7c6f8091d9b0e62e95"
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-dynabrade-52715/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "27b91919da4480e43df03a1984357ed9c94369610696d396f01542a639ef67c9"
+    },
+    {
+      "path": "/outils-pneumatiques/perceuse-dynabrade-49135/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "893797d5d3c775c0c5aa05995a1279fc9e6da0f002bba3365c4cb4304d371862"
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-orbitale-dynabrade-53415/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "2b0b3214409a0decf56f7ddadc35551d7ff9450ddbe6ed9f98e61277bd32a158"
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-rotative-dynabrade-50210/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "8c247cd83ecc53bc298ce28228ebf7eec4679c41ec54107a2f48d0c33e055470"
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-vibrante-dynabrade-51350/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "897a5b90217935743ec070dc1ed98490ab2bf71ad7fca730e5979ebc6af98da8"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-1052/",
+      "decision": "approved",
+      "contribution": "Comparer la demande d’air et le besoin de serrage avec la SI-1062 avant un remplacement.",
+      "neighbors": [
+        "/outils-pneumatiques/shinano-si-1062/",
+        "/outils-pneumatiques/shinano-si-1060/"
+      ],
+      "sources": [
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=7",
+        "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43"
+      ],
+      "finding": "Catalogue Shinano 2025, tableau p. PDF 7 contrôlé visuellement et conditions p. PDF 43 relues. SI-1052 : max 6,5 L/s = 390 L/min, moyenne 1,1 L/s = 66 L/min sans cycle qualifié ; SI-1062 : 7,9 L/s = 474 L/min, écart calculé 84. Masse 0,56/0,79 kg et couple de travail 0–60/0–70 Nm distincts du maximum. 6,3 bar à la commande entièrement actionnée. Comparaison de besoins, sans équivalence d’assemblage promise ni moyenne substituée au débit maximal.",
+      "contentHash": "16a6fd25a8e233b8b045304108e79a461b5945b4800ec4d66748849115eb4268"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-1107b/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "b75a31f353a472c35c6906269454c4fc49bc5673723c6f183a1ee3b1f224c05a"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-1305/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "5e21638e1be42067a986d87c7b8d3bc968b5b0d922c411b2775676742bf65c08"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-2001s-6/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "902f734b1fa8dd4781929e538f350cd8ae14977f5189e282f18d66041af44cc1"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-2008ex/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "aa999748696b2c8c5185789554e3052d04d0fbd9530b03cd5d01ce337f8c7f8f"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-2009ex-h/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "13f550748097be17cfcdd93c1905935933a859347d67b3498bbb27c854f5eaba"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-2015ad/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "7a2e143c8f20d1a21ac774b1c69b879046413f506a186a9aa3d3d2cd4a8ac205"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-2033/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "1b826bdcfef0c33458bdfc48aeabb35f35cb2df4ffefad3183ec64c4112c224e"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-2107a/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "6b1d807de742e1fdd207c793ecc26b7f03f28f7f33529241a94f5cbfeb33ed36"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-2700/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "94e38c1af74800e8e81c04f8673a43b6cba53adedd4d11932b2239987c32627d"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-3001a/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "c0ce96d9e451633a50694ced7c120dab0dd2e9096a23955e76e93412e07561b8"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-4120a/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "918f89ee1633f682cc65104d24cd3072afc68d2ef8f41e7252e9cf87276e10f7"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-4300/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "6939220eea19e943ceb30197cb9e327e8cdb37b51de503e0df9d8461335c4724"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-4500/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "234f9e771b7e9d088b5a8b6b46453c8b9d4bf9da19d5aed3ecffea245e7047ab"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-4600/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "eb912005ad74a3524b71dafb9396e38747f2199fdd1fff52cf6479ce70049064"
+    },
+    {
+      "path": "/outils-pneumatiques/tronconneuse-dynabrade-52418/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "b69d517e6af4d02dcee11b607ae6ad193cd37e8b1c8e4d4d47a88ca744659c19"
+    },
+    {
+      "path": "/compresseurs/airpress-24v-pour-camion-dc-24-225-15/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "4d05b2c2b2f96cf51caa99bb683bf27044c54ca2c21b89143200cd6f44f14aff"
+    },
+    {
+      "path": "/compresseurs/gentilin-ac200-05/",
+      "decision": "approved",
+      "contribution": "Comparer la production à pression égale avec C330/03 et rendre les contradictions constructeur inutilisables comme valeurs certaines.",
+      "neighbors": [
+        "/compresseurs/gentilin-c330-03/",
+        "/guides/gentilin-ac200-debit-5-8-bar/"
+      ],
+      "sources": [
+        "https://www.gentilinair.com/en/products/ac200-05",
+        "https://www.gentilinair.com/en/products/c330-03",
+        "https://www.gentilinair.com/docs/41024001-compressed_1775720906.pdf#page=6"
+      ],
+      "finding": "Fiches constructeur et notice EVO 41024001 édition 04/2026 p. 6 relues. 115 L/min à 5 bar, 60 à 8 bar, 5 L, 0,9 kW ; C330/03 165 à 8 bar, 3 L, 2,2 kW. S3 70 %/9 kg sur la fiche contre 100 %/10,5 kg sur la notice : champs dutyCycle/weightKg retirés, conflit expliqué et confirmation de révision requise. Les 185 L/min sans pression de la notice ne sont pas ajoutés à la courbe FAD. Apport propre par rapport au court guide des deux points de débit : arbitrage entre références et conséquences des divergences sur l’usage continu/transport.",
+      "contentHash": "0ba0fb89a4b8462410d03778e8d8afa80e2f251651de2e7ebd8e984a8a8b5599"
+    },
+    {
+      "path": "/outils-pneumatiques/biax-be-1005/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "9020cafd7153e8125c2a883403f4f35c9f5c5c4d258741a813e4c1c7482d4ef2"
+    },
+    {
+      "path": "/outils-pneumatiques/biax-gaa-205/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "52d24e01ddd95d6089cd085c19a49ca1b9509a128042d56ff3be0ca8bf5a7b2a"
+    },
+    {
+      "path": "/compresseurs/aircraft-airbau-480-90-b/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "20149ea760ab5dc511574e82ae0ba1d39f3a3bebc903532567209b0d455d3e36"
+    },
+    {
+      "path": "/compresseurs/black-decker-bd-195-12-nk/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "611c51199c7a54ad05178dfbe4548cdfbf7d2d5a0c803ae83c120e36deb1be0f"
+    },
+    {
+      "path": "/compresseurs/nuair-b2800-100-cm2/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "123c4e0275d3842eaa4492717704a7ded4b249e2616aec8e9217d3c0d5b31a38"
+    },
+    {
+      "path": "/compresseurs/prebena-orkan-250/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "8db1ec589ddcb5832a9ed736a41aeeab0f6ac11399d21e17174ed19935411f41"
+    },
+    {
+      "path": "/compresseurs/stanley-b-251-10-50/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "cc6e21fe65b148d3637f28375338eb8b6e27f20e92b092a9c48c793df1f58d2c"
+    },
+    {
+      "path": "/compresseurs/almig-combi-xp-11-270d/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "aaf29381aa5756c8dc5699bb4b768902797a51d6afea0d7a901992e0ecdc534c"
+    },
+    {
+      "path": "/compresseurs/renner-rs-pro-11-0-310016/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "dfec46f8834f8a3fd42b10c5149d44548958f61cea0cc8838918e08ed186bb96"
+    },
+    {
+      "path": "/compresseurs/boge-s-221-3-10-bar-insonorisation-standard/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "38b9b6787ac5639b441d35c08dcc96ba7bded4f226899ba1c4266e9aeb3f766a"
+    },
+    {
+      "path": "/compresseurs/ceccato-csa-10-ff-sur-cuve-270-l-10-bar/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "6a9b0dfaea978470bbad41df3e0f54ba6f6181ebb3e8850eeeb1017b7ed6a9f4"
+    },
+    {
+      "path": "/compresseurs/kaeser-aircenter-10-secheur-et-cuve-integres-11-bar/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "f12ce6c3ca2b818b5e39c5c375e15d48efef9aa87e58bbd1ea5a37db5b27e29d"
+    },
+    {
+      "path": "/compresseurs/broomwade-elite-11-rsccp1141v4-10-bar/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "c1419e98362fa12c7f51874f2bd6eb565f80d3ccda8b7e1f5070e67707c949c1"
+    },
+    {
+      "path": "/compresseurs/chicago-pneumatic-cpi100-50-hz-10-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "0ffa230d048950e60af55a07c4d3ab8f1a3a6a1b99b21f080b66e5f3e4ea0d6c"
+    },
+    {
+      "path": "/compresseurs/elgi-eg-11-60-hz-10-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "f29d48606646c529ffa754a9b0c88b45e7ea84a3116ef02601a621ec6b789ffd"
+    },
+    {
+      "path": "/compresseurs/ingersoll-rand-r37ne-50-hz-vitesse-variable-nirvana-standard-groupe-fixe-au-sol-sans-secheur-vitesse-variable/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "3838bdad68b4cee952b93a080debcb861caa8121b6e4b3412c3b9d008bd9575f"
+    },
+    {
+      "path": "/compresseurs/atlas-copco-g-15-50-hz-10-bar-pack-au-sol/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "b180e8cf660de1fbead19e02691a3f40d4877993c01aac582d7f0b1b22613462"
+    },
+    {
+      "path": "/compresseurs/rolair-fc229mk103-60-hz-10-342136-bar-groupe-mobile-avec-reservoir-integre/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "5677c4fda2cf2bdaf29d8c91b8343c8c1189a48b0370daa0b4bf1c5704d23a69"
+    },
+    {
+      "path": "/compresseurs/worthington-creyssensac-rlr-1000-50-hz-10-bar-full-feature-sur-reservoir-270-l/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "bdf5c33922b9fc8fc40e84151b09d38beecdd78cc3b41f8999daf94620092f07"
+    },
+    {
+      "path": "/compresseurs/airpol-18/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "ba1b7eab8f650d4b41e1abcc4ab4c2dade186f27e3e39bbdabdd0cf7cbee3de4"
+    },
+    {
+      "path": "/compresseurs/alup-allegretto-11/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "fd4af35074ef8753d8c58dc4a659da790a5dc291e82de87e8562f2bf2642bf22"
+    },
+    {
+      "path": "/compresseurs/bambi-35-20/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "03276f659921e991a1103e758c137ba47915e04f069d304df39d97d47745fa27"
+    },
+    {
+      "path": "/compresseurs/compair-l02-230-v/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "ea3438cc499bd4625d779f9d95e8b291d73e96f238530cb93d15d997a265349b"
+    },
+    {
+      "path": "/compresseurs/ekom-dk50-10s-m/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "171b5fd16450969e12e515b3e8abcc9a7a20319b61a4b89d69f7a55f1d246615"
+    },
+    {
+      "path": "/compresseurs/mark-msa-11/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "ecd5980ca62edf91efbb27fd9fd55c9fdd1755dd478326e888850326b6e4af93"
+    },
+    {
+      "path": "/compresseurs/mattei-blade-12/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "ee1c3241133709221a2aff4beced69ff30873bd36e7475c94aba18a922bb9862"
+    },
+    {
+      "path": "/compresseurs/champion-fm110/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "e57f26a19709c01f4cdecad38b86ba2973f8e614321aaf0d6fe81476b8580562"
+    },
+    {
+      "path": "/compresseurs/dalgakiran-d-10-500-t/",
+      "decision": "deferred",
+      "contribution": "Aucune admission à ce passage.",
+      "neighbors": [],
+      "sources": [],
+      "finding": "Revue éditoriale complète et vérification primaire actuelle non achevées à ce passage. Éligibilité mécanique seule ; aucune approbation ni jugement de qualité définitif. Reste en noindex sans empêcher les pages validées.",
+      "contentHash": "5bff73e5300454b723a2b719fb77a37059c9b31826ce0d256fda604890afb1eb"
+    }
+  ],
+  "acquisitionObservations": [
+    {
+      "id": "c019d76dba5d277a",
+      "url": "https://www.beko-technologies.us/en-us/products/compressed-air-dryers/energy-saving-refrigerant-dryers/",
+      "paths": [
+        "/guides/bypass-secheur-air-comprime-qualite-maintenance/"
+      ],
+      "observedAt": "2026-10-14T18:32:29.165126+00:00",
+      "status": 200,
+      "finalUrl": "https://www.beko-technologies.us/en-us/products/compressed-air-dryers/energy-saving-refrigerant-dryers/",
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "d59bd63ae313dcbc76931e5fa7d8c19e045178be354f824f83cee5e492a8208d",
+      "bytes": 301058,
+      "error": "No module named 'bs4'"
+    },
+    {
+      "id": "42e0f37ed9349820",
+      "url": "https://www.beko-technologies.com/fileadmin/beko-technologies.com/EN/manuals_en/drypoint_ra/dp-ra-20-960-r513a_iii_ba_05-317_en_00_00.pdf",
+      "paths": [
+        "/guides/bypass-secheur-air-comprime-qualite-maintenance/"
+      ],
+      "observedAt": "2026-10-14T18:32:29.166560+00:00",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+    },
+    {
+      "id": "b88ac37168442c68",
+      "url": "https://www.festo.com/media/catalog/236149_documentation.pdf",
+      "paths": [
+        "/guides/choisir-distributeur-pneumatique-debit-nominal/"
+      ],
+      "observedAt": "2026-10-14T18:32:29.166786+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "182193d6d26841d6",
+      "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air10.pdf",
+      "paths": [
+        "/guides/choisir-distributeur-pneumatique-debit-nominal/"
+      ],
+      "observedAt": "2026-10-14T18:32:29.166876+00:00",
+      "status": 200,
+      "finalUrl": "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air10.pdf",
+      "contentType": "application/pdf",
+      "sha256": "11d565d0f94073b32a6e8c7c0ae4d6474124275d1973e274670b482306d463cb",
+      "bytes": 252155
+    },
+    {
+      "id": "20260d134ed45767",
+      "url": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2019/EN/VTUG-G_EN.PDF",
+      "paths": [
+        "/guides/choisir-distributeur-pneumatique-debit-nominal/"
+      ],
+      "observedAt": "2026-10-14T18:32:29.399640+00:00",
+      "status": 200,
+      "finalUrl": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2019/EN/VTUG-G_EN.PDF",
+      "contentType": "application/pdf",
+      "sha256": "dfa766d31dcee82df0f4045cb12d659420d4520591b578a5b91140fb13363665",
+      "bytes": 7211744
+    },
+    {
+      "id": "9fe1d266fecf5a90",
+      "url": "https://www.corghi.com/en/product/a2025/",
+      "paths": [
+        "/guides/compresseur-demonte-pneu-pression-consommation/"
+      ],
+      "observedAt": "2026-10-14T18:32:29.430643+00:00",
+      "status": 200,
+      "finalUrl": "https://www.corghi.com/en/product/a2025/",
+      "contentType": "text/html; charset=UTF-8",
+      "sha256": "a735b9217f9e3b30de68f6962addaa3cff157281dacda4fd6b9d22131d7d27e7",
+      "bytes": 424311,
+      "error": "No module named 'bs4'"
+    },
+    {
+      "id": "f46941f368dc6afc",
+      "url": "https://www.corghi.com/wp-content/uploads/2026/07/A2025_it_en.pdf",
+      "paths": [
+        "/guides/compresseur-demonte-pneu-pression-consommation/"
+      ],
+      "observedAt": "2026-10-14T18:32:30.334649+00:00",
+      "status": 200,
+      "finalUrl": "https://www.corghi.com/wp-content/uploads/2026/07/A2025_it_en.pdf",
+      "contentType": "application/pdf",
+      "sha256": "cac1db6a8320be3da3f052745b406cbe04a9673cdfc61561242382a9df195900",
+      "bytes": 1826378
+    },
+    {
+      "id": "2a7686f9d3d0f860",
+      "url": "https://www.iso.org/fr/standard/72421.html",
+      "paths": [
+        "/guides/compresseur-dentaire-debit-qualite-cabinet/"
+      ],
+      "observedAt": "2026-10-14T18:32:30.339344+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "009c9480f3fd2af6",
+      "url": "https://www.duerrdental.com/en/products/compressed-air/devices/tornado-compressors/",
+      "paths": [
+        "/guides/compresseur-dentaire-debit-qualite-cabinet/"
+      ],
+      "observedAt": "2026-10-14T18:32:30.730222+00:00",
+      "status": 200,
+      "finalUrl": "https://www.duerrdental.com/en/products/compressed-air/devices/tornado-compressors/",
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "73c47644d08dea88ce5e8c5ba6fd5ac1c15a44d6c6753d0cd48b8bfd2f3d3398",
+      "bytes": 208525,
+      "error": "No module named 'bs4'"
+    },
+    {
+      "id": "044348191d9d3014",
+      "url": "https://www.festo.com/media/cms/media/mam_upload/market/Festo_General_operating_conditions_en.pdf",
+      "paths": [
+        "/guides/consommation-verin-pneumatique-double-effet/"
+      ],
+      "observedAt": "2026-10-14T18:32:30.804939+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "758f953e2a3551cf",
+      "url": "https://www.festo.com/ee/en/s/air-consumption",
+      "paths": [
+        "/guides/consommation-verin-pneumatique-double-effet/"
+      ],
+      "observedAt": "2026-10-14T18:32:30.887946+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "7c26b9a6f091b2d3",
+      "url": "https://press.festo.com/en/technologies-and-products-1/festo-adds-two-new-solutions-to-its-compressed-air-energy-saving-platform?country_code=hk",
+      "paths": [
+        "/guides/couper-air-comprime-machine-arret-week-end/"
+      ],
+      "observedAt": "2026-10-14T18:32:31.100525+00:00",
+      "status": 200,
+      "finalUrl": "https://press.festo.com/en/technologies-and-products-1/festo-adds-two-new-solutions-to-its-compressed-air-energy-saving-platform?country_code=hk",
+      "contentType": "text/html; charset=UTF-8",
+      "sha256": "6c2657918d306747c38bed18b883b84a9a38415f5ba0455a7764593299841b83",
+      "bytes": 49226,
+      "error": "No module named 'bs4'"
+    },
+    {
+      "id": "9a40695bd4a0c728",
+      "url": "https://natural-resources.canada.ca/energy-efficiency/energy-star/energy-efficiency-reference-guide-compressed-air",
+      "paths": [
+        "/guides/couper-air-comprime-machine-arret-week-end/"
+      ],
+      "observedAt": "2026-10-14T18:32:31.185074+00:00",
+      "status": 200,
+      "finalUrl": "https://natural-resources.canada.ca/energy-efficiency/energy-star/energy-efficiency-reference-guide-compressed-air",
+      "contentType": "text/html; charset=UTF-8",
+      "sha256": "8d3fc3639f6207cea0d077124bdd12c5a831065fea7fcf2907484b43688fe22f",
+      "bytes": 171392,
+      "error": "No module named 'bs4'"
+    },
+    {
+      "id": "418028acd289aab6",
+      "url": "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nupse59f8t4htfeoh3u5gifg65/4010393_11027_001_SPK2.pdf",
+      "paths": [
+        "/guides/cuve-compresseur-rouille-condensats-controle/"
+      ],
+      "observedAt": "2026-10-14T18:32:31.526320+00:00",
+      "status": 200,
+      "finalUrl": "https://d2c5rvsfjg2eub.cloudfront.net/asset/208244749100/document_nupse59f8t4htfeoh3u5gifg65/4010393_11027_001_SPK2.pdf",
+      "contentType": "application/pdf",
+      "sha256": "7af21f1efb6ac0e93ec4dde3af06bac34efdacf3d177a6e71dce6c9fb2c99356",
+      "bytes": 1721705
+    },
+    {
+      "id": "9eaf92c06f6fdebb",
+      "url": "https://www.inrs.fr/risques/utilisation-machines/verifications-initiales-periodiques",
+      "paths": [
+        "/guides/cuve-compresseur-rouille-condensats-controle/"
+      ],
+      "observedAt": "2026-10-14T18:32:31.927409+00:00",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>"
+    },
+    {
+      "id": "25bed4778a0955eb",
+      "url": "https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf",
+      "paths": [
+        "/guides/filtre-charbon-actif-air-comprime-vapeurs-huile/"
+      ],
+      "observedAt": "2026-10-14T18:32:32.086503+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "4dde03acbe129352",
+      "url": "https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/174004425_EN.PDF",
+      "paths": [
+        "/guides/filtre-charbon-actif-air-comprime-vapeurs-huile/"
+      ],
+      "observedAt": "2026-10-14T18:32:32.514537+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "a3298e3e68943647",
+      "url": "https://www.clemcoindustries.com/s/05539m.pdf",
+      "paths": [
+        "/guides/hydrosablage-compresseur-pompe-eau-debit/"
+      ],
+      "observedAt": "2026-10-14T18:32:32.605549+00:00",
+      "status": 200,
+      "finalUrl": "https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/6854248b0344223ecfada681/1750344845552/05539m.pdf",
+      "contentType": "application/pdf",
+      "sha256": "21a7891a89c521ac2604bed0e406a6c5f222ce4df2bf112d38de13c3838410dd",
+      "bytes": 1059394
+    },
+    {
+      "id": "6155cb19f3e92f58",
+      "url": "https://www.clemcoindustries.com/s/28452m.pdf",
+      "paths": [
+        "/guides/hydrosablage-compresseur-pompe-eau-debit/"
+      ],
+      "observedAt": "2026-10-14T18:32:32.714476+00:00",
+      "status": 200,
+      "finalUrl": "https://static1.squarespace.com/static/65a983af27c8b436f41a7184/t/68542559631a4c19d8972a23/1750345053613/28452m.pdf",
+      "contentType": "application/pdf",
+      "sha256": "f9b899822b409aa9357a1a3dc9bb12781cc16a44b7da1aa35aa41e2d3bf50e18",
+      "bytes": 2816612
+    },
+    {
+      "id": "d0f75efca214424c",
+      "url": "https://binks.com/support/resource-library/spray-gun-troubleshooting-preventative-maintenance-guide-sb-2-001/",
+      "paths": [
+        "/guides/pistolet-peinture-jet-deforme-crachote-diagnostic/"
+      ],
+      "observedAt": "2026-10-14T18:32:35.583082+00:00",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "e3cb16d98bf58350",
+      "url": "https://binks.com/automotive-refinishing-equipment/",
+      "paths": [
+        "/guides/pistolet-peinture-jet-deforme-crachote-diagnostic/"
+      ],
+      "observedAt": "2026-10-14T18:32:37.817789+00:00",
+      "status": 200,
+      "finalUrl": "https://binks.com/automotive-refinishing-equipment/",
+      "contentType": "text/html; charset=UTF-8",
+      "sha256": "a0478bb633a60584366daba0b8f2c5e79b6b464362cf1bee39781f50de9a8d87",
+      "bytes": 666683,
+      "error": "No module named 'bs4'"
+    }
+  ],
+  "additionalAcquisitionObservations": [
+    {
+      "id": "b88ac37168442c68",
+      "url": "https://www.festo.com/media/catalog/236149_documentation.pdf",
+      "method": "curl-system-tls",
+      "at": "2026-10-14T18:35:31.144711+00:00",
+      "exit": 56,
+      "error": "curl: (56) The requested URL returned error: 403\n"
+    },
+    {
+      "id": "044348191d9d3014",
+      "url": "https://www.festo.com/media/cms/media/mam_upload/market/Festo_General_operating_conditions_en.pdf",
+      "method": "curl-system-tls",
+      "at": "2026-10-14T18:35:31.142188+00:00",
+      "exit": 56,
+      "error": "curl: (56) The requested URL returned error: 403\n"
+    },
+    {
+      "id": "25bed4778a0955eb",
+      "url": "https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf",
+      "method": "curl-system-tls",
+      "at": "2026-10-14T18:35:31.263473+00:00",
+      "exit": 56,
+      "error": "curl: (56) The requested URL returned error: 403\n"
+    }
+  ],
+  "acquisitionNote": "Les erreurs bs4 sont des erreurs d’extraction après réponse HTTP 200 ; HTML relus après extraction avec la bibliothèque standard. Les échecs TLS du runtime Python pour BEKO/INRS ont été résolus avec curl et le magasin TLS système, sans désactiver TLS. Les refus Festo/Parker restent non résolus. Le dossier ne prétend pas valider l’inventaire complet.",
+  "captures": [
+    {
+      "file": "009c9480f3fd2af6.html",
+      "sha256": "73c47644d08dea88ce5e8c5ba6fd5ac1c15a44d6c6753d0cd48b8bfd2f3d3398",
+      "bytes": 208525,
+      "savedAt": "2026-10-14T18:32:31.164325+00:00"
+    },
+    {
+      "file": "182193d6d26841d6.pdf",
+      "sha256": "11d565d0f94073b32a6e8c7c0ae4d6474124275d1973e274670b482306d463cb",
+      "bytes": 252155,
+      "savedAt": "2026-10-14T18:32:29.537134+00:00"
+    },
+    {
+      "file": "20260d134ed45767.pdf",
+      "sha256": "dfa766d31dcee82df0f4045cb12d659420d4520591b578a5b91140fb13363665",
+      "bytes": 7211744,
+      "savedAt": "2026-10-14T18:32:30.794539+00:00"
+    },
+    {
+      "file": "418028acd289aab6.pdf",
+      "sha256": "7af21f1efb6ac0e93ec4dde3af06bac34efdacf3d177a6e71dce6c9fb2c99356",
+      "bytes": 1721705,
+      "savedAt": "2026-10-14T18:32:32.063578+00:00"
+    },
+    {
+      "file": "42e0f37ed9349820.pdf",
+      "sha256": "046389bf2151c0ddace12f4f7c1473a860a7adf1f5220b6f535a2d2c5678c6f0",
+      "bytes": 5666529,
+      "savedAt": "2026-10-14T18:34:33.657269+00:00"
+    },
+    {
+      "file": "6155cb19f3e92f58.pdf",
+      "sha256": "f9b899822b409aa9357a1a3dc9bb12781cc16a44b7da1aa35aa41e2d3bf50e18",
+      "bytes": 2816612,
+      "savedAt": "2026-10-14T18:32:33.880794+00:00"
+    },
+    {
+      "file": "7c26b9a6f091b2d3.html",
+      "sha256": "6c2657918d306747c38bed18b883b84a9a38415f5ba0455a7764593299841b83",
+      "bytes": 49226,
+      "savedAt": "2026-10-14T18:32:31.512336+00:00"
+    },
+    {
+      "file": "9a40695bd4a0c728.html",
+      "sha256": "8d3fc3639f6207cea0d077124bdd12c5a831065fea7fcf2907484b43688fe22f",
+      "bytes": 171392,
+      "savedAt": "2026-10-14T18:32:32.513504+00:00"
+    },
+    {
+      "file": "9eaf92c06f6fdebb.html",
+      "sha256": "295a7729cc6072ac972c468044a507827b728aeaa91b7e2f21105f311a9db62f",
+      "bytes": 85948,
+      "savedAt": "2026-10-14T18:34:34.403197+00:00"
+    },
+    {
+      "file": "9fe1d266fecf5a90.html",
+      "sha256": "a735b9217f9e3b30de68f6962addaa3cff157281dacda4fd6b9d22131d7d27e7",
+      "bytes": 424311,
+      "savedAt": "2026-10-14T18:32:30.323877+00:00"
+    },
+    {
+      "file": "a3298e3e68943647.pdf",
+      "sha256": "21a7891a89c521ac2604bed0e406a6c5f222ce4df2bf112d38de13c3838410dd",
+      "bytes": 1059394,
+      "savedAt": "2026-10-14T18:32:33.523036+00:00"
+    },
+    {
+      "file": "binks-SB-2-001.pdf",
+      "sha256": "4429a0ecd7cd65d7831beabafc1ce78a8c544d45b82aae80e658df04546a4d05",
+      "bytes": 1297414,
+      "savedAt": "2026-10-14T18:39:33.789212+00:00"
+    },
+    {
+      "file": "c019d76dba5d277a.html",
+      "sha256": "d59bd63ae313dcbc76931e5fa7d8c19e045178be354f824f83cee5e492a8208d",
+      "bytes": 301058,
+      "savedAt": "2026-10-14T18:32:30.324039+00:00"
+    },
+    {
+      "file": "e3cb16d98bf58350.html",
+      "sha256": "a0478bb633a60584366daba0b8f2c5e79b6b464362cf1bee39781f50de9a8d87",
+      "bytes": 666683,
+      "savedAt": "2026-10-14T18:32:39.111596+00:00"
+    },
+    {
+      "file": "f46941f368dc6afc.pdf",
+      "sha256": "cac1db6a8320be3da3f052745b406cbe04a9673cdfc61561242382a9df195900",
+      "bytes": 1826378,
+      "savedAt": "2026-10-14T18:32:31.013411+00:00"
+    },
+    {
+      "file": "gentilin-ac200-05.html",
+      "sha256": "4c04a0e5bbdb538c317dea6129067b9753ab307ae14ac36a582bfc4fd3491380",
+      "bytes": 99643,
+      "savedAt": "2026-10-14T18:37:47.090087+00:00"
+    },
+    {
+      "file": "gentilin-c330-03.html",
+      "sha256": "88970b9b57ce2100afb491efe04c2babd7a9d9c7bb8efaebd0092a04f76d08b9",
+      "bytes": 101794,
+      "savedAt": "2026-10-14T18:39:02.771269+00:00"
+    },
+    {
+      "file": "gentilin-manual.pdf",
+      "sha256": "e36b5764e9faadbe192bbadfae9668581d0f578e9aacbfd57f599f76d27e9e58",
+      "bytes": 1990955,
+      "savedAt": "2026-10-14T18:39:03.216215+00:00"
+    },
+    {
+      "file": "shinano2025.pdf",
+      "sha256": "03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b",
+      "bytes": 13390181,
+      "savedAt": "2026-10-14T18:37:45.956585+00:00"
+    }
+  ]
+}

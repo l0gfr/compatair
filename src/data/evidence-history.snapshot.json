@@ -723092,7 +723092,45 @@
         "confidence": "B",
         "notes": "SHA-256 7d2121c4aeb36c31bde784ba6ddcebee83686fb4883c6b63005d0e569613304c. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé. Édition 09.2026 : ligne de référence, consommation publiée et pression page 345 recoupées le 13 octobre ; caractéristiques et incertitudes conservées."
       }
+    },
+    {
+      "id": "added:gentilin-ac200-05:gentilin-814003001-notice-20261014:2026-10-14",
+      "evidenceId": "gentilin-814003001-notice-20261014",
+      "productId": "gentilin-ac200-05",
+      "productType": "compressor",
+      "occurredAt": "2026-10-14",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a0f4c9f4eddca20afe9a6e5d9bb09b457a2006a49e7873ec3b05a841718fdf61",
+      "snapshot": {
+        "id": "gentilin-814003001-notice-20261014",
+        "sourceUrl": "https://www.gentilinair.com/docs/41024001-compressed_1775720906.pdf#page=6",
+        "sourceLabel": "Gentilin, notice EVO 41024001, édition 04/2026, tableau AC 200/05, p. 6",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-14",
+        "confidence": "A",
+        "notes": "Notice relue : 115 L/min à 5 bar et sans huile confirmés ; cycle 100 % et masse 10,5 kg en désaccord avec la fiche S3 70 % et 9 kg. Ligne FAD 185 sans pression exclue de la courbe."
+      }
+    },
+    {
+      "id": "added:gentilin-ac200-05:gentilin-c330-comparison-20261014:2026-10-14",
+      "evidenceId": "gentilin-c330-comparison-20261014",
+      "productId": "gentilin-ac200-05",
+      "productType": "compressor",
+      "occurredAt": "2026-10-14",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b06c9bc3ede4baec968668f8a04e6966abfa70f75e499d1e2515570c8f870942",
+      "snapshot": {
+        "id": "gentilin-c330-comparison-20261014",
+        "sourceUrl": "https://www.gentilinair.com/en/products/c330-03",
+        "sourceLabel": "Gentilin, C330/03 réf. 810201001, comparaison de sélection",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-14",
+        "confidence": "A",
+        "notes": "Voisin comparé uniquement : 3 L, 2,2 kW et 165 L/min à 8 bar. Aucune valeur du C330/03 transférée aux caractéristiques AC200/05."
+      }
     }
   ],
-  "historyVersion": "bc918cd1297a8f17bb3963cb0eb9dd31259cb597b4c44e2fd21a50428ca8f6db"
+  "historyVersion": "1de413f96f9a2e62e2d0a45532193ae27f93dcb3ee5681b537350e1abb34a297"
 }

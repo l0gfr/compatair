@@ -1,4 +1,4 @@
-import { chmodSync, copyFileSync, existsSync, mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { chmodSync, copyFileSync, existsSync, mkdtempSync, mkdirSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { execFileSync } from 'node:child_process';
@@ -100,6 +100,8 @@ describe('résolution du runtime Node du hook pre-push', () => {
 		const pathDirectory = join(root, 'path');
 		fakeNode(pathDirectory, 26);
 		fakePnpm(pathDirectory);
+		// Use the same installed Git as repository setup, not a platform SDK shim.
+		symlinkSync(execFileSync('which', ['git'], { encoding: 'utf8' }).trim(), join(pathDirectory, 'git'));
 		const node24 = fakeNode(join(root, 'node24'), 24);
 		const output = execFileSync('/bin/bash', ['.githooks/pre-push'], {
 			cwd: root,

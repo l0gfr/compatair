@@ -125,3 +125,57 @@ describe('positive editorial admission at build and deployment', () => {
 		]) expect(() => validateEditorialReviews(bad)).toThrow();
 	});
 });
+
+describe('partial editorial approval without replacement admissions', () => {
+	const partialPages = () => review.pages.map((page, index) => ({ ...page, decision: index === 0 ? 'approved' : index === 1 ? 'needs-correction' : 'deferred', note: index === 0 ? 'Source primaire et voisin relus.' : 'Aucune approbation : revue ou correction encore nécessaire.' }));
+	const partialRegistry = () => registry({ status: 'partial', pages: partialPages() });
+	it('admits only explicitly approved pages and preserves every other candidate in the queue', () => {
+		const result = planReviewedIndexation(options, partialRegistry());
+		expect(result.released).toBe(1);
+		expect(result.manifest.batches[0].paths).toEqual([review.pages[0].path]);
+		expect(result.manifest.pending).toHaveLength(candidates.length - 1);
+		expect(result.report.find(page => page.path === review.pages[1].path).reason).toBe('editorial-review-needs-correction');
+		expect(result.report.find(page => page.path === review.pages[2].path).reason).toBe('editorial-review-deferred');
+		expect(result.manifest.batches[0].dailyLimits).toEqual(policy.dailyLimits);
+		expect(result.editorialReview.pages).toEqual([{ path: review.pages[0].path, contentHash: review.pages[0].contentHash }]);
+		expect(() => assertReviewedAdmissions(result, previous, partialRegistry(), policy, now)).not.toThrow();
+	});
+	it('requires the complete proposed list and its hashes even for deferred pages', () => {
+		for (const changes of [
+			{ pages: partialPages().slice(0, -1) },
+			{ pages: partialPages().map((page, index) => index === 1 ? { ...page, contentHash: 'f'.repeat(64) } : page) },
+			{ corpusHash: 'f'.repeat(64) },
+		]) expect(planReviewedIndexation(options, registry({ status: 'partial', pages: partialPages(), ...changes })).released).toBe(0);
+	});
+	it('never substitutes an out-of-proposal page for a declined page', () => {
+		const outside = candidates.find(candidate => !proposed.includes(candidate.path));
+		const pages = partialPages().map((page, index) => index === 0 ? { ...page, path: outside.path, contentHash: outside.value.contentHash } : page);
+		expect(planReviewedIndexation(options, registry({ status: 'partial', pages })).released).toBe(0);
+		expect(() => planIndexation({ ...options, approvedPaths: [outside.path] })).toThrow('hors de la proposition');
+		for (const approvedPaths of [[], [proposed[0], proposed[0]], 'all']) expect(() => planIndexation({ ...options, approvedPaths })).toThrow();
+	});
+	it('rejects an all-deferred or all-approved partial declaration and mixed full approval', () => {
+		for (const pages of [partialPages().map(page => ({ ...page, decision: 'deferred' })), review.pages]) {
+			expect(() => validateEditorialReviews(registry({ status: 'partial', pages }))).toThrow('partiel');
+		}
+		expect(() => validateEditorialReviews(registry({ pages: partialPages() }))).toThrow('non approuvée');
+	});
+	it('does not admit a rejected or unreviewed page when the deployment artifact is altered', () => {
+		for (const index of [1, 2]) {
+			const result = planReviewedIndexation(options, partialRegistry());
+			result.manifest.batches[0].paths.push(review.pages[index].path);
+			result.editorialReview.pages.push({ path: review.pages[index].path, contentHash: review.pages[index].contentHash });
+			expect(() => assertReviewedAdmissions(result, previous, partialRegistry(), policy, now)).toThrow('sans revue');
+		}
+	});
+	it('retains the day, source, policy, paused and offline guards for partial publication', () => {
+		for (const changes of [{ sourceReleaseSha: 'c'.repeat(40) }, { policyHash: 'd'.repeat(64) }, { reviewedAt: '2026-10-08T19:00:00Z' }]) {
+			expect(planReviewedIndexation(options, registry({ status: 'partial', pages: partialPages(), ...changes })).released).toBe(0);
+		}
+		const published = planReviewedIndexation(options, partialRegistry());
+		expect(planReviewedIndexation({ ...options, previous: published.manifest }, partialRegistry()).released).toBe(0);
+		expect(planReviewedIndexation({ ...options, allowRelease: false }, partialRegistry()).released).toBe(0);
+		expect(planReviewedIndexation({ ...options, policy: { ...policy, paused: true } }, partialRegistry()).released).toBe(0);
+		expect(planReviewedIndexation({ ...options, now: new Date('2026-10-08T22:00:00Z') }, partialRegistry()).released).toBe(0);
+	});
+});
