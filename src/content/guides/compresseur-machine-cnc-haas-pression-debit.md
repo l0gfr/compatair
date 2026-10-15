@@ -17,9 +17,8 @@ relatedGuides:
     "installer-reseau-air-comprime-atelier"
   ]
 sources:
-  - https://www.haascnc.com/owners/pre-install-guide/mills-pre-install/VF-4.html
-  - https://www.heidenhain.com/fileadmin/pdf/en/01_Products/Produktinformationen/PI_DA400_ID894509_en.pdf
-updatedDate: 2026-10-03
+  - https://haascnc.com/pre-install-guide/vf-4
+updatedDate: 2026-10-15
 ---
 
 **Le compresseur d’une machine CNC se dimensionne à partir du guide de préinstallation du modèle exact, puis du scénario réel de l’atelier.** Une pression minimale ne donne pas, à elle seule, le débit nécessaire. Les accessoires et les autres consommateurs doivent apparaître dans le bilan.
@@ -28,7 +27,7 @@ Le cas ci-dessous concerne la Haas VF-4 telle que présentée dans la source con
 
 ## Lire ensemble les indications de la VF-4
 
-Le [guide de préinstallation Haas VF-4](https://www.haascnc.com/owners/pre-install-guide/mills-pre-install/VF-4.html) publie **113,0 L/min à 6,9 bar**, avec l’équivalent **4 scfm à 100 psi**, et une pression minimale distincte de **5,5 bar**, soit **80 psi** dans son tableau. Haas demande une alimentation propre et sèche. Le document donne aussi des prescriptions de compresseur et de réserve, dont un service continu, à appliquer dans le contexte du guide complet.
+Le [guide de préinstallation Haas VF-4](https://haascnc.com/pre-install-guide/vf-4) publie **113,0 L/min à 6,9 bar**, avec l’équivalent **4 scfm à 100 psi**, et une pression minimale distincte de **5,5 bar**, soit **80 psi** dans son tableau. Haas demande une alimentation propre et sèche. Le document donne aussi des prescriptions de compresseur et de réserve, dont un service continu, à appliquer dans le contexte du guide complet.
 
 Ces lignes ne permettent pas de déplacer librement le débit publié vers une autre pression. Elles ne donnent pas non plus la consommation exacte de chaque changement d’outil. Gardez le point de débit et la limite minimale comme deux informations différentes.
 
@@ -64,7 +63,7 @@ Nous proposons de tenir un inventaire séparé des fonctions machine, des access
 
 Si aucune consommation n’est disponible pour une option, marquez-la comme inconnue. Ne remplacez pas cette absence par un forfait ajouté arbitrairement à la VF-4.
 
-L’air de barrage des codeurs peut avoir sa propre condition de traitement. HEIDENHAIN demande un sécheur supplémentaire avant le DA400 si la pression est inférieure à 6 bar et que l’air est saturé en vapeur d’eau. Le [cas DA400 : humidité en entrée](/guides/heidenhain-da400-air-entree-humide-six-bar/) distingue cette condition des classes d’air prévues pour les codeurs. [HEIDENHAIN DA400, information produit, février 2025](https://www.heidenhain.com/fileadmin/pdf/en/01_Products/Produktinformationen/PI_DA400_ID894509_en.pdf#page=2).
+Le traitement de l’air de barrage des codeurs demande une vérification propre à l’équipement installé. Le [dossier DA400](/guides/heidenhain-da400-air-entree-humide-six-bar/) traite ce périmètre séparément ; les valeurs de préinstallation de la VF-4 ne s’y substituent pas.
 
 ## Organiser une réception représentative
 
@@ -84,4 +83,4 @@ Pour un incident de changement d’outil, le [cas Haas TRP et alarmes 130 ou 131
 
 Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
 
-- [Haas Automation, guide de préinstallation VF-4](https://www.haascnc.com/owners/pre-install-guide/mills-pre-install/VF-4.html)
+- [Haas Automation, guide de préinstallation VF-4](https://haascnc.com/pre-install-guide/vf-4)

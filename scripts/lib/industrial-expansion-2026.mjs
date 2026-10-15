@@ -1,3 +1,4 @@
+import { applyReviewedOctober15Amendment } from './reviewed-catalog-amendments-2026-10-15.mjs';
 import { applyReviewedCatalogAmendment } from './reviewed-catalog-amendments-2026-10-14.mjs';
 import { createMultiBrandCompressor, createMultiBrandTool } from './multi-brand-catalog-import.mjs';
 import { createCpPdfToolDraft } from './cp-pdf-catalog-import.mjs';
@@ -47,7 +48,7 @@ export function buildIndustrialExpansion({ industrial, cp, dynabrade }) {
 			same(row.workingPressureBar, { min: bar, typical: bar, max: bar }, 'Pression Cleco différente de la note de page');
 			if (row.page === 77 || (row.page === 75 && row.mpn.startsWith('34RAA'))) throw new Error('Référence exclue pour contradiction entre éditions');
 		}
-		return applyReviewedCatalogAmendment(createMultiBrandTool(industrial, row));
+		return applyReviewedOctober15Amendment(applyReviewedCatalogAmendment(createMultiBrandTool(industrial, row)));
 	}), ...cp.rows.map(row => createCpPdfToolDraft(cp, row)), ...dynabrade.rows.map(row => createDynabradeToolDraft(dynabrade, row))];
 	const products = [...compressors, ...tools];
 	for (const key of [p => p.id, p => p.slug, p => `${p.brand}|${p.mpn}`]) if (new Set(products.map(key)).size !== products.length) throw new Error('Référence en double dans le lot');

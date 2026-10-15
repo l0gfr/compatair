@@ -23,18 +23,21 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-4600, référence SI-4600. Le tableau fabricant publie 558 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Largeur de coupe 4,5 mm ; capacité publiée 1,6 mm ; vitesse à vide publiée 2 600 tr/min. Masse publiée : 1 kg.",
+		"overview": "La grignoteuse SI-4600 et la cisaille SI-4500 affichent toutes deux une capacité acier de 1,6 mm, mais leurs masses, largeurs de coupe et demandes d’air diffèrent. Pour la SI-4600, conserver le maximum de 558 L/min à 6,3 bar pendant l’action.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 19.8 CFM / 9.3 L/s, soit 558 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
 			"Référence fabricant : SI-4600.",
 			"Version et équipement : Largeur de coupe 4,5 mm ; capacité publiée 1,6 mm ; vitesse à vide publiée 2 600 tr/min.",
-			"Masse publiée : 1 kg."
+			"Masse publiée : 1 kg.",
+			"La SI-4600 affiche 4,5 mm de largeur de coupe et 1,00 kg, contre 5,4 mm et 1,26 kg pour la cisaille SI-4500. Le type d’outil et le parcours de coupe doivent donc accompagner la comparaison de débit.",
+			"Les 9,3 L/s maximaux de la SI-4600 deviennent 558 L/min ; les 9,9 L/s de la SI-4500 deviennent 594 L/min. Les 36 L/min d’écart ne démontrent ni un temps de coupe plus court ni une économie par pièce."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"La valeur de 1,6 mm concerne l’acier dans le tableau fabricant. Faire préciser l’alliage, l’épaisseur et le tracé avant de choisir les outils de coupe ; la moyenne de consommation ne remplace pas le maximum pour l’alimentation."
 		]
 	},
 	"specifications": [

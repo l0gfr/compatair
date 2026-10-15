@@ -1,0 +1,880 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-15",
+  "rows": [
+    {
+      "id": "shinano-si-1060",
+      "brand": "Shinano",
+      "model": "SI-1060",
+      "mpn": "SI-1060",
+      "before": {
+        "editorial": {
+          "overview": "Shinano SI-1060, référence SI-1060. Le tableau fabricant publie 492 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 65 Nm. Vitesse à vide publiée : 11 000 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 17.4 CFM / 8.2 L/s. Conversion du maximum publié : 8.2 × 60 = 492 L/min.",
+            "Référence fabricant : SI-1060.",
+            "Couple maximal publié : 65 Nm.",
+            "Vitesse à vide publiée : 11 000 tr/min.",
+            "Masse publiée : 0,87 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "La SI-1060 est une visseuse à chocs droite pour laquelle le choix du compresseur doit être recoupé avec le couple de travail : son maximum de consommation est de 492 L/min à 6,3 bar en fonctionnement. Le même catalogue permet de comparer la SI-1062 avant un remplacement.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 17.4 CFM / 8.2 L/s. Conversion du maximum publié : 8.2 × 60 = 492 L/min.",
+            "Référence fabricant : SI-1060.",
+            "Couple maximal publié : 65 Nm.",
+            "Vitesse à vide publiée : 11 000 tr/min.",
+            "Masse publiée : 0,87 kg.",
+            "Face à la SI-1062 du même tableau, la SI-1060 demande 8,2 L/s contre 7,9 L/s au maximum, soit 492 contre 474 L/min : 18 L/min de plus par conversion. Son couple de travail publié est pourtant de 0–50 Nm, contre 0–70 Nm pour la SI-1062.",
+            "La SI-1060 tourne à vide à 11 000 tr/min et pèse 0,87 kg ; la SI-1062 affiche 10 000 tr/min et 0,79 kg. Le seul débit disponible ne permet donc pas de conclure à leur interchangeabilité."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "La moyenne de catalogue de la SI-1060, 1,4 L/s soit 84 L/min, ne définit pas le cycle réel de vissage. Conserver 492 L/min pour la demande maximale et faire valider le serrage sur l’assemblage avant une substitution."
+          ]
+        }
+      }
+    },
+    {
+      "id": "shinano-si-2008ex",
+      "brand": "Shinano",
+      "model": "SI-2008EX",
+      "mpn": "SI-2008EX",
+      "before": {
+        "editorial": {
+          "overview": "Shinano SI-2008EX, référence SI-2008EX. Le tableau fabricant publie 474 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Plateau 50 mm ; broche M6 × 1 ; rotation simple. Vitesse à vide publiée : 14500 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 16.8 CFM / 7.9 L/s, soit 474 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-2008EX.",
+            "Version et équipement : Plateau 50 mm ; broche M6 × 1 ; rotation simple.",
+            "Vitesse à vide publiée : 14500 tr/min.",
+            "Masse publiée : 0.57 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "La SI-2008EX est une mini-ponceuse à rotation simple avec plateau de 50 mm et broche M6 × 1. Son besoin maximal de 474 L/min permet de préparer l’alimentation, mais son mouvement doit aussi être distingué de la double action de la SI-2107A.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 16.8 CFM / 7.9 L/s, soit 474 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-2008EX.",
+            "Version et équipement : Plateau 50 mm ; broche M6 × 1 ; rotation simple.",
+            "Vitesse à vide publiée : 14500 tr/min.",
+            "Masse publiée : 0.57 kg.",
+            "La SI-2107A du même tableau utilise également un plateau de 50 mm et une broche M6 × 1, avec une orbite de 3 mm ; la SI-2008EX est à rotation simple. Le filetage et le diamètre communs ne prouvent donc pas une finition équivalente.",
+            "Les maxima publiés sont de 7,9 L/s pour la SI-2008EX et de 6,5 L/s pour la SI-2107A, soit 474 et 390 L/min : écart calculé de 84 L/min. Les vitesses à vide sont respectivement de 14 500 et 14 000 tr/min."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "La comparaison de consommation maximale ne mesure ni le temps nécessaire à la même finition ni une économie d’énergie par pièce. Faire valider l’abrasif, le mouvement et le résultat attendu ; ne pas dimensionner sur la seule moyenne de catalogue."
+          ]
+        }
+      }
+    },
+    {
+      "id": "shinano-si-2107a",
+      "brand": "Shinano",
+      "model": "SI-2107A",
+      "mpn": "SI-2107A",
+      "before": {
+        "editorial": {
+          "overview": "Shinano SI-2107A, référence SI-2107A. Le tableau fabricant publie 390 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Plateau 50 mm ; orbite 3 mm ; broche M6 × 1. Vitesse à vide publiée : 14000 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 13.8 CFM / 6.5 L/s, soit 390 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-2107A.",
+            "Version et équipement : Plateau 50 mm ; orbite 3 mm ; broche M6 × 1.",
+            "Vitesse à vide publiée : 14000 tr/min.",
+            "Masse publiée : 0.55 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "La SI-2107A associe un plateau de 50 mm à une double action avec orbite de 3 mm. Pour un poste de finition, son maximum de 390 L/min à 6,3 bar doit être examiné avec le mouvement demandé et l’accessoire, pas avec le seul diamètre du plateau.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 13.8 CFM / 6.5 L/s, soit 390 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-2107A.",
+            "Version et équipement : Plateau 50 mm ; orbite 3 mm ; broche M6 × 1.",
+            "Vitesse à vide publiée : 14000 tr/min.",
+            "Masse publiée : 0.55 kg.",
+            "Le catalogue place la SI-2107A et la SI-2008EX dans le même tableau : broche M6 × 1 et plateau de 50 mm pour les deux, mais double action avec orbite de 3 mm pour la première et rotation simple pour la seconde.",
+            "La SI-2107A affiche 6,5 L/s au maximum, soit 390 L/min, contre 7,9 L/s, soit 474 L/min pour la SI-2008EX. L’écart calculé de 84 L/min porte sur le débit maximal publié, sans présumer le temps de travail nécessaire."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "Une alimentation suffisante pour 390 L/min ne valide pas un remplacement de la SI-2008EX : le mouvement et le résultat de finition sont différents. Vérifier aussi l’accessoire exact et la pression à l’outil pendant l’action."
+          ]
+        }
+      }
+    },
+    {
+      "id": "shinano-si-2009ex-h",
+      "brand": "Shinano",
+      "model": "SI-2009EX-H",
+      "mpn": "SI-2009EX-H",
+      "before": {
+        "editorial": {
+          "overview": "Shinano SI-2009EX-H, référence SI-2009EX-H. Le tableau fabricant publie 354 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Rotation simple ; plateau 75 mm ; broche femelle 5/16-24 UNF ; version rapide. Vitesse à vide publiée : 5000 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 12.6 CFM / 5.9 L/s, soit 354 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-2009EX-H.",
+            "Version et équipement : Rotation simple ; plateau 75 mm ; broche femelle 5/16-24 UNF ; version rapide.",
+            "Vitesse à vide publiée : 5000 tr/min.",
+            "Masse publiée : 0.68 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "Le suffixe H de la SI-2009EX-H désigne ici la version rapide de la polisseuse à rotation simple : 5 000 tr/min à vide et 354 L/min au maximum publié. Il faut identifier cette version avant de reprendre le dimensionnement d’une SI-2009EX.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 12.6 CFM / 5.9 L/s, soit 354 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-2009EX-H.",
+            "Version et équipement : Rotation simple ; plateau 75 mm ; broche femelle 5/16-24 UNF ; version rapide.",
+            "Vitesse à vide publiée : 5000 tr/min.",
+            "Masse publiée : 0.68 kg.",
+            "La SI-2009EX sans H affiche 2 600 tr/min et 7,1 L/s au maximum ; la SI-2009EX-H affiche 5 000 tr/min et 5,9 L/s. Les conversions donnent 426 et 354 L/min : 72 L/min d’écart malgré la vitesse plus élevée de la version H.",
+            "Les deux versions partagent le plateau publié de 75 mm, la broche femelle 5/16-24 UNF et une masse de 0,68 kg. Ces interfaces communes n’autorisent pas à transférer automatiquement une procédure de polissage ou un accessoire à une autre vitesse."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "Le débit inférieur de la version H ne mesure pas une économie sur une même pièce. Confirmer les limites de vitesse du plateau et du consommable ; les 5 000 tr/min sont une vitesse à vide, pas une vitesse garantie en charge."
+          ]
+        }
+      }
+    },
+    {
+      "id": "shinano-si-4300",
+      "brand": "Shinano",
+      "model": "SI-4300",
+      "mpn": "SI-4300",
+      "before": {
+        "editorial": {
+          "overview": "Shinano SI-4300, référence SI-4300. Le tableau fabricant publie 546 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Disque 63 mm ; oscillation 2,8° ; cadence 20 000 oscillations/min. Masse publiée : 0.89 kg.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 19.2 CFM / 9.1 L/s, soit 546 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-4300.",
+            "Version et équipement : Disque 63 mm ; oscillation 2,8° ; cadence 20 000 oscillations/min.",
+            "Masse publiée : 0.89 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "La SI-4300 est un outil de coupe oscillant pour carrosserie : disque de 63 mm, angle de 2,8° et 20 000 oscillations/min à vide. Son maximum de 546 L/min ne doit pas être rapproché d’une scie alternative comme si les mouvements et les lames étaient identiques.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 19.2 CFM / 9.1 L/s, soit 546 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-4300.",
+            "Version et équipement : Disque 63 mm ; oscillation 2,8° ; cadence 20 000 oscillations/min.",
+            "Masse publiée : 0.89 kg.",
+            "Le tableau distingue la SI-4300 de la SI-4710 : oscillation de 2,8° et disque de 63 mm d’un côté, course alternative de 10 mm et 10 000 coups/min de l’autre. Les 20 000 oscillations/min de la SI-4300 ne sont pas des tours/min.",
+            "La SI-4300 demande au maximum 9,1 L/s, soit 546 L/min, contre 2,8 L/s, soit 168 L/min pour la SI-4710. L’écart calculé de 378 L/min décrit deux demandes d’air, sans valider le même travail de coupe."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "Ne pas déduire une épaisseur de tôle admissible des seules profondeurs montrées pour les disques de la SI-4300. La lame, sa destination, la géométrie et le matériau à couper doivent être confirmés avant choix."
+          ]
+        }
+      }
+    },
+    {
+      "id": "shinano-si-4500",
+      "brand": "Shinano",
+      "model": "SI-4500",
+      "mpn": "SI-4500",
+      "before": {
+        "editorial": {
+          "overview": "Shinano SI-4500, référence SI-4500. Le tableau fabricant publie 594 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Largeur de coupe 5,4 mm ; capacité publiée 1,6 mm ; vitesse à vide publiée 2 000 tr/min. Masse publiée : 1.26 kg.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 21 CFM / 9.9 L/s, soit 594 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-4500.",
+            "Version et équipement : Largeur de coupe 5,4 mm ; capacité publiée 1,6 mm ; vitesse à vide publiée 2 000 tr/min.",
+            "Masse publiée : 1.26 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "La SI-4500 est une cisaille à comparer à la grignoteuse SI-4600 selon la coupe à réaliser. Sa consommation maximale de 594 L/min et sa largeur de coupe publiée de 5,4 mm décrivent une autre configuration que les 558 L/min et 4,5 mm de la SI-4600.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 21 CFM / 9.9 L/s, soit 594 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-4500.",
+            "Version et équipement : Largeur de coupe 5,4 mm ; capacité publiée 1,6 mm ; vitesse à vide publiée 2 000 tr/min.",
+            "Masse publiée : 1.26 kg.",
+            "Pour la SI-4500 et la SI-4600, le tableau publie une capacité de coupe acier de 1,6 mm. Il distingue une cisaille de 1,26 kg et une grignoteuse de 1,00 kg ; cette capacité commune ne démontre pas le même accès ni le même résultat.",
+            "Les maxima sont de 9,9 L/s pour la SI-4500 et de 9,3 L/s pour la SI-4600, soit 594 et 558 L/min : écart calculé de 36 L/min. Les largeurs de coupe publiées sont respectivement de 5,4 et 4,5 mm."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "La capacité acier publiée ne vaut pas capacité universelle sur tous les alliages. Pour le remplacement d’une grignoteuse, faire confirmer le matériau, le tracé et l’accès ; un débit disponible supérieur ne valide pas l’opération."
+          ]
+        }
+      }
+    },
+    {
+      "id": "shinano-si-4600",
+      "brand": "Shinano",
+      "model": "SI-4600",
+      "mpn": "SI-4600",
+      "before": {
+        "editorial": {
+          "overview": "Shinano SI-4600, référence SI-4600. Le tableau fabricant publie 558 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Largeur de coupe 4,5 mm ; capacité publiée 1,6 mm ; vitesse à vide publiée 2 600 tr/min. Masse publiée : 1 kg.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 19.8 CFM / 9.3 L/s, soit 558 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-4600.",
+            "Version et équipement : Largeur de coupe 4,5 mm ; capacité publiée 1,6 mm ; vitesse à vide publiée 2 600 tr/min.",
+            "Masse publiée : 1 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "La grignoteuse SI-4600 et la cisaille SI-4500 affichent toutes deux une capacité acier de 1,6 mm, mais leurs masses, largeurs de coupe et demandes d’air diffèrent. Pour la SI-4600, conserver le maximum de 558 L/min à 6,3 bar pendant l’action.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 19.8 CFM / 9.3 L/s, soit 558 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-4600.",
+            "Version et équipement : Largeur de coupe 4,5 mm ; capacité publiée 1,6 mm ; vitesse à vide publiée 2 600 tr/min.",
+            "Masse publiée : 1 kg.",
+            "La SI-4600 affiche 4,5 mm de largeur de coupe et 1,00 kg, contre 5,4 mm et 1,26 kg pour la cisaille SI-4500. Le type d’outil et le parcours de coupe doivent donc accompagner la comparaison de débit.",
+            "Les 9,3 L/s maximaux de la SI-4600 deviennent 558 L/min ; les 9,9 L/s de la SI-4500 deviennent 594 L/min. Les 36 L/min d’écart ne démontrent ni un temps de coupe plus court ni une économie par pièce."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "La valeur de 1,6 mm concerne l’acier dans le tableau fabricant. Faire préciser l’alliage, l’épaisseur et le tracé avant de choisir les outils de coupe ; la moyenne de consommation ne remplace pas le maximum pour l’alimentation."
+          ]
+        }
+      }
+    },
+    {
+      "id": "gentilin-ac400-20",
+      "brand": "Gentilin",
+      "model": "AC400/20",
+      "mpn": "816705001",
+      "before": {
+        "editorial": {
+          "overview": "Gentilin AC400/20, référence 816705001 : cuve de 20 L, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 130 L/min à 8 bar.",
+          "verifiedFacts": [
+            "Débit restitué publié : 185 L/min à 5 bar ; 130 L/min à 8 bar.",
+            "Compresseur à pistons sans huile. Puissance moteur publiée : 1,5 kW.",
+            "Débit aspiré : 250 L/min, distinct du débit restitué.",
+            "Masse publiée : 15 kg.",
+            "Alimentation publiée : 230 V, 50 Hz."
+          ],
+          "limitations": [
+            "Les points proviennent de la fiche fabricant, pas d’un essai physique réalisé par CompatAir.",
+            "Le taux de marche est celui déclaré par le fabricant ; les conditions de cycle et de température restent à respecter. La disponibilité commerciale reste à confirmer.",
+            "La disponibilité commerciale et les exigences électriques de l’installation sont à confirmer avant achat."
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Conditions du débit",
+            "value": "Débits restitués publiés séparément à 5.0 bar, 8.0 bar. Le débit aspiré est conservé dans un champ distinct.",
+            "evidenceIds": [
+              "gentilin-816705001-20260926"
+            ]
+          },
+          {
+            "label": "Dimensions publiées",
+            "value": "44x25x52 cm",
+            "evidenceIds": [
+              "gentilin-816705001-20260926"
+            ]
+          },
+          {
+            "label": "Régime de service déclaré",
+            "value": "S3 70%",
+            "evidenceIds": [
+              "gentilin-816705001-20260926"
+            ]
+          },
+          {
+            "label": "Revêtement de la cuve",
+            "value": "Alluminio",
+            "evidenceIds": [
+              "gentilin-816705001-20260926"
+            ]
+          },
+          {
+            "label": "Cylindres",
+            "value": "4",
+            "evidenceIds": [
+              "gentilin-816705001-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse de rotation",
+            "value": "1.705,00 tr/min",
+            "evidenceIds": [
+              "gentilin-816705001-20260926"
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "id": "gentilin-816705001-20260926",
+            "sourceUrl": "https://www.gentilinair.com/en/products/ac400-20",
+            "sourceLabel": "Gentilin, fiche technique AC400/20, réf. 816705001",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Débits restitués publiés séparément à 5.0 bar, 8.0 bar. Le débit aspiré est conservé dans un champ distinct."
+          },
+          {
+            "id": "gentilin-816705001-20260926-oiltype-1",
+            "sourceUrl": "https://www.gentilinair.com/docs/41024001-compressed_1775720906.pdf#page=6",
+            "sourceLabel": "Gentilin, notice de la famille DC100/05, p. 6",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La notice liée à cette fiche déclare la compression sans huile : Tipologia Oil-free (utilizzo intensivo)"
+          }
+        ],
+        "fieldSources": {
+          "mpn": [
+            "gentilin-816705001-20260926"
+          ],
+          "tankLiters": [
+            "gentilin-816705001-20260926"
+          ],
+          "maxPressureBar": [
+            "gentilin-816705001-20260926"
+          ],
+          "fadCurve": [
+            "gentilin-816705001-20260926"
+          ],
+          "oilType": [
+            "gentilin-816705001-20260926-oiltype-1"
+          ],
+          "intakeFlowLpm": [
+            "gentilin-816705001-20260926"
+          ],
+          "powerKw": [
+            "gentilin-816705001-20260926"
+          ],
+          "weightKg": [
+            "gentilin-816705001-20260926"
+          ],
+          "voltage": [
+            "gentilin-816705001-20260926"
+          ],
+          "dutyCycle": [
+            "gentilin-816705001-20260926"
+          ]
+        },
+        "dutyCycle": 0.7
+      },
+      "after": {
+        "editorial": {
+          "overview": "Le Gentilin AC400/20 publie 130 L/min restitués à 8 bar avec une cuve de 20 L. Le choix doit distinguer ce débit des 250 L/min aspirés et tenir compte d’un conflit de régime de service entre la fiche produit et la notice liée, qui impose une confirmation fabricant avant usage prolongé.",
+          "verifiedFacts": [
+            "Débit restitué publié : 185 L/min à 5 bar ; 130 L/min à 8 bar.",
+            "Compresseur à pistons sans huile. Puissance moteur publiée : 1,5 kW.",
+            "Débit aspiré : 250 L/min, distinct du débit restitué.",
+            "Masse publiée : 15 kg.",
+            "Alimentation publiée : 230 V, 50 Hz.",
+            "Au même point de 8 bar, la fiche AC400/20 publie 130 L/min, contre 60 L/min pour l’AC200/05 : écart calculé de 70 L/min. Les cuves font respectivement 20 et 5 L ; la réserve quadruplée ne multiplie pas le débit permanent par quatre.",
+            "L’AC400/20 affiche 1,5 kW, contre 0,9 kW pour l’AC200/05. Les deux fiches donnent un débit à 5 bar distinct : 185 et 115 L/min. Un résultat interpolé à 6,3 bar serait un calcul entre ces points, pas une mesure publiée."
+          ],
+          "limitations": [
+            "Les points proviennent de la fiche fabricant, pas d’un essai physique réalisé par CompatAir.",
+            "La disponibilité commerciale et les exigences électriques de l’installation sont à confirmer avant achat.",
+            "La fiche AC400/20 indique S3 70 %, tandis que le tableau de la notice EVO 41024001 d’avril 2026, page 6, indique un cycle de travail de 100 %. La donnée calculable de taux de marche est retirée : confirmer la génération et son régime auprès de Gentilin avant un besoin continu.",
+            "La notice affiche aussi un FAD de 205 L/min sans pression de mesure dans ce tableau. Cette valeur ne remplace pas les points Air Delivery de la fiche, 185 L/min à 5 bar et 130 L/min à 8 bar. Une conclusion de compatibilité continue reste insuffisamment documentée."
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Conditions du débit",
+            "value": "Débits restitués publiés séparément à 5.0 bar, 8.0 bar. Le débit aspiré est conservé dans un champ distinct.",
+            "evidenceIds": [
+              "gentilin-816705001-20260926"
+            ]
+          },
+          {
+            "label": "Dimensions publiées",
+            "value": "44x25x52 cm",
+            "evidenceIds": [
+              "gentilin-816705001-20260926"
+            ]
+          },
+          {
+            "label": "Régime de service déclaré",
+            "value": "Conflit documentaire : fiche S3 70 % ; notice EVO 04/2026, p. 6 : 100 %. Régime de la version exacte à confirmer ; aucune valeur retenue pour le calcul.",
+            "evidenceIds": [
+              "gentilin-816705001-20260926",
+              "gentilin-ac400-20-manual-review-20261015"
+            ]
+          },
+          {
+            "label": "Revêtement de la cuve",
+            "value": "Alluminio",
+            "evidenceIds": [
+              "gentilin-816705001-20260926"
+            ]
+          },
+          {
+            "label": "Cylindres",
+            "value": "4",
+            "evidenceIds": [
+              "gentilin-816705001-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse de rotation",
+            "value": "1.705,00 tr/min",
+            "evidenceIds": [
+              "gentilin-816705001-20260926"
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "id": "gentilin-816705001-20260926",
+            "sourceUrl": "https://www.gentilinair.com/en/products/ac400-20",
+            "sourceLabel": "Gentilin, fiche technique AC400/20, réf. 816705001",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Débits restitués publiés séparément à 5.0 bar, 8.0 bar. Le débit aspiré est conservé dans un champ distinct."
+          },
+          {
+            "id": "gentilin-816705001-20260926-oiltype-1",
+            "sourceUrl": "https://www.gentilinair.com/docs/41024001-compressed_1775720906.pdf#page=6",
+            "sourceLabel": "Gentilin, notice de la famille DC100/05, p. 6",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La notice liée à cette fiche déclare la compression sans huile : Tipologia Oil-free (utilizzo intensivo)"
+          },
+          {
+            "id": "gentilin-ac400-20-manual-review-20261015",
+            "sourceUrl": "https://www.gentilinair.com/docs/41024001-compressed_1775720906.pdf#page=6",
+            "sourceLabel": "Gentilin, notice EVO 41024001, 04/2026, tableau AC400/20 p. 6",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-10-15",
+            "confidence": "A",
+            "notes": "AC400/20 : huile absente, 20 L, 15 kg, 185 L/min à 5 bar ; 100 % de cycle de travail, en conflit avec la fiche S3 70 %. FAD 205 L/min non associé à une pression dans ce tableau, non substitué à la courbe."
+          },
+          {
+            "id": "gentilin-ac400-20-comparison-review-20261015",
+            "sourceUrl": "https://www.gentilinair.com/en/products/ac200-05",
+            "sourceLabel": "Gentilin, fiche AC200/05 comparée au même point de pression",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-10-15",
+            "confidence": "A",
+            "notes": "Voisin : Air Delivery 115 L/min à 5 bar et 60 L/min à 8 bar, cuve 5 L, 0,9 kW. Comparaison de données déclarées, pas essai de rendement."
+          }
+        ],
+        "fieldSources": {
+          "mpn": [
+            "gentilin-816705001-20260926"
+          ],
+          "tankLiters": [
+            "gentilin-816705001-20260926"
+          ],
+          "maxPressureBar": [
+            "gentilin-816705001-20260926"
+          ],
+          "fadCurve": [
+            "gentilin-816705001-20260926"
+          ],
+          "oilType": [
+            "gentilin-816705001-20260926-oiltype-1"
+          ],
+          "intakeFlowLpm": [
+            "gentilin-816705001-20260926"
+          ],
+          "powerKw": [
+            "gentilin-816705001-20260926"
+          ],
+          "weightKg": [
+            "gentilin-816705001-20260926"
+          ],
+          "voltage": [
+            "gentilin-816705001-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "shinano-si-1107b",
+      "brand": "Shinano",
+      "model": "SI-1107B",
+      "mpn": "SI-1107B",
+      "before": {
+        "editorial": {
+          "overview": "Shinano SI-1107B, référence SI-1107B. Le tableau fabricant publie 306 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 30 Nm. Vitesse à vide publiée : 300 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 10.8 CFM / 5.1 L/s. Conversion du maximum publié : 5.1 × 60 = 306 L/min.",
+            "Référence fabricant : SI-1107B.",
+            "Couple maximal publié : 30 Nm.",
+            "Vitesse à vide publiée : 300 tr/min.",
+            "Masse publiée : 0,39 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "La SI-1107B est le mini-cliquet à carré de 1/4 pouce, à distinguer de la SI-1108B à carré de 3/8 pouce. Les deux demandent le même maximum publié de 306 L/min : le choix se joue aussi sur les douilles, l’accès et le besoin de serrage.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 10.8 CFM / 5.1 L/s. Conversion du maximum publié : 5.1 × 60 = 306 L/min.",
+            "Référence fabricant : SI-1107B.",
+            "Couple maximal publié : 30 Nm.",
+            "Vitesse à vide publiée : 300 tr/min.",
+            "Masse publiée : 0,39 kg.",
+            "Le tableau donne 5,1 L/s au maximum pour les SI-1107B et SI-1108B, soit 306 L/min pour chacune. Le carré change de 1/4 à 3/8 pouce, sans hausse du couple maximal annoncé : 30 Nm pour les deux.",
+            "La plage de travail est de 0–25 Nm et la vitesse à vide de 300 tr/min pour les deux références. La masse publiée passe de 0,39 kg pour la SI-1107B à 0,40 kg pour la SI-1108B."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "Un adaptateur de carré ne constitue pas une validation de la chaîne de douilles. Le maximum de 30 Nm ne certifie pas le serrage final d’un assemblage ; vérifier sa prescription et sa méthode de contrôle."
+          ]
+        }
+      }
+    },
+    {
+      "id": "shinano-si-1305",
+      "brand": "Shinano",
+      "model": "SI-1305",
+      "mpn": "SI-1305",
+      "before": {
+        "editorial": {
+          "overview": "Shinano SI-1305, référence SI-1305. Le tableau fabricant publie 474 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 90 Nm. Vitesse à vide publiée : 9 000 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 16.8 CFM / 7.9 L/s. Conversion du maximum publié : 7.9 × 60 = 474 L/min.",
+            "Référence fabricant : SI-1305.",
+            "Couple maximal publié : 90 Nm.",
+            "Vitesse à vide publiée : 9 000 tr/min.",
+            "Masse publiée : 0,94 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "La SI-1305 est une clé à chocs compacte à commande papillon. Sa comparaison avec la SI-1355 montre pourquoi deux outils annoncés à 90 Nm ne demandent pas exactement la même alimentation ni le même accès.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 16.8 CFM / 7.9 L/s. Conversion du maximum publié : 7.9 × 60 = 474 L/min.",
+            "Référence fabricant : SI-1305.",
+            "Couple maximal publié : 90 Nm.",
+            "Vitesse à vide publiée : 9 000 tr/min.",
+            "Masse publiée : 0,94 kg.",
+            "Les SI-1305 et SI-1355 partagent un carré de 3/8 pouce, une plage de travail de 0–75 Nm et 9 000 tr/min à vide. Leurs maxima d’air diffèrent : 7,9 et 7,6 L/s, soit 474 et 456 L/min ; l’écart calculé est de 18 L/min.",
+            "La SI-1305 pèse 0,94 kg contre 1,12 kg pour la SI-1355. Son entrée d’air orientable et sa commande papillon changent la prise en main ; ces différences doivent accompagner le choix pour une zone encombrée."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "Ni les 90 Nm maximaux ni les 18 L/min d’écart ne garantissent le même temps de desserrage sur une fixation réelle. Prévoir le contrôle du serrage final et la compatibilité des douilles séparément."
+          ]
+        }
+      }
+    },
+    {
+      "id": "shinano-si-2001s-6",
+      "brand": "Shinano",
+      "model": "SI-2001S-6",
+      "mpn": "SI-2001S-6",
+      "before": {
+        "editorial": {
+          "overview": "Shinano SI-2001S-6, référence SI-2001S-6. Le tableau fabricant publie 456 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Pince 6 mm ; puissance publiée 173 W. Vitesse à vide publiée : 25000 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 16.2 CFM / 7.6 L/s, soit 456 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-2001S-6.",
+            "Version et équipement : Pince 6 mm ; puissance publiée 173 W.",
+            "Vitesse à vide publiée : 25000 tr/min.",
+            "Masse publiée : 0.37 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "Le suffixe -6 de la SI-2001S-6 identifie la pince de 6 mm. Cette différence est décisive pour l’accessoire, même si la version SI-2001S à pince 1/4 pouce publie la même consommation maximale de 456 L/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 16.2 CFM / 7.6 L/s, soit 456 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-2001S-6.",
+            "Version et équipement : Pince 6 mm ; puissance publiée 173 W.",
+            "Vitesse à vide publiée : 25000 tr/min.",
+            "Masse publiée : 0.37 kg.",
+            "Le catalogue distingue la pince de 6 mm de la SI-2001S-6 de la pince 1/4 pouce de la SI-2001S. Un quart de pouce vaut 6,35 mm : la différence calculée de 0,35 mm interdit de déduire une compatibilité de queue d’une simple proximité de diamètre.",
+            "Face à la SI-2002EX-6 à pince de 6 mm, la SI-2001S-6 affiche 25 000 contre 27 000 tr/min et 173 contre 219 W. Le maximum d’air est de 7,6 contre 7,4 L/s, soit 456 contre 444 L/min : 12 L/min d’écart."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "Confirmer la pince livrée, le diamètre exact de la queue et la vitesse admissible du consommable. Une puissance plus élevée ou une consommation plus faible du modèle voisin ne valide pas le même travail de meulage."
+          ]
+        }
+      }
+    },
+    {
+      "id": "shinano-si-2015ad",
+      "brand": "Shinano",
+      "model": "SI-2015AD",
+      "mpn": "SI-2015AD",
+      "before": {
+        "editorial": {
+          "overview": "Shinano SI-2015AD, référence SI-2015AD. Le tableau fabricant publie 714 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 6 000 tr/min. Capacité du mandrin : 10 mm.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 25.2 CFM / 11.9 L/s. Conversion du maximum publié : 11.9 × 60 = 714 L/min.",
+            "Référence fabricant : SI-2015AD.",
+            "Vitesse à vide publiée : 6 000 tr/min.",
+            "Capacité du mandrin : 10 mm.",
+            "Couple maximal publié : 2.62 Nm."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "La SI-2015AD est une perceuse droite à mandrin de 10 mm et 6 000 tr/min à vide. Sa proximité de nom avec la meuleuse SI-2015A ne doit pas conduire à reprendre ses accessoires, même si leurs maxima d’air publiés sont identiques.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 25.2 CFM / 11.9 L/s. Conversion du maximum publié : 11.9 × 60 = 714 L/min.",
+            "Référence fabricant : SI-2015AD.",
+            "Vitesse à vide publiée : 6 000 tr/min.",
+            "Capacité du mandrin : 10 mm.",
+            "Couple maximal publié : 2.62 Nm.",
+            "La SI-2015AD et la perceuse à poignée pistolet SI-5100A ont un mandrin de 10 mm, mais les vitesses à vide sont de 6 000 et 5 000 tr/min et les couples maximaux de 2,62 et 3,06 Nm. Leurs maxima d’air sont de 11,9 et 9,3 L/s, soit 714 et 558 L/min : 156 L/min d’écart.",
+            "La SI-2015A sans D est une meuleuse à pince 1/4 pouce, annoncée à 5 500 tr/min et 714 L/min. Une demande d’air identique ne transforme pas sa pince en mandrin de perceuse."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "Le mandrin de 10 mm n’est pas une capacité de perçage universelle. Le tableau donne séparément une capacité de perçage de 6 mm pour la SI-2015AD ; matériau, foret et opération restent à valider avec la notice."
+          ]
+        }
+      }
+    },
+    {
+      "id": "shinano-si-2033",
+      "brand": "Shinano",
+      "model": "SI-2033",
+      "mpn": "SI-2033",
+      "before": {
+        "editorial": {
+          "overview": "Shinano SI-2033, référence SI-2033. Le tableau fabricant publie 678 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 20 000 tr/min. Masse publiée : 1,00 kg.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 24 CFM / 11.3 L/s. Conversion du maximum publié : 11.3 × 60 = 678 L/min.",
+            "Référence fabricant : SI-2033.",
+            "Vitesse à vide publiée : 20 000 tr/min.",
+            "Masse publiée : 1,00 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "La SI-2033 est une tronçonneuse à disque rotatif de 75 mm, annoncée à 20 000 tr/min à vide. Pour son alimentation, retenir les 678 L/min maximaux ; pour l’accessoire, distinguer cette rotation de l’oscillation de la SI-4300.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 24 CFM / 11.3 L/s. Conversion du maximum publié : 11.3 × 60 = 678 L/min.",
+            "Référence fabricant : SI-2033.",
+            "Vitesse à vide publiée : 20 000 tr/min.",
+            "Masse publiée : 1,00 kg.",
+            "La SI-2033 publie 11,3 L/s au maximum, soit 678 L/min ; la SI-4300 publie 9,1 L/s, soit 546 L/min. Les 132 L/min d’écart ne comparent pas un même procédé de coupe.",
+            "Le tableau indique un disque de 75 mm et une broche de 9,5 mm pour la SI-2033 ; la SI-4300 utilise un disque de 63 mm oscillant sur 2,8°. Les 20 000 tr/min de la première ne se confondent pas avec les 20 000 oscillations/min de la seconde."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "Vérifier l’alésage, le disque et sa vitesse admissible pour la SI-2033. La destination tôle ou tube indiquée au catalogue ne fournit pas une épaisseur universelle ni une permission d’employer un accessoire d’outil oscillant."
+          ]
+        }
+      }
+    },
+    {
+      "id": "shinano-si-2700",
+      "brand": "Shinano",
+      "model": "SI-2700",
+      "mpn": "SI-2700",
+      "before": {
+        "editorial": {
+          "overview": "Shinano SI-2700, référence SI-2700. Le tableau fabricant publie 558 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Bande 10 × 330 mm ; bras orientable ; puissance publiée 317 W. Vitesse à vide publiée : 15000 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 19.8 CFM / 9.3 L/s, soit 558 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-2700.",
+            "Version et équipement : Bande 10 × 330 mm ; bras orientable ; puissance publiée 317 W.",
+            "Vitesse à vide publiée : 15000 tr/min.",
+            "Masse publiée : 0.82 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "La SI-2700 est une ponceuse à bande de 10 × 330 mm dont le maximum publié atteint 558 L/min. La SI-2740 conserve cette demande d’air et ce format de bande : un remplacement doit donc être motivé par la géométrie et la prise en main, pas par une baisse de débit supposée.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 19.8 CFM / 9.3 L/s, soit 558 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-2700.",
+            "Version et équipement : Bande 10 × 330 mm ; bras orientable ; puissance publiée 317 W.",
+            "Vitesse à vide publiée : 15000 tr/min.",
+            "Masse publiée : 0.82 kg.",
+            "Pour les SI-2700 et SI-2740, le catalogue donne 9,3 L/s au maximum, soit 558 L/min, ainsi que 317 W et 15 000 tr/min à vide. Le bras réglable fait partie des deux descriptions ; la SI-2740 précise une amplitude de 160°.",
+            "La masse publiée est de 0,82 kg pour la SI-2700 et de 0,73 kg pour la SI-2740 : différence calculée de 90 g. Cette différence porte sur l’outil déclaré, sans mesure d’effort ni essai ergonomique CompatAir."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "Le débit maximal identique ne prouve pas une durée de travail identique par pièce. Confirmer l’accès, le format 10 × 330 mm et l’abrasif ; ne pas acheter une bande 10 × 460 mm de SI-2700L sur la seule proximité du nom."
+          ]
+        }
+      }
+    },
+    {
+      "id": "shinano-si-3001a",
+      "brand": "Shinano",
+      "model": "SI-3001A",
+      "mpn": "SI-3001A",
+      "before": {
+        "editorial": {
+          "overview": "Shinano SI-3001A, référence SI-3001A. Le tableau fabricant publie 390 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Plateau rectangulaire 75 × 100 mm, revêtement Leather selon Shinano ; orbite 4 mm ; version sans aspiration autonome. Vitesse à vide publiée : 10000 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 13.8 CFM / 6.5 L/s, soit 390 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-3001A.",
+            "Version et équipement : Plateau rectangulaire 75 × 100 mm, revêtement Leather selon Shinano ; orbite 4 mm ; version sans aspiration autonome.",
+            "Vitesse à vide publiée : 10000 tr/min.",
+            "Masse publiée : 0.8 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "La SI-3001A est la ponceuse orbitale rectangulaire sans aspiration autonome de cette paire de références. La comparaison avec la SI-3011A permet de chiffrer la demande d’air supplémentaire associée à cette autre configuration, sans attribuer au seul plateau une fonction d’aspiration.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 13.8 CFM / 6.5 L/s, soit 390 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-3001A.",
+            "Version et équipement : Plateau rectangulaire 75 × 100 mm, revêtement Leather selon Shinano ; orbite 4 mm ; version sans aspiration autonome.",
+            "Vitesse à vide publiée : 10000 tr/min.",
+            "Masse publiée : 0.8 kg.",
+            "Les SI-3001A et SI-3011A affichent une orbite de 4 mm et 10 000 tr/min à vide. La SI-3011A est décrite comme Self Vacuum ; la SI-3001A est décrite comme Orbital Sander sans cette fonction.",
+            "Le maximum de la SI-3001A est de 6,5 L/s, soit 390 L/min, contre 7,1 L/s, soit 426 L/min pour la SI-3011A : 36 L/min d’écart. Les masses publiées sont de 0,80 et 1,15 kg, soit 350 g de différence."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "Le catalogue distingue un plateau de 75 × 100 mm et un abrasif de 75 × 110 mm : ne pas confondre ces dimensions lors de la commande. Une fonction d’aspiration annoncée sur une référence voisine ne certifie pas la captation des poussières du poste."
+          ]
+        }
+      }
+    }
+  ]
+}

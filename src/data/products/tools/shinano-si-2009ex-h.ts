@@ -23,19 +23,22 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2009EX-H, référence SI-2009EX-H. Le tableau fabricant publie 354 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Rotation simple ; plateau 75 mm ; broche femelle 5/16-24 UNF ; version rapide. Vitesse à vide publiée : 5000 tr/min.",
+		"overview": "Le suffixe H de la SI-2009EX-H désigne ici la version rapide de la polisseuse à rotation simple : 5 000 tr/min à vide et 354 L/min au maximum publié. Il faut identifier cette version avant de reprendre le dimensionnement d’une SI-2009EX.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 12.6 CFM / 5.9 L/s, soit 354 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
 			"Référence fabricant : SI-2009EX-H.",
 			"Version et équipement : Rotation simple ; plateau 75 mm ; broche femelle 5/16-24 UNF ; version rapide.",
 			"Vitesse à vide publiée : 5000 tr/min.",
-			"Masse publiée : 0.68 kg."
+			"Masse publiée : 0.68 kg.",
+			"La SI-2009EX sans H affiche 2 600 tr/min et 7,1 L/s au maximum ; la SI-2009EX-H affiche 5 000 tr/min et 5,9 L/s. Les conversions donnent 426 et 354 L/min : 72 L/min d’écart malgré la vitesse plus élevée de la version H.",
+			"Les deux versions partagent le plateau publié de 75 mm, la broche femelle 5/16-24 UNF et une masse de 0,68 kg. Ces interfaces communes n’autorisent pas à transférer automatiquement une procédure de polissage ou un accessoire à une autre vitesse."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Le débit inférieur de la version H ne mesure pas une économie sur une même pièce. Confirmer les limites de vitesse du plateau et du consommable ; les 5 000 tr/min sont une vitesse à vide, pas une vitesse garantie en charge."
 		]
 	},
 	"specifications": [

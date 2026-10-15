@@ -1,0 +1,1515 @@
+# Revue éditoriale du 15 octobre 2026
+
+Revue réelle terminée à 2026-10-15T18:38:01.277Z. Base distante et servie : `8fe341cbaad6a1818595614a2ce29c7c2a90bb3a`.
+
+19 admissions proposées : 4 guides, 1 compresseur, 14 outils. Les plafonds 10/30/60 restent des maxima. 81 pages ne sont pas approuvées ; aucune page de remplacement.
+
+## Méthode et limites
+
+Lecture des contenus retenus et des voisins cités, contrôle des assertions décisives dans les sources primaires, des unités, des conditions et des limites. Les tableaux Shinano et Gentilin sont aussi contrôlés visuellement. Les métadonnées mécaniques ne valent pas validation. Aucun essai physique, aucune demande Google, aucune garantie de classement ou de pénalité.
+
+Le compte rendu JSON joint consigne les observations HTTP, les empreintes des fichiers primaires, les lectures du navigateur et les quatre anomalies du dernier inventaire complet. 670 sources non vérifiées ne sont pas présentées comme validées. Les quatre anomalies restent ouvertes sur leurs pages ; elles ne touchent pas les 19 admissions.
+
+Corrections : 14 fiches Shinano enrichies de comparaisons spécifiques ; conflit Gentilin sur le cycle de travail rendu explicite et valeur calculable retirée ; URL Haas migrée et assertion accessoire DA400 invérifiable retirée. Les transcriptions initiales restent intactes ; amendements datés exacts, sans adaptation silencieuse si leur base change. Deux preuves Gentilin seulement ajoutées à l’historique.
+
+Les PDFs et les réponses HTML brutes restent locales dans `/tmp/compatair-editorial-20261015`. Le registre contient les 100 URL exactes, et les contentHash complets issus de value.contentHash.
+
+
+## /outils-pneumatiques/pistolet-peinture-hvlp-hymair-ash-02/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `13e34bce961a3ad9c98cefc953a8cbc1e8ab2207eecd7ee42718b7f098ce54f2`.
+
+
+## /outils-pneumatiques/pistolet-peinture-hvlp-draper-28367/
+
+Décision : **needs-correction**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Réserve éditoriale historique conservée : la fiche manque encore d’apport distinct et de consommation d’air documentée pour cette référence. Aucune approbation nouvelle ni donnée extrapolée depuis 28366.
+
+Empreinte : `ff67217e3cb337f6365080c5f77cc4975bbe7add5bc6c0aea4130c92372ab006`.
+
+
+## /outils-pneumatiques/pistolet-nettoyage-asturomec-n4-s-50172/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `39a89e117511b01ec9617a4e80f652bb790a1a6a087a86f59d96b51c6feaeb7d`.
+
+
+## /outils-pneumatiques/pistolet-peinture-hvlp-astro-pneumatic-hvlp505/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `d400ee46adf62a00b710e510aa12fb4d14601caf734f157cbf3e38b93d2ac0c9`.
+
+
+## /outils-pneumatiques/pistolet-peinture-hvlp-sata-jet-x-hvlp-1-2-o-basic-1200138/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `526fc959dd7014e8457a18144a130b37ff76ed8967ce16b4ea0e4591831aeea2`.
+
+
+## /outils-pneumatiques/sableuse-asturomec-ps-e-50090/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `41867ae512bf6cc96de2b6629c1794c4a44be08dd7c6f76648965e0d89c54ae5`.
+
+
+## /outils-pneumatiques/cle-a-chocs-taylor-pneumatic-t-6231-1-2-hd-impact-wrench-t-6231/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `a6c78ba8d8992484a8e86ac1a07de77c20f9c2451529bbce552d90cc914b2cd8`.
+
+
+## /outils-pneumatiques/pistolet-peinture-hvlp-gav-record-2200-1-hvlp/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `480c65acb7fc7f4a3301b26e20be7d8598d053dfb1fbdc16a3ee8d7a43a016eb`.
+
+
+## /outils-pneumatiques/pistolet-peinture-hvlp-prowin-k-528g-10/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `e2ec3b1c3257ac781db75e5bbfda79a2cac3dbc79b102e0a15ac9b5303a582f7`.
+
+
+## /outils-pneumatiques/pistolet-peinture-hvlp-sagola-3300-gto-hvlp-buse-1-30-10141570/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `7a772875a4d1fec571b81943462eabfc68e11e9ed70d6ca42cc1a210a4869986`.
+
+
+## /outils-pneumatiques/pistolet-nettoyage-sip-02143/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `2aea2b806c9e826d45df6abb86110cd1fba22b82e386405f08cfba9f5cf71ff4`.
+
+
+## /outils-pneumatiques/pistolet-nettoyage-vorel-81647/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `ea85afb5512d241f1a7adedca261721f50d0814bef3a93316375ee1492e31635`.
+
+
+## /outils-pneumatiques/pistolet-nettoyage-yato-yt-23640/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `a3332117d3d41952e79bf8805edd0c1a7175a177b9f02e86e42ce8ae01e9940f`.
+
+
+## /outils-pneumatiques/pistolet-peinture-hvlp-graco-airpro-gravity-289005-289005/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `189bbae3f24eb47230d596ccad5ee84c48ce5c740efd5c4531b6cfc35d5b6a59`.
+
+
+## /outils-pneumatiques/pistolet-peinture-hvlp-sames-kremlin-fpro-g-hvlp-12-lvb-135-797-412/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `667d93e4fd32d027b5ecb1c27834ac5362a3c14af8f59300caa5fb3df5bdb4d6`.
+
+
+## /outils-pneumatiques/pistolet-peinture-hvlp-sip-02136/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `94921fd3e9f092b0f749b8bf08ab5983c23a15d9c2bf0a75aa890c708a3a3ec3`.
+
+
+## /outils-pneumatiques/pistolet-peinture-hvlp-vorel-80902/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `5dbf885d5726df1863a94acaad5f10ee63405a0e6c63c1e6b2c3dd3fc0b25ff4`.
+
+
+## /outils-pneumatiques/pistolet-peinture-hvlp-yato-yt-2340/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `2ff53814f36f4acf914e8bc4f78da0aa83ca5395ee25287a296b2452ee049880`.
+
+
+## /outils-pneumatiques/sableuse-sip-03868/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `d10f0aeaee2746ec59e07b561bec04879a9aaadc44b9fd6e0b4581ce2ed6adfd`.
+
+
+## /outils-pneumatiques/sableuse-yato-yt-2375/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `af4e2d2845bacaea093715cb13f5bda6fc328db5d1658cb3562f0acb9009f3b8`.
+
+
+## /outils-pneumatiques/pistolet-peinture-hvlp-binks-trophy-1465-08hv-c1s/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `deab6c8f77d80877022570ee154175c5fa142beb0c46911105e223f7d1183bae`.
+
+
+## /outils-pneumatiques/pistolet-peinture-hvlp-meiji-f410-g13hvlp/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `703a09937ca96f577ec6789bebf70d9af9477a5b86385ad58169a8dd11c68fd3`.
+
+
+## /outils-pneumatiques/pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-0-5-mm/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `9f9cab70b156b9f05d4cc393f5a13e852c2b24c84b61cd9fa0a7cab46844217e`.
+
+
+## /outils-pneumatiques/pistolet-nettoyage-anest-iwata-airgunsa-ae7/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `73f2612350fd4dbd83b19e9bc0baef61793464d01e7545eb7d7934d469f22b88`.
+
+
+## /outils-pneumatiques/pistolet-nettoyage-schneider-airsystems-spp-sm/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `9bc792fe8f23274fbbb02c0ef96347c9ac5024cc69ee13322ded8a3c607044ed`.
+
+
+## /outils-pneumatiques/pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-3-hvlp/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `1eb56c22359d7ac34eb72206652b21978a9797c0b56f1c9cd7ba2a2816ceddd2`.
+
+
+## /outils-pneumatiques/pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-2-mm/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `587cc54001eb6eb98757e0ca916cad997352719d35cb35973b20892b4bfd7359`.
+
+
+## /outils-pneumatiques/pistolet-peinture-hvlp-ani-black-s-hvlp-buse-1-3/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `3d40d3a85f325f4cb3b95c34f505c81b0e4e7193919633dcde38d9eb1cf2f51b`.
+
+
+## /outils-pneumatiques/pistolet-peinture-prona-r-430-hvlp-11-buse-1-1-hvlp-gravity/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `2bc0716d5d5484847d5a465552e9dbdbeb388e1423f55f721f08ee1ebe8240ca`.
+
+
+## /outils-pneumatiques/sableuse-anest-iwata-airgunsa-st-buse-5-mm/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `3191a70a797d9a8acfec2f224ae25d1a9d0005f47e312274e10f8770b375930a`.
+
+
+## /outils-pneumatiques/sableuse-schneider-airsystems-ssp-sav/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `b1c1de7155dcf3d356b3f63aa13d38245018385d3fb787c7fbd029b4713c110a`.
+
+
+## /guides/choisir-distributeur-pneumatique-debit-nominal/
+
+Décision : **needs-correction**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Texte et intention relus, mais l’assertion déterminante p1=6/p2=5 bar ne peut pas être corroborée ce jour : PDF Festo HE HTTP403 ; tentative normale du navigateur sans contenu lisible. Ne pas approuver depuis une ancienne lecture ou un score mécanique.
+
+Empreinte : `3992bfd6706eedabb6357f91a73a62f5b4cb3f47cc920876d5c0594c8f37cccd`.
+
+
+## /guides/compresseur-machine-cnc-haas-pression-debit/
+
+Décision : **approved**.
+
+Apport : Distinguer le point 113 L/min à 6,9 bar de la pression minimale de 5,5 bar pour préparer la réception d’une VF-4 et le bilan des auxiliaires.
+
+Voisins comparés : /guides/guide-complet-dimensionner-compresseur-air/, /guides/haas-trp-retour-lent-precharge-alarme-130-131/
+
+Sources effectivement lues : https://haascnc.com/pre-install-guide/vf-4
+
+Constat et limites : Source lue intégralement pour les sections Air Requirements dans le navigateur interne : tableau 4 scfm à 100 psi / 113 L/min à 6,9 bar ; minimum 80 psi / 5,5 bar ; air propre/sec, service continu, auxiliaires côté non régulé. Le guide apporte un dossier de réception par configuration ; le voisin TRP traite un défaut de mécanisme et le guide complet une méthode générale. Migration d’URL corrigée ; assertion chiffrée accessoire DA400 retirée car sa source renvoie 403 ce jour, avec lien vers le dossier spécialisé conservé. Aucune puissance de broche convertie en débit.
+
+Empreinte : `6a745eb0fede7f956db44cc8a8d45ac8bb188d9b459d0a242095acf087bc5b2b`.
+
+
+## /guides/consommation-verin-pneumatique-double-effet/
+
+Décision : **needs-correction**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Calculs et distinction moyenne/pointe relus ; les deux sources Festo de l’exemple DNC et du calculateur renvoient403. Les valeurs publiées 2,815 et 2,419 L restent non revérifiées à ce passage ; aucun remplacement inventé.
+
+Empreinte : `aebe755ee60fc3f2bba2406fe8ff887c5a56d367fa79a8a54c9ef469eb87e33c`.
+
+
+## /guides/douilles-choc-adaptateurs-carre-compatibilite/
+
+Décision : **approved**.
+
+Apport : Vérifier toute la chaîne clé, retenue, adaptateur et douille au lieu de conclure au seul carré ou au couple publicitaire.
+
+Voisins comparés : /guides/cle-a-chocs-couple-serrage-roues-dynamometrique/, /guides/cle-a-chocs-manque-couple-diagnostic/
+
+Sources effectivement lues : https://irtoolhelp.ingersollrand.com/hc/en-us/articles/360013807334-How-can-impact-tools-deliver-torques-higher-than-the-socket-ratings
+
+Constat et limites : Article constructeur lu dans le navigateur interne : dynamique du choc distincte d’un audit quasi statique ; exigence de douilles à choc en bon état et respect des informations de sécurité. Aucune limite de couple d’adaptateur inventée. La grille de références et de retenue traite les accessoires ; les voisins traitent respectivement le serrage final et l’alimentation. Le 403 du client curl est conservé comme observation distincte de la lecture normale du navigateur.
+
+Empreinte : `3cca5deea2776f893f337aea2bf1e22a23b922581dcf5001d68f887b346f883c`.
+
+
+## /guides/filtre-air-comprime-perte-pression-remplacement/
+
+Décision : **needs-correction**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Texte relu ; le PDF Parker décisif sur l’indicateur différentiel et la qualité est inaccessible403. La page peut continuer à être revue séparément, sans suspendre les autres.
+
+Empreinte : `3de403b062afb236d926f66fcc19252b2d55153426c5c93e1efc4a11536adea1`.
+
+
+## /guides/filtre-charbon-actif-air-comprime-vapeurs-huile/
+
+Décision : **needs-correction**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Texte relu ; les deux PDF Parker sur adsorption, prétraitement et critères de remplacement renvoient403. La grille est utile mais les assertions de source décisives restent à vérifier avant admission.
+
+Empreinte : `daa3128e56158a2d8d98480356e60c7d6b0d40265605e6eed869714cea44efaa`.
+
+
+## /guides/huile-sortie-compresseur-air-comprime-diagnostic/
+
+Décision : **needs-correction**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Texte relu ; le PDF Parker utilisé pour les origines/formes de contamination est inaccessible403. Les autres pistes ne remplacent pas la revue complète de cette affirmation.
+
+Empreinte : `6c7fabf11f5ff3cd561c187eb1ef09beb448468bc8a23a0f4575b726e61d7345`.
+
+
+## /guides/pressostat-compresseur-pression-enclenchement-differentiel/
+
+Décision : **approved**.
+
+Apport : Comprendre les deux seuils et distinguer commande de cuve, sortie régulée et relevé utile au réparateur.
+
+Voisins comparés : /guides/compresseur-ne-demarre-plus-froid-rallonge/, /guides/compresseur-ne-monte-plus-en-pression/, /guides/pression-regulateur-varie-cuve-compresseur-spe/
+
+Sources effectivement lues : https://condor-werke.de/en/products/pressure-switches/product/pressure-switch-mdr-2, https://condor-werke.de/fileadmin/content/PDF/Datenblaetter/Druckschalter/MDR-2/product-data-sheet-Condor-MDR-2.pdf, https://www.metabo-service.com/manuals/1151663628_00_0310_Sx_Ax_de_en_fr_nl_it_es_pt_da_no_sv_fi_hu_pl_el_%20Basic%20265.pdf
+
+Constat et limites : Condor MDR2 : page produit et fiche 04/2025 p. 3 et 7 effectivement lues ; réglage de différentiel et combinaisons limitées par diagramme. Formulations opposées sur le seuil affecté par la vis : réserve explicite du guide cohérente, aucune procédure de réglage publiée. Notice Metabo section française 4.3 : arrêt à pression cuve maximale et réglage aval distinct ; exemple 8–6=2 bar explicitement fictif. Voisins lus : diagnostic de panne et SPE, intentions distinctes.
+
+Empreinte : `5ff0e193f8a466c372c349670b476aa6554a65d40e93e8cbfebf5be6b2f1419f`.
+
+
+## /guides/raccorder-deux-compresseurs-en-parallele/
+
+Décision : **approved**.
+
+Apport : Préparer un projet de deux machines avec données comparables, bilan de secours, commande et réception, sans tutoriel de raccordement improvisé.
+
+Voisins comparés : /guides/sequencer-plusieurs-compresseurs/, /guides/compresseur-secours-n-plus-un-capacite-restante/
+
+Sources effectivement lues : https://www.atlascopco.com/en-uk/compressors/air-compressor-blog/challenger/backup, https://www.atlascopco.com/en-ae/compressors/air-compressor-blog/multi-compressor-system
+
+Constat et limites : Pages Atlas Copco lues : parallèle / partage de demande, base / appoint, restrictions du traitement et commande coordonnée. 200+200=400 puis 200 restants face à 300 sont des scénarios hypothétiques vérifiés, aucune mesure ni gain énergétique constructeur importé. Le guide de séquencement traite la stratégie d’une centrale, N+1 la continuité après panne ; celui-ci apporte le dossier initial d’ajout de deux machines et les cas de réception. Renvois présents pour ne pas multiplier les mêmes développements.
+
+Empreinte : `d0028d02f3f81f3d7af874501f1d9365ba314dc7673854910d1c8c6320dcad3c`.
+
+
+## /guides/ventouse-piece-poreuse-debit-vide/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Texte intégral relu ; la corroboration actuelle des cinq sources Schmalz, DOE, Piab et COVAL et des voisins spécialisés reste inachevée. Aucun avis positif implicite à partir du seul texte ou des anciennes dates.
+
+Empreinte : `4d186c4b6eeb0b20766d65ac2a2ce7f241ded008e464855b72d05bf003f13c46`.
+
+
+## /compresseurs/abac-formula-e-11-13-400-50/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `4d22912927be1c44f66416453a6c4dc439099c5c4963985e3ea62fac7f8c8f6a`.
+
+
+## /compresseurs/fiac-ax-153bd-dry-10-400-50-ce/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `1d9757aab65ce794c7a8ec162a31ffe92f7a8e959cf7d4456f03f0456d8ee416`.
+
+
+## /outils-pneumatiques/cleco-11pthh352/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `187c03544b706af4476d83e81c77c916592fe52c7bf35651374ca7ce1e042fe7`.
+
+
+## /outils-pneumatiques/cleco-19pca02q/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `5b5bf6031c70e6eadc2c66ba56b05a8537fae340a1c47dcda7bb2f994615c605`.
+
+
+## /outils-pneumatiques/cleco-19raa03am2/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `4d944eebf90e1f52b1abfa325f32833cad9fbdc4cb6ce57e1c1ebc2835f2598d`.
+
+
+## /outils-pneumatiques/cleco-wt-2110-8/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `48cb1d924fe6ae3d30345704771fe6bde9a41a0810fac6a4080c17108f8e43c5`.
+
+
+## /outils-pneumatiques/master-power-mp4400-15/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `0a7e86b957856cbabc62152b103002b43453bf04f98668bb52eeea31f3c11056`.
+
+
+## /outils-pneumatiques/meuleuse-chicago-pneumatic-cp3340-salavel/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `8f6ea4339a14755ff7b918f97b2d344000d5108f2dba2a7c6f8091d9b0e62e95`.
+
+
+## /outils-pneumatiques/meuleuse-dynabrade-52715/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `27b91919da4480e43df03a1984357ed9c94369610696d396f01542a639ef67c9`.
+
+
+## /outils-pneumatiques/perceuse-dynabrade-49135/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `893797d5d3c775c0c5aa05995a1279fc9e6da0f002bba3365c4cb4304d371862`.
+
+
+## /outils-pneumatiques/ponceuse-orbitale-dynabrade-53415/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `2b0b3214409a0decf56f7ddadc35551d7ff9450ddbe6ed9f98e61277bd32a158`.
+
+
+## /outils-pneumatiques/ponceuse-rotative-dynabrade-50210/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `8c247cd83ecc53bc298ce28228ebf7eec4679c41ec54107a2f48d0c33e055470`.
+
+
+## /outils-pneumatiques/ponceuse-vibrante-dynabrade-51350/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `897a5b90217935743ec070dc1ed98490ab2bf71ad7fca730e5979ebc6af98da8`.
+
+
+## /outils-pneumatiques/shinano-si-1060/
+
+Décision : **approved**.
+
+Apport : La SI-1060 est une visseuse à chocs droite pour laquelle le choix du compresseur doit être recoupé avec le couple de travail : son maximum de consommation est de 492 L/min à 6,3 bar en fonctionnement. Le même catalogue permet de comparer la SI-1062 avant un remplacement.
+
+Voisins comparés : /outils-pneumatiques/shinano-si-1062/, /outils-pneumatiques/shinano-si-1052/
+
+Sources effectivement lues : https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=7, https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43
+
+Constat et limites : Face à la SI-1062 du même tableau, la SI-1060 demande 8,2 L/s contre 7,9 L/s au maximum, soit 492 contre 474 L/min : 18 L/min de plus par conversion. Son couple de travail publié est pourtant de 0–50 Nm, contre 0–70 Nm pour la SI-1062. La SI-1060 tourne à vide à 11 000 tr/min et pèse 0,87 kg ; la SI-1062 affiche 10 000 tr/min et 0,79 kg. Le seul débit disponible ne permet donc pas de conclure à leur interchangeabilité. Limites : La moyenne de catalogue de la SI-1060, 1,4 L/s soit 84 L/min, ne définit pas le cycle réel de vissage. Conserver 492 L/min pour la demande maximale et faire valider le serrage sur l’assemblage avant une substitution. Tableaux et conditions contrôlés visuellement dans le PDF obtenu HTTP200 le15 octobre ; profils voisins et conditions documentaires relus. Les champs techniques de demande restent inchangés.
+
+Empreinte : `bae5b67866b9964d8a297113152a40ef0abc57cc50fd742f8256572babbd698a`.
+
+
+## /outils-pneumatiques/shinano-si-1107b/
+
+Décision : **approved**.
+
+Apport : La SI-1107B est le mini-cliquet à carré de 1/4 pouce, à distinguer de la SI-1108B à carré de 3/8 pouce. Les deux demandent le même maximum publié de 306 L/min : le choix se joue aussi sur les douilles, l’accès et le besoin de serrage.
+
+Voisins comparés : /outils-pneumatiques/shinano-si-1108b/
+
+Sources effectivement lues : https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=9, https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43
+
+Constat et limites : Le tableau donne 5,1 L/s au maximum pour les SI-1107B et SI-1108B, soit 306 L/min pour chacune. Le carré change de 1/4 à 3/8 pouce, sans hausse du couple maximal annoncé : 30 Nm pour les deux. La plage de travail est de 0–25 Nm et la vitesse à vide de 300 tr/min pour les deux références. La masse publiée passe de 0,39 kg pour la SI-1107B à 0,40 kg pour la SI-1108B. Limites : Un adaptateur de carré ne constitue pas une validation de la chaîne de douilles. Le maximum de 30 Nm ne certifie pas le serrage final d’un assemblage ; vérifier sa prescription et sa méthode de contrôle. Tableaux et conditions contrôlés visuellement dans le PDF obtenu HTTP200 le15 octobre ; profils voisins et conditions documentaires relus. Les champs techniques de demande restent inchangés.
+
+Empreinte : `8d8aa2bb3a1b30c390c27721049a466d165179e85b6e7c56237daeae92ec3d63`.
+
+
+## /outils-pneumatiques/shinano-si-1305/
+
+Décision : **approved**.
+
+Apport : La SI-1305 est une clé à chocs compacte à commande papillon. Sa comparaison avec la SI-1355 montre pourquoi deux outils annoncés à 90 Nm ne demandent pas exactement la même alimentation ni le même accès.
+
+Voisins comparés : /outils-pneumatiques/shinano-si-1355/
+
+Sources effectivement lues : https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=4, https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43
+
+Constat et limites : Les SI-1305 et SI-1355 partagent un carré de 3/8 pouce, une plage de travail de 0–75 Nm et 9 000 tr/min à vide. Leurs maxima d’air diffèrent : 7,9 et 7,6 L/s, soit 474 et 456 L/min ; l’écart calculé est de 18 L/min. La SI-1305 pèse 0,94 kg contre 1,12 kg pour la SI-1355. Son entrée d’air orientable et sa commande papillon changent la prise en main ; ces différences doivent accompagner le choix pour une zone encombrée. Limites : Ni les 90 Nm maximaux ni les 18 L/min d’écart ne garantissent le même temps de desserrage sur une fixation réelle. Prévoir le contrôle du serrage final et la compatibilité des douilles séparément. Tableaux et conditions contrôlés visuellement dans le PDF obtenu HTTP200 le15 octobre ; profils voisins et conditions documentaires relus. Les champs techniques de demande restent inchangés.
+
+Empreinte : `bc9c8d6ea8267bcc55376838a685d01b41ce9959ad7133a990ef5f41dbe719eb`.
+
+
+## /outils-pneumatiques/shinano-si-2001s-6/
+
+Décision : **approved**.
+
+Apport : Le suffixe -6 de la SI-2001S-6 identifie la pince de 6 mm. Cette différence est décisive pour l’accessoire, même si la version SI-2001S à pince 1/4 pouce publie la même consommation maximale de 456 L/min.
+
+Voisins comparés : /outils-pneumatiques/shinano-si-2001s/, /outils-pneumatiques/shinano-si-2002ex-6/
+
+Sources effectivement lues : https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=19, https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43
+
+Constat et limites : Le catalogue distingue la pince de 6 mm de la SI-2001S-6 de la pince 1/4 pouce de la SI-2001S. Un quart de pouce vaut 6,35 mm : la différence calculée de 0,35 mm interdit de déduire une compatibilité de queue d’une simple proximité de diamètre. Face à la SI-2002EX-6 à pince de 6 mm, la SI-2001S-6 affiche 25 000 contre 27 000 tr/min et 173 contre 219 W. Le maximum d’air est de 7,6 contre 7,4 L/s, soit 456 contre 444 L/min : 12 L/min d’écart. Limites : Confirmer la pince livrée, le diamètre exact de la queue et la vitesse admissible du consommable. Une puissance plus élevée ou une consommation plus faible du modèle voisin ne valide pas le même travail de meulage. Tableaux et conditions contrôlés visuellement dans le PDF obtenu HTTP200 le15 octobre ; profils voisins et conditions documentaires relus. Les champs techniques de demande restent inchangés.
+
+Empreinte : `8c5e751c44cabdaab0dc085628cd1477cdf8a4adbdc437439bdfa5d2dce5f28d`.
+
+
+## /outils-pneumatiques/shinano-si-2008ex/
+
+Décision : **approved**.
+
+Apport : La SI-2008EX est une mini-ponceuse à rotation simple avec plateau de 50 mm et broche M6 × 1. Son besoin maximal de 474 L/min permet de préparer l’alimentation, mais son mouvement doit aussi être distingué de la double action de la SI-2107A.
+
+Voisins comparés : /outils-pneumatiques/shinano-si-2107a/
+
+Sources effectivement lues : https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=15, https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43
+
+Constat et limites : La SI-2107A du même tableau utilise également un plateau de 50 mm et une broche M6 × 1, avec une orbite de 3 mm ; la SI-2008EX est à rotation simple. Le filetage et le diamètre communs ne prouvent donc pas une finition équivalente. Les maxima publiés sont de 7,9 L/s pour la SI-2008EX et de 6,5 L/s pour la SI-2107A, soit 474 et 390 L/min : écart calculé de 84 L/min. Les vitesses à vide sont respectivement de 14 500 et 14 000 tr/min. Limites : La comparaison de consommation maximale ne mesure ni le temps nécessaire à la même finition ni une économie d’énergie par pièce. Faire valider l’abrasif, le mouvement et le résultat attendu ; ne pas dimensionner sur la seule moyenne de catalogue. Tableaux et conditions contrôlés visuellement dans le PDF obtenu HTTP200 le15 octobre ; profils voisins et conditions documentaires relus. Les champs techniques de demande restent inchangés.
+
+Empreinte : `e08e55aa5eb7d631fdcb75fa6ab76516c8c5e40ed5c7fb13e32eb109d0a9717b`.
+
+
+## /outils-pneumatiques/shinano-si-2009ex-h/
+
+Décision : **approved**.
+
+Apport : Le suffixe H de la SI-2009EX-H désigne ici la version rapide de la polisseuse à rotation simple : 5 000 tr/min à vide et 354 L/min au maximum publié. Il faut identifier cette version avant de reprendre le dimensionnement d’une SI-2009EX.
+
+Voisins comparés : /outils-pneumatiques/shinano-si-2009ex/
+
+Sources effectivement lues : https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=18, https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43
+
+Constat et limites : La SI-2009EX sans H affiche 2 600 tr/min et 7,1 L/s au maximum ; la SI-2009EX-H affiche 5 000 tr/min et 5,9 L/s. Les conversions donnent 426 et 354 L/min : 72 L/min d’écart malgré la vitesse plus élevée de la version H. Les deux versions partagent le plateau publié de 75 mm, la broche femelle 5/16-24 UNF et une masse de 0,68 kg. Ces interfaces communes n’autorisent pas à transférer automatiquement une procédure de polissage ou un accessoire à une autre vitesse. Limites : Le débit inférieur de la version H ne mesure pas une économie sur une même pièce. Confirmer les limites de vitesse du plateau et du consommable ; les 5 000 tr/min sont une vitesse à vide, pas une vitesse garantie en charge. Tableaux et conditions contrôlés visuellement dans le PDF obtenu HTTP200 le15 octobre ; profils voisins et conditions documentaires relus. Les champs techniques de demande restent inchangés.
+
+Empreinte : `7b847524a558240f92ec19421e592e32266dd047959eee6283c7204bb7533598`.
+
+
+## /outils-pneumatiques/shinano-si-2015ad/
+
+Décision : **approved**.
+
+Apport : La SI-2015AD est une perceuse droite à mandrin de 10 mm et 6 000 tr/min à vide. Sa proximité de nom avec la meuleuse SI-2015A ne doit pas conduire à reprendre ses accessoires, même si leurs maxima d’air publiés sont identiques.
+
+Voisins comparés : /outils-pneumatiques/shinano-si-5100a/, /outils-pneumatiques/shinano-si-2015a/
+
+Sources effectivement lues : https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=22, https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43
+
+Constat et limites : La SI-2015AD et la perceuse à poignée pistolet SI-5100A ont un mandrin de 10 mm, mais les vitesses à vide sont de 6 000 et 5 000 tr/min et les couples maximaux de 2,62 et 3,06 Nm. Leurs maxima d’air sont de 11,9 et 9,3 L/s, soit 714 et 558 L/min : 156 L/min d’écart. La SI-2015A sans D est une meuleuse à pince 1/4 pouce, annoncée à 5 500 tr/min et 714 L/min. Une demande d’air identique ne transforme pas sa pince en mandrin de perceuse. Limites : Le mandrin de 10 mm n’est pas une capacité de perçage universelle. Le tableau donne séparément une capacité de perçage de 6 mm pour la SI-2015AD ; matériau, foret et opération restent à valider avec la notice. Tableaux et conditions contrôlés visuellement dans le PDF obtenu HTTP200 le15 octobre ; profils voisins et conditions documentaires relus. Les champs techniques de demande restent inchangés.
+
+Empreinte : `91e806c22c73f40590e5204d8a5ad417357fdfb18690a59b1c5b3babb617b9dc`.
+
+
+## /outils-pneumatiques/shinano-si-2033/
+
+Décision : **approved**.
+
+Apport : La SI-2033 est une tronçonneuse à disque rotatif de 75 mm, annoncée à 20 000 tr/min à vide. Pour son alimentation, retenir les 678 L/min maximaux ; pour l’accessoire, distinguer cette rotation de l’oscillation de la SI-4300.
+
+Voisins comparés : /outils-pneumatiques/shinano-si-4300/
+
+Sources effectivement lues : https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=20, https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43
+
+Constat et limites : La SI-2033 publie 11,3 L/s au maximum, soit 678 L/min ; la SI-4300 publie 9,1 L/s, soit 546 L/min. Les 132 L/min d’écart ne comparent pas un même procédé de coupe. Le tableau indique un disque de 75 mm et une broche de 9,5 mm pour la SI-2033 ; la SI-4300 utilise un disque de 63 mm oscillant sur 2,8°. Les 20 000 tr/min de la première ne se confondent pas avec les 20 000 oscillations/min de la seconde. Limites : Vérifier l’alésage, le disque et sa vitesse admissible pour la SI-2033. La destination tôle ou tube indiquée au catalogue ne fournit pas une épaisseur universelle ni une permission d’employer un accessoire d’outil oscillant. Tableaux et conditions contrôlés visuellement dans le PDF obtenu HTTP200 le15 octobre ; profils voisins et conditions documentaires relus. Les champs techniques de demande restent inchangés.
+
+Empreinte : `f4bd491d24a11893dd0d95bbf91641ddf997ca19300a0b12433033b501a5c126`.
+
+
+## /outils-pneumatiques/shinano-si-2107a/
+
+Décision : **approved**.
+
+Apport : La SI-2107A associe un plateau de 50 mm à une double action avec orbite de 3 mm. Pour un poste de finition, son maximum de 390 L/min à 6,3 bar doit être examiné avec le mouvement demandé et l’accessoire, pas avec le seul diamètre du plateau.
+
+Voisins comparés : /outils-pneumatiques/shinano-si-2008ex/
+
+Sources effectivement lues : https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=15, https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43
+
+Constat et limites : Le catalogue place la SI-2107A et la SI-2008EX dans le même tableau : broche M6 × 1 et plateau de 50 mm pour les deux, mais double action avec orbite de 3 mm pour la première et rotation simple pour la seconde. La SI-2107A affiche 6,5 L/s au maximum, soit 390 L/min, contre 7,9 L/s, soit 474 L/min pour la SI-2008EX. L’écart calculé de 84 L/min porte sur le débit maximal publié, sans présumer le temps de travail nécessaire. Limites : Une alimentation suffisante pour 390 L/min ne valide pas un remplacement de la SI-2008EX : le mouvement et le résultat de finition sont différents. Vérifier aussi l’accessoire exact et la pression à l’outil pendant l’action. Tableaux et conditions contrôlés visuellement dans le PDF obtenu HTTP200 le15 octobre ; profils voisins et conditions documentaires relus. Les champs techniques de demande restent inchangés.
+
+Empreinte : `71d3abeeedc863a402afd3c8adc419527c9f7106d3410aa794af1316fcd4384f`.
+
+
+## /outils-pneumatiques/shinano-si-2700/
+
+Décision : **approved**.
+
+Apport : La SI-2700 est une ponceuse à bande de 10 × 330 mm dont le maximum publié atteint 558 L/min. La SI-2740 conserve cette demande d’air et ce format de bande : un remplacement doit donc être motivé par la géométrie et la prise en main, pas par une baisse de débit supposée.
+
+Voisins comparés : /outils-pneumatiques/shinano-si-2740/
+
+Sources effectivement lues : https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=11, https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43
+
+Constat et limites : Pour les SI-2700 et SI-2740, le catalogue donne 9,3 L/s au maximum, soit 558 L/min, ainsi que 317 W et 15 000 tr/min à vide. Le bras réglable fait partie des deux descriptions ; la SI-2740 précise une amplitude de 160°. La masse publiée est de 0,82 kg pour la SI-2700 et de 0,73 kg pour la SI-2740 : différence calculée de 90 g. Cette différence porte sur l’outil déclaré, sans mesure d’effort ni essai ergonomique CompatAir. Limites : Le débit maximal identique ne prouve pas une durée de travail identique par pièce. Confirmer l’accès, le format 10 × 330 mm et l’abrasif ; ne pas acheter une bande 10 × 460 mm de SI-2700L sur la seule proximité du nom. Tableaux et conditions contrôlés visuellement dans le PDF obtenu HTTP200 le15 octobre ; profils voisins et conditions documentaires relus. Les champs techniques de demande restent inchangés.
+
+Empreinte : `7f05d7cc9184080ccc9df046742a9109f6e004fe4b37a880f661b69d879b97ef`.
+
+
+## /outils-pneumatiques/shinano-si-3001a/
+
+Décision : **approved**.
+
+Apport : La SI-3001A est la ponceuse orbitale rectangulaire sans aspiration autonome de cette paire de références. La comparaison avec la SI-3011A permet de chiffrer la demande d’air supplémentaire associée à cette autre configuration, sans attribuer au seul plateau une fonction d’aspiration.
+
+Voisins comparés : /outils-pneumatiques/shinano-si-3011a/
+
+Sources effectivement lues : https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=13, https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43
+
+Constat et limites : Les SI-3001A et SI-3011A affichent une orbite de 4 mm et 10 000 tr/min à vide. La SI-3011A est décrite comme Self Vacuum ; la SI-3001A est décrite comme Orbital Sander sans cette fonction. Le maximum de la SI-3001A est de 6,5 L/s, soit 390 L/min, contre 7,1 L/s, soit 426 L/min pour la SI-3011A : 36 L/min d’écart. Les masses publiées sont de 0,80 et 1,15 kg, soit 350 g de différence. Limites : Le catalogue distingue un plateau de 75 × 100 mm et un abrasif de 75 × 110 mm : ne pas confondre ces dimensions lors de la commande. Une fonction d’aspiration annoncée sur une référence voisine ne certifie pas la captation des poussières du poste. Tableaux et conditions contrôlés visuellement dans le PDF obtenu HTTP200 le15 octobre ; profils voisins et conditions documentaires relus. Les champs techniques de demande restent inchangés.
+
+Empreinte : `aea3006e3e6e16a66fc8b6ad1cd2cf04b719fd73df8d8c53ff3d268b77b5b791`.
+
+
+## /outils-pneumatiques/shinano-si-4120a/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `918f89ee1633f682cc65104d24cd3072afc68d2ef8f41e7252e9cf87276e10f7`.
+
+
+## /outils-pneumatiques/shinano-si-4300/
+
+Décision : **approved**.
+
+Apport : La SI-4300 est un outil de coupe oscillant pour carrosserie : disque de 63 mm, angle de 2,8° et 20 000 oscillations/min à vide. Son maximum de 546 L/min ne doit pas être rapproché d’une scie alternative comme si les mouvements et les lames étaient identiques.
+
+Voisins comparés : /outils-pneumatiques/shinano-si-4710/, /outils-pneumatiques/shinano-si-2033/
+
+Sources effectivement lues : https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=25, https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43
+
+Constat et limites : Le tableau distingue la SI-4300 de la SI-4710 : oscillation de 2,8° et disque de 63 mm d’un côté, course alternative de 10 mm et 10 000 coups/min de l’autre. Les 20 000 oscillations/min de la SI-4300 ne sont pas des tours/min. La SI-4300 demande au maximum 9,1 L/s, soit 546 L/min, contre 2,8 L/s, soit 168 L/min pour la SI-4710. L’écart calculé de 378 L/min décrit deux demandes d’air, sans valider le même travail de coupe. Limites : Ne pas déduire une épaisseur de tôle admissible des seules profondeurs montrées pour les disques de la SI-4300. La lame, sa destination, la géométrie et le matériau à couper doivent être confirmés avant choix. Tableaux et conditions contrôlés visuellement dans le PDF obtenu HTTP200 le15 octobre ; profils voisins et conditions documentaires relus. Les champs techniques de demande restent inchangés.
+
+Empreinte : `15b95d2f66125207b8aa250d95ea7b5c990df8bcb15194677e977505678be412`.
+
+
+## /outils-pneumatiques/shinano-si-4500/
+
+Décision : **approved**.
+
+Apport : La SI-4500 est une cisaille à comparer à la grignoteuse SI-4600 selon la coupe à réaliser. Sa consommation maximale de 594 L/min et sa largeur de coupe publiée de 5,4 mm décrivent une autre configuration que les 558 L/min et 4,5 mm de la SI-4600.
+
+Voisins comparés : /outils-pneumatiques/shinano-si-4600/
+
+Sources effectivement lues : https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=25, https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43
+
+Constat et limites : Pour la SI-4500 et la SI-4600, le tableau publie une capacité de coupe acier de 1,6 mm. Il distingue une cisaille de 1,26 kg et une grignoteuse de 1,00 kg ; cette capacité commune ne démontre pas le même accès ni le même résultat. Les maxima sont de 9,9 L/s pour la SI-4500 et de 9,3 L/s pour la SI-4600, soit 594 et 558 L/min : écart calculé de 36 L/min. Les largeurs de coupe publiées sont respectivement de 5,4 et 4,5 mm. Limites : La capacité acier publiée ne vaut pas capacité universelle sur tous les alliages. Pour le remplacement d’une grignoteuse, faire confirmer le matériau, le tracé et l’accès ; un débit disponible supérieur ne valide pas l’opération. Tableaux et conditions contrôlés visuellement dans le PDF obtenu HTTP200 le15 octobre ; profils voisins et conditions documentaires relus. Les champs techniques de demande restent inchangés.
+
+Empreinte : `e211776cc14788fe77fca96438ef5048399606d70ac4681a8339e708547f943e`.
+
+
+## /outils-pneumatiques/shinano-si-4600/
+
+Décision : **approved**.
+
+Apport : La grignoteuse SI-4600 et la cisaille SI-4500 affichent toutes deux une capacité acier de 1,6 mm, mais leurs masses, largeurs de coupe et demandes d’air diffèrent. Pour la SI-4600, conserver le maximum de 558 L/min à 6,3 bar pendant l’action.
+
+Voisins comparés : /outils-pneumatiques/shinano-si-4500/
+
+Sources effectivement lues : https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=25, https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43
+
+Constat et limites : La SI-4600 affiche 4,5 mm de largeur de coupe et 1,00 kg, contre 5,4 mm et 1,26 kg pour la cisaille SI-4500. Le type d’outil et le parcours de coupe doivent donc accompagner la comparaison de débit. Les 9,3 L/s maximaux de la SI-4600 deviennent 558 L/min ; les 9,9 L/s de la SI-4500 deviennent 594 L/min. Les 36 L/min d’écart ne démontrent ni un temps de coupe plus court ni une économie par pièce. Limites : La valeur de 1,6 mm concerne l’acier dans le tableau fabricant. Faire préciser l’alliage, l’épaisseur et le tracé avant de choisir les outils de coupe ; la moyenne de consommation ne remplace pas le maximum pour l’alimentation. Tableaux et conditions contrôlés visuellement dans le PDF obtenu HTTP200 le15 octobre ; profils voisins et conditions documentaires relus. Les champs techniques de demande restent inchangés.
+
+Empreinte : `fdcfb67ce9537f94c939c81f02c2320e041a2d6bda04adf89496fd96449d436e`.
+
+
+## /outils-pneumatiques/tronconneuse-dynabrade-52418/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `b69d517e6af4d02dcee11b607ae6ad193cd37e8b1c8e4d4d47a88ca744659c19`.
+
+
+## /compresseurs/airpress-24v-pour-camion-dc-24-225-15/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `4d05b2c2b2f96cf51caa99bb683bf27044c54ca2c21b89143200cd6f44f14aff`.
+
+
+## /compresseurs/gentilin-ac400-20/
+
+Décision : **approved**.
+
+Apport : Le Gentilin AC400/20 publie 130 L/min restitués à 8 bar avec une cuve de 20 L. Le choix doit distinguer ce débit des 250 L/min aspirés et tenir compte d’un conflit de régime de service entre la fiche produit et la notice liée, qui impose une confirmation fabricant avant usage prolongé.
+
+Voisins comparés : /compresseurs/gentilin-ac200-05/
+
+Sources effectivement lues : https://www.gentilinair.com/en/products/ac400-20, https://www.gentilinair.com/en/products/ac200-05, https://www.gentilinair.com/docs/41024001-compressed_1775720906.pdf#page=6
+
+Constat et limites : Au même point de 8 bar, la fiche AC400/20 publie 130 L/min, contre 60 L/min pour l’AC200/05 : écart calculé de 70 L/min. Les cuves font respectivement 20 et 5 L ; la réserve quadruplée ne multiplie pas le débit permanent par quatre. L’AC400/20 affiche 1,5 kW, contre 0,9 kW pour l’AC200/05. Les deux fiches donnent un débit à 5 bar distinct : 185 et 115 L/min. Un résultat interpolé à 6,3 bar serait un calcul entre ces points, pas une mesure publiée. Limites : La notice affiche aussi un FAD de 205 L/min sans pression de mesure dans ce tableau. Cette valeur ne remplace pas les points Air Delivery de la fiche, 185 L/min à 5 bar et 130 L/min à 8 bar. Une conclusion de compatibilité continue reste insuffisamment documentée. Notice p.6 contrôlée visuellement ; fiche actuelle185 L/min à 5 bar, 130 L/min à 8 bar, 250 L/min aspirés, 15 kg, 20 L. Cycle 100 % versus S3 70% retiré du calcul, sources historiques intactes et deux preuves ajoutées. Le produit reste utile avec sa réserve et un verdict insuffisant en cas de régime inconnu.
+
+Empreinte : `432f1e41c814df4cd6f7f6eb4efc52f0dc088abcf116065b2d99876ccb427bdb`.
+
+
+## /outils-pneumatiques/biax-be-1005/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `9020cafd7153e8125c2a883403f4f35c9f5c5c4d258741a813e4c1c7482d4ef2`.
+
+
+## /outils-pneumatiques/biax-gaa-205/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `52d24e01ddd95d6089cd085c19a49ca1b9509a128042d56ff3be0ca8bf5a7b2a`.
+
+
+## /compresseurs/aircraft-airbau-480-90-b/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `20149ea760ab5dc511574e82ae0ba1d39f3a3bebc903532567209b0d455d3e36`.
+
+
+## /compresseurs/black-decker-bd-195-12-nk/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `611c51199c7a54ad05178dfbe4548cdfbf7d2d5a0c803ae83c120e36deb1be0f`.
+
+
+## /compresseurs/nuair-b2800-100-cm2/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `123c4e0275d3842eaa4492717704a7ded4b249e2616aec8e9217d3c0d5b31a38`.
+
+
+## /compresseurs/prebena-orkan-250/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `8db1ec589ddcb5832a9ed736a41aeeab0f6ac11399d21e17174ed19935411f41`.
+
+
+## /compresseurs/stanley-b-251-10-50/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `cc6e21fe65b148d3637f28375338eb8b6e27f20e92b092a9c48c793df1f58d2c`.
+
+
+## /compresseurs/almig-combi-xp-11-270d/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `aaf29381aa5756c8dc5699bb4b768902797a51d6afea0d7a901992e0ecdc534c`.
+
+
+## /compresseurs/renner-rs-pro-11-0-310016/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `dfec46f8834f8a3fd42b10c5149d44548958f61cea0cc8838918e08ed186bb96`.
+
+
+## /compresseurs/boge-s-221-3-10-bar-insonorisation-standard/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `38b9b6787ac5639b441d35c08dcc96ba7bded4f226899ba1c4266e9aeb3f766a`.
+
+
+## /compresseurs/ceccato-csa-10-ff-sur-cuve-270-l-10-bar/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `6a9b0dfaea978470bbad41df3e0f54ba6f6181ebb3e8850eeeb1017b7ed6a9f4`.
+
+
+## /compresseurs/kaeser-aircenter-10-secheur-et-cuve-integres-11-bar/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `f12ce6c3ca2b818b5e39c5c375e15d48efef9aa87e58bbd1ea5a37db5b27e29d`.
+
+
+## /compresseurs/broomwade-elite-11-rsccp1141v4-10-bar/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `c1419e98362fa12c7f51874f2bd6eb565f80d3ccda8b7e1f5070e67707c949c1`.
+
+
+## /compresseurs/chicago-pneumatic-cpi100-50-hz-10-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `0ffa230d048950e60af55a07c4d3ab8f1a3a6a1b99b21f080b66e5f3e4ea0d6c`.
+
+
+## /compresseurs/elgi-eg-11-60-hz-10-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `f29d48606646c529ffa754a9b0c88b45e7ea84a3116ef02601a621ec6b789ffd`.
+
+
+## /compresseurs/ingersoll-rand-r37ne-50-hz-vitesse-variable-nirvana-standard-groupe-fixe-au-sol-sans-secheur-vitesse-variable/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `3838bdad68b4cee952b93a080debcb861caa8121b6e4b3412c3b9d008bd9575f`.
+
+
+## /compresseurs/atlas-copco-g-15-50-hz-10-bar-pack-au-sol/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `b180e8cf660de1fbead19e02691a3f40d4877993c01aac582d7f0b1b22613462`.
+
+
+## /compresseurs/rolair-fc229mk103-60-hz-10-342136-bar-groupe-mobile-avec-reservoir-integre/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `5677c4fda2cf2bdaf29d8c91b8343c8c1189a48b0370daa0b4bf1c5704d23a69`.
+
+
+## /compresseurs/worthington-creyssensac-rlr-1000-50-hz-10-bar-full-feature-sur-reservoir-270-l/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `bdf5c33922b9fc8fc40e84151b09d38beecdd78cc3b41f8999daf94620092f07`.
+
+
+## /compresseurs/airpol-18/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `ba1b7eab8f650d4b41e1abcc4ab4c2dade186f27e3e39bbdabdd0cf7cbee3de4`.
+
+
+## /compresseurs/alup-allegretto-11/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `fd4af35074ef8753d8c58dc4a659da790a5dc291e82de87e8562f2bf2642bf22`.
+
+
+## /compresseurs/bambi-35-20/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `03276f659921e991a1103e758c137ba47915e04f069d304df39d97d47745fa27`.
+
+
+## /compresseurs/compair-l02-230-v/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `ea3438cc499bd4625d779f9d95e8b291d73e96f238530cb93d15d997a265349b`.
+
+
+## /compresseurs/ekom-dk50-10s-m/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `171b5fd16450969e12e515b3e8abcc9a7a20319b61a4b89d69f7a55f1d246615`.
+
+
+## /compresseurs/mark-msa-11/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `ecd5980ca62edf91efbb27fd9fd55c9fdd1755dd478326e888850326b6e4af93`.
+
+
+## /compresseurs/mattei-blade-12/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `ee1c3241133709221a2aff4beced69ff30873bd36e7475c94aba18a922bb9862`.
+
+
+## /compresseurs/champion-fm110/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `e57f26a19709c01f4cdecad38b86ba2973f8e614321aaf0d6fe81476b8580562`.
+
+
+## /compresseurs/dalgakiran-d-10-500-t/
+
+Décision : **deferred**.
+
+Apport : Aucun apport validé pour admission à ce passage.
+
+Voisins comparés : Revue comparative non achevée.
+
+Sources effectivement lues : Aucune source actuellement validée pour une admission.
+
+Constat et limites : Revue primaire et comparaison avec les voisins non achevées à ce passage. Aucune validation ni jugement définitif de qualité ; reste en noindex et hors sitemap sans bloquer les autres pages.
+
+Empreinte : `5bff73e5300454b723a2b719fb77a37059c9b31826ce0d256fda604890afb1eb`.

@@ -1,3 +1,4 @@
+import { applyReviewedOctober15Amendment } from './reviewed-catalog-amendments-2026-10-15.mjs';
 import { applyReviewedCatalogAmendment } from './reviewed-catalog-amendments-2026-10-14.mjs';
 import { createMultiBrandCompressor, createMultiBrandTool } from './multi-brand-catalog-import.mjs';
 
@@ -95,7 +96,7 @@ export function buildTechnicalExpansion(compressorSnapshot, toolSnapshot) {
   product.editorial.verifiedFacts = product.editorial.verifiedFacts.map(fact => fact.replace('Masse nette publiée', 'Masse publiée'));
   if (row.brand === 'Airpress') product.specifications = product.specifications.map(spec => spec.label === 'Poids' ? { ...spec, label: 'Masse publiée (base non précisée)' } : spec);
   if (row.idSuffix) product.variant = { familyId: product.id.slice(0, -row.idSuffix.length - 1), label: `Référence ${row.mpn}`, distinguishingAttributes: { reference: row.mpn } };
-  return applyReviewedCatalogAmendment(product);
+  return applyReviewedOctober15Amendment(applyReviewedCatalogAmendment(product));
  });
  const tools = toolSnapshot.rows.map(row => { validateTool(row); const product = createMultiBrandTool(toolSnapshot, row);
   const hose = row.specifications.find(spec => spec.label === 'Diamètre intérieur de flexible conseillé');

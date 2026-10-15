@@ -23,18 +23,21 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-4500, référence SI-4500. Le tableau fabricant publie 594 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Largeur de coupe 5,4 mm ; capacité publiée 1,6 mm ; vitesse à vide publiée 2 000 tr/min. Masse publiée : 1.26 kg.",
+		"overview": "La SI-4500 est une cisaille à comparer à la grignoteuse SI-4600 selon la coupe à réaliser. Sa consommation maximale de 594 L/min et sa largeur de coupe publiée de 5,4 mm décrivent une autre configuration que les 558 L/min et 4,5 mm de la SI-4600.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 21 CFM / 9.9 L/s, soit 594 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
 			"Référence fabricant : SI-4500.",
 			"Version et équipement : Largeur de coupe 5,4 mm ; capacité publiée 1,6 mm ; vitesse à vide publiée 2 000 tr/min.",
-			"Masse publiée : 1.26 kg."
+			"Masse publiée : 1.26 kg.",
+			"Pour la SI-4500 et la SI-4600, le tableau publie une capacité de coupe acier de 1,6 mm. Il distingue une cisaille de 1,26 kg et une grignoteuse de 1,00 kg ; cette capacité commune ne démontre pas le même accès ni le même résultat.",
+			"Les maxima sont de 9,9 L/s pour la SI-4500 et de 9,3 L/s pour la SI-4600, soit 594 et 558 L/min : écart calculé de 36 L/min. Les largeurs de coupe publiées sont respectivement de 5,4 et 4,5 mm."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"La capacité acier publiée ne vaut pas capacité universelle sur tous les alliages. Pour le remplacement d’une grignoteuse, faire confirmer le matériau, le tracé et l’accès ; un débit disponible supérieur ne valide pas l’opération."
 		]
 	},
 	"specifications": [

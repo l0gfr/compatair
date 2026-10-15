@@ -23,19 +23,22 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2700, référence SI-2700. Le tableau fabricant publie 558 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Bande 10 × 330 mm ; bras orientable ; puissance publiée 317 W. Vitesse à vide publiée : 15000 tr/min.",
+		"overview": "La SI-2700 est une ponceuse à bande de 10 × 330 mm dont le maximum publié atteint 558 L/min. La SI-2740 conserve cette demande d’air et ce format de bande : un remplacement doit donc être motivé par la géométrie et la prise en main, pas par une baisse de débit supposée.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 19.8 CFM / 9.3 L/s, soit 558 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
 			"Référence fabricant : SI-2700.",
 			"Version et équipement : Bande 10 × 330 mm ; bras orientable ; puissance publiée 317 W.",
 			"Vitesse à vide publiée : 15000 tr/min.",
-			"Masse publiée : 0.82 kg."
+			"Masse publiée : 0.82 kg.",
+			"Pour les SI-2700 et SI-2740, le catalogue donne 9,3 L/s au maximum, soit 558 L/min, ainsi que 317 W et 15 000 tr/min à vide. Le bras réglable fait partie des deux descriptions ; la SI-2740 précise une amplitude de 160°.",
+			"La masse publiée est de 0,82 kg pour la SI-2700 et de 0,73 kg pour la SI-2740 : différence calculée de 90 g. Cette différence porte sur l’outil déclaré, sans mesure d’effort ni essai ergonomique CompatAir."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Le débit maximal identique ne prouve pas une durée de travail identique par pièce. Confirmer l’accès, le format 10 × 330 mm et l’abrasif ; ne pas acheter une bande 10 × 460 mm de SI-2700L sur la seule proximité du nom."
 		]
 	},
 	"specifications": [

@@ -23,18 +23,21 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2033, référence SI-2033. Le tableau fabricant publie 678 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 20 000 tr/min. Masse publiée : 1,00 kg.",
+		"overview": "La SI-2033 est une tronçonneuse à disque rotatif de 75 mm, annoncée à 20 000 tr/min à vide. Pour son alimentation, retenir les 678 L/min maximaux ; pour l’accessoire, distinguer cette rotation de l’oscillation de la SI-4300.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 24 CFM / 11.3 L/s. Conversion du maximum publié : 11.3 × 60 = 678 L/min.",
 			"Référence fabricant : SI-2033.",
 			"Vitesse à vide publiée : 20 000 tr/min.",
-			"Masse publiée : 1,00 kg."
+			"Masse publiée : 1,00 kg.",
+			"La SI-2033 publie 11,3 L/s au maximum, soit 678 L/min ; la SI-4300 publie 9,1 L/s, soit 546 L/min. Les 132 L/min d’écart ne comparent pas un même procédé de coupe.",
+			"Le tableau indique un disque de 75 mm et une broche de 9,5 mm pour la SI-2033 ; la SI-4300 utilise un disque de 63 mm oscillant sur 2,8°. Les 20 000 tr/min de la première ne se confondent pas avec les 20 000 oscillations/min de la seconde."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Vérifier l’alésage, le disque et sa vitesse admissible pour la SI-2033. La destination tôle ou tube indiquée au catalogue ne fournit pas une épaisseur universelle ni une permission d’employer un accessoire d’outil oscillant."
 		]
 	},
 	"specifications": [

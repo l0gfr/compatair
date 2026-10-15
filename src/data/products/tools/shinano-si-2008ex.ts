@@ -23,19 +23,22 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2008EX, référence SI-2008EX. Le tableau fabricant publie 474 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Plateau 50 mm ; broche M6 × 1 ; rotation simple. Vitesse à vide publiée : 14500 tr/min.",
+		"overview": "La SI-2008EX est une mini-ponceuse à rotation simple avec plateau de 50 mm et broche M6 × 1. Son besoin maximal de 474 L/min permet de préparer l’alimentation, mais son mouvement doit aussi être distingué de la double action de la SI-2107A.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 16.8 CFM / 7.9 L/s, soit 474 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
 			"Référence fabricant : SI-2008EX.",
 			"Version et équipement : Plateau 50 mm ; broche M6 × 1 ; rotation simple.",
 			"Vitesse à vide publiée : 14500 tr/min.",
-			"Masse publiée : 0.57 kg."
+			"Masse publiée : 0.57 kg.",
+			"La SI-2107A du même tableau utilise également un plateau de 50 mm et une broche M6 × 1, avec une orbite de 3 mm ; la SI-2008EX est à rotation simple. Le filetage et le diamètre communs ne prouvent donc pas une finition équivalente.",
+			"Les maxima publiés sont de 7,9 L/s pour la SI-2008EX et de 6,5 L/s pour la SI-2107A, soit 474 et 390 L/min : écart calculé de 84 L/min. Les vitesses à vide sont respectivement de 14 500 et 14 000 tr/min."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"La comparaison de consommation maximale ne mesure ni le temps nécessaire à la même finition ni une économie d’énergie par pièce. Faire valider l’abrasif, le mouvement et le résultat attendu ; ne pas dimensionner sur la seule moyenne de catalogue."
 		]
 	},
 	"specifications": [

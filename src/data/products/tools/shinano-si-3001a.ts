@@ -23,19 +23,22 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-3001A, référence SI-3001A. Le tableau fabricant publie 390 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Plateau rectangulaire 75 × 100 mm, revêtement Leather selon Shinano ; orbite 4 mm ; version sans aspiration autonome. Vitesse à vide publiée : 10000 tr/min.",
+		"overview": "La SI-3001A est la ponceuse orbitale rectangulaire sans aspiration autonome de cette paire de références. La comparaison avec la SI-3011A permet de chiffrer la demande d’air supplémentaire associée à cette autre configuration, sans attribuer au seul plateau une fonction d’aspiration.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 13.8 CFM / 6.5 L/s, soit 390 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
 			"Référence fabricant : SI-3001A.",
 			"Version et équipement : Plateau rectangulaire 75 × 100 mm, revêtement Leather selon Shinano ; orbite 4 mm ; version sans aspiration autonome.",
 			"Vitesse à vide publiée : 10000 tr/min.",
-			"Masse publiée : 0.8 kg."
+			"Masse publiée : 0.8 kg.",
+			"Les SI-3001A et SI-3011A affichent une orbite de 4 mm et 10 000 tr/min à vide. La SI-3011A est décrite comme Self Vacuum ; la SI-3001A est décrite comme Orbital Sander sans cette fonction.",
+			"Le maximum de la SI-3001A est de 6,5 L/s, soit 390 L/min, contre 7,1 L/s, soit 426 L/min pour la SI-3011A : 36 L/min d’écart. Les masses publiées sont de 0,80 et 1,15 kg, soit 350 g de différence."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Le catalogue distingue un plateau de 75 × 100 mm et un abrasif de 75 × 110 mm : ne pas confondre ces dimensions lors de la commande. Une fonction d’aspiration annoncée sur une référence voisine ne certifie pas la captation des poussières du poste."
 		]
 	},
 	"specifications": [

@@ -723130,7 +723130,45 @@
         "confidence": "A",
         "notes": "Voisin comparé uniquement : 3 L, 2,2 kW et 165 L/min à 8 bar. Aucune valeur du C330/03 transférée aux caractéristiques AC200/05."
       }
+    },
+    {
+      "id": "added:gentilin-ac400-20:gentilin-ac400-20-comparison-review-20261015:2026-10-15",
+      "evidenceId": "gentilin-ac400-20-comparison-review-20261015",
+      "productId": "gentilin-ac400-20",
+      "productType": "compressor",
+      "occurredAt": "2026-10-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "aa4e9528e9beb5ea80b27100c48b76d414e90db58a7cbd0f46fec4d3f0071a76",
+      "snapshot": {
+        "id": "gentilin-ac400-20-comparison-review-20261015",
+        "sourceUrl": "https://www.gentilinair.com/en/products/ac200-05",
+        "sourceLabel": "Gentilin, fiche AC200/05 comparée au même point de pression",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-15",
+        "confidence": "A",
+        "notes": "Voisin : Air Delivery 115 L/min à 5 bar et 60 L/min à 8 bar, cuve 5 L, 0,9 kW. Comparaison de données déclarées, pas essai de rendement."
+      }
+    },
+    {
+      "id": "added:gentilin-ac400-20:gentilin-ac400-20-manual-review-20261015:2026-10-15",
+      "evidenceId": "gentilin-ac400-20-manual-review-20261015",
+      "productId": "gentilin-ac400-20",
+      "productType": "compressor",
+      "occurredAt": "2026-10-15",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "20089694c624e666b0daa95203f98aecc6357870a1faba190bfc05d07e448e29",
+      "snapshot": {
+        "id": "gentilin-ac400-20-manual-review-20261015",
+        "sourceUrl": "https://www.gentilinair.com/docs/41024001-compressed_1775720906.pdf#page=6",
+        "sourceLabel": "Gentilin, notice EVO 41024001, 04/2026, tableau AC400/20 p. 6",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-15",
+        "confidence": "A",
+        "notes": "AC400/20 : huile absente, 20 L, 15 kg, 185 L/min à 5 bar ; 100 % de cycle de travail, en conflit avec la fiche S3 70 %. FAD 205 L/min non associé à une pression dans ce tableau, non substitué à la courbe."
+      }
     }
   ],
-  "historyVersion": "1de413f96f9a2e62e2d0a45532193ae27f93dcb3ee5681b537350e1abb34a297"
+  "historyVersion": "6d435f8da6852c6e79d6ad7571ba6666f84f3d57450b132ef2a831ccac1f28a8"
 }

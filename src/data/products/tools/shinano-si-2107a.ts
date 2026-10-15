@@ -23,19 +23,22 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2107A, référence SI-2107A. Le tableau fabricant publie 390 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Plateau 50 mm ; orbite 3 mm ; broche M6 × 1. Vitesse à vide publiée : 14000 tr/min.",
+		"overview": "La SI-2107A associe un plateau de 50 mm à une double action avec orbite de 3 mm. Pour un poste de finition, son maximum de 390 L/min à 6,3 bar doit être examiné avec le mouvement demandé et l’accessoire, pas avec le seul diamètre du plateau.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 13.8 CFM / 6.5 L/s, soit 390 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
 			"Référence fabricant : SI-2107A.",
 			"Version et équipement : Plateau 50 mm ; orbite 3 mm ; broche M6 × 1.",
 			"Vitesse à vide publiée : 14000 tr/min.",
-			"Masse publiée : 0.55 kg."
+			"Masse publiée : 0.55 kg.",
+			"Le catalogue place la SI-2107A et la SI-2008EX dans le même tableau : broche M6 × 1 et plateau de 50 mm pour les deux, mais double action avec orbite de 3 mm pour la première et rotation simple pour la seconde.",
+			"La SI-2107A affiche 6,5 L/s au maximum, soit 390 L/min, contre 7,9 L/s, soit 474 L/min pour la SI-2008EX. L’écart calculé de 84 L/min porte sur le débit maximal publié, sans présumer le temps de travail nécessaire."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Une alimentation suffisante pour 390 L/min ne valide pas un remplacement de la SI-2008EX : le mouvement et le résultat de finition sont différents. Vérifier aussi l’accessoire exact et la pression à l’outil pendant l’action."
 		]
 	},
 	"specifications": [

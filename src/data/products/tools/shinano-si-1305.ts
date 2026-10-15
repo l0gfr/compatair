@@ -23,19 +23,22 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-1305, référence SI-1305. Le tableau fabricant publie 474 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 90 Nm. Vitesse à vide publiée : 9 000 tr/min.",
+		"overview": "La SI-1305 est une clé à chocs compacte à commande papillon. Sa comparaison avec la SI-1355 montre pourquoi deux outils annoncés à 90 Nm ne demandent pas exactement la même alimentation ni le même accès.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 16.8 CFM / 7.9 L/s. Conversion du maximum publié : 7.9 × 60 = 474 L/min.",
 			"Référence fabricant : SI-1305.",
 			"Couple maximal publié : 90 Nm.",
 			"Vitesse à vide publiée : 9 000 tr/min.",
-			"Masse publiée : 0,94 kg."
+			"Masse publiée : 0,94 kg.",
+			"Les SI-1305 et SI-1355 partagent un carré de 3/8 pouce, une plage de travail de 0–75 Nm et 9 000 tr/min à vide. Leurs maxima d’air diffèrent : 7,9 et 7,6 L/s, soit 474 et 456 L/min ; l’écart calculé est de 18 L/min.",
+			"La SI-1305 pèse 0,94 kg contre 1,12 kg pour la SI-1355. Son entrée d’air orientable et sa commande papillon changent la prise en main ; ces différences doivent accompagner le choix pour une zone encombrée."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Ni les 90 Nm maximaux ni les 18 L/min d’écart ne garantissent le même temps de desserrage sur une fixation réelle. Prévoir le contrôle du serrage final et la compatibilité des douilles séparément."
 		]
 	},
 	"specifications": [

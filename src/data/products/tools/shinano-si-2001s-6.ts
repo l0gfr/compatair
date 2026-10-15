@@ -23,19 +23,22 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2001S-6, référence SI-2001S-6. Le tableau fabricant publie 456 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Pince 6 mm ; puissance publiée 173 W. Vitesse à vide publiée : 25000 tr/min.",
+		"overview": "Le suffixe -6 de la SI-2001S-6 identifie la pince de 6 mm. Cette différence est décisive pour l’accessoire, même si la version SI-2001S à pince 1/4 pouce publie la même consommation maximale de 456 L/min.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 16.2 CFM / 7.6 L/s, soit 456 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
 			"Référence fabricant : SI-2001S-6.",
 			"Version et équipement : Pince 6 mm ; puissance publiée 173 W.",
 			"Vitesse à vide publiée : 25000 tr/min.",
-			"Masse publiée : 0.37 kg."
+			"Masse publiée : 0.37 kg.",
+			"Le catalogue distingue la pince de 6 mm de la SI-2001S-6 de la pince 1/4 pouce de la SI-2001S. Un quart de pouce vaut 6,35 mm : la différence calculée de 0,35 mm interdit de déduire une compatibilité de queue d’une simple proximité de diamètre.",
+			"Face à la SI-2002EX-6 à pince de 6 mm, la SI-2001S-6 affiche 25 000 contre 27 000 tr/min et 173 contre 219 W. Le maximum d’air est de 7,6 contre 7,4 L/s, soit 456 contre 444 L/min : 12 L/min d’écart."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Confirmer la pince livrée, le diamètre exact de la queue et la vitesse admissible du consommable. Une puissance plus élevée ou une consommation plus faible du modèle voisin ne valide pas le même travail de meulage."
 		]
 	},
 	"specifications": [
