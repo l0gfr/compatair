@@ -23,8 +23,7 @@ sources:
   - https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air2.pdf
   - https://www.schmalz.com/en-nl/products/automation-743270/valves-308656/check-valves-and-flow-restrictors-308720/check-valves-svk-svkg-svv-308721
   - https://www.piab.com/globalassets/productimages/0255863_rev00_esl_standalone-en.pdf
-  - https://doc.coval.com/g/LEMAX%2B/not/lemax%2B_notice_coval_2023_v05.pdf
-updatedDate: 2026-10-03
+updatedDate: 2026-10-16
 ---
 
 **Pour saisir une pièce poreuse, il ne suffit pas de choisir un générateur d’après son niveau de vide maximal.** Il faut vérifier son comportement avec la pièce réelle et distinguer le débit aspiré de l’air consommé pour produire le vide. Un chiffre en L/min peut décrire l’un ou l’autre.
@@ -64,8 +63,6 @@ Nous proposons d’exiger un essai sur les matières réellement prévues et leu
 Faites préciser les mesures retenues, les limites et les conditions d’échec : pièce mal présentée, surface différente ou perte d’alimentation selon l’analyse du système. Si ces points ne sont pas validés, n’utilisez pas le résultat comme autorisation de levage ou de fonctionnement automatique.
 
 Une ventouse laissée hors de la pièce crée un autre chemin de fuite que la porosité du matériau. [Schmalz SVK](https://www.schmalz.com/en-nl/products/automation-743270/valves-308656/check-valves-and-flow-restrictors-308720/check-valves-svk-svkg-svv-308721) décrit une bille fermant la ligne non occupée et un bypass conservant une petite fuite fonctionnelle. Le [cas des ventouses non occupées](/guides/schmalz-svk-ventouses-non-occupees-vide/#dessiner-la-surface-couverte-sur-le-pr%C3%A9henseur) prépare l’essai avec la plus petite pièce prévue et les ports couverts, sans traiter le clapet comme une fermeture parfaitement étanche.
-
-COVAL décrit le passage du LEMAX+ en fonctionnement sans ASC lorsque la porosité provoque des reprises de vide en battement. Le [cas LEMAX+ : ASC missing](/guides/coval-lemax-asc-missing-piece-poreuse/) montre ce changement de cycle entre les seuils publiés de 65 et 75 %. La poursuite de génération ne constitue pas une garantie de charge admissible. [COVAL LEMAX+, notice 2023 V05](https://doc.coval.com/g/LEMAX%2B/not/lemax%2B_notice_coval_2023_v05.pdf#page=1).
 
 ## Éjecteur, pompe ou soufflante : comparer la même tâche
 
