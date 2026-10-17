@@ -11,7 +11,7 @@ const product: ToolProfileInput = {
 	"mpn": "135.797.412",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+	"demandExplanation": "Le tableau identifie le pistolet et son débit de produit, mais sa colonne de consommation d’air est vide ; aucun besoin d’air n’est calculé.",
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/pistolet-peinture-hvlp-sames-kremlin-fpro-g-hvlp-12-lvb-135-797-412.svg",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sames Kremlin FPro G HVLP-12-Lvb (réf. 135.797.412). Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "FPro G HVLP-12-Lvb, référence 135.797.412 : buse de 1,2 mm, version sans godet. Le tableau donne un débit de produit de 105 cm³/min et une largeur de jet de 30 à 40 cm mesurée à 20 cm. Le code 136.797.412 désigne la version avec godet ; le 135.797.413 est le voisin de 1,3 mm, annoncé à 126 cm³/min de produit.",
 		"verifiedFacts": [
 			"Taille buse (mm) : 1.2.",
 			"Sortie produit (cc/min) : 105.",
@@ -37,11 +37,10 @@ const product: ToolProfileInput = {
 			"Largeur de jet à 20 cm (libellé fabricant) : L : 30 cm – 40 cm."
 		],
 		"limitations": [
-			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
-			"Le tableau de configuration fournit les consommations par buse, mais n’associe pas un point de pression de mesure complet à chaque débit. Les plages recommandées ne deviennent pas des pressions de mesure.",
-			"Les têtes seules, projecteurs, buses, packs et pistolets Solo incomplets sont exclus. Lorsqu’avec/sans godet sont imprimés, une seule identité de pistolet est retenue.",
-			"Les consommations de famille et les consommations de certaines configurations diffèrent. Les valeurs originales sont conservées ; aucune harmonisation ni verdict conclusif.",
-			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"La colonne de consommation d’air de cette page est vide. Les 105 cm³/min décrivent le produit pulvérisé et ne fournissent aucun besoin d’air.",
+			"La configuration 135.797.412 et les têtes ou kits de buse sont des objets distincts du catalogue.",
+			"Le tableau ne fournit pas de point pression–consommation permettant de dimensionner le compresseur ; la compatibilité reste indéterminée.",
+			"Une consommation publiée pour la famille ne complète pas la colonne vide de cette configuration."
 		]
 	},
 	"specifications": [

@@ -73,16 +73,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Worthington Creyssensac RLR 1000, Full Feature sur réservoir 270 L, 10 bar. 1 150 L/min à 9,5 bar.",
+		"overview": "RLR 1000 Full Feature 50 Hz : cuve de 270 L et sécheur intégré, FAD de 69 m³/h, soit 1 150 L/min, à 9,5 bar pour la version 10 bar. La version Pack au sol à 8 bar est un autre montage, avec son propre point de 1 250 L/min à 7,5 bar.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Configuration de stockage documentée : 270 L.",
 			"Pression maximale de fonctionnement publiée : 10 bar."
 		],
 		"limitations": [
-			"Cycle de service du groupe complet non établi ; la tenue permanente reste indéterminée.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Configuration publiée dans la documentation citée ; disponibilité commerciale actuelle à confirmer."
+			"Le taux de marche du groupe complet reste à confirmer ; la compatibilité soutenue demeure indéterminée malgré un point FAD publié.",
+			"Les 19,1 L/s également imprimés sont arrondis : la conversion des 69 m³/h est conservée, sans fusion ni moyenne entre colonnes.",
+			"Le sécheur Full Feature et le stockage de 270 L décrivent l’équipement ; filtration et qualité d’air au point d’usage restent à préciser.",
+			"Les points des versions 8 et 10 bar ne forment pas une seule courbe."
 		]
 	},
 	"evidence": [

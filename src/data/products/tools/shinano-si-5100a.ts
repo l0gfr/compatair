@@ -23,19 +23,21 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-5100A, référence SI-5100A. Le tableau fabricant publie 558 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 5 000 tr/min. Capacité du mandrin : 10 mm.",
+		"overview": "La SI-5100A est la perceuse à poignée pistolet rapide de cette paire à mandrin de 10 mm : 5 000 tr/min à vide, contre 2 000 pour la SI-5300A. Elle publie 558 L/min au maximum à 6,3 bar, soit 54 L/min de moins que la SI-5300A, malgré la vitesse plus élevée.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 19.8 CFM / 9.3 L/s. Conversion du maximum publié : 9.3 × 60 = 558 L/min.",
 			"Référence fabricant : SI-5100A.",
 			"Vitesse à vide publiée : 5 000 tr/min.",
 			"Capacité du mandrin : 10 mm.",
-			"Couple maximal publié : 3.06 Nm."
+			"Couple maximal publié : 3.06 Nm.",
+			"Le couple maximal publié est de 3,06 Nm pour la SI-5100A contre 6,32 Nm pour la SI-5300A. Les capacités de perçage indiquées sont de 6 et 10 mm : la capacité de serrage du mandrin ne doit pas être confondue avec la capacité de perçage."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Le catalogue destine la SI-5100A au métal tendre. Confirmer le foret, le matériau et la vitesse de coupe ; ne pas déduire le choix du seul débit ni des 10 mm du mandrin."
 		]
 	},
 	"specifications": [

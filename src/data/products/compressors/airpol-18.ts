@@ -81,18 +81,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Airpol 18. 1 500 L/min à 15 bar. Groupe Airpol sans réservoir de stockage intégré.",
+		"overview": "Airpol 18 : 1 500 L/min à 15 bar, moteur de 18,5 kW et alimentation 400 V triphasée à 50 Hz. Le voisin Airpol 22 publie 2 000 L/min à 15 bar pour 22 kW. Le choix concerne ici une alimentation de réseau à pression élevée ; chaque capacité reste associée au modèle exact.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
 			"Pression maximale de fonctionnement publiée : 15 bar."
 		],
 		"limitations": [
-			"Conditions de référence FAD non précisées dans la fiche ; aucun AnnexC ni température/humidité ajouté.",
-			"Une seule configuration par modèle est retenue ; aucune fusion de pressions de fabrication différentes.",
-			"Cycle de service non établi ; la tenue permanente reste indéterminée.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"La fiche ne précise pas l’ensemble des conditions de référence FAD ; aucune annexe ISO ni condition ambiante d’essai supplémentaire n’est ajoutée.",
+			"Le taux de marche reste à confirmer ; les verdicts de tenue permanente restent indéterminés.",
+			"La fiche d’installation publie une ambiance de +5 à +45 °C et un besoin de ventilation. Vérifier ces contraintes sur l’implantation retenue.",
+			"Disponibilité, traitement d’air et pression utile au poste doivent être vérifiés pour la configuration commandée."
 		]
 	},
 	"evidence": [
@@ -144,11 +143,19 @@ const product: CompressorInput = {
 		],
 		"powerKw": [
 			"october3d-airpol-pdf-075-p7"
+		],
+		"voltage": [
+			"october3d-airpol-pdf-075-p7"
+		],
+		"phase": [
+			"october3d-airpol-pdf-075-p7"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"voltage": "400 V, 50 Hz",
+	"phase": "three-phase"
 };
 
 export default product;

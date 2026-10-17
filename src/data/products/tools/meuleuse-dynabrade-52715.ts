@@ -44,7 +44,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade 52715, référence 52715, présente une consommation maximale publiée de 1 076 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 107. Puissance moteur : 744 W. Vitesse moteur publiée : 12 000 tr/min.",
+		"overview": "La 52715 reçoit des cônes ou meules-bouchons de 38 mm au maximum, sur une sortie filetée mâle 3/8-24. Ce montage ne désigne pas une pince de 3/8 pouce. Son maximum publié est de 1 076 L/min à 6,2 bar et 12 000 tr/min, contre 1 104 L/min et 15 000 tr/min pour la 52716. Les 28 L/min d’écart accompagnent donc une vitesse différente ; l’accessoire doit être prévu pour celle du modèle retenu.",
 		"verifiedFacts": [
 			"Puissance moteur : 744 W.",
 			"Vitesse moteur publiée : 12 000 tr/min.",

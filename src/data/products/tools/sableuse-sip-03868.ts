@@ -29,19 +29,21 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SIP 03868. Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "La SIP 03868 est une cabine à capacité de média de 7,5 L, de 18 kg et de dimensions 490 × 490 × 630 mm. Elle ne se compare pas comme un simple pistolet au Yato YT-2375 avec tuyau. Le fabricant publie une consommation moyenne de 198 L/min : elle ne suffit pas à dimensionner une séance de sablage continue.",
 		"verifiedFacts": [
 			"Input Supply: : 230v (13A).",
 			"Media Capacity: : 7.5ltr.",
 			"Net Weight: : 18.00kg.",
-			"Product Dimensions: : 490(H) x 490(W) x 630mm(D)."
+			"Product Dimensions: : 490(H) x 490(W) x 630mm(D).",
+			"Les 230 V et 13 A relèvent de l’alimentation électrique de l’équipement, alors que la projection utilise l’air comprimé. Les 8,6 bar sont le maximum d’alimentation, pas un point de mesure de cette moyenne."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
 			"La consommation est présentée comme une moyenne. Le cycle d’utilisation n’est pas défini ; elle n’est pas convertie en consommation continue en charge.",
 			"La pression Air Pressure / Operating Pressure est une prescription de fonctionnement, sans pression de mesure explicitement rattachée à un régime qualifié.",
 			"L’alimentation électrique230V alimente l’équipement de cabine ; le sablage utilise l’air comprimé. Elle n’est pas une consommation pneumatique.",
-			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué.",
+			"Faire confirmer le besoin en action, le système de dépoussiérage et les dimensions utiles de travail. Les dimensions hors tout ne prouvent pas la taille d’une pièce admissible."
 		]
 	},
 	"specifications": [

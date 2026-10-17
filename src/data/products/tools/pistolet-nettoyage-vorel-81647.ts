@@ -29,18 +29,20 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Vorel 81647. Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "Pour le Vorel 81647, 0,4 MPa, soit 4 bar, est la pression de fonctionnement ; 0,8 MPa, soit 8 bar, est le maximum. Le réservoir de 950 ml le rapproche du SIP 02143, mais ce dernier publie une plage de 2 à 6 bar et une entrée BSP explicite. Ces indications ne prouvent pas le même besoin d’air.",
 		"verifiedFacts": [
 			"Tank capacity : 0.95 l.",
 			"Acoustic power : <70 dB(A).",
 			"Vibrations : <2.5 m/s².",
-			"Weight : 0.46 kg."
+			"Weight : 0.46 kg.",
+			"La fiche Vorel publie 0,46 kg et le raccord seulement comme PT standard ; le SIP indique 0,95 kg et 1/4 BSP mâle. Le profil de raccord Vorel reste à confirmer."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
 			"Les pressions recommandées ou maximales de cette fiche ne sont pas des points de mesure de consommation.",
 			"Sans régime explicite en charge et pression de mesure associée, la consommation éventuelle reste documentaire et ne permet aucun verdict conclusif.",
-			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué.",
+			"Le fabricant limite cette application aux substances biodégradables et interdit les inflammables. La consommation manque : ni les 4 bar ni la masse ne permettent un verdict de dimensionnement."
 		]
 	},
 	"specifications": [

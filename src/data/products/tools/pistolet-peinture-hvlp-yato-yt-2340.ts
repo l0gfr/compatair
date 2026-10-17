@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Yato YT-2340. Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "La fiche du Yato YT-2340 sépare 410 L/min d’air requis et 0,19 à 0,25 L/min de produit mesuré à l’eau. Ces débits ne sont pas interchangeables. Le Vorel 80902 partage la buse de 1,4 mm et le godet de 0,6 L, mais publie une autre plage d’air, non directement comparable.",
 		"verifiedFacts": [
 			"Type : HVLP.",
 			"Coating material flow (water) : 0.19-0.25 l/min.",
@@ -39,13 +39,15 @@ const product: ToolProfileInput = {
 			"Material : aluminum, stainless steel.",
 			"Acoustic power : 85.0 dB(A).",
 			"Vibrations : <2.5 m/s².",
-			"Weight : 0.74 kg."
+			"Weight : 0.74 kg.",
+			"Le maximum d’alimentation de 3 bar n’est pas une pression de mesure explicitement appariée aux 410 L/min. Le débit de produit mesuré à l’eau ne garantit pas celui d’une peinture de viscosité différente."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
 			"Les pressions recommandées ou maximales de cette fiche ne sont pas des points de mesure de consommation.",
 			"Sans régime explicite en charge et pression de mesure associée, la consommation éventuelle reste documentaire et ne permet aucun verdict conclusif.",
-			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué.",
+			"Le besoin d’air reste non qualifié. Demander les conditions en action et conserver séparément débit de liquide, consommation d’air et pression maximale."
 		]
 	},
 	"specifications": [

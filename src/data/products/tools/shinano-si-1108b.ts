@@ -23,19 +23,21 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-1108B, référence SI-1108B. Le tableau fabricant publie 306 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 30 Nm. Vitesse à vide publiée : 300 tr/min.",
+		"overview": "Le carré de 3/8 pouce identifie la SI-1108B. Le mini-cliquet SI-1107B reçoit un carré de 1/4 pouce, alors que les deux affichent 306 L/min au maximum à 6,3 bar, 30 Nm au maximum et 300 tr/min à vide. Le choix des douilles précède donc tout redimensionnement du compresseur.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 10.8 CFM / 5.1 L/s. Conversion du maximum publié : 5.1 × 60 = 306 L/min.",
 			"Référence fabricant : SI-1108B.",
 			"Couple maximal publié : 30 Nm.",
 			"Vitesse à vide publiée : 300 tr/min.",
-			"Masse publiée : 0,40 kg."
+			"Masse publiée : 0,40 kg.",
+			"La longueur publiée est identique, 125 mm. La SI-1108B pèse 0,40 kg contre 0,39 kg pour la SI-1107B ; passer au carré de 3/8 ne signifie pas davantage de couple dans cette paire."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Vérifier l’encombrement de la douille réellement utilisée et le serrage prescrit. Un adaptateur ne valide pas toute la chaîne d’accessoires et les 30 Nm ne certifient pas le serrage final."
 		]
 	},
 	"specifications": [

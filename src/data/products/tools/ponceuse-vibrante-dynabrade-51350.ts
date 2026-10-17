@@ -43,7 +43,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade 51350, référence 51350, présente une consommation maximale publiée de 510 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 179. Cadence publiée : 2 400 courses/min. Masse : 1,4 kg.",
+		"overview": "La 51350 effectue 2 400 courses/min sur une course de 10 mm avec un plateau de 70 × 279 mm. Son maximum de 510 L/min à 6,2 bar se compare au besoin de 595 L/min de la mini-orbitale 53415, sans en déduire une vitesse d’usinage équivalente. Vérifiez le plateau 57512 et les abrasifs adhésifs ou à pinces prévus. La puissance publiée dans des unités contradictoires reste non retenue.",
 		"verifiedFacts": [
 			"Cadence publiée : 2 400 courses/min.",
 			"Masse : 1,4 kg.",

@@ -6,13 +6,21 @@ import { applyReviewedCompressorDuty } from './reviewed-compressor-duty.mjs';
 
 const reviewed = JSON.parse(readFileSync(new URL('../../src/data/imports/compressor-duty-reviewed-2026-09-27.json', import.meta.url), 'utf8'));
 describe('reviewed continuous-duty evidence', () => {
- it('links all 379 exact identities to their separately dated manufacturer evidence', () => {
+ it('preserves the 379 historical identities and the explicitly withdrawn ABAC duty claim', () => {
   expect(reviewed.rows.filter(row => row.brand === 'ABAC')).toHaveLength(267);
   expect(reviewed.rows.filter(row => row.brand === 'Fini')).toHaveLength(112);
   for (const row of reviewed.rows) {
    const product = compressors.find(item => item.id === row.id);
-   expect(product, row.id).toMatchObject({ brand: row.brand, model: row.model, mpn: row.mpn, dutyCycle: 1 });
+   expect(product, row.id).toMatchObject({ brand: row.brand, model: row.model, mpn: row.mpn });
    const source = reviewed.sources.find(item => item.id === row.sourceId);
+   if (row.id === 'abac-formula-e-11-13-400-50') {
+    expect(product.dutyCycle).toBeUndefined();
+    expect(product.fieldSources.dutyCycle).toBeUndefined();
+    expect(product.editorial.limitations.join(' ')).toContain('jusqu’à 100 %');
+    expect(product.evidence.some(item => item.sourceUrl === source.url && item.retrievedAt === '2026-09-27')).toBe(true);
+    continue;
+   }
+   expect(product.dutyCycle, row.id).toBe(1);
    const evidence = product.evidence.find(item => product.fieldSources.dutyCycle.includes(item.id));
    expect(evidence).toMatchObject({ sourceUrl: source.url, retrievedAt: '2026-09-27', sourceType: 'manufacturer' });
    expect(product.editorial.limitations.join(' ')).not.toContain('Le taux de marche continu n’est pas établi');

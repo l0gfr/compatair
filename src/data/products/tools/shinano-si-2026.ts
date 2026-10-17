@@ -23,19 +23,21 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2026, référence SI-2026. Le tableau fabricant publie 750 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Plateau publié : 125 mm. Vitesse à vide publiée : 5 500 tr/min.",
+		"overview": "La SI-2026 utilise un plateau de 125 mm et annonce 750 L/min au maximum à 6,3 bar. La SI-2351 à plateau de 180 mm publie 696 L/min : le plus petit plateau ne garantit donc pas le plus petit besoin d’air. La différence calculée est de 54 L/min.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 26.4 CFM / 12.5 L/s. Conversion du maximum publié : 12.5 × 60 = 750 L/min.",
 			"Référence fabricant : SI-2026.",
 			"Plateau publié : 125 mm.",
 			"Vitesse à vide publiée : 5 500 tr/min.",
-			"Broche : 5/8-11 UNC."
+			"Broche : 5/8-11 UNC.",
+			"La SI-2026 publie 5 500 tr/min à vide et une masse de 1,50 kg, contre 4 500 tr/min et 2,13 kg pour la SI-2351. Les deux tableaux indiquent une broche mâle 5/8-11 UNC."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"La broche commune ne valide pas un changement de diamètre. Respecter le plateau, le consommable et sa vitesse admissible ; aucune équivalence de rendement ou de finition n’est déduite."
 		]
 	},
 	"specifications": [

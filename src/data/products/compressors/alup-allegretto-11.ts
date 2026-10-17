@@ -18,11 +18,15 @@ const product: CompressorInput = {
 	"maxPressureBar": 10,
 	"fadCurve": [
 		{
+			"pressureBar": 7,
+			"litersPerMinute": 1823.333
+		},
+		{
 			"pressureBar": 9.5,
 			"litersPerMinute": 1470
 		}
 	],
-	"oilType": "oil",
+	"oilType": "unknown",
 	"powerKw": 11,
 	"confidence": "B",
 	"status": "unknown",
@@ -48,7 +52,7 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Air livré à 9,5 bar",
+			"label": "FAD maximal publié à 9,5 bar",
 			"value": "1 470 L/min",
 			"evidenceIds": [
 				"october3d-alup-pdf-extra-03-p8"
@@ -77,19 +81,18 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "ALUP Allegretto 11. 1 470 L/min à 9,5 bar. Groupe sur socle sans réservoir de stockage intégré.",
+		"overview": "Allegretto 11 sur socle : le tableau VSD annonce un FAD maximal de 1 823,333 L/min à 7 bar et de 1 470 L/min à 9,5 bar. Le minimum publié à 7 bar est de 18,4 m³/h. La version Allegretto 14 annonce 1 860 L/min au maximum à 9,5 bar pour 15 kW.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
 			"Pression maximale de fonctionnement publiée : 10 bar."
 		],
 		"limitations": [
-			"Points FAD supérieurs au plafond de fonctionnement excluants, y compris lorsque le tableau présente une colonne 12,5 bar pour une famille limitée à 10 bar.",
-			"Version sur socle retenue ; réservoir externe exclu.",
-			"Cycle de service non établi ; la tenue permanente reste indéterminée.",
-			"Fréquence non publiée dans la fiche retenue ; aucune transposition des performances à 50 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Les capacités sont des maxima VSD ; la production effective dépend du régime demandé.",
+			"Le minimum de 18,4 m³/h est donné à 7 bar ; aucune valeur minimale à 9,5 bar n’est déduite.",
+			"Le taux de marche du groupe complet et la variante électrique restent à confirmer.",
+			"La page technique Allegretto ne présente pas la colonne 12,5 bar de Sonetto ; aucune réserve liée à cette colonne ne s’applique ici.",
+			"Le mode de lubrification du bloc reste unknown tant qu’une source applicable à Allegretto n’est établie."
 		]
 	},
 	"evidence": [
@@ -127,9 +130,6 @@ const product: CompressorInput = {
 	"fieldSources": {
 		"tankLiters": [
 			"october3d-alup-pdf-extra-03-p8"
-		],
-		"oilType": [
-			"october3d-alup-pdf-extra-03-p2"
 		],
 		"maxPressureBar": [
 			"october3d-alup-extra-21",

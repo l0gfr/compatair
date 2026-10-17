@@ -1,3 +1,4 @@
+import { applyReviewedOctober17Amendment } from './reviewed-catalog-amendments-2026-10-17.mjs';
 import { createHash } from 'node:crypto';
 
 const approvedSnapshotDigest = '843ebde155d92b322ec1530df1ecf28e929a92bfc4a3eb6bb31140523001a394';
@@ -163,5 +164,5 @@ export function buildDocumentedToolsOctober8(snapshot) {
 		};
 	});
 	if (digest(snapshot) !== approvedSnapshotDigest) throw new Error('Snapshot outils différent de la capture relue et approuvée');
-	return products;
+	return products.map(applyReviewedOctober17Amendment);
 }

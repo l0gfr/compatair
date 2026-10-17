@@ -32,17 +32,15 @@ const product: ToolProfileInput = {
     }
   },
   "editorial": {
-    "overview": "ProWin K-528G-10. Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
+    "overview": "K-528G-10 : pistolet HVLP gravitaire à godet latéral de 400 cm³, buse de 1,0 mm et jet annoncé de 290 mm. La ligne publie 250 L/min et la famille une plage de 20 à 28 psi. Le K-528G-14 de 1,4 mm annonce aussi 250 L/min, avec un jet de 300 mm.",
     "verifiedFacts": [
       "Buse : 1.0 mm.",
       "Largeur de jet : 290 mm."
     ],
     "limitations": [
-      "Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
-      "La table publie une consommation, sans pression de mesure précise ni protocole de pulvérisation lié à cette valeur.",
-      "Les codes SG de la colonne Turn-up Kit sont des kits de réparation et ne constituent pas des références de pistolets.",
-      "Fluid Output est libellé « ml » ; aucune durée ne permet de le publier comme un débit.",
-      "Aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+      "La consommation n’est pas reliée à une pression unique ni à un réglage de pulvérisation ; aucun nominal n’est créé à partir de la plage.",
+      "La colonne Fluid Output est exprimée en ml sans durée : elle ne devient pas un débit de peinture par minute.",
+      "Le code SG018-528-10 désigne un kit de réparation, distinct du pistolet K-528G-10."
     ]
   },
   "specifications": [

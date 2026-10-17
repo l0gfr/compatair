@@ -723168,7 +723168,165 @@
         "confidence": "A",
         "notes": "AC400/20 : huile absente, 20 L, 15 kg, 185 L/min à 5 bar ; 100 % de cycle de travail, en conflit avec la fiche S3 70 %. FAD 205 L/min non associé à une pression dans ce tableau, non substitué à la courbe."
       }
+    },
+    {
+      "id": "added:airpress-24v-pour-camion-dc-24-225-15:review-20261017-airpress-36587:2026-10-17",
+      "evidenceId": "review-20261017-airpress-36587",
+      "productId": "airpress-24v-pour-camion-dc-24-225-15",
+      "productType": "compressor",
+      "occurredAt": "2026-10-17",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8b0cd6bf05d17f4c67c0f4a76c089c458367a6b0889bb196c6172911d78a3640",
+      "snapshot": {
+        "id": "review-20261017-airpress-36587",
+        "sourceUrl": "https://airpress.fr/compresseur-silencieux-sans-huile-dc-12-180-15-10-bar-0-75-ch-0-55-kw-144-l-min-15-l-12-v-36587",
+        "sourceLabel": "Airpress, DC 12-180/15, article 36587",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-17",
+        "confidence": "B",
+        "notes": "Lecture ciblée du 17 octobre 2026, SHA-256 d2e3a823558d44e28c6d1e29a634770417d9cb3ab014c7197c626cb8beccb27c."
+      }
+    },
+    {
+      "id": "added:bambi-bb15v:review-20261017-bambi-bb24v:2026-10-17",
+      "evidenceId": "review-20261017-bambi-bb24v",
+      "productId": "bambi-bb15v",
+      "productType": "compressor",
+      "occurredAt": "2026-10-17",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2201dd21840546b8cb67a9fb147c614d46629ed4c2c9cf083badc816a42a84a5",
+      "snapshot": {
+        "id": "review-20261017-bambi-bb24v",
+        "sourceUrl": "https://bambi-air.co.uk/product/bb24v/",
+        "sourceLabel": "Bambi, BB24V, fiche constructeur",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-17",
+        "confidence": "B",
+        "notes": "Lecture ciblée du 17 octobre 2026, SHA-256 b599f69b8bcd5e4e1029d7ff375c92081c94eff023a78797a8eb34840568617c."
+      }
+    },
+    {
+      "id": "added:cle-a-chocs-taylor-pneumatic-t-6231-1-2-hd-impact-wrench-t-6231:october4-tools-taylor-product-029-p1:2026-10-17",
+      "evidenceId": "october4-tools-taylor-product-029-p1",
+      "productId": "cle-a-chocs-taylor-pneumatic-t-6231-1-2-hd-impact-wrench-t-6231",
+      "productType": "tool",
+      "occurredAt": "2026-10-17",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "49253c51b6ce1e7057c4b83b813e475eac218ba2b5c10664f3305775c05087ad",
+      "snapshot": {
+        "id": "october4-tools-taylor-product-029-p1",
+        "sourceUrl": "https://taylorpneumatic.com/products/t-6231l-1-2-hd-impact-wrench-w-2-extended-anvil",
+        "sourceLabel": "Taylor Pneumatic : T-6231L 1/2\" HD Impact Wrench 2\" Extended Anvil",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-04",
+        "confidence": "B",
+        "notes": "Déclaration fabricant, réponse primaire SHA-256 40d9dc1e610aa8e5e232f72496d7fbea72bd9cbaaa0c73453c6843342284afb8. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "corrected:gentilin-ac600-40:gentilin-814005001-20260926-oiltype-1:2026-10-17",
+      "evidenceId": "gentilin-814005001-20260926-oiltype-1",
+      "productId": "gentilin-ac600-40",
+      "productType": "compressor",
+      "occurredAt": "2026-10-17",
+      "kind": "corrected",
+      "summary": "Relecture du 17 octobre 2026 : références exactes, contradictions de cycle de service conservées, pagination PREBENA et comparaison de variantes explicitement sourcées.",
+      "fingerprint": "5b111abe18b23aac8def65f6dd500b6477b1a4ac5821adaa4f154522abed3e1d",
+      "snapshot": {
+        "id": "gentilin-814005001-20260926-oiltype-1",
+        "sourceUrl": "https://www.gentilinair.com/docs/41024001-compressed_1775720906.pdf#page=6",
+        "sourceLabel": "Gentilin, notice EVO 41024001, avril 2026, page PDF 6 : DC100/05, AC200/05, AC400/20 et AC600/40",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La page 6 identifie AC600/40, la compression sans huile et un cycle de 100 %. La fiche produit actuelle indique S3 70 % : divergence conservée dans les limites."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-astro-pneumatic-hvlp505:october3d-tools-astro-product-hvlp507-p1:2026-10-17",
+      "evidenceId": "october3d-tools-astro-product-hvlp507-p1",
+      "productId": "pistolet-peinture-hvlp-astro-pneumatic-hvlp505",
+      "productType": "tool",
+      "occurredAt": "2026-10-17",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "50a8daf883e66897f035de8627c9bfe2d817f46d1acb6fe1e86e3a587b132acb",
+      "snapshot": {
+        "id": "october3d-tools-astro-product-hvlp507-p1",
+        "sourceUrl": "https://www.astrotools.com/product/hvlp-gravity-feed-spray-gun-1-7mm-nozzle-with-aluminum-cup/",
+        "sourceLabel": "Astro Pneumatic, fiche constructeur officielle",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-03",
+        "confidence": "B",
+        "notes": "Réponse primaire SHA-256 684b8cbe8e6871bf48f2ae1d02d241f34a97db5ceed3b3c5e17c9d13de073029. Déclaration constructeur, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-draper-28367:october2b-tools-oct2b-draper-28366-html-p1:2026-10-17",
+      "evidenceId": "october2b-tools-oct2b-draper-28366-html-p1",
+      "productId": "pistolet-peinture-hvlp-draper-28367",
+      "productType": "tool",
+      "occurredAt": "2026-10-17",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8010d420dcd14dee39a81e676533f6031b4f26dd8daf46ec2fc4b476166c632b",
+      "snapshot": {
+        "id": "october2b-tools-oct2b-draper-28366-html-p1",
+        "sourceUrl": "https://www.drapertools.com/product/28366/hvlp-air-paint-spray-gun-100ml/",
+        "sourceLabel": "Draper, fiche technique constructeur 28366",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-02",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : d1d96e14c0cb2b4da4d23734c7d5dd4f16af09728608db0d7db21468a1ffcf69. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-gav-record-2200-1-hvlp:october4-tools-gav-catalog-2026-p15:2026-10-17",
+      "evidenceId": "october4-tools-gav-catalog-2026-p15",
+      "productId": "pistolet-peinture-hvlp-gav-record-2200-1-hvlp",
+      "productType": "tool",
+      "occurredAt": "2026-10-17",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "354c8c16865270e042c2c4c4004693a1f75edbfcde9d64166496be9101adbe3e",
+      "snapshot": {
+        "id": "october4-tools-gav-catalog-2026-p15",
+        "sourceUrl": "https://gav.it/wp-content/uploads/GAV-Catalogue-2026_compressed.pdf#page=15",
+        "sourceLabel": "GAV : catalogue2026, caractéristiques des pistolets complets, page PDF 15",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-04",
+        "confidence": "B",
+        "notes": "Déclaration fabricant, réponse primaire SHA-256 a45d88b0aa85921e49fa7dbbbce150d1795c6e31f74934683fca391d51030e1d. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "corrected:prebena-orkan-250:prebena-orkan-250-20260927:2026-10-17",
+      "evidenceId": "prebena-orkan-250-20260927",
+      "productId": "prebena-orkan-250",
+      "productType": "compressor",
+      "occurredAt": "2026-10-17",
+      "kind": "corrected",
+      "summary": "Relecture du 17 octobre 2026 : références exactes, contradictions de cycle de service conservées, pagination PREBENA et comparaison de variantes explicitement sourcées.",
+      "fingerprint": "4d6beb9b3e83ac4c4fd33a93fbf8e8b1bd6d2a9d11ea7dfa3fcda03b71fbb1be",
+      "snapshot": {
+        "id": "prebena-orkan-250-20260927",
+        "sourceUrl": "https://prebena.de/fileadmin/user_upload/E-Books/DE-2026/PREBENA-Hauptkatalog-2026-DE.pdf#page=118",
+        "sourceLabel": "PREBENA, catalogue général 2026, page PDF 118 / folio 116, ORKAN 250 ; matrice PDF 130 / folio 128",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-27",
+        "confidence": "A",
+        "notes": "Le catalogue distingue 250 L/min aspirés et 175 L/min de remplissage, sans pression d’essai associée à ce dernier chiffre. Aucun point FAD n’est extrapolé."
+      }
     }
   ],
-  "historyVersion": "6d435f8da6852c6e79d6ad7571ba6666f84f3d57450b132ef2a831ccac1f28a8"
+  "historyVersion": "3eeb2d96f84cceaebb9dfc5008a0f595f10d29e1d2e1a502fd8cbae3a298c08c"
 }

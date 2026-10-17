@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SATA jet X HVLP 1.2 O BASIC (réf. 1200138). Les sources constructeur publient des consommations divergentes pour cette famille ; aucune valeur n’est arbitrée pour calculer un débit.",
+		"overview": "jet X HVLP 1.2 O BASIC, article 1200138 : buse O en version BASIC. Le catalogue donne 445 Nl/min pour la famille HVLP ; la notice annonce 430 Nl/min à 2 bar en entrée. La fiche du voisin 1200170 porte une autre buse, 1.3 I, et affiche 420 l/min. Ces valeurs et unités restent séparées.",
 		"verifiedFacts": [
 			"Technologie de pulvérisation : HVLP.",
 			"Profil de buse : O.",
@@ -45,11 +45,10 @@ const product: ToolProfileInput = {
 			"Température maximale du produit pulvérisé : 50 °C."
 		],
 		"limitations": [
-			"Les sources constructeur publient des consommations divergentes pour cette famille ; aucune valeur n’est arbitrée pour calculer un débit.",
-			"Le catalogue 2025 donne RP 335 / HVLP 445 Nl/min ; la notice officielle donne RP 325 / HVLP 430 Nl/min explicitement à 2 bar. Aucune valeur n’est arbitrée.",
-			"La fiche précise HVLP 1.3 I BASIC 1200170 affiche 420 l/min au 2026-10-03. L/min et Nl/min restent distincts ; aucune condition normale absente des citations n’est supposée.",
-			"Une seule configuration BASIC par buse et technologie est retenue. Les versions DIGITAL, godets, couleurs, accessoires et jeux de buses seuls ne créent aucune nouveauté dans ce lot.",
-			"Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"La notice fixe un plafond de 2,0 bar en mode HVLP, distinct de la plage d’application générale 0,5 à 2,4 bar et du maximum mécanique d’alimentation.",
+			"Les 445 et 430 Nl/min proviennent de documents distincts ; le débit n’est pas arbitré pour calculer une compatibilité.",
+			"Les 420 l/min du 1200170 ne sont pas attribués à l’article 1200138. Les conditions normales des Nl/min ne sont pas complétées par hypothèse.",
+			"BASIC, DIGITAL et les jeux de buses sont identifiés séparément dans le catalogue ; aucun code d’assemblage absent n’est fabriqué."
 		]
 	},
 	"specifications": [
@@ -128,6 +127,13 @@ const product: ToolProfileInput = {
 			"value": "Recommended air inlet pressure 2,0 bar; air inlet pressure field of application 0,5–2,4 bar. Valeurs séparées de la consommation dans le catalogue.",
 			"evidenceIds": [
 				"october3d-tools-sata-current-catalog-2025-p15"
+			]
+		},
+		{
+			"label": "Pression maximale en mode HVLP selon la notice",
+			"value": "2,0 bar en entrée ; distinct de la plage générale 0,5–2,4 bar",
+			"evidenceIds": [
+				"october3d-tools-sata-more-jet-x-manual-85-p102"
 			]
 		}
 	],

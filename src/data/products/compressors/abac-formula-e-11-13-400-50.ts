@@ -24,19 +24,18 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "ABAC FORMULA E 11 13 400/50 , référence 4152025399 : configuration sans cuve intégrée, pression maximale publiée de 13 bar. Le point documenté le plus élevé en pression fournit 1 210 L/min à 13 bar. Configuration Full Feature publiée par le fabricant.",
+		"overview": "FORMULA E 11 13 400/50 CE, article 4152025399 : 1 210 L/min à 13 bar, 11,2 kW, alimentation 400 V triphasée à 50 Hz. La variante 10 bar de la même famille publie 1 510 L/min : ces deux versions répondent à des pressions de réseau différentes.",
 		"verifiedFacts": [
 			"Débit restitué publié : 1 210 L/min à 13 bar.",
 			"Compresseur rotatif à vis lubrifié, famille FORMULA. Puissance moteur publiée : 11,2 kW.",
-			"Masse nette publiée : 296 kg.",
-			"Alimentation publiée : 400 V, 50 Hz, triphasée.",
-			"Fonctionnement continu déclaré par le constructeur pour cette gamme ; taux de marche normalisé à 100 %."
+			"Masse publiée : 296 kg.",
+			"Alimentation publiée : 400 V, 50 Hz, triphasée."
 		],
 		"limitations": [
-			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
-			"Le fonctionnement continu est une déclaration de gamme ; respecter les conditions de la notice. La disponibilité commerciale reste à confirmer.",
-			"Version électrique exacte à vérifier à la commande ; une alimentation 230 V peut être triphasée.",
-			"Le débit publié appartient à cette référence et à sa version de pression. Il ne définit pas une courbe complète."
+			"Le FAD de 1 210 L/min appartient à la référence 4152025399 ; les 1 510 L/min de la version 10 bar ne forment pas un second point de sa courbe.",
+			"Le taux de marche applicable au groupe complet reste à confirmer. La mention générale « jusqu’à 100 % » ne fixe pas ce taux pour cet article.",
+			"La masse de 296 kg provient du bloc de dimensions produit. Des champs ERP donnent une autre masse ; la base nette ou logistique doit être clarifiée avant manutention.",
+			"Le libellé français de certaines données ERP diverge du nom E 11 des autres langues. Confirmer la référence de commande 4152025399 et les équipements Full Feature sur le devis."
 		]
 	},
 	"specifications": [
@@ -62,8 +61,8 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Taux de marche constructeur",
-			"value": "100 %, fonctionnement continu déclaré pour la gamme. Respecter les conditions de la notice de la référence.",
+			"label": "Service continu : portée de la source",
+			"value": "La page générale ABAC évoque jusqu’à 100 % de cycle de service ; le taux applicable à 4152025399 reste à confirmer dans sa notice.",
 			"evidenceIds": [
 				"abac-formula-e-11-13-400-50-continuous-duty-20260927"
 			]
@@ -116,9 +115,6 @@ const product: CompressorInput = {
 		],
 		"phase": [
 			"abac-4152025399-20260926"
-		],
-		"dutyCycle": [
-			"abac-formula-e-11-13-400-50-continuous-duty-20260927"
 		]
 	},
 	"notes": [
@@ -127,8 +123,7 @@ const product: CompressorInput = {
 	"powerKw": 11.2,
 	"weightKg": 296,
 	"voltage": "400 V, 50 Hz",
-	"phase": "three-phase",
-	"dutyCycle": 1
+	"phase": "three-phase"
 };
 
 export default product;

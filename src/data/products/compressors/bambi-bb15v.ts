@@ -164,17 +164,16 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Bambi BB15V. 35 L/min à 1 bar ; 32 L/min à 2 bar ; 30 L/min à 3 bar ; 28 L/min à 4 bar ; 27 L/min à 5 bar ; 26 L/min à 6 bar ; 25,5 L/min à 7 bar ; 25 L/min à 8 bar. Groupe avec cuve 15 L.",
+		"overview": "BB15V : 15 L, 0,34 kW et 26 L/min à 6 bar, avec un cycle maximal de 50 %. Le BB24V voisin utilise une cuve de 24 L et la même courbe de débit publiée : le gain porte sur le stockage. Le BB15V demande une alimentation de 240 V à 50 Hz.",
 		"verifiedFacts": [
-			"Air livré rattaché à une pression et aux unités originales du constructeur.",
-			"Cuve de stockage documentée : 15 L.",
-			"Pression maximale de fonctionnement publiée : 8 bar."
+			"La courbe constructeur couvre 1 à 8 bar : 35 L/min à 1 bar et 25 L/min à 8 bar.",
+			"À 6,3 bar, le rendu CompatAir interpole 25,85 L/min face aux 142 L/min de la TC-PW 340 ; le scénario soutenu dépasse le débit disponible.",
+			"La fiche indique 22 kg, une prise britannique et une prise UE sur demande."
 		],
 		"limitations": [
-			"Le fabricant ne précise pas les conditions de référence ISO 1217 ni la fenêtre de temps du cycle de service dans cette fiche.",
-			"Cycle intermittent déclaré ; durée de référence non précisée. L’exploitation permanente n’est pas assimilée à un service continu.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Le cycle maximal de 50 % est publié sans fenêtre temporelle. Aucun nombre de minutes de marche ni capacité continue n’en est déduit.",
+			"La fiche ne précise pas de conditions ISO 1217. Les valeurs restent celles du constructeur et ne constituent pas un essai CompatAir.",
+			"Le raccordement pour une installation en France et le modèle de prise doivent être confirmés avant achat. Les mentions réglementaires britanniques ne sont pas transposées au marché français."
 		]
 	},
 	"evidence": [
@@ -187,6 +186,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 0602bb7839acf86bbccb9d8abfccc8ca540282e58b62b12341634b0897d93cd1 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261017-bambi-bb24v",
+			"sourceUrl": "https://bambi-air.co.uk/product/bb24v/",
+			"sourceLabel": "Bambi, BB24V, fiche constructeur",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-17",
+			"confidence": "B",
+			"notes": "Lecture ciblée du 17 octobre 2026, SHA-256 b599f69b8bcd5e4e1029d7ff375c92081c94eff023a78797a8eb34840568617c."
 		}
 	],
 	"fieldSources": {
@@ -207,11 +216,15 @@ const product: CompressorInput = {
 		],
 		"powerKw": [
 			"october3d-bambi-product-29"
+		],
+		"voltage": [
+			"october3d-bambi-product-29"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"voltage": "240 V, 50 Hz"
 };
 
 export default product;

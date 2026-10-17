@@ -32,17 +32,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Asturomec PS/E (réf. 50090). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "PS/E, référence 50090 : pistolet de sablage à aspiration avec tube plongeur de 2 m et buse en acier cémenté trempé de 6 mm. Le catalogue annonce 5 à 8 bar de service. La PS/ES 50091 possède un réservoir aluminium de 1 000 cm³ et un réglage du débit de sable.",
 		"verifiedFacts": [
 			"Buse : acier cémenté trempé, diamètre 6 mm.",
 			"Corps : aluminium.",
 			"Tube d’aspiration : 2 m ; 8×13, unité non répétée."
 		],
 		"limitations": [
-			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
-			"Édition italienne 2024 ; aucune disponibilité commerciale actuelle n’est vérifiée.",
-			"La plage de service ne constitue pas une pression de mesure de consommation ; aucun facteur de marche implicite.",
-			"Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"La consommation d’air n’est pas publiée dans ce bloc ; le diamètre de buse et la pression de service ne suffisent pas à la reconstituer.",
+			"Le tube d’aspiration transporte l’abrasif ; ses dimensions ne constituent pas une recommandation de flexible d’alimentation en air.",
+			"PS/E et PS/ES désignent deux alimentations d’abrasif distinctes. Aucun gain de capacité d’air n’est déduit du réservoir intégré."
 		]
 	},
 	"specifications": [

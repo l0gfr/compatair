@@ -11,7 +11,7 @@ const product: ToolProfileInput = {
   "mpn": "1465-08HV-C1S",
   "demandModel": "variable-volume",
   "workingPressureBar": {},
-  "demandExplanation": "Les conditions de référence du volume normalisé et/ou le régime de mesure manquent. Le débit publié reste hors du calcul FAD.",
+  "demandExplanation": "La notice fournit les pressions d’entrée et de chapeau, pistolet déclenché. L’état de référence des SCFM manque ; le débit reste hors calcul FAD.",
   "confidence": "B",
   "variant": {
     "familyId": "binks-trophy-touch-up-pressure-siphon-sans-godet-fourni",
@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Binks Trophy 1465-08HV-C1S. Les conditions de référence du volume normalisé et/ou le régime de mesure manquent. Le débit publié reste hors du calcul FAD. Assemblage 1465-08HV-C1S, buse 0.8 mm, chapeau C1, HVLP, alimentation pressure / siphon sans godet fourni.",
+    "overview": "Trophy 1465-08HV-C1S : assemblage de retouche HVLP à buse de 0,8 mm et chapeau C1. La notice le place dans la catégorie de produits très fluides ou à débit réduit. Son tableau HVLP associe 6,4 SCFM à 21 psi en entrée et 10 psi au chapeau, avec pression d’entrée relevée pistolet déclenché.",
     "verifiedFacts": [
       "Code assemblage complet, publié littéralement : 1465-08HV-C1S.",
       "Buse produit publiée : 0.8 mm.",
@@ -42,11 +42,10 @@ const product: ToolProfileInput = {
       "Pression dans la source : Voir les couples pression d’entrée / pression au chapeau dans le tableau fabricant ; aucun nominal de travail unique inventé.."
     ],
     "limitations": [
-      "Consommation publiée en CFM ou SCFM ; l’état de référence n’est pas défini dans ces tableaux. Aucun coefficient volumique silencieux vers L/min FAD.",
-      "Pression dans le chapeau, pression d’entrée dynamique et pression produit restent des grandeurs séparées.",
-      "Les tailles de buse et les chapeaux proviennent d’une ligne d’assemblage complet. Aucun code commandable absent n’est fabriqué.",
-      "Le compresseur d’une pompe ou d’un réservoir alimentant le produit ajoute une demande distincte à documenter.",
-      "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."
+      "L’état de référence des SCFM reste à documenter avant une conversion vers les L/min du calculateur.",
+      "La pression d’entrée, celle du chapeau et celle du produit sont distinctes. Les autres points de la table sont conservés dans leur unité originale.",
+      "Le godet de conversion à aspiration 81-384 est vendu séparément selon la notice. La demande d’air d’une alimentation produit externe s’ajoute à celle du pistolet.",
+      "Le voisin 1465-10HV-C1S est une buse de 1,0 mm destinée à une autre plage de fluidité ; la table d’air concerne le même chapeau C1."
     ]
   },
   "specifications": [
@@ -89,14 +88,21 @@ const product: ToolProfileInput = {
       "label": "Consommation publiée dans son unité originale",
       "value": "2,5 / 4,0 / 5,1 / 6,4 SCFM pour 5 / 10 / 15 / 21 PSI en entrée ; 2 / 4 / 7 / 10 PSI au chapeau",
       "evidenceIds": [
-        "october7-tools-binks-trophy-touchup-p3"
+        "october7-tools-binks-trophy-touchup-p4"
       ]
     },
     {
       "label": "Pression dans la source",
       "value": "Voir les couples pression d’entrée / pression au chapeau dans le tableau fabricant ; aucun nominal de travail unique inventé.",
       "evidenceIds": [
-        "october7-tools-binks-trophy-touchup-p3"
+        "october7-tools-binks-trophy-touchup-p4"
+      ]
+    },
+    {
+      "label": "Condition de pression du tableau",
+      "value": "Pression relevée au raccord d’entrée avec pistolet déclenché",
+      "evidenceIds": [
+        "october7-tools-binks-trophy-touchup-p4"
       ]
     }
   ],

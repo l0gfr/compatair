@@ -23,19 +23,21 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-4120A, référence SI-4120A. Le tableau fabricant publie 510 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 1,60 kg. Emmanchement : 0,401 pouce / 10,2 mm.",
+		"overview": "Le SI-4120A est un burineur à emmanchement rond de 0,401 pouce, soit environ 10,2 mm. La variante SI-4120AH est explicitement à emmanchement hexagonal dans le catalogue. Avant achat d’un burin, identifier la forme réelle autant que le diamètre ; les deux versions partagent le tableau de 510 L/min au maximum à 6,3 bar.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 18 CFM / 8.5 L/s. Conversion du maximum publié : 8.5 × 60 = 510 L/min.",
 			"Référence fabricant : SI-4120A.",
 			"Masse publiée : 1,60 kg.",
 			"Emmanchement : 0,401 pouce / 10,2 mm.",
-			"Cadence à vide : 2 600 coups/min."
+			"Cadence à vide : 2 600 coups/min.",
+			"Le tableau commun publie 2 600 coups/min à vide, une course maximale de 10 mm et 1,60 kg. Le kit SI-4120A-KIT ajoute des accessoires : il ne représente pas une autre production d’air."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Le voisin SI-4300 est un outil de coupe oscillant, pas un substitut de burineur. Confirmer la forme de queue, la retenue et le burin dans la notice ; aucune énergie par coup n’est déduite de la cadence."
 		]
 	},
 	"specifications": [

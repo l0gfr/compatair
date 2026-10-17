@@ -1,3 +1,4 @@
+import { applyReviewedOctober17Amendment } from './reviewed-catalog-amendments-2026-10-17.mjs';
 import { createMultiBrandCompressor, createMultiBrandTool } from './multi-brand-catalog-import.mjs';
 
 const same = (a, b, label) => { if (JSON.stringify(a) !== JSON.stringify(b)) throw new Error(`Transcription différente : ${label}`); };
@@ -106,5 +107,5 @@ export function buildCatalogExpansion(compressorSnapshot, toolSnapshot) {
  const products = [...compressors, ...tools];
  const normalize = s => s.normalize('NFKD').replaceAll(/\p{Diacritic}/gu, '').toLowerCase().replaceAll(/[^a-z0-9]/g, '');
  for (const key of [p => p.id, p => `${normalize(p.brand)}:${normalize(p.mpn)}`, p => `${normalize(p.brand)}:${normalize(p.model)}`]) if (new Set(products.map(key)).size !== 700) throw new Error('Référence en double');
- return { compressors, tools };
+ return { compressors: compressors.map(applyReviewedOctober17Amendment), tools: tools.map(applyReviewedOctober17Amendment) };
 }

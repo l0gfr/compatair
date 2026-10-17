@@ -28,7 +28,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Gentilin AC600/40, référence 814005001 : cuve de 40 L, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 186 L/min à 8 bar.",
+		"overview": "AC600/40 : 234 L/min à 5 bar et 186 L/min à 8 bar, avec 40 L de cuve et une masse publiée de 22 kg. La fiche actuelle indique S3 70 %. À 6,2 bar, le rendu CompatAir compare environ 215 L/min interpolés aux 550 L/min demandés par la Metabo DSX 150 : ce scénario dépasse le débit disponible.",
 		"verifiedFacts": [
 			"Débit restitué publié : 234 L/min à 5 bar ; 186 L/min à 8 bar.",
 			"Compresseur à pistons sans huile. Puissance moteur publiée : 2,2 kW.",
@@ -37,9 +37,10 @@ const product: CompressorInput = {
 			"Alimentation publiée : 230 V, 50 Hz."
 		],
 		"limitations": [
-			"Les points proviennent de la fiche fabricant, pas d’un essai physique réalisé par CompatAir.",
-			"Le taux de marche est celui déclaré par le fabricant ; les conditions de cycle et de température restent à respecter. La disponibilité commerciale reste à confirmer.",
-			"La disponibilité commerciale et les exigences électriques de l’installation sont à confirmer avant achat."
+			"La fiche produit annonce S3 70 %, alors que la notice 41024001 d’avril 2026 affiche 100 % pour cette famille, y compris AC600/40. Aucun de ces taux contradictoires n’est utilisé comme cycle garanti ; le régime de la machine exacte reste à confirmer avant usage soutenu.",
+			"Les 305 L/min intitulés FAD dans la notice ne sont pas associés à une pression. Ils ne remplacent pas les points sous pression publiés sur la fiche.",
+			"Le texte commercial de la page mentionne AC660/40 alors que son titre et son tableau portent AC600/40. Vérifier l’article 814005001 sur la plaque et le devis.",
+			"Les performances de l’AC400/20 voisin sont distinctes ; sa cuve de 20 L et ses valeurs de débit ne sont pas reportées sur cette référence."
 		]
 	},
 	"specifications": [
@@ -53,13 +54,6 @@ const product: CompressorInput = {
 		{
 			"label": "Dimensions publiées",
 			"value": "66x29x59 cm",
-			"evidenceIds": [
-				"gentilin-814005001-20260926"
-			]
-		},
-		{
-			"label": "Régime de service déclaré",
-			"value": "S3 70%",
 			"evidenceIds": [
 				"gentilin-814005001-20260926"
 			]
@@ -99,11 +93,11 @@ const product: CompressorInput = {
 		{
 			"id": "gentilin-814005001-20260926-oiltype-1",
 			"sourceUrl": "https://www.gentilinair.com/docs/41024001-compressed_1775720906.pdf#page=6",
-			"sourceLabel": "Gentilin, notice de la famille DC100/05, p. 6",
+			"sourceLabel": "Gentilin, notice EVO 41024001, avril 2026, page PDF 6 : DC100/05, AC200/05, AC400/20 et AC600/40",
 			"sourceType": "manufacturer",
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
-			"notes": "La notice liée à cette fiche déclare la compression sans huile : Tipologia Oil-free (utilizzo intensivo)"
+			"notes": "La page 6 identifie AC600/40, la compression sans huile et un cycle de 100 %. La fiche produit actuelle indique S3 70 % : divergence conservée dans les limites."
 		}
 	],
 	"fieldSources": {
@@ -133,9 +127,6 @@ const product: CompressorInput = {
 		],
 		"voltage": [
 			"gentilin-814005001-20260926"
-		],
-		"dutyCycle": [
-			"gentilin-814005001-20260926"
 		]
 	},
 	"notes": [
@@ -144,8 +135,7 @@ const product: CompressorInput = {
 	"intakeFlowLpm": 350,
 	"powerKw": 2.2,
 	"weightKg": 22,
-	"voltage": "230 V, 50 Hz",
-	"dutyCycle": 0.7
+	"voltage": "230 V, 50 Hz"
 };
 
 export default product;

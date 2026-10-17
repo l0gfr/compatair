@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Stanley B 251/10/50, référence 28DC404STN086 : cuve de 50 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Groupe de compression publié : B2800. Groupe de compression : B2800. Nombre de cylindres : 2.",
+		"overview": "B 251/10/50, article 28DC404STN086 : 50 L, groupe B2800, 1,5 kW et maximum de 10 bar. Le B 251E/9/50 voisin est une référence à 9 bar. Les 255 L/min du catalogue 2020 sont un débit aspiré ; les 55 kg et 800 × 390 × 750 mm concernent l’emballage.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 1,5 kW.",
@@ -30,10 +30,9 @@ const product: CompressorInput = {
 			"Vitesse de rotation : 1250 tr/min."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"Données issues du stanley, catalogue compresseurs 2020, encore accessible sur le site du fabricant. La commercialisation actuelle de cette référence n’est pas confirmée.",
-			"La masse et les dimensions de ce tableau concernent l’emballage, pas la machine nue."
+			"Le FAD sous pression et le taux de marche ne sont pas documentés par la ligne retenue.",
+			"Le code d’article permet de distinguer les versions B 251 et B 251E. Le volume commun de 50 L ne rend pas leurs limites de pression identiques.",
+			"La disponibilité actuelle et les dimensions de la machine nue doivent être confirmées ; le catalogue est daté de 2020."
 		]
 	},
 	"specifications": [

@@ -74,9 +74,9 @@ const product: CompressorInput = {
 		},
 		{
 			"label": "Alimentation publiée",
-			"value": "400 / 50 / 3",
+			"value": "400 V, 50 Hz, triphasé",
 			"evidenceIds": [
-				"october3d-mattei-pdf-11-p6"
+				"october3d-mattei-pdf-11-p7"
 			]
 		},
 		{
@@ -88,17 +88,16 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Mattei BLADE 8. 995 L/min à 9,5 bar. BLADE sans réservoir intégré.",
+		"overview": "BLADE 8 sur socle, version 10 bar à 50 Hz : 995 L/min à 9,5 bar, moteur de 7,5 kW, alimentation 400 V triphasée. La version BLADE S 8 conserve ce point FAD avec une cuve intégrée de 270 L ; le BLADE 8 étudié demande un stockage externe.",
 		"verifiedFacts": [
-			"Air livré rattaché à une pression et aux unités originales du constructeur.",
-			"Cuve de stockage documentée : 0 L.",
-			"Plafond conservateur de la plage de fonctionnement : 10 bar."
+			"Le tableau qualifie le FAD selon ISO 1217 annexe C et sépare la pression de référence de 9,5 bar de la version 10 bar.",
+			"La technologie est à palettes rotatives ; les modes continu, automatique et modulation sont décrits par le constructeur.",
+			"La ligne BLADE 8 à 50 Hz publie 270 kg et des dimensions de 1 180 × 760 × 990 mm."
 		],
 		"limitations": [
-			"Service continu déclaré dans les modes de commande décrits ; réglages et installation de la notice à respecter.",
-			"La version 10 bar est retenue ; FAD à9,5 bar, sans fusion avec 8 bar ou 60 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"La version 60 Hz et la version de pression 8 bar ont leurs propres valeurs : elles ne complètent pas cette courbe.",
+			"Le service continu dépend du mode de commande et des conditions de la notice. Il ne signifie pas production constante à toute charge.",
+			"Le choix entre BLADE, S, E et SE porte sur le stockage et le séchage livrés ; confirmer ces options et la qualité d’air nécessaire au poste."
 		]
 	},
 	"evidence": [
@@ -152,11 +151,19 @@ const product: CompressorInput = {
 		],
 		"dutyCycle": [
 			"october3d-mattei-pdf-11-p6"
+		],
+		"voltage": [
+			"october3d-mattei-pdf-11-p7"
+		],
+		"phase": [
+			"october3d-mattei-pdf-11-p7"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"voltage": "400 V, 50 Hz",
+	"phase": "three-phase"
 };
 
 export default product;

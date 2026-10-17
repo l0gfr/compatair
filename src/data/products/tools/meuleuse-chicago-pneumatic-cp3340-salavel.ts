@@ -33,7 +33,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Chicago Pneumatic"
 	},
 	"editorial": {
-		"overview": "CP3340-SALAVEL, référence 6151609290, demande 2 700 L/min en charge à 6,3 bar selon le catalogue Chicago Pneumatic v6.08.2026, page 148. Vitesse à vide : 6 000 tr/min. Puissance de l’outil : 3 400 W.",
+		"overview": "La CP3340-SALAVEL 6151609290 utilise la même consommation en charge que la SALAVET 6151609270 : 45 L/s, soit 2 700 L/min, au point du tableau à 6,3 bar. Elles ont 3 400 W, 6 000 tr/min à vide et une broche 5/8-11 UNC, mais leur capacité de roue diffère : 230 mm et 150 mm. Le débit du compresseur ne suffit donc pas à choisir la configuration abrasive. La SALAVADE 6151609310 est une autre combinaison, 180 mm et 8 500 tr/min, avec 52 L/s, soit 3 120 L/min : 420 L/min de plus au même point de mesure. Le tableau distingue également SALAVEL ANSI et SALAVELE CE ; la référence et la protection livrées doivent être confirmées.",
 		"verifiedFacts": [
 			"Vitesse à vide : 6 000 tr/min.",
 			"Puissance de l’outil : 3 400 W.",
@@ -44,7 +44,11 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"Le débit utilisé est la consommation en charge du tableau constructeur à 6,3 bar. Aucune réduction arbitraire pour usage intermittent n’est appliquée.",
 			"Le diamètre intérieur de flexible publié est de 10 mm, sans longueur associée dans ce tableau. La perte de pression du réseau reste à vérifier pour votre installation.",
-			"Référence issue du catalogue international v6.08.2026. La configuration livrée, les normes applicables et la disponibilité en France restent à confirmer avec le fournisseur."
+			"Référence issue du catalogue international v6.08.2026. La configuration livrée, les normes applicables et la disponibilité en France restent à confirmer avec le fournisseur.",
+			"Ne pas attribuer les intervalles de maintenance familiaux comme durée garantie individuelle.",
+			"Aucune équivalence de disques, carters ou conformité n’est déduite d’une broche commune.",
+			"Flexible 10 mm publié, longueur inconnue ; ce diamètre ne prouve pas l’absence de pertes à 2 700 L/min.",
+			"Le calcul nécessite un FAD restitué au point de pression et une réserve explicite ; ni le débit aspiré ni la cuve ne démontrent une alimentation continue."
 		]
 	},
 	"specifications": [

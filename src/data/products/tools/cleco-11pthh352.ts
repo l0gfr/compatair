@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco 11PTHH352, référence 11PTHH352. Le tableau fabricant publie 300 L/min et une plage d’utilisation de 6 à 6 bar. Plage de couple publiée : 6 à 11 Nm. Vitesse à vide publiée : 3500 tr/min.",
+		"overview": "Le 11PTHH352 utilise un carré de 1/4 pouce, tandis que le 11PTHH35Q reçoit un porte-embout rapide de 1/4 pouce. Leurs valeurs publiées sont identiques : 300 L/min en charge à 6 bar, 150 L/min à vide, 6 à 11 Nm et 3 500 tr/min. Le compresseur ne départage donc pas ces deux interfaces. Vérifiez l’accessoire requis ; les masses déclarées sont de 0,82 et 0,85 kg.",
 		"verifiedFacts": [
 			"Performances publiées à 6 bar à l’entrée de l’outil, note de la page 86.",
 			"Le tableau distingue 150 L/min à vide et 300 L/min en charge à 6 bar. Le calcul conserve la plus élevée des deux valeurs publiées (300 L/min), sans cycle de travail supposé.",

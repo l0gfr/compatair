@@ -23,18 +23,20 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-4700B, référence SI-4700B. Le tableau fabricant publie 204 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Scie alternative : course 10 mm ; cadence 10 000 coups/min ; capacité acier publiée 3 mm. Masse publiée : 0.58 kg.",
+		"overview": "La SI-4700B est une scie alternative à course de 10 mm et 10 000 coups/min à vide. Son maximum de 204 L/min à 6,3 bar est inférieur aux 510 L/min de la SI-4730 à moteur rotatif. La différence de 306 L/min accompagne deux mécanismes et deux capacités de coupe distincts.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 7.2 CFM / 3.4 L/s, soit 204 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
 			"Référence fabricant : SI-4700B.",
 			"Version et équipement : Scie alternative : course 10 mm ; cadence 10 000 coups/min ; capacité acier publiée 3 mm.",
-			"Masse publiée : 0.58 kg."
+			"Masse publiée : 0.58 kg.",
+			"Le tableau annonce 3 mm de capacité acier et 0,58 kg pour la SI-4700B, contre 5 mm et 0,92 kg pour la SI-4730, dont la course est de 9 mm à 6 000 coups/min. La plus haute cadence ne démontre pas la plus forte capacité."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Choisir la lame selon le matériau et l’épaisseur. Les coups/min ne sont pas des tours/min et la capacité acier de catalogue ne vaut pas pour tous les alliages ni toutes les conditions de coupe."
 		]
 	},
 	"specifications": [

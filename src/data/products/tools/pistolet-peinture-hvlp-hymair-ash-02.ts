@@ -32,21 +32,22 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair ASH-02. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Capacité du godet : 1,000 ml. Buse standard déclarée : 1.4 mm.",
+		"overview": "ASH-02 : pistolet HVLP à aspiration, godet de 1 000 ml, buse de 1,4 mm et jet de 170 à 230 mm. Le catalogue Hymair/Steed annonce une pression de service de 2,5 à 3 bar et une consommation moyenne de 6,5 cfm. L’ASH-01 voisin reçoit un godet gravitaire de 600 ml et annonce la même moyenne.",
 		"verifiedFacts": [
 			"Capacité du godet : 1,000 ml.",
 			"Buse standard déclarée : 1.4 mm.",
 			"Largeur de jet publiée : 170-230 mm."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Les 6,5 cfm sont une consommation moyenne, sans débit en charge ni cadence de référence ; le calcul de dimensionnement reste indéterminé.",
+			"Le godet de 1 000 ml et l’alimentation par aspiration distinguent ASH-02 de l’ASH-01. Le volume de peinture n’est pas une réserve d’air.",
+			"Le raccord est annoncé 1/4 pouce mâle ; le standard du filetage n’est pas précisé dans cette page."
 		]
 	},
 	"specifications": [
 		{
 			"label": "Capacité du godet",
-			"value": "1,000 ml",
+			"value": "1 000 ml",
 			"evidenceIds": [
 				"october2-tools-steed-7-p2"
 			]

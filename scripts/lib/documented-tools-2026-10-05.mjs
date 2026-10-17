@@ -1,3 +1,4 @@
+import { applyReviewedOctober17Amendment } from './reviewed-catalog-amendments-2026-10-17.mjs';
 import { createHash } from 'node:crypto';
 
 const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -11547,5 +11548,5 @@ export function buildDocumentedToolsOctober5(snapshot) {
   return { id, slug: id, categoryId: row.categoryId, category: row.categoryId, label, brand: row.brand, model: row.model, ...(hasMpn ? { mpn: row.mpn } : {}), ...demand, confidence: 'B', image: { src: `/images/products/${id}.svg`, alt: `Repères techniques : ${label}`, sourceUrl: source.url, sourceLabel: 'Carte technique CompatAir, données déclarées par le fabricant' }, variant: { familyId: slug(`${row.brand}-${row.model}`), label: hasMpn ? `Référence ${row.mpn}` : `Modèle ${row.model}, SKU non établi`, distinguishingAttributes: { [hasMpn ? 'reference' : 'manufacturerModel']: row.mpn, ...Object.fromEntries(ownFacts.slice(0, 2).map(item => [item.label, item.value])) } }, editorial: { overview: `${label}. ${summary}`, verifiedFacts: ownFacts.map(item => `${item.label} : ${item.value}.`), limitations: [point ? 'Aucune cadence implicite : le volume par fixation ne décrit pas la pointe de débit au déclenchement. Aucune correction entre états normaux ou standards différents n’est appliquée.' : explanation, ...row.sourceLimitations, 'Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué.'] }, specifications, evidence: proofs, fieldSources: { [hasMpn ? 'mpn' : 'model']: [primary.id], ...(point ? { workingPressureBar: [evidence(sources.get(row.perActionProfile.sourceId), 10).id, unitProofs.pressure.id], airPerActionLiters: [evidence(sources.get(row.perActionProfile.sourceId), 10).id, unitProofs.volume.id], actionLabel: [evidence(sources.get(row.perActionProfile.sourceId), 10).id] } : { workingPressureBar: pressureContextIds, demandExplanation: proofs.map(proof => proof.id) }) }, notes: [summary] };
  });
  if (qualifiedCount !== 1) throw new Error('Exactly one independently qualified per-action reference reviewed');
- return result;
+ return result.map(applyReviewedOctober17Amendment);
 }

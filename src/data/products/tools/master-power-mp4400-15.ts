@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Master Power MP4400-15, référence MP4400-15. Le tableau fabricant publie 430 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Diamètre du plateau publié : 5 pouces. Orbite publiée : 3/16 pouce.",
+		"overview": "Les MP4400-15 et MP4400-05 partagent une consommation déclarée de 430 L/min à 6,2 bar, un plateau de 5 pouces, une orbite de 3/16 pouce et 12 000 tr/min. La 15 est plus longue et plus lourde : 196,75 mm et 0,78 kg, contre 139,19 mm et 0,73 kg. Le tableau répète le titre central vacuum pour les versions 35 et 15 : faites confirmer le système d’aspiration par la notice exacte, sans déduire une économie d’air du suffixe.",
 		"verifiedFacts": [
 			"Note General de la page 56 : performances mesurées à 6,2 bar à l’entrée de l’outil.",
 			"Note de la série : Air consumption 0.43 m³/min, soit 430 L/min. Le régime maximum ou moyen n’est pas précisé.",

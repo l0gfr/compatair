@@ -1,3 +1,4 @@
+import { applyReviewedOctober17Amendment } from './reviewed-catalog-amendments-2026-10-17.mjs';
 import { applyReviewedOctober15Amendment } from './reviewed-catalog-amendments-2026-10-15.mjs';
 import { applyReviewedCatalogAmendment } from './reviewed-catalog-amendments-2026-10-14.mjs';
 import { createMultiBrandCompressor, createMultiBrandTool } from './multi-brand-catalog-import.mjs';
@@ -111,5 +112,5 @@ export function buildTechnicalExpansion(compressorSnapshot, toolSnapshot) {
   return product; });
  const products = [...compressors, ...tools];
  for (const key of [p => p.id, p => p.slug, p => `${p.brand}|${p.mpn}`]) if (new Set(products.map(key)).size !== products.length) throw new Error('Référence en double dans le lot technique');
- return { compressors, tools };
+ return { compressors: compressors.map(applyReviewedOctober17Amendment), tools: tools.map(applyReviewedOctober17Amendment) };
 }

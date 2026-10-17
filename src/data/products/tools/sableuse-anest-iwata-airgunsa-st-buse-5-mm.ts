@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Anest Iwata AIRGUNSA ST buse 5 mm. Le régime de consommation et/ou la pression de travail appariée ne sont pas définis. Le débit publié reste hors du calcul FAD. Le code complet W0030500050 désigne AIRGUNSA ST buse 5 mm. fonction : pistolet de sablage; buse : 5 mm; alimentation abrasive : tuyau de succion du sable de 1,5 m.",
+    "overview": "AIRGUNSA ST, code W0030500050 : pistolet de sablage à buse de 5 mm livré avec un tuyau d’aspiration d’abrasif de 1,5 m. Le W0030500060 est la version de 6 mm avec le même type de tuyau ; les codes W0030510150 et W0030510160 désignent les versions sans ce tuyau dans la ligne de commande.",
     "verifiedFacts": [
       "Fonction : pistolet de sablage.",
       "Buse : 5 mm.",
@@ -38,9 +38,9 @@ const product: ToolProfileInput = {
       "Pression dans la source : Non publiée pour cet outil dans le tableau de commande."
     ],
     "limitations": [
-      "Cette page fournit l’identité et la construction de l’outil, sans consommation ni pression d’exercice appariées. Aucun besoin numérique n’est calculé.",
-      "La disponibilité actuelle en France n’est pas établie. Les raccords rapides et les accessoires séparés ne sont pas comptés comme des outils supplémentaires.",
-      "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."
+      "La page de commande ne publie ni débit d’air ni pression de service : aucun besoin de compresseur n’est reconstitué.",
+      "Les buses de 5 et 6 mm sont des configurations distinctes ; le catalogue ne permet pas de chiffrer leur différence de consommation.",
+      "Le tuyau de succion d’abrasif ne renseigne pas le diamètre du flexible d’alimentation en air."
     ]
   },
   "specifications": [

@@ -24,18 +24,18 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "FIAC AX 153BD DRY 10 400/50 CE, référence 4152026084 : configuration sans cuve intégrée, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 1 510 L/min à 10 bar. Sans cuve intégrée. Version DRY avec sécheur intégré.",
+		"overview": "La référence FIAC 4152026084 associe un sécheur intégré à un groupe sans cuve : 1 510 L/min à 10 bar, 400 V triphasé, 50 Hz. Le catalogue la nomme AIRBLOK 153BD DRY ; l’URL conserve AX. La version 4152026085 publie 1 210 L/min à 13 bar.",
 		"verifiedFacts": [
 			"Débit restitué publié : 1 510 L/min à 10 bar.",
 			"Compresseur rotatif à vis lubrifié à vitesse fixe. Puissance moteur publiée : 11,2 kW.",
-			"Masse nette publiée : 296 kg.",
+			"Masse publiée : 296 kg.",
 			"Alimentation publiée : 400 V, 50 Hz, triphasée."
 		],
 		"limitations": [
-			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"La référence commande prime sur le nom commercial : le catalogue utilise AIRBLOK et la fiche en ligne le code AX.",
-			"Les puissances arrondies peuvent différer entre le catalogue PDF et la fiche actuelle. Les valeurs de cette fiche proviennent exclusivement de la fiche individuelle consultée."
+			"Le FAD de chaque version reste rattaché à sa pression et à sa référence de commande.",
+			"Le taux de marche du groupe complet reste à confirmer ; un FAD disponible ne suffit pas à établir son endurance.",
+			"La fiche individuelle publie 11,2 kW et le catalogue 11 kW. L’origine de cet écart n’est pas établie ; les 11,2 kW sont ceux de la fiche individuelle consultée.",
+			"Les 296 kg sont une masse publiée dont la qualification nette doit être confirmée. Installation, cuve externe et disponibilité locale sont à préciser sur le devis."
 		]
 	},
 	"specifications": [

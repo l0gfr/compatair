@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Nuair B2800/100 CM2, référence 28FC404NUB012 : cuve de 100 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Groupe de compression publié : B2800. Groupe de compression : B2800. Nombre de cylindres : 2.",
+		"overview": "Le B2800/100 CM2, article 28FC404NUB012, conserve le groupe B2800 de la version 50 L : 1,5 kW, 230 V à 50 Hz, 1 250 tr/min et 255 L/min aspirés. La cuve passe à 100 L. Les 61 kg et 1 030 × 440 × 850 mm du tableau concernent l’emballage.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 1,5 kW.",
@@ -30,10 +30,9 @@ const product: CompressorInput = {
 			"Vitesse de rotation : 1250 tr/min."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"Données issues du nuair professional, catalogue 2022, encore accessible sur le site du fabricant. La commercialisation actuelle de cette référence n’est pas confirmée.",
-			"La masse et les dimensions de ce tableau concernent l’emballage, pas la machine nue."
+			"Le catalogue 2022 donne le débit aspiré ; le FAD sous pression et le taux de marche restent à documenter.",
+			"Le choix 50 ou 100 L porte ici sur le stockage et l’encombrement. Le tableau ne démontre pas une production d’air supérieure pour le 100 L.",
+			"Les valeurs emballées ne servent pas à dimensionner une implantation de la machine nue. Disponibilité et dimensions réelles sont à confirmer."
 		]
 	},
 	"specifications": [

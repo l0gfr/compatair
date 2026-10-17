@@ -44,14 +44,14 @@ const product: CompressorInput = {
 			"label": "Pression maximale de fonctionnement",
 			"value": "13 bar relatifs",
 			"evidenceIds": [
-				"october3d-mark-family-00"
+				"october3d-mark-pdf-new-00-p4"
 			]
 		},
 		{
 			"label": "Air livré à 12,5 bar",
 			"value": "1 150 L/min",
 			"evidenceIds": [
-				"october3d-mark-family-00"
+				"october3d-mark-pdf-new-00-p4"
 			]
 		},
 		{
@@ -70,26 +70,23 @@ const product: CompressorInput = {
 		},
 		{
 			"label": "Fréquence retenue",
-			"value": "non précisée",
+			"value": "50 Hz, publié dans le tableau fabricant",
 			"evidenceIds": [
-				"october3d-mark-family-00"
+				"october3d-mark-pdf-new-00-p4"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "MARK MSA 11. 1 150 L/min à 12,5 bar. Groupe sur socle sans réservoir de stockage intégré.",
+		"overview": "MSA 11 sur socle, version 13 bar à 50 Hz : 69 m³/h, soit 1 150 L/min, à la pression de référence de 12,5 bar. La version MSA 7,5 de même pression annonce 53 m³/h. Le tableau sépare aussi des versions MSA 11 à 8 et 10 bar ; leurs capacités ne sont pas ajoutées à cette courbe.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
 			"Pression maximale de fonctionnement publiée : 13 bar."
 		],
 		"limitations": [
-			"La pression FAD et le maximum de la version sont conservés séparément.",
-			"Version sur socle retenue ; réservoir externe exclu.",
-			"Cycle de service non établi ; la tenue permanente reste indéterminée.",
-			"Fréquence non publiée dans la fiche retenue ; aucune transposition des performances à 50 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Le taux de marche du groupe complet reste à confirmer ; la tenue permanente demeure indéterminée.",
+			"Les 19,1 L/s imprimés sont arrondis. La conversion de 69 m³/h est conservée comme base unique.",
+			"Le tableau établit 50 Hz ; tension, raccordement et disponibilité de la configuration commandée restent à confirmer."
 		]
 	},
 	"evidence": [
@@ -132,10 +129,10 @@ const product: CompressorInput = {
 			"october3d-mark-pdf-new-00-p1"
 		],
 		"maxPressureBar": [
-			"october3d-mark-family-00"
+			"october3d-mark-pdf-new-00-p4"
 		],
 		"fadCurve": [
-			"october3d-mark-family-00"
+			"october3d-mark-pdf-new-00-p4"
 		],
 		"powerKw": [
 			"october3d-mark-family-00"

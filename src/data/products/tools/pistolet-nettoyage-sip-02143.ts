@@ -29,16 +29,18 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SIP 02143. Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "Le SIP 02143 est un pistolet de nettoyage à réservoir de 950 ml, avec entrée mâle 1/4 BSP et plage de fonctionnement de 2 à 6 bar. Le Vorel 81647 dispose aussi de 950 ml, mais distingue 4 bar de fonctionnement et 8 bar au maximum. Aucun des deux ne fournit ici un besoin d’air utilisable pour choisir le compresseur.",
 		"verifiedFacts": [
 			"Pot Capacity: : 950ml.",
-			"Net Weight: : 0.95kg."
+			"Net Weight: : 0.95kg.",
+			"La masse publiée est de 0,95 kg pour le SIP, contre 0,46 kg pour le Vorel. Le volume de liquide et la masse ne remplacent pas une consommation pneumatique."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
 			"Le régime de la consommation publiée n’est pas défini par un cycle ni un fonctionnement continu en charge ; la valeur est conservée comme cellule source, sans profil de débit qualifié.",
 			"La pression Air Pressure / Operating Pressure est une prescription de fonctionnement, sans pression de mesure explicitement rattachée à un régime qualifié.",
-			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué.",
+			"Confirmer le produit de nettoyage autorisé, l’entrée et les accessoires. Ne pas associer une consommation supposée au seul maximum de pression."
 		]
 	},
 	"specifications": [

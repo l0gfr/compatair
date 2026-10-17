@@ -23,17 +23,20 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX GAA 205, référence 150600720. Le tableau fabricant publie 150 L/min et une plage d’utilisation de 6 à 6 bar. Vitesse à vide publiée : 500 tr/min. Masse publiée : 150 g.",
+		"overview": "La GAA 205 est une visseuse à aspiration intégrée des vis, à 500 tr/min, contre 900 pour la GAA 209. Les deux publient 150 L/min à 6 bar dans le tableau, sans régime de charge qualifié. Ce nombre ne permet donc pas un verdict de fonctionnement continu, même si l’outil est plus lent.",
 		"verifiedFacts": [
 			"Le catalogue prescrit un fonctionnement à 6 bar dans la page de cette famille.",
 			"Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé.",
 			"Référence fabricant : 150600720.",
 			"Vitesse à vide publiée : 500 tr/min.",
-			"Masse publiée : 150 g."
+			"Masse publiée : 150 g.",
+			"La plage de couple de la GAA 205 est de 0,04 à 1,1 Nm ; celle de la GAA 209 est de 0,02 à 1,0 Nm. Les deux pèsent 150 g et reçoivent une empreinte A3 hexagonale de 3 mm.",
+			"La douille d’aspiration se choisit selon le diamètre de tête de vis, son passage intérieur et le porte-embout. Le catalogue donne des références distinctes : l’aspiration ne valide pas à elle seule la combinaison vis/embout."
 		],
 		"limitations": [
 			"Le réglage du couple dépend de l’assemblage et des ressorts prévus par le fabricant.",
-			"L’aspiration des vis et les équipements auxiliaires peuvent demander un dimensionnement séparé."
+			"L’aspiration des vis et les équipements auxiliaires peuvent demander un dimensionnement séparé.",
+			"La valeur de 150 L/min reste documentaire, avec airflowBasis unqualified ; aucune moyenne ni consommation maximale en charge ne lui est attribuée."
 		]
 	},
 	"specifications": [
@@ -86,6 +89,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150600720-20260926"
+		],
+		"airflowBasis": [
+			"biax-150600720-20260926"
 		]
 	},
 	"notes": [
@@ -95,7 +101,8 @@ const product: ToolProfileInput = {
 		"min": 150,
 		"typical": 150,
 		"max": 150
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

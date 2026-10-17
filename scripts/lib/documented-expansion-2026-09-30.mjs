@@ -1,3 +1,4 @@
+import { applyReviewedOctober17Amendment } from './reviewed-catalog-amendments-2026-10-17.mjs';
 const DATE = '2026-09-30';
 const slug = value => value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const finite = value => { if (!Number.isFinite(value) || value <= 0) throw new Error('Valeur source positive requise'); return value; };
@@ -55,5 +56,5 @@ export function buildDocumentedExpansion(snapshot) {
 	});
 	const identities = new Set();
 	for (const p of [...compressors, ...tools]) { if (identities.has(p.id)) throw new Error('Identifiant dupliqué'); identities.add(p.id); }
-	return { compressors, tools };
+	return { compressors: compressors.map(applyReviewedOctober17Amendment), tools: tools.map(applyReviewedOctober17Amendment) };
 }

@@ -30,7 +30,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 1690
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "unknown",
 	"powerKw": 15,
 	"weightKg": 595,
@@ -81,17 +80,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "ALMiG COMBI XP 15 270D. Station 4-en-1 : réservoir 270 L, sécheur frigorifique, préfiltre et postfiltre. La courbe reprend les capacités maximales publiées, avec les minima conservés séparément.",
+		"overview": "COMBI XP 15 270D : station 50 Hz de 15 kW avec cuve de 270 L, sécheur et deux étages de filtration. À 10 bar, le catalogue donne une plage de modulation de 450 à 2 020 L/min ; à 13 bar, de 430 à 1 690 L/min. La courbe CompatAir retient les maxima publiés.",
 		"verifiedFacts": [
-			"Puissance moteur publiée : 15 kW ; poids de cette configuration : 595 kg.",
-			"Débit restitué documenté : 2 230 L/min à 8 bar ; 2 020 L/min à 10 bar ; 1 690 L/min à 13 bar.",
-			"La documentation de la série prévoit le fonctionnement continu, sous ses conditions d’installation et d’entretien."
+			"Configuration de 595 kg ; dimensions 1 530 × 700 × 1 640 mm.",
+			"À 8 bar, la plage publiée est de 450 à 2 230 L/min, selon ISO 1217 annexe C-2009.",
+			"Le COMBI XP 11 270D voisin utilise aussi une cuve de 270 L et publie 290 à 1 460 L/min à 10 bar, pour 11 kW."
 		],
 		"limitations": [
-			"La disponibilité commerciale actuelle n’a pas été confirmée.",
-			"Les minima et maxima de modulation ne décrivent pas un débit moyen de votre atelier. Aucun débit n’est extrapolé hors des points publiés.",
-			"Le service continu documenté ne dispense pas du contrôle du refroidissement, du traitement d’air et des pertes du réseau.",
-			"Le mode de lubrification n’a pas été établi dans les sources consultées ; il reste unknown, sans présumer une qualité d’air."
+			"Le taux de marche du groupe complet reste à confirmer dans une notice applicable à COMBI XP. La courbe de capacité seule ne qualifie pas l’endurance.",
+			"Un minimum de modulation n’est pas le débit moyen de l’atelier. Un besoin durable sous ce minimum demande l’étude des phases de décharge ou d’arrêt.",
+			"Les performances de filtration déclarées ne garantissent pas la qualité d’air au point d’usage ; installation, maintenance et raccordement électrique restent à vérifier.",
+			"Le mode de lubrification reste unknown dans cette fiche."
 		]
 	},
 	"evidence": [
@@ -120,9 +119,6 @@ const product: CompressorInput = {
 			"documented-20260930-almig-2026"
 		],
 		"weightKg": [
-			"documented-20260930-almig-2026"
-		],
-		"dutyCycle": [
 			"documented-20260930-almig-2026"
 		]
 	},

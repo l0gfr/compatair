@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Graco AirPro gravity 289005 (réf. 289005). Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "AirPro 289005 : pistolet HVLP gravitaire de 1,4 mm livré sans godet. La notice publie 14,4 CFM à 29 psi, soit le point de pression imprimé de 2,0 bar. La version 289006 utilise une buse de 1,8 mm ; les versions 289014 et 289023 sont des ensembles livrés avec d’autres godets.",
 		"verifiedFacts": [
 			"Orifice Size in. (mm) : 0.055 (1.4).",
 			"Spray technology : HVLP.",
@@ -38,10 +38,9 @@ const product: ToolProfileInput = {
 			"Air inlet : 1/4 npsm (R1/4–19)."
 		],
 		"limitations": [
-			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
-			"Le débit possède un point de pression explicite, mais pas de protocole de mesure établissant la position complète de la gâchette.",
-			"Les MPN de versions avec godet standard ou PPS sont exclus ; la masse avec godet n’est pas appliquée au pistolet sans godet.",
-			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Le maximum d’alimentation de 7 bar est distinct du plafond HVLP de 2 bar ; la notice associe ce dernier à 0,7 bar au chapeau.",
+			"La position de la gâchette et les conditions de référence du volume ne sont pas établies par la ligne de consommation. Les CFM restent hors calcul FAD.",
+			"Les valeurs acoustiques avec leurs notes de mesure et la masse avec godet ne sont pas appliquées au pistolet nu par défaut."
 		]
 	},
 	"specifications": [
@@ -76,6 +75,20 @@ const product: ToolProfileInput = {
 		{
 			"label": "Air inlet",
 			"value": "1/4 npsm (R1/4–19)",
+			"evidenceIds": [
+				"october5-tools-graco-airpro-gravity-p19"
+			]
+		},
+		{
+			"label": "Consommation HVLP publiée, hors calcul FAD",
+			"value": "14,4 CFM à 29 psi (2,0 bar) en entrée, selon la notice",
+			"evidenceIds": [
+				"october5-tools-graco-airpro-gravity-p19"
+			]
+		},
+		{
+			"label": "Plafond d’entrée en mode HVLP",
+			"value": "29 psi (2,0 bar), à distinguer du maximum d’alimentation de 7 bar",
 			"evidenceIds": [
 				"october5-tools-graco-airpro-gravity-p19"
 			]

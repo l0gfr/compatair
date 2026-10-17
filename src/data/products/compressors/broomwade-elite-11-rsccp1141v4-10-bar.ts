@@ -24,7 +24,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 1390
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 11,
 	"weightKg": 378,
@@ -53,7 +52,7 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Dimensions (longueur × largeur × hauteur)",
+			"label": "Dimensions publiées (ordre des axes non précisé dans cette ligne)",
 			"value": "1539 × 1535 × 787 mm",
 			"evidenceIds": [
 				"october2-broomwade-full-p20"
@@ -61,16 +60,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "BroomWade ELITE 11, réf. RSCCP1141V4, 10 bar. 1 390 L/min à 10 bar. Moteur 11 kW ; station avec sécheur, filtration et cuve.",
+		"overview": "ELITE 11, article RSCCP1141V4 : station de 11 kW avec réservoir de 270 L, sécheur, filtration et purge automatique. La capacité annoncée à 10 bar est de 1,39 m³/min ; l’ELITE 7 voisin annonce 0,97 m³/min pour 7,5 kW, avec le même volume de cuve.",
 		"verifiedFacts": [
 			"Débits restitués associés aux pressions du tableau de cette configuration.",
 			"Cuve intégrée : 270 L ; aucun volume de réservoir externe ajouté.",
 			"Numéro d’article fabricant : RSCCP1141V4."
 		],
 		"limitations": [
-			"Les points FAD publiés ne constituent pas une mesure de toute la courbe ; aucune extrapolation au-dessus de la dernière pression documentée.",
-			"Service continu déclaré pour la série ; les conditions d’installation, de refroidissement et d’entretien restent applicables.",
-			"Documentation datée, disponibilité et équipement livré à confirmer sur le devis. Aucun avis d’utilisation ni essai CompatAir."
+			"Le taux de marche applicable à ELITE 11 reste à confirmer ; aucun service continu n’est retenu à partir de la page complémentaire indisponible.",
+			"Les dimensions 1 539 × 1 535 × 787 mm sont conservées dans l’ordre publié, dont les axes ne sont pas explicités dans ce bloc.",
+			"Le sécheur et les filtres livrés doivent être précisés sur le devis. Une option d’huile alimentaire ne documente pas à elle seule une classe de pureté de l’air.",
+			"Le bloc introductif du catalogue traite de compresseurs à vis lubrifiés ; la référence exacte et les consommables sont à confirmer dans la notice de la station."
 		]
 	},
 	"evidence": [
@@ -116,9 +116,6 @@ const product: CompressorInput = {
 		],
 		"oilType": [
 			"october2-broomwade-full-p20"
-		],
-		"dutyCycle": [
-			"october2-broomwade-duty-web"
 		]
 	},
 	"notes": [

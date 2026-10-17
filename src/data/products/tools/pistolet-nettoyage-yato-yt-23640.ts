@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Yato YT-23640. Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "Le YT-23640 est décrit comme un générateur de mousse avec réservoir de 1 L et vanne d’aspiration de liquide. Ce choix d’application le distingue des nettoyeurs SIP 02143 et Vorel 81647 à réservoir de 950 ml. Les 113 L/min annoncés ne disposent pas d’un régime et d’une pression de mesure appariés : le verdict reste indéterminé.",
 		"verifiedFacts": [
 			"Air supply hose inside diameter : 3/8\" (9.5 mm).",
 			"Tank capacity : 1 l.",
@@ -37,13 +37,15 @@ const product: ToolProfileInput = {
 			"Material : aluminum.",
 			"Acoustic power : 96.0 ± 3.0 dB(A).",
 			"Vibrations : <2.5 m/s².",
-			"Weight : 0.53 kg."
+			"Weight : 0.53 kg.",
+			"La canne mesure 220 mm ; le flexible d’alimentation prescrit a un diamètre intérieur de 3/8 pouce, soit 9,5 mm. Le maximum de 0,62 MPa se convertit en 6,2 bar, sans devenir une pression d’essai du débit."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
 			"Les pressions recommandées ou maximales de cette fiche ne sont pas des points de mesure de consommation.",
 			"Sans régime explicite en charge et pression de mesure associée, la consommation éventuelle reste documentaire et ne permet aucun verdict conclusif.",
-			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué.",
+			"Vérifier le détergent, l’alimentation de liquide et le raccord réel. Le volume du réservoir et la production de mousse ne caractérisent pas le débit d’air en action."
 		]
 	},
 	"specifications": [

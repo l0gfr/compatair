@@ -29,20 +29,22 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SIP 02136. Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "Le SIP 02136 est un pistolet HVLP à succion, buse de 1,8 mm et godet de 1 L. Les Vorel 80902 et Yato YT-2340 utilisent une buse de 1,4 mm et un godet supérieur de 0,6 L. La taille du godet ne permet pas de comparer leurs consommations en continu.",
 		"verifiedFacts": [
 			"Feed Type: : Suction.",
 			"Nozzle Diameter: : Ø 1.8mm.",
 			"Paint Cup Capacity: : 1ltr.",
 			"Water Based Paint: : Yes.",
 			"Net Weight: : 1.33kg.",
-			"Product Dimensions: : 125(H) x 125(W) x 300mm(D)."
+			"Product Dimensions: : 125(H) x 125(W) x 300mm(D).",
+			"SIP publie une moyenne de 416 L/min et une plage de fonctionnement de 2,5 à 3,5 bar, sans cycle défini. Le Yato indique 410 L/min sans le même protocole : la proximité numérique ne prouve pas un besoin équivalent."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
 			"La consommation est présentée comme une moyenne. Le cycle d’utilisation n’est pas défini ; elle n’est pas convertie en consommation continue en charge.",
 			"La pression Air Pressure / Operating Pressure est une prescription de fonctionnement, sans pression de mesure explicitement rattachée à un régime qualifié.",
-			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué.",
+			"Conserver le besoin non qualifié. Faire confirmer les conditions de pulvérisation et le débit en action avant de choisir le compresseur ; une moyenne ne devient pas un maximum."
 		]
 	},
 	"specifications": [

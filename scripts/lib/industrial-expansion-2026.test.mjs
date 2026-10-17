@@ -24,8 +24,10 @@ describe('reviewed expansion of 200 compressors and 500 tools', () => {
   expect(batch.compressors.every(p => p.fadCurve.length === 1 && p.status === 'unknown')).toBe(true);
   for (const p of batch.compressors) {
    const reviewed = dutyReview.rows.find(row => row.id === p.id);
-   expect(p.dutyCycle, p.id).toBe(reviewed?.dutyCycle);
-   if (reviewed) expect(p.evidence.find(e => p.fieldSources.dutyCycle.includes(e.id))).toMatchObject({ sourceType: 'manufacturer', retrievedAt: '2026-09-27' });
+   const withdrawn = p.id === 'abac-formula-e-11-13-400-50';
+   expect(p.dutyCycle, p.id).toBe(withdrawn ? undefined : reviewed?.dutyCycle);
+   if (withdrawn) expect(p.fieldSources.dutyCycle).toBeUndefined();
+   else if (reviewed) expect(p.evidence.find(e => p.fieldSources.dutyCycle.includes(e.id))).toMatchObject({ sourceType: 'manufacturer', retrievedAt: '2026-09-27' });
   }
  });
  it('binds Shinano dynamic pressure to the separate instruction page and retains maximum demand', () => {

@@ -3,14 +3,14 @@ title: "Choisir un distributeur pneumatique : lire le débit nominal avant de r
 seoTitle: "Distributeur pneumatique : quel débit nominal choisir ?"
 description: "Filetage identique, débit différent : lisez les conditions de pression, le sens de passage et le débit nominal avant de choisir un distributeur pneumatique."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-30
+updatedDate: 2026-10-17
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 4
 reviewStatus: "internal"
 relatedGuides: [ "consommation-verin-pneumatique-double-effet", "regler-vitesse-verin-pneumatique-echappement", "raccord-air-comprime-bsp-npt-1-4", festo-vuvg-zones-pression-pilotage-12-14 ]
-sources: [ "https://www.festo.com/media/catalog/236149_documentation.pdf", "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air10.pdf", https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2019/EN/VTUG-G_EN.PDF ]
+sources: [ "https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air10.pdf", https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2019/EN/VTUG-G_EN.PDF ]
 ---
 
 **Deux distributeurs qui se vissent au même endroit ne sont pas nécessairement équivalents.** Il faut rapprocher leur fonction, leur commande, leur débit dans des conditions comparables et l’ensemble du montage. Un chiffre en L/min isolé de sa pression aval peut donner une impression trompeuse de capacité.
@@ -19,7 +19,7 @@ Le besoin n’est pas seulement de « laisser passer l’air ». Dans une machin
 
 ## Le débit nominal décrit un point d’essai
 
-La [fiche Festo HE](https://www.festo.com/media/catalog/236149_documentation.pdf) donne un exemple explicite : son débit nominal normalisé selon DIN 1343 est mesuré avec **p1 = 6 bar, p2 = 5 bar et une différence de 1 bar**. Il s’agit ici d’une vanne manuelle d’isolement, citée pour montrer comment lire une condition de débit, pas d’un modèle d’électrovanne recommandé.
+Le [catalogue Festo VUVG/VTUG, édition 2018/10, page PDF 40](https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2019/EN/VTUG-G_EN.PDF#page=40) sépare le débit nominal standard du débit sur barrette. Pour les VUVG-L en M7, colonne **B52**, il publie respectivement **380 et 340 L/min**. Il faut donc conserver le montage associé à la ligne lue, même au sein de la même référence de valve. Ces données d’édition ne remplacent pas la documentation de la configuration effectivement livrée.
 
 Ce débit n’est donc pas celui que la même pièce laisserait passer avec n’importe quelle pression amont ou aval. Il ne représente pas non plus une consommation d’air permanente. Conservez la note de bas de tableau avec la valeur quand vous préparez votre comparaison.
 
@@ -74,7 +74,7 @@ Pour un 5/3, joignez le symbole des trois positions. Le [guide des centres ferm�
 
 ## Sources et méthode
 
-Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
+Sources relues le **17 octobre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
 
-- [Festo, vanne manuelle HE, fiche d’octobre 2024, page 4](https://www.festo.com/media/catalog/236149_documentation.pdf)
+- [Festo, VUVG/VTUG, édition 2018/10, débits en M7 page PDF 40 et zones page PDF 126](https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2019/EN/VTUG-G_EN.PDF)
 - [U.S. Department of Energy, Engineer End Uses for Maximum Efficiency, fiche 10](https://www.energy.gov/sites/prod/files/2014/05/f16/compressed_air10.pdf)

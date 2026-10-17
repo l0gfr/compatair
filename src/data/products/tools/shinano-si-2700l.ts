@@ -23,18 +23,20 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2700L, référence SI-2700L. Le tableau fabricant publie 558 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 15 000 tr/min. Masse publiée : 0,85 kg.",
+		"overview": "La SI-2700L utilise une bande de 10 × 460 mm ; la SI-2700 reçoit du 10 × 330 mm. Elles publient le même maximum de 558 L/min à 6,3 bar. Le suffixe L doit donc être vérifié lors de la commande des bandes, même si le calcul d’air donne le même résultat.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 19.8 CFM / 9.3 L/s. Conversion du maximum publié : 9.3 × 60 = 558 L/min.",
 			"Référence fabricant : SI-2700L.",
 			"Vitesse à vide publiée : 15 000 tr/min.",
-			"Masse publiée : 0,85 kg."
+			"Masse publiée : 0,85 kg.",
+			"La tête de la SI-2700L peut pivoter de 120° selon le catalogue. Sa masse est de 0,85 kg contre 0,82 kg pour la SI-2700 ; les deux annoncent 317 W et 15 000 tr/min à vide."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Les tours par minute publiés ne sont pas une vitesse linéaire de bande en m/min. Vérifier l’accès et la bande adaptée, sans déduire un rendement matière des seules dimensions."
 		]
 	},
 	"specifications": [

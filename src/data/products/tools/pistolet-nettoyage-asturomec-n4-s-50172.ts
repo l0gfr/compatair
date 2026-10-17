@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Asturomec N4/S (réf. 50172). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "N4/S, référence 50172 : pistolet de lavage avec réservoir aluminium de 1 000 cm³ à baïonnette, canon de 200 mm et nébuliseur réglable. La version N4/S SUPER 50171 possède un canon de 300 mm et une possibilité de fixer le flux à la quantité souhaitée. Les deux versions annoncent 2 à 8 bar de service.",
 		"verifiedFacts": [
 			"Réservoir : aluminium 1000 cc ; baïonnette.",
 			"Canon : 200 mm, laiton nickelé.",
@@ -40,10 +40,9 @@ const product: ToolProfileInput = {
 			"Ouverture : 8,5 cm."
 		],
 		"limitations": [
-			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
-			"Édition italienne 2024 ; aucune disponibilité commerciale actuelle n’est vérifiée.",
-			"La plage de service ne constitue pas une pression de mesure de consommation ; aucun facteur de marche implicite.",
-			"Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"La plage de service ne donne pas la consommation d’air à une pression précise ; aucun débit ni cadence ne peut être garanti.",
+			"Le catalogue décrit séparément N4/S, N4/S SUPER et N4. Vérifier le code 50172 pour conserver le montage et la longueur étudiés.",
+			"Les caractéristiques proviennent du catalogue 2024 ; elles ne démontrent pas un stock actuel."
 		]
 	},
 	"specifications": [

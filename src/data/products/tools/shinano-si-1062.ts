@@ -23,19 +23,21 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-1062, référence SI-1062. Le tableau fabricant publie 474 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 80 Nm. Vitesse à vide publiée : 10 000 tr/min.",
+		"overview": "La SI-1062 privilégie le couple maximal de cette paire de visseuses à chocs à porte-embout hexagonal de 1/4 pouce : 80 Nm, contre 70 Nm pour la SI-1052. Elle demande aussi 474 L/min au maximum à 6,3 bar, soit 84 L/min de plus.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 16.8 CFM / 7.9 L/s. Conversion du maximum publié : 7.9 × 60 = 474 L/min.",
 			"Référence fabricant : SI-1062.",
 			"Couple maximal publié : 80 Nm.",
 			"Vitesse à vide publiée : 10 000 tr/min.",
-			"Masse publiée : 0,79 kg."
+			"Masse publiée : 0,79 kg.",
+			"À vide, la SI-1062 tourne à 10 000 tr/min contre 13 000 pour la SI-1052 ; sa masse est de 0,79 contre 0,56 kg. Le gain de couple annoncé accompagne ici une vitesse moindre et 230 g supplémentaires."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Le couple maximal ne garantit pas le serrage de votre assemblage. Le débit supplémentaire ne mesure pas la consommation totale d’une opération ; confirmer durée, douille ou embout et contrôle final."
 		]
 	},
 	"specifications": [

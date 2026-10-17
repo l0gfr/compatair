@@ -21,6 +21,8 @@ const f325row = row => row.brand === 'Paslode' && row.mpn === '513000';
 // Exercise semantic admission independently of the source/row checksum seal.
 async function repinned(copy) {
  let code = readFileSync(new URL('./documented-tools-2026-10-05.mjs', import.meta.url), 'utf8');
+ // A data URL has no relative module base; keep the real amendment validator.
+ code = code.replace("'./reviewed-catalog-amendments-2026-10-17.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-17.mjs', import.meta.url).href));
  for (const [name, records] of [
   ['approvedSources', copy.sources.map(source => ({ id: source.id, reviewedSourceSha256: digest(source) }))],
   ['approvedRows', copy.tools.map(row => ({ documentRowId: row.documentRowId, reviewedRowSha256: digest(row) }))],

@@ -28,7 +28,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Anest Iwata AIRGUNSA AE7. Le régime de consommation et/ou la pression de travail appariée ne sont pas définis. Le débit publié reste hors du calcul FAD. Le code complet W0020500000 désigne AIRGUNSA AE7. fonction : projection mélangée d’air et d’eau; tube de projection : 210 mm.",
+    "overview": "AIRGUNSA AE7, code W0020500000 : pistolet de projection d’air et d’eau, avec buse extérieure de 210 mm. Le P6 voisin est prévu pour les liquides de lavage et possède un godet aluminium de 1 L et une extension de 260 mm. L’alimentation en eau de l’AE7 est donc un choix de montage à vérifier séparément.",
     "verifiedFacts": [
       "Fonction : projection mélangée d’air et d’eau.",
       "Tube de projection : 210 mm.",
@@ -36,9 +36,9 @@ const product: ToolProfileInput = {
       "Pression dans la source : Non publiée pour cet outil dans le tableau de commande."
     ],
     "limitations": [
-      "Cette page fournit l’identité et la construction de l’outil, sans consommation ni pression d’exercice appariées. Aucun besoin numérique n’est calculé.",
-      "La disponibilité actuelle en France n’est pas établie. Les raccords rapides et les accessoires séparés ne sont pas comptés comme des outils supplémentaires.",
-      "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."
+      "La page de commande ne publie ni consommation d’air ni pression de service pour l’AE7 ; le choix du compresseur reste non conclusif.",
+      "Le code W0020500000 identifie le pistolet complet ; les références de buses, vannes et joints sont ses pièces de rechange.",
+      "La fonction de mélange air/eau et la longueur ne permettent pas de déduire une consommation."
     ]
   },
   "specifications": [

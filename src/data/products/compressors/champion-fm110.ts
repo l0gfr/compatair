@@ -81,16 +81,16 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Champion FM110. Le débit restitué sous pression reste non qualifié. FLOOR, stockage externe.",
+		"overview": "FM110, code A34905441, version 10 bar : capacité publiée de 18,85 m³/min, moteur de 110 kW, montage au sol et réseau 400 V à 50 Hz. La méthode de mesure n’est pas qualifiée comme FAD dans le tableau retenu ; la courbe CompatAir reste vide.",
 		"verifiedFacts": [
-			"Configuration de pression documentée : 10 bar.",
-			"Montage sans réservoir de stockage intégré explicitement documenté."
+			"Le tableau rattache le code A34905441 à la version 10 bar ; les codes 7,5 et 13 bar sont distincts.",
+			"La version FM90 à 10 bar publie 15,51 m³/min pour 90 kW. Le choix relève d’une étude de production industrielle et du réseau."
 		],
 		"limitations": [
-			"La capacité en m³/min est publiée à la pression de fonctionnement ; la brochure ne qualifie pas ici sa méthode comme FAD. La courbe CompatAir reste vide.",
-			"La pression maximale de cette version codée est 10 bar. Les configurations 7,5 et 13 bar ne sont pas comptées comme de nouveaux modèles.",
-			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+			"Une capacité sous pression est publiée ; le point à confirmer est sa qualification et son protocole FAD.",
+			"Le taux de marche et les conditions de fonctionnement continu restent à documenter.",
+			"Les petits compresseurs d’atelier éventuellement suggérés sur le seul critère de pression ne sont pas des équivalents de production à ce groupe de 110 kW.",
+			"Stockage externe, raccordement, ventilation et disponibilité doivent être validés avec le fournisseur pour le code commandé."
 		]
 	},
 	"evidence": [

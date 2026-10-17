@@ -45,7 +45,7 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Dimensions (L × l × h)",
+			"label": "Dimensions (largeur × profondeur × hauteur)",
 			"value": "3100 × 1910 × 2140 mm",
 			"evidenceIds": [
 				"documented-d-boge-s3-current-p1"
@@ -53,7 +53,7 @@ const product: CompressorInput = {
 		},
 		{
 			"label": "Conditions du débit",
-			"value": "Effective delivery is associated with maximum pressure in the table; measurement pressure not separately established.",
+			"value": "Le tableau associe une livraison effective de 24,57 m³/min à la version de pression maximale 10 bar ; la pression de mesure du FAD n’est pas établie séparément.",
 			"evidenceIds": [
 				"documented-d-boge-s3-current-p1"
 			]
@@ -67,16 +67,16 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "BOGE S 221-3, 10 bar, insonorisation standard. S-3, insonorisation standard. La livraison effective est publiée, mais sa pression de mesure n’est pas séparément établie : aucun FAD calculable n’est ajouté.",
+		"overview": "S 221-3 en version 10 bar : groupe industriel de 160 kW, avec une livraison effective annoncée de 24,57 m³/min. Le tableau donne 3 100 × 1 910 × 2 140 mm en largeur × profondeur × hauteur. La variante 13 bar publie 20,32 m³/min ; chaque valeur reste rattachée à sa configuration.",
 		"verifiedFacts": [
 			"Dimensions publiées : 3100 × 1910 × 2140 mm.",
 			"Puissance moteur publiée : 160 kW.",
 			"La documentation constructeur de cette série prévoit le service continu, sous ses conditions d’installation et d’entretien."
 		],
 		"limitations": [
-			"La disponibilité actuelle et le contenu de la configuration livrée restent à confirmer.",
-			"Le maximum de pression n’est pas assimilé à une pression de mesure du FAD. Le verdict reste insufficient_data.",
-			"La classe de qualité d’air du réseau, les pertes de pression et le refroidissement nécessitent une vérification sur l’installation."
+			"La pression de mesure du débit effectif n’est pas séparée du maximum de la version : la courbe FAD reste vide et les verdicts restent indéterminés.",
+			"La capacité annoncée concerne un groupe industriel de 160 kW. Les petites unités d’atelier éventuellement suggérées par pression ou cuve ne sont pas des équivalents de production.",
+			"Implantation, refroidissement, raccordement DN100 et pression utile du réseau doivent être étudiés pour la configuration commandée."
 		]
 	},
 	"evidence": [

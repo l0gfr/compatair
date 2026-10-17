@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco 19RAA03AM2, référence 19RAA03AM2. Le tableau fabricant publie 310 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Plage de couple publiée : 0.6 à 3.1 Nm. Vitesse à vide publiée : 1650 tr/min.",
+		"overview": "La 19RAA03AM2 partage avec la 19RAA02AM2 une consommation publiée de 310 L/min à 6,2 bar et un carré de 1/4 pouce. Son ressort standard couvre 0,6 à 2,4 Nm ; atteindre la plage totale de 0,6 à 3,1 Nm exige de confirmer le ressort et le réglage. Elle annonce 1 650 tr/min et 310 mm, contre 2 400 tr/min et 303 mm pour la 02AM2. La consommation n’est pas qualifiée de maximum ou de moyenne.",
 		"verifiedFacts": [
 			"Performances publiées à 6,2 bar à l’entrée de l’outil, note de la page 75.",
 			"Consommation publiée dans la colonne Air Cons. m³/min, multipliée par 1 000. Le régime de mesure n’est pas précisé dans ce tableau.",

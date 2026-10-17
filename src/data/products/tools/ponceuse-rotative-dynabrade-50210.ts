@@ -44,7 +44,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade 50210, référence 50210, présente une consommation maximale publiée de 595 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 89. Puissance moteur : 298 W. Vitesse moteur publiée : 15 000 tr/min.",
+		"overview": "La 50210 reçoit des disques verrouillables de 76 mm sous un capot abaissé de 1 pouce. La 50570 utilise un capot standard de 1½ pouce prévu notamment pour les disques à soies de 51 mm, avec les adaptations décrites par le fabricant. Toutes deux annoncent 15 000 tr/min et un maximum de 595 L/min à 6,2 bar. Le captage est autogénéré : le port de vide de 1 pouce reste distinct de l’entrée d’air 1/4 NPT.",
 		"verifiedFacts": [
 			"Puissance moteur : 298 W.",
 			"Vitesse moteur publiée : 15 000 tr/min.",

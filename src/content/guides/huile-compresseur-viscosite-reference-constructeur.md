@@ -3,6 +3,7 @@ title: "Quelle huile pour un compresseur : viscosité, référence et condition
 seoTitle: "Huile de compresseur : viscosité et référence à vérifier"
 description: "SAE, ISO, huile minérale ou synthétique : vérifiez la prescription de votre compresseur, les conditions d’usage et la fiche du lubrifiant avant remplacement."
 pubDate: "2026-09-26"
+updatedDate: 2026-10-17
 category: "Choisir"
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "maintenance-industrielle", "btp-chantier"]
@@ -20,7 +21,7 @@ Il faut d’abord distinguer le lubrifiant du groupe compresseur de l’huile de
 
 [Atlas Copco](https://www.atlascopco.com/en-us/compressors/service/parts/compressor-oil) décrit plusieurs fonctions du lubrifiant dans ses compresseurs : protection des pièces, gestion de la chaleur et, selon la technologie, étanchéité interne. Le constructeur relie le choix aux conditions d’application et aux propriétés de la formulation, pas uniquement à la viscosité.
 
-La [fiche Paroil M](https://www.atlascopco.com/en-us/construction-equipment/service/fluids-and-lubricants-portfolio/compressor-oil/paroil-m) fournit un exemple précis : **46 mm²/s à 40 °C** et **7,0 mm²/s à 100 °C** pour cette huile minérale destinée à certaines applications de compresseurs portables Atlas Copco. Son domaine annoncé comprend des conditions ambiantes de **−10 à +30 °C**. Ce domaine n’est pas celui de toutes les huiles minérales ni de tous les compresseurs.
+La [fiche Paroil M](https://www.atlascopco.com/en-us/construction-equipment/service/fluids-and-lubricants-portfolio/compressor-oil/paroil-m) fournit un exemple précis : **46 mm²/s à 40 °C** et **7,0 mm²/s à 100 °C** pour cette huile minérale destinée à certaines applications de compresseurs portables Atlas Copco. Son domaine annoncé comprend des conditions ambiantes de **−10 à +30 °C**. Ce domaine n’est pas celui de toutes les huiles minérales ni de tous les compresseurs. La même fiche précise que **Paroil M ne doit pas être mélangée avec d’autres huiles**. Cette restriction appartient à ce produit ; une viscosité ressemblante n’autorise pas le mélange.
 
 <figure class="article-infographic article-infographic--compact">
 <svg viewBox="0 0 520 390" role="img" aria-labelledby="huile-compresseur-viscosite-reference-constructeur-title huile-compresseur-viscosite-reference-constructeur-desc" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +67,7 @@ Pour le suivi, inscrivez date, compteur horaire, produit utilisé et observation
 
 ## Sources et méthode
 
-Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
+Sources relues le **17 octobre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
 
 - [Atlas Copco, fonctions et choix des huiles de compresseur](https://www.atlascopco.com/en-us/compressors/service/parts/compressor-oil)
 - [Atlas Copco, Paroil M, domaine et caractéristiques](https://www.atlascopco.com/en-us/construction-equipment/service/fluids-and-lubricants-portfolio/compressor-oil/paroil-m)

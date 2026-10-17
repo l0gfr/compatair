@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco 19PCA02Q, référence 19PCA02Q. Le tableau fabricant publie 310 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Plage de couple publiée : 0.6 à 2.1 Nm. Vitesse à vide publiée : 2800 tr/min.",
+		"overview": "À 6,2 bar, la série 19 déclare généralement 310 L/min, sans qualifier cette valeur de maximum ni de moyenne. La 19PCA02Q offre 2 800 tr/min et 0,6 à 2,1 Nm, contre 1 900 tr/min et 0,6 à 2,9 Nm pour la 19PCA03Q. Le choix dépend du couple et de la vitesse demandés par l’assemblage ; aucun gain de consommation n’est déduit de ces deux références.",
 		"verifiedFacts": [
 			"Performances publiées à 6,2 bar à l’entrée de l’outil, note de la page 69.",
 			"Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne.",

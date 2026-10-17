@@ -23,19 +23,21 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2001S, référence SI-2001S. Le tableau fabricant publie 456 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Pince 1/4 pouce ; puissance publiée 173 W. Vitesse à vide publiée : 25000 tr/min.",
+		"overview": "La SI-2001S reçoit une pince de 1/4 pouce, soit 6,35 mm. La SI-2001S-6 est la version à pince de 6 mm. Les 456 L/min au maximum à 6,3 bar sont communs aux deux références ; l’incertitude à lever avant achat porte d’abord sur la queue du consommable.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 16.2 CFM / 7.6 L/s, soit 456 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
 			"Référence fabricant : SI-2001S.",
 			"Version et équipement : Pince 1/4 pouce ; puissance publiée 173 W.",
 			"Vitesse à vide publiée : 25000 tr/min.",
-			"Masse publiée : 0.37 kg."
+			"Masse publiée : 0.37 kg.",
+			"Le tableau commun annonce 173 W, 25 000 tr/min à vide et 0,37 kg. L’écart de diamètre calculé entre les pinces est de 0,35 mm : leurs queues ne sont pas interchangeables par simple proximité de taille."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Vérifier la pince livrée, le serrage de la queue et la vitesse admissible de la meule. Le besoin d’air ne valide ni le montage ni une opération de meulage."
 		]
 	},
 	"specifications": [

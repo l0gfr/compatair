@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco WT-2110-8, référence WT-2110-8. Le tableau fabricant publie 2 830 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Plage de couple publiée : 1000 à 2250 Nm. Vitesse à vide publiée : 4600 tr/min.",
+		"overview": "Le WT-2110-8 annonce 2 830 L/min à 6,2 bar, contre 2 970 L/min pour le WT-2120-12, soit 140 L/min de moins dans le tableau. Sa sortie de 1 pouce et sa plage de 1 000 à 2 250 Nm ne remplacent pas la sortie de 1½ pouce et les 1 600 à 4 000 Nm du 2120. Les vitesses à vide sont de 4 600 et 3 300 tr/min. Le régime de consommation n’est pas précisé ; aucune cadence supposée ne réduit le besoin utilisé.",
 		"verifiedFacts": [
 			"Performances publiées à 6,2 bar à l’entrée de l’outil, note de la page 89.",
 			"Consommation publiée dans la colonne Air Cons. m³/min, multipliée par 1 000. Le régime de mesure n’est pas précisé dans ce tableau.",

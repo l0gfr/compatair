@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "PREBENA ORKAN 250, référence ORKAN 250 : cuve de 24 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Capacité de remplissage sans pression de mesure : 175 L/min. Vitesse de rotation : 1400 tr/min.",
+		"overview": "ORKAN 250 : 24 L, 35 kg et 1 400 tr/min. Le PIONEER 210 voisin possède 20 L et pèse 26 kg ; l’ORKAN 420 passe à 50 L et 41 kg. Le catalogue distingue 250 L/min aspirés et 175 L/min de remplissage pour l’ORKAN 250, avec une pression d’essai non précisée.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons sans huile. Puissance moteur publiée : 1,5 kW.",
@@ -30,8 +30,9 @@ const product: CompressorInput = {
 			"Masse publiée : 35,0 kg."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer."
+			"Le FAD à la pression d’un outil précis et le taux de marche restent à documenter ; la courbe FAD demeure vide.",
+			"La matrice constructeur oriente l’ORKAN 250 vers les petits et moyens cloueurs ; elle le juge inadapté aux clés à chocs et aux ponceuses excentriques génériques de son tableau. Ces indications par famille ne remplacent pas un verdict pour une référence d’outil exacte.",
+			"Les 76 dB(A) sont un niveau de puissance acoustique LWA. Le catalogue ne permet pas d’en déduire le niveau reçu par l’opérateur."
 		]
 	},
 	"specifications": [
@@ -50,7 +51,7 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Capacité de remplissage sans pression de mesure",
+			"label": "Capacité de remplissage ; pression d’essai non précisée",
 			"value": "175 L/min",
 			"evidenceIds": [
 				"prebena-orkan-250-20260927"
@@ -69,13 +70,20 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"prebena-orkan-250-20260927"
 			]
+		},
+		{
+			"label": "Puissance acoustique LWA",
+			"value": "76 dB(A), indicateur de puissance acoustique ; pression acoustique au poste non déduite",
+			"evidenceIds": [
+				"prebena-orkan-250-20260927"
+			]
 		}
 	],
 	"evidence": [
 		{
 			"id": "prebena-orkan-250-20260927",
 			"sourceUrl": "https://prebena.de/fileadmin/user_upload/E-Books/DE-2026/PREBENA-Hauptkatalog-2026-DE.pdf#page=118",
-			"sourceLabel": "PREBENA, catalogue général 2026, p. 118, réf. ORKAN 250",
+			"sourceLabel": "PREBENA, catalogue général 2026, page PDF 118 / folio 116, ORKAN 250 ; matrice PDF 130 / folio 128",
 			"sourceType": "manufacturer",
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
@@ -106,6 +114,9 @@ const product: CompressorInput = {
 		],
 		"voltage": [
 			"prebena-orkan-250-20260927"
+		],
+		"noiseDb": [
+			"prebena-orkan-250-20260927"
 		]
 	},
 	"notes": [
@@ -113,7 +124,8 @@ const product: CompressorInput = {
 	],
 	"intakeFlowLpm": 250,
 	"powerKw": 1.5,
-	"voltage": "230 V"
+	"voltage": "230 V",
+	"noiseDb": 76
 };
 
 export default product;

@@ -44,7 +44,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade 52418, référence 52418, présente une consommation maximale publiée de 1 048 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 114. Puissance moteur : 522 W. Vitesse moteur publiée : 20 000 tr/min.",
+		"overview": "La 52418 est un outil de tronçonnage à 20 000 tr/min, donné pour un maximum de 1 048 L/min à 6,2 bar. Il reçoit un disque diamant de 76 mm sur mandrin de 3/8 pouce. La 52715 est une meuleuse de 12 000 tr/min à sortie 3/8-24 pour cône ou meule-bouchon de 38 mm. Les interfaces et les accessoires diffèrent malgré les 28 L/min d’écart. Le port de captage de 1 pouce ne doit pas être confondu avec l’entrée d’air 1/4 NPT.",
 		"verifiedFacts": [
 			"Puissance moteur : 522 W.",
 			"Vitesse moteur publiée : 20 000 tr/min.",

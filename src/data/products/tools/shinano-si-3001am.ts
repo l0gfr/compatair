@@ -23,19 +23,21 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-3001AM, référence SI-3001AM. Le tableau fabricant publie 390 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Plateau rectangulaire 75 × 100 mm, autoagrippant (Velcro) ; orbite 4 mm ; version sans aspiration autonome. Vitesse à vide publiée : 10000 tr/min.",
+		"overview": "La SI-3001AM utilise le plateau autoagrippant M3003 ; la SI-3001A reçoit le plateau P3003 à revêtement Leather. Le débit maximal de 390 L/min à 6,3 bar reste identique. Le suffixe M concerne la fixation de l’abrasif et ne crée pas une fonction d’aspiration autonome.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 13.8 CFM / 6.5 L/s, soit 390 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
 			"Référence fabricant : SI-3001AM.",
 			"Version et équipement : Plateau rectangulaire 75 × 100 mm, autoagrippant (Velcro) ; orbite 4 mm ; version sans aspiration autonome.",
 			"Vitesse à vide publiée : 10000 tr/min.",
-			"Masse publiée : 0.8 kg."
+			"Masse publiée : 0.8 kg.",
+			"Le tableau partagé annonce un plateau de 75 × 100 mm, une orbite de 4 mm, 10 000 tr/min à vide et 0,80 kg. Le schéma d’accessoire mentionne 75 × 110 mm pour l’abrasif : distinguer ces cotes lors de la commande."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Confirmer la référence du plateau et le format de consommable livré. Les versions SI-3011 à aspiration autonome ont leur propre demande d’air ; cette fonction ne se déduit pas du suffixe M."
 		]
 	},
 	"specifications": [

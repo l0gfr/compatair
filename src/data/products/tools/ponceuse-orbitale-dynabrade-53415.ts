@@ -44,7 +44,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade 53415, référence 53415, présente une consommation maximale publiée de 595 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 163. Puissance moteur : 298 W. Vitesse moteur publiée : 3 200 tr/min.",
+		"overview": "La 53415 sert aux retouches avec une orbite de 5 mm et 3 200 tr/min. Son maximum publié est de 595 L/min à 6,2 bar. La tête 54029 reçoit des plateaux à filetage mâle de verrouillage ; elle se distingue de la tête 54028 de la 53417. La 51350 est une ponceuse linéaire de 2 400 courses/min, donnée pour 510 L/min au même point de pression. Les tours, les courses et les surfaces de travail ne sont pas des grandeurs interchangeables.",
 		"verifiedFacts": [
 			"Puissance moteur : 298 W.",
 			"Vitesse moteur publiée : 3 200 tr/min.",

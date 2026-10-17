@@ -41,7 +41,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade 49135, référence 49135, présente une consommation maximale publiée de 595 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 137. Puissance moteur : 298 W. Vitesse moteur publiée : 3 200 tr/min.",
+		"overview": "La 49135 est une perceuse à tête d’angle pour forets filetés 1/4-28, dans une broche femelle, avec captage vers un réseau de vide central. Elle annonce un maximum de 595 L/min à 6,2 bar et 3 200 tr/min. La 52906 est une version à poignée pistolet, avec mandrin et broche mâle 3/8-24 : 651 L/min et 3 600 tr/min. Les 56 L/min d’écart ne rendent ni l’accès ni les forets interchangeables.",
 		"verifiedFacts": [
 			"Puissance moteur : 298 W.",
 			"Vitesse moteur publiée : 3 200 tr/min.",

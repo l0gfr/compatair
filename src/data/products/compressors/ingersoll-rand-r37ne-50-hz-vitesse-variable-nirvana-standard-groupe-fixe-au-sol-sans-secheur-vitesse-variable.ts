@@ -81,19 +81,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Ingersoll Rand R37ne, 50 Hz, vitesse variable. 6 630 L/min à 7 bar. Moteur 37 kW ; Nirvana Standard, groupe fixe au sol, sans sécheur ; vitesse variable.",
+		"overview": "R37ne Nirvana Standard 50 Hz : la brochure de 2012 publie une plage de capacité de 5,83 à 6,63 m³/min à 7 bar. La courbe CompatAir conserve le maximum de 6 630 L/min à ce point ; il ne s’agit pas d’une production constante à toute vitesse. La variante TAS dispose de sa propre plage, de 5,68 à 6,36 m³/min.",
 		"verifiedFacts": [
 			"Débit restitué relié à une pression et aux unités originales de la fiche fabricant.",
 			"Périmètre retenu : groupe seul ; réservoir de stockage externe exclu.",
 			"Limite de pression documentée : 10 bar ; le point FAD conserve sa pression publiée."
 		],
 		"limitations": [
-			"Documentation constructeur © 2012 ; disponibilité actuelle et variante électrique à confirmer.",
-			"Le fluide de refroidissement publié ne permet pas, à lui seul, de qualifier la lubrification du bloc de cette génération.",
-			"Les points de vitesse variable sont regroupés dans une seule courbe. Le maximum de chaque plage publié est retenu ; la stabilité à faible charge n’est pas simulée.",
-			"Cycle de service non établi par les sources retenues ; la tenue permanente reste indéterminée.",
-			"Les seules pressions FAD retenues sont celles du document. Aucun débit aspiré, extrapolation ou essai d’utilisation CompatAir.",
-			"Documentation et disponibilité de la configuration à confirmer avec le constructeur."
+			"Les limites de fonctionnement indiquées sont de 4,5 à 10 bar ; le point de capacité retenu reste à 7 bar.",
+			"Le taux de marche du groupe complet reste à documenter ; les résultats de tenue permanente restent indéterminés.",
+			"La brochure de 2012 ne prouve pas une disponibilité commerciale actuelle. Vérifier génération, commande, réseau 50 Hz et équipements Standard/TAS.",
+			"Les minima et maxima de modulation ne sont pas transformés en débits garantis à faible charge. Le mode de lubrification reste unknown dans cette fiche."
 		]
 	},
 	"evidence": [
