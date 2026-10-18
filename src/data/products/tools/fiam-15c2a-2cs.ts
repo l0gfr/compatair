@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Fiam 15C2A-2CS, référence 112507035. Le tableau fabricant publie 240 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple de serrage indicatif : 0.4÷2 Nm. Vitesse à vide : 2000 tr/min.",
+		"overview": "15C2A-2CS 112507035 : visseuse à démarrage par poussée, 0,4 à 2 Nm et 2 000 tr/min, avec contrôle à double signal pneumatique. Le catalogue abrège le nom en 15C2A-CS mais conserve ce code. La 15C3A-2CS voisine couvre 0,4 à 3,5 Nm à 1 400 tr/min.",
 		"verifiedFacts": [
 			"La brochure associée à cette fiche indique une pression de mesure et d’utilisation recommandée de 6,3 bar (ISO 2787).",
 			"La fiche fabricant publie 4 L/s, soit 240 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML.",
@@ -33,8 +33,8 @@ const product: ToolProfileInput = {
 			"Masse publiée : 0.59 kg."
 		],
 		"limitations": [
-			"Le couple éventuel est indicatif : l’assemblage, l’accessoire et la pression dynamique influencent le résultat.",
-			"Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes."
+			"Le débit déclaré de 4 L/s, soit 240 L/min à 6,3 bar, reste sans régime qualifié ; il ne valide pas une alimentation continue.",
+			"Le double signal est une fonction de surveillance décrite par le fabricant, pas une mesure indépendante du couple final sur tout assemblage."
 		]
 	},
 	"specifications": [
@@ -124,6 +124,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"fiam-112507035-20260926"
+		],
+		"airflowBasis": [
+			"fiam-112507035-20260926"
 		]
 	},
 	"notes": [
@@ -133,7 +136,8 @@ const product: ToolProfileInput = {
 		"min": 240,
 		"typical": 240,
 		"max": 240
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

@@ -28,16 +28,14 @@ const product: ToolProfileInput = {
     }
   },
   "editorial": {
-    "overview": "GAV Z3000. Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
+    "overview": "GAV Z3000 HVLP : pistolet gravitaire de 600 cm³ dont le catalogue publie 400 Nl/min à 3 bar. Le RECORD 2200 voisin est associé à une autre plage de consommation et de pression ; les chiffres ne constituent pas un essai comparatif au même point.",
     "verifiedFacts": [
       "Capacité du godet : 600 cc.",
       "Pression de service publiée : 3 bar."
     ],
     "limitations": [
-      "Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
-      "Les références RZ/RP/RV et XV100R de la section Spare Nozzles Kit sont des pièces de rechange ; elles ne sont pas comptées comme pistolets.",
-      "La pression et la consommation sont publiées, mais la position de commande et le réglage correspondant restent non précisés.",
-      "Aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+      "Les conditions de référence du volume normalisé et le régime de pulvérisation ne sont pas détaillés ; aucun besoin FAD n’est déduit des 400 Nl/min.",
+      "Les références de jeux de buses RZ désignent des accessoires ; elles ne remplacent pas l’identité du pistolet complet."
     ]
   },
   "specifications": [

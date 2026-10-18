@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "ANI BLACK/S HVLP buse 1.4. Consommation constructeur au point documenté : 400 L/min à 2.6 bar. Montage de référence : RP1 amont 2.6 bar ; TMD1 interne 1.6 bar. La pression calculée est la lecture amont RP1 ; les pertes d’un autre montage ne sont pas établies. Buse de 1.4 mm, technologie HVLP, alimentation gravité. Cette combinaison est proposée par le fabricant sous le code AH141745.",
+    "overview": "ANI F160/PLUS/S HVLP 1,4 mm AH141745 : le catalogue donne 400 L/min avec le montage de contrôle RP1 à 2,6 bar en amont et TMD1 à 1,6 bar dans le corps. La 1,3 mm AH141744 partage ce besoin déclaré ; le choix du calibre porte sur le produit et le jet.",
     "verifiedFacts": [
       "Buse : 1.4 mm.",
       "Chapeau / technologie : HVLP.",
@@ -50,11 +50,8 @@ const product: ToolProfileInput = {
       "Pression dans la source : RP1 amont 2.6 bar ; TMD1 interne 1.6 bar."
     ],
     "limitations": [
-      "Données de l’édition 2020 actuellement liée par le fabricant ; la continuité avec les ensembles TMD2 de 2026 n’est pas établie.",
-      "Le verdict porte uniquement sur le montage constructeur avec lecture amont RP1, réglages et technologie décrits. Il ne garantit pas la pression à l’outil après un autre tuyau, raccord ou régulateur.",
-      "La disponibilité actuelle de cette référence ancienne n’est pas établie.",
-      "Les valeurs RP1 et TMD1 appartiennent à deux lieux différents du même essai. La lecture amont n’est pas présentée comme une pression interne mesurée au pistolet.",
-      "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."
+      "Les 2,6 et 1,6 bar correspondent à des points de mesure différents ; ils ne sont pas deux réglages équivalents au raccord d’entrée.",
+      "Les valeurs relèvent du montage TMD1 de cette édition. Elles ne sont pas transférées à un montage TMD2 ou à un flexible choisi arbitrairement."
     ]
   },
   "specifications": [

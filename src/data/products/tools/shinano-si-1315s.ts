@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-1315S, référence SI-1315S. Le tableau fabricant publie 354 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 60 Nm. Vitesse à vide publiée : 10 000 tr/min.",
+		"overview": "SI-1315S : clé à chocs à carré de 3/8 pouce et couple maximal de 60 Nm. La SI-1310S est à carré de 1/4 pouce et 40 Nm. Les deux partagent le maximum de 354 L/min à 6,3 bar ; le choix de sortie ne justifie donc aucun redimensionnement d’air entre ces lignes.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 12.6 CFM / 5.9 L/s. Conversion du maximum publié : 5.9 × 60 = 354 L/min.",
@@ -33,9 +33,8 @@ const product: ToolProfileInput = {
 			"Masse publiée : 0,63 kg."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
-			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"Le couple maximal ne constitue pas une consigne de serrage.",
+			"La douille doit être prévue pour le carré et les chocs de la référence retenue."
 		]
 	},
 	"specifications": [

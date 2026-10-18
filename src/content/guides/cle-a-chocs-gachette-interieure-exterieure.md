@@ -3,6 +3,7 @@ title: "Clé à chocs : choisir une gâchette intérieure ou extérieure"
 seoTitle: "Clé à chocs : gâchette intérieure ou extérieure ?"
 description: "Sur les clés lourdes Shinano, le suffixe I distingue la commande intérieure. Voici les points à essayer et les caractéristiques qui restent identiques."
 pubDate: 2026-09-26
+updatedDate: 2026-10-18
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["atelier-poids-lourds"]

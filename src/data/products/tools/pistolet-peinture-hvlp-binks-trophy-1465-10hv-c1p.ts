@@ -31,22 +31,19 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Binks Trophy 1465-10HV-C1P. Les conditions de référence du volume normalisé et/ou le régime de mesure manquent. Le débit publié reste hors du calcul FAD. Assemblage 1465-10HV-C1P, buse 1.0 mm, chapeau C1, HVLP, alimentation pressure / siphon sans godet fourni.",
+    "overview": "Trophy 1465-10HV-C1P : buse de 1,0 mm, chapeau HVLP C1 et alimentation produit sous pression, identifiée par P. La notice vise des produits légers à moyens, 15 à 20 s au Zahn n°2. Le voisin 1465-08HV-C1S est une configuration à aspiration de 0,8 mm pour produits très fluides ou débit réduit.",
     "verifiedFacts": [
       "Code assemblage complet, publié littéralement : 1465-10HV-C1P.",
       "Buse produit publiée : 1.0 mm.",
       "Chapeau publié sur cette ligne : C1.",
       "Technologie publiée : HVLP.",
-      "Alimentation : pressure / siphon sans godet fourni.",
+      "Alimentation : sous pression (P), sans godet fourni ; la version à aspiration porte S.",
       "Consommation publiée dans son unité originale : 2,5 / 4,0 / 5,1 / 6,4 SCFM pour 5 / 10 / 15 / 21 PSI en entrée ; 2 / 4 / 7 / 10 PSI au chapeau.",
       "Pression dans la source : Voir les couples pression d’entrée / pression au chapeau dans le tableau fabricant ; aucun nominal de travail unique inventé.."
     ],
     "limitations": [
-      "Consommation publiée en CFM ou SCFM ; l’état de référence n’est pas défini dans ces tableaux. Aucun coefficient volumique silencieux vers L/min FAD.",
-      "Pression dans le chapeau, pression d’entrée dynamique et pression produit restent des grandeurs séparées.",
-      "Les tailles de buse et les chapeaux proviennent d’une ligne d’assemblage complet. Aucun code commandable absent n’est fabriqué.",
-      "Le compresseur d’une pompe ou d’un réservoir alimentant le produit ajoute une demande distincte à documenter.",
-      "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."
+      "Le même tableau C1 publie 6,4 SCFM à 21 psi en entrée et 10 psi au chapeau, pistolet déclenché. L’état de référence des SCFM manque pour une conversion FAD.",
+      "Les pressions d’air, de chapeau et de produit sont distinctes. Le godet de conversion à aspiration 81-384 est séparé ; P et S ne sont pas des alimentations interchangeables par leur seul nom."
     ]
   },
   "specifications": [
@@ -80,7 +77,7 @@ const product: ToolProfileInput = {
     },
     {
       "label": "Alimentation",
-      "value": "pressure / siphon sans godet fourni",
+      "value": "Sous pression (P), sans godet fourni ; la version à aspiration porte S.",
       "evidenceIds": [
         "october7-tools-binks-trophy-touchup-p3"
       ]

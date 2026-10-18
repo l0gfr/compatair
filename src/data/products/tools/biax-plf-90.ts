@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX PLF 90, référence 150322890. Le tableau fabricant publie 250 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 300 W. Masse publiée : 760 g.",
+		"overview": "PLF 90 : scie alternative à course de 8 mm, 12 000 coups/min et porte-outil installé de 4 mm, acceptant les montages décrits jusqu’à 6 mm. Les lames conventionnelles sont distinguées dans le catalogue des systèmes de fixation propres à d’autres scies. Un micro-burin GMD 3 ne remplit pas la même fonction.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
 			"La fiche fabricant publie une consommation de 250 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
@@ -33,8 +33,8 @@ const product: ToolProfileInput = {
 			"Diamètre maximal de queue : 6 mm."
 		],
 		"limitations": [
-			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
-			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
+			"Les 250 L/min à 6 bar ne sont pas qualifiés par un régime de charge : le besoin continu reste non conclusif.",
+			"Le choix de lame et de fixation suit la notice ; les coups/min ne sont pas une vitesse de rotation."
 		]
 	},
 	"specifications": [
@@ -103,6 +103,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150322890-20260926"
+		],
+		"airflowBasis": [
+			"biax-150322890-20260926"
 		]
 	},
 	"notes": [
@@ -112,7 +115,8 @@ const product: ToolProfileInput = {
 		"min": 250,
 		"typical": 250,
 		"max": 250
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

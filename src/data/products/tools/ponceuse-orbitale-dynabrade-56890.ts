@@ -45,7 +45,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade Dynorbital Supreme 56890, référence 56890, présente une consommation publiée de 510 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 151. Aspiration des poussières : Sans aspiration. Diamètre du plateau : 152 mm.",
+		"overview": "Dynorbital Supreme 56890 : plateau de 152 mm, orbite de 10 mm et version sans aspiration. La 56894 voisine est à aspiration centralisée, plus longue, avec la même valeur Air Flow Rate de 510 L/min à 6,2 bar. Le captage requis est donc une décision indépendante d’une économie d’air supposée.",
 		"verifiedFacts": [
 			"Aspiration des poussières : Sans aspiration.",
 			"Diamètre du plateau : 152 mm.",
@@ -55,11 +55,8 @@ const product: ToolProfileInput = {
 			"Flexible : 6 mm de diamètre intérieur publié."
 		],
 		"limitations": [
-			"Masse non retenue : le tableau publie des unités contradictoires (2.4 (1)).",
-			"Le calcul conserve la consommation publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
-			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
-			"Le diamètre intérieur publié ne suffit pas à valider un réseau : la longueur, les raccords et les pertes de pression restent à contrôler.",
-			"Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur."
+			"La page ne qualifie pas ces 510 L/min de maximum ou de débit en charge. Le besoin continu reste non conclusif.",
+			"Le raccordement de captage ne doit pas être confondu avec l’entrée d’air comprimé."
 		]
 	},
 	"specifications": [
@@ -132,12 +129,16 @@ const product: ToolProfileInput = {
 		],
 		"recommendedHose": [
 			"dynabrade-56890-catalogue-d25-01"
+		],
+		"airflowBasis": [
+			"dynabrade-56890-catalogue-d25-01"
 		]
 	},
 	"notes": [
 		"Caractéristiques déclarées par le fabricant, sans essai physique par CompatAir.",
 		"La compatibilité calculée concerne l’alimentation en air. Le choix des abrasifs, carters et équipements de protection relève de la notice de l’outil."
-	]
+	],
+	"airflowBasis": "unqualified"
 };
 
 export default product;

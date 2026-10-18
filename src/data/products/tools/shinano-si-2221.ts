@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2221, référence SI-2221. Le tableau fabricant publie 426 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Rotation simple ; plateau 75 mm ; broche femelle M6 × 1. Vitesse à vide publiée : 4500 tr/min.",
+		"overview": "SI-2221 : rotation simple, plateau de 75 mm et broche femelle M6 × 1, à 4 500 tr/min. La SI-2009EX voisine tourne à 2 600 tr/min et utilise une broche femelle 5/16-24. Elles partagent 426 L/min au maximum à 6,3 bar ; l’interface et la vitesse déterminent le choix de consommable.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 15 CFM / 7.1 L/s, soit 426 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
@@ -33,9 +33,8 @@ const product: ToolProfileInput = {
 			"Masse publiée : 0.64 kg."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
-			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"Un diamètre de plateau commun ne rend pas les filetages interchangeables.",
+			"Le maximum d’air ne mesure ni l’enlèvement de matière ni la qualité de finition."
 		]
 	},
 	"specifications": [

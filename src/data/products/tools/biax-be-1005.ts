@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "perceuse",
 	"category": "perceuse",
 	"label": "BIAX BE 1005",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6,
 		"typical": 6,
@@ -23,18 +23,17 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX BE 1005, référence 150800800. Le tableau fabricant publie 450 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 200 W. Vitesse de rotation : 0-550 regelbar tr/min.",
+		"overview": "BE 1005 : outil d’ébavurage de trous jusqu’à 29 mm, queue admissible de 10 mm et vitesse réglable jusqu’à 550 tr/min. Le BE 805 voisin vise des dimensions plus petites. Pour le BE 1005, la fiche web donne 450 L/min tandis que le catalogue donne 480 L/min ; aucun débit unique n’est choisi pour conclure à la compatibilité.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
-			"La fiche fabricant publie une consommation de 450 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
 			"Référence fabricant : 150800800.",
 			"Puissance publiée : 200 W.",
 			"Vitesse de rotation : 0-550 regelbar tr/min.",
 			"Masse publiée : 920 g."
 		],
 		"limitations": [
-			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
-			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
+			"L’écart de consommation reste non résolu entre deux sources constructeur ; demander la notice de la machine exacte avant dimensionnement.",
+			"Le diamètre maximal de trou ébavuré ne désigne pas un diamètre de perçage garanti."
 		]
 	},
 	"specifications": [
@@ -43,13 +42,6 @@ const product: ToolProfileInput = {
 			"value": "Le catalogue de cette référence indique un fonctionnement à 6 bar.",
 			"evidenceIds": [
 				"biax-150800800-20260926-workingpressurebar-1"
-			]
-		},
-		{
-			"label": "Condition de consommation",
-			"value": "La fiche fabricant publie une consommation de 450 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
-			"evidenceIds": [
-				"biax-150800800-20260926"
 			]
 		},
 		{
@@ -79,6 +71,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"biax-150800800-20260926"
 			]
+		},
+		{
+			"label": "Consommations constructeur non départagées",
+			"value": "Fiche web : 450 L/min ; catalogue page 43 : 480 L/min.",
+			"evidenceIds": [
+				"biax-150800800-20260926",
+				"biax-150800800-20260926-workingpressurebar-1"
+			]
 		}
 	],
 	"evidence": [
@@ -107,19 +107,12 @@ const product: ToolProfileInput = {
 		],
 		"workingPressureBar": [
 			"biax-150800800-20260926-workingpressurebar-1"
-		],
-		"airflowLpm": [
-			"biax-150800800-20260926"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 450,
-		"typical": 450,
-		"max": 450
-	}
+	"demandExplanation": "Deux sources constructeur publient des consommations différentes pour cette référence ; aucun débit unique n’est retenu pour le calcul. Consulter les limites détaillées."
 };
 
 export default product;

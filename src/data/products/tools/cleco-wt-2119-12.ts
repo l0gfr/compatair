@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco WT-2119-12, référence WT-2119-12. Le tableau fabricant publie 2 970 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Plage de couple publiée : 1600 à 3500 Nm. Vitesse à vide publiée : 3300 tr/min.",
+		"overview": "WT-2119-12 : clé à chocs à sortie de 1½ pouce, 3 300 tr/min et plage publiée de 1 600 à 3 500 Nm. Le tableau donne 2 970 L/min à 6,2 bar, contre 2 830 pour la WT-2110-8 à sortie de 1 pouce. Le montage et la plage de couple diffèrent avant toute comparaison d’air.",
 		"verifiedFacts": [
 			"Performances publiées à 6,2 bar à l’entrée de l’outil, note de la page 89.",
 			"Consommation publiée dans la colonne Air Cons. m³/min, multipliée par 1 000. Le régime de mesure n’est pas précisé dans ce tableau.",
@@ -33,8 +33,8 @@ const product: ToolProfileInput = {
 			"Impacts par minute : 820."
 		],
 		"limitations": [
-			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
-			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
+			"Le régime des 2 970 L/min n’est pas précisé ; ce débit n’est pas traité comme un maximum en charge.",
+			"Le couple de décollement est une donnée distincte du couple de travail ; aucun chiffre de desserrage ne devient un réglage de serrage."
 		]
 	},
 	"specifications": [
@@ -115,6 +115,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"cleco-wt-2119-12-20260926"
+		],
+		"airflowBasis": [
+			"cleco-wt-2119-12-20260926"
 		]
 	},
 	"notes": [
@@ -124,7 +127,8 @@ const product: ToolProfileInput = {
 		"min": 2970,
 		"typical": 2970,
 		"max": 2970
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

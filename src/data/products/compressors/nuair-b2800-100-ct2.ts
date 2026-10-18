@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Nuair B2800/100 CT2, référence 28FC441NUB013 : cuve de 100 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Groupe de compression publié : B2800. Groupe de compression : B2800. Nombre de cylindres : 2.",
+		"overview": "B2800/100 CT2, code 28FC441NUB013 : 100 L, 1,5 kW et alimentation 400 V à 50 Hz. Le B2800/100 CM2 voisin fonctionne en 230 V ; les deux lignes donnent le groupe B2800, 1 250 tr/min et 255 L/min aspirés.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 1,5 kW.",
@@ -30,10 +30,9 @@ const product: CompressorInput = {
 			"Vitesse de rotation : 1250 tr/min."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"Données issues du nuair professional, catalogue 2022, encore accessible sur le site du fabricant. La commercialisation actuelle de cette référence n’est pas confirmée.",
-			"La masse et les dimensions de ce tableau concernent l’emballage, pas la machine nue."
+			"La différence documentée entre CT2 et CM2 porte notamment sur l’alimentation ; vérifier le raccordement et la variante commandée.",
+			"Le catalogue 2022 fournit l’aspiration, sans FAD sous pression ni taux de marche exploitable.",
+			"Les 62 kg et 1 030 × 440 × 850 mm concernent l’emballage, en largeur × profondeur × hauteur. L’implantation de la machine nue et sa disponibilité restent à confirmer."
 		]
 	},
 	"specifications": [
@@ -80,7 +79,7 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Dimensions de l’emballage (L × P × H)",
+			"label": "Dimensions de l’emballage (largeur × profondeur × hauteur)",
 			"value": "1030x440x850 mm",
 			"evidenceIds": [
 				"nuair-28fc441nub013-20260927"

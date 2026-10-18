@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco 19PCA03Q, référence 19PCA03Q. Le tableau fabricant publie 310 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Plage de couple publiée : 0.6 à 2.9 Nm. Vitesse à vide publiée : 1900 tr/min.",
+		"overview": "19PCA03Q : 1 900 tr/min et 0,6 à 2,9 Nm, contre 2 800 tr/min et 0,6 à 2,1 Nm pour la 19PCA02Q. Le choix porte sur la vitesse et le couple de l’assemblage ; la série déclare les mêmes 310 L/min à 6,2 bar.",
 		"verifiedFacts": [
 			"Performances publiées à 6,2 bar à l’entrée de l’outil, note de la page 69.",
 			"Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne.",
@@ -33,8 +33,8 @@ const product: ToolProfileInput = {
 			"Série et commande : 19P ; appui et gâchette."
 		],
 		"limitations": [
-			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
-			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
+			"La consommation générale n’est qualifiée ni de maximum, ni de moyenne, ni de débit en charge. Le dimensionnement reste indéterminé.",
+			"La plage de couple publiée ne remplace pas le réglage et la validation sur l’assemblage exact."
 		]
 	},
 	"specifications": [
@@ -115,6 +115,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"cleco-19pca03q-20260926"
+		],
+		"airflowBasis": [
+			"cleco-19pca03q-20260926"
 		]
 	},
 	"notes": [
@@ -124,7 +127,8 @@ const product: ToolProfileInput = {
 		"min": 310,
 		"typical": 310,
 		"max": 310
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

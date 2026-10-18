@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Fiam 11SM10D, référence 149561006. Le tableau fabricant publie 150 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide : 55.000 tr/min. Masse publiée : 0.13 kg.",
+		"overview": "11SM10D 149561006 : micro-meuleuse droite à pince de 3 mm, 55 000 tr/min et corps de 19,5 mm de diamètre sur 120 mm. Le catalogue donne 0,125 kg, arrondi à 0,13 kg sur le web. Le choix doit respecter l’accessoire prévu à cette vitesse élevée, indépendamment du diamètre compact.",
 		"verifiedFacts": [
 			"La brochure associée à cette fiche indique une pression de mesure et d’utilisation recommandée de 6,3 bar (ISO 2787).",
 			"La fiche fabricant publie 2.5 L/s, soit 150 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML.",
@@ -33,8 +33,8 @@ const product: ToolProfileInput = {
 			"Dimensions publiées : Ø 19,5 x L 120 mm."
 		],
 		"limitations": [
-			"Le couple éventuel est indicatif : l’assemblage, l’accessoire et la pression dynamique influencent le résultat.",
-			"Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes."
+			"Les 2,5 L/s, soit 150 L/min à 6,3 bar, ne sont pas accompagnés d’un régime de charge : le besoin continu reste indéterminé.",
+			"Une consommation identique publiée pour un autre modèle ne démontre pas la même vitesse admissible ou la même interface."
 		]
 	},
 	"specifications": [
@@ -117,6 +117,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"fiam-149561006-20260926"
+		],
+		"airflowBasis": [
+			"fiam-149561006-20260926"
 		]
 	},
 	"notes": [
@@ -126,7 +129,8 @@ const product: ToolProfileInput = {
 		"min": 150,
 		"typical": 150,
 		"max": 150
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

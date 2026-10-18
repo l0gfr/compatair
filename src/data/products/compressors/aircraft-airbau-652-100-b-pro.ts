@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Aircraft AIRBAU 652/100 B PRO, référence 2006530 : cuve de 100 L, pression maximale publiée de 14 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Capacité de remplissage approximative : 480 l/min. Condition de remplissage publiée : à 6 bar de pression de travail.",
+		"overview": "AIRBAU 652/100 B PRO, article 2006530 : groupe thermique quatre temps de 6,7 kW, deux étages, cuve de 100 L et maximum de 14 bar. Aircraft publie environ 480 L/min de remplissage à 6 bar et 642 L/min aspirés. L’AIRBAU 480/90 B voisin possède 90 L et un maximum de 10 bar.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 6,7 kW.",
@@ -29,9 +29,9 @@ const product: CompressorInput = {
 			"Nombre de cylindres : 2."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"La capacité de remplissage et sa pression éventuelle ne sont pas assimilées à un débit FAD certifié. Demander les conditions d’essai et le débit utile à la pression de l’outil."
+			"La pression de remplissage est publiée : 6 bar. La qualification FAD et les conditions d’essai de ce débit restent à obtenir.",
+			"Le taux de marche reste inconnu. La motorisation thermique demande le respect des conditions de ventilation, d’installation et d’entretien.",
+			"Les 121 kg et 1 050 × 500 × 1 060 mm sont des valeurs approximatives de la fiche. Les capacités des deux références ne sont pas fusionnées."
 		]
 	},
 	"specifications": [

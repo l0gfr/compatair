@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
     }
   },
   "editorial": {
-    "overview": "Taylor Pneumatic T-6231L 1/2\" HD Impact Wrench 2\" Extended Anvil (réf. T-6231L). La fiche distingue Average Air Cons. et Air Cons. @ Load, mais l’unité et la pression de mesure ne sont pas explicites. Le plafond 90 PSI ne devient pas un point de mesure.",
+    "overview": "T-6231L : clé à chocs à enclume allongée de 2 pouces, longueur publiée de 8,5 pouces et masse de 5,75 lb. La T-6231 sans L mesure 6,75 pouces et pèse 5,625 lb. L’allonge facilite un accès différent et doit être vérifiée avec la douille prévue.",
     "verifiedFacts": [
       "SQ. Drive : 1/2\".",
       "Weight lbs. : 5.75.",
@@ -39,10 +39,8 @@ const product: ToolProfileInput = {
       "Air Pressure : 90 PSI Max."
     ],
     "limitations": [
-      "La fiche distingue Average Air Cons. et Air Cons. @ Load, mais l’unité et la pression de mesure ne sont pas explicites. Le plafond 90 PSI ne devient pas un point de mesure.",
-      "Les colonnes Average Air Cons. et Air Cons. @ Load sont distinguées dans la fiche, mais l’unité et le point de pression de mesure ne sont pas explicités.",
-      "Air Pressure 90 PSI Max est un plafond de service ; il ne devient pas une pression de mesure par déduction.",
-      "Aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+      "Le tableau imprime 5 en moyenne et 19 en charge sans unité d’air identifiable : ces nombres restent hors calcul.",
+      "Le maximum d’alimentation de 90 psi ne prouve pas la pression de mesure de la consommation. Les couples sans unité du tableau ne sont pas présentés en Nm."
     ]
   },
   "specifications": [

@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Master Power MP4400-35, référence MP4400-35. Le tableau fabricant publie 430 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Diamètre du plateau publié : 5 pouces. Orbite publiée : 3/16 pouce.",
+		"overview": "MP4400-35 : ponceuse de 5 pouces à orbite de 3/16 pouce, 12 000 tr/min, longueur de 179,32 mm et masse de 0,75 kg. La MP4400-15 voisine est plus longue et plus lourde, avec les mêmes 430 L/min déclarés à 6,2 bar.",
 		"verifiedFacts": [
 			"Note General de la page 56 : performances mesurées à 6,2 bar à l’entrée de l’outil.",
 			"Note de la série : Air consumption 0.43 m³/min, soit 430 L/min. Le régime maximum ou moyen n’est pas précisé.",
@@ -33,9 +33,8 @@ const product: ToolProfileInput = {
 			"Vitesse publiée : 12 000 tr/min."
 		],
 		"limitations": [
-			"Catalogue GI-1250-EU archivé : disponibilité et équipement à confirmer avec le fournisseur.",
-			"Le titre central vacuum apparaît deux fois dans le tableau ; le type exact d’aspiration doit être confirmé par la notice individuelle.",
-			"Pas de mesure physique CompatAir."
+			"La page répète le titre central vacuum pour plusieurs suffixes ; le système d’aspiration exact doit être confirmé sans attribuer une fonction au seul suffixe.",
+			"Le régime de consommation n’est pas qualifié : les 430 L/min ne garantissent pas une utilisation continue."
 		]
 	},
 	"specifications": [
@@ -116,6 +115,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"master-power-mp4400-35-20260926"
+		],
+		"airflowBasis": [
+			"master-power-mp4400-35-20260926"
 		]
 	},
 	"notes": [
@@ -125,7 +127,8 @@ const product: ToolProfileInput = {
 		"min": 430,
 		"typical": 430,
 		"max": 430
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

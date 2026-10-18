@@ -1,11 +1,11 @@
 ---
-title: "Vanne de démarrage progressif : ce qu’elle change à la remise en pression"
+title: "Vanne de démarrage progressif : montée en pression et limites"
 seoTitle: "Démarrage progressif pneumatique : rôle et limites"
 description: "Une vanne de démarrage progressif contrôle la montée en pression.
   Comprenez le basculement, le volume aval et les vérifications à prévoir lors
   du redémarrage."
 pubDate: "2026-09-26"
-updatedDate: 2026-10-03
+updatedDate: 2026-10-18
 category: "Installer"
 audiences: [ "professionnel" ]
 metiers: [ "maintenance-industrielle" ]
@@ -18,7 +18,7 @@ relatedGuides:
     "regler-vitesse-verin-pneumatique-echappement"
   ]
 sources:
-  - https://www.festo.com/media/pim/789/D15000100122789.pdf
+  - https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2023/EN/MS-START-UP-EXHAUST-VALVES_EN.PDF
   - https://ross-admin-global-us-east.s3.amazonaws.com/production/uploads/document_language_file/file/49/ROSS_DM2_Series_C_Double_Valves_Installation_Instructions_SS301.pdf.pdf
 ---
 
@@ -28,9 +28,9 @@ Le dossier prend l’exemple d’une famille documentée. Les fonctions, seuils 
 
 ## Deux phases dans l’exemple Festo MS-DL
 
-La [documentation Festo MS4/MS6-DL](https://www.festo.com/media/pim/789/D15000100122789.pdf) décrit une montée lente de la pression aval réglée par un étranglement. Le siège principal s’ouvre lorsque la pression de basculement est atteinte, autour de **50 % de la pression de service**. Le document précise des tolérances et présente ces vannes en association avec les fonctions de mise en circuit prévues dans la gamme.
+La [documentation Festo MS4/MS6-DL](https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2023/EN/MS-START-UP-EXHAUST-VALVES_EN.PDF) décrit une montée lente de la pression aval réglée par un étranglement. Le siège principal s’ouvre lorsque la pression de basculement est atteinte, autour de **50 % de la pression de service**. Le document précise des tolérances et présente ces vannes en association avec les fonctions de mise en circuit prévues dans la gamme.
 
-« Environ 50 % » n’est pas un seuil exact de contrôle. Le temps de montée n’est pas non plus une temporisation universelle que l’on pourrait recopier d’une machine à l’autre.
+« Environ 50 % » n’est pas un seuil exact de contrôle. La documentation d’août 2023, page 40, exprime les tolérances par rapport à la pression amont p1 : +20 %/−10 % pour MS4, +20 %/−20 % pour MS6. À p1 = 4 bar, elle donne respectivement 1,6–2,8 bar et 1,2–2,8 bar de basculement. Ce ne sont pas des pourcentages appliqués à la moitié de p1. Le temps de montée n’est pas non plus une temporisation universelle que l’on pourrait recopier d’une machine à l’autre.
 
 <figure class="article-infographic article-infographic--compact">
 <svg viewBox="0 0 520 390" role="img" aria-labelledby="vanne-demarrage-progressif-air-comprime-remise-pression-title vanne-demarrage-progressif-air-comprime-remise-pression-desc" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +53,7 @@ Cette distinction évite une conclusion trop large : obtenir une montée lente a
 
 Certaines vannes aval ont également une condition de pilotage. Le [différentiel minimal d’une électrovanne servo-assistée](/guides/electrovanne-air-ne-ouvre-pas-pression-differentielle/) doit être vérifié sur sa référence, avec les pressions amont et aval du scénario de reprise.
 
-## Ce qu’il faut transmettre pour sélectionner la vanne
+## Le dossier à transmettre pour sélectionner la vanne
 
 | Élément du dossier | Question de sélection |
 | --- | --- |
@@ -88,6 +88,6 @@ Le réarmement d’une double valve constitue une fonction différente du rempli
 
 ## Sources et méthode
 
-Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
+Sources relues le **18 octobre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
 
-- [Festo, série MS, documentation des MS4/MS6-DL, pages 38 à 40](https://www.festo.com/media/pim/789/D15000100122789.pdf)
+- [Festo, série MS, documentation des MS4/MS6-DL, édition 2023/08, pages 38 à 40](https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2023/EN/MS-START-UP-EXHAUST-VALVES_EN.PDF)

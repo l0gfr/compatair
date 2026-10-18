@@ -24,18 +24,17 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "FIAC AX 153BD DRY 13 400/50 CE, référence 4152026085 : configuration sans cuve intégrée, pression maximale publiée de 13 bar. Le point documenté le plus élevé en pression fournit 1 210 L/min à 13 bar. Sans cuve intégrée. Version DRY avec sécheur intégré.",
+		"overview": "FIAC 4152026085 : groupe sans cuve avec sécheur DRY, 1 210 L/min à 13 bar, alimentation 400 V triphasée à 50 Hz. Le catalogue utilise AIRBLOK 153 BD DRY ; l’URL porte AX. La référence 4152026084 de 10 bar publie 1 510 L/min.",
 		"verifiedFacts": [
 			"Débit restitué publié : 1 210 L/min à 13 bar.",
 			"Compresseur rotatif à vis lubrifié à vitesse fixe. Puissance moteur publiée : 11,2 kW.",
-			"Masse nette publiée : 296 kg.",
+			"Masse publiée : 296 kg.",
 			"Alimentation publiée : 400 V, 50 Hz, triphasée."
 		],
 		"limitations": [
-			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"La référence commande prime sur le nom commercial : le catalogue utilise AIRBLOK et la fiche en ligne le code AX.",
-			"Les puissances arrondies peuvent différer entre le catalogue PDF et la fiche actuelle. Les valeurs de cette fiche proviennent exclusivement de la fiche individuelle consultée."
+			"Le catalogue donne 11 kW et la fiche individuelle 11,2 kW. L’origine de cet écart reste à établir ; la valeur typée conserve celle de la fiche individuelle.",
+			"Les 296 kg sont une masse publiée dont la qualification nette doit être confirmée.",
+			"Le taux de marche du groupe complet reste à documenter. La cuve externe, le traitement d’air livré et la disponibilité sont à préciser sur le devis."
 		]
 	},
 	"specifications": [

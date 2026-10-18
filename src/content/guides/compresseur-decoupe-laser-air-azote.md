@@ -3,6 +3,7 @@ title: "Compresseur pour découpe laser : distinguer air de service, air de cou
 seoTitle: "Découpe laser : quel compresseur pour l’air ou l’azote ?"
 description: "Air de coupe, air de service et génération d’azote : identifiez le bon circuit et demandez débit, pression et qualité pour votre machine laser et vos pièces."
 pubDate: "2026-09-26"
+updatedDate: 2026-10-18
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -24,7 +25,7 @@ Demandez les tables correspondant à la machine et aux pièces prévues. Dans vo
 
 ## Pourquoi la puissance du laser ne suffit pas
 
-Le [manuel de préinstallation du TruLaser 2030 fiber, section 3.3](https://www.trumpf.com/filestorage/TRUMPF_US/Landingpages/TruLaser_2030_fiber/pdfs/TruLaser-2030-Pre-Install-Manual.pdf) relie la consommation de gaz au diamètre de buse, à la pression et à la durée de coupe ; il renvoie aux tableaux technologiques propres à la matière et à l’épaisseur. Nous utilisons ce document pour la méthode de lecture, sans transposer ses caractéristiques à une autre machine.
+Le [manuel de préinstallation du TruLaser 2030 fiber, section 3.1, pages PDF 44 à 46](https://www.trumpf.com/filestorage/TRUMPF_US/Landingpages/TruLaser_2030_fiber/pdfs/TruLaser-2030-Pre-Install-Manual.pdf) relie la consommation de gaz au diamètre de buse, à la pression et à la durée de coupe ; il renvoie aux tableaux technologiques propres à la matière et à l’épaisseur. Nous utilisons ce document pour la méthode de lecture, sans transposer ses caractéristiques à une autre machine.
 
 Demander seulement « un compresseur pour laser de telle puissance » laisse donc plusieurs inconnues. Relevez les besoins pendant la coupe et les besoins simultanés des autres fonctions, avec les conditions de référence des débits. Faites distinguer le débit maximal requis du volume consommé sur votre programme de pièces.
 
@@ -68,8 +69,8 @@ Enfin, ne reprenez pas le besoin d’un [découpeur plasma](/guides/compresseur-
 
 ## Sources et méthode
 
-Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
+Sources relues le **18 octobre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
 
 - [TRUMPF, Laser cutting, rôle des gaz selon le procédé](https://www.trumpf.com/en_GB/solutions/applications/laser-cutting/)
-- [TRUMPF, TruLaser 2030 fiber, manuel de préinstallation, section 3.3](https://www.trumpf.com/filestorage/TRUMPF_US/Landingpages/TruLaser_2030_fiber/pdfs/TruLaser-2030-Pre-Install-Manual.pdf)
+- [TRUMPF, TruLaser 2030 fiber, manuel de préinstallation, section 3.1, pages PDF 44 à 46](https://www.trumpf.com/filestorage/TRUMPF_US/Landingpages/TruLaser_2030_fiber/pdfs/TruLaser-2030-Pre-Install-Manual.pdf)
 - [Atlas Copco, Laser cutting excellence, qualité de l’air de coupe](https://www.atlascopco.com/en-au/compressors/new-products-and-offers/local-offers/laser-cutting-excellence)

@@ -32,15 +32,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair ASH-03. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Capacité du godet : 100 ml. Buse standard déclarée : 0.8 mm.",
+		"overview": "ASH-03 : mini-pistolet gravitaire à godet de 100 ml et buse de 0,8 mm. Le catalogue publie un jet de 120 à 180 mm, une pression de service de 1,5 à 2 bar et une consommation moyenne de 4,5 cfm. L’ASH-02 voisin est un pistolet à aspiration de 1 000 ml : le choix porte aussi sur l’accès et la quantité de produit à préparer.",
 		"verifiedFacts": [
 			"Capacité du godet : 100 ml.",
 			"Buse standard déclarée : 0.8 mm.",
 			"Largeur de jet publiée : 120-180 mm."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La moyenne de 4,5 cfm ne fournit pas une consommation en pulvérisation continue ni une cadence de mesure. Le besoin de compresseur reste indéterminé.",
+			"Le faible volume du godet ne constitue pas une économie d’air mesurée."
 		]
 	},
 	"specifications": [

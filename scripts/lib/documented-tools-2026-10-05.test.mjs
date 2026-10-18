@@ -23,6 +23,7 @@ async function repinned(copy) {
  let code = readFileSync(new URL('./documented-tools-2026-10-05.mjs', import.meta.url), 'utf8');
  // A data URL has no relative module base; keep the real amendment validator.
  code = code.replace("'./reviewed-catalog-amendments-2026-10-17.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-17.mjs', import.meta.url).href));
+ code = code.replace("'./reviewed-catalog-amendments-2026-10-18.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-18.mjs', import.meta.url).href));
  for (const [name, records] of [
   ['approvedSources', copy.sources.map(source => ({ id: source.id, reviewedSourceSha256: digest(source) }))],
   ['approvedRows', copy.tools.map(row => ({ documentRowId: row.documentRowId, reviewedRowSha256: digest(row) }))],
@@ -175,7 +176,12 @@ describe('documented tools October 5', () => {
   expect(graco.details.some(detail => detail.label === 'Maximum air working pressure' && detail.value.includes('100 psi'))).toBe(true);
   expect(graco.details.some(detail => detail.label === 'Maximum fluid working pressure' && detail.value.includes('300 psi'))).toBe(true);
   expect(batch.find(product => product.brand === 'Graco' && product.mpn === '288726').workingPressureBar).toEqual({});
-  expect(batch.filter(product => product.brand === 'Sames Kremlin').every(product => product.editorial.limitations.some(note => note.includes('famille')))).toBe(true);
+  for (const product of batch.filter(product => product.brand === 'Sames Kremlin')) {
+   if (product.mpn === '135.797.413') {
+    expect(product.demandModel).toBe('variable-volume');
+    expect(product.editorial.limitations.join(' ')).toContain('colonne de consommation d’air est vide');
+   } else expect(product.editorial.limitations.some(note => note.includes('famille'))).toBe(true);
+  }
  });
  it('excludes possible AP/RP collisions without declaring an unproven global OEM alias', () => {
   expect(documentedIdentityKey('Aeropro', 'AP17407')).not.toBe(documentedIdentityKey('Rongpeng', 'RP17407'));

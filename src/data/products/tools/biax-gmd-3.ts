@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "graveur",
 	"category": "graveur",
 	"label": "BIAX GMD 3",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6,
 		"typical": 6,
@@ -23,17 +23,16 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX GMD 3, référence 150800301. Le tableau fabricant publie 80 L/min et une plage d’utilisation de 6 à 6 bar. Masse publiée : 100 g. Queue d’outil publiée : 3 mm hexagonal.",
+		"overview": "GMD 3 : micro-burin à mouvement alternatif, queue hexagonale de 3 mm, course de 9 mm et 3 000 coups/min, pour gravure et travaux fins. Le MD 100 voisin utilise une queue de 6 mm et une course de 14 mm. La fiche web donne 80 L/min pour le GMD 3, contre 45 dans le catalogue.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
-			"La fiche fabricant publie une consommation de 80 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
 			"Référence fabricant : 150800301.",
 			"Masse publiée : 100 g.",
 			"Queue d’outil publiée : 3 mm hexagonal."
 		],
 		"limitations": [
-			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
-			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
+			"Les deux consommations constructeur restent contradictoires ; aucun débit concluant n’est retenu.",
+			"Les coups/min ne sont pas des tr/min. Les outils de 3 et 6 mm ne sont pas assimilés."
 		]
 	},
 	"specifications": [
@@ -42,13 +41,6 @@ const product: ToolProfileInput = {
 			"value": "Le catalogue de cette référence indique un fonctionnement à 6 bar.",
 			"evidenceIds": [
 				"biax-150800301-20260926-workingpressurebar-1"
-			]
-		},
-		{
-			"label": "Condition de consommation",
-			"value": "La fiche fabricant publie une consommation de 80 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
-			"evidenceIds": [
-				"biax-150800301-20260926"
 			]
 		},
 		{
@@ -63,6 +55,14 @@ const product: ToolProfileInput = {
 			"value": "3 mm hexagonal",
 			"evidenceIds": [
 				"biax-150800301-20260926"
+			]
+		},
+		{
+			"label": "Consommations constructeur non départagées",
+			"value": "Fiche web : 80 L/min ; catalogue page 58 : 45 L/min.",
+			"evidenceIds": [
+				"biax-150800301-20260926",
+				"biax-150800301-20260926-workingpressurebar-1"
 			]
 		}
 	],
@@ -92,19 +92,12 @@ const product: ToolProfileInput = {
 		],
 		"workingPressureBar": [
 			"biax-150800301-20260926-workingpressurebar-1"
-		],
-		"airflowLpm": [
-			"biax-150800301-20260926"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 80,
-		"typical": 80,
-		"max": 80
-	}
+	"demandExplanation": "Deux sources constructeur publient des consommations différentes pour cette référence ; aucun débit unique n’est retenu pour le calcul. Consulter les limites détaillées."
 };
 
 export default product;

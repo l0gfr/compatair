@@ -43,9 +43,9 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade 57400, référence 57400, présente une consommation maximale publiée de 510 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 178. Vitesse moteur publiée : 2 400 tr/min. Masse : 1,2 kg.",
+		"overview": "57400 : ponceuse à mouvement linéaire, 2 400 courses/min et plateau de 70 × 203 mm. La 51350 voisine emploie un plateau de 70 × 279 mm ; leur maximum déclaré reste de 510 L/min à 6,2 bar. La longueur de surface et le mouvement gouvernent le choix d’abrasif.",
 		"verifiedFacts": [
-			"Vitesse moteur publiée : 2 400 tr/min.",
+			"Cadence du mouvement linéaire : 2 400 courses/min.",
 			"Masse : 1,2 kg.",
 			"Longueur : 178 mm.",
 			"Hauteur : 95 mm.",
@@ -53,17 +53,14 @@ const product: ToolProfileInput = {
 			"Flexible : 6 mm de diamètre intérieur publié."
 		],
 		"limitations": [
-			"Puissance moteur non retenue : le tableau publie des unités contradictoires (.3 (186)).",
-			"Le calcul conserve la consommation maximale publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
-			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
-			"Le diamètre intérieur publié ne suffit pas à valider un réseau : la longueur, les raccords et les pertes de pression restent à contrôler.",
-			"Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur."
+			"Les 2 400 courses/min décrivent un mouvement alternatif ; ils ne sont pas une vitesse de rotation de 2 400 tr/min.",
+			"Aucune puissance absente ou contradictoire n’est reconstituée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Vitesse moteur publiée",
-			"value": "2 400 tr/min",
+			"label": "Cadence du mouvement linéaire",
+			"value": "2 400 courses/min",
 			"evidenceIds": [
 				"dynabrade-57400-catalogue-d25-01"
 			]

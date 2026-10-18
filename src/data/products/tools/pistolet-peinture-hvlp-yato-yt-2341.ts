@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Yato YT-2341. Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "Yato YT-2341 : pistolet HVLP gravitaire de 600 ml à buse de 1,5 mm, contre 1,4 mm pour le YT-2340. La fiche publie séparément 410 L/min d’air et 0,15 à 0,22 L/min d’eau dans sa description du débit produit.",
 		"verifiedFacts": [
 			"Type : HVLP.",
 			"Coating material flow (water) : 0.15-0.22 l/min.",
@@ -42,10 +42,8 @@ const product: ToolProfileInput = {
 			"Weight : 0.64 kg."
 		],
 		"limitations": [
-			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
-			"Les pressions recommandées ou maximales de cette fiche ne sont pas des points de mesure de consommation.",
-			"Sans régime explicite en charge et pression de mesure associée, la consommation éventuelle reste documentaire et ne permet aucun verdict conclusif.",
-			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Les 410 L/min ne sont accompagnés ni d’un régime de charge ni d’un point pression–débit complet.",
+			"La pression maximale de 0,3 MPa ne constitue pas une pression de mesure. Le débit d’eau ne remplace jamais le besoin d’air."
 		]
 	},
 	"specifications": [

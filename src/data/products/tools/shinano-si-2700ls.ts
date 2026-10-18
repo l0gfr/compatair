@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2700LS, référence SI-2700LS. Le tableau fabricant publie 558 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 15 000 tr/min. Masse publiée : 0,9 kg.",
+		"overview": "SI-2700LS : ponceuse à bande de 13 × 460 mm, contre 10 × 460 mm pour la SI-2700L. Les deux annoncent 15 000 tr/min et 558 L/min au maximum à 6,3 bar. Le suffixe LS change donc la largeur de bande à commander sans réduire le besoin d’air.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 19.8 CFM / 9.3 L/s. Conversion du maximum publié : 9.3 × 60 = 558 L/min.",
@@ -32,9 +32,8 @@ const product: ToolProfileInput = {
 			"Masse publiée : 0,9 kg."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
-			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"Vérifier la largeur, la longueur et le bras de contact avant de commander les bandes.",
+			"Le débit maximal n’est pas abaissé à la moyenne pour garantir un fonctionnement soutenu."
 		]
 	},
 	"specifications": [

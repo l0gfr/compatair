@@ -28,7 +28,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Gentilin C330/03, référence 810201001 : cuve de 3 L, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 165 L/min à 8 bar.",
+		"overview": "C330/03, article 810201001 : cuve de 3 L, 200 L/min à 5 bar et 165 L/min à 8 bar, avec 32 kg publiés. Le C330/24 possède une cuve de 24 L et affiche la même courbe. La fiche actuelle du C330/03 annonce S1 100 %, en 230 V à 50 Hz.",
 		"verifiedFacts": [
 			"Débit restitué publié : 200 L/min à 5 bar ; 165 L/min à 8 bar.",
 			"Compresseur à pistons sans huile. Puissance moteur publiée : 2,2 kW.",
@@ -37,9 +37,10 @@ const product: CompressorInput = {
 			"Alimentation publiée : 230 V, 50 Hz."
 		],
 		"limitations": [
-			"Les points proviennent de la fiche fabricant, pas d’un essai physique réalisé par CompatAir.",
-			"Le taux de marche est celui déclaré par le fabricant ; les conditions de cycle et de température restent à respecter. La disponibilité commerciale reste à confirmer.",
-			"La disponibilité commerciale et les exigences électriques de l’installation sont à confirmer avant achat."
+			"Les 330 L/min sont le débit aspiré ; les deux points sous pression proviennent de la fiche fabricant.",
+			"La fiche actuelle donne 41 × 46,5 × 54 cm ; la notice de mai 2017 donne 396 × 473 × 598 mm pour C330/03. Confirmer la génération et l’encombrement de la machine livrée.",
+			"Le volume de cuve distingue les versions 3 et 24 L. Leur courbe commune ne démontre pas une production supérieure pour la plus grande cuve.",
+			"Le régime S1 est déclaré sur la fiche actuelle ; les conditions d’installation et d’entretien de la notice restent applicables."
 		]
 	},
 	"specifications": [
@@ -97,6 +98,15 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "La notice liée à cette fiche déclare la compression sans huile : Compressing air (no oil) to be used with suitable pneumatic utensils according to current legislation in force (E.g. blowing,"
+		},
+		{
+			"id": "gentilin-810206001-20260926-review-20261018",
+			"sourceUrl": "https://www.gentilinair.com/en/products/c330-24",
+			"sourceLabel": "Gentilin, fiche technique C330/24, réf. 810206001",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-10-18",
+			"confidence": "A",
+			"notes": "Fiche voisine consultée en HTTPS le 18 octobre 2026 ; SHA-256 du corps : 507d269200babde62014dc7cc1ff71a269f934bfbc7633af67fd6c61958e8fbf. Comparaison de configurations distinctes."
 		}
 	],
 	"fieldSources": {

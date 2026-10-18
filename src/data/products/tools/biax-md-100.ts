@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "burineur",
 	"category": "burineur",
 	"label": "BIAX MD 100",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6,
 		"typical": 6,
@@ -23,17 +23,16 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX MD 100, référence 150800310. Le tableau fabricant publie 130 L/min et une plage d’utilisation de 6 à 6 bar. Masse publiée : 530 g. Diamètre maximal de queue : 6 mm hexagonal mm.",
+		"overview": "MD 100 : burin alternatif à queue hexagonale de 6 mm, course de 14 mm et 3 000 coups/min, masse publiée de 530 g. Le GMD 3 voisin est un micro-burin à queue de 3 mm et course de 9 mm. La fiche MD 100 annonce 130 L/min, contre 140 dans le catalogue.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
-			"La fiche fabricant publie une consommation de 130 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
 			"Référence fabricant : 150800310.",
 			"Masse publiée : 530 g.",
-			"Diamètre maximal de queue : 6 mm hexagonal mm."
+			"Diamètre maximal de queue : 6 mm hexagonal."
 		],
 		"limitations": [
-			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
-			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
+			"Les deux consommations restent non départagées ; le dimensionnement est indéterminé.",
+			"Le mouvement est alternatif. La queue hexagonale de 6 mm ne désigne pas une pince de meuleuse ni une capacité de perçage."
 		]
 	},
 	"specifications": [
@@ -45,13 +44,6 @@ const product: ToolProfileInput = {
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "La fiche fabricant publie une consommation de 130 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
-			"evidenceIds": [
-				"biax-150800310-20260926"
-			]
-		},
-		{
 			"label": "Masse publiée",
 			"value": "530 g",
 			"evidenceIds": [
@@ -60,9 +52,17 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Diamètre maximal de queue",
-			"value": "6 mm hexagonal mm",
+			"value": "6 mm hexagonal",
 			"evidenceIds": [
 				"biax-150800310-20260926"
+			]
+		},
+		{
+			"label": "Consommations constructeur non départagées",
+			"value": "Fiche web : 130 L/min ; catalogue page 58 : 140 L/min.",
+			"evidenceIds": [
+				"biax-150800310-20260926",
+				"biax-150800310-20260926-workingpressurebar-1"
 			]
 		}
 	],
@@ -92,19 +92,12 @@ const product: ToolProfileInput = {
 		],
 		"workingPressureBar": [
 			"biax-150800310-20260926-workingpressurebar-1"
-		],
-		"airflowLpm": [
-			"biax-150800310-20260926"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 130,
-		"typical": 130,
-		"max": 130
-	}
+	"demandExplanation": "Deux sources constructeur publient des consommations différentes pour cette référence ; aucun débit unique n’est retenu pour le calcul. Consulter les limites détaillées."
 };
 
 export default product;

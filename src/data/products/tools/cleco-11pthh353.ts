@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco 11PTHH353, référence 11PTHH353. Le tableau fabricant publie 300 L/min et une plage d’utilisation de 6 à 6 bar. Plage de couple publiée : 6 à 11 Nm. Vitesse à vide publiée : 3500 tr/min.",
+		"overview": "Le 11PTHH353 reçoit un carré de 3/8 pouce ; le 11PTHH352 voisin utilise un carré de 1/4 pouce. Les deux annoncent 6 à 11 Nm, 3 500 tr/min, 150 L/min à vide et 300 L/min en charge à 6 bar. Le besoin de compresseur ne départage donc pas ces interfaces de sortie.",
 		"verifiedFacts": [
 			"Performances publiées à 6 bar à l’entrée de l’outil, note de la page 86.",
 			"Le tableau distingue 150 L/min à vide et 300 L/min en charge à 6 bar. Le calcul conserve la plus élevée des deux valeurs publiées (300 L/min), sans cycle de travail supposé.",
@@ -33,8 +33,8 @@ const product: ToolProfileInput = {
 			"Consommation à vide publiée : 150.0 L/min."
 		],
 		"limitations": [
-			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
-			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
+			"Le 353 pèse 0,83 kg contre 0,82 kg pour le 352. La compatibilité de la douille doit suivre le carré réellement commandé.",
+			"Le débit retenu est celui en charge, sans réduction fondée sur une cadence supposée."
 		]
 	},
 	"specifications": [

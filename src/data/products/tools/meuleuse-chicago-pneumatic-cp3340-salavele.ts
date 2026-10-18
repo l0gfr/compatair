@@ -33,7 +33,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Chicago Pneumatic"
 	},
 	"editorial": {
-		"overview": "CP3340-SALAVELE, référence 6151609320, demande 2 700 L/min en charge à 6,3 bar selon le catalogue Chicago Pneumatic v6.08.2026, page 148. Vitesse à vide : 6 000 tr/min. Puissance de l’outil : 3 400 W.",
+		"overview": "CP3340-SALAVELE 6151609320 : version CE de 230 mm, 3 400 W et 6 000 tr/min à vide, donnée pour 45 L/s en charge à 6,3 bar, soit 2 700 L/min. La SALAVEL 6151609290 voisine est une ligne ANSI distincte, avec la même consommation mais une autre référence et une masse publiée de 5,95 kg contre 5,85 kg.",
 		"verifiedFacts": [
 			"Vitesse à vide : 6 000 tr/min.",
 			"Puissance de l’outil : 3 400 W.",
@@ -42,9 +42,8 @@ const product: ToolProfileInput = {
 			"Entrée d’air 1/2 pouce ; flexible intérieur de 10 mm publié par le fabricant."
 		],
 		"limitations": [
-			"Le débit utilisé est la consommation en charge du tableau constructeur à 6,3 bar. Aucune réduction arbitraire pour usage intermittent n’est appliquée.",
-			"Le diamètre intérieur de flexible publié est de 10 mm, sans longueur associée dans ce tableau. La perte de pression du réseau reste à vérifier pour votre installation.",
-			"Référence issue du catalogue international v6.08.2026. La configuration livrée, les normes applicables et la disponibilité en France restent à confirmer avec le fournisseur."
+			"La conformité, la protection et les accessoires livrés doivent être vérifiés sur la référence exacte ; le débit identique ne prouve pas l’interchangeabilité.",
+			"Le diamètre admissible et la vitesse de l’abrasif restent des conditions de montage distinctes du bilan d’air."
 		]
 	},
 	"specifications": [

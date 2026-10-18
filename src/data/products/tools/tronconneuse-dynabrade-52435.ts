@@ -44,7 +44,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade 52435, référence 52435, présente une consommation maximale publiée de 765 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 109. Puissance moteur : 373 W. Vitesse moteur publiée : 20 000 tr/min.",
+		"overview": "52435 : outil Dynabrade de 373 W à 20 000 tr/min, maximum publié de 765 L/min à 6,2 bar et sortie filetée 3/8-24 mâle. Le 52418 voisin est un outil de tronçonnage à autre montage et besoin d’air. La présence de 3/8 pouce dans deux désignations ne suffit pas à établir une interchangeabilité.",
 		"verifiedFacts": [
 			"Puissance moteur : 373 W.",
 			"Vitesse moteur publiée : 20 000 tr/min.",
@@ -54,11 +54,8 @@ const product: ToolProfileInput = {
 			"Flexible : 10 mm de diamètre intérieur publié."
 		],
 		"limitations": [
-			"Longueur non retenue : le tableau publie des unités contradictoires (8-1/2 (126)).",
-			"Le calcul conserve la consommation maximale publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
-			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
-			"Le diamètre intérieur publié ne suffit pas à valider un réseau : la longueur, les raccords et les pertes de pression restent à contrôler.",
-			"Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur."
+			"Le filetage doit être distingué du diamètre d’alésage ou de queue d’un accessoire.",
+			"Respecter les dimensions et la vitesse admissible du montage prévu par le fabricant."
 		]
 	},
 	"specifications": [

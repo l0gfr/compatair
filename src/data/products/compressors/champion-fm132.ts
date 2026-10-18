@@ -81,16 +81,16 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Champion FM132. Le débit restitué sous pression reste non qualifié. FLOOR, stockage externe.",
+		"overview": "FM132, code A34905444, version 10 bar : capacité publiée de 21,51 m³/min, moteur de 132 kW et alimentation 400 V à 50 Hz, montage au sol. Le FM110 voisin annonce 18,85 m³/min à 10 bar pour 110 kW. La méthode FAD reste non qualifiée dans ce tableau.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 10 bar.",
 			"Montage sans réservoir de stockage intégré explicitement documenté."
 		],
 		"limitations": [
-			"La capacité en m³/min est publiée à la pression de fonctionnement ; la brochure ne qualifie pas ici sa méthode comme FAD. La courbe CompatAir reste vide.",
-			"La pression maximale de cette version codée est 10 bar. Les configurations 7,5 et 13 bar ne sont pas comptées comme de nouveaux modèles.",
-			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+			"Les codes des versions 7,5, 10 et 13 bar sont distincts. Le code A34905444 appartient à la colonne 10 bar.",
+			"La capacité sous pression est publiée ; sa qualification et son protocole FAD restent à confirmer. La courbe CompatAir demeure vide.",
+			"Le taux de marche reste inconnu. Les petits compresseurs d’atelier éventuellement suggérés ne sont pas des équivalents de production à ce groupe de 132 kW.",
+			"Stockage externe, refroidissement, raccordement et disponibilité demandent une étude de la configuration commandée."
 		]
 	},
 	"evidence": [

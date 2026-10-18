@@ -81,19 +81,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Ingersoll Rand R45n, 50 Hz, vitesse variable. 7 420 L/min à 7 bar. Moteur 45 kW ; Nirvana Standard, groupe fixe au sol, sans sécheur ; vitesse variable.",
+		"overview": "R45n Nirvana Standard 50 Hz : la brochure de 2012 annonce une plage de 6,46 à 7,42 m³/min à 7 bar, pour 45 kW. La courbe CompatAir conserve le maximum de 7 420 L/min. Le R37ne voisin annonce de 5,83 à 6,63 m³/min au même point de pression.",
 		"verifiedFacts": [
 			"Débit restitué relié à une pression et aux unités originales de la fiche fabricant.",
 			"Périmètre retenu : groupe seul ; réservoir de stockage externe exclu.",
 			"Limite de pression documentée : 10 bar ; le point FAD conserve sa pression publiée."
 		],
 		"limitations": [
-			"Documentation constructeur © 2012 ; disponibilité actuelle et variante électrique à confirmer.",
-			"Le fluide de refroidissement publié ne permet pas, à lui seul, de qualifier la lubrification du bloc de cette génération.",
-			"Les points de vitesse variable sont regroupés dans une seule courbe. Le maximum de chaque plage publié est retenu ; la stabilité à faible charge n’est pas simulée.",
-			"Cycle de service non établi par les sources retenues ; la tenue permanente reste indéterminée.",
-			"Les seules pressions FAD retenues sont celles du document. Aucun débit aspiré, extrapolation ou essai d’utilisation CompatAir.",
-			"Documentation et disponibilité de la configuration à confirmer avec le constructeur."
+			"Les limites de fonctionnement de la ligne R45n sont 4,5 à 10 bar ; sa plage de capacité est mesurée à 7 bar selon ISO 1217:2009 annexe C.",
+			"Le R45n TAS possède sa propre plage de 6,46 à 7,39 m³/min ; ses équipements et capacités restent distincts du Standard.",
+			"La capacité maximale ne décrit pas la production à tout régime. Le taux de marche reste inconnu.",
+			"La brochure de 2012 ne démontre pas une disponibilité actuelle. Vérifier génération, équipement, refroidissement, alimentation et lubrification du bloc."
 		]
 	},
 	"evidence": [

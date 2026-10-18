@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Asturomec PS/ES (réf. 50091). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "PS/ES 50091 : sablage avec réservoir intégré en aluminium de 1 L, réglage du débit de sable et buse de 6 mm. La PS/E 50090 voisine utilise un tube plongeur de 2 m dans une réserve externe. Les deux montages annoncent 5 à 8 bar de service.",
 		"verifiedFacts": [
 			"Buse : acier cémenté trempé, diamètre 6 mm.",
 			"Corps : aluminium.",
@@ -40,10 +40,8 @@ const product: ToolProfileInput = {
 			"Réglage : débit de sable réglable."
 		],
 		"limitations": [
-			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
-			"Édition italienne 2024 ; aucune disponibilité commerciale actuelle n’est vérifiée.",
-			"La plage de service ne constitue pas une pression de mesure de consommation ; aucun facteur de marche implicite.",
-			"Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Le catalogue ne publie pas de consommation d’air pour ce bloc ; le diamètre de buse ne suffit pas à la reconstituer.",
+			"Le tube d’aspiration d’abrasif ne renseigne pas les dimensions du flexible d’air."
 		]
 	},
 	"specifications": [

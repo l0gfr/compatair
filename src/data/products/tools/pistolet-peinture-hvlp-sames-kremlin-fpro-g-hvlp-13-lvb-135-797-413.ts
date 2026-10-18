@@ -11,7 +11,7 @@ const product: ToolProfileInput = {
 	"mpn": "135.797.413",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+	"demandExplanation": "Le tableau identifie le débit de produit, mais sa colonne de consommation d’air est vide ; aucun besoin d’air n’est calculé.",
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/pistolet-peinture-hvlp-sames-kremlin-fpro-g-hvlp-13-lvb-135-797-413.svg",
@@ -29,19 +29,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sames Kremlin FPro G HVLP-13-Lvb (réf. 135.797.413). Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "FPro G HVLP 13 LVB 135.797.413 : pistolet de 1,3 mm livré sans godet. Le tableau donne 126 cm³/min de produit, contre 105 pour le 135.797.412 de 1,2 mm. Le préfixe 136 désigne la livraison avec godet ; il faut conserver le code complet à la commande.",
 		"verifiedFacts": [
 			"Taille buse (mm) : 1.3.",
 			"Sortie produit (cc/min) : 126.",
 			"Technologie de pulvérisation : HVLP.",
-			"Largeur de jet à 20 cm (libellé fabricant) : L : 30 cm – 40 cm."
+			"Largeur de jet à 20 cm (libellé fabricant) : L : 30 cm – 40 cm.",
+			"La colonne de consommation d’air est vide ; les 126 cm³/min concernent le produit pulvérisé."
 		],
 		"limitations": [
-			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
-			"Le tableau de configuration fournit les consommations par buse, mais n’associe pas un point de pression de mesure complet à chaque débit. Les plages recommandées ne deviennent pas des pressions de mesure.",
-			"Les têtes seules, projecteurs, buses, packs et pistolets Solo incomplets sont exclus. Lorsqu’avec/sans godet sont imprimés, une seule identité de pistolet est retenue.",
-			"Les consommations de famille et les consommations de certaines configurations diffèrent. Les valeurs originales sont conservées ; aucune harmonisation ni verdict conclusif.",
-			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"La colonne de consommation d’air est vide dans cette page. Le débit de peinture ne fournit pas un besoin d’air.",
+			"Une valeur d’une autre configuration ne complète pas cette colonne ; le dimensionnement du compresseur reste indéterminé."
 		]
 	},
 	"specifications": [

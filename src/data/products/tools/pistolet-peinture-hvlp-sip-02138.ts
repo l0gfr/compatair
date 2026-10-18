@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SIP 02138. Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "SIP 02138 : pistolet HVLP gravitaire à godet de 600 ml et buse de 1,4 mm. Le 02136 voisin est à aspiration, avec godet de 1 L et buse de 1,8 mm. Le type d’alimentation et le calibre constituent ici les premiers critères de choix.",
 		"verifiedFacts": [
 			"Feed Type: : Gravity.",
 			"Nozzle Diameter: : Ø 1.4mm.",
@@ -39,10 +39,8 @@ const product: ToolProfileInput = {
 			"Product Dimensions: : 125(H) x 125(W) x 250mm(D)."
 		],
 		"limitations": [
-			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
-			"La consommation est présentée comme une moyenne. Le cycle d’utilisation n’est pas défini ; elle n’est pas convertie en consommation continue en charge.",
-			"La pression Air Pressure / Operating Pressure est une prescription de fonctionnement, sans pression de mesure explicitement rattachée à un régime qualifié.",
-			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"SIP qualifie les 354 L/min, ou 12,5 CFM, de moyenne. Sans cadence ni débit en charge, ce nombre ne valide pas une pulvérisation continue.",
+			"La plage de service de 3 à 4 bar ne constitue pas une courbe pression–consommation."
 		]
 	},
 	"specifications": [

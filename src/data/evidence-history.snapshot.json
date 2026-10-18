@@ -723326,7 +723326,84 @@
         "confidence": "A",
         "notes": "Le catalogue distingue 250 L/min aspirés et 175 L/min de remplissage, sans pression d’essai associée à ce dernier chiffre. Aucun point FAD n’est extrapolé."
       }
+    },
+    {
+      "id": "added:airpress-aps-10-basic-364808-13:airpress-364808-8-20260926-review-20261018:2026-10-18",
+      "evidenceId": "airpress-364808-8-20260926-review-20261018",
+      "productId": "airpress-aps-10-basic-364808-13",
+      "productType": "compressor",
+      "occurredAt": "2026-10-18",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "deca34d938d8ff9d14973412c774599eaff30d21275ae767c641f0bb7f672666",
+      "snapshot": {
+        "id": "airpress-364808-8-20260926-review-20261018",
+        "sourceUrl": "https://airpress.fr/compresseur-a-vis-aps-10-basic-8-bar-10-ch-7-5-kw-1140-l-min-364808-8",
+        "sourceLabel": "Airpress, fiche technique 364808-8, réf. 364808-8",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-18",
+        "confidence": "A",
+        "notes": "Fiche voisine consultée en HTTPS le 18 octobre 2026 ; SHA-256 du corps : 9250e01dff8073ce25295f9bc7d4248afefd3f5a947ae76d611d3deb736b47ea. Comparaison de configurations distinctes."
+      }
+    },
+    {
+      "id": "added:bambi-bb24:october3d-bambi-product-29-review-20261018:2026-10-18",
+      "evidenceId": "october3d-bambi-product-29-review-20261018",
+      "productId": "bambi-bb24",
+      "productType": "compressor",
+      "occurredAt": "2026-10-18",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6e3111962c8aba3e36f8227c60fef7cd69a825ffd5b0b0654f13544fde1fb777",
+      "snapshot": {
+        "id": "october3d-bambi-product-29-review-20261018",
+        "sourceUrl": "https://bambi-air.co.uk/product/bb15v/",
+        "sourceLabel": "Bambi, BB15V, fiche constructeur",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-18",
+        "confidence": "B",
+        "notes": "Fiche voisine consultée en HTTPS le 18 octobre 2026 ; SHA-256 du corps : 035957d1123e4041a8dc0e1279483147166448970cf50f5cd808b02f2d62b674. Comparaison de configurations distinctes."
+      }
+    },
+    {
+      "id": "added:gentilin-c330-03:gentilin-810206001-20260926-review-20261018:2026-10-18",
+      "evidenceId": "gentilin-810206001-20260926-review-20261018",
+      "productId": "gentilin-c330-03",
+      "productType": "compressor",
+      "occurredAt": "2026-10-18",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8c821955d3437b9d951b77999ab2657b5799e57496ae43864be8509e9ab3fd38",
+      "snapshot": {
+        "id": "gentilin-810206001-20260926-review-20261018",
+        "sourceUrl": "https://www.gentilinair.com/en/products/c330-24",
+        "sourceLabel": "Gentilin, fiche technique C330/24, réf. 810206001",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-18",
+        "confidence": "A",
+        "notes": "Fiche voisine consultée en HTTPS le 18 octobre 2026 ; SHA-256 du corps : 507d269200babde62014dc7cc1ff71a269f934bfbc7633af67fd6c61958e8fbf. Comparaison de configurations distinctes."
+      }
+    },
+    {
+      "id": "added:prebena-orkan-420:editorial-20261018-prebena-use-matrix-p130:2026-10-18",
+      "evidenceId": "editorial-20261018-prebena-use-matrix-p130",
+      "productId": "prebena-orkan-420",
+      "productType": "compressor",
+      "occurredAt": "2026-10-18",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "882e00cf863bfb2127b18bb0dfa53fb3458672818a6c188a01ccd78085a9f804",
+      "snapshot": {
+        "id": "editorial-20261018-prebena-use-matrix-p130",
+        "sourceUrl": "https://prebena.de/fileadmin/user_upload/E-Books/DE-2026/PREBENA-Hauptkatalog-2026-DE.pdf#page=130",
+        "sourceLabel": "PREBENA, catalogue 2026, matrice d’applications, page PDF 130, folio 128",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-18",
+        "confidence": "A",
+        "notes": "Matrice indicative de familles d’outils ; distincte d’un FAD ou d’un verdict pour référence exacte."
+      }
     }
   ],
-  "historyVersion": "3eeb2d96f84cceaebb9dfc5008a0f595f10d29e1d2e1a502fd8cbae3a298c08c"
+  "historyVersion": "c2b0479a2e653672c51bafc10212af41bcac131ae0677d622d71f371baf7a131"
 }

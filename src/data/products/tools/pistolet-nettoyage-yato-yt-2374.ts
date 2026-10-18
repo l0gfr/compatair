@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Yato YT-2374. Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "Yato YT-2374 : pistolet de nettoyage avec canon de 210 mm et réservoir de 0,85 L. Le YT-23640 voisin est un pistolet à mousse de 1 L : la fonction et l’alimentation produit doivent donc précéder le choix du compresseur.",
 		"verifiedFacts": [
 			"Air supply hose inside diameter : 3/8\" (9.5 mm).",
 			"Tank capacity : 0.85 l.",
@@ -42,11 +42,8 @@ const product: ToolProfileInput = {
 			"Weight : 0.46 kg."
 		],
 		"limitations": [
-			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
-			"Les pressions recommandées ou maximales de cette fiche ne sont pas des points de mesure de consommation.",
-			"Sans régime explicite en charge et pression de mesure associée, la consommation éventuelle reste documentaire et ne permet aucun verdict conclusif.",
-			"La fiche imprime « Coating material flow(water)130l/min ». Cette donnée de liquide ambiguë reste dans les cellules source, sans consommation d’air ni caractéristique normalisée.",
-			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"La fiche se contredit sur un débit d’eau, 130 l/h dans la description et 130 l/min dans le tableau. Aucune de ces valeurs ne décrit l’air consommé.",
+			"Les 4 bar de service et 8 bar maximum ne fournissent pas un point de consommation ; le diamètre de tuyau de 9,5 mm n’est pas un standard de raccord."
 		]
 	},
 	"specifications": [

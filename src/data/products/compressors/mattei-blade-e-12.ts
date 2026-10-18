@@ -76,29 +76,29 @@ const product: CompressorInput = {
 			"label": "Alimentation publiée",
 			"value": "400 / 50 / 3",
 			"evidenceIds": [
-				"october3d-mattei-pdf-11-p6"
+				"october3d-mattei-pdf-11-p7"
 			]
 		},
 		{
 			"label": "Fréquence retenue",
 			"value": "50 Hz",
 			"evidenceIds": [
-				"october3d-mattei-pdf-11-p6"
+				"october3d-mattei-pdf-11-p7"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "Mattei BLADE E 12. 1 370 L/min à 9,5 bar. BLADE avec sécheur externe, sans réservoir intégré.",
+		"overview": "BLADE E 12, version 10 bar à 50 Hz : 1 370 L/min à 9,5 bar, moteur de 11 kW et alimentation 400 V triphasée. Le sécheur fait partie de la version E, sans cuve intégrée. Le BLADE 12 sans sécheur annonce le même point FAD.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
 			"Plafond conservateur de la plage de fonctionnement : 10 bar."
 		],
 		"limitations": [
-			"Service continu déclaré dans les modes de commande décrits ; réglages et installation de la notice à respecter.",
-			"La version 10 bar est retenue ; FAD à9,5 bar, sans fusion avec 8 bar ou 60 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Le BLADE E 12 de cette ligne pèse 346 kg et mesure 1 410 × 810 × 990 mm ; le BLADE 12 sans sécheur pèse 308 kg.",
+			"Le tableau distingue les versions 50 et 60 Hz ainsi que les pressions de fabrication 8 et 10 bar.",
+			"Les modes continu, automatique et modulation sont décrits par le constructeur ; le service continu dépend du mode et des conditions de la notice.",
+			"Le montage SE ajoute une cuve de 270 L au sécheur. Confirmer stockage externe, traitement d’air requis et configuration livrée."
 		]
 	},
 	"evidence": [
@@ -152,11 +152,19 @@ const product: CompressorInput = {
 		],
 		"dutyCycle": [
 			"october3d-mattei-pdf-11-p6"
+		],
+		"voltage": [
+			"october3d-mattei-pdf-11-p7"
+		],
+		"phase": [
+			"october3d-mattei-pdf-11-p7"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"voltage": "400 V, 50 Hz",
+	"phase": "three-phase"
 };
 
 export default product;

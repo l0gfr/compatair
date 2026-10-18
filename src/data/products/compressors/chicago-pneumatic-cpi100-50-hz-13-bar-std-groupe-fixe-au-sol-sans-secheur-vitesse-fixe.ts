@@ -81,18 +81,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Chicago Pneumatic CPI100, 50 Hz, 13 bar. 10 366,667 L/min à 12,5 bar. Moteur 75 kW ; STD, groupe fixe au sol, sans sécheur ; vitesse fixe.",
+		"overview": "CPI100 STD 50 Hz, version 13 bar : 622 m³/h, soit 10 366,667 L/min, à 12,5 bar pour un moteur de 75 kW. La version 10 bar de la même fréquence annonce 720 m³/h à 9,5 bar. Le groupe STD de cette ligne pèse 1 417 kg.",
 		"verifiedFacts": [
 			"Débit restitué relié à une pression et aux unités originales de la fiche fabricant.",
 			"Périmètre retenu : groupe seul ; réservoir de stockage externe exclu.",
 			"Limite de pression documentée : 13 bar ; le point FAD conserve sa pression publiée."
 		],
 		"limitations": [
-			"Page 7, Pression FAD supérieure au maximum de cette configuration ; exclue sans inversion ni correction.",
-			"Cette entrée correspond à une configuration constructeur de pression maximale ; aucun nouveau produit n’est créé à partir d’un simple point de test.",
-			"Cycle de service non établi par les sources retenues ; la tenue permanente reste indéterminée.",
-			"Les seules pressions FAD retenues sont celles du document. Aucun débit aspiré, extrapolation ou essai d’utilisation CompatAir.",
-			"Documentation et disponibilité de la configuration à confirmer avec le constructeur."
+			"Le point FAD de 12,5 bar est inférieur au maximum de 13 bar de cette configuration.",
+			"Certaines lignes du tableau 60 Hz présentent une pression de référence supérieure au maximum imprimé ; elles ne sont pas utilisées pour corriger la ligne 50 Hz retenue.",
+			"Le taux de marche reste inconnu ; le point de capacité ne suffit pas à conclure pour un usage permanent.",
+			"Le groupe STD est sans sécheur ni stockage intégré. Installation et disponibilité de cette version restent à confirmer."
 		]
 	},
 	"evidence": [

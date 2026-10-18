@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Astro Pneumatic HVLP507. Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "HVLP507 : pistolet gravitaire à buse de 1,7 mm et pression de service annoncée de 41 à 44 psi. Astro indique « NO LONGER AVAILABLE » sur sa fiche. Le calibre de 1,7 mm le distingue du HVLP505 de 1,5 mm ; le choix du calibre reste lié au produit à pulvériser.",
 		"verifiedFacts": [
 			"Buse : 1.7mm.",
 			"Pression de fonctionnement : 41-44psi.",
@@ -40,10 +40,8 @@ const product: ToolProfileInput = {
 			"Diamètre intérieur du flexible : 4-6mm."
 		],
 		"limitations": [
-			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
-			"La consommation moyenne ou sans régime publié reste hors calcul ; aucun débit en charge à pression de mesure connue n’est extrapolé.",
-			"Une pression recommandée ou de service n’est pas un point de mesure de la consommation.",
-			"Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Les 10 cfm sont une consommation moyenne sans cadence de référence ; la recommandation de compresseur de 3 hp ne remplace pas un débit restitué sous pression.",
+			"Le statut constructeur ne démontre pas l’absence de stock chez tous les revendeurs."
 		]
 	},
 	"specifications": [

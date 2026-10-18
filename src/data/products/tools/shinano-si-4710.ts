@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-4710, référence SI-4710. Le tableau fabricant publie 168 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Scie alternative : course 10 mm ; cadence 10 000 coups/min ; capacité acier publiée 3 mm. Masse publiée : 0.8 kg.",
+		"overview": "SI-4710 : scie alternative à course de 10 mm et 10 000 coups/min, donnée pour 3 mm d’acier et 168 L/min au maximum à 6,3 bar. La SI-4700B voisine annonce 204 L/min ; la SI-4710F ajoute un équipement de limes distinct. Le contenu livré doit suivre le code choisi.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 6 CFM / 2.8 L/s, soit 168 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
@@ -32,9 +32,8 @@ const product: ToolProfileInput = {
 			"Masse publiée : 0.8 kg."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
-			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La cadence est un nombre de courses, pas une vitesse de rotation.",
+			"La capacité publiée ne garantit pas la même coupe sur tout acier ou avec toute lame ; respecter la notice et l’accessoire autorisé."
 		]
 	},
 	"specifications": [

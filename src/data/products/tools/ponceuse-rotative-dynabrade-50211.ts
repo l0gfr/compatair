@@ -44,7 +44,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade 50211, référence 50211, présente une consommation maximale publiée de 595 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 90. Puissance moteur : 298 W. Vitesse moteur publiée : 15 000 tr/min.",
+		"overview": "50211 : ponceuse de 76 mm à capot abaissé, aspiration centralisée et port de vide de 1¼ pouce. La 50210 utilise un captage autogénéré et un port de 1 pouce. Elles publient le même maximum de 595 L/min à 6,2 bar et 15 000 tr/min : l’installation de captage peut départager le choix.",
 		"verifiedFacts": [
 			"Puissance moteur : 298 W.",
 			"Vitesse moteur publiée : 15 000 tr/min.",
@@ -54,11 +54,8 @@ const product: ToolProfileInput = {
 			"Flexible : 6 mm de diamètre intérieur publié."
 		],
 		"limitations": [
-			"Masse non retenue : le tableau publie des unités contradictoires (1.7 (0.7)).",
-			"Le calcul conserve la consommation maximale publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
-			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
-			"Le diamètre intérieur publié ne suffit pas à valider un réseau : la longueur, les raccords et les pertes de pression restent à contrôler.",
-			"Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur."
+			"Le port de vide ne désigne pas l’entrée d’air comprimé.",
+			"La compatibilité des disques et du capot doit être vérifiée dans la notice ; un besoin d’air identique ne valide pas un accessoire."
 		]
 	},
 	"specifications": [

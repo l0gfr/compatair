@@ -9,10 +9,7 @@ const product: ToolProfileInput = {
   "brand": "Prona",
   "model": "R-430-HVLP-12 buse 1.2 HVLP Gravity",
   "demandModel": "variable-volume",
-  "workingPressureBar": {
-    "min": 1.8,
-    "max": 2
-  },
+  "workingPressureBar": {},
   "demandExplanation": "Le régime de consommation et/ou la pression de travail appariée ne sont pas définis. Le débit publié reste hors du calcul FAD.",
   "confidence": "B",
   "variant": {
@@ -33,7 +30,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Prona R-430-HVLP-12 buse 1.2 HVLP Gravity. Le régime de consommation et/ou la pression de travail appariée ne sont pas définis. Le débit publié reste hors du calcul FAD. Le tableau associe R-430-HVLP-12, buse 1.2 mm, chapeau HVLP et alimentation gravité, à un débit de produit de 147 ml/min et un jet de 234 mm à13cm ;305mm à20cm (±20).",
+    "overview": "Prona R-430 HVLP 1.2 : buse de 1,2 mm, débit produit de 147 ml/min et jet de 234 mm à 13 cm, ou 305 mm à 20 cm. La ligne 1.1 donne 140 ml/min et 230 ou 300 mm aux mêmes distances. Comparer les jets exige donc de conserver la distance de mesure.",
     "verifiedFacts": [
       "Désignation du tableau : R-430-HVLP-12.",
       "Buse : 1.2 mm.",
@@ -42,16 +39,11 @@ const product: ToolProfileInput = {
       "Débit de produit publié : 147 ml/min.",
       "Largeur du jet publiée : 234 mm à13cm ;305mm à20cm (±20).",
       "Masse publiée : 457 g (1.01 lbs).",
-      "Consommation publiée dans son unité originale : 350–370 l/min (12.33–13.07 cfm).",
-      "Pression dans la source : 1.8–2.0 kg/cm² (0.18–0.2 MPa)."
+      "Consommation publiée dans son unité originale : 350–370 l/min (12.33–13.07 cfm)."
     ],
     "limitations": [
-      "Le tableau décrit un point de pulvérisation du pistolet ; le besoin d’un réservoir ou d’une pompe externe consommant de l’air doit être compté séparément.",
-      "La pression est publiée en kg/cm² avec un arrondi secondaire en MPa ; conserver les deux cellules originales et leur précision, sans les présenter comme des mesures supplémentaires.",
-      "Disponibilité et conformité de commercialisation en France non établies.",
-      "Les plages de débit et de pression ne définissent pas un point dimensionnant.",
-      "Le jet possède deux distances de référence distinctes,13et20cm ; aucun mélange de colonnes.",
-      "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."
+      "Le tableau donne 350 à 370 L/min pour 1,8 à 2,0 kg/cm², avec une seconde expression arrondie en MPa. Aucun point exact en bar n’est reconstruit.",
+      "La plage de consommation reste sans régime qualifié ; le calculateur ne conclut pas à une alimentation continue."
     ]
   },
   "specifications": [
@@ -113,7 +105,7 @@ const product: ToolProfileInput = {
     },
     {
       "label": "Pression dans la source",
-      "value": "1.8–2.0 kg/cm² (0.18–0.2 MPa)",
+      "value": "Tableau : 1,8 à 2,0 kg/cm², également exprimé sous forme arrondie 0,18 à 0,2 MPa. Aucun point exact en bar reconstitué.",
       "evidenceIds": [
         "october8-tools-prona-product-1179777375336550400-tableau-technique-lie-par-la-fiche-fabricant"
       ]
@@ -132,10 +124,10 @@ const product: ToolProfileInput = {
     }
   ],
   "fieldSources": {
-    "workingPressureBar": [
+    "demandExplanation": [
       "october8-tools-prona-product-1179777375336550400-tableau-technique-lie-par-la-fiche-fabricant"
     ],
-    "demandExplanation": [
+    "workingPressureBar": [
       "october8-tools-prona-product-1179777375336550400-tableau-technique-lie-par-la-fiche-fabricant"
     ]
   },

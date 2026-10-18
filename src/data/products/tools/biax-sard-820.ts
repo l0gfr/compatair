@@ -23,18 +23,17 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX SARD 820, référence 150021105. Le tableau fabricant publie 500 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 300 W. Vitesse de rotation : 20.000 tr/min.",
+		"overview": "SARD 820 : meuleuse robuste à double roulement avant, 20 000 tr/min, queue maximale de 8 mm et pince de 6 mm fournie. La SARD 830 voisine doit être distinguée par son code et ses dimensions, sans transférer ses performances à la 820. Pour la 820, la fiche web annonce 300 W et le catalogue 310 W ; aucune puissance unique n’est choisie.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
 			"La fiche fabricant publie une consommation de 500 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
 			"Référence fabricant : 150021105.",
-			"Puissance publiée : 300 W.",
 			"Vitesse de rotation : 20.000 tr/min.",
 			"Masse publiée : 770 g."
 		],
 		"limitations": [
-			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
-			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
+			"Les 500 L/min à 6 bar n’ont pas de régime de charge qualifié ; le calcul ne valide pas un fonctionnement continu.",
+			"La queue maximale admissible n’est pas le diamètre de toute pince livrée. Respecter les dimensions et vitesses du consommable."
 		]
 	},
 	"specifications": [
@@ -48,13 +47,6 @@ const product: ToolProfileInput = {
 		{
 			"label": "Condition de consommation",
 			"value": "La fiche fabricant publie une consommation de 500 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
-			"evidenceIds": [
-				"biax-150021105-20260926"
-			]
-		},
-		{
-			"label": "Puissance publiée",
-			"value": "300 W",
 			"evidenceIds": [
 				"biax-150021105-20260926"
 			]
@@ -78,6 +70,14 @@ const product: ToolProfileInput = {
 			"value": "8 mm",
 			"evidenceIds": [
 				"biax-150021105-20260926"
+			]
+		},
+		{
+			"label": "Puissances constructeur non départagées",
+			"value": "Fiche web : 300 W ; catalogue page 23 : 310 W.",
+			"evidenceIds": [
+				"biax-150021105-20260926",
+				"biax-150021105-20260926-workingpressurebar-1"
 			]
 		}
 	],
@@ -110,6 +110,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150021105-20260926"
+		],
+		"airflowBasis": [
+			"biax-150021105-20260926"
 		]
 	},
 	"notes": [
@@ -119,7 +122,8 @@ const product: ToolProfileInput = {
 		"min": 500,
 		"typical": 500,
 		"max": 500
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

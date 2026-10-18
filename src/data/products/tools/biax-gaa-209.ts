@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX GAA 209, référence 150600705. Le tableau fabricant publie 150 L/min et une plage d’utilisation de 6 à 6 bar. Vitesse à vide publiée : 900 tr/min. Masse publiée : 150 g.",
+		"overview": "GAA 209 : visseuse à aspiration de vis, sortie hexagonale de 3 mm et 900 tr/min, contre 500 pour la GAA 205. La plage publiée est de 0,02 à 1,0 Nm. Les deux déclarent 150 L/min à 6 bar, sans qualification du régime de charge.",
 		"verifiedFacts": [
 			"Le catalogue prescrit un fonctionnement à 6 bar dans la page de cette famille.",
 			"Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé.",
@@ -32,8 +32,8 @@ const product: ToolProfileInput = {
 			"Masse publiée : 150 g."
 		],
 		"limitations": [
-			"Le réglage du couple dépend de l’assemblage et des ressorts prévus par le fabricant.",
-			"L’aspiration des vis et les équipements auxiliaires peuvent demander un dimensionnement séparé."
+			"Ce débit ne valide pas une demande continue, même avec un compresseur largement dimensionné.",
+			"La fonction d’aspiration et le porte-embout doivent convenir à la vis et au poste ; le chiffre de couple n’est pas un protocole de réglage."
 		]
 	},
 	"specifications": [
@@ -86,6 +86,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150600705-20260926"
+		],
+		"airflowBasis": [
+			"biax-150600705-20260926"
 		]
 	},
 	"notes": [
@@ -95,7 +98,8 @@ const product: ToolProfileInput = {
 		"min": 150,
 		"typical": 150,
 		"max": 150
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

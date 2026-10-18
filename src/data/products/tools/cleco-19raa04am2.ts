@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco 19RAA04AM2, référence 19RAA04AM2. Le tableau fabricant publie 310 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Plage de couple publiée : 1.4 à 4.7 Nm. Vitesse à vide publiée : 950 tr/min.",
+		"overview": "19RAA04AM2 : visseuse à tête d’angle, carré de 1/4 pouce, 950 tr/min et plage totale publiée de 1,4 à 4,7 Nm. La 19RAA03AM2 voisine tourne à 1 650 tr/min et couvre une autre plage avec ses ressorts. Le même débit déclaré ne rend pas les réglages de couple interchangeables.",
 		"verifiedFacts": [
 			"Performances publiées à 6,2 bar à l’entrée de l’outil, note de la page 75.",
 			"Consommation publiée dans la colonne Air Cons. m³/min, multipliée par 1 000. Le régime de mesure n’est pas précisé dans ce tableau.",
@@ -33,8 +33,8 @@ const product: ToolProfileInput = {
 			"Longueur publiée : 305 mm."
 		],
 		"limitations": [
-			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
-			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
+			"Le ressort et le réglage conditionnent la plage atteinte ; la plage totale n’est pas celle de tout ressort livré.",
+			"Les 310 L/min à 6,2 bar ne sont pas qualifiés par un régime de charge : aucune cadence continue n’est validée."
 		]
 	},
 	"specifications": [
@@ -115,6 +115,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"cleco-19raa04am2-20260926"
+		],
+		"airflowBasis": [
+			"cleco-19raa04am2-20260926"
 		]
 	},
 	"notes": [
@@ -124,7 +127,8 @@ const product: ToolProfileInput = {
 		"min": 310,
 		"typical": 310,
 		"max": 310
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

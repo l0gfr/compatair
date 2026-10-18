@@ -1,8 +1,9 @@
 ---
-title: "Micro-ponçage d’un vernis : que change une ponceuse de 30 mm ?"
+title: "Micro-ponçage d’un vernis : préparer une retouche de 30 mm"
 seoTitle: "Micro-ponçage : choisir une ponceuse de 30 mm"
 description: "La Shinano SI-3310 documente un plateau de 30 mm et une orbite de 3 mm. Délimiter la retouche, le consommable et l’air requis sans recette de grain universelle."
 pubDate: 2026-09-26
+updatedDate: 2026-10-18
 category: "Utiliser"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture"]

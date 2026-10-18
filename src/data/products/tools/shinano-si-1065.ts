@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-1065, référence SI-1065. Le tableau fabricant publie 576 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 65 Nm. Vitesse à vide publiée : 11 000 tr/min.",
+		"overview": "SI-1065 : visseuse à chocs à corps pistolet, 65 Nm au maximum et besoin maximal de 576 L/min à 6,3 bar. La SI-1062 voisine est une construction droite de 80 Nm avec 474 L/min au maximum. La forme change l’accès et la demande d’air ne suit pas le seul couple.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 20.4 CFM / 9.6 L/s. Conversion du maximum publié : 9.6 × 60 = 576 L/min.",
@@ -33,9 +33,8 @@ const product: ToolProfileInput = {
 			"Masse publiée : 0,98 kg."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
-			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"Le couple maximal n’est pas un réglage étalonné de l’assemblage.",
+			"Le maximum est retenu sans réduction arbitraire à la moyenne du catalogue."
 		]
 	},
 	"specifications": [

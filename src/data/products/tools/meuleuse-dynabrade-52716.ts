@@ -44,7 +44,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade 52716, référence 52716, présente une consommation maximale publiée de 1 104 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 107. Puissance moteur : 744 W. Vitesse moteur publiée : 15 000 tr/min.",
+		"overview": "52716 : meuleuse pour cônes ou meules-bouchons de 38 mm, sur sortie filetée mâle 3/8-24. Elle annonce 15 000 tr/min et un maximum de 1 104 L/min à 6,2 bar, contre 12 000 tr/min et 1 076 L/min pour la 52715. La vitesse admissible de l’accessoire doit suivre le modèle retenu.",
 		"verifiedFacts": [
 			"Puissance moteur : 744 W.",
 			"Vitesse moteur publiée : 15 000 tr/min.",
@@ -54,11 +54,8 @@ const product: ToolProfileInput = {
 			"Flexible : 10 mm de diamètre intérieur publié."
 		],
 		"limitations": [
-			"Masse non retenue : le tableau publie des unités contradictoires (2.0 (198)).",
-			"Le calcul conserve la consommation maximale publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
-			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
-			"Le diamètre intérieur publié ne suffit pas à valider un réseau : la longueur, les raccords et les pertes de pression restent à contrôler.",
-			"Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur."
+			"Le filetage 3/8-24 ne désigne pas une pince de 3/8 pouce.",
+			"La masse imprimée avec deux expressions incohérentes n’est pas arbitrée pour choisir une valeur."
 		]
 	},
 	"specifications": [

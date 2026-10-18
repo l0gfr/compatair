@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2110S, référence SI-2110S. Le tableau fabricant publie 426 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Dimension du plateau publiée : 75 mm. Vitesse à vide publiée : 15 000 tr/min.",
+		"overview": "SI-2110S : ponceuse à double action de 75 mm, orbite de 3 mm et 15 000 tr/min, donnée pour 426 L/min au maximum à 6,3 bar. La SI-2108EX de même diamètre annonce 408 L/min et 15 500 tr/min. Le diamètre seul ne décrit donc ni la vitesse ni le besoin d’air.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 15 CFM / 7.1 L/s. Conversion du maximum publié : 7.1 × 60 = 426 L/min.",
@@ -32,9 +32,8 @@ const product: ToolProfileInput = {
 			"Vitesse à vide publiée : 15 000 tr/min."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
-			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"Les 18 L/min d’écart sont ceux des maxima publiés ; ils ne mesurent pas un rendement de ponçage.",
+			"Le montage M6 et l’abrasif doivent suivre la référence exacte."
 		]
 	},
 	"specifications": [

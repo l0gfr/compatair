@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Asturo BBS HVLP art. 00198 buse 1,4 mm. Le régime de consommation et/ou la pression de travail appariée ne sont pas définis. Le débit publié reste hors du calcul FAD. Le tableau du pistolet BBS HVLP (article de base 00198) publie le diamètre de buse 1,4 mm sous le code de buse 14. Ce calibre est une configuration de pulvérisation réelle du catalogue ; la consommation commune de la famille n’est pas différenciée par buse.",
+    "overview": "BBS HVLP, code de base 00198, buse de 1,4 mm : le suffixe de calibre 14 se distingue du 12 pour 1,2 mm. Le catalogue publie 240 L/min pour la famille, un godet de 600 cm³, 3,5 bar de service et 5 bar maximum.",
     "verifiedFacts": [
       "Article de base imprimé : 00198.",
       "Code de buse imprimé : 14.",
@@ -48,11 +48,8 @@ const product: ToolProfileInput = {
       "Pression dans la source : Pressione esercizio: 3,5 bar ; Pressione massima: 5 bar."
     ],
     "limitations": [
-      "Le catalogue indique une consommation et une pression d’exercice, sans préciser l’ouverture de la gâchette, le régime de mesure ni les conditions de référence volumique. Ces données restent documentaires et ne suffisent pas à un verdict de dimensionnement conclusif.",
-      "La consommation est publiée pour le corps de pistolet. Aucune mesure de débit propre à cette buse n’est donnée ; elle n’est pas présentée comme une consommation différente des autres calibres de la même famille.",
-      "Le code d’article de base et le code de buse sont imprimés séparément. Aucun MPN complet n’est reconstitué par concaténation.",
-      "Le catalogue est actuellement hébergé par LTF ; la date d’édition et la disponibilité commerciale actuelle de chaque combinaison ne sont pas établies.",
-      "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."
+      "Le régime de consommation n’est pas précisé : le débit de famille ne suffit pas à valider une pulvérisation continue.",
+      "Le motif 00199xx désigne des pièces de buse ; il ne constitue pas la référence du pistolet complet."
     ]
   },
   "specifications": [

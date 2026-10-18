@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-1200B, référence SI-1200B. Le tableau fabricant publie 270 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 35 Nm. Vitesse à vide publiée : 200 tr/min.",
+		"overview": "SI-1200B : cliquet à carré de 1/4 pouce, 35 Nm au maximum, 200 tr/min et longueur de 168 mm. Le SI-1108B voisin est plus court, 125 mm, à carré de 3/8 pouce et 30 Nm. Le SI-1200B publie 270 L/min au maximum à 6,3 bar, contre 306 pour le voisin.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 9.6 CFM / 4.5 L/s. Conversion du maximum publié : 4.5 × 60 = 270 L/min.",
@@ -33,9 +33,8 @@ const product: ToolProfileInput = {
 			"Masse publiée : 0,51 kg."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
-			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"Les douilles et l’espace d’accès doivent correspondre au carré et à la longueur réellement commandés.",
+			"La valeur maximale de couple ne remplace pas le contrôle final de l’assemblage."
 		]
 	},
 	"specifications": [

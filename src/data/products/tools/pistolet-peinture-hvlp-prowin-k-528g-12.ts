@@ -32,17 +32,14 @@ const product: ToolProfileInput = {
     }
   },
   "editorial": {
-    "overview": "ProWin K-528G-12. Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
+    "overview": "K-528G-12 : buse de 1,2 mm, jet de 300 mm et godet de 600 ml. La ligne K-528G-10 porte une buse de 1,0 mm et un jet de 290 mm, avec les mêmes 250 L/min déclarés. Le changement de buse porte sur l’application, sans économie d’air démontrée.",
     "verifiedFacts": [
       "Buse : 1.2 mm.",
       "Largeur de jet : 300 mm."
     ],
     "limitations": [
-      "Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
-      "La table publie une consommation, sans pression de mesure précise ni protocole de pulvérisation lié à cette valeur.",
-      "Les codes SG de la colonne Turn-up Kit sont des kits de réparation et ne constituent pas des références de pistolets.",
-      "Fluid Output est libellé « ml » ; aucune durée ne permet de le publier comme un débit.",
-      "Aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+      "La plage de 20 à 28 psi n’associe pas un débit d’air mesuré à chaque pression.",
+      "Le tableau donne Fluid Output en ml, sans durée : les 110 ml ne sont pas transformés en ml/min. Le code SG018 est un kit de buse."
     ]
   },
   "specifications": [

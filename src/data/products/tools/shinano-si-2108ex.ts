@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2108EX, référence SI-2108EX. Le tableau fabricant publie 408 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Plateau 75 mm ; orbite 3 mm ; broche M6 × 1. Vitesse à vide publiée : 15500 tr/min.",
+		"overview": "SI-2108EX : ponceuse à double action, plateau de 75 mm, orbite de 3 mm et 15 500 tr/min à vide. La SI-2108EX-2 emploie un plateau de 50 mm. Les deux demandent jusqu’à 408 L/min à 6,3 bar ; le diamètre inférieur ne réduit pas le débit publié.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 14.4 CFM / 6.8 L/s, soit 408 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
@@ -33,9 +33,8 @@ const product: ToolProfileInput = {
 			"Masse publiée : 0.62 kg."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
-			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille du plateau doit suivre la surface à travailler et le consommable autorisé.",
+			"La broche M6 × 1 ne prouve pas la compatibilité de tout plateau du même diamètre."
 		]
 	},
 	"specifications": [

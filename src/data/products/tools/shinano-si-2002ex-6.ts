@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2002EX-6, référence SI-2002EX-6. Le tableau fabricant publie 444 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Pince 6 mm ; puissance publiée 219 W. Vitesse à vide publiée : 27000 tr/min.",
+		"overview": "SI-2002EX-6 : meuleuse à pince de 6 mm, 219 W et 27 000 tr/min à vide. La SI-2001S voisine porte une pince de 1/4 pouce, soit 6,35 mm. Le maximum est de 444 L/min à 6,3 bar pour la SI-2002EX-6, contre 456 pour cette voisine.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 15.6 CFM / 7.4 L/s, soit 444 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
@@ -33,9 +33,8 @@ const product: ToolProfileInput = {
 			"Masse publiée : 0.37 kg."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
-			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"Les queues de 6 et 6,35 mm ne sont pas assimilées. Vérifier le suffixe et la pince réellement installée.",
+			"L’accessoire doit respecter la vitesse admissible ; l’écart de consommation ne démontre pas une performance d’usinage."
 		]
 	},
 	"specifications": [

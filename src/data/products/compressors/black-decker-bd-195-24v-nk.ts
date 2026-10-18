@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Black+Decker BD 195/24V-NK, référence NKCV304BND311 : cuve de 24 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Groupe de compression : OL195. Capacité publiée sans pression de mesure : 180 l/min / 6,4 CFM.",
+		"overview": "BD 195/24V-NK, article NKCV304BND311 : cuve verticale de 24 L, alimentation 230 V à 50 Hz et maximum de 10 bar. Le groupe OL195 de 1,1 kW est également présent sur le BD 195/12-NK de 12 L. Le catalogue annonce 180 L/min sans pression d’essai pour les deux versions.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons sans huile. Puissance moteur publiée : 1,1 kW.",
@@ -29,9 +29,9 @@ const product: CompressorInput = {
 			"Vitesse de rotation : 3400 tr/min."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"Édition du catalogue et disponibilité commerciale actuelle non établies. Le débit non qualifié n’est pas utilisé pour valider une compatibilité."
+			"La version verticale de 24 L pèse 16,4 kg et mesure 307 × 307 × 640 mm selon le tableau ; le 12 L annonce 13 kg.",
+			"Les 180 L/min ne sont pas qualifiés comme FAD sous pression. Le débit utile et le taux de marche restent à documenter.",
+			"Le stockage supérieur ne démontre pas une production d’air supérieure ; l’alimentation de cette version est bien 230 V. Disponibilité actuelle à confirmer."
 		]
 	},
 	"specifications": [

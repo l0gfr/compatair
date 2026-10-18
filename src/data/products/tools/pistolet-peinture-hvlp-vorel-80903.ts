@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Vorel 80903. Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "Vorel 80903 : pistolet HVLP à buse de 1,8 mm et réservoir de 1 L. Le 80902 voisin possède une buse de 1,4 mm et un godet de 0,6 L. La capacité de produit et le calibre diffèrent, sans mesure comparative d’air à disposition.",
 		"verifiedFacts": [
 			"Type : HVLP.",
 			"Nozzle diameter : 1.8 mm.",
@@ -39,10 +39,8 @@ const product: ToolProfileInput = {
 			"Weight : 0.9 kg."
 		],
 		"limitations": [
-			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
-			"Les pressions recommandées ou maximales de cette fiche ne sont pas des points de mesure de consommation.",
-			"Sans régime explicite en charge et pression de mesure associée, la consommation éventuelle reste documentaire et ne permet aucun verdict conclusif.",
-			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Les 198 L/min sont publiés sans régime de mesure ; ils ne sont pas traités comme une demande en charge.",
+			"La fiche indique 0,3 MPa de service et 0,4 MPa maximum. Le maximum ne renseigne pas une consommation à cette pression."
 		]
 	},
 	"specifications": [

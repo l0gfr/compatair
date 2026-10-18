@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Fiam CSI12, référence 114820112. Le tableau fabricant publie 360 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide : 2200 tr/min. Masse publiée : 0.98 kg.",
+		"overview": "CSI12 114820112 : clé à chocs droite, 2 200 tr/min et masse de 0,98 kg. La CSI12P1 voisine est à poignée pistolet, 1 900 tr/min et 1,19 kg. Le tableau donne pour chacune 6 L/s à vide, soit 360 L/min à 6,3 bar ; la forme et l’accès départagent ici les références.",
 		"verifiedFacts": [
 			"Les valeurs de la brochure sont données à 6,3 bar (ISO 2787), pression recommandée.",
 			"La brochure publie 6 L/s à vide (Idle air consumption), soit 360 L/min après conversion × 60.",
@@ -32,8 +32,8 @@ const product: ToolProfileInput = {
 			"Masse publiée : 0.98 kg."
 		],
 		"limitations": [
-			"Les caractéristiques proviennent de la brochure fabricant, la fiche HTML ne renseignant pas la consommation.",
-			"Une consommation à vide n’est pas une mesure de tous les régimes en charge."
+			"La consommation est explicitement mesurée à vide ; elle ne décrit pas la demande en charge et ne permet pas un dimensionnement continu conclusif.",
+			"Le couple maximal et la plage recommandée d’assemblage restent des données distinctes."
 		]
 	},
 	"specifications": [
@@ -95,6 +95,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"fiam-114820112-20260926"
+		],
+		"airflowBasis": [
+			"fiam-114820112-20260926"
 		]
 	},
 	"notes": [
@@ -104,7 +107,8 @@ const product: ToolProfileInput = {
 		"min": 360,
 		"typical": 360,
 		"max": 360
-	}
+	},
+	"airflowBasis": "free-speed"
 };
 
 export default product;

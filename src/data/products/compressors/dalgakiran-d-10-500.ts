@@ -74,17 +74,16 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Dalgakiran D 10-500. Le débit restitué sous pression reste non qualifié. Groupe sur cuve 500 L.",
+		"overview": "D 10-500 : version à un étage, cuve de 500 L, moteur de 7,5 kW et pression de travail de 7 bar. Le tableau annonce 1 222 L/min de déplacement du piston. Le D 10-500 T voisin possède deux étages, une pression de 12,5 bar et 726 L/min de déplacement.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 7 bar.",
 			"Cuve de stockage documentée : 500 L."
 		],
 		"limitations": [
-			"La colonne Piston Displacement décrit le déplacement du piston. Aucun débit restitué sous pression n’est qualifié dans ce tableau.",
-			"Le cycle de service n’est pas indiqué ; la compatibilité ne devient pas conclusive par la seule capacité de cuve.",
-			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
-			"Le plafond CompatAir correspond à la pression de travail de la version retenue. Il ne décrit ni la soupape ni le maximum de toutes les versions de la famille."
+			"Le déplacement du piston ne constitue pas un FAD sous pression ; la courbe de débit restitué reste vide.",
+			"Les 500 L communs aux versions avec et sans T décrivent le stockage. La pression et les étages permettent d’identifier la configuration.",
+			"Le taux de marche reste inconnu ; le volume de cuve ne permet pas de conclure pour un usage continu.",
+			"Le plafond retenu correspond à la pression de travail de cette version ; il ne décrit ni la soupape ni le maximum de toutes les variantes."
 		]
 	},
 	"evidence": [

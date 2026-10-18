@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-3003A, référence SI-3003A. Le tableau fabricant publie 474 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Plateau rectangulaire 75 × 100 mm, revêtement Leather selon Shinano ; orbite 4 mm ; version sans aspiration autonome. Vitesse à vide publiée : 9000 tr/min.",
+		"overview": "SI-3003A : ponceuse orbitale à plateau de 75 × 100 mm à revêtement Leather, orbite de 4 mm et 9 000 tr/min. La SI-3001AM voisine emploie un plateau autoagrippant et annonce 390 L/min au maximum, contre 474 pour la SI-3003A à 6,3 bar. La fixation de l’abrasif doit rester explicite.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 16.8 CFM / 7.9 L/s, soit 474 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
@@ -33,9 +33,8 @@ const product: ToolProfileInput = {
 			"Masse publiée : 1.05 kg."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
-			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"Le suffixe M désigne le plateau autoagrippant ; il n’ajoute pas une aspiration autonome.",
+			"Le plateau et l’orbite doivent convenir au travail ; l’écart de débit ne suffit pas à départager la finition."
 		]
 	},
 	"specifications": [

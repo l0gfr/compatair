@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Schneider Airsystems SSP-Strahlfix staubfrei. Le régime de consommation et/ou la pression de travail appariée ne sont pas définis. Le débit publié reste hors du calcul FAD. buse 5 mm, sac de récupération et embouts ; granulat maximal 0,8 mm ; diamètre de buse 5 mm.",
+    "overview": "SSP Strahlfix staubfrei DGKD030263 : pistolet de sablage avec sac de collecte et embouts, buse de 5 mm, grain maximal publié de 0,8 mm et masse de 0,9 kg. Le catalogue annonce 150 L/min pour 6 à 8 bar ; le SSP-SAV voisin publie 280 L/min à 7 bar avec un montage Venturi différent.",
     "verifiedFacts": [
       "Granulat maximal : 0,8 mm.",
       "Diamètre de buse : 5 mm.",
@@ -42,10 +42,8 @@ const product: ToolProfileInput = {
       "Pression dans la source : 6-8 bar, Arbeitsdruck."
     ],
     "limitations": [
-      "Catalogue constructeur allemand 2025 reçu intégralement le 8 octobre 2026 ; aucune disponibilité commerciale ou essai physique CompatAir ne sont affirmés.",
-      "Les états de référence du volume d’air et le régime de mesure ne sont pas explicitement qualifiés dans cette fiche. Verdict de compatibilité insuffisant tant que le besoin en action n’est pas établi.",
-      "La plage de pression est conservée telle que publiée ; aucun besoin d’air à sa borne supérieure ou inférieure n’est inventé.",
-      "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."
+      "Le régime et les points de mesure ne permettent pas d’en déduire un gain d’efficacité ou une consommation continue garantie.",
+      "La collecte et la réutilisation des granulats ne garantissent pas l’absence de poussières ; les protections et l’air sec prescrits restent nécessaires."
     ]
   },
   "specifications": [

@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Fiam FDE26P, référence 124610553. Le tableau fabricant publie 600 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide : 2600 tr/min. Masse publiée : 0.72 kg.",
+		"overview": "FDE26P 124610553 : perceuse à poignée pistolet vendue sans mandrin, 2 600 tr/min et 0,72 kg. La FDE33P voisine tourne à 3 300 tr/min avec la même consommation publiée de 10 L/s. Les suffixes PA et PC désignent des équipements de mandrin distincts ; il faut conserver la version P à la commande.",
 		"verifiedFacts": [
 			"La brochure associée à cette fiche indique une pression de mesure et d’utilisation recommandée de 6,3 bar (ISO 2787).",
 			"La fiche fabricant publie 10 L/s, soit 600 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML.",
@@ -33,8 +33,8 @@ const product: ToolProfileInput = {
 			"Dimensions publiées : Ø 38 x L 165 x H 155 mm."
 		],
 		"limitations": [
-			"Le couple éventuel est indicatif : l’assemblage, l’accessoire et la pression dynamique influencent le résultat.",
-			"Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes."
+			"Les 600 L/min à 6,3 bar ne sont pas qualifiés par un régime de charge ; le fonctionnement continu reste indéterminé.",
+			"La plage de mandrin d’une version équipée ne prouve pas qu’un mandrin est livré avec la P."
 		]
 	},
 	"specifications": [
@@ -110,6 +110,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"fiam-124610553-20260926"
+		],
+		"airflowBasis": [
+			"fiam-124610553-20260926"
 		]
 	},
 	"notes": [
@@ -119,7 +122,8 @@ const product: ToolProfileInput = {
 		"min": 600,
 		"typical": 600,
 		"max": 600
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SATA jet X HVLP 1.3 O BASIC (réf. 1200211). Les sources constructeur publient des consommations divergentes pour cette famille ; aucune valeur n’est arbitrée pour calculer un débit.",
+		"overview": "jet X HVLP 1.3 O BASIC 1200211 : buse O de 1,3 mm, à distinguer du 1200138 en 1,2 O et du 1200170 en 1,3 I. Le catalogue donne 445 Nl/min pour la famille HVLP ; la notice donne 430 Nl/min à 2 bar en entrée. Ces déclarations restent séparées, sans choix arbitraire d’un besoin calculé.",
 		"verifiedFacts": [
 			"Technologie de pulvérisation : HVLP.",
 			"Profil de buse : O.",
@@ -45,11 +45,8 @@ const product: ToolProfileInput = {
 			"Température maximale du produit pulvérisé : 50 °C."
 		],
 		"limitations": [
-			"Les sources constructeur publient des consommations divergentes pour cette famille ; aucune valeur n’est arbitrée pour calculer un débit.",
-			"Le catalogue 2025 donne RP 335 / HVLP 445 Nl/min ; la notice officielle donne RP 325 / HVLP 430 Nl/min explicitement à 2 bar. Aucune valeur n’est arbitrée.",
-			"La fiche précise HVLP 1.3 I BASIC 1200170 affiche 420 l/min au 2026-10-03. L/min et Nl/min restent distincts ; aucune condition normale absente des citations n’est supposée.",
-			"Une seule configuration BASIC par buse et technologie est retenue. Les versions DIGITAL, godets, couleurs, accessoires et jeux de buses seuls ne créent aucune nouveauté dans ce lot.",
-			"Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"La notice limite le mode HVLP à 2 bar ; sa plage générale de 0,5 à 2,4 bar et son maximum mécanique d’entrée ne sont pas des réglages HVLP équivalents.",
+			"Les conditions de volume normalisé et l’écart entre documents doivent être confirmés pour dimensionner une alimentation ; aucune valeur d’une buse I ne complète la buse O."
 		]
 	},
 	"specifications": [

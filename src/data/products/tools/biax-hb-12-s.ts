@@ -23,18 +23,17 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX HB 12 S, référence 150123105. Le tableau fabricant publie 500 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 300 W. Vitesse de rotation : 20.000 tr/min.",
+		"overview": "HB 12 S : ponceuse à bandes de 6 ou 12 mm de largeur et de 610 mm de longueur, avec bras de contact orientable. Ce montage diffère d’une meuleuse à pince comme la SARD 820. La fiche web annonce 300 W et le catalogue 250 W : aucune puissance unique n’est arbitrée.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
 			"La fiche fabricant publie une consommation de 500 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
 			"Référence fabricant : 150123105.",
-			"Puissance publiée : 300 W.",
 			"Vitesse de rotation : 20.000 tr/min.",
 			"Masse publiée : 1470 g."
 		],
 		"limitations": [
-			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
-			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
+			"Les 500 L/min à 6 bar restent sans régime de charge qualifié et ne valident pas une alimentation continue.",
+			"La bande, le bras et le réglage doivent être prévus pour l’opération ; le chiffre de puissance contradictoire ne sert pas à comparer les capacités."
 		]
 	},
 	"specifications": [
@@ -53,13 +52,6 @@ const product: ToolProfileInput = {
 			]
 		},
 		{
-			"label": "Puissance publiée",
-			"value": "300 W",
-			"evidenceIds": [
-				"biax-150123105-20260926"
-			]
-		},
-		{
 			"label": "Vitesse de rotation",
 			"value": "20.000 tr/min",
 			"evidenceIds": [
@@ -71,6 +63,14 @@ const product: ToolProfileInput = {
 			"value": "1470 g",
 			"evidenceIds": [
 				"biax-150123105-20260926"
+			]
+		},
+		{
+			"label": "Puissances constructeur non départagées",
+			"value": "Fiche web : 300 W ; catalogue page 36 : 250 W.",
+			"evidenceIds": [
+				"biax-150123105-20260926",
+				"biax-150123105-20260926-workingpressurebar-1"
 			]
 		}
 	],
@@ -103,6 +103,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150123105-20260926"
+		],
+		"airflowBasis": [
+			"biax-150123105-20260926"
 		]
 	},
 	"notes": [
@@ -112,7 +115,8 @@ const product: ToolProfileInput = {
 		"min": 500,
 		"typical": 500,
 		"max": 500
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

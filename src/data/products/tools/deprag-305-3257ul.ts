@@ -23,18 +23,18 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "DEPRAG 305-3257UL, référence 352587E. Le tableau fabricant publie 350 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal : 15 Nm. Vitesse à vide : 525 tr/min.",
+		"overview": "305-3257UL 352587E : visseuse pistolet pour démontage horizontal, à rotation principale gauche et inversion possible. Les 15 Nm du tableau désignent le couple maximal de desserrage, à 525 tr/min à vide. La 305-4257UL voisine annonce 18 Nm et 270 tr/min ; les deux déclarent 0,35 m³/min à 6,3 bar.",
 		"verifiedFacts": [
 			"La note du tableau indique une pression de fonctionnement de 6,3 bar.",
 			"Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine.",
 			"Référence fabricant : 352587E.",
-			"Couple maximal : 15 Nm.",
+			"Couple maximal de desserrage : 15 Nm.",
 			"Vitesse à vide : 525 tr/min.",
 			"Démarrage / exécution du catalogue : reversible to right rotation."
 		],
 		"limitations": [
-			"Le couple et la vitesse correspondent à la colonne de cette référence commande, pas à l’ensemble de la famille.",
-			"Les broches intégrées nécessitent aussi le dimensionnement des auxiliaires de l’installation, qui ne sont pas inclus dans la consommation du moteur de vissage."
+			"Le débit de 350 L/min n’est pas qualifié par un régime de charge : aucun besoin continu n’est garanti.",
+			"DEPRAG prescrit un support de réaction au-delà de 10 Nm pour la poignée pistolet ; le réglage et le maintien doivent suivre la notice. Le couple de desserrage ne devient pas un réglage de serrage."
 		]
 	},
 	"specifications": [
@@ -53,7 +53,7 @@ const product: ToolProfileInput = {
 			]
 		},
 		{
-			"label": "Couple maximal",
+			"label": "Couple maximal de desserrage",
 			"value": "15 Nm",
 			"evidenceIds": [
 				"deprag-352587e-20260926"
@@ -101,6 +101,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"deprag-352587e-20260926"
+		],
+		"airflowBasis": [
+			"deprag-352587e-20260926"
 		]
 	},
 	"notes": [
@@ -110,7 +113,8 @@ const product: ToolProfileInput = {
 		"min": 350,
 		"typical": 350,
 		"max": 350
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

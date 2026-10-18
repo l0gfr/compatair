@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-5200A, référence SI-5200A. Le tableau fabricant publie 594 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 600 tr/min. Capacité du mandrin : 13 mm.",
+		"overview": "SI-5200A : perceuse à poignée pistolet et mandrin de 13 mm, 600 tr/min et couple maximal publié de 16,81 Nm. La SI-5100A voisine possède un mandrin de 10 mm et tourne à 5 000 tr/min. Les maxima d’air sont respectivement 594 et 558 L/min à 6,3 bar : la vitesse seule ne détermine pas le débit.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 21 CFM / 9.9 L/s. Conversion du maximum publié : 9.9 × 60 = 594 L/min.",
@@ -33,9 +33,8 @@ const product: ToolProfileInput = {
 			"Couple maximal publié : 16.81 Nm."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
-			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"Choisir le foret et la vitesse pour le matériau ; la capacité de mandrin n’est pas une capacité universelle de perçage.",
+			"Le couple maximal ne décrit pas une courbe à toutes les vitesses."
 		]
 	},
 	"specifications": [

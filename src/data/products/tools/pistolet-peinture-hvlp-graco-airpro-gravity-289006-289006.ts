@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Graco AirPro gravity 289006 (réf. 289006). Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "AirPro 289006 : pistolet HVLP gravitaire nu à buse de 1,8 mm, contre 1,4 mm pour le 289005. Les articles avec godet sont distincts. Le manuel donne 14,4 CFM pour la famille au point de 2 bar ; le changement de calibre ne prouve pas un changement de besoin d’air.",
 		"verifiedFacts": [
 			"Orifice Size in. (mm) : 0.070 (1.8).",
 			"Spray technology : HVLP.",
@@ -38,10 +38,8 @@ const product: ToolProfileInput = {
 			"Air inlet : 1/4 npsm (R1/4–19)."
 		],
 		"limitations": [
-			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
-			"Le débit possède un point de pression explicite, mais pas de protocole de mesure établissant la position complète de la gâchette.",
-			"Les MPN de versions avec godet standard ou PPS sont exclus ; la masse avec godet n’est pas appliquée au pistolet sans godet.",
-			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Le maximum d’alimentation de 7 bar n’est pas le réglage HVLP : la notice impose les limites d’entrée et de chapeau correspondant à ce mode.",
+			"Les conditions de référence des CFM restent nécessaires avant comparaison avec un FAD en L/min ; aucun débit n’est inventé."
 		]
 	},
 	"specifications": [

@@ -18,11 +18,15 @@ const product: CompressorInput = {
 	"maxPressureBar": 10,
 	"fadCurve": [
 		{
+			"pressureBar": 7,
+			"litersPerMinute": 2010
+		},
+		{
 			"pressureBar": 9.5,
 			"litersPerMinute": 1860
 		}
 	],
-	"oilType": "oil",
+	"oilType": "unknown",
 	"powerKw": 15,
 	"confidence": "B",
 	"status": "unknown",
@@ -74,22 +78,34 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october3d-alup-extra-21"
 			]
+		},
+		{
+			"label": "FAD maximal à 7 bar",
+			"value": "120,6 m³/h, soit 2 010 L/min",
+			"evidenceIds": [
+				"october3d-alup-pdf-extra-03-p8"
+			]
+		},
+		{
+			"label": "FAD minimal de modulation à 7 bar",
+			"value": "19,4 m³/h ; minimum à 9,5 bar non déduit",
+			"evidenceIds": [
+				"october3d-alup-pdf-extra-03-p8"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "ALUP Allegretto 14. 1 860 L/min à 9,5 bar. Groupe sur socle sans réservoir de stockage intégré.",
+		"overview": "Allegretto 14 sur socle : FAD maximal de 2 010 L/min à 7 bar et de 1 860 L/min à 9,5 bar. Le minimum publié à 7 bar est de 19,4 m³/h. L’Allegretto 11 voisin annonce un maximum de 1 470 L/min à 9,5 bar, pour 11 kW contre 15 kW ici.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
 			"Pression maximale de fonctionnement publiée : 10 bar."
 		],
 		"limitations": [
-			"Points FAD supérieurs au plafond de fonctionnement excluants, y compris lorsque le tableau présente une colonne 12,5 bar pour une famille limitée à 10 bar.",
-			"Version sur socle retenue ; réservoir externe exclu.",
-			"Cycle de service non établi ; la tenue permanente reste indéterminée.",
-			"Fréquence non publiée dans la fiche retenue ; aucune transposition des performances à 50 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Les valeurs de capacité sont des maxima VSD ; la production effective dépend du régime demandé.",
+			"Le minimum de modulation est documenté à 7 bar ; aucune valeur minimale à 9,5 bar n’est déduite.",
+			"Le tableau Allegretto ne comporte pas la colonne 12,5 bar de Sonetto. La réserve liée à cette autre famille est retirée.",
+			"Le taux de marche, l’alimentation et la lubrification du bloc restent à confirmer."
 		]
 	},
 	"evidence": [
@@ -127,9 +143,6 @@ const product: CompressorInput = {
 	"fieldSources": {
 		"tankLiters": [
 			"october3d-alup-pdf-extra-03-p8"
-		],
-		"oilType": [
-			"october3d-alup-pdf-extra-03-p2"
 		],
 		"maxPressureBar": [
 			"october3d-alup-extra-21",

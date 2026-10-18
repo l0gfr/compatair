@@ -29,9 +29,8 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Yato YT-2375. Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "Yato YT-2375 : pistolet de sablage à aspiration avec tuyau d’abrasif de 1 m. La description annonce une buse de 6,3 mm, tandis que le tableau écrit 6 mm. Cette divergence doit être levée sur la référence livrée avant de choisir les consommables ; elle ne permet pas d’assimiler le montage à la PS/E de 6 mm.",
 		"verifiedFacts": [
-			"Nozzle diameter : 6 mm.",
 			"Hose length : 1 m.",
 			"Air supply hose inside diameter : 3/8\" (9.5 mm).",
 			"Material : aluminum.",
@@ -40,16 +39,14 @@ const product: ToolProfileInput = {
 			"Weight : 0.45 kg."
 		],
 		"limitations": [
-			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
-			"Les pressions recommandées ou maximales de cette fiche ne sont pas des points de mesure de consommation.",
-			"Sans régime explicite en charge et pression de mesure associée, la consommation éventuelle reste documentaire et ne permet aucun verdict conclusif.",
-			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Les 160 L/min sont publiés sans régime de mesure ; la plage de service de 2 à 5 bar et le maximum de 8 bar ne suffisent pas au dimensionnement.",
+			"Les deux diamètres contradictoires restent visibles, sans arbitrage. Le tuyau d’aspiration ne décrit pas le flexible d’air."
 		]
 	},
 	"specifications": [
 		{
 			"label": "Nozzle diameter",
-			"value": "6 mm",
+			"value": "Description : 6,3 mm ; tableau : 6 mm. Diamètre livré à confirmer.",
 			"evidenceIds": [
 				"october5-tools-yato-tool-024-p1"
 			]
