@@ -32,12 +32,13 @@ const product: ToolProfileInput = {
     }
   },
   "editorial": {
-    "overview": "ProWin K-528G-14. Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
+    "overview": "K-528G-14 : pistolet gravitaire latéral à buse de 1,4 mm, godet de 400 cm³ et jet annoncé de 300 mm. Le K-528G-12 publie aussi 300 mm mais une buse de 1,2 mm et une autre valeur de Fluid Output. Les deux lignes conservent 250 L/min d’air déclarés.",
     "verifiedFacts": [
       "Buse : 1.4 mm.",
       "Largeur de jet : 300 mm."
     ],
     "limitations": [
+      "Fluid Output est donné en ml sans durée, et ne devient pas un débit en ml/min. La plage de 20 à 28 psi n’associe pas un point de mesure à chaque débit ; aucun besoin continu n’est calculé.",
       "Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
       "La table publie une consommation, sans pression de mesure précise ni protocole de pulvérisation lié à cette valeur.",
       "Les codes SG de la colonne Turn-up Kit sont des kits de réparation et ne constituent pas des références de pistolets.",

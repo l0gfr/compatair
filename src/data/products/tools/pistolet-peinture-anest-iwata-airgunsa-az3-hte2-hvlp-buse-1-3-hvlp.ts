@@ -10,10 +10,8 @@ const product: ToolProfileInput = {
   "model": "AIRGUNSA AZ3 HTE2 HVLP buse 1.3 HVLP",
   "mpn": "W0SPG84AG13C",
   "demandModel": "variable-volume",
-  "workingPressureBar": {
-    "typical": 2
-  },
-  "demandExplanation": "Les conditions de référence du volume normalisé et/ou le régime de mesure manquent. Le débit publié reste hors du calcul FAD.",
+  "workingPressureBar": {},
+  "demandExplanation": "Le code candidat84AG13C n’est pas confirmé par la ligne actuelle85AG13C. Aucun point de pression–consommation n’est attribué à une identité non confirmée.",
   "confidence": "B",
   "variant": {
     "familyId": "anest-iwata-airgunsa-az3-hte2-hvlp",
@@ -33,17 +31,13 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Anest Iwata AIRGUNSA AZ3 HTE2 HVLP buse 1.3 HVLP. Les conditions de référence du volume normalisé et/ou le régime de mesure manquent. Le débit publié reste hors du calcul FAD. Le code W0SPG84AG13C associe la buse 1.3 mm au chapeau HVLP, en alimentation gravité, avec un débit de produit de 150 mL/min et un jet de 280 mm au point publié.",
+    "overview": "AZ3 HTE2 HVLP, code candidat W0SPG84AG13C : le tableau actuellement accessible imprime W0SPG85AG13C pour le pistolet HVLP en 1,3 mm. Cette ligne ne confirme pas l’identité de la référence candidate. Les valeurs de débit et de pression du code85 ne lui sont donc pas attribuées.",
     "verifiedFacts": [
-      "Buse : 1.3 mm.",
-      "Chapeau : HVLP.",
-      "Alimentation : gravité.",
-      "Débit de produit au point du tableau : 150 mL/min.",
-      "Largeur de jet au point du tableau : 280 mm.",
-      "Consommation publiée dans son unité originale : 340 Nℓ/min, consommation normalisée du tableau.",
-      "Pression dans la source : 2 bar, pression au point du tableau."
+      "Le tableau courant imprime W0SPG85AG13C pour la configurationHVLP en1,3mm.",
+      "Le code candidat W0SPG84AG13C n’est pas confirmé par cette ligne ; aucune substitution de référence."
     ],
     "limitations": [
+      "Une ancienne référence ou une équivalence éventuelle doit être confirmée par une source propre au code84. Aucun MPN n’est remplacé pour faire admettre la page.",
       "Le catalogue 2025 publie la consommation en Nℓ/min, sans définir les conditions de référence du volume normalisé ; cette valeur n’est pas assimilée au FAD en L/min.",
       "La consommation appartient au point du tableau commun à la configuration, sans essai physique CompatAir ni extrapolation à une autre pression.",
       "Le catalogue porte une couverture 2025 et conserve une ancienne mention de liste de prix 2020 sur certaines pages ; la date de fabrication et la disponibilité en France ne sont pas établies.",
@@ -52,50 +46,15 @@ const product: ToolProfileInput = {
   },
   "specifications": [
     {
-      "label": "Buse",
-      "value": "1.3 mm",
+      "label": "Code de la ligne actuelle comparée, distinct du candidat",
+      "value": "W0SPG85AG13C",
       "evidenceIds": [
         "october8-tools-iwata-catalog-current-4-p7"
       ]
     },
     {
-      "label": "Chapeau",
-      "value": "HVLP",
-      "evidenceIds": [
-        "october8-tools-iwata-catalog-current-4-p7"
-      ]
-    },
-    {
-      "label": "Alimentation",
-      "value": "gravité",
-      "evidenceIds": [
-        "october8-tools-iwata-catalog-current-4-p7"
-      ]
-    },
-    {
-      "label": "Débit de produit au point du tableau",
-      "value": "150 mL/min",
-      "evidenceIds": [
-        "october8-tools-iwata-catalog-current-4-p7"
-      ]
-    },
-    {
-      "label": "Largeur de jet au point du tableau",
-      "value": "280 mm",
-      "evidenceIds": [
-        "october8-tools-iwata-catalog-current-4-p7"
-      ]
-    },
-    {
-      "label": "Consommation publiée dans son unité originale",
-      "value": "340 Nℓ/min, consommation normalisée du tableau",
-      "evidenceIds": [
-        "october8-tools-iwata-catalog-current-4-p7"
-      ]
-    },
-    {
-      "label": "Pression dans la source",
-      "value": "2 bar, pression au point du tableau",
+      "label": "Buse de cette ligne, non transférée au candidat",
+      "value": "1,3mm",
       "evidenceIds": [
         "october8-tools-iwata-catalog-current-4-p7"
       ]

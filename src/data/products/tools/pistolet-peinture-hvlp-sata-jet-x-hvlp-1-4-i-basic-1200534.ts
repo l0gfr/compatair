@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SATA jet X HVLP 1.4 I BASIC (réf. 1200534). Les sources constructeur publient des consommations divergentes pour cette famille ; aucune valeur n’est arbitrée pour calculer un débit.",
+		"overview": "jet X HVLP 1.4 I BASIC 1200534 : buse I de 1,4 dans la matrice de commande, à distinguer de la buse O du 1200211. Le catalogue donne 445 Nl/min pour la famille HVLP ; la notice donne 430 Nl/min à 2 bar. Ces valeurs ne sont pas arbitrées, ni complétées par les 420 L/min de la fiche 1.3 I.",
 		"verifiedFacts": [
 			"Technologie de pulvérisation : HVLP.",
 			"Profil de buse : I.",
@@ -45,6 +45,7 @@ const product: ToolProfileInput = {
 			"Température maximale du produit pulvérisé : 50 °C."
 		],
 		"limitations": [
+			"La notice limite le fonctionnement HVLP à 2 bar. Sa plage générale jusqu’à 2,4 bar ne constitue pas un réglage HVLP équivalent. Les états de volume normalisé restent à confirmer.",
 			"Les sources constructeur publient des consommations divergentes pour cette famille ; aucune valeur n’est arbitrée pour calculer un débit.",
 			"Le catalogue 2025 donne RP 335 / HVLP 445 Nl/min ; la notice officielle donne RP 325 / HVLP 430 Nl/min explicitement à 2 bar. Aucune valeur n’est arbitrée.",
 			"La fiche précise HVLP 1.3 I BASIC 1200170 affiche 420 l/min au 2026-10-03. L/min et Nl/min restent distincts ; aucune condition normale absente des citations n’est supposée.",
@@ -161,6 +162,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 3fc1a486bdd5ee9f5b609cc09300c8f7a2dc94e8a1393d752726496ee84366b2. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "october3d-tools-sata-current-catalog-2025-p15",
+			"sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=15",
+			"sourceLabel": "SATA, document technique officiel, page PDF 15",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-03",
+			"confidence": "B",
+			"notes": "Réponse primaire SHA-256 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3. Déclaration constructeur, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {

@@ -75,7 +75,9 @@ describe('documented compressors October4', () => {
    for (const field of ['model','tankLiters','maxPressureBar','fadCurve',...(p.dutyCycle ? ['dutyCycle'] : []),...(p.oilType !== 'unknown' ? ['oilType'] : [])]) expect(p.fieldSources[field].length).toBeGreaterThan(0);
    for (const refs of Object.values(p.fieldSources)) for (const ref of refs) expect(ids.has(ref)).toBe(true);
    for (const spec of p.specifications) for (const ref of spec.evidenceIds) expect(ids.has(ref)).toBe(true);
-   for (const e of p.evidence) { expect(e.retrievedAt).toBe('2026-10-04'); expect(e.sourceRole).toBe('primary'); expect(e.sourceUrl).toMatch(/^https:/); }
+   for (const e of p.evidence) {
+    const reviewedNeighbor = p.id === 'jun-air-6-25' && e.id === 'october3d-bambi-product-31-review-20261019-for-jun-air-6-25';
+    expect(e.retrievedAt).toBe(reviewedNeighbor ? '2026-10-19' : '2026-10-04'); expect(e.sourceRole).toBe('primary'); expect(e.sourceUrl).toMatch(/^https:/); }
   }
  });
  const mutations = [

@@ -40,7 +40,11 @@ describe('documented expansion, September 30', () => {
 		expect(uryu.airflowBasis).toBe('average');
 		const ample = batch.compressors.find(p => p.model === 'COMBI XP 22 500D');
 		expect(evaluateCompatibility(ample, uryu).verdict).toBe('insufficient_data');
-		expect(evaluateCompatibility(ample, top).verdict).toBe('continuous');
+		expect(ample.dutyCycle).toBeUndefined();
+		expect(evaluateCompatibility(ample, top).verdict).toBe('insufficient_data');
+		const documentedContinuousFixture = { ...ample, id: 'test-only-continuous-fixture', dutyCycle: 1 };
+		expect(evaluateCompatibility(documentedContinuousFixture, top).verdict).toBe('continuous');
+		expect(evaluateCompatibility(documentedContinuousFixture, uryu).verdict).toBe('insufficient_data');
 	});
 	it('rejects changed pressure columns, unsupported units, average erasure and service outside the reviewed series', () => {
 		for (const mutate of [s => { s.compressors[0].pressureBar = 15; }, s => { s.tools[0].flowUnit = 'cfm'; }, s => { s.tools.find(p => p.brand === 'URYU').flowBasis = 'maximum'; }, s => { s.compressors[0].model = 'RS-PRO 55.0'; }, s => { s.sources[0].sha256 = 'missing'; }]) {

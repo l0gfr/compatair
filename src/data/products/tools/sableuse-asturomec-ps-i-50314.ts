@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Asturomec PS/I (réf. 50314). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "PS/I 50314 : sablage à aspiration avec tube de 3 m en 8 × 13 mm, buse de 6 mm et réglage du débit d’abrasif. La PS 50210 voisine possède un tube de 2 m en 16 × 22 mm. Le trajet d’abrasif et la construction diffèrent ; le diamètre de buse identique ne chiffre pas le besoin d’air.",
 		"verifiedFacts": [
 			"Buse : acier cémenté trempé, diamètre 6 mm.",
 			"Corps : métal poli nickelé, soft-touch.",
@@ -40,6 +40,7 @@ const product: ToolProfileInput = {
 			"Réglage : débit de sable réglable."
 		],
 		"limitations": [
+			"Les 5 à 8 bar sont une plage de service sans consommation associée. Le tube d’abrasif ne décrit pas le flexible d’air.",
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 			"Édition italienne 2024 ; aucune disponibilité commerciale actuelle n’est vérifiée.",
 			"La plage de service ne constitue pas une pression de mesure de consommation ; aucun facteur de marche implicite.",

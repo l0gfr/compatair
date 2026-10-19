@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco WT-2120-12, référence WT-2120-12. Le tableau fabricant publie 2 970 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Plage de couple publiée : 1600 à 4000 Nm. Vitesse à vide publiée : 3300 tr/min.",
+		"overview": "WT-2120-12 : clé à chocs à plage de 1 600 à 4 000 Nm, 3 300 tr/min et 850 impacts/min. La WT-2119-12 voisine s’arrête à 3 500 Nm avec 820 impacts/min. Les deux lignes donnent 2 970 L/min à 6,2 bar ; la plage mécanique ne crée pas un gain d’air.",
 		"verifiedFacts": [
 			"Performances publiées à 6,2 bar à l’entrée de l’outil, note de la page 89.",
 			"Consommation publiée dans la colonne Air Cons. m³/min, multipliée par 1 000. Le régime de mesure n’est pas précisé dans ce tableau.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Impacts par minute : 850."
 		],
 		"limitations": [
+			"Le régime de consommation reste inconnu. Le couple de desserrage et le couple de travail ne deviennent pas une consigne de serrage final.",
 			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
 			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
 		]
@@ -104,6 +105,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée dans la colonne Air Cons. m³/min, multipliée par 1 000. Le régime de mesure n’est pas précisé dans ce tableau."
+		},
+		{
+			"id": "cleco-wt-2119-12-20260926",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=89",
+			"sourceLabel": "Cleco et Master Power, catalogue GI-1250-EU, p. 89, réf. WT-2119-12",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation publiée dans la colonne Air Cons. m³/min, multipliée par 1 000. Le régime de mesure n’est pas précisé dans ce tableau."
 		}
 	],
 	"fieldSources": {
@@ -115,6 +125,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"cleco-wt-2120-12-20260926"
+		],
+		"airflowBasis": [
+			"cleco-wt-2120-12-20260926"
 		]
 	},
 	"notes": [
@@ -124,7 +137,8 @@ const product: ToolProfileInput = {
 		"min": 2970,
 		"typical": 2970,
 		"max": 2970
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

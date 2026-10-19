@@ -33,7 +33,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Prona R-430-HVLP-13 buse 1.3 HVLP Gravity. Le régime de consommation et/ou la pression de travail appariée ne sont pas définis. Le débit publié reste hors du calcul FAD. Le tableau associe R-430-HVLP-13, buse 1.3 mm, chapeau HVLP et alimentation gravité, à un débit de produit de 158 ml/min et un jet de 236 mm à13cm ;308mm à20cm (±20).",
+    "overview": "R-430 HVLP 1.3 : 158 ml/min de produit et jet de 236 mm à 13 cm ou 308 mm à 20 cm, avec la tolérance publiée de ±20. La ligne 1.2 donne 147 ml/min et 234 ou 305 mm. Le tableau distingue donc calibre, débit produit et distance de jet, sans changement du débit d’air de famille.",
     "verifiedFacts": [
       "Désignation du tableau : R-430-HVLP-13.",
       "Buse : 1.3 mm.",
@@ -46,6 +46,7 @@ const product: ToolProfileInput = {
       "Pression dans la source : 1.8–2.0 kg/cm² (0.18–0.2 MPa)."
     ],
     "limitations": [
+      "Les 350 à 370 L/min pour 1,8 à 2,0 kg/cm² restent sans régime qualifié ; les expressions arrondies en MPa ne créent pas de points de mesure supplémentaires.",
       "Le tableau décrit un point de pulvérisation du pistolet ; le besoin d’un réservoir ou d’une pompe externe consommant de l’air doit être compté séparément.",
       "La pression est publiée en kg/cm² avec un arrondi secondaire en MPa ; conserver les deux cellules originales et leur précision, sans les présenter comme des mesures supplémentaires.",
       "Disponibilité et conformité de commercialisation en France non établies.",

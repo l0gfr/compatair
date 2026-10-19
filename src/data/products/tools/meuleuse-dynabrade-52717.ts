@@ -44,7 +44,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade 52717, référence 52717, présente une consommation maximale publiée de 1 133 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 107. Puissance moteur : 744 W. Vitesse moteur publiée : 18 000 tr/min.",
+		"overview": "52717 : meuleuse pour cônes ou meules-bouchons jusqu’à 38 mm, sortie mâle 3/8-24, 18 000 tr/min et maximum de 1 133 L/min à 6,2 bar. La 52716 tourne à 15 000 tr/min pour 1 104 L/min. La vitesse admissible de l’accessoire doit être vérifiée avant le bilan d’air.",
 		"verifiedFacts": [
 			"Puissance moteur : 744 W.",
 			"Vitesse moteur publiée : 18 000 tr/min.",
@@ -54,6 +54,7 @@ const product: ToolProfileInput = {
 			"Flexible : 10 mm de diamètre intérieur publié."
 		],
 		"limitations": [
+			"Le filetage de sortie ne désigne pas une pince. La masse est retirée du comparatif car les unités imprimées sont contradictoires ; aucune unité n’est choisie arbitrairement.",
 			"Masse non retenue : le tableau publie des unités contradictoires (2.0 (198)).",
 			"Le calcul conserve la consommation maximale publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
 			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
@@ -107,6 +108,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Tableau 107-0, ligne 3. Consommation maximale publiée : 40 (1,133) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
+		},
+		{
+			"id": "dynabrade-52716-catalogue-d25-01",
+			"sourceUrl": "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf#page=107",
+			"sourceLabel": "Dynabrade, catalogue D25.01, 52716, page 107",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Tableau 107-0, ligne 2. Consommation maximale publiée : 39 (1,104) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
 		}
 	],
 	"fieldSources": {

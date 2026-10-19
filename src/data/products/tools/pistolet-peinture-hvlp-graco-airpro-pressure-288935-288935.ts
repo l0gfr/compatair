@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Graco AirPro pressure 288935 (réf. 288935). Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "AirPro 288935 : configuration HVLP General Metal à orifice de 0,5 mm, contre 0,8 mm pour le 288936. Le tableau impose 19 psi, soit 1,3 bar, comme maximum d’entrée pour ce mode ; le maximum mécanique de 7 bar ne le remplace pas. La famille publie 14,9 CFM au point de 1,3 bar.",
 		"verifiedFacts": [
 			"Orifice Size in. (mm) : 0.020 (0.5).",
 			"Spray technology : HVLP.",
@@ -40,6 +40,7 @@ const product: ToolProfileInput = {
 			"Max. HVLP/Compliant Air Pressure psi (MPa, bar) : 19 (0.13, 1.3)."
 		],
 		"limitations": [
+			"La vanne de jet est entièrement ouverte dans les relevés ; le protocole ne qualifie pas explicitement tous les régimes de gâchette ni l’état de référence des CFM. L’alimentation produit et ses auxiliaires sont distincts.",
 			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
 			"La consommation est liée à une technologie et à une application. Le protocole de mesure ne précise pas explicitement la gâchette entièrement tirée ; le régime ne reçoit donc pas une qualification en charge.",
 			"Les variantes à débit accru 24U187 et 24U188 et la version haute production 24D472 ne reprennent pas automatiquement le débit des autres configurations.",

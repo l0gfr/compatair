@@ -81,16 +81,15 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Champion FM90. Le débit restitué sous pression reste non qualifié. FLOOR, stockage externe.",
+		"overview": "FM90, code A34905438, version 10 bar : capacité publiée de 15,51 m³/min, moteur de 90 kW et alimentation 400 V à 50 Hz, montage au sol. Le FM132 A34905444 voisin annonce 21,51 m³/min à 10 bar pour 132 kW.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 10 bar.",
 			"Montage sans réservoir de stockage intégré explicitement documenté."
 		],
 		"limitations": [
-			"La capacité en m³/min est publiée à la pression de fonctionnement ; la brochure ne qualifie pas ici sa méthode comme FAD. La courbe CompatAir reste vide.",
-			"La pression maximale de cette version codée est 10 bar. Les configurations 7,5 et 13 bar ne sont pas comptées comme de nouveaux modèles.",
-			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+			"Les codes des versions 7,5, 10 et 13 bar sont distincts. Le code A34905438 appartient à la colonne 10 bar.",
+			"La capacité sous pression est publiée, mais sa qualification et son protocole FAD restent à confirmer ; la courbe CompatAir demeure vide.",
+			"Le taux de marche reste inconnu. Refroidissement, stockage externe, raccordement et disponibilité demandent une étude de ce groupe industriel."
 		]
 	},
 	"evidence": [
@@ -126,12 +125,16 @@ const product: CompressorInput = {
 		],
 		"mpn": [
 			"october4-champion-fm90-132-p3"
+		],
+		"voltage": [
+			"october4-champion-fm90-132-p3"
 		]
 	},
 	"notes": [
 		"Portée de la source : capacity-at-pressure-method-unqualified.",
 		"Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées."
-	]
+	],
+	"voltage": "400 V, 50 Hz"
 };
 
 export default product;

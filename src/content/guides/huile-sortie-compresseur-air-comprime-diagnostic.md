@@ -3,13 +3,14 @@ title: "Huile à la sortie du compresseur : localiser la contamination avant de
 seoTitle: "Huile dans l’air comprimé : diagnostic au bon endroit"
 description: "Huile au raccord, dans le filtre ou sur la pièce : distinguez les origines possibles, la forme du contaminant et les vérifications utiles au réparateur."
 pubDate: "2026-09-26"
+updatedDate: 2026-10-19
 category: "Utiliser"
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "carrosserie-peinture", "maintenance-industrielle"]
 readingTime: 4
 reviewStatus: "internal"
 relatedGuides: ["huile-cle-a-chocs-pneumatique-lubrification", "filtre-charbon-actif-air-comprime-vapeurs-huile", "tester-contamination-air-avant-peinture"]
-sources: ["https://www.abacaircompressors.com/en-africa/blog/air-compressor-troubleshooting", "https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/174004425_EN.PDF", "https://www.atlascopco.com/en-us/compressors/air-compressor-blog/air-compressor-troubleshooting"]
+sources: ["https://www.abacaircompressors.com/en-africa/blog/air-compressor-troubleshooting", "https://asset.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf", "https://www.atlascopco.com/en-us/compressors/air-compressor-blog/air-compressor-troubleshooting"]
 ---
 
 **Trouver une trace d’huile à un raccord ne permet pas de désigner immédiatement le compresseur comme seule cause.** Il faut retrouver le trajet de l’air, les équipements de lubrification et la méthode de constat. Le traitement à prévoir dépend aussi de la forme du contaminant : liquide, aérosol ou vapeur.
@@ -20,7 +21,7 @@ Si le procédé exige un air maîtrisé, protégez sa production suivant la proc
 
 Nous proposons de dessiner le chemin depuis le compresseur jusqu’au poste, avec les filtres, sécheurs, lubrificateurs, collecteurs et flexibles. Notez où la trace a été observée et comment : visuellement, dans un condensat ou lors d’un contrôle prévu par le procédé.
 
-La [documentation Parker](https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/174004425_EN.PDF) décrit plusieurs origines de contamination, dont l’air aspiré et les équipements du système. Cette lecture évite de traiter une installation comme si elle ne comportait qu’une pompe et un tuyau neuf.
+La [documentation Parker, page PDF 8](https://asset.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf#page=8) distingue les aérosols d’huile de la vapeur : la coalescence traite les gouttelettes, tandis que la vapeur nécessite un étage d’adsorption adapté. Cette distinction organise le choix du traitement ; elle ne désigne pas à elle seule l’origine de la trace constatée.
 
 ## Un lubrificateur peut être voulu sur une autre branche
 
@@ -66,8 +67,8 @@ Le dossier proposé associe références des pièces, action réalisée, configu
 
 ## Sources et méthode
 
-Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
+Sources et passages déterminants relus le **19 octobre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
 
 - [ABAC, Air Compressor Troubleshooting, Oil in the outlet air](https://www.abacaircompressors.com/en-africa/blog/air-compressor-troubleshooting)
-- [Parker, High quality compressed air, origines des contaminants](https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/174004425_EN.PDF)
+- [Parker, Compressed air interchangeable elements, page PDF 8, formes de contamination](https://asset.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf)
 - [Atlas Copco, Air compressor troubleshooting, isolation et intervention](https://www.atlascopco.com/en-us/compressors/air-compressor-blog/air-compressor-troubleshooting)

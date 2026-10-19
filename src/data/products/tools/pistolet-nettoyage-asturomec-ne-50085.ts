@@ -32,13 +32,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Asturomec NE (réf. 50085). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "NE 50085 : pistolet de lavage à réservoir en acier peint de 1 000 cm³ et nébuliseur en laiton réglable. Le NE/S 50086 utilise un réservoir aluminium de même volume. Cette différence de construction ne démontre pas une différence de besoin d’air ; les deux annoncent 2 à 8 bar de service.",
 		"verifiedFacts": [
 			"Réservoir : acier peint 1000 cc.",
 			"Corps : aluminium.",
 			"Buse : nébuliseur réglable."
 		],
 		"limitations": [
+			"Le catalogue ne donne pas de consommation pour ce bloc. La compatibilité chimique du liquide doit suivre la notice de la référence livrée.",
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 			"Édition italienne 2024 ; aucune disponibilité commerciale actuelle n’est vérifiée.",
 			"La plage de service ne constitue pas une pression de mesure de consommation ; aucun facteur de marche implicite.",

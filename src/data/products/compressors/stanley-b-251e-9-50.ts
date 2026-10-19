@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Stanley B 251E/9/50, référence 28DC404STN604 : cuve de 50 L, pression maximale publiée de 9 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Groupe de compression publié : B2800. Groupe de compression : B2800. Nombre de cylindres : 2.",
+		"overview": "B 251E/9/50, code 28DC404STN604 : cuve de 50 L, groupe B2800 de 1,5 kW et maximum de 9 bar, en 230 V à 50 Hz. Le B 251E/9/100 conserve le même groupe et les 255 L/min aspirés, avec une cuve de 100 L.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 1,5 kW.",
@@ -30,23 +30,15 @@ const product: CompressorInput = {
 			"Vitesse de rotation : 1250 tr/min."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"Données issues du stanley, catalogue compresseurs 2020, encore accessible sur le site du fabricant. La commercialisation actuelle de cette référence n’est pas confirmée.",
-			"La masse et les dimensions de ce tableau concernent l’emballage, pas la machine nue."
+			"Les valeurs d’aspiration communes ne documentent pas une production supérieure pour le 100 L. Le FAD sous pression et le taux de marche restent inconnus.",
+			"Le 50 L indique 46,4 kg brut emballé et 770 × 340 × 670 mm emballé, en largeur × profondeur × hauteur ; le 100 L, 58,5 kg brut emballé.",
+			"Le catalogue de 2020 réserve la roulette avant au 100 L. Disponibilité actuelle et dimensions de la machine nue à confirmer."
 		]
 	},
 	"specifications": [
 		{
 			"label": "Conditions du débit",
 			"value": "Le tableau Stanley, catalogue compresseurs 2020 indique « Air displacement » : 255 L/min aspirés. Aucun débit restitué à une pression de mesure n’est fourni dans cette ligne.",
-			"evidenceIds": [
-				"stanley-28dc404stn604-20260927"
-			]
-		},
-		{
-			"label": "Équipement",
-			"value": "Groupe de compression publié : B2800.",
 			"evidenceIds": [
 				"stanley-28dc404stn604-20260927"
 			]
@@ -80,7 +72,7 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Dimensions de l’emballage (L × P × H)",
+			"label": "Dimensions de l’emballage (largeur × profondeur × hauteur)",
 			"value": "770x340x670 mm",
 			"evidenceIds": [
 				"stanley-28dc404stn604-20260927"

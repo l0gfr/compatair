@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "PREBENA PIONEER 210, référence PIONEER 210 : cuve de 20 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Capacité de remplissage sans pression de mesure : 139 L/min. Vitesse de rotation : 2800 tr/min.",
+		"overview": "PIONEER 210 : cuve de 20 L, moteur de 1,5 kW à 2 800 tr/min et masse publiée de 26 kg. Le catalogue distingue 210 L/min aspirés et 139 L/min de remplissage. L’ORKAN 250 voisin possède 24 L, tourne à 1 400 tr/min et annonce 175 L/min de remplissage pour 35 kg.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons sans huile. Puissance moteur publiée : 1,5 kW.",
@@ -30,8 +30,9 @@ const product: CompressorInput = {
 			"Masse publiée : 26,0 kg."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer."
+			"La pression d’essai du remplissage et le taux de marche restent à documenter ; aucun point FAD n’est ajouté.",
+			"Le PIONEER 210 annonce une puissance acoustique LWA de 74 dB(A), contre 76 dB(A) pour l’ORKAN 250. Le LWA ne décrit pas directement le bruit reçu par l’opérateur.",
+			"Les 20 L et les 480 × 470 × 725 mm publiés servent au choix de transport et d’implantation. La compatibilité avec un outil exact demande le débit utile à sa pression."
 		]
 	},
 	"specifications": [
@@ -66,6 +67,13 @@ const product: CompressorInput = {
 		{
 			"label": "Masse publiée",
 			"value": "26,0 kg",
+			"evidenceIds": [
+				"prebena-pioneer-210-20260927"
+			]
+		},
+		{
+			"label": "Puissance acoustique publiée LWA",
+			"value": "74 dB(A)",
 			"evidenceIds": [
 				"prebena-pioneer-210-20260927"
 			]

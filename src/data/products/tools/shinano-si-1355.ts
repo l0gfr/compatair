@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-1355, référence SI-1355. Le tableau fabricant publie 456 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 90 Nm. Vitesse à vide publiée : 9 000 tr/min.",
+		"overview": "SI-1355 : clé à chocs à carré de 3/8 pouce et commande papillon, donnée pour 90 Nm maximum et 9 000 tr/min à vide. Les 7,6 L/s maximum correspondent à 456 L/min à 6,3 bar. La SI-1345EX voisine possède une autre construction ; sa capacité ne complète pas celle de ce modèle.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 16.2 CFM / 7.6 L/s. Conversion du maximum publié : 7.6 × 60 = 456 L/min.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Masse publiée : 1,12 kg."
 		],
 		"limitations": [
+			"La commande et l’accès au poste doivent être évalués avec la douille. Le couple de catalogue ne garantit pas le serrage obtenu sur un assemblage.",
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
 			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
@@ -87,6 +88,24 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "shinano-si-1355-20260926-workingpressurebar-1",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+		},
+		{
+			"id": "shinano-si-1345ex-20260926",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=9",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 9, réf. SI-1345EX",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Colonne Max Air Consumption : 15 CFM / 7.1 L/s. Conversion du maximum publié : 7.1 × 60 = 426 L/min."
+		},
+		{
+			"id": "shinano-si-1345ex-20260926-workingpressurebar-1",
 			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
 			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
 			"sourceType": "manufacturer",

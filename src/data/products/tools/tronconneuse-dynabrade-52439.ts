@@ -44,7 +44,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade 52439, référence 52439, présente une consommation maximale publiée de 595 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 109. Puissance moteur : 306 W. Vitesse moteur publiée : 12 000 tr/min.",
+		"overview": "52439 : tronçonneuse d’angle pour disque diamant de 76 mm, 12 000 tr/min et sortie 3/8-24. Le tableau publie 595 L/min maximum à 6,2 bar. La 54746 voisine est une autre configuration ; ni la broche ni le débit ne suffisent à transférer un disque entre les outils.",
 		"verifiedFacts": [
 			"Puissance moteur : 306 W.",
 			"Vitesse moteur publiée : 12 000 tr/min.",
@@ -54,6 +54,7 @@ const product: ToolProfileInput = {
 			"Flexible : 6 mm de diamètre intérieur publié."
 		],
 		"limitations": [
+			"La notice impose les protections et la vitesse admissible de l’accessoire. La longueur aux unités contradictoires reste non retenue ; aucune valeur n’est reconstruite.",
 			"Longueur non retenue : le tableau publie des unités contradictoires (8-1/2 (126)).",
 			"Le calcul conserve la consommation maximale publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
 			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
@@ -107,6 +108,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Tableau 109-0, ligne 4. Consommation maximale publiée : 21 (595) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
+		},
+		{
+			"id": "dynabrade-54746-catalogue-d25-01",
+			"sourceUrl": "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf#page=110",
+			"sourceLabel": "Dynabrade, catalogue D25.01, 54746, page 110",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Tableau 110-0, ligne 8. Consommation maximale publiée : 40 (1,133) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
 		}
 	],
 	"fieldSources": {

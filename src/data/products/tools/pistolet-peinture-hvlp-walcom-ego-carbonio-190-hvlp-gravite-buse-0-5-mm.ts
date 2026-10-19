@@ -8,16 +8,11 @@ const product: ToolProfileInput = {
   "label": "Walcom Ego Carbonio 190 HVLP, gravité, buse 0.5 mm",
   "brand": "Walcom",
   "model": "Ego Carbonio 190 HVLP, gravité, buse 0.5 mm",
-  "demandModel": "fixed-flow",
+  "demandModel": "variable-volume",
   "workingPressureBar": {
     "min": 2,
     "typical": 2,
     "max": 2
-  },
-  "airflowLpm": {
-    "min": 160,
-    "typical": 160,
-    "max": 160
   },
   "confidence": "B",
   "variant": {
@@ -38,17 +33,18 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Walcom Ego Carbonio 190 HVLP, gravité, buse 0.5 mm. Consommation constructeur au point documenté : 160 L/min à 2 bar. Buse 0.5 mm et alimentation gravité, explicitement proposées dans la matrice fabricant ; une configuration par diamètre et circuit de produit, sans variante de godet ou de manomètre.",
+    "overview": "Ego Carbonio 190 HVLP en 0,5 mm : le catalogue propose ce calibre en gravité sous le motif 7130**, sans suffixe complet de commande observé. La même documentation oppose 160 L/min à 5 CFM pour la famille. Aucun de ces deux chiffres ne permet de fixer arbitrairement un besoin de compresseur.",
     "verifiedFacts": [
       "Buse déclarée : 0.5 mm.",
       "Alimentation : gravité.",
       "Technologie de pulvérisation : HVLP.",
       "Masse du pistolet déclarée : 190 g.",
       "Motif de référence fabricant : 7130**.",
-      "Consommation publiée dans son unité originale : 160 L/min.",
+      "La ligne de famille publie 160 L/min et 5 CFM, écart non résolu.",
       "Pression dans la source : 2 bar à l’entrée, point de consommation."
     ],
     "limitations": [
+      "Le calibre de 0,7 mm voisin ne fournit pas une mesure indépendante permettant de lever cet écart. Le jeu de buse doit suivre les prescriptions du produit pulvérisé ; aucun MPN complet n’est fabriqué.",
       "Le débit est la déclaration constructeur pour cette famille au point de 2 bar ; le catalogue ne fournit pas un essai de consommation séparé pour chaque diamètre de buse.",
       "Le calcul est limité à 2 bar à l’entrée du pistolet. Il ne décrit pas la consommation sur toute la plage de réglage.",
       "Motif de référence publié, suffixe de commande non observé : aucun MPN complet n’est créé.",
@@ -94,7 +90,7 @@ const product: ToolProfileInput = {
     },
     {
       "label": "Consommation publiée dans son unité originale",
-      "value": "160 L/min",
+      "value": "160 L/min et5CFM sur la même ligne, écart non résolu.",
       "evidenceIds": [
         "october7-tools-walcom-catalog2026-p10"
       ]
@@ -134,9 +130,8 @@ const product: ToolProfileInput = {
       "october7-tools-walcom-catalog2026-p10",
       "october7-tools-walcom-carbonio-instructions-p12"
     ],
-    "airflowLpm": [
-      "october7-tools-walcom-catalog2026-p10",
-      "october7-tools-walcom-carbonio-instructions-p12"
+    "demandExplanation": [
+      "october7-tools-walcom-catalog2026-p10"
     ]
   },
   "notes": [
@@ -146,7 +141,8 @@ const product: ToolProfileInput = {
     "Motif de référence publié, suffixe de commande non observé : aucun MPN complet n’est créé.",
     "Une configuration physique par buse et alimentation ; les changements de godet, emballage ou manomètre ne sont pas comptés.",
     "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."
-  ]
+  ],
+  "demandExplanation": "La documentation de famille publie 160 L/min et 5 CFM sur la même ligne sans concordance démontrée. Aucun débit unique n’est arbitré pour la configuration0,5mm."
 };
 
 export default product;

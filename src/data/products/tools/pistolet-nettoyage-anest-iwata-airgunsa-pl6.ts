@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Anest Iwata AIRGUNSA PL6. Le régime de consommation et/ou la pression de travail appariée ne sont pas définis. Le débit publié reste hors du calcul FAD. Le code complet W0020200000 désigne AIRGUNSA PL6. fonction : pulvérisation d’huile, pétrole et détergent; alimentation : godet aluminium AG-1 de 1 L; tube de projection : 500 mm.",
+    "overview": "AIRGUNSA PL6 W0020200000 : pulvérisateur à godet aluminium AG1 de 1 L et extension de 500 mm, contre 260 mm pour le P6 W0020100000. Le catalogue le présente pour huile, pétrole et détergent ; le choix de longueur concerne l’accès au poste.",
     "verifiedFacts": [
       "Fonction : pulvérisation d’huile, pétrole et détergent.",
       "Alimentation : godet aluminium AG-1 de 1 L.",
@@ -38,6 +38,7 @@ const product: ToolProfileInput = {
       "Pression dans la source : Non publiée pour cet outil dans le tableau de commande."
     ],
     "limitations": [
+      "Le tableau de commande ne donne ni consommation ni pression de service. Le liquide autorisé et le montage restent à confirmer dans la notice ; aucun débit n’est transféré d’un autre pistolet.",
       "Cette page fournit l’identité et la construction de l’outil, sans consommation ni pression d’exercice appariées. Aucun besoin numérique n’est calculé.",
       "La disponibilité actuelle en France n’est pas établie. Les raccords rapides et les accessoires séparés ne sont pas comptés comme des outils supplémentaires.",
       "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."

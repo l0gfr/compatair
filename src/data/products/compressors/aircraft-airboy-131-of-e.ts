@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Aircraft AIRBOY 131 OF E, référence 2001225 : cuve de 6 L, pression maximale publiée de 8 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Capacité de remplissage approximative : 45 l/min. Condition de remplissage publiée : à 6 bar de pression de travail.",
+		"overview": "AIRBOY 131 OF E, article 2001225 : cuve de 6 L, maximum de 8 bar, moteur de 0,6 kW et masse approximative de 15,9 kg. Aircraft publie environ 45 L/min de remplissage à 6 bar. L’AIRBOY 186 OF E annonce 90 L/min de remplissage à la même pression pour 1,1 kW et environ 9,2 kg.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 0,6 kW.",
@@ -30,9 +30,9 @@ const product: CompressorInput = {
 			"Nombre de cylindres : 2."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"La capacité de remplissage et sa pression éventuelle ne sont pas assimilées à un débit FAD certifié. Demander les conditions d’essai et le débit utile à la pression de l’outil."
+			"La pression de remplissage est publiée : 6 bar. La qualification FAD et les conditions complètes d’essai restent à obtenir ; le débit aspiré distinct est de 107 L/min.",
+			"Le 131 donne Lp 49 dB(A) à 1 m selon DIN 45635 T13 et Lw 71 dB(A) selon DIN EN ISO 3744. Ces deux grandeurs acoustiques ne se comparent pas directement.",
+			"Le taux de marche reste inconnu. Les deux modèles de 6 L se distinguent par le groupe, la masse et le remplissage, sans verdict soutenu déduit de ces seuls chiffres."
 		]
 	},
 	"specifications": [
@@ -91,6 +91,20 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"aircraft-2001225-20260927"
 			]
+		},
+		{
+			"label": "Pression acoustique Lp publiée",
+			"value": "49 dB(A) à 1 m, DIN 45635 T13",
+			"evidenceIds": [
+				"aircraft-2001225-20260927"
+			]
+		},
+		{
+			"label": "Puissance acoustique Lw publiée",
+			"value": "71 dB(A), DIN EN ISO 3744",
+			"evidenceIds": [
+				"aircraft-2001225-20260927"
+			]
 		}
 	],
 	"evidence": [
@@ -102,6 +116,15 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Débit aspiré déclaré : 107 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+		},
+		{
+			"id": "aircraft-2001230-20260927-review-20261019-for-aircraft-airboy-131-of-e",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-186-of-e-2001230/",
+			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2001230, réf. 2001230",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-10-19",
+			"confidence": "A",
+			"notes": "Fiche voisine consultée en HTTPS le 19 octobre 2026 ; SHA-256 du corps : 49205fb1229863e6dd05baa6be184764800d5c78f88439891ae5f25931ccd26d. Configurations comparées séparément."
 		}
 	],
 	"fieldSources": {

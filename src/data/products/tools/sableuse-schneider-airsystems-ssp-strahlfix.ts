@@ -33,7 +33,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Schneider Airsystems SSP-Strahlfix. Le régime de consommation et/ou la pression de travail appariée ne sont pas définis. Le débit publié reste hors du calcul FAD. buse 5 mm, buse longue ; granulat maximal 0,8 mm ; diamètre de buse 5 mm.",
+    "overview": "SSP-Strahlfix DGKD030030 : buse longue de 5 mm, grain maximal de 0,8 mm et masse de 0,64 kg. Le Strahlfix staubfrei DGKD030263 ajoute des embouts et un sac de collecte, avec une masse de 0,9 kg. Les deux déclarent 150 L/min, mais pour 6 bar et 6–8 bar respectivement.",
     "verifiedFacts": [
       "Granulat maximal : 0,8 mm.",
       "Diamètre de buse : 5 mm.",
@@ -44,6 +44,7 @@ const product: ToolProfileInput = {
       "Pression dans la source : 6 bar, Arbeitsdruck."
     ],
     "limitations": [
+      "Le régime de mesure n’est pas qualifié. La collecte des granulats ne démontre pas une absence de poussières ; les protections et le traitement d’air restent à vérifier.",
       "Catalogue constructeur allemand 2025 reçu intégralement le 8 octobre 2026 ; aucune disponibilité commerciale ou essai physique CompatAir ne sont affirmés.",
       "Les états de référence du volume d’air et le régime de mesure ne sont pas explicitement qualifiés dans cette fiche. Verdict de compatibilité insuffisant tant que le besoin en action n’est pas établi.",
       "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."

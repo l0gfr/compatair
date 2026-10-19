@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair H891. Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse. Capacité du godet : 250 ml. Largeur de jet publiée : 100 mm.",
+		"overview": "H891 : petit pistolet à godet de 250 ml, buses proposées de 0,8 à 1,2 mm et jet annoncé de 100 mm. L’ASH-03 voisin possède un godet de 100 ml et un autre jet publié. Le H891 donne 4,5 à 6 cfm pour une plage de service de 1,5 à 2,5 bar ; ces plages ne forment pas une courbe de consommation.",
 		"verifiedFacts": [
 			"Capacité du godet : 250 ml.",
 			"Largeur de jet publiée : 100 mm.",
@@ -40,7 +40,7 @@ const product: ToolProfileInput = {
 			"Plage de consommation publiée, hors calcul : 4.5-6 cfm."
 		],
 		"limitations": [
-			"Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
+			"Aucun débit de pulvérisation à un point de pression précis n’est établi. Le calibre et le volume de produit à préparer précèdent le choix du compresseur.",
 			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
 		]
 	},
@@ -86,6 +86,16 @@ const product: ToolProfileInput = {
 			"id": "october2-tools-steed-7-p5",
 			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU#page=5",
 			"sourceLabel": "Hymair, documentation technique fabricant, page PDF 5",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-01",
+			"confidence": "B",
+			"notes": "SHA-256 de la réponse source : 971e9f3f662af10d3c638d5e9c29c8847ee04672c40e29957ad4ca4eb13d61c1. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "october2-tools-steed-7-p2",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU#page=2",
+			"sourceLabel": "Hymair, documentation technique fabricant, page PDF 2",
 			"sourceType": "manual",
 			"sourceRole": "primary",
 			"retrievedAt": "2026-10-01",

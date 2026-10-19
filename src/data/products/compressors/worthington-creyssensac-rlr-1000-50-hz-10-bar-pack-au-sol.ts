@@ -73,16 +73,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Worthington Creyssensac RLR 1000, Pack au sol, 10 bar. 1 150 L/min à 9,5 bar.",
+		"overview": "RLR 1000 Pack au sol, version 10 bar à 50 Hz : 69 m³/h, soit 1 150 L/min, à 9,5 bar pour un moteur de 7,5 kW. Le montage Pack est sans sécheur ni cuve intégrés. Le Full Feature sur 500 L annonce le même point FAD, avec un autre équipement.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Configuration de stockage documentée : groupe au sol sans réservoir de stockage intégré.",
 			"Pression maximale de fonctionnement publiée : 10 bar."
 		],
 		"limitations": [
-			"Cycle de service du groupe complet non établi ; la tenue permanente reste indéterminée.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Configuration publiée dans la documentation citée ; disponibilité commerciale actuelle à confirmer."
+			"Les 19,1 L/s également imprimés sont arrondis ; la conversion des 69 m³/h est conservée comme base unique.",
+			"Le Pack pèse 225 kg selon le tableau ; le Full Feature sur 500 L, 420 kg. Le stockage et le traitement d’air changent, sans hausse de la capacité publiée à cette pression.",
+			"Le taux de marche du groupe complet reste à confirmer. Réservoir externe, traitement d’air requis, raccordement et disponibilité sont à préciser sur le devis.",
+			"Les versions de pression 8, 10 et 13 bar conservent des profils séparés."
 		]
 	},
 	"evidence": [

@@ -44,7 +44,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade 50561, référence 50561, présente une consommation maximale publiée de 595 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 90. Puissance moteur : 298 W. Vitesse moteur publiée : 15 000 tr/min.",
+		"overview": "50561 : ponceuse rotative à aspiration centralisée, plateau de 76 mm et prise d’aspiration de 32 mm. Le tableau donne 298 W, 15 000 tr/min et 595 L/min maximum à 6,2 bar. La 54430 voisine possède un plateau de 102 mm et un autre moteur ; elle ne remplace pas ce montage par son seul débit.",
 		"verifiedFacts": [
 			"Puissance moteur : 298 W.",
 			"Vitesse moteur publiée : 15 000 tr/min.",
@@ -54,6 +54,7 @@ const product: ToolProfileInput = {
 			"Flexible : 6 mm de diamètre intérieur publié."
 		],
 		"limitations": [
+			"Le carter, l’accessoire et le captage doivent suivre la référence exacte. La masse aux unités incohérentes reste hors comparaison ; aucun essai de captage n’est revendiqué.",
 			"Masse non retenue : le tableau publie des unités contradictoires (1.7 (0.7)).",
 			"Le calcul conserve la consommation maximale publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
 			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
@@ -107,6 +108,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Tableau 90-1, ligne 1. Consommation maximale publiée : 21 (595) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
+		},
+		{
+			"id": "dynabrade-54430-catalogue-d25-01",
+			"sourceUrl": "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf#page=77",
+			"sourceLabel": "Dynabrade, catalogue D25.01, 54430, page 77",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Tableau 77-1, ligne 4. Consommation maximale publiée : 40 (1,133) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
 		}
 	],
 	"fieldSources": {

@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "ANI BLACK/S HVLP buse 1.5. Consommation constructeur au point documenté : 400 L/min à 2.6 bar. Montage de référence : RP1 amont 2.6 bar ; TMD1 interne 1.6 bar. La pression calculée est la lecture amont RP1 ; les pertes d’un autre montage ne sont pas établies. Buse de 1.5 mm, technologie HVLP, alimentation gravité. Cette combinaison est proposée par le fabricant sous le code AH141746.",
+    "overview": "ANI BLACK/S HVLP 1,5 mm AH141746 : le tableau de jet donne 350 mm à 150 mm de distance et 400 mm à 200 mm. La 1,4 mm AH141745 donne 330 et 390 mm aux mêmes distances. La famille conserve 400 L/min dans le montage RP1 à 2,6 bar amont et TMD1 à 1,6 bar interne.",
     "verifiedFacts": [
       "Buse : 1.5 mm.",
       "Chapeau / technologie : HVLP.",
@@ -50,6 +50,7 @@ const product: ToolProfileInput = {
       "Pression dans la source : RP1 amont 2.6 bar ; TMD1 interne 1.6 bar."
     ],
     "limitations": [
+      "Les deux pressions appartiennent à des lieux différents. Les valeurs de cette édition TMD1 ne qualifient pas un ensemble TMD2 ni un autre réseau.",
       "Données de l’édition 2020 actuellement liée par le fabricant ; la continuité avec les ensembles TMD2 de 2026 n’est pas établie.",
       "Le verdict porte uniquement sur le montage constructeur avec lecture amont RP1, réglages et technologie décrits. Il ne garantit pas la pression à l’outil après un autre tuyau, raccord ou régulateur.",
       "La disponibilité actuelle de cette référence ancienne n’est pas établie.",

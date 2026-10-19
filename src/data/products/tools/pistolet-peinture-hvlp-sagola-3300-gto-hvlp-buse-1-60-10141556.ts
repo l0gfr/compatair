@@ -32,12 +32,13 @@ const product: ToolProfileInput = {
     }
   },
   "editorial": {
-    "overview": "Sagola 3300 GTO HVLP buse 1.60 (réf. 10141556). Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
+    "overview": "3300 GTO HVLP 10141556 : buse de 1,60 mm placée dans la ligne apprêts à poncer, 172 g/min de produit et jet de 260 mm à 12–15 cm. La 1,40 mm 10141555 est associée à la base solvantée, 161 g/min et 250 mm. Le tableau HVLP conserve 360 L/min à 2 bar pour ces configurations.",
     "verifiedFacts": [
       "Buse : 1.60 mm.",
       "Chapeau d’air : HVLP."
     ],
     "limitations": [
+      "Les lignes TECH et EPA voisines ne complètent pas ce point HVLP. Le réglage du produit et le régime de pulvérisation doivent être confirmés avant dimensionnement.",
       "Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
       "Débit publié au point de pression indiqué ; le protocole et le réglage de pulvérisation restent insuffisants pour l’intégrer au calcul.",
       "Aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."

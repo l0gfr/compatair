@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco 19PCA04Q, référence 19PCA04Q. Le tableau fabricant publie 310 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Plage de couple publiée : 1.1 à 4.5 Nm. Vitesse à vide publiée : 1100 tr/min.",
+		"overview": "19PCA04Q : 1 100 tr/min et 1,1 à 4,5 Nm, contre 1 900 tr/min et 0,6 à 2,9 Nm pour le 19PCA03Q. La commande par appui et gâchette et l’embrayage Clecomatic restent identifiés. La série annonce 310 L/min à 6,2 bar pour les deux, sans régime de mesure précisé.",
 		"verifiedFacts": [
 			"Performances publiées à 6,2 bar à l’entrée de l’outil, note de la page 69.",
 			"Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Série et commande : 19P ; appui et gâchette."
 		],
 		"limitations": [
+			"La consommation générale ne qualifie pas une utilisation continue en charge. Le couple doit être réglé et vérifié sur l’assemblage réel.",
 			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
 			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
 		]
@@ -104,6 +105,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne."
+		},
+		{
+			"id": "cleco-19pca03q-20260926",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=69",
+			"sourceLabel": "Cleco et Master Power, catalogue GI-1250-EU, p. 69, réf. 19PCA03Q",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne."
 		}
 	],
 	"fieldSources": {
@@ -115,6 +125,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"cleco-19pca04q-20260926"
+		],
+		"airflowBasis": [
+			"cleco-19pca04q-20260926"
 		]
 	},
 	"notes": [
@@ -124,7 +137,8 @@ const product: ToolProfileInput = {
 		"min": 310,
 		"typical": 310,
 		"max": 310
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

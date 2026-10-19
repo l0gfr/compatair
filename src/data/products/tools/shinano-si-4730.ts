@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-4730, référence SI-4730. Le tableau fabricant publie 510 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Scie à moteur rotatif : course 9 mm ; cadence 6 000 coups/min ; capacité acier publiée 5 mm. Masse publiée : 0.92 kg.",
+		"overview": "SI-4730 : scie à moteur pneumatique rotatif transformant le mouvement en course de 9 mm à 6 000 coups/min. La SI-4740 voisine publie une course de 5 mm à 10 500 coups/min. Les besoins maximaux sont respectivement de 510 et 288 L/min à 6,3 bar ; les cadences ne sont pas des régimes de rotation.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 18 CFM / 8.5 L/s, soit 510 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
@@ -32,6 +32,7 @@ const product: ToolProfileInput = {
 			"Masse publiée : 0.92 kg."
 		],
 		"limitations": [
+			"La capacité acier de 5 mm de cette référence ne s’étend pas à toutes les matières ni à toutes les lames. La lame et la fixation de la pièce restent à qualifier.",
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
 			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
@@ -79,6 +80,24 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "shinano-si-4730-20260926-workingpressurebar-1",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+		},
+		{
+			"id": "shinano-si-4740-20260926",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=25",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 25, réf. SI-4740",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation maximale, colonne Max Air Consumption : 10.2 CFM / 4.8 L/s, soit 288 L/min. Tableau partagé uniquement entre les références nommées par Shinano."
+		},
+		{
+			"id": "shinano-si-4740-20260926-workingpressurebar-1",
 			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
 			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
 			"sourceType": "manufacturer",

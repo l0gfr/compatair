@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Fiam LEN17, référence 146095100. Le tableau fabricant publie 600 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide : 1700 tr/min. Masse publiée : 2.1 kg.",
+		"overview": "LEN17 146095100 : ponceuse à 1 700 tr/min et sortie filetée 5/8 W, livrée avec poignée latérale et écrou de maintien. La LES45 voisine tourne à 4 500 tr/min avec une autre sortie. Les 10 L/s du LEN17, soit 600 L/min à 6,3 bar, ne qualifient pas tous les régimes de charge.",
 		"verifiedFacts": [
 			"La brochure associée à cette fiche indique une pression de mesure et d’utilisation recommandée de 6,3 bar (ISO 2787).",
 			"La fiche fabricant publie 10 L/s, soit 600 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Dimensions publiées : Ø 51 x L 280 x H 112 mm."
 		],
 		"limitations": [
+			"Le LEN17U est une version distincte avec arrivée d’eau. Le suffixe et l’accessoire doivent être confirmés, sans assimiler un filetage à une pince.",
 			"Le couple éventuel est indicatif : l’assemblage, l’accessoire et la pression dynamique influencent le résultat.",
 			"Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes."
 		]
@@ -106,6 +107,24 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+		},
+		{
+			"id": "fiam-144695400-20260926",
+			"sourceUrl": "https://www.fiamgroup.com/en/products/grinders-and-sanders/les45/",
+			"sourceLabel": "Fiam, fiche technique LES45, réf. 144695400",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La fiche fabricant publie 9 L/s, soit 540 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+		},
+		{
+			"id": "fiam-144695400-20260926-workingpressurebar-1",
+			"sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf#page=13",
+			"sourceLabel": "Fiam, brochure technique en-44, p. 13",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
 		}
 	],
 	"fieldSources": {
@@ -117,6 +136,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"fiam-146095100-20260926"
+		],
+		"airflowBasis": [
+			"fiam-146095100-20260926"
 		]
 	},
 	"notes": [
@@ -126,7 +148,8 @@ const product: ToolProfileInput = {
 		"min": 600,
 		"typical": 600,
 		"max": 600
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

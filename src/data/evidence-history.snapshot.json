@@ -723403,7 +723403,1404 @@
         "confidence": "A",
         "notes": "Matrice indicative de familles d’outils ; distincte d’un FAD ou d’un verdict pour référence exacte."
       }
+    },
+    {
+      "id": "added:aircraft-airboy-131-of-e:aircraft-2001230-20260927-review-20261019-for-aircraft-airboy-131-of-e:2026-10-19",
+      "evidenceId": "aircraft-2001230-20260927-review-20261019-for-aircraft-airboy-131-of-e",
+      "productId": "aircraft-airboy-131-of-e",
+      "productType": "compressor",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8f559577c8fd865d7b558c0b296f52e827f48242cb52e2ada645e577fc4d728c",
+      "snapshot": {
+        "id": "aircraft-2001230-20260927-review-20261019-for-aircraft-airboy-131-of-e",
+        "sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-186-of-e-2001230/",
+        "sourceLabel": "Aircraft / Stürmer, fiche constructeur 2001230, réf. 2001230",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-19",
+        "confidence": "A",
+        "notes": "Fiche voisine consultée en HTTPS le 19 octobre 2026 ; SHA-256 du corps : 49205fb1229863e6dd05baa6be184764800d5c78f88439891ae5f25931ccd26d. Configurations comparées séparément."
+      }
+    },
+    {
+      "id": "added:airpress-aps-10-basic-364808-8:airpress-364808-13-20260926-review-20261019-for-airpress-aps-10-basic-364808-8:2026-10-19",
+      "evidenceId": "airpress-364808-13-20260926-review-20261019-for-airpress-aps-10-basic-364808-8",
+      "productId": "airpress-aps-10-basic-364808-8",
+      "productType": "compressor",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5d73235477154df9fd173586ed9c972eb2c17e10e6363b4f2d8e350b4cdefac5",
+      "snapshot": {
+        "id": "airpress-364808-13-20260926-review-20261019-for-airpress-aps-10-basic-364808-8",
+        "sourceUrl": "https://airpress.fr/compresseur-a-vis-aps-10-basic-13-bar-10-ch-7-5-kw-780-l-min-364808-13",
+        "sourceLabel": "Airpress, fiche technique 364808-13, réf. 364808-13",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-19",
+        "confidence": "A",
+        "notes": "Fiche voisine consultée en HTTPS le 19 octobre 2026 ; SHA-256 du corps : 0e0b56dd7d335e5e4da0cbebb003f5d05e55ba8337dccc00d97bed828564e609. Configurations comparées séparément."
+      }
+    },
+    {
+      "id": "added:bambi-bb24d:october3d-bambi-product-31-review-20261019-for-bambi-bb24d:2026-10-19",
+      "evidenceId": "october3d-bambi-product-31-review-20261019-for-bambi-bb24d",
+      "productId": "bambi-bb24d",
+      "productType": "compressor",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6cabc36fd4bc84e945c89eba9f8603692ef1bb3213c954cf3dd3c0e183b778b0",
+      "snapshot": {
+        "id": "october3d-bambi-product-31-review-20261019-for-bambi-bb24d",
+        "sourceUrl": "https://bambi-air.co.uk/product/bb24/",
+        "sourceLabel": "Bambi, BB24, fiche constructeur",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-19",
+        "confidence": "B",
+        "notes": "Fiche voisine consultée en HTTPS le 19 octobre 2026 ; SHA-256 du corps : 4494d601f0fa3585b6c43bdd80a5f95744b3c21a39478d59f792aacece100101. Configurations comparées séparément."
+      }
+    },
+    {
+      "id": "added:biax-be-309:biax-150800745-20260926:2026-10-19",
+      "evidenceId": "biax-150800745-20260926",
+      "productId": "biax-be-309",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "324a08ba31784ad88e3c64911f9e5f32abe272e7a29602d3d7de2bb9c9dbcd9e",
+      "snapshot": {
+        "id": "biax-150800745-20260926",
+        "sourceUrl": "https://biax.de/en/product/beg-309-bis-senk-o-55-mm/",
+        "sourceLabel": "BIAX, fiche technique BEG 309 – max. hole Ø 5,5 mm, réf. 150800745",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La fiche fabricant publie une consommation de 150 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+      }
+    },
+    {
+      "id": "added:biax-be-309:biax-150800745-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "biax-150800745-20260926-workingpressurebar-1",
+      "productId": "biax-be-309",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "557179253256e79c779e3ca41e98f3b5708951494e7a528aa7d28f597913367f",
+      "snapshot": {
+        "id": "biax-150800745-20260926-workingpressurebar-1",
+        "sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=42",
+        "sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 42",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+      }
+    },
+    {
+      "id": "added:biax-gaa-305:biax-150619510-20260926:2026-10-19",
+      "evidenceId": "biax-150619510-20260926",
+      "productId": "biax-gaa-305",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "339d20c997de64e5933efa44bca96682b938297f2f2eb836779a107e1d414fa7",
+      "snapshot": {
+        "id": "biax-150619510-20260926",
+        "sourceUrl": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf#page=8",
+        "sourceLabel": "BIAX, catalogue des visseuses pneumatiques, p. 8, réf. 150619510",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé."
+      }
+    },
+    {
+      "id": "added:biax-hb-15-1:biax-150122200-20260926:2026-10-19",
+      "evidenceId": "biax-150122200-20260926",
+      "productId": "biax-hb-15-1",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d49895e8f010ecd18ee7b6fe68cf706114bea91c99a737995f8454c38833b588",
+      "snapshot": {
+        "id": "biax-150122200-20260926",
+        "sourceUrl": "https://biax.de/en/product/hb-3-bandbreiten-3mm-6mm-12mm/",
+        "sourceLabel": "BIAX, fiche technique HB 3 – Belt width 3mm, 6mm, 12mm, réf. 150122200",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La fiche fabricant publie une consommation de 340 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+      }
+    },
+    {
+      "id": "added:biax-hb-15-1:biax-150122200-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "biax-150122200-20260926-workingpressurebar-1",
+      "productId": "biax-hb-15-1",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e145da4cf3f3de664dc0cb31b7abda38b352c4da1934036c27e94a72f39b954f",
+      "snapshot": {
+        "id": "biax-150122200-20260926-workingpressurebar-1",
+        "sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=34",
+        "sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 34",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+      }
+    },
+    {
+      "id": "added:biax-mp-300:biax-150800360-20260926:2026-10-19",
+      "evidenceId": "biax-150800360-20260926",
+      "productId": "biax-mp-300",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d099ffcd6fa299069efe68ed9f130802b384706d90c2e8b063f9839062f84ee2",
+      "snapshot": {
+        "id": "biax-150800360-20260926",
+        "sourceUrl": "https://biax.de/en/product/mp-450-en/",
+        "sourceLabel": "BIAX, fiche technique MP 450, réf. 150800360",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La fiche fabricant publie une consommation de 320 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+      }
+    },
+    {
+      "id": "added:biax-mp-300:biax-150800360-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "biax-150800360-20260926-workingpressurebar-1",
+      "productId": "biax-mp-300",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "f9886d3d0ac702737712920ccfbae9695654a0218c1c9bfb4f9e705bb3ecee26",
+      "snapshot": {
+        "id": "biax-150800360-20260926-workingpressurebar-1",
+        "sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=59",
+        "sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 59",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+      }
+    },
+    {
+      "id": "added:biax-ps-2-plus:biax-150322921-20260926:2026-10-19",
+      "evidenceId": "biax-150322921-20260926",
+      "productId": "biax-ps-2-plus",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d8c11aedb865f2a123b3fa8d0d97ab5567b6c320e891bff59346ac5b2544118b",
+      "snapshot": {
+        "id": "biax-150322921-20260926",
+        "sourceUrl": "https://biax.de/en/product/ps-3-vibrationsgedampft/",
+        "sourceLabel": "BIAX, fiche technique PS 3 – Vibration dampened, réf. 150322921",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La fiche fabricant publie une consommation de 250 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+      }
+    },
+    {
+      "id": "added:biax-ps-2-plus:biax-150322921-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "biax-150322921-20260926-workingpressurebar-1",
+      "productId": "biax-ps-2-plus",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d198469801ecca6d0b7e88ebaffebe8dab4c80c361456f9b2303feab12c99872",
+      "snapshot": {
+        "id": "biax-150322921-20260926-workingpressurebar-1",
+        "sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=61",
+        "sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 61",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+      }
+    },
+    {
+      "id": "added:biax-sard-830:biax-150012032-20260926:2026-10-19",
+      "evidenceId": "biax-150012032-20260926",
+      "productId": "biax-sard-830",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "64cb221c45d49c8d0e50cac4bf5363b1a6b080b6c113d981885e1924df5a6c39",
+      "snapshot": {
+        "id": "biax-150012032-20260926",
+        "sourceUrl": "https://biax.de/en/product/sbrh-830-30-000-1-min-zweihandschleifer/",
+        "sourceLabel": "BIAX, fiche technique SBRH 830 – 30.000 1/min, Two hand grinder, réf. 150012032",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La fiche fabricant publie une consommation de 400 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+      }
+    },
+    {
+      "id": "added:biax-sard-830:biax-150012032-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "biax-150012032-20260926-workingpressurebar-1",
+      "productId": "biax-sard-830",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "08d68d31fad52a8820a99cdb0849a16694a43f8f04c2679301aad23e7569df33",
+      "snapshot": {
+        "id": "biax-150012032-20260926-workingpressurebar-1",
+        "sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=19",
+        "sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 19",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+      }
+    },
+    {
+      "id": "added:chicago-pneumatic-cp3340-salavet:cp-catalog-202608-6151609320:2026-10-19",
+      "evidenceId": "cp-catalog-202608-6151609320",
+      "productId": "chicago-pneumatic-cp3340-salavet",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e69edc355cac31a90dd5ba8d6a60b6e3dfbe7a438361808c1fd1683838065966",
+      "snapshot": {
+        "id": "cp-catalog-202608-6151609320",
+        "sourceUrl": "https://tools.cp.com/content/dam/pim/itba/cp/literature/catalogs/General-Industry_catalog_CP_EN.pdf#page=148",
+        "sourceLabel": "Chicago Pneumatic, catalogue v6.08.2026, p. 148, réf. 6151609320",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-25",
+        "confidence": "A",
+        "notes": "Colonne AIR CONS. @LOAD : 45 L/s × 60 = 2700 L/min. Note de tableau : 90 PSI (6,3 bar). Valeurs brutes et empreinte PDF versionnées."
+      }
+    },
+    {
+      "id": "added:cle-a-chocs-taylor-pneumatic-t-6749-1-2-sd-impact-wrench-t-6749:october4-tools-taylor-product-122-p1:2026-10-19",
+      "evidenceId": "october4-tools-taylor-product-122-p1",
+      "productId": "cle-a-chocs-taylor-pneumatic-t-6749-1-2-sd-impact-wrench-t-6749",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "f910652532b066614f6c363ab3415776241116021c2e891647e3f26b58108e20",
+      "snapshot": {
+        "id": "october4-tools-taylor-product-122-p1",
+        "sourceUrl": "https://taylorpneumatic.com/products/t-7749",
+        "sourceLabel": "Taylor Pneumatic : T-7749 1/2\" SD Impact Wrench",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-04",
+        "confidence": "B",
+        "notes": "Déclaration fabricant, réponse primaire SHA-256 73f519f0e2ae0d5e38307136bd57041b038e12cb0b56763d589355ce797dcc8d. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:cleco-11pthh35q:cleco-11pthh353-20260926:2026-10-19",
+      "evidenceId": "cleco-11pthh353-20260926",
+      "productId": "cleco-11pthh35q",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "f587e2e58630f05cef9b397d0c78ac164e7bb95def1d8cbd6c831c8e33ae5de1",
+      "snapshot": {
+        "id": "cleco-11pthh353-20260926",
+        "sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=86",
+        "sourceLabel": "Cleco et Master Power, catalogue GI-1250-EU, p. 86, réf. 11PTHH353",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Le tableau distingue 150 L/min à vide et 300 L/min en charge à 6 bar. Le calcul conserve la plus élevée des deux valeurs publiées (300 L/min), sans cycle de travail supposé."
+      }
+    },
+    {
+      "id": "added:cleco-19pca04q:cleco-19pca03q-20260926:2026-10-19",
+      "evidenceId": "cleco-19pca03q-20260926",
+      "productId": "cleco-19pca04q",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c0a2eab5f3090df96070ff8200ebe2cddb6191027fba120438e057f549077cf0",
+      "snapshot": {
+        "id": "cleco-19pca03q-20260926",
+        "sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=69",
+        "sourceLabel": "Cleco et Master Power, catalogue GI-1250-EU, p. 69, réf. 19PCA03Q",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne."
+      }
+    },
+    {
+      "id": "added:cleco-19raa05am2:cleco-19raa04am2-20260926:2026-10-19",
+      "evidenceId": "cleco-19raa04am2-20260926",
+      "productId": "cleco-19raa05am2",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "119440a128be49c4eff89bcafc3dee16c4add09cc63bba61c86f5ef27f51253c",
+      "snapshot": {
+        "id": "cleco-19raa04am2-20260926",
+        "sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=75",
+        "sourceLabel": "Cleco et Master Power, catalogue GI-1250-EU, p. 75, réf. 19RAA04AM2",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consommation publiée dans la colonne Air Cons. m³/min, multipliée par 1 000. Le régime de mesure n’est pas précisé dans ce tableau."
+      }
+    },
+    {
+      "id": "added:cleco-wt-2120-12:cleco-wt-2119-12-20260926:2026-10-19",
+      "evidenceId": "cleco-wt-2119-12-20260926",
+      "productId": "cleco-wt-2120-12",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "470a9c63bb4d705e45107cee46feaf98da617643506ca01ced8a41388b9df4bc",
+      "snapshot": {
+        "id": "cleco-wt-2119-12-20260926",
+        "sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=89",
+        "sourceLabel": "Cleco et Master Power, catalogue GI-1250-EU, p. 89, réf. WT-2119-12",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consommation publiée dans la colonne Air Cons. m³/min, multipliée par 1 000. Le régime de mesure n’est pas précisé dans ce tableau."
+      }
+    },
+    {
+      "id": "added:deprag-305-4257ul:deprag-352587e-20260926:2026-10-19",
+      "evidenceId": "deprag-352587e-20260926",
+      "productId": "deprag-305-4257ul",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "dfdc5ed36e8681da487b37c5991105c5220ed7b15fdcb7688ee0739eadbea866",
+      "snapshot": {
+        "id": "deprag-352587e-20260926",
+        "sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3530/D3530en.pdf#page=2",
+        "sourceLabel": "DEPRAG, brochure technique D3530en, p. 2, réf. 352587E",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine."
+      }
+    },
+    {
+      "id": "added:dynabrade-50561:dynabrade-54430-catalogue-d25-01:2026-10-19",
+      "evidenceId": "dynabrade-54430-catalogue-d25-01",
+      "productId": "dynabrade-50561",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0a0359521c1e52af714381c7579c9d206badb10a48fe0f8b43622bb701f79aa8",
+      "snapshot": {
+        "id": "dynabrade-54430-catalogue-d25-01",
+        "sourceUrl": "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf#page=77",
+        "sourceLabel": "Dynabrade, catalogue D25.01, 54430, page 77",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Tableau 77-1, ligne 4. Consommation maximale publiée : 40 (1,133) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
+      }
+    },
+    {
+      "id": "added:dynabrade-52439:dynabrade-54746-catalogue-d25-01:2026-10-19",
+      "evidenceId": "dynabrade-54746-catalogue-d25-01",
+      "productId": "dynabrade-52439",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "24a1dd3b0a0e6fc04edd21e4fb1988d382b9b01c1913815c0d1875c2075c1e74",
+      "snapshot": {
+        "id": "dynabrade-54746-catalogue-d25-01",
+        "sourceUrl": "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf#page=110",
+        "sourceLabel": "Dynabrade, catalogue D25.01, 54746, page 110",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Tableau 110-0, ligne 8. Consommation maximale publiée : 40 (1,133) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
+      }
+    },
+    {
+      "id": "added:dynabrade-52717:dynabrade-52716-catalogue-d25-01:2026-10-19",
+      "evidenceId": "dynabrade-52716-catalogue-d25-01",
+      "productId": "dynabrade-52717",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0c8a55a33bd2d0e7b70175257b27c3d6ae0cfe157b2db779e1f49c249285c04b",
+      "snapshot": {
+        "id": "dynabrade-52716-catalogue-d25-01",
+        "sourceUrl": "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf#page=107",
+        "sourceLabel": "Dynabrade, catalogue D25.01, 52716, page 107",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Tableau 107-0, ligne 2. Consommation maximale publiée : 39 (1,104) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
+      }
+    },
+    {
+      "id": "added:dynabrade-56894:dynabrade-56890-catalogue-d25-01:2026-10-19",
+      "evidenceId": "dynabrade-56890-catalogue-d25-01",
+      "productId": "dynabrade-56894",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "3947e5e7b7a431797b115adbdc37e6daed138b8e88dedd7a0bb4b5a22535f305",
+      "snapshot": {
+        "id": "dynabrade-56890-catalogue-d25-01",
+        "sourceUrl": "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf#page=151",
+        "sourceLabel": "Dynabrade, catalogue D25.01, 56890, page 151",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Tableau 151-0, ligne 9. Consommation publiée : 18 (510) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
+      }
+    },
+    {
+      "id": "added:dynabrade-58500:dynabrade-58507-catalogue-d25-01:2026-10-19",
+      "evidenceId": "dynabrade-58507-catalogue-d25-01",
+      "productId": "dynabrade-58500",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5151b38a8fbcaa51b82e2a69a81fa6640a4635735bfffc6642e15d061fde3420",
+      "snapshot": {
+        "id": "dynabrade-58507-catalogue-d25-01",
+        "sourceUrl": "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf#page=176",
+        "sourceLabel": "Dynabrade, catalogue D25.01, 58507, page 176",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Tableau 176-0, ligne 3. Consommation maximale publiée : 13 (368) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
+      }
+    },
+    {
+      "id": "added:fiam-15c2a-ft:fiam-112514372-20260926:2026-10-19",
+      "evidenceId": "fiam-112514372-20260926",
+      "productId": "fiam-15c2a-ft",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a5d7b7ec83932156c76d2e0d20df9b9ca13ebe68b5d50725a8cf1b88403dc669",
+      "snapshot": {
+        "id": "fiam-112514372-20260926",
+        "sourceUrl": "https://www.fiamgroup.com/en/products/handheld-air-screwdrivers/15c2a/",
+        "sourceLabel": "Fiam, fiche technique 15C2A, réf. 112514372",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La fiche fabricant publie 4 L/s, soit 240 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+      }
+    },
+    {
+      "id": "added:fiam-15c2a-ft:fiam-112514372-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "fiam-112514372-20260926-workingpressurebar-1",
+      "productId": "fiam-15c2a-ft",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "99e274b42992e7fa8f6aca4d4d3265de745125a6a35ec793bf646a9ffa384613",
+      "snapshot": {
+        "id": "fiam-112514372-20260926-workingpressurebar-1",
+        "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-85.pdf#page=9",
+        "sourceLabel": "Fiam, brochure technique en-85, p. 9",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+      }
+    },
+    {
+      "id": "added:fiam-9sm03dt:fiam-142313001-20260926:2026-10-19",
+      "evidenceId": "fiam-142313001-20260926",
+      "productId": "fiam-9sm03dt",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "49114acc167597904b9d94d61ea6fb4e952e245be650c8f1ed20833299edbf26",
+      "snapshot": {
+        "id": "fiam-142313001-20260926",
+        "sourceUrl": "https://www.fiamgroup.com/en/products/grinders-and-sanders/smz15d/",
+        "sourceLabel": "Fiam, fiche technique SMZ15D, réf. 142313001",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La fiche fabricant publie 6 L/s, soit 360 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+      }
+    },
+    {
+      "id": "added:fiam-9sm03dt:fiam-142313001-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "fiam-142313001-20260926-workingpressurebar-1",
+      "productId": "fiam-9sm03dt",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8152fd194fae4f70526e7ed615952223ba8b20057343ca3bd3e8f02675fc5184",
+      "snapshot": {
+        "id": "fiam-142313001-20260926-workingpressurebar-1",
+        "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf#page=7",
+        "sourceLabel": "Fiam, brochure technique en-44, p. 7",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+      }
+    },
+    {
+      "id": "added:fiam-csi12p1:fiam-114820112-20260926:2026-10-19",
+      "evidenceId": "fiam-114820112-20260926",
+      "productId": "fiam-csi12p1",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "fbfbe2fcef16cf9696d1dd270740976eb58ad06e2bce2aec8e8bdb90493d33a4",
+      "snapshot": {
+        "id": "fiam-114820112-20260926",
+        "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-67.pdf#page=4",
+        "sourceLabel": "Fiam, brochure technique en-67, p. 4, réf. 114820112",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La brochure publie 6 L/s à vide (Idle air consumption), soit 360 L/min après conversion × 60."
+      }
+    },
+    {
+      "id": "added:fiam-csi12p1:fiam-114820112-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "fiam-114820112-20260926-workingpressurebar-1",
+      "productId": "fiam-csi12p1",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ef4f0f5e7c6f19f85daab7aa4c01a26b3fee723ff89804a3001c0f93d28c0700",
+      "snapshot": {
+        "id": "fiam-114820112-20260926-workingpressurebar-1",
+        "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-67.pdf#page=4",
+        "sourceLabel": "Fiam, brochure technique en-67, p. 4",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Note explicitant les performances mesurées à 6,3 bar dans la brochure de la famille."
+      }
+    },
+    {
+      "id": "added:fiam-fde26pa:fiam-122311145-20260926:2026-10-19",
+      "evidenceId": "fiam-122311145-20260926",
+      "productId": "fiam-fde26pa",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "3106ab1eb5da6dfdbb0a9cf848408bf68dfa320d684de9c1a96b1d2be729eae3",
+      "snapshot": {
+        "id": "fiam-122311145-20260926",
+        "sourceUrl": "https://www.fiamgroup.com/en/products/air-drills/fz45c/",
+        "sourceLabel": "Fiam, fiche technique FZ45C, réf. 122311145",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La fiche fabricant publie 6 L/s, soit 360 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+      }
+    },
+    {
+      "id": "added:fiam-fde26pa:fiam-122311145-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "fiam-122311145-20260926-workingpressurebar-1",
+      "productId": "fiam-fde26pa",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e4d4b9550356fcb92c191dea99d2aafc32dc7ce670d272e6eba739c3d1ec8c49",
+      "snapshot": {
+        "id": "fiam-122311145-20260926-workingpressurebar-1",
+        "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=9",
+        "sourceLabel": "Fiam, brochure technique en-34, p. 9",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+      }
+    },
+    {
+      "id": "added:fiam-len17:fiam-144695400-20260926:2026-10-19",
+      "evidenceId": "fiam-144695400-20260926",
+      "productId": "fiam-len17",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c8f5abdfb1bbf6dd71f24f82c37e64951d5e271f01f3abb488b3d50bfd373a19",
+      "snapshot": {
+        "id": "fiam-144695400-20260926",
+        "sourceUrl": "https://www.fiamgroup.com/en/products/grinders-and-sanders/les45/",
+        "sourceLabel": "Fiam, fiche technique LES45, réf. 144695400",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La fiche fabricant publie 9 L/s, soit 540 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+      }
+    },
+    {
+      "id": "added:fiam-len17:fiam-144695400-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "fiam-144695400-20260926-workingpressurebar-1",
+      "productId": "fiam-len17",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c98859283dc65597dec219ee38bf8b2dcc3ff963255f76c271951d04dd432d53",
+      "snapshot": {
+        "id": "fiam-144695400-20260926-workingpressurebar-1",
+        "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf#page=13",
+        "sourceLabel": "Fiam, brochure technique en-44, p. 13",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+      }
+    },
+    {
+      "id": "added:fiam-mas8:october2-tools-mannesmann-0-p64:2026-10-19",
+      "evidenceId": "october2-tools-mannesmann-0-p64",
+      "productId": "fiam-mas8",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7e80f34456edb1a3b3a998f9bd88fa6bb8b3eb8936e16ec603fb8f6728648d02",
+      "snapshot": {
+        "id": "october2-tools-mannesmann-0-p64",
+        "sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download#page=64",
+        "sourceLabel": "ProfiToolsNext, catalogue fabricant anglais 05/2017, page PDF 64",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:fiam-pm1:october-dotco-p15:2026-10-19",
+      "evidenceId": "october-dotco-p15",
+      "productId": "fiam-pm1",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "746a74d94d642acfe7b9a73ec6343553418dc86350f7f46b3d21ef7edec96069",
+      "snapshot": {
+        "id": "october-dotco-p15",
+        "sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/DOTCO%20Material%20Removal_SP-102EN_en.pdf#page=15",
+        "sourceLabel": "Cleco/Dotco, Material Removal SP-102EN, page 15",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-09-30",
+        "confidence": "B",
+        "notes": "SHA-256 93b7d3cdb96a91eecf95baaf172ed0953f2021cb336460e5f9a202ce7e687c10. Caractéristiques déclarées, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:fiam-tfs60:fiam-164650102-20260926:2026-10-19",
+      "evidenceId": "fiam-164650102-20260926",
+      "productId": "fiam-tfs60",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7daa6fae9e4b533cbf2305cb39988307d9f25114c3f41eda35488dfbba3e126c",
+      "snapshot": {
+        "id": "fiam-164650102-20260926",
+        "sourceUrl": "https://www.fiamgroup.com/en/products/air-tools-for-cutting/tls12/",
+        "sourceLabel": "Fiam, fiche technique TLS12, réf. 164650102",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La fiche fabricant publie 9 L/s, soit 540 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+      }
+    },
+    {
+      "id": "added:fiam-tfs60:fiam-164650102-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "fiam-164650102-20260926-workingpressurebar-1",
+      "productId": "fiam-tfs60",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1ae80a1ee4ddbc072febde611240d64fa01c6527f3f2181d4f19cfbc1a1b53dc",
+      "snapshot": {
+        "id": "fiam-164650102-20260926-workingpressurebar-1",
+        "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-1.pdf#page=4",
+        "sourceLabel": "Fiam, brochure technique en-1, p. 4",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+      }
+    },
+    {
+      "id": "added:fiam-tls12:fiam-166350103-20260926:2026-10-19",
+      "evidenceId": "fiam-166350103-20260926",
+      "productId": "fiam-tls12",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "15ee9c6321dc5bafc038b991407f8eb0a02d83d301884c8197ad8cee7db22335",
+      "snapshot": {
+        "id": "fiam-166350103-20260926",
+        "sourceUrl": "https://www.fiamgroup.com/en/products/air-tools-for-cutting/tly20-2/",
+        "sourceLabel": "Fiam, fiche technique TLY20-2, réf. 166350103",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La fiche fabricant publie 13 L/s, soit 780 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+      }
+    },
+    {
+      "id": "added:fiam-tls12:fiam-166350103-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "fiam-166350103-20260926-workingpressurebar-1",
+      "productId": "fiam-tls12",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5e0a077823f648246fc190249bac29c3c87de82cd9f7b554bbfe016b2929adb1",
+      "snapshot": {
+        "id": "fiam-166350103-20260926-workingpressurebar-1",
+        "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-1.pdf#page=4",
+        "sourceLabel": "Fiam, brochure technique en-1, p. 4",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+      }
+    },
+    {
+      "id": "added:gentilin-c330-100:editorial-20261019-gentilin-c330100-technical-p34:2026-10-19",
+      "evidenceId": "editorial-20261019-gentilin-c330100-technical-p34",
+      "productId": "gentilin-c330-100",
+      "productType": "compressor",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9b2e34ab530c98bf4e8d42aa02a16a022044a06fa0a75d321ae90f896d7efaf0",
+      "snapshot": {
+        "id": "editorial-20261019-gentilin-c330100-technical-p34",
+        "sourceUrl": "https://www.gentilinair.com/docs/c330100_1711018362.pdf#page=34",
+        "sourceLabel": "Gentilin, notice C330/100, tableau anglais page PDF 34, révision 00 de juin 2016",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-19",
+        "confidence": "A",
+        "notes": "Tableau 50 Hz : cuve 90 L, 56 kg et dimensions A × B × C 533 × 1010 × 710 mm ; divergences avec la fiche actuelle conservées."
+      }
+    },
+    {
+      "id": "added:gentilin-c330-100:gentilin-810201001-20260926-review-20261019-for-gentilin-c330-100:2026-10-19",
+      "evidenceId": "gentilin-810201001-20260926-review-20261019-for-gentilin-c330-100",
+      "productId": "gentilin-c330-100",
+      "productType": "compressor",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "68de8e7c34f3cb3380a7ac8820a31544dea4561a50774f865e95b1c8d2639a37",
+      "snapshot": {
+        "id": "gentilin-810201001-20260926-review-20261019-for-gentilin-c330-100",
+        "sourceUrl": "https://www.gentilinair.com/en/products/c330-03",
+        "sourceLabel": "Gentilin, fiche technique C330/03, réf. 810201001",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-10-19",
+        "confidence": "A",
+        "notes": "Fiche voisine consultée en HTTPS le 19 octobre 2026 ; SHA-256 du corps : eadbe5a20fab5a2ffe300c4ec0814f97d3995941aac5de5a709496794854ccba. Configurations comparées séparément."
+      }
+    },
+    {
+      "id": "added:jun-air-6-25:october3d-bambi-product-31-review-20261019-for-jun-air-6-25:2026-10-19",
+      "evidenceId": "october3d-bambi-product-31-review-20261019-for-jun-air-6-25",
+      "productId": "jun-air-6-25",
+      "productType": "compressor",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "91c415e27f5e3ada17765c5814387071f02545331f9d9e1c66117b5a29068e3d",
+      "snapshot": {
+        "id": "october3d-bambi-product-31-review-20261019-for-jun-air-6-25",
+        "sourceUrl": "https://bambi-air.co.uk/product/bb24/",
+        "sourceLabel": "Bambi, BB24, fiche constructeur",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-19",
+        "confidence": "B",
+        "notes": "Fiche voisine consultée en HTTPS le 19 octobre 2026 ; SHA-256 du corps : 4494d601f0fa3585b6c43bdd80a5f95744b3c21a39478d59f792aacece100101. Configurations comparées séparément."
+      }
+    },
+    {
+      "id": "added:master-power-mp4403-05:master-power-mp4403-06-20260926:2026-10-19",
+      "evidenceId": "master-power-mp4403-06-20260926",
+      "productId": "master-power-mp4403-05",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a9deff692dd4d78827c999e19a109990632f328dc36180011e1cae06679e744d",
+      "snapshot": {
+        "id": "master-power-mp4403-06-20260926",
+        "sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=56",
+        "sourceLabel": "Cleco et Master Power, catalogue GI-1250-EU, p. 56, réf. MP4403-06",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Note de la série : Air consumption 0.43 m³/min, soit 430 L/min. Le régime maximum ou moyen n’est pas précisé."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-astro-pneumatic-hvlp509:october3d-tools-astro-product-hvlp507-p1:2026-10-19",
+      "evidenceId": "october3d-tools-astro-product-hvlp507-p1",
+      "productId": "pistolet-peinture-hvlp-astro-pneumatic-hvlp509",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "52f03138f58d6351734da18546ec6f95bb85331f7559b3e0dbac4a2d8a1ef413",
+      "snapshot": {
+        "id": "october3d-tools-astro-product-hvlp507-p1",
+        "sourceUrl": "https://www.astrotools.com/product/hvlp-gravity-feed-spray-gun-1-7mm-nozzle-with-aluminum-cup/",
+        "sourceLabel": "Astro Pneumatic, fiche constructeur officielle",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-03",
+        "confidence": "B",
+        "notes": "Réponse primaire SHA-256 684b8cbe8e6871bf48f2ae1d02d241f34a97db5ceed3b3c5e17c9d13de073029. Déclaration constructeur, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-hymair-h891:october2-tools-steed-7-p2:2026-10-19",
+      "evidenceId": "october2-tools-steed-7-p2",
+      "productId": "pistolet-peinture-hvlp-hymair-h891",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "fdd2fae06271d2a92834b7f55a8ca62702a7665d611019e334abcbd270798ec6",
+      "snapshot": {
+        "id": "october2-tools-steed-7-p2",
+        "sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU#page=2",
+        "sourceLabel": "Hymair, documentation technique fabricant, page PDF 2",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-01",
+        "confidence": "B",
+        "notes": "SHA-256 de la réponse source : 971e9f3f662af10d3c638d5e9c29c8847ee04672c40e29957ad4ca4eb13d61c1. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-sata-jet-x-hvlp-1-4-i-basic-1200534:october3d-tools-sata-current-catalog-2025-p15:2026-10-19",
+      "evidenceId": "october3d-tools-sata-current-catalog-2025-p15",
+      "productId": "pistolet-peinture-hvlp-sata-jet-x-hvlp-1-4-i-basic-1200534",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "29d8a374d417897d532d5125f9e02876b8412c4aa5847ab85722cd5e4c860754",
+      "snapshot": {
+        "id": "october3d-tools-sata-current-catalog-2025-p15",
+        "sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=15",
+        "sourceLabel": "SATA, document technique officiel, page PDF 15",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-03",
+        "confidence": "B",
+        "notes": "Réponse primaire SHA-256 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3. Déclaration constructeur, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-yato-yt-2346:october5-tools-yato-tool-005-p1:2026-10-19",
+      "evidenceId": "october5-tools-yato-tool-005-p1",
+      "productId": "pistolet-peinture-hvlp-yato-yt-2346",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7e7404349f18ef2898cb430ed30a68249d0d8bf20f332873f7d369b30f23b5f5",
+      "snapshot": {
+        "id": "october5-tools-yato-tool-005-p1",
+        "sourceUrl": "https://toya24.pl/en-PL/products/-spray-gun-with-fluid-cup-hvlp-0-6l-1-5-mm-10006673",
+        "sourceLabel": "Yato fiche technique officielle",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-05",
+        "confidence": "B",
+        "notes": "Déclaration fabricant, capture SHA-256 550a9a7eaed837b2df20e60fbedfc3f094dc34846d3213cb17267abe7ded15ea. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:sableuse-yato-yt-2376:october5-tools-yato-tool-024-p1:2026-10-19",
+      "evidenceId": "october5-tools-yato-tool-024-p1",
+      "productId": "sableuse-yato-yt-2376",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "37d026957e0f467f78d83fe837e4c7dc472ea94ad17b4b2b1a04fdf4dc0d8763",
+      "snapshot": {
+        "id": "october5-tools-yato-tool-024-p1",
+        "sourceUrl": "https://toya24.pl/en-PL/products/-air-sand-blaster-10007208",
+        "sourceLabel": "Yato fiche technique officielle",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-05",
+        "confidence": "B",
+        "notes": "Déclaration fabricant, capture SHA-256 7b0ffd92ea2dc3e088e1dec642907c5e04bcb4ef2a7d82a02fd3a5772928a622. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:shinano-si-1070:shinano-si-1365d-20260926:2026-10-19",
+      "evidenceId": "shinano-si-1365d-20260926",
+      "productId": "shinano-si-1070",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "67e7b7f32109d83ff537052a561da7c0497a487842e61d34484f4b430035cbd0",
+      "snapshot": {
+        "id": "shinano-si-1365d-20260926",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=7",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 7, réf. SI-1365D",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Colonne Max Air Consumption : 19.8 CFM / 9.3 L/s. Conversion du maximum publié : 9.3 × 60 = 558 L/min."
+      }
+    },
+    {
+      "id": "added:shinano-si-1070:shinano-si-1365d-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "shinano-si-1365d-20260926-workingpressurebar-1",
+      "productId": "shinano-si-1070",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "298e9b6784e85a99e91c3491aaf6008ff62c7fe0ff6ec5afc8248eb780b02235",
+      "snapshot": {
+        "id": "shinano-si-1365d-20260926-workingpressurebar-1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 43",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+      }
+    },
+    {
+      "id": "added:shinano-si-1205b:shinano-si-1200b-20260926:2026-10-19",
+      "evidenceId": "shinano-si-1200b-20260926",
+      "productId": "shinano-si-1205b",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "14b85aad5e523893884ac70f0975df2375c1bb1738568406689da659521a314b",
+      "snapshot": {
+        "id": "shinano-si-1200b-20260926",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=9",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 9, réf. SI-1200B",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Colonne Max Air Consumption : 9.6 CFM / 4.5 L/s. Conversion du maximum publié : 4.5 × 60 = 270 L/min."
+      }
+    },
+    {
+      "id": "added:shinano-si-1205b:shinano-si-1200b-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "shinano-si-1200b-20260926-workingpressurebar-1",
+      "productId": "shinano-si-1205b",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "29c3eae03ff4bff857380d5958cb4fb0751493798cc19cb70a799f8a3a308633",
+      "snapshot": {
+        "id": "shinano-si-1200b-20260926-workingpressurebar-1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 43",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+      }
+    },
+    {
+      "id": "added:shinano-si-1355:shinano-si-1345ex-20260926:2026-10-19",
+      "evidenceId": "shinano-si-1345ex-20260926",
+      "productId": "shinano-si-1355",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "dfc8e0e8cbbefc1f2c49957cf9b93f85bbc8650b65e7be740f5894be5a02c27c",
+      "snapshot": {
+        "id": "shinano-si-1345ex-20260926",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=9",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 9, réf. SI-1345EX",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Colonne Max Air Consumption : 15 CFM / 7.1 L/s. Conversion du maximum publié : 7.1 × 60 = 426 L/min."
+      }
+    },
+    {
+      "id": "added:shinano-si-1355:shinano-si-1345ex-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "shinano-si-1345ex-20260926-workingpressurebar-1",
+      "productId": "shinano-si-1355",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "17ce666510489794708057665f3f7aa83f2adc4025267e4a1475bb37f90438cd",
+      "snapshot": {
+        "id": "shinano-si-1345ex-20260926-workingpressurebar-1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 43",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+      }
+    },
+    {
+      "id": "added:shinano-si-2002ex:shinano-si-2002ex-6-20260926:2026-10-19",
+      "evidenceId": "shinano-si-2002ex-6-20260926",
+      "productId": "shinano-si-2002ex",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "3edfa57628df07fd792300ddf3ae339029a82742d88a6dd6bab55e03817d4b92",
+      "snapshot": {
+        "id": "shinano-si-2002ex-6-20260926",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=19",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 19, réf. SI-2002EX-6",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consommation maximale, colonne Max Air Consumption : 15.6 CFM / 7.4 L/s, soit 444 L/min. Tableau partagé uniquement entre les références nommées par Shinano."
+      }
+    },
+    {
+      "id": "added:shinano-si-2002ex:shinano-si-2002ex-6-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "shinano-si-2002ex-6-20260926-workingpressurebar-1",
+      "productId": "shinano-si-2002ex",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9c126b35aebc9460f1fbd23189fc18b3958c8bb44efa21f18264b4c983790715",
+      "snapshot": {
+        "id": "shinano-si-2002ex-6-20260926-workingpressurebar-1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 43",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+      }
+    },
+    {
+      "id": "added:shinano-si-2201-2:shinano-si-2201-20260926:2026-10-19",
+      "evidenceId": "shinano-si-2201-20260926",
+      "productId": "shinano-si-2201-2",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5c2949facdb085c8acfddb23243d9b03e5c095eb09441b5f0be7eb408d36a75a",
+      "snapshot": {
+        "id": "shinano-si-2201-20260926",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=15",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 15, réf. SI-2201",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consommation maximale, colonne Max Air Consumption : 15 CFM / 7.1 L/s, soit 426 L/min. Tableau partagé uniquement entre les références nommées par Shinano."
+      }
+    },
+    {
+      "id": "added:shinano-si-2201-2:shinano-si-2201-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "shinano-si-2201-20260926-workingpressurebar-1",
+      "productId": "shinano-si-2201-2",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6f3388f19ad750595d65fd5f40ed0e76172ac7909c475d06781bb465c3af4649",
+      "snapshot": {
+        "id": "shinano-si-2201-20260926-workingpressurebar-1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 43",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+      }
+    },
+    {
+      "id": "added:shinano-si-2224s:shinano-si-3100p-20260926:2026-10-19",
+      "evidenceId": "shinano-si-3100p-20260926",
+      "productId": "shinano-si-2224s",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "38218e99943d3829f2ca6ff4498091e7cdae0e64e3c22d3d05db9c9b7b552ee3",
+      "snapshot": {
+        "id": "shinano-si-3100p-20260926",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=18",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 18, réf. SI-3100P",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consommation maximale, colonne Max Air Consumption : 13.8 CFM / 6.5 L/s, soit 390 L/min. Tableau partagé uniquement entre les références nommées par Shinano."
+      }
+    },
+    {
+      "id": "added:shinano-si-2224s:shinano-si-3100p-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "shinano-si-3100p-20260926-workingpressurebar-1",
+      "productId": "shinano-si-2224s",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c7d37c7cf970639b8136d659d119113815ed0e6e7e520524060d1c4bcebb08d3",
+      "snapshot": {
+        "id": "shinano-si-3100p-20260926-workingpressurebar-1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 43",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+      }
+    },
+    {
+      "id": "added:shinano-si-2740:shinano-si-2830-20260926:2026-10-19",
+      "evidenceId": "shinano-si-2830-20260926",
+      "productId": "shinano-si-2740",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c12bae8e50d858eb380ecd3c73735ed5602e5cd2a09e0fedad55a66823e192ca",
+      "snapshot": {
+        "id": "shinano-si-2830-20260926",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=11",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 11, réf. SI-2830",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Colonne Max Air Consumption : 31.8 CFM / 15 L/s. Conversion du maximum publié : 15 × 60 = 900 L/min."
+      }
+    },
+    {
+      "id": "added:shinano-si-2740:shinano-si-2830-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "shinano-si-2830-20260926-workingpressurebar-1",
+      "productId": "shinano-si-2740",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a300a43c1ba56c7dd5a089f17b5a3a8ff638963541be39312bee2bb6f417d6f9",
+      "snapshot": {
+        "id": "shinano-si-2830-20260926-workingpressurebar-1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 43",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+      }
+    },
+    {
+      "id": "added:shinano-si-3003am:shinano-si-3200a-20260926:2026-10-19",
+      "evidenceId": "shinano-si-3200a-20260926",
+      "productId": "shinano-si-3003am",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "bdc7273da36316cf5e7dc41584d9fede50efdbf83b727866bc958fde1a98d27e",
+      "snapshot": {
+        "id": "shinano-si-3200a-20260926",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=16",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 16, réf. SI-3200A",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consommation maximale, colonne Max Air Consumption : 14.4 CFM / 6.8 L/s, soit 408 L/min. Tableau partagé uniquement entre les références nommées par Shinano."
+      }
+    },
+    {
+      "id": "added:shinano-si-3003am:shinano-si-3200a-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "shinano-si-3200a-20260926-workingpressurebar-1",
+      "productId": "shinano-si-3003am",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c3ed0e5a5b7521b7c3c5d905c4eca0f6255fcf576181fd2cac7cb83d1dda4ee2",
+      "snapshot": {
+        "id": "shinano-si-3200a-20260926-workingpressurebar-1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 43",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+      }
+    },
+    {
+      "id": "added:shinano-si-3004rm:shinano-si-3310-20260926:2026-10-19",
+      "evidenceId": "shinano-si-3310-20260926",
+      "productId": "shinano-si-3004rm",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5de0ba379ee9a5e54ce6b2f92e2503f1bc041b331038d0922bd29eaeabd2b19c",
+      "snapshot": {
+        "id": "shinano-si-3310-20260926",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=16",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 16, réf. SI-3310",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consommation maximale, colonne Max Air Consumption : 7.2 CFM / 3.4 L/s, soit 204 L/min. Tableau partagé uniquement entre les références nommées par Shinano."
+      }
+    },
+    {
+      "id": "added:shinano-si-3004rm:shinano-si-3310-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "shinano-si-3310-20260926-workingpressurebar-1",
+      "productId": "shinano-si-3004rm",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6a998e6f671faf3d550eef06b98b91b7ff0a6b19a9618c6f59ab079623224092",
+      "snapshot": {
+        "id": "shinano-si-3310-20260926-workingpressurebar-1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 43",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+      }
+    },
+    {
+      "id": "added:shinano-si-4730:shinano-si-4740-20260926:2026-10-19",
+      "evidenceId": "shinano-si-4740-20260926",
+      "productId": "shinano-si-4730",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e46f091fc176b935480a73445273cc6ee20b3a72adda5229d3bbae1cb36ea3f3",
+      "snapshot": {
+        "id": "shinano-si-4740-20260926",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=25",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 25, réf. SI-4740",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consommation maximale, colonne Max Air Consumption : 10.2 CFM / 4.8 L/s, soit 288 L/min. Tableau partagé uniquement entre les références nommées par Shinano."
+      }
+    },
+    {
+      "id": "added:shinano-si-4730:shinano-si-4740-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "shinano-si-4740-20260926-workingpressurebar-1",
+      "productId": "shinano-si-4730",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ff18667a3ca40d79cf6b36975906d33c5fa89f334ba7a3e557eab65bd14ee748",
+      "snapshot": {
+        "id": "shinano-si-4740-20260926-workingpressurebar-1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 43",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+      }
+    },
+    {
+      "id": "added:shinano-si-5300a:shinano-si-5800-20260926:2026-10-19",
+      "evidenceId": "shinano-si-5800-20260926",
+      "productId": "shinano-si-5300a",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "51e68c5f7df71ff742aa1bd6fd63a9607263f53b20045cf9d163ae3e01b8919c",
+      "snapshot": {
+        "id": "shinano-si-5800-20260926",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=23",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 23, réf. SI-5800",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Colonne Max Air Consumption : 18 CFM / 8.5 L/s. Conversion du maximum publié : 8.5 × 60 = 510 L/min."
+      }
+    },
+    {
+      "id": "added:shinano-si-5300a:shinano-si-5800-20260926-workingpressurebar-1:2026-10-19",
+      "evidenceId": "shinano-si-5800-20260926-workingpressurebar-1",
+      "productId": "shinano-si-5300a",
+      "productType": "tool",
+      "occurredAt": "2026-10-19",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "eea4fc3387c7c094e7f539b11f42aac495e44c7577b396dc5c2c3072cb025ae5",
+      "snapshot": {
+        "id": "shinano-si-5800-20260926-workingpressurebar-1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, catalogue général 2025, p. 43",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+      }
     }
   ],
-  "historyVersion": "c2b0479a2e653672c51bafc10212af41bcac131ae0677d622d71f371baf7a131"
+  "historyVersion": "9c009b500947357eb87be35562bc794a986e12ef16e74a38bbe0bbc5f12aca29"
 }

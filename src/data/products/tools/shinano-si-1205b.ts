@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-1205B, référence SI-1205B. Le tableau fabricant publie 270 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 40 Nm. Vitesse à vide publiée : 220 tr/min.",
+		"overview": "SI-1205B : mini-cliquet à carré de 3/8 pouce, contre 1/4 pouce pour le SI-1200B. Le tableau commun donne 40 Nm, 220 tr/min et 4,5 L/s maximum, soit 270 L/min, à 6,3 bar. Le débit identique ne rend pas les interfaces de douille équivalentes.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 9.6 CFM / 4.5 L/s. Conversion du maximum publié : 4.5 × 60 = 270 L/min.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Masse publiée : 0,51 kg."
 		],
 		"limitations": [
+			"Le couple maximal publié n’est pas une consigne de serrage final. Vérifier la douille et la référence effectivement livrée.",
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
 			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
@@ -87,6 +88,24 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "shinano-si-1205b-20260926-workingpressurebar-1",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+		},
+		{
+			"id": "shinano-si-1200b-20260926",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=9",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 9, réf. SI-1200B",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Colonne Max Air Consumption : 9.6 CFM / 4.5 L/s. Conversion du maximum publié : 4.5 × 60 = 270 L/min."
+		},
+		{
+			"id": "shinano-si-1200b-20260926-workingpressurebar-1",
 			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
 			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
 			"sourceType": "manufacturer",

@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-5300A, référence SI-5300A. Le tableau fabricant publie 612 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 2 000 tr/min. Capacité du mandrin : 10 mm.",
+		"overview": "SI-5300A : perceuse à mandrin de 10 mm, 2 000 tr/min et maximum d’air de 10,2 L/s, soit 612 L/min à 6,3 bar. La SI-5800 voisine accepte 8 mm et publie 510 L/min maximum. La capacité de mandrin n’est pas à elle seule une capacité garantie de perçage dans toute matière.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 21.6 CFM / 10.2 L/s. Conversion du maximum publié : 10.2 × 60 = 612 L/min.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Couple maximal publié : 6.32 Nm."
 		],
 		"limitations": [
+			"Le foret, la matière et le maintien de la pièce doivent suivre la notice. La vitesse à vide ne devient pas une vitesse de coupe mesurée.",
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
 			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
@@ -94,6 +95,24 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "shinano-si-5300a-20260926-workingpressurebar-1",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+		},
+		{
+			"id": "shinano-si-5800-20260926",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=23",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 23, réf. SI-5800",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Colonne Max Air Consumption : 18 CFM / 8.5 L/s. Conversion du maximum publié : 8.5 × 60 = 510 L/min."
+		},
+		{
+			"id": "shinano-si-5800-20260926-workingpressurebar-1",
 			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
 			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
 			"sourceType": "manufacturer",

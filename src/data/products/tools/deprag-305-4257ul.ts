@@ -23,16 +23,17 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "DEPRAG 305-4257UL, référence 352587F. Le tableau fabricant publie 350 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal : 18 Nm. Vitesse à vide : 270 tr/min.",
+		"overview": "DEPRAG 305-4257UL 352587F : visseuse de démontage à poignée pistolet, 270 tr/min à vide et couple maximal de desserrage de 18 Nm. La 305-3257UL voisine donne 525 tr/min et 15 Nm. Les deux déclarent 0,35 m³/min à 6,3 bar, soit 350 L/min, sans régime d’air qualifié.",
 		"verifiedFacts": [
 			"La note du tableau indique une pression de fonctionnement de 6,3 bar.",
 			"Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine.",
 			"Référence fabricant : 352587F.",
-			"Couple maximal : 18 Nm.",
+			"Couple maximal de desserrage : 18 Nm.",
 			"Vitesse à vide : 270 tr/min.",
 			"Démarrage / exécution du catalogue : reversible to right rotation."
 		],
 		"limitations": [
+			"Le couple de desserrage n’est pas une plage de serrage contrôlé. Le fabricant demande un appui de réaction pour le maximum au-delà de 10 Nm sur la version pistolet ; son montage doit suivre la notice.",
 			"Le couple et la vitesse correspondent à la colonne de cette référence commande, pas à l’ensemble de la famille.",
 			"Les broches intégrées nécessitent aussi le dimensionnement des auxiliaires de l’installation, qui ne sont pas inclus dans la consommation du moteur de vissage."
 		]
@@ -53,7 +54,7 @@ const product: ToolProfileInput = {
 			]
 		},
 		{
-			"label": "Couple maximal",
+			"label": "Couple maximal de desserrage",
 			"value": "18 Nm",
 			"evidenceIds": [
 				"deprag-352587f-20260926"
@@ -90,6 +91,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine."
+		},
+		{
+			"id": "deprag-352587e-20260926",
+			"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3530/D3530en.pdf#page=2",
+			"sourceLabel": "DEPRAG, brochure technique D3530en, p. 2, réf. 352587E",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine."
 		}
 	],
 	"fieldSources": {
@@ -101,6 +111,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"deprag-352587f-20260926"
+		],
+		"airflowBasis": [
+			"deprag-352587f-20260926"
 		]
 	},
 	"notes": [
@@ -110,7 +123,8 @@ const product: ToolProfileInput = {
 		"min": 350,
 		"typical": 350,
 		"max": 350
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

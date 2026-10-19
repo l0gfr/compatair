@@ -22,6 +22,7 @@ async function tamper(find,change){
  // Keep the actual amendment guard when loading semantic mutation tests from a data URL.
  code=code.replace("'./reviewed-catalog-amendments-2026-10-17.mjs'",JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-17.mjs',import.meta.url).href));
  code=code.replace("'./reviewed-catalog-amendments-2026-10-18.mjs'",JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-18.mjs',import.meta.url).href));
+ code=code.replace("'./reviewed-catalog-amendments-2026-10-19.mjs'",JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-19.mjs',import.meta.url).href));
  const replacement=`const approvedSources = ${JSON.stringify(copy.sources.map(source=>({id:source.id,reviewedSourceSha256:digest(source)})))};\nconst approvedRows = ${JSON.stringify(copy.tools.map(row=>({documentRowId:row.documentRowId,reviewedRowSha256:digest(row)})))};`;
  const pattern=/const approvedSources = \[[\s\S]*?\];\nconst approvedRows = \[[\s\S]*?\];/;
  if(!pattern.test(code))throw new Error('Missing approval contracts');

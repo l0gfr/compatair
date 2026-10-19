@@ -3,14 +3,14 @@ title: "Filtre à charbon actif pour l’air comprimé : traiter les vapeurs d�
 seoTitle: "Charbon actif air comprimé : vapeurs d’huile et durée"
 description: "Coalescence et charbon actif ne traitent pas la même forme d’huile. Définissez l’exigence, la protection amont et les critères de remplacement du charbon."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-29
+updatedDate: 2026-10-19
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture", "maintenance-industrielle"]
 readingTime: 4
 reviewStatus: "internal"
 relatedGuides: ["filtration-air-cabine-peinture-etages", "qualite-air-comprime-iso-8573-1", "filtre-air-comprime-perte-pression-remplacement"]
-sources: ["https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf", "https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/174004425_EN.PDF"]
+sources: ["https://asset.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf"]
 ---
 
 **Un filtre coalescent et un adsorbeur à charbon actif ne sont pas interchangeables.** Le premier ne suffit pas à traiter la fraction d’huile présente sous forme de vapeur. Si votre procédé impose une limite d’huile totale, il faut vérifier toutes les formes concernées et l’ensemble du traitement.
@@ -19,13 +19,13 @@ Le charbon actif n’est pas non plus une garantie permanente. Sa sélection et 
 
 ## Pourquoi une vapeur traverse la coalescence
 
-La [documentation Parker sur la qualité d’air](https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/174004425_EN.PDF) distingue les vapeurs d’huile des aérosols : elle indique que la vapeur passe au travers d’un filtre coalescent et présente l’adsorption sur charbon actif pour la réduire. Cette distinction explique l’existence d’étages différents dans une chaîne de traitement.
+La [documentation Parker sur la qualité d’air](https://asset.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf) distingue les vapeurs d’huile des aérosols : elle indique que la vapeur passe au travers d’un filtre coalescent et présente l’adsorption sur charbon actif pour la réduire. Cette distinction explique l’existence d’étages différents dans une chaîne de traitement.
 
 La bonne question au fournisseur devient : quelle exigence d’huile doit être tenue, à quel point, et avec quelle méthode de contrôle ? Une désignation « filtre fin » ou « air propre » ne répond pas à ces éléments. Le [guide ISO 8573-1](/guides/qualite-air-comprime-iso-8573-1/) donne les repères de lecture des classes.
 
 ## Une capacité d’adsorption limitée
 
-[Parker précise que le charbon possède une capacité finie](https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf) et que sa durée dépend notamment de la contamination entrante, de la présence d’huile liquide, de la température, de la pression et du point de rosée. Le document prévoit une protection préalable par coalescence pour les éléments concernés.
+[Parker précise que le charbon possède une capacité finie](https://asset.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf) et que sa durée dépend notamment de la contamination entrante, de la présence d’huile liquide, de la température, de la pression et du point de rosée. Le document prévoit une protection préalable par coalescence pour les éléments concernés.
 
 Il n’est donc pas rigoureux de promettre une durée universelle à partir de la taille du raccord. Conservez le modèle exact, les conditions garanties, le plan de remplacement et les hypothèses sur l’air entrant. Si celles-ci sont inconnues, faites-les préciser avant de transformer une durée commerciale en règle d’entretien.
 
@@ -45,7 +45,7 @@ Il n’est donc pas rigoureux de promettre une durée universelle à partir de l
 
 ## Un indicateur de pression ne mesure pas la saturation chimique
 
-La même [documentation Parker](https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf) rappelle qu’un indicateur de pression différentielle n’est pas un indicateur de qualité de l’air. Une aiguille dans une zone favorable ne prouve donc pas que l’exigence de contamination est tenue.
+La même [documentation Parker](https://asset.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf) rappelle qu’un indicateur de pression différentielle n’est pas un indicateur de qualité de l’air. Une aiguille dans une zone favorable ne prouve donc pas que l’exigence de contamination est tenue.
 
 Pour votre installation, nous proposons de séparer deux lignes de suivi : la perte de pression du traitement et la qualité demandée en aval. Le [guide des filtres et de leur remplacement](/guides/filtre-air-comprime-perte-pression-remplacement/) explique cette distinction. Ne retardez pas une maintenance prescrite uniquement parce que le manomètre paraît rassurant.
 
@@ -71,7 +71,6 @@ Le glossaire précise la définition de [adsorption sur charbon actif](/glossair
 
 ## Sources et méthode
 
-Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
+Sources et passages déterminants relus le **19 octobre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
 
-- [Parker, documentation filtration, pages PDF 8 à 10](https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf)
-- [Parker, High quality compressed air, page PDF 17](https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/174004425_EN.PDF)
+- [Parker, Compressed air interchangeable elements, pages PDF 8 à 10](https://asset.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf)

@@ -24,6 +24,7 @@ async function repinned(copy) {
  // A data URL has no relative module base; keep the real amendment validator.
  code = code.replace("'./reviewed-catalog-amendments-2026-10-17.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-17.mjs', import.meta.url).href));
  code = code.replace("'./reviewed-catalog-amendments-2026-10-18.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-18.mjs', import.meta.url).href));
+ code = code.replace("'./reviewed-catalog-amendments-2026-10-19.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-19.mjs', import.meta.url).href));
  for (const [name, records] of [
   ['approvedSources', copy.sources.map(source => ({ id: source.id, reviewedSourceSha256: digest(source) }))],
   ['approvedRows', copy.tools.map(row => ({ documentRowId: row.documentRowId, reviewedRowSha256: digest(row) }))],
@@ -177,9 +178,9 @@ describe('documented tools October 5', () => {
   expect(graco.details.some(detail => detail.label === 'Maximum fluid working pressure' && detail.value.includes('300 psi'))).toBe(true);
   expect(batch.find(product => product.brand === 'Graco' && product.mpn === '288726').workingPressureBar).toEqual({});
   for (const product of batch.filter(product => product.brand === 'Sames Kremlin')) {
-   if (product.mpn === '135.797.413') {
+   if (['135.797.413', '135.797.414'].includes(product.mpn)) {
     expect(product.demandModel).toBe('variable-volume');
-    expect(product.editorial.limitations.join(' ')).toContain('colonne de consommation d’air est vide');
+    expect(product.editorial.limitations.join(' ')).toMatch(/colonne (?:de consommation )?d’air est vide/i);
    } else expect(product.editorial.limitations.some(note => note.includes('famille'))).toBe(true);
   }
  });

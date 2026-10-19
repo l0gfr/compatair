@@ -33,7 +33,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Chicago Pneumatic"
 	},
 	"editorial": {
-		"overview": "CP3340-SALAVET, référence 6151609270, demande 2 700 L/min en charge à 6,3 bar selon le catalogue Chicago Pneumatic v6.08.2026, page 148. Vitesse à vide : 6 000 tr/min. Puissance de l’outil : 3 400 W.",
+		"overview": "CP3340-SALAVET : meuleuse de 150 mm, broche 5/8-11 UNC, 3 400 W et 6 000 tr/min à vide. La SALAVELE voisine est une configuration de 230 mm. Les deux déclarent 45 L/s en charge à 6,3 bar, soit 2 700 L/min ; la roue et sa protection ne deviennent pas interchangeables pour autant.",
 		"verifiedFacts": [
 			"Vitesse à vide : 6 000 tr/min.",
 			"Puissance de l’outil : 3 400 W.",
@@ -42,6 +42,7 @@ const product: ToolProfileInput = {
 			"Entrée d’air 1/2 pouce ; flexible intérieur de 10 mm publié par le fabricant."
 		],
 		"limitations": [
+			"La norme, la protection et les accessoires livrés doivent correspondre au code commandé. Le flexible publié ne suffit pas à qualifier les pertes de votre réseau.",
 			"Le débit utilisé est la consommation en charge du tableau constructeur à 6,3 bar. Aucune réduction arbitraire pour usage intermittent n’est appliquée.",
 			"Le diamètre intérieur de flexible publié est de 10 mm, sans longueur associée dans ce tableau. La perte de pression du réseau reste à vérifier pour votre installation.",
 			"Référence issue du catalogue international v6.08.2026. La configuration livrée, les normes applicables et la disponibilité en France restent à confirmer avec le fournisseur."
@@ -96,6 +97,15 @@ const product: ToolProfileInput = {
 			"id": "cp-catalog-202608-6151609270",
 			"sourceUrl": "https://tools.cp.com/content/dam/pim/itba/cp/literature/catalogs/General-Industry_catalog_CP_EN.pdf#page=148",
 			"sourceLabel": "Chicago Pneumatic, catalogue v6.08.2026, p. 148, réf. 6151609270",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-25",
+			"confidence": "A",
+			"notes": "Colonne AIR CONS. @LOAD : 45 L/s × 60 = 2700 L/min. Note de tableau : 90 PSI (6,3 bar). Valeurs brutes et empreinte PDF versionnées."
+		},
+		{
+			"id": "cp-catalog-202608-6151609320",
+			"sourceUrl": "https://tools.cp.com/content/dam/pim/itba/cp/literature/catalogs/General-Industry_catalog_CP_EN.pdf#page=148",
+			"sourceLabel": "Chicago Pneumatic, catalogue v6.08.2026, p. 148, réf. 6151609320",
 			"sourceType": "manufacturer",
 			"retrievedAt": "2026-09-25",
 			"confidence": "A",

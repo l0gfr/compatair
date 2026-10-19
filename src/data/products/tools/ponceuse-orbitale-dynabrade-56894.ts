@@ -45,7 +45,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade Dynorbital Supreme 56894, référence 56894, présente une consommation publiée de 510 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 151. Aspiration des poussières : Aspiration centralisée. Diamètre du plateau : 152 mm.",
+		"overview": "Dynorbital Supreme 56894 : plateau de 152 mm, orbite de 10 mm et raccordement à une aspiration centralisée. La 56890 voisine est sans aspiration et mesure 178 mm, contre 197 mm pour la 56894. La série annonce Air Flow Rate de 510 L/min à 6,2 bar, sans qualifier son régime.",
 		"verifiedFacts": [
 			"Aspiration des poussières : Aspiration centralisée.",
 			"Diamètre du plateau : 152 mm.",
@@ -55,6 +55,7 @@ const product: ToolProfileInput = {
 			"Flexible : 6 mm de diamètre intérieur publié."
 		],
 		"limitations": [
+			"Le débit ne reçoit donc pas une qualification de maximum en charge. Le captage requiert un système externe adapté ; le raccord d’aspiration ne valide pas son efficacité.",
 			"Masse non retenue : le tableau publie des unités contradictoires (2.4 (1)).",
 			"Le calcul conserve la consommation publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
 			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
@@ -115,6 +116,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Tableau 151-1, ligne 13. Consommation publiée : 18 (510) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
+		},
+		{
+			"id": "dynabrade-56890-catalogue-d25-01",
+			"sourceUrl": "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf#page=151",
+			"sourceLabel": "Dynabrade, catalogue D25.01, 56890, page 151",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Tableau 151-0, ligne 9. Consommation publiée : 18 (510) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
 		}
 	],
 	"fieldSources": {
@@ -132,12 +142,16 @@ const product: ToolProfileInput = {
 		],
 		"recommendedHose": [
 			"dynabrade-56894-catalogue-d25-01"
+		],
+		"airflowBasis": [
+			"dynabrade-56894-catalogue-d25-01"
 		]
 	},
 	"notes": [
 		"Caractéristiques déclarées par le fabricant, sans essai physique par CompatAir.",
 		"La compatibilité calculée concerne l’alimentation en air. Le choix des abrasifs, carters et équipements de protection relève de la notice de l’outil."
-	]
+	],
+	"airflowBasis": "unqualified"
 };
 
 export default product;

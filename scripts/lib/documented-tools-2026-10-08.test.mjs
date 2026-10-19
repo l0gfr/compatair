@@ -220,8 +220,8 @@ describe('October 8 primary tool documents', () => {
    expect(productTechnicalSvgError(p, 'tools', svg), p.id).toBeNull();
    expect(generatedTechnicalCardDimensions(svg), p.id).toEqual({ width: 1200, height: 800 });
   }
-  // The reviewed Prona pressure is now unknown; its exact generated card is 37 bytes larger.
-   expect(bytes).toBe(1522756);
+  // The prior Prona correction remains; the selected Iwata pressure is now unknown (+34 bytes).
+  expect(bytes).toBe(1522790);
   expect(bytes).toBeLessThan(12 * 1024 * 1024);
  });
  it('retains capture integrity, original units, dates and all critical field provenance without private paths', () => {

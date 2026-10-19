@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Meiji F410-G15HVLP. Consommation constructeur au point documenté : 385 L/min à 2 bar. Modèle du tableau constructeur F410-G15HVLP : buse 1.5 mm, alimentation gravité, chapeau HVLP. Aucune configuration interchangeable hors de cette ligne n’est déduite.",
+    "overview": "F410-G15HVLP : buse de 1,5 mm, 145 ml/min de produit et jet de 275 mm mesuré à 200 mm avec une viscosité de 20 s dans la coupe Meiji W1. Le G14 publie 140 ml/min et 270 mm au même protocole. Les deux restent à 385 L/min d’air au point d’entrée de 0,2 MPa, soit 2 bar.",
     "verifiedFacts": [
       "Buse déclarée : 1.5 mm.",
       "Alimentation : gravité.",
@@ -51,6 +51,7 @@ const product: ToolProfileInput = {
       "Pression dans la source : 0.2 MPa à l’entrée, point de consommation."
     ],
     "limitations": [
+      "Les 0,07 MPa au chapeau ne sont pas une autre pression d’entrée. Le calibre modifie l’application, sans économie d’air prouvée par son seul diamètre.",
       "Valeurs du tableau constructeur au seul point de pression documenté ; aucune extrapolation à une autre pression.",
       "Débit d’air et débit de peinture conservés séparément. Les puissances minimales de compresseur indicatives du catalogue ne remplacent pas une courbe FAD.",
       "Source constructeur identifiée et contrôlée visuellement ; disponibilité commerciale actuelle non revendiquée.",

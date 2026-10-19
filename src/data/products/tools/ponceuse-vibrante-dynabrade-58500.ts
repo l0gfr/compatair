@@ -43,7 +43,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade 58500, référence 58500, présente une consommation maximale publiée de 368 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 176. Puissance moteur : 112 W. Vitesse moteur publiée : 10 000 tr/min.",
+		"overview": "Dynabug II 58500 : plateau autoagrippant de 74 × 109 mm, orbite de 3/32 pouce et absence d’aspiration. La 58507 possède un plateau de 68 × 175 mm à pinces renforcées. Le moteur et le maximum de 368 L/min à 6,2 bar restent communs : le choix porte sur la feuille et sa fixation.",
 		"verifiedFacts": [
 			"Puissance moteur : 112 W.",
 			"Vitesse moteur publiée : 10 000 tr/min.",
@@ -53,6 +53,7 @@ const product: ToolProfileInput = {
 			"Flexible : 6 mm de diamètre intérieur publié."
 		],
 		"limitations": [
+			"La forme rectangulaire du plateau ne transforme pas ce mouvement orbital en course linéaire. Le résultat de finition doit être vérifié avec l’abrasif et la pièce.",
 			"Hauteur non retenue : le tableau publie des unités contradictoires (3-1/2 (91)).",
 			"Le calcul conserve la consommation maximale publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
 			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
@@ -99,6 +100,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Tableau 176-0, ligne 1. Consommation maximale publiée : 13 (368) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
+		},
+		{
+			"id": "dynabrade-58507-catalogue-d25-01",
+			"sourceUrl": "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf#page=176",
+			"sourceLabel": "Dynabrade, catalogue D25.01, 58507, page 176",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Tableau 176-0, ligne 3. Consommation maximale publiée : 13 (368) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
 		}
 	],
 	"fieldSources": {

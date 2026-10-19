@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Yato YT-2376. Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "YT-2376 : pistolet de sablage à réservoir de 1 L, buse de 6,3 mm et masse de 0,73 kg. Le YT-2375 aspire l’abrasif par un tuyau de 1 m. La fiche du 2376 donne 160 L/min et une plage de service de 0,2 à 0,5 MPa, séparée du maximum de 0,8 MPa.",
 		"verifiedFacts": [
 			"Tank capacity : 1 l.",
 			"Nozzle pipe length : 52 mm.",
@@ -43,6 +43,7 @@ const product: ToolProfileInput = {
 			"Weight : 0.73 kg."
 		],
 		"limitations": [
+			"Les 160 L/min restent sans régime de mesure qualifié. Le réservoir change l’organisation de l’abrasif, sans économie d’air démontrée.",
 			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
 			"Les pressions recommandées ou maximales de cette fiche ne sont pas des points de mesure de consommation.",
 			"Sans régime explicite en charge et pression de mesure associée, la consommation éventuelle reste documentaire et ne permet aucun verdict conclusif.",
@@ -131,6 +132,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-05",
 			"confidence": "B",
 			"notes": "Déclaration fabricant, capture SHA-256 c8401bd77e383fcb8782263f226867e37a53b743c283e40cf5056ac47a738cd4. Aucun essai physique CompatAir."
+		},
+		{
+			"id": "october5-tools-yato-tool-024-p1",
+			"sourceUrl": "https://toya24.pl/en-PL/products/-air-sand-blaster-10007208",
+			"sourceLabel": "Yato fiche technique officielle",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-05",
+			"confidence": "B",
+			"notes": "Déclaration fabricant, capture SHA-256 7b0ffd92ea2dc3e088e1dec642907c5e04bcb4ef2a7d82a02fd3a5772928a622. Aucun essai physique CompatAir."
 		}
 	],
 	"fieldSources": {

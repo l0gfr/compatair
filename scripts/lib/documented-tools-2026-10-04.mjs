@@ -1,3 +1,4 @@
+import { applyReviewedOctober19Amendment } from './reviewed-catalog-amendments-2026-10-19.mjs';
 import { applyReviewedOctober18Amendment } from './reviewed-catalog-amendments-2026-10-18.mjs';
 import { applyReviewedOctober17Amendment } from './reviewed-catalog-amendments-2026-10-17.mjs';
 import { createHash } from 'node:crypto';
@@ -5104,5 +5105,5 @@ export function buildDocumentedToolsOctober4(snapshot) {
   const label = `${row.brand} ${row.model}${hasMpn && row.mpn !== row.model ? ` (réf. ${row.mpn})` : ''}`;
   const summary = qualified ? `Demande au point documenté : ${format(flow)} L/min à ${format(row.pressureBar)} bar.` : explanation;
   return {id,slug:id,categoryId:row.categoryId,category:row.categoryId,label,brand:row.brand,model:row.model,...(hasMpn ? {mpn:row.mpn} : {}),...demand,confidence:'B',image:{src:`/images/products/${id}.svg`,alt:`Repères techniques : ${label}`,sourceUrl:source.url,sourceLabel:'Carte technique CompatAir, données déclarées par le fabricant'},variant:{familyId:slug(`${row.brand}-${row.model}`),label:hasMpn ? `Référence ${row.mpn}` : `Modèle ${row.model}, SKU non établi`,distinguishingAttributes:{[hasMpn ? 'reference' : 'manufacturerModel']:row.mpn,...Object.fromEntries(row.details.slice(0,2).map(item => [item.label,item.value]))}},editorial:{overview:`${label}. ${summary}`,verifiedFacts:row.details.map(item => `${item.label} : ${item.value}.`),limitations:[!qualified ? explanation : 'Le point constructeur est utilisé sans facteur de marche implicite ; aucune consommation à une autre pression n’est calculée.',...row.sourceLimitations,'Aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué.']},specifications,evidence:proofs,fieldSources:{[hasMpn ? 'mpn' : 'model']:[primary.id],workingPressureBar:[demandProof.id],...(!qualified ? {demandExplanation:proofs.map(item => item.id)} : {airflowLpm:[demandProof.id]})},notes:[summary]};
- }).map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment);
+ }).map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment);
 }

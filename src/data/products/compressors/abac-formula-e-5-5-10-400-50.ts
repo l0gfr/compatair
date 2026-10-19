@@ -24,19 +24,18 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "ABAC FORMULA E 5,5 10 400/50 , référence 4152025393 : configuration sans cuve intégrée, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 700 L/min à 10 bar. Configuration Full Feature publiée par le fabricant.",
+		"overview": "FORMULA E 5,5 10 400/50, article 4152025393 : 700 L/min à 10 bar, moteur de 5,5 kW et alimentation 400 V triphasée à 50 Hz. Le montage Full Feature comprend le sécheur, sans cuve. La version 4152025392 de 8 bar annonce 880 L/min.",
 		"verifiedFacts": [
 			"Débit restitué publié : 700 L/min à 10 bar.",
 			"Compresseur rotatif à vis lubrifié, famille FORMULA. Puissance moteur publiée : 5,5 kW.",
-			"Masse nette publiée : 268 kg.",
-			"Alimentation publiée : 400 V, 50 Hz, triphasée.",
-			"Fonctionnement continu déclaré par le constructeur pour cette gamme ; taux de marche normalisé à 100 %."
+			"Masse publiée : 268 kg.",
+			"Alimentation publiée : 400 V, 50 Hz, triphasée."
 		],
 		"limitations": [
-			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
-			"Le fonctionnement continu est une déclaration de gamme ; respecter les conditions de la notice. La disponibilité commerciale reste à confirmer.",
-			"Version électrique exacte à vérifier à la commande ; une alimentation 230 V peut être triphasée.",
-			"Le débit publié appartient à cette référence et à sa version de pression. Il ne définit pas une courbe complète."
+			"Les capacités de 700 et 880 L/min appartiennent à deux versions de pression distinctes.",
+			"Le taux de marche du groupe complet reste à confirmer pour cet article.",
+			"Le bloc de dimensions produit donne 268 kg ; les attributs ERP donnent 207 kg. Faire clarifier la base de masse avant manutention.",
+			"Le nom ERP français indique FORMULA E07 10, tandis que les autres langues indiquent E 5,5 10. La référence 4152025393 identifie la variante à faire confirmer sur le devis."
 		]
 	},
 	"specifications": [
@@ -59,13 +58,6 @@ const product: CompressorInput = {
 			"value": "1065 × 665 × 1070 mm (L × l × H)",
 			"evidenceIds": [
 				"abac-4152025393-20260926"
-			]
-		},
-		{
-			"label": "Taux de marche constructeur",
-			"value": "100 %, fonctionnement continu déclaré pour la gamme. Respecter les conditions de la notice de la référence.",
-			"evidenceIds": [
-				"abac-formula-e-5-5-10-400-50-continuous-duty-20260927"
 			]
 		}
 	],
@@ -116,9 +108,6 @@ const product: CompressorInput = {
 		],
 		"phase": [
 			"abac-4152025393-20260926"
-		],
-		"dutyCycle": [
-			"abac-formula-e-5-5-10-400-50-continuous-duty-20260927"
 		]
 	},
 	"notes": [
@@ -127,8 +116,7 @@ const product: CompressorInput = {
 	"powerKw": 5.5,
 	"weightKg": 268,
 	"voltage": "400 V, 50 Hz",
-	"phase": "three-phase",
-	"dutyCycle": 1
+	"phase": "three-phase"
 };
 
 export default product;

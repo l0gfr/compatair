@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Yato YT-2346. Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "YT-2346 : pistolet HVLP à buse de 1,8 mm et réservoir de 1 L. Le YT-2341 voisin est en 1,5 mm avec 0,6 L. La fiche du 2346 sépare 380 L/min d’air de 0,16 à 0,24 L/min d’eau dans son essai de débit produit.",
 		"verifiedFacts": [
 			"Type : HVLP.",
 			"Coating material flow (water) : 0.16-0.24 l/min.",
@@ -42,6 +42,7 @@ const product: ToolProfileInput = {
 			"Weight : 0.96 kg."
 		],
 		"limitations": [
+			"Le maximum de 0,4 MPa n’est pas une pression de mesure de consommation. Sans régime et point pression–débit qualifiés, la pulvérisation continue ne reçoit pas de verdict positif.",
 			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
 			"Les pressions recommandées ou maximales de cette fiche ne sont pas des points de mesure de consommation.",
 			"Sans régime explicite en charge et pression de mesure associée, la consommation éventuelle reste documentaire et ne permet aucun verdict conclusif.",
@@ -123,6 +124,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-05",
 			"confidence": "B",
 			"notes": "Déclaration fabricant, capture SHA-256 d5718774328e26819fa20d1b89b433c110f09dd2816b9d58e213f809bfcf4ba7. Aucun essai physique CompatAir."
+		},
+		{
+			"id": "october5-tools-yato-tool-005-p1",
+			"sourceUrl": "https://toya24.pl/en-PL/products/-spray-gun-with-fluid-cup-hvlp-0-6l-1-5-mm-10006673",
+			"sourceLabel": "Yato fiche technique officielle",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-05",
+			"confidence": "B",
+			"notes": "Déclaration fabricant, capture SHA-256 550a9a7eaed837b2df20e60fbedfc3f094dc34846d3213cb17267abe7ded15ea. Aucun essai physique CompatAir."
 		}
 	],
 	"fieldSources": {

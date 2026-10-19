@@ -45,7 +45,7 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Dimensions (L × l × h)",
+			"label": "Dimensions (largeur × profondeur × hauteur)",
 			"value": "3100 × 1910 × 2140 mm",
 			"evidenceIds": [
 				"documented-d-boge-s3-current-p1"
@@ -53,7 +53,7 @@ const product: CompressorInput = {
 		},
 		{
 			"label": "Conditions du débit",
-			"value": "Effective delivery is associated with maximum pressure in the table; measurement pressure not separately established.",
+			"value": "Livraison effective associée au maximum de la version dans le tableau ; pression de mesure non séparément établie.",
 			"evidenceIds": [
 				"documented-d-boge-s3-current-p1"
 			]
@@ -67,16 +67,16 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "BOGE S 221-3, 7.5 bar, insonorisation standard. S-3, insonorisation standard. La livraison effective est publiée, mais sa pression de mesure n’est pas séparément établie : aucun FAD calculable n’est ajouté.",
+		"overview": "S 221-3, version de 7,5 bar avec insonorisation standard : groupe industriel de 160 kW, livraison effective publiée de 28,07 m³/min et raccord DN100. La masse de cette configuration est de 4 400 kg. La version 13 bar publie 20,32 m³/min pour la même puissance.",
 		"verifiedFacts": [
 			"Dimensions publiées : 3100 × 1910 × 2140 mm.",
 			"Puissance moteur publiée : 160 kW.",
 			"La documentation constructeur de cette série prévoit le service continu, sous ses conditions d’installation et d’entretien."
 		],
 		"limitations": [
-			"La disponibilité actuelle et le contenu de la configuration livrée restent à confirmer.",
-			"Le maximum de pression n’est pas assimilé à une pression de mesure du FAD. Le verdict reste insufficient_data.",
-			"La classe de qualité d’air du réseau, les pertes de pression et le refroidissement nécessitent une vérification sur l’installation."
+			"La pression de mesure de la livraison effective n’est pas séparément établie ; la courbe FAD demeure vide.",
+			"Le tableau donne 3 100 × 1 910 × 2 140 mm en largeur × profondeur × hauteur. L’insonorisation renforcée est une autre configuration, de 4 500 kg.",
+			"La série S-3 de cette puissance est prévue pour le service continu sous ses conditions. Implantation, refroidissement, alimentation et équipement livré demandent une étude industrielle."
 		]
 	},
 	"evidence": [

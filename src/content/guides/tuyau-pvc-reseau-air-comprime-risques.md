@@ -3,13 +3,14 @@ title: "Tuyau PVC pour l’air comprimé : pourquoi un marquage de pression d�
 seoTitle: "Tuyau PVC et air comprimé : quel réseau choisir ?"
 description: "Un tuyau donné pour l’eau sous pression n’est pas automatiquement adapté à l’air comprimé. Vérifiez le domaine d’emploi et le système complet avant achat."
 pubDate: "2026-09-26"
+updatedDate: 2026-10-19
 category: "Installer"
 audiences: ["particulier", "professionnel"]
 metiers: ["garage-automobile", "maintenance-industrielle"]
 readingTime: 4
 reviewStatus: "internal"
 relatedGuides: ["installer-reseau-air-comprime-atelier", "raccord-air-comprime-bsp-npt-1-4", "maintenance-preventive-reseau-air-comprime"]
-sources: ["https://www.osha.gov/laws-regs/standardinterpretations/1991-02-28", "https://www.festo.com/media/cms/media/mam_upload/market/Festo_General_operating_conditions_en.pdf"]
+sources: ["https://www.osha.gov/laws-regs/standardinterpretations/1991-02-28", "https://www.osha.gov/publications/hib19901213"]
 ---
 
 **N’utilisez pas un tube PVC de plomberie pour construire un réseau d’air comprimé sur la seule base de sa pression nominale.** La qualification pour l’eau ne démontre pas son aptitude au gaz comprimé. Demandez un domaine d’emploi explicite et les instructions du système complet.
@@ -24,7 +25,7 @@ Cette source américaine documente le mécanisme de danger ; **elle n’est pas 
 
 ## Pourquoi un chiffre en bar ne tranche pas
 
-Une indication de pression doit être lue avec le fluide, la température et les conditions d’utilisation déclarées. Les [conditions d’emploi Festo](https://www.festo.com/media/cms/media/mam_upload/market/Festo_General_operating_conditions_en.pdf) demandent, pour leurs composants, le respect des limites techniques et la vérification de la compatibilité des matériaux avec le milieu et l’environnement. Cette logique de lecture est utile, sans transformer une notice Festo en homologation d’une canalisation tierce.
+Le [bulletin OSHA du 13 décembre 1990](https://www.osha.gov/publications/hib19901213) demande de tenir compte de la pression d’utilisation, des dimensions des tubes et raccords, de la nature du gaz et des limites prescrites par le fabricant pour évaluer le système complet. Il distingue les matériaux résistant à une rupture en fragments dans les conditions prévues ; il ne valide pas tous les thermoplastiques par leur seul nom. Ce bulletin historique précise qu’il ne reflète pas nécessairement la politique de l’agence. Il ne constitue ni une homologation d’un produit actuel ni une règle française.
 
 Notre grille d’achat comporte donc plusieurs questions. Le document mentionne-t-il l’air comprimé ? Quelle est la température admise, notamment près du compresseur ? Les huiles ou produits présents sont-ils compatibles ? Les raccords proposés font-ils partie de l’assemblage prévu ? Une réponse orale non documentée ne permet pas de fermer ces points.
 
@@ -62,7 +63,7 @@ Le dossier de remplacement doit conserver le plan, les références, les limites
 
 ## Sources et méthode
 
-Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
+Sources et passages déterminants relus le **19 octobre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
 
 - [OSHA, Use of thermoplastic pipe in above ground locations, 28 février 1991](https://www.osha.gov/laws-regs/standardinterpretations/1991-02-28)
-- [Festo, General operating conditions, conditions d’emploi et compatibilité des matériaux](https://www.festo.com/media/cms/media/mam_upload/market/Festo_General_operating_conditions_en.pdf)
+- [OSHA, bulletin historique du 13 décembre 1990, limites fabricant et évaluation du système](https://www.osha.gov/publications/hib19901213)

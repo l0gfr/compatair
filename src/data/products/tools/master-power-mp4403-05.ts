@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Master Power MP4403-05, référence MP4403-05. Le tableau fabricant publie 430 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Diamètre du plateau publié : 5 pouces. Orbite publiée : 3/32 pouce.",
+		"overview": "MP4403-05 : ponceuse sans aspiration à plateau de 5 pouces et orbite de 3/32 pouce. La MP4403-06 utilise un plateau de 6 pouces ; les deux tournent à 12 000 tr/min et la série donne 430 L/min à 6,2 bar. Le suffixe de plateau ne change pas la consommation documentée.",
 		"verifiedFacts": [
 			"Note General de la page 56 : performances mesurées à 6,2 bar à l’entrée de l’outil.",
 			"Note de la série : Air consumption 0.43 m³/min, soit 430 L/min. Le régime maximum ou moyen n’est pas précisé.",
@@ -33,9 +33,9 @@ const product: ToolProfileInput = {
 			"Vitesse publiée : 12 000 tr/min."
 		],
 		"limitations": [
-			"Catalogue GI-1250-EU archivé : disponibilité et équipement à confirmer avec le fournisseur.",
-			"Le titre central vacuum apparaît deux fois dans le tableau ; le type exact d’aspiration doit être confirmé par la notice individuelle.",
-			"Pas de mesure physique CompatAir."
+			"Le régime de cette consommation n’est pas indiqué. Le choix du plateau, de l’abrasif et du captage reste distinct de l’alimentation en air.",
+			"Le tableau place ce modèle dans la famille sans aspiration ; les titres répétés des autres versions ne modifient pas cette ligne.",
+			"Catalogue archivé, sans essai physique ; vérifier la notice et le contenu livré."
 		]
 	},
 	"specifications": [
@@ -105,6 +105,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Note de la série : Air consumption 0.43 m³/min, soit 430 L/min. Le régime maximum ou moyen n’est pas précisé."
+		},
+		{
+			"id": "master-power-mp4403-06-20260926",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=56",
+			"sourceLabel": "Cleco et Master Power, catalogue GI-1250-EU, p. 56, réf. MP4403-06",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Note de la série : Air consumption 0.43 m³/min, soit 430 L/min. Le régime maximum ou moyen n’est pas précisé."
 		}
 	],
 	"fieldSources": {
@@ -116,6 +125,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"master-power-mp4403-05-20260926"
+		],
+		"airflowBasis": [
+			"master-power-mp4403-05-20260926"
 		]
 	},
 	"notes": [
@@ -125,7 +137,8 @@ const product: ToolProfileInput = {
 		"min": 430,
 		"typical": 430,
 		"max": 430
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

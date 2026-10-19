@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Astro Pneumatic HVLP509. Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "HVLP509 : pistolet gravitaire à buse de 1,9 mm et godet aluminium. Le HVLP507 voisin est en 1,7 mm ; la fiche du 509 annonce un jet de 230 à 265 mm à 8 pouces. La pression de service publiée est de 41 à 44 psi, avec 10 cfm de consommation moyenne.",
 		"verifiedFacts": [
 			"Buse : 1.9mm.",
 			"Pression de fonctionnement : 41-44psi.",
@@ -40,6 +40,7 @@ const product: ToolProfileInput = {
 			"Diamètre intérieur du flexible : 4-6mm."
 		],
 		"limitations": [
+			"La moyenne n’est pas une consommation continue en charge. Les 3 hp recommandés ne remplacent pas le débit restitué sous pression ; aucun choix de compresseur n’en est déduit.",
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 			"La consommation moyenne ou sans régime publié reste hors calcul ; aucun débit en charge à pression de mesure connue n’est extrapolé.",
 			"Une pression recommandée ou de service n’est pas un point de mesure de la consommation.",
@@ -121,6 +122,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 1c923f4e8331b0eeb277f2ffb8ba086683d39a98d20b652d87a27dc540f92b58. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "october3d-tools-astro-product-hvlp507-p1",
+			"sourceUrl": "https://www.astrotools.com/product/hvlp-gravity-feed-spray-gun-1-7mm-nozzle-with-aluminum-cup/",
+			"sourceLabel": "Astro Pneumatic, fiche constructeur officielle",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-03",
+			"confidence": "B",
+			"notes": "Réponse primaire SHA-256 684b8cbe8e6871bf48f2ae1d02d241f34a97db5ceed3b3c5e17c9d13de073029. Déclaration constructeur, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {

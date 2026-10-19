@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Black+Decker BD 195/5-MY-T, référence 8215320BND303 : cuve de 5 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Groupe de compression : OL195. Capacité publiée sans pression de mesure : 180 l/min / 6,4 CFM.",
+		"overview": "BD 195/5-MY-T, code 8215320BND303 : cuve de 5 L, groupe OL195 de 1,1 kW, maximum de 10 bar et alimentation 230 V à 50 Hz. Cette version ajoute des roues et une poignée télescopique au BD 195/5-MY. Le tableau donne 11,8 kg contre 10,7 kg pour le MY.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons sans huile. Puissance moteur publiée : 1,1 kW.",
@@ -29,9 +29,9 @@ const product: CompressorInput = {
 			"Vitesse de rotation : 3400 tr/min."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"Édition du catalogue et disponibilité commerciale actuelle non établies. Le débit non qualifié n’est pas utilisé pour valider une compatibilité."
+			"Les deux versions publient 180 L/min sans pression de mesure ni qualification FAD ; le débit utile et le taux de marche restent à documenter.",
+			"Le MY-T mesure 323 × 383 × 465 mm ; le MY, 310 × 335 × 445 mm. Les accessoires indiqués pour les deux sont une soufflette et un tuyau spiralé de 5 m.",
+			"Le choix T porte sur le transport et l’encombrement ; les valeurs publiées de cuve, de puissance et de capacité sont communes. Disponibilité actuelle à confirmer."
 		]
 	},
 	"specifications": [

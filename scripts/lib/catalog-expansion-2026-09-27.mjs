@@ -1,3 +1,22 @@
+import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+const aircraftRepairBytes = readFileSync(new URL('../../src/data/imports/source-url-repairs-aircraft-2026-10-01.json', import.meta.url));
+if (createHash('sha256').update(aircraftRepairBytes).digest('hex') !== '514967640bea6be1cc292c3336ef25c9f25ebd9fcc11e33c991724d3defd5bc1') throw new Error('Unreviewed Aircraft source relocation ledger');
+const airboyRepair = JSON.parse(aircraftRepairBytes).repairs.find(row => row.references.some(ref => ref.productId === 'aircraft-airboy-131-of-e'));
+// The canonical AIRBOY source was relocated on October1. Reconstruct that exact
+// metadata before the October19 amendment, without changing technical fields.
+export function reviewedAirboySource(product) {
+ if (product.id !== 'aircraft-airboy-131-of-e') return product;
+ const reference = airboyRepair.references.find(ref => ref.productId === product.id);
+ const evidence = product.evidence.find(e => e.id === reference.evidenceId);
+ if (product.brand !== 'Aircraft' || product.mpn !== '2001225' || airboyRepair.httpStatus !== 200 || !evidence) throw new Error('Missing exact Aircraft source relocation review');
+ if (evidence.sourceUrl === airboyRepair.newUrl && evidence.retrievedAt === airboyRepair.verifiedAt && product.image.sourceUrl === airboyRepair.newUrl) return product;
+ if (evidence.sourceUrl !== airboyRepair.oldUrl || evidence.retrievedAt !== '2026-09-27' || product.image.sourceUrl !== airboyRepair.oldUrl) throw new Error('Unreviewed Aircraft source observation');
+ const result = structuredClone(product), proof = result.evidence.find(e => e.id === reference.evidenceId);
+ proof.sourceUrl = airboyRepair.newUrl; proof.retrievedAt = airboyRepair.verifiedAt; result.image.sourceUrl = airboyRepair.newUrl;
+ return result;
+}
+import { applyReviewedOctober19Amendment } from './reviewed-catalog-amendments-2026-10-19.mjs';
 import { applyReviewedOctober18Amendment } from './reviewed-catalog-amendments-2026-10-18.mjs';
 import { applyReviewedOctober17Amendment } from './reviewed-catalog-amendments-2026-10-17.mjs';
 import { createMultiBrandCompressor, createMultiBrandTool } from './multi-brand-catalog-import.mjs';
@@ -108,5 +127,5 @@ export function buildCatalogExpansion(compressorSnapshot, toolSnapshot) {
  const products = [...compressors, ...tools];
  const normalize = s => s.normalize('NFKD').replaceAll(/\p{Diacritic}/gu, '').toLowerCase().replaceAll(/[^a-z0-9]/g, '');
  for (const key of [p => p.id, p => `${normalize(p.brand)}:${normalize(p.mpn)}`, p => `${normalize(p.brand)}:${normalize(p.model)}`]) if (new Set(products.map(key)).size !== 700) throw new Error('Référence en double');
- return { compressors: compressors.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment), tools: tools.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment) };
+ return { compressors: compressors.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(reviewedAirboySource).map(applyReviewedOctober19Amendment), tools: tools.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment) };
 }

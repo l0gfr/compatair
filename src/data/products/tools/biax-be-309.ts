@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX BE 309, référence 150800710. Le tableau fabricant publie 150 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 20 W. Vitesse de rotation : adjustable 0-900 tr/min.",
+		"overview": "BE 309 150800710 : ébavureur droit à démarrage par poussée et vitesse réglable de 0 à 900 tr/min. Le BEG 309 voisin utilise une commande à levier. Les deux publient 150 L/min ; ce débit sans régime précisé ne départage pas leurs commandes ni ne valide un fonctionnement continu.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
 			"La fiche fabricant publie une consommation de 150 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Masse publiée : 180 g."
 		],
 		"limitations": [
+			"Le catalogue donne 6 bar avec lubrification prescrite. Le choix de la fraise et de la queue doit suivre les dimensions de la référence exacte.",
 			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
 			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
 		]
@@ -99,6 +100,24 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+		},
+		{
+			"id": "biax-150800745-20260926",
+			"sourceUrl": "https://biax.de/en/product/beg-309-bis-senk-o-55-mm/",
+			"sourceLabel": "BIAX, fiche technique BEG 309 – max. hole Ø 5,5 mm, réf. 150800745",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La fiche fabricant publie une consommation de 150 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+		},
+		{
+			"id": "biax-150800745-20260926-workingpressurebar-1",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=42",
+			"sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 42",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +129,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150800710-20260926"
+		],
+		"airflowBasis": [
+			"biax-150800710-20260926"
 		]
 	},
 	"notes": [
@@ -119,7 +141,8 @@ const product: ToolProfileInput = {
 		"min": 150,
 		"typical": 150,
 		"max": 150
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

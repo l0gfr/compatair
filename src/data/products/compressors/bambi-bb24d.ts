@@ -8,9 +8,9 @@ const product: CompressorInput = {
 	"mpn": "BB24D",
 	"variant": {
 		"familyId": "bambi-bb24d",
-		"label": "Groupe avec cuve 24 L et sécheur",
+		"label": "Groupe à deux pompes sur cuve horizontale 24 L",
 		"distinguishingAttributes": {
-			"équipement": "Groupe avec cuve 24 L et sécheur",
+			"équipement": "Groupe à deux pompes sur cuve horizontale 24 L",
 			"pressionMaximale": "8 bar",
 			"cuve": "24 L",
 			"fréquence": "50 Hz"
@@ -66,7 +66,7 @@ const product: CompressorInput = {
 	"specifications": [
 		{
 			"label": "Configuration constructeur",
-			"value": "Groupe avec cuve 24 L et sécheur",
+			"value": "Groupe à deux pompes sur cuve horizontale 24 L",
 			"evidenceIds": [
 				"october3d-bambi-product-32"
 			]
@@ -164,17 +164,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Bambi BB24D. 70 L/min à 1 bar ; 64 L/min à 2 bar ; 60 L/min à 3 bar ; 56 L/min à 4 bar ; 54 L/min à 5 bar ; 52 L/min à 6 bar ; 51 L/min à 7 bar ; 50 L/min à 8 bar. Groupe avec cuve 24 L et sécheur.",
+		"overview": "BB24D : deux pompes lubrifiées sur une cuve horizontale de 24 L, pour une puissance combinée de 0,68 kW et une masse de 31 kg. La fiche publie 52 L/min à 6 bar et 50 L/min à 8 bar. Le BB24 voisin, à une pompe de 0,34 kW, conserve 24 L et annonce 26 L/min à 6 bar.",
 		"verifiedFacts": [
-			"Air livré rattaché à une pression et aux unités originales du constructeur.",
-			"Cuve de stockage documentée : 24 L.",
-			"Pression maximale de fonctionnement publiée : 8 bar."
+			"Deux pompes, puissance combinée publiée de 0,68 kW.",
+			"Cuve horizontale de 24 L ; masse publiée de 31 kg.",
+			"FAD publié : 52 L/min à 6 bar et 50 L/min à 8 bar ; maximum de fonctionnement 8 bar."
 		],
 		"limitations": [
-			"Le fabricant ne précise pas les conditions de référence ISO 1217 ni la fenêtre de temps du cycle de service dans cette fiche.",
-			"Cycle intermittent déclaré ; durée de référence non précisée. L’exploitation permanente n’est pas assimilée à un service continu.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Le cycle maximal de 50 % est publié sans fenêtre temporelle ; il ne fournit pas un nombre de minutes de marche.",
+			"La configuration décrite ne documente aucun sécheur. Le choix BB24D/BB24 porte sur le nombre de pompes et le débit publié, avec le même stockage.",
+			"L’alimentation indiquée est 240 V à 50 Hz, avec prise britannique et prise UE sur demande. Vérifier le raccordement de la machine livrée.",
+			"Les conditions de référence ISO 1217 ne sont pas précisées ; les valeurs restent des données fabricant, sans essai physique CompatAir."
 		]
 	},
 	"evidence": [
@@ -187,6 +187,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 0e293f2f918bdb50cacf53413f2e65d5a4afbbc5d3b70d7696844bfdf83d1391 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "october3d-bambi-product-31-review-20261019-for-bambi-bb24d",
+			"sourceUrl": "https://bambi-air.co.uk/product/bb24/",
+			"sourceLabel": "Bambi, BB24, fiche constructeur",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-19",
+			"confidence": "B",
+			"notes": "Fiche voisine consultée en HTTPS le 19 octobre 2026 ; SHA-256 du corps : 4494d601f0fa3585b6c43bdd80a5f95744b3c21a39478d59f792aacece100101. Configurations comparées séparément."
 		}
 	],
 	"fieldSources": {
@@ -207,11 +217,15 @@ const product: CompressorInput = {
 		],
 		"powerKw": [
 			"october3d-bambi-product-32"
+		],
+		"voltage": [
+			"october3d-bambi-product-32"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"voltage": "240 V, 50 Hz"
 };
 
 export default product;

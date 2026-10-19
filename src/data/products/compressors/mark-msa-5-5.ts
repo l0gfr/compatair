@@ -44,14 +44,14 @@ const product: CompressorInput = {
 			"label": "Pression maximale de fonctionnement",
 			"value": "13 bar relatifs",
 			"evidenceIds": [
-				"october3d-mark-family-00"
+				"october3d-mark-pdf-new-00-p4"
 			]
 		},
 		{
 			"label": "Air livré à 12,5 bar",
 			"value": "550 L/min",
 			"evidenceIds": [
-				"october3d-mark-family-00"
+				"october3d-mark-pdf-new-00-p4"
 			]
 		},
 		{
@@ -70,26 +70,23 @@ const product: CompressorInput = {
 		},
 		{
 			"label": "Fréquence retenue",
-			"value": "non précisée",
+			"value": "50 Hz, publié dans le tableau fabricant",
 			"evidenceIds": [
-				"october3d-mark-family-00"
+				"october3d-mark-pdf-new-00-p4"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "MARK MSA 5.5. 550 L/min à 12,5 bar. Groupe sur socle sans réservoir de stockage intégré.",
+		"overview": "MSA 5.5 sur socle, version 13 bar à 50 Hz : 33 m³/h, soit 550 L/min, à la pression de référence de 12,5 bar pour un moteur de 5,5 kW. Le MSA 15 voisin publie 97 m³/h au même point de pression pour 15 kW.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
 			"Pression maximale de fonctionnement publiée : 13 bar."
 		],
 		"limitations": [
-			"La pression FAD et le maximum de la version sont conservés séparément.",
-			"Version sur socle retenue ; réservoir externe exclu.",
-			"Cycle de service non établi ; la tenue permanente reste indéterminée.",
-			"Fréquence non publiée dans la fiche retenue ; aucune transposition des performances à 50 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"La conversion des 33 m³/h est conservée ; les 9,2 L/s également imprimés sont arrondis et ne sont pas moyennés avec cette valeur.",
+			"Le tableau établit 50 Hz ; tension, raccordement et disponibilité sont à confirmer pour la version commandée.",
+			"Le taux de marche du groupe complet reste inconnu. Les variantes 8, 10 et 13 bar possèdent leurs propres capacités."
 		]
 	},
 	"evidence": [
@@ -132,13 +129,13 @@ const product: CompressorInput = {
 			"october3d-mark-pdf-new-00-p1"
 		],
 		"maxPressureBar": [
-			"october3d-mark-family-00"
+			"october3d-mark-pdf-new-00-p4"
 		],
 		"fadCurve": [
-			"october3d-mark-family-00"
+			"october3d-mark-pdf-new-00-p4"
 		],
 		"powerKw": [
-			"october3d-mark-family-00"
+			"october3d-mark-pdf-new-00-p4"
 		]
 	},
 	"notes": [

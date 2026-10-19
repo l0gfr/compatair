@@ -18,11 +18,15 @@ const product: CompressorInput = {
 	"maxPressureBar": 10,
 	"fadCurve": [
 		{
+			"pressureBar": 7,
+			"litersPerMinute": 2850
+		},
+		{
 			"pressureBar": 9.5,
 			"litersPerMinute": 2436.667
 		}
 	],
-	"oilType": "oil",
+	"oilType": "unknown",
 	"powerKw": 15,
 	"confidence": "B",
 	"status": "unknown",
@@ -48,7 +52,7 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Air livré à 9,5 bar",
+			"label": "FAD maximal à 9,5 bar",
 			"value": "2 436,667 L/min",
 			"evidenceIds": [
 				"october3d-alup-pdf-extra-02-p8"
@@ -74,22 +78,34 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october3d-alup-extra-18"
 			]
+		},
+		{
+			"label": "FAD maximal à 7 bar",
+			"value": "171 m³/h, soit 2 850 L/min",
+			"evidenceIds": [
+				"october3d-alup-pdf-extra-02-p8"
+			]
+		},
+		{
+			"label": "Minimum de modulation : unités contradictoires",
+			"value": "34,2 m³/h et 13 L/s imprimés dans le tableau ; aucune valeur minimale arbitrée",
+			"evidenceIds": [
+				"october3d-alup-pdf-extra-02-p8"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "ALUP Allegretto 15. 2 436,667 L/min à 9,5 bar. Groupe sur socle sans réservoir de stockage intégré.",
+		"overview": "Allegretto 15 sur socle : FAD maximal de 2 850 L/min à 7 bar et de 2 436,667 L/min à 9,5 bar, pour un moteur de 15 kW. L’Allegretto 18 voisin annonce un maximum de 2 873,333 L/min à 9,5 bar avec 18,5 kW selon le tableau primaire.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
 			"Pression maximale de fonctionnement publiée : 10 bar."
 		],
 		"limitations": [
-			"Points FAD supérieurs au plafond de fonctionnement excluants, y compris lorsque le tableau présente une colonne 12,5 bar pour une famille limitée à 10 bar.",
-			"Version sur socle retenue ; réservoir externe exclu.",
-			"Cycle de service non établi ; la tenue permanente reste indéterminée.",
-			"Fréquence non publiée dans la fiche retenue ; aucune transposition des performances à 50 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Les capacités sont des maxima VSD ; la production effective varie avec le régime demandé.",
+			"Pour le minimum de modulation, le tableau imprime 34,2 m³/h et 13 L/s. Ces valeurs ne sont pas équivalentes : 34,2 m³/h donne 9,5 L/s. Aucune valeur minimale corrigée n’est retenue sans clarification du fabricant.",
+			"La colonne de 12,5 bar de SCK ne décrit pas Allegretto. Les profils des deux familles restent séparés.",
+			"Le taux de marche, la variante électrique et la lubrification du bloc restent à confirmer."
 		]
 	},
 	"evidence": [
@@ -127,9 +143,6 @@ const product: CompressorInput = {
 	"fieldSources": {
 		"tankLiters": [
 			"october3d-alup-pdf-extra-02-p8"
-		],
-		"oilType": [
-			"october3d-alup-pdf-extra-02-p2"
 		],
 		"maxPressureBar": [
 			"october3d-alup-extra-18",

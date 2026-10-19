@@ -81,18 +81,16 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Airpol 30. 3 166,667 L/min à 15 bar. Groupe Airpol sans réservoir de stockage intégré.",
+		"overview": "Airpol 30 : 190 m³/h, soit 3 166,667 L/min, à 15 bar, moteur de 30 kW et alimentation 400 V triphasée à 50 Hz. L’Airpol 22 voisin annonce 2 000 L/min à 15 bar pour 22 kW. Le montage est sans réservoir de stockage intégré.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
 			"Pression maximale de fonctionnement publiée : 15 bar."
 		],
 		"limitations": [
-			"Conditions de référence FAD non précisées dans la fiche ; aucun AnnexC ni température/humidité ajouté.",
-			"Une seule configuration par modèle est retenue ; aucune fusion de pressions de fabrication différentes.",
-			"Cycle de service non établi ; la tenue permanente reste indéterminée.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"La brochure cite EN ISO 1217:2009 et EN ISO 5167-2 ; aucune annexe ou condition ambiante d’essai supplémentaire n’est ajoutée.",
+			"La fiche du modèle 30 donne 720 kg, un besoin d’air de refroidissement de 4 800 m³/h et une ambiance de +5 à +45 °C.",
+			"Le taux de marche reste à documenter. Refroidissement, stockage externe, traitement d’air et pression utile sont à vérifier sur l’installation."
 		]
 	},
 	"evidence": [
@@ -144,11 +142,19 @@ const product: CompressorInput = {
 		],
 		"powerKw": [
 			"october3d-airpol-pdf-075-p9"
+		],
+		"voltage": [
+			"october3d-airpol-pdf-075-p9"
+		],
+		"phase": [
+			"october3d-airpol-pdf-075-p9"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"voltage": "400 V, 50 Hz",
+	"phase": "three-phase"
 };
 
 export default product;

@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Asturo BBS HVLP art. 00198 buse 1,7 mm. Le régime de consommation et/ou la pression de travail appariée ne sont pas définis. Le débit publié reste hors du calcul FAD. Le tableau du pistolet BBS HVLP (article de base 00198) publie le diamètre de buse 1,7 mm sous le code de buse 17. Ce calibre est une configuration de pulvérisation réelle du catalogue ; la consommation commune de la famille n’est pas différenciée par buse.",
+    "overview": "BBS HVLP, article de base 00198, buse de 1,7 mm : code de calibre 17, distinct du 14 pour 1,4 mm. Le catalogue donne un godet de 600 cm³, 240 L/min pour la famille, 3,5 bar de service et 5 bar maximum. La buse est un choix d’application et ne crée pas une consommation mesurée séparée.",
     "verifiedFacts": [
       "Article de base imprimé : 00198.",
       "Code de buse imprimé : 17.",
@@ -48,6 +48,7 @@ const product: ToolProfileInput = {
       "Pression dans la source : Pressione esercizio: 3,5 bar ; Pressione massima: 5 bar."
     ],
     "limitations": [
+      "Le régime d’air n’est pas précisé. Les codes 00199xx concernent des pièces de buse ; aucun MPN complet de pistolet n’est fabriqué par concaténation.",
       "Le catalogue indique une consommation et une pression d’exercice, sans préciser l’ouverture de la gâchette, le régime de mesure ni les conditions de référence volumique. Ces données restent documentaires et ne suffisent pas à un verdict de dimensionnement conclusif.",
       "La consommation est publiée pour le corps de pistolet. Aucune mesure de débit propre à cette buse n’est donnée ; elle n’est pas présentée comme une consommation différente des autres calibres de la même famille.",
       "Le code d’article de base et le code de buse sont imprimés séparément. Aucun MPN complet n’est reconstitué par concaténation.",

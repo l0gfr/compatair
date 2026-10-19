@@ -3,14 +3,14 @@ title: "Filtre d’air comprimé : faut-il attendre une forte perte de pression
 seoTitle: "Filtre air comprimé : perte de pression et remplacement"
 description: "Une faible pression différentielle ne certifie pas la qualité de l’air. Croisez mesures sous débit, entretien fabricant et contrôles de contamination."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-30
+updatedDate: 2026-10-19
 category: "Utiliser"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "carrosserie-peinture"]
 readingTime: 4
 reviewStatus: "internal"
 relatedGuides: ["diagnostiquer-chute-pression-air-comprime", "filtre-charbon-actif-air-comprime-vapeurs-huile", "maintenance-preventive-reseau-air-comprime"]
-sources: ["https://au.kaeser.com/services/blog/why-do-i-need-to-service-my-compressed-air-filters.aspx", "https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf"]
+sources: ["https://au.kaeser.com/services/blog/why-do-i-need-to-service-my-compressed-air-filters.aspx", "https://asset.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf"]
 ---
 
 **Non : attendre une forte chute de pression n’est pas une règle générale de remplacement.** La pression différentielle renseigne sur la résistance au passage de l’air. Elle ne certifie pas, à elle seule, la qualité obtenue ni l’intégrité de l’élément.
@@ -21,7 +21,7 @@ Le suivi pertinent croise la notice du filtre, les conditions de débit et les c
 
 [KAESER présente l’indication différentielle](https://au.kaeser.com/services/blog/why-do-i-need-to-service-my-compressed-air-filters.aspx) comme un moyen de surveiller les pertes entre deux visites et décrit la possibilité de remonter les valeurs à une supervision. Cette information est utile pour repérer une dérive de passage et demander un contrôle.
 
-[Parker précise toutefois](https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf) que les indicateurs de pression différentielle ne mesurent pas la qualité de l’air et ne constituent pas à eux seuls une règle d’entretien. Les deux observations se complètent : mesurer la perte est utile, mais cela ne dispense pas de suivre les autres critères.
+[Parker précise toutefois](https://asset.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf) que les indicateurs de pression différentielle ne mesurent pas la qualité de l’air et ne constituent pas à eux seuls une règle d’entretien. Les deux observations se complètent : mesurer la perte est utile, mais cela ne dispense pas de suivre les autres critères.
 
 ## Comparer des mesures prises dans des conditions comparables
 
@@ -71,7 +71,7 @@ Le [registre de maintenance](/guides/maintenance-preventive-reseau-air-comprime/
 
 ## Sources et méthode
 
-Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
+Sources et passages déterminants relus le **19 octobre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
 
 - [KAESER, Why do I need to service my compressed air filters?, janvier 2021](https://au.kaeser.com/services/blog/why-do-i-need-to-service-my-compressed-air-filters.aspx)
-- [Parker, documentation filtration, page PDF 9](https://www.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf)
+- [Parker, Compressed air interchangeable elements, page PDF 9](https://asset.parker.com/content/dam/Parker-com/Literature/domnick-hunter-Industrial-Division/Literature---Documents/174004455_04.pdf)

@@ -30,7 +30,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 2630
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "unknown",
 	"powerKw": 22,
 	"weightKg": 810,
@@ -81,17 +80,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "ALMiG COMBI XP 22 500D. Station 4-en-1 : réservoir 500 L, sécheur frigorifique, préfiltre et postfiltre. La courbe reprend les capacités maximales publiées, avec les minima conservés séparément.",
+		"overview": "COMBI XP 22 500D : station 50 Hz de 22 kW avec cuve de 500 L, sécheur et pré/post-filtration. Le tableau annonce de 700 à 3 430 L/min à 10 bar et de 690 à 2 630 L/min à 13 bar. Le COMBI XP 18 500D conserve 500 L, avec de 570 à 2 730 L/min à 10 bar et un moteur de 18,5 kW.",
 		"verifiedFacts": [
-			"Puissance moteur publiée : 22 kW ; poids de cette configuration : 810 kg.",
-			"Débit restitué documenté : 3 940 L/min à 8 bar ; 3 430 L/min à 10 bar ; 2 630 L/min à 13 bar.",
-			"La documentation de la série prévoit le fonctionnement continu, sous ses conditions d’installation et d’entretien."
+			"À 8 bar : plage de 720 à 3 940 L/min selon ISO 1217 annexe C-2009.",
+			"Station avec réservoir de 500 L ; puissance nominale du tableau : 22 kW.",
+			"Les maxima de 3 430 L/min à 10 bar et 2 630 L/min à 13 bar restent associés à ces pressions."
 		],
 		"limitations": [
-			"La disponibilité commerciale actuelle n’a pas été confirmée.",
-			"Les minima et maxima de modulation ne décrivent pas un débit moyen de votre atelier. Aucun débit n’est extrapolé hors des points publiés.",
-			"Le service continu documenté ne dispense pas du contrôle du refroidissement, du traitement d’air et des pertes du réseau.",
-			"Le mode de lubrification n’a pas été établi dans les sources consultées ; il reste unknown, sans présumer une qualité d’air."
+			"La courbe CompatAir conserve les maxima publiés ; les minima de modulation restent distincts de la consommation moyenne de l’atelier.",
+			"Le taux de marche applicable au groupe complet reste à confirmer dans une notice de cette série.",
+			"Le montage 500D publié pèse 810 kg et mesure 1 860 × 740 × 1 980 mm. Le voisin 18 500D indique 800 kg pour le même encombrement.",
+			"Refroidissement, raccordement et lubrification du bloc restent à préciser pour l’installation."
 		]
 	},
 	"evidence": [
@@ -120,9 +119,6 @@ const product: CompressorInput = {
 			"documented-20260930-almig-2026"
 		],
 		"weightKg": [
-			"documented-20260930-almig-2026"
-		],
-		"dutyCycle": [
 			"documented-20260930-almig-2026"
 		]
 	},

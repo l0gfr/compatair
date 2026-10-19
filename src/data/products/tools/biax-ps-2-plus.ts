@@ -23,16 +23,17 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX PS 2 PLUS, référence 150322922. Le tableau fabricant publie 250 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 280 W. Masse publiée : 720 g.",
+		"overview": "PS 2 PLUS 150322922 : scie à fixation de lame conçue pour prévenir son extraction involontaire. La PS 3 voisine ajoute un amortissement des vibrations. La fiche HTML donne 280 W et le catalogue 300 W pour la PS 2 PLUS ; ces deux déclarations restent visibles.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
 			"La fiche fabricant publie une consommation de 250 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
 			"Référence fabricant : 150322922.",
-			"Puissance publiée : 280 W.",
+			"Puissance de la fiche HTML : 280 W ; catalogue PDF : 300 W, écart non résolu.",
 			"Masse publiée : 720 g.",
 			"Diamètre maximal de queue : 4 mm."
 		],
 		"limitations": [
+			"La consommation de 250 L/min est sans régime qualifié. Le choix de la lame et du contre-appui suit la matière et la notice, sans puissance unique arbitrée.",
 			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
 			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
 		]
@@ -54,9 +55,10 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Puissance publiée",
-			"value": "280 W",
+			"value": "Fiche HTML : 280 W ; catalogue PDF : 300 W, écart non résolu.",
 			"evidenceIds": [
-				"biax-150322922-20260926"
+				"biax-150322922-20260926",
+				"biax-150322922-20260926-workingpressurebar-1"
 			]
 		},
 		{
@@ -92,6 +94,24 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+		},
+		{
+			"id": "biax-150322921-20260926",
+			"sourceUrl": "https://biax.de/en/product/ps-3-vibrationsgedampft/",
+			"sourceLabel": "BIAX, fiche technique PS 3 – Vibration dampened, réf. 150322921",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La fiche fabricant publie une consommation de 250 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+		},
+		{
+			"id": "biax-150322921-20260926-workingpressurebar-1",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=61",
+			"sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 61",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
 		}
 	],
 	"fieldSources": {
@@ -103,6 +123,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150322922-20260926"
+		],
+		"airflowBasis": [
+			"biax-150322922-20260926"
 		]
 	},
 	"notes": [
@@ -112,7 +135,8 @@ const product: ToolProfileInput = {
 		"min": 250,
 		"typical": 250,
 		"max": 250
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

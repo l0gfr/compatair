@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, it, expect } from 'vitest';
-import { buildCatalogExpansion } from './catalog-expansion-2026-09-27.mjs';
+import { buildCatalogExpansion, reviewedAirboySource } from './catalog-expansion-2026-09-27.mjs';
 import { compressors, tools } from '../../src/data/catalog';
 import { compressorSchema, toolProfileSchema } from '../../src/domain/catalog';
 import { toolCategoryLabel } from '../../src/data/taxonomy';
@@ -20,6 +20,10 @@ const withReviewedSources = product => {
  if (!relocation) return product;
  const updated = structuredClone(product);
  const { repair, reference } = relocation;
+ if (product.id === 'aircraft-airboy-131-of-e') {
+  expect(reviewedAirboySource(product)).toBe(product);
+  return product;
+ }
  const evidence = updated.evidence.find(item => item.id === reference.evidenceId);
  if (!evidence || evidence.sourceUrl !== repair.oldUrl || evidence.retrievedAt !== snapshots[0].observedAt || updated.image?.sourceUrl !== repair.oldUrl) throw new Error('Relocation does not match the original source observation');
  evidence.sourceUrl = repair.newUrl;
@@ -56,6 +60,15 @@ describe('700 additional documented manufacturer references', () => {
    const changed = structuredClone(original);
    change(changed);
    expect(() => withReviewedSources(changed)).toThrow('Relocation does not match');
+  }
+ });
+ it('guards the exact AIRBOY source relocation before editorial reconstruction', () => {
+  const current = expansion.compressors.find(p=>p.id==='aircraft-airboy-131-of-e');
+  const repair = relocations.get(current.id).repair;
+  const prior = structuredClone(current); prior.evidence[0].sourceUrl=repair.oldUrl; prior.evidence[0].retrievedAt='2026-09-27'; prior.image.sourceUrl=repair.oldUrl;
+  expect(reviewedAirboySource(prior)).toEqual(current);
+  for (const mutate of [p=>{p.mpn='changed';},p=>{p.evidence[0].sourceUrl='https://example.com/unknown';},p=>{p.evidence[0].retrievedAt='2026-09-28';},p=>{p.image.sourceUrl='https://example.com/unknown';}]) {
+   const bad=structuredClone(prior);mutate(bad);expect(()=>reviewedAirboySource(bad)).toThrow();
   }
  });
  it('rejects intake promoted to FAD, inferred duty cycle and packaging weight promoted to net mass', () => {
